@@ -24,7 +24,10 @@ export function validateCPF(cpf: string) {
   const calculate = (multiplier: number) => {
     let sum = 0;
     for (let i = 0; i < multiplier - 1; i++) {
-      sum += values[i] * (multiplier - i);
+      const val = values[i];
+      if (val !== undefined) {
+        sum += val * (multiplier - i);
+      }
     }
     const result = (sum * 10) % 11;
     return result === 10 ? 0 : result;
