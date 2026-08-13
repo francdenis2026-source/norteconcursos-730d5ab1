@@ -196,7 +196,7 @@ function ProfilePage() {
                     </CardHeader>
                     <CardContent className="flex-grow space-y-3">
                       <ul className="space-y-2 text-xs">
-                        {Object.values(plan.features).map((feature, idx) => (
+                        {Object.entries(plan.features).map(([key, feature], idx) => (
                           <li key={idx} className="flex items-center gap-2">
                             <Check className={cn(
                               "h-3 w-3",
@@ -209,6 +209,7 @@ function ProfilePage() {
                           </li>
                         ))}
                       </ul>
+
                     </CardContent>
                     <div className="p-4 pt-0">
                       <Button 
