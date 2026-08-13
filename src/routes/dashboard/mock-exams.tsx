@@ -9,6 +9,7 @@ import { MockService } from '@/services/mockService';
 import { useAuthStatus } from '@/hooks/useDashboard';
 import { checkFeatureAccess } from '@/lib/subscriptions.config';
 import { Link } from '@tanstack/react-router';
+import { cn } from '@/lib/utils';
 
 
 export const Route = createFileRoute('/dashboard/mock-exams')({

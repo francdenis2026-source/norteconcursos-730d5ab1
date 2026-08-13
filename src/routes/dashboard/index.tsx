@@ -20,7 +20,8 @@ import {
   TrendingUp,
   Zap,
   Download,
-  FileText
+  FileText,
+  Bell
 } from 'lucide-react';
 import { 
   DropdownMenu,
