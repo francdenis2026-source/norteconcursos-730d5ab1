@@ -94,22 +94,32 @@ function AdminPanel() {
   };
 
   const handleDowngradeUser = async (userId: string, targetTier: string) => {
-    if (!confirm(`Deseja realmente fazer o downgrade deste usuário para o plano ${targetTier}?`)) return;
+    const reason = prompt(`Motivo obrigatório para o downgrade do usuário para o plano ${targetTier}:`);
+    if (!reason) {
+      toast.error('Motivo é obrigatório para realizar esta ação.');
+      return;
+    }
+
     setIsUpdatingSubscription(userId);
-    const success = await MockService.downgradeSubscription(userId, targetTier);
+    const success = await MockService.downgradeSubscription(userId, targetTier, reason);
     if (success) {
       toast.success(`Downgrade para ${targetTier} realizado!`);
       loadData();
     } else {
       toast.error('Erro ao realizar downgrade');
     }
-    setIsUpdatingSubscription(userId);
+    setIsUpdatingSubscription(null);
   };
 
   const handleCancelUserSubscription = async (userId: string) => {
-    if (!confirm('Deseja cancelar a assinatura deste usuário? O plano voltará para "Free".')) return;
+    const reason = prompt('Motivo obrigatório para o cancelamento da assinatura deste usuário:');
+    if (!reason) {
+      toast.error('Motivo é obrigatório para realizar esta ação.');
+      return;
+    }
+
     setIsUpdatingSubscription(userId);
-    const success = await MockService.cancelSubscription(userId);
+    const success = await MockService.cancelSubscription(userId, reason);
     if (success) {
       toast.success('Assinatura cancelada!');
       loadData();
