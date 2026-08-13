@@ -120,3 +120,16 @@ export interface Achievement {
   description: string;
   icon_url: string;
 }
+
+export interface UserProfile {
+  id: string;
+  full_name?: string;
+  email?: string;
+  avatar_url?: string;
+  subscription_tier: SubscriptionTier;
+  onboarding_completed: boolean;
+  onboarding_progress: any;
+  activation_code?: string;
+  is_activated: boolean;
+  role: 'admin' | 'moderator' | 'user';
+}
