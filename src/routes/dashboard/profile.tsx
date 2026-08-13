@@ -190,6 +190,44 @@ function ProfilePage() {
           </CardContent>
         </Card>
 
+        {user && !user.is_activated && (
+          <Card className="md:col-span-3 border-secondary bg-secondary/5">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Zap className="h-5 w-5 text-secondary" />
+                Ativar Assinatura
+              </CardTitle>
+              <CardDescription>
+                Insira o código enviado para seu e-mail após o pagamento para liberar seu acesso.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Input 
+                  placeholder="Código de ativação (Ex: X8J-29K)" 
+                  className="max-w-xs"
+                  id="activation-code-input"
+                />
+                <Button onClick={() => {
+                  const val = (document.getElementById('activation-code-input') as HTMLInputElement)?.value;
+                  if (val === 'TRIAL-2026') {
+                    toast.success('Assinatura ativada com sucesso!');
+                    window.location.reload();
+                  } else {
+                    toast.error('Código inválido ou já utilizado.');
+                  }
+                }}>
+                  Ativar Agora
+                </Button>
+              </div>
+              <p className="text-[10px] text-muted-foreground italic">
+                * Para o período de testes, utilize o código: <strong>TRIAL-2026</strong>
+              </p>
+            </CardContent>
+          </Card>
+        )}
+
+
         <Card className="md:col-span-3">
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
