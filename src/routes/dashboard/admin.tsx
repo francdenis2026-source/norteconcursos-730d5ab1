@@ -605,24 +605,43 @@ function AdminPanel() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    <TableRow>
-                      <TableCell className="font-medium">Franc D'nis</TableCell>
-                      <TableCell>francdenisbr@gmail.com</TableCell>
-                      <TableCell><Badge>Premium</Badge></TableCell>
-                      <TableCell><Badge variant="outline" className="text-emerald-600">Ativo</Badge></TableCell>
-                      <TableCell className="text-right">
-                        <Button variant="ghost" size="sm">Editar</Button>
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">Estudante Demo</TableCell>
-                      <TableCell>estudante@demo.com</TableCell>
-                      <TableCell><Badge variant="secondary">Free</Badge></TableCell>
-                      <TableCell><Badge variant="outline" className="text-amber-600">Pendente</Badge></TableCell>
-                      <TableCell className="text-right">
-                        <Button variant="ghost" size="sm">Editar</Button>
-                      </TableCell>
-                    </TableRow>
+                    {users.length === 0 ? (
+                      <TableRow>
+                        <TableCell colSpan={6} className="text-center py-8 text-muted-foreground">
+                          Nenhum usuário encontrado.
+                        </TableCell>
+                      </TableRow>
+                    ) : (
+                      users.map((u) => (
+                        <TableRow key={u.id}>
+                          <TableCell className="font-medium">{u.full_name}</TableCell>
+                          <TableCell className="text-xs">{u.email}</TableCell>
+                          <TableCell className="text-[10px] font-mono">{u.id.substring(0, 12)}...</TableCell>
+                          <TableCell>
+                            <select 
+                              className="text-[10px] p-1 rounded border bg-background"
+                              value={u.role}
+                              onChange={(e) => handleUpdateRole(u.id, e.target.value as any)}
+                              disabled={isUpdatingRole === u.id}
+                            >
+                              <option value="user">Usuário</option>
+                              <option value="moderator">Moderador</option>
+                              <option value="admin">Admin</option>
+                            </select>
+                          </TableCell>
+                          <TableCell>
+                            <Badge variant={u.is_activated ? "secondary" : "outline"} className="uppercase text-[9px]">
+                              {u.subscription_tier}
+                            </Badge>
+                          </TableCell>
+                          <TableCell className="text-right">
+                            <Button variant="ghost" size="sm" onClick={() => toast.info(`ID: ${u.id}`)}>
+                              Info
+                            </Button>
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
                   </TableBody>
                 </Table>
               </div>
