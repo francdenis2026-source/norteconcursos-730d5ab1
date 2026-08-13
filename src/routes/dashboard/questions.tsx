@@ -35,7 +35,7 @@ function QuestionsCatalog() {
   const [focusedContest, setFocusedContest] = useState<Contest | undefined>(undefined);
   const [loading, setLoading] = useState(true);
   
-  const featureAccess = checkFeatureAccess(user?.role || 'free', 'questions');
+  const featureAccess = checkFeatureAccess(user?.subscription_tier || 'free', 'questions');
 
 
   useEffect(() => {

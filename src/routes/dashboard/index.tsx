@@ -67,7 +67,7 @@ function DashboardIndex() {
       const currentSteps = {
         contest: !!storedContest,
         notebook: storedNotebooks.length > 0,
-        plan: user?.role !== 'free'
+        plan: user?.subscription_tier !== 'free'
       };
 
       setChecklist(currentSteps);
