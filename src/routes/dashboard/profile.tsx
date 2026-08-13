@@ -92,7 +92,7 @@ function ProfilePage() {
   const handleUpgrade = async (planId: string) => {
     setIsRedirecting(true);
     try {
-      const { url } = await checkout({ priceId: `price_mock_${planId}`, planId });
+      const { url } = await checkout({ data: { priceId: `price_mock_${planId}`, planId } });
       if (url) window.location.href = url;
     } catch (error) {
       toast.error("Erro ao iniciar pagamento");
@@ -191,14 +191,28 @@ function ProfilePage() {
         </Card>
 
         <Card className="md:col-span-3">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <CreditCard className="h-5 w-5 text-secondary" />
-              Planos e Assinatura
-            </CardTitle>
-            <CardDescription>
-              Escolha o plano que melhor se adapta ao seu ritmo de estudos.
-            </CardDescription>
+          <CardHeader className="flex flex-row items-center justify-between">
+            <div>
+              <CardTitle className="flex items-center gap-2">
+                <CreditCard className="h-5 w-5 text-secondary" />
+                Planos e Assinatura
+              </CardTitle>
+              <CardDescription>
+                Escolha o plano que melhor se adapta ao seu ritmo de estudos.
+              </CardDescription>
+            </div>
+            {user?.role !== 'free' && (
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex gap-2"
+                onClick={handleOpenBillingPortal}
+                disabled={isRedirecting}
+              >
+                <ExternalLink className="h-4 w-4" />
+                Gerenciar Assinatura
+              </Button>
+            )}
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -246,9 +260,10 @@ function ProfilePage() {
                       <Button 
                         variant={isCurrent ? "outline" : (plan.isPopular ? "secondary" : "default")} 
                         className="w-full"
-                        disabled={isCurrent}
+                        disabled={isCurrent || isRedirecting}
+                        onClick={() => handleUpgrade(plan.id)}
                       >
-                        {isCurrent ? "Plano Atual" : "Selecionar"}
+                        {isCurrent ? "Plano Atual" : (isRedirecting ? "Processando..." : "Selecionar")}
                       </Button>
                     </div>
                   </Card>
