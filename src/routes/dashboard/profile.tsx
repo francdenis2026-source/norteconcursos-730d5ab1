@@ -261,10 +261,12 @@ function ProfilePage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Zap className="h-5 w-5 text-secondary" />
-                Ativar Assinatura
+                {user.subscription_tier === 'free' ? 'Ativar Assinatura' : 'Reativar Assinatura'}
               </CardTitle>
               <CardDescription>
-                Insira o código enviado para seu e-mail após o pagamento para liberar seu acesso.
+                {user.subscription_tier === 'free' 
+                  ? 'Insira o código enviado para seu e-mail após o pagamento para liberar seu acesso.'
+                  : 'Sua assinatura está inativa. Você pode reativá-la agora ou inserir um novo código.'}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -274,11 +276,16 @@ function ProfilePage() {
                   className="max-w-xs"
                   value={activationCode}
                   onChange={(e) => setActivationCode(e.target.value)}
-                  disabled={isActivating}
+                  disabled={isActivating || isUpdating}
                 />
-                <Button onClick={handleActivate} disabled={isActivating || !activationCode}>
+                <Button onClick={handleActivate} disabled={isActivating || !activationCode || isUpdating}>
                   {isActivating ? 'Validando...' : 'Ativar Agora'}
                 </Button>
+                {user.subscription_tier !== 'free' && (
+                  <Button variant="outline" onClick={handleReactivateSubscription} disabled={isUpdating}>
+                    {isUpdating ? 'Processando...' : 'Reativar Plano Anterior'}
+                  </Button>
+                )}
                 <Button variant="ghost" size="sm" className="gap-2 text-xs" onClick={handleResendCode}>
                    <RefreshCw className="h-3 w-3" /> Reenviar E-mail
                 </Button>
