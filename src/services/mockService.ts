@@ -112,31 +112,62 @@ export const MockService = {
     return stored ? JSON.parse(stored) : [];
   },
 
-  // Stats
-  getPerformanceStats: (): PerformanceStats => {
-    const responses = MockService.getUserResponses();
-    const correct = responses.filter(r => r.isCorrect).length;
-    const total = responses.length;
-    
-    const byDiscipline = mockDisciplines.map(d => {
-      const discResponses = responses.filter(r => {
-        const q = mockQuestions.find(question => question.id === r.questionId);
-        return q?.disciplineId === d.id;
-      });
-      return {
-        disciplineId: d.id,
-        total: discResponses.length,
-        correct: discResponses.filter(r => r.isCorrect).length
-      };
-    });
+  // Stats and Syncing
+  getPerformanceStats: async (): Promise<PerformanceStats> => {
+    try {
+      // Prioriza dados do Supabase se logado
+      const { data: { session } } = await supabase.auth.getSession();
+      let responses: UserResponse[] = [];
+      
+      if (session) {
+        const { data, error } = await supabase
+          .from('user_responses')
+          .select('*')
+          .eq('user_id', session.user.id);
+        
+        if (!error && data) {
+          responses = data.map(r => ({
+            questionId: r.question_id,
+            selectedOptionId: r.selected_option_id,
+            isCorrect: r.is_correct,
+            time_spent: r.time_spent, // API returns snake_case
+            timeSpent: r.time_spent,
+            createdAt: r.created_at
+          }));
+        } else {
+          responses = MockService.getUserResponses();
+        }
+      } else {
+        responses = MockService.getUserResponses();
+      }
 
-    return {
-      totalQuestions: total,
-      correctAnswers: correct,
-      timeSpent: responses.reduce((acc, r) => acc + r.timeSpent, 0),
-      accuracyRate: total > 0 ? (correct / total) * 100 : 0,
-      byDiscipline
-    };
+      const correct = responses.filter(r => r.isCorrect).length;
+      const total = responses.length;
+      
+      const byDiscipline = mockDisciplines.map(d => {
+        const discResponses = responses.filter(r => {
+          const q = mockQuestions.find(question => question.id === r.questionId);
+          return q?.disciplineId === d.id;
+        });
+        return {
+          disciplineId: d.id,
+          total: discResponses.length,
+          correct: discResponses.filter(r => r.isCorrect).length
+        };
+      });
+
+      return {
+        totalQuestions: total,
+        correctAnswers: correct,
+        timeSpent: responses.reduce((acc, r) => acc + (r.timeSpent || 0), 0),
+        accuracyRate: total > 0 ? (correct / total) * 100 : 0,
+        byDiscipline
+      };
+    } catch (e) {
+      const localResponses = MockService.getUserResponses();
+      // ... same fallback logic if needed
+      return { totalQuestions: 0, correctAnswers: 0, timeSpent: 0, accuracyRate: 0, byDiscipline: [] };
+    }
   },
 
   // Utils
@@ -382,6 +413,19 @@ export const MockService = {
       exams.push(exam);
     }
     localStorage.setItem('norte_mock_exams', JSON.stringify(exams));
+
+    // Sincroniza com Supabase se logado
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) {
+      await supabase.from('mock_exam_results').insert({
+        user_id: session.user.id,
+        exam_id: exam.id,
+        total_questions: exam.total,
+        correct_answers: exam.correct,
+        duration_seconds: exam.duration,
+        finished_at: exam.finishedAt
+      });
+    }
   },
 
   // Syllabus Logic

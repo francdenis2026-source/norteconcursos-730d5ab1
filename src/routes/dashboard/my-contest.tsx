@@ -84,13 +84,32 @@ function MyContestPage() {
             </div>
 
             <div className="space-y-3">
-              {['Língua Portuguesa', 'Direito Constitucional', 'Direito Administrativo', 'Informática'].map((topic, i) => {
-                const status = ['Lido', 'Resumido', 'Revisado', 'Não Iniciado'][i];
+              {[
+                { name: 'Língua Portuguesa', progress: 65, nextReview: '2026-08-15' },
+                { name: 'Direito Constitucional', progress: 42, nextReview: '2026-08-14' },
+                { name: 'Direito Administrativo', progress: 15, nextReview: '2026-08-17' },
+                { name: 'Informática', progress: 0, nextReview: null }
+              ].map((topic, i) => {
+                const status = topic.progress === 100 ? 'Revisado' : topic.progress > 0 ? 'Lido' : 'Não Iniciado';
                 return (
-                  <div key={topic} className="flex items-center gap-2">
-                    <span className="text-sm flex-1">{topic}</span>
-                    <Badge variant={status === 'Lido' ? 'default' : 'outline'}>{status}</Badge>
-                    <Progress value={[65, 42, 15, 0][i]} className="h-1.5 w-20" />
+                  <div key={topic.name} className="flex flex-col gap-2 p-3 border rounded-lg hover:border-secondary/50 transition-colors">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-bold flex-1">{topic.name}</span>
+                      <Badge variant={status === 'Não Iniciado' ? 'outline' : 'default'} className={cn(
+                        status === 'Revisado' && "bg-emerald-500",
+                        status === 'Lido' && "bg-secondary"
+                      )}>
+                        {status}
+                      </Badge>
+                      <Progress value={topic.progress} className="h-1.5 w-20" />
+                    </div>
+                    {topic.nextReview && (
+                      <div className="flex items-center gap-2 text-[10px] text-muted-foreground">
+                        <Calendar className="h-3 w-3" />
+                        Próxima revisão sugerida: <span className="font-bold text-secondary">{new Date(topic.nextReview).toLocaleDateString()}</span>
+                        <Badge variant="outline" className="ml-auto text-[9px] h-4">Repetição Espaçada</Badge>
+                      </div>
+                    )}
                   </div>
                 );
               })}

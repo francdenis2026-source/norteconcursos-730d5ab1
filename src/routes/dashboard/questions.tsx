@@ -101,8 +101,8 @@ function QuestionsCatalog() {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-4">
-        <div className="relative flex-1">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+        <div className="lg:col-span-3 relative">
           <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input 
             placeholder="Pesquisar por órgão, cargo ou banca..." 
@@ -111,10 +111,16 @@ function QuestionsCatalog() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <Button variant="outline" className="gap-2">
-          <Filter className="h-4 w-4" />
-          Filtros
-        </Button>
+        <div className="grid grid-cols-2 gap-2">
+          <Button variant="outline" className="gap-2 text-xs">
+            <Filter className="h-4 w-4" />
+            Assunto
+          </Button>
+          <Button variant="outline" className="gap-2 text-xs">
+            <Zap className="h-4 w-4" />
+            Dificuldade
+          </Button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
