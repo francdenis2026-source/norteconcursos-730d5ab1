@@ -79,6 +79,21 @@ function DashboardIndex() {
       const userRole = (user?.role || 'free') as string;
       const limit = userRole === 'free' ? 10 : (userRole === 'essential' ? 100 : Infinity);
       setDailyQuota({ used: todayCount, total: limit === Infinity ? 9999 : limit });
+
+      // Notify about quota
+      if (limit !== Infinity) {
+        const usagePercent = (todayCount / (limit as number)) * 100;
+        const lastNotified = localStorage.getItem('norte_last_quota_notify');
+        const todayStr = new Date().toDateString();
+        
+        if (usagePercent >= 100 && lastNotified !== `100_${todayStr}`) {
+          toast.error("Quota diária esgotada! Considere um upgrade para continuar respondendo.");
+          localStorage.setItem('norte_last_quota_notify', `100_${todayStr}`);
+        } else if (usagePercent >= 80 && lastNotified !== `80_${todayStr}` && lastNotified !== `100_${todayStr}`) {
+          toast.warning("Você atingiu 80% da sua quota diária de questões.");
+          localStorage.setItem('norte_last_quota_notify', `80_${todayStr}`);
+        }
+      }
     };
 
     fetchOnboarding();
