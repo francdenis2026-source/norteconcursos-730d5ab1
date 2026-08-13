@@ -91,6 +91,7 @@ function PerformancePage() {
       const timer = setTimeout(checkGoals, 2000);
       return () => clearTimeout(timer);
     }
+    return () => {};
   }, [isLoading, selectedContest]);
 
   return (
