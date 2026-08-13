@@ -1,10 +1,12 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Compass, ShieldCheck, Mail, Lock } from "lucide-react";
+import { Compass, ShieldCheck, Mail, Lock, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 export const Route = createFileRoute("/auth")({
   component: AuthPage,
@@ -18,6 +20,47 @@ export const Route = createFileRoute("/auth")({
 
 function AuthPage() {
   const [mode, setMode] = useState<"login" | "register">("login");
+  const [email, setEmail] = useState("");
+  const [pin, setPin] = useState("");
+  const [name, setName] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleAuth = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      if (mode === "register") {
+        const { error } = await supabase.auth.signUp({
+          email,
+          password: pin,
+          options: {
+            data: {
+              full_name: name,
+              cpf: cpf,
+            }
+          }
+        });
+        if (error) throw error;
+        toast.success("Conta criada com sucesso! Verifique seu e-mail.");
+      } else {
+        const { error } = await supabase.auth.signInWithPassword({
+          email,
+          password: pin,
+        });
+        if (error) throw error;
+        toast.success("Login realizado com sucesso!");
+        navigate({ to: "/dashboard" });
+      }
+    } catch (error: any) {
+      toast.error(error.message || "Erro na autenticação");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted/30 p-4">
@@ -37,11 +80,17 @@ function AuthPage() {
           </p>
         </div>
 
-        <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+        <form className="space-y-4" onSubmit={handleAuth}>
           {mode === "register" && (
             <div className="space-y-2">
               <Label htmlFor="name">Nome completo</Label>
-              <Input id="name" placeholder="Ex: João Silva" required />
+              <Input 
+                id="name" 
+                placeholder="Ex: João Silva" 
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required 
+              />
             </div>
           )}
           
@@ -49,14 +98,28 @@ function AuthPage() {
             <Label htmlFor="email">E-mail</Label>
             <div className="relative">
               <Mail className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input id="email" type="email" placeholder="nome@exemplo.com" className="pl-10" required />
+              <Input 
+                id="email" 
+                type="email" 
+                placeholder="nome@exemplo.com" 
+                className="pl-10" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required 
+              />
             </div>
           </div>
 
           {mode === "register" && (
             <div className="space-y-2">
               <Label htmlFor="cpf">CPF</Label>
-              <Input id="cpf" placeholder="000.000.000-00" required />
+              <Input 
+                id="cpf" 
+                placeholder="000.000.000-00" 
+                value={cpf}
+                onChange={(e) => setCpf(e.target.value)}
+                required 
+              />
             </div>
           )}
 
@@ -71,7 +134,16 @@ function AuthPage() {
             </div>
             <div className="relative">
               <Lock className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input id="pin" type="password" placeholder="6 dígitos numéricos" maxLength={6} className="pl-10" required />
+              <Input 
+                id="pin" 
+                type="password" 
+                placeholder="6 dígitos numéricos" 
+                maxLength={6} 
+                className="pl-10" 
+                value={pin}
+                onChange={(e) => setPin(e.target.value)}
+                required 
+              />
             </div>
           </div>
 
@@ -85,13 +157,18 @@ function AuthPage() {
           )}
 
           <Button 
-            type="button" 
+            type="submit" 
             className="w-full h-11 bg-primary hover:bg-primary/90"
-            onClick={() => window.location.href = '/dashboard'}
+            disabled={isLoading}
           >
-            {mode === "login" ? "Entrar" : "Criar conta"}
+            {isLoading ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              mode === "login" ? "Entrar" : "Criar conta"
+            )}
           </Button>
         </form>
+
 
         <div className="text-center text-sm">
           <span className="text-muted-foreground">
