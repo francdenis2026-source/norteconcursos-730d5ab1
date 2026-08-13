@@ -1,43 +1,65 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { 
-  Search, 
-  Filter, 
-  MapPin, 
-  GraduationCap, 
+import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  Search,
+  Filter,
+  MapPin,
+  GraduationCap,
   Calendar,
   Briefcase,
   Trophy,
-  CheckCircle2
-} from 'lucide-react';
-import { MockService } from '@/services/mockService';
-import { Contest } from '@/types';
-import { cn } from '@/lib/utils';
-import { toast } from 'sonner';
+  CheckCircle2,
+} from "lucide-react";
+import { DataService } from "@/services/dataService";
+import { Contest } from "@/types";
+import { cn } from "@/lib/utils";
+import { toast } from "sonner";
+import type { LucideIcon } from "lucide-react";
 
-export const Route = createFileRoute('/dashboard/questions')({
-  component: QuestionsCatalog
+export const Route = createFileRoute("/dashboard/questions")({
+  component: QuestionsCatalog,
 });
 
 function QuestionsCatalog() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const contests = MockService.getContests();
-  const focusedContest = MockService.getFocusedContest();
+  const [searchTerm, setSearchTerm] = useState("");
+  const [contests, setContests] = useState<Contest[]>([]);
+  const [focusedContest, setFocusedContest] = useState<Contest | undefined>();
+  const [isLoading, setIsLoading] = useState(true);
 
-  const filteredContests = contests.filter(c => 
-    c.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    c.agency.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    c.role.toLowerCase().includes(searchTerm.toLowerCase())
+  useEffect(() => {
+    Promise.all([DataService.getContests(), DataService.getFocusedContest()])
+      .then(([loadedContests, focused]) => {
+        setContests(loadedContests);
+        setFocusedContest(focused);
+      })
+      .catch((error) => toast.error(error.message || "Não foi possível carregar os concursos."))
+      .finally(() => setIsLoading(false));
+  }, []);
+
+  const filteredContests = contests.filter(
+    (c) =>
+      c.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      c.agency.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      c.role.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
-  const handleSetFocus = (contest: Contest) => {
-    MockService.setFocusedContest(contest.id);
-    toast.success(`${contest.agency} definido como seu concurso foco!`);
-    window.location.reload(); // Quick way to update global state in demo
+  const handleSetFocus = async (contest: Contest) => {
+    try {
+      await DataService.setFocusedContest(contest.id);
+      setFocusedContest(contest);
+      toast.success(`${contest.agency} definido como seu concurso foco!`);
+    } catch (error) {
+      toast.error(
+        error instanceof Error ? error.message : "Não foi possível alterar o concurso foco.",
+      );
+    }
   };
+
+  if (isLoading)
+    return <div className="py-12 text-center text-muted-foreground">Carregando concursos...</div>;
 
   return (
     <div className="space-y-6">
@@ -49,8 +71,8 @@ function QuestionsCatalog() {
       <div className="flex flex-col md:flex-row gap-4">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input 
-            placeholder="Pesquisar por órgão, cargo ou banca..." 
+          <Input
+            placeholder="Pesquisar por órgão, cargo ou banca..."
             className="pl-10"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -64,10 +86,13 @@ function QuestionsCatalog() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {filteredContests.map((contest) => (
-          <Card key={contest.id} className={cn(
-            "flex flex-col border-2 transition-all hover:shadow-md",
-            focusedContest?.id === contest.id ? "border-secondary" : "border-border"
-          )}>
+          <Card
+            key={contest.id}
+            className={cn(
+              "flex flex-col border-2 transition-all hover:shadow-md",
+              focusedContest?.id === contest.id ? "border-secondary" : "border-border",
+            )}
+          >
             <CardHeader className="pb-3">
               <div className="flex justify-between items-start gap-2">
                 <div className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-secondary/10 text-secondary border border-secondary/20">
@@ -88,22 +113,28 @@ function QuestionsCatalog() {
                 <InfoItem icon={GraduationCap} label="Nível" value={contest.educationLevel} />
                 <InfoItem icon={MapPin} label="Local" value={contest.location} />
                 <InfoItem icon={Trophy} label="Vagas" value={contest.vacancies.toString()} />
-                <InfoItem icon={Calendar} label="Prova" value={contest.examDate || 'A definir'} />
+                <InfoItem icon={Calendar} label="Prova" value={contest.examDate || "A definir"} />
               </div>
-              
+
               <div className="pt-2">
                 <div className="text-xs text-muted-foreground mb-1">Remuneração estimada</div>
                 <div className="text-xl font-bold text-primary">
-                  {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(contest.salary)}
+                  {new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(
+                    contest.salary,
+                  )}
                 </div>
               </div>
             </CardContent>
             <CardFooter className="pt-4 border-t gap-2">
-              <Button variant="outline" className="flex-1 text-xs">Ver Detalhes</Button>
-              <Button 
+              <Button variant="outline" className="flex-1 text-xs">
+                Ver Detalhes
+              </Button>
+              <Button
                 className={cn(
                   "flex-1 text-xs",
-                  focusedContest?.id === contest.id ? "bg-muted text-muted-foreground" : "bg-primary"
+                  focusedContest?.id === contest.id
+                    ? "bg-muted text-muted-foreground"
+                    : "bg-primary",
                 )}
                 disabled={focusedContest?.id === contest.id}
                 onClick={() => handleSetFocus(contest)}
@@ -118,7 +149,15 @@ function QuestionsCatalog() {
   );
 }
 
-function InfoItem({ icon: Icon, label, value }: any) {
+function InfoItem({
+  icon: Icon,
+  label,
+  value,
+}: {
+  icon: LucideIcon;
+  label: string;
+  value: string;
+}) {
   return (
     <div className="flex items-center gap-2">
       <Icon className="h-3.5 w-3.5 text-muted-foreground shrink-0" />
