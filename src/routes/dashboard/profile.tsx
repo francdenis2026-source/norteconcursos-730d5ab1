@@ -258,12 +258,14 @@ function ProfilePage() {
                     </CardContent>
                     <div className="p-4 pt-0">
                       <Button 
+                        asChild
                         variant={isCurrent ? "outline" : (plan.isPopular ? "secondary" : "default")} 
                         className="w-full"
-                        disabled={isCurrent || isRedirecting}
-                        onClick={() => handleUpgrade(plan.id)}
+                        disabled={isCurrent}
                       >
-                        {isCurrent ? "Plano Atual" : (isRedirecting ? "Processando..." : "Selecionar")}
+                        <Link to="/checkout/$planId" params={{ planId: plan.id }}>
+                          {isCurrent ? "Plano Atual" : "Selecionar"}
+                        </Link>
                       </Button>
                     </div>
                   </Card>
