@@ -1,15 +1,16 @@
 import { createFileRoute } from '@tanstack/react-router';
-
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, 
-  ResponsiveContainer, LineChart, Line 
+  ResponsiveContainer, LineChart, Line, Legend
 } from 'recharts';
 import { useDashboardData } from '@/hooks/useDashboard';
 import { Button } from '@/components/ui/button';
-import { Download, FileText, Target, TrendingUp } from 'lucide-react';
+import { Download, FileText, Target, TrendingUp, Filter, Calendar } from 'lucide-react';
 import { toast } from 'sonner';
 import { MockService } from '@/services/mockService';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export const Route = createFileRoute('/dashboard/performance')({
   component: PerformancePage
