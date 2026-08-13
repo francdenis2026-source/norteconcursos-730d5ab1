@@ -37,6 +37,11 @@ function AdminPanel() {
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState('');
+  
+  // States for Edit Modal
+  const [editingContest, setEditingContest] = React.useState<Contest | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = React.useState(false);
+  const [isSaving, setIsSaving] = React.useState(false);
 
   const loadData = async () => {
     setIsLoading(true);
@@ -73,6 +78,25 @@ function AdminPanel() {
     } else {
       toast.error('Erro ao excluir questão');
     }
+  };
+
+  const handleEditContest = (contest: Contest) => {
+    setEditingContest({ ...contest });
+    setIsEditModalOpen(true);
+  };
+
+  const handleSaveContest = async () => {
+    if (!editingContest) return;
+    setIsSaving(true);
+    const success = await MockService.updateContest(editingContest.id, editingContest);
+    if (success) {
+      toast.success('Concurso atualizado com sucesso');
+      setIsEditModalOpen(false);
+      loadData();
+    } else {
+      toast.error('Erro ao atualizar concurso');
+    }
+    setIsSaving(false);
   };
 
   return (
@@ -150,7 +174,12 @@ function AdminPanel() {
                           <TableCell>{contest.vacancies}</TableCell>
                           <TableCell className="text-right">
                             <div className="flex justify-end gap-2">
-                              <Button variant="ghost" size="icon" className="h-8 w-8">
+                              <Button 
+                                variant="ghost" 
+                                size="icon" 
+                                className="h-8 w-8"
+                                onClick={() => handleEditContest(contest)}
+                              >
                                 <Pencil className="h-4 w-4" />
                               </Button>
                               <Button 
@@ -256,6 +285,49 @@ function AdminPanel() {
           </Card>
         </TabsContent>
       </Tabs>
+
+      {/* Edit Contest Modal */}
+      {isEditModalOpen && editingContest && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <Card className="w-full max-w-lg shadow-2xl">
+            <CardHeader>
+              <CardTitle>Editar Período do Concurso</CardTitle>
+              <CardDescription>
+                {editingContest.agency} - {editingContest.name}
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Data de Início</label>
+                  <Input 
+                    type="date" 
+                    value={editingContest.startDate ? editingContest.startDate.split('T')[0] : ''} 
+                    onChange={(e) => setEditingContest({...editingContest, startDate: e.target.value})}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Data de Fim</label>
+                  <Input 
+                    type="date" 
+                    value={editingContest.endDate ? editingContest.endDate.split('T')[0] : ''} 
+                    onChange={(e) => setEditingContest({...editingContest, endDate: e.target.value})}
+                  />
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground italic">
+                * Concursos fora deste período não serão exibidos para os alunos.
+              </p>
+              <div className="flex justify-end gap-3 mt-6">
+                <Button variant="outline" onClick={() => setIsEditModalOpen(false)}>Cancelar</Button>
+                <Button onClick={handleSaveContest} disabled={isSaving}>
+                  {isSaving ? 'Salvando...' : 'Salvar Alterações'}
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
     </div>
   );
 }
