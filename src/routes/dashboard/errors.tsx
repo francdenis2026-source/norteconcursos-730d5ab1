@@ -29,22 +29,57 @@ function ErrorsPage() {
     loadErrors();
   }, []);
 
+  const filteredQuestions = useMemo(() => {
+    if (filterDiscipline === 'all') return errorQuestions;
+    return errorQuestions.filter(q => q.disciplineId === filterDiscipline);
+  }, [errorQuestions, filterDiscipline]);
+
   if (isLoading) return <div>Carregando...</div>;
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold flex items-center gap-2">
-        <AlertCircle className="text-destructive" /> Caderno de Erros
-      </h1>
+      <div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
+        <h1 className="text-2xl font-bold flex items-center gap-2 text-primary">
+          <AlertCircle className="text-destructive h-6 w-6" /> Caderno de Erros
+        </h1>
+        <div className="flex gap-2">
+          <Select value={filterDiscipline} onValueChange={setFilterDiscipline}>
+            <SelectTrigger className="w-[180px]">
+              <Filter className="h-4 w-4 mr-2" />
+              <SelectValue placeholder="Disciplina" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todas Disciplinas</SelectItem>
+              <SelectItem value="1">Português</SelectItem>
+              <SelectItem value="4">Dir. Constitucional</SelectItem>
+            </SelectContent>
+          </Select>
+          <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2">
+            <Play className="h-4 w-4" /> Revisão Sequencial
+          </Button>
+        </div>
+      </div>
       
       <div className="grid gap-4">
-        {errorQuestions.length > 0 ? errorQuestions.map(q => (
-          <Card key={q.id}>
+        {filteredQuestions.length > 0 ? filteredQuestions.map(q => (
+          <Card key={q.id} className="hover:border-primary/50 transition-colors">
             <CardContent className="pt-6">
+              <div className="flex justify-between items-start mb-4">
+                <span className="px-2 py-0.5 bg-destructive/10 text-destructive text-[10px] font-bold rounded uppercase">
+                  Questão com Erro
+                </span>
+                <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest">
+                  ID: {q.id}
+                </span>
+              </div>
               <p className="font-medium mb-4">{q.text}</p>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-muted-foreground">{q.difficulty}</span>
-                <Button variant="outline" size="sm">Tentar Novamente</Button>
+              <div className="flex justify-between items-center text-sm border-t pt-4">
+                <div className="flex gap-4">
+                  <span className="text-muted-foreground flex items-center gap-1">
+                    <History className="h-3 w-3" /> {q.difficulty}
+                  </span>
+                </div>
+                <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground">Refazer Agora</Button>
               </div>
             </CardContent>
           </Card>

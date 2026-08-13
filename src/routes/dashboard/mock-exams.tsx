@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { PlayCircle, Clock, Trophy } from 'lucide-react';
 import { toast } from 'sonner';
+import { MockService } from '@/services/mockService';
 
 export const Route = createFileRoute('/dashboard/mock-exams')({
   component: MockExamsPage
