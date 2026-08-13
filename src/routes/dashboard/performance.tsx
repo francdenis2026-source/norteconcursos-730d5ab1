@@ -188,7 +188,8 @@ function PerformancePage() {
                     >
                       {disciplineData.map((entry, index) => {
                         const colors = ['#1E293B', '#10B981', '#F59E0B', '#64748B'];
-                        return <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />;
+                        const color = colors[index % colors.length] as string;
+                        return <Cell key={`cell-${index}`} fill={color} />;
                       })}
                     </Pie>
                     <Tooltip />
