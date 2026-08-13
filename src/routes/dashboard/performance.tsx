@@ -186,9 +186,10 @@ function PerformancePage() {
                       paddingAngle={5}
                       dataKey="total"
                     >
-                      {disciplineData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={['#1E293B', '#10B981', '#F59E0B', '#64748B'][index % 4]} />
-                      ))}
+                      {disciplineData.map((entry, index) => {
+                        const colors = ['#1E293B', '#10B981', '#F59E0B', '#64748B'];
+                        return <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />;
+                      })}
                     </Pie>
                     <Tooltip />
                     <Legend />
