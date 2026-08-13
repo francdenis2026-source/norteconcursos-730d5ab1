@@ -860,5 +860,29 @@ export const MockService = {
       console.error('Error reactivating subscription:', e);
       return false;
     }
+  },
+
+  exportSubscriptionLogsToCSV: async (userId?: string): Promise<string> => {
+    const logs = await MockService.getSubscriptionAuditLogs(userId);
+    if (logs.length === 0) return '';
+
+    const headers = ['ID', 'User ID', 'Event', 'Old Tier', 'New Tier', 'Reason', 'Effective Date', 'Created At'];
+    const rows = logs.map(log => [
+      log.id,
+      log.user_id,
+      log.event_type,
+      log.old_tier || 'N/A',
+      log.new_tier,
+      log.metadata?.reason || 'N/A',
+      log.metadata?.effective_date ? new Date(log.metadata.effective_date).toLocaleDateString() : 'Immediate',
+      new Date(log.created_at).toLocaleString()
+    ]);
+
+    const csvContent = [
+      headers.join(','),
+      ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
+    ].join('\n');
+
+    return csvContent;
   }
 };

@@ -33,6 +33,17 @@ import { Contest, Question, UserProfile } from '@/types';
 import { toast } from 'sonner';
 import { Link } from '@tanstack/react-router';
 import { CardFooter } from '@/components/ui/card';
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogDescription, 
+  DialogFooter, 
+  DialogHeader, 
+  DialogTitle 
+} from '@/components/ui/dialog';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { Download } from 'lucide-react';
 
 export const Route = createFileRoute('/dashboard/admin')({
   component: AdminPanel,
@@ -55,6 +66,23 @@ function AdminPanel() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [isUpdatingRole, setIsUpdatingRole] = React.useState<string | null>(null);
   const [isUpdatingSubscription, setIsUpdatingSubscription] = React.useState<string | null>(null);
+  
+  // Subscription management modal states
+  const [subModalConfig, setSubModalConfig] = React.useState<{
+    isOpen: boolean;
+    userId: string;
+    userName: string;
+    targetTier: string;
+    actionType: 'downgrade' | 'cancel';
+  }>({
+    isOpen: false,
+    userId: '',
+    userName: '',
+    targetTier: '',
+    actionType: 'downgrade'
+  });
+  const [subReason, setSubReason] = React.useState('');
+  const [isSubmittingSub, setIsSubmittingSub] = React.useState(false);
   
   // States for Edit Modal
   const [editingContest, setEditingContest] = React.useState<Contest | null>(null);
@@ -93,40 +121,76 @@ function AdminPanel() {
     setIsUpdatingRole(null);
   };
 
-  const handleDowngradeUser = async (userId: string, targetTier: string) => {
-    const reason = prompt(`Motivo obrigatório para o downgrade do usuário para o plano ${targetTier}:`);
-    if (!reason) {
-      toast.error('Motivo é obrigatório para realizar esta ação.');
-      return;
-    }
-
-    setIsUpdatingSubscription(userId);
-    const success = await MockService.downgradeSubscription(userId, targetTier, reason);
-    if (success) {
-      toast.success(`Downgrade para ${targetTier} realizado!`);
-      loadData();
-    } else {
-      toast.error('Erro ao realizar downgrade');
-    }
-    setIsUpdatingSubscription(null);
+  const handleDowngradeUser = (user: UserProfile, targetTier: string) => {
+    setSubModalConfig({
+      isOpen: true,
+      userId: user.id,
+      userName: user.full_name || user.email || 'Usuário',
+      targetTier: targetTier,
+      actionType: 'downgrade'
+    });
+    setSubReason('');
   };
 
-  const handleCancelUserSubscription = async (userId: string) => {
-    const reason = prompt('Motivo obrigatório para o cancelamento da assinatura deste usuário:');
-    if (!reason) {
+  const handleCancelUserSubscription = (user: UserProfile) => {
+    setSubModalConfig({
+      isOpen: true,
+      userId: user.id,
+      userName: user.full_name || user.email || 'Usuário',
+      targetTier: 'free',
+      actionType: 'cancel'
+    });
+    setSubReason('');
+  };
+
+  const processSubscriptionAction = async () => {
+    if (!subReason.trim()) {
       toast.error('Motivo é obrigatório para realizar esta ação.');
       return;
     }
 
-    setIsUpdatingSubscription(userId);
-    const success = await MockService.cancelSubscription(userId, reason);
-    if (success) {
-      toast.success('Assinatura cancelada!');
-      loadData();
-    } else {
-      toast.error('Erro ao cancelar assinatura');
+    setIsSubmittingSub(true);
+    try {
+      let success = false;
+      if (subModalConfig.actionType === 'downgrade') {
+        success = await MockService.downgradeSubscription(subModalConfig.userId, subModalConfig.targetTier, subReason);
+      } else {
+        success = await MockService.cancelSubscription(subModalConfig.userId, subReason);
+      }
+
+      if (success) {
+        toast.success(
+          subModalConfig.actionType === 'downgrade' 
+            ? `Downgrade para ${subModalConfig.targetTier} agendado!` 
+            : 'Cancelamento de assinatura agendado!'
+        );
+        setSubModalConfig(prev => ({ ...prev, isOpen: false }));
+        loadData();
+      } else {
+        toast.error('Erro ao processar solicitação.');
+      }
+    } finally {
+      setIsSubmittingSub(false);
     }
-    setIsUpdatingSubscription(null);
+  };
+
+  const handleExportAuditCSV = async () => {
+    const csv = await MockService.exportSubscriptionLogsToCSV();
+    if (!csv) {
+      toast.error('Nenhum log encontrado para exportar.');
+      return;
+    }
+
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `auditoria_assinaturas_${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success('Histórico exportado com sucesso!');
   };
 
   React.useEffect(() => {
