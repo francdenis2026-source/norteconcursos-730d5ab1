@@ -62,17 +62,34 @@ function AdminPanel() {
 
   const loadData = async () => {
     setIsLoading(true);
-    const [c, q, p, logs] = await Promise.all([
-      MockService.getContests(),
-      MockService.getQuestions(),
-      (MockService as any).getSubscriptionPlans?.() || [],
-      (MockService as any).getAdminAuditLogs?.() || []
-    ]);
-    setContests(c);
-    setQuestions(q);
-    setSubscriptionPlans(p);
-    setAuditLogs(logs);
-    setIsLoading(false);
+    try {
+      const [c, q, p, logs, u] = await Promise.all([
+        MockService.getContests(),
+        MockService.getQuestions(),
+        (MockService as any).getSubscriptionPlans?.() || [],
+        (MockService as any).getAdminAuditLogs?.() || [],
+        (MockService as any).listUsers?.() || []
+      ]);
+      setContests(c);
+      setQuestions(q);
+      setSubscriptionPlans(p);
+      setAuditLogs(logs);
+      setUsers(u);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleUpdateRole = async (userId: string, newRole: 'admin' | 'moderator' | 'user') => {
+    setIsUpdatingRole(userId);
+    const success = await MockService.updateUserRole(userId, newRole);
+    if (success) {
+      toast.success('Role atualizada com sucesso!');
+      loadData();
+    } else {
+      toast.error('Erro ao atualizar role');
+    }
+    setIsUpdatingRole(null);
   };
 
   React.useEffect(() => {
