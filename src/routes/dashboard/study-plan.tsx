@@ -1,8 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar as CalendarIcon, BookOpen, CheckCircle, GripVertical, Sparkles } from 'lucide-react';
+import { Calendar as CalendarIcon, BookOpen, CheckCircle, GripVertical, Sparkles, Info, Settings2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export const Route = createFileRoute('/dashboard/study-plan')({
   component: StudyPlanPage
@@ -14,11 +15,29 @@ function StudyPlanPage() {
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
-        <h1 className="text-2xl font-bold">Plano de Estudos</h1>
-        <Button variant="outline" size="sm" className="text-secondary border-secondary/50 gap-2 bg-secondary/5">
-          <Sparkles className="h-4 w-4" /> Gerar Recomendações (IA)
-        </Button>
+        <h1 className="text-2xl font-bold text-primary">Plano de Estudos</h1>
+        <div className="flex gap-2">
+          <Button variant="outline" size="sm" className="gap-2">
+            <Settings2 className="h-4 w-4" /> Ajustar Pesos
+          </Button>
+          <Button variant="outline" size="sm" className="text-secondary border-secondary/50 gap-2 bg-secondary/5 shadow-sm">
+            <Sparkles className="h-4 w-4" /> Gerar Recomendações
+          </Button>
+        </div>
       </div>
+
+      <Card className="bg-secondary/5 border-secondary/20">
+        <CardContent className="py-4 flex gap-4 items-start">
+          <Info className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+          <div className="text-sm">
+            <p className="font-bold text-secondary mb-1">Por que estas recomendações?</p>
+            <p className="text-muted-foreground leading-relaxed">
+              Baseado no seu histórico de <span className="text-foreground font-medium">Português (62% acerto)</span>, priorizamos temas de Sintaxe. 
+              A carga horária de <span className="text-foreground font-medium">Dir. Constitucional</span> foi aumentada para compensar o tempo reduzido na última semana.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
       
       <div className="grid grid-cols-1 md:grid-cols-7 gap-4">
         {WEEK_DAYS.map((day, idx) => (

@@ -83,6 +83,34 @@ function PerformancePage() {
         </div>
       </div>
       
+      <div className="flex flex-col md:flex-row gap-4 no-print mb-6">
+        <div className="flex-1 flex gap-2">
+          <Select value={selectedContest} onValueChange={setSelectedContest}>
+            <SelectTrigger className="w-full md:w-[280px]">
+              <Target className="h-4 w-4 mr-2" />
+              <SelectValue placeholder="Filtrar por Concurso" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todos os Concursos</SelectItem>
+              {contests.map(c => (
+                <SelectItem key={c.id} value={c.id}>{c.agency} - {c.role}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={timeRange} onValueChange={setTimeRange}>
+            <SelectTrigger className="w-full md:w-[200px]">
+              <Calendar className="h-4 w-4 mr-2" />
+              <SelectValue placeholder="Período" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="weekly">Semanal</SelectItem>
+              <SelectItem value="monthly">Mensal</SelectItem>
+              <SelectItem value="yearly">Anual</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
@@ -94,9 +122,11 @@ function PerformancePage() {
                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
                 <XAxis dataKey="name" />
                 <YAxis />
-                <Tooltip />
-                <Bar dataKey="acertos" fill="oklch(0.45 0.15 150)" radius={[4, 4, 0, 0]} />
-              </BarChart>
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="acertos" name="Período Atual" fill="oklch(0.45 0.15 150)" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="previous" name="Período Anterior" fill="oklch(0.7 0.1 150)" radius={[4, 4, 0, 0]} opacity={0.5} />
+                </BarChart>
             </ResponsiveContainer>
           </CardContent>
         </Card>
