@@ -8,21 +8,31 @@ import {
   CartesianGrid, 
   Tooltip, 
   ResponsiveContainer,
-  LineChart,
-  Line,
-  Cell
-} from 'recharts';
-import { 
-  Target, 
-  Clock, 
-  CheckCircle2, 
-  AlertCircle, 
   TrendingUp,
-  Zap
+  Target,
+  Clock,
+  CheckCircle2,
+  AlertCircle,
+  Zap,
+  Download,
+  FileText
 } from 'lucide-react';
-import { useDashboardData } from '@/hooks/useDashboard';
+import { 
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useDashboardData, useAuthStatus } from '@/hooks/useDashboard';
 import { Button } from '@/components/ui/button';
 import { MockService } from '@/services/mockService';
+import { toast } from 'sonner';
+
+export const Route = createFileRoute('/dashboard/')({
+  component: DashboardIndex
+});
 
 export const Route = createFileRoute('/dashboard/')({
   component: DashboardIndex
@@ -30,11 +40,49 @@ export const Route = createFileRoute('/dashboard/')({
 
 function DashboardIndex() {
   const { stats, focusedContest, isLoading, refreshStats } = useDashboardData();
+  const { user } = useAuthStatus();
 
   if (isLoading) return <div>Carregando...</div>;
 
+  const handleExportCSV = () => {
+    const responses = MockService.getUserResponses();
+    if (responses.length === 0) {
+      toast.error("Nenhum dado para exportar");
+      return;
+    }
+
+    const headers = ["Data", "Questão ID", "Acertou", "Tempo (seg)"];
+    const csvContent = [
+      headers.join(","),
+      ...responses.map(r => [
+        new Date(r.createdAt).toLocaleString(),
+        r.questionId,
+        r.isCorrect ? "Sim" : "Não",
+        r.timeSpent
+      ].join(","))
+    ].join("\n");
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute("download", `resultados_norte_${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("Exportação CSV concluída!");
+  };
+
+  const handleExportPDF = () => {
+    // In a real app, use jspdf or similar. Here we'll trigger a print-friendly view or just a toast for demo.
+    toast.success("Gerando PDF com resultados detalhados...");
+    setTimeout(() => {
+      window.print();
+    }, 1000);
+  };
+
   const handleLoadDemo = () => {
-    // Simulate loading demo data
     MockService.saveResponse({
       questionId: 'q1',
       isCorrect: true,
@@ -48,6 +96,7 @@ function DashboardIndex() {
       createdAt: new Date().toISOString()
     });
     refreshStats();
+    toast.success("Dados de demonstração carregados");
   };
 
   const chartData = stats?.byDiscipline.map(d => ({
@@ -61,16 +110,35 @@ function DashboardIndex() {
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-primary">Olá, João Silva</h1>
+          <h1 className="text-2xl font-bold text-primary">Olá, {user?.name?.split(' ')[0] || 'Estudante'}</h1>
           <p className="text-muted-foreground">Bem-vindo ao seu ambiente de estudos.</p>
         </div>
         <div className="flex items-center gap-2">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm" className="gap-2">
+                <Download className="h-4 w-4" /> Exportar
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuLabel>Formato de Exportação</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem onClick={handleExportCSV} className="cursor-pointer gap-2">
+                <FileText className="h-4 w-4" /> CSV (Excel)
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={handleExportPDF} className="cursor-pointer gap-2">
+                <Download className="h-4 w-4" /> PDF (Relatório)
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          
           <Button variant="outline" size="sm" onClick={handleLoadDemo}>
-            Carregar demonstração
+            Demonstração
           </Button>
+          
           <Button size="sm" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
             <TrendingUp className="mr-2 h-4 w-4" />
-            Meta Semanal: 65%
+            Meta: 65%
           </Button>
         </div>
       </div>

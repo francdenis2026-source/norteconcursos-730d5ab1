@@ -15,6 +15,8 @@ export interface Contest {
   vacancies: number;
   salary: number;
   examDate?: string;
+  startDate?: string;
+  endDate?: string;
   isDemo?: boolean;
 }
 

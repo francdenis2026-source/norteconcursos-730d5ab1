@@ -14,9 +14,25 @@ export const MockService = {
   // Contests
   getContests: async (): Promise<Contest[]> => {
     try {
-      const { data, error } = await supabase.from('contests').select('*');
-      if (error || !data || data.length === 0) return mockContests;
-      return data as unknown as Contest[];
+      const now = new Date().toISOString();
+      const { data, error } = await supabase
+        .from('contests')
+        .select('*');
+      
+      let contests: Contest[] = [];
+      if (error || !data || data.length === 0) {
+        contests = mockContests;
+      } else {
+        contests = data as unknown as Contest[];
+      }
+
+      // Filter only active contests (if dates are provided)
+      return contests.filter(c => {
+        const start = c.startDate ? new Date(c.startDate).getTime() : 0;
+        const end = c.endDate ? new Date(c.endDate).getTime() : Infinity;
+        const currentTime = new Date().getTime();
+        return currentTime >= start && currentTime <= end;
+      });
     } catch (e) {
       return mockContests;
     }
