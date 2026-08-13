@@ -128,6 +128,7 @@ export interface UserProfile {
   email?: string;
   avatar_url?: string;
   subscription_tier: SubscriptionTier;
+  subscription_expires_at?: string;
   onboarding_completed: boolean;
   onboarding_progress: any;
   activation_code?: string;

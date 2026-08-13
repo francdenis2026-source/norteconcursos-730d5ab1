@@ -33,6 +33,17 @@ import { Contest, Question, UserProfile } from '@/types';
 import { toast } from 'sonner';
 import { Link } from '@tanstack/react-router';
 import { CardFooter } from '@/components/ui/card';
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogDescription, 
+  DialogFooter, 
+  DialogHeader, 
+  DialogTitle 
+} from '@/components/ui/dialog';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { Download } from 'lucide-react';
 
 export const Route = createFileRoute('/dashboard/admin')({
   component: AdminPanel,
@@ -55,6 +66,23 @@ function AdminPanel() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [isUpdatingRole, setIsUpdatingRole] = React.useState<string | null>(null);
   const [isUpdatingSubscription, setIsUpdatingSubscription] = React.useState<string | null>(null);
+  
+  // Subscription management modal states
+  const [subModalConfig, setSubModalConfig] = React.useState<{
+    isOpen: boolean;
+    userId: string;
+    userName: string;
+    targetTier: string;
+    actionType: 'downgrade' | 'cancel';
+  }>({
+    isOpen: false,
+    userId: '',
+    userName: '',
+    targetTier: '',
+    actionType: 'downgrade'
+  });
+  const [subReason, setSubReason] = React.useState('');
+  const [isSubmittingSub, setIsSubmittingSub] = React.useState(false);
   
   // States for Edit Modal
   const [editingContest, setEditingContest] = React.useState<Contest | null>(null);
@@ -93,40 +121,76 @@ function AdminPanel() {
     setIsUpdatingRole(null);
   };
 
-  const handleDowngradeUser = async (userId: string, targetTier: string) => {
-    const reason = prompt(`Motivo obrigatório para o downgrade do usuário para o plano ${targetTier}:`);
-    if (!reason) {
-      toast.error('Motivo é obrigatório para realizar esta ação.');
-      return;
-    }
-
-    setIsUpdatingSubscription(userId);
-    const success = await MockService.downgradeSubscription(userId, targetTier, reason);
-    if (success) {
-      toast.success(`Downgrade para ${targetTier} realizado!`);
-      loadData();
-    } else {
-      toast.error('Erro ao realizar downgrade');
-    }
-    setIsUpdatingSubscription(null);
+  const handleDowngradeUser = (user: UserProfile, targetTier: string) => {
+    setSubModalConfig({
+      isOpen: true,
+      userId: user.id,
+      userName: user.full_name || user.email || 'Usuário',
+      targetTier: targetTier,
+      actionType: 'downgrade'
+    });
+    setSubReason('');
   };
 
-  const handleCancelUserSubscription = async (userId: string) => {
-    const reason = prompt('Motivo obrigatório para o cancelamento da assinatura deste usuário:');
-    if (!reason) {
+  const handleCancelUserSubscription = (user: UserProfile) => {
+    setSubModalConfig({
+      isOpen: true,
+      userId: user.id,
+      userName: user.full_name || user.email || 'Usuário',
+      targetTier: 'free',
+      actionType: 'cancel'
+    });
+    setSubReason('');
+  };
+
+  const processSubscriptionAction = async () => {
+    if (!subReason.trim()) {
       toast.error('Motivo é obrigatório para realizar esta ação.');
       return;
     }
 
-    setIsUpdatingSubscription(userId);
-    const success = await MockService.cancelSubscription(userId, reason);
-    if (success) {
-      toast.success('Assinatura cancelada!');
-      loadData();
-    } else {
-      toast.error('Erro ao cancelar assinatura');
+    setIsSubmittingSub(true);
+    try {
+      let success = false;
+      if (subModalConfig.actionType === 'downgrade') {
+        success = await MockService.downgradeSubscription(subModalConfig.userId, subModalConfig.targetTier, subReason);
+      } else {
+        success = await MockService.cancelSubscription(subModalConfig.userId, subReason);
+      }
+
+      if (success) {
+        toast.success(
+          subModalConfig.actionType === 'downgrade' 
+            ? `Downgrade para ${subModalConfig.targetTier} agendado!` 
+            : 'Cancelamento de assinatura agendado!'
+        );
+        setSubModalConfig(prev => ({ ...prev, isOpen: false }));
+        loadData();
+      } else {
+        toast.error('Erro ao processar solicitação.');
+      }
+    } finally {
+      setIsSubmittingSub(false);
     }
-    setIsUpdatingSubscription(null);
+  };
+
+  const handleExportAuditCSV = async () => {
+    const csv = await MockService.exportSubscriptionLogsToCSV();
+    if (!csv) {
+      toast.error('Nenhum log encontrado para exportar.');
+      return;
+    }
+
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `auditoria_assinaturas_${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success('Histórico exportado com sucesso!');
   };
 
   React.useEffect(() => {
@@ -679,7 +743,7 @@ function AdminPanel() {
                                     variant="ghost" 
                                     size="sm" 
                                     className="h-7 px-2 text-[10px] text-amber-600"
-                                    onClick={() => handleDowngradeUser(u.id, 'essential')}
+                                    onClick={() => handleDowngradeUser(u, 'essential')}
                                     disabled={isUpdatingSubscription === u.id || u.subscription_tier === 'essential'}
                                   >
                                     Downgrade
@@ -688,7 +752,7 @@ function AdminPanel() {
                                     variant="ghost" 
                                     size="sm" 
                                     className="h-7 px-2 text-[10px] text-rose-600"
-                                    onClick={() => handleCancelUserSubscription(u.id)}
+                                    onClick={() => handleCancelUserSubscription(u)}
                                     disabled={isUpdatingSubscription === u.id}
                                   >
                                     Cancelar
@@ -712,14 +776,19 @@ function AdminPanel() {
 
         <TabsContent value="audit" className="mt-6 space-y-4">
           <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <HistoryIcon className="h-5 w-5 text-primary" />
-                Logs de Auditoria
-              </CardTitle>
-              <CardDescription>
-                Histórico completo de alterações realizadas por administradores.
-              </CardDescription>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0">
+              <div>
+                <CardTitle className="flex items-center gap-2">
+                  <HistoryIcon className="h-5 w-5 text-primary" />
+                  Logs de Auditoria
+                </CardTitle>
+                <CardDescription>
+                  Histórico completo de alterações realizadas por administradores.
+                </CardDescription>
+              </div>
+              <Button variant="outline" size="sm" className="gap-2" onClick={handleExportAuditCSV}>
+                <Download className="h-4 w-4" /> Exportar CSV
+              </Button>
             </CardHeader>
             <CardContent>
               <div className="rounded-md border overflow-x-auto">
@@ -824,6 +893,57 @@ function AdminPanel() {
           </Card>
         </div>
       )}
+
+      {/* Subscription Action Confirmation Modal */}
+      <Dialog 
+        open={subModalConfig.isOpen} 
+        onOpenChange={(open) => !isSubmittingSub && setSubModalConfig(prev => ({ ...prev, isOpen: open }))}
+      >
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>
+              {subModalConfig.actionType === 'downgrade' ? 'Confirmar Downgrade' : 'Confirmar Cancelamento'}
+            </DialogTitle>
+            <DialogDescription>
+              {subModalConfig.actionType === 'downgrade' 
+                ? `Você está alterando o plano de ${subModalConfig.userName} para ${subModalConfig.targetTier.toUpperCase()}.`
+                : `Você está encerrando a assinatura Premium de ${subModalConfig.userName}.`}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div className="space-y-2">
+              <Label htmlFor="reason" className="text-destructive">Motivo da Alteração (Obrigatório)</Label>
+              <Textarea 
+                id="reason" 
+                placeholder="Ex: Solicitação via ticket #123, falta de pagamento, etc."
+                value={subReason}
+                onChange={(e) => setSubReason(e.target.value)}
+                className="min-h-[100px]"
+              />
+            </div>
+            <div className="bg-muted p-3 rounded-md text-[11px] space-y-1">
+              <p className="font-bold">Informações Importantes:</p>
+              <ul className="list-disc pl-4 space-y-1">
+                <li>A alteração terá data efetiva de 30 dias a partir de hoje.</li>
+                <li>Um e-mail de confirmação será enviado automaticamente ao usuário.</li>
+                <li>Este evento será registrado permanentemente no log de auditoria.</li>
+              </ul>
+            </div>
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setSubModalConfig(prev => ({ ...prev, isOpen: false }))} disabled={isSubmittingSub}>
+              Voltar
+            </Button>
+            <Button 
+              variant={subModalConfig.actionType === 'downgrade' ? 'default' : 'destructive'}
+              onClick={processSubscriptionAction}
+              disabled={isSubmittingSub || !subReason.trim()}
+            >
+              {isSubmittingSub ? 'Processando...' : 'Confirmar e Agendar'}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
