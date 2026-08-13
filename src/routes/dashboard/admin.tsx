@@ -253,10 +253,22 @@ function AdminPanel() {
               </Button>
             </CardHeader>
             <CardContent>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="relative flex-1 max-w-sm">
+              <div className="flex flex-col md:flex-row items-center gap-4 mb-4">
+                <div className="relative flex-1 max-w-sm w-full">
                   <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
                   <Input placeholder="Buscar por texto da questão..." className="pl-9" />
+                </div>
+                <div className="flex items-center gap-2">
+                  <select 
+                    className="h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                    onChange={(e) => {
+                      // Filter logic for teacherComment
+                    }}
+                  >
+                    <option value="all">Todas as Questões</option>
+                    <option value="with_comment">Com Comentário</option>
+                    <option value="without_comment">Sem Comentário</option>
+                  </select>
                 </div>
               </div>
 
@@ -329,30 +341,49 @@ function AdminPanel() {
               <CardDescription>Cadastre explicações estruturadas com suporte a formatação HTML.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Selecione a Questão</label>
-                <select className="w-full p-2 rounded-md border bg-background text-sm">
-                  <option>Selecione uma questão para comentar...</option>
-                  {questions.slice(0, 5).map(q => (
-                    <option key={q.id}>{q.text.substring(0, 60)}...</option>
-                  ))}
-                </select>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Selecione a Questão</label>
+                  <select className="w-full p-2 rounded-md border bg-background text-sm">
+                    <option>Selecione uma questão para comentar...</option>
+                    {questions.slice(0, 5).map(q => (
+                      <option key={q.id}>{q.text.substring(0, 60)}...</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Histórico de Versões</label>
+                  <select className="w-full p-2 rounded-md border bg-background text-sm">
+                    <option>Última versão (Atual)</option>
+                    <option>12/08/2026 - Admin Silva</option>
+                    <option>10/08/2026 - Admin Costa</option>
+                  </select>
+                </div>
               </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Comentário do Professor</label>
-                <div className="border rounded-md overflow-hidden">
-                  <div className="bg-muted p-2 border-b flex gap-2">
-                    <Button variant="ghost" size="sm" className="h-7 w-7 p-0 font-bold">B</Button>
-                    <Button variant="ghost" size="sm" className="h-7 w-7 p-0 italic">I</Button>
-                    <Button variant="ghost" size="sm" className="h-7 w-7 p-0 underline">U</Button>
-                    <div className="w-px h-4 bg-border self-center mx-1" />
-                    <Button variant="ghost" size="sm" className="h-7 px-2 text-[10px]">Lista</Button>
-                    <Button variant="ghost" size="sm" className="h-7 px-2 text-[10px]">Link</Button>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Comentário do Professor</label>
+                  <div className="border rounded-md overflow-hidden flex flex-col h-full">
+                    <div className="bg-muted p-2 border-b flex gap-2">
+                      <Button variant="ghost" size="sm" className="h-7 w-7 p-0 font-bold">B</Button>
+                      <Button variant="ghost" size="sm" className="h-7 w-7 p-0 italic">I</Button>
+                      <Button variant="ghost" size="sm" className="h-7 w-7 p-0 underline">U</Button>
+                      <div className="w-px h-4 bg-border self-center mx-1" />
+                      <Button variant="ghost" size="sm" className="h-7 px-2 text-[10px]">Lista</Button>
+                      <Button variant="ghost" size="sm" className="h-7 px-2 text-[10px]">Link</Button>
+                    </div>
+                    <textarea 
+                      className="w-full p-4 flex-1 min-h-[250px] text-sm focus:outline-none bg-background resize-none"
+                      placeholder="Digite o comentário estruturado aqui (suporta HTML)..."
+                    />
                   </div>
-                  <textarea 
-                    className="w-full p-4 min-h-[200px] text-sm focus:outline-none bg-background"
-                    placeholder="Digite o comentário estruturado aqui (suporta HTML)..."
-                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Visualização em Tempo Real (Prévia)</label>
+                  <div className="border rounded-md p-4 bg-muted/20 min-h-[250px] overflow-auto prose prose-sm dark:prose-invert max-w-none">
+                    <p className="text-muted-foreground italic text-xs">A prévia da formatação aparecerá aqui enquanto você digita...</p>
+                  </div>
                 </div>
               </div>
               <div className="flex justify-end gap-2">

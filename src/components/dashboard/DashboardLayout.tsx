@@ -16,7 +16,9 @@ import {
   Settings,
   Bell,
   AlertCircle,
-  LogOut
+  LogOut,
+  Moon,
+  Sun
 } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
@@ -60,6 +62,25 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const { user } = useAuthStatus();
 
 
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
+
+  React.useEffect(() => {
+    const isDark = document.documentElement.classList.contains('dark');
+    setIsDarkMode(isDark);
+  }, []);
+
+  const toggleTheme = () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    if (newMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+
   return (
     <div className="flex min-h-screen bg-background">
       {/* Sidebar Desktop */}
@@ -71,14 +92,24 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       >
         <div className="p-6 flex items-center justify-between">
           {!isCollapsed && <span className="text-xl font-bold text-primary">Norte</span>}
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            onClick={() => setIsCollapsed(!isCollapsed)}
-            className="ml-auto"
-          >
-            {isCollapsed ? <ChevronRight /> : <ChevronLeft />}
-          </Button>
+          <div className="flex items-center gap-1">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={toggleTheme}
+              className="h-8 w-8"
+            >
+              {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </Button>
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={() => setIsCollapsed(!isCollapsed)}
+              className="h-8 w-8"
+            >
+              {isCollapsed ? <ChevronRight /> : <ChevronLeft />}
+            </Button>
+          </div>
         </div>
 
         <nav className="flex-1 px-3 space-y-1">
