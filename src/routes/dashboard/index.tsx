@@ -46,26 +46,41 @@ function DashboardIndex() {
     notebook: false,
     plan: false
   });
+  const [isUpdatingTour, setIsUpdatingTour] = React.useState(false);
 
   React.useEffect(() => {
-    const tourDone = localStorage.getItem('norte_onboarding_done');
-    if (!tourDone) {
-      setShowTour(true);
-    }
+    const fetchOnboarding = async () => {
+      const status = await MockService.getOnboardingStatus();
+      if (!status.onboarding_done) {
+        setShowTour(true);
+      }
 
-    // Check completion status
-    const storedContest = localStorage.getItem('norte_focused_contest');
-    const storedNotebooks = JSON.parse(localStorage.getItem('norte_notebooks') || '[]');
-    setChecklist({
-      contest: !!storedContest,
-      notebook: storedNotebooks.length > 0,
-      plan: user?.role !== 'free'
-    });
+      // Sync with local reality if needed
+      const storedContest = localStorage.getItem('norte_focused_contest');
+      const storedNotebooks = JSON.parse(localStorage.getItem('norte_notebooks') || '[]');
+      
+      const currentSteps = {
+        contest: !!storedContest,
+        notebook: storedNotebooks.length > 0,
+        plan: user?.role !== 'free'
+      };
+
+      setChecklist(currentSteps);
+
+      // Sincronizar se o banco estiver desatualizado e estivermos logados
+      if (user && JSON.stringify(status.onboarding_steps) !== JSON.stringify(currentSteps)) {
+        MockService.updateOnboardingStatus({ onboarding_steps: currentSteps });
+      }
+    };
+
+    fetchOnboarding();
   }, [user]);
 
-  const completeTour = () => {
-    localStorage.setItem('norte_onboarding_done', 'true');
+  const completeTour = async () => {
+    setIsUpdatingTour(true);
+    await MockService.updateOnboardingStatus({ onboarding_done: true });
     setShowTour(false);
+    setIsUpdatingTour(false);
     toast.success("Tour finalizado! Boa sorte nos estudos.");
   };
 
