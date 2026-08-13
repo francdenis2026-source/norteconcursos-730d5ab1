@@ -18,7 +18,8 @@ import {
   AlertCircle,
   LogOut,
   Moon,
-  Sun
+  Sun,
+  Flame
 } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
@@ -34,6 +35,13 @@ import {
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { MockService } from '@/services/mockService';
+import { 
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 
 const menuItems = [
@@ -60,6 +68,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
   const location = useLocation();
   const { user } = useAuthStatus();
+  const [streak, setStreak] = React.useState<any>(null);
 
 
   const [isDarkMode, setIsDarkMode] = React.useState(false);
@@ -67,6 +76,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   React.useEffect(() => {
     const isDark = document.documentElement.classList.contains('dark');
     setIsDarkMode(isDark);
+    
+    const loadStreak = async () => {
+      const s = await MockService.getUserStreak();
+      setStreak(s);
+    };
+    loadStreak();
   }, []);
 
   const toggleTheme = () => {
@@ -112,7 +127,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </div>
         </div>
 
-        <nav className="flex-1 px-3 space-y-1">
+        <nav className="flex-1 px-3 space-y-1 overflow-y-auto">
           {menuItems.map((item) => (
             <Link
               key={item.href}
@@ -131,12 +146,33 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         </nav>
 
         <div className="p-4 border-t">
+          {!isCollapsed && (
+            <div className="mb-4 space-y-2">
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="flex items-center justify-between px-3 py-2 bg-orange-50 dark:bg-orange-950/30 rounded-lg border border-orange-200 dark:border-orange-800/50">
+                      <div className="flex items-center gap-2">
+                        <Flame className="h-4 w-4 text-orange-500 fill-orange-500" />
+                        <span className="text-xs font-bold text-orange-700 dark:text-orange-400">Ofensiva</span>
+                      </div>
+                      <span className="text-sm font-black text-orange-700 dark:text-orange-400">{streak?.currentStreak || 0}d</span>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p className="text-[10px]">Continue estudando diariamente para manter sua ofensiva!</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
+          )}
+
           <div className={cn("flex items-center gap-3", isCollapsed ? "justify-center" : "")}>
             <div className="h-8 w-8 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground font-bold">
               {user?.name?.substring(0, 2).toUpperCase() || 'JS'}
             </div>
             {!isCollapsed && (
-              <div className="flex flex-col">
+              <div className="flex flex-col overflow-hidden">
                 <span className="text-xs font-bold truncate">{user?.name || 'João Silva'}</span>
                 <span className="text-[10px] text-muted-foreground">Plano {user?.role || 'Plus'}</span>
               </div>
@@ -149,7 +185,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       {/* Main Content */}
       <main className="flex-1 flex flex-col min-h-screen overflow-hidden">
         {/* Top Banner Demonstrativo */}
-        <div className="bg-emerald-50 border-b border-emerald-100 px-4 py-1.5 text-center flex items-center justify-center gap-2">
+        <div className="bg-emerald-50 border-b border-emerald-100 px-4 py-1.5 text-center flex items-center justify-center gap-2 no-print">
           <div className="h-2 w-2 rounded-full bg-emerald-500" />
           <p className="text-[10px] md:text-xs text-emerald-800 font-bold uppercase tracking-wider">
             Conexão Supabase Ativa — Sincronização Híbrida
@@ -161,7 +197,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         </div>
 
         {/* Bottom Nav Mobile */}
-        <nav className="md:hidden border-t bg-card px-4 py-2 flex items-center justify-between sticky bottom-0 z-50">
+        <nav className="md:hidden border-t bg-card px-4 py-2 flex items-center justify-between sticky bottom-0 z-50 no-print">
           <Link to="/dashboard" className="flex flex-col items-center gap-1 text-[10px] text-muted-foreground">
             <LayoutDashboard className="h-5 w-5" />
             <span>Início</span>
@@ -184,28 +220,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </Link>
         </nav>
       </main>
-    </div>
-  );
-}
-
-function NotificationItem({ title, desc, time, icon: Icon, color, priority }: any) {
-  return (
-    <div className={cn(
-      "p-4 border-b last:border-0 hover:bg-muted/50 transition-colors cursor-pointer",
-      priority ? "bg-rose-50/30" : ""
-    )}>
-      <div className="flex gap-3">
-        <div className={cn("p-2 rounded-lg bg-background border shrink-0 h-fit", color)}>
-          <Icon className="h-4 w-4" />
-        </div>
-        <div className="flex flex-col gap-0.5 overflow-hidden">
-          <div className="flex justify-between items-center gap-2">
-            <span className="text-xs font-black truncate">{title}</span>
-            <span className="text-[9px] text-muted-foreground whitespace-nowrap">{time}</span>
-          </div>
-          <p className="text-[10px] text-muted-foreground line-clamp-2 leading-relaxed">{desc}</p>
-        </div>
-      </div>
     </div>
   );
 }

@@ -50,6 +50,8 @@ export interface Question {
   correctAnswer?: boolean; // For Certo/Errado
   explanation: string;
   teacherComment?: string;
+  theoryLinks?: { title: string, url: string }[];
+  media?: { id: string, file_path: string, media_type: string, label?: string }[];
   disciplineId: string;
   subjectId: string;
   difficulty: Difficulty;
@@ -103,4 +105,18 @@ export interface PerformanceStats {
     total: number;
     correct: number;
   }[];
+}
+
+export interface UserStreak {
+  currentStreak: number;
+  longestStreak: number;
+  lastActivityDate: string;
+}
+
+export interface Achievement {
+  id: string;
+  code: string;
+  name: string;
+  description: string;
+  icon_url: string;
 }
