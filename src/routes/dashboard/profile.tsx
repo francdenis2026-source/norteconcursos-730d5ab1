@@ -27,6 +27,9 @@ function ProfilePage() {
   const [isUpdating, setIsUpdating] = React.useState(false);
   const [isVerifying, setIsVerifying] = React.useState(false);
   const [isRedirecting, setIsRedirecting] = React.useState(false);
+  const [isActivating, setIsActivating] = React.useState(false);
+  const [auditLogs, setAuditLogs] = React.useState<any[]>([]);
+  const [activationCode, setActivationCode] = React.useState('');
   
   const checkout = useServerFn(createCheckoutSession);
   const portal = useServerFn(createPortalSession);
