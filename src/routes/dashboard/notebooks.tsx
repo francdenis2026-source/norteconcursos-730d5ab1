@@ -13,7 +13,9 @@ import {
   Search,
   Filter,
   CheckCircle2,
-  XCircle
+  XCircle,
+  Download,
+  Printer
 } from 'lucide-react';
 import { 
   DropdownMenu, 
@@ -80,6 +82,14 @@ function NotebooksPage() {
     setNotebooks(updated);
     localStorage.setItem('norte_notebooks', JSON.stringify(updated));
     toast.success("Caderno criado com sucesso!");
+    loadData();
+  };
+
+  const handleExportPDF = (notebook: Notebook) => {
+    toast.success(`Gerando PDF do caderno: ${notebook.name}`);
+    setTimeout(() => {
+      window.print();
+    }, 1000);
   };
 
   const filteredNotebooks = notebooks.filter(nb => 
@@ -157,6 +167,9 @@ function NotebooksPage() {
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
+                    <DropdownMenuItem className="gap-2" onClick={() => handleExportPDF(nb)}>
+                      <Printer className="h-4 w-4" /> Imprimir / PDF
+                    </DropdownMenuItem>
                     <DropdownMenuItem className="gap-2">
                       <Edit3 className="h-4 w-4" /> Renomear
                     </DropdownMenuItem>
