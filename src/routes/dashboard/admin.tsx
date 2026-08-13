@@ -29,7 +29,7 @@ import {
 } from '@/components/ui/table';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { MockService } from '@/services/mockService';
-import { Contest, Question } from '@/types';
+import { Contest, Question, UserProfile } from '@/types';
 import { toast } from 'sonner';
 import { Link } from '@tanstack/react-router';
 import { CardFooter } from '@/components/ui/card';
