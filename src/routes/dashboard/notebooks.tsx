@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/dashboard/notebooks')({
-  component: () => <Placeholder title="Meus Cadernos" />
+  component: NotebooksPage
 });
 
 function Placeholder({ title }: { title: string }) {
