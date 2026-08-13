@@ -653,7 +653,7 @@ function AdminPanel() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <History className="h-5 w-5 text-primary" />
+                <HistoryIcon className="h-5 w-5 text-primary" />
                 Logs de Auditoria
               </CardTitle>
               <CardDescription>
