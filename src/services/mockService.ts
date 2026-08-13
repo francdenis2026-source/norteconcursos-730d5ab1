@@ -130,7 +130,6 @@ export const MockService = {
 
   resetDemo: () => {
     localStorage.clear();
-  }
   },
 
   // Admin CRUD operations
