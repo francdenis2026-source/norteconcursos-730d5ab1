@@ -48,7 +48,10 @@ function QuestionsCatalog() {
       // Daily Limit Check
       const responses = MockService.getUserResponses();
       const today = new Date().toISOString().split('T')[0];
-      const todayCount = responses.filter(r => (r.createdAt || "").startsWith(today)).length;
+      const todayCount = responses.filter(r => {
+        const date = r.createdAt as string | undefined;
+        return date && date.startsWith(today);
+      }).length;
       
       const tier = user?.role || 'free';
       const limit = tier === 'free' ? 10 : (tier === 'essential' ? 100 : Infinity);
