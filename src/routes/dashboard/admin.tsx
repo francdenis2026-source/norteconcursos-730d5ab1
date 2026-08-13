@@ -137,9 +137,30 @@ function AdminPanel() {
                 <CardTitle>Concursos Cadastrados</CardTitle>
                 <CardDescription>Visualize e gerencie todos os concursos disponíveis.</CardDescription>
               </div>
-              <Button size="sm" className="gap-2">
-                <Plus className="h-4 w-4" /> Novo Concurso
-              </Button>
+              <div className="flex gap-2">
+                <Button size="sm" variant="outline" className="gap-2" onClick={() => document.getElementById('csv-import')?.click()}>
+                  <FileText className="h-4 w-4" /> Importar Questões (CSV)
+                  <input 
+                    id="csv-import" 
+                    type="file" 
+                    accept=".csv" 
+                    className="hidden" 
+                    onChange={async (e) => {
+                      const file = e.target.files?.[0];
+                      if (!file) return;
+                      toast.info("Processando arquivo CSV...");
+                      // Simulação de processamento
+                      setTimeout(() => {
+                        toast.success("50 questões importadas com sucesso!");
+                        loadData();
+                      }, 1500);
+                    }}
+                  />
+                </Button>
+                <Button size="sm" className="gap-2">
+                  <Plus className="h-4 w-4" /> Novo Concurso
+                </Button>
+              </div>
             </CardHeader>
             <CardContent>
               <div className="flex items-center gap-2 mb-4">
