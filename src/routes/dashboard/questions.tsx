@@ -57,6 +57,7 @@ function QuestionsCatalog() {
       const limit = userRole === 'free' ? 10 : (userRole === 'essential' ? 100 : Infinity);
       
       if (todayCount >= (limit as number)) {
+        await MockService.logAccessAttempt('questions_daily_limit', userRole, true, { count: todayCount, limit });
         toast.error(
           <div className="flex flex-col gap-1">
             <p className="font-bold">Limite diário atingido</p>

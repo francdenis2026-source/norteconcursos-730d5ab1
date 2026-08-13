@@ -37,6 +37,8 @@ function NotebooksPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [disciplineFilter, setDisciplineFilter] = useState<string>('all');
+  const [statusFilter, setStatusFilter] = useState<'all' | 'favorited' | 'marked'>('all');
+  const [sortBy, setSortBy] = useState<'name' | 'date' | 'questions'>('date');
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
 
   useEffect(() => {
@@ -152,10 +154,16 @@ function NotebooksPage() {
     }, 500);
   };
 
-  const filteredNotebooks = notebooks.filter(nb => 
-    nb.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    nb.description?.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredNotebooks = notebooks
+    .filter(nb => 
+      nb.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      nb.description?.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .sort((a, b) => {
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
+      if (sortBy === 'questions') return b.questionIds.length - a.questionIds.length;
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    });
 
   return (
     <div className="space-y-6">
