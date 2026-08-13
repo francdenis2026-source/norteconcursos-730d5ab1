@@ -92,23 +92,31 @@ export const questions: Question[] = [
 
 // Preencher com 40 questões conforme solicitado
 for (let i = 3; i <= 42; i++) {
-  const disc = disciplines[i % disciplines.length];
-  questions.push({
+  const disc = disciplines[i % disciplines.length] || disciplines[0];
+  const isCertoErrado = i % 3 === 0;
+  
+  const question: Question = {
     id: `q${i}`,
     text: `Questão demonstrativa ${i} sobre ${disc.name}. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-    type: i % 3 === 0 ? 'Certo ou Errado' : 'Múltipla Escolha',
-    options: i % 3 === 0 ? undefined : [
-      { id: 'a', text: 'Alternativa A', isCorrect: true },
-      { id: 'b', text: 'Alternativa B', isCorrect: false },
-      { id: 'c', text: 'Alternativa C', isCorrect: false },
-      { id: 'd', text: 'Alternativa D', isCorrect: false },
-      { id: 'e', text: 'Alternativa E', isCorrect: false },
-    ],
-    correctAnswer: i % 3 === 0 ? true : undefined,
+    type: isCertoErrado ? 'Certo ou Errado' : 'Múltipla Escolha',
     explanation: `Explicação detalhada da questão ${i}. Esta é uma questão de demonstração.`,
     disciplineId: disc.id,
     subjectId: `s${i}`,
     difficulty: i % 2 === 0 ? 'Média' : 'Difícil',
     isDemo: true
-  });
+  };
+
+  if (isCertoErrado) {
+    question.correctAnswer = true;
+  } else {
+    question.options = [
+      { id: 'a', text: 'Alternativa A', isCorrect: true },
+      { id: 'b', text: 'Alternativa B', isCorrect: false },
+      { id: 'c', text: 'Alternativa C', isCorrect: false },
+      { id: 'd', text: 'Alternativa D', isCorrect: false },
+      { id: 'e', text: 'Alternativa E', isCorrect: false },
+    ];
+  }
+  
+  questions.push(question);
 }
