@@ -15,6 +15,15 @@ import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
+import { Route as DashboardErrorsRouteImport } from './routes/dashboard/errors'
+import { Route as DashboardMockExamsRouteImport } from './routes/dashboard/mock-exams'
+import { Route as DashboardMyContestRouteImport } from './routes/dashboard/my-contest'
+import { Route as DashboardNotebooksRouteImport } from './routes/dashboard/notebooks'
+import { Route as DashboardPerformanceRouteImport } from './routes/dashboard/performance'
+import { Route as DashboardProfileRouteImport } from './routes/dashboard/profile'
+import { Route as DashboardQuestionsRouteImport } from './routes/dashboard/questions'
+import { Route as DashboardStudyPlanRouteImport } from './routes/dashboard/study-plan'
+import { Route as DashboardTimerRouteImport } from './routes/dashboard/timer'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +55,51 @@ const DashboardIndexRoute = DashboardIndexRouteImport.update({
   path: '/',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardErrorsRoute = DashboardErrorsRouteImport.update({
+  id: '/errors',
+  path: '/errors',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardMockExamsRoute = DashboardMockExamsRouteImport.update({
+  id: '/mock-exams',
+  path: '/mock-exams',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardMyContestRoute = DashboardMyContestRouteImport.update({
+  id: '/my-contest',
+  path: '/my-contest',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardNotebooksRoute = DashboardNotebooksRouteImport.update({
+  id: '/notebooks',
+  path: '/notebooks',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardPerformanceRoute = DashboardPerformanceRouteImport.update({
+  id: '/performance',
+  path: '/performance',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardProfileRoute = DashboardProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardQuestionsRoute = DashboardQuestionsRouteImport.update({
+  id: '/questions',
+  path: '/questions',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardStudyPlanRoute = DashboardStudyPlanRouteImport.update({
+  id: '/study-plan',
+  path: '/study-plan',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardTimerRoute = DashboardTimerRouteImport.update({
+  id: '/timer',
+  path: '/timer',
+  getParentRoute: () => DashboardRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -53,6 +107,15 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof DashboardRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/dashboard/errors': typeof DashboardErrorsRoute
+  '/dashboard/mock-exams': typeof DashboardMockExamsRoute
+  '/dashboard/my-contest': typeof DashboardMyContestRoute
+  '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/performance': typeof DashboardPerformanceRoute
+  '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/questions': typeof DashboardQuestionsRoute
+  '/dashboard/study-plan': typeof DashboardStudyPlanRoute
+  '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRoutesByTo {
@@ -60,6 +123,15 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/dashboard/errors': typeof DashboardErrorsRoute
+  '/dashboard/mock-exams': typeof DashboardMockExamsRoute
+  '/dashboard/my-contest': typeof DashboardMyContestRoute
+  '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/performance': typeof DashboardPerformanceRoute
+  '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/questions': typeof DashboardQuestionsRoute
+  '/dashboard/study-plan': typeof DashboardStudyPlanRoute
+  '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard': typeof DashboardIndexRoute
 }
 export interface FileRoutesById {
@@ -69,14 +141,51 @@ export interface FileRoutesById {
   '/dashboard': typeof DashboardRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/dashboard/errors': typeof DashboardErrorsRoute
+  '/dashboard/mock-exams': typeof DashboardMockExamsRoute
+  '/dashboard/my-contest': typeof DashboardMyContestRoute
+  '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/performance': typeof DashboardPerformanceRoute
+  '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/questions': typeof DashboardQuestionsRoute
+  '/dashboard/study-plan': typeof DashboardStudyPlanRoute
+  '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/auth' | '/dashboard' | '/privacy' | '/terms' | '/dashboard/'
+    | '/'
+    | '/auth'
+    | '/dashboard'
+    | '/privacy'
+    | '/terms'
+    | '/dashboard/errors'
+    | '/dashboard/mock-exams'
+    | '/dashboard/my-contest'
+    | '/dashboard/notebooks'
+    | '/dashboard/performance'
+    | '/dashboard/profile'
+    | '/dashboard/questions'
+    | '/dashboard/study-plan'
+    | '/dashboard/timer'
+    | '/dashboard/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/auth' | '/privacy' | '/terms' | '/dashboard'
+  to:
+    | '/'
+    | '/auth'
+    | '/privacy'
+    | '/terms'
+    | '/dashboard/errors'
+    | '/dashboard/mock-exams'
+    | '/dashboard/my-contest'
+    | '/dashboard/notebooks'
+    | '/dashboard/performance'
+    | '/dashboard/profile'
+    | '/dashboard/questions'
+    | '/dashboard/study-plan'
+    | '/dashboard/timer'
+    | '/dashboard'
   id:
     | '__root__'
     | '/'
@@ -84,6 +193,15 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/privacy'
     | '/terms'
+    | '/dashboard/errors'
+    | '/dashboard/mock-exams'
+    | '/dashboard/my-contest'
+    | '/dashboard/notebooks'
+    | '/dashboard/performance'
+    | '/dashboard/profile'
+    | '/dashboard/questions'
+    | '/dashboard/study-plan'
+    | '/dashboard/timer'
     | '/dashboard/'
   fileRoutesById: FileRoutesById
 }
@@ -139,14 +257,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardIndexRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/errors': {
+      id: '/dashboard/errors'
+      path: '/errors'
+      fullPath: '/dashboard/errors'
+      preLoaderRoute: typeof DashboardErrorsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/mock-exams': {
+      id: '/dashboard/mock-exams'
+      path: '/mock-exams'
+      fullPath: '/dashboard/mock-exams'
+      preLoaderRoute: typeof DashboardMockExamsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/my-contest': {
+      id: '/dashboard/my-contest'
+      path: '/my-contest'
+      fullPath: '/dashboard/my-contest'
+      preLoaderRoute: typeof DashboardMyContestRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/notebooks': {
+      id: '/dashboard/notebooks'
+      path: '/notebooks'
+      fullPath: '/dashboard/notebooks'
+      preLoaderRoute: typeof DashboardNotebooksRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/performance': {
+      id: '/dashboard/performance'
+      path: '/performance'
+      fullPath: '/dashboard/performance'
+      preLoaderRoute: typeof DashboardPerformanceRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/profile': {
+      id: '/dashboard/profile'
+      path: '/profile'
+      fullPath: '/dashboard/profile'
+      preLoaderRoute: typeof DashboardProfileRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/questions': {
+      id: '/dashboard/questions'
+      path: '/questions'
+      fullPath: '/dashboard/questions'
+      preLoaderRoute: typeof DashboardQuestionsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/study-plan': {
+      id: '/dashboard/study-plan'
+      path: '/study-plan'
+      fullPath: '/dashboard/study-plan'
+      preLoaderRoute: typeof DashboardStudyPlanRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/timer': {
+      id: '/dashboard/timer'
+      path: '/timer'
+      fullPath: '/dashboard/timer'
+      preLoaderRoute: typeof DashboardTimerRouteImport
+      parentRoute: typeof DashboardRoute
+    }
   }
 }
 
 interface DashboardRouteChildren {
+  DashboardErrorsRoute: typeof DashboardErrorsRoute
+  DashboardMockExamsRoute: typeof DashboardMockExamsRoute
+  DashboardMyContestRoute: typeof DashboardMyContestRoute
+  DashboardNotebooksRoute: typeof DashboardNotebooksRoute
+  DashboardPerformanceRoute: typeof DashboardPerformanceRoute
+  DashboardProfileRoute: typeof DashboardProfileRoute
+  DashboardQuestionsRoute: typeof DashboardQuestionsRoute
+  DashboardStudyPlanRoute: typeof DashboardStudyPlanRoute
+  DashboardTimerRoute: typeof DashboardTimerRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
 }
 
 const DashboardRouteChildren: DashboardRouteChildren = {
+  DashboardErrorsRoute: DashboardErrorsRoute,
+  DashboardMockExamsRoute: DashboardMockExamsRoute,
+  DashboardMyContestRoute: DashboardMyContestRoute,
+  DashboardNotebooksRoute: DashboardNotebooksRoute,
+  DashboardPerformanceRoute: DashboardPerformanceRoute,
+  DashboardProfileRoute: DashboardProfileRoute,
+  DashboardQuestionsRoute: DashboardQuestionsRoute,
+  DashboardStudyPlanRoute: DashboardStudyPlanRoute,
+  DashboardTimerRoute: DashboardTimerRoute,
   DashboardIndexRoute: DashboardIndexRoute,
 }
 
