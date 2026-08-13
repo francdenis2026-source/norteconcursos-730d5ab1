@@ -9,7 +9,9 @@ import {
   GraduationCap,
   ShieldCheck,
   Settings,
-  CreditCard 
+  CreditCard,
+  History,
+  UserCheck 
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -35,10 +37,14 @@ export const Route = createFileRoute('/dashboard/admin')({
 });
 
 
+import { useAuthStatus } from '@/hooks/useDashboard';
+
 function AdminPanel() {
+  const { user } = useAuthStatus();
   const [contests, setContests] = React.useState<Contest[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [subscriptionPlans, setSubscriptionPlans] = React.useState<any[]>([]);
+  const [auditLogs, setAuditLogs] = React.useState<any[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState('');
   
@@ -49,14 +55,16 @@ function AdminPanel() {
 
   const loadData = async () => {
     setIsLoading(true);
-    const [c, q, p] = await Promise.all([
+    const [c, q, p, logs] = await Promise.all([
       MockService.getContests(),
       MockService.getQuestions(),
-      (MockService as any).getSubscriptionPlans?.() || []
+      (MockService as any).getSubscriptionPlans?.() || [],
+      (MockService as any).getAdminAuditLogs?.() || []
     ]);
     setContests(c);
     setQuestions(q);
     setSubscriptionPlans(p);
+    setAuditLogs(logs);
     setIsLoading(false);
   };
 
@@ -115,10 +123,11 @@ function AdminPanel() {
       </div>
 
       <Tabs defaultValue="contests" className="w-full">
-        <TabsList className="grid w-full max-w-2xl grid-cols-3">
+        <TabsList className="grid w-full max-w-3xl grid-cols-4">
           <TabsTrigger value="contests">Concursos</TabsTrigger>
           <TabsTrigger value="questions">Questões</TabsTrigger>
-          <TabsTrigger value="subscriptions">Planos e Assinaturas</TabsTrigger>
+          <TabsTrigger value="subscriptions">Planos</TabsTrigger>
+          <TabsTrigger value="audit">Histórico/Auditoria</TabsTrigger>
         </TabsList>
 
         <TabsContent value="contests" className="mt-6 space-y-4">
@@ -332,7 +341,7 @@ function AdminPanel() {
                               defaultValue={plan.price} 
                               onBlur={async (e) => {
                                 const val = parseFloat(e.target.value);
-                                await (MockService as any).updateSubscriptionPlan(plan.id, { price: val });
+                                await (MockService as any).updateSubscriptionPlan(plan.id, { price: val }, user?.id);
                                 toast.success(`Preço do plano ${plan.id} atualizado`);
                               }}
                             />
@@ -348,6 +357,73 @@ function AdminPanel() {
                             <Button variant="outline" size="sm" className="gap-2">
                               <Settings className="h-4 w-4" /> Detalhes
                             </Button>
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
+                  </TableBody>
+                </Table>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="audit" className="mt-6 space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <History className="h-5 w-5 text-primary" />
+                Logs de Auditoria
+              </CardTitle>
+              <CardDescription>
+                Histórico completo de alterações realizadas por administradores.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="rounded-md border overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Data</TableHead>
+                      <TableHead>Admin</TableHead>
+                      <TableHead>Ação</TableHead>
+                      <TableHead>Entidade</TableHead>
+                      <TableHead>Mudanças</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {auditLogs.length === 0 ? (
+                      <TableRow>
+                        <TableCell colSpan={5} className="text-center py-8 text-muted-foreground">
+                          Nenhum log de auditoria encontrado.
+                        </TableCell>
+                      </TableRow>
+                    ) : (
+                      auditLogs.map((log) => (
+                        <TableRow key={log.id}>
+                          <TableCell className="text-xs whitespace-nowrap">
+                            {new Date(log.created_at).toLocaleString('pt-BR')}
+                          </TableCell>
+                          <TableCell>
+                            <div className="flex flex-col">
+                              <span className="text-sm font-medium">{log.admin?.full_name || 'Admin'}</span>
+                              <span className="text-[10px] text-muted-foreground">{log.admin?.email}</span>
+                            </div>
+                          </TableCell>
+                          <TableCell>
+                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-primary/10 text-primary">
+                              {log.action}
+                            </span>
+                          </TableCell>
+                          <TableCell className="text-xs">
+                            {log.entity_type}: {log.entity_id}
+                          </TableCell>
+                          <TableCell>
+                            <div className="max-w-[300px]">
+                              <code className="text-[10px] block p-2 bg-muted rounded truncate" title={JSON.stringify(log.new_values)}>
+                                {JSON.stringify(log.new_values)}
+                              </code>
+                            </div>
                           </TableCell>
                         </TableRow>
                       ))
