@@ -422,6 +422,9 @@ function ProfilePage() {
                     <div className="flex flex-col">
                       <span className="text-sm font-medium capitalize">{log.event_type.replace('_', ' ')}</span>
                       <span className="text-[10px] text-muted-foreground">{new Date(log.created_at).toLocaleString()}</span>
+                      {log.metadata?.reason && (
+                        <span className="text-[9px] text-rose-500/80 mt-0.5 italic">Motivo: {log.metadata.reason}</span>
+                      )}
                     </div>
                     <Badge variant="outline" className="uppercase text-[9px]">
                       {log.new_tier}
