@@ -293,6 +293,24 @@ export const MockService = {
     }
   },
 
+  // Access Logging
+  logAccessAttempt: async (featureKey: string, tier: string, wasBlocked: boolean, metadata: any = {}) => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        await supabase.from('access_audit_logs').insert({
+          user_id: session.user.id,
+          feature_key: featureKey,
+          tier,
+          was_blocked: wasBlocked,
+          metadata
+        });
+      }
+    } catch (e) {
+      console.error('Error logging access attempt:', e);
+    }
+  },
+
   // Onboarding
   getOnboardingStatus: async () => {
     try {
