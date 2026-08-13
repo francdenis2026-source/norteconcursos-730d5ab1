@@ -528,6 +528,62 @@ function AdminPanel() {
           </Card>
         </TabsContent>
 
+        <TabsContent value="users" className="mt-6 space-y-4">
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0">
+              <div>
+                <CardTitle>Gestão de Usuários</CardTitle>
+                <CardDescription>Crie e gerencie contas de estudantes.</CardDescription>
+              </div>
+              <Button size="sm" className="gap-2" onClick={() => {
+                const name = prompt("Nome do Usuário:");
+                const email = prompt("E-mail:");
+                const pass = prompt("Senha:");
+                if (name && email && pass) {
+                  toast.success(`Usuário ${name} criado com sucesso (Simulado)!`);
+                }
+              }}>
+                <UserCheck className="h-4 w-4" /> Novo Usuário
+              </Button>
+            </CardHeader>
+            <CardContent>
+              <div className="rounded-md border overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Nome</TableHead>
+                      <TableHead>E-mail</TableHead>
+                      <TableHead>Plano</TableHead>
+                      <TableHead>Status</TableHead>
+                      <TableHead className="text-right">Ações</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Franc D'nis</TableCell>
+                      <TableCell>francdenisbr@gmail.com</TableCell>
+                      <TableCell><Badge>Premium</Badge></TableCell>
+                      <TableCell><Badge variant="outline" className="text-emerald-600">Ativo</Badge></TableCell>
+                      <TableCell className="text-right">
+                        <Button variant="ghost" size="sm">Editar</Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Estudante Demo</TableCell>
+                      <TableCell>estudante@demo.com</TableCell>
+                      <TableCell><Badge variant="secondary">Free</Badge></TableCell>
+                      <TableCell><Badge variant="outline" className="text-amber-600">Pendente</Badge></TableCell>
+                      <TableCell className="text-right">
+                        <Button variant="ghost" size="sm">Editar</Button>
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
         <TabsContent value="audit" className="mt-6 space-y-4">
           <Card>
             <CardHeader>
