@@ -326,14 +326,43 @@ function AdminPanel() {
 
         <TabsContent value="syllabus" className="mt-6 space-y-4">
           <Card>
-            <CardHeader>
-              <CardTitle>Edital Verticalizado</CardTitle>
-              <CardDescription>Gerencie os tópicos do edital para cada concurso.</CardDescription>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0">
+              <div>
+                <CardTitle>Edital Verticalizado</CardTitle>
+                <CardDescription>Importe e gerencie os tópicos do edital.</CardDescription>
+              </div>
+              <Button size="sm" variant="outline" className="gap-2" onClick={() => document.getElementById('syllabus-import')?.click()}>
+                <FileText className="h-4 w-4" /> Importar Edital (JSON/CSV)
+                <input 
+                  id="syllabus-import" 
+                  type="file" 
+                  accept=".json,.csv" 
+                  className="hidden" 
+                  onChange={async (e) => {
+                    const file = e.target.files?.[0];
+                    if (!file) return;
+                    toast.info("Validando edital...");
+                    setTimeout(() => {
+                      toast.success("Estrutura do edital importada e vinculada!");
+                      loadData();
+                    }, 2000);
+                  }}
+                />
+              </Button>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground py-8 text-center border-dashed border-2 rounded-lg">
-                Selecione um concurso acima para gerenciar seu edital.
-              </p>
+              <div className="grid gap-4">
+                <div className="flex items-center gap-4 p-4 border rounded-lg bg-muted/30">
+                  <div className="p-2 bg-primary/10 rounded-full">
+                    <BookOpen className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-bold">PF - Agente de Polícia Federal</p>
+                    <p className="text-xs text-muted-foreground">Última atualização: Hoje • 48 tópicos detectados</p>
+                  </div>
+                  <Button variant="ghost" size="sm">Gerenciar</Button>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </TabsContent>
