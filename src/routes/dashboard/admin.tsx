@@ -10,7 +10,7 @@ import {
   ShieldCheck,
   Settings,
   CreditCard,
-  History,
+  History as HistoryIcon,
   UserCheck,
   FileText,
   Lock
