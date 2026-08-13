@@ -29,6 +29,7 @@ const menuItems = [
   { label: 'Cadernos', icon: BookOpen, href: '/dashboard/notebooks' },
   { label: 'Simulados', icon: Trophy, href: '/dashboard/mock-exams' },
   { label: 'Caderno de Erros', icon: History, href: '/dashboard/errors' },
+  { label: 'Histórico', icon: History, href: '/dashboard/history' },
   { label: 'Cronômetro', icon: Clock, href: '/dashboard/timer' },
   { label: 'Desempenho', icon: Layers, href: '/dashboard/performance' },
   { label: 'Perfil', icon: User, href: '/dashboard/profile' },
