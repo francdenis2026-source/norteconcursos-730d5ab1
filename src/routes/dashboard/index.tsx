@@ -1,3 +1,4 @@
+import React from 'react';
 import { createFileRoute } from '@tanstack/react-router';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
@@ -39,6 +40,34 @@ export const Route = createFileRoute('/dashboard/')({
 function DashboardIndex() {
   const { stats, focusedContest, isLoading, refreshStats } = useDashboardData();
   const { user } = useAuthStatus();
+  const [showTour, setShowTour] = React.useState(false);
+  const [checklist, setChecklist] = React.useState({
+    contest: false,
+    notebook: false,
+    plan: false
+  });
+
+  React.useEffect(() => {
+    const tourDone = localStorage.getItem('norte_onboarding_done');
+    if (!tourDone) {
+      setShowTour(true);
+    }
+
+    // Check completion status
+    const storedContest = localStorage.getItem('norte_focused_contest');
+    const storedNotebooks = JSON.parse(localStorage.getItem('norte_notebooks') || '[]');
+    setChecklist({
+      contest: !!storedContest,
+      notebook: storedNotebooks.length > 0,
+      plan: user?.role !== 'free'
+    });
+  }, [user]);
+
+  const completeTour = () => {
+    localStorage.setItem('norte_onboarding_done', 'true');
+    setShowTour(false);
+    toast.success("Tour finalizado! Boa sorte nos estudos.");
+  };
 
   if (isLoading) return <div>Carregando...</div>;
 
@@ -139,6 +168,32 @@ function DashboardIndex() {
           </Button>
         </div>
       </div>
+
+      {showTour && (
+        <Card className="bg-primary text-primary-foreground border-none overflow-hidden relative animate-in fade-in zoom-in duration-300">
+          <CardContent className="pt-6">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="space-y-2">
+                <h2 className="text-xl font-bold flex items-center gap-2">
+                  🚀 Comece sua Jornada no Norte
+                </h2>
+                <p className="text-primary-foreground/80 max-w-lg">
+                  Complete os passos iniciais para otimizar sua preparação.
+                </p>
+                <div className="flex flex-wrap gap-4 pt-2">
+                  <CheckItem label="Definir Concurso" done={checklist.contest} />
+                  <CheckItem label="Criar Caderno" done={checklist.notebook} />
+                  <CheckItem label="Ajustar Plano" done={checklist.plan} />
+                </div>
+              </div>
+              <Button onClick={completeTour} variant="secondary" className="shrink-0">
+                Entendi, vamos lá!
+              </Button>
+            </div>
+          </CardContent>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-3xl" />
+        </Card>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard 
@@ -260,6 +315,18 @@ function ActivityItem({ title, type, time, status, priority }: any) {
       <Button variant="ghost" size="sm" className="h-8 text-xs">
         Iniciar
       </Button>
+    </div>
+  );
+}
+
+function CheckItem({ label, done }: { label: string; done: boolean }) {
+  return (
+    <div className={cn(
+      "flex items-center gap-2 text-xs px-2 py-1 rounded-full border",
+      done ? "bg-emerald-500/20 border-emerald-500/50 text-emerald-100" : "bg-white/10 border-white/20 text-white/70"
+    )}>
+      <CheckCircle2 className={cn("h-3 w-3", done ? "text-emerald-400" : "opacity-30")} />
+      {label}
     </div>
   );
 }
