@@ -90,9 +90,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         const currentA = await MockService.getAchievements();
         if (currentA.length > a.length) {
           const newA = currentA[currentA.length - 1];
-          const { showAchievementNotification } = await import('@/components/dashboard/AchievementNotification');
-          showAchievementNotification(newA);
-          setAchievements(currentA);
+          if (newA) {
+            const { showAchievementNotification } = await import('@/components/dashboard/AchievementNotification');
+            showAchievementNotification(newA);
+            setAchievements(currentA);
+          }
         }
       }, 5000);
       return () => clearInterval(interval);
