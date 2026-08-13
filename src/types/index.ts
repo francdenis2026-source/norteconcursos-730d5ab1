@@ -49,6 +49,7 @@ export interface Question {
   }[];
   correctAnswer?: boolean; // For Certo/Errado
   explanation: string;
+  teacherComment?: string;
   disciplineId: string;
   subjectId: string;
   difficulty: Difficulty;
