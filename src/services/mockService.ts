@@ -1,5 +1,5 @@
 import { contests as mockContests, questions as mockQuestions, disciplines as mockDisciplines } from "../data/mock";
-import { Contest, Question, UserResponse, PerformanceStats, UserStreak, Achievement } from "../types";
+import { Contest, Question, UserResponse, PerformanceStats, UserStreak, Achievement, SubscriptionAuditLog, UserProfile } from "../types";
 
 import { supabase } from "@/integrations/supabase/client";
 
