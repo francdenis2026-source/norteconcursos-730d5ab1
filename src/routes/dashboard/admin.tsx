@@ -94,22 +94,32 @@ function AdminPanel() {
   };
 
   const handleDowngradeUser = async (userId: string, targetTier: string) => {
-    if (!confirm(`Deseja realmente fazer o downgrade deste usuário para o plano ${targetTier}?`)) return;
+    const reason = prompt(`Motivo obrigatório para o downgrade do usuário para o plano ${targetTier}:`);
+    if (!reason) {
+      toast.error('Motivo é obrigatório para realizar esta ação.');
+      return;
+    }
+
     setIsUpdatingSubscription(userId);
-    const success = await MockService.downgradeSubscription(userId, targetTier);
+    const success = await MockService.downgradeSubscription(userId, targetTier, reason);
     if (success) {
       toast.success(`Downgrade para ${targetTier} realizado!`);
       loadData();
     } else {
       toast.error('Erro ao realizar downgrade');
     }
-    setIsUpdatingSubscription(userId);
+    setIsUpdatingSubscription(null);
   };
 
   const handleCancelUserSubscription = async (userId: string) => {
-    if (!confirm('Deseja cancelar a assinatura deste usuário? O plano voltará para "Free".')) return;
+    const reason = prompt('Motivo obrigatório para o cancelamento da assinatura deste usuário:');
+    if (!reason) {
+      toast.error('Motivo é obrigatório para realizar esta ação.');
+      return;
+    }
+
     setIsUpdatingSubscription(userId);
-    const success = await MockService.cancelSubscription(userId);
+    const success = await MockService.cancelSubscription(userId, reason);
     if (success) {
       toast.success('Assinatura cancelada!');
       loadData();
@@ -720,13 +730,14 @@ function AdminPanel() {
                       <TableHead>Admin</TableHead>
                       <TableHead>Ação</TableHead>
                       <TableHead>Entidade</TableHead>
+                      <TableHead>Detalhes/Motivo</TableHead>
                       <TableHead>Mudanças</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {auditLogs.length === 0 ? (
                       <TableRow>
-                        <TableCell colSpan={5} className="text-center py-8 text-muted-foreground">
+                        <TableCell colSpan={6} className="text-center py-8 text-muted-foreground">
                           Nenhum log de auditoria encontrado.
                         </TableCell>
                       </TableRow>
@@ -749,6 +760,9 @@ function AdminPanel() {
                           </TableCell>
                           <TableCell className="text-xs">
                             {log.entity_type}: {log.entity_id}
+                          </TableCell>
+                          <TableCell className="text-[10px] text-rose-600 italic max-w-[150px] truncate">
+                            {log.new_values?.reason || '-'}
                           </TableCell>
                           <TableCell>
                             <div className="max-w-[300px]">

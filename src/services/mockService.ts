@@ -762,9 +762,9 @@ export const MockService = {
     }
   },
 
-  downgradeSubscription: async (userId: string, newTier: string): Promise<boolean> => {
+  downgradeSubscription: async (userId: string, newTier: string, reason?: string): Promise<boolean> => {
     try {
-      const { data: profile } = await supabase.from('profiles').select('subscription_tier').eq('id', userId).single();
+      const { data: profile } = await supabase.from('profiles').select('subscription_tier, email').eq('id', userId).single();
       const oldTier = profile?.subscription_tier || 'free';
 
       const { error } = await supabase
@@ -779,8 +779,14 @@ export const MockService = {
         event_type: 'downgrade',
         old_tier: oldTier,
         new_tier: newTier,
-        metadata: { source: 'admin_panel' }
+        metadata: { 
+          source: reason ? 'admin_panel' : 'user_action',
+          reason: reason || 'Ação do usuário'
+        }
       });
+
+      // Simulação de envio de e-mail
+      console.log(`[EMAIL] Enviado para ${profile?.email}: Downgrade confirmado para o plano ${newTier.toUpperCase()}. Data efetiva: ${new Date().toLocaleDateString()}.`);
 
       return true;
     } catch (e) {
@@ -789,9 +795,9 @@ export const MockService = {
     }
   },
 
-  cancelSubscription: async (userId: string): Promise<boolean> => {
+  cancelSubscription: async (userId: string, reason?: string): Promise<boolean> => {
     try {
-      const { data: profile } = await supabase.from('profiles').select('subscription_tier').eq('id', userId).single();
+      const { data: profile } = await supabase.from('profiles').select('subscription_tier, email').eq('id', userId).single();
       const oldTier = profile?.subscription_tier || 'free';
 
       const { error } = await supabase
@@ -809,12 +815,49 @@ export const MockService = {
         event_type: 'cancellation',
         old_tier: oldTier,
         new_tier: 'free',
-        metadata: { source: 'user_action' }
+        metadata: { 
+          source: reason ? 'admin_panel' : 'user_action',
+          reason: reason || 'Solicitado pelo usuário'
+        }
       });
+
+      // Simulação de envio de e-mail
+      console.log(`[EMAIL] Enviado para ${profile?.email}: Assinatura cancelada com sucesso. Data efetiva: ${new Date().toLocaleDateString()}. Seu acesso Premium foi encerrado.`);
 
       return true;
     } catch (e) {
       console.error('Error cancelling subscription:', e);
+      return false;
+    }
+  },
+
+  reactivateSubscription: async (userId: string): Promise<boolean> => {
+    try {
+      const { data: profile } = await supabase.from('profiles').select('is_activated, subscription_tier').eq('id', userId).single();
+      
+      if (profile?.is_activated) return false;
+
+      const { error } = await supabase
+        .from('profiles')
+        .update({ 
+          is_activated: true,
+          subscription_tier: 'essential' // Reativa no plano base ou recupera anterior se persistido
+        })
+        .eq('id', userId);
+
+      if (error) throw error;
+
+      await supabase.from('subscription_audit_logs').insert({
+        user_id: userId,
+        event_type: 'activation',
+        old_tier: 'free',
+        new_tier: 'essential',
+        metadata: { source: 'user_reactivation' }
+      });
+
+      return true;
+    } catch (e) {
+      console.error('Error reactivating subscription:', e);
       return false;
     }
   }
