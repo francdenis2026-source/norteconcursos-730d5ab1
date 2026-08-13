@@ -128,6 +128,7 @@ function AdminPanel() {
           <TabsTrigger value="contests">Concursos</TabsTrigger>
           <TabsTrigger value="questions">Questões</TabsTrigger>
           <TabsTrigger value="syllabus">Edital</TabsTrigger>
+        <TabsTrigger value="users">Usuários</TabsTrigger>
           <TabsTrigger value="subscriptions">Planos</TabsTrigger>
           <TabsTrigger value="audit">Histórico</TabsTrigger>
         </TabsList>
