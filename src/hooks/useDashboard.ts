@@ -13,7 +13,7 @@ export function useDashboardData() {
   useEffect(() => {
     const loadData = async () => {
       setIsLoading(true);
-      const performance = MockService.getPerformanceStats();
+      const performance = await MockService.getPerformanceStats();
       const contest = await MockService.getFocusedContest();
       const allContests = await MockService.getContests();
       setStats(performance);
