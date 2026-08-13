@@ -82,10 +82,16 @@ function MyContestPage() {
             </div>
 
             <div className="space-y-3">
-              <DisciplineProgress name="Língua Portuguesa" progress={65} />
-              <DisciplineProgress name="Direito Constitucional" progress={42} />
-              <DisciplineProgress name="Direito Administrativo" progress={15} />
-              <DisciplineProgress name="Informática" progress={0} />
+              {['Língua Portuguesa', 'Direito Constitucional', 'Direito Administrativo', 'Informática'].map((topic, i) => {
+                const status = ['Lido', 'Resumido', 'Revisado', 'Não Iniciado'][i];
+                return (
+                  <div key={topic} className="flex items-center gap-2">
+                    <span className="text-sm flex-1">{topic}</span>
+                    <Badge variant={status === 'Lido' ? 'default' : 'outline'}>{status}</Badge>
+                    <Progress value={[65, 42, 15, 0][i]} className="h-1.5 w-20" />
+                  </div>
+                );
+              })}
             </div>
           </CardContent>
         </Card>
