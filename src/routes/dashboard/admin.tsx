@@ -598,8 +598,9 @@ function AdminPanel() {
                     <TableRow>
                       <TableHead>Nome</TableHead>
                       <TableHead>E-mail</TableHead>
+                      <TableHead>ID</TableHead>
+                      <TableHead>Role</TableHead>
                       <TableHead>Plano</TableHead>
-                      <TableHead>Status</TableHead>
                       <TableHead className="text-right">Ações</TableHead>
                     </TableRow>
                   </TableHeader>
