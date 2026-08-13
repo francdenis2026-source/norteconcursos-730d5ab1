@@ -48,7 +48,37 @@ function ProfilePage() {
         newEmail: ''
       });
     }
+    const loadAudit = async () => {
+      const logs = await MockService.getSubscriptionAuditLogs();
+      setAuditLogs(logs);
+    };
+    loadAudit();
   }, [user]);
+
+  const handleActivate = async () => {
+    if (!activationCode) return;
+    setIsActivating(true);
+    try {
+      const result = await MockService.validateActivationCode(activationCode);
+      if (result.success) {
+        toast.success(result.message);
+        window.location.reload();
+      } else {
+        toast.error(result.message);
+      }
+    } finally {
+      setIsActivating(false);
+    }
+  };
+
+  const handleResendCode = async () => {
+    const success = await MockService.resendActivationEmail();
+    if (success) {
+      toast.success('Novo código enviado para seu e-mail!');
+    } else {
+      toast.error('Erro ao reenviar código.');
+    }
+  };
 
   const handleUpdateName = async (e: React.FormEvent) => {
     e.preventDefault();
