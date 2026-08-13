@@ -51,7 +51,7 @@ function QuestionsCatalog() {
       const todayCount = responses.filter(r => {
         const d = (r as any).createdAt;
         if (typeof d !== 'string') return false;
-        return d.indexOf(today) === 0;
+        return (d as string).indexOf(today) === 0;
       }).length;
       
       const userRole = (user?.role || 'free') as string;
