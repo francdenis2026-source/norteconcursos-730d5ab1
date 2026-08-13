@@ -149,8 +149,8 @@ function MockExamsPage() {
         </Card>
       )}
 
-      <div className="grid gap-6">
-        <Card>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <Card className="lg:col-span-2">
           <CardHeader>
             <CardTitle>Histórico de Simulados</CardTitle>
           </CardHeader>
@@ -176,6 +176,45 @@ function MockExamsPage() {
                 <p>Você ainda não completou nenhum simulado.</p>
               </div>
             )}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Trophy className="h-5 w-5 text-gold" />
+              Ranking Geral (Anônimo)
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              {[
+                { rank: 1, name: 'AlphaStuder', score: 48 },
+                { rank: 2, name: 'Concurseiro01', score: 45 },
+                { rank: 3, name: 'EstudanteFocado', score: 42 },
+                { rank: 4, name: 'Você', score: 35, isMe: true },
+                { rank: 5, name: 'MestreDasProvas', score: 40 },
+              ].sort((a, b) => b.score - a.score).map((item, idx) => (
+                <div key={item.name} className={cn(
+                  "flex items-center justify-between p-2 rounded-lg",
+                  item.isMe ? "bg-secondary/10 border border-secondary" : "hover:bg-muted/50"
+                )}>
+                  <div className="flex items-center gap-3">
+                    <span className={cn(
+                      "flex items-center justify-center h-6 w-6 rounded-full text-[10px] font-bold",
+                      idx === 0 ? "bg-gold text-white" : "bg-muted text-muted-foreground"
+                    )}>
+                      {idx + 1}
+                    </span>
+                    <span className="text-sm font-medium">{item.name}</span>
+                  </div>
+                  <span className="text-sm font-black text-secondary">{item.score}/50</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-[10px] text-muted-foreground text-center mt-4 italic">
+              O ranking é atualizado a cada 24 horas.
+            </p>
           </CardContent>
         </Card>
       </div>

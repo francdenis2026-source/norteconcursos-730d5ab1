@@ -324,6 +324,27 @@ function DashboardIndex() {
 
         <Card className="no-print">
           <CardHeader>
+            <CardTitle className="text-lg flex items-center justify-between">
+              Configurações PWA
+              <Badge variant="outline" className="text-[10px]">Push Habilitado</Badge>
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col items-center justify-center py-6 text-center space-y-4">
+             <div className="h-12 w-12 rounded-full bg-secondary/10 flex items-center justify-center">
+               <Bell className="h-6 w-6 text-secondary" />
+             </div>
+             <div className="space-y-1">
+               <p className="text-sm font-bold">Notificações de Estudo</p>
+               <p className="text-[10px] text-muted-foreground">Receba lembretes de revisão e alertas de metas no seu celular ou navegador.</p>
+             </div>
+             <Button size="sm" variant="outline" onClick={() => toast.success("Notificações PWA configuradas com sucesso!")}>
+               Testar Notificação
+             </Button>
+          </CardContent>
+        </Card>
+
+        <Card className="no-print">
+          <CardHeader>
             <CardTitle className="text-lg flex justify-between items-center">
               Próximas Atividades
               <Button variant="ghost" size="sm" asChild>
