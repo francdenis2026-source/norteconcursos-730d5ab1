@@ -27,9 +27,10 @@ import { toast } from 'sonner';
 export const Route = createFileRoute('/dashboard/admin')({
   component: AdminPanel,
   head: () => ({
-    title: 'Painel Administrativo | Norte Concurso',
+    meta: [{ title: 'Painel Administrativo | Norte Concurso' }],
   })
 });
+
 
 function AdminPanel() {
   const [contests, setContests] = React.useState<Contest[]>([]);

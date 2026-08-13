@@ -39,11 +39,12 @@ export function useAuthStatus() {
       
       if (session) {
         setUser({
-          name: session.user.user_metadata.full_name || 'Usuário',
+          name: session.user.user_metadata['full_name'] || 'Usuário',
           email: session.user.email || '',
-          role: session.user.user_metadata.role || 'Plus'
+          role: session.user.user_metadata['role'] || 'Plus'
         });
       } else {
+
         // Fallback for demo mode if no session
         setUser({
           name: 'João Silva (Demo)',
@@ -59,11 +60,12 @@ export function useAuthStatus() {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       if (session) {
         setUser({
-          name: session.user.user_metadata.full_name || 'Usuário',
+          name: session.user.user_metadata['full_name'] || 'Usuário',
           email: session.user.email || '',
-          role: session.user.user_metadata.role || 'Plus'
+          role: session.user.user_metadata['role'] || 'Plus'
         });
       } else {
+
         setUser(null);
       }
     });
