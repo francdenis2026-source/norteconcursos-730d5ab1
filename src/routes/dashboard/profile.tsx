@@ -362,6 +362,33 @@ function ProfilePage() {
           </CardContent>
         </Card>
 
+        {auditLogs.length > 0 && (
+          <Card className="md:col-span-3">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <History className="h-5 w-5 text-primary" />
+                Histórico de Assinatura
+              </CardTitle>
+              <CardDescription>Eventos importantes relacionados ao seu plano.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {auditLogs.map((log) => (
+                  <div key={log.id} className="flex items-center justify-between py-2 border-b last:border-0">
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium capitalize">{log.event_type.replace('_', ' ')}</span>
+                      <span className="text-[10px] text-muted-foreground">{new Date(log.created_at).toLocaleString()}</span>
+                    </div>
+                    <Badge variant="outline" className="uppercase text-[9px]">
+                      {log.new_tier}
+                    </Badge>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
       </div>
     </div>
   );
