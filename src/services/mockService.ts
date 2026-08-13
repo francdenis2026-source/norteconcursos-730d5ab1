@@ -442,8 +442,18 @@ export const MockService = {
       const achievements = await MockService.getAchievements();
       const perfect = achievements.find(a => a.code === 'PERFECT_SCORE');
       if (perfect) {
-        const { showAchievementNotification } = await import('@/components/dashboard/AchievementNotification');
-        showAchievementNotification(perfect);
+        const currentAttained = localStorage.getItem('norte_user_achievements_attained') || '[]';
+        const attained = JSON.parse(currentAttained);
+        if (!attained.includes('PERFECT_SCORE')) {
+          attained.push('PERFECT_SCORE');
+          localStorage.setItem('norte_user_achievements_attained', JSON.stringify(attained));
+          
+          const currentA = JSON.parse(localStorage.getItem('norte_user_achievements') || '[]');
+          if (!currentA.find((a: any) => a.code === 'PERFECT_SCORE')) {
+            currentA.push(perfect);
+            localStorage.setItem('norte_user_achievements', JSON.stringify(currentA));
+          }
+        }
       }
     }
 
