@@ -143,3 +143,25 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     </div>
   );
 }
+
+function NotificationItem({ title, desc, time, icon: Icon, color, priority }: any) {
+  return (
+    <div className={cn(
+      "p-4 border-b last:border-0 hover:bg-muted/50 transition-colors cursor-pointer",
+      priority ? "bg-rose-50/30" : ""
+    )}>
+      <div className="flex gap-3">
+        <div className={cn("p-2 rounded-lg bg-background border shrink-0 h-fit", color)}>
+          <Icon className="h-4 w-4" />
+        </div>
+        <div className="flex flex-col gap-0.5 overflow-hidden">
+          <div className="flex justify-between items-center gap-2">
+            <span className="text-xs font-black truncate">{title}</span>
+            <span className="text-[9px] text-muted-foreground whitespace-nowrap">{time}</span>
+          </div>
+          <p className="text-[10px] text-muted-foreground line-clamp-2 leading-relaxed">{desc}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
