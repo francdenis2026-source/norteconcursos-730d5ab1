@@ -48,7 +48,7 @@ export function useAuthStatus() {
       const { data: { session } } = await supabase.auth.getSession();
       
       if (session) {
-        // Buscando perfil para pegar o tier atual
+        // Buscando perfil para pegar o tier atual diretamente do banco
         const { data: profile } = await supabase
           .from('profiles')
           .select('subscription_tier')
@@ -61,10 +61,10 @@ export function useAuthStatus() {
           email: session.user.email || '',
           role: (profile?.subscription_tier as SubscriptionTier) || 
                 (session.user.user_metadata['role'] as SubscriptionTier) || 
-                'plus'
+                'free'
         });
       } else {
-        // Fallback for demo mode if no session
+        // Fallback para modo demo/visitante
         setUser({
           id: 'demo-user',
           name: 'João Silva (Demo)',
@@ -79,7 +79,7 @@ export function useAuthStatus() {
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       if (session) {
-        checkAuth(); // Re-checa para pegar dados do perfil
+        checkAuth(); 
       } else {
         setUser(null);
       }
@@ -90,5 +90,6 @@ export function useAuthStatus() {
 
   return { user, isAuthenticated: !!user, isLoading };
 }
+
 
 

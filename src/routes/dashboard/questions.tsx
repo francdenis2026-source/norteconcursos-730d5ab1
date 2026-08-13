@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -11,22 +11,32 @@ import {
   Calendar,
   Briefcase,
   Trophy,
-  CheckCircle2
+  CheckCircle2,
+  Lock,
+  Zap
 } from 'lucide-react';
 import { MockService } from '@/services/mockService';
 import { Contest } from '@/types';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
+import { useAuthStatus } from '@/hooks/useDashboard';
+import { checkFeatureAccess } from '@/lib/subscriptions.config';
+import { Link } from '@tanstack/react-router';
+
 
 export const Route = createFileRoute('/dashboard/questions')({
   component: QuestionsCatalog
 });
 
 function QuestionsCatalog() {
+  const { user } = useAuthStatus();
   const [searchTerm, setSearchTerm] = useState('');
   const [contests, setContests] = useState<Contest[]>([]);
   const [focusedContest, setFocusedContest] = useState<Contest | undefined>(undefined);
   const [loading, setLoading] = useState(true);
+  
+  const featureAccess = checkFeatureAccess(user?.role || 'free', 'questions');
+
 
   useState(() => {
     const load = async () => {
@@ -77,11 +87,24 @@ function QuestionsCatalog() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-        {filteredContests.map((contest) => (
-          <Card key={contest.id} className={cn(
-            "flex flex-col border-2 transition-all hover:shadow-md",
-            focusedContest?.id === contest.id ? "border-secondary" : "border-border"
-          )}>
+        {filteredContests.map((contest, index) => {
+          const isLocked = !featureAccess.included || (featureAccess.limit !== 'unlimited' && index >= (featureAccess.limit || 0));
+          return (
+            <Card key={contest.id} className={cn(
+              "flex flex-col border-2 transition-all hover:shadow-md relative",
+              focusedContest?.id === contest.id ? "border-secondary" : "border-border",
+              isLocked ? "opacity-75" : ""
+            )}>
+              {isLocked && (
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-background/40 backdrop-blur-[1px] p-4 text-center rounded-lg">
+                  <Lock className="h-8 w-8 text-muted-foreground mb-2" />
+                  <p className="text-xs font-bold text-muted-foreground uppercase">Limite do Plano Atingido</p>
+                  <Button asChild variant="link" size="sm" className="text-secondary h-auto p-0 mt-1">
+                    <Link to="/dashboard/profile">Liberar Acesso</Link>
+                  </Button>
+                </div>
+              )}
+
             <CardHeader className="pb-3">
               <div className="flex justify-between items-start gap-2">
                 <div className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-secondary/10 text-secondary border border-secondary/20">
