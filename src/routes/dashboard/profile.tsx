@@ -147,6 +147,23 @@ function ProfilePage() {
     }
   };
 
+  const handleCancelSubscription = async () => {
+    if (!confirm('Tem certeza que deseja cancelar sua assinatura? Você perderá o acesso aos recursos Premium ao final do ciclo.')) return;
+    
+    setIsUpdating(true);
+    try {
+      const success = await MockService.cancelSubscription(user!.id);
+      if (success) {
+        toast.success('Assinatura cancelada com sucesso.');
+        window.location.reload();
+      } else {
+        toast.error('Erro ao cancelar assinatura.');
+      }
+    } finally {
+      setIsUpdating(false);
+    }
+  };
+
   if (isLoading) return <div className="p-8">Carregando...</div>;
 
   return (
@@ -355,6 +372,11 @@ function ProfilePage() {
                   <p className="text-muted-foreground text-xs">Seus dados estão protegidos com criptografia de ponta a ponta.</p>
                 </div>
               </div>
+              {user?.subscription_tier !== 'free' && (
+                <Button variant="ghost" size="sm" className="text-destructive/70 hover:text-destructive hover:bg-destructive/10 text-[10px]" onClick={handleCancelSubscription}>
+                  Cancelar Plano
+                </Button>
+              )}
               <Button variant="ghost" className="text-destructive hover:text-destructive hover:bg-destructive/10 gap-2" onClick={handleLogout}>
                 <LogOut className="h-4 w-4" /> Sair da Conta
               </Button>
