@@ -18,6 +18,8 @@ import {
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { useAuthStatus } from '@/hooks/useDashboard';
+
 
 const menuItems = [
   { label: 'Visão Geral', icon: LayoutDashboard, href: '/dashboard' },
