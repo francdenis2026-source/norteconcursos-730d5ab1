@@ -893,8 +893,6 @@ function AdminPanel() {
           </Card>
         </div>
       )}
-        </div>
-      )}
 
       {/* Subscription Action Confirmation Modal */}
       <Dialog 
