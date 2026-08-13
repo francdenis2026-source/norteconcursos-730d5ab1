@@ -49,6 +49,8 @@ function DashboardIndex() {
   });
   const [isUpdatingTour, setIsUpdatingTour] = React.useState(false);
   const [dailyQuota, setDailyQuota] = React.useState({ used: 0, total: 0 });
+  const [blockedAttempts, setBlockedAttempts] = React.useState<any[]>([]);
+  const [isLoadingAttempts, setIsLoadingAttempts] = React.useState(false);
 
   React.useEffect(() => {
     const fetchOnboarding = async () => {
@@ -94,6 +96,12 @@ function DashboardIndex() {
           localStorage.setItem('norte_last_quota_notify', `80_${todayStr}`);
         }
       }
+
+      // Fetch audit logs
+      setIsLoadingAttempts(true);
+      const logs = await MockService.getAccessAuditLogs();
+      setBlockedAttempts(logs.filter((l: any) => l.was_blocked));
+      setIsLoadingAttempts(false);
     };
 
     fetchOnboarding();
@@ -339,6 +347,45 @@ function DashboardIndex() {
                 priority
               />
             </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg flex items-center justify-between">
+              Alertas de Acesso do Plano
+              <Badge variant="outline" className="text-[10px]">{blockedAttempts.length} bloqueios</Badge>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            {isLoadingAttempts ? (
+              <div className="space-y-2">
+                <div className="h-10 bg-muted animate-pulse rounded" />
+                <div className="h-10 bg-muted animate-pulse rounded" />
+              </div>
+            ) : blockedAttempts.length > 0 ? (
+              <div className="space-y-3">
+                {blockedAttempts.slice(0, 3).map((attempt: any) => (
+                  <div key={attempt.id} className="flex items-center justify-between p-2 rounded border bg-destructive/5 border-destructive/10">
+                    <div className="flex flex-col">
+                      <span className="text-xs font-bold text-destructive">Limite atingido: {attempt.feature_key}</span>
+                      <span className="text-[10px] text-muted-foreground">{new Date(attempt.attempt_time).toLocaleString()}</span>
+                    </div>
+                    <Button variant="ghost" size="sm" className="h-7 text-[10px] h-auto p-1" asChild>
+                      <Link to="/dashboard/profile">Ver Planos</Link>
+                    </Button>
+                  </div>
+                ))}
+                {blockedAttempts.length > 3 && (
+                  <p className="text-[10px] text-center text-muted-foreground italic">Exibindo os 3 bloqueios mais recentes</p>
+                )}
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center py-6 text-center">
+                <CheckCircle2 className="h-8 w-8 text-emerald-500 mb-2 opacity-20" />
+                <p className="text-xs text-muted-foreground">Nenhum bloqueio registrado recentemente.</p>
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>
