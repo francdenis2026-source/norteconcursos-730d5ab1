@@ -96,9 +96,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <main className="flex-1 flex flex-col min-h-screen overflow-hidden">
         {/* Top Banner Demonstrativo */}
         <div className="bg-emerald-50 border-b border-emerald-100 px-4 py-1.5 text-center flex items-center justify-center gap-2">
-          <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="h-2 w-2 rounded-full bg-emerald-500" />
           <p className="text-[10px] md:text-xs text-emerald-800 font-bold uppercase tracking-wider">
-            Modo Local Ativo — Navegação e Dados Simulados
+            Conexão Supabase Ativa — Sincronização Híbrida
           </p>
         </div>
         
