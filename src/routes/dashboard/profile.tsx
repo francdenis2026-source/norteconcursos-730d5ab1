@@ -20,36 +20,57 @@ export const Route = createFileRoute('/dashboard/profile')({
 function ProfilePage() {
   const { user, isLoading } = useAuthStatus();
   const [isUpdating, setIsUpdating] = React.useState(false);
+  const [isVerifying, setIsVerifying] = React.useState(false);
   const [formData, setFormData] = React.useState({
     name: '',
-    email: ''
+    email: '',
+    newEmail: ''
   });
 
   React.useEffect(() => {
     if (user) {
       setFormData({
         name: user.name || '',
-        email: user.email || ''
+        email: user.email || '',
+        newEmail: ''
       });
     }
   }, [user]);
 
-  const handleUpdateProfile = async (e: React.FormEvent) => {
+  const handleUpdateName = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsUpdating(true);
-    
     try {
       const { error } = await supabase.auth.updateUser({
-        email: formData.email,
         data: { full_name: formData.name }
       });
-
       if (error) throw error;
-      toast.success('Perfil atualizado com sucesso!');
+      toast.success('Nome atualizado com sucesso!');
     } catch (error: any) {
-      toast.error(error.message || 'Erro ao atualizar perfil');
+      toast.error(error.message || 'Erro ao atualizar nome');
     } finally {
       setIsUpdating(false);
+    }
+  };
+
+  const handleUpdateEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (formData.newEmail === formData.email) {
+      toast.error('O novo e-mail deve ser diferente do atual.');
+      return;
+    }
+    setIsVerifying(true);
+    try {
+      const { error } = await supabase.auth.updateUser({
+        email: formData.newEmail
+      });
+      if (error) throw error;
+      toast.info('Um link de confirmação foi enviado para o novo e-mail. A alteração só será efetivada após a confirmação.');
+      setFormData(prev => ({ ...prev, newEmail: '' }));
+    } catch (error: any) {
+      toast.error(error.message || 'Erro ao solicitar troca de e-mail');
+    } finally {
+      setIsVerifying(false);
     }
   };
 
@@ -79,7 +100,7 @@ function ProfilePage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleUpdateProfile} className="space-y-4">
+            <form onSubmit={handleUpdateName} className="space-y-4 pb-6 border-b">
               <div className="space-y-2">
                 <Label htmlFor="name">Nome Completo</Label>
                 <div className="relative">
@@ -92,21 +113,44 @@ function ProfilePage() {
                   />
                 </div>
               </div>
+              <Button type="submit" disabled={isUpdating}>
+                {isUpdating ? 'Salvando...' : 'Atualizar Nome'}
+              </Button>
+            </form>
+
+            <form onSubmit={handleUpdateEmail} className="space-y-4 pt-6">
               <div className="space-y-2">
-                <Label htmlFor="email">E-mail</Label>
-                <div className="relative">
+                <Label>E-mail Atual</Label>
+                <div className="relative opacity-60">
                   <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input 
-                    id="email" 
-                    type="email"
                     value={formData.email} 
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    className="pl-9"
+                    readOnly
+                    disabled
+                    className="pl-9 bg-muted"
                   />
                 </div>
               </div>
-              <Button type="submit" disabled={isUpdating}>
-                {isUpdating ? 'Salvando...' : 'Salvar Alterações'}
+              <div className="space-y-2">
+                <Label htmlFor="newEmail">Novo E-mail</Label>
+                <div className="relative">
+                  <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                  <Input 
+                    id="newEmail" 
+                    type="email"
+                    placeholder="Digite o novo e-mail"
+                    value={formData.newEmail} 
+                    onChange={(e) => setFormData({...formData, newEmail: e.target.value})}
+                    className="pl-9"
+                    required
+                  />
+                </div>
+                <p className="text-[10px] text-muted-foreground">
+                  * Você receberá um e-mail de confirmação no novo endereço para validar a troca.
+                </p>
+              </div>
+              <Button type="submit" variant="secondary" disabled={isVerifying}>
+                {isVerifying ? 'Processando...' : 'Solicitar Troca de E-mail'}
               </Button>
             </form>
           </CardContent>

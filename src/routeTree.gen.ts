@@ -17,6 +17,7 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
 import { Route as DashboardErrorsRouteImport } from './routes/dashboard/errors'
+import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history'
 import { Route as DashboardMockExamsRouteImport } from './routes/dashboard/mock-exams'
 import { Route as DashboardMyContestRouteImport } from './routes/dashboard/my-contest'
 import { Route as DashboardNotebooksRouteImport } from './routes/dashboard/notebooks'
@@ -64,6 +65,11 @@ const DashboardAdminRoute = DashboardAdminRouteImport.update({
 const DashboardErrorsRoute = DashboardErrorsRouteImport.update({
   id: '/errors',
   path: '/errors',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardHistoryRoute = DashboardHistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardMockExamsRoute = DashboardMockExamsRouteImport.update({
@@ -115,6 +121,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
+  '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
@@ -132,6 +139,7 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
+  '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
@@ -151,6 +159,7 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
+  '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
@@ -171,6 +180,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/dashboard/admin'
     | '/dashboard/errors'
+    | '/dashboard/history'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
@@ -188,6 +198,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/dashboard/admin'
     | '/dashboard/errors'
+    | '/dashboard/history'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
@@ -206,6 +217,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/dashboard/admin'
     | '/dashboard/errors'
+    | '/dashboard/history'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
@@ -283,6 +295,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardErrorsRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/history': {
+      id: '/dashboard/history'
+      path: '/history'
+      fullPath: '/dashboard/history'
+      preLoaderRoute: typeof DashboardHistoryRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/mock-exams': {
       id: '/dashboard/mock-exams'
       path: '/mock-exams'
@@ -345,6 +364,7 @@ declare module '@tanstack/react-router' {
 interface DashboardRouteChildren {
   DashboardAdminRoute: typeof DashboardAdminRoute
   DashboardErrorsRoute: typeof DashboardErrorsRoute
+  DashboardHistoryRoute: typeof DashboardHistoryRoute
   DashboardMockExamsRoute: typeof DashboardMockExamsRoute
   DashboardMyContestRoute: typeof DashboardMyContestRoute
   DashboardNotebooksRoute: typeof DashboardNotebooksRoute
@@ -359,6 +379,7 @@ interface DashboardRouteChildren {
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminRoute: DashboardAdminRoute,
   DashboardErrorsRoute: DashboardErrorsRoute,
+  DashboardHistoryRoute: DashboardHistoryRoute,
   DashboardMockExamsRoute: DashboardMockExamsRoute,
   DashboardMyContestRoute: DashboardMyContestRoute,
   DashboardNotebooksRoute: DashboardNotebooksRoute,
