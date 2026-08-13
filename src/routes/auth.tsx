@@ -84,7 +84,11 @@ function AuthPage() {
             </div>
           )}
 
-          <Button type="submit" className="w-full h-11 bg-primary hover:bg-primary/90">
+          <Button 
+            type="button" 
+            className="w-full h-11 bg-primary hover:bg-primary/90"
+            onClick={() => window.location.href = '/dashboard'}
+          >
             {mode === "login" ? "Entrar" : "Criar conta"}
           </Button>
         </form>
