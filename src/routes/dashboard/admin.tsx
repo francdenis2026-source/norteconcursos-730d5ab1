@@ -759,12 +759,10 @@ function AdminPanel() {
                             </span>
                           </TableCell>
                           <TableCell className="text-xs">
-                            {log.entity_type}
+                            {log.entity_type}: {log.entity_id}
                           </TableCell>
                           <TableCell className="text-[10px] text-rose-600 italic max-w-[150px] truncate">
                             {log.new_values?.reason || '-'}
-                          </TableCell>
-                            {log.entity_type}: {log.entity_id}
                           </TableCell>
                           <TableCell>
                             <div className="max-w-[300px]">
