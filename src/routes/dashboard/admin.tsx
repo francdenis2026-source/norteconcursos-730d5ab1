@@ -12,7 +12,8 @@ import {
   CreditCard,
   History,
   UserCheck,
-  FileText
+  FileText,
+  Lock
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -30,6 +31,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { MockService } from '@/services/mockService';
 import { Contest, Question } from '@/types';
 import { toast } from 'sonner';
+import { Link } from '@tanstack/react-router';
+import { CardFooter } from '@/components/ui/card';
 
 export const Route = createFileRoute('/dashboard/admin')({
   component: AdminPanel,
@@ -114,6 +117,28 @@ function AdminPanel() {
     }
     setIsSaving(false);
   };
+
+  if (isAuthLoading) return <div className="p-8">Verificando permissões...</div>;
+  if (!isAdmin) {
+    return (
+      <Card className="max-w-md mx-auto mt-20">
+        <CardHeader className="text-center">
+          <div className="mx-auto p-3 bg-destructive/10 rounded-full w-fit mb-4">
+            <Lock className="h-8 w-8 text-destructive" />
+          </div>
+          <CardTitle>Acesso Negado</CardTitle>
+          <CardDescription>
+            Você não tem permissão para acessar esta área. Esta página é restrita a administradores.
+          </CardDescription>
+        </CardHeader>
+        <CardFooter className="justify-center">
+          <Button asChild>
+            <Link to="/dashboard">Voltar para o Início</Link>
+          </Button>
+        </CardFooter>
+      </Card>
+    );
+  }
 
   return (
     <div className="space-y-6">

@@ -72,7 +72,7 @@ function Index() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mt-4">
                   <Button size="lg" className="bg-primary text-lg h-14 px-8" asChild>
-                    <Link to="/auth">Testar grátis por 15 dias</Link>
+                    <Link to="/auth">Ativar Assinatura Premium</Link>
                   </Button>
                   <Button size="lg" variant="outline" className="text-lg h-14 px-8 group">
                     Conhecer as ferramentas
