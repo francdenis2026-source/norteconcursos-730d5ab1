@@ -131,4 +131,92 @@ export const MockService = {
   resetDemo: () => {
     localStorage.clear();
   }
+  },
+
+  // Admin CRUD operations
+  createContest: async (contest: Omit<Contest, 'id'>): Promise<Contest | null> => {
+    try {
+      const { data, error } = await supabase
+        .from('contests')
+        .insert(contest)
+        .select()
+        .single();
+      if (error) throw error;
+      return data as unknown as Contest;
+    } catch (e) {
+      console.error('Error creating contest:', e);
+      return null;
+    }
+  },
+
+  updateContest: async (id: string, updates: Partial<Contest>): Promise<boolean> => {
+    try {
+      const { error } = await supabase
+        .from('contests')
+        .update(updates)
+        .eq('id', id);
+      if (error) throw error;
+      return true;
+    } catch (e) {
+      console.error('Error updating contest:', e);
+      return false;
+    }
+  },
+
+  deleteContest: async (id: string): Promise<boolean> => {
+    try {
+      const { error } = await supabase
+        .from('contests')
+        .delete()
+        .eq('id', id);
+      if (error) throw error;
+      return true;
+    } catch (e) {
+      console.error('Error deleting contest:', e);
+      return false;
+    }
+  },
+
+  createQuestion: async (question: Omit<Question, 'id'>): Promise<Question | null> => {
+    try {
+      const { data, error } = await supabase
+        .from('questions')
+        .insert(question)
+        .select()
+        .single();
+      if (error) throw error;
+      return data as unknown as Question;
+    } catch (e) {
+      console.error('Error creating question:', e);
+      return null;
+    }
+  },
+
+  updateQuestion: async (id: string, updates: Partial<Question>): Promise<boolean> => {
+    try {
+      const { error } = await supabase
+        .from('questions')
+        .update(updates)
+        .eq('id', id);
+      if (error) throw error;
+      return true;
+    } catch (e) {
+      console.error('Error updating question:', e);
+      return false;
+    }
+  },
+
+  deleteQuestion: async (id: string): Promise<boolean> => {
+    try {
+      const { error } = await supabase
+        .from('questions')
+        .delete()
+        .eq('id', id);
+      if (error) throw error;
+      return true;
+    } catch (e) {
+      console.error('Error deleting question:', e);
+      return false;
+    }
+  }
 };

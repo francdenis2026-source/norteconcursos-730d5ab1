@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { MockService } from '../services/mockService';
 import { Contest, PerformanceStats, UserResponse } from '../types';
+import { supabase } from '@/integrations/supabase/client';
 
 export function useDashboardData() {
+
   const [stats, setStats] = useState<PerformanceStats | null>(null);
   const [focusedContest, setFocusedContest] = useState<Contest | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(true);
