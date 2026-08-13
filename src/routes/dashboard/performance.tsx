@@ -35,6 +35,24 @@ function PerformancePage() {
   const { user } = useAuthStatus();
   const [selectedContest, setSelectedContest] = useState('all');
   const [timeRange, setTimeRange] = useState('monthly');
+  const [goals, setGoals] = useState<any[]>([]);
+
+  useEffect(() => {
+    const loadGoals = async () => {
+      const g = await MockService.getStudyGoals();
+      if (g.length === 0) {
+        const defaultGoals = [
+          { id: 'g1', name: 'Português', type: 'weekly_questions', target: 85, current: 45 },
+          { id: 'g2', name: 'Constitucional', type: 'weekly_questions', target: 50, current: 38 }
+        ];
+        localStorage.setItem('norte_study_goals', JSON.stringify(defaultGoals));
+        setGoals(defaultGoals);
+      } else {
+        setGoals(g);
+      }
+    };
+    loadGoals();
+  }, []);
 
   if (isLoading) return <div className="p-8">Carregando...</div>;
 
