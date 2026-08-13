@@ -1,11 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { MockService } from '@/services/mockService';
 import { Button } from '@/components/ui/button';
 import { Question } from '@/types';
-import { AlertCircle, History } from 'lucide-react';
+import { AlertCircle, History, Filter, Play } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export const Route = createFileRoute('/dashboard/errors')({
   component: ErrorsPage
@@ -14,6 +15,7 @@ export const Route = createFileRoute('/dashboard/errors')({
 function ErrorsPage() {
   const [errorQuestions, setErrorQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [filterDiscipline, setFilterDiscipline] = useState('all');
 
   useEffect(() => {
     const loadErrors = async () => {
