@@ -95,6 +95,28 @@ export const MockService = {
     responses.push(response);
     localStorage.setItem(STORAGE_KEYS.USER_RESPONSES, JSON.stringify(responses));
     
+    // Check for achievements upon saving response
+    if (responses.length === 10) {
+      const achievements = await MockService.getAchievements();
+      const first10 = achievements.find(a => a.code === 'FIRST_10');
+      if (first10) {
+        // Persist attainment locally to trigger real-time notification in layout
+        const currentAttained = localStorage.getItem('norte_user_achievements_attained') || '[]';
+        const attained = JSON.parse(currentAttained);
+        if (!attained.includes('FIRST_10')) {
+          attained.push('FIRST_10');
+          localStorage.setItem('norte_user_achievements_attained', JSON.stringify(attained));
+          
+          // Add to current achievements list if not already there
+          const currentA = JSON.parse(localStorage.getItem('norte_user_achievements') || '[]');
+          if (!currentA.find((a: any) => a.code === 'FIRST_10')) {
+            currentA.push(first10);
+            localStorage.setItem('norte_user_achievements', JSON.stringify(currentA));
+          }
+        }
+      }
+    }
+
     // Tenta salvar no Supabase se o usuário estiver logado
     const { data: { session } } = await supabase.auth.getSession();
     if (session) {
@@ -415,6 +437,26 @@ export const MockService = {
     }
     localStorage.setItem('norte_mock_exams', JSON.stringify(exams));
 
+    // Achievement check: Perfect score
+    if (exam.correct === exam.total) {
+      const achievements = await MockService.getAchievements();
+      const perfect = achievements.find(a => a.code === 'PERFECT_SCORE');
+      if (perfect) {
+        const currentAttained = localStorage.getItem('norte_user_achievements_attained') || '[]';
+        const attained = JSON.parse(currentAttained);
+        if (!attained.includes('PERFECT_SCORE')) {
+          attained.push('PERFECT_SCORE');
+          localStorage.setItem('norte_user_achievements_attained', JSON.stringify(attained));
+          
+          const currentA = JSON.parse(localStorage.getItem('norte_user_achievements') || '[]');
+          if (!currentA.find((a: any) => a.code === 'PERFECT_SCORE')) {
+            currentA.push(perfect);
+            localStorage.setItem('norte_user_achievements', JSON.stringify(currentA));
+          }
+        }
+      }
+    }
+
     // Sincroniza com Supabase se logado
     const { data: { session } } = await supabase.auth.getSession();
     if (session) {
@@ -510,10 +552,15 @@ export const MockService = {
       }
       
       const local = localStorage.getItem('norte_user_achievements');
-      return local ? JSON.parse(local) : [
+      const initial = [
         { id: '1', code: 'FIRST_10', name: 'Primeiras 10', description: 'Resolveu suas primeiras 10 questões.', icon_url: 'award' },
         { id: '2', code: 'PERFECT_SCORE', name: 'Gabarito', description: 'Acertou 100% de um simulado.', icon_url: 'star' }
       ];
+      if (!local) {
+        localStorage.setItem('norte_user_achievements', JSON.stringify(initial));
+        return initial;
+      }
+      return JSON.parse(local);
     } catch (e) {
       return [];
     }

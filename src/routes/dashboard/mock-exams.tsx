@@ -3,7 +3,8 @@ import { createFileRoute } from '@tanstack/react-router';
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { PlayCircle, Clock, Trophy, Lock } from 'lucide-react';
+import { PlayCircle, Clock, Trophy, Lock, Eye } from 'lucide-react';
+import { MediaViewer } from '@/components/dashboard/MediaViewer';
 import { toast } from 'sonner';
 import { MockService } from '@/services/mockService';
 import { useAuthStatus } from '@/hooks/useDashboard';
@@ -180,6 +181,13 @@ function MockExamsPage() {
                     <div className="text-right">
                       <p className="text-lg font-black text-secondary">{exam.correct}/{exam.total}</p>
                       <p className="text-[10px] uppercase font-bold text-emerald-600">Concluído</p>
+                      <MediaViewer 
+                        type="video" 
+                        url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+                        title="Resolução em Vídeo" 
+                        triggerLabel="Ver Vídeo"
+                        className="mt-1 h-6 text-[9px] px-2 py-0 border-emerald-500/20 text-emerald-700 bg-emerald-50 hover:bg-emerald-100"
+                      />
                     </div>
                   </div>
                 ))}
