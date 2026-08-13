@@ -124,11 +124,12 @@ function AdminPanel() {
       </div>
 
       <Tabs defaultValue="contests" className="w-full">
-        <TabsList className="grid w-full max-w-3xl grid-cols-4">
+        <TabsList className="grid w-full max-w-4xl grid-cols-5">
           <TabsTrigger value="contests">Concursos</TabsTrigger>
           <TabsTrigger value="questions">Questões</TabsTrigger>
+          <TabsTrigger value="syllabus">Edital</TabsTrigger>
           <TabsTrigger value="subscriptions">Planos</TabsTrigger>
-          <TabsTrigger value="audit">Histórico/Auditoria</TabsTrigger>
+          <TabsTrigger value="audit">Histórico</TabsTrigger>
         </TabsList>
 
         <TabsContent value="contests" className="mt-6 space-y-4">
