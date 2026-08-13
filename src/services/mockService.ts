@@ -531,10 +531,15 @@ export const MockService = {
       }
       
       const local = localStorage.getItem('norte_user_achievements');
-      return local ? JSON.parse(local) : [
+      const initial = [
         { id: '1', code: 'FIRST_10', name: 'Primeiras 10', description: 'Resolveu suas primeiras 10 questões.', icon_url: 'award' },
         { id: '2', code: 'PERFECT_SCORE', name: 'Gabarito', description: 'Acertou 100% de um simulado.', icon_url: 'star' }
       ];
+      if (!local) {
+        localStorage.setItem('norte_user_achievements', JSON.stringify(initial));
+        return initial;
+      }
+      return JSON.parse(local);
     } catch (e) {
       return [];
     }
