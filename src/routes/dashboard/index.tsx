@@ -1,5 +1,6 @@
 import React from 'react';
 import { createFileRoute } from '@tanstack/react-router';
+import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
   BarChart, 
@@ -47,6 +48,7 @@ function DashboardIndex() {
     plan: false
   });
   const [isUpdatingTour, setIsUpdatingTour] = React.useState(false);
+  const [dailyQuota, setDailyQuota] = React.useState({ used: 0, total: 0 });
 
   React.useEffect(() => {
     const fetchOnboarding = async () => {
@@ -55,7 +57,6 @@ function DashboardIndex() {
         setShowTour(true);
       }
 
-      // Sync with local reality if needed
       const storedContest = localStorage.getItem('norte_focused_contest');
       const storedNotebooks = JSON.parse(localStorage.getItem('norte_notebooks') || '[]');
       
@@ -67,13 +68,45 @@ function DashboardIndex() {
 
       setChecklist(currentSteps);
 
-      // Sincronizar se o banco estiver desatualizado e estivermos logados
       if (user && JSON.stringify(status.onboarding_steps) !== JSON.stringify(currentSteps)) {
         MockService.updateOnboardingStatus({ onboarding_steps: currentSteps });
       }
+
+      // Calculate daily quota
+      const responses = MockService.getUserResponses();
+      const today = new Date().toISOString().split('T')[0];
+      const todayCount = responses.filter(r => (r as any).createdAt?.split('T')[0] === today).length;
+      const userRole = (user?.role || 'free') as string;
+      const limit = userRole === 'free' ? 10 : (userRole === 'essential' ? 100 : Infinity);
+      setDailyQuota({ used: todayCount, total: limit === Infinity ? 9999 : limit });
     };
 
     fetchOnboarding();
+
+    // Real-time synchronization
+    if (user) {
+      const channel = supabase
+        .channel('profile_sync')
+        .on('postgres_changes', { 
+          event: 'UPDATE', 
+          schema: 'public', 
+          table: 'profiles',
+          filter: `id=eq.${user.id}`
+        }, (payload: any) => {
+          if (payload.new.onboarding_steps) {
+            setChecklist(payload.new.onboarding_steps);
+          }
+          if (payload.new.onboarding_done !== undefined) {
+            setShowTour(!payload.new.onboarding_done);
+          }
+        })
+        .subscribe();
+
+      return () => {
+        supabase.removeChannel(channel);
+      };
+    }
+    return undefined;
   }, [user]);
 
   const completeTour = async () => {
@@ -218,10 +251,11 @@ function DashboardIndex() {
           description={focusedContest?.role || "Selecione um concurso"}
         />
         <MetricCard 
-          title="Tempo Estudado" 
-          value={`${Math.floor((stats?.timeSpent || 0) / 60)}m`} 
-          icon={Clock}
-          description="Efetivo hoje"
+          title="Cota Diária" 
+          value={`${dailyQuota.used}/${dailyQuota.total === 9999 ? '∞' : dailyQuota.total}`} 
+          icon={Zap}
+          description="Questões hoje"
+          progress={(dailyQuota.used / dailyQuota.total) * 100}
         />
         <MetricCard 
           title="Taxa de Acerto" 
@@ -230,10 +264,10 @@ function DashboardIndex() {
           description="Geral acumulada"
         />
         <MetricCard 
-          title="Questões" 
-          value={stats?.totalQuestions || 0} 
-          icon={Zap}
-          description="Respondidas"
+          title="Tempo Estudado" 
+          value={`${Math.floor((stats?.timeSpent || 0) / 60)}m`} 
+          icon={Clock}
+          description="Efetivo hoje"
         />
       </div>
 
@@ -297,10 +331,10 @@ function DashboardIndex() {
   );
 }
 
-function MetricCard({ title, value, icon: Icon, description }: any) {
+function MetricCard({ title, value, icon: Icon, description, progress }: any) {
   return (
-    <Card>
-      <CardContent className="pt-6">
+    <Card className="overflow-hidden">
+      <CardContent className="pt-6 relative">
         <div className="flex items-center justify-between space-y-0 pb-2">
           <p className="text-sm font-medium text-muted-foreground">{title}</p>
           <Icon className="h-4 w-4 text-secondary" />
@@ -309,6 +343,17 @@ function MetricCard({ title, value, icon: Icon, description }: any) {
           <div className="text-2xl font-bold text-primary">{value}</div>
           <p className="text-xs text-muted-foreground">{description}</p>
         </div>
+        {progress !== undefined && (
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-muted">
+            <div 
+              className={cn(
+                "h-full transition-all duration-500",
+                progress > 90 ? "bg-destructive" : progress > 70 ? "bg-orange-500" : "bg-emerald-500"
+              )}
+              style={{ width: `${Math.min(progress, 100)}%` }}
+            />
+          </div>
+        )}
       </CardContent>
     </Card>
   );

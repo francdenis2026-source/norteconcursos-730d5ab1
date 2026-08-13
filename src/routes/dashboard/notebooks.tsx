@@ -37,6 +37,8 @@ function NotebooksPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [disciplineFilter, setDisciplineFilter] = useState<string>('all');
+  const [statusFilter, setStatusFilter] = useState<'all' | 'favorited' | 'marked'>('all');
+  const [sortBy, setSortBy] = useState<'name' | 'date' | 'questions'>('date');
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
 
   useEffect(() => {
@@ -152,10 +154,16 @@ function NotebooksPage() {
     }, 500);
   };
 
-  const filteredNotebooks = notebooks.filter(nb => 
-    nb.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    nb.description?.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredNotebooks = notebooks
+    .filter(nb => 
+      nb.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      nb.description?.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .sort((a, b) => {
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
+      if (sortBy === 'questions') return b.questionIds.length - a.questionIds.length;
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    });
 
   return (
     <div className="space-y-6">
@@ -179,11 +187,34 @@ function NotebooksPage() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <div className="flex items-center gap-2 w-full md:w-auto">
-          <Button variant="outline" size="sm" className="gap-2 shrink-0">
-            <Filter className="h-4 w-4" /> Filtros
-          </Button>
-          <Badge variant="secondary" className="hidden md:block">
+        <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm" className="gap-2 shrink-0">
+                <Filter className="h-4 w-4" /> Ordenar: {sortBy === 'date' ? 'Recentes' : sortBy === 'name' ? 'Nome' : 'Questões'}
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem onClick={() => setSortBy('date')}>Mais Recentes</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setSortBy('name')}>Nome (A-Z)</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setSortBy('questions')}>Qtd. de Questões</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm" className="gap-2 shrink-0">
+                Status: {statusFilter === 'all' ? 'Todos' : statusFilter === 'favorited' ? 'Favoritos' : 'Marcados'}
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem onClick={() => setStatusFilter('all')}>Todos</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setStatusFilter('favorited')}>Apenas Favoritos</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setStatusFilter('marked')}>Apenas Marcados</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <Badge variant="secondary" className="hidden lg:block">
             {filteredNotebooks.length} cadernos
           </Badge>
         </div>
