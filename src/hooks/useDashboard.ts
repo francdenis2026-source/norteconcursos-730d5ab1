@@ -25,8 +25,8 @@ export function useDashboardData() {
     loadData();
   }, []);
 
-  const refreshStats = () => {
-    setStats(MockService.getPerformanceStats());
+  const refreshStats = async () => {
+    setStats(await MockService.getPerformanceStats());
   };
 
   return { stats, focusedContest, contests, isLoading, refreshStats };
