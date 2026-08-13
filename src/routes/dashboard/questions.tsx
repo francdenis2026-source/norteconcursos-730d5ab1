@@ -57,7 +57,21 @@ function QuestionsCatalog() {
       const limit = userRole === 'free' ? 10 : (userRole === 'essential' ? 100 : Infinity);
       
       if (todayCount >= (limit as number)) {
-        toast.warning(`Você atingiu seu limite diário de ${limit} questões no plano ${userRole.toUpperCase()}.`);
+        toast.error(
+          <div className="flex flex-col gap-1">
+            <p className="font-bold">Limite diário atingido</p>
+            <p className="text-sm">Você já respondeu {todayCount} questões hoje no plano {userRole.toUpperCase()}.</p>
+            <Button 
+              size="sm" 
+              variant="secondary" 
+              className="mt-2 w-full"
+              onClick={() => window.location.href = '/dashboard/profile'}
+            >
+              Fazer Upgrade para Ilimitado
+            </Button>
+          </div>,
+          { duration: 8000 }
+        );
       }
       
       setLoading(false);
