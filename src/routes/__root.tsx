@@ -118,13 +118,19 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   useEffect(() => {
-    // Check local storage for theme preference
+    // Check local storage or matchMedia for theme preference
     const savedTheme = localStorage.getItem('theme');
     const isDark = savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    
     if (isDark) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
+    }
+
+    // Persist to local storage if it was system preference but no manual override yet
+    if (!savedTheme) {
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
     }
   }, []);
 
