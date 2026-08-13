@@ -164,6 +164,21 @@ function ProfilePage() {
     }
   };
 
+  const handleReactivateSubscription = async () => {
+    setIsUpdating(true);
+    try {
+      const success = await MockService.reactivateSubscription(user!.id);
+      if (success) {
+        toast.success('Assinatura reativada com sucesso!');
+        window.location.reload();
+      } else {
+        toast.error('Erro ao reativar assinatura.');
+      }
+    } finally {
+      setIsUpdating(false);
+    }
+  };
+
   if (isLoading) return <div className="p-8">Carregando...</div>;
 
   return (
