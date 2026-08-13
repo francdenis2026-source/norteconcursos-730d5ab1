@@ -7,7 +7,8 @@ const STORAGE_KEYS = {
   FOCUSED_CONTEST: 'norte_focused_contest',
   NOTEBOOKS: 'norte_notebooks',
   STUDY_PLAN: 'norte_study_plan',
-  DEMO_DATA_LOADED: 'norte_demo_loaded'
+  DEMO_DATA_LOADED: 'norte_demo_loaded',
+  ONBOARDING: 'norte_onboarding'
 };
 
 export const MockService = {
@@ -289,6 +290,45 @@ export const MockService = {
     } catch (e) {
       console.error('Error fetching audit logs:', e);
       return [];
+    }
+  },
+
+  // Onboarding
+  getOnboardingStatus: async () => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        const { data, error } = await supabase
+          .from('profiles')
+          .select('onboarding_steps, onboarding_done')
+          .eq('id', session.user.id)
+          .single();
+        if (!error && data) return data;
+      }
+      
+      const local = localStorage.getItem(STORAGE_KEYS.ONBOARDING);
+      return local ? JSON.parse(local) : { onboarding_steps: { contest: false, notebook: false, plan: false }, onboarding_done: false };
+    } catch (e) {
+      return { onboarding_steps: { contest: false, notebook: false, plan: false }, onboarding_done: false };
+    }
+  },
+
+  updateOnboardingStatus: async (updates: { onboarding_steps?: any, onboarding_done?: boolean }) => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        await supabase
+          .from('profiles')
+          .update(updates)
+          .eq('id', session.user.id);
+      }
+      
+      const current = await MockService.getOnboardingStatus();
+      const next = { ...current, ...updates };
+      localStorage.setItem(STORAGE_KEYS.ONBOARDING, JSON.stringify(next));
+      return true;
+    } catch (e) {
+      return false;
     }
   }
 };
