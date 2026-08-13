@@ -47,7 +47,9 @@ function Index() {
           </nav>
           <div className="flex items-center gap-4">
             <Link to="/auth" className="text-sm font-medium hover:underline hidden sm:block">Entrar</Link>
-            <Button className="bg-primary hover:bg-primary/90">Começar grátis</Button>
+            <Button className="bg-primary hover:bg-primary/90" asChild>
+              <Link to="/auth">Começar grátis</Link>
+            </Button>
           </div>
         </div>
       </header>
@@ -69,7 +71,9 @@ function Index() {
                   Envie suas provas, identifique seus pontos fracos e receba um plano de estudo personalizado com inteligência artificial.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                  <Button size="lg" className="bg-primary text-lg h-14 px-8">Testar grátis por 15 dias</Button>
+                  <Button size="lg" className="bg-primary text-lg h-14 px-8" asChild>
+                    <Link to="/auth">Testar grátis por 15 dias</Link>
+                  </Button>
                   <Button size="lg" variant="outline" className="text-lg h-14 px-8 group">
                     Conhecer as ferramentas
                     <ChevronRight className="ml-2 transition-transform group-hover:translate-x-1" />
