@@ -240,23 +240,25 @@ function ProfilePage() {
                 <Input 
                   placeholder="Código de ativação (Ex: X8J-29K)" 
                   className="max-w-xs"
-                  id="activation-code-input"
+                  value={activationCode}
+                  onChange={(e) => setActivationCode(e.target.value)}
+                  disabled={isActivating}
                 />
-                <Button onClick={() => {
-                  const val = (document.getElementById('activation-code-input') as HTMLInputElement)?.value;
-                  if (val === 'TRIAL-2026') {
-                    toast.success('Assinatura ativada com sucesso!');
-                    window.location.reload();
-                  } else {
-                    toast.error('Código inválido ou já utilizado.');
-                  }
-                }}>
-                  Ativar Agora
+                <Button onClick={handleActivate} disabled={isActivating || !activationCode}>
+                  {isActivating ? 'Validando...' : 'Ativar Agora'}
+                </Button>
+                <Button variant="ghost" size="sm" className="gap-2 text-xs" onClick={handleResendCode}>
+                   <RefreshCw className="h-3 w-3" /> Reenviar E-mail
                 </Button>
               </div>
               <p className="text-[10px] text-muted-foreground italic">
                 * Para o período de testes, utilize o código: <strong>TRIAL-2026</strong>
               </p>
+              {user?.activation_attempts && user.activation_attempts > 0 && (
+                <p className="text-[10px] text-rose-500 font-medium">
+                  Tentativas: {user.activation_attempts}/5
+                </p>
+              )}
             </CardContent>
           </Card>
         )}
