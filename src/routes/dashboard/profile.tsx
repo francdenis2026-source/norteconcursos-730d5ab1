@@ -148,13 +148,14 @@ function ProfilePage() {
   };
 
   const handleCancelSubscription = async () => {
-    if (!confirm('Tem certeza que deseja cancelar sua assinatura? Você perderá o acesso aos recursos Premium ao final do ciclo.')) return;
+    const reason = 'Solicitado pelo próprio usuário via painel de perfil.';
+    if (!confirm('Tem certeza que deseja cancelar sua assinatura? Você perderá o acesso aos recursos Premium ao final do ciclo de 30 dias.')) return;
     
     setIsUpdating(true);
     try {
-      const success = await MockService.cancelSubscription(user!.id);
+      const success = await MockService.cancelSubscription(user!.id, reason);
       if (success) {
-        toast.success('Assinatura cancelada com sucesso.');
+        toast.success('Assinatura cancelada com sucesso. O acesso Premium continuará ativo pelos próximos 30 dias.');
         window.location.reload();
       } else {
         toast.error('Erro ao cancelar assinatura.');
