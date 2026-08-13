@@ -32,15 +32,10 @@ export function useDashboardData() {
   return { stats, focusedContest, contests, isLoading, refreshStats };
 }
 
-import { SubscriptionTier } from '../types';
+import { SubscriptionTier, UserProfile } from '../types';
 
 export function useAuthStatus() {
-  const [user, setUser] = useState<{ 
-    id: string;
-    name: string; 
-    email: string; 
-    role: SubscriptionTier; 
-  } | null>(null);
+  const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -48,28 +43,44 @@ export function useAuthStatus() {
       const { data: { session } } = await supabase.auth.getSession();
       
       if (session) {
-        // Buscando perfil para pegar o tier atual diretamente do banco
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('subscription_tier')
-          .eq('id', session.user.id)
-          .single();
+        // Buscando perfil e roles diretamente do banco
+        const [profileRes, rolesRes] = await Promise.all([
+          supabase
+            .from('profiles')
+            .select('*')
+            .eq('id', session.user.id)
+            .single(),
+          supabase
+            .from('user_roles')
+            .select('role')
+            .eq('user_id', session.user.id)
+            .single()
+        ]);
+
+        const profile = profileRes.data;
+        const roleData = rolesRes.data;
 
         setUser({
           id: session.user.id,
-          name: session.user.user_metadata['full_name'] || 'Usuário',
+          full_name: profile?.full_name || session.user.user_metadata['full_name'] || 'Usuário',
           email: session.user.email || '',
-          role: (profile?.subscription_tier as SubscriptionTier) || 
-                (session.user.user_metadata['role'] as SubscriptionTier) || 
-                'free'
+          subscription_tier: (profile?.subscription_tier as SubscriptionTier) || 'free',
+          onboarding_completed: !!profile?.onboarding_completed,
+          onboarding_progress: profile?.onboarding_progress || {},
+          is_activated: !!profile?.is_activated,
+          role: (roleData?.role as 'admin' | 'moderator' | 'user') || 'user'
         });
       } else {
         // Fallback para modo demo/visitante
         setUser({
           id: 'demo-user',
-          name: 'João Silva (Demo)',
+          full_name: 'João Silva (Demo)',
           email: 'joao.demo@norteconcurso.com.br',
-          role: 'plus'
+          subscription_tier: 'plus',
+          onboarding_completed: false,
+          onboarding_progress: {},
+          is_activated: true,
+          role: 'user'
         });
       }
       setIsLoading(false);
@@ -78,17 +89,13 @@ export function useAuthStatus() {
     checkAuth();
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (session) {
-        checkAuth(); 
-      } else {
-        setUser(null);
-      }
+      checkAuth();
     });
 
     return () => subscription.unsubscribe();
   }, []);
 
-  return { user, isAuthenticated: !!user, isLoading };
+  return { user, isAuthenticated: !!user && user.id !== 'demo-user', isLoading, isAdmin: user?.role === 'admin' };
 }
 
 
