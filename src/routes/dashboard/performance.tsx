@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, 
@@ -41,14 +41,20 @@ function PerformancePage() {
       toast.error("Nenhum dado para exportar");
       return;
     }
-    const headers = ["Data", "Questão ID", "Acertou", "Tempo (seg)"];
+
+    const contestLabel = selectedContest === 'all' ? 'Geral' : contests.find(c => c.id === selectedContest)?.agency || 'Concurso';
+    const periodLabel = timeRange === 'weekly' ? 'Semanal' : timeRange === 'monthly' ? 'Mensal' : 'Anual';
+
+    const headers = ["Concurso", "Período", "Disciplina", "Acertos", "Total", "Tendência"];
     const csvContent = [
       headers.join(","),
-      ...responses.map(r => [
-        new Date(r.createdAt).toLocaleString(),
-        r.questionId,
-        r.isCorrect ? "Sim" : "Não",
-        r.timeSpent
+      ...disciplineData.map(d => [
+        contestLabel,
+        periodLabel,
+        d.name,
+        d.acertos,
+        d.total,
+        d.previous > 0 ? (((d.acertos - d.previous) / d.previous) * 100).toFixed(1) + "%" : "N/A"
       ].join(","))
     ].join("\n");
 
@@ -56,18 +62,37 @@ function PerformancePage() {
     const link = document.createElement("a");
     const url = URL.createObjectURL(blob);
     link.setAttribute("href", url);
-    link.setAttribute("download", `performance_norte_${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute("download", `relatorio_norte_${contestLabel}_${periodLabel}.csv`);
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    toast.success("Relatório CSV exportado!");
+    toast.success("Relatório consolidado exportado com sucesso!");
   };
 
   const handleExportPDF = () => {
-    toast.info("Preparando relatório PDF...");
-    setTimeout(() => window.print(), 1000);
+    toast.info("Gerando relatório consolidado com gráficos e variações...");
+    setTimeout(() => {
+      window.print();
+    }, 1000);
   };
+
+  const checkGoals = () => {
+    const laggingDiscipline = disciplineData.find(d => d.total > 0 && d.acertos < d.previous);
+    if (laggingDiscipline) {
+      toast.warning(`Alerta de Meta: Você está com desempenho inferior em ${laggingDiscipline.name} comparado ao período anterior.`, {
+        duration: 5000,
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (!isLoading && disciplineData.length > 0) {
+      const timer = setTimeout(checkGoals, 2000);
+      return () => clearTimeout(timer);
+    }
+    return () => {};
+  }, [isLoading, selectedContest]);
 
   return (
     <div className="space-y-6">
