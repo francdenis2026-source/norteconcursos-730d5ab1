@@ -9,7 +9,7 @@ import { useAuthStatus } from '@/hooks/useDashboard';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { MockService } from '@/services/mockService';
-import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap, RefreshCw } from 'lucide-react';
+import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap, RefreshCw, History as HistoryIcon } from 'lucide-react';
 import { SUBSCRIPTION_PLANS } from '@/lib/subscriptions.config';
 import { cn } from '@/lib/utils';
 import { createCheckoutSession, createPortalSession } from '@/lib/stripe.functions';
