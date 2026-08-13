@@ -12,7 +12,9 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { MockService } from '@/services/mockService';
 import { UserResponse, Contest } from '@/types';
-import { CheckCircle2, XCircle, Clock, Calendar } from 'lucide-react';
+import { CheckCircle2, XCircle, Clock, Calendar, Trophy } from 'lucide-react';
+import { useAuthStatus } from '@/hooks/useDashboard';
+import { cn } from '@/lib/utils';
 
 export const Route = createFileRoute('/dashboard/history')({
   component: HistoryPage,
@@ -37,8 +39,8 @@ function HistoryPage() {
         MockService.getMockExamRanking()
       ]);
       
-      setResponses(history.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()));
-      setExamHistory(exams.sort((a, b) => new Date(b.finishedAt).getTime() - new Date(a.finishedAt).getTime()));
+      setResponses(history.sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()));
+      setExamHistory(exams.sort((a: any, b: any) => new Date(b.finishedAt).getTime() - new Date(a.finishedAt).getTime()));
       setRanking(rank);
       setIsLoading(false);
     };

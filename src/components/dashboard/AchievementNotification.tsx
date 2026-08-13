@@ -1,5 +1,5 @@
 import React from 'react';
-import { toast, type Toast } from 'sonner';
+import { toast } from 'sonner';
 import { Trophy, Star, Award, Zap } from 'lucide-react';
 import { Achievement } from '@/types';
 
