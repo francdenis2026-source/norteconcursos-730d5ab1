@@ -398,9 +398,12 @@ function AdminPanel() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Imagens / Fórmulas (Media)</label>
-                    <div className="flex items-center justify-center border-2 border-dashed rounded-lg p-4 bg-muted/20 cursor-pointer hover:bg-muted/40 transition-colors">
-                      <span className="text-[10px] text-muted-foreground">Clique para fazer upload (LaTeX support auto)</span>
+                    <label className="text-sm font-medium">Mídias e Anexos (Imagens/Documentos)</label>
+                    <div className="flex items-center justify-center border-2 border-dashed rounded-lg p-4 bg-muted/20 cursor-pointer hover:bg-muted/40 transition-colors group">
+                      <div className="text-center">
+                        <Plus className="h-4 w-4 mx-auto mb-1 text-muted-foreground group-hover:text-primary transition-colors" />
+                        <span className="text-[10px] text-muted-foreground">Upload de Mídia (Vídeo/Theory PDF)</span>
+                      </div>
                     </div>
                   </div>
                 </div>

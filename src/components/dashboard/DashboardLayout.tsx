@@ -69,19 +69,23 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const location = useLocation();
   const { user } = useAuthStatus();
   const [streak, setStreak] = React.useState<any>(null);
-
-
+  const [achievements, setAchievements] = React.useState<any[]>([]);
   const [isDarkMode, setIsDarkMode] = React.useState(false);
 
   React.useEffect(() => {
+    // Sync theme on mount
     const isDark = document.documentElement.classList.contains('dark');
     setIsDarkMode(isDark);
     
-    const loadStreak = async () => {
-      const s = await MockService.getUserStreak();
+    const loadGamification = async () => {
+      const [s, a] = await Promise.all([
+        MockService.getUserStreak(),
+        MockService.getAchievements()
+      ]);
       setStreak(s);
+      setAchievements(a);
     };
-    loadStreak();
+    loadGamification();
   }, []);
 
   const toggleTheme = () => {
@@ -161,6 +165,34 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   </TooltipTrigger>
                   <TooltipContent>
                     <p className="text-[10px]">Continue estudando diariamente para manter sua ofensiva!</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="flex items-center justify-between px-3 py-2 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg border border-emerald-200 dark:border-emerald-800/50 cursor-pointer hover:bg-emerald-100 transition-colors">
+                      <div className="flex items-center gap-2">
+                        <Trophy className="h-4 w-4 text-emerald-500 fill-emerald-500" />
+                        <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400">Medalhas</span>
+                      </div>
+                      <span className="text-sm font-black text-emerald-700 dark:text-emerald-400">{achievements.length}</span>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <div className="p-1">
+                      <p className="text-[10px] font-bold mb-1">Suas Conquistas:</p>
+                      {achievements.length > 0 ? (
+                        achievements.map(a => (
+                          <div key={a.id} className="text-[9px] flex items-center gap-1">
+                             • {a.name}
+                          </div>
+                        ))
+                      ) : (
+                        <p className="text-[9px] text-muted-foreground">Nenhuma medalha ainda.</p>
+                      )}
+                    </div>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
