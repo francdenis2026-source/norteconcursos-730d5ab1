@@ -1,83 +1,74 @@
-# FASE 2 - PREPARAÇÃO PARA O BANCO DE DADOS
+# Fase 2 — implantação do banco da Norte Concurso
 
-Este documento descreve as entidades e relações necessárias para a futura integração do banco de dados na plataforma Norte Concurso, baseada na implementação da Fase 2 (Demonstrativa).
+## Estado desta entrega
 
-## 1. Entidades Necessárias (Tabelas)
+A fundação do Supabase foi implementada em `supabase/migrations/20260813000000_norte_concurso_schema.sql`.
+Ela contém autenticação integrada, perfis, planos, catálogo, questões, respostas, cadernos,
+simulados, planejamento, sessões, revisões, auditoria e políticas de Row Level Security.
 
-### `profiles`
-- `id` (uuid, PK)
-- `full_name` (text)
-- `cpf` (text, unique)
-- `focused_contest_id` (uuid, FK)
-- `subscription_tier` (enum: 'free', 'essential', 'plus', 'premium')
+O frontend mantém os mocks como fallback apenas quando as variáveis públicas do Supabase não
+estão configuradas. Com as variáveis presentes, cadastro, login, concurso-foco e indicadores
+passam a utilizar dados remotos.
 
-### `contests`
-- `id` (uuid, PK)
-- `name` (text)
-- `agency` (text)
-- `career` (enum)
-- `role` (text)
-- `exam_board` (text)
-- `education_level` (enum)
-- `location` (text)
-- `status` (enum)
-- `vacancies` (int)
-- `salary` (decimal)
-- `exam_date` (timestamp)
+## Segurança aplicada
 
-### `disciplines` & `subjects`
-- `disciplines`: `id`, `name`
-- `subjects`: `id`, `name`, `discipline_id`, `parent_id` (auto-relacionamento)
+- A senha do banco e a chave `service_role` não pertencem ao frontend nem ao repositório.
+- CPF é validado no navegador e novamente pelo PostgreSQL.
+- Alunos só acessam os próprios dados privados.
+- O gabarito fica em `question_answer_keys`, sem leitura para aluno.
+- Correção de questão e pontuação de simulado acontecem em funções do banco.
+- Respostas e notas não podem ser gravadas diretamente pelo navegador.
+- Limites diário e mensal são conferidos no servidor pela função `answer_question`.
+- Uma única sessão de cronômetro pode permanecer ativa por usuário.
+- Ações administrativas são separadas por papéis.
 
-### `questions`
-- `id` (uuid, PK)
-- `text` (text)
-- `type` (enum: 'multiple_choice', 'true_false')
-- `explanation` (text)
-- `discipline_id` (uuid, FK)
-- `subject_id` (uuid, FK)
-- `difficulty` (enum)
+## Configuração necessária
 
-### `options` (Para questões de múltipla escolha)
-- `id` (uuid, PK)
-- `question_id` (uuid, FK)
-- `text` (text)
-- `is_correct` (boolean)
+No ambiente do Lovable, configure somente:
 
-### `user_responses`
-- `id` (uuid, PK)
-- `user_id` (uuid, FK)
-- `question_id` (uuid, FK)
-- `selected_option_id` (uuid, FK, nullable)
-- `boolean_answer` (boolean, nullable)
-- `is_correct` (boolean)
-- `time_spent` (int) - segundos
-- `created_at` (timestamp)
+```text
+VITE_SUPABASE_URL=https://rarwpddnjjgmxspaoplf.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=<chave publishable do projeto>
+```
 
-### `notebooks`
-- `id` (uuid, PK)
-- `user_id` (uuid, FK)
-- `name` (text)
-- `description` (text)
+Não use prefixo `VITE_` para senha de banco, token pessoal do Supabase ou `service_role`.
 
-### `notebook_questions`
-- `notebook_id` (uuid, FK)
-- `question_id` (uuid, FK)
+Para aplicar a migration pelo CLI, autentique-se localmente e use uma senha atual configurada
+fora do repositório:
 
-## 2. Relações Principais
-- Perfil 1:1 com Usuário Auth
-- Perfil N:1 com Concursos (Foco)
-- Questões N:1 com Disciplinas e Assuntos
-- Respostas N:1 com Usuário e Questão
-- Cadernos N:1 com Usuário e N:N com Questões
+```bash
+supabase login
+supabase link --project-ref rarwpddnjjgmxspaoplf
+supabase db push
+```
 
-## 3. Segurança e RLS
-- Usuários só podem ler e escrever seus próprios `profiles`, `user_responses`, `notebooks` e `study_plans`.
-- `contests`, `questions`, `disciplines` e `subjects` são leitura pública para autenticados.
-- Admins (via `user_roles`) têm permissão total em tabelas de conteúdo.
+## Proprietário inicial
 
-## 4. Próximos Passos para Integração
-1. Criar tabelas e ENUMs no Supabase.
-2. Migrar os dados de `src/data/mock` para as tabelas iniciais.
-3. Substituir os métodos do `MockService` por chamadas à API do Supabase (Client-side).
-4. Implementar lógica de limites baseada no plano do usuário no Servidor.
+Primeiro, crie e confirme normalmente a conta `francdenisbr@gmail.com`. Depois, no SQL Editor,
+promova somente essa conta verificada:
+
+```sql
+insert into public.user_roles (user_id, role)
+select id, 'owner' from auth.users where lower(email) = 'francdenisbr@gmail.com'
+on conflict (user_id, role) do nothing;
+```
+
+Nenhuma senha inicial é mantida em migration ou arquivo público.
+
+## Módulos ainda não concluídos no frontend
+
+O banco está preparado, porém estas páginas do projeto recebido ainda eram placeholders e
+precisam de implementação visual e conexão em uma próxima entrega:
+
+- Meu Concurso e edital verticalizado.
+- Cadernos.
+- Simulados.
+- Caderno de erros.
+- Planejador.
+- Cronômetro.
+- Revisões e desempenho detalhado.
+- Painel administrativo.
+
+Essas páginas não devem ser apresentadas como prontas até que seus fluxos sejam implementados e
+testados contra as tabelas e funções desta migration.
+

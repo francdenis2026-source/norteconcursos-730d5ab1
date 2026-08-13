@@ -1,31 +1,27 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
+import { createFileRoute } from "@tanstack/react-router";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
   ResponsiveContainer,
   LineChart,
   Line,
-  Cell
-} from 'recharts';
-import { 
-  Target, 
-  Clock, 
-  CheckCircle2, 
-  AlertCircle, 
-  TrendingUp,
-  Zap
-} from 'lucide-react';
-import { useDashboardData } from '@/hooks/useDashboard';
-import { Button } from '@/components/ui/button';
-import { MockService } from '@/services/mockService';
+  Cell,
+} from "recharts";
+import { Target, Clock, CheckCircle2, AlertCircle, TrendingUp, Zap } from "lucide-react";
+import { useDashboardData } from "@/hooks/useDashboard";
+import { Button } from "@/components/ui/button";
+import { DataService } from "@/services/dataService";
+import type { LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute('/dashboard/')({
-  component: DashboardIndex
+export const Route = createFileRoute("/dashboard/")({
+  component: DashboardIndex,
 });
 
 function DashboardIndex() {
@@ -33,29 +29,31 @@ function DashboardIndex() {
 
   if (isLoading) return <div>Carregando...</div>;
 
-  const handleLoadDemo = () => {
+  const handleLoadDemo = async () => {
+    if (DataService.isRemote) return;
     // Simulate loading demo data
-    MockService.saveResponse({
-      questionId: 'q1',
+    await DataService.saveResponse({
+      questionId: "q1",
       isCorrect: true,
       timeSpent: 45,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     });
-    MockService.saveResponse({
-      questionId: 'q2',
+    await DataService.saveResponse({
+      questionId: "q2",
       isCorrect: false,
       timeSpent: 60,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     });
     refreshStats();
   };
 
-  const chartData = stats?.byDiscipline.map(d => ({
-    name: d.disciplineId === '1' ? 'Português' : 
-          d.disciplineId === '4' ? 'Constitucional' : 'Outras',
-    acertos: d.correct,
-    total: d.total
-  })) || [];
+  const chartData =
+    stats?.byDiscipline.map((d) => ({
+      name:
+        d.disciplineId === "1" ? "Português" : d.disciplineId === "4" ? "Constitucional" : "Outras",
+      acertos: d.correct,
+      total: d.total,
+    })) || [];
 
   return (
     <div className="space-y-6">
@@ -65,10 +63,15 @@ function DashboardIndex() {
           <p className="text-muted-foreground">Bem-vindo ao seu ambiente de estudos.</p>
         </div>
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" onClick={handleLoadDemo}>
-            Carregar demonstração
-          </Button>
-          <Button size="sm" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+          {!DataService.isRemote && (
+            <Button variant="outline" size="sm" onClick={handleLoadDemo}>
+              Carregar demonstração
+            </Button>
+          )}
+          <Button
+            size="sm"
+            className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
+          >
             <TrendingUp className="mr-2 h-4 w-4" />
             Meta Semanal: 65%
           </Button>
@@ -77,27 +80,27 @@ function DashboardIndex() {
 
       {/* Grid de Métricas Principais */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <MetricCard 
-          title="Foco Atual" 
-          value={focusedContest?.agency || "Não definido"} 
+        <MetricCard
+          title="Foco Atual"
+          value={focusedContest?.agency || "Não definido"}
           icon={Target}
           description={focusedContest?.role || "Selecione um concurso"}
         />
-        <MetricCard 
-          title="Tempo Estudado" 
-          value={`${Math.floor((stats?.timeSpent || 0) / 60)}m`} 
+        <MetricCard
+          title="Tempo Estudado"
+          value={`${Math.floor((stats?.timeSpent || 0) / 60)}m`}
           icon={Clock}
           description="Efetivo hoje"
         />
-        <MetricCard 
-          title="Taxa de Acerto" 
-          value={`${stats?.accuracyRate.toFixed(1) || 0}%`} 
+        <MetricCard
+          title="Taxa de Acerto"
+          value={`${stats?.accuracyRate.toFixed(1) || 0}%`}
           icon={CheckCircle2}
           description="Geral acumulada"
         />
-        <MetricCard 
-          title="Questões" 
-          value={stats?.totalQuestions || 0} 
+        <MetricCard
+          title="Questões"
+          value={stats?.totalQuestions || 0}
           icon={Zap}
           description="Respondidas"
         />
@@ -116,10 +119,13 @@ function DashboardIndex() {
                   <CartesianGrid strokeDasharray="3 3" vertical={false} />
                   <XAxis dataKey="name" />
                   <YAxis />
-                  <Tooltip 
-                    contentStyle={{ borderRadius: '8px', border: '1px solid #e2e8f0' }}
+                  <Tooltip contentStyle={{ borderRadius: "8px", border: "1px solid #e2e8f0" }} />
+                  <Bar
+                    dataKey="acertos"
+                    name="Acertos"
+                    fill="oklch(0.45 0.15 150)"
+                    radius={[4, 4, 0, 0]}
                   />
-                  <Bar dataKey="acertos" name="Acertos" fill="oklch(0.45 0.15 150)" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             ) : (
@@ -138,22 +144,22 @@ function DashboardIndex() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <ActivityItem 
-                title="Português - Sintaxe" 
-                type="Questões" 
-                time="14:00 - 15:30" 
+              <ActivityItem
+                title="Português - Sintaxe"
+                type="Questões"
+                time="14:00 - 15:30"
                 status="Pendente"
               />
-              <ActivityItem 
-                title="Dir. Constitucional - Art 5º" 
-                type="Teoria" 
-                time="16:00 - 18:00" 
+              <ActivityItem
+                title="Dir. Constitucional - Art 5º"
+                type="Teoria"
+                time="16:00 - 18:00"
                 status="Pendente"
               />
-              <ActivityItem 
-                title="Simulado Semanal" 
-                type="Simulado" 
-                time="Amanhã" 
+              <ActivityItem
+                title="Simulado Semanal"
+                type="Simulado"
+                time="Amanhã"
                 status="Pendente"
                 priority
               />
@@ -165,7 +171,17 @@ function DashboardIndex() {
   );
 }
 
-function MetricCard({ title, value, icon: Icon, description }: any) {
+function MetricCard({
+  title,
+  value,
+  icon: Icon,
+  description,
+}: {
+  title: string;
+  value: ReactNode;
+  icon: LucideIcon;
+  description: string;
+}) {
   return (
     <Card>
       <CardContent className="pt-6">
@@ -182,12 +198,26 @@ function MetricCard({ title, value, icon: Icon, description }: any) {
   );
 }
 
-function ActivityItem({ title, type, time, status, priority }: any) {
+function ActivityItem({
+  title,
+  type,
+  time,
+  status,
+  priority = false,
+}: {
+  title: string;
+  type: string;
+  time: string;
+  status: string;
+  priority?: boolean;
+}) {
   return (
-    <div className={cn(
-      "flex items-center justify-between p-3 rounded-lg border bg-card",
-      priority ? "border-l-4 border-l-secondary" : ""
-    )}>
+    <div
+      className={cn(
+        "flex items-center justify-between p-3 rounded-lg border bg-card",
+        priority ? "border-l-4 border-l-secondary" : "",
+      )}
+    >
       <div className="flex flex-col gap-1">
         <span className="text-sm font-bold">{title}</span>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -196,12 +226,8 @@ function ActivityItem({ title, type, time, status, priority }: any) {
         </div>
       </div>
       <Button variant="ghost" size="sm" className="h-8 text-xs">
-        Iniciar
+        {status === "Pendente" ? "Iniciar" : status}
       </Button>
     </div>
   );
-}
-
-function cn(...inputs: any[]) {
-  return inputs.filter(Boolean).join(' ');
 }
