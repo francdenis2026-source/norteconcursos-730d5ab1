@@ -60,9 +60,9 @@ function Index() {
           <div className="container px-4 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="flex flex-col gap-6">
-                <div className="inline-flex items-center rounded-full border border-secondary/20 bg-secondary/10 px-3 py-1 text-sm font-medium text-secondary-foreground">
+                <div className="inline-flex items-center rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-sm font-medium text-emerald-600">
                   <Zap className="mr-1 h-3.5 w-3.5" />
-                  <span>Novo: Inteligência Artificial na sua preparação</span>
+                  <span>Ambiente Demonstrativo Local</span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-primary leading-tight">
                   Descubra onde você está errando e estude na <span className="text-secondary">direção certa.</span>
