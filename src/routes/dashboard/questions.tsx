@@ -50,7 +50,7 @@ function QuestionsCatalog() {
       const today = new Date().toISOString().split('T')[0];
       const todayCount = responses.filter(r => {
         const date = (r as any).createdAt;
-        return typeof date === 'string' && date.startsWith(today);
+        return typeof date === 'string' && (date as string).startsWith(today);
       }).length;
       
       const userRole = (user?.role || 'free') as string;
