@@ -2,6 +2,18 @@
 @source "../src";
 @import "tw-animate-css";
 
+@utility no-print {
+  @media print {
+    display: none !important;
+  }
+}
+
+@utility text-print {
+  @media print {
+    color: black !important;
+  }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*

@@ -114,6 +114,7 @@ function AdminPanel() {
                   <TableHeader>
                     <TableRow>
                       <TableHead>Órgão / Nome</TableHead>
+                      <TableHead>Período</TableHead>
                       <TableHead>Banca</TableHead>
                       <TableHead>Status</TableHead>
                       <TableHead>Vagas</TableHead>
@@ -135,6 +136,10 @@ function AdminPanel() {
                               <span>{contest.agency}</span>
                               <span className="text-xs text-muted-foreground">{contest.name}</span>
                             </div>
+                          </TableCell>
+                          <TableCell className="text-xs">
+                            {contest.startDate ? new Date(contest.startDate).toLocaleDateString() : '∞'} - 
+                            {contest.endDate ? new Date(contest.endDate).toLocaleDateString() : '∞'}
                           </TableCell>
                           <TableCell>{contest.examBoard}</TableCell>
                           <TableCell>
