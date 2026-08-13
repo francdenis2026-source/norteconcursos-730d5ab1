@@ -37,6 +37,35 @@ function TimerPage() {
   const intervalRef = useRef<ReturnType<typeof setInterval>>(null);
 
   useEffect(() => {
+    const active = localStorage.getItem('norte_timer_active');
+    if (active) {
+      const parsed = JSON.parse(active);
+      const elapsed = Math.floor((Date.now() - parsed.timestamp) / 1000);
+      const remaining = parsed.timeLeft - elapsed;
+      
+      if (remaining > 0) {
+        setMode(parsed.mode);
+        setTimeLeft(remaining);
+        setIsActive(true);
+      } else {
+        localStorage.removeItem('norte_timer_active');
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isActive) {
+      localStorage.setItem('norte_timer_active', JSON.stringify({
+        mode,
+        timeLeft,
+        timestamp: Date.now()
+      }));
+    } else {
+      localStorage.removeItem('norte_timer_active');
+    }
+  }, [isActive, timeLeft, mode]);
+
+  useEffect(() => {
     if (isActive && timeLeft > 0) {
       intervalRef.current = setInterval(() => {
         setTimeLeft((prev) => prev - 1);
