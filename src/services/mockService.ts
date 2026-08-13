@@ -1,5 +1,6 @@
-import { contests, questions, disciplines } from "../data/mock";
-import { Contest, Question, UserResponse, PerformanceStats, Notebook } from "../types";
+import { contests as mockContests, questions as mockQuestions, disciplines as mockDisciplines } from "../data/mock";
+import { Contest, Question, UserResponse, PerformanceStats } from "../types";
+import { supabase } from "@/integrations/supabase/client";
 
 const STORAGE_KEYS = {
   USER_RESPONSES: 'norte_user_responses',
@@ -11,39 +12,82 @@ const STORAGE_KEYS = {
 
 export const MockService = {
   // Contests
-  getContests: (): Contest[] => {
-    return contests;
+  getContests: async (): Promise<Contest[]> => {
+    try {
+      const { data, error } = await supabase.from('contests').select('*');
+      if (error || !data || data.length === 0) return mockContests;
+      return data as unknown as Contest[];
+    } catch (e) {
+      return mockContests;
+    }
   },
 
-  getContestById: (id: string): Contest | undefined => {
-    return contests.find(c => c.id === id);
+  getContestById: async (id: string): Promise<Contest | undefined> => {
+    try {
+      const { data, error } = await supabase.from('contests').select('*').eq('id', id).single();
+      if (error || !data) return mockContests.find(c => c.id === id);
+      return data as unknown as Contest;
+    } catch (e) {
+      return mockContests.find(c => c.id === id);
+    }
   },
 
   setFocusedContest: (id: string) => {
     localStorage.setItem(STORAGE_KEYS.FOCUSED_CONTEST, id);
+    // Posteriormente: sincronizar com profile no Supabase
   },
 
-  getFocusedContest: (): Contest | undefined => {
+  getFocusedContest: async (): Promise<Contest | undefined> => {
     const id = localStorage.getItem(STORAGE_KEYS.FOCUSED_CONTEST);
-    return id ? contests.find(c => c.id === id) : undefined;
+    if (!id) return undefined;
+    return MockService.getContestById(id);
   },
 
   // Questions
-  getQuestions: (filters?: any): Question[] => {
-    let filtered = [...questions];
-    if (filters?.disciplineId) {
-      filtered = filtered.filter(q => q.disciplineId === filters.disciplineId);
+  getQuestions: async (filters?: any): Promise<Question[]> => {
+    try {
+      let query = supabase.from('questions').select('*');
+      
+      if (filters?.disciplineId) {
+        query = query.eq('discipline_id', filters.disciplineId);
+      }
+      if (filters?.difficulty) {
+        query = query.eq('difficulty', filters.difficulty);
+      }
+
+      const { data, error } = await query;
+      if (error || !data || data.length === 0) {
+        let filtered = [...mockQuestions];
+        if (filters?.disciplineId) {
+          filtered = filtered.filter(q => q.disciplineId === filters.disciplineId);
+        }
+        if (filters?.difficulty) {
+          filtered = filtered.filter(q => q.difficulty === filters.difficulty);
+        }
+        return filtered;
+      }
+      return data as unknown as Question[];
+    } catch (e) {
+      return mockQuestions;
     }
-    if (filters?.difficulty) {
-      filtered = filtered.filter(q => q.difficulty === filters.difficulty);
-    }
-    return filtered;
   },
 
-  saveResponse: (response: UserResponse) => {
+  saveResponse: async (response: UserResponse) => {
     const responses = MockService.getUserResponses();
     responses.push(response);
     localStorage.setItem(STORAGE_KEYS.USER_RESPONSES, JSON.stringify(responses));
+    
+    // Tenta salvar no Supabase se o usuário estiver logado
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) {
+      await supabase.from('user_responses').insert({
+        user_id: session.user.id,
+        question_id: response.questionId,
+        selected_option_id: response.selectedOptionId,
+        is_correct: response.isCorrect,
+        time_spent: response.timeSpent
+      });
+    }
   },
 
   getUserResponses: (): UserResponse[] => {
@@ -57,9 +101,9 @@ export const MockService = {
     const correct = responses.filter(r => r.isCorrect).length;
     const total = responses.length;
     
-    const byDiscipline = disciplines.map(d => {
+    const byDiscipline = mockDisciplines.map(d => {
       const discResponses = responses.filter(r => {
-        const q = questions.find(question => question.id === r.questionId);
+        const q = mockQuestions.find(question => question.id === r.questionId);
         return q?.disciplineId === d.id;
       });
       return {
@@ -86,6 +130,5 @@ export const MockService = {
 
   resetDemo: () => {
     localStorage.clear();
-    // Re-initialize any needed defaults
   }
 };
