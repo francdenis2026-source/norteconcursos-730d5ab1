@@ -342,6 +342,14 @@ function DashboardIndex() {
                 link="/dashboard/mock-exams"
               />
               <ActivityItem 
+                title="Revisão: Sintaxe" 
+                type="Repetição Espaçada" 
+                time="Sugerido para hoje" 
+                status="Pendente"
+                link="/dashboard/my-contest"
+                isReview
+              />
+              <ActivityItem 
                 title="Português - Sintaxe" 
                 type="Questões" 
                 time="Bloco Sugerido" 
