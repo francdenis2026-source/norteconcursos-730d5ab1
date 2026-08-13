@@ -87,7 +87,8 @@ export const questions = [
 ];
 // Preencher com 40 questões conforme solicitado
 for (let i = 3; i <= 42; i++) {
-    const disc = disciplines[i % disciplines.length] || disciplines[0];
+    const discIdx = i % disciplines.length;
+    const disc = disciplines[discIdx];
     const isCertoErrado = i % 3 === 0;
     const question = {
         id: `q${i}`,
