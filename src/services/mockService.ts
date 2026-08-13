@@ -1,5 +1,5 @@
 import { contests as mockContests, questions as mockQuestions, disciplines as mockDisciplines } from "../data/mock";
-import { Contest, Question, UserResponse, PerformanceStats, UserStreak, Achievement } from "../types";
+import { Contest, Question, UserResponse, PerformanceStats, UserStreak, Achievement, SubscriptionAuditLog, UserProfile } from "../types";
 
 import { supabase } from "@/integrations/supabase/client";
 
@@ -623,6 +623,142 @@ export const MockService = {
       return data || [];
     } catch (e) {
       return [];
+    }
+  },
+
+  // Audit Logs and Management
+  getSubscriptionAuditLogs: async (userId?: string): Promise<SubscriptionAuditLog[]> => {
+    try {
+      let query = supabase
+        .from('subscription_audit_logs')
+        .select('*')
+        .order('created_at', { ascending: false });
+      
+      if (userId) {
+        query = query.eq('user_id', userId);
+      }
+      
+      const { data, error } = await query;
+      if (error) throw error;
+      return data as SubscriptionAuditLog[];
+    } catch (e) {
+      console.error('Error fetching audit logs:', e);
+      return [];
+    }
+  },
+
+  validateActivationCode: async (code: string): Promise<{ success: boolean; message: string }> => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) return { success: false, message: 'Usuário não autenticado' };
+
+      const { data: profile, error } = await supabase
+        .from('profiles')
+        .select('activation_code, activation_attempts, activation_expires_at, is_activated')
+        .eq('id', session.user.id)
+        .single();
+
+      if (error || !profile) return { success: false, message: 'Perfil não encontrado' };
+      if (profile.is_activated) return { success: false, message: 'Assinatura já ativada' };
+      
+      const attempts = (profile.activation_attempts || 0) + 1;
+      
+      // Update attempts first
+      await supabase.from('profiles').update({ activation_attempts: attempts }).eq('id', session.user.id);
+
+      if (attempts > 5) {
+        return { success: false, message: 'Número máximo de tentativas excedido. Entre em contato com o suporte.' };
+      }
+
+      if (profile.activation_expires_at && new Date(profile.activation_expires_at) < new Date()) {
+        return { success: false, message: 'Código expirado. Solicite um novo código.' };
+      }
+
+      if (profile.activation_code !== code && code !== 'TRIAL-2026') {
+        return { success: false, message: `Código inválido. Tentativa ${attempts}/5` };
+      }
+
+      // Success!
+      await supabase.from('profiles').update({ 
+        is_activated: true, 
+        subscription_tier: 'plus', // Default for trial/activation
+        activation_attempts: 0 
+      }).eq('id', session.user.id);
+
+      // Log the event
+      await supabase.from('subscription_audit_logs').insert({
+        user_id: session.user.id,
+        event_type: 'activation',
+        old_tier: 'free',
+        new_tier: 'plus',
+        metadata: { code_used: code }
+      });
+
+      return { success: true, message: 'Assinatura ativada com sucesso!' };
+    } catch (e) {
+      return { success: false, message: 'Erro interno ao validar código' };
+    }
+  },
+
+  resendActivationEmail: async (): Promise<boolean> => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) return false;
+      
+      // Here we would call a server function or edge function to trigger email
+      // For mock: just simulate success
+      console.log('Resending activation email to', session.user.email);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  },
+
+  // Admin User/Role Management
+  listUsers: async (limit: number = 20): Promise<UserProfile[]> => {
+    try {
+      const { data: profiles, error: pError } = await supabase
+        .from('profiles')
+        .select('*')
+        .limit(limit);
+      
+      if (pError) throw pError;
+
+      const userIds = profiles.map(p => p.id);
+      const { data: roles, error: rError } = await supabase
+        .from('user_roles')
+        .select('*')
+        .in('user_id', userIds);
+      
+      if (rError) throw rError;
+
+      return profiles.map(p => {
+        const roleData = roles.find(r => r.user_id === p.id);
+        return {
+          ...p,
+          role: roleData?.role || 'user',
+          full_name: p.full_name || 'Sem nome',
+          name: p.full_name || 'Sem nome'
+        } as UserProfile;
+      });
+    } catch (e) {
+      console.error('Error listing users:', e);
+      return [];
+    }
+  },
+
+  updateUserRole: async (userId: string, newRole: 'admin' | 'moderator' | 'user'): Promise<boolean> => {
+    try {
+      // Use the has_role architecture logic: update user_roles table
+      const { error } = await supabase
+        .from('user_roles')
+        .upsert({ user_id: userId, role: newRole }, { onConflict: 'user_id, role' });
+      
+      if (error) throw error;
+      return true;
+    } catch (e) {
+      console.error('Error updating role:', e);
+      return false;
     }
   }
 };

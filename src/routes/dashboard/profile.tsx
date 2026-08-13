@@ -8,7 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import { useAuthStatus } from '@/hooks/useDashboard';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap } from 'lucide-react';
+import { MockService } from '@/services/mockService';
+import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap, RefreshCw, History as HistoryIcon } from 'lucide-react';
 import { SUBSCRIPTION_PLANS } from '@/lib/subscriptions.config';
 import { cn } from '@/lib/utils';
 import { createCheckoutSession, createPortalSession } from '@/lib/stripe.functions';
@@ -27,6 +28,9 @@ function ProfilePage() {
   const [isUpdating, setIsUpdating] = React.useState(false);
   const [isVerifying, setIsVerifying] = React.useState(false);
   const [isRedirecting, setIsRedirecting] = React.useState(false);
+  const [isActivating, setIsActivating] = React.useState(false);
+  const [auditLogs, setAuditLogs] = React.useState<any[]>([]);
+  const [activationCode, setActivationCode] = React.useState('');
   
   const checkout = useServerFn(createCheckoutSession);
   const portal = useServerFn(createPortalSession);
@@ -45,7 +49,37 @@ function ProfilePage() {
         newEmail: ''
       });
     }
+    const loadAudit = async () => {
+      const logs = await MockService.getSubscriptionAuditLogs();
+      setAuditLogs(logs);
+    };
+    loadAudit();
   }, [user]);
+
+  const handleActivate = async () => {
+    if (!activationCode) return;
+    setIsActivating(true);
+    try {
+      const result = await MockService.validateActivationCode(activationCode);
+      if (result.success) {
+        toast.success(result.message);
+        window.location.reload();
+      } else {
+        toast.error(result.message);
+      }
+    } finally {
+      setIsActivating(false);
+    }
+  };
+
+  const handleResendCode = async () => {
+    const success = await MockService.resendActivationEmail();
+    if (success) {
+      toast.success('Novo código enviado para seu e-mail!');
+    } else {
+      toast.error('Erro ao reenviar código.');
+    }
+  };
 
   const handleUpdateName = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -206,23 +240,25 @@ function ProfilePage() {
                 <Input 
                   placeholder="Código de ativação (Ex: X8J-29K)" 
                   className="max-w-xs"
-                  id="activation-code-input"
+                  value={activationCode}
+                  onChange={(e) => setActivationCode(e.target.value)}
+                  disabled={isActivating}
                 />
-                <Button onClick={() => {
-                  const val = (document.getElementById('activation-code-input') as HTMLInputElement)?.value;
-                  if (val === 'TRIAL-2026') {
-                    toast.success('Assinatura ativada com sucesso!');
-                    window.location.reload();
-                  } else {
-                    toast.error('Código inválido ou já utilizado.');
-                  }
-                }}>
-                  Ativar Agora
+                <Button onClick={handleActivate} disabled={isActivating || !activationCode}>
+                  {isActivating ? 'Validando...' : 'Ativar Agora'}
+                </Button>
+                <Button variant="ghost" size="sm" className="gap-2 text-xs" onClick={handleResendCode}>
+                   <RefreshCw className="h-3 w-3" /> Reenviar E-mail
                 </Button>
               </div>
               <p className="text-[10px] text-muted-foreground italic">
                 * Para o período de testes, utilize o código: <strong>TRIAL-2026</strong>
               </p>
+              {user?.activation_attempts && user.activation_attempts > 0 && (
+                <p className="text-[10px] text-rose-500 font-medium">
+                  Tentativas: {user.activation_attempts}/5
+                </p>
+              )}
             </CardContent>
           </Card>
         )}
@@ -325,6 +361,33 @@ function ProfilePage() {
             </div>
           </CardContent>
         </Card>
+
+        {auditLogs.length > 0 && (
+          <Card className="md:col-span-3">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <HistoryIcon className="h-5 w-5 text-primary" />
+                Histórico de Assinatura
+              </CardTitle>
+              <CardDescription>Eventos importantes relacionados ao seu plano.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {auditLogs.map((log) => (
+                  <div key={log.id} className="flex items-center justify-between py-2 border-b last:border-0">
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium capitalize">{log.event_type.replace('_', ' ')}</span>
+                      <span className="text-[10px] text-muted-foreground">{new Date(log.created_at).toLocaleString()}</span>
+                    </div>
+                    <Badge variant="outline" className="uppercase text-[9px]">
+                      {log.new_tier}
+                    </Badge>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
       </div>
     </div>

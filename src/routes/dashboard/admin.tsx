@@ -10,7 +10,7 @@ import {
   ShieldCheck,
   Settings,
   CreditCard,
-  History,
+  History as HistoryIcon,
   UserCheck,
   FileText,
   Lock
@@ -29,7 +29,7 @@ import {
 } from '@/components/ui/table';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { MockService } from '@/services/mockService';
-import { Contest, Question } from '@/types';
+import { Contest, Question, UserProfile } from '@/types';
 import { toast } from 'sonner';
 import { Link } from '@tanstack/react-router';
 import { CardFooter } from '@/components/ui/card';
@@ -48,10 +48,12 @@ function AdminPanel() {
   const { user, isAdmin, isLoading: isAuthLoading } = useAuthStatus();
   const [contests, setContests] = React.useState<Contest[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
+  const [users, setUsers] = React.useState<UserProfile[]>([]);
   const [subscriptionPlans, setSubscriptionPlans] = React.useState<any[]>([]);
   const [auditLogs, setAuditLogs] = React.useState<any[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState('');
+  const [isUpdatingRole, setIsUpdatingRole] = React.useState<string | null>(null);
   
   // States for Edit Modal
   const [editingContest, setEditingContest] = React.useState<Contest | null>(null);
@@ -60,17 +62,34 @@ function AdminPanel() {
 
   const loadData = async () => {
     setIsLoading(true);
-    const [c, q, p, logs] = await Promise.all([
-      MockService.getContests(),
-      MockService.getQuestions(),
-      (MockService as any).getSubscriptionPlans?.() || [],
-      (MockService as any).getAdminAuditLogs?.() || []
-    ]);
-    setContests(c);
-    setQuestions(q);
-    setSubscriptionPlans(p);
-    setAuditLogs(logs);
-    setIsLoading(false);
+    try {
+      const [c, q, p, logs, u] = await Promise.all([
+        MockService.getContests(),
+        MockService.getQuestions(),
+        (MockService as any).getSubscriptionPlans?.() || [],
+        (MockService as any).getAdminAuditLogs?.() || [],
+        (MockService as any).listUsers?.() || []
+      ]);
+      setContests(c);
+      setQuestions(q);
+      setSubscriptionPlans(p);
+      setAuditLogs(logs);
+      setUsers(u);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleUpdateRole = async (userId: string, newRole: 'admin' | 'moderator' | 'user') => {
+    setIsUpdatingRole(userId);
+    const success = await MockService.updateUserRole(userId, newRole);
+    if (success) {
+      toast.success('Role atualizada com sucesso!');
+      loadData();
+    } else {
+      toast.error('Erro ao atualizar role');
+    }
+    setIsUpdatingRole(null);
   };
 
   React.useEffect(() => {
@@ -579,30 +598,50 @@ function AdminPanel() {
                     <TableRow>
                       <TableHead>Nome</TableHead>
                       <TableHead>E-mail</TableHead>
+                      <TableHead>ID</TableHead>
+                      <TableHead>Role</TableHead>
                       <TableHead>Plano</TableHead>
-                      <TableHead>Status</TableHead>
                       <TableHead className="text-right">Ações</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    <TableRow>
-                      <TableCell className="font-medium">Franc D'nis</TableCell>
-                      <TableCell>francdenisbr@gmail.com</TableCell>
-                      <TableCell><Badge>Premium</Badge></TableCell>
-                      <TableCell><Badge variant="outline" className="text-emerald-600">Ativo</Badge></TableCell>
-                      <TableCell className="text-right">
-                        <Button variant="ghost" size="sm">Editar</Button>
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">Estudante Demo</TableCell>
-                      <TableCell>estudante@demo.com</TableCell>
-                      <TableCell><Badge variant="secondary">Free</Badge></TableCell>
-                      <TableCell><Badge variant="outline" className="text-amber-600">Pendente</Badge></TableCell>
-                      <TableCell className="text-right">
-                        <Button variant="ghost" size="sm">Editar</Button>
-                      </TableCell>
-                    </TableRow>
+                    {users.length === 0 ? (
+                      <TableRow>
+                        <TableCell colSpan={6} className="text-center py-8 text-muted-foreground">
+                          Nenhum usuário encontrado.
+                        </TableCell>
+                      </TableRow>
+                    ) : (
+                      users.map((u) => (
+                        <TableRow key={u.id}>
+                          <TableCell className="font-medium">{u.full_name}</TableCell>
+                          <TableCell className="text-xs">{u.email}</TableCell>
+                          <TableCell className="text-[10px] font-mono">{u.id.substring(0, 12)}...</TableCell>
+                          <TableCell>
+                            <select 
+                              className="text-[10px] p-1 rounded border bg-background"
+                              value={u.role}
+                              onChange={(e) => handleUpdateRole(u.id, e.target.value as any)}
+                              disabled={isUpdatingRole === u.id}
+                            >
+                              <option value="user">Usuário</option>
+                              <option value="moderator">Moderador</option>
+                              <option value="admin">Admin</option>
+                            </select>
+                          </TableCell>
+                          <TableCell>
+                            <Badge variant={u.is_activated ? "secondary" : "outline"} className="uppercase text-[9px]">
+                              {u.subscription_tier}
+                            </Badge>
+                          </TableCell>
+                          <TableCell className="text-right">
+                            <Button variant="ghost" size="sm" onClick={() => toast.info(`ID: ${u.id}`)}>
+                              Info
+                            </Button>
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
                   </TableBody>
                 </Table>
               </div>
@@ -614,7 +653,7 @@ function AdminPanel() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <History className="h-5 w-5 text-primary" />
+                <HistoryIcon className="h-5 w-5 text-primary" />
                 Logs de Auditoria
               </CardTitle>
               <CardDescription>
