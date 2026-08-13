@@ -56,7 +56,7 @@ const menuItems = [
   { label: 'Cronômetro', icon: Clock, href: '/dashboard/timer' },
   { label: 'Desempenho', icon: Layers, href: '/dashboard/performance' },
   { label: 'Perfil', icon: User, href: '/dashboard/profile' },
-  { label: 'Painel Admin', icon: Settings, href: '/dashboard/admin' },
+  { label: 'Painel Admin', icon: Settings, href: '/dashboard/admin', adminOnly: true },
 ];
 
 
