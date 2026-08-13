@@ -9,7 +9,9 @@ import {
   GraduationCap,
   ShieldCheck,
   Settings,
-  CreditCard 
+  CreditCard,
+  History,
+  UserCheck 
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
