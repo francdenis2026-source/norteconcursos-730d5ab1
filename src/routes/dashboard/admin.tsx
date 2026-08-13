@@ -54,6 +54,7 @@ function AdminPanel() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState('');
   const [isUpdatingRole, setIsUpdatingRole] = React.useState<string | null>(null);
+  const [isUpdatingSubscription, setIsUpdatingSubscription] = React.useState<string | null>(null);
   
   // States for Edit Modal
   const [editingContest, setEditingContest] = React.useState<Contest | null>(null);
@@ -90,6 +91,32 @@ function AdminPanel() {
       toast.error('Erro ao atualizar role');
     }
     setIsUpdatingRole(null);
+  };
+
+  const handleDowngradeUser = async (userId: string, targetTier: string) => {
+    if (!confirm(`Deseja realmente fazer o downgrade deste usuário para o plano ${targetTier}?`)) return;
+    setIsUpdatingSubscription(userId);
+    const success = await MockService.downgradeSubscription(userId, targetTier);
+    if (success) {
+      toast.success(`Downgrade para ${targetTier} realizado!`);
+      loadData();
+    } else {
+      toast.error('Erro ao realizar downgrade');
+    }
+    setIsUpdatingSubscription(userId);
+  };
+
+  const handleCancelUserSubscription = async (userId: string) => {
+    if (!confirm('Deseja cancelar a assinatura deste usuário? O plano voltará para "Free".')) return;
+    setIsUpdatingSubscription(userId);
+    const success = await MockService.cancelSubscription(userId);
+    if (success) {
+      toast.success('Assinatura cancelada!');
+      loadData();
+    } else {
+      toast.error('Erro ao cancelar assinatura');
+    }
+    setIsUpdatingSubscription(null);
   };
 
   React.useEffect(() => {
@@ -635,9 +662,33 @@ function AdminPanel() {
                             </Badge>
                           </TableCell>
                           <TableCell className="text-right">
-                            <Button variant="ghost" size="sm" onClick={() => toast.info(`ID: ${u.id}`)}>
-                              Info
-                            </Button>
+                            <div className="flex justify-end gap-2">
+                              {u.subscription_tier !== 'free' && (
+                                <>
+                                  <Button 
+                                    variant="ghost" 
+                                    size="sm" 
+                                    className="h-7 px-2 text-[10px] text-amber-600"
+                                    onClick={() => handleDowngradeUser(u.id, 'essential')}
+                                    disabled={isUpdatingSubscription === u.id || u.subscription_tier === 'essential'}
+                                  >
+                                    Downgrade
+                                  </Button>
+                                  <Button 
+                                    variant="ghost" 
+                                    size="sm" 
+                                    className="h-7 px-2 text-[10px] text-rose-600"
+                                    onClick={() => handleCancelUserSubscription(u.id)}
+                                    disabled={isUpdatingSubscription === u.id}
+                                  >
+                                    Cancelar
+                                  </Button>
+                                </>
+                              )}
+                              <Button variant="ghost" size="sm" onClick={() => toast.info(`ID: ${u.id}`)}>
+                                Info
+                              </Button>
+                            </div>
                           </TableCell>
                         </TableRow>
                       ))

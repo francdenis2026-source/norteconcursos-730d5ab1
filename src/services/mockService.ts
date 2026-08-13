@@ -760,5 +760,62 @@ export const MockService = {
       console.error('Error updating role:', e);
       return false;
     }
+  },
+
+  downgradeSubscription: async (userId: string, newTier: string): Promise<boolean> => {
+    try {
+      const { data: profile } = await supabase.from('profiles').select('subscription_tier').eq('id', userId).single();
+      const oldTier = profile?.subscription_tier || 'free';
+
+      const { error } = await supabase
+        .from('profiles')
+        .update({ subscription_tier: newTier })
+        .eq('id', userId);
+
+      if (error) throw error;
+
+      await supabase.from('subscription_audit_logs').insert({
+        user_id: userId,
+        event_type: 'downgrade',
+        old_tier: oldTier,
+        new_tier: newTier,
+        metadata: { source: 'admin_panel' }
+      });
+
+      return true;
+    } catch (e) {
+      console.error('Error downgrading subscription:', e);
+      return false;
+    }
+  },
+
+  cancelSubscription: async (userId: string): Promise<boolean> => {
+    try {
+      const { data: profile } = await supabase.from('profiles').select('subscription_tier').eq('id', userId).single();
+      const oldTier = profile?.subscription_tier || 'free';
+
+      const { error } = await supabase
+        .from('profiles')
+        .update({ 
+          subscription_tier: 'free',
+          is_activated: false
+        })
+        .eq('id', userId);
+
+      if (error) throw error;
+
+      await supabase.from('subscription_audit_logs').insert({
+        user_id: userId,
+        event_type: 'cancellation',
+        old_tier: oldTier,
+        new_tier: 'free',
+        metadata: { source: 'user_action' }
+      });
+
+      return true;
+    } catch (e) {
+      console.error('Error cancelling subscription:', e);
+      return false;
+    }
   }
 };
