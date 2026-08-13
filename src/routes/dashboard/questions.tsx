@@ -49,11 +49,11 @@ function QuestionsCatalog() {
       const responses = MockService.getUserResponses();
       const today = new Date().toISOString().split('T')[0];
       const todayCount = responses.filter(r => {
-        const date = r.createdAt as string | undefined;
+        const date = r.createdAt as string;
         return date && date.startsWith(today);
       }).length;
       
-      const tier = user?.role || 'free';
+      const tier = (user?.role || 'free') as string;
       const limit = tier === 'free' ? 10 : (tier === 'essential' ? 100 : Infinity);
       
       if (todayCount >= (limit as number)) {
