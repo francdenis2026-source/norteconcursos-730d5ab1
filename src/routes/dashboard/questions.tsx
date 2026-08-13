@@ -49,15 +49,15 @@ function QuestionsCatalog() {
       const responses = MockService.getUserResponses();
       const today = new Date().toISOString().split('T')[0];
       const todayCount = responses.filter(r => {
-        const date = r.createdAt as string;
-        return date && date.startsWith(today);
+        const date = r.createdAt;
+        return typeof date === 'string' && date.startsWith(today);
       }).length;
       
-      const tier = (user?.role || 'free') as string;
-      const limit = tier === 'free' ? 10 : (tier === 'essential' ? 100 : Infinity);
+      const userRole = (user?.role || 'free') as string;
+      const limit = userRole === 'free' ? 10 : (userRole === 'essential' ? 100 : Infinity);
       
       if (todayCount >= (limit as number)) {
-        toast.warning(`Você atingiu seu limite diário de ${limit} questões no plano ${(tier as string).toUpperCase()}.`);
+        toast.warning(`Você atingiu seu limite diário de ${limit} questões no plano ${userRole.toUpperCase()}.`);
       }
       
       setLoading(false);
