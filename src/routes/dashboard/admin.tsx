@@ -322,6 +322,45 @@ function AdminPanel() {
               </div>
             </CardContent>
           </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Editor de Comentários (Rich Text)</CardTitle>
+              <CardDescription>Cadastre explicações estruturadas com suporte a formatação HTML.</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Selecione a Questão</label>
+                <select className="w-full p-2 rounded-md border bg-background text-sm">
+                  <option>Selecione uma questão para comentar...</option>
+                  {questions.slice(0, 5).map(q => (
+                    <option key={q.id}>{q.text.substring(0, 60)}...</option>
+                  ))}
+                </select>
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Comentário do Professor</label>
+                <div className="border rounded-md overflow-hidden">
+                  <div className="bg-muted p-2 border-b flex gap-2">
+                    <Button variant="ghost" size="sm" className="h-7 w-7 p-0 font-bold">B</Button>
+                    <Button variant="ghost" size="sm" className="h-7 w-7 p-0 italic">I</Button>
+                    <Button variant="ghost" size="sm" className="h-7 w-7 p-0 underline">U</Button>
+                    <div className="w-px h-4 bg-border self-center mx-1" />
+                    <Button variant="ghost" size="sm" className="h-7 px-2 text-[10px]">Lista</Button>
+                    <Button variant="ghost" size="sm" className="h-7 px-2 text-[10px]">Link</Button>
+                  </div>
+                  <textarea 
+                    className="w-full p-4 min-h-[200px] text-sm focus:outline-none bg-background"
+                    placeholder="Digite o comentário estruturado aqui (suporta HTML)..."
+                  />
+                </div>
+              </div>
+              <div className="flex justify-end gap-2">
+                <Button variant="outline">Visualizar</Button>
+                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">Salvar Comentário</Button>
+              </div>
+            </CardContent>
+          </Card>
         </TabsContent>
 
         <TabsContent value="syllabus" className="mt-6 space-y-4">
