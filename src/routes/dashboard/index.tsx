@@ -209,7 +209,7 @@ function DashboardIndex() {
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 text-print">
         <div>
-          <h1 className="text-2xl font-bold text-primary">Olá, {user?.name?.split(' ')[0] || 'Estudante'}</h1>
+          <h1 className="text-2xl font-bold text-primary">Olá, {user?.full_name?.split(' ')[0] || 'Estudante'}</h1>
           <p className="text-muted-foreground">Bem-vindo ao seu ambiente de estudos.</p>
         </div>
         <div className="flex items-center gap-2 no-print">
