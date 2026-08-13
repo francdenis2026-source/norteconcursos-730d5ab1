@@ -28,7 +28,7 @@ function MockExamsPage() {
   const [isLoadingRanking, setIsLoadingRanking] = useState(false);
 
   
-  const featureAccess = checkFeatureAccess(user?.role || 'free', 'mockExams');
+  const featureAccess = checkFeatureAccess(user?.subscription_tier || 'free', 'mockExams');
 
   useEffect(() => {
     const loadHistory = async () => {

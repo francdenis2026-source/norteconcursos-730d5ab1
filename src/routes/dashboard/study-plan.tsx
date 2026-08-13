@@ -47,7 +47,7 @@ function StudyPlanPage() {
   const { user } = useAuthStatus();
   const { focusedContest } = useDashboardData();
   const [blocks, setBlocks] = useState<Block[]>(INITIAL_BLOCKS);
-  const featureAccess = checkFeatureAccess(user?.role || 'free', 'studyPlan');
+  const featureAccess = checkFeatureAccess(user?.subscription_tier || 'free', 'studyPlan');
 
   const handleSave = () => {
     toast.success("Plano de estudos salvo com sucesso!");

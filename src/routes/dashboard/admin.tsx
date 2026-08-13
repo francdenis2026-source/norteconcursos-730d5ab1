@@ -12,8 +12,10 @@ import {
   CreditCard,
   History,
   UserCheck,
-  FileText
+  FileText,
+  Lock
 } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -29,6 +31,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { MockService } from '@/services/mockService';
 import { Contest, Question } from '@/types';
 import { toast } from 'sonner';
+import { Link } from '@tanstack/react-router';
+import { CardFooter } from '@/components/ui/card';
 
 export const Route = createFileRoute('/dashboard/admin')({
   component: AdminPanel,
@@ -41,7 +45,7 @@ export const Route = createFileRoute('/dashboard/admin')({
 import { useAuthStatus } from '@/hooks/useDashboard';
 
 function AdminPanel() {
-  const { user } = useAuthStatus();
+  const { user, isAdmin, isLoading: isAuthLoading } = useAuthStatus();
   const [contests, setContests] = React.useState<Contest[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [subscriptionPlans, setSubscriptionPlans] = React.useState<any[]>([]);
@@ -114,6 +118,28 @@ function AdminPanel() {
     setIsSaving(false);
   };
 
+  if (isAuthLoading) return <div className="p-8">Verificando permissões...</div>;
+  if (!isAdmin) {
+    return (
+      <Card className="max-w-md mx-auto mt-20">
+        <CardHeader className="text-center">
+          <div className="mx-auto p-3 bg-destructive/10 rounded-full w-fit mb-4">
+            <Lock className="h-8 w-8 text-destructive" />
+          </div>
+          <CardTitle>Acesso Negado</CardTitle>
+          <CardDescription>
+            Você não tem permissão para acessar esta área. Esta página é restrita a administradores.
+          </CardDescription>
+        </CardHeader>
+        <CardFooter className="justify-center">
+          <Button asChild>
+            <Link to="/dashboard">Voltar para o Início</Link>
+          </Button>
+        </CardFooter>
+      </Card>
+    );
+  }
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -128,6 +154,7 @@ function AdminPanel() {
           <TabsTrigger value="contests">Concursos</TabsTrigger>
           <TabsTrigger value="questions">Questões</TabsTrigger>
           <TabsTrigger value="syllabus">Edital</TabsTrigger>
+        <TabsTrigger value="users">Usuários</TabsTrigger>
           <TabsTrigger value="subscriptions">Planos</TabsTrigger>
           <TabsTrigger value="audit">Histórico</TabsTrigger>
         </TabsList>
@@ -520,6 +547,62 @@ function AdminPanel() {
                         </TableRow>
                       ))
                     )}
+                  </TableBody>
+                </Table>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="users" className="mt-6 space-y-4">
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0">
+              <div>
+                <CardTitle>Gestão de Usuários</CardTitle>
+                <CardDescription>Crie e gerencie contas de estudantes.</CardDescription>
+              </div>
+              <Button size="sm" className="gap-2" onClick={() => {
+                const name = prompt("Nome do Usuário:");
+                const email = prompt("E-mail:");
+                const pass = prompt("Senha:");
+                if (name && email && pass) {
+                  toast.success(`Usuário ${name} criado com sucesso (Simulado)!`);
+                }
+              }}>
+                <UserCheck className="h-4 w-4" /> Novo Usuário
+              </Button>
+            </CardHeader>
+            <CardContent>
+              <div className="rounded-md border overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Nome</TableHead>
+                      <TableHead>E-mail</TableHead>
+                      <TableHead>Plano</TableHead>
+                      <TableHead>Status</TableHead>
+                      <TableHead className="text-right">Ações</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Franc D'nis</TableCell>
+                      <TableCell>francdenisbr@gmail.com</TableCell>
+                      <TableCell><Badge>Premium</Badge></TableCell>
+                      <TableCell><Badge variant="outline" className="text-emerald-600">Ativo</Badge></TableCell>
+                      <TableCell className="text-right">
+                        <Button variant="ghost" size="sm">Editar</Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Estudante Demo</TableCell>
+                      <TableCell>estudante@demo.com</TableCell>
+                      <TableCell><Badge variant="secondary">Free</Badge></TableCell>
+                      <TableCell><Badge variant="outline" className="text-amber-600">Pendente</Badge></TableCell>
+                      <TableCell className="text-right">
+                        <Button variant="ghost" size="sm">Editar</Button>
+                      </TableCell>
+                    </TableRow>
                   </TableBody>
                 </Table>
               </div>

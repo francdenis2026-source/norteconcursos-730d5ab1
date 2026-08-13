@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { useAuthStatus } from '@/hooks/useDashboard';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink } from 'lucide-react';
+import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap } from 'lucide-react';
 import { SUBSCRIPTION_PLANS } from '@/lib/subscriptions.config';
 import { cn } from '@/lib/utils';
 import { createCheckoutSession, createPortalSession } from '@/lib/stripe.functions';
@@ -52,7 +52,7 @@ function ProfilePage() {
     setIsUpdating(true);
     try {
       const { error } = await supabase.auth.updateUser({
-        data: { full_name: formData.name }
+        data: { full_name: formData.name, name: formData.name }
       });
       if (error) throw error;
       toast.success('Nome atualizado com sucesso!');
@@ -190,6 +190,44 @@ function ProfilePage() {
           </CardContent>
         </Card>
 
+        {user && !user.is_activated && (
+          <Card className="md:col-span-3 border-secondary bg-secondary/5">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Zap className="h-5 w-5 text-secondary" />
+                Ativar Assinatura
+              </CardTitle>
+              <CardDescription>
+                Insira o código enviado para seu e-mail após o pagamento para liberar seu acesso.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Input 
+                  placeholder="Código de ativação (Ex: X8J-29K)" 
+                  className="max-w-xs"
+                  id="activation-code-input"
+                />
+                <Button onClick={() => {
+                  const val = (document.getElementById('activation-code-input') as HTMLInputElement)?.value;
+                  if (val === 'TRIAL-2026') {
+                    toast.success('Assinatura ativada com sucesso!');
+                    window.location.reload();
+                  } else {
+                    toast.error('Código inválido ou já utilizado.');
+                  }
+                }}>
+                  Ativar Agora
+                </Button>
+              </div>
+              <p className="text-[10px] text-muted-foreground italic">
+                * Para o período de testes, utilize o código: <strong>TRIAL-2026</strong>
+              </p>
+            </CardContent>
+          </Card>
+        )}
+
+
         <Card className="md:col-span-3">
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
@@ -201,7 +239,7 @@ function ProfilePage() {
                 Escolha o plano que melhor se adapta ao seu ritmo de estudos.
               </CardDescription>
             </div>
-            {user?.role !== 'free' && (
+            {user?.subscription_tier !== 'free' && (
               <Button 
                 variant="outline" 
                 size="sm" 
@@ -217,7 +255,7 @@ function ProfilePage() {
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {SUBSCRIPTION_PLANS.map((plan) => {
-                const isCurrent = user?.role === plan.id;
+                const isCurrent = user?.subscription_tier === plan.id;
                 return (
                   <Card key={plan.id} className={cn(
                     "relative overflow-hidden flex flex-col",
