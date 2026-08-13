@@ -131,6 +131,18 @@ export interface UserProfile {
   onboarding_completed: boolean;
   onboarding_progress: any;
   activation_code?: string;
+  activation_attempts?: number;
+  activation_expires_at?: string;
   is_activated: boolean;
   role: 'admin' | 'moderator' | 'user';
+}
+
+export interface SubscriptionAuditLog {
+  id: string;
+  user_id: string;
+  event_type: 'activation' | 'upgrade' | 'downgrade' | 'cancellation' | 'trial_start';
+  old_tier?: string;
+  new_tier: string;
+  metadata?: any;
+  created_at: string;
 }
