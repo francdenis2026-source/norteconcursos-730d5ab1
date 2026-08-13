@@ -5,7 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { MockService } from '@/services/mockService';
 import { Button } from '@/components/ui/button';
 import { Question } from '@/types';
-import { AlertCircle, History, Filter, Play } from 'lucide-react';
+import { AlertCircle, History, Filter, Play, Clock } from 'lucide-react';
+import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export const Route = createFileRoute('/dashboard/errors')({
