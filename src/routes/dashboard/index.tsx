@@ -430,11 +430,11 @@ function MetricCard({ title, value, icon: Icon, description, progress }: any) {
   );
 }
 
-function ActivityItem({ title, type, time, status, priority }: any) {
+function ActivityItem({ title, type, time, status, priority, link }: any) {
   return (
     <div className={cn(
       "flex items-center justify-between p-3 rounded-lg border bg-card",
-      priority ? "border-l-4 border-l-secondary" : ""
+      priority ? "border-l-4 border-l-secondary shadow-sm" : ""
     )}>
       <div className="flex flex-col gap-1">
         <span className="text-sm font-bold">{title}</span>
@@ -443,8 +443,8 @@ function ActivityItem({ title, type, time, status, priority }: any) {
           <span>{time}</span>
         </div>
       </div>
-      <Button variant="ghost" size="sm" className="h-8 text-xs">
-        Iniciar
+      <Button variant="ghost" size="sm" className="h-8 text-xs hover:bg-secondary hover:text-secondary-foreground" asChild>
+        <Link to={link || '#'}>Iniciar</Link>
       </Button>
     </div>
   );
