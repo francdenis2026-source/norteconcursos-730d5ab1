@@ -7,12 +7,14 @@ import {
   YAxis, 
   CartesianGrid, 
   Tooltip, 
-  ResponsiveContainer,
+  ResponsiveContainer
+} from 'recharts';
+import { 
+  Target, 
+  Clock, 
+  CheckCircle2, 
+  AlertCircle, 
   TrendingUp,
-  Target,
-  Clock,
-  CheckCircle2,
-  AlertCircle,
   Zap,
   Download,
   FileText
@@ -29,10 +31,6 @@ import { useDashboardData, useAuthStatus } from '@/hooks/useDashboard';
 import { Button } from '@/components/ui/button';
 import { MockService } from '@/services/mockService';
 import { toast } from 'sonner';
-
-export const Route = createFileRoute('/dashboard/')({
-  component: DashboardIndex
-});
 
 export const Route = createFileRoute('/dashboard/')({
   component: DashboardIndex
@@ -75,7 +73,6 @@ function DashboardIndex() {
   };
 
   const handleExportPDF = () => {
-    // In a real app, use jspdf or similar. Here we'll trigger a print-friendly view or just a toast for demo.
     toast.success("Gerando PDF com resultados detalhados...");
     setTimeout(() => {
       window.print();
@@ -108,12 +105,12 @@ function DashboardIndex() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 text-print">
         <div>
           <h1 className="text-2xl font-bold text-primary">Olá, {user?.name?.split(' ')[0] || 'Estudante'}</h1>
           <p className="text-muted-foreground">Bem-vindo ao seu ambiente de estudos.</p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 no-print">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm" className="gap-2">
@@ -143,7 +140,6 @@ function DashboardIndex() {
         </div>
       </div>
 
-      {/* Grid de Métricas Principais */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard 
           title="Foco Atual" 
@@ -172,7 +168,6 @@ function DashboardIndex() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Gráfico de Desempenho */}
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">Evolução por Disciplina</CardTitle>
@@ -199,8 +194,7 @@ function DashboardIndex() {
           </CardContent>
         </Card>
 
-        {/* Próximas Atividades */}
-        <Card>
+        <Card className="no-print">
           <CardHeader>
             <CardTitle className="text-lg">Próximas Atividades</CardTitle>
           </CardHeader>
