@@ -743,7 +743,7 @@ function AdminPanel() {
                                     variant="ghost" 
                                     size="sm" 
                                     className="h-7 px-2 text-[10px] text-amber-600"
-                                    onClick={() => handleDowngradeUser(u.id, 'essential')}
+                                    onClick={() => handleDowngradeUser(u, 'essential')}
                                     disabled={isUpdatingSubscription === u.id || u.subscription_tier === 'essential'}
                                   >
                                     Downgrade
@@ -752,7 +752,7 @@ function AdminPanel() {
                                     variant="ghost" 
                                     size="sm" 
                                     className="h-7 px-2 text-[10px] text-rose-600"
-                                    onClick={() => handleCancelUserSubscription(u.id)}
+                                    onClick={() => handleCancelUserSubscription(u)}
                                     disabled={isUpdatingSubscription === u.id}
                                   >
                                     Cancelar
@@ -776,14 +776,19 @@ function AdminPanel() {
 
         <TabsContent value="audit" className="mt-6 space-y-4">
           <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <HistoryIcon className="h-5 w-5 text-primary" />
-                Logs de Auditoria
-              </CardTitle>
-              <CardDescription>
-                Histórico completo de alterações realizadas por administradores.
-              </CardDescription>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0">
+              <div>
+                <CardTitle className="flex items-center gap-2">
+                  <HistoryIcon className="h-5 w-5 text-primary" />
+                  Logs de Auditoria
+                </CardTitle>
+                <CardDescription>
+                  Histórico completo de alterações realizadas por administradores.
+                </CardDescription>
+              </div>
+              <Button variant="outline" size="sm" className="gap-2" onClick={handleExportAuditCSV}>
+                <Download className="h-4 w-4" /> Exportar CSV
+              </Button>
             </CardHeader>
             <CardContent>
               <div className="rounded-md border overflow-x-auto">
@@ -888,6 +893,59 @@ function AdminPanel() {
           </Card>
         </div>
       )}
+        </div>
+      )}
+
+      {/* Subscription Action Confirmation Modal */}
+      <Dialog 
+        open={subModalConfig.isOpen} 
+        onOpenChange={(open) => !isSubmittingSub && setSubModalConfig(prev => ({ ...prev, isOpen: open }))}
+      >
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>
+              {subModalConfig.actionType === 'downgrade' ? 'Confirmar Downgrade' : 'Confirmar Cancelamento'}
+            </DialogTitle>
+            <DialogDescription>
+              {subModalConfig.actionType === 'downgrade' 
+                ? `Você está alterando o plano de ${subModalConfig.userName} para ${subModalConfig.targetTier.toUpperCase()}.`
+                : `Você está encerrando a assinatura Premium de ${subModalConfig.userName}.`}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div className="space-y-2">
+              <Label htmlFor="reason" className="text-destructive">Motivo da Alteração (Obrigatório)</Label>
+              <Textarea 
+                id="reason" 
+                placeholder="Ex: Solicitação via ticket #123, falta de pagamento, etc."
+                value={subReason}
+                onChange={(e) => setSubReason(e.target.value)}
+                className="min-h-[100px]"
+              />
+            </div>
+            <div className="bg-muted p-3 rounded-md text-[11px] space-y-1">
+              <p className="font-bold">Informações Importantes:</p>
+              <ul className="list-disc pl-4 space-y-1">
+                <li>A alteração terá data efetiva de 30 dias a partir de hoje.</li>
+                <li>Um e-mail de confirmação será enviado automaticamente ao usuário.</li>
+                <li>Este evento será registrado permanentemente no log de auditoria.</li>
+              </ul>
+            </div>
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setSubModalConfig(prev => ({ ...prev, isOpen: false }))} disabled={isSubmittingSub}>
+              Voltar
+            </Button>
+            <Button 
+              variant={subModalConfig.actionType === 'downgrade' ? 'default' : 'destructive'}
+              onClick={processSubscriptionAction}
+              disabled={isSubmittingSub || !subReason.trim()}
+            >
+              {isSubmittingSub ? 'Processando...' : 'Confirmar e Agendar'}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
