@@ -48,10 +48,12 @@ function AdminPanel() {
   const { user, isAdmin, isLoading: isAuthLoading } = useAuthStatus();
   const [contests, setContests] = React.useState<Contest[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
+  const [users, setUsers] = React.useState<UserProfile[]>([]);
   const [subscriptionPlans, setSubscriptionPlans] = React.useState<any[]>([]);
   const [auditLogs, setAuditLogs] = React.useState<any[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState('');
+  const [isUpdatingRole, setIsUpdatingRole] = React.useState<string | null>(null);
   
   // States for Edit Modal
   const [editingContest, setEditingContest] = React.useState<Contest | null>(null);
