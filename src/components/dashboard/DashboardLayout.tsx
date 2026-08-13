@@ -41,6 +41,8 @@ interface DashboardLayoutProps {
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
   const location = useLocation();
+  const { user } = useAuthStatus();
+
 
   return (
     <div className="flex min-h-screen bg-background">
@@ -84,16 +86,17 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         <div className="p-4 border-t">
           <div className={cn("flex items-center gap-3", isCollapsed ? "justify-center" : "")}>
             <div className="h-8 w-8 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground font-bold">
-              JS
+              {user?.name?.substring(0, 2).toUpperCase() || 'JS'}
             </div>
             {!isCollapsed && (
               <div className="flex flex-col">
-                <span className="text-xs font-bold truncate">João Silva</span>
-                <span className="text-[10px] text-muted-foreground">Plano Plus</span>
+                <span className="text-xs font-bold truncate">{user?.name || 'João Silva'}</span>
+                <span className="text-[10px] text-muted-foreground">Plano {user?.role || 'Plus'}</span>
               </div>
             )}
           </div>
         </div>
+
       </aside>
 
       {/* Main Content */}
