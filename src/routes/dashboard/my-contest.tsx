@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { useDashboardData } from '@/hooks/useDashboard';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+import { Badge } from '@/components/ui/badge';
 import { 
   Target, 
   Calendar, 
@@ -13,6 +14,7 @@ import {
   Clock
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 export const Route = createFileRoute('/dashboard/my-contest')({
   component: MyContestPage
