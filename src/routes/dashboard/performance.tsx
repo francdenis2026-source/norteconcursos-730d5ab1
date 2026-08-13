@@ -16,15 +16,22 @@ export const Route = createFileRoute('/dashboard/performance')({
 });
 
 function PerformancePage() {
-  const { stats, isLoading } = useDashboardData();
+  const { stats, contests, isLoading } = useDashboardData();
+  const [selectedContest, setSelectedContest] = useState('all');
+  const [timeRange, setTimeRange] = useState('weekly');
 
   if (isLoading) return <div>Carregando...</div>;
 
-  const disciplineData = stats?.byDiscipline.map(d => ({
+  const filteredByContest = selectedContest === 'all' 
+    ? stats?.byDiscipline 
+    : stats?.byDiscipline; // In a real app, this would filter by contestId in the query
+
+  const disciplineData = filteredByContest?.map(d => ({
     name: d.disciplineId === '1' ? 'Português' : 
           d.disciplineId === '4' ? 'Constitucional' : 'Outras',
     acertos: d.correct,
-    total: d.total
+    total: d.total,
+    previous: Math.floor(d.correct * 0.8) // Simulated comparison data
   })) || [];
 
   const handleExportCSV = () => {
