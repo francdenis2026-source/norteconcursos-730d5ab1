@@ -100,9 +100,20 @@ export const MockService = {
       const achievements = await MockService.getAchievements();
       const first10 = achievements.find(a => a.code === 'FIRST_10');
       if (first10) {
-        // Trigger notification
-        const { showAchievementNotification } = await import('@/components/dashboard/AchievementNotification');
-        showAchievementNotification(first10);
+        // Persist attainment locally to trigger real-time notification in layout
+        const currentAttained = localStorage.getItem('norte_user_achievements_attained') || '[]';
+        const attained = JSON.parse(currentAttained);
+        if (!attained.includes('FIRST_10')) {
+          attained.push('FIRST_10');
+          localStorage.setItem('norte_user_achievements_attained', JSON.stringify(attained));
+          
+          // Add to current achievements list if not already there
+          const currentA = JSON.parse(localStorage.getItem('norte_user_achievements') || '[]');
+          if (!currentA.find((a: any) => a.code === 'FIRST_10')) {
+            currentA.push(first10);
+            localStorage.setItem('norte_user_achievements', JSON.stringify(currentA));
+          }
+        }
       }
     }
 
