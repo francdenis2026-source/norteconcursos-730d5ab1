@@ -37,7 +37,10 @@ export const Route = createFileRoute('/dashboard/admin')({
 });
 
 
+import { useAuthStatus } from '@/hooks/useDashboard';
+
 function AdminPanel() {
+  const { user } = useAuthStatus();
   const [contests, setContests] = React.useState<Contest[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [subscriptionPlans, setSubscriptionPlans] = React.useState<any[]>([]);
