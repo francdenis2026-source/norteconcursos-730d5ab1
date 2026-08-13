@@ -337,9 +337,10 @@ function AdminPanel() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Editor de Comentários (Rich Text)</CardTitle>
-              <CardDescription>Cadastre explicações estruturadas com suporte a formatação HTML.</CardDescription>
+              <CardTitle>Editor de Conteúdo Premium</CardTitle>
+              <CardDescription>Cadastre explicações estruturadas, links de teoria e anexos de mídia.</CardDescription>
             </CardHeader>
+
             <CardContent className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
@@ -386,10 +387,29 @@ function AdminPanel() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-end gap-2">
-                <Button variant="outline">Visualizar</Button>
-                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">Salvar Comentário</Button>
+              <div className="border-t pt-4 space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium">Links de Teoria (Vídeo/PDF)</label>
+                    <div className="flex gap-2">
+                      <Input placeholder="Título do link" className="text-xs" />
+                      <Input placeholder="URL" className="text-xs" />
+                      <Button variant="outline" size="sm">Add</Button>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium">Imagens / Fórmulas (Media)</label>
+                    <div className="flex items-center justify-center border-2 border-dashed rounded-lg p-4 bg-muted/20 cursor-pointer hover:bg-muted/40 transition-colors">
+                      <span className="text-[10px] text-muted-foreground">Clique para fazer upload (LaTeX support auto)</span>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div className="flex justify-end gap-2 pt-4">
+                <Button variant="outline">Visualizar</Button>
+                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">Salvar Questão Premium</Button>
+              </div>
+
             </CardContent>
           </Card>
         </TabsContent>

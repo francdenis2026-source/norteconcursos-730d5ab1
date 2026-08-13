@@ -1,5 +1,6 @@
 import { contests as mockContests, questions as mockQuestions, disciplines as mockDisciplines } from "../data/mock";
-import { Contest, Question, UserResponse, PerformanceStats } from "../types";
+import { Contest, Question, UserResponse, PerformanceStats, UserStreak } from "../types";
+
 import { supabase } from "@/integrations/supabase/client";
 
 const STORAGE_KEYS = {
@@ -452,6 +453,103 @@ export const MockService = {
     if (index >= 0) {
       goals[index].current = current;
       localStorage.setItem('norte_study_goals', JSON.stringify(goals));
+    }
+  },
+
+  // Gamification & Streaks
+  getUserStreak: async (): Promise<UserStreak | null> => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        const { data, error } = await supabase
+          .from('user_streaks')
+          .select('*')
+          .eq('user_id', session.user.id)
+          .single();
+        if (!error && data) {
+          return {
+            currentStreak: data.current_streak,
+            longestStreak: data.longest_streak,
+            lastActivityDate: data.last_activity_date
+          };
+        }
+      }
+      const local = localStorage.getItem('norte_user_streak');
+      return local ? JSON.parse(local) : { currentStreak: 3, longestStreak: 7, lastActivityDate: new Date().toISOString() };
+    } catch (e) {
+      return null;
+    }
+  },
+
+  updateStreak: async () => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        // Logic to update streak on backend
+        // This would usually be a RPC or a more complex update to handle date logic
+      }
+      // Simulação local
+      const current = await MockService.getUserStreak();
+      if (current) {
+        const next = { ...current, currentStreak: current.currentStreak + 1 };
+        localStorage.setItem('norte_user_streak', JSON.stringify(next));
+      }
+    } catch (e) {}
+  },
+
+  getAchievements: async () => {
+    try {
+      const { data, error } = await supabase.from('achievements').select('*');
+      if (error) throw error;
+      return data;
+    } catch (e) {
+      return [
+        { id: '1', code: 'FIRST_10', name: 'Primeiros Passos', description: '10 questões respondidas', icon_url: 'trophy' },
+        { id: '2', code: 'STREAK_7', name: 'Foco Inabalável', description: '7 dias seguidos', icon_url: 'flame' }
+      ];
+    }
+  },
+
+  // Ranking
+  getMockExamRanking: async (contestId?: string) => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      
+      const mockRanking = [
+        { id: '1', name: 'AlphaStuder', score: 48, total: 50, avatar: 'AS' },
+        { id: '2', name: 'Concurseiro01', score: 45, total: 50, avatar: 'C1' },
+        { id: '3', name: 'EstudanteFocado', score: 42, total: 50, avatar: 'EF' },
+        { id: '4', name: 'MestreDasProvas', score: 40, total: 50, avatar: 'MP' },
+        { id: '5', name: 'RumoAposse', score: 38, total: 50, avatar: 'RP' },
+      ];
+
+      if (session) {
+        const userRanking = { id: session.user.id, name: 'Você', score: 35, total: 50, avatar: 'VC' };
+        return [...mockRanking, userRanking].sort((a, b) => b.score - a.score);
+      }
+
+      return mockRanking;
+    } catch (e) {
+      return [];
+    }
+  },
+
+  // Versioning and Audit for Teacher Comments
+  getCommentHistory: async (questionId: string) => {
+    try {
+      const { data, error } = await supabase
+        .from('comment_audit_logs')
+        .select(`
+          *,
+          admin:profiles(full_name)
+        `)
+        .eq('question_id', questionId)
+        .order('created_at', { ascending: false });
+      
+      if (error) throw error;
+      return data || [];
+    } catch (e) {
+      return [];
     }
   }
 };
