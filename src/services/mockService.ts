@@ -95,6 +95,17 @@ export const MockService = {
     responses.push(response);
     localStorage.setItem(STORAGE_KEYS.USER_RESPONSES, JSON.stringify(responses));
     
+    // Check for achievements upon saving response
+    if (responses.length === 10) {
+      const achievements = await MockService.getAchievements();
+      const first10 = achievements.find(a => a.code === 'FIRST_10');
+      if (first10) {
+        // Trigger notification
+        const { showAchievementNotification } = await import('@/components/dashboard/AchievementNotification');
+        showAchievementNotification(first10);
+      }
+    }
+
     // Tenta salvar no Supabase se o usuário estiver logado
     const { data: { session } } = await supabase.auth.getSession();
     if (session) {
@@ -414,6 +425,16 @@ export const MockService = {
       exams.push(exam);
     }
     localStorage.setItem('norte_mock_exams', JSON.stringify(exams));
+
+    // Achievement check: Perfect score
+    if (exam.correct === exam.total) {
+      const achievements = await MockService.getAchievements();
+      const perfect = achievements.find(a => a.code === 'PERFECT_SCORE');
+      if (perfect) {
+        const { showAchievementNotification } = await import('@/components/dashboard/AchievementNotification');
+        showAchievementNotification(perfect);
+      }
+    }
 
     // Sincroniza com Supabase se logado
     const { data: { session } } = await supabase.auth.getSession();
