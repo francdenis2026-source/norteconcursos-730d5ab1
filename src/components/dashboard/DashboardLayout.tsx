@@ -95,9 +95,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       {/* Main Content */}
       <main className="flex-1 flex flex-col min-h-screen overflow-hidden">
         {/* Top Banner Demonstrativo */}
-        <div className="bg-amber-50 border-b border-amber-100 px-4 py-1 text-center">
-          <p className="text-[10px] md:text-xs text-amber-800 font-medium">
-            Ambiente demonstrativo — os dados desta fase são armazenados apenas neste dispositivo.
+        <div className="bg-emerald-50 border-b border-emerald-100 px-4 py-1.5 text-center flex items-center justify-center gap-2">
+          <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+          <p className="text-[10px] md:text-xs text-emerald-800 font-bold uppercase tracking-wider">
+            Modo Local Ativo — Navegação e Dados Simulados
           </p>
         </div>
         
