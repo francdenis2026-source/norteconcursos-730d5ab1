@@ -24,8 +24,20 @@ export const Route = createFileRoute('/dashboard/questions')({
 
 function QuestionsCatalog() {
   const [searchTerm, setSearchTerm] = useState('');
-  const contests = MockService.getContests();
-  const focusedContest = MockService.getFocusedContest();
+  const [contests, setContests] = useState<Contest[]>([]);
+  const [focusedContest, setFocusedContest] = useState<Contest | undefined>(undefined);
+  const [loading, setLoading] = useState(true);
+
+  useState(() => {
+    const load = async () => {
+      const c = await MockService.getContests();
+      const f = await MockService.getFocusedContest();
+      setContests(c);
+      setFocusedContest(f);
+      setLoading(false);
+    };
+    load();
+  });
 
   const filteredContests = contests.filter(c => 
     c.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -36,14 +48,16 @@ function QuestionsCatalog() {
   const handleSetFocus = (contest: Contest) => {
     MockService.setFocusedContest(contest.id);
     toast.success(`${contest.agency} definido como seu concurso foco!`);
-    window.location.reload(); // Quick way to update global state in demo
+    window.location.reload();
   };
 
   return (
     <div className="space-y-6">
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold text-primary">Catálogo de Concursos</h1>
-        <p className="text-muted-foreground">Encontre e foque no seu objetivo principal.</p>
+        <p className="text-muted-foreground">
+          {loading ? 'Carregando concursos...' : 'Encontre e foque no seu objetivo principal.'}
+        </p>
       </div>
 
       <div className="flex flex-col md:flex-row gap-4">

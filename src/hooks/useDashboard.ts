@@ -8,16 +8,16 @@ export function useDashboardData() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const loadData = () => {
+    const loadData = async () => {
+      setIsLoading(true);
       const performance = MockService.getPerformanceStats();
-      const contest = MockService.getFocusedContest();
+      const contest = await MockService.getFocusedContest();
       setStats(performance);
       setFocusedContest(contest);
       setIsLoading(false);
     };
 
     loadData();
-    // In a real app, we might listen to storage events or use a global state manager
   }, []);
 
   const refreshStats = () => {
