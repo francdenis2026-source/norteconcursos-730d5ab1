@@ -38,16 +38,29 @@ function QuestionsCatalog() {
   const featureAccess = checkFeatureAccess(user?.role || 'free', 'questions');
 
 
-  useState(() => {
+  useEffect(() => {
     const load = async () => {
       const c = await MockService.getContests();
       const f = await MockService.getFocusedContest();
       setContests(c);
       setFocusedContest(f);
+      
+      // Daily Limit Check
+      const responses = MockService.getUserResponses();
+      const today = new Date().toISOString().split('T')[0];
+      const todayCount = responses.filter(r => r.createdAt.startsWith(today)).length;
+      
+      const tier = user?.role || 'free';
+      const limit = tier === 'free' ? 10 : (tier === 'essential' ? 100 : Infinity);
+      
+      if (todayCount >= limit) {
+        toast.warning(`Você atingiu seu limite diário de ${limit} questões no plano ${tier.toUpperCase()}.`);
+      }
+      
       setLoading(false);
     };
     load();
-  });
+  }, [user]);
 
   const filteredContests = contests.filter(c => 
     c.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
