@@ -124,6 +124,7 @@ export interface Achievement {
 export interface UserProfile {
   id: string;
   full_name?: string;
+  name?: string; // Compatibility field
   email?: string;
   avatar_url?: string;
   subscription_tier: SubscriptionTier;

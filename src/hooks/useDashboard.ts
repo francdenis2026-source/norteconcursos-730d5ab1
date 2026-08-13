@@ -63,6 +63,7 @@ export function useAuthStatus() {
         setUser({
           id: session.user.id,
           full_name: profile?.full_name || session.user.user_metadata['full_name'] || 'Usuário',
+          name: profile?.full_name || session.user.user_metadata['full_name'] || 'Usuário',
           email: session.user.email || '',
           subscription_tier: (profile?.subscription_tier as SubscriptionTier) || 'free',
           onboarding_completed: !!profile?.onboarding_completed,
@@ -75,6 +76,7 @@ export function useAuthStatus() {
         setUser({
           id: 'demo-user',
           full_name: 'João Silva (Demo)',
+          name: 'João Silva (Demo)',
           email: 'joao.demo@norteconcurso.com.br',
           subscription_tier: 'plus',
           onboarding_completed: false,

@@ -201,7 +201,7 @@ function ProfilePage() {
                 Escolha o plano que melhor se adapta ao seu ritmo de estudos.
               </CardDescription>
             </div>
-            {user?.role !== 'free' && (
+            {user?.subscription_tier !== 'free' && (
               <Button 
                 variant="outline" 
                 size="sm" 
@@ -217,7 +217,7 @@ function ProfilePage() {
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {SUBSCRIPTION_PLANS.map((plan) => {
-                const isCurrent = user?.role === plan.id;
+                const isCurrent = user?.subscription_tier === plan.id;
                 return (
                   <Card key={plan.id} className={cn(
                     "relative overflow-hidden flex flex-col",
