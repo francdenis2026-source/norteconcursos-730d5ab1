@@ -553,5 +553,3 @@ export const MockService = {
     }
   }
 };
-  }
-};
