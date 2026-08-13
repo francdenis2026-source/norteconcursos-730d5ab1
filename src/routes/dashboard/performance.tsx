@@ -6,6 +6,10 @@ import {
   ResponsiveContainer, LineChart, Line 
 } from 'recharts';
 import { useDashboardData } from '@/hooks/useDashboard';
+import { Button } from '@/components/ui/button';
+import { Download, FileText, Target, TrendingUp } from 'lucide-react';
+import { toast } from 'sonner';
+import { MockService } from '@/services/mockService';
 
 export const Route = createFileRoute('/dashboard/performance')({
   component: PerformancePage
@@ -23,9 +27,53 @@ function PerformancePage() {
     total: d.total
   })) || [];
 
+  const handleExportCSV = () => {
+    const responses = MockService.getUserResponses();
+    if (responses.length === 0) {
+      toast.error("Nenhum dado para exportar");
+      return;
+    }
+    const headers = ["Data", "Questão ID", "Acertou", "Tempo (seg)"];
+    const csvContent = [
+      headers.join(","),
+      ...responses.map(r => [
+        new Date(r.createdAt).toLocaleString(),
+        r.questionId,
+        r.isCorrect ? "Sim" : "Não",
+        r.timeSpent
+      ].join(","))
+    ].join("\n");
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute("download", `performance_norte_${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("Relatório CSV exportado!");
+  };
+
+  const handleExportPDF = () => {
+    toast.info("Preparando relatório PDF...");
+    setTimeout(() => window.print(), 1000);
+  };
+
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Análise de Desempenho</h1>
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl font-bold">Análise de Desempenho</h1>
+        <div className="flex gap-2 no-print">
+          <Button variant="outline" size="sm" onClick={handleExportCSV} className="gap-2">
+            <FileText className="h-4 w-4" /> CSV
+          </Button>
+          <Button variant="outline" size="sm" onClick={handleExportPDF} className="gap-2">
+            <Download className="h-4 w-4" /> PDF
+          </Button>
+        </div>
+      </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card>
@@ -54,6 +102,35 @@ function PerformancePage() {
           </CardContent>
         </Card>
       </div>
+
+      <Card>
+        <CardHeader>
+          <div className="flex justify-between items-center">
+            <CardTitle className="text-lg">Metas por Disciplina</CardTitle>
+            <Button variant="ghost" size="sm" className="text-secondary gap-1">
+              <TrendingUp className="h-4 w-4" /> Definir Metas
+            </Button>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            {disciplineData.map(d => (
+              <div key={d.name} className="space-y-1">
+                <div className="flex justify-between text-sm">
+                  <span className="font-medium">{d.name}</span>
+                  <span className="text-muted-foreground">Progresso: {d.total > 0 ? ((d.acertos / d.total) * 100).toFixed(0) : 0}% / Meta: 85%</span>
+                </div>
+                <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-secondary transition-all" 
+                    style={{ width: `${Math.min(d.total > 0 ? (d.acertos / d.total) * 100 : 0, 100)}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }
