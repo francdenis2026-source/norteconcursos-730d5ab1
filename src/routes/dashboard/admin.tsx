@@ -730,6 +730,7 @@ function AdminPanel() {
                       <TableHead>Admin</TableHead>
                       <TableHead>Ação</TableHead>
                       <TableHead>Entidade</TableHead>
+                      <TableHead>Detalhes/Motivo</TableHead>
                       <TableHead>Mudanças</TableHead>
                     </TableRow>
                   </TableHeader>
