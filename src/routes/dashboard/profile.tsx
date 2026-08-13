@@ -52,7 +52,7 @@ function ProfilePage() {
     setIsUpdating(true);
     try {
       const { error } = await supabase.auth.updateUser({
-        data: { full_name: formData.name }
+        data: { full_name: formData.name, name: formData.name }
       });
       if (error) throw error;
       toast.success('Nome atualizado com sucesso!');
