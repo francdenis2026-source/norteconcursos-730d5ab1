@@ -74,5 +74,7 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
 
 export const checkFeatureAccess = (tier: SubscriptionTier, featureKey: string): TierFeature => {
   const plan = SUBSCRIPTION_PLANS.find(p => p.id === tier) || SUBSCRIPTION_PLANS[0];
+  if (!plan) return { name: 'Feature', included: false };
   return plan.features[featureKey] || { name: 'Feature', included: false };
 };
+
