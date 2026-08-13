@@ -47,6 +47,7 @@ function DashboardIndex() {
     plan: false
   });
   const [isUpdatingTour, setIsUpdatingTour] = React.useState(false);
+  const [dailyQuota, setDailyQuota] = React.useState({ used: 0, total: 0 });
 
   React.useEffect(() => {
     const fetchOnboarding = async () => {
@@ -55,7 +56,6 @@ function DashboardIndex() {
         setShowTour(true);
       }
 
-      // Sync with local reality if needed
       const storedContest = localStorage.getItem('norte_focused_contest');
       const storedNotebooks = JSON.parse(localStorage.getItem('norte_notebooks') || '[]');
       
@@ -67,13 +67,42 @@ function DashboardIndex() {
 
       setChecklist(currentSteps);
 
-      // Sincronizar se o banco estiver desatualizado e estivermos logados
       if (user && JSON.stringify(status.onboarding_steps) !== JSON.stringify(currentSteps)) {
         MockService.updateOnboardingStatus({ onboarding_steps: currentSteps });
       }
+
+      // Calculate daily quota
+      const responses = MockService.getUserResponses();
+      const today = new Date().toISOString().split('T')[0];
+      const todayCount = responses.filter(r => (r as any).createdAt?.split('T')[0] === today).length;
+      const userRole = (user?.role || 'free') as string;
+      const limit = userRole === 'free' ? 10 : (userRole === 'essential' ? 100 : Infinity);
+      setDailyQuota({ used: todayCount, total: limit === Infinity ? 9999 : limit });
     };
 
     fetchOnboarding();
+
+    // Real-time synchronization
+    if (user) {
+      const channel = supabase
+        .channel('profile_sync')
+        .on('postgres_changes', { 
+          event: 'UPDATE', 
+          schema: 'public', 
+          table: 'profiles',
+          filter: `id=eq.${user.id}`
+        }, (payload) => {
+          if (payload.new.onboarding_steps) {
+            setChecklist(payload.new.onboarding_steps);
+          }
+          if (payload.new.onboarding_done !== undefined) {
+            setShowTour(!payload.new.onboarding_done);
+          }
+        })
+        .subscribe();
+
+      return () => { supabase.removeChannel(channel); };
+    }
   }, [user]);
 
   const completeTour = async () => {
