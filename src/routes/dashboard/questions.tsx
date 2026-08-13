@@ -49,8 +49,9 @@ function QuestionsCatalog() {
       const responses = MockService.getUserResponses();
       const today = new Date().toISOString().split('T')[0];
       const todayCount = responses.filter(r => {
-        const date = (r as any).createdAt;
-        return typeof date === 'string' && (date as string).startsWith(today);
+        const d = (r as any).createdAt;
+        if (typeof d !== 'string') return false;
+        return d.indexOf(today) === 0;
       }).length;
       
       const userRole = (user?.role || 'free') as string;
