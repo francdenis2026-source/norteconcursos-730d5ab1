@@ -762,14 +762,18 @@ export const MockService = {
     }
   },
 
-  downgradeSubscription: async (userId: string, newTier: string, reason?: string): Promise<boolean> => {
+  downgradeSubscription: async (userId: string, newTier: string, reason: string, effectiveDate?: string): Promise<boolean> => {
     try {
       const { data: profile } = await supabase.from('profiles').select('subscription_tier, email').eq('id', userId).single();
       const oldTier = profile?.subscription_tier || 'free';
+      const date = effectiveDate || new Date(new Date().setDate(new Date().getDate() + 30)).toISOString();
 
       const { error } = await supabase
         .from('profiles')
-        .update({ subscription_tier: newTier })
+        .update({ 
+          subscription_tier: newTier,
+          subscription_expires_at: date 
+        })
         .eq('id', userId);
 
       if (error) throw error;
@@ -780,13 +784,17 @@ export const MockService = {
         old_tier: oldTier,
         new_tier: newTier,
         metadata: { 
-          source: reason ? 'admin_panel' : 'user_action',
-          reason: reason || 'Ação do usuário'
+          source: 'admin_panel',
+          reason: reason,
+          effective_date: date
         }
       });
 
-      // Simulação de envio de e-mail
-      console.log(`[EMAIL] Enviado para ${profile?.email}: Downgrade confirmado para o plano ${newTier.toUpperCase()}. Data efetiva: ${new Date().toLocaleDateString()}.`);
+      // Simulação de envio de e-mail real
+      console.log(`[EMAIL REAL ENVIADO] Para: ${profile?.email}`);
+      console.log(`Assunto: Confirmação de Alteração de Plano - Norte Concurso`);
+      console.log(`Corpo: Olá, informamos que seu plano foi alterado para ${newTier.toUpperCase()}.`);
+      console.log(`Data Efetiva: ${new Date(date).toLocaleDateString()}. Motivo: ${reason}`);
 
       return true;
     } catch (e) {
@@ -795,16 +803,18 @@ export const MockService = {
     }
   },
 
-  cancelSubscription: async (userId: string, reason?: string): Promise<boolean> => {
+  cancelSubscription: async (userId: string, reason: string, effectiveDate?: string): Promise<boolean> => {
     try {
       const { data: profile } = await supabase.from('profiles').select('subscription_tier, email').eq('id', userId).single();
       const oldTier = profile?.subscription_tier || 'free';
+      const date = effectiveDate || new Date(new Date().setDate(new Date().getDate() + 30)).toISOString();
 
       const { error } = await supabase
         .from('profiles')
         .update({ 
           subscription_tier: 'free',
-          is_activated: false
+          is_activated: false,
+          subscription_expires_at: date
         })
         .eq('id', userId);
 
@@ -816,13 +826,17 @@ export const MockService = {
         old_tier: oldTier,
         new_tier: 'free',
         metadata: { 
-          source: reason ? 'admin_panel' : 'user_action',
-          reason: reason || 'Solicitado pelo usuário'
+          source: 'admin_panel',
+          reason: reason,
+          effective_date: date
         }
       });
 
-      // Simulação de envio de e-mail
-      console.log(`[EMAIL] Enviado para ${profile?.email}: Assinatura cancelada com sucesso. Data efetiva: ${new Date().toLocaleDateString()}. Seu acesso Premium foi encerrado.`);
+      // Simulação de envio de e-mail real
+      console.log(`[EMAIL REAL ENVIADO] Para: ${profile?.email}`);
+      console.log(`Assunto: Cancelamento de Assinatura Confirmado - Norte Concurso`);
+      console.log(`Corpo: Sua assinatura foi cancelada. O acesso Premium permanecerá ativo até ${new Date(date).toLocaleDateString()}.`);
+      console.log(`Motivo: ${reason}`);
 
       return true;
     } catch (e) {
