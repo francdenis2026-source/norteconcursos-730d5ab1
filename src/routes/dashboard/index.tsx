@@ -342,6 +342,14 @@ function DashboardIndex() {
                 link="/dashboard/mock-exams"
               />
               <ActivityItem 
+                title="Revisão: Sintaxe" 
+                type="Repetição Espaçada" 
+                time="Sugerido para hoje" 
+                status="Pendente"
+                link="/dashboard/my-contest"
+                isReview
+              />
+              <ActivityItem 
                 title="Português - Sintaxe" 
                 type="Questões" 
                 time="Bloco Sugerido" 
@@ -430,21 +438,36 @@ function MetricCard({ title, value, icon: Icon, description, progress }: any) {
   );
 }
 
-function ActivityItem({ title, type, time, status, priority, link }: any) {
+function ActivityItem({ title, type, time, status, priority, link, isReview }: any) {
   return (
     <div className={cn(
       "flex items-center justify-between p-3 rounded-lg border bg-card",
-      priority ? "border-l-4 border-l-secondary shadow-sm" : ""
+      priority ? "border-l-4 border-l-secondary shadow-sm" : "",
+      isReview ? "border-l-4 border-l-amber-500 bg-amber-50/30" : ""
     )}>
       <div className="flex flex-col gap-1">
-        <span className="text-sm font-bold">{title}</span>
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-bold">{title}</span>
+          {isReview && <Badge variant="outline" className="text-[8px] h-3 px-1 uppercase bg-amber-100 text-amber-800 border-amber-200">Revisão</Badge>}
+        </div>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <span className="px-1.5 py-0.5 rounded bg-muted font-medium">{type}</span>
+          <span className={cn(
+            "px-1.5 py-0.5 rounded font-medium",
+            isReview ? "bg-amber-100 text-amber-900" : "bg-muted"
+          )}>{type}</span>
           <span>{time}</span>
         </div>
       </div>
-      <Button variant="ghost" size="sm" className="h-8 text-xs hover:bg-secondary hover:text-secondary-foreground" asChild>
-        <Link to={link || '#'}>Iniciar</Link>
+      <Button 
+        variant="ghost" 
+        size="sm" 
+        className={cn(
+          "h-8 text-xs hover:text-secondary-foreground",
+          isReview ? "hover:bg-amber-500 hover:text-white border-amber-200" : "hover:bg-secondary"
+        )} 
+        asChild
+      >
+        <Link to={link || '#'}>{isReview ? 'Revisar' : 'Iniciar'}</Link>
       </Button>
     </div>
   );
