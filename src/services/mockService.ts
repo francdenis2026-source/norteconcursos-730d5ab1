@@ -453,5 +453,59 @@ export const MockService = {
       goals[index].current = current;
       localStorage.setItem('norte_study_goals', JSON.stringify(goals));
     }
+  },
+
+  // Gamification & Streaks
+  getUserStreak: async (): Promise<UserStreak | null> => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        const { data, error } = await supabase
+          .from('user_streaks')
+          .select('*')
+          .eq('user_id', session.user.id)
+          .single();
+        if (!error && data) {
+          return {
+            currentStreak: data.current_streak,
+            longestStreak: data.longest_streak,
+            lastActivityDate: data.last_activity_date
+          };
+        }
+      }
+      const local = localStorage.getItem('norte_user_streak');
+      return local ? JSON.parse(local) : { currentStreak: 3, longestStreak: 7, lastActivityDate: new Date().toISOString() };
+    } catch (e) {
+      return null;
+    }
+  },
+
+  updateStreak: async () => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        // Logic to update streak on backend
+        // This would usually be a RPC or a more complex update to handle date logic
+      }
+      // Simulação local
+      const current = await MockService.getUserStreak();
+      if (current) {
+        const next = { ...current, currentStreak: current.currentStreak + 1 };
+        localStorage.setItem('norte_user_streak', JSON.stringify(next));
+      }
+    } catch (e) {}
+  },
+
+  getAchievements: async () => {
+    try {
+      const { data, error } = await supabase.from('achievements').select('*');
+      if (error) throw error;
+      return data;
+    } catch (e) {
+      return [
+        { id: '1', code: 'FIRST_10', name: 'Primeiros Passos', description: '10 questões respondidas', icon_url: 'trophy' },
+        { id: '2', code: 'STREAK_7', name: 'Foco Inabalável', description: '7 dias seguidos', icon_url: 'flame' }
+      ];
+    }
   }
 };
