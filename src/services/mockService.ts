@@ -246,13 +246,49 @@ export const MockService = {
     }
   },
 
-  updateSubscriptionPlan: async (id: string, updates: any) => {
+  updateSubscriptionPlan: async (id: string, updates: any, adminId?: string) => {
     try {
+      // 1. Get current state for audit log
+      const { data: oldPlan } = await supabase.from('subscription_plans').select('*').eq('id', id).single();
+      
+      // 2. Update the plan
       const { error } = await supabase.from('subscription_plans').update(updates).eq('id', id);
       if (error) throw error;
+
+      // 3. Create audit log if we have the adminId
+      if (adminId && oldPlan) {
+        await supabase.from('admin_audit_logs').insert({
+          admin_id: adminId,
+          action: 'UPDATE_PLAN',
+          entity_type: 'subscription_plan',
+          entity_id: id,
+          old_values: oldPlan,
+          new_values: updates
+        });
+      }
+      
       return true;
     } catch (e) {
+      console.error('Error updating plan:', e);
       return false;
+    }
+  },
+
+  getAdminAuditLogs: async () => {
+    try {
+      const { data, error } = await supabase
+        .from('admin_audit_logs')
+        .select(`
+          *,
+          admin:profiles(full_name, email)
+        `)
+        .order('created_at', { ascending: false });
+      
+      if (error) throw error;
+      return data;
+    } catch (e) {
+      console.error('Error fetching audit logs:', e);
+      return [];
     }
   }
 };
