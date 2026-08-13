@@ -201,8 +201,8 @@ function DashboardIndex() {
                   <CheckItem label="Ajustar Plano" done={checklist.plan} />
                 </div>
               </div>
-              <Button onClick={completeTour} variant="secondary" className="shrink-0">
-                Entendi, vamos lá!
+              <Button onClick={completeTour} variant="secondary" className="shrink-0" disabled={isUpdatingTour}>
+                {isUpdatingTour ? "Sincronizando..." : "Entendi, vamos lá!"}
               </Button>
             </div>
           </CardContent>

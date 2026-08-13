@@ -87,9 +87,69 @@ function NotebooksPage() {
 
   const handleExportPDF = (notebook: Notebook) => {
     toast.success(`Gerando PDF do caderno: ${notebook.name}`);
+    
+    // Create a temporary print stylesheet for cleaner PDF
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @media print {
+        body * { visibility: hidden; }
+        #print-section, #print-section * { visibility: visible; }
+        #print-section { 
+          position: absolute; 
+          left: 0; 
+          top: 0; 
+          width: 100%;
+          padding: 20px;
+          color: black !important;
+        }
+        .no-print { display: none !important; }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Create printable content
+    const notebookQuestions = allQuestions.filter(q => notebook.questionIds.includes(q.id));
+    const subjectsCount = notebookQuestions.reduce((acc: any, q) => {
+      acc[q.subjectId] = (acc[q.subjectId] || 0) + 1;
+      return acc;
+    }, {});
+
+    const printDiv = document.createElement('div');
+    printDiv.id = 'print-section';
+    printDiv.innerHTML = `
+      <div style="border-bottom: 2px solid #1e293b; padding-bottom: 10px; margin-bottom: 20px;">
+        <h1 style="font-size: 24px; font-bold; color: #1e293b;">${notebook.name}</h1>
+        <p style="color: #64748b;">${notebook.description || ''}</p>
+        <p style="font-size: 12px;">Gerado em: ${new Date().toLocaleDateString()}</p>
+      </div>
+      
+      <div style="margin-bottom: 30px; background: #f8fafc; padding: 15px; border-radius: 8px;">
+        <h2 style="font-size: 18px; margin-bottom: 10px;">Resumo do Caderno</h2>
+        <p>Total de Questões: <strong>${notebookQuestions.length}</strong></p>
+        <ul style="font-size: 14px;">
+          ${Object.entries(subjectsCount).map(([subId, count]) => `<li>Assunto ${subId}: ${count} questões</li>`).join('')}
+        </ul>
+      </div>
+
+      <div>
+        ${notebookQuestions.map((q, i) => `
+          <div style="margin-bottom: 40px; page-break-inside: avoid; border-left: 4px solid #e2e8f0; padding-left: 15px;">
+            <p style="font-weight: bold;">Questão ${i + 1} - ${q.difficulty}</p>
+            <div style="margin: 10px 0;">${q.text}</div>
+            <div style="margin-top: 10px; font-style: italic; font-size: 12px; color: #64748b;">
+              Assunto: ${q.subjectId} | Disciplina: ${q.disciplineId}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    document.body.appendChild(printDiv);
+
     setTimeout(() => {
       window.print();
-    }, 1000);
+      document.body.removeChild(printDiv);
+      document.head.removeChild(style);
+    }, 500);
   };
 
   const filteredNotebooks = notebooks.filter(nb => 
