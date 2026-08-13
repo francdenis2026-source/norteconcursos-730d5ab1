@@ -7,6 +7,7 @@ export function useDashboardData() {
 
   const [stats, setStats] = useState<PerformanceStats | null>(null);
   const [focusedContest, setFocusedContest] = useState<Contest | undefined>(undefined);
+  const [contests, setContests] = useState<Contest[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -14,8 +15,10 @@ export function useDashboardData() {
       setIsLoading(true);
       const performance = MockService.getPerformanceStats();
       const contest = await MockService.getFocusedContest();
+      const allContests = await MockService.getContests();
       setStats(performance);
       setFocusedContest(contest);
+      setContests(allContests);
       setIsLoading(false);
     };
 
@@ -26,7 +29,7 @@ export function useDashboardData() {
     setStats(MockService.getPerformanceStats());
   };
 
-  return { stats, focusedContest, isLoading, refreshStats };
+  return { stats, focusedContest, contests, isLoading, refreshStats };
 }
 
 export function useAuthStatus() {

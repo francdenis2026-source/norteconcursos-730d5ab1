@@ -1,11 +1,12 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, useNavigate } from '@tanstack/react-router';
 
 import { useEffect, useState, useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { MockService } from '@/services/mockService';
 import { Button } from '@/components/ui/button';
 import { Question } from '@/types';
-import { AlertCircle, History, Filter, Play } from 'lucide-react';
+import { AlertCircle, History, Filter, Play, Clock } from 'lucide-react';
+import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export const Route = createFileRoute('/dashboard/errors')({
@@ -13,9 +14,13 @@ export const Route = createFileRoute('/dashboard/errors')({
 });
 
 function ErrorsPage() {
+  const navigate = useNavigate();
   const [errorQuestions, setErrorQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filterDiscipline, setFilterDiscipline] = useState('all');
+  const [isRevisionMode, setIsRevisionMode] = useState(false);
+  const [currentRevisionIndex, setCurrentRevisionIndex] = useState(0);
+  const [revisionStatus, setRevisionStatus] = useState<Record<string, string>>({});
 
   useEffect(() => {
     const loadErrors = async () => {
@@ -34,7 +39,74 @@ function ErrorsPage() {
     return errorQuestions.filter(q => q.disciplineId === filterDiscipline);
   }, [errorQuestions, filterDiscipline]);
 
+  const handleStartRevision = () => {
+    if (filteredQuestions.length === 0) {
+      toast.error("Nenhuma questão para revisar nesta disciplina");
+      return;
+    }
+    setIsRevisionMode(true);
+    setCurrentRevisionIndex(0);
+    toast.success("Modo de Revisão Guiada Iniciado");
+  };
+
+  const handleUpdateStatus = async (questionId: string, status: string) => {
+    setRevisionStatus(prev => ({ ...prev, [questionId]: status }));
+    // Persistir no banco aqui via MockService/Supabase
+    toast.success(`Status atualizado: ${status}`);
+    
+    if (isRevisionMode && currentRevisionIndex < filteredQuestions.length - 1) {
+      setTimeout(() => setCurrentRevisionIndex(prev => prev + 1), 800);
+    }
+  };
+
   if (isLoading) return <div>Carregando...</div>;
+
+  if (isRevisionMode && filteredQuestions[currentRevisionIndex]) {
+    const q = filteredQuestions[currentRevisionIndex];
+    return (
+      <div className="space-y-6 max-w-2xl mx-auto">
+        <div className="flex justify-between items-center">
+          <Button variant="ghost" onClick={() => setIsRevisionMode(false)}>Voltar</Button>
+          <div className="flex items-center gap-2 font-mono text-secondary">
+            <Clock className="h-4 w-4 animate-pulse" /> 00:59
+          </div>
+          <span className="text-sm font-medium">{currentRevisionIndex + 1} / {filteredQuestions.length}</span>
+        </div>
+
+        <Card className="border-2 border-primary/20">
+          <CardHeader>
+            <CardTitle className="text-lg">Revisão: {q.id}</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <p className="text-lg leading-relaxed">{q.text}</p>
+            <div className="grid grid-cols-1 gap-2 pt-6">
+              <Button 
+                variant="outline" 
+                className="justify-start hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-200"
+                onClick={() => handleUpdateStatus(q.id, 'dominado')}
+              >
+                Dominado (Remover do Caderno)
+              </Button>
+              <Button 
+                variant="outline" 
+                className="justify-start hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200"
+                onClick={() => handleUpdateStatus(q.id, 'revisado')}
+              >
+                Revisado (Manter para Reforço)
+              </Button>
+              <Button 
+                variant="outline" 
+                className="justify-start hover:bg-amber-50 hover:text-amber-700 hover:border-amber-200"
+                onClick={() => handleUpdateStatus(q.id, 'precisa voltar')}
+              >
+                Ainda tenho dúvida (Prioridade)
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
@@ -54,7 +126,10 @@ function ErrorsPage() {
               <SelectItem value="4">Dir. Constitucional</SelectItem>
             </SelectContent>
           </Select>
-          <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2">
+          <Button 
+            onClick={handleStartRevision}
+            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2"
+          >
             <Play className="h-4 w-4" /> Revisão Sequencial
           </Button>
         </div>

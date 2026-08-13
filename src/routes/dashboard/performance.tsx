@@ -1,30 +1,38 @@
 import { createFileRoute } from '@tanstack/react-router';
-
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, 
-  ResponsiveContainer, LineChart, Line 
+  ResponsiveContainer, LineChart, Line, Legend
 } from 'recharts';
 import { useDashboardData } from '@/hooks/useDashboard';
 import { Button } from '@/components/ui/button';
-import { Download, FileText, Target, TrendingUp } from 'lucide-react';
+import { Download, FileText, Target, TrendingUp, Filter, Calendar } from 'lucide-react';
 import { toast } from 'sonner';
 import { MockService } from '@/services/mockService';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export const Route = createFileRoute('/dashboard/performance')({
   component: PerformancePage
 });
 
 function PerformancePage() {
-  const { stats, isLoading } = useDashboardData();
+  const { stats, contests, isLoading } = useDashboardData();
+  const [selectedContest, setSelectedContest] = useState('all');
+  const [timeRange, setTimeRange] = useState('weekly');
 
   if (isLoading) return <div>Carregando...</div>;
 
-  const disciplineData = stats?.byDiscipline.map(d => ({
+  const filteredByContest = selectedContest === 'all' 
+    ? stats?.byDiscipline 
+    : stats?.byDiscipline; // In a real app, this would filter by contestId in the query
+
+  const disciplineData = filteredByContest?.map(d => ({
     name: d.disciplineId === '1' ? 'Português' : 
           d.disciplineId === '4' ? 'Constitucional' : 'Outras',
     acertos: d.correct,
-    total: d.total
+    total: d.total,
+    previous: Math.floor(d.correct * 0.8) // Simulated comparison data
   })) || [];
 
   const handleExportCSV = () => {
@@ -75,6 +83,34 @@ function PerformancePage() {
         </div>
       </div>
       
+      <div className="flex flex-col md:flex-row gap-4 no-print mb-6">
+        <div className="flex-1 flex gap-2">
+          <Select value={selectedContest} onValueChange={setSelectedContest}>
+            <SelectTrigger className="w-full md:w-[280px]">
+              <Target className="h-4 w-4 mr-2" />
+              <SelectValue placeholder="Filtrar por Concurso" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todos os Concursos</SelectItem>
+              {contests.map(c => (
+                <SelectItem key={c.id} value={c.id}>{c.agency} - {c.role}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={timeRange} onValueChange={setTimeRange}>
+            <SelectTrigger className="w-full md:w-[200px]">
+              <Calendar className="h-4 w-4 mr-2" />
+              <SelectValue placeholder="Período" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="weekly">Semanal</SelectItem>
+              <SelectItem value="monthly">Mensal</SelectItem>
+              <SelectItem value="yearly">Anual</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
@@ -86,9 +122,11 @@ function PerformancePage() {
                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
                 <XAxis dataKey="name" />
                 <YAxis />
-                <Tooltip />
-                <Bar dataKey="acertos" fill="oklch(0.45 0.15 150)" radius={[4, 4, 0, 0]} />
-              </BarChart>
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="acertos" name="Período Atual" fill="oklch(0.45 0.15 150)" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="previous" name="Período Anterior" fill="oklch(0.7 0.1 150)" radius={[4, 4, 0, 0]} opacity={0.5} />
+                </BarChart>
             </ResponsiveContainer>
           </CardContent>
         </Card>
