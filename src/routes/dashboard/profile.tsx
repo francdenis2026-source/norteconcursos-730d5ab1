@@ -8,7 +8,10 @@ import { Badge } from '@/components/ui/badge';
 import { useAuthStatus } from '@/hooks/useDashboard';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { User, Mail, CreditCard, Shield, LogOut } from 'lucide-react';
+import { User, Mail, CreditCard, Shield, LogOut, Check } from 'lucide-react';
+import { SUBSCRIPTION_PLANS } from '@/lib/subscriptions.config';
+import { cn } from '@/lib/utils';
+
 
 export const Route = createFileRoute('/dashboard/profile')({
   component: ProfilePage,
@@ -156,34 +159,87 @@ function ProfilePage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="md:col-span-3">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <CreditCard className="h-5 w-5 text-secondary" />
-              Plano Atual
+              Planos e Assinatura
             </CardTitle>
+            <CardDescription>
+              Escolha o plano que melhor se adapta ao seu ritmo de estudos.
+            </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="flex flex-col items-center justify-center p-4 bg-muted rounded-lg border-2 border-secondary/20">
-              <Badge variant="secondary" className="mb-2 uppercase font-bold text-xs">
-                {user?.role || 'Plus'}
-              </Badge>
-              <span className="text-2xl font-bold text-primary">R$ 29,90/mês</span>
-              <p className="text-xs text-muted-foreground text-center mt-2">
-                Acesso ilimitado a todas as ferramentas do Norte Concurso.
-              </p>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              {SUBSCRIPTION_PLANS.map((plan) => {
+                const isCurrent = user?.role === plan.id;
+                return (
+                  <Card key={plan.id} className={cn(
+                    "relative overflow-hidden flex flex-col",
+                    plan.isPopular ? "border-secondary ring-1 ring-secondary" : "",
+                    isCurrent ? "bg-muted/50" : ""
+                  )}>
+                    {plan.isPopular && (
+                      <div className="absolute top-0 right-0 bg-secondary text-secondary-foreground text-[10px] font-bold px-2 py-0.5 rounded-bl-lg uppercase">
+                        Popular
+                      </div>
+                    )}
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-lg">{plan.name}</CardTitle>
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-2xl font-bold">R$ {plan.price.toFixed(2).replace('.', ',')}</span>
+                        <span className="text-xs text-muted-foreground">/mês</span>
+                      </div>
+                      <CardDescription className="text-xs min-h-[32px]">
+                        {plan.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-3">
+                      <ul className="space-y-2 text-xs">
+                        {Object.entries(plan.features).map(([key, feature], idx) => (
+                          <li key={idx} className="flex items-center gap-2">
+                            <Check className={cn(
+                              "h-3 w-3",
+                              feature.included ? "text-emerald-500" : "text-muted-foreground/30"
+                            )} />
+                            <span className={cn(feature.included ? "" : "text-muted-foreground/50")}>
+                              {feature.name}
+                              {feature.limit && feature.limit !== 'unlimited' && ` (${feature.limit})`}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+
+                    </CardContent>
+                    <div className="p-4 pt-0">
+                      <Button 
+                        variant={isCurrent ? "outline" : (plan.isPopular ? "secondary" : "default")} 
+                        className="w-full"
+                        disabled={isCurrent}
+                      >
+                        {isCurrent ? "Plano Atual" : "Selecionar"}
+                      </Button>
+                    </div>
+                  </Card>
+                );
+              })}
             </div>
             
-            <div className="space-y-2">
-              <Button variant="outline" className="w-full justify-start gap-2">
-                <Shield className="h-4 w-4" /> Gerenciar Assinatura
-              </Button>
-              <Button variant="ghost" className="w-full justify-start gap-2 text-destructive hover:text-destructive hover:bg-destructive/10" onClick={handleLogout}>
+            <div className="mt-8 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <Shield className="h-5 w-5 text-emerald-500" />
+                <div className="text-sm">
+                  <p className="font-medium">Assinatura Segura</p>
+                  <p className="text-muted-foreground text-xs">Seus dados estão protegidos com criptografia de ponta a ponta.</p>
+                </div>
+              </div>
+              <Button variant="ghost" className="text-destructive hover:text-destructive hover:bg-destructive/10 gap-2" onClick={handleLogout}>
                 <LogOut className="h-4 w-4" /> Sair da Conta
               </Button>
             </div>
           </CardContent>
         </Card>
+
       </div>
     </div>
   );

@@ -1,19 +1,27 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { PlayCircle, Clock, Trophy } from 'lucide-react';
+import { PlayCircle, Clock, Trophy, Lock } from 'lucide-react';
 import { toast } from 'sonner';
 import { MockService } from '@/services/mockService';
+import { useAuthStatus } from '@/hooks/useDashboard';
+import { checkFeatureAccess } from '@/lib/subscriptions.config';
+import { Link } from '@tanstack/react-router';
+
 
 export const Route = createFileRoute('/dashboard/mock-exams')({
   component: MockExamsPage
 });
 
 function MockExamsPage() {
+  const { user } = useAuthStatus();
   const [isExamActive, setIsExamActive] = useState(false);
   const [examStartTime, setExamStartTime] = useState<number | null>(null);
+  
+  const featureAccess = checkFeatureAccess(user?.role || 'free', 'mockExams');
+
 
   const startExam = () => {
     setIsExamActive(true);
@@ -56,12 +64,38 @@ function MockExamsPage() {
               Finalizar Agora
             </Button>
           </div>
-        ) : (
+        ) : featureAccess.included ? (
           <Button onClick={startExam} className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
             <PlayCircle className="mr-2 h-4 w-4" /> Iniciar Novo Simulado
           </Button>
+        ) : (
+          <Button disabled className="bg-muted text-muted-foreground">
+            <Lock className="mr-2 h-4 w-4" /> Simulado Bloqueado
+          </Button>
         )}
       </div>
+
+      {!featureAccess.included && (
+        <Card className="bg-secondary/5 border-secondary/20">
+          <CardContent className="p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-secondary/10 rounded-full">
+                <Lock className="h-6 w-6 text-secondary" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg">Funcionalidade Exclusiva</h3>
+                <p className="text-sm text-muted-foreground">
+                  Simulados completos estão disponíveis apenas nos planos <strong>Essencial, Plus e Premium</strong>.
+                </p>
+              </div>
+            </div>
+            <Button asChild variant="secondary">
+              <Link to="/dashboard/profile">Ver Planos</Link>
+            </Button>
+          </CardContent>
+        </Card>
+      )}
+
 
       <div className="grid gap-6">
         <Card>

@@ -32,8 +32,15 @@ export function useDashboardData() {
   return { stats, focusedContest, contests, isLoading, refreshStats };
 }
 
+import { SubscriptionTier } from '../types';
+
 export function useAuthStatus() {
-  const [user, setUser] = useState<{ name: string; email: string; role: string } | null>(null);
+  const [user, setUser] = useState<{ 
+    id: string;
+    name: string; 
+    email: string; 
+    role: SubscriptionTier; 
+  } | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -41,18 +48,28 @@ export function useAuthStatus() {
       const { data: { session } } = await supabase.auth.getSession();
       
       if (session) {
+        // Buscando perfil para pegar o tier atual diretamente do banco
+        const { data: profile } = await supabase
+          .from('profiles')
+          .select('subscription_tier')
+          .eq('id', session.user.id)
+          .single();
+
         setUser({
+          id: session.user.id,
           name: session.user.user_metadata['full_name'] || 'Usuário',
           email: session.user.email || '',
-          role: session.user.user_metadata['role'] || 'Plus'
+          role: (profile?.subscription_tier as SubscriptionTier) || 
+                (session.user.user_metadata['role'] as SubscriptionTier) || 
+                'free'
         });
       } else {
-
-        // Fallback for demo mode if no session
+        // Fallback para modo demo/visitante
         setUser({
+          id: 'demo-user',
           name: 'João Silva (Demo)',
           email: 'joao.demo@norteconcurso.com.br',
-          role: 'Plus'
+          role: 'plus'
         });
       }
       setIsLoading(false);
@@ -62,13 +79,8 @@ export function useAuthStatus() {
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       if (session) {
-        setUser({
-          name: session.user.user_metadata['full_name'] || 'Usuário',
-          email: session.user.email || '',
-          role: session.user.user_metadata['role'] || 'Plus'
-        });
+        checkAuth(); 
       } else {
-
         setUser(null);
       }
     });
@@ -78,4 +90,6 @@ export function useAuthStatus() {
 
   return { user, isAuthenticated: !!user, isLoading };
 }
+
+
 
