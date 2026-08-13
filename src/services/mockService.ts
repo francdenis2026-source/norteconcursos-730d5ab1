@@ -233,5 +233,26 @@ export const MockService = {
       console.error('Error deleting question:', e);
       return false;
     }
+  },
+
+  // Subscription Plans Management
+  getSubscriptionPlans: async () => {
+    try {
+      const { data, error } = await supabase.from('subscription_plans').select('*');
+      if (error || !data || data.length === 0) return null;
+      return data;
+    } catch (e) {
+      return null;
+    }
+  },
+
+  updateSubscriptionPlan: async (id: string, updates: any) => {
+    try {
+      const { error } = await supabase.from('subscription_plans').update(updates).eq('id', id);
+      if (error) throw error;
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
 };

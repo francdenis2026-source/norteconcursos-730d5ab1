@@ -6,7 +6,10 @@ import {
   Pencil, 
   Trash2, 
   BookOpen, 
-  GraduationCap 
+  GraduationCap,
+  ShieldCheck,
+  Settings,
+  CreditCard 
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -35,6 +38,7 @@ export const Route = createFileRoute('/dashboard/admin')({
 function AdminPanel() {
   const [contests, setContests] = React.useState<Contest[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
+  const [subscriptionPlans, setSubscriptionPlans] = React.useState<any[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState('');
   
@@ -45,12 +49,14 @@ function AdminPanel() {
 
   const loadData = async () => {
     setIsLoading(true);
-    const [c, q] = await Promise.all([
+    const [c, q, p] = await Promise.all([
       MockService.getContests(),
-      MockService.getQuestions()
+      MockService.getQuestions(),
+      (MockService as any).getSubscriptionPlans?.() || []
     ]);
     setContests(c);
     setQuestions(q);
+    setSubscriptionPlans(p);
     setIsLoading(false);
   };
 
@@ -109,9 +115,10 @@ function AdminPanel() {
       </div>
 
       <Tabs defaultValue="contests" className="w-full">
-        <TabsList className="grid w-full max-w-md grid-cols-2">
+        <TabsList className="grid w-full max-w-2xl grid-cols-3">
           <TabsTrigger value="contests">Concursos</TabsTrigger>
           <TabsTrigger value="questions">Questões</TabsTrigger>
+          <TabsTrigger value="subscriptions">Planos e Assinaturas</TabsTrigger>
         </TabsList>
 
         <TabsContent value="contests" className="mt-6 space-y-4">
