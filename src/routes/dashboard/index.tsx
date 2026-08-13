@@ -324,28 +324,36 @@ function DashboardIndex() {
 
         <Card className="no-print">
           <CardHeader>
-            <CardTitle className="text-lg">Próximas Atividades</CardTitle>
+            <CardTitle className="text-lg flex justify-between items-center">
+              Próximas Atividades
+              <Button variant="ghost" size="sm" asChild>
+                <Link to="/dashboard/study-plan" className="text-xs">Ver Plano</Link>
+              </Button>
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <ActivityItem 
-                title="Português - Sintaxe" 
-                type="Questões" 
-                time="14:00 - 15:30" 
-                status="Pendente"
-              />
-              <ActivityItem 
-                title="Dir. Constitucional - Art 5º" 
-                type="Teoria" 
-                time="16:00 - 18:00" 
-                status="Pendente"
-              />
-              <ActivityItem 
                 title="Simulado Semanal" 
                 type="Simulado" 
-                time="Amanhã" 
+                time="Faltam 4h para fechar" 
                 status="Pendente"
                 priority
+                link="/dashboard/mock-exams"
+              />
+              <ActivityItem 
+                title="Português - Sintaxe" 
+                type="Questões" 
+                time="Bloco Sugerido" 
+                status="Pendente"
+                link="/dashboard/questions"
+              />
+              <ActivityItem 
+                title="Cronômetro de Foco" 
+                type="Pomodoro" 
+                time="25 min" 
+                status="Pendente"
+                link="/dashboard/timer"
               />
             </div>
           </CardContent>
