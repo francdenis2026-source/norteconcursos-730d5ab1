@@ -323,6 +323,20 @@ function AdminPanel() {
           </Card>
         </TabsContent>
 
+        <TabsContent value="syllabus" className="mt-6 space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>Edital Verticalizado</CardTitle>
+              <CardDescription>Gerencie os tópicos do edital para cada concurso.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground py-8 text-center border-dashed border-2 rounded-lg">
+                Selecione um concurso acima para gerenciar seu edital.
+              </p>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
         <TabsContent value="subscriptions" className="mt-6 space-y-4">
           <Card>
             <CardHeader>
