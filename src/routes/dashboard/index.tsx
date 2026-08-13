@@ -324,28 +324,36 @@ function DashboardIndex() {
 
         <Card className="no-print">
           <CardHeader>
-            <CardTitle className="text-lg">Próximas Atividades</CardTitle>
+            <CardTitle className="text-lg flex justify-between items-center">
+              Próximas Atividades
+              <Button variant="ghost" size="sm" asChild>
+                <Link to="/dashboard/study-plan" className="text-xs">Ver Plano</Link>
+              </Button>
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <ActivityItem 
-                title="Português - Sintaxe" 
-                type="Questões" 
-                time="14:00 - 15:30" 
-                status="Pendente"
-              />
-              <ActivityItem 
-                title="Dir. Constitucional - Art 5º" 
-                type="Teoria" 
-                time="16:00 - 18:00" 
-                status="Pendente"
-              />
-              <ActivityItem 
                 title="Simulado Semanal" 
                 type="Simulado" 
-                time="Amanhã" 
+                time="Faltam 4h para fechar" 
                 status="Pendente"
                 priority
+                link="/dashboard/mock-exams"
+              />
+              <ActivityItem 
+                title="Português - Sintaxe" 
+                type="Questões" 
+                time="Bloco Sugerido" 
+                status="Pendente"
+                link="/dashboard/questions"
+              />
+              <ActivityItem 
+                title="Cronômetro de Foco" 
+                type="Pomodoro" 
+                time="25 min" 
+                status="Pendente"
+                link="/dashboard/timer"
               />
             </div>
           </CardContent>
@@ -422,11 +430,11 @@ function MetricCard({ title, value, icon: Icon, description, progress }: any) {
   );
 }
 
-function ActivityItem({ title, type, time, status, priority }: any) {
+function ActivityItem({ title, type, time, status, priority, link }: any) {
   return (
     <div className={cn(
       "flex items-center justify-between p-3 rounded-lg border bg-card",
-      priority ? "border-l-4 border-l-secondary" : ""
+      priority ? "border-l-4 border-l-secondary shadow-sm" : ""
     )}>
       <div className="flex flex-col gap-1">
         <span className="text-sm font-bold">{title}</span>
@@ -435,8 +443,8 @@ function ActivityItem({ title, type, time, status, priority }: any) {
           <span>{time}</span>
         </div>
       </div>
-      <Button variant="ghost" size="sm" className="h-8 text-xs">
-        Iniciar
+      <Button variant="ghost" size="sm" className="h-8 text-xs hover:bg-secondary hover:text-secondary-foreground" asChild>
+        <Link to={link || '#'}>Iniciar</Link>
       </Button>
     </div>
   );

@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { useDashboardData } from '@/hooks/useDashboard';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+import { Badge } from '@/components/ui/badge';
 import { 
   Target, 
   Calendar, 
@@ -13,6 +14,7 @@ import {
   Clock
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 export const Route = createFileRoute('/dashboard/my-contest')({
   component: MyContestPage
@@ -82,10 +84,16 @@ function MyContestPage() {
             </div>
 
             <div className="space-y-3">
-              <DisciplineProgress name="Língua Portuguesa" progress={65} />
-              <DisciplineProgress name="Direito Constitucional" progress={42} />
-              <DisciplineProgress name="Direito Administrativo" progress={15} />
-              <DisciplineProgress name="Informática" progress={0} />
+              {['Língua Portuguesa', 'Direito Constitucional', 'Direito Administrativo', 'Informática'].map((topic, i) => {
+                const status = ['Lido', 'Resumido', 'Revisado', 'Não Iniciado'][i];
+                return (
+                  <div key={topic} className="flex items-center gap-2">
+                    <span className="text-sm flex-1">{topic}</span>
+                    <Badge variant={status === 'Lido' ? 'default' : 'outline'}>{status}</Badge>
+                    <Progress value={[65, 42, 15, 0][i]} className="h-1.5 w-20" />
+                  </div>
+                );
+              })}
             </div>
           </CardContent>
         </Card>
@@ -151,8 +159,4 @@ function DisciplineProgress({ name, progress }: { name: string, progress: number
       </div>
     </div>
   );
-}
-
-function cn(...inputs: any[]) {
-  return inputs.filter(Boolean).join(' ');
 }

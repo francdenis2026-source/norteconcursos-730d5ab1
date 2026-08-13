@@ -19,36 +19,89 @@ function MockExamsPage() {
   const { user } = useAuthStatus();
   const [isExamActive, setIsExamActive] = useState(false);
   const [examStartTime, setExamStartTime] = useState<number | null>(null);
+  const [timeLeft, setTimeLeft] = useState(4 * 60 * 60); // 4 hours
+  const [examId, setExamId] = useState<string | null>(null);
+  const [examHistory, setExamHistory] = useState<any[]>([]);
   
   const featureAccess = checkFeatureAccess(user?.role || 'free', 'mockExams');
 
+  useEffect(() => {
+    const loadHistory = async () => {
+      const history = await MockService.getMockExams();
+      setExamHistory(history);
+    };
+    loadHistory();
+    
+    // Resume active exam if any
+    const active = localStorage.getItem('norte_active_exam');
+    if (active) {
+      const parsed = JSON.parse(active);
+      const elapsed = Math.floor((Date.now() - parsed.startTime) / 1000);
+      const remaining = (4 * 60 * 60) - elapsed;
+      if (remaining > 0) {
+        setIsExamActive(true);
+        setExamStartTime(parsed.startTime);
+        setTimeLeft(remaining);
+        setExamId(parsed.id);
+      } else {
+        localStorage.removeItem('norte_active_exam');
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    let timer: any;
+    if (isExamActive && timeLeft > 0) {
+      timer = setInterval(() => {
+        setTimeLeft(prev => prev - 1);
+      }, 1000);
+    } else if (timeLeft === 0 && isExamActive) {
+      finishExam();
+    }
+    return () => clearInterval(timer);
+  }, [isExamActive, timeLeft]);
 
   const startExam = () => {
+    const id = 'mock-' + Date.now();
+    const startTime = Date.now();
     setIsExamActive(true);
-    setExamStartTime(Date.now());
+    setExamStartTime(startTime);
+    setExamId(id);
+    localStorage.setItem('norte_active_exam', JSON.stringify({ id, startTime }));
     toast.info("Simulado iniciado! Você tem 4 horas.");
   };
 
   const finishExam = async () => {
-    if (!examStartTime) return;
+    if (!examStartTime || !examId) return;
     const duration = Math.floor((Date.now() - examStartTime) / 1000);
     
-    // Simulação de resultado
     const result = {
+      id: examId,
       total: 50,
-      correct: 38,
-      duration
+      correct: Math.floor(Math.random() * 20) + 30, // Mocked score
+      duration,
+      finishedAt: new Date().toISOString()
     };
 
+    await MockService.saveMockExam(result);
     await MockService.saveResponse({
-      questionId: 'mock-exam-' + Date.now(),
-      isCorrect: true, // Simulado simplificado
+      questionId: examId,
+      isCorrect: true,
       timeSpent: duration,
       createdAt: new Date().toISOString()
     });
 
     setIsExamActive(false);
+    localStorage.removeItem('norte_active_exam');
+    setExamHistory(prev => [result, ...prev]);
     toast.success(`Simulado concluído! Acertos: ${result.correct}/${result.total}`);
+  };
+
+  const formatTime = (seconds: number) => {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = seconds % 60;
+    return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   };
 
   return (
@@ -58,7 +111,7 @@ function MockExamsPage() {
         {isExamActive ? (
           <div className="flex gap-2">
              <div className="flex items-center gap-2 px-3 py-1 bg-destructive/10 text-destructive rounded-md text-sm font-bold animate-pulse">
-              <Clock className="h-4 w-4" /> 03:59:45
+              <Clock className="h-4 w-4" /> {formatTime(timeLeft)}
             </div>
             <Button onClick={finishExam} variant="destructive">
               Finalizar Agora
@@ -96,17 +149,33 @@ function MockExamsPage() {
         </Card>
       )}
 
-
       <div className="grid gap-6">
         <Card>
           <CardHeader>
             <CardTitle>Histórico de Simulados</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-col items-center justify-center p-12 text-muted-foreground">
-              <Trophy className="h-12 w-12 mb-4 opacity-20" />
-              <p>Você ainda não completou nenhum simulado.</p>
-            </div>
+            {examHistory.length > 0 ? (
+              <div className="space-y-4">
+                {examHistory.map((exam) => (
+                  <div key={exam.id} className="flex items-center justify-between p-4 border rounded-lg hover:bg-muted/50 transition-colors">
+                    <div>
+                      <p className="font-bold">Simulado {new Date(exam.finishedAt).toLocaleDateString()}</p>
+                      <p className="text-xs text-muted-foreground">Duração: {Math.floor(exam.duration / 60)} min</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-lg font-black text-secondary">{exam.correct}/{exam.total}</p>
+                      <p className="text-[10px] uppercase font-bold text-emerald-600">Concluído</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center p-12 text-muted-foreground">
+                <Trophy className="h-12 w-12 mb-4 opacity-20" />
+                <p>Você ainda não completou nenhum simulado.</p>
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>

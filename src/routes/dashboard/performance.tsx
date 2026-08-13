@@ -35,6 +35,24 @@ function PerformancePage() {
   const { user } = useAuthStatus();
   const [selectedContest, setSelectedContest] = useState('all');
   const [timeRange, setTimeRange] = useState('monthly');
+  const [goals, setGoals] = useState<any[]>([]);
+
+  useEffect(() => {
+    const loadGoals = async () => {
+      const g = await MockService.getStudyGoals();
+      if (g.length === 0) {
+        const defaultGoals = [
+          { id: 'g1', name: 'Português', type: 'weekly_questions', target: 85, current: 45 },
+          { id: 'g2', name: 'Constitucional', type: 'weekly_questions', target: 50, current: 38 }
+        ];
+        localStorage.setItem('norte_study_goals', JSON.stringify(defaultGoals));
+        setGoals(defaultGoals);
+      } else {
+        setGoals(g);
+      }
+    };
+    loadGoals();
+  }, []);
 
   if (isLoading) return <div className="p-8">Carregando...</div>;
 
@@ -208,13 +226,13 @@ function PerformancePage() {
                 <CardTitle className="text-lg">Tendência e Metas</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                {disciplineData.map(d => (
-                  <div key={d.name} className="space-y-2">
+                {goals.map(d => (
+                  <div key={d.id} className="space-y-2">
                     <div className="flex justify-between text-sm items-center">
                       <span className="font-bold">{d.name}</span>
                       <div className="flex items-center gap-2">
-                        <span className="text-muted-foreground text-xs">Atual: {d.acertos} / Meta: 85</span>
-                        {d.acertos >= d.previous ? (
+                        <span className="text-muted-foreground text-xs">Atual: {d.current} / Meta: {d.target}</span>
+                        {d.current >= (d.previous || 0) ? (
                           <ChevronUp className="h-4 w-4 text-emerald-500" />
                         ) : (
                           <ChevronDown className="h-4 w-4 text-rose-500" />
@@ -224,7 +242,7 @@ function PerformancePage() {
                     <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
                       <div 
                         className="h-full bg-secondary" 
-                        style={{ width: `${Math.min((d.acertos/85)*100, 100)}%` }}
+                        style={{ width: `${Math.min((d.current/d.target)*100, 100)}%` }}
                       />
                     </div>
                   </div>
