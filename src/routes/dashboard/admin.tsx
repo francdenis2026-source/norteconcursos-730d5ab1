@@ -364,6 +364,73 @@ function AdminPanel() {
             </CardContent>
           </Card>
         </TabsContent>
+
+        <TabsContent value="audit" className="mt-6 space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <History className="h-5 w-5 text-primary" />
+                Logs de Auditoria
+              </CardTitle>
+              <CardDescription>
+                Histórico completo de alterações realizadas por administradores.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="rounded-md border overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Data</TableHead>
+                      <TableHead>Admin</TableHead>
+                      <TableHead>Ação</TableHead>
+                      <TableHead>Entidade</TableHead>
+                      <TableHead>Mudanças</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {auditLogs.length === 0 ? (
+                      <TableRow>
+                        <TableCell colSpan={5} className="text-center py-8 text-muted-foreground">
+                          Nenhum log de auditoria encontrado.
+                        </TableCell>
+                      </TableRow>
+                    ) : (
+                      auditLogs.map((log) => (
+                        <TableRow key={log.id}>
+                          <TableCell className="text-xs whitespace-nowrap">
+                            {new Date(log.created_at).toLocaleString('pt-BR')}
+                          </TableCell>
+                          <TableCell>
+                            <div className="flex flex-col">
+                              <span className="text-sm font-medium">{log.admin?.full_name || 'Admin'}</span>
+                              <span className="text-[10px] text-muted-foreground">{log.admin?.email}</span>
+                            </div>
+                          </TableCell>
+                          <TableCell>
+                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-primary/10 text-primary">
+                              {log.action}
+                            </span>
+                          </TableCell>
+                          <TableCell className="text-xs">
+                            {log.entity_type}: {log.entity_id}
+                          </TableCell>
+                          <TableCell>
+                            <div className="max-w-[300px]">
+                              <code className="text-[10px] block p-2 bg-muted rounded truncate" title={JSON.stringify(log.new_values)}>
+                                {JSON.stringify(log.new_values)}
+                              </code>
+                            </div>
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
+                  </TableBody>
+                </Table>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
       </Tabs>
 
       {/* Edit Contest Modal */}
