@@ -365,5 +365,49 @@ export const MockService = {
     } catch (e) {
       return false;
     }
+  },
+
+  // Mock Exam Logic
+  getMockExams: async () => {
+    const stored = localStorage.getItem('norte_mock_exams');
+    return stored ? JSON.parse(stored) : [];
+  },
+
+  saveMockExam: async (exam: any) => {
+    const exams = await MockService.getMockExams();
+    const index = exams.findIndex((e: any) => e.id === exam.id);
+    if (index >= 0) {
+      exams[index] = exam;
+    } else {
+      exams.push(exam);
+    }
+    localStorage.setItem('norte_mock_exams', JSON.stringify(exams));
+  },
+
+  // Syllabus Logic
+  getSyllabusProgress: async (contestId: string) => {
+    const stored = localStorage.getItem(`norte_syllabus_${contestId}`);
+    return stored ? JSON.parse(stored) : {};
+  },
+
+  updateSyllabusTopic: async (contestId: string, topicId: string, status: string) => {
+    const progress = await MockService.getSyllabusProgress(contestId);
+    progress[topicId] = status;
+    localStorage.setItem(`norte_syllabus_${contestId}`, JSON.stringify(progress));
+  },
+
+  // Goals Logic
+  getStudyGoals: async () => {
+    const stored = localStorage.getItem('norte_study_goals');
+    return stored ? JSON.parse(stored) : [];
+  },
+
+  updateGoal: async (goalId: string, current: number) => {
+    const goals = await MockService.getStudyGoals();
+    const index = goals.findIndex((g: any) => g.id === goalId);
+    if (index >= 0) {
+      goals[index].current = current;
+      localStorage.setItem('norte_study_goals', JSON.stringify(goals));
+    }
   }
 };
