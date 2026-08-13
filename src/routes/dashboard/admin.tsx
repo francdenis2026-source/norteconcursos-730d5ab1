@@ -341,7 +341,7 @@ function AdminPanel() {
                               defaultValue={plan.price} 
                               onBlur={async (e) => {
                                 const val = parseFloat(e.target.value);
-                                await (MockService as any).updateSubscriptionPlan(plan.id, { price: val });
+                                await (MockService as any).updateSubscriptionPlan(plan.id, { price: val }, user?.id);
                                 toast.success(`Preço do plano ${plan.id} atualizado`);
                               }}
                             />
