@@ -15,8 +15,10 @@ import {
   CheckCircle2,
   XCircle,
   Download,
-  Printer
+  Printer,
+  Eye
 } from 'lucide-react';
+import { MediaViewer } from '@/components/dashboard/MediaViewer';
 import { 
   DropdownMenu, 
   DropdownMenuContent, 
@@ -266,6 +268,25 @@ function NotebooksPage() {
                     </DropdownMenuItem>
                     <DropdownMenuItem className="gap-2 text-destructive focus:text-destructive">
                       <Trash2 className="h-4 w-4" /> Excluir
+                    </DropdownMenuItem>
+                    <div className="border-t my-1" />
+                    <DropdownMenuItem className="p-0">
+                      <MediaViewer 
+                        type="video" 
+                        url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+                        title="Aula Inaugural: Como usar os Cadernos"
+                        triggerLabel="Ver Vídeo Aula"
+                        className="w-full justify-start border-none h-8 px-2 rounded-none"
+                      />
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="p-0">
+                      <MediaViewer 
+                        type="pdf" 
+                        url="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" 
+                        title="Teoria: Guia de Estudos"
+                        triggerLabel="Baixar Guia (PDF)"
+                        className="w-full justify-start border-none h-8 px-2 rounded-none"
+                      />
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
