@@ -366,7 +366,7 @@ function ProfilePage() {
           <Card className="md:col-span-3">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <History className="h-5 w-5 text-primary" />
+                <HistoryIcon className="h-5 w-5 text-primary" />
                 Histórico de Assinatura
               </CardTitle>
               <CardDescription>Eventos importantes relacionados ao seu plano.</CardDescription>
