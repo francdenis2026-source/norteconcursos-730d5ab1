@@ -311,6 +311,23 @@ export const MockService = {
     }
   },
 
+  getAccessAuditLogs: async () => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) return [];
+      const { data, error } = await supabase
+        .from('access_audit_logs')
+        .select('*')
+        .eq('user_id', session.user.id)
+        .order('attempt_time', { ascending: false });
+      if (error) throw error;
+      return data;
+    } catch (e) {
+      console.error('Error fetching audit logs:', e);
+      return [];
+    }
+  },
+
   // Onboarding
   getOnboardingStatus: async () => {
     try {
