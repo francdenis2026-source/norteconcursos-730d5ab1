@@ -28,17 +28,47 @@ export function useDashboardData() {
 }
 
 export function useAuthStatus() {
-  // Simplified mock auth check
   const [user, setUser] = useState<{ name: string; email: string; role: string } | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate getting user from session/storage
-    setUser({
-      name: 'João Silva (Demo)',
-      email: 'joao.demo@norteconcurso.com.br',
-      role: 'Plus'
+    const checkAuth = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      
+      if (session) {
+        setUser({
+          name: session.user.user_metadata.full_name || 'Usuário',
+          email: session.user.email || '',
+          role: session.user.user_metadata.role || 'Plus'
+        });
+      } else {
+        // Fallback for demo mode if no session
+        setUser({
+          name: 'João Silva (Demo)',
+          email: 'joao.demo@norteconcurso.com.br',
+          role: 'Plus'
+        });
+      }
+      setIsLoading(false);
+    };
+
+    checkAuth();
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session) {
+        setUser({
+          name: session.user.user_metadata.full_name || 'Usuário',
+          email: session.user.email || '',
+          role: session.user.user_metadata.role || 'Plus'
+        });
+      } else {
+        setUser(null);
+      }
     });
+
+    return () => subscription.unsubscribe();
   }, []);
 
-  return { user, isAuthenticated: !!user };
+  return { user, isAuthenticated: !!user, isLoading };
 }
+
