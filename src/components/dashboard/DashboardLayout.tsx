@@ -19,7 +19,7 @@ import {
   LogOut
 } from 'lucide-react';
 
-import { cn } from '@/utils';
+import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { useAuthStatus } from '@/hooks/useDashboard';
 import { Badge } from '@/components/ui/badge';
