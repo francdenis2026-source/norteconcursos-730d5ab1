@@ -2,6 +2,9 @@ export type Career = 'Policial' | 'Administrativa' | 'Tribunal' | 'Fiscal' | 'Ba
 
 export type ContestStatus = 'Previsto' | 'Autorizado' | 'Edital Publicado' | 'Inscrições Abertas' | 'Encerrado';
 
+export type SubscriptionTier = 'free' | 'essential' | 'plus' | 'premium';
+
+
 export interface Contest {
   id: string;
   name: string;
