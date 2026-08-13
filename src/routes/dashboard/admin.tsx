@@ -41,6 +41,7 @@ function AdminPanel() {
   const [contests, setContests] = React.useState<Contest[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [subscriptionPlans, setSubscriptionPlans] = React.useState<any[]>([]);
+  const [auditLogs, setAuditLogs] = React.useState<any[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState('');
   
@@ -51,14 +52,16 @@ function AdminPanel() {
 
   const loadData = async () => {
     setIsLoading(true);
-    const [c, q, p] = await Promise.all([
+    const [c, q, p, logs] = await Promise.all([
       MockService.getContests(),
       MockService.getQuestions(),
-      (MockService as any).getSubscriptionPlans?.() || []
+      (MockService as any).getSubscriptionPlans?.() || [],
+      (MockService as any).getAdminAuditLogs?.() || []
     ]);
     setContests(c);
     setQuestions(q);
     setSubscriptionPlans(p);
+    setAuditLogs(logs);
     setIsLoading(false);
   };
 
@@ -117,10 +120,11 @@ function AdminPanel() {
       </div>
 
       <Tabs defaultValue="contests" className="w-full">
-        <TabsList className="grid w-full max-w-2xl grid-cols-3">
+        <TabsList className="grid w-full max-w-3xl grid-cols-4">
           <TabsTrigger value="contests">Concursos</TabsTrigger>
           <TabsTrigger value="questions">Questões</TabsTrigger>
-          <TabsTrigger value="subscriptions">Planos e Assinaturas</TabsTrigger>
+          <TabsTrigger value="subscriptions">Planos</TabsTrigger>
+          <TabsTrigger value="audit">Histórico/Auditoria</TabsTrigger>
         </TabsList>
 
         <TabsContent value="contests" className="mt-6 space-y-4">
