@@ -291,6 +291,73 @@ function AdminPanel() {
             </CardContent>
           </Card>
         </TabsContent>
+
+        <TabsContent value="subscriptions" className="mt-6 space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <ShieldCheck className="h-5 w-5 text-primary" />
+                Gestão de Planos e Entitlements
+              </CardTitle>
+              <CardDescription>
+                Gerencie os valores, limites e funcionalidades de cada nível de assinatura.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="rounded-md border overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Plano</TableHead>
+                      <TableHead>Preço (R$)</TableHead>
+                      <TableHead>Funcionalidades (JSON)</TableHead>
+                      <TableHead className="text-right">Ações</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {subscriptionPlans.length === 0 ? (
+                      <TableRow>
+                        <TableCell colSpan={4} className="text-center py-8 text-muted-foreground">
+                          {isLoading ? 'Carregando planos do banco...' : 'Configuração de planos apenas via banco de dados.'}
+                        </TableCell>
+                      </TableRow>
+                    ) : (
+                      subscriptionPlans.map((plan) => (
+                        <TableRow key={plan.id}>
+                          <TableCell className="font-bold uppercase">{plan.id}</TableCell>
+                          <TableCell>
+                            <Input 
+                              type="number" 
+                              className="w-24" 
+                              defaultValue={plan.price} 
+                              onBlur={async (e) => {
+                                const val = parseFloat(e.target.value);
+                                await (MockService as any).updateSubscriptionPlan(plan.id, { price: val });
+                                toast.success(`Preço do plano ${plan.id} atualizado`);
+                              }}
+                            />
+                          </TableCell>
+                          <TableCell>
+                            <div className="max-w-[400px]">
+                              <code className="text-[10px] block p-2 bg-muted rounded truncate">
+                                {JSON.stringify(plan.features)}
+                              </code>
+                            </div>
+                          </TableCell>
+                          <TableCell className="text-right">
+                            <Button variant="outline" size="sm" className="gap-2">
+                              <Settings className="h-4 w-4" /> Detalhes
+                            </Button>
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
+                  </TableBody>
+                </Table>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
       </Tabs>
 
       {/* Edit Contest Modal */}
