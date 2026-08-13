@@ -413,6 +413,19 @@ export const MockService = {
       exams.push(exam);
     }
     localStorage.setItem('norte_mock_exams', JSON.stringify(exams));
+
+    // Sincroniza com Supabase se logado
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) {
+      await supabase.from('mock_exam_results').insert({
+        user_id: session.user.id,
+        exam_id: exam.id,
+        total_questions: exam.total,
+        correct_answers: exam.correct,
+        duration_seconds: exam.duration,
+        finished_at: exam.finishedAt
+      });
+    }
   },
 
   // Syllabus Logic
