@@ -149,7 +149,9 @@ function QuestionsCatalog() {
               </Button>
             </CardFooter>
           </Card>
-        ))}
+          );
+        })}
+
       </div>
     </div>
   );
