@@ -13,12 +13,25 @@ import {
   ChevronRight,
   ClipboardList,
   Target,
-  Settings
+  Settings,
+  Bell,
+  AlertCircle,
+  LogOut
 } from 'lucide-react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 import { Button } from '@/components/ui/button';
 import { useAuthStatus } from '@/hooks/useDashboard';
+import { Badge } from '@/components/ui/badge';
+import { 
+  DropdownMenu, 
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuLabel, 
+  DropdownMenuSeparator, 
+  DropdownMenuTrigger 
+} from '@/components/ui/dropdown-menu';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 
 const menuItems = [
