@@ -160,7 +160,3 @@ function DisciplineProgress({ name, progress }: { name: string, progress: number
     </div>
   );
 }
-
-function cn(...inputs: any[]) {
-  return inputs.filter(Boolean).join(' ');
-}
