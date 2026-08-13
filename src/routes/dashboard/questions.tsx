@@ -53,7 +53,7 @@ function QuestionsCatalog() {
       const tier = user?.role || 'free';
       const limit = tier === 'free' ? 10 : (tier === 'essential' ? 100 : Infinity);
       
-      if (todayCount >= limit) {
+      if (todayCount >= (limit as number)) {
         toast.warning(`Você atingiu seu limite diário de ${limit} questões no plano ${tier.toUpperCase()}.`);
       }
       
