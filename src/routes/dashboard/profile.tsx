@@ -8,9 +8,11 @@ import { Badge } from '@/components/ui/badge';
 import { useAuthStatus } from '@/hooks/useDashboard';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { User, Mail, CreditCard, Shield, LogOut, Check } from 'lucide-react';
+import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink } from 'lucide-react';
 import { SUBSCRIPTION_PLANS } from '@/lib/subscriptions.config';
 import { cn } from '@/lib/utils';
+import { createCheckoutSession, createPortalSession } from '@/lib/stripe.functions';
+import { useServerFn } from '@tanstack/react-start';
 
 
 export const Route = createFileRoute('/dashboard/profile')({
@@ -24,6 +26,11 @@ function ProfilePage() {
   const { user, isLoading } = useAuthStatus();
   const [isUpdating, setIsUpdating] = React.useState(false);
   const [isVerifying, setIsVerifying] = React.useState(false);
+  const [isRedirecting, setIsRedirecting] = React.useState(false);
+  
+  const checkout = useServerFn(createCheckoutSession);
+  const portal = useServerFn(createPortalSession);
+  
   const [formData, setFormData] = React.useState({
     name: '',
     email: '',
@@ -80,6 +87,30 @@ function ProfilePage() {
   const handleLogout = async () => {
     await supabase.auth.signOut();
     window.location.href = '/';
+  };
+
+  const handleUpgrade = async (planId: string) => {
+    setIsRedirecting(true);
+    try {
+      const { url } = await checkout({ data: { priceId: `price_mock_${planId}`, planId } });
+      if (url) window.location.href = url;
+    } catch (error) {
+      toast.error("Erro ao iniciar pagamento");
+    } finally {
+      setIsRedirecting(false);
+    }
+  };
+
+  const handleOpenBillingPortal = async () => {
+    setIsRedirecting(true);
+    try {
+      const { url } = await portal();
+      if (url) window.location.href = url;
+    } catch (error) {
+      toast.error("Erro ao abrir portal de cobrança");
+    } finally {
+      setIsRedirecting(false);
+    }
   };
 
   if (isLoading) return <div className="p-8">Carregando...</div>;
@@ -160,14 +191,28 @@ function ProfilePage() {
         </Card>
 
         <Card className="md:col-span-3">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <CreditCard className="h-5 w-5 text-secondary" />
-              Planos e Assinatura
-            </CardTitle>
-            <CardDescription>
-              Escolha o plano que melhor se adapta ao seu ritmo de estudos.
-            </CardDescription>
+          <CardHeader className="flex flex-row items-center justify-between">
+            <div>
+              <CardTitle className="flex items-center gap-2">
+                <CreditCard className="h-5 w-5 text-secondary" />
+                Planos e Assinatura
+              </CardTitle>
+              <CardDescription>
+                Escolha o plano que melhor se adapta ao seu ritmo de estudos.
+              </CardDescription>
+            </div>
+            {user?.role !== 'free' && (
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex gap-2"
+                onClick={handleOpenBillingPortal}
+                disabled={isRedirecting}
+              >
+                <ExternalLink className="h-4 w-4" />
+                Gerenciar Assinatura
+              </Button>
+            )}
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -215,9 +260,10 @@ function ProfilePage() {
                       <Button 
                         variant={isCurrent ? "outline" : (plan.isPopular ? "secondary" : "default")} 
                         className="w-full"
-                        disabled={isCurrent}
+                        disabled={isCurrent || isRedirecting}
+                        onClick={() => handleUpgrade(plan.id)}
                       >
-                        {isCurrent ? "Plano Atual" : "Selecionar"}
+                        {isCurrent ? "Plano Atual" : (isRedirecting ? "Processando..." : "Selecionar")}
                       </Button>
                     </div>
                   </Card>

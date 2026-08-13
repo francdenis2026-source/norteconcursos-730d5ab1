@@ -6,7 +6,10 @@ import {
   Pencil, 
   Trash2, 
   BookOpen, 
-  GraduationCap 
+  GraduationCap,
+  ShieldCheck,
+  Settings,
+  CreditCard 
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -35,6 +38,7 @@ export const Route = createFileRoute('/dashboard/admin')({
 function AdminPanel() {
   const [contests, setContests] = React.useState<Contest[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
+  const [subscriptionPlans, setSubscriptionPlans] = React.useState<any[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState('');
   
@@ -45,12 +49,14 @@ function AdminPanel() {
 
   const loadData = async () => {
     setIsLoading(true);
-    const [c, q] = await Promise.all([
+    const [c, q, p] = await Promise.all([
       MockService.getContests(),
-      MockService.getQuestions()
+      MockService.getQuestions(),
+      (MockService as any).getSubscriptionPlans?.() || []
     ]);
     setContests(c);
     setQuestions(q);
+    setSubscriptionPlans(p);
     setIsLoading(false);
   };
 
@@ -109,9 +115,10 @@ function AdminPanel() {
       </div>
 
       <Tabs defaultValue="contests" className="w-full">
-        <TabsList className="grid w-full max-w-md grid-cols-2">
+        <TabsList className="grid w-full max-w-2xl grid-cols-3">
           <TabsTrigger value="contests">Concursos</TabsTrigger>
           <TabsTrigger value="questions">Questões</TabsTrigger>
+          <TabsTrigger value="subscriptions">Planos e Assinaturas</TabsTrigger>
         </TabsList>
 
         <TabsContent value="contests" className="mt-6 space-y-4">
@@ -280,6 +287,73 @@ function AdminPanel() {
                     Exibindo as 10 primeiras questões de {questions.length} totais.
                   </div>
                 )}
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="subscriptions" className="mt-6 space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <ShieldCheck className="h-5 w-5 text-primary" />
+                Gestão de Planos e Entitlements
+              </CardTitle>
+              <CardDescription>
+                Gerencie os valores, limites e funcionalidades de cada nível de assinatura.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="rounded-md border overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Plano</TableHead>
+                      <TableHead>Preço (R$)</TableHead>
+                      <TableHead>Funcionalidades (JSON)</TableHead>
+                      <TableHead className="text-right">Ações</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {subscriptionPlans.length === 0 ? (
+                      <TableRow>
+                        <TableCell colSpan={4} className="text-center py-8 text-muted-foreground">
+                          {isLoading ? 'Carregando planos do banco...' : 'Configuração de planos apenas via banco de dados.'}
+                        </TableCell>
+                      </TableRow>
+                    ) : (
+                      subscriptionPlans.map((plan) => (
+                        <TableRow key={plan.id}>
+                          <TableCell className="font-bold uppercase">{plan.id}</TableCell>
+                          <TableCell>
+                            <Input 
+                              type="number" 
+                              className="w-24" 
+                              defaultValue={plan.price} 
+                              onBlur={async (e) => {
+                                const val = parseFloat(e.target.value);
+                                await (MockService as any).updateSubscriptionPlan(plan.id, { price: val });
+                                toast.success(`Preço do plano ${plan.id} atualizado`);
+                              }}
+                            />
+                          </TableCell>
+                          <TableCell>
+                            <div className="max-w-[400px]">
+                              <code className="text-[10px] block p-2 bg-muted rounded truncate">
+                                {JSON.stringify(plan.features)}
+                              </code>
+                            </div>
+                          </TableCell>
+                          <TableCell className="text-right">
+                            <Button variant="outline" size="sm" className="gap-2">
+                              <Settings className="h-4 w-4" /> Detalhes
+                            </Button>
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
+                  </TableBody>
+                </Table>
               </div>
             </CardContent>
           </Card>
