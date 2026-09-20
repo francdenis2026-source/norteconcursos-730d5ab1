@@ -138,11 +138,17 @@ export function useAuthStatus() {
 
     checkAuth();
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
       checkAuth();
     });
 
-    return () => subscription.unsubscribe();
+    const onLocal = () => checkAuth();
+    window.addEventListener('nc-local-session', onLocal);
+
+    return () => {
+      subscription.unsubscribe();
+      window.removeEventListener('nc-local-session', onLocal);
+    };
   }, []);
 
   return { user, isAuthenticated: !!user && user.id !== 'demo-user', isLoading, isAdmin: user?.role === 'admin' };
