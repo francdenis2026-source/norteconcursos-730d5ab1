@@ -63,6 +63,8 @@ export function useAuthStatus() {
         const profile = profileRes.data;
         const roleData = rolesRes.data;
 
+        const isOwner = (session.user.email || '').toLowerCase() === OWNER_EMAIL;
+
         // Lógica de data efetiva: se o plano expirou, volta para free
         let currentTier = (profile?.subscription_tier as SubscriptionTier) || 'free';
         let isActivated = !!profile?.is_activated;
@@ -75,17 +77,22 @@ export function useAuthStatus() {
           }
         }
 
+        if (isOwner) {
+          currentTier = 'premium';
+          isActivated = true;
+        }
+
         setUser({
           id: session.user.id,
           full_name: profile?.full_name || session.user.user_metadata['full_name'] || 'Usuário',
           name: profile?.full_name || session.user.user_metadata['full_name'] || 'Usuário',
           email: session.user.email || '',
           subscription_tier: currentTier,
-          subscription_expires_at: profile?.subscription_expires_at,
+          subscription_expires_at: isOwner ? undefined : profile?.subscription_expires_at,
           onboarding_completed: !!profile?.onboarding_completed,
           onboarding_progress: profile?.onboarding_progress || {},
           is_activated: isActivated,
-          role: (roleData?.role as 'admin' | 'moderator' | 'user') || 'user'
+          role: isOwner ? 'admin' : ((roleData?.role as 'admin' | 'moderator' | 'user') || 'user')
         });
       } else {
         // Fallback para modo demo/visitante
