@@ -33,9 +33,10 @@ export function useDashboardData() {
 }
 
 import { SubscriptionTier, UserProfile } from '../types';
+import { OWNER_EMAIL } from './useDashboard.constants';
+import { getLocalSession } from '@/lib/localSession';
 
-// Conta proprietária da plataforma: sempre com privilégios máximos
-export const OWNER_EMAIL = 'francdenisbr@gmail.com';
+export { OWNER_EMAIL };
 
 export function useAuthStatus() {
   const [user, setUser] = useState<UserProfile | null>(null);
@@ -43,8 +44,32 @@ export function useAuthStatus() {
 
   useEffect(() => {
     const checkAuth = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      
+      let session: any = null;
+      try {
+        session = (await supabase.auth.getSession()).data.session;
+      } catch {
+        session = null;
+      }
+
+      const local = getLocalSession();
+
+      if (!session && local) {
+        const isOwner = local.email === OWNER_EMAIL;
+        setUser({
+          id: local.id,
+          full_name: local.full_name,
+          name: local.full_name,
+          email: local.email,
+          subscription_tier: isOwner ? 'premium' : 'plus',
+          onboarding_completed: false,
+          onboarding_progress: {},
+          is_activated: true,
+          role: isOwner ? 'admin' : 'user'
+        });
+        setIsLoading(false);
+        return;
+      }
+
       if (session) {
         // Buscando perfil e roles diretamente do banco
         const [profileRes, rolesRes] = await Promise.all([
