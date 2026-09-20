@@ -34,6 +34,9 @@ export function useDashboardData() {
 
 import { SubscriptionTier, UserProfile } from '../types';
 
+// Conta proprietária da plataforma: sempre com privilégios máximos
+export const OWNER_EMAIL = 'francdenisbr@gmail.com';
+
 export function useAuthStatus() {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState(true);
