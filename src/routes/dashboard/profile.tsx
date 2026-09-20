@@ -119,7 +119,12 @@ function ProfilePage() {
   };
 
   const handleLogout = async () => {
-    await supabase.auth.signOut();
+    try {
+      await supabase.auth.signOut();
+    } catch {
+      // banco indisponível: segue apenas com a sessão local
+    }
+    clearLocalSession();
     window.location.href = '/';
   };
 
