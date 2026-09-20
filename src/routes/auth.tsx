@@ -7,6 +7,7 @@ import { Compass, ShieldCheck, Mail, Lock, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { setLocalSession } from "@/lib/localSession";
 
 export const Route = createFileRoute("/auth")({
   component: AuthPage,
@@ -55,7 +56,16 @@ function AuthPage() {
         navigate({ to: "/dashboard" });
       }
     } catch (error: any) {
-      toast.error(error.message || "Erro na autenticação");
+      // Banco indisponível: libera o acesso local de demonstração
+      const msg: string = error?.message || "";
+      const offline = /fetch|network|failed|Load failed|ENOTFOUND|servidor/i.test(msg);
+      if (offline) {
+        setLocalSession(email, name);
+        toast.success("Acesso liberado no modo demonstração (sem banco de dados).");
+        navigate({ to: "/dashboard" });
+      } else {
+        toast.error(msg || "Erro na autenticação");
+      }
     } finally {
       setIsLoading(false);
     }
