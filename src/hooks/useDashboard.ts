@@ -44,14 +44,16 @@ export function useAuthStatus() {
 
   useEffect(() => {
     const checkAuth = async () => {
-      let session: any = null;
-      try {
-        session = (await supabase.auth.getSession()).data.session;
-      } catch {
-        session = null;
-      }
-
       const local = getLocalSession();
+
+      let session: any = null;
+      if (!local) {
+        try {
+          session = (await supabase.auth.getSession()).data.session;
+        } catch {
+          session = null;
+        }
+      }
 
       if (!session && local) {
         const isOwner = local.email === OWNER_EMAIL;
