@@ -33,9 +33,10 @@ export function useDashboardData() {
 }
 
 import { SubscriptionTier, UserProfile } from '../types';
+import { OWNER_EMAIL } from './useDashboard.constants';
+import { getLocalSession } from '@/lib/localSession';
 
-// Conta proprietária da plataforma: sempre com privilégios máximos
-export const OWNER_EMAIL = 'francdenisbr@gmail.com';
+export { OWNER_EMAIL };
 
 export function useAuthStatus() {
   const [user, setUser] = useState<UserProfile | null>(null);
@@ -43,8 +44,34 @@ export function useAuthStatus() {
 
   useEffect(() => {
     const checkAuth = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      
+      const local = getLocalSession();
+
+      let session: any = null;
+      if (!local) {
+        try {
+          session = (await supabase.auth.getSession()).data.session;
+        } catch {
+          session = null;
+        }
+      }
+
+      if (!session && local) {
+        const isOwner = local.email === OWNER_EMAIL;
+        setUser({
+          id: local.id,
+          full_name: local.full_name,
+          name: local.full_name,
+          email: local.email,
+          subscription_tier: isOwner ? 'premium' : 'plus',
+          onboarding_completed: false,
+          onboarding_progress: {},
+          is_activated: true,
+          role: isOwner ? 'admin' : 'user'
+        });
+        setIsLoading(false);
+        return;
+      }
+
       if (session) {
         // Buscando perfil e roles diretamente do banco
         const [profileRes, rolesRes] = await Promise.all([
@@ -113,11 +140,17 @@ export function useAuthStatus() {
 
     checkAuth();
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
       checkAuth();
     });
 
-    return () => subscription.unsubscribe();
+    const onLocal = () => checkAuth();
+    window.addEventListener('nc-local-session', onLocal);
+
+    return () => {
+      subscription.unsubscribe();
+      window.removeEventListener('nc-local-session', onLocal);
+    };
   }, []);
 
   return { user, isAuthenticated: !!user && user.id !== 'demo-user', isLoading, isAdmin: user?.role === 'admin' };
