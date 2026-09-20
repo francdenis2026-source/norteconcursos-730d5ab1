@@ -291,7 +291,8 @@ function Index() {
             </div>
           </div>
           <div className="border-t pt-8 text-center text-xs text-muted-foreground">
-            © 2026 Norte Concurso. Todos os direitos reservados. Inicialmente lançado em Feijó, Acre.
+            <p>© 2026 Norte Concurso. Todos os direitos reservados. Inicialmente lançado em Feijó, Acre.</p>
+            <p className="mt-2">Desenvolvido por Franc D&apos;nis</p>
           </div>
         </div>
       </footer>
