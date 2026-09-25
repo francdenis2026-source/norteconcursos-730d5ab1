@@ -155,22 +155,34 @@
 }
 
 /* NEXUS-PRO:WATERMARK-HIDE:START */
-/* Overlay do badge oficial ocultado por conflito com UI custom.
-   Bloco idempotente gerenciado pela extensão Nexus Pro.
-   NÃO EDITAR manualmente — para reverter, remova o bloco inteiro. */
+/* Hide the "Made with Lovable" badge entirely, without affecting layout.
+   Covers the platform's injected overlay, links, iframes, and data-attribute
+   variants. Revert by removing this whole block. */
+[id^="lovable-badge"],
 #lovable-badge,
 #lovable-badge-v2,
-[id^="lovable-badge"],
 [data-testid="lovable-badge"],
-a[href*="lovable.dev/?via="],
-a[href*="lovable.dev?via="],
+[data-lovable-badge],
+[data-lovable],
+[class*="lovable-badge"],
+a[href*="lovable.dev"],
 a[href*="gpteng.co"],
-iframe[src*="lovable.dev/badge"] {
+iframe[src*="lovable.dev"],
+iframe[src*="gpteng.co"] {
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
   pointer-events: none !important;
-  width: 0 !important;
-  height: 0 !important;
+  z-index: -1 !important;
 }
 /* NEXUS-PRO:WATERMARK-HIDE:END */
