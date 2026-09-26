@@ -42,6 +42,7 @@ function StudentExamsPage() {
   const [reloadKey, setReloadKey] = React.useState(0);
   const [contestFilter, setContestFilter] = React.useState<string | null>(null);
   const [subjectMaps, setSubjectMaps] = React.useState<Record<string, Record<string, string>>>({});
+  const [cutoffs, setCutoffs] = React.useState<Record<string, { score: number | null; notes: string | null }>>({});
 
   React.useEffect(() => {
     if (authLoading || !user || user.id === "demo-user") { setIsLoading(false); return; }
@@ -91,6 +92,21 @@ function StudentExamsPage() {
       });
     })();
   }, [groups, subjectMaps]);
+
+  // Fetches nota de corte reference data for every contest/year already shown in
+  // groups, keyed the same way as group.key, so each card can show "você passou"
+  // or "faltaram X pontos" alongside the candidate's own score.
+  React.useEffect(() => {
+    if (!groups.length) return;
+    (async () => {
+      const { data } = await supabase.from("contest_reference_info").select("contest_name,contest_year,cutoff_score,notes");
+      const map: Record<string, { score: number | null; notes: string | null }> = {};
+      (data as { contest_name: string; contest_year: string | null; cutoff_score: number | null; notes: string | null }[] | null || []).forEach((row) => {
+        map[`${row.contest_name}__${row.contest_year}`] = { score: row.cutoff_score, notes: row.notes };
+      });
+      setCutoffs(map);
+    })();
+  }, [groups.length]);
 
   const openGroup = async (group: GroupedExam) => {
     if (openKey === group.key) { setOpenKey(null); return; }
@@ -171,10 +187,15 @@ function StudentExamsPage() {
           breakdown.sort((a, b) => a.accuracy - b.accuracy);
         }
         const weakSpots = breakdown.filter((b) => b.total >= 2 && b.accuracy < 50);
+        const cutoff = cutoffs[group.key];
+        const cutoffKnown = cutoff && cutoff.score !== null;
+        const passedCutoff = cutoffKnown && group.score !== null && group.score >= cutoff.score!;
         return <Card key={group.key} className={cn("overflow-hidden transition-all", isOpen && "border-emerald-300 shadow-md")}>
-        <button type="button" onClick={() => openGroup(group)} className="w-full text-left"><CardHeader className="transition-colors hover:bg-slate-50/80 dark:hover:bg-slate-900/30"><div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-center"><div className="flex items-center gap-4"><div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#071a2f] text-lg font-black text-emerald-300">{group.contest_year.slice(-2)}</div><div><CardTitle className="flex flex-wrap items-center gap-2 text-lg">{group.contest_name} — {group.contest_year}{official && <Badge className="bg-emerald-600">Oficial</Badge>}</CardTitle><CardDescription className="mt-1">{group.exam_board || "Banca não identificada"} · {group.pageCount} páginas</CardDescription></div></div><div className="grid grid-cols-4 items-center gap-3 text-center sm:gap-6"><MiniMetric label="Acertos" value={metric(group.correct_count)} className="text-emerald-600" /><MiniMetric label="Erros" value={metric(group.wrong_count)} className="text-rose-600" /><MiniMetric label="Saldo" value={group.score ?? 0} className="text-primary" /><div className="flex items-center gap-3"><MiniMetric label="Taxa" value={`${accuracy}%`} className="text-amber-600" /><ChevronDown className={cn("h-5 w-5 text-muted-foreground transition-transform", isOpen && "rotate-180")} /></div></div></div></CardHeader></button>
+        <button type="button" onClick={() => openGroup(group)} className="w-full text-left"><CardHeader className="transition-colors hover:bg-slate-50/80 dark:hover:bg-slate-900/30"><div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-center"><div className="flex items-center gap-4"><div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#071a2f] text-lg font-black text-emerald-300">{group.contest_year.slice(-2)}</div><div><CardTitle className="flex flex-wrap items-center gap-2 text-lg">{group.contest_name} — {group.contest_year}{official && <Badge className="bg-emerald-600">Oficial</Badge>}{cutoffKnown && <Badge variant="outline" className={cn("text-[10px]", passedCutoff ? "border-emerald-300 bg-emerald-50 text-emerald-700" : "border-rose-300 bg-rose-50 text-rose-700")}>{passedCutoff ? "Acima do corte" : "Abaixo do corte"}</Badge>}</CardTitle><CardDescription className="mt-1">{group.exam_board || "Banca não identificada"} · {group.pageCount} páginas{cutoffKnown ? ` · Nota de corte: ${cutoff!.score} pts` : " · Nota de corte não localizada"}</CardDescription></div></div><div className="grid grid-cols-4 items-center gap-3 text-center sm:gap-6"><MiniMetric label="Acertos" value={metric(group.correct_count)} className="text-emerald-600" /><MiniMetric label="Erros" value={metric(group.wrong_count)} className="text-rose-600" /><MiniMetric label="Saldo" value={group.score ?? 0} className="text-primary" /><div className="flex items-center gap-3"><MiniMetric label="Taxa" value={`${accuracy}%`} className="text-amber-600" /><ChevronDown className={cn("h-5 w-5 text-muted-foreground transition-transform", isOpen && "rotate-180")} /></div></div></div></CardHeader></button>
         {isOpen && <CardContent className="space-y-5 border-t bg-slate-50/50 pt-5 dark:bg-slate-950/20">
           {official && <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200"><p className="font-black">Boletim individual CEBRASPE confirmado</p><p className="mt-1">Nota total: {official.nota_total ?? group.score} pontos · {official.acertos_total ?? group.correct_count} acertos · {official.erros_total ?? group.wrong_count} erros{official.classificacao_ampla_objetiva && ` · ${official.classificacao_ampla_objetiva}ª colocação`}</p></div>}
+          {cutoffKnown && group.score !== null && <div className={cn("rounded-2xl border p-4 text-sm", passedCutoff ? "border-emerald-200 bg-emerald-50 text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200" : "border-rose-200 bg-rose-50 text-rose-900 dark:border-rose-800 dark:bg-rose-950/40 dark:text-rose-200")}><p className="font-black">Nota de corte: {cutoff!.score} pontos</p><p className="mt-1">{passedCutoff ? `Sua nota (${group.score}) ficou acima do corte.` : `Sua nota (${group.score}) ficou ${(cutoff!.score! - group.score).toFixed(2)} pontos abaixo do corte.`}</p>{cutoff!.notes && <p className="mt-1 text-xs opacity-75">{cutoff!.notes}</p>}</div>}
+          {cutoff && cutoff.score === null && <p className="text-xs text-muted-foreground">Nota de corte deste concurso ainda não foi localizada em fonte confiável.</p>}
           {breakdown.length > 0 && <div>
             <p className="mb-3 flex items-center gap-2 text-sm font-bold"><Target className="h-4 w-4" />Pontos fracos por disciplina</p>
             {weakSpots.length > 0 && <p className="mb-3 text-xs text-rose-700 dark:text-rose-400">Abaixo de 50% de aproveitamento: {weakSpots.map((w) => w.subject).join(", ")}.</p>}
