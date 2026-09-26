@@ -207,14 +207,16 @@ on conflict (exam_year,item_number) do update set
 -- items (24, 26, 29, 37, 103, 116, 119) had no legible letter in the scan at all —
 -- the candidate confirmed his answers for these directly in chat, so this is now a
 -- complete, fully confirmed grading of all 120 items with zero items pending.
--- correct_count/wrong_count: 64 corretas + 12 anuladas (sempre contam como acerto)
--- = 76 pontos líquidos; 42 erradas; 2 em branco (itens 2 e 92).
+-- Score follows the CEBRASPE net-score formula: nota líquida = corretas − erradas +
+-- anuladas (cada errada anula uma certa; cada anulada vale +1 ponto ao candidato).
+-- 64 corretas − 42 erradas + 12 anuladas = 34 pontos líquidos; 2 em branco (itens 2
+-- e 92, que não somam nem descontam).
 insert into public.student_exam_documents
   (user_id,contest_name,contest_year,exam_board,doc_type,file_name,storage_path,
    correct_count,wrong_count,blank_count,score_net,extracted_data,notes)
 select u.id,'Polícia Rodoviária Federal','2019','CEBRASPE','resultado',
   'PRF_2019_resultado_franc_denis.txt','manual-entry/prf-2019-franc-denis',
-  76, 42, 2, 76,
+  64, 42, 2, 34,
   '{
     "method": "leitura manuscrita item a item confrontada com o gabarito oficial definitivo; 7 itens sem letra legível na foto (24,26,29,37,103,116,119) foram confirmados diretamente pelo candidato em chat",
     "items": {
@@ -241,7 +243,7 @@ select u.id,'Polícia Rodoviária Federal','2019','CEBRASPE','resultado',
       "119":"correta","120":"correta"
     }
   }'::jsonb,
-  'Todos os 120 itens conferidos individualmente contra o gabarito oficial definitivo — 113 lidos diretamente da foto e 7 (24,26,29,37,103,116,119) confirmados pelo próprio candidato em chat, pois a foto não tinha letra legível para eles. Não foi usada a contagem "79" anotada pelo candidato na capa, conforme solicitado; nota líquida final 76 (64 corretas + 12 anuladas), 42 erradas, 2 em branco. Conferência completa, sem itens pendentes.'
+  'Todos os 120 itens conferidos individualmente contra o gabarito oficial definitivo — 113 lidos diretamente da foto e 7 (24,26,29,37,103,116,119) confirmados pelo próprio candidato em chat, pois a foto não tinha letra legível para eles. Não foi usada a contagem "79" anotada pelo candidato na capa, conforme solicitado; nota líquida final 34, pelo padrão CEBRASPE (64 corretas − 42 erradas + 12 anuladas), 2 em branco. Conferência completa, sem itens pendentes.'
 from auth.users u where u.email='69598193268@norteconcurso.local'
 on conflict do nothing;
 
