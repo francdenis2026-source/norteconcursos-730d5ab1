@@ -89,7 +89,7 @@ select
   coalesce(tm.discipline,'Geral'),
   '[TEXTO VERBATIM DA VERSÃO V AINDA NÃO CONFIRMADO — apenas o gabarito oficial foi localizado nesta sessão; a prova disponível publicamente (qconcursos) é da versão T, com ordem de alternativas diferente da versão V do candidato. Não exibir como questão ativa até a transcrição verbatim ser confirmada.]',
   '[TEXTO VERBATIM DA VERSÃO V AINDA NÃO CONFIRMADO — apenas o gabarito oficial foi localizado nesta sessão; a prova disponível publicamente (qconcursos) é da versão T, com ordem de alternativas diferente da versão V do candidato. Não exibir como questão ativa até a transcrição verbatim ser confirmada.]',
-  gabarito.official_answer, null,
+  gabarito.official_answer, 2,
   case when gabarito.official_answer='X' then 'annulled' else 'under_review' end,
   true, true, '[]'::jsonb,
   case when gabarito.official_answer='X'
