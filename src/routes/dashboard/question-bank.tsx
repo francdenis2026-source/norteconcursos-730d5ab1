@@ -13,6 +13,7 @@ import {
   ChevronDown,
   ChevronUp,
   ShieldCheck,
+  ExternalLink,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -42,6 +43,8 @@ interface QBItem {
   is_original?: boolean;
   source_kind?: "official" | "curated" | "personal";
   source_page?: number | null;
+  legal_basis?: Array<{ title?: string; url?: string }>;
+  review_note?: string | null;
 }
 
 function QuestionBankPage() {
@@ -124,15 +127,23 @@ function QuestionBankPage() {
           candidate_answer: null,
           is_correct: null,
           is_anulada: false,
-          explanation:
-            "Gabarito conferido na publicação oficial definitiva do CEBRASPE. O comentário pedagógico detalhado será acrescentado na revisão editorial.",
+          explanation: row.review_note
+            ? String(row.review_note)
+            : "Gabarito conferido na publicação oficial definitiva do CEBRASPE. O comentário pedagógico detalhado será acrescentado na revisão editorial.",
           difficulty: null,
           source_confidence: "alta",
           content_status: String(row.content_status),
           verified_at: row.verified_at ? String(row.verified_at) : null,
+          law_version_checked_at: row.law_version_checked_at
+            ? String(row.law_version_checked_at)
+            : null,
           is_original: false,
           source_kind: "official",
           source_page: row.source_page ? Number(row.source_page) : null,
+          legal_basis: Array.isArray(row.legal_basis)
+            ? (row.legal_basis as Array<{ title?: string; url?: string }>)
+            : [],
+          review_note: row.review_note ? String(row.review_note) : null,
         }),
       );
       setItems([...official, ...curated, ...personal]);
@@ -315,6 +326,14 @@ function QuestionBankPage() {
                           Edital verificado
                         </Badge>
                       )}
+                      {q.law_version_checked_at && (
+                        <Badge
+                          variant="outline"
+                          className="text-[10px] border-indigo-200 bg-indigo-50 text-indigo-700"
+                        >
+                          Vigência jurídica conferida
+                        </Badge>
+                      )}
                       <StatusIcon anulada={q.is_anulada} correct={q.is_correct} />
                     </div>
                     <p className="text-sm leading-relaxed">{q.question_text}</p>
@@ -356,6 +375,30 @@ function QuestionBankPage() {
                       </p>
                       {q.explanation}
                     </div>
+                    {q.legal_basis && q.legal_basis.length > 0 && (
+                      <div className="rounded-lg border border-indigo-100 bg-indigo-50/50 p-3">
+                        <p className="mb-2 text-xs font-bold uppercase text-indigo-800">
+                          Fontes oficiais da revisão jurídica
+                        </p>
+                        <div className="flex flex-col gap-1.5">
+                          {q.legal_basis.map((source, index) =>
+                            source.url ? (
+                              <a
+                                key={`${source.url}-${index}`}
+                                href={source.url}
+                                target="_blank"
+                                rel="noreferrer"
+                                onClick={(event) => event.stopPropagation()}
+                                className="inline-flex w-fit items-center gap-1 text-xs font-medium text-indigo-700 hover:underline"
+                              >
+                                {source.title || "Fonte oficial"}
+                                <ExternalLink className="h-3 w-3" />
+                              </a>
+                            ) : null,
+                          )}
+                        </div>
+                      </div>
+                    )}
                     {q.source_confidence !== "alta" && (
                       <p className="text-[10px] text-amber-600 flex items-center gap-1">
                         Confiança da explicação: {q.source_confidence} — vale conferir com material
