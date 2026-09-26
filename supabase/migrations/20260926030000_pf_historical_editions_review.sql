@@ -12,7 +12,9 @@ create table if not exists public.syllabus_exclusions (
 );
 
 alter table public.syllabus_exclusions enable row level security;
+drop policy if exists "Authenticated users can read syllabus exclusions" on public.syllabus_exclusions;
 create policy "Authenticated users can read syllabus exclusions" on public.syllabus_exclusions for select to authenticated using (true);
+drop policy if exists "Admins manage syllabus exclusions" on public.syllabus_exclusions;
 create policy "Admins manage syllabus exclusions" on public.syllabus_exclusions for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'));
 
 insert into public.content_sources (source_type,title,issuer,url,published_on,status,notes) values

@@ -1,5 +1,10 @@
 -- Enable Realtime for profiles to sync onboarding
-alter publication supabase_realtime add table public.profiles;
+do $$
+begin
+  alter publication supabase_realtime add table public.profiles;
+exception when duplicate_object then
+  null;
+end $$;
 
 -- Create table for access audit logs
 create table if not exists public.access_audit_logs (
@@ -17,11 +22,13 @@ grant all on public.access_audit_logs to service_role;
 
 alter table public.access_audit_logs enable row level security;
 
+drop policy if exists "Users can view own audit logs" on public.access_audit_logs;
 create policy "Users can view own audit logs"
     on public.access_audit_logs for select
     to authenticated
     using (auth.uid() = user_id);
 
+drop policy if exists "Users can insert own audit logs" on public.access_audit_logs;
 create policy "Users can insert own audit logs"
     on public.access_audit_logs for insert
     to authenticated

@@ -39,11 +39,17 @@ create table if not exists public.syllabus_topics (
 alter table public.content_sources enable row level security;
 alter table public.syllabus_editions enable row level security;
 alter table public.syllabus_topics enable row level security;
+drop policy if exists "Authenticated users can read content sources" on public.content_sources;
 create policy "Authenticated users can read content sources" on public.content_sources for select to authenticated using (true);
+drop policy if exists "Authenticated users can read syllabus editions" on public.syllabus_editions;
 create policy "Authenticated users can read syllabus editions" on public.syllabus_editions for select to authenticated using (true);
+drop policy if exists "Authenticated users can read syllabus topics" on public.syllabus_topics;
 create policy "Authenticated users can read syllabus topics" on public.syllabus_topics for select to authenticated using (true);
+drop policy if exists "Admins manage content sources" on public.content_sources;
 create policy "Admins manage content sources" on public.content_sources for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'));
+drop policy if exists "Admins manage syllabus editions" on public.syllabus_editions;
 create policy "Admins manage syllabus editions" on public.syllabus_editions for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'));
+drop policy if exists "Admins manage syllabus topics" on public.syllabus_topics;
 create policy "Admins manage syllabus topics" on public.syllabus_topics for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'));
 
 alter table public.question_bank add column if not exists syllabus_topic_id uuid references public.syllabus_topics(id);

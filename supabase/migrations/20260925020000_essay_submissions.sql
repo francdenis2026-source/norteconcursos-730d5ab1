@@ -19,18 +19,22 @@ create table if not exists public.essay_submissions (
 
 alter table public.essay_submissions enable row level security;
 
+drop policy if exists "Users can view own essays" on public.essay_submissions;
 create policy "Users can view own essays"
   on public.essay_submissions for select to authenticated
   using (auth.uid() = user_id);
 
+drop policy if exists "Users can insert own essays" on public.essay_submissions;
 create policy "Users can insert own essays"
   on public.essay_submissions for insert to authenticated
   with check (auth.uid() = user_id);
 
+drop policy if exists "Users can update own essays" on public.essay_submissions;
 create policy "Users can update own essays"
   on public.essay_submissions for update to authenticated
   using (auth.uid() = user_id);
 
+drop policy if exists "Admins can manage all essays" on public.essay_submissions;
 create policy "Admins can manage all essays"
   on public.essay_submissions for all to authenticated
   using (public.has_role(auth.uid(), 'admin'))

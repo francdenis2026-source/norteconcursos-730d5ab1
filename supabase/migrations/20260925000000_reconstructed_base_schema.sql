@@ -40,6 +40,7 @@ create table if not exists public.profiles (
 
 alter table public.profiles enable row level security;
 
+drop policy if exists "Users can view own profile" on public.profiles;
 create policy "Users can view own profile"
   on public.profiles for select
   to authenticated
@@ -48,6 +49,7 @@ create policy "Users can view own profile"
 -- Note: "Users can update own profile" policy is created by
 -- 20260813000001_onboarding_and_tiers.sql, kept there to match original history.
 
+drop policy if exists "Service role full access to profiles" on public.profiles;
 create policy "Service role full access to profiles"
   on public.profiles for all
   to service_role
@@ -65,11 +67,13 @@ create table if not exists public.user_roles (
 
 alter table public.user_roles enable row level security;
 
+drop policy if exists "Users can view own role" on public.user_roles;
 create policy "Users can view own role"
   on public.user_roles for select
   to authenticated
   using (auth.uid() = user_id);
 
+drop policy if exists "Service role full access to user_roles" on public.user_roles;
 create policy "Service role full access to user_roles"
   on public.user_roles for all
   to service_role
@@ -89,17 +93,20 @@ as $$
   )
 $$;
 
+drop policy if exists "Admins can manage all roles" on public.user_roles;
 create policy "Admins can manage all roles"
   on public.user_roles for all
   to authenticated
   using (public.has_role(auth.uid(), 'admin'))
   with check (public.has_role(auth.uid(), 'admin'));
 
+drop policy if exists "Admins can view all profiles" on public.profiles;
 create policy "Admins can view all profiles"
   on public.profiles for select
   to authenticated
   using (public.has_role(auth.uid(), 'admin'));
 
+drop policy if exists "Admins can update all profiles" on public.profiles;
 create policy "Admins can update all profiles"
   on public.profiles for update
   to authenticated
@@ -155,10 +162,12 @@ create table if not exists public.contests (
 
 alter table public.contests enable row level security;
 
+drop policy if exists "Anyone can view contests" on public.contests;
 create policy "Anyone can view contests"
   on public.contests for select
   using (true);
 
+drop policy if exists "Admins can manage contests" on public.contests;
 create policy "Admins can manage contests"
   on public.contests for all
   to authenticated
@@ -182,13 +191,17 @@ create table if not exists public.subjects (
 alter table public.disciplines enable row level security;
 alter table public.subjects enable row level security;
 
+drop policy if exists "Anyone can view disciplines" on public.disciplines;
 create policy "Anyone can view disciplines" on public.disciplines for select using (true);
+drop policy if exists "Anyone can view subjects" on public.subjects;
 create policy "Anyone can view subjects" on public.subjects for select using (true);
 
+drop policy if exists "Admins can manage disciplines" on public.disciplines;
 create policy "Admins can manage disciplines"
   on public.disciplines for all to authenticated
   using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'));
 
+drop policy if exists "Admins can manage subjects" on public.subjects;
 create policy "Admins can manage subjects"
   on public.subjects for all to authenticated
   using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'));
@@ -215,10 +228,12 @@ create table if not exists public.questions (
 
 alter table public.questions enable row level security;
 
+drop policy if exists "Anyone can view questions" on public.questions;
 create policy "Anyone can view questions"
   on public.questions for select
   using (true);
 
+drop policy if exists "Admins can manage questions" on public.questions;
 create policy "Admins can manage questions"
   on public.questions for all
   to authenticated
@@ -239,14 +254,17 @@ create table if not exists public.user_responses (
 
 alter table public.user_responses enable row level security;
 
+drop policy if exists "Users can view own responses" on public.user_responses;
 create policy "Users can view own responses"
   on public.user_responses for select to authenticated
   using (auth.uid() = user_id);
 
+drop policy if exists "Users can insert own responses" on public.user_responses;
 create policy "Users can insert own responses"
   on public.user_responses for insert to authenticated
   with check (auth.uid() = user_id);
 
+drop policy if exists "Admins can view all responses" on public.user_responses;
 create policy "Admins can view all responses"
   on public.user_responses for select to authenticated
   using (public.has_role(auth.uid(), 'admin'));
@@ -266,15 +284,18 @@ create table if not exists public.mock_exam_results (
 
 alter table public.mock_exam_results enable row level security;
 
+drop policy if exists "Users can view own mock exam results" on public.mock_exam_results;
 create policy "Users can view own mock exam results"
   on public.mock_exam_results for select to authenticated
   using (auth.uid() = user_id);
 
+drop policy if exists "Users can insert own mock exam results" on public.mock_exam_results;
 create policy "Users can insert own mock exam results"
   on public.mock_exam_results for insert to authenticated
   with check (auth.uid() = user_id);
 
 -- Needed so the ranking query can join profiles.full_name for any user_id
+drop policy if exists "Anyone authenticated can view mock exam results for ranking" on public.mock_exam_results;
 create policy "Anyone authenticated can view mock exam results for ranking"
   on public.mock_exam_results for select to authenticated
   using (true);
@@ -300,12 +321,15 @@ create table if not exists public.user_achievements (
 alter table public.achievements enable row level security;
 alter table public.user_achievements enable row level security;
 
+drop policy if exists "Anyone can view achievements" on public.achievements;
 create policy "Anyone can view achievements" on public.achievements for select using (true);
 
+drop policy if exists "Users can view own achievements" on public.user_achievements;
 create policy "Users can view own achievements"
   on public.user_achievements for select to authenticated
   using (auth.uid() = user_id);
 
+drop policy if exists "Users can insert own achievements" on public.user_achievements;
 create policy "Users can insert own achievements"
   on public.user_achievements for insert to authenticated
   with check (auth.uid() = user_id);
@@ -322,10 +346,12 @@ create table if not exists public.user_streaks (
 
 alter table public.user_streaks enable row level security;
 
+drop policy if exists "Users can view own streak" on public.user_streaks;
 create policy "Users can view own streak"
   on public.user_streaks for select to authenticated
   using (auth.uid() = user_id);
 
+drop policy if exists "Users can update own streak" on public.user_streaks;
 create policy "Users can update own streak"
   on public.user_streaks for all to authenticated
   using (auth.uid() = user_id) with check (auth.uid() = user_id);
@@ -343,9 +369,11 @@ create table if not exists public.subscription_plans (
 
 alter table public.subscription_plans enable row level security;
 
+drop policy if exists "Anyone can view subscription plans" on public.subscription_plans;
 create policy "Anyone can view subscription plans"
   on public.subscription_plans for select using (true);
 
+drop policy if exists "Admins can manage subscription plans" on public.subscription_plans;
 create policy "Admins can manage subscription plans"
   on public.subscription_plans for all to authenticated
   using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'));
@@ -364,14 +392,17 @@ create table if not exists public.subscription_audit_logs (
 
 alter table public.subscription_audit_logs enable row level security;
 
+drop policy if exists "Users can view own subscription audit logs" on public.subscription_audit_logs;
 create policy "Users can view own subscription audit logs"
   on public.subscription_audit_logs for select to authenticated
   using (auth.uid() = user_id);
 
+drop policy if exists "Admins can view all subscription audit logs" on public.subscription_audit_logs;
 create policy "Admins can view all subscription audit logs"
   on public.subscription_audit_logs for select to authenticated
   using (public.has_role(auth.uid(), 'admin'));
 
+drop policy if exists "Admins can insert subscription audit logs" on public.subscription_audit_logs;
 create policy "Admins can insert subscription audit logs"
   on public.subscription_audit_logs for insert to authenticated
   with check (public.has_role(auth.uid(), 'admin'));
@@ -391,10 +422,12 @@ create table if not exists public.admin_audit_logs (
 
 alter table public.admin_audit_logs enable row level security;
 
+drop policy if exists "Admins can view admin audit logs" on public.admin_audit_logs;
 create policy "Admins can view admin audit logs"
   on public.admin_audit_logs for select to authenticated
   using (public.has_role(auth.uid(), 'admin'));
 
+drop policy if exists "Admins can insert admin audit logs" on public.admin_audit_logs;
 create policy "Admins can insert admin audit logs"
   on public.admin_audit_logs for insert to authenticated
   with check (public.has_role(auth.uid(), 'admin'));
@@ -412,10 +445,12 @@ create table if not exists public.comment_audit_logs (
 
 alter table public.comment_audit_logs enable row level security;
 
+drop policy if exists "Admins can view comment audit logs" on public.comment_audit_logs;
 create policy "Admins can view comment audit logs"
   on public.comment_audit_logs for select to authenticated
   using (public.has_role(auth.uid(), 'admin'));
 
+drop policy if exists "Admins can insert comment audit logs" on public.comment_audit_logs;
 create policy "Admins can insert comment audit logs"
   on public.comment_audit_logs for insert to authenticated
   with check (public.has_role(auth.uid(), 'admin'));

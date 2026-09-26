@@ -24,14 +24,17 @@ create table if not exists public.question_bank (
 
 alter table public.question_bank enable row level security;
 
+drop policy if exists "Users can view own question bank" on public.question_bank;
 create policy "Users can view own question bank"
   on public.question_bank for select to authenticated
   using (auth.uid() = user_id);
 
+drop policy if exists "Users can manage own question bank" on public.question_bank;
 create policy "Users can manage own question bank"
   on public.question_bank for all to authenticated
   using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
+drop policy if exists "Admins can manage all question bank" on public.question_bank;
 create policy "Admins can manage all question bank"
   on public.question_bank for all to authenticated
   using (public.has_role(auth.uid(), 'admin'))

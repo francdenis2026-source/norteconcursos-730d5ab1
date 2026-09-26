@@ -15,10 +15,12 @@ create table if not exists public.official_exam_documents (
 
 alter table public.official_exam_documents enable row level security;
 
+drop policy if exists "Anyone can view official exam documents" on public.official_exam_documents;
 create policy "Anyone can view official exam documents"
   on public.official_exam_documents for select
   using (true);
 
+drop policy if exists "Admins can manage official exam documents" on public.official_exam_documents;
 create policy "Admins can manage official exam documents"
   on public.official_exam_documents for all to authenticated
   using (public.has_role(auth.uid(), 'admin'))
@@ -47,18 +49,22 @@ create table if not exists public.student_exam_documents (
 
 alter table public.student_exam_documents enable row level security;
 
+drop policy if exists "Users can view own exam documents" on public.student_exam_documents;
 create policy "Users can view own exam documents"
   on public.student_exam_documents for select to authenticated
   using (auth.uid() = user_id);
 
+drop policy if exists "Users can insert own exam documents" on public.student_exam_documents;
 create policy "Users can insert own exam documents"
   on public.student_exam_documents for insert to authenticated
   with check (auth.uid() = user_id);
 
+drop policy if exists "Users can update own exam documents" on public.student_exam_documents;
 create policy "Users can update own exam documents"
   on public.student_exam_documents for update to authenticated
   using (auth.uid() = user_id);
 
+drop policy if exists "Admins can manage all student exam documents" on public.student_exam_documents;
 create policy "Admins can manage all student exam documents"
   on public.student_exam_documents for all to authenticated
   using (public.has_role(auth.uid(), 'admin'))
@@ -80,9 +86,11 @@ create table if not exists public.contest_reference_info (
 
 alter table public.contest_reference_info enable row level security;
 
+drop policy if exists "Anyone can view contest reference info" on public.contest_reference_info;
 create policy "Anyone can view contest reference info"
   on public.contest_reference_info for select using (true);
 
+drop policy if exists "Admins can manage contest reference info" on public.contest_reference_info;
 create policy "Admins can manage contest reference info"
   on public.contest_reference_info for all to authenticated
   using (public.has_role(auth.uid(), 'admin'))
