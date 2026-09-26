@@ -33,10 +33,6 @@ export function useDashboardData() {
 }
 
 import { SubscriptionTier, UserProfile } from '../types';
-import { OWNER_EMAIL } from './useDashboard.constants';
-import { getLocalSession } from '@/lib/localSession';
-
-export { OWNER_EMAIL };
 
 export function useAuthStatus() {
   const [user, setUser] = useState<UserProfile | null>(null);
@@ -44,33 +40,7 @@ export function useAuthStatus() {
 
   useEffect(() => {
     const checkAuth = async () => {
-      const local = getLocalSession();
-
-      let session: any = null;
-      if (!local) {
-        try {
-          session = (await supabase.auth.getSession()).data.session;
-        } catch {
-          session = null;
-        }
-      }
-
-      if (!session && local) {
-        const isOwner = local.email === OWNER_EMAIL;
-        setUser({
-          id: local.id,
-          full_name: local.full_name,
-          name: local.full_name,
-          email: local.email,
-          subscription_tier: isOwner ? 'premium' : 'plus',
-          onboarding_completed: false,
-          onboarding_progress: {},
-          is_activated: true,
-          role: isOwner ? 'admin' : 'user'
-        });
-        setIsLoading(false);
-        return;
-      }
+      const { data: { session } } = await supabase.auth.getSession();
 
       if (session) {
         // Buscando perfil e roles diretamente do banco
@@ -90,8 +60,6 @@ export function useAuthStatus() {
         const profile = profileRes.data;
         const roleData = rolesRes.data;
 
-        const isOwner = (session.user.email || '').toLowerCase() === OWNER_EMAIL;
-
         // Lógica de data efetiva: se o plano expirou, volta para free
         let currentTier = (profile?.subscription_tier as SubscriptionTier) || 'free';
         let isActivated = !!profile?.is_activated;
@@ -104,22 +72,17 @@ export function useAuthStatus() {
           }
         }
 
-        if (isOwner) {
-          currentTier = 'premium';
-          isActivated = true;
-        }
-
         setUser({
           id: session.user.id,
           full_name: profile?.full_name || session.user.user_metadata['full_name'] || 'Usuário',
           name: profile?.full_name || session.user.user_metadata['full_name'] || 'Usuário',
           email: session.user.email || '',
           subscription_tier: currentTier,
-          subscription_expires_at: isOwner ? undefined : profile?.subscription_expires_at,
+          subscription_expires_at: profile?.subscription_expires_at,
           onboarding_completed: !!profile?.onboarding_completed,
           onboarding_progress: profile?.onboarding_progress || {},
           is_activated: isActivated,
-          role: isOwner ? 'admin' : ((roleData?.role as 'admin' | 'moderator' | 'user') || 'user')
+          role: (roleData?.role as 'admin' | 'moderator' | 'user') || 'user'
         });
       } else {
         // Fallback para modo demo/visitante
@@ -140,17 +103,11 @@ export function useAuthStatus() {
 
     checkAuth();
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       checkAuth();
     });
 
-    const onLocal = () => checkAuth();
-    window.addEventListener('nc-local-session', onLocal);
-
-    return () => {
-      subscription.unsubscribe();
-      window.removeEventListener('nc-local-session', onLocal);
-    };
+    return () => subscription.unsubscribe();
   }, []);
 
   return { user, isAuthenticated: !!user && user.id !== 'demo-user', isLoading, isAdmin: user?.role === 'admin' };

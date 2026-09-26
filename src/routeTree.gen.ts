@@ -17,15 +17,20 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
+import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers'
 import { Route as DashboardErrorsRouteImport } from './routes/dashboard/errors'
+import { Route as DashboardEssaysRouteImport } from './routes/dashboard/essays'
 import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history'
 import { Route as DashboardMockExamsRouteImport } from './routes/dashboard/mock-exams'
 import { Route as DashboardMyContestRouteImport } from './routes/dashboard/my-contest'
 import { Route as DashboardNotebooksRouteImport } from './routes/dashboard/notebooks'
 import { Route as DashboardPerformanceRouteImport } from './routes/dashboard/performance'
 import { Route as DashboardProfileRouteImport } from './routes/dashboard/profile'
+import { Route as DashboardQuestionBankRouteImport } from './routes/dashboard/question-bank'
 import { Route as DashboardQuestionsRouteImport } from './routes/dashboard/questions'
+import { Route as DashboardStudentExamsRouteImport } from './routes/dashboard/student-exams'
 import { Route as DashboardStudyPlanRouteImport } from './routes/dashboard/study-plan'
+import { Route as DashboardStudyToolsRouteImport } from './routes/dashboard/study-tools'
 import { Route as DashboardTimerRouteImport } from './routes/dashboard/timer'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
 
@@ -69,9 +74,19 @@ const DashboardAdminRoute = DashboardAdminRouteImport.update({
   path: '/admin',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardCareersRoute = DashboardCareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardErrorsRoute = DashboardErrorsRouteImport.update({
   id: '/errors',
   path: '/errors',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardEssaysRoute = DashboardEssaysRouteImport.update({
+  id: '/essays',
+  path: '/essays',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardHistoryRoute = DashboardHistoryRouteImport.update({
@@ -104,14 +119,29 @@ const DashboardProfileRoute = DashboardProfileRouteImport.update({
   path: '/profile',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardQuestionBankRoute = DashboardQuestionBankRouteImport.update({
+  id: '/question-bank',
+  path: '/question-bank',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardQuestionsRoute = DashboardQuestionsRouteImport.update({
   id: '/questions',
   path: '/questions',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardStudentExamsRoute = DashboardStudentExamsRouteImport.update({
+  id: '/student-exams',
+  path: '/student-exams',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardStudyPlanRoute = DashboardStudyPlanRouteImport.update({
   id: '/study-plan',
   path: '/study-plan',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardStudyToolsRoute = DashboardStudyToolsRouteImport.update({
+  id: '/study-tools',
+  path: '/study-tools',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardTimerRoute = DashboardTimerRouteImport.update({
@@ -133,15 +163,20 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
+  '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/question-bank': typeof DashboardQuestionBankRoute
   '/dashboard/questions': typeof DashboardQuestionsRoute
+  '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
+  '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
@@ -153,15 +188,20 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
+  '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/question-bank': typeof DashboardQuestionBankRoute
   '/dashboard/questions': typeof DashboardQuestionsRoute
+  '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
+  '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
@@ -175,15 +215,20 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
+  '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/question-bank': typeof DashboardQuestionBankRoute
   '/dashboard/questions': typeof DashboardQuestionsRoute
+  '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
+  '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
@@ -198,15 +243,20 @@ export interface FileRouteTypes {
     | '/terms'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/careers'
     | '/dashboard/errors'
+    | '/dashboard/essays'
     | '/dashboard/history'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
     | '/dashboard/performance'
     | '/dashboard/profile'
+    | '/dashboard/question-bank'
     | '/dashboard/questions'
+    | '/dashboard/student-exams'
     | '/dashboard/study-plan'
+    | '/dashboard/study-tools'
     | '/dashboard/timer'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
@@ -218,15 +268,20 @@ export interface FileRouteTypes {
     | '/terms'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/careers'
     | '/dashboard/errors'
+    | '/dashboard/essays'
     | '/dashboard/history'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
     | '/dashboard/performance'
     | '/dashboard/profile'
+    | '/dashboard/question-bank'
     | '/dashboard/questions'
+    | '/dashboard/student-exams'
     | '/dashboard/study-plan'
+    | '/dashboard/study-tools'
     | '/dashboard/timer'
     | '/dashboard'
     | '/api/public/stripe-webhook'
@@ -239,15 +294,20 @@ export interface FileRouteTypes {
     | '/terms'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/careers'
     | '/dashboard/errors'
+    | '/dashboard/essays'
     | '/dashboard/history'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
     | '/dashboard/performance'
     | '/dashboard/profile'
+    | '/dashboard/question-bank'
     | '/dashboard/questions'
+    | '/dashboard/student-exams'
     | '/dashboard/study-plan'
+    | '/dashboard/study-tools'
     | '/dashboard/timer'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
@@ -321,11 +381,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAdminRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/careers': {
+      id: '/dashboard/careers'
+      path: '/careers'
+      fullPath: '/dashboard/careers'
+      preLoaderRoute: typeof DashboardCareersRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/errors': {
       id: '/dashboard/errors'
       path: '/errors'
       fullPath: '/dashboard/errors'
       preLoaderRoute: typeof DashboardErrorsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/essays': {
+      id: '/dashboard/essays'
+      path: '/essays'
+      fullPath: '/dashboard/essays'
+      preLoaderRoute: typeof DashboardEssaysRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/history': {
@@ -370,6 +444,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardProfileRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/question-bank': {
+      id: '/dashboard/question-bank'
+      path: '/question-bank'
+      fullPath: '/dashboard/question-bank'
+      preLoaderRoute: typeof DashboardQuestionBankRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/questions': {
       id: '/dashboard/questions'
       path: '/questions'
@@ -377,11 +458,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardQuestionsRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/student-exams': {
+      id: '/dashboard/student-exams'
+      path: '/student-exams'
+      fullPath: '/dashboard/student-exams'
+      preLoaderRoute: typeof DashboardStudentExamsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/study-plan': {
       id: '/dashboard/study-plan'
       path: '/study-plan'
       fullPath: '/dashboard/study-plan'
       preLoaderRoute: typeof DashboardStudyPlanRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/study-tools': {
+      id: '/dashboard/study-tools'
+      path: '/study-tools'
+      fullPath: '/dashboard/study-tools'
+      preLoaderRoute: typeof DashboardStudyToolsRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/timer': {
@@ -403,30 +498,40 @@ declare module '@tanstack/react-router' {
 
 interface DashboardRouteChildren {
   DashboardAdminRoute: typeof DashboardAdminRoute
+  DashboardCareersRoute: typeof DashboardCareersRoute
   DashboardErrorsRoute: typeof DashboardErrorsRoute
+  DashboardEssaysRoute: typeof DashboardEssaysRoute
   DashboardHistoryRoute: typeof DashboardHistoryRoute
   DashboardMockExamsRoute: typeof DashboardMockExamsRoute
   DashboardMyContestRoute: typeof DashboardMyContestRoute
   DashboardNotebooksRoute: typeof DashboardNotebooksRoute
   DashboardPerformanceRoute: typeof DashboardPerformanceRoute
   DashboardProfileRoute: typeof DashboardProfileRoute
+  DashboardQuestionBankRoute: typeof DashboardQuestionBankRoute
   DashboardQuestionsRoute: typeof DashboardQuestionsRoute
+  DashboardStudentExamsRoute: typeof DashboardStudentExamsRoute
   DashboardStudyPlanRoute: typeof DashboardStudyPlanRoute
+  DashboardStudyToolsRoute: typeof DashboardStudyToolsRoute
   DashboardTimerRoute: typeof DashboardTimerRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
 }
 
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminRoute: DashboardAdminRoute,
+  DashboardCareersRoute: DashboardCareersRoute,
   DashboardErrorsRoute: DashboardErrorsRoute,
+  DashboardEssaysRoute: DashboardEssaysRoute,
   DashboardHistoryRoute: DashboardHistoryRoute,
   DashboardMockExamsRoute: DashboardMockExamsRoute,
   DashboardMyContestRoute: DashboardMyContestRoute,
   DashboardNotebooksRoute: DashboardNotebooksRoute,
   DashboardPerformanceRoute: DashboardPerformanceRoute,
   DashboardProfileRoute: DashboardProfileRoute,
+  DashboardQuestionBankRoute: DashboardQuestionBankRoute,
   DashboardQuestionsRoute: DashboardQuestionsRoute,
+  DashboardStudentExamsRoute: DashboardStudentExamsRoute,
   DashboardStudyPlanRoute: DashboardStudyPlanRoute,
+  DashboardStudyToolsRoute: DashboardStudyToolsRoute,
   DashboardTimerRoute: DashboardTimerRoute,
   DashboardIndexRoute: DashboardIndexRoute,
 }

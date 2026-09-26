@@ -1,301 +1,576 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { 
-  Compass, 
-  ChevronRight, 
-  Search, 
-  BookOpen, 
-  BarChart3, 
-  Calendar, 
-  Layers, 
-  FileText, 
-  CheckCircle2,
-  Users,
+import {
+  ArrowRight,
+  BarChart3,
+  BookOpenCheck,
+  BrainCircuit,
+  Check,
+  ChevronRight,
+  CirclePlay,
+  Clock3,
+  FileSearch,
+  Flame,
+  Landmark,
+  LineChart,
+  Menu,
+  Quote,
   ShieldCheck,
+  Sparkles,
+  Star,
+  Target,
+  Trophy,
   Zap,
-  LayoutDashboard
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
-    title: "Norte Concurso | Seu estudo na direção certa",
+    title: "Norte Concurso | Preparação inteligente para concursos públicos",
     meta: [
-      { name: "description", content: "Plataforma completa para preparação para concursos públicos com IA, diagnósticos e planos personalizados." },
-      { property: "og:title", content: "Norte Concurso" },
-      { property: "og:description", content: "Seu estudo na direção certa." },
-    ]
-  })
+      {
+        name: "description",
+        content:
+          "Diagnóstico de desempenho, plano adaptativo, questões e simulados para acelerar sua aprovação em concursos públicos.",
+      },
+      { property: "og:title", content: "Norte Concurso — Estude com direção" },
+      { property: "og:description", content: "Transforme esforço em evolução mensurável." },
+      { property: "og:image", content: "/hero-concurso.png" },
+    ],
+  }),
 });
+
+const tools = [
+  {
+    icon: FileSearch,
+    title: "Diagnóstico de provas",
+    text: "Envie suas provas e descubra padrões de erro, lacunas e oportunidades de ganho.",
+  },
+  {
+    icon: BrainCircuit,
+    title: "Plano adaptativo com IA",
+    text: "Um roteiro que muda com seu desempenho, sua rotina e a proximidade da prova.",
+  },
+  {
+    icon: BookOpenCheck,
+    title: "Questões inteligentes",
+    text: "Treine por banca, disciplina e dificuldade com comentários pedagógicos.",
+  },
+  {
+    icon: Trophy,
+    title: "Simulados estratégicos",
+    text: "Reproduza o ritmo da prova e acompanhe sua posição em indicadores claros.",
+  },
+  {
+    icon: LineChart,
+    title: "Evolução mensurável",
+    text: "Visualize constância, domínio por matéria e projeção de desempenho.",
+  },
+  {
+    icon: Clock3,
+    title: "Foco e produtividade",
+    text: "Pomodoro, revisões e agenda integrados em um fluxo de estudo sustentável.",
+  },
+];
+const steps = [
+  [
+    "01",
+    "Defina seu alvo",
+    "Escolha carreira, banca e edital para criar uma preparação sem dispersão.",
+  ],
+  ["02", "Mapeie seu nível", "Faça um diagnóstico inicial ou envie uma prova já realizada."],
+  ["03", "Siga a rota", "Receba prioridades diárias com teoria, questões e revisões."],
+  ["04", "Ajuste e avance", "A plataforma aprende com seus resultados e recalibra o plano."],
+];
+const careers = [
+  "Polícia Federal",
+  "PRF",
+  "Tribunais",
+  "Área Fiscal",
+  "Controle",
+  "Bancárias",
+  "Polícias Civis",
+  "Administrativas",
+];
+
+function Brand({ light = false }: { light?: boolean }) {
+  return (
+    <span className="brand-lockup">
+      <span className="brand-mark">
+        <Star aria-hidden="true" />
+      </span>
+      <span className={light ? "text-white" : "text-primary"}>
+        Norte<span>Concurso</span>
+      </span>
+    </span>
+  );
+}
 
 function Index() {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between px-4 md:px-8">
-          <div className="flex items-center gap-2">
-            <Compass className="h-8 w-8 text-secondary" />
-            <span className="text-xl font-bold tracking-tight text-primary">Norte Concurso</span>
-          </div>
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <Link to="/" className="transition-colors hover:text-primary">Início</Link>
-            <a href="#como-funciona" className="transition-colors hover:text-primary">Como funciona</a>
-            <a href="#ferramentas" className="transition-colors hover:text-primary">Ferramentas</a>
-            <a href="#concursos" className="transition-colors hover:text-primary">Concursos</a>
-            <a href="#planos" className="transition-colors hover:text-primary">Planos</a>
+    <div className="landing-shell">
+      <header className="landing-header">
+        <div className="site-container flex h-[76px] items-center justify-between">
+          <Link to="/" aria-label="Norte Concurso — início">
+            <Brand light />
+          </Link>
+          <nav className="hidden items-center gap-8 lg:flex" aria-label="Navegação principal">
+            <a href="#metodo">Método</a>
+            <a href="#plataforma">Plataforma</a>
+            <a href="#carreiras">Carreiras</a>
+            <a href="#planos">Planos</a>
           </nav>
-          <div className="flex items-center gap-4">
-            <Link to="/auth" className="text-sm font-medium hover:underline hidden sm:block">Entrar</Link>
-            <Button className="bg-primary hover:bg-primary/90" asChild>
-              <Link to="/auth">Começar grátis</Link>
+          <div className="hidden items-center gap-3 sm:flex">
+            <Button
+              variant="ghost"
+              className="text-white/80 hover:bg-white/10 hover:text-white"
+              asChild
+            >
+              <Link to="/auth">Entrar</Link>
+            </Button>
+            <Button className="premium-button" asChild>
+              <Link to="/auth">
+                Começar agora <ArrowRight />
+              </Link>
             </Button>
           </div>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-white sm:hidden"
+            aria-label="Abrir menu"
+          >
+            <Menu />
+          </Button>
         </div>
       </header>
 
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden pt-20 pb-16 md:pt-32 md:pb-24">
-          <div className="container px-4 md:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="flex flex-col gap-6">
-                <div className="inline-flex items-center rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-sm font-medium text-emerald-600">
-                  <CheckCircle2 className="mr-1 h-3.5 w-3.5" />
-                  <span>Conectado ao Supabase Externo</span>
+      <main>
+        <section className="hero-professional">
+          <div className="hero-image" aria-hidden="true" />
+          <div className="hero-grid" aria-hidden="true" />
+          <div className="site-container relative z-10 grid min-h-[760px] items-center py-28 lg:grid-cols-[1.08fr_.92fr]">
+            <div className="max-w-[720px] pt-8">
+              <div className="eyebrow reveal-up">
+                <Sparkles /> Inteligência aplicada à sua aprovação
+              </div>
+              <h1 className="hero-title reveal-up delay-1">
+                Você não precisa estudar mais. Precisa estudar <em>na direção certa.</em>
+              </h1>
+              <p className="hero-copy reveal-up delay-2">
+                Diagnóstico preciso, plano adaptativo e dados claros para transformar cada hora de
+                estudo em avanço real rumo à nomeação.
+              </p>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row reveal-up delay-3">
+                <Button size="lg" className="premium-button h-14 px-7 text-[15px]" asChild>
+                  <Link to="/auth">
+                    Montar meu plano gratuito <ArrowRight />
+                  </Link>
+                </Button>
+                <a href="#plataforma" className="hero-secondary">
+                  <CirclePlay /> Conhecer a plataforma
+                </a>
+              </div>
+              <div className="hero-proof reveal-up delay-3">
+                <div className="avatar-stack">
+                  <span>MC</span>
+                  <span>RF</span>
+                  <span>AL</span>
+                  <span>+</span>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-primary leading-tight">
-                  Descubra onde você está errando e estude na <span className="text-secondary">direção certa.</span>
-                </h1>
-                <p className="text-lg text-muted-foreground md:max-w-[500px]">
-                  Envie suas provas, identifique seus pontos fracos e receba um plano de estudo personalizado com inteligência artificial.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                  <Button size="lg" className="bg-primary text-lg h-14 px-8" asChild>
-                    <Link to="/auth">Ativar Assinatura Premium</Link>
-                  </Button>
-                  <Button size="lg" variant="outline" className="text-lg h-14 px-8 group">
-                    Conhecer as ferramentas
-                    <ChevronRight className="ml-2 transition-transform group-hover:translate-x-1" />
-                  </Button>
+                <div>
+                  <div className="flex gap-0.5 text-amber-400">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <Star key={i} className="h-3.5 w-3.5 fill-current" />
+                    ))}
+                  </div>
+                  <p>Preparação séria para quem decidiu avançar</p>
                 </div>
               </div>
-              <div className="relative">
-                <div className="aspect-video rounded-xl bg-muted shadow-2xl overflow-hidden border">
-                  <div className="p-4 bg-primary/5 flex items-center justify-between border-b">
-                    <div className="flex gap-2">
-                      <div className="h-3 w-3 rounded-full bg-red-400" />
-                      <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                      <div className="h-3 w-3 rounded-full bg-green-400" />
-                    </div>
-                    <div className="text-xs text-muted-foreground">Painel de Evolução - Norte Concurso</div>
-                  </div>
-                  <div className="p-6 grid grid-cols-2 gap-4">
-                    <div className="h-32 rounded-lg bg-card border shadow-sm flex items-center justify-center">
-                      <BarChart3 className="h-12 w-12 text-secondary/40" />
-                    </div>
-                    <div className="h-32 rounded-lg bg-card border shadow-sm flex items-center justify-center">
-                      <Calendar className="h-12 w-12 text-primary/40" />
-                    </div>
-                    <div className="col-span-2 h-40 rounded-lg bg-card border shadow-sm flex items-center justify-center">
-                      <LayoutDashboard className="h-16 w-16 text-muted/40" />
-                    </div>
-                  </div>
+            </div>
+            <div className="hidden lg:block" aria-hidden="true">
+              <div className="floating-metric metric-one">
+                <span className="metric-icon">
+                  <Target />
+                </span>
+                <div>
+                  <small>Meta semanal</small>
+                  <strong>82% concluída</strong>
                 </div>
-                {/* Decorative Elements */}
-                <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-secondary/20 blur-2xl" />
-                <div className="absolute -top-6 -right-6 h-32 w-32 rounded-full bg-accent/20 blur-3xl" />
+                <span className="metric-up">+12%</span>
+              </div>
+              <div className="floating-metric metric-two">
+                <span className="metric-icon gold">
+                  <Flame />
+                </span>
+                <div>
+                  <small>Sequência de estudos</small>
+                  <strong>21 dias</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="hero-stats">
+            <div className="site-container grid grid-cols-2 gap-6 md:grid-cols-4">
+              <div>
+                <strong>+12 mil</strong>
+                <span>questões comentadas</span>
+              </div>
+              <div>
+                <strong>360°</strong>
+                <span>visão do desempenho</span>
+              </div>
+              <div>
+                <strong>24h</strong>
+                <span>para seu primeiro plano</span>
+              </div>
+              <div>
+                <strong>1 rota</strong>
+                <span>feita para o seu objetivo</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Como Funciona */}
-        <section id="como-funciona" className="py-20 bg-muted/30">
-          <div className="container px-4 md:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Como funciona</h2>
-              <p className="mt-4 text-muted-foreground">O caminho para sua aprovação em quatro passos simples</p>
+        <section id="metodo" className="section-pad bg-[#f6f8fb]">
+          <div className="site-container">
+            <div className="section-heading">
+              <div>
+                <span className="section-kicker">Método Norte</span>
+                <h2>Clareza antes de velocidade.</h2>
+              </div>
+              <p>
+                Uma jornada estruturada para você saber exatamente onde está, o que fazer hoje e
+                como medir sua evolução.
+              </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { step: "1", title: "Escolha o concurso", desc: "Selecione a carreira ou órgão que você deseja focar.", icon: Search },
-                { step: "2", title: "Envie sua prova", desc: "Suba uma prova realizada e o gabarito oficial.", icon: FileText },
-                { step: "3", title: "Receba o diagnóstico", desc: "Nossa IA detalha seu desempenho e falhas.", icon: BarChart3 },
-                { step: "4", title: "Siga seu plano", desc: "Estude com cronograma personalizado para você.", icon: CheckCircle2 }
-              ].map((item, idx) => (
-                <div key={idx} className="relative p-6 rounded-2xl bg-card border shadow-sm hover:shadow-md transition-shadow">
-                  <div className="absolute -top-4 left-6 h-8 w-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold">
-                    {item.step}
+            <div className="method-grid">
+              {steps.map(([number, title, text], index) => (
+                <article className="method-card" key={number}>
+                  <span className="method-number">{number}</span>
+                  <div className="method-line">
+                    <span style={{ width: `${25 * (index + 1)}%` }} />
                   </div>
-                  <div className="mt-4 flex flex-col gap-3">
-                    <item.icon className="h-10 w-10 text-primary/60" />
-                    <h3 className="text-xl font-bold text-primary">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                  <ChevronRight className="method-arrow" />
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Ferramentas */}
-        <section id="ferramentas" className="py-20">
-          <div className="container px-4 md:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Ferramentas poderosas</h2>
-              <p className="mt-4 text-muted-foreground">Tudo o que você precisa para dominar o conteúdo e gerenciar seu tempo</p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {[
-                "Diagnóstico de provas", "Plano de estudo inteligente", "Banco de questões", "Simulados",
-                "Flashcards", "Resumos", "Áudio de revisão", "Treino de redação",
-                "Gerador de mnemônicos", "Caderno de erros", "Painel de evolução"
-              ].map((tool, idx) => (
-                <div key={idx} className="p-4 rounded-xl border bg-card flex items-center gap-3 hover:border-secondary/50 transition-colors">
-                  <CheckCircle2 className="h-5 w-5 text-secondary shrink-0" />
-                  <span className="text-sm font-medium">{tool}</span>
+        <section id="plataforma" className="section-pad overflow-hidden">
+          <div className="site-container grid items-center gap-16 lg:grid-cols-[.95fr_1.05fr]">
+            <div className="dashboard-showcase">
+              <div className="showcase-glow" />
+              <div className="mock-window">
+                <div className="mock-top">
+                  <Brand />
+                  <span>Visão geral</span>
+                  <span className="mock-avatar">FD</span>
                 </div>
+                <div className="mock-body">
+                  <div className="mock-sidebar">
+                    {[Target, BarChart3, BookOpenCheck, Trophy].map((Icon, i) => (
+                      <span className={i === 0 ? "active" : ""} key={i}>
+                        <Icon />
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mock-content">
+                    <small>SEU PROGRESSO</small>
+                    <h3>Continue avançando, Franc.</h3>
+                    <div className="mock-metrics">
+                      <div>
+                        <span>Taxa de acerto</span>
+                        <strong>76,4%</strong>
+                        <i>+8,2%</i>
+                      </div>
+                      <div>
+                        <span>Questões hoje</span>
+                        <strong>42</strong>
+                        <i>meta 60</i>
+                      </div>
+                    </div>
+                    <div className="mock-chart">
+                      <div className="chart-label">
+                        <span>Evolução por semana</span>
+                        <strong>+18%</strong>
+                      </div>
+                      <div className="chart-bars">
+                        {[38, 48, 42, 62, 58, 76, 88].map((h, i) => (
+                          <span key={i} style={{ height: `${h}%` }} />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="showcase-badge">
+                <BrainCircuit />
+                <div>
+                  <small>IA NORTE</small>
+                  <strong>Plano recalibrado</strong>
+                </div>
+                <Check />
+              </div>
+            </div>
+            <div>
+              <span className="section-kicker">Sua central de preparação</span>
+              <h2 className="feature-title">
+                Tudo conversa. Tudo aponta para a sua próxima melhor ação.
+              </h2>
+              <p className="feature-copy">
+                Chega de ferramentas soltas, planilhas esquecidas e decisões no escuro. A Norte
+                integra sua rotina em uma experiência simples, profunda e acionável.
+              </p>
+              <div className="feature-list">
+                {(
+                  [
+                    ["Diagnóstico que encontra a causa do erro", FileSearch],
+                    ["Prioridades recalculadas pelo seu desempenho", BrainCircuit],
+                    ["Indicadores fáceis de entender e usar", LineChart],
+                  ] as [string, LucideIcon][]
+                ).map(([label, Icon]) => (
+                  <div key={label}>
+                    <span>
+                      <Icon />
+                    </span>
+                    <p>{label}</p>
+                  </div>
+                ))}
+              </div>
+              <Button
+                variant="outline"
+                className="mt-8 h-12 rounded-xl border-slate-300 px-6"
+                asChild
+              >
+                <Link to="/auth">
+                  Explorar a plataforma <ArrowRight />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-pad bg-[#071a2f] text-white">
+          <div className="site-container">
+            <div className="section-heading light">
+              <div>
+                <span className="section-kicker">Ecossistema completo</span>
+                <h2>Da dúvida à evolução.</h2>
+              </div>
+              <p>
+                Recursos que trabalham juntos para manter foco, ritmo e confiança até o dia da
+                prova.
+              </p>
+            </div>
+            <div className="tools-grid">
+              {tools.map(({ icon: Icon, title, text }) => (
+                <article key={title}>
+                  <span>
+                    <Icon />
+                  </span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                  <a href="#planos">
+                    Saiba mais <ArrowRight />
+                  </a>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Carreiras */}
-        <section id="concursos" className="py-20 bg-primary text-primary-foreground">
-          <div className="container px-4 md:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Prepare-se para qualquer carreira</h2>
-              <p className="mt-4 text-primary-foreground/70">As melhores ferramentas para os concursos mais concorridos</p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                "Polícia Federal", "Polícia Rodoviária Federal", "Polícias Civis", "Polícias Militares",
-                "Polícia Penal", "Polícia Científica", "Tribunais", "Carreiras administrativas",
-                "Carreiras fiscais", "Carreiras bancárias", "Controle e gestão", "Educação",
-                "Saúde", "Prefeituras e câmaras"
-              ].map((career, idx) => (
-                <div key={idx} className="px-6 py-3 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition-colors cursor-default text-sm font-medium">
+        <section id="carreiras" className="section-pad career-section">
+          <div className="site-container text-center">
+            <span className="section-kicker">Do seu primeiro edital à nomeação</span>
+            <h2 className="mx-auto mt-3 max-w-3xl text-4xl font-extrabold tracking-[-.04em] text-primary md:text-5xl">
+              Uma plataforma. Todas as carreiras que movem o Brasil.
+            </h2>
+            <div className="career-cloud">
+              {careers.map((career, i) => (
+                <span key={career} className={i < 3 ? "featured" : ""}>
+                  <Landmark />
                   {career}
-                </div>
+                </span>
               ))}
+            </div>
+            <div className="testimonial-card">
+              <Quote />
+              <blockquote>
+                “Pela primeira vez eu parei de estudar pelo medo de não dar tempo e comecei a
+                estudar pelo que realmente movia minha nota.”
+              </blockquote>
+              <div>
+                <span className="testimonial-avatar">MR</span>
+                <p>
+                  <strong>Marina Ribeiro</strong>
+                  <small>Candidata — Tribunais</small>
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Planos */}
-        <section id="planos" className="py-20">
-          <div className="container px-4 md:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Planos para todos os níveis</h2>
-              <p className="mt-4 text-muted-foreground">Escolha o plano que melhor se adapta à sua jornada</p>
+        <section id="planos" className="section-pad bg-[#f6f8fb]">
+          <div className="site-container">
+            <div className="mx-auto mb-14 max-w-2xl text-center">
+              <span className="section-kicker">Planos transparentes</span>
+              <h2 className="mt-3 text-4xl font-extrabold tracking-[-.04em] text-primary md:text-5xl">
+                Invista na preparação que sabe para onde ir.
+              </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Teste */}
-              <div className="p-8 rounded-2xl border bg-card flex flex-col gap-6">
-                <div>
-                  <h3 className="text-xl font-bold">Teste Gratuito</h3>
-                  <div className="mt-4 flex items-baseline gap-1">
-                    <span className="text-3xl font-bold">R$ 0</span>
-                    <span className="text-muted-foreground text-sm">/15 dias</span>
-                  </div>
-                </div>
-                <ul className="flex flex-col gap-3 text-sm">
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> 10 questões / dia</li>
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> 1 Diagnóstico de prova</li>
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> Plano básico</li>
-                </ul>
-                <Button variant="outline" className="mt-auto w-full">Começar agora</Button>
-              </div>
-
-              {/* Plus - Destaque */}
-              <div className="p-8 rounded-2xl border-2 border-secondary bg-card flex flex-col gap-6 relative shadow-xl transform md:-translate-y-4">
-                <div className="absolute top-0 right-8 -translate-y-1/2 bg-secondary text-secondary-foreground px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                  Mais recomendado
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-primary">Plus</h3>
-                  <div className="mt-4 flex items-baseline gap-1">
-                    <span className="text-3xl font-bold text-primary">R$ 39,90</span>
-                    <span className="text-muted-foreground text-sm">/mês</span>
-                  </div>
-                </div>
-                <ul className="flex flex-col gap-3 text-sm">
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> <b>Tudo do Essencial</b></li>
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> Diagnóstico com IA</li>
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> Planejador adaptativo</li>
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> 150 ações de IA / mês</li>
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> Assistente de estudos</li>
-                </ul>
-                <Button className="mt-auto w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold">Assinar Plus</Button>
-              </div>
-
-              {/* Premium */}
-              <div className="p-8 rounded-2xl border bg-card flex flex-col gap-6">
-                <div>
-                  <h3 className="text-xl font-bold">Premium</h3>
-                  <div className="mt-4 flex items-baseline gap-1">
-                    <span className="text-3xl font-bold">R$ 69,90</span>
-                    <span className="text-muted-foreground text-sm">/mês</span>
-                  </div>
-                </div>
-                <ul className="flex flex-col gap-3 text-sm">
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> <b>Tudo do Plus</b></li>
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> 500 ações de IA / mês</li>
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> 30 provas processadas</li>
-                  <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary" /> Prioridade no suporte</li>
-                </ul>
-                <Button variant="outline" className="mt-auto w-full">Assinar Premium</Button>
-              </div>
+            <div className="pricing-grid">
+              <Pricing
+                name="Essencial"
+                price="0"
+                description="Para organizar os primeiros passos."
+                features={["10 questões por dia", "Diagnóstico inicial", "Plano básico"]}
+              />
+              <Pricing
+                featured
+                name="Plus"
+                price="39,90"
+                description="Para acelerar com inteligência e constância."
+                features={[
+                  "Tudo do Essencial",
+                  "Diagnóstico completo com IA",
+                  "Plano adaptativo",
+                  "150 ações de IA por mês",
+                  "Assistente de estudos",
+                ]}
+              />
+              <Pricing
+                name="Premium"
+                price="69,90"
+                description="Para uma preparação de alta performance."
+                features={[
+                  "Tudo do Plus",
+                  "500 ações de IA por mês",
+                  "30 provas processadas",
+                  "Suporte prioritário",
+                ]}
+              />
             </div>
+          </div>
+        </section>
+
+        <section className="final-cta">
+          <div className="site-container relative z-10 text-center">
+            <span className="eyebrow mx-auto">
+              <Zap /> Seu próximo ciclo começa agora
+            </span>
+            <h2>
+              Esforço sem direção cansa.
+              <br />
+              Esforço inteligente aprova.
+            </h2>
+            <p>
+              Crie sua conta, defina seu objetivo e receba os próximos passos da sua preparação.
+            </p>
+            <Button size="lg" className="premium-button mt-8 h-14 px-8" asChild>
+              <Link to="/auth">
+                Começar gratuitamente <ArrowRight />
+              </Link>
+            </Button>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t bg-muted/30 pt-16 pb-8">
-        <div className="container px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-2">
-                <Compass className="h-6 w-6 text-secondary" />
-                <span className="text-lg font-bold tracking-tight text-primary">Norte Concurso</span>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Seu estudo na direção certa. A plataforma definitiva para transformar seu esforço em aprovação.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Plataforma</h4>
-              <ul className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Como funciona</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Ferramentas</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Planos</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Perguntas frequentes</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Institucional</h4>
-              <ul className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Termos de uso</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Política de privacidade</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Cookies</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Suporte</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Aviso Legal</h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                A Norte Concurso é uma plataforma de tecnologia educacional independente. Não possuímos vínculo com órgãos públicos ou bancas examinadoras.
-              </p>
-            </div>
+      <footer className="landing-footer">
+        <div className="site-container grid gap-12 py-14 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div>
+            <Brand light />
+            <p className="mt-5 max-w-xs">
+              Tecnologia, método e clareza para transformar preparação em aprovação.
+            </p>
           </div>
-          <div className="border-t pt-8 text-center text-xs text-muted-foreground">
-            <p>© 2026 Norte Concurso. Todos os direitos reservados. Inicialmente lançado em Feijó, Acre.</p>
-            <p className="mt-2">Desenvolvido por Franc D&apos;nis</p>
+          <FooterColumn
+            title="Plataforma"
+            links={["Método", "Ferramentas", "Planos", "Carreiras"]}
+          />
+          <FooterColumn
+            title="Institucional"
+            links={["Sobre nós", "Privacidade", "Termos de uso", "Suporte"]}
+          />
+          <div>
+            <h4>Segurança</h4>
+            <p className="mt-4 flex items-center gap-2">
+              <ShieldCheck className="h-5 w-5 text-emerald-400" /> Dados protegidos
+            </p>
           </div>
         </div>
+        <div className="site-container flex flex-col gap-2 border-t border-white/10 py-6 text-xs text-white/45 sm:flex-row sm:justify-between">
+          <span>© 2026 Norte Concurso. Todos os direitos reservados.</span>
+          <span>Feito no Acre para todo o Brasil.</span>
+        </div>
       </footer>
+    </div>
+  );
+}
+
+function Pricing({
+  name,
+  price,
+  description,
+  features,
+  featured = false,
+}: {
+  name: string;
+  price: string;
+  description: string;
+  features: string[];
+  featured?: boolean;
+}) {
+  return (
+    <article className={`pricing-card ${featured ? "featured" : ""}`}>
+      {featured && <span className="popular-tag">MAIS ESCOLHIDO</span>}
+      <div>
+        <span className="plan-name">{name}</span>
+        <p>{description}</p>
+      </div>
+      <div className="price">
+        <small>R$</small>
+        <strong>{price}</strong>
+        <span>{price !== "0" ? "/mês" : "/15 dias"}</span>
+      </div>
+      <ul>
+        {features.map((f) => (
+          <li key={f}>
+            <span>
+              <Check />
+            </span>
+            {f}
+          </li>
+        ))}
+      </ul>
+      <Button
+        className={featured ? "premium-button" : ""}
+        variant={featured ? "default" : "outline"}
+        asChild
+      >
+        <Link to="/auth">
+          Escolher {name}
+          <ArrowRight />
+        </Link>
+      </Button>
+    </article>
+  );
+}
+function FooterColumn({ title, links }: { title: string; links: string[] }) {
+  return (
+    <div>
+      <h4>{title}</h4>
+      <ul>
+        {links.map((link) => (
+          <li key={link}>
+            <a href="#">{link}</a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -8,7 +8,6 @@ import { Badge } from '@/components/ui/badge';
 import { useAuthStatus } from '@/hooks/useDashboard';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { clearLocalSession } from '@/lib/localSession';
 import { MockService } from '@/services/mockService';
 import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap, RefreshCw, History as HistoryIcon } from 'lucide-react';
 import { SUBSCRIPTION_PLANS } from '@/lib/subscriptions.config';
@@ -120,12 +119,7 @@ function ProfilePage() {
   };
 
   const handleLogout = async () => {
-    try {
-      await supabase.auth.signOut();
-    } catch {
-      // banco indisponível: segue apenas com a sessão local
-    }
-    clearLocalSession();
+    await supabase.auth.signOut();
     window.location.href = '/';
   };
 
