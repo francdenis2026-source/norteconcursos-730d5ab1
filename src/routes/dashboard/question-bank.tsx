@@ -1,10 +1,10 @@
-import React from 'react';
-import { createFileRoute } from '@tanstack/react-router';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuthStatus } from '@/hooks/useDashboard';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { createFileRoute } from "@tanstack/react-router";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   BookMarked,
   CheckCircle2,
@@ -13,10 +13,10 @@ import {
   ChevronDown,
   ChevronUp,
   ShieldCheck,
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute('/dashboard/question-bank')({
+export const Route = createFileRoute("/dashboard/question-bank")({
   component: QuestionBankPage,
 });
 
@@ -40,43 +40,53 @@ interface QBItem {
   verified_at?: string | null;
   law_version_checked_at?: string | null;
   is_original?: boolean;
+  source_kind?: "official" | "curated" | "personal";
+  source_page?: number | null;
 }
 
 function QuestionBankPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const [items, setItems] = React.useState<QBItem[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
-  const [subjectFilter, setSubjectFilter] = React.useState<string>('all');
-  const [careerFilter, setCareerFilter] = React.useState<string>('all');
-  const [yearFilter, setYearFilter] = React.useState<string>('all');
-  const [statusFilter, setStatusFilter] = React.useState<string>('all');
+  const [subjectFilter, setSubjectFilter] = React.useState<string>("all");
+  const [careerFilter, setCareerFilter] = React.useState<string>("all");
+  const [yearFilter, setYearFilter] = React.useState<string>("all");
+  const [statusFilter, setStatusFilter] = React.useState<string>("all");
   const [openId, setOpenId] = React.useState<string | null>(null);
 
   React.useEffect(() => {
-    if (authLoading || !user || user.id === 'demo-user') {
+    if (authLoading || !user || user.id === "demo-user") {
       setIsLoading(false);
       return;
     }
     const load = async () => {
       setIsLoading(true);
-      const [personalResult, curatedResult] = await Promise.all([
+      const [personalResult, curatedResult, officialResult] = await Promise.all([
         supabase
-          .from('question_bank')
-          .select('*')
-          .eq('user_id', user.id)
-          .order('contest_year', { ascending: true })
-          .order('item_number', { ascending: true }),
+          .from("question_bank")
+          .select("*")
+          .eq("user_id", user.id)
+          .order("contest_year", { ascending: true })
+          .order("item_number", { ascending: true }),
         supabase
-          .from('curated_question_catalog')
-          .select('*')
-          .eq('content_status', 'active')
-          .order('contest_year', { ascending: false })
-          .order('created_at', { ascending: true }),
+          .from("curated_question_catalog")
+          .select("*")
+          .eq("content_status", "active")
+          .order("contest_year", { ascending: false })
+          .order("created_at", { ascending: true }),
+        supabase
+          .from("official_exam_questions")
+          .select("*")
+          .eq("content_status", "active")
+          .order("exam_year", { ascending: false })
+          .order("item_number", { ascending: true }),
       ]);
 
-      const personal = ((personalResult.data as QBItem[]) || []).filter(
-        (item) => !['obsolete', 'revoked', 'archived'].includes(item.content_status || 'active'),
-      );
+      const personal = ((personalResult.data as QBItem[]) || [])
+        .filter(
+          (item) => !["obsolete", "revoked", "archived"].includes(item.content_status || "active"),
+        )
+        .map((item) => ({ ...item, source_kind: "personal" as const }));
       const curated = ((curatedResult.data as Array<Record<string, unknown>>) || []).map(
         (row, index): QBItem => ({
           id: `curated-${String(row.id)}`,
@@ -93,13 +103,39 @@ function QuestionBankPage() {
           is_anulada: false,
           explanation: String(row.explanation),
           difficulty: row.difficulty ? String(row.difficulty) : null,
-          source_confidence: 'alta',
+          source_confidence: "alta",
           content_status: String(row.content_status),
           verified_at: row.verified_at ? String(row.verified_at) : null,
           is_original: true,
+          source_kind: "curated",
         }),
       );
-      setItems([...curated, ...personal]);
+      const official = ((officialResult.data as Array<Record<string, unknown>>) || []).map(
+        (row): QBItem => ({
+          id: `official-${String(row.id)}`,
+          contest_name: String(row.contest_name),
+          contest_year: String(row.exam_year),
+          career_name: String(row.career_name),
+          item_number: Number(row.item_number),
+          subject: String(row.subject),
+          subtopic: null,
+          question_text: String(row.question_text),
+          official_answer: String(row.official_answer),
+          candidate_answer: null,
+          is_correct: null,
+          is_anulada: false,
+          explanation:
+            "Gabarito conferido na publicação oficial definitiva do CEBRASPE. O comentário pedagógico detalhado será acrescentado na revisão editorial.",
+          difficulty: null,
+          source_confidence: "alta",
+          content_status: String(row.content_status),
+          verified_at: row.verified_at ? String(row.verified_at) : null,
+          is_original: false,
+          source_kind: "official",
+          source_page: row.source_page ? Number(row.source_page) : null,
+        }),
+      );
+      setItems([...official, ...curated, ...personal]);
       setIsLoading(false);
     };
     load();
@@ -119,12 +155,12 @@ function QuestionBankPage() {
   );
 
   const filtered = items.filter((i) => {
-    if (subjectFilter !== 'all' && i.subject !== subjectFilter) return false;
-    if (careerFilter !== 'all' && (i.career_name || i.contest_name) !== careerFilter) return false;
-    if (yearFilter !== 'all' && i.contest_year !== yearFilter) return false;
-    if (statusFilter === 'errou' && i.is_correct !== false) return false;
-    if (statusFilter === 'acertou' && i.is_correct !== true) return false;
-    if (statusFilter === 'anulada' && !i.is_anulada) return false;
+    if (subjectFilter !== "all" && i.subject !== subjectFilter) return false;
+    if (careerFilter !== "all" && (i.career_name || i.contest_name) !== careerFilter) return false;
+    if (yearFilter !== "all" && i.contest_year !== yearFilter) return false;
+    if (statusFilter === "errou" && i.is_correct !== false) return false;
+    if (statusFilter === "acertou" && i.is_correct !== true) return false;
+    if (statusFilter === "anulada" && !i.is_anulada) return false;
     return true;
   });
 
@@ -133,12 +169,12 @@ function QuestionBankPage() {
     acertos: items.filter((i) => i.is_correct === true).length,
     erros: items.filter((i) => i.is_correct === false).length,
     anuladas: items.filter((i) => i.is_anulada).length,
-    autorais: items.filter((i) => i.is_original).length,
+    oficiais: items.filter((i) => i.source_kind === "official").length,
   };
 
   if (authLoading || isLoading) return <div className="p-8">Carregando banco de questões...</div>;
 
-  if (!user || user.id === 'demo-user') {
+  if (!user || user.id === "demo-user") {
     return (
       <div className="h-[60vh] flex flex-col items-center justify-center text-center space-y-4">
         <BookMarked className="h-16 w-16 text-muted-foreground/30" />
@@ -166,8 +202,8 @@ function QuestionBankPage() {
         <div>
           <h1 className="text-2xl font-bold text-primary">Banco de Questões</h1>
           <p className="text-muted-foreground">
-            Questões autorais no estilo CEBRASPE, vinculadas a editais oficiais e com explicação
-            pedagógica.
+            Questões oficiais da PF e questões autorais, todas vinculadas ao edital e a fontes
+            verificadas.
           </p>
         </div>
         <Badge
@@ -183,7 +219,7 @@ function QuestionBankPage() {
         <StatTile label="Certas" value={stats.acertos} color="text-emerald-600" />
         <StatTile label="Erradas" value={stats.erros} color="text-rose-600" />
         <StatTile label="Anuladas" value={stats.anuladas} color="text-amber-600" />
-        <StatTile label="Autorais" value={stats.autorais} color="text-amber-600" />
+        <StatTile label="Oficiais" value={stats.oficiais} color="text-sky-600" />
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -191,30 +227,30 @@ function QuestionBankPage() {
           label="Matéria"
           value={subjectFilter}
           onChange={setSubjectFilter}
-          options={['all', ...subjects]}
+          options={["all", ...subjects]}
           allLabel="Todas as matérias"
         />
         <FilterSelect
           label="Carreira"
           value={careerFilter}
           onChange={setCareerFilter}
-          options={['all', ...careers]}
+          options={["all", ...careers]}
           allLabel="Todas as carreiras"
         />
         <FilterSelect
           label="Ano"
           value={yearFilter}
           onChange={setYearFilter}
-          options={['all', ...years]}
+          options={["all", ...years]}
           allLabel="Todos os anos"
         />
         <FilterSelect
           label="Status"
           value={statusFilter}
           onChange={setStatusFilter}
-          options={['all', 'acertou', 'errou', 'anulada']}
+          options={["all", "acertou", "errou", "anulada"]}
           allLabel="Todos"
-          labels={{ acertou: 'Acertei', errou: 'Errei', anulada: 'Anuladas' }}
+          labels={{ acertou: "Acertei", errou: "Errei", anulada: "Anuladas" }}
         />
       </div>
 
@@ -225,14 +261,14 @@ function QuestionBankPage() {
             <Card
               key={q.id}
               className={cn(
-                'border-l-4',
+                "border-l-4",
                 q.is_anulada
-                  ? 'border-l-amber-400'
+                  ? "border-l-amber-400"
                   : q.is_correct === true
-                    ? 'border-l-emerald-500'
+                    ? "border-l-emerald-500"
                     : q.is_correct === false
-                      ? 'border-l-rose-500'
-                      : 'border-l-muted',
+                      ? "border-l-rose-500"
+                      : "border-l-muted",
               )}
             >
               <CardContent
@@ -263,6 +299,14 @@ function QuestionBankPage() {
                           Questão autoral
                         </Badge>
                       )}
+                      {q.source_kind === "official" && (
+                        <Badge
+                          variant="outline"
+                          className="text-[10px] border-violet-200 bg-violet-50 text-violet-700"
+                        >
+                          Prova oficial PF
+                        </Badge>
+                      )}
                       {q.verified_at && (
                         <Badge
                           variant="outline"
@@ -288,7 +332,7 @@ function QuestionBankPage() {
                   <div className="mt-3 pt-3 border-t space-y-2">
                     <div className="flex flex-wrap gap-3 text-xs">
                       <span>
-                        Gabarito oficial: <strong>{q.official_answer || '—'}</strong>
+                        Gabarito oficial: <strong>{q.official_answer || "—"}</strong>
                       </span>
                       {q.candidate_answer && (
                         <span>
@@ -300,6 +344,11 @@ function QuestionBankPage() {
                           {q.difficulty}
                         </Badge>
                       )}
+                      {q.source_kind === "official" && q.source_page && (
+                        <span className="text-muted-foreground">
+                          Caderno oficial, pág. {q.source_page}
+                        </span>
+                      )}
                     </div>
                     <div className="p-3 bg-muted/50 rounded-lg text-sm leading-relaxed">
                       <p className="font-bold text-xs uppercase text-muted-foreground mb-1">
@@ -307,7 +356,7 @@ function QuestionBankPage() {
                       </p>
                       {q.explanation}
                     </div>
-                    {q.source_confidence !== 'alta' && (
+                    {q.source_confidence !== "alta" && (
                       <p className="text-[10px] text-amber-600 flex items-center gap-1">
                         Confiança da explicação: {q.source_confidence} — vale conferir com material
                         complementar.
@@ -329,7 +378,7 @@ function StatTile({ label, value, color }: { label: string; value: number; color
     <Card>
       <CardContent className="pt-4 pb-3">
         <p className="text-xs text-muted-foreground">{label}</p>
-        <p className={cn('text-2xl font-bold', color)}>{value}</p>
+        <p className={cn("text-2xl font-bold", color)}>{value}</p>
       </CardContent>
     </Card>
   );
@@ -366,7 +415,7 @@ function FilterSelect({
     >
       {options.map((opt) => (
         <option key={opt} value={opt}>
-          {opt === 'all' ? allLabel : labels?.[opt] || opt}
+          {opt === "all" ? allLabel : labels?.[opt] || opt}
         </option>
       ))}
     </select>
