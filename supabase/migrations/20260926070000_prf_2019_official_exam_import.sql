@@ -200,49 +200,49 @@ on conflict (exam_year,item_number) do update set
 -- Student's own graded attempt (Franc Denis, CPF 69598193268).
 -- Per explicit instruction, this is NOT based on the handwritten tally on the cover
 -- page ("79 acertos"). All 120 items were individually re-read from the scanned
--- booklet (candidate's own check/X annotation, plus his written answer letter where
--- legible) and cross-checked one by one against the confirmed official gabarito
--- above. Items whose handwriting was genuinely ambiguous or where the check/X mark
--- conflicted with the letter he wrote are marked "pendente_conferencia" rather than
--- guessed, so no fabricated grading enters the platform — 18 of 120 items fall in
--- this category and should be confirmed with the candidate (ideally against a
--- higher-resolution scan) before being treated as final.
--- correct_count/wrong_count below reflect only the confidently-read items:
--- 52 corretas + 12 anuladas (sempre contam como acerto) = 64 pontos líquidos
--- estimados; 37 erradas; 1 em branco (item 92); 18 pendentes.
+-- booklet and cross-checked one by one against the confirmed official gabarito
+-- above. Where the candidate's own check/X self-grade conflicted with the answer
+-- letter he actually wrote, the written letter was treated as authoritative (his X
+-- most likely reflects a preliminary, not the definitive, gabarito) — this resolved
+-- 11 of the original 18 ambiguous items across two review passes. The remaining 7
+-- items (24, 26, 29, 37, 103, 116, 119) show only a small circular mark with no
+-- legible C/E letter and are kept as "pendente_conferencia" rather than guessed.
+-- correct_count/wrong_count below reflect the confidently-read items:
+-- 61 corretas + 12 anuladas (sempre contam como acerto) = 73 pontos líquidos
+-- estimados; 38 erradas; 2 em branco (itens 2 e 92); 7 pendentes.
 insert into public.student_exam_documents
   (user_id,contest_name,contest_year,exam_board,doc_type,file_name,storage_path,
    correct_count,wrong_count,blank_count,score_net,extracted_data,notes)
 select u.id,'Polícia Rodoviária Federal','2019','CEBRASPE','resultado',
   'PRF_2019_resultado_franc_denis.txt','manual-entry/prf-2019-franc-denis',
-  64, 37, 1, 64,
+  73, 38, 2, 73,
   '{
-    "method": "leitura manuscrita item a item (visto=acertou, X=errou, mais a letra C/E escrita), confrontada individualmente com o gabarito oficial definitivo",
+    "method": "leitura manuscrita item a item confrontada com o gabarito oficial definitivo; onde o visto/X do candidato conflitava com a letra escrita, a letra prevaleceu (o X provavelmente refletia um gabarito preliminar)",
     "items": {
-      "1":"correta","2":"pendente_conferencia","3":"anulada","4":"correta","5":"pendente_conferencia",
+      "1":"correta","2":"branco","3":"anulada","4":"correta","5":"errada",
       "6":"correta","7":"correta","8":"correta","9":"correta","10":"correta","11":"errada","12":"correta",
       "13":"correta","14":"correta","15":"correta","16":"correta","17":"correta","18":"correta","19":"correta",
       "20":"errada","21":"correta","22":"errada","23":"errada","24":"pendente_conferencia","25":"errada",
       "26":"pendente_conferencia","27":"correta","28":"errada","29":"pendente_conferencia","30":"errada",
       "31":"anulada","32":"errada","33":"anulada","34":"correta","35":"correta","36":"correta",
-      "37":"pendente_conferencia","38":"pendente_conferencia","39":"correta","40":"errada","41":"correta",
+      "37":"pendente_conferencia","38":"correta","39":"correta","40":"errada","41":"correta",
       "42":"errada","43":"errada","44":"errada","45":"errada","46":"errada","47":"errada","48":"errada",
-      "49":"errada","50":"pendente_conferencia","51":"correta","52":"correta","53":"pendente_conferencia",
-      "54":"errada","55":"pendente_conferencia","56":"correta","57":"correta","58":"errada","59":"errada",
-      "60":"pendente_conferencia","61":"anulada","62":"anulada","63":"correta","64":"correta","65":"correta",
+      "49":"errada","50":"correta","51":"correta","52":"correta","53":"correta",
+      "54":"errada","55":"correta","56":"correta","57":"correta","58":"errada","59":"errada",
+      "60":"correta","61":"anulada","62":"anulada","63":"correta","64":"correta","65":"correta",
       "66":"correta","67":"correta","68":"errada","69":"correta","70":"errada","71":"anulada","72":"anulada",
-      "73":"errada","74":"errada","75":"errada","76":"anulada","77":"errada","78":"pendente_conferencia",
+      "73":"errada","74":"errada","75":"errada","76":"anulada","77":"errada","78":"correta",
       "79":"correta","80":"correta","81":"correta","82":"errada","83":"anulada","84":"correta",
-      "85":"pendente_conferencia","86":"pendente_conferencia","87":"correta","88":"errada","89":"correta",
+      "85":"correta","86":"correta","87":"correta","88":"errada","89":"correta",
       "90":"correta","91":"anulada","92":"branco","93":"errada","94":"correta","95":"correta","96":"errada",
-      "97":"errada","98":"errada","99":"errada","100":"pendente_conferencia","101":"correta","102":"correta",
+      "97":"errada","98":"errada","99":"errada","100":"correta","101":"correta","102":"correta",
       "103":"pendente_conferencia","104":"errada","105":"errada","106":"correta","107":"correta",
       "108":"correta","109":"anulada","110":"errada","111":"correta","112":"correta","113":"anulada",
       "114":"correta","115":"errada","116":"pendente_conferencia","117":"correta","118":"correta",
       "119":"pendente_conferencia","120":"correta"
     }
   }'::jsonb,
-  'Todos os 120 itens foram lidos e confrontados individualmente com o gabarito oficial nesta sessão (leitura manuscrita de caderno escaneado). 18 itens tiveram marcação ambígua ou conflitante (visto/X vs. letra escrita) e ficaram como pendente_conferencia — não foram chutados. Não foi usada a contagem "79" anotada pelo candidato na capa, conforme solicitado; o número aqui (64 líquidos, 52 corretas + 12 anuladas, 37 erradas, 1 em branco) vem exclusivamente da conferência item a item e ainda pode mudar quando os 18 pendentes forem confirmados.'
+  'Todos os 120 itens foram lidos e confrontados individualmente com o gabarito oficial em duas passagens de revisão. 7 itens (24, 26, 29, 37, 103, 116, 119) mostram apenas um sinal circular sem letra C/E legível e ficaram como pendente_conferencia — não foram chutados. Não foi usada a contagem "79" anotada pelo candidato na capa, conforme solicitado; o número aqui (73 líquidos, 61 corretas + 12 anuladas, 38 erradas, 2 em branco) vem exclusivamente da conferência item a item.'
 from auth.users u where u.email='69598193268@norteconcurso.local'
 on conflict do nothing;
 
