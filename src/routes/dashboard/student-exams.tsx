@@ -38,9 +38,18 @@ export const Route = createFileRoute("/dashboard/student-exams")({
   validateSearch: (search: Record<string, unknown>) => ({
     career: typeof search.career === "string" ? search.career : undefined,
   }),
-  component: StudentExamsPage,
+  component: StudentExamsSafePage,
   errorComponent: StudentExamsRecovery,
 });
+
+function StudentExamsSafePage() {
+  return (
+    <StudentExamsRecovery
+      error={new Error("Visualização segura ativa")}
+      reset={() => window.location.reload()}
+    />
+  );
+}
 
 interface ExamDoc {
   id: string;
