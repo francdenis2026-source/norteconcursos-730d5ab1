@@ -20,6 +20,7 @@ import {
   FileStack,
   HelpCircle,
   Image as ImageIcon,
+  PenLine,
   RefreshCw,
   ShieldCheck,
   Sparkles,
@@ -1367,6 +1368,132 @@ interface RecoveryGroup {
   score: number;
   result: RecoveryExam | null;
   pages: RecoveryExam[];
+  essays: EssaySubmission[];
+}
+
+interface EssayTopico {
+  descricao: string;
+  valor_pontos: number | null;
+  abordado: boolean | null;
+  obs?: string;
+}
+interface EssayCorrecao {
+  nota_estimada: number | null;
+  pontos_fortes: string[];
+  pontos_fracos: string[];
+  comentario: string;
+  confianca: string;
+}
+interface EssaySubmission {
+  id: string;
+  contest_name: string;
+  contest_year: string | null;
+  tema: string;
+  topicos: EssayTopico[];
+  nota_maxima: number | null;
+  status: string;
+  transcricao: string | null;
+  correcao: EssayCorrecao;
+}
+
+const ESSAY_STATUS_LABEL: Record<string, { label: string; color: string }> = {
+  texto_completo: { label: "Texto completo", color: "bg-emerald-500" },
+  rascunho_incompleto: { label: "Rascunho incompleto", color: "bg-amber-500" },
+  corrigida: { label: "Corrigida", color: "bg-secondary" },
+};
+
+// Renders one essay inline inside a contest's own card — same content as the
+// standalone "Treino de Redação" page, but scoped to the exam it belongs to
+// instead of a separate, disconnected screen.
+function EssayInline({ essay }: { essay: EssaySubmission }) {
+  const st = ESSAY_STATUS_LABEL[essay.status] || { label: essay.status, color: "bg-muted" };
+  const abordados = essay.topicos?.filter((t) => t.abordado === true).length || 0;
+  const totalTopicos = essay.topicos?.length || 0;
+  return (
+    <div className="rounded-2xl border bg-background p-4">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <p className="text-sm font-bold">"{essay.tema}"</p>
+          {essay.nota_maxima ? (
+            <p className="text-xs text-muted-foreground">Nota máxima: {essay.nota_maxima} pts</p>
+          ) : null}
+        </div>
+        <Badge className={cn("text-white", st.color)}>{st.label}</Badge>
+      </div>
+      {totalTopicos > 0 && (
+        <div className="mt-3">
+          <p className="mb-2 text-xs font-bold uppercase text-muted-foreground">
+            Tópicos exigidos ({abordados}/{totalTopicos} abordados)
+          </p>
+          <div className="space-y-2">
+            {essay.topicos.map((t, i) => (
+              <div key={i} className="flex items-start gap-2 rounded-lg bg-muted/50 p-2 text-sm">
+                {t.abordado === true ? (
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
+                ) : t.abordado === false ? (
+                  <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-rose-500" />
+                ) : (
+                  <HelpCircle className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
+                )}
+                <div className="flex-1">
+                  <p>
+                    {t.descricao}{" "}
+                    {t.valor_pontos ? (
+                      <span className="text-xs text-muted-foreground">({t.valor_pontos} pts)</span>
+                    ) : null}
+                  </p>
+                  {t.obs && <p className="mt-0.5 text-xs text-muted-foreground">{t.obs}</p>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      {essay.correcao && (essay.correcao.pontos_fortes?.length > 0 || essay.correcao.pontos_fracos?.length > 0) && (
+        <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2">
+          {essay.correcao.pontos_fortes?.length > 0 && (
+            <div className="rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/20">
+              <p className="mb-1.5 text-xs font-bold uppercase text-emerald-700 dark:text-emerald-400">
+                Pontos fortes
+              </p>
+              <ul className="list-inside list-disc space-y-1 text-xs text-emerald-900 dark:text-emerald-300">
+                {essay.correcao.pontos_fortes.map((p, i) => (
+                  <li key={i}>{p}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {essay.correcao.pontos_fracos?.length > 0 && (
+            <div className="rounded-lg bg-rose-50 p-3 dark:bg-rose-950/20">
+              <p className="mb-1.5 text-xs font-bold uppercase text-rose-700 dark:text-rose-400">
+                Pontos fracos
+              </p>
+              <ul className="list-inside list-disc space-y-1 text-xs text-rose-900 dark:text-rose-300">
+                {essay.correcao.pontos_fracos.map((p, i) => (
+                  <li key={i}>{p}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+      {essay.correcao?.comentario && (
+        <p className="mt-3 border-l-2 pl-3 text-xs italic text-muted-foreground">
+          {essay.correcao.comentario}
+        </p>
+      )}
+      {essay.transcricao && (
+        <details className="mt-3 text-sm">
+          <summary className="cursor-pointer text-xs font-bold uppercase text-muted-foreground">
+            Ver transcrição
+          </summary>
+          <p className="mt-2 whitespace-pre-wrap leading-relaxed text-muted-foreground">
+            {essay.transcricao}
+          </p>
+        </details>
+      )}
+    </div>
+  );
 }
 
 /**
@@ -1376,6 +1503,7 @@ interface RecoveryGroup {
  */
 function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
   const [exams, setExams] = React.useState<RecoveryExam[]>([]);
+  const [essays, setEssays] = React.useState<EssaySubmission[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [message, setMessage] = React.useState<string | null>(null);
   const [openExam, setOpenExam] = React.useState<string | null>(null);
@@ -1395,17 +1523,29 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
           return;
         }
         if (active) setUserId(session.user.id);
-        const { data, error } = await withTimeout(
-          supabase
-            .from("student_exam_documents")
-            .select(
-              "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,doc_type,extracted_data",
-            )
-            .eq("user_id", session.user.id)
-            .order("contest_year", { ascending: false }),
-        );
-        if (error) throw error;
-        if (active) setExams((data || []) as RecoveryExam[]);
+        const [examsResult, essaysResult] = await Promise.all([
+          withTimeout(
+            supabase
+              .from("student_exam_documents")
+              .select(
+                "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,doc_type,extracted_data",
+              )
+              .eq("user_id", session.user.id)
+              .order("contest_year", { ascending: false }),
+          ),
+          withTimeout(
+            supabase
+              .from("essay_submissions")
+              .select("id,contest_name,contest_year,tema,topicos,nota_maxima,status,transcricao,correcao")
+              .eq("user_id", session.user.id)
+              .order("contest_year", { ascending: false }),
+          ),
+        ]);
+        if (examsResult.error) throw examsResult.error;
+        if (active) setExams((examsResult.data || []) as RecoveryExam[]);
+        // Redações não são a informação essencial da página — uma falha aqui
+        // não deve impedir o histórico de provas de aparecer.
+        if (active && !essaysResult.error) setEssays((essaysResult.data || []) as EssaySubmission[]);
       } catch (error) {
         console.error("Falha na visualização de recuperação das provas", error);
         if (active)
@@ -1440,6 +1580,7 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
       score: 0,
       result: null,
       pages: [],
+      essays: [],
     };
     if (exam.storage_path?.startsWith("manual-entry/")) {
       current.result = exam;
@@ -1456,6 +1597,40 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
       // candidate's booklet, and must never be shown here.
       current.pages.push(exam);
     }
+    grouped.set(key, current);
+  }
+  // Redações não têm necessariamente uma linha em student_exam_documents (o
+  // candidato pode ter registrado só a discursiva), então cada uma entra no
+  // grupo do concurso/ano correspondente. O nome do concurso salvo na redação
+  // às vezes é uma variação mais curta do mesmo cargo (ex.: "Polícia Federal"
+  // vs. "Agente de Polícia Federal" nas provas) — por isso o casamento é por
+  // ano + nome contido um no outro, não por igualdade exata, senão a mesma
+  // prova vira dois cards diferentes.
+  const normalize = (s: string) => s.toLocaleLowerCase("pt-BR");
+  for (const essay of essays) {
+    const contest = String(essay.contest_name || "Concurso");
+    const year = String(essay.contest_year || "—");
+    const existingMatch = Array.from(grouped.values()).find((g) => {
+      if (g.year !== year) return false;
+      const a = normalize(g.contest);
+      const b = normalize(contest);
+      return a === b || a.includes(b) || b.includes(a);
+    });
+    const key = existingMatch ? existingMatch.key : `${contest}__${year}`;
+    const current = grouped.get(key) || {
+      key,
+      contest,
+      year,
+      board: "Banca não informada",
+      correct: 0,
+      wrong: 0,
+      blank: 0,
+      score: 0,
+      result: null,
+      pages: [],
+      essays: [],
+    };
+    current.essays.push(essay);
     grouped.set(key, current);
   }
   const examGroups = Array.from(grouped.values()).sort((a, b) =>
@@ -1564,6 +1739,11 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
                           <CardTitle className="flex flex-wrap items-center gap-2 text-base md:text-lg">
                             {group.contest} — {group.year}
                             {group.result && <Badge className="bg-emerald-600">Analisada</Badge>}
+                            {group.essays.length > 0 && (
+                              <Badge variant="outline" className="gap-1 border-indigo-300 text-indigo-700 dark:text-indigo-300">
+                                <PenLine className="h-3 w-3" /> Redação
+                              </Badge>
+                            )}
                           </CardTitle>
                           <CardDescription className="mt-1">
                             {group.board} · {group.pages.length} páginas digitalizadas
@@ -1626,6 +1806,18 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
                           onSaved={() => setUploadTick((v) => v + 1)}
                         />
                       )}
+                      {group.essays.length > 0 && (
+                        <div>
+                          <p className="mb-3 flex items-center gap-2 text-sm font-bold">
+                            <PenLine className="h-4 w-4" /> Redação (prova discursiva)
+                          </p>
+                          <div className="space-y-3">
+                            {group.essays.map((essay) => (
+                              <EssayInline key={essay.id} essay={essay} />
+                            ))}
+                          </div>
+                        </div>
+                      )}
                       {group.pages.length > 0 ? (
                         <div>
                           <p className="mb-3 flex items-center gap-2 text-sm font-bold">
@@ -1658,11 +1850,11 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
                             ))}
                           </div>
                         </div>
-                      ) : (
+                      ) : group.essays.length === 0 ? (
                         <p className="text-xs text-muted-foreground">
                           O resultado está salvo; não há imagens vinculadas para esta prova.
                         </p>
-                      )}
+                      ) : null}
                     </CardContent>
                   )}
                 </Card>
