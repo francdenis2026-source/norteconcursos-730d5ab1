@@ -9,13 +9,22 @@
 -- are still present and correct in the database (re-inserting them could
 -- create duplicates, since student_exam_documents has no natural unique key
 -- to upsert against).
+-- NOTE: the original migration used the same generic
+-- 'https://www.cebraspe.org.br/concursos/encerrado' URL that PRF's import
+-- also used. Since content_sources.url is UNIQUE, that insert's
+-- "on conflict (url) do update" silently updated PRF's existing row instead
+-- of creating a DEPEN-specific one — content_sources never gained a 'DEPEN%'
+-- titled row, so every downstream join (syllabus_editions, syllabus_topics,
+-- official_exam_questions) matched zero rows and inserted nothing. This is
+-- the real root cause of the missing DEPEN question bank. Using a distinct
+-- URL here so this source gets its own row.
 insert into public.content_sources (source_type,title,issuer,url,status,notes) values
-('outro','DEPEN - Edital nº 1/2020, gabaritos e provas oficiais','DEPEN / CEBRASPE','https://www.cebraspe.org.br/concursos/encerrado','vigente','Prova, gabaritos e discursiva desta importação foram fornecidos em PDF pelo próprio candidato; link direto aos PDFs específicos ainda não localizado.')
+('outro','DEPEN - Edital nº 1/2020, gabaritos e provas oficiais','DEPEN / CEBRASPE','https://www.cebraspe.org.br/concursos/encerrado?concurso=depen-2021','vigente','Prova, gabaritos e discursiva desta importação foram fornecidos em PDF pelo próprio candidato; link direto aos PDFs específicos ainda não localizado.')
 on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
 
 insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board,source_id,status)
 select 'Departamento Penitenciário Nacional','Agente Federal de Execução Penal',2021,'CEBRASPE',id,'active'
-from public.content_sources where url='https://www.cebraspe.org.br/concursos/encerrado' and title like 'DEPEN%'
+from public.content_sources where url='https://www.cebraspe.org.br/concursos/encerrado?concurso=depen-2021'
 on conflict (contest_name,role_name,contest_year) do update set source_id=excluded.source_id,status='active';
 
 with edition as (
@@ -40,7 +49,7 @@ from edition cross join (values
 ) d(discipline,topic_text)
 on conflict (edition_id,discipline,topic_order) do update set topic_text=excluded.topic_text;
 
-with src as (select id from public.content_sources where url='https://www.cebraspe.org.br/concursos/encerrado' and title like 'DEPEN%'),
+with src as (select id from public.content_sources where url='https://www.cebraspe.org.br/concursos/encerrado?concurso=depen-2021'),
 edition as (select id from public.syllabus_editions where contest_name='Departamento Penitenciário Nacional' and role_name='Agente Federal de Execução Penal' and contest_year=2021),
 topic_map(item_from,item_to,discipline) as (values
   (1,13,'Língua Portuguesa'),(14,15,'Lei 12.846/2013'),(16,19,'Ética, Moral e Sindicância'),
