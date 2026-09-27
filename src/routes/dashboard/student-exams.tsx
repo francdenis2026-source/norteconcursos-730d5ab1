@@ -171,12 +171,18 @@ function StudentExamsPage() {
 
         const map = new Map<string, GroupedExam>();
         for (const doc of (data || []) as ExamDoc[]) {
-          const key = `${doc.contest_name}__${doc.contest_year}`;
+          // Alguns registros históricos foram importados antes das restrições
+          // atuais do schema. Ignorá-los é mais seguro do que derrubar todo o
+          // painel por causa de um nome/ano ausente.
+          if (!doc?.contest_name || !doc?.contest_year) continue;
+          const contestName = String(doc.contest_name);
+          const contestYear = String(doc.contest_year);
+          const key = `${contestName}__${contestYear}`;
           if (!map.has(key))
             map.set(key, {
               key,
-              contest_name: doc.contest_name,
-              contest_year: doc.contest_year,
+              contest_name: contestName,
+              contest_year: contestYear,
               exam_board: doc.exam_board,
               correct_count: null,
               wrong_count: null,
@@ -364,16 +370,20 @@ function StudentExamsPage() {
       />
     );
 
-  const careers = Array.from(new Set(groups.map((g) => g.contest_name)));
-  const activeCareer = contestFilter ?? careers[0];
-  const careerGroups = groups.filter((g) => g.contest_name === activeCareer);
+  const careers = Array.from(new Set(groups.map((g) => g.contest_name).filter(Boolean)));
+  const activeCareer =
+    contestFilter && careers.includes(contestFilter) ? contestFilter : careers[0];
+  const filteredCareerGroups = groups.filter((g) => g.contest_name === activeCareer);
+  const careerGroups = filteredCareerGroups.length ? filteredCareerGroups : groups;
+  const safeActiveCareer = activeCareer || careerGroups[0]?.contest_name || "Concurso";
   const careerLabel =
-    activeCareer.length > 24
-      ? activeCareer
+    safeActiveCareer.length > 24
+      ? safeActiveCareer
           .split(" ")
+          .filter(Boolean)
           .map((w) => w[0])
           .join("")
-      : activeCareer;
+      : safeActiveCareer;
 
   const chartData = careerGroups.map((group) => {
     const answered = metric(group.correct_count) + metric(group.wrong_count);
@@ -390,7 +400,10 @@ function StudentExamsPage() {
     totalCorrect + totalWrong ? Math.round((totalCorrect / (totalCorrect + totalWrong)) * 100) : 0;
   const bestExam = [...careerGroups].sort(
     (a, b) => (b.score ?? -Infinity) - (a.score ?? -Infinity),
-  )[0];
+  )[0] ?? {
+    contest_year: "—",
+    score: 0,
+  };
   const evolution = (chartData.at(-1)?.aproveitamento ?? 0) - (chartData[0]?.aproveitamento ?? 0);
   const hasMultipleAttempts = careerGroups.length > 1;
 
