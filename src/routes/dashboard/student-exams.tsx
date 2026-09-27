@@ -1246,6 +1246,81 @@ function MiniMetric({
   );
 }
 
+// Full-screen page-by-page viewer for a digitized exam booklet — lets the
+// candidate flip through their scanned answer sheet like slides instead of
+// opening each photo in a new tab. Left/Right arrow keys and Esc work too.
+function PageSlideshow({
+  contestLabel,
+  imageUrl,
+  current,
+  total,
+  onPrev,
+  onNext,
+  onClose,
+}: {
+  contestLabel: string;
+  imageUrl: string | undefined;
+  current: number;
+  total: number;
+  onPrev: () => void;
+  onNext: () => void;
+  onClose: () => void;
+}) {
+  React.useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") onPrev();
+      else if (e.key === "ArrowRight") onNext();
+      else if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [onPrev, onNext, onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex flex-col bg-black/90 p-4"
+      onClick={(e) => e.target === e.currentTarget && onClose()}
+    >
+      <div className="flex items-center justify-between text-white">
+        <div>
+          <p className="text-sm font-bold">{contestLabel}</p>
+          <p className="text-xs text-white/70">
+            Página {current} de {total}
+          </p>
+        </div>
+        <Button variant="ghost" size="icon" className="text-white hover:bg-white/10" onClick={onClose}>
+          <XCircle className="h-6 w-6" />
+        </Button>
+      </div>
+      <div className="relative flex flex-1 items-center justify-center overflow-hidden">
+        <button
+          type="button"
+          onClick={onPrev}
+          disabled={total <= 1}
+          className="absolute left-2 z-10 rounded-full bg-black/50 p-2 text-white transition hover:bg-black/70 disabled:opacity-30"
+          aria-label="Página anterior"
+        >
+          <ChevronDown className="h-6 w-6 rotate-90" />
+        </button>
+        {imageUrl ? (
+          <img src={imageUrl} alt={`Página ${current}`} className="max-h-full max-w-full rounded-lg object-contain" />
+        ) : (
+          <p className="text-sm text-white/70">carregando…</p>
+        )}
+        <button
+          type="button"
+          onClick={onNext}
+          disabled={total <= 1}
+          className="absolute right-2 z-10 rounded-full bg-black/50 p-2 text-white transition hover:bg-black/70 disabled:opacity-30"
+          aria-label="Próxima página"
+        >
+          <ChevronDown className="h-6 w-6 -rotate-90" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function EmptyState({
   title,
   description,
@@ -1307,6 +1382,7 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
   const [pageUrls, setPageUrls] = React.useState<Record<string, string>>({});
   const [userId, setUserId] = React.useState<string | null>(null);
   const [uploadTick, setUploadTick] = React.useState(0);
+  const [viewer, setViewer] = React.useState<{ groupKey: string; index: number } | null>(null);
 
   React.useEffect(() => {
     let active = true;
@@ -1557,11 +1633,10 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
                           </p>
                           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
                             {group.pages.map((page, index) => (
-                              <a
+                              <button
                                 key={page.id}
-                                href={pageUrls[page.id]}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                type="button"
+                                onClick={() => setViewer({ groupKey: group.key, index })}
                                 className="relative aspect-[3/4] overflow-hidden rounded-xl border bg-muted shadow-sm transition hover:-translate-y-1 hover:ring-2 hover:ring-emerald-400"
                               >
                                 {pageUrls[page.id] ? (
@@ -1579,7 +1654,7 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
                                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-5 text-[10px] font-bold text-white">
                                   Página {index + 1}
                                 </span>
-                              </a>
+                              </button>
                             ))}
                           </div>
                         </div>
@@ -1606,6 +1681,27 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
         <RefreshCw className="mr-2 h-4 w-4" />
         Atualizar dados
       </Button>
+
+      {viewer &&
+        (() => {
+          const group = examGroups.find((g) => g.key === viewer.groupKey);
+          const page = group?.pages[viewer.index];
+          if (!group || !page) return null;
+          const total = group.pages.length;
+          const go = (delta: number) =>
+            setViewer({ groupKey: group.key, index: (viewer.index + delta + total) % total });
+          return (
+            <PageSlideshow
+              contestLabel={`${group.contest} — ${group.year}`}
+              imageUrl={pageUrls[page.id]}
+              current={viewer.index + 1}
+              total={total}
+              onPrev={() => go(-1)}
+              onNext={() => go(1)}
+              onClose={() => setViewer(null)}
+            />
+          );
+        })()}
     </div>
   );
 }
