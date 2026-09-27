@@ -11,10 +11,11 @@ import {
   Clock3,
   FileSearch,
   Flame,
+  Gavel,
   Landmark,
   LineChart,
   Menu,
-  Quote,
+  ScrollText,
   ShieldCheck,
   Sparkles,
   Star,
@@ -172,21 +173,19 @@ function Index() {
                   <CirclePlay /> Conhecer a plataforma
                 </a>
               </div>
-              <div className="hero-proof reveal-up delay-3">
-                <div className="avatar-stack">
-                  <span>MC</span>
-                  <span>RF</span>
-                  <span>AL</span>
-                  <span>+</span>
-                </div>
-                <div>
-                  <div className="flex gap-0.5 text-amber-400">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <Star key={i} className="h-3.5 w-3.5 fill-current" />
-                    ))}
-                  </div>
-                  <p>Preparação séria para quem decidiu avançar</p>
-                </div>
+              <div className="hero-proof reveal-up delay-3 flex-wrap !gap-x-6 !gap-y-3">
+                <span className="flex items-center gap-2 text-xs font-bold text-white/70">
+                  <ScrollText className="h-4 w-4 shrink-0 text-emerald-300" />
+                  Conteúdo com fonte oficial verificada
+                </span>
+                <span className="flex items-center gap-2 text-xs font-bold text-white/70">
+                  <ShieldCheck className="h-4 w-4 shrink-0 text-emerald-300" />
+                  Sem cartão de crédito para começar
+                </span>
+                <span className="flex items-center gap-2 text-xs font-bold text-white/70">
+                  <Clock3 className="h-4 w-4 shrink-0 text-emerald-300" />
+                  Seu plano pronto em minutos
+                </span>
               </div>
             </div>
             <div className="hidden lg:block" aria-hidden="true">
@@ -399,18 +398,25 @@ function Index() {
               ))}
             </div>
             <div className="testimonial-card">
-              <Quote />
-              <blockquote>
-                “Pela primeira vez eu parei de estudar pelo medo de não dar tempo e comecei a
-                estudar pelo que realmente movia minha nota.”
-              </blockquote>
-              <div>
-                <span className="testimonial-avatar">MR</span>
-                <p>
-                  <strong>Marina Ribeiro</strong>
-                  <small>Candidata — Tribunais</small>
-                </p>
-              </div>
+              <Gavel className="h-8 w-8" aria-hidden="true" />
+              <h3 className="mt-5 text-center text-xl font-black tracking-tight text-primary">
+                Conteúdo com a seriedade que sua aprovação exige
+              </h3>
+              <ul className="mx-auto mt-6 max-w-xl space-y-3 text-left text-sm text-slate-600">
+                <li className="flex items-start gap-3">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                  Toda questão é vinculada ao edital ativo e a uma fonte oficial verificada.
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                  Leis federais no texto compilado do Planalto; súmulas e jurisprudência, no
+                  tribunal competente.
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                  Verificação de vigência antes de qualquer conteúdo jurídico ser publicado.
+                </li>
+              </ul>
             </div>
           </div>
         </section>
