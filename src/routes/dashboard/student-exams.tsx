@@ -39,6 +39,7 @@ export const Route = createFileRoute("/dashboard/student-exams")({
     career: typeof search.career === "string" ? search.career : undefined,
   }),
   component: StudentExamsPage,
+  errorComponent: StudentExamsRecovery,
 });
 
 interface ExamDoc {
@@ -825,6 +826,127 @@ function EmptyState({
       <h2 className="text-xl font-bold">{title}</h2>
       <p className="max-w-md text-muted-foreground">{description}</p>
       {children}
+    </div>
+  );
+}
+
+interface RecoveryExam {
+  id: string;
+  contest_name: string | null;
+  contest_year: string | number | null;
+  exam_board: string | null;
+  correct_count: number | null;
+  wrong_count: number | null;
+  blank_count: number | null;
+  score_net: number | null;
+  score_raw: number | null;
+}
+
+/**
+ * Última barreira de proteção da rota. O painel principal contém gráficos e
+ * análises enriquecidas; se algum dado legado inesperado provocar uma exceção,
+ * esta visão independente ainda entrega ao candidato seu histórico real.
+ */
+function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
+  const [exams, setExams] = React.useState<RecoveryExam[]>([]);
+  const [loading, setLoading] = React.useState(true);
+  const [message, setMessage] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    let active = true;
+    const load = async () => {
+      try {
+        const { data: sessionData } = await supabase.auth.getSession();
+        const session = sessionData.session;
+        if (!session) {
+          if (active) setMessage("Entre novamente para acessar suas provas.");
+          return;
+        }
+        const { data, error } = await supabase
+          .from("student_exam_documents")
+          .select(
+            "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw",
+          )
+          .eq("user_id", session.user.id)
+          .order("contest_year", { ascending: false });
+        if (error) throw error;
+        if (active) setExams((data || []) as RecoveryExam[]);
+      } catch (error) {
+        console.error("Falha na visualização de recuperação das provas", error);
+        if (active) setMessage("Não foi possível consultar o histórico neste momento.");
+      } finally {
+        if (active) setLoading(false);
+      }
+    };
+    void load();
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  if (loading) {
+    return <div className="p-8 text-sm text-muted-foreground">Carregando suas provas…</div>;
+  }
+
+  return (
+    <div className="space-y-6">
+      <section className="rounded-[28px] bg-[#071a2f] px-6 py-7 text-white shadow-xl md:px-9">
+        <Badge className="mb-3 border-amber-300/20 bg-amber-400/10 text-amber-200">
+          Histórico protegido
+        </Badge>
+        <h1 className="text-3xl font-black">Minhas provas</h1>
+        <p className="mt-2 max-w-2xl text-sm text-slate-300">
+          Seus resultados continuam salvos. Esta visualização segura foi ativada enquanto os
+          gráficos detalhados são reconstruídos.
+        </p>
+      </section>
+
+      {message ? (
+        <Card>
+          <CardContent className="space-y-4 pt-6 text-center">
+            <p className="text-sm text-muted-foreground">{message}</p>
+            <Button onClick={reset}>Tentar novamente</Button>
+          </CardContent>
+        </Card>
+      ) : exams.length ? (
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {exams.map((exam) => {
+            const correct = Number(exam.correct_count ?? 0);
+            const wrong = Number(exam.wrong_count ?? 0);
+            const answered = correct + wrong;
+            const accuracy = answered ? Math.round((correct / answered) * 100) : 0;
+            const score = Number(exam.score_net ?? exam.score_raw ?? 0);
+            return (
+              <Card key={String(exam.id)} className="overflow-hidden border-slate-200 shadow-sm">
+                <div className="h-1.5 bg-emerald-500" />
+                <CardHeader>
+                  <CardTitle className="text-base">
+                    {String(exam.contest_name || "Concurso")} — {String(exam.contest_year || "—")}
+                  </CardTitle>
+                  <CardDescription>
+                    {String(exam.exam_board || "Banca não informada")}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="grid grid-cols-3 gap-3 text-center">
+                  <MiniMetric label="Acertos" value={correct} className="text-emerald-600" />
+                  <MiniMetric label="Saldo" value={score} className="text-primary" />
+                  <MiniMetric label="Taxa" value={`${accuracy}%`} className="text-amber-600" />
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+      ) : (
+        <EmptyState
+          title="Nenhuma prova encontrada"
+          description="Não há resultados vinculados à conta atualmente conectada."
+        />
+      )}
+
+      <Button variant="outline" onClick={reset}>
+        <RefreshCw className="mr-2 h-4 w-4" />
+        Recarregar análises completas
+      </Button>
     </div>
   );
 }
