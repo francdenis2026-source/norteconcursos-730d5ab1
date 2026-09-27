@@ -883,24 +883,27 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
     let active = true;
     const load = async () => {
       try {
-        const { data: sessionData } = await supabase.auth.getSession();
+        const { data: sessionData } = await withTimeout(supabase.auth.getSession());
         const session = sessionData.session;
         if (!session) {
           if (active) setMessage("Entre novamente para acessar suas provas.");
           return;
         }
-        const { data, error } = await supabase
-          .from("student_exam_documents")
-          .select(
-            "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,extracted_data",
-          )
-          .eq("user_id", session.user.id)
-          .order("contest_year", { ascending: false });
+        const { data, error } = await withTimeout(
+          supabase
+            .from("student_exam_documents")
+            .select(
+              "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,extracted_data",
+            )
+            .eq("user_id", session.user.id)
+            .order("contest_year", { ascending: false }),
+        );
         if (error) throw error;
         if (active) setExams((data || []) as RecoveryExam[]);
       } catch (error) {
         console.error("Falha na visualização de recuperação das provas", error);
-        if (active) setMessage("Não foi possível consultar o histórico neste momento.");
+        if (active)
+          setMessage("Não foi possível sincronizar suas provas agora. Verifique sua conexão e tente novamente.");
       } finally {
         if (active) setLoading(false);
       }
