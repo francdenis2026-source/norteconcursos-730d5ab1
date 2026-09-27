@@ -144,4 +144,5 @@ set extracted_data = jsonb_set(
   true
 )
 where d.contest_name ilike '%Polícia Federal%'
-  and d.contest_year in ('2014','2018','2021','2025');
+  and d.contest_year in ('2014','2018','2021','2025')
+on conflict (user_id, contest_year, item_number) do nothing;
