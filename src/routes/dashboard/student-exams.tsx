@@ -1277,6 +1277,7 @@ interface RecoveryExam {
   score_raw: number | null;
   file_name: string;
   storage_path: string;
+  doc_type: string | null;
   extracted_data: ExamAnalysis | null;
 }
 
@@ -1322,7 +1323,7 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
           supabase
             .from("student_exam_documents")
             .select(
-              "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,extracted_data",
+              "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,doc_type,extracted_data",
             )
             .eq("user_id", session.user.id)
             .order("contest_year", { ascending: false }),
@@ -1370,7 +1371,13 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
       current.wrong = Number(exam.wrong_count ?? 0);
       current.blank = Number(exam.blank_count ?? 0);
       current.score = Number(exam.score_net ?? exam.score_raw ?? 0);
-    } else {
+    } else if (exam.doc_type === "prova_realizada" || exam.doc_type === "upload_candidato") {
+      // Only the candidate's own scanned booklet pages belong in the
+      // gallery below. Reference documents the admin may have stored for
+      // the same contest/year (doc_type 'prova', 'gabarito', 'edital',
+      // 'matriz', 'padrao_resposta', 'outro' — e.g. an official exam PDF
+      // kept for transcription reference) are official material, not the
+      // candidate's booklet, and must never be shown here.
       current.pages.push(exam);
     }
     grouped.set(key, current);
