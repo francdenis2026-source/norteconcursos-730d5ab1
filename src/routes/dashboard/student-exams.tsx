@@ -117,6 +117,19 @@ interface DisciplineBreakdown {
 
 const metric = (value: number | null | undefined) => value ?? 0;
 
+const withTimeout = async <T,>(promise: PromiseLike<T>, timeoutMs = 12000): Promise<T> => {
+  let timeoutId: ReturnType<typeof setTimeout> | undefined;
+  const timeout = new Promise<never>((_, reject) => {
+    timeoutId = setTimeout(() => reject(new Error("Tempo de sincronização excedido")), timeoutMs);
+  });
+
+  try {
+    return await Promise.race([Promise.resolve(promise), timeout]);
+  } finally {
+    if (timeoutId) clearTimeout(timeoutId);
+  }
+};
+
 // Every exam group is tagged with the exact career/contest it belongs to
 // (contest_name). Aggregate metrics (evolution chart, best score, etc.) are always
 // computed within a single selected contest — different careers (PF, PRF, ...) are
@@ -144,78 +157,98 @@ function StudentExamsPage() {
     const load = async () => {
       setIsLoading(true);
       setErrorMessage(null);
-      const [{ data, error }, { data: auditData }] = await Promise.all([
-        supabase
-          .from("student_exam_documents")
-          .select("*")
-          .eq("user_id", user.id)
-          .order("contest_year", { ascending: true }),
-        supabase
+      try {
+        // A lista de provas é a informação essencial da página. Consultas
+        // complementares não podem impedir que esse histórico seja exibido.
+        const { data, error } = await withTimeout(
+          supabase
+            .from("student_exam_documents")
+            .select("*")
+            .eq("user_id", user.id)
+            .order("contest_year", { ascending: true }),
+        );
+        if (error) throw error;
+
+        const map = new Map<string, GroupedExam>();
+        for (const doc of (data || []) as ExamDoc[]) {
+          const key = `${doc.contest_name}__${doc.contest_year}`;
+          if (!map.has(key))
+            map.set(key, {
+              key,
+              contest_name: doc.contest_name,
+              contest_year: doc.contest_year,
+              exam_board: doc.exam_board,
+              correct_count: null,
+              wrong_count: null,
+              blank_count: null,
+              score: null,
+              pageCount: 0,
+              extracted_data: null,
+              docs: [],
+              audit_items: [],
+            });
+          const group = map.get(key)!;
+          group.docs.push(doc);
+          group.pageCount += 1;
+          if (doc.correct_count !== null) group.correct_count = doc.correct_count;
+          if (doc.wrong_count !== null) group.wrong_count = doc.wrong_count;
+          if (doc.blank_count !== null) group.blank_count = doc.blank_count;
+          if (doc.score_net !== null) group.score = Number(doc.score_net);
+          else if (doc.score_raw !== null) group.score = Number(doc.score_raw);
+          if (doc.extracted_data && Object.keys(doc.extracted_data).length)
+            group.extracted_data = doc.extracted_data;
+        }
+        const allGroups = Array.from(map.values()).map((group) => ({
+          ...group,
+          score:
+            group.score ??
+            (group.correct_count !== null && group.wrong_count !== null
+              ? group.correct_count - group.wrong_count
+              : null),
+        }));
+        setGroups(allGroups);
+        const requestedCareer = career
+          ? allGroups.find((group) => {
+              const contestName = group.contest_name.toLocaleLowerCase("pt-BR");
+              const careerName = career.toLocaleLowerCase("pt-BR");
+              return contestName.includes(careerName) || careerName.includes(contestName);
+            })?.contest_name
+          : null;
+        setContestFilter(
+          (previous) =>
+            requestedCareer ??
+            (previous && allGroups.some((group) => group.contest_name === previous)
+              ? previous
+              : (allGroups[0]?.contest_name ?? null)),
+        );
+
+        // Enriquece os grupos depois que a tela principal já foi liberada.
+        void supabase
           .from("student_exam_item_audits")
           .select(
             "contest_year,item_number,candidate_answer,official_answer,comparison_status,reading_confidence,evidence_note",
           )
           .eq("user_id", user.id)
-          .order("item_number", { ascending: true }),
-      ]);
-      if (error) {
-        setErrorMessage("Não foi possível sincronizar suas provas. Tente novamente.");
-        setIsLoading(false);
-        return;
-      }
-      const map = new Map<string, GroupedExam>();
-      for (const doc of (data || []) as ExamDoc[]) {
-        const key = `${doc.contest_name}__${doc.contest_year}`;
-        if (!map.has(key))
-          map.set(key, {
-            key,
-            contest_name: doc.contest_name,
-            contest_year: doc.contest_year,
-            exam_board: doc.exam_board,
-            correct_count: null,
-            wrong_count: null,
-            blank_count: null,
-            score: null,
-            pageCount: 0,
-            extracted_data: null,
-            docs: [],
-            audit_items: [],
+          .order("item_number", { ascending: true })
+          .then(({ data: auditData }) => {
+            if (!auditData) return;
+            setGroups((current) =>
+              current.map((group) => ({
+                ...group,
+                audit_items: (auditData as AuditItem[]).filter(
+                  (item) => String(item.contest_year) === String(group.contest_year),
+                ),
+              })),
+            );
           });
-        const group = map.get(key)!;
-        group.docs.push(doc);
-        group.pageCount += 1;
-        if (doc.correct_count !== null) group.correct_count = doc.correct_count;
-        if (doc.wrong_count !== null) group.wrong_count = doc.wrong_count;
-        if (doc.blank_count !== null) group.blank_count = doc.blank_count;
-        if (doc.score_net !== null) group.score = Number(doc.score_net);
-        else if (doc.score_raw !== null) group.score = Number(doc.score_raw);
-        if (doc.extracted_data && Object.keys(doc.extracted_data).length)
-          group.extracted_data = doc.extracted_data;
+      } catch (error) {
+        console.error("Falha ao carregar histórico de provas", error);
+        setErrorMessage(
+          "Não foi possível sincronizar suas provas agora. Verifique sua conexão e tente novamente.",
+        );
+      } finally {
+        setIsLoading(false);
       }
-      const allGroups = Array.from(map.values()).map((group) => ({
-        ...group,
-        score:
-          group.score ??
-          (group.correct_count !== null && group.wrong_count !== null
-            ? group.correct_count - group.wrong_count
-            : null),
-      }));
-      setGroups(allGroups);
-      const requestedCareer = career
-        ? allGroups.find((group) => {
-            const contestName = group.contest_name.toLocaleLowerCase("pt-BR");
-            const careerName = career.toLocaleLowerCase("pt-BR");
-            return contestName.includes(careerName) || careerName.includes(contestName);
-          })?.contest_name
-        : null;
-      setContestFilter(
-        (previous) =>
-          requestedCareer ??
-          (previous && allGroups.some((group) => group.contest_name === previous)
-            ? previous
-            : (allGroups[0]?.contest_name ?? null)),
-      );
-      setIsLoading(false);
     };
     load();
   }, [user, authLoading, reloadKey, career]);
