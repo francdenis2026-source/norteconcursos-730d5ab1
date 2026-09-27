@@ -16,8 +16,7 @@ import {
   CheckCircle2,
   ChevronDown,
   CircleSlash2,
-  ExternalLink,
-  FileStack,
+  GraduationCap,
   HelpCircle,
   Image as ImageIcon,
   PenLine,
@@ -27,6 +26,7 @@ import {
   Target,
   TrendingUp,
   XCircle,
+  FileStack,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
@@ -39,18 +39,9 @@ export const Route = createFileRoute("/dashboard/student-exams")({
   validateSearch: (search: Record<string, unknown>) => ({
     career: typeof search.career === "string" ? search.career : undefined,
   }),
-  component: StudentExamsSafePage,
-  errorComponent: StudentExamsRecovery,
+  component: StudentExamsPage,
+  errorComponent: StudentExamsErrorFallback,
 });
-
-function StudentExamsSafePage() {
-  return (
-    <StudentExamsRecovery
-      error={new Error("Visualização segura ativa")}
-      reset={() => window.location.reload()}
-    />
-  );
-}
 
 interface ExamDoc {
   id: string;
@@ -59,6 +50,7 @@ interface ExamDoc {
   exam_board: string | null;
   file_name: string;
   storage_path: string;
+  doc_type: string | null;
   score_raw: number | null;
   score_net: number | null;
   correct_count: number | null;
@@ -94,6 +86,32 @@ interface ExamAnalysis {
   [key: string]: unknown;
 }
 
+interface EssayTopico {
+  descricao: string;
+  valor_pontos: number | null;
+  abordado: boolean | null;
+  obs?: string;
+}
+interface EssayCorrecao {
+  nota_estimada: number | null;
+  pontos_fortes: string[];
+  pontos_fracos: string[];
+  comentario: string;
+  confianca: string;
+}
+interface EssaySubmission {
+  id: string;
+  contest_name: string;
+  contest_year: string | null;
+  tema: string;
+  topicos: EssayTopico[];
+  nota_maxima: number | null;
+  status: string;
+  transcricao: string | null;
+  correcao: EssayCorrecao;
+  storage_paths: string[] | null;
+}
+
 interface GroupedExam {
   key: string;
   contest_name: string;
@@ -106,6 +124,9 @@ interface GroupedExam {
   pageCount: number;
   extracted_data: ExamAnalysis | null;
   docs: ExamDoc[];
+  pages: ExamDoc[];
+  resultDoc: ExamDoc | null;
+  essays: EssaySubmission[];
   audit_items: AuditItem[];
 }
 
@@ -127,7 +148,15 @@ interface DisciplineBreakdown {
   accuracy: number;
 }
 
+const ESSAY_STATUS_LABEL: Record<string, { label: string; color: string }> = {
+  texto_completo: { label: "Texto completo", color: "bg-emerald-500" },
+  rascunho_incompleto: { label: "Rascunho incompleto", color: "bg-amber-500" },
+  corrigida: { label: "Corrigida", color: "bg-secondary" },
+};
+
 const metric = (value: number | null | undefined) => value ?? 0;
+
+const normalizeText = (value: string) => value.toLocaleLowerCase("pt-BR");
 
 const withTimeout = async <T,>(promise: PromiseLike<T>, timeoutMs = 12000): Promise<T> => {
   let timeoutId: ReturnType<typeof setTimeout> | undefined;
@@ -142,10 +171,56 @@ const withTimeout = async <T,>(promise: PromiseLike<T>, timeoutMs = 12000): Prom
   }
 };
 
+// Only the candidate's own scanned booklet pages belong in the gallery.
+// Reference documents the admin may have stored for the same contest/year
+// (doc_type 'prova', 'gabarito', 'edital', 'matriz', 'padrao_resposta',
+// 'outro' — kept for transcription reference) are official material, not
+// the candidate's booklet, and must never be shown here. Manually-entered
+// results (no scanned image at all) are excluded the same way.
+const isCandidatePage = (doc: ExamDoc) =>
+  !doc.storage_path.startsWith("manual-entry/") &&
+  (doc.doc_type === "prova_realizada" || doc.doc_type === "upload_candidato" || !doc.doc_type);
+
+// CEBRASPE-style net score: correct minus wrong, with anuladas always
+// counted as correct (matches how correct_count/score_net were computed for
+// PF, PRF and DEPEN throughout this project). Contests with per-discipline
+// point weights (PC-AC, PP-Acre) use their own official formula instead —
+// hardcoded here to match the weights read off each exam's official cover
+// page during that contest's import.
+const WEIGHTED_SCORING: Record<
+  string,
+  { ranges: { from: number; to: number; points: number }[]; maxScore: number }
+> = {
+  "Polícia Civil do Acre": {
+    ranges: [
+      { from: 1, to: 40, points: 1 },
+      { from: 41, to: 60, points: 2 },
+      { from: 61, to: 80, points: 1 },
+    ],
+    maxScore: 100,
+  },
+  "Polícia Penal do Acre": {
+    ranges: [
+      { from: 1, to: 30, points: 1 },
+      { from: 31, to: 60, points: 2 },
+    ],
+    maxScore: 90,
+  },
+};
+
+function computeScore(contestName: string, correctItems: number[], wrongItems: number[]): number {
+  const weighted = WEIGHTED_SCORING[contestName];
+  if (!weighted) return correctItems.length - wrongItems.length;
+  const pointsFor = (item: number) =>
+    weighted.ranges.find((r) => item >= r.from && item <= r.to)?.points ?? 1;
+  return correctItems.reduce((sum, item) => sum + pointsFor(item), 0);
+}
+
 // Every exam group is tagged with the exact career/contest it belongs to
-// (contest_name). Aggregate metrics (evolution chart, best score, etc.) are always
-// computed within a single selected contest — different careers (PF, PRF, ...) are
-// never averaged together, per project rule (each career keeps its own panel).
+// (contest_name). Aggregate metrics (evolution chart, best score, etc.) are
+// always computed within a single selected contest — different careers
+// (PF, PRF, ...) are never averaged together, per project rule (each career
+// keeps its own panel).
 function StudentExamsPage() {
   const { career } = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
@@ -154,12 +229,14 @@ function StudentExamsPage() {
   const [errorMessage, setErrorMessage] = React.useState<string | null>(null);
   const [openKey, setOpenKey] = React.useState<string | null>(null);
   const [signedUrls, setSignedUrls] = React.useState<Record<string, string>>({});
+  const [essayImageUrls, setEssayImageUrls] = React.useState<Record<string, string>>({});
   const [reloadKey, setReloadKey] = React.useState(0);
   const [contestFilter, setContestFilter] = React.useState<string | null>(null);
   const [subjectMaps, setSubjectMaps] = React.useState<Record<string, Record<string, string>>>({});
   const [cutoffs, setCutoffs] = React.useState<
     Record<string, { score: number | null; notes: string | null }>
   >({});
+  const [viewer, setViewer] = React.useState<{ groupKey: string; index: number } | null>(null);
 
   React.useEffect(() => {
     if (authLoading || !user || user.id === "demo-user") {
@@ -172,17 +249,28 @@ function StudentExamsPage() {
       try {
         // A lista de provas é a informação essencial da página. Consultas
         // complementares não podem impedir que esse histórico seja exibido.
-        const { data, error } = await withTimeout(
-          supabase
-            .from("student_exam_documents")
-            .select("*")
-            .eq("user_id", user.id)
-            .order("contest_year", { ascending: true }),
-        );
-        if (error) throw error;
+        const [docsResult, essaysResult] = await Promise.all([
+          withTimeout(
+            supabase
+              .from("student_exam_documents")
+              .select("*")
+              .eq("user_id", user.id)
+              .order("contest_year", { ascending: true }),
+          ),
+          withTimeout(
+            supabase
+              .from("essay_submissions")
+              .select(
+                "id,contest_name,contest_year,tema,topicos,nota_maxima,status,transcricao,correcao,storage_paths",
+              )
+              .eq("user_id", user.id)
+              .order("contest_year", { ascending: true }),
+          ).catch(() => ({ data: [] as EssaySubmission[], error: null })),
+        ]);
+        if (docsResult.error) throw docsResult.error;
 
         const map = new Map<string, GroupedExam>();
-        for (const doc of (data || []) as ExamDoc[]) {
+        for (const doc of (docsResult.data || []) as ExamDoc[]) {
           // Alguns registros históricos foram importados antes das restrições
           // atuais do schema. Ignorá-los é mais seguro do que derrubar todo o
           // painel por causa de um nome/ano ausente.
@@ -203,19 +291,68 @@ function StudentExamsPage() {
               pageCount: 0,
               extracted_data: null,
               docs: [],
+              pages: [],
+              resultDoc: null,
+              essays: [],
               audit_items: [],
             });
           const group = map.get(key)!;
           group.docs.push(doc);
-          group.pageCount += 1;
+          if (isCandidatePage(doc)) {
+            group.pages.push(doc);
+            group.pageCount += 1;
+          }
           if (doc.correct_count !== null) group.correct_count = doc.correct_count;
           if (doc.wrong_count !== null) group.wrong_count = doc.wrong_count;
           if (doc.blank_count !== null) group.blank_count = doc.blank_count;
           if (doc.score_net !== null) group.score = Number(doc.score_net);
           else if (doc.score_raw !== null) group.score = Number(doc.score_raw);
-          if (doc.extracted_data && Object.keys(doc.extracted_data).length)
+          if (doc.extracted_data && Object.keys(doc.extracted_data).length) {
             group.extracted_data = doc.extracted_data;
+            if (doc.extracted_data.candidate_answers) group.resultDoc = doc;
+          }
+          if (!group.resultDoc && doc.correct_count !== null) group.resultDoc = doc;
         }
+
+        // Redações não têm necessariamente uma linha em student_exam_documents
+        // (o candidato pode ter registrado só a discursiva), então cada uma
+        // entra no grupo do concurso/ano correspondente. O nome do concurso
+        // salvo na redação às vezes é uma variação mais curta do mesmo cargo
+        // (ex.: "Polícia Federal" vs. "Agente de Polícia Federal" nas provas)
+        // — por isso o casamento é por ano + nome contido um no outro, não
+        // por igualdade exata, senão a mesma prova vira dois cards diferentes.
+        for (const essay of ((essaysResult as { data: EssaySubmission[] | null }).data ||
+          []) as EssaySubmission[]) {
+          const contestName = String(essay.contest_name || "Concurso");
+          const contestYear = String(essay.contest_year || "—");
+          const existingMatch = Array.from(map.values()).find((group) => {
+            if (group.contest_year !== contestYear) return false;
+            const a = normalizeText(group.contest_name);
+            const b = normalizeText(contestName);
+            return a === b || a.includes(b) || b.includes(a);
+          });
+          const key = existingMatch ? existingMatch.key : `${contestName}__${contestYear}`;
+          if (!map.has(key))
+            map.set(key, {
+              key,
+              contest_name: contestName,
+              contest_year: contestYear,
+              exam_board: null,
+              correct_count: null,
+              wrong_count: null,
+              blank_count: null,
+              score: null,
+              pageCount: 0,
+              extracted_data: null,
+              docs: [],
+              pages: [],
+              resultDoc: null,
+              essays: [],
+              audit_items: [],
+            });
+          map.get(key)!.essays.push(essay);
+        }
+
         const allGroups = Array.from(map.values()).map((group) => ({
           ...group,
           score:
@@ -227,8 +364,8 @@ function StudentExamsPage() {
         setGroups(allGroups);
         const requestedCareer = career
           ? allGroups.find((group) => {
-              const contestName = group.contest_name.toLocaleLowerCase("pt-BR");
-              const careerName = career.toLocaleLowerCase("pt-BR");
+              const contestName = normalizeText(group.contest_name);
+              const careerName = normalizeText(career);
               return contestName.includes(careerName) || careerName.includes(contestName);
             })?.contest_name
           : null;
@@ -273,36 +410,38 @@ function StudentExamsPage() {
 
   // Fetches item_number -> subject/discipline for each career present, so the
   // per-item correct/wrong data already stored in extracted_data.items can be
-  // rolled up into a "pontos fracos por disciplina" breakdown without duplicating
-  // the subject text inside student_exam_documents itself.
+  // rolled up into a "pontos fracos por disciplina" breakdown without
+  // duplicating the subject text inside student_exam_documents itself.
   React.useEffect(() => {
-    const careers = Array.from(new Set(groups.map((g) => g.contest_name)));
-    const missing = careers.filter((c) => !subjectMaps[c]);
+    const careersPresent = Array.from(new Set(groups.map((g) => g.contest_name)));
+    const missing = careersPresent.filter((c) => !subjectMaps[c]);
     if (!missing.length) return;
     (async () => {
       const results = await Promise.all(
-        missing.map((career) =>
+        missing.map((careerName) =>
           supabase
             .from("official_exam_questions")
             .select("item_number,subject")
-            .eq("career_name", career),
+            .eq("career_name", careerName),
         ),
       );
       setSubjectMaps((previous) => {
         const next = { ...previous };
-        missing.forEach((career, index) => {
+        missing.forEach((careerName, index) => {
           const rows =
-            (results[index].data as { item_number: number; subject: string }[] | null) || [];
-          next[career] = Object.fromEntries(rows.map((r) => [String(r.item_number), r.subject]));
+            (results[index]?.data as { item_number: number; subject: string }[] | null) || [];
+          next[careerName] = Object.fromEntries(
+            rows.map((r) => [String(r.item_number), r.subject]),
+          );
         });
         return next;
       });
     })();
   }, [groups, subjectMaps]);
 
-  // Fetches nota de corte reference data for every contest/year already shown in
-  // groups, keyed the same way as group.key, so each card can show "você passou"
-  // or "faltaram X pontos" alongside the candidate's own score.
+  // Fetches nota de corte reference data for every contest/year already
+  // shown in groups, keyed the same way as group.key, so each card can show
+  // "você passou" or "faltaram X pontos" alongside the candidate's own score.
   React.useEffect(() => {
     if (!groups.length) return;
     (async () => {
@@ -335,19 +474,37 @@ function StudentExamsPage() {
       return;
     }
     setOpenKey(group.key);
-    const missing = group.docs.filter(
-      (doc) => !doc.storage_path.startsWith("manual-entry/") && !signedUrls[doc.id],
-    );
-    if (!missing.length) return;
+    const missingPages = group.pages.filter((doc) => !signedUrls[doc.id]);
+    const essayPaths = group.essays.flatMap((essay) => essay.storage_paths || []);
+    const missingEssayPaths = essayPaths.filter((path) => !essayImageUrls[path]);
+
+    if (missingEssayPaths.length) {
+      void Promise.all(
+        missingEssayPaths.map((path) =>
+          supabase.storage.from("student-exams").createSignedUrl(path, 3600),
+        ),
+      ).then((results) => {
+        setEssayImageUrls((current) => {
+          const next = { ...current };
+          missingEssayPaths.forEach((path, index) => {
+            const url = results[index]?.data?.signedUrl;
+            if (url) next[path] = url;
+          });
+          return next;
+        });
+      });
+    }
+
+    if (!missingPages.length) return;
     const results = await Promise.all(
-      missing.map((doc) =>
+      missingPages.map((doc) =>
         supabase.storage.from("student-exams").createSignedUrl(doc.storage_path, 3600),
       ),
     );
     setSignedUrls((previous) => {
       const next = { ...previous };
-      missing.forEach((doc, index) => {
-        const url = results[index].data?.signedUrl;
+      missingPages.forEach((doc, index) => {
+        const url = results[index]?.data?.signedUrl;
         if (url) next[doc.id] = url;
       });
       return next;
@@ -376,17 +533,22 @@ function StudentExamsPage() {
     );
   if (!groups.length)
     return (
-      <EmptyState
-        title="Nenhuma prova encontrada"
-        description="Quando uma prova for cadastrada, o diagnóstico completo aparecerá aqui."
-      />
+      <div className="space-y-7">
+        {user.id && <ExamUploader userId={user.id} onUploaded={() => setReloadKey((v) => v + 1)} />}
+        <EmptyState
+          title="Nenhuma prova encontrada"
+          description="Quando uma prova for cadastrada, o diagnóstico completo aparecerá aqui."
+        />
+      </div>
     );
 
   const careers = Array.from(new Set(groups.map((g) => g.contest_name).filter(Boolean)));
   const activeCareer =
     contestFilter && careers.includes(contestFilter) ? contestFilter : careers[0];
   const filteredCareerGroups = groups.filter((g) => g.contest_name === activeCareer);
-  const careerGroups = filteredCareerGroups.length ? filteredCareerGroups : groups;
+  const careerGroups = (filteredCareerGroups.length ? filteredCareerGroups : groups).sort((a, b) =>
+    a.contest_year.localeCompare(b.contest_year, "pt-BR", { numeric: true }),
+  );
   const safeActiveCareer = activeCareer || careerGroups[0]?.contest_name || "Concurso";
   const careerLabel =
     safeActiveCareer.length > 24
@@ -419,46 +581,35 @@ function StudentExamsPage() {
   const evolution = (chartData.at(-1)?.aproveitamento ?? 0) - (chartData[0]?.aproveitamento ?? 0);
   const hasMultipleAttempts = careerGroups.length > 1;
 
+  const activeViewerGroup = viewer ? careerGroups.find((g) => g.key === viewer.groupKey) : null;
+  const activeViewerPage =
+    viewer && activeViewerGroup ? activeViewerGroup.pages[viewer.index] : null;
+
   return (
     <div className="space-y-7">
-      <section className="relative overflow-hidden rounded-[28px] bg-[#071a2f] px-6 py-7 text-white shadow-xl md:px-9 md:py-9">
-        <div className="absolute -right-16 -top-24 h-72 w-72 rounded-full bg-emerald-400/15 blur-3xl" />
-        <div className="relative flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-          <div>
-            <Badge className="mb-4 border-emerald-300/20 bg-emerald-400/10 text-emerald-300 hover:bg-emerald-400/10">
-              <Sparkles className="mr-1.5 h-3.5 w-3.5" /> Inteligência de desempenho
-            </Badge>
-            <h1 className="text-3xl font-black tracking-tight md:text-4xl">Central de Provas</h1>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-300 md:text-base">
-              Seu histórico real transformado em indicadores para orientar a próxima etapa da
-              preparação.
-            </p>
-          </div>
-          <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
-            <ShieldCheck className="h-5 w-5 text-emerald-300" />
-            <div>
-              <p className="text-xs font-bold">Dados sincronizados</p>
-              <p className="text-[11px] text-slate-400">Acesso privado por CPF</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ExamsHero
+        examCount={careerGroups.length}
+        accuracy={globalAccuracy}
+        bestScore={bestExam.score ?? 0}
+      />
+
+      {user.id && <ExamUploader userId={user.id} onUploaded={() => setReloadKey((v) => v + 1)} />}
 
       {careers.length > 1 && (
         <div className="flex flex-wrap gap-2">
-          {careers.map((career) => (
+          {careers.map((careerName) => (
             <button
-              key={career}
+              key={careerName}
               type="button"
-              onClick={() => setContestFilter(career)}
+              onClick={() => setContestFilter(careerName)}
               className={cn(
                 "rounded-full border px-4 py-1.5 text-xs font-bold transition-colors",
-                career === activeCareer
+                careerName === activeCareer
                   ? "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40"
                   : "border-slate-200 text-muted-foreground hover:border-emerald-300",
               )}
             >
-              {career}
+              {careerName}
             </button>
           ))}
         </div>
@@ -492,7 +643,7 @@ function StudentExamsPage() {
           value={hasMultipleAttempts ? `${evolution >= 0 ? "+" : ""}${evolution} p.p.` : "1 prova"}
           detail={
             hasMultipleAttempts
-              ? `${careerGroups[0].contest_year} → ${careerGroups.at(-1)?.contest_year}`
+              ? `${careerGroups[0]?.contest_year} → ${careerGroups.at(-1)?.contest_year}`
               : "Envie outra prova para comparar"
           }
           tone={evolution >= 0 ? "emerald" : "rose"}
@@ -584,8 +735,8 @@ function StudentExamsPage() {
         <div>
           <h2 className="text-xl font-black text-primary">Histórico detalhado</h2>
           <p className="text-sm text-muted-foreground">
-            Abra uma prova para ver o boletim, os pontos fracos por disciplina e as páginas
-            digitalizadas.
+            Abra uma prova para ver o boletim, os pontos fracos por disciplina, a redação e as
+            páginas digitalizadas.
           </p>
         </div>
         {careerGroups.map((group) => {
@@ -602,13 +753,7 @@ function StudentExamsPage() {
             const bySubject = new Map<string, { correct: number; wrong: number }>();
             for (const [itemNumber, verdict] of Object.entries(items)) {
               const subject = subjectMap[itemNumber];
-              if (
-                !subject ||
-                verdict === "anulada" ||
-                verdict === "branco" ||
-                verdict === "pendente_conferencia"
-              )
-                continue;
+              if (!subject || verdict === "anulada" || verdict === "branco") continue;
               const entry = bySubject.get(subject) ?? { correct: 0, wrong: 0 };
               if (verdict === "correta") entry.correct += 1;
               else if (verdict === "errada") entry.wrong += 1;
@@ -628,8 +773,8 @@ function StudentExamsPage() {
           }
           const weakSpots = breakdown.filter((b) => b.total >= 2 && b.accuracy < 50);
           const cutoff = cutoffs[group.key];
-          const cutoffKnown = cutoff && cutoff.score !== null;
-          const passedCutoff = cutoffKnown && group.score !== null && group.score >= cutoff.score!;
+          const cutoffKnown = !!cutoff && cutoff.score !== null;
+          const passedCutoff = cutoffKnown && group.score !== null && group.score >= cutoff!.score!;
           return (
             <Card
               key={group.key}
@@ -649,6 +794,14 @@ function StudentExamsPage() {
                         <CardTitle className="flex flex-wrap items-center gap-2 text-lg">
                           {group.contest_name} — {group.contest_year}
                           {official && <Badge className="bg-emerald-600">Oficial</Badge>}
+                          {group.essays.length > 0 && (
+                            <Badge
+                              variant="outline"
+                              className="gap-1 border-indigo-300 text-indigo-700 dark:text-indigo-300"
+                            >
+                              <PenLine className="h-3 w-3" /> Redação
+                            </Badge>
+                          )}
                           {cutoffKnown && (
                             <Badge
                               variant="outline"
@@ -744,10 +897,13 @@ function StudentExamsPage() {
                         Pontos fracos por disciplina
                       </p>
                       {weakSpots.length > 0 && (
-                        <p className="mb-3 text-xs text-rose-700 dark:text-rose-400">
-                          Abaixo de 50% de aproveitamento:{" "}
-                          {weakSpots.map((w) => w.subject).join(", ")}.
-                        </p>
+                        <div className="mb-3 flex items-start gap-2 rounded-xl border border-rose-200 bg-rose-50 p-3 text-xs text-rose-700 dark:border-rose-900 dark:bg-rose-950/30 dark:text-rose-400">
+                          <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+                          <span>
+                            Abaixo de 50% de aproveitamento:{" "}
+                            {weakSpots.map((w) => w.subject).join(", ")}.
+                          </span>
+                        </div>
                       )}
                       <div className="space-y-2">
                         {breakdown.map((item) => (
@@ -779,49 +935,161 @@ function StudentExamsPage() {
                       </div>
                     </div>
                   )}
-                  <div>
-                    <p className="mb-3 flex items-center gap-2 text-sm font-bold">
-                      <ImageIcon className="h-4 w-4" />
-                      Caderno digitalizado
-                    </p>
-                    <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-                      {group.docs.map((doc, index) => (
-                        <a
-                          key={doc.id}
-                          href={signedUrls[doc.id] || undefined}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group relative aspect-[3/4] overflow-hidden rounded-xl border bg-muted shadow-sm transition hover:-translate-y-1 hover:ring-2 hover:ring-emerald-400"
-                        >
-                          {signedUrls[doc.id] ? (
-                            <img
-                              src={signedUrls[doc.id]}
-                              alt={`Página ${index + 1}`}
-                              className="h-full w-full object-cover"
-                              loading="lazy"
-                            />
-                          ) : (
-                            <span className="flex h-full items-center justify-center text-[10px] text-muted-foreground">
-                              carregando…
-                            </span>
-                          )}
-                          <span className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-5 text-[10px] font-bold text-white">
-                            Pág. {index + 1}
-                            <ExternalLink className="h-3 w-3" />
-                          </span>
-                        </a>
-                      ))}
+                  {group.resultDoc && (
+                    <GabaritoEditor
+                      resultId={group.resultDoc.id}
+                      contestName={group.contest_name}
+                      contestYear={group.contest_year}
+                      candidateAnswers={group.resultDoc.extracted_data?.candidate_answers}
+                      onSaved={() => setReloadKey((v) => v + 1)}
+                    />
+                  )}
+                  {group.essays.length > 0 && (
+                    <div>
+                      <p className="mb-3 flex items-center gap-2 text-sm font-bold">
+                        <PenLine className="h-4 w-4" /> Redação (prova discursiva)
+                      </p>
+                      <div className="space-y-3">
+                        {group.essays.map((essay) => (
+                          <EssayInline key={essay.id} essay={essay} imageUrls={essayImageUrls} />
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
+                  {group.pages.length > 0 ? (
+                    <div>
+                      <p className="mb-3 flex items-center gap-2 text-sm font-bold">
+                        <ImageIcon className="h-4 w-4" />
+                        Caderno digitalizado
+                      </p>
+                      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
+                        {group.pages.map((doc, index) => (
+                          <button
+                            key={doc.id}
+                            type="button"
+                            onClick={() => setViewer({ groupKey: group.key, index })}
+                            className="group relative aspect-[3/4] overflow-hidden rounded-xl border bg-muted shadow-sm transition hover:-translate-y-1 hover:ring-2 hover:ring-emerald-400"
+                          >
+                            {signedUrls[doc.id] ? (
+                              <img
+                                src={signedUrls[doc.id]}
+                                alt={`Página ${index + 1}`}
+                                className="h-full w-full object-cover"
+                                loading="lazy"
+                              />
+                            ) : (
+                              <span className="flex h-full items-center justify-center text-[10px] text-muted-foreground">
+                                carregando…
+                              </span>
+                            )}
+                            <span className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-5 text-[10px] font-bold text-white">
+                              Pág. {index + 1}
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ) : group.essays.length === 0 ? (
+                    <p className="text-xs text-muted-foreground">
+                      O resultado está salvo; não há imagens vinculadas para esta prova.
+                    </p>
+                  ) : null}
                 </CardContent>
               )}
             </Card>
           );
         })}
       </section>
+
+      {activeViewerGroup && activeViewerPage && viewer && (
+        <PageSlideshow
+          contestLabel={`${activeViewerGroup.contest_name} — ${activeViewerGroup.contest_year}`}
+          imageUrl={signedUrls[activeViewerPage.id]}
+          current={viewer.index + 1}
+          total={activeViewerGroup.pages.length}
+          onPrev={() =>
+            setViewer({
+              groupKey: activeViewerGroup.key,
+              index:
+                (viewer.index - 1 + activeViewerGroup.pages.length) %
+                activeViewerGroup.pages.length,
+            })
+          }
+          onNext={() =>
+            setViewer({
+              groupKey: activeViewerGroup.key,
+              index: (viewer.index + 1) % activeViewerGroup.pages.length,
+            })
+          }
+          onClose={() => setViewer(null)}
+        />
+      )}
     </div>
   );
 }
+
+function ExamsHero({
+  examCount,
+  accuracy,
+  bestScore,
+}: {
+  examCount: number;
+  accuracy: number;
+  bestScore: number;
+}) {
+  return (
+    <section className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[#071a2f] px-6 py-8 text-white shadow-2xl md:px-10 md:py-10">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.08]"
+        style={{
+          backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)",
+          backgroundSize: "18px 18px",
+        }}
+      />
+      <div className="pointer-events-none absolute -right-20 -top-28 h-80 w-80 rounded-full bg-emerald-400/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-amber-400/10 blur-3xl" />
+      <div className="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <div className="max-w-2xl">
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            <Badge className="border-emerald-300/20 bg-emerald-400/10 text-emerald-300 hover:bg-emerald-400/10">
+              <Sparkles className="mr-1.5 h-3.5 w-3.5" /> Inteligência de desempenho
+            </Badge>
+            <Badge variant="outline" className="border-white/15 bg-white/5 text-slate-300">
+              <ShieldCheck className="mr-1.5 h-3.5 w-3.5 text-emerald-300" /> Dados sincronizados
+            </Badge>
+          </div>
+          <h1 className="flex items-center gap-3 text-3xl font-black tracking-tight md:text-4xl">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/10">
+              <GraduationCap className="h-6 w-6 text-emerald-300" />
+            </span>
+            Central de Provas
+          </h1>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-300 md:text-base">
+            Seu histórico real, o gabarito conferido item a item e os pontos fracos por disciplina —
+            tudo organizado por concurso, para orientar a próxima etapa da preparação.
+          </p>
+        </div>
+        <div className="grid grid-cols-3 gap-3 sm:gap-4">
+          <HeroStat label="Provas" value={String(examCount)} />
+          <HeroStat label="Aproveitamento" value={`${accuracy}%`} />
+          <HeroStat label="Melhor saldo" value={`${bestScore} pts`} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HeroStat({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="min-w-[92px] rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-center backdrop-blur">
+      <p className="text-xl font-black text-white">{value}</p>
+      <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-400">
+        {label}
+      </p>
+    </div>
+  );
+}
+
 // Lets the candidate upload a photo/PDF of an exam they took. Each file
 // becomes its own student_exam_documents row (doc_type "upload_candidato",
 // analysis_status "pendente") and triggers the analyze-exam-upload edge
@@ -870,9 +1138,10 @@ function ExamUploader({ userId, onUploaded }: { userId: string; onUploaded: () =
           prev.map((s, idx) => (idx === i ? { ...s, state: "classificando" } : s)),
         );
 
-        const { data: fnResult, error: fnError } = await supabase.functions.invoke("analyze-exam-upload", {
-          body: { documentId: inserted.id },
-        });
+        const { data: fnResult, error: fnError } = await supabase.functions.invoke(
+          "analyze-exam-upload",
+          { body: { documentId: inserted.id } },
+        );
         if (fnError) throw fnError;
         const extracted = fnResult?.extracted;
         setStatuses((prev) =>
@@ -892,7 +1161,13 @@ function ExamUploader({ userId, onUploaded }: { userId: string; onUploaded: () =
         console.error("Falha no upload/análise da prova", error);
         setStatuses((prev) =>
           prev.map((s, idx) =>
-            idx === i ? { ...s, state: "erro", detail: error instanceof Error ? error.message : String(error) } : s,
+            idx === i
+              ? {
+                  ...s,
+                  state: "erro",
+                  detail: error instanceof Error ? error.message : String(error),
+                }
+              : s,
           ),
         );
       }
@@ -902,7 +1177,7 @@ function ExamUploader({ userId, onUploaded }: { userId: string; onUploaded: () =
   };
 
   return (
-    <Card className="border-dashed border-2 border-emerald-300/60 bg-emerald-50/40 dark:bg-emerald-950/10">
+    <Card className="border-2 border-dashed border-emerald-300/60 bg-emerald-50/40 dark:bg-emerald-950/10">
       <CardContent className="flex flex-col items-center gap-3 py-6 text-center sm:flex-row sm:justify-between sm:text-left">
         <div>
           <p className="flex items-center gap-2 text-sm font-bold">
@@ -930,10 +1205,12 @@ function ExamUploader({ userId, onUploaded }: { userId: string; onUploaded: () =
         </div>
       </CardContent>
       {statuses.length > 0 && (
-        <CardContent className="border-t pt-3 space-y-1.5">
+        <CardContent className="space-y-1.5 border-t pt-3">
           {statuses.map((s, i) => (
             <div key={i} className="flex items-center gap-2 text-xs">
-              {s.state === "ok" && <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-emerald-600" />}
+              {s.state === "ok" && (
+                <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-emerald-600" />
+              )}
               {s.state === "erro" && <XCircle className="h-3.5 w-3.5 shrink-0 text-rose-600" />}
               {(s.state === "enviando" || s.state === "classificando") && (
                 <RefreshCw className="h-3.5 w-3.5 shrink-0 animate-spin text-muted-foreground" />
@@ -951,45 +1228,6 @@ function ExamUploader({ userId, onUploaded }: { userId: string; onUploaded: () =
       )}
     </Card>
   );
-}
-
-// CEBRASPE-style net score: correct minus wrong, with anuladas always
-// counted as correct (this matches how correct_count/score_net were computed
-// for PF, PRF and DEPEN throughout this project). Contests with per-discipline
-// point weights (PC-AC, PP-Acre) use their own official formula instead —
-// hardcoded here to match the weights read off each exam's official cover
-// page during that contest's import.
-const WEIGHTED_SCORING: Record<
-  string,
-  { ranges: { from: number; to: number; points: number }[]; maxScore: number }
-> = {
-  "Polícia Civil do Acre": {
-    ranges: [
-      { from: 1, to: 40, points: 1 },
-      { from: 41, to: 60, points: 2 },
-      { from: 61, to: 80, points: 1 },
-    ],
-    maxScore: 100,
-  },
-  "Polícia Penal do Acre": {
-    ranges: [
-      { from: 1, to: 30, points: 1 },
-      { from: 31, to: 60, points: 2 },
-    ],
-    maxScore: 90,
-  },
-};
-
-function computeScore(
-  contestName: string,
-  correctItems: number[],
-  wrongItems: number[],
-): number {
-  const weighted = WEIGHTED_SCORING[contestName];
-  if (!weighted) return correctItems.length - wrongItems.length;
-  const pointsFor = (item: number) =>
-    weighted.ranges.find((r) => item >= r.from && item <= r.to)?.points ?? 1;
-  return correctItems.reduce((sum, item) => sum + pointsFor(item), 0);
 }
 
 // Lets the candidate fix their own marked answers when they realize an item
@@ -1040,7 +1278,11 @@ function GabaritoEditor({
     }
   };
 
-  const itemNumbers = official ? Object.keys(official).map(Number).sort((a, b) => a - b) : [];
+  const itemNumbers = official
+    ? Object.keys(official)
+        .map(Number)
+        .sort((a, b) => a - b)
+    : [];
 
   const live = React.useMemo(() => {
     if (!official) return null;
@@ -1133,7 +1375,9 @@ function GabaritoEditor({
   return (
     <div className="rounded-2xl border border-amber-300 bg-amber-50/60 p-4 dark:border-amber-800 dark:bg-amber-950/20">
       <div className="mb-3 flex items-center justify-between">
-        <p className="text-sm font-bold">Corrigindo o gabarito — {contestName} {contestYear}</p>
+        <p className="text-sm font-bold">
+          Corrigindo o gabarito — {contestName} {contestYear}
+        </p>
         <Button variant="ghost" size="sm" onClick={() => setEditing(false)} disabled={saving}>
           Cancelar
         </Button>
@@ -1162,9 +1406,7 @@ function GabaritoEditor({
                 <select
                   className="w-full rounded border bg-background px-1 py-1 text-center text-xs"
                   value={answers[String(n)] || ""}
-                  onChange={(e) =>
-                    setAnswers((prev) => ({ ...prev, [String(n)]: e.target.value }))
-                  }
+                  onChange={(e) => setAnswers((prev) => ({ ...prev, [String(n)]: e.target.value }))}
                 >
                   <option value=""> </option>
                   {["A", "B", "C", "D", "E"].map((letter) => (
@@ -1190,12 +1432,6 @@ function GabaritoEditor({
   );
 }
 
-// MetricCard/MiniMetric were referenced throughout this file (including in
-// the always-rendered StudentExamsRecovery view) but never defined anywhere
-// — a pre-existing bug that crashed this page with a ReferenceError as soon
-// as there was real exam data to render (examGroups.length > 0), which
-// never surfaced in earlier testing because that only happened without a
-// logged-in session (an empty/error state that never reaches this code).
 const TONE_STYLES: Record<string, string> = {
   navy: "bg-[#071a2f] text-white",
   emerald: "bg-emerald-50 text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-200",
@@ -1247,6 +1483,16 @@ function MiniMetric({
   );
 }
 
+function Insight({ label, value, text }: { label: string; value: string; text: string }) {
+  return (
+    <div className="space-y-1 border-l-2 border-emerald-300/60 pl-3">
+      <p className="text-[11px] font-bold uppercase tracking-wide text-muted-foreground">{label}</p>
+      <p className="text-sm font-black text-foreground">{value}</p>
+      <p className="text-xs leading-relaxed text-muted-foreground">{text}</p>
+    </div>
+  );
+}
+
 // Full-screen page-by-page viewer for a digitized exam booklet — lets the
 // candidate flip through their scanned answer sheet like slides instead of
 // opening each photo in a new tab. Left/Right arrow keys and Esc work too.
@@ -1289,7 +1535,12 @@ function PageSlideshow({
             Página {current} de {total}
           </p>
         </div>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-white/10" onClick={onClose}>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="text-white hover:bg-white/10"
+          onClick={onClose}
+        >
           <XCircle className="h-6 w-6" />
         </Button>
       </div>
@@ -1304,7 +1555,11 @@ function PageSlideshow({
           <ChevronDown className="h-6 w-6 rotate-90" />
         </button>
         {imageUrl ? (
-          <img src={imageUrl} alt={`Página ${current}`} className="max-h-full max-w-full rounded-lg object-contain" />
+          <img
+            src={imageUrl}
+            alt={`Página ${current}`}
+            className="max-h-full max-w-full rounded-lg object-contain"
+          />
         ) : (
           <p className="text-sm text-white/70">carregando…</p>
         )}
@@ -1321,87 +1576,6 @@ function PageSlideshow({
     </div>
   );
 }
-
-function EmptyState({
-  title,
-  description,
-  children,
-}: {
-  title: string;
-  description: string;
-  children?: React.ReactNode;
-}) {
-  return (
-    <div className="flex h-[60vh] flex-col items-center justify-center space-y-4 text-center">
-      <FileStack className="h-16 w-16 text-muted-foreground/30" />
-      <h2 className="text-xl font-bold">{title}</h2>
-      <p className="max-w-md text-muted-foreground">{description}</p>
-      {children}
-    </div>
-  );
-}
-
-interface RecoveryExam {
-  id: string;
-  contest_name: string | null;
-  contest_year: string | number | null;
-  exam_board: string | null;
-  correct_count: number | null;
-  wrong_count: number | null;
-  blank_count: number | null;
-  score_net: number | null;
-  score_raw: number | null;
-  file_name: string;
-  storage_path: string;
-  doc_type: string | null;
-  extracted_data: ExamAnalysis | null;
-}
-
-interface RecoveryGroup {
-  key: string;
-  contest: string;
-  year: string;
-  board: string;
-  correct: number;
-  wrong: number;
-  blank: number;
-  score: number;
-  result: RecoveryExam | null;
-  pages: RecoveryExam[];
-  essays: EssaySubmission[];
-}
-
-interface EssayTopico {
-  descricao: string;
-  valor_pontos: number | null;
-  abordado: boolean | null;
-  obs?: string;
-}
-interface EssayCorrecao {
-  nota_estimada: number | null;
-  pontos_fortes: string[];
-  pontos_fracos: string[];
-  comentario: string;
-  confianca: string;
-}
-interface EssaySubmission {
-  id: string;
-  contest_name: string;
-  contest_year: string | null;
-  tema: string;
-  topicos: EssayTopico[];
-  nota_maxima: number | null;
-  status: string;
-  transcricao: string | null;
-  correcao: EssayCorrecao;
-  storage_paths: string[] | null;
-}
-
-const ESSAY_STATUS_LABEL: Record<string, { label: string; color: string }> = {
-  texto_completo: { label: "Texto completo", color: "bg-emerald-500" },
-  rascunho_incompleto: { label: "Rascunho incompleto", color: "bg-amber-500" },
-  corrigida: { label: "Corrigida", color: "bg-secondary" },
-};
 
 // Renders one essay inline inside a contest's own card — same content as the
 // standalone "Treino de Redação" page, but scoped to the exam it belongs to
@@ -1487,34 +1661,35 @@ function EssayInline({
           </div>
         </div>
       )}
-      {essay.correcao && (essay.correcao.pontos_fortes?.length > 0 || essay.correcao.pontos_fracos?.length > 0) && (
-        <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2">
-          {essay.correcao.pontos_fortes?.length > 0 && (
-            <div className="rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/20">
-              <p className="mb-1.5 text-xs font-bold uppercase text-emerald-700 dark:text-emerald-400">
-                Pontos fortes
-              </p>
-              <ul className="list-inside list-disc space-y-1 text-xs text-emerald-900 dark:text-emerald-300">
-                {essay.correcao.pontos_fortes.map((p, i) => (
-                  <li key={i}>{p}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {essay.correcao.pontos_fracos?.length > 0 && (
-            <div className="rounded-lg bg-rose-50 p-3 dark:bg-rose-950/20">
-              <p className="mb-1.5 text-xs font-bold uppercase text-rose-700 dark:text-rose-400">
-                Pontos fracos
-              </p>
-              <ul className="list-inside list-disc space-y-1 text-xs text-rose-900 dark:text-rose-300">
-                {essay.correcao.pontos_fracos.map((p, i) => (
-                  <li key={i}>{p}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
+      {essay.correcao &&
+        (essay.correcao.pontos_fortes?.length > 0 || essay.correcao.pontos_fracos?.length > 0) && (
+          <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2">
+            {essay.correcao.pontos_fortes?.length > 0 && (
+              <div className="rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/20">
+                <p className="mb-1.5 text-xs font-bold uppercase text-emerald-700 dark:text-emerald-400">
+                  Pontos fortes
+                </p>
+                <ul className="list-inside list-disc space-y-1 text-xs text-emerald-900 dark:text-emerald-300">
+                  {essay.correcao.pontos_fortes.map((p, i) => (
+                    <li key={i}>{p}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {essay.correcao.pontos_fracos?.length > 0 && (
+              <div className="rounded-lg bg-rose-50 p-3 dark:bg-rose-950/20">
+                <p className="mb-1.5 text-xs font-bold uppercase text-rose-700 dark:text-rose-400">
+                  Pontos fracos
+                </p>
+                <ul className="list-inside list-disc space-y-1 text-xs text-rose-900 dark:text-rose-300">
+                  {essay.correcao.pontos_fracos.map((p, i) => (
+                    <li key={i}>{p}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
       {essay.correcao?.comentario && (
         <p className="mt-3 border-l-2 pl-3 text-xs italic text-muted-foreground">
           {essay.correcao.comentario}
@@ -1534,425 +1709,43 @@ function EssayInline({
   );
 }
 
-/**
- * Última barreira de proteção da rota. O painel principal contém gráficos e
- * análises enriquecidas; se algum dado legado inesperado provocar uma exceção,
- * esta visão independente ainda entrega ao candidato seu histórico real.
- */
-function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
-  const [exams, setExams] = React.useState<RecoveryExam[]>([]);
-  const [essays, setEssays] = React.useState<EssaySubmission[]>([]);
-  const [loading, setLoading] = React.useState(true);
-  const [message, setMessage] = React.useState<string | null>(null);
-  const [openExam, setOpenExam] = React.useState<string | null>(null);
-  const [pageUrls, setPageUrls] = React.useState<Record<string, string>>({});
-  const [essayImageUrls, setEssayImageUrls] = React.useState<Record<string, string>>({});
-  const [userId, setUserId] = React.useState<string | null>(null);
-  const [uploadTick, setUploadTick] = React.useState(0);
-  const [viewer, setViewer] = React.useState<{ groupKey: string; index: number } | null>(null);
-
-  React.useEffect(() => {
-    let active = true;
-    const load = async () => {
-      try {
-        const { data: sessionData } = await withTimeout(supabase.auth.getSession());
-        const session = sessionData.session;
-        if (!session) {
-          if (active) setMessage("Entre novamente para acessar suas provas.");
-          return;
-        }
-        if (active) setUserId(session.user.id);
-        const [examsResult, essaysResult] = await Promise.all([
-          withTimeout(
-            supabase
-              .from("student_exam_documents")
-              .select(
-                "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,doc_type,extracted_data",
-              )
-              .eq("user_id", session.user.id)
-              .order("contest_year", { ascending: false }),
-          ),
-          withTimeout(
-            supabase
-              .from("essay_submissions")
-              .select(
-                "id,contest_name,contest_year,tema,topicos,nota_maxima,status,transcricao,correcao,storage_paths",
-              )
-              .eq("user_id", session.user.id)
-              .order("contest_year", { ascending: false }),
-          ),
-        ]);
-        if (examsResult.error) throw examsResult.error;
-        if (active) setExams((examsResult.data || []) as RecoveryExam[]);
-        // Redações não são a informação essencial da página — uma falha aqui
-        // não deve impedir o histórico de provas de aparecer.
-        if (active && !essaysResult.error) setEssays((essaysResult.data || []) as EssaySubmission[]);
-      } catch (error) {
-        console.error("Falha na visualização de recuperação das provas", error);
-        if (active)
-          setMessage("Não foi possível sincronizar suas provas agora. Verifique sua conexão e tente novamente.");
-      } finally {
-        if (active) setLoading(false);
-      }
-    };
-    void load();
-    return () => {
-      active = false;
-    };
-  }, [uploadTick]);
-
-  if (loading) {
-    return <div className="p-8 text-sm text-muted-foreground">Carregando suas provas…</div>;
-  }
-
-  const grouped = new Map<string, RecoveryGroup>();
-  for (const exam of exams) {
-    const contest = String(exam.contest_name || "Concurso");
-    const year = String(exam.contest_year || "—");
-    const key = `${contest}__${year}`;
-    const current = grouped.get(key) || {
-      key,
-      contest,
-      year,
-      board: String(exam.exam_board || "Banca não informada"),
-      correct: 0,
-      wrong: 0,
-      blank: 0,
-      score: 0,
-      result: null,
-      pages: [],
-      essays: [],
-    };
-    if (exam.storage_path?.startsWith("manual-entry/")) {
-      current.result = exam;
-      current.correct = Number(exam.correct_count ?? 0);
-      current.wrong = Number(exam.wrong_count ?? 0);
-      current.blank = Number(exam.blank_count ?? 0);
-      current.score = Number(exam.score_net ?? exam.score_raw ?? 0);
-    } else if (exam.doc_type === "prova_realizada" || exam.doc_type === "upload_candidato") {
-      // Only the candidate's own scanned booklet pages belong in the
-      // gallery below. Reference documents the admin may have stored for
-      // the same contest/year (doc_type 'prova', 'gabarito', 'edital',
-      // 'matriz', 'padrao_resposta', 'outro' — e.g. an official exam PDF
-      // kept for transcription reference) are official material, not the
-      // candidate's booklet, and must never be shown here.
-      current.pages.push(exam);
-    }
-    grouped.set(key, current);
-  }
-  // Redações não têm necessariamente uma linha em student_exam_documents (o
-  // candidato pode ter registrado só a discursiva), então cada uma entra no
-  // grupo do concurso/ano correspondente. O nome do concurso salvo na redação
-  // às vezes é uma variação mais curta do mesmo cargo (ex.: "Polícia Federal"
-  // vs. "Agente de Polícia Federal" nas provas) — por isso o casamento é por
-  // ano + nome contido um no outro, não por igualdade exata, senão a mesma
-  // prova vira dois cards diferentes.
-  const normalize = (s: string) => s.toLocaleLowerCase("pt-BR");
-  for (const essay of essays) {
-    const contest = String(essay.contest_name || "Concurso");
-    const year = String(essay.contest_year || "—");
-    const existingMatch = Array.from(grouped.values()).find((g) => {
-      if (g.year !== year) return false;
-      const a = normalize(g.contest);
-      const b = normalize(contest);
-      return a === b || a.includes(b) || b.includes(a);
-    });
-    const key = existingMatch ? existingMatch.key : `${contest}__${year}`;
-    const current = grouped.get(key) || {
-      key,
-      contest,
-      year,
-      board: "Banca não informada",
-      correct: 0,
-      wrong: 0,
-      blank: 0,
-      score: 0,
-      result: null,
-      pages: [],
-      essays: [],
-    };
-    current.essays.push(essay);
-    grouped.set(key, current);
-  }
-  const examGroups = Array.from(grouped.values()).sort((a, b) =>
-    b.year.localeCompare(a.year, "pt-BR", { numeric: true }),
-  );
-  const totalPages = examGroups.reduce((sum, group) => sum + group.pages.length, 0);
-  const averageAccuracy = examGroups.length
-    ? Math.round(
-        examGroups.reduce((sum, group) => {
-          const answered = group.correct + group.wrong;
-          return sum + (answered ? (group.correct / answered) * 100 : 0);
-        }, 0) / examGroups.length,
-      )
-    : 0;
-
-  const toggleExam = async (group: RecoveryGroup) => {
-    if (openExam === group.key) {
-      setOpenExam(null);
-      return;
-    }
-    setOpenExam(group.key);
-    const essayPaths = group.essays.flatMap((essay) => essay.storage_paths || []);
-    const missingEssayPaths = essayPaths.filter((path) => !essayImageUrls[path]);
-    if (missingEssayPaths.length) {
-      void Promise.all(
-        missingEssayPaths.map((path) =>
-          supabase.storage.from("student-exams").createSignedUrl(path, 3600),
-        ),
-      ).then((results) => {
-        setEssayImageUrls((current) => {
-          const next = { ...current };
-          missingEssayPaths.forEach((path, index) => {
-            const url = results[index].data?.signedUrl;
-            if (url) next[path] = url;
-          });
-          return next;
-        });
-      });
-    }
-    const missing = group.pages.filter((page) => !pageUrls[page.id]);
-    if (!missing.length) return;
-    const results = await Promise.all(
-      missing.map((page) =>
-        supabase.storage.from("student-exams").createSignedUrl(page.storage_path, 3600),
-      ),
-    );
-    setPageUrls((current) => {
-      const next = { ...current };
-      missing.forEach((page, index) => {
-        const url = results[index].data?.signedUrl;
-        if (url) next[page.id] = url;
-      });
-      return next;
-    });
-  };
-
+function EmptyState({
+  title,
+  description,
+  children,
+}: {
+  title: string;
+  description: string;
+  children?: React.ReactNode;
+}) {
   return (
-    <div className="space-y-6">
-      <section className="rounded-[28px] bg-[#071a2f] px-6 py-7 text-white shadow-xl md:px-9">
-        <Badge className="mb-3 border-emerald-300/20 bg-emerald-400/10 text-emerald-200">
-          Dados sincronizados
-        </Badge>
-        <h1 className="text-3xl font-black">Minhas provas</h1>
-        <p className="mt-2 max-w-2xl text-sm text-slate-300">
-          Resultados, indicadores de desempenho e cadernos digitalizados reunidos por concurso.
-        </p>
-      </section>
-
-      {userId && <ExamUploader userId={userId} onUploaded={() => setUploadTick((v) => v + 1)} />}
-
-      {message ? (
-        <Card>
-          <CardContent className="space-y-4 pt-6 text-center">
-            <p className="text-sm text-muted-foreground">{message}</p>
-            <Button onClick={reset}>Tentar novamente</Button>
-          </CardContent>
-        </Card>
-      ) : examGroups.length ? (
-        <>
-          <section className="grid gap-4 sm:grid-cols-3">
-            <MetricCard
-              icon={FileStack}
-              label="Provas analisadas"
-              value={String(examGroups.length)}
-              detail={`${totalPages} páginas originais`}
-              tone="navy"
-            />
-            <MetricCard
-              icon={Target}
-              label="Aproveitamento médio"
-              value={`${averageAccuracy}%`}
-              detail="Somente itens respondidos"
-              tone="emerald"
-            />
-            <MetricCard
-              icon={ShieldCheck}
-              label="Arquivos recuperados"
-              value={String(totalPages)}
-              detail="Imagens acessíveis no Supabase"
-              tone="amber"
-            />
-          </section>
-          <div className="space-y-4">
-            {examGroups.map((group) => {
-              const answered = group.correct + group.wrong;
-              const accuracy = answered ? Math.round((group.correct / answered) * 100) : 0;
-              const isOpen = openExam === group.key;
-              return (
-                <Card
-                  key={group.key}
-                  className={cn(
-                    "overflow-hidden border-slate-200 shadow-sm",
-                    isOpen && "border-emerald-300 shadow-md",
-                  )}
-                >
-                  <button
-                    type="button"
-                    className="w-full text-left"
-                    onClick={() => void toggleExam(group)}
-                  >
-                    <CardHeader className="transition-colors hover:bg-slate-50 dark:hover:bg-slate-900/30">
-                      <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
-                        <div>
-                          <CardTitle className="flex flex-wrap items-center gap-2 text-base md:text-lg">
-                            {group.contest} — {group.year}
-                            {group.result && <Badge className="bg-emerald-600">Analisada</Badge>}
-                            {group.essays.length > 0 && (
-                              <Badge variant="outline" className="gap-1 border-indigo-300 text-indigo-700 dark:text-indigo-300">
-                                <PenLine className="h-3 w-3" /> Redação
-                              </Badge>
-                            )}
-                          </CardTitle>
-                          <CardDescription className="mt-1">
-                            {group.board} · {group.pages.length} páginas digitalizadas
-                          </CardDescription>
-                        </div>
-                        <div className="grid grid-cols-4 items-center gap-4 text-center">
-                          <MiniMetric
-                            label="Acertos"
-                            value={group.correct}
-                            className="text-emerald-600"
-                          />
-                          <MiniMetric label="Erros" value={group.wrong} className="text-rose-600" />
-                          <MiniMetric label="Saldo" value={group.score} className="text-primary" />
-                          <div className="flex items-center gap-2">
-                            <MiniMetric
-                              label="Taxa"
-                              value={`${accuracy}%`}
-                              className="text-amber-600"
-                            />
-                            <ChevronDown
-                              className={cn("h-5 w-5 transition-transform", isOpen && "rotate-180")}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </CardHeader>
-                  </button>
-                  {isOpen && (
-                    <CardContent className="space-y-4 border-t bg-slate-50/50 pt-5 dark:bg-slate-950/20">
-                      <div className="grid gap-3 sm:grid-cols-4">
-                        <div className="rounded-xl border bg-background p-3 text-sm">
-                          <strong>{group.correct}</strong>
-                          <br />
-                          <span className="text-xs text-muted-foreground">questões corretas</span>
-                        </div>
-                        <div className="rounded-xl border bg-background p-3 text-sm">
-                          <strong>{group.wrong}</strong>
-                          <br />
-                          <span className="text-xs text-muted-foreground">questões erradas</span>
-                        </div>
-                        <div className="rounded-xl border bg-background p-3 text-sm">
-                          <strong>{group.blank}</strong>
-                          <br />
-                          <span className="text-xs text-muted-foreground">em branco</span>
-                        </div>
-                        <div className="rounded-xl border bg-background p-3 text-sm">
-                          <strong>{group.score}</strong>
-                          <br />
-                          <span className="text-xs text-muted-foreground">
-                            pontuação registrada
-                          </span>
-                        </div>
-                      </div>
-                      {group.result && (
-                        <GabaritoEditor
-                          resultId={group.result.id}
-                          contestName={group.contest}
-                          contestYear={group.year}
-                          candidateAnswers={group.result.extracted_data?.candidate_answers}
-                          onSaved={() => setUploadTick((v) => v + 1)}
-                        />
-                      )}
-                      {group.essays.length > 0 && (
-                        <div>
-                          <p className="mb-3 flex items-center gap-2 text-sm font-bold">
-                            <PenLine className="h-4 w-4" /> Redação (prova discursiva)
-                          </p>
-                          <div className="space-y-3">
-                            {group.essays.map((essay) => (
-                              <EssayInline key={essay.id} essay={essay} imageUrls={essayImageUrls} />
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                      {group.pages.length > 0 ? (
-                        <div>
-                          <p className="mb-3 flex items-center gap-2 text-sm font-bold">
-                            <ImageIcon className="h-4 w-4" /> Caderno digitalizado
-                          </p>
-                          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-                            {group.pages.map((page, index) => (
-                              <button
-                                key={page.id}
-                                type="button"
-                                onClick={() => setViewer({ groupKey: group.key, index })}
-                                className="relative aspect-[3/4] overflow-hidden rounded-xl border bg-muted shadow-sm transition hover:-translate-y-1 hover:ring-2 hover:ring-emerald-400"
-                              >
-                                {pageUrls[page.id] ? (
-                                  <img
-                                    src={pageUrls[page.id]}
-                                    alt={`Página ${index + 1}`}
-                                    className="h-full w-full object-cover"
-                                    loading="lazy"
-                                  />
-                                ) : (
-                                  <span className="flex h-full items-center justify-center text-[10px] text-muted-foreground">
-                                    carregando…
-                                  </span>
-                                )}
-                                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-5 text-[10px] font-bold text-white">
-                                  Página {index + 1}
-                                </span>
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      ) : group.essays.length === 0 ? (
-                        <p className="text-xs text-muted-foreground">
-                          O resultado está salvo; não há imagens vinculadas para esta prova.
-                        </p>
-                      ) : null}
-                    </CardContent>
-                  )}
-                </Card>
-              );
-            })}
-          </div>
-        </>
-      ) : (
-        <EmptyState
-          title="Nenhuma prova encontrada"
-          description="Não há resultados vinculados à conta atualmente conectada."
-        />
-      )}
-
-      <Button variant="outline" onClick={reset}>
-        <RefreshCw className="mr-2 h-4 w-4" />
-        Atualizar dados
-      </Button>
-
-      {viewer &&
-        (() => {
-          const group = examGroups.find((g) => g.key === viewer.groupKey);
-          const page = group?.pages[viewer.index];
-          if (!group || !page) return null;
-          const total = group.pages.length;
-          const go = (delta: number) =>
-            setViewer({ groupKey: group.key, index: (viewer.index + delta + total) % total });
-          return (
-            <PageSlideshow
-              contestLabel={`${group.contest} — ${group.year}`}
-              imageUrl={pageUrls[page.id]}
-              current={viewer.index + 1}
-              total={total}
-              onPrev={() => go(-1)}
-              onNext={() => go(1)}
-              onClose={() => setViewer(null)}
-            />
-          );
-        })()}
+    <div className="flex h-[60vh] flex-col items-center justify-center space-y-4 text-center">
+      <CircleSlash2 className="h-16 w-16 text-muted-foreground/30" />
+      <h2 className="text-xl font-bold">{title}</h2>
+      <p className="max-w-md text-muted-foreground">{description}</p>
+      {children}
     </div>
+  );
+}
+
+// Última barreira de proteção da rota: se algo além do que o próprio painel
+// já trata (que tem seu próprio estado de erro/retry) lançar uma exceção
+// durante a renderização, isso evita uma tela em branco.
+function StudentExamsErrorFallback({ reset }: { error: Error; reset: () => void }) {
+  return (
+    <EmptyState
+      title="Não foi possível carregar suas provas"
+      description="Algo deu errado ao montar esta tela. Tente novamente — se persistir, atualize a página."
+    >
+      <div className="flex gap-2">
+        <Button onClick={reset}>
+          <RefreshCw className="mr-2 h-4 w-4" />
+          Tentar novamente
+        </Button>
+        <Button variant="outline" onClick={() => window.location.reload()}>
+          Recarregar página
+        </Button>
+      </div>
+    </EmptyState>
   );
 }
