@@ -107,8 +107,14 @@ interface AuditItem {
   evidence_note: string | null;
 }
 
+interface DisciplineBreakdown { subject: string; correct: number; wrong: number; total: number; accuracy: number; }
+
 const metric = (value: number | null | undefined) => value ?? 0;
 
+// Every exam group is tagged with the exact career/contest it belongs to
+// (contest_name). Aggregate metrics (evolution chart, best score, etc.) are always
+// computed within a single selected contest — different careers (PF, PRF, ...) are
+// never averaged together, per project rule (each career keeps its own panel).
 function StudentExamsPage() {
   const { career } = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
@@ -118,6 +124,9 @@ function StudentExamsPage() {
   const [openKey, setOpenKey] = React.useState<string | null>(null);
   const [signedUrls, setSignedUrls] = React.useState<Record<string, string>>({});
   const [reloadKey, setReloadKey] = React.useState(0);
+  const [contestFilter, setContestFilter] = React.useState<string | null>(null);
+  const [subjectMaps, setSubjectMaps] = React.useState<Record<string, Record<string, string>>>({});
+  const [cutoffs, setCutoffs] = React.useState<Record<string, { score: number | null; notes: string | null }>>({});
 
   React.useEffect(() => {
     if (authLoading || !user || user.id === "demo-user") {
@@ -175,24 +184,51 @@ function StudentExamsPage() {
         if (doc.extracted_data && Object.keys(doc.extracted_data).length)
           group.extracted_data = doc.extracted_data;
       }
-      for (const item of (auditData || []) as AuditItem[]) {
-        for (const group of map.values())
-          if (group.contest_year === item.contest_year) group.audit_items.push(item);
-      }
-      setGroups(
-        Array.from(map.values()).map((group) => ({
-          ...group,
-          score:
-            group.score ??
-            (group.correct_count !== null && group.wrong_count !== null
-              ? group.correct_count - group.wrong_count
-              : null),
-        })),
-      );
+      const allGroups = Array.from(map.values()).map((group) => ({ ...group, score: group.score ?? (group.correct_count !== null && group.wrong_count !== null ? group.correct_count - group.wrong_count : null) }));
+      setGroups(allGroups);
+      setContestFilter((previous) => previous && allGroups.some((g) => g.contest_name === previous) ? previous : (allGroups[0]?.contest_name ?? null));
       setIsLoading(false);
     };
     load();
   }, [user, authLoading, reloadKey]);
+
+  // Fetches item_number -> subject/discipline for each career present, so the
+  // per-item correct/wrong data already stored in extracted_data.items can be
+  // rolled up into a "pontos fracos por disciplina" breakdown without duplicating
+  // the subject text inside student_exam_documents itself.
+  React.useEffect(() => {
+    const careers = Array.from(new Set(groups.map((g) => g.contest_name)));
+    const missing = careers.filter((c) => !subjectMaps[c]);
+    if (!missing.length) return;
+    (async () => {
+      const results = await Promise.all(missing.map((career) =>
+        supabase.from("official_exam_questions").select("item_number,subject").eq("career_name", career)
+      ));
+      setSubjectMaps((previous) => {
+        const next = { ...previous };
+        missing.forEach((career, index) => {
+          const rows = (results[index].data as { item_number: number; subject: string }[] | null) || [];
+          next[career] = Object.fromEntries(rows.map((r) => [String(r.item_number), r.subject]));
+        });
+        return next;
+      });
+    })();
+  }, [groups, subjectMaps]);
+
+  // Fetches nota de corte reference data for every contest/year already shown in
+  // groups, keyed the same way as group.key, so each card can show "você passou"
+  // or "faltaram X pontos" alongside the candidate's own score.
+  React.useEffect(() => {
+    if (!groups.length) return;
+    (async () => {
+      const { data } = await supabase.from("contest_reference_info").select("contest_name,contest_year,cutoff_score,notes");
+      const map: Record<string, { score: number | null; notes: string | null }> = {};
+      (data as { contest_name: string; contest_year: string | null; cutoff_score: number | null; notes: string | null }[] | null || []).forEach((row) => {
+        map[`${row.contest_name}__${row.contest_year}`] = { score: row.cutoff_score, notes: row.notes };
+      });
+      setCutoffs(map);
+    })();
+  }, [groups.length]);
 
   const openGroup = async (group: GroupedExam) => {
     if (openKey === group.key) {
@@ -247,581 +283,96 @@ function StudentExamsPage() {
       />
     );
 
-  const visibleGroups = career
-    ? groups.filter((group) => group.contest_name.toLowerCase().includes(career.toLowerCase()))
-    : groups;
-  if (!visibleGroups.length)
-    return (
-      <EmptyState
-        title={`Nenhuma prova de ${career}`}
-        description="Ainda não há resultado vinculado a esta carreira na sua conta."
-      />
-    );
+  const careers = Array.from(new Set(groups.map((g) => g.contest_name)));
+  const activeCareer = contestFilter ?? careers[0];
+  const careerGroups = groups.filter((g) => g.contest_name === activeCareer);
+  const careerLabel = activeCareer.length > 24 ? activeCareer.split(" ").map((w) => w[0]).join("") : activeCareer;
 
-  const chartData = visibleGroups.map((group) => {
-    const answered = metric(group.correct_count) + metric(group.wrong_count);
-    return {
-      year: group.contest_year,
-      aproveitamento: answered ? Math.round((metric(group.correct_count) / answered) * 100) : 0,
-      saldo: group.score ?? 0,
-    };
-  });
-  const totalPages = visibleGroups.reduce((sum, group) => sum + group.pageCount, 0);
-  const totalCorrect = visibleGroups.reduce((sum, group) => sum + metric(group.correct_count), 0);
-  const totalWrong = visibleGroups.reduce((sum, group) => sum + metric(group.wrong_count), 0);
-  const globalAccuracy =
-    totalCorrect + totalWrong ? Math.round((totalCorrect / (totalCorrect + totalWrong)) * 100) : 0;
-  const bestExam = [...visibleGroups].sort(
-    (a, b) => (b.score ?? -Infinity) - (a.score ?? -Infinity),
-  )[0];
+  const chartData = careerGroups.map((group) => { const answered = metric(group.correct_count) + metric(group.wrong_count); return { year: group.contest_year, aproveitamento: answered ? Math.round((metric(group.correct_count) / answered) * 100) : 0, saldo: group.score ?? 0 }; });
+  const totalPages = careerGroups.reduce((sum, group) => sum + group.pageCount, 0);
+  const totalCorrect = careerGroups.reduce((sum, group) => sum + metric(group.correct_count), 0);
+  const totalWrong = careerGroups.reduce((sum, group) => sum + metric(group.wrong_count), 0);
+  const globalAccuracy = totalCorrect + totalWrong ? Math.round((totalCorrect / (totalCorrect + totalWrong)) * 100) : 0;
+  const bestExam = [...careerGroups].sort((a, b) => (b.score ?? -Infinity) - (a.score ?? -Infinity))[0];
   const evolution = (chartData.at(-1)?.aproveitamento ?? 0) - (chartData[0]?.aproveitamento ?? 0);
+  const hasMultipleAttempts = careerGroups.length > 1;
 
-  return (
-    <div className="space-y-7">
-      <section className="relative overflow-hidden rounded-[28px] bg-[#071a2f] px-6 py-7 text-white shadow-xl md:px-9 md:py-9">
-        <div className="absolute -right-16 -top-24 h-72 w-72 rounded-full bg-emerald-400/15 blur-3xl" />
-        <div className="relative flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-          <div>
-            <Badge className="mb-4 border-emerald-300/20 bg-emerald-400/10 text-emerald-300 hover:bg-emerald-400/10">
-              <Sparkles className="mr-1.5 h-3.5 w-3.5" /> Inteligência de desempenho
-            </Badge>
-            <h1 className="text-3xl font-black tracking-tight md:text-4xl">
-              {career ? `Área ${career}` : "Central de Provas"}
-            </h1>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-300 md:text-base">
-              {career
-                ? `Resultados, análise por questão e materiais vinculados à carreira ${career}.`
-                : "Seu histórico real de concursos transformado em indicadores para orientar a próxima etapa da preparação."}
-            </p>
-          </div>
-          <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
-            <ShieldCheck className="h-5 w-5 text-emerald-300" />
-            <div>
-              <p className="text-xs font-bold">Dados sincronizados</p>
-              <p className="text-[11px] text-slate-400">Acesso privado por CPF</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <MetricCard
-          icon={FileStack}
-          label="Provas analisadas"
-          value={String(visibleGroups.length)}
-          detail={`${totalPages} registro${totalPages === 1 ? "" : "s"} de resultado`}
-          tone="navy"
-        />
-        <MetricCard
-          icon={Target}
-          label="Aproveitamento geral"
-          value={`${globalAccuracy}%`}
-          detail={`${totalCorrect} acertos em ${totalCorrect + totalWrong} itens`}
-          tone="emerald"
-        />
-        <MetricCard
-          icon={BarChart3}
-          label="Melhor saldo"
-          value={`${bestExam.score ?? 0} pts`}
-          detail={`${bestExam.contest_name} ${bestExam.contest_year} · ${bestExam.exam_board || "banca"}`}
-          tone="amber"
-        />
-        <MetricCard
-          icon={TrendingUp}
-          label="Evolução histórica"
-          value={`${evolution >= 0 ? "+" : ""}${evolution} p.p.`}
-          detail={`${visibleGroups[0].contest_year} → ${visibleGroups.at(-1)?.contest_year}`}
-          tone={evolution >= 0 ? "emerald" : "rose"}
-        />
-      </section>
-
-      <section className="grid gap-5 xl:grid-cols-[1.55fr_1fr]">
-        <Card className="overflow-hidden border-slate-200/80 shadow-sm">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <TrendingUp className="h-5 w-5 text-emerald-600" />
-              Evolução entre provas
-            </CardTitle>
-            <CardDescription>
-              Percentual de acertos considerando apenas itens respondidos.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="h-[280px] pl-0">
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={chartData} margin={{ top: 8, right: 18, left: 0, bottom: 0 }}>
-                <defs>
-                  <linearGradient id="accuracyFill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
-                    <stop offset="95%" stopColor="#10b981" stopOpacity={0.02} />
-                  </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="4 4" vertical={false} stroke="#e2e8f0" />
-                <XAxis
-                  dataKey="year"
-                  axisLine={false}
-                  tickLine={false}
-                  tick={{ fill: "#64748b", fontSize: 12 }}
-                />
-                <YAxis
-                  domain={[0, 100]}
-                  axisLine={false}
-                  tickLine={false}
-                  tick={{ fill: "#94a3b8", fontSize: 11 }}
-                  tickFormatter={(value) => `${value}%`}
-                />
-                <Tooltip
-                  formatter={(value) => [`${value}%`, "Aproveitamento"]}
-                  labelFormatter={(label) => `PF ${label}`}
-                />
-                <Area
-                  type="monotone"
-                  dataKey="aproveitamento"
-                  stroke="#059669"
-                  strokeWidth={3}
-                  fill="url(#accuracyFill)"
-                  dot={{ fill: "#059669", strokeWidth: 3, r: 5 }}
-                />
-              </AreaChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-        <Card className="border-emerald-200/70 bg-gradient-to-br from-emerald-50 to-white shadow-sm dark:from-emerald-950/30 dark:to-card">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Award className="h-5 w-5 text-amber-500" />
-              Leitura estratégica
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <Insight
-              label="Melhor desempenho"
-              value={`PF ${bestExam.contest_year}`}
-              text={`${bestExam.score ?? 0} pontos líquidos e ${chartData.find((item) => item.year === bestExam.contest_year)?.aproveitamento ?? 0}% de aproveitamento.`}
-            />
-            <Insight
-              label="Tendência"
-              value={evolution >= 0 ? "Evolução positiva" : "Ponto de atenção"}
-              text={`Variação de ${Math.abs(evolution)} ponto${Math.abs(evolution) === 1 ? "" : "s"} percentual entre a primeira e a última prova registrada.`}
-            />
-            <Insight
-              label="Próximo foco"
-              value="Revisar os itens errados"
-              text="Use o detalhamento por questão para priorizar os assuntos com maior perda de pontos conforme a regra da banca."
-            />
-          </CardContent>
-        </Card>
-      </section>
-
-      <section className="space-y-4">
-        <div>
-          <h2 className="text-xl font-black text-primary">Histórico detalhado</h2>
-          <p className="text-sm text-muted-foreground">
-            Abra uma prova para consultar o boletim e todas as páginas digitalizadas.
-          </p>
-        </div>
-        {visibleGroups.map((group) => {
-          const answered = metric(group.correct_count) + metric(group.wrong_count);
-          const accuracy = answered
-            ? Math.round((metric(group.correct_count) / answered) * 100)
-            : 0;
-          const official = group.extracted_data?.resultado_oficial;
-          const audit = group.extracted_data?.auditoria_gabarito_definitivo;
-          const performance = group.extracted_data?.pontuacao_obtida;
-          const itemResults = group.extracted_data?.items;
-          const storedDocs = group.docs.filter(
-            (doc) => !doc.storage_path.startsWith("manual-entry/"),
-          );
-          const auditCounts = countAudit(group.audit_items);
-          const isOpen = openKey === group.key;
-          return (
-            <Card
-              key={group.key}
-              className={cn(
-                "overflow-hidden transition-all",
-                isOpen && "border-emerald-300 shadow-md",
-              )}
-            >
-              <button type="button" onClick={() => openGroup(group)} className="w-full text-left">
-                <CardHeader className="transition-colors hover:bg-slate-50/80 dark:hover:bg-slate-900/30">
-                  <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-center">
-                    <div className="flex items-center gap-4">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#071a2f] text-lg font-black text-emerald-300">
-                        {group.contest_year.slice(-2)}
-                      </div>
-                      <div>
-                        <CardTitle className="flex flex-wrap items-center gap-2 text-lg">
-                          {group.contest_name} — {group.contest_year}
-                          {official && <Badge className="bg-emerald-600">Oficial</Badge>}
-                        </CardTitle>
-                        <CardDescription className="mt-1">
-                          {group.exam_board || "Banca não identificada"} · resultado individual
-                          registrado
-                        </CardDescription>
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-4 items-center gap-3 text-center sm:gap-6">
-                      <MiniMetric
-                        label="Acertos"
-                        value={metric(group.correct_count)}
-                        className="text-emerald-600"
-                      />
-                      <MiniMetric
-                        label="Erros"
-                        value={metric(group.wrong_count)}
-                        className="text-rose-600"
-                      />
-                      <MiniMetric label="Saldo" value={group.score ?? 0} className="text-primary" />
-                      <div className="flex items-center gap-3">
-                        <MiniMetric
-                          label="Taxa"
-                          value={`${accuracy}%`}
-                          className="text-amber-600"
-                        />
-                        <ChevronDown
-                          className={cn(
-                            "h-5 w-5 text-muted-foreground transition-transform",
-                            isOpen && "rotate-180",
-                          )}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </CardHeader>
-              </button>
-              {isOpen && (
-                <CardContent className="space-y-5 border-t bg-slate-50/50 pt-5 dark:bg-slate-950/20">
-                  {official && (
-                    <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200">
-                      <p className="font-black">Boletim individual CEBRASPE confirmado</p>
-                      <p className="mt-1">
-                        Nota total: {official.nota_total ?? group.score} pontos ·{" "}
-                        {official.acertos_total ?? group.correct_count} acertos ·{" "}
-                        {official.erros_total ?? group.wrong_count} erros
-                        {official.classificacao_ampla_objetiva &&
-                          ` · ${official.classificacao_ampla_objetiva}ª colocação`}
-                      </p>
-                    </div>
-                  )}
-                  {performance && (
-                    <section className="space-y-4 rounded-2xl border border-violet-200 bg-gradient-to-br from-violet-50 to-white p-4 shadow-sm dark:border-violet-900 dark:from-violet-950/30 dark:to-card">
-                      <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
-                        <div>
-                          <p className="font-black text-primary">
-                            Resultado oficial - Polícia Penal do Acre
-                          </p>
-                          <p className="mt-1 text-xs text-muted-foreground">
-                            Prova IBFC 2023 corrigida conforme os pesos previstos no edital.
-                          </p>
-                        </div>
-                        <Badge className="w-fit bg-emerald-600">
-                          {group.extracted_data?.habilitado_prova_objetiva
-                            ? "Habilitado"
-                            : "Resultado registrado"}
-                        </Badge>
-                      </div>
-                      <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-                        <ResultMetric
-                          label="Objetiva"
-                          value={`${performance.total ?? group.score ?? 0}/90`}
-                        />
-                        <ResultMetric
-                          label="Conhecimentos gerais"
-                          value={`${performance.gerais_total ?? 0}/30`}
-                        />
-                        <ResultMetric
-                          label="Conhecimentos específicos"
-                          value={`${performance.especificos?.pontos ?? 0}/60`}
-                        />
-                        <ResultMetric
-                          label="Discursiva"
-                          value={`${group.extracted_data?.confirmacao_diario_oficial?.nota_discursiva_deduzida ?? 0}/20`}
-                        />
-                      </div>
-                      {itemResults && <ManualItemGrid items={itemResults} />}
-                    </section>
-                  )}
-                  {audit && (
-                    <section className="space-y-4 rounded-2xl border bg-white p-4 shadow-sm dark:bg-card">
-                      <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
-                        <div>
-                          <p className="flex items-center gap-2 font-black text-primary">
-                            <ShieldCheck className="h-5 w-5 text-emerald-600" />
-                            Auditoria pelo gabarito definitivo
-                          </p>
-                          <p className="mt-1 text-xs text-muted-foreground">
-                            Cada marcação legível foi comparada individualmente; dúvida de leitura
-                            permanece indeterminada.
-                          </p>
-                        </div>
-                        <Badge variant="outline">
-                          {group.audit_items.length || 120} itens mapeados
-                        </Badge>
-                      </div>
-                      <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-                        <AuditMetric
-                          icon={CheckCircle2}
-                          label="Confirmadas"
-                          value={auditCounts.correct}
-                          tone="text-emerald-600"
-                        />
-                        <AuditMetric
-                          icon={XCircle}
-                          label="Divergências"
-                          value={auditCounts.wrong}
-                          tone="text-rose-600"
-                        />
-                        <AuditMetric
-                          icon={CircleSlash2}
-                          label="Anuladas"
-                          value={auditCounts.annulled}
-                          tone="text-amber-600"
-                        />
-                        <AuditMetric
-                          icon={HelpCircle}
-                          label="A conferir"
-                          value={auditCounts.indeterminate}
-                          tone="text-slate-500"
-                        />
-                      </div>
-                      {(audit.divergencia_corrigida || audit.observacao) && (
-                        <div className="flex gap-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-950 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
-                          <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
-                          <span>{audit.divergencia_corrigida || audit.observacao}</span>
-                        </div>
-                      )}
-                      <div>
-                        <p className="mb-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
-                          Questão por questão
-                        </p>
-                        <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-10 lg:grid-cols-12">
-                          {group.audit_items.map((item) => (
-                            <AuditTile key={item.item_number} item={item} />
-                          ))}
-                        </div>
-                        <p className="mt-3 text-[11px] text-muted-foreground">
-                          C/E à esquerda: resposta lida na prova. C/E/X à direita: gabarito
-                          definitivo. X no gabarito significa questão anulada.
-                        </p>
-                      </div>
-                    </section>
-                  )}
-                  <div>
-                    <p className="mb-3 flex items-center gap-2 text-sm font-bold">
-                      <ImageIcon className="h-4 w-4" />
-                      Materiais anexados
-                    </p>
-                    {storedDocs.length ? (
-                      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-                        {storedDocs.map((doc, index) => (
-                          <a
-                            key={doc.id}
-                            href={signedUrls[doc.id] || undefined}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group relative aspect-[3/4] overflow-hidden rounded-xl border bg-muted shadow-sm transition hover:-translate-y-1 hover:ring-2 hover:ring-emerald-400"
-                          >
-                            {signedUrls[doc.id] ? (
-                              <img
-                                src={signedUrls[doc.id]}
-                                alt={`Página ${index + 1}`}
-                                className="h-full w-full object-cover"
-                                loading="lazy"
-                              />
-                            ) : (
-                              <span className="flex h-full items-center justify-center text-[10px] text-muted-foreground">
-                                carregando…
-                              </span>
-                            )}
-                            <span className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-5 text-[10px] font-bold text-white">
-                              Pág. {index + 1}
-                              <ExternalLink className="h-3 w-3" />
-                            </span>
-                          </a>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="rounded-xl border border-dashed bg-white p-4 text-sm text-muted-foreground dark:bg-card">
-                        <p className="font-bold text-foreground">
-                          Resultado localizado, arquivos não localizados
-                        </p>
-                        <p className="mt-1 text-xs leading-relaxed">
-                          A análise e as questões estão salvas, mas a prova realizada e os
-                          documentos oficiais não foram enviados ao Storage deste projeto.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </CardContent>
-              )}
-            </Card>
-          );
-        })}
-      </section>
-    </div>
-  );
-}
-
-function MetricCard({
-  icon: Icon,
-  label,
-  value,
-  detail,
-  tone,
-}: {
-  icon: React.ElementType;
-  label: string;
-  value: string;
-  detail: string;
-  tone: "navy" | "emerald" | "amber" | "rose";
-}) {
-  const tones = {
-    navy: "bg-slate-100 text-slate-700 dark:bg-slate-800",
-    emerald: "bg-emerald-100 text-emerald-700 dark:bg-emerald-950",
-    amber: "bg-amber-100 text-amber-700 dark:bg-amber-950",
-    rose: "bg-rose-100 text-rose-700 dark:bg-rose-950",
-  };
-  return (
-    <Card className="border-slate-200/80 shadow-sm">
-      <CardContent className="flex items-start justify-between p-5">
-        <div>
-          <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{label}</p>
-          <p className="mt-2 text-3xl font-black tracking-tight text-primary">{value}</p>
-          <p className="mt-1 text-xs text-muted-foreground">{detail}</p>
-        </div>
-        <span className={cn("rounded-2xl p-3", tones[tone])}>
-          <Icon className="h-5 w-5" />
-        </span>
-      </CardContent>
-    </Card>
-  );
-}
-function MiniMetric({
-  label,
-  value,
-  className,
-}: {
-  label: string;
-  value: string | number;
-  className?: string;
-}) {
-  return (
-    <div>
-      <p className="text-[10px] font-bold uppercase tracking-wide text-muted-foreground">{label}</p>
-      <p className={cn("mt-1 text-lg font-black", className)}>{value}</p>
-    </div>
-  );
-}
-function Insight({ label, value, text }: { label: string; value: string; text: string }) {
-  return (
-    <div className="rounded-2xl border border-white bg-white/80 p-4 shadow-sm dark:border-white/10 dark:bg-card/70">
-      <p className="text-[10px] font-black uppercase tracking-widest text-emerald-700 dark:text-emerald-400">
-        {label}
-      </p>
-      <p className="mt-1 font-black text-primary">{value}</p>
-      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{text}</p>
-    </div>
-  );
-}
-function countAudit(items: AuditItem[]) {
-  return items.reduce(
-    (counts, item) => {
-      counts[item.comparison_status] += 1;
-      return counts;
-    },
-    { correct: 0, wrong: 0, annulled: 0, blank: 0, indeterminate: 0 },
-  );
-}
-function AuditMetric({
-  icon: Icon,
-  label,
-  value,
-  tone,
-}: {
-  icon: React.ElementType;
-  label: string;
-  value: number;
-  tone: string;
-}) {
-  return (
-    <div className="rounded-xl border bg-slate-50 p-3 dark:bg-slate-900/40">
-      <Icon className={cn("h-4 w-4", tone)} />
-      <p className={cn("mt-2 text-xl font-black", tone)}>{value}</p>
-      <p className="text-[10px] font-bold uppercase tracking-wide text-muted-foreground">{label}</p>
-    </div>
-  );
-}
-function AuditTile({ item }: { item: AuditItem }) {
-  const styles = {
-    correct:
-      "border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-300",
-    wrong:
-      "border-rose-200 bg-rose-50 text-rose-800 dark:border-rose-900 dark:bg-rose-950/40 dark:text-rose-300",
-    annulled:
-      "border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-900 dark:bg-amber-950/40 dark:text-amber-300",
-    blank: "border-slate-200 bg-slate-50 text-slate-500",
-    indeterminate: "border-slate-200 bg-white text-slate-400 dark:bg-slate-900/40",
-  };
-  const labels = {
-    correct: "Certa",
-    wrong: "Divergente",
-    annulled: "Anulada",
-    blank: "Em branco",
-    indeterminate: "Leitura incerta",
-  };
-  return (
-    <div
-      title={`Item ${item.item_number}: ${labels[item.comparison_status]}${item.evidence_note ? ` — ${item.evidence_note}` : ""}`}
-      className={cn("rounded-lg border px-2 py-2 text-center", styles[item.comparison_status])}
-    >
-      <p className="text-[10px] font-black">{item.item_number}</p>
-      <p className="mt-1 text-xs font-bold">
-        {item.candidate_answer || "?"} / {item.official_answer}
-      </p>
-    </div>
-  );
-}
-function ResultMetric({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-xl border border-violet-100 bg-white/80 p-3 dark:border-violet-900 dark:bg-card/70">
-      <p className="text-[10px] font-black uppercase tracking-wide text-muted-foreground">
-        {label}
-      </p>
-      <p className="mt-1 text-xl font-black text-violet-700 dark:text-violet-300">{value}</p>
-    </div>
-  );
-}
-function ManualItemGrid({
-  items,
-}: {
-  items: Record<string, "correta" | "errada" | "anulada" | "branco">;
-}) {
-  const styles = {
-    correta: "border-emerald-200 bg-emerald-50 text-emerald-800",
-    errada: "border-rose-200 bg-rose-50 text-rose-800",
-    anulada: "border-amber-200 bg-amber-50 text-amber-800",
-    branco: "border-slate-200 bg-slate-50 text-slate-500",
-  };
-  return (
-    <div>
-      <p className="mb-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
-        Resultado das 60 questões
-      </p>
-      <div className="grid grid-cols-5 gap-2 sm:grid-cols-10 md:grid-cols-12">
-        {Object.entries(items)
-          .sort(([a], [b]) => Number(a) - Number(b))
-          .map(([number, status]) => (
-            <div
-              key={number}
-              title={`Questão ${number}: ${status}`}
-              className={cn("rounded-lg border px-2 py-2 text-center", styles[status])}
-            >
-              <p className="text-[10px] font-black">{number}</p>
-              <p className="mt-1 text-[9px] font-bold uppercase">{status.slice(0, 3)}</p>
-            </div>
-          ))}
+  return <div className="space-y-7">
+    <section className="relative overflow-hidden rounded-[28px] bg-[#071a2f] px-6 py-7 text-white shadow-xl md:px-9 md:py-9">
+      <div className="absolute -right-16 -top-24 h-72 w-72 rounded-full bg-emerald-400/15 blur-3xl" />
+      <div className="relative flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+        <div><Badge className="mb-4 border-emerald-300/20 bg-emerald-400/10 text-emerald-300 hover:bg-emerald-400/10"><Sparkles className="mr-1.5 h-3.5 w-3.5" /> Inteligência de desempenho</Badge><h1 className="text-3xl font-black tracking-tight md:text-4xl">Central de Provas</h1><p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-300 md:text-base">Seu histórico real transformado em indicadores para orientar a próxima etapa da preparação.</p></div>
+        <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur"><ShieldCheck className="h-5 w-5 text-emerald-300" /><div><p className="text-xs font-bold">Dados sincronizados</p><p className="text-[11px] text-slate-400">Acesso privado por CPF</p></div></div>
       </div>
-    </div>
-  );
+    </section>
+
+    {careers.length > 1 && <div className="flex flex-wrap gap-2">
+      {careers.map((career) => <button key={career} type="button" onClick={() => setContestFilter(career)} className={cn("rounded-full border px-4 py-1.5 text-xs font-bold transition-colors", career === activeCareer ? "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40" : "border-slate-200 text-muted-foreground hover:border-emerald-300")}>{career}</button>)}
+    </div>}
+
+    <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <MetricCard icon={FileStack} label="Provas analisadas" value={String(careerGroups.length)} detail={`${totalPages} páginas processadas`} tone="navy" />
+      <MetricCard icon={Target} label="Aproveitamento geral" value={`${globalAccuracy}%`} detail={`${totalCorrect} acertos em ${totalCorrect + totalWrong} itens`} tone="emerald" />
+      <MetricCard icon={BarChart3} label="Melhor saldo" value={`${bestExam.score ?? 0} pts`} detail={`${careerLabel} ${bestExam.contest_year} · padrão CEBRASPE`} tone="amber" />
+      <MetricCard icon={TrendingUp} label="Evolução histórica" value={hasMultipleAttempts ? `${evolution >= 0 ? "+" : ""}${evolution} p.p.` : "1 prova"} detail={hasMultipleAttempts ? `${careerGroups[0].contest_year} → ${careerGroups.at(-1)?.contest_year}` : "Envie outra prova para comparar"} tone={evolution >= 0 ? "emerald" : "rose"} />
+    </section>
+
+    <section className="grid gap-5 xl:grid-cols-[1.55fr_1fr]">
+      <Card className="overflow-hidden border-slate-200/80 shadow-sm"><CardHeader><CardTitle className="flex items-center gap-2 text-lg"><TrendingUp className="h-5 w-5 text-emerald-600" />Evolução entre provas</CardTitle><CardDescription>{hasMultipleAttempts ? "Percentual de acertos considerando apenas itens respondidos." : `Só há uma prova de ${careerLabel} cadastrada até agora — a comparação aparece aqui assim que houver outra.`}</CardDescription></CardHeader><CardContent className="h-[280px] pl-0"><ResponsiveContainer width="100%" height="100%"><AreaChart data={chartData} margin={{ top: 8, right: 18, left: 0, bottom: 0 }}><defs><linearGradient id="accuracyFill" x1="0" y1="0" x2="0" y2="1"><stop offset="5%" stopColor="#10b981" stopOpacity={0.3} /><stop offset="95%" stopColor="#10b981" stopOpacity={0.02} /></linearGradient></defs><CartesianGrid strokeDasharray="4 4" vertical={false} stroke="#e2e8f0" /><XAxis dataKey="year" axisLine={false} tickLine={false} tick={{ fill: "#64748b", fontSize: 12 }} /><YAxis domain={[0, 100]} axisLine={false} tickLine={false} tick={{ fill: "#94a3b8", fontSize: 11 }} tickFormatter={(value) => `${value}%`} /><Tooltip formatter={(value) => [`${value}%`, "Aproveitamento"]} labelFormatter={(label) => `${careerLabel} ${label}`} /><Area type="monotone" dataKey="aproveitamento" stroke="#059669" strokeWidth={3} fill="url(#accuracyFill)" dot={{ fill: "#059669", strokeWidth: 3, r: 5 }} /></AreaChart></ResponsiveContainer></CardContent></Card>
+      <Card className="border-emerald-200/70 bg-gradient-to-br from-emerald-50 to-white shadow-sm dark:from-emerald-950/30 dark:to-card"><CardHeader><CardTitle className="flex items-center gap-2 text-lg"><Award className="h-5 w-5 text-amber-500" />Leitura estratégica</CardTitle></CardHeader><CardContent className="space-y-4"><Insight label="Melhor desempenho" value={`${careerLabel} ${bestExam.contest_year}`} text={`${bestExam.score ?? 0} pontos líquidos e ${chartData.find((item) => item.year === bestExam.contest_year)?.aproveitamento ?? 0}% de aproveitamento.`} />{hasMultipleAttempts && <Insight label="Tendência" value={evolution >= 0 ? "Evolução positiva" : "Ponto de atenção"} text={`Variação de ${Math.abs(evolution)} ponto${Math.abs(evolution) === 1 ? "" : "s"} percentual entre a primeira e a última prova registrada.`} />}<Insight label="Próximo foco" value="Reduzir erros líquidos" text="No modelo CEBRASPE, cada erro reduz o saldo. Priorize segurança de resposta antes de ampliar o volume." /></CardContent></Card>
+    </section>
+
+    <section className="space-y-4">
+      <div><h2 className="text-xl font-black text-primary">Histórico detalhado</h2><p className="text-sm text-muted-foreground">Abra uma prova para ver o boletim, os pontos fracos por disciplina e as páginas digitalizadas.</p></div>
+      {careerGroups.map((group) => {
+        const answered = metric(group.correct_count) + metric(group.wrong_count);
+        const accuracy = answered ? Math.round((metric(group.correct_count) / answered) * 100) : 0;
+        const official = group.extracted_data?.resultado_oficial;
+        const isOpen = openKey === group.key;
+        const subjectMap = subjectMaps[group.contest_name];
+        const items: Record<string, string> | undefined = group.extracted_data?.items;
+        const breakdown: DisciplineBreakdown[] = [];
+        if (items && subjectMap) {
+          const bySubject = new Map<string, { correct: number; wrong: number }>();
+          for (const [itemNumber, verdict] of Object.entries(items)) {
+            const subject = subjectMap[itemNumber];
+            if (!subject || verdict === "anulada" || verdict === "branco" || verdict === "pendente_conferencia") continue;
+            const entry = bySubject.get(subject) ?? { correct: 0, wrong: 0 };
+            if (verdict === "correta") entry.correct += 1; else if (verdict === "errada") entry.wrong += 1;
+            bySubject.set(subject, entry);
+          }
+          for (const [subject, { correct, wrong }] of bySubject) {
+            const total = correct + wrong;
+            breakdown.push({ subject, correct, wrong, total, accuracy: total ? Math.round((correct / total) * 100) : 0 });
+          }
+          breakdown.sort((a, b) => a.accuracy - b.accuracy);
+        }
+        const weakSpots = breakdown.filter((b) => b.total >= 2 && b.accuracy < 50);
+        const cutoff = cutoffs[group.key];
+        const cutoffKnown = cutoff && cutoff.score !== null;
+        const passedCutoff = cutoffKnown && group.score !== null && group.score >= cutoff.score!;
+        return <Card key={group.key} className={cn("overflow-hidden transition-all", isOpen && "border-emerald-300 shadow-md")}>
+        <button type="button" onClick={() => openGroup(group)} className="w-full text-left"><CardHeader className="transition-colors hover:bg-slate-50/80 dark:hover:bg-slate-900/30"><div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-center"><div className="flex items-center gap-4"><div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#071a2f] text-lg font-black text-emerald-300">{group.contest_year.slice(-2)}</div><div><CardTitle className="flex flex-wrap items-center gap-2 text-lg">{group.contest_name} — {group.contest_year}{official && <Badge className="bg-emerald-600">Oficial</Badge>}{cutoffKnown && <Badge variant="outline" className={cn("text-[10px]", passedCutoff ? "border-emerald-300 bg-emerald-50 text-emerald-700" : "border-rose-300 bg-rose-50 text-rose-700")}>{passedCutoff ? "Acima do corte" : "Abaixo do corte"}</Badge>}</CardTitle><CardDescription className="mt-1">{group.exam_board || "Banca não identificada"} · {group.pageCount} páginas{cutoffKnown ? ` · Nota de corte: ${cutoff!.score} pts` : " · Nota de corte não localizada"}</CardDescription></div></div><div className="grid grid-cols-4 items-center gap-3 text-center sm:gap-6"><MiniMetric label="Acertos" value={metric(group.correct_count)} className="text-emerald-600" /><MiniMetric label="Erros" value={metric(group.wrong_count)} className="text-rose-600" /><MiniMetric label="Saldo" value={group.score ?? 0} className="text-primary" /><div className="flex items-center gap-3"><MiniMetric label="Taxa" value={`${accuracy}%`} className="text-amber-600" /><ChevronDown className={cn("h-5 w-5 text-muted-foreground transition-transform", isOpen && "rotate-180")} /></div></div></div></CardHeader></button>
+        {isOpen && <CardContent className="space-y-5 border-t bg-slate-50/50 pt-5 dark:bg-slate-950/20">
+          {official && <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200"><p className="font-black">Boletim individual CEBRASPE confirmado</p><p className="mt-1">Nota total: {official.nota_total ?? group.score} pontos · {official.acertos_total ?? group.correct_count} acertos · {official.erros_total ?? group.wrong_count} erros{official.classificacao_ampla_objetiva && ` · ${official.classificacao_ampla_objetiva}ª colocação`}</p></div>}
+          {cutoffKnown && group.score !== null && <div className={cn("rounded-2xl border p-4 text-sm", passedCutoff ? "border-emerald-200 bg-emerald-50 text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200" : "border-rose-200 bg-rose-50 text-rose-900 dark:border-rose-800 dark:bg-rose-950/40 dark:text-rose-200")}><p className="font-black">Nota de corte: {cutoff!.score} pontos</p><p className="mt-1">{passedCutoff ? `Sua nota (${group.score}) ficou acima do corte.` : `Sua nota (${group.score}) ficou ${(cutoff!.score! - group.score).toFixed(2)} pontos abaixo do corte.`}</p>{cutoff!.notes && <p className="mt-1 text-xs opacity-75">{cutoff!.notes}</p>}</div>}
+          {cutoff && cutoff.score === null && <p className="text-xs text-muted-foreground">Nota de corte deste concurso ainda não foi localizada em fonte confiável.</p>}
+          {breakdown.length > 0 && <div>
+            <p className="mb-3 flex items-center gap-2 text-sm font-bold"><Target className="h-4 w-4" />Pontos fracos por disciplina</p>
+            {weakSpots.length > 0 && <p className="mb-3 text-xs text-rose-700 dark:text-rose-400">Abaixo de 50% de aproveitamento: {weakSpots.map((w) => w.subject).join(", ")}.</p>}
+            <div className="space-y-2">
+              {breakdown.map((item) => <div key={item.subject} className="flex items-center gap-3 text-xs">
+                <span className="w-40 shrink-0 truncate font-semibold" title={item.subject}>{item.subject}</span>
+                <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"><div className={cn("h-full rounded-full", item.accuracy < 50 ? "bg-rose-500" : item.accuracy < 75 ? "bg-amber-500" : "bg-emerald-500")} style={{ width: `${item.accuracy}%` }} /></div>
+                <span className="w-24 shrink-0 text-right text-muted-foreground">{item.correct}/{item.total} ({item.accuracy}%)</span>
+              </div>)}
+            </div>
+          </div>}
+          <div><p className="mb-3 flex items-center gap-2 text-sm font-bold"><ImageIcon className="h-4 w-4" />Caderno digitalizado</p><div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">{group.docs.map((doc, index) => <a key={doc.id} href={signedUrls[doc.id] || undefined} target="_blank" rel="noopener noreferrer" className="group relative aspect-[3/4] overflow-hidden rounded-xl border bg-muted shadow-sm transition hover:-translate-y-1 hover:ring-2 hover:ring-emerald-400">{signedUrls[doc.id] ? <img src={signedUrls[doc.id]} alt={`Página ${index + 1}`} className="h-full w-full object-cover" loading="lazy" /> : <span className="flex h-full items-center justify-center text-[10px] text-muted-foreground">carregando…</span>}<span className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-5 text-[10px] font-bold text-white">Pág. {index + 1}<ExternalLink className="h-3 w-3" /></span></a>)}</div></div>
+        </CardContent>}
+      </Card>; })}
+    </section>
+  </div>;
 }
 function EmptyState({
   title,

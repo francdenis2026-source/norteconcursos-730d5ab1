@@ -1,4 +1,5 @@
 -- Students may create signed URLs only for files linked to their own account.
+drop policy if exists "Users can view own student exam files" on storage.objects;
 create policy "Users can view own student exam files"
   on storage.objects for select to authenticated
   using (

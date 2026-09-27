@@ -24,7 +24,9 @@ create table if not exists public.curated_question_catalog (
 );
 
 alter table public.curated_question_catalog enable row level security;
+drop policy if exists "Authenticated users can read active curated questions" on public.curated_question_catalog;
 create policy "Authenticated users can read active curated questions" on public.curated_question_catalog for select to authenticated using (content_status='active');
+drop policy if exists "Admins manage curated questions" on public.curated_question_catalog;
 create policy "Admins manage curated questions" on public.curated_question_catalog for all to authenticated using (public.has_role(auth.uid(),'admin')) with check (public.has_role(auth.uid(),'admin'));
 
 insert into public.content_sources (source_type,title,issuer,url,published_on,status,notes) values

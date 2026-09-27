@@ -4,10 +4,11 @@ ADD COLUMN IF NOT EXISTS onboarding_steps jsonb DEFAULT '{"contest": false, "not
 ADD COLUMN IF NOT EXISTS onboarding_done boolean DEFAULT false;
 
 -- Garantir que a tabela profiles tenha RLS para o próprio usuário editar
-CREATE POLICY "Users can update own profile" 
-ON public.profiles 
-FOR UPDATE 
-TO authenticated 
+DROP POLICY IF EXISTS "Users can update own profile" ON public.profiles;
+CREATE POLICY "Users can update own profile"
+ON public.profiles
+FOR UPDATE
+TO authenticated
 USING (auth.uid() = id);
 
 -- Criar função para validar tier no backend (exemplo para ser usada em outras funções ou RLS)
