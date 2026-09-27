@@ -849,6 +849,22 @@ interface RecoveryExam {
   blank_count: number | null;
   score_net: number | null;
   score_raw: number | null;
+  file_name: string;
+  storage_path: string;
+  extracted_data: ExamAnalysis | null;
+}
+
+interface RecoveryGroup {
+  key: string;
+  contest: string;
+  year: string;
+  board: string;
+  correct: number;
+  wrong: number;
+  blank: number;
+  score: number;
+  result: RecoveryExam | null;
+  pages: RecoveryExam[];
 }
 
 /**
@@ -860,6 +876,8 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
   const [exams, setExams] = React.useState<RecoveryExam[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [message, setMessage] = React.useState<string | null>(null);
+  const [openExam, setOpenExam] = React.useState<string | null>(null);
+  const [pageUrls, setPageUrls] = React.useState<Record<string, string>>({});
 
   React.useEffect(() => {
     let active = true;
@@ -874,7 +892,7 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
         const { data, error } = await supabase
           .from("student_exam_documents")
           .select(
-            "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw",
+            "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,extracted_data",
           )
           .eq("user_id", session.user.id)
           .order("contest_year", { ascending: false });
@@ -897,16 +915,79 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
     return <div className="p-8 text-sm text-muted-foreground">Carregando suas provas…</div>;
   }
 
+  const grouped = new Map<string, RecoveryGroup>();
+  for (const exam of exams) {
+    const contest = String(exam.contest_name || "Concurso");
+    const year = String(exam.contest_year || "—");
+    const key = `${contest}__${year}`;
+    const current = grouped.get(key) || {
+      key,
+      contest,
+      year,
+      board: String(exam.exam_board || "Banca não informada"),
+      correct: 0,
+      wrong: 0,
+      blank: 0,
+      score: 0,
+      result: null,
+      pages: [],
+    };
+    if (exam.storage_path?.startsWith("manual-entry/")) {
+      current.result = exam;
+      current.correct = Number(exam.correct_count ?? 0);
+      current.wrong = Number(exam.wrong_count ?? 0);
+      current.blank = Number(exam.blank_count ?? 0);
+      current.score = Number(exam.score_net ?? exam.score_raw ?? 0);
+    } else {
+      current.pages.push(exam);
+    }
+    grouped.set(key, current);
+  }
+  const examGroups = Array.from(grouped.values()).sort((a, b) =>
+    b.year.localeCompare(a.year, "pt-BR", { numeric: true }),
+  );
+  const totalPages = examGroups.reduce((sum, group) => sum + group.pages.length, 0);
+  const averageAccuracy = examGroups.length
+    ? Math.round(
+        examGroups.reduce((sum, group) => {
+          const answered = group.correct + group.wrong;
+          return sum + (answered ? (group.correct / answered) * 100 : 0);
+        }, 0) / examGroups.length,
+      )
+    : 0;
+
+  const toggleExam = async (group: RecoveryGroup) => {
+    if (openExam === group.key) {
+      setOpenExam(null);
+      return;
+    }
+    setOpenExam(group.key);
+    const missing = group.pages.filter((page) => !pageUrls[page.id]);
+    if (!missing.length) return;
+    const results = await Promise.all(
+      missing.map((page) =>
+        supabase.storage.from("student-exams").createSignedUrl(page.storage_path, 3600),
+      ),
+    );
+    setPageUrls((current) => {
+      const next = { ...current };
+      missing.forEach((page, index) => {
+        const url = results[index].data?.signedUrl;
+        if (url) next[page.id] = url;
+      });
+      return next;
+    });
+  };
+
   return (
     <div className="space-y-6">
       <section className="rounded-[28px] bg-[#071a2f] px-6 py-7 text-white shadow-xl md:px-9">
-        <Badge className="mb-3 border-amber-300/20 bg-amber-400/10 text-amber-200">
-          Histórico protegido
+        <Badge className="mb-3 border-emerald-300/20 bg-emerald-400/10 text-emerald-200">
+          Dados sincronizados
         </Badge>
         <h1 className="text-3xl font-black">Minhas provas</h1>
         <p className="mt-2 max-w-2xl text-sm text-slate-300">
-          Seus resultados continuam salvos. Esta visualização segura foi ativada enquanto os
-          gráficos detalhados são reconstruídos.
+          Resultados, indicadores de desempenho e cadernos digitalizados reunidos por concurso.
         </p>
       </section>
 
@@ -917,34 +998,153 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
             <Button onClick={reset}>Tentar novamente</Button>
           </CardContent>
         </Card>
-      ) : exams.length ? (
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {exams.map((exam) => {
-            const correct = Number(exam.correct_count ?? 0);
-            const wrong = Number(exam.wrong_count ?? 0);
-            const answered = correct + wrong;
-            const accuracy = answered ? Math.round((correct / answered) * 100) : 0;
-            const score = Number(exam.score_net ?? exam.score_raw ?? 0);
-            return (
-              <Card key={String(exam.id)} className="overflow-hidden border-slate-200 shadow-sm">
-                <div className="h-1.5 bg-emerald-500" />
-                <CardHeader>
-                  <CardTitle className="text-base">
-                    {String(exam.contest_name || "Concurso")} — {String(exam.contest_year || "—")}
-                  </CardTitle>
-                  <CardDescription>
-                    {String(exam.exam_board || "Banca não informada")}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="grid grid-cols-3 gap-3 text-center">
-                  <MiniMetric label="Acertos" value={correct} className="text-emerald-600" />
-                  <MiniMetric label="Saldo" value={score} className="text-primary" />
-                  <MiniMetric label="Taxa" value={`${accuracy}%`} className="text-amber-600" />
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+      ) : examGroups.length ? (
+        <>
+          <section className="grid gap-4 sm:grid-cols-3">
+            <MetricCard
+              icon={FileStack}
+              label="Provas analisadas"
+              value={String(examGroups.length)}
+              detail={`${totalPages} páginas originais`}
+              tone="navy"
+            />
+            <MetricCard
+              icon={Target}
+              label="Aproveitamento médio"
+              value={`${averageAccuracy}%`}
+              detail="Somente itens respondidos"
+              tone="emerald"
+            />
+            <MetricCard
+              icon={ShieldCheck}
+              label="Arquivos recuperados"
+              value={String(totalPages)}
+              detail="Imagens acessíveis no Supabase"
+              tone="amber"
+            />
+          </section>
+          <div className="space-y-4">
+            {examGroups.map((group) => {
+              const answered = group.correct + group.wrong;
+              const accuracy = answered ? Math.round((group.correct / answered) * 100) : 0;
+              const isOpen = openExam === group.key;
+              return (
+                <Card
+                  key={group.key}
+                  className={cn(
+                    "overflow-hidden border-slate-200 shadow-sm",
+                    isOpen && "border-emerald-300 shadow-md",
+                  )}
+                >
+                  <button
+                    type="button"
+                    className="w-full text-left"
+                    onClick={() => void toggleExam(group)}
+                  >
+                    <CardHeader className="transition-colors hover:bg-slate-50 dark:hover:bg-slate-900/30">
+                      <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
+                        <div>
+                          <CardTitle className="flex flex-wrap items-center gap-2 text-base md:text-lg">
+                            {group.contest} — {group.year}
+                            {group.result && <Badge className="bg-emerald-600">Analisada</Badge>}
+                          </CardTitle>
+                          <CardDescription className="mt-1">
+                            {group.board} · {group.pages.length} páginas digitalizadas
+                          </CardDescription>
+                        </div>
+                        <div className="grid grid-cols-4 items-center gap-4 text-center">
+                          <MiniMetric
+                            label="Acertos"
+                            value={group.correct}
+                            className="text-emerald-600"
+                          />
+                          <MiniMetric label="Erros" value={group.wrong} className="text-rose-600" />
+                          <MiniMetric label="Saldo" value={group.score} className="text-primary" />
+                          <div className="flex items-center gap-2">
+                            <MiniMetric
+                              label="Taxa"
+                              value={`${accuracy}%`}
+                              className="text-amber-600"
+                            />
+                            <ChevronDown
+                              className={cn("h-5 w-5 transition-transform", isOpen && "rotate-180")}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </CardHeader>
+                  </button>
+                  {isOpen && (
+                    <CardContent className="space-y-4 border-t bg-slate-50/50 pt-5 dark:bg-slate-950/20">
+                      <div className="grid gap-3 sm:grid-cols-4">
+                        <div className="rounded-xl border bg-background p-3 text-sm">
+                          <strong>{group.correct}</strong>
+                          <br />
+                          <span className="text-xs text-muted-foreground">questões corretas</span>
+                        </div>
+                        <div className="rounded-xl border bg-background p-3 text-sm">
+                          <strong>{group.wrong}</strong>
+                          <br />
+                          <span className="text-xs text-muted-foreground">questões erradas</span>
+                        </div>
+                        <div className="rounded-xl border bg-background p-3 text-sm">
+                          <strong>{group.blank}</strong>
+                          <br />
+                          <span className="text-xs text-muted-foreground">em branco</span>
+                        </div>
+                        <div className="rounded-xl border bg-background p-3 text-sm">
+                          <strong>{group.score}</strong>
+                          <br />
+                          <span className="text-xs text-muted-foreground">
+                            pontuação registrada
+                          </span>
+                        </div>
+                      </div>
+                      {group.pages.length > 0 ? (
+                        <div>
+                          <p className="mb-3 flex items-center gap-2 text-sm font-bold">
+                            <ImageIcon className="h-4 w-4" /> Caderno digitalizado
+                          </p>
+                          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
+                            {group.pages.map((page, index) => (
+                              <a
+                                key={page.id}
+                                href={pageUrls[page.id]}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="relative aspect-[3/4] overflow-hidden rounded-xl border bg-muted shadow-sm transition hover:-translate-y-1 hover:ring-2 hover:ring-emerald-400"
+                              >
+                                {pageUrls[page.id] ? (
+                                  <img
+                                    src={pageUrls[page.id]}
+                                    alt={`Página ${index + 1}`}
+                                    className="h-full w-full object-cover"
+                                    loading="lazy"
+                                  />
+                                ) : (
+                                  <span className="flex h-full items-center justify-center text-[10px] text-muted-foreground">
+                                    carregando…
+                                  </span>
+                                )}
+                                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-5 text-[10px] font-bold text-white">
+                                  Página {index + 1}
+                                </span>
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <p className="text-xs text-muted-foreground">
+                          O resultado está salvo; não há imagens vinculadas para esta prova.
+                        </p>
+                      )}
+                    </CardContent>
+                  )}
+                </Card>
+              );
+            })}
+          </div>
+        </>
       ) : (
         <EmptyState
           title="Nenhuma prova encontrada"
@@ -954,7 +1154,7 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
 
       <Button variant="outline" onClick={reset}>
         <RefreshCw className="mr-2 h-4 w-4" />
-        Recarregar análises completas
+        Atualizar dados
       </Button>
     </div>
   );
