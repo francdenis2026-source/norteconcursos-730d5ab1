@@ -27,6 +27,8 @@ import {
   TrendingUp,
   XCircle,
   FileStack,
+  ZoomIn,
+  ZoomOut,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
@@ -1513,20 +1515,81 @@ function PageSlideshow({
   onNext: () => void;
   onClose: () => void;
 }) {
+  const ZOOM_MIN = 1;
+  const ZOOM_MAX = 4;
+  const [zoom, setZoom] = React.useState(1);
+  const [pan, setPan] = React.useState({ x: 0, y: 0 });
+  const dragRef = React.useRef<{ x: number; y: number; panX: number; panY: number } | null>(null);
+  const [isDragging, setIsDragging] = React.useState(false);
+
+  const clampZoom = (value: number) => Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, value));
+
+  const zoomBy = (delta: number) => {
+    setZoom((previous) => {
+      const next = clampZoom(previous + delta);
+      if (next === ZOOM_MIN) setPan({ x: 0, y: 0 });
+      return next;
+    });
+  };
+
+  const resetZoom = () => {
+    setZoom(1);
+    setPan({ x: 0, y: 0 });
+  };
+
+  // A cada página nova, começa sem zoom — senão o zoom da página anterior
+  // ficaria "grudado" ao navegar, cortando a próxima imagem sem o candidato entender por quê.
+  React.useEffect(() => {
+    resetZoom();
+  }, [current]);
+
   React.useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") onPrev();
       else if (e.key === "ArrowRight") onNext();
       else if (e.key === "Escape") onClose();
+      else if (e.key === "+" || e.key === "=") zoomBy(0.5);
+      else if (e.key === "-") zoomBy(-0.5);
+      else if (e.key === "0") resetZoom();
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [onPrev, onNext, onClose]);
 
+  const handleWheel = (e: React.WheelEvent) => {
+    if (!imageUrl) return;
+    e.preventDefault();
+    zoomBy(e.deltaY < 0 ? 0.35 : -0.35);
+  };
+
+  const handleDoubleClick = () => {
+    if (zoom > 1) resetZoom();
+    else setZoom(2.5);
+  };
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    if (zoom <= 1) return;
+    (e.target as Element).setPointerCapture(e.pointerId);
+    dragRef.current = { x: e.clientX, y: e.clientY, panX: pan.x, panY: pan.y };
+    setIsDragging(true);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (!dragRef.current) return;
+    const dx = e.clientX - dragRef.current.x;
+    const dy = e.clientY - dragRef.current.y;
+    setPan({ x: dragRef.current.panX + dx, y: dragRef.current.panY + dy });
+  };
+
+  const stopDragging = () => {
+    dragRef.current = null;
+    setIsDragging(false);
+  };
+
   return (
     <div
       className="fixed inset-0 z-50 flex flex-col bg-black/90 p-4"
-      onClick={(e) => e.target === e.currentTarget && onClose()}
+      onClick={(e) => e.target === e.currentTarget && zoom === 1 && onClose()}
     >
       <div className="flex items-center justify-between text-white">
         <div>
@@ -1535,16 +1598,49 @@ function PageSlideshow({
             Página {current} de {total}
           </p>
         </div>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="text-white hover:bg-white/10"
-          onClick={onClose}
-        >
-          <XCircle className="h-6 w-6" />
-        </Button>
+        <div className="flex items-center gap-1">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-white hover:bg-white/10 disabled:opacity-30"
+            onClick={() => zoomBy(-0.5)}
+            disabled={zoom <= ZOOM_MIN}
+            aria-label="Diminuir zoom"
+          >
+            <ZoomOut className="h-5 w-5" />
+          </Button>
+          <button
+            type="button"
+            onClick={resetZoom}
+            className="min-w-[3.5rem] rounded px-1 text-xs font-bold text-white/80 hover:bg-white/10"
+          >
+            {Math.round(zoom * 100)}%
+          </button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-white hover:bg-white/10 disabled:opacity-30"
+            onClick={() => zoomBy(0.5)}
+            disabled={zoom >= ZOOM_MAX}
+            aria-label="Aumentar zoom"
+          >
+            <ZoomIn className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="ml-1 text-white hover:bg-white/10"
+            onClick={onClose}
+            aria-label="Fechar"
+          >
+            <XCircle className="h-6 w-6" />
+          </Button>
+        </div>
       </div>
-      <div className="relative flex flex-1 items-center justify-center overflow-hidden">
+      <div
+        className="relative flex flex-1 items-center justify-center overflow-hidden"
+        onWheel={handleWheel}
+      >
         <button
           type="button"
           onClick={onPrev}
@@ -1558,7 +1654,21 @@ function PageSlideshow({
           <img
             src={imageUrl}
             alt={`Página ${current}`}
-            className="max-h-full max-w-full rounded-lg object-contain"
+            onDoubleClick={handleDoubleClick}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={stopDragging}
+            onPointerLeave={stopDragging}
+            draggable={false}
+            className={cn(
+              "max-h-full max-w-full rounded-lg object-contain transition-transform",
+              zoom > 1 ? (isDragging ? "cursor-grabbing" : "cursor-grab") : "cursor-zoom-in",
+              isDragging && "duration-0",
+            )}
+            style={{
+              transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
+              transitionDuration: isDragging ? "0ms" : "150ms",
+            }}
           />
         ) : (
           <p className="text-sm text-white/70">carregando…</p>
@@ -1573,6 +1683,10 @@ function PageSlideshow({
           <ChevronDown className="h-6 w-6 -rotate-90" />
         </button>
       </div>
+      <p className="pt-2 text-center text-[11px] text-white/40">
+        Roda do mouse ou +/- para zoom · duplo clique para ampliar · arraste para mover · 0 para
+        restaurar
+      </p>
     </div>
   );
 }
