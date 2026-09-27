@@ -820,6 +820,137 @@ function StudentExamsPage() {
     </div>
   );
 }
+// Lets the candidate upload a photo/PDF of an exam they took. Each file
+// becomes its own student_exam_documents row (doc_type "upload_candidato",
+// analysis_status "pendente") and triggers the analyze-exam-upload edge
+// function, which asks the AI Gateway to identify the contest/year/board —
+// never a score. The candidate sees the classification result (or an error)
+// per file so they know whether it landed correctly.
+function ExamUploader({ userId, onUploaded }: { userId: string; onUploaded: () => void }) {
+  const [busy, setBusy] = React.useState(false);
+  const [statuses, setStatuses] = React.useState<
+    { name: string; state: "enviando" | "classificando" | "ok" | "erro"; detail?: string }[]
+  >([]);
+
+  const handleFiles = async (fileList: FileList | null) => {
+    if (!fileList || !fileList.length) return;
+    setBusy(true);
+    const files = Array.from(fileList);
+    setStatuses(files.map((f) => ({ name: f.name, state: "enviando" })));
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      if (!file) continue;
+      try {
+        const path = `${userId}/uploads-candidato/${Date.now()}-${file.name.replace(/[^a-zA-Z0-9._-]/g, "_")}`;
+        const { error: uploadError } = await supabase.storage.from("student-exams").upload(path, file, {
+          contentType: file.type || undefined,
+        });
+        if (uploadError) throw uploadError;
+
+        const { data: inserted, error: insertError } = await supabase
+          .from("student_exam_documents")
+          .insert({
+            user_id: userId,
+            contest_name: null,
+            contest_year: null,
+            doc_type: "upload_candidato",
+            uploaded_via: "candidate_upload",
+            analysis_status: "pendente",
+            file_name: file.name,
+            storage_path: path,
+          })
+          .select("id")
+          .single();
+        if (insertError || !inserted) throw insertError ?? new Error("Falha ao registrar o envio");
+
+        setStatuses((prev) =>
+          prev.map((s, idx) => (idx === i ? { ...s, state: "classificando" } : s)),
+        );
+
+        const { data: fnResult, error: fnError } = await supabase.functions.invoke("analyze-exam-upload", {
+          body: { documentId: inserted.id },
+        });
+        if (fnError) throw fnError;
+        const extracted = fnResult?.extracted;
+        setStatuses((prev) =>
+          prev.map((s, idx) =>
+            idx === i
+              ? {
+                  ...s,
+                  state: "ok",
+                  detail: extracted?.contest_name
+                    ? `${extracted.contest_name}${extracted.contest_year ? " — " + extracted.contest_year : ""}`
+                    : "Enviado; não foi possível identificar o concurso automaticamente.",
+                }
+              : s,
+          ),
+        );
+      } catch (error) {
+        console.error("Falha no upload/análise da prova", error);
+        setStatuses((prev) =>
+          prev.map((s, idx) =>
+            idx === i ? { ...s, state: "erro", detail: error instanceof Error ? error.message : String(error) } : s,
+          ),
+        );
+      }
+    }
+    setBusy(false);
+    onUploaded();
+  };
+
+  return (
+    <Card className="border-dashed border-2 border-emerald-300/60 bg-emerald-50/40 dark:bg-emerald-950/10">
+      <CardContent className="flex flex-col items-center gap-3 py-6 text-center sm:flex-row sm:justify-between sm:text-left">
+        <div>
+          <p className="flex items-center gap-2 text-sm font-bold">
+            <ImageIcon className="h-4 w-4 text-emerald-600" /> Enviar uma prova que você fez
+          </p>
+          <p className="mt-1 text-xs text-muted-foreground">
+            Envie fotos ou o PDF do caderno/gabarito. Uma IA identifica o concurso, o ano e a banca
+            automaticamente — a nota continua sendo conferida item a item depois, nunca inventada.
+          </p>
+        </div>
+        <div>
+          <label>
+            <input
+              type="file"
+              multiple
+              accept="image/*,.pdf"
+              className="hidden"
+              disabled={busy}
+              onChange={(e) => void handleFiles(e.target.files)}
+            />
+            <Button asChild disabled={busy} className="pointer-events-none">
+              <span>{busy ? "Enviando…" : "Selecionar arquivos"}</span>
+            </Button>
+          </label>
+        </div>
+      </CardContent>
+      {statuses.length > 0 && (
+        <CardContent className="border-t pt-3 space-y-1.5">
+          {statuses.map((s, i) => (
+            <div key={i} className="flex items-center gap-2 text-xs">
+              {s.state === "ok" && <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-emerald-600" />}
+              {s.state === "erro" && <XCircle className="h-3.5 w-3.5 shrink-0 text-rose-600" />}
+              {(s.state === "enviando" || s.state === "classificando") && (
+                <RefreshCw className="h-3.5 w-3.5 shrink-0 animate-spin text-muted-foreground" />
+              )}
+              <span className="font-semibold">{s.name}</span>
+              <span className="text-muted-foreground">
+                {s.state === "enviando" && "enviando…"}
+                {s.state === "classificando" && "identificando concurso…"}
+                {s.state === "ok" && s.detail}
+                {s.state === "erro" && `erro: ${s.detail}`}
+              </span>
+            </div>
+          ))}
+        </CardContent>
+      )}
+    </Card>
+  );
+}
+
 function EmptyState({
   title,
   description,
@@ -878,6 +1009,8 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
   const [message, setMessage] = React.useState<string | null>(null);
   const [openExam, setOpenExam] = React.useState<string | null>(null);
   const [pageUrls, setPageUrls] = React.useState<Record<string, string>>({});
+  const [userId, setUserId] = React.useState<string | null>(null);
+  const [uploadTick, setUploadTick] = React.useState(0);
 
   React.useEffect(() => {
     let active = true;
@@ -889,6 +1022,7 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
           if (active) setMessage("Entre novamente para acessar suas provas.");
           return;
         }
+        if (active) setUserId(session.user.id);
         const { data, error } = await withTimeout(
           supabase
             .from("student_exam_documents")
@@ -912,7 +1046,7 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
     return () => {
       active = false;
     };
-  }, []);
+  }, [uploadTick]);
 
   if (loading) {
     return <div className="p-8 text-sm text-muted-foreground">Carregando suas provas…</div>;
@@ -993,6 +1127,8 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
           Resultados, indicadores de desempenho e cadernos digitalizados reunidos por concurso.
         </p>
       </section>
+
+      {userId && <ExamUploader userId={userId} onUploaded={() => setUploadTick((v) => v + 1)} />}
 
       {message ? (
         <Card>
