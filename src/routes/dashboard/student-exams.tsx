@@ -1394,6 +1394,7 @@ interface EssaySubmission {
   status: string;
   transcricao: string | null;
   correcao: EssayCorrecao;
+  storage_paths: string[] | null;
 }
 
 const ESSAY_STATUS_LABEL: Record<string, { label: string; color: string }> = {
@@ -1405,7 +1406,13 @@ const ESSAY_STATUS_LABEL: Record<string, { label: string; color: string }> = {
 // Renders one essay inline inside a contest's own card — same content as the
 // standalone "Treino de Redação" page, but scoped to the exam it belongs to
 // instead of a separate, disconnected screen.
-function EssayInline({ essay }: { essay: EssaySubmission }) {
+function EssayInline({
+  essay,
+  imageUrls,
+}: {
+  essay: EssaySubmission;
+  imageUrls: Record<string, string>;
+}) {
   const st = ESSAY_STATUS_LABEL[essay.status] || { label: essay.status, color: "bg-muted" };
   const abordados = essay.topicos?.filter((t) => t.abordado === true).length || 0;
   const totalTopicos = essay.topicos?.length || 0;
@@ -1420,6 +1427,37 @@ function EssayInline({ essay }: { essay: EssaySubmission }) {
         </div>
         <Badge className={cn("text-white", st.color)}>{st.label}</Badge>
       </div>
+      {essay.storage_paths && essay.storage_paths.length > 0 && (
+        <div className="mt-3">
+          <p className="mb-2 text-xs font-bold uppercase text-muted-foreground">
+            Folha da redação do candidato
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {essay.storage_paths.map((path) => (
+              <a
+                key={path}
+                href={imageUrls[path] || undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative h-40 w-32 overflow-hidden rounded-xl border bg-muted shadow-sm transition hover:-translate-y-1 hover:ring-2 hover:ring-emerald-400"
+              >
+                {imageUrls[path] ? (
+                  <img
+                    src={imageUrls[path]}
+                    alt="Folha da redação"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <span className="flex h-full items-center justify-center text-[10px] text-muted-foreground">
+                    carregando…
+                  </span>
+                )}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
       {totalTopicos > 0 && (
         <div className="mt-3">
           <p className="mb-2 text-xs font-bold uppercase text-muted-foreground">
@@ -1508,6 +1546,7 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
   const [message, setMessage] = React.useState<string | null>(null);
   const [openExam, setOpenExam] = React.useState<string | null>(null);
   const [pageUrls, setPageUrls] = React.useState<Record<string, string>>({});
+  const [essayImageUrls, setEssayImageUrls] = React.useState<Record<string, string>>({});
   const [userId, setUserId] = React.useState<string | null>(null);
   const [uploadTick, setUploadTick] = React.useState(0);
   const [viewer, setViewer] = React.useState<{ groupKey: string; index: number } | null>(null);
@@ -1536,7 +1575,9 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
           withTimeout(
             supabase
               .from("essay_submissions")
-              .select("id,contest_name,contest_year,tema,topicos,nota_maxima,status,transcricao,correcao")
+              .select(
+                "id,contest_name,contest_year,tema,topicos,nota_maxima,status,transcricao,correcao,storage_paths",
+              )
               .eq("user_id", session.user.id)
               .order("contest_year", { ascending: false }),
           ),
@@ -1652,6 +1693,24 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
       return;
     }
     setOpenExam(group.key);
+    const essayPaths = group.essays.flatMap((essay) => essay.storage_paths || []);
+    const missingEssayPaths = essayPaths.filter((path) => !essayImageUrls[path]);
+    if (missingEssayPaths.length) {
+      void Promise.all(
+        missingEssayPaths.map((path) =>
+          supabase.storage.from("student-exams").createSignedUrl(path, 3600),
+        ),
+      ).then((results) => {
+        setEssayImageUrls((current) => {
+          const next = { ...current };
+          missingEssayPaths.forEach((path, index) => {
+            const url = results[index].data?.signedUrl;
+            if (url) next[path] = url;
+          });
+          return next;
+        });
+      });
+    }
     const missing = group.pages.filter((page) => !pageUrls[page.id]);
     if (!missing.length) return;
     const results = await Promise.all(
@@ -1813,7 +1872,7 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
                           </p>
                           <div className="space-y-3">
                             {group.essays.map((essay) => (
-                              <EssayInline key={essay.id} essay={essay} />
+                              <EssayInline key={essay.id} essay={essay} imageUrls={essayImageUrls} />
                             ))}
                           </div>
                         </div>
