@@ -79,6 +79,7 @@ interface ExamAnalysis {
     observacao?: string;
   };
   items?: Record<string, "correta" | "errada" | "anulada" | "branco">;
+  candidate_answers?: Record<string, string>;
   pontuacao_obtida?: {
     total?: number;
     gerais_total?: number;
@@ -843,9 +844,9 @@ function ExamUploader({ userId, onUploaded }: { userId: string; onUploaded: () =
       if (!file) continue;
       try {
         const path = `${userId}/uploads-candidato/${Date.now()}-${file.name.replace(/[^a-zA-Z0-9._-]/g, "_")}`;
-        const { error: uploadError } = await supabase.storage.from("student-exams").upload(path, file, {
-          contentType: file.type || undefined,
-        });
+        const { error: uploadError } = await supabase.storage
+          .from("student-exams")
+          .upload(path, file, file.type ? { contentType: file.type } : {});
         if (uploadError) throw uploadError;
 
         const { data: inserted, error: insertError } = await supabase
@@ -948,6 +949,300 @@ function ExamUploader({ userId, onUploaded }: { userId: string; onUploaded: () =
         </CardContent>
       )}
     </Card>
+  );
+}
+
+// CEBRASPE-style net score: correct minus wrong, with anuladas always
+// counted as correct (this matches how correct_count/score_net were computed
+// for PF, PRF and DEPEN throughout this project). Contests with per-discipline
+// point weights (PC-AC, PP-Acre) use their own official formula instead —
+// hardcoded here to match the weights read off each exam's official cover
+// page during that contest's import.
+const WEIGHTED_SCORING: Record<
+  string,
+  { ranges: { from: number; to: number; points: number }[]; maxScore: number }
+> = {
+  "Polícia Civil do Acre": {
+    ranges: [
+      { from: 1, to: 40, points: 1 },
+      { from: 41, to: 60, points: 2 },
+      { from: 61, to: 80, points: 1 },
+    ],
+    maxScore: 100,
+  },
+  "Polícia Penal do Acre": {
+    ranges: [
+      { from: 1, to: 30, points: 1 },
+      { from: 31, to: 60, points: 2 },
+    ],
+    maxScore: 90,
+  },
+};
+
+function computeScore(
+  contestName: string,
+  correctItems: number[],
+  wrongItems: number[],
+): number {
+  const weighted = WEIGHTED_SCORING[contestName];
+  if (!weighted) return correctItems.length - wrongItems.length;
+  const pointsFor = (item: number) =>
+    weighted.ranges.find((r) => item >= r.from && item <= r.to)?.points ?? 1;
+  return correctItems.reduce((sum, item) => sum + pointsFor(item), 0);
+}
+
+// Lets the candidate fix their own marked answers when they realize an item
+// was sent wrong. Requires an explicit confirmation before entering edit
+// mode (so a stray click never touches a saved result), recomputes
+// acertos/erros/taxa/nota live as each answer changes, and only persists to
+// the database when the candidate explicitly saves.
+function GabaritoEditor({
+  resultId,
+  contestName,
+  contestYear,
+  candidateAnswers,
+  onSaved,
+}: {
+  resultId: string;
+  contestName: string;
+  contestYear: string;
+  candidateAnswers: Record<string, string> | undefined;
+  onSaved: () => void;
+}) {
+  const [editing, setEditing] = React.useState(false);
+  const [loadingOfficial, setLoadingOfficial] = React.useState(false);
+  const [official, setOfficial] = React.useState<Record<string, string> | null>(null);
+  const [answers, setAnswers] = React.useState<Record<string, string>>(candidateAnswers || {});
+  const [saving, setSaving] = React.useState(false);
+
+  const startEditing = async () => {
+    const confirmed = window.confirm(
+      `Tem certeza que deseja corrigir o gabarito que você marcou para ${contestName} — ${contestYear}? ` +
+        "Isso vai recalcular seus acertos, erros e nota nessa prova.",
+    );
+    if (!confirmed) return;
+    setEditing(true);
+    setAnswers(candidateAnswers || {});
+    if (!official) {
+      setLoadingOfficial(true);
+      const { data } = await supabase
+        .from("official_exam_questions")
+        .select("item_number, official_answer")
+        .eq("career_name", contestName)
+        .eq("exam_year", Number(contestYear));
+      const map: Record<string, string> = {};
+      (data || []).forEach((row: { item_number: number; official_answer: string }) => {
+        map[String(row.item_number)] = row.official_answer;
+      });
+      setOfficial(map);
+      setLoadingOfficial(false);
+    }
+  };
+
+  const itemNumbers = official ? Object.keys(official).map(Number).sort((a, b) => a - b) : [];
+
+  const live = React.useMemo(() => {
+    if (!official) return null;
+    const correctItems: number[] = [];
+    const wrongItems: number[] = [];
+    let blank = 0;
+    for (const n of itemNumbers) {
+      const off = official[String(n)];
+      const mine = (answers[String(n)] || "").toUpperCase();
+      if (!mine) {
+        blank += 1;
+      } else if (off === "X" || mine === off) {
+        correctItems.push(n);
+      } else {
+        wrongItems.push(n);
+      }
+    }
+    return {
+      correct: correctItems.length,
+      wrong: wrongItems.length,
+      blank,
+      score: computeScore(contestName, correctItems, wrongItems),
+      correctItems,
+      wrongItems,
+    };
+  }, [official, answers, itemNumbers, contestName]);
+
+  const handleSave = async () => {
+    if (!live) return;
+    const confirmed = window.confirm(
+      "Confirma salvar este gabarito corrigido? Vai substituir os acertos/erros/nota anteriores desta prova.",
+    );
+    if (!confirmed) return;
+    setSaving(true);
+    try {
+      const itemsVerdict: Record<string, string> = {};
+      for (const n of itemNumbers) {
+        const off = official![String(n)];
+        const mine = (answers[String(n)] || "").toUpperCase();
+        itemsVerdict[String(n)] = !mine
+          ? "branco"
+          : off === "X"
+            ? "anulada"
+            : mine === off
+              ? "correta"
+              : "errada";
+      }
+      const { data: current } = await supabase
+        .from("student_exam_documents")
+        .select("extracted_data")
+        .eq("id", resultId)
+        .single();
+      const nextExtracted = {
+        ...(current?.extracted_data || {}),
+        items: itemsVerdict,
+        candidate_answers: answers,
+      };
+      const { error } = await supabase
+        .from("student_exam_documents")
+        .update({
+          correct_count: live.correct,
+          wrong_count: live.wrong,
+          blank_count: live.blank,
+          score_net: live.score,
+          score_raw: live.score,
+          extracted_data: nextExtracted,
+          notes: "Gabarito corrigido manualmente pelo candidato na tela Minhas Provas.",
+        })
+        .eq("id", resultId);
+      if (error) throw error;
+      setEditing(false);
+      onSaved();
+    } catch (error) {
+      window.alert(error instanceof Error ? error.message : "Erro ao salvar o gabarito corrigido.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  if (!editing) {
+    return (
+      <div className="flex justify-end">
+        <Button variant="outline" size="sm" onClick={() => void startEditing()}>
+          Corrigir meu gabarito
+        </Button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="rounded-2xl border border-amber-300 bg-amber-50/60 p-4 dark:border-amber-800 dark:bg-amber-950/20">
+      <div className="mb-3 flex items-center justify-between">
+        <p className="text-sm font-bold">Corrigindo o gabarito — {contestName} {contestYear}</p>
+        <Button variant="ghost" size="sm" onClick={() => setEditing(false)} disabled={saving}>
+          Cancelar
+        </Button>
+      </div>
+      {loadingOfficial ? (
+        <p className="text-xs text-muted-foreground">Carregando gabarito oficial...</p>
+      ) : !itemNumbers.length ? (
+        <p className="text-xs text-muted-foreground">
+          Gabarito oficial desta prova ainda não está cadastrado na plataforma — não é possível
+          recalcular automaticamente.
+        </p>
+      ) : (
+        <>
+          {live && (
+            <div className="mb-4 grid grid-cols-4 gap-2 text-center">
+              <MiniMetric label="Acertos" value={live.correct} className="text-emerald-600" />
+              <MiniMetric label="Erros" value={live.wrong} className="text-rose-600" />
+              <MiniMetric label="Em branco" value={live.blank} className="text-muted-foreground" />
+              <MiniMetric label="Nota" value={live.score} className="text-primary" />
+            </div>
+          )}
+          <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10">
+            {itemNumbers.map((n) => (
+              <label key={n} className="flex flex-col items-center gap-1 text-[10px]">
+                <span className="font-semibold text-muted-foreground">{n}</span>
+                <select
+                  className="w-full rounded border bg-background px-1 py-1 text-center text-xs"
+                  value={answers[String(n)] || ""}
+                  onChange={(e) =>
+                    setAnswers((prev) => ({ ...prev, [String(n)]: e.target.value }))
+                  }
+                >
+                  <option value=""> </option>
+                  {["A", "B", "C", "D", "E"].map((letter) => (
+                    <option key={letter} value={letter}>
+                      {letter}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            ))}
+          </div>
+          <div className="mt-4 flex justify-end gap-2">
+            <Button variant="outline" size="sm" onClick={() => setEditing(false)} disabled={saving}>
+              Cancelar
+            </Button>
+            <Button size="sm" onClick={() => void handleSave()} disabled={saving}>
+              {saving ? "Salvando..." : "Salvar gabarito corrigido"}
+            </Button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+// MetricCard/MiniMetric were referenced throughout this file (including in
+// the always-rendered StudentExamsRecovery view) but never defined anywhere
+// — a pre-existing bug that crashed this page with a ReferenceError as soon
+// as there was real exam data to render (examGroups.length > 0), which
+// never surfaced in earlier testing because that only happened without a
+// logged-in session (an empty/error state that never reaches this code).
+const TONE_STYLES: Record<string, string> = {
+  navy: "bg-[#071a2f] text-white",
+  emerald: "bg-emerald-50 text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-200",
+  amber: "bg-amber-50 text-amber-900 dark:bg-amber-950/40 dark:text-amber-200",
+  rose: "bg-rose-50 text-rose-900 dark:bg-rose-950/40 dark:text-rose-200",
+};
+
+function MetricCard({
+  icon: Icon,
+  label,
+  value,
+  detail,
+  tone = "navy",
+}: {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  value: string;
+  detail?: string;
+  tone?: keyof typeof TONE_STYLES;
+}) {
+  return (
+    <Card className={cn("border-none shadow-sm", TONE_STYLES[tone])}>
+      <CardContent className="flex items-start gap-3 p-4">
+        <Icon className="mt-0.5 h-5 w-5 shrink-0 opacity-80" />
+        <div className="min-w-0">
+          <p className="text-xs font-semibold uppercase tracking-wide opacity-70">{label}</p>
+          <p className="truncate text-xl font-black">{value}</p>
+          {detail && <p className="mt-0.5 truncate text-[11px] opacity-70">{detail}</p>}
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function MiniMetric({
+  label,
+  value,
+  className,
+}: {
+  label: string;
+  value: string | number;
+  className?: string;
+}) {
+  return (
+    <div className="flex flex-col items-center">
+      <span className={cn("text-base font-black", className)}>{value}</span>
+      <span className="text-[10px] uppercase tracking-wide text-muted-foreground">{label}</span>
+    </div>
   );
 }
 
@@ -1239,6 +1534,15 @@ function StudentExamsRecovery({ reset }: { error: Error; reset: () => void }) {
                           </span>
                         </div>
                       </div>
+                      {group.result && (
+                        <GabaritoEditor
+                          resultId={group.result.id}
+                          contestName={group.contest}
+                          contestYear={group.year}
+                          candidateAnswers={group.result.extracted_data?.candidate_answers}
+                          onSaved={() => setUploadTick((v) => v + 1)}
+                        />
+                      )}
                       {group.pages.length > 0 ? (
                         <div>
                           <p className="mb-3 flex items-center gap-2 text-sm font-bold">
