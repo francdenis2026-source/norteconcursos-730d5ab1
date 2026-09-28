@@ -53,6 +53,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
 
 type Answer = "A" | "B" | "C" | "D" | "E";
 type Source = "official" | "curated" | "personal";
+type OrderMode = "random" | "exam";
 type LegalBasis = { title?: string; lei?: string; artigo?: string; url?: string };
 type Question = {
   id: string;
@@ -83,10 +84,19 @@ const answerLabel = (answer: Answer, board: string) =>
   /CEBRASPE|CESPE/i.test(board) ? (answer === "C" ? "Certo" : "Errado") : `Alternativa ${answer}`;
 const examKey = (question: Question) =>
   [question.contest, question.career, question.board, question.year].join("::");
+function shuffled<T>(items: T[]) {
+  const result = [...items];
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
+  }
+  return result;
+}
 
 function QuestionTrainer() {
   const routeFilters = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
+  const userId = user?.id;
   const [catalog, setCatalog] = React.useState<Question[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
@@ -98,6 +108,7 @@ function QuestionTrainer() {
   const [subject, setSubject] = React.useState(routeFilters.subject || "all");
   const [source, setSource] = React.useState(routeFilters.source || "all");
   const [limit, setLimit] = React.useState("20");
+  const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
   const [index, setIndex] = React.useState(0);
@@ -110,7 +121,7 @@ function QuestionTrainer() {
   const [startedAt, setStartedAt] = React.useState(Date.now());
 
   React.useEffect(() => {
-    if (authLoading || !user || user.id === "demo-user") {
+    if (authLoading || !userId || userId === "demo-user") {
       setLoading(false);
       return;
     }
@@ -136,7 +147,7 @@ function QuestionTrainer() {
             .select(
               "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status",
             )
-            .eq("user_id", user.id),
+            .eq("user_id", userId),
         ]);
         if (officialResult.error) throw officialResult.error;
         if (curatedResult.error) throw curatedResult.error;
@@ -207,7 +218,7 @@ function QuestionTrainer() {
     return () => {
       active = false;
     };
-  }, [authLoading, user]);
+  }, [authLoading, userId]);
 
   const choices = React.useMemo(() => {
     const exams = Array.from(
@@ -242,7 +253,8 @@ function QuestionTrainer() {
     [catalog, contest, board, career, year, appliedExam, subject, source],
   );
   const startTraining = () => {
-    setQuestions([...pool].sort(() => Math.random() - 0.5).slice(0, Number(limit)));
+    const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
+    setQuestions(ordered.slice(0, Number(limit)));
     setIndex(0);
     setCorrect(0);
     setWrong(0);
@@ -301,7 +313,7 @@ function QuestionTrainer() {
     setAnswered(false);
     setHelpUsed(false);
     setStartedAt(Date.now());
-    setQuestions((items) => [...items].sort(() => Math.random() - 0.5));
+    setQuestions((items) => (orderMode === "random" ? shuffled(items) : [...items]));
   };
 
   if (authLoading || loading)
@@ -337,7 +349,7 @@ function QuestionTrainer() {
         total={catalog.length}
         available={pool.length}
         choices={choices}
-        values={{ contest, board, career, year, appliedExam, subject, source, limit }}
+        values={{ contest, board, career, year, appliedExam, subject, source, limit, orderMode }}
         setters={{
           setContest,
           setBoard,
@@ -347,6 +359,7 @@ function QuestionTrainer() {
           setSubject,
           setSource,
           setLimit,
+          setOrderMode,
         }}
         start={startTraining}
       />
@@ -420,11 +433,14 @@ function QuestionTrainer() {
               <button
                 key={answer}
                 type="button"
+                aria-pressed={selected === answer}
                 disabled={answered}
                 onClick={() => setSelected(answer)}
                 className={cn(
-                  "group flex min-h-14 items-center justify-center gap-2 rounded-xl border-2 px-4 font-bold transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-md disabled:hover:translate-y-0",
-                  selected === answer && !answered && "border-primary bg-primary/5 text-primary",
+                  "group relative flex min-h-16 items-center justify-center gap-2 rounded-xl border-2 border-border bg-background px-4 font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:shadow-md disabled:hover:translate-y-0",
+                  selected === answer &&
+                    !answered &&
+                    "scale-[1.02] border-blue-600 bg-blue-600 text-white shadow-lg shadow-blue-600/20 ring-4 ring-blue-600/15 hover:bg-blue-600 hover:text-white",
                   answered &&
                     answer === question.answer &&
                     "border-emerald-500 bg-emerald-50 text-emerald-700",
@@ -434,8 +450,15 @@ function QuestionTrainer() {
                     "border-rose-500 bg-rose-50 text-rose-700",
                 )}
               >
-                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-muted text-xs group-hover:bg-primary group-hover:text-primary-foreground">
-                  {answer}
+                <span
+                  className={cn(
+                    "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
+                    selected === answer &&
+                      !answered &&
+                      "bg-white text-blue-700 group-hover:bg-white group-hover:text-blue-700",
+                  )}
+                >
+                  {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
                 </span>
                 {answerLabel(answer, question.board)}
               </button>
@@ -590,6 +613,7 @@ type SetupValues = {
   subject: string;
   source: string;
   limit: string;
+  orderMode: OrderMode;
 };
 type SetupSetters = {
   setContest: (value: string) => void;
@@ -600,6 +624,7 @@ type SetupSetters = {
   setSubject: (value: string) => void;
   setSource: (value: string) => void;
   setLimit: (value: string) => void;
+  setOrderMode: (value: OrderMode) => void;
 };
 
 function TrainerSetup({
@@ -729,6 +754,23 @@ function TrainerSetup({
               allLabel="Quantidade"
               hideAll
             />
+            <label className="space-y-2">
+              <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
+                Ordem das questões
+              </span>
+              <Select
+                value={values.orderMode}
+                onValueChange={(value) => setters.setOrderMode(value as OrderMode)}
+              >
+                <SelectTrigger className="h-11 bg-background">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="random">Aleatório inteligente</SelectItem>
+                  <SelectItem value="exam">Ordem do acervo</SelectItem>
+                </SelectContent>
+              </Select>
+            </label>
           </div>
           <div className="mt-7 flex flex-col gap-3 rounded-2xl border bg-muted/30 p-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
@@ -736,7 +778,9 @@ function TrainerSetup({
                 {Math.min(available, Number(values.limit))} questões serão usadas
               </p>
               <p className="text-xs text-muted-foreground">
-                Embaralhadas, com correção após cada resposta.
+                {values.orderMode === "random"
+                  ? "Seleção embaralhada uma única vez ao iniciar; a questão fica estável enquanto você responde."
+                  : "Questões apresentadas na ordem cadastrada, com correção após cada resposta."}
               </p>
             </div>
             <div className="flex gap-2">
