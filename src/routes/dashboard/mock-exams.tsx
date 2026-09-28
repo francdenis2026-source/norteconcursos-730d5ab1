@@ -50,9 +50,19 @@ import {
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/dashboard/mock-exams")({ component: ProfessionalSimulator });
+export const Route = createFileRoute("/dashboard/mock-exams")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    contest: typeof search.contest === "string" ? search.contest : undefined,
+    board: typeof search.board === "string" ? search.board : undefined,
+    career: typeof search.career === "string" ? search.career : undefined,
+    year: typeof search.year === "string" ? search.year : undefined,
+    subject: typeof search.subject === "string" ? search.subject : undefined,
+    source: typeof search.source === "string" ? search.source : undefined,
+  }),
+  component: ProfessionalSimulator,
+});
 
-type Answer = "C" | "E";
+type Answer = "A" | "B" | "C" | "D" | "E";
 type SimulatorStage = "setup" | "active" | "result";
 interface SimulatorQuestion {
   id: string;
@@ -103,6 +113,7 @@ const LIMITS = [10, 20, 30, 50];
 const DURATIONS = [15, 30, 60, 120];
 
 function ProfessionalSimulator() {
+  const routeSearch = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
   const [stage, setStage] = React.useState<SimulatorStage>("setup");
   const [catalog, setCatalog] = React.useState<SimulatorQuestion[]>([]);
@@ -111,12 +122,12 @@ function ProfessionalSimulator() {
   const [leaderboard, setLeaderboard] = React.useState<RankProfile[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [loadError, setLoadError] = React.useState<string | null>(null);
-  const [contest, setContest] = React.useState("all");
-  const [subject, setSubject] = React.useState("all");
-  const [board, setBoard] = React.useState("all");
-  const [career, setCareer] = React.useState("all");
-  const [year, setYear] = React.useState("all");
-  const [sourceKind, setSourceKind] = React.useState("all");
+  const [contest, setContest] = React.useState(routeSearch.contest || "all");
+  const [subject, setSubject] = React.useState(routeSearch.subject || "all");
+  const [board, setBoard] = React.useState(routeSearch.board || "all");
+  const [career, setCareer] = React.useState(routeSearch.career || "all");
+  const [year, setYear] = React.useState(routeSearch.year || "all");
+  const [sourceKind, setSourceKind] = React.useState(routeSearch.source || "all");
   const [limit, setLimit] = React.useState(20);
   const [durationMinutes, setDurationMinutes] = React.useState(30);
   const [startWarningOpen, setStartWarningOpen] = React.useState(false);
@@ -975,14 +986,33 @@ function ActiveSimulator(p: {
           <CardContent className="space-y-7 p-6 md:p-9">
             <p className="text-lg font-medium leading-8 md:text-xl">{current.text}</p>
             <div className="rounded-2xl border bg-muted/20 p-5">
-              <p className="mb-4 text-sm font-bold">Julgue o item:</p>
+              <p className="mb-4 text-sm font-bold">
+                {isCebraspeStyle(current.board)
+                  ? "Julgue o item:"
+                  : "Assinale a alternativa correta:"}
+              </p>
               <RadioGroup
                 value={answers[current.id] || ""}
                 onValueChange={(v) => setAnswers((old) => ({ ...old, [current.id]: v as Answer }))}
-                className="grid gap-3 sm:grid-cols-2"
+                className={cn(
+                  "grid gap-3",
+                  isCebraspeStyle(current.board) ? "sm:grid-cols-2" : "sm:grid-cols-5",
+                )}
               >
-                <AnswerOption value="C" label="Certo" selected={answers[current.id] === "C"} />
-                <AnswerOption value="E" label="Errado" selected={answers[current.id] === "E"} />
+                {answerOptions(current.board).map((option) => (
+                  <AnswerOption
+                    key={option}
+                    value={option}
+                    label={
+                      isCebraspeStyle(current.board)
+                        ? option === "C"
+                          ? "Certo"
+                          : "Errado"
+                        : `Alternativa ${option}`
+                    }
+                    selected={answers[current.id] === option}
+                  />
+                ))}
               </RadioGroup>
             </div>
             <div className="flex flex-wrap items-center justify-between gap-3">
@@ -1484,4 +1514,12 @@ function performanceMessage(accuracy: number) {
   if (accuracy >= 40)
     return "Você já tem uma base, mas precisa concentrar a revisão nas disciplinas mais frágeis.";
   return "Use este diagnóstico como ponto de partida: revise a teoria e refaça os itens errados em 24 horas.";
+}
+function isCebraspeStyle(board: string) {
+  return /CEBRASPE|CESPE/i.test(board);
+}
+function answerOptions(board: string): Answer[] {
+  if (isCebraspeStyle(board)) return ["C", "E"];
+  if (/IBFC/i.test(board)) return ["A", "B", "C", "D"];
+  return ["A", "B", "C", "D", "E"];
 }
