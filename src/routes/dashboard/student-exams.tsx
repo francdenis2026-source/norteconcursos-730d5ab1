@@ -17,6 +17,9 @@ import {
   TrendingDown,
   TrendingUp,
   XCircle,
+  FileStack,
+  ZoomIn,
+  ZoomOut,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";

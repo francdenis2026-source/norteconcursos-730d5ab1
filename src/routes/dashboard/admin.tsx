@@ -44,6 +44,25 @@ import {
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Download } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+
+interface AdminExamUploadRow {
+  id: string;
+  user_id: string;
+  cpf: string | null;
+  full_name: string | null;
+  auth_email: string | null;
+  contest_name: string | null;
+  contest_year: string | null;
+  exam_board: string | null;
+  doc_type: string;
+  uploaded_via: string;
+  analysis_status: string;
+  ai_extracted: Record<string, unknown> | null;
+  file_name: string;
+  storage_path: string;
+  created_at: string;
+}
 
 export const Route = createFileRoute('/dashboard/admin')({
   component: AdminPanel,
@@ -88,6 +107,98 @@ function AdminPanel() {
   const [editingContest, setEditingContest] = React.useState<Contest | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = React.useState(false);
   const [isSaving, setIsSaving] = React.useState(false);
+
+  // Real Supabase data (not MockService): every uploaded exam document,
+  // joined to the owning profile's CPF/email, so a misrouted upload
+  // (wrong account/session) can be spotted and relinked from here.
+  const [examUploads, setExamUploads] = React.useState<AdminExamUploadRow[]>([]);
+  const [examUploadsLoading, setExamUploadsLoading] = React.useState(true);
+  const [examUploadsError, setExamUploadsError] = React.useState<string | null>(null);
+  const [examSearch, setExamSearch] = React.useState('');
+  const [relinkTargetId, setRelinkTargetId] = React.useState<string | null>(null);
+  const [relinkCpf, setRelinkCpf] = React.useState('');
+  const [relinkContestName, setRelinkContestName] = React.useState('');
+  const [relinkContestYear, setRelinkContestYear] = React.useState('');
+  const [isRelinking, setIsRelinking] = React.useState(false);
+
+  const loadExamUploads = React.useCallback(async () => {
+    setExamUploadsLoading(true);
+    setExamUploadsError(null);
+    const { data, error } = await supabase
+      .from('admin_student_exam_documents')
+      .select('*')
+      .order('created_at', { ascending: false });
+    if (error) {
+      setExamUploadsError(error.message);
+    } else {
+      setExamUploads((data || []) as AdminExamUploadRow[]);
+    }
+    setExamUploadsLoading(false);
+  }, []);
+
+  React.useEffect(() => {
+    if (isAdmin) void loadExamUploads();
+  }, [isAdmin, loadExamUploads]);
+
+  const openRelink = (row: AdminExamUploadRow) => {
+    setRelinkTargetId(row.id);
+    setRelinkCpf(row.cpf || '');
+    setRelinkContestName(row.contest_name || '');
+    setRelinkContestYear(row.contest_year || '');
+  };
+
+  const handleRelink = async () => {
+    if (!relinkTargetId) return;
+    setIsRelinking(true);
+    try {
+      const update: Record<string, unknown> = {
+        contest_name: relinkContestName.trim() || null,
+        contest_year: relinkContestYear.trim() || null,
+      };
+      // Reassigning by CPF is opt-in: only touch user_id if the admin typed a
+      // CPF that resolves to a different profile, so a blank/unchanged field
+      // never accidentally moves a document to another account.
+      const trimmedCpf = relinkCpf.trim();
+      if (trimmedCpf) {
+        const { data: targetProfile, error: profileError } = await supabase
+          .from('profiles')
+          .select('id')
+          .eq('cpf', trimmedCpf)
+          .maybeSingle();
+        if (profileError) throw profileError;
+        if (!targetProfile) {
+          toast.error(`Nenhuma conta encontrada com o CPF ${trimmedCpf}.`);
+          setIsRelinking(false);
+          return;
+        }
+        update.user_id = targetProfile.id;
+      }
+      const { error } = await supabase
+        .from('student_exam_documents')
+        .update(update)
+        .eq('id', relinkTargetId);
+      if (error) throw error;
+      toast.success('Vínculo corrigido com sucesso.');
+      setRelinkTargetId(null);
+      void loadExamUploads();
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'Erro ao corrigir vínculo.');
+    } finally {
+      setIsRelinking(false);
+    }
+  };
+
+  const filteredExamUploads = examUploads.filter((row) => {
+    if (!examSearch.trim()) return true;
+    const q = examSearch.trim().toLowerCase();
+    return (
+      row.cpf?.toLowerCase().includes(q) ||
+      row.full_name?.toLowerCase().includes(q) ||
+      row.auth_email?.toLowerCase().includes(q) ||
+      row.contest_name?.toLowerCase().includes(q) ||
+      row.user_id.toLowerCase().includes(q)
+    );
+  });
 
   const loadData = async () => {
     setIsLoading(true);
@@ -270,11 +381,12 @@ function AdminPanel() {
       </div>
 
       <Tabs defaultValue="contests" className="w-full">
-        <TabsList className="grid w-full max-w-4xl grid-cols-5">
+        <TabsList className="grid w-full max-w-5xl grid-cols-7">
           <TabsTrigger value="contests">Concursos</TabsTrigger>
           <TabsTrigger value="questions">Questões</TabsTrigger>
           <TabsTrigger value="syllabus">Edital</TabsTrigger>
         <TabsTrigger value="users">Usuários</TabsTrigger>
+          <TabsTrigger value="exam-uploads">Provas Enviadas</TabsTrigger>
           <TabsTrigger value="subscriptions">Planos</TabsTrigger>
           <TabsTrigger value="audit">Histórico</TabsTrigger>
         </TabsList>
@@ -607,6 +719,121 @@ function AdminPanel() {
           </Card>
         </TabsContent>
 
+        <TabsContent value="exam-uploads" className="mt-6 space-y-4">
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0">
+              <div>
+                <CardTitle>Provas Enviadas pelos Candidatos</CardTitle>
+                <CardDescription>
+                  Todo documento de prova cadastrado no banco, com CPF e e-mail da conta dona do
+                  registro (auth.uid = user_id). Use para localizar e corrigir vínculos incorretos
+                  com segurança — a correção só move o registro quando você digita um CPF de destino
+                  explicitamente.
+                </CardDescription>
+              </div>
+              <Button size="sm" variant="outline" className="gap-2" onClick={() => void loadExamUploads()}>
+                <HistoryIcon className="h-4 w-4" /> Atualizar
+              </Button>
+            </CardHeader>
+            <CardContent>
+              <div className="relative mb-4 max-w-sm">
+                <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                <Input
+                  placeholder="Buscar por CPF, e-mail, nome, concurso ou user_id..."
+                  className="pl-9"
+                  value={examSearch}
+                  onChange={(e) => setExamSearch(e.target.value)}
+                />
+              </div>
+              {examUploadsError && (
+                <p className="mb-4 text-sm text-destructive">Erro ao carregar: {examUploadsError}</p>
+              )}
+              <div className="rounded-md border overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>CPF / Conta</TableHead>
+                      <TableHead>Concurso</TableHead>
+                      <TableHead>Origem</TableHead>
+                      <TableHead>Status IA</TableHead>
+                      <TableHead>Arquivo</TableHead>
+                      <TableHead>Enviado em</TableHead>
+                      <TableHead className="text-right">Ações</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {examUploadsLoading ? (
+                      <TableRow>
+                        <TableCell colSpan={7} className="text-center py-8 text-muted-foreground">
+                          Carregando...
+                        </TableCell>
+                      </TableRow>
+                    ) : filteredExamUploads.length === 0 ? (
+                      <TableRow>
+                        <TableCell colSpan={7} className="text-center py-8 text-muted-foreground">
+                          Nenhum documento encontrado.
+                        </TableCell>
+                      </TableRow>
+                    ) : (
+                      filteredExamUploads.map((row) => (
+                        <TableRow key={row.id}>
+                          <TableCell>
+                            <div className="flex flex-col text-xs">
+                              <span className="font-bold">{row.cpf || '—'}</span>
+                              <span className="text-muted-foreground">{row.full_name || row.auth_email || '—'}</span>
+                              <span className="font-mono text-[10px] text-muted-foreground">
+                                {row.user_id.slice(0, 8)}…
+                              </span>
+                            </div>
+                          </TableCell>
+                          <TableCell className="text-xs">
+                            <div className="flex flex-col">
+                              <span>{row.contest_name || <span className="italic text-muted-foreground">não identificado</span>}</span>
+                              <span className="text-muted-foreground">
+                                {row.contest_year || '—'} {row.exam_board ? `· ${row.exam_board}` : ''}
+                              </span>
+                              {row.ai_extracted?.contest_name ? (
+                                <span className="mt-0.5 text-[10px] text-emerald-700">
+                                  IA sugeriu: {String(row.ai_extracted.contest_name)}
+                                  {row.ai_extracted.contest_year ? ` (${String(row.ai_extracted.contest_year)})` : ''}
+                                </span>
+                              ) : null}
+                            </div>
+                          </TableCell>
+                          <TableCell className="text-[10px]">
+                            <Badge variant="outline">
+                              {row.uploaded_via === 'candidate_upload' ? 'Candidato' : 'Admin/import'}
+                            </Badge>
+                          </TableCell>
+                          <TableCell className="text-[10px]">
+                            <Badge
+                              variant={row.analysis_status === 'erro' ? 'destructive' : 'secondary'}
+                              className="uppercase"
+                            >
+                              {row.analysis_status}
+                            </Badge>
+                          </TableCell>
+                          <TableCell className="max-w-[160px] truncate text-xs" title={row.file_name}>
+                            {row.file_name}
+                          </TableCell>
+                          <TableCell className="whitespace-nowrap text-[10px] text-muted-foreground">
+                            {new Date(row.created_at).toLocaleString('pt-BR')}
+                          </TableCell>
+                          <TableCell className="text-right">
+                            <Button variant="ghost" size="sm" onClick={() => openRelink(row)}>
+                              Corrigir vínculo
+                            </Button>
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
+                  </TableBody>
+                </Table>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
         <TabsContent value="subscriptions" className="mt-6 space-y-4">
           <Card>
             <CardHeader>
@@ -893,6 +1120,54 @@ function AdminPanel() {
           </Card>
         </div>
       )}
+
+      {/* Exam Upload Relink Modal */}
+      <Dialog open={!!relinkTargetId} onOpenChange={(open) => !isRelinking && !open && setRelinkTargetId(null)}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>Corrigir vínculo da prova</DialogTitle>
+            <DialogDescription>
+              Ajuste o concurso identificado ou mova este documento para outra conta informando o
+              CPF correto. Deixar o CPF em branco mantém o dono atual do registro.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-2">
+            <div className="space-y-2">
+              <Label htmlFor="relink-cpf">Mover para o CPF (opcional)</Label>
+              <Input
+                id="relink-cpf"
+                placeholder="Deixe em branco para não alterar a conta"
+                value={relinkCpf}
+                onChange={(e) => setRelinkCpf(e.target.value)}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="relink-contest">Concurso</Label>
+              <Input
+                id="relink-contest"
+                value={relinkContestName}
+                onChange={(e) => setRelinkContestName(e.target.value)}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="relink-year">Ano</Label>
+              <Input
+                id="relink-year"
+                value={relinkContestYear}
+                onChange={(e) => setRelinkContestYear(e.target.value)}
+              />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setRelinkTargetId(null)} disabled={isRelinking}>
+              Cancelar
+            </Button>
+            <Button onClick={handleRelink} disabled={isRelinking}>
+              {isRelinking ? 'Salvando...' : 'Salvar vínculo'}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       {/* Subscription Action Confirmation Modal */}
       <Dialog 
