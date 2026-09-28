@@ -71,14 +71,18 @@ def build_exam(e, items, gab, out):
         elif not ctx and last_base and BASEREF.search(it["stem"]) and not it.get("gap"):
             ctx = last_base
             notes.append("texto-base herdado do item anterior")
-        opts = "\n".join(f"({k}) {it['options'].get(k, '[alternativa não extraída]')}" for k in "ABCDE")
+        ce = bool(it.get("ce"))
+        opts = "" if ce else "\n".join(f"({k}) {it['options'].get(k, '[alternativa não extraída]')}" for k in "ABCDE"[:e.get("n_opts", 5)])
         if it.get("gap"):
             txt = "[Enunciado não extraído do PDF; conferir no caderno oficial.]"
             notes.append("enunciado não extraído")
             stats["gap"] += 1
         else:
-            txt = (("Texto-base:\n" + ctx + "\n\n") if ctx else "") + it["stem"] + "\n" + opts
-            if len(it["options"]) != 5:
+            if ce:
+                txt = (("Comando:\n" + ctx + "\n\n") if ctx else "") + "Item: " + it["stem"]
+            else:
+                txt = (("Texto-base:\n" + ctx + "\n\n") if ctx else "") + it["stem"] + "\n" + opts
+            if len(it["options"]) != e.get('n_opts', 5) and not ce:
                 notes.append("alternativas incompletas no PDF")
                 stats["incomplete"] += 1
         status = "under_review"
@@ -87,10 +91,12 @@ def build_exam(e, items, gab, out):
             stats["annulled"] += 1
         stats["ok"] += 1
         legal = bool(LEGAL.search(it["subject"])) or bool(LEGAL_TEXT.search(txt))
-        fig = bool(NEEDS_FIG.search(it["stem"] + " " + ctx)) or it.get("gap") or len(it["options"]) != 5
+        fig = bool(NEEDS_FIG.search(it["stem"] + " " + ctx)) or it.get("gap") or (len(it["options"]) != e.get('n_opts', 5) and not ce)
         note = "Importada do caderno oficial (Tipo 1) e conferida com o gabarito definitivo em 27/09/2026; aguardando revisão de conteúdo."
         if notes:
             note += " Observações: " + "; ".join(notes) + "."
+        if it.get("just"):
+            note += " Justificativa da banca (gabarito preliminar): " + it["just"][:700]
         if fig:
             note += " Pode depender de figura/tabela do caderno."
         row = f"({n},{q(it['subject'])},{q(txt)},{q(ans)},{it['page']},{q(status)},{str(legal).lower()},{str(bool(fig)).lower()},{q(note)})"

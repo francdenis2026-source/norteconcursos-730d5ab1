@@ -34,9 +34,9 @@ def _lines(pdf):
     return out
 
 
-def parse_ceb_mc(pdf):
+def parse_ceb_mc(pdf, start=1):
     lines = _lines(pdf)
-    items, cur, pre, expected, last = [], None, [], 1, None
+    items, cur, pre, expected, last = [], None, [], start, None
     for pg, ind, t, sz in lines:
         m = re.fullmatch(r"Quest[ãa]o (\d{1,3})", t)
         if m and int(m.group(1)) in (expected, expected + 1):
@@ -74,6 +74,8 @@ def gab_blocks_generic(pdf):
     toks = [l.strip() for p in d for l in p.get_text().splitlines() if l.strip()]
     res, nums, lets = {}, [], []
     for l in toks:
+        if re.fullmatch(r"0+", l):
+            continue
         if re.fullmatch(r"\d{1,3}", l):
             if lets:
                 nums, lets = [], []
