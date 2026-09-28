@@ -215,7 +215,7 @@ function QuestionBankPage() {
                     questões disponíveis nesta seleção
                   </p>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                   <Button variant="outline" onClick={reset}>
                     Limpar
                   </Button>
@@ -224,9 +224,15 @@ function QuestionBankPage() {
                     disabled={!filtered.length}
                     className="gap-2 bg-emerald-600 hover:bg-emerald-700"
                   >
+                    <Link to="/dashboard/question-trainer" search={search}>
+                      <BookOpenCheck className="h-4 w-4" />
+                      Treinar com correção imediata
+                    </Link>
+                  </Button>
+                  <Button asChild disabled={!filtered.length} variant="outline" className="gap-2">
                     <Link to="/dashboard/mock-exams" search={search}>
                       <Play className="h-4 w-4 fill-current" />
-                      Continuar para o simulador
+                      Fazer simulado
                     </Link>
                   </Button>
                 </div>

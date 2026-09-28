@@ -27,6 +27,7 @@ import { Route as DashboardNotebooksRouteImport } from './routes/dashboard/noteb
 import { Route as DashboardPerformanceRouteImport } from './routes/dashboard/performance'
 import { Route as DashboardProfileRouteImport } from './routes/dashboard/profile'
 import { Route as DashboardQuestionBankRouteImport } from './routes/dashboard/question-bank'
+import { Route as DashboardQuestionTrainerRouteImport } from './routes/dashboard/question-trainer'
 import { Route as DashboardQuestionsRouteImport } from './routes/dashboard/questions'
 import { Route as DashboardStudentExamsRouteImport } from './routes/dashboard/student-exams'
 import { Route as DashboardStudyPlanRouteImport } from './routes/dashboard/study-plan'
@@ -124,6 +125,12 @@ const DashboardQuestionBankRoute = DashboardQuestionBankRouteImport.update({
   path: '/question-bank',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardQuestionTrainerRoute =
+  DashboardQuestionTrainerRouteImport.update({
+    id: '/question-trainer',
+    path: '/question-trainer',
+    getParentRoute: () => DashboardRoute,
+  } as any)
 const DashboardQuestionsRoute = DashboardQuestionsRouteImport.update({
   id: '/questions',
   path: '/questions',
@@ -173,6 +180,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
+  '/dashboard/question-trainer': typeof DashboardQuestionTrainerRoute
   '/dashboard/questions': typeof DashboardQuestionsRoute
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
@@ -198,6 +206,7 @@ export interface FileRoutesByTo {
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
+  '/dashboard/question-trainer': typeof DashboardQuestionTrainerRoute
   '/dashboard/questions': typeof DashboardQuestionsRoute
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
@@ -225,6 +234,7 @@ export interface FileRoutesById {
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
+  '/dashboard/question-trainer': typeof DashboardQuestionTrainerRoute
   '/dashboard/questions': typeof DashboardQuestionsRoute
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
@@ -253,6 +263,7 @@ export interface FileRouteTypes {
     | '/dashboard/performance'
     | '/dashboard/profile'
     | '/dashboard/question-bank'
+    | '/dashboard/question-trainer'
     | '/dashboard/questions'
     | '/dashboard/student-exams'
     | '/dashboard/study-plan'
@@ -278,6 +289,7 @@ export interface FileRouteTypes {
     | '/dashboard/performance'
     | '/dashboard/profile'
     | '/dashboard/question-bank'
+    | '/dashboard/question-trainer'
     | '/dashboard/questions'
     | '/dashboard/student-exams'
     | '/dashboard/study-plan'
@@ -304,6 +316,7 @@ export interface FileRouteTypes {
     | '/dashboard/performance'
     | '/dashboard/profile'
     | '/dashboard/question-bank'
+    | '/dashboard/question-trainer'
     | '/dashboard/questions'
     | '/dashboard/student-exams'
     | '/dashboard/study-plan'
@@ -451,6 +464,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardQuestionBankRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/question-trainer': {
+      id: '/dashboard/question-trainer'
+      path: '/question-trainer'
+      fullPath: '/dashboard/question-trainer'
+      preLoaderRoute: typeof DashboardQuestionTrainerRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/questions': {
       id: '/dashboard/questions'
       path: '/questions'
@@ -508,6 +528,7 @@ interface DashboardRouteChildren {
   DashboardPerformanceRoute: typeof DashboardPerformanceRoute
   DashboardProfileRoute: typeof DashboardProfileRoute
   DashboardQuestionBankRoute: typeof DashboardQuestionBankRoute
+  DashboardQuestionTrainerRoute: typeof DashboardQuestionTrainerRoute
   DashboardQuestionsRoute: typeof DashboardQuestionsRoute
   DashboardStudentExamsRoute: typeof DashboardStudentExamsRoute
   DashboardStudyPlanRoute: typeof DashboardStudyPlanRoute
@@ -528,6 +549,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardPerformanceRoute: DashboardPerformanceRoute,
   DashboardProfileRoute: DashboardProfileRoute,
   DashboardQuestionBankRoute: DashboardQuestionBankRoute,
+  DashboardQuestionTrainerRoute: DashboardQuestionTrainerRoute,
   DashboardQuestionsRoute: DashboardQuestionsRoute,
   DashboardStudentExamsRoute: DashboardStudentExamsRoute,
   DashboardStudyPlanRoute: DashboardStudyPlanRoute,

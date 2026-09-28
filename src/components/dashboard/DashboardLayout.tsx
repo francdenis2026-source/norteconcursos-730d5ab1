@@ -24,6 +24,7 @@ import {
   ShieldCheck,
   FileStack,
   BookMarked,
+  BrainCircuit,
   PenLine,
   Timer,
 } from "lucide-react";
@@ -51,6 +52,7 @@ const menuItems = [
   { label: "Meu Concurso", icon: Target, href: "/dashboard/my-contest" },
   { label: "Minhas Provas", icon: FileStack, href: "/dashboard/student-exams" },
   { label: "Banco de Questões", icon: BookMarked, href: "/dashboard/question-bank" },
+  { label: "Treinador de Questões", icon: BrainCircuit, href: "/dashboard/question-trainer" },
   { label: "Redação", icon: PenLine, href: "/dashboard/essays" },
   { label: "Central de Estudos", icon: Timer, href: "/dashboard/study-tools" },
   { label: "Plano de Estudos", icon: ClipboardList, href: "/dashboard/study-plan" },
