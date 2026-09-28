@@ -81,6 +81,8 @@ const boardAnswers = (board: string): Answer[] =>
       : ["A", "B", "C", "D", "E"];
 const answerLabel = (answer: Answer, board: string) =>
   /CEBRASPE|CESPE/i.test(board) ? (answer === "C" ? "Certo" : "Errado") : `Alternativa ${answer}`;
+const examKey = (question: Question) =>
+  [question.contest, question.career, question.board, question.year].join("::");
 
 function QuestionTrainer() {
   const routeFilters = Route.useSearch();
@@ -92,6 +94,7 @@ function QuestionTrainer() {
   const [board, setBoard] = React.useState(routeFilters.board || "all");
   const [career, setCareer] = React.useState(routeFilters.career || "all");
   const [year, setYear] = React.useState(routeFilters.year || "all");
+  const [appliedExam, setAppliedExam] = React.useState("all");
   const [subject, setSubject] = React.useState(routeFilters.subject || "all");
   const [source, setSource] = React.useState(routeFilters.source || "all");
   const [limit, setLimit] = React.useState("20");
@@ -206,16 +209,24 @@ function QuestionTrainer() {
     };
   }, [authLoading, user]);
 
-  const choices = React.useMemo(
-    () => ({
+  const choices = React.useMemo(() => {
+    const exams = Array.from(
+      new Map(
+        catalog.map((item) => [
+          examKey(item),
+          `${item.contest} — ${item.career} · ${item.board} · ${item.year}`,
+        ]),
+      ).entries(),
+    ).sort((a, b) => b[1].localeCompare(a[1], "pt-BR", { numeric: true }));
+    return {
       contests: unique(catalog.map((item) => item.contest)),
       boards: unique(catalog.map((item) => item.board)),
       careers: unique(catalog.map((item) => item.career)),
       years: unique(catalog.map((item) => item.year)).sort((a, b) => Number(b) - Number(a)),
       subjects: unique(catalog.map((item) => item.subject)),
-    }),
-    [catalog],
-  );
+      exams,
+    };
+  }, [catalog]);
   const pool = React.useMemo(
     () =>
       catalog.filter(
@@ -224,10 +235,11 @@ function QuestionTrainer() {
           (board === "all" || item.board === board) &&
           (career === "all" || item.career === career) &&
           (year === "all" || item.year === year) &&
+          (appliedExam === "all" || examKey(item) === appliedExam) &&
           (subject === "all" || item.subject === subject) &&
           (source === "all" || item.source === source),
       ),
-    [catalog, contest, board, career, year, subject, source],
+    [catalog, contest, board, career, year, appliedExam, subject, source],
   );
   const startTraining = () => {
     setQuestions([...pool].sort(() => Math.random() - 0.5).slice(0, Number(limit)));
@@ -239,6 +251,15 @@ function QuestionTrainer() {
     setHelpUsed(false);
     setStartedAt(Date.now());
     setStarted(true);
+  };
+  const selectAppliedExam = (value: string) => {
+    setAppliedExam(value);
+    if (value === "all") return;
+    const [selectedContest, selectedCareer, selectedBoard, selectedYear] = value.split("::");
+    setContest(selectedContest);
+    setCareer(selectedCareer);
+    setBoard(selectedBoard);
+    setYear(selectedYear);
   };
 
   const question = questions[index];
@@ -316,8 +337,17 @@ function QuestionTrainer() {
         total={catalog.length}
         available={pool.length}
         choices={choices}
-        values={{ contest, board, career, year, subject, source, limit }}
-        setters={{ setContest, setBoard, setCareer, setYear, setSubject, setSource, setLimit }}
+        values={{ contest, board, career, year, appliedExam, subject, source, limit }}
+        setters={{
+          setContest,
+          setBoard,
+          setCareer,
+          setYear,
+          setAppliedExam: selectAppliedExam,
+          setSubject,
+          setSource,
+          setLimit,
+        }}
         start={startTraining}
       />
     );
@@ -556,18 +586,20 @@ type SetupValues = {
   board: string;
   career: string;
   year: string;
+  appliedExam: string;
   subject: string;
   source: string;
   limit: string;
 };
 type SetupSetters = {
-  setContest: React.Dispatch<React.SetStateAction<string>>;
-  setBoard: React.Dispatch<React.SetStateAction<string>>;
-  setCareer: React.Dispatch<React.SetStateAction<string>>;
-  setYear: React.Dispatch<React.SetStateAction<string>>;
-  setSubject: React.Dispatch<React.SetStateAction<string>>;
-  setSource: React.Dispatch<React.SetStateAction<string>>;
-  setLimit: React.Dispatch<React.SetStateAction<string>>;
+  setContest: (value: string) => void;
+  setBoard: (value: string) => void;
+  setCareer: (value: string) => void;
+  setYear: (value: string) => void;
+  setAppliedExam: (value: string) => void;
+  setSubject: (value: string) => void;
+  setSource: (value: string) => void;
+  setLimit: (value: string) => void;
 };
 
 function TrainerSetup({
@@ -586,6 +618,7 @@ function TrainerSetup({
     careers: string[];
     years: string[];
     subjects: string[];
+    exams: Array<[string, string]>;
   };
   values: SetupValues;
   setters: SetupSetters;
@@ -596,6 +629,7 @@ function TrainerSetup({
     setters.setBoard("all");
     setters.setCareer("all");
     setters.setYear("all");
+    setters.setAppliedExam("all");
     setters.setSubject("all");
     setters.setSource("all");
   };
@@ -668,6 +702,13 @@ function TrainerSetup({
               value={values.year}
               setValue={setters.setYear}
               options={choices.years}
+            />
+            <TrainerFilter
+              label="Prova aplicada"
+              value={values.appliedExam}
+              setValue={setters.setAppliedExam}
+              options={choices.exams.map(([value]) => value)}
+              labels={Object.fromEntries(choices.exams)}
             />
             <TrainerFilter
               label="Origem"
