@@ -345,24 +345,56 @@ function QuestionTrainer() {
     };
   }, [authLoading, userId]);
 
+  // Cada lista mostra só o que existe combinado com os OUTROS filtros já escolhidos,
+  // para nunca montar uma combinação sem questões.
   const choices = React.useMemo(() => {
+    const filters = { contest, board, career, year, subject, source } as const;
+    const fields = {
+      contest: (item: Question) => item.contest,
+      board: (item: Question) => item.board,
+      career: (item: Question) => item.career,
+      year: (item: Question) => item.year,
+      subject: (item: Question) => item.subject,
+      source: (item: Question) => item.source,
+    };
+    const scoped = (skip: keyof typeof fields) =>
+      catalog.filter((item) =>
+        (Object.keys(fields) as Array<keyof typeof fields>).every(
+          (key) => key === skip || filters[key] === "all" || fields[key](item) === filters[key],
+        ),
+      );
     const exams = Array.from(
       new Map(
-        catalog.map((item) => [
+        scoped("contest").map((item) => [
           examKey(item),
           `${item.contest} — ${item.career} · ${item.board} · ${item.year}`,
         ]),
       ).entries(),
     ).sort((a, b) => b[1].localeCompare(a[1], "pt-BR", { numeric: true }));
     return {
-      contests: unique(catalog.map((item) => item.contest)),
-      boards: unique(catalog.map((item) => item.board)),
-      careers: unique(catalog.map((item) => item.career)),
-      years: unique(catalog.map((item) => item.year)).sort((a, b) => Number(b) - Number(a)),
-      subjects: unique(catalog.map((item) => item.subject)),
-      exams,
+      contests: unique(scoped("contest").map(fields.contest)),
+      boards: unique(scoped("board").map(fields.board)),
+      careers: unique(scoped("career").map(fields.career)),
+      years: unique(scoped("year").map(fields.year)).sort((x, y) => Number(y) - Number(x)),
+      subjects: unique(scoped("subject").map(fields.subject)),
+      exams: exams.filter(([key]) => {
+        const [c, ca, b, y] = key.split("::");
+        return (
+          (contest === "all" || c === contest) &&
+          (career === "all" || ca === career) &&
+          (board === "all" || b === board) &&
+          (year === "all" || y === year)
+        );
+      }),
     };
-  }, [catalog]);
+  }, [catalog, contest, board, career, year, subject, source]);
+  // Ao mexer em um filtro individual, a "prova aplicada" escolhida antes deixa de valer.
+  const manual =
+    <T,>(setter: (value: T) => void) =>
+    (value: T) => {
+      setAppliedExam("all");
+      setter(value);
+    };
   const pool = React.useMemo(
     () =>
       catalog.filter(
@@ -486,13 +518,13 @@ function QuestionTrainer() {
           choices={choices}
           values={{ contest, board, career, year, appliedExam, subject, source, limit, orderMode }}
           setters={{
-            setContest,
-            setBoard,
-            setCareer,
-            setYear,
+            setContest: manual(setContest),
+            setBoard: manual(setBoard),
+            setCareer: manual(setCareer),
+            setYear: manual(setYear),
             setAppliedExam: selectAppliedExam,
-            setSubject,
-            setSource,
+            setSubject: manual(setSubject),
+            setSource: manual(setSource),
             setLimit,
             setOrderMode,
           }}
