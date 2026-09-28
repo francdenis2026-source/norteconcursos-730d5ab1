@@ -1,31 +1,52 @@
 import React from "react";
-import { createFileRoute } from "@tanstack/react-router";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuthStatus } from "@/hooks/useDashboard";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
+  AlertTriangle,
   BookMarked,
+  BookOpenCheck,
   CheckCircle2,
-  XCircle,
-  CircleSlash,
   ChevronDown,
   ChevronUp,
-  ShieldCheck,
+  CircleSlash,
   ExternalLink,
+  FileCheck2,
+  FilterX,
+  Gavel,
+  Layers3,
+  LibraryBig,
+  Loader2,
+  Play,
+  RefreshCw,
+  Search,
+  ShieldCheck,
+  Sparkles,
+  Target,
+  XCircle,
 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/dashboard/question-bank")({
-  component: QuestionBankPage,
-});
+export const Route = createFileRoute("/dashboard/question-bank")({ component: QuestionBankPage });
 
+type SourceKind = "official" | "curated" | "personal";
 interface QBItem {
   id: string;
   contest_name: string;
   contest_year: string;
-  career_name?: string;
+  career_name: string;
+  exam_board: string;
   item_number: number;
   subject: string;
   subtopic: string | null;
@@ -37,430 +58,668 @@ interface QBItem {
   explanation: string;
   difficulty: string | null;
   source_confidence: string;
-  content_status?: string;
-  verified_at?: string | null;
-  law_version_checked_at?: string | null;
-  is_original?: boolean;
-  source_kind?: "official" | "curated" | "personal";
-  source_page?: number | null;
-  legal_basis?: Array<{ title?: string; url?: string }>;
-  review_note?: string | null;
+  verified_at: string | null;
+  law_version_checked_at: string | null;
+  source_kind: SourceKind;
+  source_page: number | null;
+  legal_basis: Array<{ title?: string; lei?: string; artigo?: string; url?: string }>;
 }
+
+const PAGE_SIZE = 20;
+const SOURCE_LABELS: Record<SourceKind, string> = {
+  official: "Prova oficial",
+  curated: "Autoral auditada",
+  personal: "Questão pessoal",
+};
 
 function QuestionBankPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const [items, setItems] = React.useState<QBItem[]>([]);
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [subjectFilter, setSubjectFilter] = React.useState<string>("all");
-  const [careerFilter, setCareerFilter] = React.useState<string>("all");
-  const [yearFilter, setYearFilter] = React.useState<string>("all");
-  const [statusFilter, setStatusFilter] = React.useState<string>("all");
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState<string | null>(null);
+  const [search, setSearch] = React.useState("");
+  const [contest, setContest] = React.useState("all");
+  const [board, setBoard] = React.useState("all");
+  const [career, setCareer] = React.useState("all");
+  const [year, setYear] = React.useState("all");
+  const [subject, setSubject] = React.useState("all");
+  const [source, setSource] = React.useState("all");
+  const [performance, setPerformance] = React.useState("all");
+  const [sort, setSort] = React.useState("recent");
+  const [visibleCount, setVisibleCount] = React.useState(PAGE_SIZE);
   const [openId, setOpenId] = React.useState<string | null>(null);
+  const [revealed, setRevealed] = React.useState<Set<string>>(new Set());
 
-  React.useEffect(() => {
+  const load = React.useCallback(async () => {
     if (authLoading || !user || user.id === "demo-user") {
-      setIsLoading(false);
+      setLoading(false);
       return;
     }
-    const load = async () => {
-      setIsLoading(true);
+    setLoading(true);
+    setError(null);
+    try {
       const [personalResult, curatedResult, officialResult] = await Promise.all([
         supabase
           .from("question_bank")
           .select("*")
           .eq("user_id", user.id)
-          .order("contest_year", { ascending: true })
+          .order("contest_year", { ascending: false })
           .order("item_number", { ascending: true }),
         supabase
           .from("curated_question_catalog")
           .select("*")
           .eq("content_status", "active")
-          .order("contest_year", { ascending: false })
-          .order("created_at", { ascending: true }),
+          .order("contest_year", { ascending: false }),
         supabase
           .from("official_exam_questions")
           .select("*")
           .eq("content_status", "active")
+          .neq("official_answer", "X")
           .order("exam_year", { ascending: false })
           .order("item_number", { ascending: true }),
       ]);
-
-      const personal = ((personalResult.data as QBItem[]) || [])
+      if (personalResult.error) throw personalResult.error;
+      if (curatedResult.error) throw curatedResult.error;
+      if (officialResult.error) throw officialResult.error;
+      const personal = ((personalResult.data || []) as Array<Record<string, unknown>>)
         .filter(
-          (item) => !["obsolete", "revoked", "archived"].includes(item.content_status || "active"),
+          (row) =>
+            !["obsolete", "revoked", "archived"].includes(String(row.content_status || "active")),
         )
-        .map((item) => ({ ...item, source_kind: "personal" as const }));
-      const curated = ((curatedResult.data as Array<Record<string, unknown>>) || []).map(
-        (row, index): QBItem => ({
-          id: `curated-${String(row.id)}`,
-          contest_name: String(row.contest_name),
-          contest_year: String(row.contest_year),
-          career_name: String(row.career_name),
-          item_number: index + 1,
-          subject: String(row.subject),
-          subtopic: row.subtopic ? String(row.subtopic) : null,
-          question_text: String(row.question_text),
-          official_answer: String(row.official_answer),
-          candidate_answer: null,
-          is_correct: null,
-          is_anulada: false,
-          explanation: String(row.explanation),
-          difficulty: row.difficulty ? String(row.difficulty) : null,
-          source_confidence: "alta",
-          content_status: String(row.content_status),
-          verified_at: row.verified_at ? String(row.verified_at) : null,
-          is_original: true,
-          source_kind: "curated",
-        }),
+        .map((row): QBItem => normalizeQuestion(row, "personal"));
+      const curated = ((curatedResult.data || []) as Array<Record<string, unknown>>).map(
+        (row): QBItem => normalizeQuestion(row, "curated"),
       );
-      const official = ((officialResult.data as Array<Record<string, unknown>>) || []).map(
-        (row): QBItem => ({
-          id: `official-${String(row.id)}`,
-          contest_name: String(row.contest_name),
-          contest_year: String(row.exam_year),
-          career_name: String(row.career_name),
-          item_number: Number(row.item_number),
-          subject: String(row.subject),
-          subtopic: null,
-          question_text: String(row.question_text),
-          official_answer: String(row.official_answer),
-          candidate_answer: null,
-          is_correct: null,
-          is_anulada: false,
-          explanation: row.review_note
-            ? String(row.review_note)
-            : "Gabarito conferido na publicação oficial definitiva do CEBRASPE. O comentário pedagógico detalhado será acrescentado na revisão editorial.",
-          difficulty: null,
-          source_confidence: "alta",
-          content_status: String(row.content_status),
-          verified_at: row.verified_at ? String(row.verified_at) : null,
-          law_version_checked_at: row.law_version_checked_at
-            ? String(row.law_version_checked_at)
-            : null,
-          is_original: false,
-          source_kind: "official",
-          source_page: row.source_page ? Number(row.source_page) : null,
-          legal_basis: Array.isArray(row.legal_basis)
-            ? (row.legal_basis as Array<{ title?: string; url?: string }>)
-            : [],
-          review_note: row.review_note ? String(row.review_note) : null,
-        }),
+      const official = ((officialResult.data || []) as Array<Record<string, unknown>>).map(
+        (row): QBItem => normalizeQuestion(row, "official"),
       );
       setItems([...official, ...curated, ...personal]);
-      setIsLoading(false);
-    };
-    load();
-  }, [user, authLoading]);
+    } catch (loadError) {
+      setError(
+        loadError instanceof Error
+          ? loadError.message
+          : "Não foi possível carregar o banco de questões.",
+      );
+    } finally {
+      setLoading(false);
+    }
+  }, [authLoading, user]);
 
-  const subjects = React.useMemo(
-    () => Array.from(new Set(items.map((i) => i.subject))).sort(),
+  React.useEffect(() => {
+    void load();
+  }, [load]);
+  React.useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+    setOpenId(null);
+  }, [search, contest, board, career, year, subject, source, performance, sort]);
+
+  const facets = React.useMemo(
+    () => ({
+      contests: unique(items.map((item) => item.contest_name)),
+      boards: unique(
+        items.map((item) => item.exam_board).filter((value) => value !== "Não informada"),
+      ),
+      careers: unique(items.map((item) => item.career_name)),
+      years: unique(items.map((item) => item.contest_year).sort((a, b) => Number(b) - Number(a))),
+      subjects: unique(items.map((item) => item.subject)),
+    }),
     [items],
   );
-  const careers = React.useMemo(
-    () => Array.from(new Set(items.map((i) => i.career_name || i.contest_name))).sort(),
+
+  const filtered = React.useMemo(() => {
+    const term = normalize(search);
+    const rows = items.filter((item) => {
+      if (
+        term &&
+        !normalize(
+          [
+            item.question_text,
+            item.subject,
+            item.subtopic,
+            item.contest_name,
+            item.career_name,
+            item.exam_board,
+          ]
+            .filter(Boolean)
+            .join(" "),
+        ).includes(term)
+      )
+        return false;
+      if (contest !== "all" && item.contest_name !== contest) return false;
+      if (board !== "all" && item.exam_board !== board) return false;
+      if (career !== "all" && item.career_name !== career) return false;
+      if (year !== "all" && item.contest_year !== year) return false;
+      if (subject !== "all" && item.subject !== subject) return false;
+      if (source !== "all" && item.source_kind !== source) return false;
+      if (performance === "correct" && item.is_correct !== true) return false;
+      if (performance === "wrong" && item.is_correct !== false) return false;
+      if (performance === "blank" && item.candidate_answer) return false;
+      return true;
+    });
+    return rows.sort((a, b) =>
+      sort === "oldest"
+        ? Number(a.contest_year) - Number(b.contest_year)
+        : sort === "subject"
+          ? a.subject.localeCompare(b.subject)
+          : sort === "contest"
+            ? a.contest_name.localeCompare(b.contest_name)
+            : Number(b.contest_year) - Number(a.contest_year),
+    );
+  }, [items, search, contest, board, career, year, subject, source, performance, sort]);
+
+  const stats = React.useMemo(
+    () => ({
+      total: items.length,
+      official: items.filter((item) => item.source_kind === "official").length,
+      curated: items.filter((item) => item.source_kind === "curated").length,
+      subjects: new Set(items.map((item) => item.subject)).size,
+      legal: items.filter((item) => item.law_version_checked_at).length,
+    }),
     [items],
   );
-  const years = React.useMemo(
-    () => Array.from(new Set(items.map((i) => i.contest_year))).sort(),
-    [items],
-  );
-
-  const filtered = items.filter((i) => {
-    if (subjectFilter !== "all" && i.subject !== subjectFilter) return false;
-    if (careerFilter !== "all" && (i.career_name || i.contest_name) !== careerFilter) return false;
-    if (yearFilter !== "all" && i.contest_year !== yearFilter) return false;
-    if (statusFilter === "errou" && i.is_correct !== false) return false;
-    if (statusFilter === "acertou" && i.is_correct !== true) return false;
-    if (statusFilter === "anulada" && !i.is_anulada) return false;
-    return true;
-  });
-
-  const stats = {
-    total: items.length,
-    acertos: items.filter((i) => i.is_correct === true).length,
-    erros: items.filter((i) => i.is_correct === false).length,
-    anuladas: items.filter((i) => i.is_anulada).length,
-    oficiais: items.filter((i) => i.source_kind === "official").length,
+  const activeFilterCount =
+    [contest, board, career, year, subject, source, performance].filter((value) => value !== "all")
+      .length + (search ? 1 : 0);
+  const clearFilters = () => {
+    setSearch("");
+    setContest("all");
+    setBoard("all");
+    setCareer("all");
+    setYear("all");
+    setSubject("all");
+    setSource("all");
+    setPerformance("all");
   };
 
-  if (authLoading || isLoading) return <div className="p-8">Carregando banco de questões...</div>;
-
-  if (!user || user.id === "demo-user") {
-    return (
-      <div className="h-[60vh] flex flex-col items-center justify-center text-center space-y-4">
-        <BookMarked className="h-16 w-16 text-muted-foreground/30" />
-        <h2 className="text-xl font-bold">Faça login para ver seu banco de questões</h2>
-      </div>
-    );
-  }
-
-  if (items.length === 0) {
-    return (
-      <div className="h-[60vh] flex flex-col items-center justify-center text-center space-y-4">
-        <BookMarked className="h-16 w-16 text-muted-foreground/30" />
-        <h2 className="text-xl font-bold">Banco de questões ainda vazio</h2>
-        <p className="text-muted-foreground max-w-md">
-          Conforme suas provas forem analisadas, as questões individuais com explicação pedagógica
-          aparecem aqui.
-        </p>
-      </div>
-    );
-  }
+  if (authLoading || loading) return <LoadingState />;
+  if (!user || user.id === "demo-user") return <LoginState />;
+  if (error) return <ErrorState message={error} retry={load} />;
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+    <div className="space-y-6 pb-8">
+      <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-[#061a30] via-[#0b3150] to-[#0c695f] p-6 text-white shadow-xl md:p-9">
+        <div className="flex flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">
+          <div className="max-w-3xl">
+            <Badge className="mb-4 border-white/15 bg-white/10 text-emerald-100 hover:bg-white/10">
+              <Sparkles className="mr-1 h-3.5 w-3.5" /> Acervo inteligente e auditado
+            </Badge>
+            <h1 className="text-3xl font-black tracking-tight md:text-5xl">Banco de Questões</h1>
+            <p className="mt-4 text-sm leading-6 text-slate-200 md:text-base">
+              Encontre questões por banca, carreira, concurso, disciplina e origem. Conteúdos
+              revogados, obsoletos ou sem aprovação editorial não aparecem nesta área.
+            </p>
+          </div>
+          <Button
+            asChild
+            size="lg"
+            className="shrink-0 gap-2 rounded-xl bg-emerald-500 text-slate-950 hover:bg-emerald-400"
+          >
+            <Link to="/dashboard/mock-exams">
+              <Play className="h-4 w-4 fill-current" /> Treinar no simulador
+            </Link>
+          </Button>
+        </div>
+        <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-5">
+          <HeroStat label="questões ativas" value={stats.total} icon={LibraryBig} />
+          <HeroStat label="provas oficiais" value={stats.official} icon={FileCheck2} />
+          <HeroStat label="autorais auditadas" value={stats.curated} icon={BookOpenCheck} />
+          <HeroStat label="disciplinas" value={stats.subjects} icon={Layers3} />
+          <HeroStat label="revisões jurídicas" value={stats.legal} icon={Gavel} />
+        </div>
+      </section>
+
+      <Card className="border-0 shadow-lg ring-1 ring-border/70">
+        <CardHeader>
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <CardTitle className="flex items-center gap-2">
+                <Search className="h-5 w-5 text-emerald-600" /> Localizar questões
+              </CardTitle>
+              <CardDescription>
+                Combine os filtros para montar uma seleção específica.
+              </CardDescription>
+            </div>
+            {activeFilterCount > 0 && (
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={clearFilters}
+                className="gap-2 text-red-600"
+              >
+                <FilterX className="h-4 w-4" /> Limpar {activeFilterCount} filtro
+                {activeFilterCount !== 1 ? "s" : ""}
+              </Button>
+            )}
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="relative">
+            <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+            <Input
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+              placeholder="Buscar no enunciado, assunto, órgão, cargo ou banca..."
+              className="h-11 pl-10"
+            />
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <Filter
+              label="Concurso"
+              value={contest}
+              change={setContest}
+              options={facets.contests}
+            />
+            <Filter label="Banca" value={board} change={setBoard} options={facets.boards} />
+            <Filter
+              label="Carreira ou cargo"
+              value={career}
+              change={setCareer}
+              options={facets.careers}
+            />
+            <Filter label="Ano" value={year} change={setYear} options={facets.years} />
+            <Filter
+              label="Disciplina"
+              value={subject}
+              change={setSubject}
+              options={facets.subjects}
+            />
+            <Filter
+              label="Origem"
+              value={source}
+              change={setSource}
+              options={["official", "curated", "personal"]}
+              labels={SOURCE_LABELS}
+            />
+            <Filter
+              label="Meu desempenho"
+              value={performance}
+              change={setPerformance}
+              options={["correct", "wrong", "blank"]}
+              labels={{ correct: "Acertei", wrong: "Errei", blank: "Sem resposta" }}
+            />
+            <Filter
+              label="Ordenar"
+              value={sort}
+              change={setSort}
+              options={["recent", "oldest", "subject", "contest"]}
+              labels={{
+                recent: "Mais recentes",
+                oldest: "Mais antigas",
+                subject: "Por disciplina",
+                contest: "Por concurso",
+              }}
+              all={false}
+            />
+          </div>
+        </CardContent>
+      </Card>
+
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-primary">Banco de Questões</h1>
-          <p className="text-muted-foreground">
-            Questões oficiais da PF e questões autorais, todas vinculadas ao edital e a fontes
-            verificadas.
+          <h2 className="text-xl font-black">Questões encontradas</h2>
+          <p className="text-sm text-muted-foreground">
+            {filtered.length} de {items.length} questões no acervo
           </p>
         </div>
         <Badge
           variant="outline"
           className="w-fit gap-1.5 border-emerald-200 bg-emerald-50 px-3 py-1.5 text-emerald-700"
         >
-          <ShieldCheck className="h-3.5 w-3.5" /> Fontes oficiais verificadas
+          <ShieldCheck className="h-3.5 w-3.5" /> Somente conteúdo ativo
         </Badge>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
-        <StatTile label="Questões" value={stats.total} color="text-primary" />
-        <StatTile label="Certas" value={stats.acertos} color="text-emerald-600" />
-        <StatTile label="Erradas" value={stats.erros} color="text-rose-600" />
-        <StatTile label="Anuladas" value={stats.anuladas} color="text-amber-600" />
-        <StatTile label="Oficiais" value={stats.oficiais} color="text-sky-600" />
-      </div>
-
-      <div className="flex flex-wrap gap-2">
-        <FilterSelect
-          label="Matéria"
-          value={subjectFilter}
-          onChange={setSubjectFilter}
-          options={["all", ...subjects]}
-          allLabel="Todas as matérias"
-        />
-        <FilterSelect
-          label="Carreira"
-          value={careerFilter}
-          onChange={setCareerFilter}
-          options={["all", ...careers]}
-          allLabel="Todas as carreiras"
-        />
-        <FilterSelect
-          label="Ano"
-          value={yearFilter}
-          onChange={setYearFilter}
-          options={["all", ...years]}
-          allLabel="Todos os anos"
-        />
-        <FilterSelect
-          label="Status"
-          value={statusFilter}
-          onChange={setStatusFilter}
-          options={["all", "acertou", "errou", "anulada"]}
-          allLabel="Todos"
-          labels={{ acertou: "Acertei", errou: "Errei", anulada: "Anuladas" }}
-        />
-      </div>
-
-      <div className="space-y-3">
-        {filtered.map((q) => {
-          const isOpen = openId === q.id;
-          return (
-            <Card
-              key={q.id}
-              className={cn(
-                "border-l-4",
-                q.is_anulada
-                  ? "border-l-amber-400"
-                  : q.is_correct === true
-                    ? "border-l-emerald-500"
-                    : q.is_correct === false
-                      ? "border-l-rose-500"
-                      : "border-l-muted",
-              )}
-            >
-              <CardContent
-                className="pt-4 cursor-pointer"
-                onClick={() => setOpenId(isOpen ? null : q.id)}
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 flex-wrap mb-1.5">
-                      <Badge variant="outline" className="text-[10px]">
-                        {q.contest_year}
-                      </Badge>
-                      <Badge variant="outline" className="text-[10px]">
-                        Item {q.item_number}
-                      </Badge>
-                      <Badge className="text-[10px] bg-secondary">{q.subject}</Badge>
-                      <span className="text-[10px] font-medium text-muted-foreground">
-                        {q.career_name || q.contest_name}
-                      </span>
-                      {q.subtopic && (
-                        <span className="text-[10px] text-muted-foreground">{q.subtopic}</span>
-                      )}
-                      {q.is_original && (
-                        <Badge
-                          variant="outline"
-                          className="text-[10px] border-sky-200 bg-sky-50 text-sky-700"
-                        >
-                          Questão autoral
-                        </Badge>
-                      )}
-                      {q.source_kind === "official" && (
-                        <Badge
-                          variant="outline"
-                          className="text-[10px] border-violet-200 bg-violet-50 text-violet-700"
-                        >
-                          Prova oficial PF
-                        </Badge>
-                      )}
-                      {q.verified_at && (
-                        <Badge
-                          variant="outline"
-                          className="text-[10px] border-emerald-200 text-emerald-700"
-                        >
-                          Edital verificado
-                        </Badge>
-                      )}
-                      {q.law_version_checked_at && (
-                        <Badge
-                          variant="outline"
-                          className="text-[10px] border-indigo-200 bg-indigo-50 text-indigo-700"
-                        >
-                          Vigência jurídica conferida
-                        </Badge>
-                      )}
-                      <StatusIcon anulada={q.is_anulada} correct={q.is_correct} />
-                    </div>
-                    <p className="text-sm leading-relaxed">{q.question_text}</p>
-                  </div>
-                  <Button variant="ghost" size="icon" className="shrink-0 h-7 w-7">
-                    {isOpen ? (
-                      <ChevronUp className="h-4 w-4" />
-                    ) : (
-                      <ChevronDown className="h-4 w-4" />
-                    )}
-                  </Button>
-                </div>
-
-                {isOpen && (
-                  <div className="mt-3 pt-3 border-t space-y-2">
-                    <div className="flex flex-wrap gap-3 text-xs">
-                      <span>
-                        Gabarito oficial: <strong>{q.official_answer || "—"}</strong>
-                      </span>
-                      {q.candidate_answer && (
-                        <span>
-                          Sua resposta: <strong>{q.candidate_answer}</strong>
-                        </span>
-                      )}
-                      {q.difficulty && (
-                        <Badge variant="outline" className="text-[10px]">
-                          {q.difficulty}
-                        </Badge>
-                      )}
-                      {q.source_kind === "official" && q.source_page && (
-                        <span className="text-muted-foreground">
-                          Caderno oficial, pág. {q.source_page}
-                        </span>
-                      )}
-                    </div>
-                    <div className="p-3 bg-muted/50 rounded-lg text-sm leading-relaxed">
-                      <p className="font-bold text-xs uppercase text-muted-foreground mb-1">
-                        Explicação
-                      </p>
-                      {q.explanation}
-                    </div>
-                    {q.legal_basis && q.legal_basis.length > 0 && (
-                      <div className="rounded-lg border border-indigo-100 bg-indigo-50/50 p-3">
-                        <p className="mb-2 text-xs font-bold uppercase text-indigo-800">
-                          Fontes oficiais da revisão jurídica
-                        </p>
-                        <div className="flex flex-col gap-1.5">
-                          {q.legal_basis.map((source, index) =>
-                            source.url ? (
-                              <a
-                                key={`${source.url}-${index}`}
-                                href={source.url}
-                                target="_blank"
-                                rel="noreferrer"
-                                onClick={(event) => event.stopPropagation()}
-                                className="inline-flex w-fit items-center gap-1 text-xs font-medium text-indigo-700 hover:underline"
-                              >
-                                {source.title || "Fonte oficial"}
-                                <ExternalLink className="h-3 w-3" />
-                              </a>
-                            ) : null,
-                          )}
-                        </div>
-                      </div>
-                    )}
-                    {q.source_confidence !== "alta" && (
-                      <p className="text-[10px] text-amber-600 flex items-center gap-1">
-                        Confiança da explicação: {q.source_confidence} — vale conferir com material
-                        complementar.
-                      </p>
-                    )}
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-          );
-        })}
-      </div>
+      {filtered.length ? (
+        <div className="space-y-3">
+          {filtered.slice(0, visibleCount).map((question, index) => (
+            <QuestionCard
+              key={question.id}
+              question={question}
+              index={index + 1}
+              open={openId === question.id}
+              revealed={revealed.has(question.id)}
+              toggle={() => setOpenId(openId === question.id ? null : question.id)}
+              reveal={() => setRevealed((old) => new Set(old).add(question.id))}
+            />
+          ))}
+        </div>
+      ) : (
+        <EmptyResults clear={clearFilters} />
+      )}
+      {visibleCount < filtered.length && (
+        <div className="flex justify-center">
+          <Button
+            variant="outline"
+            size="lg"
+            onClick={() => setVisibleCount((value) => value + PAGE_SIZE)}
+          >
+            Carregar mais {Math.min(PAGE_SIZE, filtered.length - visibleCount)} questões
+          </Button>
+        </div>
+      )}
+      <footer className="rounded-2xl border bg-card px-5 py-4 text-center text-xs text-muted-foreground">
+        Acervo educacional com governança editorial · Desenvolvido por{" "}
+        <strong className="text-foreground">Franc D&apos;nis</strong> · Feijó-AC
+      </footer>
     </div>
   );
 }
 
-function StatTile({ label, value, color }: { label: string; value: number; color: string }) {
+function QuestionCard({
+  question,
+  index,
+  open,
+  revealed,
+  toggle,
+  reveal,
+}: {
+  question: QBItem;
+  index: number;
+  open: boolean;
+  revealed: boolean;
+  toggle: () => void;
+  reveal: () => void;
+}) {
+  const sourceTone =
+    question.source_kind === "official"
+      ? "border-violet-200 bg-violet-50 text-violet-700"
+      : question.source_kind === "curated"
+        ? "border-sky-200 bg-sky-50 text-sky-700"
+        : "border-amber-200 bg-amber-50 text-amber-700";
+  return (
+    <Card
+      className={cn(
+        "overflow-hidden border-l-4 transition-shadow hover:shadow-md",
+        question.is_correct === true
+          ? "border-l-emerald-500"
+          : question.is_correct === false
+            ? "border-l-red-500"
+            : "border-l-slate-300",
+      )}
+    >
+      <button onClick={toggle} className="flex w-full items-start gap-4 p-5 text-left">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-sm font-black text-primary-foreground">
+          {index}
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="mb-2 flex flex-wrap items-center gap-2">
+            <Badge variant="outline" className={sourceTone}>
+              {SOURCE_LABELS[question.source_kind]}
+            </Badge>
+            <Badge variant="outline">{question.exam_board}</Badge>
+            <Badge variant="secondary">{question.subject}</Badge>
+            <span className="text-xs text-muted-foreground">
+              {question.contest_name} · {question.contest_year}
+              {question.item_number ? ` · Item ${question.item_number}` : ""}
+            </span>
+            {question.verified_at && <ShieldCheck className="h-4 w-4 text-emerald-600" />}
+            <StatusIcon correct={question.is_correct} />
+          </div>
+          <p className={cn("text-sm font-medium leading-6 md:text-base", !open && "line-clamp-2")}>
+            {question.question_text}
+          </p>
+        </div>
+        {open ? (
+          <ChevronUp className="mt-1 h-5 w-5 shrink-0 text-muted-foreground" />
+        ) : (
+          <ChevronDown className="mt-1 h-5 w-5 shrink-0 text-muted-foreground" />
+        )}
+      </button>
+      {open && (
+        <div className="border-t bg-muted/15 p-5 md:pl-[80px]">
+          <div className="mb-4 flex flex-wrap gap-2 text-xs text-muted-foreground">
+            <span className="rounded-full border bg-background px-3 py-1">
+              Cargo: {question.career_name}
+            </span>
+            {question.subtopic && (
+              <span className="rounded-full border bg-background px-3 py-1">
+                Assunto: {question.subtopic}
+              </span>
+            )}
+            {question.difficulty && (
+              <span className="rounded-full border bg-background px-3 py-1">
+                Dificuldade: {question.difficulty}
+              </span>
+            )}
+            {question.source_page && (
+              <span className="rounded-full border bg-background px-3 py-1">
+                Página oficial: {question.source_page}
+              </span>
+            )}
+          </div>
+          {!revealed ? (
+            <div className="rounded-xl border border-dashed bg-background p-5 text-center">
+              <Target className="mx-auto h-7 w-7 text-primary" />
+              <p className="mt-2 font-bold">Tente resolver antes de consultar</p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                O gabarito e a explicação continuam protegidos.
+              </p>
+              <Button
+                className="mt-4"
+                variant="outline"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  reveal();
+                }}
+              >
+                Revelar solução
+              </Button>
+            </div>
+          ) : (
+            <Solution question={question} />
+          )}
+        </div>
+      )}
+    </Card>
+  );
+}
+
+function Solution({ question }: { question: QBItem }) {
+  return (
+    <div className="space-y-4">
+      <div className="flex flex-wrap gap-3">
+        <Badge className="bg-emerald-600 text-white hover:bg-emerald-600">
+          Gabarito: {question.official_answer || "—"}
+        </Badge>
+        {question.candidate_answer && (
+          <Badge variant="outline">Sua resposta: {question.candidate_answer}</Badge>
+        )}
+      </div>
+      <div className="rounded-xl border bg-background p-4">
+        <p className="mb-2 text-xs font-black uppercase tracking-wide text-muted-foreground">
+          Explicação pedagógica
+        </p>
+        <p className="text-sm leading-6">{question.explanation}</p>
+      </div>
+      {question.legal_basis.length > 0 && (
+        <div className="rounded-xl border border-indigo-100 bg-indigo-50/50 p-4">
+          <p className="mb-2 text-xs font-black uppercase text-indigo-800">Fontes oficiais</p>
+          <div className="flex flex-col gap-2">
+            {question.legal_basis
+              .filter((source) => source.url)
+              .map((source, index) => (
+                <a
+                  key={`${source.url}-${index}`}
+                  href={source.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex w-fit items-center gap-1.5 text-xs font-semibold text-indigo-700 hover:underline"
+                >
+                  {source.title || source.lei || "Fonte oficial"}
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              ))}
+          </div>
+        </div>
+      )}
+      {question.law_version_checked_at && (
+        <p className="flex items-center gap-1.5 text-xs font-semibold text-emerald-700">
+          <Gavel className="h-3.5 w-3.5" />
+          Vigência jurídica conferida em{" "}
+          {new Date(question.law_version_checked_at).toLocaleDateString("pt-BR")}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function Filter({
+  label,
+  value,
+  change,
+  options,
+  labels,
+  all = true,
+}: {
+  label: string;
+  value: string;
+  change: (value: string) => void;
+  options: string[];
+  labels?: Record<string, string>;
+  all?: boolean;
+}) {
+  return (
+    <label className="space-y-1.5">
+      <span className="text-xs font-bold text-muted-foreground">{label}</span>
+      <Select value={value} onValueChange={change}>
+        <SelectTrigger>
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          {all && <SelectItem value="all">Todos</SelectItem>}
+          {options.map((option) => (
+            <SelectItem key={option} value={option}>
+              {labels?.[option] || option}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </label>
+  );
+}
+function HeroStat({
+  label,
+  value,
+  icon: Icon,
+}: {
+  label: string;
+  value: number;
+  icon: React.ElementType;
+}) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
+      <Icon className="mb-3 h-5 w-5 text-emerald-300" />
+      <p className="text-2xl font-black">{value}</p>
+      <p className="text-[11px] text-slate-300">{label}</p>
+    </div>
+  );
+}
+function StatusIcon({ correct }: { correct: boolean | null }) {
+  if (correct === true)
+    return (
+      <span title="Você acertou">
+        <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+      </span>
+    );
+  if (correct === false)
+    return (
+      <span title="Você errou">
+        <XCircle className="h-4 w-4 text-red-600" />
+      </span>
+    );
+  return null;
+}
+function LoadingState() {
+  return (
+    <div className="flex min-h-[60vh] flex-col items-center justify-center">
+      <Loader2 className="h-9 w-9 animate-spin text-emerald-600" />
+      <p className="mt-3 text-sm text-muted-foreground">Organizando o banco de questões...</p>
+    </div>
+  );
+}
+function LoginState() {
+  return (
+    <div className="flex min-h-[60vh] flex-col items-center justify-center text-center">
+      <BookMarked className="h-14 w-14 text-muted-foreground/30" />
+      <h2 className="mt-4 text-xl font-black">Entre para acessar o acervo</h2>
+      <p className="mt-2 text-sm text-muted-foreground">
+        O banco profissional é personalizado para cada candidato.
+      </p>
+    </div>
+  );
+}
+function ErrorState({ message, retry }: { message: string; retry: () => void }) {
+  return (
+    <Card className="mx-auto mt-10 max-w-xl">
+      <CardContent className="flex flex-col items-center p-8 text-center">
+        <AlertTriangle className="h-10 w-10 text-red-500" />
+        <h2 className="mt-4 text-xl font-black">Falha ao carregar o acervo</h2>
+        <p className="mt-2 text-sm text-muted-foreground">{message}</p>
+        <Button className="mt-5 gap-2" onClick={retry}>
+          <RefreshCw className="h-4 w-4" />
+          Tentar novamente
+        </Button>
+      </CardContent>
+    </Card>
+  );
+}
+function EmptyResults({ clear }: { clear: () => void }) {
   return (
     <Card>
-      <CardContent className="pt-4 pb-3">
-        <p className="text-xs text-muted-foreground">{label}</p>
-        <p className={cn("text-2xl font-bold", color)}>{value}</p>
+      <CardContent className="flex flex-col items-center py-14 text-center">
+        <CircleSlash className="h-12 w-12 text-muted-foreground/30" />
+        <h3 className="mt-4 text-lg font-black">Nenhuma questão corresponde aos filtros</h3>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Remova alguns critérios ou faça uma busca mais ampla.
+        </p>
+        <Button variant="outline" className="mt-5 gap-2" onClick={clear}>
+          <FilterX className="h-4 w-4" />
+          Limpar filtros
+        </Button>
       </CardContent>
     </Card>
   );
 }
 
-function StatusIcon({ anulada, correct }: { anulada: boolean; correct: boolean | null }) {
-  if (anulada) return <CircleSlash className="h-3.5 w-3.5 text-amber-500" />;
-  if (correct === true) return <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />;
-  if (correct === false) return <XCircle className="h-3.5 w-3.5 text-rose-500" />;
-  return null;
+function normalizeQuestion(row: Record<string, unknown>, sourceKind: SourceKind): QBItem {
+  const isOfficial = sourceKind === "official",
+    isCurated = sourceKind === "curated";
+  return {
+    id: `${sourceKind}-${String(row.id)}`,
+    contest_name: String(row.contest_name || "Não informado"),
+    contest_year: String(isOfficial ? row.exam_year : row.contest_year || "—"),
+    career_name: String(row.career_name || row.contest_name || "Não informada"),
+    exam_board: String(row.exam_board || "Não informada"),
+    item_number: Number(row.item_number || 0),
+    subject: String(row.subject || "Sem disciplina"),
+    subtopic: row.subtopic ? String(row.subtopic) : null,
+    question_text: String(row.question_text || ""),
+    official_answer: row.official_answer ? String(row.official_answer) : null,
+    candidate_answer: row.candidate_answer ? String(row.candidate_answer) : null,
+    is_correct: typeof row.is_correct === "boolean" ? row.is_correct : null,
+    is_anulada: Boolean(row.is_anulada),
+    explanation: String(
+      row.explanation ||
+        row.review_note ||
+        (isOfficial
+          ? "Gabarito conferido na publicação oficial definitiva. O comentário pedagógico detalhado será acrescentado na revisão editorial."
+          : "Explicação em revisão editorial."),
+    ),
+    difficulty: row.difficulty ? String(row.difficulty) : null,
+    source_confidence: String(row.source_confidence || "alta"),
+    verified_at: row.verified_at ? String(row.verified_at) : null,
+    law_version_checked_at: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
+    source_kind: sourceKind,
+    source_page: row.source_page ? Number(row.source_page) : null,
+    legal_basis: Array.isArray(row.legal_basis) ? (row.legal_basis as QBItem["legal_basis"]) : [],
+  };
 }
-
-function FilterSelect({
-  label,
-  value,
-  onChange,
-  options,
-  allLabel,
-  labels,
-}: {
-  label: string;
-  value: string;
-  onChange: (v: string) => void;
-  options: string[];
-  allLabel: string;
-  labels?: Record<string, string>;
-}) {
-  return (
-    <select
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-      className="h-9 px-3 rounded-md border bg-background text-sm"
-      aria-label={label}
-    >
-      {options.map((opt) => (
-        <option key={opt} value={opt}>
-          {opt === "all" ? allLabel : labels?.[opt] || opt}
-        </option>
-      ))}
-    </select>
-  );
+function unique(values: string[]) {
+  return Array.from(new Set(values.filter(Boolean))).sort((a, b) => a.localeCompare(b, "pt-BR"));
+}
+function normalize(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
 }
