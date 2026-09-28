@@ -17,7 +17,6 @@ import {
   TrendingDown,
   TrendingUp,
   XCircle,
-  FileStack,
   ZoomIn,
   ZoomOut,
 } from "lucide-react";
