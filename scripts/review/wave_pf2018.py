@@ -1,4 +1,4 @@
-# Onda 2 (parte 3): PF 2018 (Agente). Gera supabase/migrations/20260927410000_pf_2018_review_wave.sql
+# Onda 2 (parte 3): PF 2018 (Agente). Gera supabase/migrations/20260927410100_pf_2018_review_wave.sql
 import os, sys, re, json
 sys.path.insert(0, os.path.dirname(__file__))
 import wave_lib as W
@@ -173,7 +173,7 @@ for n in (119, 120):
     D[n] = dict(action="block", note="Bloqueado (27/09/2026): a NBC TSP Estrutura Conceitual foi revisada (R1, 13/11/2025, após a prova); é preciso conferir o texto vigente antes de publicar. A chave oficial continua valendo para a pontuação.")
 
 if __name__ == "__main__":
-    out = os.path.join(ROOT, "supabase", "migrations", "20260927410000_pf_2018_review_wave.sql")
+    out = os.path.join(ROOT, "supabase", "migrations", "20260927410100_pf_2018_review_wave.sql")
     c = W.build_sql(CFG, D, out, "Onda 2 (parte 3): PF 2018 (Agente). Gerado por scripts/review/wave_pf2018.py.\nTextos recuperados do caderno oficial (CEBRASPE 2018); leis conferidas em 27/09/2026.")
     print(c, sum(c.values()), "de 103")
     print("sem decisão:", [n for n in range(1, 121) if n not in D])

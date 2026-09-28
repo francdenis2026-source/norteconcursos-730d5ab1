@@ -65,7 +65,7 @@ D14 = {
 }
 
 if __name__ == "__main__":
-    o1 = os.path.join(ROOT, "supabase", "migrations", "20260927400000_pf_2021_legal_audit.sql")
+    o1 = os.path.join(ROOT, "supabase", "migrations", "20260927400100_pf_2021_legal_audit.sql")
     o2 = os.path.join(ROOT, "supabase", "migrations", "20260927400500_pf_2014_legal_audit.sql")
     print(W.build_sql(CFG21, D21, o1, "Auditoria jurídica refeita: PF 2021 (Agente). Textos oficiais compilados do Planalto e súmulas conferidos em 27/09/2026."))
     print(W.build_sql(CFG14, D14, o2, "Auditoria jurídica: PF 2014 (Agente), itens 105 e 115. Textos oficiais do Planalto conferidos em 27/09/2026."))
