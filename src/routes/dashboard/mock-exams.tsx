@@ -29,6 +29,16 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
@@ -103,8 +113,14 @@ function ProfessionalSimulator() {
   const [loadError, setLoadError] = React.useState<string | null>(null);
   const [contest, setContest] = React.useState("all");
   const [subject, setSubject] = React.useState("all");
+  const [board, setBoard] = React.useState("all");
+  const [career, setCareer] = React.useState("all");
+  const [year, setYear] = React.useState("all");
+  const [sourceKind, setSourceKind] = React.useState("all");
   const [limit, setLimit] = React.useState(20);
   const [durationMinutes, setDurationMinutes] = React.useState(30);
+  const [startWarningOpen, setStartWarningOpen] = React.useState(false);
+  const [warningAccepted, setWarningAccepted] = React.useState(false);
   const [questions, setQuestions] = React.useState<SimulatorQuestion[]>([]);
   const [answers, setAnswers] = React.useState<Record<string, Answer>>({});
   const [flagged, setFlagged] = React.useState<Set<string>>(new Set());
@@ -222,6 +238,16 @@ function ProfessionalSimulator() {
       void finishSimulator(true); /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [timeLeft, stage, startedAt]);
 
+  React.useEffect(() => {
+    if (stage !== "active") return;
+    const warnBeforeLeaving = (event: BeforeUnloadEvent) => {
+      event.preventDefault();
+      event.returnValue = "";
+    };
+    window.addEventListener("beforeunload", warnBeforeLeaving);
+    return () => window.removeEventListener("beforeunload", warnBeforeLeaving);
+  }, [stage]);
+
   const contests = React.useMemo(
     () =>
       Array.from(new Set(catalog.map((item) => item.contest))).sort((a, b) => a.localeCompare(b)),
@@ -238,14 +264,31 @@ function ProfessionalSimulator() {
       ).sort((a, b) => a.localeCompare(b)),
     [catalog, contest],
   );
+  const boards = React.useMemo(
+    () => Array.from(new Set(catalog.map((item) => item.board))).sort((a, b) => a.localeCompare(b)),
+    [catalog],
+  );
+  const careers = React.useMemo(
+    () =>
+      Array.from(new Set(catalog.map((item) => item.career))).sort((a, b) => a.localeCompare(b)),
+    [catalog],
+  );
+  const years = React.useMemo(
+    () => Array.from(new Set(catalog.map((item) => item.year))).sort((a, b) => b - a),
+    [catalog],
+  );
   const available = React.useMemo(
     () =>
       catalog.filter(
         (item) =>
           (contest === "all" || item.contest === contest) &&
-          (subject === "all" || item.subject === subject),
+          (subject === "all" || item.subject === subject) &&
+          (board === "all" || item.board === board) &&
+          (career === "all" || item.career === career) &&
+          (year === "all" || item.year === Number(year)) &&
+          (sourceKind === "all" || item.sourceKind === sourceKind),
       ),
-    [catalog, contest, subject],
+    [catalog, contest, subject, board, career, year, sourceKind],
   );
   const current = questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
@@ -265,6 +308,22 @@ function ProfessionalSimulator() {
     setTimeLeft(durationMinutes * 60);
     setStage("active");
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function cancelSimulator() {
+    const wasEarly = elapsedSeconds < 60;
+    setStage("setup");
+    setQuestions([]);
+    setAnswers({});
+    setFlagged(new Set());
+    setStartedAt(null);
+    setTimeLeft(0);
+    setElapsedSeconds(0);
+    toast.info(
+      wasEarly
+        ? "Treino cancelado em menos de 1 minuto. Nenhum dado foi registrado."
+        : "Treino cancelado. O resultado não foi registrado nem afetou o ranking.",
+    );
   }
 
   async function finishSimulator(automatic = false) {
@@ -341,6 +400,7 @@ function ProfessionalSimulator() {
         setAnswers={setAnswers}
         setFlagged={setFlagged}
         finish={finishSimulator}
+        cancel={cancelSimulator}
       />
     );
   if (stage === "result")
@@ -393,7 +453,7 @@ function ProfessionalSimulator() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               <Field label="Concurso ou carreira">
                 <Select
                   value={contest}
@@ -412,6 +472,63 @@ function ProfessionalSimulator() {
                         {i}
                       </SelectItem>
                     ))}
+                  </SelectContent>
+                </Select>
+              </Field>
+              <Field label="Banca organizadora">
+                <Select value={board} onValueChange={setBoard}>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Todas as bancas</SelectItem>
+                    {boards.map((item) => (
+                      <SelectItem key={item} value={item}>
+                        {item}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </Field>
+              <Field label="Carreira ou cargo">
+                <Select value={career} onValueChange={setCareer}>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Todas as carreiras</SelectItem>
+                    {careers.map((item) => (
+                      <SelectItem key={item} value={item}>
+                        {item}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </Field>
+              <Field label="Ano de referência">
+                <Select value={year} onValueChange={setYear}>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Todos os anos</SelectItem>
+                    {years.map((item) => (
+                      <SelectItem key={item} value={String(item)}>
+                        {item}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </Field>
+              <Field label="Origem das questões">
+                <Select value={sourceKind} onValueChange={setSourceKind}>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Oficiais e autorais</SelectItem>
+                    <SelectItem value="official">Provas oficiais</SelectItem>
+                    <SelectItem value="curated">Questões autorais auditadas</SelectItem>
                   </SelectContent>
                 </Select>
               </Field>
@@ -471,7 +588,10 @@ function ProfessionalSimulator() {
               </div>
               <Button
                 size="lg"
-                onClick={startSimulator}
+                onClick={() => {
+                  setWarningAccepted(false);
+                  setStartWarningOpen(true);
+                }}
                 disabled={!available.length}
                 className="gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700"
               >
@@ -510,9 +630,57 @@ function ProfessionalSimulator() {
         <RankIdentity profile={rankProfile} leaderboard={leaderboard} userId={user?.id} />
         <Leaderboard rows={leaderboard} userId={user?.id} />
       </div>
+      <CatalogOverview catalog={catalog} />
       <footer className="rounded-2xl border bg-card px-5 py-4 text-center text-xs text-muted-foreground">
         Desenvolvido por <strong className="text-foreground">Franc D&apos;nis</strong> · Feijó-AC
       </footer>
+      <Dialog open={startWarningOpen} onOpenChange={setStartWarningOpen}>
+        <DialogContent className="sm:max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 text-xl">
+              <ShieldCheck className="h-5 w-5 text-emerald-600" /> Compromisso de prova
+            </DialogTitle>
+            <DialogDescription>
+              Leia antes de iniciar. O cronômetro começará imediatamente após a confirmação.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-3 rounded-xl border bg-muted/30 p-4 text-sm">
+            <p className="font-bold">Durante o simulado:</p>
+            <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
+              <li>o gabarito e os comentários ficam ocultos até a finalização;</li>
+              <li>fechar ou atualizar a página pode encerrar o treino em andamento;</li>
+              <li>para cancelar, será necessário digitar a frase de confirmação;</li>
+              <li>
+                cancelamentos com menos de 1 minuto não são registrados e nunca afetam o ranking.
+              </li>
+            </ul>
+          </div>
+          <label className="flex cursor-pointer items-start gap-3 rounded-xl border p-3">
+            <Checkbox
+              checked={warningAccepted}
+              onCheckedChange={(value) => setWarningAccepted(value === true)}
+            />
+            <span className="text-sm">
+              Estou preparado e entendo que devo concluir o simulado para registrar meu desempenho.
+            </span>
+          </label>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setStartWarningOpen(false)}>
+              Voltar
+            </Button>
+            <Button
+              disabled={!warningAccepted}
+              onClick={() => {
+                setStartWarningOpen(false);
+                startSimulator();
+              }}
+              className="bg-emerald-600 hover:bg-emerald-700"
+            >
+              <Play className="mr-2 h-4 w-4" /> Confirmar e iniciar
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
@@ -666,6 +834,54 @@ function Leaderboard({ rows, userId }: { rows: RankProfile[]; userId?: string })
   );
 }
 
+function CatalogOverview({ catalog }: { catalog: SimulatorQuestion[] }) {
+  const group = (key: "board" | "career" | "subject") =>
+    Array.from(
+      catalog.reduce(
+        (map, item) => map.set(item[key], (map.get(item[key]) || 0) + 1),
+        new Map<string, number>(),
+      ),
+    ).sort((a, b) => b[1] - a[1]);
+  const sections = [
+    { title: "Principais bancas", items: group("board") },
+    { title: "Carreiras e cargos", items: group("career") },
+    { title: "Disciplinas", items: group("subject") },
+  ];
+  return (
+    <Card className="border-0 shadow-lg ring-1 ring-border/70">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2 text-xl">
+          <BookOpenCheck className="h-5 w-5 text-blue-600" /> Acervo organizado
+        </CardTitle>
+        <CardDescription>
+          Visão do banco ativo por banca, carreira e disciplina. Os números acompanham
+          automaticamente a expansão do catálogo.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="grid gap-6 lg:grid-cols-3">
+        {sections.map((section) => (
+          <div key={section.title}>
+            <p className="mb-3 text-sm font-black uppercase tracking-wide text-muted-foreground">
+              {section.title}
+            </p>
+            <div className="space-y-2">
+              {section.items.slice(0, 8).map(([name, count]) => (
+                <div
+                  key={name}
+                  className="flex items-center justify-between gap-3 rounded-lg bg-muted/40 px-3 py-2"
+                >
+                  <span className="truncate text-sm font-semibold">{name}</span>
+                  <Badge variant="secondary">{count}</Badge>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </CardContent>
+    </Card>
+  );
+}
+
 function ActiveSimulator(p: {
   questions: SimulatorQuestion[];
   currentIndex: number;
@@ -679,6 +895,7 @@ function ActiveSimulator(p: {
   setAnswers: React.Dispatch<React.SetStateAction<Record<string, Answer>>>;
   setFlagged: React.Dispatch<React.SetStateAction<Set<string>>>;
   finish: (automatic?: boolean) => Promise<void>;
+  cancel: () => void;
 }) {
   const {
     questions,
@@ -693,8 +910,11 @@ function ActiveSimulator(p: {
     setAnswers,
     setFlagged,
     finish,
+    cancel,
   } = p;
   const progress = (answeredCount / questions.length) * 100;
+  const [cancelOpen, setCancelOpen] = React.useState(false);
+  const [cancelPhrase, setCancelPhrase] = React.useState("");
   return (
     <div className="space-y-5 pb-8">
       <div className="sticky top-[82px] z-10 rounded-2xl border bg-background/95 p-4 shadow-lg backdrop-blur">
@@ -718,9 +938,20 @@ function ActiveSimulator(p: {
             <Clock3 className="h-5 w-5" />
             {formatTime(timeLeft)}
           </div>
-          <Button variant="destructive" onClick={() => void finish()} disabled={saving}>
-            {saving && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Finalizar
-          </Button>
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              onClick={() => {
+                setCancelPhrase("");
+                setCancelOpen(true);
+              }}
+            >
+              Cancelar
+            </Button>
+            <Button variant="destructive" onClick={() => void finish()} disabled={saving}>
+              {saving && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Finalizar
+            </Button>
+          </div>
         </div>
         <div className="mt-3 flex items-center gap-3">
           <Progress value={progress} className="h-2" />
@@ -828,6 +1059,43 @@ function ActiveSimulator(p: {
           </CardContent>
         </Card>
       </div>
+      <Dialog open={cancelOpen} onOpenChange={setCancelOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Cancelar simulado?</DialogTitle>
+            <DialogDescription>
+              O resultado não será salvo nem afetará suas questões, estrelas ou posição no ranking.
+              Para confirmar, digite exatamente:
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-3">
+            <div className="rounded-lg bg-red-50 p-3 text-center font-mono text-sm font-black text-red-700">
+              CANCELAR SIMULADO
+            </div>
+            <Input
+              value={cancelPhrase}
+              onChange={(event) => setCancelPhrase(event.target.value)}
+              placeholder="Digite a frase de confirmação"
+              autoComplete="off"
+            />
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setCancelOpen(false)}>
+              Continuar prova
+            </Button>
+            <Button
+              variant="destructive"
+              disabled={cancelPhrase.trim().toUpperCase() !== "CANCELAR SIMULADO"}
+              onClick={() => {
+                setCancelOpen(false);
+                cancel();
+              }}
+            >
+              Cancelar definitivamente
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
