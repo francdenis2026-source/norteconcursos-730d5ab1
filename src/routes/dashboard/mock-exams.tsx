@@ -1,251 +1,1039 @@
-import { createFileRoute } from '@tanstack/react-router';
+import React from "react";
+import { createFileRoute } from "@tanstack/react-router";
+import {
+  AlertTriangle,
+  ArrowLeft,
+  ArrowRight,
+  BarChart3,
+  BookOpenCheck,
+  CheckCircle2,
+  Clock3,
+  Flag,
+  Gauge,
+  History,
+  Loader2,
+  Play,
+  RotateCcw,
+  ShieldCheck,
+  Sparkles,
+  Target,
+  TimerReset,
+  Trophy,
+  XCircle,
+} from "lucide-react";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { cn } from "@/lib/utils";
 
-import { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { PlayCircle, Clock, Trophy, Lock, Eye } from 'lucide-react';
-import { MediaViewer } from '@/components/dashboard/MediaViewer';
-import { toast } from 'sonner';
-import { MockService } from '@/services/mockService';
-import { useAuthStatus } from '@/hooks/useDashboard';
-import { checkFeatureAccess } from '@/lib/subscriptions.config';
-import { Link } from '@tanstack/react-router';
-import { cn } from '@/lib/utils';
+export const Route = createFileRoute("/dashboard/mock-exams")({ component: ProfessionalSimulator });
 
+type Answer = "C" | "E";
+type SimulatorStage = "setup" | "active" | "result";
+interface SimulatorQuestion {
+  id: string;
+  sourceKind: "official" | "curated";
+  contest: string;
+  year: number;
+  career: string;
+  board: string;
+  subject: string;
+  subtopic: string | null;
+  itemNumber: number | null;
+  text: string;
+  answer: Answer;
+  explanation: string;
+  difficulty: string | null;
+  legalBasis: Array<{ title?: string; lei?: string; artigo?: string; url?: string }>;
+}
+interface AttemptHistory {
+  id: string;
+  title: string;
+  total_questions: number;
+  correct_answers: number;
+  wrong_answers: number;
+  blank_answers: number;
+  accuracy: number;
+  duration_seconds: number;
+  finished_at: string;
+}
+interface SubjectResult {
+  subject: string;
+  total: number;
+  correct: number;
+  wrong: number;
+  blank: number;
+  accuracy: number;
+}
+const LIMITS = [10, 20, 30, 50];
+const DURATIONS = [15, 30, 60, 120];
 
-export const Route = createFileRoute('/dashboard/mock-exams')({
-  component: MockExamsPage
-});
+function ProfessionalSimulator() {
+  const { user, isLoading: authLoading } = useAuthStatus();
+  const [stage, setStage] = React.useState<SimulatorStage>("setup");
+  const [catalog, setCatalog] = React.useState<SimulatorQuestion[]>([]);
+  const [history, setHistory] = React.useState<AttemptHistory[]>([]);
+  const [loading, setLoading] = React.useState(true);
+  const [loadError, setLoadError] = React.useState<string | null>(null);
+  const [contest, setContest] = React.useState("all");
+  const [subject, setSubject] = React.useState("all");
+  const [limit, setLimit] = React.useState(20);
+  const [durationMinutes, setDurationMinutes] = React.useState(30);
+  const [questions, setQuestions] = React.useState<SimulatorQuestion[]>([]);
+  const [answers, setAnswers] = React.useState<Record<string, Answer>>({});
+  const [flagged, setFlagged] = React.useState<Set<string>>(new Set());
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [startedAt, setStartedAt] = React.useState<number | null>(null);
+  const [timeLeft, setTimeLeft] = React.useState(0);
+  const [elapsedSeconds, setElapsedSeconds] = React.useState(0);
+  const [saving, setSaving] = React.useState(false);
 
-function MockExamsPage() {
-  const { user } = useAuthStatus();
-  const [isExamActive, setIsExamActive] = useState(false);
-  const [examStartTime, setExamStartTime] = useState<number | null>(null);
-  const [timeLeft, setTimeLeft] = useState(4 * 60 * 60); // 4 hours
-  const [examId, setExamId] = useState<string | null>(null);
-  const [examHistory, setExamHistory] = useState<any[]>([]);
-  const [ranking, setRanking] = useState<any[]>([]);
-  const [isLoadingRanking, setIsLoadingRanking] = useState(false);
+  const loadData = React.useCallback(async () => {
+    if (authLoading) return;
+    setLoading(true);
+    setLoadError(null);
+    try {
+      const [officialResult, curatedResult, historyResult] = await Promise.all([
+        supabase
+          .from("official_exam_questions")
+          .select(
+            "id,contest_name,exam_year,career_name,exam_board,subject,item_number,question_text,official_answer,review_note,legal_basis",
+          )
+          .eq("content_status", "active")
+          .neq("official_answer", "X"),
+        supabase
+          .from("curated_question_catalog")
+          .select(
+            "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,legal_basis",
+          )
+          .eq("content_status", "active"),
+        user && user.id !== "demo-user"
+          ? supabase
+              .from("simulator_attempts")
+              .select(
+                "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at",
+              )
+              .eq("user_id", user.id)
+              .order("finished_at", { ascending: false })
+              .limit(8)
+          : Promise.resolve({ data: [], error: null }),
+      ]);
+      if (officialResult.error) throw officialResult.error;
+      if (curatedResult.error) throw curatedResult.error;
+      const official = ((officialResult.data || []) as Array<Record<string, unknown>>).map(
+        (row): SimulatorQuestion => ({
+          id: String(row.id),
+          sourceKind: "official",
+          contest: String(row.contest_name),
+          year: Number(row.exam_year),
+          career: String(row.career_name),
+          board: String(row.exam_board),
+          subject: String(row.subject),
+          subtopic: null,
+          itemNumber: Number(row.item_number),
+          text: String(row.question_text),
+          answer: String(row.official_answer) as Answer,
+          explanation: String(row.review_note || "Gabarito definitivo conferido na fonte oficial."),
+          difficulty: null,
+          legalBasis: parseLegalBasis(row.legal_basis),
+        }),
+      );
+      const curated = ((curatedResult.data || []) as Array<Record<string, unknown>>).map(
+        (row): SimulatorQuestion => ({
+          id: String(row.id),
+          sourceKind: "curated",
+          contest: String(row.contest_name),
+          year: Number(row.contest_year),
+          career: String(row.career_name),
+          board: String(row.exam_board),
+          subject: String(row.subject),
+          subtopic: row.subtopic ? String(row.subtopic) : null,
+          itemNumber: null,
+          text: String(row.question_text),
+          answer: String(row.official_answer) as Answer,
+          explanation: String(row.explanation),
+          difficulty: row.difficulty ? String(row.difficulty) : null,
+          legalBasis: parseLegalBasis(row.legal_basis),
+        }),
+      );
+      setCatalog([...official, ...curated]);
+      setHistory((historyResult.data || []) as AttemptHistory[]);
+    } catch (error) {
+      setLoadError(
+        error instanceof Error ? error.message : "Não foi possível carregar o banco de questões.",
+      );
+    } finally {
+      setLoading(false);
+    }
+  }, [authLoading, user]);
 
-  
-  const featureAccess = checkFeatureAccess(user?.subscription_tier || 'free', 'mockExams');
+  React.useEffect(() => {
+    void loadData();
+  }, [loadData]);
+  React.useEffect(() => {
+    if (stage !== "active" || timeLeft <= 0) return;
+    const timer = window.setInterval(() => {
+      setTimeLeft((value) => Math.max(0, value - 1));
+      setElapsedSeconds((value) => value + 1);
+    }, 1000);
+    return () => window.clearInterval(timer);
+  }, [stage, timeLeft]);
+  React.useEffect(() => {
+    if (stage === "active" && timeLeft === 0 && startedAt)
+      void finishSimulator(true); /* eslint-disable-next-line react-hooks/exhaustive-deps */
+  }, [timeLeft, stage, startedAt]);
 
-  useEffect(() => {
-    const loadHistory = async () => {
-      const history = await MockService.getMockExams();
-      setExamHistory(history);
-    };
-    
-    const loadRanking = async () => {
-      setIsLoadingRanking(true);
-      const r = await MockService.getMockExamRanking();
-      setRanking(r);
-      setIsLoadingRanking(false);
-    };
+  const contests = React.useMemo(
+    () =>
+      Array.from(new Set(catalog.map((item) => item.contest))).sort((a, b) => a.localeCompare(b)),
+    [catalog],
+  );
+  const subjects = React.useMemo(
+    () =>
+      Array.from(
+        new Set(
+          catalog
+            .filter((item) => contest === "all" || item.contest === contest)
+            .map((item) => item.subject),
+        ),
+      ).sort((a, b) => a.localeCompare(b)),
+    [catalog, contest],
+  );
+  const available = React.useMemo(
+    () =>
+      catalog.filter(
+        (item) =>
+          (contest === "all" || item.contest === contest) &&
+          (subject === "all" || item.subject === subject),
+      ),
+    [catalog, contest, subject],
+  );
+  const current = questions[currentIndex];
+  const answeredCount = Object.keys(answers).length;
+  const result = React.useMemo(() => calculateResult(questions, answers), [questions, answers]);
 
-    loadHistory();
-    loadRanking();
+  function startSimulator() {
+    if (!available.length) {
+      toast.error("Nenhuma questão ativa corresponde aos filtros escolhidos.");
+      return;
+    }
+    setQuestions(shuffle(available).slice(0, Math.min(limit, available.length)));
+    setAnswers({});
+    setFlagged(new Set());
+    setCurrentIndex(0);
+    setStartedAt(Date.now());
+    setElapsedSeconds(0);
+    setTimeLeft(durationMinutes * 60);
+    setStage("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
-    
-    // Resume active exam if any
-    const active = localStorage.getItem('norte_active_exam');
-    if (active) {
-      const parsed = JSON.parse(active);
-      const elapsed = Math.floor((Date.now() - parsed.startTime) / 1000);
-      const remaining = (4 * 60 * 60) - elapsed;
-      if (remaining > 0) {
-        setIsExamActive(true);
-        setExamStartTime(parsed.startTime);
-        setTimeLeft(remaining);
-        setExamId(parsed.id);
-      } else {
-        localStorage.removeItem('norte_active_exam');
+  async function finishSimulator(automatic = false) {
+    if (!questions.length || saving) return;
+    setSaving(true);
+    const computed = calculateResult(questions, answers);
+    if (user && user.id !== "demo-user") {
+      const title = contest === "all" ? "Simulado multidisciplinar" : `Simulado — ${contest}`;
+      const { data: attempt, error } = await supabase
+        .from("simulator_attempts")
+        .insert({
+          user_id: user.id,
+          title,
+          contest_filter: contest === "all" ? null : contest,
+          subject_filter: subject === "all" ? null : subject,
+          total_questions: questions.length,
+          correct_answers: computed.correct,
+          wrong_answers: computed.wrong,
+          blank_answers: computed.blank,
+          accuracy: computed.accuracy,
+          duration_seconds: elapsedSeconds,
+          time_limit_seconds: durationMinutes * 60,
+          finished_at: new Date().toISOString(),
+        })
+        .select("id")
+        .single();
+      if (error) toast.error("O resultado foi calculado, mas não pôde ser salvo no histórico.");
+      else if (attempt) {
+        const rows = questions.map((q, index) => ({
+          attempt_id: attempt.id,
+          user_id: user.id,
+          question_id: q.id,
+          question_source: q.sourceKind,
+          question_order: index + 1,
+          subject: q.subject,
+          selected_answer: answers[q.id] || null,
+          official_answer: q.answer,
+          is_correct: answers[q.id] ? answers[q.id] === q.answer : null,
+          was_flagged: flagged.has(q.id),
+        }));
+        const { error: detailError } = await supabase.from("simulator_responses").insert(rows);
+        if (detailError)
+          toast.error("O resumo foi salvo, mas houve falha ao detalhar as respostas.");
       }
     }
-  }, []);
+    setSaving(false);
+    setStage("result");
+    if (automatic) toast.warning("Tempo encerrado. O simulado foi finalizado automaticamente.");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  function resetSimulator() {
+    setStage("setup");
+    setQuestions([]);
+    setAnswers({});
+    setFlagged(new Set());
+    setStartedAt(null);
+    void loadData();
+  }
 
-  useEffect(() => {
-    let timer: any;
-    if (isExamActive && timeLeft > 0) {
-      timer = setInterval(() => {
-        setTimeLeft(prev => prev - 1);
-      }, 1000);
-    } else if (timeLeft === 0 && isExamActive) {
-      finishExam();
-    }
-    return () => clearInterval(timer);
-  }, [isExamActive, timeLeft]);
-
-  const startExam = () => {
-    const id = 'mock-' + Date.now();
-    const startTime = Date.now();
-    setIsExamActive(true);
-    setExamStartTime(startTime);
-    setExamId(id);
-    localStorage.setItem('norte_active_exam', JSON.stringify({ id, startTime }));
-    toast.info("Simulado iniciado! Você tem 4 horas.");
-  };
-
-  const finishExam = async () => {
-    if (!examStartTime || !examId) return;
-    const duration = Math.floor((Date.now() - examStartTime) / 1000);
-    
-    const result = {
-      id: examId,
-      total: 50,
-      correct: Math.floor(Math.random() * 20) + 30, // Mocked score
-      duration,
-      finishedAt: new Date().toISOString()
-    };
-
-    await MockService.saveMockExam(result);
-    await MockService.saveResponse({
-      questionId: examId,
-      isCorrect: true,
-      timeSpent: duration,
-      createdAt: new Date().toISOString()
-    });
-
-    setIsExamActive(false);
-    localStorage.removeItem('norte_active_exam');
-    setExamHistory(prev => [result, ...prev]);
-    toast.success(`Simulado concluído! Acertos: ${result.correct}/${result.total}`);
-  };
-
-  const formatTime = (seconds: number) => {
-    const h = Math.floor(seconds / 3600);
-    const m = Math.floor((seconds % 3600) / 60);
-    const s = seconds % 60;
-    return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-  };
+  if (loading || authLoading) return <LoadingState />;
+  if (loadError) return <ErrorState message={loadError} retry={loadData} />;
+  if (stage === "active" && current)
+    return (
+      <ActiveSimulator
+        questions={questions}
+        currentIndex={currentIndex}
+        current={current}
+        answers={answers}
+        flagged={flagged}
+        timeLeft={timeLeft}
+        answeredCount={answeredCount}
+        saving={saving}
+        setCurrentIndex={setCurrentIndex}
+        setAnswers={setAnswers}
+        setFlagged={setFlagged}
+        finish={finishSimulator}
+      />
+    );
+  if (stage === "result")
+    return (
+      <ResultView
+        questions={questions}
+        answers={answers}
+        result={result}
+        elapsed={elapsedSeconds}
+        reset={resetSimulator}
+      />
+    );
 
   return (
-    <div className="space-y-6">
-      <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Simulados</h1>
-        {isExamActive ? (
-          <div className="flex gap-2">
-             <div className="flex items-center gap-2 px-3 py-1 bg-destructive/10 text-destructive rounded-md text-sm font-bold animate-pulse">
-              <Clock className="h-4 w-4" /> {formatTime(timeLeft)}
-            </div>
-            <Button onClick={finishExam} variant="destructive">
-              Finalizar Agora
-            </Button>
+    <div className="space-y-6 pb-6">
+      <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-[#061a30] via-[#0b3150] to-[#0c695f] p-6 text-white shadow-xl md:p-9">
+        <div className="grid gap-8 lg:grid-cols-[1.4fr_.8fr] lg:items-center">
+          <div>
+            <Badge className="mb-4 border-white/15 bg-white/10 text-emerald-100 hover:bg-white/10">
+              <Sparkles className="mr-1 h-3.5 w-3.5" /> Centro de Treinamento Inteligente
+            </Badge>
+            <h1 className="max-w-3xl text-3xl font-black tracking-tight md:text-5xl">
+              Simulador Norte Concursos
+            </h1>
+            <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-200 md:text-base">
+              Treine com questões oficiais e autorais auditadas, receba diagnóstico por disciplina e
+              transforme cada erro em uma próxima ação de estudo.
+            </p>
           </div>
-        ) : featureAccess.included ? (
-          <Button onClick={startExam} className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
-            <PlayCircle className="mr-2 h-4 w-4" /> Iniciar Novo Simulado
-          </Button>
-        ) : (
-          <Button disabled className="bg-muted text-muted-foreground">
-            <Lock className="mr-2 h-4 w-4" /> Simulado Bloqueado
-          </Button>
-        )}
-      </div>
-
-      {!featureAccess.included && (
-        <Card className="bg-secondary/5 border-secondary/20">
-          <CardContent className="p-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-secondary/10 rounded-full">
-                <Lock className="h-6 w-6 text-secondary" />
-              </div>
+          <div className="grid grid-cols-2 gap-3">
+            <HeroMetric value={catalog.length} label="questões ativas" icon={BookOpenCheck} />
+            <HeroMetric value={contests.length} label="concursos" icon={ShieldCheck} />
+            <HeroMetric
+              value={new Set(catalog.map((i) => i.subject)).size}
+              label="disciplinas"
+              icon={BarChart3}
+            />
+            <HeroMetric value={history.length} label="tentativas recentes" icon={History} />
+          </div>
+        </div>
+      </section>
+      <div className="grid gap-6 xl:grid-cols-[1.15fr_.85fr]">
+        <Card className="border-0 shadow-lg ring-1 ring-border/70">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-xl">
+              <Target className="h-5 w-5 text-emerald-600" /> Monte seu treino
+            </CardTitle>
+            <CardDescription>
+              Configure o foco. A seleção usa somente conteúdo com status ativo.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="grid gap-4 md:grid-cols-2">
+              <Field label="Concurso ou carreira">
+                <Select
+                  value={contest}
+                  onValueChange={(v) => {
+                    setContest(v);
+                    setSubject("all");
+                  }}
+                >
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Todos os concursos</SelectItem>
+                    {contests.map((i) => (
+                      <SelectItem key={i} value={i}>
+                        {i}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </Field>
+              <Field label="Disciplina">
+                <Select value={subject} onValueChange={setSubject}>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Todas as disciplinas</SelectItem>
+                    {subjects.map((i) => (
+                      <SelectItem key={i} value={i}>
+                        {i}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </Field>
+              <Field label="Quantidade de questões">
+                <Select value={String(limit)} onValueChange={(v) => setLimit(Number(v))}>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {LIMITS.map((i) => (
+                      <SelectItem key={i} value={String(i)}>
+                        {i} questões
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </Field>
+              <Field label="Tempo de prova">
+                <Select
+                  value={String(durationMinutes)}
+                  onValueChange={(v) => setDurationMinutes(Number(v))}
+                >
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {DURATIONS.map((i) => (
+                      <SelectItem key={i} value={String(i)}>
+                        {i} minutos
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </Field>
+            </div>
+            <div className="flex flex-col gap-3 rounded-2xl border bg-muted/30 p-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <h3 className="font-bold text-lg">Funcionalidade Exclusiva</h3>
-                <p className="text-sm text-muted-foreground">
-                  Simulados completos estão disponíveis apenas nos planos <strong>Essencial, Plus e Premium</strong>.
+                <p className="font-bold">{available.length} questões disponíveis</p>
+                <p className="text-xs text-muted-foreground">
+                  Serão sorteadas {Math.min(limit, available.length)} questões sem repetição.
                 </p>
               </div>
+              <Button
+                size="lg"
+                onClick={startSimulator}
+                disabled={!available.length}
+                className="gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700"
+              >
+                <Play className="h-4 w-4 fill-current" /> Iniciar simulado
+              </Button>
             </div>
-            <Button asChild variant="secondary">
-              <Link to="/dashboard/profile">Ver Planos</Link>
-            </Button>
           </CardContent>
         </Card>
-      )}
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <Card className="lg:col-span-2">
+        <Card className="border-0 shadow-lg ring-1 ring-border/70">
           <CardHeader>
-            <CardTitle>Histórico de Simulados</CardTitle>
+            <CardTitle className="flex items-center gap-2 text-xl">
+              <History className="h-5 w-5 text-blue-600" /> Histórico recente
+            </CardTitle>
+            <CardDescription>Últimas tentativas registradas no Supabase.</CardDescription>
           </CardHeader>
           <CardContent>
-            {examHistory.length > 0 ? (
-              <div className="space-y-4">
-                {examHistory.map((exam) => (
-                  <div key={exam.id} className="flex items-center justify-between p-4 border rounded-lg hover:bg-muted/50 transition-colors">
-                    <div>
-                      <p className="font-bold">Simulado {new Date(exam.finishedAt).toLocaleDateString()}</p>
-                      <p className="text-xs text-muted-foreground">Duração: {Math.floor(exam.duration / 60)} min</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-lg font-black text-secondary">{exam.correct}/{exam.total}</p>
-                      <p className="text-[10px] uppercase font-bold text-emerald-600">Concluído</p>
-                      <MediaViewer 
-                        type="video" 
-                        url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
-                        title="Resolução em Vídeo" 
-                        triggerLabel="Ver Vídeo"
-                        className="mt-1 h-6 text-[9px] px-2 py-0 border-emerald-500/20 text-emerald-700 bg-emerald-50 hover:bg-emerald-100"
-                      />
-                    </div>
-                  </div>
+            {history.length ? (
+              <div className="space-y-3">
+                {history.slice(0, 5).map((i) => (
+                  <HistoryRow key={i.id} item={i} />
                 ))}
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center p-12 text-muted-foreground">
-                <Trophy className="h-12 w-12 mb-4 opacity-20" />
-                <p>Você ainda não completou nenhum simulado.</p>
+              <div className="flex min-h-56 flex-col items-center justify-center rounded-2xl border border-dashed text-center">
+                <Trophy className="mb-3 h-10 w-10 text-muted-foreground/30" />
+                <p className="font-semibold">Sua jornada começa aqui</p>
+                <p className="mt-1 max-w-xs text-xs text-muted-foreground">
+                  Finalize o primeiro simulado para formar sua linha histórica.
+                </p>
               </div>
             )}
           </CardContent>
         </Card>
+      </div>
+      <footer className="rounded-2xl border bg-card px-5 py-4 text-center text-xs text-muted-foreground">
+        Desenvolvido por <strong className="text-foreground">Franc D&apos;nis</strong> · Feijó-AC
+      </footer>
+    </div>
+  );
+}
 
-        <Card>
+function ActiveSimulator(p: {
+  questions: SimulatorQuestion[];
+  currentIndex: number;
+  current: SimulatorQuestion;
+  answers: Record<string, Answer>;
+  flagged: Set<string>;
+  timeLeft: number;
+  answeredCount: number;
+  saving: boolean;
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
+  setAnswers: React.Dispatch<React.SetStateAction<Record<string, Answer>>>;
+  setFlagged: React.Dispatch<React.SetStateAction<Set<string>>>;
+  finish: (automatic?: boolean) => Promise<void>;
+}) {
+  const {
+    questions,
+    currentIndex,
+    current,
+    answers,
+    flagged,
+    timeLeft,
+    answeredCount,
+    saving,
+    setCurrentIndex,
+    setAnswers,
+    setFlagged,
+    finish,
+  } = p;
+  const progress = (answeredCount / questions.length) * 100;
+  return (
+    <div className="space-y-5 pb-8">
+      <div className="sticky top-[82px] z-10 rounded-2xl border bg-background/95 p-4 shadow-lg backdrop-blur">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider text-emerald-600">
+              Simulado em andamento
+            </p>
+            <p className="font-bold">
+              Questão {currentIndex + 1} de {questions.length}
+            </p>
+          </div>
+          <div
+            className={cn(
+              "flex items-center gap-2 rounded-xl px-4 py-2 font-mono text-lg font-black",
+              timeLeft < 300
+                ? "bg-red-50 text-red-700"
+                : "bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100",
+            )}
+          >
+            <Clock3 className="h-5 w-5" />
+            {formatTime(timeLeft)}
+          </div>
+          <Button variant="destructive" onClick={() => void finish()} disabled={saving}>
+            {saving && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Finalizar
+          </Button>
+        </div>
+        <div className="mt-3 flex items-center gap-3">
+          <Progress value={progress} className="h-2" />
+          <span className="whitespace-nowrap text-xs font-semibold">
+            {answeredCount}/{questions.length} respondidas
+          </span>
+        </div>
+      </div>
+      <div className="grid gap-5 xl:grid-cols-[1fr_280px]">
+        <Card className="border-0 shadow-lg ring-1 ring-border/70">
+          <CardHeader className="border-b bg-muted/20">
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="outline">{current.subject}</Badge>
+              <Badge variant="secondary">{current.board}</Badge>
+              <span className="text-xs text-muted-foreground">
+                {current.contest} · {current.year}
+                {current.itemNumber ? ` · Item ${current.itemNumber}` : ""}
+              </span>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-7 p-6 md:p-9">
+            <p className="text-lg font-medium leading-8 md:text-xl">{current.text}</p>
+            <div className="rounded-2xl border bg-muted/20 p-5">
+              <p className="mb-4 text-sm font-bold">Julgue o item:</p>
+              <RadioGroup
+                value={answers[current.id] || ""}
+                onValueChange={(v) => setAnswers((old) => ({ ...old, [current.id]: v as Answer }))}
+                className="grid gap-3 sm:grid-cols-2"
+              >
+                <AnswerOption value="C" label="Certo" selected={answers[current.id] === "C"} />
+                <AnswerOption value="E" label="Errado" selected={answers[current.id] === "E"} />
+              </RadioGroup>
+            </div>
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <Button
+                variant="outline"
+                className={cn(
+                  "gap-2",
+                  flagged.has(current.id) && "border-amber-400 bg-amber-50 text-amber-800",
+                )}
+                onClick={() =>
+                  setFlagged((old) => {
+                    const next = new Set(old);
+                    if (next.has(current.id)) next.delete(current.id);
+                    else next.add(current.id);
+                    return next;
+                  })
+                }
+              >
+                <Flag className={cn("h-4 w-4", flagged.has(current.id) && "fill-current")} />
+                {flagged.has(current.id) ? "Marcada para revisão" : "Marcar para revisão"}
+              </Button>
+              <div className="flex gap-2">
+                <Button
+                  variant="outline"
+                  disabled={currentIndex === 0}
+                  onClick={() => setCurrentIndex((i) => i - 1)}
+                >
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  Anterior
+                </Button>
+                <Button
+                  disabled={currentIndex === questions.length - 1}
+                  onClick={() => setCurrentIndex((i) => i + 1)}
+                >
+                  Próxima
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="h-fit xl:sticky xl:top-[220px]">
           <CardHeader>
-            <CardTitle className="text-lg flex items-center gap-2">
-              <Trophy className="h-5 w-5 text-gold" />
-              Ranking Geral (Anônimo)
-            </CardTitle>
+            <CardTitle className="text-base">Mapa da prova</CardTitle>
+            <CardDescription>Clique para navegar.</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
-              {isLoadingRanking ? (
-                <div className="space-y-2">
-                  {[1, 2, 3, 4, 5].map(i => (
-                    <div key={i} className="h-10 w-full bg-muted animate-pulse rounded-lg" />
-                  ))}
-                </div>
-              ) : (
-                ranking.map((item, idx) => (
-                  <div key={item.id} className={cn(
-                    "flex items-center justify-between p-2 rounded-lg",
-                    item.id === user?.id ? "bg-secondary/10 border border-secondary" : "hover:bg-muted/50"
-                  )}>
-                    <div className="flex items-center gap-3">
-                      <span className={cn(
-                        "flex items-center justify-center h-6 w-6 rounded-full text-[10px] font-bold",
-                        idx === 0 ? "bg-amber-400 text-white" : 
-                        idx === 1 ? "bg-slate-300 text-slate-700" :
-                        idx === 2 ? "bg-amber-600/50 text-white" :
-                        "bg-muted text-muted-foreground"
-                      )}>
-                        {idx + 1}
-                      </span>
-                      <span className="text-sm font-medium">{item.name}</span>
-                    </div>
-                    <span className="text-sm font-black text-secondary">{item.score}/{item.total}</span>
-                  </div>
-                ))
-              )}
+            <div className="grid grid-cols-5 gap-2">
+              {questions.map((q, i) => (
+                <button
+                  key={q.id}
+                  onClick={() => setCurrentIndex(i)}
+                  className={cn(
+                    "relative flex h-10 items-center justify-center rounded-lg border text-xs font-bold transition",
+                    i === currentIndex
+                      ? "border-primary bg-primary text-primary-foreground"
+                      : answers[q.id]
+                        ? "border-emerald-300 bg-emerald-50 text-emerald-800"
+                        : "hover:bg-muted",
+                  )}
+                >
+                  {i + 1}
+                  {flagged.has(q.id) && (
+                    <span className="absolute -right-1 -top-1 h-2.5 w-2.5 rounded-full bg-amber-500" />
+                  )}
+                </button>
+              ))}
             </div>
-
-            <p className="text-[10px] text-muted-foreground text-center mt-4 italic">
-              O ranking é atualizado a cada 24 horas.
-            </p>
+            <div className="mt-5 space-y-2 text-xs text-muted-foreground">
+              <Legend color="bg-primary" label="Questão atual" />
+              <Legend color="bg-emerald-400" label="Respondida" />
+              <Legend color="bg-amber-500" label="Marcada para revisão" />
+            </div>
           </CardContent>
         </Card>
       </div>
     </div>
   );
+}
+
+function ResultView({
+  questions,
+  answers,
+  result,
+  elapsed,
+  reset,
+}: {
+  questions: SimulatorQuestion[];
+  answers: Record<string, Answer>;
+  result: ReturnType<typeof calculateResult>;
+  elapsed: number;
+  reset: () => void;
+}) {
+  const [open, setOpen] = React.useState<string | null>(null);
+  return (
+    <div className="space-y-6 pb-8">
+      <section className="rounded-3xl bg-gradient-to-br from-[#061a30] to-[#0c695f] p-7 text-white shadow-xl md:p-10">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <Badge className="mb-3 bg-white/10 text-emerald-100 hover:bg-white/10">
+              Diagnóstico concluído
+            </Badge>
+            <h1 className="text-3xl font-black md:text-4xl">Seu desempenho: {result.accuracy}%</h1>
+            <p className="mt-2 text-slate-200">{performanceMessage(result.accuracy)}</p>
+          </div>
+          <div className="flex h-32 w-32 items-center justify-center rounded-full border-[10px] border-emerald-300/20 bg-white/10">
+            <span className="text-3xl font-black">
+              {result.correct}/{questions.length}
+            </span>
+          </div>
+        </div>
+      </section>
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
+        <ResultMetric icon={CheckCircle2} label="Acertos" value={result.correct} tone="emerald" />
+        <ResultMetric icon={XCircle} label="Erros" value={result.wrong} tone="red" />
+        <ResultMetric icon={AlertTriangle} label="Em branco" value={result.blank} tone="amber" />
+        <ResultMetric icon={Gauge} label="Precisão" value={`${result.accuracy}%`} tone="blue" />
+        <ResultMetric icon={TimerReset} label="Tempo" value={formatTime(elapsed)} tone="slate" />
+      </div>
+      <div className="grid gap-6 lg:grid-cols-[.75fr_1.25fr]">
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <BarChart3 className="h-5 w-5 text-blue-600" />
+              Desempenho por disciplina
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {result.bySubject.map((i) => (
+              <div key={i.subject}>
+                <div className="mb-1.5 flex items-center justify-between gap-3 text-sm">
+                  <span className="truncate font-semibold">{i.subject}</span>
+                  <span
+                    className={cn(
+                      "font-black",
+                      i.accuracy >= 70
+                        ? "text-emerald-600"
+                        : i.accuracy >= 50
+                          ? "text-amber-600"
+                          : "text-red-600",
+                    )}
+                  >
+                    {i.accuracy}%
+                  </span>
+                </div>
+                <Progress value={i.accuracy} />
+                <p className="mt-1 text-[11px] text-muted-foreground">
+                  {i.correct} certas · {i.wrong} erradas · {i.blank} em branco
+                </p>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Target className="h-5 w-5 text-emerald-600" />
+              Plano pós-simulado
+            </CardTitle>
+            <CardDescription>Ações sugeridas a partir do resultado real.</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            {result.bySubject
+              .slice()
+              .sort((a, b) => a.accuracy - b.accuracy)
+              .slice(0, 3)
+              .map((i, n) => (
+                <div key={i.subject} className="flex gap-3 rounded-xl border p-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-black text-primary-foreground">
+                    {n + 1}
+                  </span>
+                  <div>
+                    <p className="font-bold">Reforçar {i.subject}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      Revise a teoria dos itens errados, refaça as questões sem consultar o gabarito
+                      e programe nova bateria em 24 horas. Precisão atual: {i.accuracy}%.
+                    </p>
+                  </div>
+                </div>
+              ))}
+          </CardContent>
+        </Card>
+      </div>
+      <Card>
+        <CardHeader>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <CardTitle>Correção comentada</CardTitle>
+              <CardDescription>
+                Entenda o gabarito e transforme falhas em aprendizado.
+              </CardDescription>
+            </div>
+            <Button onClick={reset} className="gap-2">
+              <RotateCcw className="h-4 w-4" />
+              Novo simulado
+            </Button>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          {questions.map((q, n) => {
+            const selected = answers[q.id],
+              correct = selected === q.answer,
+              isOpen = open === q.id;
+            return (
+              <div
+                key={q.id}
+                className={cn(
+                  "overflow-hidden rounded-xl border",
+                  correct ? "border-emerald-200" : "border-red-200",
+                )}
+              >
+                <button
+                  className="flex w-full items-center gap-3 p-4 text-left"
+                  onClick={() => setOpen(isOpen ? null : q.id)}
+                >
+                  {correct ? (
+                    <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
+                  ) : (
+                    <XCircle className="h-5 w-5 shrink-0 text-red-600" />
+                  )}
+                  <span className="min-w-0 flex-1 truncate text-sm font-semibold">
+                    {n + 1}. {q.text}
+                  </span>
+                  <Badge variant="outline">
+                    Você: {selected || "Branco"} · Gabarito: {q.answer}
+                  </Badge>
+                </button>
+                {isOpen && (
+                  <div className="border-t bg-muted/20 p-5">
+                    <p className="text-sm leading-6">{q.explanation}</p>
+                    {q.legalBasis.length > 0 && (
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {q.legalBasis
+                          .filter((s) => s.url)
+                          .map((s, i) => (
+                            <a
+                              key={`${s.url}-${i}`}
+                              href={s.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-xs font-semibold text-blue-700 underline underline-offset-4"
+                            >
+                              {s.title || s.lei || "Fonte oficial"}
+                            </a>
+                          ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </CardContent>
+      </Card>
+      <footer className="text-center text-xs text-muted-foreground">
+        Desenvolvido por <strong>Franc D&apos;nis</strong> · Feijó-AC
+      </footer>
+    </div>
+  );
+}
+
+function AnswerOption({
+  value,
+  label,
+  selected,
+}: {
+  value: Answer;
+  label: string;
+  selected: boolean;
+}) {
+  return (
+    <label
+      className={cn(
+        "flex cursor-pointer items-center gap-3 rounded-xl border-2 p-4 transition",
+        selected ? "border-primary bg-primary/5" : "hover:border-primary/40 hover:bg-muted/40",
+      )}
+    >
+      <RadioGroupItem value={value} />
+      <span className="font-bold">
+        {value} — {label}
+      </span>
+    </label>
+  );
+}
+function HeroMetric({
+  value,
+  label,
+  icon: Icon,
+}: {
+  value: number;
+  label: string;
+  icon: React.ElementType;
+}) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
+      <Icon className="mb-3 h-5 w-5 text-emerald-300" />
+      <p className="text-2xl font-black">{value}</p>
+      <p className="text-xs text-slate-300">{label}</p>
+    </div>
+  );
+}
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <label className="space-y-2">
+      <span className="text-sm font-bold">{label}</span>
+      {children}
+    </label>
+  );
+}
+function Legend({ color, label }: { color: string; label: string }) {
+  return (
+    <div className="flex items-center gap-2">
+      <span className={cn("h-2.5 w-2.5 rounded-full", color)} />
+      {label}
+    </div>
+  );
+}
+function HistoryRow({ item }: { item: AttemptHistory }) {
+  return (
+    <div className="flex items-center justify-between gap-3 rounded-xl border p-3">
+      <div className="min-w-0">
+        <p className="truncate text-sm font-bold">{item.title}</p>
+        <p className="text-[11px] text-muted-foreground">
+          {new Date(item.finished_at).toLocaleDateString("pt-BR")} · {item.total_questions} questões
+        </p>
+      </div>
+      <div className="text-right">
+        <p
+          className={cn(
+            "text-lg font-black",
+            item.accuracy >= 70
+              ? "text-emerald-600"
+              : item.accuracy >= 50
+                ? "text-amber-600"
+                : "text-red-600",
+          )}
+        >
+          {Math.round(item.accuracy)}%
+        </p>
+        <p className="text-[10px] text-muted-foreground">{item.correct_answers} acertos</p>
+      </div>
+    </div>
+  );
+}
+function ResultMetric({
+  icon: Icon,
+  label,
+  value,
+  tone,
+}: {
+  icon: React.ElementType;
+  label: string;
+  value: React.ReactNode;
+  tone: "emerald" | "red" | "amber" | "blue" | "slate";
+}) {
+  const tones = {
+    emerald: "bg-emerald-50 text-emerald-700",
+    red: "bg-red-50 text-red-700",
+    amber: "bg-amber-50 text-amber-700",
+    blue: "bg-blue-50 text-blue-700",
+    slate: "bg-slate-100 text-slate-700",
+  };
+  return (
+    <Card>
+      <CardContent className="flex items-center gap-3 p-4">
+        <span className={cn("rounded-xl p-2.5", tones[tone])}>
+          <Icon className="h-5 w-5" />
+        </span>
+        <div>
+          <p className="text-2xl font-black">{value}</p>
+          <p className="text-xs text-muted-foreground">{label}</p>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+function LoadingState() {
+  return (
+    <div className="flex min-h-[60vh] flex-col items-center justify-center">
+      <Loader2 className="h-9 w-9 animate-spin text-emerald-600" />
+      <p className="mt-3 text-sm text-muted-foreground">Preparando o banco de questões...</p>
+    </div>
+  );
+}
+function ErrorState({ message, retry }: { message: string; retry: () => void }) {
+  return (
+    <Card className="mx-auto mt-10 max-w-xl">
+      <CardContent className="flex flex-col items-center p-8 text-center">
+        <AlertTriangle className="h-10 w-10 text-red-500" />
+        <h2 className="mt-4 text-xl font-bold">Não foi possível abrir o simulador</h2>
+        <p className="mt-2 text-sm text-muted-foreground">{message}</p>
+        <Button className="mt-5" onClick={retry}>
+          Tentar novamente
+        </Button>
+      </CardContent>
+    </Card>
+  );
+}
+function calculateResult(questions: SimulatorQuestion[], answers: Record<string, Answer>) {
+  let correct = 0,
+    wrong = 0,
+    blank = 0;
+  const map = new Map<string, SubjectResult>();
+  questions.forEach((q) => {
+    const selected = answers[q.id],
+      row = map.get(q.subject) || {
+        subject: q.subject,
+        total: 0,
+        correct: 0,
+        wrong: 0,
+        blank: 0,
+        accuracy: 0,
+      };
+    row.total++;
+    if (!selected) {
+      blank++;
+      row.blank++;
+    } else if (selected === q.answer) {
+      correct++;
+      row.correct++;
+    } else {
+      wrong++;
+      row.wrong++;
+    }
+    map.set(q.subject, row);
+  });
+  const bySubject = Array.from(map.values())
+    .map((i) => ({ ...i, accuracy: i.total ? Math.round((i.correct / i.total) * 100) : 0 }))
+    .sort((a, b) => b.total - a.total);
+  return {
+    correct,
+    wrong,
+    blank,
+    accuracy: questions.length ? Math.round((correct / questions.length) * 100) : 0,
+    bySubject,
+  };
+}
+function parseLegalBasis(value: unknown): SimulatorQuestion["legalBasis"] {
+  return Array.isArray(value) ? (value as SimulatorQuestion["legalBasis"]) : [];
+}
+function shuffle<T>(items: T[]) {
+  const copy = [...items];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+function formatTime(seconds: number) {
+  const h = Math.floor(seconds / 3600),
+    m = Math.floor((seconds % 3600) / 60),
+    s = seconds % 60;
+  return h > 0
+    ? `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`
+    : `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+}
+function performanceMessage(accuracy: number) {
+  if (accuracy >= 80)
+    return "Excelente domínio. Mantenha revisões espaçadas e avance para baterias mais longas.";
+  if (accuracy >= 60)
+    return "Boa base. A correção comentada abaixo mostra onde buscar os próximos pontos.";
+  if (accuracy >= 40)
+    return "Você já tem uma base, mas precisa concentrar a revisão nas disciplinas mais frágeis.";
+  return "Use este diagnóstico como ponto de partida: revise a teoria e refaça os itens errados em 24 horas.";
 }
