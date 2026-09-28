@@ -8,6 +8,7 @@ import {
   BookOpenCheck,
   CheckCircle2,
   Clock3,
+  Crown,
   Flag,
   Gauge,
   History,
@@ -16,6 +17,7 @@ import {
   RotateCcw,
   ShieldCheck,
   Sparkles,
+  Star,
   Target,
   TimerReset,
   Trophy,
@@ -77,6 +79,16 @@ interface SubjectResult {
   blank: number;
   accuracy: number;
 }
+interface RankProfile {
+  rank_position?: number;
+  user_id: string;
+  display_name?: string;
+  total_points: number;
+  stars: number;
+  level_name: string;
+  completed_simulators: number;
+  best_accuracy: number;
+}
 const LIMITS = [10, 20, 30, 50];
 const DURATIONS = [15, 30, 60, 120];
 
@@ -85,6 +97,8 @@ function ProfessionalSimulator() {
   const [stage, setStage] = React.useState<SimulatorStage>("setup");
   const [catalog, setCatalog] = React.useState<SimulatorQuestion[]>([]);
   const [history, setHistory] = React.useState<AttemptHistory[]>([]);
+  const [rankProfile, setRankProfile] = React.useState<RankProfile | null>(null);
+  const [leaderboard, setLeaderboard] = React.useState<RankProfile[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [loadError, setLoadError] = React.useState<string | null>(null);
   const [contest, setContest] = React.useState("all");
@@ -105,31 +119,42 @@ function ProfessionalSimulator() {
     setLoading(true);
     setLoadError(null);
     try {
-      const [officialResult, curatedResult, historyResult] = await Promise.all([
-        supabase
-          .from("official_exam_questions")
-          .select(
-            "id,contest_name,exam_year,career_name,exam_board,subject,item_number,question_text,official_answer,review_note,legal_basis",
-          )
-          .eq("content_status", "active")
-          .neq("official_answer", "X"),
-        supabase
-          .from("curated_question_catalog")
-          .select(
-            "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,legal_basis",
-          )
-          .eq("content_status", "active"),
-        user && user.id !== "demo-user"
-          ? supabase
-              .from("simulator_attempts")
-              .select(
-                "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at",
-              )
-              .eq("user_id", user.id)
-              .order("finished_at", { ascending: false })
-              .limit(8)
-          : Promise.resolve({ data: [], error: null }),
-      ]);
+      const [officialResult, curatedResult, historyResult, rankResult, leaderboardResult] =
+        await Promise.all([
+          supabase
+            .from("official_exam_questions")
+            .select(
+              "id,contest_name,exam_year,career_name,exam_board,subject,item_number,question_text,official_answer,review_note,legal_basis",
+            )
+            .eq("content_status", "active")
+            .neq("official_answer", "X"),
+          supabase
+            .from("curated_question_catalog")
+            .select(
+              "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,legal_basis",
+            )
+            .eq("content_status", "active"),
+          user && user.id !== "demo-user"
+            ? supabase
+                .from("simulator_attempts")
+                .select(
+                  "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at",
+                )
+                .eq("user_id", user.id)
+                .order("finished_at", { ascending: false })
+                .limit(8)
+            : Promise.resolve({ data: [], error: null }),
+          user && user.id !== "demo-user"
+            ? supabase
+                .from("user_rank_profiles")
+                .select("user_id,total_points,stars,level_name,completed_simulators,best_accuracy")
+                .eq("user_id", user.id)
+                .maybeSingle()
+            : Promise.resolve({ data: null, error: null }),
+          user && user.id !== "demo-user"
+            ? supabase.rpc("get_public_leaderboard", { limit_count: 10 })
+            : Promise.resolve({ data: [], error: null }),
+        ]);
       if (officialResult.error) throw officialResult.error;
       if (curatedResult.error) throw curatedResult.error;
       const official = ((officialResult.data || []) as Array<Record<string, unknown>>).map(
@@ -170,6 +195,8 @@ function ProfessionalSimulator() {
       );
       setCatalog([...official, ...curated]);
       setHistory((historyResult.data || []) as AttemptHistory[]);
+      setRankProfile((rankResult.data || null) as RankProfile | null);
+      setLeaderboard((leaderboardResult.data || []) as RankProfile[]);
     } catch (error) {
       setLoadError(
         error instanceof Error ? error.message : "Não foi possível carregar o banco de questões.",
@@ -479,10 +506,163 @@ function ProfessionalSimulator() {
           </CardContent>
         </Card>
       </div>
+      <div className="grid gap-6 xl:grid-cols-[.7fr_1.3fr]">
+        <RankIdentity profile={rankProfile} leaderboard={leaderboard} userId={user?.id} />
+        <Leaderboard rows={leaderboard} userId={user?.id} />
+      </div>
       <footer className="rounded-2xl border bg-card px-5 py-4 text-center text-xs text-muted-foreground">
         Desenvolvido por <strong className="text-foreground">Franc D&apos;nis</strong> · Feijó-AC
       </footer>
     </div>
+  );
+}
+
+function RankIdentity({
+  profile,
+  leaderboard,
+  userId,
+}: {
+  profile: RankProfile | null;
+  leaderboard: RankProfile[];
+  userId?: string;
+}) {
+  const position = leaderboard.find((item) => item.user_id === userId)?.rank_position;
+  const nextTarget =
+    !profile || profile.total_points < 250
+      ? 250
+      : profile.total_points < 750
+        ? 750
+        : profile.total_points < 1500
+          ? 1500
+          : profile.total_points < 3000
+            ? 3000
+            : 3000;
+  const progress = profile
+    ? Math.min(100, Math.round((profile.total_points / nextTarget) * 100))
+    : 0;
+  return (
+    <Card className="overflow-hidden border-0 bg-gradient-to-br from-amber-50 to-orange-50 shadow-lg ring-1 ring-amber-200 dark:from-amber-950/20 dark:to-background">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2 text-xl">
+          <Crown className="h-5 w-5 text-amber-600" /> Minha liga
+        </CardTitle>
+        <CardDescription>Seu perfil competitivo evolui automaticamente.</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-5">
+        <div className="flex items-center justify-between gap-4">
+          <div>
+            <p className="text-3xl font-black">{profile?.level_name || "Aspirante"}</p>
+            <p className="text-sm text-muted-foreground">
+              {profile?.total_points || 0} pontos ·{" "}
+              {position ? `${position}º lugar` : "classificação inicial"}
+            </p>
+          </div>
+          <div className="flex gap-1" aria-label={`${profile?.stars || 1} estrelas`}>
+            {[1, 2, 3, 4, 5].map((star) => (
+              <Star
+                key={star}
+                className={cn(
+                  "h-6 w-6",
+                  star <= (profile?.stars || 1)
+                    ? "fill-amber-400 text-amber-500"
+                    : "text-amber-200",
+                )}
+              />
+            ))}
+          </div>
+        </div>
+        <div>
+          <div className="mb-2 flex justify-between text-xs font-semibold">
+            <span>Progresso para a próxima estrela</span>
+            <span>{progress}%</span>
+          </div>
+          <Progress value={progress} className="h-2.5 bg-amber-200 [&>div]:bg-amber-500" />
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="rounded-xl bg-white/70 p-3 dark:bg-card">
+            <p className="text-xl font-black">{profile?.completed_simulators || 0}</p>
+            <p className="text-[11px] text-muted-foreground">simulados concluídos</p>
+          </div>
+          <div className="rounded-xl bg-white/70 p-3 dark:bg-card">
+            <p className="text-xl font-black">{Math.round(profile?.best_accuracy || 0)}%</p>
+            <p className="text-[11px] text-muted-foreground">melhor precisão</p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function Leaderboard({ rows, userId }: { rows: RankProfile[]; userId?: string }) {
+  return (
+    <Card className="border-0 shadow-lg ring-1 ring-border/70">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2 text-xl">
+          <Trophy className="h-5 w-5 text-amber-500" /> Ranking geral
+        </CardTitle>
+        <CardDescription>
+          Classificação por pontos. Sobrenomes e dados pessoais permanecem protegidos.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        {rows.length ? (
+          <div className="space-y-2">
+            {rows.map((item) => (
+              <div
+                key={item.user_id}
+                className={cn(
+                  "grid grid-cols-[42px_1fr_auto] items-center gap-3 rounded-xl border p-3",
+                  item.user_id === userId &&
+                    "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/20",
+                )}
+              >
+                <span
+                  className={cn(
+                    "flex h-8 w-8 items-center justify-center rounded-full text-xs font-black",
+                    item.rank_position === 1
+                      ? "bg-amber-400 text-white"
+                      : item.rank_position === 2
+                        ? "bg-slate-300 text-slate-700"
+                        : item.rank_position === 3
+                          ? "bg-orange-400 text-white"
+                          : "bg-muted text-muted-foreground",
+                  )}
+                >
+                  {item.rank_position}
+                </span>
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-bold">
+                    {item.display_name}
+                    {item.user_id === userId ? " (você)" : ""}
+                  </p>
+                  <p className="text-[11px] text-muted-foreground">
+                    {item.level_name} · {item.completed_simulators} simulados
+                  </p>
+                </div>
+                <div className="text-right">
+                  <p className="font-black">{item.total_points} pts</p>
+                  <div className="flex justify-end gap-0.5">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star
+                        key={star}
+                        className={cn(
+                          "h-3 w-3",
+                          star <= item.stars ? "fill-amber-400 text-amber-500" : "text-slate-200",
+                        )}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
+            O ranking será exibido após os primeiros candidatos concluírem simulados.
+          </div>
+        )}
+      </CardContent>
+    </Card>
   );
 }
 
