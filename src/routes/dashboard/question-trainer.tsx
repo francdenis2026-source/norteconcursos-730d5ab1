@@ -12,6 +12,7 @@ import {
   Loader2,
   RotateCcw,
   Sparkles,
+  Strikethrough,
   Target,
   X,
   XCircle,
@@ -93,6 +94,62 @@ function shuffled<T>(items: T[]) {
   return result;
 }
 
+type ParsedQuestion = {
+  baseLabel: string;
+  base: string;
+  stem: string;
+  options: { letter: Answer; text: string }[];
+};
+
+// question_text guarda tudo num campo só: "Texto-base:\n…\n\n<enunciado>\n(A) …\n(B) …" (ou
+// "Comando:\n…\n\nItem: …" nos itens Certo/Errado). Separamos texto de apoio, enunciado e alternativas.
+function parseQuestion(raw: string): ParsedQuestion {
+  let text = raw.replace(/\r/g, "").trim();
+  let base = "";
+  let baseLabel = "Texto de apoio";
+  const head = text.match(/^(Texto-base|Comando):\n([\s\S]*?)\n\n(?=\S)/);
+  if (head) {
+    baseLabel = head[1] === "Comando" ? "Comando da questão" : "Texto de apoio";
+    base = (head[2] ?? "").trim();
+    text = text.slice(head[0].length).trim();
+  }
+  text = text.replace(/^Item:\s*/, "");
+
+  const lines = text.split("\n");
+  const firstOption = lines.findIndex((line) => /^\(A\)\s?/.test(line));
+  if (firstOption >= 0) {
+    const options: { letter: Answer; text: string }[] = [];
+    for (const line of lines.slice(firstOption)) {
+      const match = line.match(/^\(([A-E])\)\s?(.*)$/);
+      const last = options[options.length - 1];
+      if (match) options.push({ letter: (match[1] ?? "A") as Answer, text: (match[2] ?? "").trim() });
+      else if (last) last.text += ` ${line.trim()}`;
+    }
+    return { baseLabel, base, stem: lines.slice(0, firstOption).join("\n").trim(), options };
+  }
+
+  // Formato antigo: alternativas na mesma linha ("… A) texto; B) texto; C) …").
+  const marks: number[] = [];
+  let cursor = 0;
+  for (const letter of "ABCDE") {
+    const at = text.indexOf(`${letter}) `, cursor);
+    if (at < 0 || (at > 0 && !/[\s:;.]/.test(text.charAt(at - 1)))) break;
+    marks.push(at);
+    cursor = at + 3;
+  }
+  if (marks.length >= 4) {
+    const options = marks.map((start, i) => ({
+      letter: "ABCDE".charAt(i) as Answer,
+      text: text
+        .slice(start + 3, marks[i + 1] ?? text.length)
+        .replace(/[;\s]+$/, "")
+        .trim(),
+    }));
+    return { baseLabel, base, stem: text.slice(0, marks[0] ?? 0).trim(), options };
+  }
+  return { baseLabel, base, stem: text, options: [] };
+}
+
 function QuestionTrainer() {
   const routeFilters = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
@@ -113,6 +170,7 @@ function QuestionTrainer() {
   const [error, setError] = React.useState<string | null>(null);
   const [index, setIndex] = React.useState(0);
   const [selected, setSelected] = React.useState<Answer | null>(null);
+  const [struck, setStruck] = React.useState<Answer[]>([]);
   const [answered, setAnswered] = React.useState(false);
   const [helpUsed, setHelpUsed] = React.useState(false);
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
@@ -259,6 +317,7 @@ function QuestionTrainer() {
     setCorrect(0);
     setWrong(0);
     setSelected(null);
+    setStruck([]);
     setAnswered(false);
     setHelpUsed(false);
     setStartedAt(Date.now());
@@ -300,6 +359,7 @@ function QuestionTrainer() {
   const next = () => {
     setModal(null);
     setSelected(null);
+    setStruck([]);
     setAnswered(false);
     setHelpUsed(false);
     setStartedAt(Date.now());
@@ -310,6 +370,7 @@ function QuestionTrainer() {
     setCorrect(0);
     setWrong(0);
     setSelected(null);
+    setStruck([]);
     setAnswered(false);
     setHelpUsed(false);
     setStartedAt(Date.now());
@@ -378,6 +439,23 @@ function QuestionTrainer() {
     );
 
   const isCorrect = selected === question.answer;
+  const parsed = parseQuestion(question.text);
+  const hasOptions = parsed.options.length > 0;
+  const certoErrado = !hasOptions && /CEBRASPE|CESPE/i.test(question.board);
+  const labelFor = (answer: Answer) =>
+    hasOptions ? `Alternativa ${answer}` : answerLabel(answer, question.board);
+  const chooseOption = (letter: Answer) => {
+    if (answered) return;
+    setStruck((items) => items.filter((item) => item !== letter));
+    setSelected(letter);
+  };
+  const toggleStrike = (letter: Answer) => {
+    if (answered) return;
+    setStruck((items) =>
+      items.includes(letter) ? items.filter((item) => item !== letter) : [...items, letter],
+    );
+    if (selected === letter) setSelected(null);
+  };
   return (
     <div className="mx-auto max-w-4xl space-y-4 pb-8">
       <header className="flex flex-wrap items-center justify-between gap-3">
@@ -415,21 +493,92 @@ function QuestionTrainer() {
               {question.contest} · {question.year}
             </Badge>
           </div>
-          <p className="text-base font-medium leading-7 text-foreground md:text-lg">
-            {question.text}
+          {parsed.base && (
+            <details
+              open
+              className="mb-4 rounded-xl border bg-muted/40 [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary className="flex cursor-pointer select-none items-center justify-between px-4 py-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
+                {parsed.baseLabel}
+                <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
+              </summary>
+              <div className="max-h-80 overflow-y-auto whitespace-pre-line px-4 pb-4 text-sm leading-7 text-foreground">
+                {parsed.base}
+              </div>
+            </details>
+          )}
+          <p className="whitespace-pre-line text-base font-medium leading-7 text-foreground md:text-lg">
+            {parsed.stem}
           </p>
           <p className="mt-5 text-xs font-black uppercase tracking-wider text-muted-foreground">
-            {/CEBRASPE|CESPE/i.test(question.board)
-              ? "Julgue o item"
-              : "Assinale a alternativa correta"}
+            {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
           </p>
+          {hasOptions && (
+            <div className="mt-3 space-y-2">
+              {parsed.options.map((option) => {
+                const isStruck = struck.includes(option.letter);
+                const isSelected = selected === option.letter;
+                const isRight = answered && option.letter === question.answer;
+                const isWrong = answered && isSelected && option.letter !== question.answer;
+                return (
+                  <div key={option.letter} className="flex items-start gap-2">
+                    <button
+                      type="button"
+                      aria-pressed={isSelected}
+                      disabled={answered}
+                      onClick={() => chooseOption(option.letter)}
+                      className={cn(
+                        "group flex flex-1 items-start gap-3 rounded-xl border-2 border-border bg-background p-3 text-left text-sm leading-6 transition-all duration-200 hover:border-primary hover:bg-primary/5 disabled:hover:bg-background",
+                        isStruck && "opacity-50",
+                        isSelected &&
+                          !answered &&
+                          "border-blue-600 bg-blue-50 ring-4 ring-blue-600/10 hover:bg-blue-50",
+                        isRight && "border-emerald-500 bg-emerald-50 hover:bg-emerald-50",
+                        isWrong && "border-rose-500 bg-rose-50 hover:bg-rose-50",
+                      )}
+                    >
+                      <span
+                        className={cn(
+                          "mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-muted text-xs font-bold",
+                          isSelected && !answered && "bg-blue-600 text-white",
+                          isRight && "bg-emerald-600 text-white",
+                          isWrong && "bg-rose-600 text-white",
+                        )}
+                      >
+                        {option.letter}
+                      </span>
+                      <span className={cn(isStruck && "line-through")}>{option.text}</span>
+                    </button>
+                    <Button
+                      type="button"
+                      variant={isStruck ? "secondary" : "ghost"}
+                      size="icon"
+                      className="h-10 w-10 shrink-0"
+                      disabled={answered}
+                      aria-pressed={isStruck}
+                      aria-label={
+                        isStruck
+                          ? `Desfazer risco da alternativa ${option.letter}`
+                          : `Riscar alternativa ${option.letter}`
+                      }
+                      title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
+                      onClick={() => toggleStrike(option.letter)}
+                    >
+                      <Strikethrough className="h-4 w-4" />
+                    </Button>
+                  </div>
+                );
+              })}
+            </div>
+          )}
           <div
             className={cn(
               "mt-3 grid gap-2",
+              hasOptions && "hidden",
               boardAnswers(question.board).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
             )}
           >
-            {boardAnswers(question.board).map((answer) => (
+            {(hasOptions ? [] : boardAnswers(question.board)).map((answer) => (
               <button
                 key={answer}
                 type="button"
@@ -460,7 +609,7 @@ function QuestionTrainer() {
                 >
                   {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
                 </span>
-                {answerLabel(answer, question.board)}
+                {labelFor(answer)}
               </button>
             ))}
           </div>
@@ -508,7 +657,7 @@ function QuestionTrainer() {
                 <GuideStep
                   number="2"
                   text={
-                    /CEBRASPE|CESPE/i.test(question.board)
+                    certoErrado
                       ? "Procure termos absolutos, exceções e relações de causa. Uma única parte falsa torna o item errado."
                       : "Elimine primeiro as alternativas incompatíveis com o enunciado e compare as restantes."
                   }
@@ -541,8 +690,8 @@ function QuestionTrainer() {
                   {isCorrect ? "Resposta correta" : "Vamos corrigir este ponto"}
                 </DialogTitle>
                 <DialogDescription>
-                  Você marcou {selected ? answerLabel(selected, question.board) : "—"}. O gabarito é{" "}
-                  {answerLabel(question.answer, question.board)}.
+                  Você marcou {selected ? labelFor(selected) : "—"}. O gabarito é{" "}
+                  {labelFor(question.answer)}.
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-4">
