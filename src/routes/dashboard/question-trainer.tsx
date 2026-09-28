@@ -69,12 +69,34 @@ type Question = {
   answer: Answer;
   explanation: string;
   legalBasis: LegalBasis[];
+  checkedAt: string | null;
 };
 
 const parseBasis = (value: unknown): LegalBasis[] =>
   Array.isArray(value)
     ? value.filter((item): item is LegalBasis => Boolean(item) && typeof item === "object")
     : [];
+// Fontes oficiais aceitas para legislação e jurisprudência (CONTENT_GOVERNANCE.md).
+const OFFICIAL_SOURCE = /(^|\.)(planalto\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br)(\/|$)/i;
+const isOfficialUrl = (url?: string) => {
+  try {
+    return Boolean(url) && OFFICIAL_SOURCE.test(new URL(String(url)).hostname + "/");
+  } catch {
+    return false;
+  }
+};
+// Questão com base legal só entra no treino se a vigência foi conferida na fonte oficial
+// (data registrada + link oficial). Assim nenhuma resposta desatualizada é exibida.
+const isLegallyVerified = (basis: LegalBasis[], checkedAt: unknown) =>
+  basis.length === 0 || (Boolean(checkedAt) && basis.some((item) => isOfficialUrl(item.url)));
+// Explicações podem trazer um trecho "Exemplo: …" — mostramos separado, em destaque.
+function splitExplanation(text: string) {
+  const match = text.match(/\n?\s*Exemplo(?: pr[aá]tico)?:\s*([\s\S]*)$/i);
+  if (!match || match.index === undefined) return { main: text.trim(), example: "" };
+  return { main: text.slice(0, match.index).trim(), example: (match[1] ?? "").trim() };
+}
+const formatDate = (value: string | null) =>
+  value ? new Date(value).toLocaleDateString("pt-BR") : "";
 const boardAnswers = (board: string): Answer[] =>
   /CEBRASPE|CESPE/i.test(board)
     ? ["C", "E"]
@@ -190,20 +212,20 @@ function QuestionTrainer() {
           supabase
             .from("official_exam_questions")
             .select(
-              "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis",
+              "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,law_version_checked_at,legal_review_required,legal_audit_completed",
             )
             .eq("content_status", "active")
             .neq("official_answer", "X"),
           supabase
             .from("curated_question_catalog")
             .select(
-              "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis",
+              "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,law_version_checked_at",
             )
             .eq("content_status", "active"),
           supabase
             .from("question_bank")
             .select(
-              "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status",
+              "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status,law_version_checked_at",
             )
             .eq("user_id", userId),
         ]);
@@ -211,7 +233,13 @@ function QuestionTrainer() {
         if (curatedResult.error) throw curatedResult.error;
         if (personalResult.error) throw personalResult.error;
         const catalog: Question[] = [
-          ...((officialResult.data || []) as Array<Record<string, unknown>>).map((row) => ({
+          ...((officialResult.data || []) as Array<Record<string, unknown>>)
+            .filter(
+              (row) =>
+                !(row.legal_review_required && !row.legal_audit_completed) &&
+                isLegallyVerified(parseBasis(row.legal_basis), row.law_version_checked_at),
+            )
+            .map((row) => ({
             id: String(row.id),
             source: "official" as const,
             contest: String(row.contest_name),
@@ -226,8 +254,13 @@ function QuestionTrainer() {
               row.review_note || "Item conferido com o gabarito definitivo da prova oficial.",
             ),
             legalBasis: parseBasis(row.legal_basis),
+            checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
           })),
-          ...((curatedResult.data || []) as Array<Record<string, unknown>>).map((row) => ({
+          ...((curatedResult.data || []) as Array<Record<string, unknown>>)
+            .filter((row) =>
+              isLegallyVerified(parseBasis(row.legal_basis), row.law_version_checked_at),
+            )
+            .map((row) => ({
             id: String(row.id),
             source: "curated" as const,
             contest: String(row.contest_name),
@@ -240,13 +273,16 @@ function QuestionTrainer() {
             answer: String(row.official_answer) as Answer,
             explanation: String(row.explanation || "Explicação editorial em revisão."),
             legalBasis: parseBasis(row.legal_basis),
+            checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
           })),
           ...((personalResult.data || []) as Array<Record<string, unknown>>)
             .filter(
               (row) =>
                 !["obsolete", "revoked", "archived"].includes(
                   String(row.content_status || "active"),
-                ) && /^[A-E]$/.test(String(row.official_answer)),
+                ) &&
+                /^[A-E]$/.test(String(row.official_answer)) &&
+                isLegallyVerified(parseBasis(row.legal_basis), row.law_version_checked_at),
             )
             .map((row) => ({
               id: String(row.id),
@@ -261,6 +297,7 @@ function QuestionTrainer() {
               answer: String(row.official_answer) as Answer,
               explanation: String(row.explanation || "Explicação pedagógica em revisão."),
               legalBasis: parseBasis(row.legal_basis),
+              checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
             })),
         ];
         if (active) setCatalog(catalog);
@@ -441,6 +478,8 @@ function QuestionTrainer() {
   const isCorrect = selected === question.answer;
   const parsed = parseQuestion(question.text);
   const hasOptions = parsed.options.length > 0;
+  const explanation = splitExplanation(question.explanation);
+  const correctOption = parsed.options.find((option) => option.letter === question.answer);
   const certoErrado = !hasOptions && /CEBRASPE|CESPE/i.test(question.board);
   const labelFor = (answer: Answer) =>
     hasOptions ? `Alternativa ${answer}` : answerLabel(answer, question.board);
@@ -695,22 +734,34 @@ function QuestionTrainer() {
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-4">
+                {!isCorrect && (
+                  <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
+                    <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
+                      Resposta correta
+                    </p>
+                    <p className="text-sm font-bold">{labelFor(question.answer)}</p>
+                    {correctOption && <p className="mt-1 text-sm leading-6">{correctOption.text}</p>}
+                  </div>
+                )}
                 <div className="rounded-xl border bg-muted/30 p-4">
                   <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
-                    Explicação pedagógica
+                    Explicando de um jeito simples
                   </p>
-                  <p className="text-sm leading-6">{question.explanation}</p>
+                  <p className="text-sm leading-6">{explanation.main}</p>
                 </div>
-                <div>
-                  <p className="mb-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
-                    Como resolver melhor
+                {explanation.example && (
+                  <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 dark:bg-amber-950/30">
+                    <p className="mb-1 text-xs font-black uppercase tracking-wider text-amber-700">
+                      Exemplo do dia a dia
+                    </p>
+                    <p className="text-sm leading-6">{explanation.example}</p>
+                  </div>
+                )}
+                {question.checkedAt && question.legalBasis.length > 0 && (
+                  <p className="text-xs text-muted-foreground">
+                    Vigência conferida na fonte oficial em {formatDate(question.checkedAt)}.
                   </p>
-                  <ol className="space-y-2 text-sm">
-                    <li>1. Classifique o comando e o tema cobrado.</li>
-                    <li>2. Localize a palavra que confirma ou invalida a afirmação.</li>
-                    <li>3. Registre a regra no caderno de erros e refaça em 24 horas.</li>
-                  </ol>
-                </div>
+                )}
                 {question.legalBasis.length > 0 && (
                   <div>
                     <p className="mb-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
