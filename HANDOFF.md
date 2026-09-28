@@ -4,16 +4,16 @@ Documento de continuidade. Cole isto (ou o link do arquivo) na primeira mensagem
 
 ## 1. Onde tudo está
 
-**Repositório local:** `C:\Users\familia\Desktop\norteconcursos-730d5ab1-main`
+**Repositório local:** `C:\Users\familia\Desktop\PROVAS FEITAS POR MIM\norteconcursos`
 
 **GitHub:**
-- `origin` → `francdenis2026-source/norteconcursos-730d5ab1` — **sem acesso de escrita** (nenhuma conta testada consegue dar push aqui)
-- `platforma` → `projectsFranc/PlataformaNorteconcurso` — **este é o remoto ativo**, conectado ao Lovable. Todo push vai pra cá.
+- `origin` → `francdenis2026-source/norteconcursos-730d5ab1` — **este é o repositório correto e canônico do projeto** (confirmado pelo Franc Denis em 28/09/2026). Tem push normal, `main` local rastreia `origin/main`, e está com o histórico completo e atualizado (426+ commits, incluindo os imports de provas mais recentes).
+- `platforma` → `projectsFranc/PlataformaNorteconcurso` — **obsoleto/desatualizado**. Chegou a ser usado como remoto conectado ao Lovable, mas ficou **133 commits atrasado** em relação ao `origin/main` (parado em 26/09/2026). Não usar como referência nem como destino de push sem confirmar antes com o usuário — a nota antiga abaixo, dizendo que `origin` "não tem acesso de escrita", estava **errada**.
 
-**Lovable:**
+**Lovable (status: desatualizado, não confiar sem verificar):**
 - Projeto: https://lovable.dev/projects/8ab8740c-ad92-45df-9d6c-937fc71c534d
 - App publicado: https://friendly-flock-nook.lovable.app
-- Confirmado que o site publicado reflete o código enviado (mostra "Conectado ao Supabase Externo")
+- Esse app publicado reflete o remoto `platforma`, que está muito atrás do `origin` (faltam o treinador de questões, a prova do Feijó 2018, SEFAZ-AC, PC-CE/DF/MG/SC/PI, ranking, etc.). Se for necessário publicar de novo no Lovable, sincronizar `platforma` com `origin/main` primeiro (ação de push, confirmar com o usuário antes).
 
 **Supabase (banco de dados novo, em uso):**
 - URL: `https://gkwphadbveiyjcwiiizw.supabase.co`
