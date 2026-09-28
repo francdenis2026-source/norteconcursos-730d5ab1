@@ -30,6 +30,13 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
@@ -76,9 +83,18 @@ const answerLabel = (answer: Answer, board: string) =>
   /CEBRASPE|CESPE/i.test(board) ? (answer === "C" ? "Certo" : "Errado") : `Alternativa ${answer}`;
 
 function QuestionTrainer() {
-  const filters = Route.useSearch();
+  const routeFilters = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
+  const [catalog, setCatalog] = React.useState<Question[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
+  const [started, setStarted] = React.useState(false);
+  const [contest, setContest] = React.useState(routeFilters.contest || "all");
+  const [board, setBoard] = React.useState(routeFilters.board || "all");
+  const [career, setCareer] = React.useState(routeFilters.career || "all");
+  const [year, setYear] = React.useState(routeFilters.year || "all");
+  const [subject, setSubject] = React.useState(routeFilters.subject || "all");
+  const [source, setSource] = React.useState(routeFilters.source || "all");
+  const [limit, setLimit] = React.useState("20");
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
   const [index, setIndex] = React.useState(0);
@@ -175,17 +191,7 @@ function QuestionTrainer() {
               legalBasis: parseBasis(row.legal_basis),
             })),
         ];
-        const match = (actual: string, expected?: string) => !expected || actual === expected;
-        const filtered = catalog.filter(
-          (q) =>
-            match(q.contest, filters.contest) &&
-            match(q.board, filters.board) &&
-            match(q.career, filters.career) &&
-            match(q.year, filters.year) &&
-            match(q.subject, filters.subject) &&
-            match(q.source, filters.source),
-        );
-        if (active) setQuestions(filtered.sort(() => Math.random() - 0.5));
+        if (active) setCatalog(catalog);
       } catch (loadError) {
         if (active)
           setError(
@@ -198,16 +204,42 @@ function QuestionTrainer() {
     return () => {
       active = false;
     };
-  }, [
-    authLoading,
-    user,
-    filters.board,
-    filters.career,
-    filters.contest,
-    filters.source,
-    filters.subject,
-    filters.year,
-  ]);
+  }, [authLoading, user]);
+
+  const choices = React.useMemo(
+    () => ({
+      contests: unique(catalog.map((item) => item.contest)),
+      boards: unique(catalog.map((item) => item.board)),
+      careers: unique(catalog.map((item) => item.career)),
+      years: unique(catalog.map((item) => item.year)).sort((a, b) => Number(b) - Number(a)),
+      subjects: unique(catalog.map((item) => item.subject)),
+    }),
+    [catalog],
+  );
+  const pool = React.useMemo(
+    () =>
+      catalog.filter(
+        (item) =>
+          (contest === "all" || item.contest === contest) &&
+          (board === "all" || item.board === board) &&
+          (career === "all" || item.career === career) &&
+          (year === "all" || item.year === year) &&
+          (subject === "all" || item.subject === subject) &&
+          (source === "all" || item.source === source),
+      ),
+    [catalog, contest, board, career, year, subject, source],
+  );
+  const startTraining = () => {
+    setQuestions([...pool].sort(() => Math.random() - 0.5).slice(0, Number(limit)));
+    setIndex(0);
+    setCorrect(0);
+    setWrong(0);
+    setSelected(null);
+    setAnswered(false);
+    setHelpUsed(false);
+    setStartedAt(Date.now());
+    setStarted(true);
+  };
 
   const question = questions[index];
   const submit = async () => {
@@ -278,14 +310,23 @@ function QuestionTrainer() {
         </Button>
       </Center>
     );
+  if (!started)
+    return (
+      <TrainerSetup
+        total={catalog.length}
+        available={pool.length}
+        choices={choices}
+        values={{ contest, board, career, year, subject, source, limit }}
+        setters={{ setContest, setBoard, setCareer, setYear, setSubject, setSource, setLimit }}
+        start={startTraining}
+      />
+    );
   if (!questions.length)
     return (
       <Center>
         <Target className="h-10 w-10 text-primary" />
         <p>Nenhuma questão ativa corresponde aos filtros escolhidos.</p>
-        <Button asChild>
-          <Link to="/dashboard/question-bank">Alterar filtros</Link>
-        </Button>
+        <Button onClick={() => setStarted(false)}>Alterar filtros</Button>
       </Center>
     );
   if (!question)
@@ -297,10 +338,8 @@ function QuestionTrainer() {
   return (
     <div className="mx-auto max-w-4xl space-y-4 pb-8">
       <header className="flex flex-wrap items-center justify-between gap-3">
-        <Button asChild variant="ghost" size="sm">
-          <Link to="/dashboard/question-bank">
-            <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
-          </Link>
+        <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
+          <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
         </Button>
         <div className="flex items-center gap-2">
           <Badge variant="secondary">
@@ -509,6 +548,218 @@ function QuestionTrainer() {
         </DialogContent>
       </Dialog>
     </div>
+  );
+}
+
+type SetupValues = {
+  contest: string;
+  board: string;
+  career: string;
+  year: string;
+  subject: string;
+  source: string;
+  limit: string;
+};
+type SetupSetters = {
+  setContest: React.Dispatch<React.SetStateAction<string>>;
+  setBoard: React.Dispatch<React.SetStateAction<string>>;
+  setCareer: React.Dispatch<React.SetStateAction<string>>;
+  setYear: React.Dispatch<React.SetStateAction<string>>;
+  setSubject: React.Dispatch<React.SetStateAction<string>>;
+  setSource: React.Dispatch<React.SetStateAction<string>>;
+  setLimit: React.Dispatch<React.SetStateAction<string>>;
+};
+
+function TrainerSetup({
+  total,
+  available,
+  choices,
+  values,
+  setters,
+  start,
+}: {
+  total: number;
+  available: number;
+  choices: {
+    contests: string[];
+    boards: string[];
+    careers: string[];
+    years: string[];
+    subjects: string[];
+  };
+  values: SetupValues;
+  setters: SetupSetters;
+  start: () => void;
+}) {
+  const reset = () => {
+    setters.setContest("all");
+    setters.setBoard("all");
+    setters.setCareer("all");
+    setters.setYear("all");
+    setters.setSubject("all");
+    setters.setSource("all");
+  };
+  return (
+    <div className="mx-auto max-w-5xl space-y-5 pb-10 animate-in fade-in duration-300">
+      <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-950 via-slate-900 to-blue-950 p-6 text-white shadow-xl md:p-8">
+        <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
+          <div>
+            <Badge className="mb-4 border-white/15 bg-white/10 text-emerald-100 hover:bg-white/10">
+              <BrainCircuit className="mr-1.5 h-3.5 w-3.5" /> Treinador adaptativo
+            </Badge>
+            <h1 className="text-3xl font-black md:text-4xl">Configure sua sessão de treino</h1>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
+              Escolha a banca, carreira, concurso e disciplina. Aqui cada resposta recebe correção
+              imediata e orientação pedagógica, sem afetar o ranking dos simulados.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-2 text-center">
+            <div className="rounded-xl border border-white/10 bg-white/10 px-4 py-3">
+              <p className="text-2xl font-black">{total}</p>
+              <p className="text-[10px] text-slate-300">questões ativas</p>
+            </div>
+            <div className="rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-4 py-3">
+              <p className="text-2xl font-black text-emerald-300">{available}</p>
+              <p className="text-[10px] text-slate-300">na seleção</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Card className="border-0 shadow-lg ring-1 ring-border/70">
+        <CardContent className="p-5 md:p-7">
+          <div className="mb-6 flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+              <BookOpenCheck className="h-5 w-5" />
+            </div>
+            <div>
+              <h2 className="text-lg font-black">Filtros do treino</h2>
+              <p className="text-xs text-muted-foreground">
+                As opções podem ser combinadas livremente.
+              </p>
+            </div>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <TrainerFilter
+              label="Banca"
+              value={values.board}
+              setValue={setters.setBoard}
+              options={choices.boards}
+            />
+            <TrainerFilter
+              label="Disciplina"
+              value={values.subject}
+              setValue={setters.setSubject}
+              options={choices.subjects}
+            />
+            <TrainerFilter
+              label="Concurso"
+              value={values.contest}
+              setValue={setters.setContest}
+              options={choices.contests}
+            />
+            <TrainerFilter
+              label="Carreira ou cargo"
+              value={values.career}
+              setValue={setters.setCareer}
+              options={choices.careers}
+            />
+            <TrainerFilter
+              label="Ano"
+              value={values.year}
+              setValue={setters.setYear}
+              options={choices.years}
+            />
+            <TrainerFilter
+              label="Origem"
+              value={values.source}
+              setValue={setters.setSource}
+              options={["official", "curated", "personal"]}
+              labels={{
+                official: "Provas oficiais",
+                curated: "Autorais auditadas",
+                personal: "Meu caderno",
+              }}
+            />
+            <TrainerFilter
+              label="Quantidade"
+              value={values.limit}
+              setValue={setters.setLimit}
+              options={["5", "10", "20", "30", "50"]}
+              allLabel="Quantidade"
+              hideAll
+            />
+          </div>
+          <div className="mt-7 flex flex-col gap-3 rounded-2xl border bg-muted/30 p-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="font-black">
+                {Math.min(available, Number(values.limit))} questões serão usadas
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Embaralhadas, com correção após cada resposta.
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <Button variant="outline" onClick={reset}>
+                Limpar filtros
+              </Button>
+              <Button
+                disabled={!available}
+                onClick={start}
+                className="bg-emerald-600 hover:bg-emerald-700"
+              >
+                <Sparkles className="mr-2 h-4 w-4" /> Iniciar treinamento
+              </Button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+
+function TrainerFilter({
+  label,
+  value,
+  setValue,
+  options,
+  labels,
+  allLabel = "Todos",
+  hideAll = false,
+}: {
+  label: string;
+  value: string;
+  setValue: (value: string) => void;
+  options: string[];
+  labels?: Record<string, string>;
+  allLabel?: string;
+  hideAll?: boolean;
+}) {
+  return (
+    <label className="space-y-2">
+      <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
+        {label}
+      </span>
+      <Select value={value} onValueChange={setValue}>
+        <SelectTrigger className="h-11 bg-background">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          {!hideAll && <SelectItem value="all">{allLabel}</SelectItem>}
+          {options.map((option) => (
+            <SelectItem key={option} value={option}>
+              {labels?.[option] || option}
+              {hideAll ? " questões" : ""}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </label>
+  );
+}
+
+function unique(values: string[]) {
+  return Array.from(new Set(values.filter(Boolean))).sort((a, b) =>
+    a.localeCompare(b, "pt-BR", { numeric: true }),
   );
 }
 
