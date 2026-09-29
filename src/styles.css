@@ -1205,14 +1205,10 @@
   .site-container {
     width: min(100% - 28px, 1180px);
   }
-  .hero-professional .site-container {
-    min-height: 700px;
-  }
-  .hero-title {
-    font-size: 3.2rem;
-  }
+  /* Altura e tamanho do hero ficam definidos só no bloco @media (max-width: 780px)
+     abaixo, pra não haver duas regras conflitantes decidindo o mesmo valor. */
   .hero-copy {
-    font-size: 16px;
+    font-size: 15px;
   }
   .hero-image {
     background-position: 68% center;
@@ -1222,7 +1218,7 @@
     padding-left: 12px;
   }
   .hero-stats strong {
-    font-size: 17px;
+    font-size: 16px;
   }
   .method-grid,
   .pricing-grid,
@@ -1230,13 +1226,13 @@
     grid-template-columns: 1fr;
   }
   .section-heading {
-    margin-bottom: 34px;
+    margin-bottom: 24px;
   }
   .method-card {
-    min-height: 230px;
+    min-height: 0;
   }
   .section-pad {
-    padding-block: 70px;
+    padding-block: 48px;
   }
   .dashboard-showcase {
     margin-inline: -15px;
@@ -1245,7 +1241,7 @@
     transform: none;
   }
   .mock-content {
-    padding: 22px;
+    padding: 18px;
   }
   .mock-metrics {
     grid-template-columns: 1fr;
@@ -1257,10 +1253,10 @@
     display: none;
   }
   .testimonial-card {
-    padding: 30px 20px;
+    padding: 24px 18px;
   }
   .testimonial-card blockquote {
-    font-size: 18px;
+    font-size: 17px;
   }
   .pricing-card.featured {
     order: -1;
@@ -2232,7 +2228,7 @@ iframe[src*="gpteng.co"] {
   }
 
   .hero-professional {
-    min-height: 720px;
+    min-height: 0;
   }
 
   .hero-image {
@@ -2243,12 +2239,12 @@ iframe[src*="gpteng.co"] {
   }
 
   .hero-title {
-    font-size: clamp(2.7rem, 13vw, 4.2rem);
-    line-height: 0.98;
+    font-size: clamp(2.1rem, 9vw, 2.9rem);
+    line-height: 1.04;
   }
 
   .section-pad {
-    padding-block: 76px;
+    padding-block: 48px;
   }
 
   .section-heading {

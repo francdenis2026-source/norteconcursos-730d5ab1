@@ -109,7 +109,7 @@ function Index() {
   return (
     <div className="landing-shell">
       <header className="landing-header">
-        <div className="site-container flex h-[76px] items-center justify-between">
+        <div className="site-container flex h-16 items-center justify-between sm:h-[76px]">
           <Link to="/" aria-label="Norte Concurso — início">
             <NorteBrand light />
           </Link>
@@ -192,8 +192,8 @@ function Index() {
         <section className="hero-professional">
           <div className="hero-image" aria-hidden="true" />
           <div className="hero-grid" aria-hidden="true" />
-          <div className="site-container relative z-10 grid min-h-[760px] items-center py-28 lg:grid-cols-[1.08fr_.92fr]">
-            <div className="max-w-[720px] pt-8">
+          <div className="site-container relative z-10 grid min-h-0 items-center py-12 sm:min-h-[560px] sm:py-20 lg:min-h-[760px] lg:grid-cols-[1.08fr_.92fr] lg:py-28">
+            <div className="max-w-[720px] pt-2 sm:pt-8">
               <div className="eyebrow reveal-up">
                 <ShieldCheck /> Preparação especializada em segurança pública
               </div>
@@ -204,7 +204,7 @@ function Index() {
                 Conteúdo direcionado, treino por banca e simulados de alta pressão para quem mira
                 Polícia Federal, PRF, Polícias Civis, Penais e Militares.
               </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row reveal-up delay-3">
+              <div className="mt-6 flex flex-col gap-3 sm:mt-9 sm:flex-row reveal-up delay-3">
                 <Button size="lg" className="premium-button h-14 px-7 text-[15px]" asChild>
                   <Link to="/auth">
                     Iniciar minha preparação <ArrowRight />
@@ -252,7 +252,7 @@ function Index() {
             </div>
           </div>
           <div className="hero-stats">
-            <div className="site-container grid grid-cols-2 gap-6 md:grid-cols-4">
+            <div className="site-container grid grid-cols-2 gap-3 sm:gap-6 md:grid-cols-4">
               <div>
                 <strong>PF · PRF</strong>
                 <span>carreiras federais</span>
