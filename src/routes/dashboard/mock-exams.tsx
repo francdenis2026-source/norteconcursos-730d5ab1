@@ -1284,7 +1284,7 @@ function ResultView({
                           .map((s, i) => (
                             <a
                               key={`${s.url}-${i}`}
-                              href={s.url}
+                              href={basisHref(s)}
                               target="_blank"
                               rel="noreferrer"
                               className="text-xs font-semibold text-blue-700 underline underline-offset-4"
@@ -1483,6 +1483,15 @@ function calculateResult(questions: SimulatorQuestion[], answers: Record<string,
 }
 function parseLegalBasis(value: unknown): SimulatorQuestion["legalBasis"] {
   return Array.isArray(value) ? (value as SimulatorQuestion["legalBasis"]) : [];
+}
+// O Planalto marca cada artigo com uma âncora "#artN" (ex.: <a name="art205">
+// antes de "Art. 205."), então quando sabemos o artigo dá pra pular a busca
+// manual e abrir a página já rolada direto no trecho certo.
+function basisHref(basis: { artigo?: string; url?: string }) {
+  if (!basis.url) return undefined;
+  if (!basis.artigo || basis.url.includes("#")) return basis.url;
+  const artigoAnchor = basis.artigo.replace(/[^0-9A-Za-z-]/g, "");
+  return artigoAnchor ? `${basis.url}#art${artigoAnchor}` : basis.url;
 }
 function shuffle<T>(items: T[]) {
   const copy = [...items];

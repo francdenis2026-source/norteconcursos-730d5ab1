@@ -76,6 +76,15 @@ const parseBasis = (value: unknown): LegalBasis[] =>
   Array.isArray(value)
     ? value.filter((item): item is LegalBasis => Boolean(item) && typeof item === "object")
     : [];
+// O Planalto marca cada artigo com uma âncora "#artN" (ex.: <a name="art205">
+// antes de "Art. 205."), então quando sabemos o artigo dá pra pular a busca
+// manual e abrir a página já rolada direto no trecho certo.
+const basisHref = (basis: LegalBasis) => {
+  if (!basis.url) return undefined;
+  if (!basis.artigo || basis.url.includes("#")) return basis.url;
+  const artigoAnchor = basis.artigo.replace(/[^0-9A-Za-z-]/g, "");
+  return artigoAnchor ? `${basis.url}#art${artigoAnchor}` : basis.url;
+};
 // Fontes oficiais aceitas para legislação e jurisprudência (CONTENT_GOVERNANCE.md).
 const OFFICIAL_SOURCE =
   /(^|\.)(planalto\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br)(\/|$)/i;
@@ -844,7 +853,7 @@ function QuestionTrainer() {
                         basis.url ? (
                           <a
                             key={`${basis.url}-${basisIndex}`}
-                            href={basis.url}
+                            href={basisHref(basis)}
                             target="_blank"
                             rel="noreferrer"
                             className="block rounded-lg border p-3 text-sm font-medium text-primary hover:bg-muted"
