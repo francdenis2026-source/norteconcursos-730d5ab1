@@ -325,7 +325,7 @@
       rgb(5 21 34 / 0.18)
     ),
     linear-gradient(0deg, #051522 0%, transparent 38%),
-    url("/media/hero-home-police.png") center/cover no-repeat;
+    url("/media/hero-home-police-v2.png") center/cover no-repeat;
 }
 .hero-grid {
   position: absolute;
@@ -1907,7 +1907,7 @@ iframe[src*="gpteng.co"] {
   isolation: isolate;
   background:
     linear-gradient(90deg, rgb(4 17 28 / 0.96), rgb(4 17 28 / 0.68)),
-    url("/media/hero-dashboard-police.png") center 52% / cover no-repeat;
+    url("/media/hero-dashboard-command-v2.png") center 52% / cover no-repeat;
 }
 
 .final-cta::before {
@@ -2013,7 +2013,7 @@ iframe[src*="gpteng.co"] {
 .onboarding-command {
   background:
     linear-gradient(120deg, rgb(7 26 43 / 0.97), rgb(15 52 78 / 0.94)),
-    url("/media/hero-dashboard-police.png") center / cover no-repeat !important;
+    url("/media/hero-dashboard-command-v2.png") center / cover no-repeat !important;
 }
 
 .dashboard-command-hero,
@@ -2048,7 +2048,7 @@ iframe[src*="gpteng.co"] {
   border: 1px solid rgb(255 255 255 / 0.08);
   border-radius: 14px;
   padding: clamp(1.5rem, 4vw, 2.5rem);
-  background: url("/media/hero-dashboard-police.png") center 58% / cover no-repeat;
+  background: url("/media/hero-dashboard-command-v2.png") center 58% / cover no-repeat;
 }
 
 .dashboard-command-hero::after,
@@ -2116,13 +2116,13 @@ iframe[src*="gpteng.co"] {
 
 .question-trainer-hero {
   min-height: 310px;
-  background: url("/media/hero-question-trainer.png") center / cover no-repeat;
+  background: url("/media/hero-question-training-v2.png") center / cover no-repeat;
 }
 
 .mock-exam-hero,
 .mock-result-hero {
   min-height: 320px;
-  background: url("/media/hero-mock-exam.png") center / cover no-repeat;
+  background: url("/media/hero-question-training-v2.png") center / cover no-repeat;
 }
 
 .mock-result-hero {
@@ -2133,7 +2133,7 @@ iframe[src*="gpteng.co"] {
   min-height: 230px;
   border-radius: 14px;
   padding: clamp(1.5rem, 4vw, 2.5rem);
-  background: url("/media/hero-dashboard-police.png") center 55% / cover no-repeat;
+  background: url("/media/hero-dashboard-command-v2.png") center 55% / cover no-repeat;
 }
 
 .catalog-command-hero h1 {
@@ -2161,6 +2161,53 @@ iframe[src*="gpteng.co"] {
   text-wrap: pretty;
 }
 
+.dashboard-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.dashboard-quick-actions > a {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgb(205 216 224 / 0.9);
+  border-radius: 0.7rem;
+  background: rgb(255 255 255 / 0.92);
+  box-shadow: 0 10px 28px rgb(9 39 63 / 0.055);
+  transition: 180ms ease;
+}
+
+.dashboard-quick-actions > a:hover {
+  border-color: #d3a33d;
+  transform: translateY(-2px);
+}
+
+.dashboard-quick-actions > a > svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: #9a6c17;
+}
+
+.dashboard-quick-actions span,
+.dashboard-quick-actions strong,
+.dashboard-quick-actions small {
+  display: block;
+}
+
+.dashboard-quick-actions strong {
+  color: #0c2942;
+  font-size: 0.85rem;
+}
+
+.dashboard-quick-actions small {
+  margin-top: 0.1rem;
+  color: #72808d;
+  font-size: 0.68rem;
+}
+
 .mobile-command-nav {
   padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
 }
@@ -2175,7 +2222,7 @@ iframe[src*="gpteng.co"] {
   background:
     linear-gradient(90deg, rgb(5 19 31 / 0.14), rgb(5 19 31 / 0.54)),
     linear-gradient(0deg, rgb(5 19 31 / 0.88), transparent 54%),
-    url("/media/hero-dashboard-police.png") center / cover no-repeat;
+    url("/media/hero-dashboard-command-v2.png") center / cover no-repeat;
   transform: none;
 }
 
@@ -2235,7 +2282,7 @@ iframe[src*="gpteng.co"] {
     background:
       linear-gradient(90deg, rgb(5 21 34 / 0.95), rgb(5 21 34 / 0.7)),
       linear-gradient(0deg, #051522 0%, transparent 48%),
-      url("/media/hero-home-police.png") 68% center / cover no-repeat;
+      url("/media/hero-home-police-v2.png") 68% center / cover no-repeat;
   }
 
   .hero-title {
@@ -2286,6 +2333,10 @@ iframe[src*="gpteng.co"] {
 
   .landing-shell .site-container {
     width: calc(100% - 24px);
+  }
+
+  .landing-shell .mobile-optional-section {
+    display: none;
   }
 
   .landing-header .site-container {
@@ -2516,6 +2567,129 @@ iframe[src*="gpteng.co"] {
   .landing-footer .site-container:first-child {
     gap: 24px;
     padding-block: 30px;
+  }
+
+  .landing-footer .site-container:first-child > :not(:first-child) {
+    display: none;
+  }
+
+  .landing-footer .site-container:last-child {
+    padding-block: 16px;
+  }
+
+  .dashboard-home .dashboard-command-hero {
+    min-height: 168px;
+    padding: 16px;
+    border-radius: 10px;
+    background-position: 66% center;
+  }
+
+  .dashboard-home .dashboard-command-hero h1 {
+    margin-top: 6px;
+    font-size: 1.55rem;
+  }
+
+  .dashboard-home .dashboard-command-hero p {
+    display: none;
+  }
+
+  .dashboard-home .internal-hero-kicker {
+    font-size: 9px;
+  }
+
+  .dashboard-home .dashboard-hero-secondary > :not(:last-child) {
+    display: none;
+  }
+
+  .dashboard-home .dashboard-hero-secondary {
+    margin-top: 12px;
+  }
+
+  .dashboard-quick-actions {
+    gap: 6px;
+  }
+
+  .dashboard-quick-actions > a {
+    min-height: 62px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 4px;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .dashboard-quick-actions > a > svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dashboard-quick-actions strong {
+    font-size: 11px;
+  }
+
+  .dashboard-quick-actions small {
+    display: none;
+  }
+
+  .dashboard-home .onboarding-command {
+    border-radius: 9px;
+  }
+
+  .dashboard-home .onboarding-command > div:first-child {
+    padding: 14px;
+  }
+
+  .dashboard-home .onboarding-command h2 {
+    font-size: 15px;
+  }
+
+  .dashboard-home .onboarding-command p,
+  .dashboard-home .onboarding-command .flex.flex-wrap {
+    display: none;
+  }
+
+  .dashboard-home .command-metric > div {
+    padding: 11px;
+  }
+
+  .dashboard-home .command-metric p:first-child {
+    font-size: 10px;
+  }
+
+  .dashboard-home .command-metric .text-2xl {
+    overflow: hidden;
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .dashboard-home .command-metric p.text-xs {
+    font-size: 9px;
+  }
+
+  .dashboard-home .dashboard-desktop-detail {
+    display: none;
+  }
+
+  .dashboard-home .dashboard-next-actions-header {
+    padding: 12px;
+  }
+
+  .dashboard-home .dashboard-next-actions-content {
+    padding: 0 10px 10px;
+  }
+
+  .dashboard-home .dashboard-next-actions-title {
+    font-size: 14px;
+  }
+
+  .dashboard-home .dashboard-next-actions-content > div {
+    gap: 6px;
+  }
+
+  .dashboard-home .dashboard-next-actions-content > div > div {
+    padding: 8px;
   }
 
   .question-trainer-hero p {
