@@ -37,8 +37,8 @@ insert into public.content_sources (source_type,title,issuer,url,status,notes) v
 on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
 
 -- New syllabus edition for this career.
-insert into public.syllabus_editions (contest_name,role_name,contest_year)
-select 'Polícia Federal','Escrivão de Polícia Federal',2025
+insert into public.syllabus_editions (contest_name,role_name,contest_year,source_id)
+select 'Polícia Federal','Escrivão de Polícia Federal',2025,(select id from public.content_sources where url=$q$https://www.cebraspe.org.br/concursos/pf_25_policial/prova/106_pf_cb2_01.pdf$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Polícia Federal' and role_name='Escrivão de Polícia Federal' and contest_year=2025

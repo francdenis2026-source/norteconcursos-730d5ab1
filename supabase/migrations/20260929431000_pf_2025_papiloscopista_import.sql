@@ -73,8 +73,8 @@ on conflict (url) do update set checked_at=now(),status=excluded.status,notes=ex
 
 -- New syllabus edition for this career/year (2025, distinct from the 2021
 -- edition already registered).
-insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board)
-select 'Polícia Federal','Papiloscopista Policial Federal',2025,'CEBRASPE'
+insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board,source_id)
+select 'Polícia Federal','Papiloscopista Policial Federal',2025,'CEBRASPE',(select id from public.content_sources where url=$q$https://drive.google.com/file/d/1oYY4L2FMusSyNcMxoegVSD3GrMndqTm3/view$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Polícia Federal' and role_name='Papiloscopista Policial Federal' and contest_year=2025

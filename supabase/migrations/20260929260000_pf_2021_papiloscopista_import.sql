@@ -28,8 +28,8 @@ insert into public.content_sources (source_type,title,issuer,url,status,notes) v
 on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
 
 -- New syllabus edition for this career.
-insert into public.syllabus_editions (contest_name,role_name,contest_year)
-select 'Polícia Federal','Papiloscopista Policial Federal',2021
+insert into public.syllabus_editions (contest_name,role_name,contest_year,source_id)
+select 'Polícia Federal','Papiloscopista Policial Federal',2021,(select id from public.content_sources where url=$q$https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/papiloscopista-policial-federal/prova_cargo_4_papiloscopista_policial_federal.pdf/view$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Polícia Federal' and role_name='Papiloscopista Policial Federal' and contest_year=2021

@@ -42,8 +42,8 @@ insert into public.content_sources (source_type,title,issuer,url,status,notes) v
 ('outro','Gabarito definitivo CGM Porto Velho - Auditor - Conhecimentos Específicos - 2026','CGM Porto Velho/RO / CEBRASPE','https://cdn.cebraspe.org.br/concursos/cgm_porto_velho_ro_26/arquivos/ADDC4DCC2133882E801EB6E9EDAAE57E1B98E20D60ACAB34826B9BE4AA6DC528.pdf','vigente','Gabarito oficial definitivo de Conhecimentos Específicos (Matriz 211_CGMROAUDITOR_001_01), explicitamente rotulado CARGO 1: AUDITOR (Google Drive fileId 1ylVNzFmFRXa5vl8ahL5_udX66E3GzDgC). Itens 31-80; item 54 anulado (X), demais com gabarito definitivo A-E.')
 on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
 
-insert into public.syllabus_editions (contest_name,role_name,contest_year)
-select 'Controladoria-Geral do Município de Porto Velho (CGM/RO)','Auditor',2026
+insert into public.syllabus_editions (contest_name,role_name,contest_year,source_id)
+select 'Controladoria-Geral do Município de Porto Velho (CGM/RO)','Auditor',2026,(select id from public.content_sources where url=$q$https://cdn.cebraspe.org.br/concursos/cgm_porto_velho_ro_26/arquivos/2B0AA311FB1CDEC9C1AC8AC3318B712AFDC0E7248BEF86D3FB02C5B9BA133C8C.pdf$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Controladoria-Geral do Município de Porto Velho (CGM/RO)' and role_name='Auditor' and contest_year=2026
