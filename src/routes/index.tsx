@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Treino orientado por dados para quem escolheu servir e proteger.",
       },
-      { property: "og:image", content: "/media/hero-home-police-v2.png" },
+      { property: "og:image", content: "/media/hero-home-police-v3.png" },
     ],
   }),
 });
@@ -189,7 +189,6 @@ function Index() {
       <main>
         <section className="hero-professional">
           <div className="hero-image" aria-hidden="true" />
-          <div className="hero-grid" aria-hidden="true" />
           <div className="site-container relative z-10 grid min-h-0 items-center py-12 sm:min-h-[560px] sm:py-20 lg:min-h-[760px] lg:grid-cols-[1.08fr_.92fr] lg:py-28">
             <div className="max-w-[720px] pt-2 sm:pt-8">
               <div className="eyebrow reveal-up">
