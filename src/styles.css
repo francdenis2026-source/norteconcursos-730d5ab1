@@ -74,73 +74,72 @@
 }
 
 :root {
-  --radius: 0.75rem;
-  /* Navy Blue - Deep trust and authority */
-  --background: oklch(0.985 0.006 240);
-  --foreground: oklch(0.22 0.045 246);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.25 0.05 240);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.05 240);
-  --primary: oklch(0.26 0.075 245);
-  --primary-foreground: oklch(0.98 0.01 240);
-  --secondary: oklch(0.56 0.15 164); /* Emerald Green - Growth and regional identity */
-  --secondary-foreground: oklch(0.98 0.01 150);
-  --muted: oklch(0.92 0.01 240);
-  --muted-foreground: oklch(0.45 0.04 240);
-  --accent: oklch(0.75 0.15 60); /* Gold/Orange - Direction and achievement */
-  --accent-foreground: oklch(0.15 0.05 240);
+  --radius: 0.625rem;
+  --background: oklch(0.974 0.007 236);
+  --foreground: oklch(0.2 0.037 244);
+  --card: oklch(0.995 0.003 240);
+  --card-foreground: oklch(0.21 0.037 244);
+  --popover: oklch(0.995 0.003 240);
+  --popover-foreground: oklch(0.21 0.037 244);
+  --primary: oklch(0.23 0.052 244);
+  --primary-foreground: oklch(0.975 0.006 85);
+  --secondary: oklch(0.68 0.126 228);
+  --secondary-foreground: oklch(0.17 0.041 244);
+  --muted: oklch(0.93 0.012 236);
+  --muted-foreground: oklch(0.46 0.03 241);
+  --accent: oklch(0.79 0.139 81);
+  --accent-foreground: oklch(0.2 0.044 244);
   --destructive: oklch(0.6 0.2 25);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.9 0.018 240);
-  --input: oklch(0.88 0.02 240);
-  --ring: oklch(0.3 0.06 240);
+  --border: oklch(0.875 0.017 237);
+  --input: oklch(0.86 0.02 237);
+  --ring: oklch(0.68 0.126 228);
 
-  --chart-1: oklch(0.45 0.15 150);
-  --chart-2: oklch(0.3 0.06 240);
-  --chart-3: oklch(0.75 0.15 60);
+  --chart-1: oklch(0.68 0.126 228);
+  --chart-2: oklch(0.43 0.077 244);
+  --chart-3: oklch(0.79 0.139 81);
   --chart-4: oklch(0.6 0.2 25);
   --chart-5: oklch(0.5 0.1 200);
 
-  --sidebar: oklch(0.25 0.05 240);
-  --sidebar-foreground: oklch(0.98 0.01 240);
-  --sidebar-primary: oklch(0.45 0.15 150);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.35 0.08 240);
+  --sidebar: oklch(0.19 0.043 244);
+  --sidebar-foreground: oklch(0.96 0.008 236);
+  --sidebar-primary: oklch(0.79 0.139 81);
+  --sidebar-primary-foreground: oklch(0.18 0.043 244);
+  --sidebar-accent: oklch(0.28 0.052 244);
   --sidebar-accent-foreground: oklch(0.98 0.01 240);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.45 0.15 150);
+  --sidebar-ring: oklch(0.68 0.126 228);
 }
 
 .dark {
-  --background: oklch(0.15 0.03 240);
-  --foreground: oklch(0.95 0.01 240);
-  --card: oklch(0.18 0.04 240);
-  --card-foreground: oklch(0.95 0.01 240);
-  --popover: oklch(0.18 0.04 240);
-  --popover-foreground: oklch(0.95 0.01 240);
-  --primary: oklch(0.9 0.02 240);
-  --primary-foreground: oklch(0.15 0.03 240);
-  --secondary: oklch(0.55 0.18 150);
-  --secondary-foreground: oklch(0.1 0.02 150);
-  --muted: oklch(0.25 0.04 240);
-  --muted-foreground: oklch(0.7 0.02 240);
-  --accent: oklch(0.8 0.18 60);
-  --accent-foreground: oklch(0.1 0.02 60);
+  --background: oklch(0.145 0.032 244);
+  --foreground: oklch(0.95 0.009 236);
+  --card: oklch(0.185 0.037 244);
+  --card-foreground: oklch(0.95 0.009 236);
+  --popover: oklch(0.18 0.038 244);
+  --popover-foreground: oklch(0.95 0.009 236);
+  --primary: oklch(0.79 0.139 81);
+  --primary-foreground: oklch(0.16 0.04 244);
+  --secondary: oklch(0.68 0.126 228);
+  --secondary-foreground: oklch(0.15 0.038 244);
+  --muted: oklch(0.25 0.039 244);
+  --muted-foreground: oklch(0.72 0.02 237);
+  --accent: oklch(0.79 0.139 81);
+  --accent-foreground: oklch(0.16 0.04 244);
   --destructive: oklch(0.5 0.2 25);
   --destructive-foreground: oklch(0.95 0.01 25);
-  --border: oklch(0.3 0.04 240);
-  --input: oklch(0.3 0.04 240);
-  --ring: oklch(0.9 0.02 240);
+  --border: oklch(0.31 0.038 244);
+  --input: oklch(0.31 0.038 244);
+  --ring: oklch(0.68 0.126 228);
 
-  --sidebar: oklch(0.12 0.03 240);
-  --sidebar-foreground: oklch(0.9 0.02 240);
-  --sidebar-primary: oklch(0.55 0.18 150);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.2 0.04 240);
-  --sidebar-accent-foreground: oklch(0.9 0.02 240);
+  --sidebar: oklch(0.115 0.027 244);
+  --sidebar-foreground: oklch(0.93 0.01 236);
+  --sidebar-primary: oklch(0.79 0.139 81);
+  --sidebar-primary-foreground: oklch(0.15 0.038 244);
+  --sidebar-accent: oklch(0.22 0.041 244);
+  --sidebar-accent-foreground: oklch(0.93 0.01 236);
   --sidebar-border: oklch(1 0 0 / 15%);
-  --sidebar-ring: oklch(0.55 0.18 150);
+  --sidebar-ring: oklch(0.68 0.126 228);
 }
 
 @layer base {
@@ -151,7 +150,7 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: "Manrope", "Inter", "Segoe UI", sans-serif;
+    font-family: "Inter", "Aptos", "Segoe UI", sans-serif;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
@@ -227,13 +226,77 @@
   transform: rotate(8deg) scale(1.08);
   filter: drop-shadow(0 0 5px rgb(255 255 255 / 0.45));
 }
+.norte-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.72rem;
+  color: #071a2b;
+  line-height: 1;
+}
+.norte-brand.is-light {
+  color: #f8f5eb;
+}
+.norte-brand__mark {
+  display: grid;
+  width: 2.45rem;
+  height: 2.45rem;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid rgb(234 182 77 / 0.55);
+  border-radius: 0.72rem;
+  background: linear-gradient(145deg, #112f49, #071725);
+  box-shadow:
+    inset 0 0 0 1px rgb(255 255 255 / 0.04),
+    0 10px 28px rgb(0 0 0 / 0.16);
+}
+.norte-brand__mark svg {
+  width: 2rem;
+  height: 2rem;
+  overflow: visible;
+}
+.norte-brand__shield {
+  fill: #173a57;
+  stroke: #eab64d;
+  stroke-width: 1.3;
+}
+.norte-brand__north {
+  fill: #eab64d;
+}
+.norte-brand__cut {
+  fill: #f8f5eb;
+}
+.norte-brand__point {
+  fill: #58b9e6;
+}
+.norte-brand__type {
+  display: grid;
+  gap: 0.16rem;
+  min-width: max-content;
+}
+.norte-brand__type strong {
+  font-family: "Bahnschrift SemiCondensed", "Arial Narrow", sans-serif;
+  font-size: 1.08rem;
+  font-stretch: condensed;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+.norte-brand__type span {
+  color: #b98528;
+  font-size: 0.55rem;
+  font-weight: 900;
+  letter-spacing: 0.28em;
+}
+.norte-brand--compact .norte-brand__mark {
+  width: 2.35rem;
+  height: 2.35rem;
+}
 .premium-button {
   border: 0 !important;
-  border-radius: 11px !important;
-  color: #041c2c !important;
+  border-radius: 9px !important;
+  color: #101d2a !important;
   font-weight: 800 !important;
-  background: linear-gradient(135deg, #71e3bd, #2ac495) !important;
-  box-shadow: 0 12px 32px rgb(33 188 143 / 0.22) !important;
+  background: linear-gradient(135deg, #f2c867, #e3a52d) !important;
+  box-shadow: 0 12px 32px rgb(218 156 39 / 0.22) !important;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -242,7 +305,7 @@
 .premium-button:hover {
   transform: translateY(-2px);
   filter: brightness(1.04);
-  box-shadow: 0 17px 36px rgb(33 188 143 / 0.32) !important;
+  box-shadow: 0 17px 36px rgb(218 156 39 / 0.3) !important;
 }
 
 .hero-professional {
@@ -256,13 +319,13 @@
   background:
     linear-gradient(
       90deg,
-      #04172a 0%,
-      rgb(4 23 42 / 0.93) 31%,
-      rgb(4 23 42 / 0.24) 68%,
-      rgb(4 23 42 / 0.22)
+      #051522 0%,
+      rgb(5 21 34 / 0.94) 35%,
+      rgb(5 21 34 / 0.32) 70%,
+      rgb(5 21 34 / 0.18)
     ),
-    linear-gradient(0deg, #04172a 0%, transparent 34%),
-    url("/hero-concurso.png") center/cover no-repeat;
+    linear-gradient(0deg, #051522 0%, transparent 38%),
+    url("/media/hero-home-police.png") center/cover no-repeat;
 }
 .hero-grid {
   position: absolute;
@@ -279,12 +342,12 @@
   width: fit-content;
   align-items: center;
   gap: 8px;
-  border: 1px solid rgb(91 224 180 / 0.28);
-  border-radius: 999px;
-  background: rgb(31 189 142 / 0.11);
+  border: 1px solid rgb(234 182 77 / 0.3);
+  border-radius: 7px;
+  background: rgb(234 182 77 / 0.1);
   padding: 8px 13px;
-  color: #81e7c4;
-  font-size: 11px;
+  color: #f0c866;
+  font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -295,20 +358,22 @@
 .hero-title {
   margin-top: 24px;
   max-width: 740px;
-  font-size: clamp(3rem, 5.6vw, 5.2rem);
-  font-weight: 900;
-  line-height: 0.98;
-  letter-spacing: -0.062em;
+  font-family: "Bahnschrift SemiCondensed", "Arial Narrow", sans-serif;
+  font-size: clamp(3.1rem, 5.8vw, 5.45rem);
+  font-stretch: condensed;
+  font-weight: 800;
+  line-height: 0.94;
+  letter-spacing: -0.042em;
   text-wrap: balance;
 }
 .hero-title em {
-  color: #67ddb7;
+  color: #f0c15a;
   font-style: normal;
 }
 .hero-copy {
   margin-top: 26px;
   max-width: 610px;
-  color: rgb(226 238 247 / 0.72);
+  color: rgb(232 239 245 / 0.76);
   font-size: 18px;
   line-height: 1.7;
 }
@@ -320,7 +385,7 @@
   gap: 9px;
   padding-inline: 22px;
   border: 1px solid rgb(255 255 255 / 0.22);
-  border-radius: 11px;
+  border-radius: 9px;
   color: white;
   font-size: 14px;
   font-weight: 800;
@@ -1512,3 +1577,714 @@ iframe[src*="gpteng.co"] {
   z-index: -1 !important;
 }
 /* NEXUS-PRO:WATERMARK-HIDE:END */
+
+/* -------------------------------------------------------------------------- */
+/* Norte Concurso — operational clarity visual system                        */
+/* -------------------------------------------------------------------------- */
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid rgb(88 185 230 / 0.48);
+  outline-offset: 3px;
+}
+
+.landing-shell {
+  background: #f4f6f7;
+  color: #142536;
+}
+
+.landing-shell .site-container {
+  width: min(1240px, calc(100% - 48px));
+}
+
+.landing-header {
+  border-bottom-color: rgb(255 255 255 / 0.1);
+  background: linear-gradient(180deg, rgb(3 13 22 / 0.9), rgb(3 13 22 / 0.24));
+  backdrop-filter: blur(10px);
+}
+
+.landing-header nav a {
+  color: rgb(242 246 249 / 0.72);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-professional {
+  min-height: 820px;
+  background: #051522;
+}
+
+.hero-professional::after {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgb(234 182 77 / 0.8), transparent);
+}
+
+.hero-grid {
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgb(88 185 230 / 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(88 185 230 / 0.22) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.hero-proof span svg {
+  color: #f0c15a !important;
+}
+
+.floating-metric {
+  border-radius: 10px;
+  border-color: rgb(234 182 77 / 0.22);
+  background: rgb(5 19 31 / 0.84);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 0.32);
+}
+
+.metric-icon {
+  border-radius: 7px;
+  background: rgb(88 185 230 / 0.14);
+  color: #74c9ed;
+}
+
+.metric-up {
+  color: #f0c15a;
+}
+
+.hero-stats {
+  background: rgb(3 14 24 / 0.82);
+}
+
+.hero-stats strong {
+  color: #f6f2e8;
+  font-family: "Bahnschrift SemiCondensed", "Arial Narrow", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.015em;
+}
+
+.hero-stats span {
+  color: rgb(228 237 243 / 0.56);
+  font-size: 0.72rem;
+}
+
+.section-pad {
+  padding-block: 104px;
+}
+
+.section-heading h2,
+.feature-title,
+.career-section h2,
+.landing-shell #planos h2,
+.final-cta h2 {
+  font-family: "Bahnschrift SemiCondensed", "Arial Narrow", sans-serif;
+  font-stretch: condensed;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.section-kicker {
+  color: #9a6c17;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.landing-shell #metodo,
+.landing-shell #planos {
+  background-color: #eef2f4 !important;
+  background-image:
+    linear-gradient(rgb(15 47 72 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(15 47 72 / 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.method-grid {
+  gap: 14px;
+}
+
+.method-card {
+  min-height: 276px;
+  border-radius: 10px;
+  border-color: #d8e0e5;
+  box-shadow: 0 18px 44px rgb(10 36 56 / 0.055);
+}
+
+.method-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  content: "";
+  background: linear-gradient(90deg, #e8ae3f, #59b9e5);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.method-card:hover {
+  transform: translateY(-5px);
+  border-color: #b9c7d0;
+  box-shadow: 0 24px 56px rgb(10 36 56 / 0.11);
+}
+
+.method-card:hover::before {
+  opacity: 1;
+}
+
+.method-number {
+  color: #a2731c;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+}
+
+.method-line span {
+  background: linear-gradient(90deg, #dda12d, #58b9e6);
+}
+
+.method-card h3,
+.tools-grid h3 {
+  font-family: "Bahnschrift SemiCondensed", "Arial Narrow", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.dashboard-showcase {
+  border-radius: 16px;
+}
+
+.mock-window {
+  overflow: hidden;
+  border: 1px solid #c9d5dc;
+  border-radius: 12px;
+  background: #f9fbfc;
+  box-shadow: 0 36px 86px rgb(7 26 43 / 0.16);
+}
+
+.mock-top {
+  min-height: 58px;
+  border-bottom-color: #dbe3e8;
+  background: #ffffff;
+}
+
+.mock-top .norte-brand__mark {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 0.48rem;
+}
+
+.mock-top .norte-brand__mark svg {
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+.mock-top .norte-brand__type {
+  display: none;
+}
+
+.mock-sidebar {
+  background: #0a2033;
+}
+
+.mock-sidebar span.active {
+  background: rgb(234 182 77 / 0.16);
+  color: #f0c15a;
+}
+
+.mock-chart .chart-bars span {
+  background: linear-gradient(180deg, #58b9e6, #173b58);
+}
+
+.showcase-badge {
+  border-radius: 9px;
+  border-color: rgb(234 182 77 / 0.25);
+  background: #0a2033;
+  color: white;
+}
+
+.showcase-badge > svg:first-child,
+.feature-list > div > span {
+  background: #fff2d3;
+  color: #936516;
+}
+
+.landing-shell > main > section:nth-of-type(4) {
+  position: relative;
+  background-color: #071a2b !important;
+  background-image:
+    radial-gradient(circle at 78% 14%, rgb(88 185 230 / 0.12), transparent 28%),
+    linear-gradient(rgb(255 255 255 / 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.028) 1px, transparent 1px);
+  background-size:
+    auto,
+    56px 56px,
+    56px 56px;
+}
+
+.tools-grid article {
+  min-height: 244px;
+  border-color: rgb(255 255 255 / 0.1);
+  border-radius: 9px;
+  background: linear-gradient(145deg, rgb(255 255 255 / 0.055), rgb(255 255 255 / 0.018));
+}
+
+.tools-grid article > span {
+  border-radius: 7px;
+  background: rgb(234 182 77 / 0.12);
+  color: #f0c15a;
+}
+
+.tools-grid article a {
+  color: #7bc7e9;
+}
+
+.career-section {
+  background: radial-gradient(circle at 50% 10%, rgb(88 185 230 / 0.09), transparent 34%), #f7f8f8;
+}
+
+.career-cloud span {
+  border-radius: 7px;
+  border-color: #d3dde3;
+  background: #fff;
+  color: #17334b;
+  box-shadow: 0 8px 24px rgb(10 39 60 / 0.045);
+}
+
+.career-cloud span.featured {
+  border-color: #e1b85e;
+  background: #fff8e9;
+  color: #745013;
+}
+
+.career-cloud span svg {
+  color: #b07a1b;
+}
+
+.testimonial-card {
+  border-radius: 12px;
+  border-color: #d6dfe4;
+  background: linear-gradient(135deg, #fff, #f3f6f7);
+  box-shadow: 0 26px 64px rgb(11 40 61 / 0.08);
+}
+
+.testimonial-card > svg {
+  color: #ac771c;
+}
+
+.pricing-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pricing-card {
+  border-radius: 10px;
+  border-color: #d5dfe4;
+  background: #fff;
+  box-shadow: 0 16px 46px rgb(8 35 55 / 0.055);
+}
+
+.pricing-card.featured {
+  border-color: #d9a93e;
+  background: linear-gradient(180deg, #fffaf0, #fff);
+  color: #142536;
+  box-shadow: 0 24px 62px rgb(150 100 15 / 0.13);
+}
+
+.pricing-card.featured > div > p {
+  color: #7b8996;
+}
+
+.pricing-card.featured li > span {
+  background: #fff0c9;
+  color: #926314;
+}
+
+.popular-tag {
+  border-radius: 4px;
+  background: #e3a52d;
+  color: #102338;
+  letter-spacing: 0.08em;
+}
+
+.pricing-card li > span {
+  background: #e5f3f9;
+  color: #25749b;
+}
+
+.final-cta {
+  isolation: isolate;
+  background:
+    linear-gradient(90deg, rgb(4 17 28 / 0.96), rgb(4 17 28 / 0.68)),
+    url("/media/hero-dashboard-police.png") center 52% / cover no-repeat;
+}
+
+.final-cta::before {
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgb(88 185 230 / 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(88 185 230 / 0.18) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.landing-footer {
+  background: #040f19;
+}
+
+/* Application shell */
+
+.command-app {
+  background: #edf1f3;
+}
+
+.dark .command-app {
+  background: #07121d;
+}
+
+.tactical-sidebar {
+  position: relative;
+  background-image:
+    radial-gradient(circle at 18% 3%, rgb(88 185 230 / 0.14), transparent 24%),
+    linear-gradient(rgb(255 255 255 / 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.028) 1px, transparent 1px);
+  background-size:
+    auto,
+    44px 44px,
+    44px 44px;
+}
+
+.sidebar-group-label {
+  color: rgb(240 193 90 / 0.62);
+  font-family: "Bahnschrift SemiCondensed", "Arial Narrow", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sidebar-link-active {
+  position: relative;
+}
+
+.sidebar-link-active::before {
+  position: absolute;
+  inset: 6px auto 6px -7px;
+  width: 3px;
+  border-radius: 3px;
+  content: "";
+  background: #edb744;
+}
+
+.tactical-topbar {
+  box-shadow: 0 12px 34px rgb(8 30 46 / 0.04);
+}
+
+.command-surface {
+  background:
+    radial-gradient(circle at 90% 0%, rgb(88 185 230 / 0.075), transparent 26%),
+    linear-gradient(rgb(17 51 74 / 0.024) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(17 51 74 / 0.024) 1px, transparent 1px), var(--color-background);
+  background-size:
+    auto,
+    48px 48px,
+    48px 48px,
+    auto;
+}
+
+.command-surface [data-slot="card"],
+.command-surface .command-panel,
+.question-window,
+.exam-question-window {
+  border-color: color-mix(in oklab, var(--color-border) 86%, #173b58 14%);
+  border-radius: 12px;
+  box-shadow: 0 14px 38px rgb(7 31 49 / 0.055);
+}
+
+.command-panel,
+.command-metric {
+  border-color: color-mix(in oklab, var(--color-border) 88%, #173b58 12%);
+  border-radius: 12px;
+  box-shadow: 0 14px 38px rgb(7 31 49 / 0.055);
+}
+
+.command-metric {
+  position: relative;
+}
+
+.command-metric::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  content: "";
+  background: linear-gradient(90deg, #dda12d, #58b9e6);
+}
+
+.onboarding-command {
+  background:
+    linear-gradient(120deg, rgb(7 26 43 / 0.97), rgb(15 52 78 / 0.94)),
+    url("/media/hero-dashboard-police.png") center / cover no-repeat !important;
+}
+
+.dashboard-command-hero,
+.tactical-feature-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 28px 70px rgb(4 22 36 / 0.18);
+}
+
+.dashboard-command-hero::before,
+.tactical-feature-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgb(4 18 30 / 0.96),
+    rgb(4 18 30 / 0.76) 52%,
+    rgb(4 18 30 / 0.22)
+  );
+}
+
+.dashboard-command-hero {
+  display: flex;
+  min-height: 280px;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: 14px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: url("/media/hero-dashboard-police.png") center 58% / cover no-repeat;
+}
+
+.dashboard-command-hero::after,
+.tactical-feature-hero::after {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: -1;
+  height: 3px;
+  content: "";
+  background: linear-gradient(90deg, #e5a92f, #59b9e5 52%, transparent);
+}
+
+.dashboard-command-hero h1,
+.tactical-feature-hero h1 {
+  margin-top: 0.8rem;
+  font-family: "Bahnschrift SemiCondensed", "Arial Narrow", sans-serif;
+  font-size: clamp(2.15rem, 4vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+}
+
+.dashboard-command-hero p,
+.tactical-feature-hero > p,
+.tactical-feature-hero > div p {
+  color: rgb(231 239 244 / 0.74);
+}
+
+.dashboard-command-hero p {
+  margin-top: 0.85rem;
+  max-width: 38rem;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.internal-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f0c15a;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.hero-outline-action {
+  border-color: rgb(255 255 255 / 0.28) !important;
+  background: rgb(5 20 32 / 0.34) !important;
+  color: white !important;
+  backdrop-filter: blur(12px);
+}
+
+.hero-outline-action:hover {
+  background: rgb(255 255 255 / 0.12) !important;
+}
+
+.hero-primary-action {
+  border-color: transparent !important;
+  background: linear-gradient(135deg, #f0c969, #dfa129) !important;
+  color: #0b1f31 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 12px 28px rgb(218 156 39 / 0.22) !important;
+}
+
+.question-trainer-hero {
+  min-height: 310px;
+  background: url("/media/hero-question-trainer.png") center / cover no-repeat;
+}
+
+.mock-exam-hero,
+.mock-result-hero {
+  min-height: 320px;
+  background: url("/media/hero-mock-exam.png") center / cover no-repeat;
+}
+
+.mock-result-hero {
+  min-height: 250px;
+}
+
+.catalog-command-hero {
+  min-height: 230px;
+  border-radius: 14px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: url("/media/hero-dashboard-police.png") center 55% / cover no-repeat;
+}
+
+.catalog-command-hero h1 {
+  margin-top: 0.75rem;
+}
+
+.catalog-command-hero > p {
+  margin-top: 0.65rem;
+  color: rgb(231 239 244 / 0.76);
+  font-size: 1rem;
+}
+
+.session-status-bar,
+.exam-status-bar {
+  border-left: 3px solid #dda12d;
+}
+
+.question-window,
+.exam-question-window {
+  background: linear-gradient(180deg, rgb(88 185 230 / 0.025), transparent 22%), var(--color-card);
+}
+
+.question-window p,
+.exam-question-window p {
+  text-wrap: pretty;
+}
+
+.mobile-command-nav {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+/* Authentication */
+
+.auth-visual {
+  background: #061522;
+}
+
+.auth-visual-image {
+  background:
+    linear-gradient(90deg, rgb(5 19 31 / 0.14), rgb(5 19 31 / 0.54)),
+    linear-gradient(0deg, rgb(5 19 31 / 0.88), transparent 54%),
+    url("/media/hero-dashboard-police.png") center / cover no-repeat;
+  transform: none;
+}
+
+.auth-visual::after {
+  background-image:
+    linear-gradient(rgb(88 185 230 / 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(88 185 230 / 0.14) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.auth-message h1,
+.auth-heading h2 {
+  font-family: "Bahnschrift SemiCondensed", "Arial Narrow", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.auth-card,
+.auth-field input {
+  border-radius: 9px;
+}
+
+.auth-field input:focus {
+  border-color: #58b9e6;
+  box-shadow: 0 0 0 3px rgb(88 185 230 / 0.14);
+}
+
+.auth-switch button,
+.auth-terms a,
+.auth-field > div:first-child > button {
+  color: #8d6117;
+}
+
+@media (max-width: 1120px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-command-hero {
+    min-height: 300px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 780px) {
+  .landing-shell .site-container {
+    width: min(100% - 32px, 1240px);
+  }
+
+  .hero-professional {
+    min-height: 720px;
+  }
+
+  .hero-image {
+    background:
+      linear-gradient(90deg, rgb(5 21 34 / 0.95), rgb(5 21 34 / 0.7)),
+      linear-gradient(0deg, #051522 0%, transparent 48%),
+      url("/media/hero-home-police.png") 68% center / cover no-repeat;
+  }
+
+  .hero-title {
+    font-size: clamp(2.7rem, 13vw, 4.2rem);
+    line-height: 0.98;
+  }
+
+  .section-pad {
+    padding-block: 76px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .dashboard-command-hero {
+    min-height: 340px;
+    background-position: 64% center;
+  }
+
+  .question-trainer-hero,
+  .mock-exam-hero {
+    background-position: 62% center;
+  }
+
+  .tactical-feature-hero::before {
+    background: linear-gradient(90deg, rgb(4 18 30 / 0.96), rgb(4 18 30 / 0.78));
+  }
+}
+
+@media (max-width: 620px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats .site-container > div {
+    padding-left: 14px;
+  }
+
+  .dashboard-command-hero,
+  .catalog-command-hero {
+    border-radius: 10px;
+  }
+
+  .auth-panel {
+    min-height: 100dvh;
+  }
+}

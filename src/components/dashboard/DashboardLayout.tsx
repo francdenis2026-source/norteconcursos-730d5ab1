@@ -15,12 +15,9 @@ import {
   Target,
   Settings,
   Bell,
-  AlertCircle,
-  LogOut,
   Moon,
   Sun,
   Flame,
-  Star,
   ShieldCheck,
   FileStack,
   BookMarked,
@@ -45,26 +42,43 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { MockService } from "@/services/mockService";
 import type { Achievement, UserStreak } from "@/types";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { NorteBrand } from "@/components/brand/NorteBrand";
 
 const menuItems = [
-  { label: "Visão Geral", icon: LayoutDashboard, href: "/dashboard" },
-  { label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
-  { label: "Meu Concurso", icon: Target, href: "/dashboard/my-contest" },
-  { label: "Minhas Provas", icon: FileStack, href: "/dashboard/student-exams" },
-  { label: "Banco de Questões", icon: BookMarked, href: "/dashboard/question-bank" },
-  { label: "Treinador de Questões", icon: BrainCircuit, href: "/dashboard/question-trainer" },
-  { label: "Redação", icon: PenLine, href: "/dashboard/essays" },
-  { label: "Central de Estudos", icon: Timer, href: "/dashboard/study-tools" },
-  { label: "Plano de Estudos", icon: ClipboardList, href: "/dashboard/study-plan" },
-  { label: "Catálogo de Concursos", icon: Search, href: "/dashboard/questions" },
-  { label: "Cadernos", icon: BookOpen, href: "/dashboard/notebooks" },
-  { label: "Simulador Profissional", icon: Trophy, href: "/dashboard/mock-exams" },
-  { label: "Caderno de Erros", icon: History, href: "/dashboard/errors" },
-  { label: "Histórico", icon: History, href: "/dashboard/history" },
-  { label: "Cronômetro", icon: Clock, href: "/dashboard/timer" },
-  { label: "Desempenho", icon: Layers, href: "/dashboard/performance" },
-  { label: "Perfil", icon: User, href: "/dashboard/profile" },
-  { label: "Painel Admin", icon: Settings, href: "/dashboard/admin", adminOnly: true },
+  { group: "Hoje", label: "Visão Geral", icon: LayoutDashboard, href: "/dashboard" },
+  { group: "Hoje", label: "Plano de Estudos", icon: ClipboardList, href: "/dashboard/study-plan" },
+  { group: "Hoje", label: "Central de Estudos", icon: Timer, href: "/dashboard/study-tools" },
+  { group: "Objetivo", label: "Meu Concurso", icon: Target, href: "/dashboard/my-contest" },
+  { group: "Objetivo", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
+  { group: "Objetivo", label: "Catálogo de Concursos", icon: Search, href: "/dashboard/questions" },
+  {
+    group: "Treinamento",
+    label: "Treinador de Questões",
+    icon: BrainCircuit,
+    href: "/dashboard/question-trainer",
+  },
+  {
+    group: "Treinamento",
+    label: "Banco de Questões",
+    icon: BookMarked,
+    href: "/dashboard/question-bank",
+  },
+  { group: "Treinamento", label: "Cadernos", icon: BookOpen, href: "/dashboard/notebooks" },
+  { group: "Treinamento", label: "Caderno de Erros", icon: History, href: "/dashboard/errors" },
+  { group: "Provas", label: "Simulador Profissional", icon: Trophy, href: "/dashboard/mock-exams" },
+  { group: "Provas", label: "Minhas Provas", icon: FileStack, href: "/dashboard/student-exams" },
+  { group: "Provas", label: "Redação", icon: PenLine, href: "/dashboard/essays" },
+  { group: "Inteligência", label: "Desempenho", icon: Layers, href: "/dashboard/performance" },
+  { group: "Inteligência", label: "Histórico", icon: History, href: "/dashboard/history" },
+  { group: "Inteligência", label: "Cronômetro", icon: Clock, href: "/dashboard/timer" },
+  { group: "Conta", label: "Perfil", icon: User, href: "/dashboard/profile" },
+  {
+    group: "Conta",
+    label: "Painel Admin",
+    icon: Settings,
+    href: "/dashboard/admin",
+    adminOnly: true,
+  },
 ];
 
 interface DashboardLayoutProps {
@@ -123,28 +137,21 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   return (
-    <div className="app-shell flex min-h-screen bg-background">
+    <div className="app-shell command-app flex min-h-screen bg-background">
       {/* Sidebar Desktop */}
       <aside
         className={cn(
-          "hidden md:flex flex-col border-r border-white/8 bg-[#071a2f] text-white transition-all duration-300 sticky top-0 h-screen shadow-2xl shadow-slate-950/10 z-30",
+          "tactical-sidebar hidden md:flex flex-col border-r border-white/8 bg-[#071a2b] text-white transition-all duration-300 sticky top-0 h-screen shadow-2xl shadow-slate-950/10 z-30",
           isCollapsed ? "w-[84px]" : "w-[272px]",
         )}
       >
         <div className="h-[82px] px-5 flex items-center justify-between border-b border-white/8">
           {!isCollapsed ? (
-            <Link to="/dashboard" className="brand-lockup">
-              <span className="brand-mark">
-                <Star aria-hidden="true" />
-              </span>
-              <span className="text-white">
-                Norte<span>Concurso</span>
-              </span>
+            <Link to="/dashboard" aria-label="Norte Concurso — visão geral">
+              <NorteBrand light />
             </Link>
           ) : (
-            <span className="brand-mark mx-auto">
-              <Star aria-hidden="true" />
-            </span>
+            <NorteBrand compact light className="mx-auto" />
           )}
           <div className="flex items-center gap-1">
             <Button
@@ -152,6 +159,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               size="icon"
               onClick={toggleTheme}
               className="h-8 w-8 text-white/50 hover:bg-white/10 hover:text-white"
+              aria-label={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}
             >
               {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
@@ -160,34 +168,37 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               size="icon"
               onClick={() => setIsCollapsed(!isCollapsed)}
               className="h-8 w-8 text-white/50 hover:bg-white/10 hover:text-white"
+              aria-label={isCollapsed ? "Expandir menu lateral" : "Recolher menu lateral"}
             >
               {isCollapsed ? <ChevronRight /> : <ChevronLeft />}
             </Button>
           </div>
         </div>
 
-        {!isCollapsed && (
-          <div className="px-5 pt-6 pb-2 text-[9px] font-black uppercase tracking-[.18em] text-white/30">
-            Sua preparação
-          </div>
-        )}
-        <nav className="flex-1 px-3 space-y-1 overflow-y-auto py-2">
-          {menuItems.map((item) => {
+        <nav className="flex-1 px-3 space-y-1 overflow-y-auto py-4" aria-label="Menu operacional">
+          {menuItems.map((item, index) => {
             if (item.adminOnly && user?.role !== "admin") return null;
+            const showGroup = !isCollapsed && item.group !== menuItems[index - 1]?.group;
             return (
-              <Link
-                key={item.href}
-                to={item.href}
-                className={cn(
-                  "group flex items-center gap-3 px-3 py-2.5 rounded-xl text-[13px] font-semibold transition-all duration-200",
-                  location.pathname === item.href
-                    ? "bg-emerald-400/15 text-emerald-300 shadow-sm ring-1 ring-emerald-400/15"
-                    : "text-white/52 hover:bg-white/7 hover:text-white",
+              <React.Fragment key={item.href}>
+                {showGroup && (
+                  <div className="sidebar-group-label px-3 pb-1 pt-5 first:pt-1">{item.group}</div>
                 )}
-              >
-                <item.icon className="h-5 w-5 shrink-0" />
-                {!isCollapsed && <span>{item.label}</span>}
-              </Link>
+                <Link
+                  to={item.href}
+                  aria-label={item.label}
+                  title={isCollapsed ? item.label : undefined}
+                  className={cn(
+                    "group flex items-center gap-3 px-3 py-2.5 rounded-lg text-[13px] font-semibold transition-all duration-200",
+                    location.pathname === item.href
+                      ? "sidebar-link-active bg-amber-300/12 text-amber-200 shadow-sm ring-1 ring-amber-300/15"
+                      : "text-white/60 hover:bg-white/7 hover:text-white",
+                  )}
+                >
+                  <item.icon className="h-5 w-5 shrink-0" />
+                  {!isCollapsed && <span>{item.label}</span>}
+                </Link>
+              </React.Fragment>
             );
           })}
         </nav>
@@ -268,19 +279,25 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
       {/* Main Content */}
       <main className="app-content flex-1 flex flex-col min-h-screen overflow-hidden">
-        <div className="h-[82px] bg-white/85 dark:bg-card/85 backdrop-blur-xl border-b px-5 md:px-8 flex items-center justify-between no-print sticky top-0 z-20">
+        <div className="tactical-topbar h-[82px] bg-white/90 dark:bg-card/90 backdrop-blur-xl border-b px-5 md:px-8 flex items-center justify-between no-print sticky top-0 z-20">
           <div>
-            <p className="text-[9px] font-black uppercase tracking-[.16em] text-emerald-600">
-              Ambiente de estudos
+            <p className="text-xs font-black uppercase tracking-[.1em] text-amber-700 dark:text-amber-300">
+              Centro de operações
             </p>
-            <p className="text-sm font-extrabold text-primary mt-0.5">Sua central de preparação</p>
+            <p className="text-sm font-extrabold text-primary mt-0.5">
+              Preparação para carreiras policiais
+            </p>
           </div>
           <div className="flex items-center gap-2">
-            <div className="hidden sm:flex items-center gap-2 rounded-full bg-emerald-50 border border-emerald-100 px-3 py-1.5 text-[10px] font-bold text-emerald-700">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" /> Dados
-              sincronizados
+            <div className="hidden sm:flex items-center gap-2 rounded-md bg-sky-50 border border-sky-100 px-3 py-1.5 text-xs font-bold text-sky-800 dark:bg-sky-950/30 dark:border-sky-800/40 dark:text-sky-200">
+              <span className="h-1.5 w-1.5 rounded-full bg-sky-500" /> Dados sincronizados
             </div>
-            <Button variant="ghost" size="icon" className="rounded-xl relative">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="rounded-lg relative"
+              aria-label="Notificações"
+            >
               <Bell className="h-4 w-4" />
               <span className="absolute right-2 top-2 h-1.5 w-1.5 rounded-full bg-amber-500" />
             </Button>
@@ -295,51 +312,43 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4 md:p-8 lg:p-10">
+        <div className="command-surface flex-1 overflow-y-auto p-4 md:p-8 lg:p-10">
           <div className="mx-auto max-w-[1440px]">{children}</div>
           <footer className="mx-auto mt-10 max-w-[1440px] border-t pt-4 text-center text-xs text-muted-foreground no-print">
-            Plataforma desenvolvida por <strong className="text-foreground">Franc D&apos;nis</strong>{" "}
-            · Feijó-AC
+            Plataforma desenvolvida por{" "}
+            <strong className="text-foreground">Franc D&apos;nis</strong> · Feijó-AC
           </footer>
         </div>
 
         {/* Bottom Nav Mobile */}
-        <nav className="md:hidden border-t border-white/10 bg-[#071a2f] px-4 py-2.5 flex items-center justify-between sticky bottom-0 z-50 no-print shadow-2xl">
-          <Link
-            to="/dashboard"
-            className="flex flex-col items-center gap-1 text-[10px] text-emerald-300"
-          >
-            <LayoutDashboard className="h-5 w-5" />
-            <span>Início</span>
-          </Link>
-          <Link
-            to="/dashboard/study-plan"
-            className="flex flex-col items-center gap-1 text-[10px] text-white/50"
-          >
-            <ClipboardList className="h-5 w-5" />
-            <span>Plano</span>
-          </Link>
-          <Link
-            to="/dashboard/questions"
-            className="flex flex-col items-center gap-1 text-[10px] text-white/50"
-          >
-            <Search className="h-5 w-5" />
-            <span>Questões</span>
-          </Link>
-          <Link
-            to="/dashboard/performance"
-            className="flex flex-col items-center gap-1 text-[10px] text-white/50"
-          >
-            <Layers className="h-5 w-5" />
-            <span>Desempenho</span>
-          </Link>
-          <Link
-            to="/dashboard/profile"
-            className="flex flex-col items-center gap-1 text-[10px] text-white/50"
-          >
-            <User className="h-5 w-5" />
-            <span>Mais</span>
-          </Link>
+        <nav className="mobile-command-nav md:hidden border-t border-white/10 bg-[#071a2b] px-2 py-2 flex items-center justify-around sticky bottom-0 z-50 no-print shadow-2xl">
+          {(
+            [
+              { label: "Hoje", href: "/dashboard", icon: LayoutDashboard },
+              { label: "Treinar", href: "/dashboard/question-trainer", icon: BrainCircuit },
+              { label: "Simular", href: "/dashboard/mock-exams", icon: Trophy },
+              { label: "Evolução", href: "/dashboard/performance", icon: Layers },
+              { label: "Perfil", href: "/dashboard/profile", icon: User },
+            ] as const
+          ).map((item) => {
+            const active =
+              item.href === "/dashboard"
+                ? location.pathname === "/dashboard" || location.pathname === "/dashboard/"
+                : location.pathname.startsWith(item.href);
+            return (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={cn(
+                  "flex min-h-11 min-w-14 flex-col items-center justify-center gap-1 rounded-md px-2 text-xs font-semibold transition-colors",
+                  active ? "bg-amber-300/12 text-amber-200" : "text-white/55 hover:text-white",
+                )}
+              >
+                <item.icon className="h-5 w-5" />
+                <span>{item.label}</span>
+              </Link>
+            );
+          })}
         </nav>
       </main>
     </div>

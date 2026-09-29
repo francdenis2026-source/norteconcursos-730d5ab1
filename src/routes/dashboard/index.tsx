@@ -1,29 +1,21 @@
-import React from 'react';
-import { createFileRoute, Link } from '@tanstack/react-router';
-import { supabase } from '@/integrations/supabase/client';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  ResponsiveContainer
-} from 'recharts';
-import { 
-  Target, 
-  Clock, 
-  CheckCircle2, 
-  AlertCircle, 
+import React from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { supabase } from "@/integrations/supabase/client";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import {
+  Target,
+  Clock,
+  CheckCircle2,
+  AlertCircle,
   TrendingUp,
   Zap,
   Download,
   FileText,
-  Bell
-} from 'lucide-react';
-import { 
+  Bell,
+} from "lucide-react";
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -31,13 +23,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useDashboardData, useAuthStatus } from '@/hooks/useDashboard';
-import { Button } from '@/components/ui/button';
-import { MockService } from '@/services/mockService';
-import { toast } from 'sonner';
+import { useDashboardData, useAuthStatus } from "@/hooks/useDashboard";
+import { Button } from "@/components/ui/button";
+import { MockService } from "@/services/mockService";
+import { toast } from "sonner";
 
-export const Route = createFileRoute('/dashboard/')({
-  component: DashboardIndex
+export const Route = createFileRoute("/dashboard/")({
+  component: DashboardIndex,
 });
 
 function DashboardIndex() {
@@ -47,7 +39,7 @@ function DashboardIndex() {
   const [checklist, setChecklist] = React.useState({
     contest: false,
     notebook: false,
-    plan: false
+    plan: false,
   });
   const [isUpdatingTour, setIsUpdatingTour] = React.useState(false);
   const [dailyQuota, setDailyQuota] = React.useState({ used: 0, total: 0 });
@@ -61,13 +53,13 @@ function DashboardIndex() {
         setShowTour(true);
       }
 
-      const storedContest = localStorage.getItem('norte_focused_contest');
-      const storedNotebooks = JSON.parse(localStorage.getItem('norte_notebooks') || '[]');
-      
+      const storedContest = localStorage.getItem("norte_focused_contest");
+      const storedNotebooks = JSON.parse(localStorage.getItem("norte_notebooks") || "[]");
+
       const currentSteps = {
         contest: !!storedContest,
         notebook: storedNotebooks.length > 0,
-        plan: user?.subscription_tier !== 'free'
+        plan: user?.subscription_tier !== "free",
       };
 
       setChecklist(currentSteps);
@@ -78,24 +70,30 @@ function DashboardIndex() {
 
       // Calculate daily quota
       const responses = MockService.getUserResponses();
-      const today = new Date().toISOString().split('T')[0];
-      const todayCount = responses.filter(r => (r as any).createdAt?.split('T')[0] === today).length;
-      const userRole = (user?.role || 'free') as string;
-      const limit = userRole === 'free' ? 10 : (userRole === 'essential' ? 100 : Infinity);
+      const today = new Date().toISOString().split("T")[0];
+      const todayCount = responses.filter(
+        (r) => (r as any).createdAt?.split("T")[0] === today,
+      ).length;
+      const userRole = (user?.role || "free") as string;
+      const limit = userRole === "free" ? 10 : userRole === "essential" ? 100 : Infinity;
       setDailyQuota({ used: todayCount, total: limit === Infinity ? 9999 : limit });
 
       // Notify about quota
       if (limit !== Infinity) {
         const usagePercent = (todayCount / (limit as number)) * 100;
-        const lastNotified = localStorage.getItem('norte_last_quota_notify');
+        const lastNotified = localStorage.getItem("norte_last_quota_notify");
         const todayStr = new Date().toDateString();
-        
+
         if (usagePercent >= 100 && lastNotified !== `100_${todayStr}`) {
           toast.error("Quota diária esgotada! Considere um upgrade para continuar respondendo.");
-          localStorage.setItem('norte_last_quota_notify', `100_${todayStr}`);
-        } else if (usagePercent >= 80 && lastNotified !== `80_${todayStr}` && lastNotified !== `100_${todayStr}`) {
+          localStorage.setItem("norte_last_quota_notify", `100_${todayStr}`);
+        } else if (
+          usagePercent >= 80 &&
+          lastNotified !== `80_${todayStr}` &&
+          lastNotified !== `100_${todayStr}`
+        ) {
           toast.warning("Você atingiu 80% da sua quota diária de questões.");
-          localStorage.setItem('norte_last_quota_notify', `80_${todayStr}`);
+          localStorage.setItem("norte_last_quota_notify", `80_${todayStr}`);
         }
       }
 
@@ -111,20 +109,24 @@ function DashboardIndex() {
     // Real-time synchronization
     if (user) {
       const channel = supabase
-        .channel('profile_sync')
-        .on('postgres_changes', { 
-          event: 'UPDATE', 
-          schema: 'public', 
-          table: 'profiles',
-          filter: `id=eq.${user.id}`
-        }, (payload: any) => {
-          if (payload.new.onboarding_steps) {
-            setChecklist(payload.new.onboarding_steps);
-          }
-          if (payload.new.onboarding_done !== undefined) {
-            setShowTour(!payload.new.onboarding_done);
-          }
-        })
+        .channel("profile_sync")
+        .on(
+          "postgres_changes",
+          {
+            event: "UPDATE",
+            schema: "public",
+            table: "profiles",
+            filter: `id=eq.${user.id}`,
+          },
+          (payload: any) => {
+            if (payload.new.onboarding_steps) {
+              setChecklist(payload.new.onboarding_steps);
+            }
+            if (payload.new.onboarding_done !== undefined) {
+              setShowTour(!payload.new.onboarding_done);
+            }
+          },
+        )
         .subscribe();
 
       return () => {
@@ -154,20 +156,22 @@ function DashboardIndex() {
     const headers = ["Data", "Questão ID", "Acertou", "Tempo (seg)"];
     const csvContent = [
       headers.join(","),
-      ...responses.map(r => [
-        new Date(r.createdAt).toLocaleString(),
-        r.questionId,
-        r.isCorrect ? "Sim" : "Não",
-        r.timeSpent
-      ].join(","))
+      ...responses.map((r) =>
+        [
+          new Date(r.createdAt).toLocaleString(),
+          r.questionId,
+          r.isCorrect ? "Sim" : "Não",
+          r.timeSpent,
+        ].join(","),
+      ),
     ].join("\n");
 
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
     const link = document.createElement("a");
     const url = URL.createObjectURL(blob);
     link.setAttribute("href", url);
-    link.setAttribute("download", `resultados_norte_${new Date().toISOString().split('T')[0]}.csv`);
-    link.style.visibility = 'hidden';
+    link.setAttribute("download", `resultados_norte_${new Date().toISOString().split("T")[0]}.csv`);
+    link.style.visibility = "hidden";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -183,39 +187,46 @@ function DashboardIndex() {
 
   const handleLoadDemo = () => {
     MockService.saveResponse({
-      questionId: 'q1',
+      questionId: "q1",
       isCorrect: true,
       timeSpent: 45,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     });
     MockService.saveResponse({
-      questionId: 'q2',
+      questionId: "q2",
       isCorrect: false,
       timeSpent: 60,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     });
     refreshStats();
     toast.success("Dados de demonstração carregados");
   };
 
-  const chartData = stats?.byDiscipline.map(d => ({
-    name: d.disciplineId === '1' ? 'Português' : 
-          d.disciplineId === '4' ? 'Constitucional' : 'Outras',
-    acertos: d.correct,
-    total: d.total
-  })) || [];
+  const chartData =
+    stats?.byDiscipline.map((d) => ({
+      name:
+        d.disciplineId === "1" ? "Português" : d.disciplineId === "4" ? "Constitucional" : "Outras",
+      acertos: d.correct,
+      total: d.total,
+    })) || [];
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 text-print">
-        <div>
-          <h1 className="text-2xl font-bold text-primary">Olá, {user?.full_name?.split(' ')[0] || 'Estudante'}</h1>
-          <p className="text-muted-foreground">Bem-vindo ao seu ambiente de estudos.</p>
+      <section className="dashboard-command-hero text-print">
+        <div className="relative z-10 max-w-2xl">
+          <span className="internal-hero-kicker">
+            <Target className="h-4 w-4" /> Briefing do dia
+          </span>
+          <h1>Olá, {user?.full_name?.split(" ")[0] || "Estudante"}.</h1>
+          <p>
+            Sua central de preparação reúne alvo, ritmo e desempenho para indicar a próxima ação com
+            clareza.
+          </p>
         </div>
-        <div className="flex items-center gap-2 no-print">
+        <div className="relative z-10 flex flex-wrap items-center gap-2 no-print">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="gap-2">
+              <Button variant="outline" size="sm" className="hero-outline-action gap-2">
                 <Download className="h-4 w-4" /> Exportar
               </Button>
             </DropdownMenuTrigger>
@@ -230,20 +241,25 @@ function DashboardIndex() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          
-          <Button variant="outline" size="sm" onClick={handleLoadDemo}>
+
+          <Button
+            variant="outline"
+            size="sm"
+            className="hero-outline-action"
+            onClick={handleLoadDemo}
+          >
             Demonstração
           </Button>
-          
-          <Button size="sm" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+
+          <Button size="sm" className="hero-primary-action">
             <TrendingUp className="mr-2 h-4 w-4" />
             Meta: 65%
           </Button>
         </div>
-      </div>
+      </section>
 
       {showTour && (
-        <Card className="bg-primary text-primary-foreground border-none overflow-hidden relative animate-in fade-in zoom-in duration-300">
+        <Card className="onboarding-command bg-primary text-primary-foreground border-none overflow-hidden relative animate-in fade-in zoom-in duration-300">
           <CardContent className="pt-6">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="space-y-2">
@@ -259,7 +275,12 @@ function DashboardIndex() {
                   <CheckItem label="Ajustar Plano" done={checklist.plan} />
                 </div>
               </div>
-              <Button onClick={completeTour} variant="secondary" className="shrink-0" disabled={isUpdatingTour}>
+              <Button
+                onClick={completeTour}
+                variant="secondary"
+                className="shrink-0"
+                disabled={isUpdatingTour}
+              >
                 {isUpdatingTour ? "Sincronizando..." : "Entendi, vamos lá!"}
               </Button>
             </div>
@@ -269,35 +290,35 @@ function DashboardIndex() {
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <MetricCard 
-          title="Foco Atual" 
-          value={focusedContest?.agency || "Não definido"} 
+        <MetricCard
+          title="Foco Atual"
+          value={focusedContest?.agency || "Não definido"}
           icon={Target}
           description={focusedContest?.role || "Selecione um concurso"}
         />
-        <MetricCard 
-          title="Cota Diária" 
-          value={`${dailyQuota.used}/${dailyQuota.total === 9999 ? '∞' : dailyQuota.total}`} 
+        <MetricCard
+          title="Cota Diária"
+          value={`${dailyQuota.used}/${dailyQuota.total === 9999 ? "∞" : dailyQuota.total}`}
           icon={Zap}
           description="Questões hoje"
           progress={(dailyQuota.used / dailyQuota.total) * 100}
         />
-        <MetricCard 
-          title="Taxa de Acerto" 
-          value={`${stats?.accuracyRate.toFixed(1) || 0}%`} 
+        <MetricCard
+          title="Taxa de Acerto"
+          value={`${stats?.accuracyRate.toFixed(1) || 0}%`}
           icon={CheckCircle2}
           description="Geral acumulada"
         />
-        <MetricCard 
-          title="Tempo Estudado" 
-          value={`${Math.floor((stats?.timeSpent || 0) / 60)}m`} 
+        <MetricCard
+          title="Tempo Estudado"
+          value={`${Math.floor((stats?.timeSpent || 0) / 60)}m`}
           icon={Clock}
           description="Efetivo hoje"
         />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card>
+        <Card className="command-panel">
           <CardHeader>
             <CardTitle className="text-lg">Evolução por Disciplina</CardTitle>
           </CardHeader>
@@ -308,10 +329,13 @@ function DashboardIndex() {
                   <CartesianGrid strokeDasharray="3 3" vertical={false} />
                   <XAxis dataKey="name" />
                   <YAxis />
-                  <Tooltip 
-                    contentStyle={{ borderRadius: '8px', border: '1px solid #e2e8f0' }}
+                  <Tooltip contentStyle={{ borderRadius: "8px", border: "1px solid #e2e8f0" }} />
+                  <Bar
+                    dataKey="acertos"
+                    name="Acertos"
+                    fill="oklch(0.45 0.15 150)"
+                    radius={[4, 4, 0, 0]}
                   />
-                  <Bar dataKey="acertos" name="Acertos" fill="oklch(0.45 0.15 150)" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             ) : (
@@ -323,65 +347,75 @@ function DashboardIndex() {
           </CardContent>
         </Card>
 
-        <Card className="no-print">
+        <Card className="command-panel no-print">
           <CardHeader>
             <CardTitle className="text-lg flex items-center justify-between">
               Configurações PWA
-              <Badge variant="outline" className="text-[10px]">Push Habilitado</Badge>
+              <Badge variant="outline" className="text-[10px]">
+                Push Habilitado
+              </Badge>
             </CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col items-center justify-center py-6 text-center space-y-4">
-             <div className="h-12 w-12 rounded-full bg-secondary/10 flex items-center justify-center">
-               <Bell className="h-6 w-6 text-secondary" />
-             </div>
-             <div className="space-y-1">
-               <p className="text-sm font-bold">Notificações de Estudo</p>
-               <p className="text-[10px] text-muted-foreground">Receba lembretes de revisão e alertas de metas no seu celular ou navegador.</p>
-             </div>
-             <Button size="sm" variant="outline" onClick={() => toast.success("Notificações PWA configuradas com sucesso!")}>
-               Testar Notificação
-             </Button>
+            <div className="h-12 w-12 rounded-full bg-secondary/10 flex items-center justify-center">
+              <Bell className="h-6 w-6 text-secondary" />
+            </div>
+            <div className="space-y-1">
+              <p className="text-sm font-bold">Notificações de Estudo</p>
+              <p className="text-[10px] text-muted-foreground">
+                Receba lembretes de revisão e alertas de metas no seu celular ou navegador.
+              </p>
+            </div>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => toast.success("Notificações PWA configuradas com sucesso!")}
+            >
+              Testar Notificação
+            </Button>
           </CardContent>
         </Card>
 
-        <Card className="no-print">
+        <Card className="command-panel no-print">
           <CardHeader>
             <CardTitle className="text-lg flex justify-between items-center">
               Próximas Atividades
               <Button variant="ghost" size="sm" asChild>
-                <Link to="/dashboard/study-plan" className="text-xs">Ver Plano</Link>
+                <Link to="/dashboard/study-plan" className="text-xs">
+                  Ver Plano
+                </Link>
               </Button>
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <ActivityItem 
-                title="Simulado Semanal" 
-                type="Simulado" 
-                time="Faltam 4h para fechar" 
+              <ActivityItem
+                title="Simulado Semanal"
+                type="Simulado"
+                time="Faltam 4h para fechar"
                 status="Pendente"
                 priority
                 link="/dashboard/mock-exams"
               />
-              <ActivityItem 
-                title="Revisão: Sintaxe" 
-                type="Repetição Espaçada" 
-                time="Sugerido para hoje" 
+              <ActivityItem
+                title="Revisão: Sintaxe"
+                type="Repetição Espaçada"
+                time="Sugerido para hoje"
                 status="Pendente"
                 link="/dashboard/my-contest"
                 isReview
               />
-              <ActivityItem 
-                title="Português - Sintaxe" 
-                type="Questões" 
-                time="Bloco Sugerido" 
+              <ActivityItem
+                title="Português - Sintaxe"
+                type="Questões"
+                time="Bloco Sugerido"
                 status="Pendente"
                 link="/dashboard/questions"
               />
-              <ActivityItem 
-                title="Cronômetro de Foco" 
-                type="Pomodoro" 
-                time="25 min" 
+              <ActivityItem
+                title="Cronômetro de Foco"
+                type="Pomodoro"
+                time="25 min"
                 status="Pendente"
                 link="/dashboard/timer"
               />
@@ -389,11 +423,13 @@ function DashboardIndex() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="command-panel">
           <CardHeader>
             <CardTitle className="text-lg flex items-center justify-between">
               Alertas de Acesso do Plano
-              <Badge variant="outline" className="text-[10px]">{blockedAttempts.length} bloqueios</Badge>
+              <Badge variant="outline" className="text-[10px]">
+                {blockedAttempts.length} bloqueios
+              </Badge>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -405,24 +441,40 @@ function DashboardIndex() {
             ) : blockedAttempts.length > 0 ? (
               <div className="space-y-3">
                 {blockedAttempts.slice(0, 3).map((attempt: any) => (
-                  <div key={attempt.id} className="flex items-center justify-between p-2 rounded border bg-destructive/5 border-destructive/10">
+                  <div
+                    key={attempt.id}
+                    className="flex items-center justify-between p-2 rounded border bg-destructive/5 border-destructive/10"
+                  >
                     <div className="flex flex-col">
-                      <span className="text-xs font-bold text-destructive">Limite atingido: {attempt.feature_key}</span>
-                      <span className="text-[10px] text-muted-foreground">{new Date(attempt.attempt_time).toLocaleString()}</span>
+                      <span className="text-xs font-bold text-destructive">
+                        Limite atingido: {attempt.feature_key}
+                      </span>
+                      <span className="text-[10px] text-muted-foreground">
+                        {new Date(attempt.attempt_time).toLocaleString()}
+                      </span>
                     </div>
-                    <Button variant="ghost" size="sm" className="h-7 text-[10px] h-auto p-1" asChild>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="h-7 text-[10px] h-auto p-1"
+                      asChild
+                    >
                       <Link to="/dashboard/profile">Ver Planos</Link>
                     </Button>
                   </div>
                 ))}
                 {blockedAttempts.length > 3 && (
-                  <p className="text-[10px] text-center text-muted-foreground italic">Exibindo os 3 bloqueios mais recentes</p>
+                  <p className="text-[10px] text-center text-muted-foreground italic">
+                    Exibindo os 3 bloqueios mais recentes
+                  </p>
                 )}
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-6 text-center">
                 <CheckCircle2 className="h-8 w-8 text-emerald-500 mb-2 opacity-20" />
-                <p className="text-xs text-muted-foreground">Nenhum bloqueio registrado recentemente.</p>
+                <p className="text-xs text-muted-foreground">
+                  Nenhum bloqueio registrado recentemente.
+                </p>
               </div>
             )}
           </CardContent>
@@ -434,7 +486,7 @@ function DashboardIndex() {
 
 function MetricCard({ title, value, icon: Icon, description, progress }: any) {
   return (
-    <Card className="overflow-hidden">
+    <Card className="command-metric overflow-hidden">
       <CardContent className="pt-6 relative">
         <div className="flex items-center justify-between space-y-0 pb-2">
           <p className="text-sm font-medium text-muted-foreground">{title}</p>
@@ -446,10 +498,14 @@ function MetricCard({ title, value, icon: Icon, description, progress }: any) {
         </div>
         {progress !== undefined && (
           <div className="absolute bottom-0 left-0 w-full h-1 bg-muted">
-            <div 
+            <div
               className={cn(
                 "h-full transition-all duration-500",
-                progress > 90 ? "bg-destructive" : progress > 70 ? "bg-orange-500" : "bg-emerald-500"
+                progress > 90
+                  ? "bg-destructive"
+                  : progress > 70
+                    ? "bg-orange-500"
+                    : "bg-emerald-500",
               )}
               style={{ width: `${Math.min(progress, 100)}%` }}
             />
@@ -462,34 +518,47 @@ function MetricCard({ title, value, icon: Icon, description, progress }: any) {
 
 function ActivityItem({ title, type, time, status, priority, link, isReview }: any) {
   return (
-    <div className={cn(
-      "flex items-center justify-between p-3 rounded-lg border bg-card",
-      priority ? "border-l-4 border-l-secondary shadow-sm" : "",
-      isReview ? "border-l-4 border-l-amber-500 bg-amber-50/30" : ""
-    )}>
+    <div
+      className={cn(
+        "flex items-center justify-between p-3 rounded-lg border bg-card",
+        priority ? "border-l-4 border-l-secondary shadow-sm" : "",
+        isReview ? "border-l-4 border-l-amber-500 bg-amber-50/30" : "",
+      )}
+    >
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2">
           <span className="text-sm font-bold">{title}</span>
-          {isReview && <Badge variant="outline" className="text-[8px] h-3 px-1 uppercase bg-amber-100 text-amber-800 border-amber-200">Revisão</Badge>}
+          {isReview && (
+            <Badge
+              variant="outline"
+              className="text-[8px] h-3 px-1 uppercase bg-amber-100 text-amber-800 border-amber-200"
+            >
+              Revisão
+            </Badge>
+          )}
         </div>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <span className={cn(
-            "px-1.5 py-0.5 rounded font-medium",
-            isReview ? "bg-amber-100 text-amber-900" : "bg-muted"
-          )}>{type}</span>
+          <span
+            className={cn(
+              "px-1.5 py-0.5 rounded font-medium",
+              isReview ? "bg-amber-100 text-amber-900" : "bg-muted",
+            )}
+          >
+            {type}
+          </span>
           <span>{time}</span>
         </div>
       </div>
-      <Button 
-        variant="ghost" 
-        size="sm" 
+      <Button
+        variant="ghost"
+        size="sm"
         className={cn(
           "h-8 text-xs hover:text-secondary-foreground",
-          isReview ? "hover:bg-amber-500 hover:text-white border-amber-200" : "hover:bg-secondary"
-        )} 
+          isReview ? "hover:bg-amber-500 hover:text-white border-amber-200" : "hover:bg-secondary",
+        )}
         asChild
       >
-        <Link to={link || '#'}>{isReview ? 'Revisar' : 'Iniciar'}</Link>
+        <Link to={link || "#"}>{isReview ? "Revisar" : "Iniciar"}</Link>
       </Button>
     </div>
   );
@@ -497,10 +566,14 @@ function ActivityItem({ title, type, time, status, priority, link, isReview }: a
 
 function CheckItem({ label, done }: { label: string; done: boolean }) {
   return (
-    <div className={cn(
-      "flex items-center gap-2 text-xs px-2 py-1 rounded-full border",
-      done ? "bg-emerald-500/20 border-emerald-500/50 text-emerald-100" : "bg-white/10 border-white/20 text-white/70"
-    )}>
+    <div
+      className={cn(
+        "flex items-center gap-2 text-xs px-2 py-1 rounded-full border",
+        done
+          ? "bg-emerald-500/20 border-emerald-500/50 text-emerald-100"
+          : "bg-white/10 border-white/20 text-white/70",
+      )}
+    >
       <CheckCircle2 className={cn("h-3 w-3", done ? "text-emerald-400" : "opacity-30")} />
       {label}
     </div>
@@ -508,5 +581,5 @@ function CheckItem({ label, done }: { label: string; done: boolean }) {
 }
 
 function cn(...inputs: any[]) {
-  return inputs.filter(Boolean).join(' ');
+  return inputs.filter(Boolean).join(" ");
 }
