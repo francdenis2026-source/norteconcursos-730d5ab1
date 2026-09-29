@@ -279,12 +279,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
       {/* Main Content */}
       <main className="app-content flex-1 flex flex-col min-h-screen overflow-hidden">
-        <div className="tactical-topbar h-[82px] bg-white/90 dark:bg-card/90 backdrop-blur-xl border-b px-5 md:px-8 flex items-center justify-between no-print sticky top-0 z-20">
+        <div className="tactical-topbar h-[60px] bg-white/90 dark:bg-card/90 backdrop-blur-xl border-b px-3 sm:h-[68px] sm:px-5 md:h-[82px] md:px-8 flex items-center justify-between no-print sticky top-0 z-20">
           <div>
-            <p className="text-xs font-black uppercase tracking-[.1em] text-amber-700 dark:text-amber-300">
+            <p className="text-[10px] font-black uppercase tracking-[.1em] text-amber-700 dark:text-amber-300 sm:text-xs">
               Centro de operações
             </p>
-            <p className="text-sm font-extrabold text-primary mt-0.5">
+            <p className="mt-0.5 text-xs font-extrabold text-primary sm:text-sm">
               Preparação para carreiras policiais
             </p>
           </div>
@@ -312,9 +312,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </div>
         </div>
 
-        <div className="command-surface flex-1 overflow-y-auto p-4 md:p-8 lg:p-10">
+        <div className="command-surface flex-1 overflow-y-auto p-2.5 sm:p-4 md:p-8 lg:p-10">
           <div className="mx-auto max-w-[1440px]">{children}</div>
-          <footer className="mx-auto mt-10 max-w-[1440px] border-t pt-4 text-center text-xs text-muted-foreground no-print">
+          <footer className="mx-auto mt-6 max-w-[1440px] border-t pt-3 text-center text-[10px] text-muted-foreground no-print sm:mt-10 sm:pt-4 sm:text-xs">
             Plataforma desenvolvida por{" "}
             <strong className="text-foreground">Franc D&apos;nis</strong> · Feijó-AC
           </footer>

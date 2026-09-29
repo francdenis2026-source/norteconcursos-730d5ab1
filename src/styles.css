@@ -2283,4 +2283,20 @@ iframe[src*="gpteng.co"] {
   .auth-panel {
     min-height: 100dvh;
   }
+
+  .question-trainer-hero {
+    min-height: 0;
+    background-position: 66% center;
+  }
+
+  .trainer-setup .command-panel,
+  .trainer-session-shell .question-window {
+    border-radius: 0.75rem;
+  }
+
+  .trainer-session-shell .session-status-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 }
