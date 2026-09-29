@@ -25,6 +25,15 @@
 -- Legislativo – Especialidade: Policial Legislativo Federal", código
 -- CDAL-015, órgão "Câmara dos Deputados", banca CEBRASPE, ano 2026.
 
+-- This exam has 180 items (CG 1-90 + CE 91-180), exceeding the original
+-- 1-120 bound set by 20260926050000_pf_official_exam_question_import.sql.
+-- Widen the check to accommodate this and future longer exams.
+alter table public.official_exam_questions
+  drop constraint if exists official_exam_questions_item_number_check;
+alter table public.official_exam_questions
+  add constraint official_exam_questions_item_number_check
+  check (item_number between 1 and 200);
+
 insert into public.content_sources (source_type,title,issuer,url,status,notes) values
 ('outro','Prova objetiva - Conhecimentos Gerais - Câmara dos Deputados - Policial Legislativo Federal - 2026','Câmara dos Deputados / CEBRASPE','https://www.cebraspe.org.br/concursos/cd_26_policial_legislativo/prova_objetiva_conhecimentos_gerais.pdf/view','vigente','Caderno oficial usado para extração auditável de itens 1-90 (Google Drive fileId 1iIlZ8ULGoN80iffDX1jBRegWuNfKMaY2, texto lido verbatim nesta sessão). Edital nº 1 - CD/PLF, de 23/1/2026; aplicação 26/4/2026.'),
 ('outro','Prova objetiva - Conhecimentos Específicos - Câmara dos Deputados - Policial Legislativo Federal - 2026','Câmara dos Deputados / CEBRASPE','https://www.cebraspe.org.br/concursos/cd_26_policial_legislativo/prova_objetiva_conhecimentos_especificos.pdf/view','vigente','Caderno oficial usado para extração auditável de itens 91-180 (Google Drive fileId 139uVVRFXKRgzQ4O_hIh1cfvIwWplinAz, texto lido verbatim nesta sessão). Edital nº 1 - CD/PLF, de 23/1/2026; aplicação 26/4/2026.'),
@@ -33,8 +42,8 @@ insert into public.content_sources (source_type,title,issuer,url,status,notes) v
 ('outro','Edital nº 1 – CD/PLF, de 23 de janeiro de 2026 (Abertura)','Câmara dos Deputados / CEBRASPE','https://www.cebraspe.org.br/concursos/cd_26_policial_legislativo/edital_1_abertura.pdf/view','vigente','Edital de abertura do concurso; usado para confirmar denominação exata do cargo (Técnico Legislativo – Especialidade: Policial Legislativo Federal, código CDAL-015) e banca (Google Drive fileId 1K56dLM4QovvYRO18mnc9RDHtl_AjJxzG).')
 on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
 
-insert into public.syllabus_editions (contest_name,role_name,contest_year)
-select 'Câmara dos Deputados','Técnico Legislativo – Especialidade: Policial Legislativo Federal',2026
+insert into public.syllabus_editions (contest_name,role_name,contest_year,source_id)
+select 'Câmara dos Deputados','Técnico Legislativo – Especialidade: Policial Legislativo Federal',2026,(select id from public.content_sources where url=$q$https://www.cebraspe.org.br/concursos/cd_26_policial_legislativo/prova_objetiva_conhecimentos_gerais.pdf/view$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Câmara dos Deputados' and role_name='Técnico Legislativo – Especialidade: Policial Legislativo Federal' and contest_year=2026

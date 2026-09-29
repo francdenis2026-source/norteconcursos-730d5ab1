@@ -50,8 +50,8 @@ on conflict (url) do update set checked_at=now(),status=excluded.status,notes=ex
 
 -- New syllabus edition for this career (distinct from the existing Agente
 -- 2021 edition row).
-insert into public.syllabus_editions (contest_name,role_name,contest_year)
-select 'Polícia Federal','Delegado de Polícia Federal',2021
+insert into public.syllabus_editions (contest_name,role_name,contest_year,source_id)
+select 'Polícia Federal','Delegado de Polícia Federal',2021,(select id from public.content_sources where url=$q$https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/delegado-de-policia-federal/prova_cargo_1_delegado_de_polcia_federal.pdf/view$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Polícia Federal' and role_name='Delegado de Polícia Federal' and contest_year=2021

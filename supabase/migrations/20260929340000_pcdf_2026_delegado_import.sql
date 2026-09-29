@@ -81,8 +81,8 @@ insert into public.content_sources (source_type,title,issuer,url,status,notes) v
 ('outro','Gabarito definitivo PCDF - Delegado - 2026','PCDF / CEBRASPE','http://www.cebraspe.org.br/concursos/pc_df_26_delegado?doc=gabarito_definitivo_p1','vigente','Gabarito oficial definitivo, MATRIZ_184_PC_DF_EDELEGADO_001_00 (Google Drive fileId 1LMiDC3n7xdH370OE79XVl4IittnVD4dr); (X) identifica item anulado. URL exata do PDF não foi crawleada nesta sessão; aponta para a página oficial do concurso.')
 on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
 
-insert into public.syllabus_editions (contest_name,role_name,contest_year)
-select 'Polícia Civil do Distrito Federal','Delegado de Polícia',2026
+insert into public.syllabus_editions (contest_name,role_name,contest_year,source_id)
+select 'Polícia Civil do Distrito Federal','Delegado de Polícia',2026,(select id from public.content_sources where url=$q$http://www.cebraspe.org.br/concursos/pc_df_26_delegado?doc=prova_objetiva_p1$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Polícia Civil do Distrito Federal' and role_name='Delegado de Polícia' and contest_year=2026

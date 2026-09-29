@@ -64,8 +64,8 @@ insert into public.content_sources (source_type,title,issuer,url,status,notes) v
 ('outro','Gabarito definitivo PM-DF 2025 (P1+P2) - Oficial PM 2º Tenente','PMDF / CEBRASPE','https://www.cebraspe.org.br/concursos/pm_df_25_cfo/gabarito_definitivo','vigente','Gabaritos oficiais definitivos MATRIZ_064_PMDF_CG1_00 (P1) e MATRIZ_064_PMDF_001_00 (P2), cargo Oficial Policial Militar - 2º Tenente (Google Drive fileIds 1jhL62-nfIRc2CK2FgAKnWdjZZvci-wMs e 1Fmu0tyNLUXiylujFKQZDq5qlPY7CF6PT); X identifica item anulado.')
 on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
 
-insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board)
-select 'Polícia Militar do Distrito Federal','Oficial Policial Militar – 2º Tenente',2025,'CEBRASPE'
+insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board,source_id)
+select 'Polícia Militar do Distrito Federal','Oficial Policial Militar – 2º Tenente',2025,'CEBRASPE',(select id from public.content_sources where url=$q$https://www.cebraspe.org.br/concursos/pm_df_25_cfo$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Polícia Militar do Distrito Federal' and role_name='Oficial Policial Militar – 2º Tenente' and contest_year=2025

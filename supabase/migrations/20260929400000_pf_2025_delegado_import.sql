@@ -29,8 +29,8 @@ on conflict (url) do update set checked_at=now(),status=excluded.status,notes=ex
 
 -- New syllabus edition for this exam year (distinct from the existing 2021
 -- Delegado edition row).
-insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board)
-select 'Polícia Federal','Delegado de Polícia Federal',2025,'CEBRASPE'
+insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board,source_id)
+select 'Polícia Federal','Delegado de Polícia Federal',2025,'CEBRASPE',(select id from public.content_sources where url=$q$https://drive.google.com/file/d/1wspbjh9e8Q2m1I9IpKkbvqCftgrbgW_q/view$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Polícia Federal' and role_name='Delegado de Polícia Federal' and contest_year=2025

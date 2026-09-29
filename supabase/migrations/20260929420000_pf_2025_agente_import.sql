@@ -46,8 +46,8 @@ insert into public.content_sources (source_type,title,issuer,url,status,notes) v
 on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
 
 -- New syllabus edition for this career/year.
-insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board)
-select 'Polícia Federal','Agente de Polícia Federal',2025,'CEBRASPE'
+insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board,source_id)
+select 'Polícia Federal','Agente de Polícia Federal',2025,'CEBRASPE',(select id from public.content_sources where url=$q$https://drive.google.com/file/d/1oYY4L2FMusSyNcMxoegVSD3GrMndqTm3/view$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Polícia Federal' and role_name='Agente de Polícia Federal' and contest_year=2025

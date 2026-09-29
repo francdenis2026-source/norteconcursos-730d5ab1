@@ -51,8 +51,8 @@ insert into public.content_sources (source_type,title,issuer,url,status,notes) v
 on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
 
 -- Syllabus edition for this career.
-insert into public.syllabus_editions (contest_name,role_name,contest_year)
-select 'Polícia Civil de Minas Gerais','Técnico-Assistente da Polícia Civil e de Atividades Governamentais (TPAG) - Auxiliar de Perícia',2025
+insert into public.syllabus_editions (contest_name,role_name,contest_year,source_id)
+select 'Polícia Civil de Minas Gerais','Técnico-Assistente da Polícia Civil e de Atividades Governamentais (TPAG) - Auxiliar de Perícia',2025,(select id from public.content_sources where url=$q$https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/prova_objetiva_eixo_geral$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Polícia Civil de Minas Gerais' and role_name='Técnico-Assistente da Polícia Civil e de Atividades Governamentais (TPAG) - Auxiliar de Perícia' and contest_year=2025

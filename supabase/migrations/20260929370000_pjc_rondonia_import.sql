@@ -23,22 +23,22 @@ on conflict (url) do update set checked_at=now(), status=excluded.status;
 -- @@
 
 insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board,source_id,status)
-select $q$Polícia Civil do Estado de Rondônia$q$,$q$Agente de Polícia Civil$q$,2022,$q$Cebraspe$q$,id,'under_review' from public.content_sources where url=$q$https://drive.google.com/file/d/1PgQEOt35VTZ3SR4xLI5uG7Y67D2pnAWG/view$q$
+select $q$Polícia Civil do Estado de Rondônia$q$,$q$Agente de Polícia Civil$q$,2022,$q$Cebraspe$q$,id,'active' from public.content_sources where url=$q$https://drive.google.com/file/d/1PgQEOt35VTZ3SR4xLI5uG7Y67D2pnAWG/view$q$
 on conflict (contest_name,role_name,contest_year) do update set source_id=excluded.source_id;
 -- @@
 
 insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board,source_id,status)
-select $q$Polícia Civil do Estado de Rondônia$q$,$q$Datiloscopista Policial$q$,2022,$q$Cebraspe$q$,id,'under_review' from public.content_sources where url=$q$https://drive.google.com/file/d/1AnSqnfU4uR1mRa1nv_JZSVQ2o-w3D3V1/view$q$
+select $q$Polícia Civil do Estado de Rondônia$q$,$q$Datiloscopista Policial$q$,2022,$q$Cebraspe$q$,id,'active' from public.content_sources where url=$q$https://drive.google.com/file/d/1AnSqnfU4uR1mRa1nv_JZSVQ2o-w3D3V1/view$q$
 on conflict (contest_name,role_name,contest_year) do update set source_id=excluded.source_id;
 -- @@
 
 insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board,source_id,status)
-select $q$Polícia Civil do Estado de Rondônia$q$,$q$Delegado de Polícia$q$,2022,$q$Cebraspe$q$,id,'under_review' from public.content_sources where url=$q$https://drive.google.com/file/d/15TDG2Jt1yISfovmZ7XNxRlf-ZzU3VJIU/view$q$
+select $q$Polícia Civil do Estado de Rondônia$q$,$q$Delegado de Polícia$q$,2022,$q$Cebraspe$q$,id,'active' from public.content_sources where url=$q$https://drive.google.com/file/d/15TDG2Jt1yISfovmZ7XNxRlf-ZzU3VJIU/view$q$
 on conflict (contest_name,role_name,contest_year) do update set source_id=excluded.source_id;
 -- @@
 
 insert into public.syllabus_editions (contest_name,role_name,contest_year,exam_board,source_id,status)
-select $q$Polícia Civil do Estado de Rondônia$q$,$q$Escrivão de Polícia Civil$q$,2022,$q$Cebraspe$q$,id,'under_review' from public.content_sources where url=$q$https://drive.google.com/file/d/1wTHKfk4jOxVNcoscagNnV6yOTpV4IMtV/view$q$
+select $q$Polícia Civil do Estado de Rondônia$q$,$q$Escrivão de Polícia Civil$q$,2022,$q$Cebraspe$q$,id,'active' from public.content_sources where url=$q$https://drive.google.com/file/d/1wTHKfk4jOxVNcoscagNnV6yOTpV4IMtV/view$q$
 on conflict (contest_name,role_name,contest_year) do update set source_id=excluded.source_id;
 -- @@
 
@@ -86,7 +86,7 @@ Por meio do emprego do termo "Ainda", no início do quarto período do texto CG1
 (B) expressa uma ressalva em relação à ideia veiculada no período anterior.
 (C) acrescenta outro motivo para a ideia apresentada nos período anteriores.
 (D) introduz uma conclusão sobre a ideia apresentada no período anterior.
-(E) pontua o tempo do raciocínio do autor nas etapas de exposição das ideias.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(3,$q$Conhecimentos Gerais$q$,$q$Texto CG1A1-I (mesmo texto da questão 1).
+(E) pontua o tempo do raciocínio do autor nas etapas de exposição das ideias.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(3,$q$Conhecimentos Gerais$q$,$q$Texto CG1A1-I (mesmo texto da questão 1).
 
 No texto CG1A1-I, ao qualificar o mundo estudado pelos cientistas como "um mundo que não foi feito para ser catalogado e sistematizado" (penúltimo período), o autor indica
 (A) certa distância entre os propósitos da ciência e os propósitos dos cientistas.
@@ -220,7 +220,7 @@ Considerando que, no texto CG1A2-I, João seja uma das pessoas que compõem o co
 (B) superior ou igual a 50% e inferior a 65%.
 (C) superior ou igual a 65% e inferior a 70%.
 (D) superior ou igual a 70 % e inferior a 85%.
-(E) superior ou igual a 85%.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(20,$q$Conhecimentos Gerais$q$,$q$Ao investigar um possível crime de parcelamento irregular de terras, um agente de polícia identificou o seguinte padrão no comportamento do suspeito: este vendeu um lote por dia na primeira semana, três lotes por dia na segunda, cinco lotes por dia na terceira, seguindo esse mesmo padrão até o fim da quinta semana, quando então foi preso em flagrante. Nessa situação hipotética, supondo-se que tenham sido vendidos lotes todos os dias durante esse período, o total de lotes vendidos foi de
+(E) superior ou igual a 85%.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(20,$q$Conhecimentos Gerais$q$,$q$Ao investigar um possível crime de parcelamento irregular de terras, um agente de polícia identificou o seguinte padrão no comportamento do suspeito: este vendeu um lote por dia na primeira semana, três lotes por dia na segunda, cinco lotes por dia na terceira, seguindo esse mesmo padrão até o fim da quinta semana, quando então foi preso em flagrante. Nessa situação hipotética, supondo-se que tenham sido vendidos lotes todos os dias durante esse período, o total de lotes vendidos foi de
 (A) 175.
 (B) 25.
 (C) 125.
@@ -341,7 +341,7 @@ from (values (31,$q$Conhecimentos Especificos$q$,$q$Conforme a figura precedente
 (B) diferencial.
 (C) compactado.
 (D) completo.
-(E) espelhado.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(40,$q$Conhecimentos Especificos$q$,$q$No MS Word, a orientação da página é um recurso de configuração de página adequado para permitir alternância entre os modos
+(E) espelhado.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(40,$q$Conhecimentos Especificos$q$,$q$No MS Word, a orientação da página é um recurso de configuração de página adequado para permitir alternância entre os modos
 (A) recuo e espaçamento.
 (B) cabeçalho e rodapé.
 (C) A4 e carta.
@@ -366,7 +366,7 @@ from (values (31,$q$Conhecimentos Especificos$q$,$q$Conforme a figura precedente
 (B) Ctrl+Alt+Del e Trocar Usuário.
 (C) Ctrl+Alt+Del e Gerenciador de Tarefas.
 (D) Ctrl+Alt+Del e Bloquear.
-(E) Ctrl+Alt+Del e Sair.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(45,$q$Conhecimentos Especificos$q$,$q$No MS Windows, uma das opções para se fazer o backup apenas das pastas e arquivos selecionados pelo usuário, indicando-se a periodicidade e o período de disponibilidade do backup, é chamada de
+(E) Ctrl+Alt+Del e Sair.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(45,$q$Conhecimentos Especificos$q$,$q$No MS Windows, uma das opções para se fazer o backup apenas das pastas e arquivos selecionados pelo usuário, indicando-se a periodicidade e o período de disponibilidade do backup, é chamada de
 (A) Fazer o backup de arquivos no OneDrive.
 (B) Fazer backup usando Histórico de arquivos.
 (C) Fazer backup agora.
@@ -572,7 +572,7 @@ Assinale a opção correta.
 (B) língua portuguesa.
 (C) território.
 (D) brasão.
-(E) selo nacional.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(81,$q$Conhecimentos Especificos$q$,$q$No Brasil, é proibido qualquer trabalho a menor de
+(E) selo nacional.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(81,$q$Conhecimentos Especificos$q$,$q$No Brasil, é proibido qualquer trabalho a menor de
 (A) dezoito anos, salvo na condição de aprendiz, a partir de dezesseis anos.
 (B) dezesseis anos, salvo na condição de aprendiz, a partir de quatorze anos.
 (C) dezesseis anos, salvo na condição de aprendiz, a partir de quinze anos.
@@ -656,7 +656,7 @@ Estão certos apenas os itens
 (B) IV e V.
 (C) I, II e IV
 (D) II, III e V.
-(E) III, IV e V.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(94,$q$Conhecimentos Especificos$q$,$q$A manifestação da vontade do Estado por meio de uma unidade que congrega atribuições exercidas pelos agentes públicos que a integram corresponde à teoria
+(E) III, IV e V.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Agente de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(94,$q$Conhecimentos Especificos$q$,$q$A manifestação da vontade do Estado por meio de uma unidade que congrega atribuições exercidas pelos agentes públicos que a integram corresponde à teoria
 (A) da imputação.
 (B) da responsabilidade.
 (C) do órgão.
@@ -785,7 +785,7 @@ Estariam mantidos os sentidos e a correção gramatical do quarto parágrafo do 
 (B) a forma verbal "visa", em duas de suas ocorrências, fosse substituída, respectivamente, por pretende e objetiva.
 (C) o artigo "a" fosse retirado em "a dimensão de reconhecimento" e em "a dimensão participativa".
 (D) fosse suprimida a vírgula empregada após "corrigindo".
-(E) o termo onde fosse inserido após o nome atribuído a cada dimensão.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Datiloscopista Policial) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(12,$q$Conhecimentos Gerais$q$,$q$Texto CG1A1-III
+(E) o termo onde fosse inserido após o nome atribuído a cada dimensão.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Datiloscopista Policial) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(12,$q$Conhecimentos Gerais$q$,$q$Texto CG1A1-III
 
 Criminalística - ramo da ciência penal que estuda, investiga, descobre, comprova a existência de criminosos, usando em seus trabalhos subsídios de antropologia, psicologia, medicina legal, psiquiatria, dactiloscopia, detector de mentiras etc. Entre suas atribuições, estão o levantamento do local do crime, a colheita de provas e as perícias. Também denominada jurisprudência criminal ou polícia científica.
 
@@ -921,7 +921,7 @@ Internet: <www.ap.anpuh.org> (com adaptações).
 (B) O auge da exploração da cassiterita em Rondônia se deu logo após a descoberta da primeira jazida na década de 50 do século passado.
 (C) Com o avanço da tecnologia garimpeira, os impactos ambientais da exploração de cassiterita no garimpo Bom Futuro foram eliminados.
 (D) O garimpo Bom Futuro é atualmente explorado por cerca de 50 mil garimpeiros chamados de requeiros.
-(E) Desmoronamentos de terra são inerentes à extração mineral, mas, historicamente, o garimpo Bom Futuro nunca apresentou tal acidente natural.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Datiloscopista Policial) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$)) v(n,subj,txt,ans,pg,st,legal,ctx,note)
+(E) Desmoronamentos de terra são inerentes à extração mineral, mas, historicamente, o garimpo Bom Futuro nunca apresentou tal acidente natural.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Datiloscopista Policial) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$)) v(n,subj,txt,ans,pg,st,legal,ctx,note)
 join public.content_sources qs on qs.url=$q$https://drive.google.com/file/d/1plxOIdpXe9NPVHGgGj5GeRVZ5xD_ll1N/view$q$ join public.content_sources gs on gs.url=$q$https://drive.google.com/file/d/1dQDiU3nYBeP7uGmjft99IeR_EAuac3nY/view$q$
 join public.syllabus_editions ed on ed.contest_name=$q$Polícia Civil do Estado de Rondônia$q$ and ed.role_name=$q$Datiloscopista Policial$q$ and ed.contest_year=2022
 join public.syllabus_topics t on t.edition_id=ed.id and t.discipline=v.subj
@@ -1218,7 +1218,7 @@ from (values (71,$q$Conhecimentos Especificos$q$,$q$A anomalia da visão que est
 (B) vencimento básico, vedado o acréscimo de outras gratificações e adicionais.
 (C) subsídio fixado em parcela única, permitindo-se o acréscimo de outra gratificação ou adicional, observado o teto remuneratório do funcionalismo público.
 (D) vencimento básico, que pode ser acrescido de outras gratificações e adicionais, observado o teto remuneratório do funcionalismo público.
-(E) subsídio fixado em parcela única, vedado o acréscimo de qualquer gratificação ou adicional.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Datiloscopista Policial) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(83,$q$Conhecimentos Especificos$q$,$q$A seguridade social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinadas a assegurar os direitos relativos à
+(E) subsídio fixado em parcela única, vedado o acréscimo de qualquer gratificação ou adicional.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Datiloscopista Policial) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(83,$q$Conhecimentos Especificos$q$,$q$A seguridade social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinadas a assegurar os direitos relativos à
 I saúde.
 II previdência social.
 III assistência social.
@@ -1261,7 +1261,7 @@ Assinale a opção correta.
 (B) autorização.
 (C) permissão.
 (D) admissão.
-(E) concessão.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Datiloscopista Policial) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(90,$q$Conhecimentos Especificos$q$,$q$Considera-se transgressão disciplinar do policial civil do estado de Rondônia a conduta de
+(E) concessão.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Datiloscopista Policial) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(90,$q$Conhecimentos Especificos$q$,$q$Considera-se transgressão disciplinar do policial civil do estado de Rondônia a conduta de
 I apresentar as vantagens da associação sindical.
 II emprestar dinheiro com cláusula de pagamento de juros.
 III permutar horário de serviço sem permissão do superior.
@@ -1389,7 +1389,7 @@ from (values (1,$q$Conhecimentos Gerais$q$,$q$Admitindo-se um comprometimento de
 (B) O auge da exploração da cassiterita em Rondônia se deu logo após a descoberta da primeira jazida na década de 50 do século passado.
 (C) Com o avanço da tecnologia garimpeira, os impactos ambientais da exploração de cassiterita no garimpo Bom Futuro foram eliminados.
 (D) O garimpo Bom Futuro é atualmente explorado por cerca de 50 mil garimpeiros chamados de requeiros.
-(E) Desmoronamentos de terra são inerentes à extração mineral, mas, historicamente, o garimpo Bom Futuro nunca apresentou tal acidente natural.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Delegado de Polícia) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$)) v(n,subj,txt,ans,pg,st,legal,ctx,note)
+(E) Desmoronamentos de terra são inerentes à extração mineral, mas, historicamente, o garimpo Bom Futuro nunca apresentou tal acidente natural.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Gerais - Cargo Delegado de Polícia) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$)) v(n,subj,txt,ans,pg,st,legal,ctx,note)
 join public.content_sources qs on qs.url=$q$https://drive.google.com/file/d/1112eq09B_oV-LwqEtMjVBhbSdJ4ArLKH/view$q$ join public.content_sources gs on gs.url=$q$https://drive.google.com/file/d/134lSzI-OHM5D6tX0zsFn_d5hESStoY57/view$q$
 join public.syllabus_editions ed on ed.contest_name=$q$Polícia Civil do Estado de Rondônia$q$ and ed.role_name=$q$Delegado de Polícia$q$ and ed.contest_year=2022
 join public.syllabus_topics t on t.edition_id=ed.id and t.discipline=v.subj
@@ -1625,7 +1625,7 @@ from (values (51,$q$Conhecimentos Especificos$q$,$q$Acerca da interceptação te
 (B) Enquanto adequada e proporcional, a interceptação telefônica pode ser renovada sucessivamente, sem limite de vezes, mediante o crivo judicial.
 (C) A escuta telefônica poderá ser determinada de ofício pela autoridade policial, independentemente de autorização judicial.
 (D) Como regra, a interceptação é aplicável na apuração do crime de ameaça.
-(E) Poderá a autoridade policial, com amparo legal na lei de interceptação telefônica, requerer judicialmente a escuta ambiental.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Delegado de Polícia) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(52,$q$Conhecimentos Especificos$q$,$q$O depoimento especial da criança, no âmbito da persecução penal,
+(E) Poderá a autoridade policial, com amparo legal na lei de interceptação telefônica, requerer judicialmente a escuta ambiental.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Delegado de Polícia) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(52,$q$Conhecimentos Especificos$q$,$q$O depoimento especial da criança, no âmbito da persecução penal,
 (A) deverá ser realizado, preferencialmente, no âmbito da investigação policial e da ação penal em momentos distintos.
 (B) poderá ser realizado pelos conselhos tutelares, desde que conduzido por profissional da educação ou da saúde.
 (C) independentemente da idade do impúbere, seguirá, como regra, o rito cautelar de antecipação de prova.
@@ -2144,7 +2144,7 @@ from (values (31,$q$Conhecimentos Especificos$q$,$q$Em certa pesquisa de opiniã
 (B) 2.
 (C) 4.
 (D) 5.
-(E) 10.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Escrivão de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(33,$q$Conhecimentos Especificos$q$,$q$Os eventos B1, B2, B3 e B4 formam uma partição do espaço amostral Ω, de tal sorte que P(Bk) = 1/10, em que k ∈ {1, 2, 3, 4}. Na situação hipotética apresentada, a probabilidade da intersecção dos eventos complementares de B2, B3 e B4, representada como B2^c ∩ B3^c ∩ B4^c, é igual a
+(E) 10.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Escrivão de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(33,$q$Conhecimentos Especificos$q$,$q$Os eventos B1, B2, B3 e B4 formam uma partição do espaço amostral Ω, de tal sorte que P(Bk) = 1/10, em que k ∈ {1, 2, 3, 4}. Na situação hipotética apresentada, a probabilidade da intersecção dos eventos complementares de B2, B3 e B4, representada como B2^c ∩ B3^c ∩ B4^c, é igual a
 (A) 9/10.
 (B) 42/125.
 (C) 1/10.
@@ -2404,7 +2404,7 @@ Assinale a opção correta.
 (B) Apenas o item I está certo.
 (C) Apenas o item II está certo.
 (D) Apenas o item III está certo.
-(E) Nenhum item está certo.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Escrivão de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(79,$q$Conhecimentos Especificos$q$,$q$De acordo com o texto constitucional, a polícia ostensiva e a preservação da ordem pública cabem à(s)
+(E) Nenhum item está certo.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Escrivão de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(79,$q$Conhecimentos Especificos$q$,$q$De acordo com o texto constitucional, a polícia ostensiva e a preservação da ordem pública cabem à(s)
 (A) polícias civis.
 (B) polícias penais.
 (C) Polícia Rodoviária Federal.
@@ -2478,7 +2478,7 @@ from (values (91,$q$Conhecimentos Especificos$q$,$q$A entidade de personalidade 
 (B) sociedade de economia mista.
 (C) fundação pública.
 (D) empresa pública.
-(E) autarquia.$q$,null,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Escrivão de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(92,$q$Conhecimentos Especificos$q$,$q$A aplicação de penalidade de suspensão a servidor por agente público cuja competência se limite à aplicação da penalidade de advertência configura ato viciado pelo(a)
+(E) autarquia.$q$,$q$X$q$,1,'annulled',false,false,$q$Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Escrivão de Polícia Civil) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO).$q$),(92,$q$Conhecimentos Especificos$q$,$q$A aplicação de penalidade de suspensão a servidor por agente público cuja competência se limite à aplicação da penalidade de advertência configura ato viciado pelo(a)
 (A) usurpação de função.
 (B) abuso de autoridade.
 (C) função aparente.

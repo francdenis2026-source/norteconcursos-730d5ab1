@@ -51,8 +51,8 @@ insert into public.content_sources (source_type,title,issuer,url,status,notes) v
 ('outro','Gabarito definitivo PC/ES - Delegado de Polícia - 2022 (Conhecimentos Específicos)','Polícia Civil do Estado do Espírito Santo / CEBRASPE','https://drive.google.com/file/d/1g2lHFTok06Nbpk7ZQS5Ut_8dUkroSklm/view','vigente','Gabarito oficial definitivo, CARGO: DELEGADO DE POLÍCIA, itens 21-80 (Google Drive fileId 1g2lHFTok06Nbpk7ZQS5Ut_8dUkroSklm); X identifica item anulado.')
 on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
 
-insert into public.syllabus_editions (contest_name,role_name,contest_year)
-select 'Polícia Civil do Estado do Espírito Santo','Delegado de Polícia',2022
+insert into public.syllabus_editions (contest_name,role_name,contest_year,source_id)
+select 'Polícia Civil do Estado do Espírito Santo','Delegado de Polícia',2022,(select id from public.content_sources where url=$q$https://drive.google.com/file/d/1iXQnSEq7bc-EKkp3a0R3Qx78FWTA4wy9/view$q$)
 where not exists (
   select 1 from public.syllabus_editions
   where contest_name='Polícia Civil do Estado do Espírito Santo' and role_name='Delegado de Polícia' and contest_year=2022
