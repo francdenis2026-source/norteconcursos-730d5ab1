@@ -88,6 +88,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#071a2b" },
+      // Meta tags de app-shell: no celular, adicionar à tela inicial abre em
+      // modo standalone (sem barra de endereço do navegador), como um app nativo.
+      { name: "mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
+      { name: "apple-mobile-web-app-title", content: "Norte Concurso" },
     ],
     links: [
       {
@@ -95,6 +101,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "manifest", href: "/manifest.webmanifest" },
+      { rel: "apple-touch-icon", href: "/icons/icon-256.png" },
     ],
   }),
   shellComponent: RootShell,
@@ -136,6 +144,16 @@ function RootComponent() {
     // Persist to local storage if it was system preference but no manual override yet
     if (!savedTheme) {
       localStorage.setItem("theme", isDark ? "dark" : "light");
+    }
+  }, []);
+
+  useEffect(() => {
+    // Registra o service worker de app-shell (só ícone/manifesto em cache,
+    // sem afetar dados ao vivo) — habilita "Adicionar à tela inicial" no celular.
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js").catch(() => {
+        // instalação do app ainda funciona sem SW (só perde o cache do shell)
+      });
     }
   }, []);
 

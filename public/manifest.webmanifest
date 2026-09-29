@@ -1,0 +1,28 @@
+{
+  "name": "Norte Concurso",
+  "short_name": "Norte Concurso",
+  "description": "Preparação inteligente e personalizada para concursos públicos.",
+  "start_url": "/dashboard?source=pwa",
+  "id": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#071a2b",
+  "theme_color": "#071a2b",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/icons/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
