@@ -325,7 +325,7 @@
       rgb(5 21 34 / 0.18)
     ),
     linear-gradient(0deg, #051522 0%, transparent 38%),
-    url("/media/hero-home-police-v3.png") center/cover no-repeat;
+    url("/media/hero-agente-federal-autoral-v1.png") center/cover no-repeat;
 }
 .eyebrow {
   display: flex;
@@ -836,6 +836,51 @@
   display: grid;
   gap: 14px;
   margin-top: 26px;
+}
+
+.brand-cover-card {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  align-items: center;
+  gap: 18px;
+  max-width: 590px;
+  margin-top: 24px;
+  padding: 12px;
+  border: 1px solid rgb(198 151 52 / 0.22);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #081722, #10283a);
+  box-shadow: 0 18px 44px rgb(7 24 37 / 0.12);
+}
+
+.brand-cover-card img {
+  width: 104px;
+  aspect-ratio: 4 / 5;
+  border-radius: 9px;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgb(0 0 0 / 0.3);
+}
+
+.brand-cover-card span {
+  color: #efbd52;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-cover-card strong {
+  display: block;
+  margin-top: 5px;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.brand-cover-card p {
+  margin-top: 6px;
+  color: rgb(230 238 243 / 0.66);
+  font-size: 0.78rem;
+  line-height: 1.5;
 }
 .feature-list > div {
   display: flex;
@@ -1884,7 +1929,7 @@ iframe[src*="gpteng.co"] {
   isolation: isolate;
   background:
     linear-gradient(90deg, rgb(4 17 28 / 0.96), rgb(4 17 28 / 0.68)),
-    url("/media/hero-dashboard-command-v3.png") center 52% / cover no-repeat;
+    url("/media/hero-agente-federal-autoral-v1.png") center 52% / cover no-repeat;
 }
 
 .final-cta::before {
@@ -2187,7 +2232,7 @@ iframe[src*="gpteng.co"] {
   background:
     linear-gradient(90deg, rgb(5 19 31 / 0.14), rgb(5 19 31 / 0.54)),
     linear-gradient(0deg, rgb(5 19 31 / 0.88), transparent 54%),
-    url("/media/hero-dashboard-command-v3.png") center / cover no-repeat;
+    url("/media/hero-agente-federal-autoral-v1.png") center / cover no-repeat;
   transform: none;
 }
 
@@ -2244,7 +2289,7 @@ iframe[src*="gpteng.co"] {
     background:
       linear-gradient(90deg, rgb(5 21 34 / 0.95), rgb(5 21 34 / 0.7)),
       linear-gradient(0deg, #051522 0%, transparent 48%),
-      url("/media/hero-home-police-v3.png") 68% center / cover no-repeat;
+      url("/media/hero-agente-federal-autoral-v1.png") 72% center / cover no-repeat;
   }
 
   .hero-title {
@@ -2457,6 +2502,39 @@ iframe[src*="gpteng.co"] {
   .feature-list + button {
     margin-top: 16px !important;
     height: 42px !important;
+  }
+
+  .brand-cover-card {
+    grid-template-columns: 78px 1fr;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 9px;
+    border-radius: 11px;
+  }
+
+  .brand-cover-card img {
+    width: 78px;
+    border-radius: 7px;
+  }
+
+  .brand-cover-card span {
+    font-size: 9px;
+  }
+
+  .brand-cover-card strong {
+    margin-top: 3px;
+    font-size: 13px;
+  }
+
+  .brand-cover-card p {
+    display: none;
+  }
+
+  .brand-cover-card + a,
+  .brand-cover-card + button {
+    width: 100%;
+    height: 48px !important;
+    margin-top: 14px !important;
   }
 
   .tools-grid article {

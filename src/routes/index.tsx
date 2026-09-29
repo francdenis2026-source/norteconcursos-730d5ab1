@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Treino orientado por dados para quem escolheu servir e proteger.",
       },
-      { property: "og:image", content: "/media/hero-home-police-v3.png" },
+      { property: "og:image", content: "/media/hero-agente-federal-autoral-v1.png" },
     ],
   }),
 });
@@ -376,6 +376,17 @@ function Index() {
                     <p>{label}</p>
                   </div>
                 ))}
+              </div>
+              <div className="brand-cover-card">
+                <img
+                  src="/media/capa-norte-concursos-autoral-v2.png"
+                  alt="Capa institucional Norte Concursos para carreiras policiais"
+                />
+                <div>
+                  <span>Identidade Norte</span>
+                  <strong>Preparação séria para carreiras policiais.</strong>
+                  <p>Estratégia, constância e desempenho reunidos em uma única plataforma.</p>
+                </div>
               </div>
               <Button
                 variant="outline"
