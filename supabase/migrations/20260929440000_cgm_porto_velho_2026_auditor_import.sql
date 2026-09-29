@@ -27,7 +27,10 @@
 --     02/09/2026) and read it directly from the official CEBRASPE CDN, since
 --     it was missing from the Drive folder but is required by governance
 --     (no guessing answers).
---   - No item was marked "X" (anulado) in either gabarito for Cargo 1.
+--   - Item 54 (Conhecimentos Específicos) is marked "X" (anulado) in the
+--     official gabarito and is imported with content_status='annulled', per
+--     governance (annulled items are never shown to students). All other 79
+--     items had a definite letter answer (A-E), no other item was annulled.
 --
 -- No discursive items (redação / questão discursiva) are imported: the
 -- official_exam_questions table models single-answer objective items only.
@@ -36,7 +39,7 @@ insert into public.content_sources (source_type,title,issuer,url,status,notes) v
 ('outro','Prova objetiva CGM Porto Velho - Auditor - Conhecimentos Gerais - 2026','CGM Porto Velho/RO / CEBRASPE','https://cdn.cebraspe.org.br/concursos/cgm_porto_velho_ro_26/arquivos/2B0AA311FB1CDEC9C1AC8AC3318B712AFDC0E7248BEF86D3FB02C5B9BA133C8C.pdf','vigente','Caderno oficial de Conhecimentos Gerais, Cargo 1: Auditor (Google Drive fileId 1tTgCuY-dgiPIL2xDS3G6LeauEsh-cUAW, texto lido verbatim nesta sessão e conferido contra a cópia oficial no CDN da CEBRASPE).'),
 ('outro','Prova objetiva CGM Porto Velho - Auditor - Conhecimentos Específicos - 2026','CGM Porto Velho/RO / CEBRASPE','https://cdn.cebraspe.org.br/concursos/cgm_porto_velho_ro_26/arquivos/2559554662B5E5D9594E6E426AEED58F3469E6B856573355FD8B3C9D7BF8A30A.pdf','vigente','Caderno oficial de Conhecimentos Específicos, Cargo 1: Auditor (Google Drive fileId 19wO9dG4akf1_cJbbm6oxMZzKuoGyLVBW, texto lido verbatim nesta sessão).'),
 ('outro','Gabarito definitivo CGM Porto Velho - Auditor - Conhecimentos Gerais - 2026','CGM Porto Velho/RO / CEBRASPE','https://cdn.cebraspe.org.br/concursos/cgm_porto_velho_ro_26/arquivos/9B041111FB0F5C49C1ADF4F29BD0F55313F7A9C13D9A03AC45F11C4C76848912.pdf','vigente','Gabarito oficial definitivo de Conhecimentos Gerais, Cargo 1: Auditor. Ausente na pasta do Google Drive do usuário; lido diretamente do CDN oficial da CEBRASPE nesta sessão. Itens 1-30, nenhum anulado.'),
-('outro','Gabarito definitivo CGM Porto Velho - Auditor - Conhecimentos Específicos - 2026','CGM Porto Velho/RO / CEBRASPE','https://cdn.cebraspe.org.br/concursos/cgm_porto_velho_ro_26/arquivos/ADDC4DCC2133882E801EB6E9EDAAE57E1B98E20D60ACAB34826B9BE4AA6DC528.pdf','vigente','Gabarito oficial definitivo de Conhecimentos Específicos (Matriz 211_CGMROAUDITOR_001_01), explicitamente rotulado CARGO 1: AUDITOR (Google Drive fileId 1ylVNzFmFRXa5vl8ahL5_udX66E3GzDgC). Itens 31-80, nenhum anulado.')
+('outro','Gabarito definitivo CGM Porto Velho - Auditor - Conhecimentos Específicos - 2026','CGM Porto Velho/RO / CEBRASPE','https://cdn.cebraspe.org.br/concursos/cgm_porto_velho_ro_26/arquivos/ADDC4DCC2133882E801EB6E9EDAAE57E1B98E20D60ACAB34826B9BE4AA6DC528.pdf','vigente','Gabarito oficial definitivo de Conhecimentos Específicos (Matriz 211_CGMROAUDITOR_001_01), explicitamente rotulado CARGO 1: AUDITOR (Google Drive fileId 1ylVNzFmFRXa5vl8ahL5_udX66E3GzDgC). Itens 31-80; item 54 anulado (X), demais com gabarito definitivo A-E.')
 on conflict (url) do update set checked_at=now(),status=excluded.status,notes=excluded.notes;
 
 insert into public.syllabus_editions (contest_name,role_name,contest_year)
