@@ -377,6 +377,17 @@ function Index() {
                   </div>
                 ))}
               </div>
+              <div className="brand-cover-card">
+                <img
+                  src="/media/capa-norte-concursos-autoral-v2.png"
+                  alt="Capa institucional Norte Concursos para carreiras policiais"
+                />
+                <div>
+                  <span>Identidade Norte</span>
+                  <strong>Preparação séria para carreiras policiais.</strong>
+                  <p>Estratégia, constância e desempenho reunidos em uma única plataforma.</p>
+                </div>
+              </div>
               <Button
                 variant="outline"
                 className="mt-8 h-12 rounded-xl border-slate-300 px-6"
