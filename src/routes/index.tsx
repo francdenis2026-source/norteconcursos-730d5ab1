@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Treino orientado por dados para quem escolheu servir e proteger.",
       },
-      { property: "og:image", content: "/media/hero-home-police.png" },
+      { property: "og:image", content: "/media/hero-home-police-v3.png" },
     ],
   }),
 });
@@ -189,7 +189,6 @@ function Index() {
       <main>
         <section className="hero-professional">
           <div className="hero-image" aria-hidden="true" />
-          <div className="hero-grid" aria-hidden="true" />
           <div className="site-container relative z-10 grid min-h-0 items-center py-12 sm:min-h-[560px] sm:py-20 lg:min-h-[760px] lg:grid-cols-[1.08fr_.92fr] lg:py-28">
             <div className="max-w-[720px] pt-2 sm:pt-8">
               <div className="eyebrow reveal-up">
@@ -271,7 +270,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="metodo" className="section-pad bg-[#f6f8fb]">
+        <section id="metodo" className="mobile-optional-section section-pad bg-[#f6f8fb]">
           <div className="site-container">
             <div className="section-heading">
               <div>
@@ -391,7 +390,7 @@ function Index() {
           </div>
         </section>
 
-        <section className="section-pad bg-[#071a2f] text-white">
+        <section className="mobile-optional-section section-pad bg-[#071a2f] text-white">
           <div className="site-container">
             <div className="section-heading light">
               <div>
@@ -420,7 +419,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="carreiras" className="section-pad career-section">
+        <section id="carreiras" className="mobile-optional-section section-pad career-section">
           <div className="site-container text-center">
             <span className="section-kicker">Foco total em segurança pública</span>
             <h2 className="mx-auto mt-3 max-w-3xl text-4xl font-extrabold tracking-[-.04em] text-primary md:text-5xl">

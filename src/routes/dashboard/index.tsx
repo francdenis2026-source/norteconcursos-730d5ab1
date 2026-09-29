@@ -1,5 +1,6 @@
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import type { LucideIcon } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,6 +15,9 @@ import {
   Download,
   FileText,
   Bell,
+  BrainCircuit,
+  Layers,
+  Trophy,
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -32,6 +36,20 @@ export const Route = createFileRoute("/dashboard/")({
   component: DashboardIndex,
 });
 
+type AccessAuditLog = {
+  id: string;
+  feature_key: string;
+  attempt_time: string;
+  was_blocked: boolean;
+};
+
+type ProfileChange = {
+  new: {
+    onboarding_steps?: { contest: boolean; notebook: boolean; plan: boolean };
+    onboarding_done?: boolean;
+  };
+};
+
 function DashboardIndex() {
   const { stats, focusedContest, isLoading, refreshStats } = useDashboardData();
   const { user } = useAuthStatus();
@@ -43,7 +61,7 @@ function DashboardIndex() {
   });
   const [isUpdatingTour, setIsUpdatingTour] = React.useState(false);
   const [dailyQuota, setDailyQuota] = React.useState({ used: 0, total: 0 });
-  const [blockedAttempts, setBlockedAttempts] = React.useState<any[]>([]);
+  const [blockedAttempts, setBlockedAttempts] = React.useState<AccessAuditLog[]>([]);
   const [isLoadingAttempts, setIsLoadingAttempts] = React.useState(false);
 
   React.useEffect(() => {
@@ -72,7 +90,7 @@ function DashboardIndex() {
       const responses = MockService.getUserResponses();
       const today = new Date().toISOString().split("T")[0];
       const todayCount = responses.filter(
-        (r) => (r as any).createdAt?.split("T")[0] === today,
+        (response) => response.createdAt?.split("T")[0] === today,
       ).length;
       const userRole = (user?.role || "free") as string;
       const limit = userRole === "free" ? 10 : userRole === "essential" ? 100 : Infinity;
@@ -100,7 +118,7 @@ function DashboardIndex() {
       // Fetch audit logs
       setIsLoadingAttempts(true);
       const logs = await MockService.getAccessAuditLogs();
-      setBlockedAttempts(logs.filter((l: any) => l.was_blocked));
+      setBlockedAttempts((logs as AccessAuditLog[]).filter((log) => log.was_blocked));
       setIsLoadingAttempts(false);
     };
 
@@ -118,7 +136,7 @@ function DashboardIndex() {
             table: "profiles",
             filter: `id=eq.${user.id}`,
           },
-          (payload: any) => {
+          (payload: ProfileChange) => {
             if (payload.new.onboarding_steps) {
               setChecklist(payload.new.onboarding_steps);
             }
@@ -211,7 +229,7 @@ function DashboardIndex() {
     })) || [];
 
   return (
-    <div className="space-y-6">
+    <div className="dashboard-home space-y-3 sm:space-y-6">
       <section className="dashboard-command-hero text-print">
         <div className="relative z-10 max-w-2xl">
           <span className="internal-hero-kicker">
@@ -223,7 +241,7 @@ function DashboardIndex() {
             clareza.
           </p>
         </div>
-        <div className="relative z-10 flex flex-wrap items-center gap-2 no-print">
+        <div className="dashboard-hero-secondary relative z-10 flex flex-wrap items-center gap-2 no-print">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm" className="hero-outline-action gap-2">
@@ -258,6 +276,30 @@ function DashboardIndex() {
         </div>
       </section>
 
+      <section className="dashboard-quick-actions no-print" aria-label="Ações rápidas">
+        <Link to="/dashboard/question-trainer">
+          <BrainCircuit />
+          <span>
+            <strong>Treinar</strong>
+            <small>Questões por filtro</small>
+          </span>
+        </Link>
+        <Link to="/dashboard/mock-exams">
+          <Trophy />
+          <span>
+            <strong>Simular</strong>
+            <small>Prova completa</small>
+          </span>
+        </Link>
+        <Link to="/dashboard/performance">
+          <Layers />
+          <span>
+            <strong>Evolução</strong>
+            <small>Ver desempenho</small>
+          </span>
+        </Link>
+      </section>
+
       {showTour && (
         <Card className="onboarding-command bg-primary text-primary-foreground border-none overflow-hidden relative animate-in fade-in zoom-in duration-300">
           <CardContent className="pt-6">
@@ -289,7 +331,7 @@ function DashboardIndex() {
         </Card>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="dashboard-metrics grid grid-cols-2 gap-2 sm:gap-4 lg:grid-cols-4">
         <MetricCard
           title="Foco Atual"
           value={focusedContest?.agency || "Não definido"}
@@ -317,8 +359,8 @@ function DashboardIndex() {
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card className="command-panel">
+      <div className="dashboard-secondary-grid grid grid-cols-1 gap-3 sm:gap-6 lg:grid-cols-2">
+        <Card className="command-panel dashboard-desktop-detail">
           <CardHeader>
             <CardTitle className="text-lg">Evolução por Disciplina</CardTitle>
           </CardHeader>
@@ -347,7 +389,7 @@ function DashboardIndex() {
           </CardContent>
         </Card>
 
-        <Card className="command-panel no-print">
+        <Card className="command-panel dashboard-desktop-detail no-print">
           <CardHeader>
             <CardTitle className="text-lg flex items-center justify-between">
               Configurações PWA
@@ -376,9 +418,9 @@ function DashboardIndex() {
           </CardContent>
         </Card>
 
-        <Card className="command-panel no-print">
-          <CardHeader>
-            <CardTitle className="text-lg flex justify-between items-center">
+        <Card className="command-panel dashboard-next-actions no-print">
+          <CardHeader className="dashboard-next-actions-header">
+            <CardTitle className="dashboard-next-actions-title text-lg flex justify-between items-center">
               Próximas Atividades
               <Button variant="ghost" size="sm" asChild>
                 <Link to="/dashboard/study-plan" className="text-xs">
@@ -387,7 +429,7 @@ function DashboardIndex() {
               </Button>
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="dashboard-next-actions-content">
             <div className="space-y-4">
               <ActivityItem
                 title="Simulado Semanal"
@@ -423,7 +465,7 @@ function DashboardIndex() {
           </CardContent>
         </Card>
 
-        <Card className="command-panel">
+        <Card className="command-panel dashboard-desktop-detail">
           <CardHeader>
             <CardTitle className="text-lg flex items-center justify-between">
               Alertas de Acesso do Plano
@@ -440,7 +482,7 @@ function DashboardIndex() {
               </div>
             ) : blockedAttempts.length > 0 ? (
               <div className="space-y-3">
-                {blockedAttempts.slice(0, 3).map((attempt: any) => (
+                {blockedAttempts.slice(0, 3).map((attempt) => (
                   <div
                     key={attempt.id}
                     className="flex items-center justify-between p-2 rounded border bg-destructive/5 border-destructive/10"
@@ -484,7 +526,19 @@ function DashboardIndex() {
   );
 }
 
-function MetricCard({ title, value, icon: Icon, description, progress }: any) {
+function MetricCard({
+  title,
+  value,
+  icon: Icon,
+  description,
+  progress,
+}: {
+  title: string;
+  value: string;
+  icon: LucideIcon;
+  description: string;
+  progress?: number;
+}) {
   return (
     <Card className="command-metric overflow-hidden">
       <CardContent className="pt-6 relative">
@@ -516,7 +570,22 @@ function MetricCard({ title, value, icon: Icon, description, progress }: any) {
   );
 }
 
-function ActivityItem({ title, type, time, status, priority, link, isReview }: any) {
+function ActivityItem({
+  title,
+  type,
+  time,
+  priority,
+  link,
+  isReview,
+}: {
+  title: string;
+  type: string;
+  time: string;
+  status: string;
+  priority?: boolean;
+  link: string;
+  isReview?: boolean;
+}) {
   return (
     <div
       className={cn(
@@ -580,6 +649,6 @@ function CheckItem({ label, done }: { label: string; done: boolean }) {
   );
 }
 
-function cn(...inputs: any[]) {
+function cn(...inputs: unknown[]) {
   return inputs.filter(Boolean).join(" ");
 }
