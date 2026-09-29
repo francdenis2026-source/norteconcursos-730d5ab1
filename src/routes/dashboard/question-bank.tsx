@@ -2,6 +2,7 @@ import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   AlertTriangle,
+  ArrowRight,
   BookMarked,
   BookOpenCheck,
   Building2,
@@ -298,10 +299,22 @@ function QuestionBankPage() {
           </CardContent>
         </Card>
       </div>
-      <div className="grid gap-6 lg:grid-cols-2">
-        <Collection title="Acervo por disciplina" icon={BookOpenCheck} rows={bySubject} />
-        <Collection title="Acervo por banca" icon={FileCheck2} rows={byBoard} />
-      </div>
+      <section className="collection-showcase">
+        <div className="collection-showcase-heading">
+          <span>Rotas rápidas de estudo</span>
+          <h2>Entre diretamente no conteúdo que deseja treinar.</h2>
+          <p>Selecione uma disciplina ou banca para abrir o treinador com o filtro já aplicado.</p>
+        </div>
+        <div className="relative z-10 grid gap-6 lg:grid-cols-2">
+          <Collection
+            title="Acervo por disciplina"
+            icon={BookOpenCheck}
+            rows={bySubject}
+            filterKey="subject"
+          />
+          <Collection title="Acervo por banca" icon={FileCheck2} rows={byBoard} filterKey="board" />
+        </div>
+      </section>
       <footer className="rounded-2xl border bg-card px-5 py-4 text-center text-xs text-muted-foreground">
         Acervo educacional com governança editorial
       </footer>
@@ -343,13 +356,15 @@ function Collection({
   title,
   icon: Icon,
   rows,
+  filterKey,
 }: {
   title: string;
   icon: React.ElementType;
   rows: Array<[string, number]>;
+  filterKey: "subject" | "board";
 }) {
   return (
-    <Card>
+    <Card className="catalog-collection-card">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-lg">
           <Icon className="h-5 w-5 text-primary" />
@@ -358,13 +373,19 @@ function Collection({
       </CardHeader>
       <CardContent className="grid gap-2 sm:grid-cols-2">
         {rows.slice(0, 12).map(([name, count]) => (
-          <div
+          <Link
             key={name}
-            className="flex items-center justify-between gap-3 rounded-lg bg-muted/40 px-3 py-2"
+            to="/dashboard/question-trainer"
+            search={filterKey === "subject" ? { subject: name } : { board: name }}
+            className="collection-study-link"
+            aria-label={`Treinar ${filterKey === "subject" ? "a disciplina" : "questões da banca"} ${name}`}
           >
             <span className="truncate text-sm font-semibold">{name}</span>
-            <Badge variant="secondary">{count}</Badge>
-          </div>
+            <span className="flex shrink-0 items-center gap-2">
+              <Badge variant="secondary">{count}</Badge>
+              <ArrowRight className="h-4 w-4" />
+            </span>
+          </Link>
         ))}
       </CardContent>
     </Card>

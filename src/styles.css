@@ -2222,6 +2222,107 @@ iframe[src*="gpteng.co"] {
   padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
 }
 
+.collection-showcase {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(1rem, 3vw, 2rem);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 22px;
+  background: url("/media/hero-question-training-v3.png") center 42% / cover no-repeat;
+  box-shadow: 0 24px 65px rgb(6 25 40 / 0.18);
+}
+
+.collection-showcase::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(
+    105deg,
+    rgb(4 18 30 / 0.98),
+    rgb(4 18 30 / 0.82) 58%,
+    rgb(4 18 30 / 0.5)
+  );
+}
+
+.collection-showcase-heading {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.collection-showcase-heading > span {
+  color: #efbd52;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.collection-showcase-heading h2 {
+  margin-top: 6px;
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.collection-showcase-heading p {
+  margin-top: 8px;
+  color: rgb(232 240 245 / 0.72);
+  font-size: 0.9rem;
+}
+
+.catalog-collection-card {
+  border-color: rgb(255 255 255 / 0.16) !important;
+  background: rgb(249 252 253 / 0.95) !important;
+  box-shadow: 0 18px 42px rgb(0 0 0 / 0.2) !important;
+  backdrop-filter: blur(16px);
+}
+
+.collection-study-link {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: #edf2f6;
+  padding: 8px 10px 8px 12px;
+  color: #10283b;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.collection-study-link svg {
+  color: #16866c;
+  transition: transform 0.2s ease;
+}
+
+.collection-study-link:hover {
+  border-color: rgb(22 134 108 / 0.35);
+  background: white;
+  box-shadow: 0 10px 24px rgb(15 55 77 / 0.12);
+  transform: translateY(-2px);
+}
+
+.collection-study-link:hover svg {
+  transform: translateX(3px);
+}
+
+.collection-study-link:focus-visible {
+  border-color: #16866c;
+  outline: 3px solid rgb(22 134 108 / 0.24);
+  outline-offset: 2px;
+}
+
 /* Authentication */
 
 .auth-visual {
@@ -2741,6 +2842,38 @@ iframe[src*="gpteng.co"] {
 
   .dashboard-home .dashboard-next-actions-content > div > div {
     padding: 8px;
+  }
+
+  .collection-showcase {
+    padding: 12px;
+    border-radius: 14px;
+    background-position: 68% center;
+  }
+
+  .collection-showcase-heading {
+    margin-bottom: 14px;
+  }
+
+  .collection-showcase-heading h2 {
+    margin-top: 5px;
+    font-size: 1.35rem;
+  }
+
+  .collection-showcase-heading p {
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .catalog-collection-card > div:first-child {
+    padding: 16px 16px 10px;
+  }
+
+  .catalog-collection-card > div:last-child {
+    padding: 0 12px 12px;
+  }
+
+  .collection-study-link {
+    min-height: 48px;
   }
 
   .question-trainer-hero p {
