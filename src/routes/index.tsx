@@ -117,7 +117,6 @@ function Index() {
             <a href="#metodo">Método</a>
             <a href="#plataforma">Plataforma</a>
             <a href="#carreiras">Carreiras</a>
-            <a href="#planos">Planos</a>
           </nav>
           <div className="hidden items-center gap-3 sm:flex">
             <Button
@@ -155,7 +154,6 @@ function Index() {
                   ["Método", "#metodo"],
                   ["Centro de treino", "#plataforma"],
                   ["Carreiras policiais", "#carreiras"],
-                  ["Planos", "#planos"],
                 ].map(([label, href]) => (
                   <SheetClose asChild key={href}>
                     <a
@@ -413,9 +411,9 @@ function Index() {
                   </span>
                   <h3>{title}</h3>
                   <p>{text}</p>
-                  <a href="#planos">
-                    Ver planos <ArrowRight />
-                  </a>
+                  <Link to="/auth">
+                    Acessar plataforma <ArrowRight />
+                  </Link>
                 </article>
               ))}
             </div>
@@ -462,58 +460,6 @@ function Index() {
           </div>
         </section>
 
-        <section id="planos" className="section-pad bg-[#f6f8fb]">
-          <div className="site-container">
-            <div className="mx-auto mb-14 max-w-2xl text-center">
-              <span className="section-kicker">Planos transparentes</span>
-              <h2 className="mt-3 text-4xl font-extrabold tracking-[-.04em] text-primary md:text-5xl">
-                Escolha seu nível de operação.
-              </h2>
-            </div>
-            <div className="pricing-grid">
-              <Pricing
-                planId="free"
-                name="Gratuito"
-                price="0"
-                description="Para iniciar o reconhecimento do terreno."
-                features={["10 questões por dia", "Análise básica", "Cronômetro de estudos"]}
-              />
-              <Pricing
-                planId="essential"
-                name="Essencial"
-                price="19,90"
-                description="Para ganhar ritmo com questões e simulados."
-                features={["100 questões por dia", "2 simulados completos", "Plano de estudos"]}
-              />
-              <Pricing
-                featured
-                planId="plus"
-                name="Plus"
-                price="29,90"
-                description="Para uma preparação contínua e sem limites."
-                features={[
-                  "Questões ilimitadas",
-                  "Simulados ilimitados",
-                  "Análise avançada",
-                  "Plano adaptativo",
-                ]}
-              />
-              <Pricing
-                planId="premium"
-                name="Premium"
-                price="49,90"
-                description="Para operar com acompanhamento completo."
-                features={[
-                  "Questões e simulados ilimitados",
-                  "Relatórios consolidados",
-                  "Plano personalizado",
-                  "Suporte prioritário",
-                ]}
-              />
-            </div>
-          </div>
-        </section>
-
         <section className="final-cta">
           <div className="site-container relative z-10 text-center">
             <span className="eyebrow mx-auto">
@@ -542,10 +488,7 @@ function Index() {
               Inteligência de estudo para as carreiras que protegem o Brasil.
             </p>
           </div>
-          <FooterColumn
-            title="Plataforma"
-            links={["Método", "Ferramentas", "Planos", "Carreiras"]}
-          />
+          <FooterColumn title="Plataforma" links={["Método", "Ferramentas", "Carreiras"]} />
           <FooterColumn
             title="Institucional"
             links={["Sobre nós", "Privacidade", "Termos de uso", "Suporte"]}
@@ -566,68 +509,10 @@ function Index() {
   );
 }
 
-function Pricing({
-  planId,
-  name,
-  price,
-  description,
-  features,
-  featured = false,
-}: {
-  planId: string;
-  name: string;
-  price: string;
-  description: string;
-  features: string[];
-  featured?: boolean;
-}) {
-  return (
-    <article className={`pricing-card ${featured ? "featured" : ""}`}>
-      {featured && <span className="popular-tag">MAIS ESCOLHIDO</span>}
-      <div>
-        <span className="plan-name">{name}</span>
-        <p>{description}</p>
-      </div>
-      <div className="price">
-        <small>{price === "0" ? "" : "R$"}</small>
-        <strong>{price}</strong>
-        <span>{price !== "0" ? "/mês" : "gratuito"}</span>
-      </div>
-      <ul>
-        {features.map((f) => (
-          <li key={f}>
-            <span>
-              <Check />
-            </span>
-            {f}
-          </li>
-        ))}
-      </ul>
-      <Button
-        className={featured ? "premium-button" : ""}
-        variant={featured ? "default" : "outline"}
-        asChild
-      >
-        {planId === "free" ? (
-          <Link to="/auth">
-            Começar gratuitamente
-            <ArrowRight />
-          </Link>
-        ) : (
-          <Link to="/checkout/$planId" params={{ planId }}>
-            Escolher {name}
-            <ArrowRight />
-          </Link>
-        )}
-      </Button>
-    </article>
-  );
-}
 function FooterColumn({ title, links }: { title: string; links: string[] }) {
   const destinations: Record<string, string> = {
     Método: "#metodo",
     Ferramentas: "#plataforma",
-    Planos: "#planos",
     Carreiras: "#carreiras",
     "Sobre nós": "#metodo",
     Privacidade: "/privacy",
