@@ -48,6 +48,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     year: typeof search.year === "string" ? search.year : undefined,
     subject: typeof search.subject === "string" ? search.subject : undefined,
     source: typeof search.source === "string" ? search.source : undefined,
+    reviewed: typeof search.reviewed === "string" ? search.reviewed : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -107,6 +108,12 @@ function splitExplanation(text: string) {
 }
 const formatDate = (value: string | null) =>
   value ? new Date(value).toLocaleDateString("pt-BR") : "";
+// "Revisada" = já tem explicação didática com exemplo do dia a dia (bloco "Exemplo:")
+// E, se depender de lei/súmula, essa fonte já foi conferida vigente no Planalto (checkedAt
+// preenchido) — a mesma checagem que o treinador já faz pra decidir o que entra no treino.
+const hasReviewedExplanation = (question: Question) =>
+  /Exemplo(?: pr[aá]tico)?:/i.test(question.explanation) &&
+  (question.legalBasis.length === 0 || Boolean(question.checkedAt));
 const boardAnswers = (board: string): Answer[] =>
   /CEBRASPE|CESPE/i.test(board)
     ? ["C", "E"]
@@ -198,6 +205,7 @@ function QuestionTrainer() {
   const [appliedExam, setAppliedExam] = React.useState("all");
   const [subject, setSubject] = React.useState(routeFilters.subject || "all");
   const [source, setSource] = React.useState(routeFilters.source || "all");
+  const [reviewed, setReviewed] = React.useState(routeFilters.reviewed || "all");
   const [limit, setLimit] = React.useState("20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
   const [loading, setLoading] = React.useState(true);
@@ -357,7 +365,7 @@ function QuestionTrainer() {
   // Cada lista mostra só o que existe combinado com os OUTROS filtros já escolhidos,
   // para nunca montar uma combinação sem questões.
   const choices = React.useMemo(() => {
-    const filters = { contest, board, career, year, subject, source } as const;
+    const filters = { contest, board, career, year, subject, source, reviewed } as const;
     const fields = {
       contest: (item: Question) => item.contest,
       board: (item: Question) => item.board,
@@ -365,6 +373,7 @@ function QuestionTrainer() {
       year: (item: Question) => item.year,
       subject: (item: Question) => item.subject,
       source: (item: Question) => item.source,
+      reviewed: (item: Question) => (hasReviewedExplanation(item) ? "reviewed" : "pending"),
     };
     const scoped = (skip: keyof typeof fields) =>
       catalog.filter((item) =>
@@ -396,7 +405,7 @@ function QuestionTrainer() {
         );
       }),
     };
-  }, [catalog, contest, board, career, year, subject, source]);
+  }, [catalog, contest, board, career, year, subject, source, reviewed]);
   // Ao mexer em um filtro individual, a "prova aplicada" escolhida antes deixa de valer.
   const manual =
     <T,>(setter: (value: T) => void) =>
@@ -414,9 +423,10 @@ function QuestionTrainer() {
           (year === "all" || item.year === year) &&
           (appliedExam === "all" || examKey(item) === appliedExam) &&
           (subject === "all" || item.subject === subject) &&
-          (source === "all" || item.source === source),
+          (source === "all" || item.source === source) &&
+          (reviewed === "all" || hasReviewedExplanation(item)),
       ),
-    [catalog, contest, board, career, year, appliedExam, subject, source],
+    [catalog, contest, board, career, year, appliedExam, subject, source, reviewed],
   );
   const startTraining = () => {
     const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
@@ -525,7 +535,18 @@ function QuestionTrainer() {
           total={catalog.length}
           available={pool.length}
           choices={choices}
-          values={{ contest, board, career, year, appliedExam, subject, source, limit, orderMode }}
+          values={{
+            contest,
+            board,
+            career,
+            year,
+            appliedExam,
+            subject,
+            source,
+            reviewed,
+            limit,
+            orderMode,
+          }}
           setters={{
             setContest: manual(setContest),
             setBoard: manual(setBoard),
@@ -534,6 +555,7 @@ function QuestionTrainer() {
             setAppliedExam: selectAppliedExam,
             setSubject: manual(setSubject),
             setSource: manual(setSource),
+            setReviewed: manual(setReviewed),
             setLimit,
             setOrderMode,
           }}
@@ -893,6 +915,7 @@ type SetupValues = {
   appliedExam: string;
   subject: string;
   source: string;
+  reviewed: string;
   limit: string;
   orderMode: OrderMode;
 };
@@ -904,6 +927,7 @@ type SetupSetters = {
   setAppliedExam: (value: string) => void;
   setSubject: (value: string) => void;
   setSource: (value: string) => void;
+  setReviewed: (value: string) => void;
   setLimit: (value: string) => void;
   setOrderMode: (value: OrderMode) => void;
 };
@@ -938,6 +962,7 @@ function TrainerSetup({
     setters.setAppliedExam("all");
     setters.setSubject("all");
     setters.setSource("all");
+    setters.setReviewed("all");
   };
   return (
     <div className="mx-auto max-w-5xl space-y-5 pb-10 animate-in fade-in duration-300">
@@ -1026,6 +1051,14 @@ function TrainerSetup({
                 curated: "Autorais auditadas",
                 personal: "Meu caderno",
               }}
+            />
+            <TrainerFilter
+              label="Explicação didática"
+              value={values.reviewed}
+              setValue={setters.setReviewed}
+              options={["reviewed"]}
+              labels={{ reviewed: "Só com exemplo do dia a dia revisado" }}
+              allLabel="Todas as questões"
             />
             <TrainerFilter
               label="Quantidade"
