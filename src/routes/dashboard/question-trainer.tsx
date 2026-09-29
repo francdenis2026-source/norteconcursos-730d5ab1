@@ -280,8 +280,8 @@ function QuestionTrainer() {
         const [officialResult, curatedResult, personalResult] = await Promise.all([
           query(
             "official_exam_questions",
-            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,difficulty",
-            "law_version_checked_at,legal_review_required,legal_audit_completed",
+            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis",
+            "law_version_checked_at,legal_review_required,legal_audit_completed,difficulty",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
           ),
           isGuest
