@@ -12,12 +12,18 @@ import {
   Loader2,
   RotateCcw,
   Sparkles,
+  Strikethrough,
   Target,
   X,
   XCircle,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import {
+  GUEST_DAILY_LIMIT,
+  getGuestRemainingToday,
+  registerGuestAnswer,
+} from "@/lib/guestQuota";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -47,6 +53,9 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     year: typeof search.year === "string" ? search.year : undefined,
     subject: typeof search.subject === "string" ? search.subject : undefined,
     source: typeof search.source === "string" ? search.source : undefined,
+    reviewed: typeof search.reviewed === "string" ? search.reviewed : undefined,
+    state: typeof search.state === "string" ? search.state : undefined,
+    category: typeof search.category === "string" ? search.category : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -54,6 +63,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
 type Answer = "A" | "B" | "C" | "D" | "E";
 type Source = "official" | "curated" | "personal";
 type OrderMode = "random" | "exam";
+type Difficulty = "fácil" | "média" | "difícil";
 type LegalBasis = { title?: string; lei?: string; artigo?: string; url?: string };
 type Question = {
   id: string;
@@ -68,12 +78,70 @@ type Question = {
   answer: Answer;
   explanation: string;
   legalBasis: LegalBasis[];
+  checkedAt: string | null;
+  difficulty: Difficulty;
+  state: string;
+  category: string;
+};
+
+const normalizeDifficulty = (value: unknown): Difficulty => {
+  const text = String(value ?? "").toLowerCase();
+  if (text.startsWith("fác") || text.startsWith("fac")) return "fácil";
+  if (text.startsWith("dif")) return "difícil";
+  return "média";
+};
+const DIFFICULTY_LABEL: Record<Difficulty, string> = {
+  fácil: "Fácil",
+  média: "Média",
+  difícil: "Difícil",
+};
+const DIFFICULTY_STYLE: Record<Difficulty, string> = {
+  fácil: "border-emerald-300 bg-emerald-50 text-emerald-700",
+  média: "border-amber-300 bg-amber-50 text-amber-700",
+  difícil: "border-rose-300 bg-rose-50 text-rose-700",
 };
 
 const parseBasis = (value: unknown): LegalBasis[] =>
   Array.isArray(value)
     ? value.filter((item): item is LegalBasis => Boolean(item) && typeof item === "object")
     : [];
+// O Planalto marca cada artigo com uma âncora "#artN" (ex.: <a name="art205">
+// antes de "Art. 205."), então quando sabemos o artigo dá pra pular a busca
+// manual e abrir a página já rolada direto no trecho certo.
+const basisHref = (basis: LegalBasis) => {
+  if (!basis.url) return undefined;
+  if (!basis.artigo || basis.url.includes("#")) return basis.url;
+  const artigoAnchor = basis.artigo.replace(/[^0-9A-Za-z-]/g, "");
+  return artigoAnchor ? `${basis.url}#art${artigoAnchor}` : basis.url;
+};
+// Fontes oficiais aceitas para legislação e jurisprudência (CONTENT_GOVERNANCE.md).
+const OFFICIAL_SOURCE =
+  /(^|\.)(planalto\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br)(\/|$)/i;
+const isOfficialUrl = (url?: string) => {
+  try {
+    return Boolean(url) && OFFICIAL_SOURCE.test(new URL(String(url)).hostname + "/");
+  } catch {
+    return false;
+  }
+};
+// Questão com base legal só entra no treino se a vigência foi conferida na fonte oficial
+// (data registrada + link oficial). Assim nenhuma resposta desatualizada é exibida.
+const isLegallyVerified = (basis: LegalBasis[], checkedAt: unknown) =>
+  basis.length === 0 || (Boolean(checkedAt) && basis.some((item) => isOfficialUrl(item.url)));
+// Explicações podem trazer um trecho "Exemplo: …" — mostramos separado, em destaque.
+function splitExplanation(text: string) {
+  const match = text.match(/\n?\s*Exemplo(?: pr[aá]tico)?:\s*([\s\S]*)$/i);
+  if (!match || match.index === undefined) return { main: text.trim(), example: "" };
+  return { main: text.slice(0, match.index).trim(), example: (match[1] ?? "").trim() };
+}
+const formatDate = (value: string | null) =>
+  value ? new Date(value).toLocaleDateString("pt-BR") : "";
+// "Revisada" = já tem explicação didática com exemplo do dia a dia (bloco "Exemplo:")
+// E, se depender de lei/súmula, essa fonte já foi conferida vigente no Planalto (checkedAt
+// preenchido) — a mesma checagem que o treinador já faz pra decidir o que entra no treino.
+const hasReviewedExplanation = (question: Question) =>
+  /Exemplo(?: pr[aá]tico)?:/i.test(question.explanation) &&
+  (question.legalBasis.length === 0 || Boolean(question.checkedAt));
 const boardAnswers = (board: string): Answer[] =>
   /CEBRASPE|CESPE/i.test(board)
     ? ["C", "E"]
@@ -93,11 +161,74 @@ function shuffled<T>(items: T[]) {
   return result;
 }
 
+type ParsedQuestion = {
+  baseLabel: string;
+  base: string;
+  stem: string;
+  options: { letter: Answer; text: string }[];
+};
+
+// question_text guarda tudo num campo só: "Texto-base:\n…\n\n<enunciado>\n(A) …\n(B) …" (ou
+// "Comando:\n…\n\nItem: …" nos itens Certo/Errado). Separamos texto de apoio, enunciado e alternativas.
+function parseQuestion(raw: string): ParsedQuestion {
+  let text = raw.replace(/\r/g, "").trim();
+  let base = "";
+  let baseLabel = "Texto de apoio";
+  const head = text.match(/^(Texto-base|Comando):\n([\s\S]*?)\n\n(?=\S)/);
+  if (head) {
+    baseLabel = head[1] === "Comando" ? "Comando da questão" : "Texto de apoio";
+    base = (head[2] ?? "").trim();
+    text = text.slice(head[0].length).trim();
+  }
+  text = text.replace(/^Item:\s*/, "");
+
+  const lines = text.split("\n");
+  const firstOption = lines.findIndex((line) => /^\(A\)\s?/.test(line));
+  if (firstOption >= 0) {
+    const options: { letter: Answer; text: string }[] = [];
+    for (const line of lines.slice(firstOption)) {
+      const match = line.match(/^\(([A-E])\)\s?(.*)$/);
+      const last = options[options.length - 1];
+      if (match)
+        options.push({ letter: (match[1] ?? "A") as Answer, text: (match[2] ?? "").trim() });
+      else if (last) last.text += ` ${line.trim()}`;
+    }
+    return { baseLabel, base, stem: lines.slice(0, firstOption).join("\n").trim(), options };
+  }
+
+  // Formato antigo: alternativas na mesma linha ("… A) texto; B) texto; C) …").
+  const marks: number[] = [];
+  let cursor = 0;
+  for (const letter of "ABCDE") {
+    const at = text.indexOf(`${letter}) `, cursor);
+    if (at < 0 || (at > 0 && !/[\s:;.]/.test(text.charAt(at - 1)))) break;
+    marks.push(at);
+    cursor = at + 3;
+  }
+  if (marks.length >= 4) {
+    const options = marks.map((start, i) => ({
+      letter: "ABCDE".charAt(i) as Answer,
+      text: text
+        .slice(start + 3, marks[i + 1] ?? text.length)
+        .replace(/[;\s]+$/, "")
+        .trim(),
+    }));
+    return { baseLabel, base, stem: text.slice(0, marks[0] ?? 0).trim(), options };
+  }
+  return { baseLabel, base, stem: text, options: [] };
+}
+
 function QuestionTrainer() {
   const routeFilters = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
   const userId = user?.id;
+  const isGuest = !authLoading && (!user || userId === "demo-user");
+  const [guestRemaining, setGuestRemaining] = React.useState(GUEST_DAILY_LIMIT);
+  React.useEffect(() => {
+    if (isGuest) setGuestRemaining(getGuestRemainingToday());
+  }, [isGuest]);
   const [catalog, setCatalog] = React.useState<Question[]>([]);
+  const [hidden, setHidden] = React.useState(0);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
   const [contest, setContest] = React.useState(routeFilters.contest || "all");
@@ -107,12 +238,17 @@ function QuestionTrainer() {
   const [appliedExam, setAppliedExam] = React.useState("all");
   const [subject, setSubject] = React.useState(routeFilters.subject || "all");
   const [source, setSource] = React.useState(routeFilters.source || "all");
+  const [reviewed, setReviewed] = React.useState(routeFilters.reviewed || "all");
+  const [state, setState] = React.useState(routeFilters.state || "all");
+  const [category, setCategory] = React.useState(routeFilters.category || "all");
+  const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState("20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
   const [index, setIndex] = React.useState(0);
   const [selected, setSelected] = React.useState<Answer | null>(null);
+  const [struck, setStruck] = React.useState<Answer[]>([]);
   const [answered, setAnswered] = React.useState(false);
   const [helpUsed, setHelpUsed] = React.useState(false);
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
@@ -121,39 +257,79 @@ function QuestionTrainer() {
   const [startedAt, setStartedAt] = React.useState(Date.now());
 
   React.useEffect(() => {
-    if (authLoading || !userId || userId === "demo-user") {
+    if (authLoading) return;
+    // Visitante sem cadastro (isGuest): degustação limitada ao acervo de
+    // provas oficiais (nunca às questões autorais/premium nem ao caderno
+    // pessoal, que exigem login) — ver src/lib/guestQuota.ts para o
+    // controle dos 10/dia. Sem sessão e sem ser o guest de degustação não
+    // há nada pra carregar.
+    if (!isGuest && (!userId || userId === "demo-user")) {
       setLoading(false);
       return;
     }
     let active = true;
     void (async () => {
       try {
+        // Se a migration de verificação legal ainda não foi aplicada, as colunas novas não existem:
+        // repetimos a consulta sem elas e seguimos sem o filtro de vigência (avisando na tela).
+        const query = async (
+          table: "official_exam_questions" | "curated_question_catalog" | "question_bank",
+          base: string,
+          extra: string,
+          refine: (builder: any) => any, // eslint-disable-line @typescript-eslint/no-explicit-any
+        ) => {
+          const full = await refine(supabase.from(table).select(`${base},${extra}`));
+          if (!full.error) return { ...full, gated: true };
+          const plain = await refine(supabase.from(table).select(base));
+          return { ...plain, gated: false };
+        };
         const [officialResult, curatedResult, personalResult] = await Promise.all([
-          supabase
-            .from("official_exam_questions")
-            .select(
-              "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis",
-            )
-            .eq("content_status", "active")
-            .neq("official_answer", "X"),
-          supabase
-            .from("curated_question_catalog")
-            .select(
-              "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis",
-            )
-            .eq("content_status", "active"),
-          supabase
-            .from("question_bank")
-            .select(
-              "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status",
-            )
-            .eq("user_id", userId),
+          query(
+            "official_exam_questions",
+            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,state,career_category",
+            "law_version_checked_at,legal_review_required,legal_audit_completed,difficulty",
+            (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
+          ),
+          isGuest
+            ? Promise.resolve({ data: [], error: null, gated: true })
+            : query(
+                "curated_question_catalog",
+                "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
+                "law_version_checked_at",
+                (builder) => builder.eq("content_status", "active"),
+              ),
+          isGuest || !userId
+            ? Promise.resolve({ data: [], error: null, gated: true })
+            : query(
+                "question_bank",
+                "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status,difficulty,state,career_category",
+                "law_version_checked_at",
+                (builder) => builder.eq("user_id", userId),
+              ),
         ]);
+        let hiddenCount = 0;
+        const gate = (
+          rows: Array<Record<string, unknown>>,
+          gated: boolean,
+          extraOk: (row: Record<string, unknown>) => boolean = () => true,
+        ) =>
+          rows.filter((row) => {
+            const ok =
+              !gated ||
+              (extraOk(row) &&
+                isLegallyVerified(parseBasis(row.legal_basis), row.law_version_checked_at));
+            if (!ok) hiddenCount += 1;
+            return ok;
+          });
         if (officialResult.error) throw officialResult.error;
         if (curatedResult.error) throw curatedResult.error;
         if (personalResult.error) throw personalResult.error;
         const catalog: Question[] = [
-          ...((officialResult.data || []) as Array<Record<string, unknown>>).map((row) => ({
+          ...gate(
+            (officialResult.data || []) as Array<Record<string, unknown>>,
+            officialResult.gated,
+            (row) => !(row.legal_review_required && !row.legal_audit_completed),
+          ).map((row) => ({
             id: String(row.id),
             source: "official" as const,
             contest: String(row.contest_name),
@@ -168,8 +344,15 @@ function QuestionTrainer() {
               row.review_note || "Item conferido com o gabarito definitivo da prova oficial.",
             ),
             legalBasis: parseBasis(row.legal_basis),
+            checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
+            difficulty: normalizeDifficulty(row.difficulty),
+            state: String(row.state || ""),
+            category: String(row.career_category || ""),
           })),
-          ...((curatedResult.data || []) as Array<Record<string, unknown>>).map((row) => ({
+          ...gate(
+            (curatedResult.data || []) as Array<Record<string, unknown>>,
+            curatedResult.gated,
+          ).map((row) => ({
             id: String(row.id),
             source: "curated" as const,
             contest: String(row.contest_name),
@@ -182,13 +365,20 @@ function QuestionTrainer() {
             answer: String(row.official_answer) as Answer,
             explanation: String(row.explanation || "Explicação editorial em revisão."),
             legalBasis: parseBasis(row.legal_basis),
+            checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
+            difficulty: normalizeDifficulty(row.difficulty),
+            state: String(row.state || ""),
+            category: String(row.career_category || ""),
           })),
           ...((personalResult.data || []) as Array<Record<string, unknown>>)
             .filter(
               (row) =>
                 !["obsolete", "revoked", "archived"].includes(
                   String(row.content_status || "active"),
-                ) && /^[A-E]$/.test(String(row.official_answer)),
+                ) &&
+                /^[A-E]$/.test(String(row.official_answer)) &&
+                (!personalResult.gated ||
+                  isLegallyVerified(parseBasis(row.legal_basis), row.law_version_checked_at)),
             )
             .map((row) => ({
               id: String(row.id),
@@ -203,9 +393,16 @@ function QuestionTrainer() {
               answer: String(row.official_answer) as Answer,
               explanation: String(row.explanation || "Explicação pedagógica em revisão."),
               legalBasis: parseBasis(row.legal_basis),
+              checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
+              difficulty: normalizeDifficulty(row.difficulty),
+              state: String(row.state || ""),
+              category: String(row.career_category || ""),
             })),
         ];
-        if (active) setCatalog(catalog);
+        if (active) {
+          setCatalog(catalog);
+          setHidden(hiddenCount);
+        }
       } catch (loadError) {
         if (active)
           setError(
@@ -218,26 +415,75 @@ function QuestionTrainer() {
     return () => {
       active = false;
     };
-  }, [authLoading, userId]);
+  }, [authLoading, userId, isGuest]);
 
+  // Cada lista mostra só o que existe combinado com os OUTROS filtros já escolhidos,
+  // para nunca montar uma combinação sem questões.
   const choices = React.useMemo(() => {
+    const filters = {
+      contest,
+      board,
+      career,
+      year,
+      subject,
+      source,
+      reviewed,
+      difficulty,
+      state,
+      category,
+    } as const;
+    const fields = {
+      contest: (item: Question) => item.contest,
+      board: (item: Question) => item.board,
+      career: (item: Question) => item.career,
+      year: (item: Question) => item.year,
+      subject: (item: Question) => item.subject,
+      source: (item: Question) => item.source,
+      reviewed: (item: Question) => (hasReviewedExplanation(item) ? "reviewed" : "pending"),
+      difficulty: (item: Question) => item.difficulty,
+      state: (item: Question) => item.state,
+      category: (item: Question) => item.category,
+    };
+    const scoped = (skip: keyof typeof fields) =>
+      catalog.filter((item) =>
+        (Object.keys(fields) as Array<keyof typeof fields>).every(
+          (key) => key === skip || filters[key] === "all" || fields[key](item) === filters[key],
+        ),
+      );
     const exams = Array.from(
       new Map(
-        catalog.map((item) => [
+        scoped("contest").map((item) => [
           examKey(item),
           `${item.contest} — ${item.career} · ${item.board} · ${item.year}`,
         ]),
       ).entries(),
     ).sort((a, b) => b[1].localeCompare(a[1], "pt-BR", { numeric: true }));
     return {
-      contests: unique(catalog.map((item) => item.contest)),
-      boards: unique(catalog.map((item) => item.board)),
-      careers: unique(catalog.map((item) => item.career)),
-      years: unique(catalog.map((item) => item.year)).sort((a, b) => Number(b) - Number(a)),
-      subjects: unique(catalog.map((item) => item.subject)),
-      exams,
+      contests: unique(scoped("contest").map(fields.contest)),
+      boards: unique(scoped("board").map(fields.board)),
+      careers: unique(scoped("career").map(fields.career)),
+      years: unique(scoped("year").map(fields.year)).sort((x, y) => Number(y) - Number(x)),
+      subjects: unique(scoped("subject").map(fields.subject)),
+      states: unique(scoped("state").map(fields.state)),
+      categories: unique(scoped("category").map(fields.category)),
+      exams: exams.filter(([key]) => {
+        const [c, ca, b, y] = key.split("::");
+        return (
+          (contest === "all" || c === contest) &&
+          (career === "all" || ca === career) &&
+          (board === "all" || b === board) &&
+          (year === "all" || y === year)
+        );
+      }),
     };
-  }, [catalog]);
+  }, [catalog, contest, board, career, year, subject, source, reviewed, difficulty, state, category]);
+  // Ao mexer em um filtro individual, a "prova aplicada" escolhida antes deixa de valer.
+  const manual =
+    <T,>(setter: (value: T) => void) =>
+    (value: T) => {
+      setAppliedExam("all");
+      setter(value);
+    };
   const pool = React.useMemo(
     () =>
       catalog.filter(
@@ -248,17 +494,36 @@ function QuestionTrainer() {
           (year === "all" || item.year === year) &&
           (appliedExam === "all" || examKey(item) === appliedExam) &&
           (subject === "all" || item.subject === subject) &&
-          (source === "all" || item.source === source),
+          (source === "all" || item.source === source) &&
+          (reviewed === "all" || hasReviewedExplanation(item)) &&
+          (difficulty === "all" || item.difficulty === difficulty) &&
+          (state === "all" || item.state === state) &&
+          (category === "all" || item.category === category),
       ),
-    [catalog, contest, board, career, year, appliedExam, subject, source],
+    [
+      catalog,
+      contest,
+      board,
+      career,
+      year,
+      appliedExam,
+      subject,
+      source,
+      reviewed,
+      difficulty,
+      state,
+      category,
+    ],
   );
   const startTraining = () => {
     const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
-    setQuestions(ordered.slice(0, Number(limit)));
+    const sessionSize = isGuest ? Math.min(Number(limit), guestRemaining) : Number(limit);
+    setQuestions(ordered.slice(0, sessionSize));
     setIndex(0);
     setCorrect(0);
     setWrong(0);
     setSelected(null);
+    setStruck([]);
     setAnswered(false);
     setHelpUsed(false);
     setStartedAt(Date.now());
@@ -277,12 +542,15 @@ function QuestionTrainer() {
   const question = questions[index];
   const submit = async () => {
     if (!selected || !question || answered || !user) return;
+    if (isGuest && guestRemaining <= 0) return;
     const isCorrect = selected === question.answer;
     setAnswered(true);
     if (isCorrect) setCorrect((value) => value + 1);
     else setWrong((value) => value + 1);
     setModal("result");
-    if (user.id !== "demo-user") {
+    if (isGuest) {
+      setGuestRemaining(Math.max(0, GUEST_DAILY_LIMIT - registerGuestAnswer()));
+    } else if (user.id !== "demo-user") {
       await supabase.from("question_training_responses").insert({
         user_id: user.id,
         question_id: question.id,
@@ -300,6 +568,7 @@ function QuestionTrainer() {
   const next = () => {
     setModal(null);
     setSelected(null);
+    setStruck([]);
     setAnswered(false);
     setHelpUsed(false);
     setStartedAt(Date.now());
@@ -310,6 +579,7 @@ function QuestionTrainer() {
     setCorrect(0);
     setWrong(0);
     setSelected(null);
+    setStruck([]);
     setAnswered(false);
     setHelpUsed(false);
     setStartedAt(Date.now());
@@ -323,7 +593,7 @@ function QuestionTrainer() {
         <p>Preparando seu treino…</p>
       </Center>
     );
-  if (!user || user.id === "demo-user")
+  if (!user)
     return (
       <Center>
         <BrainCircuit className="h-10 w-10 text-primary" />
@@ -331,6 +601,26 @@ function QuestionTrainer() {
         <Button asChild>
           <Link to="/auth">Entrar</Link>
         </Button>
+      </Center>
+    );
+  if (isGuest && guestRemaining <= 0 && !started)
+    return (
+      <Center>
+        <Sparkles className="h-10 w-10 text-amber-500" />
+        <p className="max-w-sm">
+          Você usou suas {GUEST_DAILY_LIMIT} questões grátis de hoje. Crie uma conta gratuita para
+          continuar treinando, salvar seu progresso e desbloquear o acervo completo.
+        </p>
+        <div className="flex gap-2">
+          <Button asChild>
+            <Link to="/auth" search={{ mode: "register" }}>
+              Criar conta grátis
+            </Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link to="/auth">Já tenho conta</Link>
+          </Button>
+        </div>
       </Center>
     );
   if (error)
@@ -345,24 +635,60 @@ function QuestionTrainer() {
     );
   if (!started)
     return (
-      <TrainerSetup
-        total={catalog.length}
-        available={pool.length}
-        choices={choices}
-        values={{ contest, board, career, year, appliedExam, subject, source, limit, orderMode }}
-        setters={{
-          setContest,
-          setBoard,
-          setCareer,
-          setYear,
-          setAppliedExam: selectAppliedExam,
-          setSubject,
-          setSource,
-          setLimit,
-          setOrderMode,
-        }}
-        start={startTraining}
-      />
+      <div className="space-y-4">
+        {isGuest && (
+          <div className="mx-auto max-w-4xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+            <span className="font-bold">Modo visitante:</span> você tem {guestRemaining} de{" "}
+            {GUEST_DAILY_LIMIT} questões grátis hoje, só do acervo de provas oficiais.{" "}
+            <Link to="/auth" search={{ mode: "register" }} className="font-bold underline">
+              Crie sua conta grátis
+            </Link>{" "}
+            para treinar sem limite e desbloquear as questões autorais.
+          </div>
+        )}
+        {hidden > 0 && (
+          <div className="mx-auto max-w-4xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+            {hidden} questão(ões) de legislação estão ocultas até a vigência ser conferida no
+            Planalto.
+          </div>
+        )}
+        <TrainerSetup
+          total={catalog.length}
+          available={pool.length}
+          choices={choices}
+          values={{
+            contest,
+            board,
+            career,
+            year,
+            appliedExam,
+            subject,
+            source,
+            reviewed,
+            difficulty,
+            state,
+            category,
+            limit,
+            orderMode,
+          }}
+          setters={{
+            setContest: manual(setContest),
+            setBoard: manual(setBoard),
+            setCareer: manual(setCareer),
+            setYear: manual(setYear),
+            setAppliedExam: selectAppliedExam,
+            setSubject: manual(setSubject),
+            setSource: manual(setSource),
+            setReviewed: manual(setReviewed),
+            setDifficulty: manual(setDifficulty),
+            setState: manual(setState),
+            setCategory: manual(setCategory),
+            setLimit,
+            setOrderMode,
+          }}
+          start={startTraining}
+        />
+      </div>
     );
   if (!questions.length)
     return (
@@ -378,8 +704,27 @@ function QuestionTrainer() {
     );
 
   const isCorrect = selected === question.answer;
+  const parsed = parseQuestion(question.text);
+  const hasOptions = parsed.options.length > 0;
+  const explanation = splitExplanation(question.explanation);
+  const correctOption = parsed.options.find((option) => option.letter === question.answer);
+  const certoErrado = !hasOptions && /CEBRASPE|CESPE/i.test(question.board);
+  const labelFor = (answer: Answer) =>
+    hasOptions ? `Alternativa ${answer}` : answerLabel(answer, question.board);
+  const chooseOption = (letter: Answer) => {
+    if (answered) return;
+    setStruck((items) => items.filter((item) => item !== letter));
+    setSelected(letter);
+  };
+  const toggleStrike = (letter: Answer) => {
+    if (answered) return;
+    setStruck((items) =>
+      items.includes(letter) ? items.filter((item) => item !== letter) : [...items, letter],
+    );
+    if (selected === letter) setSelected(null);
+  };
   return (
-    <div className="mx-auto max-w-4xl space-y-4 pb-8">
+    <div className="trainer-session-shell mx-auto max-w-4xl space-y-4 pb-8">
       <header className="flex flex-wrap items-center justify-between gap-3">
         <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
           <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
@@ -391,7 +736,7 @@ function QuestionTrainer() {
           <Badge variant="outline">Não afeta ranking</Badge>
         </div>
       </header>
-      <div className="rounded-2xl border bg-card px-4 py-3 shadow-sm">
+      <div className="session-status-bar rounded-xl border bg-card px-4 py-3 shadow-sm">
         <div className="mb-2 flex items-center justify-between text-xs">
           <span className="font-bold">
             Questão {index + 1} de {questions.length}
@@ -403,10 +748,10 @@ function QuestionTrainer() {
         <Progress value={(index / questions.length) * 100} className="h-1.5" />
       </div>
       <Card
-        className="overflow-hidden border-0 shadow-xl ring-1 ring-border/70 animate-in fade-in slide-in-from-bottom-3 duration-300"
+        className="question-window overflow-hidden border-0 shadow-xl ring-1 ring-border/70 animate-in fade-in slide-in-from-bottom-3 duration-300"
         key={question.id}
       >
-        <div className="h-1 bg-gradient-to-r from-emerald-500 via-sky-500 to-indigo-500" />
+        <div className="h-1 bg-gradient-to-r from-amber-500 via-sky-500 to-blue-800" />
         <CardContent className="p-5 md:p-7">
           <div className="mb-5 flex flex-wrap gap-2">
             <Badge>{question.board}</Badge>
@@ -414,22 +759,96 @@ function QuestionTrainer() {
             <Badge variant="outline">
               {question.contest} · {question.year}
             </Badge>
+            <Badge variant="outline" className={cn("font-bold", DIFFICULTY_STYLE[question.difficulty])}>
+              {DIFFICULTY_LABEL[question.difficulty]}
+            </Badge>
           </div>
-          <p className="text-base font-medium leading-7 text-foreground md:text-lg">
-            {question.text}
+          {parsed.base && (
+            <details
+              open
+              className="mb-4 rounded-xl border bg-muted/40 [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary className="flex cursor-pointer select-none items-center justify-between px-4 py-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
+                {parsed.baseLabel}
+                <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
+              </summary>
+              <div className="max-h-80 overflow-y-auto whitespace-pre-line px-4 pb-4 text-sm leading-7 text-foreground">
+                {parsed.base}
+              </div>
+            </details>
+          )}
+          <p className="whitespace-pre-line text-base font-medium leading-7 text-foreground md:text-lg">
+            {parsed.stem}
           </p>
           <p className="mt-5 text-xs font-black uppercase tracking-wider text-muted-foreground">
-            {/CEBRASPE|CESPE/i.test(question.board)
-              ? "Julgue o item"
-              : "Assinale a alternativa correta"}
+            {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
           </p>
+          {hasOptions && (
+            <div className="mt-3 space-y-2">
+              {parsed.options.map((option) => {
+                const isStruck = struck.includes(option.letter);
+                const isSelected = selected === option.letter;
+                const isRight = answered && option.letter === question.answer;
+                const isWrong = answered && isSelected && option.letter !== question.answer;
+                return (
+                  <div key={option.letter} className="flex items-start gap-2">
+                    <button
+                      type="button"
+                      aria-pressed={isSelected}
+                      disabled={answered}
+                      onClick={() => chooseOption(option.letter)}
+                      className={cn(
+                        "group flex flex-1 items-start gap-3 rounded-xl border-2 border-border bg-background p-3 text-left text-sm leading-6 transition-all duration-200 hover:border-primary hover:bg-primary/5 disabled:hover:bg-background",
+                        isStruck && "opacity-50",
+                        isSelected &&
+                          !answered &&
+                          "border-blue-600 bg-blue-50 ring-4 ring-blue-600/10 hover:bg-blue-50",
+                        isRight && "border-emerald-500 bg-emerald-50 hover:bg-emerald-50",
+                        isWrong && "border-rose-500 bg-rose-50 hover:bg-rose-50",
+                      )}
+                    >
+                      <span
+                        className={cn(
+                          "mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-muted text-xs font-bold",
+                          isSelected && !answered && "bg-blue-600 text-white",
+                          isRight && "bg-emerald-600 text-white",
+                          isWrong && "bg-rose-600 text-white",
+                        )}
+                      >
+                        {option.letter}
+                      </span>
+                      <span className={cn(isStruck && "line-through")}>{option.text}</span>
+                    </button>
+                    <Button
+                      type="button"
+                      variant={isStruck ? "secondary" : "ghost"}
+                      size="icon"
+                      className="h-10 w-10 shrink-0"
+                      disabled={answered}
+                      aria-pressed={isStruck}
+                      aria-label={
+                        isStruck
+                          ? `Desfazer risco da alternativa ${option.letter}`
+                          : `Riscar alternativa ${option.letter}`
+                      }
+                      title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
+                      onClick={() => toggleStrike(option.letter)}
+                    >
+                      <Strikethrough className="h-4 w-4" />
+                    </Button>
+                  </div>
+                );
+              })}
+            </div>
+          )}
           <div
             className={cn(
               "mt-3 grid gap-2",
+              hasOptions && "hidden",
               boardAnswers(question.board).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
             )}
           >
-            {boardAnswers(question.board).map((answer) => (
+            {(hasOptions ? [] : boardAnswers(question.board)).map((answer) => (
               <button
                 key={answer}
                 type="button"
@@ -460,7 +879,7 @@ function QuestionTrainer() {
                 >
                   {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
                 </span>
-                {answerLabel(answer, question.board)}
+                {labelFor(answer)}
               </button>
             ))}
           </div>
@@ -508,7 +927,7 @@ function QuestionTrainer() {
                 <GuideStep
                   number="2"
                   text={
-                    /CEBRASPE|CESPE/i.test(question.board)
+                    certoErrado
                       ? "Procure termos absolutos, exceções e relações de causa. Uma única parte falsa torna o item errado."
                       : "Elimine primeiro as alternativas incompatíveis com o enunciado e compare as restantes."
                   }
@@ -541,27 +960,41 @@ function QuestionTrainer() {
                   {isCorrect ? "Resposta correta" : "Vamos corrigir este ponto"}
                 </DialogTitle>
                 <DialogDescription>
-                  Você marcou {selected ? answerLabel(selected, question.board) : "—"}. O gabarito é{" "}
-                  {answerLabel(question.answer, question.board)}.
+                  Você marcou {selected ? labelFor(selected) : "—"}. O gabarito é{" "}
+                  {labelFor(question.answer)}.
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-4">
+                {!isCorrect && (
+                  <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
+                    <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
+                      Resposta correta
+                    </p>
+                    <p className="text-sm font-bold">{labelFor(question.answer)}</p>
+                    {correctOption && (
+                      <p className="mt-1 text-sm leading-6">{correctOption.text}</p>
+                    )}
+                  </div>
+                )}
                 <div className="rounded-xl border bg-muted/30 p-4">
                   <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
-                    Explicação pedagógica
+                    Explicando de um jeito simples
                   </p>
-                  <p className="text-sm leading-6">{question.explanation}</p>
+                  <p className="text-sm leading-6">{explanation.main}</p>
                 </div>
-                <div>
-                  <p className="mb-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
-                    Como resolver melhor
+                {explanation.example && (
+                  <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 dark:bg-amber-950/30">
+                    <p className="mb-1 text-xs font-black uppercase tracking-wider text-amber-700">
+                      Exemplo do dia a dia
+                    </p>
+                    <p className="text-sm leading-6">{explanation.example}</p>
+                  </div>
+                )}
+                {question.checkedAt && question.legalBasis.length > 0 && (
+                  <p className="text-xs text-muted-foreground">
+                    Vigência conferida na fonte oficial em {formatDate(question.checkedAt)}.
                   </p>
-                  <ol className="space-y-2 text-sm">
-                    <li>1. Classifique o comando e o tema cobrado.</li>
-                    <li>2. Localize a palavra que confirma ou invalida a afirmação.</li>
-                    <li>3. Registre a regra no caderno de erros e refaça em 24 horas.</li>
-                  </ol>
-                </div>
+                )}
                 {question.legalBasis.length > 0 && (
                   <div>
                     <p className="mb-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
@@ -572,7 +1005,7 @@ function QuestionTrainer() {
                         basis.url ? (
                           <a
                             key={`${basis.url}-${basisIndex}`}
-                            href={basis.url}
+                            href={basisHref(basis)}
                             target="_blank"
                             rel="noreferrer"
                             className="block rounded-lg border p-3 text-sm font-medium text-primary hover:bg-muted"
@@ -612,6 +1045,10 @@ type SetupValues = {
   appliedExam: string;
   subject: string;
   source: string;
+  reviewed: string;
+  difficulty: string;
+  state: string;
+  category: string;
   limit: string;
   orderMode: OrderMode;
 };
@@ -623,6 +1060,10 @@ type SetupSetters = {
   setAppliedExam: (value: string) => void;
   setSubject: (value: string) => void;
   setSource: (value: string) => void;
+  setReviewed: (value: string) => void;
+  setDifficulty: (value: string) => void;
+  setState: (value: string) => void;
+  setCategory: (value: string) => void;
   setLimit: (value: string) => void;
   setOrderMode: (value: OrderMode) => void;
 };
@@ -643,6 +1084,8 @@ function TrainerSetup({
     careers: string[];
     years: string[];
     subjects: string[];
+    states: string[];
+    categories: string[];
     exams: Array<[string, string]>;
   };
   values: SetupValues;
@@ -657,16 +1100,20 @@ function TrainerSetup({
     setters.setAppliedExam("all");
     setters.setSubject("all");
     setters.setSource("all");
+    setters.setReviewed("all");
+    setters.setDifficulty("all");
+    setters.setState("all");
+    setters.setCategory("all");
   };
   return (
     <div className="mx-auto max-w-5xl space-y-5 pb-10 animate-in fade-in duration-300">
-      <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-950 via-slate-900 to-blue-950 p-6 text-white shadow-xl md:p-8">
+      <section className="question-trainer-hero tactical-feature-hero overflow-hidden rounded-2xl p-6 text-white shadow-xl md:p-8">
         <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div>
-            <Badge className="mb-4 border-white/15 bg-white/10 text-emerald-100 hover:bg-white/10">
-              <BrainCircuit className="mr-1.5 h-3.5 w-3.5" /> Treinador adaptativo
+            <Badge className="mb-4 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10">
+              <BrainCircuit className="mr-1.5 h-3.5 w-3.5" /> Treinamento de precisão
             </Badge>
-            <h1 className="text-3xl font-black md:text-4xl">Configure sua sessão de treino</h1>
+            <h1 className="text-3xl font-black md:text-4xl">Monte sua sessão de questões</h1>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
               Escolha a banca, carreira, concurso e disciplina. Aqui cada resposta recebe correção
               imediata e orientação pedagógica, sem afetar o ranking dos simulados.
@@ -677,17 +1124,17 @@ function TrainerSetup({
               <p className="text-2xl font-black">{total}</p>
               <p className="text-[10px] text-slate-300">questões ativas</p>
             </div>
-            <div className="rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-4 py-3">
-              <p className="text-2xl font-black text-emerald-300">{available}</p>
+            <div className="rounded-xl border border-amber-300/30 bg-amber-300/10 px-4 py-3">
+              <p className="text-2xl font-black text-amber-200">{available}</p>
               <p className="text-[10px] text-slate-300">na seleção</p>
             </div>
           </div>
         </div>
       </section>
-      <Card className="border-0 shadow-lg ring-1 ring-border/70">
+      <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
         <CardContent className="p-5 md:p-7">
           <div className="mb-6 flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+            <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
               <BookOpenCheck className="h-5 w-5" />
             </div>
             <div>
@@ -723,6 +1170,18 @@ function TrainerSetup({
               options={choices.careers}
             />
             <TrainerFilter
+              label="Estado"
+              value={values.state}
+              setValue={setters.setState}
+              options={choices.states}
+            />
+            <TrainerFilter
+              label="Categoria"
+              value={values.category}
+              setValue={setters.setCategory}
+              options={choices.categories}
+            />
+            <TrainerFilter
               label="Ano"
               value={values.year}
               setValue={setters.setYear}
@@ -745,6 +1204,21 @@ function TrainerSetup({
                 curated: "Autorais auditadas",
                 personal: "Meu caderno",
               }}
+            />
+            <TrainerFilter
+              label="Explicação didática"
+              value={values.reviewed}
+              setValue={setters.setReviewed}
+              options={["reviewed"]}
+              labels={{ reviewed: "Só com exemplo do dia a dia revisado" }}
+              allLabel="Todas as questões"
+            />
+            <TrainerFilter
+              label="Dificuldade"
+              value={values.difficulty}
+              setValue={setters.setDifficulty}
+              options={["fácil", "média", "difícil"]}
+              labels={{ fácil: "Fácil", média: "Média", difícil: "Difícil" }}
             />
             <TrainerFilter
               label="Quantidade"
@@ -787,11 +1261,7 @@ function TrainerSetup({
               <Button variant="outline" onClick={reset}>
                 Limpar filtros
               </Button>
-              <Button
-                disabled={!available}
-                onClick={start}
-                className="bg-emerald-600 hover:bg-emerald-700"
-              >
+              <Button disabled={!available} onClick={start} className="hero-primary-action">
                 <Sparkles className="mr-2 h-4 w-4" /> Iniciar treinamento
               </Button>
             </div>

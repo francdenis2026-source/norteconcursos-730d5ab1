@@ -69,6 +69,16 @@ interface QuestionReference {
   legalBasis: Array<{ title?: string; norma?: string; artigo?: string; url?: string }>;
 }
 
+// O Planalto marca cada artigo com uma âncora "#artN" (ex.: <a name="art205">
+// antes de "Art. 205."), então quando sabemos o artigo dá pra pular a busca
+// manual e abrir a página já rolada direto no trecho certo.
+const basisHref = (basis: { artigo?: string; url?: string }) => {
+  if (!basis.url) return undefined;
+  if (!basis.artigo || basis.url.includes("#")) return basis.url;
+  const artigoAnchor = basis.artigo.replace(/[^0-9A-Za-z-]/g, "");
+  return artigoAnchor ? `${basis.url}#art${artigoAnchor}` : basis.url;
+};
+
 interface ExamGroup {
   key: string;
   contest: string;
@@ -383,16 +393,6 @@ function StudentExamIntelligence() {
         />
       </section>
       <Timeline groups={attempts} />
-      <section className="grid gap-5 xl:grid-cols-[1.25fr_1fr]">
-        <DisciplineAnalysis metrics={subjectMetrics} />
-        <ActionPlan
-          weakest={weakest}
-          strongest={strongest}
-          omissionRate={omissionRate}
-          wrong={totalWrong}
-          blank={totalBlank}
-        />
-      </section>
       <section className="space-y-4">
         <div>
           <h2 className="text-xl font-black text-primary">Desempenho por concurso</h2>
@@ -427,6 +427,16 @@ function StudentExamIntelligence() {
             onToggle={() => void toggleExam(group)}
           />
         ))}
+      </section>
+      <section className="grid gap-5 xl:grid-cols-[1.25fr_1fr]">
+        <DisciplineAnalysis metrics={subjectMetrics} />
+        <ActionPlan
+          weakest={weakest}
+          strongest={strongest}
+          omissionRate={omissionRate}
+          wrong={totalWrong}
+          blank={totalBlank}
+        />
       </section>
     </div>
   );
@@ -740,7 +750,7 @@ function ContestCard({
                           .map((basis, index) => (
                             <a
                               key={`${reference.key}-${index}`}
-                              href={basis.url}
+                              href={basisHref(basis)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 hover:underline"

@@ -1,6 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import {
   ArrowRight,
   BarChart3,
   BookOpenCheck,
@@ -12,109 +20,98 @@ import {
   FileSearch,
   Flame,
   Gavel,
-  Landmark,
   LineChart,
   Menu,
   ScrollText,
   ShieldCheck,
   Sparkles,
-  Star,
   Target,
   Trophy,
   Zap,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { NorteBrand } from "@/components/brand/NorteBrand";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
-    title: "Norte Concurso | Preparação inteligente para concursos públicos",
+    title: "Norte Concurso | Preparação de elite para carreiras policiais",
     meta: [
       {
         name: "description",
         content:
-          "Diagnóstico de desempenho, plano adaptativo, questões e simulados para acelerar sua aprovação em concursos públicos.",
+          "Plataforma de estudo para Polícia Federal, PRF, Polícias Civis, Penais e Militares, com questões, simulados e inteligência de desempenho.",
       },
-      { property: "og:title", content: "Norte Concurso — Estude com direção" },
-      { property: "og:description", content: "Transforme esforço em evolução mensurável." },
-      { property: "og:image", content: "/hero-concurso.png" },
+      { property: "og:title", content: "Norte Concurso — Sua preparação entra em operação" },
+      {
+        property: "og:description",
+        content: "Treino orientado por dados para quem escolheu servir e proteger.",
+      },
+      { property: "og:image", content: "/media/hero-home-police.png" },
     ],
   }),
 });
 
 const tools = [
   {
-    icon: FileSearch,
-    title: "Diagnóstico de provas",
-    text: "Envie suas provas e descubra padrões de erro, lacunas e oportunidades de ganho.",
+    icon: BookOpenCheck,
+    title: "Banco policial",
+    text: "Questões de PF, PRF, Polícias Civis, Penais e Militares organizadas por banca e edital.",
   },
   {
     icon: BrainCircuit,
-    title: "Plano adaptativo com IA",
-    text: "Um roteiro que muda com seu desempenho, sua rotina e a proximidade da prova.",
-  },
-  {
-    icon: BookOpenCheck,
-    title: "Questões inteligentes",
-    text: "Treine por banca, disciplina e dificuldade com comentários pedagógicos.",
+    title: "Treinador tático",
+    text: "Sessões rápidas com correção imediata, explicação pedagógica e fonte jurídica.",
   },
   {
     icon: Trophy,
-    title: "Simulados estratégicos",
-    text: "Reproduza o ritmo da prova e acompanhe sua posição em indicadores claros.",
+    title: "Simulador de prova",
+    text: "Cronômetro, mapa de questões e diagnóstico por disciplina no ritmo da prova real.",
+  },
+  {
+    icon: FileSearch,
+    title: "Caderno de erros",
+    text: "Transforme cada falha em uma ordem de revisão clara, sem repetir estudo no escuro.",
+  },
+  {
+    icon: Target,
+    title: "Rota por edital",
+    text: "Prioridades alinhadas ao cargo, à banca, ao peso das matérias e ao seu desempenho.",
   },
   {
     icon: LineChart,
-    title: "Evolução mensurável",
-    text: "Visualize constância, domínio por matéria e projeção de desempenho.",
-  },
-  {
-    icon: Clock3,
-    title: "Foco e produtividade",
-    text: "Pomodoro, revisões e agenda integrados em um fluxo de estudo sustentável.",
+    title: "Painel de inteligência",
+    text: "Precisão, ritmo, lacunas e constância traduzidos em decisões para o próximo ciclo.",
   },
 ];
 const steps = [
   [
     "01",
-    "Defina seu alvo",
-    "Escolha carreira, banca e edital para criar uma preparação sem dispersão.",
+    "Defina a missão",
+    "Escolha carreira, cargo, banca e edital para concentrar energia no que realmente pontua.",
   ],
-  ["02", "Mapeie seu nível", "Faça um diagnóstico inicial ou envie uma prova já realizada."],
-  ["03", "Siga a rota", "Receba prioridades diárias com teoria, questões e revisões."],
-  ["04", "Ajuste e avance", "A plataforma aprende com seus resultados e recalibra o plano."],
+  ["02", "Faça o reconhecimento", "Resolva um diagnóstico e identifique riscos por disciplina."],
+  ["03", "Entre em treinamento", "Execute questões, revisões e blocos de foco com objetivo claro."],
+  ["04", "Simule sob pressão", "Teste tempo, estratégia e domínio antes do dia decisivo."],
 ];
 const careers = [
   "Polícia Federal",
-  "PRF",
-  "Tribunais",
-  "Área Fiscal",
-  "Controle",
-  "Bancárias",
+  "Polícia Rodoviária Federal",
   "Polícias Civis",
-  "Administrativas",
+  "Polícias Penais",
+  "Polícias Militares",
+  "Bombeiros Militares",
+  "Perícia Criminal",
+  "Guardas Municipais",
 ];
-
-function Brand({ light = false }: { light?: boolean }) {
-  return (
-    <span className="brand-lockup">
-      <span className="brand-mark">
-        <Star aria-hidden="true" />
-      </span>
-      <span className={light ? "text-white" : "text-primary"}>
-        Norte<span>Concurso</span>
-      </span>
-    </span>
-  );
-}
 
 function Index() {
   return (
     <div className="landing-shell">
       <header className="landing-header">
-        <div className="site-container flex h-[76px] items-center justify-between">
+        <div className="site-container flex h-16 items-center justify-between sm:h-[76px]">
           <Link to="/" aria-label="Norte Concurso — início">
-            <Brand light />
+            <NorteBrand light />
           </Link>
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Navegação principal">
             <a href="#metodo">Método</a>
@@ -136,14 +133,58 @@ function Index() {
               </Link>
             </Button>
           </div>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-white sm:hidden"
-            aria-label="Abrir menu"
-          >
-            <Menu />
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-white sm:hidden"
+                aria-label="Abrir menu"
+              >
+                <Menu />
+              </Button>
+            </SheetTrigger>
+            <SheetContent className="border-white/10 bg-[#071a2b] text-white [&>button]:text-white [&>button]:opacity-90">
+              <SheetHeader className="border-b border-white/10 pb-5 text-left">
+                <SheetTitle>
+                  <NorteBrand light />
+                </SheetTitle>
+              </SheetHeader>
+              <nav className="mt-8 grid gap-2" aria-label="Navegação móvel">
+                {[
+                  ["Método", "#metodo"],
+                  ["Centro de treino", "#plataforma"],
+                  ["Carreiras policiais", "#carreiras"],
+                  ["Planos", "#planos"],
+                ].map(([label, href]) => (
+                  <SheetClose asChild key={href}>
+                    <a
+                      href={href}
+                      className="rounded-lg border border-white/10 px-4 py-3 text-base font-bold text-white/85 hover:bg-white/10"
+                    >
+                      {label}
+                    </a>
+                  </SheetClose>
+                ))}
+              </nav>
+              <div className="mt-8 grid gap-3">
+                <SheetClose asChild>
+                  <Button
+                    variant="outline"
+                    className="border-white/20 bg-transparent text-white"
+                    asChild
+                  >
+                    <Link to="/auth">Entrar</Link>
+                  </Button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Button className="premium-button" asChild>
+                    <Link to="/auth">Começar agora</Link>
+                  </Button>
+                </SheetClose>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </header>
 
@@ -151,32 +192,32 @@ function Index() {
         <section className="hero-professional">
           <div className="hero-image" aria-hidden="true" />
           <div className="hero-grid" aria-hidden="true" />
-          <div className="site-container relative z-10 grid min-h-[760px] items-center py-28 lg:grid-cols-[1.08fr_.92fr]">
-            <div className="max-w-[720px] pt-8">
+          <div className="site-container relative z-10 grid min-h-0 items-center py-12 sm:min-h-[560px] sm:py-20 lg:min-h-[760px] lg:grid-cols-[1.08fr_.92fr] lg:py-28">
+            <div className="max-w-[720px] pt-2 sm:pt-8">
               <div className="eyebrow reveal-up">
-                <Sparkles /> Inteligência aplicada à sua aprovação
+                <ShieldCheck /> Preparação especializada em segurança pública
               </div>
               <h1 className="hero-title reveal-up delay-1">
-                Você não precisa estudar mais. Precisa estudar <em>na direção certa.</em>
+                Sua aprovação não é sorte. É <em>operação bem planejada.</em>
               </h1>
               <p className="hero-copy reveal-up delay-2">
-                Diagnóstico preciso, plano adaptativo e dados claros para transformar cada hora de
-                estudo em avanço real rumo à nomeação.
+                Conteúdo direcionado, treino por banca e simulados de alta pressão para quem mira
+                Polícia Federal, PRF, Polícias Civis, Penais e Militares.
               </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row reveal-up delay-3">
+              <div className="mt-6 flex flex-col gap-3 sm:mt-9 sm:flex-row reveal-up delay-3">
                 <Button size="lg" className="premium-button h-14 px-7 text-[15px]" asChild>
                   <Link to="/auth">
-                    Montar meu plano gratuito <ArrowRight />
+                    Iniciar minha preparação <ArrowRight />
                   </Link>
                 </Button>
                 <a href="#plataforma" className="hero-secondary">
-                  <CirclePlay /> Conhecer a plataforma
+                  <CirclePlay /> Explorar o centro de treino
                 </a>
               </div>
               <div className="hero-proof reveal-up delay-3 flex-wrap !gap-x-6 !gap-y-3">
                 <span className="flex items-center gap-2 text-xs font-bold text-white/70">
                   <ScrollText className="h-4 w-4 shrink-0 text-emerald-300" />
-                  Conteúdo com fonte oficial verificada
+                  Questões oficiais e autorais auditadas
                 </span>
                 <span className="flex items-center gap-2 text-xs font-bold text-white/70">
                   <ShieldCheck className="h-4 w-4 shrink-0 text-emerald-300" />
@@ -184,7 +225,7 @@ function Index() {
                 </span>
                 <span className="flex items-center gap-2 text-xs font-bold text-white/70">
                   <Clock3 className="h-4 w-4 shrink-0 text-emerald-300" />
-                  Seu plano pronto em minutos
+                  Evolução medida em cada sessão
                 </span>
               </div>
             </div>
@@ -211,22 +252,22 @@ function Index() {
             </div>
           </div>
           <div className="hero-stats">
-            <div className="site-container grid grid-cols-2 gap-6 md:grid-cols-4">
+            <div className="site-container grid grid-cols-2 gap-3 sm:gap-6 md:grid-cols-4">
               <div>
-                <strong>+12 mil</strong>
-                <span>questões comentadas</span>
+                <strong>PF · PRF</strong>
+                <span>carreiras federais</span>
               </div>
               <div>
-                <strong>360°</strong>
-                <span>visão do desempenho</span>
+                <strong>PC · PP</strong>
+                <span>civis e penais</span>
               </div>
               <div>
-                <strong>24h</strong>
-                <span>para seu primeiro plano</span>
+                <strong>PM · CBM</strong>
+                <span>militares e bombeiros</span>
               </div>
               <div>
-                <strong>1 rota</strong>
-                <span>feita para o seu objetivo</span>
+                <strong>1 comando</strong>
+                <span>treino, prova e evolução</span>
               </div>
             </div>
           </div>
@@ -236,12 +277,12 @@ function Index() {
           <div className="site-container">
             <div className="section-heading">
               <div>
-                <span className="section-kicker">Método Norte</span>
-                <h2>Clareza antes de velocidade.</h2>
+                <span className="section-kicker">Protocolo Norte</span>
+                <h2>Preparação é estratégia, não improviso.</h2>
               </div>
               <p>
-                Uma jornada estruturada para você saber exatamente onde está, o que fazer hoje e
-                como medir sua evolução.
+                Um ciclo objetivo para transformar edital, desempenho e tempo disponível em uma
+                rotina executável até a prova.
               </p>
             </div>
             <div className="method-grid">
@@ -266,7 +307,7 @@ function Index() {
               <div className="showcase-glow" />
               <div className="mock-window">
                 <div className="mock-top">
-                  <Brand />
+                  <NorteBrand />
                   <span>Visão geral</span>
                   <span className="mock-avatar">FD</span>
                 </div>
@@ -279,8 +320,8 @@ function Index() {
                     ))}
                   </div>
                   <div className="mock-content">
-                    <small>SEU PROGRESSO</small>
-                    <h3>Continue avançando, Franc.</h3>
+                    <small>SALA DE COMANDO</small>
+                    <h3>Próxima missão: Direito Penal.</h3>
                     <div className="mock-metrics">
                       <div>
                         <span>Taxa de acerto</span>
@@ -310,27 +351,25 @@ function Index() {
               <div className="showcase-badge">
                 <BrainCircuit />
                 <div>
-                  <small>IA NORTE</small>
-                  <strong>Plano recalibrado</strong>
+                  <small>INTELIGÊNCIA NORTE</small>
+                  <strong>Rota atualizada</strong>
                 </div>
                 <Check />
               </div>
             </div>
             <div>
-              <span className="section-kicker">Sua central de preparação</span>
-              <h2 className="feature-title">
-                Tudo conversa. Tudo aponta para a sua próxima melhor ação.
-              </h2>
+              <span className="section-kicker">Centro de operações</span>
+              <h2 className="feature-title">Cada dado aponta para a próxima ação.</h2>
               <p className="feature-copy">
-                Chega de ferramentas soltas, planilhas esquecidas e decisões no escuro. A Norte
-                integra sua rotina em uma experiência simples, profunda e acionável.
+                Questões, simulados, rotina e desempenho trabalham no mesmo painel para você entrar
+                em cada sessão sabendo o que treinar e por quê.
               </p>
               <div className="feature-list">
                 {(
                   [
-                    ["Diagnóstico que encontra a causa do erro", FileSearch],
-                    ["Prioridades recalculadas pelo seu desempenho", BrainCircuit],
-                    ["Indicadores fáceis de entender e usar", LineChart],
+                    ["Diagnóstico por disciplina e banca", FileSearch],
+                    ["Prioridade ajustada ao seu desempenho", BrainCircuit],
+                    ["Indicadores claros para decidir rápido", LineChart],
                   ] as [string, LucideIcon][]
                 ).map(([label, Icon]) => (
                   <div key={label}>
@@ -347,7 +386,7 @@ function Index() {
                 asChild
               >
                 <Link to="/auth">
-                  Explorar a plataforma <ArrowRight />
+                  Conhecer o centro de treino <ArrowRight />
                 </Link>
               </Button>
             </div>
@@ -358,12 +397,12 @@ function Index() {
           <div className="site-container">
             <div className="section-heading light">
               <div>
-                <span className="section-kicker">Ecossistema completo</span>
-                <h2>Da dúvida à evolução.</h2>
+                <span className="section-kicker">Equipamento de preparação</span>
+                <h2>Ferramentas para cada fase da missão.</h2>
               </div>
               <p>
-                Recursos que trabalham juntos para manter foco, ritmo e confiança até o dia da
-                prova.
+                Do primeiro diagnóstico ao último simulado: um fluxo contínuo de treino, correção e
+                ajuste.
               </p>
             </div>
             <div className="tools-grid">
@@ -375,7 +414,7 @@ function Index() {
                   <h3>{title}</h3>
                   <p>{text}</p>
                   <a href="#planos">
-                    Saiba mais <ArrowRight />
+                    Ver planos <ArrowRight />
                   </a>
                 </article>
               ))}
@@ -385,14 +424,14 @@ function Index() {
 
         <section id="carreiras" className="section-pad career-section">
           <div className="site-container text-center">
-            <span className="section-kicker">Do seu primeiro edital à nomeação</span>
+            <span className="section-kicker">Foco total em segurança pública</span>
             <h2 className="mx-auto mt-3 max-w-3xl text-4xl font-extrabold tracking-[-.04em] text-primary md:text-5xl">
-              Uma plataforma. Todas as carreiras que movem o Brasil.
+              A plataforma de quem escolheu servir e proteger.
             </h2>
             <div className="career-cloud">
               {careers.map((career, i) => (
                 <span key={career} className={i < 3 ? "featured" : ""}>
-                  <Landmark />
+                  <ShieldCheck />
                   {career}
                 </span>
               ))}
@@ -400,12 +439,13 @@ function Index() {
             <div className="testimonial-card">
               <Gavel className="h-8 w-8" aria-hidden="true" />
               <h3 className="mt-5 text-center text-xl font-black tracking-tight text-primary">
-                Conteúdo com a seriedade que sua aprovação exige
+                Base de estudo com rastreabilidade jurídica
               </h3>
               <ul className="mx-auto mt-6 max-w-xl space-y-3 text-left text-sm text-slate-600">
                 <li className="flex items-start gap-3">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-                  Toda questão é vinculada ao edital ativo e a uma fonte oficial verificada.
+                  Questões jurídicas sinalizam fonte, referência e data de verificação quando
+                  aplicável.
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
@@ -414,7 +454,8 @@ function Index() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-                  Verificação de vigência antes de qualquer conteúdo jurídico ser publicado.
+                  Conteúdos auditados são identificados para você saber exatamente o que está
+                  estudando.
                 </li>
               </ul>
             </div>
@@ -426,37 +467,46 @@ function Index() {
             <div className="mx-auto mb-14 max-w-2xl text-center">
               <span className="section-kicker">Planos transparentes</span>
               <h2 className="mt-3 text-4xl font-extrabold tracking-[-.04em] text-primary md:text-5xl">
-                Invista na preparação que sabe para onde ir.
+                Escolha seu nível de operação.
               </h2>
             </div>
             <div className="pricing-grid">
               <Pricing
-                name="Essencial"
+                planId="free"
+                name="Gratuito"
                 price="0"
-                description="Para organizar os primeiros passos."
-                features={["10 questões por dia", "Diagnóstico inicial", "Plano básico"]}
+                description="Para iniciar o reconhecimento do terreno."
+                features={["10 questões por dia", "Análise básica", "Cronômetro de estudos"]}
+              />
+              <Pricing
+                planId="essential"
+                name="Essencial"
+                price="19,90"
+                description="Para ganhar ritmo com questões e simulados."
+                features={["100 questões por dia", "2 simulados completos", "Plano de estudos"]}
               />
               <Pricing
                 featured
+                planId="plus"
                 name="Plus"
-                price="39,90"
-                description="Para acelerar com inteligência e constância."
+                price="29,90"
+                description="Para uma preparação contínua e sem limites."
                 features={[
-                  "Tudo do Essencial",
-                  "Diagnóstico completo com IA",
+                  "Questões ilimitadas",
+                  "Simulados ilimitados",
+                  "Análise avançada",
                   "Plano adaptativo",
-                  "150 ações de IA por mês",
-                  "Assistente de estudos",
                 ]}
               />
               <Pricing
+                planId="premium"
                 name="Premium"
-                price="69,90"
-                description="Para uma preparação de alta performance."
+                price="49,90"
+                description="Para operar com acompanhamento completo."
                 features={[
-                  "Tudo do Plus",
-                  "500 ações de IA por mês",
-                  "30 provas processadas",
+                  "Questões e simulados ilimitados",
+                  "Relatórios consolidados",
+                  "Plano personalizado",
                   "Suporte prioritário",
                 ]}
               />
@@ -467,16 +517,14 @@ function Index() {
         <section className="final-cta">
           <div className="site-container relative z-10 text-center">
             <span className="eyebrow mx-auto">
-              <Zap /> Seu próximo ciclo começa agora
+              <Zap /> Pronto para entrar em operação
             </span>
             <h2>
-              Esforço sem direção cansa.
+              Disciplina sem estratégia desgasta.
               <br />
-              Esforço inteligente aprova.
+              Treino orientado aprova.
             </h2>
-            <p>
-              Crie sua conta, defina seu objetivo e receba os próximos passos da sua preparação.
-            </p>
+            <p>Defina sua carreira, faça o diagnóstico e comece o primeiro ciclo de treino.</p>
             <Button size="lg" className="premium-button mt-8 h-14 px-8" asChild>
               <Link to="/auth">
                 Começar gratuitamente <ArrowRight />
@@ -489,9 +537,9 @@ function Index() {
       <footer className="landing-footer">
         <div className="site-container grid gap-12 py-14 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
-            <Brand light />
+            <NorteBrand light />
             <p className="mt-5 max-w-xs">
-              Tecnologia, método e clareza para transformar preparação em aprovação.
+              Inteligência de estudo para as carreiras que protegem o Brasil.
             </p>
           </div>
           <FooterColumn
@@ -519,12 +567,14 @@ function Index() {
 }
 
 function Pricing({
+  planId,
   name,
   price,
   description,
   features,
   featured = false,
 }: {
+  planId: string;
   name: string;
   price: string;
   description: string;
@@ -539,9 +589,9 @@ function Pricing({
         <p>{description}</p>
       </div>
       <div className="price">
-        <small>R$</small>
+        <small>{price === "0" ? "" : "R$"}</small>
         <strong>{price}</strong>
-        <span>{price !== "0" ? "/mês" : "/15 dias"}</span>
+        <span>{price !== "0" ? "/mês" : "gratuito"}</span>
       </div>
       <ul>
         {features.map((f) => (
@@ -558,22 +608,39 @@ function Pricing({
         variant={featured ? "default" : "outline"}
         asChild
       >
-        <Link to="/auth">
-          Escolher {name}
-          <ArrowRight />
-        </Link>
+        {planId === "free" ? (
+          <Link to="/auth">
+            Começar gratuitamente
+            <ArrowRight />
+          </Link>
+        ) : (
+          <Link to="/checkout/$planId" params={{ planId }}>
+            Escolher {name}
+            <ArrowRight />
+          </Link>
+        )}
       </Button>
     </article>
   );
 }
 function FooterColumn({ title, links }: { title: string; links: string[] }) {
+  const destinations: Record<string, string> = {
+    Método: "#metodo",
+    Ferramentas: "#plataforma",
+    Planos: "#planos",
+    Carreiras: "#carreiras",
+    "Sobre nós": "#metodo",
+    Privacidade: "/privacy",
+    "Termos de uso": "/terms",
+    Suporte: "/auth",
+  };
   return (
     <div>
       <h4>{title}</h4>
       <ul>
         {links.map((link) => (
           <li key={link}>
-            <a href="#">{link}</a>
+            <a href={destinations[link] ?? "/"}>{link}</a>
           </li>
         ))}
       </ul>
