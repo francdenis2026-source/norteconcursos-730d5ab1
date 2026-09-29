@@ -642,9 +642,6 @@ function ProfessionalSimulator() {
         <Leaderboard rows={leaderboard} userId={user?.id} />
       </div>
       <CatalogOverview catalog={catalog} />
-      <footer className="rounded-2xl border bg-card px-5 py-4 text-center text-xs text-muted-foreground">
-        Desenvolvido por <strong className="text-foreground">Franc D&apos;nis</strong> · Feijó-AC
-      </footer>
       <Dialog open={startWarningOpen} onOpenChange={setStartWarningOpen}>
         <DialogContent className="sm:max-w-lg">
           <DialogHeader>
@@ -1304,9 +1301,6 @@ function ResultView({
           })}
         </CardContent>
       </Card>
-      <footer className="text-center text-xs text-muted-foreground">
-        Desenvolvido por <strong>Franc D&apos;nis</strong> · Feijó-AC
-      </footer>
     </div>
   );
 }

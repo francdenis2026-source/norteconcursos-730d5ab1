@@ -297,6 +297,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
         <div className="flex-1 overflow-y-auto p-4 md:p-8 lg:p-10">
           <div className="mx-auto max-w-[1440px]">{children}</div>
+          <footer className="mx-auto mt-10 max-w-[1440px] border-t pt-4 text-center text-xs text-muted-foreground no-print">
+            Plataforma desenvolvida por <strong className="text-foreground">Franc D&apos;nis</strong>{" "}
+            · Feijó-AC
+          </footer>
         </div>
 
         {/* Bottom Nav Mobile */}

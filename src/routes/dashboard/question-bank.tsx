@@ -280,8 +280,7 @@ function QuestionBankPage() {
         <Collection title="Acervo por banca" icon={FileCheck2} rows={byBoard} />
       </div>
       <footer className="rounded-2xl border bg-card px-5 py-4 text-center text-xs text-muted-foreground">
-        Acervo educacional com governança editorial · Desenvolvido por{" "}
-        <strong className="text-foreground">Franc D&apos;nis</strong> · Feijó-AC
+        Acervo educacional com governança editorial
       </footer>
     </div>
   );

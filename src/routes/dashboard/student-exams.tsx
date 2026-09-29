@@ -383,16 +383,6 @@ function StudentExamIntelligence() {
         />
       </section>
       <Timeline groups={attempts} />
-      <section className="grid gap-5 xl:grid-cols-[1.25fr_1fr]">
-        <DisciplineAnalysis metrics={subjectMetrics} />
-        <ActionPlan
-          weakest={weakest}
-          strongest={strongest}
-          omissionRate={omissionRate}
-          wrong={totalWrong}
-          blank={totalBlank}
-        />
-      </section>
       <section className="space-y-4">
         <div>
           <h2 className="text-xl font-black text-primary">Desempenho por concurso</h2>
@@ -427,6 +417,16 @@ function StudentExamIntelligence() {
             onToggle={() => void toggleExam(group)}
           />
         ))}
+      </section>
+      <section className="grid gap-5 xl:grid-cols-[1.25fr_1fr]">
+        <DisciplineAnalysis metrics={subjectMetrics} />
+        <ActionPlan
+          weakest={weakest}
+          strongest={strongest}
+          omissionRate={omissionRate}
+          wrong={totalWrong}
+          blank={totalBlank}
+        />
       </section>
     </div>
   );
