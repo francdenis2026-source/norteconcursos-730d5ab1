@@ -24,6 +24,9 @@ import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 
 export const Route = createFileRoute("/auth")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    mode: search.mode === "register" ? "register" : undefined,
+  }),
   component: AuthPage,
   head: () => ({
     title: "Acessar plataforma | Norte Concurso",
@@ -32,7 +35,8 @@ export const Route = createFileRoute("/auth")({
 });
 
 function AuthPage() {
-  const [mode, setMode] = useState<"login" | "register">("login");
+  const routeSearch = Route.useSearch();
+  const [mode, setMode] = useState<"login" | "register">(routeSearch.mode || "login");
   const [email, setEmail] = useState("");
   const [pin, setPin] = useState("");
   const [name, setName] = useState("");

@@ -19,6 +19,11 @@ import {
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import {
+  GUEST_DAILY_LIMIT,
+  getGuestRemainingToday,
+  registerGuestAnswer,
+} from "@/lib/guestQuota";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -56,6 +61,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
 type Answer = "A" | "B" | "C" | "D" | "E";
 type Source = "official" | "curated" | "personal";
 type OrderMode = "random" | "exam";
+type Difficulty = "fácil" | "média" | "difícil";
 type LegalBasis = { title?: string; lei?: string; artigo?: string; url?: string };
 type Question = {
   id: string;
@@ -71,6 +77,24 @@ type Question = {
   explanation: string;
   legalBasis: LegalBasis[];
   checkedAt: string | null;
+  difficulty: Difficulty;
+};
+
+const normalizeDifficulty = (value: unknown): Difficulty => {
+  const text = String(value ?? "").toLowerCase();
+  if (text.startsWith("fác") || text.startsWith("fac")) return "fácil";
+  if (text.startsWith("dif")) return "difícil";
+  return "média";
+};
+const DIFFICULTY_LABEL: Record<Difficulty, string> = {
+  fácil: "Fácil",
+  média: "Média",
+  difícil: "Difícil",
+};
+const DIFFICULTY_STYLE: Record<Difficulty, string> = {
+  fácil: "border-emerald-300 bg-emerald-50 text-emerald-700",
+  média: "border-amber-300 bg-amber-50 text-amber-700",
+  difícil: "border-rose-300 bg-rose-50 text-rose-700",
 };
 
 const parseBasis = (value: unknown): LegalBasis[] =>
@@ -194,6 +218,11 @@ function QuestionTrainer() {
   const routeFilters = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
   const userId = user?.id;
+  const isGuest = !authLoading && (!user || userId === "demo-user");
+  const [guestRemaining, setGuestRemaining] = React.useState(GUEST_DAILY_LIMIT);
+  React.useEffect(() => {
+    if (isGuest) setGuestRemaining(getGuestRemainingToday());
+  }, [isGuest]);
   const [catalog, setCatalog] = React.useState<Question[]>([]);
   const [hidden, setHidden] = React.useState(0);
   const [questions, setQuestions] = React.useState<Question[]>([]);
@@ -206,6 +235,7 @@ function QuestionTrainer() {
   const [subject, setSubject] = React.useState(routeFilters.subject || "all");
   const [source, setSource] = React.useState(routeFilters.source || "all");
   const [reviewed, setReviewed] = React.useState(routeFilters.reviewed || "all");
+  const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState("20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
   const [loading, setLoading] = React.useState(true);
@@ -221,7 +251,13 @@ function QuestionTrainer() {
   const [startedAt, setStartedAt] = React.useState(Date.now());
 
   React.useEffect(() => {
-    if (authLoading || !userId || userId === "demo-user") {
+    if (authLoading) return;
+    // Visitante sem cadastro (isGuest): degustação limitada ao acervo de
+    // provas oficiais (nunca às questões autorais/premium nem ao caderno
+    // pessoal, que exigem login) — ver src/lib/guestQuota.ts para o
+    // controle dos 10/dia. Sem sessão e sem ser o guest de degustação não
+    // há nada pra carregar.
+    if (!isGuest && (!userId || userId === "demo-user")) {
       setLoading(false);
       return;
     }
@@ -244,22 +280,26 @@ function QuestionTrainer() {
         const [officialResult, curatedResult, personalResult] = await Promise.all([
           query(
             "official_exam_questions",
-            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis",
+            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,difficulty",
             "law_version_checked_at,legal_review_required,legal_audit_completed",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
           ),
-          query(
-            "curated_question_catalog",
-            "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis",
-            "law_version_checked_at",
-            (builder) => builder.eq("content_status", "active"),
-          ),
-          query(
-            "question_bank",
-            "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status",
-            "law_version_checked_at",
-            (builder) => builder.eq("user_id", userId),
-          ),
+          isGuest
+            ? Promise.resolve({ data: [], error: null, gated: true })
+            : query(
+                "curated_question_catalog",
+                "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty",
+                "law_version_checked_at",
+                (builder) => builder.eq("content_status", "active"),
+              ),
+          isGuest || !userId
+            ? Promise.resolve({ data: [], error: null, gated: true })
+            : query(
+                "question_bank",
+                "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status,difficulty",
+                "law_version_checked_at",
+                (builder) => builder.eq("user_id", userId),
+              ),
         ]);
         let hiddenCount = 0;
         const gate = (
@@ -299,6 +339,7 @@ function QuestionTrainer() {
             ),
             legalBasis: parseBasis(row.legal_basis),
             checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
+            difficulty: normalizeDifficulty(row.difficulty),
           })),
           ...gate(
             (curatedResult.data || []) as Array<Record<string, unknown>>,
@@ -317,6 +358,7 @@ function QuestionTrainer() {
             explanation: String(row.explanation || "Explicação editorial em revisão."),
             legalBasis: parseBasis(row.legal_basis),
             checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
+            difficulty: normalizeDifficulty(row.difficulty),
           })),
           ...((personalResult.data || []) as Array<Record<string, unknown>>)
             .filter(
@@ -342,6 +384,7 @@ function QuestionTrainer() {
               explanation: String(row.explanation || "Explicação pedagógica em revisão."),
               legalBasis: parseBasis(row.legal_basis),
               checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
+              difficulty: normalizeDifficulty(row.difficulty),
             })),
         ];
         if (active) {
@@ -360,12 +403,12 @@ function QuestionTrainer() {
     return () => {
       active = false;
     };
-  }, [authLoading, userId]);
+  }, [authLoading, userId, isGuest]);
 
   // Cada lista mostra só o que existe combinado com os OUTROS filtros já escolhidos,
   // para nunca montar uma combinação sem questões.
   const choices = React.useMemo(() => {
-    const filters = { contest, board, career, year, subject, source, reviewed } as const;
+    const filters = { contest, board, career, year, subject, source, reviewed, difficulty } as const;
     const fields = {
       contest: (item: Question) => item.contest,
       board: (item: Question) => item.board,
@@ -374,6 +417,7 @@ function QuestionTrainer() {
       subject: (item: Question) => item.subject,
       source: (item: Question) => item.source,
       reviewed: (item: Question) => (hasReviewedExplanation(item) ? "reviewed" : "pending"),
+      difficulty: (item: Question) => item.difficulty,
     };
     const scoped = (skip: keyof typeof fields) =>
       catalog.filter((item) =>
@@ -405,7 +449,7 @@ function QuestionTrainer() {
         );
       }),
     };
-  }, [catalog, contest, board, career, year, subject, source, reviewed]);
+  }, [catalog, contest, board, career, year, subject, source, reviewed, difficulty]);
   // Ao mexer em um filtro individual, a "prova aplicada" escolhida antes deixa de valer.
   const manual =
     <T,>(setter: (value: T) => void) =>
@@ -424,13 +468,15 @@ function QuestionTrainer() {
           (appliedExam === "all" || examKey(item) === appliedExam) &&
           (subject === "all" || item.subject === subject) &&
           (source === "all" || item.source === source) &&
-          (reviewed === "all" || hasReviewedExplanation(item)),
+          (reviewed === "all" || hasReviewedExplanation(item)) &&
+          (difficulty === "all" || item.difficulty === difficulty),
       ),
-    [catalog, contest, board, career, year, appliedExam, subject, source, reviewed],
+    [catalog, contest, board, career, year, appliedExam, subject, source, reviewed, difficulty],
   );
   const startTraining = () => {
     const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
-    setQuestions(ordered.slice(0, Number(limit)));
+    const sessionSize = isGuest ? Math.min(Number(limit), guestRemaining) : Number(limit);
+    setQuestions(ordered.slice(0, sessionSize));
     setIndex(0);
     setCorrect(0);
     setWrong(0);
@@ -454,12 +500,15 @@ function QuestionTrainer() {
   const question = questions[index];
   const submit = async () => {
     if (!selected || !question || answered || !user) return;
+    if (isGuest && guestRemaining <= 0) return;
     const isCorrect = selected === question.answer;
     setAnswered(true);
     if (isCorrect) setCorrect((value) => value + 1);
     else setWrong((value) => value + 1);
     setModal("result");
-    if (user.id !== "demo-user") {
+    if (isGuest) {
+      setGuestRemaining(Math.max(0, GUEST_DAILY_LIMIT - registerGuestAnswer()));
+    } else if (user.id !== "demo-user") {
       await supabase.from("question_training_responses").insert({
         user_id: user.id,
         question_id: question.id,
@@ -502,7 +551,7 @@ function QuestionTrainer() {
         <p>Preparando seu treino…</p>
       </Center>
     );
-  if (!user || user.id === "demo-user")
+  if (!user)
     return (
       <Center>
         <BrainCircuit className="h-10 w-10 text-primary" />
@@ -510,6 +559,26 @@ function QuestionTrainer() {
         <Button asChild>
           <Link to="/auth">Entrar</Link>
         </Button>
+      </Center>
+    );
+  if (isGuest && guestRemaining <= 0 && !started)
+    return (
+      <Center>
+        <Sparkles className="h-10 w-10 text-amber-500" />
+        <p className="max-w-sm">
+          Você usou suas {GUEST_DAILY_LIMIT} questões grátis de hoje. Crie uma conta gratuita para
+          continuar treinando, salvar seu progresso e desbloquear o acervo completo.
+        </p>
+        <div className="flex gap-2">
+          <Button asChild>
+            <Link to="/auth" search={{ mode: "register" }}>
+              Criar conta grátis
+            </Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link to="/auth">Já tenho conta</Link>
+          </Button>
+        </div>
       </Center>
     );
   if (error)
@@ -525,6 +594,16 @@ function QuestionTrainer() {
   if (!started)
     return (
       <div className="space-y-4">
+        {isGuest && (
+          <div className="mx-auto max-w-4xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+            <span className="font-bold">Modo visitante:</span> você tem {guestRemaining} de{" "}
+            {GUEST_DAILY_LIMIT} questões grátis hoje, só do acervo de provas oficiais.{" "}
+            <Link to="/auth" search={{ mode: "register" }} className="font-bold underline">
+              Crie sua conta grátis
+            </Link>{" "}
+            para treinar sem limite e desbloquear as questões autorais.
+          </div>
+        )}
         {hidden > 0 && (
           <div className="mx-auto max-w-4xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
             {hidden} questão(ões) de legislação estão ocultas até a vigência ser conferida no
@@ -544,6 +623,7 @@ function QuestionTrainer() {
             subject,
             source,
             reviewed,
+            difficulty,
             limit,
             orderMode,
           }}
@@ -556,6 +636,7 @@ function QuestionTrainer() {
             setSubject: manual(setSubject),
             setSource: manual(setSource),
             setReviewed: manual(setReviewed),
+            setDifficulty: manual(setDifficulty),
             setLimit,
             setOrderMode,
           }}
@@ -631,6 +712,9 @@ function QuestionTrainer() {
             <Badge variant="outline">{question.subject}</Badge>
             <Badge variant="outline">
               {question.contest} · {question.year}
+            </Badge>
+            <Badge variant="outline" className={cn("font-bold", DIFFICULTY_STYLE[question.difficulty])}>
+              {DIFFICULTY_LABEL[question.difficulty]}
             </Badge>
           </div>
           {parsed.base && (
@@ -916,6 +1000,7 @@ type SetupValues = {
   subject: string;
   source: string;
   reviewed: string;
+  difficulty: string;
   limit: string;
   orderMode: OrderMode;
 };
@@ -928,6 +1013,7 @@ type SetupSetters = {
   setSubject: (value: string) => void;
   setSource: (value: string) => void;
   setReviewed: (value: string) => void;
+  setDifficulty: (value: string) => void;
   setLimit: (value: string) => void;
   setOrderMode: (value: OrderMode) => void;
 };
@@ -963,6 +1049,7 @@ function TrainerSetup({
     setters.setSubject("all");
     setters.setSource("all");
     setters.setReviewed("all");
+    setters.setDifficulty("all");
   };
   return (
     <div className="mx-auto max-w-5xl space-y-5 pb-10 animate-in fade-in duration-300">
@@ -1059,6 +1146,13 @@ function TrainerSetup({
               options={["reviewed"]}
               labels={{ reviewed: "Só com exemplo do dia a dia revisado" }}
               allLabel="Todas as questões"
+            />
+            <TrainerFilter
+              label="Dificuldade"
+              value={values.difficulty}
+              setValue={setters.setDifficulty}
+              options={["fácil", "média", "difícil"]}
+              labels={{ fácil: "Fácil", média: "Média", difícil: "Difícil" }}
             />
             <TrainerFilter
               label="Quantidade"
