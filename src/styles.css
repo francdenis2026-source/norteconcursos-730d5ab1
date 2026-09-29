@@ -2283,4 +2283,270 @@ iframe[src*="gpteng.co"] {
   .auth-panel {
     min-height: 100dvh;
   }
+
+  .landing-shell .site-container {
+    width: calc(100% - 24px);
+  }
+
+  .landing-header .site-container {
+    height: 56px;
+  }
+
+  .landing-header .norte-brand__mark {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .landing-header .norte-brand__type strong {
+    font-size: 0.9rem;
+  }
+
+  .hero-professional > .site-container {
+    padding-block: 28px 24px;
+  }
+
+  .hero-professional .eyebrow {
+    max-width: 92%;
+    padding: 6px 9px;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-title {
+    margin-top: 14px;
+    font-size: clamp(1.85rem, 8.2vw, 2.3rem);
+    line-height: 1;
+  }
+
+  .hero-copy {
+    margin-top: 14px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .hero-professional .premium-button,
+  .hero-secondary {
+    height: 44px !important;
+    font-size: 13px;
+  }
+
+  .hero-professional .hero-proof {
+    margin-top: 18px;
+    gap: 8px;
+  }
+
+  .hero-professional .hero-proof span {
+    font-size: 10px;
+  }
+
+  .hero-professional .hero-proof span:nth-child(n + 2) {
+    display: none;
+  }
+
+  .hero-stats {
+    padding-block: 12px;
+  }
+
+  .hero-stats .site-container {
+    gap: 9px;
+  }
+
+  .hero-stats .site-container > div {
+    padding-left: 9px;
+  }
+
+  .hero-stats strong {
+    font-size: 14px;
+  }
+
+  .hero-stats span {
+    margin-top: 1px;
+    font-size: 8px;
+  }
+
+  .section-pad {
+    padding-block: 34px;
+  }
+
+  .section-heading {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .section-heading h2,
+  .feature-title,
+  .career-section h2,
+  .final-cta h2 {
+    font-size: 1.72rem !important;
+    line-height: 1.05;
+  }
+
+  .section-heading > p,
+  .feature-copy {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .method-grid,
+  .tools-grid {
+    gap: 9px;
+  }
+
+  .method-card {
+    min-height: 0;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .method-line {
+    margin: 9px 0 13px;
+  }
+
+  .method-card h3 {
+    font-size: 16px;
+  }
+
+  .method-card p {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .method-arrow {
+    display: none;
+  }
+
+  .landing-shell #plataforma > .site-container {
+    gap: 24px;
+  }
+
+  .dashboard-showcase {
+    padding-block: 6px;
+  }
+
+  .mock-top {
+    min-height: 44px;
+    height: 44px;
+  }
+
+  .feature-list {
+    gap: 7px;
+  }
+
+  .feature-list > div {
+    padding: 9px 10px;
+  }
+
+  .feature-list + a,
+  .feature-list + button {
+    margin-top: 16px !important;
+    height: 42px !important;
+  }
+
+  .tools-grid article {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  .tools-grid article > span {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tools-grid article h3 {
+    margin-top: 12px;
+    font-size: 16px;
+  }
+
+  .tools-grid article p {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .tools-grid article a {
+    margin-top: 12px;
+    font-size: 11px;
+  }
+
+  .career-section h2 {
+    margin-top: 8px;
+  }
+
+  .career-cloud {
+    gap: 7px;
+    margin-top: 20px;
+  }
+
+  .career-cloud span {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .testimonial-card {
+    margin-top: 22px;
+    padding: 18px 14px;
+  }
+
+  .testimonial-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .testimonial-card ul {
+    margin-top: 14px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .final-cta {
+    padding-block: 42px;
+  }
+
+  .final-cta p {
+    margin-top: 12px;
+    font-size: 13px;
+  }
+
+  .final-cta .premium-button {
+    height: 44px !important;
+    margin-top: 18px !important;
+  }
+
+  .landing-footer .site-container:first-child {
+    gap: 24px;
+    padding-block: 30px;
+  }
+
+  .question-trainer-hero p {
+    display: none;
+  }
+
+  .question-trainer-hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .trainer-setup .question-trainer-hero > div {
+    gap: 9px;
+  }
+
+  .trainer-setup .question-trainer-hero .grid.grid-cols-2 {
+    gap: 6px;
+  }
+
+  .question-trainer-hero {
+    min-height: 0;
+    background-position: 66% center;
+  }
+
+  .trainer-setup .command-panel,
+  .trainer-session-shell .question-window {
+    border-radius: 0.75rem;
+  }
+
+  .trainer-session-shell .session-status-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 }
