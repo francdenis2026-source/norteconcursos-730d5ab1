@@ -401,9 +401,9 @@ function Index() {
           </div>
         </section>
 
-        <section className="mobile-optional-section section-pad bg-[#071a2f] text-white">
+        <section className="mobile-optional-section section-pad tools-art-section text-white">
           <div className="site-container">
-            <div className="section-heading light">
+            <div className="section-heading light tools-art-intro">
               <div>
                 <span className="section-kicker">Equipamento de preparação</span>
                 <h2>Ferramentas para cada fase da missão.</h2>
@@ -431,41 +431,43 @@ function Index() {
         </section>
 
         <section id="carreiras" className="mobile-optional-section section-pad career-section">
-          <div className="site-container text-center">
-            <span className="section-kicker">Foco total em segurança pública</span>
-            <h2 className="mx-auto mt-3 max-w-3xl text-4xl font-extrabold tracking-[-.04em] text-primary md:text-5xl">
-              A plataforma de quem escolheu servir e proteger.
-            </h2>
-            <div className="career-cloud">
-              {careers.map((career, i) => (
-                <span key={career} className={i < 3 ? "featured" : ""}>
-                  <ShieldCheck />
-                  {career}
-                </span>
-              ))}
-            </div>
-            <div className="testimonial-card">
-              <Gavel className="h-8 w-8" aria-hidden="true" />
-              <h3 className="mt-5 text-center text-xl font-black tracking-tight text-primary">
-                Base de estudo com rastreabilidade jurídica
-              </h3>
-              <ul className="mx-auto mt-6 max-w-xl space-y-3 text-left text-sm text-slate-600">
-                <li className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-                  Questões jurídicas sinalizam fonte, referência e data de verificação quando
-                  aplicável.
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-                  Leis federais no texto compilado do Planalto; súmulas e jurisprudência, no
-                  tribunal competente.
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-                  Conteúdos auditados são identificados para você saber exatamente o que está
-                  estudando.
-                </li>
-              </ul>
+          <div className="site-container">
+            <div className="career-section-content">
+              <span className="section-kicker">Foco total em segurança pública</span>
+              <h2 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-[-.04em] md:text-5xl">
+                A plataforma de quem escolheu servir e proteger.
+              </h2>
+              <div className="career-cloud">
+                {careers.map((career, i) => (
+                  <span key={career} className={i < 3 ? "featured" : ""}>
+                    <ShieldCheck />
+                    {career}
+                  </span>
+                ))}
+              </div>
+              <div className="testimonial-card">
+                <Gavel className="h-8 w-8" aria-hidden="true" />
+                <h3 className="mt-5 text-center text-xl font-black tracking-tight text-primary">
+                  Base de estudo com rastreabilidade jurídica
+                </h3>
+                <ul className="mx-auto mt-6 max-w-xl space-y-3 text-left text-sm text-slate-600">
+                  <li className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                    Questões jurídicas sinalizam fonte, referência e data de verificação quando
+                    aplicável.
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                    Leis federais no texto compilado do Planalto; súmulas e jurisprudência, no
+                    tribunal competente.
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                    Conteúdos auditados são identificados para você saber exatamente o que está
+                    estudando.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
