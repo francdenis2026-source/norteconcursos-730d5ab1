@@ -54,6 +54,8 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     subject: typeof search.subject === "string" ? search.subject : undefined,
     source: typeof search.source === "string" ? search.source : undefined,
     reviewed: typeof search.reviewed === "string" ? search.reviewed : undefined,
+    state: typeof search.state === "string" ? search.state : undefined,
+    category: typeof search.category === "string" ? search.category : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -78,6 +80,8 @@ type Question = {
   legalBasis: LegalBasis[];
   checkedAt: string | null;
   difficulty: Difficulty;
+  state: string;
+  category: string;
 };
 
 const normalizeDifficulty = (value: unknown): Difficulty => {
@@ -235,6 +239,8 @@ function QuestionTrainer() {
   const [subject, setSubject] = React.useState(routeFilters.subject || "all");
   const [source, setSource] = React.useState(routeFilters.source || "all");
   const [reviewed, setReviewed] = React.useState(routeFilters.reviewed || "all");
+  const [state, setState] = React.useState(routeFilters.state || "all");
+  const [category, setCategory] = React.useState(routeFilters.category || "all");
   const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState("20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
@@ -280,7 +286,7 @@ function QuestionTrainer() {
         const [officialResult, curatedResult, personalResult] = await Promise.all([
           query(
             "official_exam_questions",
-            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis",
+            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,state,career_category",
             "law_version_checked_at,legal_review_required,legal_audit_completed,difficulty",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
           ),
@@ -288,7 +294,7 @@ function QuestionTrainer() {
             ? Promise.resolve({ data: [], error: null, gated: true })
             : query(
                 "curated_question_catalog",
-                "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty",
+                "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
                 "law_version_checked_at",
                 (builder) => builder.eq("content_status", "active"),
               ),
@@ -296,7 +302,7 @@ function QuestionTrainer() {
             ? Promise.resolve({ data: [], error: null, gated: true })
             : query(
                 "question_bank",
-                "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status,difficulty",
+                "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status,difficulty,state,career_category",
                 "law_version_checked_at",
                 (builder) => builder.eq("user_id", userId),
               ),
@@ -340,6 +346,8 @@ function QuestionTrainer() {
             legalBasis: parseBasis(row.legal_basis),
             checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
             difficulty: normalizeDifficulty(row.difficulty),
+            state: String(row.state || ""),
+            category: String(row.career_category || ""),
           })),
           ...gate(
             (curatedResult.data || []) as Array<Record<string, unknown>>,
@@ -359,6 +367,8 @@ function QuestionTrainer() {
             legalBasis: parseBasis(row.legal_basis),
             checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
             difficulty: normalizeDifficulty(row.difficulty),
+            state: String(row.state || ""),
+            category: String(row.career_category || ""),
           })),
           ...((personalResult.data || []) as Array<Record<string, unknown>>)
             .filter(
@@ -385,6 +395,8 @@ function QuestionTrainer() {
               legalBasis: parseBasis(row.legal_basis),
               checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
               difficulty: normalizeDifficulty(row.difficulty),
+              state: String(row.state || ""),
+              category: String(row.career_category || ""),
             })),
         ];
         if (active) {
@@ -408,7 +420,18 @@ function QuestionTrainer() {
   // Cada lista mostra só o que existe combinado com os OUTROS filtros já escolhidos,
   // para nunca montar uma combinação sem questões.
   const choices = React.useMemo(() => {
-    const filters = { contest, board, career, year, subject, source, reviewed, difficulty } as const;
+    const filters = {
+      contest,
+      board,
+      career,
+      year,
+      subject,
+      source,
+      reviewed,
+      difficulty,
+      state,
+      category,
+    } as const;
     const fields = {
       contest: (item: Question) => item.contest,
       board: (item: Question) => item.board,
@@ -418,6 +441,8 @@ function QuestionTrainer() {
       source: (item: Question) => item.source,
       reviewed: (item: Question) => (hasReviewedExplanation(item) ? "reviewed" : "pending"),
       difficulty: (item: Question) => item.difficulty,
+      state: (item: Question) => item.state,
+      category: (item: Question) => item.category,
     };
     const scoped = (skip: keyof typeof fields) =>
       catalog.filter((item) =>
@@ -439,6 +464,8 @@ function QuestionTrainer() {
       careers: unique(scoped("career").map(fields.career)),
       years: unique(scoped("year").map(fields.year)).sort((x, y) => Number(y) - Number(x)),
       subjects: unique(scoped("subject").map(fields.subject)),
+      states: unique(scoped("state").map(fields.state)),
+      categories: unique(scoped("category").map(fields.category)),
       exams: exams.filter(([key]) => {
         const [c, ca, b, y] = key.split("::");
         return (
@@ -449,7 +476,7 @@ function QuestionTrainer() {
         );
       }),
     };
-  }, [catalog, contest, board, career, year, subject, source, reviewed, difficulty]);
+  }, [catalog, contest, board, career, year, subject, source, reviewed, difficulty, state, category]);
   // Ao mexer em um filtro individual, a "prova aplicada" escolhida antes deixa de valer.
   const manual =
     <T,>(setter: (value: T) => void) =>
@@ -469,9 +496,24 @@ function QuestionTrainer() {
           (subject === "all" || item.subject === subject) &&
           (source === "all" || item.source === source) &&
           (reviewed === "all" || hasReviewedExplanation(item)) &&
-          (difficulty === "all" || item.difficulty === difficulty),
+          (difficulty === "all" || item.difficulty === difficulty) &&
+          (state === "all" || item.state === state) &&
+          (category === "all" || item.category === category),
       ),
-    [catalog, contest, board, career, year, appliedExam, subject, source, reviewed, difficulty],
+    [
+      catalog,
+      contest,
+      board,
+      career,
+      year,
+      appliedExam,
+      subject,
+      source,
+      reviewed,
+      difficulty,
+      state,
+      category,
+    ],
   );
   const startTraining = () => {
     const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
@@ -624,6 +666,8 @@ function QuestionTrainer() {
             source,
             reviewed,
             difficulty,
+            state,
+            category,
             limit,
             orderMode,
           }}
@@ -637,6 +681,8 @@ function QuestionTrainer() {
             setSource: manual(setSource),
             setReviewed: manual(setReviewed),
             setDifficulty: manual(setDifficulty),
+            setState: manual(setState),
+            setCategory: manual(setCategory),
             setLimit,
             setOrderMode,
           }}
@@ -1001,6 +1047,8 @@ type SetupValues = {
   source: string;
   reviewed: string;
   difficulty: string;
+  state: string;
+  category: string;
   limit: string;
   orderMode: OrderMode;
 };
@@ -1014,6 +1062,8 @@ type SetupSetters = {
   setSource: (value: string) => void;
   setReviewed: (value: string) => void;
   setDifficulty: (value: string) => void;
+  setState: (value: string) => void;
+  setCategory: (value: string) => void;
   setLimit: (value: string) => void;
   setOrderMode: (value: OrderMode) => void;
 };
@@ -1034,6 +1084,8 @@ function TrainerSetup({
     careers: string[];
     years: string[];
     subjects: string[];
+    states: string[];
+    categories: string[];
     exams: Array<[string, string]>;
   };
   values: SetupValues;
@@ -1050,6 +1102,8 @@ function TrainerSetup({
     setters.setSource("all");
     setters.setReviewed("all");
     setters.setDifficulty("all");
+    setters.setState("all");
+    setters.setCategory("all");
   };
   return (
     <div className="mx-auto max-w-5xl space-y-5 pb-10 animate-in fade-in duration-300">
@@ -1114,6 +1168,18 @@ function TrainerSetup({
               value={values.career}
               setValue={setters.setCareer}
               options={choices.careers}
+            />
+            <TrainerFilter
+              label="Estado"
+              value={values.state}
+              setValue={setters.setState}
+              options={choices.states}
+            />
+            <TrainerFilter
+              label="Categoria"
+              value={values.category}
+              setValue={setters.setCategory}
+              options={choices.categories}
             />
             <TrainerFilter
               label="Ano"
