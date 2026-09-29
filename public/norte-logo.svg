@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 96" role="img" aria-labelledby="title desc">
+  <title id="title">Norte Concurso</title>
+  <desc id="desc">Símbolo de direção em forma de escudo e nome Norte Concurso</desc>
+  <g transform="translate(4 4)">
+    <rect width="88" height="88" rx="22" fill="#071a2b"/>
+    <path d="M44 11 72 21.7v19.1C72 58.2 60.8 71.3 44 78.4 27.2 71.3 16 58.2 16 40.8V21.7L44 11Z" fill="#102f4b" stroke="#eab64d" stroke-width="2.5"/>
+    <path d="m44 19.9 15 38.3L44 52.5l-15 5.7 15-38.3Z" fill="#eab64d"/>
+    <path d="M44 28.4v16.8l-6.8 3.4L44 28.4Z" fill="#f7f4e9"/>
+    <circle cx="44" cy="64.6" r="3.5" fill="#58b9e6"/>
+  </g>
+  <g fill="#071a2b" font-family="Arial, sans-serif">
+    <text x="112" y="47" font-size="42" font-weight="800" letter-spacing="4">NORTE</text>
+    <text x="114" y="75" font-size="20" font-weight="700" letter-spacing="8" fill="#9b6d16">CONCURSO</text>
+  </g>
+</svg>

@@ -427,14 +427,14 @@ function ProfessionalSimulator() {
 
   return (
     <div className="space-y-6 pb-6">
-      <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-[#061a30] via-[#0b3150] to-[#0c695f] p-6 text-white shadow-xl md:p-9">
+      <section className="mock-exam-hero tactical-feature-hero overflow-hidden rounded-2xl p-6 text-white shadow-xl md:p-9">
         <div className="grid gap-8 lg:grid-cols-[1.4fr_.8fr] lg:items-center">
           <div>
-            <Badge className="mb-4 border-white/15 bg-white/10 text-emerald-100 hover:bg-white/10">
-              <Sparkles className="mr-1 h-3.5 w-3.5" /> Centro de Treinamento Inteligente
+            <Badge className="mb-4 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10">
+              <Sparkles className="mr-1 h-3.5 w-3.5" /> Sala de simulação
             </Badge>
             <h1 className="max-w-3xl text-3xl font-black tracking-tight md:text-5xl">
-              Simulador Norte Concursos
+              Simulador de prova policial
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-200 md:text-base">
               Treine com questões oficiais e autorais auditadas, receba diagnóstico por disciplina e
@@ -454,7 +454,7 @@ function ProfessionalSimulator() {
         </div>
       </section>
       <div className="grid gap-6 xl:grid-cols-[1.15fr_.85fr]">
-        <Card className="border-0 shadow-lg ring-1 ring-border/70">
+        <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl">
               <Target className="h-5 w-5 text-emerald-600" /> Monte seu treino
@@ -604,14 +604,14 @@ function ProfessionalSimulator() {
                   setStartWarningOpen(true);
                 }}
                 disabled={!available.length}
-                className="gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700"
+                className="hero-primary-action gap-2 rounded-lg"
               >
                 <Play className="h-4 w-4 fill-current" /> Iniciar simulado
               </Button>
             </div>
           </CardContent>
         </Card>
-        <Card className="border-0 shadow-lg ring-1 ring-border/70">
+        <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl">
               <History className="h-5 w-5 text-blue-600" /> Histórico recente
@@ -925,7 +925,7 @@ function ActiveSimulator(p: {
   const [cancelPhrase, setCancelPhrase] = React.useState("");
   return (
     <div className="space-y-5 pb-8">
-      <div className="sticky top-[82px] z-10 rounded-2xl border bg-background/95 p-4 shadow-lg backdrop-blur">
+      <div className="exam-status-bar sticky top-[82px] z-10 rounded-xl border bg-background/95 p-4 shadow-lg backdrop-blur">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-xs font-bold uppercase tracking-wider text-emerald-600">
@@ -969,7 +969,7 @@ function ActiveSimulator(p: {
         </div>
       </div>
       <div className="grid gap-5 xl:grid-cols-[1fr_280px]">
-        <Card className="border-0 shadow-lg ring-1 ring-border/70">
+        <Card className="exam-question-window border-0 shadow-lg ring-1 ring-border/70">
           <CardHeader className="border-b bg-muted/20">
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="outline">{current.subject}</Badge>
@@ -1143,7 +1143,7 @@ function ResultView({
   const [open, setOpen] = React.useState<string | null>(null);
   return (
     <div className="space-y-6 pb-8">
-      <section className="rounded-3xl bg-gradient-to-br from-[#061a30] to-[#0c695f] p-7 text-white shadow-xl md:p-10">
+      <section className="mock-result-hero tactical-feature-hero rounded-2xl p-7 text-white shadow-xl md:p-10">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <Badge className="mb-3 bg-white/10 text-emerald-100 hover:bg-white/10">

@@ -15,13 +15,13 @@ import {
   UserRound,
   ShieldCheck,
   Sparkles,
-  Star,
   Target,
   Trophy,
 } from "lucide-react";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { NorteBrand } from "@/components/brand/NorteBrand";
 
 export const Route = createFileRoute("/auth")({
   component: AuthPage,
@@ -88,21 +88,16 @@ function AuthPage() {
         <div className="auth-visual-image" />
         <div className="auth-visual-content">
           <Link to="/" className="brand-lockup">
-            <span className="brand-mark">
-              <Star aria-hidden="true" />
-            </span>
-            <span className="text-white">
-              Norte<span>Concurso</span>
-            </span>
+            <NorteBrand light />
           </Link>
           <div className="auth-message">
             <span className="eyebrow">
-              <Sparkles /> Método, dados e direção
+              <Sparkles /> Preparação para carreiras policiais
             </span>
-            <h1>Sua aprovação começa com uma decisão clara.</h1>
+            <h1>Entre em operação com um plano claro.</h1>
             <p>
-              Entre no ambiente que transforma seus resultados em um plano de estudo vivo e
-              objetivo.
+              Acesse o ambiente que transforma questões, simulados e desempenho em decisões de
+              estudo.
             </p>
           </div>
           <div className="auth-benefits">
@@ -125,12 +120,7 @@ function AuthPage() {
             <ArrowLeft /> Voltar para o início
           </Link>
           <div className="auth-mobile-brand">
-            <span className="brand-mark">
-              <Star aria-hidden="true" />
-            </span>
-            <strong>
-              Norte<span>Concurso</span>
-            </strong>
+            <NorteBrand />
           </div>
           <div className="auth-heading">
             <span>{mode === "login" ? "BEM-VINDO DE VOLTA" : "COMECE SUA JORNADA"}</span>

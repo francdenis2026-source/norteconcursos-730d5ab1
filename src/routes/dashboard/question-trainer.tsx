@@ -597,7 +597,7 @@ function QuestionTrainer() {
     if (selected === letter) setSelected(null);
   };
   return (
-    <div className="mx-auto max-w-4xl space-y-4 pb-8">
+    <div className="trainer-session-shell mx-auto max-w-4xl space-y-4 pb-8">
       <header className="flex flex-wrap items-center justify-between gap-3">
         <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
           <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
@@ -609,7 +609,7 @@ function QuestionTrainer() {
           <Badge variant="outline">Não afeta ranking</Badge>
         </div>
       </header>
-      <div className="rounded-2xl border bg-card px-4 py-3 shadow-sm">
+      <div className="session-status-bar rounded-xl border bg-card px-4 py-3 shadow-sm">
         <div className="mb-2 flex items-center justify-between text-xs">
           <span className="font-bold">
             Questão {index + 1} de {questions.length}
@@ -621,10 +621,10 @@ function QuestionTrainer() {
         <Progress value={(index / questions.length) * 100} className="h-1.5" />
       </div>
       <Card
-        className="overflow-hidden border-0 shadow-xl ring-1 ring-border/70 animate-in fade-in slide-in-from-bottom-3 duration-300"
+        className="question-window overflow-hidden border-0 shadow-xl ring-1 ring-border/70 animate-in fade-in slide-in-from-bottom-3 duration-300"
         key={question.id}
       >
-        <div className="h-1 bg-gradient-to-r from-emerald-500 via-sky-500 to-indigo-500" />
+        <div className="h-1 bg-gradient-to-r from-amber-500 via-sky-500 to-blue-800" />
         <CardContent className="p-5 md:p-7">
           <div className="mb-5 flex flex-wrap gap-2">
             <Badge>{question.board}</Badge>
@@ -966,13 +966,13 @@ function TrainerSetup({
   };
   return (
     <div className="mx-auto max-w-5xl space-y-5 pb-10 animate-in fade-in duration-300">
-      <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-950 via-slate-900 to-blue-950 p-6 text-white shadow-xl md:p-8">
+      <section className="question-trainer-hero tactical-feature-hero overflow-hidden rounded-2xl p-6 text-white shadow-xl md:p-8">
         <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div>
-            <Badge className="mb-4 border-white/15 bg-white/10 text-emerald-100 hover:bg-white/10">
-              <BrainCircuit className="mr-1.5 h-3.5 w-3.5" /> Treinador adaptativo
+            <Badge className="mb-4 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10">
+              <BrainCircuit className="mr-1.5 h-3.5 w-3.5" /> Treinamento de precisão
             </Badge>
-            <h1 className="text-3xl font-black md:text-4xl">Configure sua sessão de treino</h1>
+            <h1 className="text-3xl font-black md:text-4xl">Monte sua sessão de questões</h1>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
               Escolha a banca, carreira, concurso e disciplina. Aqui cada resposta recebe correção
               imediata e orientação pedagógica, sem afetar o ranking dos simulados.
@@ -983,17 +983,17 @@ function TrainerSetup({
               <p className="text-2xl font-black">{total}</p>
               <p className="text-[10px] text-slate-300">questões ativas</p>
             </div>
-            <div className="rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-4 py-3">
-              <p className="text-2xl font-black text-emerald-300">{available}</p>
+            <div className="rounded-xl border border-amber-300/30 bg-amber-300/10 px-4 py-3">
+              <p className="text-2xl font-black text-amber-200">{available}</p>
               <p className="text-[10px] text-slate-300">na seleção</p>
             </div>
           </div>
         </div>
       </section>
-      <Card className="border-0 shadow-lg ring-1 ring-border/70">
+      <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
         <CardContent className="p-5 md:p-7">
           <div className="mb-6 flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+            <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
               <BookOpenCheck className="h-5 w-5" />
             </div>
             <div>
@@ -1101,11 +1101,7 @@ function TrainerSetup({
               <Button variant="outline" onClick={reset}>
                 Limpar filtros
               </Button>
-              <Button
-                disabled={!available}
-                onClick={start}
-                className="bg-emerald-600 hover:bg-emerald-700"
-              >
+              <Button disabled={!available} onClick={start} className="hero-primary-action">
                 <Sparkles className="mr-2 h-4 w-4" /> Iniciar treinamento
               </Button>
             </div>
