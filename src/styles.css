@@ -325,7 +325,7 @@
       rgb(5 21 34 / 0.18)
     ),
     linear-gradient(0deg, #051522 0%, transparent 38%),
-    url("/media/hero-jornada-policial-v1.png") center/cover no-repeat;
+    url("/media/hero-agente-federal-autoral-v1.png") center/cover no-repeat;
 }
 .eyebrow {
   display: flex;
@@ -1884,7 +1884,7 @@ iframe[src*="gpteng.co"] {
   isolation: isolate;
   background:
     linear-gradient(90deg, rgb(4 17 28 / 0.96), rgb(4 17 28 / 0.68)),
-    url("/media/hero-jornada-policial-v1.png") center 52% / cover no-repeat;
+    url("/media/hero-agente-federal-autoral-v1.png") center 52% / cover no-repeat;
 }
 
 .final-cta::before {
@@ -2187,7 +2187,7 @@ iframe[src*="gpteng.co"] {
   background:
     linear-gradient(90deg, rgb(5 19 31 / 0.14), rgb(5 19 31 / 0.54)),
     linear-gradient(0deg, rgb(5 19 31 / 0.88), transparent 54%),
-    url("/media/hero-jornada-policial-v1.png") center / cover no-repeat;
+    url("/media/hero-agente-federal-autoral-v1.png") center / cover no-repeat;
   transform: none;
 }
 
@@ -2244,7 +2244,7 @@ iframe[src*="gpteng.co"] {
     background:
       linear-gradient(90deg, rgb(5 21 34 / 0.95), rgb(5 21 34 / 0.7)),
       linear-gradient(0deg, #051522 0%, transparent 48%),
-      url("/media/hero-jornada-policial-v1.png") 68% center / cover no-repeat;
+      url("/media/hero-agente-federal-autoral-v1.png") 72% center / cover no-repeat;
   }
 
   .hero-title {

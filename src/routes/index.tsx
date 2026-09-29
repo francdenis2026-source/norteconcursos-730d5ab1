@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Treino orientado por dados para quem escolheu servir e proteger.",
       },
-      { property: "og:image", content: "/media/hero-jornada-policial-v1.png" },
+      { property: "og:image", content: "/media/hero-agente-federal-autoral-v1.png" },
     ],
   }),
 });
