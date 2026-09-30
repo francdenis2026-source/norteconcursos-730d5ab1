@@ -1732,6 +1732,49 @@ iframe[src*="gpteng.co"] {
   background-size: 48px 48px;
 }
 
+.landing-shell #metodo.method-hero-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #f4f7f8;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(3 14 22 / 0.98) 0%,
+      rgb(3 14 22 / 0.82) 47%,
+      rgb(3 14 22 / 0.2) 100%
+    ),
+    linear-gradient(0deg, #06131d 0%, transparent 52%),
+    url("/media/hero-protocolo-norte-v1.png") center top / 100% auto no-repeat !important;
+  background-color: #06131d !important;
+}
+
+.method-hero-section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0 44%, rgb(6 19 29 / 0.76) 70%, #06131d 100%);
+  content: "";
+}
+
+.method-hero-intro {
+  display: block;
+  min-height: 220px;
+  max-width: 650px;
+}
+
+.method-hero-intro h2 {
+  max-width: 640px;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.method-hero-intro > p {
+  max-width: 540px;
+  margin-top: 24px;
+  color: rgb(236 242 245 / 0.7);
+}
+
 .method-grid {
   gap: 14px;
 }
@@ -1741,6 +1784,34 @@ iframe[src*="gpteng.co"] {
   border-radius: 10px;
   border-color: #d8e0e5;
   box-shadow: 0 18px 44px rgb(10 36 56 / 0.055);
+}
+
+.method-hero-section .method-card {
+  border-color: rgb(234 182 77 / 0.22);
+  background: linear-gradient(145deg, rgb(9 28 41 / 0.94), rgb(5 18 28 / 0.82));
+  box-shadow: 0 22px 54px rgb(0 0 0 / 0.28);
+  backdrop-filter: blur(13px);
+}
+
+.method-hero-section .method-card:hover {
+  border-color: rgb(234 182 77 / 0.58);
+  box-shadow: 0 28px 66px rgb(0 0 0 / 0.4);
+}
+
+.method-hero-section .method-card h3 {
+  color: #f8f5eb;
+}
+
+.method-hero-section .method-card p {
+  color: rgb(231 238 242 / 0.62);
+}
+
+.method-hero-section .method-line {
+  background: rgb(255 255 255 / 0.1);
+}
+
+.method-hero-section .method-arrow {
+  color: rgb(240 193 90 / 0.68);
 }
 
 .method-card::before {
@@ -1781,6 +1852,52 @@ iframe[src*="gpteng.co"] {
 
 .dashboard-showcase {
   border-radius: 16px;
+}
+
+.platform-hero-section {
+  position: relative;
+  isolation: isolate;
+  color: #f5f7f8;
+  background:
+    linear-gradient(90deg, rgb(3 13 21 / 0.7), rgb(3 13 21 / 0.56)),
+    linear-gradient(0deg, #04111a 0%, transparent 64%),
+    url("/media/hero-centro-operacoes-v1.png") center top / 100% auto no-repeat;
+  background-color: #04111a;
+}
+
+.platform-hero-section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: radial-gradient(circle at 72% 24%, rgb(234 182 77 / 0.11), transparent 32%);
+  content: "";
+}
+
+.platform-hero-copy {
+  padding: 30px;
+  border: 1px solid rgb(234 182 77 / 0.24);
+  border-radius: 14px;
+  background: rgb(3 16 25 / 0.79);
+  box-shadow: 0 28px 70px rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(14px);
+}
+
+.platform-hero-section .feature-title {
+  color: #fff;
+  text-shadow: 0 3px 24px rgb(0 0 0 / 0.38);
+}
+
+.platform-hero-section .feature-copy {
+  color: rgb(236 242 245 / 0.68);
+}
+
+.platform-hero-section .feature-list > div {
+  color: #f1f5f6;
+}
+
+.platform-hero-section .brand-cover-card {
+  border-color: rgb(234 182 77 / 0.4);
+  background: linear-gradient(135deg, rgb(5 20 30 / 0.96), rgb(16 40 58 / 0.9));
 }
 
 .mock-window {

@@ -270,9 +270,9 @@ function Index() {
           </div>
         </section>
 
-        <section id="metodo" className="mobile-optional-section section-pad bg-[#f6f8fb]">
+        <section id="metodo" className="mobile-optional-section section-pad method-hero-section">
           <div className="site-container">
-            <div className="section-heading">
+            <div className="section-heading light method-hero-intro">
               <div>
                 <span className="section-kicker">Protocolo Norte</span>
                 <h2>Preparação é estratégia, não improviso.</h2>
@@ -298,7 +298,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="plataforma" className="section-pad overflow-hidden">
+        <section id="plataforma" className="section-pad overflow-hidden platform-hero-section">
           <div className="site-container grid items-center gap-16 lg:grid-cols-[.95fr_1.05fr]">
             <div className="dashboard-showcase">
               <div className="showcase-glow" />
@@ -354,7 +354,7 @@ function Index() {
                 <Check />
               </div>
             </div>
-            <div>
+            <div className="platform-hero-copy">
               <span className="section-kicker">Centro de operações</span>
               <h2 className="feature-title">Cada dado aponta para a próxima ação.</h2>
               <p className="feature-copy">
