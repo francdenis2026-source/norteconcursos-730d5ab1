@@ -23,8 +23,8 @@ import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 
 export const Route = createFileRoute("/auth")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    mode: search.mode === "register" ? "register" : undefined,
+  validateSearch: (search: Record<string, unknown>): { mode?: "register" | undefined } => ({
+    mode: search["mode"] === "register" ? "register" : undefined,
   }),
   component: AuthPage,
   head: () => ({
