@@ -24,6 +24,7 @@ import {
   BrainCircuit,
   PenLine,
   Timer,
+  MapPin,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -51,6 +52,12 @@ const menuItems = [
   { group: "Objetivo", label: "Meu Concurso", icon: Target, href: "/dashboard/my-contest" },
   { group: "Objetivo", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
   { group: "Objetivo", label: "Catálogo de Concursos", icon: Search, href: "/dashboard/questions" },
+  {
+    group: "Treinamento",
+    label: "Edital Eletrônico",
+    icon: MapPin,
+    href: "/dashboard/edital",
+  },
   {
     group: "Treinamento",
     label: "Treinador de Questões",
