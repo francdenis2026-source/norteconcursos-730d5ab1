@@ -280,6 +280,9 @@ function Index() {
 
         <section className="pcac-campaign" aria-labelledby="pcac-campaign-title">
           <div className="pcac-campaign-backdrop" aria-hidden="true" />
+          <div className="pcac-acre-map" aria-hidden="true">
+            <div className="pcac-acre-map-texture" />
+          </div>
           <div className="site-container pcac-campaign-layout">
             <div className="pcac-campaign-content">
               <div className="pcac-campaign-emblems" aria-label="Identidade institucional do Acre">
