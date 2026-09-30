@@ -19,6 +19,7 @@ import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
 import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers'
+import { Route as DashboardEditalRouteImport } from './routes/dashboard/edital'
 import { Route as DashboardErrorsRouteImport } from './routes/dashboard/errors'
 import { Route as DashboardEssaysRouteImport } from './routes/dashboard/essays'
 import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history'
@@ -35,6 +36,8 @@ import { Route as DashboardStudyPlanRouteImport } from './routes/dashboard/study
 import { Route as DashboardStudyToolsRouteImport } from './routes/dashboard/study-tools'
 import { Route as DashboardTimerRouteImport } from './routes/dashboard/timer'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
+import { Route as DashboardEditalIndexRouteImport } from './routes/dashboard/edital.index'
+import { Route as DashboardEditalTopicIdRouteImport } from './routes/dashboard/edital.$topicId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -84,6 +87,11 @@ const DashboardAdminRoute = DashboardAdminRouteImport.update({
 const DashboardCareersRoute = DashboardCareersRouteImport.update({
   id: '/careers',
   path: '/careers',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardEditalRoute = DashboardEditalRouteImport.update({
+  id: '/edital',
+  path: '/edital',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardErrorsRoute = DashboardErrorsRouteImport.update({
@@ -167,6 +175,16 @@ const ApiPublicStripeWebhookRoute = ApiPublicStripeWebhookRouteImport.update({
   path: '/api/public/stripe-webhook',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DashboardEditalIndexRoute = DashboardEditalIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DashboardEditalRoute,
+} as any)
+const DashboardEditalTopicIdRoute = DashboardEditalTopicIdRouteImport.update({
+  id: '/$topicId',
+  path: '/$topicId',
+  getParentRoute: () => DashboardEditalRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -178,6 +196,7 @@ export interface FileRoutesByFullPath {
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/careers': typeof DashboardCareersRoute
+  '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/history': typeof DashboardHistoryRoute
@@ -195,6 +214,8 @@ export interface FileRoutesByFullPath {
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
+  '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
+  '/dashboard/edital/': typeof DashboardEditalIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -222,6 +243,8 @@ export interface FileRoutesByTo {
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
+  '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
+  '/dashboard/edital': typeof DashboardEditalIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -234,6 +257,7 @@ export interface FileRoutesById {
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/careers': typeof DashboardCareersRoute
+  '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/history': typeof DashboardHistoryRoute
@@ -251,6 +275,8 @@ export interface FileRoutesById {
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
+  '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
+  '/dashboard/edital/': typeof DashboardEditalIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -264,6 +290,7 @@ export interface FileRouteTypes {
     | '/checkout/$planId'
     | '/dashboard/admin'
     | '/dashboard/careers'
+    | '/dashboard/edital'
     | '/dashboard/errors'
     | '/dashboard/essays'
     | '/dashboard/history'
@@ -281,6 +308,8 @@ export interface FileRouteTypes {
     | '/dashboard/timer'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
+    | '/dashboard/edital/$topicId'
+    | '/dashboard/edital/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -308,6 +337,8 @@ export interface FileRouteTypes {
     | '/dashboard/timer'
     | '/dashboard'
     | '/api/public/stripe-webhook'
+    | '/dashboard/edital/$topicId'
+    | '/dashboard/edital'
   id:
     | '__root__'
     | '/'
@@ -319,6 +350,7 @@ export interface FileRouteTypes {
     | '/checkout/$planId'
     | '/dashboard/admin'
     | '/dashboard/careers'
+    | '/dashboard/edital'
     | '/dashboard/errors'
     | '/dashboard/essays'
     | '/dashboard/history'
@@ -336,6 +368,8 @@ export interface FileRouteTypes {
     | '/dashboard/timer'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
+    | '/dashboard/edital/$topicId'
+    | '/dashboard/edital/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -419,6 +453,13 @@ declare module '@tanstack/react-router' {
       path: '/careers'
       fullPath: '/dashboard/careers'
       preLoaderRoute: typeof DashboardCareersRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/edital': {
+      id: '/dashboard/edital'
+      path: '/edital'
+      fullPath: '/dashboard/edital'
+      preLoaderRoute: typeof DashboardEditalRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/errors': {
@@ -533,12 +574,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicStripeWebhookRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dashboard/edital/': {
+      id: '/dashboard/edital/'
+      path: '/'
+      fullPath: '/dashboard/edital/'
+      preLoaderRoute: typeof DashboardEditalIndexRouteImport
+      parentRoute: typeof DashboardEditalRoute
+    }
+    '/dashboard/edital/$topicId': {
+      id: '/dashboard/edital/$topicId'
+      path: '/$topicId'
+      fullPath: '/dashboard/edital/$topicId'
+      preLoaderRoute: typeof DashboardEditalTopicIdRouteImport
+      parentRoute: typeof DashboardEditalRoute
+    }
   }
 }
+
+interface DashboardEditalRouteChildren {
+  DashboardEditalTopicIdRoute: typeof DashboardEditalTopicIdRoute
+  DashboardEditalIndexRoute: typeof DashboardEditalIndexRoute
+}
+
+const DashboardEditalRouteChildren: DashboardEditalRouteChildren = {
+  DashboardEditalTopicIdRoute: DashboardEditalTopicIdRoute,
+  DashboardEditalIndexRoute: DashboardEditalIndexRoute,
+}
+
+const DashboardEditalRouteWithChildren = DashboardEditalRoute._addFileChildren(
+  DashboardEditalRouteChildren,
+)
 
 interface DashboardRouteChildren {
   DashboardAdminRoute: typeof DashboardAdminRoute
   DashboardCareersRoute: typeof DashboardCareersRoute
+  DashboardEditalRoute: typeof DashboardEditalRouteWithChildren
   DashboardErrorsRoute: typeof DashboardErrorsRoute
   DashboardEssaysRoute: typeof DashboardEssaysRoute
   DashboardHistoryRoute: typeof DashboardHistoryRoute
@@ -560,6 +630,7 @@ interface DashboardRouteChildren {
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminRoute: DashboardAdminRoute,
   DashboardCareersRoute: DashboardCareersRoute,
+  DashboardEditalRoute: DashboardEditalRouteWithChildren,
   DashboardErrorsRoute: DashboardErrorsRoute,
   DashboardEssaysRoute: DashboardEssaysRoute,
   DashboardHistoryRoute: DashboardHistoryRoute,
