@@ -2,6 +2,7 @@ import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   AlertTriangle,
+  ArrowRight,
   BookMarked,
   BookOpenCheck,
   Building2,
@@ -40,6 +41,8 @@ interface CatalogItem {
   board: string;
   subject: string;
   source: SourceKind;
+  state: string;
+  category: string;
 }
 const SOURCE_LABELS: Record<SourceKind, string> = {
   official: "Provas oficiais",
@@ -57,7 +60,9 @@ function QuestionBankPage() {
     [career, setCareer] = React.useState("all"),
     [year, setYear] = React.useState("all"),
     [subject, setSubject] = React.useState("all"),
-    [source, setSource] = React.useState("all");
+    [source, setSource] = React.useState("all"),
+    [state, setState] = React.useState("all"),
+    [category, setCategory] = React.useState("all");
   const load = React.useCallback(async () => {
     if (authLoading || !user || user.id === "demo-user") {
       setLoading(false);
@@ -69,15 +74,19 @@ function QuestionBankPage() {
       const [personal, curated, official] = await Promise.all([
         supabase
           .from("question_bank")
-          .select("id,contest_name,contest_year,subject,content_status")
+          .select("id,contest_name,contest_year,subject,content_status,state,career_category")
           .eq("user_id", user.id),
         supabase
           .from("curated_question_catalog")
-          .select("id,contest_name,contest_year,career_name,exam_board,subject")
+          .select(
+            "id,contest_name,contest_year,career_name,exam_board,subject,state,career_category",
+          )
           .eq("content_status", "active"),
         supabase
           .from("official_exam_questions")
-          .select("id,contest_name,exam_year,career_name,exam_board,subject,official_answer")
+          .select(
+            "id,contest_name,exam_year,career_name,exam_board,subject,official_answer,state,career_category",
+          )
           .eq("content_status", "active")
           .neq("official_answer", "X"),
       ]);
@@ -115,6 +124,8 @@ function QuestionBankPage() {
       careers: unique(items.map((i) => i.career)),
       years: unique(items.map((i) => i.year).sort((a, b) => Number(b) - Number(a))),
       subjects: unique(items.map((i) => i.subject)),
+      states: unique(items.map((i) => i.state)),
+      categories: unique(items.map((i) => i.category)),
     }),
     [items],
   );
@@ -127,9 +138,11 @@ function QuestionBankPage() {
           (career === "all" || i.career === career) &&
           (year === "all" || i.year === year) &&
           (subject === "all" || i.subject === subject) &&
-          (source === "all" || i.source === source),
+          (source === "all" || i.source === source) &&
+          (state === "all" || i.state === state) &&
+          (category === "all" || i.category === category),
       ),
-    [items, contest, board, career, year, subject, source],
+    [items, contest, board, career, year, subject, source, state, category],
   );
   const bySubject = React.useMemo(() => groupBy(filtered, "subject"), [filtered]);
   const byBoard = React.useMemo(() => groupBy(filtered, "board"), [filtered]);
@@ -140,6 +153,8 @@ function QuestionBankPage() {
     setYear("all");
     setSubject("all");
     setSource("all");
+    setState("all");
+    setCategory("all");
   };
   if (authLoading || loading) return <Loading />;
   if (!user || user.id === "demo-user") return <Login />;
@@ -151,6 +166,8 @@ function QuestionBankPage() {
     year: year === "all" ? undefined : year,
     subject: subject === "all" ? undefined : subject,
     source: source === "all" ? undefined : source,
+    state: state === "all" ? undefined : state,
+    category: category === "all" ? undefined : category,
   };
   return (
     <div className="space-y-6 pb-8">
@@ -191,6 +208,13 @@ function QuestionBankPage() {
                 value={career}
                 set={setCareer}
                 values={options.careers}
+              />
+              <Filter label="Estado" value={state} set={setState} values={options.states} />
+              <Filter
+                label="Categoria"
+                value={category}
+                set={setCategory}
+                values={options.categories}
               />
               <Filter label="Ano" value={year} set={setYear} values={options.years} />
               <Filter
@@ -275,10 +299,22 @@ function QuestionBankPage() {
           </CardContent>
         </Card>
       </div>
-      <div className="grid gap-6 lg:grid-cols-2">
-        <Collection title="Acervo por disciplina" icon={BookOpenCheck} rows={bySubject} />
-        <Collection title="Acervo por banca" icon={FileCheck2} rows={byBoard} />
-      </div>
+      <section className="collection-showcase">
+        <div className="collection-showcase-heading">
+          <span>Rotas rápidas de estudo</span>
+          <h2>Entre diretamente no conteúdo que deseja treinar.</h2>
+          <p>Selecione uma disciplina ou banca para abrir o treinador com o filtro já aplicado.</p>
+        </div>
+        <div className="relative z-10 grid gap-6 lg:grid-cols-2">
+          <Collection
+            title="Acervo por disciplina"
+            icon={BookOpenCheck}
+            rows={bySubject}
+            filterKey="subject"
+          />
+          <Collection title="Acervo por banca" icon={FileCheck2} rows={byBoard} filterKey="board" />
+        </div>
+      </section>
       <footer className="rounded-2xl border bg-card px-5 py-4 text-center text-xs text-muted-foreground">
         Acervo educacional com governança editorial
       </footer>
@@ -320,13 +356,15 @@ function Collection({
   title,
   icon: Icon,
   rows,
+  filterKey,
 }: {
   title: string;
   icon: React.ElementType;
   rows: Array<[string, number]>;
+  filterKey: "subject" | "board";
 }) {
   return (
-    <Card>
+    <Card className="catalog-collection-card">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-lg">
           <Icon className="h-5 w-5 text-primary" />
@@ -335,13 +373,19 @@ function Collection({
       </CardHeader>
       <CardContent className="grid gap-2 sm:grid-cols-2">
         {rows.slice(0, 12).map(([name, count]) => (
-          <div
+          <Link
             key={name}
-            className="flex items-center justify-between gap-3 rounded-lg bg-muted/40 px-3 py-2"
+            to="/dashboard/question-trainer"
+            search={filterKey === "subject" ? { subject: name } : { board: name }}
+            className="collection-study-link"
+            aria-label={`Treinar ${filterKey === "subject" ? "a disciplina" : "questões da banca"} ${name}`}
           >
             <span className="truncate text-sm font-semibold">{name}</span>
-            <Badge variant="secondary">{count}</Badge>
-          </div>
+            <span className="flex shrink-0 items-center gap-2">
+              <Badge variant="secondary">{count}</Badge>
+              <ArrowRight className="h-4 w-4" />
+            </span>
+          </Link>
         ))}
       </CardContent>
     </Card>
@@ -436,6 +480,8 @@ function normalize(row: Record<string, unknown>, source: SourceKind): CatalogIte
     board: String(row.exam_board || "Não informada"),
     subject: String(row.subject || "Sem disciplina"),
     source,
+    state: String(row.state || ""),
+    category: String(row.career_category || ""),
   };
 }
 function unique(values: string[]) {

@@ -242,31 +242,46 @@
   height: 2.45rem;
   place-items: center;
   flex: 0 0 auto;
-  border: 1px solid rgb(234 182 77 / 0.55);
-  border-radius: 0.72rem;
-  background: linear-gradient(145deg, #112f49, #071725);
+  border: 1px solid rgb(234 182 77 / 0.72);
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #20323a, #070e13 68%);
   box-shadow:
-    inset 0 0 0 1px rgb(255 255 255 / 0.04),
-    0 10px 28px rgb(0 0 0 / 0.16);
+    inset 0 0 0 2px rgb(0 0 0 / 0.5),
+    0 0 0 1px rgb(255 211 112 / 0.12),
+    0 10px 28px rgb(0 0 0 / 0.22);
 }
 .norte-brand__mark svg {
   width: 2rem;
   height: 2rem;
   overflow: visible;
 }
-.norte-brand__shield {
-  fill: #173a57;
+.norte-brand__frame {
+  fill: #0a151b;
+  stroke: #c9912c;
+  stroke-width: 1.25;
+}
+.norte-brand__orbit {
+  fill: none;
   stroke: #eab64d;
-  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-width: 2.5;
 }
-.norte-brand__north {
-  fill: #eab64d;
+.norte-brand__monogram {
+  fill: none;
+  stroke: #f4d27c;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3.1;
 }
-.norte-brand__cut {
-  fill: #f8f5eb;
+.norte-brand__star {
+  fill: #f0b63e;
+  filter: drop-shadow(0 0 3px rgb(234 182 77 / 0.45));
 }
-.norte-brand__point {
-  fill: #58b9e6;
+.norte-brand__horizon {
+  fill: none;
+  stroke: rgb(244 210 124 / 0.62);
+  stroke-linecap: round;
+  stroke-width: 1;
 }
 .norte-brand__type {
   display: grid;
@@ -278,13 +293,14 @@
   font-size: 1.08rem;
   font-stretch: condensed;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 0 rgb(255 255 255 / 0.12);
 }
 .norte-brand__type span {
-  color: #b98528;
+  color: #c58b27;
   font-size: 0.55rem;
   font-weight: 900;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.2em;
 }
 .norte-brand--compact .norte-brand__mark {
   width: 2.35rem;
@@ -325,17 +341,7 @@
       rgb(5 21 34 / 0.18)
     ),
     linear-gradient(0deg, #051522 0%, transparent 38%),
-    url("/media/hero-home-police.png") center/cover no-repeat;
-}
-.hero-grid {
-  position: absolute;
-  inset: 0;
-  opacity: 0.08;
-  background-image:
-    linear-gradient(rgb(255 255 255 / 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(255 255 255 / 0.2) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: linear-gradient(90deg, #000, transparent 72%);
+    url("/media/hero-agente-federal-autoral-v1.png") center top/cover no-repeat;
 }
 .eyebrow {
   display: flex;
@@ -891,6 +897,51 @@
   gap: 14px;
   margin-top: 26px;
 }
+
+.brand-cover-card {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  align-items: center;
+  gap: 18px;
+  max-width: 590px;
+  margin-top: 24px;
+  padding: 12px;
+  border: 1px solid rgb(198 151 52 / 0.22);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #081722, #10283a);
+  box-shadow: 0 18px 44px rgb(7 24 37 / 0.12);
+}
+
+.brand-cover-card img {
+  width: 104px;
+  aspect-ratio: 4 / 5;
+  border-radius: 9px;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgb(0 0 0 / 0.3);
+}
+
+.brand-cover-card span {
+  color: #efbd52;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-cover-card strong {
+  display: block;
+  margin-top: 5px;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.brand-cover-card p {
+  margin-top: 6px;
+  color: rgb(230 238 243 / 0.66);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
 .feature-list > div {
   display: flex;
   align-items: center;
@@ -1162,12 +1213,7 @@
   background: radial-gradient(circle at 50% 0%, #164569, #071a2f 58%);
 }
 .final-cta:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.09;
-  background-image: linear-gradient(45deg, transparent 48%, white 49%, white 51%, transparent 52%);
-  background-size: 60px 60px;
+  display: none;
 }
 .final-cta h2 {
   margin-top: 24px;
@@ -1650,7 +1696,7 @@ iframe[src*="gpteng.co"] {
 }
 
 .hero-professional {
-  min-height: 820px;
+  min-height: 720px;
   background: #051522;
 }
 
@@ -1661,14 +1707,6 @@ iframe[src*="gpteng.co"] {
   height: 1px;
   content: "";
   background: linear-gradient(90deg, transparent, rgb(234 182 77 / 0.8), transparent);
-}
-
-.hero-grid {
-  opacity: 0.12;
-  background-image:
-    linear-gradient(rgb(88 185 230 / 0.22) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(88 185 230 / 0.22) 1px, transparent 1px);
-  background-size: 72px 72px;
 }
 
 .hero-proof span svg {
@@ -1738,6 +1776,49 @@ iframe[src*="gpteng.co"] {
   background-size: 48px 48px;
 }
 
+.landing-shell #metodo.method-hero-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #f4f7f8;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(3 14 22 / 0.98) 0%,
+      rgb(3 14 22 / 0.82) 47%,
+      rgb(3 14 22 / 0.2) 100%
+    ),
+    linear-gradient(0deg, #06131d 0%, transparent 52%),
+    url("/media/hero-protocolo-norte-v1.png") center top / 100% auto no-repeat !important;
+  background-color: #06131d !important;
+}
+
+.method-hero-section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0 44%, rgb(6 19 29 / 0.76) 70%, #06131d 100%);
+  content: "";
+}
+
+.method-hero-intro {
+  display: block;
+  min-height: 220px;
+  max-width: 650px;
+}
+
+.method-hero-intro h2 {
+  max-width: 640px;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.method-hero-intro > p {
+  max-width: 540px;
+  margin-top: 24px;
+  color: rgb(236 242 245 / 0.7);
+}
+
 .method-grid {
   gap: 14px;
 }
@@ -1747,6 +1828,34 @@ iframe[src*="gpteng.co"] {
   border-radius: 10px;
   border-color: #d8e0e5;
   box-shadow: 0 18px 44px rgb(10 36 56 / 0.055);
+}
+
+.method-hero-section .method-card {
+  border-color: rgb(234 182 77 / 0.22);
+  background: linear-gradient(145deg, rgb(9 28 41 / 0.94), rgb(5 18 28 / 0.82));
+  box-shadow: 0 22px 54px rgb(0 0 0 / 0.28);
+  backdrop-filter: blur(13px);
+}
+
+.method-hero-section .method-card:hover {
+  border-color: rgb(234 182 77 / 0.58);
+  box-shadow: 0 28px 66px rgb(0 0 0 / 0.4);
+}
+
+.method-hero-section .method-card h3 {
+  color: #f8f5eb;
+}
+
+.method-hero-section .method-card p {
+  color: rgb(231 238 242 / 0.62);
+}
+
+.method-hero-section .method-line {
+  background: rgb(255 255 255 / 0.1);
+}
+
+.method-hero-section .method-arrow {
+  color: rgb(240 193 90 / 0.68);
 }
 
 .method-card::before {
@@ -1787,6 +1896,387 @@ iframe[src*="gpteng.co"] {
 
 .dashboard-showcase {
   border-radius: 16px;
+}
+
+.platform-hero-section {
+  position: relative;
+  isolation: isolate;
+  color: #f5f7f8;
+  background:
+    linear-gradient(90deg, rgb(3 13 21 / 0.7), rgb(3 13 21 / 0.56)),
+    linear-gradient(0deg, #04111a 0%, transparent 64%),
+    url("/media/hero-centro-operacoes-v1.png") center top / 100% auto no-repeat;
+  background-color: #04111a;
+}
+
+.platform-hero-section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: radial-gradient(circle at 72% 24%, rgb(234 182 77 / 0.11), transparent 32%);
+  content: "";
+}
+
+.platform-hero-copy {
+  padding: 30px;
+  border: 1px solid rgb(234 182 77 / 0.24);
+  border-radius: 14px;
+  background: rgb(3 16 25 / 0.79);
+  box-shadow: 0 28px 70px rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(14px);
+}
+
+.platform-hero-section .feature-title {
+  color: #fff;
+  text-shadow: 0 3px 24px rgb(0 0 0 / 0.38);
+}
+
+.platform-hero-section .feature-copy {
+  color: rgb(236 242 245 / 0.68);
+}
+
+.platform-hero-section .feature-list > div {
+  color: #f1f5f6;
+}
+
+.platform-hero-section .brand-cover-card {
+  border-color: rgb(234 182 77 / 0.4);
+  background: linear-gradient(135deg, rgb(5 20 30 / 0.96), rgb(16 40 58 / 0.9));
+}
+
+/* Campanha PCAC 2026 */
+.pcac-campaign {
+  position: relative;
+  isolation: isolate;
+  min-height: 690px;
+  overflow: hidden;
+  border-top: 1px solid rgb(232 173 50 / 0.28);
+  border-bottom: 1px solid rgb(232 173 50 / 0.28);
+  color: #fff;
+  background: #041420;
+}
+
+.pcac-campaign-backdrop {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(2 15 25 / 0.98) 0%,
+      rgb(2 15 25 / 0.92) 34%,
+      rgb(2 15 25 / 0.3) 64%,
+      rgb(2 15 25 / 0.08) 100%
+    ),
+    linear-gradient(0deg, rgb(2 15 25 / 0.68) 0%, transparent 45%),
+    url("/media/hero-campanha-pcac-2026-v1.png");
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.012);
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pcac-campaign:hover .pcac-campaign-backdrop {
+  transform: scale(1.025);
+}
+
+.pcac-campaign::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 19% 50%, rgb(232 173 50 / 0.11), transparent 30%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.025), transparent 18%);
+}
+
+.pcac-campaign-layout {
+  display: grid;
+  min-height: 690px;
+  align-items: center;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.pcac-campaign-content {
+  width: min(650px, 53%);
+}
+
+.pcac-campaign-emblems {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.pcac-emblem-card {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.19);
+  border-radius: 16px;
+  background: rgb(255 255 255 / 0.96);
+  box-shadow: 0 16px 35px rgb(0 0 0 / 0.28);
+}
+
+.pcac-emblem-card img {
+  width: 51px;
+  height: 51px;
+  object-fit: contain;
+}
+
+.pcac-emblem-card:last-of-type img {
+  width: 55px;
+  height: 55px;
+}
+
+.pcac-emblem-divider {
+  width: 1px;
+  height: 38px;
+  background: rgb(255 255 255 / 0.2);
+}
+
+.pcac-emblem-label {
+  display: grid;
+  gap: 2px;
+  margin-left: 2px;
+  text-transform: uppercase;
+}
+
+.pcac-emblem-label small {
+  color: rgb(255 255 255 / 0.58);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.pcac-emblem-label strong {
+  color: #f3bd48;
+  font-family: var(--font-display);
+  font-size: 21px;
+  letter-spacing: 0.05em;
+}
+
+.pcac-campaign-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  border: 1px solid rgb(232 173 50 / 0.36);
+  border-radius: 999px;
+  padding: 9px 14px;
+  color: #f3bd48;
+  background: rgb(232 173 50 / 0.09);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+}
+
+.pcac-campaign-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pcac-campaign h2 {
+  max-width: 650px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(42px, 4.6vw, 72px);
+  font-weight: 900;
+  line-height: 0.96;
+  letter-spacing: -0.038em;
+}
+
+.pcac-campaign h2 em {
+  color: #f1b93f;
+  font-style: normal;
+}
+
+.pcac-campaign-content > p:not(.pcac-campaign-disclaimer) {
+  max-width: 610px;
+  margin: 24px 0 0;
+  color: rgb(235 242 247 / 0.76);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.pcac-campaign-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.pcac-campaign-roles span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 9px;
+  padding: 9px 11px;
+  color: rgb(255 255 255 / 0.86);
+  background: rgb(5 28 43 / 0.72);
+  font-size: 12px;
+  font-weight: 800;
+  backdrop-filter: blur(12px);
+}
+
+.pcac-campaign-roles svg {
+  width: 14px;
+  height: 14px;
+  color: #f3bd48;
+}
+
+.pcac-campaign-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.pcac-campaign-note {
+  color: rgb(255 255 255 / 0.58);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pcac-campaign-disclaimer {
+  max-width: 570px;
+  margin: 22px 0 0;
+  color: rgb(255 255 255 / 0.4);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .pcac-campaign,
+  .pcac-campaign-layout {
+    min-height: 660px;
+  }
+
+  .pcac-campaign-backdrop {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgb(2 15 25 / 0.98) 0%,
+        rgb(2 15 25 / 0.88) 48%,
+        rgb(2 15 25 / 0.25) 100%
+      ),
+      linear-gradient(0deg, rgb(2 15 25 / 0.82) 0%, transparent 60%),
+      url("/media/hero-campanha-pcac-2026-v1.png");
+    background-position: 61% center;
+  }
+
+  .pcac-campaign-content {
+    width: min(620px, 78%);
+  }
+}
+
+@media (max-width: 640px) {
+  .pcac-campaign,
+  .pcac-campaign-layout {
+    min-height: 720px;
+  }
+
+  .pcac-campaign-layout {
+    align-items: end;
+    padding-top: 250px;
+    padding-bottom: 34px;
+  }
+
+  .pcac-campaign-backdrop {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgb(2 15 25 / 0.08) 0%,
+        rgb(2 15 25 / 0.24) 26%,
+        rgb(2 15 25 / 0.97) 52%,
+        #020f19 100%
+      ),
+      url("/media/hero-campanha-pcac-2026-v1.png");
+    background-position: 68% top;
+    background-size: auto 410px;
+    background-repeat: no-repeat;
+  }
+
+  .pcac-campaign-content {
+    width: 100%;
+  }
+
+  .pcac-campaign-emblems {
+    margin-bottom: 16px;
+  }
+
+  .pcac-emblem-card {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+  }
+
+  .pcac-emblem-card img,
+  .pcac-emblem-card:last-of-type img {
+    width: 43px;
+    height: 43px;
+  }
+
+  .pcac-emblem-label strong {
+    font-size: 17px;
+  }
+
+  .pcac-campaign-badge {
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+
+  .pcac-campaign h2 {
+    max-width: 560px;
+    font-size: clamp(34px, 10.5vw, 48px);
+    line-height: 1;
+  }
+
+  .pcac-campaign-content > p:not(.pcac-campaign-disclaimer) {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.58;
+  }
+
+  .pcac-campaign-roles {
+    gap: 6px;
+    margin-top: 17px;
+  }
+
+  .pcac-campaign-roles span {
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+
+  .pcac-campaign-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .pcac-campaign-actions a {
+    width: 100%;
+  }
+
+  .pcac-campaign-note {
+    text-align: center;
+  }
+
+  .pcac-campaign-disclaimer {
+    margin-top: 14px;
+    font-size: 9px;
+  }
 }
 
 .mock-window {
@@ -1874,22 +2364,85 @@ iframe[src*="gpteng.co"] {
   color: #7bc7e9;
 }
 
+.landing-shell > main > section.tools-art-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(4 14 22 / 0.18) 0%,
+      rgb(4 14 22 / 0.72) 43%,
+      rgb(4 14 22 / 0.96) 100%
+    ),
+    linear-gradient(0deg, #06131d 0%, transparent 45%),
+    url("/media/hero-feminino-ferramentas-v1.png") center top / 100% auto no-repeat;
+  background-color: #06131d;
+}
+
+.tools-art-section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0 38%, rgb(6 19 29 / 0.92) 67%, #06131d 100%);
+  content: "";
+}
+
+.tools-art-intro {
+  min-height: 205px;
+  padding-left: 43%;
+}
+
+.tools-art-section .tools-grid {
+  position: relative;
+  backdrop-filter: blur(12px);
+}
+
 .career-section {
-  background: radial-gradient(circle at 50% 10%, rgb(88 185 230 / 0.09), transparent 34%), #f7f8f8;
+  isolation: isolate;
+  overflow: hidden;
+  color: #f8f5eb;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(3 14 22 / 0.98) 0%,
+      rgb(3 14 22 / 0.87) 48%,
+      rgb(3 14 22 / 0.2) 100%
+    ),
+    url("/media/hero-feminino-carreiras-v1.png") center top / 100% auto no-repeat;
+  background-color: #03101a;
+}
+
+.career-section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(0deg, rgb(3 14 22 / 0.82), transparent 48%);
+  content: "";
+}
+
+.career-section-content {
+  width: min(100%, 760px);
+}
+
+.career-section h2 {
+  color: #fff;
+  text-wrap: balance;
 }
 
 .career-cloud span {
   border-radius: 7px;
   border-color: #d3dde3;
-  background: #fff;
-  color: #17334b;
-  box-shadow: 0 8px 24px rgb(10 39 60 / 0.045);
+  background: rgb(5 20 30 / 0.78);
+  color: #edf2f3;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.16);
+  backdrop-filter: blur(8px);
 }
 
 .career-cloud span.featured {
   border-color: #e1b85e;
-  background: #fff8e9;
-  color: #745013;
+  background: rgb(74 50 12 / 0.64);
+  color: #f7d889;
 }
 
 .career-cloud span svg {
@@ -1897,10 +2450,12 @@ iframe[src*="gpteng.co"] {
 }
 
 .testimonial-card {
+  margin-inline: 0;
   border-radius: 12px;
-  border-color: #d6dfe4;
-  background: linear-gradient(135deg, #fff, #f3f6f7);
-  box-shadow: 0 26px 64px rgb(11 40 61 / 0.08);
+  border-color: rgb(234 182 77 / 0.28);
+  background: linear-gradient(135deg, rgb(255 255 255 / 0.96), rgb(237 241 241 / 0.92));
+  box-shadow: 0 26px 64px rgb(0 0 0 / 0.24);
+  backdrop-filter: blur(12px);
 }
 
 .testimonial-card > svg {
@@ -1951,15 +2506,11 @@ iframe[src*="gpteng.co"] {
   isolation: isolate;
   background:
     linear-gradient(90deg, rgb(4 17 28 / 0.96), rgb(4 17 28 / 0.68)),
-    url("/media/hero-dashboard-police.png") center 52% / cover no-repeat;
+    url("/media/hero-agente-federal-autoral-v1.png") center top / cover no-repeat;
 }
 
 .final-cta::before {
-  opacity: 0.22;
-  background-image:
-    linear-gradient(rgb(88 185 230 / 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(88 185 230 / 0.18) 1px, transparent 1px);
-  background-size: 64px 64px;
+  display: none;
 }
 
 .landing-footer {
@@ -1978,14 +2529,7 @@ iframe[src*="gpteng.co"] {
 
 .tactical-sidebar {
   position: relative;
-  background-image:
-    radial-gradient(circle at 18% 3%, rgb(88 185 230 / 0.14), transparent 24%),
-    linear-gradient(rgb(255 255 255 / 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(255 255 255 / 0.028) 1px, transparent 1px);
-  background-size:
-    auto,
-    44px 44px,
-    44px 44px;
+  background-image: radial-gradient(circle at 18% 3%, rgb(88 185 230 / 0.14), transparent 28%);
 }
 
 .sidebar-group-label {
@@ -2016,14 +2560,8 @@ iframe[src*="gpteng.co"] {
 
 .command-surface {
   background:
-    radial-gradient(circle at 90% 0%, rgb(88 185 230 / 0.075), transparent 26%),
-    linear-gradient(rgb(17 51 74 / 0.024) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(17 51 74 / 0.024) 1px, transparent 1px), var(--color-background);
-  background-size:
-    auto,
-    48px 48px,
-    48px 48px,
-    auto;
+    radial-gradient(circle at 90% 0%, rgb(88 185 230 / 0.075), transparent 28%),
+    var(--color-background);
 }
 
 .command-surface [data-slot="card"],
@@ -2057,7 +2595,7 @@ iframe[src*="gpteng.co"] {
 .onboarding-command {
   background:
     linear-gradient(120deg, rgb(7 26 43 / 0.97), rgb(15 52 78 / 0.94)),
-    url("/media/hero-dashboard-police.png") center / cover no-repeat !important;
+    url("/media/hero-dashboard-command-v3.png") center / cover no-repeat !important;
 }
 
 .dashboard-command-hero,
@@ -2092,7 +2630,7 @@ iframe[src*="gpteng.co"] {
   border: 1px solid rgb(255 255 255 / 0.08);
   border-radius: 14px;
   padding: clamp(1.5rem, 4vw, 2.5rem);
-  background: url("/media/hero-dashboard-police.png") center 58% / cover no-repeat;
+  background: url("/media/hero-dashboard-command-v3.png") center 58% / cover no-repeat;
 }
 
 .dashboard-command-hero::after,
@@ -2140,9 +2678,12 @@ iframe[src*="gpteng.co"] {
 }
 
 .hero-outline-action {
+  min-height: 42px;
   border-color: rgb(255 255 255 / 0.28) !important;
   background: rgb(5 20 32 / 0.34) !important;
   color: white !important;
+  font-size: 0.875rem !important;
+  font-weight: 750 !important;
   backdrop-filter: blur(12px);
 }
 
@@ -2151,22 +2692,24 @@ iframe[src*="gpteng.co"] {
 }
 
 .hero-primary-action {
+  min-height: 42px;
   border-color: transparent !important;
   background: linear-gradient(135deg, #f0c969, #dfa129) !important;
   color: #0b1f31 !important;
   font-weight: 800 !important;
+  font-size: 0.875rem !important;
   box-shadow: 0 12px 28px rgb(218 156 39 / 0.22) !important;
 }
 
 .question-trainer-hero {
   min-height: 310px;
-  background: url("/media/hero-question-trainer.png") center / cover no-repeat;
+  background: url("/media/hero-question-training-v3.png") center / cover no-repeat;
 }
 
 .mock-exam-hero,
 .mock-result-hero {
   min-height: 320px;
-  background: url("/media/hero-mock-exam.png") center / cover no-repeat;
+  background: url("/media/hero-question-training-v3.png") center / cover no-repeat;
 }
 
 .mock-result-hero {
@@ -2177,7 +2720,7 @@ iframe[src*="gpteng.co"] {
   min-height: 230px;
   border-radius: 14px;
   padding: clamp(1.5rem, 4vw, 2.5rem);
-  background: url("/media/hero-dashboard-police.png") center 55% / cover no-repeat;
+  background: url("/media/hero-dashboard-command-v3.png") center 55% / cover no-repeat;
 }
 
 .catalog-command-hero h1 {
@@ -2205,8 +2748,156 @@ iframe[src*="gpteng.co"] {
   text-wrap: pretty;
 }
 
+.dashboard-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.dashboard-quick-actions > a {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgb(205 216 224 / 0.9);
+  border-radius: 0.7rem;
+  background: rgb(255 255 255 / 0.92);
+  box-shadow: 0 10px 28px rgb(9 39 63 / 0.055);
+  transition: 180ms ease;
+}
+
+.dashboard-quick-actions > a:hover {
+  border-color: #d3a33d;
+  transform: translateY(-2px);
+}
+
+.dashboard-quick-actions > a > svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: #9a6c17;
+}
+
+.dashboard-quick-actions span,
+.dashboard-quick-actions strong,
+.dashboard-quick-actions small {
+  display: block;
+}
+
+.dashboard-quick-actions strong {
+  color: #0c2942;
+  font-size: 0.85rem;
+}
+
+.dashboard-quick-actions small {
+  margin-top: 0.1rem;
+  color: #72808d;
+  font-size: 0.68rem;
+}
+
 .mobile-command-nav {
   padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+.collection-showcase {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(1rem, 3vw, 2rem);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 22px;
+  background: url("/media/hero-question-training-v3.png") center 42% / cover no-repeat;
+  box-shadow: 0 24px 65px rgb(6 25 40 / 0.18);
+}
+
+.collection-showcase::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(
+    105deg,
+    rgb(4 18 30 / 0.98),
+    rgb(4 18 30 / 0.82) 58%,
+    rgb(4 18 30 / 0.5)
+  );
+}
+
+.collection-showcase-heading {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.collection-showcase-heading > span {
+  color: #efbd52;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.collection-showcase-heading h2 {
+  margin-top: 6px;
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.collection-showcase-heading p {
+  margin-top: 8px;
+  color: rgb(232 240 245 / 0.72);
+  font-size: 0.9rem;
+}
+
+.catalog-collection-card {
+  border-color: rgb(255 255 255 / 0.16) !important;
+  background: rgb(249 252 253 / 0.95) !important;
+  box-shadow: 0 18px 42px rgb(0 0 0 / 0.2) !important;
+  backdrop-filter: blur(16px);
+}
+
+.collection-study-link {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: #edf2f6;
+  padding: 8px 10px 8px 12px;
+  color: #10283b;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.collection-study-link svg {
+  color: #16866c;
+  transition: transform 0.2s ease;
+}
+
+.collection-study-link:hover {
+  border-color: rgb(22 134 108 / 0.35);
+  background: white;
+  box-shadow: 0 10px 24px rgb(15 55 77 / 0.12);
+  transform: translateY(-2px);
+}
+
+.collection-study-link:hover svg {
+  transform: translateX(3px);
+}
+
+.collection-study-link:focus-visible {
+  border-color: #16866c;
+  outline: 3px solid rgb(22 134 108 / 0.24);
+  outline-offset: 2px;
 }
 
 /* Authentication */
@@ -2219,15 +2910,12 @@ iframe[src*="gpteng.co"] {
   background:
     linear-gradient(90deg, rgb(5 19 31 / 0.14), rgb(5 19 31 / 0.54)),
     linear-gradient(0deg, rgb(5 19 31 / 0.88), transparent 54%),
-    url("/media/hero-dashboard-police.png") center / cover no-repeat;
+    url("/media/hero-agente-federal-autoral-v1.png") center / cover no-repeat;
   transform: none;
 }
 
 .auth-visual::after {
-  background-image:
-    linear-gradient(rgb(88 185 230 / 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(88 185 230 / 0.14) 1px, transparent 1px);
-  background-size: 64px 64px;
+  display: none;
 }
 
 .auth-message h1,
@@ -2279,7 +2967,7 @@ iframe[src*="gpteng.co"] {
     background:
       linear-gradient(90deg, rgb(5 21 34 / 0.95), rgb(5 21 34 / 0.7)),
       linear-gradient(0deg, #051522 0%, transparent 48%),
-      url("/media/hero-home-police.png") 68% center / cover no-repeat;
+      url("/media/hero-agente-federal-autoral-v1.png") 72% top / cover no-repeat;
   }
 
   .hero-title {
@@ -2326,5 +3014,480 @@ iframe[src*="gpteng.co"] {
 
   .auth-panel {
     min-height: 100dvh;
+  }
+
+  .landing-shell .site-container {
+    width: calc(100% - 24px);
+  }
+
+  .landing-shell .mobile-optional-section {
+    display: none;
+  }
+
+  .landing-header .site-container {
+    height: 56px;
+  }
+
+  .landing-header .norte-brand__mark {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .landing-header .norte-brand__type strong {
+    font-size: 0.9rem;
+  }
+
+  .hero-professional > .site-container {
+    padding-block: 40px 34px;
+  }
+
+  .hero-professional .eyebrow {
+    max-width: 100%;
+    padding: 8px 11px;
+    font-size: 11px;
+    letter-spacing: 0.07em;
+  }
+
+  .hero-title {
+    margin-top: 18px;
+    font-size: clamp(2.25rem, 10.2vw, 2.85rem);
+    line-height: 1.02;
+  }
+
+  .hero-copy {
+    margin-top: 18px;
+    color: rgb(242 247 250 / 0.84);
+    font-size: 15px;
+    line-height: 1.58;
+  }
+
+  .hero-professional .premium-button,
+  .hero-secondary {
+    width: 100%;
+    height: 52px !important;
+    padding-inline: 18px;
+    font-size: 15px;
+  }
+
+  .hero-professional .hero-proof {
+    margin-top: 18px;
+    gap: 8px;
+  }
+
+  .hero-professional .hero-proof span {
+    font-size: 12px;
+  }
+
+  .hero-professional .hero-proof span:nth-child(n + 2) {
+    display: none;
+  }
+
+  .hero-stats {
+    padding-block: 12px;
+  }
+
+  .hero-stats .site-container {
+    gap: 9px;
+  }
+
+  .hero-stats .site-container > div {
+    padding-left: 9px;
+  }
+
+  .hero-stats strong {
+    font-size: 17px;
+  }
+
+  .hero-stats span {
+    margin-top: 1px;
+    font-size: 10px;
+  }
+
+  .section-pad {
+    padding-block: 34px;
+  }
+
+  .section-heading {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .section-heading h2,
+  .feature-title,
+  .career-section h2,
+  .final-cta h2 {
+    font-size: 1.72rem !important;
+    line-height: 1.05;
+  }
+
+  .section-heading > p,
+  .feature-copy {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .method-grid,
+  .tools-grid {
+    gap: 9px;
+  }
+
+  .method-card {
+    min-height: 0;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .method-line {
+    margin: 9px 0 13px;
+  }
+
+  .method-card h3 {
+    font-size: 16px;
+  }
+
+  .method-card p {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .method-arrow {
+    display: none;
+  }
+
+  .landing-shell #plataforma > .site-container {
+    gap: 24px;
+  }
+
+  .dashboard-showcase {
+    padding-block: 6px;
+  }
+
+  .mock-top {
+    min-height: 44px;
+    height: 44px;
+  }
+
+  .feature-list {
+    gap: 7px;
+  }
+
+  .feature-list > div {
+    padding: 9px 10px;
+  }
+
+  .feature-list + a,
+  .feature-list + button {
+    margin-top: 16px !important;
+    height: 42px !important;
+  }
+
+  .brand-cover-card {
+    grid-template-columns: 78px 1fr;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 9px;
+    border-radius: 11px;
+  }
+
+  .brand-cover-card img {
+    width: 78px;
+    border-radius: 7px;
+  }
+
+  .brand-cover-card span {
+    font-size: 9px;
+  }
+
+  .brand-cover-card strong {
+    margin-top: 3px;
+    font-size: 13px;
+  }
+
+  .brand-cover-card p {
+    display: none;
+  }
+
+  .brand-cover-card + a,
+  .brand-cover-card + button {
+    width: 100%;
+    height: 48px !important;
+    margin-top: 14px !important;
+  }
+
+  .tools-grid article {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  .tools-grid article > span {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tools-grid article h3 {
+    margin-top: 12px;
+    font-size: 16px;
+  }
+
+  .tools-grid article p {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .tools-grid article a {
+    margin-top: 12px;
+    font-size: 11px;
+  }
+
+  .career-section h2 {
+    margin-top: 8px;
+  }
+
+  .career-cloud {
+    gap: 7px;
+    margin-top: 20px;
+  }
+
+  .career-cloud span {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .testimonial-card {
+    margin-top: 22px;
+    padding: 18px 14px;
+  }
+
+  .testimonial-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .testimonial-card ul {
+    margin-top: 14px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .final-cta {
+    padding-block: 42px;
+  }
+
+  .final-cta p {
+    margin-top: 12px;
+    font-size: 15px;
+  }
+
+  .final-cta .premium-button {
+    min-width: min(100%, 280px);
+    height: 52px !important;
+    margin-top: 18px !important;
+    font-size: 15px;
+  }
+
+  .landing-footer .site-container:first-child {
+    gap: 24px;
+    padding-block: 30px;
+  }
+
+  .landing-footer .site-container:first-child > :not(:first-child) {
+    display: none;
+  }
+
+  .landing-footer .site-container:last-child {
+    padding-block: 16px;
+  }
+
+  .dashboard-home .dashboard-command-hero {
+    min-height: 210px;
+    padding: 20px;
+    border-radius: 10px;
+    background-position: 66% center;
+  }
+
+  .dashboard-home .dashboard-command-hero h1 {
+    margin-top: 9px;
+    font-size: 1.9rem;
+  }
+
+  .dashboard-home .dashboard-command-hero p {
+    display: none;
+  }
+
+  .dashboard-home .internal-hero-kicker {
+    font-size: 11px;
+  }
+
+  .dashboard-home .dashboard-hero-secondary > :not(:last-child) {
+    display: none;
+  }
+
+  .dashboard-home .dashboard-hero-secondary {
+    margin-top: 16px;
+  }
+
+  .dashboard-home .dashboard-hero-secondary .hero-primary-action {
+    min-height: 46px;
+    padding-inline: 18px;
+    font-size: 14px !important;
+  }
+
+  .dashboard-quick-actions {
+    gap: 6px;
+  }
+
+  .dashboard-quick-actions > a {
+    min-height: 78px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 6px;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .dashboard-quick-actions > a > svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .dashboard-quick-actions strong {
+    font-size: 13px;
+  }
+
+  .dashboard-quick-actions small {
+    display: none;
+  }
+
+  .dashboard-home .onboarding-command {
+    border-radius: 9px;
+  }
+
+  .dashboard-home .onboarding-command > div:first-child {
+    padding: 14px;
+  }
+
+  .dashboard-home .onboarding-command h2 {
+    font-size: 15px;
+  }
+
+  .dashboard-home .onboarding-command p,
+  .dashboard-home .onboarding-command .flex.flex-wrap {
+    display: none;
+  }
+
+  .dashboard-home .command-metric > div {
+    padding: 11px;
+  }
+
+  .dashboard-home .command-metric p:first-child {
+    font-size: 10px;
+  }
+
+  .dashboard-home .command-metric .text-2xl {
+    overflow: hidden;
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .dashboard-home .command-metric p.text-xs {
+    font-size: 9px;
+  }
+
+  .dashboard-home .dashboard-desktop-detail {
+    display: none;
+  }
+
+  .dashboard-home .dashboard-next-actions-header {
+    padding: 12px;
+  }
+
+  .dashboard-home .dashboard-next-actions-content {
+    padding: 0 10px 10px;
+  }
+
+  .dashboard-home .dashboard-next-actions-title {
+    font-size: 14px;
+  }
+
+  .dashboard-home .dashboard-next-actions-content > div {
+    gap: 6px;
+  }
+
+  .dashboard-home .dashboard-next-actions-content > div > div {
+    padding: 8px;
+  }
+
+  .collection-showcase {
+    padding: 12px;
+    border-radius: 14px;
+    background-position: 68% center;
+  }
+
+  .collection-showcase-heading {
+    margin-bottom: 14px;
+  }
+
+  .collection-showcase-heading h2 {
+    margin-top: 5px;
+    font-size: 1.35rem;
+  }
+
+  .collection-showcase-heading p {
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .catalog-collection-card > div:first-child {
+    padding: 16px 16px 10px;
+  }
+
+  .catalog-collection-card > div:last-child {
+    padding: 0 12px 12px;
+  }
+
+  .collection-study-link {
+    min-height: 48px;
+  }
+
+  .question-trainer-hero p {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 1.5;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .question-trainer-hero h1 {
+    font-size: 1.7rem;
+    line-height: 1.08;
+  }
+
+  .trainer-setup .question-trainer-hero > div {
+    gap: 9px;
+  }
+
+  .trainer-setup .question-trainer-hero .grid.grid-cols-2 {
+    gap: 6px;
+  }
+
+  .question-trainer-hero {
+    min-height: 260px;
+    background-position: 66% center;
+  }
+
+  .trainer-setup .command-panel,
+  .trainer-session-shell .question-window {
+    border-radius: 0.75rem;
+  }
+
+  .trainer-session-shell .session-status-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
 }

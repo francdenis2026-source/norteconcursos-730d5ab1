@@ -15,23 +15,24 @@ export function NorteBrand({ className, compact = false, light = false }: NorteB
         light && "is-light",
         className,
       )}
-      aria-label="Norte Concurso"
+      aria-label="Norte Concursos"
     >
       <span className="norte-brand__mark" aria-hidden="true">
         <svg viewBox="0 0 48 48" role="img">
+          <circle className="norte-brand__frame" cx="24" cy="24" r="20" />
+          <path className="norte-brand__orbit" d="M34.2 15.1a13.2 13.2 0 1 0 .2 17.6" />
+          <path className="norte-brand__monogram" d="M17.5 33V15l13 18V15" />
           <path
-            className="norte-brand__shield"
-            d="M24 3.5 41 10v11.6c0 10.6-6.8 18.6-17 22.9C13.8 40.2 7 32.2 7 21.6V10l17-6.5Z"
+            className="norte-brand__star"
+            d="m24 4.8 1.55 4.05L29.6 10.4l-4.05 1.55L24 16l-1.55-4.05-4.05-1.55 4.05-1.55L24 4.8Z"
           />
-          <path className="norte-brand__north" d="m24 9 9.1 23.2L24 28.7l-9.1 3.5L24 9Z" />
-          <path className="norte-brand__cut" d="M24 14.2v10.2l-4.1 2.1L24 14.2Z" />
-          <circle className="norte-brand__point" cx="24" cy="36.2" r="2.1" />
+          <path className="norte-brand__horizon" d="M13.2 37.2h21.6" />
         </svg>
       </span>
       {!compact && (
         <span className="norte-brand__type" aria-hidden="true">
           <strong>NORTE</strong>
-          <span>CONCURSO</span>
+          <span>CONCURSOS</span>
         </span>
       )}
     </span>

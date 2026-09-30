@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Treino orientado por dados para quem escolheu servir e proteger.",
       },
-      { property: "og:image", content: "/media/hero-home-police.png" },
+      { property: "og:image", content: "/media/hero-agente-federal-autoral-v1.png" },
     ],
   }),
 });
@@ -117,7 +117,6 @@ function Index() {
             <a href="#metodo">Método</a>
             <a href="#plataforma">Plataforma</a>
             <a href="#carreiras">Carreiras</a>
-            <a href="#planos">Planos</a>
           </nav>
           <div className="hidden items-center gap-3 sm:flex">
             <Button
@@ -155,7 +154,6 @@ function Index() {
                   ["Método", "#metodo"],
                   ["Centro de treino", "#plataforma"],
                   ["Carreiras policiais", "#carreiras"],
-                  ["Planos", "#planos"],
                 ].map(([label, href]) => (
                   <SheetClose asChild key={href}>
                     <a
@@ -191,7 +189,6 @@ function Index() {
       <main>
         <section className="hero-professional">
           <div className="hero-image" aria-hidden="true" />
-          <div className="hero-grid" aria-hidden="true" />
           <div className="site-container relative z-10 grid min-h-0 items-center py-12 sm:min-h-[560px] sm:py-20 lg:min-h-[760px] lg:grid-cols-[1.08fr_.92fr] lg:py-28">
             <div className="max-w-[720px] pt-2 sm:pt-8">
               <div className="eyebrow reveal-up">
@@ -281,9 +278,64 @@ function Index() {
           </div>
         </section>
 
-        <section id="metodo" className="section-pad bg-[#f6f8fb]">
+        <section className="pcac-campaign" aria-labelledby="pcac-campaign-title">
+          <div className="pcac-campaign-backdrop" aria-hidden="true" />
+          <div className="site-container pcac-campaign-layout">
+            <div className="pcac-campaign-content">
+              <div className="pcac-campaign-emblems" aria-label="Identidade institucional do Acre">
+                <span className="pcac-emblem-card">
+                  <img src="/media/brasao-acre-oficial.svg" alt="Brasão do Estado do Acre" />
+                </span>
+                <span className="pcac-emblem-divider" aria-hidden="true" />
+                <span className="pcac-emblem-card">
+                  <img src="/media/brasao-pcac-oficial.jpg" alt="Brasão da Polícia Civil do Acre" />
+                </span>
+                <span className="pcac-emblem-label">
+                  <small>Campanha especial</small>
+                  <strong>PCAC 2026</strong>
+                </span>
+              </div>
+
+              <div className="pcac-campaign-badge">
+                <Sparkles /> Concurso anunciado · preparação antecipada
+              </div>
+              <h2 id="pcac-campaign-title">
+                Sua próxima missão pode começar <em>antes do edital.</em>
+              </h2>
+              <p>
+                O novo concurso da Polícia Civil do Acre foi anunciado. Prepare-se desde agora para
+                Delegado, Oficial Investigador de Polícia e Perito com treino direcionado, simulados
+                e inteligência de desempenho.
+              </p>
+
+              <div className="pcac-campaign-roles" aria-label="Cargos anunciados">
+                {["Delegado de Polícia", "Oficial Investigador", "Perito"].map((role) => (
+                  <span key={role}>
+                    <Check /> {role}
+                  </span>
+                ))}
+              </div>
+
+              <div className="pcac-campaign-actions">
+                <Button size="lg" className="premium-button h-14 px-7 text-[15px]" asChild>
+                  <Link to="/auth">
+                    Começar preparação para PCAC <ArrowRight />
+                  </Link>
+                </Button>
+                <span className="pcac-campaign-note">Edital ainda não publicado</span>
+              </div>
+
+              <p className="pcac-campaign-disclaimer">
+                Campanha educacional independente. A Norte Concursos não possui vínculo ou endosso
+                institucional do Governo do Acre ou da Polícia Civil.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="metodo" className="mobile-optional-section section-pad method-hero-section">
           <div className="site-container">
-            <div className="section-heading">
+            <div className="section-heading light method-hero-intro">
               <div>
                 <span className="section-kicker">Protocolo Norte</span>
                 <h2>Preparação é estratégia, não improviso.</h2>
@@ -309,7 +361,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="plataforma" className="section-pad overflow-hidden">
+        <section id="plataforma" className="section-pad overflow-hidden platform-hero-section">
           <div className="site-container grid items-center gap-16 lg:grid-cols-[.95fr_1.05fr]">
             <div className="dashboard-showcase">
               <div className="showcase-glow" />
@@ -365,7 +417,7 @@ function Index() {
                 <Check />
               </div>
             </div>
-            <div>
+            <div className="platform-hero-copy">
               <span className="section-kicker">Centro de operações</span>
               <h2 className="feature-title">Cada dado aponta para a próxima ação.</h2>
               <p className="feature-copy">
@@ -388,6 +440,17 @@ function Index() {
                   </div>
                 ))}
               </div>
+              <div className="brand-cover-card">
+                <img
+                  src="/media/capa-norte-concursos-autoral-v2.png"
+                  alt="Capa institucional Norte Concursos para carreiras policiais"
+                />
+                <div>
+                  <span>Identidade Norte</span>
+                  <strong>Preparação séria para carreiras policiais.</strong>
+                  <p>Estratégia, constância e desempenho reunidos em uma única plataforma.</p>
+                </div>
+              </div>
               <Button
                 variant="outline"
                 className="mt-8 h-12 rounded-xl border-slate-300 px-6"
@@ -401,9 +464,9 @@ function Index() {
           </div>
         </section>
 
-        <section className="section-pad bg-[#071a2f] text-white">
+        <section className="mobile-optional-section section-pad tools-art-section text-white">
           <div className="site-container">
-            <div className="section-heading light">
+            <div className="section-heading light tools-art-intro">
               <div>
                 <span className="section-kicker">Equipamento de preparação</span>
                 <h2>Ferramentas para cada fase da missão.</h2>
@@ -421,103 +484,53 @@ function Index() {
                   </span>
                   <h3>{title}</h3>
                   <p>{text}</p>
-                  <a href="#planos">
-                    Ver planos <ArrowRight />
-                  </a>
+                  <Link to="/auth">
+                    Acessar plataforma <ArrowRight />
+                  </Link>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="carreiras" className="section-pad career-section">
-          <div className="site-container text-center">
-            <span className="section-kicker">Foco total em segurança pública</span>
-            <h2 className="mx-auto mt-3 max-w-3xl text-4xl font-extrabold tracking-[-.04em] text-primary md:text-5xl">
-              A plataforma de quem escolheu servir e proteger.
-            </h2>
-            <div className="career-cloud">
-              {careers.map((career, i) => (
-                <span key={career} className={i < 3 ? "featured" : ""}>
-                  <ShieldCheck />
-                  {career}
-                </span>
-              ))}
-            </div>
-            <div className="testimonial-card">
-              <Gavel className="h-8 w-8" aria-hidden="true" />
-              <h3 className="mt-5 text-center text-xl font-black tracking-tight text-primary">
-                Base de estudo com rastreabilidade jurídica
-              </h3>
-              <ul className="mx-auto mt-6 max-w-xl space-y-3 text-left text-sm text-slate-600">
-                <li className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-                  Questões jurídicas sinalizam fonte, referência e data de verificação quando
-                  aplicável.
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-                  Leis federais no texto compilado do Planalto; súmulas e jurisprudência, no
-                  tribunal competente.
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-                  Conteúdos auditados são identificados para você saber exatamente o que está
-                  estudando.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section id="planos" className="section-pad bg-[#f6f8fb]">
+        <section id="carreiras" className="mobile-optional-section section-pad career-section">
           <div className="site-container">
-            <div className="mx-auto mb-14 max-w-2xl text-center">
-              <span className="section-kicker">Planos transparentes</span>
-              <h2 className="mt-3 text-4xl font-extrabold tracking-[-.04em] text-primary md:text-5xl">
-                Escolha seu nível de operação.
+            <div className="career-section-content">
+              <span className="section-kicker">Foco total em segurança pública</span>
+              <h2 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-[-.04em] md:text-5xl">
+                A plataforma de quem escolheu servir e proteger.
               </h2>
-            </div>
-            <div className="pricing-grid">
-              <Pricing
-                planId="free"
-                name="Gratuito"
-                price="0"
-                description="Para iniciar o reconhecimento do terreno."
-                features={["10 questões por dia", "Análise básica", "Cronômetro de estudos"]}
-              />
-              <Pricing
-                planId="essential"
-                name="Essencial"
-                price="19,90"
-                description="Para ganhar ritmo com questões e simulados."
-                features={["100 questões por dia", "2 simulados completos", "Plano de estudos"]}
-              />
-              <Pricing
-                featured
-                planId="plus"
-                name="Plus"
-                price="29,90"
-                description="Para uma preparação contínua e sem limites."
-                features={[
-                  "Questões ilimitadas",
-                  "Simulados ilimitados",
-                  "Análise avançada",
-                  "Plano adaptativo",
-                ]}
-              />
-              <Pricing
-                planId="premium"
-                name="Premium"
-                price="49,90"
-                description="Para operar com acompanhamento completo."
-                features={[
-                  "Questões e simulados ilimitados",
-                  "Relatórios consolidados",
-                  "Plano personalizado",
-                  "Suporte prioritário",
-                ]}
-              />
+              <div className="career-cloud">
+                {careers.map((career, i) => (
+                  <span key={career} className={i < 3 ? "featured" : ""}>
+                    <ShieldCheck />
+                    {career}
+                  </span>
+                ))}
+              </div>
+              <div className="testimonial-card">
+                <Gavel className="h-8 w-8" aria-hidden="true" />
+                <h3 className="mt-5 text-center text-xl font-black tracking-tight text-primary">
+                  Base de estudo com rastreabilidade jurídica
+                </h3>
+                <ul className="mx-auto mt-6 max-w-xl space-y-3 text-left text-sm text-slate-600">
+                  <li className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                    Questões jurídicas sinalizam fonte, referência e data de verificação quando
+                    aplicável.
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                    Leis federais no texto compilado do Planalto; súmulas e jurisprudência, no
+                    tribunal competente.
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                    Conteúdos auditados são identificados para você saber exatamente o que está
+                    estudando.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -550,10 +563,7 @@ function Index() {
               Inteligência de estudo para as carreiras que protegem o Brasil.
             </p>
           </div>
-          <FooterColumn
-            title="Plataforma"
-            links={["Método", "Ferramentas", "Planos", "Carreiras"]}
-          />
+          <FooterColumn title="Plataforma" links={["Método", "Ferramentas", "Carreiras"]} />
           <FooterColumn
             title="Institucional"
             links={["Sobre nós", "Privacidade", "Termos de uso", "Suporte"]}
@@ -574,68 +584,10 @@ function Index() {
   );
 }
 
-function Pricing({
-  planId,
-  name,
-  price,
-  description,
-  features,
-  featured = false,
-}: {
-  planId: string;
-  name: string;
-  price: string;
-  description: string;
-  features: string[];
-  featured?: boolean;
-}) {
-  return (
-    <article className={`pricing-card ${featured ? "featured" : ""}`}>
-      {featured && <span className="popular-tag">MAIS ESCOLHIDO</span>}
-      <div>
-        <span className="plan-name">{name}</span>
-        <p>{description}</p>
-      </div>
-      <div className="price">
-        <small>{price === "0" ? "" : "R$"}</small>
-        <strong>{price}</strong>
-        <span>{price !== "0" ? "/mês" : "gratuito"}</span>
-      </div>
-      <ul>
-        {features.map((f) => (
-          <li key={f}>
-            <span>
-              <Check />
-            </span>
-            {f}
-          </li>
-        ))}
-      </ul>
-      <Button
-        className={featured ? "premium-button" : ""}
-        variant={featured ? "default" : "outline"}
-        asChild
-      >
-        {planId === "free" ? (
-          <Link to="/auth">
-            Começar gratuitamente
-            <ArrowRight />
-          </Link>
-        ) : (
-          <Link to="/checkout/$planId" params={{ planId }}>
-            Escolher {name}
-            <ArrowRight />
-          </Link>
-        )}
-      </Button>
-    </article>
-  );
-}
 function FooterColumn({ title, links }: { title: string; links: string[] }) {
   const destinations: Record<string, string> = {
     Método: "#metodo",
     Ferramentas: "#plataforma",
-    Planos: "#planos",
     Carreiras: "#carreiras",
     "Sobre nós": "#metodo",
     Privacidade: "/privacy",

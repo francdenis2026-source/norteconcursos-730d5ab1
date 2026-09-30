@@ -19,11 +19,7 @@ import {
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import {
-  GUEST_DAILY_LIMIT,
-  getGuestRemainingToday,
-  registerGuestAnswer,
-} from "@/lib/guestQuota";
+import { GUEST_DAILY_LIMIT, getGuestRemainingToday, registerGuestAnswer } from "@/lib/guestQuota";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -54,6 +50,8 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     subject: typeof search.subject === "string" ? search.subject : undefined,
     source: typeof search.source === "string" ? search.source : undefined,
     reviewed: typeof search.reviewed === "string" ? search.reviewed : undefined,
+    state: typeof search.state === "string" ? search.state : undefined,
+    category: typeof search.category === "string" ? search.category : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -78,6 +76,8 @@ type Question = {
   legalBasis: LegalBasis[];
   checkedAt: string | null;
   difficulty: Difficulty;
+  state: string;
+  category: string;
 };
 
 const normalizeDifficulty = (value: unknown): Difficulty => {
@@ -246,6 +246,8 @@ function QuestionTrainer() {
   const [subject, setSubject] = React.useState(routeFilters.subject || "all");
   const [source, setSource] = React.useState(routeFilters.source || "all");
   const [reviewed, setReviewed] = React.useState(routeFilters.reviewed || "all");
+  const [state, setState] = React.useState(routeFilters.state || "all");
+  const [category, setCategory] = React.useState(routeFilters.category || "all");
   const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState("20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
@@ -282,7 +284,7 @@ function QuestionTrainer() {
           const { data, error: guestError } = await supabase
             .rpc("get_daily_guest_questions", { p_limit: 10 })
             .select(
-              "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,difficulty",
+              "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,difficulty,state,career_category",
             );
           if (guestError) throw guestError;
           const guestCatalog: Question[] = ((data || []) as Array<Record<string, unknown>>).map(
@@ -303,6 +305,8 @@ function QuestionTrainer() {
               legalBasis: parseBasis(row.legal_basis),
               checkedAt: null,
               difficulty: normalizeDifficulty(row.difficulty),
+              state: String(row.state || ""),
+              category: String(row.career_category || ""),
             }),
           );
           if (active) {
@@ -327,13 +331,13 @@ function QuestionTrainer() {
         const [officialResult, curatedResult, personalResult] = await Promise.all([
           query(
             "official_exam_questions",
-            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis",
+            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,state,career_category",
             "law_version_checked_at,legal_review_required,legal_audit_completed,difficulty",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
           ),
           query(
             "curated_question_catalog",
-            "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty",
+            "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
             "law_version_checked_at",
             (builder) => builder.eq("content_status", "active"),
           ),
@@ -341,7 +345,7 @@ function QuestionTrainer() {
             ? Promise.resolve({ data: [], error: null, gated: true })
             : query(
                 "question_bank",
-                "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status,difficulty",
+                "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status,difficulty,state,career_category",
                 "law_version_checked_at",
                 (builder) => builder.eq("user_id", userId),
               ),
@@ -385,6 +389,8 @@ function QuestionTrainer() {
             legalBasis: parseBasis(row.legal_basis),
             checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
             difficulty: normalizeDifficulty(row.difficulty),
+            state: String(row.state || ""),
+            category: String(row.career_category || ""),
           })),
           ...gate(
             (curatedResult.data || []) as Array<Record<string, unknown>>,
@@ -404,6 +410,8 @@ function QuestionTrainer() {
             legalBasis: parseBasis(row.legal_basis),
             checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
             difficulty: normalizeDifficulty(row.difficulty),
+            state: String(row.state || ""),
+            category: String(row.career_category || ""),
           })),
           ...((personalResult.data || []) as Array<Record<string, unknown>>)
             .filter(
@@ -430,6 +438,8 @@ function QuestionTrainer() {
               legalBasis: parseBasis(row.legal_basis),
               checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
               difficulty: normalizeDifficulty(row.difficulty),
+              state: String(row.state || ""),
+              category: String(row.career_category || ""),
             })),
         ];
         if (active) {
@@ -453,7 +463,18 @@ function QuestionTrainer() {
   // Cada lista mostra só o que existe combinado com os OUTROS filtros já escolhidos,
   // para nunca montar uma combinação sem questões.
   const choices = React.useMemo(() => {
-    const filters = { contest, board, career, year, subject, source, reviewed, difficulty } as const;
+    const filters = {
+      contest,
+      board,
+      career,
+      year,
+      subject,
+      source,
+      reviewed,
+      difficulty,
+      state,
+      category,
+    } as const;
     const fields = {
       contest: (item: Question) => item.contest,
       board: (item: Question) => item.board,
@@ -463,6 +484,8 @@ function QuestionTrainer() {
       source: (item: Question) => item.source,
       reviewed: (item: Question) => (hasReviewedExplanation(item) ? "reviewed" : "pending"),
       difficulty: (item: Question) => item.difficulty,
+      state: (item: Question) => item.state,
+      category: (item: Question) => item.category,
     };
     const scoped = (skip: keyof typeof fields) =>
       catalog.filter((item) =>
@@ -484,6 +507,8 @@ function QuestionTrainer() {
       careers: unique(scoped("career").map(fields.career)),
       years: unique(scoped("year").map(fields.year)).sort((x, y) => Number(y) - Number(x)),
       subjects: unique(scoped("subject").map(fields.subject)),
+      states: unique(scoped("state").map(fields.state)),
+      categories: unique(scoped("category").map(fields.category)),
       exams: exams.filter(([key]) => {
         const [c, ca, b, y] = key.split("::");
         return (
@@ -494,7 +519,19 @@ function QuestionTrainer() {
         );
       }),
     };
-  }, [catalog, contest, board, career, year, subject, source, reviewed, difficulty]);
+  }, [
+    catalog,
+    contest,
+    board,
+    career,
+    year,
+    subject,
+    source,
+    reviewed,
+    difficulty,
+    state,
+    category,
+  ]);
   // Ao mexer em um filtro individual, a "prova aplicada" escolhida antes deixa de valer.
   const manual =
     <T,>(setter: (value: T) => void) =>
@@ -514,9 +551,24 @@ function QuestionTrainer() {
           (subject === "all" || item.subject === subject) &&
           (source === "all" || item.source === source) &&
           (reviewed === "all" || hasReviewedExplanation(item)) &&
-          (difficulty === "all" || item.difficulty === difficulty),
+          (difficulty === "all" || item.difficulty === difficulty) &&
+          (state === "all" || item.state === state) &&
+          (category === "all" || item.category === category),
       ),
-    [catalog, contest, board, career, year, appliedExam, subject, source, reviewed, difficulty],
+    [
+      catalog,
+      contest,
+      board,
+      career,
+      year,
+      appliedExam,
+      subject,
+      source,
+      reviewed,
+      difficulty,
+      state,
+      category,
+    ],
   );
   const startTraining = () => {
     // Visitante: ordem fixa (a mesma pra todo mundo naquele dia) — só quem
@@ -678,6 +730,8 @@ function QuestionTrainer() {
             source,
             reviewed,
             difficulty,
+            state,
+            category,
             limit,
             orderMode,
           }}
@@ -691,6 +745,8 @@ function QuestionTrainer() {
             setSource: manual(setSource),
             setReviewed: manual(setReviewed),
             setDifficulty: manual(setDifficulty),
+            setState: manual(setState),
+            setCategory: manual(setCategory),
             setLimit,
             setOrderMode,
           }}
@@ -738,8 +794,8 @@ function QuestionTrainer() {
     if (selected === letter) setSelected(null);
   };
   return (
-    <div className="trainer-session-shell mx-auto max-w-4xl space-y-4 pb-8">
-      <header className="flex flex-wrap items-center justify-between gap-3">
+    <div className="trainer-session-shell mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+      <header className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
         {isGuest ? (
           <Badge variant="secondary">
             <Sparkles className="mr-1 h-3.5 w-3.5 text-amber-500" /> Desafio do dia
@@ -762,8 +818,8 @@ function QuestionTrainer() {
           )}
         </div>
       </header>
-      <div className="session-status-bar rounded-xl border bg-card px-4 py-3 shadow-sm">
-        <div className="mb-2 flex items-center justify-between text-xs">
+      <div className="session-status-bar rounded-lg border bg-card px-3 py-2 shadow-sm sm:rounded-xl sm:px-4 sm:py-3">
+        <div className="mb-1.5 flex items-center justify-between text-[11px] sm:mb-2 sm:text-xs">
           <span className="font-bold">
             Questão {index + 1} de {questions.length}
           </span>
@@ -778,35 +834,38 @@ function QuestionTrainer() {
         key={question.id}
       >
         <div className="h-1 bg-gradient-to-r from-amber-500 via-sky-500 to-blue-800" />
-        <CardContent className="p-5 md:p-7">
-          <div className="mb-5 flex flex-wrap gap-2">
+        <CardContent className="p-3.5 sm:p-5 md:p-7">
+          <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-5 sm:gap-2">
             <Badge>{question.board}</Badge>
             <Badge variant="outline">{question.subject}</Badge>
             <Badge variant="outline">
               {question.contest} · {question.year}
             </Badge>
-            <Badge variant="outline" className={cn("font-bold", DIFFICULTY_STYLE[question.difficulty])}>
+            <Badge
+              variant="outline"
+              className={cn("font-bold", DIFFICULTY_STYLE[question.difficulty])}
+            >
               {DIFFICULTY_LABEL[question.difficulty]}
             </Badge>
           </div>
           {parsed.base && (
             <details
               open
-              className="mb-4 rounded-xl border bg-muted/40 [&_summary::-webkit-details-marker]:hidden"
+              className="mb-3 rounded-lg border bg-muted/40 sm:mb-4 sm:rounded-xl [&_summary::-webkit-details-marker]:hidden"
             >
               <summary className="flex cursor-pointer select-none items-center justify-between px-4 py-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
                 {parsed.baseLabel}
                 <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
               </summary>
-              <div className="max-h-80 overflow-y-auto whitespace-pre-line px-4 pb-4 text-sm leading-7 text-foreground">
+              <div className="max-h-52 overflow-y-auto whitespace-pre-line px-3 pb-3 text-sm leading-6 text-foreground sm:max-h-80 sm:px-4 sm:pb-4 sm:leading-7">
                 {parsed.base}
               </div>
             </details>
           )}
-          <p className="whitespace-pre-line text-base font-medium leading-7 text-foreground md:text-lg">
+          <p className="whitespace-pre-line text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
             {parsed.stem}
           </p>
-          <p className="mt-5 text-xs font-black uppercase tracking-wider text-muted-foreground">
+          <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
             {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
           </p>
           {hasOptions && (
@@ -824,7 +883,7 @@ function QuestionTrainer() {
                       disabled={answered}
                       onClick={() => chooseOption(option.letter)}
                       className={cn(
-                        "group flex flex-1 items-start gap-3 rounded-xl border-2 border-border bg-background p-3 text-left text-sm leading-6 transition-all duration-200 hover:border-primary hover:bg-primary/5 disabled:hover:bg-background",
+                        "group flex flex-1 items-start gap-2 rounded-lg border-2 border-border bg-background p-2.5 text-left text-sm leading-5 transition-all duration-200 hover:border-primary hover:bg-primary/5 disabled:hover:bg-background sm:gap-3 sm:rounded-xl sm:p-3 sm:leading-6",
                         isStruck && "opacity-50",
                         isSelected &&
                           !answered &&
@@ -835,7 +894,7 @@ function QuestionTrainer() {
                     >
                       <span
                         className={cn(
-                          "mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-muted text-xs font-bold",
+                          "mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-muted text-[11px] font-bold sm:h-7 sm:w-7 sm:rounded-lg sm:text-xs",
                           isSelected && !answered && "bg-blue-600 text-white",
                           isRight && "bg-emerald-600 text-white",
                           isWrong && "bg-rose-600 text-white",
@@ -849,7 +908,7 @@ function QuestionTrainer() {
                       type="button"
                       variant={isStruck ? "secondary" : "ghost"}
                       size="icon"
-                      className="h-10 w-10 shrink-0"
+                      className="h-9 w-9 shrink-0 sm:h-10 sm:w-10"
                       disabled={answered}
                       aria-pressed={isStruck}
                       aria-label={
@@ -882,7 +941,7 @@ function QuestionTrainer() {
                 disabled={answered}
                 onClick={() => setSelected(answer)}
                 className={cn(
-                  "group relative flex min-h-16 items-center justify-center gap-2 rounded-xl border-2 border-border bg-background px-4 font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:shadow-md disabled:hover:translate-y-0",
+                  "group relative flex min-h-12 items-center justify-center gap-2 rounded-lg border-2 border-border bg-background px-3 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:shadow-md disabled:hover:translate-y-0 sm:min-h-16 sm:rounded-xl sm:px-4 sm:text-base",
                   selected === answer &&
                     !answered &&
                     "scale-[1.02] border-blue-600 bg-blue-600 text-white shadow-lg shadow-blue-600/20 ring-4 ring-blue-600/15 hover:bg-blue-600 hover:text-white",
@@ -909,7 +968,7 @@ function QuestionTrainer() {
               </button>
             ))}
           </div>
-          <div className="mt-6 flex flex-col-reverse gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-4 flex flex-col-reverse gap-2 sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
             <Button
               variant="ghost"
               className="text-amber-700"
@@ -925,7 +984,7 @@ function QuestionTrainer() {
               size="lg"
               disabled={!selected || answered}
               onClick={submit}
-              className="min-w-44"
+              className="h-11 min-w-44 sm:h-12"
             >
               Confirmar resposta <Check className="ml-2 h-4 w-4" />
             </Button>
@@ -1073,6 +1132,8 @@ type SetupValues = {
   source: string;
   reviewed: string;
   difficulty: string;
+  state: string;
+  category: string;
   limit: string;
   orderMode: OrderMode;
 };
@@ -1086,6 +1147,8 @@ type SetupSetters = {
   setSource: (value: string) => void;
   setReviewed: (value: string) => void;
   setDifficulty: (value: string) => void;
+  setState: (value: string) => void;
+  setCategory: (value: string) => void;
   setLimit: (value: string) => void;
   setOrderMode: (value: OrderMode) => void;
 };
@@ -1106,6 +1169,8 @@ function TrainerSetup({
     careers: string[];
     years: string[];
     subjects: string[];
+    states: string[];
+    categories: string[];
     exams: Array<[string, string]>;
   };
   values: SetupValues;
@@ -1122,37 +1187,41 @@ function TrainerSetup({
     setters.setSource("all");
     setters.setReviewed("all");
     setters.setDifficulty("all");
+    setters.setState("all");
+    setters.setCategory("all");
   };
   return (
-    <div className="mx-auto max-w-5xl space-y-5 pb-10 animate-in fade-in duration-300">
-      <section className="question-trainer-hero tactical-feature-hero overflow-hidden rounded-2xl p-6 text-white shadow-xl md:p-8">
-        <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
+    <div className="trainer-setup mx-auto max-w-5xl space-y-3 pb-5 animate-in fade-in duration-300 sm:space-y-5 sm:pb-10">
+      <section className="question-trainer-hero tactical-feature-hero overflow-hidden rounded-xl p-4 text-white shadow-xl sm:rounded-2xl sm:p-6 md:p-8">
+        <div className="grid gap-3 sm:gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div>
-            <Badge className="mb-4 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10">
+            <Badge className="mb-2 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10 sm:mb-4">
               <BrainCircuit className="mr-1.5 h-3.5 w-3.5" /> Treinamento de precisão
             </Badge>
-            <h1 className="text-3xl font-black md:text-4xl">Monte sua sessão de questões</h1>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
+            <h1 className="text-2xl font-black leading-tight sm:text-3xl md:text-4xl">
+              Monte sua sessão de questões
+            </h1>
+            <p className="mt-2 max-w-2xl text-xs leading-5 text-slate-300 sm:mt-3 sm:text-sm sm:leading-6">
               Escolha a banca, carreira, concurso e disciplina. Aqui cada resposta recebe correção
               imediata e orientação pedagógica, sem afetar o ranking dos simulados.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-2 text-center">
-            <div className="rounded-xl border border-white/10 bg-white/10 px-4 py-3">
-              <p className="text-2xl font-black">{total}</p>
+            <div className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 sm:rounded-xl sm:px-4 sm:py-3">
+              <p className="text-xl font-black sm:text-2xl">{total}</p>
               <p className="text-[10px] text-slate-300">questões ativas</p>
             </div>
-            <div className="rounded-xl border border-amber-300/30 bg-amber-300/10 px-4 py-3">
-              <p className="text-2xl font-black text-amber-200">{available}</p>
+            <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-2 sm:rounded-xl sm:px-4 sm:py-3">
+              <p className="text-xl font-black text-amber-200 sm:text-2xl">{available}</p>
               <p className="text-[10px] text-slate-300">na seleção</p>
             </div>
           </div>
         </div>
       </section>
       <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
-        <CardContent className="p-5 md:p-7">
-          <div className="mb-6 flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
+        <CardContent className="p-3.5 sm:p-5 md:p-7">
+          <div className="mb-3 flex items-center gap-2.5 sm:mb-6 sm:gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200 sm:h-11 sm:w-11">
               <BookOpenCheck className="h-5 w-5" />
             </div>
             <div>
@@ -1162,7 +1231,7 @@ function TrainerSetup({
               </p>
             </div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             <TrainerFilter
               label="Banca"
               value={values.board}
@@ -1186,6 +1255,18 @@ function TrainerSetup({
               value={values.career}
               setValue={setters.setCareer}
               options={choices.careers}
+            />
+            <TrainerFilter
+              label="Estado"
+              value={values.state}
+              setValue={setters.setState}
+              options={choices.states}
+            />
+            <TrainerFilter
+              label="Categoria"
+              value={values.category}
+              setValue={setters.setCategory}
+              options={choices.categories}
             />
             <TrainerFilter
               label="Ano"
@@ -1234,7 +1315,7 @@ function TrainerSetup({
               allLabel="Quantidade"
               hideAll
             />
-            <label className="space-y-2">
+            <label className="space-y-1.5 sm:space-y-2">
               <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
                 Ordem das questões
               </span>
@@ -1242,7 +1323,7 @@ function TrainerSetup({
                 value={values.orderMode}
                 onValueChange={(value) => setters.setOrderMode(value as OrderMode)}
               >
-                <SelectTrigger className="h-11 bg-background">
+                <SelectTrigger className="h-10 bg-background sm:h-11">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -1252,7 +1333,7 @@ function TrainerSetup({
               </Select>
             </label>
           </div>
-          <div className="mt-7 flex flex-col gap-3 rounded-2xl border bg-muted/30 p-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-4 flex flex-col gap-2.5 rounded-xl border bg-muted/30 p-3 sm:mt-7 sm:flex-row sm:items-center sm:justify-between sm:rounded-2xl sm:p-4">
             <div>
               <p className="font-black">
                 {Math.min(available, Number(values.limit))} questões serão usadas
@@ -1263,11 +1344,15 @@ function TrainerSetup({
                   : "Questões apresentadas na ordem cadastrada, com correção após cada resposta."}
               </p>
             </div>
-            <div className="flex gap-2">
-              <Button variant="outline" onClick={reset}>
+            <div className="grid grid-cols-[auto_1fr] gap-2 sm:flex">
+              <Button variant="outline" size="sm" onClick={reset} className="sm:h-10 sm:px-4">
                 Limpar filtros
               </Button>
-              <Button disabled={!available} onClick={start} className="hero-primary-action">
+              <Button
+                disabled={!available}
+                onClick={start}
+                className="hero-primary-action h-9 sm:h-10"
+              >
                 <Sparkles className="mr-2 h-4 w-4" /> Iniciar treinamento
               </Button>
             </div>
@@ -1296,12 +1381,12 @@ function TrainerFilter({
   hideAll?: boolean;
 }) {
   return (
-    <label className="space-y-2">
+    <label className="space-y-1.5 sm:space-y-2">
       <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
         {label}
       </span>
       <Select value={value} onValueChange={setValue}>
-        <SelectTrigger className="h-11 bg-background">
+        <SelectTrigger className="h-10 bg-background sm:h-11">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
