@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as DesafioDiarioRouteImport } from './routes/desafio-diario'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
@@ -48,6 +49,11 @@ const AuthRoute = AuthRouteImport.update({
 const DashboardRoute = DashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DesafioDiarioRoute = DesafioDiarioRouteImport.update({
+  id: '/desafio-diario',
+  path: '/desafio-diario',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -166,6 +172,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/dashboard': typeof DashboardRouteWithChildren
+  '/desafio-diario': typeof DesafioDiarioRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
@@ -192,6 +199,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/desafio-diario': typeof DesafioDiarioRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
@@ -220,6 +228,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/dashboard': typeof DashboardRouteWithChildren
+  '/desafio-diario': typeof DesafioDiarioRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
@@ -249,6 +258,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/dashboard'
+    | '/desafio-diario'
     | '/privacy'
     | '/terms'
     | '/checkout/$planId'
@@ -275,6 +285,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/auth'
+    | '/desafio-diario'
     | '/privacy'
     | '/terms'
     | '/checkout/$planId'
@@ -302,6 +313,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/dashboard'
+    | '/desafio-diario'
     | '/privacy'
     | '/terms'
     | '/checkout/$planId'
@@ -330,6 +342,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthRoute: typeof AuthRoute
   DashboardRoute: typeof DashboardRouteWithChildren
+  DesafioDiarioRoute: typeof DesafioDiarioRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
   CheckoutPlanIdRoute: typeof CheckoutPlanIdRoute
@@ -357,6 +370,13 @@ declare module '@tanstack/react-router' {
       path: '/dashboard'
       fullPath: '/dashboard'
       preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/desafio-diario': {
+      id: '/desafio-diario'
+      path: '/desafio-diario'
+      fullPath: '/desafio-diario'
+      preLoaderRoute: typeof DesafioDiarioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -566,6 +586,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthRoute: AuthRoute,
   DashboardRoute: DashboardRouteWithChildren,
+  DesafioDiarioRoute: DesafioDiarioRoute,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
   CheckoutPlanIdRoute: CheckoutPlanIdRoute,

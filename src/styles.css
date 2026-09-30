@@ -403,6 +403,50 @@
   border-color: rgb(255 255 255 / 0.4);
   transform: translateY(-2px);
 }
+.daily-trial-banner {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  border: 1px solid rgb(234 182 77 / 0.35);
+  border-radius: 10px;
+  background: rgb(234 182 77 / 0.1);
+  padding: 12px 16px;
+  color: #fdf1d6;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+.daily-trial-banner:hover {
+  border-color: rgb(234 182 77 / 0.6);
+  background: rgb(234 182 77 / 0.16);
+  transform: translateY(-1px);
+}
+.daily-trial-banner strong {
+  color: #f0c866;
+  font-weight: 900;
+}
+.daily-trial-pulse {
+  position: absolute;
+  top: 8px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f0c866;
+  box-shadow: 0 0 0 rgb(240 200 102 / 0.6);
+  animation: daily-trial-pulse 2.2s ease-out infinite;
+}
+@keyframes daily-trial-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(240 200 102 / 0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgb(240 200 102 / 0);
+  }
+}
 .hero-proof {
   display: flex;
   align-items: center;
@@ -1732,6 +1776,49 @@ iframe[src*="gpteng.co"] {
   background-size: 48px 48px;
 }
 
+.landing-shell #metodo.method-hero-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #f4f7f8;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(3 14 22 / 0.98) 0%,
+      rgb(3 14 22 / 0.82) 47%,
+      rgb(3 14 22 / 0.2) 100%
+    ),
+    linear-gradient(0deg, #06131d 0%, transparent 52%),
+    url("/media/hero-protocolo-norte-v1.png") center top / 100% auto no-repeat !important;
+  background-color: #06131d !important;
+}
+
+.method-hero-section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0 44%, rgb(6 19 29 / 0.76) 70%, #06131d 100%);
+  content: "";
+}
+
+.method-hero-intro {
+  display: block;
+  min-height: 220px;
+  max-width: 650px;
+}
+
+.method-hero-intro h2 {
+  max-width: 640px;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.method-hero-intro > p {
+  max-width: 540px;
+  margin-top: 24px;
+  color: rgb(236 242 245 / 0.7);
+}
+
 .method-grid {
   gap: 14px;
 }
@@ -1741,6 +1828,34 @@ iframe[src*="gpteng.co"] {
   border-radius: 10px;
   border-color: #d8e0e5;
   box-shadow: 0 18px 44px rgb(10 36 56 / 0.055);
+}
+
+.method-hero-section .method-card {
+  border-color: rgb(234 182 77 / 0.22);
+  background: linear-gradient(145deg, rgb(9 28 41 / 0.94), rgb(5 18 28 / 0.82));
+  box-shadow: 0 22px 54px rgb(0 0 0 / 0.28);
+  backdrop-filter: blur(13px);
+}
+
+.method-hero-section .method-card:hover {
+  border-color: rgb(234 182 77 / 0.58);
+  box-shadow: 0 28px 66px rgb(0 0 0 / 0.4);
+}
+
+.method-hero-section .method-card h3 {
+  color: #f8f5eb;
+}
+
+.method-hero-section .method-card p {
+  color: rgb(231 238 242 / 0.62);
+}
+
+.method-hero-section .method-line {
+  background: rgb(255 255 255 / 0.1);
+}
+
+.method-hero-section .method-arrow {
+  color: rgb(240 193 90 / 0.68);
 }
 
 .method-card::before {
@@ -1781,6 +1896,426 @@ iframe[src*="gpteng.co"] {
 
 .dashboard-showcase {
   border-radius: 16px;
+}
+
+.platform-hero-section {
+  position: relative;
+  isolation: isolate;
+  color: #f5f7f8;
+  background:
+    linear-gradient(90deg, rgb(3 13 21 / 0.7), rgb(3 13 21 / 0.56)),
+    linear-gradient(0deg, #04111a 0%, transparent 64%),
+    url("/media/hero-centro-operacoes-v1.png") center top / 100% auto no-repeat;
+  background-color: #04111a;
+}
+
+.platform-hero-section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: radial-gradient(circle at 72% 24%, rgb(234 182 77 / 0.11), transparent 32%);
+  content: "";
+}
+
+.platform-hero-copy {
+  padding: 30px;
+  border: 1px solid rgb(234 182 77 / 0.24);
+  border-radius: 14px;
+  background: rgb(3 16 25 / 0.79);
+  box-shadow: 0 28px 70px rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(14px);
+}
+
+.platform-hero-section .feature-title {
+  color: #fff;
+  text-shadow: 0 3px 24px rgb(0 0 0 / 0.38);
+}
+
+.platform-hero-section .feature-copy {
+  color: rgb(236 242 245 / 0.68);
+}
+
+.platform-hero-section .feature-list > div {
+  color: #f1f5f6;
+}
+
+.platform-hero-section .brand-cover-card {
+  border-color: rgb(234 182 77 / 0.4);
+  background: linear-gradient(135deg, rgb(5 20 30 / 0.96), rgb(16 40 58 / 0.9));
+}
+
+/* Campanha PCAC 2026 */
+.pcac-campaign {
+  position: relative;
+  isolation: isolate;
+  min-height: 690px;
+  overflow: hidden;
+  border-top: 1px solid rgb(232 173 50 / 0.28);
+  border-bottom: 1px solid rgb(232 173 50 / 0.28);
+  color: #fff;
+  background: #041420;
+}
+
+.pcac-campaign-backdrop {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(2 15 25 / 0.98) 0%,
+      rgb(2 15 25 / 0.92) 34%,
+      rgb(2 15 25 / 0.3) 64%,
+      rgb(2 15 25 / 0.08) 100%
+    ),
+    linear-gradient(0deg, rgb(2 15 25 / 0.68) 0%, transparent 45%),
+    url("/media/hero-campanha-pcac-2026-v3.png");
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.012);
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pcac-campaign:hover .pcac-campaign-backdrop {
+  transform: scale(1.025);
+}
+
+.pcac-acre-map {
+  position: absolute;
+  z-index: -1;
+  top: 9%;
+  left: 35.5%;
+  width: min(32vw, 510px);
+  aspect-ratio: 1200 / 664;
+  pointer-events: none;
+  background: #f3bd48;
+  filter: drop-shadow(0 0 14px rgb(243 189 72 / 0.62));
+  mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / contain no-repeat;
+  opacity: 0.94;
+}
+
+.pcac-acre-map-texture {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgb(1 41 29 / 0.04), rgb(239 184 63 / 0.1)),
+    url("/media/textura-amazonia-acre-v1.png") 50% 58% / cover;
+  filter: saturate(1.16) brightness(1.08);
+  mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / contain no-repeat;
+  transform: scale(0.976);
+}
+
+.pcac-campaign::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 19% 50%, rgb(232 173 50 / 0.11), transparent 30%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.025), transparent 18%);
+}
+
+.pcac-campaign-layout {
+  display: grid;
+  min-height: 690px;
+  align-items: center;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.pcac-campaign-content {
+  width: min(650px, 53%);
+}
+
+.pcac-campaign-emblems {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.pcac-emblem-card {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.19);
+  border-radius: 16px;
+  background: rgb(255 255 255 / 0.96);
+  box-shadow: 0 16px 35px rgb(0 0 0 / 0.28);
+}
+
+.pcac-emblem-card img {
+  width: 51px;
+  height: 51px;
+  object-fit: contain;
+}
+
+.pcac-emblem-card:last-of-type img {
+  width: 55px;
+  height: 55px;
+}
+
+.pcac-emblem-divider {
+  width: 1px;
+  height: 38px;
+  background: rgb(255 255 255 / 0.2);
+}
+
+.pcac-emblem-label {
+  display: grid;
+  gap: 2px;
+  margin-left: 2px;
+  text-transform: uppercase;
+}
+
+.pcac-emblem-label small {
+  color: rgb(255 255 255 / 0.58);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.pcac-emblem-label strong {
+  color: #f3bd48;
+  font-family: var(--font-display);
+  font-size: 21px;
+  letter-spacing: 0.05em;
+}
+
+.pcac-campaign-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  border: 1px solid rgb(232 173 50 / 0.36);
+  border-radius: 999px;
+  padding: 9px 14px;
+  color: #f3bd48;
+  background: rgb(232 173 50 / 0.09);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+}
+
+.pcac-campaign-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pcac-campaign h2 {
+  max-width: 650px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(42px, 4.6vw, 72px);
+  font-weight: 900;
+  line-height: 0.96;
+  letter-spacing: -0.038em;
+}
+
+.pcac-campaign h2 em {
+  color: #f1b93f;
+  font-style: normal;
+}
+
+.pcac-campaign-content > p:not(.pcac-campaign-disclaimer) {
+  max-width: 610px;
+  margin: 24px 0 0;
+  color: rgb(235 242 247 / 0.76);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.pcac-campaign-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.pcac-campaign-roles span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 9px;
+  padding: 9px 11px;
+  color: rgb(255 255 255 / 0.86);
+  background: rgb(5 28 43 / 0.72);
+  font-size: 12px;
+  font-weight: 800;
+  backdrop-filter: blur(12px);
+}
+
+.pcac-campaign-roles svg {
+  width: 14px;
+  height: 14px;
+  color: #f3bd48;
+}
+
+.pcac-campaign-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.pcac-campaign-note {
+  color: rgb(255 255 255 / 0.58);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pcac-campaign-disclaimer {
+  max-width: 570px;
+  margin: 22px 0 0;
+  color: rgb(255 255 255 / 0.4);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .pcac-campaign,
+  .pcac-campaign-layout {
+    min-height: 660px;
+  }
+
+  .pcac-campaign-backdrop {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgb(2 15 25 / 0.98) 0%,
+        rgb(2 15 25 / 0.88) 48%,
+        rgb(2 15 25 / 0.25) 100%
+      ),
+      linear-gradient(0deg, rgb(2 15 25 / 0.82) 0%, transparent 60%),
+      url("/media/hero-campanha-pcac-2026-v3.png");
+    background-position: 61% center;
+  }
+
+  .pcac-campaign-content {
+    width: min(620px, 78%);
+  }
+
+  .pcac-acre-map {
+    top: 8%;
+    left: 31%;
+    width: 39vw;
+    opacity: 0.82;
+  }
+}
+
+@media (max-width: 640px) {
+  .pcac-campaign,
+  .pcac-campaign-layout {
+    min-height: 720px;
+  }
+
+  .pcac-campaign-layout {
+    align-items: end;
+    padding-top: 250px;
+    padding-bottom: 34px;
+  }
+
+  .pcac-campaign-backdrop {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgb(2 15 25 / 0.08) 0%,
+        rgb(2 15 25 / 0.24) 26%,
+        rgb(2 15 25 / 0.97) 52%,
+        #020f19 100%
+      ),
+      url("/media/hero-campanha-pcac-2026-v3.png");
+    background-position: 68% top;
+    background-size: auto 410px;
+    background-repeat: no-repeat;
+  }
+
+  .pcac-campaign-content {
+    width: 100%;
+  }
+
+  .pcac-acre-map {
+    top: 4%;
+    left: 2%;
+    width: 55%;
+    opacity: 0.72;
+  }
+
+  .pcac-campaign-emblems {
+    margin-bottom: 16px;
+  }
+
+  .pcac-emblem-card {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+  }
+
+  .pcac-emblem-card img,
+  .pcac-emblem-card:last-of-type img {
+    width: 43px;
+    height: 43px;
+  }
+
+  .pcac-emblem-label strong {
+    font-size: 17px;
+  }
+
+  .pcac-campaign-badge {
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+
+  .pcac-campaign h2 {
+    max-width: 560px;
+    font-size: clamp(34px, 10.5vw, 48px);
+    line-height: 1;
+  }
+
+  .pcac-campaign-content > p:not(.pcac-campaign-disclaimer) {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.58;
+  }
+
+  .pcac-campaign-roles {
+    gap: 6px;
+    margin-top: 17px;
+  }
+
+  .pcac-campaign-roles span {
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+
+  .pcac-campaign-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .pcac-campaign-actions a {
+    width: 100%;
+  }
+
+  .pcac-campaign-note {
+    text-align: center;
+  }
+
+  .pcac-campaign-disclaimer {
+    margin-top: 14px;
+    font-size: 9px;
+  }
 }
 
 .mock-window {

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -19,7 +19,25 @@ import {
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { GUEST_DAILY_LIMIT, getGuestRemainingToday, registerGuestAnswer } from "@/lib/guestQuota";
+import {
+  type Answer,
+  type Question,
+  answerLabel,
+  boardAnswers,
+  DIFFICULTY_LABEL,
+  DIFFICULTY_STYLE,
+  examKey,
+  formatDate,
+  hasReviewedExplanation,
+  isLegallyVerified,
+  isPlaceholderExplanation,
+  normalizeDifficulty,
+  parseBasis,
+  parseQuestion,
+  basisHref,
+  shuffled,
+  splitExplanation,
+} from "@/lib/questionFormat";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -56,173 +74,20 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
   component: QuestionTrainer,
 });
 
-type Answer = "A" | "B" | "C" | "D" | "E";
-type Source = "official" | "curated" | "personal";
 type OrderMode = "random" | "exam";
-type Difficulty = "fácil" | "média" | "difícil";
-type LegalBasis = { title?: string; lei?: string; artigo?: string; url?: string };
-type Question = {
-  id: string;
-  source: Source;
-  contest: string;
-  year: string;
-  career: string;
-  board: string;
-  subject: string;
-  subtopic: string | null;
-  text: string;
-  answer: Answer;
-  explanation: string;
-  legalBasis: LegalBasis[];
-  checkedAt: string | null;
-  difficulty: Difficulty;
-  state: string;
-  category: string;
-};
-
-const normalizeDifficulty = (value: unknown): Difficulty => {
-  const text = String(value ?? "").toLowerCase();
-  if (text.startsWith("fác") || text.startsWith("fac")) return "fácil";
-  if (text.startsWith("dif")) return "difícil";
-  return "média";
-};
-const DIFFICULTY_LABEL: Record<Difficulty, string> = {
-  fácil: "Fácil",
-  média: "Média",
-  difícil: "Difícil",
-};
-const DIFFICULTY_STYLE: Record<Difficulty, string> = {
-  fácil: "border-emerald-300 bg-emerald-50 text-emerald-700",
-  média: "border-amber-300 bg-amber-50 text-amber-700",
-  difícil: "border-rose-300 bg-rose-50 text-rose-700",
-};
-
-const parseBasis = (value: unknown): LegalBasis[] =>
-  Array.isArray(value)
-    ? value.filter((item): item is LegalBasis => Boolean(item) && typeof item === "object")
-    : [];
-// O Planalto marca cada artigo com uma âncora "#artN" (ex.: <a name="art205">
-// antes de "Art. 205."), então quando sabemos o artigo dá pra pular a busca
-// manual e abrir a página já rolada direto no trecho certo.
-const basisHref = (basis: LegalBasis) => {
-  if (!basis.url) return undefined;
-  if (!basis.artigo || basis.url.includes("#")) return basis.url;
-  const artigoAnchor = basis.artigo.replace(/[^0-9A-Za-z-]/g, "");
-  return artigoAnchor ? `${basis.url}#art${artigoAnchor}` : basis.url;
-};
-// Fontes oficiais aceitas para legislação e jurisprudência (CONTENT_GOVERNANCE.md).
-const OFFICIAL_SOURCE =
-  /(^|\.)(planalto\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br)(\/|$)/i;
-const isOfficialUrl = (url?: string) => {
-  try {
-    return Boolean(url) && OFFICIAL_SOURCE.test(new URL(String(url)).hostname + "/");
-  } catch {
-    return false;
-  }
-};
-// Questão com base legal só entra no treino se a vigência foi conferida na fonte oficial
-// (data registrada + link oficial). Assim nenhuma resposta desatualizada é exibida.
-const isLegallyVerified = (basis: LegalBasis[], checkedAt: unknown) =>
-  basis.length === 0 || (Boolean(checkedAt) && basis.some((item) => isOfficialUrl(item.url)));
-// Explicações podem trazer um trecho "Exemplo: …" — mostramos separado, em destaque.
-function splitExplanation(text: string) {
-  const match = text.match(/\n?\s*Exemplo(?: pr[aá]tico)?:\s*([\s\S]*)$/i);
-  if (!match || match.index === undefined) return { main: text.trim(), example: "" };
-  return { main: text.slice(0, match.index).trim(), example: (match[1] ?? "").trim() };
-}
-const formatDate = (value: string | null) =>
-  value ? new Date(value).toLocaleDateString("pt-BR") : "";
-// "Revisada" = já tem explicação didática com exemplo do dia a dia (bloco "Exemplo:")
-// E, se depender de lei/súmula, essa fonte já foi conferida vigente no Planalto (checkedAt
-// preenchido) — a mesma checagem que o treinador já faz pra decidir o que entra no treino.
-const hasReviewedExplanation = (question: Question) =>
-  /Exemplo(?: pr[aá]tico)?:/i.test(question.explanation) &&
-  (question.legalBasis.length === 0 || Boolean(question.checkedAt));
-const boardAnswers = (board: string): Answer[] =>
-  /CEBRASPE|CESPE/i.test(board)
-    ? ["C", "E"]
-    : /IBFC/i.test(board)
-      ? ["A", "B", "C", "D"]
-      : ["A", "B", "C", "D", "E"];
-const answerLabel = (answer: Answer, board: string) =>
-  /CEBRASPE|CESPE/i.test(board) ? (answer === "C" ? "Certo" : "Errado") : `Alternativa ${answer}`;
-const examKey = (question: Question) =>
-  [question.contest, question.career, question.board, question.year].join("::");
-function shuffled<T>(items: T[]) {
-  const result = [...items];
-  for (let index = result.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1));
-    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
-  }
-  return result;
-}
-
-type ParsedQuestion = {
-  baseLabel: string;
-  base: string;
-  stem: string;
-  options: { letter: Answer; text: string }[];
-};
-
-// question_text guarda tudo num campo só: "Texto-base:\n…\n\n<enunciado>\n(A) …\n(B) …" (ou
-// "Comando:\n…\n\nItem: …" nos itens Certo/Errado). Separamos texto de apoio, enunciado e alternativas.
-function parseQuestion(raw: string): ParsedQuestion {
-  let text = raw.replace(/\r/g, "").trim();
-  let base = "";
-  let baseLabel = "Texto de apoio";
-  const head = text.match(/^(Texto-base|Comando):\n([\s\S]*?)\n\n(?=\S)/);
-  if (head) {
-    baseLabel = head[1] === "Comando" ? "Comando da questão" : "Texto de apoio";
-    base = (head[2] ?? "").trim();
-    text = text.slice(head[0].length).trim();
-  }
-  text = text.replace(/^Item:\s*/, "");
-
-  const lines = text.split("\n");
-  const firstOption = lines.findIndex((line) => /^\(A\)\s?/.test(line));
-  if (firstOption >= 0) {
-    const options: { letter: Answer; text: string }[] = [];
-    for (const line of lines.slice(firstOption)) {
-      const match = line.match(/^\(([A-E])\)\s?(.*)$/);
-      const last = options[options.length - 1];
-      if (match)
-        options.push({ letter: (match[1] ?? "A") as Answer, text: (match[2] ?? "").trim() });
-      else if (last) last.text += ` ${line.trim()}`;
-    }
-    return { baseLabel, base, stem: lines.slice(0, firstOption).join("\n").trim(), options };
-  }
-
-  // Formato antigo: alternativas na mesma linha ("… A) texto; B) texto; C) …").
-  const marks: number[] = [];
-  let cursor = 0;
-  for (const letter of "ABCDE") {
-    const at = text.indexOf(`${letter}) `, cursor);
-    if (at < 0 || (at > 0 && !/[\s:;.]/.test(text.charAt(at - 1)))) break;
-    marks.push(at);
-    cursor = at + 3;
-  }
-  if (marks.length >= 4) {
-    const options = marks.map((start, i) => ({
-      letter: "ABCDE".charAt(i) as Answer,
-      text: text
-        .slice(start + 3, marks[i + 1] ?? text.length)
-        .replace(/[;\s]+$/, "")
-        .trim(),
-    }));
-    return { baseLabel, base, stem: text.slice(0, marks[0] ?? 0).trim(), options };
-  }
-  return { baseLabel, base, stem: text, options: [] };
-}
 
 function QuestionTrainer() {
   const routeFilters = Route.useSearch();
+  const navigate = useNavigate();
   const { user, isLoading: authLoading } = useAuthStatus();
   const userId = user?.id;
   const isGuest = !authLoading && (!user || userId === "demo-user");
-  const [guestRemaining, setGuestRemaining] = React.useState(GUEST_DAILY_LIMIT);
+  // O painel/área do cliente é só pra quem tem conta. Visitante nunca fica
+  // aqui — é redirecionado pro Desafio Diário público (/desafio-diario),
+  // que tem sua própria página fora do /dashboard.
   React.useEffect(() => {
-    if (isGuest) setGuestRemaining(getGuestRemainingToday());
-  }, [isGuest]);
+    if (isGuest) navigate({ to: "/desafio-diario", replace: true });
+  }, [isGuest, navigate]);
   const [catalog, setCatalog] = React.useState<Question[]>([]);
   const [hidden, setHidden] = React.useState(0);
   const [questions, setQuestions] = React.useState<Question[]>([]);
@@ -253,13 +118,10 @@ function QuestionTrainer() {
   const [startedAt, setStartedAt] = React.useState(Date.now());
 
   React.useEffect(() => {
-    if (authLoading) return;
-    // Visitante sem cadastro (isGuest): degustação limitada ao acervo de
-    // provas oficiais (nunca às questões autorais/premium nem ao caderno
-    // pessoal, que exigem login) — ver src/lib/guestQuota.ts para o
-    // controle dos 10/dia. Sem sessão e sem ser o guest de degustação não
-    // há nada pra carregar.
-    if (!isGuest && (!userId || userId === "demo-user")) {
+    if (authLoading || isGuest) return;
+    // Sem sessão real (nem visitante, nem logado) não há nada pra carregar
+    // — visitante já foi redirecionado pro Desafio Diário no efeito acima.
+    if (!userId || userId === "demo-user") {
       setLoading(false);
       return;
     }
@@ -286,15 +148,13 @@ function QuestionTrainer() {
             "law_version_checked_at,legal_review_required,legal_audit_completed,difficulty",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
           ),
-          isGuest
-            ? Promise.resolve({ data: [], error: null, gated: true })
-            : query(
-                "curated_question_catalog",
-                "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
-                "law_version_checked_at",
-                (builder) => builder.eq("content_status", "active"),
-              ),
-          isGuest || !userId
+          query(
+            "curated_question_catalog",
+            "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
+            "law_version_checked_at",
+            (builder) => builder.eq("content_status", "active"),
+          ),
+          !userId
             ? Promise.resolve({ data: [], error: null, gated: true })
             : query(
                 "question_bank",
@@ -525,8 +385,7 @@ function QuestionTrainer() {
   );
   const startTraining = () => {
     const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
-    const sessionSize = isGuest ? Math.min(Number(limit), guestRemaining) : Number(limit);
-    setQuestions(ordered.slice(0, sessionSize));
+    setQuestions(ordered.slice(0, Number(limit)));
     setIndex(0);
     setCorrect(0);
     setWrong(0);
@@ -550,15 +409,12 @@ function QuestionTrainer() {
   const question = questions[index];
   const submit = async () => {
     if (!selected || !question || answered || !user) return;
-    if (isGuest && guestRemaining <= 0) return;
     const isCorrect = selected === question.answer;
     setAnswered(true);
     if (isCorrect) setCorrect((value) => value + 1);
     else setWrong((value) => value + 1);
     setModal("result");
-    if (isGuest) {
-      setGuestRemaining(Math.max(0, GUEST_DAILY_LIMIT - registerGuestAnswer()));
-    } else if (user.id !== "demo-user") {
+    if (user.id !== "demo-user") {
       await supabase.from("question_training_responses").insert({
         user_id: user.id,
         question_id: question.id,
@@ -594,11 +450,11 @@ function QuestionTrainer() {
     setQuestions((items) => (orderMode === "random" ? shuffled(items) : [...items]));
   };
 
-  if (authLoading || loading)
+  if (authLoading || loading || isGuest)
     return (
       <Center>
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
-        <p>Preparando seu treino…</p>
+        <p>{isGuest ? "Redirecionando…" : "Preparando seu treino…"}</p>
       </Center>
     );
   if (!user)
@@ -609,26 +465,6 @@ function QuestionTrainer() {
         <Button asChild>
           <Link to="/auth">Entrar</Link>
         </Button>
-      </Center>
-    );
-  if (isGuest && guestRemaining <= 0 && !started)
-    return (
-      <Center>
-        <Sparkles className="h-10 w-10 text-amber-500" />
-        <p className="max-w-sm">
-          Você usou suas {GUEST_DAILY_LIMIT} questões grátis de hoje. Crie uma conta gratuita para
-          continuar treinando, salvar seu progresso e desbloquear o acervo completo.
-        </p>
-        <div className="flex gap-2">
-          <Button asChild>
-            <Link to="/auth" search={{ mode: "register" }}>
-              Criar conta grátis
-            </Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link to="/auth">Já tenho conta</Link>
-          </Button>
-        </div>
       </Center>
     );
   if (error)
@@ -644,16 +480,6 @@ function QuestionTrainer() {
   if (!started)
     return (
       <div className="space-y-4">
-        {isGuest && (
-          <div className="mx-auto max-w-4xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
-            <span className="font-bold">Modo visitante:</span> você tem {guestRemaining} de{" "}
-            {GUEST_DAILY_LIMIT} questões grátis hoje, só do acervo de provas oficiais.{" "}
-            <Link to="/auth" search={{ mode: "register" }} className="font-bold underline">
-              Crie sua conta grátis
-            </Link>{" "}
-            para treinar sem limite e desbloquear as questões autorais.
-          </div>
-        )}
         {hidden > 0 && (
           <div className="mx-auto max-w-4xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
             {hidden} questão(ões) de legislação estão ocultas até a vigência ser conferida no
@@ -987,12 +813,14 @@ function QuestionTrainer() {
                     )}
                   </div>
                 )}
-                <div className="rounded-xl border bg-muted/30 p-4">
-                  <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
-                    Explicando de um jeito simples
-                  </p>
-                  <p className="text-sm leading-6">{explanation.main}</p>
-                </div>
+                {!isPlaceholderExplanation(explanation.main) && (
+                  <div className="rounded-xl border bg-muted/30 p-4">
+                    <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
+                      Comentário da questão
+                    </p>
+                    <p className="text-sm leading-6">{explanation.main}</p>
+                  </div>
+                )}
                 {explanation.example && (
                   <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 dark:bg-amber-950/30">
                     <p className="mb-1 text-xs font-black uppercase tracking-wider text-amber-700">
