@@ -1900,6 +1900,341 @@ iframe[src*="gpteng.co"] {
   background: linear-gradient(135deg, rgb(5 20 30 / 0.96), rgb(16 40 58 / 0.9));
 }
 
+/* Campanha PCAC 2026 */
+.pcac-campaign {
+  position: relative;
+  isolation: isolate;
+  min-height: 690px;
+  overflow: hidden;
+  border-top: 1px solid rgb(232 173 50 / 0.28);
+  border-bottom: 1px solid rgb(232 173 50 / 0.28);
+  color: #fff;
+  background: #041420;
+}
+
+.pcac-campaign-backdrop {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(2 15 25 / 0.98) 0%,
+      rgb(2 15 25 / 0.92) 34%,
+      rgb(2 15 25 / 0.3) 64%,
+      rgb(2 15 25 / 0.08) 100%
+    ),
+    linear-gradient(0deg, rgb(2 15 25 / 0.68) 0%, transparent 45%),
+    url("/media/hero-campanha-pcac-2026-v1.png");
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.012);
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pcac-campaign:hover .pcac-campaign-backdrop {
+  transform: scale(1.025);
+}
+
+.pcac-campaign::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 19% 50%, rgb(232 173 50 / 0.11), transparent 30%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.025), transparent 18%);
+}
+
+.pcac-campaign-layout {
+  display: grid;
+  min-height: 690px;
+  align-items: center;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.pcac-campaign-content {
+  width: min(650px, 53%);
+}
+
+.pcac-campaign-emblems {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.pcac-emblem-card {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.19);
+  border-radius: 16px;
+  background: rgb(255 255 255 / 0.96);
+  box-shadow: 0 16px 35px rgb(0 0 0 / 0.28);
+}
+
+.pcac-emblem-card img {
+  width: 51px;
+  height: 51px;
+  object-fit: contain;
+}
+
+.pcac-emblem-card:last-of-type img {
+  width: 55px;
+  height: 55px;
+}
+
+.pcac-emblem-divider {
+  width: 1px;
+  height: 38px;
+  background: rgb(255 255 255 / 0.2);
+}
+
+.pcac-emblem-label {
+  display: grid;
+  gap: 2px;
+  margin-left: 2px;
+  text-transform: uppercase;
+}
+
+.pcac-emblem-label small {
+  color: rgb(255 255 255 / 0.58);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.pcac-emblem-label strong {
+  color: #f3bd48;
+  font-family: var(--font-display);
+  font-size: 21px;
+  letter-spacing: 0.05em;
+}
+
+.pcac-campaign-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  border: 1px solid rgb(232 173 50 / 0.36);
+  border-radius: 999px;
+  padding: 9px 14px;
+  color: #f3bd48;
+  background: rgb(232 173 50 / 0.09);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+}
+
+.pcac-campaign-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pcac-campaign h2 {
+  max-width: 650px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(42px, 4.6vw, 72px);
+  font-weight: 900;
+  line-height: 0.96;
+  letter-spacing: -0.038em;
+}
+
+.pcac-campaign h2 em {
+  color: #f1b93f;
+  font-style: normal;
+}
+
+.pcac-campaign-content > p:not(.pcac-campaign-disclaimer) {
+  max-width: 610px;
+  margin: 24px 0 0;
+  color: rgb(235 242 247 / 0.76);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.pcac-campaign-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.pcac-campaign-roles span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 9px;
+  padding: 9px 11px;
+  color: rgb(255 255 255 / 0.86);
+  background: rgb(5 28 43 / 0.72);
+  font-size: 12px;
+  font-weight: 800;
+  backdrop-filter: blur(12px);
+}
+
+.pcac-campaign-roles svg {
+  width: 14px;
+  height: 14px;
+  color: #f3bd48;
+}
+
+.pcac-campaign-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.pcac-campaign-note {
+  color: rgb(255 255 255 / 0.58);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pcac-campaign-disclaimer {
+  max-width: 570px;
+  margin: 22px 0 0;
+  color: rgb(255 255 255 / 0.4);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .pcac-campaign,
+  .pcac-campaign-layout {
+    min-height: 660px;
+  }
+
+  .pcac-campaign-backdrop {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgb(2 15 25 / 0.98) 0%,
+        rgb(2 15 25 / 0.88) 48%,
+        rgb(2 15 25 / 0.25) 100%
+      ),
+      linear-gradient(0deg, rgb(2 15 25 / 0.82) 0%, transparent 60%),
+      url("/media/hero-campanha-pcac-2026-v1.png");
+    background-position: 61% center;
+  }
+
+  .pcac-campaign-content {
+    width: min(620px, 78%);
+  }
+}
+
+@media (max-width: 640px) {
+  .pcac-campaign,
+  .pcac-campaign-layout {
+    min-height: 720px;
+  }
+
+  .pcac-campaign-layout {
+    align-items: end;
+    padding-top: 250px;
+    padding-bottom: 34px;
+  }
+
+  .pcac-campaign-backdrop {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgb(2 15 25 / 0.08) 0%,
+        rgb(2 15 25 / 0.24) 26%,
+        rgb(2 15 25 / 0.97) 52%,
+        #020f19 100%
+      ),
+      url("/media/hero-campanha-pcac-2026-v1.png");
+    background-position: 68% top;
+    background-size: auto 410px;
+    background-repeat: no-repeat;
+  }
+
+  .pcac-campaign-content {
+    width: 100%;
+  }
+
+  .pcac-campaign-emblems {
+    margin-bottom: 16px;
+  }
+
+  .pcac-emblem-card {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+  }
+
+  .pcac-emblem-card img,
+  .pcac-emblem-card:last-of-type img {
+    width: 43px;
+    height: 43px;
+  }
+
+  .pcac-emblem-label strong {
+    font-size: 17px;
+  }
+
+  .pcac-campaign-badge {
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+
+  .pcac-campaign h2 {
+    max-width: 560px;
+    font-size: clamp(34px, 10.5vw, 48px);
+    line-height: 1;
+  }
+
+  .pcac-campaign-content > p:not(.pcac-campaign-disclaimer) {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.58;
+  }
+
+  .pcac-campaign-roles {
+    gap: 6px;
+    margin-top: 17px;
+  }
+
+  .pcac-campaign-roles span {
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+
+  .pcac-campaign-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .pcac-campaign-actions a {
+    width: 100%;
+  }
+
+  .pcac-campaign-note {
+    text-align: center;
+  }
+
+  .pcac-campaign-disclaimer {
+    margin-top: 14px;
+    font-size: 9px;
+  }
+}
+
 .mock-window {
   overflow: hidden;
   border: 1px solid #c9d5dc;

@@ -270,6 +270,61 @@ function Index() {
           </div>
         </section>
 
+        <section className="pcac-campaign" aria-labelledby="pcac-campaign-title">
+          <div className="pcac-campaign-backdrop" aria-hidden="true" />
+          <div className="site-container pcac-campaign-layout">
+            <div className="pcac-campaign-content">
+              <div className="pcac-campaign-emblems" aria-label="Identidade institucional do Acre">
+                <span className="pcac-emblem-card">
+                  <img src="/media/brasao-acre-oficial.svg" alt="Brasão do Estado do Acre" />
+                </span>
+                <span className="pcac-emblem-divider" aria-hidden="true" />
+                <span className="pcac-emblem-card">
+                  <img src="/media/brasao-pcac-oficial.jpg" alt="Brasão da Polícia Civil do Acre" />
+                </span>
+                <span className="pcac-emblem-label">
+                  <small>Campanha especial</small>
+                  <strong>PCAC 2026</strong>
+                </span>
+              </div>
+
+              <div className="pcac-campaign-badge">
+                <Sparkles /> Concurso anunciado · preparação antecipada
+              </div>
+              <h2 id="pcac-campaign-title">
+                Sua próxima missão pode começar <em>antes do edital.</em>
+              </h2>
+              <p>
+                O novo concurso da Polícia Civil do Acre foi anunciado. Prepare-se desde agora para
+                Delegado, Oficial Investigador de Polícia e Perito com treino direcionado, simulados
+                e inteligência de desempenho.
+              </p>
+
+              <div className="pcac-campaign-roles" aria-label="Cargos anunciados">
+                {["Delegado de Polícia", "Oficial Investigador", "Perito"].map((role) => (
+                  <span key={role}>
+                    <Check /> {role}
+                  </span>
+                ))}
+              </div>
+
+              <div className="pcac-campaign-actions">
+                <Button size="lg" className="premium-button h-14 px-7 text-[15px]" asChild>
+                  <Link to="/auth">
+                    Começar preparação para PCAC <ArrowRight />
+                  </Link>
+                </Button>
+                <span className="pcac-campaign-note">Edital ainda não publicado</span>
+              </div>
+
+              <p className="pcac-campaign-disclaimer">
+                Campanha educacional independente. A Norte Concursos não possui vínculo ou endosso
+                institucional do Governo do Acre ou da Polícia Civil.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section id="metodo" className="mobile-optional-section section-pad method-hero-section">
           <div className="site-container">
             <div className="section-heading light method-hero-intro">
