@@ -1784,11 +1784,13 @@ iframe[src*="gpteng.co"] {
   background:
     linear-gradient(
       90deg,
-      rgb(3 14 22 / 0.98) 0%,
-      rgb(3 14 22 / 0.82) 47%,
-      rgb(3 14 22 / 0.2) 100%
+      rgb(3 14 22 / 0.96) 0%,
+      rgb(3 14 22 / 0.85) 32%,
+      rgb(3 14 22 / 0.36) 48%,
+      rgb(3 14 22 / 0.08) 68%,
+      rgb(3 14 22 / 0.03) 100%
     ),
-    linear-gradient(0deg, #06131d 0%, transparent 52%),
+    linear-gradient(0deg, #06131d 0%, transparent 34%),
     url("/media/hero-protocolo-norte-urbano-v2.webp") center top / 100% auto no-repeat !important;
   background-color: #06131d !important;
 }
@@ -1797,7 +1799,7 @@ iframe[src*="gpteng.co"] {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(180deg, transparent 0 44%, rgb(6 19 29 / 0.76) 70%, #06131d 100%);
+  background: linear-gradient(180deg, transparent 0 58%, rgb(6 19 29 / 0.42) 83%, #06131d 100%);
   content: "";
 }
 
