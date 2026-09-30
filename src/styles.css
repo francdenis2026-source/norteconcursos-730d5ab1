@@ -1969,7 +1969,7 @@ iframe[src*="gpteng.co"] {
       rgb(2 15 25 / 0.08) 100%
     ),
     linear-gradient(0deg, rgb(2 15 25 / 0.68) 0%, transparent 45%),
-    url("/media/hero-campanha-pcac-2026-v1.png");
+    url("/media/hero-campanha-pcac-2026-v2.png");
   background-position: center;
   background-size: cover;
   transform: scale(1.012);
@@ -2170,7 +2170,7 @@ iframe[src*="gpteng.co"] {
         rgb(2 15 25 / 0.25) 100%
       ),
       linear-gradient(0deg, rgb(2 15 25 / 0.82) 0%, transparent 60%),
-      url("/media/hero-campanha-pcac-2026-v1.png");
+      url("/media/hero-campanha-pcac-2026-v2.png");
     background-position: 61% center;
   }
 
@@ -2200,7 +2200,7 @@ iframe[src*="gpteng.co"] {
         rgb(2 15 25 / 0.97) 52%,
         #020f19 100%
       ),
-      url("/media/hero-campanha-pcac-2026-v1.png");
+      url("/media/hero-campanha-pcac-2026-v2.png");
     background-position: 68% top;
     background-size: auto 410px;
     background-repeat: no-repeat;

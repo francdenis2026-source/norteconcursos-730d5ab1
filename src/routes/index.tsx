@@ -297,10 +297,10 @@ function Index() {
               </div>
 
               <div className="pcac-campaign-badge">
-                <Sparkles /> Concurso anunciado · preparação antecipada
+                <Sparkles /> Novo concurso da Polícia Civil do Acre anunciado
               </div>
               <h2 id="pcac-campaign-title">
-                Sua próxima missão pode começar <em>antes do edital.</em>
+                PCAC: sua próxima missão <em>começa agora.</em>
               </h2>
               <p>
                 O novo concurso da Polícia Civil do Acre foi anunciado. Prepare-se desde agora para
@@ -319,7 +319,7 @@ function Index() {
               <div className="pcac-campaign-actions">
                 <Button size="lg" className="premium-button h-14 px-7 text-[15px]" asChild>
                   <Link to="/auth">
-                    Começar preparação para PCAC <ArrowRight />
+                    Quero me preparar para a PCAC <ArrowRight />
                   </Link>
                 </Button>
                 <span className="pcac-campaign-note">Edital ainda não publicado</span>
