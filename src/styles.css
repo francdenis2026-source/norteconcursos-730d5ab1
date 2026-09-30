@@ -2269,41 +2269,50 @@ html {
   line-height: 1.6;
 }
 
-/* Final CTA: team in the background, featured agents in front */
+/* Final CTA: one lineup of agents from every career */
 .lp-final {
-  min-height: min(92svh, 860px);
-  display: flex;
-  align-items: center;
-}
-.lp-final .lp-photo__media {
-  background-image: url("/media/hero/careers-team.webp");
-  background-position: 88% 30%;
-  background-size: cover;
-  filter: saturate(0.85) brightness(0.75);
-}
-.lp-final .lp-photo__shade {
-  background:
-    linear-gradient(90deg, var(--ink-deep) 0%, oklch(0.12 0.025 263 / 0.92) 34%, oklch(0.12 0.025 263 / 0.35) 70%, oklch(0.12 0.025 263 / 0.15) 100%),
-    linear-gradient(0deg, var(--ink-deep) 0%, transparent 38%),
-    linear-gradient(180deg, var(--ink-deep), transparent 22%);
-}
-.lp-final__grid {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  padding-bottom: 0;
+  text-align: center;
+}
+.lp-final__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 50% 78%, oklch(0.8 0.13 78 / 0.16), transparent 70%),
+    radial-gradient(700px 400px at 50% 0%, oklch(0.45 0.09 240 / 0.14), transparent 70%),
+    var(--ink-deep);
+}
+.lp-final__bg::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 75% 70% at 50% 40%, black 10%, transparent 75%);
 }
 .lp-final__copy {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
+  display: grid;
+  justify-items: center;
+  max-width: 860px;
+  margin-inline: auto;
 }
 .lp-final .lp-h2 {
-  font-size: clamp(2.4rem, 4.8vw, 4.4rem);
+  max-width: 820px;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+}
+.lp-final .lp-lead {
+  margin-inline: auto;
 }
 .lp-final__actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
   margin-top: 36px;
 }
@@ -2312,42 +2321,37 @@ html {
   height: 3.35rem;
   padding-inline: 1.6rem;
 }
-.lp-final__agents {
+.lp-final__lineup {
   position: relative;
-  align-self: end;
-  justify-self: end;
-  width: min(100%, 720px);
-  margin-bottom: calc(clamp(80px, 11vw, 150px) * -1);
+  width: min(100%, 1680px);
+  margin: clamp(40px, 6vw, 80px) auto 0;
+  aspect-ratio: 1876 / 660;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 66%, transparent 100%),
+    linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 66%, transparent 100%),
+    linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
+  mask-composite: intersect;
 }
-.lp-final__agents::before {
-  position: absolute;
-  inset: 8% 4% 0;
-  z-index: -1;
-  content: "";
-  background: radial-gradient(ellipse at 50% 55%, oklch(0.8 0.13 78 / 0.28), transparent 65%);
-  filter: blur(30px);
-}
-.lp-final__agents img {
+.lp-final__lineup img {
   display: block;
   width: 100%;
-  height: auto;
-  filter: drop-shadow(0 30px 40px oklch(0 0 0 / 0.6));
-  mask-image: linear-gradient(180deg, #000 86%, transparent 100%);
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0;
 }
 @media (max-width: 900px) {
-  .lp-final {
-    min-height: 0;
+  .lp-final__lineup {
+    aspect-ratio: 1 / 0.82;
   }
-  .lp-final__grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .lp-final__lineup img {
+    object-position: 26% 0;
   }
-  .lp-final .lp-photo__shade {
-    background: linear-gradient(0deg, var(--ink-deep) 8%, oklch(0.12 0.025 263 / 0.85) 50%, oklch(0.12 0.025 263 / 0.6));
-  }
-  .lp-final__agents {
-    justify-self: center;
-    width: min(100%, 520px);
+}
+@media (max-width: 640px) {
+  .lp-final__actions {
+    width: 100%;
   }
   .lp-final__actions > * {
     width: 100%;

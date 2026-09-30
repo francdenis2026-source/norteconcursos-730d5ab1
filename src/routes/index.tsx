@@ -499,10 +499,9 @@ function Index() {
           </div>
         </section>
 
-        <section className="lp-section lp-photo lp-final">
-          <div className="lp-photo__media" aria-hidden="true" />
-          <div className="lp-photo__shade" aria-hidden="true" />
-          <div className="lp-container lp-final__grid">
+        <section className="lp-section lp-final">
+          <div className="lp-final__bg" aria-hidden="true" />
+          <div className="lp-container">
             <div className="lp-final__copy" data-reveal>
               <span className="chip-brass">
                 <Sparkles /> Pronto para entrar em operação
@@ -522,14 +521,14 @@ function Index() {
                 </Link>
               </div>
             </div>
-            <div className="lp-final__agents" data-reveal style={delay(1)} aria-hidden="true">
-              <img
-                src="/media/agentes-destaque.webp"
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+          </div>
+          <div className="lp-final__lineup" data-reveal style={delay(1)} aria-hidden="true">
+            <img
+              src="/media/hero/lineup-carreiras.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </section>
       </main>
