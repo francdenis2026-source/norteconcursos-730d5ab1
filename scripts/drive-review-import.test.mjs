@@ -4,7 +4,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import crypto from "node:crypto";
-import { readImport, chunks } from "./import-drive-review.mjs";
+import { readImport, chunks, importChecksums, matchesImportState } from "./import-drive-review.mjs";
 
 function fixture() {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "drive-review-"));
@@ -68,4 +68,25 @@ test("fracionamento preserva ordem e todos os registros incluindo texto grande",
   const result = [...chunks(rows, 300)];
   assert.deepEqual(result.flat(), rows);
   assert.equal(result[1].length, 1);
+});
+
+test("retomada só considera completo um acervo com todos os IDs e textos confirmados", () => {
+  const f = fixture();
+  const data = readImport(f.dir);
+  const complete = {
+    documents: 1,
+    candidates: 1,
+    invalid_publishable: 0,
+    ...importChecksums(data),
+  };
+  assert.equal(matchesImportState(data, complete), true);
+  for (const changed of [
+    { candidates: 0 },
+    { documents: 0 },
+    { invalid_publishable: 1 },
+    { ids_md5: "alterado" },
+    { documents_md5: "alterado" },
+  ])
+    assert.equal(matchesImportState(data, { ...complete, ...changed }), false);
+  assert.equal(matchesImportState(data, undefined), false);
 });
