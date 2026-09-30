@@ -31,6 +31,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
+import { AcreSection } from "@/components/landing/AcreSection";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -367,54 +368,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="acre" className="lp-section lp-photo lp-acre" aria-labelledby="acre-title">
-          <div className="lp-photo__media" aria-hidden="true" />
-          <div className="lp-photo__shade" aria-hidden="true" />
-          <div className="lp-container lp-acre__grid">
-            <div className="lp-acre__copy" data-reveal>
-              <span className="lp-kicker">Segurança pública do Acre</span>
-              <h2 id="acre-title" className="lp-h2">
-                Cinco carreiras. <em>Um só compromisso.</em>
-              </h2>
-              <p className="lp-lead">
-                Bombeiros, polícias civil, penal e federal, e o sistema socioeducativo. A Norte
-                prepara você para servir o Acre e o Brasil.
-              </p>
-              <ul className="lp-acre__list">
-                {[
-                  "Corpo de Bombeiros",
-                  "Polícia Civil",
-                  "Polícia Penal",
-                  "Socioeducativo",
-                  "Polícia Federal",
-                ].map((name, i) => (
-                  <li key={name}>
-                    <span>{String(i + 1).padStart(2, "0")}</span>
-                    {name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div
-              className="lp-acre__stage"
-              data-reveal
-              style={delay(1)}
-              role="img"
-              aria-label="Mapa do Acre com profissionais da segurança pública"
-            >
-              <div className="lp-acre__map" aria-hidden="true">
-                <div className="lp-acre__fill" />
-              </div>
-              <img
-                className="lp-acre__people"
-                src="/media/acre-profissionais.webp"
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
-        </section>
+        <AcreSection />
 
         <section id="metodo" className="lp-section lp-photo lp-method">
           <div className="lp-photo__media" aria-hidden="true" />
