@@ -211,10 +211,7 @@ function Index() {
                   <CirclePlay /> Explorar o centro de treino
                 </a>
               </div>
-              <Link
-                to="/dashboard/question-trainer"
-                className="daily-trial-banner reveal-up delay-3"
-              >
+              <Link to="/desafio-diario" className="daily-trial-banner reveal-up delay-3">
                 <span className="daily-trial-pulse" aria-hidden="true" />
                 <Zap className="h-4 w-4 shrink-0" />
                 <span>

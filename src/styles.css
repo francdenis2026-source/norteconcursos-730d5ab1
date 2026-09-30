@@ -1986,11 +1986,11 @@ iframe[src*="gpteng.co"] {
   top: 9%;
   left: 35.5%;
   width: min(32vw, 510px);
-  aspect-ratio: 512 / 287;
+  aspect-ratio: 1200 / 664;
   pointer-events: none;
   background: #f3bd48;
   filter: drop-shadow(0 0 14px rgb(243 189 72 / 0.62));
-  mask: url("/media/mapa-acre-silhueta-oficial.svg") center / contain no-repeat;
+  mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / contain no-repeat;
   opacity: 0.94;
 }
 
@@ -2001,7 +2001,7 @@ iframe[src*="gpteng.co"] {
     linear-gradient(120deg, rgb(1 41 29 / 0.04), rgb(239 184 63 / 0.1)),
     url("/media/textura-amazonia-acre-v1.png") 50% 58% / cover;
   filter: saturate(1.16) brightness(1.08);
-  mask: url("/media/mapa-acre-silhueta-oficial.svg") center / contain no-repeat;
+  mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / contain no-repeat;
   transform: scale(0.976);
 }
 
