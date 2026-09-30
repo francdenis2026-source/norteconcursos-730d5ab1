@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "test": "node --test scripts/question-regression.test.mjs",
+    "test": "node --test scripts/question-regression.test.mjs scripts/drive-review-import.test.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
