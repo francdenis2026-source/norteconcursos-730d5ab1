@@ -580,7 +580,7 @@ function Index() {
         </div>
         <div className="site-container flex flex-col gap-2 border-t border-white/10 py-6 text-xs text-white/45 sm:flex-row sm:justify-between">
           <span>© 2026 Norte Concurso. Todos os direitos reservados.</span>
-          <span>Feito no Acre para todo o Brasil.</span>
+          <span>De Feijó-Acre para todo o Brasil.</span>
         </div>
       </footer>
     </div>
