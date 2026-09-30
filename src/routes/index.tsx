@@ -548,23 +548,33 @@ function Index() {
         <section className="lp-section lp-photo lp-final">
           <div className="lp-photo__media" aria-hidden="true" />
           <div className="lp-photo__shade" aria-hidden="true" />
-          <div className="lp-container" data-reveal>
-            <span className="chip-brass">
-              <Sparkles /> Pronto para entrar em operação
-            </span>
-            <h2 className="lp-h2">
-              Disciplina sem estratégia desgasta. <em>Treino orientado aprova.</em>
-            </h2>
-            <p className="lp-lead">
-              Defina sua carreira, faça o diagnóstico e comece o primeiro ciclo de treino.
-            </p>
-            <div className="lp-final__actions">
-              <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
-                Começar gratuitamente <ArrowRight />
-              </Link>
-              <Link to="/desafio-diario" className="btn-glass">
-                <BookOpenCheck /> Fazer o desafio diário
-              </Link>
+          <div className="lp-container lp-final__grid">
+            <div className="lp-final__copy" data-reveal>
+              <span className="chip-brass">
+                <Sparkles /> Pronto para entrar em operação
+              </span>
+              <h2 className="lp-h2">
+                Disciplina sem estratégia desgasta. <em>Treino orientado aprova.</em>
+              </h2>
+              <p className="lp-lead">
+                Defina sua carreira, faça o diagnóstico e comece o primeiro ciclo de treino.
+              </p>
+              <div className="lp-final__actions">
+                <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
+                  Começar gratuitamente <ArrowRight />
+                </Link>
+                <Link to="/desafio-diario" className="btn-glass">
+                  <BookOpenCheck /> Fazer o desafio diário
+                </Link>
+              </div>
+            </div>
+            <div className="lp-final__agents" data-reveal style={delay(1)} aria-hidden="true">
+              <img
+                src="/media/agentes-destaque.webp"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </section>
