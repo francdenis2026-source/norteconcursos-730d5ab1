@@ -1998,9 +1998,9 @@ iframe[src*="gpteng.co"] {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(120deg, rgb(1 41 29 / 0.04), rgb(239 184 63 / 0.1)),
-    url("/media/textura-amazonia-acre-v1.png") 50% 58% / cover;
-  filter: saturate(1.16) brightness(1.08);
+    linear-gradient(120deg, rgb(3 18 30 / 0.08), rgb(239 184 63 / 0.08)),
+    url("/media/textura-acre-profissionais-v2.webp") center / cover;
+  filter: saturate(0.98) brightness(0.98);
   mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / contain no-repeat;
   transform: scale(0.976);
 }
