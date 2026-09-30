@@ -5,6 +5,7 @@ import { CAREERS } from "@/lib/careers";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ShieldCheck, FileStack, BookMarked } from "lucide-react";
+import { PageHero } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/careers")({
   component: CareersPage,
@@ -51,13 +52,17 @@ function CareersPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold text-primary">Carreiras Policiais</h1>
-        <p className="text-muted-foreground">
-          Escolha a carreira para focar seus estudos — dados reais vão se acumulando conforme você
-          envia provas.
-        </p>
-      </div>
+      <PageHero
+        image="careers-team"
+        kicker="Objetivo"
+        icon={ShieldCheck}
+        title={
+          <>
+            Carreiras <em>policiais</em>
+          </>
+        }
+        description="Escolha a carreira para focar seus estudos — dados reais vão se acumulando conforme você envia provas."
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {CAREERS.map((c) => {

@@ -10,6 +10,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { MockService } from '@/services/mockService';
 import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap, RefreshCw, History as HistoryIcon } from 'lucide-react';
+import { PageHero } from '@/components/dashboard/PageHero';
 import { SUBSCRIPTION_PLANS } from '@/lib/subscriptions.config';
 import { cn } from '@/lib/utils';
 import { createCheckoutSession, createPortalSession } from '@/lib/stripe.functions';
@@ -183,11 +184,18 @@ function ProfilePage() {
   if (isLoading) return <div className="p-8">Carregando...</div>;
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold tracking-tight">Meu Perfil</h1>
-        <p className="text-muted-foreground">Gerencie suas informações pessoais e plano.</p>
-      </div>
+    <div className="mx-auto max-w-5xl space-y-6">
+      <PageHero
+        image="auth"
+        kicker="Conta"
+        icon={User}
+        title={
+          <>
+            Meu <em>perfil</em>
+          </>
+        }
+        description="Gerencie suas informações pessoais, plano e assinatura."
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card className="md:col-span-2">

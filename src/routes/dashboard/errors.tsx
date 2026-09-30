@@ -6,6 +6,7 @@ import { MockService } from '@/services/mockService';
 import { Button } from '@/components/ui/button';
 import { Question } from '@/types';
 import { AlertCircle, History, Filter, Play, Clock } from 'lucide-react';
+import { PageHero } from '@/components/dashboard/PageHero';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
@@ -110,30 +111,35 @@ function ErrorsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
-        <h1 className="text-2xl font-bold flex items-center gap-2 text-primary">
-          <AlertCircle className="text-destructive h-6 w-6" /> Caderno de Erros
-        </h1>
-        <div className="flex gap-2">
-          <Select value={filterDiscipline} onValueChange={setFilterDiscipline}>
-            <SelectTrigger className="w-[180px]">
-              <Filter className="h-4 w-4 mr-2" />
-              <SelectValue placeholder="Disciplina" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">Todas Disciplinas</SelectItem>
-              <SelectItem value="1">Português</SelectItem>
-              <SelectItem value="4">Dir. Constitucional</SelectItem>
-            </SelectContent>
-          </Select>
-          <Button 
-            onClick={handleStartRevision}
-            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2"
-          >
-            <Play className="h-4 w-4" /> Revisão Sequencial
-          </Button>
-        </div>
-      </div>
+      <PageHero
+        image="study-desk"
+        kicker="Treinamento"
+        icon={AlertCircle}
+        title={
+          <>
+            Caderno de <em>erros</em>
+          </>
+        }
+        description="Cada falha vira uma ordem de revisão clara. Revise em sequência e marque o que já dominou."
+        actions={
+          <>
+            <Select value={filterDiscipline} onValueChange={setFilterDiscipline}>
+              <SelectTrigger className="hero-btn-ghost w-[190px]">
+                <Filter className="mr-2 h-4 w-4" />
+                <SelectValue placeholder="Disciplina" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">Todas as disciplinas</SelectItem>
+                <SelectItem value="1">Português</SelectItem>
+                <SelectItem value="4">Dir. Constitucional</SelectItem>
+              </SelectContent>
+            </Select>
+            <Button onClick={handleStartRevision} className="hero-btn-primary gap-2">
+              <Play className="h-4 w-4" /> Revisão sequencial
+            </Button>
+          </>
+        }
+      />
       
       <div className="grid gap-4">
         {filteredQuestions.length > 0 ? filteredQuestions.map(q => (

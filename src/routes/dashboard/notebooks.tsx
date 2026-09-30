@@ -19,6 +19,7 @@ import {
   Eye
 } from 'lucide-react';
 import { MediaViewer } from '@/components/dashboard/MediaViewer';
+import { PageHero } from '@/components/dashboard/PageHero';
 import { 
   DropdownMenu, 
   DropdownMenuContent, 
@@ -169,15 +170,22 @@ function NotebooksPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
-        <div>
-          <h1 className="text-2xl font-bold text-primary">Meus Cadernos</h1>
-          <p className="text-muted-foreground">Organize suas questões favoritas para revisão personalizada.</p>
-        </div>
-        <Button onClick={handleCreateNotebook} className="gap-2 bg-secondary text-secondary-foreground hover:bg-secondary/90">
-          <Plus className="h-4 w-4" /> Criar Caderno
-        </Button>
-      </div>
+      <PageHero
+        image="trainer"
+        kicker="Treinamento"
+        icon={BookOpen}
+        title={
+          <>
+            Meus <em>cadernos</em>
+          </>
+        }
+        description="Organize suas questões favoritas em coleções para revisão personalizada."
+        actions={
+          <Button onClick={handleCreateNotebook} className="hero-btn-primary gap-2">
+            <Plus className="h-4 w-4" /> Criar caderno
+          </Button>
+        }
+      />
 
       <div className="flex flex-col md:flex-row gap-4 items-center bg-card p-4 rounded-xl border shadow-sm">
         <div className="relative flex-1 w-full">

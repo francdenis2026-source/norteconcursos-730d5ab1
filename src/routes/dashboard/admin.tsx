@@ -43,6 +43,7 @@ import {
 } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import { PageHero } from '@/components/dashboard/PageHero';
 import { Download } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -373,12 +374,18 @@ function AdminPanel() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Painel Administrativo</h1>
-          <p className="text-muted-foreground">Gerencie os concursos e questões da plataforma.</p>
-        </div>
-      </div>
+      <PageHero
+        image="command-room"
+        size="sm"
+        kicker="Administração"
+        icon={Settings}
+        title={
+          <>
+            Painel <em>administrativo</em>
+          </>
+        }
+        description="Gerencie concursos, questões, usuários e assinaturas da plataforma."
+      />
 
       <Tabs defaultValue="contests" className="w-full">
         <TabsList className="grid w-full max-w-5xl grid-cols-7">

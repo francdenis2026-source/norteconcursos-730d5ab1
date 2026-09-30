@@ -1,14 +1,13 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   ArrowLeft,
   ArrowRight,
-  Check,
   Eye,
   EyeOff,
+  IdCard,
   Loader2,
   Lock,
   Mail,
@@ -87,33 +86,37 @@ function AuthPage() {
   };
 
   return (
-    <main className="auth-shell">
+    <main className="auth">
       <section className="auth-visual">
-        <div className="auth-visual-image" />
-        <div className="auth-visual-content">
-          <Link to="/" className="brand-lockup">
-            <NorteBrand light />
-          </Link>
-          <div className="auth-message">
-            <span className="eyebrow">
-              <Sparkles /> Preparação para carreiras policiais
-            </span>
-            <h1>Entre em operação com um plano claro.</h1>
-            <p>
-              Acesse o ambiente que transforma questões, simulados e desempenho em decisões de
-              estudo.
-            </p>
+        <Link to="/" aria-label="Norte Concurso — início" className="w-fit">
+          <NorteBrand light />
+        </Link>
+        <div>
+          <span className="chip-brass">
+            <Sparkles /> Preparação para carreiras policiais
+          </span>
+          <h1>
+            Entre em operação com <em>um plano claro.</em>
+          </h1>
+          <p>
+            Acesse o ambiente que transforma questões, simulados e desempenho em decisões de estudo.
+          </p>
+        </div>
+        <div className="auth-benefits">
+          <div>
+            <Target />
+            <strong>Prioridades personalizadas</strong>
+            <span>Rota ajustada ao seu cargo e banca.</span>
           </div>
-          <div className="auth-benefits">
-            <span>
-              <Target /> Prioridades personalizadas
-            </span>
-            <span>
-              <Trophy /> Evolução mensurável
-            </span>
-            <span>
-              <ShieldCheck /> Dados protegidos
-            </span>
+          <div>
+            <Trophy />
+            <strong>Evolução mensurável</strong>
+            <span>Precisão e ritmo em cada sessão.</span>
+          </div>
+          <div>
+            <ShieldCheck />
+            <strong>Dados protegidos</strong>
+            <span>Acesso individual por CPF.</span>
           </div>
         </div>
       </section>
@@ -126,8 +129,25 @@ function AuthPage() {
           <div className="auth-mobile-brand">
             <NorteBrand />
           </div>
+          <div className="auth-tabs" role="tablist" aria-label="Tipo de acesso">
+            <button
+              type="button"
+              role="tab"
+              aria-selected={mode === "login"}
+              onClick={() => setMode("login")}
+            >
+              Entrar
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={mode === "register"}
+              onClick={() => setMode("register")}
+            >
+              Criar conta
+            </button>
+          </div>
           <div className="auth-heading">
-            <span>{mode === "login" ? "BEM-VINDO DE VOLTA" : "COMECE SUA JORNADA"}</span>
             <h2>{mode === "login" ? "Acesse sua preparação" : "Crie sua conta gratuita"}</h2>
             <p>
               {mode === "login"
@@ -139,23 +159,28 @@ function AuthPage() {
             {mode === "register" && (
               <div className="auth-field">
                 <Label htmlFor="name">Nome completo</Label>
-                <Input
-                  id="name"
-                  placeholder="Como podemos chamar você?"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
+                <div className="auth-field__control">
+                  <UserRound />
+                  <Input
+                    id="name"
+                    autoComplete="name"
+                    placeholder="Como podemos chamar você?"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </div>
               </div>
             )}
             {mode === "register" && (
               <div className="auth-field">
                 <Label htmlFor="email">E-mail para contato</Label>
-                <div>
+                <div className="auth-field__control">
                   <Mail />
                   <Input
                     id="email"
                     type="email"
+                    autoComplete="email"
                     placeholder="seuemail@exemplo.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -166,8 +191,8 @@ function AuthPage() {
             )}
             <div className="auth-field">
               <Label htmlFor="cpf">CPF</Label>
-              <div>
-                <UserRound />
+              <div className="auth-field__control">
+                <IdCard />
                 <Input
                   id="cpf"
                   inputMode="numeric"
@@ -182,13 +207,24 @@ function AuthPage() {
             <div className="auth-field">
               <div className="flex items-center justify-between">
                 <Label htmlFor="pin">Senha de acesso</Label>
-                {mode === "login" && <button type="button">Esqueci minha senha</button>}
+                {mode === "login" && (
+                  <button
+                    type="button"
+                    className="auth-link"
+                    onClick={() =>
+                      toast.info("Para redefinir sua senha, fale com o suporte da Norte Concurso.")
+                    }
+                  >
+                    Esqueci minha senha
+                  </button>
+                )}
               </div>
-              <div>
+              <div className="auth-field__control">
                 <Lock />
                 <Input
                   id="pin"
                   type={showPin ? "text" : "password"}
+                  autoComplete={mode === "login" ? "current-password" : "new-password"}
                   placeholder="Digite sua senha"
                   value={pin}
                   onChange={(e) => setPin(e.target.value)}
@@ -196,7 +232,8 @@ function AuthPage() {
                 />
                 <button
                   type="button"
-                  aria-label="Mostrar senha"
+                  className="auth-field__toggle"
+                  aria-label={showPin ? "Ocultar senha" : "Mostrar senha"}
                   onClick={() => setShowPin(!showPin)}
                 >
                   {showPin ? <EyeOff /> : <Eye />}
@@ -205,14 +242,14 @@ function AuthPage() {
             </div>
             {mode === "register" && (
               <label className="auth-terms">
-                <Checkbox required />
+                <Checkbox required className="mt-0.5" />
                 <span>
                   Aceito os <Link to="/terms">termos de uso</Link> e a{" "}
                   <Link to="/privacy">política de privacidade</Link>.
                 </span>
               </label>
             )}
-            <Button type="submit" className="premium-button h-12 w-full" disabled={isLoading}>
+            <button type="submit" className="btn-brass auth-submit" disabled={isLoading}>
               {isLoading ? (
                 <Loader2 className="animate-spin" />
               ) : (
@@ -221,18 +258,11 @@ function AuthPage() {
                   <ArrowRight />
                 </>
               )}
-            </Button>
-          </form>
-          <div className="auth-switch">
-            <span>{mode === "login" ? "Ainda não tem uma conta?" : "Já faz parte da Norte?"}</span>
-            <button onClick={() => setMode(mode === "login" ? "register" : "login")}>
-              {mode === "login" ? "Criar conta grátis" : "Fazer login"}
             </button>
-          </div>
+          </form>
           <div className="auth-security">
             <ShieldCheck />
-            <span>Ambiente criptografado e seguro</span>
-            <Check />
+            <span>Ambiente criptografado · seus dados não são compartilhados</span>
           </div>
         </div>
       </section>

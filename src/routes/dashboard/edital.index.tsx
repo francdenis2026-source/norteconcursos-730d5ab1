@@ -4,6 +4,7 @@ import { BookOpenText, ChevronRight, Loader2, MapPin, Sparkles } from "lucide-re
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
+import { LockedState } from "@/components/dashboard/PageHero";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import {
   Select,
@@ -145,13 +146,23 @@ function EditalPage() {
       </div>
     );
   if (!user || user.id === "demo-user")
-    return <p className="text-muted-foreground">Entre na sua conta para ver o edital eletrônico.</p>;
+    return (
+      <LockedState
+        image="field-map"
+        title={
+          <>
+            Edital <em>eletrônico</em>
+          </>
+        }
+        description="Entre na sua conta para navegar pelo edital do seu concurso assunto por assunto, com resumos e treino direcionado."
+      />
+    );
   if (error) return <p className="text-destructive">{error}</p>;
 
   return (
     <div className="space-y-6 pb-8">
-      <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-[#061a30] via-[#0b3150] to-[#0c695f] p-6 text-white shadow-xl md:p-9">
-        <Badge className="mb-4 border-white/15 bg-white/10 text-emerald-100 hover:bg-white/10">
+      <section className="page-hero page-hero--lg" data-hero="field-map">
+        <Badge className="hero-chip">
           <Sparkles className="mr-1 h-3.5 w-3.5" />
           CTI — Centro de Treinamento Intensivo
         </Badge>

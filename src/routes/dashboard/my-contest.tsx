@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { PageHero } from '@/components/dashboard/PageHero';
 
 export const Route = createFileRoute('/dashboard/my-contest')({
   component: MyContestPage
@@ -27,16 +28,25 @@ function MyContestPage() {
 
   if (!focusedContest) {
     return (
-      <div className="h-[60vh] flex flex-col items-center justify-center text-center space-y-4">
-        <Target className="h-16 w-16 text-muted-foreground/30" />
-        <h2 className="text-xl font-bold">Nenhum concurso em foco</h2>
-        <p className="text-muted-foreground max-w-md">
-          Selecione um concurso no catálogo para acompanhar seu progresso detalhado.
-        </p>
-        <Button asChild className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
-          <a href="/dashboard/questions">Ir para Catálogo</a>
-        </Button>
-      </div>
+      <PageHero
+        image="careers-team"
+        size="lg"
+        kicker="Meu concurso"
+        icon={Target}
+        title={
+          <>
+            Nenhum concurso <em>em foco.</em>
+          </>
+        }
+        description="Selecione um concurso no catálogo para acompanhar edital, prazo e progresso detalhado."
+        actions={
+          <Button asChild className="hero-btn-primary gap-2">
+            <a href="/dashboard/questions">
+              Ir para o catálogo <ChevronRight className="h-4 w-4" />
+            </a>
+          </Button>
+        }
+      />
     );
   }
 
@@ -46,24 +56,29 @@ function MyContestPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-bold text-primary">{focusedContest.agency}</h1>
-          <p className="text-muted-foreground">{focusedContest.role} • {focusedContest.examBoard}</p>
-        </div>
-        {daysToExam !== null && (
-          <div className={cn(
-            "px-4 py-2 rounded-lg border-2 flex items-center gap-3",
-            daysToExam < 30 ? "border-rose-500 bg-rose-50 text-rose-700" : "border-secondary bg-secondary/5 text-secondary"
-          )}>
-            <Calendar className="h-5 w-5" />
-            <div>
-              <p className="text-[10px] uppercase font-bold leading-tight">Dias para a Prova</p>
-              <p className="text-xl font-black leading-tight">{daysToExam}</p>
+      <PageHero
+        image="careers-team"
+        kicker="Meu concurso"
+        icon={Target}
+        title={focusedContest.agency}
+        description={`${focusedContest.role} · ${focusedContest.examBoard}`}
+        actions={
+          daysToExam !== null && (
+            <div
+              className={cn(
+                "hero-stat flex items-center gap-3",
+                daysToExam < 30 && "!border-rose-400/50 !bg-rose-500/15",
+              )}
+            >
+              <Calendar className="h-5 w-5 text-brass" />
+              <div>
+                <span>Dias para a prova</span>
+                <strong>{daysToExam}</strong>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )
+        }
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card className="md:col-span-2">

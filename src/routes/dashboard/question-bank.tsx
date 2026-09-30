@@ -20,6 +20,7 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
+import { LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -171,8 +172,8 @@ function QuestionBankPage() {
   };
   return (
     <div className="space-y-6 pb-8">
-      <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-[#061a30] via-[#0b3150] to-[#0c695f] p-6 text-white shadow-xl md:p-9">
-        <Badge className="mb-4 border-white/15 bg-white/10 text-emerald-100 hover:bg-white/10">
+      <section className="page-hero page-hero--lg" data-hero="trainer">
+        <Badge className="hero-chip">
           <Sparkles className="mr-1 h-3.5 w-3.5" />
           Central de Treinamento
         </Badge>
@@ -433,10 +434,12 @@ function Metric({
   label: string;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/10 p-4">
-      <Icon className="mb-3 h-5 w-5 text-emerald-300" />
-      <p className="text-2xl font-black">{value}</p>
-      <p className="text-xs text-slate-300">{label}</p>
+    <div className="hero-stat">
+      <span>
+        <Icon />
+        {label}
+      </span>
+      <strong className="tabular">{value}</strong>
     </div>
   );
 }
@@ -450,10 +453,15 @@ function Loading() {
 }
 function Login() {
   return (
-    <div className="flex min-h-[60vh] flex-col items-center justify-center text-center">
-      <BookMarked className="h-14 w-14 text-muted-foreground/30" />
-      <h2 className="mt-4 text-xl font-black">Entre para montar seu treino</h2>
-    </div>
+    <LockedState
+      image="trainer"
+      title={
+        <>
+          Banco de <em>questões</em>
+        </>
+      }
+      description="Entre na sua conta para montar baterias por banca, carreira, concurso e disciplina."
+    />
   );
 }
 function ErrorState({ message, retry }: { message: string; retry: () => void }) {
