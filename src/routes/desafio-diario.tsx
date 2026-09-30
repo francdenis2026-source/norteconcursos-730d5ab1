@@ -563,21 +563,20 @@ function TrainingResult({
 }) {
   const accuracy = total ? Math.round((correct / total) * 100) : 0;
   return (
-    <Card className="overflow-hidden text-center shadow-xl">
-      <div className="h-2 bg-gradient-to-r from-emerald-500 to-sky-500" />
-      <CardContent className="space-y-6 p-8">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl bg-emerald-100 text-emerald-700">
-          <Sparkles className="h-8 w-8" />
+    <Card className="overflow-hidden shadow-xl">
+      <div className="mock-result-hero tactical-feature-hero p-7 text-center text-white md:p-10">
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-white/15 bg-white/10">
+          <Sparkles className="h-7 w-7 text-amber-200" />
         </div>
-        <div>
-          <p className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
-            Desafio concluído
-          </p>
-          <h1 className="mt-2 text-4xl font-black">{accuracy}%</h1>
-          <p className="mt-2 text-muted-foreground">
-            {correct} certas · {wrong} erradas · {total} questões
-          </p>
-        </div>
+        <p className="mt-4 text-sm font-bold uppercase tracking-wider text-slate-200">
+          Desafio diário concluído
+        </p>
+        <h1 className="mt-1 text-4xl font-black md:text-5xl">{accuracy}%</h1>
+        <p className="mt-2 text-slate-200">
+          {correct} certas · {wrong} erradas · {total} questões
+        </p>
+      </div>
+      <CardContent className="space-y-6 p-8 text-center">
         <Progress value={accuracy} />
         <div className="space-y-3">
           <p className="text-sm text-muted-foreground">
