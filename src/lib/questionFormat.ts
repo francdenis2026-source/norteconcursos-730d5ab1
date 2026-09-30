@@ -57,8 +57,12 @@ export const basisHref = (basis: LegalBasis) => {
   return artigoAnchor ? `${basis.url}#art${artigoAnchor}` : basis.url;
 };
 // Fontes oficiais aceitas para legislação e jurisprudência (CONTENT_GOVERNANCE.md).
+// Tratados e instrumentos internacionais sem decreto de internalização no
+// Planalto (ex.: Declaração Universal dos Direitos Humanos, resoluções da
+// Assembleia Geral da ONU) são verificados diretamente nas fontes primárias
+// dos organismos que os custodiam.
 const OFFICIAL_SOURCE =
-  /(^|\.)(planalto\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br)(\/|$)/i;
+  /(^|\.)(planalto\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br|ohchr\.org|unodc\.org|un\.org)(\/|$)/i;
 export const isOfficialUrl = (url?: string) => {
   try {
     return Boolean(url) && OFFICIAL_SOURCE.test(new URL(String(url)).hostname + "/");
