@@ -2632,7 +2632,7 @@ html {
   inset: 0;
   z-index: -2;
   content: "";
-  background: url("/media/hero/auth.webp") 70% center / cover no-repeat;
+  background: url("/media/hero/auth.webp") 70% top / cover no-repeat;
   animation: slow-zoom 2.4s var(--ease-out) both;
 }
 .auth-visual::after {
@@ -3736,6 +3736,7 @@ html {
 }
 [data-hero="auth"] {
   --hero-image: url("/media/hero/auth.webp");
+  --hero-position: 70% top;
 }
 [data-hero="toolkit"] {
   --hero-image: url("/media/hero/toolkit.webp");
