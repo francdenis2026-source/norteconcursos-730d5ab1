@@ -524,7 +524,7 @@ function Index() {
           </div>
           <div className="lp-final__lineup" data-reveal style={delay(1)} aria-hidden="true">
             <img
-              src="/media/hero/lineup-carreiras.webp"
+              src="/media/hero/lineup-carreiras-ajustada.webp"
               alt=""
               loading="lazy"
               decoding="async"

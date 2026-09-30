@@ -2325,12 +2325,12 @@ html {
   position: relative;
   width: min(100%, 1680px);
   margin: clamp(40px, 6vw, 80px) auto 0;
-  aspect-ratio: 1876 / 660;
+  aspect-ratio: 1896 / 830;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 66%, transparent 100%),
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 82%, transparent 100%),
     linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
   -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 66%, transparent 100%),
+  mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 82%, transparent 100%),
     linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
   mask-composite: intersect;
 }
@@ -2340,14 +2340,6 @@ html {
   height: 100%;
   object-fit: cover;
   object-position: 50% 0;
-}
-@media (max-width: 900px) {
-  .lp-final__lineup {
-    aspect-ratio: 1 / 0.82;
-  }
-  .lp-final__lineup img {
-    object-position: 26% 0;
-  }
 }
 @media (max-width: 640px) {
   .lp-final__actions {
