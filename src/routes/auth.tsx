@@ -122,10 +122,10 @@ function AuthPage() {
       </section>
 
       <section className="auth-panel">
+        <Link to="/" className="auth-back">
+          <ArrowLeft /> Voltar para o início
+        </Link>
         <div className="auth-card">
-          <Link to="/" className="auth-back">
-            <ArrowLeft /> Voltar para o início
-          </Link>
           <div className="auth-mobile-brand">
             <NorteBrand />
           </div>
@@ -189,6 +189,7 @@ function AuthPage() {
                 </div>
               </div>
             )}
+            <div className={mode === "register" ? "auth-row" : "contents"}>
             <div className="auth-field">
               <Label htmlFor="cpf">CPF</Label>
               <div className="auth-field__control">
@@ -239,6 +240,7 @@ function AuthPage() {
                   {showPin ? <EyeOff /> : <Eye />}
                 </button>
               </div>
+            </div>
             </div>
             {mode === "register" && (
               <label className="auth-terms">
