@@ -22,14 +22,14 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import {
   type Answer,
   type Question,
-  answerLabel,
-  boardAnswers,
+  questionAnswerLabel,
+  questionAnswers,
   DIFFICULTY_LABEL,
   DIFFICULTY_STYLE,
   examKey,
   formatDate,
   hasReviewedExplanation,
-  isLegallyVerified,
+  isEligibleQuestion,
   isPlaceholderExplanation,
   normalizeDifficulty,
   parseBasis,
@@ -57,19 +57,36 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { fetchAllRows } from "@/lib/catalog";
+import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    contest: typeof search.contest === "string" ? search.contest : undefined,
-    board: typeof search.board === "string" ? search.board : undefined,
-    career: typeof search.career === "string" ? search.career : undefined,
-    year: typeof search.year === "string" ? search.year : undefined,
-    subject: typeof search.subject === "string" ? search.subject : undefined,
-    source: typeof search.source === "string" ? search.source : undefined,
-    reviewed: typeof search.reviewed === "string" ? search.reviewed : undefined,
-    state: typeof search.state === "string" ? search.state : undefined,
-    category: typeof search.category === "string" ? search.category : undefined,
+  validateSearch: (
+    search: Record<string, unknown>,
+  ): Partial<
+    Record<
+      | "contest"
+      | "board"
+      | "career"
+      | "year"
+      | "subject"
+      | "source"
+      | "reviewed"
+      | "state"
+      | "category",
+      string | undefined
+    >
+  > => ({
+    contest: typeof search["contest"] === "string" ? search["contest"] : undefined,
+    board: typeof search["board"] === "string" ? search["board"] : undefined,
+    career: typeof search["career"] === "string" ? search["career"] : undefined,
+    year: typeof search["year"] === "string" ? search["year"] : undefined,
+    subject: typeof search["subject"] === "string" ? search["subject"] : undefined,
+    source: typeof search["source"] === "string" ? search["source"] : undefined,
+    reviewed: typeof search["reviewed"] === "string" ? search["reviewed"] : undefined,
+    state: typeof search["state"] === "string" ? search["state"] : undefined,
+    category: typeof search["category"] === "string" ? search["category"] : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -110,6 +127,9 @@ function QuestionTrainer() {
   const [index, setIndex] = React.useState(0);
   const [selected, setSelected] = React.useState<Answer | null>(null);
   const [struck, setStruck] = React.useState<Answer[]>([]);
+  const [saving, setSaving] = React.useState(false);
+  const savingRef = React.useRef(false);
+  const responseIdRef = React.useRef(crypto.randomUUID());
   const [answered, setAnswered] = React.useState(false);
   const [helpUsed, setHelpUsed] = React.useState(false);
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
@@ -128,24 +148,27 @@ function QuestionTrainer() {
     let active = true;
     void (async () => {
       try {
-        // Se a migration de verificação legal ainda não foi aplicada, as colunas novas não existem:
-        // repetimos a consulta sem elas e seguimos sem o filtro de vigência (avisando na tela).
         const query = async (
           table: "official_exam_questions" | "curated_question_catalog" | "question_bank",
           base: string,
           extra: string,
-          refine: (builder: any) => any, // eslint-disable-line @typescript-eslint/no-explicit-any
-        ) => {
-          const full = await refine(supabase.from(table).select(`${base},${extra}`));
-          if (!full.error) return { ...full, gated: true };
-          const plain = await refine(supabase.from(table).select(base));
-          return { ...plain, gated: false };
-        };
+          refine: (
+            builder: ReturnType<ReturnType<typeof supabase.from>["select"]>,
+          ) => ReturnType<ReturnType<typeof supabase.from>["select"]>,
+        ) => ({
+          data: await fetchAllRows((from, to) =>
+            refine(supabase.from(table).select(base + ",content_status," + extra))
+              .order("id")
+              .range(from, to),
+          ),
+          error: null,
+          gated: true,
+        });
         const [officialResult, curatedResult, personalResult] = await Promise.all([
           query(
             "official_exam_questions",
             "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,state,career_category",
-            "law_version_checked_at,legal_review_required,legal_audit_completed,difficulty",
+            "law_version_checked_at,legal_review_required,legal_audit_completed,context_review_required,difficulty",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
           ),
           query(
@@ -158,9 +181,9 @@ function QuestionTrainer() {
             ? Promise.resolve({ data: [], error: null, gated: true })
             : query(
                 "question_bank",
-                "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status,difficulty,state,career_category",
+                "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
                 "law_version_checked_at",
-                (builder) => builder.eq("user_id", userId),
+                (builder) => builder.eq("user_id", userId).eq("content_status", "active"),
               ),
         ]);
         let hiddenCount = 0;
@@ -170,10 +193,7 @@ function QuestionTrainer() {
           extraOk: (row: Record<string, unknown>) => boolean = () => true,
         ) =>
           rows.filter((row) => {
-            const ok =
-              !gated ||
-              (extraOk(row) &&
-                isLegallyVerified(parseBasis(row.legal_basis), row.law_version_checked_at));
+            const ok = extraOk(row) && isEligibleQuestion(row);
             if (!ok) hiddenCount += 1;
             return ok;
           });
@@ -184,75 +204,72 @@ function QuestionTrainer() {
           ...gate(
             (officialResult.data || []) as Array<Record<string, unknown>>,
             officialResult.gated,
-            (row) => !(row.legal_review_required && !row.legal_audit_completed),
+            (row) => !(row["legal_review_required"] && !row["legal_audit_completed"]),
           ).map((row) => ({
-            id: String(row.id),
+            id: String(row["id"]),
             source: "official" as const,
-            contest: String(row.contest_name),
-            year: String(row.exam_year),
-            career: String(row.career_name || "Carreira policial"),
-            board: String(row.exam_board || "CEBRASPE"),
-            subject: String(row.subject),
+            contest: String(row["contest_name"]),
+            year: String(row["exam_year"]),
+            career: String(row["career_name"] || "Carreira policial"),
+            board: String(row["exam_board"] || "CEBRASPE"),
+            subject: String(row["subject"]),
             subtopic: null,
-            text: String(row.question_text),
-            answer: String(row.official_answer) as Answer,
+            text: String(row["question_text"]),
+            answer: String(row["official_answer"]) as Answer,
             explanation: String(
-              row.review_note || "Item conferido com o gabarito definitivo da prova oficial.",
+              row["review_note"] || "Item conferido com o gabarito definitivo da prova oficial.",
             ),
-            legalBasis: parseBasis(row.legal_basis),
-            checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
-            difficulty: normalizeDifficulty(row.difficulty),
-            state: String(row.state || ""),
-            category: String(row.career_category || ""),
+            legalBasis: parseBasis(row["legal_basis"]),
+            checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
+            difficulty: normalizeDifficulty(row["difficulty"]),
+            state: String(row["state"] || ""),
+            category: String(row["career_category"] || ""),
           })),
           ...gate(
             (curatedResult.data || []) as Array<Record<string, unknown>>,
             curatedResult.gated,
           ).map((row) => ({
-            id: String(row.id),
+            id: String(row["id"]),
             source: "curated" as const,
-            contest: String(row.contest_name),
-            year: String(row.contest_year),
-            career: String(row.career_name || "Carreira policial"),
-            board: String(row.exam_board || "Banca"),
-            subject: String(row.subject),
-            subtopic: row.subtopic ? String(row.subtopic) : null,
-            text: String(row.question_text),
-            answer: String(row.official_answer) as Answer,
-            explanation: String(row.explanation || "Explicação editorial em revisão."),
-            legalBasis: parseBasis(row.legal_basis),
-            checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
-            difficulty: normalizeDifficulty(row.difficulty),
-            state: String(row.state || ""),
-            category: String(row.career_category || ""),
+            contest: String(row["contest_name"]),
+            year: String(row["contest_year"]),
+            career: String(row["career_name"] || "Carreira policial"),
+            board: String(row["exam_board"] || "Banca"),
+            subject: String(row["subject"]),
+            subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
+            text: String(row["question_text"]),
+            answer: String(row["official_answer"]) as Answer,
+            explanation: String(row["explanation"] || "Explicação editorial em revisão."),
+            legalBasis: parseBasis(row["legal_basis"]),
+            checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
+            difficulty: normalizeDifficulty(row["difficulty"]),
+            state: String(row["state"] || ""),
+            category: String(row["career_category"] || ""),
           })),
           ...((personalResult.data || []) as Array<Record<string, unknown>>)
-            .filter(
-              (row) =>
-                !["obsolete", "revoked", "archived"].includes(
-                  String(row.content_status || "active"),
-                ) &&
-                /^[A-E]$/.test(String(row.official_answer)) &&
-                (!personalResult.gated ||
-                  isLegallyVerified(parseBasis(row.legal_basis), row.law_version_checked_at)),
-            )
+            .filter(isEligibleQuestion)
             .map((row) => ({
-              id: String(row.id),
+              id: String(row["id"]),
               source: "personal" as const,
-              contest: String(row.contest_name),
-              year: String(row.contest_year),
+              contest: String(row["contest_name"]),
+              year: String(row["contest_year"]),
               career: "Meu caderno",
-              board: /^[CE]$/.test(String(row.official_answer)) ? "CEBRASPE" : "Multibanca",
-              subject: String(row.subject),
-              subtopic: row.subtopic ? String(row.subtopic) : null,
-              text: String(row.question_text),
-              answer: String(row.official_answer) as Answer,
-              explanation: String(row.explanation || "Explicação pedagógica em revisão."),
-              legalBasis: parseBasis(row.legal_basis),
-              checkedAt: row.law_version_checked_at ? String(row.law_version_checked_at) : null,
-              difficulty: normalizeDifficulty(row.difficulty),
-              state: String(row.state || ""),
-              category: String(row.career_category || ""),
+              board: "Meu caderno",
+              kind: parseQuestion(String(row["question_text"])).options.length
+                ? ("multiple_choice" as const)
+                : ("true_false" as const),
+              subject: String(row["subject"]),
+              subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
+              text: String(row["question_text"]),
+              answer: String(row["official_answer"]) as Answer,
+              explanation: String(row["explanation"] || "Explicação pedagógica em revisão."),
+              legalBasis: parseBasis(row["legal_basis"]),
+              checkedAt: row["law_version_checked_at"]
+                ? String(row["law_version_checked_at"])
+                : null,
+              difficulty: normalizeDifficulty(row["difficulty"]),
+              state: String(row["state"] || ""),
+              category: String(row["career_category"] || ""),
             })),
         ];
         if (active) {
@@ -289,16 +306,16 @@ function QuestionTrainer() {
       category,
     } as const;
     const fields = {
-      contest: (item: Question) => item.contest,
-      board: (item: Question) => item.board,
-      career: (item: Question) => item.career,
-      year: (item: Question) => item.year,
-      subject: (item: Question) => item.subject,
-      source: (item: Question) => item.source,
+      contest: (item: Question) => item["contest"],
+      board: (item: Question) => item["board"],
+      career: (item: Question) => item["career"],
+      year: (item: Question) => item["year"],
+      subject: (item: Question) => item["subject"],
+      source: (item: Question) => item["source"],
       reviewed: (item: Question) => (hasReviewedExplanation(item) ? "reviewed" : "pending"),
-      difficulty: (item: Question) => item.difficulty,
-      state: (item: Question) => item.state,
-      category: (item: Question) => item.category,
+      difficulty: (item: Question) => item["difficulty"],
+      state: (item: Question) => item["state"],
+      category: (item: Question) => item["category"],
     };
     const scoped = (skip: keyof typeof fields) =>
       catalog.filter((item) =>
@@ -310,7 +327,7 @@ function QuestionTrainer() {
       new Map(
         scoped("contest").map((item) => [
           examKey(item),
-          `${item.contest} — ${item.career} · ${item.board} · ${item.year}`,
+          `${item["contest"]} — ${item["career"]} · ${item["board"]} · ${item["year"]}`,
         ]),
       ).entries(),
     ).sort((a, b) => b[1].localeCompare(a[1], "pt-BR", { numeric: true }));
@@ -356,17 +373,17 @@ function QuestionTrainer() {
     () =>
       catalog.filter(
         (item) =>
-          (contest === "all" || item.contest === contest) &&
-          (board === "all" || item.board === board) &&
-          (career === "all" || item.career === career) &&
-          (year === "all" || item.year === year) &&
+          (contest === "all" || item["contest"] === contest) &&
+          (board === "all" || item["board"] === board) &&
+          (career === "all" || item["career"] === career) &&
+          (year === "all" || item["year"] === year) &&
           (appliedExam === "all" || examKey(item) === appliedExam) &&
-          (subject === "all" || item.subject === subject) &&
-          (source === "all" || item.source === source) &&
+          (subject === "all" || item["subject"] === subject) &&
+          (source === "all" || item["source"] === source) &&
           (reviewed === "all" || hasReviewedExplanation(item)) &&
-          (difficulty === "all" || item.difficulty === difficulty) &&
-          (state === "all" || item.state === state) &&
-          (category === "all" || item.category === category),
+          (difficulty === "all" || item["difficulty"] === difficulty) &&
+          (state === "all" || item["state"] === state) &&
+          (category === "all" || item["category"] === category),
       ),
     [
       catalog,
@@ -399,7 +416,12 @@ function QuestionTrainer() {
   const selectAppliedExam = (value: string) => {
     setAppliedExam(value);
     if (value === "all") return;
-    const [selectedContest, selectedCareer, selectedBoard, selectedYear] = value.split("::");
+    const [
+      selectedContest = "all",
+      selectedCareer = "all",
+      selectedBoard = "all",
+      selectedYear = "all",
+    ] = value.split("::");
     setContest(selectedContest);
     setCareer(selectedCareer);
     setBoard(selectedBoard);
@@ -408,28 +430,41 @@ function QuestionTrainer() {
 
   const question = questions[index];
   const submit = async () => {
-    if (!selected || !question || answered || !user) return;
+    if (!selected || !question || answered || !user || savingRef.current) return;
+    savingRef.current = true;
+    setSaving(true);
     const isCorrect = selected === question.answer;
-    setAnswered(true);
-    if (isCorrect) setCorrect((value) => value + 1);
-    else setWrong((value) => value + 1);
-    setModal("result");
-    if (user.id !== "demo-user") {
-      await supabase.from("question_training_responses").insert({
-        user_id: user.id,
-        question_id: question.id,
-        question_source: question.source,
-        contest_name: question.contest,
-        subject: question.subject,
-        selected_answer: selected,
-        official_answer: question.answer,
-        is_correct: isCorrect,
-        asked_for_help: helpUsed,
-        response_seconds: Math.max(0, Math.round((Date.now() - startedAt) / 1000)),
-      });
+    try {
+      const { error } = await supabase.from("question_training_responses").upsert(
+        {
+          id: responseIdRef.current,
+          user_id: user.id,
+          question_id: question.id,
+          question_source: question.source,
+          contest_name: question.contest,
+          subject: question.subject,
+          selected_answer: selected,
+          official_answer: question.answer,
+          is_correct: isCorrect,
+          asked_for_help: helpUsed,
+          response_seconds: Math.max(0, Math.round((Date.now() - startedAt) / 1000)),
+        },
+        { onConflict: "id" },
+      );
+      if (error) throw error;
+      setAnswered(true);
+      if (isCorrect) setCorrect((value) => value + 1);
+      else setWrong((value) => value + 1);
+      setModal("result");
+    } catch {
+      toast.error("Não foi possível salvar sua resposta. Tente novamente.");
+    } finally {
+      savingRef.current = false;
+      setSaving(false);
     }
   };
   const next = () => {
+    responseIdRef.current = crypto.randomUUID();
     setModal(null);
     setSelected(null);
     setStruck([]);
@@ -439,6 +474,7 @@ function QuestionTrainer() {
     setIndex((value) => value + 1);
   };
   const restart = () => {
+    responseIdRef.current = crypto.randomUUID();
     setIndex(0);
     setCorrect(0);
     setWrong(0);
@@ -542,16 +578,16 @@ function QuestionTrainer() {
   const hasOptions = parsed.options.length > 0;
   const explanation = splitExplanation(question.explanation);
   const correctOption = parsed.options.find((option) => option.letter === question.answer);
-  const certoErrado = !hasOptions && /CEBRASPE|CESPE/i.test(question.board);
+  const certoErrado = !hasOptions && questionAnswers(question).join("") === "CE";
   const labelFor = (answer: Answer) =>
-    hasOptions ? `Alternativa ${answer}` : answerLabel(answer, question.board);
+    hasOptions ? `Alternativa ${answer}` : questionAnswerLabel(answer, question);
   const chooseOption = (letter: Answer) => {
-    if (answered) return;
+    if (answered || savingRef.current) return;
     setStruck((items) => items.filter((item) => item !== letter));
     setSelected(letter);
   };
   const toggleStrike = (letter: Answer) => {
-    if (answered) return;
+    if (answered || savingRef.current) return;
     setStruck((items) =>
       items.includes(letter) ? items.filter((item) => item !== letter) : [...items, letter],
     );
@@ -632,7 +668,7 @@ function QuestionTrainer() {
                     <button
                       type="button"
                       aria-pressed={isSelected}
-                      disabled={answered}
+                      disabled={answered || saving}
                       onClick={() => chooseOption(option.letter)}
                       className={cn(
                         "group flex flex-1 items-start gap-2 rounded-lg border-2 border-border bg-background p-2.5 text-left text-sm leading-5 transition-all duration-200 hover:border-primary hover:bg-primary/5 disabled:hover:bg-background sm:gap-3 sm:rounded-xl sm:p-3 sm:leading-6",
@@ -661,7 +697,7 @@ function QuestionTrainer() {
                       variant={isStruck ? "secondary" : "ghost"}
                       size="icon"
                       className="h-9 w-9 shrink-0 sm:h-10 sm:w-10"
-                      disabled={answered}
+                      disabled={answered || saving}
                       aria-pressed={isStruck}
                       aria-label={
                         isStruck
@@ -682,15 +718,15 @@ function QuestionTrainer() {
             className={cn(
               "mt-3 grid gap-2",
               hasOptions && "hidden",
-              boardAnswers(question.board).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
+              questionAnswers(question).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
             )}
           >
-            {(hasOptions ? [] : boardAnswers(question.board)).map((answer) => (
+            {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
               <button
                 key={answer}
                 type="button"
                 aria-pressed={selected === answer}
-                disabled={answered}
+                disabled={answered || saving}
                 onClick={() => setSelected(answer)}
                 className={cn(
                   "group relative flex min-h-12 items-center justify-center gap-2 rounded-lg border-2 border-border bg-background px-3 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:shadow-md disabled:hover:translate-y-0 sm:min-h-16 sm:rounded-xl sm:px-4 sm:text-base",
@@ -724,7 +760,7 @@ function QuestionTrainer() {
             <Button
               variant="ghost"
               className="text-amber-700"
-              disabled={answered}
+              disabled={answered || saving}
               onClick={() => {
                 setHelpUsed(true);
                 setModal("help");
@@ -734,7 +770,7 @@ function QuestionTrainer() {
             </Button>
             <Button
               size="lg"
-              disabled={!selected || answered}
+              disabled={!selected || answered || saving}
               onClick={submit}
               className="h-11 min-w-44 sm:h-12"
             >

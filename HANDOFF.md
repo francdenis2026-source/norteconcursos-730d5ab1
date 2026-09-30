@@ -17,13 +17,12 @@ Documento de continuidade. Cole isto (ou o link do arquivo) na primeira mensagem
 
 **Supabase (banco de dados novo, em uso):**
 - URL: `https://gkwphadbveiyjcwiiizw.supabase.co`
-- Publishable key: `sb_publishable_hF4jXHTs4tapaOMX2KdqvA_N_A5Tyqf`
+- Chave publicável: configure pelo ambiente local.
 - (Service role key e senha do banco estão só no histórico do chat anterior — se precisar, gere uma nova em Project Settings → API, é mais seguro que reusar a antiga)
 - Projeto Supabase **antigo** (`rarwpddnjjgmxspaoplf`) está pausado/fora do ar — não usar.
 
 **Contas criadas no Supabase Auth:**
-- Admin: `francdenisbr@gmail.com` / senha `125758` (role: admin)
-- Franc Denis (aluno): `69598193268@norteconcurso.local` / senha `125758` (CPF 69598193268, role: user)
+- Credenciais e dados pessoais removidos. Use o fluxo de recuperação de acesso da plataforma.
 
 ## 2. O que já foi feito
 

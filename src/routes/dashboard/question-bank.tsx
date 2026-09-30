@@ -29,6 +29,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { fetchAllRows } from "@/lib/catalog";
+import { isEligibleQuestion } from "@/lib/questionFormat";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/question-bank")({ component: QuestionBankPage });
@@ -71,41 +73,51 @@ function QuestionBankPage() {
     setLoading(true);
     setError(null);
     try {
+      const query = async (
+        table: "question_bank" | "curated_question_catalog" | "official_exam_questions",
+        fields: string,
+        userId?: string,
+      ) => ({
+        data: await fetchAllRows((from, to) => {
+          let q = supabase
+            .from(table)
+            .select(fields + ",content_status,official_answer,legal_basis,law_version_checked_at")
+            .eq("content_status", "active")
+            .order("id")
+            .range(from, to);
+          if (userId) q = q.eq("user_id", userId);
+          return q.returns<Record<string, unknown>[]>();
+        }),
+        error: null,
+      });
       const [personal, curated, official] = await Promise.all([
-        supabase
-          .from("question_bank")
-          .select("id,contest_name,contest_year,subject,content_status,state,career_category")
-          .eq("user_id", user.id),
-        supabase
-          .from("curated_question_catalog")
-          .select(
-            "id,contest_name,contest_year,career_name,exam_board,subject,state,career_category",
-          )
-          .eq("content_status", "active"),
-        supabase
-          .from("official_exam_questions")
-          .select(
-            "id,contest_name,exam_year,career_name,exam_board,subject,official_answer,state,career_category",
-          )
-          .eq("content_status", "active")
-          .neq("official_answer", "X"),
+        query(
+          "question_bank",
+          "id,contest_name,contest_year,subject,state,career_category",
+          user.id,
+        ),
+        query(
+          "curated_question_catalog",
+          "id,contest_name,contest_year,career_name,exam_board,subject,state,career_category",
+        ),
+        query(
+          "official_exam_questions",
+          "id,contest_name,exam_year,career_name,exam_board,subject,state,career_category,legal_review_required,legal_audit_completed,context_review_required",
+        ),
       ]);
       if (personal.error) throw personal.error;
       if (curated.error) throw curated.error;
       if (official.error) throw official.error;
       const personalRows = ((personal.data || []) as Array<Record<string, unknown>>)
-        .filter(
-          (row) =>
-            !["obsolete", "revoked", "archived"].includes(String(row.content_status || "active")),
-        )
+        .filter(isEligibleQuestion)
         .map((row) => normalize(row, "personal"));
       setItems([
-        ...((official.data || []) as Array<Record<string, unknown>>).map((row) =>
-          normalize(row, "official"),
-        ),
-        ...((curated.data || []) as Array<Record<string, unknown>>).map((row) =>
-          normalize(row, "curated"),
-        ),
+        ...((official.data || []) as Array<Record<string, unknown>>)
+          .filter(isEligibleQuestion)
+          .map((row) => normalize(row, "official")),
+        ...((curated.data || []) as Array<Record<string, unknown>>)
+          .filter(isEligibleQuestion)
+          .map((row) => normalize(row, "curated")),
         ...personalRows,
       ]);
     } catch (e) {
@@ -268,25 +280,25 @@ function QuestionBankPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl">
               <ShieldCheck className="h-5 w-5 text-blue-600" />
-              Formato automático da banca
+              Formato da questão
             </CardTitle>
             <CardDescription>
-              O aplicativo adapta a resposta ao padrão da organizadora.
+              O aplicativo identifica as alternativas e os itens de julgamento.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
             <StyleCard
-              title="CEBRASPE / CESPE"
+              title="Certo ou Errado"
               description="Itens de julgamento com opções Certo ou Errado."
               options={["Certo", "Errado"]}
             />
             <StyleCard
-              title="IBFC"
+              title="Múltipla escolha com quatro opções"
               description="Questões objetivas com alternativas A, B, C e D."
               options={["A", "B", "C", "D"]}
             />
             <StyleCard
-              title="FGV, FCC, IBADE e outras"
+              title="Múltipla escolha com cinco opções"
               description="Questões objetivas com alternativas A, B, C, D e E."
               options={["A", "B", "C", "D", "E"]}
             />
@@ -473,15 +485,15 @@ function ErrorState({ message, retry }: { message: string; retry: () => void }) 
 }
 function normalize(row: Record<string, unknown>, source: SourceKind): CatalogItem {
   return {
-    id: String(row.id),
-    contest: String(row.contest_name || "Não informado"),
-    year: String(source === "official" ? row.exam_year : row.contest_year || "—"),
-    career: String(row.career_name || row.contest_name || "Não informada"),
-    board: String(row.exam_board || "Não informada"),
-    subject: String(row.subject || "Sem disciplina"),
+    id: String(row["id"]),
+    contest: String(row["contest_name"] || "Não informado"),
+    year: String(source === "official" ? row["exam_year"] : row["contest_year"] || "—"),
+    career: String(row["career_name"] || row["contest_name"] || "Não informada"),
+    board: String(row["exam_board"] || "Não informada"),
+    subject: String(row["subject"] || "Sem disciplina"),
     source,
-    state: String(row.state || ""),
-    category: String(row.career_category || ""),
+    state: String(row["state"] || ""),
+    category: String(row["career_category"] || ""),
   };
 }
 function unique(values: string[]) {

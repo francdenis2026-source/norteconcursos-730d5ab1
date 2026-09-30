@@ -30,7 +30,7 @@ function CareersPage() {
         );
         if (c) {
           next[c.id] = next[c.id] || { exams: 0, questions: 0 };
-          next[c.id].exams++;
+          next[c.id]!.exams++;
         }
       });
       (questionsRes.data || []).forEach((r: { contest_name: string | null }) => {
@@ -41,7 +41,7 @@ function CareersPage() {
         );
         if (c) {
           next[c.id] = next[c.id] || { exams: 0, questions: 0 };
-          next[c.id].questions++;
+          next[c.id]!.questions++;
         }
       });
       setCounts(next);

@@ -27,20 +27,17 @@ import {
 } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
-import {
-  GUEST_DAILY_LIMIT,
-  getGuestRemainingToday,
-  registerGuestAnswer,
-} from "@/lib/guestQuota";
+import { GUEST_DAILY_LIMIT, getGuestRemainingToday, registerGuestAnswer } from "@/lib/guestQuota";
 import {
   type Answer,
   type Question,
   DIFFICULTY_LABEL,
   DIFFICULTY_STYLE,
-  answerLabel,
-  boardAnswers,
+  questionAnswerLabel,
+  questionAnswers,
   isPlaceholderExplanation,
   normalizeDifficulty,
+  isEligibleQuestion,
   parseBasis,
   parseQuestion,
   splitExplanation,
@@ -89,29 +86,31 @@ function DesafioDiario() {
         const { data, error } = await supabase
           .rpc("get_daily_guest_questions", { p_limit: 10 })
           .select(
-            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,difficulty,state,career_category",
+            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,difficulty,state,career_category,content_status,law_version_checked_at,legal_review_required,legal_audit_completed,context_review_required",
           );
         if (error) throw error;
-        const daily: Question[] = ((data || []) as Array<Record<string, unknown>>).map((row) => ({
-          id: String(row.id),
-          source: "official" as const,
-          contest: String(row.contest_name),
-          year: String(row.exam_year),
-          career: String(row.career_name || "Carreira policial"),
-          board: String(row.exam_board || "CEBRASPE"),
-          subject: String(row.subject),
-          subtopic: null,
-          text: String(row.question_text),
-          answer: String(row.official_answer) as Answer,
-          explanation: String(
-            row.review_note || "Item conferido com o gabarito definitivo da prova oficial.",
-          ),
-          legalBasis: parseBasis(row.legal_basis),
-          checkedAt: null,
-          difficulty: normalizeDifficulty(row.difficulty),
-          state: String(row.state || ""),
-          category: String(row.career_category || ""),
-        }));
+        const daily: Question[] = ((data || []) as Array<Record<string, unknown>>)
+          .filter(isEligibleQuestion)
+          .map((row) => ({
+            id: String(row["id"]),
+            source: "official" as const,
+            contest: String(row["contest_name"]),
+            year: String(row["exam_year"]),
+            career: String(row["career_name"] || "Carreira policial"),
+            board: String(row["exam_board"] || "CEBRASPE"),
+            subject: String(row["subject"]),
+            subtopic: null,
+            text: String(row["question_text"]),
+            answer: String(row["official_answer"]) as Answer,
+            explanation: String(
+              row["review_note"] || "Item conferido com o gabarito definitivo da prova oficial.",
+            ),
+            legalBasis: parseBasis(row["legal_basis"]),
+            checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
+            difficulty: normalizeDifficulty(row["difficulty"]),
+            state: String(row["state"] || ""),
+            category: String(row["career_category"] || ""),
+          }));
         if (!active) return;
         setRemaining(remainingToday);
         setQuestions(daily);
@@ -204,9 +203,9 @@ function DesafioDiario() {
               <div>
                 <h1 className="text-xl font-black">Você já respondeu hoje</h1>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Suas {GUEST_DAILY_LIMIT} questões grátis de hoje já foram usadas neste
-                  computador. O desafio libera de novo amanhã, ou você pode criar uma conta pra
-                  treinar sem limite agora mesmo.
+                  Suas {GUEST_DAILY_LIMIT} questões grátis de hoje já foram usadas neste computador.
+                  O desafio libera de novo amanhã, ou você pode criar uma conta pra treinar sem
+                  limite agora mesmo.
                 </p>
               </div>
               <div className="flex flex-col gap-2 sm:flex-row">
@@ -233,9 +232,9 @@ function DesafioDiario() {
               <div>
                 <h1 className="text-2xl font-black">Desafio diário Norte Concurso</h1>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  {questions.length} questões oficiais de concursos públicos, sorteadas hoje —
-                  as mesmas pra todo mundo que entrar hoje. Correção na hora, com explicação
-                  didática em cada uma.
+                  {questions.length} questões oficiais de concursos públicos, sorteadas hoje — as
+                  mesmas pra todo mundo que entrar hoje. Correção na hora, com explicação didática
+                  em cada uma.
                 </p>
               </div>
               <div className="flex items-center justify-center gap-2 text-xs font-bold text-muted-foreground">
@@ -272,7 +271,9 @@ function DesafioDiario() {
             onToggleStrike={(letter) => {
               if (answered) return;
               setStruck((items) =>
-                items.includes(letter) ? items.filter((item) => item !== letter) : [...items, letter],
+                items.includes(letter)
+                  ? items.filter((item) => item !== letter)
+                  : [...items, letter],
               );
               if (selected === letter) setSelected(null);
             }}
@@ -332,9 +333,9 @@ function QuestionPlayer({
   const hasOptions = parsed.options.length > 0;
   const explanation = splitExplanation(question.explanation);
   const correctOption = parsed.options.find((option) => option.letter === question.answer);
-  const certoErrado = !hasOptions && /CEBRASPE|CESPE/i.test(question.board);
+  const certoErrado = !hasOptions && questionAnswers(question).join("") === "CE";
   const labelFor = (answer: Answer) =>
-    hasOptions ? `Alternativa ${answer}` : answerLabel(answer, question.board);
+    hasOptions ? `Alternativa ${answer}` : questionAnswerLabel(answer, question);
 
   return (
     <div className="space-y-4">
@@ -456,10 +457,10 @@ function QuestionPlayer({
             className={cn(
               "mt-3 grid gap-2",
               hasOptions && "hidden",
-              boardAnswers(question.board).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
+              questionAnswers(question).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
             )}
           >
-            {(hasOptions ? [] : boardAnswers(question.board)).map((answer) => (
+            {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
               <button
                 key={answer}
                 type="button"
@@ -495,7 +496,12 @@ function QuestionPlayer({
             ))}
           </div>
           <div className="mt-6 flex justify-end">
-            <Button size="lg" disabled={!selected || answered} onClick={onSubmit} className="min-w-44">
+            <Button
+              size="lg"
+              disabled={!selected || answered}
+              onClick={onSubmit}
+              className="min-w-44"
+            >
               Confirmar resposta <Check className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -512,7 +518,9 @@ function QuestionPlayer({
             >
               {isCorrect ? <CheckCircle2 /> : <X />}
             </div>
-            <DialogTitle>{isCorrect ? "Resposta correta" : "Vamos corrigir este ponto"}</DialogTitle>
+            <DialogTitle>
+              {isCorrect ? "Resposta correta" : "Vamos corrigir este ponto"}
+            </DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
             {!isCorrect && (
