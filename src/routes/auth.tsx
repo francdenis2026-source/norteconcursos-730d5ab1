@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
+  AlertCircle,
   ArrowLeft,
   ArrowRight,
   Eye,
@@ -17,10 +18,25 @@ import {
   Target,
   Trophy,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
+
+function friendlyAuthError(error: unknown) {
+  const raw = error instanceof Error ? error.message : "";
+  if (/invalid login credentials/i.test(raw))
+    return "CPF ou senha incorretos. Confira os dados e tente novamente.";
+  if (/already registered|already been registered/i.test(raw))
+    return "Já existe uma conta com este CPF. Use a aba Entrar.";
+  if (/password should be at least|weak/i.test(raw))
+    return "Escolha uma senha mais forte, com pelo menos 6 caracteres.";
+  if (/rate limit|too many/i.test(raw))
+    return "Muitas tentativas seguidas. Aguarde um instante e tente de novo.";
+  if (/failed to fetch|network/i.test(raw))
+    return "Sem conexão com o servidor. Verifique sua internet e tente de novo.";
+  return raw || "Não foi possível autenticar. Tente novamente.";
+}
 
 export const Route = createFileRoute("/auth")({
   validateSearch: (search: Record<string, unknown>): { mode?: "register" | undefined } => ({
@@ -42,7 +58,17 @@ function AuthPage() {
   const [cpf, setCpf] = useState("");
   const [showPin, setShowPin] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
+  const errorRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (formError) errorRef.current?.focus();
+  }, [formError]);
+
+  useEffect(() => {
+    setFormError(null);
+  }, [mode]);
 
   const normalizeCpf = (value: string) => value.replace(/\D/g, "").slice(0, 11);
   const formatCpf = (value: string) => {
@@ -55,6 +81,7 @@ function AuthPage() {
 
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
+    setFormError(null);
     setIsLoading(true);
     try {
       if (mode === "register") {
@@ -79,7 +106,7 @@ function AuthPage() {
         navigate({ to: "/dashboard" });
       }
     } catch (error: unknown) {
-      toast.error(error instanceof Error ? error.message : "Não foi possível autenticar");
+      setFormError(friendlyAuthError(error));
     } finally {
       setIsLoading(false);
     }
@@ -198,6 +225,7 @@ function AuthPage() {
                   id="cpf"
                   inputMode="numeric"
                   autoComplete="username"
+                  {...(formError ? { "aria-invalid": true, "aria-describedby": "auth-error" } : {})}
                   placeholder="000.000.000-00"
                   value={cpf}
                   onChange={(e) => setCpf(formatCpf(e.target.value))}
@@ -226,6 +254,7 @@ function AuthPage() {
                   id="pin"
                   type={showPin ? "text" : "password"}
                   autoComplete={mode === "login" ? "current-password" : "new-password"}
+                  {...(formError ? { "aria-invalid": true, "aria-describedby": "auth-error" } : {})}
                   placeholder="Digite sua senha"
                   value={pin}
                   onChange={(e) => setPin(e.target.value)}
@@ -250,6 +279,12 @@ function AuthPage() {
                   <Link to="/privacy">política de privacidade</Link>.
                 </span>
               </label>
+            )}
+            {formError && (
+              <div ref={errorRef} id="auth-error" role="alert" tabIndex={-1} className="auth-error">
+                <AlertCircle />
+                <span>{formError}</span>
+              </div>
             )}
             <button type="submit" className="btn-brass auth-submit" disabled={isLoading}>
               {isLoading ? (
