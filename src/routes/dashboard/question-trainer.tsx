@@ -220,8 +220,19 @@ function QuestionTrainer() {
   const userId = user?.id;
   const isGuest = !authLoading && (!user || userId === "demo-user");
   const [guestRemaining, setGuestRemaining] = React.useState(GUEST_DAILY_LIMIT);
+  const [guestQuotaReady, setGuestQuotaReady] = React.useState(false);
   React.useEffect(() => {
-    if (isGuest) setGuestRemaining(getGuestRemainingToday());
+    if (!isGuest) return;
+    let active = true;
+    void getGuestRemainingToday().then((remaining) => {
+      if (active) {
+        setGuestRemaining(remaining);
+        setGuestQuotaReady(true);
+      }
+    });
+    return () => {
+      active = false;
+    };
   }, [isGuest]);
   const [catalog, setCatalog] = React.useState<Question[]>([]);
   const [hidden, setHidden] = React.useState(0);
@@ -266,6 +277,44 @@ function QuestionTrainer() {
     let active = true;
     void (async () => {
       try {
+        if (isGuest) {
+          // Visitante: as MESMAS 10 questões do dia pra todo mundo, calculadas
+          // pelo relógio do servidor no fuso do Acre (public.get_daily_guest_questions) —
+          // nunca uma seleção aleatória feita no navegador de cada um.
+          const { data, error: guestError } = await supabase
+            .rpc("get_daily_guest_questions", { p_limit: 10 })
+            .select(
+              "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,difficulty,state,career_category",
+            );
+          if (guestError) throw guestError;
+          const guestCatalog: Question[] = ((data || []) as Array<Record<string, unknown>>).map(
+            (row) => ({
+              id: String(row.id),
+              source: "official" as const,
+              contest: String(row.contest_name),
+              year: String(row.exam_year),
+              career: String(row.career_name || "Carreira policial"),
+              board: String(row.exam_board || "CEBRASPE"),
+              subject: String(row.subject),
+              subtopic: null,
+              text: String(row.question_text),
+              answer: String(row.official_answer) as Answer,
+              explanation: String(
+                row.review_note || "Item conferido com o gabarito definitivo da prova oficial.",
+              ),
+              legalBasis: parseBasis(row.legal_basis),
+              checkedAt: null,
+              difficulty: normalizeDifficulty(row.difficulty),
+              state: String(row.state || ""),
+              category: String(row.career_category || ""),
+            }),
+          );
+          if (active) {
+            setCatalog(guestCatalog);
+            setHidden(0);
+          }
+          return;
+        }
         // Se a migration de verificação legal ainda não foi aplicada, as colunas novas não existem:
         // repetimos a consulta sem elas e seguimos sem o filtro de vigência (avisando na tela).
         const query = async (
@@ -286,15 +335,13 @@ function QuestionTrainer() {
             "law_version_checked_at,legal_review_required,legal_audit_completed,difficulty",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
           ),
-          isGuest
-            ? Promise.resolve({ data: [], error: null, gated: true })
-            : query(
-                "curated_question_catalog",
-                "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
-                "law_version_checked_at",
-                (builder) => builder.eq("content_status", "active"),
-              ),
-          isGuest || !userId
+          query(
+            "curated_question_catalog",
+            "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
+            "law_version_checked_at",
+            (builder) => builder.eq("content_status", "active"),
+          ),
+          !userId
             ? Promise.resolve({ data: [], error: null, gated: true })
             : query(
                 "question_bank",
@@ -524,7 +571,9 @@ function QuestionTrainer() {
     ],
   );
   const startTraining = () => {
-    const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
+    // Visitante: ordem fixa (a mesma pra todo mundo naquele dia) — só quem
+    // já tem conta pode embaralhar a própria sessão de treino.
+    const ordered = !isGuest && orderMode === "random" ? shuffled(pool) : [...pool];
     const sessionSize = isGuest ? Math.min(Number(limit), guestRemaining) : Number(limit);
     setQuestions(ordered.slice(0, sessionSize));
     setIndex(0);
@@ -537,6 +586,14 @@ function QuestionTrainer() {
     setStartedAt(Date.now());
     setStarted(true);
   };
+  // Visitante: pula a tela de filtros e começa direto no desafio diário
+  // (as mesmas 10 questões do dia pra todo mundo, sem escolha de filtro).
+  React.useEffect(() => {
+    if (isGuest && guestQuotaReady && !loading && !started && guestRemaining > 0 && pool.length) {
+      startTraining();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isGuest, guestQuotaReady, loading, started, guestRemaining, pool.length]);
   const selectAppliedExam = (value: string) => {
     setAppliedExam(value);
     if (value === "all") return;
@@ -557,7 +614,7 @@ function QuestionTrainer() {
     else setWrong((value) => value + 1);
     setModal("result");
     if (isGuest) {
-      setGuestRemaining(Math.max(0, GUEST_DAILY_LIMIT - registerGuestAnswer()));
+      setGuestRemaining(Math.max(0, GUEST_DAILY_LIMIT - (await registerGuestAnswer())));
     } else if (user.id !== "demo-user") {
       await supabase.from("question_training_responses").insert({
         user_id: user.id,
@@ -641,19 +698,18 @@ function QuestionTrainer() {
         </Button>
       </Center>
     );
+  if (isGuest && !started)
+    // Visitante nunca vê a tela de filtros: o efeito acima já dispara o
+    // início automático assim que o desafio diário estiver pronto.
+    return (
+      <Center>
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        <p>Preparando o desafio diário…</p>
+      </Center>
+    );
   if (!started)
     return (
       <div className="space-y-4">
-        {isGuest && (
-          <div className="mx-auto max-w-4xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
-            <span className="font-bold">Modo visitante:</span> você tem {guestRemaining} de{" "}
-            {GUEST_DAILY_LIMIT} questões grátis hoje, só do acervo de provas oficiais.{" "}
-            <Link to="/auth" search={{ mode: "register" }} className="font-bold underline">
-              Crie sua conta grátis
-            </Link>{" "}
-            para treinar sem limite e desbloquear as questões autorais.
-          </div>
-        )}
         {hidden > 0 && (
           <div className="mx-auto max-w-4xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
             {hidden} questão(ões) de legislação estão ocultas até a vigência ser conferida no
@@ -708,7 +764,13 @@ function QuestionTrainer() {
     );
   if (!question)
     return (
-      <TrainingResult total={questions.length} correct={correct} wrong={wrong} restart={restart} />
+      <TrainingResult
+        total={questions.length}
+        correct={correct}
+        wrong={wrong}
+        restart={restart}
+        isGuest={isGuest}
+      />
     );
 
   const isCorrect = selected === question.answer;
@@ -734,14 +796,26 @@ function QuestionTrainer() {
   return (
     <div className="trainer-session-shell mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
       <header className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
-        <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
-          <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
-        </Button>
-        <div className="flex items-center gap-2">
+        {isGuest ? (
           <Badge variant="secondary">
-            <Flame className="mr-1 h-3.5 w-3.5 text-orange-500" /> Treinador
+            <Sparkles className="mr-1 h-3.5 w-3.5 text-amber-500" /> Desafio do dia
           </Badge>
-          <Badge variant="outline">Não afeta ranking</Badge>
+        ) : (
+          <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
+            <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
+          </Button>
+        )}
+        <div className="flex items-center gap-2">
+          {isGuest ? (
+            <Badge variant="outline">{guestRemaining} restantes hoje</Badge>
+          ) : (
+            <>
+              <Badge variant="secondary">
+                <Flame className="mr-1 h-3.5 w-3.5 text-orange-500" /> Treinador
+              </Badge>
+              <Badge variant="outline">Não afeta ranking</Badge>
+            </>
+          )}
         </div>
       </header>
       <div className="session-status-bar rounded-lg border bg-card px-3 py-2 shadow-sm sm:rounded-xl sm:px-4 sm:py-3">
@@ -1357,11 +1431,13 @@ function TrainingResult({
   correct,
   wrong,
   restart,
+  isGuest,
 }: {
   total: number;
   correct: number;
   wrong: number;
   restart: () => void;
+  isGuest: boolean;
 }) {
   const accuracy = total ? Math.round((correct / total) * 100) : 0;
   return (
@@ -1382,14 +1458,33 @@ function TrainingResult({
             </p>
           </div>
           <Progress value={accuracy} />
-          <div className="flex flex-col gap-2 sm:flex-row">
-            <Button className="flex-1" onClick={restart}>
-              <RotateCcw className="mr-2 h-4 w-4" /> Treinar novamente
-            </Button>
-            <Button asChild variant="outline" className="flex-1">
-              <Link to="/dashboard/question-bank">Nova seleção</Link>
-            </Button>
-          </div>
+          {isGuest ? (
+            <div className="space-y-3">
+              <p className="text-sm text-muted-foreground">
+                Foi seu desafio diário grátis. Crie uma conta pra treinar sem limite e desbloquear
+                o acervo autoral completo.
+              </p>
+              <div className="flex flex-col gap-2 sm:flex-row">
+                <Button className="flex-1" asChild>
+                  <Link to="/auth" search={{ mode: "register" }}>
+                    Criar conta grátis
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" className="flex-1">
+                  <Link to="/auth">Já tenho conta</Link>
+                </Button>
+              </div>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-2 sm:flex-row">
+              <Button className="flex-1" onClick={restart}>
+                <RotateCcw className="mr-2 h-4 w-4" /> Treinar novamente
+              </Button>
+              <Button asChild variant="outline" className="flex-1">
+                <Link to="/dashboard/question-bank">Nova seleção</Link>
+              </Button>
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>
