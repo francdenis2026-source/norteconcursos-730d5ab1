@@ -1292,6 +1292,9 @@ html {
 .lp-pin:nth-child(3) i::after {
   animation-delay: 1.6s;
 }
+.lp-pin:nth-child(4) i::after {
+  animation-delay: 2.2s;
+}
 @keyframes pin-ping {
   0% {
     opacity: 0.9;

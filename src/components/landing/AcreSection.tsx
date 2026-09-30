@@ -82,6 +82,7 @@ const PINS = [
   { name: "Cruzeiro do Sul", left: 18.3, top: 13.8 },
   { name: "Feijó", left: 49.4, top: 26.8 },
   { name: "Sena Madureira", left: 72, top: 48.6 },
+  { name: "Rio Branco", left: 83.4, top: 70.3 },
 ];
 
 const delay = (n: number) => ({ "--reveal-delay": n }) as CSSProperties;
