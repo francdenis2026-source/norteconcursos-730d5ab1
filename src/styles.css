@@ -2530,13 +2530,6 @@ html {
   .lp-footer__brand {
     grid-column: 1 / -1;
   }
-  .lp-pcac__map {
-    left: auto;
-    right: 4%;
-    top: 6%;
-    width: 42vw;
-    opacity: 0.5;
-  }
 }
 @media (max-width: 640px) {
   .lp-header .btn-brass {
@@ -2827,9 +2820,6 @@ html {
   transition:
     border-color 0.2s,
     box-shadow 0.2s;
-}
-.auth-field input.no-icon {
-  padding-left: 14px;
 }
 .auth-field input:focus-visible {
   border-color: var(--ring);
@@ -3518,7 +3508,6 @@ html {
    ========================================================================== */
 
 .page-hero,
-.dashboard-command-hero,
 .tactical-feature-hero,
 .catalog-command-hero {
   --hero-image: url("/media/hero/dashboard.webp");
@@ -3533,7 +3522,6 @@ html {
   box-shadow: var(--shadow-hero);
 }
 .page-hero::before,
-.dashboard-command-hero::before,
 .tactical-feature-hero::before,
 .catalog-command-hero::before {
   position: absolute;
@@ -3545,7 +3533,6 @@ html {
     linear-gradient(0deg, oklch(0.12 0.028 263 / 0.55), transparent 50%);
 }
 .page-hero::after,
-.dashboard-command-hero::after,
 .tactical-feature-hero::after,
 .catalog-command-hero::after {
   position: absolute;
@@ -3582,7 +3569,6 @@ html {
   max-width: 720px;
 }
 .page-hero h1,
-.dashboard-command-hero h1,
 .tactical-feature-hero h1,
 .catalog-command-hero h1 {
   margin-top: 14px;
@@ -3598,7 +3584,6 @@ html {
   font-style: normal;
 }
 .page-hero__desc,
-.dashboard-command-hero > div > p,
 .catalog-command-hero > p {
   max-width: 600px;
   margin-top: 12px;
@@ -3705,8 +3690,7 @@ html {
 .hero-primary-action:hover {
   filter: brightness(1.05);
 }
-.hero-btn-ghost,
-.hero-outline-action {
+.hero-btn-ghost {
   height: 40px !important;
   border: 1px solid oklch(1 0 0 / 0.2) !important;
   border-radius: 10px !important;
@@ -3715,14 +3699,12 @@ html {
   font-weight: 600 !important;
   backdrop-filter: blur(10px);
 }
-.hero-btn-ghost:hover,
-.hero-outline-action:hover {
+.hero-btn-ghost:hover {
   background: oklch(1 0 0 / 0.14) !important;
 }
 
 /* Hero image per area */
-[data-hero="dashboard"],
-.dashboard-command-hero {
+[data-hero="dashboard"] {
   --hero-image: url("/media/hero/dashboard.webp");
 }
 [data-hero="journey"] {
@@ -3764,15 +3746,6 @@ html {
     linear-gradient(270deg, oklch(0.12 0.028 263 / 0.97) 0%, oklch(0.12 0.028 263 / 0.85) 45%, oklch(0.12 0.028 263 / 0.35)),
     linear-gradient(0deg, oklch(0.12 0.028 263 / 0.6), transparent 50%);
 }
-
-.dashboard-command-hero {
-  display: flex;
-  min-height: 260px;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-}
 .question-trainer-hero {
   min-height: 280px;
 }
@@ -3797,65 +3770,9 @@ html {
 }
 
 .command-panel,
-.command-metric,
 .question-window,
 .exam-question-window {
   border-radius: 18px !important;
-}
-
-.surface-card {
-  border: 1px solid var(--color-border);
-  border-radius: 18px;
-  background: var(--color-card);
-  box-shadow: var(--shadow-card);
-}
-
-.command-metric,
-.metric-tile {
-  position: relative;
-  overflow: hidden;
-}
-.command-metric::after,
-.metric-tile::after {
-  position: absolute;
-  top: 0;
-  right: 18px;
-  left: 18px;
-  height: 2px;
-  border-radius: 0 0 2px 2px;
-  content: "";
-  background: linear-gradient(90deg, var(--brass), transparent);
-  opacity: 0.8;
-}
-
-.metric-tile {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding: 20px;
-  border: 1px solid var(--color-border);
-  border-radius: 18px;
-  background: var(--color-card);
-  box-shadow: var(--shadow-card);
-  transition:
-    transform 0.3s var(--ease-out),
-    box-shadow 0.3s var(--ease-out);
-}
-.metric-tile:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lift);
-}
-.metric-tile__head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  color: var(--color-muted-foreground);
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 .metric-tile__icon {
   display: grid;
@@ -3872,34 +3789,6 @@ html {
 .metric-tile__icon svg {
   width: 16px;
   height: 16px;
-}
-.metric-tile__value {
-  overflow: hidden;
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-stretch: 80%;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.01em;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.metric-tile__desc {
-  color: var(--color-muted-foreground);
-  font-size: 0.8125rem;
-}
-.metric-tile__bar {
-  height: 4px;
-  overflow: hidden;
-  border-radius: 4px;
-  background: var(--color-muted);
-}
-.metric-tile__bar i {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--color-emerald-500);
-  transition: width 0.6s var(--ease-out);
 }
 
 .quick-actions {
@@ -4382,23 +4271,20 @@ html {
 }
 @media (max-width: 767px) {
   .page-hero,
-  .dashboard-command-hero,
-  .tactical-feature-hero,
-  .catalog-command-hero {
+.tactical-feature-hero,
+.catalog-command-hero {
     border-radius: 16px;
     padding: 20px;
   }
   .page-hero::before,
-  .dashboard-command-hero::before,
-  .tactical-feature-hero::before,
-  .catalog-command-hero::before {
+.tactical-feature-hero::before,
+.catalog-command-hero::before {
     background:
       linear-gradient(0deg, oklch(0.12 0.028 263 / 0.97) 20%, oklch(0.12 0.028 263 / 0.7) 70%, oklch(0.12 0.028 263 / 0.45));
   }
   .page-hero h1,
-  .dashboard-command-hero h1,
-  .tactical-feature-hero h1,
-  .catalog-command-hero h1 {
+.tactical-feature-hero h1,
+.catalog-command-hero h1 {
     font-size: 1.9rem !important;
   }
   .page-hero__desc {
@@ -4416,12 +4302,6 @@ html {
   .quick-action > svg:last-child,
   .quick-action small {
     display: none;
-  }
-  .metric-tile {
-    padding: 16px;
-  }
-  .metric-tile__value {
-    font-size: 1.5rem;
   }
   .question-trainer-hero p {
     display: -webkit-box;
@@ -4457,16 +4337,13 @@ html {
 
 @media print {
   .page-hero,
-  .dashboard-command-hero,
-  .tactical-feature-hero {
+.tactical-feature-hero {
     color: black;
     background: none;
     box-shadow: none;
   }
   .page-hero::before,
-  .page-hero::after,
-  .dashboard-command-hero::before,
-  .dashboard-command-hero::after {
+.page-hero::after {
     display: none;
   }
 }
