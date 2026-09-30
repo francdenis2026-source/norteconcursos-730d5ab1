@@ -32,8 +32,7 @@ function deviceDateFallback(): string {
 export async function getAcreDateKey(): Promise<string> {
   if (cachedAcreDate) return cachedAcreDate;
   if (!acreDatePromise) {
-    acreDatePromise = supabase
-      .rpc("get_current_acre_date")
+    acreDatePromise = Promise.resolve(supabase.rpc("get_current_acre_date"))
       .then(({ data, error }) => {
         if (error || !data) throw error ?? new Error("sem data do servidor");
         cachedAcreDate = String(data);
@@ -45,7 +44,7 @@ export async function getAcreDateKey(): Promise<string> {
         return fallback;
       });
   }
-  return acreDatePromise;
+  return acreDatePromise!;
 }
 
 async function storageKey(): Promise<string> {

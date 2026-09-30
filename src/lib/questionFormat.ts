@@ -24,6 +24,7 @@ export type Question = {
   difficulty: Difficulty;
   state: string;
   category: string;
+  kind?: "true_false" | "multiple_choice";
 };
 
 export const normalizeDifficulty = (value: unknown): Difficulty => {
@@ -72,8 +73,26 @@ export const isOfficialUrl = (url?: string) => {
 };
 // Questão com base legal só entra no treino se a vigência foi conferida na fonte oficial
 // (data registrada + link oficial). Assim nenhuma resposta desatualizada é exibida.
-export const isLegallyVerified = (basis: LegalBasis[], checkedAt: unknown) =>
-  basis.length === 0 || (Boolean(checkedAt) && basis.some((item) => isOfficialUrl(item.url)));
+export const isLegalSubject = (subject: string) => /direito|legisla/i.test(subject);
+export const isLegallyVerified = (basis: LegalBasis[], checkedAt: unknown, required = false) => {
+  if (!basis.length) return !required;
+  const date = typeof checkedAt === "string" ? Date.parse(checkedAt) : NaN;
+  return (
+    Number.isFinite(date) &&
+    date <= Date.now() &&
+    basis.every((item) => isOfficialUrl(item.url) && /^https?:\/\//i.test(item.url ?? ""))
+  );
+};
+export const isEligibleQuestion = (row: Record<string, unknown>) =>
+  row["content_status"] === "active" &&
+  row["official_answer"] !== "X" &&
+  !row["context_review_required"] &&
+  !(row["legal_review_required"] && !row["legal_audit_completed"]) &&
+  isLegallyVerified(
+    parseBasis(row["legal_basis"]),
+    row["law_version_checked_at"],
+    isLegalSubject(String(row["subject"] ?? "")),
+  );
 // Explicações podem trazer um trecho "Exemplo: …" — mostramos separado, em destaque.
 export function splitExplanation(text: string) {
   const match = text.match(/\n?\s*Exemplo(?: pr[aá]tico)?:\s*([\s\S]*)$/i);
@@ -94,7 +113,25 @@ export const isPlaceholderExplanation = (text: string) => PLACEHOLDER_NOTE.test(
 // preenchido) — a mesma checagem que o treinador já faz pra decidir o que entra no treino.
 export const hasReviewedExplanation = (question: Question) =>
   /Exemplo(?: pr[aá]tico)?:/i.test(question.explanation) &&
-  (question.legalBasis.length === 0 || Boolean(question.checkedAt));
+  isLegallyVerified(question.legalBasis, question.checkedAt, isLegalSubject(question.subject));
+export const questionAnswers = (question: Question): Answer[] => {
+  const options = parseQuestion(question.text).options;
+  if (options.length) return options.map((option) => option.letter);
+  if (
+    question.kind === "true_false" ||
+    (question.kind !== "multiple_choice" &&
+      (question.source === "curated" ||
+        /julgue|certo ou errado|CEBRASPE|CESPE/i.test(question.text + " " + question.board)))
+  )
+    return ["C", "E"];
+  return boardAnswers(question.board);
+};
+export const questionAnswerLabel = (answer: Answer, question: Question) =>
+  questionAnswers(question).join("") === "CE"
+    ? answer === "C"
+      ? "Certo"
+      : "Errado"
+    : `Alternativa ${answer}`;
 export const boardAnswers = (board: string): Answer[] =>
   /CEBRASPE|CESPE/i.test(board)
     ? ["C", "E"]
@@ -109,7 +146,7 @@ export function shuffled<T>(items: T[]) {
   const result = [...items];
   for (let index = result.length - 1; index > 0; index -= 1) {
     const swapIndex = Math.floor(Math.random() * (index + 1));
-    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
+    [result[index], result[swapIndex]] = [result[swapIndex]!, result[index]!];
   }
   return result;
 }
@@ -136,11 +173,11 @@ export function parseQuestion(raw: string): ParsedQuestion {
   text = text.replace(/^Item:\s*/, "");
 
   const lines = text.split("\n");
-  const firstOption = lines.findIndex((line) => /^\(A\)\s?/.test(line));
-  if (firstOption >= 0) {
+  const firstOption = lines.findIndex((line) => /^\s*\(A\)\s?/.test(line));
+  if (firstOption >= 0 && !/\([B-E]\)/.test(lines[firstOption] ?? "")) {
     const options: { letter: Answer; text: string }[] = [];
     for (const line of lines.slice(firstOption)) {
-      const match = line.match(/^\(([A-E])\)\s?(.*)$/);
+      const match = line.match(/^\s*\(([A-E])\)\s?(.*)$/);
       const last = options[options.length - 1];
       if (match)
         options.push({ letter: (match[1] ?? "A") as Answer, text: (match[2] ?? "").trim() });
@@ -150,19 +187,19 @@ export function parseQuestion(raw: string): ParsedQuestion {
   }
 
   // Formato antigo: alternativas na mesma linha ("… A) texto; B) texto; C) …").
+  const matches = [...text.matchAll(/(?:^|[\s:;.])(\(?([A-E])\))\s+/g)];
   const marks: number[] = [];
-  let cursor = 0;
-  for (const letter of "ABCDE") {
-    const at = text.indexOf(`${letter}) `, cursor);
-    if (at < 0 || (at > 0 && !/[\s:;.]/.test(text.charAt(at - 1)))) break;
-    marks.push(at);
-    cursor = at + 3;
+  const ends: number[] = [];
+  for (const match of matches) {
+    if (match[2] !== "ABCDE"[marks.length]) continue;
+    marks.push(match.index + match[0].indexOf(match[1]!));
+    ends.push(match.index + match[0].length);
   }
   if (marks.length >= 4) {
     const options = marks.map((start, i) => ({
       letter: "ABCDE".charAt(i) as Answer,
       text: text
-        .slice(start + 3, marks[i + 1] ?? text.length)
+        .slice(ends[i], marks[i + 1] ?? text.length)
         .replace(/[;\s]+$/, "")
         .trim(),
     }));

@@ -1,4 +1,5 @@
 import React from "react";
+import { isEligibleQuestion } from "@/lib/questionFormat";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BookOpenText, ChevronRight, Loader2, MapPin, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -77,7 +78,7 @@ function EditalPage() {
       list.push(e);
       map.set(examKey(e), list);
     }
-    return Array.from(map.values()).map((list) => list[0]);
+    return Array.from(map.values()).map((list) => list[0]!);
   }, [editions]);
 
   const currentEdition = React.useMemo(
@@ -102,7 +103,9 @@ function EditalPage() {
           .order("topic_order"),
         supabase
           .from("curated_question_catalog")
-          .select("syllabus_topic_id")
+          .select(
+            "syllabus_topic_id,subject,content_status,official_answer,legal_basis,law_version_checked_at",
+          )
           .eq("content_status", "active"),
       ]);
       if (!active) return;
@@ -112,8 +115,11 @@ function EditalPage() {
         return;
       }
       const counts = new Map<string, number>();
-      for (const row of (countsResult.data || []) as Array<{ syllabus_topic_id: string }>) {
-        counts.set(row.syllabus_topic_id, (counts.get(row.syllabus_topic_id) || 0) + 1);
+      for (const row of ((countsResult.data || []) as Array<Record<string, unknown>>).filter(
+        isEligibleQuestion,
+      )) {
+        const id = String(row["syllabus_topic_id"]);
+        counts.set(id, (counts.get(id) || 0) + 1);
       }
       setTopics(
         ((topicsResult.data || []) as Array<Omit<Topic, "count">>).map((t) => ({
@@ -145,7 +151,9 @@ function EditalPage() {
       </div>
     );
   if (!user || user.id === "demo-user")
-    return <p className="text-muted-foreground">Entre na sua conta para ver o edital eletrônico.</p>;
+    return (
+      <p className="text-muted-foreground">Entre na sua conta para ver o edital eletrônico.</p>
+    );
   if (error) return <p className="text-destructive">{error}</p>;
 
   return (

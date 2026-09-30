@@ -178,19 +178,19 @@ const normalize = (value: string) =>
     .toLowerCase();
 function readMetrics(data: Record<string, unknown> | null) {
   const result: Record<string, Metric> = {};
-  const raw = data?.by_subject;
+  const raw = data?.["by_subject"];
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) return result;
   for (const [subject, value] of Object.entries(raw as Record<string, unknown>)) {
     if (!value || typeof value !== "object" || Array.isArray(value)) continue;
     const item = value as Record<string, unknown>;
-    const correct = Number(item.correct ?? item.corretas ?? 0),
-      wrong = Number(item.wrong ?? item.erradas ?? 0),
-      blank = Number(item.blank ?? item.branco ?? item.em_branco ?? 0);
+    const correct = Number(item["correct"] ?? item["corretas"] ?? 0),
+      wrong = Number(item["wrong"] ?? item["erradas"] ?? 0),
+      blank = Number(item["blank"] ?? item["branco"] ?? item["em_branco"] ?? 0);
     result[normalize(subject)] = {
       correct,
       wrong,
       blank,
-      total: Number(item.total ?? correct + wrong + blank),
+      total: Number(item["total"] ?? correct + wrong + blank),
     };
   }
   return result;
@@ -316,7 +316,7 @@ function StudyPlanPage() {
   const pfScores = attempts
     .filter((row) => careerMatch(String(row.contest_name || ""), "PF") && row.score_net !== null)
     .map((row) => Number(row.score_net));
-  const evolution = pfScores.length >= 2 ? pfScores.at(-1)! - pfScores[0] : null;
+  const evolution = pfScores.length >= 2 ? pfScores.at(-1)! - pfScores[0]! : null;
   const questionGoal = Math.max(180, Math.round(weeklyHours * 18));
   const savePlan = () => {
     localStorage.setItem("norte_study_career", career);

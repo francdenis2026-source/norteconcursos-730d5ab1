@@ -28,7 +28,7 @@ import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/student-exams")({
   validateSearch: (search: Record<string, unknown>) => ({
-    career: typeof search.career === "string" ? search.career : undefined,
+    career: typeof search["career"] === "string" ? search["career"] : undefined,
   }),
   component: StudentExamIntelligence,
   errorComponent: ExamRouteError,
@@ -156,42 +156,42 @@ function StudentExamIntelligence() {
 
         const referenceMap = new Map<string, QuestionReference>();
         for (const raw of (officialResult.data || []) as Array<Record<string, unknown>>) {
-          const contest = String(raw.contest_name || "Concurso");
-          const year = String(raw.exam_year || "");
-          const item = Number(raw.item_number || 0);
+          const contest = String(raw["contest_name"] || "Concurso");
+          const year = String(raw["exam_year"] || "");
+          const item = Number(raw["item_number"] || 0);
           referenceMap.set(questionKey(contest, year, item), {
             key: questionKey(contest, year, item),
             contest,
             year,
             item,
-            subject: String(raw.subject || "Disciplina não classificada"),
+            subject: String(raw["subject"] || "Disciplina não classificada"),
             subtopic: null,
-            text: String(raw.question_text || "Enunciado indisponível"),
-            answer: raw.official_answer ? String(raw.official_answer) : null,
+            text: String(raw["question_text"] || "Enunciado indisponível"),
+            answer: raw["official_answer"] ? String(raw["official_answer"]) : null,
             explanation: String(
-              raw.review_note ||
+              raw["review_note"] ||
                 "Gabarito confirmado na fonte oficial. A explicação pedagógica detalhada ainda está em revisão editorial.",
             ),
-            legalBasis: Array.isArray(raw.legal_basis) ? raw.legal_basis : [],
+            legalBasis: Array.isArray(raw["legal_basis"]) ? raw["legal_basis"] : [],
           });
         }
         for (const raw of (personalResult.data || []) as Array<Record<string, unknown>>) {
-          const status = String(raw.content_status || "active");
+          const status = String(raw["content_status"] || "active");
           if (["obsolete", "revoked", "archived"].includes(status)) continue;
-          const contest = String(raw.contest_name || "Concurso");
-          const year = String(raw.contest_year || "");
-          const item = Number(raw.item_number || 0);
+          const contest = String(raw["contest_name"] || "Concurso");
+          const year = String(raw["contest_year"] || "");
+          const item = Number(raw["item_number"] || 0);
           referenceMap.set(questionKey(contest, year, item), {
             key: questionKey(contest, year, item),
             contest,
             year,
             item,
-            subject: String(raw.subject || "Disciplina não classificada"),
-            subtopic: raw.subtopic ? String(raw.subtopic) : null,
-            text: String(raw.question_text || "Enunciado indisponível"),
-            answer: raw.official_answer ? String(raw.official_answer) : null,
-            explanation: String(raw.explanation || "Explicação em revisão editorial."),
-            legalBasis: Array.isArray(raw.legal_basis) ? raw.legal_basis : [],
+            subject: String(raw["subject"] || "Disciplina não classificada"),
+            subtopic: raw["subtopic"] ? String(raw["subtopic"]) : null,
+            text: String(raw["question_text"] || "Enunciado indisponível"),
+            answer: raw["official_answer"] ? String(raw["official_answer"]) : null,
+            explanation: String(raw["explanation"] || "Explicação em revisão editorial."),
+            legalBasis: Array.isArray(raw["legal_basis"]) ? raw["legal_basis"] : [],
           });
         }
 
@@ -219,8 +219,8 @@ function StudentExamIntelligence() {
   const groups = React.useMemo(() => {
     const grouped = new Map<string, ExamGroup>();
     for (const row of rows) {
-      const contest = String(row.contest_name || "Concurso");
-      const year = String(row.contest_year || "—");
+      const contest = String(row["contest_name"] || "Concurso");
+      const year = String(row["contest_year"] || "—");
       const key = `${contest}__${year}`;
       const current = grouped.get(key) || {
         key,
@@ -348,7 +348,7 @@ function StudentExamIntelligence() {
     setPageUrls((current) => {
       const next = { ...current };
       missing.forEach((page, index) => {
-        const url = signed[index].data?.signedUrl;
+        const url = signed[index]?.data?.signedUrl;
         if (url) next[page.id] = url;
       });
       return next;
@@ -490,7 +490,7 @@ function Timeline({ groups }: { groups: ExamGroup[] }) {
         <div className="flex min-w-max items-start gap-0">
           {groups.map((group, index) => {
             const accuracy = examAccuracy(group);
-            const previous = index ? examAccuracy(groups[index - 1]) : null;
+            const previous = index ? examAccuracy(groups[index - 1]!) : null;
             const delta = previous === null ? null : accuracy - previous;
             return (
               <div key={group.key} className="relative w-44 px-3 text-center">
@@ -548,10 +548,10 @@ function DisciplineAnalysis({ metrics }: { metrics: SubjectMetric[] }) {
       <CardContent className="space-y-4">
         {ranked.length ? (
           ranked.map((item) => (
-            <div key={item.subject}>
+            <div key={item["subject"]}>
               <div className="mb-1.5 flex items-center justify-between gap-3 text-xs">
-                <span className="truncate font-bold" title={item.subject}>
-                  {item.subject}
+                <span className="truncate font-bold" title={item["subject"]}>
+                  {item["subject"]}
                 </span>
                 <span
                   className={cn(
@@ -602,8 +602,8 @@ function ActionPlan({
   wrong,
   blank,
 }: {
-  weakest?: SubjectMetric;
-  strongest?: SubjectMetric;
+  weakest?: SubjectMetric | undefined;
+  strongest?: SubjectMetric | undefined;
   omissionRate: number;
   wrong: number;
   blank: number;
