@@ -211,7 +211,10 @@ function Index() {
                   <CirclePlay /> Explorar o centro de treino
                 </a>
               </div>
-              <Link to="/dashboard/question-trainer" className="daily-trial-banner reveal-up delay-3">
+              <Link
+                to="/dashboard/question-trainer"
+                className="daily-trial-banner reveal-up delay-3"
+              >
                 <span className="daily-trial-pulse" aria-hidden="true" />
                 <Zap className="h-4 w-4 shrink-0" />
                 <span>
@@ -280,6 +283,9 @@ function Index() {
 
         <section className="pcac-campaign" aria-labelledby="pcac-campaign-title">
           <div className="pcac-campaign-backdrop" aria-hidden="true" />
+          <div className="pcac-acre-map" aria-hidden="true">
+            <div className="pcac-acre-map-texture" />
+          </div>
           <div className="site-container pcac-campaign-layout">
             <div className="pcac-campaign-content">
               <div className="pcac-campaign-emblems" aria-label="Identidade institucional do Acre">
