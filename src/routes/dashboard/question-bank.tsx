@@ -21,6 +21,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
 import { LockedState } from "@/components/dashboard/PageHero";
+import { QuestionTotals } from "@/components/dashboard/QuestionTotals";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -201,6 +202,7 @@ function QuestionBankPage() {
           <Metric icon={Layers3} value={options.subjects.length} label="disciplinas" />
         </div>
       </section>
+      <QuestionTotals enabled />
       <div className="grid gap-6 xl:grid-cols-[1.1fr_.9fr]">
         <Card className="border-0 shadow-lg ring-1 ring-border/70">
           <CardHeader>
