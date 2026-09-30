@@ -211,6 +211,14 @@ function Index() {
                   <CirclePlay /> Explorar o centro de treino
                 </a>
               </div>
+              <Link to="/dashboard/question-trainer" className="daily-trial-banner reveal-up delay-3">
+                <span className="daily-trial-pulse" aria-hidden="true" />
+                <Zap className="h-4 w-4 shrink-0" />
+                <span>
+                  <strong>Teste agora, sem cadastro:</strong> 10 questões oficiais grátis hoje.
+                </span>
+                <ArrowRight className="ml-auto h-4 w-4 shrink-0" />
+              </Link>
               <div className="hero-proof reveal-up delay-3 flex-wrap !gap-x-6 !gap-y-3">
                 <span className="flex items-center gap-2 text-xs font-bold text-white/70">
                   <ScrollText className="h-4 w-4 shrink-0 text-emerald-300" />
