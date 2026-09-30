@@ -83,6 +83,36 @@ export function* chunks(rows, maxBytes = 1500000) {
   if (chunk.length) yield chunk;
 }
 
+export function importChecksums(data) {
+  const md5 = (value) => crypto.createHash("md5").update(value).digest("hex");
+  return {
+    ids_md5: md5(
+      data.candidates
+        .map((r) => r.id)
+        .sort()
+        .join(","),
+    ),
+    documents_md5: md5(
+      data.documents
+        .toSorted((a, b) => (a.drive_id < b.drive_id ? -1 : 1))
+        .map((r) => r.drive_id + ":" + md5(r.raw_text))
+        .join(","),
+    ),
+  };
+}
+
+export function matchesImportState(data, state) {
+  if (
+    !state ||
+    state.documents !== data.documents.length ||
+    state.candidates !== data.candidates.length ||
+    state.invalid_publishable !== 0
+  )
+    return false;
+  const expected = importChecksums(data);
+  return state.ids_md5 === expected.ids_md5 && state.documents_md5 === expected.documents_md5;
+}
+
 async function main() {
   const [inputDir, reportFile, mode] = process.argv.slice(2);
   if (!inputDir || !reportFile)
@@ -120,6 +150,18 @@ async function main() {
   };
   const save = () => fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
   save();
+  const stateQuery = `select (select count(*)::int from public.drive_question_import_documents) as documents,(select count(*)::int from public.drive_question_import_candidates) as candidates,(select count(*)::int from public.drive_question_import_candidates where payload->>'publishable' is distinct from 'false') as invalid_publishable,(select md5(string_agg(id,',' order by id)) from public.drive_question_import_candidates) as ids_md5,(select md5(string_agg(drive_id||':'||md5(raw_text),',' order by drive_id collate "C")) from public.drive_question_import_documents) as documents_md5`;
+  const before = await request(stateQuery, [], true);
+  if (matchesImportState(data, before[0])) {
+    report.verification = before;
+    report.already_complete = true;
+    report.inserted = { documents: 0, candidates: 0 };
+    report.complete = true;
+    report.finished_at = new Date().toISOString();
+    save();
+    console.log("IMPORTACAO_JA_COMPLETA_CONFIRMADA_SEM_ALTERAR_REVISOES");
+    return;
+  }
   for (const [name, rows] of Object.entries(data)) {
     let processed = 0,
       inserted = 0;
@@ -189,38 +231,8 @@ async function main() {
       console.log(JSON.stringify({ table, processed, total: rows.length, inserted }));
     }
   }
-  report.verification = await request(
-    `select (select count(*)::int from public.drive_question_import_documents) as documents,(select count(*)::int from public.drive_question_import_candidates) as candidates,(select count(*)::int from public.drive_question_import_candidates where payload->>'publishable' is distinct from 'false') as invalid_publishable,(select md5(string_agg(id,',' order by id)) from public.drive_question_import_candidates) as ids_md5,(select md5(string_agg(drive_id||':'||md5(raw_text),',' order by drive_id collate "C")) from public.drive_question_import_documents) as documents_md5`,
-    [],
-    true,
-  );
-  const verified = report.verification[0];
-  const idsMd5 = crypto
-    .createHash("md5")
-    .update(
-      data.candidates
-        .map((r) => r.id)
-        .sort()
-        .join(","),
-    )
-    .digest("hex");
-  // Ordenação explícita ASCII coincide com COLLATE C do PostgreSQL.
-  const asciiDocsMd5 = crypto
-    .createHash("md5")
-    .update(
-      data.documents
-        .toSorted((a, b) => (a.drive_id < b.drive_id ? -1 : 1))
-        .map((r) => r.drive_id + ":" + crypto.createHash("md5").update(r.raw_text).digest("hex"))
-        .join(","),
-    )
-    .digest("hex");
-  if (
-    verified.documents !== expected.documents ||
-    verified.candidates !== expected.candidates ||
-    verified.invalid_publishable !== 0 ||
-    verified.ids_md5 !== idsMd5 ||
-    verified.documents_md5 !== asciiDocsMd5
-  )
+  report.verification = await request(stateQuery, [], true);
+  if (!matchesImportState(data, report.verification[0]))
     throw new Error("Contagens, textos ou IDs divergentes; confira o relatório");
   report.complete = true;
   report.finished_at = new Date().toISOString();
