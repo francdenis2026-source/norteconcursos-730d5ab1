@@ -78,6 +78,13 @@ export function splitExplanation(text: string) {
 }
 export const formatDate = (value: string | null) =>
   value ? new Date(value).toLocaleDateString("pt-BR") : "";
+// Alguns itens ainda em fase de importação têm review_note preenchido só com
+// metadado de auditoria ("Importado do caderno oficial...", "aguardando
+// revisão de conteúdo...") em vez de uma explicação de verdade escrita pra
+// quem está estudando. Não é uma explicação — não deve aparecer como se fosse.
+const PLACEHOLDER_NOTE =
+  /aguardando revis[ãa]o de conte[úu]do|transcri[çc][ãa]o verbatim|importado do caderno oficial/i;
+export const isPlaceholderExplanation = (text: string) => PLACEHOLDER_NOTE.test(text);
 // "Revisada" = já tem explicação didática com exemplo do dia a dia (bloco "Exemplo:")
 // E, se depender de lei/súmula, essa fonte já foi conferida vigente no Planalto (checkedAt
 // preenchido) — a mesma checagem que o treinador já faz pra decidir o que entra no treino.

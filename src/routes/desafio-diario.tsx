@@ -39,6 +39,7 @@ import {
   DIFFICULTY_STYLE,
   answerLabel,
   boardAnswers,
+  isPlaceholderExplanation,
   normalizeDifficulty,
   parseBasis,
   parseQuestion,
@@ -523,12 +524,14 @@ function QuestionPlayer({
                 {correctOption && <p className="mt-1 text-sm leading-6">{correctOption.text}</p>}
               </div>
             )}
-            <div className="rounded-xl border bg-muted/30 p-4">
-              <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
-                Explicando de um jeito simples
-              </p>
-              <p className="text-sm leading-6">{explanation.main}</p>
-            </div>
+            {!isPlaceholderExplanation(explanation.main) && (
+              <div className="rounded-xl border bg-muted/30 p-4">
+                <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
+                  Comentário da questão
+                </p>
+                <p className="text-sm leading-6">{explanation.main}</p>
+              </div>
+            )}
             {explanation.example && (
               <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 dark:bg-amber-950/30">
                 <p className="mb-1 text-xs font-black uppercase tracking-wider text-amber-700">
