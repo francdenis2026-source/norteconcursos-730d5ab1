@@ -31,6 +31,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { NorteBrand } from "@/components/brand/NorteBrand";
+import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -201,6 +202,7 @@ function Index() {
                 Conteúdo direcionado, treino por banca e simulados de alta pressão para quem mira
                 Polícia Federal, PRF, Polícias Civis, Penais e Militares.
               </p>
+              <QuestionCountBadge />
               <div className="mt-6 flex flex-col gap-3 sm:mt-9 sm:flex-row reveal-up delay-3">
                 <Button size="lg" className="premium-button h-14 px-7 text-[15px]" asChild>
                   <Link to="/auth">

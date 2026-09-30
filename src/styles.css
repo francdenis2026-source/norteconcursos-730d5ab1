@@ -3577,3 +3577,41 @@ iframe[src*="gpteng.co"] {
     display: none;
   }
 }
+
+/* Public catalog badge: only the aggregate is fetched, never question content. */
+.question-count-badge {
+  position: relative; isolation: isolate; overflow: hidden;
+  display: flex; align-items: center; gap: 16px;
+  width: fit-content; max-width: 100%; margin-top: 24px;
+  padding: 18px 22px; border: 1px solid rgba(243,190,56,.4);
+  border-radius: 18px; text-decoration: none; color: #f4f7fa;
+  background: linear-gradient(120deg, rgba(15,37,52,.96), rgba(5,19,30,.94));
+  box-shadow: 0 12px 36px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.06);
+  transition: border-color .2s, box-shadow .2s;
+}
+.question-count-badge:hover { border-color: #f3be38; box-shadow: 0 12px 36px rgba(0,0,0,.25), 0 0 24px rgba(243,190,56,.1); }
+.question-count-badge:focus-visible { outline: 3px solid #f3be38; outline-offset: 4px; }
+.question-count-icon { display: grid; place-items: center; flex-shrink: 0; width: 52px; height: 52px; border-radius: 15px; color: #f3be38; border: 1px solid rgba(243,190,56,.25); background: rgba(243,190,56,.08); }
+.question-count-icon svg { width: 26px; height: 26px; }
+.question-count-content { display: grid; gap: 5px; min-width: 0; }
+.question-count-eyebrow { font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .13em; color: #edc86b; }
+.question-count-main { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 9px; min-height: 36px; font-size: 15px; font-weight: 700; line-height: 1.15; }
+.question-count-main strong { font-size: clamp(28px, 4vw, 36px); letter-spacing: -.04em; color: #fff; font-variant-numeric: tabular-nums; }
+.question-count-detail { font-size: 11px; color: #aebfca; line-height: 1.5; }
+.question-count-status { display: flex; align-items: center; gap: 6px; font-size: 10px; color: #aebfca; }
+.question-count-status i { width: 6px; height: 6px; border-radius: 50%; background: #8696a0; flex-shrink: 0; }
+.question-count-badge[data-live="true"] .question-count-status i { background: #69dfad; box-shadow: 0 0 0 3px rgba(105,223,173,.1); }
+.question-count-arrow { margin-left: auto; width: 18px; height: 18px; flex-shrink: 0; color: #edc86b; }
+@media (prefers-reduced-motion: no-preference) {
+  .question-count-badge::after { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: linear-gradient(105deg, transparent 40%, rgba(243,190,56,.08) 50%, transparent 60%); transform: translateX(-110%); animation: question-count-sheen 9s ease-in-out infinite; }
+  .question-count-badge[data-live="true"] .question-count-status i { animation: question-count-pulse 2.8s ease-in-out infinite; }
+}
+@keyframes question-count-sheen { 0%, 65% { transform: translateX(-110%); } 90%, 100% { transform: translateX(110%); } }
+@keyframes question-count-pulse { 50% { box-shadow: 0 0 0 5px rgba(105,223,173,.03); } }
+@media (max-width: 480px) {
+  .question-count-badge { padding: 16px; gap: 12px; width: 100%; border-radius: 15px; }
+  .question-count-icon { width: 42px; height: 42px; border-radius: 12px; }
+  .question-count-main { font-size: 13px; }
+  .question-count-eyebrow { font-size: 8px; letter-spacing: .08em; }
+  .question-count-detail { font-size: 10px; }
+}
