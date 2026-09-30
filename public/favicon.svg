@@ -1,7 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="16" fill="#071a2b"/>
-  <path d="M32 8 54 16.4v15C54 45.1 45.2 55.4 32 61 18.8 55.4 10 45.1 10 31.4v-15L32 8Z" fill="#102f4b" stroke="#eab64d" stroke-width="2"/>
-  <path d="m32 15 11.8 30.1L32 40.6l-11.8 4.5L32 15Z" fill="#eab64d"/>
-  <path d="M32 21.7v13.2l-5.3 2.7L32 21.7Z" fill="#f7f4e9"/>
-  <circle cx="32" cy="50.2" r="2.8" fill="#58b9e6"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"><defs>
+  <linearGradient id="fbody" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1e2a48"/><stop offset="1" stop-color="#0a0f1e"/>
+  </linearGradient>
+  <linearGradient id="frim" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f6dc8a"/><stop offset=".5" stop-color="#d9a53a"/><stop offset="1" stop-color="#a3711a"/>
+  </linearGradient>
+  <linearGradient id="fbrass" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f8df8f"/><stop offset="1" stop-color="#d49a2c"/>
+  </linearGradient></defs>
+  <path d="M32 4 54 11.5V30C54 44.5 45 55 32 60.5 19 55 10 44.5 10 30V11.5Z" fill="url(#fbody)" stroke="url(#frim)" stroke-width="2.2" stroke-linejoin="round"/>
+  
+  <path d="M24.2 24H24.4L39.8 40V47H39.6L24.2 31Z" fill="url(#fbrass)"/>
+  <path d="M20 47V24H24.2V47ZM39.8 24H44V47H39.8Z" fill="#f7f1df"/>
+  <path d="M32 10.8 33.5 15 37.7 16.5 33.5 18 32 22.2 30.5 18 26.3 16.5 30.5 15Z" fill="url(#fbrass)"/></svg>

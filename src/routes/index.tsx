@@ -613,45 +613,73 @@ function Index() {
 }
 
 function ProductMock() {
+  const progress = ["ok", "ok", "ko", "ok", "ok", "ok", "ko", "ok", "ok", "ok", "ok", "now"];
+  const options: [string, string, boolean?][] = [
+    ["A", "o recebimento da denúncia pelo juiz"],
+    ["B", "o trânsito em julgado de sentença penal condenatória", true],
+    ["C", "a prolação da sentença em primeiro grau"],
+    ["D", "a confirmação da condenação em segunda instância"],
+  ];
   return (
     <div className="lp-mock" aria-hidden="true">
-      <div className="lp-mock__bar">
-        <span className="lp-mock__crumb">
-          Treino · <b>Questão 12 de 30</b>
+      <div className="lp-mock__chrome">
+        <span className="lp-mock__dots">
+          <i />
+          <i />
+          <i />
         </span>
-        <span className="lp-mock__timer">
-          <Timer /> 01:42
+        <span className="lp-mock__title">Treinador de questões</span>
+        <span className="lp-mock__live">
+          <b /> Correção imediata
         </span>
       </div>
-      <div className="lp-mock__body">
+      <div className="lp-mock__app">
+        <div className="lp-mock__head">
+          <div>
+            <span className="lp-mock__tag">Direito Constitucional</span>
+            <strong>
+              Questão 12 <em>de 30</em>
+            </strong>
+          </div>
+          <span className="lp-mock__timer">
+            <Timer /> 01:42
+          </span>
+        </div>
         <div className="lp-mock__progress">
-          {["ok", "ok", "ko", "ok", "ok", "ok", "ko", "ok", "ok", "ok", "ok", "now", "", "", ""].map(
-            (s, i) => (
-              <i key={i} className={s} />
-            ),
-          )}
+          {progress.map((state, i) => (
+            <i key={i} className={state} />
+          ))}
+          {[0, 1, 2].map((i) => (
+            <i key={`rest-${i}`} />
+          ))}
         </div>
-        <div className="lp-mock__line" style={{ width: "96%" }} />
-        <div className="lp-mock__line" style={{ width: "88%" }} />
-        <div className="lp-mock__line" style={{ width: "54%", marginBottom: 6 }} />
-        <div className="lp-mock__opt">
-          <b>A</b>
-          <span className="lp-mock__line" style={{ maxWidth: "70%" }} />
-        </div>
-        <div className="lp-mock__opt is-correct">
-          <b>B</b>
-          <span className="lp-mock__line" style={{ maxWidth: "62%" }} />
-          <small>Correta</small>
-        </div>
-        <div className="lp-mock__opt">
-          <b>C</b>
-          <span className="lp-mock__line" style={{ maxWidth: "78%" }} />
+        <p className="lp-mock__stem">
+          Segundo a Constituição Federal de 1988, a presunção de inocência prevalece até:
+        </p>
+        <div className="lp-mock__opts">
+          {options.map(([letter, text, correct]) => (
+            <div className={`lp-mock__opt${correct ? " is-correct" : ""}`} key={letter}>
+              <b>{letter}</b>
+              <span>{text}</span>
+              {correct && (
+                <small>
+                  <Check /> Correta
+                </small>
+              )}
+            </div>
+          ))}
         </div>
         <div className="lp-mock__explain">
           <ScrollText />
           <div>
-            <span className="lp-mock__line" style={{ width: "92%" }} />
-            <span className="lp-mock__line" style={{ width: "70%" }} />
+            <strong>Por que a alternativa B está correta</strong>
+            <p>
+              Ninguém será considerado culpado até o trânsito em julgado de sentença penal
+              condenatória.
+            </p>
+            <span>
+              <ShieldCheck /> CF/88, art. 5º, LVII · fonte oficial verificada
+            </span>
           </div>
         </div>
       </div>
