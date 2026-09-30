@@ -12,6 +12,7 @@ import {
   Timer as TimerIcon,
   CheckCircle2
 } from 'lucide-react';
+import { PageHero, HeroStat } from '@/components/dashboard/PageHero';
 import { Progress } from '@/components/ui/progress';
 import { toast } from 'sonner';
 import { MockService } from '@/services/mockService';
@@ -124,17 +125,19 @@ function TimerPage() {
   const progress = ((MODES[mode].minutes * 60 - timeLeft) / (MODES[mode].minutes * 60)) * 100;
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
-      <div className="flex justify-between items-end">
-        <div>
-          <h1 className="text-2xl font-bold text-primary">Cronômetro Pomodoro</h1>
-          <p className="text-muted-foreground">Maximize sua concentração com intervalos estratégicos.</p>
-        </div>
-        <div className="flex items-center gap-2 px-3 py-1.5 bg-muted rounded-full text-xs font-medium">
-          <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />
-          {sessionsCompleted} sessões hoje
-        </div>
-      </div>
+    <div className="mx-auto max-w-5xl space-y-6">
+      <PageHero
+        image="study-desk"
+        kicker="Foco"
+        icon={TimerIcon}
+        title={
+          <>
+            Cronômetro <em>Pomodoro</em>
+          </>
+        }
+        description="Maximize sua concentração com intervalos estratégicos."
+        actions={<HeroStat icon={CheckCircle2} label="Sessões hoje" value={sessionsCompleted} />}
+      />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <Card className="lg:col-span-2 overflow-hidden">

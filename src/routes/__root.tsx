@@ -12,25 +12,49 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
+function StatusScreen({
+  code,
+  title,
+  description,
+  children,
+}: {
+  code: string;
+  title: string;
+  description: string;
+  children: ReactNode;
+}) {
+  return (
+    <main
+      className="page-hero flex min-h-svh items-center justify-center !rounded-none !border-0 px-6 text-center"
+      data-hero="journey"
+    >
+      <div className="max-w-lg">
+        <span className="hero-chip">Norte Concurso</span>
+        <p className="font-display mt-6 text-8xl font-extrabold leading-none text-brass md:text-9xl">
+          {code}
+        </p>
+        <h1 className="!mt-4">{title}</h1>
+        <p className="page-hero__desc mx-auto">{description}</p>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">{children}</div>
+      </div>
+    </main>
+  );
+}
+
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Go home
-          </Link>
-        </div>
-      </div>
-    </div>
+    <StatusScreen
+      code="404"
+      title="Rota fora do mapa"
+      description="A página que você procura não existe ou foi movida. Retome a navegação a partir do início."
+    >
+      <Link to="/" className="btn-brass">
+        Voltar ao início
+      </Link>
+      <Link to="/dashboard" className="btn-glass">
+        Ir para o painel
+      </Link>
+    </StatusScreen>
   );
 }
 
@@ -42,33 +66,24 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
-        </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
-          <button
-            onClick={() => {
-              router.invalidate();
-              reset();
-            }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Try again
-          </button>
-          <a
-            href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-          >
-            Go home
-          </a>
-        </div>
-      </div>
-    </div>
+    <StatusScreen
+      code="!"
+      title="Esta página não carregou"
+      description="Algo deu errado do nosso lado. Tente novamente ou volte ao início."
+    >
+      <button
+        onClick={() => {
+          router.invalidate();
+          reset();
+        }}
+        className="btn-brass"
+      >
+        Tentar novamente
+      </button>
+      <a href="/" className="btn-glass">
+        Voltar ao início
+      </a>
+    </StatusScreen>
   );
 }
 
@@ -87,7 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Estude com direção. Evolua com clareza." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#071a2b" },
+      { name: "theme-color", content: "#0a0f1c" },
       // Meta tags de app-shell: no celular, adicionar à tela inicial abre em
       // modo standalone (sem barra de endereço do navegador), como um app nativo.
       { name: "mobile-web-app-capable", content: "yes" },
@@ -96,11 +111,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "apple-mobile-web-app-title", content: "Norte Concurso" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400..800&family=JetBrains+Mono:wght@400..700&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
-      },
-      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      },      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "manifest", href: "/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/icons/icon-256.png" },
     ],

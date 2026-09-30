@@ -12,7 +12,8 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { MockService } from '@/services/mockService';
 import { UserResponse, Contest } from '@/types';
-import { CheckCircle2, XCircle, Clock, Calendar, Trophy } from 'lucide-react';
+import { CheckCircle2, XCircle, Clock, Calendar, Trophy, History } from 'lucide-react';
+import { PageHero } from '@/components/dashboard/PageHero';
 import { useAuthStatus } from '@/hooks/useDashboard';
 import { cn } from '@/lib/utils';
 
@@ -52,10 +53,17 @@ function HistoryPage() {
 
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold tracking-tight">Histórico de Estudos</h1>
-        <p className="text-muted-foreground">Acompanhe sua evolução, tentativas em simulados e posição no ranking.</p>
-      </div>
+      <PageHero
+        image="command-room"
+        kicker="Inteligência"
+        icon={History}
+        title={
+          <>
+            Histórico de <em>estudos</em>
+          </>
+        }
+        description="Acompanhe sua evolução, tentativas em simulados e posição no ranking."
+      />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <Card className="lg:col-span-2">

@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { NorteBrand } from "@/components/brand/NorteBrand";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -161,24 +162,27 @@ function DesafioDiario() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f6f8fb]">
-      <header className="border-b bg-white">
-        <div className="mx-auto flex h-16 max-w-4xl items-center justify-between px-4">
+    <div className="min-h-screen bg-background">
+      <header className="sticky top-0 z-30 border-b border-white/10 bg-[oklch(0.12_0.025_263/0.92)] backdrop-blur-xl">
+        <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
           <Link to="/" aria-label="Norte Concurso — início">
-            <NorteBrand />
+            <NorteBrand light />
           </Link>
-          <Button variant="ghost" size="sm" asChild>
-            <Link to="/">
-              <ArrowLeft className="mr-1.5 h-4 w-4" /> Início
+          <div className="flex items-center gap-2">
+            <Link to="/" className="app-top-btn !w-auto gap-1.5 px-3 text-sm font-semibold text-white/75 hover:!bg-white/10 hover:!text-white">
+              <ArrowLeft className="h-4 w-4" /> Início
             </Link>
-          </Button>
+            <Link to="/auth" search={{ mode: "register" }} className="btn-brass !h-9 !px-4 !text-sm">
+              Criar conta
+            </Link>
+          </div>
         </div>
       </header>
 
-      <main className="mx-auto max-w-2xl px-4 py-10">
+      <main className="mx-auto max-w-5xl px-3 py-6 sm:px-4 sm:py-10">
         {step === "loading" && (
           <Center>
-            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            <Loader2 className="h-8 w-8 animate-spin text-brass" />
             <p>Preparando o desafio de hoje…</p>
           </Center>
         )}
@@ -194,59 +198,57 @@ function DesafioDiario() {
         )}
 
         {step === "blocked" && (
-          <Card className="overflow-hidden text-center shadow-xl">
-            <div className="h-2 bg-gradient-to-r from-amber-500 to-emerald-500" />
-            <CardContent className="space-y-5 p-8">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-amber-700">
-                <Sparkles className="h-7 w-7" />
-              </div>
-              <div>
-                <h1 className="text-xl font-black">Você já respondeu hoje</h1>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Suas {GUEST_DAILY_LIMIT} questões grátis de hoje já foram usadas neste computador.
-                  O desafio libera de novo amanhã, ou você pode criar uma conta pra treinar sem
-                  limite agora mesmo.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 sm:flex-row">
-                <Button className="flex-1" asChild>
-                  <Link to="/auth" search={{ mode: "register" }}>
-                    Criar conta grátis
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" className="flex-1">
-                  <Link to="/auth">Já tenho conta</Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+          <PageHero
+            image="trainer"
+            size="lg"
+            kicker="Desafio de hoje concluído"
+            icon={Sparkles}
+            title={
+              <>
+                Você já respondeu <em>hoje.</em>
+              </>
+            }
+            description={`Suas ${GUEST_DAILY_LIMIT} questões grátis de hoje já foram usadas neste computador. O desafio libera de novo amanhã, ou crie uma conta para treinar sem limite agora mesmo.`}
+            actions={
+              <>
+                <Link to="/auth" search={{ mode: undefined }} className="hero-btn-ghost inline-flex items-center px-4 text-sm">
+                  Já tenho conta
+                </Link>
+                <Link to="/auth" search={{ mode: "register" }} className="hero-btn-primary inline-flex items-center gap-2 px-4 text-sm">
+                  Criar conta grátis <ArrowRight className="h-4 w-4" />
+                </Link>
+              </>
+            }
+          />
         )}
 
         {step === "intro" && (
-          <Card className="overflow-hidden text-center shadow-xl">
-            <div className="h-2 bg-gradient-to-r from-amber-500 via-sky-500 to-blue-800" />
-            <CardContent className="space-y-5 p-8">
-              <Badge className="mx-auto w-fit">
-                <Zap className="mr-1 h-3.5 w-3.5" /> Sem cadastro
-              </Badge>
-              <div>
-                <h1 className="text-2xl font-black">Desafio diário Norte Concurso</h1>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {questions.length} questões oficiais de concursos públicos, sorteadas hoje — as
-                  mesmas pra todo mundo que entrar hoje. Correção na hora, com explicação didática
-                  em cada uma.
-                </p>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-xs font-bold text-muted-foreground">
-                <ShieldCheck className="h-4 w-4 text-emerald-600" /> Gabarito oficial conferido
-              </div>
-              <Button size="lg" className="w-full" onClick={startChallenge}>
-                Começar agora <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </CardContent>
-          </Card>
+          <PageHero
+            image="trainer"
+            size="lg"
+            kicker="Sem cadastro · grátis"
+            icon={Zap}
+            title={
+              <>
+                Desafio diário <em>Norte Concurso</em>
+              </>
+            }
+            description={`${questions.length} questões oficiais de concursos públicos, sorteadas hoje — as mesmas para todo mundo que entrar hoje. Correção na hora, com explicação didática em cada uma.`}
+            actions={
+              <button type="button" className="btn-brass" onClick={startChallenge}>
+                Começar agora <ArrowRight />
+              </button>
+            }
+          >
+            <div className="page-hero__stats max-w-xl">
+              <HeroStat icon={Zap} label="Questões" value={questions.length} />
+              <HeroStat icon={ShieldCheck} label="Gabarito" value="Oficial" />
+              <HeroStat icon={Sparkles} label="Custo" value="Grátis" />
+            </div>
+          </PageHero>
         )}
 
+        <div className="mx-auto max-w-3xl">
         {step === "done" && (
           <TrainingResult total={questions.length} correct={correct} wrong={wrong} />
         )}
@@ -282,6 +284,7 @@ function DesafioDiario() {
             isLast={index + 1 >= questions.length}
           />
         )}
+        </div>
       </main>
     </div>
   );

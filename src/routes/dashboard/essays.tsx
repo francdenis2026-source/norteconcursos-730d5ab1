@@ -5,6 +5,7 @@ import { useAuthStatus } from '@/hooks/useDashboard';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { PenLine, CheckCircle2, XCircle, HelpCircle } from 'lucide-react';
+import { PageHero, LockedState } from '@/components/dashboard/PageHero';
 import { cn } from '@/lib/utils';
 
 export const Route = createFileRoute('/dashboard/essays')({
@@ -55,10 +56,15 @@ function EssaysPage() {
 
   if (!user || user.id === 'demo-user') {
     return (
-      <div className="h-[60vh] flex flex-col items-center justify-center text-center space-y-4">
-        <PenLine className="h-16 w-16 text-muted-foreground/30" />
-        <h2 className="text-xl font-bold">Faça login para ver suas redações</h2>
-      </div>
+      <LockedState
+        image="study-desk"
+        title={
+          <>
+            Treino de <em>redação</em>
+          </>
+        }
+        description="Entre na sua conta para registrar discursivas e acompanhar a aderência aos tópicos do edital."
+      />
     );
   }
 
@@ -74,10 +80,17 @@ function EssaysPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold text-primary">Treino de Redação</h1>
-        <p className="text-muted-foreground">Discursivas registradas, com aderência aos tópicos exigidos pelo edital.</p>
-      </div>
+      <PageHero
+        image="study-desk"
+        kicker="Provas"
+        icon={PenLine}
+        title={
+          <>
+            Treino de <em>redação</em>
+          </>
+        }
+        description="Discursivas registradas, com aderência aos tópicos exigidos pelo edital."
+      />
 
       <div className="space-y-4">
         {essays.map(e => {

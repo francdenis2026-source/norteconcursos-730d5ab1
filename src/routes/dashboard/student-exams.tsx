@@ -444,29 +444,26 @@ function StudentExamIntelligence() {
 
 function Hero({ attempts, years }: { attempts: number; years: number }) {
   return (
-    <section className="relative overflow-hidden rounded-[30px] bg-[#071a2f] px-6 py-8 text-white shadow-xl md:px-10 md:py-10">
-      <div className="absolute -right-12 -top-20 h-64 w-64 rounded-full bg-emerald-400/15 blur-3xl" />
-      <div className="relative flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-        <div>
-          <Badge className="mb-4 border-emerald-300/20 bg-emerald-400/10 text-emerald-200">
-            Inteligência de desempenho
-          </Badge>
-          <h1 className="text-3xl font-black tracking-tight md:text-4xl">
-            Minha trajetória em concursos
+    <section className="page-hero page-hero--lg" data-hero="exam-hall">
+      <div className="page-hero__row">
+        <div className="page-hero__text">
+          <span className="hero-chip">Inteligência de desempenho</span>
+          <h1>
+            Minha trajetória <em>em concursos</em>
           </h1>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-300 md:text-base">
+          <p className="page-hero__desc">
             Uma leitura objetiva do seu histórico, das falhas recorrentes e do próximo passo de
             estudo.
           </p>
         </div>
-        <div className="flex gap-3">
-          <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-center">
-            <p className="text-2xl font-black text-emerald-300">{attempts}</p>
-            <p className="text-[11px] text-slate-400">provas analisadas</p>
+        <div className="flex gap-2 sm:gap-3">
+          <div className="hero-stat min-w-[120px]">
+            <span>Provas analisadas</span>
+            <strong className="tabular">{attempts}</strong>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-center">
-            <p className="text-2xl font-black text-emerald-300">{years}</p>
-            <p className="text-[11px] text-slate-400">anos no histórico</p>
+          <div className="hero-stat min-w-[120px]">
+            <span>Anos no histórico</span>
+            <strong className="tabular">{years}</strong>
           </div>
         </div>
       </div>
@@ -849,7 +846,7 @@ function MetricCard({
   tone: "navy" | "emerald" | "amber" | "rose";
 }) {
   const styles = {
-    navy: "bg-[#071a2f] text-white",
+    navy: "bg-ink text-white",
     emerald: "bg-emerald-600 text-white",
     amber: "bg-amber-50 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100",
     rose: "bg-rose-50 text-rose-950 dark:bg-rose-950/30 dark:text-rose-100",

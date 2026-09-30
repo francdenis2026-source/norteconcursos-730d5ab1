@@ -27,6 +27,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { CAREERS, careerByAgency, normalizeText } from "@/lib/careers";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { LockedState } from "@/components/dashboard/PageHero";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 
@@ -214,9 +215,14 @@ function PerformancePage() {
     );
   if (!user || user.id === "demo-user")
     return (
-      <EmptyState
-        title="Faça login para ver seu raio-X"
-        description="Seu diagnóstico completo fica protegido na conta vinculada ao CPF."
+      <LockedState
+        image="command-room"
+        title={
+          <>
+            Raio-X <em>completo</em>
+          </>
+        }
+        description="Seu diagnóstico completo fica protegido na conta vinculada ao CPF. Entre para ver precisão, ritmo e lacunas por matéria."
       />
     );
   if (errorMessage) return <EmptyState title="Falha ao carregar" description={errorMessage} />;
@@ -473,32 +479,21 @@ function RaioXHero({
   weakestSubject: string | null;
 }) {
   return (
-    <section className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[#071a2f] px-6 py-8 text-white shadow-2xl md:px-10 md:py-10">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.08]"
-        style={{
-          backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)",
-          backgroundSize: "18px 18px",
-        }}
-      />
-      <div className="pointer-events-none absolute -right-20 -top-28 h-80 w-80 rounded-full bg-emerald-400/20 blur-3xl" />
-      <div className="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-        <div className="max-w-2xl">
-          <Badge className="mb-4 border-emerald-300/20 bg-emerald-400/10 text-emerald-300 hover:bg-emerald-400/10">
-            <Sparkles className="mr-1.5 h-3.5 w-3.5" /> Diagnóstico consolidado
-          </Badge>
-          <h1 className="flex items-center gap-3 text-3xl font-black tracking-tight md:text-4xl">
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/10">
-              <Activity className="h-6 w-6 text-emerald-300" />
-            </span>
-            Raio-X completo
+    <section className="page-hero page-hero--lg" data-hero="command-room">
+      <div className="page-hero__row">
+        <div className="page-hero__text">
+          <span className="hero-chip">
+            <Activity /> Diagnóstico consolidado
+          </span>
+          <h1>
+            Raio-X <em>completo</em>
           </h1>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-300 md:text-base">
+          <p className="page-hero__desc">
             Todas as provas que você já fez, cruzadas por matéria, para mostrar exatamente onde
             intensificar o estudo.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-3 sm:gap-4">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
           <HeroStat label="Provas" value={String(totalExams)} />
           <HeroStat label="Aproveitamento" value={`${accuracy}%`} />
           <HeroStat label="Maior foco" value={weakestSubject ?? "—"} small />
@@ -518,17 +513,17 @@ function HeroStat({
   small?: boolean;
 }) {
   return (
-    <div className="min-w-[110px] max-w-[160px] rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-center backdrop-blur">
-      <p className={cn("truncate font-black text-white", small ? "text-sm" : "text-xl")}>{value}</p>
-      <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-400">
-        {label}
-      </p>
+    <div className="hero-stat min-w-[104px] max-w-[170px]">
+      <span>{label}</span>
+      <strong className={cn("truncate tabular", small && "!text-base !leading-tight")}>
+        {value}
+      </strong>
     </div>
   );
 }
 
 const TONE_STYLES: Record<string, string> = {
-  navy: "bg-[#071a2f] text-white",
+  navy: "bg-ink text-white",
   emerald: "bg-emerald-50 text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-200",
   amber: "bg-amber-50 text-amber-900 dark:bg-amber-950/40 dark:text-amber-200",
   rose: "bg-rose-50 text-rose-900 dark:bg-rose-950/40 dark:text-rose-200",

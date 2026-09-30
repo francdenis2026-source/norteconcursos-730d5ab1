@@ -4,6 +4,7 @@ import { ArrowLeft, BookOpenCheck, GraduationCap, Layers3, Loader2, Scale } from
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
+import { LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -113,7 +114,17 @@ function TopicPage() {
       </div>
     );
   if (!user || user.id === "demo-user")
-    return <p className="text-muted-foreground">Entre na sua conta para estudar este assunto.</p>;
+    return (
+      <LockedState
+        image="field-map"
+        title={
+          <>
+            Estude este <em>assunto</em>
+          </>
+        }
+        description="Entre na sua conta para acessar o resumo, as explicações revisadas e o treino deste assunto do edital."
+      />
+    );
   if (error || !topic)
     return (
       <div className="space-y-4">
@@ -144,8 +155,8 @@ function TopicPage() {
         </Link>
       </Button>
 
-      <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-[#061a30] via-[#0b3150] to-[#0c695f] p-6 text-white shadow-xl md:p-9">
-        <Badge className="mb-3 border-white/15 bg-white/10 text-emerald-100 hover:bg-white/10">
+      <section className="page-hero" data-hero="field-map">
+        <Badge className="hero-chip">
           <Layers3 className="mr-1 h-3.5 w-3.5" />
           {topic.discipline}
         </Badge>

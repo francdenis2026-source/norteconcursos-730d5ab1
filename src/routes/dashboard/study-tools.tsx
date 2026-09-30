@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Timer, Layers, ListChecks, RotateCcw } from "lucide-react";
+import { PageHero } from "@/components/dashboard/PageHero";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/study-tools")({
@@ -67,10 +68,17 @@ const CHECKLIST_ITEMS = [
 function StudyToolsPage() {
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold text-primary">Central de Estudos</h1>
-        <p className="text-muted-foreground">Ferramentas rápidas para usar durante o estudo.</p>
-      </div>
+      <PageHero
+        image="study-desk"
+        kicker="Hoje"
+        icon={Timer}
+        title={
+          <>
+            Central de <em>estudos</em>
+          </>
+        }
+        description="Pomodoro, flashcards e ferramentas rápidas para usar durante cada sessão de estudo."
+      />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <PomodoroCard />
