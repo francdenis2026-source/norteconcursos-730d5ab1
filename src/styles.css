@@ -1999,7 +1999,7 @@ iframe[src*="gpteng.co"] {
   inset: 0;
   background:
     linear-gradient(120deg, rgb(3 18 30 / 0.08), rgb(239 184 63 / 0.08)),
-    url("/media/textura-acre-profissionais-v2.webp") center / cover;
+    url("/media/textura-acre-cinco-carreiras-v3.webp") center / cover;
   filter: saturate(0.98) brightness(0.98);
   mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / contain no-repeat;
   transform: scale(0.976);
@@ -3528,5 +3528,50 @@ iframe[src*="gpteng.co"] {
     position: sticky;
     top: 0;
     z-index: 10;
+  }
+}
+
+/* Motion stays on the clipped map, keeping portraits and page copy readable. */
+@media (prefers-reduced-motion: no-preference) {
+  .pcac-acre-map {
+    animation: pcac-acre-float 9s ease-in-out infinite;
+  }
+
+  .pcac-acre-map::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+    background: linear-gradient(
+      110deg,
+      transparent 35%,
+      rgb(255 221 151 / 0.16) 50%,
+      transparent 65%
+    );
+    animation: pcac-acre-sheen 12s ease-in-out infinite;
+  }
+}
+
+@keyframes pcac-acre-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes pcac-acre-sheen {
+  0%, 30% { transform: translateX(-110%); opacity: 0; }
+  40% { opacity: 1; }
+  65% { opacity: 1; }
+  75%, 100% { transform: translateX(110%); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pcac-acre-map,
+  .pcac-acre-map::after {
+    animation: none !important;
+    transform: none;
+  }
+
+  .pcac-acre-map::after {
+    display: none;
   }
 }
