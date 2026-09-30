@@ -1102,28 +1102,6 @@ html {
     linear-gradient(90deg, oklch(0.11 0.025 263 / 0.98) 0%, oklch(0.11 0.025 263 / 0.9) 38%, oklch(0.11 0.025 263 / 0.2) 70%, transparent),
     linear-gradient(0deg, oklch(0.11 0.025 263 / 0.7), transparent 45%);
 }
-.lp-pcac__map {
-  position: absolute;
-  z-index: -1;
-  top: 12%;
-  left: 38%;
-  width: min(30vw, 470px);
-  aspect-ratio: 1200 / 664;
-  pointer-events: none;
-  background: var(--brass);
-  filter: drop-shadow(0 0 18px oklch(0.8 0.13 78 / 0.55));
-  mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / contain no-repeat;
-  opacity: 0.9;
-}
-.lp-pcac__map-texture {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(120deg, oklch(0.2 0.03 262 / 0.1), oklch(0.8 0.13 78 / 0.1)),
-    url("/media/textura-acre-cinco-carreiras-v3.webp") center / cover;
-  mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / contain no-repeat;
-  transform: scale(0.975);
-}
 .lp-pcac__content {
   max-width: 620px;
 }
@@ -1199,6 +1177,87 @@ html {
   color: oklch(1 0 0 / 0.38);
   font-size: 0.75rem;
   line-height: 1.6;
+}
+
+/* Acre: map filled with the Amazon, professionals stepping out of it */
+.lp-acre .lp-photo__media {
+  background-image: url("/media/acre-floresta.webp");
+  background-position: center;
+  filter: saturate(0.4) brightness(0.3) blur(2px);
+  transform: scale(1.05);
+}
+.lp-acre .lp-photo__shade {
+  background:
+    linear-gradient(90deg, oklch(0.11 0.025 263 / 0.96) 0%, oklch(0.11 0.025 263 / 0.8) 45%, oklch(0.11 0.025 263 / 0.45) 100%),
+    linear-gradient(180deg, var(--ink-deep), transparent 22%, transparent 78%, var(--ink-deep));
+}
+.lp-acre__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+}
+.lp-acre__list {
+  display: grid;
+  max-width: 420px;
+  margin-top: 36px;
+  border-top: 1px solid oklch(1 0 0 / 0.12);
+}
+.lp-acre__list li {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid oklch(1 0 0 / 0.12);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-stretch: 80%;
+  font-weight: 700;
+}
+.lp-acre__list li span {
+  color: var(--brass);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+.lp-acre__stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1200 / 664;
+  margin-block: clamp(24px, 4vw, 56px);
+}
+.lp-acre__map {
+  position: absolute;
+  inset: 0;
+  filter: drop-shadow(0 0 0.8px var(--brass)) drop-shadow(0 0 0.8px var(--brass))
+    drop-shadow(0 0 1.5px var(--brass-soft)) drop-shadow(0 0 34px oklch(0.8 0.13 78 / 0.5));
+}
+.lp-acre__fill {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 0%, oklch(0.12 0.03 263 / 0.6) 100%),
+    linear-gradient(120deg, oklch(0.8 0.13 78 / 0.18), transparent 60%),
+    url("/media/acre-floresta.webp") center / cover;
+  mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / 100% 100% no-repeat;
+}
+.lp-acre__people {
+  position: absolute;
+  bottom: -9%;
+  left: -1%;
+  width: 102%;
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 22px 26px oklch(0 0 0 / 0.55));
+  mask-image: linear-gradient(180deg, #000 80%, transparent 99%);
+}
+@media (max-width: 900px) {
+  .lp-acre__grid {
+    grid-template-columns: 1fr;
+  }
+  .lp-acre .lp-photo__shade {
+    background: linear-gradient(180deg, var(--ink-deep), oklch(0.11 0.025 263 / 0.7) 20%, oklch(0.11 0.025 263 / 0.7) 80%, var(--ink-deep));
+  }
 }
 
 /* Method timeline */
