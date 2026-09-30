@@ -1078,7 +1078,7 @@ function TrainerSetup({
               options={["official", "curated", "personal"]}
               labels={{
                 official: "Provas oficiais",
-                curated: "Autorais auditadas",
+                curated: "Questões autorais",
                 personal: "Meu caderno",
               }}
             />
@@ -1087,7 +1087,7 @@ function TrainerSetup({
               value={values.reviewed}
               setValue={setters.setReviewed}
               options={["reviewed"]}
-              labels={{ reviewed: "Só com exemplo do dia a dia revisado" }}
+              labels={{ reviewed: "Com explicação e exemplo do dia a dia" }}
               allLabel="Todas as questões"
             />
             <TrainerFilter

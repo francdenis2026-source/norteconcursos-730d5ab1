@@ -174,7 +174,7 @@ export function parseQuestion(raw: string): ParsedQuestion {
 
   const lines = text.split("\n");
   const firstOption = lines.findIndex((line) => /^\s*\(A\)\s?/.test(line));
-  if (firstOption >= 0) {
+  if (firstOption >= 0 && !/\([B-E]\)/.test(lines[firstOption] ?? "")) {
     const options: { letter: Answer; text: string }[] = [];
     for (const line of lines.slice(firstOption)) {
       const match = line.match(/^\s*\(([A-E])\)\s?(.*)$/);

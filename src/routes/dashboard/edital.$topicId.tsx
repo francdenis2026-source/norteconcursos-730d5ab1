@@ -7,7 +7,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { basisHref, parseBasis, splitExplanation, type LegalBasis } from "@/lib/questionFormat";
+import {
+  basisHref,
+  parseBasis,
+  splitExplanation,
+  isEligibleQuestion,
+  type LegalBasis,
+} from "@/lib/questionFormat";
 
 export const Route = createFileRoute("/dashboard/edital/$topicId")({ component: TopicPage });
 
@@ -69,7 +75,9 @@ function TopicPage() {
           .maybeSingle(),
         supabase
           .from("curated_question_catalog")
-          .select("id,subtopic,subject,explanation,legal_basis,difficulty")
+          .select(
+            "id,subtopic,subject,explanation,legal_basis,difficulty,content_status,official_answer,law_version_checked_at",
+          )
           .eq("syllabus_topic_id", topicId)
           .eq("content_status", "active"),
       ]);
@@ -79,14 +87,16 @@ function TopicPage() {
         setError(curatedResult.error.message);
       } else {
         setCards(
-          ((curatedResult.data || []) as Array<Record<string, unknown>>).map((row) => ({
-            id: String(row.id),
-            subtopic: row.subtopic ? String(row.subtopic) : null,
-            subject: String(row.subject),
-            explanation: String(row.explanation),
-            legalBasis: parseBasis(row.legal_basis),
-            difficulty: String(row.difficulty || "média"),
-          })),
+          ((curatedResult.data || []) as Array<Record<string, unknown>>)
+            .filter(isEligibleQuestion)
+            .map((row) => ({
+              id: String(row["id"]),
+              subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
+              subject: String(row["subject"]),
+              explanation: String(row["explanation"]),
+              legalBasis: parseBasis(row["legal_basis"]),
+              difficulty: String(row["difficulty"] || "média"),
+            })),
         );
       }
       setLoading(false);
@@ -169,7 +179,9 @@ function TopicPage() {
         </Card>
       ) : (
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold">Resumo do assunto ({cards.length} pontos revisados)</h2>
+          <h2 className="text-lg font-semibold">
+            Resumo do assunto ({cards.length} pontos revisados)
+          </h2>
           {cards.map((card) => {
             const { main, example } = splitExplanation(card.explanation);
             return (

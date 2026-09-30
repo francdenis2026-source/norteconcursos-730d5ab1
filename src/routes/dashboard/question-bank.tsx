@@ -48,7 +48,7 @@ interface CatalogItem {
 }
 const SOURCE_LABELS: Record<SourceKind, string> = {
   official: "Provas oficiais",
-  curated: "Autorais auditadas",
+  curated: "Questões autorais",
   personal: "Meu caderno",
 };
 

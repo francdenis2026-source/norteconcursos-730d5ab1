@@ -31,6 +31,7 @@ test("Cebraspe multiple-choice booklet preserves its actual alternatives", () =>
 test("inline parenthesized and legacy alternatives preserve their contents", () => {
   for (const text of [
     "Escolha (A) Um; (B) Dois; (C) Três; (D) Quatro",
+    "Escolha\n(A) Um; (B) Dois; (C) Três; (D) Quatro",
     "Escolha A) Um; B) Dois; C) Três; D) Quatro",
   ]) {
     const parsed = parseQuestion(text);
