@@ -174,7 +174,9 @@ Retificação de um histórico corrigido **logo depois do erro**, com expressõe
 | Despesa incorrida e **não** paga | **Sim** | Não |
 | Despesa **não** incorrida, mas paga | Não | **Sim** |
 
-> **Como pensar:** na competência pergunte "o fato **aconteceu**?". No caixa pergunte "o dinheiro **entrou ou saiu**?". A contabilidade adota, como regra, o regime de competência.$md$, 'Polícia Federal', 1, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
+> **Como pensar:** na competência pergunte "o fato **aconteceu**?". No caixa pergunte "o dinheiro **entrou ou saiu**?". A contabilidade adota, como regra, o regime de competência.
+
+> **Conferido no Planalto (Lei das S.A., art. 177, redação da Lei nº 11.941/2009):** a escrituração da companhia deve observar métodos ou critérios contábeis uniformes no tempo e registrar as mutações patrimoniais **segundo o regime de competência**. A tabela do material é aplicação dessa regra.$md$, 'Polícia Federal', 1, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
 ('contabilidade-lancamentos-operacoes-diversas', 'Contabilidade Geral', 'Operações contábeis', 70, 'Lançamentos de operações diversas', 'Os lançamentos mais cobrados: juros, descontos, aluguéis, câmbio, seguros, vendas, folha e duplicatas descontadas.', $md$Convenção: **D** = débito, **C** = crédito.
 
 ## Juros, descontos, aluguéis e câmbio
@@ -273,7 +275,9 @@ O balancete **não identifica todos os erros** de escrituração. Detecta só aq
 - **Passivo:** Fornecedores, Salários a pagar, Valores a pagar, Tributos a recolher, Empréstimos e financiamentos, Debêntures, Provisões, Adiantamento de clientes, Duplicatas descontadas, (−) Encargos financeiros a transcorrer.
 - **PL:** Capital social, (−) Capital a integralizar, Reservas de capital, Reservas de lucros, (−) Ações em tesouraria, Ajustes de avaliação patrimonial, (−) Prejuízos acumulados, (−) Gastos com emissão de títulos.
 
-> **Cai em prova:** depreciação acumulada é **retificadora do ativo** (saldo credor). Não é passivo.$md$, 'Polícia Federal', 2, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[{"title": "Lei nº 6.404/1976 (Lei das S.A.), texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"}]'::jsonb),
+> **Cai em prova:** depreciação acumulada é **retificadora do ativo** (saldo credor). Não é passivo.
+
+> **Conferido no Planalto (Lei das S.A., texto compilado):** o art. 179 classifica o ativo em circulante, realizável a longo prazo, investimentos, imobilizado e intangível (este com o fundo de comércio adquirido), como no quadro acima. O patrimônio líquido se divide em capital social, reservas de capital, ajustes de avaliação patrimonial, reservas de lucros, ações em tesouraria e prejuízos acumulados (art. 178, § 2º, III, incluído pela Lei nº 11.941/2009). Se o **ciclo operacional** da empresa for maior que o exercício social, a classificação em circulante ou longo prazo usa o prazo desse ciclo (art. 179, parágrafo único).$md$, 'Polícia Federal', 2, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[{"title": "Lei nº 6.404/1976 (Lei das S.A.), texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"}]'::jsonb),
 ('contabilidade-mercadorias-cmv-resultado-bruto', 'Contabilidade Geral', 'Demonstração do resultado', 110, 'Operações com mercadorias, CMV e resultado bruto', 'Receita bruta até lucro bruto, os descontos e as fórmulas do CMV e das compras líquidas.', $md$## Do faturamento ao lucro bruto
 
 1. **Receita bruta** (vendas brutas)
@@ -295,7 +299,9 @@ O balancete **não identifica todos os erros** de escrituração. Detecta só aq
 - **CMV = Estoque inicial + Compras líquidas − Estoque final**
 - **Compras líquidas = Compras brutas + IPI + fretes e seguros − devoluções, abatimentos e descontos − tributos recuperáveis**
 
-> **Cai em prova:** os tributos **recuperáveis** saem do custo da compra, porque serão compensados depois. Já os **não recuperáveis** ficam no custo.$md$, 'Polícia Federal', 2, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
+> **Cai em prova:** os tributos **recuperáveis** saem do custo da compra, porque serão compensados depois. Já os **não recuperáveis** ficam no custo.
+
+> **Conferido no Planalto (Lei das S.A., art. 187):** a demonstração do resultado discrimina a **receita bruta** das vendas e serviços, as **deduções**, os **abatimentos** e os **impostos**; a **receita líquida**; o **custo das mercadorias e serviços vendidos**; e o **lucro bruto**. A sequência do material acompanha esse artigo. As fórmulas de CMV e de compras líquidas vêm do resumo do professor e não são texto de lei.$md$, 'Polícia Federal', 2, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
 ('contabilidade-estoques-cpc-16', 'Contabilidade Geral', 'Pronunciamentos CPC', 120, 'Estoques (CPC 16): o que compõe o custo', 'Definição de estoques, custo de aquisição e o que é custo ou despesa.', $md$## Estoques são ativos
 
 - Mantidos **para venda** no curso normal dos negócios (mercadorias e produtos acabados).
