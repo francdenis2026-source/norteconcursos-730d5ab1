@@ -155,7 +155,9 @@ Retificação de um histórico corrigido **logo depois do erro**, com expressõe
 - **Extrínsecas:** encadernado, folhas numeradas, autenticado pela Junta Comercial (empresas mercantis) ou pelo Registro Civil de Pessoas Jurídicas (empresas civis), com termos de abertura e de encerramento.
 - **Intrínsecas:** ordem cronológica, sem rasuras e entrelinhas, método uniforme, língua e moeda nacionais.
 
-> **Cai em prova:** o Razão aparece como "facultativo", mas as bancas cobram que é **obrigatório** para o contribuinte do lucro real.$md$, 'Polícia Federal', 1, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[{"title": "Código Civil (Lei nº 10.406/2002), texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"}, {"title": "Lei Complementar nº 123/2006, texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm"}]'::jsonb),
+> **Cai em prova:** o Razão aparece como "facultativo", mas as bancas cobram que é **obrigatório** para o contribuinte do lucro real.
+
+> **Conferido no site do CFC:** a **ITG 2000 (R1)**, que trata da escrituração contábil, está **em vigor** (DOU 12/12/2014) e se aplica a **todas as entidades**, independentemente de natureza e porte. Confirmei a **versão vigente da norma**. As regras do Código Civil e da LC 123/2006 citadas no texto seguem em conferência.$md$, 'Polícia Federal', 1, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[{"title": "Código Civil (Lei nº 10.406/2002), texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"}, {"title": "Lei Complementar nº 123/2006, texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm"}]'::jsonb),
 ('contabilidade-regimes-caixa-competencia', 'Contabilidade Geral', 'Regimes contábeis', 60, 'Regimes de caixa e de competência', 'Quando uma receita ou despesa é reconhecida em cada regime, com a tabela das seis combinações.', $md$## Definições
 
 - **Regime de caixa:** receitas **recebidas** e despesas **pagas**.
@@ -232,7 +234,9 @@ Retificação de um histórico corrigido **logo depois do erro**, com expressõe
 4. **Reversão** (parte do valor foi recebida): D EPCLD / C Reversão de EPCLD (receita).
 5. **Recuperação de crédito já baixado:** D Caixa / C Receita com recuperação de crédito.
 
-> **Cai em prova:** a EPCLD **nunca** reduz o PL diretamente de uma vez: ela passa pelo **resultado** (despesa) e só então reduz o ativo.$md$, 'Polícia Federal', 2, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
+> **Cai em prova:** a EPCLD **nunca** reduz o PL diretamente de uma vez: ela passa pelo **resultado** (despesa) e só então reduz o ativo.
+
+> **Conferido no site do CFC:** provisões e passivos contingentes estão em vigor como **CPC 25**, versão brasileira **NBC TG 25 (R2)**. Confirmei a **versão vigente**. A estimativa de perdas com créditos (EPCLD) e seus lançamentos vêm do resumo do professor e seguem em conferência.$md$, 'Polícia Federal', 2, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
 ('contabilidade-balancete-verificacao', 'Contabilidade Geral', 'Balancete', 90, 'Balancete de verificação', 'Para que serve, o que prova e o que não prova o balancete.', $md$## Características
 
 - Demonstrativo **auxiliar** e **não obrigatório**.
@@ -320,7 +324,9 @@ O balancete **não identifica todos os erros** de escrituração. Detecta só aq
 - Despesas administrativas que não ajudam a trazer o estoque ao local e à condição atuais.
 - Despesas de comercialização (venda e entrega ao cliente).
 
-> **Cai em prova:** frete de **compra** é custo; frete de **venda** é despesa. Decore o par.$md$, 'Polícia Federal', 3, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
+> **Cai em prova:** frete de **compra** é custo; frete de **venda** é despesa. Decore o par.
+
+> **Conferido no site do CFC (Normas Completas):** o pronunciamento de estoques está em vigor como **CPC 16 (R1)** no CPC, com a versão brasileira **NBC TG 16 (R2)** do CFC. Confirmei a **versão vigente da norma**, e não cada afirmação do texto; os exemplos de custo e despesa vêm do resumo do professor e seguem em conferência.$md$, 'Polícia Federal', 3, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
 ('contabilidade-depreciacao-amortizacao-exaustao', 'Contabilidade Geral', 'Pronunciamentos CPC', 130, 'Depreciação, amortização e exaustão', 'Os conceitos de valor (original, contábil, residual, depreciável), a fórmula e as regras de início.', $md$## Qual é qual
 
 | Termo | Perda de valor de... |
@@ -350,7 +356,9 @@ O balancete **não identifica todos os erros** de escrituração. Detecta só aq
 6. **Depreciação acelerada:** coeficiente 1,0 (1 turno de 8 h), 1,5 (2 turnos) e 2,0 (3 turnos).
 7. **Bens usados:** prazo é o **maior** entre a metade da vida útil do bem novo e o restante da vida útil, considerada desde a primeira instalação.
 
-> **Cai em prova:** o valor residual pode **aumentar**; a despesa de depreciação será zero enquanto o residual for igual ou maior que o valor contábil.$md$, 'Polícia Federal', 3, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
+> **Cai em prova:** o valor residual pode **aumentar**; a despesa de depreciação será zero enquanto o residual for igual ou maior que o valor contábil.
+
+> **Conferido no site do CFC:** a norma de ativo imobilizado é o **CPC 27**, versão brasileira **NBC TG 27 (R4)**. Confirmei a **versão vigente**. Os coeficientes de depreciação acelerada (1,0, 1,5 e 2,0) e o prazo para bens usados vêm de **regras fiscais do Imposto de Renda**, e não do CPC 27; **não foram conferidos aqui**, então confirme-os na legislação tributária antes de usar.$md$, 'Polícia Federal', 3, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
 ('contabilidade-impairment-cpc-01-baixa-ativos', 'Contabilidade Geral', 'Pronunciamentos CPC', 140, 'Redução ao valor recuperável (CPC 01) e baixa de ativos', 'O teste de recuperabilidade em três passos, a contabilização da perda e o resultado na alienação.', $md$## Objetivo do CPC 01
 
 Garantir que os ativos **não fiquem registrados por mais do que podem render** com o uso ou com a venda.
@@ -373,7 +381,9 @@ Garantir que os ativos **não fiquem registrados por mais do que podem render** 
 
 O valor contábil de um ativo é baixado na **alienação** ou quando **não há expectativa de benefício econômico futuro** (por exemplo, extinção do bem).
 
-> **Resultado na venda = Valor de alienação − Valor contábil**$md$, 'Polícia Federal', 3, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
+> **Resultado na venda = Valor de alienação − Valor contábil**
+
+> **Conferido no site do CFC e do CPC:** a norma vigente é o **CPC 01 (R1)**, em versão brasileira **NBC TG 01 (R4)** (DOU 22/12/2017). O **CPC 01 original foi revogado**; se um material citar a redação antiga, está desatualizado. Confirmei a **versão vigente**, e não cada passo do teste de recuperabilidade.$md$, 'Polícia Federal', 3, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[]'::jsonb),
 ('contabilidade-patrimonio-liquido-capital-reservas', 'Contabilidade Geral', 'Lei das S.A.', 150, 'Patrimônio líquido: capital, reservas e ações em tesouraria', 'Os tipos de capital, as reservas de capital e de lucros, a reserva legal e o mnemônico LERO.', $md$## Capital
 
 | Termo | Significado |
