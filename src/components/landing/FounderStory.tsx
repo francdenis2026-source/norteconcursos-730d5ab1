@@ -22,6 +22,11 @@ const milestones = [
     "Aprovação para agente penitenciário",
     "Aprovação no concurso do Estado do Acre, somando mais uma conquista à trajetória como concurseiro.",
   ],
+  [
+    "2025",
+    "Concurso para agente da PF",
+    "56,00 pontos líquidos e 13.104ª colocação na prova objetiva, na ampla concorrência. Foram 82 acertos, 26 erros e 12 questões em branco, conforme o resultado registrado na plataforma, com o boletim da Cebraspe indicado como fonte.",
+  ],
 ];
 
 export function FounderStory({ full = false }: { full?: boolean }) {
