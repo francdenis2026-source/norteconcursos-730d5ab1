@@ -23,6 +23,7 @@ import { Route as DashboardEditalRouteImport } from './routes/dashboard/edital'
 import { Route as DashboardErrorsRouteImport } from './routes/dashboard/errors'
 import { Route as DashboardEssaysRouteImport } from './routes/dashboard/essays'
 import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history'
+import { Route as DashboardLibraryRouteImport } from './routes/dashboard/library'
 import { Route as DashboardMockExamsRouteImport } from './routes/dashboard/mock-exams'
 import { Route as DashboardMyContestRouteImport } from './routes/dashboard/my-contest'
 import { Route as DashboardNotebooksRouteImport } from './routes/dashboard/notebooks'
@@ -38,6 +39,8 @@ import { Route as DashboardTimerRouteImport } from './routes/dashboard/timer'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
 import { Route as DashboardEditalIndexRouteImport } from './routes/dashboard/edital.index'
 import { Route as DashboardEditalTopicIdRouteImport } from './routes/dashboard/edital.$topicId'
+import { Route as DashboardLibraryIndexRouteImport } from './routes/dashboard/library.index'
+import { Route as DashboardLibrarySlugRouteImport } from './routes/dashboard/library.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -107,6 +110,11 @@ const DashboardEssaysRoute = DashboardEssaysRouteImport.update({
 const DashboardHistoryRoute = DashboardHistoryRouteImport.update({
   id: '/history',
   path: '/history',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardLibraryRoute = DashboardLibraryRouteImport.update({
+  id: '/library',
+  path: '/library',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardMockExamsRoute = DashboardMockExamsRouteImport.update({
@@ -185,6 +193,16 @@ const DashboardEditalTopicIdRoute = DashboardEditalTopicIdRouteImport.update({
   path: '/$topicId',
   getParentRoute: () => DashboardEditalRoute,
 } as any)
+const DashboardLibraryIndexRoute = DashboardLibraryIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DashboardLibraryRoute,
+} as any)
+const DashboardLibrarySlugRoute = DashboardLibrarySlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => DashboardLibraryRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -200,6 +218,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/history': typeof DashboardHistoryRoute
+  '/dashboard/library': typeof DashboardLibraryRouteWithChildren
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
@@ -215,7 +234,9 @@ export interface FileRoutesByFullPath {
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
+  '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
   '/dashboard/edital/': typeof DashboardEditalIndexRoute
+  '/dashboard/library/': typeof DashboardLibraryIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -244,7 +265,9 @@ export interface FileRoutesByTo {
   '/dashboard': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
+  '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
   '/dashboard/edital': typeof DashboardEditalIndexRoute
+  '/dashboard/library': typeof DashboardLibraryIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -261,6 +284,7 @@ export interface FileRoutesById {
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/history': typeof DashboardHistoryRoute
+  '/dashboard/library': typeof DashboardLibraryRouteWithChildren
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
@@ -276,7 +300,9 @@ export interface FileRoutesById {
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
+  '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
   '/dashboard/edital/': typeof DashboardEditalIndexRoute
+  '/dashboard/library/': typeof DashboardLibraryIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -294,6 +320,7 @@ export interface FileRouteTypes {
     | '/dashboard/errors'
     | '/dashboard/essays'
     | '/dashboard/history'
+    | '/dashboard/library'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
@@ -309,7 +336,9 @@ export interface FileRouteTypes {
     | '/dashboard/'
     | '/api/public/stripe-webhook'
     | '/dashboard/edital/$topicId'
+    | '/dashboard/library/$slug'
     | '/dashboard/edital/'
+    | '/dashboard/library/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -338,7 +367,9 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/api/public/stripe-webhook'
     | '/dashboard/edital/$topicId'
+    | '/dashboard/library/$slug'
     | '/dashboard/edital'
+    | '/dashboard/library'
   id:
     | '__root__'
     | '/'
@@ -354,6 +385,7 @@ export interface FileRouteTypes {
     | '/dashboard/errors'
     | '/dashboard/essays'
     | '/dashboard/history'
+    | '/dashboard/library'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
@@ -369,7 +401,9 @@ export interface FileRouteTypes {
     | '/dashboard/'
     | '/api/public/stripe-webhook'
     | '/dashboard/edital/$topicId'
+    | '/dashboard/library/$slug'
     | '/dashboard/edital/'
+    | '/dashboard/library/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -483,6 +517,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardHistoryRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/library': {
+      id: '/dashboard/library'
+      path: '/library'
+      fullPath: '/dashboard/library'
+      preLoaderRoute: typeof DashboardLibraryRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/mock-exams': {
       id: '/dashboard/mock-exams'
       path: '/mock-exams'
@@ -588,6 +629,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardEditalTopicIdRouteImport
       parentRoute: typeof DashboardEditalRoute
     }
+    '/dashboard/library/': {
+      id: '/dashboard/library/'
+      path: '/'
+      fullPath: '/dashboard/library/'
+      preLoaderRoute: typeof DashboardLibraryIndexRouteImport
+      parentRoute: typeof DashboardLibraryRoute
+    }
+    '/dashboard/library/$slug': {
+      id: '/dashboard/library/$slug'
+      path: '/$slug'
+      fullPath: '/dashboard/library/$slug'
+      preLoaderRoute: typeof DashboardLibrarySlugRouteImport
+      parentRoute: typeof DashboardLibraryRoute
+    }
   }
 }
 
@@ -605,6 +660,19 @@ const DashboardEditalRouteWithChildren = DashboardEditalRoute._addFileChildren(
   DashboardEditalRouteChildren,
 )
 
+interface DashboardLibraryRouteChildren {
+  DashboardLibrarySlugRoute: typeof DashboardLibrarySlugRoute
+  DashboardLibraryIndexRoute: typeof DashboardLibraryIndexRoute
+}
+
+const DashboardLibraryRouteChildren: DashboardLibraryRouteChildren = {
+  DashboardLibrarySlugRoute: DashboardLibrarySlugRoute,
+  DashboardLibraryIndexRoute: DashboardLibraryIndexRoute,
+}
+
+const DashboardLibraryRouteWithChildren =
+  DashboardLibraryRoute._addFileChildren(DashboardLibraryRouteChildren)
+
 interface DashboardRouteChildren {
   DashboardAdminRoute: typeof DashboardAdminRoute
   DashboardCareersRoute: typeof DashboardCareersRoute
@@ -612,6 +680,7 @@ interface DashboardRouteChildren {
   DashboardErrorsRoute: typeof DashboardErrorsRoute
   DashboardEssaysRoute: typeof DashboardEssaysRoute
   DashboardHistoryRoute: typeof DashboardHistoryRoute
+  DashboardLibraryRoute: typeof DashboardLibraryRouteWithChildren
   DashboardMockExamsRoute: typeof DashboardMockExamsRoute
   DashboardMyContestRoute: typeof DashboardMyContestRoute
   DashboardNotebooksRoute: typeof DashboardNotebooksRoute
@@ -634,6 +703,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardErrorsRoute: DashboardErrorsRoute,
   DashboardEssaysRoute: DashboardEssaysRoute,
   DashboardHistoryRoute: DashboardHistoryRoute,
+  DashboardLibraryRoute: DashboardLibraryRouteWithChildren,
   DashboardMockExamsRoute: DashboardMockExamsRoute,
   DashboardMyContestRoute: DashboardMyContestRoute,
   DashboardNotebooksRoute: DashboardNotebooksRoute,

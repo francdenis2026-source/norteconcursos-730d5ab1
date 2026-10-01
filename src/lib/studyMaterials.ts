@@ -1,0 +1,102 @@
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+
+export type StudyMaterialStatus = "under_review" | "active" | "obsolete" | "archived";
+
+export type StudyMaterialSource = { title?: string; url?: string };
+
+export type StudyMaterialSummary = {
+  id: string;
+  slug: string;
+  discipline: string;
+  topic_label: string;
+  sort_order: number;
+  title: string;
+  summary: string | null;
+  contest_name: string | null;
+  law_version_checked_at: string | null;
+  content_status: StudyMaterialStatus;
+};
+
+export type StudyMaterial = StudyMaterialSummary & {
+  body_md: string;
+  source_note: string;
+  legal_basis: StudyMaterialSource[];
+  syllabus_topic_order: number | null;
+  reviewed_at: string | null;
+  updated_at: string;
+};
+
+const SUMMARY_COLUMNS =
+  "id,slug,discipline,topic_label,sort_order,title,summary,contest_name,law_version_checked_at,content_status";
+
+export const STATUS_LABEL: Record<StudyMaterialStatus, string> = {
+  under_review: "Em revisão",
+  active: "Publicado",
+  obsolete: "Obsoleto",
+  archived: "Arquivado",
+};
+
+/** Active materials only (RLS also guarantees this for students). */
+export function useStudyMaterialList(enabled: boolean) {
+  return useQuery({
+    queryKey: ["study-materials", "list"],
+    enabled,
+    staleTime: 5 * 60 * 1000,
+    queryFn: async (): Promise<StudyMaterialSummary[]> => {
+      const { data, error } = await supabase
+        .from("study_materials")
+        .select(SUMMARY_COLUMNS)
+        .eq("content_status", "active")
+        .order("discipline")
+        .order("sort_order");
+      if (error) throw error;
+      return (data ?? []) as StudyMaterialSummary[];
+    },
+  });
+}
+
+export function useStudyMaterial(slug: string, enabled: boolean) {
+  return useQuery({
+    queryKey: ["study-materials", "detail", slug],
+    enabled,
+    staleTime: 5 * 60 * 1000,
+    queryFn: async (): Promise<StudyMaterial | null> => {
+      const { data, error } = await supabase
+        .from("study_materials")
+        .select(
+          `${SUMMARY_COLUMNS},body_md,source_note,legal_basis,syllabus_topic_order,reviewed_at,updated_at`,
+        )
+        .eq("slug", slug)
+        .eq("content_status", "active")
+        .maybeSingle();
+      if (error) throw error;
+      return (data ?? null) as StudyMaterial | null;
+    },
+  });
+}
+
+export function groupByDiscipline(items: StudyMaterialSummary[]) {
+  const map = new Map<string, StudyMaterialSummary[]>();
+  for (const item of items) {
+    const list = map.get(item.discipline) ?? [];
+    list.push(item);
+    map.set(item.discipline, list);
+  }
+  return Array.from(map.entries()).sort((a, b) => a[0].localeCompare(b[0], "pt-BR"));
+}
+
+/** Rough reading time at ~200 words/minute, never below 1 minute. */
+export function readingMinutes(markdown: string) {
+  return Math.max(1, Math.round(markdown.split(/\s+/).filter(Boolean).length / 200));
+}
+
+export function slugify(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80);
+}

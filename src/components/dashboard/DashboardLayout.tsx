@@ -14,6 +14,7 @@ import {
   Flame,
   History,
   Layers,
+  Library,
   LayoutDashboard,
   LogOut,
   MapPin,
@@ -74,6 +75,7 @@ const MENU: MenuItem[] = [
   { group: "Objetivo", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
   { group: "Objetivo", label: "Catálogo de concursos", icon: Search, href: "/dashboard/questions" },
   { group: "Treinamento", label: "Edital eletrônico", icon: MapPin, href: "/dashboard/edital" },
+  { group: "Treinamento", label: "Biblioteca de estudo", icon: Library, href: "/dashboard/library" },
   {
     group: "Treinamento",
     label: "Treinador de questões",

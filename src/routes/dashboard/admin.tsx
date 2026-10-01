@@ -44,6 +44,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { PageHero } from "@/components/dashboard/PageHero";
+import { LibraryAdmin } from "@/components/library/LibraryAdmin";
 import { Download } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -394,10 +395,11 @@ function AdminPanel() {
       />
 
       <Tabs defaultValue="contests" className="w-full">
-        <TabsList className="grid w-full max-w-5xl grid-cols-7">
+        <TabsList className="grid w-full max-w-5xl grid-cols-8">
           <TabsTrigger value="contests">Concursos</TabsTrigger>
           <TabsTrigger value="questions">Questões</TabsTrigger>
           <TabsTrigger value="syllabus">Edital</TabsTrigger>
+          <TabsTrigger value="library">Biblioteca</TabsTrigger>
           <TabsTrigger value="users">Usuários</TabsTrigger>
           <TabsTrigger value="exam-uploads">Provas Enviadas</TabsTrigger>
           <TabsTrigger value="subscriptions">Planos</TabsTrigger>
@@ -726,6 +728,10 @@ function AdminPanel() {
               </div>
             </CardContent>
           </Card>
+        </TabsContent>
+
+        <TabsContent value="library" className="mt-6">
+          <LibraryAdmin />
         </TabsContent>
 
         <TabsContent value="syllabus" className="mt-6 space-y-4">
