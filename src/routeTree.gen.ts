@@ -14,6 +14,8 @@ import { Route as AuthRouteImport } from './routes/auth'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as DesafioDiarioRouteImport } from './routes/desafio-diario'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as SuporteRouteImport } from './routes/suporte'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
@@ -65,6 +67,16 @@ const DesafioDiarioRoute = DesafioDiarioRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SuporteRoute = SuporteRouteImport.update({
+  id: '/suporte',
+  path: '/suporte',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TermsRoute = TermsRouteImport.update({
@@ -210,6 +222,8 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof DashboardRouteWithChildren
   '/desafio-diario': typeof DesafioDiarioRoute
   '/privacy': typeof PrivacyRoute
+  '/sobre': typeof SobreRoute
+  '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
@@ -243,6 +257,8 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/desafio-diario': typeof DesafioDiarioRoute
   '/privacy': typeof PrivacyRoute
+  '/sobre': typeof SobreRoute
+  '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
@@ -276,6 +292,8 @@ export interface FileRoutesById {
   '/dashboard': typeof DashboardRouteWithChildren
   '/desafio-diario': typeof DesafioDiarioRoute
   '/privacy': typeof PrivacyRoute
+  '/sobre': typeof SobreRoute
+  '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
@@ -312,6 +330,8 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/desafio-diario'
     | '/privacy'
+    | '/sobre'
+    | '/suporte'
     | '/terms'
     | '/checkout/$planId'
     | '/dashboard/admin'
@@ -345,6 +365,8 @@ export interface FileRouteTypes {
     | '/auth'
     | '/desafio-diario'
     | '/privacy'
+    | '/sobre'
+    | '/suporte'
     | '/terms'
     | '/checkout/$planId'
     | '/dashboard/admin'
@@ -377,6 +399,8 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/desafio-diario'
     | '/privacy'
+    | '/sobre'
+    | '/suporte'
     | '/terms'
     | '/checkout/$planId'
     | '/dashboard/admin'
@@ -412,6 +436,8 @@ export interface RootRouteChildren {
   DashboardRoute: typeof DashboardRouteWithChildren
   DesafioDiarioRoute: typeof DesafioDiarioRoute
   PrivacyRoute: typeof PrivacyRoute
+  SobreRoute: typeof SobreRoute
+  SuporteRoute: typeof SuporteRoute
   TermsRoute: typeof TermsRoute
   CheckoutPlanIdRoute: typeof CheckoutPlanIdRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
@@ -452,6 +478,20 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/suporte': {
+      id: '/suporte'
+      path: '/suporte'
+      fullPath: '/suporte'
+      preLoaderRoute: typeof SuporteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/terms': {
@@ -729,6 +769,8 @@ const rootRouteChildren: RootRouteChildren = {
   DashboardRoute: DashboardRouteWithChildren,
   DesafioDiarioRoute: DesafioDiarioRoute,
   PrivacyRoute: PrivacyRoute,
+  SobreRoute: SobreRoute,
+  SuporteRoute: SuporteRoute,
   TermsRoute: TermsRoute,
   CheckoutPlanIdRoute: CheckoutPlanIdRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,

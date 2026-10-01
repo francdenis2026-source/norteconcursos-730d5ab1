@@ -1,0 +1,9 @@
+# Conteúdo institucional — 30/09/2026
+
+A apresentação de Franc Denis fica concentrada na página `/sobre`, acessível discretamente pelo link “Nossa história” no rodapé. A página inicial não expõe o bloco biográfico. A seção detalha a trajetória informada pelo desenvolvedor: cargos efetivos de professor em 2018 e 2019; aprovações para agente socioeducativo e técnico de informática no ISE/AC em 2021, com efetivação como agente socioeducativo; aprovação para agente penitenciário do Acre em 2023. Aprovação não é apresentada como posse. O retrato é uma composição editada a partir da imagem do agente indicada pelo usuário, com novo fundo e remoção da pessoa lateral; sua origem está registrada em `ASSET_ATTRIBUTIONS.md`.
+
+`/privacy` e `/terms` substituem os avisos “Em breve” por informações sobre uso, dados, conteúdo e contratação. As informações técnicas refletem os recursos presentes no repositório. A referência aos direitos do titular aponta ao texto compilado da LGPD no Planalto: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm. A operação ainda precisa definir seu canal real de atendimento e detalhar os prazos de retenção e a identificação formal do controlador; esta entrega não atesta conformidade jurídica integral.
+
+`/suporte` oferece perguntas frequentes e preparação de relatos locais, com cópia e download. Não registra tickets nem transmite o relato a um servidor. O envio direto por e-mail fica disponível quando `VITE_SUPPORT_EMAIL` tiver um endereço público confirmado, definido no ambiente de implantação. Nenhum telefone, endereço de atendimento ou prazo de resposta foi inventado.
+
+Validação: compilação Vite e TypeScript; conferência visual no navegador; abertura de FAQ, seleção de assunto, habilitação de ações após preenchimento e confirmação da cópia do relato. O rodapé aponta para as novas páginas, mantendo os destinos existentes de método, ferramentas, carreiras e acesso.

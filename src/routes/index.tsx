@@ -551,9 +551,10 @@ function Index() {
           <FooterColumn
             title="Institucional"
             links={[
+              ["Nossa história", "/sobre"],
               ["Privacidade", "/privacy"],
               ["Termos de uso", "/terms"],
-              ["Suporte", "/auth"],
+              ["Central de suporte", "/suporte"],
             ]}
           />
           <FooterColumn

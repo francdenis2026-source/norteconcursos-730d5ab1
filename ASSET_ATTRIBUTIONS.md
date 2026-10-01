@@ -1,5 +1,7 @@
 # Atribuições de recursos visuais
 
+- `public/media/franc-denis-retrato-v1.webp`: edição com a ferramenta integrada de geração de imagens (modo edit, identity-preserve), a partir da imagem do agente enviada pelo usuário para a seção Nossa história. Prompt: preservar o rosto, óculos, postura, camisa azul, colete e calça caqui do agente principal; remover integralmente a pessoa que aparece na lateral; substituir o fundo por um cenário arquitetônico sóbrio em azul escuro com luz quente discreta; enquadramento vertical 3:4, da cabeça até as coxas, sem textos nem outras pessoas. Conversão de PNG para WebP sem corte adicional.
+
 - `public/media/hero/lineup-carreiras-ajustada.webp`: edição da imagem de equipe existente com a ferramenta integrada de geração de imagens. Prompt: aproximar os dois agentes de azul e calça caqui dos demais integrantes, igualar escala e enquadramento das pernas, harmonizar iluminação e tonalidade da pele, preservando os sete integrantes e a paisagem. A página usa a proporção original da nova imagem para evitar corte adicional na base.
 
 - `public/media/mapa-acre-silhueta-ibge-2024.svg`: silhueta gerada a partir da Malha Territorial 2024 da Unidade da Federação do Acre (código 12), publicada pelo Instituto Brasileiro de Geografia e Estatística — IBGE. Fonte oficial: [Malhas Municipais 2024 — Acre](https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2024/UFs/AC/). O arquivo é usado como máscara cartográfica para recortar a montagem de profissionais da segurança na campanha.
