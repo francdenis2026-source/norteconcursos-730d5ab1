@@ -32,7 +32,6 @@ import type { LucideIcon } from "lucide-react";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
-import { FounderStory } from "@/components/landing/FounderStory";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -499,8 +498,6 @@ function Index() {
             </div>
           </div>
         </section>
-
-        <FounderStory />
 
         <section className="lp-section lp-final">
           <div className="lp-final__bg" aria-hidden="true" />

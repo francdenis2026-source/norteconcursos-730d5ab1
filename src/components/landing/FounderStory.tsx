@@ -31,10 +31,14 @@ export function FounderStory({ full = false }: { full?: boolean }) {
         <div className="founder-grid">
           <div className="founder-identity">
             <span className="lp-kicker">Nossa origem · Feijó, Acre</span>
-            <div className="founder-seal" aria-hidden="true">
-              <span>FD</span>
-              <small>EDUCAR · SERVIR · CRIAR</small>
-            </div>
+            <img
+              className="founder-portrait"
+              src="/media/franc-denis-retrato-v1.webp"
+              alt="Franc Denis, com camisa azul e colete, em composição com fundo escuro"
+              width={1086}
+              height={1448}
+              decoding="async"
+            />
             <span className="founder-location">
               <MapPin size={15} /> Feijó · Acre · Brasil
             </span>
