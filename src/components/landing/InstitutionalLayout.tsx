@@ -6,11 +6,13 @@ export function InstitutionalLayout({
   title,
   eyebrow,
   intro,
+  heroImage,
   children,
 }: {
   title: string;
   eyebrow: string;
   intro: string;
+  heroImage?: string;
   children: ReactNode;
 }) {
   return (
@@ -24,10 +26,29 @@ export function InstitutionalLayout({
         </Link>
       </header>
       <main>
-        <div className="institutional-heading lp-container">
-          <span className="lp-kicker">{eyebrow}</span>
-          <h1>{title}</h1>
-          <p>{intro}</p>
+        <div
+          className={`institutional-heading lp-container${heroImage ? " institutional-heading--visual" : ""}`}
+        >
+          <div className="institutional-heading__copy">
+            <span className="lp-kicker">{eyebrow}</span>
+            <h1>{title}</h1>
+            <p>{intro}</p>
+          </div>
+          {heroImage && (
+            <div className="institutional-heading__visual" aria-hidden="true">
+              <img
+                src={heroImage}
+                alt=""
+                width={1086}
+                height={1448}
+                fetchPriority="high"
+                decoding="async"
+              />
+              <span>
+                FEIJÓ · ACRE <i /> EDUCAÇÃO · SEGURANÇA · TECNOLOGIA
+              </span>
+            </div>
+          )}
         </div>
         {children}
       </main>
