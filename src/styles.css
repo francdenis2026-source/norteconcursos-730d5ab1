@@ -2373,7 +2373,7 @@ html {
 .founder-manifesto { margin-top: 28px; padding: 20px 24px; border-left: 2px solid #d2aa5b; background: #d2aa5b0b; }
 .founder-manifesto > span { color: #d2aa5b; font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; }
 .founder-manifesto p { margin-top: 12px; font-size: 18px; line-height: 1.6; }
-.founder-timeline { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 64px; gap: 24px; }
+.founder-timeline { display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 64px; gap: 24px; }
 .founder-timeline article { border-top: 1px solid #d2aa5b60; padding-top: 22px; }
 .founder-timeline article > span { color: #eac780; font-family: var(--font-display); font-size: 40px; font-weight: 750; }
 .founder-timeline h3 { margin-block: 15px 10px; font-size: 17px; line-height: 1.4; font-weight: 650; }
