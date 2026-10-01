@@ -436,7 +436,9 @@ Dura **um ano**, e a data de término é fixada no estatuto. Pode ter duração 
 
 A DLPA pode estar dentro da DMPL, quando esta for elaborada e publicada.
 
-> **Cai em prova:** o limite de **R$ 2 milhões de PL** vale para a **DFC** das companhias **fechadas**. A DVA é obrigatória só para as **abertas**.$md$, 'Polícia Federal', 3, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[{"title": "Lei nº 6.404/1976 (Lei das S.A.), texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"}]'::jsonb)
+> **Cai em prova:** o limite de **R$ 2 milhões de PL** vale para a **DFC** das companhias **fechadas**. A DVA é obrigatória só para as **abertas**.
+
+> **Conferido no Planalto (Lei nº 6.404, art. 176, § 6º, incluído pela Lei nº 11.638/2007):** a companhia fechada com patrimônio líquido, na data do balanço, **inferior a R$ 2.000.000,00** **não é obrigada** a elaborar e publicar a demonstração dos fluxos de caixa. Ou seja, **a partir de R$ 2 milhões** a DFC é exigida.$md$, 'Polícia Federal', 3, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[{"title": "Lei nº 6.404/1976 (Lei das S.A.), texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"}]'::jsonb)
 on conflict (slug) do update set
   title = excluded.title, summary = excluded.summary, body_md = excluded.body_md,
   source_note = excluded.source_note, legal_basis = excluded.legal_basis

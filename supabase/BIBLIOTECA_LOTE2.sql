@@ -207,6 +207,8 @@ Capacidade do Estado de **restringir direitos e garantias individuais** em benef
 - É **interrompida** pela notificação ou citação do acusado, por qualquer ato inequívoco de apuração do fato, pela decisão condenatória recorrível e por ato inequívoco que importe tentativa de solução conciliatória no âmbito interno.
 - Se o fato também constituir **crime**, aplicam-se os prazos da **lei penal**.
 
+> **Atualização legislativa (conferida no Planalto):** a ação punitiva da Administração Pública Federal **prescreve em 5 anos**, contados da prática do ato (ou do fim da infração permanente ou continuada). Incide a **prescrição intercorrente** quando o procedimento fica **paralisado por mais de 3 anos**, pendente de julgamento ou despacho (art. 1º, § 1º). A **Lei nº 11.941/2009** incluiu a interrupção pela **notificação** e pela **tentativa de conciliação** interna e criou a prescrição de **5 anos para a execução da multa** (art. 1º-A). A lei **não se aplica** a infrações de **natureza funcional** nem a procedimentos **tributários** (art. 5º).
+
 ## Abuso de poder
 
 | Excesso de poder | Desvio de poder (de finalidade) |
