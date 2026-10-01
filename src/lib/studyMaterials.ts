@@ -18,7 +18,12 @@ export type StudyMaterialSummary = {
   content_status: StudyMaterialStatus;
 };
 
+export type Flashcard = { f: string; b: string };
+export type QuizItem = { q: string; a: boolean; why: string };
+
 export type StudyMaterial = StudyMaterialSummary & {
+  flashcards: Flashcard[] | null;
+  quiz: QuizItem[] | null;
   body_md: string;
   source_note: string;
   legal_basis: StudyMaterialSource[];
@@ -65,7 +70,7 @@ export function useStudyMaterial(slug: string, enabled: boolean) {
       const { data, error } = await supabase
         .from("study_materials")
         .select(
-          `${SUMMARY_COLUMNS},body_md,source_note,legal_basis,syllabus_topic_order,reviewed_at,updated_at`,
+          `${SUMMARY_COLUMNS},flashcards,quiz,body_md,source_note,legal_basis,syllabus_topic_order,reviewed_at,updated_at`,
         )
         .eq("slug", slug)
         .eq("content_status", "active")

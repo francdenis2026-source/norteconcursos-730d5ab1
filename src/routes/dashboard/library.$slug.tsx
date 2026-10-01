@@ -13,6 +13,7 @@ import {
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { Markdown } from "@/components/library/Markdown";
+import { StudyPractice } from "@/components/library/StudyPractice";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { isOfficialUrl } from "@/lib/questionFormat";
@@ -140,6 +141,8 @@ function MaterialPage() {
           )}
         </aside>
       )}
+
+      <StudyPractice flashcards={material.flashcards ?? []} quiz={material.quiz ?? []} />
 
       <div className="library-cta no-print">
         <div>
