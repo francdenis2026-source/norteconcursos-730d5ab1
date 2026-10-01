@@ -2383,7 +2383,49 @@ html {
 .institutional-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 24px; border-bottom: 1px solid #ffffff12; }
 .institutional-heading { padding-block: clamp(48px, 7vw, 90px); }
 .institutional-heading h1 { max-width: 880px; margin-block: 20px 24px; font-family: var(--font-display); font-weight: 800; font-size: clamp(38px, 6vw, 72px); letter-spacing: -0.035em; line-height: 1.08; }
-.institutional-heading > p { max-width: 650px; font-size: 18px; line-height: 1.7; color: #b3bcc9; }
+.institutional-heading__copy > p { max-width: 650px; font-size: 18px; line-height: 1.7; color: #b3bcc9; }
+.institutional-heading--visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+  padding-block: clamp(36px, 5vw, 64px);
+}
+.institutional-heading__visual {
+  position: relative;
+  width: min(100%, 340px);
+  justify-self: end;
+  padding: 10px;
+  border: 1px solid #d2aa5b40;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #d2aa5b16, #ffffff03);
+  box-shadow: 0 20px 70px #00000040;
+}
+.institutional-heading__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  border-radius: 14px;
+}
+.institutional-heading__visual > span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 6px 4px;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: .08em;
+  line-height: 1.6;
+  color: #d2aa5b;
+}
+.institutional-heading__visual i { width: 3px; height: 3px; border-radius: 50%; background: currentColor; }
+@media (max-width: 760px) {
+  .institutional-heading--visual { grid-template-columns: 1fr; }
+  .institutional-heading__visual { justify-self: center; width: min(100%, 280px); }
+}
 .institutional-values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; padding-block: 64px; }
 .institutional-values article { padding: 26px; border: 1px solid #ffffff14; border-radius: 16px; background: #ffffff03; }
 .institutional-values article > span { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; color: #d2aa5b; }

@@ -12,6 +12,7 @@ function About() {
       eyebrow="Raízes no Acre. Ambição de ir além."
       title="A experiência vira método."
       intro="Conheça a pessoa, a trajetória e os princípios por trás da Norte Concursos."
+      heroImage="/media/franc-denis-retrato-v1.webp"
     >
       <FounderStory full />
       <section className="institutional-values lp-container">
