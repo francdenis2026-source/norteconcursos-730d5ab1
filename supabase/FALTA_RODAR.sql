@@ -1,3 +1,71 @@
+-- Atualiza o texto de materiais de Contabilidade já publicados (não altera status nem datas).
+begin;
+update public.study_materials set body_md = $md$## Capital
+
+| Termo | Significado |
+|---|---|
+| **Capital autorizado** | Valor previsto no estatuto para aumento do capital sem reforma estatutária |
+| **Capital social (subscrito)** | Formado pelas ações subscritas na constituição ou em aumentos |
+| **Capital a realizar (a integralizar)** | Parte que os sócios ainda não pagaram: capital social − capital realizado |
+| **Capital integralizado (realizado)** | Parte que já foi paga |
+
+Na constituição da companhia, exige-se entrada mínima de **10%** do preço de emissão das ações subscritas **em dinheiro**.
+
+## Reservas (contas credoras do PL)
+
+**Reservas de capital** (lançadas direto no PL, art. 182, § 1º): contribuição do subscritor que ultrapassar o valor nominal das ações (**ágio na emissão**) e o **produto da alienação de partes beneficiárias e bônus de subscrição**. O § 2º acrescenta o resultado da correção monetária do capital realizado, enquanto não capitalizado.
+
+**Reservas de lucros** (destinações do lucro líquido): legal (**a única obrigatória**), estatutária, para contingências, de lucros a realizar, de incentivos fiscais, de retenção de lucros e especial de dividendos obrigatórios não distribuídos.
+
+### Uso das reservas de capital
+
+Absorver prejuízos que superem lucros acumulados e reservas de lucros; resgatar, reembolsar ou comprar ações; resgatar partes beneficiárias; incorporar ao capital; pagar dividendo a ações preferenciais, se assegurado.
+
+## Ações em tesouraria
+
+São ações da própria empresa readquiridas. A conta é **redutora do PL**. O limite do saldo é o dos lucros acumulados e reservas, **exceto a reserva legal**.
+
+## Reserva legal
+
+- **Cálculo:** 5% do lucro líquido do exercício.
+- **Limite:** não ultrapassa 20% do capital social.
+- **Uso:** só para **compensar prejuízos** ou **aumentar o capital**.
+
+## Mnemônico LERO
+
+As reservas de lucros cuja soma **não pode ultrapassar o capital social**: **L**egal, **E**statutária, **R**etenção de lucros e **O** (especial de dividendos obrigatórios não distribuídos). Ficam de fora contingências, incentivos fiscais, lucros a realizar e prêmio de debêntures.
+
+> **Cai em prova:** das reservas de lucros, só a **legal** é obrigatória.
+
+> **Atualização legislativa (conferida no Planalto, texto compilado da Lei nº 6.404/1976):** a **Lei nº 11.638/2007** revogou as alíneas "c" e "d" do § 1º do art. 182, de modo que o **prêmio na emissão de debêntures** e as **doações e subvenções para investimento** deixaram de ser reservas de capital (hoje seguem o regime das reservas de lucros). Itens de prova ou resumos antigos que as listem como reservas de capital estão **desatualizados**. A reserva legal continua em **5% do lucro líquido, limitada a 20% do capital social** (art. 193), e pode ser dispensada quando ela somada às reservas de capital passar de **30%** do capital (art. 193, § 1º).$md$, legal_basis = '[{"title": "Lei nº 6.404/1976 (Lei das S.A.), texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"}]'::jsonb where slug = 'contabilidade-patrimonio-liquido-capital-reservas';
+update public.study_materials set body_md = $md$## Exercício social
+
+Dura **um ano**, e a data de término é fixada no estatuto. Pode ter duração diversa na constituição da companhia e em alterações estatutárias (art. 175).
+
+## Regras de apresentação (art. 176)
+
+- Contas semelhantes podem ser **agrupadas**.
+- Pequenos saldos podem ser **agregados**, desde que indicada a natureza e que não ultrapassem **1/10** do valor do grupo.
+- É **vedado** usar designações genéricas, como "diversas contas" ou "contas correntes".
+- As demonstrações registram a destinação dos lucros **conforme a proposta da administração**, no pressuposto de aprovação pela assembleia geral.
+
+## Quadro das demonstrações
+
+| Demonstração | Companhia aberta | Companhia fechada |
+|---|---|---|
+| Balanço patrimonial (BP) | Sim | Sim |
+| Demonstração do resultado do exercício (DRE) | Sim | Sim |
+| Lucros ou prejuízos acumulados (DLPA) ou Mutações do PL (DMPL) | Sim | Sim |
+| Resultado abrangente (DRA), pelo CPC 26 | Sim | Conforme as normas aplicáveis |
+| Fluxo de caixa (DFC) | Sim | Se o PL for **igual ou superior a R$ 2 milhões** |
+| Valor adicionado (DVA) | Sim | Não obrigatória |
+
+A DLPA pode estar dentro da DMPL, quando esta for elaborada e publicada.
+
+> **Cai em prova:** o limite de **R$ 2 milhões de PL** vale para a **DFC** das companhias **fechadas**. A DVA é obrigatória só para as **abertas**.
+
+> **Conferido no Planalto (Lei nº 6.404, art. 176, § 6º, incluído pela Lei nº 11.638/2007):** a companhia fechada com patrimônio líquido, na data do balanço, **inferior a R$ 2.000.000,00** **não é obrigada** a elaborar e publicar a demonstração dos fluxos de caixa. Ou seja, **a partir de R$ 2 milhões** a DFC é exigida.$md$, legal_basis = '[{"title": "Lei nº 6.404/1976 (Lei das S.A.), texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"}]'::jsonb where slug = 'contabilidade-demonstracoes-contabeis-lei-6404';
+commit;
 -- Segundo lote da Biblioteca: Direito Constitucional, Administrativo e Penal (PF).
 -- Entram como `under_review`. Requer a migração das colunas flashcards/quiz (20261001070000).
 begin;
@@ -171,9 +239,7 @@ O **poder normativo** é mais amplo: abrange todos os atos normativos, exceto os
 | **Autônomo** | Privativo do chefe do Executivo, pode ser delegado a Ministros, é ato **primário** e **pode inovar** |
 | **Autorizado (delegado)** | Editado por órgãos da Administração mediante **delegação por lei**, que fixa as diretrizes. Ato secundário, mas **pode inovar** |
 
-> **Cai em prova:** o regulamento **executivo** não inova; só os **autônomos** e os **autorizados** podem inovar.
-
-> **Atualização legislativa (conferida no Planalto, Lei nº 9.784/1999, processo administrativo federal):** a **competência é irrenunciável** e só se transfere nos casos de **delegação e avocação** admitidos em lei (art. 11). A delegação é possível ainda que o delegado **não seja subordinado** ao delegante (art. 12) e é **revogável a qualquer tempo** (art. 14, § 2º). **Não podem ser delegados:** a **edição de atos normativos**, a **decisão de recursos administrativos** e as matérias de **competência exclusiva** (art. 13). A **avocação** é **excepcional e temporária**, por **motivos relevantes devidamente justificados**, de competência de órgão **hierarquicamente inferior** (art. 15). Atenção: a regra de que o subordinado "não pode negar" a delegação vem da doutrina, não da lei.$md$, 'Polícia Federal', 1, 'Reescrito a partir dos mapas mentais da pasta Apostilas (100 mapas mentais gratuitos), com organização, exemplos e destaques de prova próprios. Aguardando conferência com a Constituição e as leis citadas.', '[{"title": "Constituição Federal de 1988", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}]'::jsonb, '[{"f": "Elementos sempre vinculados do ato", "b": "Competência, finalidade e forma, mesmo no ato discricionário."}, {"f": "Mérito administrativo", "b": "Formado por motivo e objeto; existe só no ato discricionário."}, {"f": "Avocar × delegar", "b": "Avocar: o superior traz atribuição do subordinado, se não for privativa. Delegar: transferência precária de atribuição."}, {"f": "Reconsideração × revisão", "b": "Reconsideração: pela própria autoridade que editou o ato. Revisão: pela autoridade superior."}, {"f": "Regulamento que não inova", "b": "O executivo (decreto regulamentar), ato secundário que viabiliza o fiel cumprimento da lei."}]'::jsonb, '[{"q": "O subordinado pode se recusar a cumprir uma delegação de atribuição.", "a": false, "why": "A delegação não pode ser negada pelo subordinado."}, {"q": "Revogação e anulação são formas de desfazer o ato: a primeira por inconveniência, a segunda por vício.", "a": true, "why": "Revoga-se o ato inconveniente ou inoportuno; anula-se o ato com vício."}, {"q": "O regulamento executivo pode inovar a ordem jurídica.", "a": false, "why": "É ato secundário e não inova; os autônomos e autorizados podem inovar."}]'::jsonb),
+> **Cai em prova:** o regulamento **executivo** não inova; só os **autônomos** e os **autorizados** podem inovar.$md$, 'Polícia Federal', 1, 'Reescrito a partir dos mapas mentais da pasta Apostilas (100 mapas mentais gratuitos), com organização, exemplos e destaques de prova próprios. Aguardando conferência com a Constituição e as leis citadas.', '[{"title": "Constituição Federal de 1988", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}]'::jsonb, '[{"f": "Elementos sempre vinculados do ato", "b": "Competência, finalidade e forma, mesmo no ato discricionário."}, {"f": "Mérito administrativo", "b": "Formado por motivo e objeto; existe só no ato discricionário."}, {"f": "Avocar × delegar", "b": "Avocar: o superior traz atribuição do subordinado, se não for privativa. Delegar: transferência precária de atribuição."}, {"f": "Reconsideração × revisão", "b": "Reconsideração: pela própria autoridade que editou o ato. Revisão: pela autoridade superior."}, {"f": "Regulamento que não inova", "b": "O executivo (decreto regulamentar), ato secundário que viabiliza o fiel cumprimento da lei."}]'::jsonb, '[{"q": "O subordinado pode se recusar a cumprir uma delegação de atribuição.", "a": false, "why": "A delegação não pode ser negada pelo subordinado."}, {"q": "Revogação e anulação são formas de desfazer o ato: a primeira por inconveniência, a segunda por vício.", "a": true, "why": "Revoga-se o ato inconveniente ou inoportuno; anula-se o ato com vício."}, {"q": "O regulamento executivo pode inovar a ordem jurídica.", "a": false, "why": "É ato secundário e não inova; os autônomos e autorizados podem inovar."}]'::jsonb),
 ('administrativo-poder-de-policia-ciclo-prescricao', 'Direito Administrativo', 'Poderes administrativos', 20, 'Poder de polícia: atributos, ciclo e prescrição', 'Conceito, polícia administrativa × judiciária, atributos e as quatro fases do ciclo de polícia.', $md$## Conceito
 
 Capacidade do Estado de **restringir direitos e garantias individuais** em benefício da coletividade, aplicada de forma moderada e buscando o interesse público. Só pode ser exercida por entidades de **direito público**.
@@ -256,9 +322,7 @@ Exclui a tipicidade material quando presentes, ao mesmo tempo:
 | **Consunção** | O fato mais grave **absorve** o menos grave |
 | **Especialidade** | A norma **especial** afasta a **geral** |
 
-> **Cai em prova:** a irretroatividade **tem exceção**: a lei penal **benéfica** retroage, mesmo depois do trânsito em julgado.
-
-> **Conferido nas fontes oficiais:** o art. 5º da Constituição prevê a **legalidade e anterioridade** (XXXIX: "não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal"), a **irretroatividade, salvo para beneficiar o réu** (XL), a **pessoalidade da pena** (XLV: nenhuma pena passará da pessoa do condenado, mas a obrigação de reparar o dano e o perdimento de bens podem ser estendidos aos sucessores, nos termos da lei) e a vedação de **penas cruéis** (XLVII). O Código Penal repete a legalidade no art. 1º e a *abolitio criminis* no art. 2º ("ninguém pode ser punido por fato que lei posterior deixa de considerar crime"). Já a **insignificância** e o mnemônico **MARI** vêm da **jurisprudência** (STF), e **não de texto de lei**: não os cite como dispositivo legal.$md$, 'Polícia Federal', 1, 'Reescrito a partir dos mapas mentais da pasta Apostilas (100 mapas mentais gratuitos), com organização, exemplos e destaques de prova próprios. Aguardando conferência com a Constituição e as leis citadas.', '[{"title": "Constituição Federal de 1988", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}, {"title": "Código Penal (Decreto-Lei nº 2.848/1940)", "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"}]'::jsonb, '[{"f": "Regra de irretroatividade penal", "b": "A lei penal não retroage, exceto para beneficiar o réu, inclusive após o trânsito em julgado."}, {"f": "Mnemônico MARI (insignificância)", "b": "Mínima ofensividade, Ausência de periculosidade social, Reduzido grau de reprovabilidade, Inexpressividade da lesão."}, {"f": "Intervenção mínima", "b": "O Direito Penal é a última ratio: só atua quando outros ramos não bastam."}, {"f": "Alteridade", "b": "Não se pune a conduta que não ofende bem jurídico de outra pessoa, como a autolesão."}, {"f": "Consunção × especialidade", "b": "Consunção: o fato mais grave absorve o menos grave. Especialidade: a norma especial afasta a geral."}]'::jsonb, '[{"q": "A lei penal posterior mais benéfica não retroage depois do trânsito em julgado.", "a": false, "why": "Ela retroage para beneficiar o réu, inclusive após o trânsito em julgado."}, {"q": "Para o princípio da insignificância, basta a inexpressividade da lesão, sem outros requisitos.", "a": false, "why": "Exigem-se os quatro vetores do MARI em conjunto."}, {"q": "Pelo princípio da alteridade, a autolesão não é punida.", "a": true, "why": "Não há crime sem ofensa a bem jurídico de terceiro."}]'::jsonb)
+> **Cai em prova:** a irretroatividade **tem exceção**: a lei penal **benéfica** retroage, mesmo depois do trânsito em julgado.$md$, 'Polícia Federal', 1, 'Reescrito a partir dos mapas mentais da pasta Apostilas (100 mapas mentais gratuitos), com organização, exemplos e destaques de prova próprios. Aguardando conferência com a Constituição e as leis citadas.', '[{"title": "Constituição Federal de 1988", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}, {"title": "Código Penal (Decreto-Lei nº 2.848/1940)", "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"}]'::jsonb, '[{"f": "Regra de irretroatividade penal", "b": "A lei penal não retroage, exceto para beneficiar o réu, inclusive após o trânsito em julgado."}, {"f": "Mnemônico MARI (insignificância)", "b": "Mínima ofensividade, Ausência de periculosidade social, Reduzido grau de reprovabilidade, Inexpressividade da lesão."}, {"f": "Intervenção mínima", "b": "O Direito Penal é a última ratio: só atua quando outros ramos não bastam."}, {"f": "Alteridade", "b": "Não se pune a conduta que não ofende bem jurídico de outra pessoa, como a autolesão."}, {"f": "Consunção × especialidade", "b": "Consunção: o fato mais grave absorve o menos grave. Especialidade: a norma especial afasta a geral."}]'::jsonb, '[{"q": "A lei penal posterior mais benéfica não retroage depois do trânsito em julgado.", "a": false, "why": "Ela retroage para beneficiar o réu, inclusive após o trânsito em julgado."}, {"q": "Para o princípio da insignificância, basta a inexpressividade da lesão, sem outros requisitos.", "a": false, "why": "Exigem-se os quatro vetores do MARI em conjunto."}, {"q": "Pelo princípio da alteridade, a autolesão não é punida.", "a": true, "why": "Não há crime sem ofensa a bem jurídico de terceiro."}]'::jsonb)
 on conflict (slug) do update set
   title = excluded.title, summary = excluded.summary, body_md = excluded.body_md,
   source_note = excluded.source_note, legal_basis = excluded.legal_basis,
