@@ -387,7 +387,7 @@ Na constituição da companhia, exige-se entrada mínima de **10%** do preço de
 
 ## Reservas (contas credoras do PL)
 
-**Reservas de capital** (lançadas direto no PL): ágio na emissão de ações, alienação de bônus de subscrição, alienação de partes beneficiárias, lucros na alienação de ações em tesouraria.
+**Reservas de capital** (lançadas direto no PL, art. 182, § 1º): contribuição do subscritor que ultrapassar o valor nominal das ações (**ágio na emissão**) e o **produto da alienação de partes beneficiárias e bônus de subscrição**. O § 2º acrescenta o resultado da correção monetária do capital realizado, enquanto não capitalizado.
 
 **Reservas de lucros** (destinações do lucro líquido): legal (**a única obrigatória**), estatutária, para contingências, de lucros a realizar, de incentivos fiscais, de retenção de lucros e especial de dividendos obrigatórios não distribuídos.
 
@@ -409,7 +409,9 @@ São ações da própria empresa readquiridas. A conta é **redutora do PL**. O 
 
 As reservas de lucros cuja soma **não pode ultrapassar o capital social**: **L**egal, **E**statutária, **R**etenção de lucros e **O** (especial de dividendos obrigatórios não distribuídos). Ficam de fora contingências, incentivos fiscais, lucros a realizar e prêmio de debêntures.
 
-> **Cai em prova:** das reservas de lucros, só a **legal** é obrigatória.$md$, 'Polícia Federal', 3, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[{"title": "Lei nº 6.404/1976 (Lei das S.A.), texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"}]'::jsonb),
+> **Cai em prova:** das reservas de lucros, só a **legal** é obrigatória.
+
+> **Atualização legislativa (conferida no Planalto, texto compilado da Lei nº 6.404/1976):** a **Lei nº 11.638/2007** revogou as alíneas "c" e "d" do § 1º do art. 182, de modo que o **prêmio na emissão de debêntures** e as **doações e subvenções para investimento** deixaram de ser reservas de capital (hoje seguem o regime das reservas de lucros). Itens de prova ou resumos antigos que as listem como reservas de capital estão **desatualizados**. A reserva legal continua em **5% do lucro líquido, limitada a 20% do capital social** (art. 193), e pode ser dispensada quando ela somada às reservas de capital passar de **30%** do capital (art. 193, § 1º).$md$, 'Polícia Federal', 3, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[{"title": "Lei nº 6.404/1976 (Lei das S.A.), texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"}]'::jsonb),
 ('contabilidade-demonstracoes-contabeis-lei-6404', 'Contabilidade Geral', 'Lei das S.A.', 160, 'Demonstrações contábeis e a Lei nº 6.404/1976', 'Quais demonstrações cada tipo de companhia elabora e regras dos arts. 175 e 176.', $md$## Exercício social
 
 Dura **um ano**, e a data de término é fixada no estatuto. Pode ter duração diversa na constituição da companhia e em alterações estatutárias (art. 175).
@@ -435,6 +437,9 @@ Dura **um ano**, e a data de término é fixada no estatuto. Pode ter duração 
 A DLPA pode estar dentro da DMPL, quando esta for elaborada e publicada.
 
 > **Cai em prova:** o limite de **R$ 2 milhões de PL** vale para a **DFC** das companhias **fechadas**. A DVA é obrigatória só para as **abertas**.$md$, 'Polícia Federal', 3, 'Reescrito a partir do Resumão de Contabilidade Geral para a Polícia Federal (Gran Cursos Online, prof. Feliphe Araújo), com organização, exemplos e destaques de prova próprios. Aguardando conferência das normas e dos exemplos.', '[{"title": "Lei nº 6.404/1976 (Lei das S.A.), texto compilado", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"}]'::jsonb)
-on conflict (slug) do nothing;
+on conflict (slug) do update set
+  title = excluded.title, summary = excluded.summary, body_md = excluded.body_md,
+  source_note = excluded.source_note, legal_basis = excluded.legal_basis
+  where public.study_materials.content_status = 'under_review';
 
 commit;
