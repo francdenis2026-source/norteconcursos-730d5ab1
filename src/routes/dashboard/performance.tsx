@@ -1,5 +1,5 @@
 import React from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Bar,
   BarChart,
@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { CAREERS, careerByAgency, normalizeText } from "@/lib/careers";
+import { CAREERS, careerByAgency } from "@/lib/careers";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { LockedState } from "@/components/dashboard/PageHero";
@@ -67,18 +67,11 @@ interface SubjectStat {
 
 const metric = (value: number | null | undefined) => value ?? 0;
 
-// As carreiras já usam nomes ligeiramente diferentes entre `student_exam_documents`
-// (contest_name digitado pelo candidato/importação) e `official_exam_questions`
-// (career_name da matriz oficial) — ex.: "Polícia Rodoviária Federal" vs
-// "Policial Rodoviário Federal" em anos diferentes do mesmo cargo. Comparar por
-// igualdade exata faz o item silenciosamente sumir do raio-X; a normalização +
-// contenção (um nome contém o outro) resolve isso sem precisar corrigir o dado
-// legado em produção.
-const namesMatch = (a: string, b: string) => {
-  const na = normalizeText(a);
-  const nb = normalizeText(b);
-  return na === nb || na.includes(nb) || nb.includes(na);
-};
+// A matéria de cada item vem da questão oficial cadastrada para aquela PROVA: concurso + ano +
+// número do item (o mesmo número se repete entre anos, então o ano é parte da chave). O nome do
+// concurso na prova do aluno pode diferir do da questão (PF), por isso a forma canônica.
+const canonicalContest = (name: string) =>
+  name.toLocaleLowerCase("pt-BR").includes("agente de polícia federal") ? "Polícia Federal" : name;
 
 // Só conta como "matéria a intensificar" quando já há volume mínimo de itens
 // respondidos — com 1 questão, 0% ou 100% não diz nada sobre domínio real.
@@ -87,11 +80,11 @@ const WEAK_THRESHOLD = 60;
 
 function buildSubjectStats(
   groups: ExamGroup[],
-  subjectByCareer: Map<string, Record<string, string>>,
+  subjectByExam: Map<string, Record<string, string>>,
 ): SubjectStat[] {
   const bySubject = new Map<string, { correct: number; wrong: number }>();
   for (const group of groups) {
-    const subjectMap = subjectByCareer.get(group.contest_name);
+    const subjectMap = subjectByExam.get(group.key);
     if (!subjectMap) continue;
     for (const [itemNumber, verdict] of Object.entries(group.items)) {
       if (verdict === "anulada" || verdict === "branco") continue;
@@ -120,7 +113,7 @@ function buildSubjectStats(
 function PerformancePage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const [groups, setGroups] = React.useState<ExamGroup[]>([]);
-  const [subjectByCareer, setSubjectByCareer] = React.useState<Map<string, Record<string, string>>>(
+  const [subjectByExam, setSubjectByExam] = React.useState<Map<string, Record<string, string>>>(
     new Map(),
   );
   const [isLoading, setIsLoading] = React.useState(true);
@@ -135,18 +128,43 @@ function PerformancePage() {
       setIsLoading(true);
       setErrorMessage(null);
       try {
-        const [{ data: docs, error: docsError }, { data: questions, error: questionsError }] =
-          await Promise.all([
-            supabase
-              .from("student_exam_documents")
-              .select(
-                "contest_name,contest_year,correct_count,wrong_count,blank_count,score_net,score_raw,extracted_data",
-              )
-              .eq("user_id", user.id),
-            supabase.from("official_exam_questions").select("career_name,item_number,subject"),
-          ]);
+        const { data: docs, error: docsError } = await supabase
+          .from("student_exam_documents")
+          .select(
+            "contest_name,contest_year,correct_count,wrong_count,blank_count,score_net,score_raw,extracted_data",
+          )
+          .eq("user_id", user.id);
         if (docsError) throw docsError;
-        if (questionsError) throw questionsError;
+
+        // O PostgREST devolve no máximo 1000 linhas por consulta e o banco tem milhares de
+        // questões: busca só as dos concursos do aluno, em páginas.
+        const contestNames = Array.from(
+          new Set(
+            (docs || []).flatMap((doc) =>
+              doc.contest_name ? [doc.contest_name, canonicalContest(doc.contest_name)] : [],
+            ),
+          ),
+        );
+        const questions: {
+          contest_name: string;
+          exam_year: number;
+          item_number: number;
+          subject: string;
+        }[] = [];
+        const PAGE = 1000;
+        for (let from = 0; contestNames.length; from += PAGE) {
+          const { data: chunk, error: chunkError } = await supabase
+            .from("official_exam_questions")
+            .select("contest_name,exam_year,item_number,subject")
+            .in("contest_name", contestNames)
+            .order("contest_name")
+            .order("exam_year")
+            .order("item_number")
+            .range(from, from + PAGE - 1);
+          if (chunkError) throw chunkError;
+          questions.push(...(chunk || []));
+          if ((chunk || []).length < PAGE) break;
+        }
 
         const map = new Map<string, ExamGroup>();
         for (const doc of (docs || []) as ExamDoc[]) {
@@ -173,31 +191,19 @@ function PerformancePage() {
         }
         setGroups(Array.from(map.values()));
 
-        const careerNames = Array.from(
-          new Set(Array.from(map.values()).map((g) => g.contest_name)),
-        );
-        const officialCareerNames = Array.from(
-          new Set(
-            ((questions || []) as { career_name: string }[])
-              .map((q) => q.career_name)
-              .filter(Boolean),
-          ),
-        );
-        const nextSubjectByCareer = new Map<string, Record<string, string>>();
-        for (const contestName of careerNames) {
-          const matchedOfficialName = officialCareerNames.find((name) =>
-            namesMatch(name, contestName),
+        const nextSubjectByExam = new Map<string, Record<string, string>>();
+        for (const group of map.values()) {
+          const contest = canonicalContest(group.contest_name);
+          const rows = questions.filter(
+            (q) => q.contest_name === contest && String(q.exam_year) === group.contest_year,
           );
-          if (!matchedOfficialName) continue;
-          const rows = (
-            (questions || []) as { career_name: string; item_number: number; subject: string }[]
-          ).filter((q) => q.career_name === matchedOfficialName);
-          nextSubjectByCareer.set(
-            contestName,
-            Object.fromEntries(rows.map((r) => [String(r.item_number), r.subject])),
-          );
+          if (rows.length)
+            nextSubjectByExam.set(
+              group.key,
+              Object.fromEntries(rows.map((r) => [String(r.item_number), r.subject])),
+            );
         }
-        setSubjectByCareer(nextSubjectByCareer);
+        setSubjectByExam(nextSubjectByExam);
       } catch (error) {
         console.error("Falha ao montar o raio-X de desempenho", error);
         setErrorMessage(
@@ -238,14 +244,14 @@ function PerformancePage() {
   const totalWrong = groups.reduce((sum, g) => sum + metric(g.wrong), 0);
   const globalAccuracy =
     totalCorrect + totalWrong ? Math.round((totalCorrect / (totalCorrect + totalWrong)) * 100) : 0;
-  const globalSubjects = buildSubjectStats(groups, subjectByCareer);
+  const globalSubjects = buildSubjectStats(groups, subjectByExam);
   const weakSubjects = globalSubjects.filter(
     (s) => s.total >= MIN_ITEMS_FOR_SIGNAL && s.accuracy < WEAK_THRESHOLD,
   );
-  const contestsWithSubjectData = groups.filter((g) => subjectByCareer.has(g.contest_name)).length;
+  const contestsWithSubjectData = groups.filter((g) => subjectByExam.has(g.key)).length;
 
   const federalGroups = groups.filter((g) => careerByAgency(g.contest_name)?.tier === "federal");
-  const federalSubjects = buildSubjectStats(federalGroups, subjectByCareer);
+  const federalSubjects = buildSubjectStats(federalGroups, subjectByExam);
   const federalWeak = federalSubjects.filter(
     (s) => s.total >= MIN_ITEMS_FOR_SIGNAL && s.accuracy < WEAK_THRESHOLD,
   );
@@ -329,14 +335,16 @@ function PerformancePage() {
                     ? Math.round((metric(group.correct) / answered) * 100)
                     : 0;
                   return (
-                    <div key={group.key} className="flex items-center gap-3 text-sm">
-                      <span
-                        className="w-56 shrink-0 truncate font-semibold"
-                        title={group.contest_name}
-                      >
-                        {group.contest_name} — {group.contest_year}
-                      </span>
-                      <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
+                    <div key={group.key} className="space-y-1.5 text-sm">
+                      <div className="flex items-baseline justify-between gap-3">
+                        <span className="min-w-0 font-semibold leading-snug">
+                          {group.contest_name} — {group.contest_year}
+                        </span>
+                        <span className="shrink-0 text-right text-xs text-muted-foreground">
+                          {metric(group.correct)}/{answered} ({accuracy}%)
+                        </span>
+                      </div>
+                      <div className="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
                         <div
                           className={cn(
                             "h-full rounded-full",
@@ -349,9 +357,6 @@ function PerformancePage() {
                           style={{ width: `${accuracy}%` }}
                         />
                       </div>
-                      <span className="w-28 shrink-0 text-right text-muted-foreground">
-                        {metric(group.correct)}/{answered} ({accuracy}%)
-                      </span>
                     </div>
                   );
                 })}
@@ -394,6 +399,30 @@ function PerformancePage() {
               <SubjectTable subjects={globalSubjects} />
             </>
           )}
+
+          <section className="space-y-4">
+            <div>
+              <h2 className="text-xl font-black text-primary">Raio-X de cada prova</h2>
+              <p className="text-sm text-muted-foreground">
+                Disciplina por disciplina, separado por concurso. Para ver as questões que você
+                errou, abra a correção da prova.
+              </p>
+            </div>
+            {[...groups]
+              .sort(
+                (a, b) =>
+                  a.contest_name.localeCompare(b.contest_name) ||
+                  a.contest_year.localeCompare(b.contest_year),
+              )
+              .map((group) => (
+                <ExamXrayCard
+                  key={group.key}
+                  group={group}
+                  stats={buildSubjectStats([group], subjectByExam)}
+                  hasQuestionBank={subjectByExam.has(group.key)}
+                />
+              ))}
+          </section>
         </TabsContent>
 
         <TabsContent value="federal" className="space-y-6">
@@ -632,6 +661,79 @@ function SubjectTable({ subjects }: { subjects: SubjectStat[] }) {
         ))}
       </CardContent>
     </Card>
+  );
+}
+
+function ExamXrayCard({
+  group,
+  stats,
+  hasQuestionBank,
+}: {
+  group: ExamGroup;
+  stats: SubjectStat[];
+  hasQuestionBank: boolean;
+}) {
+  const answered = metric(group.correct) + metric(group.wrong);
+  const accuracy = answered ? Math.round((metric(group.correct) / answered) * 100) : 0;
+  const mapped = stats.reduce((sum, s) => sum + s.total, 0);
+  return (
+    <Card>
+      <CardHeader className="pb-3">
+        <CardTitle className="flex flex-wrap items-center justify-between gap-2 text-base">
+          <span>
+            {group.contest_name} — {group.contest_year}
+          </span>
+          <span className="text-sm font-black text-primary">
+            {metric(group.correct)}/{answered} ({accuracy}%)
+          </span>
+        </CardTitle>
+        <CardDescription>
+          {hasQuestionBank
+            ? `${mapped} item(ns) respondidos com disciplina cadastrada.`
+            : "As questões desta prova ainda não têm disciplina cadastrada; o aproveitamento geral acima continua válido."}
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-3">
+        {stats.length > 0 && <SubjectRows subjects={stats} />}
+        <Link
+          to="/dashboard/student-exams"
+          search={{ career: group.contest_name }}
+          className="inline-block text-xs font-bold text-emerald-700 hover:underline"
+        >
+          Ver as questões e a correção desta prova →
+        </Link>
+      </CardContent>
+    </Card>
+  );
+}
+
+function SubjectRows({ subjects }: { subjects: SubjectStat[] }) {
+  return (
+    <>
+      {subjects.map((s) => (
+        <div key={s.subject} className="space-y-1 text-xs">
+          <div className="flex items-baseline justify-between gap-3">
+            <span className="min-w-0 font-semibold leading-snug">{s.subject}</span>
+            <span className="shrink-0 text-muted-foreground">
+              {s.correct}/{s.total} ({s.accuracy}%)
+            </span>
+          </div>
+          <div className="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
+            <div
+              className={cn(
+                "h-full rounded-full",
+                s.accuracy < 50
+                  ? "bg-rose-500"
+                  : s.accuracy < 75
+                    ? "bg-amber-500"
+                    : "bg-emerald-500",
+              )}
+              style={{ width: `${s.accuracy}%` }}
+            />
+          </div>
+        </div>
+      ))}
+    </>
   );
 }
 
