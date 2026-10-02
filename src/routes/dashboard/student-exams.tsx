@@ -392,7 +392,7 @@ function StudentExamIntelligence() {
           tone={evolution >= 0 ? "emerald" : "rose"}
         />
       </section>
-      <Timeline groups={attempts} />
+      <Timeline groups={groups} />
       <section className="space-y-4">
         <div>
           <h2 className="text-xl font-black text-primary">Desempenho por concurso</h2>
@@ -486,28 +486,40 @@ function Timeline({ groups }: { groups: ExamGroup[] }) {
       <CardContent className="overflow-x-auto pb-6">
         <div className="flex min-w-max items-start gap-0">
           {groups.map((group, index) => {
-            const accuracy = examAccuracy(group);
-            const previous = index ? examAccuracy(groups[index - 1]!) : null;
-            const delta = previous === null ? null : accuracy - previous;
+            const graded = group.correct + group.wrong + group.blank > 0;
+            const accuracy = graded ? examAccuracy(group) : null;
+            const previousGraded = groups
+              .slice(0, index)
+              .reverse()
+              .find((item) => item.correct + item.wrong + item.blank > 0);
+            const delta =
+              accuracy === null || !previousGraded ? null : accuracy - examAccuracy(previousGraded);
             return (
               <div key={group.key} className="relative w-44 px-3 text-center">
                 <div className="absolute left-0 right-0 top-5 h-0.5 bg-slate-200" />
                 <div
                   className={cn(
                     "relative mx-auto flex h-11 w-11 items-center justify-center rounded-full border-4 border-background text-xs font-black text-white",
-                    accuracy >= 70
-                      ? "bg-emerald-500"
-                      : accuracy >= 50
-                        ? "bg-amber-500"
-                        : "bg-rose-500",
+                    accuracy === null
+                      ? "bg-slate-400"
+                      : accuracy >= 70
+                        ? "bg-emerald-500"
+                        : accuracy >= 50
+                          ? "bg-amber-500"
+                          : "bg-rose-500",
                   )}
                 >
-                  {accuracy}%
+                  {accuracy === null ? "—" : `${accuracy}%`}
                 </div>
                 <p className="mt-3 text-sm font-black">{group.year}</p>
                 <p className="mt-1 line-clamp-2 text-[11px] text-muted-foreground">
                   {group.contest}
                 </p>
+                {accuracy === null && (
+                  <Badge variant="outline" className="mt-2 text-[10px] text-slate-600">
+                    sem resultado
+                  </Badge>
+                )}
                 {delta !== null && (
                   <Badge
                     variant="outline"
