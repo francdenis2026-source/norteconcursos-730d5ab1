@@ -31,6 +31,7 @@ import {
   Trophy,
   User,
   Medal,
+  Radar,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -75,6 +76,7 @@ const MENU: MenuItem[] = [
   { group: "Objetivo", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
   { group: "Objetivo", label: "Catálogo de concursos", icon: Search, href: "/dashboard/questions" },
   { group: "Treinamento", label: "Edital eletrônico", icon: MapPin, href: "/dashboard/edital" },
+  { group: "Treinamento", label: "Raio-X dos editais", icon: Radar, href: "/dashboard/edital-radar" },
   { group: "Treinamento", label: "Biblioteca de estudo", icon: Library, href: "/dashboard/library" },
   {
     group: "Treinamento",
