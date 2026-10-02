@@ -26,6 +26,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { AgenteContabilidadePlan } from "@/components/dashboard/AgenteContabilidadePlan";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/study-plan")({ component: StudyPlanPage });
@@ -535,6 +536,7 @@ function StudyPlanPage() {
           </Card>
         </div>
       </section>
+      {career === "PF" && <AgenteContabilidadePlan attempts={attempts} />}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
