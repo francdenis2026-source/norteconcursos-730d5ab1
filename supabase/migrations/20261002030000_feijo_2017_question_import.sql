@@ -99,7 +99,7 @@ select
 from imported
 cross join sources
 join topics on topics.discipline = imported.subject
-on conflict (contest_name, exam_year, item_number) do update set
+on conflict (contest_name, career_name, exam_year, item_number) do update set
   subject = excluded.subject,
   question_text = excluded.question_text,
   raw_extraction = excluded.raw_extraction,
