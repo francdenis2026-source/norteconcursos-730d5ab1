@@ -26,6 +26,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AddExamDialog } from "@/components/dashboard/AddExamDialog";
+import {
+  ContestPlanCard,
+  type PlanEdition,
+  type WeakItem,
+} from "@/components/dashboard/ContestPlanCard";
 import { ExamPhotoUploader } from "@/components/dashboard/ExamPhotoUploader";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { canRegisterExams } from "@/lib/subscriptions.config";
@@ -200,6 +205,7 @@ function StudentExamIntelligence() {
   const [rows, setRows] = React.useState<ExamRow[]>([]);
   const [questions, setQuestions] = React.useState<Map<string, QuestionReference>>(new Map());
   const [syllabus, setSyllabus] = React.useState<Map<string, string[]>>(new Map());
+  const [cutoffs, setCutoffs] = React.useState<Map<string, number>>(new Map());
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
   const [selectedExam, setSelectedExam] = React.useState<string>(ALL_CONTESTS);
@@ -243,7 +249,7 @@ function StudentExamIntelligence() {
           const { data: chunk, error: chunkError } = await supabase
             .from("official_exam_questions")
             .select(
-              "contest_name,exam_year,item_number,subject,question_text,official_answer,review_note,legal_basis,content_status",
+              "contest_name,career_name,exam_year,item_number,subject,question_text,official_answer,review_note,legal_basis,content_status",
             )
             .eq("content_status", "active")
             .in("contest_name", contestNames)
@@ -255,7 +261,58 @@ function StudentExamIntelligence() {
           officialRows.push(...((chunk || []) as Array<Record<string, unknown>>));
           if ((chunk || []).length < PAGE) break;
         }
-        const officialResult = { data: officialRows };
+        // Um mesmo concurso/ano pode ter vários cargos com os mesmos números de item (PF 2021 e 2025:
+        // Agente, Escrivão, Delegado, Papiloscopista). Fica só a questão do cargo da prova do aluno;
+        // se houver vários cargos e nenhum for o dele, não adivinha a disciplina.
+        const studentContestNames = Array.from(
+          new Set((examResult.data || []).map((row) => String(row.contest_name || "Concurso"))),
+        );
+        const norm = (text: string) =>
+          text
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLocaleLowerCase("pt-BR")
+            .replace(/\s+/g, " ")
+            .trim();
+        const careerMatches = (career: string) =>
+          studentContestNames.some((name) => {
+            const a = norm(name);
+            const b = norm(career);
+            return a === b || a.includes(b) || b.includes(a);
+          });
+        const rowsByItem = new Map<string, Array<Record<string, unknown>>>();
+        for (const raw of officialRows) {
+          const key = questionKey(
+            String(raw["contest_name"] || "Concurso"),
+            String(raw["exam_year"] || ""),
+            Number(raw["item_number"] || 0),
+          );
+          rowsByItem.set(key, [...(rowsByItem.get(key) ?? []), raw]);
+        }
+        const resolvedOfficial: Array<Record<string, unknown>> = [];
+        for (const rows of rowsByItem.values()) {
+          const careers = new Set(rows.map((row) => String(row["career_name"] ?? "")));
+          if (careers.size <= 1) resolvedOfficial.push(...rows);
+          else
+            resolvedOfficial.push(
+              ...rows.filter((row) => careerMatches(String(row["career_name"] ?? ""))),
+            );
+        }
+        const officialResult = { data: resolvedOfficial };
+
+        // Notas de corte cadastradas por concurso/ano (complementar: sem elas não há plano de nota).
+        const cutoffMap = new Map<string, number>();
+        try {
+          const refs = await supabase
+            .from("contest_reference_info")
+            .select("contest_name,contest_year,cutoff_score")
+            .in("contest_name", studentContestNames);
+          for (const ref of refs.data ?? [])
+            if (ref.cutoff_score !== null)
+              cutoffMap.set(`${ref.contest_name}__${ref.contest_year}`, Number(ref.cutoff_score));
+        } catch (cutoffError) {
+          console.warn("Não foi possível carregar as notas de corte", cutoffError);
+        }
         const personalResult = await supabase
           .from("question_bank")
           .select(
@@ -349,6 +406,7 @@ function StudentExamIntelligence() {
         setRows((examResult.data || []) as ExamRow[]);
         setQuestions(referenceMap);
         setSyllabus(syllabusMap);
+        setCutoffs(cutoffMap);
       } catch (loadError) {
         console.error("Falha ao carregar inteligência de provas", loadError);
         if (active)
@@ -540,6 +598,56 @@ function StudentExamIntelligence() {
     });
   };
 
+  // Raio-X de TODAS as edições de cada concurso (ex.: PF 2014+2018+2021+2025) e plano até o corte.
+  const families = contests
+    .map((contest) => {
+      const list = groups.filter((group) => group.contest === contest);
+      const report = computeSubjectReport(list, questions, syllabus);
+      const weakItems: WeakItem[] = list.flatMap((group) =>
+        Object.entries(group.analysis?.items || {}).flatMap(([itemText, verdict]) => {
+          if (verdict !== "errada" && verdict !== "branco") return [];
+          const reference = questions.get(
+            questionKey(group.canonicalContest, group.year, Number(itemText)),
+          );
+          return [
+            {
+              edition: group.year,
+              item: Number(itemText),
+              verdict,
+              subject: reference?.subject ?? UNCLASSIFIED,
+            },
+          ];
+        }),
+      );
+      const editions: PlanEdition[] = list.map((group) => ({
+        key: group.key,
+        year: group.year,
+        correct: group.correct,
+        wrong: group.wrong,
+        blank: group.blank,
+        net: group.score
+          ? group.score
+          : group.correct + group.wrong > 0
+            ? group.correct - group.wrong
+            : null,
+        cutoff: cutoffs.get(`${group.contest}__${group.year}`) ?? null,
+        hasItems: Object.keys(group.analysis?.items || {}).length > 0,
+      }));
+      return {
+        contest,
+        editions,
+        subjects: report.metrics,
+        weakItems,
+        cebraspe: list.some((group) => /cebraspe/i.test(group.board)),
+        hasCutoff: editions.some((edition) => edition.cutoff !== null),
+      };
+    })
+    .filter((family) => family.editions.some((e) => e.correct + e.wrong + e.blank > 0))
+    .sort(
+      (a, b) =>
+        Number(b.hasCutoff) - Number(a.hasCutoff) || a.contest.localeCompare(b.contest, "pt-BR"),
+    );
+
   const selectExam = (key: string) => {
     if (key === selectedExam) {
       setSelectedExam(ALL_CONTESTS);
@@ -631,6 +739,27 @@ function StudentExamIntelligence() {
               setOpenExam(null);
               setReloadKey((value) => value + 1);
             }}
+          />
+        ))}
+      </section>
+      <section className="space-y-4">
+        <div>
+          <h2 className="text-xl font-black text-primary">Raio-X e plano por concurso</h2>
+          <p className="text-sm text-muted-foreground">
+            Todas as edições de cada concurso juntas (por exemplo PF 2014, 2018, 2021 e 2025), com o
+            mapa dos seus erros e questões em branco e o caminho até a nota de corte.
+          </p>
+        </div>
+        {families.map((family) => (
+          <ContestPlanCard
+            key={family.contest}
+            contest={family.contest}
+            editions={family.editions}
+            subjects={family.subjects}
+            weakItems={family.weakItems}
+            cebraspe={family.cebraspe}
+            unclassifiedLabel={UNCLASSIFIED}
+            defaultOpen={family.hasCutoff}
           />
         ))}
       </section>
@@ -1041,12 +1170,26 @@ function ContestCard({
             />
             <ScoreBox icon={Target} label="Pontuação" value={group.score} tone="text-primary" />
           </div>
-          <DisciplineAnalysis
-            embedded
-            report={computeSubjectReport([group], references, syllabus)}
-            title="Raio-X desta prova"
-            scope={`Todas as disciplinas cobradas em ${group.contest} — ${group.year}, só desta prova.`}
-          />
+          {Object.keys(group.analysis?.items || {}).length === 0 &&
+          group.correct + group.wrong > 0 ? (
+            <div className="rounded-xl border border-dashed bg-background p-4 text-sm text-muted-foreground">
+              Esta prova foi cadastrada pelo resultado oficial ({group.correct} acertos,{" "}
+              {group.wrong} erros, nota {group.score}) e não tem detalhamento por questão, por isso
+              não há Raio-X por disciplina desta edição. Ela entra no Raio-X do concurso (todas as
+              edições) pelos totais e pela nota de corte, e as outras edições mostram as
+              disciplinas.
+            </div>
+          ) : (
+            <DisciplineAnalysis
+              embedded
+
+              report={computeSubjectReport([group], references, syllabus)}
+
+              title="Raio-X desta prova"
+
+              scope={`Todas as disciplinas cobradas em ${group.contest} — ${group.year}, só desta prova.`}
+            />
+          )}
           <div>
             <h3 className="mb-3 flex items-center gap-2 text-sm font-black">
               <BookOpenCheck className="h-4 w-4" /> Como corrigir erros e omissões
