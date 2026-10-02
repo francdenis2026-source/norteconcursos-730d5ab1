@@ -14,6 +14,7 @@ export type StudyMaterialSummary = {
   title: string;
   summary: string | null;
   contest_name: string | null;
+  syllabus_topic_order: number | null;
   law_version_checked_at: string | null;
   content_status: StudyMaterialStatus;
 };
@@ -27,13 +28,12 @@ export type StudyMaterial = StudyMaterialSummary & {
   body_md: string;
   source_note: string;
   legal_basis: StudyMaterialSource[];
-  syllabus_topic_order: number | null;
   reviewed_at: string | null;
   updated_at: string;
 };
 
 const SUMMARY_COLUMNS =
-  "id,slug,discipline,topic_label,sort_order,title,summary,contest_name,law_version_checked_at,content_status";
+  "id,slug,discipline,topic_label,sort_order,title,summary,contest_name,syllabus_topic_order,law_version_checked_at,content_status";
 
 export const STATUS_LABEL: Record<StudyMaterialStatus, string> = {
   under_review: "Em revisão",
@@ -70,7 +70,7 @@ export function useStudyMaterial(slug: string, enabled: boolean) {
       const { data, error } = await supabase
         .from("study_materials")
         .select(
-          `${SUMMARY_COLUMNS},flashcards,quiz,body_md,source_note,legal_basis,syllabus_topic_order,reviewed_at,updated_at`,
+          `${SUMMARY_COLUMNS},flashcards,quiz,body_md,source_note,legal_basis,reviewed_at,updated_at`,
         )
         .eq("slug", slug)
         .eq("content_status", "active")
@@ -104,4 +104,48 @@ export function slugify(value: string) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 80);
+}
+
+/**
+ * Materiais de uma matéria agrupados pelo tópico do edital a que respondem (syllabus_topic_order),
+ * em ordem de estudo. Sem ordem de edital, tudo cai em um único grupo (order = null).
+ */
+export function groupByEditalTopic(items: StudyMaterialSummary[]) {
+  const map = new Map<number | null, StudyMaterialSummary[]>();
+  for (const item of items) {
+    const key = item.syllabus_topic_order ?? null;
+    map.set(key, [...(map.get(key) ?? []), item]);
+  }
+  return Array.from(map.entries())
+    .sort((a, b) => (a[0] ?? 9999) - (b[0] ?? 9999))
+    .map(([order, list]) => ({
+      order,
+      items: [...list].sort((a, b) => a.sort_order - b.sort_order),
+    }));
+}
+
+const READ_KEY = "norte-library-read";
+
+/** Materiais já abertos neste navegador (conveniência local, não é dado do aluno no servidor). */
+export function readSlugs(): Set<string> {
+  try {
+    const raw = localStorage.getItem(READ_KEY);
+    const parsed: unknown = raw ? JSON.parse(raw) : [];
+    return new Set(
+      Array.isArray(parsed) ? parsed.filter((v): v is string => typeof v === "string") : [],
+    );
+  } catch {
+    return new Set();
+  }
+}
+
+export function markSlugRead(slug: string) {
+  try {
+    const current = readSlugs();
+    if (current.has(slug)) return;
+    current.add(slug);
+    localStorage.setItem(READ_KEY, JSON.stringify([...current]));
+  } catch {
+    // sem armazenamento disponível: o marcador de lido simplesmente não persiste
+  }
 }
