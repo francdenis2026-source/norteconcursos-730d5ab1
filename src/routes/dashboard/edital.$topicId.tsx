@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import { ArrowLeft, BookOpenCheck, GraduationCap, Layers3, Loader2, Scale } from "lucide-react";
@@ -93,7 +94,7 @@ function TopicPage() {
             .map((row) => ({
               id: String(row["id"]),
               subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
-              subject: String(row["subject"]),
+              subject: canonicalSubject(String(row["subject"])),
               explanation: String(row["explanation"]),
               legalBasis: parseBasis(row["legal_basis"]),
               difficulty: String(row["difficulty"] || "média"),

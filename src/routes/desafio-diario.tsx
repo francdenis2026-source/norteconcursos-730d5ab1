@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -99,7 +100,7 @@ function DesafioDiario() {
             year: String(row["exam_year"]),
             career: String(row["career_name"] || "Carreira policial"),
             board: String(row["exam_board"] || "CEBRASPE"),
-            subject: String(row["subject"]),
+            subject: canonicalSubject(String(row["subject"])),
             subtopic: null,
             text: String(row["question_text"]),
             answer: String(row["official_answer"]) as Answer,

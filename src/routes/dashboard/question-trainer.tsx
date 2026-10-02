@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import * as React from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
@@ -212,7 +213,7 @@ function QuestionTrainer() {
             year: String(row["exam_year"]),
             career: String(row["career_name"] || "Carreira policial"),
             board: String(row["exam_board"] || "CEBRASPE"),
-            subject: String(row["subject"]),
+            subject: canonicalSubject(String(row["subject"])),
             subtopic: null,
             text: String(row["question_text"]),
             answer: String(row["official_answer"]) as Answer,
@@ -235,7 +236,7 @@ function QuestionTrainer() {
             year: String(row["contest_year"]),
             career: String(row["career_name"] || "Carreira policial"),
             board: String(row["exam_board"] || "Banca"),
-            subject: String(row["subject"]),
+            subject: canonicalSubject(String(row["subject"])),
             subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
             text: String(row["question_text"]),
             answer: String(row["official_answer"]) as Answer,
@@ -258,7 +259,7 @@ function QuestionTrainer() {
               kind: parseQuestion(String(row["question_text"])).options.length
                 ? ("multiple_choice" as const)
                 : ("true_false" as const),
-              subject: String(row["subject"]),
+              subject: canonicalSubject(String(row["subject"])),
               subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
               text: String(row["question_text"]),
               answer: String(row["official_answer"]) as Answer,

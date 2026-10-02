@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
 import { isEligibleQuestion } from "@/lib/questionFormat";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -138,9 +139,10 @@ function EditalPage() {
   const byDiscipline = React.useMemo(() => {
     const map = new Map<string, Topic[]>();
     for (const t of topics) {
-      const list = map.get(t.discipline) || [];
+      const discipline = canonicalSubject(t.discipline);
+      const list = map.get(discipline) || [];
       list.push(t);
-      map.set(t.discipline, list);
+      map.set(discipline, list);
     }
     return Array.from(map.entries());
   }, [topics]);

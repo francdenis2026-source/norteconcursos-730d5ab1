@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
@@ -207,7 +208,7 @@ function ProfessionalSimulator() {
           year: Number(row["exam_year"]),
           career: String(row["career_name"]),
           board: String(row["exam_board"]),
-          subject: String(row["subject"]),
+          subject: canonicalSubject(String(row["subject"])),
           subtopic: null,
           itemNumber: Number(row["item_number"]),
           text: String(row["question_text"]),
@@ -227,7 +228,7 @@ function ProfessionalSimulator() {
           year: Number(row["contest_year"]),
           career: String(row["career_name"]),
           board: String(row["exam_board"]),
-          subject: String(row["subject"]),
+          subject: canonicalSubject(String(row["subject"])),
           subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
           itemNumber: null,
           text: String(row["question_text"]),
