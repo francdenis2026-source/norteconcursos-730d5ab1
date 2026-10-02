@@ -102,6 +102,8 @@ interface SubjectMetric {
   blank: number;
   total: number;
   accuracy: number;
+  // Questões desta disciplina cadastradas para a prova (mesmo as que o aluno não respondeu).
+  catalog?: number;
 }
 
 const canonicalContest = (name: string) =>
@@ -113,6 +115,7 @@ const questionKey = (contest: string, year: string, item: number) =>
   `${canonicalContest(contest)}__${year}__${item}`;
 
 const UNCLASSIFIED = "Sem disciplina cadastrada";
+const ALL_CONTESTS = "__todos__";
 
 interface SubjectReport {
   metrics: SubjectMetric[];
@@ -126,8 +129,31 @@ interface SubjectReport {
 function computeSubjectReport(
   groups: ExamGroup[],
   references: Map<string, QuestionReference>,
+  syllabus: Map<string, string[]> = new Map(),
 ): SubjectReport {
   const map = new Map<string, SubjectMetric>();
+  const metricFor = (subject: string) => {
+    const existing = map.get(subject);
+    if (existing) return existing;
+    const created: SubjectMetric = {
+      subject,
+      correct: 0,
+      wrong: 0,
+      blank: 0,
+      total: 0,
+      accuracy: 0,
+    };
+    map.set(subject, created);
+    return created;
+  };
+  // Disciplinas e nº de questões cadastradas de cada prova (concurso + ano).
+  const catalogByExam = new Map<string, Map<string, number>>();
+  for (const reference of references.values()) {
+    const examKey = `${canonicalContest(reference.contest)}__${reference.year}`;
+    const subjects = catalogByExam.get(examKey) ?? new Map<string, number>();
+    subjects.set(reference.subject, (subjects.get(reference.subject) ?? 0) + 1);
+    catalogByExam.set(examKey, subjects);
+  }
   let counted = 0;
   let mapped = 0;
   for (const group of groups) {
@@ -136,30 +162,29 @@ function computeSubjectReport(
       const reference = references.get(
         questionKey(group.canonicalContest, group.year, Number(itemText)),
       );
-      const subject = reference?.subject ?? UNCLASSIFIED;
-      const metric = map.get(subject) || {
-        subject,
-        correct: 0,
-        wrong: 0,
-        blank: 0,
-        total: 0,
-        accuracy: 0,
-      };
+      const metric = metricFor(reference?.subject ?? UNCLASSIFIED);
       if (verdict === "correta") metric.correct += 1;
       if (verdict === "errada") metric.wrong += 1;
       if (verdict === "branco") metric.blank += 1;
       metric.total += 1;
       metric.accuracy = percent(metric.correct, metric.correct + metric.wrong);
-      map.set(subject, metric);
       counted += 1;
       if (reference) mapped += 1;
     }
+    // Toda disciplina cobrada na prova aparece, mesmo sem item respondido: as que têm questão
+    // cadastrada e as listadas no edital do concurso.
+    const examKey = `${group.canonicalContest}__${group.year}`;
+    for (const [subject, count] of catalogByExam.get(examKey) ?? [])
+      metricFor(subject).catalog = (metricFor(subject).catalog ?? 0) + count;
+    for (const subject of syllabus.get(examKey) ?? []) metricFor(subject);
   }
   const metrics = Array.from(map.values()).sort(
     (a, b) =>
       Number(a.subject === UNCLASSIFIED) - Number(b.subject === UNCLASSIFIED) ||
+      Number(a.total === 0) - Number(b.total === 0) ||
       a.accuracy - b.accuracy ||
-      b.total - a.total,
+      b.total - a.total ||
+      a.subject.localeCompare(b.subject, "pt-BR"),
   );
   return { metrics, counted, mapped };
 }
@@ -168,6 +193,7 @@ function StudentExamIntelligence() {
   const { career } = Route.useSearch();
   const [rows, setRows] = React.useState<ExamRow[]>([]);
   const [questions, setQuestions] = React.useState<Map<string, QuestionReference>>(new Map());
+  const [syllabus, setSyllabus] = React.useState<Map<string, string[]>>(new Map());
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
   const [selectedContest, setSelectedContest] = React.useState<string | null>(null);
@@ -272,9 +298,51 @@ function StudentExamIntelligence() {
           });
         }
 
+        // Disciplinas cobradas em cada concurso segundo o edital cadastrado. É complementar: se não
+        // houver edital, a tela segue só com as questões.
+        const syllabusMap = new Map<string, string[]>();
+        try {
+          const editions = await supabase
+            .from("syllabus_editions")
+            .select("id,contest_name,contest_year")
+            .in("contest_name", contestNames);
+          const editionRows = editions.error ? [] : (editions.data ?? []);
+          if (editionRows.length) {
+            const keyByEdition = new Map(
+              editionRows.map((edition) => [
+                edition.id,
+                `${canonicalContest(edition.contest_name)}__${edition.contest_year}`,
+              ]),
+            );
+            const editionIds = editionRows.map((edition) => edition.id);
+            for (let from = 0; ; from += PAGE) {
+              const { data: chunk, error: topicError } = await supabase
+                .from("syllabus_topics")
+                .select("edition_id,discipline")
+                .in("edition_id", editionIds)
+                .order("edition_id")
+                .order("discipline")
+                .range(from, from + PAGE - 1);
+              if (topicError) break;
+              for (const topic of chunk ?? []) {
+                const key = keyByEdition.get(topic.edition_id);
+                if (!key) continue;
+                const discipline = canonicalSubject(topic.discipline);
+                const list = syllabusMap.get(key) ?? [];
+                if (discipline && !list.includes(discipline)) list.push(discipline);
+                syllabusMap.set(key, list);
+              }
+              if ((chunk ?? []).length < PAGE) break;
+            }
+          }
+        } catch (syllabusError) {
+          console.warn("Não foi possível carregar as disciplinas do edital", syllabusError);
+        }
+
         if (!active) return;
         setRows((examResult.data || []) as ExamRow[]);
         setQuestions(referenceMap);
+        setSyllabus(syllabusMap);
       } catch (loadError) {
         console.error("Falha ao carregar inteligência de provas", loadError);
         if (active)
@@ -344,19 +412,15 @@ function StudentExamIntelligence() {
     setSelectedContest(
       (current) =>
         requested ||
-        (current && groups.some((group) => group.contest === current)
+        (current && (current === ALL_CONTESTS || groups.some((group) => group.contest === current))
           ? current
           : groups.at(-1)?.contest || null),
     );
   }, [groups, career]);
 
   const overallReport = React.useMemo(
-    () => computeSubjectReport(groups, questions),
-    [groups, questions],
-  );
-  const subjectMetrics = React.useMemo(
-    () => overallReport.metrics.filter((metric) => metric.subject !== UNCLASSIFIED),
-    [overallReport],
+    () => computeSubjectReport(groups, questions, syllabus),
+    [groups, questions, syllabus],
   );
 
   if (loading) return <LoadingState />;
@@ -377,21 +441,33 @@ function StudentExamIntelligence() {
     );
 
   const attempts = groups.filter((group) => group.correct + group.wrong + group.blank > 0);
-  const totalCorrect = attempts.reduce((sum, group) => sum + group.correct, 0);
-  const totalWrong = attempts.reduce((sum, group) => sum + group.wrong, 0);
-  const totalBlank = attempts.reduce((sum, group) => sum + group.blank, 0);
+  const contests = Array.from(new Set(groups.map((group) => group.contest)));
+  const allSelected = selectedContest === ALL_CONTESTS;
+  const selectedGroups = allSelected
+    ? groups
+    : groups.filter((group) => group.contest === selectedContest);
+  // Métricas, plano de ação e destaques seguem o concurso escolhido (ou todos).
+  const scopeAttempts = selectedGroups.filter(
+    (group) => group.correct + group.wrong + group.blank > 0,
+  );
+  const scopeLabel = allSelected ? "Todos os concursos" : (selectedContest ?? "");
+  const totalCorrect = scopeAttempts.reduce((sum, group) => sum + group.correct, 0);
+  const totalWrong = scopeAttempts.reduce((sum, group) => sum + group.wrong, 0);
+  const totalBlank = scopeAttempts.reduce((sum, group) => sum + group.blank, 0);
   const totalItems = totalCorrect + totalWrong + totalBlank;
   const responseAccuracy = percent(totalCorrect, totalCorrect + totalWrong);
   const omissionRate = percent(totalBlank, totalItems);
-  const bestAttempt = [...attempts].sort((a, b) => examAccuracy(b) - examAccuracy(a))[0];
-  const firstAttempt = attempts[0];
-  const latestAttempt = attempts.at(-1);
+  const bestAttempt = [...scopeAttempts].sort((a, b) => examAccuracy(b) - examAccuracy(a))[0];
+  const firstAttempt = scopeAttempts[0];
+  const latestAttempt = scopeAttempts.at(-1);
   const evolution =
     latestAttempt && firstAttempt ? examAccuracy(latestAttempt) - examAccuracy(firstAttempt) : 0;
-  const contests = Array.from(new Set(groups.map((group) => group.contest)));
-  const selectedGroups = groups.filter((group) => group.contest === selectedContest);
-  const weakest = subjectMetrics[0];
-  const strongest = [...subjectMetrics].sort(
+  const scopeReport = computeSubjectReport(selectedGroups, questions, syllabus);
+  const scopeSubjects = scopeReport.metrics.filter(
+    (metric) => metric.subject !== UNCLASSIFIED && metric.total > 0,
+  );
+  const weakest = scopeSubjects[0];
+  const strongest = [...scopeSubjects].sort(
     (a, b) => b.accuracy - a.accuracy || b.total - a.total,
   )[0];
 
@@ -421,49 +497,27 @@ function StudentExamIntelligence() {
   return (
     <div className="space-y-7 pb-10">
       <Hero attempts={attempts.length} years={new Set(attempts.map((item) => item.year)).size} />
-      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <MetricCard
-          icon={Target}
-          label="Precisão ao responder"
-          value={`${responseAccuracy}%`}
-          detail={`${totalCorrect} acertos em ${totalCorrect + totalWrong} respondidas`}
-          tone="emerald"
-        />
-        <MetricCard
-          icon={CircleSlash2}
-          label="Taxa de omissão"
-          value={`${omissionRate}%`}
-          detail={`${totalBlank} itens deixados em branco`}
-          tone={omissionRate > 20 ? "rose" : "amber"}
-        />
-        <MetricCard
-          icon={Award}
-          label="Melhor desempenho"
-          value={`${bestAttempt ? examAccuracy(bestAttempt) : 0}%`}
-          detail={bestAttempt ? `${bestAttempt.contest} ${bestAttempt.year}` : "Sem dados"}
-          tone="navy"
-        />
-        <MetricCard
-          icon={evolution >= 0 ? TrendingUp : TrendingDown}
-          label="Evolução histórica"
-          value={`${evolution >= 0 ? "+" : ""}${evolution} p.p.`}
-          detail={
-            firstAttempt && latestAttempt
-              ? `${firstAttempt.year} → ${latestAttempt.year}`
-              : "Uma tentativa"
-          }
-          tone={evolution >= 0 ? "emerald" : "rose"}
-        />
-      </section>
       <Timeline groups={groups} />
       <section className="space-y-4">
         <div>
           <h2 className="text-xl font-black text-primary">Desempenho por concurso</h2>
           <p className="text-sm text-muted-foreground">
-            As métricas permanecem separadas por carreira e banca.
+            Escolha um concurso: as métricas, as disciplinas e as provas abaixo mudam com a escolha.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => setSelectedContest(ALL_CONTESTS)}
+            className={cn(
+              "rounded-full border px-4 py-2 text-xs font-bold transition",
+              allSelected
+                ? "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40"
+                : "border-slate-200 text-muted-foreground hover:border-emerald-300",
+            )}
+          >
+            Todos os concursos
+          </button>
           {contests.map((contest) => (
             <button
               key={contest}
@@ -480,11 +534,46 @@ function StudentExamIntelligence() {
             </button>
           ))}
         </div>
+        <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <MetricCard
+            icon={Target}
+            label="Precisão ao responder"
+            value={`${responseAccuracy}%`}
+            detail={`${scopeLabel}: ${totalCorrect} acertos em ${totalCorrect + totalWrong} respondidas`}
+            tone="emerald"
+          />
+          <MetricCard
+            icon={CircleSlash2}
+            label="Taxa de omissão"
+            value={`${omissionRate}%`}
+            detail={`${totalBlank} itens deixados em branco`}
+            tone={omissionRate > 20 ? "rose" : "amber"}
+          />
+          <MetricCard
+            icon={Award}
+            label="Melhor desempenho"
+            value={`${bestAttempt ? examAccuracy(bestAttempt) : 0}%`}
+            detail={bestAttempt ? `${bestAttempt.contest} ${bestAttempt.year}` : "Sem dados"}
+            tone="navy"
+          />
+          <MetricCard
+            icon={evolution >= 0 ? TrendingUp : TrendingDown}
+            label="Evolução histórica"
+            value={`${evolution >= 0 ? "+" : ""}${evolution} p.p.`}
+            detail={
+              firstAttempt && latestAttempt
+                ? `${firstAttempt.year} → ${latestAttempt.year}`
+                : "Uma tentativa"
+            }
+            tone={evolution >= 0 ? "emerald" : "rose"}
+          />
+        </section>
         {selectedGroups.map((group) => (
           <ContestCard
             key={group.key}
             group={group}
             references={questions}
+            syllabus={syllabus}
             open={openExam === group.key}
             pageUrls={pageUrls}
             onToggle={() => void toggleExam(group)}
@@ -499,7 +588,7 @@ function StudentExamIntelligence() {
         <DisciplineAnalysis
           report={overallReport}
           title="Raio-X geral — todos os concursos"
-          scope={`Soma de ${attempts.length} prova(s) já realizadas.`}
+          scope={`Soma de ${attempts.length} prova(s) já realizadas, com todas as disciplinas cobradas em cada concurso.`}
         />
         <ActionPlan
           weakest={weakest}
@@ -629,7 +718,7 @@ function DisciplineAnalysis({
         Number(a.subject === UNCLASSIFIED) - Number(b.subject === UNCLASSIFIED) ||
         b.total - a.total,
     )
-    .slice(0, 12);
+    .slice(0, embedded ? undefined : 20);
   const unmapped = report.counted - report.mapped;
   const text = (value: number, neutral: boolean) =>
     neutral
@@ -658,18 +747,23 @@ function DisciplineAnalysis({
                 <span className="truncate font-bold" title={item.subject}>
                   {item.subject}
                 </span>
-                <span className={cn("font-black", text(item.accuracy, neutral))}>
-                  {item.accuracy}%
+                <span
+                  className={cn("font-black", text(item.accuracy, neutral || item.total === 0))}
+                >
+                  {item.total === 0 ? "—" : `${item.accuracy}%`}
                 </span>
               </div>
               <div className="h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
                 <div
                   className={cn("h-full rounded-full", bar(item.accuracy, neutral))}
-                  style={{ width: `${item.accuracy}%` }}
+                  style={{ width: `${item.total === 0 ? 0 : item.accuracy}%` }}
                 />
               </div>
               <p className="mt-1 text-[10px] text-muted-foreground">
-                {item.correct} acertos · {item.wrong} erros · {item.blank} em branco
+                {item.total === 0
+                  ? "Cobrada nesta prova, sem itens seus classificados"
+                  : `${item.correct} acertos · ${item.wrong} erros · ${item.blank} em branco`}
+                {item.catalog ? ` · ${item.catalog} questão(ões) cadastrada(s)` : ""}
               </p>
             </div>
           );
@@ -762,6 +856,7 @@ function ActionPlan({
 function ContestCard({
   group,
   references,
+  syllabus,
   open,
   pageUrls,
   onToggle,
@@ -769,6 +864,7 @@ function ContestCard({
 }: {
   group: ExamGroup;
   references: Map<string, QuestionReference>;
+  syllabus: Map<string, string[]>;
   open: boolean;
   pageUrls: Record<string, string>;
   onToggle: () => void;
@@ -837,9 +933,9 @@ function ContestCard({
           </div>
           <DisciplineAnalysis
             embedded
-            report={computeSubjectReport([group], references)}
+            report={computeSubjectReport([group], references, syllabus)}
             title="Raio-X desta prova"
-            scope={`Disciplinas de ${group.contest} — ${group.year}, somente desta prova.`}
+            scope={`Todas as disciplinas cobradas em ${group.contest} — ${group.year}, só desta prova.`}
           />
           <div>
             <h3 className="mb-3 flex items-center gap-2 text-sm font-black">
