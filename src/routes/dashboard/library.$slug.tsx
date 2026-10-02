@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import {
   ArrowLeft,
@@ -17,7 +17,12 @@ import { StudyPractice } from "@/components/library/StudyPractice";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { isOfficialUrl } from "@/lib/questionFormat";
-import { readingMinutes, useStudyMaterial, useStudyMaterialList } from "@/lib/studyMaterials";
+import {
+  markSlugRead,
+  readingMinutes,
+  useStudyMaterial,
+  useStudyMaterialList,
+} from "@/lib/studyMaterials";
 
 export const Route = createFileRoute("/dashboard/library/$slug")({ component: MaterialPage });
 
@@ -27,6 +32,10 @@ function MaterialPage() {
   const signedIn = !!user && user.id !== "demo-user";
   const { data: material, isPending, isError } = useStudyMaterial(slug, signedIn);
   const { data: list } = useStudyMaterialList(signedIn);
+
+  useEffect(() => {
+    if (material) markSlugRead(material.slug);
+  }, [material]);
 
   const siblings = useMemo(() => {
     if (!material || !list) return { prev: null, next: null };
