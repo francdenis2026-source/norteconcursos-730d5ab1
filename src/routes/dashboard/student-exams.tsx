@@ -1,6 +1,6 @@
 import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   AlertTriangle,
   Award,
@@ -25,7 +25,10 @@ import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { AddExamDialog } from "@/components/dashboard/AddExamDialog";
 import { ExamPhotoUploader } from "@/components/dashboard/ExamPhotoUploader";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { canRegisterExams } from "@/lib/subscriptions.config";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/student-exams")({
@@ -191,6 +194,9 @@ function computeSubjectReport(
 
 function StudentExamIntelligence() {
   const { career } = Route.useSearch();
+  const { user } = useAuthStatus();
+  const canAdd =
+    !!user && user.id !== "demo-user" && canRegisterExams(user.subscription_tier, user.role);
   const [rows, setRows] = React.useState<ExamRow[]>([]);
   const [questions, setQuestions] = React.useState<Map<string, QuestionReference>>(new Map());
   const [syllabus, setSyllabus] = React.useState<Map<string, string[]>>(new Map());
@@ -435,9 +441,15 @@ function StudentExamIntelligence() {
   if (!groups.length)
     return (
       <EmptyState
-        title="Nenhuma prova encontrada"
-        description="Não há provas vinculadas à conta atualmente conectada."
-      />
+        title="Você ainda não cadastrou nenhuma prova"
+        description="Cadastre os concursos que você já fez para ver a linha do tempo, o Raio-X por disciplina e o seu rendimento."
+      >
+        <AddExamCard
+          user={user}
+          contestSuggestions={[]}
+          onChanged={() => setReloadKey((v) => v + 1)}
+        />
+      </EmptyState>
     );
 
   const attempts = groups.filter((group) => group.correct + group.wrong + group.blank > 0);
@@ -499,11 +511,19 @@ function StudentExamIntelligence() {
       <Hero attempts={attempts.length} years={new Set(attempts.map((item) => item.year)).size} />
       <Timeline groups={groups} />
       <section className="space-y-4">
-        <div>
-          <h2 className="text-xl font-black text-primary">Desempenho por concurso</h2>
-          <p className="text-sm text-muted-foreground">
-            Escolha um concurso: as métricas, as disciplinas e as provas abaixo mudam com a escolha.
-          </p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h2 className="text-xl font-black text-primary">Desempenho por concurso</h2>
+            <p className="text-sm text-muted-foreground">
+              Escolha um concurso: as métricas, as disciplinas e as provas abaixo mudam com a
+              escolha.
+            </p>
+          </div>
+          <AddExamCard
+            user={user}
+            contestSuggestions={contests}
+            onChanged={() => setReloadKey((v) => v + 1)}
+          />
         </div>
         <div className="flex flex-wrap gap-2">
           <button
@@ -574,6 +594,7 @@ function StudentExamIntelligence() {
             group={group}
             references={questions}
             syllabus={syllabus}
+            canUpload={canAdd}
             open={openExam === group.key}
             pageUrls={pageUrls}
             onToggle={() => void toggleExam(group)}
@@ -598,6 +619,45 @@ function StudentExamIntelligence() {
           blank={totalBlank}
         />
       </section>
+    </div>
+  );
+}
+
+function AddExamCard({
+  user,
+  contestSuggestions,
+  onChanged,
+}: {
+  user: {
+    id: string;
+    subscription_tier: Parameters<typeof canRegisterExams>[0];
+    role?: string;
+  } | null;
+  contestSuggestions: string[];
+  onChanged: () => void;
+}) {
+  if (!user || user.id === "demo-user") return null;
+  if (canRegisterExams(user.subscription_tier, user.role))
+    return (
+      <AddExamDialog
+        userId={user.id}
+        contestSuggestions={contestSuggestions}
+        onChanged={onChanged}
+      />
+    );
+  return (
+    <div className="max-w-sm rounded-2xl border border-dashed bg-background p-4 text-sm">
+      <p className="font-black">Cadastre e analise as suas provas</p>
+      <p className="mt-1 text-xs text-muted-foreground">
+        Este recurso faz parte do plano Premium: registrar os concursos que você já fez, enviar as
+        fotos e acompanhar o seu rendimento por disciplina.
+      </p>
+      <Link
+        to="/dashboard/profile"
+        className="mt-2 inline-block text-xs font-bold text-emerald-700 hover:underline"
+      >
+        Ver os planos →
+      </Link>
     </div>
   );
 }
@@ -857,6 +917,7 @@ function ContestCard({
   group,
   references,
   syllabus,
+  canUpload,
   open,
   pageUrls,
   onToggle,
@@ -865,6 +926,7 @@ function ContestCard({
   group: ExamGroup;
   references: Map<string, QuestionReference>;
   syllabus: Map<string, string[]>;
+  canUpload: boolean;
   open: boolean;
   pageUrls: Record<string, string>;
   onToggle: () => void;
@@ -990,13 +1052,15 @@ function ContestCard({
               </div>
             )}
           </div>
-          <ExamPhotoUploader
-            contest={group.contest}
-            year={group.year}
-            board={group.board}
-            existingPages={group.pages.length}
-            onUploaded={onUploaded}
-          />
+          {canUpload && (
+            <ExamPhotoUploader
+              contest={group.contest}
+              year={group.year}
+              board={group.board}
+              existingPages={group.pages.length}
+              onUploaded={onUploaded}
+            />
+          )}
           {group.pages.length > 0 && (
             <div>
               <h3 className="mb-3 flex items-center gap-2 text-sm font-black">
