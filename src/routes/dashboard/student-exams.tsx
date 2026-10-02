@@ -132,28 +132,51 @@ function StudentExamIntelligence() {
         const session = sessionData.session;
         if (!session) throw new Error("Sua sessão expirou. Entre novamente para ver as provas.");
 
-        const [examResult, officialResult, personalResult] = await Promise.all([
-          supabase
-            .from("student_exam_documents")
-            .select(
-              "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,extracted_data",
-            )
-            .eq("user_id", session.user.id)
-            .order("contest_year", { ascending: true }),
-          supabase
+        const examResult = await supabase
+          .from("student_exam_documents")
+          .select(
+            "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,extracted_data",
+          )
+          .eq("user_id", session.user.id)
+          .order("contest_year", { ascending: true });
+        if (examResult.error) throw examResult.error;
+
+        // O banco tem milhares de questões ativas e o PostgREST devolve no máximo 1000 por
+        // consulta; sem filtro, as questões de alguns concursos ficavam de fora. Busca só as
+        // dos concursos do aluno, em páginas.
+        const contestNames = Array.from(
+          new Set(
+            (examResult.data || []).flatMap((row) => {
+              const name = String(row.contest_name || "Concurso");
+              return [name, canonicalContest(name)];
+            }),
+          ),
+        );
+        const PAGE = 1000;
+        const officialRows: Array<Record<string, unknown>> = [];
+        for (let from = 0; contestNames.length; from += PAGE) {
+          const { data: chunk, error: chunkError } = await supabase
             .from("official_exam_questions")
             .select(
               "contest_name,exam_year,item_number,subject,question_text,official_answer,review_note,legal_basis,content_status",
             )
-            .eq("content_status", "active"),
-          supabase
-            .from("question_bank")
-            .select(
-              "contest_name,contest_year,item_number,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status",
-            )
-            .eq("user_id", session.user.id),
-        ]);
-        if (examResult.error) throw examResult.error;
+            .eq("content_status", "active")
+            .in("contest_name", contestNames)
+            .order("contest_name")
+            .order("exam_year")
+            .order("item_number")
+            .range(from, from + PAGE - 1);
+          if (chunkError) throw chunkError;
+          officialRows.push(...((chunk || []) as Array<Record<string, unknown>>));
+          if ((chunk || []).length < PAGE) break;
+        }
+        const officialResult = { data: officialRows };
+        const personalResult = await supabase
+          .from("question_bank")
+          .select(
+            "contest_name,contest_year,item_number,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status",
+          )
+          .eq("user_id", session.user.id);
 
         const referenceMap = new Map<string, QuestionReference>();
         for (const raw of (officialResult.data || []) as Array<Record<string, unknown>>) {
