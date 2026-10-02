@@ -202,7 +202,7 @@ function StudentExamIntelligence() {
   const [syllabus, setSyllabus] = React.useState<Map<string, string[]>>(new Map());
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
-  const [selectedContest, setSelectedContest] = React.useState<string | null>(null);
+  const [selectedExam, setSelectedExam] = React.useState<string>(ALL_CONTESTS);
   const [openExam, setOpenExam] = React.useState<string | null>(null);
   const [pageUrls, setPageUrls] = React.useState<Record<string, string>>({});
   const [reloadKey, setReloadKey] = React.useState(0);
@@ -408,19 +408,20 @@ function StudentExamIntelligence() {
 
   React.useEffect(() => {
     if (!groups.length) return;
+    // Link vindo de outra tela (?career=): abre a edição mais recente daquele concurso.
     const requested = career
-      ? groups.find((group) => {
+      ? [...groups].reverse().find((group) => {
           const expected = career.toLocaleLowerCase("pt-BR");
           const actual = group.contest.toLocaleLowerCase("pt-BR");
           return actual.includes(expected) || expected.includes(actual);
-        })?.contest
+        })?.key
       : null;
-    setSelectedContest(
+    setSelectedExam(
       (current) =>
         requested ||
-        (current && (current === ALL_CONTESTS || groups.some((group) => group.contest === current))
+        (current === ALL_CONTESTS || groups.some((group) => group.key === current)
           ? current
-          : groups.at(-1)?.contest || null),
+          : ALL_CONTESTS),
     );
   }, [groups, career]);
 
@@ -454,15 +455,18 @@ function StudentExamIntelligence() {
 
   const attempts = groups.filter((group) => group.correct + group.wrong + group.blank > 0);
   const contests = Array.from(new Set(groups.map((group) => group.contest)));
-  const allSelected = selectedContest === ALL_CONTESTS;
+  const allSelected = selectedExam === ALL_CONTESTS;
   const selectedGroups = allSelected
     ? groups
-    : groups.filter((group) => group.contest === selectedContest);
-  // Métricas, plano de ação e destaques seguem o concurso escolhido (ou todos).
+    : groups.filter((group) => group.key === selectedExam);
+  const selectedGroup = allSelected ? null : (selectedGroups[0] ?? null);
+  // Métricas, plano de ação e destaques seguem a prova escolhida na linha do tempo (ou todas).
   const scopeAttempts = selectedGroups.filter(
     (group) => group.correct + group.wrong + group.blank > 0,
   );
-  const scopeLabel = allSelected ? "Todos os concursos" : (selectedContest ?? "");
+  const scopeLabel = selectedGroup
+    ? `${selectedGroup.contest} — ${selectedGroup.year}`
+    : "Todos os concursos";
   const totalCorrect = scopeAttempts.reduce((sum, group) => sum + group.correct, 0);
   const totalWrong = scopeAttempts.reduce((sum, group) => sum + group.wrong, 0);
   const totalBlank = scopeAttempts.reduce((sum, group) => sum + group.blank, 0);
@@ -470,10 +474,40 @@ function StudentExamIntelligence() {
   const responseAccuracy = percent(totalCorrect, totalCorrect + totalWrong);
   const omissionRate = percent(totalBlank, totalItems);
   const bestAttempt = [...scopeAttempts].sort((a, b) => examAccuracy(b) - examAccuracy(a))[0];
-  const firstAttempt = scopeAttempts[0];
-  const latestAttempt = scopeAttempts.at(-1);
-  const evolution =
-    latestAttempt && firstAttempt ? examAccuracy(latestAttempt) - examAccuracy(firstAttempt) : 0;
+  // Evolução = variação de aproveitamento (acertos ÷ respondidas) em pontos percentuais.
+  // Uma prova escolhida: contra a edição anterior do MESMO concurso. Todas: média das últimas
+  // provas contra a média das primeiras (comparar só a primeira com a última misturava bancas).
+  const yearOf = (group: ExamGroup) => Number(group.year) || 0;
+  const average = (list: ExamGroup[]) =>
+    list.reduce((sum, group) => sum + examAccuracy(group), 0) / list.length;
+  const evolutionInfo: { value: string; detail: string; delta: number | null } = (() => {
+    if (selectedGroup) {
+      const previous = attempts
+        .filter(
+          (group) =>
+            group.contest === selectedGroup.contest && yearOf(group) < yearOf(selectedGroup),
+        )
+        .at(-1);
+      if (!previous || !scopeAttempts.length)
+        return { value: "—", detail: "Primeira prova deste concurso", delta: null };
+      const delta = examAccuracy(selectedGroup) - examAccuracy(previous);
+      return {
+        value: `${delta >= 0 ? "+" : ""}${delta} p.p.`,
+        detail: `${previous.year} → ${selectedGroup.year}, mesmo concurso`,
+        delta,
+      };
+    }
+    const count = Math.min(3, Math.floor(scopeAttempts.length / 2));
+    if (count < 1) return { value: "—", detail: "Precisa de pelo menos 2 provas", delta: null };
+    const delta = Math.round(
+      average(scopeAttempts.slice(-count)) - average(scopeAttempts.slice(0, count)),
+    );
+    return {
+      value: `${delta >= 0 ? "+" : ""}${delta} p.p.`,
+      detail: `média das últimas ${count} × primeiras ${count} provas`,
+      delta,
+    };
+  })();
   const scopeReport = computeSubjectReport(selectedGroups, questions, syllabus);
   const scopeSubjects = scopeReport.metrics.filter(
     (metric) => metric.subject !== UNCLASSIFIED && metric.total > 0,
@@ -506,17 +540,27 @@ function StudentExamIntelligence() {
     });
   };
 
+  const selectExam = (key: string) => {
+    if (key === selectedExam) {
+      setSelectedExam(ALL_CONTESTS);
+      return;
+    }
+    setSelectedExam(key);
+    const group = groups.find((item) => item.key === key);
+    if (group && openExam !== group.key) void toggleExam(group);
+  };
+
   return (
     <div className="space-y-7 pb-10">
       <Hero attempts={attempts.length} years={new Set(attempts.map((item) => item.year)).size} />
-      <Timeline groups={groups} />
+      <Timeline groups={groups} selectedKey={selectedExam} onSelect={selectExam} />
       <section className="space-y-4">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h2 className="text-xl font-black text-primary">Desempenho por concurso</h2>
+            <h2 className="text-xl font-black text-primary">Desempenho por prova</h2>
             <p className="text-sm text-muted-foreground">
-              Escolha um concurso: as métricas, as disciplinas e as provas abaixo mudam com a
-              escolha.
+              Clique em uma prova da linha do tempo: as métricas, as disciplinas e a correção abaixo
+              passam a mostrar só ela, com cada edição separada (PF 2014, 2018, 2021…).
             </p>
           </div>
           <AddExamCard
@@ -525,34 +569,23 @@ function StudentExamIntelligence() {
             onChanged={() => setReloadKey((v) => v + 1)}
           />
         </div>
-        <div className="flex flex-wrap gap-2">
-          <button
-            type="button"
-            onClick={() => setSelectedContest(ALL_CONTESTS)}
-            className={cn(
-              "rounded-full border px-4 py-2 text-xs font-bold transition",
-              allSelected
-                ? "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40"
-                : "border-slate-200 text-muted-foreground hover:border-emerald-300",
-            )}
-          >
-            Todos os concursos
-          </button>
-          {contests.map((contest) => (
-            <button
-              key={contest}
+        <div className="flex flex-wrap items-center gap-3 rounded-2xl border bg-background px-4 py-3 text-sm">
+          <span className="text-muted-foreground">Mostrando:</span>
+          <strong className="min-w-0 break-words">{scopeLabel}</strong>
+          {allSelected ? (
+            <span className="text-xs text-muted-foreground">
+              Clique em uma prova da linha do tempo para ver só ela.
+            </span>
+          ) : (
+            <Button
               type="button"
-              onClick={() => setSelectedContest(contest)}
-              className={cn(
-                "rounded-full border px-4 py-2 text-xs font-bold transition",
-                selectedContest === contest
-                  ? "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40"
-                  : "border-slate-200 text-muted-foreground hover:border-emerald-300",
-              )}
+              variant="outline"
+              size="sm"
+              onClick={() => setSelectedExam(ALL_CONTESTS)}
             >
-              {contest}
-            </button>
-          ))}
+              Ver todos os concursos
+            </Button>
+          )}
         </div>
         <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <MetricCard
@@ -577,15 +610,11 @@ function StudentExamIntelligence() {
             tone="navy"
           />
           <MetricCard
-            icon={evolution >= 0 ? TrendingUp : TrendingDown}
-            label="Evolução histórica"
-            value={`${evolution >= 0 ? "+" : ""}${evolution} p.p.`}
-            detail={
-              firstAttempt && latestAttempt
-                ? `${firstAttempt.year} → ${latestAttempt.year}`
-                : "Uma tentativa"
-            }
-            tone={evolution >= 0 ? "emerald" : "rose"}
+            icon={(evolutionInfo.delta ?? 0) >= 0 ? TrendingUp : TrendingDown}
+            label="Evolução"
+            value={evolutionInfo.value}
+            detail={evolutionInfo.detail}
+            tone={(evolutionInfo.delta ?? 0) >= 0 ? "emerald" : "rose"}
           />
         </section>
         {selectedGroups.map((group) => (
@@ -691,7 +720,15 @@ function Hero({ attempts, years }: { attempts: number; years: number }) {
   );
 }
 
-function Timeline({ groups }: { groups: ExamGroup[] }) {
+function Timeline({
+  groups,
+  selectedKey,
+  onSelect,
+}: {
+  groups: ExamGroup[];
+  selectedKey: string;
+  onSelect: (key: string) => void;
+}) {
   return (
     <Card className="overflow-hidden border-slate-200 shadow-sm">
       <CardHeader>
@@ -699,8 +736,8 @@ function Timeline({ groups }: { groups: ExamGroup[] }) {
           <TrendingUp className="h-5 w-5 text-emerald-600" /> Linha do tempo geral
         </CardTitle>
         <CardDescription>
-          Aproveitamento nas questões respondidas; compare concursos com cautela porque bancas e
-          critérios mudam.
+          Aproveitamento nas questões respondidas. Clique em uma prova para ver só ela; clique de
+          novo para voltar a todas. Compare concursos com cautela porque bancas e critérios mudam.
         </CardDescription>
       </CardHeader>
       <CardContent className="overflow-x-auto pb-6">
@@ -715,7 +752,18 @@ function Timeline({ groups }: { groups: ExamGroup[] }) {
             const delta =
               accuracy === null || !previousGraded ? null : accuracy - examAccuracy(previousGraded);
             return (
-              <div key={group.key} className="relative w-44 px-3 text-center">
+              <button
+                key={group.key}
+                type="button"
+                onClick={() => onSelect(group.key)}
+                aria-pressed={selectedKey === group.key}
+                className={cn(
+                  "relative w-44 rounded-2xl px-3 pb-3 text-center transition",
+                  selectedKey === group.key
+                    ? "bg-emerald-50 ring-2 ring-emerald-400 dark:bg-emerald-950/30"
+                    : "hover:bg-slate-50 dark:hover:bg-slate-900/30",
+                )}
+              >
                 <div className="absolute left-0 right-0 top-5 h-0.5 bg-slate-200" />
                 <div
                   className={cn(
@@ -752,7 +800,7 @@ function Timeline({ groups }: { groups: ExamGroup[] }) {
                     {delta} p.p.
                   </Badge>
                 )}
-              </div>
+              </button>
             );
           })}
         </div>
