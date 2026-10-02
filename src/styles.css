@@ -3053,6 +3053,13 @@ html {
   width: 14px;
   color: var(--color-emerald-600);
 }
+.auth-dev-signature {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--color-muted-foreground);
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
 @media (min-width: 961px) and (max-height: 700px) {
   .auth-heading p,
   .auth-security {

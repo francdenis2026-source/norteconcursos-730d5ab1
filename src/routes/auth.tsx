@@ -301,6 +301,7 @@ function AuthPage() {
             <ShieldCheck />
             <span>Ambiente criptografado · seus dados não são compartilhados</span>
           </div>
+          <p className="auth-dev-signature">Dev. Franc D'nis · Feijó-AC, Brasil</p>
         </div>
       </section>
     </main>
