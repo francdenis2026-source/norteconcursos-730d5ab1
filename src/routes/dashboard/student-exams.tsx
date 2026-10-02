@@ -111,6 +111,58 @@ const percent = (part: number, total: number) => (total ? Math.round((part / tot
 const questionKey = (contest: string, year: string, item: number) =>
   `${canonicalContest(contest)}__${year}__${item}`;
 
+const UNCLASSIFIED = "Sem disciplina cadastrada";
+
+interface SubjectReport {
+  metrics: SubjectMetric[];
+  counted: number;
+  mapped: number;
+}
+
+// Raio-X por disciplina de um conjunto de provas (uma só, ou todas). Conta todos os itens
+// respondidos (anuladas e pendentes ficam de fora); a disciplina vem da questão cadastrada e,
+// quando ela não existe, o item cai em "Sem disciplina cadastrada" em vez de sumir da conta.
+function computeSubjectReport(
+  groups: ExamGroup[],
+  references: Map<string, QuestionReference>,
+): SubjectReport {
+  const map = new Map<string, SubjectMetric>();
+  let counted = 0;
+  let mapped = 0;
+  for (const group of groups) {
+    for (const [itemText, verdict] of Object.entries(group.analysis?.items || {})) {
+      if (verdict === "anulada" || verdict === "pendente_conferencia") continue;
+      const reference = references.get(
+        questionKey(group.canonicalContest, group.year, Number(itemText)),
+      );
+      const subject = reference?.subject ?? UNCLASSIFIED;
+      const metric = map.get(subject) || {
+        subject,
+        correct: 0,
+        wrong: 0,
+        blank: 0,
+        total: 0,
+        accuracy: 0,
+      };
+      if (verdict === "correta") metric.correct += 1;
+      if (verdict === "errada") metric.wrong += 1;
+      if (verdict === "branco") metric.blank += 1;
+      metric.total += 1;
+      metric.accuracy = percent(metric.correct, metric.correct + metric.wrong);
+      map.set(subject, metric);
+      counted += 1;
+      if (reference) mapped += 1;
+    }
+  }
+  const metrics = Array.from(map.values()).sort(
+    (a, b) =>
+      Number(a.subject === UNCLASSIFIED) - Number(b.subject === UNCLASSIFIED) ||
+      a.accuracy - b.accuracy ||
+      b.total - a.total,
+  );
+  return { metrics, counted, mapped };
+}
+
 function StudentExamIntelligence() {
   const { career } = Route.useSearch();
   const [rows, setRows] = React.useState<ExamRow[]>([]);
@@ -297,32 +349,14 @@ function StudentExamIntelligence() {
     );
   }, [groups, career]);
 
-  const subjectMetrics = React.useMemo(() => {
-    const map = new Map<string, SubjectMetric>();
-    for (const group of groups) {
-      for (const [itemText, verdict] of Object.entries(group.analysis?.items || {})) {
-        const reference = questions.get(
-          questionKey(group.canonicalContest, group.year, Number(itemText)),
-        );
-        if (!reference || verdict === "anulada" || verdict === "pendente_conferencia") continue;
-        const metric = map.get(reference.subject) || {
-          subject: reference.subject,
-          correct: 0,
-          wrong: 0,
-          blank: 0,
-          total: 0,
-          accuracy: 0,
-        };
-        if (verdict === "correta") metric.correct += 1;
-        if (verdict === "errada") metric.wrong += 1;
-        if (verdict === "branco") metric.blank += 1;
-        metric.total += 1;
-        metric.accuracy = percent(metric.correct, metric.correct + metric.wrong);
-        map.set(reference.subject, metric);
-      }
-    }
-    return Array.from(map.values()).sort((a, b) => a.accuracy - b.accuracy || b.total - a.total);
-  }, [groups, questions]);
+  const overallReport = React.useMemo(
+    () => computeSubjectReport(groups, questions),
+    [groups, questions],
+  );
+  const subjectMetrics = React.useMemo(
+    () => overallReport.metrics.filter((metric) => metric.subject !== UNCLASSIFIED),
+    [overallReport],
+  );
 
   if (loading) return <LoadingState />;
   if (error)
@@ -461,7 +495,11 @@ function StudentExamIntelligence() {
         ))}
       </section>
       <section className="grid gap-5 xl:grid-cols-[1.25fr_1fr]">
-        <DisciplineAnalysis metrics={subjectMetrics} />
+        <DisciplineAnalysis
+          report={overallReport}
+          title="Raio-X geral — todos os concursos"
+          scope={`Soma de ${attempts.length} prova(s) já realizadas.`}
+        />
         <ActionPlan
           weakest={weakest}
           strongest={strongest}
@@ -573,50 +611,59 @@ function Timeline({ groups }: { groups: ExamGroup[] }) {
   );
 }
 
-function DisciplineAnalysis({ metrics }: { metrics: SubjectMetric[] }) {
-  const ranked = [...metrics].sort((a, b) => b.total - a.total).slice(0, 12);
-  return (
-    <Card className="border-slate-200 shadow-sm">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-lg">
-          <Brain className="h-5 w-5 text-violet-600" /> Raio-X das disciplinas
-        </CardTitle>
-        <CardDescription>
-          Calculado somente sobre itens com classificação editorial disponível. Cobertura atual:{" "}
-          {metrics.reduce((sum, item) => sum + item.total, 0)} itens.
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        {ranked.length ? (
-          ranked.map((item) => (
-            <div key={item["subject"]}>
+function DisciplineAnalysis({
+  report,
+  title,
+  scope,
+  embedded = false,
+}: {
+  report: SubjectReport;
+  title: string;
+  scope: string;
+  embedded?: boolean;
+}) {
+  const ranked = [...report.metrics]
+    .sort(
+      (a, b) =>
+        Number(a.subject === UNCLASSIFIED) - Number(b.subject === UNCLASSIFIED) ||
+        b.total - a.total,
+    )
+    .slice(0, 12);
+  const unmapped = report.counted - report.mapped;
+  const text = (value: number, neutral: boolean) =>
+    neutral
+      ? "text-slate-500"
+      : value >= 70
+        ? "text-emerald-600"
+        : value >= 50
+          ? "text-amber-600"
+          : "text-rose-600";
+  const bar = (value: number, neutral: boolean) =>
+    neutral
+      ? "bg-slate-400"
+      : value >= 70
+        ? "bg-emerald-500"
+        : value >= 50
+          ? "bg-amber-500"
+          : "bg-rose-500";
+  const body = (
+    <div className="space-y-4">
+      {ranked.length ? (
+        ranked.map((item) => {
+          const neutral = item.subject === UNCLASSIFIED;
+          return (
+            <div key={item.subject}>
               <div className="mb-1.5 flex items-center justify-between gap-3 text-xs">
-                <span className="truncate font-bold" title={item["subject"]}>
-                  {item["subject"]}
+                <span className="truncate font-bold" title={item.subject}>
+                  {item.subject}
                 </span>
-                <span
-                  className={cn(
-                    "font-black",
-                    item.accuracy >= 70
-                      ? "text-emerald-600"
-                      : item.accuracy >= 50
-                        ? "text-amber-600"
-                        : "text-rose-600",
-                  )}
-                >
+                <span className={cn("font-black", text(item.accuracy, neutral))}>
                   {item.accuracy}%
                 </span>
               </div>
               <div className="h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
                 <div
-                  className={cn(
-                    "h-full rounded-full",
-                    item.accuracy >= 70
-                      ? "bg-emerald-500"
-                      : item.accuracy >= 50
-                        ? "bg-amber-500"
-                        : "bg-rose-500",
-                  )}
+                  className={cn("h-full rounded-full", bar(item.accuracy, neutral))}
                   style={{ width: `${item.accuracy}%` }}
                 />
               </div>
@@ -624,14 +671,38 @@ function DisciplineAnalysis({ metrics }: { metrics: SubjectMetric[] }) {
                 {item.correct} acertos · {item.wrong} erros · {item.blank} em branco
               </p>
             </div>
-          ))
-        ) : (
-          <p className="text-sm text-muted-foreground">
-            As disciplinas ainda estão em revisão editorial e aparecerão aqui quando forem
-            liberadas.
-          </p>
-        )}
-      </CardContent>
+          );
+        })
+      ) : (
+        <p className="text-sm text-muted-foreground">Nenhum item respondido nesta seleção.</p>
+      )}
+      {report.counted > 0 && unmapped > 0 && (
+        <p className="text-[11px] text-muted-foreground">
+          {report.mapped} de {report.counted} itens têm disciplina cadastrada. Os outros {unmapped}{" "}
+          aparecem em "{UNCLASSIFIED}" e não entram nos pontos fracos.
+        </p>
+      )}
+    </div>
+  );
+  if (embedded)
+    return (
+      <div className="space-y-3">
+        <h3 className="flex items-center gap-2 text-sm font-black">
+          <Brain className="h-4 w-4 text-violet-600" /> {title}
+        </h3>
+        <p className="text-xs text-muted-foreground">{scope}</p>
+        {body}
+      </div>
+    );
+  return (
+    <Card className="border-slate-200 shadow-sm">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2 text-lg">
+          <Brain className="h-5 w-5 text-violet-600" /> {title}
+        </CardTitle>
+        <CardDescription>{scope}</CardDescription>
+      </CardHeader>
+      <CardContent>{body}</CardContent>
     </Card>
   );
 }
@@ -763,6 +834,12 @@ function ContestCard({
             />
             <ScoreBox icon={Target} label="Pontuação" value={group.score} tone="text-primary" />
           </div>
+          <DisciplineAnalysis
+            embedded
+            report={computeSubjectReport([group], references)}
+            title="Raio-X desta prova"
+            scope={`Disciplinas de ${group.contest} — ${group.year}, somente desta prova.`}
+          />
           <div>
             <h3 className="mb-3 flex items-center gap-2 text-sm font-black">
               <BookOpenCheck className="h-4 w-4" /> Como corrigir erros e omissões
