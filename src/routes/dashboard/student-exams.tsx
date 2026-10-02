@@ -24,6 +24,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ExamPhotoUploader } from "@/components/dashboard/ExamPhotoUploader";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/student-exams")({
@@ -246,6 +247,10 @@ function StudentExamIntelligence() {
       }
       grouped.set(key, current);
     }
+    // Páginas enviadas pela tela têm "pagina-NN" no caminho; mantém a ordem do caderno.
+    const pageNumber = (path: string) => Number(/pagina-(\d+)/.exec(path)?.[1] ?? 0);
+    for (const group of grouped.values())
+      group.pages.sort((a, b) => pageNumber(a.storage_path) - pageNumber(b.storage_path));
     return Array.from(grouped.values()).sort((a, b) =>
       a.year.localeCompare(b.year, "pt-BR", { numeric: true }),
     );
@@ -425,6 +430,10 @@ function StudentExamIntelligence() {
             open={openExam === group.key}
             pageUrls={pageUrls}
             onToggle={() => void toggleExam(group)}
+            onUploaded={() => {
+              setOpenExam(null);
+              setReloadKey((value) => value + 1);
+            }}
           />
         ))}
       </section>
@@ -661,12 +670,14 @@ function ContestCard({
   open,
   pageUrls,
   onToggle,
+  onUploaded,
 }: {
   group: ExamGroup;
   references: Map<string, QuestionReference>;
   open: boolean;
   pageUrls: Record<string, string>;
   onToggle: () => void;
+  onUploaded: () => void;
 }) {
   const answered = group.correct + group.wrong;
   const accuracy = percent(group.correct, answered);
@@ -782,6 +793,13 @@ function ContestCard({
               </div>
             )}
           </div>
+          <ExamPhotoUploader
+            contest={group.contest}
+            year={group.year}
+            board={group.board}
+            existingPages={group.pages.length}
+            onUploaded={onUploaded}
+          />
           {group.pages.length > 0 && (
             <div>
               <h3 className="mb-3 flex items-center gap-2 text-sm font-black">
