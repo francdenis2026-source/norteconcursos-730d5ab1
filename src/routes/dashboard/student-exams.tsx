@@ -49,6 +49,9 @@ type Verdict = "correta" | "errada" | "anulada" | "branco" | "pendente_conferenc
 interface ExamAnalysis {
   items?: Record<string, Verdict>;
   resultado_oficial?: { nota_total?: number; classificacao_ampla_objetiva?: number };
+  // Detalhamento por questão feito a partir de planilha pessoal, que pode divergir do resultado oficial.
+  itens_aproximado?: boolean;
+  itens_metodo?: string;
 }
 
 interface ExamRow {
@@ -1170,6 +1173,14 @@ function ContestCard({
             />
             <ScoreBox icon={Target} label="Pontuação" value={group.score} tone="text-primary" />
           </div>
+          {group.analysis?.itens_aproximado && (
+            <div className="rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-900 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
+              <strong>Detalhamento por questão aproximado.</strong> Os totais e a nota são os
+              oficiais ({group.correct} acertos, {group.wrong} erros, nota {group.score}), mas o
+              Raio-X por disciplina desta edição vem da sua planilha pessoal e pode divergir em
+              algumas questões. Use para ver tendências, não para contar cada item.
+            </div>
+          )}
           {Object.keys(group.analysis?.items || {}).length === 0 &&
           group.correct + group.wrong > 0 ? (
             <div className="rounded-xl border border-dashed bg-background p-4 text-sm text-muted-foreground">
