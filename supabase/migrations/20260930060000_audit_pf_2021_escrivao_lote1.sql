@@ -41,11 +41,15 @@ where exam_year=2021 and career_name='Escrivão de Polícia Federal' and item_nu
 
 update public.official_exam_questions
 set review_note=$q$Correto. O tráfico ilícito de entorpecentes e drogas afins é expressamente classificado pela Constituição Federal como crime inafiançável (e também insuscetível de graça ou anistia).
-Fonte oficial: art. 5º, XLIII, CF/1988 (planalto.gov.br).$q$
+Fonte oficial: art. 5º, XLIII, CF/1988 (planalto.gov.br).$q$,
+    legal_audit_completed=true, current_syllabus_topic_id=syllabus_topic_id, law_version_checked_at=now(),
+    legal_basis='[{"fonte":"art. 5º, XLIII, CF/1988","url":"https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}]'::jsonb
 where exam_year=2021 and career_name='Escrivão de Polícia Federal' and item_number=29;
 
 update public.official_exam_questions
 set review_note=$q$Errado. O art. 5º, LI, da Constituição Federal permite a extradição do brasileiro naturalizado em duas hipóteses: crime comum praticado ANTES da naturalização, ou comprovado envolvimento em tráfico ilícito de entorpecentes e drogas afins — nesta segunda hipótese, a Constituição não exige que o envolvimento seja anterior à naturalização, podendo ocorrer antes ou depois dela.
 Fonte oficial: art. 5º, LI, CF/1988 (planalto.gov.br).
-Exemplo: para crimes comuns "normais", só pode extraditar o naturalizado se o crime foi antes de ele se naturalizar; já para tráfico de drogas, essa restrição de tempo não existe — pode ser antes ou depois, que ainda cabe extradição.$q$
+Exemplo: para crimes comuns "normais", só pode extraditar o naturalizado se o crime foi antes de ele se naturalizar; já para tráfico de drogas, essa restrição de tempo não existe — pode ser antes ou depois, que ainda cabe extradição.$q$,
+    legal_audit_completed=true, current_syllabus_topic_id=syllabus_topic_id, law_version_checked_at=now(),
+    legal_basis='[{"fonte":"art. 5º, LI, CF/1988","url":"https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}]'::jsonb
 where exam_year=2021 and career_name='Escrivão de Polícia Federal' and item_number=30;
