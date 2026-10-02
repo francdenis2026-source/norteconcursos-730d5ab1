@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { fetchAllRows } from "@/lib/catalog";
@@ -32,7 +33,7 @@ const isReviewed = (row: Row, explanation: unknown) =>
     explanation: String(explanation ?? ""),
     legalBasis: parseBasis(row["legal_basis"]),
     checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
-    subject: String(row["subject"] ?? ""),
+    subject: canonicalSubject(String(row["subject"] ?? "")),
   } as Question);
 
 async function loadStats(): Promise<QuestionStats> {

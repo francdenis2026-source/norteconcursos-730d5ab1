@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
@@ -240,7 +241,7 @@ function StudentExamIntelligence() {
             contest,
             year,
             item,
-            subject: String(raw["subject"] || "Disciplina não classificada"),
+            subject: canonicalSubject(String(raw["subject"] || "Disciplina não classificada")),
             subtopic: null,
             text: String(raw["question_text"] || "Enunciado indisponível"),
             answer: raw["official_answer"] ? String(raw["official_answer"]) : null,
@@ -262,7 +263,7 @@ function StudentExamIntelligence() {
             contest,
             year,
             item,
-            subject: String(raw["subject"] || "Disciplina não classificada"),
+            subject: canonicalSubject(String(raw["subject"] || "Disciplina não classificada")),
             subtopic: raw["subtopic"] ? String(raw["subtopic"]) : null,
             text: String(raw["question_text"] || "Enunciado indisponível"),
             answer: raw["official_answer"] ? String(raw["official_answer"]) : null,

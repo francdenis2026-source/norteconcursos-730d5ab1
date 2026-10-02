@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -500,7 +501,7 @@ function normalize(row: Record<string, unknown>, source: SourceKind): CatalogIte
     year: String(source === "official" ? row["exam_year"] : row["contest_year"] || "—"),
     career: String(row["career_name"] || row["contest_name"] || "Não informada"),
     board: String(row["exam_board"] || "Não informada"),
-    subject: String(row["subject"] || "Sem disciplina"),
+    subject: canonicalSubject(String(row["subject"] || "Sem disciplina")),
     source,
     state: String(row["state"] || ""),
     category: String(row["career_category"] || ""),

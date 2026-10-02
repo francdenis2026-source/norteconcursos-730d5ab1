@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -200,7 +201,9 @@ function PerformancePage() {
           if (rows.length)
             nextSubjectByExam.set(
               group.key,
-              Object.fromEntries(rows.map((r) => [String(r.item_number), r.subject])),
+              Object.fromEntries(
+                rows.map((r) => [String(r.item_number), canonicalSubject(r.subject)]),
+              ),
             );
         }
         setSubjectByExam(nextSubjectByExam);
