@@ -218,7 +218,7 @@ export function StudyGoals({ planTier }: { planTier?: string }) {
             </Button>
           </div>
           <Button className="hero-btn-primary w-full gap-2" asChild>
-            <Link to="/dashboard/student-exams">
+            <Link to="/dashboard/student-exams" search={{ career: undefined }}>
               <FileText className="h-4 w-4" /> Acessar minhas provas
               <ArrowRight className="h-4 w-4" />
             </Link>
