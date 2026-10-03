@@ -277,9 +277,9 @@ function NewStudentForm({ onCreated }: { onCreated: () => void }) {
             {SUBSCRIPTION_PLANS.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
           </select>
           <Input aria-label="Nome" placeholder="Nome completo" maxLength={120} value={name} onChange={(e) => setName(normalizeUppercase(e.target.value))} className="order-1 uppercase" />
-          <Input aria-label="E-mail" type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <Input aria-label="Senha inicial" type="password" placeholder="Senha inicial" value={password} onChange={(e) => setPassword(e.target.value)} />
-          <Button type="submit" disabled={busy}>{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : "Cadastrar"}</Button>
+          <Input aria-label="E-mail" type="email" placeholder="E-mail" maxLength={255} value={email} onChange={(e) => setEmail(e.target.value)} className="order-2" />
+          <Input aria-label="Senha inicial" type="password" placeholder="Senha inicial" value={password} onChange={(e) => setPassword(e.target.value)} className="order-3" />
+          <Button type="submit" disabled={busy} className="order-5">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : "Cadastrar"}</Button>
         </form>
       </CardContent>
     </Card>
