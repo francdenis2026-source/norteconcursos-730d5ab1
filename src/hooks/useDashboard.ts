@@ -46,11 +46,16 @@ export function useAuthStatus() {
         // Buscando perfil e roles diretamente do banco
         const [profileRes, rolesRes] = await Promise.all([
           supabase.from("profiles").select("*").eq("id", session.user.id).single(),
-          supabase.from("user_roles").select("role").eq("user_id", session.user.id).single(),
+          supabase.from("user_roles").select("role").eq("user_id", session.user.id),
         ]);
 
         const profile = profileRes.data;
-        const roleData = rolesRes.data;
+        const roleList = (rolesRes.data ?? []).map((r) => r.role);
+        const topRole = roleList.includes("admin")
+          ? "admin"
+          : roleList.includes("moderator")
+            ? "moderator"
+            : "user";
 
         // Lógica de data efetiva: se o plano expirou, volta para free
         let currentTier = (profile?.subscription_tier as SubscriptionTier) || "free";
@@ -75,7 +80,7 @@ export function useAuthStatus() {
           onboarding_completed: !!profile?.onboarding_completed,
           onboarding_progress: profile?.onboarding_progress || {},
           is_activated: isActivated,
-          role: (roleData?.role as "admin" | "moderator" | "user") || "user",
+          role: topRole as "admin" | "moderator" | "user",
         });
       } else {
         // Fallback para modo demo/visitante

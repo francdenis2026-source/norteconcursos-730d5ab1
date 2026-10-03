@@ -131,6 +131,14 @@ const MENU: MenuItem[] = [
   },
 ];
 
+const ADMIN_MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
+  { label: "Alunos", href: "/dashboard/admin-students", icon: User },
+  { label: "Números", href: "/dashboard/admin-metrics", icon: Layers },
+  { label: "Cadastros", href: "/dashboard/admin-signups", icon: User },
+  { label: "Conteúdo", href: "/dashboard/admin", icon: Settings },
+  { label: "Perfil", href: "/dashboard/profile", icon: User },
+];
+
 const MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
   { label: "Painel", href: "/dashboard", icon: LayoutDashboard },
   { label: "Questões", href: "/dashboard/question-trainer", icon: BrainCircuit },
@@ -168,10 +176,25 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const [streak, setStreak] = React.useState<UserStreak | null>(null);
   const [achievements, setAchievements] = React.useState<Achievement[]>([]);
 
+  const isAdmin = user?.role === "admin";
+  // Administrador vê só a administração (e o próprio perfil); aluno vê só a área de estudo.
   const items = React.useMemo(
-    () => MENU.filter((item) => !item.adminOnly || user?.role === "admin"),
-    [user?.role],
+    () =>
+      isAdmin
+        ? [
+            ...MENU.filter((item) => item.adminOnly),
+            ...MENU.filter((item) => item.href === "/dashboard/profile"),
+          ]
+        : MENU.filter((item) => !item.adminOnly),
+    [isAdmin],
   );
+
+  React.useEffect(() => {
+    if (!isAdmin) return;
+    const path = normalize(location.pathname);
+    if (path.startsWith("/dashboard/admin") || path === "/dashboard/profile") return;
+    navigate({ to: "/dashboard/admin-students", replace: true });
+  }, [isAdmin, location.pathname, navigate]);
   const current = items.find((item) => isActive(location.pathname, item.href));
 
   React.useEffect(() => {
@@ -254,7 +277,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   const tier = user?.subscription_tier ? String(user.subscription_tier) : "free";
-  const displayName = user?.full_name || "Estudante";
+  const displayName = user?.full_name || (isAdmin ? "Administrador" : "Estudante");
+  const planLabel = isAdmin ? "Administrador" : `Plano ${tier.charAt(0).toUpperCase() + tier.slice(1)}`;
 
   const nav = (collapsed: boolean) => (
     <nav className="app-nav scroll-dark" aria-label="Menu principal">
@@ -301,7 +325,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             <>
               <span className="app-user__meta">
                 <strong>{displayName}</strong>
-                <span>Plano {tier.charAt(0).toUpperCase() + tier.slice(1)}</span>
+                <span>{planLabel}</span>
               </span>
               <ChevronsUpDown />
             </>
@@ -311,7 +335,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <DropdownMenuContent side="top" align="start" className="w-60">
         <DropdownMenuLabel className="font-normal">
           <span className="block text-sm font-semibold">{displayName}</span>
-          <span className="block text-xs text-muted-foreground">Plano {tier}</span>
+          <span className="block text-xs text-muted-foreground">{planLabel}</span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild className="cursor-pointer gap-2">
@@ -470,7 +494,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </main>
 
           <nav className="app-bottom-nav no-print" aria-label="Navegação rápida">
-            {MOBILE_NAV.map((item) => (
+            {(isAdmin ? ADMIN_MOBILE_NAV : MOBILE_NAV).map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
