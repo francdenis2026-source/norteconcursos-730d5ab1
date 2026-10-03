@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { BarChart3, FileStack, Loader2, RefreshCw, Sparkles, Trophy, Users } from "lucide-react";
+import { Activity, BarChart3, FileStack, Loader2, RefreshCw, Sparkles, Trophy, Users } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
