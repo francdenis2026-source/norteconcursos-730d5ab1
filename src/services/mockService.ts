@@ -1,3 +1,4 @@
+import { PAYMENTS_ENABLED, PAYMENTS_NOTICE } from '../lib/launch.config';
 import { contests as mockContests, questions as mockQuestions, disciplines as mockDisciplines } from "../data/mock";
 import { Contest, Question, UserResponse, PerformanceStats, UserStreak, Achievement, SubscriptionAuditLog, UserProfile } from "../types";
 
@@ -643,6 +644,7 @@ export const MockService = {
   },
 
   validateActivationCode: async (code: string): Promise<{ success: boolean; message: string }> => {
+    if (!PAYMENTS_ENABLED) return { success: false, message: PAYMENTS_NOTICE };
     try {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) return { success: false, message: 'Usuário não autenticado' };
