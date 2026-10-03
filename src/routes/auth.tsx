@@ -22,7 +22,7 @@ import { useEffect, useRef, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
-import { validateCPF } from "@/lib/utils";
+import { normalizeUppercase, validateCPF } from "@/lib/utils";
 
 function friendlyAuthError(error: unknown) {
   const raw = error instanceof Error ? error.message : "";
@@ -95,7 +95,7 @@ function AuthPage() {
           email: email.trim().toLowerCase(),
           password: pin,
           options: {
-            data: { full_name: name, cpf: cpfDigits },
+            data: { full_name: normalizeUppercase(name.trim()), cpf: cpfDigits },
             emailRedirectTo: `${window.location.origin}/auth`,
           },
         });
@@ -213,7 +213,8 @@ function AuthPage() {
                     autoComplete="name"
                     placeholder="Como podemos chamar você?"
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setName(normalizeUppercase(e.target.value))}
+                    className="uppercase"
                     required
                   />
                 </div>

@@ -5,6 +5,11 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+/** Normaliza campos nominais para o padrão visual e persistido da plataforma. */
+export function normalizeUppercase(value: string) {
+  return value.toLocaleUpperCase("pt-BR");
+}
+
 export function formatCPF(cpf: string) {
   const digits = cpf.replace(/\D/g, "");
   return digits.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
