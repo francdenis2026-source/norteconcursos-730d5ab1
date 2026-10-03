@@ -65,6 +65,12 @@ function AuthPage() {
   const [formError, setFormError] = useState<string | null>(null);
   const errorRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  /** E-mail aguardando confirmação (tela de boas-vindas após cadastro). */
+  const [pendingEmail, setPendingEmail] = useState<string | null>(null);
+  /** E-mail de login recusado por falta de confirmação (mostra botão de reenvio). */
+  const [unconfirmedEmail, setUnconfirmedEmail] = useState<string | null>(null);
+  const [resending, setResending] = useState(false);
+  const [cooldown, setCooldown] = useState(0);
 
   useEffect(() => {
     if (formError) errorRef.current?.focus();
@@ -72,7 +78,48 @@ function AuthPage() {
 
   useEffect(() => {
     setFormError(null);
+    setUnconfirmedEmail(null);
   }, [mode]);
+
+  // Entrada automática: ao confirmar o e-mail (link volta para /auth ou outra aba confirma),
+  // a sessão chega aqui e o aluno é levado direto ao painel.
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => {
+      if (data.session) navigate({ to: "/dashboard" });
+    });
+    const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === "SIGNED_IN" && session) {
+        toast.success("E-mail confirmado! Bem-vindo à Norte Concurso.");
+        navigate({ to: "/dashboard" });
+      }
+    });
+    return () => sub.subscription.unsubscribe();
+  }, [navigate]);
+
+  useEffect(() => {
+    if (cooldown <= 0) return;
+    const t = setTimeout(() => setCooldown((c) => c - 1), 1000);
+    return () => clearTimeout(t);
+  }, [cooldown]);
+
+  const resendConfirmation = async (target: string) => {
+    if (cooldown > 0 || resending) return;
+    setResending(true);
+    try {
+      const { error } = await supabase.auth.resend({
+        type: "signup",
+        email: target,
+        options: { emailRedirectTo: `${window.location.origin}/auth` },
+      });
+      if (error) throw error;
+      toast.success(`Novo e-mail de confirmação enviado para ${target}.`);
+      setCooldown(60);
+    } catch (error: unknown) {
+      toast.error(friendlyAuthError(error));
+    } finally {
+      setResending(false);
+    }
+  };
 
   const normalizeCpf = (value: string) => value.replace(/\D/g, "").slice(0, 11);
   const formatCpf = (value: string) => {
@@ -104,8 +151,8 @@ function AuthPage() {
           toast.success("Conta criada!");
           navigate({ to: "/dashboard" });
         } else {
-          toast.success("Conta criada! Confirme seu e-mail pelo link que enviamos para entrar.");
-          setMode("login");
+          setPendingEmail(email.trim().toLowerCase());
+          setCooldown(60);
         }
       } else {
         // Contas antigas entram pelo CPF (e-mail interno); contas novas, pelo e-mail real.
@@ -120,7 +167,12 @@ function AuthPage() {
           email: loginEmail,
           password: pin,
         });
-        if (error) throw error;
+        if (error) {
+          if (/email not confirmed/i.test(error.message) && loginEmail.includes("@") && !loginEmail.endsWith(".local")) {
+            setUnconfirmedEmail(loginEmail);
+          }
+          throw error;
+        }
         toast.success("Bem-vindo à sua preparação!");
         navigate({ to: "/dashboard" });
       }
@@ -176,6 +228,46 @@ function AuthPage() {
           <div className="auth-mobile-brand">
             <NorteBrand />
           </div>
+          {pendingEmail ? (
+            <div className="space-y-5 text-center" role="status" aria-live="polite">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Mail className="h-7 w-7" />
+              </div>
+              <div className="auth-heading">
+                <h2>Bem-vindo à Norte Concurso!</h2>
+                <p>
+                  Sua conta foi criada. Enviamos um link de confirmação para{" "}
+                  <strong className="text-foreground">{pendingEmail}</strong>. Clique no link para
+                  ativar o acesso — você entrará automaticamente.
+                </p>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <Loader2 className="h-4 w-4 animate-spin" /> Aguardando confirmação do e-mail…
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Não encontrou? Verifique a caixa de spam ou promoções.
+              </p>
+              <button
+                type="button"
+                className="btn-brass auth-submit"
+                disabled={resending || cooldown > 0}
+                onClick={() => resendConfirmation(pendingEmail)}
+              >
+                {resending ? <Loader2 className="animate-spin" /> : cooldown > 0 ? `Reenviar em ${cooldown}s` : "Reenviar e-mail de confirmação"}
+              </button>
+              <button
+                type="button"
+                className="auth-link"
+                onClick={() => {
+                  setPendingEmail(null);
+                  setMode("login");
+                }}
+              >
+                Já confirmei — ir para Entrar
+              </button>
+            </div>
+          ) : (
+          <>
           <div className="auth-tabs" role="tablist" aria-label="Tipo de acesso">
             <button
               type="button"
@@ -310,6 +402,20 @@ function AuthPage() {
                 <span>{formError}</span>
               </div>
             )}
+            {unconfirmedEmail && (
+              <button
+                type="button"
+                className="auth-link"
+                disabled={resending || cooldown > 0}
+                onClick={() => resendConfirmation(unconfirmedEmail)}
+              >
+                {resending
+                  ? "Enviando…"
+                  : cooldown > 0
+                    ? `E-mail reenviado · novo envio em ${cooldown}s`
+                    : "Reenviar e-mail de confirmação"}
+              </button>
+            )}
             <button type="submit" className="btn-brass auth-submit" disabled={isLoading}>
               {isLoading ? (
                 <Loader2 className="animate-spin" />
@@ -321,6 +427,8 @@ function AuthPage() {
               )}
             </button>
           </form>
+          </>
+          )}
           <div className="auth-security">
             <ShieldCheck />
             <span>Ambiente criptografado · seus dados não são compartilhados</span>
