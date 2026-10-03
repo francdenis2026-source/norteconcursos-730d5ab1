@@ -35,6 +35,7 @@ import {
   Timer,
   Trophy,
   User,
+  Wallet,
   Medal,
   Radar,
 } from "lucide-react";
@@ -129,6 +130,13 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Administração",
+    label: "Financeiro",
+    icon: Wallet,
+    href: "/dashboard/admin-finance",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
     label: "Cadastros por dia",
     icon: User,
     href: "/dashboard/admin-signups",
@@ -138,8 +146,8 @@ const MENU: MenuItem[] = [
 
 const ADMIN_MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
   { label: "Alunos", href: "/dashboard/admin-students", icon: User },
+  { label: "Financeiro", href: "/dashboard/admin-finance", icon: Wallet },
   { label: "Números", href: "/dashboard/admin-metrics", icon: Layers },
-  { label: "Cadastros", href: "/dashboard/admin-signups", icon: User },
   { label: "Conteúdo", href: "/dashboard/admin", icon: Settings },
   { label: "Perfil", href: "/dashboard/profile", icon: User },
 ];
