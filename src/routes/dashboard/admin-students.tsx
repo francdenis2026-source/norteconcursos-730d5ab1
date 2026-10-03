@@ -101,14 +101,14 @@ function AdminStudentsPage() {
 
   async function changePlan(id: string, tier: string) {
     const { error: e } = await supabase.from("profiles").update({ subscription_tier: tier, is_activated: tier !== "free" }).eq("id", id);
-    if (e) return toast.error("Não foi possível alterar o plano.");
+    if (e) { toast.error("Não foi possível alterar o plano."); return; }
     await supabase.from("subscription_audit_logs").insert({ user_id: id, event_type: "admin_change", new_tier: tier, metadata: { source: "admin_students" } });
     setRows((r) => r.map((x) => (x.id === id ? { ...x, subscription_tier: tier } : x)));
     toast.success("Plano atualizado.");
   }
 
   async function toggleExams(id: string) {
-    if (openId === id) return setOpenId(null);
+    if (openId === id) { setOpenId(null); return; }
     setOpenId(id);
     setExams([]);
     const { data } = await supabase
@@ -193,7 +193,8 @@ function NewStudentForm({ onCreated }: { onCreated: () => void }) {
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     if (!name.trim() || !/^\S+@\S+\.\S+$/.test(email) || password.length < 6) {
-      return toast.error("Preencha nome, e-mail válido e senha com 6+ caracteres.");
+      toast.error("Preencha nome, e-mail válido e senha com 6+ caracteres.");
+      return;
     }
     setBusy(true);
     try {
