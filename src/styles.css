@@ -926,32 +926,196 @@ html {
   height: 3.35rem;
   padding-inline: 1.6rem;
 }
-.lp-hero__daily {
+/* Desafio diário — selo de destaque no topo da hero */
+.daily-badge {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem 1.15rem;
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 22px;
+  padding: 0.75rem 0.85rem 0.75rem 1rem;
+  border: 1px solid oklch(0.8 0.13 78 / 0.5);
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+  background: linear-gradient(135deg, oklch(0.8 0.13 78 / 0.18), oklch(0.8 0.13 78 / 0.05));
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 12px 40px -14px oklch(0.8 0.13 78 / 0.6),
+    inset 0 1px 0 oklch(1 0 0 / 0.14);
+  transition:
+    transform 0.25s var(--ease-out),
+    box-shadow 0.25s var(--ease-out),
+    border-color 0.25s;
+}
+.daily-badge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, transparent 35%, oklch(1 0 0 / 0.22) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: daily-sheen 4.5s ease-in-out 1.2s infinite;
+}
+.daily-badge:hover {
+  transform: translateY(-3px);
+  border-color: var(--brass);
+  box-shadow:
+    0 20px 52px -14px oklch(0.8 0.13 78 / 0.8),
+    inset 0 1px 0 oklch(1 0 0 / 0.2);
+}
+.daily-badge:focus-visible {
+  outline: 2px solid var(--brass-soft);
+  outline-offset: 3px;
+}
+.daily-badge__live {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 22px;
+  gap: 0.55rem;
+  color: var(--brass-soft);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.daily-badge__pulse {
+  position: relative;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: oklch(0.72 0.19 150);
+}
+.daily-badge__pulse::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 2px solid oklch(0.72 0.19 150 / 0.7);
+  border-radius: 50%;
+  animation: daily-ping 1.8s ease-out infinite;
+}
+.daily-badge__main {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+.daily-badge__main strong {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.daily-badge__main small {
   color: oklch(1 0 0 / 0.72);
-  font-size: 0.875rem;
-  transition: color 0.2s;
+  font-size: 0.75rem;
 }
-.lp-hero__daily strong {
-  color: white;
-  font-weight: 600;
+.daily-badge__dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
-.lp-hero__daily:hover {
-  color: white;
+.daily-badge__dots i {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: oklch(1 0 0 / 0.22);
 }
-.lp-hero__daily:hover svg:last-child {
-  transform: translateX(3px);
+.daily-badge__dots i[data-done="true"] {
+  background: var(--brass);
+  box-shadow: 0 0 8px oklch(0.8 0.13 78 / 0.7);
 }
-.lp-hero__daily svg:last-child {
-  width: 15px;
+.daily-badge__dots i[data-done="false"] {
+  animation: daily-wave 2.4s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.12s);
+}
+.daily-badge__timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: oklch(1 0 0 / 0.82);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+.daily-badge__timer svg {
+  width: 0.85rem;
+  height: 0.85rem;
   color: var(--brass);
-  transition: transform 0.2s;
 }
-.lp-hero__daily .chip-dot {
-  animation: pulse-ring 2.2s var(--ease-out) infinite;
+.daily-badge__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-left: auto;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  background: var(--brass);
+  color: var(--brass-foreground);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+.daily-badge__cta svg {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.25s var(--ease-out);
+}
+.daily-badge:hover .daily-badge__cta svg {
+  transform: translateX(4px);
+}
+@keyframes daily-sheen {
+  0%,
+  55% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+@keyframes daily-ping {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+@keyframes daily-wave {
+  0%,
+  100% {
+    background: oklch(1 0 0 / 0.22);
+    transform: scale(1);
+  }
+  50% {
+    background: var(--brass-soft);
+    transform: scale(1.5);
+  }
+}
+@media (max-width: 640px) {
+  .daily-badge {
+    width: 100%;
+    gap: 0.6rem 0.9rem;
+  }
+  .daily-badge__cta {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .daily-badge,
+  .daily-badge__cta svg {
+    transition: none;
+  }
+  .daily-badge::before,
+  .daily-badge__pulse::after,
+  .daily-badge__dots i[data-done="false"] {
+    animation: none;
+  }
 }
 .lp-hero__aside {
   position: absolute;

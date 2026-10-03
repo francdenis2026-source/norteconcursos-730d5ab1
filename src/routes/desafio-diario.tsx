@@ -29,7 +29,7 @@ import {
 } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
-import { GUEST_DAILY_LIMIT, getGuestRemainingToday, registerGuestAnswer } from "@/lib/guestQuota";
+import { GUEST_DAILY_LIMIT, getGuestRemainingToday, onAcreDayChange, registerGuestAnswer } from "@/lib/guestQuota";
 import {
   type Answer,
   type Question,
@@ -79,6 +79,14 @@ function DesafioDiario() {
   const [showResult, setShowResult] = React.useState(false);
   const [correct, setCorrect] = React.useState(0);
   const [wrong, setWrong] = React.useState(0);
+  const [dayChanged, setDayChanged] = React.useState(false);
+
+  // Virou o dia no Acre: as 10 questões grátis foram renovadas. Se a pessoa deixou a
+  // aba aberta, recarrega para buscar o novo conjunto (sem interromper quem está jogando).
+  React.useEffect(() => onAcreDayChange(() => setDayChanged(true)), []);
+  React.useEffect(() => {
+    if (dayChanged && step !== "playing") window.location.reload();
+  }, [dayChanged, step]);
 
   React.useEffect(() => {
     let active = true;
