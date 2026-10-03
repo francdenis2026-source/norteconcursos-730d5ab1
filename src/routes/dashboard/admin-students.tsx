@@ -1,9 +1,8 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { createClient } from "@supabase/supabase-js";
 import { toast } from "sonner";
 import { Activity, FileStack, Loader2, RefreshCw, Sparkles, UserPlus, Users } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { createIsolatedSupabaseClient, supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
+import { normalizeUppercase } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/admin-students")({
   head: () => ({
@@ -198,7 +198,7 @@ function NewStudentForm({ onCreated }: { onCreated: () => void }) {
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
 
-  async function submit(e: React.FormEvent) {
+  async function submit(e: FormEvent) {
     e.preventDefault();
     if (!name.trim() || !/^\S+@\S+\.\S+$/.test(email) || password.length < 6) {
       toast.error("Preencha nome, e-mail válido e senha com 6+ caracteres.");
@@ -207,10 +207,12 @@ function NewStudentForm({ onCreated }: { onCreated: () => void }) {
     setBusy(true);
     try {
       // Cliente separado, sem guardar sessão: cria o aluno sem desconectar o administrador.
-      const url = import.meta.env["VITE_SUPABASE_URL"] ?? "https://gkwphadbveiyjcwiiizw.supabase.co";
-      const key = import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"] ?? import.meta.env["VITE_SUPABASE_ANON_KEY"] ?? "";
-      const temp = createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false, storageKey: "nc-admin-create" } });
-      const { error } = await temp.auth.signUp({ email, password, options: { data: { full_name: name } } });
+      const temp = createIsolatedSupabaseClient("nc-admin-create");
+      const { error } = await temp.auth.signUp({
+        email: email.trim().toLowerCase(),
+        password,
+        options: { data: { full_name: normalizeUppercase(name.trim()) } },
+      });
       if (error) throw error;
       toast.success("Aluno cadastrado. Ele pode precisar confirmar o e-mail.");
       setName(""); setEmail(""); setPassword("");
@@ -229,7 +231,7 @@ function NewStudentForm({ onCreated }: { onCreated: () => void }) {
       </CardHeader>
       <CardContent>
         <form onSubmit={submit} className="grid grid-cols-1 gap-3 md:grid-cols-4">
-          <Input aria-label="Nome" placeholder="Nome completo" value={name} onChange={(e) => setName(e.target.value)} />
+          <Input aria-label="Nome" placeholder="Nome completo" value={name} onChange={(e) => setName(normalizeUppercase(e.target.value))} className="uppercase" />
           <Input aria-label="E-mail" type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
           <Input aria-label="Senha inicial" type="password" placeholder="Senha inicial" value={password} onChange={(e) => setPassword(e.target.value)} />
           <Button type="submit" disabled={busy}>{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : "Cadastrar"}</Button>
