@@ -5013,3 +5013,156 @@ iframe[src*="gpteng.co"] {
 .quiz-opts button.is-wrong { border-color: var(--destructive); background: oklch(0.6 0.19 22 / .12); }
 .quiz-why { padding: .9rem 1rem; border-radius: .9rem; border-left: 4px solid var(--brass); background: oklch(0.8 0.13 78 / .12); font-size: .95rem; }
 @media (prefers-reduced-motion: reduce) { .fc__in { transition: none; } }
+
+/* ============ Homepage compacta (desktop) ============ */
+@media (min-width: 1024px) {
+  .lp-section {
+    padding-block: clamp(48px, 6vw, 84px);
+  }
+  .lp-hero {
+    min-height: min(86svh, 720px);
+  }
+  .lp-hero__body {
+    padding-top: clamp(96px, 12vh, 140px);
+    padding-bottom: clamp(28px, 4vh, 48px);
+  }
+  .lp-hero__title {
+    font-size: clamp(2.4rem, 4.4vw, 4.2rem);
+    margin-top: 18px;
+  }
+  .lp-hero__lead {
+    margin-top: 18px;
+  }
+  .lp-hero__ctas {
+    margin-top: 24px;
+  }
+  .lp-h2 {
+    font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+    margin-top: 12px;
+  }
+  .lp-lead {
+    margin-top: 14px;
+    font-size: 1rem;
+  }
+  .lp-head {
+    margin-bottom: clamp(28px, 4vw, 44px);
+    gap: 32px;
+  }
+  .lp-marquee {
+    padding-block: 14px;
+  }
+  .lp-marquee__item {
+    font-size: 1.05rem;
+  }
+  .lp-rail__item {
+    padding: 16px 20px;
+  }
+  .lp-rail__item strong {
+    font-size: 1.15rem;
+  }
+  /* PCAC */
+  .lp-pcac__emblems {
+    margin-bottom: 20px;
+  }
+  .lp-pcac__emblem {
+    width: 46px;
+    height: 46px;
+  }
+  .lp-pcac__emblem img {
+    width: 36px;
+    height: 36px;
+  }
+  .lp-pcac__roles {
+    margin-top: 20px;
+  }
+  .lp-pcac__actions {
+    margin-top: 24px;
+  }
+  .lp-pcac__disclaimer {
+    margin-top: 18px;
+  }
+  /* Acre: mapa e cartas menores */
+  .lp-acre__stage {
+    margin-block: 12px 28px;
+    max-width: 880px;
+    margin-inline: auto;
+  }
+  .lp-acre__people {
+    width: 62%;
+  }
+  .lp-card {
+    min-height: 158px;
+    padding: 18px;
+  }
+  .lp-card strong {
+    font-size: 1.2rem;
+  }
+  .lp-card__num {
+    font-size: 2.8rem;
+  }
+  /* Método */
+  .lp-step__card {
+    padding: 20px;
+  }
+  .lp-step h3 {
+    font-size: 1.25rem;
+  }
+  /* Plataforma bento */
+  .lp-bento {
+    grid-auto-rows: minmax(168px, auto);
+  }
+  .lp-tile {
+    padding: 20px;
+    border-radius: 18px;
+  }
+  .lp-tile h3 {
+    padding-top: 18px;
+    font-size: 1.2rem;
+  }
+  .lp-tile--feature .lp-tile__copy {
+    padding: 24px 24px 0;
+  }
+  .lp-tile--feature h3 {
+    font-size: 1.6rem;
+  }
+  .lp-mock {
+    margin: 20px 0 0 22px;
+  }
+  .lp-mock__app {
+    gap: 10px;
+    padding: 16px 18px 0;
+  }
+  /* Carreiras */
+  .lp-careers__list {
+    margin-top: 32px;
+  }
+  .lp-career {
+    padding: 14px 14px 14px 0;
+  }
+  .lp-career strong {
+    font-size: 1.15rem;
+  }
+  /* Confiança */
+  .lp-pillars {
+    margin-top: 28px;
+  }
+  .lp-pillar {
+    padding: 16px 0;
+  }
+  /* Final */
+  .lp-final .lp-h2 {
+    font-size: clamp(2rem, 3.8vw, 3.4rem);
+  }
+  .lp-final__actions {
+    margin-top: 26px;
+  }
+  .lp-final__lineup {
+    margin-top: clamp(28px, 4vw, 48px);
+    max-height: 380px;
+  }
+  /* Rodapé */
+  .lp-footer__grid {
+    padding-block: 48px 36px;
+    gap: 36px;
+  }
+}
