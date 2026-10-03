@@ -11,7 +11,6 @@ import {
   Settings,
   CreditCard,
   History as HistoryIcon,
-  UserCheck,
   FileText,
   Lock,
 } from "lucide-react";
@@ -29,7 +28,7 @@ import {
 } from "@/components/ui/table";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MockService } from "@/services/mockService";
-import { Contest, Question, UserProfile } from "@/types";
+import { Contest, Question } from "@/types";
 import { toast } from "sonner";
 import { Link } from "@tanstack/react-router";
 import { CardFooter } from "@/components/ui/card";
@@ -42,7 +41,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { PageHero } from "@/components/dashboard/PageHero";
 import { LibraryAdmin } from "@/components/library/LibraryAdmin";
 import { Download } from "lucide-react";
@@ -87,30 +85,9 @@ function AdminPanel() {
   const { user, isAdmin, isLoading: isAuthLoading } = useAuthStatus();
   const [contests, setContests] = React.useState<Contest[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
-  const [users, setUsers] = React.useState<UserProfile[]>([]);
-  const [subscriptionPlans, setSubscriptionPlans] = React.useState<any[]>([]);
   const [auditLogs, setAuditLogs] = React.useState<any[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState("");
-  const [isUpdatingRole, setIsUpdatingRole] = React.useState<string | null>(null);
-  const [isUpdatingSubscription, setIsUpdatingSubscription] = React.useState<string | null>(null);
-
-  // Subscription management modal states
-  const [subModalConfig, setSubModalConfig] = React.useState<{
-    isOpen: boolean;
-    userId: string;
-    userName: string;
-    targetTier: string;
-    actionType: "downgrade" | "cancel";
-  }>({
-    isOpen: false,
-    userId: "",
-    userName: "",
-    targetTier: "",
-    actionType: "downgrade",
-  });
-  const [subReason, setSubReason] = React.useState("");
-  const [isSubmittingSub, setIsSubmittingSub] = React.useState(false);
 
   // States for Edit Modal
   const [editingContest, setEditingContest] = React.useState<Contest | null>(null);
@@ -167,7 +144,7 @@ function AdminPanel() {
       // Reassigning by CPF is opt-in: only touch user_id if the admin typed a
       // CPF that resolves to a different profile, so a blank/unchanged field
       // never accidentally moves a document to another account.
-      const trimmedCpf = relinkCpf.trim();
+      const trimmedCpf = relinkCpf.replace(/\D/g, "");
       if (trimmedCpf) {
         const { data: targetProfile, error: profileError } = await supabase
           .from("profiles")
@@ -212,89 +189,16 @@ function AdminPanel() {
   const loadData = async () => {
     setIsLoading(true);
     try {
-      const [c, q, p, logs, u] = await Promise.all([
+      const [c, q, logs] = await Promise.all([
         MockService.getContests(),
         MockService.getQuestions(),
-        (MockService as any).getSubscriptionPlans?.() || [],
         (MockService as any).getAdminAuditLogs?.() || [],
-        (MockService as any).listUsers?.() || [],
       ]);
       setContests(c);
       setQuestions(q);
-      setSubscriptionPlans(p);
       setAuditLogs(logs);
-      setUsers(u);
     } finally {
       setIsLoading(false);
-    }
-  };
-
-  const handleUpdateRole = async (userId: string, newRole: "admin" | "moderator" | "user") => {
-    setIsUpdatingRole(userId);
-    const success = await MockService.updateUserRole(userId, newRole);
-    if (success) {
-      toast.success("Role atualizada com sucesso!");
-      loadData();
-    } else {
-      toast.error("Erro ao atualizar role");
-    }
-    setIsUpdatingRole(null);
-  };
-
-  const handleDowngradeUser = (user: UserProfile, targetTier: string) => {
-    setSubModalConfig({
-      isOpen: true,
-      userId: user.id,
-      userName: user.full_name || user.email || "Usuário",
-      targetTier: targetTier,
-      actionType: "downgrade",
-    });
-    setSubReason("");
-  };
-
-  const handleCancelUserSubscription = (user: UserProfile) => {
-    setSubModalConfig({
-      isOpen: true,
-      userId: user.id,
-      userName: user.full_name || user.email || "Usuário",
-      targetTier: "free",
-      actionType: "cancel",
-    });
-    setSubReason("");
-  };
-
-  const processSubscriptionAction = async () => {
-    if (!subReason.trim()) {
-      toast.error("Motivo é obrigatório para realizar esta ação.");
-      return;
-    }
-
-    setIsSubmittingSub(true);
-    try {
-      let success = false;
-      if (subModalConfig.actionType === "downgrade") {
-        success = await MockService.downgradeSubscription(
-          subModalConfig.userId,
-          subModalConfig.targetTier,
-          subReason,
-        );
-      } else {
-        success = await MockService.cancelSubscription(subModalConfig.userId, subReason);
-      }
-
-      if (success) {
-        toast.success(
-          subModalConfig.actionType === "downgrade"
-            ? `Downgrade para ${subModalConfig.targetTier} agendado!`
-            : "Cancelamento de assinatura agendado!",
-        );
-        setSubModalConfig((prev) => ({ ...prev, isOpen: false }));
-        loadData();
-      } else {
-        toast.error("Erro ao processar solicitação.");
-      }
-    } finally {
-      setIsSubmittingSub(false);
     }
   };
 
@@ -408,9 +312,7 @@ function AdminPanel() {
           <TabsTrigger value="questions">Questões</TabsTrigger>
           <TabsTrigger value="syllabus">Edital</TabsTrigger>
           <TabsTrigger value="library">Biblioteca</TabsTrigger>
-          <TabsTrigger value="users">Usuários</TabsTrigger>
           <TabsTrigger value="exam-uploads">Provas Enviadas</TabsTrigger>
-          <TabsTrigger value="subscriptions">Planos</TabsTrigger>
           <TabsTrigger value="audit">Histórico</TabsTrigger>
         </TabsList>
 
@@ -637,7 +539,7 @@ function AdminPanel() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Editor de Conteúdo Premium</CardTitle>
+              <CardTitle>Editor de explicações da questão</CardTitle>
               <CardDescription>
                 Cadastre explicações estruturadas, links de teoria e anexos de mídia.
               </CardDescription>
@@ -932,195 +834,6 @@ function AdminPanel() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="subscriptions" className="mt-6 space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <ShieldCheck className="h-5 w-5 text-primary" />
-                Gestão de Planos e Entitlements
-              </CardTitle>
-              <CardDescription>
-                Gerencie os valores, limites e funcionalidades de cada nível de assinatura.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="rounded-md border overflow-x-auto">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Plano</TableHead>
-                      <TableHead>Preço (R$)</TableHead>
-                      <TableHead>Funcionalidades (JSON)</TableHead>
-                      <TableHead className="text-right">Ações</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {subscriptionPlans.length === 0 ? (
-                      <TableRow>
-                        <TableCell colSpan={4} className="text-center py-8 text-muted-foreground">
-                          {isLoading
-                            ? "Carregando planos do banco..."
-                            : "Configuração de planos apenas via banco de dados."}
-                        </TableCell>
-                      </TableRow>
-                    ) : (
-                      subscriptionPlans.map((plan) => (
-                        <TableRow key={plan.id}>
-                          <TableCell className="font-bold uppercase">{plan.id}</TableCell>
-                          <TableCell>
-                            <Input
-                              type="number"
-                              className="w-24"
-                              defaultValue={plan.price}
-                              onBlur={async (e) => {
-                                const val = parseFloat(e.target.value);
-                                await (MockService as any).updateSubscriptionPlan(
-                                  plan.id,
-                                  { price: val },
-                                  user?.id,
-                                );
-                                toast.success(`Preço do plano ${plan.id} atualizado`);
-                              }}
-                            />
-                          </TableCell>
-                          <TableCell>
-                            <div className="max-w-[400px]">
-                              <code className="text-[10px] block p-2 bg-muted rounded truncate">
-                                {JSON.stringify(plan.features)}
-                              </code>
-                            </div>
-                          </TableCell>
-                          <TableCell className="text-right">
-                            <Button variant="outline" size="sm" className="gap-2">
-                              <Settings className="h-4 w-4" /> Detalhes
-                            </Button>
-                          </TableCell>
-                        </TableRow>
-                      ))
-                    )}
-                  </TableBody>
-                </Table>
-              </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-
-        <TabsContent value="users" className="mt-6 space-y-4">
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0">
-              <div>
-                <CardTitle>Gestão de Usuários</CardTitle>
-                <CardDescription>Crie e gerencie contas de estudantes.</CardDescription>
-              </div>
-              <Button
-                size="sm"
-                className="gap-2"
-                onClick={() => {
-                  const name = prompt("Nome do Usuário:");
-                  const email = prompt("E-mail:");
-                  const pass = prompt("Senha:");
-                  if (name && email && pass) {
-                    toast.success(`Usuário ${name} criado com sucesso (Simulado)!`);
-                  }
-                }}
-              >
-                <UserCheck className="h-4 w-4" /> Novo Usuário
-              </Button>
-            </CardHeader>
-            <CardContent>
-              <div className="rounded-md border overflow-x-auto">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Nome</TableHead>
-                      <TableHead>E-mail</TableHead>
-                      <TableHead>ID</TableHead>
-                      <TableHead>Role</TableHead>
-                      <TableHead>Plano</TableHead>
-                      <TableHead className="text-right">Ações</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {users.length === 0 ? (
-                      <TableRow>
-                        <TableCell colSpan={6} className="text-center py-8 text-muted-foreground">
-                          Nenhum usuário encontrado.
-                        </TableCell>
-                      </TableRow>
-                    ) : (
-                      users.map((u) => (
-                        <TableRow key={u.id}>
-                          <TableCell className="font-medium">{u.full_name}</TableCell>
-                          <TableCell className="text-xs">{u.email}</TableCell>
-                          <TableCell className="text-[10px] font-mono">
-                            {u.id.substring(0, 12)}...
-                          </TableCell>
-                          <TableCell>
-                            <select
-                              className="text-[10px] p-1 rounded border bg-background"
-                              value={u.role}
-                              onChange={(e) => handleUpdateRole(u.id, e.target.value as any)}
-                              disabled={isUpdatingRole === u.id}
-                            >
-                              <option value="user">Usuário</option>
-                              <option value="moderator">Moderador</option>
-                              <option value="admin">Admin</option>
-                            </select>
-                          </TableCell>
-                          <TableCell>
-                            <Badge
-                              variant={u.is_activated ? "secondary" : "outline"}
-                              className="uppercase text-[9px]"
-                            >
-                              {u.subscription_tier}
-                            </Badge>
-                          </TableCell>
-                          <TableCell className="text-right">
-                            <div className="flex justify-end gap-2">
-                              {u.subscription_tier !== "free" && (
-                                <>
-                                  <Button
-                                    variant="ghost"
-                                    size="sm"
-                                    className="h-7 px-2 text-[10px] text-amber-600"
-                                    onClick={() => handleDowngradeUser(u, "essential")}
-                                    disabled={
-                                      isUpdatingSubscription === u.id ||
-                                      u.subscription_tier === "essential"
-                                    }
-                                  >
-                                    Downgrade
-                                  </Button>
-                                  <Button
-                                    variant="ghost"
-                                    size="sm"
-                                    className="h-7 px-2 text-[10px] text-rose-600"
-                                    onClick={() => handleCancelUserSubscription(u)}
-                                    disabled={isUpdatingSubscription === u.id}
-                                  >
-                                    Cancelar
-                                  </Button>
-                                </>
-                              )}
-                              <Button
-                                variant="ghost"
-                                size="sm"
-                                onClick={() => toast.info(`ID: ${u.id}`)}
-                              >
-                                Info
-                              </Button>
-                            </div>
-                          </TableCell>
-                        </TableRow>
-                      ))
-                    )}
-                  </TableBody>
-                </Table>
-              </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-
         <TabsContent value="audit" className="mt-6 space-y-4">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0">
@@ -1309,66 +1022,6 @@ function AdminPanel() {
         </DialogContent>
       </Dialog>
 
-      {/* Subscription Action Confirmation Modal */}
-      <Dialog
-        open={subModalConfig.isOpen}
-        onOpenChange={(open) =>
-          !isSubmittingSub && setSubModalConfig((prev) => ({ ...prev, isOpen: open }))
-        }
-      >
-        <DialogContent className="sm:max-w-[425px]">
-          <DialogHeader>
-            <DialogTitle>
-              {subModalConfig.actionType === "downgrade"
-                ? "Confirmar Downgrade"
-                : "Confirmar Cancelamento"}
-            </DialogTitle>
-            <DialogDescription>
-              {subModalConfig.actionType === "downgrade"
-                ? `Você está alterando o plano de ${subModalConfig.userName} para ${subModalConfig.targetTier.toUpperCase()}.`
-                : `Você está encerrando a assinatura Premium de ${subModalConfig.userName}.`}
-            </DialogDescription>
-          </DialogHeader>
-          <div className="grid gap-4 py-4">
-            <div className="space-y-2">
-              <Label htmlFor="reason" className="text-destructive">
-                Motivo da Alteração (Obrigatório)
-              </Label>
-              <Textarea
-                id="reason"
-                placeholder="Ex: Solicitação via ticket #123, falta de pagamento, etc."
-                value={subReason}
-                onChange={(e) => setSubReason(e.target.value)}
-                className="min-h-[100px]"
-              />
-            </div>
-            <div className="bg-muted p-3 rounded-md text-[11px] space-y-1">
-              <p className="font-bold">Informações Importantes:</p>
-              <ul className="list-disc pl-4 space-y-1">
-                <li>A alteração terá data efetiva de 30 dias a partir de hoje.</li>
-                <li>Um e-mail de confirmação será enviado automaticamente ao usuário.</li>
-                <li>Este evento será registrado permanentemente no log de auditoria.</li>
-              </ul>
-            </div>
-          </div>
-          <DialogFooter>
-            <Button
-              variant="outline"
-              onClick={() => setSubModalConfig((prev) => ({ ...prev, isOpen: false }))}
-              disabled={isSubmittingSub}
-            >
-              Voltar
-            </Button>
-            <Button
-              variant={subModalConfig.actionType === "downgrade" ? "default" : "destructive"}
-              onClick={processSubscriptionAction}
-              disabled={isSubmittingSub || !subReason.trim()}
-            >
-              {isSubmittingSub ? "Processando..." : "Confirmar e Agendar"}
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { toast } from "sonner";
-import { Activity, FileStack, Loader2, Pencil, RefreshCw, Sparkles, Trash2, UserPlus, Users } from "lucide-react";
+import { Activity, FileStack, Loader2, Pencil, RefreshCw, ShieldCheck, Sparkles, Trash2, UserPlus, Users } from "lucide-react";
 import { createIsolatedSupabaseClient, supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
@@ -9,6 +9,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { normalizeUppercase } from "@/lib/utils";
 
@@ -34,6 +37,7 @@ interface StudentRow {
   aiToday: number;
   aiTotal: number;
   exams: number;
+  isAdmin: boolean;
 }
 interface ExamRow {
   id: string;
@@ -48,7 +52,10 @@ interface ExamRow {
 const todayIso = () => new Date().toISOString().slice(0, 10);
 
 function AdminStudentsPage() {
-  const { isAdmin } = useAuthStatus();
+  const { user, isAdmin } = useAuthStatus();
+  const [planChange, setPlanChange] = useState<{ id: string; name: string; tier: string; from: string } | null>(null);
+  const [planReason, setPlanReason] = useState("");
+  const [planBusy, setPlanBusy] = useState(false);
   const [rows, setRows] = useState<StudentRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -68,10 +75,12 @@ function AdminStudentsPage() {
         .order("created_at", { ascending: false })
         .limit(500);
       if (pErr) throw pErr;
-      const [usage, docs] = await Promise.all([
+      const [usage, docs, roles] = await Promise.all([
         supabase.from("ai_usage_logs").select("user_id, used_on").limit(10000),
         supabase.from("student_exam_documents").select("user_id").limit(10000),
+        supabase.from("user_roles").select("user_id").eq("role", "admin"),
       ]);
+      const adminIds = new Set((roles.data ?? []).map((r) => r.user_id));
       const t = todayIso();
       setRows(
         (profiles ?? []).map((p) => {
@@ -82,6 +91,7 @@ function AdminStudentsPage() {
             aiTotal: u.length,
             aiToday: u.filter((x) => x.used_on === t).length,
             exams: (docs.data ?? []).filter((d) => d.user_id === p.id).length,
+            isAdmin: adminIds.has(p.id),
           };
         }),
       );
@@ -102,12 +112,48 @@ function AdminStudentsPage() {
     return q ? rows.filter((r) => `${r.full_name} ${r.email}`.toLowerCase().includes(q)) : rows;
   }, [rows, filter]);
 
-  async function changePlan(id: string, tier: string) {
-    const { error: e } = await supabase.from("profiles").update({ subscription_tier: tier, is_activated: tier !== "free" }).eq("id", id);
-    if (e) { toast.error("Não foi possível alterar o plano."); return; }
-    await supabase.from("subscription_audit_logs").insert({ user_id: id, event_type: "admin_change", new_tier: tier, metadata: { source: "admin_students" } });
+  function askPlanChange(s: StudentRow, tier: string) {
+    if (tier === s.subscription_tier) return;
+    setPlanReason("");
+    setPlanChange({ id: s.id, name: s.full_name || s.email || "aluno", tier, from: s.subscription_tier });
+  }
+
+  async function confirmPlanChange() {
+    if (!planChange || !planReason.trim()) return;
+    setPlanBusy(true);
+    const { id, tier, from } = planChange;
+    // Plano definido pelo administrador não vence sozinho (limpa qualquer vencimento antigo).
+    const { error: e } = await supabase
+      .from("profiles")
+      .update({ subscription_tier: tier, is_activated: tier !== "free", subscription_expires_at: null })
+      .eq("id", id);
+    if (e) { toast.error("Não foi possível alterar o plano."); setPlanBusy(false); return; }
+    await supabase.from("subscription_audit_logs").insert({
+      user_id: id,
+      event_type: "admin_change",
+      old_tier: from,
+      new_tier: tier,
+      metadata: { source: "admin_students", reason: planReason.trim() },
+    });
     setRows((r) => r.map((x) => (x.id === id ? { ...x, subscription_tier: tier } : x)));
-    toast.success("Plano atualizado.");
+    setPlanChange(null);
+    setPlanBusy(false);
+    toast.success("Plano atualizado e registrado no histórico.");
+  }
+
+  async function toggleAdmin(s: StudentRow) {
+    const label = s.full_name || s.email || "este aluno";
+    const promote = !s.isAdmin;
+    const msg = promote
+      ? `Tornar ${label} ADMINISTRADOR? Ele passará a ver e alterar os dados de todos os alunos.`
+      : `Remover o acesso de administrador de ${label}?`;
+    if (!window.confirm(msg)) return;
+    const { error: e } = promote
+      ? await supabase.from("user_roles").upsert({ user_id: s.id, role: "admin" }, { onConflict: "user_id,role" })
+      : await supabase.from("user_roles").delete().eq("user_id", s.id).eq("role", "admin");
+    if (e) { toast.error("Não foi possível alterar o papel."); return; }
+    setRows((r) => r.map((x) => (x.id === s.id ? { ...x, isAdmin: promote } : x)));
+    toast.success(promote ? "Agora é administrador." : "Acesso de administrador removido.");
   }
 
   async function saveName(id: string) {
@@ -196,12 +242,16 @@ function AdminStudentsPage() {
                     )}
                     <p className="truncate text-xs text-muted-foreground">{s.email}</p>
                   </div>
+                  {s.isAdmin && <Badge className="gap-1"><ShieldCheck className="h-3 w-3" aria-hidden /> Admin</Badge>}
                   <Badge variant="secondary">IA: {s.aiToday} hoje · {s.aiTotal} total</Badge>
                   <Button size="sm" variant="ghost" onClick={() => void toggleExams(s.id)}>Provas ({s.exams})</Button>
                   <Button asChild size="sm" variant="outline"><Link to="/dashboard/admin-student/$id" params={{ id: s.id }}>Ver progresso</Link></Button>
-                  <select aria-label={`Plano de ${s.full_name ?? s.email}`} value={s.subscription_tier} onChange={(e) => void changePlan(s.id, e.target.value)} className="h-9 rounded-md border border-input bg-background px-2 text-sm text-foreground">
+                  <select aria-label={`Plano de ${s.full_name ?? s.email}`} value={s.subscription_tier} onChange={(e) => askPlanChange(s, e.target.value)} className="h-9 rounded-md border border-input bg-background px-2 text-sm text-foreground">
                     {SUBSCRIPTION_PLANS.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
                   </select>
+                  {s.id !== user?.id && (
+                    <Button size="sm" variant="ghost" onClick={() => void toggleAdmin(s)}>{s.isAdmin ? "Remover admin" : "Tornar admin"}</Button>
+                  )}
                   <Button size="icon" variant="ghost" aria-label={`Editar ${s.full_name ?? s.email}`} onClick={() => { setEditId(s.id); setEditName(s.full_name ?? ""); }}><Pencil className="h-4 w-4" /></Button>
                   <Button size="icon" variant="ghost" className="text-destructive hover:bg-destructive/10" aria-label={`Excluir ${s.full_name ?? s.email}`} onClick={() => void removeStudent(s)}><Trash2 className="h-4 w-4" /></Button>
                 </div>
@@ -220,6 +270,27 @@ function AdminStudentsPage() {
           )}
         </CardContent>
       </Card>
+
+      <Dialog open={!!planChange} onOpenChange={(open) => { if (!open && !planBusy) setPlanChange(null); }}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>Alterar plano</DialogTitle>
+            <DialogDescription>
+              {planChange && `Alterar o plano de ${planChange.name} de ${SUBSCRIPTION_PLANS.find((p) => p.id === planChange.from)?.name ?? planChange.from} para ${SUBSCRIPTION_PLANS.find((p) => p.id === planChange.tier)?.name ?? planChange.tier}. A mudança vale agora e fica registrada no histórico.`}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-2 py-2">
+            <Label htmlFor="plan-reason">Motivo (obrigatório)</Label>
+            <Textarea id="plan-reason" value={planReason} onChange={(e) => setPlanReason(e.target.value)} maxLength={300} placeholder="Ex.: período de testes, pedido do aluno, pagamento confirmado…" className="min-h-[90px]" />
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setPlanChange(null)} disabled={planBusy}>Voltar</Button>
+            <Button onClick={() => void confirmPlanChange()} disabled={planBusy || !planReason.trim()}>
+              {planBusy ? <Loader2 className="h-4 w-4 animate-spin" /> : "Confirmar"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

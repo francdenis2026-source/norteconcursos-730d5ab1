@@ -762,47 +762,6 @@ export const MockService = {
     }
   },
 
-  downgradeSubscription: async (userId: string, newTier: string, reason: string, effectiveDate?: string): Promise<boolean> => {
-    try {
-      const { data: profile } = await supabase.from('profiles').select('subscription_tier, email').eq('id', userId).single();
-      const oldTier = profile?.subscription_tier || 'free';
-      const date = effectiveDate || new Date(new Date().setDate(new Date().getDate() + 30)).toISOString();
-
-      const { error } = await supabase
-        .from('profiles')
-        .update({ 
-          subscription_tier: newTier,
-          subscription_expires_at: date 
-        })
-        .eq('id', userId);
-
-      if (error) throw error;
-
-      await supabase.from('subscription_audit_logs').insert({
-        user_id: userId,
-        event_type: 'downgrade',
-        old_tier: oldTier,
-        new_tier: newTier,
-        metadata: { 
-          source: 'admin_panel',
-          reason: reason,
-          effective_date: date
-        }
-      });
-
-      // Simulação de envio de e-mail real
-      console.log(`[EMAIL REAL ENVIADO] Para: ${profile?.email}`);
-      console.log(`Assunto: Confirmação de Alteração de Plano - Norte Concurso`);
-      console.log(`Corpo: Olá, informamos que seu plano foi alterado para ${newTier.toUpperCase()}.`);
-      console.log(`Data Efetiva: ${new Date(date).toLocaleDateString()}. Motivo: ${reason}`);
-
-      return true;
-    } catch (e) {
-      console.error('Error downgrading subscription:', e);
-      return false;
-    }
-  },
-
   cancelSubscription: async (userId: string, reason: string, effectiveDate?: string): Promise<boolean> => {
     try {
       const { data: profile } = await supabase.from('profiles').select('subscription_tier, email').eq('id', userId).single();
@@ -832,11 +791,6 @@ export const MockService = {
         }
       });
 
-      // Simulação de envio de e-mail real
-      console.log(`[EMAIL REAL ENVIADO] Para: ${profile?.email}`);
-      console.log(`Assunto: Cancelamento de Assinatura Confirmado - Norte Concurso`);
-      console.log(`Corpo: Sua assinatura foi cancelada. O acesso Premium permanecerá ativo até ${new Date(date).toLocaleDateString()}.`);
-      console.log(`Motivo: ${reason}`);
 
       return true;
     } catch (e) {
