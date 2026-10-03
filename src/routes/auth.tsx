@@ -172,6 +172,7 @@ function AuthPage() {
           <ArrowLeft /> Voltar para o início
         </Link>
         <div className="auth-card">
+          <img src="/media/hero/auth-seguranca.jpg" alt="Policiais e bombeiro da segurança pública" className="auth-photo" width={1600} height={1200} />
           <div className="auth-mobile-brand">
             <NorteBrand />
           </div>
