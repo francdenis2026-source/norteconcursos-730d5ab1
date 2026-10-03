@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
-import { Activity, FileStack, Loader2, RefreshCw, Sparkles, UserPlus, Users } from "lucide-react";
+import { Activity, FileStack, Loader2, Pencil, RefreshCw, Sparkles, Trash2, UserPlus, Users } from "lucide-react";
 import { createIsolatedSupabaseClient, supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
@@ -55,6 +55,8 @@ function AdminStudentsPage() {
   const [filter, setFilter] = useState("");
   const [openId, setOpenId] = useState<string | null>(null);
   const [exams, setExams] = useState<ExamRow[]>([]);
+  const [editId, setEditId] = useState<string | null>(null);
+  const [editName, setEditName] = useState("");
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -106,6 +108,25 @@ function AdminStudentsPage() {
     await supabase.from("subscription_audit_logs").insert({ user_id: id, event_type: "admin_change", new_tier: tier, metadata: { source: "admin_students" } });
     setRows((r) => r.map((x) => (x.id === id ? { ...x, subscription_tier: tier } : x)));
     toast.success("Plano atualizado.");
+  }
+
+  async function saveName(id: string) {
+    const name = normalizeUppercase(editName.trim());
+    if (!name) { toast.error("Informe o nome."); return; }
+    const { error: e } = await supabase.from("profiles").update({ full_name: name }).eq("id", id);
+    if (e) { toast.error("Não foi possível salvar."); return; }
+    setRows((r) => r.map((x) => (x.id === id ? { ...x, full_name: name } : x)));
+    setEditId(null);
+    toast.success("Aluno atualizado.");
+  }
+
+  async function removeStudent(s: StudentRow) {
+    const label = s.full_name || s.email || "este aluno";
+    if (!window.confirm(`Excluir ${label}? A conta, provas e histórico serão apagados de forma permanente.`)) return;
+    const { error: e } = await supabase.rpc("admin_delete_user", { _user_id: s.id });
+    if (e) { toast.error(e.message || "Não foi possível excluir."); return; }
+    setRows((r) => r.filter((x) => x.id !== s.id));
+    toast.success("Aluno excluído.");
   }
 
   async function toggleExams(id: string) {
@@ -164,7 +185,15 @@ function AdminStudentsPage() {
               <div key={s.id} className="rounded-lg border border-border bg-card p-3">
                 <div className="flex flex-wrap items-center gap-3">
                   <div className="min-w-0 flex-1">
-                    <p className="truncate font-medium text-foreground">{s.full_name || "Sem nome"}</p>
+                    {editId === s.id ? (
+                      <form className="flex gap-2" onSubmit={(e) => { e.preventDefault(); void saveName(s.id); }}>
+                        <Input aria-label="Nome do aluno" value={editName} onChange={(e) => setEditName(normalizeUppercase(e.target.value))} className="h-8 uppercase" autoFocus />
+                        <Button size="sm" type="submit">Salvar</Button>
+                        <Button size="sm" type="button" variant="ghost" onClick={() => setEditId(null)}>Cancelar</Button>
+                      </form>
+                    ) : (
+                      <p className="truncate font-medium text-foreground">{s.full_name || "Sem nome"}</p>
+                    )}
                     <p className="truncate text-xs text-muted-foreground">{s.email}</p>
                   </div>
                   <Badge variant="secondary">IA: {s.aiToday} hoje · {s.aiTotal} total</Badge>
@@ -172,6 +201,8 @@ function AdminStudentsPage() {
                   <select aria-label={`Plano de ${s.full_name ?? s.email}`} value={s.subscription_tier} onChange={(e) => void changePlan(s.id, e.target.value)} className="h-9 rounded-md border border-input bg-background px-2 text-sm text-foreground">
                     {SUBSCRIPTION_PLANS.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
                   </select>
+                  <Button size="icon" variant="ghost" aria-label={`Editar ${s.full_name ?? s.email}`} onClick={() => { setEditId(s.id); setEditName(s.full_name ?? ""); }}><Pencil className="h-4 w-4" /></Button>
+                  <Button size="icon" variant="ghost" className="text-destructive hover:bg-destructive/10" aria-label={`Excluir ${s.full_name ?? s.email}`} onClick={() => void removeStudent(s)}><Trash2 className="h-4 w-4" /></Button>
                 </div>
                 {openId === s.id && (
                   <ul className="mt-3 space-y-1 border-t border-border pt-3 text-sm">
