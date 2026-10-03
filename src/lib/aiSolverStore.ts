@@ -43,6 +43,15 @@ export function registerUse(userId: string): void {
     usageKey(userId),
     JSON.stringify({ date: today(), count: getUsedToday(userId) + 1 }),
   );
+  // Registro online (best effort) para o painel do administrador.
+  void import("@/integrations/supabase/client")
+    .then(async ({ supabase }) => {
+      const { data } = await supabase.auth.getSession();
+      if (data.session?.user.id) {
+        await supabase.from("ai_usage_logs").insert({ user_id: data.session.user.id });
+      }
+    })
+    .catch(() => undefined);
 }
 
 export function listResolutions(userId: string): SavedResolution[] {
