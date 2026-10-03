@@ -5166,3 +5166,28 @@ iframe[src*="gpteng.co"] {
     gap: 36px;
   }
 }
+
+/* Redesigned feature card: Treinador de questões */
+.lp-tile--feature { display: grid; grid-template-rows: auto 1fr; gap: 0; }
+.lp-feature__copy { padding: 26px 28px 0; }
+.lp-feature__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.lp-feature__badge {
+  padding: 5px 11px; border-radius: 999px; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--brass-soft);
+  background: oklch(0.8 0.13 78 / 0.12); box-shadow: inset 0 0 0 1px oklch(0.8 0.13 78 / 0.3);
+}
+.lp-tile--feature .lp-feature__copy h3 { margin-top: 18px; padding: 0; font-size: clamp(1.6rem, 2.2vw, 2rem); }
+.lp-tile--feature .lp-feature__copy p { margin-top: 8px; }
+.lp-feature__list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.lp-feature__list li {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 11px; border-radius: 10px;
+  font-size: 0.78rem; color: oklch(1 0 0 / 0.82); background: oklch(1 0 0 / 0.05);
+  border: 1px solid oklch(1 0 0 / 0.08);
+}
+.lp-feature__list svg { width: 14px; height: 14px; color: var(--brass-soft); }
+.lp-feature__window { display: flex; min-height: 0; padding: 20px 22px 22px; }
+.lp-feature__window .lp-mock {
+  margin: 0; border: 1px solid oklch(1 0 0 / 0.12); border-radius: 14px;
+  box-shadow: 0 20px 50px -24px oklch(0 0 0 / 0.6), 0 0 0 1px oklch(0 0 0 / 0.35);
+}
+@media (max-width: 1023px) { .lp-feature__window .lp-mock { margin: 0 !important; } }

@@ -86,6 +86,7 @@ const MENU: MenuItem[] = [
     href: "/dashboard/question-trainer",
   },
   { group: "Treinamento", label: "Resolver com IA", icon: Sparkles, href: "/dashboard/ai-solver" },
+  { group: "Treinamento", label: "Planos e uso", icon: Sparkles, href: "/dashboard/subscriptions" },
   {
     group: "Treinamento",
     label: "Banco de questões",

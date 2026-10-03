@@ -22,6 +22,7 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
     price: 0,
     description: "Para quem está começando a jornada.",
     features: {
+      aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 3 },
       questions: { name: "Questões por dia", included: true, limit: 10 },
       mockExams: { name: "Simulados completos", included: false },
       performanceAnalytics: { name: "Análise básica", included: true },
@@ -36,6 +37,7 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
     price: 19.9,
     description: "Foco total em resolução de questões.",
     features: {
+      aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 15 },
       questions: { name: "Questões por dia", included: true, limit: 100 },
       mockExams: { name: "Simulados completos", included: true, limit: 2 },
       performanceAnalytics: { name: "Análise detalhada", included: true },
@@ -51,6 +53,7 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
     description: "O melhor custo-benefício para sua aprovação.",
     isPopular: true,
     features: {
+      aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 50 },
       questions: { name: "Questões ilimitadas", included: true, limit: "unlimited" },
       mockExams: { name: "Simulados ilimitados", included: true, limit: "unlimited" },
       performanceAnalytics: { name: "Análise avançada", included: true },
@@ -65,6 +68,7 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
     price: 49.9,
     description: "Acompanhamento completo e ferramentas exclusivas.",
     features: {
+      aiSolver: { name: "Resoluções com IA ilimitadas", included: true, limit: "unlimited" },
       questions: { name: "Questões ilimitadas", included: true, limit: "unlimited" },
       mockExams: { name: "Simulados ilimitados", included: true, limit: "unlimited" },
       performanceAnalytics: { name: "Relatórios consolidados", included: true },
