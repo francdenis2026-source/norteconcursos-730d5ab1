@@ -69,7 +69,15 @@ interface AdminExamUploadRow {
 export const Route = createFileRoute("/dashboard/admin")({
   component: AdminPanel,
   head: () => ({
-    meta: [{ title: "Painel Administrativo | Norte Concurso" }],
+    meta: [
+      { title: "Conteúdo da plataforma | Norte Concurso" },
+      { name: "description", content: "Administração de concursos, questões, editais, biblioteca e provas do Norte Concurso." },
+      { property: "og:title", content: "Conteúdo da plataforma | Norte Concurso" },
+      { property: "og:description", content: "Central administrativa de conteúdo e provas da plataforma." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { name: "robots", content: "noindex" },
+    ],
   }),
 });
 
@@ -391,11 +399,11 @@ function AdminPanel() {
             Painel <em>administrativo</em>
           </>
         }
-        description="Gerencie concursos, questões, usuários e assinaturas da plataforma."
+        description="Gerencie concursos, questões, editais, biblioteca e provas em uma central reservada."
       />
 
       <Tabs defaultValue="contests" className="w-full">
-        <TabsList className="grid w-full max-w-5xl grid-cols-8">
+        <TabsList className="admin-tabs w-full max-w-5xl">
           <TabsTrigger value="contests">Concursos</TabsTrigger>
           <TabsTrigger value="questions">Questões</TabsTrigger>
           <TabsTrigger value="syllabus">Edital</TabsTrigger>

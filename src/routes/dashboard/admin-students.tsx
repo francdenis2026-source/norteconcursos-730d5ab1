@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { createClient } from "@supabase/supabase-js";
 import { toast } from "sonner";
-import { Loader2, RefreshCw, UserPlus, Users } from "lucide-react";
+import { Activity, FileStack, Loader2, RefreshCw, Sparkles, UserPlus, Users } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/admin-students")({
   head: () => ({
@@ -124,16 +125,23 @@ function AdminStudentsPage() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl space-y-6 p-4 md:p-6">
-      <header className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <p className="flex items-center gap-2 text-sm font-medium text-primary"><Users className="h-4 w-4" aria-hidden /> Administração</p>
-          <h1 className="text-2xl font-bold text-foreground md:text-3xl">Alunos e planos</h1>
+    <div className="mx-auto max-w-6xl space-y-6">
+      <PageHero
+        image="command-room"
+        size="sm"
+        kicker="Operações de alunos"
+        icon={Users}
+        title={<>Alunos, planos <em>e IA</em></>}
+        description="Cadastre contas, acompanhe provas e consumo de IA e ajuste o acesso de cada aluno."
+        actions={<Button className="hero-btn-ghost gap-2" onClick={() => void load()} disabled={loading}><RefreshCw className="h-4 w-4" aria-hidden /> Atualizar dados</Button>}
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={Users} label="Alunos" value={rows.length} />
+          <HeroStat icon={Sparkles} label="Uso de IA hoje" value={rows.reduce((total, row) => total + row.aiToday, 0)} />
+          <HeroStat icon={Activity} label="Uso de IA total" value={rows.reduce((total, row) => total + row.aiTotal, 0)} />
+          <HeroStat icon={FileStack} label="Provas registradas" value={rows.reduce((total, row) => total + row.exams, 0)} />
         </div>
-        <Button variant="outline" onClick={() => void load()} disabled={loading}>
-          <RefreshCw className="mr-2 h-4 w-4" aria-hidden /> Atualizar
-        </Button>
-      </header>
+      </PageHero>
 
       <NewStudentForm onCreated={() => void load()} />
 
