@@ -8,6 +8,9 @@ export const PAYMENTS_ENABLED = false;
 export const TESTING_PHASE = true;
 export const TESTING_TIER: SubscriptionTier = "essential";
 
+/** A fase de testes só vale para quem está no plano gratuito/Essencial; planos acima (Plus, Premium) ficam como estão. */
+export const isTestingTier = (tier: string) => tier === "free" || tier === "essential";
+
 export const SOON_LABEL = "Em breve";
 export const TESTING_NOTICE =
   "Estamos em fase de testes. Durante este período, todas as contas usam o plano Essencial. Em breve os planos serão liberados.";
