@@ -115,6 +115,20 @@ const MENU: MenuItem[] = [
     href: "/dashboard/admin-students",
     adminOnly: true,
   },
+  {
+    group: "Administração",
+    label: "Números gerais",
+    icon: Layers,
+    href: "/dashboard/admin-metrics",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
+    label: "Cadastros por dia",
+    icon: User,
+    href: "/dashboard/admin-signups",
+    adminOnly: true,
+  },
 ];
 
 const MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
