@@ -1,6 +1,6 @@
 import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, type ErrorComponentProps } from "@tanstack/react-router";
 import {
   AlertTriangle,
   Award,
@@ -1402,7 +1402,7 @@ function EmptyState({
     </div>
   );
 }
-function ExamRouteError({ reset }: { error: Error; reset: () => void }) {
+function ExamRouteError({ reset }: ErrorComponentProps) {
   return (
     <EmptyState
       title="O painel encontrou uma inconsistência"
