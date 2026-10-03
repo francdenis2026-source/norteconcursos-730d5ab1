@@ -122,6 +122,13 @@ const MENU: MenuItem[] = [
     href: "/dashboard/admin-metrics",
     adminOnly: true,
   },
+  {
+    group: "Administração",
+    label: "Cadastros por dia",
+    icon: User,
+    href: "/dashboard/admin-signups",
+    adminOnly: true,
+  },
 ];
 
 const MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
