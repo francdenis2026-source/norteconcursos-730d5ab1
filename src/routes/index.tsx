@@ -31,6 +31,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
+import { TestingSeal } from "@/components/landing/TestingSeal";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
 
@@ -261,6 +262,7 @@ function Index() {
           <div className="lp-hero__grid" aria-hidden="true" />
           <div className="lp-container lp-hero__body">
             <div className="lp-hero__content">
+              <TestingSeal />
               <DailyChallengeBadge />
               <span className="chip-brass">
                 <Compass /> Preparação para segurança pública
