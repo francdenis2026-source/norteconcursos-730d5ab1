@@ -82,6 +82,7 @@ Em nenhum ano ele apareceu na lista de classificados — sempre abaixo do corte,
 - **Login:** aceita **e-mail ou CPF**. Contas antigas entram pelo CPF (e-mail interno `<cpf>@norteconcurso.local`); contas novas, pelo e-mail real.
 - **CPF único:** coluna `profiles.cpf` com índice único (migration `20260930400000_profiles_cpf_unique.sql`).
 - **Publicação:** o site só muda em `norteconcursos.xyz` depois de **Publish > Update** no Lovable.
+- **Sync Lovable:** se o Lovable avisar "diverged", ele guarda as alterações na branch `lovable-sync`; junte-a ao `main` com merge commit (nunca squash/rebase).
 
 ## 5. Credenciais sensíveis
 

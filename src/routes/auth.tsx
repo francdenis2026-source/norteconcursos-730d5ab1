@@ -211,10 +211,11 @@ function AuthPage() {
                   <Input
                     id="name"
                     autoComplete="name"
+                    autoCapitalize="characters"
+                    className="uppercase placeholder:normal-case"
                     placeholder="Como podemos chamar você?"
                     value={name}
                     onChange={(e) => setName(normalizeUppercase(e.target.value))}
-                    className="uppercase"
                     required
                   />
                 </div>
