@@ -5013,3 +5013,23 @@ iframe[src*="gpteng.co"] {
 .quiz-opts button.is-wrong { border-color: var(--destructive); background: oklch(0.6 0.19 22 / .12); }
 .quiz-why { padding: .9rem 1rem; border-radius: .9rem; border-left: 4px solid var(--brass); background: oklch(0.8 0.13 78 / .12); font-size: .95rem; }
 @media (prefers-reduced-motion: reduce) { .fc__in { transition: none; } }
+
+/* === Homepage compacta (web) === */
+@media (min-width: 1024px) {
+  .lp-hero { min-height: min(88svh, 760px); }
+  .lp-hero__body { padding-top: clamp(96px, 12vh, 140px); }
+  .lp-section { padding-block: clamp(52px, 7vw, 88px); }
+  .lp-h2 { font-size: clamp(1.9rem, 3.4vw, 3rem); margin-top: 12px; }
+  .lp-lead { margin-top: 14px; font-size: 1rem; }
+  .lp-head { margin-bottom: clamp(28px, 4vw, 44px); gap: 32px; }
+  .lp-rail__item { padding: 14px 20px; }
+  .lp-rail__item strong { font-size: 1.15rem; }
+  .lp-marquee { padding-block: 14px; }
+  .lp-marquee__item { font-size: 1.05rem; gap: 20px; }
+  .lp-bento { grid-auto-rows: minmax(160px, auto); gap: 12px; }
+  .lp-tile { padding: 20px; border-radius: 18px; }
+  .lp-tile h3 { padding-top: 18px; font-size: 1.2rem; }
+  .lp-tile--feature .lp-tile__copy { padding: 24px 24px 0; }
+  .lp-tile--feature h3 { font-size: 1.6rem; }
+  .lp-step { gap: 12px; }
+}
