@@ -228,6 +228,46 @@ function AuthPage() {
           <div className="auth-mobile-brand">
             <NorteBrand />
           </div>
+          {pendingEmail ? (
+            <div className="space-y-5 text-center" role="status" aria-live="polite">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Mail className="h-7 w-7" />
+              </div>
+              <div className="auth-heading">
+                <h2>Bem-vindo à Norte Concurso!</h2>
+                <p>
+                  Sua conta foi criada. Enviamos um link de confirmação para{" "}
+                  <strong className="text-foreground">{pendingEmail}</strong>. Clique no link para
+                  ativar o acesso — você entrará automaticamente.
+                </p>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <Loader2 className="h-4 w-4 animate-spin" /> Aguardando confirmação do e-mail…
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Não encontrou? Verifique a caixa de spam ou promoções.
+              </p>
+              <button
+                type="button"
+                className="btn-brass auth-submit"
+                disabled={resending || cooldown > 0}
+                onClick={() => resendConfirmation(pendingEmail)}
+              >
+                {resending ? <Loader2 className="animate-spin" /> : cooldown > 0 ? `Reenviar em ${cooldown}s` : "Reenviar e-mail de confirmação"}
+              </button>
+              <button
+                type="button"
+                className="auth-link"
+                onClick={() => {
+                  setPendingEmail(null);
+                  setMode("login");
+                }}
+              >
+                Já confirmei — ir para Entrar
+              </button>
+            </div>
+          ) : (
+          <>
           <div className="auth-tabs" role="tablist" aria-label="Tipo de acesso">
             <button
               type="button"
@@ -361,6 +401,20 @@ function AuthPage() {
                 <span>{formError}</span>
               </div>
             )}
+            {unconfirmedEmail && (
+              <button
+                type="button"
+                className="auth-link"
+                disabled={resending || cooldown > 0}
+                onClick={() => resendConfirmation(unconfirmedEmail)}
+              >
+                {resending
+                  ? "Enviando…"
+                  : cooldown > 0
+                    ? `E-mail reenviado · novo envio em ${cooldown}s`
+                    : "Reenviar e-mail de confirmação"}
+              </button>
+            )}
             <button type="submit" className="btn-brass auth-submit" disabled={isLoading}>
               {isLoading ? (
                 <Loader2 className="animate-spin" />
@@ -372,6 +426,8 @@ function AuthPage() {
               )}
             </button>
           </form>
+          </>
+          )}
           <div className="auth-security">
             <ShieldCheck />
             <span>Ambiente criptografado · seus dados não são compartilhados</span>
