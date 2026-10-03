@@ -40,6 +40,7 @@ import { Route as DashboardQuestionsRouteImport } from './routes/dashboard/quest
 import { Route as DashboardStudentExamsRouteImport } from './routes/dashboard/student-exams'
 import { Route as DashboardStudyPlanRouteImport } from './routes/dashboard/study-plan'
 import { Route as DashboardStudyToolsRouteImport } from './routes/dashboard/study-tools'
+import { Route as DashboardSubscriptionsRouteImport } from './routes/dashboard/subscriptions'
 import { Route as DashboardTimerRouteImport } from './routes/dashboard/timer'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
 import { Route as DashboardEditalIndexRouteImport } from './routes/dashboard/edital.index'
@@ -203,6 +204,11 @@ const DashboardStudyToolsRoute = DashboardStudyToolsRouteImport.update({
   path: '/study-tools',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardSubscriptionsRoute = DashboardSubscriptionsRouteImport.update({
+  id: '/subscriptions',
+  path: '/subscriptions',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardTimerRoute = DashboardTimerRouteImport.update({
   id: '/timer',
   path: '/timer',
@@ -265,6 +271,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
+  '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
@@ -301,6 +308,7 @@ export interface FileRoutesByTo {
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
+  '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
@@ -341,6 +349,7 @@ export interface FileRoutesById {
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
+  '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
@@ -382,6 +391,7 @@ export interface FileRouteTypes {
     | '/dashboard/student-exams'
     | '/dashboard/study-plan'
     | '/dashboard/study-tools'
+    | '/dashboard/subscriptions'
     | '/dashboard/timer'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
@@ -418,6 +428,7 @@ export interface FileRouteTypes {
     | '/dashboard/student-exams'
     | '/dashboard/study-plan'
     | '/dashboard/study-tools'
+    | '/dashboard/subscriptions'
     | '/dashboard/timer'
     | '/dashboard'
     | '/api/public/stripe-webhook'
@@ -457,6 +468,7 @@ export interface FileRouteTypes {
     | '/dashboard/student-exams'
     | '/dashboard/study-plan'
     | '/dashboard/study-tools'
+    | '/dashboard/subscriptions'
     | '/dashboard/timer'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
@@ -699,6 +711,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardStudyToolsRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/subscriptions': {
+      id: '/dashboard/subscriptions'
+      path: '/subscriptions'
+      fullPath: '/dashboard/subscriptions'
+      preLoaderRoute: typeof DashboardSubscriptionsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/timer': {
       id: '/dashboard/timer'
       path: '/timer'
@@ -792,6 +811,7 @@ interface DashboardRouteChildren {
   DashboardStudentExamsRoute: typeof DashboardStudentExamsRoute
   DashboardStudyPlanRoute: typeof DashboardStudyPlanRoute
   DashboardStudyToolsRoute: typeof DashboardStudyToolsRoute
+  DashboardSubscriptionsRoute: typeof DashboardSubscriptionsRoute
   DashboardTimerRoute: typeof DashboardTimerRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
 }
@@ -817,6 +837,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardStudentExamsRoute: DashboardStudentExamsRoute,
   DashboardStudyPlanRoute: DashboardStudyPlanRoute,
   DashboardStudyToolsRoute: DashboardStudyToolsRoute,
+  DashboardSubscriptionsRoute: DashboardSubscriptionsRoute,
   DashboardTimerRoute: DashboardTimerRoute,
   DashboardIndexRoute: DashboardIndexRoute,
 }
