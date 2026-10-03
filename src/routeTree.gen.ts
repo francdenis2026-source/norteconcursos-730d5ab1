@@ -17,9 +17,11 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SuporteRouteImport } from './routes/suporte'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as ApiSolveQuestionRouteImport } from './routes/api/solve-question'
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
+import { Route as DashboardAiSolverRouteImport } from './routes/dashboard/ai-solver'
 import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers'
 import { Route as DashboardEditalRouteImport } from './routes/dashboard/edital'
 import { Route as DashboardEditalRadarRouteImport } from './routes/dashboard/edital-radar'
@@ -85,6 +87,11 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiSolveQuestionRoute = ApiSolveQuestionRouteImport.update({
+  id: '/api/solve-question',
+  path: '/api/solve-question',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CheckoutPlanIdRoute = CheckoutPlanIdRouteImport.update({
   id: '/checkout/$planId',
   path: '/checkout/$planId',
@@ -98,6 +105,11 @@ const DashboardIndexRoute = DashboardIndexRouteImport.update({
 const DashboardAdminRoute = DashboardAdminRouteImport.update({
   id: '/admin',
   path: '/admin',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardAiSolverRoute = DashboardAiSolverRouteImport.update({
+  id: '/ai-solver',
+  path: '/ai-solver',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardCareersRoute = DashboardCareersRouteImport.update({
@@ -231,8 +243,10 @@ export interface FileRoutesByFullPath {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
@@ -267,8 +281,10 @@ export interface FileRoutesByTo {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
@@ -303,8 +319,10 @@ export interface FileRoutesById {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
@@ -342,8 +360,10 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
@@ -378,8 +398,10 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital-radar'
     | '/dashboard/errors'
@@ -413,8 +435,10 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
@@ -451,6 +475,7 @@ export interface RootRouteChildren {
   SobreRoute: typeof SobreRoute
   SuporteRoute: typeof SuporteRoute
   TermsRoute: typeof TermsRoute
+  ApiSolveQuestionRoute: typeof ApiSolveQuestionRoute
   CheckoutPlanIdRoute: typeof CheckoutPlanIdRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
 }
@@ -513,6 +538,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/solve-question': {
+      id: '/api/solve-question'
+      path: '/api/solve-question'
+      fullPath: '/api/solve-question'
+      preLoaderRoute: typeof ApiSolveQuestionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/checkout/$planId': {
       id: '/checkout/$planId'
       path: '/checkout/$planId'
@@ -532,6 +564,13 @@ declare module '@tanstack/react-router' {
       path: '/admin'
       fullPath: '/dashboard/admin'
       preLoaderRoute: typeof DashboardAdminRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/ai-solver': {
+      id: '/dashboard/ai-solver'
+      path: '/ai-solver'
+      fullPath: '/dashboard/ai-solver'
+      preLoaderRoute: typeof DashboardAiSolverRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/careers': {
@@ -734,6 +773,7 @@ const DashboardLibraryRouteWithChildren =
 
 interface DashboardRouteChildren {
   DashboardAdminRoute: typeof DashboardAdminRoute
+  DashboardAiSolverRoute: typeof DashboardAiSolverRoute
   DashboardCareersRoute: typeof DashboardCareersRoute
   DashboardEditalRoute: typeof DashboardEditalRouteWithChildren
   DashboardEditalRadarRoute: typeof DashboardEditalRadarRoute
@@ -758,6 +798,7 @@ interface DashboardRouteChildren {
 
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminRoute: DashboardAdminRoute,
+  DashboardAiSolverRoute: DashboardAiSolverRoute,
   DashboardCareersRoute: DashboardCareersRoute,
   DashboardEditalRoute: DashboardEditalRouteWithChildren,
   DashboardEditalRadarRoute: DashboardEditalRadarRoute,
@@ -793,6 +834,7 @@ const rootRouteChildren: RootRouteChildren = {
   SobreRoute: SobreRoute,
   SuporteRoute: SuporteRoute,
   TermsRoute: TermsRoute,
+  ApiSolveQuestionRoute: ApiSolveQuestionRoute,
   CheckoutPlanIdRoute: CheckoutPlanIdRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
 }
