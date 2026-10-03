@@ -22,13 +22,16 @@ import { useEffect, useRef, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
+import { validateCPF } from "@/lib/utils";
 
 function friendlyAuthError(error: unknown) {
   const raw = error instanceof Error ? error.message : "";
   if (/invalid login credentials/i.test(raw))
-    return "CPF ou senha incorretos. Confira os dados e tente novamente.";
-  if (/already registered|already been registered/i.test(raw))
-    return "Já existe uma conta com este CPF. Use a aba Entrar.";
+    return "E-mail/CPF ou senha incorretos. Confira os dados e tente novamente.";
+  if (/already registered|already been registered|database error/i.test(raw))
+    return "CPF ou e-mail já cadastrado. Use a aba Entrar.";
+  if (/email not confirmed/i.test(raw))
+    return "Confirme seu e-mail pelo link que enviamos antes de entrar.";
   if (/password should be at least|weak/i.test(raw))
     return "Escolha uma senha mais forte, com pelo menos 6 caracteres.";
   if (/rate limit|too many/i.test(raw))
@@ -56,6 +59,7 @@ function AuthPage() {
   const [pin, setPin] = useState("");
   const [name, setName] = useState("");
   const [cpf, setCpf] = useState("");
+  const [login, setLogin] = useState("");
   const [showPin, setShowPin] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
@@ -86,19 +90,34 @@ function AuthPage() {
     try {
       if (mode === "register") {
         const cpfDigits = normalizeCpf(cpf);
-        if (cpfDigits.length !== 11) throw new Error("Informe um CPF com 11 números.");
-        const { error } = await supabase.auth.signUp({
-          email: `${cpfDigits}@norteconcurso.local`,
+        if (!validateCPF(cpfDigits)) throw new Error("CPF inválido. Confira os números.");
+        const { data, error } = await supabase.auth.signUp({
+          email: email.trim().toLowerCase(),
           password: pin,
-          options: { data: { full_name: name, cpf: cpfDigits, contact_email: email } },
+          options: {
+            data: { full_name: name, cpf: cpfDigits },
+            emailRedirectTo: `${window.location.origin}/auth`,
+          },
         });
         if (error) throw error;
-        toast.success("Conta criada! Agora você pode acessar com seu CPF.");
+        if (data.session) {
+          toast.success("Conta criada!");
+          navigate({ to: "/dashboard" });
+        } else {
+          toast.success("Conta criada! Confirme seu e-mail pelo link que enviamos para entrar.");
+          setMode("login");
+        }
       } else {
-        const cpfDigits = normalizeCpf(cpf);
-        if (cpfDigits.length !== 11) throw new Error("Informe um CPF com 11 números.");
+        // Contas antigas entram pelo CPF (e-mail interno); contas novas, pelo e-mail real.
+        const id = login.trim();
+        let loginEmail = id.toLowerCase();
+        if (!id.includes("@")) {
+          const cpfDigits = normalizeCpf(id);
+          if (!validateCPF(cpfDigits)) throw new Error("CPF inválido. Confira os números.");
+          loginEmail = `${cpfDigits}@norteconcurso.local`;
+        }
         const { error } = await supabase.auth.signInWithPassword({
-          email: `${cpfDigits}@norteconcurso.local`,
+          email: loginEmail,
           password: pin,
         });
         if (error) throw error;
@@ -178,7 +197,7 @@ function AuthPage() {
             <h2>{mode === "login" ? "Acesse sua preparação" : "Crie sua conta gratuita"}</h2>
             <p>
               {mode === "login"
-                ? "Entre com seu CPF e continue de onde parou."
+                ? "Entre com seu e-mail (ou CPF, em contas antigas) e continue de onde parou."
                 : "Leva menos de dois minutos para começar."}
             </p>
           </div>
@@ -201,7 +220,7 @@ function AuthPage() {
             )}
             {mode === "register" && (
               <div className="auth-field">
-                <Label htmlFor="email">E-mail para contato</Label>
+                <Label htmlFor="email">E-mail</Label>
                 <div className="auth-field__control">
                   <Mail />
                   <Input
@@ -218,17 +237,19 @@ function AuthPage() {
             )}
             <div className={mode === "register" ? "auth-row" : "contents"}>
             <div className="auth-field">
-              <Label htmlFor="cpf">CPF</Label>
+              <Label htmlFor="cpf">{mode === "register" ? "CPF" : "E-mail ou CPF"}</Label>
               <div className="auth-field__control">
                 <IdCard />
                 <Input
                   id="cpf"
-                  inputMode="numeric"
+                  inputMode={mode === "register" ? "numeric" : "email"}
                   autoComplete="username"
                   {...(formError ? { "aria-invalid": true, "aria-describedby": "auth-error" } : {})}
-                  placeholder="000.000.000-00"
-                  value={cpf}
-                  onChange={(e) => setCpf(formatCpf(e.target.value))}
+                  placeholder={mode === "register" ? "000.000.000-00" : "seuemail@exemplo.com ou CPF"}
+                  value={mode === "register" ? cpf : login}
+                  onChange={(e) =>
+                    mode === "register" ? setCpf(formatCpf(e.target.value)) : setLogin(e.target.value)
+                  }
                   required
                 />
               </div>
