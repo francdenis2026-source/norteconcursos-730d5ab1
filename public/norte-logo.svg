@@ -1,15 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 96" role="img" aria-labelledby="title desc">
-  <title id="title">Norte Concurso</title>
-  <desc id="desc">Símbolo de direção em forma de escudo e nome Norte Concurso</desc>
-  <g transform="translate(4 4)">
-    <rect width="88" height="88" rx="22" fill="#071a2b"/>
-    <path d="M44 11 72 21.7v19.1C72 58.2 60.8 71.3 44 78.4 27.2 71.3 16 58.2 16 40.8V21.7L44 11Z" fill="#102f4b" stroke="#eab64d" stroke-width="2.5"/>
-    <path d="m44 19.9 15 38.3L44 52.5l-15 5.7 15-38.3Z" fill="#eab64d"/>
-    <path d="M44 28.4v16.8l-6.8 3.4L44 28.4Z" fill="#f7f4e9"/>
-    <circle cx="44" cy="64.6" r="3.5" fill="#58b9e6"/>
-  </g>
-  <g fill="#071a2b" font-family="Arial, sans-serif">
-    <text x="112" y="47" font-size="42" font-weight="800" letter-spacing="4">NORTE</text>
-    <text x="114" y="75" font-size="20" font-weight="700" letter-spacing="8" fill="#9b6d16">CONCURSO</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 72" role="img" aria-labelledby="t d">
+  <title id="t">Norte Concursos</title>
+  <desc id="d">Escudo com monograma N e estrela do norte, ao lado do nome Norte Concursos</desc>
+  <defs>
+  <linearGradient id="lbody" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1e2a48"/><stop offset="1" stop-color="#0a0f1e"/>
+  </linearGradient>
+  <linearGradient id="lrim" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f6dc8a"/><stop offset=".5" stop-color="#d9a53a"/><stop offset="1" stop-color="#a3711a"/>
+  </linearGradient>
+  <linearGradient id="lbrass" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f8df8f"/><stop offset="1" stop-color="#d49a2c"/>
+  </linearGradient></defs>
+  <g transform="translate(2 4) scale(1)">
+  <path d="M32 4 54 11.5V30C54 44.5 45 55 32 60.5 19 55 10 44.5 10 30V11.5Z" fill="url(#lbody)" stroke="url(#lrim)" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M32 4 54 11.5V30C54 44.5 45 55 32 60.5 19 55 10 44.5 10 30V11.5Z" transform="translate(32 33) scale(.84) translate(-32 -33)" fill="none" stroke="#e9bd55" stroke-opacity=".35" stroke-width=".8" stroke-linejoin="round"/>
+  <path d="M24.2 24H24.4L39.8 40V47H39.6L24.2 31Z" fill="url(#lbrass)"/>
+  <path d="M20 47V24H24.2V47ZM39.8 24H44V47H39.8Z" fill="#f7f1df"/>
+  <path d="M32 10.8 33.5 15 37.7 16.5 33.5 18 32 22.2 30.5 18 26.3 16.5 30.5 15Z" fill="url(#lbrass)"/></g>
+  <g font-family="Archivo, 'Arial Narrow', Arial, sans-serif">
+    <text x="82" y="38" font-size="34" font-weight="800" letter-spacing="6" fill="#0a0f1e" textLength="178" lengthAdjust="spacing">NORTE</text>
+    <text x="83" y="58" font-size="11.5" font-weight="600" letter-spacing="6.4" fill="#a3711a" font-family="'JetBrains Mono', Consolas, monospace">CONCURSOS</text>
   </g>
 </svg>

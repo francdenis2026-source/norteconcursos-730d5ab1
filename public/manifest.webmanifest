@@ -8,21 +8,12 @@
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
   "orientation": "portrait-primary",
-  "background_color": "#071a2b",
-  "theme_color": "#071a2b",
+  "background_color": "#0a0f1c",
+  "theme_color": "#0a0f1c",
   "lang": "pt-BR",
   "icons": [
-    {
-      "src": "/icons/icon-256.png",
-      "sizes": "256x256",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-256.png",
-      "sizes": "256x256",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
+    { "src": "/icons/icon-256.png", "sizes": "256x256", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }

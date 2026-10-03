@@ -6,18 +6,23 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import {
-  Target,
-  Clock,
+  ArrowRight,
+  BarChart3,
+  BrainCircuit,
   CheckCircle2,
-  AlertCircle,
-  TrendingUp,
-  Zap,
+  Circle,
+  Clock,
+  Compass,
   Download,
   FileText,
-  Bell,
-  BrainCircuit,
   Layers,
+  MapPin,
+  NotebookPen,
+  ShieldAlert,
+  Target,
+  Timer,
   Trophy,
+  Zap,
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -29,7 +34,10 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useDashboardData, useAuthStatus } from "@/hooks/useDashboard";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { MockService } from "@/services/mockService";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
+import { QuestionTotals } from "@/components/dashboard/QuestionTotals";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/dashboard/")({
@@ -50,8 +58,27 @@ type ProfileChange = {
   };
 };
 
+const TRAINER_SEARCH = {
+  contest: undefined,
+  board: undefined,
+  career: undefined,
+  year: undefined,
+  subject: undefined,
+  source: undefined,
+  reviewed: undefined,
+  state: undefined,
+  category: undefined,
+};
+
+function greeting() {
+  const hour = new Date().getHours();
+  if (hour < 12) return "Bom dia";
+  if (hour < 18) return "Boa tarde";
+  return "Boa noite";
+}
+
 function DashboardIndex() {
-  const { stats, focusedContest, isLoading, refreshStats } = useDashboardData();
+  const { stats, focusedContest, isLoading } = useDashboardData();
   const { user } = useAuthStatus();
   const [showTour, setShowTour] = React.useState(false);
   const [checklist, setChecklist] = React.useState({
@@ -86,7 +113,6 @@ function DashboardIndex() {
         MockService.updateOnboardingStatus({ onboarding_steps: currentSteps });
       }
 
-      // Calculate daily quota
       const responses = MockService.getUserResponses();
       const today = new Date().toISOString().split("T")[0];
       const todayCount = responses.filter(
@@ -96,26 +122,24 @@ function DashboardIndex() {
       const limit = userRole === "free" ? 10 : userRole === "essential" ? 100 : Infinity;
       setDailyQuota({ used: todayCount, total: limit === Infinity ? 9999 : limit });
 
-      // Notify about quota
       if (limit !== Infinity) {
         const usagePercent = (todayCount / (limit as number)) * 100;
         const lastNotified = localStorage.getItem("norte_last_quota_notify");
         const todayStr = new Date().toDateString();
 
         if (usagePercent >= 100 && lastNotified !== `100_${todayStr}`) {
-          toast.error("Quota diária esgotada! Considere um upgrade para continuar respondendo.");
+          toast.error("Cota diária esgotada! Considere um upgrade para continuar respondendo.");
           localStorage.setItem("norte_last_quota_notify", `100_${todayStr}`);
         } else if (
           usagePercent >= 80 &&
           lastNotified !== `80_${todayStr}` &&
           lastNotified !== `100_${todayStr}`
         ) {
-          toast.warning("Você atingiu 80% da sua quota diária de questões.");
+          toast.warning("Você atingiu 80% da sua cota diária de questões.");
           localStorage.setItem("norte_last_quota_notify", `80_${todayStr}`);
         }
       }
 
-      // Fetch audit logs
       setIsLoadingAttempts(true);
       const logs = await MockService.getAccessAuditLogs();
       setBlockedAttempts((logs as AccessAuditLog[]).filter((log) => log.was_blocked));
@@ -124,7 +148,6 @@ function DashboardIndex() {
 
     fetchOnboarding();
 
-    // Real-time synchronization
     if (user) {
       const channel = supabase
         .channel("profile_sync")
@@ -159,10 +182,10 @@ function DashboardIndex() {
     await MockService.updateOnboardingStatus({ onboarding_done: true });
     setShowTour(false);
     setIsUpdatingTour(false);
-    toast.success("Tour finalizado! Boa sorte nos estudos.");
+    toast.success("Tudo pronto! Boa sorte nos estudos.");
   };
 
-  if (isLoading) return <div>Carregando...</div>;
+  if (isLoading) return <DashboardSkeleton />;
 
   const handleExportCSV = () => {
     const responses = MockService.getUserResponses();
@@ -197,27 +220,10 @@ function DashboardIndex() {
   };
 
   const handleExportPDF = () => {
-    toast.success("Gerando PDF com resultados detalhados...");
+    toast.success("Gerando relatório para impressão...");
     setTimeout(() => {
       window.print();
-    }, 1000);
-  };
-
-  const handleLoadDemo = () => {
-    MockService.saveResponse({
-      questionId: "q1",
-      isCorrect: true,
-      timeSpent: 45,
-      createdAt: new Date().toISOString(),
-    });
-    MockService.saveResponse({
-      questionId: "q2",
-      isCorrect: false,
-      timeSpent: 60,
-      createdAt: new Date().toISOString(),
-    });
-    refreshStats();
-    toast.success("Dados de demonstração carregados");
+    }, 600);
   };
 
   const chartData =
@@ -228,248 +234,247 @@ function DashboardIndex() {
       total: d.total,
     })) || [];
 
+  const accuracy = stats?.accuracyRate ?? 0;
+  const minutes = Math.floor((stats?.timeSpent || 0) / 60);
+  const unlimited = dailyQuota.total === 9999;
+  const quotaPercent = dailyQuota.total ? (dailyQuota.used / dailyQuota.total) * 100 : 0;
+  const firstName = user?.full_name?.split(" ")[0] || "Estudante";
+
   return (
-    <div className="dashboard-home space-y-3 sm:space-y-6">
-      <section className="dashboard-command-hero text-print">
-        <div className="relative z-10 max-w-2xl">
-          <span className="internal-hero-kicker">
-            <Target className="h-4 w-4" /> Briefing do dia
-          </span>
-          <h1>Olá, {user?.full_name?.split(" ")[0] || "Estudante"}.</h1>
-          <p>
-            Sua central de preparação reúne alvo, ritmo e desempenho para indicar a próxima ação com
-            clareza.
-          </p>
+    <div className="space-y-5 sm:space-y-7">
+      <PageHero
+        image="dashboard"
+        size="lg"
+        kicker="Briefing do dia"
+        icon={Compass}
+        title={
+          <>
+            {greeting()}, <em>{firstName}.</em>
+          </>
+        }
+        description="Sua central de preparação reúne alvo, ritmo e desempenho para indicar a próxima ação com clareza."
+        actions={
+          <>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm" className="hero-btn-ghost gap-2">
+                  <Download className="h-4 w-4" /> Exportar
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuLabel>Formato de exportação</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={handleExportCSV} className="cursor-pointer gap-2">
+                  <FileText className="h-4 w-4" /> CSV (Excel)
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={handleExportPDF} className="cursor-pointer gap-2">
+                  <Download className="h-4 w-4" /> PDF (relatório)
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <Button size="sm" className="hero-btn-primary gap-2" asChild>
+              <Link to="/dashboard/question-trainer" search={TRAINER_SEARCH}>
+                Treinar agora <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </>
+        }
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={Target} label="Foco atual" value={focusedContest?.agency || "—"} />
+          <HeroStat icon={CheckCircle2} label="Taxa de acerto" value={`${accuracy.toFixed(1)}%`} />
+          <HeroStat icon={Clock} label="Tempo efetivo" value={`${minutes} min`} />
+          <HeroStat
+            icon={Zap}
+            label="Cota diária"
+            value={
+              unlimited ? (
+                `${dailyQuota.used}/∞`
+              ) : (
+                <>
+                  {dailyQuota.used}/{dailyQuota.total}
+                  <i className="hero-stat__bar" aria-hidden="true">
+                    <b
+                      style={{
+                        width: `${Math.min(quotaPercent, 100)}%`,
+                        background:
+                          quotaPercent > 90
+                            ? "var(--color-destructive)"
+                            : quotaPercent > 70
+                              ? "var(--color-amber-400)"
+                              : "var(--color-emerald-400)",
+                      }}
+                    />
+                  </i>
+                </>
+              )
+            }
+          />
         </div>
-        <div className="dashboard-hero-secondary relative z-10 flex flex-wrap items-center gap-2 no-print">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="hero-outline-action gap-2">
-                <Download className="h-4 w-4" /> Exportar
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuLabel>Formato de Exportação</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={handleExportCSV} className="cursor-pointer gap-2">
-                <FileText className="h-4 w-4" /> CSV (Excel)
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={handleExportPDF} className="cursor-pointer gap-2">
-                <Download className="h-4 w-4" /> PDF (Relatório)
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <Button
-            variant="outline"
-            size="sm"
-            className="hero-outline-action"
-            onClick={handleLoadDemo}
-          >
-            Demonstração
-          </Button>
-
-          <Button size="sm" className="hero-primary-action">
-            <TrendingUp className="mr-2 h-4 w-4" />
-            Meta: 65%
-          </Button>
-        </div>
-      </section>
-
-      <section className="dashboard-quick-actions no-print" aria-label="Ações rápidas">
-        <Link to="/dashboard/question-trainer">
-          <BrainCircuit />
-          <span>
-            <strong>Treinar</strong>
-            <small>Questões por filtro</small>
-          </span>
-        </Link>
-        <Link to="/dashboard/mock-exams">
-          <Trophy />
-          <span>
-            <strong>Simular</strong>
-            <small>Prova completa</small>
-          </span>
-        </Link>
-        <Link to="/dashboard/performance">
-          <Layers />
-          <span>
-            <strong>Evolução</strong>
-            <small>Ver desempenho</small>
-          </span>
-        </Link>
-      </section>
+      </PageHero>
 
       {showTour && (
-        <Card className="onboarding-command bg-primary text-primary-foreground border-none overflow-hidden relative animate-in fade-in zoom-in duration-300">
-          <CardContent className="pt-6">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-              <div className="space-y-2">
-                <h2 className="text-xl font-bold flex items-center gap-2">
-                  🚀 Comece sua Jornada no Norte
-                </h2>
-                <p className="text-primary-foreground/80 max-w-lg">
-                  Complete os passos iniciais para otimizar sua preparação.
-                </p>
-                <div className="flex flex-wrap gap-4 pt-2">
-                  <CheckItem label="Definir Concurso" done={checklist.contest} />
-                  <CheckItem label="Criar Caderno" done={checklist.notebook} />
-                  <CheckItem label="Ajustar Plano" done={checklist.plan} />
-                </div>
-              </div>
-              <Button
-                onClick={completeTour}
-                variant="secondary"
-                className="shrink-0"
-                disabled={isUpdatingTour}
-              >
-                {isUpdatingTour ? "Sincronizando..." : "Entendi, vamos lá!"}
-              </Button>
+        <section className="onboarding-banner no-print">
+          <div>
+            <span className="hero-chip">Primeiros passos</span>
+            <h2 className="font-display mt-3 text-2xl font-bold">Configure sua rota de preparação</h2>
+            <div className="onboarding-steps">
+              <OnboardingStep label="Definir concurso" done={checklist.contest} />
+              <OnboardingStep label="Criar caderno" done={checklist.notebook} />
+              <OnboardingStep label="Ajustar plano" done={checklist.plan} />
             </div>
-          </CardContent>
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-3xl" />
-        </Card>
+          </div>
+          <Button onClick={completeTour} className="hero-btn-primary" disabled={isUpdatingTour}>
+            {isUpdatingTour ? "Sincronizando..." : "Concluir configuração"}
+          </Button>
+        </section>
       )}
 
-      <div className="dashboard-metrics grid grid-cols-2 gap-2 sm:gap-4 lg:grid-cols-4">
-        <MetricCard
-          title="Foco Atual"
-          value={focusedContest?.agency || "Não definido"}
-          icon={Target}
-          description={focusedContest?.role || "Selecione um concurso"}
+      <section className="quick-actions no-print" aria-label="Ações rápidas">
+        <QuickAction
+          to="/dashboard/question-trainer"
+          icon={BrainCircuit}
+          title="Treinar"
+          text="Questões por filtro"
         />
-        <MetricCard
-          title="Cota Diária"
-          value={`${dailyQuota.used}/${dailyQuota.total === 9999 ? "∞" : dailyQuota.total}`}
-          icon={Zap}
-          description="Questões hoje"
-          progress={(dailyQuota.used / dailyQuota.total) * 100}
+        <QuickAction
+          to="/dashboard/mock-exams"
+          icon={Trophy}
+          title="Simular"
+          text="Prova completa"
         />
-        <MetricCard
-          title="Taxa de Acerto"
-          value={`${stats?.accuracyRate.toFixed(1) || 0}%`}
-          icon={CheckCircle2}
-          description="Geral acumulada"
+        <QuickAction
+          to="/dashboard/edital"
+          icon={MapPin}
+          title="Edital"
+          text="Estudar por assunto"
         />
-        <MetricCard
-          title="Tempo Estudado"
-          value={`${Math.floor((stats?.timeSpent || 0) / 60)}m`}
-          icon={Clock}
-          description="Efetivo hoje"
+        <QuickAction
+          to="/dashboard/performance"
+          icon={Layers}
+          title="Evolução"
+          text="Raio-X de desempenho"
         />
-      </div>
+      </section>
 
-      <div className="dashboard-secondary-grid grid grid-cols-1 gap-3 sm:gap-6 lg:grid-cols-2">
-        <Card className="command-panel dashboard-desktop-detail">
-          <CardHeader>
-            <CardTitle className="text-lg">Evolução por Disciplina</CardTitle>
+      <QuestionTotals enabled={!!user && user.id !== "demo-user"} />
+
+      <div className="grid grid-cols-1 gap-4 sm:gap-6 xl:grid-cols-[1.35fr_1fr]">
+        <Card className="command-panel">
+          <CardHeader className="pb-2">
+            <div className="section-title">
+              <div>
+                <h2>Evolução por disciplina</h2>
+                <p>Acertos acumulados nas suas sessões</p>
+              </div>
+              <Button variant="ghost" size="sm" asChild>
+                <Link to="/dashboard/performance">
+                  Raio-X <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </Button>
+            </div>
           </CardHeader>
-          <CardContent className="h-80">
+          <CardContent className="h-72 sm:h-80">
             {chartData.length > 0 ? (
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData}>
+                <BarChart data={chartData} margin={{ left: -18, right: 8, top: 12 }}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip contentStyle={{ borderRadius: "8px", border: "1px solid #e2e8f0" }} />
+                  <XAxis dataKey="name" tickLine={false} axisLine={false} />
+                  <YAxis tickLine={false} axisLine={false} allowDecimals={false} />
+                  <Tooltip
+                    cursor={{ fill: "var(--color-muted)" }}
+                    contentStyle={{
+                      borderRadius: 12,
+                      border: "1px solid var(--color-border)",
+                      background: "var(--color-popover)",
+                      color: "var(--color-popover-foreground)",
+                    }}
+                  />
                   <Bar
                     dataKey="acertos"
                     name="Acertos"
-                    fill="oklch(0.45 0.15 150)"
-                    radius={[4, 4, 0, 0]}
+                    fill="var(--color-chart-1)"
+                    radius={[8, 8, 2, 2]}
+                    maxBarSize={56}
                   />
                 </BarChart>
               </ResponsiveContainer>
             ) : (
-              <div className="h-full flex flex-col items-center justify-center text-muted-foreground">
-                <AlertCircle className="h-12 w-12 mb-2 opacity-20" />
-                <p>Nenhum dado para exibir ainda.</p>
-              </div>
+              <EmptyState
+                icon={BarChart3}
+                title="Sem dados por enquanto"
+                text="Resolva sua primeira sessão de questões para ver a evolução por disciplina."
+                action={
+                  <Button size="sm" asChild>
+                    <Link to="/dashboard/question-trainer" search={TRAINER_SEARCH}>Começar treino</Link>
+                  </Button>
+                }
+              />
             )}
           </CardContent>
         </Card>
 
-        <Card className="command-panel dashboard-desktop-detail no-print">
-          <CardHeader>
-            <CardTitle className="text-lg flex items-center justify-between">
-              Configurações PWA
-              <Badge variant="outline" className="text-[10px]">
-                Push Habilitado
-              </Badge>
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col items-center justify-center py-6 text-center space-y-4">
-            <div className="h-12 w-12 rounded-full bg-secondary/10 flex items-center justify-center">
-              <Bell className="h-6 w-6 text-secondary" />
-            </div>
-            <div className="space-y-1">
-              <p className="text-sm font-bold">Notificações de Estudo</p>
-              <p className="text-[10px] text-muted-foreground">
-                Receba lembretes de revisão e alertas de metas no seu celular ou navegador.
-              </p>
-            </div>
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => toast.success("Notificações PWA configuradas com sucesso!")}
-            >
-              Testar Notificação
-            </Button>
-          </CardContent>
-        </Card>
-
-        <Card className="command-panel dashboard-next-actions no-print">
-          <CardHeader className="dashboard-next-actions-header">
-            <CardTitle className="dashboard-next-actions-title text-lg flex justify-between items-center">
-              Próximas Atividades
+        <Card className="command-panel no-print">
+          <CardHeader className="pb-3">
+            <div className="section-title">
+              <div>
+                <h2>Próximas atividades</h2>
+                <p>Sequência sugerida para hoje</p>
+              </div>
               <Button variant="ghost" size="sm" asChild>
-                <Link to="/dashboard/study-plan" className="text-xs">
-                  Ver Plano
+                <Link to="/dashboard/study-plan">
+                  Ver plano <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </Button>
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="dashboard-next-actions-content">
-            <div className="space-y-4">
-              <ActivityItem
-                title="Simulado Semanal"
-                type="Simulado"
-                time="Faltam 4h para fechar"
-                status="Pendente"
-                priority
-                link="/dashboard/mock-exams"
-              />
-              <ActivityItem
-                title="Revisão: Sintaxe"
-                type="Repetição Espaçada"
-                time="Sugerido para hoje"
-                status="Pendente"
-                link="/dashboard/my-contest"
-                isReview
-              />
-              <ActivityItem
-                title="Português - Sintaxe"
-                type="Questões"
-                time="Bloco Sugerido"
-                status="Pendente"
-                link="/dashboard/questions"
-              />
-              <ActivityItem
-                title="Cronômetro de Foco"
-                type="Pomodoro"
-                time="25 min"
-                status="Pendente"
-                link="/dashboard/timer"
-              />
             </div>
+          </CardHeader>
+          <CardContent className="space-y-2.5">
+            <TaskRow
+              icon={Trophy}
+              tone="brass"
+              title="Simulado semanal"
+              meta="Simulado · prioridade"
+              to="/dashboard/mock-exams"
+              cta="Iniciar"
+            />
+            <TaskRow
+              icon={NotebookPen}
+              tone="signal"
+              title="Revisão dos erros recentes"
+              meta="Repetição espaçada · sugerido hoje"
+              to="/dashboard/errors"
+              cta="Revisar"
+            />
+            <TaskRow
+              icon={BrainCircuit}
+              tone="jade"
+              title="Bloco de questões do seu concurso"
+              meta="Treino direcionado"
+              to="/dashboard/question-trainer"
+              cta="Treinar"
+            />
+            <TaskRow
+              icon={Timer}
+              title="Sessão de foco"
+              meta="Pomodoro · 25 min"
+              to="/dashboard/timer"
+              cta="Abrir"
+            />
           </CardContent>
         </Card>
+      </div>
 
-        <Card className="command-panel dashboard-desktop-detail">
-          <CardHeader>
-            <CardTitle className="text-lg flex items-center justify-between">
-              Alertas de Acesso do Plano
-              <Badge variant="outline" className="text-[10px]">
+      {(isLoadingAttempts || blockedAttempts.length > 0) && (
+        <Card className="command-panel no-print">
+          <CardHeader className="pb-3">
+            <CardTitle className="flex items-center justify-between gap-3">
+              <span className="section-title">
+                <span>
+                  <h2>Limites do plano</h2>
+                  <p>Recursos que você tentou usar além da sua cota</p>
+                </span>
+              </span>
+              <Badge variant="outline" className="shrink-0">
                 {blockedAttempts.length} bloqueios
               </Badge>
             </CardTitle>
@@ -477,178 +482,137 @@ function DashboardIndex() {
           <CardContent>
             {isLoadingAttempts ? (
               <div className="space-y-2">
-                <div className="h-10 bg-muted animate-pulse rounded" />
-                <div className="h-10 bg-muted animate-pulse rounded" />
+                <Skeleton className="h-12 rounded-xl" />
+                <Skeleton className="h-12 rounded-xl" />
               </div>
-            ) : blockedAttempts.length > 0 ? (
-              <div className="space-y-3">
+            ) : (
+              <div className="grid gap-2 md:grid-cols-3">
                 {blockedAttempts.slice(0, 3).map((attempt) => (
                   <div
                     key={attempt.id}
-                    className="flex items-center justify-between p-2 rounded border bg-destructive/5 border-destructive/10"
+                    className="flex items-center gap-3 rounded-xl border border-destructive/15 bg-destructive/5 p-3"
                   >
-                    <div className="flex flex-col">
-                      <span className="text-xs font-bold text-destructive">
-                        Limite atingido: {attempt.feature_key}
-                      </span>
-                      <span className="text-[10px] text-muted-foreground">
+                    <ShieldAlert className="h-4 w-4 shrink-0 text-destructive" />
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm font-semibold">{attempt.feature_key}</p>
+                      <p className="text-xs text-muted-foreground">
                         {new Date(attempt.attempt_time).toLocaleString()}
-                      </span>
+                      </p>
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="h-7 text-[10px] h-auto p-1"
-                      asChild
-                    >
-                      <Link to="/dashboard/profile">Ver Planos</Link>
+                    <Button variant="ghost" size="sm" asChild>
+                      <Link to="/dashboard/profile">Planos</Link>
                     </Button>
                   </div>
                 ))}
-                {blockedAttempts.length > 3 && (
-                  <p className="text-[10px] text-center text-muted-foreground italic">
-                    Exibindo os 3 bloqueios mais recentes
-                  </p>
-                )}
-              </div>
-            ) : (
-              <div className="flex flex-col items-center justify-center py-6 text-center">
-                <CheckCircle2 className="h-8 w-8 text-emerald-500 mb-2 opacity-20" />
-                <p className="text-xs text-muted-foreground">
-                  Nenhum bloqueio registrado recentemente.
-                </p>
               </div>
             )}
           </CardContent>
         </Card>
-      </div>
+      )}
     </div>
   );
 }
 
-function MetricCard({
-  title,
-  value,
+function QuickAction({
+  to,
   icon: Icon,
-  description,
-  progress,
+  title,
+  text,
 }: {
-  title: string;
-  value: string;
+  to: string;
   icon: LucideIcon;
-  description: string;
-  progress?: number;
+  title: string;
+  text: string;
 }) {
   return (
-    <Card className="command-metric overflow-hidden">
-      <CardContent className="pt-6 relative">
-        <div className="flex items-center justify-between space-y-0 pb-2">
-          <p className="text-sm font-medium text-muted-foreground">{title}</p>
-          <Icon className="h-4 w-4 text-secondary" />
-        </div>
-        <div className="flex flex-col gap-1">
-          <div className="text-2xl font-bold text-primary">{value}</div>
-          <p className="text-xs text-muted-foreground">{description}</p>
-        </div>
-        {progress !== undefined && (
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-muted">
-            <div
-              className={cn(
-                "h-full transition-all duration-500",
-                progress > 90
-                  ? "bg-destructive"
-                  : progress > 70
-                    ? "bg-orange-500"
-                    : "bg-emerald-500",
-              )}
-              style={{ width: `${Math.min(progress, 100)}%` }}
-            />
-          </div>
-        )}
-      </CardContent>
-    </Card>
+    <Link to={to} className="quick-action">
+      <span className="quick-action__icon">
+        <Icon />
+      </span>
+      <span>
+        <strong>{title}</strong>
+        <small>{text}</small>
+      </span>
+      <ArrowRight />
+    </Link>
   );
 }
 
-function ActivityItem({
+function TaskRow({
+  icon: Icon,
   title,
-  type,
-  time,
-  priority,
-  link,
-  isReview,
+  meta,
+  to,
+  cta,
+  tone,
 }: {
+  icon: LucideIcon;
   title: string;
-  type: string;
-  time: string;
-  status: string;
-  priority?: boolean;
-  link: string;
-  isReview?: boolean;
+  meta: string;
+  to: string;
+  cta: string;
+  tone?: "brass" | "signal" | "jade";
 }) {
   return (
-    <div
-      className={cn(
-        "flex items-center justify-between p-3 rounded-lg border bg-card",
-        priority ? "border-l-4 border-l-secondary shadow-sm" : "",
-        isReview ? "border-l-4 border-l-amber-500 bg-amber-50/30" : "",
-      )}
-    >
-      <div className="flex flex-col gap-1">
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-bold">{title}</span>
-          {isReview && (
-            <Badge
-              variant="outline"
-              className="text-[8px] h-3 px-1 uppercase bg-amber-100 text-amber-800 border-amber-200"
-            >
-              Revisão
-            </Badge>
-          )}
-        </div>
-        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <span
-            className={cn(
-              "px-1.5 py-0.5 rounded font-medium",
-              isReview ? "bg-amber-100 text-amber-900" : "bg-muted",
-            )}
-          >
-            {type}
-          </span>
-          <span>{time}</span>
-        </div>
+    <div className="task-row" data-tone={tone}>
+      <span className="task-row__icon">
+        <Icon />
+      </span>
+      <div className="min-w-0 flex-1">
+        <p className="truncate text-sm font-semibold">{title}</p>
+        <p className="truncate text-xs text-muted-foreground">{meta}</p>
       </div>
-      <Button
-        variant="ghost"
-        size="sm"
-        className={cn(
-          "h-8 text-xs hover:text-secondary-foreground",
-          isReview ? "hover:bg-amber-500 hover:text-white border-amber-200" : "hover:bg-secondary",
-        )}
-        asChild
-      >
-        <Link to={link || "#"}>{isReview ? "Revisar" : "Iniciar"}</Link>
+      <Button variant="outline" size="sm" asChild>
+        <Link to={to}>{cta}</Link>
       </Button>
     </div>
   );
 }
 
-function CheckItem({ label, done }: { label: string; done: boolean }) {
+function OnboardingStep({ label, done }: { label: string; done: boolean }) {
   return (
-    <div
-      className={cn(
-        "flex items-center gap-2 text-xs px-2 py-1 rounded-full border",
-        done
-          ? "bg-emerald-500/20 border-emerald-500/50 text-emerald-100"
-          : "bg-white/10 border-white/20 text-white/70",
-      )}
-    >
-      <CheckCircle2 className={cn("h-3 w-3", done ? "text-emerald-400" : "opacity-30")} />
+    <span className="onboarding-step" data-done={done}>
+      {done ? <CheckCircle2 /> : <Circle />}
       {label}
+    </span>
+  );
+}
+
+function EmptyState({
+  icon: Icon,
+  title,
+  text,
+  action,
+}: {
+  icon: LucideIcon;
+  title: string;
+  text: string;
+  action?: React.ReactNode;
+}) {
+  return (
+    <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
+      <span className="metric-tile__icon h-12 w-12 rounded-2xl">
+        <Icon />
+      </span>
+      <div>
+        <p className="font-semibold">{title}</p>
+        <p className="mx-auto mt-1 max-w-xs text-sm text-muted-foreground">{text}</p>
+      </div>
+      {action}
     </div>
   );
 }
 
-function cn(...inputs: unknown[]) {
-  return inputs.filter(Boolean).join(" ");
+function DashboardSkeleton() {
+  return (
+    <div className="space-y-6">
+      <Skeleton className="h-[300px] rounded-[22px]" />
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        {[0, 1, 2, 3].map((i) => (
+          <Skeleton key={i} className="h-32 rounded-2xl" />
+        ))}
+      </div>
+      <Skeleton className="h-80 rounded-2xl" />
+    </div>
+  );
 }

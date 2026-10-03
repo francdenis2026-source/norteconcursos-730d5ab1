@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -15,6 +16,7 @@ import {
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { NorteBrand } from "@/components/brand/NorteBrand";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -27,19 +29,17 @@ import {
 } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
-import {
-  GUEST_DAILY_LIMIT,
-  getGuestRemainingToday,
-  registerGuestAnswer,
-} from "@/lib/guestQuota";
+import { GUEST_DAILY_LIMIT, getGuestRemainingToday, registerGuestAnswer } from "@/lib/guestQuota";
 import {
   type Answer,
   type Question,
   DIFFICULTY_LABEL,
   DIFFICULTY_STYLE,
-  answerLabel,
-  boardAnswers,
+  questionAnswerLabel,
+  questionAnswers,
+  isPlaceholderExplanation,
   normalizeDifficulty,
+  isEligibleQuestion,
   parseBasis,
   parseQuestion,
   splitExplanation,
@@ -88,29 +88,31 @@ function DesafioDiario() {
         const { data, error } = await supabase
           .rpc("get_daily_guest_questions", { p_limit: 10 })
           .select(
-            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,difficulty,state,career_category",
+            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,difficulty,state,career_category,content_status,law_version_checked_at,legal_review_required,legal_audit_completed,context_review_required",
           );
         if (error) throw error;
-        const daily: Question[] = ((data || []) as Array<Record<string, unknown>>).map((row) => ({
-          id: String(row.id),
-          source: "official" as const,
-          contest: String(row.contest_name),
-          year: String(row.exam_year),
-          career: String(row.career_name || "Carreira policial"),
-          board: String(row.exam_board || "CEBRASPE"),
-          subject: String(row.subject),
-          subtopic: null,
-          text: String(row.question_text),
-          answer: String(row.official_answer) as Answer,
-          explanation: String(
-            row.review_note || "Item conferido com o gabarito definitivo da prova oficial.",
-          ),
-          legalBasis: parseBasis(row.legal_basis),
-          checkedAt: null,
-          difficulty: normalizeDifficulty(row.difficulty),
-          state: String(row.state || ""),
-          category: String(row.career_category || ""),
-        }));
+        const daily: Question[] = ((data || []) as Array<Record<string, unknown>>)
+          .filter(isEligibleQuestion)
+          .map((row) => ({
+            id: String(row["id"]),
+            source: "official" as const,
+            contest: String(row["contest_name"]),
+            year: String(row["exam_year"]),
+            career: String(row["career_name"] || "Carreira policial"),
+            board: String(row["exam_board"] || "CEBRASPE"),
+            subject: canonicalSubject(String(row["subject"])),
+            subtopic: null,
+            text: String(row["question_text"]),
+            answer: String(row["official_answer"]) as Answer,
+            explanation: String(
+              row["review_note"] || "Item conferido com o gabarito definitivo da prova oficial.",
+            ),
+            legalBasis: parseBasis(row["legal_basis"]),
+            checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
+            difficulty: normalizeDifficulty(row["difficulty"]),
+            state: String(row["state"] || ""),
+            category: String(row["career_category"] || ""),
+          }));
         if (!active) return;
         setRemaining(remainingToday);
         setQuestions(daily);
@@ -161,24 +163,27 @@ function DesafioDiario() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f6f8fb]">
-      <header className="border-b bg-white">
-        <div className="mx-auto flex h-16 max-w-4xl items-center justify-between px-4">
+    <div className="min-h-screen bg-background">
+      <header className="sticky top-0 z-30 border-b border-white/10 bg-[oklch(0.12_0.025_263/0.92)] backdrop-blur-xl">
+        <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
           <Link to="/" aria-label="Norte Concurso — início">
-            <NorteBrand />
+            <NorteBrand light />
           </Link>
-          <Button variant="ghost" size="sm" asChild>
-            <Link to="/">
-              <ArrowLeft className="mr-1.5 h-4 w-4" /> Início
+          <div className="flex items-center gap-2">
+            <Link to="/" className="app-top-btn !w-auto gap-1.5 px-3 text-sm font-semibold text-white/75 hover:!bg-white/10 hover:!text-white">
+              <ArrowLeft className="h-4 w-4" /> Início
             </Link>
-          </Button>
+            <Link to="/auth" search={{ mode: "register" }} className="btn-brass !h-9 !px-4 !text-sm">
+              Criar conta
+            </Link>
+          </div>
         </div>
       </header>
 
-      <main className="mx-auto max-w-2xl px-4 py-10">
+      <main className="mx-auto max-w-5xl px-3 py-6 sm:px-4 sm:py-10">
         {step === "loading" && (
           <Center>
-            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            <Loader2 className="h-8 w-8 animate-spin text-brass" />
             <p>Preparando o desafio de hoje…</p>
           </Center>
         )}
@@ -194,59 +199,57 @@ function DesafioDiario() {
         )}
 
         {step === "blocked" && (
-          <Card className="overflow-hidden text-center shadow-xl">
-            <div className="h-2 bg-gradient-to-r from-amber-500 to-emerald-500" />
-            <CardContent className="space-y-5 p-8">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-amber-700">
-                <Sparkles className="h-7 w-7" />
-              </div>
-              <div>
-                <h1 className="text-xl font-black">Você já respondeu hoje</h1>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Suas {GUEST_DAILY_LIMIT} questões grátis de hoje já foram usadas neste
-                  computador. O desafio libera de novo amanhã, ou você pode criar uma conta pra
-                  treinar sem limite agora mesmo.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 sm:flex-row">
-                <Button className="flex-1" asChild>
-                  <Link to="/auth" search={{ mode: "register" }}>
-                    Criar conta grátis
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" className="flex-1">
-                  <Link to="/auth">Já tenho conta</Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+          <PageHero
+            image="trainer"
+            size="lg"
+            kicker="Desafio de hoje concluído"
+            icon={Sparkles}
+            title={
+              <>
+                Você já respondeu <em>hoje.</em>
+              </>
+            }
+            description={`Suas ${GUEST_DAILY_LIMIT} questões grátis de hoje já foram usadas neste computador. O desafio libera de novo amanhã, ou crie uma conta para treinar sem limite agora mesmo.`}
+            actions={
+              <>
+                <Link to="/auth" search={{ mode: undefined }} className="hero-btn-ghost inline-flex items-center px-4 text-sm">
+                  Já tenho conta
+                </Link>
+                <Link to="/auth" search={{ mode: "register" }} className="hero-btn-primary inline-flex items-center gap-2 px-4 text-sm">
+                  Criar conta grátis <ArrowRight className="h-4 w-4" />
+                </Link>
+              </>
+            }
+          />
         )}
 
         {step === "intro" && (
-          <Card className="overflow-hidden text-center shadow-xl">
-            <div className="h-2 bg-gradient-to-r from-amber-500 via-sky-500 to-blue-800" />
-            <CardContent className="space-y-5 p-8">
-              <Badge className="mx-auto w-fit">
-                <Zap className="mr-1 h-3.5 w-3.5" /> Sem cadastro
-              </Badge>
-              <div>
-                <h1 className="text-2xl font-black">Desafio diário Norte Concurso</h1>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {questions.length} questões oficiais de concursos públicos, sorteadas hoje —
-                  as mesmas pra todo mundo que entrar hoje. Correção na hora, com explicação
-                  didática em cada uma.
-                </p>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-xs font-bold text-muted-foreground">
-                <ShieldCheck className="h-4 w-4 text-emerald-600" /> Gabarito oficial conferido
-              </div>
-              <Button size="lg" className="w-full" onClick={startChallenge}>
-                Começar agora <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </CardContent>
-          </Card>
+          <PageHero
+            image="trainer"
+            size="lg"
+            kicker="Sem cadastro · grátis"
+            icon={Zap}
+            title={
+              <>
+                Desafio diário <em>Norte Concurso</em>
+              </>
+            }
+            description={`${questions.length} questões oficiais de concursos públicos, sorteadas hoje — as mesmas para todo mundo que entrar hoje. Correção na hora, com explicação didática em cada uma.`}
+            actions={
+              <button type="button" className="btn-brass" onClick={startChallenge}>
+                Começar agora <ArrowRight />
+              </button>
+            }
+          >
+            <div className="page-hero__stats max-w-xl">
+              <HeroStat icon={Zap} label="Questões" value={questions.length} />
+              <HeroStat icon={ShieldCheck} label="Gabarito" value="Oficial" />
+              <HeroStat icon={Sparkles} label="Custo" value="Grátis" />
+            </div>
+          </PageHero>
         )}
 
+        <div className="mx-auto max-w-3xl">
         {step === "done" && (
           <TrainingResult total={questions.length} correct={correct} wrong={wrong} />
         )}
@@ -271,7 +274,9 @@ function DesafioDiario() {
             onToggleStrike={(letter) => {
               if (answered) return;
               setStruck((items) =>
-                items.includes(letter) ? items.filter((item) => item !== letter) : [...items, letter],
+                items.includes(letter)
+                  ? items.filter((item) => item !== letter)
+                  : [...items, letter],
               );
               if (selected === letter) setSelected(null);
             }}
@@ -280,6 +285,7 @@ function DesafioDiario() {
             isLast={index + 1 >= questions.length}
           />
         )}
+        </div>
       </main>
     </div>
   );
@@ -331,9 +337,9 @@ function QuestionPlayer({
   const hasOptions = parsed.options.length > 0;
   const explanation = splitExplanation(question.explanation);
   const correctOption = parsed.options.find((option) => option.letter === question.answer);
-  const certoErrado = !hasOptions && /CEBRASPE|CESPE/i.test(question.board);
+  const certoErrado = !hasOptions && questionAnswers(question).join("") === "CE";
   const labelFor = (answer: Answer) =>
-    hasOptions ? `Alternativa ${answer}` : answerLabel(answer, question.board);
+    hasOptions ? `Alternativa ${answer}` : questionAnswerLabel(answer, question);
 
   return (
     <div className="space-y-4">
@@ -455,10 +461,10 @@ function QuestionPlayer({
             className={cn(
               "mt-3 grid gap-2",
               hasOptions && "hidden",
-              boardAnswers(question.board).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
+              questionAnswers(question).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
             )}
           >
-            {(hasOptions ? [] : boardAnswers(question.board)).map((answer) => (
+            {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
               <button
                 key={answer}
                 type="button"
@@ -494,7 +500,12 @@ function QuestionPlayer({
             ))}
           </div>
           <div className="mt-6 flex justify-end">
-            <Button size="lg" disabled={!selected || answered} onClick={onSubmit} className="min-w-44">
+            <Button
+              size="lg"
+              disabled={!selected || answered}
+              onClick={onSubmit}
+              className="min-w-44"
+            >
               Confirmar resposta <Check className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -511,7 +522,9 @@ function QuestionPlayer({
             >
               {isCorrect ? <CheckCircle2 /> : <X />}
             </div>
-            <DialogTitle>{isCorrect ? "Resposta correta" : "Vamos corrigir este ponto"}</DialogTitle>
+            <DialogTitle>
+              {isCorrect ? "Resposta correta" : "Vamos corrigir este ponto"}
+            </DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
             {!isCorrect && (
@@ -523,12 +536,14 @@ function QuestionPlayer({
                 {correctOption && <p className="mt-1 text-sm leading-6">{correctOption.text}</p>}
               </div>
             )}
-            <div className="rounded-xl border bg-muted/30 p-4">
-              <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
-                Explicando de um jeito simples
-              </p>
-              <p className="text-sm leading-6">{explanation.main}</p>
-            </div>
+            {!isPlaceholderExplanation(explanation.main) && (
+              <div className="rounded-xl border bg-muted/30 p-4">
+                <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
+                  Comentário da questão
+                </p>
+                <p className="text-sm leading-6">{explanation.main}</p>
+              </div>
+            )}
             {explanation.example && (
               <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 dark:bg-amber-950/30">
                 <p className="mb-1 text-xs font-black uppercase tracking-wider text-amber-700">
@@ -560,21 +575,20 @@ function TrainingResult({
 }) {
   const accuracy = total ? Math.round((correct / total) * 100) : 0;
   return (
-    <Card className="overflow-hidden text-center shadow-xl">
-      <div className="h-2 bg-gradient-to-r from-emerald-500 to-sky-500" />
-      <CardContent className="space-y-6 p-8">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl bg-emerald-100 text-emerald-700">
-          <Sparkles className="h-8 w-8" />
+    <Card className="overflow-hidden shadow-xl">
+      <div className="mock-result-hero tactical-feature-hero p-7 text-center text-white md:p-10">
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-white/15 bg-white/10">
+          <Sparkles className="h-7 w-7 text-amber-200" />
         </div>
-        <div>
-          <p className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
-            Desafio concluído
-          </p>
-          <h1 className="mt-2 text-4xl font-black">{accuracy}%</h1>
-          <p className="mt-2 text-muted-foreground">
-            {correct} certas · {wrong} erradas · {total} questões
-          </p>
-        </div>
+        <p className="mt-4 text-sm font-bold uppercase tracking-wider text-slate-200">
+          Desafio diário concluído
+        </p>
+        <h1 className="mt-1 text-4xl font-black md:text-5xl">{accuracy}%</h1>
+        <p className="mt-2 text-slate-200">
+          {correct} certas · {wrong} erradas · {total} questões
+        </p>
+      </div>
+      <CardContent className="space-y-6 p-8 text-center">
         <Progress value={accuracy} />
         <div className="space-y-3">
           <p className="text-sm text-muted-foreground">

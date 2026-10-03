@@ -1,5 +1,6 @@
+import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   AlertTriangle,
   Award,
@@ -24,11 +25,20 @@ import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { AddExamDialog } from "@/components/dashboard/AddExamDialog";
+import {
+  ContestPlanCard,
+  type PlanEdition,
+  type WeakItem,
+} from "@/components/dashboard/ContestPlanCard";
+import { ExamPhotoUploader } from "@/components/dashboard/ExamPhotoUploader";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { canRegisterExams } from "@/lib/subscriptions.config";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/student-exams")({
   validateSearch: (search: Record<string, unknown>) => ({
-    career: typeof search.career === "string" ? search.career : undefined,
+    career: typeof search["career"] === "string" ? search["career"] : undefined,
   }),
   component: StudentExamIntelligence,
   errorComponent: ExamRouteError,
@@ -39,6 +49,9 @@ type Verdict = "correta" | "errada" | "anulada" | "branco" | "pendente_conferenc
 interface ExamAnalysis {
   items?: Record<string, Verdict>;
   resultado_oficial?: { nota_total?: number; classificacao_ampla_objetiva?: number };
+  // Detalhamento por questão feito a partir de planilha pessoal, que pode divergir do resultado oficial.
+  itens_aproximado?: boolean;
+  itens_metodo?: string;
 }
 
 interface ExamRow {
@@ -100,6 +113,8 @@ interface SubjectMetric {
   blank: number;
   total: number;
   accuracy: number;
+  // Questões desta disciplina cadastradas para a prova (mesmo as que o aluno não respondeu).
+  catalog?: number;
 }
 
 const canonicalContest = (name: string) =>
@@ -110,13 +125,93 @@ const percent = (part: number, total: number) => (total ? Math.round((part / tot
 const questionKey = (contest: string, year: string, item: number) =>
   `${canonicalContest(contest)}__${year}__${item}`;
 
+const UNCLASSIFIED = "Sem disciplina cadastrada";
+const ALL_CONTESTS = "__todos__";
+
+interface SubjectReport {
+  metrics: SubjectMetric[];
+  counted: number;
+  mapped: number;
+}
+
+// Raio-X por disciplina de um conjunto de provas (uma só, ou todas). Conta todos os itens
+// respondidos (anuladas e pendentes ficam de fora); a disciplina vem da questão cadastrada e,
+// quando ela não existe, o item cai em "Sem disciplina cadastrada" em vez de sumir da conta.
+function computeSubjectReport(
+  groups: ExamGroup[],
+  references: Map<string, QuestionReference>,
+  syllabus: Map<string, string[]> = new Map(),
+): SubjectReport {
+  const map = new Map<string, SubjectMetric>();
+  const metricFor = (subject: string) => {
+    const existing = map.get(subject);
+    if (existing) return existing;
+    const created: SubjectMetric = {
+      subject,
+      correct: 0,
+      wrong: 0,
+      blank: 0,
+      total: 0,
+      accuracy: 0,
+    };
+    map.set(subject, created);
+    return created;
+  };
+  // Disciplinas e nº de questões cadastradas de cada prova (concurso + ano).
+  const catalogByExam = new Map<string, Map<string, number>>();
+  for (const reference of references.values()) {
+    const examKey = `${canonicalContest(reference.contest)}__${reference.year}`;
+    const subjects = catalogByExam.get(examKey) ?? new Map<string, number>();
+    subjects.set(reference.subject, (subjects.get(reference.subject) ?? 0) + 1);
+    catalogByExam.set(examKey, subjects);
+  }
+  let counted = 0;
+  let mapped = 0;
+  for (const group of groups) {
+    for (const [itemText, verdict] of Object.entries(group.analysis?.items || {})) {
+      if (verdict === "anulada" || verdict === "pendente_conferencia") continue;
+      const reference = references.get(
+        questionKey(group.canonicalContest, group.year, Number(itemText)),
+      );
+      const metric = metricFor(reference?.subject ?? UNCLASSIFIED);
+      if (verdict === "correta") metric.correct += 1;
+      if (verdict === "errada") metric.wrong += 1;
+      if (verdict === "branco") metric.blank += 1;
+      metric.total += 1;
+      metric.accuracy = percent(metric.correct, metric.correct + metric.wrong);
+      counted += 1;
+      if (reference) mapped += 1;
+    }
+    // Toda disciplina cobrada na prova aparece, mesmo sem item respondido: as que têm questão
+    // cadastrada e as listadas no edital do concurso.
+    const examKey = `${group.canonicalContest}__${group.year}`;
+    for (const [subject, count] of catalogByExam.get(examKey) ?? [])
+      metricFor(subject).catalog = (metricFor(subject).catalog ?? 0) + count;
+    for (const subject of syllabus.get(examKey) ?? []) metricFor(subject);
+  }
+  const metrics = Array.from(map.values()).sort(
+    (a, b) =>
+      Number(a.subject === UNCLASSIFIED) - Number(b.subject === UNCLASSIFIED) ||
+      Number(a.total === 0) - Number(b.total === 0) ||
+      a.accuracy - b.accuracy ||
+      b.total - a.total ||
+      a.subject.localeCompare(b.subject, "pt-BR"),
+  );
+  return { metrics, counted, mapped };
+}
+
 function StudentExamIntelligence() {
   const { career } = Route.useSearch();
+  const { user } = useAuthStatus();
+  const canAdd =
+    !!user && user.id !== "demo-user" && canRegisterExams(user.subscription_tier, user.role);
   const [rows, setRows] = React.useState<ExamRow[]>([]);
   const [questions, setQuestions] = React.useState<Map<string, QuestionReference>>(new Map());
+  const [syllabus, setSyllabus] = React.useState<Map<string, string[]>>(new Map());
+  const [cutoffs, setCutoffs] = React.useState<Map<string, number>>(new Map());
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
-  const [selectedContest, setSelectedContest] = React.useState<string | null>(null);
+  const [selectedExam, setSelectedExam] = React.useState<string>(ALL_CONTESTS);
   const [openExam, setOpenExam] = React.useState<string | null>(null);
   const [pageUrls, setPageUrls] = React.useState<Record<string, string>>({});
   const [reloadKey, setReloadKey] = React.useState(0);
@@ -131,73 +226,190 @@ function StudentExamIntelligence() {
         const session = sessionData.session;
         if (!session) throw new Error("Sua sessão expirou. Entre novamente para ver as provas.");
 
-        const [examResult, officialResult, personalResult] = await Promise.all([
-          supabase
-            .from("student_exam_documents")
-            .select(
-              "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,extracted_data",
-            )
-            .eq("user_id", session.user.id)
-            .order("contest_year", { ascending: true }),
-          supabase
+        const examResult = await supabase
+          .from("student_exam_documents")
+          .select(
+            "id,contest_name,contest_year,exam_board,correct_count,wrong_count,blank_count,score_net,score_raw,file_name,storage_path,extracted_data",
+          )
+          .eq("user_id", session.user.id)
+          .order("contest_year", { ascending: true });
+        if (examResult.error) throw examResult.error;
+
+        // O banco tem milhares de questões ativas e o PostgREST devolve no máximo 1000 por
+        // consulta; sem filtro, as questões de alguns concursos ficavam de fora. Busca só as
+        // dos concursos do aluno, em páginas.
+        const contestNames = Array.from(
+          new Set(
+            (examResult.data || []).flatMap((row) => {
+              const name = String(row.contest_name || "Concurso");
+              return [name, canonicalContest(name)];
+            }),
+          ),
+        );
+        const PAGE = 1000;
+        const officialRows: Array<Record<string, unknown>> = [];
+        for (let from = 0; contestNames.length; from += PAGE) {
+          const { data: chunk, error: chunkError } = await supabase
             .from("official_exam_questions")
             .select(
-              "contest_name,exam_year,item_number,subject,question_text,official_answer,review_note,legal_basis,content_status",
+              "contest_name,career_name,exam_year,item_number,subject,question_text,official_answer,review_note,legal_basis,content_status",
             )
-            .eq("content_status", "active"),
-          supabase
-            .from("question_bank")
-            .select(
-              "contest_name,contest_year,item_number,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status",
-            )
-            .eq("user_id", session.user.id),
-        ]);
-        if (examResult.error) throw examResult.error;
+            .eq("content_status", "active")
+            .in("contest_name", contestNames)
+            .order("contest_name")
+            .order("exam_year")
+            .order("item_number")
+            .range(from, from + PAGE - 1);
+          if (chunkError) throw chunkError;
+          officialRows.push(...((chunk || []) as Array<Record<string, unknown>>));
+          if ((chunk || []).length < PAGE) break;
+        }
+        // Um mesmo concurso/ano pode ter vários cargos com os mesmos números de item (PF 2021 e 2025:
+        // Agente, Escrivão, Delegado, Papiloscopista). Fica só a questão do cargo da prova do aluno;
+        // se houver vários cargos e nenhum for o dele, não adivinha a disciplina.
+        const studentContestNames = Array.from(
+          new Set((examResult.data || []).map((row) => String(row.contest_name || "Concurso"))),
+        );
+        const norm = (text: string) =>
+          text
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLocaleLowerCase("pt-BR")
+            .replace(/\s+/g, " ")
+            .trim();
+        const careerMatches = (career: string) =>
+          studentContestNames.some((name) => {
+            const a = norm(name);
+            const b = norm(career);
+            return a === b || a.includes(b) || b.includes(a);
+          });
+        const rowsByItem = new Map<string, Array<Record<string, unknown>>>();
+        for (const raw of officialRows) {
+          const key = questionKey(
+            String(raw["contest_name"] || "Concurso"),
+            String(raw["exam_year"] || ""),
+            Number(raw["item_number"] || 0),
+          );
+          rowsByItem.set(key, [...(rowsByItem.get(key) ?? []), raw]);
+        }
+        const resolvedOfficial: Array<Record<string, unknown>> = [];
+        for (const rows of rowsByItem.values()) {
+          const careers = new Set(rows.map((row) => String(row["career_name"] ?? "")));
+          if (careers.size <= 1) resolvedOfficial.push(...rows);
+          else
+            resolvedOfficial.push(
+              ...rows.filter((row) => careerMatches(String(row["career_name"] ?? ""))),
+            );
+        }
+        const officialResult = { data: resolvedOfficial };
+
+        // Notas de corte cadastradas por concurso/ano (complementar: sem elas não há plano de nota).
+        const cutoffMap = new Map<string, number>();
+        try {
+          const refs = await supabase
+            .from("contest_reference_info")
+            .select("contest_name,contest_year,cutoff_score")
+            .in("contest_name", studentContestNames);
+          for (const ref of refs.data ?? [])
+            if (ref.cutoff_score !== null)
+              cutoffMap.set(`${ref.contest_name}__${ref.contest_year}`, Number(ref.cutoff_score));
+        } catch (cutoffError) {
+          console.warn("Não foi possível carregar as notas de corte", cutoffError);
+        }
+        const personalResult = await supabase
+          .from("question_bank")
+          .select(
+            "contest_name,contest_year,item_number,subject,subtopic,question_text,official_answer,explanation,legal_basis,content_status",
+          )
+          .eq("user_id", session.user.id);
 
         const referenceMap = new Map<string, QuestionReference>();
         for (const raw of (officialResult.data || []) as Array<Record<string, unknown>>) {
-          const contest = String(raw.contest_name || "Concurso");
-          const year = String(raw.exam_year || "");
-          const item = Number(raw.item_number || 0);
+          const contest = String(raw["contest_name"] || "Concurso");
+          const year = String(raw["exam_year"] || "");
+          const item = Number(raw["item_number"] || 0);
           referenceMap.set(questionKey(contest, year, item), {
             key: questionKey(contest, year, item),
             contest,
             year,
             item,
-            subject: String(raw.subject || "Disciplina não classificada"),
+            subject: canonicalSubject(String(raw["subject"] || "Disciplina não classificada")),
             subtopic: null,
-            text: String(raw.question_text || "Enunciado indisponível"),
-            answer: raw.official_answer ? String(raw.official_answer) : null,
+            text: String(raw["question_text"] || "Enunciado indisponível"),
+            answer: raw["official_answer"] ? String(raw["official_answer"]) : null,
             explanation: String(
-              raw.review_note ||
+              raw["review_note"] ||
                 "Gabarito confirmado na fonte oficial. A explicação pedagógica detalhada ainda está em revisão editorial.",
             ),
-            legalBasis: Array.isArray(raw.legal_basis) ? raw.legal_basis : [],
+            legalBasis: Array.isArray(raw["legal_basis"]) ? raw["legal_basis"] : [],
           });
         }
         for (const raw of (personalResult.data || []) as Array<Record<string, unknown>>) {
-          const status = String(raw.content_status || "active");
+          const status = String(raw["content_status"] || "active");
           if (["obsolete", "revoked", "archived"].includes(status)) continue;
-          const contest = String(raw.contest_name || "Concurso");
-          const year = String(raw.contest_year || "");
-          const item = Number(raw.item_number || 0);
+          const contest = String(raw["contest_name"] || "Concurso");
+          const year = String(raw["contest_year"] || "");
+          const item = Number(raw["item_number"] || 0);
           referenceMap.set(questionKey(contest, year, item), {
             key: questionKey(contest, year, item),
             contest,
             year,
             item,
-            subject: String(raw.subject || "Disciplina não classificada"),
-            subtopic: raw.subtopic ? String(raw.subtopic) : null,
-            text: String(raw.question_text || "Enunciado indisponível"),
-            answer: raw.official_answer ? String(raw.official_answer) : null,
-            explanation: String(raw.explanation || "Explicação em revisão editorial."),
-            legalBasis: Array.isArray(raw.legal_basis) ? raw.legal_basis : [],
+            subject: canonicalSubject(String(raw["subject"] || "Disciplina não classificada")),
+            subtopic: raw["subtopic"] ? String(raw["subtopic"]) : null,
+            text: String(raw["question_text"] || "Enunciado indisponível"),
+            answer: raw["official_answer"] ? String(raw["official_answer"]) : null,
+            explanation: String(raw["explanation"] || "Explicação em revisão editorial."),
+            legalBasis: Array.isArray(raw["legal_basis"]) ? raw["legal_basis"] : [],
           });
+        }
+
+        // Disciplinas cobradas em cada concurso segundo o edital cadastrado. É complementar: se não
+        // houver edital, a tela segue só com as questões.
+        const syllabusMap = new Map<string, string[]>();
+        try {
+          const editions = await supabase
+            .from("syllabus_editions")
+            .select("id,contest_name,contest_year")
+            .in("contest_name", contestNames);
+          const editionRows = editions.error ? [] : (editions.data ?? []);
+          if (editionRows.length) {
+            const keyByEdition = new Map(
+              editionRows.map((edition) => [
+                edition.id,
+                `${canonicalContest(edition.contest_name)}__${edition.contest_year}`,
+              ]),
+            );
+            const editionIds = editionRows.map((edition) => edition.id);
+            for (let from = 0; ; from += PAGE) {
+              const { data: chunk, error: topicError } = await supabase
+                .from("syllabus_topics")
+                .select("edition_id,discipline")
+                .in("edition_id", editionIds)
+                .order("edition_id")
+                .order("discipline")
+                .range(from, from + PAGE - 1);
+              if (topicError) break;
+              for (const topic of chunk ?? []) {
+                const key = keyByEdition.get(topic.edition_id);
+                if (!key) continue;
+                const discipline = canonicalSubject(topic.discipline);
+                const list = syllabusMap.get(key) ?? [];
+                if (discipline && !list.includes(discipline)) list.push(discipline);
+                syllabusMap.set(key, list);
+              }
+              if ((chunk ?? []).length < PAGE) break;
+            }
+          }
+        } catch (syllabusError) {
+          console.warn("Não foi possível carregar as disciplinas do edital", syllabusError);
         }
 
         if (!active) return;
         setRows((examResult.data || []) as ExamRow[]);
         setQuestions(referenceMap);
+        setSyllabus(syllabusMap);
+        setCutoffs(cutoffMap);
       } catch (loadError) {
         console.error("Falha ao carregar inteligência de provas", loadError);
         if (active)
@@ -219,8 +431,8 @@ function StudentExamIntelligence() {
   const groups = React.useMemo(() => {
     const grouped = new Map<string, ExamGroup>();
     for (const row of rows) {
-      const contest = String(row.contest_name || "Concurso");
-      const year = String(row.contest_year || "—");
+      const contest = String(row["contest_name"] || "Concurso");
+      const year = String(row["contest_year"] || "—");
       const key = `${contest}__${year}`;
       const current = grouped.get(key) || {
         key,
@@ -246,6 +458,10 @@ function StudentExamIntelligence() {
       }
       grouped.set(key, current);
     }
+    // Páginas enviadas pela tela têm "pagina-NN" no caminho; mantém a ordem do caderno.
+    const pageNumber = (path: string) => Number(/pagina-(\d+)/.exec(path)?.[1] ?? 0);
+    for (const group of grouped.values())
+      group.pages.sort((a, b) => pageNumber(a.storage_path) - pageNumber(b.storage_path));
     return Array.from(grouped.values()).sort((a, b) =>
       a.year.localeCompare(b.year, "pt-BR", { numeric: true }),
     );
@@ -253,48 +469,27 @@ function StudentExamIntelligence() {
 
   React.useEffect(() => {
     if (!groups.length) return;
+    // Link vindo de outra tela (?career=): abre a edição mais recente daquele concurso.
     const requested = career
-      ? groups.find((group) => {
+      ? [...groups].reverse().find((group) => {
           const expected = career.toLocaleLowerCase("pt-BR");
           const actual = group.contest.toLocaleLowerCase("pt-BR");
           return actual.includes(expected) || expected.includes(actual);
-        })?.contest
+        })?.key
       : null;
-    setSelectedContest(
+    setSelectedExam(
       (current) =>
         requested ||
-        (current && groups.some((group) => group.contest === current)
+        (current === ALL_CONTESTS || groups.some((group) => group.key === current)
           ? current
-          : groups.at(-1)?.contest || null),
+          : ALL_CONTESTS),
     );
   }, [groups, career]);
 
-  const subjectMetrics = React.useMemo(() => {
-    const map = new Map<string, SubjectMetric>();
-    for (const group of groups) {
-      for (const [itemText, verdict] of Object.entries(group.analysis?.items || {})) {
-        const reference = questions.get(
-          questionKey(group.canonicalContest, group.year, Number(itemText)),
-        );
-        if (!reference || verdict === "anulada" || verdict === "pendente_conferencia") continue;
-        const metric = map.get(reference.subject) || {
-          subject: reference.subject,
-          correct: 0,
-          wrong: 0,
-          blank: 0,
-          total: 0,
-          accuracy: 0,
-        };
-        if (verdict === "correta") metric.correct += 1;
-        if (verdict === "errada") metric.wrong += 1;
-        if (verdict === "branco") metric.blank += 1;
-        metric.total += 1;
-        metric.accuracy = percent(metric.correct, metric.correct + metric.wrong);
-        map.set(reference.subject, metric);
-      }
-    }
-    return Array.from(map.values()).sort((a, b) => a.accuracy - b.accuracy || b.total - a.total);
-  }, [groups, questions]);
+  const overallReport = React.useMemo(
+    () => computeSubjectReport(groups, questions, syllabus),
+    [groups, questions, syllabus],
+  );
 
   if (loading) return <LoadingState />;
   if (error)
@@ -308,27 +503,78 @@ function StudentExamIntelligence() {
   if (!groups.length)
     return (
       <EmptyState
-        title="Nenhuma prova encontrada"
-        description="Não há provas vinculadas à conta atualmente conectada."
-      />
+        title="Você ainda não cadastrou nenhuma prova"
+        description="Cadastre os concursos que você já fez para ver a linha do tempo, o Raio-X por disciplina e o seu rendimento."
+      >
+        <AddExamCard
+          user={user}
+          contestSuggestions={[]}
+          onChanged={() => setReloadKey((v) => v + 1)}
+        />
+      </EmptyState>
     );
 
   const attempts = groups.filter((group) => group.correct + group.wrong + group.blank > 0);
-  const totalCorrect = attempts.reduce((sum, group) => sum + group.correct, 0);
-  const totalWrong = attempts.reduce((sum, group) => sum + group.wrong, 0);
-  const totalBlank = attempts.reduce((sum, group) => sum + group.blank, 0);
+  const contests = Array.from(new Set(groups.map((group) => group.contest)));
+  const allSelected = selectedExam === ALL_CONTESTS;
+  const selectedGroups = allSelected
+    ? groups
+    : groups.filter((group) => group.key === selectedExam);
+  const selectedGroup = allSelected ? null : (selectedGroups[0] ?? null);
+  // Métricas, plano de ação e destaques seguem a prova escolhida na linha do tempo (ou todas).
+  const scopeAttempts = selectedGroups.filter(
+    (group) => group.correct + group.wrong + group.blank > 0,
+  );
+  const scopeLabel = selectedGroup
+    ? `${selectedGroup.contest} — ${selectedGroup.year}`
+    : "Todos os concursos";
+  const totalCorrect = scopeAttempts.reduce((sum, group) => sum + group.correct, 0);
+  const totalWrong = scopeAttempts.reduce((sum, group) => sum + group.wrong, 0);
+  const totalBlank = scopeAttempts.reduce((sum, group) => sum + group.blank, 0);
   const totalItems = totalCorrect + totalWrong + totalBlank;
   const responseAccuracy = percent(totalCorrect, totalCorrect + totalWrong);
   const omissionRate = percent(totalBlank, totalItems);
-  const bestAttempt = [...attempts].sort((a, b) => examAccuracy(b) - examAccuracy(a))[0];
-  const firstAttempt = attempts[0];
-  const latestAttempt = attempts.at(-1);
-  const evolution =
-    latestAttempt && firstAttempt ? examAccuracy(latestAttempt) - examAccuracy(firstAttempt) : 0;
-  const contests = Array.from(new Set(groups.map((group) => group.contest)));
-  const selectedGroups = groups.filter((group) => group.contest === selectedContest);
-  const weakest = subjectMetrics[0];
-  const strongest = [...subjectMetrics].sort(
+  const bestAttempt = [...scopeAttempts].sort((a, b) => examAccuracy(b) - examAccuracy(a))[0];
+  // Evolução = variação de aproveitamento (acertos ÷ respondidas) em pontos percentuais.
+  // Uma prova escolhida: contra a edição anterior do MESMO concurso. Todas: média das últimas
+  // provas contra a média das primeiras (comparar só a primeira com a última misturava bancas).
+  const yearOf = (group: ExamGroup) => Number(group.year) || 0;
+  const average = (list: ExamGroup[]) =>
+    list.reduce((sum, group) => sum + examAccuracy(group), 0) / list.length;
+  const evolutionInfo: { value: string; detail: string; delta: number | null } = (() => {
+    if (selectedGroup) {
+      const previous = attempts
+        .filter(
+          (group) =>
+            group.contest === selectedGroup.contest && yearOf(group) < yearOf(selectedGroup),
+        )
+        .at(-1);
+      if (!previous || !scopeAttempts.length)
+        return { value: "—", detail: "Primeira prova deste concurso", delta: null };
+      const delta = examAccuracy(selectedGroup) - examAccuracy(previous);
+      return {
+        value: `${delta >= 0 ? "+" : ""}${delta} p.p.`,
+        detail: `${previous.year} → ${selectedGroup.year}, mesmo concurso`,
+        delta,
+      };
+    }
+    const count = Math.min(3, Math.floor(scopeAttempts.length / 2));
+    if (count < 1) return { value: "—", detail: "Precisa de pelo menos 2 provas", delta: null };
+    const delta = Math.round(
+      average(scopeAttempts.slice(-count)) - average(scopeAttempts.slice(0, count)),
+    );
+    return {
+      value: `${delta >= 0 ? "+" : ""}${delta} p.p.`,
+      detail: `média das últimas ${count} × primeiras ${count} provas`,
+      delta,
+    };
+  })();
+  const scopeReport = computeSubjectReport(selectedGroups, questions, syllabus);
+  const scopeSubjects = scopeReport.metrics.filter(
+    (metric) => metric.subject !== UNCLASSIFIED && metric.total > 0,
+  );
+  const weakest = scopeSubjects[0];
+  const strongest = [...scopeSubjects].sort(
     (a, b) => b.accuracy - a.accuracy || b.total - a.total,
   )[0];
 
@@ -348,88 +594,184 @@ function StudentExamIntelligence() {
     setPageUrls((current) => {
       const next = { ...current };
       missing.forEach((page, index) => {
-        const url = signed[index].data?.signedUrl;
+        const url = signed[index]?.data?.signedUrl;
         if (url) next[page.id] = url;
       });
       return next;
     });
   };
 
+  // Raio-X de TODAS as edições de cada concurso (ex.: PF 2014+2018+2021+2025) e plano até o corte.
+  const families = contests
+    .map((contest) => {
+      const list = groups.filter((group) => group.contest === contest);
+      const report = computeSubjectReport(list, questions, syllabus);
+      const weakItems: WeakItem[] = list.flatMap((group) =>
+        Object.entries(group.analysis?.items || {}).flatMap(([itemText, verdict]) => {
+          if (verdict !== "errada" && verdict !== "branco") return [];
+          const reference = questions.get(
+            questionKey(group.canonicalContest, group.year, Number(itemText)),
+          );
+          return [
+            {
+              edition: group.year,
+              item: Number(itemText),
+              verdict,
+              subject: reference?.subject ?? UNCLASSIFIED,
+            },
+          ];
+        }),
+      );
+      const editions: PlanEdition[] = list.map((group) => ({
+        key: group.key,
+        year: group.year,
+        correct: group.correct,
+        wrong: group.wrong,
+        blank: group.blank,
+        net: group.score
+          ? group.score
+          : group.correct + group.wrong > 0
+            ? group.correct - group.wrong
+            : null,
+        cutoff: cutoffs.get(`${group.contest}__${group.year}`) ?? null,
+        hasItems: Object.keys(group.analysis?.items || {}).length > 0,
+      }));
+      return {
+        contest,
+        editions,
+        subjects: report.metrics,
+        weakItems,
+        cebraspe: list.some((group) => /cebraspe/i.test(group.board)),
+        hasCutoff: editions.some((edition) => edition.cutoff !== null),
+      };
+    })
+    .filter((family) => family.editions.some((e) => e.correct + e.wrong + e.blank > 0))
+    .sort(
+      (a, b) =>
+        Number(b.hasCutoff) - Number(a.hasCutoff) || a.contest.localeCompare(b.contest, "pt-BR"),
+    );
+
+  const selectExam = (key: string) => {
+    if (key === selectedExam) {
+      setSelectedExam(ALL_CONTESTS);
+      return;
+    }
+    setSelectedExam(key);
+    const group = groups.find((item) => item.key === key);
+    if (group && openExam !== group.key) void toggleExam(group);
+  };
+
   return (
     <div className="space-y-7 pb-10">
       <Hero attempts={attempts.length} years={new Set(attempts.map((item) => item.year)).size} />
-      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <MetricCard
-          icon={Target}
-          label="Precisão ao responder"
-          value={`${responseAccuracy}%`}
-          detail={`${totalCorrect} acertos em ${totalCorrect + totalWrong} respondidas`}
-          tone="emerald"
-        />
-        <MetricCard
-          icon={CircleSlash2}
-          label="Taxa de omissão"
-          value={`${omissionRate}%`}
-          detail={`${totalBlank} itens deixados em branco`}
-          tone={omissionRate > 20 ? "rose" : "amber"}
-        />
-        <MetricCard
-          icon={Award}
-          label="Melhor desempenho"
-          value={`${bestAttempt ? examAccuracy(bestAttempt) : 0}%`}
-          detail={bestAttempt ? `${bestAttempt.contest} ${bestAttempt.year}` : "Sem dados"}
-          tone="navy"
-        />
-        <MetricCard
-          icon={evolution >= 0 ? TrendingUp : TrendingDown}
-          label="Evolução histórica"
-          value={`${evolution >= 0 ? "+" : ""}${evolution} p.p.`}
-          detail={
-            firstAttempt && latestAttempt
-              ? `${firstAttempt.year} → ${latestAttempt.year}`
-              : "Uma tentativa"
-          }
-          tone={evolution >= 0 ? "emerald" : "rose"}
-        />
-      </section>
-      <Timeline groups={attempts} />
+      <Timeline groups={groups} selectedKey={selectedExam} onSelect={selectExam} />
       <section className="space-y-4">
-        <div>
-          <h2 className="text-xl font-black text-primary">Desempenho por concurso</h2>
-          <p className="text-sm text-muted-foreground">
-            As métricas permanecem separadas por carreira e banca.
-          </p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h2 className="text-xl font-black text-primary">Desempenho por prova</h2>
+            <p className="text-sm text-muted-foreground">
+              Clique em uma prova da linha do tempo: as métricas, as disciplinas e a correção abaixo
+              passam a mostrar só ela, com cada edição separada (PF 2014, 2018, 2021…).
+            </p>
+          </div>
+          <AddExamCard
+            user={user}
+            contestSuggestions={contests}
+            onChanged={() => setReloadKey((v) => v + 1)}
+          />
         </div>
-        <div className="flex flex-wrap gap-2">
-          {contests.map((contest) => (
-            <button
-              key={contest}
+        <div className="flex flex-wrap items-center gap-3 rounded-2xl border bg-background px-4 py-3 text-sm">
+          <span className="text-muted-foreground">Mostrando:</span>
+          <strong className="min-w-0 break-words">{scopeLabel}</strong>
+          {allSelected ? (
+            <span className="text-xs text-muted-foreground">
+              Clique em uma prova da linha do tempo para ver só ela.
+            </span>
+          ) : (
+            <Button
               type="button"
-              onClick={() => setSelectedContest(contest)}
-              className={cn(
-                "rounded-full border px-4 py-2 text-xs font-bold transition",
-                selectedContest === contest
-                  ? "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40"
-                  : "border-slate-200 text-muted-foreground hover:border-emerald-300",
-              )}
+              variant="outline"
+              size="sm"
+              onClick={() => setSelectedExam(ALL_CONTESTS)}
             >
-              {contest}
-            </button>
-          ))}
+              Ver todos os concursos
+            </Button>
+          )}
         </div>
+        <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <MetricCard
+            icon={Target}
+            label="Precisão ao responder"
+            value={`${responseAccuracy}%`}
+            detail={`${scopeLabel}: ${totalCorrect} acertos em ${totalCorrect + totalWrong} respondidas`}
+            tone="emerald"
+          />
+          <MetricCard
+            icon={CircleSlash2}
+            label="Taxa de omissão"
+            value={`${omissionRate}%`}
+            detail={`${totalBlank} itens deixados em branco`}
+            tone={omissionRate > 20 ? "rose" : "amber"}
+          />
+          <MetricCard
+            icon={Award}
+            label="Melhor desempenho"
+            value={`${bestAttempt ? examAccuracy(bestAttempt) : 0}%`}
+            detail={bestAttempt ? `${bestAttempt.contest} ${bestAttempt.year}` : "Sem dados"}
+            tone="navy"
+          />
+          <MetricCard
+            icon={(evolutionInfo.delta ?? 0) >= 0 ? TrendingUp : TrendingDown}
+            label="Evolução"
+            value={evolutionInfo.value}
+            detail={evolutionInfo.detail}
+            tone={(evolutionInfo.delta ?? 0) >= 0 ? "emerald" : "rose"}
+          />
+        </section>
         {selectedGroups.map((group) => (
           <ContestCard
             key={group.key}
             group={group}
             references={questions}
+            syllabus={syllabus}
+            canUpload={canAdd}
             open={openExam === group.key}
             pageUrls={pageUrls}
             onToggle={() => void toggleExam(group)}
+            onUploaded={() => {
+              setOpenExam(null);
+              setReloadKey((value) => value + 1);
+            }}
+          />
+        ))}
+      </section>
+      <section className="space-y-4">
+        <div>
+          <h2 className="text-xl font-black text-primary">Raio-X e plano por concurso</h2>
+          <p className="text-sm text-muted-foreground">
+            Todas as edições de cada concurso juntas (por exemplo PF 2014, 2018, 2021 e 2025), com o
+            mapa dos seus erros e questões em branco e o caminho até a nota de corte.
+          </p>
+        </div>
+        {families.map((family) => (
+          <ContestPlanCard
+            key={family.contest}
+            contest={family.contest}
+            editions={family.editions}
+            subjects={family.subjects}
+            weakItems={family.weakItems}
+            cebraspe={family.cebraspe}
+            unclassifiedLabel={UNCLASSIFIED}
+            defaultOpen={family.hasCutoff}
           />
         ))}
       </section>
       <section className="grid gap-5 xl:grid-cols-[1.25fr_1fr]">
-        <DisciplineAnalysis metrics={subjectMetrics} />
+        <DisciplineAnalysis
+          report={overallReport}
+          title="Raio-X geral — todos os concursos"
+          scope={`Soma de ${attempts.length} prova(s) já realizadas, com todas as disciplinas cobradas em cada concurso.`}
+        />
         <ActionPlan
           weakest={weakest}
           strongest={strongest}
@@ -442,31 +784,67 @@ function StudentExamIntelligence() {
   );
 }
 
+function AddExamCard({
+  user,
+  contestSuggestions,
+  onChanged,
+}: {
+  user: {
+    id: string;
+    subscription_tier: Parameters<typeof canRegisterExams>[0];
+    role?: string;
+  } | null;
+  contestSuggestions: string[];
+  onChanged: () => void;
+}) {
+  if (!user || user.id === "demo-user") return null;
+  if (canRegisterExams(user.subscription_tier, user.role))
+    return (
+      <AddExamDialog
+        userId={user.id}
+        contestSuggestions={contestSuggestions}
+        onChanged={onChanged}
+      />
+    );
+  return (
+    <div className="max-w-sm rounded-2xl border border-dashed bg-background p-4 text-sm">
+      <p className="font-black">Cadastre e analise as suas provas</p>
+      <p className="mt-1 text-xs text-muted-foreground">
+        Este recurso faz parte do plano Premium: registrar os concursos que você já fez, enviar as
+        fotos e acompanhar o seu rendimento por disciplina.
+      </p>
+      <Link
+        to="/dashboard/profile"
+        className="mt-2 inline-block text-xs font-bold text-emerald-700 hover:underline"
+      >
+        Ver os planos →
+      </Link>
+    </div>
+  );
+}
+
 function Hero({ attempts, years }: { attempts: number; years: number }) {
   return (
-    <section className="relative overflow-hidden rounded-[30px] bg-[#071a2f] px-6 py-8 text-white shadow-xl md:px-10 md:py-10">
-      <div className="absolute -right-12 -top-20 h-64 w-64 rounded-full bg-emerald-400/15 blur-3xl" />
-      <div className="relative flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-        <div>
-          <Badge className="mb-4 border-emerald-300/20 bg-emerald-400/10 text-emerald-200">
-            Inteligência de desempenho
-          </Badge>
-          <h1 className="text-3xl font-black tracking-tight md:text-4xl">
-            Minha trajetória em concursos
+    <section className="page-hero page-hero--lg" data-hero="exam-hall">
+      <div className="page-hero__row">
+        <div className="page-hero__text">
+          <span className="hero-chip">Inteligência de desempenho</span>
+          <h1>
+            Minha trajetória <em>em concursos</em>
           </h1>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-300 md:text-base">
+          <p className="page-hero__desc">
             Uma leitura objetiva do seu histórico, das falhas recorrentes e do próximo passo de
             estudo.
           </p>
         </div>
-        <div className="flex gap-3">
-          <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-center">
-            <p className="text-2xl font-black text-emerald-300">{attempts}</p>
-            <p className="text-[11px] text-slate-400">provas analisadas</p>
+        <div className="flex gap-2 sm:gap-3">
+          <div className="hero-stat min-w-[120px]">
+            <span>Provas analisadas</span>
+            <strong className="tabular">{attempts}</strong>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-center">
-            <p className="text-2xl font-black text-emerald-300">{years}</p>
-            <p className="text-[11px] text-slate-400">anos no histórico</p>
+          <div className="hero-stat min-w-[120px]">
+            <span>Anos no histórico</span>
+            <strong className="tabular">{years}</strong>
           </div>
         </div>
       </div>
@@ -474,7 +852,15 @@ function Hero({ attempts, years }: { attempts: number; years: number }) {
   );
 }
 
-function Timeline({ groups }: { groups: ExamGroup[] }) {
+function Timeline({
+  groups,
+  selectedKey,
+  onSelect,
+}: {
+  groups: ExamGroup[];
+  selectedKey: string;
+  onSelect: (key: string) => void;
+}) {
   return (
     <Card className="overflow-hidden border-slate-200 shadow-sm">
       <CardHeader>
@@ -482,35 +868,58 @@ function Timeline({ groups }: { groups: ExamGroup[] }) {
           <TrendingUp className="h-5 w-5 text-emerald-600" /> Linha do tempo geral
         </CardTitle>
         <CardDescription>
-          Aproveitamento nas questões respondidas; compare concursos com cautela porque bancas e
-          critérios mudam.
+          Aproveitamento nas questões respondidas. Clique em uma prova para ver só ela; clique de
+          novo para voltar a todas. Compare concursos com cautela porque bancas e critérios mudam.
         </CardDescription>
       </CardHeader>
       <CardContent className="overflow-x-auto pb-6">
         <div className="flex min-w-max items-start gap-0">
           {groups.map((group, index) => {
-            const accuracy = examAccuracy(group);
-            const previous = index ? examAccuracy(groups[index - 1]) : null;
-            const delta = previous === null ? null : accuracy - previous;
+            const graded = group.correct + group.wrong + group.blank > 0;
+            const accuracy = graded ? examAccuracy(group) : null;
+            const previousGraded = groups
+              .slice(0, index)
+              .reverse()
+              .find((item) => item.correct + item.wrong + item.blank > 0);
+            const delta =
+              accuracy === null || !previousGraded ? null : accuracy - examAccuracy(previousGraded);
             return (
-              <div key={group.key} className="relative w-44 px-3 text-center">
+              <button
+                key={group.key}
+                type="button"
+                onClick={() => onSelect(group.key)}
+                aria-pressed={selectedKey === group.key}
+                className={cn(
+                  "relative w-44 rounded-2xl px-3 pb-3 text-center transition",
+                  selectedKey === group.key
+                    ? "bg-emerald-50 ring-2 ring-emerald-400 dark:bg-emerald-950/30"
+                    : "hover:bg-slate-50 dark:hover:bg-slate-900/30",
+                )}
+              >
                 <div className="absolute left-0 right-0 top-5 h-0.5 bg-slate-200" />
                 <div
                   className={cn(
                     "relative mx-auto flex h-11 w-11 items-center justify-center rounded-full border-4 border-background text-xs font-black text-white",
-                    accuracy >= 70
-                      ? "bg-emerald-500"
-                      : accuracy >= 50
-                        ? "bg-amber-500"
-                        : "bg-rose-500",
+                    accuracy === null
+                      ? "bg-slate-400"
+                      : accuracy >= 70
+                        ? "bg-emerald-500"
+                        : accuracy >= 50
+                          ? "bg-amber-500"
+                          : "bg-rose-500",
                   )}
                 >
-                  {accuracy}%
+                  {accuracy === null ? "—" : `${accuracy}%`}
                 </div>
                 <p className="mt-3 text-sm font-black">{group.year}</p>
                 <p className="mt-1 line-clamp-2 text-[11px] text-muted-foreground">
                   {group.contest}
                 </p>
+                {accuracy === null && (
+                  <Badge variant="outline" className="mt-2 text-[10px] text-slate-600">
+                    sem resultado
+                  </Badge>
+                )}
                 {delta !== null && (
                   <Badge
                     variant="outline"
@@ -523,7 +932,7 @@ function Timeline({ groups }: { groups: ExamGroup[] }) {
                     {delta} p.p.
                   </Badge>
                 )}
-              </div>
+              </button>
             );
           })}
         </div>
@@ -532,65 +941,103 @@ function Timeline({ groups }: { groups: ExamGroup[] }) {
   );
 }
 
-function DisciplineAnalysis({ metrics }: { metrics: SubjectMetric[] }) {
-  const ranked = [...metrics].sort((a, b) => b.total - a.total).slice(0, 12);
-  return (
-    <Card className="border-slate-200 shadow-sm">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-lg">
-          <Brain className="h-5 w-5 text-violet-600" /> Raio-X das disciplinas
-        </CardTitle>
-        <CardDescription>
-          Calculado somente sobre itens com classificação editorial disponível. Cobertura atual:{" "}
-          {metrics.reduce((sum, item) => sum + item.total, 0)} itens.
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        {ranked.length ? (
-          ranked.map((item) => (
+function DisciplineAnalysis({
+  report,
+  title,
+  scope,
+  embedded = false,
+}: {
+  report: SubjectReport;
+  title: string;
+  scope: string;
+  embedded?: boolean;
+}) {
+  const ranked = [...report.metrics]
+    .sort(
+      (a, b) =>
+        Number(a.subject === UNCLASSIFIED) - Number(b.subject === UNCLASSIFIED) ||
+        b.total - a.total,
+    )
+    .slice(0, embedded ? undefined : 20);
+  const unmapped = report.counted - report.mapped;
+  const text = (value: number, neutral: boolean) =>
+    neutral
+      ? "text-slate-500"
+      : value >= 70
+        ? "text-emerald-600"
+        : value >= 50
+          ? "text-amber-600"
+          : "text-rose-600";
+  const bar = (value: number, neutral: boolean) =>
+    neutral
+      ? "bg-slate-400"
+      : value >= 70
+        ? "bg-emerald-500"
+        : value >= 50
+          ? "bg-amber-500"
+          : "bg-rose-500";
+  const body = (
+    <div className="space-y-4">
+      {ranked.length ? (
+        ranked.map((item) => {
+          const neutral = item.subject === UNCLASSIFIED;
+          return (
             <div key={item.subject}>
               <div className="mb-1.5 flex items-center justify-between gap-3 text-xs">
                 <span className="truncate font-bold" title={item.subject}>
                   {item.subject}
                 </span>
                 <span
-                  className={cn(
-                    "font-black",
-                    item.accuracy >= 70
-                      ? "text-emerald-600"
-                      : item.accuracy >= 50
-                        ? "text-amber-600"
-                        : "text-rose-600",
-                  )}
+                  className={cn("font-black", text(item.accuracy, neutral || item.total === 0))}
                 >
-                  {item.accuracy}%
+                  {item.total === 0 ? "—" : `${item.accuracy}%`}
                 </span>
               </div>
               <div className="h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
                 <div
-                  className={cn(
-                    "h-full rounded-full",
-                    item.accuracy >= 70
-                      ? "bg-emerald-500"
-                      : item.accuracy >= 50
-                        ? "bg-amber-500"
-                        : "bg-rose-500",
-                  )}
-                  style={{ width: `${item.accuracy}%` }}
+                  className={cn("h-full rounded-full", bar(item.accuracy, neutral))}
+                  style={{ width: `${item.total === 0 ? 0 : item.accuracy}%` }}
                 />
               </div>
               <p className="mt-1 text-[10px] text-muted-foreground">
-                {item.correct} acertos · {item.wrong} erros · {item.blank} em branco
+                {item.total === 0
+                  ? "Cobrada nesta prova, sem itens seus classificados"
+                  : `${item.correct} acertos · ${item.wrong} erros · ${item.blank} em branco`}
+                {item.catalog ? ` · ${item.catalog} questão(ões) cadastrada(s)` : ""}
               </p>
             </div>
-          ))
-        ) : (
-          <p className="text-sm text-muted-foreground">
-            As disciplinas ainda estão em revisão editorial e aparecerão aqui quando forem
-            liberadas.
-          </p>
-        )}
-      </CardContent>
+          );
+        })
+      ) : (
+        <p className="text-sm text-muted-foreground">Nenhum item respondido nesta seleção.</p>
+      )}
+      {report.counted > 0 && unmapped > 0 && (
+        <p className="text-[11px] text-muted-foreground">
+          {report.mapped} de {report.counted} itens têm disciplina cadastrada. Os outros {unmapped}{" "}
+          aparecem em "{UNCLASSIFIED}" e não entram nos pontos fracos.
+        </p>
+      )}
+    </div>
+  );
+  if (embedded)
+    return (
+      <div className="space-y-3">
+        <h3 className="flex items-center gap-2 text-sm font-black">
+          <Brain className="h-4 w-4 text-violet-600" /> {title}
+        </h3>
+        <p className="text-xs text-muted-foreground">{scope}</p>
+        {body}
+      </div>
+    );
+  return (
+    <Card className="border-slate-200 shadow-sm">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2 text-lg">
+          <Brain className="h-5 w-5 text-violet-600" /> {title}
+        </CardTitle>
+        <CardDescription>{scope}</CardDescription>
+      </CardHeader>
+      <CardContent>{body}</CardContent>
     </Card>
   );
 }
@@ -602,8 +1049,8 @@ function ActionPlan({
   wrong,
   blank,
 }: {
-  weakest?: SubjectMetric;
-  strongest?: SubjectMetric;
+  weakest?: SubjectMetric | undefined;
+  strongest?: SubjectMetric | undefined;
   omissionRate: number;
   wrong: number;
   blank: number;
@@ -649,15 +1096,21 @@ function ActionPlan({
 function ContestCard({
   group,
   references,
+  syllabus,
+  canUpload,
   open,
   pageUrls,
   onToggle,
+  onUploaded,
 }: {
   group: ExamGroup;
   references: Map<string, QuestionReference>;
+  syllabus: Map<string, string[]>;
+  canUpload: boolean;
   open: boolean;
   pageUrls: Record<string, string>;
   onToggle: () => void;
+  onUploaded: () => void;
 }) {
   const answered = group.correct + group.wrong;
   const accuracy = percent(group.correct, answered);
@@ -720,6 +1173,34 @@ function ContestCard({
             />
             <ScoreBox icon={Target} label="Pontuação" value={group.score} tone="text-primary" />
           </div>
+          {group.analysis?.itens_aproximado && (
+            <div className="rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-900 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
+              <strong>Detalhamento por questão aproximado.</strong> Os totais e a nota são os
+              oficiais ({group.correct} acertos, {group.wrong} erros, nota {group.score}), mas o
+              Raio-X por disciplina desta edição vem da sua planilha pessoal e pode divergir em
+              algumas questões. Use para ver tendências, não para contar cada item.
+            </div>
+          )}
+          {Object.keys(group.analysis?.items || {}).length === 0 &&
+          group.correct + group.wrong > 0 ? (
+            <div className="rounded-xl border border-dashed bg-background p-4 text-sm text-muted-foreground">
+              Esta prova foi cadastrada pelo resultado oficial ({group.correct} acertos,{" "}
+              {group.wrong} erros, nota {group.score}) e não tem detalhamento por questão, por isso
+              não há Raio-X por disciplina desta edição. Ela entra no Raio-X do concurso (todas as
+              edições) pelos totais e pela nota de corte, e as outras edições mostram as
+              disciplinas.
+            </div>
+          ) : (
+            <DisciplineAnalysis
+              embedded
+
+              report={computeSubjectReport([group], references, syllabus)}
+
+              title="Raio-X desta prova"
+
+              scope={`Todas as disciplinas cobradas em ${group.contest} — ${group.year}, só desta prova.`}
+            />
+          )}
           <div>
             <h3 className="mb-3 flex items-center gap-2 text-sm font-black">
               <BookOpenCheck className="h-4 w-4" /> Como corrigir erros e omissões
@@ -773,6 +1254,15 @@ function ContestCard({
               </div>
             )}
           </div>
+          {canUpload && (
+            <ExamPhotoUploader
+              contest={group.contest}
+              year={group.year}
+              board={group.board}
+              existingPages={group.pages.length}
+              onUploaded={onUploaded}
+            />
+          )}
           {group.pages.length > 0 && (
             <div>
               <h3 className="mb-3 flex items-center gap-2 text-sm font-black">
@@ -849,7 +1339,7 @@ function MetricCard({
   tone: "navy" | "emerald" | "amber" | "rose";
 }) {
   const styles = {
-    navy: "bg-[#071a2f] text-white",
+    navy: "bg-ink text-white",
     emerald: "bg-emerald-600 text-white",
     amber: "bg-amber-50 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100",
     rose: "bg-rose-50 text-rose-950 dark:bg-rose-950/30 dark:text-rose-100",

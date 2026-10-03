@@ -26,6 +26,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { AgenteContabilidadePlan } from "@/components/dashboard/AgenteContabilidadePlan";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/study-plan")({ component: StudyPlanPage });
@@ -178,19 +179,19 @@ const normalize = (value: string) =>
     .toLowerCase();
 function readMetrics(data: Record<string, unknown> | null) {
   const result: Record<string, Metric> = {};
-  const raw = data?.by_subject;
+  const raw = data?.["by_subject"];
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) return result;
   for (const [subject, value] of Object.entries(raw as Record<string, unknown>)) {
     if (!value || typeof value !== "object" || Array.isArray(value)) continue;
     const item = value as Record<string, unknown>;
-    const correct = Number(item.correct ?? item.corretas ?? 0),
-      wrong = Number(item.wrong ?? item.erradas ?? 0),
-      blank = Number(item.blank ?? item.branco ?? item.em_branco ?? 0);
+    const correct = Number(item["correct"] ?? item["corretas"] ?? 0),
+      wrong = Number(item["wrong"] ?? item["erradas"] ?? 0),
+      blank = Number(item["blank"] ?? item["branco"] ?? item["em_branco"] ?? 0);
     result[normalize(subject)] = {
       correct,
       wrong,
       blank,
-      total: Number(item.total ?? correct + wrong + blank),
+      total: Number(item["total"] ?? correct + wrong + blank),
     };
   }
   return result;
@@ -316,7 +317,7 @@ function StudyPlanPage() {
   const pfScores = attempts
     .filter((row) => careerMatch(String(row.contest_name || ""), "PF") && row.score_net !== null)
     .map((row) => Number(row.score_net));
-  const evolution = pfScores.length >= 2 ? pfScores.at(-1)! - pfScores[0] : null;
+  const evolution = pfScores.length >= 2 ? pfScores.at(-1)! - pfScores[0]! : null;
   const questionGoal = Math.max(180, Math.round(weeklyHours * 18));
   const savePlan = () => {
     localStorage.setItem("norte_study_career", career);
@@ -326,22 +327,16 @@ function StudyPlanPage() {
 
   return (
     <div className="space-y-7 pb-10">
-      <section className="relative overflow-hidden rounded-3xl border bg-slate-950 px-6 py-7 text-white shadow-xl md:px-9 md:py-9">
-        <div
-          className={cn(
-            "absolute inset-y-0 right-0 w-2/3 bg-gradient-to-l opacity-25 blur-3xl",
-            plan.accent,
-          )}
-        />
-        <div className="relative grid gap-7 lg:grid-cols-[1.5fr_1fr] lg:items-end">
+      <section className="page-hero page-hero--lg" data-hero="journey">
+        <div className="grid gap-7 lg:grid-cols-[1.5fr_1fr] lg:items-end">
           <div>
-            <Badge className="mb-4 border-white/15 bg-white/10 text-white hover:bg-white/10">
-              <Sparkles className="mr-1.5 h-3.5 w-3.5" /> Inteligência baseada na sua trajetória
-            </Badge>
-            <h1 className="max-w-3xl text-3xl font-black tracking-tight md:text-4xl">
-              Operação aprovação: <span className="text-sky-300">PF, PRF e Polícia Civil</span>
+            <span className="hero-chip">
+              <Sparkles /> Inteligência baseada na sua trajetória
+            </span>
+            <h1>
+              Operação aprovação: <em>PF, PRF e Polícia Civil</em>
             </h1>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-300 md:text-base">
+            <p className="page-hero__desc">
               Um ciclo adaptativo que transforma suas provas anteriores em prioridades, metas de
               questões e revisões mensuráveis.
             </p>
@@ -364,8 +359,8 @@ function StudyPlanPage() {
         </div>
       </section>
       {error && (
-        <Card className="border-amber-300 bg-amber-50">
-          <CardContent className="flex items-center gap-3 py-4 text-sm text-amber-900">
+        <Card className="border-amber-300 bg-amber-50 dark:border-amber-500/30 dark:bg-amber-500/10">
+          <CardContent className="flex items-center gap-3 py-4 text-sm text-amber-900 dark:text-amber-200">
             <RefreshCw className="h-4 w-4" /> {error} O plano-base continua disponível.
           </CardContent>
         </Card>
@@ -386,7 +381,7 @@ function StudyPlanPage() {
               <span
                 className={cn(
                   "hidden text-xs sm:block",
-                  career === id ? "text-white/75" : "text-muted-foreground",
+                  career === id ? "text-primary-foreground/75" : "text-muted-foreground",
                 )}
               >
                 {CAREERS[id].fullName}
@@ -541,6 +536,7 @@ function StudyPlanPage() {
           </Card>
         </div>
       </section>
+      {career === "PF" && <AgenteContabilidadePlan attempts={attempts} />}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -567,18 +563,21 @@ function StudyPlanPage() {
           </div>
         </CardContent>
       </Card>
-      <section className="rounded-3xl border bg-gradient-to-br from-primary to-slate-900 p-6 text-white shadow-lg md:flex md:items-center md:justify-between md:p-8">
+      <section
+        className="page-hero page-hero--sm md:!flex-row md:!items-end md:!justify-between"
+        data-hero="exam-hall"
+      >
         <div>
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-white/60">
-            Próxima missão
-          </p>
-          <h2 className="mt-2 text-2xl font-black">Execute um diagnóstico {career}</h2>
-          <p className="mt-2 max-w-2xl text-sm text-white/70">
+          <span className="hero-chip">Próxima missão</span>
+          <h2 className="font-display mt-3 text-3xl font-extrabold leading-none">
+            Execute um diagnóstico <span className="text-brass">{career}</span>
+          </h2>
+          <p className="page-hero__desc">
             O resultado alimentará a próxima recalibração do plano. Gabarito e explicações só
             aparecem ao finalizar.
           </p>
         </div>
-        <Button asChild size="lg" className="mt-5 bg-white text-primary hover:bg-white/90 md:mt-0">
+        <Button asChild size="lg" className="hero-btn-primary mt-5 md:mt-0">
           <Link
             to="/dashboard/mock-exams"
             search={{
@@ -604,10 +603,12 @@ function HeroMetric({
   icon: React.ElementType;
 }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-white/[0.07] p-3 backdrop-blur">
-      <Icon className="mb-2 h-4 w-4 text-sky-300" />
-      <p className="text-lg font-black leading-none">{value}</p>
-      <p className="mt-1 text-[10px] leading-tight text-slate-400">{label}</p>
+    <div className="hero-stat">
+      <span>
+        <Icon />
+        <span className="truncate">{label}</span>
+      </span>
+      <strong className="truncate !text-xl tabular">{value}</strong>
     </div>
   );
 }

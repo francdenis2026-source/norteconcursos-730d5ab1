@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
@@ -51,13 +52,28 @@ import {
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/mock-exams")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    contest: typeof search.contest === "string" ? search.contest : undefined,
-    board: typeof search.board === "string" ? search.board : undefined,
-    career: typeof search.career === "string" ? search.career : undefined,
-    year: typeof search.year === "string" ? search.year : undefined,
-    subject: typeof search.subject === "string" ? search.subject : undefined,
-    source: typeof search.source === "string" ? search.source : undefined,
+  validateSearch: (
+    search: Record<string, unknown>,
+  ): Partial<
+    Record<
+      | "contest"
+      | "board"
+      | "career"
+      | "year"
+      | "subject"
+      | "source"
+      | "reviewed"
+      | "state"
+      | "category",
+      string | undefined
+    >
+  > => ({
+    contest: typeof search["contest"] === "string" ? search["contest"] : undefined,
+    board: typeof search["board"] === "string" ? search["board"] : undefined,
+    career: typeof search["career"] === "string" ? search["career"] : undefined,
+    year: typeof search["year"] === "string" ? search["year"] : undefined,
+    subject: typeof search["subject"] === "string" ? search["subject"] : undefined,
+    source: typeof search["source"] === "string" ? search["source"] : undefined,
   }),
   component: ProfessionalSimulator,
 });
@@ -186,38 +202,40 @@ function ProfessionalSimulator() {
       if (curatedResult.error) throw curatedResult.error;
       const official = ((officialResult.data || []) as Array<Record<string, unknown>>).map(
         (row): SimulatorQuestion => ({
-          id: String(row.id),
+          id: String(row["id"]),
           sourceKind: "official",
-          contest: String(row.contest_name),
-          year: Number(row.exam_year),
-          career: String(row.career_name),
-          board: String(row.exam_board),
-          subject: String(row.subject),
+          contest: String(row["contest_name"]),
+          year: Number(row["exam_year"]),
+          career: String(row["career_name"]),
+          board: String(row["exam_board"]),
+          subject: canonicalSubject(String(row["subject"])),
           subtopic: null,
-          itemNumber: Number(row.item_number),
-          text: String(row.question_text),
-          answer: String(row.official_answer) as Answer,
-          explanation: String(row.review_note || "Gabarito definitivo conferido na fonte oficial."),
+          itemNumber: Number(row["item_number"]),
+          text: String(row["question_text"]),
+          answer: String(row["official_answer"]) as Answer,
+          explanation: String(
+            row["review_note"] || "Gabarito definitivo conferido na fonte oficial.",
+          ),
           difficulty: null,
-          legalBasis: parseLegalBasis(row.legal_basis),
+          legalBasis: parseLegalBasis(row["legal_basis"]),
         }),
       );
       const curated = ((curatedResult.data || []) as Array<Record<string, unknown>>).map(
         (row): SimulatorQuestion => ({
-          id: String(row.id),
+          id: String(row["id"]),
           sourceKind: "curated",
-          contest: String(row.contest_name),
-          year: Number(row.contest_year),
-          career: String(row.career_name),
-          board: String(row.exam_board),
-          subject: String(row.subject),
-          subtopic: row.subtopic ? String(row.subtopic) : null,
+          contest: String(row["contest_name"]),
+          year: Number(row["contest_year"]),
+          career: String(row["career_name"]),
+          board: String(row["exam_board"]),
+          subject: canonicalSubject(String(row["subject"])),
+          subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
           itemNumber: null,
-          text: String(row.question_text),
-          answer: String(row.official_answer) as Answer,
-          explanation: String(row.explanation),
-          difficulty: row.difficulty ? String(row.difficulty) : null,
-          legalBasis: parseLegalBasis(row.legal_basis),
+          text: String(row["question_text"]),
+          answer: String(row["official_answer"]) as Answer,
+          explanation: String(row["explanation"]),
+          difficulty: row["difficulty"] ? String(row["difficulty"]) : null,
+          legalBasis: parseLegalBasis(row["legal_basis"]),
         }),
       );
       setCatalog([...official, ...curated]);
@@ -261,7 +279,9 @@ function ProfessionalSimulator() {
 
   const contests = React.useMemo(
     () =>
-      Array.from(new Set(catalog.map((item) => item.contest))).sort((a, b) => a.localeCompare(b)),
+      Array.from(new Set(catalog.map((item) => item["contest"]))).sort((a, b) =>
+        a.localeCompare(b),
+      ),
     [catalog],
   );
   const subjects = React.useMemo(
@@ -269,35 +289,36 @@ function ProfessionalSimulator() {
       Array.from(
         new Set(
           catalog
-            .filter((item) => contest === "all" || item.contest === contest)
-            .map((item) => item.subject),
+            .filter((item) => contest === "all" || item["contest"] === contest)
+            .map((item) => item["subject"]),
         ),
       ).sort((a, b) => a.localeCompare(b)),
     [catalog, contest],
   );
   const boards = React.useMemo(
-    () => Array.from(new Set(catalog.map((item) => item.board))).sort((a, b) => a.localeCompare(b)),
+    () =>
+      Array.from(new Set(catalog.map((item) => item["board"]))).sort((a, b) => a.localeCompare(b)),
     [catalog],
   );
   const careers = React.useMemo(
     () =>
-      Array.from(new Set(catalog.map((item) => item.career))).sort((a, b) => a.localeCompare(b)),
+      Array.from(new Set(catalog.map((item) => item["career"]))).sort((a, b) => a.localeCompare(b)),
     [catalog],
   );
   const years = React.useMemo(
-    () => Array.from(new Set(catalog.map((item) => item.year))).sort((a, b) => b - a),
+    () => Array.from(new Set(catalog.map((item) => item["year"]))).sort((a, b) => b - a),
     [catalog],
   );
   const available = React.useMemo(
     () =>
       catalog.filter(
         (item) =>
-          (contest === "all" || item.contest === contest) &&
-          (subject === "all" || item.subject === subject) &&
-          (board === "all" || item.board === board) &&
-          (career === "all" || item.career === career) &&
-          (year === "all" || item.year === Number(year)) &&
-          (sourceKind === "all" || item.sourceKind === sourceKind),
+          (contest === "all" || item["contest"] === contest) &&
+          (subject === "all" || item["subject"] === subject) &&
+          (board === "all" || item["board"] === board) &&
+          (career === "all" || item["career"] === career) &&
+          (year === "all" || item["year"] === Number(year)) &&
+          (sourceKind === "all" || item["sourceKind"] === sourceKind),
       ),
     [catalog, contest, subject, board, career, year, sourceKind],
   );
@@ -700,7 +721,7 @@ function RankIdentity({
 }: {
   profile: RankProfile | null;
   leaderboard: RankProfile[];
-  userId?: string;
+  userId?: string | undefined;
 }) {
   const position = leaderboard.find((item) => item.user_id === userId)?.rank_position;
   const nextTarget =
@@ -769,7 +790,7 @@ function RankIdentity({
   );
 }
 
-function Leaderboard({ rows, userId }: { rows: RankProfile[]; userId?: string }) {
+function Leaderboard({ rows, userId }: { rows: RankProfile[]; userId?: string | undefined }) {
   return (
     <Card className="border-0 shadow-lg ring-1 ring-border/70">
       <CardHeader>
@@ -1497,7 +1518,7 @@ function shuffle<T>(items: T[]) {
   const copy = [...items];
   for (let i = copy.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
+    [copy[i], copy[j]] = [copy[j]!, copy[i]!];
   }
   return copy;
 }

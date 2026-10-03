@@ -1,11 +1,11 @@
-import React from 'react';
-import { createFileRoute } from '@tanstack/react-router';
-import { 
-  Plus, 
-  Search, 
-  Pencil, 
-  Trash2, 
-  BookOpen, 
+import React from "react";
+import { createFileRoute } from "@tanstack/react-router";
+import {
+  Plus,
+  Search,
+  Pencil,
+  Trash2,
+  BookOpen,
   GraduationCap,
   ShieldCheck,
   Settings,
@@ -13,38 +13,40 @@ import {
   History as HistoryIcon,
   UserCheck,
   FileText,
-  Lock
-} from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
-  Table, 
-  TableBody, 
-  TableCell, 
-  TableHead, 
-  TableHeader, 
-  TableRow 
-} from '@/components/ui/table';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { MockService } from '@/services/mockService';
-import { Contest, Question, UserProfile } from '@/types';
-import { toast } from 'sonner';
-import { Link } from '@tanstack/react-router';
-import { CardFooter } from '@/components/ui/card';
-import { 
-  Dialog, 
-  DialogContent, 
-  DialogDescription, 
-  DialogFooter, 
-  DialogHeader, 
-  DialogTitle 
-} from '@/components/ui/dialog';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Download } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
+  Lock,
+} from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { MockService } from "@/services/mockService";
+import { Contest, Question, UserProfile } from "@/types";
+import { toast } from "sonner";
+import { Link } from "@tanstack/react-router";
+import { CardFooter } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { PageHero } from "@/components/dashboard/PageHero";
+import { LibraryAdmin } from "@/components/library/LibraryAdmin";
+import { Download } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 interface AdminExamUploadRow {
   id: string;
@@ -64,15 +66,14 @@ interface AdminExamUploadRow {
   created_at: string;
 }
 
-export const Route = createFileRoute('/dashboard/admin')({
+export const Route = createFileRoute("/dashboard/admin")({
   component: AdminPanel,
   head: () => ({
-    meta: [{ title: 'Painel Administrativo | Norte Concurso' }],
-  })
+    meta: [{ title: "Painel Administrativo | Norte Concurso" }],
+  }),
 });
 
-
-import { useAuthStatus } from '@/hooks/useDashboard';
+import { useAuthStatus } from "@/hooks/useDashboard";
 
 function AdminPanel() {
   const { user, isAdmin, isLoading: isAuthLoading } = useAuthStatus();
@@ -82,27 +83,27 @@ function AdminPanel() {
   const [subscriptionPlans, setSubscriptionPlans] = React.useState<any[]>([]);
   const [auditLogs, setAuditLogs] = React.useState<any[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchTerm, setSearchTerm] = React.useState("");
   const [isUpdatingRole, setIsUpdatingRole] = React.useState<string | null>(null);
   const [isUpdatingSubscription, setIsUpdatingSubscription] = React.useState<string | null>(null);
-  
+
   // Subscription management modal states
   const [subModalConfig, setSubModalConfig] = React.useState<{
     isOpen: boolean;
     userId: string;
     userName: string;
     targetTier: string;
-    actionType: 'downgrade' | 'cancel';
+    actionType: "downgrade" | "cancel";
   }>({
     isOpen: false,
-    userId: '',
-    userName: '',
-    targetTier: '',
-    actionType: 'downgrade'
+    userId: "",
+    userName: "",
+    targetTier: "",
+    actionType: "downgrade",
   });
-  const [subReason, setSubReason] = React.useState('');
+  const [subReason, setSubReason] = React.useState("");
   const [isSubmittingSub, setIsSubmittingSub] = React.useState(false);
-  
+
   // States for Edit Modal
   const [editingContest, setEditingContest] = React.useState<Contest | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = React.useState(false);
@@ -114,20 +115,20 @@ function AdminPanel() {
   const [examUploads, setExamUploads] = React.useState<AdminExamUploadRow[]>([]);
   const [examUploadsLoading, setExamUploadsLoading] = React.useState(true);
   const [examUploadsError, setExamUploadsError] = React.useState<string | null>(null);
-  const [examSearch, setExamSearch] = React.useState('');
+  const [examSearch, setExamSearch] = React.useState("");
   const [relinkTargetId, setRelinkTargetId] = React.useState<string | null>(null);
-  const [relinkCpf, setRelinkCpf] = React.useState('');
-  const [relinkContestName, setRelinkContestName] = React.useState('');
-  const [relinkContestYear, setRelinkContestYear] = React.useState('');
+  const [relinkCpf, setRelinkCpf] = React.useState("");
+  const [relinkContestName, setRelinkContestName] = React.useState("");
+  const [relinkContestYear, setRelinkContestYear] = React.useState("");
   const [isRelinking, setIsRelinking] = React.useState(false);
 
   const loadExamUploads = React.useCallback(async () => {
     setExamUploadsLoading(true);
     setExamUploadsError(null);
     const { data, error } = await supabase
-      .from('admin_student_exam_documents')
-      .select('*')
-      .order('created_at', { ascending: false });
+      .from("admin_student_exam_documents")
+      .select("*")
+      .order("created_at", { ascending: false });
     if (error) {
       setExamUploadsError(error.message);
     } else {
@@ -142,9 +143,9 @@ function AdminPanel() {
 
   const openRelink = (row: AdminExamUploadRow) => {
     setRelinkTargetId(row.id);
-    setRelinkCpf(row.cpf || '');
-    setRelinkContestName(row.contest_name || '');
-    setRelinkContestYear(row.contest_year || '');
+    setRelinkCpf(row.cpf || "");
+    setRelinkContestName(row["contest_name"] || "");
+    setRelinkContestYear(row["contest_year"] || "");
   };
 
   const handleRelink = async () => {
@@ -161,9 +162,9 @@ function AdminPanel() {
       const trimmedCpf = relinkCpf.trim();
       if (trimmedCpf) {
         const { data: targetProfile, error: profileError } = await supabase
-          .from('profiles')
-          .select('id')
-          .eq('cpf', trimmedCpf)
+          .from("profiles")
+          .select("id")
+          .eq("cpf", trimmedCpf)
           .maybeSingle();
         if (profileError) throw profileError;
         if (!targetProfile) {
@@ -171,18 +172,18 @@ function AdminPanel() {
           setIsRelinking(false);
           return;
         }
-        update.user_id = targetProfile.id;
+        update["user_id"] = targetProfile.id;
       }
       const { error } = await supabase
-        .from('student_exam_documents')
+        .from("student_exam_documents")
         .update(update)
-        .eq('id', relinkTargetId);
+        .eq("id", relinkTargetId);
       if (error) throw error;
-      toast.success('Vínculo corrigido com sucesso.');
+      toast.success("Vínculo corrigido com sucesso.");
       setRelinkTargetId(null);
       void loadExamUploads();
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : 'Erro ao corrigir vínculo.');
+      toast.error(error instanceof Error ? error.message : "Erro ao corrigir vínculo.");
     } finally {
       setIsRelinking(false);
     }
@@ -195,8 +196,8 @@ function AdminPanel() {
       row.cpf?.toLowerCase().includes(q) ||
       row.full_name?.toLowerCase().includes(q) ||
       row.auth_email?.toLowerCase().includes(q) ||
-      row.contest_name?.toLowerCase().includes(q) ||
-      row.user_id.toLowerCase().includes(q)
+      row["contest_name"]?.toLowerCase().includes(q) ||
+      row["user_id"].toLowerCase().includes(q)
     );
   });
 
@@ -208,7 +209,7 @@ function AdminPanel() {
         MockService.getQuestions(),
         (MockService as any).getSubscriptionPlans?.() || [],
         (MockService as any).getAdminAuditLogs?.() || [],
-        (MockService as any).listUsers?.() || []
+        (MockService as any).listUsers?.() || [],
       ]);
       setContests(c);
       setQuestions(q);
@@ -220,14 +221,14 @@ function AdminPanel() {
     }
   };
 
-  const handleUpdateRole = async (userId: string, newRole: 'admin' | 'moderator' | 'user') => {
+  const handleUpdateRole = async (userId: string, newRole: "admin" | "moderator" | "user") => {
     setIsUpdatingRole(userId);
     const success = await MockService.updateUserRole(userId, newRole);
     if (success) {
-      toast.success('Role atualizada com sucesso!');
+      toast.success("Role atualizada com sucesso!");
       loadData();
     } else {
-      toast.error('Erro ao atualizar role');
+      toast.error("Erro ao atualizar role");
     }
     setIsUpdatingRole(null);
   };
@@ -236,49 +237,53 @@ function AdminPanel() {
     setSubModalConfig({
       isOpen: true,
       userId: user.id,
-      userName: user.full_name || user.email || 'Usuário',
+      userName: user.full_name || user.email || "Usuário",
       targetTier: targetTier,
-      actionType: 'downgrade'
+      actionType: "downgrade",
     });
-    setSubReason('');
+    setSubReason("");
   };
 
   const handleCancelUserSubscription = (user: UserProfile) => {
     setSubModalConfig({
       isOpen: true,
       userId: user.id,
-      userName: user.full_name || user.email || 'Usuário',
-      targetTier: 'free',
-      actionType: 'cancel'
+      userName: user.full_name || user.email || "Usuário",
+      targetTier: "free",
+      actionType: "cancel",
     });
-    setSubReason('');
+    setSubReason("");
   };
 
   const processSubscriptionAction = async () => {
     if (!subReason.trim()) {
-      toast.error('Motivo é obrigatório para realizar esta ação.');
+      toast.error("Motivo é obrigatório para realizar esta ação.");
       return;
     }
 
     setIsSubmittingSub(true);
     try {
       let success = false;
-      if (subModalConfig.actionType === 'downgrade') {
-        success = await MockService.downgradeSubscription(subModalConfig.userId, subModalConfig.targetTier, subReason);
+      if (subModalConfig.actionType === "downgrade") {
+        success = await MockService.downgradeSubscription(
+          subModalConfig.userId,
+          subModalConfig.targetTier,
+          subReason,
+        );
       } else {
         success = await MockService.cancelSubscription(subModalConfig.userId, subReason);
       }
 
       if (success) {
         toast.success(
-          subModalConfig.actionType === 'downgrade' 
-            ? `Downgrade para ${subModalConfig.targetTier} agendado!` 
-            : 'Cancelamento de assinatura agendado!'
+          subModalConfig.actionType === "downgrade"
+            ? `Downgrade para ${subModalConfig.targetTier} agendado!`
+            : "Cancelamento de assinatura agendado!",
         );
-        setSubModalConfig(prev => ({ ...prev, isOpen: false }));
+        setSubModalConfig((prev) => ({ ...prev, isOpen: false }));
         loadData();
       } else {
-        toast.error('Erro ao processar solicitação.');
+        toast.error("Erro ao processar solicitação.");
       }
     } finally {
       setIsSubmittingSub(false);
@@ -288,20 +293,23 @@ function AdminPanel() {
   const handleExportAuditCSV = async () => {
     const csv = await MockService.exportSubscriptionLogsToCSV();
     if (!csv) {
-      toast.error('Nenhum log encontrado para exportar.');
+      toast.error("Nenhum log encontrado para exportar.");
       return;
     }
 
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    const link = document.createElement('a');
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
     const url = URL.createObjectURL(blob);
-    link.setAttribute('href', url);
-    link.setAttribute('download', `auditoria_assinaturas_${new Date().toISOString().split('T')[0]}.csv`);
-    link.style.visibility = 'hidden';
+    link.setAttribute("href", url);
+    link.setAttribute(
+      "download",
+      `auditoria_assinaturas_${new Date().toISOString().split("T")[0]}.csv`,
+    );
+    link.style.visibility = "hidden";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    toast.success('Histórico exportado com sucesso!');
+    toast.success("Histórico exportado com sucesso!");
   };
 
   React.useEffect(() => {
@@ -309,24 +317,24 @@ function AdminPanel() {
   }, []);
 
   const handleDeleteContest = async (id: string) => {
-    if (!confirm('Tem certeza que deseja excluir este concurso?')) return;
+    if (!confirm("Tem certeza que deseja excluir este concurso?")) return;
     const success = await MockService.deleteContest(id);
     if (success) {
-      toast.success('Concurso excluído com sucesso');
+      toast.success("Concurso excluído com sucesso");
       loadData();
     } else {
-      toast.error('Erro ao excluir concurso');
+      toast.error("Erro ao excluir concurso");
     }
   };
 
   const handleDeleteQuestion = async (id: string) => {
-    if (!confirm('Tem certeza que deseja excluir esta questão?')) return;
+    if (!confirm("Tem certeza que deseja excluir esta questão?")) return;
     const success = await MockService.deleteQuestion(id);
     if (success) {
-      toast.success('Questão excluída com sucesso');
+      toast.success("Questão excluída com sucesso");
       loadData();
     } else {
-      toast.error('Erro ao excluir questão');
+      toast.error("Erro ao excluir questão");
     }
   };
 
@@ -340,11 +348,11 @@ function AdminPanel() {
     setIsSaving(true);
     const success = await MockService.updateContest(editingContest.id, editingContest);
     if (success) {
-      toast.success('Concurso atualizado com sucesso');
+      toast.success("Concurso atualizado com sucesso");
       setIsEditModalOpen(false);
       loadData();
     } else {
-      toast.error('Erro ao atualizar concurso');
+      toast.error("Erro ao atualizar concurso");
     }
     setIsSaving(false);
   };
@@ -373,19 +381,26 @@ function AdminPanel() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Painel Administrativo</h1>
-          <p className="text-muted-foreground">Gerencie os concursos e questões da plataforma.</p>
-        </div>
-      </div>
+      <PageHero
+        image="command-room"
+        size="sm"
+        kicker="Administração"
+        icon={Settings}
+        title={
+          <>
+            Painel <em>administrativo</em>
+          </>
+        }
+        description="Gerencie concursos, questões, usuários e assinaturas da plataforma."
+      />
 
       <Tabs defaultValue="contests" className="w-full">
-        <TabsList className="grid w-full max-w-5xl grid-cols-7">
+        <TabsList className="grid w-full max-w-5xl grid-cols-8">
           <TabsTrigger value="contests">Concursos</TabsTrigger>
           <TabsTrigger value="questions">Questões</TabsTrigger>
           <TabsTrigger value="syllabus">Edital</TabsTrigger>
-        <TabsTrigger value="users">Usuários</TabsTrigger>
+          <TabsTrigger value="library">Biblioteca</TabsTrigger>
+          <TabsTrigger value="users">Usuários</TabsTrigger>
           <TabsTrigger value="exam-uploads">Provas Enviadas</TabsTrigger>
           <TabsTrigger value="subscriptions">Planos</TabsTrigger>
           <TabsTrigger value="audit">Histórico</TabsTrigger>
@@ -396,16 +411,23 @@ function AdminPanel() {
             <CardHeader className="flex flex-row items-center justify-between space-y-0">
               <div>
                 <CardTitle>Concursos Cadastrados</CardTitle>
-                <CardDescription>Visualize e gerencie todos os concursos disponíveis.</CardDescription>
+                <CardDescription>
+                  Visualize e gerencie todos os concursos disponíveis.
+                </CardDescription>
               </div>
               <div className="flex gap-2">
-                <Button size="sm" variant="outline" className="gap-2" onClick={() => document.getElementById('csv-import')?.click()}>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="gap-2"
+                  onClick={() => document.getElementById("csv-import")?.click()}
+                >
                   <FileText className="h-4 w-4" /> Importar Questões (CSV)
-                  <input 
-                    id="csv-import" 
-                    type="file" 
-                    accept=".csv" 
-                    className="hidden" 
+                  <input
+                    id="csv-import"
+                    type="file"
+                    accept=".csv"
+                    className="hidden"
                     onChange={async (e) => {
                       const file = e.target.files?.[0];
                       if (!file) return;
@@ -430,7 +452,7 @@ function AdminPanel() {
                   <Input placeholder="Buscar concurso..." className="pl-9" />
                 </div>
               </div>
-              
+
               <div className="rounded-md border overflow-x-auto">
                 <Table>
                   <TableHeader>
@@ -460,8 +482,11 @@ function AdminPanel() {
                             </div>
                           </TableCell>
                           <TableCell className="text-xs">
-                            {contest.startDate ? new Date(contest.startDate).toLocaleDateString() : '∞'} - 
-                            {contest.endDate ? new Date(contest.endDate).toLocaleDateString() : '∞'}
+                            {contest.startDate
+                              ? new Date(contest.startDate).toLocaleDateString()
+                              : "∞"}{" "}
+                            -
+                            {contest.endDate ? new Date(contest.endDate).toLocaleDateString() : "∞"}
                           </TableCell>
                           <TableCell>{contest.examBoard}</TableCell>
                           <TableCell>
@@ -472,17 +497,17 @@ function AdminPanel() {
                           <TableCell>{contest.vacancies}</TableCell>
                           <TableCell className="text-right">
                             <div className="flex justify-end gap-2">
-                              <Button 
-                                variant="ghost" 
-                                size="icon" 
+                              <Button
+                                variant="ghost"
+                                size="icon"
                                 className="h-8 w-8"
                                 onClick={() => handleEditContest(contest)}
                               >
                                 <Pencil className="h-4 w-4" />
                               </Button>
-                              <Button 
-                                variant="ghost" 
-                                size="icon" 
+                              <Button
+                                variant="ghost"
+                                size="icon"
                                 className="h-8 w-8 text-destructive"
                                 onClick={() => handleDeleteContest(contest.id)}
                               >
@@ -505,7 +530,9 @@ function AdminPanel() {
             <CardHeader className="flex flex-row items-center justify-between space-y-0">
               <div>
                 <CardTitle>Banco de Questões</CardTitle>
-                <CardDescription>Crie e edite o banco de dados de questões da plataforma.</CardDescription>
+                <CardDescription>
+                  Crie e edite o banco de dados de questões da plataforma.
+                </CardDescription>
               </div>
               <Button size="sm" className="gap-2">
                 <Plus className="h-4 w-4" /> Nova Questão
@@ -518,7 +545,7 @@ function AdminPanel() {
                   <Input placeholder="Buscar por texto da questão..." className="pl-9" />
                 </div>
                 <div className="flex items-center gap-2">
-                  <select 
+                  <select
                     className="h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     onChange={(e) => {
                       // Filter logic for teacherComment
@@ -552,16 +579,22 @@ function AdminPanel() {
                       questions.slice(0, 10).map((question) => (
                         <TableRow key={question.id}>
                           <TableCell className="max-w-[400px]">
-                            <p className="truncate text-sm" title={question.text}>{question.text}</p>
+                            <p className="truncate text-sm" title={question.text}>
+                              {question.text}
+                            </p>
                           </TableCell>
                           <TableCell>{question.type}</TableCell>
                           <TableCell>
-                             <span className={cn(
-                               "inline-flex items-center px-2 py-0.5 rounded text-xs font-medium",
-                               question.difficulty === 'Fácil' ? "bg-emerald-100 text-emerald-800" :
-                               question.difficulty === 'Média' ? "bg-amber-100 text-amber-800" :
-                               "bg-rose-100 text-rose-800"
-                             )}>
+                            <span
+                              className={cn(
+                                "inline-flex items-center px-2 py-0.5 rounded text-xs font-medium",
+                                question.difficulty === "Fácil"
+                                  ? "bg-emerald-100 text-emerald-800"
+                                  : question.difficulty === "Média"
+                                    ? "bg-amber-100 text-amber-800"
+                                    : "bg-rose-100 text-rose-800",
+                              )}
+                            >
                               {question.difficulty}
                             </span>
                           </TableCell>
@@ -570,9 +603,9 @@ function AdminPanel() {
                               <Button variant="ghost" size="icon" className="h-8 w-8">
                                 <Pencil className="h-4 w-4" />
                               </Button>
-                              <Button 
-                                variant="ghost" 
-                                size="icon" 
+                              <Button
+                                variant="ghost"
+                                size="icon"
                                 className="h-8 w-8 text-destructive"
                                 onClick={() => handleDeleteQuestion(question.id)}
                               >
@@ -597,7 +630,9 @@ function AdminPanel() {
           <Card>
             <CardHeader>
               <CardTitle>Editor de Conteúdo Premium</CardTitle>
-              <CardDescription>Cadastre explicações estruturadas, links de teoria e anexos de mídia.</CardDescription>
+              <CardDescription>
+                Cadastre explicações estruturadas, links de teoria e anexos de mídia.
+              </CardDescription>
             </CardHeader>
 
             <CardContent className="space-y-4">
@@ -606,7 +641,7 @@ function AdminPanel() {
                   <label className="text-sm font-medium">Selecione a Questão</label>
                   <select className="w-full p-2 rounded-md border bg-background text-sm">
                     <option>Selecione uma questão para comentar...</option>
-                    {questions.slice(0, 5).map(q => (
+                    {questions.slice(0, 5).map((q) => (
                       <option key={q.id}>{q.text.substring(0, 60)}...</option>
                     ))}
                   </select>
@@ -625,14 +660,24 @@ function AdminPanel() {
                   <label className="text-sm font-medium">Comentário do Professor</label>
                   <div className="border rounded-md overflow-hidden flex flex-col h-full">
                     <div className="bg-muted p-2 border-b flex gap-2">
-                      <Button variant="ghost" size="sm" className="h-7 w-7 p-0 font-bold">B</Button>
-                      <Button variant="ghost" size="sm" className="h-7 w-7 p-0 italic">I</Button>
-                      <Button variant="ghost" size="sm" className="h-7 w-7 p-0 underline">U</Button>
+                      <Button variant="ghost" size="sm" className="h-7 w-7 p-0 font-bold">
+                        B
+                      </Button>
+                      <Button variant="ghost" size="sm" className="h-7 w-7 p-0 italic">
+                        I
+                      </Button>
+                      <Button variant="ghost" size="sm" className="h-7 w-7 p-0 underline">
+                        U
+                      </Button>
                       <div className="w-px h-4 bg-border self-center mx-1" />
-                      <Button variant="ghost" size="sm" className="h-7 px-2 text-[10px]">Lista</Button>
-                      <Button variant="ghost" size="sm" className="h-7 px-2 text-[10px]">Link</Button>
+                      <Button variant="ghost" size="sm" className="h-7 px-2 text-[10px]">
+                        Lista
+                      </Button>
+                      <Button variant="ghost" size="sm" className="h-7 px-2 text-[10px]">
+                        Link
+                      </Button>
                     </div>
-                    <textarea 
+                    <textarea
                       className="w-full p-4 flex-1 min-h-[250px] text-sm focus:outline-none bg-background resize-none"
                       placeholder="Digite o comentário estruturado aqui (suporta HTML)..."
                     />
@@ -642,7 +687,9 @@ function AdminPanel() {
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Visualização em Tempo Real (Prévia)</label>
                   <div className="border rounded-md p-4 bg-muted/20 min-h-[250px] overflow-auto prose prose-sm dark:prose-invert max-w-none">
-                    <p className="text-muted-foreground italic text-xs">A prévia da formatação aparecerá aqui enquanto você digita...</p>
+                    <p className="text-muted-foreground italic text-xs">
+                      A prévia da formatação aparecerá aqui enquanto você digita...
+                    </p>
                   </div>
                 </div>
               </div>
@@ -653,15 +700,21 @@ function AdminPanel() {
                     <div className="flex gap-2">
                       <Input placeholder="Título do link" className="text-xs" />
                       <Input placeholder="URL" className="text-xs" />
-                      <Button variant="outline" size="sm">Add</Button>
+                      <Button variant="outline" size="sm">
+                        Add
+                      </Button>
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Mídias e Anexos (Imagens/Documentos)</label>
+                    <label className="text-sm font-medium">
+                      Mídias e Anexos (Imagens/Documentos)
+                    </label>
                     <div className="flex items-center justify-center border-2 border-dashed rounded-lg p-4 bg-muted/20 cursor-pointer hover:bg-muted/40 transition-colors group">
                       <div className="text-center">
                         <Plus className="h-4 w-4 mx-auto mb-1 text-muted-foreground group-hover:text-primary transition-colors" />
-                        <span className="text-[10px] text-muted-foreground">Upload de Mídia (Vídeo/Theory PDF)</span>
+                        <span className="text-[10px] text-muted-foreground">
+                          Upload de Mídia (Vídeo/Theory PDF)
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -669,11 +722,16 @@ function AdminPanel() {
               </div>
               <div className="flex justify-end gap-2 pt-4">
                 <Button variant="outline">Visualizar</Button>
-                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">Salvar Questão Premium</Button>
+                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                  Salvar Questão Premium
+                </Button>
               </div>
-
             </CardContent>
           </Card>
+        </TabsContent>
+
+        <TabsContent value="library" className="mt-6">
+          <LibraryAdmin />
         </TabsContent>
 
         <TabsContent value="syllabus" className="mt-6 space-y-4">
@@ -683,13 +741,18 @@ function AdminPanel() {
                 <CardTitle>Edital Verticalizado</CardTitle>
                 <CardDescription>Importe e gerencie os tópicos do edital.</CardDescription>
               </div>
-              <Button size="sm" variant="outline" className="gap-2" onClick={() => document.getElementById('syllabus-import')?.click()}>
+              <Button
+                size="sm"
+                variant="outline"
+                className="gap-2"
+                onClick={() => document.getElementById("syllabus-import")?.click()}
+              >
                 <FileText className="h-4 w-4" /> Importar Edital (JSON/CSV)
-                <input 
-                  id="syllabus-import" 
-                  type="file" 
-                  accept=".json,.csv" 
-                  className="hidden" 
+                <input
+                  id="syllabus-import"
+                  type="file"
+                  accept=".json,.csv"
+                  className="hidden"
                   onChange={async (e) => {
                     const file = e.target.files?.[0];
                     if (!file) return;
@@ -710,9 +773,13 @@ function AdminPanel() {
                   </div>
                   <div className="flex-1">
                     <p className="font-bold">PF - Agente de Polícia Federal</p>
-                    <p className="text-xs text-muted-foreground">Última atualização: Hoje • 48 tópicos detectados</p>
+                    <p className="text-xs text-muted-foreground">
+                      Última atualização: Hoje • 48 tópicos detectados
+                    </p>
                   </div>
-                  <Button variant="ghost" size="sm">Gerenciar</Button>
+                  <Button variant="ghost" size="sm">
+                    Gerenciar
+                  </Button>
                 </div>
               </div>
             </CardContent>
@@ -731,7 +798,12 @@ function AdminPanel() {
                   explicitamente.
                 </CardDescription>
               </div>
-              <Button size="sm" variant="outline" className="gap-2" onClick={() => void loadExamUploads()}>
+              <Button
+                size="sm"
+                variant="outline"
+                className="gap-2"
+                onClick={() => void loadExamUploads()}
+              >
                 <HistoryIcon className="h-4 w-4" /> Atualizar
               </Button>
             </CardHeader>
@@ -746,7 +818,9 @@ function AdminPanel() {
                 />
               </div>
               {examUploadsError && (
-                <p className="mb-4 text-sm text-destructive">Erro ao carregar: {examUploadsError}</p>
+                <p className="mb-4 text-sm text-destructive">
+                  Erro ao carregar: {examUploadsError}
+                </p>
               )}
               <div className="rounded-md border overflow-x-auto">
                 <Table>
@@ -779,45 +853,61 @@ function AdminPanel() {
                         <TableRow key={row.id}>
                           <TableCell>
                             <div className="flex flex-col text-xs">
-                              <span className="font-bold">{row.cpf || '—'}</span>
-                              <span className="text-muted-foreground">{row.full_name || row.auth_email || '—'}</span>
+                              <span className="font-bold">{row.cpf || "—"}</span>
+                              <span className="text-muted-foreground">
+                                {row.full_name || row.auth_email || "—"}
+                              </span>
                               <span className="font-mono text-[10px] text-muted-foreground">
-                                {row.user_id.slice(0, 8)}…
+                                {row["user_id"].slice(0, 8)}…
                               </span>
                             </div>
                           </TableCell>
                           <TableCell className="text-xs">
                             <div className="flex flex-col">
-                              <span>{row.contest_name || <span className="italic text-muted-foreground">não identificado</span>}</span>
-                              <span className="text-muted-foreground">
-                                {row.contest_year || '—'} {row.exam_board ? `· ${row.exam_board}` : ''}
+                              <span>
+                                {row["contest_name"] || (
+                                  <span className="italic text-muted-foreground">
+                                    não identificado
+                                  </span>
+                                )}
                               </span>
-                              {row.ai_extracted?.contest_name ? (
+                              <span className="text-muted-foreground">
+                                {row["contest_year"] || "—"}{" "}
+                                {row.exam_board ? `· ${row.exam_board}` : ""}
+                              </span>
+                              {row.ai_extracted?.["contest_name"] ? (
                                 <span className="mt-0.5 text-[10px] text-emerald-700">
-                                  IA sugeriu: {String(row.ai_extracted.contest_name)}
-                                  {row.ai_extracted.contest_year ? ` (${String(row.ai_extracted.contest_year)})` : ''}
+                                  IA sugeriu: {String(row.ai_extracted?.["contest_name"])}
+                                  {row.ai_extracted?.["contest_year"]
+                                    ? ` (${String(row.ai_extracted?.["contest_year"])})`
+                                    : ""}
                                 </span>
                               ) : null}
                             </div>
                           </TableCell>
                           <TableCell className="text-[10px]">
                             <Badge variant="outline">
-                              {row.uploaded_via === 'candidate_upload' ? 'Candidato' : 'Admin/import'}
+                              {row.uploaded_via === "candidate_upload"
+                                ? "Candidato"
+                                : "Admin/import"}
                             </Badge>
                           </TableCell>
                           <TableCell className="text-[10px]">
                             <Badge
-                              variant={row.analysis_status === 'erro' ? 'destructive' : 'secondary'}
+                              variant={row.analysis_status === "erro" ? "destructive" : "secondary"}
                               className="uppercase"
                             >
                               {row.analysis_status}
                             </Badge>
                           </TableCell>
-                          <TableCell className="max-w-[160px] truncate text-xs" title={row.file_name}>
+                          <TableCell
+                            className="max-w-[160px] truncate text-xs"
+                            title={row.file_name}
+                          >
                             {row.file_name}
                           </TableCell>
                           <TableCell className="whitespace-nowrap text-[10px] text-muted-foreground">
-                            {new Date(row.created_at).toLocaleString('pt-BR')}
+                            {new Date(row.created_at).toLocaleString("pt-BR")}
                           </TableCell>
                           <TableCell className="text-right">
                             <Button variant="ghost" size="sm" onClick={() => openRelink(row)}>
@@ -860,7 +950,9 @@ function AdminPanel() {
                     {subscriptionPlans.length === 0 ? (
                       <TableRow>
                         <TableCell colSpan={4} className="text-center py-8 text-muted-foreground">
-                          {isLoading ? 'Carregando planos do banco...' : 'Configuração de planos apenas via banco de dados.'}
+                          {isLoading
+                            ? "Carregando planos do banco..."
+                            : "Configuração de planos apenas via banco de dados."}
                         </TableCell>
                       </TableRow>
                     ) : (
@@ -868,13 +960,17 @@ function AdminPanel() {
                         <TableRow key={plan.id}>
                           <TableCell className="font-bold uppercase">{plan.id}</TableCell>
                           <TableCell>
-                            <Input 
-                              type="number" 
-                              className="w-24" 
-                              defaultValue={plan.price} 
+                            <Input
+                              type="number"
+                              className="w-24"
+                              defaultValue={plan.price}
                               onBlur={async (e) => {
                                 const val = parseFloat(e.target.value);
-                                await (MockService as any).updateSubscriptionPlan(plan.id, { price: val }, user?.id);
+                                await (MockService as any).updateSubscriptionPlan(
+                                  plan.id,
+                                  { price: val },
+                                  user?.id,
+                                );
                                 toast.success(`Preço do plano ${plan.id} atualizado`);
                               }}
                             />
@@ -908,14 +1004,18 @@ function AdminPanel() {
                 <CardTitle>Gestão de Usuários</CardTitle>
                 <CardDescription>Crie e gerencie contas de estudantes.</CardDescription>
               </div>
-              <Button size="sm" className="gap-2" onClick={() => {
-                const name = prompt("Nome do Usuário:");
-                const email = prompt("E-mail:");
-                const pass = prompt("Senha:");
-                if (name && email && pass) {
-                  toast.success(`Usuário ${name} criado com sucesso (Simulado)!`);
-                }
-              }}>
+              <Button
+                size="sm"
+                className="gap-2"
+                onClick={() => {
+                  const name = prompt("Nome do Usuário:");
+                  const email = prompt("E-mail:");
+                  const pass = prompt("Senha:");
+                  if (name && email && pass) {
+                    toast.success(`Usuário ${name} criado com sucesso (Simulado)!`);
+                  }
+                }}
+              >
                 <UserCheck className="h-4 w-4" /> Novo Usuário
               </Button>
             </CardHeader>
@@ -944,9 +1044,11 @@ function AdminPanel() {
                         <TableRow key={u.id}>
                           <TableCell className="font-medium">{u.full_name}</TableCell>
                           <TableCell className="text-xs">{u.email}</TableCell>
-                          <TableCell className="text-[10px] font-mono">{u.id.substring(0, 12)}...</TableCell>
+                          <TableCell className="text-[10px] font-mono">
+                            {u.id.substring(0, 12)}...
+                          </TableCell>
                           <TableCell>
-                            <select 
+                            <select
                               className="text-[10px] p-1 rounded border bg-background"
                               value={u.role}
                               onChange={(e) => handleUpdateRole(u.id, e.target.value as any)}
@@ -958,26 +1060,32 @@ function AdminPanel() {
                             </select>
                           </TableCell>
                           <TableCell>
-                            <Badge variant={u.is_activated ? "secondary" : "outline"} className="uppercase text-[9px]">
+                            <Badge
+                              variant={u.is_activated ? "secondary" : "outline"}
+                              className="uppercase text-[9px]"
+                            >
                               {u.subscription_tier}
                             </Badge>
                           </TableCell>
                           <TableCell className="text-right">
                             <div className="flex justify-end gap-2">
-                              {u.subscription_tier !== 'free' && (
+                              {u.subscription_tier !== "free" && (
                                 <>
-                                  <Button 
-                                    variant="ghost" 
-                                    size="sm" 
+                                  <Button
+                                    variant="ghost"
+                                    size="sm"
                                     className="h-7 px-2 text-[10px] text-amber-600"
-                                    onClick={() => handleDowngradeUser(u, 'essential')}
-                                    disabled={isUpdatingSubscription === u.id || u.subscription_tier === 'essential'}
+                                    onClick={() => handleDowngradeUser(u, "essential")}
+                                    disabled={
+                                      isUpdatingSubscription === u.id ||
+                                      u.subscription_tier === "essential"
+                                    }
                                   >
                                     Downgrade
                                   </Button>
-                                  <Button 
-                                    variant="ghost" 
-                                    size="sm" 
+                                  <Button
+                                    variant="ghost"
+                                    size="sm"
                                     className="h-7 px-2 text-[10px] text-rose-600"
                                     onClick={() => handleCancelUserSubscription(u)}
                                     disabled={isUpdatingSubscription === u.id}
@@ -986,7 +1094,11 @@ function AdminPanel() {
                                   </Button>
                                 </>
                               )}
-                              <Button variant="ghost" size="sm" onClick={() => toast.info(`ID: ${u.id}`)}>
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={() => toast.info(`ID: ${u.id}`)}
+                              >
                                 Info
                               </Button>
                             </div>
@@ -1041,12 +1153,16 @@ function AdminPanel() {
                       auditLogs.map((log) => (
                         <TableRow key={log.id}>
                           <TableCell className="text-xs whitespace-nowrap">
-                            {new Date(log.created_at).toLocaleString('pt-BR')}
+                            {new Date(log.created_at).toLocaleString("pt-BR")}
                           </TableCell>
                           <TableCell>
                             <div className="flex flex-col">
-                              <span className="text-sm font-medium">{log.admin?.full_name || 'Admin'}</span>
-                              <span className="text-[10px] text-muted-foreground">{log.admin?.email}</span>
+                              <span className="text-sm font-medium">
+                                {log.admin?.full_name || "Admin"}
+                              </span>
+                              <span className="text-[10px] text-muted-foreground">
+                                {log.admin?.email}
+                              </span>
                             </div>
                           </TableCell>
                           <TableCell>
@@ -1058,11 +1174,14 @@ function AdminPanel() {
                             {log.entity_type}: {log.entity_id}
                           </TableCell>
                           <TableCell className="text-[10px] text-rose-600 italic max-w-[150px] truncate">
-                            {log.new_values?.reason || '-'}
+                            {log.new_values?.reason || "-"}
                           </TableCell>
                           <TableCell>
                             <div className="max-w-[300px]">
-                              <code className="text-[10px] block p-2 bg-muted rounded truncate" title={JSON.stringify(log.new_values)}>
+                              <code
+                                className="text-[10px] block p-2 bg-muted rounded truncate"
+                                title={JSON.stringify(log.new_values)}
+                              >
                                 {JSON.stringify(log.new_values)}
                               </code>
                             </div>
@@ -1092,18 +1211,22 @@ function AdminPanel() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Data de Início</label>
-                  <Input 
-                    type="date" 
-                    value={editingContest.startDate ? editingContest.startDate.split('T')[0] : ''} 
-                    onChange={(e) => setEditingContest({...editingContest, startDate: e.target.value})}
+                  <Input
+                    type="date"
+                    value={editingContest.startDate ? editingContest.startDate.split("T")[0] : ""}
+                    onChange={(e) =>
+                      setEditingContest({ ...editingContest, startDate: e.target.value })
+                    }
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Data de Fim</label>
-                  <Input 
-                    type="date" 
-                    value={editingContest.endDate ? editingContest.endDate.split('T')[0] : ''} 
-                    onChange={(e) => setEditingContest({...editingContest, endDate: e.target.value})}
+                  <Input
+                    type="date"
+                    value={editingContest.endDate ? editingContest.endDate.split("T")[0] : ""}
+                    onChange={(e) =>
+                      setEditingContest({ ...editingContest, endDate: e.target.value })
+                    }
                   />
                 </div>
               </div>
@@ -1111,9 +1234,11 @@ function AdminPanel() {
                 * Concursos fora deste período não serão exibidos para os alunos.
               </p>
               <div className="flex justify-end gap-3 mt-6">
-                <Button variant="outline" onClick={() => setIsEditModalOpen(false)}>Cancelar</Button>
+                <Button variant="outline" onClick={() => setIsEditModalOpen(false)}>
+                  Cancelar
+                </Button>
                 <Button onClick={handleSaveContest} disabled={isSaving}>
-                  {isSaving ? 'Salvando...' : 'Salvar Alterações'}
+                  {isSaving ? "Salvando..." : "Salvar Alterações"}
                 </Button>
               </div>
             </CardContent>
@@ -1122,7 +1247,10 @@ function AdminPanel() {
       )}
 
       {/* Exam Upload Relink Modal */}
-      <Dialog open={!!relinkTargetId} onOpenChange={(open) => !isRelinking && !open && setRelinkTargetId(null)}>
+      <Dialog
+        open={!!relinkTargetId}
+        onOpenChange={(open) => !isRelinking && !open && setRelinkTargetId(null)}
+      >
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
             <DialogTitle>Corrigir vínculo da prova</DialogTitle>
@@ -1159,37 +1287,47 @@ function AdminPanel() {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setRelinkTargetId(null)} disabled={isRelinking}>
+            <Button
+              variant="outline"
+              onClick={() => setRelinkTargetId(null)}
+              disabled={isRelinking}
+            >
               Cancelar
             </Button>
             <Button onClick={handleRelink} disabled={isRelinking}>
-              {isRelinking ? 'Salvando...' : 'Salvar vínculo'}
+              {isRelinking ? "Salvando..." : "Salvar vínculo"}
             </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
 
       {/* Subscription Action Confirmation Modal */}
-      <Dialog 
-        open={subModalConfig.isOpen} 
-        onOpenChange={(open) => !isSubmittingSub && setSubModalConfig(prev => ({ ...prev, isOpen: open }))}
+      <Dialog
+        open={subModalConfig.isOpen}
+        onOpenChange={(open) =>
+          !isSubmittingSub && setSubModalConfig((prev) => ({ ...prev, isOpen: open }))
+        }
       >
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
             <DialogTitle>
-              {subModalConfig.actionType === 'downgrade' ? 'Confirmar Downgrade' : 'Confirmar Cancelamento'}
+              {subModalConfig.actionType === "downgrade"
+                ? "Confirmar Downgrade"
+                : "Confirmar Cancelamento"}
             </DialogTitle>
             <DialogDescription>
-              {subModalConfig.actionType === 'downgrade' 
+              {subModalConfig.actionType === "downgrade"
                 ? `Você está alterando o plano de ${subModalConfig.userName} para ${subModalConfig.targetTier.toUpperCase()}.`
                 : `Você está encerrando a assinatura Premium de ${subModalConfig.userName}.`}
             </DialogDescription>
           </DialogHeader>
           <div className="grid gap-4 py-4">
             <div className="space-y-2">
-              <Label htmlFor="reason" className="text-destructive">Motivo da Alteração (Obrigatório)</Label>
-              <Textarea 
-                id="reason" 
+              <Label htmlFor="reason" className="text-destructive">
+                Motivo da Alteração (Obrigatório)
+              </Label>
+              <Textarea
+                id="reason"
                 placeholder="Ex: Solicitação via ticket #123, falta de pagamento, etc."
                 value={subReason}
                 onChange={(e) => setSubReason(e.target.value)}
@@ -1206,15 +1344,19 @@ function AdminPanel() {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setSubModalConfig(prev => ({ ...prev, isOpen: false }))} disabled={isSubmittingSub}>
+            <Button
+              variant="outline"
+              onClick={() => setSubModalConfig((prev) => ({ ...prev, isOpen: false }))}
+              disabled={isSubmittingSub}
+            >
               Voltar
             </Button>
-            <Button 
-              variant={subModalConfig.actionType === 'downgrade' ? 'default' : 'destructive'}
+            <Button
+              variant={subModalConfig.actionType === "downgrade" ? "default" : "destructive"}
               onClick={processSubscriptionAction}
               disabled={isSubmittingSub || !subReason.trim()}
             >
-              {isSubmittingSub ? 'Processando...' : 'Confirmar e Agendar'}
+              {isSubmittingSub ? "Processando..." : "Confirmar e Agendar"}
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -1224,5 +1366,5 @@ function AdminPanel() {
 }
 
 function cn(...classes: any[]) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
