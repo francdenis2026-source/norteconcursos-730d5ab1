@@ -22,6 +22,7 @@ import { Route as ApiSolveQuestionRouteImport } from './routes/api/solve-questio
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
+import { Route as DashboardAdminFinanceRouteImport } from './routes/dashboard/admin-finance'
 import { Route as DashboardAdminMetricsRouteImport } from './routes/dashboard/admin-metrics'
 import { Route as DashboardAdminSignupsRouteImport } from './routes/dashboard/admin-signups'
 import { Route as DashboardAdminStudentsRouteImport } from './routes/dashboard/admin-students'
@@ -116,6 +117,11 @@ const DashboardIndexRoute = DashboardIndexRouteImport.update({
 const DashboardAdminRoute = DashboardAdminRouteImport.update({
   id: '/admin',
   path: '/admin',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardAdminFinanceRoute = DashboardAdminFinanceRouteImport.update({
+  id: '/admin-finance',
+  path: '/admin-finance',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardAdminMetricsRoute = DashboardAdminMetricsRouteImport.update({
@@ -283,6 +289,7 @@ export interface FileRoutesByFullPath {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
@@ -327,6 +334,7 @@ export interface FileRoutesByTo {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
@@ -371,6 +379,7 @@ export interface FileRoutesById {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
@@ -418,6 +427,7 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-finance'
     | '/dashboard/admin-metrics'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
@@ -462,6 +472,7 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-finance'
     | '/dashboard/admin-metrics'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
@@ -505,6 +516,7 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-finance'
     | '/dashboard/admin-metrics'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
@@ -644,6 +656,13 @@ declare module '@tanstack/react-router' {
       path: '/admin'
       fullPath: '/dashboard/admin'
       preLoaderRoute: typeof DashboardAdminRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/admin-finance': {
+      id: '/dashboard/admin-finance'
+      path: '/admin-finance'
+      fullPath: '/dashboard/admin-finance'
+      preLoaderRoute: typeof DashboardAdminFinanceRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/admin-metrics': {
@@ -888,6 +907,7 @@ const DashboardLibraryRouteWithChildren =
 
 interface DashboardRouteChildren {
   DashboardAdminRoute: typeof DashboardAdminRoute
+  DashboardAdminFinanceRoute: typeof DashboardAdminFinanceRoute
   DashboardAdminMetricsRoute: typeof DashboardAdminMetricsRoute
   DashboardAdminSignupsRoute: typeof DashboardAdminSignupsRoute
   DashboardAdminStudentsRoute: typeof DashboardAdminStudentsRoute
@@ -918,6 +938,7 @@ interface DashboardRouteChildren {
 
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminRoute: DashboardAdminRoute,
+  DashboardAdminFinanceRoute: DashboardAdminFinanceRoute,
   DashboardAdminMetricsRoute: DashboardAdminMetricsRoute,
   DashboardAdminSignupsRoute: DashboardAdminSignupsRoute,
   DashboardAdminStudentsRoute: DashboardAdminStudentsRoute,
