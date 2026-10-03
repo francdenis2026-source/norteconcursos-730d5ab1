@@ -22,6 +22,7 @@ import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
+import { validateCPF } from "@/lib/utils";
 
 export const Route = createFileRoute("/auth")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -60,7 +61,7 @@ function AuthPage() {
     try {
       if (mode === "register") {
         const cpfDigits = normalizeCpf(cpf);
-        if (cpfDigits.length !== 11) throw new Error("Informe um CPF com 11 números.");
+        if (!validateCPF(cpfDigits)) throw new Error("CPF inválido. Confira os números.");
         const { error } = await supabase.auth.signUp({
           email: `${cpfDigits}@norteconcurso.local`,
           password: pin,
@@ -70,7 +71,7 @@ function AuthPage() {
         toast.success("Conta criada! Agora você pode acessar com seu CPF.");
       } else {
         const cpfDigits = normalizeCpf(cpf);
-        if (cpfDigits.length !== 11) throw new Error("Informe um CPF com 11 números.");
+        if (!validateCPF(cpfDigits)) throw new Error("CPF inválido. Confira os números.");
         const { error } = await supabase.auth.signInWithPassword({
           email: `${cpfDigits}@norteconcurso.local`,
           password: pin,
