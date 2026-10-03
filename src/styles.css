@@ -5088,7 +5088,8 @@ iframe[src*="gpteng.co"] {
     margin-inline: auto;
   }
   .lp-acre__people {
-    width: 62%;
+    width: 56%;
+    left: 22%;
   }
   .lp-card {
     min-height: 158px;
