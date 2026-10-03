@@ -662,6 +662,11 @@ function ProductMock() {
             </span>
           </div>
         </div>
+        <div className="lp-mock__stats">
+          <span><b>83%</b> acertos</span>
+          <span><b>9</b> em sequência</span>
+          <span className="lp-mock__ai">✦ IA explicou · salvo no caderno</span>
+        </div>
       </div>
     </div>
   );

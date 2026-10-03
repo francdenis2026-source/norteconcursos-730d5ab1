@@ -109,6 +109,13 @@ const MENU: MenuItem[] = [
     href: "/dashboard/admin",
     adminOnly: true,
   },
+  {
+    group: "Conta",
+    label: "Alunos e planos",
+    icon: User,
+    href: "/dashboard/admin-students",
+    adminOnly: true,
+  },
 ];
 
 const MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
