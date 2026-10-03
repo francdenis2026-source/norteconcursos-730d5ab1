@@ -67,7 +67,7 @@ function GoalBar({
   );
 }
 
-export function StudyGoals({ planTier }: { planTier?: string }) {
+export function StudyGoals({ planTier }: { planTier?: string | undefined }) {
   const [goals, setGoals] = React.useState<Goals>(DEFAULT_GOALS);
   const [editing, setEditing] = React.useState(false);
   const [draft, setDraft] = React.useState<Goals>(DEFAULT_GOALS);
