@@ -5199,3 +5199,37 @@ iframe[src*="gpteng.co"] {
 .lp-mock__stats b { font-weight: 700; }
 .lp-mock__stats .lp-mock__ai { margin-left: auto; background: color-mix(in oklab, #10b981 18%, transparent); color: #10b981; font-weight: 600; }
 .lp-tile--feature .lp-mock { border-radius: 16px; box-shadow: 0 24px 60px -24px rgb(0 0 0 / 0.45), 0 0 0 1px color-mix(in oklab, currentColor 8%, transparent); }
+
+/* ===== Login: imagem profissional de segurança pública ===== */
+.auth-visual::before { background-image: url("/media/hero/auth-seguranca.jpg"); background-position: 60% 30%; }
+@media (max-width: 960px) {
+  .auth-panel::before {
+    content: ""; display: block; width: 100%; max-width: 420px; height: 180px; margin: 0 auto 20px;
+    border-radius: 18px; box-shadow: 0 18px 40px -20px rgb(0 0 0 / 0.5);
+    background: linear-gradient(0deg, oklch(0.12 0.025 263 / 0.55), transparent 60%), url("/media/hero/auth-seguranca.jpg") center 30% / cover no-repeat;
+  }
+  .auth-panel { flex-direction: column; }
+}
+
+/* ===== Rodapé mais baixo ===== */
+.lp-footer__grid { padding-block: 40px 28px; gap: 32px; }
+.lp-footer__brand p { margin-top: 12px; }
+.lp-footer ul { gap: 8px; margin-top: 12px; }
+.lp-footer__bottom { padding-block: 16px; }
+
+/* ===== Homepage: cada bloco cabe em uma janela (desktop) ===== */
+@media (min-width: 1024px) {
+  .lp-tile--feature {
+    grid-column: 1 / -1; grid-row: auto;
+    display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center; max-height: min(78svh, 520px);
+  }
+  .lp-tile--feature .lp-feature__copy { padding: 32px 36px; }
+  .lp-tile--feature .lp-feature__window { padding: 20px 22px; align-self: stretch; overflow: hidden; }
+  .lp-tile--feature .lp-mock { min-height: 0; max-height: 100%; }
+  .lp-tile--feature .lp-mock__explain { display: none; }
+  .lp-tile--feature .lp-mock__opt { padding-block: 7px; }
+  .lp-bento { grid-auto-rows: minmax(150px, auto); }
+  .lp-section { max-height: none; }
+  .lp-section img { max-height: 72svh; object-fit: cover; }
+}
