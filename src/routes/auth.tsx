@@ -18,7 +18,7 @@ import {
   Target,
   Trophy,
 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
@@ -83,7 +83,7 @@ function AuthPage() {
       .replace(/\.(\d{3})(\d)/, ".$1-$2");
   };
 
-  const handleAuth = async (e: React.FormEvent) => {
+  const handleAuth = async (e: FormEvent) => {
     e.preventDefault();
     setFormError(null);
     setIsLoading(true);

@@ -20,3 +20,7 @@ As áreas autenticadas usam uma única navegação por jornadas (Hoje, Objetivo,
 ## Normalização de dados pessoais
 
 Campos nominais são convertidos para maiúsculas durante a digitação e novamente antes da persistência, garantindo consistência mesmo fora da interface.
+
+## Configuração do banco no navegador
+
+A configuração pública do Supabase e a criação de clientes isolados ficam centralizadas na integração compartilhada, evitando destinos divergentes.
