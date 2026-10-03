@@ -1390,9 +1390,9 @@ html {
 
 .lp-acre__people {
   position: absolute;
-  bottom: -10%;
-  left: 12%;
-  width: 78%;
+  bottom: -6%;
+  left: 16%;
+  width: 68%;
   height: auto;
   pointer-events: none;
   filter: drop-shadow(0 22px 26px oklch(0 0 0 / 0.55));
