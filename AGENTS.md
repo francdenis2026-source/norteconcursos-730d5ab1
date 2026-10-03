@@ -24,3 +24,12 @@ Campos nominais são convertidos para maiúsculas durante a digitação e novame
 ## Configuração do banco no navegador
 
 A configuração pública do Supabase e a criação de clientes isolados ficam centralizadas na integração compartilhada, evitando destinos divergentes.
+
+## Regra do Desafio diário (não pular, em nenhum dispositivo)
+
+Todo dia, à meia-noite do horário do Acre (`America/Rio_Branco`, UTC−5), as **10 questões grátis** do Desafio diário são renovadas para quem não quer se cadastrar. Não remover, enfraquecer nem contornar essa regra.
+
+- A data do dia vem do relógio do servidor (`get_current_acre_date()`); a reserva sem rede é `acreDateKey()` em `src/lib/acreTime.ts`. **Nunca** usar `toISOString()`/UTC para "o dia de hoje": viraria o dia às 19h do Acre.
+- A data é reconferida a cada 60 s (`src/lib/guestQuota.ts`); a página `/desafio-diario` recarrega sozinha na virada do dia (sem interromper quem está respondendo).
+- As 10 questões do dia são as mesmas para todos (`get_daily_guest_questions`). A contagem de respondidas fica no `localStorage` de cada aparelho, com a chave da data do Acre.
+- O selo da hero (`DailyChallengeBadge`) mostra quantas restam hoje e a contagem até a renovação; ao concluir, convida a criar conta.

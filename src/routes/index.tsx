@@ -31,6 +31,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
+import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
 
 export const Route = createFileRoute("/")({
@@ -260,6 +261,7 @@ function Index() {
           <div className="lp-hero__grid" aria-hidden="true" />
           <div className="lp-container lp-hero__body">
             <div className="lp-hero__content">
+              <DailyChallengeBadge />
               <span className="chip-brass">
                 <Compass /> Preparação para segurança pública
               </span>
@@ -279,13 +281,6 @@ function Index() {
                   <CirclePlay /> Conhecer a plataforma
                 </a>
               </div>
-              <Link to="/desafio-diario" className="lp-hero__daily">
-                <span className="chip-dot" aria-hidden="true" />
-                <span>
-                  <strong>Teste agora, sem cadastro:</strong> 10 questões oficiais grátis hoje
-                </span>
-                <ArrowRight />
-              </Link>
               <QuestionCountBadge />
             </div>
             <div className="lp-hero__aside" aria-hidden="true">
