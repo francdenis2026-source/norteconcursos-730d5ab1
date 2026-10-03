@@ -58,17 +58,28 @@ function AdminLoginPage() {
   }
 
   return (
-    <main className="grid min-h-svh place-items-center bg-background px-4 py-10">
-      <div className="w-full max-w-sm space-y-6">
-        <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="h-4 w-4" aria-hidden /> Voltar ao site
-        </Link>
-        <div className="rounded-2xl border border-border bg-card p-6 shadow-lg">
+    <main className="admin-access">
+      <section className="admin-access__visual" aria-label="Norte Concurso — administração segura">
+        <img src="/media/hero/auth-seguranca.jpg" alt="Profissionais da segurança pública em operação" width={1600} height={1200} />
+        <div className="admin-access__visual-copy">
+          <NorteBrand light />
+          <span><ShieldCheck aria-hidden /> Centro de gestão</span>
+          <h2>Controle institucional com visão completa.</h2>
+          <p>Administre alunos, conteúdo, provas, planos e uso de inteligência artificial em um ambiente reservado.</p>
+        </div>
+      </section>
+      <section className="admin-access__panel">
+        <div className="admin-access__form">
+          <Link to="/" className="admin-access__back">
+            <ArrowLeft className="h-4 w-4" aria-hidden /> Voltar ao site
+          </Link>
+          <div className="admin-access__brand"><NorteBrand /></div>
           <NorteBrand />
-          <p className="mt-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary">
+          <p className="mt-7 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary">
             <ShieldCheck className="h-4 w-4" aria-hidden /> Acesso restrito
           </p>
-          <h1 className="mt-1 text-2xl font-bold text-foreground">Área do administrador</h1>
+          <h1 className="mt-2 font-display text-3xl font-bold text-foreground">Área do administrador</h1>
+          <p className="mt-2 text-sm leading-6 text-muted-foreground">Entre com uma conta autorizada para abrir a central de gestão.</p>
           <form onSubmit={submit} className="mt-6 space-y-4">
             <div className="space-y-1.5">
               <Label htmlFor="adm-email">E-mail</Label>
@@ -90,7 +101,7 @@ function AdminLoginPage() {
             </Button>
           </form>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

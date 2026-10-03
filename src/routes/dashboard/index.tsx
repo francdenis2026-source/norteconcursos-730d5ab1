@@ -41,6 +41,16 @@ import { QuestionTotals } from "@/components/dashboard/QuestionTotals";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/dashboard/")({
+  head: () => ({
+    meta: [
+      { title: "Painel do aluno | Norte Concurso" },
+      { name: "description", content: "Acompanhe seu plano, desempenho e próximas atividades de preparação para concursos." },
+      { property: "og:title", content: "Painel do aluno | Norte Concurso" },
+      { property: "og:description", content: "Sua central de preparação, questões, provas e desempenho." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+    ],
+  }),
   component: DashboardIndex,
 });
 
@@ -245,14 +255,14 @@ function DashboardIndex() {
       <PageHero
         image="dashboard"
         size="lg"
-        kicker="Briefing do dia"
+        kicker="Central de preparação"
         icon={Compass}
         title={
           <>
             {greeting()}, <em>{firstName}.</em>
           </>
         }
-        description="Sua central de preparação reúne alvo, ritmo e desempenho para indicar a próxima ação com clareza."
+        description="Prioridades, ritmo e desempenho reunidos para você avançar com clareza hoje."
         actions={
           <>
             <DropdownMenu>
