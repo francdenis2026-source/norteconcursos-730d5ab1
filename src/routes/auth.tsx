@@ -161,7 +161,9 @@ function AuthPage() {
         if (!id.includes("@")) {
           const cpfDigits = normalizeCpf(id);
           if (!validateCPF(cpfDigits)) throw new Error("CPF inválido. Confira os números.");
-          loginEmail = `${cpfDigits}@norteconcurso.local`;
+          // ponytail: RPC expõe CPF→e-mail; trocar por edge function com rate limit se houver abuso.
+          const { data: found } = await supabase.rpc("login_email_for_cpf", { _cpf: cpfDigits });
+          loginEmail = found || `${cpfDigits}@norteconcurso.local`;
         }
         const { error } = await supabase.auth.signInWithPassword({
           email: loginEmail,
