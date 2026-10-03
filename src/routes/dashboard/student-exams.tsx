@@ -1402,7 +1402,7 @@ function EmptyState({
     </div>
   );
 }
-function ExamRouteError({ reset }: { error: Error; reset: () => void }) {
+function ExamRouteError({ reset }: ErrorComponentProps) {
   return (
     <EmptyState
       title="O painel encontrou uma inconsistência"
