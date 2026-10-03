@@ -137,7 +137,7 @@ function AdminMetricsPage() {
           <Card>
             <CardHeader>
               <CardTitle>Últimos 14 dias</CardTitle>
-              <CardDescription>Uso de IA por dia (barras) e novos cadastros.</CardDescription>
+              <CardDescription>Uso de IA por dia (barras), provas resolvidas e novos cadastros.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-1.5">
               {stats.byDay.map((d) => (
@@ -146,7 +146,7 @@ function AdminMetricsPage() {
                   <div className="h-3 flex-1 rounded bg-muted">
                     <div className="h-3 rounded bg-primary" style={{ width: `${(d.ai / stats.maxAi) * 100}%` }} />
                   </div>
-                  <span className="w-20 shrink-0 text-right text-foreground">{d.ai} IA · {d.signups} cad.</span>
+                  <span className="w-36 shrink-0 text-right text-foreground">{d.ai} IA · {d.exams} provas · {d.signups} cad.</span>
                 </div>
               ))}
             </CardContent>
