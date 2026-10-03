@@ -25,6 +25,7 @@ import {
   Search,
   Settings,
   ShieldCheck,
+  Sparkles,
   Sun,
   Target,
   Timer,
@@ -84,6 +85,7 @@ const MENU: MenuItem[] = [
     icon: BrainCircuit,
     href: "/dashboard/question-trainer",
   },
+  { group: "Treinamento", label: "Resolver com IA", icon: Sparkles, href: "/dashboard/ai-solver" },
   {
     group: "Treinamento",
     label: "Banco de questões",
