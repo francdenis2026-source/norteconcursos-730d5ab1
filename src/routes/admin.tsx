@@ -73,7 +73,6 @@ function AdminLoginPage() {
           <Link to="/" className="admin-access__back">
             <ArrowLeft className="h-4 w-4" aria-hidden /> Voltar ao site
           </Link>
-          <div className="admin-access__brand"><NorteBrand /></div>
           <NorteBrand />
           <p className="mt-7 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary">
             <ShieldCheck className="h-4 w-4" aria-hidden /> Acesso restrito

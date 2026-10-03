@@ -3721,7 +3721,6 @@ html {
   font-weight: 600;
 }
 .admin-access__back:hover { color: var(--color-foreground); }
-.admin-access__brand { display: none; }
 .admin-tabs {
   display: grid;
   grid-template-columns: repeat(8, minmax(112px, 1fr));
@@ -3732,8 +3731,6 @@ html {
   .admin-access { grid-template-columns: 1fr; }
   .admin-access__visual { display: none; }
   .admin-access__panel { min-height: 100svh; }
-  .admin-access__brand { display: block; margin-bottom: 24px; }
-  .admin-access__form > .admin-access__brand + div { display: none; }
 }
 
 /* Command palette */
