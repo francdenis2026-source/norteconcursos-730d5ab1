@@ -1,6 +1,6 @@
 import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, type ErrorComponentProps } from "@tanstack/react-router";
 import {
   AlertTriangle,
   Award,
