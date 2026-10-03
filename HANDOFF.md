@@ -76,6 +76,13 @@ Em nenhum ano ele apareceu na lista de classificados — sempre abaixo do corte,
 - Questões em branco/sem marcação = tratar como "não sabia" (ponto fraco), não como dado neutro — isso já foi aplicado no diagnóstico mas não muda a pontuação real (branco sempre vale 0).
 - Nota líquida = certas − erradas + anuladas (cada anulada vale +1).
 
+## 4b. Autenticação (cadastro e login)
+
+- **Cadastro:** nome + e-mail real + CPF (validado pelos dígitos) + senha. O Supabase envia link de confirmação ("Confirm email" ligado); o envio usa SMTP próprio (Resend, remetente `no-reply@norteconcursos.xyz`).
+- **Login:** aceita **e-mail ou CPF**. Contas antigas entram pelo CPF (e-mail interno `<cpf>@norteconcurso.local`); contas novas, pelo e-mail real.
+- **CPF único:** coluna `profiles.cpf` com índice único (migration `20260930400000_profiles_cpf_unique.sql`).
+- **Publicação:** o site só muda em `norteconcursos.xyz` depois de **Publish > Update** no Lovable.
+
 ## 5. Credenciais sensíveis
 
 Senha do banco, service role key etc. **não estão neste arquivo por segurança**. Se a nova sessão precisar, gere novas credenciais no painel do Supabase (Project Settings → API / Database) e me passe as novas — é mais seguro do que reusar as antigas que já foram digitadas em chat.
