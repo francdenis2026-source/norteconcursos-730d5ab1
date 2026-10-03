@@ -83,6 +83,7 @@ Em nenhum ano ele apareceu na lista de classificados — sempre abaixo do corte,
 - **CPF único:** coluna `profiles.cpf` com índice único (migration `20260930400000_profiles_cpf_unique.sql`).
 - **Publicação:** o site só muda em `norteconcursos.xyz` depois de **Publish > Update** no Lovable.
 - **Sync Lovable:** se o Lovable avisar "diverged", ele guarda as alterações na branch `lovable-sync`; junte-a ao `main` com merge commit (nunca squash/rebase).
+- **Branch do Lovable:** o Lovable está conectado à branch `fix/merge-lovable-sync` (não ao `main`). Para levar o trabalho dele ao `main`, abra PR dessa branch para `main` com merge commit.
 
 ## 5. Credenciais sensíveis
 
