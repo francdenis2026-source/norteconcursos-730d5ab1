@@ -1,5 +1,8 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
+import { SoonBadge } from "@/components/SoonBadge";
+import { AI_ENABLED, SOON_LABEL, TESTING_PHASE } from "@/lib/launch.config";
+import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import {
   BookMarked,
   BookOpen,
@@ -8,6 +11,7 @@ import {
   ChevronsLeft,
   ChevronsRight,
   ChevronsUpDown,
+  FlaskConical,
   ClipboardList,
   Clock,
   FileStack,
@@ -67,6 +71,7 @@ type MenuItem = {
   icon: LucideIcon;
   href: string;
   adminOnly?: boolean;
+  soon?: boolean;
 };
 
 const MENU: MenuItem[] = [
@@ -85,7 +90,7 @@ const MENU: MenuItem[] = [
     icon: BrainCircuit,
     href: "/dashboard/question-trainer",
   },
-  { group: "Questões", label: "Resolver com IA", icon: Sparkles, href: "/dashboard/ai-solver" },
+  { group: "Questões", label: "Resolver com IA", icon: Sparkles, href: "/dashboard/ai-solver", soon: !AI_ENABLED },
   {
     group: "Questões",
     label: "Banco de questões",
@@ -278,7 +283,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   const tier = user?.subscription_tier ? String(user.subscription_tier) : "free";
   const displayName = user?.full_name || (isAdmin ? "Administrador" : "Estudante");
-  const planLabel = isAdmin ? "Administrador" : `Plano ${tier.charAt(0).toUpperCase() + tier.slice(1)}`;
+  const planName = SUBSCRIPTION_PLANS.find((p) => p.id === tier)?.name ?? tier;
+  const planLabel = isAdmin ? "Administrador" : `Plano ${planName}`;
 
   const nav = (collapsed: boolean) => (
     <nav className="app-nav scroll-dark" aria-label="Menu principal">
@@ -295,6 +301,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           >
             <item.icon />
             {!collapsed && <span>{item.label}</span>}
+            {!collapsed && item.soon && <SoonBadge className="ml-auto" />}
           </Link>
         );
         return (
@@ -304,7 +311,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             {collapsed ? (
               <Tooltip>
                 <TooltipTrigger asChild>{link}</TooltipTrigger>
-                <TooltipContent side="right">{item.label}</TooltipContent>
+                <TooltipContent side="right">{item.soon ? `${item.label} — ${SOON_LABEL}` : item.label}</TooltipContent>
               </Tooltip>
             ) : (
               link
@@ -483,7 +490,18 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </header>
 
           <main className="app-content">
-            <div className="app-content__inner">{children}</div>
+            <div className="app-content__inner">
+              {TESTING_PHASE && !isAdmin && (
+                <div role="status" className="mb-4 flex items-start gap-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm text-foreground">
+                  <FlaskConical className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" aria-hidden />
+                  <p>
+                    <strong>Fase de testes.</strong> Durante este período, todas as contas usam o plano Essencial.
+                    Em breve os planos serão liberados.
+                  </p>
+                </div>
+              )}
+              {children}
+            </div>
             <footer className="app-footer no-print">
               <span>© 2026 Norte Concurso</span>
               <span>

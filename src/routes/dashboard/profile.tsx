@@ -12,6 +12,8 @@ import { MockService } from '@/services/mockService';
 import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap, RefreshCw, History as HistoryIcon } from 'lucide-react';
 import { PageHero } from '@/components/dashboard/PageHero';
 import { SUBSCRIPTION_PLANS } from '@/lib/subscriptions.config';
+import { SoonBadge } from '@/components/SoonBadge';
+import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE } from '@/lib/launch.config';
 import { cn, normalizeUppercase } from '@/lib/utils';
 import { createCheckoutSession, createPortalSession } from '@/lib/stripe.functions';
 import { useServerFn } from '@tanstack/react-start';
@@ -133,6 +135,10 @@ function ProfilePage() {
   };
 
   const handleUpgrade = async (planId: string) => {
+    if (!PAYMENTS_ENABLED) {
+      toast.info(PAYMENTS_NOTICE);
+      return;
+    }
     setIsRedirecting(true);
     try {
       const { url } = await checkout({ data: { priceId: `price_mock_${planId}`, planId } });
@@ -378,9 +384,11 @@ function ProfilePage() {
                               "h-3 w-3",
                               feature.included ? "text-emerald-500" : "text-muted-foreground/30"
                             )} />
-                            <span className={cn(feature.included ? "" : "text-muted-foreground/50")}>
+                            <span className={cn("flex flex-wrap items-center gap-1.5", feature.included ? "" : "text-muted-foreground/50")}>
                               {feature.name}
-                              {feature.limit && feature.limit !== 'unlimited' && ` (${feature.limit})`}
+                              {key === 'aiSolver' && !AI_ENABLED
+                                ? <SoonBadge />
+                                : feature.limit && feature.limit !== 'unlimited' && ` (${feature.limit})`}
                             </span>
                           </li>
                         ))}
@@ -388,16 +396,22 @@ function ProfilePage() {
 
                     </CardContent>
                     <div className="p-4 pt-0">
-                      <Button 
-                        asChild
-                        variant={isCurrent ? "outline" : (plan.isPopular ? "secondary" : "default")} 
-                        className="w-full"
-                        disabled={isCurrent}
-                      >
-                        <Link to="/checkout/$planId" params={{ planId: plan.id }}>
-                          {isCurrent ? "Plano Atual" : "Selecionar"}
-                        </Link>
-                      </Button>
+                      {PAYMENTS_ENABLED || isCurrent ? (
+                        <Button
+                          asChild
+                          variant={isCurrent ? "outline" : (plan.isPopular ? "secondary" : "default")}
+                          className="w-full"
+                          disabled={isCurrent}
+                        >
+                          <Link to="/checkout/$planId" params={{ planId: plan.id }}>
+                            {isCurrent ? "Plano Atual" : "Selecionar"}
+                          </Link>
+                        </Button>
+                      ) : (
+                        <Button className="w-full" disabled aria-label={`${plan.name} — em breve`}>
+                          Em breve
+                        </Button>
+                      )}
                     </div>
                   </Card>
                 );

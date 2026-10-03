@@ -1,9 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router';
+import { PAYMENTS_ENABLED } from '@/lib/launch.config';
 
 export const Route = createFileRoute('/api/public/stripe-webhook')({
   server: {
     handlers: {
       POST: async ({ request }) => {
+        // Pagamentos desativados: não aceita avisos (o endereço ainda não confere a assinatura do Stripe).
+        if (!PAYMENTS_ENABLED) return new Response('Pagamentos desativados', { status: 503 });
         const body = await request.text();
 
         console.log("Stripe Webhook Received!");

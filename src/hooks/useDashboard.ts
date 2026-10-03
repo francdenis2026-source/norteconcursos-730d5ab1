@@ -32,6 +32,7 @@ export function useDashboardData() {
 }
 
 import { SubscriptionTier, UserProfile } from "../types";
+import { TESTING_PHASE, TESTING_TIER } from "@/lib/launch.config";
 
 export function useAuthStatus() {
   const [user, setUser] = useState<UserProfile | null>(null);
@@ -68,6 +69,9 @@ export function useAuthStatus() {
             isActivated = false;
           }
         }
+
+        // Fase de testes: contas gratuitas usam o plano de testes até a liberação dos planos.
+        if (TESTING_PHASE && currentTier === "free") currentTier = TESTING_TIER;
 
         if (!active) return;
         setUser({

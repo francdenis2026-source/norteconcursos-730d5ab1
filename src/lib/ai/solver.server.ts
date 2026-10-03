@@ -2,6 +2,8 @@ import { createOpenAI } from "@ai-sdk/openai";
 import { streamText } from "ai";
 import { z } from "zod";
 
+import { AI_ENABLED } from "@/lib/launch.config";
+
 import {
   createLovableAiGatewayRunIdFetch,
   getLovableAiGatewayRunId,
@@ -27,6 +29,9 @@ O candidato colará uma questão (com ou sem alternativas). Responda em portugu�
 Regras: cite o dispositivo legal (lei, artigo) quando aplicável, mas avise que o candidato deve conferir a vigência no texto oficial (Planalto) e a jurisprudência no tribunal competente. Se a questão estiver incompleta ou ambígua, diga isso claramente. Nunca invente súmulas ou números de artigos. Limite a resposta a cerca de 600 palavras.`;
 
 export async function handleSolveQuestion(request: Request): Promise<Response> {
+  if (!AI_ENABLED) {
+    return Response.json({ error: "A resolução com IA estará disponível em breve." }, { status: 503 });
+  }
   const apiKey = process.env["LOVABLE_API_KEY"];
   if (!apiKey) {
     return Response.json({ error: "Serviço de IA não configurado." }, { status: 500 });
