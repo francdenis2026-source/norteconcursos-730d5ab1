@@ -7,6 +7,8 @@ import { getDailyLimit, getUsedToday, registerUse, saveResolution } from "@/lib/
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import { SoonBadge } from "@/components/SoonBadge";
+import { AI_ENABLED } from "@/lib/launch.config";
 
 export const Route = createFileRoute("/dashboard/ai-solver")({
   head: () => ({
@@ -36,6 +38,32 @@ function AiSolverPage() {
   const [used, setUsed] = useState(0);
   const [saved, setSaved] = useState(false);
   useEffect(() => setUsed(getUsedToday(userId)), [userId]);
+
+  if (!AI_ENABLED) {
+    return (
+      <div className="mx-auto max-w-3xl space-y-6 p-4 md:p-6">
+        <header className="space-y-2">
+          <p className="flex items-center gap-2 text-sm font-medium text-primary">
+            <Sparkles className="h-4 w-4" aria-hidden /> Resolução com IA <SoonBadge />
+          </p>
+          <h1 className="text-2xl font-bold text-foreground md:text-3xl">Resolver questão com IA</h1>
+        </header>
+        <Card>
+          <CardContent className="space-y-3 pt-6 text-sm text-muted-foreground">
+            <p className="text-base font-semibold text-foreground">Estamos preparando este recurso.</p>
+            <p>
+              Em breve você poderá colar uma questão de concurso e receber a resolução passo a passo, com a análise das
+              alternativas e os conceitos cobrados. Por enquanto, o recurso está desativado para todos os planos.
+            </p>
+            <p>
+              Enquanto isso, continue com o <Link to="/dashboard/question-trainer" className="font-medium text-primary underline">treinador de questões</Link>{" "}
+              e o <Link to="/dashboard/mock-exams" className="font-medium text-primary underline">simulador</Link>.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   const isLoading = status === "loading";
   const reachedLimit = limit !== "unlimited" && used >= limit;

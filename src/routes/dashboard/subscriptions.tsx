@@ -8,6 +8,8 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { getDailyLimit, getUsedToday } from "@/lib/aiSolverStore";
 import { cn } from "@/lib/utils";
+import { SoonBadge } from "@/components/SoonBadge";
+import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE, TESTING_NOTICE, TESTING_PHASE } from "@/lib/launch.config";
 
 export const Route = createFileRoute("/dashboard/subscriptions")({
   head: () => ({
@@ -40,6 +42,13 @@ function SubscriptionsPage() {
         <h1 className="text-2xl font-bold text-foreground md:text-3xl">Planos e uso</h1>
       </header>
 
+      {(TESTING_PHASE || !PAYMENTS_ENABLED) && (
+        <div role="status" className="space-y-1 rounded-lg border border-amber-500/40 bg-amber-500/10 p-4 text-sm text-foreground">
+          {TESTING_PHASE && <p><strong>Fase de testes.</strong> {TESTING_NOTICE}</p>}
+          {!PAYMENTS_ENABLED && <p>{PAYMENTS_NOTICE}</p>}
+        </div>
+      )}
+
       <Card>
         <CardContent className="space-y-2 pt-6">
           <div className="flex flex-wrap justify-between gap-2 text-sm">
@@ -47,13 +56,19 @@ function SubscriptionsPage() {
               Plano atual: <strong>{SUBSCRIPTION_PLANS.find((p) => p.id === tier)?.name ?? "Gratuito"}</strong>
               {isAdmin && " (administrador)"}
             </span>
-            <span className="text-muted-foreground">
-              Resoluções com IA hoje: {used} / {limit === "unlimited" ? "ilimitado" : limit}
-            </span>
+            {AI_ENABLED ? (
+              <span className="text-muted-foreground">
+                Resoluções com IA hoje: {used} / {limit === "unlimited" ? "ilimitado" : limit}
+              </span>
+            ) : (
+              <span className="flex items-center gap-2 text-muted-foreground">Resoluções com IA <SoonBadge /></span>
+            )}
           </div>
-          <div className="h-2 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
-            <div className="h-full bg-primary transition-all" style={{ width: `${pct}%` }} />
-          </div>
+          {AI_ENABLED && (
+            <div className="h-2 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
+              <div className="h-full bg-primary transition-all" style={{ width: `${pct}%` }} />
+            </div>
+          )}
         </CardContent>
       </Card>
 
@@ -78,9 +93,9 @@ function SubscriptionsPage() {
                   {Object.entries(plan.features).map(([key, f]) => (
                     <li key={key} className={cn("flex gap-2", !f.included && "text-muted-foreground")}>
                       {f.included ? <Check className="h-4 w-4 shrink-0 text-primary" /> : <X className="h-4 w-4 shrink-0" />}
-                      <span>
+                      <span className="flex flex-wrap items-center gap-2">
                         {f.name}
-                        {typeof f.limit === "number" && `: ${f.limit}`}
+                        {key === "aiSolver" && !AI_ENABLED ? <SoonBadge /> : typeof f.limit === "number" && `: ${f.limit}`}
                       </span>
                     </li>
                   ))}
@@ -88,9 +103,13 @@ function SubscriptionsPage() {
                 {current ? (
                   <Button variant="outline" disabled>Seu plano</Button>
                 ) : plan.price > 0 ? (
-                  <Button asChild>
-                    <Link to="/checkout/$planId" params={{ planId: plan.id }}>Assinar {plan.name}</Link>
-                  </Button>
+                  PAYMENTS_ENABLED ? (
+                    <Button asChild>
+                      <Link to="/checkout/$planId" params={{ planId: plan.id }}>Assinar {plan.name}</Link>
+                    </Button>
+                  ) : (
+                    <Button disabled aria-label={`Assinar ${plan.name} — em breve`}>Em breve</Button>
+                  )
                 ) : null}
               </CardContent>
             </Card>
