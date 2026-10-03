@@ -9,7 +9,7 @@ import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { getDailyLimit, getUsedToday } from "@/lib/aiSolverStore";
 import { cn } from "@/lib/utils";
 import { SoonBadge } from "@/components/SoonBadge";
-import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE, TESTING_NOTICE, TESTING_PHASE } from "@/lib/launch.config";
+import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE, TESTING_NOTICE, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
 
 export const Route = createFileRoute("/dashboard/subscriptions")({
   head: () => ({
@@ -42,9 +42,9 @@ function SubscriptionsPage() {
         <h1 className="text-2xl font-bold text-foreground md:text-3xl">Planos e uso</h1>
       </header>
 
-      {(TESTING_PHASE || !PAYMENTS_ENABLED) && (
+      {((TESTING_PHASE && isTestingTier(tier)) || !PAYMENTS_ENABLED) && (
         <div role="status" className="space-y-1 rounded-lg border border-amber-500/40 bg-amber-500/10 p-4 text-sm text-foreground">
-          {TESTING_PHASE && <p><strong>Fase de testes.</strong> {TESTING_NOTICE}</p>}
+          {TESTING_PHASE && isTestingTier(tier) && <p><strong>Fase de testes.</strong> {TESTING_NOTICE}</p>}
           {!PAYMENTS_ENABLED && <p>{PAYMENTS_NOTICE}</p>}
         </div>
       )}

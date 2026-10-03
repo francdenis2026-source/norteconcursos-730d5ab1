@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import { SoonBadge } from "@/components/SoonBadge";
-import { AI_ENABLED, SOON_LABEL, TESTING_PHASE } from "@/lib/launch.config";
+import { AI_ENABLED, SOON_LABEL, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import {
   BookMarked,
@@ -491,7 +491,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
           <main className="app-content">
             <div className="app-content__inner">
-              {TESTING_PHASE && !isAdmin && (
+              {TESTING_PHASE && !isAdmin && isTestingTier(tier) && (
                 <div role="status" className="mb-4 flex items-start gap-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm text-foreground">
                   <FlaskConical className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" aria-hidden />
                   <p>

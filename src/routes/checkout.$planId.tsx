@@ -10,7 +10,7 @@ import { createCheckoutSession } from '@/lib/stripe.functions';
 import { useServerFn } from '@tanstack/react-start';
 import { toast } from 'sonner';
 import { SoonBadge } from '@/components/SoonBadge';
-import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE, TESTING_NOTICE, TESTING_PHASE } from '@/lib/launch.config';
+import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE } from '@/lib/launch.config';
 
 export const Route = createFileRoute('/checkout/$planId')({
   component: CheckoutPage
@@ -49,7 +49,6 @@ function CheckoutPage() {
               <div role="status" className="space-y-1 rounded-xl border border-amber-500/40 bg-amber-500/10 p-4 text-sm text-foreground">
                 <p className="flex items-center gap-2 font-bold">Pagamentos <SoonBadge /></p>
                 <p>{PAYMENTS_NOTICE}</p>
-                {TESTING_PHASE && <p>{TESTING_NOTICE}</p>}
               </div>
             )}
             <h1 className="text-3xl font-black text-primary uppercase tracking-tight">Finalizar Assinatura</h1>
