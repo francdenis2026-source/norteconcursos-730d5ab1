@@ -417,17 +417,33 @@ function Index() {
 
             <div className="lp-bento">
               <article className="lp-tile lp-tile--feature" data-reveal>
-                <div className="lp-tile__copy">
-                  <span className="lp-tile__icon">
-                    <BrainCircuit />
-                  </span>
-                  <h3 className="mt-6">Treinador de questões</h3>
+                <div className="lp-feature__copy">
+                  <div className="lp-feature__top">
+                    <span className="lp-tile__icon">
+                      <BrainCircuit />
+                    </span>
+                    <span className="lp-feature__badge">Recurso principal</span>
+                  </div>
+                  <h3>Treinador de questões</h3>
                   <p>
                     Sessões por banca, carreira e disciplina com correção imediata, explicação
-                    pedagógica e fonte jurídica.
+                    pedagógica e fonte jurídica oficial.
                   </p>
+                  <ul className="lp-feature__list">
+                    <li>
+                      <Check /> Filtros por banca e cargo
+                    </li>
+                    <li>
+                      <Check /> Resolução passo a passo com IA
+                    </li>
+                    <li>
+                      <Check /> Salva no seu caderno de revisão
+                    </li>
+                  </ul>
                 </div>
-                <ProductMock />
+                <div className="lp-feature__window">
+                  <ProductMock />
+                </div>
               </article>
               {TOOLS.map(({ icon: Icon, title, text, variant }, i) => (
                 <article
