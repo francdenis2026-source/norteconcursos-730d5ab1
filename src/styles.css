@@ -1281,9 +1281,9 @@ html {
 }
 .lp-acre__fill {
   background:
-    linear-gradient(180deg, transparent 0%, oklch(0.12 0.03 263 / 0.6) 100%),
-    linear-gradient(120deg, oklch(0.8 0.13 78 / 0.18), transparent 60%),
-    url("/media/acre-floresta.webp") center / cover;
+    linear-gradient(180deg, transparent 0%, oklch(0.12 0.03 263 / 0.55) 100%),
+    linear-gradient(120deg, oklch(0.8 0.13 78 / 0.14), transparent 60%),
+    url("/media/acre-seguranca.jpg") center / cover;
 }
 .lp-acre__sheen {
   overflow: hidden;
@@ -1390,9 +1390,9 @@ html {
 
 .lp-acre__people {
   position: absolute;
-  bottom: -10%;
-  left: 12%;
-  width: 78%;
+  bottom: -6%;
+  left: 16%;
+  width: 68%;
   height: auto;
   pointer-events: none;
   filter: drop-shadow(0 22px 26px oklch(0 0 0 / 0.55));
@@ -3251,6 +3251,16 @@ html {
 .app-nav__link[data-active="true"] svg {
   color: var(--brass);
 }
+.app-nav__admin {
+  border-radius: 10px;
+}
+.app-nav__admin .app-nav__link {
+  color: var(--brass-soft);
+  box-shadow: inset 0 0 0 1px oklch(0.8 0.13 78 / 0.14);
+}
+.app-nav__admin .app-nav__link:hover {
+  background: oklch(0.8 0.13 78 / 0.1);
+}
 .app-nav__link[data-active="true"]::before {
   position: absolute;
   top: 9px;
@@ -3623,6 +3633,104 @@ html {
 }
 .app-sheet .app-nav {
   padding-top: 8px;
+}
+
+/* Separate administrative access */
+.admin-access {
+  display: grid;
+  min-height: 100svh;
+  grid-template-columns: minmax(0, 1.15fr) minmax(420px, 0.85fr);
+  background: var(--color-background);
+}
+.admin-access__visual {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  overflow: hidden;
+  color: oklch(0.97 0.005 255);
+  background: var(--ink-deep);
+}
+.admin-access__visual::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(90deg, oklch(0.12 0.028 263 / 0.94), oklch(0.12 0.028 263 / 0.5)), linear-gradient(0deg, oklch(0.12 0.028 263 / 0.92), transparent 60%);
+}
+.admin-access__visual > img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.admin-access__visual-copy {
+  display: flex;
+  width: min(620px, 100%);
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(36px, 7vw, 88px);
+}
+.admin-access__visual-copy > span {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  color: var(--brass-soft);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.admin-access__visual-copy > span svg { width: 16px; }
+.admin-access__visual-copy h2 {
+  max-width: 560px;
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  font-stretch: 78%;
+  font-weight: 800;
+  line-height: 0.98;
+}
+.admin-access__visual-copy p {
+  max-width: 540px;
+  margin-top: 18px;
+  color: oklch(0.94 0.008 255 / 0.7);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.admin-access__panel {
+  display: grid;
+  min-width: 0;
+  place-items: center;
+  padding: clamp(28px, 6vw, 72px);
+}
+.admin-access__form { width: min(100%, 430px); }
+.admin-access__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  color: var(--color-muted-foreground);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.admin-access__back:hover { color: var(--color-foreground); }
+.admin-tabs {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(112px, 1fr));
+  justify-content: start;
+  overflow-x: auto;
+}
+@media (max-width: 900px) {
+  .admin-access { grid-template-columns: 1fr; }
+  .admin-access__visual { display: none; }
+  .admin-access__panel { min-height: 100svh; }
 }
 
 /* Command palette */
@@ -5014,22 +5122,221 @@ iframe[src*="gpteng.co"] {
 .quiz-why { padding: .9rem 1rem; border-radius: .9rem; border-left: 4px solid var(--brass); background: oklch(0.8 0.13 78 / .12); font-size: .95rem; }
 @media (prefers-reduced-motion: reduce) { .fc__in { transition: none; } }
 
-/* === Homepage compacta (web) === */
+/* ============ Homepage compacta (desktop) ============ */
 @media (min-width: 1024px) {
-  .lp-hero { min-height: min(88svh, 760px); }
-  .lp-hero__body { padding-top: clamp(96px, 12vh, 140px); }
-  .lp-section { padding-block: clamp(52px, 7vw, 88px); }
-  .lp-h2 { font-size: clamp(1.9rem, 3.4vw, 3rem); margin-top: 12px; }
-  .lp-lead { margin-top: 14px; font-size: 1rem; }
-  .lp-head { margin-bottom: clamp(28px, 4vw, 44px); gap: 32px; }
-  .lp-rail__item { padding: 14px 20px; }
-  .lp-rail__item strong { font-size: 1.15rem; }
-  .lp-marquee { padding-block: 14px; }
-  .lp-marquee__item { font-size: 1.05rem; gap: 20px; }
-  .lp-bento { grid-auto-rows: minmax(160px, auto); gap: 12px; }
-  .lp-tile { padding: 20px; border-radius: 18px; }
-  .lp-tile h3 { padding-top: 18px; font-size: 1.2rem; }
-  .lp-tile--feature .lp-tile__copy { padding: 24px 24px 0; }
-  .lp-tile--feature h3 { font-size: 1.6rem; }
-  .lp-step { gap: 12px; }
+  .lp-section {
+    padding-block: clamp(48px, 6vw, 84px);
+  }
+  .lp-hero {
+    min-height: min(86svh, 720px);
+  }
+  .lp-hero__body {
+    padding-top: clamp(96px, 12vh, 140px);
+    padding-bottom: clamp(28px, 4vh, 48px);
+  }
+  .lp-hero__title {
+    font-size: clamp(2.4rem, 4.4vw, 4.2rem);
+    margin-top: 18px;
+  }
+  .lp-hero__lead {
+    margin-top: 18px;
+  }
+  .lp-hero__ctas {
+    margin-top: 24px;
+  }
+  .lp-h2 {
+    font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+    margin-top: 12px;
+  }
+  .lp-lead {
+    margin-top: 14px;
+    font-size: 1rem;
+  }
+  .lp-head {
+    margin-bottom: clamp(28px, 4vw, 44px);
+    gap: 32px;
+  }
+  .lp-marquee {
+    padding-block: 14px;
+  }
+  .lp-marquee__item {
+    font-size: 1.05rem;
+  }
+  .lp-rail__item {
+    padding: 16px 20px;
+  }
+  .lp-rail__item strong {
+    font-size: 1.15rem;
+  }
+  /* PCAC */
+  .lp-pcac__emblems {
+    margin-bottom: 20px;
+  }
+  .lp-pcac__emblem {
+    width: 46px;
+    height: 46px;
+  }
+  .lp-pcac__emblem img {
+    width: 36px;
+    height: 36px;
+  }
+  .lp-pcac__roles {
+    margin-top: 20px;
+  }
+  .lp-pcac__actions {
+    margin-top: 24px;
+  }
+  .lp-pcac__disclaimer {
+    margin-top: 18px;
+  }
+  /* Acre: mapa e cartas menores */
+  .lp-acre__stage {
+    margin-block: 12px 28px;
+    max-width: 880px;
+    margin-inline: auto;
+  }
+  .lp-acre__people {
+    width: 56%;
+    left: 22%;
+  }
+  .lp-card {
+    min-height: 158px;
+    padding: 18px;
+  }
+  .lp-card strong {
+    font-size: 1.2rem;
+  }
+  .lp-card__num {
+    font-size: 2.8rem;
+  }
+  /* Método */
+  .lp-step__card {
+    padding: 20px;
+  }
+  .lp-step h3 {
+    font-size: 1.25rem;
+  }
+  /* Plataforma bento */
+  .lp-bento {
+    grid-auto-rows: minmax(168px, auto);
+  }
+  .lp-tile {
+    padding: 20px;
+    border-radius: 18px;
+  }
+  .lp-tile h3 {
+    padding-top: 18px;
+    font-size: 1.2rem;
+  }
+  .lp-tile--feature .lp-tile__copy {
+    padding: 24px 24px 0;
+  }
+  .lp-tile--feature h3 {
+    font-size: 1.6rem;
+  }
+  .lp-mock {
+    margin: 20px 0 0 22px;
+  }
+  .lp-mock__app {
+    gap: 10px;
+    padding: 16px 18px 0;
+  }
+  /* Carreiras */
+  .lp-careers__list {
+    margin-top: 32px;
+  }
+  .lp-career {
+    padding: 14px 14px 14px 0;
+  }
+  .lp-career strong {
+    font-size: 1.15rem;
+  }
+  /* Confiança */
+  .lp-pillars {
+    margin-top: 28px;
+  }
+  .lp-pillar {
+    padding: 16px 0;
+  }
+  /* Final */
+  .lp-final .lp-h2 {
+    font-size: clamp(2rem, 3.8vw, 3.4rem);
+  }
+  .lp-final__actions {
+    margin-top: 26px;
+  }
+  .lp-final__lineup {
+    margin-top: clamp(28px, 4vw, 48px);
+    max-height: 380px;
+  }
+  /* Rodapé */
+  .lp-footer__grid {
+    padding-block: 48px 36px;
+    gap: 36px;
+  }
+}
+
+/* Redesigned feature card: Treinador de questões */
+.lp-tile--feature { display: grid; grid-template-rows: auto 1fr; gap: 0; }
+.lp-feature__copy { padding: 26px 28px 0; }
+.lp-feature__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.lp-feature__badge {
+  padding: 5px 11px; border-radius: 999px; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--brass-soft);
+  background: oklch(0.8 0.13 78 / 0.12); box-shadow: inset 0 0 0 1px oklch(0.8 0.13 78 / 0.3);
+}
+.lp-tile--feature .lp-feature__copy h3 { margin-top: 18px; padding: 0; font-size: clamp(1.6rem, 2.2vw, 2rem); }
+.lp-tile--feature .lp-feature__copy p { margin-top: 8px; }
+.lp-feature__list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.lp-feature__list li {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 11px; border-radius: 10px;
+  font-size: 0.78rem; color: oklch(1 0 0 / 0.82); background: oklch(1 0 0 / 0.05);
+  border: 1px solid oklch(1 0 0 / 0.08);
+}
+.lp-feature__list svg { width: 14px; height: 14px; color: var(--brass-soft); }
+.lp-feature__window { display: flex; min-height: 0; padding: 20px 22px 22px; }
+.lp-feature__window .lp-mock {
+  margin: 0; border: 1px solid oklch(1 0 0 / 0.12); border-radius: 14px;
+  box-shadow: 0 20px 50px -24px oklch(0 0 0 / 0.6), 0 0 0 1px oklch(0 0 0 / 0.35);
+}
+@media (max-width: 1023px) { .lp-feature__window .lp-mock { margin: 0 !important; } }
+
+/* Mock moderno do Treinador — faixa de estatísticas */
+.lp-mock__stats { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 18px 14px; border-top: 1px solid color-mix(in oklab, currentColor 10%, transparent); font-size: 0.72rem; opacity: 0.92; }
+.lp-mock__stats span { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 999px; background: color-mix(in oklab, currentColor 6%, transparent); }
+.lp-mock__stats b { font-weight: 700; }
+.lp-mock__stats .lp-mock__ai { margin-left: auto; background: color-mix(in oklab, #10b981 18%, transparent); color: #10b981; font-weight: 600; }
+.lp-tile--feature .lp-mock { border-radius: 16px; box-shadow: 0 24px 60px -24px rgb(0 0 0 / 0.45), 0 0 0 1px color-mix(in oklab, currentColor 8%, transparent); }
+
+/* ===== Login: imagem profissional de segurança pública ===== */
+.auth-visual::before { background-image: url("/media/hero/auth-seguranca.jpg"); background-position: 60% 30%; }
+.auth-photo { display: none; }
+@media (max-width: 960px) {
+  .auth-photo {
+    display: block; width: 100%; max-width: 420px; height: 170px; margin: 0 auto 18px; object-fit: cover; object-position: center 30%;
+    border-radius: 18px; box-shadow: 0 18px 40px -20px rgb(0 0 0 / 0.5);
+  }
+}
+
+/* ===== Rodapé mais baixo ===== */
+.lp-footer__grid { padding-block: 40px 28px; gap: 32px; }
+.lp-footer__brand p { margin-top: 12px; }
+.lp-footer ul { gap: 8px; margin-top: 12px; }
+.lp-footer__bottom { padding-block: 16px; }
+
+/* ===== Homepage: cada bloco cabe em uma janela (desktop) ===== */
+@media (min-width: 1024px) {
+  .lp-tile--feature {
+    grid-column: 1 / -1; grid-row: auto;
+    display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center; max-height: min(78svh, 520px);
+  }
+  .lp-tile--feature .lp-feature__copy { padding: 32px 36px; }
+  .lp-tile--feature .lp-feature__window { padding: 20px 22px; align-self: stretch; overflow: hidden; }
+  .lp-tile--feature .lp-mock { min-height: 0; max-height: 100%; }
+  .lp-tile--feature .lp-mock__explain { display: none; }
+  .lp-tile--feature .lp-mock__opt { padding-block: 7px; }
+  .lp-bento { grid-auto-rows: minmax(150px, auto); }
+  .lp-section { max-height: none; }
+  .lp-section img { max-height: 72svh; object-fit: cover; }
 }

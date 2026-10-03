@@ -10,3 +10,10 @@ const supabaseAnonKey =
   "sb_publishable_hF4jXHTs4tapaOMX2KdqvA_N_A5Tyqf";
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+/** Cliente isolado para fluxos de autenticação que não podem substituir a sessão atual. */
+export function createIsolatedSupabaseClient(storageKey: string) {
+  return createClient(supabaseUrl, supabaseAnonKey, {
+    auth: { persistSession: false, autoRefreshToken: false, storageKey },
+  });
+}

@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as DesafioDiarioRouteImport } from './routes/desafio-diario'
@@ -17,9 +18,12 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SuporteRouteImport } from './routes/suporte'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as ApiSolveQuestionRouteImport } from './routes/api/solve-question'
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
+import { Route as DashboardAdminStudentsRouteImport } from './routes/dashboard/admin-students'
+import { Route as DashboardAiSolverRouteImport } from './routes/dashboard/ai-solver'
 import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers'
 import { Route as DashboardEditalRouteImport } from './routes/dashboard/edital'
 import { Route as DashboardEditalRadarRouteImport } from './routes/dashboard/edital-radar'
@@ -38,6 +42,7 @@ import { Route as DashboardQuestionsRouteImport } from './routes/dashboard/quest
 import { Route as DashboardStudentExamsRouteImport } from './routes/dashboard/student-exams'
 import { Route as DashboardStudyPlanRouteImport } from './routes/dashboard/study-plan'
 import { Route as DashboardStudyToolsRouteImport } from './routes/dashboard/study-tools'
+import { Route as DashboardSubscriptionsRouteImport } from './routes/dashboard/subscriptions'
 import { Route as DashboardTimerRouteImport } from './routes/dashboard/timer'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
 import { Route as DashboardEditalIndexRouteImport } from './routes/dashboard/edital.index'
@@ -48,6 +53,11 @@ import { Route as DashboardLibrarySlugRouteImport } from './routes/dashboard/lib
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -85,6 +95,11 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiSolveQuestionRoute = ApiSolveQuestionRouteImport.update({
+  id: '/api/solve-question',
+  path: '/api/solve-question',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CheckoutPlanIdRoute = CheckoutPlanIdRouteImport.update({
   id: '/checkout/$planId',
   path: '/checkout/$planId',
@@ -98,6 +113,16 @@ const DashboardIndexRoute = DashboardIndexRouteImport.update({
 const DashboardAdminRoute = DashboardAdminRouteImport.update({
   id: '/admin',
   path: '/admin',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardAdminStudentsRoute = DashboardAdminStudentsRouteImport.update({
+  id: '/admin-students',
+  path: '/admin-students',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardAiSolverRoute = DashboardAiSolverRouteImport.update({
+  id: '/ai-solver',
+  path: '/ai-solver',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardCareersRoute = DashboardCareersRouteImport.update({
@@ -191,6 +216,11 @@ const DashboardStudyToolsRoute = DashboardStudyToolsRouteImport.update({
   path: '/study-tools',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardSubscriptionsRoute = DashboardSubscriptionsRouteImport.update({
+  id: '/subscriptions',
+  path: '/subscriptions',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardTimerRoute = DashboardTimerRouteImport.update({
   id: '/timer',
   path: '/timer',
@@ -224,6 +254,7 @@ const DashboardLibrarySlugRoute = DashboardLibrarySlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/auth': typeof AuthRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/desafio-diario': typeof DesafioDiarioRoute
@@ -231,8 +262,11 @@ export interface FileRoutesByFullPath {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
+  '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
@@ -251,6 +285,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
+  '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
@@ -261,14 +296,18 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/auth': typeof AuthRoute
   '/desafio-diario': typeof DesafioDiarioRoute
   '/privacy': typeof PrivacyRoute
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
+  '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
@@ -285,6 +324,7 @@ export interface FileRoutesByTo {
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
+  '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
@@ -296,6 +336,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/auth': typeof AuthRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/desafio-diario': typeof DesafioDiarioRoute
@@ -303,8 +344,11 @@ export interface FileRoutesById {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
+  '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
@@ -323,6 +367,7 @@ export interface FileRoutesById {
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
+  '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
@@ -335,6 +380,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/admin'
     | '/auth'
     | '/dashboard'
     | '/desafio-diario'
@@ -342,8 +388,11 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-students'
+    | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
@@ -362,6 +411,7 @@ export interface FileRouteTypes {
     | '/dashboard/student-exams'
     | '/dashboard/study-plan'
     | '/dashboard/study-tools'
+    | '/dashboard/subscriptions'
     | '/dashboard/timer'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
@@ -372,14 +422,18 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/admin'
     | '/auth'
     | '/desafio-diario'
     | '/privacy'
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-students'
+    | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital-radar'
     | '/dashboard/errors'
@@ -396,6 +450,7 @@ export interface FileRouteTypes {
     | '/dashboard/student-exams'
     | '/dashboard/study-plan'
     | '/dashboard/study-tools'
+    | '/dashboard/subscriptions'
     | '/dashboard/timer'
     | '/dashboard'
     | '/api/public/stripe-webhook'
@@ -406,6 +461,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/admin'
     | '/auth'
     | '/dashboard'
     | '/desafio-diario'
@@ -413,8 +469,11 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-students'
+    | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
@@ -433,6 +492,7 @@ export interface FileRouteTypes {
     | '/dashboard/student-exams'
     | '/dashboard/study-plan'
     | '/dashboard/study-tools'
+    | '/dashboard/subscriptions'
     | '/dashboard/timer'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
@@ -444,6 +504,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRoute
   AuthRoute: typeof AuthRoute
   DashboardRoute: typeof DashboardRouteWithChildren
   DesafioDiarioRoute: typeof DesafioDiarioRoute
@@ -451,6 +512,7 @@ export interface RootRouteChildren {
   SobreRoute: typeof SobreRoute
   SuporteRoute: typeof SuporteRoute
   TermsRoute: typeof TermsRoute
+  ApiSolveQuestionRoute: typeof ApiSolveQuestionRoute
   CheckoutPlanIdRoute: typeof CheckoutPlanIdRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
 }
@@ -462,6 +524,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -513,6 +582,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/solve-question': {
+      id: '/api/solve-question'
+      path: '/api/solve-question'
+      fullPath: '/api/solve-question'
+      preLoaderRoute: typeof ApiSolveQuestionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/checkout/$planId': {
       id: '/checkout/$planId'
       path: '/checkout/$planId'
@@ -532,6 +608,20 @@ declare module '@tanstack/react-router' {
       path: '/admin'
       fullPath: '/dashboard/admin'
       preLoaderRoute: typeof DashboardAdminRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/admin-students': {
+      id: '/dashboard/admin-students'
+      path: '/admin-students'
+      fullPath: '/dashboard/admin-students'
+      preLoaderRoute: typeof DashboardAdminStudentsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/ai-solver': {
+      id: '/dashboard/ai-solver'
+      path: '/ai-solver'
+      fullPath: '/dashboard/ai-solver'
+      preLoaderRoute: typeof DashboardAiSolverRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/careers': {
@@ -660,6 +750,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardStudyToolsRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/subscriptions': {
+      id: '/dashboard/subscriptions'
+      path: '/subscriptions'
+      fullPath: '/dashboard/subscriptions'
+      preLoaderRoute: typeof DashboardSubscriptionsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/timer': {
       id: '/dashboard/timer'
       path: '/timer'
@@ -734,6 +831,8 @@ const DashboardLibraryRouteWithChildren =
 
 interface DashboardRouteChildren {
   DashboardAdminRoute: typeof DashboardAdminRoute
+  DashboardAdminStudentsRoute: typeof DashboardAdminStudentsRoute
+  DashboardAiSolverRoute: typeof DashboardAiSolverRoute
   DashboardCareersRoute: typeof DashboardCareersRoute
   DashboardEditalRoute: typeof DashboardEditalRouteWithChildren
   DashboardEditalRadarRoute: typeof DashboardEditalRadarRoute
@@ -752,12 +851,15 @@ interface DashboardRouteChildren {
   DashboardStudentExamsRoute: typeof DashboardStudentExamsRoute
   DashboardStudyPlanRoute: typeof DashboardStudyPlanRoute
   DashboardStudyToolsRoute: typeof DashboardStudyToolsRoute
+  DashboardSubscriptionsRoute: typeof DashboardSubscriptionsRoute
   DashboardTimerRoute: typeof DashboardTimerRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
 }
 
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminRoute: DashboardAdminRoute,
+  DashboardAdminStudentsRoute: DashboardAdminStudentsRoute,
+  DashboardAiSolverRoute: DashboardAiSolverRoute,
   DashboardCareersRoute: DashboardCareersRoute,
   DashboardEditalRoute: DashboardEditalRouteWithChildren,
   DashboardEditalRadarRoute: DashboardEditalRadarRoute,
@@ -776,6 +878,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardStudentExamsRoute: DashboardStudentExamsRoute,
   DashboardStudyPlanRoute: DashboardStudyPlanRoute,
   DashboardStudyToolsRoute: DashboardStudyToolsRoute,
+  DashboardSubscriptionsRoute: DashboardSubscriptionsRoute,
   DashboardTimerRoute: DashboardTimerRoute,
   DashboardIndexRoute: DashboardIndexRoute,
 }
@@ -786,6 +889,7 @@ const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRoute,
   AuthRoute: AuthRoute,
   DashboardRoute: DashboardRouteWithChildren,
   DesafioDiarioRoute: DesafioDiarioRoute,
@@ -793,6 +897,7 @@ const rootRouteChildren: RootRouteChildren = {
   SobreRoute: SobreRoute,
   SuporteRoute: SuporteRoute,
   TermsRoute: TermsRoute,
+  ApiSolveQuestionRoute: ApiSolveQuestionRoute,
   CheckoutPlanIdRoute: CheckoutPlanIdRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
 }

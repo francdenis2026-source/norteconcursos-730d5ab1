@@ -18,11 +18,11 @@ import {
   Target,
   Trophy,
 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
-import { validateCPF } from "@/lib/utils";
+import { normalizeUppercase, validateCPF } from "@/lib/utils";
 
 function friendlyAuthError(error: unknown) {
   const raw = error instanceof Error ? error.message : "";
@@ -83,7 +83,7 @@ function AuthPage() {
       .replace(/\.(\d{3})(\d)/, ".$1-$2");
   };
 
-  const handleAuth = async (e: React.FormEvent) => {
+  const handleAuth = async (e: FormEvent) => {
     e.preventDefault();
     setFormError(null);
     setIsLoading(true);
@@ -95,7 +95,7 @@ function AuthPage() {
           email: email.trim().toLowerCase(),
           password: pin,
           options: {
-            data: { full_name: name.trim().toLocaleUpperCase("pt-BR"), cpf: cpfDigits },
+            data: { full_name: normalizeUppercase(name.trim()), cpf: cpfDigits },
             emailRedirectTo: `${window.location.origin}/auth`,
           },
         });
@@ -172,6 +172,7 @@ function AuthPage() {
           <ArrowLeft /> Voltar para o início
         </Link>
         <div className="auth-card">
+          <img src="/media/hero/auth-seguranca.jpg" alt="Policiais e bombeiro da segurança pública" className="auth-photo" width={1600} height={1200} />
           <div className="auth-mobile-brand">
             <NorteBrand />
           </div>
@@ -214,7 +215,7 @@ function AuthPage() {
                     className="uppercase placeholder:normal-case"
                     placeholder="Como podemos chamar você?"
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setName(normalizeUppercase(e.target.value))}
                     required
                   />
                 </div>

@@ -12,7 +12,7 @@ import { MockService } from '@/services/mockService';
 import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap, RefreshCw, History as HistoryIcon } from 'lucide-react';
 import { PageHero } from '@/components/dashboard/PageHero';
 import { SUBSCRIPTION_PLANS } from '@/lib/subscriptions.config';
-import { cn } from '@/lib/utils';
+import { cn, normalizeUppercase } from '@/lib/utils';
 import { createCheckoutSession, createPortalSession } from '@/lib/stripe.functions';
 import { useServerFn } from '@tanstack/react-start';
 
@@ -86,10 +86,18 @@ function ProfilePage() {
     e.preventDefault();
     setIsUpdating(true);
     try {
+      if (!user) throw new Error('Entre novamente para atualizar seus dados.');
+      const normalizedName = normalizeUppercase(formData.name.trim());
       const { error } = await supabase.auth.updateUser({
-        data: { full_name: formData.name, name: formData.name }
+        data: { full_name: normalizedName, name: normalizedName }
       });
       if (error) throw error;
+      const { error: profileError } = await supabase
+        .from('profiles')
+        .update({ full_name: normalizedName })
+        .eq('id', user.id);
+      if (profileError) throw profileError;
+      setFormData((previous) => ({ ...previous, name: normalizedName }));
       toast.success('Nome atualizado com sucesso!');
     } catch (error: any) {
       toast.error(error.message || 'Erro ao atualizar nome');
@@ -217,8 +225,8 @@ function ProfilePage() {
                   <Input 
                     id="name" 
                     value={formData.name} 
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="pl-9"
+                    onChange={(e) => setFormData({...formData, name: normalizeUppercase(e.target.value)})}
+                    className="pl-9 uppercase"
                   />
                 </div>
               </div>
@@ -284,7 +292,8 @@ function ProfilePage() {
                   placeholder="Código de ativação (Ex: X8J-29K)" 
                   className="max-w-xs"
                   value={activationCode}
-                  onChange={(e) => setActivationCode(e.target.value)}
+                  onChange={(e) => setActivationCode(normalizeUppercase(e.target.value))}
+                  autoCapitalize="characters"
                   disabled={isActivating || isUpdating}
                 />
                 <Button onClick={handleActivate} disabled={isActivating || !activationCode || isUpdating}>

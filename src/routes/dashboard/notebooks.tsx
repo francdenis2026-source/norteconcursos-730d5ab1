@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { MediaViewer } from '@/components/dashboard/MediaViewer';
 import { PageHero } from '@/components/dashboard/PageHero';
+import { AiResolutionsSection } from '@/components/dashboard/AiResolutionsSection';
 import { 
   DropdownMenu, 
   DropdownMenuContent, 
@@ -186,6 +187,8 @@ function NotebooksPage() {
           </Button>
         }
       />
+
+      <AiResolutionsSection />
 
       <div className="flex flex-col md:flex-row gap-4 items-center bg-card p-4 rounded-xl border shadow-sm">
         <div className="relative flex-1 w-full">

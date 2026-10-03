@@ -25,6 +25,7 @@ import {
   Search,
   Settings,
   ShieldCheck,
+  Sparkles,
   Sun,
   Target,
   Timer,
@@ -69,50 +70,58 @@ type MenuItem = {
 };
 
 const MENU: MenuItem[] = [
-  { group: "Hoje", label: "Visão geral", icon: LayoutDashboard, href: "/dashboard" },
+  { group: "Hoje", label: "Painel do aluno", icon: LayoutDashboard, href: "/dashboard" },
   { group: "Hoje", label: "Plano de estudos", icon: ClipboardList, href: "/dashboard/study-plan" },
   { group: "Hoje", label: "Central de estudos", icon: Timer, href: "/dashboard/study-tools" },
   { group: "Objetivo", label: "Meu concurso", icon: Target, href: "/dashboard/my-contest" },
   { group: "Objetivo", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
-  { group: "Objetivo", label: "Catálogo de concursos", icon: Search, href: "/dashboard/questions" },
-  { group: "Treinamento", label: "Edital eletrônico", icon: MapPin, href: "/dashboard/edital" },
-  { group: "Treinamento", label: "Raio-X dos editais", icon: Radar, href: "/dashboard/edital-radar" },
-  { group: "Treinamento", label: "Biblioteca de estudo", icon: Library, href: "/dashboard/library" },
+  { group: "Objetivo", label: "Concursos disponíveis", icon: Search, href: "/dashboard/questions" },
+  { group: "Edital e conteúdo", label: "Edital eletrônico", icon: MapPin, href: "/dashboard/edital" },
+  { group: "Edital e conteúdo", label: "Mudanças no edital", icon: Radar, href: "/dashboard/edital-radar" },
+  { group: "Edital e conteúdo", label: "Biblioteca", icon: Library, href: "/dashboard/library" },
   {
-    group: "Treinamento",
+    group: "Questões",
     label: "Treinador de questões",
     icon: BrainCircuit,
     href: "/dashboard/question-trainer",
   },
+  { group: "Questões", label: "Resolver com IA", icon: Sparkles, href: "/dashboard/ai-solver" },
   {
-    group: "Treinamento",
+    group: "Questões",
     label: "Banco de questões",
     icon: BookMarked,
     href: "/dashboard/question-bank",
   },
-  { group: "Treinamento", label: "Cadernos", icon: BookOpen, href: "/dashboard/notebooks" },
-  { group: "Treinamento", label: "Caderno de erros", icon: NotebookPen, href: "/dashboard/errors" },
+  { group: "Questões", label: "Meus cadernos", icon: BookOpen, href: "/dashboard/notebooks" },
+  { group: "Questões", label: "Revisar erros", icon: NotebookPen, href: "/dashboard/errors" },
   { group: "Provas", label: "Simulador", icon: Trophy, href: "/dashboard/mock-exams" },
   { group: "Provas", label: "Minhas provas", icon: FileStack, href: "/dashboard/student-exams" },
   { group: "Provas", label: "Redação", icon: PenLine, href: "/dashboard/essays" },
-  { group: "Inteligência", label: "Desempenho", icon: Layers, href: "/dashboard/performance" },
-  { group: "Inteligência", label: "Histórico", icon: History, href: "/dashboard/history" },
-  { group: "Inteligência", label: "Cronômetro", icon: Clock, href: "/dashboard/timer" },
+  { group: "Desempenho", label: "Visão de desempenho", icon: Layers, href: "/dashboard/performance" },
+  { group: "Desempenho", label: "Histórico de atividades", icon: History, href: "/dashboard/history" },
+  { group: "Conta", label: "Plano e uso", icon: Sparkles, href: "/dashboard/subscriptions" },
   { group: "Conta", label: "Perfil", icon: User, href: "/dashboard/profile" },
   {
-    group: "Conta",
-    label: "Painel admin",
+    group: "Administração",
+    label: "Conteúdo da plataforma",
     icon: Settings,
     href: "/dashboard/admin",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
+    label: "Alunos, planos e IA",
+    icon: User,
+    href: "/dashboard/admin-students",
     adminOnly: true,
   },
 ];
 
 const MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
-  { label: "Hoje", href: "/dashboard", icon: LayoutDashboard },
-  { label: "Treinar", href: "/dashboard/question-trainer", icon: BrainCircuit },
-  { label: "Simular", href: "/dashboard/mock-exams", icon: Trophy },
-  { label: "Evolução", href: "/dashboard/performance", icon: Layers },
+  { label: "Painel", href: "/dashboard", icon: LayoutDashboard },
+  { label: "Questões", href: "/dashboard/question-trainer", icon: BrainCircuit },
+  { label: "Simulados", href: "/dashboard/mock-exams", icon: Trophy },
+  { label: "Desempenho", href: "/dashboard/performance", icon: Layers },
   { label: "Perfil", href: "/dashboard/profile", icon: User },
 ];
 
@@ -253,6 +262,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         return (
           <React.Fragment key={item.href}>
             {showGroup && <div className="app-nav__group">{item.group}</div>}
+            <div className={item.adminOnly ? "app-nav__admin" : undefined}>
             {collapsed ? (
               <Tooltip>
                 <TooltipTrigger asChild>{link}</TooltipTrigger>
@@ -261,6 +271,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             ) : (
               link
             )}
+            </div>
           </React.Fragment>
         );
       })}

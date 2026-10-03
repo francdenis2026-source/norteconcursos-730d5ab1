@@ -1,3 +1,4 @@
+import os
 import sys
 import pg8000.native
 
@@ -6,7 +7,7 @@ sql = open(f, encoding="utf-8").read()
 
 conn = pg8000.native.Connection(
     user="postgres.gkwphadbveiyjcwiiizw",
-    password="KzlnhelvQsdgqLLa",
+    password=os.environ["PGPW"],
     host="aws-0-sa-east-1.pooler.supabase.com",
     port=5432,
     database="postgres",
