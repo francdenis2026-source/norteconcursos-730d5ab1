@@ -222,7 +222,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   React.useEffect(() => {
     let known = 0;
     let cancelled = false;
-    Promise.all([MockService.getUserStreak(), MockService.getAchievements()]).then(([s, a]) => {
+    Promise.all([
+      MockService.registerStudyVisit().then((v) => v ?? MockService.getUserStreak()),
+      MockService.getAchievements(),
+    ]).then(([s, a]) => {
       if (cancelled) return;
       setStreak(s);
       setAchievements(a);

@@ -516,27 +516,22 @@ export const MockService = {
           };
         }
       }
-      const local = localStorage.getItem('norte_user_streak');
-      return local ? JSON.parse(local) : { currentStreak: 3, longestStreak: 7, lastActivityDate: new Date().toISOString() };
+      return { currentStreak: 0, longestStreak: 0, lastActivityDate: '' };
     } catch (e) {
       return null;
     }
   },
 
-  updateStreak: async () => {
-    try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (session) {
-        // Logic to update streak on backend
-        // This would usually be a RPC or a more complex update to handle date logic
-      }
-      // Simulação local
-      const current = await MockService.getUserStreak();
-      if (current) {
-        const next = { ...current, currentStreak: current.currentStreak + 1 };
-        localStorage.setItem('norte_user_streak', JSON.stringify(next));
-      }
-    } catch (e) {}
+  /** Registra que o aluno entrou hoje para estudar (dia do Acre) e devolve a ofensiva real. */
+  registerStudyVisit: async (): Promise<UserStreak | null> => {
+    const { data, error } = await supabase.rpc('register_study_visit');
+    const row = Array.isArray(data) ? data[0] : data;
+    if (error || !row) return null;
+    return {
+      currentStreak: row.current_streak,
+      longestStreak: row.longest_streak,
+      lastActivityDate: row.last_activity_date,
+    };
   },
 
   getAchievements: async (): Promise<Achievement[]> => {

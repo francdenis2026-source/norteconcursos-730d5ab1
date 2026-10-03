@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { PenLine, CheckCircle2, XCircle, HelpCircle } from 'lucide-react';
 import { PageHero, LockedState } from '@/components/dashboard/PageHero';
 import { cn } from '@/lib/utils';
+import { EssayTabs } from '@/components/dashboard/EssayWorkshop';
 
 export const Route = createFileRoute('/dashboard/essays')({
   component: EssaysPage,
@@ -68,16 +69,6 @@ function EssaysPage() {
     );
   }
 
-  if (essays.length === 0) {
-    return (
-      <div className="h-[60vh] flex flex-col items-center justify-center text-center space-y-4">
-        <PenLine className="h-16 w-16 text-muted-foreground/30" />
-        <h2 className="text-xl font-bold">Nenhuma redação registrada</h2>
-        <p className="text-muted-foreground max-w-md">Envie a foto do rascunho ou da folha definitiva da sua discursiva para começar.</p>
-      </div>
-    );
-  }
-
   return (
     <div className="space-y-6">
       <PageHero
@@ -89,9 +80,17 @@ function EssaysPage() {
             Treino de <em>redação</em>
           </>
         }
-        description="Discursivas registradas, com aderência aos tópicos exigidos pelo edital."
+        description="Caderno de 30 linhas, guia, modelos de redação e discursivas de provas."
       />
 
+      <EssayTabs
+        userId={user.id}
+        imported={
+          essays.length === 0 ? (
+            <p className="text-sm text-muted-foreground py-8 text-center">
+              Nenhuma discursiva de prova registrada. Use o Caderno para treinar.
+            </p>
+          ) : (
       <div className="space-y-4">
         {essays.map(e => {
           const st = statusLabel[e.status] || { label: e.status, color: 'bg-muted' };
@@ -166,6 +165,9 @@ function EssaysPage() {
           );
         })}
       </div>
+          )
+        }
+      />
     </div>
   );
 }
