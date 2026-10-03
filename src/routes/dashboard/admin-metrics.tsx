@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { BarChart3, FileStack, Loader2, RefreshCw, Sparkles, Trophy, Users } from "lucide-react";
+import { Activity, BarChart3, FileStack, Loader2, RefreshCw, Sparkles, Trophy, Users } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/dashboard/admin-metrics")({
 interface Raw {
   profiles: { id: string; subscription_tier: string | null; created_at: string }[];
   usage: { user_id: string; used_on: string }[];
-  results: number;
+  results: { user_id: string; created_at: string }[];
   docs: number;
 }
 
@@ -51,11 +51,11 @@ function AdminMetricsPage() {
       const [p, u, r, d] = await Promise.all([
         supabase.from("profiles").select("id, subscription_tier, created_at").limit(10000),
         supabase.from("ai_usage_logs").select("user_id, used_on").limit(50000),
-        supabase.from("mock_exam_results").select("id", { count: "exact", head: true }),
+        supabase.from("mock_exam_results").select("user_id, created_at").limit(50000),
         supabase.from("student_exam_documents").select("id", { count: "exact", head: true }),
       ]);
       if (p.error) throw p.error;
-      setRaw({ profiles: p.data ?? [], usage: u.data ?? [], results: r.count ?? 0, docs: d.count ?? 0 });
+      setRaw({ profiles: p.data ?? [], usage: u.data ?? [], results: r.data ?? [], docs: d.count ?? 0 });
     } catch {
       setError("Não foi possível carregar os números. Confirme que entrou como administrador.");
     } finally {
@@ -79,9 +79,16 @@ function AdminMetricsPage() {
     const byDay = days.map((day) => ({
       day,
       ai: raw.usage.filter((x) => x.used_on === day).length,
+      exams: raw.results.filter((r) => r.created_at.slice(0, 10) === day).length,
       signups: raw.profiles.filter((p) => p.created_at.slice(0, 10) === day).length,
     }));
-    return { byPlan, byDay, maxAi: Math.max(1, ...byDay.map((d) => d.ai)) };
+    // Aluno ativo = usou IA ou concluiu simulado nos últimos 7 dias.
+    const since = lastDays(7)[0] ?? "";
+    const active = new Set([
+      ...raw.usage.filter((x) => x.used_on >= since).map((x) => x.user_id),
+      ...raw.results.filter((r) => r.created_at.slice(0, 10) >= since).map((r) => r.user_id),
+    ]).size;
+    return { byPlan, byDay, active, maxAi: Math.max(1, ...byDay.map((d) => d.ai)) };
   }, [raw]);
 
   if (!isAdmin) return <p className="p-6 text-muted-foreground">Acesso restrito ao administrador.</p>;
@@ -99,8 +106,9 @@ function AdminMetricsPage() {
       >
         <div className="page-hero__stats">
           <HeroStat icon={Users} label="Alunos cadastrados" value={raw?.profiles.length ?? 0} />
-          <HeroStat icon={Trophy} label="Provas resolvidas" value={raw?.results ?? 0} />
-          <HeroStat icon={FileStack} label="Páginas de provas enviadas" value={raw?.docs ?? 0} />
+          <HeroStat icon={Activity} label="Ativos (7 dias)" value={stats?.active ?? 0} />
+          <HeroStat icon={Trophy} label="Provas resolvidas" value={raw?.results.length ?? 0} />
+          <HeroStat icon={FileStack} label="Páginas enviadas" value={raw?.docs ?? 0} />
           <HeroStat icon={Sparkles} label="Uso de IA total" value={raw?.usage.length ?? 0} />
         </div>
       </PageHero>
@@ -129,7 +137,7 @@ function AdminMetricsPage() {
           <Card>
             <CardHeader>
               <CardTitle>Últimos 14 dias</CardTitle>
-              <CardDescription>Uso de IA por dia (barras) e novos cadastros.</CardDescription>
+              <CardDescription>Uso de IA por dia (barras), provas resolvidas e novos cadastros.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-1.5">
               {stats.byDay.map((d) => (
@@ -138,7 +146,7 @@ function AdminMetricsPage() {
                   <div className="h-3 flex-1 rounded bg-muted">
                     <div className="h-3 rounded bg-primary" style={{ width: `${(d.ai / stats.maxAi) * 100}%` }} />
                   </div>
-                  <span className="w-20 shrink-0 text-right text-foreground">{d.ai} IA · {d.signups} cad.</span>
+                  <span className="w-36 shrink-0 text-right text-foreground">{d.ai} IA · {d.exams} provas · {d.signups} cad.</span>
                 </div>
               ))}
             </CardContent>
