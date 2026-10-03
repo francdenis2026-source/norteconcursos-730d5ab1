@@ -95,7 +95,7 @@ function AuthPage() {
           email: email.trim().toLowerCase(),
           password: pin,
           options: {
-            data: { full_name: name, cpf: cpfDigits },
+            data: { full_name: name.trim().toLocaleUpperCase("pt-BR"), cpf: cpfDigits },
             emailRedirectTo: `${window.location.origin}/auth`,
           },
         });
@@ -210,6 +210,8 @@ function AuthPage() {
                   <Input
                     id="name"
                     autoComplete="name"
+                    autoCapitalize="characters"
+                    className="uppercase placeholder:normal-case"
                     placeholder="Como podemos chamar você?"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
