@@ -1,6 +1,8 @@
-import { useRef, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
-import { Sparkles, Square, Eraser, Loader2 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Sparkles, Square, Eraser, Loader2, BookmarkCheck, Gauge } from "lucide-react";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { getDailyLimit, getUsedToday, registerUse, saveResolution } from "@/lib/aiSolverStore";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -28,15 +30,24 @@ function AiSolverPage() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
+  const { user, isAdmin } = useAuthStatus();
+  const userId = user?.id ?? "demo-user";
+  const limit = getDailyLimit(user?.subscription_tier ?? "free", isAdmin);
+  const [used, setUsed] = useState(0);
+  const [saved, setSaved] = useState(false);
+  useEffect(() => setUsed(getUsedToday(userId)), [userId]);
 
   const isLoading = status === "loading";
-  const canSubmit = question.trim().length >= 20 && !isLoading;
+  const reachedLimit = limit !== "unlimited" && used >= limit;
+  const canSubmit = question.trim().length >= 20 && !isLoading && !reachedLimit;
 
   async function solve() {
     const controller = new AbortController();
     abortRef.current = controller;
+    if (reachedLimit) return;
     setAnswer("");
     setError(null);
+    setSaved(false);
     setStatus("loading");
     try {
       const res = await fetch("/api/solve-question", {
@@ -65,6 +76,10 @@ function AiSolverPage() {
         setAnswer(text);
       }
       if (!text.trim()) throw new Error("A IA não retornou uma resposta para esta questão.");
+      registerUse(userId);
+      setUsed(getUsedToday(userId));
+      saveResolution(userId, question, text);
+      setSaved(true);
       setStatus("done");
     } catch (err) {
       if (controller.signal.aborted) {
@@ -89,6 +104,26 @@ function AiSolverPage() {
           Cole o enunciado e as alternativas. A IA explica a resolução passo a passo e os conceitos cobrados.
         </p>
       </header>
+
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border bg-card p-3 text-sm">
+        <span className="flex items-center gap-2 text-foreground">
+          <Gauge className="h-4 w-4 text-primary" aria-hidden />
+          {limit === "unlimited"
+            ? "Resoluções ilimitadas no seu plano"
+            : `Hoje: ${used} de ${limit} resoluções do seu plano`}
+        </span>
+        <div className="flex gap-3">
+          <Link to="/dashboard/notebooks" className="font-medium text-primary hover:underline">Meu caderno</Link>
+          <Link to="/dashboard/subscriptions" className="font-medium text-primary hover:underline">Ver planos</Link>
+        </div>
+      </div>
+
+      {reachedLimit && (
+        <div role="status" className="rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground">
+          Você usou todas as resoluções de hoje. O limite renova amanhã — ou{" "}
+          <Link to="/dashboard/subscriptions" className="font-semibold text-primary underline">mude de plano</Link>.
+        </div>
+      )}
 
       <Card>
         <CardContent className="space-y-3 pt-6">
@@ -141,6 +176,12 @@ function AiSolverPage() {
             <div className="whitespace-pre-wrap text-sm leading-relaxed text-foreground" aria-live="polite">
               {answer || "Analisando a questão..."}
             </div>
+            {saved && (
+              <p className="mt-4 flex items-center gap-2 text-sm text-primary">
+                <BookmarkCheck className="h-4 w-4" aria-hidden /> Salva no seu caderno.{" "}
+                <Link to="/dashboard/notebooks" className="underline">Abrir caderno</Link>
+              </p>
+            )}
           </CardContent>
         </Card>
       )}
