@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { Activity, FileStack, Loader2, Pencil, RefreshCw, Sparkles, Trash2, UserPlus, Users } from "lucide-react";
 import { createIsolatedSupabaseClient, supabase } from "@/integrations/supabase/client";
@@ -198,6 +198,7 @@ function AdminStudentsPage() {
                   </div>
                   <Badge variant="secondary">IA: {s.aiToday} hoje · {s.aiTotal} total</Badge>
                   <Button size="sm" variant="ghost" onClick={() => void toggleExams(s.id)}>Provas ({s.exams})</Button>
+                  <Button asChild size="sm" variant="outline"><Link to="/dashboard/admin-student/$id" params={{ id: s.id }}>Ver progresso</Link></Button>
                   <select aria-label={`Plano de ${s.full_name ?? s.email}`} value={s.subscription_tier} onChange={(e) => void changePlan(s.id, e.target.value)} className="h-9 rounded-md border border-input bg-background px-2 text-sm text-foreground">
                     {SUBSCRIPTION_PLANS.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
                   </select>

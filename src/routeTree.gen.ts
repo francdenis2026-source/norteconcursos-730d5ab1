@@ -46,6 +46,7 @@ import { Route as DashboardStudyToolsRouteImport } from './routes/dashboard/stud
 import { Route as DashboardSubscriptionsRouteImport } from './routes/dashboard/subscriptions'
 import { Route as DashboardTimerRouteImport } from './routes/dashboard/timer'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
+import { Route as DashboardAdminStudentIdRouteImport } from './routes/dashboard/admin-student.$id'
 import { Route as DashboardEditalIndexRouteImport } from './routes/dashboard/edital.index'
 import { Route as DashboardEditalTopicIdRouteImport } from './routes/dashboard/edital.$topicId'
 import { Route as DashboardLibraryIndexRouteImport } from './routes/dashboard/library.index'
@@ -237,6 +238,11 @@ const ApiPublicStripeWebhookRoute = ApiPublicStripeWebhookRouteImport.update({
   path: '/api/public/stripe-webhook',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DashboardAdminStudentIdRoute = DashboardAdminStudentIdRouteImport.update({
+  id: '/admin-student/$id',
+  path: '/admin-student/$id',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardEditalIndexRoute = DashboardEditalIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -296,6 +302,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
+  '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
   '/dashboard/edital/': typeof DashboardEditalIndexRoute
@@ -336,6 +343,7 @@ export interface FileRoutesByTo {
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
+  '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
   '/dashboard/edital': typeof DashboardEditalIndexRoute
@@ -380,6 +388,7 @@ export interface FileRoutesById {
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
+  '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
   '/dashboard/edital/': typeof DashboardEditalIndexRoute
@@ -425,6 +434,7 @@ export interface FileRouteTypes {
     | '/dashboard/timer'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
+    | '/dashboard/admin-student/$id'
     | '/dashboard/edital/$topicId'
     | '/dashboard/library/$slug'
     | '/dashboard/edital/'
@@ -465,6 +475,7 @@ export interface FileRouteTypes {
     | '/dashboard/timer'
     | '/dashboard'
     | '/api/public/stripe-webhook'
+    | '/dashboard/admin-student/$id'
     | '/dashboard/edital/$topicId'
     | '/dashboard/library/$slug'
     | '/dashboard/edital'
@@ -508,6 +519,7 @@ export interface FileRouteTypes {
     | '/dashboard/timer'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
+    | '/dashboard/admin-student/$id'
     | '/dashboard/edital/$topicId'
     | '/dashboard/library/$slug'
     | '/dashboard/edital/'
@@ -790,6 +802,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicStripeWebhookRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dashboard/admin-student/$id': {
+      id: '/dashboard/admin-student/$id'
+      path: '/admin-student/$id'
+      fullPath: '/dashboard/admin-student/$id'
+      preLoaderRoute: typeof DashboardAdminStudentIdRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/edital/': {
       id: '/dashboard/edital/'
       path: '/'
@@ -874,6 +893,7 @@ interface DashboardRouteChildren {
   DashboardSubscriptionsRoute: typeof DashboardSubscriptionsRoute
   DashboardTimerRoute: typeof DashboardTimerRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
+  DashboardAdminStudentIdRoute: typeof DashboardAdminStudentIdRoute
 }
 
 const DashboardRouteChildren: DashboardRouteChildren = {
@@ -902,6 +922,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardSubscriptionsRoute: DashboardSubscriptionsRoute,
   DashboardTimerRoute: DashboardTimerRoute,
   DashboardIndexRoute: DashboardIndexRoute,
+  DashboardAdminStudentIdRoute: DashboardAdminStudentIdRoute,
 }
 
 const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
