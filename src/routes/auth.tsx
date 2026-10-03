@@ -42,6 +42,7 @@ function AuthPage() {
   const [pin, setPin] = useState("");
   const [name, setName] = useState("");
   const [cpf, setCpf] = useState("");
+  const [login, setLogin] = useState("");
   const [showPin, setShowPin] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -62,18 +63,37 @@ function AuthPage() {
       if (mode === "register") {
         const cpfDigits = normalizeCpf(cpf);
         if (!validateCPF(cpfDigits)) throw new Error("CPF inválido. Confira os números.");
-        const { error } = await supabase.auth.signUp({
-          email: `${cpfDigits}@norteconcurso.local`,
+        const { data, error } = await supabase.auth.signUp({
+          email: email.trim().toLowerCase(),
           password: pin,
-          options: { data: { full_name: name, cpf: cpfDigits, contact_email: email } },
+          options: {
+            data: { full_name: name, cpf: cpfDigits },
+            emailRedirectTo: `${window.location.origin}/auth`,
+          },
         });
-        if (error) throw error;
-        toast.success("Conta criada! Agora você pode acessar com seu CPF.");
+        if (error) {
+          // O trigger de perfil rejeita CPF repetido; o Auth devolve isso como erro genérico.
+          if (/database error/i.test(error.message)) throw new Error("CPF ou e-mail já cadastrado.");
+          throw error;
+        }
+        if (data.session) {
+          toast.success("Conta criada!");
+          navigate({ to: "/dashboard" });
+        } else {
+          toast.success("Conta criada! Confirme seu e-mail pelo link que enviamos para entrar.");
+          setMode("login");
+        }
       } else {
-        const cpfDigits = normalizeCpf(cpf);
-        if (!validateCPF(cpfDigits)) throw new Error("CPF inválido. Confira os números.");
+        // Contas antigas entram pelo CPF (e-mail interno); contas novas, pelo e-mail real.
+        const id = login.trim();
+        let loginEmail = id.toLowerCase();
+        if (!id.includes("@")) {
+          const cpfDigits = normalizeCpf(id);
+          if (!validateCPF(cpfDigits)) throw new Error("CPF inválido. Confira os números.");
+          loginEmail = `${cpfDigits}@norteconcurso.local`;
+        }
         const { error } = await supabase.auth.signInWithPassword({
-          email: `${cpfDigits}@norteconcurso.local`,
+          email: loginEmail,
           password: pin,
         });
         if (error) throw error;
@@ -132,7 +152,7 @@ function AuthPage() {
             <h2>{mode === "login" ? "Acesse sua preparação" : "Crie sua conta gratuita"}</h2>
             <p>
               {mode === "login"
-                ? "Entre com seu CPF e continue de onde parou."
+                ? "Entre com seu e-mail (ou CPF, em contas antigas) e continue de onde parou."
                 : "Leva menos de dois minutos para começar."}
             </p>
           </div>
@@ -151,7 +171,7 @@ function AuthPage() {
             )}
             {mode === "register" && (
               <div className="auth-field">
-                <Label htmlFor="email">E-mail para contato</Label>
+                <Label htmlFor="email">E-mail</Label>
                 <div>
                   <Mail />
                   <Input
@@ -165,21 +185,37 @@ function AuthPage() {
                 </div>
               </div>
             )}
-            <div className="auth-field">
-              <Label htmlFor="cpf">CPF</Label>
-              <div>
-                <UserRound />
-                <Input
-                  id="cpf"
-                  inputMode="numeric"
-                  autoComplete="username"
-                  placeholder="000.000.000-00"
-                  value={cpf}
-                  onChange={(e) => setCpf(formatCpf(e.target.value))}
-                  required
-                />
+            {mode === "register" ? (
+              <div className="auth-field">
+                <Label htmlFor="cpf">CPF</Label>
+                <div>
+                  <UserRound />
+                  <Input
+                    id="cpf"
+                    inputMode="numeric"
+                    placeholder="000.000.000-00"
+                    value={cpf}
+                    onChange={(e) => setCpf(formatCpf(e.target.value))}
+                    required
+                  />
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="auth-field">
+                <Label htmlFor="login">E-mail ou CPF</Label>
+                <div>
+                  <UserRound />
+                  <Input
+                    id="login"
+                    autoComplete="username"
+                    placeholder="seuemail@exemplo.com ou CPF"
+                    value={login}
+                    onChange={(e) => setLogin(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+            )}
             <div className="auth-field">
               <div className="flex items-center justify-between">
                 <Label htmlFor="pin">Senha de acesso</Label>
