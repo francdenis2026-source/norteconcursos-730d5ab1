@@ -8,8 +8,9 @@
   <linearGradient id="fbrass" x1="0" y1="0" x2="1" y2="1">
     <stop offset="0" stop-color="#f8df8f"/><stop offset="1" stop-color="#d49a2c"/>
   </linearGradient></defs>
-  <path d="M32 4 54 11.5V30C54 44.5 45 55 32 60.5 19 55 10 44.5 10 30V11.5Z" fill="url(#fbody)" stroke="url(#frim)" stroke-width="2.2" stroke-linejoin="round"/>
-  
-  <path d="M24.2 24H24.4L39.8 40V47H39.6L24.2 31Z" fill="url(#fbrass)"/>
-  <path d="M20 47V24H24.2V47ZM39.8 24H44V47H39.8Z" fill="#f7f1df"/>
-  <path d="M32 10.8 33.5 15 37.7 16.5 33.5 18 32 22.2 30.5 18 26.3 16.5 30.5 15Z" fill="url(#fbrass)"/></svg>
+  <path d="M32 2.5 57 10.5V31C57 46.5 46.5 57 32 61.5 17.5 57 7 46.5 7 31V10.5Z" fill="url(#fbody)" stroke="url(#frim)" stroke-width="2.6" stroke-linejoin="round"/>
+  <g transform="translate(32 38) scale(1.28) translate(-32 -38)">
+    <path d="M24.2 24H24.4L39.8 40V47H39.6L24.2 31Z" fill="url(#fbrass)"/>
+    <path d="M20 47V24H24.2V47ZM39.8 24H44V47H39.8Z" fill="#f7f1df"/>
+  </g>
+  <path d="M32 8.6 33.7 13.3 38.4 15 33.7 16.7 32 21.4 30.3 16.7 25.6 15 30.3 13.3Z" fill="url(#fbrass)"/></svg>
