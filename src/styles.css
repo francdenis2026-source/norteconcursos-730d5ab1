@@ -1281,9 +1281,9 @@ html {
 }
 .lp-acre__fill {
   background:
-    linear-gradient(180deg, transparent 0%, oklch(0.12 0.03 263 / 0.6) 100%),
-    linear-gradient(120deg, oklch(0.8 0.13 78 / 0.18), transparent 60%),
-    url("/media/acre-floresta.webp") center / cover;
+    linear-gradient(180deg, transparent 0%, oklch(0.12 0.03 263 / 0.55) 100%),
+    linear-gradient(120deg, oklch(0.8 0.13 78 / 0.14), transparent 60%),
+    url("/media/acre-seguranca.jpg") center / cover;
 }
 .lp-acre__sheen {
   overflow: hidden;
