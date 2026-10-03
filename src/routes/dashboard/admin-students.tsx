@@ -228,11 +228,14 @@ function NewStudentForm({ onCreated }: { onCreated: () => void }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [tier, setTier] = useState("free");
   const [busy, setBusy] = useState(false);
 
   async function submit(e: FormEvent) {
     e.preventDefault();
-    if (!name.trim() || !/^\S+@\S+\.\S+$/.test(email) || password.length < 6) {
+    const cleanName = normalizeUppercase(name.trim()).slice(0, 120);
+    const cleanEmail = email.trim().toLowerCase();
+    if (!cleanName || !/^\S+@\S+\.\S+$/.test(cleanEmail) || cleanEmail.length > 255 || password.length < 6) {
       toast.error("Preencha nome, e-mail válido e senha com 6+ caracteres.");
       return;
     }
@@ -240,14 +243,21 @@ function NewStudentForm({ onCreated }: { onCreated: () => void }) {
     try {
       // Cliente separado, sem guardar sessão: cria o aluno sem desconectar o administrador.
       const temp = createIsolatedSupabaseClient("nc-admin-create");
-      const { error } = await temp.auth.signUp({
-        email: email.trim().toLowerCase(),
+      const { data, error } = await temp.auth.signUp({
+        email: cleanEmail,
         password,
-        options: { data: { full_name: normalizeUppercase(name.trim()) } },
+        options: { data: { full_name: cleanName } },
       });
       if (error) throw error;
+      const newId = data.user?.id;
+      if (newId && tier !== "free") {
+        // O perfil é criado junto com a conta; o admin aplica o plano escolhido.
+        const { error: pErr } = await supabase.from("profiles").update({ subscription_tier: tier, is_activated: true }).eq("id", newId);
+        if (pErr) toast.warning("Aluno criado, mas o plano não foi aplicado. Ajuste na lista.");
+        else await supabase.from("subscription_audit_logs").insert({ user_id: newId, event_type: "admin_change", new_tier: tier, metadata: { source: "admin_create" } });
+      }
       toast.success("Aluno cadastrado. Ele pode precisar confirmar o e-mail.");
-      setName(""); setEmail(""); setPassword("");
+      setName(""); setEmail(""); setPassword(""); setTier("free");
       onCreated();
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Falha ao cadastrar aluno.");
@@ -262,8 +272,11 @@ function NewStudentForm({ onCreated }: { onCreated: () => void }) {
         <CardTitle className="flex items-center gap-2"><UserPlus className="h-5 w-5" aria-hidden /> Cadastrar aluno</CardTitle>
       </CardHeader>
       <CardContent>
-        <form onSubmit={submit} className="grid grid-cols-1 gap-3 md:grid-cols-4">
-          <Input aria-label="Nome" placeholder="Nome completo" value={name} onChange={(e) => setName(normalizeUppercase(e.target.value))} className="uppercase" />
+        <form onSubmit={submit} className="grid grid-cols-1 gap-3 md:grid-cols-5">
+          <select aria-label="Plano do novo aluno" value={tier} onChange={(e) => setTier(e.target.value)} className="order-4 h-9 rounded-md border border-input bg-background px-2 text-sm text-foreground">
+            {SUBSCRIPTION_PLANS.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
+          </select>
+          <Input aria-label="Nome" placeholder="Nome completo" maxLength={120} value={name} onChange={(e) => setName(normalizeUppercase(e.target.value))} className="order-1 uppercase" />
           <Input aria-label="E-mail" type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
           <Input aria-label="Senha inicial" type="password" placeholder="Senha inicial" value={password} onChange={(e) => setPassword(e.target.value)} />
           <Button type="submit" disabled={busy}>{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : "Cadastrar"}</Button>
