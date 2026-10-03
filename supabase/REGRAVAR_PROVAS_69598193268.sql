@@ -196,7 +196,7 @@ cross join src
 cross join edition
 join topic_map tm on imported.item_number between tm.item_from and tm.item_to
 join public.syllabus_topics t on t.edition_id=edition.id and t.discipline=coalesce(tm.discipline,'Geral')
-on conflict (exam_year,item_number) do update set
+on conflict (contest_name,career_name,exam_year,item_number) do update set
   question_text=excluded.question_text, official_answer=excluded.official_answer,
   content_status=excluded.content_status, review_note=excluded.review_note;
 
@@ -444,7 +444,7 @@ cross join src
 cross join edition
 join topic_map tm on imported.item_number between tm.item_from and tm.item_to
 join public.syllabus_topics t on t.edition_id=edition.id and t.discipline=coalesce(tm.discipline,'Geral')
-on conflict (exam_year,item_number) do update set
+on conflict (contest_name,career_name,exam_year,item_number) do update set
   question_text=excluded.question_text, official_answer=excluded.official_answer,
   content_status=excluded.content_status, review_note=excluded.review_note;
 
@@ -1083,7 +1083,7 @@ cross join src
 cross join edition
 join topic_map tm on imported.item_number between tm.item_from and tm.item_to
 join public.syllabus_topics t on t.edition_id=edition.id and t.discipline=coalesce(tm.discipline,'Geral')
-on conflict (exam_year,item_number) do update set
+on conflict (contest_name,career_name,exam_year,item_number) do update set
   question_text=excluded.question_text, official_answer=excluded.official_answer,
   content_status=excluded.content_status, review_note=excluded.review_note;
 
@@ -1337,7 +1337,7 @@ cross join src
 cross join edition
 join topic_map tm on imported.item_number between tm.item_from and tm.item_to
 join public.syllabus_topics t on t.edition_id=edition.id and t.discipline=coalesce(tm.discipline,'Geral')
-on conflict (exam_year,item_number) do update set
+on conflict (contest_name,career_name,exam_year,item_number) do update set
   question_text=excluded.question_text, official_answer=excluded.official_answer,
   content_status=excluded.content_status, review_note=excluded.review_note;
 
@@ -1610,7 +1610,7 @@ cross join src
 cross join edition
 join topic_map tm on gabarito.item_number between tm.item_from and tm.item_to
 join public.syllabus_topics t on t.edition_id=edition.id and t.discipline=coalesce(tm.discipline,'Geral')
-on conflict (exam_year,item_number) do update set
+on conflict (contest_name,career_name,exam_year,item_number) do update set
   official_answer=excluded.official_answer, content_status=excluded.content_status, review_note=excluded.review_note;
 
 -- Student's own graded attempt (Franc Denis, CPF 69598193268), caderno S01 -

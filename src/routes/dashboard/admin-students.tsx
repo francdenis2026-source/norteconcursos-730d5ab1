@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { toast } from "sonner";
-import { Activity, FileStack, Loader2, RefreshCw, Sparkles, UserPlus, Users } from "lucide-react";
+import { Activity, FileStack, Loader2, Pencil, RefreshCw, Sparkles, Trash2, UserPlus, Users } from "lucide-react";
 import { createIsolatedSupabaseClient, supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
@@ -55,6 +55,8 @@ function AdminStudentsPage() {
   const [filter, setFilter] = useState("");
   const [openId, setOpenId] = useState<string | null>(null);
   const [exams, setExams] = useState<ExamRow[]>([]);
+  const [editId, setEditId] = useState<string | null>(null);
+  const [editName, setEditName] = useState("");
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -106,6 +108,25 @@ function AdminStudentsPage() {
     await supabase.from("subscription_audit_logs").insert({ user_id: id, event_type: "admin_change", new_tier: tier, metadata: { source: "admin_students" } });
     setRows((r) => r.map((x) => (x.id === id ? { ...x, subscription_tier: tier } : x)));
     toast.success("Plano atualizado.");
+  }
+
+  async function saveName(id: string) {
+    const name = normalizeUppercase(editName.trim());
+    if (!name) { toast.error("Informe o nome."); return; }
+    const { error: e } = await supabase.from("profiles").update({ full_name: name }).eq("id", id);
+    if (e) { toast.error("Não foi possível salvar."); return; }
+    setRows((r) => r.map((x) => (x.id === id ? { ...x, full_name: name } : x)));
+    setEditId(null);
+    toast.success("Aluno atualizado.");
+  }
+
+  async function removeStudent(s: StudentRow) {
+    const label = s.full_name || s.email || "este aluno";
+    if (!window.confirm(`Excluir ${label}? A conta, provas e histórico serão apagados de forma permanente.`)) return;
+    const { error: e } = await supabase.rpc("admin_delete_user", { _user_id: s.id });
+    if (e) { toast.error(e.message || "Não foi possível excluir."); return; }
+    setRows((r) => r.filter((x) => x.id !== s.id));
+    toast.success("Aluno excluído.");
   }
 
   async function toggleExams(id: string) {
@@ -164,14 +185,25 @@ function AdminStudentsPage() {
               <div key={s.id} className="rounded-lg border border-border bg-card p-3">
                 <div className="flex flex-wrap items-center gap-3">
                   <div className="min-w-0 flex-1">
-                    <p className="truncate font-medium text-foreground">{s.full_name || "Sem nome"}</p>
+                    {editId === s.id ? (
+                      <form className="flex gap-2" onSubmit={(e) => { e.preventDefault(); void saveName(s.id); }}>
+                        <Input aria-label="Nome do aluno" value={editName} onChange={(e) => setEditName(normalizeUppercase(e.target.value))} className="h-8 uppercase" autoFocus />
+                        <Button size="sm" type="submit">Salvar</Button>
+                        <Button size="sm" type="button" variant="ghost" onClick={() => setEditId(null)}>Cancelar</Button>
+                      </form>
+                    ) : (
+                      <p className="truncate font-medium text-foreground">{s.full_name || "Sem nome"}</p>
+                    )}
                     <p className="truncate text-xs text-muted-foreground">{s.email}</p>
                   </div>
                   <Badge variant="secondary">IA: {s.aiToday} hoje · {s.aiTotal} total</Badge>
                   <Button size="sm" variant="ghost" onClick={() => void toggleExams(s.id)}>Provas ({s.exams})</Button>
+                  <Button asChild size="sm" variant="outline"><Link to="/dashboard/admin-student/$id" params={{ id: s.id }}>Ver progresso</Link></Button>
                   <select aria-label={`Plano de ${s.full_name ?? s.email}`} value={s.subscription_tier} onChange={(e) => void changePlan(s.id, e.target.value)} className="h-9 rounded-md border border-input bg-background px-2 text-sm text-foreground">
                     {SUBSCRIPTION_PLANS.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
                   </select>
+                  <Button size="icon" variant="ghost" aria-label={`Editar ${s.full_name ?? s.email}`} onClick={() => { setEditId(s.id); setEditName(s.full_name ?? ""); }}><Pencil className="h-4 w-4" /></Button>
+                  <Button size="icon" variant="ghost" className="text-destructive hover:bg-destructive/10" aria-label={`Excluir ${s.full_name ?? s.email}`} onClick={() => void removeStudent(s)}><Trash2 className="h-4 w-4" /></Button>
                 </div>
                 {openId === s.id && (
                   <ul className="mt-3 space-y-1 border-t border-border pt-3 text-sm">
@@ -196,11 +228,14 @@ function NewStudentForm({ onCreated }: { onCreated: () => void }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [tier, setTier] = useState("free");
   const [busy, setBusy] = useState(false);
 
   async function submit(e: FormEvent) {
     e.preventDefault();
-    if (!name.trim() || !/^\S+@\S+\.\S+$/.test(email) || password.length < 6) {
+    const cleanName = normalizeUppercase(name.trim()).slice(0, 120);
+    const cleanEmail = email.trim().toLowerCase();
+    if (!cleanName || !/^\S+@\S+\.\S+$/.test(cleanEmail) || cleanEmail.length > 255 || password.length < 6) {
       toast.error("Preencha nome, e-mail válido e senha com 6+ caracteres.");
       return;
     }
@@ -208,14 +243,21 @@ function NewStudentForm({ onCreated }: { onCreated: () => void }) {
     try {
       // Cliente separado, sem guardar sessão: cria o aluno sem desconectar o administrador.
       const temp = createIsolatedSupabaseClient("nc-admin-create");
-      const { error } = await temp.auth.signUp({
-        email: email.trim().toLowerCase(),
+      const { data, error } = await temp.auth.signUp({
+        email: cleanEmail,
         password,
-        options: { data: { full_name: normalizeUppercase(name.trim()) } },
+        options: { data: { full_name: cleanName } },
       });
       if (error) throw error;
+      const newId = data.user?.id;
+      if (newId && tier !== "free") {
+        // O perfil nasce junto com a conta; o admin aplica o plano escolhido.
+        const { error: pErr } = await supabase.from("profiles").update({ subscription_tier: tier, is_activated: true }).eq("id", newId);
+        if (pErr) toast.warning("Aluno criado, mas o plano não foi aplicado. Ajuste na lista.");
+        else await supabase.from("subscription_audit_logs").insert({ user_id: newId, event_type: "admin_change", new_tier: tier, metadata: { source: "admin_create" } });
+      }
       toast.success("Aluno cadastrado. Ele pode precisar confirmar o e-mail.");
-      setName(""); setEmail(""); setPassword("");
+      setName(""); setEmail(""); setPassword(""); setTier("free");
       onCreated();
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Falha ao cadastrar aluno.");
@@ -230,10 +272,13 @@ function NewStudentForm({ onCreated }: { onCreated: () => void }) {
         <CardTitle className="flex items-center gap-2"><UserPlus className="h-5 w-5" aria-hidden /> Cadastrar aluno</CardTitle>
       </CardHeader>
       <CardContent>
-        <form onSubmit={submit} className="grid grid-cols-1 gap-3 md:grid-cols-4">
-          <Input aria-label="Nome" placeholder="Nome completo" value={name} onChange={(e) => setName(normalizeUppercase(e.target.value))} className="uppercase" />
-          <Input aria-label="E-mail" type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <form onSubmit={submit} className="grid grid-cols-1 gap-3 md:grid-cols-5">
+          <Input aria-label="Nome" placeholder="Nome completo" maxLength={120} value={name} onChange={(e) => setName(normalizeUppercase(e.target.value))} className="uppercase" />
+          <Input aria-label="E-mail" type="email" placeholder="E-mail" maxLength={255} value={email} onChange={(e) => setEmail(e.target.value)} />
           <Input aria-label="Senha inicial" type="password" placeholder="Senha inicial" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <select aria-label="Plano do novo aluno" value={tier} onChange={(e) => setTier(e.target.value)} className="h-9 rounded-md border border-input bg-background px-2 text-sm text-foreground">
+            {SUBSCRIPTION_PLANS.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
+          </select>
           <Button type="submit" disabled={busy}>{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : "Cadastrar"}</Button>
         </form>
       </CardContent>
