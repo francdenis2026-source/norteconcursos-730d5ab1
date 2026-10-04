@@ -45,6 +45,7 @@ import { PageHero } from "@/components/dashboard/PageHero";
 import { LibraryAdmin } from "@/components/library/LibraryAdmin";
 import { Download } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { confirmDialog } from "@/lib/confirm";
 
 interface AdminExamUploadRow {
   id: string;
@@ -229,7 +230,7 @@ function AdminPanel() {
   }, []);
 
   const handleDeleteContest = async (id: string) => {
-    if (!confirm("Tem certeza que deseja excluir este concurso?")) return;
+    if (!(await confirmDialog({ title: "Excluir concurso?", message: "O concurso será removido da plataforma.", confirmLabel: "Excluir" }))) return;
     const success = await MockService.deleteContest(id);
     if (success) {
       toast.success("Concurso excluído com sucesso");
@@ -240,7 +241,7 @@ function AdminPanel() {
   };
 
   const handleDeleteQuestion = async (id: string) => {
-    if (!confirm("Tem certeza que deseja excluir esta questão?")) return;
+    if (!(await confirmDialog({ title: "Excluir questão?", message: "A questão será removida da plataforma.", confirmLabel: "Excluir" }))) return;
     const success = await MockService.deleteQuestion(id);
     if (success) {
       toast.success("Questão excluída com sucesso");

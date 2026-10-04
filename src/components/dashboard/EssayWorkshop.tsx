@@ -2,6 +2,7 @@ import React from "react";
 import { toast } from "sonner";
 import { Bot, FilePlus2, Save, Trash2, CheckSquare, Square } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { confirmDialog } from "@/lib/confirm";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -172,7 +173,7 @@ function EssayNotebook({ userId }: { userId: string }) {
   };
 
   const remove = async (e: SavedEssay) => {
-    if (!window.confirm(`Excluir "${e.title}"? Essa ação não pode ser desfeita.`)) return;
+    if (!(await confirmDialog({ title: "Excluir redação?", message: `"${e.title}" será apagada. Essa ação não pode ser desfeita.`, confirmLabel: "Excluir" }))) return;
     const { error } = await supabase.from("user_essays").delete().eq("id", e.id);
     if (error) {
       toast.error("Não foi possível excluir.");

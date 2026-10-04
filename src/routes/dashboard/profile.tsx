@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { useAuthStatus } from '@/hooks/useDashboard';
 import { supabase } from '@/integrations/supabase/client';
+import { confirmDialog } from '@/lib/confirm';
 import { toast } from 'sonner';
 import { MockService } from '@/services/mockService';
 import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap, RefreshCw, History as HistoryIcon } from 'lucide-react';
@@ -165,7 +166,7 @@ function ProfilePage() {
 
   const handleCancelSubscription = async () => {
     const reason = 'Solicitado pelo próprio usuário via painel de perfil.';
-    if (!confirm('Tem certeza que deseja cancelar sua assinatura? Você perderá o acesso aos recursos Premium ao final do ciclo de 30 dias.')) return;
+    if (!(await confirmDialog({ title: 'Cancelar assinatura?', message: 'Você perderá o acesso aos recursos Premium ao final do ciclo de 30 dias.', confirmLabel: 'Cancelar assinatura', cancelLabel: 'Manter plano' }))) return;
     
     setIsUpdating(true);
     try {

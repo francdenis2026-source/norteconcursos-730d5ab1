@@ -14,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { normalizeUppercase } from "@/lib/utils";
+import { confirmDialog } from "@/lib/confirm";
 import { StudentDetailsDialog, fmtDateTime } from "@/components/dashboard/StudentDetailsDialog";
 
 export const Route = createFileRoute("/dashboard/admin-students")({
@@ -158,7 +159,7 @@ function AdminStudentsPage() {
     const msg = promote
       ? `Tornar ${label} ADMINISTRADOR? Ele passará a ver e alterar os dados de todos os alunos.`
       : `Remover o acesso de administrador de ${label}?`;
-    if (!window.confirm(msg)) return;
+    if (!(await confirmDialog({ title: promote ? "Tornar administrador?" : "Remover administrador?", message: msg, confirmLabel: promote ? "Tornar administrador" : "Remover acesso", tone: promote ? "default" : "danger" }))) return;
     const { error: e } = promote
       ? await supabase.from("user_roles").upsert({ user_id: s.id, role: "admin" }, { onConflict: "user_id,role" })
       : await supabase.from("user_roles").delete().eq("user_id", s.id).eq("role", "admin");
@@ -179,7 +180,7 @@ function AdminStudentsPage() {
 
   async function removeStudent(s: StudentRow) {
     const label = s.full_name || s.email || "este aluno";
-    if (!window.confirm(`Excluir ${label}? A conta, provas e histórico serão apagados de forma permanente.`)) return;
+    if (!(await confirmDialog({ title: "Excluir aluno?", message: `${label}: a conta, as provas e o histórico serão apagados de forma permanente.`, confirmLabel: "Excluir aluno" }))) return;
     const { error: e } = await supabase.rpc("admin_delete_user", { _user_id: s.id });
     if (e) { toast.error(e.message || "Não foi possível excluir."); return; }
     setRows((r) => r.filter((x) => x.id !== s.id));

@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { Download, Loader2, PiggyBank, Plus, RefreshCw, Trash2, TrendingDown, TrendingUp, Users, Wallet } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { confirmDialog } from "@/lib/confirm";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { acreDateKey } from "@/lib/acreTime";
@@ -170,7 +171,7 @@ function AdminFinancePage() {
 
   async function removeEntry(entry: Entry) {
     const label = `${categoryLabel(entry.kind, entry.category)} de ${formatBRL(entry.amount_cents)} em ${dayLabel(entry.entry_date)}`;
-    if (!window.confirm(`Excluir o lançamento ${label}? Isso não pode ser desfeito.`)) return;
+    if (!(await confirmDialog({ title: "Excluir lançamento?", message: `${label}. Isso não pode ser desfeito.`, confirmLabel: "Excluir" }))) return;
     const { error: err } = await supabase.from("finance_entries").delete().eq("id", entry.id);
     if (err) { toast.error("Não foi possível excluir."); return; }
     setEntries((list) => list.filter((x) => x.id !== entry.id));

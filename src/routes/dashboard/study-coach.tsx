@@ -13,18 +13,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { LockedState, PageHero } from "@/components/dashboard/PageHero";
-import {
-  buildPlan,
-  buildSchedule,
-  CAREERS,
-  DAY_NAMES,
-  diffShares,
-  type BlockKind,
-  type CareerId,
-  type Experience,
-  type SubjectStat,
-} from "@/lib/studyEngine";
+import { buildPlan, CAREERS, diffShares, type CareerId, type Experience, type SubjectStat } from "@/lib/studyEngine";
+import { buildSchedule, DAY_NAMES } from "@/lib/studySchedule";
+import { StudyRecord, WeekChecklist, type CheckRow } from "@/components/dashboard/StudyChecklist";
 import { cn } from "@/lib/utils";
+import { confirmDialog } from "@/lib/confirm";
 
 export const Route = createFileRoute("/dashboard/study-coach")({ component: StudyCoachPage });
 
@@ -37,6 +30,7 @@ interface Profile {
   hours_per_week: number;
   study_days: number[];
   essay: boolean;
+  start_time: string;
   last_plan: { at: string; shares: Record<string, number> } | null;
 }
 type Draft = Omit<Profile, "id" | "last_plan">;
@@ -48,15 +42,15 @@ const EXPERIENCE: [Experience, string, string][] = [
 ];
 const HOURS = [5, 8, 10, 15, 20, 25, 30, 40];
 const WEEK_ORDER = [1, 2, 3, 4, 5, 6, 0]; // segunda → domingo
-const KIND_STYLE: Record<BlockKind, string> = {
-  Teoria: "border-sky-500/40 bg-sky-500/10",
-  Questões: "border-emerald-500/40 bg-emerald-500/10",
-  "Revisão de erros": "border-amber-500/40 bg-amber-500/10",
-  Redação: "border-violet-500/40 bg-violet-500/10",
-  Simulado: "border-rose-500/40 bg-rose-500/10",
-};
+const START_TIMES = ["06:00", "07:00", "08:00", "12:00", "14:00", "16:00", "18:00", "19:00", "20:00", "21:00"];
 
-const fmtMin = (m: number) => (m >= 60 ? `${Math.floor(m / 60)}h${m % 60 ? String(m % 60).padStart(2, "0") : ""}` : `${m}min`);
+/** Segunda-feira da semana atual (fuso do Acre) em yyyy-mm-dd. */
+function acreWeekStart(now = new Date()): string {
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(now); // yyyy-mm-dd
+  const d = new Date(`${today}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+  return d.toISOString().slice(0, 10);
+}
 
 function Wizard({ initial, onSave, onCancel }: { initial: Profile | null; onSave: (d: Draft) => Promise<void>; onCancel?: () => void }) {
   const [step, setStep] = React.useState(0);
@@ -67,6 +61,7 @@ function Wizard({ initial, onSave, onCancel }: { initial: Profile | null; onSave
   const [hours, setHours] = React.useState(initial?.hours_per_week ?? 10);
   const [days, setDays] = React.useState<number[]>(initial?.study_days ?? [1, 2, 3, 4, 5, 6]);
   const [essay, setEssay] = React.useState<boolean | null>(initial ? initial.essay : null);
+  const [startTime, setStartTime] = React.useState(initial?.start_time ?? "19:00");
   const [busy, setBusy] = React.useState(false);
 
   const steps = ["Experiência", "Objetivo", "Disponibilidade", "Redação"];
@@ -76,7 +71,7 @@ function Wizard({ initial, onSave, onCancel }: { initial: Profile | null; onSave
   async function finish() {
     if (!experience || essay === null) return;
     setBusy(true);
-    await onSave({ name: name.trim() || null, experience, career, exam_date: examDate || null, hours_per_week: hours, study_days: days, essay });
+    await onSave({ name: name.trim() || null, experience, career, exam_date: examDate || null, hours_per_week: hours, study_days: days, essay, start_time: startTime });
     setBusy(false);
   }
 
@@ -143,6 +138,18 @@ function Wizard({ initial, onSave, onCancel }: { initial: Profile | null; onSave
               <p className="text-xs text-muted-foreground">Seja realista: é melhor cumprir 8 horas do que prometer 25 e desistir.</p>
             </div>
             <div className="space-y-3">
+              <Label>A que horas você costuma começar a estudar?</Label>
+              <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Horário de início">
+                {START_TIMES.map((t) => (
+                  <button key={t} type="button" role="radio" aria-checked={startTime === t} onClick={() => setStartTime(t)}
+                    className={cn("rounded-full border px-4 py-2 text-sm font-semibold tabular-nums", startTime === t ? "border-primary bg-primary text-primary-foreground" : "hover:border-primary/50")}>
+                    {t}
+                  </button>
+                ))}
+              </div>
+              <p className="text-xs text-muted-foreground">Nos fins de semana o cronograma começa pela manhã, se você escolher um horário à noite.</p>
+            </div>
+            <div className="space-y-3">
               <Label>Em quais dias da semana você estuda?</Label>
               <div className="flex flex-wrap gap-2" role="group" aria-label="Dias de estudo">
                 {WEEK_ORDER.map((d) => (
@@ -206,18 +213,25 @@ function StudyCoachPage() {
   const [hoursStudied, setHoursStudied] = React.useState(0);
   const [loading, setLoading] = React.useState(true);
   const [mode, setMode] = React.useState<Mode>({ kind: "view" });
+  const [checks, setChecks] = React.useState<CheckRow[]>([]);
   const real = !!user && user.id !== "demo-user";
 
   const load = React.useCallback(async () => {
     if (!user) return;
-    const [p, s, h] = await Promise.all([
+    const [p, s, h, c] = await Promise.all([
       supabase.from("study_profiles")
-        .select("id,name,experience,career,exam_date,hours_per_week,study_days,essay,last_plan")
+        .select("id,name,experience,career,exam_date,hours_per_week,study_days,essay,start_time,last_plan")
         .eq("user_id", user.id)
         .order("updated_at", { ascending: false }),
       supabase.rpc("my_subject_stats"),
       supabase.rpc("my_study_hours"),
+      supabase.from("study_plan_checks")
+        .select("plan_id,week_start,block_key,subject,kind,topics,minutes,done_at")
+        .eq("user_id", user.id)
+        .order("done_at", { ascending: false })
+        .limit(2000),
     ]);
+    setChecks((c.data as CheckRow[] | null) ?? []);
     const list = (p.data as Profile[] | null) ?? [];
     setPlans(list);
     setSelectedId((cur) => (cur && list.some((x) => x.id === cur) ? cur : (list[0]?.id ?? null)));
@@ -237,7 +251,20 @@ function StudyCoachPage() {
     () => profile ? buildPlan({ experience: profile.experience, career: profile.career, examDate: profile.exam_date, hoursPerWeek: profile.hours_per_week, stats, hoursStudied }) : null,
     [profile, stats, hoursStudied],
   );
-  const schedule = React.useMemo(() => (plan && profile ? buildSchedule(plan, profile.study_days, profile.essay) : []), [plan, profile]);
+  const weekStart = React.useMemo(() => acreWeekStart(), []);
+  const weekIndex = Math.floor(new Date(`${weekStart}T00:00:00Z`).getTime() / (7 * 86_400_000));
+  // Blocos de teoria concluídos em semanas anteriores: os assuntos seguem de onde o aluno parou.
+  const doneBefore = React.useMemo(() => {
+    const m: Record<string, number> = {};
+    for (const c of checks) {
+      if (c.plan_id === profile?.id && c.kind === "Teoria" && c.week_start < weekStart) m[c.subject] = (m[c.subject] ?? 0) + 1;
+    }
+    return m;
+  }, [checks, profile?.id, weekStart]);
+  const schedule = React.useMemo(
+    () => (plan && profile ? buildSchedule(plan, profile.study_days, profile.essay, { weekIndex, startTime: profile.start_time, doneBefore }) : []),
+    [plan, profile, weekIndex, doneBefore],
+  );
   const changes = React.useMemo(() => (plan ? diffShares(profile?.last_plan?.shares, plan.subjects) : []), [plan, profile]);
 
   // Guarda uma "foto" do plano a cada 7 dias para mostrar o que mudou desde então.
@@ -264,7 +291,7 @@ function StudyCoachPage() {
 
   async function remove(p: Profile) {
     const label = p.name || CAREERS.find((c) => c.id === p.career)?.name || "este plano";
-    if (!window.confirm(`Excluir "${label}"? O cronograma e os ajustes deste plano serão apagados. Seu histórico de questões não é afetado.`)) return;
+    if (!(await confirmDialog({ title: "Excluir plano?", message: `"${label}": o cronograma e os ajustes serão apagados. Seu histórico de questões e seu registro de estudos não são afetados.`, confirmLabel: "Excluir plano" }))) return;
     const { error } = await supabase.from("study_profiles").delete().eq("id", p.id);
     if (error) { toast.error("Não foi possível excluir."); return; }
     toast.success("Plano excluído.");
@@ -345,50 +372,20 @@ function StudyCoachPage() {
             </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Cronograma da semana</CardTitle>
-              <CardDescription>
-                {schedule.length} dias de estudo · {fmtMin(schedule.reduce((n, d) => n + d.minutes, 0))} no total.
-                Cada bloco abre a ferramenta certa. O cronograma se reorganiza quando seu desempenho muda.
-              </CardDescription>
-              <div className="flex flex-wrap gap-2 pt-1 text-[0.7rem]">
-                {(Object.keys(KIND_STYLE) as BlockKind[]).filter((k) => k !== "Redação" || profile.essay).map((k) => (
-                  <span key={k} className={cn("rounded-full border px-2.5 py-0.5 font-semibold", KIND_STYLE[k])}>{k}</span>
-                ))}
-              </div>
-            </CardHeader>
-            <CardContent>
-              <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-                {schedule.map((d) => (
-                  <section key={d.day} className="rounded-xl border bg-card p-3" aria-label={DAY_NAMES[d.day]}>
-                    <div className="mb-2 flex items-baseline justify-between">
-                      <h3 className="text-sm font-bold">{DAY_NAMES[d.day]}</h3>
-                      <span className="text-xs tabular-nums text-muted-foreground">{fmtMin(d.minutes)}</span>
-                    </div>
-                    <ul className="space-y-1.5">
-                      {d.blocks.map((b, i) => (
-                        <li key={i}>
-                          <Link to={b.href} className={cn("flex items-center justify-between gap-2 rounded-lg border px-2.5 py-1.5 text-xs transition-colors hover:brightness-95", KIND_STYLE[b.kind])}>
-                            <span className="min-w-0">
-                              <span className="block truncate font-semibold">{b.subject}</span>
-                              <span className="block text-[0.68rem] text-muted-foreground">{b.kind}</span>
-                            </span>
-                            <span className="shrink-0 font-bold tabular-nums">{fmtMin(b.minutes)}</span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
-                ))}
-              </div>
-              {profile.study_days.length < 7 && (
-                <p className="mt-3 text-xs text-muted-foreground">
-                  Dias sem estudo: {WEEK_ORDER.filter((d) => !profile.study_days.includes(d)).map((d) => DAY_NAMES[d]).join(", ")}. Descanso também faz parte do plano.
-                </p>
-              )}
-            </CardContent>
-          </Card>
+          {user && (
+            <WeekChecklist
+              userId={user.id}
+              planId={profile.id}
+              weekStart={weekStart}
+              schedule={schedule}
+              checks={checks}
+              onChange={() => void load()}
+              hasEssay={profile.essay}
+              restDays={WEEK_ORDER.filter((d) => !profile.study_days.includes(d)).map((d) => DAY_NAMES[d] ?? "")}
+            />
+          )}
+
+          <StudyRecord checks={checks} planId={profile.id} />
 
           {changes.length > 0 && (
             <Card className="border-primary/40">
