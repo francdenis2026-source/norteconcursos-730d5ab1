@@ -979,7 +979,6 @@ html {
   font-weight: 800;
   line-height: 0.94;
   letter-spacing: -0.025em;
-  text-shadow: 0 1px 3px oklch(0.05 0.02 262 / 0.8);
 }
 .lp-hero__title em {
   display: block;
