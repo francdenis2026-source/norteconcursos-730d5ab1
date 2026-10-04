@@ -556,62 +556,14 @@ export const MockService = {
         if (!error && data) return data.map((a: any) => a.achievement);
       }
       
-      const local = localStorage.getItem('norte_user_achievements');
-      const initial = [
-        { id: '1', code: 'FIRST_10', name: 'Primeiras 10', description: 'Resolveu suas primeiras 10 questões.', icon_url: 'award' },
-        { id: '2', code: 'PERFECT_SCORE', name: 'Gabarito', description: 'Acertou 100% de um simulado.', icon_url: 'star' }
-      ];
-      if (!local) {
-        localStorage.setItem('norte_user_achievements', JSON.stringify(initial));
-        return initial;
-      }
-      return JSON.parse(local);
+      // Sem conta não há medalhas: nada de dados de exemplo.
+      return [];
     } catch (e) {
       return [];
     }
   },
 
   // Ranking Panel with Anonymous Comparisons
-  getMockExamRanking: async (contestId?: string): Promise<any[]> => {
-    try {
-      const { data, error } = await supabase
-        .from('mock_exam_results')
-        .select(`
-          correct_answers,
-          total_questions,
-          user_id,
-          profiles:user_id (full_name)
-        `)
-        .order('correct_answers', { ascending: false })
-        .limit(10);
-      
-      if (error || !data || data.length === 0) {
-        const { data: { session } } = await supabase.auth.getSession();
-        const mockRanking = [
-          { id: '1', name: 'Estudante Alfa', score: 48, total: 50 },
-          { id: '2', name: 'Concurseiro Beta', score: 45, total: 50 },
-          { id: '3', name: 'Delta Master', score: 40, total: 50 },
-          { id: '4', name: 'Sigma Study', score: 38, total: 50 }
-        ];
-
-        if (session) {
-          const userRanking = { id: session.user.id, name: 'Você (Atual)', score: 42, total: 50 };
-          return [...mockRanking, userRanking].sort((a, b) => b.score - a.score);
-        }
-        return mockRanking;
-      }
-      
-      return data.map((d: any, idx: number) => ({
-        id: d.user_id,
-        name: d.profiles?.full_name || `Usuário Anônimo #${idx + 1}`,
-        score: d.correct_answers,
-        total: d.total_questions
-      }));
-    } catch (e) {
-      return [];
-    }
-  },
-
   // Versioning and Audit for Teacher Comments
   getCommentHistory: async (questionId: string) => {
     try {

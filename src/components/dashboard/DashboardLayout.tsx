@@ -115,6 +115,7 @@ const MENU: MenuItem[] = [
   { group: "Provas", label: "Redação", icon: PenLine, href: "/dashboard/essays" },
   { group: "Desempenho", label: "Visão de desempenho", icon: Layers, href: "/dashboard/performance" },
   { group: "Desempenho", label: "Histórico de atividades", icon: History, href: "/dashboard/history" },
+  { group: "Desempenho", label: "Medalhas", icon: Medal, href: "/dashboard/medals" },
   { group: "Conta", label: "Plano e uso", icon: Sparkles, href: "/dashboard/subscriptions" },
   { group: "Conta", label: "Perfil", icon: User, href: "/dashboard/profile" },
   {
@@ -501,6 +502,13 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 </li>
               ))}
             </ul>
+            <Link
+              to="/dashboard/medals"
+              onClick={() => setMedalsOpen(false)}
+              className="block rounded-lg bg-primary/10 px-3 py-2 text-center text-sm font-semibold text-primary hover:bg-primary/15"
+            >
+              Ver todas as medalhas e como ganhar
+            </Link>
           </DialogContent>
         </Dialog>
 
