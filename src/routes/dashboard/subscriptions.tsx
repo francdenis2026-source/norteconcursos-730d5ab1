@@ -9,6 +9,7 @@ import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { getDailyLimit, getUsedToday } from "@/lib/aiSolverStore";
 import { cn } from "@/lib/utils";
 import { SoonBadge } from "@/components/SoonBadge";
+import { PlanCountdown } from "@/components/dashboard/PlanCountdown";
 import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE, TESTING_NOTICE, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
 
 export const Route = createFileRoute("/dashboard/subscriptions")({
@@ -47,6 +48,10 @@ function SubscriptionsPage() {
           {TESTING_PHASE && isTestingTier(tier) && <p><strong>Fase de testes.</strong> {TESTING_NOTICE}</p>}
           {!PAYMENTS_ENABLED && <p>{PAYMENTS_NOTICE}</p>}
         </div>
+      )}
+
+      {user?.plan_ends_at && (
+        <PlanCountdown endsAt={user.plan_ends_at} planName={SUBSCRIPTION_PLANS.find((p) => p.id === tier)?.name ?? "Gratuito"} />
       )}
 
       <Card>

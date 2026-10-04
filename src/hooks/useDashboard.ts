@@ -32,7 +32,7 @@ export function useDashboardData() {
 }
 
 import { SubscriptionTier, UserProfile } from "../types";
-import { TESTING_PHASE, TESTING_TIER } from "@/lib/launch.config";
+import { TESTING_PHASE, TESTING_TIER, planEndsAt } from "@/lib/launch.config";
 
 export function useAuthStatus() {
   const [user, setUser] = useState<UserProfile | null>(null);
@@ -81,6 +81,7 @@ export function useAuthStatus() {
           email: session.user.email || "",
           subscription_tier: currentTier,
           subscription_expires_at: profile?.subscription_expires_at,
+          plan_ends_at: planEndsAt(profile?.created_at, currentTier, profile?.subscription_expires_at),
           onboarding_completed: !!profile?.onboarding_completed,
           onboarding_progress: profile?.onboarding_progress || {},
           is_activated: isActivated,

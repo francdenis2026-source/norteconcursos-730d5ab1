@@ -62,6 +62,7 @@ import {
 } from "@/components/ui/command";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { PlanCountdownInline } from "@/components/dashboard/PlanCountdown";
 import { MockService, type MedalProgress } from "@/services/mockService";
 import type { Achievement, UserStreak } from "@/types";
 import { NorteBrand } from "@/components/brand/NorteBrand";
@@ -546,6 +547,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   <p>
                     <strong>Fase de testes.</strong> Plataforma aberta e gratuita por 30 dias. Durante este período, todas as contas usam o plano Essencial.
                     Em breve os planos pagos serão ativados.
+                    {user?.plan_ends_at && (
+                      <>
+                        {" "}Seu acesso gratuito termina em <PlanCountdownInline endsAt={user.plan_ends_at} />.
+                      </>
+                    )}
                   </p>
                 </div>
               )}
