@@ -3,7 +3,7 @@ import { ArrowRight, Check, Minus } from "lucide-react";
 import { SUBSCRIPTION_PLANS, type TierFeature } from "@/lib/subscriptions.config";
 import { AI_ENABLED, PAYMENTS_ENABLED, TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 
-const ROWS: [string, string][] = [
+export const PLAN_ROWS: [string, string][] = [
   ["questions", "Questões"],
   ["mockExams", "Simulados"],
   ["aiSolver", "Resolução com IA"],
@@ -13,7 +13,7 @@ const ROWS: [string, string][] = [
   ["prioritySupport", "Suporte prioritário"],
 ];
 
-function value(key: string, f: TierFeature | undefined): string | null {
+export function planValue(key: string, f: TierFeature | undefined): string | null {
   if (!f || !f.included) return null;
   if (key === "aiSolver" && !AI_ENABLED) return "Em breve";
   if (f.limit === "unlimited") return "Ilimitado";
@@ -21,7 +21,7 @@ function value(key: string, f: TierFeature | undefined): string | null {
   return "Incluído";
 }
 
-const FAQ: [string, string][] = [
+export const FAQ: [string, string][] = [
   [
     "Como funciona o período de testes?",
     `Por ${TESTING_DAYS} dias a plataforma está aberta e gratuita: ao criar a conta você usa os recursos do plano Essencial, sem cartão e sem cobrança.`,
@@ -83,8 +83,8 @@ export function PlansSection() {
                   </p>
                 )}
                 <ul className="mt-5 flex-1 space-y-2.5 text-sm">
-                  {ROWS.map(([key, label]) => {
-                    const v = value(key, plan.features[key]);
+                  {PLAN_ROWS.map(([key, label]) => {
+                    const v = planValue(key, plan.features[key]);
                     return (
                       <li key={key} className={`flex items-start gap-2 ${v ? "text-white/90" : "text-white/35"}`}>
                         {v ? <Check className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" aria-hidden /> : <Minus className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />}
