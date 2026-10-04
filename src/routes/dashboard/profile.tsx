@@ -13,6 +13,7 @@ import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap, Refre
 import { PageHero } from '@/components/dashboard/PageHero';
 import { SUBSCRIPTION_PLANS } from '@/lib/subscriptions.config';
 import { SoonBadge } from '@/components/SoonBadge';
+import { AvatarUploader } from '@/components/dashboard/AvatarUploader';
 import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE } from '@/lib/launch.config';
 import { cn, normalizeUppercase } from '@/lib/utils';
 import { createCheckoutSession, createPortalSession } from '@/lib/stripe.functions';
@@ -223,6 +224,7 @@ function ProfilePage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
+            {user && <AvatarUploader userId={user.id} name={user.full_name ?? ''} url={user.avatar_url} />}
             <form onSubmit={handleUpdateName} className="space-y-4 pb-6 border-b">
               <div className="space-y-2">
                 <Label htmlFor="name">Nome Completo</Label>

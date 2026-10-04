@@ -87,6 +87,7 @@ export function useAuthStatus() {
         if (!active) return;
         setUser({
           id: session.user.id,
+          avatar_url: profile?.avatar_url ?? undefined,
           full_name: profile?.full_name || session.user.user_metadata["full_name"] || "Usuário",
           name: profile?.full_name || session.user.user_metadata["full_name"] || "Usuário",
           email: session.user.email || "",

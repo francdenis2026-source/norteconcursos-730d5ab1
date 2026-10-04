@@ -191,6 +191,13 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [streak, setStreak] = React.useState<UserStreak | null>(null);
   const [achievements, setAchievements] = React.useState<Achievement[]>([]);
+  const [avatarUrl, setAvatarUrl] = React.useState<string | null>(null);
+  React.useEffect(() => setAvatarUrl(user?.avatar_url ?? null), [user?.avatar_url]);
+  React.useEffect(() => {
+    const on = (e: Event) => setAvatarUrl((e as CustomEvent<string | null>).detail);
+    window.addEventListener("norte:avatar-changed", on);
+    return () => window.removeEventListener("norte:avatar-changed", on);
+  }, []);
   const [medalsOpen, setMedalsOpen] = React.useState(false);
   const [medalProgress, setMedalProgress] = React.useState<MedalProgress[]>([]);
   const openMedals = () => {
@@ -348,7 +355,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button type="button" className="app-user" aria-label="Menu da conta">
-          <span className="app-avatar">{initials(user?.full_name)}</span>
+          <span className="app-avatar">
+            {avatarUrl ? <img src={avatarUrl} alt="" className="h-full w-full rounded-[inherit] object-cover" /> : initials(user?.full_name)}
+          </span>
           {!collapsed && (
             <>
               <span className="app-user__meta">
