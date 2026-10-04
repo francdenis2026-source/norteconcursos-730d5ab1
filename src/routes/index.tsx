@@ -197,6 +197,7 @@ const delay = (n: number) => ({ "--reveal-delay": n }) as CSSProperties;
 
 function Index() {
   const scrolled = useScrolled();
+  const [heroReady, setHeroReady] = useState(false);
   useReveal();
 
   return (
@@ -263,9 +264,9 @@ function Index() {
       </header>
 
       <main>
-        <section className="lp-hero">
+        <section className={`lp-hero${heroReady ? " is-ready" : ""}`}>
           <div className="lp-hero__media" aria-hidden="true">
-            <HeroVideo />
+            <HeroVideo onDone={() => setHeroReady(true)} />
           </div>
           <div className="lp-hero__shade" aria-hidden="true" />
           <div className="lp-hero__grid" aria-hidden="true" />
