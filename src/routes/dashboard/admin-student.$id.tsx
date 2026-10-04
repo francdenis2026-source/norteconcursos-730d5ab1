@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, FileStack, Loader2, Sparkles, Target, Trophy, UserRound } from "lucide-react";
+import { ArrowLeft, Clock, FileStack, Loader2, Target, Trophy, UserRound, ListChecks } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
+import { fmtClock } from "@/components/dashboard/SessionClock";
 
 export const Route = createFileRoute("/dashboard/admin-student/$id")({
   head: () => ({
@@ -24,9 +25,12 @@ export const Route = createFileRoute("/dashboard/admin-student/$id")({
 });
 
 interface Profile { full_name: string | null; email: string | null; subscription_tier: string | null; created_at: string }
-interface Result { id: string; total_questions: number | null; correct_answers: number | null; finished_at: string | null; created_at: string }
+interface Sim { id: string; title: string; total_questions: number; correct_answers: number; wrong_answers: number; blank_answers: number; accuracy: number; finished_at: string }
+interface Subject { subject: string; answered: number; correct: number }
+interface Day { day: string; questions: number; correct: number; seconds: number }
+interface Progress { simulators: Sim[]; subjects: Subject[]; days: Day[]; total_answered: number; total_correct: number }
 interface Doc { contest_name: string | null; contest_year: string | null; exam_board: string | null; score_net: number | null; correct_count: number | null; wrong_count: number | null }
-interface Data { profile: Profile | null; results: Result[]; docs: Doc[]; usage: string[] }
+interface Data { profile: Profile | null; progress: Progress | null; docs: Doc[] }
 
 function StudentDetailPage() {
   const { id } = Route.useParams();
@@ -37,19 +41,17 @@ function StudentDetailPage() {
   useEffect(() => {
     let alive = true;
     (async () => {
-      const [p, r, d, u] = await Promise.all([
+      const [p, r, d] = await Promise.all([
         supabase.from("profiles").select("full_name, email, subscription_tier, created_at").eq("id", id).maybeSingle(),
-        supabase.from("mock_exam_results").select("id, total_questions, correct_answers, finished_at, created_at").eq("user_id", id).order("created_at"),
+        supabase.rpc("admin_student_progress", { _user_id: id }),
         supabase.from("student_exam_documents").select("contest_name, contest_year, exam_board, score_net, correct_count, wrong_count").eq("user_id", id),
-        supabase.from("ai_usage_logs").select("used_on").eq("user_id", id),
       ]);
       if (!alive) return;
       if (p.error) { setError("Não foi possível carregar este aluno."); return; }
       setData({
         profile: p.data as Profile | null,
-        results: (r.data as Result[]) ?? [],
+        progress: r.error ? null : (r.data as unknown as Progress),
         docs: (d.data as Doc[]) ?? [],
-        usage: (u.data ?? []).map((x) => x.used_on as string),
       });
     })();
     return () => { alive = false; };
@@ -57,8 +59,9 @@ function StudentDetailPage() {
 
   const summary = useMemo(() => {
     if (!data) return null;
-    const total = data.results.reduce((s, r) => s + (r.total_questions ?? 0), 0);
-    const correct = data.results.reduce((s, r) => s + (r.correct_answers ?? 0), 0);
+    const pg = data.progress;
+    const total = pg?.total_answered ?? 0;
+    const correct = pg?.total_correct ?? 0;
     // Agrupa páginas enviadas por prova (concurso + ano + banca).
     const exams = new Map<string, Doc>();
     for (const doc of data.docs) {
@@ -66,12 +69,16 @@ function StudentDetailPage() {
       const prev = exams.get(key);
       if (!prev || (doc.correct_count ?? -1) > (prev.correct_count ?? -1)) exams.set(key, doc);
     }
-    const days = Array.from({ length: 14 }, (_, i) => {
-      const dt = new Date(); dt.setDate(dt.getDate() - (13 - i));
-      const iso = dt.toISOString().slice(0, 10);
-      return { iso, n: data.usage.filter((x) => x === iso).length };
-    });
-    return { pct: total ? Math.round((correct / total) * 100) : 0, exams: [...exams.values()], days, maxDay: Math.max(1, ...days.map((d) => d.n)) };
+    const days = pg?.days ?? [];
+    const seconds = days.reduce((n, d) => n + d.seconds, 0);
+    return {
+      pct: total ? Math.round((correct / total) * 100) : 0,
+      total,
+      seconds,
+      exams: [...exams.values()],
+      days,
+      maxQ: Math.max(1, ...days.map((d) => d.questions)),
+    };
   }, [data]);
 
   if (!isAdmin) return <p className="p-6 text-muted-foreground">Acesso restrito ao administrador.</p>;
@@ -86,10 +93,11 @@ function StudentDetailPage() {
       <PageHero image="study-desk" size="sm" kicker={`Plano ${plan}`} icon={UserRound}
         title={<>{data.profile?.full_name || "Aluno"}</>} description={data.profile?.email ?? ""}>
         <div className="page-hero__stats">
-          <HeroStat icon={Trophy} label="Simulados feitos" value={data.results.length} />
+          <HeroStat icon={Trophy} label="Simulados feitos" value={data.progress?.simulators.length ?? 0} />
+          <HeroStat icon={ListChecks} label="Questões resolvidas" value={summary.total} />
           <HeroStat icon={Target} label="Acertos" value={`${summary.pct}%`} />
+          <HeroStat icon={Clock} label="Estudo (14 dias)" value={fmtClock(summary.seconds)} />
           <HeroStat icon={FileStack} label="Provas enviadas" value={summary.exams.length} />
-          <HeroStat icon={Sparkles} label="Uso de IA" value={data.usage.length} />
         </div>
       </PageHero>
 
@@ -97,13 +105,13 @@ function StudentDetailPage() {
         <Card>
           <CardHeader><CardTitle>Evolução nos simulados</CardTitle><CardDescription>Percentual de acertos em cada simulado, do mais antigo ao mais recente.</CardDescription></CardHeader>
           <CardContent className="space-y-2">
-            {data.results.length === 0 ? <p className="text-sm text-muted-foreground">Nenhum simulado concluído.</p> : data.results.map((r) => {
-              const pct = r.total_questions ? Math.round(((r.correct_answers ?? 0) / r.total_questions) * 100) : 0;
+            {!data.progress || data.progress.simulators.length === 0 ? <p className="text-sm text-muted-foreground">Nenhum simulado concluído.</p> : data.progress.simulators.map((r) => {
+              const pct = Math.round(Number(r.accuracy));
               return (
                 <div key={r.id} className="flex items-center gap-3 text-xs">
-                  <span className="w-20 shrink-0 text-muted-foreground">{new Date(r.finished_at ?? r.created_at).toLocaleDateString("pt-BR")}</span>
+                  <span className="w-20 shrink-0 text-muted-foreground">{new Date(r.finished_at).toLocaleDateString("pt-BR")}</span>
                   <div className="h-3 flex-1 rounded bg-muted"><div className="h-3 rounded bg-primary" style={{ width: `${pct}%` }} /></div>
-                  <span className="w-24 shrink-0 text-right text-foreground">{r.correct_answers ?? 0}/{r.total_questions ?? 0} · {pct}%</span>
+                  <span className="w-24 shrink-0 text-right text-foreground">{r.correct_answers}/{r.total_questions} · {pct}%</span>
                 </div>
               );
             })}
@@ -111,15 +119,31 @@ function StudentDetailPage() {
         </Card>
 
         <Card>
-          <CardHeader><CardTitle>Uso de IA — 14 dias</CardTitle><CardDescription>Resoluções pedidas ao Treinador por dia.</CardDescription></CardHeader>
+          <CardHeader><CardTitle>Atividade — 14 dias</CardTitle><CardDescription>Questões resolvidas por dia e minutos de estudo na plataforma.</CardDescription></CardHeader>
           <CardContent className="space-y-1.5">
             {summary.days.map((d) => (
-              <div key={d.iso} className="flex items-center gap-3 text-xs">
-                <span className="w-12 shrink-0 text-muted-foreground">{d.iso.slice(8, 10)}/{d.iso.slice(5, 7)}</span>
-                <div className="h-3 flex-1 rounded bg-muted"><div className="h-3 rounded bg-secondary" style={{ width: `${(d.n / summary.maxDay) * 100}%` }} /></div>
-                <span className="w-8 shrink-0 text-right text-foreground">{d.n}</span>
+              <div key={d.day} className="flex items-center gap-3 text-xs">
+                <span className="w-12 shrink-0 text-muted-foreground">{d.day.slice(8, 10)}/{d.day.slice(5, 7)}</span>
+                <div className="h-3 flex-1 rounded bg-muted"><div className="h-3 rounded bg-secondary" style={{ width: `${(d.questions / summary.maxQ) * 100}%` }} /></div>
+                <span className="w-32 shrink-0 text-right text-foreground">{d.questions} questões · {Math.round(d.seconds / 60)} min</span>
               </div>
             ))}
+          </CardContent>
+        </Card>
+
+        <Card className="lg:col-span-2">
+          <CardHeader><CardTitle>Desempenho por matéria</CardTitle><CardDescription>Acertos por disciplina, da mais praticada à menos. Em vermelho: abaixo de 60%.</CardDescription></CardHeader>
+          <CardContent className="space-y-2">
+            {!data.progress || data.progress.subjects.length === 0 ? <p className="text-sm text-muted-foreground">Nenhuma questão resolvida ainda.</p> : data.progress.subjects.map((m) => {
+              const pct = m.answered ? Math.round((m.correct / m.answered) * 100) : 0;
+              return (
+                <div key={m.subject} className="flex items-center gap-3 text-xs">
+                  <span className="w-44 shrink-0 truncate text-foreground" title={m.subject}>{m.subject}</span>
+                  <div className="h-3 flex-1 rounded bg-muted"><div className={pct < 60 ? "h-3 rounded bg-rose-500" : "h-3 rounded bg-emerald-500"} style={{ width: `${pct}%` }} /></div>
+                  <span className="w-28 shrink-0 text-right text-foreground">{m.correct}/{m.answered} · {pct}%</span>
+                </div>
+              );
+            })}
           </CardContent>
         </Card>
 
