@@ -7,6 +7,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PageHero } from "@/components/dashboard/PageHero";
 import { AudioPlayer } from "@/components/media/AudioPlayer";
+import { TOPIC_VIDEOS } from "@/data/topicVideos";
+import { isPlaylistId } from "@/lib/arsenal";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import {
   DISCIPLINES,
@@ -119,6 +121,88 @@ function VideosTab() {
   );
 }
 
+const SUBJECT_KEYS = Object.keys(TOPIC_VIDEOS);
+const countVideos = (subject: string) => Object.values(TOPIC_VIDEOS[subject] ?? {}).reduce((n, list) => n + list.length, 0);
+
+/** Biblioteca de videoaulas organizada por matéria e assunto (PF, PRF e Polícia Civil). */
+function TopicsTab() {
+  const [subject, setSubject] = React.useState(SUBJECT_KEYS[0] ?? "");
+  const [video, setVideo] = React.useState<{ id: string; title: string } | null>(null);
+  const topics = Object.entries(TOPIC_VIDEOS[subject] ?? {}).filter(([t]) => t !== "*");
+  const general = TOPIC_VIDEOS[subject]?.["*"] ?? [];
+  const total = SUBJECT_KEYS.reduce((n, s) => n + countVideos(s), 0);
+
+  return (
+    <div className="space-y-4">
+      <p className="text-sm text-muted-foreground">
+        {total} videoaulas gratuitas organizadas por matéria e assunto, selecionadas para os editais de <strong>PF, PRF e Polícia Civil</strong>.
+      </p>
+      <div className="flex flex-wrap gap-2" role="tablist" aria-label="Matérias">
+        {SUBJECT_KEYS.map((s) => (
+          <button key={s} type="button" role="tab" aria-selected={subject === s} onClick={() => { setSubject(s); setVideo(null); }}
+            className={cn("rounded-full border px-3 py-1.5 text-sm font-medium", subject === s ? "border-primary bg-primary text-primary-foreground" : "hover:border-primary/50")}>
+            {s} <span className="opacity-70">· {countVideos(s)}</span>
+          </button>
+        ))}
+      </div>
+
+      {video && (
+        <div className="overflow-hidden rounded-2xl border bg-black shadow-lg">
+          <div className="aspect-video w-full">
+            <iframe key={video.id} src={isPlaylistId(video.id) ? youtubeEmbedUrl(video.id) : `https://www.youtube-nocookie.com/embed/${video.id}?rel=0&autoplay=1`} title={video.title} className="h-full w-full"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
+          </div>
+          <div className="flex flex-wrap items-center justify-between gap-2 bg-card px-4 py-3">
+            <p className="min-w-0 truncate text-sm font-semibold">{video.title}</p>
+            <a href={isPlaylistId(video.id) ? youtubePlaylistUrl(video.id) : `https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-xs font-medium text-primary hover:underline">
+              Abrir no YouTube <ExternalLink className="h-3.5 w-3.5" />
+            </a>
+          </div>
+        </div>
+      )}
+
+      <div className="grid gap-3 md:grid-cols-2">
+        {topics.map(([topic, list]) => (
+          <Card key={topic}>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm">{topic}</CardTitle>
+              <CardDescription className="text-xs">{list.length} {list.length === 1 ? "vídeo" : "vídeos"}</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-1">
+              {list.map((v) => (
+                <button key={v.id} type="button" onClick={() => { setVideo(v); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                  className={cn("flex w-full items-start gap-2 rounded-lg px-2 py-1.5 text-left text-xs hover:bg-muted", video?.id === v.id && "bg-primary/10 font-semibold")}>
+                  <PlayCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" />
+                  <span className="flex-1">{v.title}</span>
+                  {isPlaylistId(v.id) && <Badge variant="secondary" className="shrink-0 text-[0.6rem]">Curso</Badge>}
+                </button>
+              ))}
+            </CardContent>
+          </Card>
+        ))}
+        {general.length > 0 && (
+          <Card className="md:col-span-2">
+            <CardHeader className="pb-2"><CardTitle className="text-sm">Gerais da matéria · questões e revisões</CardTitle></CardHeader>
+            <CardContent className="grid gap-1 md:grid-cols-2">
+              {general.map((v) => (
+                <button key={v.id} type="button" onClick={() => { setVideo(v); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                  className="flex items-start gap-2 rounded-lg px-2 py-1.5 text-left text-xs hover:bg-muted">
+                  <PlayCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" />
+                  <span className="flex-1">{v.title}</span>
+                </button>
+              ))}
+            </CardContent>
+          </Card>
+        )}
+      </div>
+      <p className="flex items-start gap-2 text-xs text-muted-foreground">
+        <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+        Vídeos gratuitos e públicos do YouTube, de canais que não pertencem à Norte Concurso. Se algum não carregar aqui, use "Abrir no YouTube".
+      </p>
+    </div>
+  );
+}
+
 function PodcastsTab({ canPreview }: { canPreview: boolean }) {
   const [selected, setSelected] = React.useState<Podcast | null>(PODCASTS[0] ?? null);
   const [local, setLocal] = React.useState<{ url: string; name: string } | null>(null);
@@ -213,9 +297,11 @@ function MediaCenterPage() {
       <Tabs defaultValue="videos" className="space-y-4">
         <TabsList>
           <TabsTrigger value="videos">Videoaulas gratuitas</TabsTrigger>
+          <TabsTrigger value="assuntos">Por assunto</TabsTrigger>
           <TabsTrigger value="podcasts">Podcasts</TabsTrigger>
         </TabsList>
         <TabsContent value="videos"><VideosTab /></TabsContent>
+        <TabsContent value="assuntos"><TopicsTab /></TabsContent>
         <TabsContent value="podcasts"><PodcastsTab canPreview={isAdmin} /></TabsContent>
       </Tabs>
     </div>

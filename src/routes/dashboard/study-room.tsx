@@ -17,7 +17,7 @@ import { StudyPractice } from "@/components/library/StudyPractice";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { youtubeEmbedUrl, youtubePlaylistUrl, youtubeSearchUrl } from "@/data/mediaCatalog";
 import { readingMinutes, useStudyMaterial, useStudyMaterialList } from "@/lib/studyMaterials";
-import { loadArsenal, mediaDisciplineOf, rankMaterials, type Arsenal } from "@/lib/arsenal";
+import { isPlaylistId, loadArsenal, mediaDisciplineOf, rankMaterials, type Arsenal } from "@/lib/arsenal";
 import { AudioPlayer } from "@/components/media/AudioPlayer";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { advance, fmtClock, initialState, makeSegments, pause, skip, start, type Segment, type TimerState } from "@/lib/studyTimer";
@@ -204,6 +204,10 @@ function StudyRoomPage() {
   });
   const discipline = mediaDisciplineOf(subject);
   const playlists = arsenal?.playlists ?? [];
+  // Videoaulas catalogadas por assunto; sem elas, as gerais da matéria e, por fim, as playlists da disciplina.
+  const topicVideos = arsenal?.videos ?? [];
+  const [videoId, setVideoId] = React.useState<string | null>(null);
+  const activeVideo = topicVideos.find((v) => v.id === videoId) ?? topicVideos[0];
   const podcasts = arsenal?.podcasts ?? [];
   const [playlistId, setPlaylistId] = React.useState<string | null>(null);
   const activePlaylist = playlists.find((p) => p.id === playlistId) ?? playlists[0];
@@ -266,7 +270,7 @@ function StudyRoomPage() {
         <ul className="mt-3 flex flex-wrap gap-2 text-xs" aria-label="Recursos disponíveis para este assunto">
           {([
             ["Material", (arsenal?.topicMaterials.length ?? 0) || (arsenal?.subjectMaterials.length ?? 0), arsenal ? ((arsenal.topicMaterials.length ?? 0) > 0 ? "do assunto" : "da matéria") : ""],
-            ["Videoaulas", playlists.length, "playlists"],
+            ["Videoaulas", topicVideos.length || playlists.length, topicVideos.length ? (arsenal?.videosAreTopic ? "do assunto" : "da matéria") : "playlists"],
             ["Podcasts", podcasts.length, ""],
             ["Flashcards", arsenal?.cards ?? 0, "seus"],
             ["Questões", arsenal?.questions ?? 0, "na matéria"],
@@ -325,11 +329,41 @@ function StudyRoomPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base"><PlayCircle className="h-5 w-5 text-primary" /> Videoaulas gratuitas</CardTitle>
               <CardDescription>
-                {activePlaylist ? `Playlists de ${discipline} (por matéria, não por assunto). Procure o tema "${topic || subject}" na lista do vídeo.` : "Ainda não há playlists cadastradas para esta matéria."}
+                {activeVideo
+                  ? arsenal?.videosAreTopic
+                    ? `Selecionadas para "${topic}". Todas gratuitas, do YouTube.`
+                    : "Videoaulas gerais da matéria. Ainda não catalogamos vídeos específicos deste assunto."
+                  : activePlaylist
+                    ? `Playlists de ${discipline} (por matéria, não por assunto). Procure o tema "${topic || subject}" na lista do vídeo.`
+                    : "Ainda não há videoaulas cadastradas para esta matéria."}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
-              {activePlaylist ? (
+              {activeVideo ? (
+                <>
+                  <div className="overflow-hidden rounded-xl border bg-black">
+                    <div className="aspect-video w-full">
+                      <iframe key={activeVideo.id} src={isPlaylistId(activeVideo.id) ? youtubeEmbedUrl(activeVideo.id) : `https://www.youtube-nocookie.com/embed/${activeVideo.id}?rel=0`} title={activeVideo.title} className="h-full w-full" loading="lazy"
+                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
+                    </div>
+                  </div>
+                  <ul className="max-h-64 space-y-1 overflow-y-auto pr-1">
+                    {topicVideos.map((v) => (
+                      <li key={v.id}>
+                        <button type="button" onClick={() => setVideoId(v.id)}
+                          className={cn("flex w-full items-start gap-2 rounded-lg border px-3 py-2 text-left text-xs font-medium", v.id === activeVideo.id ? "border-primary bg-primary/10" : "hover:border-primary/50")}>
+                          <PlayCircle className={cn("mt-0.5 h-4 w-4 shrink-0", v.id === activeVideo.id ? "text-primary" : "text-muted-foreground")} />
+                          <span className="flex-1">{v.title}</span>
+                          {isPlaylistId(v.id) && <Badge variant="secondary" className="shrink-0 text-[0.6rem]">Curso</Badge>}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                  <a href={isPlaylistId(activeVideo.id) ? youtubePlaylistUrl(activeVideo.id) : `https://www.youtube.com/watch?v=${activeVideo.id}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline">
+                    Abrir no YouTube <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                </>
+              ) : activePlaylist ? (
                 <>
                   <div className="overflow-hidden rounded-xl border bg-black">
                     <div className="aspect-video w-full">

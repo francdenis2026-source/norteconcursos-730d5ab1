@@ -10,6 +10,7 @@ import { canonicalSubject } from "@/lib/subjects";
 import { PLAYLISTS, PODCASTS, type Podcast, type VideoPlaylist } from "@/data/mediaCatalog";
 import { fetchStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
 import { areaOfSubject, subjectInArea } from "@/lib/questionTopics";
+import { TOPIC_VIDEOS, type TopicVideo } from "@/data/topicVideos";
 
 const strip = (v: string) => v.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 const tokens = (v: string) => strip(v).split(/[^a-z0-9]+/).filter((t) => t.length >= 5);
@@ -38,12 +39,29 @@ export function rankMaterials(list: StudyMaterialSummary[], subject: string, top
     .sort((a, b) => b.score - a.score || a.m.sort_order - b.m.sort_order);
 }
 
+/** Videoaulas catalogadas por assunto ("exact") e as gerais da matéria. IDs com "PL" são playlists. */
+export function topicVideosFor(subject: string, topic: string): { exact: TopicVideo[]; general: TopicVideo[] } {
+  const exact: TopicVideo[] = [];
+  const general: TopicVideo[] = [];
+  for (const [key, topics] of Object.entries(TOPIC_VIDEOS)) {
+    if (!subjectInArea(subject, key)) continue;
+    if (topic) exact.push(...(topics[topic] ?? []));
+    general.push(...(topics["*"] ?? []));
+  }
+  return { exact, general };
+}
+
+export const isPlaylistId = (id: string) => id.startsWith("PL") && id.length > 12;
+
 export interface Arsenal {
   /** Materiais que casam com o assunto. */
   topicMaterials: StudyMaterialSummary[];
   /** Materiais da matéria em geral. */
   subjectMaterials: StudyMaterialSummary[];
   playlists: VideoPlaylist[];
+  /** Videoaulas do assunto (e, na falta delas, as gerais da matéria). */
+  videos: TopicVideo[];
+  videosAreTopic: boolean;
   podcasts: Podcast[];
   /** Cartões do aluno naquela matéria/assunto. */
   cards: number;
@@ -89,7 +107,10 @@ export async function loadArsenal(qc: QueryClient, userId: string, subject: stri
   let questions = 0;
   for (const [s, n] of counts) if (subjectInArea(subject, s)) questions += n;
 
+  const tv = topicVideosFor(subject, topic);
   return {
+    videos: tv.exact.length ? tv.exact : tv.general,
+    videosAreTopic: tv.exact.length > 0,
     topicMaterials: ranked.filter((r) => r.score > 0).map((r) => r.m),
     subjectMaterials: ranked.map((r) => r.m),
     playlists: discipline ? PLAYLISTS.filter((p) => p.discipline === discipline) : [],
@@ -101,7 +122,7 @@ export async function loadArsenal(qc: QueryClient, userId: string, subject: stri
 
 /** Há ALGO para estudar? Só então vale abrir a Sala de estudo. */
 export const hasAnyResource = (a: Arsenal) =>
-  a.subjectMaterials.length + a.playlists.length + a.podcasts.length + a.cards + a.questions > 0;
+  a.subjectMaterials.length + a.videos.length + a.playlists.length + a.podcasts.length + a.cards + a.questions > 0;
 
 /** Texto do aviso profissional quando não há nada para o assunto. */
 export function missingMessage(subject: string, topic: string): string {

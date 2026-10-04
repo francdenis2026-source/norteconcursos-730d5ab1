@@ -18,6 +18,7 @@ const T = {
     "Colocação pronominal",
     "Reescrita e substituição de trechos",
     "Significação das palavras",
+    "Redação oficial",
   ],
   raciocinio: [
     "Proposições e conectivos lógicos",
