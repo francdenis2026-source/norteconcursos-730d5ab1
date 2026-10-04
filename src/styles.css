@@ -6085,8 +6085,24 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     gap: 6px;
     overflow-x: auto;
     scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 14px;
     margin: 0 -14px 12px;
     padding: 0 14px;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 14px,
+      black calc(100% - 28px),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 14px,
+      black calc(100% - 28px),
+      transparent 100%
+    );
   }
   .mh__tabs::-webkit-scrollbar {
     display: none;
@@ -6096,6 +6112,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     flex: none;
     align-items: center;
     gap: 6px;
+    scroll-snap-align: start;
     border: 1px solid oklch(1 0 0 / 0.12);
     border-radius: 999px;
     padding: 8px 13px;
@@ -6217,9 +6234,24 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     gap: 10px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-padding-inline: 14px;
     margin: 0 -14px;
     padding: 4px 14px 8px;
     scrollbar-width: none;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 14px,
+      black calc(100% - 32px),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 14px,
+      black calc(100% - 32px),
+      transparent 100%
+    );
   }
   .mh__plans::-webkit-scrollbar {
     display: none;
