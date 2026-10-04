@@ -618,12 +618,6 @@ function QuestionTrainer() {
   if (!started)
     return (
       <div className="space-y-4">
-        {hidden > 0 && (
-          <div className="mx-auto max-w-4xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
-            {hidden} questão(ões) de legislação estão ocultas até a vigência ser conferida no
-            Planalto.
-          </div>
-        )}
         <TrainerSetup
           total={catalog.length}
           available={pool.length}

@@ -73,7 +73,7 @@ export function QuestionTotals({ enabled, className }: Props) {
         {data && (
           <>
             <b>{reviewedPct}%</b> do acervo já está revisado · {fmt(data.official)} oficiais e{" "}
-            {fmt(data.curated)} autorais
+            {fmt(data.curated)} autorais · {fmt(Math.max(0, data.raw - data.eligible))} fora do treino (aguardando conferência de vigência ou gabarito)
           </>
         )}
       </p>
