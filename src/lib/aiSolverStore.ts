@@ -30,7 +30,8 @@ function read<T>(key: string, fallback: T): T {
 
 export function getDailyLimit(tier: SubscriptionTier, isAdmin = false): number | "unlimited" {
   if (isAdmin) return "unlimited";
-  return checkFeatureAccess(tier, "aiSolver").limit ?? 0;
+  const f = checkFeatureAccess(tier, "aiSolver");
+  return f.included ? (f.limit ?? 0) : 0;
 }
 
 export function getUsedToday(userId: string): number {

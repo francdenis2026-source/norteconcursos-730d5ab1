@@ -29,6 +29,34 @@ export function planEndsAt(createdAt: string | undefined, tier: string, expiresA
   return new Date(start + TESTING_DAYS * 86_400_000).toISOString();
 }
 
+/**
+ * Plano em vigor agora (mesma regra do app e do servidor):
+ * vencimento próprio vencido -> Gratuito; na fase de testes, free/essencial sem vencimento
+ * valem Essencial por 30 dias e depois voltam ao Gratuito.
+ */
+export function effectiveTier(
+  tier: string | null | undefined,
+  createdAt: string | undefined,
+  expiresAt: string | null | undefined,
+  now = Date.now(),
+): { tier: string; expiredFrom?: string } {
+  let current = tier || "free";
+  let expiredFrom: string | undefined;
+  if (expiresAt && new Date(expiresAt).getTime() < now) {
+    if (current !== "free") expiredFrom = current;
+    current = "free";
+  }
+  if (TESTING_PHASE && !expiresAt && (current === "free" || current === TESTING_TIER)) {
+    const end = planEndsAt(createdAt, current, null);
+    if (end && new Date(end).getTime() > now) current = TESTING_TIER;
+    else {
+      current = "free";
+      expiredFrom = TESTING_TIER;
+    }
+  }
+  return expiredFrom ? { tier: current, expiredFrom } : { tier: current };
+}
+
 export const SOON_LABEL = "Em breve";
 export const TESTING_NOTICE =
   "Plataforma aberta e gratuita por 30 dias, em fase de testes. Durante este período, todas as contas usam o plano Essencial. Em breve os planos pagos serão ativados.";

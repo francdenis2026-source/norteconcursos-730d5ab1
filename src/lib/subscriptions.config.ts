@@ -22,7 +22,7 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
     price: 0,
     description: "Para quem está começando a jornada.",
     features: {
-      aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 3 },
+      aiSolver: { name: "Resoluções com IA", included: false },
       questions: { name: "Questões por dia", included: true, limit: 10 },
       mockExams: { name: "Simulados completos", included: false },
       performanceAnalytics: { name: "Análise básica", included: true },

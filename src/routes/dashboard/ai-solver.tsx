@@ -1,3 +1,4 @@
+import { supabase } from "@/integrations/supabase/client";
 import { useEffect, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, Square, Eraser, Loader2, BookmarkCheck, Gauge } from "lucide-react";
@@ -66,8 +67,9 @@ function AiSolverPage() {
   }
 
   const isLoading = status === "loading";
+  const noAccess = limit === 0;
   const reachedLimit = limit !== "unlimited" && used >= limit;
-  const canSubmit = question.trim().length >= 20 && !isLoading && !reachedLimit;
+  const canSubmit = question.trim().length >= 20 && !isLoading && !reachedLimit && !noAccess;
 
   async function solve() {
     const controller = new AbortController();
@@ -80,7 +82,10 @@ function AiSolverPage() {
     try {
       const res = await fetch("/api/solve-question", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${(await supabase.auth.getSession()).data.session?.access_token ?? ""}`,
+        },
         body: JSON.stringify({ question }),
         signal: controller.signal,
       });
@@ -136,9 +141,11 @@ function AiSolverPage() {
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border bg-card p-3 text-sm">
         <span className="flex items-center gap-2 text-foreground">
           <Gauge className="h-4 w-4 text-primary" aria-hidden />
-          {limit === "unlimited"
-            ? "Resoluções ilimitadas no seu plano"
-            : `Hoje: ${used} de ${limit} resoluções do seu plano`}
+          {noAccess
+            ? "A IA não está incluída no plano Gratuito"
+            : limit === "unlimited"
+              ? "Resoluções ilimitadas no seu plano"
+              : `Hoje: ${used} de ${limit} resoluções do seu plano`}
         </span>
         <div className="flex gap-3">
           <Link to="/dashboard/notebooks" className="font-medium text-primary hover:underline">Meu caderno</Link>
@@ -146,7 +153,13 @@ function AiSolverPage() {
         </div>
       </div>
 
-      {reachedLimit && (
+      {noAccess && (
+        <div role="status" className="rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground">
+          A resolução com IA é um recurso dos planos pagos. <Link to="/dashboard/subscriptions" className="font-semibold text-primary underline">Veja os planos</Link>.
+        </div>
+      )}
+
+      {!noAccess && reachedLimit && (
         <div role="status" className="rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground">
           Você usou todas as resoluções de hoje. O limite renova amanhã — ou{" "}
           <Link to="/dashboard/subscriptions" className="font-semibold text-primary underline">mude de plano</Link>.

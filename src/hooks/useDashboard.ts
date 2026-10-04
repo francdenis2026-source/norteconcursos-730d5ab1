@@ -32,7 +32,7 @@ export function useDashboardData() {
 }
 
 import { SubscriptionTier, UserProfile } from "../types";
-import { TESTING_PHASE, TESTING_TIER, planEndsAt } from "@/lib/launch.config";
+import { effectiveTier, planEndsAt } from "@/lib/launch.config";
 
 export function useAuthStatus() {
   const [user, setUser] = useState<UserProfile | null>(null);
@@ -59,30 +59,12 @@ export function useAuthStatus() {
             : "user";
 
         // Lógica de data efetiva: se o plano expirou, volta para free
-        let currentTier = (profile?.subscription_tier as SubscriptionTier) || "free";
-        let isActivated = !!profile?.is_activated;
-        let expiredFrom: string | undefined;
-
-        if (profile?.subscription_expires_at) {
-          const expiryDate = new Date(profile.subscription_expires_at);
-          if (expiryDate < new Date()) {
-            if (currentTier !== "free") expiredFrom = currentTier;
-            currentTier = "free";
-            isActivated = false;
-          }
-        }
-
-        // Fase de testes: free/essencial sem vencimento próprio usam o plano de testes por 30 dias.
-        // Passado o prazo, voltam ao plano Gratuito e o app oferece a renovação.
-        const hasOwnExpiry = !!profile?.subscription_expires_at;
-        if (TESTING_PHASE && !hasOwnExpiry && (currentTier === "free" || currentTier === TESTING_TIER)) {
-          const end = planEndsAt(profile?.created_at, currentTier, null);
-          if (end && new Date(end) > new Date()) currentTier = TESTING_TIER;
-          else {
-            currentTier = "free";
-            expiredFrom = TESTING_TIER;
-          }
-        }
+        // Plano em vigor: vencimento próprio e fase de testes (regra única em launch.config).
+        const eff = effectiveTier(profile?.subscription_tier, profile?.created_at, profile?.subscription_expires_at);
+        const currentTier = eff.tier as SubscriptionTier;
+        const expiredFrom = eff.expiredFrom;
+        const expiredByDate = !!profile?.subscription_expires_at && new Date(profile.subscription_expires_at) < new Date();
+        const isActivated = expiredByDate ? false : !!profile?.is_activated;
 
         if (!active) return;
         setUser({
