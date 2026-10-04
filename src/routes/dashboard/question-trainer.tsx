@@ -16,6 +16,7 @@ import {
   Strikethrough,
   Target,
   X,
+  Timer,
   XCircle,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -147,6 +148,7 @@ function QuestionTrainer() {
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
   const [correct, setCorrect] = React.useState(0);
   const [wrong, setWrong] = React.useState(0);
+  const [results, setResults] = React.useState<("ok" | "err")[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
 
   React.useEffect(() => {
@@ -439,6 +441,7 @@ function QuestionTrainer() {
     setIndex(0);
     setCorrect(0);
     setWrong(0);
+    setResults([]);
     setSelected(null);
     setStruck([]);
     setAnswered(false);
@@ -462,6 +465,7 @@ function QuestionTrainer() {
     setIndex(0);
     setCorrect(0);
     setWrong(0);
+    setResults([]);
     setSelected(null);
     setStruck([]);
     setAnswered(false);
@@ -511,6 +515,11 @@ function QuestionTrainer() {
       setAnswered(true);
       if (isCorrect) setCorrect((value) => value + 1);
       else setWrong((value) => value + 1);
+      setResults((prev) => {
+        const copy = [...prev];
+        copy[index] = isCorrect ? "ok" : "err";
+        return copy;
+      });
       setModal("result");
     } catch {
       toast.error("Não foi possível salvar sua resposta. Tente novamente.");
@@ -534,6 +543,7 @@ function QuestionTrainer() {
     setIndex(0);
     setCorrect(0);
     setWrong(0);
+    setResults([]);
     setSelected(null);
     setStruck([]);
     setAnswered(false);
@@ -666,26 +676,29 @@ function QuestionTrainer() {
           <Badge variant="outline">Não afeta ranking</Badge>
         </div>
       </header>
-      <div className="session-status-bar rounded-lg border bg-card px-3 py-2 shadow-sm sm:rounded-xl sm:px-4 sm:py-3">
-        <div className="mb-1.5 flex items-center justify-between text-[11px] sm:mb-2 sm:text-xs">
-          <span className="font-bold">
-            Questão {index + 1} de {questions.length}
-          </span>
-          <span className="text-muted-foreground">
-            {correct} certas · {wrong} erradas
-          </span>
-        </div>
-        <Progress value={(index / questions.length) * 100} className="h-1.5" />
-      </div>
       <Card
-        className="question-window overflow-hidden border-0 shadow-xl ring-1 ring-border/70 animate-in fade-in slide-in-from-bottom-3 duration-300"
+        className="question-window dark overflow-hidden border border-white/10 bg-[oklch(0.15_0.03_262)] text-foreground shadow-2xl ring-1 ring-amber-400/15 animate-in fade-in slide-in-from-bottom-3 duration-300"
         key={question.id}
       >
-        <div className="h-1 bg-gradient-to-r from-amber-500 via-sky-500 to-blue-800" />
+        <div className="flex items-center justify-between gap-3 border-b border-white/10 bg-black/25 px-4 py-2.5">
+          <div className="flex items-center gap-3">
+            <span className="flex gap-1.5" aria-hidden>
+              <i className="h-2.5 w-2.5 rounded-full bg-white/20" />
+              <i className="h-2.5 w-2.5 rounded-full bg-white/20" />
+              <i className="h-2.5 w-2.5 rounded-full bg-white/20" />
+            </span>
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-white/55">Treinador de questões</span>
+          </div>
+          <span className="flex items-center gap-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-emerald-400">
+            <i className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" aria-hidden /> Correção imediata
+          </span>
+        </div>
         <CardContent className="p-3.5 sm:p-5 md:p-7">
-          <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-5 sm:gap-2">
-            <Badge>{question.board}</Badge>
-            <Badge variant="outline">{question.subject}</Badge>
+          <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
+            <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-300">
+              {question.subject}
+            </span>
+            <Badge variant="outline">{question.board}</Badge>
             <Badge variant="outline">
               {question.contest} · {question.year}
             </Badge>
@@ -695,6 +708,31 @@ function QuestionTrainer() {
             >
               {DIFFICULTY_LABEL[question.difficulty]}
             </Badge>
+          </div>
+          <div className="mb-3 flex items-end justify-between gap-3">
+            <div>
+              <h2 className="font-display text-2xl font-extrabold leading-none text-white sm:text-3xl">
+                Questão {index + 1} <span className="text-white/45">de {questions.length}</span>
+              </h2>
+              <p className="mt-1.5 text-xs text-white/55">
+                {correct} certas · {wrong} erradas
+              </p>
+            </div>
+            <ElapsedTimer startedAt={startedAt} running={!answered} />
+          </div>
+          <div className="mb-4 flex gap-1 sm:mb-6 sm:gap-1.5" role="img" aria-label={`Questão ${index + 1} de ${questions.length}`}>
+            {questions.map((q, i) => (
+              <i
+                key={q.id}
+                className={cn(
+                  "h-1.5 min-w-0 flex-1 rounded-full transition-colors",
+                  results[i] === "ok" && "bg-emerald-500",
+                  results[i] === "err" && "bg-rose-500",
+                  !results[i] && i === index && "bg-amber-400",
+                  !results[i] && i !== index && "bg-white/10",
+                )}
+              />
+            ))}
           </div>
           {parsed.base && (
             <details
@@ -731,26 +769,36 @@ function QuestionTrainer() {
                       disabled={answered || saving}
                       onClick={() => chooseOption(option.letter)}
                       className={cn(
-                        "group flex flex-1 items-start gap-2 rounded-lg border-2 border-border bg-background p-2.5 text-left text-sm leading-5 transition-all duration-200 hover:border-primary hover:bg-primary/5 disabled:hover:bg-background sm:gap-3 sm:rounded-xl sm:p-3 sm:leading-6",
+                        "group flex flex-1 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] p-2.5 text-left text-sm leading-5 transition-all duration-200 hover:border-amber-400/50 hover:bg-amber-400/5 disabled:hover:bg-white/[0.03] sm:gap-3 sm:p-3 sm:leading-6",
                         isStruck && "opacity-50",
                         isSelected &&
                           !answered &&
-                          "border-blue-600 bg-blue-50 ring-4 ring-blue-600/10 hover:bg-blue-50",
-                        isRight && "border-emerald-500 bg-emerald-50 hover:bg-emerald-50",
-                        isWrong && "border-rose-500 bg-rose-50 hover:bg-rose-50",
+                          "border-amber-400/70 bg-amber-400/10 ring-4 ring-amber-400/10 hover:bg-amber-400/10",
+                        isRight && "border-emerald-500/70 bg-emerald-500/10 hover:bg-emerald-500/10",
+                        isWrong && "border-rose-500/70 bg-rose-500/10 hover:bg-rose-500/10",
                       )}
                     >
                       <span
                         className={cn(
-                          "mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-muted text-[11px] font-bold sm:h-7 sm:w-7 sm:rounded-lg sm:text-xs",
-                          isSelected && !answered && "bg-blue-600 text-white",
+                          "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/10 font-mono text-[11px] font-bold sm:h-7 sm:w-7 sm:rounded-lg sm:text-xs",
+                          isSelected && !answered && "bg-amber-400 text-slate-900",
                           isRight && "bg-emerald-600 text-white",
                           isWrong && "bg-rose-600 text-white",
                         )}
                       >
                         {option.letter}
                       </span>
-                      <span className={cn(isStruck && "line-through")}>{option.text}</span>
+                      <span className={cn("flex-1", isStruck && "line-through")}>{option.text}</span>
+                      {isRight && (
+                        <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-400">
+                          <Check className="h-3.5 w-3.5" /> Correta
+                        </span>
+                      )}
+                      {isWrong && (
+                        <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-rose-400">
+                          <XCircle className="h-3.5 w-3.5" /> Sua resposta
+                        </span>
+                      )}
                     </button>
                     <Button
                       type="button"
@@ -792,14 +840,14 @@ function QuestionTrainer() {
                   "group relative flex min-h-12 items-center justify-center gap-2 rounded-lg border-2 border-border bg-background px-3 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:shadow-md disabled:hover:translate-y-0 sm:min-h-16 sm:rounded-xl sm:px-4 sm:text-base",
                   selected === answer &&
                     !answered &&
-                    "scale-[1.02] border-blue-600 bg-blue-600 text-white shadow-lg shadow-blue-600/20 ring-4 ring-blue-600/15 hover:bg-blue-600 hover:text-white",
+                    "scale-[1.02] border-amber-400 bg-amber-400 text-slate-900 shadow-lg shadow-amber-400/20 ring-4 ring-amber-400/15 hover:bg-amber-400 hover:text-slate-900",
                   answered &&
                     answer === question.answer &&
-                    "border-emerald-500 bg-emerald-50 text-emerald-700",
+                    "border-emerald-500 bg-emerald-500/10 text-emerald-300",
                   answered &&
                     selected === answer &&
                     answer !== question.answer &&
-                    "border-rose-500 bg-rose-50 text-rose-700",
+                    "border-rose-500 bg-rose-500/10 text-rose-300",
                 )}
               >
                 <span
@@ -807,7 +855,7 @@ function QuestionTrainer() {
                     "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
                     selected === answer &&
                       !answered &&
-                      "bg-white text-blue-700 group-hover:bg-white group-hover:text-blue-700",
+                      "bg-white text-amber-700 group-hover:bg-white group-hover:text-amber-700",
                   )}
                 >
                   {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
@@ -819,7 +867,7 @@ function QuestionTrainer() {
           <div className="mt-4 flex flex-col-reverse gap-2 sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
             <Button
               variant="ghost"
-              className="text-amber-700"
+              className="text-amber-300 hover:text-amber-200"
               disabled={answered || saving}
               onClick={() => {
                 setHelpUsed(true);
@@ -832,7 +880,7 @@ function QuestionTrainer() {
               size="lg"
               disabled={!selected || answered || saving}
               onClick={submit}
-              className="h-11 min-w-44 sm:h-12"
+              className="h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
             >
               Confirmar resposta <Check className="ml-2 h-4 w-4" />
             </Button>
@@ -1339,5 +1387,23 @@ function TrainingResult({
         </CardContent>
       </Card>
     </div>
+  );
+}
+
+function ElapsedTimer({ startedAt, running }: { startedAt: number; running: boolean }) {
+  const [secs, setSecs] = React.useState(0);
+  React.useEffect(() => {
+    const tick = () => setSecs(Math.max(0, Math.floor((Date.now() - startedAt) / 1000)));
+    tick();
+    if (!running) return;
+    const id = window.setInterval(tick, 1000);
+    return () => window.clearInterval(id);
+  }, [startedAt, running]);
+  const mm = String(Math.floor(secs / 60)).padStart(2, "0");
+  const ss = String(secs % 60).padStart(2, "0");
+  return (
+    <span className="flex items-center gap-1.5 rounded-xl border border-white/10 bg-black/25 px-3 py-1.5 font-mono text-sm font-semibold tabular-nums text-white" role="timer" aria-label="Tempo nesta questão">
+      <Timer className="h-4 w-4 text-amber-400" aria-hidden /> {mm}:{ss}
+    </span>
   );
 }
