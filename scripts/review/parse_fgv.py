@@ -5,6 +5,7 @@ parse_fgv(pdf)             -> lista de dicts {n, page, subject, context, stem, o
 parse_fgv_gab(pdf, tipo=1) -> {n: letra | '*'}   ('*' = questão anulada)
 """
 import pymupdf, re, sys
+from fgv_key import answer_token
 
 OPT = re.compile(r"^\(([A-E])\)\s*")
 
@@ -116,8 +117,9 @@ def parse_fgv_gab(pdf, tipo=1):
             on = int(m.group(1)) == tipo
             i += 1
             continue
-        if on and re.fullmatch(r"\d{1,3}", l) and i + 1 < len(lines) and re.fullmatch(r"[A-E*]", lines[i + 1]):
-            res[int(l)] = lines[i + 1]
+        if on and re.fullmatch(r"\d{1,3}", l) and i + 1 < len(lines) and re.fullmatch(r"[A-E]\*{0,3}|\*", lines[i + 1]):
+            token = answer_token(lines[i + 1])
+            res[int(l)] = "*" if token == "X" else token
             i += 2
             continue
         i += 1

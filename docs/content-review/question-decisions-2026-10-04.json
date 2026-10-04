@@ -1,0 +1,1931 @@
+[
+  {
+    "table": "board_exam_questions",
+    "id": "02dc4521-42c7-4274-9f2d-92e387abce6b",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "0470a746-5036-48d0-84a5-7359ea97c415",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "076a6869-bfdd-42ac-abcf-0f408ed338c0",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "07c52be2-c15f-491f-8cf0-4a83974585c5",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "08738ae0-5260-47fd-8eda-dfeaba3bf5d8",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "092aec2a-ac78-456f-abc2-489e5d095b9a",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "0aa6c0d7-04a4-440e-9fb9-faac274285cc",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "0d703edd-dc65-476b-8bba-affeb1f59f5d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "0db1e665-6e0c-4893-a213-99d3727d1437",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "0ff2be87-9e54-4194-9e9e-e858229b4291",
+    "decision": "under_review",
+    "reasons": ["support_not_exact"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "1471d688-6e34-4b3e-b075-412b2f23bf3b",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "16405e9d-cdea-46da-9223-34d39f696148",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/contadorcgm-cont-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "171244e5-9ce4-4eb3-abe2-0b62c906f25b",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "1bf24b17-8123-42da-ad1b-55f02da7bf02",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "1c3786a6-61fd-4294-974b-ffa8fc2ad756",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "1ce90948-eae1-4dc1-b175-e9fd5209622d",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/contadorcgm-cont-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "1ceacd74-88c0-4354-9582-b8698285cf0f",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "1cef52af-155b-4bce-a6a4-cca0b908cf56",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "1d77e01f-2175-4ebc-aa81-39d98fda7daf",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "1db31b8c-bd22-4626-b581-58c5238f0e56",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "1ee4cb1a-a8e9-4315-aa42-1656fde02d1f",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "22095ecd-d20b-4625-91bf-764097f5ea53",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/contadorcgm-cont-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "22bcd96d-668f-446a-949e-8ed6df34c9b4",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "249d6d6d-5a09-4c6e-a397-3cf1f1bfed5e",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "2b1112de-6a67-4800-9701-2adfb01d6a60",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "2b160606-329b-4b86-969e-0cee24131600",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "2e12bdea-d511-474c-9bcb-a6fdfdffc116",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "2e1f0977-0154-4d04-afe3-0d031be6dbd2",
+    "decision": "under_review",
+    "reasons": ["visual_pending", "emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "2f31eef0-3659-46df-a2bc-1e37820eef31",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "3003d360-3122-4a4f-8e7c-a9f332273a8a",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "31464b5a-a7ec-4fd6-b883-0701ac19dc5b",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "3176dc3b-43bf-4245-b26b-0187a2bc1f5d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "33af0822-f169-49ee-9d50-3b65bb3a11d2",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "33e941ce-8da0-42c7-b48b-c6191ff18838",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "344d1d6a-8324-4be4-a206-3e3c59a0d2b9",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "3461c498-442d-4530-bd96-ecb92e893eea",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "36099505-2204-454a-9775-6ee6b3eb8fc3",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "368b32a3-b1ce-416a-9fe5-0ab190887697",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "36df89bd-2a93-4501-893f-7da18ac0c8ec",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "3701186a-d7d4-43f3-9f6d-e8f0b89635f1",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "3907b2bf-a1c4-4bc4-9e05-2b73c4bf7c48",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "399be2e0-26a9-46e2-ba60-f928aee95517",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "3a4f7dfb-3d57-4214-bbee-d9d62ce5b886",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "3d2fed2a-d0c6-4238-bd23-b45a7a6e5fca",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "3eba5063-554a-4e75-8577-3181f8d75867",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "4029b011-f56e-4f3a-a243-4f2893a000ed",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "426fceba-9285-404d-ab88-b4add9635d51",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "477de08d-0311-43f8-838c-c54e9dae2fb1",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tecnico-de-controle-internocgm-tci-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "48cc9952-0580-498a-b536-8533616101ea",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "4b02cb44-c9eb-412b-bce8-b1b54e70f52b",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "4c663037-7957-416a-8391-14d17c6af9fb",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "4c6a3f4c-6c84-4046-af39-8d3876cc9ee3",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "53ab3975-df89-40d4-83ac-2e5f5d37e51d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "55b83e63-c0d5-4c54-90e5-67d24037fb63",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "55f70aa4-e3da-41e8-a40b-092ca351e836",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "5610ae7d-2f3e-41fa-b66d-e553572e5b8a",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "575b163c-1a6d-40c2-bda4-895234176213",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "57cbc57d-6607-4bea-84f6-e8b9963de6a2",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "5894ad81-2017-46c2-9507-190ab10d47f3",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "58a5f8e3-3227-4ffc-ace5-97055c1691f0",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "59b0dec5-716f-4ed5-8ad5-b8b513507ed9",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tecnico-de-controle-internocgm-tci-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "5b4c00cb-f9be-416f-99fa-32ad0434aed8",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "5d3b8d50-f95a-424e-8136-465939122c84",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "5e820a57-2193-4f58-999e-9fcc16358c48",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "6319f957-3add-4cb5-b42f-10825fbacf67",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "6370b5d8-fe84-4103-aec4-fa51da08e167",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "63c79f78-de4e-4be3-a095-c7f1b38d8031",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "64ad0e2a-9ee6-4217-b44b-817c96ed08ca",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "6694b9f9-19e9-4518-88ad-e3b5eaaf09cf",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "69b69083-6806-499b-a66b-bdec00070d5c",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "6a4caa46-c507-4401-8f5a-7f6803f5490d",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/contadorcgm-cont-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "6c3a876d-6dcf-41bb-a372-6391125694ce",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "6c9e4ba6-c44c-435e-98ca-e1d1de41ebf1",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "6df80c00-3dea-42e4-9776-02d2c7ccb0ec",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "6fc538b9-4d1a-42d6-8b51-330e45a6eb5d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "74af3027-3a24-4b87-91e8-b5d0523b3e96",
+    "decision": "under_review",
+    "reasons": ["option_E_not_exact", "emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "75f7e897-3b0b-44b6-b4fe-4dd823125b7c",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "768df621-e9d7-4342-aae7-4c77107ab74f",
+    "decision": "under_review",
+    "reasons": ["support_not_exact"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "78ace637-d651-4732-8227-4d358c1c358b",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "7a420867-92d1-4be2-8c61-debacccb6de9",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "7d881eaa-ed7c-405a-813e-1e9f954419a2",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "80a17f14-3989-48f8-990a-bccb17c6421a",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "8173778c-063b-4b01-8395-7125a507f198",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "82743e3d-2776-4bd0-8e0d-3ebc6639c259",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "83138941-ca09-4cd5-ae8b-6ce835aa5cc0",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "8350023f-734a-47e7-896f-7f581df0f1f1",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "8365b24b-7d21-4fd0-9475-098ee1283dcd",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "87221500-4629-4b76-b55a-ac7d44800a08",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "87cd46f7-b737-47f1-99aa-4287ccacf6a5",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "8accc2bc-cb65-4310-a8cf-6909a576a466",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "8b553106-8a84-4a16-b0ff-93ab93bf8828",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "8ce45e61-7c15-4145-b33f-dbbc68f28601",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "8e56a7fc-d3a1-4d35-ba3d-81e46287d05d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "915701db-855b-4805-a3b8-be7398aa798b",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "927b4987-15cb-49fe-b4c6-3fa96ede7fb4",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "952543d0-cfe0-4758-adf4-370e74a211ff",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "968d7f30-02f1-403f-aaf5-7cf830584d88",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tecnico-de-controle-internocgm-tci-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "9723a01e-9ad9-4b90-b9e2-37cd517afd4c",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "97eb5584-e4b0-4bf3-82f8-d3f12835e6fd",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "993c4aab-2820-4a47-8d23-22ca6d8ab39f",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "99dbd2df-2000-466f-a54c-52a6b84e8e2c",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "9afce7dd-9d2c-46f1-8e64-78c1bed56238",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/contadorcgm-cont-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "9c5996d6-0630-4176-a4bc-7fa150e970bf",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "9cc75c3f-edbd-4d77-9726-bae4ea858de7",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "9d579334-b5a5-41c5-838d-4f53b4fc196e",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "9f9ac99b-76d6-4edf-adad-932e10ba352f",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "9faba175-5d87-4595-8052-8f3279ebf830",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "a32f8608-74e9-4cee-b900-9c22b799f7bf",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tecnico-de-controle-internocgm-tci-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "a738a6fb-34ce-4847-ac55-d98661f36708",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "a82bc507-0281-4a64-b21d-fb9c237fb4ad",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "a92de951-64a6-428d-8257-99aeb72ed328",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "ab272500-3966-4f50-92a1-24345d19162c",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "abb5bd31-aa01-4ed1-a8af-52a4c0a01532",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tecnico-de-controle-internocgm-tci-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "ac898c6c-b0f6-46d4-8a2e-a514b8675b87",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "ae6fd6aa-119e-41b3-8b5b-287c46e2c9bd",
+    "decision": "under_review",
+    "reasons": ["previous_item_context_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "b2955dc0-28bf-48f1-b815-9bd50525f258",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "b47fc6b0-37da-43c3-a85a-39bfec6dfa68",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "b93dab8f-99b2-4f89-81ea-a0366532d943",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "b9594ec4-9e9b-4069-8042-e1ec3191ff8d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tecnico-de-controle-internocgm-tci-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "bad6c332-c0c7-4c38-921e-61b4d106c352",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "bae096c2-cfe2-43a0-a47d-0fb00de78a21",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "be7dba7f-4d41-4f6f-b850-c5eb7008a89e",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "c03f6700-1d6c-4d1a-be31-b4e56c6b0c15",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-consultor-legislativo-especial-direito-constitucionalcns101-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "c1955602-e04d-41fd-ae0a-cd5f82c5dfb8",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "c5a93214-d5bc-453a-85d2-d8bbb9510ce5",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "c6cb0db1-d562-4b1c-a825-783f470a8f5c",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "c8ad10ef-e815-4185-85d9-1c77456bcac5",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "c8e44ceb-30e7-4057-a47a-403da13736bd",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "cac844c1-6904-4f57-9c33-cfbf9885ef05",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "cc042ccd-a3dc-420f-80d0-8b5e3fe678cd",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "ccf2d568-4031-4148-8e61-92e34f51d795",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "cd173cc3-5ad2-4ac2-ad4f-8d0d62edf1e0",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "cea505ea-987a-4485-91a7-f55e5521b88e",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tecnico-de-controle-internocgm-tci-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "cf4d7966-1eb3-4a72-a61c-ea3f75fb164e",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d04aefaa-75d0-4ffc-b2e3-94608cdabdce",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d09bf805-f4d0-492e-9ea1-70dc81d4feca",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d11025ff-6a5f-49d4-b571-123d6c107079",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/contadorcgm-cont-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d14ea9ba-59d7-4852-9928-003d0d9582d4",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d24058ac-b010-4a6e-9bc6-945775fe8399",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d245826a-7503-4c85-b917-5436a700b175",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/contadorcgm-cont-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d2bed6dc-cfbb-4830-b466-49baa9750abb",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d2f743a1-21e5-4e6d-ad66-067bec36daa1",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d41de176-6745-4128-9b88-0a4b1ead6b24",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d4ee7dcc-8eb9-4a5a-a859-e57ce2099959",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d64184f7-df85-4e58-b617-29d6da9ba345",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d6fc0f07-55dc-49cd-b61a-724db975b70d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tecnico-de-controle-internocgm-tci-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d7e93ef2-1bd3-481d-bf9c-18b0655fef1f",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_ciencias_contabeisaudciecon_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d83a4a74-308c-4e24-9310-b9ecd0b0c349",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "d8e3a10e-9e5e-4182-a997-7f804a2f2317",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tecnico-de-controle-internocgm-tci-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "ddec2469-e10b-4a77-ba2a-2a09c9427896",
+    "decision": "under_review",
+    "reasons": ["visual_pending", "emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/contadorcgm-cont-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "dea2416b-4bf3-47ba-b90f-7a9c7fbd2735",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "df19d917-0c1d-4c38-a0d2-f67d4c6d840d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cabo-pmcnm001-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pmespcabo2022_gabarito_definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "df1ee0de-82d8-4c91-8818-71a21f7b9a4a",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "dfa69d08-bb48-4d7a-8833-f07f525e8eae",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "e04dca94-a040-4657-bb66-90bc9aa03b6d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "e09b2798-ad34-430e-9e3d-54c21a381dda",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "e358504c-9ccd-4644-a6b9-4f64bd555668",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "e47a0e3e-4477-46c7-98ff-fe54914a7f41",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "e79e6c6f-e912-4d15-a31e-6f7039b0590d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "e9a7c068-b43c-4014-bc94-eb03e42cc3cb",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "ea45e9e5-7a0b-4736-82f0-2c819ceaed4d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tecnico-de-controle-internocgm-tci-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "ebc947f5-668b-4a08-a6b2-11563776bfdd",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/contadorcgm-cont-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "ebceb5ba-08fb-4204-92c6-26556b887e35",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "ed678113-6390-4737-88e4-4e1bb76d4ba7",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "f030f6c1-074c-4315-aec4-bff3142acabb",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "f2c55008-ac33-48dc-b68c-8d78bd7bc94f",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "f3d746db-363f-408b-8c98-1d0a4cd0d2e4",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "f411c161-3908-4c3b-af72-2963bf70ce7a",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "f4f525a5-2373-4745-bf0d-60b49fce74d3",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "f8703356-79c3-43c7-ac93-769f68d4b263",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/contadorcgm-cont-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-cgm-gabarito-definitivo.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "f91dafaf-297b-4db3-8fc7-2ff5e89378d9",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns104_-_auditor_do_estado_-_direito_manhacns104_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cgesc2022_gabarito_definitivo_retificado_20230327.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "f9d7b565-aeaa-4f35-8aa0-fbda3d236f69",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "fc774922-b79c-4dbb-9178-9baba2449e4c",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "fcec84b5-31e2-4e03-bccd-5004e7543403",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "fde4ad7e-f3e4-4b2e-bce9-4198f49503ee",
+    "decision": "under_review",
+    "reasons": ["emphasis_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cadete_bm_do_1o_ano_do_curso_de_formacao_de_oficiaiscnm001_tipo_1_8461654891.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cbmerj2022_gabarito_definitivo_1.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "fe93c0a7-2cfc-485a-a0a3-162abbc48887",
+    "decision": "under_review",
+    "reasons": ["visual_pending"],
+    "syllabus_topic_id": null,
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cnm202-assistente-legislativo-administrativo-agente-legislativocnm202-tipo-1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf"
+  },
+  {
+    "table": "board_exam_questions",
+    "id": "fec0686e-268c-4291-8b93-2bd89a2dd6d8",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+    "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/analista_tecnico_-_letrasanaletras_tipo_1.pdf",
+    "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "04dd6e95-46ed-47ac-80d9-426d754e2704",
+    "decision": "under_review",
+    "reasons": ["jurisprudence_primary_confirmation_pending"],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "e06bf3d3-f210-4909-8a75-f8fd1f486988",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "a4a36530-3af4-4339-bfbc-b4a98cf788ca",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "870e2d1a-2a94-4201-9d46-bbaec6cfdcb6",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "021a23ac-7615-431c-b0ea-8a467c8f77f6",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "82bcfb24-779d-463a-86b1-a7815ac325db",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "205cfcbc-f4bb-440f-aea5-25f010195294",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "a27fce46-c9ff-43e2-bd91-fea44a13dc62",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "7ed26ffb-50df-4ee0-9694-1f11e9b98f7f",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "399a0587-26e7-4038-b9dc-9cca6275ee8c",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "5655fded-bcde-4044-a5e9-b1e3f0190ad2",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "545c3cb1-6016-4d4d-92dc-81edb23be543",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "93142939-4747-4b86-812c-5a681d148579",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "5f0914bb-c327-475f-85be-bccbd9fc2e75",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "d54d76f3-0b04-46a0-adff-74858b0f94c3",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "f028fa6b-95ae-4843-95fe-5ac44415fb58",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "3e36ac63-2b94-4edf-8839-4a688d12de6a",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "0ae246e4-e07d-4309-bc8a-0a61edf76a91",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "35e6273e-847d-48e0-a598-fba88cffd1ac",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "0f147774-8c7c-4489-8fac-934f90229477",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "1e920f8f-67bd-4d7f-ae9a-5bed42a92f6d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "f2343ef9-7189-4c62-8658-eda46a303798",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "ee93da1a-4b60-44df-bb87-8d422abf9461",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "25575789-0838-4b6b-8e54-373d22036a0c",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "e4fda5f7-294f-486e-a3eb-8aaef8d0312a",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "de7df57e-c64f-4efb-8935-932559a5d630",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "d5f178ea-d532-4729-948c-18a436d3a018",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "6e0b3b57-9855-4841-a280-8826ff2b8dfa",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "30916218-c874-43ae-aed8-13178f145119",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "444a349d-69b3-4905-8d5e-a46690c8211d",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "b087c8ce-9ee0-4557-8918-4feb87406ae8",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "d6f646d1-ea48-40f3-a717-6e85477e23cb",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "b5886b10-bca1-4a93-b2b3-8c80f7ee6d54",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "5ee88dbf-497c-4723-b110-90c88272b3b2",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "98bde148-8574-429e-86a0-1f7edae1b4d1",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "c6a0519e-f09b-4656-a013-09c5a6f117df",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "17b86a59-9ec3-41d0-a70b-f6130dc047bf",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "8656d5ed-bb30-442b-b19e-f915b4ea422e",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "b2554fa1-e99f-442e-92c0-b45552e20998",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "67ae8de1-3b54-4433-8a1d-c84dc39a8126",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "4d318e72-20a0-4aee-8e19-286481ab7c83",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "cad615cc-ba32-4e5b-b5c2-a8807ce71d34",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "44b4014c-ef7b-419e-9a41-8453fad3e84b",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "bc1299c3-b4de-4e91-9c3d-f9afdbe79bfa",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "5070647c-5bd3-4c12-8e63-9fb9d39de998",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "7a1d1a68-91a8-41c0-a1cf-f0a171ed9b2c",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "6f6188eb-5af0-451c-a6af-786654630241",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  },
+  {
+    "table": "curated_question_catalog",
+    "id": "29237002-de18-4f18-b175-71ddf1c47cac",
+    "decision": "approved",
+    "reasons": [],
+    "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+  }
+]
