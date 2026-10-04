@@ -861,7 +861,7 @@ html {
   opacity: 0;
   pointer-events: none;
 }
-@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
   .lp-hero__video {
     display: none;
   }
@@ -965,6 +965,7 @@ html {
   font-weight: 800;
   line-height: 0.94;
   letter-spacing: -0.025em;
+  text-shadow: 0 2px 18px oklch(0.05 0.02 262 / 0.55), 0 1px 2px oklch(0.05 0.02 262 / 0.7);
 }
 .lp-hero__title em {
   display: block;
@@ -977,9 +978,10 @@ html {
 .lp-hero__lead {
   max-width: 560px;
   margin-top: 26px;
-  color: oklch(0.9 0.01 255 / 0.74);
+  color: oklch(0.96 0.005 255 / 0.9);
   font-size: clamp(1rem, 1.3vw, 1.1875rem);
   line-height: 1.65;
+  text-shadow: 0 1px 10px oklch(0.05 0.02 262 / 0.5);
 }
 .lp-hero__ctas {
   display: flex;
@@ -1328,6 +1330,7 @@ html {
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.02em;
+  text-shadow: 0 2px 16px oklch(0.05 0.02 262 / 0.45);
 }
 .lp-h2 em {
   color: var(--brass);
@@ -1336,9 +1339,10 @@ html {
 .lp-lead {
   max-width: 520px;
   margin-top: 20px;
-  color: oklch(0.9 0.01 255 / 0.66);
+  color: oklch(0.95 0.005 255 / 0.86);
   font-size: 1.0625rem;
   line-height: 1.7;
+  text-shadow: 0 1px 10px oklch(0.05 0.02 262 / 0.4);
 }
 .lp-head {
   display: grid;
@@ -2086,11 +2090,15 @@ html {
 .lp-platform .lp-kicker {
   color: var(--brass-deep);
 }
+.lp-platform .lp-h2 {
+  text-shadow: none;
+}
 .lp-platform .lp-h2 em {
   color: var(--brass-deep);
 }
 .lp-platform .lp-lead {
-  color: oklch(0.2 0.03 262 / 0.62);
+  color: oklch(0.2 0.03 262 / 0.78);
+  text-shadow: none;
 }
 .lp-bento {
   position: relative;
@@ -6098,7 +6106,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
   .mh__lead {
     margin-bottom: 10px;
-    color: oklch(1 0 0 / 0.72);
+    color: oklch(1 0 0 / 0.88);
     font-size: 0.85rem;
     line-height: 1.45;
   }
@@ -6122,7 +6130,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     line-height: 1.2;
   }
   .mh__grid span {
-    color: oklch(1 0 0 / 0.6);
+    color: oklch(1 0 0 / 0.78);
     font-size: 0.74rem;
     line-height: 1.35;
     display: -webkit-box;
