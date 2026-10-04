@@ -16,6 +16,7 @@ import { ConfirmHost } from "@/components/ConfirmHost";
 import { MobileNotice } from "@/components/MobileNotice";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { THEME_INIT_SCRIPT } from "../lib/theme";
 
 function StatusScreen({
   code,
@@ -141,6 +142,8 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
+        {/* Aplica claro/escuro antes da primeira pintura, para não piscar. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <HeadContent />
       </head>
       <body>
@@ -166,25 +169,6 @@ function RootComponent() {
     });
     return () => data.subscription.unsubscribe();
   }, [router, queryClient]);
-
-  useEffect(() => {
-    // Check local storage or matchMedia for theme preference
-    const savedTheme = localStorage.getItem("theme");
-    const isDark =
-      savedTheme === "dark" ||
-      (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-
-    // Persist to local storage if it was system preference but no manual override yet
-    if (!savedTheme) {
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    }
-  }, []);
 
   useEffect(() => {
     // Registra o service worker de app-shell (só ícone/manifesto em cache,

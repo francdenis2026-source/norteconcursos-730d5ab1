@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import { SoonBadge } from "@/components/SoonBadge";
 import { AI_ENABLED, SOON_LABEL, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
+import { getActiveTheme, toggleTheme as toggleStoredTheme } from "@/lib/theme";
 import {
   BookMarked,
   BookOpen,
@@ -281,7 +282,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const navigate = useNavigate();
   const { user } = useAuthStatus();
   const [isCollapsed, setIsCollapsed] = React.useState(false);
-  const [isDarkMode, setIsDarkMode] = React.useState(false);
+  const [isDarkMode, setIsDarkMode] = React.useState(() => getActiveTheme() === "dark");
   const [paletteOpen, setPaletteOpen] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [streak, setStreak] = React.useState<UserStreak | null>(null);
@@ -388,10 +389,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   const toggleTheme = () => {
-    const next = !isDarkMode;
-    setIsDarkMode(next);
-    document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("theme", next ? "dark" : "light");
+    setIsDarkMode(toggleStoredTheme() === "dark");
   };
 
   const [farewell, setFarewell] = React.useState<{ spent: number } | null>(null);

@@ -39,6 +39,7 @@ import { TestingSeal } from "@/components/landing/TestingSeal";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
 import { MobileHub } from "@/components/landing/MobileHub";
+import { ThemeToggle } from "@/components/landing/ThemeToggle";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -224,6 +225,7 @@ function Index() {
             <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
               Começar grátis <ArrowRight />
             </Link>
+            <ThemeToggle />
             <Sheet>
               <SheetTrigger asChild>
                 <button type="button" className="lp-menu-btn" aria-label="Abrir menu">
@@ -639,6 +641,7 @@ function Index() {
         </div>
         <div className="lp-container lp-footer__bottom">
           <span>© 2026 Norte Concurso. Todos os direitos reservados.</span>
+          <span className="lp-footer__dev">Desenvolvido por FRANC</span>
           <span className="lp-coord">
             <b>N</b> · De Feijó-Acre para todo o Brasil
           </span>
