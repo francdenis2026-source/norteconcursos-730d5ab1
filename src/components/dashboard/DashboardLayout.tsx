@@ -63,6 +63,7 @@ import {
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { PlanCountdownInline } from "@/components/dashboard/PlanCountdown";
+import { RenewPlanDialog } from "@/components/dashboard/RenewPlanDialog";
 import { MockService, type MedalProgress } from "@/services/mockService";
 import type { Achievement, UserStreak } from "@/types";
 import { NorteBrand } from "@/components/brand/NorteBrand";
@@ -453,6 +454,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </div>
         </aside>
 
+        <RenewPlanDialog user={user} enabled={!isAdmin} />
+
         <Dialog open={medalsOpen} onOpenChange={setMedalsOpen}>
           <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-lg">
             <DialogTitle>Medalhas e progresso</DialogTitle>
@@ -541,7 +544,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
           <main className="app-content">
             <div className="app-content__inner">
-              {TESTING_PHASE && !isAdmin && isTestingTier(tier) && (
+              {TESTING_PHASE && !isAdmin && isTestingTier(tier) && !!user?.plan_ends_at && (
                 <div role="status" className="mb-4 flex items-start gap-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm text-foreground">
                   <FlaskConical className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" aria-hidden />
                   <p>

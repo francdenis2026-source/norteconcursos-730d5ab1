@@ -131,6 +131,8 @@ export interface UserProfile {
   subscription_expires_at?: string;
   /** Fim do plano para o contador (vencimento real ou fim da fase de testes). */
   plan_ends_at?: string | null;
+  /** Plano que acabou de vencer (o aluno voltou ao Gratuito e deve ver o convite de renovação). */
+  expired_plan?: string | undefined;
   onboarding_completed: boolean;
   onboarding_progress: any;
   activation_code?: string;

@@ -61,17 +61,28 @@ export function useAuthStatus() {
         // Lógica de data efetiva: se o plano expirou, volta para free
         let currentTier = (profile?.subscription_tier as SubscriptionTier) || "free";
         let isActivated = !!profile?.is_activated;
+        let expiredFrom: string | undefined;
 
         if (profile?.subscription_expires_at) {
           const expiryDate = new Date(profile.subscription_expires_at);
           if (expiryDate < new Date()) {
+            if (currentTier !== "free") expiredFrom = currentTier;
             currentTier = "free";
             isActivated = false;
           }
         }
 
-        // Fase de testes: contas gratuitas usam o plano de testes até a liberação dos planos.
-        if (TESTING_PHASE && currentTier === "free") currentTier = TESTING_TIER;
+        // Fase de testes: free/essencial sem vencimento próprio usam o plano de testes por 30 dias.
+        // Passado o prazo, voltam ao plano Gratuito e o app oferece a renovação.
+        const hasOwnExpiry = !!profile?.subscription_expires_at;
+        if (TESTING_PHASE && !hasOwnExpiry && (currentTier === "free" || currentTier === TESTING_TIER)) {
+          const end = planEndsAt(profile?.created_at, currentTier, null);
+          if (end && new Date(end) > new Date()) currentTier = TESTING_TIER;
+          else {
+            currentTier = "free";
+            expiredFrom = TESTING_TIER;
+          }
+        }
 
         if (!active) return;
         setUser({
@@ -81,7 +92,8 @@ export function useAuthStatus() {
           email: session.user.email || "",
           subscription_tier: currentTier,
           subscription_expires_at: profile?.subscription_expires_at,
-          plan_ends_at: planEndsAt(profile?.created_at, currentTier, profile?.subscription_expires_at),
+          plan_ends_at: expiredFrom ? null : planEndsAt(profile?.created_at, currentTier, profile?.subscription_expires_at),
+          expired_plan: expiredFrom,
           onboarding_completed: !!profile?.onboarding_completed,
           onboarding_progress: profile?.onboarding_progress || {},
           is_activated: isActivated,

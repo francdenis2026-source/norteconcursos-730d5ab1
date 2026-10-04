@@ -43,9 +43,9 @@ function SubscriptionsPage() {
         <h1 className="text-2xl font-bold text-foreground md:text-3xl">Planos e uso</h1>
       </header>
 
-      {((TESTING_PHASE && isTestingTier(tier)) || !PAYMENTS_ENABLED) && (
+      {((TESTING_PHASE && isTestingTier(tier) && !!user?.plan_ends_at) || !PAYMENTS_ENABLED) && (
         <div role="status" className="space-y-1 rounded-lg border border-amber-500/40 bg-amber-500/10 p-4 text-sm text-foreground">
-          {TESTING_PHASE && isTestingTier(tier) && <p><strong>Fase de testes.</strong> {TESTING_NOTICE}</p>}
+          {TESTING_PHASE && isTestingTier(tier) && !!user?.plan_ends_at && <p><strong>Fase de testes.</strong> {TESTING_NOTICE}</p>}
           {!PAYMENTS_ENABLED && <p>{PAYMENTS_NOTICE}</p>}
         </div>
       )}
