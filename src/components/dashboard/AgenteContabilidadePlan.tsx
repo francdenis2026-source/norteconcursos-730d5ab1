@@ -2,39 +2,16 @@ import { Link } from "@tanstack/react-router";
 import { AlertTriangle, CalendarDays, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  AGENTE_TOPICS,
-  AGENTE_WEEKS,
-  computeAgenteStats,
-  type ItemVerdicts,
-} from "@/lib/agenteContabilidade";
-import { cn } from "@/lib/utils";
-
-interface AttemptRow {
-  contest_name: string | null;
-  contest_year: string | number | null;
-  extracted_data: Record<string, unknown> | null;
-}
-
-const normalize = (value: string) => value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+import { AGENTE_TOPICS, AGENTE_WEEKS, computeAgenteStats } from "@/lib/agenteContabilidade";
 
 const YEARS = [2014, 2018, 2021, 2025];
 
 // Plano de 6 semanas de Contabilidade Geral para Agente de PF (Bloco III do edital: 24 de 120 itens),
-// priorizado pelo que mais caiu nas provas de Agente e pelos pontos que o aluno perdeu em cada tópico.
-export function AgenteContabilidadePlan({ attempts }: { attempts: AttemptRow[] }) {
-  const verdicts: ItemVerdicts = {};
-  let approximate = false;
-  for (const row of attempts) {
-    if (!normalize(String(row.contest_name ?? "")).includes("agente de policia federal")) continue;
-    const year = Number(row.contest_year);
-    const items = row.extracted_data?.["items"];
-    if (!year || !items || typeof items !== "object") continue;
-    verdicts[year] = { ...(verdicts[year] ?? {}), ...(items as Record<string, string>) };
-    if (row.extracted_data?.["itens_aproximado"]) approximate = true;
-  }
-  const stats = computeAgenteStats(verdicts);
-  const personal = stats.some((stat) => stat.hasData);
+// priorizado pelo que mais caiu nas quatro provas oficiais de Agente (2014, 2018, 2021 e 2025).
+// A informação é a mesma para todos os alunos: não usa o desempenho de nenhum candidato.
+export function AgenteContabilidadePlan() {
+  const stats = computeAgenteStats({});
+  const totalAsked = stats.reduce((n, stat) => n + stat.asked, 0);
   const labelOf = (id: number) => AGENTE_TOPICS.find((topic) => topic.id === id)?.label ?? "";
 
   return (
@@ -44,9 +21,9 @@ export function AgenteContabilidadePlan({ attempts }: { attempts: AttemptRow[] }
           <Target className="h-5 w-5 text-emerald-600" /> Plano de Contabilidade para Agente de PF
         </CardTitle>
         <CardDescription>
-          O Bloco III do edital da PF 2025 é só Contabilidade Geral: 24 dos 120 itens. A ordem
-          abaixo junta o que mais caiu nas provas de Agente com os pontos que você perdeu em cada
-          tópico (erro = 2 pontos, em branco = 1).
+          O Bloco III do edital da PF 2025 é só Contabilidade Geral: 24 dos 120 itens. A ordem abaixo
+          é a do que mais caiu nas quatro provas oficiais de Agente já analisadas ({totalAsked} itens
+          de Contabilidade). É o mesmo norte para todos os alunos.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-8">
@@ -59,8 +36,7 @@ export function AgenteContabilidadePlan({ attempts }: { attempts: AttemptRow[] }
                   <th className="py-1 pr-3">#</th>
                   <th className="py-1 pr-3">Tópico do edital</th>
                   <th className="py-1 pr-3">Caiu ({YEARS.join(", ")})</th>
-                  <th className="py-1 pr-3">Seu desempenho</th>
-                  <th className="py-1 pr-3">Pontos perdidos</th>
+                  <th className="py-1 pr-3">% das questões</th>
                   <th className="py-1">Materiais</th>
                 </tr>
               </thead>
@@ -76,30 +52,15 @@ export function AgenteContabilidadePlan({ attempts }: { attempts: AttemptRow[] }
                       </span>
                     </td>
                     <td className="py-2 pr-3">
-                      {stat.hasData ? (
-                        `${stat.correct} certas · ${stat.wrong} erradas · ${stat.blank} em branco`
-                      ) : (
-                        <span className="text-muted-foreground">sem itens seus</span>
-                      )}
-                    </td>
-                    <td className="py-2 pr-3">
-                      {stat.hasData ? (
-                        <Badge
-                          variant="outline"
-                          className={cn(
-                            "text-[10px]",
-                            stat.pointsLost >= 10
-                              ? "border-rose-300 text-rose-700"
-                              : stat.pointsLost >= 6
-                                ? "border-amber-300 text-amber-700"
-                                : "text-muted-foreground",
-                          )}
-                        >
-                          {stat.pointsLost}
-                        </Badge>
-                      ) : (
-                        "—"
-                      )}
+                      <div className="flex items-center gap-2">
+                        <div className="h-1.5 w-16 overflow-hidden rounded-full bg-muted">
+                          <div
+                            className="h-full rounded-full bg-emerald-600"
+                            style={{ width: `${Math.min(100, (stat.asked / (stats[0]?.asked || 1)) * 100)}%` }}
+                          />
+                        </div>
+                        <span className="tabular-nums">{((100 * stat.asked) / totalAsked).toFixed(0)}%</span>
+                      </div>
                     </td>
                     <td className="py-2">
                       <div className="flex flex-wrap gap-x-2 gap-y-1">
@@ -120,11 +81,13 @@ export function AgenteContabilidadePlan({ attempts }: { attempts: AttemptRow[] }
               </tbody>
             </table>
           </div>
-          {!personal && (
-            <p className="text-xs text-muted-foreground">
-              Sem itens seus de Agente de PF cadastrados: a ordem usa só a frequência nas provas.
-            </p>
-          )}
+          <p className="text-xs text-muted-foreground">
+            Quer ver o peso de todas as disciplinas em provas federais, estaduais e da sua carreira?{" "}
+            <Link to="/dashboard/exam-panorama" className="font-bold text-emerald-700 hover:underline">
+              Abrir o Panorama das provas
+            </Link>
+            .
+          </p>
         </section>
 
         <section className="space-y-3">
@@ -160,8 +123,6 @@ export function AgenteContabilidadePlan({ attempts }: { attempts: AttemptRow[] }
         <p className="flex items-start gap-2 text-xs text-muted-foreground">
           <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0" />O tópico de cada questão foi
           atribuído automaticamente pelo enunciado e pode errar em alguns itens.
-          {approximate &&
-            " O detalhamento da PF 2025 vem de planilha pessoal e é aproximado; os totais oficiais são os do BDI."}
         </p>
       </CardContent>
     </Card>

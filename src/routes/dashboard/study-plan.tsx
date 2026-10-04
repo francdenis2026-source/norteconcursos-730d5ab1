@@ -536,7 +536,7 @@ function StudyPlanPage() {
           </Card>
         </div>
       </section>
-      {career === "PF" && <AgenteContabilidadePlan attempts={attempts} />}
+      {career === "PF" && <AgenteContabilidadePlan />}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
