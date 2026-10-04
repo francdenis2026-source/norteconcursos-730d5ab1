@@ -66,8 +66,8 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { PlanCountdownInline } from "@/components/dashboard/PlanCountdown";
 import { AcreClock } from "@/components/dashboard/AcreClock";
-import { alertDialog } from "@/lib/confirm";
-import { flushStudyClock, fmtHuman, getStudyToday, stopStudyClock } from "@/lib/studyClock";
+import { FarewellDialog } from "@/components/dashboard/FarewellDialog";
+import { flushStudyClock, getStudyToday, stopStudyClock } from "@/lib/studyClock";
 import { SessionClock } from "@/components/dashboard/SessionClock";
 import { RenewPlanDialog } from "@/components/dashboard/RenewPlanDialog";
 import { MockService, type MedalProgress } from "@/services/mockService";
@@ -339,15 +339,16 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     localStorage.setItem("theme", next ? "dark" : "light");
   };
 
-  const signOut = async () => {
-    await flushStudyClock();
-    const spent = getStudyToday();
+  const [farewell, setFarewell] = React.useState<{ spent: number } | null>(null);
+  const reallySignOut = async () => {
     stopStudyClock();
-    if (!isAdmin && spent >= 60) {
-      await alertDialog({ title: "Até logo!", message: `Hoje você ficou ${fmtHuman(spent)} na plataforma. Bom descanso e até a próxima sessão de estudo.`, okLabel: "Sair" });
-    }
     await supabase.auth.signOut();
     navigate({ to: "/" });
+  };
+  const signOut = async () => {
+    await flushStudyClock();
+    if (isAdmin) await reallySignOut();
+    else setFarewell({ spent: getStudyToday() });
   };
 
   const go = (href: string) => {
@@ -646,6 +647,16 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             ))}
           </nav>
         </div>
+
+        <FarewellDialog
+          open={!!farewell}
+          name={displayName}
+          spent={farewell?.spent ?? 0}
+          streak={streak?.currentStreak ?? 0}
+          medals={achievements.length}
+          onStay={() => setFarewell(null)}
+          onLeave={() => void reallySignOut()}
+        />
 
         <Dialog open={paletteOpen} onOpenChange={setPaletteOpen}>
           <DialogContent className="cmd-dialog max-w-xl overflow-hidden p-0">
