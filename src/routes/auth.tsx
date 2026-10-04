@@ -64,6 +64,8 @@ function AuthPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
   const errorRef = useRef<HTMLDivElement>(null);
+  /** Login feito neste formulário: o próprio formulário avisa, o listener de sessão fica quieto. */
+  const manualAuth = useRef(false);
   const navigate = useNavigate();
   /** E-mail aguardando confirmação (tela de boas-vindas após cadastro). */
   const [pendingEmail, setPendingEmail] = useState<string | null>(null);
@@ -89,7 +91,10 @@ function AuthPage() {
     });
     const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === "SIGNED_IN" && session) {
-        toast.success("E-mail confirmado! Bem-vindo à Norte Concurso.");
+        // Entrada sem passar pelo formulário = clique no link de confirmação (outra aba ou e-mail).
+        if (!manualAuth.current) {
+          toast.success("E-mail confirmado", { id: "auth-welcome", description: "Sua conta está ativa. Boa preparação!" });
+        }
         navigate({ to: "/dashboard" });
       }
     });
@@ -165,6 +170,7 @@ function AuthPage() {
           const { data: found } = await supabase.rpc("login_email_for_cpf", { _cpf: cpfDigits });
           loginEmail = found || `${cpfDigits}@norteconcurso.local`;
         }
+        manualAuth.current = true;
         const { error } = await supabase.auth.signInWithPassword({
           email: loginEmail,
           password: pin,
@@ -173,9 +179,10 @@ function AuthPage() {
           if (/email not confirmed/i.test(error.message) && loginEmail.includes("@") && !loginEmail.endsWith(".local")) {
             setUnconfirmedEmail(loginEmail);
           }
+          manualAuth.current = false;
           throw error;
         }
-        toast.success("Bem-vindo à sua preparação!");
+        toast.success("Bem-vindo de volta", { id: "auth-welcome", description: "Sua preparação continua de onde parou." });
         navigate({ to: "/dashboard" });
       }
     } catch (error: unknown) {

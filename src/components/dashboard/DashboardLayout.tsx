@@ -80,6 +80,7 @@ type MenuItem = {
 
 const MENU: MenuItem[] = [
   { group: "Hoje", label: "Painel do aluno", icon: LayoutDashboard, href: "/dashboard" },
+  { group: "Hoje", label: "Assistente de estudos", icon: Sparkles, href: "/dashboard/study-coach" },
   { group: "Hoje", label: "Plano de estudos", icon: ClipboardList, href: "/dashboard/study-plan" },
   { group: "Hoje", label: "Central de estudos", icon: Timer, href: "/dashboard/study-tools" },
   { group: "Objetivo", label: "Meu concurso", icon: Target, href: "/dashboard/my-contest" },
@@ -555,17 +556,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
           <main className="app-content">
             <div className="app-content__inner">
-              {TESTING_PHASE && !isAdmin && isTestingTier(tier) && !!user?.plan_ends_at && (
+              {TESTING_PHASE && !isAdmin && isTestingTier(tier) && !!user?.plan_ends_at && !location.pathname.startsWith("/dashboard/subscriptions") && (
                 <div role="status" className="mb-4 flex items-start gap-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm text-foreground">
                   <FlaskConical className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" aria-hidden />
                   <p>
-                    <strong>Fase de testes.</strong> Plataforma aberta e gratuita por 30 dias. Durante este período, todas as contas usam o plano Essencial.
-                    Em breve os planos pagos serão ativados.
-                    {user?.plan_ends_at && (
-                      <>
-                        {" "}Seu acesso gratuito termina em <PlanCountdownInline endsAt={user.plan_ends_at} />.
-                      </>
-                    )}
+                    <strong>Fase de testes.</strong> Você usa o plano Essencial de graça. Seu acesso termina em{" "}
+                    <PlanCountdownInline endsAt={user.plan_ends_at} />.
                   </p>
                 </div>
               )}
