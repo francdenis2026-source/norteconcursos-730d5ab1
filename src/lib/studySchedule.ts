@@ -71,7 +71,7 @@ function howTo(kind: BlockKind, minutes: number): string {
   const q = Math.max(3, Math.round(minutes / 2.5));
   switch (kind) {
     case "Teoria":
-      return "Estude com o material da Biblioteca e faça um resumo curto, com as suas palavras (ou um mapa mental). No fim, sem olhar, escreva 3 pontos que você não pode esquecer. Lei seca: confira sempre a versão vigente.";
+      return "Estude com o material da Biblioteca ou com uma videoaula gratuita da matéria e faça um resumo curto, com as suas palavras (ou um mapa mental). No fim, sem olhar, escreva 3 pontos que você não pode esquecer. Lei seca: confira sempre a versão vigente.";
     case "Flashcards":
       return "Logo depois da teoria, crie ou revise flashcards dos assuntos acima. Tente responder de cabeça antes de virar o cartão (recuperação ativa): é o que fixa o conteúdo.";
     case "Questões":

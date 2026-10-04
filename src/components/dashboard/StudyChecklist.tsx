@@ -1,10 +1,14 @@
 import * as React from "react";
-import { Link } from "@tanstack/react-router";
-import { BookOpen, CheckCircle2, ChevronDown, Play, Circle, ClipboardCheck, Clock3, ExternalLink, Repeat2, Route as RouteIcon } from "lucide-react";
+import { Link, useNavigate } from "@tanstack/react-router";
+import { useQueryClient } from "@tanstack/react-query";
+import { BookOpen, CheckCircle2, ChevronDown, Loader2, Play, Circle, ClipboardCheck, Clock3, ExternalLink, Repeat2, Route as RouteIcon } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { alertDialog } from "@/lib/confirm";
+import { hasAnyResource, loadArsenal, missingMessage } from "@/lib/arsenal";
+import { PODCASTS } from "@/data/mediaCatalog";
 import { DAY_NAMES, dueReviews, mixSummary, REVIEW_OFFSETS, type BlockKind, type ScheduleDay } from "@/lib/studySchedule";
 import { cn } from "@/lib/utils";
 
@@ -58,6 +62,43 @@ export function WeekChecklist({
 }) {
   const [open, setOpen] = React.useState<string | null>(null);
   const [busy, setBusy] = React.useState<string | null>(null);
+  const [opening, setOpening] = React.useState<string | null>(null);
+  const qc = useQueryClient();
+  const navigate = useNavigate();
+
+  /** Confere se há conteúdo para o assunto: abre a Sala de estudo se houver, avisa se não houver. */
+  async function study(b: ScheduleDay["blocks"][number], topic: string | undefined) {
+    setOpening(b.key);
+    try {
+      const arsenal = await loadArsenal(qc, userId, b.subject, topic ?? "");
+      if (!hasAnyResource(arsenal)) {
+        await alertDialog({ title: "Ainda sem conteúdo para este assunto", message: missingMessage(b.subject, topic ?? "") });
+        return;
+      }
+      await navigate({ to: "/dashboard/study-room", search: roomSearch(b, topic, planId, weekStart) });
+    } catch {
+      // Se a checagem falhar (rede), não trava o aluno: abre a sala, que mostra o que houver.
+      await navigate({ to: "/dashboard/study-room", search: roomSearch(b, topic, planId, weekStart) });
+    } finally {
+      setOpening(null);
+    }
+  }
+
+  /** Ferramentas fora da sala: confere se existe algo antes de redirecionar. */
+  async function openOther(b: ScheduleDay["blocks"][number]) {
+    if (b.kind === "Podcast" && PODCASTS.length === 0) {
+      await alertDialog({ title: "Podcasts em breve", message: "Os episódios em áudio ainda estão sendo produzidos. Assim que forem publicados, eles aparecem na Central de mídia." });
+      return;
+    }
+    if (b.kind === "Simulado") {
+      const a = await loadArsenal(qc, userId, "Língua Portuguesa", "").catch(() => null);
+      if (a && a.questions === 0) {
+        await alertDialog({ title: "Simulado indisponível", message: "Ainda não há questões cadastradas para montar um simulado. Tente novamente em breve." });
+        return;
+      }
+    }
+    await navigate({ to: b.href, ...(b.search ? { search: b.search } : {}) });
+  }
   const doneKeys = new Set(checks.filter((c) => c.plan_id === planId && c.week_start === weekStart).map((c) => c.block_key));
   const planned = schedule.reduce((n, d) => n + d.minutes, 0);
   const done = schedule.reduce((n, d) => n + d.blocks.filter((b) => doneKeys.has(b.key)).reduce((m, b) => m + b.minutes, 0), 0);
@@ -148,13 +189,14 @@ export function WeekChecklist({
                                 {b.topics.map((t) => (
                                   <li key={t}>
                                     {inRoom(b.kind) ? (
-                                      <Link
-                                        to="/dashboard/study-room"
-                                        search={roomSearch(b, t, planId, weekStart)}
-                                        className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+                                      <button
+                                        type="button"
+                                        onClick={() => void study(b, t)}
+                                        disabled={opening === b.key}
+                                        className="inline-flex items-center gap-1 text-left font-semibold text-primary hover:underline"
                                       >
-                                        <BookOpen className="h-3.5 w-3.5" /> {t}
-                                      </Link>
+                                        <BookOpen className="h-3.5 w-3.5 shrink-0" /> {t}
+                                      </button>
                                     ) : (
                                       t
                                     )}
@@ -168,18 +210,24 @@ export function WeekChecklist({
                             <p className="mt-1 leading-relaxed">{b.how}</p>
                           </div>
                           <div className="flex flex-wrap items-center gap-3">
-                            {inRoom(b.kind) && (
-                              <Link
-                                to="/dashboard/study-room"
-                                search={roomSearch(b, b.topics[0], planId, weekStart)}
-                                className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 font-bold text-primary-foreground hover:opacity-90"
+                            {inRoom(b.kind) ? (
+                              <button
+                                type="button"
+                                onClick={() => void study(b, b.topics[0])}
+                                disabled={opening === b.key}
+                                className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 font-bold text-primary-foreground hover:opacity-90 disabled:opacity-60"
                               >
-                                <Play className="h-3.5 w-3.5" /> Iniciar sessão de estudo
-                              </Link>
+                                {opening === b.key ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Play className="h-3.5 w-3.5" />} Estudar este assunto
+                              </button>
+                            ) : (
+                              <button
+                                type="button"
+                                onClick={() => void openOther(b)}
+                                className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+                              >
+                                Abrir ferramenta <ExternalLink className="h-3.5 w-3.5" />
+                              </button>
                             )}
-                            <Link to={b.href} {...(b.search ? { search: b.search } : {})} className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
-                              Abrir ferramenta <ExternalLink className="h-3.5 w-3.5" />
-                            </Link>
                           </div>
                         </div>
                       )}
@@ -328,10 +376,11 @@ export function ReviewQueue({
 }
 
 const CYCLE: [string, string][] = [
-  ["Teoria", "estude o assunto e resuma com suas palavras"],
+  ["Teoria", "leia o material ou assista à videoaula e resuma com suas palavras"],
   ["Flashcards", "no mesmo dia, treine a recuperação ativa"],
   ["Questões", "no dia seguinte, aplique em questões da banca"],
   ["Revisão espaçada", "volte ao assunto em 1, 7 e 30 dias"],
+  ["Podcast", "reforce em áudio nos tempos livres (quando houver episódios)"],
   ["Revisão de erros", "refaça o que errou, sem consultar"],
   ["Simulado", "teste tudo em condições de prova"],
 ];

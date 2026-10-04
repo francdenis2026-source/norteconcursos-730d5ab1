@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AlertTriangle, HelpCircle } from "lucide-react";
+import { AlertTriangle, HelpCircle, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { registerConfirmHost, type ConfirmOptions } from "@/lib/confirm";
@@ -17,7 +17,8 @@ export function ConfirmHost() {
     state?.resolve(ok);
     setState(null);
   };
-  const danger = state?.opts.tone !== "default";
+  const tone = state?.opts.tone ?? "danger";
+  const danger = tone === "danger";
 
   return (
     <Dialog open={!!state} onOpenChange={(open) => !open && close(false)}>
@@ -27,15 +28,17 @@ export function ConfirmHost() {
             className={`mb-2 grid h-12 w-12 place-items-center rounded-full ${danger ? "bg-rose-500/12 text-rose-600" : "bg-primary/10 text-primary"}`}
             aria-hidden
           >
-            {danger ? <AlertTriangle className="h-6 w-6" /> : <HelpCircle className="h-6 w-6" />}
+            {danger ? <AlertTriangle className="h-6 w-6" /> : tone === "info" ? <Info className="h-6 w-6" /> : <HelpCircle className="h-6 w-6" />}
           </div>
           <DialogTitle>{state?.opts.title}</DialogTitle>
           <DialogDescription>{state?.opts.message}</DialogDescription>
         </DialogHeader>
         <DialogFooter className="gap-2 sm:gap-0">
-          <Button variant="outline" onClick={() => close(false)} autoFocus>
-            {state?.opts.cancelLabel ?? "Cancelar"}
-          </Button>
+          {!state?.opts.hideCancel && (
+            <Button variant="outline" onClick={() => close(false)} autoFocus>
+              {state?.opts.cancelLabel ?? "Cancelar"}
+            </Button>
+          )}
           <Button variant={danger ? "destructive" : "default"} onClick={() => close(true)}>
             {state?.opts.confirmLabel ?? "Confirmar"}
           </Button>

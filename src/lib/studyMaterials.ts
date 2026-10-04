@@ -43,21 +43,23 @@ export const STATUS_LABEL: Record<StudyMaterialStatus, string> = {
 };
 
 /** Active materials only (RLS also guarantees this for students). */
+export async function fetchStudyMaterialList(): Promise<StudyMaterialSummary[]> {
+  const { data, error } = await supabase
+    .from("study_materials")
+    .select(SUMMARY_COLUMNS)
+    .eq("content_status", "active")
+    .order("discipline")
+    .order("sort_order");
+  if (error) throw error;
+  return (data ?? []) as StudyMaterialSummary[];
+}
+
 export function useStudyMaterialList(enabled: boolean) {
   return useQuery({
     queryKey: ["study-materials", "list"],
     enabled,
     staleTime: 5 * 60 * 1000,
-    queryFn: async (): Promise<StudyMaterialSummary[]> => {
-      const { data, error } = await supabase
-        .from("study_materials")
-        .select(SUMMARY_COLUMNS)
-        .eq("content_status", "active")
-        .order("discipline")
-        .order("sort_order");
-      if (error) throw error;
-      return (data ?? []) as StudyMaterialSummary[];
-    },
+    queryFn: fetchStudyMaterialList,
   });
 }
 

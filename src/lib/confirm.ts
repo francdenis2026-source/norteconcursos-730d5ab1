@@ -4,7 +4,9 @@ export interface ConfirmOptions {
   confirmLabel?: string;
   cancelLabel?: string;
   /** "danger" (padrão) para ações destrutivas; "default" para confirmações comuns. */
-  tone?: "danger" | "default";
+  tone?: "danger" | "default" | "info";
+  /** Só o botão de confirmar (usado nos avisos). */
+  hideCancel?: boolean;
 }
 
 type Host = ((opts: ConfirmOptions) => Promise<boolean>) | null;
@@ -20,4 +22,9 @@ export function registerConfirmHost(h: Host) {
  */
 export function confirmDialog(opts: ConfirmOptions): Promise<boolean> {
   return host ? host(opts) : Promise.resolve(false);
+}
+
+/** Aviso informativo com um botão só ("Entendi"). */
+export async function alertDialog(opts: { title: string; message: string; okLabel?: string }): Promise<void> {
+  await confirmDialog({ title: opts.title, message: opts.message, confirmLabel: opts.okLabel ?? "Entendi", tone: "info", hideCancel: true });
 }

@@ -1,8 +1,8 @@
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  ArrowLeft, BookOpenCheck, BrainCircuit, CheckCircle2, Coffee, ExternalLink, FileText, Layers, Library, Loader2,
-  MapPin, Pause, Play, PlayCircle, RotateCcw, SkipForward, Timer as TimerIcon,
+  ArrowLeft, BookOpenCheck, BrainCircuit, CheckCircle2, Coffee, ExternalLink, FileText, Headphones, Layers, Library, Loader2,
+  MapPin, Minus, Pause, Play, PlayCircle, RotateCcw, SkipForward, Timer as TimerIcon,
 } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
@@ -15,9 +15,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Markdown } from "@/components/library/Markdown";
 import { StudyPractice } from "@/components/library/StudyPractice";
 import { LockedState } from "@/components/dashboard/PageHero";
-import { PLAYLISTS, youtubePlaylistUrl, youtubeSearchUrl } from "@/data/mediaCatalog";
-import { readingMinutes, useStudyMaterial, useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
-import { areaOfSubject, subjectInArea } from "@/lib/questionTopics";
+import { youtubeEmbedUrl, youtubePlaylistUrl, youtubeSearchUrl } from "@/data/mediaCatalog";
+import { readingMinutes, useStudyMaterial, useStudyMaterialList } from "@/lib/studyMaterials";
+import { loadArsenal, mediaDisciplineOf, rankMaterials, type Arsenal } from "@/lib/arsenal";
+import { AudioPlayer } from "@/components/media/AudioPlayer";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { advance, fmtClock, initialState, makeSegments, pause, skip, start, type Segment, type TimerState } from "@/lib/studyTimer";
 import { cn } from "@/lib/utils";
 
@@ -35,23 +37,6 @@ export const Route = createFileRoute("/dashboard/study-room")({
   }),
   component: StudyRoomPage,
 });
-
-const strip = (v: string) => v.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
-const tokens = (v: string) => strip(v).split(/[^a-z0-9]+/).filter((t) => t.length >= 5);
-
-/** Materiais da matéria, com os do assunto primeiro (mais palavras em comum). */
-function rank(list: StudyMaterialSummary[], subject: string, topic: string) {
-  const want = new Set(tokens(topic));
-  return list
-    .filter((m) => subjectInArea(subject, m.discipline))
-    .map((m) => ({ m, score: tokens(`${m.topic_label} ${m.title} ${m.summary ?? ""}`).filter((t) => want.has(t)).length }))
-    .sort((a, b) => b.score - a.score || a.m.sort_order - b.m.sort_order);
-}
-
-const DISCIPLINE_OF_AREA: Record<string, string> = {
-  portugues: "Língua Portuguesa", raciocinio: "Raciocínio Lógico", constitucional: "Direito Constitucional",
-  penal: "Direito Penal", processual: "Direito Processual Penal", informatica: "Informática",
-};
 
 // ───────────────────────── Cronômetro ─────────────────────────
 
@@ -204,15 +189,26 @@ function StudyRoomPage() {
   const storageKey = `norte_room_${sp.key ?? `${subject}|${topic}`}_${planned}_${sp.week ?? ""}`;
 
   const { data: list, isPending } = useStudyMaterialList(real);
-  const ranked = React.useMemo(() => rank(list ?? [], subject, topic), [list, subject, topic]);
+  const ranked = React.useMemo(() => rankMaterials(list ?? [], subject, topic), [list, subject, topic]);
   const [slug, setSlug] = React.useState<string | null>(null);
   const currentSlug = slug ?? ranked[0]?.m.slug ?? "";
   const { data: material, isPending: loadingMaterial } = useStudyMaterial(currentSlug, real && !!currentSlug);
   const exact = ranked.filter((r) => r.score > 0);
 
-  const area = areaOfSubject(subject);
-  const discipline = area ? DISCIPLINE_OF_AREA[area] : undefined;
-  const playlists = discipline ? PLAYLISTS.filter((p) => p.discipline === discipline) : [];
+  const qc = useQueryClient();
+  const { data: arsenal } = useQuery<Arsenal>({
+    queryKey: ["arsenal", user?.id, subject, topic],
+    enabled: real && !!subject,
+    staleTime: 5 * 60_000,
+    queryFn: () => loadArsenal(qc, user!.id, subject, topic),
+  });
+  const discipline = mediaDisciplineOf(subject);
+  const playlists = arsenal?.playlists ?? [];
+  const podcasts = arsenal?.podcasts ?? [];
+  const [playlistId, setPlaylistId] = React.useState<string | null>(null);
+  const activePlaylist = playlists.find((p) => p.id === playlistId) ?? playlists[0];
+  const [podcastId, setPodcastId] = React.useState<string | null>(null);
+  const activePodcast = podcasts.find((p) => p.id === podcastId) ?? podcasts[0];
 
   const [notes, setNotes] = React.useState(() => {
     try { return localStorage.getItem(`${storageKey}_notes`) ?? ""; } catch { return ""; }
@@ -267,6 +263,20 @@ function StudyRoomPage() {
         </div>
         <h1 className="mt-2 text-2xl font-black leading-tight md:text-3xl">{topic || subject}</h1>
         <p className="text-sm text-muted-foreground">{subject}</p>
+        <ul className="mt-3 flex flex-wrap gap-2 text-xs" aria-label="Recursos disponíveis para este assunto">
+          {([
+            ["Material", (arsenal?.topicMaterials.length ?? 0) || (arsenal?.subjectMaterials.length ?? 0), arsenal ? ((arsenal.topicMaterials.length ?? 0) > 0 ? "do assunto" : "da matéria") : ""],
+            ["Videoaulas", playlists.length, "playlists"],
+            ["Podcasts", podcasts.length, ""],
+            ["Flashcards", arsenal?.cards ?? 0, "seus"],
+            ["Questões", arsenal?.questions ?? 0, "na matéria"],
+          ] as [string, number, string][]).map(([label, n, hint]) => (
+            <li key={label} className={cn("flex items-center gap-1.5 rounded-full border px-3 py-1 font-semibold", n > 0 ? "border-emerald-500/40 bg-emerald-500/10" : "text-muted-foreground")}>
+              {n > 0 ? <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" /> : <Minus className="h-3.5 w-3.5" />}
+              {label}{n > 0 ? ` · ${n}${hint ? ` ${hint}` : ""}` : " · indisponível"}
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[1fr_340px]">
@@ -310,6 +320,66 @@ function StudyRoomPage() {
             </CardContent>
           </Card>
 
+          {/* Videoaulas */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-base"><PlayCircle className="h-5 w-5 text-primary" /> Videoaulas gratuitas</CardTitle>
+              <CardDescription>
+                {activePlaylist ? `Playlists de ${discipline} (por matéria, não por assunto). Procure o tema "${topic || subject}" na lista do vídeo.` : "Ainda não há playlists cadastradas para esta matéria."}
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {activePlaylist ? (
+                <>
+                  <div className="overflow-hidden rounded-xl border bg-black">
+                    <div className="aspect-video w-full">
+                      <iframe key={activePlaylist.id} src={youtubeEmbedUrl(activePlaylist.id)} title={activePlaylist.title} className="h-full w-full" loading="lazy"
+                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {playlists.map((p) => (
+                      <button key={p.id} type="button" onClick={() => setPlaylistId(p.id)}
+                        className={cn("rounded-full border px-3 py-1 text-xs font-semibold", p.id === activePlaylist.id ? "border-primary bg-primary text-primary-foreground" : "hover:border-primary/50")}>
+                        {p.title}
+                      </button>
+                    ))}
+                  </div>
+                  <a href={youtubePlaylistUrl(activePlaylist.id)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline">
+                    Abrir no YouTube <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                </>
+              ) : (
+                <a href={youtubeSearchUrl(topic || subject)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
+                  Buscar aulas grátis deste assunto no YouTube <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              )}
+            </CardContent>
+          </Card>
+
+          {/* Podcasts */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-base"><Headphones className="h-5 w-5 text-primary" /> Podcasts de estudo</CardTitle>
+              <CardDescription>{activePodcast ? "Reforce o assunto em áudio." : "Ainda não há podcasts desta matéria. Os episódios gerados no NotebookLM chegam em breve."}</CardDescription>
+            </CardHeader>
+            {activePodcast && (
+              <CardContent className="space-y-3">
+                <AudioPlayer src={activePodcast.src} title={activePodcast.title} subtitle={activePodcast.discipline} resumeKey={activePodcast.id} />
+                {podcasts.length > 1 && (
+                  <div className="flex flex-wrap gap-2">
+                    {podcasts.map((p) => (
+                      <button key={p.id} type="button" onClick={() => setPodcastId(p.id)}
+                        className={cn("rounded-full border px-3 py-1 text-xs font-semibold", p.id === activePodcast.id ? "border-primary bg-primary text-primary-foreground" : "hover:border-primary/50")}>
+                        {p.title}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+            )}
+          </Card>
+
           {/* Anotações */}
           <Card>
             <CardHeader><CardTitle className="text-base">Anotações da sessão</CardTitle><CardDescription>Salvas neste aparelho, só para você. Ao final, escreva 3 pontos que não pode esquecer.</CardDescription></CardHeader>
@@ -332,19 +402,6 @@ function StudyRoomPage() {
               <Link to="/dashboard/flashcards" search={{ subject, ...(topic ? { topic } : {}) }} className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"><Layers className="h-4 w-4 text-cyan-600" /> Flashcards do assunto</Link>
               <Link to="/dashboard/edital" className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"><MapPin className="h-4 w-4 text-sky-600" /> Ver no edital</Link>
               <Link to="/dashboard/library" className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"><Library className="h-4 w-4 text-violet-600" /> Biblioteca completa</Link>
-              {playlists.length > 0 && (
-                <div className="pt-2">
-                  <p className="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground"><PlayCircle className="h-3.5 w-3.5" /> Videoaulas gratuitas</p>
-                  <ul className="space-y-1">
-                    {playlists.slice(0, 3).map((p) => (
-                      <li key={p.id}><a href={youtubePlaylistUrl(p.id)} target="_blank" rel="noopener noreferrer" className="flex items-start gap-1.5 text-xs font-medium text-primary hover:underline"><ExternalLink className="mt-0.5 h-3 w-3 shrink-0" /> {p.title}</a></li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              {discipline && (
-                <a href={youtubeSearchUrl(`${topic || discipline}`)} target="_blank" rel="noopener noreferrer" className="block pt-1 text-xs font-medium text-muted-foreground hover:text-primary hover:underline">Buscar aulas grátis deste assunto no YouTube</a>
-              )}
             </CardContent>
           </Card>
         </aside>
