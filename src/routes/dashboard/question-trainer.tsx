@@ -163,7 +163,7 @@ function QuestionTrainer() {
     void (async () => {
       try {
         const query = async (
-          table: "official_exam_questions" | "curated_question_catalog" | "question_bank",
+          table: "official_exam_questions" | "curated_question_catalog" | "question_bank" | "board_exam_questions",
           base: string,
           extra: string,
           refine: (
@@ -178,7 +178,7 @@ function QuestionTrainer() {
           error: null,
           gated: true,
         });
-        const [officialResult, curatedResult, personalResult] = await Promise.all([
+        const [officialResult, curatedResult, personalResult, boardResult] = await Promise.all([
           query(
             "official_exam_questions",
             "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,state,career_category",
@@ -199,6 +199,13 @@ function QuestionTrainer() {
                 "law_version_checked_at",
                 (builder) => builder.eq("user_id", userId).eq("content_status", "active"),
               ),
+          // Provas de bancas com alternativas A–E (FGV etc.): só entram depois de revisadas e ativadas.
+          query(
+            "board_exam_questions",
+            "id,board,contest_name,career_name,exam_year,subject,support_text,stem,options,official_answer,needs_visual,legal_review_required,law_version_checked_at,legal_basis,explanation,difficulty,state,career_category",
+            "created_at",
+            (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
+          ).catch(() => ({ data: [], error: null, gated: true })), // tabela ainda não criada: segue sem elas
         ]);
         let hiddenCount = 0;
         const gate = (
@@ -214,7 +221,35 @@ function QuestionTrainer() {
         if (officialResult.error) throw officialResult.error;
         if (curatedResult.error) throw curatedResult.error;
         if (personalResult.error) throw personalResult.error;
+        // tabela ainda não criada no banco: segue sem as questões de bancas
+        const boardRows = boardResult.error ? [] : ((boardResult.data || []) as Array<Record<string, unknown>>);
         const catalog: Question[] = [
+          ...gate(
+            boardRows.map((row) => ({ ...row, context_review_required: row["needs_visual"], legal_audit_completed: !row["legal_review_required"] || !!row["law_version_checked_at"] })),
+            true,
+          ).map((row) => {
+            const opts = (row["options"] || {}) as Record<string, string>;
+            const support = row["support_text"] ? `Texto-base:\n${String(row["support_text"])}\n\n` : "";
+            return {
+              id: String(row["id"]),
+              source: "official" as const,
+              contest: String(row["contest_name"]),
+              year: String(row["exam_year"]),
+              career: String(row["career_name"]),
+              board: String(row["board"]),
+              subject: canonicalSubject(String(row["subject"])),
+              subtopic: null,
+              text: `${support}${String(row["stem"])}\n${Object.entries(opts).map(([letter, text]) => `(${letter}) ${text}`).join("\n")}`,
+              answer: String(row["official_answer"]) as Answer,
+              explanation: String(row["explanation"] || "Gabarito definitivo da banca organizadora. Comentário pedagógico em preparação."),
+              legalBasis: parseBasis(row["legal_basis"]),
+              checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
+              difficulty: normalizeDifficulty(row["difficulty"]),
+              state: String(row["state"] || ""),
+              category: String(row["career_category"] || ""),
+              kind: "multiple_choice" as const,
+            };
+          }),
           ...gate(
             (officialResult.data || []) as Array<Record<string, unknown>>,
             officialResult.gated,

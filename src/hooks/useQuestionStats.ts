@@ -29,6 +29,8 @@ export type QuestionStats = {
 
 const OFFICIAL_COLUMNS =
   "id,subject,exam_board,review_note,legal_basis,official_answer,law_version_checked_at,content_status,legal_review_required,legal_audit_completed,context_review_required";
+const BOARD_COLUMNS =
+  "id,subject,board,explanation,legal_basis,official_answer,law_version_checked_at,content_status,legal_review_required,needs_visual";
 const CURATED_COLUMNS =
   "id,subject,exam_board,explanation,legal_basis,official_answer,law_version_checked_at,content_status";
 
@@ -41,7 +43,7 @@ const isReviewed = (row: Row, explanation: unknown) =>
   } as Question);
 
 async function loadStats(): Promise<QuestionStats> {
-  const [official, curated] = await Promise.all([
+  const [official, curated, boardRaw] = await Promise.all([
     fetchAllRows<Row>(
       (from, to) =>
         supabase
@@ -58,8 +60,23 @@ async function loadStats(): Promise<QuestionStats> {
           .order("id")
           .range(from, to) as unknown as Page,
     ),
+    fetchAllRows<Row>(
+      (from, to) =>
+        supabase
+          .from("board_exam_questions")
+          .select(BOARD_COLUMNS)
+          .order("id")
+          .range(from, to) as unknown as Page,
+    ).catch(() => [] as Row[]), // tabela ainda não criada
   ]);
 
+  // Provas de bancas (FGV etc.): contam como oficiais; "needs_visual" equivale a revisão de contexto pendente.
+  const board = boardRaw.map((r) => ({
+    ...r,
+    exam_board: r["board"],
+    context_review_required: r["needs_visual"],
+    legal_audit_completed: !r["legal_review_required"] || !!r["law_version_checked_at"],
+  }));
   const subjects = new Map<string, QuestionStats["bySubject"][number]>();
   const boards = new Map<string, QuestionStats["byBoard"][number]>();
   let eligible = 0;
@@ -80,13 +97,14 @@ async function loadStats(): Promise<QuestionStats> {
     }
   };
   add(official, "official");
+  add(board, "official");
   add(curated, "curated");
 
   return {
-    raw: official.length + curated.length,
+    raw: official.length + board.length + curated.length,
     eligible,
     reviewed,
-    official: official.length,
+    official: official.length + board.length,
     curated: curated.length,
     bySubject: [...subjects.values()].sort((x, y) => y.total - x.total),
     byBoard: [...boards.values()].sort((x, y) => y.total - x.total),
