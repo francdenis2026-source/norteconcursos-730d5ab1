@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Activity, BarChart3, FileStack, Loader2, RefreshCw, Sparkles, Trophy, Users } from "lucide-react";
+import { Activity, BarChart3, FileStack, Loader2, RefreshCw, ShieldCheck, Sparkles, Trophy, Users } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
@@ -28,6 +28,7 @@ interface Raw {
   usage: { user_id: string; used_on: string }[];
   results: { user_id: string; created_at: string }[];
   docs: number;
+  roles: { user_id: string; role: string }[];
 }
 
 /** Últimos N dias em ISO (yyyy-mm-dd), do mais antigo ao mais recente. */
@@ -48,14 +49,15 @@ function AdminMetricsPage() {
     setLoading(true);
     setError(null);
     try {
-      const [p, u, r, d] = await Promise.all([
+      const [p, u, r, d, ro] = await Promise.all([
         supabase.from("profiles").select("id, subscription_tier, created_at").limit(10000),
         supabase.from("ai_usage_logs").select("user_id, used_on").limit(50000),
         supabase.from("mock_exam_results").select("user_id, created_at").limit(50000),
         supabase.from("student_exam_documents").select("id", { count: "exact", head: true }),
+        supabase.from("user_roles").select("user_id, role").limit(10000),
       ]);
       if (p.error) throw p.error;
-      setRaw({ profiles: p.data ?? [], usage: u.data ?? [], results: r.data ?? [], docs: d.count ?? 0 });
+      setRaw({ profiles: p.data ?? [], usage: u.data ?? [], results: r.data ?? [], docs: d.count ?? 0, roles: ro.data ?? [] });
     } catch {
       setError("Não foi possível carregar os números. Confirme que entrou como administrador.");
     } finally {
@@ -69,12 +71,23 @@ function AdminMetricsPage() {
 
   const stats = useMemo(() => {
     if (!raw) return null;
+    // Tipo da conta: administrador > moderador > aluno.
+    const roleOf = (id: string): "admin" | "moderator" | "student" => {
+      const mine = raw.roles.filter((r) => r.user_id === id).map((r) => r.role);
+      return mine.includes("admin") ? "admin" : mine.includes("moderator") ? "moderator" : "student";
+    };
+    const kind = new Map(raw.profiles.map((p) => [p.id, roleOf(p.id)]));
     const tierOf = new Map(raw.profiles.map((p) => [p.id, p.subscription_tier ?? "free"]));
+    const count = (k: "admin" | "moderator" | "student") => raw.profiles.filter((p) => kind.get(p.id) === k).length;
+    const totals = { students: count("student"), admins: count("admin"), others: count("moderator") };
     const days = lastDays(14);
+    const inPlan = (id: string, plan: string) => (tierOf.get(id) ?? "free") === plan;
     const byPlan = SUBSCRIPTION_PLANS.map((plan) => ({
       name: plan.name,
-      students: raw.profiles.filter((p) => (p.subscription_tier ?? "free") === plan.id).length,
-      ai: raw.usage.filter((x) => (tierOf.get(x.user_id) ?? "free") === plan.id).length,
+      students: raw.profiles.filter((p) => kind.get(p.id) === "student" && inPlan(p.id, plan.id)).length,
+      admins: raw.profiles.filter((p) => kind.get(p.id) === "admin" && inPlan(p.id, plan.id)).length,
+      others: raw.profiles.filter((p) => kind.get(p.id) === "moderator" && inPlan(p.id, plan.id)).length,
+      ai: raw.usage.filter((x) => kind.get(x.user_id) === "student" && inPlan(x.user_id, plan.id)).length,
     }));
     const byDay = days.map((day) => ({
       day,
@@ -84,11 +97,13 @@ function AdminMetricsPage() {
     }));
     // Aluno ativo = usou IA ou concluiu simulado nos últimos 7 dias.
     const since = lastDays(7)[0] ?? "";
-    const active = new Set([
-      ...raw.usage.filter((x) => x.used_on >= since).map((x) => x.user_id),
-      ...raw.results.filter((r) => r.created_at.slice(0, 10) >= since).map((r) => r.user_id),
-    ]).size;
-    return { byPlan, byDay, active, maxAi: Math.max(1, ...byDay.map((d) => d.ai)) };
+    const active = new Set(
+      [
+        ...raw.usage.filter((x) => x.used_on >= since).map((x) => x.user_id),
+        ...raw.results.filter((r) => r.created_at.slice(0, 10) >= since).map((r) => r.user_id),
+      ].filter((id) => kind.get(id) === "student"),
+    ).size;
+    return { byPlan, byDay, active, totals, maxAi: Math.max(1, ...byDay.map((d) => d.ai)) };
   }, [raw]);
 
   if (!isAdmin) return <p className="p-6 text-muted-foreground">Acesso restrito ao administrador.</p>;
@@ -105,7 +120,8 @@ function AdminMetricsPage() {
         actions={<Button className="hero-btn-ghost gap-2" onClick={() => void load()} disabled={loading}><RefreshCw className="h-4 w-4" aria-hidden /> Atualizar</Button>}
       >
         <div className="page-hero__stats">
-          <HeroStat icon={Users} label="Alunos cadastrados" value={raw?.profiles.length ?? 0} />
+          <HeroStat icon={Users} label="Alunos cadastrados" value={stats?.totals.students ?? 0} />
+          <HeroStat icon={ShieldCheck} label="Administradores" value={stats?.totals.admins ?? 0} />
           <HeroStat icon={Activity} label="Ativos (7 dias)" value={stats?.active ?? 0} />
           <HeroStat icon={Trophy} label="Provas resolvidas" value={raw?.results.length ?? 0} />
           <HeroStat icon={FileStack} label="Páginas enviadas" value={raw?.docs ?? 0} />
@@ -121,17 +137,25 @@ function AdminMetricsPage() {
           <Card>
             <CardHeader>
               <CardTitle>Por plano</CardTitle>
-              <CardDescription>Alunos e resoluções com IA em cada plano.</CardDescription>
+              <CardDescription>Contas por tipo (aluno, administrador, outros) e resoluções com IA dos alunos em cada plano.</CardDescription>
             </CardHeader>
             <CardContent>
               <table className="w-full text-sm">
-                <thead><tr className="text-left text-muted-foreground"><th className="py-2">Plano</th><th>Alunos</th><th>Uso de IA</th></tr></thead>
+                <thead><tr className="text-left text-muted-foreground"><th className="py-2">Plano</th><th>Alunos</th><th>Admins</th><th>Outros</th><th>Uso de IA</th></tr></thead>
                 <tbody>
                   {stats.byPlan.map((row) => (
-                    <tr key={row.name} className="border-t border-border"><td className="py-2 font-medium text-foreground">{row.name}</td><td>{row.students}</td><td>{row.ai}</td></tr>
+                    <tr key={row.name} className="border-t border-border"><td className="py-2 font-medium text-foreground">{row.name}</td><td>{row.students}</td><td>{row.admins}</td><td>{row.others}</td><td>{row.ai}</td></tr>
                   ))}
+                  <tr className="border-t-2 border-border font-semibold text-foreground">
+                    <td className="py-2">Total</td>
+                    <td>{stats.totals.students}</td>
+                    <td>{stats.totals.admins}</td>
+                    <td>{stats.totals.others}</td>
+                    <td>{stats.byPlan.reduce((n, r) => n + r.ai, 0)}</td>
+                  </tr>
                 </tbody>
               </table>
+              <p className="mt-3 text-xs text-muted-foreground">Outros = moderadores. Administradores não entram na contagem de alunos nem no uso de IA.</p>
             </CardContent>
           </Card>
           <Card>
