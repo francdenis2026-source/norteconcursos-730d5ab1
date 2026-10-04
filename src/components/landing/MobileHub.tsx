@@ -14,7 +14,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { PAYMENTS_ENABLED, TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
-import { PLAN_ROWS, planValue } from "@/components/landing/PlansSection";
+import { PLAN_ROWS, planValue } from "@/lib/planPresentation";
 import { cn } from "@/lib/utils";
 
 type Tab = "metodo" | "recursos" | "carreiras" | "pcac" | "planos";
@@ -60,7 +60,9 @@ export function MobileHub({ steps, tools, careers, pillars }: Props) {
       return true;
     };
     const onClick = (e: MouseEvent) => {
-      const a = (e.target as HTMLElement | null)?.closest?.("a[href^='#']") as HTMLAnchorElement | null;
+      const a = (e.target as HTMLElement | null)?.closest?.(
+        "a[href^='#']",
+      ) as HTMLAnchorElement | null;
       if (a && go(a.getAttribute("href") ?? "")) e.preventDefault();
     };
     document.addEventListener("click", onClick);
@@ -173,13 +175,18 @@ export function MobileHub({ steps, tools, careers, pillars }: Props) {
               {SUBSCRIPTION_PLANS.map((plan) => {
                 const testing = TESTING_PHASE && plan.id === "essential";
                 return (
-                  <article key={plan.id} className={cn("mh__plan", (plan.isPopular || testing) && "is-hot")}>
+                  <article
+                    key={plan.id}
+                    className={cn("mh__plan", (plan.isPopular || testing) && "is-hot")}
+                  >
                     <h3>
                       {plan.name}
                       {testing && <em>Grátis no teste</em>}
                     </h3>
                     <p className="mh__price">
-                      {plan.price === 0 ? "Grátis" : `R$ ${plan.price.toFixed(2).replace(".", ",")}`}
+                      {plan.price === 0
+                        ? "Grátis"
+                        : `R$ ${plan.price.toFixed(2).replace(".", ",")}`}
                       {plan.price > 0 && (
                         <small>/mês{!PAYMENTS_ENABLED ? " · em breve" : ""}</small>
                       )}

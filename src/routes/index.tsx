@@ -345,7 +345,12 @@ function Index() {
           </div>
         </section>
 
-        <MobileHub steps={STEPS as [string, string][]} tools={TOOLS} careers={CAREERS} pillars={PILLARS} />
+        <MobileHub
+          steps={STEPS as [string, string][]}
+          tools={TOOLS}
+          careers={CAREERS}
+          pillars={PILLARS}
+        />
 
         <div className="lp-marquee" aria-hidden="true">
           <div className="lp-marquee__track">
