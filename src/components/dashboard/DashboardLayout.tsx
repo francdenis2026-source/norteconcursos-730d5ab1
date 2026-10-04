@@ -64,7 +64,7 @@ import {
 } from "@/components/ui/command";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { PlanCountdownInline } from "@/components/dashboard/PlanCountdown";
+import { PlanCountdownInline, PlanCountdownShort } from "@/components/dashboard/PlanCountdown";
 import { AcreClock } from "@/components/dashboard/AcreClock";
 import { FarewellDialog } from "@/components/dashboard/FarewellDialog";
 import { flushStudyClock, getStudyToday, stopStudyClock } from "@/lib/studyClock";
@@ -595,6 +595,19 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               </button>
               <AcreClock />
               {!isAdmin && user && user.id !== "demo-user" && <SessionClock userId={user.id} />}
+              {TESTING_PHASE && !isAdmin && isTestingTier(tier) && !!user?.plan_ends_at && (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link to="/dashboard/subscriptions" className="app-streak app-trial" aria-label="Fase de testes: tempo restante de acesso">
+                      <FlaskConical />
+                      <span className="app-trial__label">Teste</span>
+                      <span className="app-trial__full"><PlanCountdownInline endsAt={user.plan_ends_at} /></span>
+                      <span className="app-trial__short"><PlanCountdownShort endsAt={user.plan_ends_at} /></span>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom">Fase de testes: você usa o plano Essencial de graça. Depois, a conta segue no plano Gratuito.</TooltipContent>
+                </Tooltip>
+              )}
               <span className="app-streak" title="Dias seguidos de estudo">
                 <Flame />
                 <span className="tabular">{streak?.currentStreak ?? 0}</span>
@@ -612,15 +625,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
           <main className="app-content" data-hue={GROUP_HUE[items.find((i) => isActive(location.pathname, i.href))?.group ?? "Hoje"] ?? "gold"}>
             <div className="app-content__inner">
-              {TESTING_PHASE && !isAdmin && isTestingTier(tier) && !!user?.plan_ends_at && !location.pathname.startsWith("/dashboard/subscriptions") && (
-                <div role="status" className="mb-4 flex items-start gap-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm text-foreground">
-                  <FlaskConical className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" aria-hidden />
-                  <p>
-                    <strong>Fase de testes.</strong> Você usa o plano Essencial de graça. Seu acesso termina em{" "}
-                    <PlanCountdownInline endsAt={user.plan_ends_at} />.
-                  </p>
-                </div>
-              )}
               {children}
             </div>
             <footer className="app-footer no-print">

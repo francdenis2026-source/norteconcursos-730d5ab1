@@ -38,6 +38,14 @@ export function PlanCountdownInline({ endsAt }: { endsAt: string }) {
   );
 }
 
+/** Versão curta para a barra superior: "29d 06h". */
+export function PlanCountdownShort({ endsAt }: { endsAt: string }) {
+  const r = useRemaining(endsAt);
+  if (!r) return null;
+  if (r.over) return <strong>encerrado</strong>;
+  return <strong className="tabular-nums">{r.d}d {two(r.h)}h</strong>;
+}
+
 /** Versão completa: quatro blocos (dias, horas, minutos, segundos) e data de término. */
 export function PlanCountdown({ endsAt, planName, className }: { endsAt: string; planName: string; className?: string }) {
   const r = useRemaining(endsAt);

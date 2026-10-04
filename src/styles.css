@@ -5921,3 +5921,32 @@ iframe[src*="gpteng.co"] {
       linear-gradient(0deg, oklch(0.13 0.03 263 / 0.88) 15%, oklch(0.13 0.03 263 / 0.55) 100%);
   }
 }
+
+/* ===== Ajustes de espaço e enquadramento das heros ===== */
+.app-content {
+  padding-top: clamp(10px, 1.4vw, 16px);
+}
+/* Posição vertical da imagem (heros baixas mostram uma faixa: centra no rosto/assunto) */
+[data-hero="dashboard"] { --hero-position: 85% 26%; }
+[data-hero="journey"] { --hero-position: 60% 50%; }
+[data-hero="study-desk"] { --hero-position: 80% 50%; }
+[data-hero="trainer"], .question-trainer-hero { --hero-position: 85% 20%; }
+[data-hero="exam-hall"], .mock-exam-hero, .mock-result-hero { --hero-position: 75% 26%; }
+[data-hero="command-room"] { --hero-position: 80% 52%; }
+[data-hero="careers-team"], .catalog-command-hero { --hero-position: 70% 16%; }
+[data-hero="field-map"] { --hero-position: 78% 18%; }
+[data-hero="toolkit"] { --hero-position: 20% 18%; }
+[data-hero="auth"] { --hero-position: 70% 18%; }
+
+/* Fase de testes: selo discreto na barra superior */
+.app-trial svg { color: oklch(0.74 0.15 70); }
+.app-trial__label { color: var(--color-muted-foreground); font-size: 0.75rem; font-weight: 600; }
+.app-trial__short { display: none; }
+.app-trial strong { font-size: 0.8rem; }
+@media (max-width: 1279px) {
+  .app-trial__label, .app-trial__full { display: none; }
+  .app-trial__short { display: inline; }
+}
+@media (max-width: 767px) {
+  .app-trial { padding-inline: 8px; gap: 4px; }
+}
