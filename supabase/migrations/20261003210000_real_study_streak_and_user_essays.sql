@@ -1,3 +1,15 @@
+-- Os valores antigos eram de teste/simulação: a contagem recomeça do zero, mas SÓ na primeira aplicação
+-- (se a função já existe, esta migration já rodou e as ofensivas reais não podem ser apagadas).
+do $$
+begin
+  if not exists (
+    select 1 from pg_proc p join pg_namespace n on n.oid = p.pronamespace
+    where n.nspname = 'public' and p.proname = 'register_study_visit'
+  ) then
+    update public.user_streaks set current_streak = 0, longest_streak = 0, last_activity_date = null;
+  end if;
+end $$;
+
 -- 1) Ofensiva real: conta apenas os dias (fuso do Acre) em que o aluno entrou na plataforma.
 create or replace function public.register_study_visit()
 returns table (current_streak integer, longest_streak integer, last_activity_date date)
@@ -30,10 +42,6 @@ end $$;
 
 revoke all on function public.register_study_visit() from public;
 grant execute on function public.register_study_visit() to authenticated;
-
--- Os valores antigos eram de teste/simulação: a contagem recomeça do zero.
-update public.user_streaks
-   set current_streak = 0, longest_streak = 0, last_activity_date = null;
 
 -- 2) Caderno de redação do aluno (salvar, editar, excluir).
 create table if not exists public.user_essays (
