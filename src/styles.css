@@ -6948,8 +6948,26 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .lp-hero__panel {
     min-width: 0;
   }
+  .lp-hero__content {
+    position: relative;
+    isolation: isolate;
+    padding: 16px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+  }
+  .lp-hero.is-ready .lp-hero__content {
+    border-color: oklch(1 0 0 / 0.16);
+    background: linear-gradient(160deg, oklch(1 0 0 / 0.14), oklch(1 0 0 / 0.04));
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    box-shadow: 0 10px 30px oklch(0.08 0.02 262 / 0.35);
+    transition:
+      background 0.6s ease,
+      border-color 0.6s ease,
+      box-shadow 0.6s ease;
+  }
   .lp-hero__title {
-    margin-top: 14px;
+    margin-top: 10px;
     font-size: clamp(2rem, 9.5vw, 2.6rem);
   }
   .lp-hero__lead {
