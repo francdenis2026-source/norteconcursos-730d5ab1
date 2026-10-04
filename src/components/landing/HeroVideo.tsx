@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Abertura em vídeo da hero (≈0,25 MB): toca inteira a cada visita/recarga e, ao terminar,
- * desfaz o fade para a imagem fixa de fundo. Em celular, com economia de dados ou com
- * "reduzir movimento" o vídeo nem baixa (o CSS também o esconde): fica só a imagem.
+ * Abertura em vídeo da hero (≈0,25 MB): toca inteira a cada visita/recarga (também no
+ * celular) e, ao terminar, desfaz o fade para a imagem fixa de fundo. Com economia de
+ * dados ou com "reduzir movimento" o vídeo nem baixa: fica só a imagem.
  */
 export function HeroVideo() {
   const ref = useRef<HTMLVideoElement>(null);
@@ -12,7 +12,7 @@ export function HeroVideo() {
   useEffect(() => {
     const el = ref.current;
     const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
-    if (!el || saveData || matchMedia("(prefers-reduced-motion: reduce)").matches || matchMedia("(max-width: 767px)").matches) {
+    if (!el || saveData || matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setDone(true);
       return;
     }
