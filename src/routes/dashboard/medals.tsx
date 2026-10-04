@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { MockService, type MedalProgress } from "@/services/mockService";
+import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -15,6 +16,8 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/dashboard/medals")({ component: MedalsPage });
 
 /** Trilha de cada medalha, pelo código; a ordem dentro da trilha dá o nível (bronze → prata → ouro). */
+interface Win { code: string; name: string; description: string | null }
+
 const TRACKS: { id: string; title: string; hint: string; icon: LucideIcon; to: string; codes: string[] }[] = [
   { id: "answered", title: "Questões resolvidas", hint: "Cada questão respondida no Treinador conta, uma vez por questão.", icon: BookOpenCheck, to: "/dashboard/question-trainer", codes: ["FIRST_10", "ANSWERED_100", "ANSWERED_500", "ANSWERED_1000"] },
   { id: "correct", title: "Acertos", hint: "Acertos acumulados nas questões e nos simulados.", icon: Target, to: "/dashboard/question-trainer", codes: ["CORRECT_50", "CORRECT_250", "CORRECT_1000"] },
@@ -56,10 +59,21 @@ function MedalsPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
   const [list, setList] = React.useState<MedalProgress[] | null>(null);
+  const [wins, setWins] = React.useState<Win[] | null>(null);
 
   React.useEffect(() => {
     if (authLoading || !real) return;
     void MockService.awardAchievements().then(() => MockService.getMedalProgress()).then(setList);
+    // Conquistas = medalhas sem meta automática (aprovações reais registradas pela administração).
+    void supabase
+      .from("user_achievements")
+      .select("achievement:achievements(code,name,description,target)")
+      .then(({ data }) => {
+        const rows = ((data ?? []) as unknown as { achievement: (Win & { target: number | null }) | null }[])
+          .map((r) => r.achievement)
+          .filter((a): a is Win & { target: number | null } => !!a && a.target === null);
+        setWins(rows);
+      });
   }, [authLoading, real]);
 
   if (authLoading) return <div className="flex justify-center py-16"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Carregando" /></div>;
@@ -140,10 +154,37 @@ function MedalsPage() {
             );
           })}
 
-          <p className="flex items-center gap-2 text-xs text-muted-foreground">
-            <CalendarCheck className="h-3.5 w-3.5" /> Medalhas de aprovação em concursos reais são concedidas pela administração e aparecem aqui quando existirem.
-            <Badge variant="outline">Sem pontos falsos: tudo vem do seu uso real</Badge>
-          </p>
+          <section aria-label="Conquistas" className="space-y-2">
+            <div>
+              <h2 className="flex items-center gap-2 text-base font-bold"><Crown className="h-4 w-4 text-amber-500" /> Conquistas</h2>
+              <p className="text-xs text-muted-foreground">Aprovações em concursos reais. São registradas pela administração, depois de conferidas.</p>
+            </div>
+            {wins && wins.length > 0 ? (
+              <ul className="grid gap-3 md:grid-cols-2">
+                {wins.map((w) => (
+                  <li key={w.code} className="flex items-start gap-3 rounded-xl border border-amber-400/50 bg-gradient-to-br from-amber-50 to-card p-4 dark:from-amber-950/20">
+                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-amber-400/25 text-amber-700 dark:text-amber-300" aria-hidden>
+                      <Trophy className="h-6 w-6" />
+                    </span>
+                    <div className="min-w-0">
+                      <Badge className="mb-1 bg-amber-500 hover:bg-amber-500">Aprovado</Badge>
+                      <p className="text-sm font-bold leading-snug">{w.name.replace(/^Aprovado\s+—\s+/i, "")}</p>
+                      {w.description && <p className="mt-0.5 text-xs text-muted-foreground">{w.description}</p>}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <div className="rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
+                <p className="font-semibold text-foreground">Sua primeira aprovação vai aparecer aqui.</p>
+                <p className="mt-1 text-xs">
+                  Quando você for aprovado em um concurso, a administração registra a conquista (com o edital e a classificação) e ela ganha um
+                  lugar de destaque neste painel.
+                </p>
+              </div>
+            )}
+            <p className="flex items-center gap-2 text-xs text-muted-foreground"><CalendarCheck className="h-3.5 w-3.5" /> As medalhas acima vêm do seu uso real da plataforma.</p>
+          </section>
         </>
       )}
     </div>

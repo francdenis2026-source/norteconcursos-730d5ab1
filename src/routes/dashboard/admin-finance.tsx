@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { Download, Loader2, PiggyBank, Plus, RefreshCw, Trash2, TrendingDown, TrendingUp, Users, Wallet } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { confirmDialog } from "@/lib/confirm";
+import { DatePicker } from "@/components/ui/date-picker";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { acreDateKey } from "@/lib/acreTime";
@@ -352,7 +353,7 @@ function AdminFinancePage() {
             </CardHeader>
             <CardContent className="space-y-5">
               <form onSubmit={addEntry} className="grid grid-cols-1 gap-3 md:grid-cols-6">
-                <Input aria-label="Data" type="date" value={entryDate} max={today} onChange={(e) => setEntryDate(e.target.value)} required />
+                <DatePicker aria-label="Data" value={entryDate} max={today} onChange={setEntryDate} required />
                 <select aria-label="Tipo" value={kind} onChange={(e) => { const k = e.target.value as Kind; setKind(k); setCategory(CATEGORIES[k][0]![0]); }} className="h-9 rounded-md border border-input bg-background px-2 text-sm text-foreground">
                   <option value="despesa">Despesa</option>
                   <option value="receita">Receita</option>

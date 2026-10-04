@@ -46,6 +46,7 @@ import { LibraryAdmin } from "@/components/library/LibraryAdmin";
 import { Download } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { confirmDialog } from "@/lib/confirm";
+import { DatePicker } from "@/components/ui/date-picker";
 
 interface AdminExamUploadRow {
   id: string;
@@ -933,22 +934,16 @@ function AdminPanel() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Data de Início</label>
-                  <Input
-                    type="date"
-                    value={editingContest.startDate ? editingContest.startDate.split("T")[0] : ""}
-                    onChange={(e) =>
-                      setEditingContest({ ...editingContest, startDate: e.target.value })
-                    }
+                  <DatePicker
+                    value={editingContest.startDate ? (editingContest.startDate.split("T")[0] ?? "") : ""}
+                    onChange={(v) => setEditingContest({ ...editingContest, startDate: v })}
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Data de Fim</label>
-                  <Input
-                    type="date"
-                    value={editingContest.endDate ? editingContest.endDate.split("T")[0] : ""}
-                    onChange={(e) =>
-                      setEditingContest({ ...editingContest, endDate: e.target.value })
-                    }
+                  <DatePicker
+                    value={editingContest.endDate ? (editingContest.endDate.split("T")[0] ?? "") : ""}
+                    onChange={(v) => setEditingContest({ ...editingContest, endDate: v })}
                   />
                 </div>
               </div>

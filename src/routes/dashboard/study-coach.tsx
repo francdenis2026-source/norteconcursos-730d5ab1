@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { DatePicker } from "@/components/ui/date-picker";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { LockedState, PageHero } from "@/components/dashboard/PageHero";
@@ -117,7 +118,7 @@ function Wizard({ initial, onSave, onCancel }: { initial: Profile | null; onSave
             </div>
             <div className="space-y-2">
               <Label htmlFor="exam">Data da prova (se já souber)</Label>
-              <Input id="exam" type="date" value={examDate} min={new Date().toISOString().slice(0, 10)} onChange={(e) => setExamDate(e.target.value)} />
+              <DatePicker id="exam" value={examDate} min={new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(new Date())} onChange={setExamDate} placeholder="Escolher a data da prova" />
               <p className="text-xs text-muted-foreground">Sem data? Deixe em branco: o plano assume 24 semanas e você ajusta depois.</p>
             </div>
           </div>

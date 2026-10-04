@@ -1,3 +1,4 @@
+import { DatePicker } from "@/components/ui/date-picker";
 import { useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
@@ -392,11 +393,10 @@ export function LibraryAdmin() {
                     />
                   </Field>
                   <Field label="Fontes conferidas em">
-                    <Input
-                      type="date"
+                    <DatePicker
                       value={draft.law_version_checked_at}
                       max={new Date().toISOString().slice(0, 10)}
-                      onChange={(e) => update({ law_version_checked_at: e.target.value })}
+                      onChange={(v) => update({ law_version_checked_at: v })}
                     />
                   </Field>
                 </TabsContent>
