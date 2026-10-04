@@ -41,7 +41,7 @@ export function AcreClock() {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <span className="app-streak hidden lg:inline-flex" role="timer" aria-label={`Horário do Acre: ${full.format(d)}`}>
+        <span className="app-streak app-clock" role="timer" aria-label={`Horário do Acre: ${full.format(d)}`}>
           <CalendarClock />
           <span className="tabular capitalize">{day.format(d).replace(".", "")}</span>
           <span className="tabular">{hm.format(d)}</span>
