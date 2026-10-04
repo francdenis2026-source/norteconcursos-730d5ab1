@@ -846,6 +846,19 @@ html {
   background: url("/media/hero/landing-hero.webp") 62% center / cover no-repeat;
   animation: slow-zoom 2.4s var(--ease-out) both;
 }
+.lp-hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 92% center;
+  opacity: 0;
+  transition: opacity 1.2s var(--ease-out);
+}
+.lp-hero__video[data-ready="true"] {
+  opacity: 1;
+}
 .lp-hero__shade {
   position: absolute;
   inset: 0;

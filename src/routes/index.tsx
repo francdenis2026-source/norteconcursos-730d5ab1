@@ -32,6 +32,7 @@ import type { LucideIcon } from "lucide-react";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
+import { HeroVideo } from "@/components/landing/HeroVideo";
 import { TestingSeal } from "@/components/landing/TestingSeal";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
@@ -259,7 +260,9 @@ function Index() {
 
       <main>
         <section className="lp-hero">
-          <div className="lp-hero__media" aria-hidden="true" />
+          <div className="lp-hero__media" aria-hidden="true">
+            <HeroVideo />
+          </div>
           <div className="lp-hero__shade" aria-hidden="true" />
           <div className="lp-hero__grid" aria-hidden="true" />
           <div className="lp-container lp-hero__body">
