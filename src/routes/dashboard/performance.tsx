@@ -31,6 +31,7 @@ import { Badge } from "@/components/ui/badge";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+import { StudyTimeCard } from "@/components/dashboard/StudyTimeCard";
 
 export const Route = createFileRoute("/dashboard/performance")({
   component: PerformancePage,
@@ -287,6 +288,7 @@ function PerformancePage() {
         </TabsList>
 
         <TabsContent value="geral" className="space-y-6">
+          <StudyTimeCard userId={user.id} />
           <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             <MetricCard
               icon={FileStack}

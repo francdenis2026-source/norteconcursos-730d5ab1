@@ -66,6 +66,8 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { PlanCountdownInline } from "@/components/dashboard/PlanCountdown";
 import { AcreClock } from "@/components/dashboard/AcreClock";
+import { alertDialog } from "@/lib/confirm";
+import { flushStudyClock, fmtHuman, getStudyToday, stopStudyClock } from "@/lib/studyClock";
 import { SessionClock } from "@/components/dashboard/SessionClock";
 import { RenewPlanDialog } from "@/components/dashboard/RenewPlanDialog";
 import { MockService, type MedalProgress } from "@/services/mockService";
@@ -315,6 +317,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   const signOut = async () => {
+    await flushStudyClock();
+    const spent = getStudyToday();
+    stopStudyClock();
+    if (!isAdmin && spent >= 60) {
+      await alertDialog({ title: "Até logo!", message: `Hoje você ficou ${fmtHuman(spent)} na plataforma. Bom descanso e até a próxima sessão de estudo.`, okLabel: "Sair" });
+    }
     await supabase.auth.signOut();
     navigate({ to: "/" });
   };
