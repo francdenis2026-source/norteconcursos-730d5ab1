@@ -38,6 +38,7 @@ import { HeroVideo } from "@/components/landing/HeroVideo";
 import { TestingSeal } from "@/components/landing/TestingSeal";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
+import { MobileHub } from "@/components/landing/MobileHub";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -343,6 +344,8 @@ function Index() {
             </div>
           </div>
         </section>
+
+        <MobileHub steps={STEPS as [string, string][]} tools={TOOLS} careers={CAREERS} pillars={PILLARS} />
 
         <div className="lp-marquee" aria-hidden="true">
           <div className="lp-marquee__track">
