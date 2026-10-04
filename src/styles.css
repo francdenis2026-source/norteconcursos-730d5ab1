@@ -859,8 +859,8 @@ html {
 }
 @media (max-width: 767px) {
   .lp-hero__video {
-    object-fit: contain;
-    object-position: center center;
+    object-fit: cover;
+    object-position: 62% center;
   }
 }
 .lp-hero__video[data-done="true"] {
@@ -2962,7 +2962,7 @@ html {
   }
   .lp-hero__shade {
     background:
-      linear-gradient(0deg, var(--ink-deep) 8%, oklch(0.12 0.025 263 / 0.9) 45%, oklch(0.12 0.025 263 / 0.45) 100%);
+      linear-gradient(0deg, var(--ink-deep) 8%, oklch(0.12 0.025 263 / 0.88) 38%, oklch(0.12 0.025 263 / 0.3) 62%, transparent 85%);
   }
   .lp-hero__ctas {
     flex-direction: column;
