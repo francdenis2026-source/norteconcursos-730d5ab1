@@ -210,15 +210,15 @@ function AdminMetricsPage() {
         <Card>
           <CardHeader>
             <CardTitle>Questões por disciplina</CardTitle>
-            <CardDescription>Total cadastrado, disponíveis no treino, revisadas, oficiais e autorais.</CardDescription>
+            <CardDescription>Total = todas as cadastradas · No treino = liberadas aos alunos · Revisadas = com explicação e fonte verificadas · Oficiais + Autorais = Total.</CardDescription>
           </CardHeader>
           <CardContent>
             {content.isPending ? <Loader2 className="mx-auto h-5 w-5 animate-spin text-muted-foreground" aria-label="Carregando" /> : (
               <table className="w-full text-sm">
-                <thead><tr className="text-left text-muted-foreground"><th className="py-2">Disciplina</th><th>Total</th><th>Treino</th><th>Revisadas</th><th>Oficiais</th><th>Autorais</th></tr></thead>
+                <thead><tr className="text-left text-xs text-muted-foreground [&>th]:px-2 [&>th]:py-2 [&>th]:font-medium"><th className="pl-0">Disciplina</th><th title="Todas as cadastradas">Total</th><th title="Liberadas para treino dos alunos">No treino</th><th title="Com explicação e fonte verificadas">Revisadas</th><th title="De provas reais">Oficiais</th><th title="Criadas pela plataforma">Autorais</th></tr></thead>
                 <tbody>
                   {(content.data?.bySubject ?? []).map((s) => (
-                    <tr key={s.subject} className="border-t border-border"><td className="py-2 font-medium text-foreground">{s.subject}</td><td>{s.total}</td><td>{s.eligible}</td><td>{s.reviewed}</td><td>{s.official}</td><td>{s.curated}</td></tr>
+                    <tr key={s.subject} className="border-t border-border [&>td]:px-2 [&>td]:py-2"><td className="pl-0 font-medium text-foreground">{s.subject}</td><td>{s.total}</td><td>{s.eligible}</td><td>{s.reviewed}</td><td>{s.official}</td><td>{s.curated}</td></tr>
                   ))}
                 </tbody>
               </table>
