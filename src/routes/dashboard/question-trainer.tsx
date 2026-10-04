@@ -59,6 +59,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { fetchAllRows } from "@/lib/catalog";
+import { classifyTopic, subjectInArea } from "@/lib/questionTopics";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
@@ -75,7 +76,10 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       | "source"
       | "reviewed"
       | "state"
-      | "category",
+      | "category"
+      | "area"
+      | "topic"
+      | "go",
       string | undefined
     >
   > => ({
@@ -88,6 +92,9 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     reviewed: typeof search["reviewed"] === "string" ? search["reviewed"] : undefined,
     state: typeof search["state"] === "string" ? search["state"] : undefined,
     category: typeof search["category"] === "string" ? search["category"] : undefined,
+    area: typeof search["area"] === "string" ? search["area"] : undefined,
+    topic: typeof search["topic"] === "string" ? search["topic"] : undefined,
+    go: typeof search["go"] === "string" ? search["go"] : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -120,6 +127,10 @@ function QuestionTrainer() {
   const [reviewed, setReviewed] = React.useState(routeFilters.reviewed || "all");
   const [state, setState] = React.useState(routeFilters.state || "all");
   const [category, setCategory] = React.useState(routeFilters.category || "all");
+  // Vindos do cronograma: matéria do plano (pode juntar várias do banco) e assunto classificado por palavras-chave.
+  const [area, setArea] = React.useState(routeFilters.area || "all");
+  const [topic, setTopic] = React.useState(routeFilters.topic || "all");
+  const autoStart = React.useRef(routeFilters.go === "1");
   const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState("20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
@@ -338,6 +349,7 @@ function QuestionTrainer() {
       careers: unique(scoped("career").map(fields.career)),
       years: unique(scoped("year").map(fields.year)).sort((x, y) => Number(y) - Number(x)),
       subjects: unique(scoped("subject").map(fields.subject)),
+      topics: [] as string[],
       states: unique(scoped("state").map(fields.state)),
       categories: unique(scoped("category").map(fields.category)),
       exams: exams.filter(([key]) => {
@@ -370,10 +382,27 @@ function QuestionTrainer() {
       setAppliedExam("all");
       setter(value);
     };
+  const topicOf = React.useMemo(() => {
+    const m = new Map<string, string | null>();
+    for (const q of catalog) m.set(q.id, classifyTopic(q.subject, q.text));
+    return m;
+  }, [catalog]);
+  const topicChoices = React.useMemo(() => {
+    const set = new Set<string>();
+    for (const q of catalog) {
+      if (subject !== "all" && q.subject !== subject) continue;
+      if (area !== "all" && !subjectInArea(area, q.subject)) continue;
+      const t = topicOf.get(q.id);
+      if (t) set.add(t);
+    }
+    return [...set].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }, [catalog, subject, area, topicOf]);
   const pool = React.useMemo(
     () =>
       catalog.filter(
         (item) =>
+          (area === "all" || subjectInArea(area, item.subject)) &&
+          (topic === "all" || topicOf.get(item.id) === topic) &&
           (contest === "all" || item["contest"] === contest) &&
           (board === "all" || item["board"] === board) &&
           (career === "all" || item["career"] === career) &&
@@ -388,6 +417,9 @@ function QuestionTrainer() {
       ),
     [
       catalog,
+      area,
+      topic,
+      topicOf,
       contest,
       board,
       career,
@@ -414,6 +446,29 @@ function QuestionTrainer() {
     setStartedAt(Date.now());
     setStarted(true);
   };
+  // Poucas questões classificadas naquele assunto: amplia para a matéria inteira em vez de abrir vazio.
+  React.useEffect(() => {
+    if (!autoStart.current || loading || started || catalog.length === 0 || pool.length > 0 || topic === "all") return;
+    setTopic("all");
+    toast.info("Poucas questões desse assunto: mostrando a matéria inteira.");
+  }, [loading, started, catalog.length, pool.length, topic]);
+  // Veio do cronograma com ?go=1: começa direto, com 10 questões do assunto, assim que houver questões.
+  React.useEffect(() => {
+    if (!autoStart.current || loading || started || pool.length === 0) return;
+    autoStart.current = false;
+    setLimit("10");
+    const ordered = shuffled(pool).slice(0, 10);
+    setQuestions(ordered);
+    setIndex(0);
+    setCorrect(0);
+    setWrong(0);
+    setSelected(null);
+    setStruck([]);
+    setAnswered(false);
+    setHelpUsed(false);
+    setStartedAt(Date.now());
+    setStarted(true);
+  }, [loading, started, pool]);
   const selectAppliedExam = (value: string) => {
     setAppliedExam(value);
     if (value === "all") return;
@@ -526,7 +581,7 @@ function QuestionTrainer() {
         <TrainerSetup
           total={catalog.length}
           available={pool.length}
-          choices={choices}
+          choices={{ ...choices, topics: topicChoices }}
           values={{
             contest,
             board,
@@ -539,6 +594,8 @@ function QuestionTrainer() {
             difficulty,
             state,
             category,
+            area,
+            topic,
             limit,
             orderMode,
           }}
@@ -554,6 +611,8 @@ function QuestionTrainer() {
             setDifficulty: manual(setDifficulty),
             setState: manual(setState),
             setCategory: manual(setCategory),
+            setArea,
+            setTopic: manual(setTopic),
             setLimit,
             setOrderMode,
           }}
@@ -925,6 +984,8 @@ type SetupValues = {
   difficulty: string;
   state: string;
   category: string;
+  area: string;
+  topic: string;
   limit: string;
   orderMode: OrderMode;
 };
@@ -940,6 +1001,8 @@ type SetupSetters = {
   setDifficulty: (value: string) => void;
   setState: (value: string) => void;
   setCategory: (value: string) => void;
+  setArea: (value: string) => void;
+  setTopic: (value: string) => void;
   setLimit: (value: string) => void;
   setOrderMode: (value: OrderMode) => void;
 };
@@ -960,6 +1023,7 @@ function TrainerSetup({
     careers: string[];
     years: string[];
     subjects: string[];
+    topics: string[];
     states: string[];
     categories: string[];
     exams: Array<[string, string]>;
@@ -980,6 +1044,8 @@ function TrainerSetup({
     setters.setDifficulty("all");
     setters.setState("all");
     setters.setCategory("all");
+    setters.setArea("all");
+    setters.setTopic("all");
   };
   return (
     <div className="trainer-setup mx-auto max-w-5xl space-y-3 pb-5 animate-in fade-in duration-300 sm:space-y-5 sm:pb-10">
@@ -1022,6 +1088,14 @@ function TrainerSetup({
               </p>
             </div>
           </div>
+          {values.area !== "all" && (
+            <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-xs font-semibold">
+              Filtro do seu cronograma: {values.area}
+              <button type="button" className="underline" onClick={() => { setters.setArea("all"); setters.setTopic("all"); }}>
+                limpar
+              </button>
+            </p>
+          )}
           <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             <TrainerFilter
               label="Banca"
@@ -1034,6 +1108,13 @@ function TrainerSetup({
               value={values.subject}
               setValue={setters.setSubject}
               options={choices.subjects}
+            />
+            <TrainerFilter
+              label="Assunto (classificação automática)"
+              value={values.topic}
+              setValue={setters.setTopic}
+              options={choices.topics}
+              allLabel="Todos os assuntos"
             />
             <TrainerFilter
               label="Concurso"

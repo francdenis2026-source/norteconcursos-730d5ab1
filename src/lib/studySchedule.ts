@@ -23,6 +23,8 @@ export interface ScheduleBlock {
   topics: string[];
   how: string;
   href: string;
+  /** Parâmetros que a ferramenta recebe (matéria/assunto já filtrados). */
+  search?: Record<string, string>;
 }
 export interface ScheduleDay {
   day: number; // 0 = domingo … 6 = sábado
@@ -33,7 +35,7 @@ export interface ScheduleDay {
 export const DAY_NAMES = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 const HREF: Record<BlockKind, string> = {
   Teoria: "/dashboard/library",
-  Flashcards: "/dashboard/library",
+  Flashcards: "/dashboard/flashcards",
   Questões: "/dashboard/question-trainer",
   "Revisão de erros": "/dashboard/errors",
   Redação: "/dashboard/essays",
@@ -85,6 +87,12 @@ function howTo(kind: BlockKind, minutes: number): string {
     case "Podcast":
       return "Aprendizado em áudio, leve: ouça um episódio no trânsito, na academia ou em outra hora livre. Ao final, diga em voz alta o que entendeu.";
   }
+}
+
+function searchFor(kind: BlockKind, subject: string, topics: string[]): Record<string, string> | undefined {
+  if (kind === "Flashcards") return { subject, ...(topics[0] ? { topic: topics[0] } : {}) };
+  if (kind === "Questões") return { area: subject, go: "1", ...(topics[0] ? { topic: topics[0] } : {}) };
+  return undefined;
 }
 
 export interface ScheduleOptions {
@@ -281,6 +289,7 @@ export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boole
         topics,
         how: howTo(r.kind, r.minutes),
         href: HREF[r.kind],
+        ...(searchFor(r.kind, r.subject, topics) ? { search: searchFor(r.kind, r.subject, topics)! } : {}),
       };
     });
     return { day: d, blocks, minutes: blocks.reduce((n, b) => n + b.minutes, 0) };

@@ -107,6 +107,7 @@ const MENU: MenuItem[] = [
     icon: BookMarked,
     href: "/dashboard/question-bank",
   },
+  { group: "Questões", label: "Flashcards", icon: Layers, href: "/dashboard/flashcards" },
   { group: "Questões", label: "Meus cadernos", icon: BookOpen, href: "/dashboard/notebooks" },
   { group: "Questões", label: "Revisar erros", icon: NotebookPen, href: "/dashboard/errors" },
   { group: "Provas", label: "Simulador", icon: Trophy, href: "/dashboard/mock-exams" },

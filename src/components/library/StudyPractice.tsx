@@ -1,11 +1,40 @@
 import { useState } from "react";
+import { toast } from "sonner";
+import { Link } from "@tanstack/react-router";
+import { supabase } from "@/integrations/supabase/client";
 import { ArrowLeft, ArrowRight, CheckCircle2, Layers, ListChecks, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Flashcard, QuizItem } from "@/lib/studyMaterials";
 
 const HUES = [250, 160, 30, 310, 200];
 
-export function StudyPractice({ flashcards, quiz }: { flashcards: Flashcard[]; quiz: QuizItem[] }) {
+/** Copia os flashcards revisados do material para o baralho do aluno (sem duplicar se já copiou). */
+function SaveToDeck({ cards, slug, subject, topic }: { cards: Flashcard[]; slug: string; subject: string; topic: string }) {
+  const [state, setState] = useState<"idle" | "busy" | "done">("idle");
+  async function save() {
+    setState("busy");
+    const { data } = await supabase.auth.getSession();
+    const uid = data.session?.user.id;
+    if (!uid) { toast.error("Entre na sua conta para salvar os cartões."); setState("idle"); return; }
+    const rows = cards.map((c, i) => ({ user_id: uid, subject, topic, front: c.f, back: c.b, source: "library", source_key: `${slug}:${i}` }));
+    const { error } = await supabase.from("flashcards").upsert(rows, { onConflict: "user_id,source_key", ignoreDuplicates: true });
+    if (error) { toast.error("Não foi possível salvar os cartões."); setState("idle"); return; }
+    toast.success("Cartões salvos. Eles entram na sua revisão de hoje.");
+    setState("done");
+  }
+  return (
+    <div className="mt-3 flex flex-wrap items-center gap-3 text-sm">
+      <Button size="sm" variant="outline" disabled={state !== "idle"} onClick={() => void save()}>
+        <Layers className="h-4 w-4" /> {state === "done" ? "Salvos no baralho" : "Salvar no meu baralho"}
+      </Button>
+      {state === "done" && <Link to="/dashboard/flashcards" className="font-semibold text-primary hover:underline">Ir revisar</Link>}
+    </div>
+  );
+}
+
+export function StudyPractice({
+  flashcards, quiz, slug, subject, topic,
+}: { flashcards: Flashcard[]; quiz: QuizItem[]; slug?: string; subject?: string; topic?: string }) {
   const [tab, setTab] = useState<"cards" | "quiz">(flashcards.length ? "cards" : "quiz");
   if (!flashcards.length && !quiz.length) return null;
   return (
@@ -23,6 +52,7 @@ export function StudyPractice({ flashcards, quiz }: { flashcards: Flashcard[]; q
         )}
       </div>
       {tab === "cards" ? <Cards cards={flashcards} /> : <Quiz items={quiz} />}
+      {tab === "cards" && slug && subject && <SaveToDeck cards={flashcards} slug={slug} subject={subject} topic={topic ?? ""} />}
     </section>
   );
 }

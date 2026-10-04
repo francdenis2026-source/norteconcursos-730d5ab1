@@ -138,7 +138,7 @@ export function WeekChecklist({
                             <p className="font-bold uppercase tracking-wide text-muted-foreground">Como estudar</p>
                             <p className="mt-1 leading-relaxed">{b.how}</p>
                           </div>
-                          <Link to={b.href} className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
+                          <Link to={b.href} {...(b.search ? { search: b.search } : {})} className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
                             Abrir ferramenta <ExternalLink className="h-3.5 w-3.5" />
                           </Link>
                         </div>
