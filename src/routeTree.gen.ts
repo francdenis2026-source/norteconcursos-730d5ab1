@@ -34,6 +34,7 @@ import { Route as DashboardErrorsRouteImport } from './routes/dashboard/errors'
 import { Route as DashboardEssaysRouteImport } from './routes/dashboard/essays'
 import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history'
 import { Route as DashboardLibraryRouteImport } from './routes/dashboard/library'
+import { Route as DashboardMediaRouteImport } from './routes/dashboard/media'
 import { Route as DashboardMockExamsRouteImport } from './routes/dashboard/mock-exams'
 import { Route as DashboardMyContestRouteImport } from './routes/dashboard/my-contest'
 import { Route as DashboardNotebooksRouteImport } from './routes/dashboard/notebooks'
@@ -180,6 +181,11 @@ const DashboardLibraryRoute = DashboardLibraryRouteImport.update({
   path: '/library',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardMediaRoute = DashboardMediaRouteImport.update({
+  id: '/media',
+  path: '/media',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardMockExamsRoute = DashboardMockExamsRouteImport.update({
   id: '/mock-exams',
   path: '/mock-exams',
@@ -307,6 +313,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
+  '/dashboard/media': typeof DashboardMediaRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
@@ -351,6 +358,7 @@ export interface FileRoutesByTo {
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/history': typeof DashboardHistoryRoute
+  '/dashboard/media': typeof DashboardMediaRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
@@ -399,6 +407,7 @@ export interface FileRoutesById {
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
+  '/dashboard/media': typeof DashboardMediaRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
@@ -448,6 +457,7 @@ export interface FileRouteTypes {
     | '/dashboard/essays'
     | '/dashboard/history'
     | '/dashboard/library'
+    | '/dashboard/media'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
@@ -492,6 +502,7 @@ export interface FileRouteTypes {
     | '/dashboard/errors'
     | '/dashboard/essays'
     | '/dashboard/history'
+    | '/dashboard/media'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
@@ -539,6 +550,7 @@ export interface FileRouteTypes {
     | '/dashboard/essays'
     | '/dashboard/history'
     | '/dashboard/library'
+    | '/dashboard/media'
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
@@ -754,6 +766,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardLibraryRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/media': {
+      id: '/dashboard/media'
+      path: '/media'
+      fullPath: '/dashboard/media'
+      preLoaderRoute: typeof DashboardMediaRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/mock-exams': {
       id: '/dashboard/mock-exams'
       path: '/mock-exams'
@@ -938,6 +957,7 @@ interface DashboardRouteChildren {
   DashboardEssaysRoute: typeof DashboardEssaysRoute
   DashboardHistoryRoute: typeof DashboardHistoryRoute
   DashboardLibraryRoute: typeof DashboardLibraryRouteWithChildren
+  DashboardMediaRoute: typeof DashboardMediaRoute
   DashboardMockExamsRoute: typeof DashboardMockExamsRoute
   DashboardMyContestRoute: typeof DashboardMyContestRoute
   DashboardNotebooksRoute: typeof DashboardNotebooksRoute
@@ -970,6 +990,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardEssaysRoute: DashboardEssaysRoute,
   DashboardHistoryRoute: DashboardHistoryRoute,
   DashboardLibraryRoute: DashboardLibraryRouteWithChildren,
+  DashboardMediaRoute: DashboardMediaRoute,
   DashboardMockExamsRoute: DashboardMockExamsRoute,
   DashboardMyContestRoute: DashboardMyContestRoute,
   DashboardNotebooksRoute: DashboardNotebooksRoute,

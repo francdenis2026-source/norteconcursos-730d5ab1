@@ -26,6 +26,7 @@ import {
   Moon,
   NotebookPen,
   PenLine,
+  PlayCircle,
   Search,
   Settings,
   ShieldCheck,
@@ -63,6 +64,7 @@ import {
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { PlanCountdownInline } from "@/components/dashboard/PlanCountdown";
+import { AcreClock } from "@/components/dashboard/AcreClock";
 import { SessionClock } from "@/components/dashboard/SessionClock";
 import { RenewPlanDialog } from "@/components/dashboard/RenewPlanDialog";
 import { MockService, type MedalProgress } from "@/services/mockService";
@@ -89,6 +91,7 @@ const MENU: MenuItem[] = [
   { group: "Edital e conteúdo", label: "Edital eletrônico", icon: MapPin, href: "/dashboard/edital" },
   { group: "Edital e conteúdo", label: "Mudanças no edital", icon: Radar, href: "/dashboard/edital-radar" },
   { group: "Edital e conteúdo", label: "Biblioteca", icon: Library, href: "/dashboard/library" },
+  { group: "Edital e conteúdo", label: "Central de mídia", icon: PlayCircle, href: "/dashboard/media" },
   {
     group: "Questões",
     label: "Treinador de questões",
@@ -538,6 +541,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <span>Ir para…</span>
                 <span className="kbd">Ctrl K</span>
               </button>
+              <AcreClock />
               {!isAdmin && user && user.id !== "demo-user" && <SessionClock userId={user.id} />}
               <span className="app-streak" title="Dias seguidos de estudo">
                 <Flame />
