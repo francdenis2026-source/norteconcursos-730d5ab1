@@ -844,6 +844,11 @@ html {
   inset: 0;
   z-index: -2;
   background: url("/media/hero/landing-hero.webp") 62% center / cover no-repeat;
+  opacity: 0;
+  transition: opacity 1.6s var(--ease-out);
+}
+.lp-hero.is-ready .lp-hero__media {
+  opacity: 1;
   animation: slow-zoom 2.4s var(--ease-out) both;
 }
 .lp-hero__video {
