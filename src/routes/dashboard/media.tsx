@@ -7,13 +7,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PageHero } from "@/components/dashboard/PageHero";
 import { AudioPlayer } from "@/components/media/AudioPlayer";
-import { TOPIC_VIDEOS } from "@/data/topicVideos";
+import { useMediaCatalog } from "@/lib/mediaStore";
 import { isPlaylistId } from "@/lib/arsenal";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import {
   DISCIPLINES,
-  PLAYLISTS,
-  PODCASTS,
   youtubeEmbedUrl,
   youtubePlaylistUrl,
   youtubeSearchUrl,
@@ -55,7 +53,8 @@ function VideoStage({ playlistId, title }: { playlistId: string; title: string }
 
 function VideosTab() {
   const [discipline, setDiscipline] = React.useState<string>(DISCIPLINES[0]);
-  const list = PLAYLISTS.filter((p) => p.discipline === discipline);
+  const { catalog } = useMediaCatalog();
+  const list = catalog.playlists.filter((p) => p.discipline === discipline);
   const [selected, setSelected] = React.useState<string | null>(null);
   const current = list.find((p) => p.id === selected) ?? list[0];
 
@@ -121,16 +120,20 @@ function VideosTab() {
   );
 }
 
-const SUBJECT_KEYS = Object.keys(TOPIC_VIDEOS);
-const countVideos = (subject: string) => Object.values(TOPIC_VIDEOS[subject] ?? {}).reduce((n, list) => n + list.length, 0);
+type TopicMap = Record<string, Record<string, import("@/data/topicVideos").TopicVideo[]>>;
+const countVideos = (map: TopicMap, subject: string) => Object.values(map[subject] ?? {}).reduce((n, list) => n + list.length, 0);
 
 /** Biblioteca de videoaulas organizada por matéria e assunto (PF, PRF e Polícia Civil). */
 function TopicsTab() {
-  const [subject, setSubject] = React.useState(SUBJECT_KEYS[0] ?? "");
+  const { catalog } = useMediaCatalog();
+  const TOPIC_VIDEOS = catalog.topicVideos;
+  const SUBJECT_KEYS = Object.keys(TOPIC_VIDEOS);
+  const [pick, setSubject] = React.useState("");
+  const subject = pick || SUBJECT_KEYS[0] || "";
   const [video, setVideo] = React.useState<{ id: string; title: string } | null>(null);
   const topics = Object.entries(TOPIC_VIDEOS[subject] ?? {}).filter(([t]) => t !== "*");
   const general = TOPIC_VIDEOS[subject]?.["*"] ?? [];
-  const total = SUBJECT_KEYS.reduce((n, s) => n + countVideos(s), 0);
+  const total = SUBJECT_KEYS.reduce((n, s) => n + countVideos(TOPIC_VIDEOS, s), 0);
 
   return (
     <div className="space-y-4">
@@ -141,7 +144,7 @@ function TopicsTab() {
         {SUBJECT_KEYS.map((s) => (
           <button key={s} type="button" role="tab" aria-selected={subject === s} onClick={() => { setSubject(s); setVideo(null); }}
             className={cn("rounded-full border px-3 py-1.5 text-sm font-medium", subject === s ? "border-primary bg-primary text-primary-foreground" : "hover:border-primary/50")}>
-            {s} <span className="opacity-70">· {countVideos(s)}</span>
+            {s} <span className="opacity-70">· {countVideos(TOPIC_VIDEOS, s)}</span>
           </button>
         ))}
       </div>
@@ -204,7 +207,9 @@ function TopicsTab() {
 }
 
 function PodcastsTab({ canPreview }: { canPreview: boolean }) {
-  const [selected, setSelected] = React.useState<Podcast | null>(PODCASTS[0] ?? null);
+  const PODCASTS = useMediaCatalog().catalog.podcasts;
+  const [pick, setSelected] = React.useState<Podcast | null>(null);
+  const selected = pick ?? PODCASTS[0] ?? null;
   const [local, setLocal] = React.useState<{ url: string; name: string } | null>(null);
   const fileInput = React.useRef<HTMLInputElement>(null);
 

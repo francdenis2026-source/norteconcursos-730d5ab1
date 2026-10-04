@@ -7,10 +7,11 @@ import type { QueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { fetchAllRows } from "@/lib/catalog";
 import { canonicalSubject } from "@/lib/subjects";
-import { PLAYLISTS, PODCASTS, type Podcast, type VideoPlaylist } from "@/data/mediaCatalog";
+import type { Podcast, VideoPlaylist } from "@/data/mediaCatalog";
 import { fetchStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
 import { areaOfSubject, subjectInArea } from "@/lib/questionTopics";
 import { TOPIC_VIDEOS, type TopicVideo } from "@/data/topicVideos";
+import { MEDIA_KEY, fetchMediaCatalog } from "@/lib/mediaStore";
 
 const strip = (v: string) => v.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 const tokens = (v: string) => strip(v).split(/[^a-z0-9]+/).filter((t) => t.length >= 5);
@@ -40,10 +41,10 @@ export function rankMaterials(list: StudyMaterialSummary[], subject: string, top
 }
 
 /** Videoaulas catalogadas por assunto ("exact") e as gerais da matéria. IDs com "PL" são playlists. */
-export function topicVideosFor(subject: string, topic: string): { exact: TopicVideo[]; general: TopicVideo[] } {
+export function topicVideosFor(subject: string, topic: string, source: Record<string, Record<string, TopicVideo[]>> = TOPIC_VIDEOS): { exact: TopicVideo[]; general: TopicVideo[] } {
   const exact: TopicVideo[] = [];
   const general: TopicVideo[] = [];
-  for (const [key, topics] of Object.entries(TOPIC_VIDEOS)) {
+  for (const [key, topics] of Object.entries(source)) {
     if (!subjectInArea(subject, key)) continue;
     if (topic) exact.push(...(topics[topic] ?? []));
     general.push(...(topics["*"] ?? []));
@@ -91,7 +92,7 @@ async function questionCountBySubject(qc: QueryClient): Promise<Map<string, numb
 }
 
 export async function loadArsenal(qc: QueryClient, userId: string, subject: string, topic: string): Promise<Arsenal> {
-  const [list, counts, cards] = await Promise.all([
+  const [list, counts, cards, media] = await Promise.all([
     qc.fetchQuery({ queryKey: ["study-materials", "list"], staleTime: 5 * 60_000, queryFn: fetchStudyMaterialList }),
     questionCountBySubject(qc).catch(() => new Map<string, number>()),
     (async () => {
@@ -100,6 +101,7 @@ export async function loadArsenal(qc: QueryClient, userId: string, subject: stri
       const { count } = await q;
       return count ?? 0;
     })().catch(() => 0),
+    qc.fetchQuery({ queryKey: MEDIA_KEY, staleTime: 5 * 60_000, queryFn: fetchMediaCatalog }),
   ]);
 
   const ranked = rankMaterials(list, subject, topic);
@@ -107,14 +109,14 @@ export async function loadArsenal(qc: QueryClient, userId: string, subject: stri
   let questions = 0;
   for (const [s, n] of counts) if (subjectInArea(subject, s)) questions += n;
 
-  const tv = topicVideosFor(subject, topic);
+  const tv = topicVideosFor(subject, topic, media.topicVideos);
   return {
     videos: tv.exact.length ? tv.exact : tv.general,
     videosAreTopic: tv.exact.length > 0,
     topicMaterials: ranked.filter((r) => r.score > 0).map((r) => r.m),
     subjectMaterials: ranked.map((r) => r.m),
-    playlists: discipline ? PLAYLISTS.filter((p) => p.discipline === discipline) : [],
-    podcasts: PODCASTS.filter((p) => (discipline ? p.discipline === discipline : strip(p.discipline).includes(strip(subject)))),
+    playlists: discipline ? media.playlists.filter((p) => p.discipline === discipline) : [],
+    podcasts: media.podcasts.filter((p) => (discipline ? p.discipline === discipline : strip(p.discipline).includes(strip(subject)))),
     cards,
     questions,
   };

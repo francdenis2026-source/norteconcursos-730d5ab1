@@ -21,12 +21,16 @@ export type QuestionStats = {
   reviewed: number;
   official: number;
   curated: number;
+  /** Por disciplina (nome canônico): total cadastrado, disponíveis no treino, revisadas, oficiais e autorais. */
+  bySubject: { subject: string; total: number; eligible: number; reviewed: number; official: number; curated: number }[];
+  /** Questões por banca organizadora. */
+  byBoard: { board: string; total: number; official: number; curated: number }[];
 };
 
 const OFFICIAL_COLUMNS =
-  "id,subject,review_note,legal_basis,official_answer,law_version_checked_at,content_status,legal_review_required,legal_audit_completed,context_review_required";
+  "id,subject,exam_board,review_note,legal_basis,official_answer,law_version_checked_at,content_status,legal_review_required,legal_audit_completed,context_review_required";
 const CURATED_COLUMNS =
-  "id,subject,explanation,legal_basis,official_answer,law_version_checked_at,content_status";
+  "id,subject,exam_board,explanation,legal_basis,official_answer,law_version_checked_at,content_status";
 
 const isReviewed = (row: Row, explanation: unknown) =>
   hasReviewedExplanation({
@@ -56,17 +60,36 @@ async function loadStats(): Promise<QuestionStats> {
     ),
   ]);
 
-  const eligibleOfficial = official.filter(isEligibleQuestion);
-  const eligibleCurated = curated.filter(isEligibleQuestion);
+  const subjects = new Map<string, QuestionStats["bySubject"][number]>();
+  const boards = new Map<string, QuestionStats["byBoard"][number]>();
+  let eligible = 0;
+  let reviewed = 0;
+  const add = (rows: Row[], kind: "official" | "curated") => {
+    for (const row of rows) {
+      const name = canonicalSubject(String(row["subject"] ?? "")) || "Sem disciplina";
+      const board = String(row["exam_board"] ?? "").trim() || "Não informada";
+      const s = subjects.get(name) ?? { subject: name, total: 0, eligible: 0, reviewed: 0, official: 0, curated: 0 };
+      const bd = boards.get(board) ?? { board, total: 0, official: 0, curated: 0 };
+      s.total++; s[kind]++; bd.total++; bd[kind]++;
+      if (isEligibleQuestion(row)) {
+        s.eligible++; eligible++;
+        if (isReviewed(row, row[kind === "official" ? "review_note" : "explanation"])) { s.reviewed++; reviewed++; }
+      }
+      subjects.set(name, s);
+      boards.set(board, bd);
+    }
+  };
+  add(official, "official");
+  add(curated, "curated");
 
   return {
     raw: official.length + curated.length,
-    eligible: eligibleOfficial.length + eligibleCurated.length,
-    reviewed:
-      eligibleOfficial.filter((row) => isReviewed(row, row["review_note"])).length +
-      eligibleCurated.filter((row) => isReviewed(row, row["explanation"])).length,
+    eligible,
+    reviewed,
     official: official.length,
     curated: curated.length,
+    bySubject: [...subjects.values()].sort((x, y) => y.total - x.total),
+    byBoard: [...boards.values()].sort((x, y) => y.total - x.total),
   };
 }
 

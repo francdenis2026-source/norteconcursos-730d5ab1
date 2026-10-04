@@ -141,6 +141,13 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Administração",
+    label: "Central de mídia (admin)",
+    icon: PlayCircle,
+    href: "/dashboard/admin-media",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
     label: "Financeiro",
     icon: Wallet,
     href: "/dashboard/admin-finance",

@@ -37,7 +37,6 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { MockService } from "@/services/mockService";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
-import { QuestionTotals } from "@/components/dashboard/QuestionTotals";
 import { StudyGoals } from "@/components/dashboard/StudyGoals";
 import { toast } from "sonner";
 
@@ -368,7 +367,6 @@ function DashboardIndex() {
         />
       </section>
 
-      <QuestionTotals enabled={!!user && user.id !== "demo-user"} />
 
       <StudyGoals planTier={user?.subscription_tier} />
 

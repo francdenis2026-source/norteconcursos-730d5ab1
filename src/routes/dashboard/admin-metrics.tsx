@@ -7,6 +7,8 @@ import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
+import { QuestionTotals } from "@/components/dashboard/QuestionTotals";
+import { useQuestionStats } from "@/hooks/useQuestionStats";
 
 export const Route = createFileRoute("/dashboard/admin-metrics")({
   head: () => ({
@@ -28,6 +30,11 @@ interface Raw {
   usage: { user_id: string; used_on: string }[];
   results: { user_id: string; created_at: string }[];
   docs: number;
+  /** Simulados concluídos pelos alunos (simulador por disciplina/concurso). */
+  simulados: number;
+  /** Banca de cada prova enviada pelos alunos e de cada documento oficial. */
+  sentBoards: string[];
+  officialBoards: string[];
   roles: { user_id: string; role: string }[];
 }
 
@@ -49,15 +56,18 @@ function AdminMetricsPage() {
     setLoading(true);
     setError(null);
     try {
-      const [p, u, r, d, ro] = await Promise.all([
+      const [p, u, r, d, ro, sim, sent, off] = await Promise.all([
         supabase.from("profiles").select("id, subscription_tier, created_at").limit(10000),
         supabase.from("ai_usage_logs").select("user_id, used_on").limit(50000),
         supabase.from("mock_exam_results").select("user_id, created_at").limit(50000),
         supabase.from("student_exam_documents").select("id", { count: "exact", head: true }),
         supabase.from("user_roles").select("user_id, role").limit(10000),
+        supabase.from("simulator_attempts").select("id", { count: "exact", head: true }),
+        supabase.from("student_exam_documents").select("exam_board").limit(50000),
+        supabase.from("official_exam_documents").select("exam_board").limit(50000),
       ]);
       if (p.error) throw p.error;
-      setRaw({ profiles: p.data ?? [], usage: u.data ?? [], results: r.data ?? [], docs: d.count ?? 0, roles: ro.data ?? [] });
+      setRaw({ profiles: p.data ?? [], usage: u.data ?? [], results: r.data ?? [], docs: d.count ?? 0, simulados: sim.count ?? 0, sentBoards: (sent.data ?? []).map((x) => x.exam_board ?? ""), officialBoards: (off.data ?? []).map((x) => x.exam_board ?? ""), roles: ro.data ?? [] });
     } catch {
       setError("Não foi possível carregar os números. Confirme que entrou como administrador.");
     } finally {
@@ -68,6 +78,22 @@ function AdminMetricsPage() {
   useEffect(() => {
     void load();
   }, [load]);
+
+  const content = useQuestionStats(isAdmin);
+  const byBoardDocs = useMemo(() => {
+    const m = new Map<string, { board: string; sent: number; official: number }>();
+    const bump = (list: string[], k: "sent" | "official") => {
+      for (const raw of list) {
+        const board = raw.trim().toUpperCase() || "NÃO INFORMADA";
+        const row = m.get(board) ?? { board, sent: 0, official: 0 };
+        row[k]++;
+        m.set(board, row);
+      }
+    };
+    bump(raw?.sentBoards ?? [], "sent");
+    bump(raw?.officialBoards ?? [], "official");
+    return [...m.values()].sort((a, b) => b.sent + b.official - (a.sent + a.official));
+  }, [raw]);
 
   const stats = useMemo(() => {
     if (!raw) return null;
@@ -124,7 +150,8 @@ function AdminMetricsPage() {
           <HeroStat icon={ShieldCheck} label="Administradores" value={stats?.totals.admins ?? 0} />
           <HeroStat icon={Activity} label="Ativos (7 dias)" value={stats?.active ?? 0} />
           <HeroStat icon={Trophy} label="Provas resolvidas" value={raw?.results.length ?? 0} />
-          <HeroStat icon={FileStack} label="Páginas enviadas" value={raw?.docs ?? 0} />
+          <HeroStat icon={Trophy} label="Simulados feitos" value={raw?.simulados ?? 0} />
+          <HeroStat icon={FileStack} label="Provas enviadas" value={raw?.docs ?? 0} />
           <HeroStat icon={Sparkles} label="Uso de IA total" value={raw?.usage.length ?? 0} />
         </div>
       </PageHero>
@@ -177,6 +204,63 @@ function AdminMetricsPage() {
           </Card>
         </div>
       )}
+
+      <QuestionTotals enabled={isAdmin} />
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Questões por disciplina</CardTitle>
+            <CardDescription>Total cadastrado, disponíveis no treino, revisadas, oficiais e autorais.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            {content.isPending ? <Loader2 className="mx-auto h-5 w-5 animate-spin text-muted-foreground" aria-label="Carregando" /> : (
+              <table className="w-full text-sm">
+                <thead><tr className="text-left text-muted-foreground"><th className="py-2">Disciplina</th><th>Total</th><th>Treino</th><th>Revisadas</th><th>Oficiais</th><th>Autorais</th></tr></thead>
+                <tbody>
+                  {(content.data?.bySubject ?? []).map((s) => (
+                    <tr key={s.subject} className="border-t border-border"><td className="py-2 font-medium text-foreground">{s.subject}</td><td>{s.total}</td><td>{s.eligible}</td><td>{s.reviewed}</td><td>{s.official}</td><td>{s.curated}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+          </CardContent>
+        </Card>
+        <div className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>Questões por banca</CardTitle>
+              <CardDescription>Banca organizadora de cada questão cadastrada.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <table className="w-full text-sm">
+                <thead><tr className="text-left text-muted-foreground"><th className="py-2">Banca</th><th>Total</th><th>Oficiais</th><th>Autorais</th></tr></thead>
+                <tbody>
+                  {(content.data?.byBoard ?? []).map((b) => (
+                    <tr key={b.board} className="border-t border-border"><td className="py-2 font-medium text-foreground">{b.board}</td><td>{b.total}</td><td>{b.official}</td><td>{b.curated}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Provas enviadas por banca</CardTitle>
+              <CardDescription>Provas enviadas pelos alunos e documentos oficiais (provas, gabaritos) cadastrados.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <table className="w-full text-sm">
+                <thead><tr className="text-left text-muted-foreground"><th className="py-2">Banca</th><th>Dos alunos</th><th>Oficiais</th></tr></thead>
+                <tbody>
+                  {byBoardDocs.map((b) => (
+                    <tr key={b.board} className="border-t border-border"><td className="py-2 font-medium text-foreground">{b.board}</td><td>{b.sent}</td><td>{b.official}</td></tr>
+                  ))}
+                  {!byBoardDocs.length && <tr><td colSpan={3} className="py-3 text-muted-foreground">Nenhuma prova enviada ainda.</td></tr>}
+                </tbody>
+              </table>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 }
