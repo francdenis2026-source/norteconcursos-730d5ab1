@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { SoonBadge } from "@/components/SoonBadge";
 import { PlanCountdown } from "@/components/dashboard/PlanCountdown";
 import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE, TESTING_NOTICE, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
+import { PageHero } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/subscriptions")({
   head: () => ({
@@ -38,12 +39,14 @@ function SubscriptionsPage() {
 
   return (
     <div className="mx-auto max-w-6xl space-y-6 p-4 md:p-6">
-      <header className="space-y-1">
-        <p className="flex items-center gap-2 text-sm font-medium text-primary">
-          <Crown className="h-4 w-4" aria-hidden /> Assinatura
-        </p>
-        <h1 className="text-2xl font-bold text-foreground md:text-3xl">Planos e uso</h1>
-      </header>
+      <PageHero
+        image="dashboard"
+        size="sm"
+        kicker="Assinatura"
+        icon={Crown}
+        title={<>Planos e <em>uso</em></>}
+        description="Seu plano, o uso de recursos e o que cada plano oferece."
+      />
 
       {!PAYMENTS_ENABLED && (
         <p role="status" className="text-sm text-muted-foreground">

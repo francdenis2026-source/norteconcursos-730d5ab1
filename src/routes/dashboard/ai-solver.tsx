@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Textarea } from "@/components/ui/textarea";
 import { SoonBadge } from "@/components/SoonBadge";
 import { AI_ENABLED } from "@/lib/launch.config";
+import { PageHero } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/ai-solver")({
   head: () => ({
@@ -45,12 +46,15 @@ function AiSolverPage() {
   if (!AI_ENABLED) {
     return (
       <div className="mx-auto max-w-3xl space-y-6 p-4 md:p-6">
-        <header className="space-y-2">
-          <p className="flex items-center gap-2 text-sm font-medium text-primary">
-            <Sparkles className="h-4 w-4" aria-hidden /> Resolução com IA <SoonBadge />
-          </p>
-          <h1 className="text-2xl font-bold text-foreground md:text-3xl">Resolver questão com IA</h1>
-        </header>
+        <PageHero
+          image="trainer"
+          size="sm"
+          kicker="Resolução com IA"
+          icon={Sparkles}
+          title={<>Resolver questão <em>com IA</em></>}
+          description="Em breve: cole uma questão e receba a resolução passo a passo."
+          actions={<SoonBadge />}
+        />
         <Card>
           <CardContent className="space-y-3 pt-6 text-sm text-muted-foreground">
             <p className="text-base font-semibold text-foreground">Estamos preparando este recurso.</p>
@@ -129,15 +133,14 @@ function AiSolverPage() {
 
   return (
     <div className="mx-auto max-w-4xl space-y-6 p-4 md:p-6">
-      <header className="space-y-1">
-        <p className="flex items-center gap-2 text-sm font-medium text-primary">
-          <Sparkles className="h-4 w-4" aria-hidden /> Resolução com IA
-        </p>
-        <h1 className="text-2xl font-bold text-foreground md:text-3xl">Resolver questão</h1>
-        <p className="text-muted-foreground">
-          Cole o enunciado e as alternativas. A IA explica a resolução passo a passo e os conceitos cobrados.
-        </p>
-      </header>
+      <PageHero
+        image="trainer"
+        size="sm"
+        kicker="Resolução com IA"
+        icon={Sparkles}
+        title={<>Resolver <em>questão</em></>}
+        description="Cole o enunciado e as alternativas. A IA explica a resolução passo a passo e os conceitos cobrados."
+      />
 
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border bg-card p-3 text-sm">
         <span className="flex items-center gap-2 text-foreground">

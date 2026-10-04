@@ -71,7 +71,7 @@ export async function fetchMediaCatalog(): Promise<MediaCatalog> {
       supabase.from("media_videos").select("*").eq("active", true).order("sort_order").limit(5000),
       supabase.from("media_podcasts").select("*").eq("active", true).order("sort_order").limit(1000),
     ]);
-    if (v.error) return STATIC_CATALOG; // tabela ausente ou banco fora do ar
+    if (v.error || !v.data?.length) return STATIC_CATALOG; // tabela ausente, vazia (ex.: visitante sem permissão) ou banco fora do ar
     return buildCatalog((v.data ?? []) as VideoRow[], p.error ? [] : ((p.data ?? []) as PodcastRow[]));
   } catch {
     return STATIC_CATALOG;

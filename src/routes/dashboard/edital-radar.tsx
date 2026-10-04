@@ -16,6 +16,7 @@ import {
   type TopicTier,
 } from "@/lib/editalRadar";
 import { cn } from "@/lib/utils";
+import { PageHero } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/edital-radar")({ component: EditalRadarPage });
 
@@ -154,17 +155,16 @@ function EditalRadarPage() {
 
   return (
     <div className="space-y-7 pb-10">
+      <PageHero
+        image="field-map"
+        size="sm"
+        kicker="Inteligência de editais"
+        icon={Radar}
+        title={<>Raio-X dos <em>editais</em></>}
+        description="Cruza o que cada edital lista com o que as provas já cadastradas realmente cobraram: o que mais cai, o que nunca caiu e o que tende a cair. É estatística, não garantia."
+      />
       <section className="rounded-3xl border bg-background p-6 shadow-sm">
-        <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700 dark:bg-emerald-950/40">
-          <Radar className="h-4 w-4" /> Inteligência de editais
-        </span>
-        <h1 className="mt-3 text-3xl font-black text-primary">Raio-X dos editais</h1>
-        <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
-          Cruza o que cada edital lista com o que as provas já cadastradas realmente cobraram: o que
-          mais cai, o que nunca caiu e o que tende a cair no próximo concurso. É estatística sobre
-          as provas disponíveis, não garantia de que o tema vá cair.
-        </p>
-        <div className="mt-5 flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2">
           {SPHERES.map((item) => (
             <button
               key={item.id}

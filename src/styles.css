@@ -5829,3 +5829,95 @@ iframe[src*="gpteng.co"] {
   .app-streak:has(.lucide-flame) svg { animation: none; }
   .app-top-btn:hover svg, .app-top-search:hover svg, .app-streak:hover svg { transform: none; }
 }
+
+/* ===== Heros dos painéis: compactas, mais claras e com a cor da área ===== */
+.page-hero,
+.tactical-feature-hero,
+.catalog-command-hero {
+  --hero-min: 0px;
+  min-height: 0 !important;
+  justify-content: center;
+  padding: clamp(16px, 2.2vw, 26px) clamp(18px, 2.6vw, 32px) !important;
+  border-radius: 18px;
+  box-shadow:
+    inset 0 2px 0 color-mix(in oklab, var(--hue, var(--brass)) 75%, transparent),
+    var(--shadow-hero);
+}
+.page-hero--lg {
+  min-height: 132px !important;
+}
+.page-hero::before,
+.tactical-feature-hero::before,
+.catalog-command-hero::before {
+  background:
+    radial-gradient(70% 150% at 100% 0%, color-mix(in oklab, var(--hue, var(--brass)) 24%, transparent), transparent 70%),
+    linear-gradient(90deg, oklch(0.13 0.03 263 / 0.9) 0%, oklch(0.13 0.03 263 / 0.66) 42%, oklch(0.13 0.03 263 / 0.2) 78%, oklch(0.13 0.03 263 / 0.04) 100%);
+}
+[data-hero="toolkit"]::before {
+  background:
+    radial-gradient(70% 150% at 0% 0%, color-mix(in oklab, var(--hue, var(--brass)) 24%, transparent), transparent 70%),
+    linear-gradient(270deg, oklch(0.13 0.03 263 / 0.9) 0%, oklch(0.13 0.03 263 / 0.66) 42%, oklch(0.13 0.03 263 / 0.2) 78%, oklch(0.13 0.03 263 / 0.04) 100%);
+}
+.page-hero__row {
+  align-items: center;
+  gap: 14px 28px;
+}
+.page-hero h1,
+.tactical-feature-hero h1,
+.catalog-command-hero h1 {
+  margin-top: 10px;
+  font-size: clamp(1.5rem, 2.4vw, 2.15rem) !important;
+  line-height: 1.02 !important;
+}
+.page-hero h1 em {
+  color: var(--hue, var(--brass));
+}
+.page-hero__desc,
+.catalog-command-hero > p {
+  margin-top: 8px;
+  color: oklch(0.96 0.01 255 / 0.82);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.app-content .hero-chip,
+.app-content .internal-hero-kicker {
+  border-color: color-mix(in oklab, var(--hue, var(--brass)) 45%, transparent) !important;
+  color: var(--hue, var(--brass-soft)) !important;
+  background: color-mix(in oklab, var(--hue, var(--brass)) 14%, transparent) !important;
+}
+.page-hero__stats {
+  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+.hero-stat {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: oklch(0.13 0.03 262 / 0.5);
+}
+.hero-stat strong {
+  margin-top: 4px;
+  font-size: 1.3rem;
+}
+.hero-stat span svg {
+  color: var(--hue, var(--brass));
+}
+.question-trainer-hero,
+.mock-exam-hero,
+.mock-result-hero {
+  min-height: 0 !important;
+}
+@media (max-width: 767px) {
+  .page-hero,
+  .tactical-feature-hero,
+  .catalog-command-hero {
+    padding: 14px !important;
+  }
+  .page-hero::before,
+  .tactical-feature-hero::before,
+  .catalog-command-hero::before {
+    background:
+      radial-gradient(90% 120% at 100% 0%, color-mix(in oklab, var(--hue, var(--brass)) 22%, transparent), transparent 70%),
+      linear-gradient(0deg, oklch(0.13 0.03 263 / 0.88) 15%, oklch(0.13 0.03 263 / 0.55) 100%);
+  }
+}
