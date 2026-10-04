@@ -64,7 +64,6 @@ export function buildCatalog(videos: VideoRow[], podcasts: PodcastRow[]): MediaC
 }
 
 export const STATIC_CATALOG: MediaCatalog = { topicVideos: TOPIC_VIDEOS, playlists: PLAYLISTS, podcasts: PODCASTS, fromDb: false };
-const EMPTY_CATALOG: MediaCatalog = { topicVideos: {}, playlists: [], podcasts: [], fromDb: true };
 
 export async function fetchMediaCatalog(): Promise<MediaCatalog> {
   try {
@@ -81,7 +80,8 @@ export async function fetchMediaCatalog(): Promise<MediaCatalog> {
 
 export function useMediaCatalog() {
   const q = useQuery({ queryKey: MEDIA_KEY, queryFn: fetchMediaCatalog, staleTime: 5 * 60_000 });
-  return { catalog: q.data ?? EMPTY_CATALOG, isLoading: q.isPending };
+  // Enquanto o banco responde (ou se estiver lento/fora do ar) mostra o catálogo padrão do app.
+  return { catalog: q.data ?? STATIC_CATALOG, isLoading: q.isPending };
 }
 
 /** Extrai o id de um vídeo ou playlist de um link do YouTube (ou aceita o id puro). */

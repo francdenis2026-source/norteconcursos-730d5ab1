@@ -1,6 +1,7 @@
 import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ExternalLink, FileAudio, Headphones, Info, PlayCircle, Search, Upload } from "lucide-react";
+import { ExternalLink, FileAudio, Headphones, Info, ListVideo, PlayCircle, Search, Upload } from "lucide-react";
+import { SubjectIcon } from "@/components/ui/subject-icon";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -72,11 +73,11 @@ function VideosTab() {
               setSelected(null);
             }}
             className={cn(
-              "rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors",
+              "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium transition-all hover:-translate-y-px hover:shadow-sm",
               discipline === d ? "border-primary bg-primary text-primary-foreground" : "hover:border-primary/50",
             )}
           >
-            {d}
+            <SubjectIcon subject={d} /> {d}
           </button>
         ))}
       </div>
@@ -143,8 +144,8 @@ function TopicsTab() {
       <div className="flex flex-wrap gap-2" role="tablist" aria-label="Matérias">
         {SUBJECT_KEYS.map((s) => (
           <button key={s} type="button" role="tab" aria-selected={subject === s} onClick={() => { setSubject(s); setVideo(null); }}
-            className={cn("rounded-full border px-3 py-1.5 text-sm font-medium", subject === s ? "border-primary bg-primary text-primary-foreground" : "hover:border-primary/50")}>
-            {s} <span className="opacity-70">· {countVideos(TOPIC_VIDEOS, s)}</span>
+            className={cn("inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium transition-all hover:-translate-y-px hover:shadow-sm", subject === s ? "border-primary bg-primary text-primary-foreground" : "hover:border-primary/50")}>
+            <SubjectIcon subject={s} /> {s} <span className="opacity-70">· {countVideos(TOPIC_VIDEOS, s)}</span>
           </button>
         ))}
       </div>
@@ -301,9 +302,9 @@ function MediaCenterPage() {
       />
       <Tabs defaultValue="videos" className="space-y-4">
         <TabsList>
-          <TabsTrigger value="videos">Videoaulas gratuitas</TabsTrigger>
-          <TabsTrigger value="assuntos">Por assunto</TabsTrigger>
-          <TabsTrigger value="podcasts">Podcasts</TabsTrigger>
+          <TabsTrigger value="videos" className="gap-1.5"><PlayCircle className="h-4 w-4 !text-rose-500" /> Videoaulas gratuitas</TabsTrigger>
+          <TabsTrigger value="assuntos" className="gap-1.5"><ListVideo className="h-4 w-4 !text-violet-500" /> Por assunto</TabsTrigger>
+          <TabsTrigger value="podcasts" className="gap-1.5"><Headphones className="h-4 w-4 !text-emerald-500" /> Podcasts</TabsTrigger>
         </TabsList>
         <TabsContent value="videos"><VideosTab /></TabsContent>
         <TabsContent value="assuntos"><TopicsTab /></TabsContent>

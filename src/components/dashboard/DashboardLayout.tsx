@@ -83,6 +83,29 @@ type MenuItem = {
   soon?: boolean;
 };
 
+type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal";
+const GROUP_HUE: Record<string, Hue> = {
+  Hoje: "gold",
+  Objetivo: "sky",
+  "Edital e conteúdo": "violet",
+  Questões: "emerald",
+  Provas: "rose",
+  Desempenho: "orange",
+  Conta: "teal",
+  Administração: "gold",
+};
+const MOBILE_HUE: Record<string, Hue> = {
+  "/dashboard": "gold",
+  "/dashboard/question-trainer": "emerald",
+  "/dashboard/mock-exams": "rose",
+  "/dashboard/performance": "orange",
+  "/dashboard/profile": "teal",
+  "/dashboard/admin-students": "sky",
+  "/dashboard/admin-finance": "emerald",
+  "/dashboard/admin-metrics": "violet",
+  "/dashboard/admin": "gold",
+};
+
 const MENU: MenuItem[] = [
   { group: "Hoje", label: "Painel do aluno", icon: LayoutDashboard, href: "/dashboard" },
   { group: "Hoje", label: "Assistente de estudos", icon: Sparkles, href: "/dashboard/study-coach" },
@@ -350,7 +373,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             aria-current={active ? "page" : undefined}
             aria-label={collapsed ? item.label : undefined}
           >
-            <item.icon />
+            <span className="app-ico" data-hue={GROUP_HUE[item.group] ?? "gold"}>
+              <item.icon />
+            </span>
             {!collapsed && <span>{item.label}</span>}
             {!collapsed && item.soon && <SoonBadge className="ml-auto" />}
           </Link>
@@ -584,7 +609,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </div>
           </header>
 
-          <main className="app-content">
+          <main className="app-content" data-hue={GROUP_HUE[items.find((i) => isActive(location.pathname, i.href))?.group ?? "Hoje"] ?? "gold"}>
             <div className="app-content__inner">
               {TESTING_PHASE && !isAdmin && isTestingTier(tier) && !!user?.plan_ends_at && !location.pathname.startsWith("/dashboard/subscriptions") && (
                 <div role="status" className="mb-4 flex items-start gap-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm text-foreground">
@@ -613,7 +638,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 to={item.href}
                 data-active={isActive(location.pathname, item.href)}
               >
-                <item.icon />
+                <span className="app-ico" data-hue={MOBILE_HUE[item.href] ?? "gold"}>
+                  <item.icon />
+                </span>
                 <span>{item.label}</span>
               </Link>
             ))}
