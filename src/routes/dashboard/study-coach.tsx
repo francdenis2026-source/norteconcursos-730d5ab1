@@ -226,7 +226,7 @@ function StudyCoachPage() {
       supabase.rpc("my_subject_stats"),
       supabase.rpc("my_study_hours"),
       supabase.from("study_plan_checks")
-        .select("plan_id,week_start,block_key,subject,kind,topics,minutes,done_at")
+        .select("plan_id,week_start,block_key,subject,kind,topics,minutes,actual_seconds,done_at")
         .eq("user_id", user.id)
         .order("done_at", { ascending: false })
         .limit(2000),

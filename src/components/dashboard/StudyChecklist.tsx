@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
-import { CheckCircle2, ChevronDown, Circle, ClipboardCheck, Clock3, ExternalLink, Repeat2, Route as RouteIcon } from "lucide-react";
+import { BookOpen, CheckCircle2, ChevronDown, Play, Circle, ClipboardCheck, Clock3, ExternalLink, Repeat2, Route as RouteIcon } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,6 +16,7 @@ export interface CheckRow {
   kind: string;
   topics: string[];
   minutes: number;
+  actual_seconds?: number;
   done_at: string;
 }
 
@@ -28,6 +29,18 @@ const KIND_STYLE: Record<BlockKind, string> = {
   Redação: "border-violet-500/40 bg-violet-500/10",
   Simulado: "border-rose-500/40 bg-rose-500/10",
 };
+const inRoom = (k: BlockKind) => k === "Teoria" || k === "Flashcards" || k === "Questões";
+
+/** Parâmetros da sala de estudo: o bloco, o assunto clicado e onde registrar a conclusão. */
+function roomSearch(b: ScheduleDay["blocks"][number], topic: string | undefined, planId?: string, weekStart?: string) {
+  return {
+    subject: b.subject, kind: b.kind, minutes: String(b.minutes), key: b.key,
+    ...(topic ? { topic } : {}),
+    ...(planId ? { plan: planId } : {}),
+    ...(weekStart ? { week: weekStart } : {}),
+  };
+}
+
 export const fmtMin = (m: number) => (m >= 60 ? `${Math.floor(m / 60)}h${m % 60 ? String(m % 60).padStart(2, "0") : ""}` : `${m}min`);
 
 /** Cronograma da semana com horários, assuntos e marcação de "estudado". */
@@ -131,16 +144,43 @@ export function WeekChecklist({
                           {b.topics.length > 0 && (
                             <div>
                               <p className="font-bold uppercase tracking-wide text-muted-foreground">Assuntos</p>
-                              <ul className="mt-1 list-disc space-y-0.5 pl-5">{b.topics.map((t) => <li key={t}>{t}</li>)}</ul>
+                              <ul className="mt-1 space-y-0.5">
+                                {b.topics.map((t) => (
+                                  <li key={t}>
+                                    {inRoom(b.kind) ? (
+                                      <Link
+                                        to="/dashboard/study-room"
+                                        search={roomSearch(b, t, planId, weekStart)}
+                                        className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+                                      >
+                                        <BookOpen className="h-3.5 w-3.5" /> {t}
+                                      </Link>
+                                    ) : (
+                                      t
+                                    )}
+                                  </li>
+                                ))}
+                              </ul>
                             </div>
                           )}
                           <div>
                             <p className="font-bold uppercase tracking-wide text-muted-foreground">Como estudar</p>
                             <p className="mt-1 leading-relaxed">{b.how}</p>
                           </div>
-                          <Link to={b.href} {...(b.search ? { search: b.search } : {})} className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
-                            Abrir ferramenta <ExternalLink className="h-3.5 w-3.5" />
-                          </Link>
+                          <div className="flex flex-wrap items-center gap-3">
+                            {inRoom(b.kind) && (
+                              <Link
+                                to="/dashboard/study-room"
+                                search={roomSearch(b, b.topics[0], planId, weekStart)}
+                                className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 font-bold text-primary-foreground hover:opacity-90"
+                              >
+                                <Play className="h-3.5 w-3.5" /> Iniciar sessão de estudo
+                              </Link>
+                            )}
+                            <Link to={b.href} {...(b.search ? { search: b.search } : {})} className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
+                              Abrir ferramenta <ExternalLink className="h-3.5 w-3.5" />
+                            </Link>
+                          </div>
                         </div>
                       )}
                     </li>
@@ -176,8 +216,8 @@ export function StudyRecord({ checks, planId }: { checks: CheckRow[]; planId: st
         <CardDescription>Tudo que você marcou como estudado neste plano.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-5">
-        <div className="grid grid-cols-3 gap-3">
-          {[["Horas registradas", fmtMin(total)], ["Blocos concluídos", String(mine.length)], ["Dias com estudo", String(days)]].map(([l, v]) => (
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+          {[["Horas registradas", fmtMin(total)], ["Blocos concluídos", String(mine.length)], ["Dias com estudo", String(days)], ["Tempo cronometrado", fmtMin(Math.round(mine.reduce((n, c) => n + (c.actual_seconds ?? 0), 0) / 60))]].map(([l, v]) => (
             <div key={l} className="rounded-lg bg-muted/60 p-3">
               <p className="text-[0.68rem] font-semibold uppercase tracking-wide text-muted-foreground">{l}</p>
               <p className="text-xl font-black tabular-nums">{v}</p>
