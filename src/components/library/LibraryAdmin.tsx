@@ -134,9 +134,13 @@ export function LibraryAdmin() {
         if (!user?.id) throw new Error("Sessão de administrador não encontrada.");
         const checked = d.law_version_checked_at ? Date.parse(d.law_version_checked_at) : NaN;
         if (!Number.isFinite(checked) || checked > Date.now())
-          throw new Error("Informe a data em que as fontes foram conferidas (não pode ser futura).");
+          throw new Error(
+            "Informe a data em que as fontes foram conferidas (não pode ser futura).",
+          );
         if (sources.some((s) => s.url && !isOfficialUrl(s.url)))
-          throw new Error("Há fonte com link que não é de órgão oficial. Corrija antes de publicar.");
+          throw new Error(
+            "Há fonte com link que não é de órgão oficial. Corrija antes de publicar.",
+          );
       }
 
       const payload = {
@@ -148,7 +152,9 @@ export function LibraryAdmin() {
         summary: d.summary.trim() || null,
         body_md: d.body_md,
         contest_name: d.contest_name.trim() || null,
-        syllabus_topic_order: d.syllabus_topic_order ? Number.parseInt(d.syllabus_topic_order, 10) : null,
+        syllabus_topic_order: d.syllabus_topic_order
+          ? Number.parseInt(d.syllabus_topic_order, 10)
+          : null,
         source_note: d.source_note.trim(),
         legal_basis: sources,
         law_version_checked_at: d.law_version_checked_at
@@ -195,7 +201,8 @@ export function LibraryAdmin() {
     return acc;
   }, {});
 
-  const update = (patch: Partial<Draft>) => setDraft((current) => (current ? { ...current, ...patch } : current));
+  const update = (patch: Partial<Draft>) =>
+    setDraft((current) => (current ? { ...current, ...patch } : current));
 
   return (
     <div className="space-y-4">
@@ -235,11 +242,13 @@ export function LibraryAdmin() {
         </div>
       ) : isError ? (
         <div className="surface-card p-6 text-sm text-muted-foreground">
-          Não foi possível carregar. Se a tabela <code>study_materials</code> ainda não existe, aplique
-          as migrações da pasta <code>supabase/migrations</code>.
+          Não foi possível carregar. Se a tabela <code>study_materials</code> ainda não existe,
+          aplique as migrações da pasta <code>supabase/migrations</code>.
         </div>
       ) : items.length === 0 ? (
-        <div className="surface-card p-6 text-sm text-muted-foreground">Nenhum material neste filtro.</div>
+        <div className="surface-card p-6 text-sm text-muted-foreground">
+          Nenhum material neste filtro.
+        </div>
       ) : (
         <ul className="grid gap-2">
           {items.map((item) => (
@@ -305,8 +314,8 @@ export function LibraryAdmin() {
               <DialogHeader>
                 <DialogTitle>{draft.id ? "Revisar material" : "Novo material"}</DialogTitle>
                 <DialogDescription>
-                  Para publicar, informe a data em que as fontes foram conferidas. O seu usuário fica
-                  registrado como revisor.
+                  Para publicar, informe a data em que as fontes foram conferidas. O seu usuário
+                  fica registrado como revisor.
                 </DialogDescription>
               </DialogHeader>
 
@@ -317,7 +326,10 @@ export function LibraryAdmin() {
                 </TabsList>
                 <TabsContent value="edit" className="mt-4 grid gap-4 md:grid-cols-2">
                   <Field label="Título" className="md:col-span-2">
-                    <Input value={draft.title} onChange={(e) => update({ title: e.target.value })} />
+                    <Input
+                      value={draft.title}
+                      onChange={(e) => update({ title: e.target.value })}
+                    />
                   </Field>
                   <Field label="Matéria (igual ao edital)">
                     <Input
@@ -364,7 +376,10 @@ export function LibraryAdmin() {
                     />
                   </Field>
                   <Field label="Resumo (aparece no cartão)" className="md:col-span-2">
-                    <Input value={draft.summary} onChange={(e) => update({ summary: e.target.value })} />
+                    <Input
+                      value={draft.summary}
+                      onChange={(e) => update({ summary: e.target.value })}
+                    />
                   </Field>
                   <Field label="Conteúdo (Markdown)" className="md:col-span-2">
                     <Textarea
@@ -402,7 +417,9 @@ export function LibraryAdmin() {
                 </TabsContent>
                 <TabsContent value="preview" className="mt-4">
                   <div className="surface-card p-6">
-                    <h3 className="font-display mb-4 text-2xl font-extrabold">{draft.title || "Sem título"}</h3>
+                    <h3 className="font-display mb-4 text-2xl font-extrabold">
+                      {draft.title || "Sem título"}
+                    </h3>
                     <Markdown source={draft.body_md || "_Sem conteúdo ainda._"} />
                   </div>
                 </TabsContent>

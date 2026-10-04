@@ -28,6 +28,7 @@ import { Route as DashboardAdminMetricsRouteImport } from './routes/dashboard/ad
 import { Route as DashboardAdminQuestionsRouteImport } from './routes/dashboard/admin-questions'
 import { Route as DashboardAdminSignupsRouteImport } from './routes/dashboard/admin-signups'
 import { Route as DashboardAdminStudentsRouteImport } from './routes/dashboard/admin-students'
+import { Route as DashboardAdminSupportRouteImport } from './routes/dashboard/admin-support'
 import { Route as DashboardAiSolverRouteImport } from './routes/dashboard/ai-solver'
 import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers'
 import { Route as DashboardEditalRouteImport } from './routes/dashboard/edital'
@@ -156,6 +157,11 @@ const DashboardAdminSignupsRoute = DashboardAdminSignupsRouteImport.update({
 const DashboardAdminStudentsRoute = DashboardAdminStudentsRouteImport.update({
   id: '/admin-students',
   path: '/admin-students',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardAdminSupportRoute = DashboardAdminSupportRouteImport.update({
+  id: '/admin-support',
+  path: '/admin-support',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardAiSolverRoute = DashboardAiSolverRouteImport.update({
@@ -349,6 +355,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/admin-questions': typeof DashboardAdminQuestionsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
+  '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
@@ -403,6 +410,7 @@ export interface FileRoutesByTo {
   '/dashboard/admin-questions': typeof DashboardAdminQuestionsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
+  '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
@@ -457,6 +465,7 @@ export interface FileRoutesById {
   '/dashboard/admin-questions': typeof DashboardAdminQuestionsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
+  '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
@@ -514,6 +523,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-questions'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
+    | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital'
@@ -568,6 +578,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-questions'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
+    | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital-radar'
@@ -621,6 +632,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-questions'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
+    | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital'
@@ -806,6 +818,13 @@ declare module '@tanstack/react-router' {
       path: '/admin-students'
       fullPath: '/dashboard/admin-students'
       preLoaderRoute: typeof DashboardAdminStudentsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/admin-support': {
+      id: '/dashboard/admin-support'
+      path: '/admin-support'
+      fullPath: '/dashboard/admin-support'
+      preLoaderRoute: typeof DashboardAdminSupportRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/ai-solver': {
@@ -1084,6 +1103,7 @@ interface DashboardRouteChildren {
   DashboardAdminQuestionsRoute: typeof DashboardAdminQuestionsRoute
   DashboardAdminSignupsRoute: typeof DashboardAdminSignupsRoute
   DashboardAdminStudentsRoute: typeof DashboardAdminStudentsRoute
+  DashboardAdminSupportRoute: typeof DashboardAdminSupportRoute
   DashboardAiSolverRoute: typeof DashboardAiSolverRoute
   DashboardCareersRoute: typeof DashboardCareersRoute
   DashboardEditalRoute: typeof DashboardEditalRouteWithChildren
@@ -1124,6 +1144,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminQuestionsRoute: DashboardAdminQuestionsRoute,
   DashboardAdminSignupsRoute: DashboardAdminSignupsRoute,
   DashboardAdminStudentsRoute: DashboardAdminStudentsRoute,
+  DashboardAdminSupportRoute: DashboardAdminSupportRoute,
   DashboardAiSolverRoute: DashboardAiSolverRoute,
   DashboardCareersRoute: DashboardCareersRoute,
   DashboardEditalRoute: DashboardEditalRouteWithChildren,

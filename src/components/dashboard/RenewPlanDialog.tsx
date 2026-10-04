@@ -2,7 +2,14 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Hourglass } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { PAYMENTS_ENABLED } from "@/lib/launch.config";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import type { UserProfile } from "@/types";
@@ -39,7 +46,8 @@ export function RenewPlanDialog({ user, enabled }: { user: UserProfile | null; e
           </div>
           <DialogTitle>Seu plano {name} expirou</DialogTitle>
           <DialogDescription>
-            Sua conta voltou ao plano Gratuito, com os recursos básicos. Deseja renovar o plano para recuperar o acesso completo?
+            Sua conta voltou ao plano Gratuito, com os recursos básicos. Deseja renovar o plano para
+            recuperar o acesso completo?
             {!PAYMENTS_ENABLED && " Os planos pagos serão ativados em breve — avisaremos você."}
           </DialogDescription>
         </DialogHeader>

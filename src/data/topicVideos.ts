@@ -14,813 +14,2726 @@ export interface TopicVideo {
 
 export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
   "Língua Portuguesa": {
-    "Crase": [
-      { id: "SB17C63Wcgc", title: "Crase — dicas e questões, banca CESPE/CEBRASPE", channel: "JUS POLIS" },
-      { id: "JBALZYWrOXg", title: "Crase para concursos: questões comentadas CESPE (Prof. Eliane Vieira)", channel: "Rota de Estudo" },
-      { id: "Ha8bpJmj76E", title: "Teste de Português: questões sobre crase (CESPE/CEBRASPE) — Prof. Letícia Góes", channel: "Português com Letícia" },
-      { id: "x7upR1wDSSo", title: "Crase para concurso público — aula direto ao ponto", channel: "Prof. Álvaro Ferreira" },
-      { id: "GzogylmkSW0", title: "Crase — questão comentada da banca CEBRASPE", channel: "Português com Edson" },
+    Crase: [
+      {
+        id: "SB17C63Wcgc",
+        title: "Crase — dicas e questões, banca CESPE/CEBRASPE",
+        channel: "JUS POLIS",
+      },
+      {
+        id: "JBALZYWrOXg",
+        title: "Crase para concursos: questões comentadas CESPE (Prof. Eliane Vieira)",
+        channel: "Rota de Estudo",
+      },
+      {
+        id: "Ha8bpJmj76E",
+        title: "Teste de Português: questões sobre crase (CESPE/CEBRASPE) — Prof. Letícia Góes",
+        channel: "Português com Letícia",
+      },
+      {
+        id: "x7upR1wDSSo",
+        title: "Crase para concurso público — aula direto ao ponto",
+        channel: "Prof. Álvaro Ferreira",
+      },
+      {
+        id: "GzogylmkSW0",
+        title: "Crase — questão comentada da banca CEBRASPE",
+        channel: "Português com Edson",
+      },
     ],
     "Concordância verbal e nominal": [
-      { id: "qFYxm6HrNrM", title: "Concordância verbal e nominal para concursos públicos", channel: "Concurseiro Nômade" },
-      { id: "C8JPK8vBfa0", title: "Você ainda erra concordância verbal e nominal? Veja antes da prova", channel: "Prof. Álvaro Ferreira" },
-      { id: "J83S10smTgA", title: "Concordância verbal e nominal — exercícios para concursos", channel: "Rota de Estudo" },
-      { id: "eTdevz8WKH4", title: "Exercícios de concordância verbal e nominal", channel: "Rota de Estudo" },
-      { id: "iZItMtEu9_Y", title: "Revisão CEBRASPE: concordância, regência, crase e colocação pronominal", channel: "Décio Terror" },
+      {
+        id: "qFYxm6HrNrM",
+        title: "Concordância verbal e nominal para concursos públicos",
+        channel: "Concurseiro Nômade",
+      },
+      {
+        id: "C8JPK8vBfa0",
+        title: "Você ainda erra concordância verbal e nominal? Veja antes da prova",
+        channel: "Prof. Álvaro Ferreira",
+      },
+      {
+        id: "J83S10smTgA",
+        title: "Concordância verbal e nominal — exercícios para concursos",
+        channel: "Rota de Estudo",
+      },
+      {
+        id: "eTdevz8WKH4",
+        title: "Exercícios de concordância verbal e nominal",
+        channel: "Rota de Estudo",
+      },
+      {
+        id: "iZItMtEu9_Y",
+        title: "Revisão CEBRASPE: concordância, regência, crase e colocação pronominal",
+        channel: "Décio Terror",
+      },
     ],
     "Regência verbal e nominal": [
-      { id: "Y5ChEVWOWRk", title: "Revisão de regência verbal e nominal para concurso público", channel: "Prof. Álvaro Ferreira" },
-      { id: "-joCrtiE3Ks", title: "Dicas matadoras de regência verbal e nominal em concursos", channel: "Professor Mazziotti" },
-      { id: "oOosGRe5gKo", title: "Exercícios de regência nominal e verbal para concursos", channel: "Rota de Estudo" },
-      { id: "Cf-So6bJXVA", title: "Regência verbal para concurso público em 5 minutos", channel: "Prof. Álvaro Ferreira" },
+      {
+        id: "Y5ChEVWOWRk",
+        title: "Revisão de regência verbal e nominal para concurso público",
+        channel: "Prof. Álvaro Ferreira",
+      },
+      {
+        id: "-joCrtiE3Ks",
+        title: "Dicas matadoras de regência verbal e nominal em concursos",
+        channel: "Professor Mazziotti",
+      },
+      {
+        id: "oOosGRe5gKo",
+        title: "Exercícios de regência nominal e verbal para concursos",
+        channel: "Rota de Estudo",
+      },
+      {
+        id: "Cf-So6bJXVA",
+        title: "Regência verbal para concurso público em 5 minutos",
+        channel: "Prof. Álvaro Ferreira",
+      },
     ],
-    "Pontuação": [
-      { id: "huEo6imC5Xw", title: "Vírgula para concurso: aprenda em 1 vídeo + questões", channel: "Prof. Álvaro Ferreira" },
-      { id: "G8Stjzy-87k", title: "Pontuação — aulão completo para concurso público", channel: "Prof. Álvaro Ferreira" },
+    Pontuação: [
+      {
+        id: "huEo6imC5Xw",
+        title: "Vírgula para concurso: aprenda em 1 vídeo + questões",
+        channel: "Prof. Álvaro Ferreira",
+      },
+      {
+        id: "G8Stjzy-87k",
+        title: "Pontuação — aulão completo para concurso público",
+        channel: "Prof. Álvaro Ferreira",
+      },
     ],
     "Interpretação e compreensão de texto": [
-      { id: "DvDXfVkpatM", title: "Interpretação — banca CESPE/CEBRASPE (INSS/PF/PRF)", channel: "Giancarla Bombonato Português e Redação" },
-      { id: "AWZYcg082QQ", title: "Dicas finais PF: interpretação de textos CESPE", channel: "Professora Adriana Figueiredo" },
-      { id: "z0PX0-KjI6U", title: "Acerte interpretação de texto com 4 passos", channel: "Prof. Álvaro Ferreira" },
-      { id: "52yJBc9plMs", title: "Interpretação e compreensão textual — questões CEBRASPE, VUNESP e CESGRANRIO", channel: "JUS POLIS" },
-      { id: "KQNaleLezCI", title: "Português para PRF 2026, banca CEBRASPE — Sidney Martins", channel: "Português com SIDOKA - Sidney Martins" },
-      { id: "PLtGrAGdGm2t0vlRuZVUsMwVdnXctb06N-", title: "CESPE/CEBRASPE — teoria e exercícios (playlist)", channel: "Professor Mazziotti" },
+      {
+        id: "DvDXfVkpatM",
+        title: "Interpretação — banca CESPE/CEBRASPE (INSS/PF/PRF)",
+        channel: "Giancarla Bombonato Português e Redação",
+      },
+      {
+        id: "AWZYcg082QQ",
+        title: "Dicas finais PF: interpretação de textos CESPE",
+        channel: "Professora Adriana Figueiredo",
+      },
+      {
+        id: "z0PX0-KjI6U",
+        title: "Acerte interpretação de texto com 4 passos",
+        channel: "Prof. Álvaro Ferreira",
+      },
+      {
+        id: "52yJBc9plMs",
+        title: "Interpretação e compreensão textual — questões CEBRASPE, VUNESP e CESGRANRIO",
+        channel: "JUS POLIS",
+      },
+      {
+        id: "KQNaleLezCI",
+        title: "Português para PRF 2026, banca CEBRASPE — Sidney Martins",
+        channel: "Português com SIDOKA - Sidney Martins",
+      },
+      {
+        id: "PLtGrAGdGm2t0vlRuZVUsMwVdnXctb06N-",
+        title: "CESPE/CEBRASPE — teoria e exercícios (playlist)",
+        channel: "Professor Mazziotti",
+      },
     ],
     "Reescrita e substituição de trechos": [
-      { id: "Afbhakb5QEU", title: "Reescrita de frases — Português CEBRASPE", channel: "OPG - Português para concursos!" },
-      { id: "AkFloAZTgBU", title: "Reescrita de frases CESPE para concursos", channel: "Eliezer Piano Produtividade" },
-      { id: "_ra-w5CDYKU", title: "CEBRASPE — reescrita de frases e parágrafos do texto", channel: "Professor Mazziotti" },
-      { id: "Z_dvw9b0xT0", title: "Português CEBRASPE 012 — reescrita de frases", channel: "OPG - Português para concursos!" },
-      { id: "Dh3bcc_7Z1s", title: "Intensivão CEBRASPE — reescrita — Profª Ariane Budke", channel: "JUS POLIS" },
+      {
+        id: "Afbhakb5QEU",
+        title: "Reescrita de frases — Português CEBRASPE",
+        channel: "OPG - Português para concursos!",
+      },
+      {
+        id: "AkFloAZTgBU",
+        title: "Reescrita de frases CESPE para concursos",
+        channel: "Eliezer Piano Produtividade",
+      },
+      {
+        id: "_ra-w5CDYKU",
+        title: "CEBRASPE — reescrita de frases e parágrafos do texto",
+        channel: "Professor Mazziotti",
+      },
+      {
+        id: "Z_dvw9b0xT0",
+        title: "Português CEBRASPE 012 — reescrita de frases",
+        channel: "OPG - Português para concursos!",
+      },
+      {
+        id: "Dh3bcc_7Z1s",
+        title: "Intensivão CEBRASPE — reescrita — Profª Ariane Budke",
+        channel: "JUS POLIS",
+      },
     ],
     "Coesão e coerência textual": [
-      { id: "_JyumVmPnWQ", title: "Coesão textual — Descomplicando CESPE/UnB #22", channel: "Curso Agora Eu Passo" },
-      { id: "60wyY63Lz0k", title: "Aula completa sobre coesão textual (teoria e questões)", channel: "Aucielly Nobre" },
+      {
+        id: "_JyumVmPnWQ",
+        title: "Coesão textual — Descomplicando CESPE/UnB #22",
+        channel: "Curso Agora Eu Passo",
+      },
+      {
+        id: "60wyY63Lz0k",
+        title: "Aula completa sobre coesão textual (teoria e questões)",
+        channel: "Aucielly Nobre",
+      },
     ],
     "Colocação pronominal": [
-      { id: "6zsVwix7Uh0", title: "Colocação pronominal (para concurso)", channel: "Prof. Álvaro Ferreira" },
-      { id: "mBUFd7NiZUI", title: "Colocação pronominal — exercícios (próclise, ênclise e mesóclise)", channel: "Rota de Estudo" },
-      { id: "th_DMMj-VeY", title: "Concurso PRF — próclise, mesóclise e ênclise: como se usa?", channel: "Professor Mazziotti" },
-      { id: "ZYFKHWXtpqE", title: "Colocação pronominal — próclise, mesóclise e ênclise", channel: "Português com Leo Martins" },
-      { id: "PLY5LstekqHTVJ445R6MqAqjW2TA3gov60", title: "Colocação pronominal — próclise, ênclise e mesóclise (playlist)", channel: "Prof. Zé Arnaldo - Tire suas Dúvidas de Letra" },
+      {
+        id: "6zsVwix7Uh0",
+        title: "Colocação pronominal (para concurso)",
+        channel: "Prof. Álvaro Ferreira",
+      },
+      {
+        id: "mBUFd7NiZUI",
+        title: "Colocação pronominal — exercícios (próclise, ênclise e mesóclise)",
+        channel: "Rota de Estudo",
+      },
+      {
+        id: "th_DMMj-VeY",
+        title: "Concurso PRF — próclise, mesóclise e ênclise: como se usa?",
+        channel: "Professor Mazziotti",
+      },
+      {
+        id: "ZYFKHWXtpqE",
+        title: "Colocação pronominal — próclise, mesóclise e ênclise",
+        channel: "Português com Leo Martins",
+      },
+      {
+        id: "PLY5LstekqHTVJ445R6MqAqjW2TA3gov60",
+        title: "Colocação pronominal — próclise, ênclise e mesóclise (playlist)",
+        channel: "Prof. Zé Arnaldo - Tire suas Dúvidas de Letra",
+      },
     ],
     "Ortografia e acentuação gráfica": [
-      { id: "lZb8yx7oSm8", title: "Novo Acordo Ortográfico: o que mudou na acentuação gráfica", channel: "Aprova Concursos" },
-      { id: "hgF5_RC6H8M", title: "Regras de acentuação — aula grátis de Português", embeddable: false },
-      { id: "NN0IQAx0hA4", title: "Português para concursos — ortografia e acentuação", channel: "Ciência Exata" },
-      { id: "PJOLSYoEWO8", title: "Questão de concurso — acentuação gráfica", channel: "Ciência Exata" },
+      {
+        id: "lZb8yx7oSm8",
+        title: "Novo Acordo Ortográfico: o que mudou na acentuação gráfica",
+        channel: "Aprova Concursos",
+      },
+      {
+        id: "hgF5_RC6H8M",
+        title: "Regras de acentuação — aula grátis de Português",
+        embeddable: false,
+      },
+      {
+        id: "NN0IQAx0hA4",
+        title: "Português para concursos — ortografia e acentuação",
+        channel: "Ciência Exata",
+      },
+      {
+        id: "PJOLSYoEWO8",
+        title: "Questão de concurso — acentuação gráfica",
+        channel: "Ciência Exata",
+      },
     ],
     "Classes de palavras e emprego": [
-      { id: "ltrzPijgKi4", title: "Morfologia: classes de palavras (para concurso)", channel: "Prof. Álvaro Ferreira" },
-      { id: "3fyN4DrdcOo", title: "Aulão de pronomes para concurso público — teoria e questões", channel: "Prof. Álvaro Ferreira" },
-      { id: "K_T57gXZvug", title: "Conjunção, preposição e interjeição + exercícios resolvidos", channel: "Professor Noslen" },
-      { id: "WYSU-0UcsNE", title: "Preposição ou conjunção? Entenda a diferença", channel: "Minuto Português" },
+      {
+        id: "ltrzPijgKi4",
+        title: "Morfologia: classes de palavras (para concurso)",
+        channel: "Prof. Álvaro Ferreira",
+      },
+      {
+        id: "3fyN4DrdcOo",
+        title: "Aulão de pronomes para concurso público — teoria e questões",
+        channel: "Prof. Álvaro Ferreira",
+      },
+      {
+        id: "K_T57gXZvug",
+        title: "Conjunção, preposição e interjeição + exercícios resolvidos",
+        channel: "Professor Noslen",
+      },
+      {
+        id: "WYSU-0UcsNE",
+        title: "Preposição ou conjunção? Entenda a diferença",
+        channel: "Minuto Português",
+      },
     ],
     "Tipologia e gêneros textuais": [
-      { id: "h0CKy8IFxh4", title: "Tipos de textos — Português para concurso público", channel: "Prof. Álvaro Ferreira" },
-      { id: "FQkScABGX9w", title: "Tipologia textual e gêneros textuais — Português para concursos", channel: "Português para Concursos Professor Rosenthal" },
-      { id: "Yj0cJ3D9WUg", title: "Tipos e gêneros textuais: como nunca mais errar essas questões", channel: "Karla Gomes | Português e Redação" },
-      { id: "K5U828nU8fg", title: "Reconhecimento de tipos e gêneros textuais em questões comentadas", channel: "Professor Mazziotti" },
+      {
+        id: "h0CKy8IFxh4",
+        title: "Tipos de textos — Português para concurso público",
+        channel: "Prof. Álvaro Ferreira",
+      },
+      {
+        id: "FQkScABGX9w",
+        title: "Tipologia textual e gêneros textuais — Português para concursos",
+        channel: "Português para Concursos Professor Rosenthal",
+      },
+      {
+        id: "Yj0cJ3D9WUg",
+        title: "Tipos e gêneros textuais: como nunca mais errar essas questões",
+        channel: "Karla Gomes | Português e Redação",
+      },
+      {
+        id: "K5U828nU8fg",
+        title: "Reconhecimento de tipos e gêneros textuais em questões comentadas",
+        channel: "Professor Mazziotti",
+      },
     ],
     "Redação oficial": [
-      { id: "VrIoVCKhzt8", title: "Redação oficial CEBRASPE — Polícia Federal e TCU", channel: "Décio Terror" },
-      { id: "QMGojO4vIQU", title: "Redação para CEBRASPE (concurso da PF)", channel: "Professora Adriana Figueiredo" },
+      {
+        id: "VrIoVCKhzt8",
+        title: "Redação oficial CEBRASPE — Polícia Federal e TCU",
+        channel: "Décio Terror",
+      },
+      {
+        id: "QMGojO4vIQU",
+        title: "Redação para CEBRASPE (concurso da PF)",
+        channel: "Professora Adriana Figueiredo",
+      },
     ],
     "*": [
-      { id: "PLAzcWdLW0AoEuf22APsWkvR8WU3Si29qO", title: "Português para Concurso Público", channel: "Aprova Concursos" },
+      {
+        id: "PLAzcWdLW0AoEuf22APsWkvR8WU3Si29qO",
+        title: "Português para Concurso Público",
+        channel: "Aprova Concursos",
+      },
     ],
   },
   "Raciocínio Lógico": {
     "Proposições e conectivos lógicos": [
-      { id: "tfVZTjBKiXU", title: "CEBRASPE — resolução de questões #1: proposições e conectivos", channel: "Leandro Morgado" },
-      { id: "naP68lSXKTo", title: "Como estudar conectivos lógicos para concursos", channel: "Prof. Jerffson Fernando" },
+      {
+        id: "tfVZTjBKiXU",
+        title: "CEBRASPE — resolução de questões #1: proposições e conectivos",
+        channel: "Leandro Morgado",
+      },
+      {
+        id: "naP68lSXKTo",
+        title: "Como estudar conectivos lógicos para concursos",
+        channel: "Prof. Jerffson Fernando",
+      },
       { id: "a0Mi0tTgx88", title: "Raciocínio lógico — CEBRASPE", channel: "Wagner Aguiar" },
-      { id: "PLeMovEZTFtLuvEKpyzDAqsZc4RAx8GZtN", title: "Curso de raciocínio lógico — foco CESPE (playlist)", channel: "Raciocínio Lógico com o Professor PH" },
+      {
+        id: "PLeMovEZTFtLuvEKpyzDAqsZc4RAx8GZtN",
+        title: "Curso de raciocínio lógico — foco CESPE (playlist)",
+        channel: "Raciocínio Lógico com o Professor PH",
+      },
     ],
     "Tabela-verdade e equivalências": [
-      { id: "GfCCN5rTR6g", title: "Raciocínio lógico CEBRASPE — tabela verdade das proposições", channel: "Tiago Gomes" },
-      { id: "f_L07byzmKw", title: "Equivalência lógica INSS — questões CEBRASPE", channel: "Prof. Kaká - Raciocínio Lógico e Matemática" },
-      { id: "dkBpQRQgW-I", title: "Tabela verdade em exercícios — raciocínio lógico", channel: "Matemática Pra Passar" },
-      { id: "KsdFf1QGA0M", title: "Entenda tabela verdade de uma vez por todas — aula 1", channel: "Felippe Loureiro" },
-      { id: "tLLkYSy7q6c", title: "Questão da banca CEBRASPE sobre tabela verdade", channel: "Matemática com Douglas de Souza" },
+      {
+        id: "GfCCN5rTR6g",
+        title: "Raciocínio lógico CEBRASPE — tabela verdade das proposições",
+        channel: "Tiago Gomes",
+      },
+      {
+        id: "f_L07byzmKw",
+        title: "Equivalência lógica INSS — questões CEBRASPE",
+        channel: "Prof. Kaká - Raciocínio Lógico e Matemática",
+      },
+      {
+        id: "dkBpQRQgW-I",
+        title: "Tabela verdade em exercícios — raciocínio lógico",
+        channel: "Matemática Pra Passar",
+      },
+      {
+        id: "KsdFf1QGA0M",
+        title: "Entenda tabela verdade de uma vez por todas — aula 1",
+        channel: "Felippe Loureiro",
+      },
+      {
+        id: "tLLkYSy7q6c",
+        title: "Questão da banca CEBRASPE sobre tabela verdade",
+        channel: "Matemática com Douglas de Souza",
+      },
     ],
     "Negação de proposições": [
-      { id: "w7P89v5aDxE", title: "Raciocínio lógico — aula 3: negação de proposições (Prof. Gui)", channel: "Matemática em Exercícios" },
-      { id: "sehKuczORt0", title: "Raciocínio lógico: negação em exercícios", channel: "Matemática Pra Passar" },
-      { id: "Filhg3k9xAQ", title: "Aula 9: negação de proposições lógicas (E, OU)", channel: "Ivan Zevedo | Matemática" },
-      { id: "27YmFxjktjk", title: "Aula 10: negação (se…então; se e somente se; ou…ou)", channel: "Ivan Zevedo | Matemática" },
-      { id: "3vVrsvYet6Y", title: "Aula 11: exercícios de negação de proposições lógicas", channel: "Ivan Zevedo | Matemática" },
+      {
+        id: "w7P89v5aDxE",
+        title: "Raciocínio lógico — aula 3: negação de proposições (Prof. Gui)",
+        channel: "Matemática em Exercícios",
+      },
+      {
+        id: "sehKuczORt0",
+        title: "Raciocínio lógico: negação em exercícios",
+        channel: "Matemática Pra Passar",
+      },
+      {
+        id: "Filhg3k9xAQ",
+        title: "Aula 9: negação de proposições lógicas (E, OU)",
+        channel: "Ivan Zevedo | Matemática",
+      },
+      {
+        id: "27YmFxjktjk",
+        title: "Aula 10: negação (se…então; se e somente se; ou…ou)",
+        channel: "Ivan Zevedo | Matemática",
+      },
+      {
+        id: "3vVrsvYet6Y",
+        title: "Aula 11: exercícios de negação de proposições lógicas",
+        channel: "Ivan Zevedo | Matemática",
+      },
     ],
     "Argumentação e diagramas lógicos": [
-      { id: "e9RcWo5Zlr8", title: "Lógica de argumentação e diagramas lógicos", channel: "Focado no Edital" },
-      { id: "nztbAk0wknY", title: "Lógica de argumentação em exercícios", channel: "Matemática Pra Passar" },
-      { id: "zxNE4kIMdo8", title: "Lógica de argumentação para concursos", channel: "Matemática Pra Passar" },
-      { id: "Znog7DacX84", title: "Diagramas lógicos em exercícios", channel: "Matemática Pra Passar" },
-      { id: "O8oV3B3aAA8", title: "Decifrando o silogismo: argumentação lógica", channel: "Filosofares - Bruno Neppo" },
+      {
+        id: "e9RcWo5Zlr8",
+        title: "Lógica de argumentação e diagramas lógicos",
+        channel: "Focado no Edital",
+      },
+      {
+        id: "nztbAk0wknY",
+        title: "Lógica de argumentação em exercícios",
+        channel: "Matemática Pra Passar",
+      },
+      {
+        id: "zxNE4kIMdo8",
+        title: "Lógica de argumentação para concursos",
+        channel: "Matemática Pra Passar",
+      },
+      {
+        id: "Znog7DacX84",
+        title: "Diagramas lógicos em exercícios",
+        channel: "Matemática Pra Passar",
+      },
+      {
+        id: "O8oV3B3aAA8",
+        title: "Decifrando o silogismo: argumentação lógica",
+        channel: "Filosofares - Bruno Neppo",
+      },
     ],
-    "Conjuntos": [
-      { id: "WB-TsWMBImM", title: "Como não errar teoria dos conjuntos em concursos", channel: "Felippe Loureiro" },
-      { id: "UCkkC9XrHtk", title: "Dica 01 — teoria dos conjuntos — CESPE (Pablo Guimarães)", channel: "Aula Móvel" },
-      { id: "GuaLFdS-tZY", title: "Operações com conjuntos (parte I)", channel: "Professor Julio Cesar | Bizutemática" },
-      { id: "I7i8zX7GtxQ", title: "Questão de conjuntos — raciocínio lógico matemático", channel: "PetroDicas" },
+    Conjuntos: [
+      {
+        id: "WB-TsWMBImM",
+        title: "Como não errar teoria dos conjuntos em concursos",
+        channel: "Felippe Loureiro",
+      },
+      {
+        id: "UCkkC9XrHtk",
+        title: "Dica 01 — teoria dos conjuntos — CESPE (Pablo Guimarães)",
+        channel: "Aula Móvel",
+      },
+      {
+        id: "GuaLFdS-tZY",
+        title: "Operações com conjuntos (parte I)",
+        channel: "Professor Julio Cesar | Bizutemática",
+      },
+      {
+        id: "I7i8zX7GtxQ",
+        title: "Questão de conjuntos — raciocínio lógico matemático",
+        channel: "PetroDicas",
+      },
     ],
     "Análise combinatória": [
-      { id: "7yZKHDdm_d0", title: "Análise combinatória e probabilidade — questão CEBRASPE (2022)", channel: "Exercitando a Matemática com Prof. Fernando Couto" },
+      {
+        id: "7yZKHDdm_d0",
+        title: "Análise combinatória e probabilidade — questão CEBRASPE (2022)",
+        channel: "Exercitando a Matemática com Prof. Fernando Couto",
+      },
       { id: "SpNeqhsveEE", title: "Análise combinatória — Polícia Federal", channel: "Prático" },
-      { id: "2f-WSc2PZew", title: "Questão da Polícia Federal 2018 (análise combinatória)", channel: "Matemática Objetiva" },
-      { id: "0lRr48USHZw", title: "PCDF/CESPE — análise combinatória", channel: "Professora Cássia Coutinho" },
-      { id: "PLX0M3n7YsPNiBgHSd55cxpgvg71XhUITG", title: "Análise combinatória para concursos públicos (playlist)", channel: "Jéferson Prieto" },
+      {
+        id: "2f-WSc2PZew",
+        title: "Questão da Polícia Federal 2018 (análise combinatória)",
+        channel: "Matemática Objetiva",
+      },
+      {
+        id: "0lRr48USHZw",
+        title: "PCDF/CESPE — análise combinatória",
+        channel: "Professora Cássia Coutinho",
+      },
+      {
+        id: "PLX0M3n7YsPNiBgHSd55cxpgvg71XhUITG",
+        title: "Análise combinatória para concursos públicos (playlist)",
+        channel: "Jéferson Prieto",
+      },
     ],
-    "Probabilidade": [
-      { id: "oSJdd-FKzyI", title: "Estatística Polícia Federal — exercícios de probabilidade CEBRASPE", channel: "Estatística para Concurso" },
-      { id: "xvTJwYeGD9M", title: "Estatística e probabilidade CEBRASPE — macetes", channel: "Estatística para Concurso" },
+    Probabilidade: [
+      {
+        id: "oSJdd-FKzyI",
+        title: "Estatística Polícia Federal — exercícios de probabilidade CEBRASPE",
+        channel: "Estatística para Concurso",
+      },
+      {
+        id: "xvTJwYeGD9M",
+        title: "Estatística e probabilidade CEBRASPE — macetes",
+        channel: "Estatística para Concurso",
+      },
     ],
     "Razão, proporção e regra de três": [
-      { id: "-4PfhP4XfdA", title: "Regra de 3 simples e composta — banca CESPE/CEBRASPE", channel: "matcar videos matemáticos" },
-      { id: "tED3MGhSSno", title: "Razão, proporção, regra de três e porcentagem", channel: "Canal Unigranrio" },
-      { id: "aCjc5HAy3_M", title: "Matemática básica: razão, proporção, regra de três e porcentagem", channel: "Professor Julio Cesar | Bizutemática" },
-      { id: "dA5Aw6Hrw9o", title: "Aprenda a resolver regra de três composta", channel: "Ivan Zevedo | Matemática" },
-      { id: "PLougO8IRm3JbYMLFargRVggD-CcYSSUsw", title: "Regra de três, razão e proporção (playlist)", channel: "Professora Angela Matemática" },
+      {
+        id: "-4PfhP4XfdA",
+        title: "Regra de 3 simples e composta — banca CESPE/CEBRASPE",
+        channel: "matcar videos matemáticos",
+      },
+      {
+        id: "tED3MGhSSno",
+        title: "Razão, proporção, regra de três e porcentagem",
+        channel: "Canal Unigranrio",
+      },
+      {
+        id: "aCjc5HAy3_M",
+        title: "Matemática básica: razão, proporção, regra de três e porcentagem",
+        channel: "Professor Julio Cesar | Bizutemática",
+      },
+      {
+        id: "dA5Aw6Hrw9o",
+        title: "Aprenda a resolver regra de três composta",
+        channel: "Ivan Zevedo | Matemática",
+      },
+      {
+        id: "PLougO8IRm3JbYMLFargRVggD-CcYSSUsw",
+        title: "Regra de três, razão e proporção (playlist)",
+        channel: "Professora Angela Matemática",
+      },
     ],
-    "Porcentagem": [
-      { id: "tED3MGhSSno", title: "Razão, proporção, regra de três e porcentagem", channel: "Canal Unigranrio" },
+    Porcentagem: [
+      {
+        id: "tED3MGhSSno",
+        title: "Razão, proporção, regra de três e porcentagem",
+        channel: "Canal Unigranrio",
+      },
     ],
     "*": [
-      { id: "puaqIhg7bP8", title: "Questões comentadas de raciocínio lógico — banca CEBRASPE", channel: "Nova Concursos" },
-      { id: "Y-gbtjakeRs", title: "Questões comentadas de raciocínio lógico do CESPE", channel: "Clube das Questões" },
-      { id: "PLqjSTsK75fSekJ1Lxon-iaj8md9Hl6S49", title: "Raciocínio Lógico e Matemático — questões resolvidas e comentadas", channel: "JULIO BATTISTI - LIVROS E CURSOS LTDA." },
-      { id: "PL-4cMc9KcAt6kbXyDgnsu2sWeGfjehF_y", title: "Raciocínio Lógico para Concursos — RLM completo", channel: "JC Concursos" },
-      { id: "PLw4wejdBxKWXOZujbP9EAMxACnPeXdK5J", title: "Raciocínio Lógico para Concursos", channel: "Prep Concursos" },
+      {
+        id: "puaqIhg7bP8",
+        title: "Questões comentadas de raciocínio lógico — banca CEBRASPE",
+        channel: "Nova Concursos",
+      },
+      {
+        id: "Y-gbtjakeRs",
+        title: "Questões comentadas de raciocínio lógico do CESPE",
+        channel: "Clube das Questões",
+      },
+      {
+        id: "PLqjSTsK75fSekJ1Lxon-iaj8md9Hl6S49",
+        title: "Raciocínio Lógico e Matemático — questões resolvidas e comentadas",
+        channel: "JULIO BATTISTI - LIVROS E CURSOS LTDA.",
+      },
+      {
+        id: "PL-4cMc9KcAt6kbXyDgnsu2sWeGfjehF_y",
+        title: "Raciocínio Lógico para Concursos — RLM completo",
+        channel: "JC Concursos",
+      },
+      {
+        id: "PLw4wejdBxKWXOZujbP9EAMxACnPeXdK5J",
+        title: "Raciocínio Lógico para Concursos",
+        channel: "Prep Concursos",
+      },
     ],
   },
   "Direito Constitucional": {
     "Direitos e garantias individuais (art. 5º)": [
-      { id: "D_AdM_M810Q", title: "Direitos e garantias fundamentais", channel: "Mario Tossan | Escola de Concursados" },
-      { id: "CR6XMyYqLHE", title: "Art. 5º — direitos e deveres individuais e coletivos", channel: "Focus Concursos" },
-      { id: "YwGvJoqS-gI", title: "Dos direitos e garantias fundamentais, arts. 5 a 17 da CF/1988", channel: "Instituto Rodolfo Souza" },
-      { id: "XS3QU0mHAv0", title: "CF — art. 5º, direitos e deveres individuais e coletivos (aula 01)", channel: "Gustavo Fregapani" },
-      { id: "CTzCipRdIsY", title: "Direito Constitucional — art. 5º CF/88 (AlfaCon)", channel: "AlfaCon" },
+      {
+        id: "D_AdM_M810Q",
+        title: "Direitos e garantias fundamentais",
+        channel: "Mario Tossan | Escola de Concursados",
+      },
+      {
+        id: "CR6XMyYqLHE",
+        title: "Art. 5º — direitos e deveres individuais e coletivos",
+        channel: "Focus Concursos",
+      },
+      {
+        id: "YwGvJoqS-gI",
+        title: "Dos direitos e garantias fundamentais, arts. 5 a 17 da CF/1988",
+        channel: "Instituto Rodolfo Souza",
+      },
+      {
+        id: "XS3QU0mHAv0",
+        title: "CF — art. 5º, direitos e deveres individuais e coletivos (aula 01)",
+        channel: "Gustavo Fregapani",
+      },
+      {
+        id: "CTzCipRdIsY",
+        title: "Direito Constitucional — art. 5º CF/88 (AlfaCon)",
+        channel: "AlfaCon",
+      },
     ],
     "Segurança pública (art. 144)": [
-      { id: "p9UR6jdQbys", title: "Art. 144 — Constituição Federal de 1988", channel: "Leandro Sarno - Direito e Debates" },
-      { id: "gbJdkKwngVQ", title: "CF/88 — art. 144, §§ 1º a 3º (segurança pública, parte II)", channel: "Prof. Emerson Bruno" },
-      { id: "v0LPFe2QcwI", title: "CF/88 — art. 144, §§ 5º e 6º (segurança pública, parte IV)", channel: "Prof. Emerson Bruno" },
-      { id: "JYoJKFaw1n8", title: "CF/88 — art. 144, §§ 7º a 10 (segurança pública, parte V)", channel: "Prof. Emerson Bruno" },
+      {
+        id: "p9UR6jdQbys",
+        title: "Art. 144 — Constituição Federal de 1988",
+        channel: "Leandro Sarno - Direito e Debates",
+      },
+      {
+        id: "gbJdkKwngVQ",
+        title: "CF/88 — art. 144, §§ 1º a 3º (segurança pública, parte II)",
+        channel: "Prof. Emerson Bruno",
+      },
+      {
+        id: "v0LPFe2QcwI",
+        title: "CF/88 — art. 144, §§ 5º e 6º (segurança pública, parte IV)",
+        channel: "Prof. Emerson Bruno",
+      },
+      {
+        id: "JYoJKFaw1n8",
+        title: "CF/88 — art. 144, §§ 7º a 10 (segurança pública, parte V)",
+        channel: "Prof. Emerson Bruno",
+      },
       { id: "qNS-dWWXacA", title: "Artigo 144 CF/88: Polícia Penal", channel: "Jonathan Herbert" },
-      { id: "zyT_hV30gg4", title: "Segurança pública na Constituição Federal (Direito que cai na prova)", channel: "Aprova Concursos" },
-      { id: "9CdTHhsl8RY", title: "50 questões de segurança pública — art. 144", channel: "QC Aprova Concursos Públicos" },
+      {
+        id: "zyT_hV30gg4",
+        title: "Segurança pública na Constituição Federal (Direito que cai na prova)",
+        channel: "Aprova Concursos",
+      },
+      {
+        id: "9CdTHhsl8RY",
+        title: "50 questões de segurança pública — art. 144",
+        channel: "QC Aprova Concursos Públicos",
+      },
     ],
     "Princípios fundamentais": [
-      { id: "ypNuEbiWysw", title: "Princípios fundamentais (arts. 1º ao 4º da Constituição Federal)", channel: "Me Julga - Cíntia Brunelli" },
-      { id: "0UzuLO7Zbkg", title: "Constituição Federal — artigos 1º a 4º, princípios fundamentais", channel: "Gustavo Fregapani" },
-      { id: "VrZ-6iJuyos", title: "Princípios fundamentais — Direito Constitucional", channel: "PHD Concursos Públicos e Cursos de capacitação" },
-      { id: "aR0UaUgpJbE", title: "Princípios fundamentais da CF — questões de concursos", channel: "Matérias para concursos" },
-      { id: "PLD7176F663E049907", title: "CF/88 — princípios fundamentais, arts. 1º a 4º (playlist)", channel: "Prof. Emerson Bruno" },
+      {
+        id: "ypNuEbiWysw",
+        title: "Princípios fundamentais (arts. 1º ao 4º da Constituição Federal)",
+        channel: "Me Julga - Cíntia Brunelli",
+      },
+      {
+        id: "0UzuLO7Zbkg",
+        title: "Constituição Federal — artigos 1º a 4º, princípios fundamentais",
+        channel: "Gustavo Fregapani",
+      },
+      {
+        id: "VrZ-6iJuyos",
+        title: "Princípios fundamentais — Direito Constitucional",
+        channel: "PHD Concursos Públicos e Cursos de capacitação",
+      },
+      {
+        id: "aR0UaUgpJbE",
+        title: "Princípios fundamentais da CF — questões de concursos",
+        channel: "Matérias para concursos",
+      },
+      {
+        id: "PLD7176F663E049907",
+        title: "CF/88 — princípios fundamentais, arts. 1º a 4º (playlist)",
+        channel: "Prof. Emerson Bruno",
+      },
     ],
     "Direitos sociais e nacionalidade": [
-      { id: "LlEKrSk0LFw", title: "Direitos sociais (CF/88, arts. 6º a 11)", channel: "Mario Tossan | Escola de Concursados" },
-      { id: "fkf1WzZC94o", title: "Concurso PRF — direitos da nacionalidade", channel: "Qconcursos" },
-      { id: "vjAg5c_zyNs", title: "Questões comentadas — direitos de nacionalidade (Prof. Alan Vinícius)", channel: "Prof. Alan Vinícius" },
+      {
+        id: "LlEKrSk0LFw",
+        title: "Direitos sociais (CF/88, arts. 6º a 11)",
+        channel: "Mario Tossan | Escola de Concursados",
+      },
+      {
+        id: "fkf1WzZC94o",
+        title: "Concurso PRF — direitos da nacionalidade",
+        channel: "Qconcursos",
+      },
+      {
+        id: "vjAg5c_zyNs",
+        title: "Questões comentadas — direitos de nacionalidade (Prof. Alan Vinícius)",
+        channel: "Prof. Alan Vinícius",
+      },
     ],
     "Direitos políticos": [
-      { id: "kaxOw2Jj2q0", title: "Arts. 14 e 16 — direitos políticos, comentários para concursos", channel: "Direito e Xadrez" },
+      {
+        id: "kaxOw2Jj2q0",
+        title: "Arts. 14 e 16 — direitos políticos, comentários para concursos",
+        channel: "Direito e Xadrez",
+      },
     ],
     "Organização do Estado": [
-      { id: "7AK7HyP9w54", title: "Repartição de competências: organização do Estado — Prof. Bernardo Gonçalves", channel: "Supremo" },
-      { id: "ql1y6y1iEpI", title: "Organização do Estado — leitura grifada da CF, arts. 18 a 36", channel: "Revisão Animada" },
+      {
+        id: "7AK7HyP9w54",
+        title: "Repartição de competências: organização do Estado — Prof. Bernardo Gonçalves",
+        channel: "Supremo",
+      },
+      {
+        id: "ql1y6y1iEpI",
+        title: "Organização do Estado — leitura grifada da CF, arts. 18 a 36",
+        channel: "Revisão Animada",
+      },
       { id: "GyXNV_MGIw8", title: "Repartição das competências", channel: "KULTIVI CONCURSOS" },
       { id: "ueknASmy38M", title: "AGU Explica — competências legislativas", embeddable: false },
-      { id: "CGUE86C4AaI", title: "CF/88 — artigo 23, competência material comum", channel: "Prof. Leonardo Saraiva" },
+      {
+        id: "CGUE86C4AaI",
+        title: "CF/88 — artigo 23, competência material comum",
+        channel: "Prof. Leonardo Saraiva",
+      },
     ],
     "Poder Judiciário": [
-      { id: "QKTR3IoelSw", title: "Direito Constitucional — Poder Judiciário (Weslei Machado)", channel: "Gran Cursos Online" },
+      {
+        id: "QKTR3IoelSw",
+        title: "Direito Constitucional — Poder Judiciário (Weslei Machado)",
+        channel: "Gran Cursos Online",
+      },
     ],
     "Poder Legislativo": [
-      { id: "Aku2RCmr6Fs", title: "Desafiando a Constituição — Poder Legislativo", channel: "Gran Jurídico" },
+      {
+        id: "Aku2RCmr6Fs",
+        title: "Desafiando a Constituição — Poder Legislativo",
+        channel: "Gran Jurídico",
+      },
     ],
     "Controle de constitucionalidade": [
-      { id: "QKLOdd27YoQ", title: "Controle de constitucionalidade — curso gratuito, aula 6", channel: "Estratégia Carreira Jurídica" },
-      { id: "22Q4VCTiJ44", title: "Controle de constitucionalidade — parte 01", channel: "Adriane Fauth" },
+      {
+        id: "QKLOdd27YoQ",
+        title: "Controle de constitucionalidade — curso gratuito, aula 6",
+        channel: "Estratégia Carreira Jurídica",
+      },
+      {
+        id: "22Q4VCTiJ44",
+        title: "Controle de constitucionalidade — parte 01",
+        channel: "Adriane Fauth",
+      },
     ],
     "*": [
-      { id: "6SC7Uuky_eE", title: "Questões de Direito Constitucional para a banca CEBRASPE 2025", channel: "Nova Concursos" },
-      { id: "nm4W2Znh0zY", title: "TRE Unificado — Direito Constitucional: questões CEBRASPE", channel: "Qconcursos" },
-      { id: "PLbuo_BUvjP3MoVF_vLWPc0Qwqs6k9zSVm", title: "Direito Constitucional para Concursos", channel: "Mario Tossan | Escola de Concursados" },
-      { id: "PLBkozukn4cGUv5KpSOOmIK2ocE64em7N3", title: "Curso completo de Direito Constitucional 2025", channel: "Adriane Fauth" },
-      { id: "PLdarqF3CDzWHWQ93rc0MvJ4BYUxTXqab7", title: "Curso de Direito Constitucional", channel: "Direito Em Tela" },
+      {
+        id: "6SC7Uuky_eE",
+        title: "Questões de Direito Constitucional para a banca CEBRASPE 2025",
+        channel: "Nova Concursos",
+      },
+      {
+        id: "nm4W2Znh0zY",
+        title: "TRE Unificado — Direito Constitucional: questões CEBRASPE",
+        channel: "Qconcursos",
+      },
+      {
+        id: "PLbuo_BUvjP3MoVF_vLWPc0Qwqs6k9zSVm",
+        title: "Direito Constitucional para Concursos",
+        channel: "Mario Tossan | Escola de Concursados",
+      },
+      {
+        id: "PLBkozukn4cGUv5KpSOOmIK2ocE64em7N3",
+        title: "Curso completo de Direito Constitucional 2025",
+        channel: "Adriane Fauth",
+      },
+      {
+        id: "PLdarqF3CDzWHWQ93rc0MvJ4BYUxTXqab7",
+        title: "Curso de Direito Constitucional",
+        channel: "Direito Em Tela",
+      },
     ],
     "Poder Executivo": [
-      { id: "8FWJydeJetQ", title: "Atribuições do Presidente da República", channel: "Prof. Daniel Sena" },
-      { id: "YvPc9kX6MUY", title: "CF/88 — art. 84, XIV a XVIII (atribuições do Presidente)", channel: "Prof. Emerson Bruno" },
-      { id: "Vd5PJCFdw14", title: "Atribuições do Presidente da República — Poder Executivo (CESPE)", channel: "Prof. Alan Vinícius" },
-      { id: "PLhTKk53U8pNmNnQOtzsmnmvJ2a3FV2Jyk", title: "CF/88 — Poder Executivo, arts. 76 a 91 (playlist)", channel: "Prof. Emerson Bruno" },
+      {
+        id: "8FWJydeJetQ",
+        title: "Atribuições do Presidente da República",
+        channel: "Prof. Daniel Sena",
+      },
+      {
+        id: "YvPc9kX6MUY",
+        title: "CF/88 — art. 84, XIV a XVIII (atribuições do Presidente)",
+        channel: "Prof. Emerson Bruno",
+      },
+      {
+        id: "Vd5PJCFdw14",
+        title: "Atribuições do Presidente da República — Poder Executivo (CESPE)",
+        channel: "Prof. Alan Vinícius",
+      },
+      {
+        id: "PLhTKk53U8pNmNnQOtzsmnmvJ2a3FV2Jyk",
+        title: "CF/88 — Poder Executivo, arts. 76 a 91 (playlist)",
+        channel: "Prof. Emerson Bruno",
+      },
     ],
   },
   "Direito Administrativo": {
     "Princípios da Administração Pública": [
-      { id: "YDu8Ftky404", title: "Princípios da Administração Pública — LIMPE", channel: "Mario Tossan | Escola de Concursados" },
-      { id: "MvBQlanmZ14", title: "Princípios expressos da Administração Pública — LIMPE, art. 37 da CF", channel: "Insista // Persista e nunca Desista!" },
-      { id: "9tISEeB0XvU", title: "Princípios expressos da administração pública: LIMPE", channel: "Resumos Para Concursos" },
-      { id: "AeabV1q81Go", title: "Direito Administrativo — princípios e poderes administrativos", channel: "Júlio Cezar Matos" },
-      { id: "PLP5e_SWhZ47Pi159vrEuJrXzlNaiXgmfk", title: "Direito Administrativo para concursos (playlist)", channel: "Resumos Para Concursos" },
+      {
+        id: "YDu8Ftky404",
+        title: "Princípios da Administração Pública — LIMPE",
+        channel: "Mario Tossan | Escola de Concursados",
+      },
+      {
+        id: "MvBQlanmZ14",
+        title: "Princípios expressos da Administração Pública — LIMPE, art. 37 da CF",
+        channel: "Insista // Persista e nunca Desista!",
+      },
+      {
+        id: "9tISEeB0XvU",
+        title: "Princípios expressos da administração pública: LIMPE",
+        channel: "Resumos Para Concursos",
+      },
+      {
+        id: "AeabV1q81Go",
+        title: "Direito Administrativo — princípios e poderes administrativos",
+        channel: "Júlio Cezar Matos",
+      },
+      {
+        id: "PLP5e_SWhZ47Pi159vrEuJrXzlNaiXgmfk",
+        title: "Direito Administrativo para concursos (playlist)",
+        channel: "Resumos Para Concursos",
+      },
     ],
     "Poderes administrativos": [
-      { id: "p3TskaE-9-s", title: "Poderes administrativos (disciplinar, regulamentar e de polícia)", channel: "Mario Tossan | Escola de Concursados" },
-      { id: "dXsV4xUM3lo", title: "Poder hierárquico, disciplinar e regulamentar", channel: "Aprovação PGE" },
-      { id: "rVE06eyU4UA", title: "Poderes administrativos (vinculado, discricionário e hierárquico)", channel: "Mario Tossan | Escola de Concursados" },
-      { id: "bxCbn-WKHJY", title: "Poder de polícia (Direito Administrativo) — aula completa", channel: "Gran Cursos Online" },
-      { id: "mf-rPMLIZYw", title: "Questões sobre poderes da Administração Pública", channel: "Irene Nohara" },
+      {
+        id: "p3TskaE-9-s",
+        title: "Poderes administrativos (disciplinar, regulamentar e de polícia)",
+        channel: "Mario Tossan | Escola de Concursados",
+      },
+      {
+        id: "dXsV4xUM3lo",
+        title: "Poder hierárquico, disciplinar e regulamentar",
+        channel: "Aprovação PGE",
+      },
+      {
+        id: "rVE06eyU4UA",
+        title: "Poderes administrativos (vinculado, discricionário e hierárquico)",
+        channel: "Mario Tossan | Escola de Concursados",
+      },
+      {
+        id: "bxCbn-WKHJY",
+        title: "Poder de polícia (Direito Administrativo) — aula completa",
+        channel: "Gran Cursos Online",
+      },
+      {
+        id: "mf-rPMLIZYw",
+        title: "Questões sobre poderes da Administração Pública",
+        channel: "Irene Nohara",
+      },
     ],
     "Atos administrativos": [
-      { id: "U1939ykaugY", title: "Atributos do ato administrativo", channel: "Mario Tossan | Escola de Concursados" },
-      { id: "L2lXiq54qno", title: "Atos administrativos para concursos (resumo): conceito, espécies e classificação", channel: "Me Julga - Cíntia Brunelli" },
-      { id: "us0LJGOSmtM", title: "Aula dos elementos dos atos administrativos", channel: "TecConcursos" },
-      { id: "arOLSgsaqvQ", title: "Extinção dos atos administrativos", channel: "Professor Dalmo Azevedo" },
-      { id: "8jneBxt853M", title: "Atos administrativos por questões", channel: "Kyrlla Pattyelly | Auditora Fiscal" },
+      {
+        id: "U1939ykaugY",
+        title: "Atributos do ato administrativo",
+        channel: "Mario Tossan | Escola de Concursados",
+      },
+      {
+        id: "L2lXiq54qno",
+        title: "Atos administrativos para concursos (resumo): conceito, espécies e classificação",
+        channel: "Me Julga - Cíntia Brunelli",
+      },
+      {
+        id: "us0LJGOSmtM",
+        title: "Aula dos elementos dos atos administrativos",
+        channel: "TecConcursos",
+      },
+      {
+        id: "arOLSgsaqvQ",
+        title: "Extinção dos atos administrativos",
+        channel: "Professor Dalmo Azevedo",
+      },
+      {
+        id: "8jneBxt853M",
+        title: "Atos administrativos por questões",
+        channel: "Kyrlla Pattyelly | Auditora Fiscal",
+      },
     ],
     "Organização administrativa": [
-      { id: "VAiyp-50pqE", title: "Administração Pública — organização (Direito Administrativo CESPE/CEBRASPE)", channel: "Prof. Alan Vinícius" },
+      {
+        id: "VAiyp-50pqE",
+        title: "Administração Pública — organização (Direito Administrativo CESPE/CEBRASPE)",
+        channel: "Prof. Alan Vinícius",
+      },
     ],
     "Agentes públicos e Lei 8.112/1990": [
-      { id: "_5irvphXdAs", title: "Lei 8.112/1990 — regime jurídico dos servidores da União (aula 01)", channel: "Gustavo Fregapani" },
+      {
+        id: "_5irvphXdAs",
+        title: "Lei 8.112/1990 — regime jurídico dos servidores da União (aula 01)",
+        channel: "Gustavo Fregapani",
+      },
       { id: "j86_LU6GucE", title: "Lei nº 8.112 de 1990", channel: "Concursos para Professores" },
-      { id: "ymz_19yl2fo", title: "Aula de Lei 8.112/90 — regime jurídico dos servidores públicos (AlfaCon)", channel: "AlfaCon" },
-      { id: "mHupt05GFso", title: "Lei 8.112/90 comentada para concursos públicos", channel: "Estratégia Concursos" },
-      { id: "zfRK--GVGC8", title: "Lei do Servidor (8.112/90) — aula 1, parte 1", channel: "Saber Direito" },
+      {
+        id: "ymz_19yl2fo",
+        title: "Aula de Lei 8.112/90 — regime jurídico dos servidores públicos (AlfaCon)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "mHupt05GFso",
+        title: "Lei 8.112/90 comentada para concursos públicos",
+        channel: "Estratégia Concursos",
+      },
+      {
+        id: "zfRK--GVGC8",
+        title: "Lei do Servidor (8.112/90) — aula 1, parte 1",
+        channel: "Saber Direito",
+      },
     ],
     "Licitações e contratos": [
-      { id: "WAB3R1BTZfE", title: "Nova Lei de Licitações e Contratos", channel: "Professor Leandro Campos" },
-      { id: "Czaw9u9MpPY", title: "Aula 01 — licitações (Lei 14.133/21), completa e facilitada", channel: "FAZ QUESTÃO CONCURSOS PÚBLICOS" },
-      { id: "QPbq4DMOFF4", title: "Licitações — Lei 14.133/2021, curso completo, parte 1", channel: "Estratégia Concursos" },
-      { id: "xdCUFCgjpdk", title: "Licitações e contratos — Lei 14.133/2021 em questões CEBRASPE", channel: "Professor Ronaldo Paiva - Fala, Xerife!" },
-      { id: "bOVUl01sO9A", title: "Maratona de questões 14.133/21 — FGV e CEBRASPE", channel: "JUS POLIS" },
+      {
+        id: "WAB3R1BTZfE",
+        title: "Nova Lei de Licitações e Contratos",
+        channel: "Professor Leandro Campos",
+      },
+      {
+        id: "Czaw9u9MpPY",
+        title: "Aula 01 — licitações (Lei 14.133/21), completa e facilitada",
+        channel: "FAZ QUESTÃO CONCURSOS PÚBLICOS",
+      },
+      {
+        id: "QPbq4DMOFF4",
+        title: "Licitações — Lei 14.133/2021, curso completo, parte 1",
+        channel: "Estratégia Concursos",
+      },
+      {
+        id: "xdCUFCgjpdk",
+        title: "Licitações e contratos — Lei 14.133/2021 em questões CEBRASPE",
+        channel: "Professor Ronaldo Paiva - Fala, Xerife!",
+      },
+      {
+        id: "bOVUl01sO9A",
+        title: "Maratona de questões 14.133/21 — FGV e CEBRASPE",
+        channel: "JUS POLIS",
+      },
     ],
     "Responsabilidade civil do Estado": [
-      { id: "uY8fFOwsfv8", title: "Reta final PF — Direito Administrativo: responsabilidade civil (100% CEBRASPE)", channel: "Projeto Caveira" },
-      { id: "QE-q8jGJaE4", title: "PF 2025 — Direito Administrativo: responsabilidade civil do Estado (aula 61)", channel: "Lac Concursos - Principal" },
-      { id: "82C_nkB30V8", title: "Responsabilidade civil do Estado — teoria e questões (Prof. Muniz)", channel: "Vetorial Concursos" },
-      { id: "ihIKrf_KbsE", title: "Aula grátis: responsabilidade civil do Estado", channel: "Estúdio Aulas Concursos" },
-      { id: "fS0LrjO5Wfs", title: "Responsabilidade civil do Estado — Profª Flávia Campos", channel: "Supremo" },
+      {
+        id: "uY8fFOwsfv8",
+        title: "Reta final PF — Direito Administrativo: responsabilidade civil (100% CEBRASPE)",
+        channel: "Projeto Caveira",
+      },
+      {
+        id: "QE-q8jGJaE4",
+        title: "PF 2025 — Direito Administrativo: responsabilidade civil do Estado (aula 61)",
+        channel: "Lac Concursos - Principal",
+      },
+      {
+        id: "82C_nkB30V8",
+        title: "Responsabilidade civil do Estado — teoria e questões (Prof. Muniz)",
+        channel: "Vetorial Concursos",
+      },
+      {
+        id: "ihIKrf_KbsE",
+        title: "Aula grátis: responsabilidade civil do Estado",
+        channel: "Estúdio Aulas Concursos",
+      },
+      {
+        id: "fS0LrjO5Wfs",
+        title: "Responsabilidade civil do Estado — Profª Flávia Campos",
+        channel: "Supremo",
+      },
     ],
     "Processo administrativo (Lei 9.784/1999)": [
-      { id: "GuT5kwkaxQQ", title: "Lei 9.784/1999: processo administrativo federal comentada", channel: "Estratégia Carreira Jurídica" },
-      { id: "MQSFXuT19f8", title: "Introdução à Lei 9.784/99 — processo administrativo na Administração Federal", channel: "Marks EDU" },
-      { id: "1x3MIktpFeg", title: "Lei 9.784/99 — processo administrativo (aula + questões)", channel: "Marks EDU" },
-      { id: "f2AzolaRj2s", title: "Aula de processo administrativo federal — Lei 9.784/99", channel: "Focado no Edital" },
-      { id: "PLXqf3ZuLeWkNxVt3tPiknOQq_OAgdytWZ", title: "Lei 9784/99 — processo administrativo (playlist)", channel: "zero duvidis" },
+      {
+        id: "GuT5kwkaxQQ",
+        title: "Lei 9.784/1999: processo administrativo federal comentada",
+        channel: "Estratégia Carreira Jurídica",
+      },
+      {
+        id: "MQSFXuT19f8",
+        title: "Introdução à Lei 9.784/99 — processo administrativo na Administração Federal",
+        channel: "Marks EDU",
+      },
+      {
+        id: "1x3MIktpFeg",
+        title: "Lei 9.784/99 — processo administrativo (aula + questões)",
+        channel: "Marks EDU",
+      },
+      {
+        id: "f2AzolaRj2s",
+        title: "Aula de processo administrativo federal — Lei 9.784/99",
+        channel: "Focado no Edital",
+      },
+      {
+        id: "PLXqf3ZuLeWkNxVt3tPiknOQq_OAgdytWZ",
+        title: "Lei 9784/99 — processo administrativo (playlist)",
+        channel: "zero duvidis",
+      },
     ],
     "*": [
-      { id: "RmSKkScS_uI", title: "Questões comentadas CEBRASPE — Direito Administrativo, parte 08", channel: "Mundo dos Concursos Públicos" },
-      { id: "FL-Vww9Cwcc", title: "Questões CESPE/CEBRASPE de Direito Administrativo", channel: "Professor Leandro Campos" },
-      { id: "PLO3hBdfBc4pETfgR6E9GeqF04fUZaVL_u", title: "Direito Administrativo completo para concurso (playlist)", channel: "Professor Alê" },
+      {
+        id: "RmSKkScS_uI",
+        title: "Questões comentadas CEBRASPE — Direito Administrativo, parte 08",
+        channel: "Mundo dos Concursos Públicos",
+      },
+      {
+        id: "FL-Vww9Cwcc",
+        title: "Questões CESPE/CEBRASPE de Direito Administrativo",
+        channel: "Professor Leandro Campos",
+      },
+      {
+        id: "PLO3hBdfBc4pETfgR6E9GeqF04fUZaVL_u",
+        title: "Direito Administrativo completo para concurso (playlist)",
+        channel: "Professor Alê",
+      },
     ],
     "Improbidade administrativa (Lei 8.429/1992)": [
-      { id: "EbZWtU4L0Yo", title: "Lei 8.429 de 1992 — improbidade administrativa I — Profª Paula Bidoia", embeddable: false },
-      { id: "QwNcy04oq8I", title: "Improbidade administrativa", channel: "Prof. Guilherme de Luca" },
-      { id: "cTJdXALKpm4", title: "Concurso PCDF Administrativo: entenda de uma vez a Lei 8.429/1992", channel: "Gran Cursos Online" },
-      { id: "VwwNpee93z4", title: "Improbidade administrativa — aula completa e resumida, Lei 8.429/1992", channel: "LEIS BRASILEIRAS EM ÁUDIO" },
-      { id: "T10My2vy_m4", title: "Lei de Improbidade Administrativa (atualizada) — artigos 1º a 8º", channel: "Gustavo Fregapani" },
+      {
+        id: "EbZWtU4L0Yo",
+        title: "Lei 8.429 de 1992 — improbidade administrativa I — Profª Paula Bidoia",
+        embeddable: false,
+      },
+      {
+        id: "QwNcy04oq8I",
+        title: "Improbidade administrativa",
+        channel: "Prof. Guilherme de Luca",
+      },
+      {
+        id: "cTJdXALKpm4",
+        title: "Concurso PCDF Administrativo: entenda de uma vez a Lei 8.429/1992",
+        channel: "Gran Cursos Online",
+      },
+      {
+        id: "VwwNpee93z4",
+        title: "Improbidade administrativa — aula completa e resumida, Lei 8.429/1992",
+        channel: "LEIS BRASILEIRAS EM ÁUDIO",
+      },
+      {
+        id: "T10My2vy_m4",
+        title: "Lei de Improbidade Administrativa (atualizada) — artigos 1º a 8º",
+        channel: "Gustavo Fregapani",
+      },
     ],
   },
   "Direito Penal": {
     "Teoria do crime: fato típico": [
-      { id: "HYFqCkWUTNs", title: "Teoria do crime: fato típico e teorias da conduta", channel: "Simplificando Direito Penal - Professor Rafael" },
+      {
+        id: "HYFqCkWUTNs",
+        title: "Teoria do crime: fato típico e teorias da conduta",
+        channel: "Simplificando Direito Penal - Professor Rafael",
+      },
       { id: "-sjyltxfQwg", title: "Fato típico — aula 6.12", channel: "Fábio Roque Araújo" },
-      { id: "te-hFN7_2h8", title: "Fato típico e seus elementos + teorias da conduta", channel: "Ana Carolina Aidar" },
-      { id: "syYLK6QlkgU", title: "Aula de dolo, culpa e preterdolo (Direito Penal)", channel: "TecConcursos" },
-      { id: "VvGblRJCMA0", title: "Teoria do crime — aula esquematizada + resumão e questões", channel: "Prof. Diego Pureza" },
-      { id: "e43PMgUA5es", title: "Teoria do crime explicada de forma simples e clara", channel: "Monster Concursos" },
+      {
+        id: "te-hFN7_2h8",
+        title: "Fato típico e seus elementos + teorias da conduta",
+        channel: "Ana Carolina Aidar",
+      },
+      {
+        id: "syYLK6QlkgU",
+        title: "Aula de dolo, culpa e preterdolo (Direito Penal)",
+        channel: "TecConcursos",
+      },
+      {
+        id: "VvGblRJCMA0",
+        title: "Teoria do crime — aula esquematizada + resumão e questões",
+        channel: "Prof. Diego Pureza",
+      },
+      {
+        id: "e43PMgUA5es",
+        title: "Teoria do crime explicada de forma simples e clara",
+        channel: "Monster Concursos",
+      },
     ],
     "Ilicitude e excludentes": [
-      { id: "wj-x2IcjcJI", title: "Estado de necessidade e legítima defesa: quais as diferenças?", channel: "Ana Carolina Aidar" },
-      { id: "8XGvBalJbDI", title: "Aula 15: excludentes de ilicitude — legítima defesa", channel: "Leonardo Agostini Advogado" },
-      { id: "1_rrBWwq60w", title: "Estado de necessidade — Direito Penal", channel: "Ana Carolina Aidar" },
-      { id: "HRCeV4BqW1E", title: "Legítima defesa — Direito Penal", channel: "Ana Carolina Aidar" },
-      { id: "BkQZOLoQUG8", title: "Estrito cumprimento de dever legal e exercício regular de direito", channel: "Ana Carolina Aidar" },
+      {
+        id: "wj-x2IcjcJI",
+        title: "Estado de necessidade e legítima defesa: quais as diferenças?",
+        channel: "Ana Carolina Aidar",
+      },
+      {
+        id: "8XGvBalJbDI",
+        title: "Aula 15: excludentes de ilicitude — legítima defesa",
+        channel: "Leonardo Agostini Advogado",
+      },
+      {
+        id: "1_rrBWwq60w",
+        title: "Estado de necessidade — Direito Penal",
+        channel: "Ana Carolina Aidar",
+      },
+      {
+        id: "HRCeV4BqW1E",
+        title: "Legítima defesa — Direito Penal",
+        channel: "Ana Carolina Aidar",
+      },
+      {
+        id: "BkQZOLoQUG8",
+        title: "Estrito cumprimento de dever legal e exercício regular de direito",
+        channel: "Ana Carolina Aidar",
+      },
     ],
-    "Culpabilidade": [
-      { id: "uHQP8bS_8mc", title: "20 questões de culpabilidade — Direito Penal, arts. 26 e 28", channel: "Questões de Concurso Grátis" },
+    Culpabilidade: [
+      {
+        id: "uHQP8bS_8mc",
+        title: "20 questões de culpabilidade — Direito Penal, arts. 26 e 28",
+        channel: "Questões de Concurso Grátis",
+      },
     ],
     "Concurso de crimes e penas": [
-      { id: "Gyw0bqgfnm4", title: "Concurso de crimes — concurso material e concurso formal", channel: "Tulio Vianna TV" },
+      {
+        id: "Gyw0bqgfnm4",
+        title: "Concurso de crimes — concurso material e concurso formal",
+        channel: "Tulio Vianna TV",
+      },
     ],
     "Extinção da punibilidade": [
       { id: "Tlqrjz-CL2M", title: "Extinção da punibilidade — introdução", channel: "Trilhante" },
-      { id: "n7BUu48lvBA", title: "Aula das causas de extinção da punibilidade, parte 1", channel: "TecConcursos" },
-      { id: "0LFqJccjSdc", title: "Direito Penal — prescrição da pretensão punitiva", channel: "Paulo Henrique Helene" },
-      { id: "ASFuLkVAMB4", title: "Direito Penal — extinção da punibilidade", channel: "Paulo Henrique Helene" },
+      {
+        id: "n7BUu48lvBA",
+        title: "Aula das causas de extinção da punibilidade, parte 1",
+        channel: "TecConcursos",
+      },
+      {
+        id: "0LFqJccjSdc",
+        title: "Direito Penal — prescrição da pretensão punitiva",
+        channel: "Paulo Henrique Helene",
+      },
+      {
+        id: "ASFuLkVAMB4",
+        title: "Direito Penal — extinção da punibilidade",
+        channel: "Paulo Henrique Helene",
+      },
       { id: "Qf1xl3iWAPo", title: "Prescrição", channel: "Ana Carolina Aidar" },
     ],
     "Crimes contra a pessoa": [
       { id: "9TU6FgJ4C2o", title: "Homicídio — Direito Penal", channel: "Ana Carolina Aidar" },
-      { id: "sAi4bG4PnFI", title: "Crimes contra a pessoa — homicídio simples", channel: "Trilhante" },
-      { id: "r-k66sCTcfA", title: "Homicídio (art. 121, Código Penal): crimes contra a vida", channel: "Simplificando Direito Penal - Professor Rafael" },
-      { id: "2XfcAmOK6rY", title: "Homicídio (art. 121 do CP) — atualizado 2026", channel: "Prof. Diego Pureza" },
-      { id: "aMB5zJ4jieY", title: "Lesão corporal (art. 129 do CP) — atualizado 2026", channel: "Prof. Diego Pureza" },
+      {
+        id: "sAi4bG4PnFI",
+        title: "Crimes contra a pessoa — homicídio simples",
+        channel: "Trilhante",
+      },
+      {
+        id: "r-k66sCTcfA",
+        title: "Homicídio (art. 121, Código Penal): crimes contra a vida",
+        channel: "Simplificando Direito Penal - Professor Rafael",
+      },
+      {
+        id: "2XfcAmOK6rY",
+        title: "Homicídio (art. 121 do CP) — atualizado 2026",
+        channel: "Prof. Diego Pureza",
+      },
+      {
+        id: "aMB5zJ4jieY",
+        title: "Lesão corporal (art. 129 do CP) — atualizado 2026",
+        channel: "Prof. Diego Pureza",
+      },
       { id: "6SM0iySg4T0", title: "Lesão corporal — aula 5.3", channel: "Fábio Roque Araújo" },
     ],
     "Crimes contra o patrimônio": [
-      { id: "qsX9WNGNCks", title: "Direito Penal — diferença entre furto, roubo e extorsão", channel: "Monster Concursos" },
-      { id: "ZWbLWf2Z2qA", title: "Furto simples: aula completa e atualizada", channel: "Simplificando Direito Penal - Professor Rafael" },
-      { id: "lsnhypGfGto", title: "Furto mediante fraude × estelionato", channel: "Juliana Menezes" },
-      { id: "mtulpZaDVWY", title: "Roubo (art. 157) — Concurso Polícia Civil", channel: "Prof. Diego Pureza" },
-      { id: "aoYdYpSIG40", title: "Furto, art. 155 do CP (Direito Penal para a Polícia Civil)", channel: "Prof. Diego Pureza" },
+      {
+        id: "qsX9WNGNCks",
+        title: "Direito Penal — diferença entre furto, roubo e extorsão",
+        channel: "Monster Concursos",
+      },
+      {
+        id: "ZWbLWf2Z2qA",
+        title: "Furto simples: aula completa e atualizada",
+        channel: "Simplificando Direito Penal - Professor Rafael",
+      },
+      {
+        id: "lsnhypGfGto",
+        title: "Furto mediante fraude × estelionato",
+        channel: "Juliana Menezes",
+      },
+      {
+        id: "mtulpZaDVWY",
+        title: "Roubo (art. 157) — Concurso Polícia Civil",
+        channel: "Prof. Diego Pureza",
+      },
+      {
+        id: "aoYdYpSIG40",
+        title: "Furto, art. 155 do CP (Direito Penal para a Polícia Civil)",
+        channel: "Prof. Diego Pureza",
+      },
       { id: "NeSfAqMkZAs", title: "Furto, art. 155, caput e §§ 1º a 3º", channel: "Acaz Priviat" },
     ],
     "Crimes contra a administração pública": [
-      { id: "3vi8HQcXVVU", title: "Crimes contra a Administração Pública — resumo", channel: "Prof. Rossi" },
-      { id: "_OrwDXoKfQg", title: "Direito Penal para PRF — crimes contra a Administração (Rodrigo Gomes)", channel: "AlfaCon" },
-      { id: "lx0eDD8ADq0", title: "Concurso PRF: crimes contra a Administração Pública", channel: "AlfaCon" },
-      { id: "wh9BeztUOdk", title: "Peculato (art. 312, Código Penal)", channel: "Simplificando Direito Penal - Professor Rafael" },
-      { id: "C5_D3qpVOwQ", title: "Peculato, concussão ou corrupção passiva? Questão VUNESP 2019", channel: "NEAF Concursos" },
-      { id: "MUIBJ68W6RE", title: "Aula gratuita ao vivo: crimes contra a Administração Pública (Evandro Guedes)", channel: "AlfaCon" },
+      {
+        id: "3vi8HQcXVVU",
+        title: "Crimes contra a Administração Pública — resumo",
+        channel: "Prof. Rossi",
+      },
+      {
+        id: "_OrwDXoKfQg",
+        title: "Direito Penal para PRF — crimes contra a Administração (Rodrigo Gomes)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "lx0eDD8ADq0",
+        title: "Concurso PRF: crimes contra a Administração Pública",
+        channel: "AlfaCon",
+      },
+      {
+        id: "wh9BeztUOdk",
+        title: "Peculato (art. 312, Código Penal)",
+        channel: "Simplificando Direito Penal - Professor Rafael",
+      },
+      {
+        id: "C5_D3qpVOwQ",
+        title: "Peculato, concussão ou corrupção passiva? Questão VUNESP 2019",
+        channel: "NEAF Concursos",
+      },
+      {
+        id: "MUIBJ68W6RE",
+        title: "Aula gratuita ao vivo: crimes contra a Administração Pública (Evandro Guedes)",
+        channel: "AlfaCon",
+      },
     ],
     "Princípios e aplicação da lei penal": [
       { id: "kvcrkhwY8WE", title: "A lei penal no tempo e no espaço", channel: "MGLCONCURSOS" },
-      { id: "lbZi4XULATI", title: "Lei penal no tempo — aula completa", channel: "Simplificando Direito Penal - Professor Rafael" },
-      { id: "hJOE3MXTdcI", title: "Aplicação da lei penal (tempo e espaço) — resumo fácil", channel: "Me Julga - Cíntia Brunelli" },
+      {
+        id: "lbZi4XULATI",
+        title: "Lei penal no tempo — aula completa",
+        channel: "Simplificando Direito Penal - Professor Rafael",
+      },
+      {
+        id: "hJOE3MXTdcI",
+        title: "Aplicação da lei penal (tempo e espaço) — resumo fácil",
+        channel: "Me Julga - Cíntia Brunelli",
+      },
       { id: "dzMlHeJHf5U", title: "Aplicação da lei penal no espaço — aula 03", embeddable: false },
-      { id: "W-h8fJcY-kk", title: "Princípios e aplicação da lei penal", channel: "Estúdio Aulas Concursos" },
-      { id: "UaVCArd3Gtg", title: "Direito Penal do zero: aplicação da lei penal, parte 01", channel: "Monster Concursos" },
+      {
+        id: "W-h8fJcY-kk",
+        title: "Princípios e aplicação da lei penal",
+        channel: "Estúdio Aulas Concursos",
+      },
+      {
+        id: "UaVCArd3Gtg",
+        title: "Direito Penal do zero: aplicação da lei penal, parte 01",
+        channel: "Monster Concursos",
+      },
     ],
     "*": [
-      { id: "PLnxEEWSVFtNJ6E54d8tGB4dMgBC9d5P4f", title: "Parte Geral do Direito Penal — assuntos mais cobrados", channel: "Simplificando Direito Penal - Professor Rafael" },
-      { id: "PLZvSkVqe_ub5Sm8XowmRRYhSCBW3tQZGT", title: "Facilitando o Direito Penal para a Polícia Civil", channel: "Prof. Diego Pureza" },
+      {
+        id: "PLnxEEWSVFtNJ6E54d8tGB4dMgBC9d5P4f",
+        title: "Parte Geral do Direito Penal — assuntos mais cobrados",
+        channel: "Simplificando Direito Penal - Professor Rafael",
+      },
+      {
+        id: "PLZvSkVqe_ub5Sm8XowmRRYhSCBW3tQZGT",
+        title: "Facilitando o Direito Penal para a Polícia Civil",
+        channel: "Prof. Diego Pureza",
+      },
     ],
   },
   "Direito Processual Penal": {
     "Inquérito policial": [
-      { id: "MFBv7pOB3hA", title: "Aula completa de inquérito policial para concursos (atualizada)", channel: "Professor Rafael Lisbôa - Concursos e OAB" },
+      {
+        id: "MFBv7pOB3hA",
+        title: "Aula completa de inquérito policial para concursos (atualizada)",
+        channel: "Professor Rafael Lisbôa - Concursos e OAB",
+      },
       { id: "LKC-WndRbEU", title: "Inquérito policial esquematizado", channel: "Focus Concursos" },
-      { id: "rYX87AGaXC8", title: "Carreira policial: tudo sobre inquérito policial em 3h (Érico Palazzo)", channel: "Gran Cursos Online" },
-      { id: "owolD7q-M8Y", title: "Resolução de questões — inquérito policial, PMAL e PCAL, banca CESPE", channel: "Professor Hugo Dias - HD CURSOS" },
-      { id: "5oTyB333y_I", title: "Concurso Polícia Federal: Direito Processual Penal", channel: "Cursos do Portal" },
-      { id: "fG1QW-CDdVQ", title: "Inquérito policial — histórico, conceito, características e instauração", channel: "Aprova Concursos" },
+      {
+        id: "rYX87AGaXC8",
+        title: "Carreira policial: tudo sobre inquérito policial em 3h (Érico Palazzo)",
+        channel: "Gran Cursos Online",
+      },
+      {
+        id: "owolD7q-M8Y",
+        title: "Resolução de questões — inquérito policial, PMAL e PCAL, banca CESPE",
+        channel: "Professor Hugo Dias - HD CURSOS",
+      },
+      {
+        id: "5oTyB333y_I",
+        title: "Concurso Polícia Federal: Direito Processual Penal",
+        channel: "Cursos do Portal",
+      },
+      {
+        id: "fG1QW-CDdVQ",
+        title: "Inquérito policial — histórico, conceito, características e instauração",
+        channel: "Aprova Concursos",
+      },
     ],
     "Ação penal": [
-      { id: "oNycs1XLJzU", title: "Direito Processual Penal — começando do zero (AlfaCon)", channel: "AlfaCon" },
-      { id: "ftGw2uVK8HI", title: "Ação penal — aula esquematizada + resumão e questões", channel: "Prof. Diego Pureza" },
+      {
+        id: "oNycs1XLJzU",
+        title: "Direito Processual Penal — começando do zero (AlfaCon)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "ftGw2uVK8HI",
+        title: "Ação penal — aula esquematizada + resumão e questões",
+        channel: "Prof. Diego Pureza",
+      },
       { id: "YXmHNrFlOPg", title: "Ação penal esquematizada", channel: "Prof. Diego Pureza" },
       { id: "N-8JLh9eHMk", title: "Ação penal privada — espécies", channel: "Ana Carolina Aidar" },
-      { id: "A_y2VWPey9E", title: "Ação penal pública condicionada", channel: "Ana Carolina Aidar" },
+      {
+        id: "A_y2VWPey9E",
+        title: "Ação penal pública condicionada",
+        channel: "Ana Carolina Aidar",
+      },
     ],
-    "Provas": [
-      { id: "Kqx5vYQ3OMY", title: "Cadeia de custódia da prova: o que é?", channel: "Ana Carolina Aidar" },
-      { id: "9d7nhKveJf0", title: "Cadeia de custódia — questões comentadas (Pacote Anticrime)", channel: "LEVANTA E VAI ROBERTO FERNANDES" },
+    Provas: [
+      {
+        id: "Kqx5vYQ3OMY",
+        title: "Cadeia de custódia da prova: o que é?",
+        channel: "Ana Carolina Aidar",
+      },
+      {
+        id: "9d7nhKveJf0",
+        title: "Cadeia de custódia — questões comentadas (Pacote Anticrime)",
+        channel: "LEVANTA E VAI ROBERTO FERNANDES",
+      },
       { id: "d1Dp8wo3S14", title: "Provas — aula 7.1", channel: "Fábio Roque Araújo" },
       { id: "zSrr_sllIhM", title: "Teoria geral da prova", channel: "Ana Carolina Aidar" },
-      { id: "bRudcscQMLw", title: "Cadeia de custódia da prova criminal", channel: "Marlon Ricardo - Criminalistas de Sucesso" },
+      {
+        id: "bRudcscQMLw",
+        title: "Cadeia de custódia da prova criminal",
+        channel: "Marlon Ricardo - Criminalistas de Sucesso",
+      },
     ],
     "Prisões e medidas cautelares": [
-      { id: "uCd49pdduLY", title: "Prisão temporária — Processo Penal", channel: "Ana Carolina Aidar" },
-      { id: "yIV6LUHHM8o", title: "Flagrante, preventiva e temporária (sem confundir)", channel: "Qconcursos" },
-      { id: "QdFm9qzsUgk", title: "Prisão preventiva — Processo Penal", channel: "Ana Carolina Aidar" },
-      { id: "SzreBgHZryc", title: "Prisões em flagrante — aula esquematizada + resumão e questões", channel: "Prof. Diego Pureza" },
-      { id: "K2Q8dEsJ9vU", title: "Diferenças entre prisão em flagrante, temporária e preventiva", channel: "Bebendo Direito" },
-      { id: "4HHAZu3CP1Q", title: "Prisão em flagrante — Processo Penal", channel: "Ana Carolina Aidar" },
-      { id: "DyHElCvFgGM", title: "Prisão em flagrante: resumo completo", channel: "Direito Desenhado" },
+      {
+        id: "uCd49pdduLY",
+        title: "Prisão temporária — Processo Penal",
+        channel: "Ana Carolina Aidar",
+      },
+      {
+        id: "yIV6LUHHM8o",
+        title: "Flagrante, preventiva e temporária (sem confundir)",
+        channel: "Qconcursos",
+      },
+      {
+        id: "QdFm9qzsUgk",
+        title: "Prisão preventiva — Processo Penal",
+        channel: "Ana Carolina Aidar",
+      },
+      {
+        id: "SzreBgHZryc",
+        title: "Prisões em flagrante — aula esquematizada + resumão e questões",
+        channel: "Prof. Diego Pureza",
+      },
+      {
+        id: "K2Q8dEsJ9vU",
+        title: "Diferenças entre prisão em flagrante, temporária e preventiva",
+        channel: "Bebendo Direito",
+      },
+      {
+        id: "4HHAZu3CP1Q",
+        title: "Prisão em flagrante — Processo Penal",
+        channel: "Ana Carolina Aidar",
+      },
+      {
+        id: "DyHElCvFgGM",
+        title: "Prisão em flagrante: resumo completo",
+        channel: "Direito Desenhado",
+      },
     ],
-    "Competência": [
-      { id: "P5DPWrzrh0c", title: "Jurisdição — conexão e continência no Processo Penal", channel: "Fala Tribunos com Henrique Perez" },
-      { id: "nddPTjTg3wA", title: "Competência no Processo Penal — Prof. Fernando Capez", channel: "Fernando Capez" },
-      { id: "Z92UbkfOPC4", title: "Conexão e continência no Processo Penal (dicas)", channel: "João Lucas Souto Gil Messias" },
-      { id: "Ud8E6POk8IM", title: "Revisão da competência no Processo Penal em questões", channel: "Robson Concursos" },
+    Competência: [
+      {
+        id: "P5DPWrzrh0c",
+        title: "Jurisdição — conexão e continência no Processo Penal",
+        channel: "Fala Tribunos com Henrique Perez",
+      },
+      {
+        id: "nddPTjTg3wA",
+        title: "Competência no Processo Penal — Prof. Fernando Capez",
+        channel: "Fernando Capez",
+      },
+      {
+        id: "Z92UbkfOPC4",
+        title: "Conexão e continência no Processo Penal (dicas)",
+        channel: "João Lucas Souto Gil Messias",
+      },
+      {
+        id: "Ud8E6POk8IM",
+        title: "Revisão da competência no Processo Penal em questões",
+        channel: "Robson Concursos",
+      },
       { id: "v-S0_udCMpI", title: "Jurisdição e competência", channel: "Supremo" },
     ],
-    "Nulidades": [
-      { id: "ML0tRuB2MhU", title: "Nulidades no Processo Penal — tipos de nulidades", channel: "Trilhante" },
-      { id: "Jo8yEXPUyYg", title: "Nulidades no Processo Penal — nulidades em espécie I", channel: "Trilhante" },
+    Nulidades: [
+      {
+        id: "ML0tRuB2MhU",
+        title: "Nulidades no Processo Penal — tipos de nulidades",
+        channel: "Trilhante",
+      },
+      {
+        id: "Jo8yEXPUyYg",
+        title: "Nulidades no Processo Penal — nulidades em espécie I",
+        channel: "Trilhante",
+      },
     ],
     "*": [
-      { id: "IikAfrpdZZM", title: "Processo Penal do zero para a Polícia Civil", channel: "Prof. Diego Pureza" },
+      {
+        id: "IikAfrpdZZM",
+        title: "Processo Penal do zero para a Polícia Civil",
+        channel: "Prof. Diego Pureza",
+      },
       { id: "dQYgnz13csQ", title: "Concurso PC SP: aula de Processo Penal", channel: "Qconcursos" },
-      { id: "PLlcBAGSoN8MrP3cE3jz_fCOy4zhvTxnzV", title: "Curso de Direito Processual Penal", channel: "Fábio Roque Araújo" },
+      {
+        id: "PLlcBAGSoN8MrP3cE3jz_fCOy4zhvTxnzV",
+        title: "Curso de Direito Processual Penal",
+        channel: "Fábio Roque Araújo",
+      },
     ],
   },
   "Legislação Especial e Direitos Humanos": {
     "Lei de Drogas (Lei 11.343/2006)": [
-      { id: "5UmGFhLgw0k", title: "Lei esquematizada — Lei de Drogas (Lei nº 11.343/2006)", channel: "Focus Concursos" },
-      { id: "i5lcZyzzP_k", title: "Aula gratuita: Lei de Drogas — Legislação Penal Especial", channel: "Dedicação Delta" },
-      { id: "oXt3X78i6Tg", title: "Lei de Drogas (Lei 11.343/06) — aula completa", channel: "MGLCONCURSOS" },
-      { id: "24sPFk3R4-Y", title: "Lei de Drogas — videoaula, Lei 11.343/06 explicada", channel: "Professora Camila Miranda" },
-      { id: "fWYcTbOzzo4", title: "Lei de Drogas para concursos da área policial", channel: "Estratégia Concursos" },
-      { id: "kbCUAo_dlQI", title: "10 dicas sobre a Lei de Drogas", channel: "Rodrigo Alvarez - Desenhando Direito" },
-      { id: "_3_17L4drfo", title: "30 questões da Lei de Drogas", channel: "QC Aprova Concursos Públicos" },
+      {
+        id: "5UmGFhLgw0k",
+        title: "Lei esquematizada — Lei de Drogas (Lei nº 11.343/2006)",
+        channel: "Focus Concursos",
+      },
+      {
+        id: "i5lcZyzzP_k",
+        title: "Aula gratuita: Lei de Drogas — Legislação Penal Especial",
+        channel: "Dedicação Delta",
+      },
+      {
+        id: "oXt3X78i6Tg",
+        title: "Lei de Drogas (Lei 11.343/06) — aula completa",
+        channel: "MGLCONCURSOS",
+      },
+      {
+        id: "24sPFk3R4-Y",
+        title: "Lei de Drogas — videoaula, Lei 11.343/06 explicada",
+        channel: "Professora Camila Miranda",
+      },
+      {
+        id: "fWYcTbOzzo4",
+        title: "Lei de Drogas para concursos da área policial",
+        channel: "Estratégia Concursos",
+      },
+      {
+        id: "kbCUAo_dlQI",
+        title: "10 dicas sobre a Lei de Drogas",
+        channel: "Rodrigo Alvarez - Desenhando Direito",
+      },
+      {
+        id: "_3_17L4drfo",
+        title: "30 questões da Lei de Drogas",
+        channel: "QC Aprova Concursos Públicos",
+      },
     ],
     "Abuso de autoridade (Lei 13.869/2019)": [
-      { id: "AzVpuQfcjPw", title: "Aula gratuita: Lei de Abuso de Autoridade (Lei nº 13.869/19)", channel: "Dedicação Delta" },
-      { id: "rtxcS849Dlk", title: "Nova Lei de Abuso de Autoridade — Lei 13.869/19 — Concurso PF", channel: "Monster Concursos" },
-      { id: "WbaUF7wwwBA", title: "Lei nº 13.869/2019 — Lei do Abuso de Autoridade (1)", channel: "Gustavo Fregapani" },
-      { id: "qNM3oEpmkYg", title: "Aulão PCDF: nova Lei de Abuso de Autoridade (13.869/2019)", channel: "Gran Cursos Online" },
-      { id: "8g1qujVd6XU", title: "Lei de Abuso de Autoridade (Lei nº 13.869/19) — Profª Priscilla Fernandes", channel: "Focus Concursos" },
-      { id: "f7i3y66QkRY", title: "Introdução — crimes de abuso da autoridade (Lei 13869/2019)", channel: "Aprova Concursos" },
+      {
+        id: "AzVpuQfcjPw",
+        title: "Aula gratuita: Lei de Abuso de Autoridade (Lei nº 13.869/19)",
+        channel: "Dedicação Delta",
+      },
+      {
+        id: "rtxcS849Dlk",
+        title: "Nova Lei de Abuso de Autoridade — Lei 13.869/19 — Concurso PF",
+        channel: "Monster Concursos",
+      },
+      {
+        id: "WbaUF7wwwBA",
+        title: "Lei nº 13.869/2019 — Lei do Abuso de Autoridade (1)",
+        channel: "Gustavo Fregapani",
+      },
+      {
+        id: "qNM3oEpmkYg",
+        title: "Aulão PCDF: nova Lei de Abuso de Autoridade (13.869/2019)",
+        channel: "Gran Cursos Online",
+      },
+      {
+        id: "8g1qujVd6XU",
+        title: "Lei de Abuso de Autoridade (Lei nº 13.869/19) — Profª Priscilla Fernandes",
+        channel: "Focus Concursos",
+      },
+      {
+        id: "f7i3y66QkRY",
+        title: "Introdução — crimes de abuso da autoridade (Lei 13869/2019)",
+        channel: "Aprova Concursos",
+      },
     ],
     "Organizações criminosas (Lei 12.850/2013)": [
-      { id: "f56-z3pyVFc", title: "Lei 12850/2013 — organizações criminosas, parte 1", channel: "Aprova Concursos" },
-      { id: "buqlGgZa668", title: "Lei de Organização Criminosa — Lei 12.850 de 2013, parte 1", channel: "FAB | Prof. Ayres Barros" },
-      { id: "0IxV4YnEmO4", title: "Lei nº 12.850/2013 (Lei de Combate às Organizações Criminosas)", channel: "Estratégia Carreira Jurídica" },
-      { id: "ZD7aeETD0r0", title: "Colaboração premiada: entenda como funciona", channel: "Canal MPF" },
-      { id: "L-rLq4aMWws", title: "Lei das organizações criminosas — Lei 12.850/2013, atualizado 2026", channel: "LEIS BRASILEIRAS EM ÁUDIO" },
+      {
+        id: "f56-z3pyVFc",
+        title: "Lei 12850/2013 — organizações criminosas, parte 1",
+        channel: "Aprova Concursos",
+      },
+      {
+        id: "buqlGgZa668",
+        title: "Lei de Organização Criminosa — Lei 12.850 de 2013, parte 1",
+        channel: "FAB | Prof. Ayres Barros",
+      },
+      {
+        id: "0IxV4YnEmO4",
+        title: "Lei nº 12.850/2013 (Lei de Combate às Organizações Criminosas)",
+        channel: "Estratégia Carreira Jurídica",
+      },
+      {
+        id: "ZD7aeETD0r0",
+        title: "Colaboração premiada: entenda como funciona",
+        channel: "Canal MPF",
+      },
+      {
+        id: "L-rLq4aMWws",
+        title: "Lei das organizações criminosas — Lei 12.850/2013, atualizado 2026",
+        channel: "LEIS BRASILEIRAS EM ÁUDIO",
+      },
     ],
     "Estatuto da Criança e do Adolescente": [
       { id: "GIn7MrZ3dhM", title: "Parte criminal do ECA — ato infracional", channel: "Trilhante" },
-      { id: "dSLYCs3CwU4", title: "ECA comentado e atualizado para concursos (artigo por artigo)", channel: "Prof. Marcos Barboza" },
-      { id: "hmmKE3V-ChQ", title: "ECA — da prática do ato infracional (arts. 103 a 128)", channel: "NordestHi Concursos" },
-      { id: "Tb5dck0rxnE", title: "Os 9 artigos do ECA mais cobrados em concursos", channel: "Claro que Vou Passar" },
-      { id: "PLoNeJXKIPb0PGloDUKOh8B39GUKfNMtmi", title: "Estatuto da Criança e do Adolescente — ECA para concursos (playlist)", channel: "Professor Online" },
+      {
+        id: "dSLYCs3CwU4",
+        title: "ECA comentado e atualizado para concursos (artigo por artigo)",
+        channel: "Prof. Marcos Barboza",
+      },
+      {
+        id: "hmmKE3V-ChQ",
+        title: "ECA — da prática do ato infracional (arts. 103 a 128)",
+        channel: "NordestHi Concursos",
+      },
+      {
+        id: "Tb5dck0rxnE",
+        title: "Os 9 artigos do ECA mais cobrados em concursos",
+        channel: "Claro que Vou Passar",
+      },
+      {
+        id: "PLoNeJXKIPb0PGloDUKOh8B39GUKfNMtmi",
+        title: "Estatuto da Criança e do Adolescente — ECA para concursos (playlist)",
+        channel: "Professor Online",
+      },
     ],
     "Lei de Migração (Lei 13.445/2017)": [
-      { id: "gxRwjeEtASo", title: "Lei de Migração (13.445/2017) — resumo + questões comentadas", channel: "Canal Conta que eu te Conto!" },
-      { id: "oD56bjXzviI", title: "Lei nº 13.445/2017 comentada (Lei de Migração)", channel: "Estratégia Carreira Jurídica" },
-      { id: "kmNCNUyApJ0", title: "Concurso PF 2024 — aula de Lei 13.445/17, Legislação Especial (AlfaCon)", channel: "AlfaCon" },
-      { id: "V1TGAJ_N2dk", title: "Política Nacional de Migrações (Lei nº 13.445/2017)", channel: "Fernando Bueno" },
-      { id: "PLULuDtQP4S_t-zhaIzLmJfPa_SW-kaP6q", title: "Lei 13445 — Lei de Migração (playlist)", channel: "Sandro Gonçalves" },
+      {
+        id: "gxRwjeEtASo",
+        title: "Lei de Migração (13.445/2017) — resumo + questões comentadas",
+        channel: "Canal Conta que eu te Conto!",
+      },
+      {
+        id: "oD56bjXzviI",
+        title: "Lei nº 13.445/2017 comentada (Lei de Migração)",
+        channel: "Estratégia Carreira Jurídica",
+      },
+      {
+        id: "kmNCNUyApJ0",
+        title: "Concurso PF 2024 — aula de Lei 13.445/17, Legislação Especial (AlfaCon)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "V1TGAJ_N2dk",
+        title: "Política Nacional de Migrações (Lei nº 13.445/2017)",
+        channel: "Fernando Bueno",
+      },
+      {
+        id: "PLULuDtQP4S_t-zhaIzLmJfPa_SW-kaP6q",
+        title: "Lei 13445 — Lei de Migração (playlist)",
+        channel: "Sandro Gonçalves",
+      },
     ],
     "Teoria geral dos direitos humanos": [
-      { id: "WwAU0olBdu0", title: "Treinando Direitos Humanos na Constituição Federal — FGV, FCC e Cebraspe", channel: "Profe Alê Lopes I Repertório e Humanidades" },
-      { id: "1ovIYQFM5-Q", title: "100 questões CEBRASPE (12/30) — Direitos Humanos", channel: "Loja do Concurseiro" },
-      { id: "RlQaEe1EaXY", title: "Correção CEBRASPE (Direitos Humanos e Polícia)", channel: "Aristócrates - Brabo Da Redação" },
-      { id: "Diy2dxBiUt0", title: "20 questões — Direitos Humanos — banca CESPE/CEBRASPE", channel: "QC Aprova Concursos Públicos" },
+      {
+        id: "WwAU0olBdu0",
+        title: "Treinando Direitos Humanos na Constituição Federal — FGV, FCC e Cebraspe",
+        channel: "Profe Alê Lopes I Repertório e Humanidades",
+      },
+      {
+        id: "1ovIYQFM5-Q",
+        title: "100 questões CEBRASPE (12/30) — Direitos Humanos",
+        channel: "Loja do Concurseiro",
+      },
+      {
+        id: "RlQaEe1EaXY",
+        title: "Correção CEBRASPE (Direitos Humanos e Polícia)",
+        channel: "Aristócrates - Brabo Da Redação",
+      },
+      {
+        id: "Diy2dxBiUt0",
+        title: "20 questões — Direitos Humanos — banca CESPE/CEBRASPE",
+        channel: "QC Aprova Concursos Públicos",
+      },
     ],
     "Estatuto do Desarmamento (Lei 10.826/2003)": [
-      { id: "3sNFD5RR-UA", title: "Estatuto do Desarmamento para iniciantes — questões comentadas (aula 3/3)", channel: "Instante Jurídico" },
-      { id: "6WqqpOA5qKs", title: "Aula gratuita: Estatuto do Desarmamento (Lei nº 10.826/03) — Legislação Penal Especial", channel: "Dedicação Delta" },
-      { id: "9cvUsxrZrBw", title: "Estatuto do Desarmamento (Lei 10.826/2003)", channel: "Instituto Rodolfo Souza" },
-      { id: "hx4edhZh_Oo", title: "Lei esquematizada — Estatuto do Desarmamento (Lei nº 10.826/2003)", channel: "Focus Concursos" },
-      { id: "5kBn_cZEziY", title: "Concurso PF Administrativo: Lei 10.826/2003, Estatuto do Desarmamento", channel: "LexPlay" },
-      { id: "mXMn167FFfs", title: "Lei 10.826 de 2003 — Estatuto do Desarmamento", embeddable: false },
+      {
+        id: "3sNFD5RR-UA",
+        title: "Estatuto do Desarmamento para iniciantes — questões comentadas (aula 3/3)",
+        channel: "Instante Jurídico",
+      },
+      {
+        id: "6WqqpOA5qKs",
+        title:
+          "Aula gratuita: Estatuto do Desarmamento (Lei nº 10.826/03) — Legislação Penal Especial",
+        channel: "Dedicação Delta",
+      },
+      {
+        id: "9cvUsxrZrBw",
+        title: "Estatuto do Desarmamento (Lei 10.826/2003)",
+        channel: "Instituto Rodolfo Souza",
+      },
+      {
+        id: "hx4edhZh_Oo",
+        title: "Lei esquematizada — Estatuto do Desarmamento (Lei nº 10.826/2003)",
+        channel: "Focus Concursos",
+      },
+      {
+        id: "5kBn_cZEziY",
+        title: "Concurso PF Administrativo: Lei 10.826/2003, Estatuto do Desarmamento",
+        channel: "LexPlay",
+      },
+      {
+        id: "mXMn167FFfs",
+        title: "Lei 10.826 de 2003 — Estatuto do Desarmamento",
+        embeddable: false,
+      },
     ],
     "Crimes hediondos (Lei 8.072/1990)": [
-      { id: "RpxK8-MB9_w", title: "Lei dos Crimes Hediondos (Lei 8.072/90) — live #010, concurso Polícia Civil", channel: "Prof. Diego Pureza" },
-      { id: "qzPbBDWCO-w", title: "Aula gratuita: Lei de Crimes Hediondos (Lei nº 8.072/90)", channel: "Dedicação Delta" },
-      { id: "RA21YMfH2_U", title: "Aula completa — Lei de Crimes Hediondos, 8.072/90", channel: "VALE CONCURSOS" },
-      { id: "iN_YNIzEw_8", title: "Lei de Crimes Hediondos — aula 1", channel: "Fábio Roque Araújo" },
-      { id: "HJL9QO77XSw", title: "Revisão dos crimes hediondos + questões estratégicas (atualizada 2025)", channel: "Direito Estratégico" },
+      {
+        id: "RpxK8-MB9_w",
+        title: "Lei dos Crimes Hediondos (Lei 8.072/90) — live #010, concurso Polícia Civil",
+        channel: "Prof. Diego Pureza",
+      },
+      {
+        id: "qzPbBDWCO-w",
+        title: "Aula gratuita: Lei de Crimes Hediondos (Lei nº 8.072/90)",
+        channel: "Dedicação Delta",
+      },
+      {
+        id: "RA21YMfH2_U",
+        title: "Aula completa — Lei de Crimes Hediondos, 8.072/90",
+        channel: "VALE CONCURSOS",
+      },
+      {
+        id: "iN_YNIzEw_8",
+        title: "Lei de Crimes Hediondos — aula 1",
+        channel: "Fábio Roque Araújo",
+      },
+      {
+        id: "HJL9QO77XSw",
+        title: "Revisão dos crimes hediondos + questões estratégicas (atualizada 2025)",
+        channel: "Direito Estratégico",
+      },
     ],
     "Tortura (Lei 9.455/1997)": [
-      { id: "KSOZ0J4-34k", title: "Lei de Tortura (Lei 9.455/1997) — live #011, concurso Polícia Civil", channel: "Prof. Diego Pureza" },
-      { id: "x6XjasWOJ_M", title: "Aula completa: Lei de Tortura para concursos públicos (Lei 9.455/97)", channel: "Prof. Eriksen Almerão" },
-      { id: "gr7tf8O8O6M", title: "Lei 9.455/97 — Lei de Tortura, teoria + questões", channel: "Nathy Bueno" },
+      {
+        id: "KSOZ0J4-34k",
+        title: "Lei de Tortura (Lei 9.455/1997) — live #011, concurso Polícia Civil",
+        channel: "Prof. Diego Pureza",
+      },
+      {
+        id: "x6XjasWOJ_M",
+        title: "Aula completa: Lei de Tortura para concursos públicos (Lei 9.455/97)",
+        channel: "Prof. Eriksen Almerão",
+      },
+      {
+        id: "gr7tf8O8O6M",
+        title: "Lei 9.455/97 — Lei de Tortura, teoria + questões",
+        channel: "Nathy Bueno",
+      },
       { id: "LKh0lsfSK-k", title: "Lei esquematizada 9.455/1997", channel: "Nova Concursos" },
     ],
     "Maria da Penha (Lei 11.340/2006)": [
-      { id: "xw2ig9iHLiA", title: "Lei Maria da Penha (atualizada): revisão completa + questões comentadas", channel: "Planeta Zetrus" },
-      { id: "2kKfq68qVXo", title: "Aula completa — Lei 11.340/2006, Lei Maria da Penha (atualizada)", channel: "Prof. Eriksen Almerão" },
-      { id: "pKIylLZGS4Q", title: "Lei esquematizada — Maria da Penha (Lei nº 11.340 de 2006)", channel: "Focus Concursos" },
-      { id: "HHi2L2srxdw", title: "Lei Maria da Penha (Lei 11.340/06) — live #009, concurso Polícia Civil", channel: "Prof. Diego Pureza" },
+      {
+        id: "xw2ig9iHLiA",
+        title: "Lei Maria da Penha (atualizada): revisão completa + questões comentadas",
+        channel: "Planeta Zetrus",
+      },
+      {
+        id: "2kKfq68qVXo",
+        title: "Aula completa — Lei 11.340/2006, Lei Maria da Penha (atualizada)",
+        channel: "Prof. Eriksen Almerão",
+      },
+      {
+        id: "pKIylLZGS4Q",
+        title: "Lei esquematizada — Maria da Penha (Lei nº 11.340 de 2006)",
+        channel: "Focus Concursos",
+      },
+      {
+        id: "HHi2L2srxdw",
+        title: "Lei Maria da Penha (Lei 11.340/06) — live #009, concurso Polícia Civil",
+        channel: "Prof. Diego Pureza",
+      },
     ],
     "Interceptação telefônica (Lei 9.296/1996)": [
-      { id: "ir_YQ4qTHEI", title: "Lei esquematizada — interceptação telefônica (Lei nº 9.296 de 1996)", channel: "Focus Concursos" },
-      { id: "JiZwFZOxq-Y", title: "Lei 9.296/96 — 30 questões comentadas sobre interceptação telefônica", channel: "QC Aprova Concursos Públicos" },
-      { id: "3mQmgYNInPs", title: "Lei nº 9.296/1996 comentada (interceptação telefônica)", channel: "Estratégia Carreira Jurídica" },
-      { id: "ZNlTnHKfawM", title: "Lei de Interceptação Telefônica — aula 3.1", channel: "Fábio Roque Araújo" },
+      {
+        id: "ir_YQ4qTHEI",
+        title: "Lei esquematizada — interceptação telefônica (Lei nº 9.296 de 1996)",
+        channel: "Focus Concursos",
+      },
+      {
+        id: "JiZwFZOxq-Y",
+        title: "Lei 9.296/96 — 30 questões comentadas sobre interceptação telefônica",
+        channel: "QC Aprova Concursos Públicos",
+      },
+      {
+        id: "3mQmgYNInPs",
+        title: "Lei nº 9.296/1996 comentada (interceptação telefônica)",
+        channel: "Estratégia Carreira Jurídica",
+      },
+      {
+        id: "ZNlTnHKfawM",
+        title: "Lei de Interceptação Telefônica — aula 3.1",
+        channel: "Fábio Roque Araújo",
+      },
     ],
     "Lavagem de dinheiro (Lei 9.613/1998)": [
-      { id: "sMsLP1CXvgg", title: "Aula 55: crime de lavagem de dinheiro e Lei 9.613/1998", channel: "Retorno Interno - Com Renan Duarte" },
-      { id: "g-SCouishIk", title: "Aula 15 — lavagem de dinheiro, Lei 9.613/98", channel: "Professor Willian Capriata" },
-      { id: "6e4eLvaclJk", title: "Legislação comentada — Lei nº 9.613/1998, lavagem de capitais", channel: "Estratégia Carreira Jurídica" },
-      { id: "sZKdFIinwKI", title: "Entenda os principais aspectos da Lei de Lavagem de Capitais (Lei nº 9.613/98)", channel: "Fernando Capez" },
-      { id: "MmQ5oK7ZTkQ", title: "Sexta Extravagante — Lei nº 9.613/98, lavagem de dinheiro: o essencial em 1 hora", channel: "Gran Cursos Online" },
-      { id: "5oKPsxpSG9k", title: "Lei nº 9.613 de 1998 — lavagem de capitais — Prof. Raphael Pinho", channel: "Professor Raphael Pinho" },
+      {
+        id: "sMsLP1CXvgg",
+        title: "Aula 55: crime de lavagem de dinheiro e Lei 9.613/1998",
+        channel: "Retorno Interno - Com Renan Duarte",
+      },
+      {
+        id: "g-SCouishIk",
+        title: "Aula 15 — lavagem de dinheiro, Lei 9.613/98",
+        channel: "Professor Willian Capriata",
+      },
+      {
+        id: "6e4eLvaclJk",
+        title: "Legislação comentada — Lei nº 9.613/1998, lavagem de capitais",
+        channel: "Estratégia Carreira Jurídica",
+      },
+      {
+        id: "sZKdFIinwKI",
+        title: "Entenda os principais aspectos da Lei de Lavagem de Capitais (Lei nº 9.613/98)",
+        channel: "Fernando Capez",
+      },
+      {
+        id: "MmQ5oK7ZTkQ",
+        title: "Sexta Extravagante — Lei nº 9.613/98, lavagem de dinheiro: o essencial em 1 hora",
+        channel: "Gran Cursos Online",
+      },
+      {
+        id: "5oKPsxpSG9k",
+        title: "Lei nº 9.613 de 1998 — lavagem de capitais — Prof. Raphael Pinho",
+        channel: "Professor Raphael Pinho",
+      },
     ],
   },
-  "Informática": {
+  Informática: {
     "Malwares e ataques": [
-      { id: "1tVxzd7id7A", title: "Informática para concursos — malware e vírus", channel: "Prof. Marcelo Narciso" },
-      { id: "fzy6v5wZHJY", title: "Programas maliciosos mais cobrados — segurança da informação", channel: "Prof. Marcelo Narciso" },
-      { id: "YJDk67f4R0c", title: "Questões de informática — segurança: malware e vírus (Rodrigo Schaeffer)", channel: "Rodrigo Schaeffer" },
+      {
+        id: "1tVxzd7id7A",
+        title: "Informática para concursos — malware e vírus",
+        channel: "Prof. Marcelo Narciso",
+      },
+      {
+        id: "fzy6v5wZHJY",
+        title: "Programas maliciosos mais cobrados — segurança da informação",
+        channel: "Prof. Marcelo Narciso",
+      },
+      {
+        id: "YJDk67f4R0c",
+        title: "Questões de informática — segurança: malware e vírus (Rodrigo Schaeffer)",
+        channel: "Rodrigo Schaeffer",
+      },
     ],
     "Segurança da informação": [
-      { id: "mOMKbwUNplE", title: "Curso básico de informática para concursos — segurança da informação", channel: "Professor Victor Dalton" },
-      { id: "1VvzfPs9HsQ", title: "Informática para a CEBRASPE — segurança da informação e redes", channel: "Focus Concursos" },
-      { id: "K2aUdyJpd8k", title: "Segurança da informação para concursos #1 (Rodrigo Schaeffer)", channel: "Rodrigo Schaeffer" },
-      { id: "jLYXwMY9lQQ", title: "Informática para concursos e a segurança da informação", channel: "Veon Aprova Logo" },
+      {
+        id: "mOMKbwUNplE",
+        title: "Curso básico de informática para concursos — segurança da informação",
+        channel: "Professor Victor Dalton",
+      },
+      {
+        id: "1VvzfPs9HsQ",
+        title: "Informática para a CEBRASPE — segurança da informação e redes",
+        channel: "Focus Concursos",
+      },
+      {
+        id: "K2aUdyJpd8k",
+        title: "Segurança da informação para concursos #1 (Rodrigo Schaeffer)",
+        channel: "Rodrigo Schaeffer",
+      },
+      {
+        id: "jLYXwMY9lQQ",
+        title: "Informática para concursos e a segurança da informação",
+        channel: "Veon Aprova Logo",
+      },
     ],
     "Redes e internet": [
-      { id: "IJOHzFcs_2Q", title: "50 questões de informática (1/5) — redes, internet, protocolos", channel: "Professor Alê" },
+      {
+        id: "IJOHzFcs_2Q",
+        title: "50 questões de informática (1/5) — redes, internet, protocolos",
+        channel: "Professor Alê",
+      },
       { id: "FwAb1IEyp0o", title: "TCP/IP", channel: "Rodrigo Schaeffer" },
-      { id: "CcBvqLq0UeA", title: "Informática para concursos — redes e protocolos (AlfaCon)", channel: "AlfaCon" },
-      { id: "xpOb7j3jU68", title: "Redes de computadores para a Polícia Federal — aula 01", channel: "Professor João Antonio" },
-      { id: "DhqdUFt-g0k", title: "Informática para concursos — redes II: TCP e UDP", channel: "Professor Alê" },
-      { id: "zs-fW7os6lM", title: "Curso básico de informática para concursos — redes e internet", channel: "Professor Victor Dalton" },
-      { id: "HEB6RwSVdu4", title: "Questões avançadas de informática para a Polícia Federal — redes", channel: "Rani Passos" },
+      {
+        id: "CcBvqLq0UeA",
+        title: "Informática para concursos — redes e protocolos (AlfaCon)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "xpOb7j3jU68",
+        title: "Redes de computadores para a Polícia Federal — aula 01",
+        channel: "Professor João Antonio",
+      },
+      {
+        id: "DhqdUFt-g0k",
+        title: "Informática para concursos — redes II: TCP e UDP",
+        channel: "Professor Alê",
+      },
+      {
+        id: "zs-fW7os6lM",
+        title: "Curso básico de informática para concursos — redes e internet",
+        channel: "Professor Victor Dalton",
+      },
+      {
+        id: "HEB6RwSVdu4",
+        title: "Questões avançadas de informática para a Polícia Federal — redes",
+        channel: "Rani Passos",
+      },
     ],
     "*": [
-      { id: "sG-uGHLCKK4", title: "Informática Polícia Federal — curso completo e gratuito, aula 1", channel: "Direção Concursos" },
-      { id: "t0_filXLIJg", title: "Questões CESPE/CEBRASPE de informática", channel: "Questões Informática Concursos" },
-      { id: "PLzMN3jVT58xo_JFbE7h4l9-mbgFhBg_Nr", title: "Curso Básico de Informática para Concursos", channel: "Professor Victor Dalton" },
-      { id: "PLO3hBdfBc4pFjZGW8G3SNXc1emC55qXwR", title: "Informática para Concursos", channel: "Professor Alê" },
-      { id: "PLpW0DXxdqP00PDY1mY_myKHvlZM2IWL57", title: "Informática para concursos 2026", channel: "Léo Matos" },
+      {
+        id: "sG-uGHLCKK4",
+        title: "Informática Polícia Federal — curso completo e gratuito, aula 1",
+        channel: "Direção Concursos",
+      },
+      {
+        id: "t0_filXLIJg",
+        title: "Questões CESPE/CEBRASPE de informática",
+        channel: "Questões Informática Concursos",
+      },
+      {
+        id: "PLzMN3jVT58xo_JFbE7h4l9-mbgFhBg_Nr",
+        title: "Curso Básico de Informática para Concursos",
+        channel: "Professor Victor Dalton",
+      },
+      {
+        id: "PLO3hBdfBc4pFjZGW8G3SNXc1emC55qXwR",
+        title: "Informática para Concursos",
+        channel: "Professor Alê",
+      },
+      {
+        id: "PLpW0DXxdqP00PDY1mY_myKHvlZM2IWL57",
+        title: "Informática para concursos 2026",
+        channel: "Léo Matos",
+      },
     ],
     "Sistemas operacionais (Windows e Linux)": [
-      { id: "AChpvq10kWo", title: "Semana CEBRASPE/CESPE — aula 02: questões de Windows e Linux", channel: "Prof. Vimerson Dantas" },
-      { id: "1cpi7dC1HcM", title: "Informática para a PF — aula 03: noções de sistema operacional (Linux e Windows)", channel: "Guia do Concurseiro" },
-      { id: "ZePjbOrYAcg", title: "Informática para concursos: sistemas operacionais Windows e Linux", channel: "Cursos do Portal" },
-      { id: "eF5v7NK0l0s", title: "Aula 01 — noções de sistema operacional (Windows e Linux)", channel: "ROMILTON JÚNIOR" },
-      { id: "2jeYg8HDWQg", title: "Noções de sistema operacional Windows 10", channel: "ROMILTON JÚNIOR" },
+      {
+        id: "AChpvq10kWo",
+        title: "Semana CEBRASPE/CESPE — aula 02: questões de Windows e Linux",
+        channel: "Prof. Vimerson Dantas",
+      },
+      {
+        id: "1cpi7dC1HcM",
+        title: "Informática para a PF — aula 03: noções de sistema operacional (Linux e Windows)",
+        channel: "Guia do Concurseiro",
+      },
+      {
+        id: "ZePjbOrYAcg",
+        title: "Informática para concursos: sistemas operacionais Windows e Linux",
+        channel: "Cursos do Portal",
+      },
+      {
+        id: "eF5v7NK0l0s",
+        title: "Aula 01 — noções de sistema operacional (Windows e Linux)",
+        channel: "ROMILTON JÚNIOR",
+      },
+      {
+        id: "2jeYg8HDWQg",
+        title: "Noções de sistema operacional Windows 10",
+        channel: "ROMILTON JÚNIOR",
+      },
     ],
     "Navegadores e correio eletrônico": [
-      { id: "awlDxCI56rw", title: "Navegadores: Internet Explorer, Edge, Firefox e Chrome (para concursos)", channel: "Prof. ZEPKA" },
-      { id: "KoECePDV9rE", title: "Internet e navegadores (Chrome, Edge, Mozilla e teclas de atalho)", channel: "Nova Concursos" },
-      { id: "2V4V1BCdVqc", title: "Informática para concursos — navegadores (AlfaCon)", channel: "AlfaCon" },
-      { id: "RL3JOvfa0s8", title: "Questões de concursos — navegadores de internet", channel: "Rodrigo&Questões" },
-      { id: "FpprtXGGw4M", title: "Correio eletrônico para concursos", channel: "Rodrigo Schaeffer" },
-      { id: "fnAOIYIdXa4", title: "Aulão informática — correio eletrônico (SMTP, POP, IMAP)", channel: "Ciência Exata" },
+      {
+        id: "awlDxCI56rw",
+        title: "Navegadores: Internet Explorer, Edge, Firefox e Chrome (para concursos)",
+        channel: "Prof. ZEPKA",
+      },
+      {
+        id: "KoECePDV9rE",
+        title: "Internet e navegadores (Chrome, Edge, Mozilla e teclas de atalho)",
+        channel: "Nova Concursos",
+      },
+      {
+        id: "2V4V1BCdVqc",
+        title: "Informática para concursos — navegadores (AlfaCon)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "RL3JOvfa0s8",
+        title: "Questões de concursos — navegadores de internet",
+        channel: "Rodrigo&Questões",
+      },
+      {
+        id: "FpprtXGGw4M",
+        title: "Correio eletrônico para concursos",
+        channel: "Rodrigo Schaeffer",
+      },
+      {
+        id: "fnAOIYIdXa4",
+        title: "Aulão informática — correio eletrônico (SMTP, POP, IMAP)",
+        channel: "Ciência Exata",
+      },
     ],
     "Computação em nuvem": [
-      { id: "-ILLZokFGkM", title: "Informática para concursos — computação em nuvem e armazenamento", channel: "Professor Alê" },
-      { id: "xrD68EnIdwY", title: "Computação em nuvem em exercícios CESPE — aula 01", channel: "Léo Matos" },
-      { id: "vsncwPpt97M", title: "Computação em nuvem — questões comentadas CESPE/CEBRASPE", channel: "Vicente Albuquerque" },
+      {
+        id: "-ILLZokFGkM",
+        title: "Informática para concursos — computação em nuvem e armazenamento",
+        channel: "Professor Alê",
+      },
+      {
+        id: "xrD68EnIdwY",
+        title: "Computação em nuvem em exercícios CESPE — aula 01",
+        channel: "Léo Matos",
+      },
+      {
+        id: "vsncwPpt97M",
+        title: "Computação em nuvem — questões comentadas CESPE/CEBRASPE",
+        channel: "Vicente Albuquerque",
+      },
       { id: "e3rQ373LnC0", title: "Computação em nuvem (cloud computing)", channel: "Léo Matos" },
-      { id: "8wAR6N7BlmU", title: "Informática para a banca CEBRASPE 2025", channel: "Nova Concursos" },
+      {
+        id: "8wAR6N7BlmU",
+        title: "Informática para a banca CEBRASPE 2025",
+        channel: "Nova Concursos",
+      },
     ],
     "Backup e armazenamento": [
-      { id: "-ILLZokFGkM", title: "Informática para concursos — computação em nuvem e armazenamento", channel: "Professor Alê" },
+      {
+        id: "-ILLZokFGkM",
+        title: "Informática para concursos — computação em nuvem e armazenamento",
+        channel: "Professor Alê",
+      },
     ],
     "Editores de texto e planilhas": [
-      { id: "q24l1ThT1j8", title: "Semana CEBRASPE/CESPE — aula 03: Word e Writer", channel: "Prof. Vimerson Dantas" },
-      { id: "9yDNq110beA", title: "Semana CEBRASPE/CESPE — aula 01: Excel e Calc", channel: "Prof. Vimerson Dantas" },
-      { id: "xNCpiMPuUAo", title: "Planilha para concursos: LibreOffice Calc, Excel e outros", channel: "Aprendendo com vídeos" },
-      { id: "pTWzHN7Z5MI", title: "Projeto 150 questões de informática CEBRASPE — aula 9: planilhas", channel: "Professor Lucas Costa - Informática para Concursos" },
+      {
+        id: "q24l1ThT1j8",
+        title: "Semana CEBRASPE/CESPE — aula 03: Word e Writer",
+        channel: "Prof. Vimerson Dantas",
+      },
+      {
+        id: "9yDNq110beA",
+        title: "Semana CEBRASPE/CESPE — aula 01: Excel e Calc",
+        channel: "Prof. Vimerson Dantas",
+      },
+      {
+        id: "xNCpiMPuUAo",
+        title: "Planilha para concursos: LibreOffice Calc, Excel e outros",
+        channel: "Aprendendo com vídeos",
+      },
+      {
+        id: "pTWzHN7Z5MI",
+        title: "Projeto 150 questões de informática CEBRASPE — aula 9: planilhas",
+        channel: "Professor Lucas Costa - Informática para Concursos",
+      },
       { id: "S5dhg3BF1xQ", title: "LibreOffice Calc para concursos", channel: "Veon Aprova Logo" },
     ],
     "Hardware e software": [
-      { id: "Z51Xag_u8H8", title: "Hardware e software: conceitos para concurso (do básico ao avançado)", channel: "Aías Tavares" },
-      { id: "PLKaxXxugagVtg0RihCckAhk1lsc0gkPNm", title: "Informática para concursos — conceitos básicos de hardware e software (playlist)", channel: "Rodrigo Schaeffer" },
-      { id: "fdYQo8TA3uY", title: "Conceitos básicos de informática para concursos — aula 1", channel: "Rodrigo Schaeffer" },
-      { id: "r4UqUdlFr9o", title: "Informática para concursos 2025 — conceitos básicos (Prof. Alan Souza)", channel: "Prof. Alan Souza" },
-      { id: "8QEgmSycKds", title: "Questões de hardware e software para concursos", channel: "Rodrigo&Questões" },
+      {
+        id: "Z51Xag_u8H8",
+        title: "Hardware e software: conceitos para concurso (do básico ao avançado)",
+        channel: "Aías Tavares",
+      },
+      {
+        id: "PLKaxXxugagVtg0RihCckAhk1lsc0gkPNm",
+        title: "Informática para concursos — conceitos básicos de hardware e software (playlist)",
+        channel: "Rodrigo Schaeffer",
+      },
+      {
+        id: "fdYQo8TA3uY",
+        title: "Conceitos básicos de informática para concursos — aula 1",
+        channel: "Rodrigo Schaeffer",
+      },
+      {
+        id: "r4UqUdlFr9o",
+        title: "Informática para concursos 2025 — conceitos básicos (Prof. Alan Souza)",
+        channel: "Prof. Alan Souza",
+      },
+      {
+        id: "8QEgmSycKds",
+        title: "Questões de hardware e software para concursos",
+        channel: "Rodrigo&Questões",
+      },
     ],
   },
-  "Contabilidade": {
+  Contabilidade: {
     "Conceitos e finalidades": [
-      { id: "3K0Flfp03G8", title: "Contabilidade Polícia Federal: tudo em uma aula", channel: "Contabilidade Facilitada" },
-      { id: "B45J5Lv9a-M", title: "Contabilidade para a Polícia Federal do zero", channel: "Contabilidade Facilitada" },
-      { id: "KDW3PZXtVa0", title: "Concurso PF 2025: como otimizar sua preparação em Contabilidade Geral", channel: "Prof. Igor Cintra" },
-      { id: "tXzCeoKrefU", title: "Aula de Contabilidade para a Polícia Federal (AlfaCon)", channel: "AlfaCon" },
-      { id: "1va2oZLwTPw", title: "Polícia Federal: Contabilidade Geral (Prof. Assis Coutinho)", channel: "LS Concursos" },
-      { id: "PLf8SnkouFmb07aTn05j1JUXxwX-EHJNm2", title: "Curso gratuito de Contabilidade Geral (playlist)", channel: "Direção Concursos" },
+      {
+        id: "3K0Flfp03G8",
+        title: "Contabilidade Polícia Federal: tudo em uma aula",
+        channel: "Contabilidade Facilitada",
+      },
+      {
+        id: "B45J5Lv9a-M",
+        title: "Contabilidade para a Polícia Federal do zero",
+        channel: "Contabilidade Facilitada",
+      },
+      {
+        id: "KDW3PZXtVa0",
+        title: "Concurso PF 2025: como otimizar sua preparação em Contabilidade Geral",
+        channel: "Prof. Igor Cintra",
+      },
+      {
+        id: "tXzCeoKrefU",
+        title: "Aula de Contabilidade para a Polícia Federal (AlfaCon)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "1va2oZLwTPw",
+        title: "Polícia Federal: Contabilidade Geral (Prof. Assis Coutinho)",
+        channel: "LS Concursos",
+      },
+      {
+        id: "PLf8SnkouFmb07aTn05j1JUXxwX-EHJNm2",
+        title: "Curso gratuito de Contabilidade Geral (playlist)",
+        channel: "Direção Concursos",
+      },
     ],
     "Patrimônio e equação fundamental": [
-      { id: "YXQpwLpHMU0", title: "Contabilidade — equação fundamental do patrimônio", channel: "Prof. Feliphe Araújo" },
-      { id: "N_Ku5FkfEuY", title: "Equação fundamental: ativos, passivos e patrimônio líquido", channel: "Prof. João Batista - Contabilidade na WEB" },
-      { id: "54kh8Ie--f8", title: "Equação da contabilidade explicada (ativo = passivo + PL)", channel: "GCoelho" },
-      { id: "VyDmkRSGeCY", title: "Aula 10 — patrimônio (IV): equação fundamental e estados patrimoniais", channel: "Gilmar Possati | Contabilizando" },
-      { id: "XvXmCGubgfM", title: "Contabilidade geral — aula 4: equação fundamental do patrimônio", channel: "Academia NobreSilva" },
+      {
+        id: "YXQpwLpHMU0",
+        title: "Contabilidade — equação fundamental do patrimônio",
+        channel: "Prof. Feliphe Araújo",
+      },
+      {
+        id: "N_Ku5FkfEuY",
+        title: "Equação fundamental: ativos, passivos e patrimônio líquido",
+        channel: "Prof. João Batista - Contabilidade na WEB",
+      },
+      {
+        id: "54kh8Ie--f8",
+        title: "Equação da contabilidade explicada (ativo = passivo + PL)",
+        channel: "GCoelho",
+      },
+      {
+        id: "VyDmkRSGeCY",
+        title: "Aula 10 — patrimônio (IV): equação fundamental e estados patrimoniais",
+        channel: "Gilmar Possati | Contabilizando",
+      },
+      {
+        id: "XvXmCGubgfM",
+        title: "Contabilidade geral — aula 4: equação fundamental do patrimônio",
+        channel: "Academia NobreSilva",
+      },
     ],
     "Balanço patrimonial": [
-      { id: "mD-krqVDdco", title: "Balanço patrimonial: contas do ativo e do passivo, circulante e não circulante", channel: "Professor Quintino ®️" },
+      {
+        id: "mD-krqVDdco",
+        title: "Balanço patrimonial: contas do ativo e do passivo, circulante e não circulante",
+        channel: "Professor Quintino ®️",
+      },
     ],
     "*": [
-      { id: "M7nJE8SS7l8", title: "Reta final PF — revisão nivelada de contabilidade (questões CEBRASPE)", channel: "Projeto Caveira" },
-      { id: "niZDYeeHdJA", title: "Contabilidade para PF 2025: correção da última prova", channel: "Contabilidade Facilitada" },
-      { id: "FMsT9-LgPF0", title: "Polícia Federal pós-edital: sprint de questões CEBRASPE", channel: "Estratégia Concursos" },
+      {
+        id: "M7nJE8SS7l8",
+        title: "Reta final PF — revisão nivelada de contabilidade (questões CEBRASPE)",
+        channel: "Projeto Caveira",
+      },
+      {
+        id: "niZDYeeHdJA",
+        title: "Contabilidade para PF 2025: correção da última prova",
+        channel: "Contabilidade Facilitada",
+      },
+      {
+        id: "FMsT9-LgPF0",
+        title: "Polícia Federal pós-edital: sprint de questões CEBRASPE",
+        channel: "Estratégia Concursos",
+      },
     ],
     "Escrituração e partidas dobradas": [
       { id: "r38zdbQjZrw", title: "Partidas dobradas e razonetes em 40 min", channel: "GCoelho" },
-      { id: "CSKT_VGbtso", title: "Método das partidas dobradas — Prof. Cláudio Marcelo", channel: "Prof. Cláudio Marcelo" },
-      { id: "aPL4-Av_Q3M", title: "Método das partidas dobradas — aula 6, revisão de contabilidade", channel: "Acerte as Contas!" },
-      { id: "IIECHLvTyQ8", title: "O segredo das partidas dobradas (débito e crédito), parte I", channel: "Prof Fábio Araújo" },
-      { id: "U5JPcImzgf8", title: "Partidas dobradas — lançamentos contábeis na prática", channel: "GCoelho" },
+      {
+        id: "CSKT_VGbtso",
+        title: "Método das partidas dobradas — Prof. Cláudio Marcelo",
+        channel: "Prof. Cláudio Marcelo",
+      },
+      {
+        id: "aPL4-Av_Q3M",
+        title: "Método das partidas dobradas — aula 6, revisão de contabilidade",
+        channel: "Acerte as Contas!",
+      },
+      {
+        id: "IIECHLvTyQ8",
+        title: "O segredo das partidas dobradas (débito e crédito), parte I",
+        channel: "Prof Fábio Araújo",
+      },
+      {
+        id: "U5JPcImzgf8",
+        title: "Partidas dobradas — lançamentos contábeis na prática",
+        channel: "GCoelho",
+      },
     ],
     "Contas e plano de contas": [
       { id: "Cgc-UaSsQ10", title: "Contabilidade — aula 10", channel: "Momento de Estudar®" },
     ],
     "Balancete de verificação": [
-      { id: "4gcMUmI4IcI", title: "Aula de balancete de verificação (Contabilidade Geral)", embeddable: false },
-      { id: "jnsBBqUZD84", title: "Aula 06/18 — balancete de verificação e exercícios de débito e crédito", channel: "Lac Concursos - Principal" },
-      { id: "H3fWgDhh0do", title: "Aprenda a fazer um balancete de verificação — exercício prático", channel: "ACCOUNTING +258" },
-      { id: "jr1MejjKczg", title: "Balancete de verificação: tudo o que você precisa saber", channel: "Contabilidade Facilitada" },
-      { id: "2tw8GbLuP6E", title: "Balancete de verificação — erros identificáveis", channel: "Camila Gomes" },
+      {
+        id: "4gcMUmI4IcI",
+        title: "Aula de balancete de verificação (Contabilidade Geral)",
+        embeddable: false,
+      },
+      {
+        id: "jnsBBqUZD84",
+        title: "Aula 06/18 — balancete de verificação e exercícios de débito e crédito",
+        channel: "Lac Concursos - Principal",
+      },
+      {
+        id: "H3fWgDhh0do",
+        title: "Aprenda a fazer um balancete de verificação — exercício prático",
+        channel: "ACCOUNTING +258",
+      },
+      {
+        id: "jr1MejjKczg",
+        title: "Balancete de verificação: tudo o que você precisa saber",
+        channel: "Contabilidade Facilitada",
+      },
+      {
+        id: "2tw8GbLuP6E",
+        title: "Balancete de verificação — erros identificáveis",
+        channel: "Camila Gomes",
+      },
     ],
     "DRE e demais demonstrações": [
-      { id: "5eNN7lttMTw", title: "Demonstração do Resultado do Exercício — DRE", channel: "Prof. Camila Sá" },
-      { id: "Xub5yWJKvXg", title: "Demonstrações contábeis: BP, DRE, DFC, DLPA, DMPL", embeddable: false },
-      { id: "Wv7d8uha6PI", title: "Demonstrações contábeis: BP, DRE, DFC e DVA — resumão em 11 minutos", channel: "Ricardo Neves" },
-      { id: "EDj1kBdRpZc", title: "Curso de contabilidade grátis — DRE, aula 14", embeddable: false },
-      { id: "6PzMw91_dHU", title: "Demonstração dos fluxos de caixa (DFC) — método indireto", channel: "Marcia Lacerda Farias" },
-      { id: "m786tSjVPZQ", title: "Demonstração do resultado abrangente (DRA)", channel: "Prof. Camila Sá" },
+      {
+        id: "5eNN7lttMTw",
+        title: "Demonstração do Resultado do Exercício — DRE",
+        channel: "Prof. Camila Sá",
+      },
+      {
+        id: "Xub5yWJKvXg",
+        title: "Demonstrações contábeis: BP, DRE, DFC, DLPA, DMPL",
+        embeddable: false,
+      },
+      {
+        id: "Wv7d8uha6PI",
+        title: "Demonstrações contábeis: BP, DRE, DFC e DVA — resumão em 11 minutos",
+        channel: "Ricardo Neves",
+      },
+      {
+        id: "EDj1kBdRpZc",
+        title: "Curso de contabilidade grátis — DRE, aula 14",
+        embeddable: false,
+      },
+      {
+        id: "6PzMw91_dHU",
+        title: "Demonstração dos fluxos de caixa (DFC) — método indireto",
+        channel: "Marcia Lacerda Farias",
+      },
+      {
+        id: "m786tSjVPZQ",
+        title: "Demonstração do resultado abrangente (DRA)",
+        channel: "Prof. Camila Sá",
+      },
     ],
     "Operações com mercadorias": [
-      { id: "KBnM2KXoZRY", title: "Controle de estoque: PEPS, média ponderada e CMV", channel: "Professor Quintino ®️" },
-      { id: "CqCWtnMJXgU", title: "Operação com mercadorias — lançamentos no razão, inventário periódico", channel: "aplicAção" },
-      { id: "Sn7jBvxtbR8", title: "Como fazer lançamentos de operações com mercadorias (razonetes e ficha de estoques)", channel: "Contabilidade Societária" },
-      { id: "mJ9KMELEyAM", title: "Aula grátis de Contabilidade Geral — operações com mercadorias, parte 1", channel: "Lac Concursos - Principal" },
+      {
+        id: "KBnM2KXoZRY",
+        title: "Controle de estoque: PEPS, média ponderada e CMV",
+        channel: "Professor Quintino ®️",
+      },
+      {
+        id: "CqCWtnMJXgU",
+        title: "Operação com mercadorias — lançamentos no razão, inventário periódico",
+        channel: "aplicAção",
+      },
+      {
+        id: "Sn7jBvxtbR8",
+        title:
+          "Como fazer lançamentos de operações com mercadorias (razonetes e ficha de estoques)",
+        channel: "Contabilidade Societária",
+      },
+      {
+        id: "mJ9KMELEyAM",
+        title: "Aula grátis de Contabilidade Geral — operações com mercadorias, parte 1",
+        channel: "Lac Concursos - Principal",
+      },
     ],
     "Estrutura conceitual e NBC TSP": [
-      { id: "mYI5iXNp3z4", title: "Contabilidade Pública — aula 06: NBC TSP Estrutura Conceitual", channel: "Roberto Weber" },
-      { id: "di06IUByK5A", title: "NBC TSP Estrutura Conceitual — aula 02", channel: "Renato Chaves | Contabilidade e Auditoria" },
-      { id: "Kyiei4tZ5Fg", title: "Contabilidade Pública — NBC TSP Estrutura Conceitual", channel: "Renato Chaves | Contabilidade e Auditoria" },
-      { id: "tmY535a4cRI", title: "PF 2021 — questões sobre NBC TSP Estrutura Conceitual", channel: "Professor Quintino ®️" },
-      { id: "gWiCXtZk3Tk", title: "NBC TG Estrutura Conceitual (CPC 00)", channel: "Momento de Estudar®" },
+      {
+        id: "mYI5iXNp3z4",
+        title: "Contabilidade Pública — aula 06: NBC TSP Estrutura Conceitual",
+        channel: "Roberto Weber",
+      },
+      {
+        id: "di06IUByK5A",
+        title: "NBC TSP Estrutura Conceitual — aula 02",
+        channel: "Renato Chaves | Contabilidade e Auditoria",
+      },
+      {
+        id: "Kyiei4tZ5Fg",
+        title: "Contabilidade Pública — NBC TSP Estrutura Conceitual",
+        channel: "Renato Chaves | Contabilidade e Auditoria",
+      },
+      {
+        id: "tmY535a4cRI",
+        title: "PF 2021 — questões sobre NBC TSP Estrutura Conceitual",
+        channel: "Professor Quintino ®️",
+      },
+      {
+        id: "gWiCXtZk3Tk",
+        title: "NBC TG Estrutura Conceitual (CPC 00)",
+        channel: "Momento de Estudar®",
+      },
     ],
     "Regimes de caixa e competência": [
-      { id: "Fm8PnS6vSpo", title: "Regime de caixa × regime de competência — explicação e exercícios", channel: "Camila Gomes" },
-      { id: "07sA7BIcsPY", title: "Aula de regimes contábeis: competência, caixa e misto", embeddable: false },
-      { id: "dbBXzcNkrYY", title: "Regime de caixa e regime de competência — Contabilidade", channel: "GCoelho" },
+      {
+        id: "Fm8PnS6vSpo",
+        title: "Regime de caixa × regime de competência — explicação e exercícios",
+        channel: "Camila Gomes",
+      },
+      {
+        id: "07sA7BIcsPY",
+        title: "Aula de regimes contábeis: competência, caixa e misto",
+        embeddable: false,
+      },
+      {
+        id: "dbBXzcNkrYY",
+        title: "Regime de caixa e regime de competência — Contabilidade",
+        channel: "GCoelho",
+      },
     ],
     "Atos e fatos contábeis": [
-      { id: "K0-xREBmXoc", title: "Fatos contábeis: permutativos, modificativos e mistos", channel: "Professor Quintino ®️" },
-      { id: "UrFg3kWayB0", title: "Aula de atos e fatos contábeis (Contabilidade Geral)", embeddable: false },
-      { id: "0EEZldm8Pm4", title: "Revisando os tipos de fatos contábeis", channel: "William Notario" },
+      {
+        id: "K0-xREBmXoc",
+        title: "Fatos contábeis: permutativos, modificativos e mistos",
+        channel: "Professor Quintino ®️",
+      },
+      {
+        id: "UrFg3kWayB0",
+        title: "Aula de atos e fatos contábeis (Contabilidade Geral)",
+        embeddable: false,
+      },
+      {
+        id: "0EEZldm8Pm4",
+        title: "Revisando os tipos de fatos contábeis",
+        channel: "William Notario",
+      },
     ],
   },
-  "Estatística": {
+  Estatística: {
     "Medidas de posição": [
-      { id: "ygahS_8aj5Q", title: "Estatística PF: como comparar média, mediana e moda", channel: "Matemática Pra Passar" },
-      { id: "11YjHnqFGHU", title: "Estatística Polícia Federal: domine o passo a passo", channel: "Matemática Pra Passar" },
+      {
+        id: "ygahS_8aj5Q",
+        title: "Estatística PF: como comparar média, mediana e moda",
+        channel: "Matemática Pra Passar",
+      },
+      {
+        id: "11YjHnqFGHU",
+        title: "Estatística Polícia Federal: domine o passo a passo",
+        channel: "Matemática Pra Passar",
+      },
       { id: "GIzwKJL33_g", title: "Média, moda e mediana", channel: "Gis com Giz" },
-      { id: "UA8LqRgv2l0", title: "Medidas de posição — média, mediana e moda, parte 02 (Prof. Rodrigo Macedo)", channel: "Marcos Aba Matemática" },
-      { id: "PLFYsZqiaMzFswB9fYpmZY2QLkhEtCC3hD", title: "Média, mediana e moda — questões de estatística de concursos (playlist)", channel: "Central dos Números" },
+      {
+        id: "UA8LqRgv2l0",
+        title: "Medidas de posição — média, mediana e moda, parte 02 (Prof. Rodrigo Macedo)",
+        channel: "Marcos Aba Matemática",
+      },
+      {
+        id: "PLFYsZqiaMzFswB9fYpmZY2QLkhEtCC3hD",
+        title: "Média, mediana e moda — questões de estatística de concursos (playlist)",
+        channel: "Central dos Números",
+      },
     ],
     "Medidas de dispersão": [
-      { id: "8MfneZgSWjw", title: "Estatística: medidas de dispersão ou variabilidade", channel: "Professor Altamir Araldi - Ensinando Matemática" },
-      { id: "ar75_a8cxMk", title: "Variância e desvio padrão", channel: "Prof. MURAKAMI - MATEMÁTICA RAPIDOLA" },
-      { id: "d7jBKtUoldM", title: "Variância e desvio padrão — exercícios resolvidos", channel: "PROFESSOR ÂNGELO TORRES" },
-      { id: "IQFkTsrSdWQ", title: "Amplitude, variância, desvio padrão e coeficiente de variação", channel: "Salvando o Semestre" },
-      { id: "QNOk0e9Fgis", title: "Estatística CESPE (CEBRASPE) — desvio padrão", channel: "Prof. Sérgio Carvalho - Olá Amigos" },
+      {
+        id: "8MfneZgSWjw",
+        title: "Estatística: medidas de dispersão ou variabilidade",
+        channel: "Professor Altamir Araldi - Ensinando Matemática",
+      },
+      {
+        id: "ar75_a8cxMk",
+        title: "Variância e desvio padrão",
+        channel: "Prof. MURAKAMI - MATEMÁTICA RAPIDOLA",
+      },
+      {
+        id: "d7jBKtUoldM",
+        title: "Variância e desvio padrão — exercícios resolvidos",
+        channel: "PROFESSOR ÂNGELO TORRES",
+      },
+      {
+        id: "IQFkTsrSdWQ",
+        title: "Amplitude, variância, desvio padrão e coeficiente de variação",
+        channel: "Salvando o Semestre",
+      },
+      {
+        id: "QNOk0e9Fgis",
+        title: "Estatística CESPE (CEBRASPE) — desvio padrão",
+        channel: "Prof. Sérgio Carvalho - Olá Amigos",
+      },
     ],
     "Correlação e regressão": [
-      { id: "7gWN20iFUFw", title: "Correlação e regressão linear — aula 22", channel: "omatematico.com" },
+      {
+        id: "7gWN20iFUFw",
+        title: "Correlação e regressão linear — aula 22",
+        channel: "omatematico.com",
+      },
     ],
-    "Probabilidade": [
-      { id: "z4DqYPCexTY", title: "Desvendando probabilidade e estatística da CEBRASPE", channel: "Estatística para Concurso" },
-      { id: "oSJdd-FKzyI", title: "Estatística Polícia Federal — exercícios de probabilidade CEBRASPE", channel: "Estatística para Concurso" },
+    Probabilidade: [
+      {
+        id: "z4DqYPCexTY",
+        title: "Desvendando probabilidade e estatística da CEBRASPE",
+        channel: "Estatística para Concurso",
+      },
+      {
+        id: "oSJdd-FKzyI",
+        title: "Estatística Polícia Federal — exercícios de probabilidade CEBRASPE",
+        channel: "Estatística para Concurso",
+      },
     ],
     "Amostragem e inferência": [
-      { id: "8PHqpuSzpAk", title: "Intervalo de confiança e teste de hipóteses passo a passo — Polícia Federal", channel: "Estatística para Concurso" },
-      { id: "ilG0RXsMbmo", title: "Intervalo de confiança da média populacional — questão CEBRASPE Polícia Federal", channel: "Estatística para Concurso" },
-      { id: "sWle26_vNbI", title: "Intervalo de confiança — conceitos (#01)", channel: "Professor Guru" },
+      {
+        id: "8PHqpuSzpAk",
+        title: "Intervalo de confiança e teste de hipóteses passo a passo — Polícia Federal",
+        channel: "Estatística para Concurso",
+      },
+      {
+        id: "ilG0RXsMbmo",
+        title: "Intervalo de confiança da média populacional — questão CEBRASPE Polícia Federal",
+        channel: "Estatística para Concurso",
+      },
+      {
+        id: "sWle26_vNbI",
+        title: "Intervalo de confiança — conceitos (#01)",
+        channel: "Professor Guru",
+      },
       { id: "gX606VyKISI", title: "Introdução à inferência estatística", channel: "James Sampaio" },
     ],
     "*": [
-      { id: "RgvHY-SY1mQ", title: "Resolva questões de estatística para a Polícia Federal: dicas e estratégias", channel: "Jhoni Zini" },
-      { id: "mUWItGU9js0", title: "Agente da PF — resolução de estatística CEBRASPE 2021", channel: "Estatística para Concurso" },
-      { id: "nBHQToeEaLo", title: "Missão Polícia Federal — questões de estatística", embeddable: false },
-      { id: "uNCW6rPq9Io", title: "Estatística Polícia Federal — curso completo e gratuito, aula 1", channel: "Direção Concursos" },
+      {
+        id: "RgvHY-SY1mQ",
+        title: "Resolva questões de estatística para a Polícia Federal: dicas e estratégias",
+        channel: "Jhoni Zini",
+      },
+      {
+        id: "mUWItGU9js0",
+        title: "Agente da PF — resolução de estatística CEBRASPE 2021",
+        channel: "Estatística para Concurso",
+      },
+      {
+        id: "nBHQToeEaLo",
+        title: "Missão Polícia Federal — questões de estatística",
+        embeddable: false,
+      },
+      {
+        id: "uNCW6rPq9Io",
+        title: "Estatística Polícia Federal — curso completo e gratuito, aula 1",
+        channel: "Direção Concursos",
+      },
       { id: "XaHHufaADT0", title: "Estatística — concurso PF 2025", channel: "Bráulia Perázzio" },
     ],
   },
   "Legislação de Trânsito": {
     "Sistema Nacional de Trânsito": [
-      { id: "JZzMkUDorug", title: "Código de Trânsito Brasileiro — Sistema Nacional de Trânsito (SNT), Lei 9.503/97", channel: "Professor Soares" },
-      { id: "4MDQaMHtHGw", title: "Sistema Nacional de Trânsito — CTB, aula 02/60", channel: "Lac Concursos - Principal" },
-      { id: "g5YqlT-42kQ", title: "CTB — Sistema Nacional de Trânsito", channel: "Lac Concursos - Principal" },
-      { id: "i0m9ZvpyWko", title: "Curso gratuito para PRF — Sistema Nacional de Trânsito", channel: "Gran Cursos Online" },
+      {
+        id: "JZzMkUDorug",
+        title: "Código de Trânsito Brasileiro — Sistema Nacional de Trânsito (SNT), Lei 9.503/97",
+        channel: "Professor Soares",
+      },
+      {
+        id: "4MDQaMHtHGw",
+        title: "Sistema Nacional de Trânsito — CTB, aula 02/60",
+        channel: "Lac Concursos - Principal",
+      },
+      {
+        id: "g5YqlT-42kQ",
+        title: "CTB — Sistema Nacional de Trânsito",
+        channel: "Lac Concursos - Principal",
+      },
+      {
+        id: "i0m9ZvpyWko",
+        title: "Curso gratuito para PRF — Sistema Nacional de Trânsito",
+        channel: "Gran Cursos Online",
+      },
     ],
     "Normas gerais de circulação": [
-      { id: "rg-HfWDfSE0", title: "CTB — normas de circulação e conduta", channel: "Professor Soares" },
-      { id: "ymgAgeh1DQ8", title: "Fundamentos do Código de Trânsito Brasileiro (CTB)", channel: "Felipe Medeiros" },
+      {
+        id: "rg-HfWDfSE0",
+        title: "CTB — normas de circulação e conduta",
+        channel: "Professor Soares",
+      },
+      {
+        id: "ymgAgeh1DQ8",
+        title: "Fundamentos do Código de Trânsito Brasileiro (CTB)",
+        channel: "Felipe Medeiros",
+      },
     ],
-    "Infrações": [
-      { id: "SIaiAzsrIYc", title: "Das penalidades (CTB)", channel: "Áudio Da Lei" },
-    ],
+    Infrações: [{ id: "SIaiAzsrIYc", title: "Das penalidades (CTB)", channel: "Áudio Da Lei" }],
     "Penalidades e medidas administrativas": [
       { id: "hQqhs5qWhuw", title: "CTB — das penalidades", channel: "Lac Concursos - Principal" },
-      { id: "fhfIYerVvGo", title: "Julgamento das autuações e penalidades e crimes de trânsito — arts. 281 a 312-B", channel: "Legislação em áudio" },
+      {
+        id: "fhfIYerVvGo",
+        title: "Julgamento das autuações e penalidades e crimes de trânsito — arts. 281 a 312-B",
+        channel: "Legislação em áudio",
+      },
     ],
     "Crimes de trânsito": [
       { id: "v5vY3Gw-ZCo", title: "Crimes de trânsito (Lei nº 9.503/1997)", channel: "AlfaCon" },
-      { id: "Agc8dswXKl4", title: "Aula gratuita: Código de Trânsito Brasileiro — legislação penal especial", channel: "Dedicação Delta" },
+      {
+        id: "Agc8dswXKl4",
+        title: "Aula gratuita: Código de Trânsito Brasileiro — legislação penal especial",
+        channel: "Dedicação Delta",
+      },
     ],
     "*": [
-      { id: "ZhWgF-C7l78", title: "Concurso PRF: como gabaritar trânsito? (Julio Ponte)", channel: "Direção Concursos" },
-      { id: "hU_4FzEr2sA", title: "Curso completo de Legislação de Trânsito para concursos — Prof. Hugo Garotinho", channel: "Estratégia Concursos" },
-      { id: "Lbt8095ZDjY", title: "Concurso PRF 2026 — começando do zero: legislação de trânsito", embeddable: false },
-      { id: "DwdwXeO6dEk", title: "Concurso PRF: legislação de trânsito esquematizada — Paulo Sérgio", channel: "Gran Cursos Online" },
-      { id: "0TFnUNZx_8Q", title: "Concurso PRF 2024 — legislação de trânsito, curso completo", channel: "AlfaCon" },
-      { id: "ADsNCQn-Nzk", title: "Aula 07 — CTB — Polícia Rodoviária Federal", channel: "Lac Concursos - Principal" },
+      {
+        id: "ZhWgF-C7l78",
+        title: "Concurso PRF: como gabaritar trânsito? (Julio Ponte)",
+        channel: "Direção Concursos",
+      },
+      {
+        id: "hU_4FzEr2sA",
+        title: "Curso completo de Legislação de Trânsito para concursos — Prof. Hugo Garotinho",
+        channel: "Estratégia Concursos",
+      },
+      {
+        id: "Lbt8095ZDjY",
+        title: "Concurso PRF 2026 — começando do zero: legislação de trânsito",
+        embeddable: false,
+      },
+      {
+        id: "DwdwXeO6dEk",
+        title: "Concurso PRF: legislação de trânsito esquematizada — Paulo Sérgio",
+        channel: "Gran Cursos Online",
+      },
+      {
+        id: "0TFnUNZx_8Q",
+        title: "Concurso PRF 2024 — legislação de trânsito, curso completo",
+        channel: "AlfaCon",
+      },
+      {
+        id: "ADsNCQn-Nzk",
+        title: "Aula 07 — CTB — Polícia Rodoviária Federal",
+        channel: "Lac Concursos - Principal",
+      },
     ],
   },
-  "Física": {
+  Física: {
     "*": [
-      { id: "SUCGN2LP28I", title: "Concurso PRF 2023 — aula de Física, começando do zero (AlfaCon)", channel: "AlfaCon" },
-      { id: "8Npp6bVjmNU", title: "Maratona de questões PRF: noções de Física", channel: "Nova Concursos" },
-      { id: "32MmfWD9qzY", title: "Aula de Física aplicada à PRF — Prof. Caio Fábio", channel: "AlfaCon" },
-      { id: "2ejTOkam3os", title: "Física para concursos: aulas de Física gratuitas", channel: "Instituto dos Concursos" },
+      {
+        id: "SUCGN2LP28I",
+        title: "Concurso PRF 2023 — aula de Física, começando do zero (AlfaCon)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "8Npp6bVjmNU",
+        title: "Maratona de questões PRF: noções de Física",
+        channel: "Nova Concursos",
+      },
+      {
+        id: "32MmfWD9qzY",
+        title: "Aula de Física aplicada à PRF — Prof. Caio Fábio",
+        channel: "AlfaCon",
+      },
+      {
+        id: "2ejTOkam3os",
+        title: "Física para concursos: aulas de Física gratuitas",
+        channel: "Instituto dos Concursos",
+      },
     ],
-    "Cinemática": [
-      { id: "MovdTteYjv4", title: "Física I — aula 04: MRU e MRUV (fórmulas, exercícios e gráficos)", channel: "Professor Douglas Maioli" },
-      { id: "b_bKkKE50aA", title: "MRU e MRUV — exercícios resolvidos de Física", channel: "Pense e Resolva com Paulo Tavares" },
-      { id: "k99Y89j-vmQ", title: "Aula de Física para o concurso da PRF — cinemática escalar (Caio Fábio)", channel: "AlfaCon" },
-      { id: "nguH7yHaZHU", title: "Cinemática: MRU e MRUV — aula completa", channel: "FisicaInterativa.Com" },
-      { id: "MtgUB5PZkUs", title: "Questões para concurso PRF: Física — cinemática", channel: "AlfaCon" },
+    Cinemática: [
+      {
+        id: "MovdTteYjv4",
+        title: "Física I — aula 04: MRU e MRUV (fórmulas, exercícios e gráficos)",
+        channel: "Professor Douglas Maioli",
+      },
+      {
+        id: "b_bKkKE50aA",
+        title: "MRU e MRUV — exercícios resolvidos de Física",
+        channel: "Pense e Resolva com Paulo Tavares",
+      },
+      {
+        id: "k99Y89j-vmQ",
+        title: "Aula de Física para o concurso da PRF — cinemática escalar (Caio Fábio)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "nguH7yHaZHU",
+        title: "Cinemática: MRU e MRUV — aula completa",
+        channel: "FisicaInterativa.Com",
+      },
+      {
+        id: "MtgUB5PZkUs",
+        title: "Questões para concurso PRF: Física — cinemática",
+        channel: "AlfaCon",
+      },
     ],
     "Dinâmica e leis de Newton": [
       { id: "Delk9s6EXQw", title: "Leis de Newton II", channel: "Física com Ítalo Feitosa" },
-      { id: "rwpbJyGbgQk", title: "Exercícios resolvidos — leis de Newton (Física do zero)", channel: "Eureka Matemática" },
-      { id: "gHe26-eI4fc", title: "Leis de Newton: força de atrito estático e dinâmico", channel: "Como é bom ser nerd - Pura Física" },
-      { id: "M0YKQtzV41w", title: "Aplicando as leis de Newton — aula 09 (força de atrito)", channel: "Davi Oliveira - Física 2.0" },
+      {
+        id: "rwpbJyGbgQk",
+        title: "Exercícios resolvidos — leis de Newton (Física do zero)",
+        channel: "Eureka Matemática",
+      },
+      {
+        id: "gHe26-eI4fc",
+        title: "Leis de Newton: força de atrito estático e dinâmico",
+        channel: "Como é bom ser nerd - Pura Física",
+      },
+      {
+        id: "M0YKQtzV41w",
+        title: "Aplicando as leis de Newton — aula 09 (força de atrito)",
+        channel: "Davi Oliveira - Física 2.0",
+      },
     ],
     "Trabalho, energia e potência": [
-      { id: "zaSFD-bIVqM", title: "Física 1 — aula 10: energia cinética e trabalho (parte 2)", channel: "DOUG.FISICA" },
-      { id: "E6yX9YuBDFI", title: "Física — aula 3: trabalho da força de atrito", channel: "omatematico.com" },
-      { id: "9XGTjycTNOQ", title: "Aula de Física para o concurso da PRF — potência, impulso e colisão (Caio Fábio)", channel: "AlfaCon" },
+      {
+        id: "zaSFD-bIVqM",
+        title: "Física 1 — aula 10: energia cinética e trabalho (parte 2)",
+        channel: "DOUG.FISICA",
+      },
+      {
+        id: "E6yX9YuBDFI",
+        title: "Física — aula 3: trabalho da força de atrito",
+        channel: "omatematico.com",
+      },
+      {
+        id: "9XGTjycTNOQ",
+        title: "Aula de Física para o concurso da PRF — potência, impulso e colisão (Caio Fábio)",
+        channel: "AlfaCon",
+      },
     ],
     "Estática e hidrostática": [
-      { id: "tC7PjUgrx1w", title: "Hidrostática (conceito de pressão) — aula 01", channel: "Davi Oliveira - Física 2.0" },
-      { id: "-8zLdgZwM8U", title: "Hidrostática — aula 09 (princípio de Pascal)", channel: "Davi Oliveira - Física 2.0" },
-      { id: "5ywWKhGoLNc", title: "Hidrostática — aula 11 (empuxo, teoria)", channel: "Davi Oliveira - Física 2.0" },
-      { id: "TCARSL57DO4", title: "Hidrostática — aula 12 (empuxo, exemplos)", channel: "Davi Oliveira - Física 2.0" },
-      { id: "aOSkebN0HEM", title: "Pressão de um fluido e pressão atmosférica — exercícios resolvidos de hidrostática", channel: "Voando em Física (com Igor Zz-it)" },
+      {
+        id: "tC7PjUgrx1w",
+        title: "Hidrostática (conceito de pressão) — aula 01",
+        channel: "Davi Oliveira - Física 2.0",
+      },
+      {
+        id: "-8zLdgZwM8U",
+        title: "Hidrostática — aula 09 (princípio de Pascal)",
+        channel: "Davi Oliveira - Física 2.0",
+      },
+      {
+        id: "5ywWKhGoLNc",
+        title: "Hidrostática — aula 11 (empuxo, teoria)",
+        channel: "Davi Oliveira - Física 2.0",
+      },
+      {
+        id: "TCARSL57DO4",
+        title: "Hidrostática — aula 12 (empuxo, exemplos)",
+        channel: "Davi Oliveira - Física 2.0",
+      },
+      {
+        id: "aOSkebN0HEM",
+        title: "Pressão de um fluido e pressão atmosférica — exercícios resolvidos de hidrostática",
+        channel: "Voando em Física (com Igor Zz-it)",
+      },
     ],
-    "Termologia": [
-      { id: "xXs7qKsbHaE", title: "Aula especial de Física: termologia — calorimetria", channel: "Estratégia Militares" },
-      { id: "Zt73CC9lhLk", title: "Nivelamento de Física para concurso — aula 2: calorimetria", channel: "Física para concurso." },
+    Termologia: [
+      {
+        id: "xXs7qKsbHaE",
+        title: "Aula especial de Física: termologia — calorimetria",
+        channel: "Estratégia Militares",
+      },
+      {
+        id: "Zt73CC9lhLk",
+        title: "Nivelamento de Física para concurso — aula 2: calorimetria",
+        channel: "Física para concurso.",
+      },
       { id: "htZ5wOED9ZE", title: "Dilatação térmica", channel: "Brasil Escola Oficial" },
       { id: "Iw-PBEcFylw", title: "Tudo sobre temperatura — aula 1", channel: "Skola de Física" },
     ],
     "Ondas e óptica": [
-      { id: "PLrzM0kp41yoFwRg_w8XOzPeYq-vzxI_qd", title: "Ondulatória: curso completo (playlist)", channel: "Como é bom ser nerd - Pura Física" },
-      { id: "bHjXlpAJCVQ", title: "Introdução e classificação das ondas — óptica e ondulatória", channel: "Me Salva! ENEM" },
-      { id: "8CIj0lrUFLQ", title: "Fundamentos da óptica ondulatória — parte 2", channel: "Carlos Eduardo Souza" },
-      { id: "bu0qT4Fouy8", title: "Exercícios de óptica — sombra e penumbra", channel: "Professor Boaro" },
+      {
+        id: "PLrzM0kp41yoFwRg_w8XOzPeYq-vzxI_qd",
+        title: "Ondulatória: curso completo (playlist)",
+        channel: "Como é bom ser nerd - Pura Física",
+      },
+      {
+        id: "bHjXlpAJCVQ",
+        title: "Introdução e classificação das ondas — óptica e ondulatória",
+        channel: "Me Salva! ENEM",
+      },
+      {
+        id: "8CIj0lrUFLQ",
+        title: "Fundamentos da óptica ondulatória — parte 2",
+        channel: "Carlos Eduardo Souza",
+      },
+      {
+        id: "bu0qT4Fouy8",
+        title: "Exercícios de óptica — sombra e penumbra",
+        channel: "Professor Boaro",
+      },
     ],
-    "Eletricidade": [
-      { id: "Xs2uCVztdHA", title: "Física — eletrodinâmica: 1ª lei de Ohm", channel: "Como é bom ser nerd - Pura Física" },
-      { id: "8kKRhvmPnZ8", title: "Lei de Ohm — exercícios e questões resolvidas", channel: "Mundo da Elétrica" },
-      { id: "CyaB3LKxD8c", title: "Lei de Ohm — eletrodinâmica do zero", channel: "Eureka Matemática" },
+    Eletricidade: [
+      {
+        id: "Xs2uCVztdHA",
+        title: "Física — eletrodinâmica: 1ª lei de Ohm",
+        channel: "Como é bom ser nerd - Pura Física",
+      },
+      {
+        id: "8kKRhvmPnZ8",
+        title: "Lei de Ohm — exercícios e questões resolvidas",
+        channel: "Mundo da Elétrica",
+      },
+      {
+        id: "CyaB3LKxD8c",
+        title: "Lei de Ohm — eletrodinâmica do zero",
+        channel: "Eureka Matemática",
+      },
     ],
   },
   "Medicina Legal e Criminalística": {
-    "Tanatologia": [
-      { id: "SM8xrAk67oQ", title: "Aula gratuita: morte e tanatognose — Medicina Legal", channel: "Dedicação Delta" },
-      { id: "checgsa4jqA", title: "Medicina Legal — tanatologia forense", channel: "Escola de Direito" },
+    Tanatologia: [
+      {
+        id: "SM8xrAk67oQ",
+        title: "Aula gratuita: morte e tanatognose — Medicina Legal",
+        channel: "Dedicação Delta",
+      },
+      {
+        id: "checgsa4jqA",
+        title: "Medicina Legal — tanatologia forense",
+        channel: "Escola de Direito",
+      },
     ],
     "Traumatologia forense": [
-      { id: "1MqSb6aQqx0", title: "Medicina Legal (Perito Criminal) — traumatologia forense", channel: "CNE Concursos Públicos" },
-      { id: "R-Qc4tLHGlU", title: "Aprenda Medicina Legal — traumatologia (PCMG)", channel: "VALE CONCURSOS" },
-      { id: "K6sJvqfdBG0", title: "Medicina Legal — traumatologia forense I", channel: "Andre Uchoa" },
-      { id: "Isr6FaTXabI", title: "Medicina Legal — traumatologia forense", channel: "Professora Danielle Mamed" },
+      {
+        id: "1MqSb6aQqx0",
+        title: "Medicina Legal (Perito Criminal) — traumatologia forense",
+        channel: "CNE Concursos Públicos",
+      },
+      {
+        id: "R-Qc4tLHGlU",
+        title: "Aprenda Medicina Legal — traumatologia (PCMG)",
+        channel: "VALE CONCURSOS",
+      },
+      {
+        id: "K6sJvqfdBG0",
+        title: "Medicina Legal — traumatologia forense I",
+        channel: "Andre Uchoa",
+      },
+      {
+        id: "Isr6FaTXabI",
+        title: "Medicina Legal — traumatologia forense",
+        channel: "Professora Danielle Mamed",
+      },
     ],
     "Perícias criminais": [
-      { id: "2cTlwp9F3AU", title: "Pós-edital: Criminalística — Prof. Alexandre Herculano", channel: "Estratégia Concursos" },
-      { id: "njPYRn0GZmc", title: "Criminalística na prática — Prof. Gustavo Lopes", channel: "AlfaCon" },
+      {
+        id: "2cTlwp9F3AU",
+        title: "Pós-edital: Criminalística — Prof. Alexandre Herculano",
+        channel: "Estratégia Concursos",
+      },
+      {
+        id: "njPYRn0GZmc",
+        title: "Criminalística na prática — Prof. Gustavo Lopes",
+        channel: "AlfaCon",
+      },
     ],
     "*": [
-      { id: "VYkosV9AYJE", title: "Concurso Polícia Civil/BA: Medicina Legal", channel: "Cursos do Portal" },
-      { id: "qwVOX4HmwJ4", title: "Noções de Medicina Legal — Polícia Científica e Polícia Civil", channel: "CSI BR por Perito Walker Duarte" },
-      { id: "uMuJGlvHq_o", title: "Concurso PC BA 2024 — aula de Medicina Legal (AlfaCon)", channel: "AlfaCon" },
-      { id: "rjNJDAxTWzc", title: "Introdução à Medicina Legal e perícias médico-legais", channel: "Supremo" },
+      {
+        id: "VYkosV9AYJE",
+        title: "Concurso Polícia Civil/BA: Medicina Legal",
+        channel: "Cursos do Portal",
+      },
+      {
+        id: "qwVOX4HmwJ4",
+        title: "Noções de Medicina Legal — Polícia Científica e Polícia Civil",
+        channel: "CSI BR por Perito Walker Duarte",
+      },
+      {
+        id: "uMuJGlvHq_o",
+        title: "Concurso PC BA 2024 — aula de Medicina Legal (AlfaCon)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "rjNJDAxTWzc",
+        title: "Introdução à Medicina Legal e perícias médico-legais",
+        channel: "Supremo",
+      },
     ],
     "Identificação humana": [
-      { id: "-j3EX9g5Kfs", title: "Antropologia forense — identificação e reconhecimento (Medicina Legal)", channel: "Curso EMDELTA" },
+      {
+        id: "-j3EX9g5Kfs",
+        title: "Antropologia forense — identificação e reconhecimento (Medicina Legal)",
+        channel: "Curso EMDELTA",
+      },
       { id: "uZF9MboG3O4", title: "Noções de papiloscopia", channel: "Hey, Professor!" },
-      { id: "bI3b3ZQbH9E", title: "Missão Aprovado PC GO Papiloscopista — noções de identificação", channel: "Gran Cursos Online" },
+      {
+        id: "bI3b3ZQbH9E",
+        title: "Missão Aprovado PC GO Papiloscopista — noções de identificação",
+        channel: "Gran Cursos Online",
+      },
     ],
     "Sexologia forense": [
-      { id: "oZecsJYH-1g", title: "Perícia criminal — Medicina Legal: sexologia forense (Prof. Nelson, aula 03)", embeddable: false },
-      { id: "lVuDu6QTfyU", title: "Sexologia forense — exercícios (Medicina Legal 13/19)", channel: "Lac Concursos - Principal" },
-      { id: "q1zAUdiw1Lg", title: "Sexologia forense: gravidez, parto, puerpério e aborto", channel: "Supremo" },
+      {
+        id: "oZecsJYH-1g",
+        title: "Perícia criminal — Medicina Legal: sexologia forense (Prof. Nelson, aula 03)",
+        embeddable: false,
+      },
+      {
+        id: "lVuDu6QTfyU",
+        title: "Sexologia forense — exercícios (Medicina Legal 13/19)",
+        channel: "Lac Concursos - Principal",
+      },
+      {
+        id: "q1zAUdiw1Lg",
+        title: "Sexologia forense: gravidez, parto, puerpério e aborto",
+        channel: "Supremo",
+      },
     ],
   },
   "Geopolítica e Língua Estrangeira": {
     "Interpretação de textos em inglês": [
-      { id: "64Z8RFeCQuw", title: "Questões CEBRASPE: Inglês para concursos", channel: "Aprova Concursos" },
-      { id: "4AVILeF7Was", title: "Prova CEBRASPE — correção de Inglês", channel: "Professor Daniel Marques - Inglês e Português" },
-      { id: "VC1ZJavg6eg", title: "Maratona — interpretação de textos em inglês", channel: "Inglês para Concursos" },
+      {
+        id: "64Z8RFeCQuw",
+        title: "Questões CEBRASPE: Inglês para concursos",
+        channel: "Aprova Concursos",
+      },
+      {
+        id: "4AVILeF7Was",
+        title: "Prova CEBRASPE — correção de Inglês",
+        channel: "Professor Daniel Marques - Inglês e Português",
+      },
+      {
+        id: "VC1ZJavg6eg",
+        title: "Maratona — interpretação de textos em inglês",
+        channel: "Inglês para Concursos",
+      },
     ],
     "Geopolítica brasileira e fronteiras": [
-      { id: "btEEogItU9I", title: "Aulão especial PRF — geopolítica brasileira", embeddable: false },
-      { id: "n8KY8nqTeDM", title: "Aula de geopolítica para o concurso da PRF — Prof. Italo Trigueiro", channel: "AlfaCon" },
-      { id: "nMHXf6umR7U", title: "Aula de geopolítica para PF e PRF (AlfaCon)", channel: "AlfaCon" },
-      { id: "TGwCYMP4mwI", title: "Concurso PRF 2021 — geopolítica brasileira, aula 1", channel: "Geografia 2.0 I Prof. Thiago Araújo" },
-      { id: "hLjb5tWWcas", title: "Concurso PRF 2023 — geopolítica, desafio 21 dias", channel: "AlfaCon" },
-      { id: "272Cnvgf8tI", title: "Como estudar geopolítica brasileira para o concurso da PRF", channel: "Prof. JeanGrafia | GabaritaGeo" },
+      {
+        id: "btEEogItU9I",
+        title: "Aulão especial PRF — geopolítica brasileira",
+        embeddable: false,
+      },
+      {
+        id: "n8KY8nqTeDM",
+        title: "Aula de geopolítica para o concurso da PRF — Prof. Italo Trigueiro",
+        channel: "AlfaCon",
+      },
+      {
+        id: "nMHXf6umR7U",
+        title: "Aula de geopolítica para PF e PRF (AlfaCon)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "TGwCYMP4mwI",
+        title: "Concurso PRF 2021 — geopolítica brasileira, aula 1",
+        channel: "Geografia 2.0 I Prof. Thiago Araújo",
+      },
+      {
+        id: "hLjb5tWWcas",
+        title: "Concurso PRF 2023 — geopolítica, desafio 21 dias",
+        channel: "AlfaCon",
+      },
+      {
+        id: "272Cnvgf8tI",
+        title: "Como estudar geopolítica brasileira para o concurso da PRF",
+        channel: "Prof. JeanGrafia | GabaritaGeo",
+      },
     ],
     "Interpretação de textos em espanhol": [
-      { id: "x4b0v5TavvY", title: "Concurso PRF 2023 — aula de Espanhol, começando do zero", channel: "AlfaCon" },
+      {
+        id: "x4b0v5TavvY",
+        title: "Concurso PRF 2023 — aula de Espanhol, começando do zero",
+        channel: "AlfaCon",
+      },
       { id: "jkSPnPVffLY", title: "PRF — questões de Espanhol", channel: "JUS POLIS" },
     ],
     "*": [
-      { id: "pWL-4RBHZA8", title: "Inglês ou Espanhol para PRF? Dúvidas frequentes", channel: "AlfaCon" },
+      {
+        id: "pWL-4RBHZA8",
+        title: "Inglês ou Espanhol para PRF? Dúvidas frequentes",
+        channel: "AlfaCon",
+      },
     ],
   },
   "Ética no Serviço Público": {
     "Código de ética do servidor (Decreto 1.171/1994)": [
-      { id: "00izlYOFbWw", title: "Ética no serviço público: Decreto 1.171/1994 — Código de Ética do Servidor Público Federal", channel: "Qualis Concursos" },
-      { id: "KBB1p1IXFf4", title: "Decreto 1.171/94 — Código de Ética (atualizado em 2025)", channel: "Prof. Guilherme de Luca" },
-      { id: "GQ6EyOB_xpU", title: "Decreto 1.171/94 — Código de Ética completo", channel: "Marks EDU" },
-      { id: "UU5kx1S3r0I", title: "Código de Ética — Decreto 1.171/94 — Profª Raquel Stasiak", channel: "Cejurisoficial" },
-      { id: "vk73DkDzQ1E", title: "Ética no serviço público — Decreto 1171/94", channel: "Professor Andre Barbieri" },
+      {
+        id: "00izlYOFbWw",
+        title:
+          "Ética no serviço público: Decreto 1.171/1994 — Código de Ética do Servidor Público Federal",
+        channel: "Qualis Concursos",
+      },
+      {
+        id: "KBB1p1IXFf4",
+        title: "Decreto 1.171/94 — Código de Ética (atualizado em 2025)",
+        channel: "Prof. Guilherme de Luca",
+      },
+      {
+        id: "GQ6EyOB_xpU",
+        title: "Decreto 1.171/94 — Código de Ética completo",
+        channel: "Marks EDU",
+      },
+      {
+        id: "UU5kx1S3r0I",
+        title: "Código de Ética — Decreto 1.171/94 — Profª Raquel Stasiak",
+        channel: "Cejurisoficial",
+      },
+      {
+        id: "vk73DkDzQ1E",
+        title: "Ética no serviço público — Decreto 1171/94",
+        channel: "Professor Andre Barbieri",
+      },
     ],
   },
-  "Criminologia": {
+  Criminologia: {
     "Escolas criminológicas": [
-      { id: "rAhPl-5d9Nc", title: "Escolas Clássica e Positiva — Criminologia (SmartPol)", channel: "SmartPol Carreiras Policiais" },
+      {
+        id: "rAhPl-5d9Nc",
+        title: "Escolas Clássica e Positiva — Criminologia (SmartPol)",
+        channel: "SmartPol Carreiras Policiais",
+      },
     ],
     "Conceito, métodos e finalidades": [
-      { id: "xsRIyWybAYo", title: "Criminologia — conceito, métodos, objetos e finalidades (Polícia Civil SP)", channel: "Prof. Diego Pureza" },
+      {
+        id: "xsRIyWybAYo",
+        title: "Criminologia — conceito, métodos, objetos e finalidades (Polícia Civil SP)",
+        channel: "Prof. Diego Pureza",
+      },
     ],
     "Prevenção do delito": [
-      { id: "XNa8u5tHARU", title: "Criminologia — prevenção do delito (Polícia Civil SP)", channel: "Prof. Diego Pureza" },
+      {
+        id: "XNa8u5tHARU",
+        title: "Criminologia — prevenção do delito (Polícia Civil SP)",
+        channel: "Prof. Diego Pureza",
+      },
     ],
     "*": [
       { id: "OuMAqbb70rs", title: "Concurso PC SP: aula de Criminologia", channel: "Qconcursos" },
-      { id: "B_AEqRbW1is", title: "Aula gratuita — Criminologia para PC SP (AlfaCon)", channel: "AlfaCon" },
-      { id: "DJOKkTcQeHM", title: "Criminologia — curso completo — Prof. Ronaldo Paiva", channel: "Professor Ronaldo Paiva - Fala, Xerife!" },
-      { id: "KUXs_7kh_BY", title: "Concursos PM CE: noções de Criminologia em questões", channel: "Gran Cursos Online" },
-      { id: "PLZvSkVqe_ub4tzEulAKOf6ngvQ4Vggilc", title: "Criminologia para a Polícia Civil (playlist)", channel: "Prof. Diego Pureza" },
+      {
+        id: "B_AEqRbW1is",
+        title: "Aula gratuita — Criminologia para PC SP (AlfaCon)",
+        channel: "AlfaCon",
+      },
+      {
+        id: "DJOKkTcQeHM",
+        title: "Criminologia — curso completo — Prof. Ronaldo Paiva",
+        channel: "Professor Ronaldo Paiva - Fala, Xerife!",
+      },
+      {
+        id: "KUXs_7kh_BY",
+        title: "Concursos PM CE: noções de Criminologia em questões",
+        channel: "Gran Cursos Online",
+      },
+      {
+        id: "PLZvSkVqe_ub4tzEulAKOf6ngvQ4Vggilc",
+        title: "Criminologia para a Polícia Civil (playlist)",
+        channel: "Prof. Diego Pureza",
+      },
     ],
   },
   "Carreiras (PRF, PF, PC)": {

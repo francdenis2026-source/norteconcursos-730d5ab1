@@ -1,87 +1,132 @@
-import { PAYMENTS_ENABLED, PAYMENTS_NOTICE } from '../lib/launch.config';
-import { contests as mockContests, questions as mockQuestions, disciplines as mockDisciplines } from "../data/mock";
-import { Contest, Question, UserResponse, PerformanceStats, UserStreak, Achievement, SubscriptionAuditLog, UserProfile } from "../types";
+import { userStorageKey } from "@/lib/userStorage";
+import { PAYMENTS_ENABLED, PAYMENTS_NOTICE } from "../lib/launch.config";
+import {
+  contests as mockContests,
+  questions as mockQuestions,
+  disciplines as mockDisciplines,
+} from "../data/mock";
+import {
+  Contest,
+  Question,
+  UserResponse,
+  PerformanceStats,
+  UserStreak,
+  Achievement,
+  SubscriptionAuditLog,
+  UserProfile,
+} from "../types";
 
 import { supabase } from "@/integrations/supabase/client";
 
 const STORAGE_KEYS = {
-  USER_RESPONSES: 'norte_user_responses',
-  FOCUSED_CONTEST: 'norte_focused_contest',
-  NOTEBOOKS: 'norte_notebooks',
-  STUDY_PLAN: 'norte_study_plan',
-  DEMO_DATA_LOADED: 'norte_demo_loaded',
-  ONBOARDING: 'norte_onboarding'
+  get USER_RESPONSES() {
+    return userStorageKey("norte_user_responses");
+  },
+  get FOCUSED_CONTEST() {
+    return userStorageKey("norte_focused_contest");
+  },
+  get NOTEBOOKS() {
+    return userStorageKey("norte_notebooks");
+  },
+  get STUDY_PLAN() {
+    return userStorageKey("norte_study_plan");
+  },
+  get DEMO_DATA_LOADED() {
+    return userStorageKey("norte_demo_loaded");
+  },
+  get ONBOARDING() {
+    return userStorageKey("norte_onboarding");
+  },
 };
+
+function mapContest(row: Record<string, unknown>): Contest {
+  return {
+    id: String(row["id"]),
+    name: String(row["name"] ?? ""),
+    agency: String(row["agency"] ?? ""),
+    career: String(row["career"] ?? "Policial") as Contest["career"],
+    role: String(row["role"] ?? ""),
+    examBoard: String(row["exam_board"] ?? ""),
+    educationLevel: String(row["education_level"] ?? "Superior") as Contest["educationLevel"],
+    location: String(row["location"] ?? ""),
+    status: String(row["status"] ?? "Previsto") as Contest["status"],
+    vacancies: Number(row["vacancies"] ?? 0),
+    salary: Number(row["salary"] ?? 0),
+    ...(row["exam_date"] ? { examDate: String(row["exam_date"]) } : {}),
+    ...(row["start_date"] ? { startDate: String(row["start_date"]) } : {}),
+    ...(row["end_date"] ? { endDate: String(row["end_date"]) } : {}),
+    isDemo: Boolean(row["is_demo"]),
+  };
+}
 
 export const MockService = {
   // Contests
   getContests: async (): Promise<Contest[]> => {
-    try {
-      const now = new Date().toISOString();
-      const { data, error } = await supabase
-        .from('contests')
-        .select('*');
-      
-      let contests: Contest[] = [];
-      if (error || !data || data.length === 0) {
-        contests = mockContests;
-      } else {
-        contests = data as unknown as Contest[];
-      }
-
-      // Filter only active contests (if dates are provided)
-      return contests.filter(c => {
-        const start = c.startDate ? new Date(c.startDate).getTime() : 0;
-        const end = c.endDate ? new Date(c.endDate).getTime() : Infinity;
-        const currentTime = new Date().getTime();
-        return currentTime >= start && currentTime <= end;
-      });
-    } catch (e) {
-      return mockContests;
-    }
+    const { data, error } = await supabase.from("contests").select("*").eq("is_demo", false);
+    if (error) throw error;
+    return (data ?? []).map(mapContest).filter((c) => !/fict[ií]cio/i.test(c.name));
   },
-
   getContestById: async (id: string): Promise<Contest | undefined> => {
-    try {
-      const { data, error } = await supabase.from('contests').select('*').eq('id', id).single();
-      if (error || !data) return mockContests.find(c => c.id === id);
-      return data as unknown as Contest;
-    } catch (e) {
-      return mockContests.find(c => c.id === id);
-    }
+    const { data, error } = await supabase
+      .from("contests")
+      .select("*")
+      .eq("id", id)
+      .eq("is_demo", false)
+      .maybeSingle();
+    if (error) throw error;
+    return data ? mapContest(data) : undefined;
   },
-
-  setFocusedContest: (id: string) => {
+  setFocusedContest: async (id: string) => {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+    if (!session) throw new Error("Entre na sua conta para definir o concurso.");
+    const { error } = await supabase
+      .from("profiles")
+      .update({ focused_contest_id: id })
+      .eq("id", session.user.id);
+    if (error) throw error;
     localStorage.setItem(STORAGE_KEYS.FOCUSED_CONTEST, id);
-    // Posteriormente: sincronizar com profile no Supabase
   },
-
   getFocusedContest: async (): Promise<Contest | undefined> => {
-    const id = localStorage.getItem(STORAGE_KEYS.FOCUSED_CONTEST);
-    if (!id) return undefined;
-    return MockService.getContestById(id);
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+    if (!session) return undefined;
+    const { data, error } = await supabase
+      .from("profiles")
+      .select("focused_contest_id")
+      .eq("id", session.user.id)
+      .single();
+    if (error) throw error;
+    return data?.focused_contest_id
+      ? MockService.getContestById(data.focused_contest_id)
+      : undefined;
   },
 
   // Questions
-  getQuestions: async (filters?: any): Promise<Question[]> => {
+  getQuestions: async (filters?: {
+    disciplineId?: string;
+    difficulty?: string;
+  }): Promise<Question[]> => {
     try {
-      let query = supabase.from('questions').select('*');
-      
+      let query = supabase.from("questions").select("*");
+
       if (filters?.disciplineId) {
-        query = query.eq('discipline_id', filters.disciplineId);
+        query = query.eq("discipline_id", filters.disciplineId);
       }
       if (filters?.difficulty) {
-        query = query.eq('difficulty', filters.difficulty);
+        query = query.eq("difficulty", filters.difficulty);
       }
 
       const { data, error } = await query;
       if (error || !data || data.length === 0) {
         let filtered = [...mockQuestions];
         if (filters?.disciplineId) {
-          filtered = filtered.filter(q => q.disciplineId === filters.disciplineId);
+          filtered = filtered.filter((q) => q.disciplineId === filters.disciplineId);
         }
         if (filters?.difficulty) {
-          filtered = filtered.filter(q => q.difficulty === filters.difficulty);
+          filtered = filtered.filter((q) => q.difficulty === filters.difficulty);
         }
         return filtered;
       }
@@ -95,38 +140,49 @@ export const MockService = {
     const responses = MockService.getUserResponses();
     responses.push(response);
     localStorage.setItem(STORAGE_KEYS.USER_RESPONSES, JSON.stringify(responses));
-    
+
     // Check for achievements upon saving response
     if (responses.length === 10) {
       const achievements = await MockService.getAchievements();
-      const first10 = achievements.find(a => a.code === 'FIRST_10');
+      const first10 = achievements.find((a) => a.code === "FIRST_10");
       if (first10) {
         // Persist attainment locally to trigger real-time notification in layout
-        const currentAttained = localStorage.getItem('norte_user_achievements_attained') || '[]';
+        const currentAttained =
+          localStorage.getItem(userStorageKey("norte_user_achievements_attained")) || "[]";
         const attained = JSON.parse(currentAttained);
-        if (!attained.includes('FIRST_10')) {
-          attained.push('FIRST_10');
-          localStorage.setItem('norte_user_achievements_attained', JSON.stringify(attained));
-          
+        if (!attained.includes("FIRST_10")) {
+          attained.push("FIRST_10");
+          localStorage.setItem(
+            userStorageKey("norte_user_achievements_attained"),
+            JSON.stringify(attained),
+          );
+
           // Add to current achievements list if not already there
-          const currentA = JSON.parse(localStorage.getItem('norte_user_achievements') || '[]');
-          if (!currentA.find((a: any) => a.code === 'FIRST_10')) {
+          const currentA = JSON.parse(
+            localStorage.getItem(userStorageKey("norte_user_achievements")) || "[]",
+          );
+          if (!currentA.find((a: { code: string }) => a.code === "FIRST_10")) {
             currentA.push(first10);
-            localStorage.setItem('norte_user_achievements', JSON.stringify(currentA));
+            localStorage.setItem(
+              userStorageKey("norte_user_achievements"),
+              JSON.stringify(currentA),
+            );
           }
         }
       }
     }
 
     // Tenta salvar no Supabase se o usuário estiver logado
-    const { data: { session } } = await supabase.auth.getSession();
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
     if (session) {
-      await supabase.from('user_responses').insert({
+      await supabase.from("user_responses").insert({
         user_id: session.user.id,
         question_id: response.questionId,
         selected_option_id: response.selectedOptionId,
         is_correct: response.isCorrect,
-        time_spent: response.timeSpent
+        time_spent: response.timeSpent,
       });
     }
   },
@@ -140,23 +196,25 @@ export const MockService = {
   getPerformanceStats: async (): Promise<PerformanceStats> => {
     try {
       // Prioriza dados do Supabase se logado
-      const { data: { session } } = await supabase.auth.getSession();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
       let responses: UserResponse[] = [];
-      
+
       if (session) {
         const { data, error } = await supabase
-          .from('user_responses')
-          .select('*')
-          .eq('user_id', session.user.id);
-        
+          .from("user_responses")
+          .select("*")
+          .eq("user_id", session.user.id);
+
         if (!error && data) {
-          responses = data.map(r => ({
+          responses = data.map((r) => ({
             questionId: r.question_id,
             selectedOptionId: r.selected_option_id,
             isCorrect: r.is_correct,
             time_spent: r.time_spent, // API returns snake_case
             timeSpent: r.time_spent,
-            createdAt: r.created_at
+            createdAt: r.created_at,
           }));
         } else {
           responses = MockService.getUserResponses();
@@ -165,18 +223,18 @@ export const MockService = {
         responses = MockService.getUserResponses();
       }
 
-      const correct = responses.filter(r => r.isCorrect).length;
+      const correct = responses.filter((r) => r.isCorrect).length;
       const total = responses.length;
-      
-      const byDiscipline = mockDisciplines.map(d => {
-        const discResponses = responses.filter(r => {
-          const q = mockQuestions.find(question => question.id === r.questionId);
+
+      const byDiscipline = mockDisciplines.map((d) => {
+        const discResponses = responses.filter((r) => {
+          const q = mockQuestions.find((question) => question.id === r.questionId);
           return q?.disciplineId === d.id;
         });
         return {
           disciplineId: d.id,
           total: discResponses.length,
-          correct: discResponses.filter(r => r.isCorrect).length
+          correct: discResponses.filter((r) => r.isCorrect).length,
         };
       });
 
@@ -185,12 +243,18 @@ export const MockService = {
         correctAnswers: correct,
         timeSpent: responses.reduce((acc, r) => acc + (r.timeSpent || 0), 0),
         accuracyRate: total > 0 ? (correct / total) * 100 : 0,
-        byDiscipline
+        byDiscipline,
       };
     } catch (e) {
       const localResponses = MockService.getUserResponses();
       // ... same fallback logic if needed
-      return { totalQuestions: 0, correctAnswers: 0, timeSpent: 0, accuracyRate: 0, byDiscipline: [] };
+      return {
+        totalQuestions: 0,
+        correctAnswers: 0,
+        timeSpent: 0,
+        accuracyRate: 0,
+        byDiscipline: [],
+      };
     }
   },
 
@@ -201,92 +265,75 @@ export const MockService = {
   },
 
   resetDemo: () => {
-    localStorage.clear();
+    for (const key of Object.keys(localStorage)) {
+      if (key.startsWith("norte_") && key.endsWith(userStorageKey("").slice(0)))
+        localStorage.removeItem(key);
+    }
   },
 
   // Admin CRUD operations
-  createContest: async (contest: Omit<Contest, 'id'>): Promise<Contest | null> => {
+  createContest: async (contest: Omit<Contest, "id">): Promise<Contest | null> => {
     try {
-      const { data, error } = await supabase
-        .from('contests')
-        .insert(contest)
-        .select()
-        .single();
+      const { data, error } = await supabase.from("contests").insert(contest).select().single();
       if (error) throw error;
       return data as unknown as Contest;
     } catch (e) {
-      console.error('Error creating contest:', e);
+      console.error("Error creating contest:", e);
       return null;
     }
   },
 
   updateContest: async (id: string, updates: Partial<Contest>): Promise<boolean> => {
     try {
-      const { error } = await supabase
-        .from('contests')
-        .update(updates)
-        .eq('id', id);
+      const { error } = await supabase.from("contests").update(updates).eq("id", id);
       if (error) throw error;
       return true;
     } catch (e) {
-      console.error('Error updating contest:', e);
+      console.error("Error updating contest:", e);
       return false;
     }
   },
 
   deleteContest: async (id: string): Promise<boolean> => {
     try {
-      const { error } = await supabase
-        .from('contests')
-        .delete()
-        .eq('id', id);
+      const { error } = await supabase.from("contests").delete().eq("id", id);
       if (error) throw error;
       return true;
     } catch (e) {
-      console.error('Error deleting contest:', e);
+      console.error("Error deleting contest:", e);
       return false;
     }
   },
 
-  createQuestion: async (question: Omit<Question, 'id'>): Promise<Question | null> => {
+  createQuestion: async (question: Omit<Question, "id">): Promise<Question | null> => {
     try {
-      const { data, error } = await supabase
-        .from('questions')
-        .insert(question)
-        .select()
-        .single();
+      const { data, error } = await supabase.from("questions").insert(question).select().single();
       if (error) throw error;
       return data as unknown as Question;
     } catch (e) {
-      console.error('Error creating question:', e);
+      console.error("Error creating question:", e);
       return null;
     }
   },
 
   updateQuestion: async (id: string, updates: Partial<Question>): Promise<boolean> => {
     try {
-      const { error } = await supabase
-        .from('questions')
-        .update(updates)
-        .eq('id', id);
+      const { error } = await supabase.from("questions").update(updates).eq("id", id);
       if (error) throw error;
       return true;
     } catch (e) {
-      console.error('Error updating question:', e);
+      console.error("Error updating question:", e);
       return false;
     }
   },
 
   deleteQuestion: async (id: string): Promise<boolean> => {
     try {
-      const { error } = await supabase
-        .from('questions')
-        .delete()
-        .eq('id', id);
+      const { error } = await supabase.from("questions").delete().eq("id", id);
       if (error) throw error;
       return true;
     } catch (e) {
-      console.error('Error deleting question:', e);
+      console.error("Error deleting question:", e);
       return false;
     }
   },
@@ -294,7 +341,7 @@ export const MockService = {
   // Subscription Plans Management
   getSubscriptionPlans: async () => {
     try {
-      const { data, error } = await supabase.from('subscription_plans').select('*');
+      const { data, error } = await supabase.from("subscription_plans").select("*");
       if (error || !data || data.length === 0) return null;
       return data;
     } catch (e) {
@@ -302,30 +349,38 @@ export const MockService = {
     }
   },
 
-  updateSubscriptionPlan: async (id: string, updates: any, adminId?: string) => {
+  updateSubscriptionPlan: async (
+    id: string,
+    updates: Record<string, unknown>,
+    adminId?: string,
+  ) => {
     try {
       // 1. Get current state for audit log
-      const { data: oldPlan } = await supabase.from('subscription_plans').select('*').eq('id', id).single();
-      
+      const { data: oldPlan } = await supabase
+        .from("subscription_plans")
+        .select("*")
+        .eq("id", id)
+        .single();
+
       // 2. Update the plan
-      const { error } = await supabase.from('subscription_plans').update(updates).eq('id', id);
+      const { error } = await supabase.from("subscription_plans").update(updates).eq("id", id);
       if (error) throw error;
 
       // 3. Create audit log if we have the adminId
       if (adminId && oldPlan) {
-        await supabase.from('admin_audit_logs').insert({
+        await supabase.from("admin_audit_logs").insert({
           admin_id: adminId,
-          action: 'UPDATE_PLAN',
-          entity_type: 'subscription_plan',
+          action: "UPDATE_PLAN",
+          entity_type: "subscription_plan",
           entity_id: id,
           old_values: oldPlan,
-          new_values: updates
+          new_values: updates,
         });
       }
-      
+
       return true;
     } catch (e) {
-      console.error('Error updating plan:', e);
+      console.error("Error updating plan:", e);
       return false;
     }
   },
@@ -333,52 +388,63 @@ export const MockService = {
   getAdminAuditLogs: async () => {
     try {
       const { data, error } = await supabase
-        .from('admin_audit_logs')
-        .select(`
+        .from("admin_audit_logs")
+        .select(
+          `
           *,
           admin:profiles(full_name, email)
-        `)
-        .order('created_at', { ascending: false });
-      
+        `,
+        )
+        .order("created_at", { ascending: false });
+
       if (error) throw error;
       return data;
     } catch (e) {
-      console.error('Error fetching audit logs:', e);
+      console.error("Error fetching audit logs:", e);
       return [];
     }
   },
 
   // Access Logging
-  logAccessAttempt: async (featureKey: string, tier: string, wasBlocked: boolean, metadata: any = {}) => {
+  logAccessAttempt: async (
+    featureKey: string,
+    tier: string,
+    wasBlocked: boolean,
+    metadata: Record<string, unknown> = {},
+  ) => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
       if (session) {
-        await supabase.from('access_audit_logs').insert({
+        await supabase.from("access_audit_logs").insert({
           user_id: session.user.id,
           feature_key: featureKey,
           tier,
           was_blocked: wasBlocked,
-          metadata
+          metadata,
         });
       }
     } catch (e) {
-      console.error('Error logging access attempt:', e);
+      console.error("Error logging access attempt:", e);
     }
   },
 
   getAccessAuditLogs: async () => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
       if (!session) return [];
       const { data, error } = await supabase
-        .from('access_audit_logs')
-        .select('*')
-        .eq('user_id', session.user.id)
-        .order('attempt_time', { ascending: false });
+        .from("access_audit_logs")
+        .select("*")
+        .eq("user_id", session.user.id)
+        .order("attempt_time", { ascending: false });
       if (error) throw error;
       return data;
     } catch (e) {
-      console.error('Error fetching audit logs:', e);
+      console.error("Error fetching audit logs:", e);
       return [];
     }
   },
@@ -386,33 +452,45 @@ export const MockService = {
   // Onboarding
   getOnboardingStatus: async () => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
       if (session) {
         const { data, error } = await supabase
-          .from('profiles')
-          .select('onboarding_steps, onboarding_done')
-          .eq('id', session.user.id)
+          .from("profiles")
+          .select("onboarding_steps, onboarding_done")
+          .eq("id", session.user.id)
           .single();
         if (!error && data) return data;
       }
-      
+
       const local = localStorage.getItem(STORAGE_KEYS.ONBOARDING);
-      return local ? JSON.parse(local) : { onboarding_steps: { contest: false, notebook: false, plan: false }, onboarding_done: false };
+      return local
+        ? JSON.parse(local)
+        : {
+            onboarding_steps: { contest: false, notebook: false, plan: false },
+            onboarding_done: false,
+          };
     } catch (e) {
-      return { onboarding_steps: { contest: false, notebook: false, plan: false }, onboarding_done: false };
+      return {
+        onboarding_steps: { contest: false, notebook: false, plan: false },
+        onboarding_done: false,
+      };
     }
   },
 
-  updateOnboardingStatus: async (updates: { onboarding_steps?: any, onboarding_done?: boolean }) => {
+  updateOnboardingStatus: async (updates: {
+    onboarding_steps?: Record<string, boolean>;
+    onboarding_done?: boolean;
+  }) => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
       if (session) {
-        await supabase
-          .from('profiles')
-          .update(updates)
-          .eq('id', session.user.id);
+        await supabase.from("profiles").update(updates).eq("id", session.user.id);
       }
-      
+
       const current = await MockService.getOnboardingStatus();
       const next = { ...current, ...updates };
       localStorage.setItem(STORAGE_KEYS.ONBOARDING, JSON.stringify(next));
@@ -424,100 +502,119 @@ export const MockService = {
 
   // Mock Exam Logic
   getMockExams: async () => {
-    const stored = localStorage.getItem('norte_mock_exams');
+    const stored = localStorage.getItem(userStorageKey("norte_mock_exams"));
     return stored ? JSON.parse(stored) : [];
   },
 
-  saveMockExam: async (exam: any) => {
+  saveMockExam: async (exam: {
+    id: string;
+    correct: number;
+    total: number;
+    duration: number;
+    [key: string]: unknown;
+  }) => {
     const exams = await MockService.getMockExams();
-    const index = exams.findIndex((e: any) => e.id === exam.id);
+    const index = exams.findIndex((e: { id: string }) => e.id === exam.id);
     if (index >= 0) {
       exams[index] = exam;
     } else {
       exams.push(exam);
     }
-    localStorage.setItem('norte_mock_exams', JSON.stringify(exams));
+    localStorage.setItem(userStorageKey("norte_mock_exams"), JSON.stringify(exams));
 
     // Achievement check: Perfect score
     if (exam.correct === exam.total) {
       const achievements = await MockService.getAchievements();
-      const perfect = achievements.find(a => a.code === 'PERFECT_SCORE');
+      const perfect = achievements.find((a) => a.code === "PERFECT_SCORE");
       if (perfect) {
-        const currentAttained = localStorage.getItem('norte_user_achievements_attained') || '[]';
+        const currentAttained =
+          localStorage.getItem(userStorageKey("norte_user_achievements_attained")) || "[]";
         const attained = JSON.parse(currentAttained);
-        if (!attained.includes('PERFECT_SCORE')) {
-          attained.push('PERFECT_SCORE');
-          localStorage.setItem('norte_user_achievements_attained', JSON.stringify(attained));
-          
-          const currentA = JSON.parse(localStorage.getItem('norte_user_achievements') || '[]');
-          if (!currentA.find((a: any) => a.code === 'PERFECT_SCORE')) {
+        if (!attained.includes("PERFECT_SCORE")) {
+          attained.push("PERFECT_SCORE");
+          localStorage.setItem(
+            userStorageKey("norte_user_achievements_attained"),
+            JSON.stringify(attained),
+          );
+
+          const currentA = JSON.parse(
+            localStorage.getItem(userStorageKey("norte_user_achievements")) || "[]",
+          );
+          if (!currentA.find((a: { code: string }) => a.code === "PERFECT_SCORE")) {
             currentA.push(perfect);
-            localStorage.setItem('norte_user_achievements', JSON.stringify(currentA));
+            localStorage.setItem(
+              userStorageKey("norte_user_achievements"),
+              JSON.stringify(currentA),
+            );
           }
         }
       }
     }
 
     // Sincroniza com Supabase se logado
-    const { data: { session } } = await supabase.auth.getSession();
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
     if (session) {
-      await supabase.from('mock_exam_results').insert({
+      await supabase.from("mock_exam_results").insert({
         user_id: session.user.id,
         exam_id: exam.id,
         total_questions: exam.total,
         correct_answers: exam.correct,
         duration_seconds: exam.duration,
-        finished_at: exam.finishedAt
+        finished_at: exam["finishedAt"],
       });
     }
   },
 
   // Syllabus Logic
   getSyllabusProgress: async (contestId: string) => {
-    const stored = localStorage.getItem(`norte_syllabus_${contestId}`);
+    const stored = localStorage.getItem(userStorageKey(`norte_syllabus_${contestId}`));
     return stored ? JSON.parse(stored) : {};
   },
 
   updateSyllabusTopic: async (contestId: string, topicId: string, status: string) => {
     const progress = await MockService.getSyllabusProgress(contestId);
     progress[topicId] = status;
-    localStorage.setItem(`norte_syllabus_${contestId}`, JSON.stringify(progress));
+    localStorage.setItem(userStorageKey(`norte_syllabus_${contestId}`), JSON.stringify(progress));
   },
 
   // Goals Logic
   getStudyGoals: async () => {
-    const stored = localStorage.getItem('norte_study_goals');
+    const stored = localStorage.getItem(userStorageKey("norte_study_goals"));
     return stored ? JSON.parse(stored) : [];
   },
 
   updateGoal: async (goalId: string, current: number) => {
     const goals = await MockService.getStudyGoals();
-    const index = goals.findIndex((g: any) => g.id === goalId);
+    const index = goals.findIndex((g: { id: string }) => g.id === goalId);
     if (index >= 0) {
       goals[index].current = current;
-      localStorage.setItem('norte_study_goals', JSON.stringify(goals));
+      localStorage.setItem(userStorageKey("norte_study_goals"), JSON.stringify(goals));
     }
   },
 
   // Gamification & Streaks
   getUserStreak: async (): Promise<UserStreak | null> => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
       if (session) {
         const { data, error } = await supabase
-          .from('user_streaks')
-          .select('*')
-          .eq('user_id', session.user.id)
+          .from("user_streaks")
+          .select("*")
+          .eq("user_id", session.user.id)
           .single();
         if (!error && data) {
           return {
             currentStreak: data.current_streak,
             longestStreak: data.longest_streak,
-            lastActivityDate: data.last_activity_date
+            lastActivityDate: data.last_activity_date,
           };
         }
       }
-      return { currentStreak: 0, longestStreak: 0, lastActivityDate: '' };
+      return { currentStreak: 0, longestStreak: 0, lastActivityDate: "" };
     } catch (e) {
       return null;
     }
@@ -525,7 +622,7 @@ export const MockService = {
 
   /** Registra que o aluno entrou hoje para estudar (dia do Acre) e devolve a ofensiva real. */
   registerStudyVisit: async (): Promise<UserStreak | null> => {
-    const { data, error } = await supabase.rpc('register_study_visit');
+    const { data, error } = await supabase.rpc("register_study_visit");
     const row = Array.isArray(data) ? data[0] : data;
     if (error || !row) return null;
     return {
@@ -537,25 +634,27 @@ export const MockService = {
 
   /** Concede no servidor as medalhas cuja meta foi atingida; devolve as novas. */
   awardAchievements: async (): Promise<Achievement[]> => {
-    const { data } = await supabase.rpc('award_achievements');
+    const { data } = await supabase.rpc("award_achievements");
     return (data as Achievement[] | null) ?? [];
   },
 
   getMedalProgress: async (): Promise<MedalProgress[]> => {
-    const { data } = await supabase.rpc('medal_progress');
+    const { data } = await supabase.rpc("medal_progress");
     return (data as MedalProgress[] | null) ?? [];
   },
 
   getAchievements: async (): Promise<Achievement[]> => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
       if (session) {
         const { data, error } = await supabase
-          .from('user_achievements')
-          .select('*, achievement:achievements(*)');
-        if (!error && data) return data.map((a: any) => a.achievement);
+          .from("user_achievements")
+          .select("*, achievement:achievements(*)");
+        if (!error && data) return data.map((a: { achievement: Achievement }) => a.achievement);
       }
-      
+
       // Sem conta não há medalhas: nada de dados de exemplo.
       return [];
     } catch (e) {
@@ -568,14 +667,16 @@ export const MockService = {
   getCommentHistory: async (questionId: string) => {
     try {
       const { data, error } = await supabase
-        .from('comment_audit_logs')
-        .select(`
+        .from("comment_audit_logs")
+        .select(
+          `
           *,
           admin:profiles(full_name)
-        `)
-        .eq('question_id', questionId)
-        .order('created_at', { ascending: false });
-      
+        `,
+        )
+        .eq("question_id", questionId)
+        .order("created_at", { ascending: false });
+
       if (error) throw error;
       return data || [];
     } catch (e) {
@@ -587,19 +688,19 @@ export const MockService = {
   getSubscriptionAuditLogs: async (userId?: string): Promise<SubscriptionAuditLog[]> => {
     try {
       let query = supabase
-        .from('subscription_audit_logs')
-        .select('*')
-        .order('created_at', { ascending: false });
-      
+        .from("subscription_audit_logs")
+        .select("*")
+        .order("created_at", { ascending: false });
+
       if (userId) {
-        query = query.eq('user_id', userId);
+        query = query.eq("user_id", userId);
       }
-      
+
       const { data, error } = await query;
       if (error) throw error;
       return data as SubscriptionAuditLog[];
     } catch (e) {
-      console.error('Error fetching audit logs:', e);
+      console.error("Error fetching audit logs:", e);
       return [];
     }
   },
@@ -607,65 +708,78 @@ export const MockService = {
   validateActivationCode: async (code: string): Promise<{ success: boolean; message: string }> => {
     if (!PAYMENTS_ENABLED) return { success: false, message: PAYMENTS_NOTICE };
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) return { success: false, message: 'Usuário não autenticado' };
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      if (!session) return { success: false, message: "Usuário não autenticado" };
 
       const { data: profile, error } = await supabase
-        .from('profiles')
-        .select('activation_code, activation_attempts, activation_expires_at, is_activated')
-        .eq('id', session.user.id)
+        .from("profiles")
+        .select("activation_code, activation_attempts, activation_expires_at, is_activated")
+        .eq("id", session.user.id)
         .single();
 
-      if (error || !profile) return { success: false, message: 'Perfil não encontrado' };
-      if (profile.is_activated) return { success: false, message: 'Assinatura já ativada' };
-      
+      if (error || !profile) return { success: false, message: "Perfil não encontrado" };
+      if (profile.is_activated) return { success: false, message: "Assinatura já ativada" };
+
       const attempts = (profile.activation_attempts || 0) + 1;
-      
+
       // Update attempts first
-      await supabase.from('profiles').update({ activation_attempts: attempts }).eq('id', session.user.id);
+      await supabase
+        .from("profiles")
+        .update({ activation_attempts: attempts })
+        .eq("id", session.user.id);
 
       if (attempts > 5) {
-        return { success: false, message: 'Número máximo de tentativas excedido. Entre em contato com o suporte.' };
+        return {
+          success: false,
+          message: "Número máximo de tentativas excedido. Entre em contato com o suporte.",
+        };
       }
 
       if (profile.activation_expires_at && new Date(profile.activation_expires_at) < new Date()) {
-        return { success: false, message: 'Código expirado. Solicite um novo código.' };
+        return { success: false, message: "Código expirado. Solicite um novo código." };
       }
 
-      if (profile.activation_code !== code && code !== 'TRIAL-2026') {
+      if (profile.activation_code !== code && code !== "TRIAL-2026") {
         return { success: false, message: `Código inválido. Tentativa ${attempts}/5` };
       }
 
       // Success!
-      await supabase.from('profiles').update({ 
-        is_activated: true, 
-        subscription_tier: 'plus', // Default for trial/activation
-        activation_attempts: 0 
-      }).eq('id', session.user.id);
+      await supabase
+        .from("profiles")
+        .update({
+          is_activated: true,
+          subscription_tier: "plus", // Default for trial/activation
+          activation_attempts: 0,
+        })
+        .eq("id", session.user.id);
 
       // Log the event
-      await supabase.from('subscription_audit_logs').insert({
+      await supabase.from("subscription_audit_logs").insert({
         user_id: session.user.id,
-        event_type: 'activation',
-        old_tier: 'free',
-        new_tier: 'plus',
-        metadata: { code_used: code }
+        event_type: "activation",
+        old_tier: "free",
+        new_tier: "plus",
+        metadata: { code_used: code },
       });
 
-      return { success: true, message: 'Assinatura ativada com sucesso!' };
+      return { success: true, message: "Assinatura ativada com sucesso!" };
     } catch (e) {
-      return { success: false, message: 'Erro interno ao validar código' };
+      return { success: false, message: "Erro interno ao validar código" };
     }
   },
 
   resendActivationEmail: async (): Promise<boolean> => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
       if (!session) return false;
-      
+
       // Here we would call a server function or edge function to trigger email
       // For mock: just simulate success
-      console.log('Resending activation email to', session.user.email);
+      console.log("Resending activation email to", session.user.email);
       return true;
     } catch (e) {
       return false;
@@ -676,141 +790,167 @@ export const MockService = {
   listUsers: async (limit: number = 20): Promise<UserProfile[]> => {
     try {
       const { data: profiles, error: pError } = await supabase
-        .from('profiles')
-        .select('*')
+        .from("profiles")
+        .select("*")
         .limit(limit);
-      
+
       if (pError) throw pError;
 
-      const userIds = profiles.map(p => p.id);
+      const userIds = profiles.map((p) => p.id);
       const { data: roles, error: rError } = await supabase
-        .from('user_roles')
-        .select('*')
-        .in('user_id', userIds);
-      
+        .from("user_roles")
+        .select("*")
+        .in("user_id", userIds);
+
       if (rError) throw rError;
 
-      return profiles.map(p => {
-        const roleData = roles.find(r => r.user_id === p.id);
+      return profiles.map((p) => {
+        const roleData = roles.find((r) => r.user_id === p.id);
         return {
           ...p,
-          role: roleData?.role || 'user',
-          full_name: p.full_name || 'Sem nome',
-          name: p.full_name || 'Sem nome'
+          role: roleData?.role || "user",
+          full_name: p.full_name || "Sem nome",
+          name: p.full_name || "Sem nome",
         } as UserProfile;
       });
     } catch (e) {
-      console.error('Error listing users:', e);
+      console.error("Error listing users:", e);
       return [];
     }
   },
 
-  updateUserRole: async (userId: string, newRole: 'admin' | 'moderator' | 'user'): Promise<boolean> => {
+  updateUserRole: async (
+    userId: string,
+    newRole: "admin" | "moderator" | "user",
+  ): Promise<boolean> => {
     try {
       // Use the has_role architecture logic: update user_roles table
       const { error } = await supabase
-        .from('user_roles')
-        .upsert({ user_id: userId, role: newRole }, { onConflict: 'user_id, role' });
-      
+        .from("user_roles")
+        .upsert({ user_id: userId, role: newRole }, { onConflict: "user_id, role" });
+
       if (error) throw error;
       return true;
     } catch (e) {
-      console.error('Error updating role:', e);
+      console.error("Error updating role:", e);
       return false;
     }
   },
 
-  cancelSubscription: async (userId: string, reason: string, effectiveDate?: string): Promise<boolean> => {
+  cancelSubscription: async (
+    userId: string,
+    reason: string,
+    effectiveDate?: string,
+  ): Promise<boolean> => {
     try {
-      const { data: profile } = await supabase.from('profiles').select('subscription_tier, email').eq('id', userId).single();
-      const oldTier = profile?.subscription_tier || 'free';
-      const date = effectiveDate || new Date(new Date().setDate(new Date().getDate() + 30)).toISOString();
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("subscription_tier, email")
+        .eq("id", userId)
+        .single();
+      const oldTier = profile?.subscription_tier || "free";
+      const date =
+        effectiveDate || new Date(new Date().setDate(new Date().getDate() + 30)).toISOString();
 
       const { error } = await supabase
-        .from('profiles')
-        .update({ 
-          subscription_tier: 'free',
+        .from("profiles")
+        .update({
+          subscription_tier: "free",
           is_activated: false,
-          subscription_expires_at: date
+          subscription_expires_at: date,
         })
-        .eq('id', userId);
+        .eq("id", userId);
 
       if (error) throw error;
 
-      await supabase.from('subscription_audit_logs').insert({
+      await supabase.from("subscription_audit_logs").insert({
         user_id: userId,
-        event_type: 'cancellation',
+        event_type: "cancellation",
         old_tier: oldTier,
-        new_tier: 'free',
-        metadata: { 
-          source: 'admin_panel',
+        new_tier: "free",
+        metadata: {
+          source: "admin_panel",
           reason: reason,
-          effective_date: date
-        }
+          effective_date: date,
+        },
       });
-
 
       return true;
     } catch (e) {
-      console.error('Error cancelling subscription:', e);
+      console.error("Error cancelling subscription:", e);
       return false;
     }
   },
 
   reactivateSubscription: async (userId: string): Promise<boolean> => {
     try {
-      const { data: profile } = await supabase.from('profiles').select('is_activated, subscription_tier').eq('id', userId).single();
-      
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("is_activated, subscription_tier")
+        .eq("id", userId)
+        .single();
+
       if (profile?.is_activated) return false;
 
       const { error } = await supabase
-        .from('profiles')
-        .update({ 
+        .from("profiles")
+        .update({
           is_activated: true,
-          subscription_tier: 'essential' // Reativa no plano base ou recupera anterior se persistido
+          subscription_tier: "essential", // Reativa no plano base ou recupera anterior se persistido
         })
-        .eq('id', userId);
+        .eq("id", userId);
 
       if (error) throw error;
 
-      await supabase.from('subscription_audit_logs').insert({
+      await supabase.from("subscription_audit_logs").insert({
         user_id: userId,
-        event_type: 'activation',
-        old_tier: 'free',
-        new_tier: 'essential',
-        metadata: { source: 'user_reactivation' }
+        event_type: "activation",
+        old_tier: "free",
+        new_tier: "essential",
+        metadata: { source: "user_reactivation" },
       });
 
       return true;
     } catch (e) {
-      console.error('Error reactivating subscription:', e);
+      console.error("Error reactivating subscription:", e);
       return false;
     }
   },
 
   exportSubscriptionLogsToCSV: async (userId?: string): Promise<string> => {
     const logs = await MockService.getSubscriptionAuditLogs(userId);
-    if (logs.length === 0) return '';
+    if (logs.length === 0) return "";
 
-    const headers = ['ID', 'User ID', 'Event', 'Old Tier', 'New Tier', 'Reason', 'Effective Date', 'Created At'];
-    const rows = logs.map(log => [
+    const headers = [
+      "ID",
+      "User ID",
+      "Event",
+      "Old Tier",
+      "New Tier",
+      "Reason",
+      "Effective Date",
+      "Created At",
+    ];
+    const rows = logs.map((log) => [
       log.id,
       log.user_id,
       log.event_type,
-      log.old_tier || 'N/A',
+      log.old_tier || "N/A",
       log.new_tier,
-      log.metadata?.reason || 'N/A',
-      log.metadata?.effective_date ? new Date(log.metadata.effective_date).toLocaleDateString() : 'Immediate',
-      new Date(log.created_at).toLocaleString()
+      String(log.metadata?.["reason"] || "N/A"),
+      typeof log.metadata?.["effective_date"] === "string"
+        ? new Date(log.metadata["effective_date"]).toLocaleDateString()
+        : "Immediate",
+      new Date(log.created_at).toLocaleString(),
     ]);
 
     const csvContent = [
-      headers.join(','),
-      ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
-    ].join('\n');
+      headers.join(","),
+      ...rows.map((row) => row.map((cell) => `"${cell}"`).join(",")),
+    ].join("\n");
 
     return csvContent;
-  }
+  },
 };
 
 export interface MedalProgress {

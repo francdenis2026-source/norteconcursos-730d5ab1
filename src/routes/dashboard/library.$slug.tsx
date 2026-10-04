@@ -151,7 +151,13 @@ function MaterialPage() {
         </aside>
       )}
 
-      <StudyPractice flashcards={material.flashcards ?? []} quiz={material.quiz ?? []} slug={material.slug} subject={material.discipline} topic={material.topic_label ?? material.title} />
+      <StudyPractice
+        flashcards={material.flashcards ?? []}
+        quiz={material.quiz ?? []}
+        slug={material.slug}
+        subject={material.discipline}
+        topic={material.topic_label ?? material.title}
+      />
 
       <div className="library-cta no-print">
         <div>

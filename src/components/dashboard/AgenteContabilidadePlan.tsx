@@ -21,9 +21,9 @@ export function AgenteContabilidadePlan() {
           <Target className="h-5 w-5 text-emerald-600" /> Plano de Contabilidade para Agente de PF
         </CardTitle>
         <CardDescription>
-          O Bloco III do edital da PF 2025 é só Contabilidade Geral: 24 dos 120 itens. A ordem abaixo
-          é a do que mais caiu nas quatro provas oficiais de Agente já analisadas ({totalAsked} itens
-          de Contabilidade). É o mesmo norte para todos os alunos.
+          O Bloco III do edital da PF 2025 é só Contabilidade Geral: 24 dos 120 itens. A ordem
+          abaixo é a do que mais caiu nas quatro provas oficiais de Agente já analisadas (
+          {totalAsked} itens de Contabilidade). É o mesmo norte para todos os alunos.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-8">
@@ -56,10 +56,14 @@ export function AgenteContabilidadePlan() {
                         <div className="h-1.5 w-16 overflow-hidden rounded-full bg-muted">
                           <div
                             className="h-full rounded-full bg-emerald-600"
-                            style={{ width: `${Math.min(100, (stat.asked / (stats[0]?.asked || 1)) * 100)}%` }}
+                            style={{
+                              width: `${Math.min(100, (stat.asked / (stats[0]?.asked || 1)) * 100)}%`,
+                            }}
                           />
                         </div>
-                        <span className="tabular-nums">{((100 * stat.asked) / totalAsked).toFixed(0)}%</span>
+                        <span className="tabular-nums">
+                          {((100 * stat.asked) / totalAsked).toFixed(0)}%
+                        </span>
                       </div>
                     </td>
                     <td className="py-2">
@@ -83,7 +87,10 @@ export function AgenteContabilidadePlan() {
           </div>
           <p className="text-xs text-muted-foreground">
             Quer ver o peso de todas as disciplinas em provas federais, estaduais e da sua carreira?{" "}
-            <Link to="/dashboard/exam-panorama" className="font-bold text-emerald-700 hover:underline">
+            <Link
+              to="/dashboard/exam-panorama"
+              className="font-bold text-emerald-700 hover:underline"
+            >
               Abrir o Panorama das provas
             </Link>
             .

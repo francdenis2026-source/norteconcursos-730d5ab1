@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { createFileRoute } from '@tanstack/react-router';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { 
-  Plus, 
-  BookOpen, 
-  Trash2, 
-  Edit3, 
-  MoreVertical, 
+import React, { useState, useEffect } from "react";
+import { createFileRoute } from "@tanstack/react-router";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Plus,
+  BookOpen,
+  Trash2,
+  Edit3,
+  MoreVertical,
   FileText,
   Search,
   Filter,
@@ -16,33 +16,33 @@ import {
   XCircle,
   Download,
   Printer,
-  Eye
-} from 'lucide-react';
-import { MediaViewer } from '@/components/dashboard/MediaViewer';
-import { PageHero } from '@/components/dashboard/PageHero';
-import { AiResolutionsSection } from '@/components/dashboard/AiResolutionsSection';
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuTrigger 
-} from '@/components/ui/dropdown-menu';
-import { MockService } from '@/services/mockService';
-import { Notebook, Question } from '@/types';
-import { toast } from 'sonner';
-import { Badge } from '@/components/ui/badge';
+  Eye,
+} from "lucide-react";
+import { MediaViewer } from "@/components/dashboard/MediaViewer";
+import { PageHero } from "@/components/dashboard/PageHero";
+import { AiResolutionsSection } from "@/components/dashboard/AiResolutionsSection";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { MockService } from "@/services/mockService";
+import { Notebook, Question } from "@/types";
+import { toast } from "sonner";
+import { Badge } from "@/components/ui/badge";
 
-export const Route = createFileRoute('/dashboard/notebooks')({
-  component: NotebooksPage
+export const Route = createFileRoute("/dashboard/notebooks")({
+  component: NotebooksPage,
 });
 
 function NotebooksPage() {
   const [notebooks, setNotebooks] = useState<Notebook[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [disciplineFilter, setDisciplineFilter] = useState<string>('all');
-  const [statusFilter, setStatusFilter] = useState<'all' | 'favorited' | 'marked'>('all');
-  const [sortBy, setSortBy] = useState<'name' | 'date' | 'questions'>('date');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [disciplineFilter, setDisciplineFilter] = useState<string>("all");
+  const [statusFilter, setStatusFilter] = useState<"all" | "favorited" | "marked">("all");
+  const [sortBy, setSortBy] = useState<"name" | "date" | "questions">("date");
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
 
   useEffect(() => {
@@ -52,50 +52,50 @@ function NotebooksPage() {
   const loadData = async () => {
     setIsLoading(true);
     // Load Notebooks
-    const storedNbs = localStorage.getItem('norte_notebooks');
+    const storedNbs = localStorage.getItem("norte_notebooks");
     if (storedNbs) {
       setNotebooks(JSON.parse(storedNbs));
     } else {
       const initial: Notebook[] = [
         {
-          id: 'nb-1',
-          name: 'Revisão Português - Sintaxe',
-          description: 'Questões focadas em análise sintática para o concurso da PF',
-          questionIds: ['q1', 'q3', 'q5'],
-          createdAt: new Date().toISOString()
-        }
+          id: "nb-1",
+          name: "Revisão Português - Sintaxe",
+          description: "Questões focadas em análise sintática para o concurso da PF",
+          questionIds: ["q1", "q3", "q5"],
+          createdAt: new Date().toISOString(),
+        },
       ];
       setNotebooks(initial);
-      localStorage.setItem('norte_notebooks', JSON.stringify(initial));
+      localStorage.setItem("norte_notebooks", JSON.stringify(initial));
     }
 
     // Load All Questions for searching context
     const questions = await MockService.getQuestions();
     setAllQuestions(questions);
-    
+
     setIsLoading(false);
   };
 
   const handleCreateNotebook = () => {
     const newNb: Notebook = {
-      id: 'nb-' + Date.now(),
-      name: 'Novo Caderno',
-      description: 'Descrição do caderno',
+      id: "nb-" + Date.now(),
+      name: "Novo Caderno",
+      description: "Descrição do caderno",
       questionIds: [],
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     };
     const updated = [...notebooks, newNb];
     setNotebooks(updated);
-    localStorage.setItem('norte_notebooks', JSON.stringify(updated));
+    localStorage.setItem("norte_notebooks", JSON.stringify(updated));
     toast.success("Caderno criado com sucesso!");
     loadData();
   };
 
   const handleExportPDF = (notebook: Notebook) => {
     toast.success(`Gerando PDF do caderno: ${notebook.name}`);
-    
+
     // Create a temporary print stylesheet for cleaner PDF
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.innerHTML = `
       @media print {
         body * { visibility: hidden; }
@@ -114,18 +114,18 @@ function NotebooksPage() {
     document.head.appendChild(style);
 
     // Create printable content
-    const notebookQuestions = allQuestions.filter(q => notebook.questionIds.includes(q.id));
-    const subjectsCount = notebookQuestions.reduce((acc: any, q) => {
+    const notebookQuestions = allQuestions.filter((q) => notebook.questionIds.includes(q.id));
+    const subjectsCount = notebookQuestions.reduce((acc: Record<string, number>, q) => {
       acc[q.subjectId] = (acc[q.subjectId] || 0) + 1;
       return acc;
     }, {});
 
-    const printDiv = document.createElement('div');
-    printDiv.id = 'print-section';
+    const printDiv = document.createElement("div");
+    printDiv.id = "print-section";
     printDiv.innerHTML = `
       <div style="border-bottom: 2px solid #1e293b; padding-bottom: 10px; margin-bottom: 20px;">
         <h1 style="font-size: 24px; font-bold; color: #1e293b;">${notebook.name}</h1>
-        <p style="color: #64748b;">${notebook.description || ''}</p>
+        <p style="color: #64748b;">${notebook.description || ""}</p>
         <p style="font-size: 12px;">Gerado em: ${new Date().toLocaleDateString()}</p>
       </div>
       
@@ -133,12 +133,16 @@ function NotebooksPage() {
         <h2 style="font-size: 18px; margin-bottom: 10px;">Resumo do Caderno</h2>
         <p>Total de Questões: <strong>${notebookQuestions.length}</strong></p>
         <ul style="font-size: 14px;">
-          ${Object.entries(subjectsCount).map(([subId, count]) => `<li>Assunto ${subId}: ${count} questões</li>`).join('')}
+          ${Object.entries(subjectsCount)
+            .map(([subId, count]) => `<li>Assunto ${subId}: ${count} questões</li>`)
+            .join("")}
         </ul>
       </div>
 
       <div>
-        ${notebookQuestions.map((q, i) => `
+        ${notebookQuestions
+          .map(
+            (q, i) => `
           <div style="margin-bottom: 40px; page-break-inside: avoid; border-left: 4px solid #e2e8f0; padding-left: 15px;">
             <p style="font-weight: bold;">Questão ${i + 1} - ${q.difficulty}</p>
             <div style="margin: 10px 0;">${q.text}</div>
@@ -146,7 +150,9 @@ function NotebooksPage() {
               Assunto: ${q.subjectId} | Disciplina: ${q.disciplineId}
             </div>
           </div>
-        `).join('')}
+        `,
+          )
+          .join("")}
       </div>
     `;
     document.body.appendChild(printDiv);
@@ -159,13 +165,14 @@ function NotebooksPage() {
   };
 
   const filteredNotebooks = notebooks
-    .filter(nb => 
-      nb.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      nb.description?.toLowerCase().includes(searchTerm.toLowerCase())
+    .filter(
+      (nb) =>
+        nb.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        nb.description?.toLowerCase().includes(searchTerm.toLowerCase()),
     )
     .sort((a, b) => {
-      if (sortBy === 'name') return a.name.localeCompare(b.name);
-      if (sortBy === 'questions') return b.questionIds.length - a.questionIds.length;
+      if (sortBy === "name") return a.name.localeCompare(b.name);
+      if (sortBy === "questions") return b.questionIds.length - a.questionIds.length;
       return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
     });
 
@@ -193,9 +200,9 @@ function NotebooksPage() {
       <div className="flex flex-col md:flex-row gap-4 items-center bg-card p-4 rounded-xl border shadow-sm">
         <div className="relative flex-1 w-full">
           <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input 
-            placeholder="Buscar por nome ou assunto..." 
-            className="pl-9" 
+          <Input
+            placeholder="Buscar por nome ou assunto..."
+            className="pl-9"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -204,26 +211,38 @@ function NotebooksPage() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm" className="gap-2 shrink-0">
-                <Filter className="h-4 w-4" /> Ordenar: {sortBy === 'date' ? 'Recentes' : sortBy === 'name' ? 'Nome' : 'Questões'}
+                <Filter className="h-4 w-4" /> Ordenar:{" "}
+                {sortBy === "date" ? "Recentes" : sortBy === "name" ? "Nome" : "Questões"}
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem onClick={() => setSortBy('date')}>Mais Recentes</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setSortBy('name')}>Nome (A-Z)</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setSortBy('questions')}>Qtd. de Questões</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setSortBy("date")}>Mais Recentes</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setSortBy("name")}>Nome (A-Z)</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setSortBy("questions")}>
+                Qtd. de Questões
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm" className="gap-2 shrink-0">
-                Status: {statusFilter === 'all' ? 'Todos' : statusFilter === 'favorited' ? 'Favoritos' : 'Marcados'}
+                Status:{" "}
+                {statusFilter === "all"
+                  ? "Todos"
+                  : statusFilter === "favorited"
+                    ? "Favoritos"
+                    : "Marcados"}
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem onClick={() => setStatusFilter('all')}>Todos</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setStatusFilter('favorited')}>Apenas Favoritos</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setStatusFilter('marked')}>Apenas Marcados</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setStatusFilter("all")}>Todos</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setStatusFilter("favorited")}>
+                Apenas Favoritos
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setStatusFilter("marked")}>
+                Apenas Marcados
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
@@ -235,25 +254,32 @@ function NotebooksPage() {
 
       {isLoading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[1, 2, 3].map(i => <div key={i} className="h-40 bg-muted animate-pulse rounded-lg" />)}
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="h-40 bg-muted animate-pulse rounded-lg" />
+          ))}
         </div>
       ) : filteredNotebooks.length === 0 ? (
         <Card className="border-dashed py-12 flex flex-col items-center justify-center text-center">
           <BookOpen className="h-12 w-12 text-muted-foreground/30 mb-4" />
           <h3 className="font-bold">Nenhum caderno encontrado</h3>
           <p className="text-sm text-muted-foreground max-w-[250px] mt-1">
-            {searchTerm ? "Tente mudar os termos da busca." : "Crie cadernos para separar questões por temas ou concursos."}
+            {searchTerm
+              ? "Tente mudar os termos da busca."
+              : "Crie cadernos para separar questões por temas ou concursos."}
           </p>
           {searchTerm && (
-            <Button variant="ghost" size="sm" className="mt-4" onClick={() => setSearchTerm('')}>
+            <Button variant="ghost" size="sm" className="mt-4" onClick={() => setSearchTerm("")}>
               Limpar Busca
             </Button>
           )}
         </Card>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredNotebooks.map(nb => (
-            <Card key={nb.id} className="hover:border-secondary/50 transition-all group shadow-sm hover:shadow-md">
+          {filteredNotebooks.map((nb) => (
+            <Card
+              key={nb.id}
+              className="hover:border-secondary/50 transition-all group shadow-sm hover:shadow-md"
+            >
               <CardHeader className="pb-2 flex flex-row items-start justify-between space-y-0">
                 <div className="flex items-center gap-3">
                   <div className="p-2.5 bg-secondary/10 rounded-xl text-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors">
@@ -261,7 +287,9 @@ function NotebooksPage() {
                   </div>
                   <div className="overflow-hidden">
                     <CardTitle className="text-base truncate max-w-[150px]">{nb.name}</CardTitle>
-                    <CardDescription className="text-xs line-clamp-1">{nb.description}</CardDescription>
+                    <CardDescription className="text-xs line-clamp-1">
+                      {nb.description}
+                    </CardDescription>
                   </div>
                 </div>
                 <DropdownMenu>
@@ -282,18 +310,18 @@ function NotebooksPage() {
                     </DropdownMenuItem>
                     <div className="border-t my-1" />
                     <DropdownMenuItem className="p-0">
-                      <MediaViewer 
-                        type="video" 
-                        url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+                      <MediaViewer
+                        type="video"
+                        url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                         title="Aula Inaugural: Como usar os Cadernos"
                         triggerLabel="Ver Vídeo Aula"
                         className="w-full justify-start border-none h-8 px-2 rounded-none"
                       />
                     </DropdownMenuItem>
                     <DropdownMenuItem className="p-0">
-                      <MediaViewer 
-                        type="pdf" 
-                        url="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" 
+                      <MediaViewer
+                        type="pdf"
+                        url="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
                         title="Teoria: Guia de Estudos"
                         triggerLabel="Baixar Guia (PDF)"
                         className="w-full justify-start border-none h-8 px-2 rounded-none"
@@ -316,7 +344,11 @@ function NotebooksPage() {
                     <CheckCircle2 className="h-3 w-3 text-emerald-500" />
                     {nb.questionIds.length} questões
                   </span>
-                  <Button variant="ghost" size="sm" className="h-8 text-xs font-black uppercase tracking-widest text-secondary hover:text-secondary hover:bg-secondary/10">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="h-8 text-xs font-black uppercase tracking-widest text-secondary hover:text-secondary hover:bg-secondary/10"
+                  >
                     Estudar
                   </Button>
                 </div>

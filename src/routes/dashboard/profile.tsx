@@ -1,31 +1,41 @@
-import React from 'react';
-import { createFileRoute, Link } from '@tanstack/react-router';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Badge } from '@/components/ui/badge';
-import { useAuthStatus } from '@/hooks/useDashboard';
-import { supabase } from '@/integrations/supabase/client';
-import { confirmDialog } from '@/lib/confirm';
-import { toast } from 'sonner';
-import { MockService } from '@/services/mockService';
-import { User, Mail, CreditCard, Shield, LogOut, Check, ExternalLink, Zap, RefreshCw, History as HistoryIcon } from 'lucide-react';
-import { PageHero } from '@/components/dashboard/PageHero';
-import { SUBSCRIPTION_PLANS } from '@/lib/subscriptions.config';
-import { SoonBadge } from '@/components/SoonBadge';
-import { AvatarUploader } from '@/components/dashboard/AvatarUploader';
-import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE } from '@/lib/launch.config';
-import { cn, normalizeUppercase } from '@/lib/utils';
-import { createCheckoutSession, createPortalSession } from '@/lib/stripe.functions';
-import { useServerFn } from '@tanstack/react-start';
+import React from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { supabase } from "@/integrations/supabase/client";
+import { confirmDialog } from "@/lib/confirm";
+import { toast } from "sonner";
+import { MockService } from "@/services/mockService";
+import {
+  User,
+  Mail,
+  CreditCard,
+  Shield,
+  LogOut,
+  Check,
+  ExternalLink,
+  Zap,
+  RefreshCw,
+  History as HistoryIcon,
+} from "lucide-react";
+import { PageHero } from "@/components/dashboard/PageHero";
+import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
+import { SoonBadge } from "@/components/SoonBadge";
+import { AvatarUploader } from "@/components/dashboard/AvatarUploader";
+import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE } from "@/lib/launch.config";
+import { cn, normalizeUppercase } from "@/lib/utils";
+import { createCheckoutSession, createPortalSession } from "@/lib/stripe.functions";
+import { useServerFn } from "@tanstack/react-start";
 
-
-export const Route = createFileRoute('/dashboard/profile')({
+export const Route = createFileRoute("/dashboard/profile")({
   component: ProfilePage,
   head: () => ({
-    meta: [{ title: 'Meu Perfil | Norte Concurso' }],
-  })
+    meta: [{ title: "Meu Perfil | Norte Concurso" }],
+  }),
 });
 
 function ProfilePage() {
@@ -34,24 +44,24 @@ function ProfilePage() {
   const [isVerifying, setIsVerifying] = React.useState(false);
   const [isRedirecting, setIsRedirecting] = React.useState(false);
   const [isActivating, setIsActivating] = React.useState(false);
-  const [auditLogs, setAuditLogs] = React.useState<any[]>([]);
-  const [activationCode, setActivationCode] = React.useState('');
-  
+  const [auditLogs, setAuditLogs] = React.useState<import("@/types").SubscriptionAuditLog[]>([]);
+  const [activationCode, setActivationCode] = React.useState("");
+
   const checkout = useServerFn(createCheckoutSession);
   const portal = useServerFn(createPortalSession);
-  
+
   const [formData, setFormData] = React.useState({
-    name: '',
-    email: '',
-    newEmail: ''
+    name: "",
+    email: "",
+    newEmail: "",
   });
 
   React.useEffect(() => {
     if (user) {
       setFormData({
-        name: user.name || '',
-        email: user.email || '',
-        newEmail: ''
+        name: user.name || "",
+        email: user.email || "",
+        newEmail: "",
       });
     }
     const loadAudit = async () => {
@@ -80,9 +90,9 @@ function ProfilePage() {
   const handleResendCode = async () => {
     const success = await MockService.resendActivationEmail();
     if (success) {
-      toast.success('Novo código enviado para seu e-mail!');
+      toast.success("Novo código enviado para seu e-mail!");
     } else {
-      toast.error('Erro ao reenviar código.');
+      toast.error("Erro ao reenviar código.");
     }
   };
 
@@ -90,21 +100,21 @@ function ProfilePage() {
     e.preventDefault();
     setIsUpdating(true);
     try {
-      if (!user) throw new Error('Entre novamente para atualizar seus dados.');
+      if (!user) throw new Error("Entre novamente para atualizar seus dados.");
       const normalizedName = normalizeUppercase(formData.name.trim());
       const { error } = await supabase.auth.updateUser({
-        data: { full_name: normalizedName, name: normalizedName }
+        data: { full_name: normalizedName, name: normalizedName },
       });
       if (error) throw error;
       const { error: profileError } = await supabase
-        .from('profiles')
+        .from("profiles")
         .update({ full_name: normalizedName })
-        .eq('id', user.id);
+        .eq("id", user.id);
       if (profileError) throw profileError;
       setFormData((previous) => ({ ...previous, name: normalizedName }));
-      toast.success('Nome atualizado com sucesso!');
-    } catch (error: any) {
-      toast.error(error.message || 'Erro ao atualizar nome');
+      toast.success("Nome atualizado com sucesso!");
+    } catch (error: unknown) {
+      toast.error(error instanceof Error ? error.message : "Erro ao atualizar nome");
     } finally {
       setIsUpdating(false);
     }
@@ -113,19 +123,21 @@ function ProfilePage() {
   const handleUpdateEmail = async (e: React.FormEvent) => {
     e.preventDefault();
     if (formData.newEmail === formData.email) {
-      toast.error('O novo e-mail deve ser diferente do atual.');
+      toast.error("O novo e-mail deve ser diferente do atual.");
       return;
     }
     setIsVerifying(true);
     try {
       const { error } = await supabase.auth.updateUser({
-        email: formData.newEmail
+        email: formData.newEmail,
       });
       if (error) throw error;
-      toast.info('Um link de confirmação foi enviado para o novo e-mail. A alteração só será efetivada após a confirmação.');
-      setFormData(prev => ({ ...prev, newEmail: '' }));
-    } catch (error: any) {
-      toast.error(error.message || 'Erro ao solicitar troca de e-mail');
+      toast.info(
+        "Um link de confirmação foi enviado para o novo e-mail. A alteração só será efetivada após a confirmação.",
+      );
+      setFormData((prev) => ({ ...prev, newEmail: "" }));
+    } catch (error: unknown) {
+      toast.error(error instanceof Error ? error.message : "Erro ao solicitar troca de e-mail");
     } finally {
       setIsVerifying(false);
     }
@@ -133,7 +145,7 @@ function ProfilePage() {
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   const handleUpgrade = async (planId: string) => {
@@ -165,17 +177,27 @@ function ProfilePage() {
   };
 
   const handleCancelSubscription = async () => {
-    const reason = 'Solicitado pelo próprio usuário via painel de perfil.';
-    if (!(await confirmDialog({ title: 'Cancelar assinatura?', message: 'Você perderá o acesso aos recursos Premium ao final do ciclo de 30 dias.', confirmLabel: 'Cancelar assinatura', cancelLabel: 'Manter plano' }))) return;
-    
+    const reason = "Solicitado pelo próprio usuário via painel de perfil.";
+    if (
+      !(await confirmDialog({
+        title: "Cancelar assinatura?",
+        message: "Você perderá o acesso aos recursos Premium ao final do ciclo de 30 dias.",
+        confirmLabel: "Cancelar assinatura",
+        cancelLabel: "Manter plano",
+      }))
+    )
+      return;
+
     setIsUpdating(true);
     try {
       const success = await MockService.cancelSubscription(user!.id, reason);
       if (success) {
-        toast.success('Assinatura cancelada com sucesso. O acesso Premium continuará ativo pelos próximos 30 dias.');
+        toast.success(
+          "Assinatura cancelada com sucesso. O acesso Premium continuará ativo pelos próximos 30 dias.",
+        );
         window.location.reload();
       } else {
-        toast.error('Erro ao cancelar assinatura.');
+        toast.error("Erro ao cancelar assinatura.");
       }
     } finally {
       setIsUpdating(false);
@@ -187,10 +209,10 @@ function ProfilePage() {
     try {
       const success = await MockService.reactivateSubscription(user!.id);
       if (success) {
-        toast.success('Assinatura reativada com sucesso!');
+        toast.success("Assinatura reativada com sucesso!");
         window.location.reload();
       } else {
-        toast.error('Erro ao reativar assinatura.');
+        toast.error("Erro ao reativar assinatura.");
       }
     } finally {
       setIsUpdating(false);
@@ -220,27 +242,29 @@ function ProfilePage() {
               <User className="h-5 w-5 text-primary" />
               Informações Pessoais
             </CardTitle>
-            <CardDescription>
-              Mantenha seus dados de contato atualizados.
-            </CardDescription>
+            <CardDescription>Mantenha seus dados de contato atualizados.</CardDescription>
           </CardHeader>
           <CardContent>
-            {user && <AvatarUploader userId={user.id} name={user.full_name ?? ''} url={user.avatar_url} />}
+            {user && (
+              <AvatarUploader userId={user.id} name={user.full_name ?? ""} url={user.avatar_url} />
+            )}
             <form onSubmit={handleUpdateName} className="space-y-4 pb-6 border-b">
               <div className="space-y-2">
                 <Label htmlFor="name">Nome Completo</Label>
                 <div className="relative">
                   <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                  <Input 
-                    id="name" 
-                    value={formData.name} 
-                    onChange={(e) => setFormData({...formData, name: normalizeUppercase(e.target.value)})}
+                  <Input
+                    id="name"
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: normalizeUppercase(e.target.value) })
+                    }
                     className="pl-9 uppercase"
                   />
                 </div>
               </div>
               <Button type="submit" disabled={isUpdating}>
-                {isUpdating ? 'Salvando...' : 'Atualizar Nome'}
+                {isUpdating ? "Salvando..." : "Atualizar Nome"}
               </Button>
             </form>
 
@@ -249,24 +273,19 @@ function ProfilePage() {
                 <Label>E-mail Atual</Label>
                 <div className="relative opacity-60">
                   <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                  <Input 
-                    value={formData.email} 
-                    readOnly
-                    disabled
-                    className="pl-9 bg-muted"
-                  />
+                  <Input value={formData.email} readOnly disabled className="pl-9 bg-muted" />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="newEmail">Novo E-mail</Label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                  <Input 
-                    id="newEmail" 
+                  <Input
+                    id="newEmail"
                     type="email"
                     placeholder="Digite o novo e-mail"
-                    value={formData.newEmail} 
-                    onChange={(e) => setFormData({...formData, newEmail: e.target.value})}
+                    value={formData.newEmail}
+                    onChange={(e) => setFormData({ ...formData, newEmail: e.target.value })}
                     className="pl-9"
                     required
                   />
@@ -276,7 +295,7 @@ function ProfilePage() {
                 </p>
               </div>
               <Button type="submit" variant="secondary" disabled={isVerifying}>
-                {isVerifying ? 'Processando...' : 'Solicitar Troca de E-mail'}
+                {isVerifying ? "Processando..." : "Solicitar Troca de E-mail"}
               </Button>
             </form>
           </CardContent>
@@ -287,34 +306,46 @@ function ProfilePage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Zap className="h-5 w-5 text-secondary" />
-                {user.subscription_tier === 'free' ? 'Ativar Assinatura' : 'Reativar Assinatura'}
+                {user.subscription_tier === "free" ? "Ativar Assinatura" : "Reativar Assinatura"}
               </CardTitle>
               <CardDescription>
-                {user.subscription_tier === 'free' 
-                  ? 'Insira o código enviado para seu e-mail após o pagamento para liberar seu acesso.'
-                  : 'Sua assinatura está inativa. Você pode reativá-la agora ou inserir um novo código.'}
+                {user.subscription_tier === "free"
+                  ? "Insira o código enviado para seu e-mail após o pagamento para liberar seu acesso."
+                  : "Sua assinatura está inativa. Você pode reativá-la agora ou inserir um novo código."}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-3">
-                <Input 
-                  placeholder="Código de ativação (Ex: X8J-29K)" 
+                <Input
+                  placeholder="Código de ativação (Ex: X8J-29K)"
                   className="max-w-xs"
                   value={activationCode}
                   onChange={(e) => setActivationCode(normalizeUppercase(e.target.value))}
                   autoCapitalize="characters"
                   disabled={isActivating || isUpdating}
                 />
-                <Button onClick={handleActivate} disabled={isActivating || !activationCode || isUpdating}>
-                  {isActivating ? 'Validando...' : 'Ativar Agora'}
+                <Button
+                  onClick={handleActivate}
+                  disabled={isActivating || !activationCode || isUpdating}
+                >
+                  {isActivating ? "Validando..." : "Ativar Agora"}
                 </Button>
-                {user.subscription_tier !== 'free' && (
-                  <Button variant="outline" onClick={handleReactivateSubscription} disabled={isUpdating}>
-                    {isUpdating ? 'Processando...' : 'Reativar Plano Anterior'}
+                {user.subscription_tier !== "free" && (
+                  <Button
+                    variant="outline"
+                    onClick={handleReactivateSubscription}
+                    disabled={isUpdating}
+                  >
+                    {isUpdating ? "Processando..." : "Reativar Plano Anterior"}
                   </Button>
                 )}
-                <Button variant="ghost" size="sm" className="gap-2 text-xs" onClick={handleResendCode}>
-                   <RefreshCw className="h-3 w-3" /> Reenviar E-mail
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="gap-2 text-xs"
+                  onClick={handleResendCode}
+                >
+                  <RefreshCw className="h-3 w-3" /> Reenviar E-mail
                 </Button>
               </div>
               <p className="text-[10px] text-muted-foreground italic">
@@ -329,7 +360,6 @@ function ProfilePage() {
           </Card>
         )}
 
-
         <Card className="md:col-span-3">
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
@@ -341,10 +371,10 @@ function ProfilePage() {
                 Escolha o plano que melhor se adapta ao seu ritmo de estudos.
               </CardDescription>
             </div>
-            {user?.subscription_tier !== 'free' && (
-              <Button 
-                variant="outline" 
-                size="sm" 
+            {user?.subscription_tier !== "free" && (
+              <Button
+                variant="outline"
+                size="sm"
                 className="flex gap-2"
                 onClick={handleOpenBillingPortal}
                 disabled={isRedirecting}
@@ -359,11 +389,14 @@ function ProfilePage() {
               {SUBSCRIPTION_PLANS.map((plan) => {
                 const isCurrent = user?.subscription_tier === plan.id;
                 return (
-                  <Card key={plan.id} className={cn(
-                    "relative overflow-hidden flex flex-col",
-                    plan.isPopular ? "border-secondary ring-1 ring-secondary" : "",
-                    isCurrent ? "bg-muted/50" : ""
-                  )}>
+                  <Card
+                    key={plan.id}
+                    className={cn(
+                      "relative overflow-hidden flex flex-col",
+                      plan.isPopular ? "border-secondary ring-1 ring-secondary" : "",
+                      isCurrent ? "bg-muted/50" : "",
+                    )}
+                  >
                     {plan.isPopular && (
                       <div className="absolute top-0 right-0 bg-secondary text-secondary-foreground text-[10px] font-bold px-2 py-0.5 rounded-bl-lg uppercase">
                         Popular
@@ -372,7 +405,9 @@ function ProfilePage() {
                     <CardHeader className="pb-4">
                       <CardTitle className="text-lg">{plan.name}</CardTitle>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-2xl font-bold">R$ {plan.price.toFixed(2).replace('.', ',')}</span>
+                        <span className="text-2xl font-bold">
+                          R$ {plan.price.toFixed(2).replace(".", ",")}
+                        </span>
                         <span className="text-xs text-muted-foreground">/mês</span>
                       </div>
                       <CardDescription className="text-xs min-h-[32px]">
@@ -383,26 +418,36 @@ function ProfilePage() {
                       <ul className="space-y-2 text-xs">
                         {Object.entries(plan.features).map(([key, feature], idx) => (
                           <li key={idx} className="flex items-center gap-2">
-                            <Check className={cn(
-                              "h-3 w-3",
-                              feature.included ? "text-emerald-500" : "text-muted-foreground/30"
-                            )} />
-                            <span className={cn("flex flex-wrap items-center gap-1.5", feature.included ? "" : "text-muted-foreground/50")}>
+                            <Check
+                              className={cn(
+                                "h-3 w-3",
+                                feature.included ? "text-emerald-500" : "text-muted-foreground/30",
+                              )}
+                            />
+                            <span
+                              className={cn(
+                                "flex flex-wrap items-center gap-1.5",
+                                feature.included ? "" : "text-muted-foreground/50",
+                              )}
+                            >
                               {feature.name}
-                              {key === 'aiSolver' && !AI_ENABLED
-                                ? <SoonBadge />
-                                : feature.limit && feature.limit !== 'unlimited' && ` (${feature.limit})`}
+                              {key === "aiSolver" && !AI_ENABLED ? (
+                                <SoonBadge />
+                              ) : (
+                                feature.limit &&
+                                feature.limit !== "unlimited" &&
+                                ` (${feature.limit})`
+                              )}
                             </span>
                           </li>
                         ))}
                       </ul>
-
                     </CardContent>
                     <div className="p-4 pt-0">
                       {PAYMENTS_ENABLED || isCurrent ? (
                         <Button
                           asChild
-                          variant={isCurrent ? "outline" : (plan.isPopular ? "secondary" : "default")}
+                          variant={isCurrent ? "outline" : plan.isPopular ? "secondary" : "default"}
                           className="w-full"
                           disabled={isCurrent}
                         >
@@ -420,21 +465,33 @@ function ProfilePage() {
                 );
               })}
             </div>
-            
+
             <div className="mt-8 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <Shield className="h-5 w-5 text-emerald-500" />
                 <div className="text-sm">
                   <p className="font-medium">Assinatura Segura</p>
-                  <p className="text-muted-foreground text-xs">Seus dados estão protegidos com criptografia de ponta a ponta.</p>
+                  <p className="text-muted-foreground text-xs">
+                    Sua conexão usa HTTPS. O acesso aos dados da conta é protegido por autenticação
+                    e permissões.
+                  </p>
                 </div>
               </div>
-              {user?.subscription_tier !== 'free' && (
-                <Button variant="ghost" size="sm" className="text-destructive/70 hover:text-destructive hover:bg-destructive/10 text-[10px]" onClick={handleCancelSubscription}>
+              {user?.subscription_tier !== "free" && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-destructive/70 hover:text-destructive hover:bg-destructive/10 text-[10px]"
+                  onClick={handleCancelSubscription}
+                >
                   Cancelar Plano
                 </Button>
               )}
-              <Button variant="ghost" className="text-destructive hover:text-destructive hover:bg-destructive/10 gap-2" onClick={handleLogout}>
+              <Button
+                variant="ghost"
+                className="text-destructive hover:text-destructive hover:bg-destructive/10 gap-2"
+                onClick={handleLogout}
+              >
                 <LogOut className="h-4 w-4" /> Sair da Conta
               </Button>
             </div>
@@ -453,12 +510,21 @@ function ProfilePage() {
             <CardContent>
               <div className="space-y-4">
                 {auditLogs.map((log) => (
-                  <div key={log.id} className="flex items-center justify-between py-2 border-b last:border-0">
+                  <div
+                    key={log.id}
+                    className="flex items-center justify-between py-2 border-b last:border-0"
+                  >
                     <div className="flex flex-col">
-                      <span className="text-sm font-medium capitalize">{log.event_type.replace('_', ' ')}</span>
-                      <span className="text-[10px] text-muted-foreground">{new Date(log.created_at).toLocaleString()}</span>
-                      {log.metadata?.reason && (
-                        <span className="text-[9px] text-rose-500/80 mt-0.5 italic">Motivo: {log.metadata.reason}</span>
+                      <span className="text-sm font-medium capitalize">
+                        {log.event_type.replace("_", " ")}
+                      </span>
+                      <span className="text-[10px] text-muted-foreground">
+                        {new Date(log.created_at).toLocaleString()}
+                      </span>
+                      {typeof log.metadata?.["reason"] === "string" && (
+                        <span className="text-[9px] text-rose-500/80 mt-0.5 italic">
+                          Motivo: {String(log.metadata?.["reason"])}
+                        </span>
                       )}
                     </div>
                     <Badge variant="outline" className="uppercase text-[9px]">
@@ -470,7 +536,6 @@ function ProfilePage() {
             </CardContent>
           </Card>
         )}
-
       </div>
     </div>
   );

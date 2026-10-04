@@ -87,7 +87,10 @@ export function StudyGoals({ planTier }: { planTier?: string | undefined }) {
 
   const save = () => {
     const next: Goals = {
-      questionsPerDay: Math.max(1, Math.floor(draft.questionsPerDay) || DEFAULT_GOALS.questionsPerDay),
+      questionsPerDay: Math.max(
+        1,
+        Math.floor(draft.questionsPerDay) || DEFAULT_GOALS.questionsPerDay,
+      ),
       minutesPerDay: Math.max(5, Math.floor(draft.minutesPerDay) || DEFAULT_GOALS.minutesPerDay),
     };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(next));

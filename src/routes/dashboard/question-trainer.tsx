@@ -163,7 +163,11 @@ function QuestionTrainer() {
     void (async () => {
       try {
         const query = async (
-          table: "official_exam_questions" | "curated_question_catalog" | "question_bank" | "board_exam_questions",
+          table:
+            | "official_exam_questions"
+            | "curated_question_catalog"
+            | "question_bank"
+            | "board_exam_questions",
           base: string,
           extra: string,
           refine: (
@@ -222,14 +226,23 @@ function QuestionTrainer() {
         if (curatedResult.error) throw curatedResult.error;
         if (personalResult.error) throw personalResult.error;
         // tabela ainda não criada no banco: segue sem as questões de bancas
-        const boardRows = boardResult.error ? [] : ((boardResult.data || []) as Array<Record<string, unknown>>);
+        const boardRows = boardResult.error
+          ? []
+          : ((boardResult.data || []) as Array<Record<string, unknown>>);
         const catalog: Question[] = [
           ...gate(
-            boardRows.map((row) => ({ ...row, context_review_required: row["needs_visual"], legal_audit_completed: !row["legal_review_required"] || !!row["law_version_checked_at"] })),
+            boardRows.map((row) => ({
+              ...row,
+              context_review_required: row["needs_visual"],
+              legal_audit_completed:
+                !row["legal_review_required"] || !!row["law_version_checked_at"],
+            })),
             true,
           ).map((row) => {
             const opts = (row["options"] || {}) as Record<string, string>;
-            const support = row["support_text"] ? `Texto-base:\n${String(row["support_text"])}\n\n` : "";
+            const support = row["support_text"]
+              ? `Texto-base:\n${String(row["support_text"])}\n\n`
+              : "";
             return {
               id: String(row["id"]),
               source: "official" as const,
@@ -239,11 +252,18 @@ function QuestionTrainer() {
               board: String(row["board"]),
               subject: canonicalSubject(String(row["subject"])),
               subtopic: null,
-              text: `${support}${String(row["stem"])}\n${Object.entries(opts).map(([letter, text]) => `(${letter}) ${text}`).join("\n")}`,
+              text: `${support}${String(row["stem"])}\n${Object.entries(opts)
+                .map(([letter, text]) => `(${letter}) ${text}`)
+                .join("\n")}`,
               answer: String(row["official_answer"]) as Answer,
-              explanation: String(row["explanation"] || "Gabarito definitivo da banca organizadora. Comentário pedagógico em preparação."),
+              explanation: String(
+                row["explanation"] ||
+                  "Gabarito definitivo da banca organizadora. Comentário pedagógico em preparação.",
+              ),
               legalBasis: parseBasis(row["legal_basis"]),
-              checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
+              checkedAt: row["law_version_checked_at"]
+                ? String(row["law_version_checked_at"])
+                : null,
               difficulty: normalizeDifficulty(row["difficulty"]),
               state: String(row["state"] || ""),
               category: String(row["career_category"] || ""),
@@ -436,7 +456,20 @@ function QuestionTrainer() {
   }, [catalog, subject, area, topicOf]);
   // Para cada filtro: quantas questões existem em cada opção, respeitando TODOS os outros filtros.
   const facets = React.useMemo(() => {
-    const keys = ["board", "subject", "topic", "contest", "career", "state", "category", "year", "exam", "source", "reviewed", "difficulty"] as const;
+    const keys = [
+      "board",
+      "subject",
+      "topic",
+      "contest",
+      "career",
+      "state",
+      "category",
+      "year",
+      "exam",
+      "source",
+      "reviewed",
+      "difficulty",
+    ] as const;
     type K = (typeof keys)[number];
     const val: Record<K, (q: Question) => string> = {
       board: (q) => q.board,
@@ -452,7 +485,20 @@ function QuestionTrainer() {
       reviewed: (q) => (hasReviewedExplanation(q) ? "reviewed" : ""),
       difficulty: (q) => q.difficulty,
     };
-    const sel: Record<K, string> = { board, subject, topic, contest, career, state, category, year, exam: appliedExam, source, reviewed, difficulty };
+    const sel: Record<K, string> = {
+      board,
+      subject,
+      topic,
+      contest,
+      career,
+      state,
+      category,
+      year,
+      exam: appliedExam,
+      source,
+      reviewed,
+      difficulty,
+    };
     const base = area === "all" ? catalog : catalog.filter((q) => subjectInArea(area, q.subject));
     const counts = {} as Record<K, Map<string, number>>;
     const totals = {} as Record<K, number>;
@@ -469,7 +515,23 @@ function QuestionTrainer() {
       totals[k] = all;
     }
     return { counts, totals };
-  }, [catalog, area, topicOf, board, subject, topic, contest, career, state, category, year, appliedExam, source, reviewed, difficulty]);
+  }, [
+    catalog,
+    area,
+    topicOf,
+    board,
+    subject,
+    topic,
+    contest,
+    career,
+    state,
+    category,
+    year,
+    appliedExam,
+    source,
+    reviewed,
+    difficulty,
+  ]);
   const pool = React.useMemo(
     () =>
       catalog.filter(
@@ -522,7 +584,15 @@ function QuestionTrainer() {
   };
   // Poucas questões classificadas naquele assunto: amplia para a matéria inteira em vez de abrir vazio.
   React.useEffect(() => {
-    if (!autoStart.current || loading || started || catalog.length === 0 || pool.length > 0 || topic === "all") return;
+    if (
+      !autoStart.current ||
+      loading ||
+      started ||
+      catalog.length === 0 ||
+      pool.length > 0 ||
+      topic === "all"
+    )
+      return;
     setTopic("all");
     toast.info("Poucas questões desse assunto: mostrando a matéria inteira.");
   }, [loading, started, catalog.length, pool.length, topic]);
@@ -753,10 +823,13 @@ function QuestionTrainer() {
               <i className="h-2.5 w-2.5 rounded-full bg-white/20" />
               <i className="h-2.5 w-2.5 rounded-full bg-white/20" />
             </span>
-            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-white/55">Treinador de questões</span>
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-white/55">
+              Treinador de questões
+            </span>
           </div>
           <span className="flex items-center gap-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-emerald-400">
-            <i className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" aria-hidden /> Correção imediata
+            <i className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" aria-hidden />{" "}
+            Correção imediata
           </span>
         </div>
         <CardContent className="p-3.5 sm:p-5 md:p-7">
@@ -786,7 +859,11 @@ function QuestionTrainer() {
             </div>
             <ElapsedTimer startedAt={startedAt} running={!answered} />
           </div>
-          <div className="mb-4 flex gap-1 sm:mb-6 sm:gap-1.5" role="img" aria-label={`Questão ${index + 1} de ${questions.length}`}>
+          <div
+            className="mb-4 flex gap-1 sm:mb-6 sm:gap-1.5"
+            role="img"
+            aria-label={`Questão ${index + 1} de ${questions.length}`}
+          >
             {questions.map((q, i) => (
               <i
                 key={q.id}
@@ -840,7 +917,8 @@ function QuestionTrainer() {
                         isSelected &&
                           !answered &&
                           "border-amber-400/70 bg-amber-400/10 ring-4 ring-amber-400/10 hover:bg-amber-400/10",
-                        isRight && "border-emerald-500/70 bg-emerald-500/10 hover:bg-emerald-500/10",
+                        isRight &&
+                          "border-emerald-500/70 bg-emerald-500/10 hover:bg-emerald-500/10",
                         isWrong && "border-rose-500/70 bg-rose-500/10 hover:bg-rose-500/10",
                       )}
                     >
@@ -854,7 +932,9 @@ function QuestionTrainer() {
                       >
                         {option.letter}
                       </span>
-                      <span className={cn("flex-1", isStruck && "line-through")}>{option.text}</span>
+                      <span className={cn("flex-1", isStruck && "line-through")}>
+                        {option.text}
+                      </span>
                       {isRight && (
                         <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-400">
                           <Check className="h-3.5 w-3.5" /> Correta
@@ -1207,7 +1287,14 @@ function TrainerSetup({
           {values.area !== "all" && (
             <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-xs font-semibold">
               Filtro do seu cronograma: {values.area}
-              <button type="button" className="underline" onClick={() => { setters.setArea("all"); setters.setTopic("all"); }}>
+              <button
+                type="button"
+                className="underline"
+                onClick={() => {
+                  setters.setArea("all");
+                  setters.setTopic("all");
+                }}
+              >
                 limpar
               </button>
             </p>
@@ -1506,7 +1593,11 @@ function ElapsedTimer({ startedAt, running }: { startedAt: number; running: bool
   const mm = String(Math.floor(secs / 60)).padStart(2, "0");
   const ss = String(secs % 60).padStart(2, "0");
   return (
-    <span className="flex items-center gap-1.5 rounded-xl border border-white/10 bg-black/25 px-3 py-1.5 font-mono text-sm font-semibold tabular-nums text-white" role="timer" aria-label="Tempo nesta questão">
+    <span
+      className="flex items-center gap-1.5 rounded-xl border border-white/10 bg-black/25 px-3 py-1.5 font-mono text-sm font-semibold tabular-nums text-white"
+      role="timer"
+      aria-label="Tempo nesta questão"
+    >
       <Timer className="h-4 w-4 text-amber-400" aria-hidden /> {mm}:{ss}
     </span>
   );

@@ -1,5 +1,14 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Gauge, Headphones, Pause, Play, RotateCcw, RotateCw, Volume2, VolumeX } from "lucide-react";
+import {
+  Gauge,
+  Headphones,
+  Pause,
+  Play,
+  RotateCcw,
+  RotateCw,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const SPEEDS = [0.75, 1, 1.25, 1.5, 2];
@@ -10,7 +19,9 @@ const fmt = (s: number) => {
   const h = Math.floor(s / 3600);
   const m = Math.floor((s % 3600) / 60);
   const sec = Math.floor(s % 60);
-  return h > 0 ? `${h}:${String(m).padStart(2, "0")}:${String(sec).padStart(2, "0")}` : `${m}:${String(sec).padStart(2, "0")}`;
+  return h > 0
+    ? `${h}:${String(m).padStart(2, "0")}:${String(sec).padStart(2, "0")}`
+    : `${m}:${String(sec).padStart(2, "0")}`;
 };
 
 interface Props {
@@ -40,7 +51,10 @@ export function AudioPlayer({ src, title, subtitle, resumeKey, className }: Prop
     setTime(0);
     setPlaying(false);
     if ("mediaSession" in navigator) {
-      navigator.mediaSession.metadata = new MediaMetadata({ title, artist: subtitle ?? "Norte Concurso" });
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title,
+        artist: subtitle ?? "Norte Concurso",
+      });
     }
   }, [src, title, subtitle]);
 
@@ -91,7 +105,10 @@ export function AudioPlayer({ src, title, subtitle, resumeKey, className }: Prop
 
   return (
     <div
-      className={cn("rounded-2xl border border-border bg-gradient-to-br from-card to-muted/40 p-4 shadow-sm", className)}
+      className={cn(
+        "rounded-2xl border border-border bg-gradient-to-br from-card to-muted/40 p-4 shadow-sm",
+        className,
+      )}
       role="group"
       aria-label={`Player de áudio: ${title}`}
     >
@@ -110,12 +127,20 @@ export function AudioPlayer({ src, title, subtitle, resumeKey, className }: Prop
       <div className="flex items-center gap-4">
         <div className="relative grid h-16 w-16 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
           <Headphones className="h-7 w-7" aria-hidden />
-          <span className="absolute inset-x-2 bottom-1.5 flex h-3 items-end justify-center gap-[2px]" aria-hidden>
+          <span
+            className="absolute inset-x-2 bottom-1.5 flex h-3 items-end justify-center gap-[2px]"
+            aria-hidden
+          >
             {[0, 1, 2, 3, 4].map((i) => (
               <i
                 key={i}
                 className="w-[3px] rounded-full bg-primary"
-                style={{ height: playing ? undefined : 3, animation: playing ? `eq-bar 0.9s ease-in-out ${i * 0.12}s infinite alternate` : undefined }}
+                style={{
+                  height: playing ? undefined : 3,
+                  animation: playing
+                    ? `eq-bar 0.9s ease-in-out ${i * 0.12}s infinite alternate`
+                    : undefined,
+                }}
               />
             ))}
           </span>
@@ -133,7 +158,16 @@ export function AudioPlayer({ src, title, subtitle, resumeKey, className }: Prop
             {Array.from({ length: BARS * 2 }, (_, i) => {
               const h = 30 + ((i * 37) % 70); // altura determinística, parece forma de onda
               const done = (i / (BARS * 2)) * 100 < pct;
-              return <i key={i} className={cn("flex-1 rounded-full", done ? "bg-primary" : "bg-muted-foreground/25")} style={{ height: `${h}%` }} />;
+              return (
+                <i
+                  key={i}
+                  className={cn(
+                    "flex-1 rounded-full",
+                    done ? "bg-primary" : "bg-muted-foreground/25",
+                  )}
+                  style={{ height: `${h}%` }}
+                />
+              );
             })}
           </div>
           <input
@@ -160,7 +194,12 @@ export function AudioPlayer({ src, title, subtitle, resumeKey, className }: Prop
 
       <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <button type="button" onClick={() => skip(-15)} aria-label="Voltar 15 segundos" className="grid h-10 w-10 place-items-center rounded-full text-muted-foreground hover:bg-muted hover:text-foreground">
+          <button
+            type="button"
+            onClick={() => skip(-15)}
+            aria-label="Voltar 15 segundos"
+            className="grid h-10 w-10 place-items-center rounded-full text-muted-foreground hover:bg-muted hover:text-foreground"
+          >
             <RotateCcw className="h-5 w-5" />
           </button>
           <button
@@ -171,13 +210,23 @@ export function AudioPlayer({ src, title, subtitle, resumeKey, className }: Prop
           >
             {playing ? <Pause className="h-6 w-6" /> : <Play className="ml-0.5 h-6 w-6" />}
           </button>
-          <button type="button" onClick={() => skip(15)} aria-label="Avançar 15 segundos" className="grid h-10 w-10 place-items-center rounded-full text-muted-foreground hover:bg-muted hover:text-foreground">
+          <button
+            type="button"
+            onClick={() => skip(15)}
+            aria-label="Avançar 15 segundos"
+            className="grid h-10 w-10 place-items-center rounded-full text-muted-foreground hover:bg-muted hover:text-foreground"
+          >
             <RotateCw className="h-5 w-5" />
           </button>
         </div>
 
         <div className="flex items-center gap-3">
-          <button type="button" onClick={cycleSpeed} aria-label={`Velocidade ${speed}x`} className="flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-bold tabular-nums hover:border-primary">
+          <button
+            type="button"
+            onClick={cycleSpeed}
+            aria-label={`Velocidade ${speed}x`}
+            className="flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-bold tabular-nums hover:border-primary"
+          >
             <Gauge className="h-3.5 w-3.5" /> {speed}x
           </button>
           <div className="flex items-center gap-1.5">
@@ -190,7 +239,11 @@ export function AudioPlayer({ src, title, subtitle, resumeKey, className }: Prop
               }}
               className="text-muted-foreground hover:text-foreground"
             >
-              {muted || volume === 0 ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+              {muted || volume === 0 ? (
+                <VolumeX className="h-4 w-4" />
+              ) : (
+                <Volume2 className="h-4 w-4" />
+              )}
             </button>
             <input
               type="range"
@@ -214,7 +267,11 @@ export function AudioPlayer({ src, title, subtitle, resumeKey, className }: Prop
         </div>
       </div>
 
-      {error && <p role="alert" className="mt-3 text-xs text-destructive">Não foi possível carregar este áudio.</p>}
+      {error && (
+        <p role="alert" className="mt-3 text-xs text-destructive">
+          Não foi possível carregar este áudio.
+        </p>
+      )}
       <style>{`@keyframes eq-bar { from { height: 3px } to { height: 14px } }`}</style>
     </div>
   );

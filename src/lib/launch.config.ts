@@ -22,7 +22,11 @@ export const TESTING_OPENED_AT = "2026-10-03T00:00:00-05:00";
  * - Gratuito/Essencial na fase de testes: 30 dias após o cadastro (ou após a abertura, o que for mais tarde).
  * - Plano pago sem vencimento: sem contador.
  */
-export function planEndsAt(createdAt: string | undefined, tier: string, expiresAt?: string | null): string | null {
+export function planEndsAt(
+  createdAt: string | undefined,
+  tier: string,
+  expiresAt?: string | null,
+): string | null {
   if (expiresAt) return expiresAt;
   if (!TESTING_PHASE || !isTestingTier(tier) || !createdAt) return null;
   const start = Math.max(new Date(createdAt).getTime(), new Date(TESTING_OPENED_AT).getTime());

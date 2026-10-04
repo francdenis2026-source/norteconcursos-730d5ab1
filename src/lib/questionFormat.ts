@@ -39,9 +39,12 @@ export const DIFFICULTY_LABEL: Record<Difficulty, string> = {
   difícil: "Difícil",
 };
 export const DIFFICULTY_STYLE: Record<Difficulty, string> = {
-  fácil: "border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300",
-  média: "border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-400/40 dark:bg-amber-400/10 dark:text-amber-300",
-  difícil: "border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300",
+  fácil:
+    "border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300",
+  média:
+    "border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-400/40 dark:bg-amber-400/10 dark:text-amber-300",
+  difícil:
+    "border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300",
 };
 
 export const parseBasis = (value: unknown): LegalBasis[] =>

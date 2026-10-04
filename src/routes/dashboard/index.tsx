@@ -44,9 +44,16 @@ export const Route = createFileRoute("/dashboard/")({
   head: () => ({
     meta: [
       { title: "Painel do aluno | Norte Concurso" },
-      { name: "description", content: "Acompanhe seu plano, desempenho e próximas atividades de preparação para concursos." },
+      {
+        name: "description",
+        content:
+          "Acompanhe seu plano, desempenho e próximas atividades de preparação para concursos.",
+      },
       { property: "og:title", content: "Painel do aluno | Norte Concurso" },
-      { property: "og:description", content: "Sua central de preparação, questões, provas e desempenho." },
+      {
+        property: "og:description",
+        content: "Sua central de preparação, questões, provas e desempenho.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -327,7 +334,9 @@ function DashboardIndex() {
         <section className="onboarding-banner no-print">
           <div>
             <span className="hero-chip">Primeiros passos</span>
-            <h2 className="font-display mt-3 text-2xl font-bold">Configure sua rota de preparação</h2>
+            <h2 className="font-display mt-3 text-2xl font-bold">
+              Configure sua rota de preparação
+            </h2>
             <div className="onboarding-steps">
               <OnboardingStep label="Definir concurso" done={checklist.contest} />
               <OnboardingStep label="Criar caderno" done={checklist.notebook} />
@@ -366,7 +375,6 @@ function DashboardIndex() {
           text="Raio-X de desempenho"
         />
       </section>
-
 
       <StudyGoals planTier={user?.subscription_tier} />
 
@@ -417,7 +425,9 @@ function DashboardIndex() {
                 text="Resolva sua primeira sessão de questões para ver a evolução por disciplina."
                 action={
                   <Button size="sm" asChild>
-                    <Link to="/dashboard/question-trainer" search={TRAINER_SEARCH}>Começar treino</Link>
+                    <Link to="/dashboard/question-trainer" search={TRAINER_SEARCH}>
+                      Começar treino
+                    </Link>
                   </Button>
                 }
               />

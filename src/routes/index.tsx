@@ -423,7 +423,15 @@ function Index() {
                 <li className="lp-step" key={title} data-reveal style={delay(i)}>
                   <span className="lp-step__node">
                     <i className="app-ico" data-hue={STEP_HUES[i]} aria-hidden="true">
-                      {i === 0 ? <Target /> : i === 1 ? <FileSearch /> : i === 2 ? <BrainCircuit /> : <Trophy />}
+                      {i === 0 ? (
+                        <Target />
+                      ) : i === 1 ? (
+                        <FileSearch />
+                      ) : i === 2 ? (
+                        <BrainCircuit />
+                      ) : (
+                        <Trophy />
+                      )}
                     </i>
                     <b>0{i + 1}</b>
                   </span>
@@ -471,7 +479,7 @@ function Index() {
                       <Check /> Filtros por banca e cargo
                     </li>
                     <li>
-                      <Check /> Resolução passo a passo com IA
+                      <Check /> Resolução passo a passo com IA · em breve
                     </li>
                     <li>
                       <Check /> Salva no seu caderno de revisão
@@ -702,8 +710,12 @@ function ProductMock() {
           </div>
         </div>
         <div className="lp-mock__stats">
-          <span><b>83%</b> acertos</span>
-          <span><b>9</b> em sequência</span>
+          <span>
+            <b>83%</b> acertos
+          </span>
+          <span>
+            <b>9</b> em sequência
+          </span>
           <span className="lp-mock__ai">✦ IA explicou · salvo no caderno</span>
         </div>
       </div>

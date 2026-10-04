@@ -14,7 +14,10 @@ import { TOPIC_VIDEOS, type TopicVideo } from "@/data/topicVideos";
 import { MEDIA_KEY, fetchMediaCatalog } from "@/lib/mediaStore";
 
 const strip = (v: string) => v.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
-const tokens = (v: string) => strip(v).split(/[^a-z0-9]+/).filter((t) => t.length >= 5);
+const tokens = (v: string) =>
+  strip(v)
+    .split(/[^a-z0-9]+/)
+    .filter((t) => t.length >= 5);
 
 /** Disciplina da Central de mídia que corresponde à matéria do cronograma. */
 const DISCIPLINE_OF_AREA: Record<string, string> = {
@@ -36,12 +39,20 @@ export function rankMaterials(list: StudyMaterialSummary[], subject: string, top
   const want = new Set(tokens(topic));
   return list
     .filter((m) => subjectInArea(subject, m.discipline))
-    .map((m) => ({ m, score: tokens(`${m.topic_label} ${m.title} ${m.summary ?? ""}`).filter((t) => want.has(t)).length }))
+    .map((m) => ({
+      m,
+      score: tokens(`${m.topic_label} ${m.title} ${m.summary ?? ""}`).filter((t) => want.has(t))
+        .length,
+    }))
     .sort((a, b) => b.score - a.score || a.m.sort_order - b.m.sort_order);
 }
 
 /** Videoaulas catalogadas por assunto ("exact") e as gerais da matéria. IDs com "PL" são playlists. */
-export function topicVideosFor(subject: string, topic: string, source: Record<string, Record<string, TopicVideo[]>> = TOPIC_VIDEOS): { exact: TopicVideo[]; general: TopicVideo[] } {
+export function topicVideosFor(
+  subject: string,
+  topic: string,
+  source: Record<string, Record<string, TopicVideo[]>> = TOPIC_VIDEOS,
+): { exact: TopicVideo[]; general: TopicVideo[] } {
   const exact: TopicVideo[] = [];
   const general: TopicVideo[] = [];
   for (const [key, topics] of Object.entries(source)) {
@@ -82,21 +93,51 @@ async function questionCountBySubject(qc: QueryClient): Promise<Map<string, numb
           counts.set(s, (counts.get(s) ?? 0) + 1);
         }
       };
-      add(await fetchAllRows<{ subject: string | null }>((from, to) =>
-        supabase.from("official_exam_questions").select("subject").eq("content_status", "active").neq("official_answer", "X").order("id").range(from, to)));
-      add(await fetchAllRows<{ subject: string | null }>((from, to) =>
-        supabase.from("curated_question_catalog").select("subject").eq("content_status", "active").order("id").range(from, to)));
+      add(
+        await fetchAllRows<{ subject: string | null }>((from, to) =>
+          supabase
+            .from("official_exam_questions")
+            .select("subject")
+            .eq("content_status", "active")
+            .neq("official_answer", "X")
+            .order("id")
+            .range(from, to),
+        ),
+      );
+      add(
+        await fetchAllRows<{ subject: string | null }>((from, to) =>
+          supabase
+            .from("curated_question_catalog")
+            .select("subject")
+            .eq("content_status", "active")
+            .order("id")
+            .range(from, to),
+        ),
+      );
       return counts;
     },
   });
 }
 
-export async function loadArsenal(qc: QueryClient, userId: string, subject: string, topic: string): Promise<Arsenal> {
+export async function loadArsenal(
+  qc: QueryClient,
+  userId: string,
+  subject: string,
+  topic: string,
+): Promise<Arsenal> {
   const [list, counts, cards, media] = await Promise.all([
-    qc.fetchQuery({ queryKey: ["study-materials", "list"], staleTime: 5 * 60_000, queryFn: fetchStudyMaterialList }),
+    qc.fetchQuery({
+      queryKey: ["study-materials", "list"],
+      staleTime: 5 * 60_000,
+      queryFn: fetchStudyMaterialList,
+    }),
     questionCountBySubject(qc).catch(() => new Map<string, number>()),
     (async () => {
-      let q = supabase.from("flashcards").select("id", { count: "exact", head: true }).eq("user_id", userId).eq("subject", subject);
+      let q = supabase
+        .from("flashcards")
+        .select("id", { count: "exact", head: true })
+        .eq("user_id", userId)
+        .eq("subject", subject);
       if (topic) q = q.eq("topic", topic);
       const { count } = await q;
       return count ?? 0;
@@ -116,7 +157,9 @@ export async function loadArsenal(qc: QueryClient, userId: string, subject: stri
     topicMaterials: ranked.filter((r) => r.score > 0).map((r) => r.m),
     subjectMaterials: ranked.map((r) => r.m),
     playlists: discipline ? media.playlists.filter((p) => p.discipline === discipline) : [],
-    podcasts: media.podcasts.filter((p) => (discipline ? p.discipline === discipline : strip(p.discipline).includes(strip(subject)))),
+    podcasts: media.podcasts.filter((p) =>
+      discipline ? p.discipline === discipline : strip(p.discipline).includes(strip(subject)),
+    ),
     cards,
     questions,
   };
@@ -124,7 +167,13 @@ export async function loadArsenal(qc: QueryClient, userId: string, subject: stri
 
 /** Há ALGO para estudar? Só então vale abrir a Sala de estudo. */
 export const hasAnyResource = (a: Arsenal) =>
-  a.subjectMaterials.length + a.videos.length + a.playlists.length + a.podcasts.length + a.cards + a.questions > 0;
+  a.subjectMaterials.length +
+    a.videos.length +
+    a.playlists.length +
+    a.podcasts.length +
+    a.cards +
+    a.questions >
+  0;
 
 /** Texto do aviso profissional quando não há nada para o assunto. */
 export function missingMessage(subject: string, topic: string): string {

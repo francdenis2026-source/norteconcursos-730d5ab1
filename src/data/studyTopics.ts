@@ -97,7 +97,15 @@ const T = {
     "Veículos e equipamentos",
     "Sinalização",
   ],
-  fisica: ["Cinemática", "Dinâmica e leis de Newton", "Trabalho, energia e potência", "Estática e hidrostática", "Ondas e óptica", "Termologia", "Eletricidade"],
+  fisica: [
+    "Cinemática",
+    "Dinâmica e leis de Newton",
+    "Trabalho, energia e potência",
+    "Estática e hidrostática",
+    "Ondas e óptica",
+    "Termologia",
+    "Eletricidade",
+  ],
   contabilidade: [
     "Conceitos e finalidades",
     "Patrimônio e equação fundamental",
@@ -130,10 +138,31 @@ const T = {
     "Estatuto da Criança e do Adolescente",
     "Lei de Migração (Lei 13.445/2017)",
   ],
-  atualidades: ["Política nacional e internacional", "Economia e finanças públicas", "Segurança pública no Brasil", "Meio ambiente e sustentabilidade", "Tecnologia e sociedade"],
-  medicina: ["Tanatologia", "Traumatologia forense", "Local de crime e preservação", "Cadeia de custódia", "Perícias criminais", "Identificação humana"],
-  idiomas: ["Geopolítica brasileira e fronteiras", "Interpretação de textos em inglês", "Vocabulário e estruturas básicas"],
-  etica: ["Ética no serviço público", "Cidadania e direitos fundamentais", "Direitos humanos e atividade policial"],
+  atualidades: [
+    "Política nacional e internacional",
+    "Economia e finanças públicas",
+    "Segurança pública no Brasil",
+    "Meio ambiente e sustentabilidade",
+    "Tecnologia e sociedade",
+  ],
+  medicina: [
+    "Tanatologia",
+    "Traumatologia forense",
+    "Local de crime e preservação",
+    "Cadeia de custódia",
+    "Perícias criminais",
+    "Identificação humana",
+  ],
+  idiomas: [
+    "Geopolítica brasileira e fronteiras",
+    "Interpretação de textos em inglês",
+    "Vocabulário e estruturas básicas",
+  ],
+  etica: [
+    "Ética no serviço público",
+    "Cidadania e direitos fundamentais",
+    "Direitos humanos e atividade policial",
+  ],
 } as const;
 
 const strip = (v: string) => v.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -145,19 +174,26 @@ export function topicsFor(subject: string): string[] {
   const add = (list: readonly string[]) => out.push(...list);
   if (/portugues/.test(n)) add(T.portugues);
   if (/raciocinio|logic/.test(n) && !/estatistica/.test(n)) add(T.raciocinio);
-  if (/estatistica/.test(n)) { add(T.estatistica); add(T.raciocinio.slice(0, 5)); }
+  if (/estatistica/.test(n)) {
+    add(T.estatistica);
+    add(T.raciocinio.slice(0, 5));
+  }
   if (/constitucional/.test(n)) add(T.constitucional);
   if (/administrativ/.test(n)) add(T.administrativo);
-  if (/penal/.test(n) && !/^direito processual penal$/.test(n) && !/legislacao/.test(n)) add(T.penal);
+  if (/penal/.test(n) && !/^direito processual penal$/.test(n) && !/legislacao/.test(n))
+    add(T.penal);
   if (/processual/.test(n)) add(T.processual);
   if (/informatica|tecnologia/.test(n)) add(T.informatica);
   if (/transito/.test(n)) add(T.transito);
   if (/fisica/.test(n)) add(T.fisica);
   if (/contabilidade/.test(n)) add(T.contabilidade);
-  if (/direitos humanos|legislacao especial|legislacao penal|legislacao especifica/.test(n)) add(T.humanos);
+  if (/direitos humanos|legislacao especial|legislacao penal|legislacao especifica/.test(n))
+    add(T.humanos);
   if (/atualidades|economia/.test(n)) add(T.atualidades);
   if (/medicina|criminalistica/.test(n)) add(T.medicina);
   if (/geopolitica|estrangeira|ingles/.test(n)) add(T.idiomas);
   if (/etica|cidadania/.test(n) && !/direitos humanos/.test(n)) add(T.etica);
-  return out.length ? [...new Set(out)] : ["Conceitos fundamentais", "Pontos mais cobrados em provas", "Questões comentadas da banca"];
+  return out.length
+    ? [...new Set(out)]
+    : ["Conceitos fundamentais", "Pontos mais cobrados em provas", "Questões comentadas da banca"];
 }

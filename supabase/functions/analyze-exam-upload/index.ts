@@ -67,13 +67,14 @@ Deno.serve(async (req: Request) => {
         .from("student_exam_documents")
         .update({
           analysis_status: "erro",
-          notes: "LOVABLE_API_KEY não configurada no projeto Supabase (Edge Function Secrets); não foi possível chamar o AI Gateway.",
+          notes:
+            "LOVABLE_API_KEY não configurada no projeto Supabase (Edge Function Secrets); não foi possível chamar o AI Gateway.",
         })
         .eq("id", documentId);
-      return new Response(
-        JSON.stringify({ error: "LOVABLE_API_KEY não configurada" }),
-        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
-      );
+      return new Response(JSON.stringify({ error: "LOVABLE_API_KEY não configurada" }), {
+        status: 500,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
     const { data: signed, error: signError } = await supabase.storage
@@ -106,7 +107,7 @@ Deno.serve(async (req: Request) => {
     } else {
       userContent.push({
         type: "text",
-        text: "O arquivo não é uma imagem (provavelmente PDF); classifique com base apenas no nome do arquivo e em qualquer contexto disponível, e marque confidence como \"baixa\" se não tiver certeza.",
+        text: 'O arquivo não é uma imagem (provavelmente PDF); classifique com base apenas no nome do arquivo e em qualquer contexto disponível, e marque confidence como "baixa" se não tiver certeza.',
       });
     }
 
@@ -132,7 +133,10 @@ Deno.serve(async (req: Request) => {
 
     const aiJson = await aiResponse.json();
     const rawText: string = aiJson.choices?.[0]?.message?.content ?? "{}";
-    const cleaned = rawText.trim().replace(/^```json\s*/i, "").replace(/```$/i, "");
+    const cleaned = rawText
+      .trim()
+      .replace(/^```json\s*/i, "")
+      .replace(/```$/i, "");
 
     let extracted: Record<string, unknown>;
     try {

@@ -29,7 +29,12 @@ import {
 } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
-import { GUEST_DAILY_LIMIT, getGuestRemainingToday, onAcreDayChange, registerGuestAnswer } from "@/lib/guestQuota";
+import {
+  GUEST_DAILY_LIMIT,
+  getGuestRemainingToday,
+  onAcreDayChange,
+  registerGuestAnswer,
+} from "@/lib/guestQuota";
 import {
   type Answer,
   type Question,
@@ -178,10 +183,17 @@ function DesafioDiario() {
             <NorteBrand light />
           </Link>
           <div className="flex items-center gap-2">
-            <Link to="/" className="app-top-btn !w-auto gap-1.5 px-3 text-sm font-semibold text-white/75 hover:!bg-white/10 hover:!text-white">
+            <Link
+              to="/"
+              className="app-top-btn !w-auto gap-1.5 px-3 text-sm font-semibold text-white/75 hover:!bg-white/10 hover:!text-white"
+            >
               <ArrowLeft className="h-4 w-4" /> Início
             </Link>
-            <Link to="/auth" search={{ mode: "register" }} className="btn-brass !h-9 !px-4 !text-sm">
+            <Link
+              to="/auth"
+              search={{ mode: "register" }}
+              className="btn-brass !h-9 !px-4 !text-sm"
+            >
               Criar conta
             </Link>
           </div>
@@ -220,10 +232,18 @@ function DesafioDiario() {
             description={`Suas ${GUEST_DAILY_LIMIT} questões grátis de hoje já foram usadas neste computador. O desafio libera de novo amanhã, ou crie uma conta para treinar sem limite agora mesmo.`}
             actions={
               <>
-                <Link to="/auth" search={{ mode: undefined }} className="hero-btn-ghost inline-flex items-center px-4 text-sm">
+                <Link
+                  to="/auth"
+                  search={{ mode: undefined }}
+                  className="hero-btn-ghost inline-flex items-center px-4 text-sm"
+                >
                   Já tenho conta
                 </Link>
-                <Link to="/auth" search={{ mode: "register" }} className="hero-btn-primary inline-flex items-center gap-2 px-4 text-sm">
+                <Link
+                  to="/auth"
+                  search={{ mode: "register" }}
+                  className="hero-btn-primary inline-flex items-center gap-2 px-4 text-sm"
+                >
                   Criar conta grátis <ArrowRight className="h-4 w-4" />
                 </Link>
               </>
@@ -258,41 +278,41 @@ function DesafioDiario() {
         )}
 
         <div className="mx-auto max-w-3xl">
-        {step === "done" && (
-          <TrainingResult total={questions.length} correct={correct} wrong={wrong} />
-        )}
+          {step === "done" && (
+            <TrainingResult total={questions.length} correct={correct} wrong={wrong} />
+          )}
 
-        {step === "playing" && question && (
-          <QuestionPlayer
-            question={question}
-            index={index}
-            total={questions.length}
-            remaining={remaining}
-            selected={selected}
-            struck={struck}
-            answered={answered}
-            showResult={showResult}
-            correct={correct}
-            wrong={wrong}
-            onSelect={(letter) => {
-              if (answered) return;
-              setStruck((items) => items.filter((item) => item !== letter));
-              setSelected(letter);
-            }}
-            onToggleStrike={(letter) => {
-              if (answered) return;
-              setStruck((items) =>
-                items.includes(letter)
-                  ? items.filter((item) => item !== letter)
-                  : [...items, letter],
-              );
-              if (selected === letter) setSelected(null);
-            }}
-            onSubmit={submit}
-            onNext={next}
-            isLast={index + 1 >= questions.length}
-          />
-        )}
+          {step === "playing" && question && (
+            <QuestionPlayer
+              question={question}
+              index={index}
+              total={questions.length}
+              remaining={remaining}
+              selected={selected}
+              struck={struck}
+              answered={answered}
+              showResult={showResult}
+              correct={correct}
+              wrong={wrong}
+              onSelect={(letter) => {
+                if (answered) return;
+                setStruck((items) => items.filter((item) => item !== letter));
+                setSelected(letter);
+              }}
+              onToggleStrike={(letter) => {
+                if (answered) return;
+                setStruck((items) =>
+                  items.includes(letter)
+                    ? items.filter((item) => item !== letter)
+                    : [...items, letter],
+                );
+                if (selected === letter) setSelected(null);
+              }}
+              onSubmit={submit}
+              onNext={next}
+              isLast={index + 1 >= questions.length}
+            />
+          )}
         </div>
       </main>
     </div>

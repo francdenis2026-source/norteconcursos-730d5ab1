@@ -160,7 +160,11 @@ function EditalRadarPage() {
         size="sm"
         kicker="Inteligência de editais"
         icon={Radar}
-        title={<>Raio-X dos <em>editais</em></>}
+        title={
+          <>
+            Raio-X dos <em>editais</em>
+          </>
+        }
         description="Cruza o que cada edital lista com o que as provas já cadastradas realmente cobraram: o que mais cai, o que nunca caiu e o que tende a cair. É estatística, não garantia."
       />
       <section className="rounded-3xl border bg-background p-6 shadow-sm">

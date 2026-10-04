@@ -41,7 +41,9 @@ function EssayModels() {
               </div>
             ))}
             <div className="rounded-lg bg-muted/50 p-3">
-              <p className="text-xs font-bold uppercase text-muted-foreground mb-1">Por que funciona</p>
+              <p className="text-xs font-bold uppercase text-muted-foreground mb-1">
+                Por que funciona
+              </p>
               <ul className="list-disc list-inside text-sm space-y-1">
                 {m.porQueFunciona.map((x) => (
                   <li key={x}>{x}</li>
@@ -52,7 +54,8 @@ function EssayModels() {
         </Card>
       ))}
       <p className="text-xs text-muted-foreground">
-        Textos autorais da plataforma, apenas como apoio de estrutura. Não são gabaritos oficiais de banca.
+        Textos autorais da plataforma, apenas como apoio de estrutura. Não são gabaritos oficiais de
+        banca.
       </p>
     </div>
   );
@@ -72,7 +75,9 @@ function EssayGuide() {
       <Card>
         <CardHeader>
           <CardTitle>Esqueleto da redação</CardTitle>
-          <CardDescription>Estrutura para 30 linhas: introdução, dois desenvolvimentos e proposta.</CardDescription>
+          <CardDescription>
+            Estrutura para 30 linhas: introdução, dois desenvolvimentos e proposta.
+          </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           {ESSAY_SKELETON.map((s, i) => (
@@ -98,7 +103,12 @@ function EssayGuide() {
           {ESSAY_CHECKLIST.map((c, i) => {
             const on = done.has(i);
             return (
-              <button key={c} type="button" onClick={() => toggle(i)} className="flex w-full items-start gap-2 text-left text-sm">
+              <button
+                key={c}
+                type="button"
+                onClick={() => toggle(i)}
+                className="flex w-full items-start gap-2 text-left text-sm"
+              >
                 {on ? (
                   <CheckSquare className="h-4 w-4 mt-0.5 text-emerald-500" />
                 ) : (
@@ -173,7 +183,14 @@ function EssayNotebook({ userId }: { userId: string }) {
   };
 
   const remove = async (e: SavedEssay) => {
-    if (!(await confirmDialog({ title: "Excluir redação?", message: `"${e.title}" será apagada. Essa ação não pode ser desfeita.`, confirmLabel: "Excluir" }))) return;
+    if (
+      !(await confirmDialog({
+        title: "Excluir redação?",
+        message: `"${e.title}" será apagada. Essa ação não pode ser desfeita.`,
+        confirmLabel: "Excluir",
+      }))
+    )
+      return;
     const { error } = await supabase.from("user_essays").delete().eq("id", e.id);
     if (error) {
       toast.error("Não foi possível excluir.");
@@ -188,7 +205,11 @@ function EssayNotebook({ userId }: { userId: string }) {
     <div className="grid gap-4 lg:grid-cols-[1fr_280px]">
       <Card>
         <CardHeader className="space-y-3">
-          <Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Tema ou título da redação" />
+          <Input
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="Tema ou título da redação"
+          />
           <div className="flex items-center justify-between text-xs text-muted-foreground">
             <span className={lines > MAX_LINES ? "font-bold text-rose-600" : ""}>
               {lines} / {MAX_LINES} linhas (estimativa) · {words} palavras
@@ -231,9 +252,14 @@ function EssayNotebook({ userId }: { userId: string }) {
           <CardTitle className="text-base">Minhas redações</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2">
-          {list.length === 0 && <p className="text-sm text-muted-foreground">Nenhuma redação salva ainda.</p>}
+          {list.length === 0 && (
+            <p className="text-sm text-muted-foreground">Nenhuma redação salva ainda.</p>
+          )}
           {list.map((e) => (
-            <div key={e.id} className={`flex items-center gap-2 rounded-lg border p-2 ${e.id === id ? "border-primary" : ""}`}>
+            <div
+              key={e.id}
+              className={`flex items-center gap-2 rounded-lg border p-2 ${e.id === id ? "border-primary" : ""}`}
+            >
               <button
                 type="button"
                 className="flex-1 text-left min-w-0"
@@ -244,9 +270,16 @@ function EssayNotebook({ userId }: { userId: string }) {
                 }}
               >
                 <p className="truncate text-sm font-medium">{e.title}</p>
-                <p className="text-xs text-muted-foreground">{new Date(e.updated_at).toLocaleDateString("pt-BR")}</p>
+                <p className="text-xs text-muted-foreground">
+                  {new Date(e.updated_at).toLocaleDateString("pt-BR")}
+                </p>
               </button>
-              <Button size="icon" variant="ghost" aria-label={`Excluir ${e.title}`} onClick={() => remove(e)}>
+              <Button
+                size="icon"
+                variant="ghost"
+                aria-label={`Excluir ${e.title}`}
+                onClick={() => remove(e)}
+              >
                 <Trash2 className="h-4 w-4 text-rose-500" />
               </Button>
             </div>
@@ -267,7 +300,8 @@ function EssayAiAssistant() {
           <Badge variant="secondary">Em breve</Badge>
         </div>
         <CardDescription>
-          Receberá sua redação e devolverá nota estimada, aderência aos tópicos, erros de gramática e sugestões de melhoria.
+          Receberá sua redação e devolverá nota estimada, aderência aos tópicos, erros de gramática
+          e sugestões de melhoria.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -287,7 +321,10 @@ export function EssayTabs({ userId, imported }: { userId: string; imported: Reac
         <TabsTrigger value="guia">Guia e esqueleto</TabsTrigger>
         <TabsTrigger value="modelos">Modelos</TabsTrigger>
         <TabsTrigger value="ia">
-          Correção com IA <Badge variant="secondary" className="ml-1.5">Em breve</Badge>
+          Correção com IA{" "}
+          <Badge variant="secondary" className="ml-1.5">
+            Em breve
+          </Badge>
         </TabsTrigger>
         <TabsTrigger value="provas">Discursivas de provas</TabsTrigger>
       </TabsList>

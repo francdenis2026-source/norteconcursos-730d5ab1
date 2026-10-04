@@ -109,18 +109,45 @@ const MOBILE_HUE: Record<string, Hue> = {
 };
 
 const MENU: MenuItem[] = [
+  {
+    group: "Administração",
+    label: "Atendimento",
+    icon: FileStack,
+    href: "/dashboard/admin-support",
+    adminOnly: true,
+  },
   { group: "Hoje", label: "Painel do aluno", icon: LayoutDashboard, href: "/dashboard" },
   { group: "Hoje", label: "Assistente de estudos", icon: Sparkles, href: "/dashboard/study-coach" },
   { group: "Hoje", label: "Plano de estudos", icon: ClipboardList, href: "/dashboard/study-plan" },
   { group: "Hoje", label: "Central de estudos", icon: Timer, href: "/dashboard/study-tools" },
   { group: "Objetivo", label: "Meu concurso", icon: Target, href: "/dashboard/my-contest" },
   { group: "Objetivo", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
-  { group: "Objetivo", label: "Panorama das provas", icon: BarChart3, href: "/dashboard/exam-panorama" },
+  {
+    group: "Objetivo",
+    label: "Panorama das provas",
+    icon: BarChart3,
+    href: "/dashboard/exam-panorama",
+  },
   { group: "Objetivo", label: "Concursos disponíveis", icon: Search, href: "/dashboard/questions" },
-  { group: "Edital e conteúdo", label: "Edital eletrônico", icon: MapPin, href: "/dashboard/edital" },
-  { group: "Edital e conteúdo", label: "Mudanças no edital", icon: Radar, href: "/dashboard/edital-radar" },
+  {
+    group: "Edital e conteúdo",
+    label: "Edital eletrônico",
+    icon: MapPin,
+    href: "/dashboard/edital",
+  },
+  {
+    group: "Edital e conteúdo",
+    label: "Mudanças no edital",
+    icon: Radar,
+    href: "/dashboard/edital-radar",
+  },
   { group: "Edital e conteúdo", label: "Biblioteca", icon: Library, href: "/dashboard/library" },
-  { group: "Edital e conteúdo", label: "Central de mídia", icon: PlayCircle, href: "/dashboard/media" },
+  {
+    group: "Edital e conteúdo",
+    label: "Central de mídia",
+    icon: PlayCircle,
+    href: "/dashboard/media",
+  },
   { group: "ENEM", label: "Área ENEM", icon: GraduationCap, href: "/dashboard/enem" },
   {
     group: "Questões",
@@ -128,7 +155,13 @@ const MENU: MenuItem[] = [
     icon: BrainCircuit,
     href: "/dashboard/question-trainer",
   },
-  { group: "Questões", label: "Resolver com IA", icon: Sparkles, href: "/dashboard/ai-solver", soon: !AI_ENABLED },
+  {
+    group: "Questões",
+    label: "Resolver com IA",
+    icon: Sparkles,
+    href: "/dashboard/ai-solver",
+    soon: !AI_ENABLED,
+  },
   {
     group: "Questões",
     label: "Banco de questões",
@@ -141,8 +174,18 @@ const MENU: MenuItem[] = [
   { group: "Provas", label: "Simulador", icon: Trophy, href: "/dashboard/mock-exams" },
   { group: "Provas", label: "Minhas provas", icon: FileStack, href: "/dashboard/student-exams" },
   { group: "Provas", label: "Redação", icon: PenLine, href: "/dashboard/essays" },
-  { group: "Desempenho", label: "Visão de desempenho", icon: Layers, href: "/dashboard/performance" },
-  { group: "Desempenho", label: "Histórico de atividades", icon: History, href: "/dashboard/history" },
+  {
+    group: "Desempenho",
+    label: "Visão de desempenho",
+    icon: Layers,
+    href: "/dashboard/performance",
+  },
+  {
+    group: "Desempenho",
+    label: "Histórico de atividades",
+    icon: History,
+    href: "/dashboard/history",
+  },
   { group: "Desempenho", label: "Medalhas", icon: Medal, href: "/dashboard/medals" },
   { group: "Conta", label: "Plano e uso", icon: Sparkles, href: "/dashboard/subscriptions" },
   { group: "Conta", label: "Perfil", icon: User, href: "/dashboard/profile" },
@@ -224,7 +267,9 @@ function isActive(pathname: string, href: string) {
 function initials(name?: string) {
   if (!name) return "NC";
   const parts = name.trim().split(/\s+/);
-  return ((parts[0]?.[0] ?? "") + (parts.length > 1 ? (parts.at(-1)?.[0] ?? "") : "")).toUpperCase();
+  return (
+    (parts[0]?.[0] ?? "") + (parts.length > 1 ? (parts.at(-1)?.[0] ?? "") : "")
+  ).toUpperCase();
 }
 
 interface DashboardLayoutProps {
@@ -395,14 +440,16 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <React.Fragment key={item.href}>
             {showGroup && <div className="app-nav__group">{item.group}</div>}
             <div className={item.adminOnly ? "app-nav__admin" : undefined}>
-            {collapsed ? (
-              <Tooltip>
-                <TooltipTrigger asChild>{link}</TooltipTrigger>
-                <TooltipContent side="right">{item.soon ? `${item.label} — ${SOON_LABEL}` : item.label}</TooltipContent>
-              </Tooltip>
-            ) : (
-              link
-            )}
+              {collapsed ? (
+                <Tooltip>
+                  <TooltipTrigger asChild>{link}</TooltipTrigger>
+                  <TooltipContent side="right">
+                    {item.soon ? `${item.label} — ${SOON_LABEL}` : item.label}
+                  </TooltipContent>
+                </Tooltip>
+              ) : (
+                link
+              )}
             </div>
           </React.Fragment>
         );
@@ -415,7 +462,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <DropdownMenuTrigger asChild>
         <button type="button" className="app-user" aria-label="Menu da conta">
           <span className="app-avatar">
-            {avatarUrl ? <img src={avatarUrl} alt="" className="h-full w-full rounded-[inherit] object-cover" /> : initials(user?.full_name)}
+            {avatarUrl ? (
+              <img
+                src={avatarUrl}
+                alt=""
+                className="h-full w-full rounded-[inherit] object-cover"
+              />
+            ) : (
+              initials(user?.full_name)
+            )}
           </span>
           {!collapsed && (
             <>
@@ -471,7 +526,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             )}
           </div>
 
-          <button type="button" className="app-sidebar__search" onClick={() => setPaletteOpen(true)}>
+          <button
+            type="button"
+            className="app-sidebar__search"
+            onClick={() => setPaletteOpen(true)}
+          >
             <Search />
             {!isCollapsed && (
               <>
@@ -494,7 +553,13 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 </div>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <div className="app-stat cursor-pointer" role="button" tabIndex={0} onClick={openMedals} onKeyDown={(e) => e.key === "Enter" && openMedals()}>
+                    <div
+                      className="app-stat cursor-pointer"
+                      role="button"
+                      tabIndex={0}
+                      onClick={openMedals}
+                      onKeyDown={(e) => e.key === "Enter" && openMedals()}
+                    >
                       <span>
                         <Medal /> Medalhas
                       </span>
@@ -529,14 +594,19 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-lg">
             <DialogTitle>Medalhas e progresso</DialogTitle>
             <p className="text-sm text-muted-foreground">
-              Cada medalha é concedida automaticamente ao atingir a meta. Continue estudando para avançar.
+              Cada medalha é concedida automaticamente ao atingir a meta. Continue estudando para
+              avançar.
             </p>
             <ul className="space-y-3">
               {medalProgress.map((m) => (
                 <li key={m.code} className={m.earned ? "" : "opacity-80"}>
                   <div className="flex items-center justify-between gap-2 text-sm">
                     <span className="flex items-center gap-2 font-semibold">
-                      <Medal className={m.earned ? "h-4 w-4 text-amber-500" : "h-4 w-4 text-muted-foreground"} />
+                      <Medal
+                        className={
+                          m.earned ? "h-4 w-4 text-amber-500" : "h-4 w-4 text-muted-foreground"
+                        }
+                      />
                       {m.name}
                     </span>
                     <span className="tabular text-xs text-muted-foreground">
@@ -608,14 +678,25 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               {TESTING_PHASE && !isAdmin && isTestingTier(tier) && !!user?.plan_ends_at && (
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link to="/dashboard/subscriptions" className="app-streak app-trial" aria-label="Fase de testes: tempo restante de acesso">
+                    <Link
+                      to="/dashboard/subscriptions"
+                      className="app-streak app-trial"
+                      aria-label="Fase de testes: tempo restante de acesso"
+                    >
                       <FlaskConical />
                       <span className="app-trial__label">Teste</span>
-                      <span className="app-trial__full"><PlanCountdownInline endsAt={user.plan_ends_at} /></span>
-                      <span className="app-trial__short"><PlanCountdownShort endsAt={user.plan_ends_at} /></span>
+                      <span className="app-trial__full">
+                        <PlanCountdownInline endsAt={user.plan_ends_at} />
+                      </span>
+                      <span className="app-trial__short">
+                        <PlanCountdownShort endsAt={user.plan_ends_at} />
+                      </span>
                     </Link>
                   </TooltipTrigger>
-                  <TooltipContent side="bottom">Fase de testes: você usa o plano Essencial de graça. Depois, a conta segue no plano Gratuito.</TooltipContent>
+                  <TooltipContent side="bottom">
+                    Fase de testes: você usa o plano Essencial de graça. Depois, a conta segue no
+                    plano Gratuito.
+                  </TooltipContent>
                 </Tooltip>
               )}
               <span className="app-streak" title="Dias seguidos de estudo">
@@ -633,10 +714,14 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </div>
           </header>
 
-          <main className="app-content" data-hue={GROUP_HUE[items.find((i) => isActive(location.pathname, i.href))?.group ?? "Hoje"] ?? "gold"}>
-            <div className="app-content__inner">
-              {children}
-            </div>
+          <main
+            className="app-content"
+            data-hue={
+              GROUP_HUE[items.find((i) => isActive(location.pathname, i.href))?.group ?? "Hoje"] ??
+              "gold"
+            }
+          >
+            <div className="app-content__inner">{children}</div>
             <footer className="app-footer no-print">
               <span>© 2026 Norte Concurso</span>
               <span>

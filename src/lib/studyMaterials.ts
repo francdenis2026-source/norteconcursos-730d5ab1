@@ -1,3 +1,4 @@
+import { userStorageKey } from "@/lib/userStorage";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -131,7 +132,7 @@ const READ_KEY = "norte-library-read";
 /** Materiais já abertos neste navegador (conveniência local, não é dado do aluno no servidor). */
 export function readSlugs(): Set<string> {
   try {
-    const raw = localStorage.getItem(READ_KEY);
+    const raw = localStorage.getItem(userStorageKey(READ_KEY));
     const parsed: unknown = raw ? JSON.parse(raw) : [];
     return new Set(
       Array.isArray(parsed) ? parsed.filter((v): v is string => typeof v === "string") : [],
@@ -146,7 +147,7 @@ export function markSlugRead(slug: string) {
     const current = readSlugs();
     if (current.has(slug)) return;
     current.add(slug);
-    localStorage.setItem(READ_KEY, JSON.stringify([...current]));
+    localStorage.setItem(userStorageKey(READ_KEY), JSON.stringify([...current]));
   } catch {
     // sem armazenamento disponível: o marcador de lido simplesmente não persiste
   }

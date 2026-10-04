@@ -1,24 +1,24 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { useDashboardData } from '@/hooks/useDashboard';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
-import { Badge } from '@/components/ui/badge';
-import { 
-  Target, 
-  Calendar, 
-  Trophy, 
-  AlertCircle, 
-  CheckCircle2, 
+import { createFileRoute } from "@tanstack/react-router";
+import { useDashboardData } from "@/hooks/useDashboard";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { Badge } from "@/components/ui/badge";
+import {
+  Target,
+  Calendar,
+  Trophy,
+  AlertCircle,
+  CheckCircle2,
   ChevronRight,
   TrendingUp,
-  Clock
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import { PageHero } from '@/components/dashboard/PageHero';
+  Clock,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { PageHero } from "@/components/dashboard/PageHero";
 
-export const Route = createFileRoute('/dashboard/my-contest')({
-  component: MyContestPage
+export const Route = createFileRoute("/dashboard/my-contest")({
+  component: MyContestPage,
 });
 
 function MyContestPage() {
@@ -50,8 +50,11 @@ function MyContestPage() {
     );
   }
 
-  const daysToExam = focusedContest.examDate 
-    ? Math.ceil((new Date(focusedContest.examDate).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))
+  const daysToExam = focusedContest.examDate
+    ? Math.ceil(
+        (new Date(focusedContest.examDate).getTime() - new Date().getTime()) /
+          (1000 * 60 * 60 * 24),
+      )
     : null;
 
   return (
@@ -100,20 +103,31 @@ function MyContestPage() {
 
             <div className="space-y-3">
               {[
-                { name: 'Língua Portuguesa', progress: 65, nextReview: '2026-08-15' },
-                { name: 'Direito Constitucional', progress: 42, nextReview: '2026-08-14' },
-                { name: 'Direito Administrativo', progress: 15, nextReview: '2026-08-17' },
-                { name: 'Informática', progress: 0, nextReview: null }
+                { name: "Língua Portuguesa", progress: 65, nextReview: "2026-08-15" },
+                { name: "Direito Constitucional", progress: 42, nextReview: "2026-08-14" },
+                { name: "Direito Administrativo", progress: 15, nextReview: "2026-08-17" },
+                { name: "Informática", progress: 0, nextReview: null },
               ].map((topic, i) => {
-                const status = topic.progress === 100 ? 'Revisado' : topic.progress > 0 ? 'Lido' : 'Não Iniciado';
+                const status =
+                  topic.progress === 100
+                    ? "Revisado"
+                    : topic.progress > 0
+                      ? "Lido"
+                      : "Não Iniciado";
                 return (
-                  <div key={topic.name} className="flex flex-col gap-2 p-3 border rounded-lg hover:border-secondary/50 transition-colors">
+                  <div
+                    key={topic.name}
+                    className="flex flex-col gap-2 p-3 border rounded-lg hover:border-secondary/50 transition-colors"
+                  >
                     <div className="flex items-center gap-2">
                       <span className="text-sm font-bold flex-1">{topic.name}</span>
-                      <Badge variant={status === 'Não Iniciado' ? 'outline' : 'default'} className={cn(
-                        status === 'Revisado' && "bg-emerald-500",
-                        status === 'Lido' && "bg-secondary"
-                      )}>
+                      <Badge
+                        variant={status === "Não Iniciado" ? "outline" : "default"}
+                        className={cn(
+                          status === "Revisado" && "bg-emerald-500",
+                          status === "Lido" && "bg-secondary",
+                        )}
+                      >
                         {status}
                       </Badge>
                       <Progress value={topic.progress} className="h-1.5 w-20" />
@@ -121,8 +135,13 @@ function MyContestPage() {
                     {topic.nextReview && (
                       <div className="flex items-center gap-2 text-[10px] text-muted-foreground">
                         <Calendar className="h-3 w-3" />
-                        Próxima revisão sugerida: <span className="font-bold text-secondary">{new Date(topic.nextReview).toLocaleDateString()}</span>
-                        <Badge variant="outline" className="ml-auto text-[9px] h-4">Repetição Espaçada</Badge>
+                        Próxima revisão sugerida:{" "}
+                        <span className="font-bold text-secondary">
+                          {new Date(topic.nextReview).toLocaleDateString()}
+                        </span>
+                        <Badge variant="outline" className="ml-auto text-[9px] h-4">
+                          Repetição Espaçada
+                        </Badge>
                       </div>
                     )}
                   </div>
@@ -155,7 +174,8 @@ function MyContestPage() {
               <div className="p-3 border border-amber-200 bg-amber-50 rounded-lg flex gap-3">
                 <AlertCircle className="h-5 w-5 text-amber-600 shrink-0" />
                 <p className="text-[11px] text-amber-800">
-                  Sua performance em <strong>Informática</strong> está abaixo da meta (60%). Recomendamos priorizar este tema na próxima semana.
+                  Sua performance em <strong>Informática</strong> está abaixo da meta (60%).
+                  Recomendamos priorizar este tema na próxima semana.
                 </p>
               </div>
             </CardContent>
@@ -170,7 +190,8 @@ function MyContestPage() {
             </CardHeader>
             <CardContent>
               <p className="text-xs opacity-90 leading-relaxed italic">
-                "Foque em simulados nesta reta final. A banca {focusedContest.examBoard} costuma repetir padrões de enunciados em {focusedContest.role}."
+                "Foque em simulados nesta reta final. A banca {focusedContest.examBoard} costuma
+                repetir padrões de enunciados em {focusedContest.role}."
               </p>
             </CardContent>
           </Card>
@@ -180,7 +201,7 @@ function MyContestPage() {
   );
 }
 
-function DisciplineProgress({ name, progress }: { name: string, progress: number }) {
+function DisciplineProgress({ name, progress }: { name: string; progress: number }) {
   return (
     <div className="flex items-center justify-between p-3 rounded-lg border group hover:border-secondary transition-colors cursor-pointer">
       <div className="flex flex-col gap-1 flex-1 mr-4">

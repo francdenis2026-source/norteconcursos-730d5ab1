@@ -3,18 +3,15 @@ import { z } from "zod";
 import { PAYMENTS_ENABLED, PAYMENTS_NOTICE } from "@/lib/launch.config";
 
 export const createCheckoutSession = createServerFn({ method: "POST" })
-  .inputValidator((data: unknown) => z.object({ priceId: z.string(), planId: z.string() }).parse(data))
-  .handler(async ({ data }) => {
+  .validator((data: unknown) => z.object({ priceId: z.string(), planId: z.string() }).parse(data))
+  .handler(async (): Promise<{ url: string }> => {
     if (!PAYMENTS_ENABLED) throw new Error(PAYMENTS_NOTICE);
-    console.log("Mocking Stripe Checkout Session creation for:", data.planId);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    return { url: `/dashboard/profile?success=true&plan=${data.planId}` };
+    throw new Error("Checkout indisponível até a integração de pagamentos ser validada.");
   });
 
-export const createPortalSession = createServerFn({ method: "POST" })
-  .handler(async () => {
+export const createPortalSession = createServerFn({ method: "POST" }).handler(
+  async (): Promise<{ url: string }> => {
     if (!PAYMENTS_ENABLED) throw new Error(PAYMENTS_NOTICE);
-    console.log("Mocking Stripe Billing Portal Session creation");
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    return { url: "https://billing.stripe.com/p/session/test_mock_portal" };
-  });
+    throw new Error("Portal indisponível até a integração de pagamentos ser validada.");
+  },
+);

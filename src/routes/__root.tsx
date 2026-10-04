@@ -10,6 +10,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
+import { supabase, passwordRecoveryPending } from "@/integrations/supabase/client";
 import { Toaster } from "@/components/ui/sonner";
 import { ConfirmHost } from "@/components/ConfirmHost";
 import { MobileNotice } from "@/components/MobileNotice";
@@ -124,7 +125,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: appCss,
-      },      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "manifest", href: "/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/icons/apple-touch-180.png" },
     ],
@@ -151,6 +153,19 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+  useEffect(() => {
+    let previousUser: string | null = null;
+    if (passwordRecoveryPending) void router.navigate({ to: "/auth", search: { recovery: true } });
+    const { data } = supabase.auth.onAuthStateChange((event, session) => {
+      const currentUser = session?.user.id ?? null;
+      if (currentUser !== previousUser) queryClient.clear();
+      previousUser = currentUser;
+      if (event === "PASSWORD_RECOVERY")
+        void router.navigate({ to: "/auth", search: { recovery: true } });
+    });
+    return () => data.subscription.unsubscribe();
+  }, [router, queryClient]);
 
   useEffect(() => {
     // Check local storage or matchMedia for theme preference

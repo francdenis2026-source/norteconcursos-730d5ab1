@@ -11,14 +11,21 @@ export function HeroVideo() {
 
   useEffect(() => {
     const el = ref.current;
-    const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
-    if (!el || saveData || matchMedia("(prefers-reduced-motion: reduce)").matches || matchMedia("(max-width: 767px)").matches) {
+    const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
+      ?.saveData;
+    if (
+      !el ||
+      saveData ||
+      matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      matchMedia("(max-width: 767px)").matches
+    ) {
       setDone(true);
       return;
     }
     let loaded = document.readyState === "complete";
     // AbortError = o navegador pausou por economia de energia; o observador retoma quando a hero aparecer.
-    const play = () => void el.play().catch((e: unknown) => (e as Error).name !== "AbortError" && setDone(true));
+    const play = () =>
+      void el.play().catch((e: unknown) => (e as Error).name !== "AbortError" && setDone(true));
     const onLoad = () => {
       loaded = true;
       play();

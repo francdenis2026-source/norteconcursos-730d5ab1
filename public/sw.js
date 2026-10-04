@@ -33,7 +33,5 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
   const url = new URL(request.url);
   if (!SHELL_ASSETS.includes(url.pathname)) return;
-  event.respondWith(
-    caches.match(request).then((cached) => cached || fetch(request)),
-  );
+  event.respondWith(caches.match(request).then((cached) => cached || fetch(request)));
 });
