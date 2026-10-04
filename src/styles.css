@@ -6927,6 +6927,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     min-height: 0;
   }
   .lp-hero__media::before {
+    background-image: url("/media/hero/command-room.webp");
     filter: saturate(1.35) contrast(1.1);
   }
   .lp-hero__shade {
