@@ -3353,6 +3353,11 @@ html {
   }
 }
 @media (max-width: 900px) {
+  .lp-header {
+    /* evita que o menu/lua fiquem colados no notch/barra de status quando
+       o site roda como app instalado (sem a barra do navegador) */
+    padding-top: env(safe-area-inset-top);
+  }
   .lp-nav,
   .lp-header__login {
     display: none;
