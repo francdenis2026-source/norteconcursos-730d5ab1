@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
-import { CheckCircle2, ChevronDown, Circle, ClipboardCheck, Clock3, ExternalLink } from "lucide-react";
+import { CheckCircle2, ChevronDown, Circle, ClipboardCheck, Clock3, ExternalLink, Repeat2, Route as RouteIcon } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { DAY_NAMES, type BlockKind, type ScheduleDay } from "@/lib/studySchedule";
+import { DAY_NAMES, dueReviews, mixSummary, REVIEW_OFFSETS, type BlockKind, type ScheduleDay } from "@/lib/studySchedule";
 import { cn } from "@/lib/utils";
 
 export interface CheckRow {
@@ -21,6 +21,8 @@ export interface CheckRow {
 
 const KIND_STYLE: Record<BlockKind, string> = {
   Teoria: "border-sky-500/40 bg-sky-500/10",
+  Flashcards: "border-cyan-500/40 bg-cyan-500/10",
+  Podcast: "border-fuchsia-500/40 bg-fuchsia-500/10",
   Questões: "border-emerald-500/40 bg-emerald-500/10",
   "Revisão de erros": "border-amber-500/40 bg-amber-500/10",
   Redação: "border-violet-500/40 bg-violet-500/10",
@@ -30,7 +32,7 @@ export const fmtMin = (m: number) => (m >= 60 ? `${Math.floor(m / 60)}h${m % 60 
 
 /** Cronograma da semana com horários, assuntos e marcação de "estudado". */
 export function WeekChecklist({
-  userId, planId, weekStart, schedule, checks, onChange, hasEssay, restDays,
+  userId, planId, weekStart, schedule, checks, onChange, restDays,
 }: {
   userId: string;
   planId: string;
@@ -38,7 +40,7 @@ export function WeekChecklist({
   schedule: ScheduleDay[];
   checks: CheckRow[];
   onChange: () => void;
-  hasEssay: boolean;
+  hasEssay?: boolean;
   restDays: string[];
 }) {
   const [open, setOpen] = React.useState<string | null>(null);
@@ -77,7 +79,7 @@ export function WeekChecklist({
           <Progress value={pct} className="h-2.5" />
         </div>
         <div className="flex flex-wrap gap-2 pt-1 text-[0.7rem]">
-          {(Object.keys(KIND_STYLE) as BlockKind[]).filter((k) => k !== "Redação" || hasEssay).map((k) => (
+          {(Object.keys(KIND_STYLE) as BlockKind[]).filter((k) => schedule.some((d) => d.blocks.some((b) => b.kind === k))).map((k) => (
             <span key={k} className={cn("rounded-full border px-2.5 py-0.5 font-semibold", KIND_STYLE[k])}>{k}</span>
           ))}
         </div>
@@ -212,6 +214,122 @@ export function StudyRecord({ checks, planId }: { checks: CheckRow[]; planId: st
               </ul>
             </div>
           </>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+
+const STAGE_LABEL = ["24 horas", "7 dias", "30 dias"];
+
+/** Revisão espaçada do dia: assuntos estudados que chegaram na hora de revisar (1, 7 e 30 dias). */
+export function ReviewQueue({
+  userId, planId, weekStart, checks, onChange,
+}: {
+  userId: string;
+  planId: string;
+  weekStart: string;
+  checks: CheckRow[];
+  onChange: () => void;
+}) {
+  const [busy, setBusy] = React.useState<string | null>(null);
+  const due = React.useMemo(() => dueReviews(checks, planId), [checks, planId]);
+
+  async function complete(subject: string, topic: string, stage: number) {
+    setBusy(topic);
+    const { error } = await supabase.from("study_plan_checks").insert({
+      user_id: userId, plan_id: planId, week_start: weekStart, block_key: `rev-${topic}-${stage}`,
+      subject, kind: "Revisão espaçada", topics: [topic], minutes: 5,
+    });
+    setBusy(null);
+    if (error) { toast.error("Não foi possível registrar a revisão."); return; }
+    toast.success("Revisão registrada.");
+    onChange();
+  }
+
+  return (
+    <Card className={due.length ? "border-amber-500/50" : ""}>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2"><Repeat2 className="h-5 w-5 text-amber-600" /> Revisão do dia</CardTitle>
+        <CardDescription>
+          O que você estudou volta para revisão depois de {REVIEW_OFFSETS.join(", ").replace(/, (\d+)$/, " e $1")} dias. Revisar na hora certa é o que faz o conteúdo ficar.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        {due.length === 0 ? (
+          <p className="text-sm text-muted-foreground">
+            Nenhuma revisão pendente. Conforme você marcar blocos de teoria como estudados, os assuntos aparecem aqui na hora certa.
+          </p>
+        ) : (
+          <ul className="divide-y">
+            {due.map((r) => (
+              <li key={r.topic} className="flex flex-wrap items-center justify-between gap-2 py-2">
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold">{r.topic}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {r.subject} · revisão de {STAGE_LABEL[r.stage]}{r.overdueDays > 0 ? ` · atrasada ${r.overdueDays} ${r.overdueDays === 1 ? "dia" : "dias"}` : ""}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  disabled={busy === r.topic}
+                  onClick={() => void complete(r.subject, r.topic, r.stage)}
+                  className="rounded-full border border-amber-500/50 bg-amber-500/10 px-3 py-1 text-xs font-bold hover:bg-amber-500/20"
+                >
+                  Revisei
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+
+const CYCLE: [string, string][] = [
+  ["Teoria", "estude o assunto e resuma com suas palavras"],
+  ["Flashcards", "no mesmo dia, treine a recuperação ativa"],
+  ["Questões", "no dia seguinte, aplique em questões da banca"],
+  ["Revisão espaçada", "volte ao assunto em 1, 7 e 30 dias"],
+  ["Revisão de erros", "refaça o que errou, sem consultar"],
+  ["Simulado", "teste tudo em condições de prova"],
+];
+
+/** Explica o método e mostra como o tempo desta semana foi dividido. */
+export function MethodCard({ schedule, phaseTitle }: { schedule: ScheduleDay[]; phaseTitle: string }) {
+  const mix = mixSummary(schedule);
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2"><RouteIcon className="h-5 w-5 text-primary" /> O método do seu plano</CardTitle>
+        <CardDescription>
+          Estudo de concurso funciona em ciclo: cada assunto passa por todas as etapas abaixo. A divisão do tempo muda conforme a fase ({phaseTitle}).
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <ol className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {CYCLE.map(([name, text], i) => (
+            <li key={name} className="flex items-start gap-3 rounded-lg border p-3">
+              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-primary/10 text-xs font-black text-primary">{i + 1}</span>
+              <span className="text-sm"><strong>{name}</strong><span className="block text-xs text-muted-foreground">{text}</span></span>
+            </li>
+          ))}
+        </ol>
+        {mix.total > 0 && (
+          <div className="space-y-2">
+            <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Esta semana</p>
+            <div className="flex h-3 overflow-hidden rounded-full bg-muted" role="img" aria-label="Divisão do tempo da semana">
+              {mix.items.map((it) => (
+                <div key={it.kind} className={cn("h-full border-r border-background", KIND_STYLE[it.kind].split(" ")[1]?.replace("/10", "/70"))} style={{ width: `${it.pct}%` }} title={`${it.kind} ${it.pct}%`} />
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
+              {mix.items.map((it) => (
+                <span key={it.kind}><strong>{it.kind}</strong> <span className="tabular-nums text-muted-foreground">{fmtMin(it.minutes)} · {it.pct}%</span></span>
+              ))}
+            </div>
+          </div>
         )}
       </CardContent>
     </Card>

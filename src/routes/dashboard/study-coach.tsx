@@ -15,7 +15,7 @@ import { Progress } from "@/components/ui/progress";
 import { LockedState, PageHero } from "@/components/dashboard/PageHero";
 import { buildPlan, CAREERS, diffShares, type CareerId, type Experience, type SubjectStat } from "@/lib/studyEngine";
 import { buildSchedule, DAY_NAMES } from "@/lib/studySchedule";
-import { StudyRecord, WeekChecklist, type CheckRow } from "@/components/dashboard/StudyChecklist";
+import { MethodCard, ReviewQueue, StudyRecord, WeekChecklist, type CheckRow } from "@/components/dashboard/StudyChecklist";
 import { cn } from "@/lib/utils";
 import { confirmDialog } from "@/lib/confirm";
 
@@ -371,6 +371,12 @@ function StudyCoachPage() {
               <p className="text-xs text-muted-foreground">Estimativa baseada na sua experiência, na carreira e no seu desempenho real. Serve para orientar o estudo e não garante aprovação.</p>
             </CardContent>
           </Card>
+
+          <MethodCard schedule={schedule} phaseTitle={plan.phase.title} />
+
+          {user && (
+            <ReviewQueue userId={user.id} planId={profile.id} weekStart={weekStart} checks={checks} onChange={() => void load()} />
+          )}
 
           {user && (
             <WeekChecklist
