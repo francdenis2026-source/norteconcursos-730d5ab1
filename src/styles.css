@@ -857,6 +857,12 @@ html {
   opacity: 1;
   transition: opacity 1.6s var(--ease-out);
 }
+@media (max-width: 767px) {
+  .lp-hero__video {
+    object-fit: cover;
+    object-position: 62% center;
+  }
+}
 .lp-hero__video[data-done="true"] {
   opacity: 0;
   pointer-events: none;
@@ -907,6 +913,10 @@ html {
 .lp-hero__panel > * {
   margin: 0 !important;
   animation: rise 1s var(--ease-out) 0.35s both;
+  animation-play-state: paused;
+}
+.lp-hero.is-ready .lp-hero__panel > * {
+  animation-play-state: running;
 }
 .lp-hero__panel > :nth-child(2) { animation-delay: 0.45s; }
 .lp-hero__panel > :nth-child(3) { animation-delay: 0.55s; }
@@ -941,6 +951,10 @@ html {
 }
 .lp-hero__content > * {
   animation: rise 1s var(--ease-out) both;
+  animation-play-state: paused;
+}
+.lp-hero.is-ready .lp-hero__content > * {
+  animation-play-state: running;
 }
 .lp-hero__content > :nth-child(2) {
   animation-delay: 0.08s;
@@ -965,7 +979,6 @@ html {
   font-weight: 800;
   line-height: 0.94;
   letter-spacing: -0.025em;
-  text-shadow: 0 2px 18px oklch(0.05 0.02 262 / 0.55), 0 1px 2px oklch(0.05 0.02 262 / 0.7);
 }
 .lp-hero__title em {
   display: block;
@@ -981,7 +994,7 @@ html {
   color: oklch(0.96 0.005 255 / 0.9);
   font-size: clamp(1rem, 1.3vw, 1.1875rem);
   line-height: 1.65;
-  text-shadow: 0 1px 10px oklch(0.05 0.02 262 / 0.5);
+  text-shadow: 0 1px 3px oklch(0.05 0.02 262 / 0.7);
 }
 .lp-hero__ctas {
   display: flex;
@@ -1330,7 +1343,7 @@ html {
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.02em;
-  text-shadow: 0 2px 16px oklch(0.05 0.02 262 / 0.45);
+  text-shadow: 0 1px 3px oklch(0.05 0.02 262 / 0.6);
 }
 .lp-h2 em {
   color: var(--brass);
@@ -1342,7 +1355,7 @@ html {
   color: oklch(0.95 0.005 255 / 0.86);
   font-size: 1.0625rem;
   line-height: 1.7;
-  text-shadow: 0 1px 10px oklch(0.05 0.02 262 / 0.4);
+  text-shadow: 0 1px 3px oklch(0.05 0.02 262 / 0.5);
 }
 .lp-head {
   display: grid;
@@ -2949,7 +2962,7 @@ html {
   }
   .lp-hero__shade {
     background:
-      linear-gradient(0deg, var(--ink-deep) 8%, oklch(0.12 0.025 263 / 0.9) 45%, oklch(0.12 0.025 263 / 0.45) 100%);
+      linear-gradient(0deg, var(--ink-deep) 8%, oklch(0.12 0.025 263 / 0.88) 38%, oklch(0.12 0.025 263 / 0.3) 62%, transparent 85%);
   }
   .lp-hero__ctas {
     flex-direction: column;
