@@ -31,6 +31,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
+import { PlansSection } from "@/components/landing/PlansSection";
 import { TestingSeal } from "@/components/landing/TestingSeal";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
@@ -60,6 +61,7 @@ const NAV: [string, string][] = [
   ["Método", "#metodo"],
   ["Plataforma", "#plataforma"],
   ["Carreiras", "#carreiras"],
+  ["Planos", "#planos"],
 ];
 
 const ROLES = [
@@ -511,6 +513,8 @@ function Index() {
             </div>
           </div>
         </section>
+
+        <PlansSection />
 
         <section className="lp-section lp-final">
           <div className="lp-final__bg" aria-hidden="true" />

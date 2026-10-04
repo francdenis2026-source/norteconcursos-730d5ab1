@@ -22,11 +22,24 @@ async function checkAiAccess(request: Request): Promise<Response | null> {
     fetch(`${SUPABASE_URL}/rest/v1/user_roles?user_id=eq.${id}&role=eq.admin&select=role`, { headers }),
   ]);
   const isAdmin = role.ok && ((await role.json()) as unknown[]).length > 0;
-  if (isAdmin) return null;
-  const [p] = prof.ok ? ((await prof.json()) as { subscription_tier: string; subscription_expires_at: string | null; created_at: string }[]) : [];
-  const { tier } = effectiveTier(p?.subscription_tier, p?.created_at, p?.subscription_expires_at);
-  if (!checkFeatureAccess(tier as SubscriptionTier, "aiSolver").included) {
-    return Response.json({ error: "A resolução com IA não está incluída no plano Gratuito." }, { status: 403 });
+  let limit: number | null = null; // nulo = ilimitado
+  if (!isAdmin) {
+    const [p] = prof.ok ? ((await prof.json()) as { subscription_tier: string; subscription_expires_at: string | null; created_at: string }[]) : [];
+    const { tier } = effectiveTier(p?.subscription_tier, p?.created_at, p?.subscription_expires_at);
+    const feature = checkFeatureAccess(tier as SubscriptionTier, "aiSolver");
+    if (!feature.included) {
+      return Response.json({ error: "A resolução com IA não está incluída no plano Gratuito." }, { status: 403 });
+    }
+    limit = typeof feature.limit === "number" ? feature.limit : null;
+  }
+  // Reserva atômica no banco: se o limite do dia acabou, recusa antes de gastar IA.
+  const consume = await fetch(`${SUPABASE_URL}/rest/v1/rpc/ai_try_consume`, {
+    method: "POST",
+    headers: { ...headers, "Content-Type": "application/json" },
+    body: JSON.stringify({ _limit: limit }),
+  });
+  if (!consume.ok || (await consume.json()) !== true) {
+    return Response.json({ error: "Você usou todas as resoluções de IA de hoje. O limite renova à meia-noite (horário do Acre)." }, { status: 429 });
   }
   return null;
 }

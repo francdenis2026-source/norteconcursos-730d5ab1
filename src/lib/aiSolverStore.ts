@@ -14,9 +14,7 @@ export interface SavedResolution {
   createdAt: string;
 }
 
-const usageKey = (userId: string) => `nc_ai_usage_${userId}`;
 const notebookKey = (userId: string) => `nc_ai_notebook_${userId}`;
-const today = () => new Date().toISOString().slice(0, 10);
 
 function read<T>(key: string, fallback: T): T {
   if (typeof window === "undefined") return fallback;
@@ -34,25 +32,11 @@ export function getDailyLimit(tier: SubscriptionTier, isAdmin = false): number |
   return f.included ? (f.limit ?? 0) : 0;
 }
 
-export function getUsedToday(userId: string): number {
-  const u = read<{ date: string; count: number }>(usageKey(userId), { date: today(), count: 0 });
-  return u.date === today() ? u.count : 0;
-}
-
-export function registerUse(userId: string): void {
-  window.localStorage.setItem(
-    usageKey(userId),
-    JSON.stringify({ date: today(), count: getUsedToday(userId) + 1 }),
-  );
-  // Registro online (best effort) para o painel do administrador.
-  void import("@/integrations/supabase/client")
-    .then(async ({ supabase }) => {
-      const { data } = await supabase.auth.getSession();
-      if (data.session?.user.id) {
-        await supabase.from("ai_usage_logs").insert({ user_id: data.session.user.id });
-      }
-    })
-    .catch(() => undefined);
+/** Uso de hoje (dia do Acre), contado e gravado no servidor. */
+export async function fetchUsedToday(): Promise<number> {
+  const { supabase } = await import("@/integrations/supabase/client");
+  const { data } = await supabase.rpc("ai_used_today");
+  return typeof data === "number" ? data : 0;
 }
 
 export function listResolutions(userId: string): SavedResolution[] {

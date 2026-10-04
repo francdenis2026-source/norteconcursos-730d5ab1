@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
-import { getDailyLimit, getUsedToday } from "@/lib/aiSolverStore";
+import { fetchUsedToday, getDailyLimit } from "@/lib/aiSolverStore";
 import { cn } from "@/lib/utils";
 import { SoonBadge } from "@/components/SoonBadge";
 import { PlanCountdown } from "@/components/dashboard/PlanCountdown";
@@ -31,7 +31,9 @@ function SubscriptionsPage() {
   const tier = user?.subscription_tier ?? "free";
   const limit = getDailyLimit(tier, isAdmin);
   const [used, setUsed] = useState(0);
-  useEffect(() => setUsed(getUsedToday(user?.id ?? "demo-user")), [user?.id]);
+  useEffect(() => {
+    if (user?.id && user.id !== "demo-user") void fetchUsedToday().then(setUsed);
+  }, [user?.id]);
   const pct = limit === "unlimited" ? 100 : Math.min(100, Math.round((used / Math.max(1, limit)) * 100));
 
   return (

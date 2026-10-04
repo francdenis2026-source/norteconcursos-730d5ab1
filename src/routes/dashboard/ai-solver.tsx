@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, Square, Eraser, Loader2, BookmarkCheck, Gauge } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { getDailyLimit, getUsedToday, registerUse, saveResolution } from "@/lib/aiSolverStore";
+import { fetchUsedToday, getDailyLimit, saveResolution } from "@/lib/aiSolverStore";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -38,7 +38,9 @@ function AiSolverPage() {
   const limit = getDailyLimit(user?.subscription_tier ?? "free", isAdmin);
   const [used, setUsed] = useState(0);
   const [saved, setSaved] = useState(false);
-  useEffect(() => setUsed(getUsedToday(userId)), [userId]);
+  useEffect(() => {
+    if (userId !== "demo-user") void fetchUsedToday().then(setUsed);
+  }, [userId]);
 
   if (!AI_ENABLED) {
     return (
@@ -109,8 +111,7 @@ function AiSolverPage() {
         setAnswer(text);
       }
       if (!text.trim()) throw new Error("A IA não retornou uma resposta para esta questão.");
-      registerUse(userId);
-      setUsed(getUsedToday(userId));
+      void fetchUsedToday().then(setUsed);
       saveResolution(userId, question, text);
       setSaved(true);
       setStatus("done");
