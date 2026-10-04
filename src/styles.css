@@ -5950,3 +5950,14 @@ iframe[src*="gpteng.co"] {
 @media (max-width: 767px) {
   .app-trial { padding-inline: 8px; gap: 4px; }
 }
+
+/* Abrir uma lista (Radix) trava a rolagem; sem isso a página "pula" para o lado.
+   A calha da barra já é reservada (scrollbar-gutter), então anulamos a compensação extra. */
+html body[data-scroll-locked] {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+  --removed-body-scroll-bar-size: 0px !important;
+}
+html body[data-scroll-locked] .right-scroll-bar-position {
+  right: 0 !important;
+}

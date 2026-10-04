@@ -399,6 +399,42 @@ function QuestionTrainer() {
     }
     return [...set].sort((a, b) => a.localeCompare(b, "pt-BR"));
   }, [catalog, subject, area, topicOf]);
+  // Para cada filtro: quantas questões existem em cada opção, respeitando TODOS os outros filtros.
+  const facets = React.useMemo(() => {
+    const keys = ["board", "subject", "topic", "contest", "career", "state", "category", "year", "exam", "source", "reviewed", "difficulty"] as const;
+    type K = (typeof keys)[number];
+    const val: Record<K, (q: Question) => string> = {
+      board: (q) => q.board,
+      subject: (q) => q.subject,
+      topic: (q) => topicOf.get(q.id) ?? "",
+      contest: (q) => q.contest,
+      career: (q) => q.career,
+      state: (q) => q.state ?? "",
+      category: (q) => q.category ?? "",
+      year: (q) => q.year,
+      exam: (q) => examKey(q),
+      source: (q) => q.source,
+      reviewed: (q) => (hasReviewedExplanation(q) ? "reviewed" : ""),
+      difficulty: (q) => q.difficulty,
+    };
+    const sel: Record<K, string> = { board, subject, topic, contest, career, state, category, year, exam: appliedExam, source, reviewed, difficulty };
+    const base = area === "all" ? catalog : catalog.filter((q) => subjectInArea(area, q.subject));
+    const counts = {} as Record<K, Map<string, number>>;
+    const totals = {} as Record<K, number>;
+    for (const k of keys) {
+      const m = new Map<string, number>();
+      let all = 0;
+      for (const q of base) {
+        if (!keys.every((o) => o === k || sel[o] === "all" || val[o](q) === sel[o])) continue;
+        all++;
+        const v = val[k](q);
+        if (v) m.set(v, (m.get(v) ?? 0) + 1);
+      }
+      counts[k] = m;
+      totals[k] = all;
+    }
+    return { counts, totals };
+  }, [catalog, area, topicOf, board, subject, topic, contest, career, state, category, year, appliedExam, source, reviewed, difficulty]);
   const pool = React.useMemo(
     () =>
       catalog.filter(
@@ -592,6 +628,7 @@ function QuestionTrainer() {
           total={catalog.length}
           available={pool.length}
           choices={{ ...choices, topics: topicChoices }}
+          facets={facets}
           values={{
             contest,
             board,
@@ -1059,12 +1096,14 @@ function TrainerSetup({
   total,
   available,
   choices,
+  facets,
   values,
   setters,
   start,
 }: {
   total: number;
   available: number;
+  facets: { counts: Record<string, Map<string, number>>; totals: Record<string, number> };
   choices: {
     contests: string[];
     boards: string[];
@@ -1146,18 +1185,24 @@ function TrainerSetup({
           )}
           <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             <TrainerFilter
+              counts={facets.counts["board"]}
+              allCount={facets.totals["board"]}
               label="Banca"
               value={values.board}
               setValue={setters.setBoard}
               options={choices.boards}
             />
             <TrainerFilter
+              counts={facets.counts["subject"]}
+              allCount={facets.totals["subject"]}
               label="Disciplina"
               value={values.subject}
               setValue={setters.setSubject}
               options={choices.subjects}
             />
             <TrainerFilter
+              counts={facets.counts["topic"]}
+              allCount={facets.totals["topic"]}
               label="Assunto (classificação automática)"
               value={values.topic}
               setValue={setters.setTopic}
@@ -1165,36 +1210,48 @@ function TrainerSetup({
               allLabel="Todos os assuntos"
             />
             <TrainerFilter
+              counts={facets.counts["contest"]}
+              allCount={facets.totals["contest"]}
               label="Concurso"
               value={values.contest}
               setValue={setters.setContest}
               options={choices.contests}
             />
             <TrainerFilter
+              counts={facets.counts["career"]}
+              allCount={facets.totals["career"]}
               label="Carreira ou cargo"
               value={values.career}
               setValue={setters.setCareer}
               options={choices.careers}
             />
             <TrainerFilter
+              counts={facets.counts["state"]}
+              allCount={facets.totals["state"]}
               label="Estado"
               value={values.state}
               setValue={setters.setState}
               options={choices.states}
             />
             <TrainerFilter
+              counts={facets.counts["category"]}
+              allCount={facets.totals["category"]}
               label="Categoria"
               value={values.category}
               setValue={setters.setCategory}
               options={choices.categories}
             />
             <TrainerFilter
+              counts={facets.counts["year"]}
+              allCount={facets.totals["year"]}
               label="Ano"
               value={values.year}
               setValue={setters.setYear}
               options={choices.years}
             />
             <TrainerFilter
+              counts={facets.counts["exam"]}
+              allCount={facets.totals["exam"]}
               label="Prova aplicada"
               value={values.appliedExam}
               setValue={setters.setAppliedExam}
@@ -1202,6 +1259,8 @@ function TrainerSetup({
               labels={Object.fromEntries(choices.exams)}
             />
             <TrainerFilter
+              counts={facets.counts["source"]}
+              allCount={facets.totals["source"]}
               label="Origem"
               value={values.source}
               setValue={setters.setSource}
@@ -1213,6 +1272,8 @@ function TrainerSetup({
               }}
             />
             <TrainerFilter
+              counts={facets.counts["reviewed"]}
+              allCount={facets.totals["reviewed"]}
               label="Explicação didática"
               value={values.reviewed}
               setValue={setters.setReviewed}
@@ -1221,6 +1282,8 @@ function TrainerSetup({
               allLabel="Todas as questões"
             />
             <TrainerFilter
+              counts={facets.counts["difficulty"]}
+              allCount={facets.totals["difficulty"]}
               label="Dificuldade"
               value={values.difficulty}
               setValue={setters.setDifficulty}
@@ -1291,7 +1354,11 @@ function TrainerFilter({
   labels,
   allLabel = "Todos",
   hideAll = false,
+  counts,
+  allCount,
 }: {
+  counts?: Map<string, number> | undefined;
+  allCount?: number | undefined;
   label: string;
   value: string;
   setValue: (value: string) => void;
@@ -1310,13 +1377,21 @@ function TrainerFilter({
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
-          {!hideAll && <SelectItem value="all">{allLabel}</SelectItem>}
-          {options.map((option) => (
-            <SelectItem key={option} value={option}>
-              {labels?.[option] || option}
-              {hideAll ? " questões" : ""}
+          {!hideAll && (
+            <SelectItem value="all">
+              {allLabel}
+              {allCount !== undefined ? ` (${allCount.toLocaleString("pt-BR")})` : ""}
             </SelectItem>
-          ))}
+          )}
+          {options
+            .filter((option) => !counts || (counts.get(option) ?? 0) > 0 || option === value)
+            .map((option) => (
+              <SelectItem key={option} value={option}>
+                {labels?.[option] || option}
+                {counts ? ` (${(counts.get(option) ?? 0).toLocaleString("pt-BR")})` : ""}
+                {hideAll ? " questões" : ""}
+              </SelectItem>
+            ))}
         </SelectContent>
       </Select>
     </label>
