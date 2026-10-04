@@ -78,11 +78,14 @@ const SCOPE_LABEL: Record<Scope, string> = {
 };
 
 // Positions projected from real lon/lat onto the IBGE silhouette (percent of the stage).
-const PINS = [
+const PINS: { name: string; left: number; top: number; side?: "left" }[] = [
   { name: "Cruzeiro do Sul", left: 18.3, top: 13.8 },
+  // Tarauacá fica ~0,4° a oeste de Feijó: o rótulo vai para a esquerda para não sobrepor.
+  { name: "Tarauacá", left: 43.8, top: 26.7, side: "left" },
   { name: "Feijó", left: 49.4, top: 26.8 },
   { name: "Sena Madureira", left: 72, top: 48.6 },
   { name: "Rio Branco", left: 83.4, top: 70.3 },
+  { name: "Brasiléia", left: 71, top: 94.5 },
 ];
 
 const delay = (n: number) => ({ "--reveal-delay": n }) as CSSProperties;
@@ -200,7 +203,7 @@ export function AcreSection() {
               {PINS.map((pin) => (
                 <span
                   key={pin.name}
-                  className="lp-pin"
+                  className={pin.side === "left" ? "lp-pin lp-pin--left" : "lp-pin"}
                   style={{ left: `${pin.left}%`, top: `${pin.top}%` }}
                 >
                   <i aria-hidden="true" />

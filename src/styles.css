@@ -1496,6 +1496,7 @@ html {
 .lp-acre__pins {
   position: absolute;
   inset: 0;
+  z-index: 3;
   transform: translate3d(calc(var(--px) * -10px), calc(var(--py) * -8px), 0);
   transition: transform 0.5s var(--ease-out);
 }
@@ -1506,6 +1507,13 @@ html {
   gap: 8px;
   transform: translate(-5px, -50%);
   cursor: default;
+}
+.lp-pin--left {
+  flex-direction: row-reverse;
+  transform: translate(calc(-100% + 5px), -50%);
+}
+.lp-pin--left:hover em {
+  transform: translateX(-3px);
 }
 .lp-pin i {
   position: relative;
