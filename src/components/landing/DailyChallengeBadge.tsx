@@ -60,25 +60,34 @@ export function DailyChallengeBadge() {
 
   const content = (
     <>
-      <span className="daily-badge__live">
-        <span className="daily-badge__pulse" aria-hidden="true" />
-        Desafio de hoje
+      <span className="daily-badge__top">
+        <span className="daily-badge__live">
+          <span className="daily-badge__pulse" aria-hidden="true" />
+          Desafio de hoje
+        </span>
+        <span className="daily-badge__timer" aria-hidden="true">
+          <Clock /> Renova em <time>{countdown}</time>
+        </span>
       </span>
-      <span className="daily-badge__main">
-        <strong>{title}</strong>
-        <small>{hint}</small>
+      <span className="daily-badge__body">
+        <span className="daily-badge__main">
+          <strong>{title}</strong>
+          <small>{hint}</small>
+        </span>
+        <span className="daily-badge__cta">
+          {done ? "Criar conta e treinar sem limite" : started ? "Continuar" : "Responder agora"}
+          <ArrowRight aria-hidden="true" />
+        </span>
       </span>
-      <span className="daily-badge__dots" aria-hidden="true">
-        {Array.from({ length: GUEST_DAILY_LIMIT }, (_, i) => (
-          <i key={i} data-done={i < used} style={{ ["--i" as string]: i }} />
-        ))}
-      </span>
-      <span className="daily-badge__timer" aria-hidden="true">
-        <Clock /> Renova em <time>{countdown}</time>
-      </span>
-      <span className="daily-badge__cta">
-        {done ? "Criar conta e treinar sem limite" : started ? "Continuar" : "Responder agora"}
-        <ArrowRight aria-hidden="true" />
+      <span className="daily-badge__progress" aria-hidden="true">
+        <span className="daily-badge__dots">
+          {Array.from({ length: GUEST_DAILY_LIMIT }, (_, i) => (
+            <i key={i} data-done={i < used} />
+          ))}
+        </span>
+        <span className="daily-badge__count">
+          {used}/{GUEST_DAILY_LIMIT}
+        </span>
       </span>
     </>
   );

@@ -15,6 +15,6 @@ export const isTestingTier = (tier: string) => tier === "free" || tier === "esse
 
 export const SOON_LABEL = "Em breve";
 export const TESTING_NOTICE =
-  "Plataforma aberta e gratuita por 30 dias, em fase de testes. Durante este período, todas as contas usam o plano Essencial. Em breve os planos serão liberados.";
+  "Plataforma aberta e gratuita por 30 dias, em fase de testes. Durante este período, todas as contas usam o plano Essencial. Em breve os planos pagos serão ativados.";
 export const PAYMENTS_NOTICE =
   "Os pagamentos estão desativados por enquanto. Em breve os planos serão ativados.";

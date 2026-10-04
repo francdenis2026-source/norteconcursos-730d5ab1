@@ -7,16 +7,14 @@ export function TestingSeal() {
   return (
     <div
       role="note"
-      className="mb-3 inline-flex max-w-full items-center gap-3 rounded-xl border border-amber-400/50 bg-amber-400/10 px-3.5 py-2 text-left backdrop-blur"
+      className="mb-3 inline-flex max-w-full flex-wrap items-center gap-x-2.5 gap-y-0.5 rounded-full border border-amber-400/45 bg-amber-400/10 py-1.5 pl-2.5 pr-4 backdrop-blur"
     >
-      <BadgeCheck className="h-6 w-6 shrink-0 text-amber-400" aria-hidden />
-      <span className="leading-tight">
-        <strong className="block text-xs font-bold uppercase tracking-widest text-amber-300">
-          Acesso aberto · Fase de testes
-        </strong>
-        <span className="text-sm text-white/85">
-          Plataforma gratuita por {TESTING_DAYS} dias, no plano Essencial. Depois, planos liberados.
-        </span>
+      <BadgeCheck className="h-4 w-4 shrink-0 text-amber-400" aria-hidden />
+      <strong className="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-amber-300">
+        Acesso aberto · Fase de testes
+      </strong>
+      <span className="text-xs text-white/80">
+        Grátis por {TESTING_DAYS} dias no plano Essencial · depois, planos pagos
       </span>
     </div>
   );

@@ -62,7 +62,7 @@ import {
 } from "@/components/ui/command";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { MockService } from "@/services/mockService";
+import { MockService, type MedalProgress } from "@/services/mockService";
 import type { Achievement, UserStreak } from "@/types";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 
@@ -188,6 +188,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [streak, setStreak] = React.useState<UserStreak | null>(null);
   const [achievements, setAchievements] = React.useState<Achievement[]>([]);
+  const [medalsOpen, setMedalsOpen] = React.useState(false);
+  const [medalProgress, setMedalProgress] = React.useState<MedalProgress[]>([]);
+  const openMedals = () => {
+    setMedalsOpen(true);
+    void MockService.getMedalProgress().then(setMedalProgress);
+  };
 
   const isAdmin = user?.role === "admin";
   // Administrador vê só a administração (e o próprio perfil); aluno vê só a área de estudo.
@@ -224,7 +230,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     let cancelled = false;
     Promise.all([
       MockService.registerStudyVisit().then((v) => v ?? MockService.getUserStreak()),
-      MockService.getAchievements(),
+      MockService.awardAchievements().then(() => MockService.getAchievements()),
     ]).then(([s, a]) => {
       if (cancelled) return;
       setStreak(s);
@@ -232,6 +238,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       known = a.length;
     });
     const interval = window.setInterval(async () => {
+      await MockService.awardAchievements();
       const latest = await MockService.getAchievements();
       if (cancelled || latest.length <= known) return;
       known = latest.length;
@@ -416,7 +423,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 </div>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <div className="app-stat">
+                    <div className="app-stat cursor-pointer" role="button" tabIndex={0} onClick={openMedals} onKeyDown={(e) => e.key === "Enter" && openMedals()}>
                       <span>
                         <Medal /> Medalhas
                       </span>
@@ -426,7 +433,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   <TooltipContent side="top" className="max-w-56">
                     {achievements.length > 0
                       ? achievements.map((a) => a.name).join(" · ")
-                      : "Nenhuma medalha ainda. Continue treinando."}
+                      : "Nenhuma medalha ainda. Clique para ver como ganhar."}
                   </TooltipContent>
                 </Tooltip>
               </div>
@@ -444,6 +451,37 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             {userMenu(isCollapsed)}
           </div>
         </aside>
+
+        <Dialog open={medalsOpen} onOpenChange={setMedalsOpen}>
+          <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-lg">
+            <DialogTitle>Medalhas e progresso</DialogTitle>
+            <p className="text-sm text-muted-foreground">
+              Cada medalha é concedida automaticamente ao atingir a meta. Continue estudando para avançar.
+            </p>
+            <ul className="space-y-3">
+              {medalProgress.map((m) => (
+                <li key={m.code} className={m.earned ? "" : "opacity-80"}>
+                  <div className="flex items-center justify-between gap-2 text-sm">
+                    <span className="flex items-center gap-2 font-semibold">
+                      <Medal className={m.earned ? "h-4 w-4 text-amber-500" : "h-4 w-4 text-muted-foreground"} />
+                      {m.name}
+                    </span>
+                    <span className="tabular text-xs text-muted-foreground">
+                      {m.earned ? "Conquistada" : `${m.current} / ${m.target}`}
+                    </span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">{m.description}</p>
+                  <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-muted">
+                    <div
+                      className={m.earned ? "h-full bg-amber-500" : "h-full bg-primary"}
+                      style={{ width: `${Math.round((m.current / m.target) * 100)}%` }}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </DialogContent>
+        </Dialog>
 
         <div className="app-main">
           <header className="app-topbar no-print">
@@ -507,7 +545,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   <FlaskConical className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" aria-hidden />
                   <p>
                     <strong>Fase de testes.</strong> Plataforma aberta e gratuita por 30 dias. Durante este período, todas as contas usam o plano Essencial.
-                    Em breve os planos serão liberados.
+                    Em breve os planos pagos serão ativados.
                   </p>
                 </div>
               )}

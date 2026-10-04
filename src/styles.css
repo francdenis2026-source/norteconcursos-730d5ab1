@@ -930,28 +930,42 @@ html {
 .daily-badge {
   position: relative;
   isolation: isolate;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.7rem 1.15rem;
-  width: fit-content;
-  max-width: 100%;
+  display: grid;
+  gap: 0.85rem;
+  width: min(100%, 34rem);
   margin-bottom: 22px;
-  padding: 0.75rem 0.85rem 0.75rem 1rem;
-  border: 1px solid oklch(0.8 0.13 78 / 0.5);
-  border-radius: 20px;
+  padding: 1rem 1.1rem 1.05rem;
+  border: 1px solid oklch(0.8 0.13 78 / 0.45);
+  border-radius: 18px;
   color: white;
   text-decoration: none;
   overflow: hidden;
-  background: linear-gradient(135deg, oklch(0.8 0.13 78 / 0.18), oklch(0.8 0.13 78 / 0.05));
-  backdrop-filter: blur(14px);
+  background:
+    linear-gradient(160deg, oklch(0.2 0.02 255 / 0.78), oklch(0.14 0.02 255 / 0.7)),
+    linear-gradient(135deg, oklch(0.8 0.13 78 / 0.16), transparent 60%);
+  backdrop-filter: blur(16px);
   box-shadow:
-    0 12px 40px -14px oklch(0.8 0.13 78 / 0.6),
-    inset 0 1px 0 oklch(1 0 0 / 0.14);
+    0 18px 48px -18px oklch(0 0 0 / 0.7),
+    0 0 0 1px oklch(0.8 0.13 78 / 0.08),
+    inset 0 1px 0 oklch(1 0 0 / 0.1);
   transition:
     transform 0.25s var(--ease-out),
     box-shadow 0.25s var(--ease-out),
     border-color 0.25s;
+}
+.daily-badge__top,
+.daily-badge__body,
+.daily-badge__progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+}
+.daily-badge__body {
+  flex-wrap: wrap;
+}
+.daily-badge__progress {
+  gap: 0.75rem;
 }
 .daily-badge::before {
   content: "";
@@ -986,6 +1000,7 @@ html {
 }
 .daily-badge__pulse {
   position: relative;
+  margin: 0 4px;
   width: 0.55rem;
   height: 0.55rem;
   border-radius: 50%;
@@ -1002,42 +1017,47 @@ html {
 .daily-badge__main {
   display: flex;
   flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
   line-height: 1.25;
 }
 .daily-badge__main strong {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 .daily-badge__main small {
-  color: oklch(1 0 0 / 0.72);
-  font-size: 0.75rem;
+  color: oklch(1 0 0 / 0.68);
+  font-size: 0.78rem;
 }
 .daily-badge__dots {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
 }
 .daily-badge__dots i {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background: oklch(1 0 0 / 0.22);
+  height: 0.38rem;
+  border-radius: 999px;
+  background: oklch(1 0 0 / 0.16);
 }
 .daily-badge__dots i[data-done="true"] {
-  background: var(--brass);
-  box-shadow: 0 0 8px oklch(0.8 0.13 78 / 0.7);
+  background: linear-gradient(90deg, var(--brass), var(--brass-soft));
+  box-shadow: 0 0 10px oklch(0.8 0.13 78 / 0.55);
 }
-.daily-badge__dots i[data-done="false"] {
-  animation: daily-wave 2.4s ease-in-out infinite;
-  animation-delay: calc(var(--i, 0) * 0.12s);
+.daily-badge__count {
+  color: oklch(1 0 0 / 0.78);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
 }
 .daily-badge__timer {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  color: oklch(1 0 0 / 0.82);
+  color: oklch(1 0 0 / 0.7);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-variant-numeric: tabular-nums;
 }
 .daily-badge__timer svg {
@@ -1049,13 +1069,14 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  margin-left: auto;
-  padding: 0.55rem 0.95rem;
+  padding: 0.6rem 1.05rem;
   border-radius: 999px;
   background: var(--brass);
   color: var(--brass-foreground);
   font-size: 0.8125rem;
   font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px -8px oklch(0.8 0.13 78 / 0.8);
 }
 .daily-badge__cta svg {
   width: 1rem;
@@ -1096,14 +1117,9 @@ html {
   }
 }
 @media (max-width: 640px) {
-  .daily-badge {
-    width: 100%;
-    gap: 0.6rem 0.9rem;
-  }
   .daily-badge__cta {
     width: 100%;
     justify-content: center;
-    margin-left: 0;
   }
 }
 @media (prefers-reduced-motion: reduce) {

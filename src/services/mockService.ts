@@ -535,6 +535,17 @@ export const MockService = {
     };
   },
 
+  /** Concede no servidor as medalhas cuja meta foi atingida; devolve as novas. */
+  awardAchievements: async (): Promise<Achievement[]> => {
+    const { data } = await supabase.rpc('award_achievements');
+    return (data as Achievement[] | null) ?? [];
+  },
+
+  getMedalProgress: async (): Promise<MedalProgress[]> => {
+    const { data } = await supabase.rpc('medal_progress');
+    return (data as MedalProgress[] | null) ?? [];
+  },
+
   getAchievements: async (): Promise<Achievement[]> => {
     try {
       const { data: { session } } = await supabase.auth.getSession();
@@ -542,9 +553,7 @@ export const MockService = {
         const { data, error } = await supabase
           .from('user_achievements')
           .select('*, achievement:achievements(*)');
-        if (!error && data && data.length > 0) {
-          return data.map((a: any) => a.achievement);
-        }
+        if (!error && data) return data.map((a: any) => a.achievement);
       }
       
       const local = localStorage.getItem('norte_user_achievements');
@@ -851,3 +860,12 @@ export const MockService = {
     return csvContent;
   }
 };
+
+export interface MedalProgress {
+  code: string;
+  name: string;
+  description: string;
+  target: number;
+  current: number;
+  earned: boolean;
+}
