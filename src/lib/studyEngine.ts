@@ -282,3 +282,104 @@ export function selfCheck() {
   console.assert(b > a, "matéria com muitos erros ganha mais tempo");
   return { a, b };
 }
+
+// ───────────────────────── Cronograma semanal ─────────────────────────
+
+export type BlockKind = "Teoria" | "Questões" | "Revisão de erros" | "Redação" | "Simulado";
+
+export interface ScheduleBlock {
+  kind: BlockKind;
+  subject: string;
+  minutes: number;
+  href: string;
+}
+export interface ScheduleDay {
+  day: number; // 0 = domingo … 6 = sábado
+  blocks: ScheduleBlock[];
+  minutes: number;
+}
+
+export const DAY_NAMES = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+const HREF: Record<BlockKind, string> = {
+  Teoria: "/dashboard/edital",
+  Questões: "/dashboard/question-trainer",
+  "Revisão de erros": "/dashboard/errors",
+  Redação: "/dashboard/essays",
+  Simulado: "/dashboard/mock-exams",
+};
+const UNIT = 45; // minutos por bloco de matéria
+
+/**
+ * Monta a semana: separa tempo fixo (redação, revisão de erros, simulado), divide o resto entre as
+ * matérias conforme o plano e espalha os blocos pelos dias escolhidos sem repetir a matéria no dia.
+ */
+export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boolean): ScheduleDay[] {
+  const days = [...new Set(studyDays)].filter((d) => d >= 0 && d <= 6).sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7));
+  if (days.length === 0) return [];
+  const total = plan.hoursPerWeek * 60;
+  const round15 = (n: number) => Math.max(15, Math.round(n / 15) * 15);
+
+  const essayMin = essay ? Math.min(180, round15(total * 0.12)) : 0;
+  const reviewMin = round15(total * 0.1);
+  const simMin = plan.phase.id === "integration" || plan.phase.id === "final" ? Math.min(180, round15(total * 0.2)) : 0;
+  const fixed = essayMin + reviewMin + simMin;
+  const forSubjects = Math.max(0, total - fixed);
+
+  // Capacidade de cada dia: fim de semana comporta mais (peso 1,3).
+  const weights = days.map((d) => (d === 0 || d === 6 ? 1.3 : 1));
+  const wSum = weights.reduce((n, w) => n + w, 0);
+  const cap = new Map(days.map((d, i) => [d, (total * (weights[i] ?? 1)) / wSum]));
+  const out = new Map<number, ScheduleBlock[]>(days.map((d) => [d, []]));
+  const place = (day: number, b: ScheduleBlock) => {
+    out.get(day)!.push(b);
+    cap.set(day, (cap.get(day) ?? 0) - b.minutes);
+  };
+
+  const last = days[days.length - 1]!;
+  const penultimate = days[Math.max(0, days.length - 2)]!;
+  if (simMin) place(last, { kind: "Simulado", subject: "Simulado completo", minutes: simMin, href: HREF.Simulado });
+  place(penultimate, { kind: "Revisão de erros", subject: "Caderno de erros", minutes: reviewMin, href: HREF["Revisão de erros"] });
+  if (essayMin) {
+    const half = round15(essayMin / 2);
+    const a = days[Math.min(1, days.length - 1)]!;
+    const b = days[Math.min(days.length - 1, Math.floor(days.length / 2) + 1)]!;
+    place(a, { kind: "Redação", subject: "Treino de redação (30 linhas)", minutes: half, href: HREF.Redação });
+    place(b, { kind: "Redação", subject: "Revisão e reescrita", minutes: Math.max(15, essayMin - half), href: HREF.Redação });
+  }
+
+  // Blocos por matéria (mínimo 1 para quem tem ao menos 30 min), intercalados para variar.
+  const sumShare = plan.subjects.reduce((n, s) => n + s.share, 0) || 1;
+  const queues = plan.subjects.map((s) => {
+    const minutes = (forSubjects * s.share) / sumShare;
+    const n = minutes < 30 ? 0 : Math.max(1, Math.round(minutes / UNIT));
+    return { s, n, size: n ? round15(minutes / n) : 0, done: 0 };
+  });
+  const order: { name: string; minutes: number; k: number }[] = [];
+  for (let again = true; again; ) {
+    again = false;
+    for (const q of queues) {
+      if (q.done < q.n) {
+        order.push({ name: q.s.name, minutes: q.size, k: q.done });
+        q.done += 1;
+        again = true;
+      }
+    }
+  }
+
+  for (const blk of order) {
+    // Dia com mais folga que ainda não tem essa matéria; se todos têm, o de mais folga.
+    const free = days.filter((d) => !out.get(d)!.some((b) => b.subject === blk.name));
+    const pool = free.length ? free : days;
+    const day = pool.reduce((best, d) => ((cap.get(d) ?? 0) > (cap.get(best) ?? 0) ? d : best), pool[0]!);
+    const theory = plan.phase.id === "base" ? blk.k % 2 === 0 : blk.k === 0;
+    place(day, { kind: theory ? "Teoria" : "Questões", subject: blk.name, minutes: blk.minutes, href: theory ? HREF.Teoria : HREF.Questões });
+  }
+
+  return days.map((d) => {
+    const blocks = out.get(d)!;
+    // Ordem do dia: teoria → questões → redação → revisão → simulado.
+    const rank: Record<BlockKind, number> = { Teoria: 0, Questões: 1, Redação: 2, "Revisão de erros": 3, Simulado: 4 };
+    blocks.sort((a, b) => rank[a.kind] - rank[b.kind]);
+    return { day: d, blocks, minutes: blocks.reduce((n, b) => n + b.minutes, 0) };
+  });
+}
