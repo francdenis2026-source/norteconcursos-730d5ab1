@@ -6039,9 +6039,14 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
   .lp-hero__ctas .btn-brass,
   .lp-hero__ctas .btn-glass {
-    height: 2.8rem;
+    min-height: 2.8rem;
+    height: auto;
+    padding-block: 0.5rem;
     padding-inline: 0.9rem;
     font-size: 0.85rem;
+    line-height: 1.15;
+    white-space: normal;
+    text-align: center;
     flex: 1;
     justify-content: center;
   }
@@ -6051,7 +6056,6 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .lp-hero__ctas .btn-brass {
     font-size: 0.78rem;
     padding-inline: 0.5rem;
-    white-space: nowrap;
   }
   .lp-hero__ctas .btn-brass svg {
     display: none;
@@ -6336,9 +6340,18 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .mh__cta .btn-brass,
   .mh__cta .btn-glass {
     flex: 1;
-    height: 2.7rem;
+    min-height: 2.7rem;
+    height: auto;
     justify-content: center;
+    padding-block: 0.45rem;
     padding-inline: 0.7rem;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
+    line-height: 1.15;
+    white-space: normal;
+    text-align: center;
+  }
+  .mh__cta .btn-brass svg,
+  .mh__cta .btn-glass svg {
+    flex: none;
   }
 }
