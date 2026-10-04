@@ -641,7 +641,7 @@ function Index() {
         </div>
         <div className="lp-container lp-footer__bottom">
           <span>© 2026 Norte Concurso. Todos os direitos reservados.</span>
-          <span className="lp-footer__dev">Desenvolvido por FRANC</span>
+          <span className="lp-footer__dev">Desenvolvido por Franc D'nis</span>
           <span className="lp-coord">
             <b>N</b> · De Feijó-Acre para todo o Brasil
           </span>
