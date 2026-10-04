@@ -5,7 +5,7 @@
 // arriscaria mostrar dados velhos ou quebrar login/sessão. Só os arquivos
 // estáticos do "shell" (ícone, manifesto) ficam em cache; todo o resto vai
 // direto pra rede.
-const SHELL_CACHE = "norte-app-shell-v1";
+const SHELL_CACHE = "norte-app-shell-v2";
 const SHELL_ASSETS = ["/manifest.webmanifest", "/icons/icon-256.png", "/favicon.svg"];
 
 self.addEventListener("install", (event) => {
@@ -33,5 +33,16 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
   const url = new URL(request.url);
   if (!SHELL_ASSETS.includes(url.pathname)) return;
-  event.respondWith(caches.match(request).then((cached) => cached || fetch(request)));
+  // Network-first: sempre busca a versão mais nova do shell; só cai pro
+  // cache se a rede falhar (offline/instável). Cache-first anterior podia
+  // prender pra sempre um ícone/manifesto velho de uma instalação antiga.
+  event.respondWith(
+    fetch(request)
+      .then((response) => {
+        const copy = response.clone();
+        void caches.open(SHELL_CACHE).then((cache) => cache.put(request, copy));
+        return response;
+      })
+      .catch(() => caches.match(request)),
+  );
 });

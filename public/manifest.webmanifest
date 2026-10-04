@@ -2,7 +2,7 @@
   "name": "Norte Concurso",
   "short_name": "Norte Concurso",
   "description": "Preparação inteligente e personalizada para concursos públicos.",
-  "start_url": "/dashboard?source=pwa",
+  "start_url": "/?source=pwa",
   "id": "/dashboard",
   "scope": "/",
   "display": "standalone",
