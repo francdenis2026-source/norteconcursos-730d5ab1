@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { QuestionTotals } from "@/components/dashboard/QuestionTotals";
+import { canonicalBoard } from "@/lib/subjects";
 import { useQuestionStats } from "@/hooks/useQuestionStats";
 
 export const Route = createFileRoute("/dashboard/admin-metrics")({
@@ -84,7 +85,7 @@ function AdminMetricsPage() {
     const m = new Map<string, { board: string; sent: number; official: number }>();
     const bump = (list: string[], k: "sent" | "official") => {
       for (const raw of list) {
-        const board = raw.trim().toUpperCase() || "NÃO INFORMADA";
+        const board = canonicalBoard(raw) || "NÃO INFORMADA";
         const row = m.get(board) ?? { board, sent: 0, official: 0 };
         row[k]++;
         m.set(board, row);
@@ -229,17 +230,23 @@ function AdminMetricsPage() {
           <Card>
             <CardHeader>
               <CardTitle>Questões por banca</CardTitle>
-              <CardDescription>Banca organizadora de cada questão cadastrada.</CardDescription>
+              <CardDescription>Quantas questões cada banca tem e quanto isso representa do acervo.</CardDescription>
             </CardHeader>
-            <CardContent>
-              <table className="w-full text-sm">
-                <thead><tr className="text-left text-muted-foreground"><th className="py-2">Banca</th><th>Total</th><th>Oficiais</th><th>Autorais</th></tr></thead>
-                <tbody>
-                  {(content.data?.byBoard ?? []).map((b) => (
-                    <tr key={b.board} className="border-t border-border"><td className="py-2 font-medium text-foreground">{b.board}</td><td>{b.total}</td><td>{b.official}</td><td>{b.curated}</td></tr>
-                  ))}
-                </tbody>
-              </table>
+            <CardContent className="space-y-3">
+              {(content.data?.byBoard ?? []).map((b) => (
+                <div key={b.board} className="space-y-1">
+                  <div className="flex items-baseline justify-between gap-2 text-sm">
+                    <span className="font-semibold text-foreground">{b.board}</span>
+                    <span className="tabular-nums text-foreground">{b.total.toLocaleString("pt-BR")} <span className="text-xs text-muted-foreground">({Math.round((b.total / Math.max(1, content.data?.raw ?? 1)) * 100)}%)</span></span>
+                  </div>
+                  <div className="flex h-2.5 overflow-hidden rounded bg-muted" style={{ width: `${Math.max(4, (b.total / Math.max(1, content.data?.byBoard[0]?.total ?? 1)) * 100)}%` }}>
+                    <div className="bg-primary" style={{ width: `${(b.official / b.total) * 100}%` }} />
+                    <div className="bg-amber-500" style={{ width: `${(b.curated / b.total) * 100}%` }} />
+                  </div>
+                  <p className="text-xs text-muted-foreground">{b.official.toLocaleString("pt-BR")} oficiais · {b.curated.toLocaleString("pt-BR")} autorais</p>
+                </div>
+              ))}
+              <p className="flex gap-4 border-t border-border pt-2 text-xs text-muted-foreground"><span><i className="mr-1 inline-block h-2 w-2 rounded-sm bg-primary" />Oficiais</span><span><i className="mr-1 inline-block h-2 w-2 rounded-sm bg-amber-500" />Autorais</span></p>
             </CardContent>
           </Card>
           <Card>

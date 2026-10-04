@@ -1,4 +1,5 @@
 import React from "react";
+import { canonicalBoard } from "@/lib/subjects";
 import { ArrowDown, ArrowUp, Loader2, Upload, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -109,7 +110,7 @@ export function ExamPhotoUploader({
           user_id: userId,
           contest_name: contest,
           contest_year: year,
-          exam_board: board,
+          exam_board: canonicalBoard(board) || null,
           doc_type: "prova_realizada",
           file_name: `${slugify(contest)}_${year}_pagina_${page}.jpg`,
           storage_path: storagePath,

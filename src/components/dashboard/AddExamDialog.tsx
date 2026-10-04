@@ -1,4 +1,5 @@
 import React from "react";
+import { canonicalBoard } from "@/lib/subjects";
 import { Plus } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -119,7 +120,7 @@ export function AddExamDialog({
         user_id: userId,
         contest_name: name,
         contest_year: year,
-        exam_board: board.trim() || null,
+        exam_board: canonicalBoard(board) || null,
         doc_type: "resultado",
         file_name: `${slugify(name)}_${year}_resultado.txt`,
         storage_path: `manual-entry/${userId}/${slugify(name)}-${year}`,

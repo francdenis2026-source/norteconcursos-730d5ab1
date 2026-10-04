@@ -22,3 +22,9 @@ export function canonicalSubject(raw: string | null | undefined): string {
   if (/\bingles\b/.test(key)) return "Língua Inglesa";
   return text;
 }
+
+/** Banca em maiúsculas e sem variações ("Cebraspe", "CESPE/CEBRASPE" → "CEBRASPE"). Vazio fica vazio. */
+export function canonicalBoard(raw: string | null | undefined): string {
+  const b = (raw ?? "").trim().replace(/\s+/g, " ").toUpperCase();
+  return /^CESPE|^CEBRASPE/.test(b) ? "CEBRASPE" : b;
+}

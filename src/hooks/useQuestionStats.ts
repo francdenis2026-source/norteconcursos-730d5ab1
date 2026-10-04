@@ -1,4 +1,4 @@
-import { canonicalSubject } from "@/lib/subjects";
+import { canonicalBoard, canonicalSubject } from "@/lib/subjects";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { fetchAllRows } from "@/lib/catalog";
@@ -67,7 +67,7 @@ async function loadStats(): Promise<QuestionStats> {
   const add = (rows: Row[], kind: "official" | "curated") => {
     for (const row of rows) {
       const name = canonicalSubject(String(row["subject"] ?? "")) || "Sem disciplina";
-      const board = String(row["exam_board"] ?? "").trim() || "Não informada";
+      const board = canonicalBoard(String(row["exam_board"] ?? "")) || "NÃO INFORMADA";
       const s = subjects.get(name) ?? { subject: name, total: 0, eligible: 0, reviewed: 0, official: 0, curated: 0 };
       const bd = boards.get(board) ?? { board, total: 0, official: 0, curated: 0 };
       s.total++; s[kind]++; bd.total++; bd[kind]++;
