@@ -1,51 +1,60 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Vídeo de fundo da hero (≈0,3 MB). Só entra depois da página carregada e nunca em celular,
- * com economia de dados ou com "reduzir movimento"; nesses casos fica a imagem de fundo.
- * Pausa quando a hero sai da tela.
+ * Abertura em vídeo da hero (≈0,25 MB): toca inteira a cada visita/recarga e, ao terminar,
+ * desfaz o fade para a imagem fixa de fundo. Em celular, com economia de dados ou com
+ * "reduzir movimento" o vídeo nem baixa (o CSS também o esconde): fica só a imagem.
  */
 export function HeroVideo() {
-  const [on, setOn] = useState(false);
-  const [ready, setReady] = useState(false);
   const ref = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
-    if (saveData || matchMedia("(prefers-reduced-motion: reduce)").matches || matchMedia("(max-width: 767px)").matches) return;
-    const start = () => setOn(true);
-    if (document.readyState === "complete") {
-      const t = window.setTimeout(start, 300);
-      return () => window.clearTimeout(t);
-    }
-    window.addEventListener("load", start, { once: true });
-    return () => window.removeEventListener("load", start);
-  }, []);
+  const [done, setDone] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
-    if (!on || !el) return;
-    const io = new IntersectionObserver(([e]) => (e?.isIntersecting ? void el.play().catch(() => {}) : el.pause()));
+    const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
+    if (!el || saveData || matchMedia("(prefers-reduced-motion: reduce)").matches || matchMedia("(max-width: 767px)").matches) {
+      setDone(true);
+      return;
+    }
+    let loaded = document.readyState === "complete";
+    // AbortError = o navegador pausou por economia de energia; o observador retoma quando a hero aparecer.
+    const play = () => void el.play().catch((e: unknown) => (e as Error).name !== "AbortError" && setDone(true));
+    const onLoad = () => {
+      loaded = true;
+      play();
+    };
+    let timer = 0;
+    if (loaded) timer = window.setTimeout(play, 150);
+    else window.addEventListener("load", onLoad, { once: true });
+    // Pausa fora da tela e retoma ao voltar (até terminar).
+    const io = new IntersectionObserver(([e]) => {
+      if (!loaded || el.ended) return;
+      if (e?.isIntersecting) play();
+      else el.pause();
+    });
     io.observe(el);
-    return () => io.disconnect();
-  }, [on]);
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("load", onLoad);
+      io.disconnect();
+    };
+  }, []);
 
-  if (!on) return null;
   return (
     <video
       ref={ref}
       className="lp-hero__video"
-      data-ready={ready}
-      autoPlay
+      data-done={done}
+      poster="/media/hero/hero-intro-poster.webp"
       muted
-      loop
       playsInline
-      preload="auto"
+      preload="none"
       aria-hidden="true"
-      onCanPlay={() => setReady(true)}
+      onEnded={() => setDone(true)}
+      onError={() => setDone(true)}
     >
-      <source src="/media/hero/hero-loop.webm" type="video/webm" />
-      <source src="/media/hero/hero-loop.mp4" type="video/mp4" />
+      <source src="/media/hero/hero-intro.webm" type="video/webm" />
+      <source src="/media/hero/hero-intro.mp4" type="video/mp4" />
     </video>
   );
 }

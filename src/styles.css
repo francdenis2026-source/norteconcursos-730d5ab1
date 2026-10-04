@@ -853,11 +853,17 @@ html {
   height: 100%;
   object-fit: cover;
   object-position: 92% center;
-  opacity: 0;
-  transition: opacity 1.2s var(--ease-out);
-}
-.lp-hero__video[data-ready="true"] {
   opacity: 1;
+  transition: opacity 1.6s var(--ease-out);
+}
+.lp-hero__video[data-done="true"] {
+  opacity: 0;
+  pointer-events: none;
+}
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .lp-hero__video {
+    display: none;
+  }
 }
 .lp-hero__shade {
   position: absolute;
