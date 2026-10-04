@@ -169,6 +169,13 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Administração",
+    label: "Questões de bancas",
+    icon: BookMarked,
+    href: "/dashboard/admin-questions",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
     label: "Central de mídia (admin)",
     icon: PlayCircle,
     href: "/dashboard/admin-media",
