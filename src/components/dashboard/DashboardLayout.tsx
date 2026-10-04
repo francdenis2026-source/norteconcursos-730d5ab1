@@ -63,6 +63,7 @@ import {
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { PlanCountdownInline } from "@/components/dashboard/PlanCountdown";
+import { SessionClock } from "@/components/dashboard/SessionClock";
 import { RenewPlanDialog } from "@/components/dashboard/RenewPlanDialog";
 import { MockService, type MedalProgress } from "@/services/mockService";
 import type { Achievement, UserStreak } from "@/types";
@@ -527,6 +528,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <span>Ir para…</span>
                 <span className="kbd">Ctrl K</span>
               </button>
+              {!isAdmin && user && user.id !== "demo-user" && <SessionClock userId={user.id} />}
               <span className="app-streak" title="Dias seguidos de estudo">
                 <Flame />
                 <span className="tabular">{streak?.currentStreak ?? 0}</span>

@@ -41,6 +41,7 @@ interface StudentRow {
   isAdmin: boolean;
   created_at: string | null;
   last_sign_in_at: string | null;
+  online: boolean;
 }
 interface ExamRow {
   id: string;
@@ -79,12 +80,14 @@ function AdminStudentsPage() {
         .order("created_at", { ascending: false })
         .limit(500);
       if (pErr) throw pErr;
-      const [usage, docs, roles, access] = await Promise.all([
+      const [usage, docs, roles, access, onlineRes] = await Promise.all([
         supabase.from("ai_usage_logs").select("user_id, used_on").limit(10000),
         supabase.from("student_exam_documents").select("user_id").limit(10000),
         supabase.from("user_roles").select("user_id").eq("role", "admin"),
         supabase.rpc("admin_students_access"),
+        supabase.rpc("admin_students_online"),
       ]);
+      const onlineIds = new Set((onlineRes.data ?? []).map((o: { user_id: string }) => o.user_id));
       const lastLogin = new Map<string, string | null>((access.data ?? []).map((a: { id: string; last_sign_in_at: string | null }) => [a.id, a.last_sign_in_at] as [string, string | null]));
       const adminIds = new Set((roles.data ?? []).map((r) => r.user_id));
       const t = todayIso();
@@ -99,6 +102,7 @@ function AdminStudentsPage() {
             exams: (docs.data ?? []).filter((d) => d.user_id === p.id).length,
             isAdmin: adminIds.has(p.id),
             last_sign_in_at: lastLogin.get(p.id) ?? null,
+            online: onlineIds.has(p.id),
           };
         }),
       );
@@ -252,6 +256,7 @@ function AdminStudentsPage() {
                       Cadastro {fmtDateTime(s.created_at)} · Último login {fmtDateTime(s.last_sign_in_at)}
                     </p>
                   </div>
+                  {s.online && <Badge className="bg-emerald-600">Online</Badge>}
                   {s.isAdmin && <Badge className="gap-1"><ShieldCheck className="h-3 w-3" aria-hidden /> Admin</Badge>}
                   <Badge variant="secondary">IA: {s.aiToday} hoje · {s.aiTotal} total</Badge>
                   <Button size="sm" variant="outline" onClick={() => setDetailsId(s.id)}>Detalhes</Button>

@@ -2,6 +2,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { AlertTriangle, CheckCircle2, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
+import { fmtClock } from "@/components/dashboard/SessionClock";
 import { PAYMENTS_ENABLED } from "@/lib/launch.config";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -29,6 +30,14 @@ interface Details {
   paid_total_cents: number;
   payments: { entry_date: string; category: string; description: string | null; amount_cents: number; plan_id: string | null }[];
   plan_history: { event_type: string; old_tier: string | null; new_tier: string; created_at: string; reason: string | null }[];
+}
+
+interface TimeStats {
+  total_seconds: number;
+  today_seconds: number;
+  sessions: number;
+  online: boolean;
+  recent: { started_at: string; last_seen_at: string; active_seconds: number }[];
 }
 
 export const fmtDateTime = (iso?: string | null) =>
@@ -63,12 +72,15 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
 export function StudentDetailsDialog({ userId, onClose }: { userId: string | null; onClose: () => void }) {
   const [d, setD] = useState<Details | null>(null);
   const [error, setError] = useState(false);
+  const [time, setTime] = useState<TimeStats | null>(null);
 
   useEffect(() => {
     setD(null);
     setError(false);
+    setTime(null);
     if (!userId) return;
     let alive = true;
+    void supabase.rpc("admin_student_time", { _user_id: userId }).then(({ data }) => alive && data && setTime(data as unknown as TimeStats));
     void supabase.rpc("admin_student_details", { _user_id: userId }).then(({ data, error: e }) => {
       if (!alive) return;
       if (e || !data) setError(true);
@@ -135,6 +147,34 @@ export function StudentDetailsDialog({ userId, onClose }: { userId: string | nul
                 <Field label="Último dia de estudo" value={fmtDate(d.last_study_date)} />
                 <Field label="Papel" value={d.is_admin ? "Administrador" : "Aluno"} />
               </dl>
+            </Section>
+
+            <Section title="Tempo na plataforma">
+              {!time ? (
+                <p className="text-xs text-muted-foreground">Sem dados de sessão (rode a migration study_sessions).</p>
+              ) : (
+                <>
+                  <dl className="grid grid-cols-2 gap-3 md:grid-cols-4">
+                    <Field label="Agora" value={time.online ? <Badge className="bg-emerald-600">Online</Badge> : <Badge variant="outline">Offline</Badge>} />
+                    <Field label="Hoje" value={fmtClock(time.today_seconds)} />
+                    <Field label="Total" value={fmtClock(time.total_seconds)} />
+                    <Field
+                      label="Média por sessão"
+                      value={time.sessions > 0 ? fmtClock(Math.round(time.total_seconds / time.sessions)) : "—"}
+                    />
+                  </dl>
+                  {time.recent.length > 0 && (
+                    <ul className="space-y-1 border-t border-border pt-2 text-xs text-muted-foreground">
+                      {time.recent.map((r) => (
+                        <li key={r.started_at} className="flex justify-between gap-2">
+                          <span>Início {fmtDateTime(r.started_at)} · último sinal {fmtDateTime(r.last_seen_at)}</span>
+                          <strong className="tabular-nums text-foreground">{fmtClock(r.active_seconds)}</strong>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </>
+              )}
             </Section>
 
             <Section title="Plano">
