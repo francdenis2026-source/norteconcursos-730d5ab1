@@ -14,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { normalizeUppercase } from "@/lib/utils";
+import { StudentDetailsDialog, fmtDateTime } from "@/components/dashboard/StudentDetailsDialog";
 
 export const Route = createFileRoute("/dashboard/admin-students")({
   head: () => ({
@@ -38,6 +39,8 @@ interface StudentRow {
   aiTotal: number;
   exams: number;
   isAdmin: boolean;
+  created_at: string | null;
+  last_sign_in_at: string | null;
 }
 interface ExamRow {
   id: string;
@@ -64,6 +67,7 @@ function AdminStudentsPage() {
   const [exams, setExams] = useState<ExamRow[]>([]);
   const [editId, setEditId] = useState<string | null>(null);
   const [editName, setEditName] = useState("");
+  const [detailsId, setDetailsId] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -71,15 +75,17 @@ function AdminStudentsPage() {
     try {
       const { data: profiles, error: pErr } = await supabase
         .from("profiles")
-        .select("id, full_name, email, subscription_tier")
+        .select("id, full_name, email, subscription_tier, created_at")
         .order("created_at", { ascending: false })
         .limit(500);
       if (pErr) throw pErr;
-      const [usage, docs, roles] = await Promise.all([
+      const [usage, docs, roles, access] = await Promise.all([
         supabase.from("ai_usage_logs").select("user_id, used_on").limit(10000),
         supabase.from("student_exam_documents").select("user_id").limit(10000),
         supabase.from("user_roles").select("user_id").eq("role", "admin"),
+        supabase.rpc("admin_students_access"),
       ]);
+      const lastLogin = new Map<string, string | null>((access.data ?? []).map((a: { id: string; last_sign_in_at: string | null }) => [a.id, a.last_sign_in_at] as [string, string | null]));
       const adminIds = new Set((roles.data ?? []).map((r) => r.user_id));
       const t = todayIso();
       setRows(
@@ -92,6 +98,7 @@ function AdminStudentsPage() {
             aiToday: u.filter((x) => x.used_on === t).length,
             exams: (docs.data ?? []).filter((d) => d.user_id === p.id).length,
             isAdmin: adminIds.has(p.id),
+            last_sign_in_at: lastLogin.get(p.id) ?? null,
           };
         }),
       );
@@ -241,9 +248,13 @@ function AdminStudentsPage() {
                       <p className="truncate font-medium text-foreground">{s.full_name || "Sem nome"}</p>
                     )}
                     <p className="truncate text-xs text-muted-foreground">{s.email}</p>
+                    <p className="truncate text-[0.7rem] text-muted-foreground">
+                      Cadastro {fmtDateTime(s.created_at)} · Último login {fmtDateTime(s.last_sign_in_at)}
+                    </p>
                   </div>
                   {s.isAdmin && <Badge className="gap-1"><ShieldCheck className="h-3 w-3" aria-hidden /> Admin</Badge>}
                   <Badge variant="secondary">IA: {s.aiToday} hoje · {s.aiTotal} total</Badge>
+                  <Button size="sm" variant="outline" onClick={() => setDetailsId(s.id)}>Detalhes</Button>
                   <Button size="sm" variant="ghost" onClick={() => void toggleExams(s.id)}>Provas ({s.exams})</Button>
                   <Button asChild size="sm" variant="outline"><Link to="/dashboard/admin-student/$id" params={{ id: s.id }}>Ver progresso</Link></Button>
                   <select aria-label={`Plano de ${s.full_name ?? s.email}`} value={s.subscription_tier} onChange={(e) => askPlanChange(s, e.target.value)} className="h-9 rounded-md border border-input bg-background px-2 text-sm text-foreground">
@@ -270,6 +281,8 @@ function AdminStudentsPage() {
           )}
         </CardContent>
       </Card>
+
+      <StudentDetailsDialog userId={detailsId} onClose={() => setDetailsId(null)} />
 
       <Dialog open={!!planChange} onOpenChange={(open) => { if (!open && !planBusy) setPlanChange(null); }}>
         <DialogContent className="sm:max-w-[425px]">
