@@ -135,7 +135,6 @@ function ProfessionalSimulator() {
   const [catalog, setCatalog] = React.useState<SimulatorQuestion[]>([]);
   const [history, setHistory] = React.useState<AttemptHistory[]>([]);
   const [rankProfile, setRankProfile] = React.useState<RankProfile | null>(null);
-  const [leaderboard, setLeaderboard] = React.useState<RankProfile[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [loadError, setLoadError] = React.useState<string | null>(null);
   const [contest, setContest] = React.useState(routeSearch.contest || "all");
@@ -162,7 +161,7 @@ function ProfessionalSimulator() {
     setLoading(true);
     setLoadError(null);
     try {
-      const [officialResult, curatedResult, historyResult, rankResult, leaderboardResult] =
+      const [officialResult, curatedResult, historyResult, rankResult] =
         await Promise.all([
           supabase
             .from("official_exam_questions")
@@ -188,15 +187,8 @@ function ProfessionalSimulator() {
                 .limit(8)
             : Promise.resolve({ data: [], error: null }),
           user && user.id !== "demo-user"
-            ? supabase
-                .from("user_rank_profiles")
-                .select("user_id,total_points,stars,level_name,completed_simulators,best_accuracy")
-                .eq("user_id", user.id)
-                .maybeSingle()
+            ? supabase.rpc("my_rank_summary", { _period: "all", _metric: "points" }).maybeSingle()
             : Promise.resolve({ data: null, error: null }),
-          user && user.id !== "demo-user"
-            ? supabase.rpc("get_public_leaderboard", { limit_count: 10 })
-            : Promise.resolve({ data: [], error: null }),
         ]);
       if (officialResult.error) throw officialResult.error;
       if (curatedResult.error) throw curatedResult.error;
@@ -241,7 +233,6 @@ function ProfessionalSimulator() {
       setCatalog([...official, ...curated]);
       setHistory((historyResult.data || []) as AttemptHistory[]);
       setRankProfile((rankResult.data || null) as RankProfile | null);
-      setLeaderboard((leaderboardResult.data || []) as RankProfile[]);
     } catch (error) {
       setLoadError(
         error instanceof Error ? error.message : "Não foi possível carregar o banco de questões.",
@@ -659,8 +650,8 @@ function ProfessionalSimulator() {
         </Card>
       </div>
       <div className="grid gap-6 xl:grid-cols-[.7fr_1.3fr]">
-        <RankIdentity profile={rankProfile} leaderboard={leaderboard} userId={user?.id} />
-        <Leaderboard rows={leaderboard} userId={user?.id} />
+        <RankIdentity profile={rankProfile} />
+        <Leaderboard userId={user?.id} />
       </div>
       <CatalogOverview catalog={catalog} />
       <Dialog open={startWarningOpen} onOpenChange={setStartWarningOpen}>
@@ -714,16 +705,8 @@ function ProfessionalSimulator() {
   );
 }
 
-function RankIdentity({
-  profile,
-  leaderboard,
-  userId,
-}: {
-  profile: RankProfile | null;
-  leaderboard: RankProfile[];
-  userId?: string | undefined;
-}) {
-  const position = leaderboard.find((item) => item.user_id === userId)?.rank_position;
+function RankIdentity({ profile }: { profile: RankProfile | null }) {
+  const position = profile?.rank_position;
   const nextTarget =
     !profile || profile.total_points < 250
       ? 250
@@ -790,27 +773,98 @@ function RankIdentity({
   );
 }
 
-function Leaderboard({ rows, userId }: { rows: RankProfile[]; userId?: string | undefined }) {
+interface RankRow {
+  rank_position: number;
+  user_id: string;
+  display_name: string;
+  points: number;
+  questions: number;
+  accuracy: number;
+  stars: number;
+  level_name: string;
+  is_me: boolean;
+}
+const PERIODS = [
+  ["week", "Semana"],
+  ["month", "Mês"],
+  ["all", "Geral"],
+] as const;
+const METRICS = [
+  ["points", "Pontos"],
+  ["questions", "Questões"],
+] as const;
+
+function Leaderboard({ userId }: { userId?: string | undefined }) {
+  const [period, setPeriod] = React.useState<(typeof PERIODS)[number][0]>("week");
+  const [metric, setMetric] = React.useState<(typeof METRICS)[number][0]>("points");
+  const [rows, setRows] = React.useState<RankRow[]>([]);
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    if (!userId || userId === "demo-user") {
+      setLoading(false);
+      return;
+    }
+    let alive = true;
+    setLoading(true);
+    void supabase
+      .rpc("get_ranking", { _period: period, _metric: metric, _limit: 10 })
+      .then(({ data }) => {
+        if (!alive) return;
+        setRows((data || []) as RankRow[]);
+        setLoading(false);
+      });
+    return () => {
+      alive = false;
+    };
+  }, [period, metric, userId]);
+
+  const pill = (active: boolean) =>
+    cn(
+      "rounded-full px-3 py-1 text-xs font-semibold transition-colors",
+      active ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:text-foreground",
+    );
+
   return (
     <Card className="border-0 shadow-lg ring-1 ring-border/70">
-      <CardHeader>
+      <CardHeader className="space-y-3">
         <CardTitle className="flex items-center gap-2 text-xl">
-          <Trophy className="h-5 w-5 text-amber-500" /> Ranking geral
+          <Trophy className="h-5 w-5 text-amber-500" /> Ranking
         </CardTitle>
         <CardDescription>
-          Classificação por pontos. Sobrenomes e dados pessoais permanecem protegidos.
+          Simulados e questões do Treinador valem pontos (+1 por questão, +2 se acertar sem ajuda). Só a primeira resposta de cada
+          questão conta. Administradores ficam fora. Sobrenomes ficam protegidos.
         </CardDescription>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div className="flex gap-1.5" role="tablist" aria-label="Período">
+            {PERIODS.map(([id, label]) => (
+              <button key={id} type="button" role="tab" aria-selected={period === id} className={pill(period === id)} onClick={() => setPeriod(id)}>
+                {label}
+              </button>
+            ))}
+          </div>
+          <div className="flex gap-1.5" role="tablist" aria-label="Ordenar por">
+            {METRICS.map(([id, label]) => (
+              <button key={id} type="button" role="tab" aria-selected={metric === id} className={pill(metric === id)} onClick={() => setMetric(id)}>
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
       </CardHeader>
       <CardContent>
-        {rows.length ? (
+        {loading ? (
+          <div className="flex justify-center py-8">
+            <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" aria-label="Carregando" />
+          </div>
+        ) : rows.length ? (
           <div className="space-y-2">
             {rows.map((item) => (
               <div
                 key={item.user_id}
                 className={cn(
                   "grid grid-cols-[42px_1fr_auto] items-center gap-3 rounded-xl border p-3",
-                  item.user_id === userId &&
-                    "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/20",
+                  item.is_me && "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/20",
                 )}
               >
                 <span
@@ -830,22 +884,22 @@ function Leaderboard({ rows, userId }: { rows: RankProfile[]; userId?: string | 
                 <div className="min-w-0">
                   <p className="truncate text-sm font-bold">
                     {item.display_name}
-                    {item.user_id === userId ? " (você)" : ""}
+                    {item.is_me ? " (você)" : ""}
                   </p>
                   <p className="text-[11px] text-muted-foreground">
-                    {item.level_name} · {item.completed_simulators} simulados
+                    {item.level_name} · {item.accuracy}% de acerto
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="font-black">{item.total_points} pts</p>
+                  <p className="font-black">{metric === "questions" ? `${item.questions} questões` : `${item.points} pts`}</p>
+                  <p className="text-[11px] text-muted-foreground">
+                    {metric === "questions" ? `${item.points} pts` : `${item.questions} questões`}
+                  </p>
                   <div className="flex justify-end gap-0.5">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star
                         key={star}
-                        className={cn(
-                          "h-3 w-3",
-                          star <= item.stars ? "fill-amber-400 text-amber-500" : "text-slate-200",
-                        )}
+                        className={cn("h-3 w-3", star <= item.stars ? "fill-amber-400 text-amber-500" : "text-slate-200")}
                       />
                     ))}
                   </div>
@@ -855,7 +909,7 @@ function Leaderboard({ rows, userId }: { rows: RankProfile[]; userId?: string | 
           </div>
         ) : (
           <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
-            O ranking será exibido após os primeiros candidatos concluírem simulados.
+            Ninguém pontuou neste período ainda. Resolva questões ou faça um simulado para abrir o ranking.
           </div>
         )}
       </CardContent>

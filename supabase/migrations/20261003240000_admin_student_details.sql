@@ -45,8 +45,10 @@ begin
     'last_study_date', s.last_activity_date,
     'current_streak', coalesce(s.current_streak, 0),
     'longest_streak', coalesce(s.longest_streak, 0),
-    'answered', (select count(*) from public.user_responses x where x.user_id = u.id),
-    'correct', (select count(*) from public.user_responses x where x.user_id = u.id and x.is_correct),
+    'answered', (select count(*) from (select distinct question_id from public.question_training_responses x where x.user_id = u.id) d)
+                + (select count(*) from public.simulator_responses x where x.user_id = u.id and x.selected_answer is not null),
+    'correct', (select count(*) from (select distinct on (question_id) is_correct from public.question_training_responses x where x.user_id = u.id order by question_id, created_at) d where d.is_correct)
+                + (select count(*) from public.simulator_responses x where x.user_id = u.id and x.is_correct),
     'essays', (select count(*) from public.user_essays x where x.user_id = u.id),
     'exams', (select count(*) from public.student_exam_documents x where x.user_id = u.id),
     'medals', (select count(*) from public.user_achievements x where x.user_id = u.id),
