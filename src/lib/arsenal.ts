@@ -45,7 +45,7 @@ export function topicVideosFor(subject: string, topic: string, source: Record<st
   const exact: TopicVideo[] = [];
   const general: TopicVideo[] = [];
   for (const [key, topics] of Object.entries(source)) {
-    if (!subjectInArea(subject, key)) continue;
+    if (key.startsWith("ENEM") || !subjectInArea(subject, key)) continue; // videoaulas de ENEM ficam na área ENEM
     if (topic) exact.push(...(topics[topic] ?? []));
     general.push(...(topics["*"] ?? []));
   }

@@ -31,6 +31,7 @@ import { Route as DashboardAiSolverRouteImport } from './routes/dashboard/ai-sol
 import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers'
 import { Route as DashboardEditalRouteImport } from './routes/dashboard/edital'
 import { Route as DashboardEditalRadarRouteImport } from './routes/dashboard/edital-radar'
+import { Route as DashboardEnemRouteImport } from './routes/dashboard/enem'
 import { Route as DashboardErrorsRouteImport } from './routes/dashboard/errors'
 import { Route as DashboardEssaysRouteImport } from './routes/dashboard/essays'
 import { Route as DashboardExamPanoramaRouteImport } from './routes/dashboard/exam-panorama'
@@ -169,6 +170,11 @@ const DashboardEditalRoute = DashboardEditalRouteImport.update({
 const DashboardEditalRadarRoute = DashboardEditalRadarRouteImport.update({
   id: '/edital-radar',
   path: '/edital-radar',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardEnemRoute = DashboardEnemRouteImport.update({
+  id: '/enem',
+  path: '/enem',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardErrorsRoute = DashboardErrorsRouteImport.update({
@@ -340,6 +346,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
+  '/dashboard/enem': typeof DashboardEnemRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
@@ -391,6 +398,7 @@ export interface FileRoutesByTo {
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
+  '/dashboard/enem': typeof DashboardEnemRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
@@ -444,6 +452,7 @@ export interface FileRoutesById {
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
+  '/dashboard/enem': typeof DashboardEnemRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
@@ -499,6 +508,7 @@ export interface FileRouteTypes {
     | '/dashboard/careers'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
+    | '/dashboard/enem'
     | '/dashboard/errors'
     | '/dashboard/essays'
     | '/dashboard/exam-panorama'
@@ -550,6 +560,7 @@ export interface FileRouteTypes {
     | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital-radar'
+    | '/dashboard/enem'
     | '/dashboard/errors'
     | '/dashboard/essays'
     | '/dashboard/exam-panorama'
@@ -602,6 +613,7 @@ export interface FileRouteTypes {
     | '/dashboard/careers'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
+    | '/dashboard/enem'
     | '/dashboard/errors'
     | '/dashboard/essays'
     | '/dashboard/exam-panorama'
@@ -803,6 +815,13 @@ declare module '@tanstack/react-router' {
       path: '/edital-radar'
       fullPath: '/dashboard/edital-radar'
       preLoaderRoute: typeof DashboardEditalRadarRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/enem': {
+      id: '/dashboard/enem'
+      path: '/enem'
+      fullPath: '/dashboard/enem'
+      preLoaderRoute: typeof DashboardEnemRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/errors': {
@@ -1049,6 +1068,7 @@ interface DashboardRouteChildren {
   DashboardCareersRoute: typeof DashboardCareersRoute
   DashboardEditalRoute: typeof DashboardEditalRouteWithChildren
   DashboardEditalRadarRoute: typeof DashboardEditalRadarRoute
+  DashboardEnemRoute: typeof DashboardEnemRoute
   DashboardErrorsRoute: typeof DashboardErrorsRoute
   DashboardEssaysRoute: typeof DashboardEssaysRoute
   DashboardExamPanoramaRoute: typeof DashboardExamPanoramaRoute
@@ -1087,6 +1107,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardCareersRoute: DashboardCareersRoute,
   DashboardEditalRoute: DashboardEditalRouteWithChildren,
   DashboardEditalRadarRoute: DashboardEditalRadarRoute,
+  DashboardEnemRoute: DashboardEnemRoute,
   DashboardErrorsRoute: DashboardErrorsRoute,
   DashboardEssaysRoute: DashboardEssaysRoute,
   DashboardExamPanoramaRoute: DashboardExamPanoramaRoute,

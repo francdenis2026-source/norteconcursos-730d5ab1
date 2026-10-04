@@ -12,6 +12,7 @@ import {
   ChevronsRight,
   ChevronsUpDown,
   FlaskConical,
+  GraduationCap,
   ClipboardList,
   Clock,
   FileStack,
@@ -88,6 +89,7 @@ const GROUP_HUE: Record<string, Hue> = {
   Hoje: "gold",
   Objetivo: "sky",
   "Edital e conteúdo": "violet",
+  ENEM: "sky",
   Questões: "emerald",
   Provas: "rose",
   Desempenho: "orange",
@@ -119,6 +121,7 @@ const MENU: MenuItem[] = [
   { group: "Edital e conteúdo", label: "Mudanças no edital", icon: Radar, href: "/dashboard/edital-radar" },
   { group: "Edital e conteúdo", label: "Biblioteca", icon: Library, href: "/dashboard/library" },
   { group: "Edital e conteúdo", label: "Central de mídia", icon: PlayCircle, href: "/dashboard/media" },
+  { group: "ENEM", label: "Área ENEM", icon: GraduationCap, href: "/dashboard/enem" },
   {
     group: "Questões",
     label: "Treinador de questões",

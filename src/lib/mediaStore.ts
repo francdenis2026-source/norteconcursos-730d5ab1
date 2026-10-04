@@ -7,6 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { PLAYLISTS, PODCASTS, type Podcast, type VideoPlaylist } from "@/data/mediaCatalog";
 import { TOPIC_VIDEOS, type TopicVideo } from "@/data/topicVideos";
+import { ENEM_VIDEOS } from "@/data/enemVideos";
 
 export interface MediaCatalog {
   /** matéria → assunto → vídeos ("*" = gerais da matéria). */
@@ -63,7 +64,7 @@ export function buildCatalog(videos: VideoRow[], podcasts: PodcastRow[]): MediaC
   };
 }
 
-export const STATIC_CATALOG: MediaCatalog = { topicVideos: TOPIC_VIDEOS, playlists: PLAYLISTS, podcasts: PODCASTS, fromDb: false };
+export const STATIC_CATALOG: MediaCatalog = { topicVideos: { ...TOPIC_VIDEOS, ...ENEM_VIDEOS }, playlists: PLAYLISTS, podcasts: PODCASTS, fromDb: false };
 
 export async function fetchMediaCatalog(): Promise<MediaCatalog> {
   try {

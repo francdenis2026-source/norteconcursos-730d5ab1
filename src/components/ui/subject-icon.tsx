@@ -1,10 +1,17 @@
-import { Atom, BookText, Building2, Calculator, Coins, Fingerprint, Gavel, Globe, HeartHandshake, Landmark, Laptop, Scale, Shield, Stethoscope, TrafficCone, type LucideIcon } from "lucide-react";
+import { Atom, BookOpen, BookText, Dna, FlaskConical, Map as MapIcon, PenLine, ScrollText, Brain, Building2, Calculator, Coins, Fingerprint, Gavel, Globe, HeartHandshake, Landmark, Laptop, Scale, Shield, Stethoscope, TrafficCone, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal";
 
 /** Ícone e cor de cada matéria (reconhece o nome por palavras-chave). */
 const RULES: [RegExp, LucideIcon, Hue][] = [
+  [/reda[çc]/i, PenLine, "rose"],
+  [/literat/i, BookOpen, "rose"],
+  [/biolog/i, Dna, "emerald"],
+  [/qu[ií]mica/i, FlaskConical, "violet"],
+  [/hist[óo]ria/i, ScrollText, "orange"],
+  [/geograf/i, MapIcon, "teal"],
+  [/filosof|sociolog/i, Brain, "violet"],
   [/portugu/i, BookText, "rose"],
   [/racioc|estat|matem/i, Calculator, "sky"],
   [/constitucional/i, Landmark, "gold"],

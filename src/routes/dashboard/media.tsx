@@ -1,7 +1,8 @@
 import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ExternalLink, FileAudio, Headphones, Info, ListVideo, PlayCircle, Search, Upload } from "lucide-react";
+import { ExternalLink, FileAudio, GraduationCap, Headphones, Info, ListVideo, PlayCircle, Search, Upload } from "lucide-react";
 import { SubjectIcon } from "@/components/ui/subject-icon";
+import { EnemVideos } from "@/components/enem/EnemVideos";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -128,7 +129,7 @@ const countVideos = (map: TopicMap, subject: string) => Object.values(map[subjec
 function TopicsTab() {
   const { catalog } = useMediaCatalog();
   const TOPIC_VIDEOS = catalog.topicVideos;
-  const SUBJECT_KEYS = Object.keys(TOPIC_VIDEOS);
+  const SUBJECT_KEYS = Object.keys(TOPIC_VIDEOS).filter((k) => !k.startsWith("ENEM"));
   const [pick, setSubject] = React.useState("");
   const subject = pick || SUBJECT_KEYS[0] || "";
   const [video, setVideo] = React.useState<{ id: string; title: string } | null>(null);
@@ -304,12 +305,27 @@ function MediaCenterPage() {
         <TabsList>
           <TabsTrigger value="videos" className="gap-1.5"><PlayCircle className="h-4 w-4 !text-rose-500" /> Videoaulas gratuitas</TabsTrigger>
           <TabsTrigger value="assuntos" className="gap-1.5"><ListVideo className="h-4 w-4 !text-violet-500" /> Por assunto</TabsTrigger>
+          <TabsTrigger value="enem" className="gap-1.5"><GraduationCap className="h-4 w-4 !text-sky-500" /> ENEM</TabsTrigger>
           <TabsTrigger value="podcasts" className="gap-1.5"><Headphones className="h-4 w-4 !text-emerald-500" /> Podcasts</TabsTrigger>
         </TabsList>
         <TabsContent value="videos"><VideosTab /></TabsContent>
         <TabsContent value="assuntos"><TopicsTab /></TabsContent>
+        <TabsContent value="enem"><EnemMediaTab /></TabsContent>
         <TabsContent value="podcasts"><PodcastsTab canPreview={isAdmin} /></TabsContent>
       </Tabs>
+    </div>
+  );
+}
+
+function EnemMediaTab() {
+  const [subject, setSubject] = React.useState("Matemática");
+  return (
+    <div className="space-y-3">
+      <p className="text-sm text-muted-foreground">
+        Videoaulas gratuitas do ENEM por matéria e assunto. Para plano de estudos, redação e checklist, abra a{" "}
+        <a className="font-semibold text-primary underline" href="/dashboard/enem">área ENEM</a>.
+      </p>
+      <EnemVideos subject={subject} onSubject={setSubject} />
     </div>
   );
 }
