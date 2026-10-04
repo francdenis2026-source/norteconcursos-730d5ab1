@@ -7044,10 +7044,13 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     color: oklch(0.32 0.03 262 / 0.78);
   }
   :root:not(.dark) .lp-footer__dev {
-    color: oklch(0.4 0.03 262 / 0.65);
+    color: oklch(0.42 0.03 262);
   }
   :root:not(.dark) .lp-footer .lp-coord {
-    color: oklch(0.32 0.03 262 / 0.7);
+    color: oklch(0.35 0.03 262);
+  }
+  :root:not(.dark) .lp-footer .lp-coord b {
+    color: var(--brass-deep);
   }
   .mh {
     display: block;
@@ -7352,7 +7355,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     color: oklch(0.3 0.03 262 / 0.75);
   }
   :root:not(.dark) .mh__pcac small {
-    color: oklch(0.35 0.03 262 / 0.55);
+    color: oklch(0.42 0.03 262);
   }
   :root:not(.dark) .mh__plan {
     border-color: oklch(0.15 0.03 262 / 0.14);
@@ -7362,10 +7365,20 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     color: oklch(0.25 0.03 262 / 0.88);
   }
   :root:not(.dark) .mh__plan li.is-off {
-    color: oklch(0.4 0.03 262 / 0.4);
+    color: oklch(0.52 0.03 262);
   }
   :root:not(.dark) .mh__price small {
-    color: oklch(0.35 0.03 262 / 0.55);
+    color: oklch(0.42 0.03 262);
+  }
+  :root:not(.dark) .mh__grid--steps b,
+  :root:not(.dark) .mh__tab svg,
+  :root:not(.dark) .mh__grid li > svg,
+  :root:not(.dark) .mh__pills svg,
+  :root:not(.dark) .mh__plan li svg {
+    color: var(--brass-deep);
+  }
+  :root:not(.dark) .mh__tab.is-on svg {
+    color: inherit;
   }
   :root:not(.dark) .mh .btn-glass {
     color: oklch(0.2 0.03 262);
