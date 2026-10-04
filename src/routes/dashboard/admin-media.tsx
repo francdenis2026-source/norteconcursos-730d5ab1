@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
@@ -109,6 +110,7 @@ function VideosAdmin({ videos, onChange }: { videos: VideoRow[]; onChange: () =>
   const [status, setStatus] = useState("");
   const [q, setQ] = useState("");
   const [preview, setPreview] = useState<string | null>(null);
+  const previewVideo = videos.find((x) => x.id === preview) ?? null;
   const [busy, setBusy] = useState(false);
   const [form, setForm] = useState({ subject: DISCIPLINES[0] as string, topic: "*", link: "", title: "", channel: "" });
 
@@ -227,20 +229,30 @@ function VideosAdmin({ videos, onChange }: { videos: VideoRow[]; onChange: () =>
                   <td className="pr-3"><div>{v.title}</div><div className="text-xs text-muted-foreground">{v.channel ?? "Canal desconhecido"}{v.is_playlist ? " · playlist" : ""}</div></td>
                   <td><Badge className={STATUS[v.status].cls} variant="secondary">{STATUS[v.status].label}</Badge></td>
                   <td className="space-x-1 whitespace-nowrap text-right">
-                    <Button size="sm" variant="ghost" onClick={() => setPreview(preview === v.id ? null : v.id)}>Prévia</Button>
+                    <Button size="sm" variant="ghost" onClick={() => setPreview(v.id)}>Prévia</Button>
                     <Button size="sm" variant="ghost" onClick={() => void run(() => supabase.from("media_videos").update({ active: !v.active }).eq("id", v.id), v.active ? "Vídeo desativado." : "Vídeo ativado.")}>{v.active ? "Desativar" : "Ativar"}</Button>
                     <Button size="sm" variant="ghost" aria-label="Excluir" onClick={() => void remove(v)}><Trash2 className="h-4 w-4 text-destructive" /></Button>
                   </td>
                 </tr>
               ))}
-              {preview && (() => {
-                const v = videos.find((x) => x.id === preview);
-                return v ? <tr><td colSpan={4} className="py-3"><iframe title={v.title} src={youtubeEmbedUrl(v.youtube_id)} className="aspect-video w-full max-w-2xl rounded-lg" allowFullScreen /></td></tr> : null;
-              })()}
             </tbody>
           </table>
         </CardContent>
       </Card>
+      <Dialog open={!!previewVideo} onOpenChange={(open) => !open && setPreview(null)}>
+        <DialogContent className="sm:max-w-3xl">
+          <DialogHeader>
+            <DialogTitle className="pr-6 text-base">{previewVideo?.title}</DialogTitle>
+            <DialogDescription>{previewVideo?.channel ?? "Canal desconhecido"}{previewVideo && !previewVideo.embeddable ? " · o autor não permite exibir fora do YouTube" : ""}</DialogDescription>
+          </DialogHeader>
+          {previewVideo && (
+            <iframe title={previewVideo.title} src={youtubeEmbedUrl(previewVideo.youtube_id)} className="aspect-video w-full rounded-lg" allow="fullscreen; encrypted-media" allowFullScreen />
+          )}
+          {previewVideo && (
+            <a className="text-sm text-primary underline" target="_blank" rel="noreferrer" href={previewVideo.is_playlist ? `https://www.youtube.com/playlist?list=${previewVideo.youtube_id}` : `https://www.youtube.com/watch?v=${previewVideo.youtube_id}`}>Abrir no YouTube</a>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
