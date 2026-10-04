@@ -4321,7 +4321,8 @@ html {
     display: none;
   }
   .app-topbar {
-    height: 58px;
+    height: calc(58px + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top);
     padding-inline: 14px;
     border-bottom-color: oklch(1 0 0 / 0.07);
     color: white;
@@ -6429,7 +6430,7 @@ iframe[src*="gpteng.co"] {
     font-size: 15px;
   }
   .app-topbar {
-    height: 50px;
+    height: calc(50px + env(safe-area-inset-top));
   }
   .app-content {
     padding: 8px 8px 80px;
@@ -7374,5 +7375,41 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   :root:not(.dark) .mh .btn-glass:hover {
     border-color: oklch(0.15 0.03 262 / 0.32);
     background: oklch(0.15 0.03 262 / 0.09);
+  }
+}
+
+/* ==========================================================================
+   Instalar app (PWA) — banner discreto, só aparece no celular quando o
+   navegador dispara beforeinstallprompt (hoje, principalmente Chrome/Android).
+   ========================================================================== */
+@media (max-width: 767px) {
+  .install-app-banner {
+    position: fixed;
+    right: 10px;
+    /* fica acima da app-bottom-nav (quando presente) pra não sobrepor */
+    bottom: calc(78px + env(safe-area-inset-bottom));
+    left: 10px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid oklch(1 0 0 / 0.1);
+    border-radius: 16px;
+    background: oklch(0.13 0.026 263 / 0.96);
+    box-shadow: 0 20px 40px -12px oklch(0 0 0 / 0.55);
+    backdrop-filter: blur(18px) saturate(1.4);
+  }
+  .install-app-banner__text {
+    margin: 0;
+    color: oklch(1 0 0 / 0.88);
+    font-size: 0.8125rem;
+    line-height: 1.3;
+  }
+  .install-app-banner__actions {
+    display: flex;
+    flex: none;
+    gap: 6px;
   }
 }

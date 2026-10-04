@@ -14,6 +14,7 @@ import { supabase, passwordRecoveryPending } from "@/integrations/supabase/clien
 import { Toaster } from "@/components/ui/sonner";
 import { ConfirmHost } from "@/components/ConfirmHost";
 import { MobileNotice } from "@/components/MobileNotice";
+import { InstallAppPrompt } from "@/components/InstallAppPrompt";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { THEME_INIT_SCRIPT } from "../lib/theme";
@@ -97,7 +98,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1, viewport-fit=cover",
+      },
       { title: "Norte Concurso" },
       {
         name: "description",
@@ -186,6 +190,7 @@ function RootComponent() {
       <Toaster position="top-center" closeButton />
       <ConfirmHost />
       <MobileNotice />
+      <InstallAppPrompt />
     </QueryClientProvider>
   );
 }
