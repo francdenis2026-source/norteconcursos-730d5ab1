@@ -1025,7 +1025,7 @@ function ActiveSimulator(p: {
   const [cancelPhrase, setCancelPhrase] = React.useState("");
   return (
     <div className="space-y-5 pb-8">
-      <div className="exam-status-bar sticky top-[82px] z-10 rounded-xl border bg-background/95 p-4 shadow-lg backdrop-blur">
+      <div className="exam-status-bar sticky z-10 rounded-xl border bg-background/95 p-4 shadow-lg backdrop-blur">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-xs font-bold uppercase tracking-wider text-emerald-600">

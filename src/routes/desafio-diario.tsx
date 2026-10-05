@@ -177,7 +177,7 @@ function DesafioDiario() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-30 border-b border-white/10 bg-[oklch(0.12_0.025_263/0.92)] backdrop-blur-xl">
+      <header className="sticky top-0 z-30 border-b border-white/10 bg-[oklch(0.12_0.025_263/0.92)] pt-[env(safe-area-inset-top)] backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
           <Link to="/" aria-label="Norte Concurso — início">
             <NorteBrand light />
