@@ -16,7 +16,7 @@ import { Markdown } from "@/components/library/Markdown";
 import { StudyPractice } from "@/components/library/StudyPractice";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { isOfficialUrl } from "@/lib/questionFormat";
+import { isStudySourceUrl } from "@/lib/studySourceUrl";
 import {
   markSlugRead,
   readingMinutes,
@@ -137,7 +137,7 @@ function MaterialPage() {
             <ul>
               {sources.map((source, index) => (
                 <li key={`${source.url ?? source.title}-${index}`}>
-                  {source.url && isOfficialUrl(source.url) ? (
+                  {source.url && isStudySourceUrl(source.url) ? (
                     <a href={source.url} target="_blank" rel="noopener noreferrer">
                       {source.title || source.url} <ExternalLink />
                     </a>
