@@ -14,6 +14,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { Markdown } from "@/components/library/Markdown";
 import { StudyPractice } from "@/components/library/StudyPractice";
+import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
@@ -128,6 +129,8 @@ function MaterialPage() {
       <div className="surface-card library-body">
         <Markdown source={material.body_md} />
       </div>
+
+      <WorkedExamples key={`${user?.id}:${material.slug}`} slug={material.slug} enabled={signedIn} />
 
       {(sources.length > 0 || material.source_note) && (
         <aside className="surface-card library-sources" aria-label="Fontes">

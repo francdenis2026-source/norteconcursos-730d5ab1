@@ -7,6 +7,7 @@ import { LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LegalCoursePractice } from "@/components/library/LegalCoursePractice";
+import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { Markdown } from "@/components/library/Markdown";
 import { useStudyMaterial } from "@/lib/studyMaterials";
 import { useLegalCourses, useLegalProgress, useLegalUnits, type LegalUnit, type LegalCourse } from "@/lib/legalCourses";
@@ -71,6 +72,7 @@ function LegalCoursePage() {
     {progress.isError && <p role="alert" className="rounded-xl border p-3 text-sm">Não foi possível carregar o progresso. <button className="underline" onClick={() => void progress.refetch()}>Tentar novamente</button></p>}
     {tab === "application" ? material.isPending ? <Skeleton className="h-64" /> : material.data ? <>
       <p className="text-sm text-muted-foreground">Este conjunto testa os conceitos indicados no resumo de aplicação. A cobertura da leitura integral é acompanhada por dispositivo.</p>
+      <WorkedExamples key={`${userId}:${course.material_slug}`} slug={course.material_slug} enabled={!!userId} />
       {userId && <LegalCoursePractice key={`${userId}:${material.data.slug}`} courseId={course.id} userId={userId} material={material.data} />}
       <Link to="/dashboard/library/$slug" params={{ slug: course.material_slug }} className="inline-block underline">Abrir explicações e exemplos de aplicação</Link>
     </> : <p>Não foi possível carregar os exercícios. <button onClick={() => void material.refetch()} className="underline">Tentar novamente</button></p> : <div className="grid gap-4 lg:grid-cols-[300px_minmax(0,1fr)]">
@@ -87,12 +89,12 @@ function LegalCoursePage() {
           {!visible.length && <p className="text-sm">Nenhum dispositivo neste filtro.</p>}
         </nav>
       </aside>
-      {progress.isPending ? <Skeleton className="h-80 rounded-xl" /> : selected && userId && !progress.isError && <UnitLesson key={`${userId}:${selected.id}`} unit={selected} references={course.overview.jurisprudence.filter(ref => ref.articles.includes(selected.label))} progress={byId.get(selected.id)} userId={userId} onNext={() => { const index = current.findIndex(row => row.id === selected.id); if (current[index + 1]) setSelectedId(current[index + 1]!.id); }} />}
+      {progress.isPending ? <Skeleton className="h-80 rounded-xl" /> : selected && userId && !progress.isError && <UnitLesson key={`${userId}:${selected.id}`} unit={selected} materialSlug={course.material_slug} references={course.overview.jurisprudence.filter(ref => ref.articles.includes(selected.label))} progress={byId.get(selected.id)} userId={userId} onNext={() => { const index = current.findIndex(row => row.id === selected.id); if (current[index + 1]) setSelectedId(current[index + 1]!.id); }} />}
     </div>}
   </div>;
 }
 
-function UnitLesson({ unit, references, progress, userId, onNext }: { unit: LegalUnit; references: LegalCourse["overview"]["jurisprudence"]; progress: LegalProgress | undefined; userId: string; onNext: () => void }) {
+function UnitLesson({ unit, materialSlug, references, progress, userId, onNext }: { unit: LegalUnit; materialSlug: string; references: LegalCourse["overview"]["jurisprudence"]; progress: LegalProgress | undefined; userId: string; onNext: () => void }) {
   const queryClient = useQueryClient();
   const [mode, setMode] = useState<"read" | "recall">("read");
   const [revealed, setRevealed] = useState(false);
@@ -122,6 +124,7 @@ function UnitLesson({ unit, references, progress, userId, onNext }: { unit: Lega
         {unit.unit_key.startsWith("anexo-") ? <div className="library-body overflow-x-auto"><Markdown source={unit.body_text} /></div> : <div className="whitespace-pre-wrap break-words text-base leading-8">{unit.body_text}</div>}
         {unit.recall.figures?.filter(figure => isStudySourceUrl(figure.url)).map(figure => <figure key={figure.url} className="rounded-xl border p-3"><img src={figure.url} alt={figure.title} className="h-auto max-w-full" loading="lazy" onError={event => { event.currentTarget.hidden = true; }} /><figcaption className="mt-2 text-xs"><a href={figure.url} target="_blank" rel="noopener noreferrer" className="underline">{figure.title}</a></figcaption></figure>)}
         <section className="rounded-xl bg-muted/40 p-4"><h3 className="font-semibold">Como conferir sua compreensão</h3><ul className="mt-2 list-disc space-y-2 pl-5 text-sm">{unit.recall.checklist.map(item => <li key={item}>{item}</li>)}</ul></section>
+        <WorkedExamples slug={materialSlug} enabled={true} articleLabel={unit.label} />
       </>}
       {mode === "recall" && revealed && <section className="space-y-3"><p className="text-sm">Compare sua resposta com o dispositivo inteiro. Registre a regra ou exceção que confundiu. Esta avaliação é feita por você; não é correção automática de texto livre.</p><div className="flex flex-wrap gap-2">{([['again','Não lembrei · 10 min'],['hard','Com dificuldade · 1 dia'],['good','Lembrei'],['easy','Lembrei com facilidade']] as const).map(([rating,label]) => <Button disabled={busy} key={rating} variant="outline" onClick={() => void save(rating)}>{label}</Button>)}</div></section>}
       <label className="block text-sm">Anotações e confusões a retomar<textarea maxLength={4000} className="mt-1 min-h-24 w-full rounded-lg border bg-background p-3" value={notes} onChange={e => setNotes(e.target.value)} /></label>
