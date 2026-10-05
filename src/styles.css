@@ -3906,6 +3906,11 @@ html {
    ========================================================================== */
 
 .app-shell {
+  /* Altura real do header (sem a faixa de notch/status bar): outras barras
+     sticky da página calculam seu offset a partir daqui, nunca com um
+     valor fixo em px, senão ficam coladas/cortadas pelo header no app
+     instalado (onde env(safe-area-inset-top) soma altura extra). */
+  --app-topbar-h: 64px;
   display: flex;
   min-height: 100svh;
   background: var(--color-background);
@@ -4188,16 +4193,20 @@ html {
   flex-direction: column;
 }
 .app-topbar {
+  /* --app-topbar-h vem de .app-shell (muda por breakpoint). A altura real
+     soma a faixa de notch/status bar do app instalado, então nunca usar um
+     valor fixo em px aqui. */
   position: sticky;
   top: 0;
   z-index: 20;
   display: flex;
-  height: 64px;
+  height: calc(var(--app-topbar-h) + env(safe-area-inset-top));
   flex: none;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding-inline: clamp(16px, 3vw, 40px);
+  padding-top: env(safe-area-inset-top);
   border-bottom: 1px solid var(--color-border);
   background: color-mix(in oklab, var(--color-background) 82%, transparent);
   backdrop-filter: blur(16px) saturate(1.5);
@@ -4339,12 +4348,13 @@ html {
 }
 
 @media (max-width: 767px) {
+  .app-shell {
+    --app-topbar-h: 58px;
+  }
   .app-sidebar {
     display: none;
   }
   .app-topbar {
-    height: calc(58px + env(safe-area-inset-top));
-    padding-top: env(safe-area-inset-top);
     padding-inline: 14px;
     border-bottom-color: oklch(1 0 0 / 0.07);
     color: white;
@@ -5704,6 +5714,10 @@ html {
 .session-status-bar,
 .exam-status-bar {
   border-left: 3px solid var(--brass) !important;
+  /* Nunca usar um "top" fixo aqui: a altura real do header do app muda por
+     breakpoint e cresce com env(safe-area-inset-top) no app instalado, e um
+     valor fixo acaba deixando essa barra colada/cortada por baixo do header. */
+  top: calc(var(--app-topbar-h, 64px) + env(safe-area-inset-top) + 16px) !important;
 }
 
 /* Question bank catalog */
@@ -6451,8 +6465,8 @@ iframe[src*="gpteng.co"] {
   html {
     font-size: 15px;
   }
-  .app-topbar {
-    height: calc(50px + env(safe-area-inset-top));
+  .app-shell {
+    --app-topbar-h: 50px;
   }
   .app-content {
     padding: 8px 8px 80px;
