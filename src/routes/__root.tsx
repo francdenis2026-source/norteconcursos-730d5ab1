@@ -14,8 +14,10 @@ import { supabase, passwordRecoveryPending } from "@/integrations/supabase/clien
 import { Toaster } from "@/components/ui/sonner";
 import { ConfirmHost } from "@/components/ConfirmHost";
 import { MobileNotice } from "@/components/MobileNotice";
+import { InstallAppPrompt } from "@/components/InstallAppPrompt";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { THEME_INIT_SCRIPT } from "../lib/theme";
 
 function StatusScreen({
   code,
@@ -96,7 +98,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1, viewport-fit=cover",
+      },
       { title: "Norte Concurso" },
       {
         name: "description",
@@ -141,6 +146,8 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
+        {/* Aplica claro/escuro antes da primeira pintura, para não piscar. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <HeadContent />
       </head>
       <body>
@@ -168,25 +175,6 @@ function RootComponent() {
   }, [router, queryClient]);
 
   useEffect(() => {
-    // Check local storage or matchMedia for theme preference
-    const savedTheme = localStorage.getItem("theme");
-    const isDark =
-      savedTheme === "dark" ||
-      (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-
-    // Persist to local storage if it was system preference but no manual override yet
-    if (!savedTheme) {
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    }
-  }, []);
-
-  useEffect(() => {
     // Registra o service worker de app-shell (só ícone/manifesto em cache,
     // sem afetar dados ao vivo) — habilita "Adicionar à tela inicial" no celular.
     if ("serviceWorker" in navigator) {
@@ -202,6 +190,7 @@ function RootComponent() {
       <Toaster position="top-center" closeButton />
       <ConfirmHost />
       <MobileNotice />
+      <InstallAppPrompt />
     </QueryClientProvider>
   );
 }
