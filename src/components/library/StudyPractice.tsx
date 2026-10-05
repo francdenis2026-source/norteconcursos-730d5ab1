@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { toast } from "sonner";
 import { Link } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
@@ -71,12 +71,14 @@ export function StudyPractice({
   slug,
   subject,
   topic,
+  onQuizComplete,
 }: {
   flashcards: Flashcard[];
   quiz: QuizItem[];
   slug?: string;
   subject?: string;
   topic?: string;
+  onQuizComplete?: ((answers: boolean[]) => void) | undefined;
 }) {
   const [tab, setTab] = useState<"cards" | "quiz">(flashcards.length ? "cards" : "quiz");
   if (!flashcards.length && !quiz.length) return null;
@@ -94,7 +96,7 @@ export function StudyPractice({
           </button>
         )}
       </div>
-      {tab === "cards" ? <Cards cards={flashcards} /> : <Quiz items={quiz} />}
+      {tab === "cards" ? <Cards cards={flashcards} /> : <Quiz items={quiz} onComplete={onQuizComplete} />}
       {tab === "cards" && slug && subject && (
         <SaveToDeck cards={flashcards} slug={slug} subject={subject} topic={topic ?? ""} />
       )}
@@ -147,7 +149,8 @@ function Cards({ cards }: { cards: Flashcard[] }) {
   );
 }
 
-function Quiz({ items }: { items: QuizItem[] }) {
+function Quiz({ items, onComplete }: { items: QuizItem[]; onComplete?: ((answers: boolean[]) => void) | undefined }) {
+  const completed = useRef(false);
   const [i, setI] = useState(0);
   const [answers, setAnswers] = useState<(boolean | null)[]>(() => items.map(() => null));
   const score = answers.filter((a, n) => a === items[n]!.a).length;
@@ -163,6 +166,7 @@ function Quiz({ items }: { items: QuizItem[] }) {
           variant="outline"
           className="gap-2"
           onClick={() => {
+            completed.current = false;
             setAnswers(items.map(() => null));
             setI(0);
           }}
@@ -216,7 +220,7 @@ function Quiz({ items }: { items: QuizItem[] }) {
             />
           ))}
         </div>
-        <Button disabled={given === null} onClick={() => setI(i + 1)} className="gap-2">
+        <Button disabled={given === null} onClick={() => { if (i === items.length - 1 && !completed.current && answers.every(answer => answer !== null)) { completed.current = true; onComplete?.(answers as boolean[]); } setI(i + 1); }} className="gap-2">
           {i === items.length - 1 ? "Ver resultado" : "Próxima"} <ArrowRight className="h-4 w-4" />
         </Button>
       </div>

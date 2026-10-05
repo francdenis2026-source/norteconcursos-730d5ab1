@@ -5,7 +5,7 @@ const rows = JSON.parse(await readFile(input, 'utf8'));
 const seen = new Set();
 for (const row of rows) {
   const url = new URL(row.url);
-  if (url.protocol !== 'https:' || url.username || url.password || !['www.planalto.gov.br', 'cdn.cebraspe.org.br', 'portal.stf.jus.br', 'noticias.stf.jus.br'].includes(url.hostname) || seen.has(row.url)) throw new Error('Fonte não oficial ou duplicada');
+  if (url.protocol !== 'https:' || url.username || url.password || !['www.planalto.gov.br', 'cdn.cebraspe.org.br', 'portal.stf.jus.br', 'noticias.stf.jus.br', 'stf.jus.br', 'www.stf.jus.br', 'www.stj.jus.br', 'scon.stj.jus.br', 'processo.stj.jus.br'].includes(url.hostname) || seen.has(row.url)) throw new Error('Fonte não oficial ou duplicada');
   seen.add(row.url);
   if (!row.title || !row.issuer || row.is_official !== true || !Number.isFinite(Date.parse(row.checked_at)) || !['lei', 'decreto', 'edital', 'jurisprudencia'].includes(row.source_type)) throw new Error('Metadados inválidos');
 }
