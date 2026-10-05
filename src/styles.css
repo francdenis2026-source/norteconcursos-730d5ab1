@@ -447,11 +447,18 @@ html {
 :where(
   :disabled,
   [aria-disabled="true"],
-  [data-disabled],
-  [data-disabled] *,
+  [data-disabled="true"],
+  [data-disabled="true"] *,
+  [data-disabled=""],
+  [data-disabled=""] *,
   label:has(> :disabled)
 ) {
   cursor: not-allowed;
+}
+
+:where([cmdk-input]:not(:disabled)) {
+  cursor: text;
+  caret-color: currentColor;
 }
 
 /* ==========================================================================
