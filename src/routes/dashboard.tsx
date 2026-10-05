@@ -23,7 +23,7 @@ function DashboardComponent() {
     );
   if (!isAuthenticated || !user)
     return (
-      <main className="page-hero min-h-screen grid place-items-center px-6">
+      <main className="min-h-dvh grid place-items-center px-6">
         <section className="max-w-xl text-center space-y-6">
           <span className="hero-chip">Sua preparação, seu histórico</span>
           <h1>Entre para acessar a plataforma.</h1>
