@@ -28,7 +28,7 @@ import { normalizeUppercase, validateCPF } from "@/lib/utils";
 function friendlyAuthError(error: unknown) {
   const raw = error instanceof Error ? error.message : "";
   if (/invalid login credentials/i.test(raw))
-    return "E-mail/CPF ou senha incorretos. Confira os dados e tente novamente.";
+    return "E-mail ou senha incorretos. Confira os dados e tente novamente.";
   if (/already registered|already been registered|database error/i.test(raw))
     return "CPF ou e-mail já cadastrado. Use a aba Entrar.";
   if (/email not confirmed/i.test(raw))
@@ -248,7 +248,7 @@ function AuthPage() {
           <div>
             <ShieldCheck />
             <strong>Dados protegidos</strong>
-            <span>Acesso individual com e-mail ou CPF nas contas antigas.</span>
+            <span>Acesso individual com e-mail e senha.</span>
           </div>
         </div>
       </section>
@@ -346,7 +346,7 @@ function AuthPage() {
                 <h2>{mode === "login" ? "Acesse sua preparação" : "Crie sua conta gratuita"}</h2>
                 <p>
                   {mode === "login"
-                    ? "Entre com seu e-mail (ou CPF, em contas antigas) e continue de onde parou."
+                    ? "Entre com seu e-mail e continue de onde parou."
                     : "Leva menos de dois minutos para começar."}
                 </p>
               </div>
@@ -388,9 +388,9 @@ function AuthPage() {
                 )}
                 <div className={mode === "register" ? "auth-row" : "contents"}>
                   <div className="auth-field">
-                    <Label htmlFor="cpf">{mode === "register" ? "CPF" : "E-mail ou CPF"}</Label>
+                    <Label htmlFor="cpf">{mode === "register" ? "CPF" : "E-mail"}</Label>
                     <div className="auth-field__control">
-                      <IdCard />
+                      {mode === "register" ? <IdCard /> : <Mail />}
                       <Input
                         id="cpf"
                         inputMode={mode === "register" ? "numeric" : "email"}
@@ -399,7 +399,7 @@ function AuthPage() {
                           ? { "aria-invalid": true, "aria-describedby": "auth-error" }
                           : {})}
                         placeholder={
-                          mode === "register" ? "000.000.000-00" : "seuemail@exemplo.com ou CPF"
+                          mode === "register" ? "000.000.000-00" : "seuemail@exemplo.com"
                         }
                         value={mode === "register" ? cpf : login}
                         onChange={(e) =>
