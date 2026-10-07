@@ -60,6 +60,7 @@ import {
 } from "@/components/ui/select";
 import { classifyTopic, subjectInArea } from "@/lib/questionTopics";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
+import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
@@ -663,6 +664,9 @@ function QuestionTrainer() {
             >
               {DIFFICULTY_LABEL[question.difficulty]}
             </Badge>
+            <span className="ml-auto">
+              <ReportQuestionButton question={question} />
+            </span>
           </div>
           {reviewingPast && (
             <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-200">
