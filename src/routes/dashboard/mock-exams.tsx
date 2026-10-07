@@ -1,6 +1,6 @@
 import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   AlertTriangle,
   ArrowLeft,
@@ -13,6 +13,7 @@ import {
   Flag,
   Gauge,
   History,
+  Lock,
   Loader2,
   Play,
   RotateCcw,
@@ -27,6 +28,7 @@ import {
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { checkFeatureAccess } from "@/lib/subscriptions.config";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -130,7 +132,9 @@ const DURATIONS = [15, 30, 60, 120];
 
 function ProfessionalSimulator() {
   const routeSearch = Route.useSearch();
-  const { user, isLoading: authLoading } = useAuthStatus();
+  const { user, isLoading: authLoading, isAdmin } = useAuthStatus();
+  const hasMockExamAccess =
+    isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "mockExams").included;
   const [stage, setStage] = React.useState<SimulatorStage>("setup");
   const [catalog, setCatalog] = React.useState<SimulatorQuestion[]>([]);
   const [history, setHistory] = React.useState<AttemptHistory[]>([]);
@@ -317,6 +321,10 @@ function ProfessionalSimulator() {
   const result = React.useMemo(() => calculateResult(questions, answers), [questions, answers]);
 
   function startSimulator() {
+    if (!hasMockExamAccess) {
+      toast.error("Simulados completos são um recurso dos planos pagos.");
+      return;
+    }
     if (!available.length) {
       toast.error("Nenhuma questão ativa corresponde aos filtros escolhidos.");
       return;
@@ -614,12 +622,30 @@ function ProfessionalSimulator() {
                   setWarningAccepted(false);
                   setStartWarningOpen(true);
                 }}
-                disabled={!available.length}
+                disabled={!available.length || !hasMockExamAccess}
                 className="hero-primary-action gap-2 rounded-lg"
               >
                 <Play className="h-4 w-4 fill-current" /> Iniciar simulado
               </Button>
             </div>
+            {!hasMockExamAccess && (
+              <div
+                role="status"
+                className="flex items-start gap-2 rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground"
+              >
+                <Lock className="mt-0.5 h-4 w-4 shrink-0" />
+                <span>
+                  Simulados completos e cronometrados são um recurso dos planos pagos.{" "}
+                  <Link
+                    to="/dashboard/subscriptions"
+                    className="font-semibold text-primary underline"
+                  >
+                    Veja os planos
+                  </Link>
+                  .
+                </span>
+              </div>
+            )}
           </CardContent>
         </Card>
         <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">

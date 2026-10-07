@@ -46,8 +46,9 @@ export function RenewPlanDialog({ user, enabled }: { user: UserProfile | null; e
           </div>
           <DialogTitle>Seu plano {name} expirou</DialogTitle>
           <DialogDescription>
-            Sua conta voltou ao plano Gratuito, com os recursos básicos. Deseja renovar o plano para
-            recuperar o acesso completo?
+            Sua conta entrou em modo limitado: até 10 questões por dia no Treinador, sem simulados
+            completos nem plano de estudos personalizado. Deseja renovar o plano para recuperar o
+            acesso completo?
             {!PAYMENTS_ENABLED && " Os planos pagos serão ativados em breve — avisaremos você."}
           </DialogDescription>
         </DialogHeader>
