@@ -8,6 +8,7 @@ import {
   Check,
   CheckCircle2,
   CircleHelp,
+  ExternalLink,
   Flame,
   Lock,
   Loader2,
@@ -59,6 +60,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { classifyTopic, subjectInArea } from "@/lib/questionTopics";
+import { canonicalSubject } from "@/lib/subjects";
+import { type StudyMaterialSummary, useStudyMaterialList } from "@/lib/studyMaterials";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { toast } from "sonner";
@@ -116,6 +119,17 @@ function QuestionTrainer() {
   }, [isGuest, navigate]);
   const canLoad = !authLoading && !isGuest && !!userId && userId !== "demo-user";
   const { catalog, loading: catalogLoading, error } = useQuestionCatalog(userId, canLoad);
+  const { data: libraryMaterials } = useStudyMaterialList(canLoad);
+  const libraryByDiscipline = React.useMemo(() => {
+    const map = new Map<string, StudyMaterialSummary[]>();
+    for (const item of libraryMaterials ?? []) {
+      const list = map.get(item.discipline) ?? [];
+      list.push(item);
+      map.set(item.discipline, list);
+    }
+    for (const list of map.values()) list.sort((a, b) => a.sort_order - b.sort_order);
+    return map;
+  }, [libraryMaterials]);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
@@ -595,6 +609,7 @@ function QuestionTrainer() {
   const parsed = parseQuestion(question.text);
   const hasOptions = parsed.options.length > 0;
   const explanation = splitExplanation(question.explanation);
+  const relatedMaterial = libraryByDiscipline.get(canonicalSubject(question.subject))?.[0] ?? null;
   const correctOption = parsed.options.find((option) => option.letter === question.answer);
   const certoErrado = !hasOptions && questionAnswers(question).join("") === "CE";
   const labelFor = (answer: Answer) =>
@@ -997,6 +1012,19 @@ function QuestionTrainer() {
                       )}
                     </div>
                   </div>
+                )}
+                {relatedMaterial && (
+                  <Link
+                    to="/dashboard/library/$slug"
+                    params={{ slug: relatedMaterial.slug }}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-primary hover:underline"
+                  >
+                    <BookOpenCheck className="h-3.5 w-3.5" />
+                    Quer entender melhor esse assunto? Veja "{relatedMaterial.title}" na Biblioteca
+                    <ExternalLink className="h-3 w-3" />
+                  </Link>
                 )}
               </div>
               <DialogFooter>
