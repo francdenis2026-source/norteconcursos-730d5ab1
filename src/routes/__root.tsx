@@ -15,6 +15,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { ConfirmHost } from "@/components/ConfirmHost";
 import { MobileNotice } from "@/components/MobileNotice";
 import { InstallAppPrompt } from "@/components/InstallAppPrompt";
+import { UpdateAvailablePrompt } from "@/components/UpdateAvailablePrompt";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { THEME_INIT_SCRIPT } from "../lib/theme";
@@ -191,6 +192,7 @@ function RootComponent() {
       <ConfirmHost />
       <MobileNotice />
       <InstallAppPrompt />
+      <UpdateAvailablePrompt />
     </QueryClientProvider>
   );
 }
