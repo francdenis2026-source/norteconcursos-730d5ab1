@@ -15,6 +15,7 @@ import { LockedState } from "@/components/dashboard/PageHero";
 import { Markdown } from "@/components/library/Markdown";
 import { StudyPractice } from "@/components/library/StudyPractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
+import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
@@ -125,6 +126,8 @@ function MaterialPage() {
           )}
         </ul>
       </header>
+
+      <LegalUpdateNotice review={material.legal_review} />
 
       <div className="surface-card library-body">
         <Markdown source={material.body_md} />

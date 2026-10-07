@@ -1,8 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import type { LegalProgress } from "./legalLearning";
+import type { LegalReview } from "@/components/library/LegalUpdateNotice";
 
 export type LegalCourse = {
+  legal_review?: LegalReview | null;
   id: string; slug: string; title: string; source_url: string; source_sha256: string;
   checked_at: string; material_slug: string; syllabus_topic_id: string;
   overview: {

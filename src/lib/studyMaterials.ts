@@ -1,6 +1,7 @@
 import { userStorageKey } from "@/lib/userStorage";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import type { LegalReview } from "@/components/library/LegalUpdateNotice";
 
 export type StudyMaterialStatus = "under_review" | "active" | "obsolete" | "archived";
 
@@ -24,6 +25,7 @@ export type Flashcard = { f: string; b: string };
 export type QuizItem = { q: string; a: boolean; why: string };
 
 export type StudyMaterial = StudyMaterialSummary & {
+  legal_review?: LegalReview | null;
   flashcards: Flashcard[] | null;
   quiz: QuizItem[] | null;
   body_md: string;
@@ -73,7 +75,7 @@ export function useStudyMaterial(slug: string, enabled: boolean) {
       const { data, error } = await supabase
         .from("study_materials")
         .select(
-          `${SUMMARY_COLUMNS},flashcards,quiz,body_md,source_note,legal_basis,reviewed_at,updated_at`,
+          `${SUMMARY_COLUMNS},flashcards,quiz,body_md,source_note,legal_basis,reviewed_at,updated_at,legal_review`,
         )
         .eq("slug", slug)
         .eq("content_status", "active")
