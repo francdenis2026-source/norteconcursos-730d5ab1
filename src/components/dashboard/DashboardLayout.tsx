@@ -146,7 +146,7 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Edital e conteúdo",
-    label: "Mudanças no edital",
+    label: "Raio-X dos editais",
     icon: Radar,
     href: "/dashboard/edital-radar",
   },
