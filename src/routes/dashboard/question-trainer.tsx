@@ -83,7 +83,8 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       | "category"
       | "area"
       | "topic"
-      | "go",
+      | "go"
+      | "reinforce",
       string | undefined
     >
   > => ({
@@ -99,6 +100,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     area: typeof search["area"] === "string" ? search["area"] : undefined,
     topic: typeof search["topic"] === "string" ? search["topic"] : undefined,
     go: typeof search["go"] === "string" ? search["go"] : undefined,
+    reinforce: typeof search["reinforce"] === "string" ? search["reinforce"] : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -628,6 +630,18 @@ function QuestionTrainer() {
   };
   return (
     <div className="trainer-session-shell mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+      {routeFilters.reinforce === "1" && (
+        <div className="reinforce-banner">
+          <BookOpenCheck className="h-5 w-5 shrink-0" />
+          <div>
+            <p className="reinforce-banner-title">Exercícios para reforçar o aprendizado</p>
+            <p className="reinforce-banner-subtitle">
+              Questões de {question.subject} selecionadas a partir do material que você acabou de
+              estudar.
+            </p>
+          </div>
+        </div>
+      )}
       <header className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
         <div className="flex items-center gap-1.5">
           <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>

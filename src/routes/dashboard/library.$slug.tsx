@@ -130,7 +130,11 @@ function MaterialPage() {
         <Markdown source={material.body_md} />
       </div>
 
-      <WorkedExamples key={`${user?.id}:${material.slug}`} slug={material.slug} enabled={signedIn} />
+      <WorkedExamples
+        key={`${user?.id}:${material.slug}`}
+        slug={material.slug}
+        enabled={signedIn}
+      />
 
       {(sources.length > 0 || material.source_note) && (
         <aside className="surface-card library-sources" aria-label="Fontes">
@@ -168,7 +172,10 @@ function MaterialPage() {
           <span>Resolva questões de {material.discipline} para testar o que acabou de ler.</span>
         </div>
         <Button asChild className="hero-btn-primary gap-2">
-          <Link to="/dashboard/question-trainer" search={{ subject: material.discipline }}>
+          <Link
+            to="/dashboard/question-trainer"
+            search={{ subject: material.discipline, go: "1", reinforce: "1" }}
+          >
             <BrainCircuit className="h-4 w-4" /> Treinar questões
           </Link>
         </Button>
