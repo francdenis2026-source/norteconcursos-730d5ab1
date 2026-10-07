@@ -24,6 +24,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
+import { fetchQuestionsAnsweredToday, getDailyQuestionLimit } from "@/lib/questionDailyLimit";
 import {
   type Answer,
   type Question,
@@ -110,8 +111,21 @@ type OrderMode = "random" | "exam";
 function QuestionTrainer() {
   const routeFilters = Route.useSearch();
   const navigate = useNavigate();
-  const { user, isLoading: authLoading } = useAuthStatus();
+  const { user, isLoading: authLoading, isAdmin } = useAuthStatus();
   const userId = user?.id;
+  const dailyLimit = getDailyQuestionLimit(user?.subscription_tier ?? "free", isAdmin);
+  const [dailyUsed, setDailyUsed] = React.useState(0);
+  const reachedDailyLimit = dailyLimit !== "unlimited" && dailyUsed >= dailyLimit;
+  React.useEffect(() => {
+    if (!userId || userId === "demo-user") return;
+    let active = true;
+    void fetchQuestionsAnsweredToday(userId).then((n) => {
+      if (active) setDailyUsed(n);
+    });
+    return () => {
+      active = false;
+    };
+  }, [userId]);
   const isGuest = !authLoading && (!user || userId === "demo-user");
   // O painel/área do cliente é só pra quem tem conta. Visitante nunca fica
   // aqui — é redirecionado pro Desafio Diário público (/desafio-diario),
@@ -464,7 +478,8 @@ function QuestionTrainer() {
     // eslint-disable-next-line react-hooks/exhaustive-deps -- só deve rodar quando a questão exibida muda
   }, [index, question?.id, question?.source]);
   const submit = async () => {
-    if (!selected || !question || answered || !user || savingRef.current) return;
+    if (!selected || !question || answered || !user || savingRef.current || reachedDailyLimit)
+      return;
     savingRef.current = true;
     setSaving(true);
     const isCorrect = selected === question.answer;
@@ -487,6 +502,7 @@ function QuestionTrainer() {
       );
       if (error) throw error;
       setAnswered(true);
+      setDailyUsed((n) => n + 1);
       markLocked(question.source, question.id, { selected, isCorrect });
       setResults((prev) => {
         const copy = [...prev];
@@ -640,6 +656,22 @@ function QuestionTrainer() {
               estudar.
             </p>
           </div>
+        </div>
+      )}
+      {reachedDailyLimit && (
+        <div
+          role="status"
+          className="flex items-start gap-2 rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground"
+        >
+          <Lock className="mt-0.5 h-4 w-4 shrink-0" />
+          <span>
+            Você usou as {dailyLimit} questões de hoje do plano Gratuito. O limite renova amanhã —
+            ou{" "}
+            <Link to="/dashboard/subscriptions" className="font-semibold text-primary underline">
+              mude de plano
+            </Link>{" "}
+            para responder sem limite diário.
+          </span>
         </div>
       )}
       <header className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
@@ -881,7 +913,7 @@ function QuestionTrainer() {
                 </Button>
                 <Button
                   size="lg"
-                  disabled={!selected || saving}
+                  disabled={!selected || saving || reachedDailyLimit}
                   onClick={submit}
                   className="h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
                 >

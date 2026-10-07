@@ -8,6 +8,7 @@ import {
   Compass,
   Gauge,
   Loader2,
+  Lock,
   Minus,
   PenLine,
   Pencil,
@@ -45,6 +46,7 @@ import {
 } from "@/components/dashboard/StudyChecklist";
 import { cn } from "@/lib/utils";
 import { confirmDialog } from "@/lib/confirm";
+import { checkFeatureAccess } from "@/lib/subscriptions.config";
 
 export const Route = createFileRoute("/dashboard/study-coach")({ component: StudyCoachPage });
 
@@ -409,7 +411,7 @@ function TrendIcon({ t }: { t: "up" | "down" | "flat" | null }) {
 type Mode = { kind: "view" } | { kind: "create" } | { kind: "edit"; id: string };
 
 function StudyCoachPage() {
-  const { user, isLoading: authLoading } = useAuthStatus();
+  const { user, isLoading: authLoading, isAdmin } = useAuthStatus();
   const [plans, setPlans] = React.useState<Profile[]>([]);
   const [selectedId, setSelectedId] = React.useState<string | null>(null);
   const [stats, setStats] = React.useState<SubjectStat[]>([]);
@@ -418,6 +420,8 @@ function StudyCoachPage() {
   const [mode, setMode] = React.useState<Mode>({ kind: "view" });
   const [checks, setChecks] = React.useState<CheckRow[]>([]);
   const real = !!user && user.id !== "demo-user";
+  const hasStudyPlanAccess =
+    isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "studyPlan").included;
 
   const load = React.useCallback(async () => {
     if (!user) return;
@@ -511,7 +515,7 @@ function StudyCoachPage() {
   }, [plan, profile]);
 
   async function save(d: Draft) {
-    if (!user) return;
+    if (!user || !hasStudyPlanAccess) return;
     const res =
       mode.kind === "edit"
         ? await supabase.from("study_profiles").update(d).eq("id", mode.id).select("id").single()
@@ -573,7 +577,8 @@ function StudyCoachPage() {
   const careerName = CAREERS.find((c) => c.id === profile?.career)?.name ?? "";
   const planLabel = (p: Profile) =>
     p.name || CAREERS.find((c) => c.id === p.career)?.name || "Plano";
-  const showWizard = plans.length === 0 || mode.kind !== "view";
+  const showWizard = hasStudyPlanAccess && (plans.length === 0 || mode.kind !== "view");
+  const showPlanPaywall = !hasStudyPlanAccess && (plans.length === 0 || mode.kind !== "view");
   const editing = mode.kind === "edit" ? (plans.find((p) => p.id === mode.id) ?? null) : null;
 
   return (
@@ -628,6 +633,28 @@ function StudyCoachPage() {
           onSave={save}
           {...(plans.length > 0 ? { onCancel: () => setMode({ kind: "view" }) } : {})}
         />
+      )}
+
+      {showPlanPaywall && (
+        <Card>
+          <CardContent className="flex items-start gap-3 p-6 text-sm">
+            <Lock className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+            <div className="space-y-2">
+              <p className="font-semibold">
+                O Plano de Estudos personalizado é um recurso dos planos pagos.
+              </p>
+              <p className="text-muted-foreground">
+                Ele monta um cronograma que se ajusta aos seus acertos, erros e tempo de estudo.
+              </p>
+              <Link
+                to="/dashboard/subscriptions"
+                className="inline-block font-semibold text-primary underline"
+              >
+                Veja os planos
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
       )}
 
       {profile && plan && mode.kind === "view" && (
