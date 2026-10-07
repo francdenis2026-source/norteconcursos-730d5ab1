@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LockedState, PageHero } from "@/components/dashboard/PageHero";
-import { canonicalSubject } from "@/lib/subjects";
+import { canonicalCareerName, canonicalSubject } from "@/lib/subjects";
 import {
   analyzeEditals,
   TIER_LABEL,
@@ -95,7 +95,11 @@ function ExamPanoramaPage() {
       if (e) setError(true);
       else
         setRows(
-          ((data as Row[]) ?? []).map((r) => ({ ...r, subject: canonicalSubject(r.subject) })),
+          ((data as Row[]) ?? []).map((r) => ({
+            ...r,
+            subject: canonicalSubject(r.subject),
+            career_name: canonicalCareerName(r.career_name),
+          })),
         );
     });
   }, [authLoading, real]);
@@ -146,15 +150,23 @@ function ExamPanoramaPage() {
 
   const topicResult = React.useMemo(() => {
     if (!radarData) return null;
-    const selected = radarData.questions.filter((q) => {
-      const meta = examMeta.get(`${q.contest}|${q.career}|${q.year}`);
-      if (!meta) return false;
-      if (scope !== "all" && meta.scope !== scope) return false;
-      if (family !== "all" && meta.family !== family) return false;
-      if (role !== "all" && q.career !== role) return false;
-      return true;
-    });
-    return analyzeEditals(selected, radarData.topics, radarData.editions);
+    // Canonicaliza o cargo dos dois lados (questões e edições) antes de cruzar, senão uma prova
+    // cujo career_name tinha a grafia antiga "perde" o vínculo com o próprio edital dela.
+    const selected = radarData.questions
+      .map((q) => ({ ...q, career: canonicalCareerName(q.career) }))
+      .filter((q) => {
+        const meta = examMeta.get(`${q.contest}|${q.career}|${q.year}`);
+        if (!meta) return false;
+        if (scope !== "all" && meta.scope !== scope) return false;
+        if (family !== "all" && meta.family !== family) return false;
+        if (role !== "all" && q.career !== role) return false;
+        return true;
+      });
+    const editions = radarData.editions.map((e) => ({
+      ...e,
+      role: canonicalCareerName(e.role),
+    }));
+    return analyzeEditals(selected, radarData.topics, editions);
   }, [radarData, examMeta, scope, family, role]);
 
   const view = React.useMemo(() => {
