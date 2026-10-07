@@ -447,11 +447,18 @@ html {
 :where(
   :disabled,
   [aria-disabled="true"],
-  [data-disabled],
-  [data-disabled] *,
+  [data-disabled="true"],
+  [data-disabled="true"] *,
+  [data-disabled=""],
+  [data-disabled=""] *,
   label:has(> :disabled)
 ) {
   cursor: not-allowed;
+}
+
+:where([cmdk-input]:not(:disabled)) {
+  cursor: text;
+  caret-color: currentColor;
 }
 
 /* ==========================================================================
@@ -7506,3 +7513,24 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     transform: none;
   }
 }
+
+/* Illustrated worked examples */
+.worked-examples { padding: clamp(1rem, 3vw, 2rem); display: grid; gap: 1.5rem; }
+.worked-illustration, .worked-case { border: 1px solid var(--border); border-radius: 1rem; padding: clamp(.875rem, 2.5vw, 1.5rem); min-width: 0; }
+.worked-illustration figcaption { margin-bottom: 1rem; }
+.worked-illustration figcaption p { font-size: .875rem; color: var(--muted-foreground); margin-top: .5rem; }
+.worked-illustration select { margin-left: .5rem; padding: .4rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--background); }
+.worked-svg { width: 100%; height: auto; max-height: 350px; display: block; margin: 1rem auto; }
+.worked-table { max-width: 100%; overflow-x: auto; border-radius: .75rem; border: 1px solid var(--border); }
+.worked-table table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+.worked-table th, .worked-table td { padding: .65rem .8rem; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+.worked-table th { background: var(--muted); }
+.worked-selected, .worked-result { background: color-mix(in oklab, var(--primary) 10%, var(--card)); }
+.worked-result { border-radius: .75rem; padding: .875rem; font-size: .875rem; line-height: 1.75; }
+.worked-choice { padding: .5rem .75rem; border-radius: .75rem; border: 1px solid var(--border); font-size: .8125rem; }
+.worked-choice[aria-pressed="true"] { border-color: var(--primary); background: color-mix(in oklab, var(--primary) 12%, var(--card)); }
+.worked-flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 1rem; }
+.worked-flow li { border: 1px solid var(--border); padding: .875rem; border-radius: .75rem; }
+.worked-flow li span { display: inline-flex; justify-content: center; align-items: center; height: 1.6rem; width: 1.6rem; border-radius: 50%; background: var(--primary); color: var(--primary-foreground); font-size: .75rem; font-weight: 700; }
+.worked-flow li p { margin-top: .5rem; font-size: .875rem; line-height: 1.6; }
+@media print { .worked-case textarea { display: none; } .worked-svg { break-inside: avoid; } }

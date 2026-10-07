@@ -1,0 +1,82 @@
+[
+  {
+    "source_type": "jurisprudencia",
+    "title": "STF — Tema 506, RE 635.659",
+    "issuer": "STF",
+    "url": "https://noticias.stf.jus.br/postsnoticias/stf-define-40-gramas-de-maconha-como-criterio-para-diferenciar-usuario-de-traficante/",
+    "checked_at": "2026-10-05T02:59:16.424711+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Alerta pedagógico confrontado com fonte do tribunal competente; não é catálogo exaustivo de decisões."
+  },
+  {
+    "source_type": "jurisprudencia",
+    "title": "STJ — estabilidade e permanência da associação para o tráfico",
+    "issuer": "STJ",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/26082022-Falta-de-demonstracao-de-vinculo-permanente-afasta-condenacao-por-associacao-para-o-trafico.aspx",
+    "checked_at": "2026-10-05T02:59:16.424711+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Alerta pedagógico confrontado com fonte do tribunal competente; não é catálogo exaustivo de decisões."
+  },
+  {
+    "source_type": "jurisprudencia",
+    "title": "STF — regime inicial e individualização",
+    "issuer": "STF",
+    "url": "https://stf.jus.br/arquivo/informativo/documento/informativo702.htm",
+    "checked_at": "2026-10-05T02:59:16.424711+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Alerta pedagógico confrontado com fonte do tribunal competente; não é catálogo exaustivo de decisões."
+  },
+  {
+    "source_type": "jurisprudencia",
+    "title": "STF — ADI 4.424",
+    "issuer": "STF",
+    "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=503333&ori=1",
+    "checked_at": "2026-10-05T02:59:16.424711+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Alerta pedagógico confrontado com fonte do tribunal competente; não é catálogo exaustivo de decisões."
+  },
+  {
+    "source_type": "jurisprudencia",
+    "title": "STJ — Súmula 600, ausência de coabitação",
+    "issuer": "STJ",
+    "url": "https://processo.stj.jus.br/SCON/pesquisar.jsp?b=SUMU&livre=SUMULA.tipo.+e+%40num%3D%27000600%27",
+    "checked_at": "2026-10-05T02:59:16.424711+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Alerta pedagógico confrontado com fonte do tribunal competente; não é catálogo exaustivo de decisões."
+  },
+  {
+    "source_type": "jurisprudencia",
+    "title": "STJ — Súmula 492, ato infracional e internação",
+    "issuer": "STJ",
+    "url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=185&l=100&operador=AND&ordenacao=-%40NUM&p=false&tipo=SUMULA+OR+SU",
+    "checked_at": "2026-10-05T02:59:16.424711+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Alerta pedagógico confrontado com fonte do tribunal competente; não é catálogo exaustivo de decisões."
+  },
+  {
+    "source_type": "jurisprudencia",
+    "title": "STF — ADIs 3.360 e 4.109, Informativo 1043",
+    "issuer": "STF",
+    "url": "https://portal.stf.jus.br/textos/verTexto.asp?pagina=casos_notorios_2022&servico=jurisprudenciaPesquisaGeral",
+    "checked_at": "2026-10-05T02:59:16.424711+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Alerta pedagógico confrontado com fonte do tribunal competente; não é catálogo exaustivo de decisões."
+  },
+  {
+    "source_type": "lei",
+    "title": "Lei 15.450/2026 — alteração do ECA com vacatio de 180 dias",
+    "issuer": "Presidência da República — Planalto",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15450.htm",
+    "checked_at": "2026-10-05T02:59:16.424711+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Publicada em 01/07/2026; ainda em vacatio na conferência de 04/10/2026. Acréscimo não tratado como regra já aplicável."
+  }
+]

@@ -16,6 +16,7 @@ import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
 import {
   groupByDiscipline,
   groupByEditalTopic,
@@ -108,6 +109,8 @@ function LibraryIndex() {
           <HeroStat icon={Check} label="Já lidos" value={isPending ? "—" : readCount} />
         </div>
       </PageHero>
+
+      {signedIn && <LegalPathCatalog userId={user.id} />}
 
       {isPending && signedIn ? (
         <div className="space-y-3">
