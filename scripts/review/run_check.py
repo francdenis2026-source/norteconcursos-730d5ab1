@@ -3,6 +3,10 @@ sys.path.insert(0, '.')
 from check_gabaritos import parse_combined_gabarito, find_career_block
 
 PROVAS = {
+    ('Polícia Militar do Estado de São Paulo', 'Cabo PM'):
+        ('/mnt/user-data/uploads/PROVAS/pmespcabo2022_gabarito_definitivo.pdf', 'CABO PM'),
+    ('Corpo de Bombeiros Militar do Estado do Rio de Janeiro', 'Cadete BM – Curso de Formação de Oficiais'):
+        ('/mnt/user-data/uploads/PROVAS/cbmerj2022_gabarito_definitivo_1.pdf', 'CADETE BM'),
     ('Assembleia Legislativa do Estado do Maranhão', 'Assistente Legislativo – Agente Legislativo'):
         ('/mnt/user-data/uploads/PROVAS/alema-2023-gabarito-final-para-publicacao-retificado-04.10.2023.pdf', 'AGENTE LEGISLATIVO'),
     ('Assembleia Legislativa do Estado do Maranhão', 'Consultor Legislativo Especial – Direito Constitucional'):
