@@ -358,8 +358,8 @@ function AdminStudentsPage() {
           ) : (
             visible.map((s) => (
               <div key={s.id} className="rounded-lg border border-border bg-card p-3">
-                <div className="flex flex-wrap items-center gap-3">
-                  <div className="min-w-0 flex-1">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="min-w-0 sm:max-w-[16rem] sm:shrink-0">
                     {editId === s.id ? (
                       <form
                         className="flex gap-2"
@@ -388,76 +388,77 @@ function AdminStudentsPage() {
                         </Button>
                       </form>
                     ) : (
-                      <p
-                        className="break-words font-medium text-foreground"
-                        title={s.full_name ?? ""}
-                      >
+                      <p className="truncate font-medium text-foreground" title={s.full_name ?? ""}>
                         {s.full_name || "Sem nome"}
                       </p>
                     )}
-                    <p className="break-words text-xs text-muted-foreground">{s.email}</p>
+                    <p className="truncate text-xs text-muted-foreground" title={s.email ?? ""}>
+                      {s.email}
+                    </p>
                     <p className="truncate text-[0.7rem] text-muted-foreground">
                       Cadastro {fmtDateTime(s.created_at)} · Último login{" "}
                       {fmtDateTime(s.last_sign_in_at)}
                     </p>
                   </div>
-                  {s.online && <Badge className="bg-emerald-600">Online</Badge>}
-                  {s.isAdmin && (
-                    <Badge className="gap-1">
-                      <ShieldCheck className="h-3 w-3" aria-hidden /> Admin
+                  <div className="flex flex-wrap items-center gap-2">
+                    {s.online && <Badge className="bg-emerald-600">Online</Badge>}
+                    {s.isAdmin && (
+                      <Badge className="gap-1">
+                        <ShieldCheck className="h-3 w-3" aria-hidden /> Admin
+                      </Badge>
+                    )}
+                    <Badge variant="secondary">
+                      IA: {s.aiToday} hoje · {s.aiTotal} total
                     </Badge>
-                  )}
-                  <Badge variant="secondary">
-                    IA: {s.aiToday} hoje · {s.aiTotal} total
-                  </Badge>
-                  <Button size="sm" variant="outline" onClick={() => setDetailsId(s.id)}>
-                    Detalhes
-                  </Button>
-                  <Button size="sm" variant="ghost" onClick={() => void toggleExams(s.id)}>
-                    Provas ({s.exams})
-                  </Button>
-                  <Button asChild size="sm" variant="outline">
-                    <Link to="/dashboard/admin-student/$id" params={{ id: s.id }}>
-                      Ver progresso
-                    </Link>
-                  </Button>
-                  <select
-                    aria-label={`Plano de ${s.full_name ?? s.email}`}
-                    value={s.subscription_tier}
-                    onChange={(e) => askPlanChange(s, e.target.value)}
-                    className="h-9 rounded-md border border-input bg-background px-2 text-sm text-foreground"
-                  >
-                    {SUBSCRIPTION_PLANS.map((p) => (
-                      <option key={p.id} value={p.id}>
-                        {p.name}
-                      </option>
-                    ))}
-                  </select>
-                  {s.id !== user?.id && (
-                    <Button size="sm" variant="ghost" onClick={() => void toggleAdmin(s)}>
-                      {s.isAdmin ? "Remover admin" : "Tornar admin"}
+                    <Button size="sm" variant="outline" onClick={() => setDetailsId(s.id)}>
+                      Detalhes
                     </Button>
-                  )}
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    aria-label={`Editar ${s.full_name ?? s.email}`}
-                    onClick={() => {
-                      setEditId(s.id);
-                      setEditName(s.full_name ?? "");
-                    }}
-                  >
-                    <Pencil className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    className="text-destructive hover:bg-destructive/10"
-                    aria-label={`Excluir ${s.full_name ?? s.email}`}
-                    onClick={() => void removeStudent(s)}
-                  >
-                    <Trash2 className="h-4 w-4" />
-                  </Button>
+                    <Button size="sm" variant="ghost" onClick={() => void toggleExams(s.id)}>
+                      Provas ({s.exams})
+                    </Button>
+                    <Button asChild size="sm" variant="outline">
+                      <Link to="/dashboard/admin-student/$id" params={{ id: s.id }}>
+                        Ver progresso
+                      </Link>
+                    </Button>
+                    <select
+                      aria-label={`Plano de ${s.full_name ?? s.email}`}
+                      value={s.subscription_tier}
+                      onChange={(e) => askPlanChange(s, e.target.value)}
+                      className="h-9 rounded-md border border-input bg-background px-2 text-sm text-foreground"
+                    >
+                      {SUBSCRIPTION_PLANS.map((p) => (
+                        <option key={p.id} value={p.id}>
+                          {p.name}
+                        </option>
+                      ))}
+                    </select>
+                    {s.id !== user?.id && (
+                      <Button size="sm" variant="ghost" onClick={() => void toggleAdmin(s)}>
+                        {s.isAdmin ? "Remover admin" : "Tornar admin"}
+                      </Button>
+                    )}
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      aria-label={`Editar ${s.full_name ?? s.email}`}
+                      onClick={() => {
+                        setEditId(s.id);
+                        setEditName(s.full_name ?? "");
+                      }}
+                    >
+                      <Pencil className="h-4 w-4" />
+                    </Button>
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      className="text-destructive hover:bg-destructive/10"
+                      aria-label={`Excluir ${s.full_name ?? s.email}`}
+                      onClick={() => void removeStudent(s)}
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
                 {openId === s.id && (
                   <ul className="mt-3 space-y-1 border-t border-border pt-3 text-sm">
