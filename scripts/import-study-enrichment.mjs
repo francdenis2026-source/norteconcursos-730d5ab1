@@ -18,8 +18,11 @@ for(const row of rows){
   if(!['id','title','scenario','question','conclusion','pitfall'].every(k=>text(c[k]))||ids.has(c.id)||!Array.isArray(c.steps)||c.steps.length<2||!c.steps.every(text)||!text(c.variation?.scenario)||!text(c.variation?.answer)||!Array.isArray(c.articles)||!c.articles.every(text))throw Error('Caso sem resolução ou variação');
   ids.add(c.id);
  }
+ const entry=e=>text(e?.label)&&Number.isFinite(e?.value)&&e.value>=0;
  for(const illustration of illustrations){
-  if(!['truth','venn','probability','flow'].includes(illustration.kind)||!text(illustration.title)||!text(illustration.caption)||(illustration.kind==='flow'&&(!Array.isArray(illustration.nodes)||illustration.nodes.length<2||illustration.nodes.length>5||!illustration.nodes.every(text))))throw Error('Ilustração inválida');
+  if(!['truth','venn','probability','flow','ledger'].includes(illustration.kind)||!text(illustration.title)||!text(illustration.caption))throw Error('Ilustração inválida');
+  if(illustration.kind==='flow'&&(!Array.isArray(illustration.nodes)||illustration.nodes.length<2||illustration.nodes.length>5||!illustration.nodes.every(text)))throw Error('Ilustração inválida');
+  if(illustration.kind==='ledger'&&(!text(illustration.account)||!['devedora','credora'].includes(illustration.nature)||!Array.isArray(illustration.debits)||!Array.isArray(illustration.credits)||!illustration.debits.length&&!illustration.credits.length||!illustration.debits.every(entry)||!illustration.credits.every(entry)))throw Error('Ilustração inválida');
  }
  const urls=new Set();
  for(const s of row.sources){const u=new URL(s.url);if(!text(s.title)||!sha.test(s.sha256)||!Number.isFinite(Date.parse(s.checked_at))||Date.parse(s.checked_at)>Date.now()||u.protocol!=='https:'||u.username||u.password||!hosts.has(u.hostname)||urls.has(s.url))throw Error('Fonte não primária ou sem evidência de conferência');urls.add(s.url);}
