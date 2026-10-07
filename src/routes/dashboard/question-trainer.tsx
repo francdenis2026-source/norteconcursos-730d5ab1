@@ -454,6 +454,9 @@ function QuestionTrainer() {
   // muda — back/forward dentro da sessão não reconta nem reseta o cronômetro.
   React.useEffect(() => {
     if (!question) return;
+    // Enquanto o histórico de respostas ainda está carregando, espera: decidir "não respondida"
+    // antes de saber é o que deixava responder de novo e, ao voltar, mostrar como não respondida.
+    if (lockedLoading) return;
     const past = locked.get(lockedKey(question.source, question.id));
     if (past) {
       setSelected(past.selected);
@@ -475,10 +478,18 @@ function QuestionTrainer() {
       setStruck([]);
       setStartedAt(Date.now());
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- só deve rodar quando a questão exibida muda
-  }, [index, question?.id, question?.source]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só deve rodar quando a questão exibida muda (ou quando o histórico termina de carregar)
+  }, [index, question?.id, question?.source, lockedLoading]);
   const submit = async () => {
-    if (!selected || !question || answered || !user || savingRef.current || reachedDailyLimit)
+    if (
+      !selected ||
+      !question ||
+      answered ||
+      !user ||
+      savingRef.current ||
+      reachedDailyLimit ||
+      lockedLoading
+    )
       return;
     savingRef.current = true;
     setSaving(true);
