@@ -9,6 +9,9 @@ import { LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { LibraryVideos } from "@/components/library/LibraryVideos";
+import { useMediaCatalog } from "@/lib/mediaStore";
+import { relatedVideos } from "@/lib/relatedVideos";
 import {
   basisHref,
   parseBasis,
@@ -48,6 +51,11 @@ function TopicPage() {
   const [cards, setCards] = React.useState<StudyCard[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
+  const { catalog } = useMediaCatalog();
+  const videos = React.useMemo(
+    () => (topic ? relatedVideos(catalog, topic.discipline, topic.topic_text) : []),
+    [catalog, topic],
+  );
 
   React.useEffect(() => {
     if (authLoading || !user || user.id === "demo-user") {
@@ -233,6 +241,8 @@ function TopicPage() {
           })}
         </div>
       )}
+
+      {videos.length > 0 && <LibraryVideos videos={videos} />}
     </div>
   );
 }

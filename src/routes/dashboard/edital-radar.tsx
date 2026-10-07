@@ -9,26 +9,23 @@ import {
   Loader2,
   Radar,
 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   analyzeEditals,
   sphereOf,
+  TIER_LABEL,
+  TIER_STYLE,
   type DisciplineStat,
-  type RadarEdition,
-  type RadarQuestion,
-  type RadarTopic,
   type Sphere,
   type TopicStat,
   type TopicTier,
 } from "@/lib/editalRadar";
+import { loadRadarData, type RadarData } from "@/lib/radarData";
 import { cn } from "@/lib/utils";
 import { PageHero } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/edital-radar")({ component: EditalRadarPage });
-
-const PAGE = 1000;
 
 const SPHERES: { id: Sphere; label: string }[] = [
   { id: "federal", label: "Concursos federais" },
@@ -36,80 +33,6 @@ const SPHERES: { id: Sphere; label: string }[] = [
   { id: "outras", label: "Outras forças e concursos" },
   { id: "todas", label: "Todos" },
 ];
-
-const TIER_LABEL: Record<TopicTier, string> = {
-  alta: "Quase sempre cai",
-  media: "Cai com frequência",
-  baixa: "Cai de vez em quando",
-  nunca: "Nunca caiu",
-  amostra: "Poucos dados",
-};
-
-const TIER_STYLE: Record<TopicTier, string> = {
-  alta: "bg-rose-100 text-rose-800 dark:bg-rose-950/40 dark:text-rose-200",
-  media: "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200",
-  baixa: "bg-sky-100 text-sky-800 dark:bg-sky-950/40 dark:text-sky-200",
-  nunca: "bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-200",
-  amostra: "bg-slate-100 text-slate-500 dark:bg-slate-900 dark:text-slate-400",
-};
-
-interface RadarData {
-  questions: RadarQuestion[];
-  topics: RadarTopic[];
-  editions: RadarEdition[];
-}
-
-async function loadRadarData(): Promise<RadarData> {
-  const questions: RadarQuestion[] = [];
-  for (let from = 0; ; from += PAGE) {
-    const { data, error } = await supabase
-      .from("official_exam_questions")
-      .select("contest_name,career_name,exam_board,exam_year,subject,syllabus_topic_id")
-      .eq("content_status", "active")
-      .order("id")
-      .range(from, from + PAGE - 1);
-    if (error) throw error;
-    for (const row of data ?? [])
-      questions.push({
-        contest: row.contest_name,
-        career: row.career_name,
-        board: row.exam_board,
-        year: row.exam_year,
-        subject: row.subject,
-        topicId: row.syllabus_topic_id,
-      });
-    if ((data ?? []).length < PAGE) break;
-  }
-  const editionsResult = await supabase
-    .from("syllabus_editions")
-    .select("id,contest_name,role_name,contest_year,exam_board");
-  if (editionsResult.error) throw editionsResult.error;
-  const editions: RadarEdition[] = (editionsResult.data ?? []).map((row) => ({
-    id: row.id,
-    contest: row.contest_name,
-    role: row.role_name,
-    year: row.contest_year,
-    board: row.exam_board,
-  }));
-  const topics: RadarTopic[] = [];
-  for (let from = 0; ; from += PAGE) {
-    const { data, error } = await supabase
-      .from("syllabus_topics")
-      .select("id,edition_id,discipline,topic_text")
-      .order("id")
-      .range(from, from + PAGE - 1);
-    if (error) throw error;
-    for (const row of data ?? [])
-      topics.push({
-        id: row.id,
-        editionId: row.edition_id,
-        discipline: row.discipline,
-        text: row.topic_text,
-      });
-    if ((data ?? []).length < PAGE) break;
-  }
-  return { questions, topics, editions };
-}
 
 function EditalRadarPage() {
   const [data, setData] = React.useState<RadarData | null>(null);
