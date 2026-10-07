@@ -17,6 +17,7 @@ import {
   ClipboardList,
   Clock,
   FileStack,
+  Flag,
   Flame,
   History,
   Layers,
@@ -237,6 +238,13 @@ const MENU: MenuItem[] = [
     label: "Cadastros por dia",
     icon: User,
     href: "/dashboard/admin-signups",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
+    label: "Questões reportadas",
+    icon: Flag,
+    href: "/dashboard/admin-question-reports",
     adminOnly: true,
   },
 ];

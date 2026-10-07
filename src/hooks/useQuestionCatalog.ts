@@ -110,6 +110,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             return {
               id: String(row["id"]),
               source: "official" as const,
+              table: "board_exam_questions" as const,
               contest: String(row["contest_name"]),
               year: String(row["exam_year"]),
               career: String(row["career_name"]),
@@ -141,6 +142,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
           ).map((row) => ({
             id: String(row["id"]),
             source: "official" as const,
+            table: "official_exam_questions" as const,
             contest: String(row["contest_name"]),
             year: String(row["exam_year"]),
             career: String(row["career_name"] || "Carreira policial"),
@@ -164,6 +166,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
           ).map((row) => ({
             id: String(row["id"]),
             source: "curated" as const,
+            table: "curated_question_catalog" as const,
             contest: String(row["contest_name"]),
             year: String(row["contest_year"]),
             career: String(row["career_name"] || "Carreira policial"),
@@ -184,6 +187,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             .map((row) => ({
               id: String(row["id"]),
               source: "personal" as const,
+              table: "question_bank" as const,
               contest: String(row["contest_name"]),
               year: String(row["contest_year"]),
               career: "Meu caderno",
