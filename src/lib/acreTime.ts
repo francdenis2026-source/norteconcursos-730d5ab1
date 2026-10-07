@@ -33,6 +33,11 @@ export function secondsUntilAcreMidnight(now: Date = new Date()): number {
   return 86400 - (((h % 24) * 60 + m) * 60 + s);
 }
 
+/** Instante UTC (ISO) em que começou o dia de hoje no Acre — para filtrar "desde hoje" no banco. */
+export function acreDayStartISO(now: Date = new Date()): string {
+  return `${acreDateKey(now)}T05:00:00.000Z`;
+}
+
 /** 3725 -> "01:02:05" */
 export function formatCountdown(totalSeconds: number): string {
   const t = Math.min(86399, Math.max(0, Math.floor(totalSeconds)));

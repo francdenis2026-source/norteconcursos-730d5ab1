@@ -358,7 +358,7 @@ function AdminStudentsPage() {
           ) : (
             visible.map((s) => (
               <div key={s.id} className="rounded-lg border border-border bg-card p-3">
-                <div className="flex flex-wrap items-center gap-3">
+                <div className="flex items-start gap-3">
                   <div className="min-w-0 flex-1">
                     {editId === s.id ? (
                       <form
@@ -388,25 +388,31 @@ function AdminStudentsPage() {
                         </Button>
                       </form>
                     ) : (
-                      <p className="truncate font-medium text-foreground">
+                      <p className="truncate font-medium text-foreground" title={s.full_name ?? ""}>
                         {s.full_name || "Sem nome"}
                       </p>
                     )}
-                    <p className="truncate text-xs text-muted-foreground">{s.email}</p>
+                    <p className="truncate text-xs text-muted-foreground" title={s.email ?? ""}>
+                      {s.email}
+                    </p>
                     <p className="truncate text-[0.7rem] text-muted-foreground">
                       Cadastro {fmtDateTime(s.created_at)} · Último login{" "}
                       {fmtDateTime(s.last_sign_in_at)}
                     </p>
                   </div>
-                  {s.online && <Badge className="bg-emerald-600">Online</Badge>}
-                  {s.isAdmin && (
-                    <Badge className="gap-1">
-                      <ShieldCheck className="h-3 w-3" aria-hidden /> Admin
+                  <div className="flex shrink-0 flex-wrap items-center justify-end gap-2">
+                    {s.online && <Badge className="bg-emerald-600">Online</Badge>}
+                    {s.isAdmin && (
+                      <Badge className="gap-1">
+                        <ShieldCheck className="h-3 w-3" aria-hidden /> Admin
+                      </Badge>
+                    )}
+                    <Badge variant="secondary">
+                      IA: {s.aiToday} hoje · {s.aiTotal} total
                     </Badge>
-                  )}
-                  <Badge variant="secondary">
-                    IA: {s.aiToday} hoje · {s.aiTotal} total
-                  </Badge>
+                  </div>
+                </div>
+                <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-border pt-3">
                   <Button size="sm" variant="outline" onClick={() => setDetailsId(s.id)}>
                     Detalhes
                   </Button>

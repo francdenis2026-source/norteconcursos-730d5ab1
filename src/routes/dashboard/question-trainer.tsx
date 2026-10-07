@@ -1,4 +1,3 @@
-import { canonicalSubject } from "@/lib/subjects";
 import * as React from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
@@ -9,7 +8,9 @@ import {
   Check,
   CheckCircle2,
   CircleHelp,
+  ExternalLink,
   Flame,
+  Lock,
   Loader2,
   RotateCcw,
   Sparkles,
@@ -21,6 +22,9 @@ import {
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
+import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
+import { fetchQuestionsAnsweredToday, getDailyQuestionLimit } from "@/lib/questionDailyLimit";
 import {
   type Answer,
   type Question,
@@ -31,10 +35,7 @@ import {
   examKey,
   formatDate,
   hasReviewedExplanation,
-  isEligibleQuestion,
   isPlaceholderExplanation,
-  normalizeDifficulty,
-  parseBasis,
   parseQuestion,
   basisHref,
   shuffled,
@@ -59,8 +60,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { fetchAllRows } from "@/lib/catalog";
 import { classifyTopic, subjectInArea } from "@/lib/questionTopics";
+import { canonicalSubject } from "@/lib/subjects";
+import { type StudyMaterialSummary, useStudyMaterialList } from "@/lib/studyMaterials";
+import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
+import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
@@ -80,7 +84,8 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       | "category"
       | "area"
       | "topic"
-      | "go",
+      | "go"
+      | "reinforce",
       string | undefined
     >
   > => ({
@@ -96,6 +101,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     area: typeof search["area"] === "string" ? search["area"] : undefined,
     topic: typeof search["topic"] === "string" ? search["topic"] : undefined,
     go: typeof search["go"] === "string" ? search["go"] : undefined,
+    reinforce: typeof search["reinforce"] === "string" ? search["reinforce"] : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -105,8 +111,21 @@ type OrderMode = "random" | "exam";
 function QuestionTrainer() {
   const routeFilters = Route.useSearch();
   const navigate = useNavigate();
-  const { user, isLoading: authLoading } = useAuthStatus();
+  const { user, isLoading: authLoading, isAdmin } = useAuthStatus();
   const userId = user?.id;
+  const dailyLimit = getDailyQuestionLimit(user?.subscription_tier ?? "free", isAdmin);
+  const [dailyUsed, setDailyUsed] = React.useState(0);
+  const reachedDailyLimit = dailyLimit !== "unlimited" && dailyUsed >= dailyLimit;
+  React.useEffect(() => {
+    if (!userId || userId === "demo-user") return;
+    let active = true;
+    void fetchQuestionsAnsweredToday(userId).then((n) => {
+      if (active) setDailyUsed(n);
+    });
+    return () => {
+      active = false;
+    };
+  }, [userId]);
   const isGuest = !authLoading && (!user || userId === "demo-user");
   // O painel/área do cliente é só pra quem tem conta. Visitante nunca fica
   // aqui — é redirecionado pro Desafio Diário público (/desafio-diario),
@@ -114,8 +133,20 @@ function QuestionTrainer() {
   React.useEffect(() => {
     if (isGuest) navigate({ to: "/desafio-diario", replace: true });
   }, [isGuest, navigate]);
-  const [catalog, setCatalog] = React.useState<Question[]>([]);
-  const [hidden, setHidden] = React.useState(0);
+  const canLoad = !authLoading && !isGuest && !!userId && userId !== "demo-user";
+  const { catalog, loading: catalogLoading, error } = useQuestionCatalog(userId, canLoad);
+  const { data: libraryMaterials } = useStudyMaterialList(canLoad);
+  const libraryByDiscipline = React.useMemo(() => {
+    const map = new Map<string, StudyMaterialSummary[]>();
+    for (const item of libraryMaterials ?? []) {
+      const list = map.get(item.discipline) ?? [];
+      list.push(item);
+      map.set(item.discipline, list);
+    }
+    for (const list of map.values()) list.sort((a, b) => a.sort_order - b.sort_order);
+    return map;
+  }, [libraryMaterials]);
+  const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
   const [contest, setContest] = React.useState(routeFilters.contest || "all");
@@ -135,8 +166,7 @@ function QuestionTrainer() {
   const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState("20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
-  const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState<string | null>(null);
+  const loading = catalogLoading || lockedLoading;
   const [index, setIndex] = React.useState(0);
   const [selected, setSelected] = React.useState<Answer | null>(null);
   const [struck, setStruck] = React.useState<Answer[]>([]);
@@ -144,220 +174,13 @@ function QuestionTrainer() {
   const savingRef = React.useRef(false);
   const responseIdRef = React.useRef(crypto.randomUUID());
   const [answered, setAnswered] = React.useState(false);
+  const [reviewingPast, setReviewingPast] = React.useState(false);
   const [helpUsed, setHelpUsed] = React.useState(false);
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
-  const [correct, setCorrect] = React.useState(0);
-  const [wrong, setWrong] = React.useState(0);
   const [results, setResults] = React.useState<("ok" | "err")[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
-
-  React.useEffect(() => {
-    if (authLoading || isGuest) return;
-    // Sem sessão real (nem visitante, nem logado) não há nada pra carregar
-    // — visitante já foi redirecionado pro Desafio Diário no efeito acima.
-    if (!userId || userId === "demo-user") {
-      setLoading(false);
-      return;
-    }
-    let active = true;
-    void (async () => {
-      try {
-        const query = async (
-          table:
-            | "official_exam_questions"
-            | "curated_question_catalog"
-            | "question_bank"
-            | "board_exam_questions",
-          base: string,
-          extra: string,
-          refine: (
-            builder: ReturnType<ReturnType<typeof supabase.from>["select"]>,
-          ) => ReturnType<ReturnType<typeof supabase.from>["select"]>,
-        ) => ({
-          data: await fetchAllRows((from, to) =>
-            refine(supabase.from(table).select(base + ",content_status," + extra))
-              .order("id")
-              .range(from, to),
-          ),
-          error: null,
-          gated: true,
-        });
-        const [officialResult, curatedResult, personalResult, boardResult] = await Promise.all([
-          query(
-            "official_exam_questions",
-            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,state,career_category",
-            "law_version_checked_at,legal_review_required,legal_audit_completed,context_review_required,difficulty",
-            (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
-          ),
-          query(
-            "curated_question_catalog",
-            "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
-            "law_version_checked_at",
-            (builder) => builder.eq("content_status", "active"),
-          ),
-          !userId
-            ? Promise.resolve({ data: [], error: null, gated: true })
-            : query(
-                "question_bank",
-                "id,contest_name,contest_year,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
-                "law_version_checked_at",
-                (builder) => builder.eq("user_id", userId).eq("content_status", "active"),
-              ),
-          // Provas de bancas com alternativas A–E (FGV etc.): só entram depois de revisadas e ativadas.
-          query(
-            "board_exam_questions",
-            "id,board,contest_name,career_name,exam_year,subject,support_text,stem,options,official_answer,needs_visual,legal_review_required,law_version_checked_at,legal_basis,explanation,difficulty,state,career_category",
-            "created_at",
-            (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
-          ).catch(() => ({ data: [], error: null, gated: true })), // tabela ainda não criada: segue sem elas
-        ]);
-        let hiddenCount = 0;
-        const gate = (
-          rows: Array<Record<string, unknown>>,
-          gated: boolean,
-          extraOk: (row: Record<string, unknown>) => boolean = () => true,
-        ) =>
-          rows.filter((row) => {
-            const ok = extraOk(row) && isEligibleQuestion(row);
-            if (!ok) hiddenCount += 1;
-            return ok;
-          });
-        if (officialResult.error) throw officialResult.error;
-        if (curatedResult.error) throw curatedResult.error;
-        if (personalResult.error) throw personalResult.error;
-        // tabela ainda não criada no banco: segue sem as questões de bancas
-        const boardRows = boardResult.error
-          ? []
-          : ((boardResult.data || []) as Array<Record<string, unknown>>);
-        const catalog: Question[] = [
-          ...gate(
-            boardRows.map((row) => ({
-              ...row,
-              context_review_required: row["needs_visual"],
-              legal_audit_completed:
-                !row["legal_review_required"] || !!row["law_version_checked_at"],
-            })),
-            true,
-          ).map((row) => {
-            const opts = (row["options"] || {}) as Record<string, string>;
-            const support = row["support_text"]
-              ? `Texto-base:\n${String(row["support_text"])}\n\n`
-              : "";
-            return {
-              id: String(row["id"]),
-              source: "official" as const,
-              contest: String(row["contest_name"]),
-              year: String(row["exam_year"]),
-              career: String(row["career_name"]),
-              board: String(row["board"]),
-              subject: canonicalSubject(String(row["subject"])),
-              subtopic: null,
-              text: `${support}${String(row["stem"])}\n${Object.entries(opts)
-                .map(([letter, text]) => `(${letter}) ${text}`)
-                .join("\n")}`,
-              answer: String(row["official_answer"]) as Answer,
-              explanation: String(
-                row["explanation"] ||
-                  "Gabarito definitivo da banca organizadora. Comentário pedagógico em preparação.",
-              ),
-              legalBasis: parseBasis(row["legal_basis"]),
-              checkedAt: row["law_version_checked_at"]
-                ? String(row["law_version_checked_at"])
-                : null,
-              difficulty: normalizeDifficulty(row["difficulty"]),
-              state: String(row["state"] || ""),
-              category: String(row["career_category"] || ""),
-              kind: "multiple_choice" as const,
-            };
-          }),
-          ...gate(
-            (officialResult.data || []) as Array<Record<string, unknown>>,
-            officialResult.gated,
-            (row) => !(row["legal_review_required"] && !row["legal_audit_completed"]),
-          ).map((row) => ({
-            id: String(row["id"]),
-            source: "official" as const,
-            contest: String(row["contest_name"]),
-            year: String(row["exam_year"]),
-            career: String(row["career_name"] || "Carreira policial"),
-            board: String(row["exam_board"] || "CEBRASPE"),
-            subject: canonicalSubject(String(row["subject"])),
-            subtopic: null,
-            text: String(row["question_text"]),
-            answer: String(row["official_answer"]) as Answer,
-            explanation: String(
-              row["review_note"] || "Item conferido com o gabarito definitivo da prova oficial.",
-            ),
-            legalBasis: parseBasis(row["legal_basis"]),
-            checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
-            difficulty: normalizeDifficulty(row["difficulty"]),
-            state: String(row["state"] || ""),
-            category: String(row["career_category"] || ""),
-          })),
-          ...gate(
-            (curatedResult.data || []) as Array<Record<string, unknown>>,
-            curatedResult.gated,
-          ).map((row) => ({
-            id: String(row["id"]),
-            source: "curated" as const,
-            contest: String(row["contest_name"]),
-            year: String(row["contest_year"]),
-            career: String(row["career_name"] || "Carreira policial"),
-            board: String(row["exam_board"] || "Banca"),
-            subject: canonicalSubject(String(row["subject"])),
-            subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
-            text: String(row["question_text"]),
-            answer: String(row["official_answer"]) as Answer,
-            explanation: String(row["explanation"] || "Explicação editorial em revisão."),
-            legalBasis: parseBasis(row["legal_basis"]),
-            checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
-            difficulty: normalizeDifficulty(row["difficulty"]),
-            state: String(row["state"] || ""),
-            category: String(row["career_category"] || ""),
-          })),
-          ...((personalResult.data || []) as Array<Record<string, unknown>>)
-            .filter(isEligibleQuestion)
-            .map((row) => ({
-              id: String(row["id"]),
-              source: "personal" as const,
-              contest: String(row["contest_name"]),
-              year: String(row["contest_year"]),
-              career: "Meu caderno",
-              board: "Meu caderno",
-              kind: parseQuestion(String(row["question_text"])).options.length
-                ? ("multiple_choice" as const)
-                : ("true_false" as const),
-              subject: canonicalSubject(String(row["subject"])),
-              subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
-              text: String(row["question_text"]),
-              answer: String(row["official_answer"]) as Answer,
-              explanation: String(row["explanation"] || "Explicação pedagógica em revisão."),
-              legalBasis: parseBasis(row["legal_basis"]),
-              checkedAt: row["law_version_checked_at"]
-                ? String(row["law_version_checked_at"])
-                : null,
-              difficulty: normalizeDifficulty(row["difficulty"]),
-              state: String(row["state"] || ""),
-              category: String(row["career_category"] || ""),
-            })),
-        ];
-        if (active) {
-          setCatalog(catalog);
-          setHidden(hiddenCount);
-        }
-      } catch (loadError) {
-        if (active)
-          setError(
-            loadError instanceof Error ? loadError.message : "Não foi possível carregar o treino.",
-          );
-      } finally {
-        if (active) setLoading(false);
-      }
-    })();
-    return () => {
-      active = false;
-    };
-  }, [authLoading, userId, isGuest]);
+  const correct = results.filter((r) => r === "ok").length;
+  const wrong = results.filter((r) => r === "err").length;
 
   // Cada lista mostra só o que existe combinado com os OUTROS filtros já escolhidos,
   // para nunca montar uma combinação sem questões.
@@ -572,8 +395,6 @@ function QuestionTrainer() {
     const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
     setQuestions(ordered.slice(0, Number(limit)));
     setIndex(0);
-    setCorrect(0);
-    setWrong(0);
     setResults([]);
     setSelected(null);
     setStruck([]);
@@ -604,8 +425,6 @@ function QuestionTrainer() {
     const ordered = shuffled(pool).slice(0, 10);
     setQuestions(ordered);
     setIndex(0);
-    setCorrect(0);
-    setWrong(0);
     setResults([]);
     setSelected(null);
     setStruck([]);
@@ -630,8 +449,48 @@ function QuestionTrainer() {
   };
 
   const question = questions[index];
+  // Já respondida antes (nesta sessão ou em qualquer sessão anterior): mostra
+  // em modo revisão, sem permitir reenviar. Só rearma quando a questão exibida
+  // muda — back/forward dentro da sessão não reconta nem reseta o cronômetro.
+  React.useEffect(() => {
+    if (!question) return;
+    // Enquanto o histórico de respostas ainda está carregando, espera: decidir "não respondida"
+    // antes de saber é o que deixava responder de novo e, ao voltar, mostrar como não respondida.
+    if (lockedLoading) return;
+    const past = locked.get(lockedKey(question.source, question.id));
+    if (past) {
+      setSelected(past.selected);
+      setAnswered(true);
+      setReviewingPast(true);
+      setHelpUsed(false);
+      setStruck([]);
+      setResults((prev) => {
+        if (prev[index]) return prev;
+        const copy = [...prev];
+        copy[index] = past.isCorrect ? "ok" : "err";
+        return copy;
+      });
+    } else {
+      setSelected(null);
+      setAnswered(false);
+      setReviewingPast(false);
+      setHelpUsed(false);
+      setStruck([]);
+      setStartedAt(Date.now());
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só deve rodar quando a questão exibida muda (ou quando o histórico termina de carregar)
+  }, [index, question?.id, question?.source, lockedLoading]);
   const submit = async () => {
-    if (!selected || !question || answered || !user || savingRef.current) return;
+    if (
+      !selected ||
+      !question ||
+      answered ||
+      !user ||
+      savingRef.current ||
+      reachedDailyLimit ||
+      lockedLoading
+    )
+      return;
     savingRef.current = true;
     setSaving(true);
     const isCorrect = selected === question.answer;
@@ -654,8 +513,8 @@ function QuestionTrainer() {
       );
       if (error) throw error;
       setAnswered(true);
-      if (isCorrect) setCorrect((value) => value + 1);
-      else setWrong((value) => value + 1);
+      setDailyUsed((n) => n + 1);
+      markLocked(question.source, question.id, { selected, isCorrect });
       setResults((prev) => {
         const copy = [...prev];
         copy[index] = isCorrect ? "ok" : "err";
@@ -669,25 +528,21 @@ function QuestionTrainer() {
       setSaving(false);
     }
   };
-  const next = () => {
+  const goTo = (target: number) => {
+    if (target < 0 || target > questions.length) return;
     responseIdRef.current = crypto.randomUUID();
     setModal(null);
-    setSelected(null);
-    setStruck([]);
-    setAnswered(false);
-    setHelpUsed(false);
-    setStartedAt(Date.now());
-    setIndex((value) => value + 1);
+    setIndex(target);
   };
+  const next = () => goTo(index + 1);
   const restart = () => {
     responseIdRef.current = crypto.randomUUID();
     setIndex(0);
-    setCorrect(0);
-    setWrong(0);
     setResults([]);
     setSelected(null);
     setStruck([]);
     setAnswered(false);
+    setReviewingPast(false);
     setHelpUsed(false);
     setStartedAt(Date.now());
     setQuestions((items) => (orderMode === "random" ? shuffled(items) : [...items]));
@@ -783,6 +638,7 @@ function QuestionTrainer() {
   const parsed = parseQuestion(question.text);
   const hasOptions = parsed.options.length > 0;
   const explanation = splitExplanation(question.explanation);
+  const relatedMaterial = libraryByDiscipline.get(canonicalSubject(question.subject))?.[0] ?? null;
   const correctOption = parsed.options.find((option) => option.letter === question.answer);
   const certoErrado = !hasOptions && questionAnswers(question).join("") === "CE";
   const labelFor = (answer: Answer) =>
@@ -801,10 +657,43 @@ function QuestionTrainer() {
   };
   return (
     <div className="trainer-session-shell mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+      {routeFilters.reinforce === "1" && (
+        <div className="reinforce-banner">
+          <BookOpenCheck className="h-5 w-5 shrink-0" />
+          <div>
+            <p className="reinforce-banner-title">Exercícios para reforçar o aprendizado</p>
+            <p className="reinforce-banner-subtitle">
+              Questões de {question.subject} selecionadas a partir do material que você acabou de
+              estudar.
+            </p>
+          </div>
+        </div>
+      )}
+      {reachedDailyLimit && (
+        <div
+          role="status"
+          className="flex items-start gap-2 rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground"
+        >
+          <Lock className="mt-0.5 h-4 w-4 shrink-0" />
+          <span>
+            Você usou as {dailyLimit} questões de hoje do plano Gratuito. O limite renova amanhã —
+            ou{" "}
+            <Link to="/dashboard/subscriptions" className="font-semibold text-primary underline">
+              mude de plano
+            </Link>{" "}
+            para responder sem limite diário.
+          </span>
+        </div>
+      )}
       <header className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
-        <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
-          <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
-        </Button>
+        <div className="flex items-center gap-1.5">
+          <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
+            <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
+          </Button>
+          <Button variant="ghost" size="sm" disabled={index === 0} onClick={() => goTo(index - 1)}>
+            <ArrowLeft className="mr-1.5 h-4 w-4" /> Anterior
+          </Button>
+        </div>
         <div className="flex items-center gap-2">
           <Badge variant="secondary">
             <Flame className="mr-1 h-3.5 w-3.5 text-orange-500" /> Treinador
@@ -847,7 +736,16 @@ function QuestionTrainer() {
             >
               {DIFFICULTY_LABEL[question.difficulty]}
             </Badge>
+            <span className="ml-auto">
+              <ReportQuestionButton question={question} />
+            </span>
           </div>
+          {reviewingPast && (
+            <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-200">
+              <Lock className="h-3.5 w-3.5 shrink-0" /> Você já respondeu esta questão antes —
+              revisão apenas, sem reenvio.
+            </div>
+          )}
           <div className="mb-3 flex items-end justify-between gap-3">
             <div>
               <h2 className="font-display text-2xl font-extrabold leading-none text-white sm:text-3xl">
@@ -1011,26 +909,47 @@ function QuestionTrainer() {
             ))}
           </div>
           <div className="mt-4 flex flex-col-reverse gap-2 sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
-            <Button
-              variant="ghost"
-              className="text-amber-300 hover:text-amber-200"
-              disabled={answered || saving}
-              onClick={() => {
-                setHelpUsed(true);
-                setModal("help");
-              }}
-            >
-              <CircleHelp className="mr-2 h-4 w-4" /> Estou em dúvida
-            </Button>
-            <Button
-              size="lg"
-              disabled={!selected || answered || saving}
-              onClick={submit}
-              className="h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
-            >
-              Confirmar resposta <Check className="ml-2 h-4 w-4" />
-            </Button>
+            {!answered ? (
+              <>
+                <Button
+                  variant="ghost"
+                  className="text-amber-300 hover:text-amber-200"
+                  disabled={saving}
+                  onClick={() => {
+                    setHelpUsed(true);
+                    setModal("help");
+                  }}
+                >
+                  <CircleHelp className="mr-2 h-4 w-4" /> Estou em dúvida
+                </Button>
+                <Button
+                  size="lg"
+                  disabled={!selected || saving || reachedDailyLimit}
+                  onClick={submit}
+                  className="h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
+                >
+                  Confirmar resposta <Check className="ml-2 h-4 w-4" />
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button variant="outline" onClick={() => setModal("result")}>
+                  Ver comentário da questão
+                </Button>
+                <Button
+                  size="lg"
+                  onClick={next}
+                  className="h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
+                >
+                  {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </>
+            )}
           </div>
+          {answered && (
+            <QuestionSocialPanel questionId={question.id} questionSource={question.source} />
+          )}
         </CardContent>
       </Card>
       <Dialog open={modal !== null} onOpenChange={(open) => !open && setModal(null)}>
@@ -1150,6 +1069,19 @@ function QuestionTrainer() {
                       )}
                     </div>
                   </div>
+                )}
+                {relatedMaterial && (
+                  <Link
+                    to="/dashboard/library/$slug"
+                    params={{ slug: relatedMaterial.slug }}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-primary hover:underline"
+                  >
+                    <BookOpenCheck className="h-3.5 w-3.5" />
+                    Quer entender melhor esse assunto? Veja "{relatedMaterial.title}" na Biblioteca
+                    <ExternalLink className="h-3 w-3" />
+                  </Link>
                 )}
               </div>
               <DialogFooter>

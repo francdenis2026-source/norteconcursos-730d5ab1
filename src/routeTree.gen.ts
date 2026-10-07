@@ -22,9 +22,11 @@ import { Route as ApiSolveQuestionRouteImport } from './routes/api/solve-questio
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
+import { Route as DashboardAdminContestsRouteImport } from './routes/dashboard/admin-contests'
 import { Route as DashboardAdminFinanceRouteImport } from './routes/dashboard/admin-finance'
 import { Route as DashboardAdminMediaRouteImport } from './routes/dashboard/admin-media'
 import { Route as DashboardAdminMetricsRouteImport } from './routes/dashboard/admin-metrics'
+import { Route as DashboardAdminQuestionReportsRouteImport } from './routes/dashboard/admin-question-reports'
 import { Route as DashboardAdminQuestionsRouteImport } from './routes/dashboard/admin-questions'
 import { Route as DashboardAdminSignupsRouteImport } from './routes/dashboard/admin-signups'
 import { Route as DashboardAdminStudentsRouteImport } from './routes/dashboard/admin-students'
@@ -130,6 +132,11 @@ const DashboardAdminRoute = DashboardAdminRouteImport.update({
   path: '/admin',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardAdminContestsRoute = DashboardAdminContestsRouteImport.update({
+  id: '/admin-contests',
+  path: '/admin-contests',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardAdminFinanceRoute = DashboardAdminFinanceRouteImport.update({
   id: '/admin-finance',
   path: '/admin-finance',
@@ -145,6 +152,12 @@ const DashboardAdminMetricsRoute = DashboardAdminMetricsRouteImport.update({
   path: '/admin-metrics',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardAdminQuestionReportsRoute =
+  DashboardAdminQuestionReportsRouteImport.update({
+    id: '/admin-question-reports',
+    path: '/admin-question-reports',
+    getParentRoute: () => DashboardRoute,
+  } as any)
 const DashboardAdminQuestionsRoute = DashboardAdminQuestionsRouteImport.update({
   id: '/admin-questions',
   path: '/admin-questions',
@@ -356,9 +369,11 @@ export interface FileRoutesByFullPath {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
   '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-media': typeof DashboardAdminMediaRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
+  '/dashboard/admin-question-reports': typeof DashboardAdminQuestionReportsRoute
   '/dashboard/admin-questions': typeof DashboardAdminQuestionsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
@@ -412,9 +427,11 @@ export interface FileRoutesByTo {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
   '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-media': typeof DashboardAdminMediaRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
+  '/dashboard/admin-question-reports': typeof DashboardAdminQuestionReportsRoute
   '/dashboard/admin-questions': typeof DashboardAdminQuestionsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
@@ -468,9 +485,11 @@ export interface FileRoutesById {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
   '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-media': typeof DashboardAdminMediaRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
+  '/dashboard/admin-question-reports': typeof DashboardAdminQuestionReportsRoute
   '/dashboard/admin-questions': typeof DashboardAdminQuestionsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
@@ -527,9 +546,11 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-contests'
     | '/dashboard/admin-finance'
     | '/dashboard/admin-media'
     | '/dashboard/admin-metrics'
+    | '/dashboard/admin-question-reports'
     | '/dashboard/admin-questions'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
@@ -583,9 +604,11 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-contests'
     | '/dashboard/admin-finance'
     | '/dashboard/admin-media'
     | '/dashboard/admin-metrics'
+    | '/dashboard/admin-question-reports'
     | '/dashboard/admin-questions'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
@@ -638,9 +661,11 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-contests'
     | '/dashboard/admin-finance'
     | '/dashboard/admin-media'
     | '/dashboard/admin-metrics'
+    | '/dashboard/admin-question-reports'
     | '/dashboard/admin-questions'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
@@ -791,6 +816,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAdminRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/admin-contests': {
+      id: '/dashboard/admin-contests'
+      path: '/admin-contests'
+      fullPath: '/dashboard/admin-contests'
+      preLoaderRoute: typeof DashboardAdminContestsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/admin-finance': {
       id: '/dashboard/admin-finance'
       path: '/admin-finance'
@@ -810,6 +842,13 @@ declare module '@tanstack/react-router' {
       path: '/admin-metrics'
       fullPath: '/dashboard/admin-metrics'
       preLoaderRoute: typeof DashboardAdminMetricsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/admin-question-reports': {
+      id: '/dashboard/admin-question-reports'
+      path: '/admin-question-reports'
+      fullPath: '/dashboard/admin-question-reports'
+      preLoaderRoute: typeof DashboardAdminQuestionReportsRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/admin-questions': {
@@ -1117,9 +1156,11 @@ const DashboardLibraryRouteWithChildren =
 
 interface DashboardRouteChildren {
   DashboardAdminRoute: typeof DashboardAdminRoute
+  DashboardAdminContestsRoute: typeof DashboardAdminContestsRoute
   DashboardAdminFinanceRoute: typeof DashboardAdminFinanceRoute
   DashboardAdminMediaRoute: typeof DashboardAdminMediaRoute
   DashboardAdminMetricsRoute: typeof DashboardAdminMetricsRoute
+  DashboardAdminQuestionReportsRoute: typeof DashboardAdminQuestionReportsRoute
   DashboardAdminQuestionsRoute: typeof DashboardAdminQuestionsRoute
   DashboardAdminSignupsRoute: typeof DashboardAdminSignupsRoute
   DashboardAdminStudentsRoute: typeof DashboardAdminStudentsRoute
@@ -1159,9 +1200,11 @@ interface DashboardRouteChildren {
 
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminRoute: DashboardAdminRoute,
+  DashboardAdminContestsRoute: DashboardAdminContestsRoute,
   DashboardAdminFinanceRoute: DashboardAdminFinanceRoute,
   DashboardAdminMediaRoute: DashboardAdminMediaRoute,
   DashboardAdminMetricsRoute: DashboardAdminMetricsRoute,
+  DashboardAdminQuestionReportsRoute: DashboardAdminQuestionReportsRoute,
   DashboardAdminQuestionsRoute: DashboardAdminQuestionsRoute,
   DashboardAdminSignupsRoute: DashboardAdminSignupsRoute,
   DashboardAdminStudentsRoute: DashboardAdminStudentsRoute,

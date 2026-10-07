@@ -5,11 +5,17 @@
 
 export type Answer = "A" | "B" | "C" | "D" | "E";
 export type Source = "official" | "curated" | "personal";
+// Tabela física de origem. "source" agrupa official_exam_questions e
+// board_exam_questions sob "official" pro Treinador; quando uma ação precisa
+// saber a tabela exata (corrigir a questão na fonte, por exemplo), use "table".
+export type QuestionTable =
+  "official_exam_questions" | "curated_question_catalog" | "question_bank" | "board_exam_questions";
 export type Difficulty = "fácil" | "média" | "difícil";
 export type LegalBasis = { title?: string; lei?: string; artigo?: string; url?: string };
 export type Question = {
   id: string;
   source: Source;
+  table?: QuestionTable;
   contest: string;
   year: string;
   career: string;
