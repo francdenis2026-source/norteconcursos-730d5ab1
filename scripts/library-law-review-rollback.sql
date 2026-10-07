@@ -38,4 +38,3 @@ begin
  if (select to_jsonb(m) from public.study_materials m where id=first_row.id)<>before_row then raise exception 'Rollback failed'; end if;
  raise notice 'PASS: publication privileges, atomic preflight, idempotence and preserved learning records';
 end $test$;
-
