@@ -7546,6 +7546,9 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .worked-ledger-row:last-child { border-bottom: none; }
 .worked-ledger-balance { padding: .625rem .875rem; font-size: .8125rem; background: color-mix(in oklab, var(--primary) 10%, var(--card)); border-top: 1px solid var(--border); }
 .worked-ledger-balance--unusual { background: color-mix(in oklab, oklch(0.65 0.2 25) 14%, var(--card)); color: oklch(0.45 0.18 25); }
+.reinforce-banner { display: flex; align-items: center; gap: .75rem; padding: .75rem 1rem; border-radius: 1rem; background: linear-gradient(120deg, color-mix(in oklab, var(--primary) 16%, var(--card)), color-mix(in oklab, var(--primary) 6%, var(--card))); border: 1px solid color-mix(in oklab, var(--primary) 30%, var(--border)); color: var(--primary); }
+.reinforce-banner-title { margin: 0; font-size: .875rem; font-weight: 700; color: var(--foreground); }
+.reinforce-banner-subtitle { margin: .125rem 0 0; font-size: .75rem; color: var(--muted-foreground); }
 .worked-matrix { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; max-width: 280px; margin: 0 auto; }
 .worked-matrix-cell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: .75rem; background: var(--card); font-size: 1.75rem; }
 .worked-matrix-cell--blank { border: 2px dashed color-mix(in oklab, var(--primary) 60%, var(--border)); background: color-mix(in oklab, var(--primary) 8%, var(--card)); font-weight: 700; color: var(--primary); }

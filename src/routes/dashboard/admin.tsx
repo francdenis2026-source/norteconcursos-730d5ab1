@@ -43,6 +43,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { PageHero } from "@/components/dashboard/PageHero";
 import { LibraryAdmin } from "@/components/library/LibraryAdmin";
+import { EnrichmentAdmin } from "@/components/library/EnrichmentAdmin";
 import { Download } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { confirmDialog } from "@/lib/confirm";
@@ -683,7 +684,18 @@ function AdminPanel() {
         </TabsContent>
 
         <TabsContent value="library" className="mt-6">
-          <LibraryAdmin />
+          <Tabs defaultValue="materials">
+            <TabsList>
+              <TabsTrigger value="materials">Materiais</TabsTrigger>
+              <TabsTrigger value="enrichments">Exemplos e ilustrações</TabsTrigger>
+            </TabsList>
+            <TabsContent value="materials" className="mt-4">
+              <LibraryAdmin />
+            </TabsContent>
+            <TabsContent value="enrichments" className="mt-4">
+              <EnrichmentAdmin />
+            </TabsContent>
+          </Tabs>
         </TabsContent>
 
         <TabsContent value="syllabus" className="mt-6 space-y-4">
