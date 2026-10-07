@@ -3,7 +3,7 @@
 // verdade do Treinador — nada de mock). O aluno não responde de novo aqui;
 // ele revisa e marca o progresso (pendente/revisado/dominado) pra focar no
 // que ainda precisa estudar.
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -18,12 +18,15 @@ import {
 } from "@/components/ui/dialog";
 import {
   AlertCircle,
+  BookOpenCheck,
   Check,
+  ExternalLink,
   History,
   Filter,
   Loader2,
   Play,
   Sparkles,
+  Target,
   XCircle,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -33,7 +36,10 @@ import { useLockedAnswers } from "@/hooks/useLockedAnswers";
 import {
   DIFFICULTY_LABEL,
   DIFFICULTY_STYLE,
+  basisHref,
+  formatDate,
   parseQuestion,
+  splitExplanation,
   type Question,
 } from "@/lib/questionFormat";
 import { PageHero, LockedState } from "@/components/dashboard/PageHero";
@@ -46,6 +52,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
+import { canonicalSubject } from "@/lib/subjects";
+import { type StudyMaterialSummary, useStudyMaterialList } from "@/lib/studyMaterials";
+import { WorkedExamples } from "@/components/library/WorkedExamples";
+import { LibraryVideos } from "@/components/library/LibraryVideos";
+import { useMediaCatalog } from "@/lib/mediaStore";
+import { relatedVideos } from "@/lib/relatedVideos";
 
 export const Route = createFileRoute("/dashboard/errors")({
   component: ErrorsPage,
@@ -68,12 +80,127 @@ const STATUS_STYLE: Record<ReviewStatus, string> = {
     "border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300",
 };
 
+/**
+ * Tudo que o aluno precisa pra reforçar o que errou: explicação, exemplo do dia a dia,
+ * fontes oficiais, material da Biblioteca com exemplos/ilustrações e vídeo-aulas, e um
+ * atalho para praticar mais questões do mesmo assunto.
+ */
+function ErrorArsenal({
+  question,
+  relatedMaterial,
+  videos,
+}: {
+  question: Question;
+  relatedMaterial: StudyMaterialSummary | null;
+  videos: ReturnType<typeof relatedVideos>;
+}) {
+  const explanation = question.explanation ? splitExplanation(question.explanation) : null;
+  return (
+    <div className="space-y-4">
+      {explanation?.main && (
+        <div className="rounded-xl border bg-muted/30 p-4">
+          <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
+            Comentário da questão
+          </p>
+          <p className="text-sm leading-6">{explanation.main}</p>
+        </div>
+      )}
+      {explanation?.example && (
+        <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 dark:bg-amber-950/30">
+          <p className="mb-1 text-xs font-black uppercase tracking-wider text-amber-700">
+            Exemplo do dia a dia
+          </p>
+          <p className="text-sm leading-6">{explanation.example}</p>
+        </div>
+      )}
+      {question.checkedAt && question.legalBasis.length > 0 && (
+        <p className="text-xs text-muted-foreground">
+          Vigência conferida na fonte oficial em {formatDate(question.checkedAt)}.
+        </p>
+      )}
+      {question.legalBasis.length > 0 && (
+        <div>
+          <p className="mb-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
+            Fontes oficiais vinculadas
+          </p>
+          <div className="space-y-2">
+            {question.legalBasis.map((basis, basisIndex) =>
+              basis.url ? (
+                <a
+                  key={`${basis.url}-${basisIndex}`}
+                  href={basisHref(basis)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block rounded-lg border p-3 text-sm font-medium text-primary hover:bg-muted"
+                >
+                  {basis.title || basis.lei || "Fonte oficial"}
+                  {basis.artigo ? ` · ${basis.artigo}` : ""}
+                </a>
+              ) : (
+                <div key={basisIndex} className="rounded-lg border p-3 text-sm">
+                  {basis.title || basis.lei || "Fonte oficial"}
+                </div>
+              ),
+            )}
+          </div>
+        </div>
+      )}
+      {relatedMaterial && (
+        <div className="space-y-3 rounded-xl border p-4">
+          <Link
+            to="/dashboard/library/$slug"
+            params={{ slug: relatedMaterial.slug }}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+          >
+            <BookOpenCheck className="h-4 w-4" />
+            Reforçar com "{relatedMaterial.title}" na Biblioteca
+            <ExternalLink className="h-3 w-3" />
+          </Link>
+          <details>
+            <summary className="cursor-pointer text-xs font-semibold text-muted-foreground hover:text-primary">
+              Ver exemplos, ilustrações e vídeo-aulas aqui mesmo
+            </summary>
+            <div className="mt-3 space-y-3">
+              <WorkedExamples slug={relatedMaterial.slug} enabled />
+              {videos.length > 0 && <LibraryVideos videos={videos} />}
+            </div>
+          </details>
+        </div>
+      )}
+      <Button asChild variant="outline" className="w-full gap-2">
+        <Link
+          to="/dashboard/question-trainer"
+          search={{ subject: question.subject, go: "1", reinforce: "1" }}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Target className="h-4 w-4" /> Praticar mais questões de {question.subject}
+        </Link>
+      </Button>
+    </div>
+  );
+}
+
 function ErrorsPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
   const userId = real ? user?.id : undefined;
   const { catalog, loading: catalogLoading } = useQuestionCatalog(userId, real);
   const { locked, loading: lockedLoading } = useLockedAnswers(userId, real);
+  const { data: libraryMaterials } = useStudyMaterialList(real);
+  const { catalog: mediaCatalog } = useMediaCatalog();
+  const libraryByDiscipline = useMemo(() => {
+    const map = new Map<string, StudyMaterialSummary[]>();
+    for (const item of libraryMaterials ?? []) {
+      const key = canonicalSubject(item.discipline);
+      const list = map.get(key) ?? [];
+      list.push(item);
+      map.set(key, list);
+    }
+    return map;
+  }, [libraryMaterials]);
 
   const [reviewStatus, setReviewStatus] = useState<Record<string, ReviewStatus>>({});
   const [statusLoading, setStatusLoading] = useState(true);
@@ -191,6 +318,15 @@ function ErrorsPage() {
     const { question } = reviewQueue[revisionIndex];
     const parsed = parseQuestion(question.text);
     const correctOption = parsed.options.find((o) => o.letter === question.answer);
+    const relatedMaterial =
+      libraryByDiscipline.get(canonicalSubject(question.subject))?.[0] ?? null;
+    const videos = relatedMaterial
+      ? relatedVideos(
+          mediaCatalog,
+          question.subject,
+          relatedMaterial.topic_label ?? relatedMaterial.title,
+        )
+      : [];
     return (
       <div className="mx-auto max-w-2xl space-y-6">
         <div className="flex items-center justify-between">
@@ -221,14 +357,7 @@ function ErrorsPage() {
               <p className="text-sm font-bold">{question.answer}</p>
               {correctOption && <p className="mt-1 text-sm leading-6">{correctOption.text}</p>}
             </div>
-            {question.explanation && (
-              <div className="rounded-xl border bg-muted/30 p-4">
-                <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
-                  Comentário da questão
-                </p>
-                <p className="text-sm leading-6">{question.explanation}</p>
-              </div>
-            )}
+            <ErrorArsenal question={question} relatedMaterial={relatedMaterial} videos={videos} />
             <div className="grid grid-cols-1 gap-2 pt-2">
               <Button
                 variant="outline"
@@ -385,49 +514,61 @@ function ErrorsPage() {
 
       <Dialog open={!!detail} onOpenChange={(open) => !open && setDetail(null)}>
         <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto">
-          {detail && (
-            <>
-              <DialogHeader>
-                <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-100 text-rose-700 sm:mx-0">
-                  <XCircle />
-                </div>
-                <DialogTitle>Revisão da questão</DialogTitle>
-                <DialogDescription>
-                  Esta questão já foi respondida; a resposta não pode ser enviada de novo.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="space-y-4">
-                <p className="whitespace-pre-line text-sm leading-6">
-                  {parseQuestion(detail.text).stem}
-                </p>
-                <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
-                  <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
-                    Resposta correta
-                  </p>
-                  <p className="text-sm font-bold">{detail.answer}</p>
-                  {parseQuestion(detail.text).options.find((o) => o.letter === detail.answer) && (
-                    <p className="mt-1 text-sm leading-6">
-                      {
-                        parseQuestion(detail.text).options.find((o) => o.letter === detail.answer)
-                          ?.text
-                      }
+          {detail &&
+            (() => {
+              const detailRelatedMaterial =
+                libraryByDiscipline.get(canonicalSubject(detail.subject))?.[0] ?? null;
+              const detailVideos = detailRelatedMaterial
+                ? relatedVideos(
+                    mediaCatalog,
+                    detail.subject,
+                    detailRelatedMaterial.topic_label ?? detailRelatedMaterial.title,
+                  )
+                : [];
+              return (
+                <>
+                  <DialogHeader>
+                    <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-100 text-rose-700 sm:mx-0">
+                      <XCircle />
+                    </div>
+                    <DialogTitle>Revisão da questão</DialogTitle>
+                    <DialogDescription>
+                      Esta questão já foi respondida; a resposta não pode ser enviada de novo.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="space-y-4">
+                    <p className="whitespace-pre-line text-sm leading-6">
+                      {parseQuestion(detail.text).stem}
                     </p>
-                  )}
-                </div>
-                {detail.explanation && (
-                  <div className="rounded-xl border bg-muted/30 p-4">
-                    <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
-                      Comentário da questão
-                    </p>
-                    <p className="text-sm leading-6">{detail.explanation}</p>
+                    <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
+                      <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
+                        Resposta correta
+                      </p>
+                      <p className="text-sm font-bold">{detail.answer}</p>
+                      {parseQuestion(detail.text).options.find(
+                        (o) => o.letter === detail.answer,
+                      ) && (
+                        <p className="mt-1 text-sm leading-6">
+                          {
+                            parseQuestion(detail.text).options.find(
+                              (o) => o.letter === detail.answer,
+                            )?.text
+                          }
+                        </p>
+                      )}
+                    </div>
+                    <ErrorArsenal
+                      question={detail}
+                      relatedMaterial={detailRelatedMaterial}
+                      videos={detailVideos}
+                    />
                   </div>
-                )}
-              </div>
-              <DialogFooter>
-                <Button onClick={() => setDetail(null)}>Fechar</Button>
-              </DialogFooter>
-            </>
-          )}
+                  <DialogFooter>
+                    <Button onClick={() => setDetail(null)}>Fechar</Button>
+                  </DialogFooter>
+                </>
+              );
+            })()}
         </DialogContent>
       </Dialog>
     </div>
