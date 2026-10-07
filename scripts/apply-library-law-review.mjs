@@ -7,7 +7,7 @@ export function validateLawReview(packageData) {
  const checkReview=review=>{
   if(!review?.scope||!Array.isArray(review.sources)||!review.sources.length||!Array.isArray(review.changes)||!Array.isArray(review.corrections)||!Number.isFinite(Date.parse(review.checked_at))||Date.parse(review.checked_at)>Date.now()+300000)throw Error('Conferência incompleta');
   for(const source of review.sources){checkUrl(source.url);if(!source.title||(source.sha256&&!/^[a-f0-9]{64}$/.test(source.sha256)))throw Error('Evidência inválida');}
-  for(const change of review.changes){checkUrl(change.url);if(!change.title||!change.summary||!change.vigency||!['effective','future','reference'].includes(change.state)||!Array.isArray(change.articles))throw Error('Vigência não revisada');}
+  for(const change of review.changes){checkUrl(change.url);if(!change.title||!change.summary||!change.vigency||!['effective','future','reference','expired'].includes(change.state)||!Array.isArray(change.articles))throw Error('Vigência não revisada');}
  };
  if(!packageData.version||!Array.isArray(packageData.materials)||!packageData.materials.length||!Array.isArray(packageData.courses)||!Array.isArray(packageData.enrichments))throw Error('Pacote incompleto');
  const slugs=new Set();

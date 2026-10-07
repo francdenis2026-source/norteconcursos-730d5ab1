@@ -1,15 +1,21 @@
 import { Fragment, type ReactNode } from "react";
+import { isStudySourceUrl } from "@/lib/studySourceUrl";
+
+export function studyMarkdownHref(value: string): string | null {
+  if (/^\/dashboard\/(?:library|legal-course)\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)) return value;
+  return isStudySourceUrl(value) ? value : null;
+}
 
 /**
  * Minimal, safe Markdown renderer for study materials.
  * Supports: ## / ### headings, paragraphs, bullet and numbered lists (one nested level),
- * pipe tables, blockquotes (callouts), **bold**, *italic* and `code`.
+ * pipe tables, blockquotes (callouts), safe study links, **bold**, *italic* and `code`.
  * It builds React nodes directly, so no HTML is ever injected.
  */
 
 function inline(text: string, keyPrefix: string): ReactNode[] {
   const out: ReactNode[] = [];
-  const pattern = /(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`)/g;
+  const pattern = /(\[[^\]\n]+\]\([^\s)]+\)|\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`)/g;
   let last = 0;
   let index = 0;
   for (const match of text.matchAll(pattern)) {
@@ -17,7 +23,11 @@ function inline(text: string, keyPrefix: string): ReactNode[] {
     if (start > last) out.push(text.slice(last, start));
     const token = match[0];
     const key = `${keyPrefix}-${index++}`;
-    if (token.startsWith("**")) out.push(<strong key={key}>{token.slice(2, -2)}</strong>);
+    if (token.startsWith("[")) {
+      const separator = token.indexOf("](");
+      const href = studyMarkdownHref(token.slice(separator + 2, -1));
+      out.push(href ? <a key={key} href={href} className="cursor-pointer underline" {...(href.startsWith("https:") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{token.slice(1, separator)}</a> : token);
+    } else if (token.startsWith("**")) out.push(<strong key={key}>{token.slice(2, -2)}</strong>);
     else if (token.startsWith("`")) out.push(<code key={key}>{token.slice(1, -1)}</code>);
     else out.push(<em key={key}>{token.slice(1, -1)}</em>);
     last = start + token.length;

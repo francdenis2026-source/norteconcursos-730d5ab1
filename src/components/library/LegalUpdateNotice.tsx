@@ -10,7 +10,7 @@ export type LegalReview = {
   sources: { title: string; url: string; sha256?: string }[];
   changes: {
     title: string; url: string; articles: string[]; summary: string;
-    vigency: string; state: "effective" | "future" | "reference";
+    vigency: string; state: "effective" | "future" | "reference" | "expired";
   }[];
 };
 
@@ -24,7 +24,7 @@ export function LegalUpdateNotice({ review }: { review?: LegalReview | null | un
       <summary className="cursor-pointer font-medium"><History className="mr-2 inline h-4 w-4" /> Mudanças recentes e vigência ({review.changes.length})</summary>
       <ul className="mt-4 space-y-5">
         {review.changes.map((change, index) => <li key={`${change.url}-${index}`} className="border-l-2 border-primary pl-3 text-sm">
-          <p className="font-semibold">{change.title} · {change.state === "future" ? "Vigência futura" : change.state === "effective" ? "Em vigor na conferência" : "Referência a conferir no caso concreto"}</p>
+          <p className="font-semibold">{change.title} · {change.state === "expired" ? "Vigência encerrada" : change.state === "future" ? "Vigência futura" : change.state === "effective" ? "Em vigor na conferência" : "Referência a conferir no caso concreto"}</p>
           <p className="mt-1">{change.summary}</p>
           {!!change.articles.length && <p className="mt-1 text-muted-foreground">Dispositivos: {change.articles.join(", ")}</p>}
           <p className="mt-1">{change.vigency}</p>

@@ -7,6 +7,7 @@ for (const row of rows) {
   const url = new URL(row.url);
   if (url.protocol !== 'https:' || url.username || url.password || !['www.planalto.gov.br', 'cdn.cebraspe.org.br', 'portal.stf.jus.br', 'noticias.stf.jus.br', 'stf.jus.br', 'www.stf.jus.br', 'www.stj.jus.br', 'scon.stj.jus.br', 'processo.stj.jus.br'].includes(url.hostname) || seen.has(row.url)) throw new Error('Fonte não oficial ou duplicada');
   seen.add(row.url);
+  if (row.status && !['vigente', 'parcialmente_revogado', 'revogado', 'substituido', 'em_revisao'].includes(row.status)) throw new Error('Status de fonte incompatível com o banco');
   if (!row.title || !row.issuer || row.is_official !== true || !Number.isFinite(Date.parse(row.checked_at)) || !['lei', 'decreto', 'edital', 'jurisprudencia'].includes(row.source_type)) throw new Error('Metadados inválidos');
 }
 const result = { validated: rows.length, inserted: 0, preserved: 0, dry_run: mode === '--dry-run' };

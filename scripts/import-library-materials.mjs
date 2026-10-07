@@ -13,7 +13,11 @@ for (const row of records) {
     if (typeof row[key] !== 'string' || !row[key].trim()) throw new Error(`Campo ausente: ${key}`);
   }
   if (!Number.isInteger(row.syllabus_topic_order) || !Number.isFinite(Date.parse(row.law_version_checked_at))) throw new Error('Classificação ou data inválida');
-  if (row.quiz?.length !== 8 || row.flashcards?.length !== 4) throw new Error('Prática incompleta');
+  // Complementary reading is not an active question set for the associated edital.
+  if (row._supplemental_scope) {
+    if (typeof row._supplemental_scope !== 'string' || !row.source_note.includes(row._supplemental_scope) || row.quiz?.length !== 0) throw new Error('Leitura complementar não pode publicar questões sem cobertura de edital');
+  } else if (row.quiz?.length !== 8) throw new Error('Prática incompleta');
+  if (row.flashcards?.length !== 4) throw new Error('Prática incompleta');
   if (row.quiz.some(q => typeof q.a !== 'boolean' || !q.q || !q.why)) throw new Error('Questão inválida');
   if (row.flashcards.some(c => !c.f || !c.b)) throw new Error('Cartão inválido');
   if (row.legal_basis.some(s => !s.title || !/^https:\/\//.test(s.url))) throw new Error('Fonte inválida');
@@ -40,7 +44,7 @@ if (!result.dry_run) {
   const present = new Set(existing.map(r => r.slug));
   for (const row of records) {
     if (present.has(row.slug)) { result.preserved++; continue; }
-    const { _syllabus_topic_id, _syllabus_edition_id, ...material } = row;
+    const { _syllabus_topic_id, _syllabus_edition_id, _supplemental_scope, ...material } = row;
     const inserted = await request('/study_materials?on_conflict=slug', {
       method: 'POST', headers: { Prefer: 'resolution=ignore-duplicates,return=representation' },
       body: JSON.stringify({ ...material, content_status: 'active', reviewed_by: reviewer, reviewed_at: new Date().toISOString() }),
