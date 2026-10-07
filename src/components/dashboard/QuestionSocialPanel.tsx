@@ -2,11 +2,13 @@
 // estatística profissional de quantos acertaram/erraram em % e os
 // comentários de outros alunos logados, com campo pra ele comentar também.
 import * as React from "react";
-import { BarChart3, Loader2, MessageSquare, Send } from "lucide-react";
+import { BarChart3, ChevronDown, ChevronUp, Loader2, MessageSquare, Send } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+
+const COMMENTS_PAGE_SIZE = 5;
 
 type Stats = { total: number; correct: number; wrong: number; accuracy: number };
 type Comment = {
@@ -29,6 +31,13 @@ export function QuestionSocialPanel({
   const [loading, setLoading] = React.useState(true);
   const [draft, setDraft] = React.useState("");
   const [sending, setSending] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+  const [visibleCount, setVisibleCount] = React.useState(COMMENTS_PAGE_SIZE);
+  // A RPC traz do mais antigo pro mais novo; aqui exibimos do mais novo pro
+  // mais antigo e revelamos só um punhado por vez, pra questão com muito
+  // comentário não deixar a tela enorme.
+  const newestFirst = React.useMemo(() => [...comments].reverse(), [comments]);
+  const shownComments = newestFirst.slice(0, visibleCount);
 
   const load = React.useCallback(async () => {
     const [statsRes, commentsRes] = await Promise.all([
@@ -50,6 +59,8 @@ export function QuestionSocialPanel({
 
   React.useEffect(() => {
     setLoading(true);
+    setOpen(false);
+    setVisibleCount(COMMENTS_PAGE_SIZE);
     void load();
   }, [load]);
 
@@ -107,33 +118,58 @@ export function QuestionSocialPanel({
         </div>
       )}
 
-      <div className="flex items-center gap-2 pt-1">
-        <MessageSquare className="h-4 w-4 text-primary" />
-        <p className="text-xs font-black uppercase tracking-wider text-muted-foreground">
-          Comentários de quem já estudou esta questão
-        </p>
-      </div>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="flex w-full items-center justify-between gap-2 pt-1 text-left"
+        aria-expanded={open}
+      >
+        <span className="flex items-center gap-2">
+          <MessageSquare className="h-4 w-4 text-primary" />
+          <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
+            Comentários de quem já estudou esta questão
+            {!loading && comments.length > 0 ? ` (${comments.length})` : ""}
+          </span>
+        </span>
+        {open ? (
+          <ChevronUp className="h-4 w-4 text-muted-foreground" />
+        ) : (
+          <ChevronDown className="h-4 w-4 text-muted-foreground" />
+        )}
+      </button>
       {!loading && comments.length === 0 && (
         <p className="text-sm text-muted-foreground">Seja o primeiro a comentar.</p>
       )}
-      <div className="max-h-64 space-y-2 overflow-y-auto">
-        {comments.map((comment) => (
-          <div
-            key={comment.id}
-            className={
-              comment.is_me
-                ? "rounded-lg border border-primary/30 bg-primary/5 p-2.5 text-sm"
-                : "rounded-lg border bg-background p-2.5 text-sm"
-            }
-          >
-            <p className="mb-1 text-[11px] font-bold text-muted-foreground">
-              {comment.display_name}
-              {comment.is_me ? " (você)" : ""}
-            </p>
-            <p className="whitespace-pre-line leading-5">{comment.body}</p>
-          </div>
-        ))}
-      </div>
+      {open && comments.length > 0 && (
+        <div className="space-y-2">
+          {shownComments.map((comment) => (
+            <div
+              key={comment.id}
+              className={
+                comment.is_me
+                  ? "rounded-lg border border-primary/30 bg-primary/5 p-2.5 text-sm"
+                  : "rounded-lg border bg-background p-2.5 text-sm"
+              }
+            >
+              <p className="mb-1 text-[11px] font-bold text-muted-foreground">
+                {comment.display_name}
+                {comment.is_me ? " (você)" : ""}
+              </p>
+              <p className="whitespace-pre-line leading-5">{comment.body}</p>
+            </div>
+          ))}
+          {visibleCount < newestFirst.length && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="w-full"
+              onClick={() => setVisibleCount((v) => v + COMMENTS_PAGE_SIZE)}
+            >
+              Ver mais comentários ({newestFirst.length - visibleCount} restantes)
+            </Button>
+          )}
+        </div>
+      )}
       <div className="flex gap-2">
         <Textarea
           value={draft}
