@@ -18,7 +18,7 @@ export type StudyEnrichment = {
   checked_at: string;
   content: {
     illustrations: {
-      kind: "truth" | "venn" | "probability" | "flow" | "ledger";
+      kind: "truth" | "venn" | "probability" | "flow" | "ledger" | "matrix";
       title: string;
       caption: string;
       nodes?: string[];
@@ -26,6 +26,8 @@ export type StudyEnrichment = {
       nature?: "devedora" | "credora";
       debits?: LedgerEntry[];
       credits?: LedgerEntry[];
+      cells?: string[];
+      answer?: string;
     }[];
     cases: WorkedCase[];
   };
