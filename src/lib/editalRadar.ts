@@ -71,6 +71,24 @@ export interface DisciplineStat {
 
 export type TopicTier = "alta" | "media" | "baixa" | "nunca" | "amostra";
 
+// Rótulo e estilo de cada faixa de probabilidade — compartilhados entre o Raio-X dos editais e o
+// Panorama das provas, para que o mesmo tópico apareça com a mesma cor e o mesmo texto nas duas áreas.
+export const TIER_LABEL: Record<TopicTier, string> = {
+  alta: "Quase sempre cai",
+  media: "Cai com frequência",
+  baixa: "Cai de vez em quando",
+  nunca: "Nunca caiu",
+  amostra: "Poucos dados",
+};
+
+export const TIER_STYLE: Record<TopicTier, string> = {
+  alta: "bg-rose-100 text-rose-800 dark:bg-rose-950/40 dark:text-rose-200",
+  media: "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200",
+  baixa: "bg-sky-100 text-sky-800 dark:bg-sky-950/40 dark:text-sky-200",
+  nunca: "bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-200",
+  amostra: "bg-slate-100 text-slate-500 dark:bg-slate-900 dark:text-slate-400",
+};
+
 export interface TopicStat {
   key: string;
   discipline: string;
