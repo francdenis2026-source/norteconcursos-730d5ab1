@@ -28,3 +28,18 @@ export function canonicalBoard(raw: string | null | undefined): string {
   const b = (raw ?? "").trim().replace(/\s+/g, " ").toUpperCase();
   return /^CESPE\b|^CEBRASPE\b/.test(b) ? "CEBRASPE" : b;
 }
+
+// Igual a canonicalSubject, mas para career_name (cargo): algumas importações antigas gravaram o
+// nome da INSTITUIÇÃO em career_name em vez do nome do cargo (ex.: um conserto pontual para a PRF
+// trocou "Policial Rodoviário Federal" por "Polícia Rodoviária Federal" para bater com outra tela,
+// e uma reimportação posterior trouxe de volta o nome do cargo original) — sem isso, o mesmo cargo
+// aparece duas vezes em filtros. A lista cresce conforme outros pares forem encontrados.
+const CAREER_NAME_ALIASES: Record<string, string> = {
+  "polícia rodoviária federal": "Policial Rodoviário Federal",
+};
+
+export function canonicalCareerName(raw: string | null | undefined): string {
+  const text = (raw ?? "").trim();
+  if (!text) return text;
+  return CAREER_NAME_ALIASES[strip(text)] ?? text;
+}
