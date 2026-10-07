@@ -29,9 +29,9 @@ export function canonicalBoard(raw: string | null | undefined): string {
   return /^CESPE\b|^CEBRASPE\b/.test(b) ? "CEBRASPE" : b;
 }
 
-// Igual a canonicalSubject, mas para career_name (cargo). Dois padrões já identificados no
-// histórico de importações, ambos reunidos aqui como o mesmo cargo (nunca estados/editais
-// diferentes — ver nota em exam-panorama.tsx sobre o que NÃO é unificado):
+// Igual a canonicalSubject, mas para career_name (cargo). Padrões já identificados no histórico
+// de importações, todos reunidos aqui como o mesmo cargo (nunca estados/editais diferentes com
+// cargos de fato diferentes — ver nota em exam-panorama.tsx sobre o que NÃO é unificado):
 // 1) O nome da INSTITUIÇÃO foi gravado em career_name em vez do nome do cargo (um conserto pontual
 //    trocou career_name pelo nome do órgão para bater com outra tela — migration
 //    20260927000000_fix_career_name_join_mismatch.sql, para PRF, PC-AC e PP-AC — e uma
@@ -39,6 +39,11 @@ export function canonicalBoard(raw: string | null | undefined): string {
 //    coexistindo).
 // 2) O mesmo cargo, do mesmo órgão/estado, foi escrito por extenso de formas diferentes em
 //    importações de anos diferentes (ex.: TPAG de Minas Gerais, 2025 e 2026).
+// 3) O mesmo cargo (Delegado de Polícia Civil) é nomeado de forma diferente por banca/estado:
+//    "Delegado de Polícia" (SC, DF, RO, ES), "Delegado de Polícia Civil" (PI, CE) e "Delegado de
+//    Polícia Substituto" (MG, nome do cargo durante o estágio probatório) são o mesmo cargo —
+//    confirmado pelo usuário em 2026-10-07. O mesmo padrão vale para "Oficial Investigador" (PI)
+//    e "Oficial Investigador de Polícia" (CE).
 // A lista cresce conforme outros pares forem encontrados.
 // Chaves já passadas por strip() (sem acento, minúsculas) — strip() não remove parênteses.
 const CAREER_NAME_ALIASES: Record<string, string> = {
@@ -47,6 +52,9 @@ const CAREER_NAME_ALIASES: Record<string, string> = {
   "policia penal do acre": "Agente de Polícia Penal",
   "tecnico assistente da policia civil e de atividades governamentais (tpag) auxiliar de pericia":
     "Técnico-Assistente – Auxiliar de Perícia (TPAG)",
+  "delegado de policia civil": "Delegado de Polícia",
+  "delegado de policia substituto": "Delegado de Polícia",
+  "oficial investigador de policia": "Oficial Investigador",
 };
 
 export function canonicalCareerName(raw: string | null | undefined): string {

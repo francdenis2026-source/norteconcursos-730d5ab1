@@ -283,10 +283,11 @@ function ExamPanoramaPage() {
           {roles.length > 2 && (
             <div className="space-y-1.5">
               {/* career_name já vem normalizado por canonicalCareerName() (src/lib/subjects.ts),
-                  que só junta grafias diferentes do MESMO cargo (ex.: nome da instituição gravado
-                  por engano no lugar do cargo). Cargos com o mesmo nome em estados/editais
-                  diferentes (ex.: "Delegado de Polícia" em mais de um estado) continuam cada um
-                  com seu próprio pill de propósito — são concursos reais diferentes. */}
+                  que junta grafias diferentes do MESMO cargo entre estados/bancas (ex.: nome da
+                  instituição gravado por engano no lugar do cargo; "Delegado de Polícia" x
+                  "Delegado de Polícia Civil" x "Delegado de Polícia Substituto"; "Oficial
+                  Investigador" x "Oficial Investigador de Polícia"). Cargos com nomes parecidos
+                  mas que são funções realmente distintas continuam separados. */}
               <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
                 Cargo
               </p>
