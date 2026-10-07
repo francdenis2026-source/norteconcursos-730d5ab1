@@ -1,6 +1,14 @@
 import React from "react";
-import { createFileRoute } from "@tanstack/react-router";
-import { AlertTriangle, ArrowDown, ArrowUp, Equal, Loader2, Radar } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  AlertTriangle,
+  ArrowDown,
+  ArrowUp,
+  ChevronDown,
+  Equal,
+  Loader2,
+  Radar,
+} from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -232,12 +240,18 @@ function EditalRadarPage() {
               <CardDescription>
                 Participação média no total de questões, com peso maior para as provas mais
                 recentes. “Esperadas” é quanto a disciplina valeria numa prova de ~
-                {result.averageExamSize} questões.
+                {result.averageExamSize} questões. Clique numa disciplina para ver os assuntos com
+                mais chance de cair, do mais provável ao menos provável.
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-3">
               {result.disciplines.slice(0, 20).map((d) => (
-                <DisciplineRow key={d.subject} stat={d} totalExams={result.exams.length} />
+                <DisciplineRow
+                  key={d.subject}
+                  stat={d}
+                  totalExams={result.exams.length}
+                  topics={result.topics.filter((t) => t.discipline === d.subject)}
+                />
               ))}
             </CardContent>
           </Card>
@@ -246,9 +260,9 @@ function EditalRadarPage() {
             <CardHeader>
               <CardTitle className="text-lg">Radar de previsibilidade</CardTitle>
               <CardDescription>
-                Tópicos do edital que mais se repetem nas provas. A frequência considera só as
-                provas em que o tópico estava no edital e dá mais peso às recentes. Tópicos com
-                menos de 2 provas ficam como “poucos dados”.
+                Os tópicos de todas as disciplinas que mais se repetem nas provas, juntos num só
+                lugar. A frequência considera só as provas em que o tópico estava no edital e dá
+                mais peso às recentes. Tópicos com menos de 2 provas ficam como “poucos dados”.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -265,19 +279,6 @@ function EditalRadarPage() {
                   cadastrado).
                 </p>
               )}
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">O que a banca cobra e o que não cobra</CardTitle>
-              <CardDescription>
-                Por disciplina: tópicos que caem sempre, tópicos que já caíram e tópicos do edital
-                que nunca apareceram nas provas analisadas.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-2">
-              <CoveragePanels topics={result.topics} disciplines={result.disciplines} />
             </CardContent>
           </Card>
 
@@ -393,7 +394,16 @@ function Summary({
   );
 }
 
-function DisciplineRow({ stat, totalExams }: { stat: DisciplineStat; totalExams: number }) {
+function DisciplineRow({
+  stat,
+  totalExams,
+  topics,
+}: {
+  stat: DisciplineStat;
+  totalExams: number;
+  topics: TopicStat[];
+}) {
+  const [open, setOpen] = React.useState(false);
   const percent = Math.round(stat.weightedShare * 100);
   const trend =
     stat.trend === "sobe" ? (
@@ -411,45 +421,113 @@ function DisciplineRow({ stat, totalExams }: { stat: DisciplineStat; totalExams:
     ) : (
       <span className="text-muted-foreground">sem tendência</span>
     );
+  // Mais prováveis primeiro; dentro do mesmo nível, o que mais caiu primeiro.
+  const ordered = [...topics].sort((a, b) => b.score - a.score || b.questions - a.questions);
+  const tiersPresent = (["alta", "media", "baixa", "nunca", "amostra"] as TopicTier[]).filter(
+    (tier) => ordered.some((t) => t.tier === tier),
+  );
+
   return (
-    <div>
-      <div className="mb-1 flex items-baseline justify-between gap-3 text-sm">
-        <span className="min-w-0 font-bold">{stat.subject}</span>
-        <span className="shrink-0 font-black text-primary">{percent}%</span>
-      </div>
-      <div className="h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
-        <div
-          className="h-full rounded-full bg-emerald-500"
-          style={{ width: `${Math.min(100, percent)}%` }}
-        />
-      </div>
-      <p className="mt-1 flex flex-wrap gap-x-3 text-[11px] text-muted-foreground">
-        <span>≈ {stat.expected} questões esperadas</span>
-        <span>
-          em {stat.exams} de {totalExams} prova(s)
-        </span>
-        {trend}
-      </p>
+    <div className="rounded-xl border border-slate-100 dark:border-slate-800">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="w-full px-3 py-3 text-left"
+        aria-expanded={open}
+      >
+        <div className="mb-1 flex items-baseline justify-between gap-3 text-sm">
+          <span className="flex min-w-0 items-center gap-1.5 font-bold">
+            <ChevronDown
+              className={cn(
+                "h-3.5 w-3.5 shrink-0 text-muted-foreground transition-transform",
+                open && "rotate-180",
+              )}
+              aria-hidden
+            />
+            {stat.subject}
+          </span>
+          <span className="shrink-0 font-black text-primary">{percent}%</span>
+        </div>
+        <div className="h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
+          <div
+            className="h-full rounded-full bg-emerald-500"
+            style={{ width: `${Math.min(100, percent)}%` }}
+          />
+        </div>
+        <p className="mt-1 flex flex-wrap gap-x-3 text-[11px] text-muted-foreground">
+          <span>≈ {stat.expected} questões esperadas</span>
+          <span>
+            em {stat.exams} de {totalExams} prova(s)
+          </span>
+          {trend}
+          {topics.length > 0 && (
+            <span className="font-semibold text-primary">
+              {open ? "ocultar" : "ver"} {topics.length} assunto(s) do edital →
+            </span>
+          )}
+        </p>
+      </button>
+      {open && (
+        <div className="space-y-4 border-t border-slate-100 px-3 pb-3 pt-3 dark:border-slate-800">
+          {topics.length === 0 ? (
+            <p className="text-xs text-muted-foreground">
+              Sem edital cadastrado para esta disciplina nesta seleção.
+            </p>
+          ) : (
+            tiersPresent.map((tier) => (
+              <div key={tier}>
+                <Badge className={cn("border-0 text-[10px]", TIER_STYLE[tier])}>
+                  {TIER_LABEL[tier]} · {ordered.filter((t) => t.tier === tier).length}
+                </Badge>
+                <ul className="mt-2 divide-y divide-slate-100 dark:divide-slate-800">
+                  {ordered
+                    .filter((t) => t.tier === tier)
+                    .map((topic) => (
+                      <TopicRow key={topic.key} topic={topic} showDiscipline={false} />
+                    ))}
+                </ul>
+              </div>
+            ))
+          )}
+        </div>
+      )}
     </div>
   );
 }
 
-function TopicRow({ topic }: { topic: TopicStat }) {
+function TopicRow({
+  topic,
+  showDiscipline = true,
+}: {
+  topic: TopicStat;
+  showDiscipline?: boolean;
+}) {
   return (
     <li className="flex flex-wrap items-start justify-between gap-2 py-2.5 text-sm">
       <div className="min-w-0">
         <p className="font-semibold leading-snug">{topic.text}</p>
         <p className="text-[11px] text-muted-foreground">
-          {topic.discipline} · caiu em {topic.examsAsked} de {topic.examsInEdital} prova(s) com esse
-          tópico no edital · {topic.questions} questão(ões)
+          {showDiscipline ? `${topic.discipline} · ` : ""}caiu em {topic.examsAsked} de{" "}
+          {topic.examsInEdital} prova(s) com esse tópico no edital · {topic.questions} questão(ões)
           {topic.lastYear ? ` · última vez em ${topic.lastYear}` : ""}
         </p>
+        {topic.topicIds[0] && (
+          <Link
+            to="/dashboard/edital/$topicId"
+            params={{ topicId: topic.topicIds[0] }}
+            className="mt-1 inline-block text-xs font-bold text-primary hover:underline"
+          >
+            Ver resumo e exemplos deste assunto →
+          </Link>
+        )}
       </div>
       <div className="flex shrink-0 items-center gap-2">
         <span className="text-xs font-black text-primary">{Math.round(topic.score * 100)}%</span>
-        <Badge className={cn("border-0 text-[10px]", TIER_STYLE[topic.tier])}>
-          {TIER_LABEL[topic.tier]}
-        </Badge>
+        {showDiscipline && (
+          <Badge className={cn("border-0 text-[10px]", TIER_STYLE[topic.tier])}>
+            {TIER_LABEL[topic.tier]}
+          </Badge>
+        )}
       </div>
     </li>
   );
@@ -484,75 +562,5 @@ function ChangeList({
         {items.length > 25 && <li>… e mais {items.length - 25}</li>}
       </ul>
     </details>
-  );
-}
-
-function CoveragePanels({
-  topics,
-  disciplines,
-}: {
-  topics: TopicStat[];
-  disciplines: DisciplineStat[];
-}) {
-  const byDiscipline = new Map<string, TopicStat[]>();
-  for (const topic of topics)
-    byDiscipline.set(topic.discipline, [...(byDiscipline.get(topic.discipline) ?? []), topic]);
-  const order = disciplines.map((d) => d.subject);
-  const names = [...byDiscipline.keys()].sort(
-    (a, b) =>
-      (order.indexOf(a) === -1 ? 999 : order.indexOf(a)) -
-        (order.indexOf(b) === -1 ? 999 : order.indexOf(b)) || a.localeCompare(b, "pt-BR"),
-  );
-  if (!names.length)
-    return (
-      <p className="text-sm text-muted-foreground">
-        Sem edital cadastrado para as provas desta seleção.
-      </p>
-    );
-  return (
-    <>
-      {names.map((name) => {
-        const list = byDiscipline.get(name) ?? [];
-        const groups: { tier: TopicTier; items: TopicStat[] }[] = (
-          ["alta", "media", "baixa", "nunca", "amostra"] as TopicTier[]
-        ).map((tier) => ({ tier, items: list.filter((t) => t.tier === tier) }));
-        return (
-          <details key={name} className="rounded-xl border bg-background px-4 py-3">
-            <summary className="cursor-pointer text-sm font-black">
-              {name}{" "}
-              <span className="text-xs font-normal text-muted-foreground">
-                · {list.length} tópico(s) ·{" "}
-                {groups
-                  .filter((g) => g.items.length)
-                  .map((g) => `${g.items.length} ${TIER_LABEL[g.tier].toLowerCase()}`)
-                  .join(" · ")}
-              </span>
-            </summary>
-            <div className="mt-3 space-y-3">
-              {groups
-                .filter((g) => g.items.length)
-                .map((g) => (
-                  <div key={g.tier}>
-                    <Badge className={cn("border-0 text-[10px]", TIER_STYLE[g.tier])}>
-                      {TIER_LABEL[g.tier]}
-                    </Badge>
-                    <ul className="mt-1 list-disc space-y-0.5 pl-5 text-xs text-muted-foreground">
-                      {g.items.slice(0, 15).map((t) => (
-                        <li key={t.key}>
-                          {t.text}
-                          {g.tier !== "nunca" && g.tier !== "amostra"
-                            ? ` (${t.examsAsked}/${t.examsInEdital})`
-                            : ""}
-                        </li>
-                      ))}
-                      {g.items.length > 15 && <li>… e mais {g.items.length - 15}</li>}
-                    </ul>
-                  </div>
-                ))}
-            </div>
-          </details>
-        );
-      })}
-    </>
   );
 }

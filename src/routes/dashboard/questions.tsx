@@ -160,11 +160,14 @@ function QuestionsCatalog() {
                 <p>
                   {c.location} · {c.educationLevel}
                 </p>
+                <p>
+                  Inscrições: {date(c.startDate)} até {date(c.endDate)}
+                </p>
                 <p>Prova: {date(c.examDate)}</p>
                 <p>Vagas: {c.vacancies > 0 ? c.vacancies : "A confirmar"}</p>
                 <p>Remuneração informada: {money(c.salary)}</p>
               </CardContent>
-              <CardFooter className="gap-2">
+              <CardFooter className="flex-wrap gap-2">
                 <Button variant="outline" onClick={() => setDetail(c)}>
                   Ver detalhes
                 </Button>
@@ -175,6 +178,13 @@ function QuestionsCatalog() {
                       ? "Foco definido"
                       : "Definir foco"}
                 </Button>
+                {c.status === "Inscrições Abertas" && c.registrationUrl && (
+                  <Button asChild variant="secondary">
+                    <a href={c.registrationUrl} target="_blank" rel="noreferrer">
+                      Inscreva-se
+                    </a>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}
@@ -200,6 +210,30 @@ function QuestionsCatalog() {
                 Inscrições: {date(detail.startDate)} até {date(detail.endDate)}
               </p>
               <p>Prova: {date(detail.examDate)}</p>
+              {detail.studyTips && (
+                <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
+                  <p className="text-sm font-semibold text-foreground">Dicas de estudo</p>
+                  <p className="whitespace-pre-line text-sm text-foreground/90">
+                    {detail.studyTips}
+                  </p>
+                </div>
+              )}
+              <div className="flex flex-wrap gap-2">
+                {detail.officialEditalUrl && (
+                  <Button asChild variant="outline" size="sm">
+                    <a href={detail.officialEditalUrl} target="_blank" rel="noreferrer">
+                      Ver edital oficial
+                    </a>
+                  </Button>
+                )}
+                {detail.registrationUrl && (
+                  <Button asChild size="sm">
+                    <a href={detail.registrationUrl} target="_blank" rel="noreferrer">
+                      Página de inscrição
+                    </a>
+                  </Button>
+                )}
+              </div>
               <p>Confirme prazos e condições no edital oficial antes de se inscrever.</p>
             </div>
           )}

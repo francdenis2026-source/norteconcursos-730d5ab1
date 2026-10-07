@@ -81,6 +81,8 @@ export interface TopicStat {
   lastYear: number | null;
   score: number; // 0..1: frequência ponderada pela recência
   tier: TopicTier;
+  /** IDs de syllabus_topics (de todas as edições) que geraram este agregado — para linkar ao resumo do assunto. */
+  topicIds: string[];
 }
 
 export interface EditalChange {
@@ -209,6 +211,7 @@ export function analyzeEditals(
       last: number | null;
       wAsked: number;
       wTotal: number;
+      topicIds: Set<string>;
     }
   >();
   let examsWithSyllabus = 0;
@@ -228,9 +231,11 @@ export function analyzeEditals(
         last: null,
         wAsked: 0,
         wTotal: 0,
+        topicIds: new Set<string>(),
       };
       item.inEdital += 1;
       item.wTotal += w;
+      item.topicIds.add(t.id);
       const count = e.byTopic.get(key) ?? 0;
       if (count > 0) {
         item.asked += 1;
@@ -263,6 +268,7 @@ export function analyzeEditals(
       lastYear: item.last,
       score,
       tier,
+      topicIds: [...item.topicIds],
     };
   });
   topicStats.sort((a, b) => b.score - a.score || b.questions - a.questions);

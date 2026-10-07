@@ -56,6 +56,11 @@ function mapContest(row: Record<string, unknown>): Contest {
     ...(row["start_date"] ? { startDate: String(row["start_date"]) } : {}),
     ...(row["end_date"] ? { endDate: String(row["end_date"]) } : {}),
     isDemo: Boolean(row["is_demo"]),
+    ...(row["registration_url"] ? { registrationUrl: String(row["registration_url"]) } : {}),
+    ...(row["official_edital_url"]
+      ? { officialEditalUrl: String(row["official_edital_url"]) }
+      : {}),
+    ...(row["study_tips"] ? { studyTips: String(row["study_tips"]) } : {}),
   };
 }
 
