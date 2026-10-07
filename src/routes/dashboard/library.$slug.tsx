@@ -7,6 +7,7 @@ import {
   Clock3,
   ExternalLink,
   Library,
+  PlayCircle,
   ScrollText,
   ShieldCheck,
 } from "lucide-react";
@@ -18,6 +19,9 @@ import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
+import { isPlaylistId } from "@/lib/arsenal";
+import { useMediaCatalog } from "@/lib/mediaStore";
+import { relatedVideos } from "@/lib/relatedVideos";
 import {
   markSlugRead,
   readingMinutes,
@@ -33,10 +37,16 @@ function MaterialPage() {
   const signedIn = !!user && user.id !== "demo-user";
   const { data: material, isPending, isError } = useStudyMaterial(slug, signedIn);
   const { data: list } = useStudyMaterialList(signedIn);
+  const { catalog } = useMediaCatalog();
 
   useEffect(() => {
     if (material) markSlugRead(material.slug);
   }, [material]);
+
+  const videos = useMemo(() => {
+    if (!material) return [];
+    return relatedVideos(catalog, material.discipline, material.topic_label ?? material.title);
+  }, [catalog, material]);
 
   const siblings = useMemo(() => {
     if (!material || !list) return { prev: null, next: null };
@@ -135,6 +145,40 @@ function MaterialPage() {
         slug={material.slug}
         enabled={signedIn}
       />
+
+      {videos.length > 0 && (
+        <section
+          className="surface-card library-videos no-print"
+          aria-label="Vídeo-aulas relacionadas"
+        >
+          <h2>Vídeo-aulas relacionadas</h2>
+          <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+            {videos.map((video) => (
+              <li key={video.id}>
+                <a
+                  href={
+                    isPlaylistId(video.id)
+                      ? `https://www.youtube.com/playlist?list=${video.id}`
+                      : `https://www.youtube.com/watch?v=${video.id}`
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-start gap-2 rounded-xl border p-3 text-sm hover:bg-muted/60"
+                >
+                  <PlayCircle className="mt-0.5 h-4 w-4 shrink-0 text-rose-500" />
+                  <span className="min-w-0">
+                    <span className="block font-medium leading-snug">{video.title}</span>
+                    <span className="block text-xs text-muted-foreground">
+                      {video.topic === "*" ? video.subject : video.topic}
+                      {video.channel ? ` · ${video.channel}` : ""}
+                    </span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {(sources.length > 0 || material.source_note) && (
         <aside className="surface-card library-sources" aria-label="Fontes">
