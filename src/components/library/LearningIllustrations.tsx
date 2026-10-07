@@ -26,6 +26,8 @@ export function LearningIllustration({
         <ProbabilityDiagram />
       ) : illustration.kind === "ledger" ? (
         <LedgerDiagram illustration={illustration} />
+      ) : illustration.kind === "matrix" ? (
+        <MatrixDiagram illustration={illustration} />
       ) : (
         <ol className="worked-flow" aria-label={illustration.title}>
           {illustration.nodes?.map((node, i) => (
@@ -386,6 +388,44 @@ function LedgerDiagram({
           ? "Aqui o saldo inverteu — vale conferir os lançamentos."
           : "Os lançamentos acima seguem o padrão esperado."}
       </p>
+    </div>
+  );
+}
+function MatrixDiagram({
+  illustration,
+}: {
+  illustration: StudyEnrichment["content"]["illustrations"][number];
+}) {
+  const [revealed, setRevealed] = useState(false);
+  const cells = illustration.cells ?? [];
+  const answer = illustration.answer ?? "";
+  return (
+    <div>
+      <div
+        className="worked-matrix"
+        role="img"
+        aria-label={`Matriz 3 por 3 de figuras, última célula a descobrir. Resposta: ${answer}.`}
+      >
+        {cells.map((cell, i) => {
+          const isBlank = cell === "?";
+          return (
+            <div
+              key={i}
+              className={`worked-matrix-cell${isBlank ? " worked-matrix-cell--blank" : ""}`}
+            >
+              {isBlank ? (revealed ? answer : "?") : cell}
+            </div>
+          );
+        })}
+      </div>
+      <button
+        type="button"
+        className="worked-choice mt-3"
+        aria-pressed={revealed}
+        onClick={() => setRevealed((v) => !v)}
+      >
+        {revealed ? "Esconder resposta" : "Revelar resposta"}
+      </button>
     </div>
   );
 }
