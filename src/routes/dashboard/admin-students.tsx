@@ -388,11 +388,14 @@ function AdminStudentsPage() {
                         </Button>
                       </form>
                     ) : (
-                      <p className="truncate font-medium text-foreground">
+                      <p
+                        className="break-words font-medium text-foreground"
+                        title={s.full_name ?? ""}
+                      >
                         {s.full_name || "Sem nome"}
                       </p>
                     )}
-                    <p className="truncate text-xs text-muted-foreground">{s.email}</p>
+                    <p className="break-words text-xs text-muted-foreground">{s.email}</p>
                     <p className="truncate text-[0.7rem] text-muted-foreground">
                       Cadastro {fmtDateTime(s.created_at)} · Último login{" "}
                       {fmtDateTime(s.last_sign_in_at)}
