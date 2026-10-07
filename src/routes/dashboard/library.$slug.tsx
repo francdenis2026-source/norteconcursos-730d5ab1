@@ -7,19 +7,18 @@ import {
   Clock3,
   ExternalLink,
   Library,
-  PlayCircle,
   ScrollText,
   ShieldCheck,
 } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { LockedState } from "@/components/dashboard/PageHero";
+import { LibraryVideos } from "@/components/library/LibraryVideos";
 import { Markdown } from "@/components/library/Markdown";
 import { StudyPractice } from "@/components/library/StudyPractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
-import { isPlaylistId } from "@/lib/arsenal";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
 import {
@@ -146,39 +145,7 @@ function MaterialPage() {
         enabled={signedIn}
       />
 
-      {videos.length > 0 && (
-        <section
-          className="surface-card library-videos no-print"
-          aria-label="Vídeo-aulas relacionadas"
-        >
-          <h2>Vídeo-aulas relacionadas</h2>
-          <ul className="mt-3 grid gap-2 sm:grid-cols-2">
-            {videos.map((video) => (
-              <li key={video.id}>
-                <a
-                  href={
-                    isPlaylistId(video.id)
-                      ? `https://www.youtube.com/playlist?list=${video.id}`
-                      : `https://www.youtube.com/watch?v=${video.id}`
-                  }
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-start gap-2 rounded-xl border p-3 text-sm hover:bg-muted/60"
-                >
-                  <PlayCircle className="mt-0.5 h-4 w-4 shrink-0 text-rose-500" />
-                  <span className="min-w-0">
-                    <span className="block font-medium leading-snug">{video.title}</span>
-                    <span className="block text-xs text-muted-foreground">
-                      {video.topic === "*" ? video.subject : video.topic}
-                      {video.channel ? ` · ${video.channel}` : ""}
-                    </span>
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      <LibraryVideos videos={videos} />
 
       {(sources.length > 0 || material.source_note) && (
         <aside className="surface-card library-sources" aria-label="Fontes">
