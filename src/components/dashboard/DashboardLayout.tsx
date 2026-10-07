@@ -118,6 +118,13 @@ const MENU: MenuItem[] = [
     href: "/dashboard/admin-support",
     adminOnly: true,
   },
+  {
+    group: "Administração",
+    label: "Concursos — curadoria",
+    icon: Search,
+    href: "/dashboard/admin-contests",
+    adminOnly: true,
+  },
   { group: "Hoje", label: "Painel do aluno", icon: LayoutDashboard, href: "/dashboard" },
   { group: "Hoje", label: "Assistente de estudos", icon: Sparkles, href: "/dashboard/study-coach" },
   { group: "Hoje", label: "Plano de estudos", icon: ClipboardList, href: "/dashboard/study-plan" },

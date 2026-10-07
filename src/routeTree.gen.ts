@@ -22,6 +22,7 @@ import { Route as ApiSolveQuestionRouteImport } from './routes/api/solve-questio
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
+import { Route as DashboardAdminContestsRouteImport } from './routes/dashboard/admin-contests'
 import { Route as DashboardAdminFinanceRouteImport } from './routes/dashboard/admin-finance'
 import { Route as DashboardAdminMediaRouteImport } from './routes/dashboard/admin-media'
 import { Route as DashboardAdminMetricsRouteImport } from './routes/dashboard/admin-metrics'
@@ -129,6 +130,11 @@ const DashboardIndexRoute = DashboardIndexRouteImport.update({
 const DashboardAdminRoute = DashboardAdminRouteImport.update({
   id: '/admin',
   path: '/admin',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardAdminContestsRoute = DashboardAdminContestsRouteImport.update({
+  id: '/admin-contests',
+  path: '/admin-contests',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardAdminFinanceRoute = DashboardAdminFinanceRouteImport.update({
@@ -363,6 +369,7 @@ export interface FileRoutesByFullPath {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
   '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-media': typeof DashboardAdminMediaRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
@@ -420,6 +427,7 @@ export interface FileRoutesByTo {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
   '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-media': typeof DashboardAdminMediaRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
@@ -477,6 +485,7 @@ export interface FileRoutesById {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
   '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-media': typeof DashboardAdminMediaRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
@@ -537,6 +546,7 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-contests'
     | '/dashboard/admin-finance'
     | '/dashboard/admin-media'
     | '/dashboard/admin-metrics'
@@ -594,6 +604,7 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-contests'
     | '/dashboard/admin-finance'
     | '/dashboard/admin-media'
     | '/dashboard/admin-metrics'
@@ -650,6 +661,7 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-contests'
     | '/dashboard/admin-finance'
     | '/dashboard/admin-media'
     | '/dashboard/admin-metrics'
@@ -802,6 +814,13 @@ declare module '@tanstack/react-router' {
       path: '/admin'
       fullPath: '/dashboard/admin'
       preLoaderRoute: typeof DashboardAdminRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/admin-contests': {
+      id: '/dashboard/admin-contests'
+      path: '/admin-contests'
+      fullPath: '/dashboard/admin-contests'
+      preLoaderRoute: typeof DashboardAdminContestsRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/admin-finance': {
@@ -1137,6 +1156,7 @@ const DashboardLibraryRouteWithChildren =
 
 interface DashboardRouteChildren {
   DashboardAdminRoute: typeof DashboardAdminRoute
+  DashboardAdminContestsRoute: typeof DashboardAdminContestsRoute
   DashboardAdminFinanceRoute: typeof DashboardAdminFinanceRoute
   DashboardAdminMediaRoute: typeof DashboardAdminMediaRoute
   DashboardAdminMetricsRoute: typeof DashboardAdminMetricsRoute
@@ -1180,6 +1200,7 @@ interface DashboardRouteChildren {
 
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminRoute: DashboardAdminRoute,
+  DashboardAdminContestsRoute: DashboardAdminContestsRoute,
   DashboardAdminFinanceRoute: DashboardAdminFinanceRoute,
   DashboardAdminMediaRoute: DashboardAdminMediaRoute,
   DashboardAdminMetricsRoute: DashboardAdminMetricsRoute,

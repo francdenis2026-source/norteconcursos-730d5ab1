@@ -22,6 +22,9 @@ export interface Contest {
   startDate?: string;
   endDate?: string;
   isDemo?: boolean;
+  registrationUrl?: string;
+  officialEditalUrl?: string;
+  studyTips?: string;
 }
 
 export interface Subject {
