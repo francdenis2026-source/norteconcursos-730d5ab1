@@ -7517,7 +7517,9 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 /* Illustrated worked examples */
 .worked-examples { padding: clamp(1rem, 3vw, 2rem); display: grid; gap: 1.5rem; }
 .worked-illustration, .worked-case { border: 1px solid var(--border); border-radius: 1rem; padding: clamp(.875rem, 2.5vw, 1.5rem); min-width: 0; }
+.worked-illustration { background: linear-gradient(165deg, color-mix(in oklab, var(--primary) 6%, var(--card)), var(--card)); box-shadow: 0 1px 2px color-mix(in oklab, var(--foreground) 6%, transparent); }
 .worked-illustration figcaption { margin-bottom: 1rem; }
+.worked-illustration figcaption strong { font-size: 1.0625rem; }
 .worked-illustration figcaption p { font-size: .875rem; color: var(--muted-foreground); margin-top: .5rem; }
 .worked-illustration select { margin-left: .5rem; padding: .4rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--background); }
 .worked-svg { width: 100%; height: auto; max-height: 350px; display: block; margin: 1rem auto; }
@@ -7533,4 +7535,15 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .worked-flow li { border: 1px solid var(--border); padding: .875rem; border-radius: .75rem; }
 .worked-flow li span { display: inline-flex; justify-content: center; align-items: center; height: 1.6rem; width: 1.6rem; border-radius: 50%; background: var(--primary); color: var(--primary-foreground); font-size: .75rem; font-weight: 700; }
 .worked-flow li p { margin-top: .5rem; font-size: .875rem; line-height: 1.6; }
+.worked-ledger { border-radius: .875rem; overflow: hidden; border: 1px solid var(--border); }
+.worked-ledger-title { padding: .625rem .875rem; font-weight: 700; font-size: .875rem; background: color-mix(in oklab, var(--primary) 14%, var(--card)); border-bottom: 1px solid var(--border); }
+.worked-ledger-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.worked-ledger-col { min-height: 3.5rem; }
+.worked-ledger-debit { border-right: 1px solid var(--border); background: color-mix(in oklab, oklch(0.6 0.14 250) 8%, var(--card)); }
+.worked-ledger-credit { background: color-mix(in oklab, oklch(0.65 0.16 55) 8%, var(--card)); }
+.worked-ledger-head { display: block; padding: .5rem .75rem; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted-foreground); border-bottom: 1px solid var(--border); }
+.worked-ledger-row { display: flex; justify-content: space-between; gap: .5rem; padding: .4rem .75rem; font-size: .8125rem; min-height: 1.6rem; border-bottom: 1px dashed color-mix(in oklab, var(--border) 70%, transparent); }
+.worked-ledger-row:last-child { border-bottom: none; }
+.worked-ledger-balance { padding: .625rem .875rem; font-size: .8125rem; background: color-mix(in oklab, var(--primary) 10%, var(--card)); border-top: 1px solid var(--border); }
+.worked-ledger-balance--unusual { background: color-mix(in oklab, oklch(0.65 0.2 25) 14%, var(--card)); color: oklch(0.45 0.18 25); }
 @media print { .worked-case textarea { display: none; } .worked-svg { break-inside: avoid; } }
