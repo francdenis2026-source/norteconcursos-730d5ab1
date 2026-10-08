@@ -37,6 +37,7 @@ function inline(text: string, keyPrefix: string): ReactNode[] {
 }
 
 type Block =
+  | { type: "example"; blocks: Block[] }
   | { type: "h2" | "h3" | "p"; text: string }
   | { type: "quote"; lines: string[] }
   | { type: "ul" | "ol"; items: { text: string; children: string[] }[] }
@@ -48,6 +49,30 @@ const cells = (line: string) =>
     .replace(/^\||\|$/g, "")
     .split("|")
     .map((c) => c.trim());
+
+/** Explicit pedagogical labels only: mentions inside a legal provision stay neutral. */
+function isExampleLabel(text: string): boolean {
+  const label = text.replace(/[*_`]/g, "").replace(/^\s*\d+(?:\.\d+)*[.)-]?\s*/, "")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+  return /^(?:exemplos?\b|casos?\s+(?:\d+|concretos?|praticos?|ilustrativos?)\b|situacao\s+(?:aplicada|hipotetica|pratica|problema)\b|primeira aplicacao\b|aplicacao (?:pratica|na prova)\b|na pratica\b|exercicio resolvido\b)/.test(label);
+}
+
+function highlightExampleSections(blocks: Block[]): Block[] {
+  const result: Block[] = [];
+  for (let index = 0; index < blocks.length; index++) {
+    const block = blocks[index]!;
+    if ((block.type === "h2" || block.type === "h3") && isExampleLabel(block.text)) {
+      const section: Block[] = [block];
+      while (index + 1 < blocks.length) {
+        const next = blocks[index + 1]!;
+        if (next.type === "h2" || (block.type === "h3" && next.type === "h3")) break;
+        section.push(next); index++;
+      }
+      result.push({type: "example", blocks: section});
+    } else result.push(block);
+  }
+  return result;
+}
 
 function parse(markdown: string): Block[] {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
@@ -106,25 +131,24 @@ function parse(markdown: string): Block[] {
       blocks.push({ type: "p", text: paragraph.join(" ") });
     }
   }
-  return blocks;
+  return highlightExampleSections(blocks);
 }
 
-export function Markdown({ source }: { source: string }) {
-  const blocks = parse(source);
-  return (
-    <div className="study-prose">
-      {blocks.map((block, index) => {
+function renderBlocks(blocks: Block[]): ReactNode[] {
+  return blocks.map((block, index) => {
         const key = `b${index}`;
         switch (block.type) {
+          case "example":
+            return <section key={key} className="study-example" aria-label="Exemplo aplicado">{renderBlocks(block.blocks)}</section>;
           case "h2":
             return <h2 key={key}>{inline(block.text, key)}</h2>;
           case "h3":
             return <h3 key={key}>{inline(block.text, key)}</h3>;
           case "p":
-            return <p key={key}>{inline(block.text, key)}</p>;
+            return <p key={key} className={isExampleLabel(block.text) ? "study-example" : undefined}>{inline(block.text, key)}</p>;
           case "quote":
             return (
-              <blockquote key={key}>
+              <blockquote key={key} className={isExampleLabel(block.lines[0] ?? "") ? "study-example" : undefined}>
                 {block.lines.map((line, n) => (
                   <p key={`${key}-${n}`}>{inline(line, `${key}-${n}`)}</p>
                 ))}
@@ -136,7 +160,7 @@ export function Markdown({ source }: { source: string }) {
             return (
               <List key={key}>
                 {block.items.map((item, n) => (
-                  <li key={`${key}-${n}`}>
+                  <li key={`${key}-${n}`} className={isExampleLabel(item.text) ? "study-example" : undefined}>
                     {inline(item.text, `${key}-${n}`)}
                     {item.children.length > 0 && (
                       <ul>
@@ -157,7 +181,7 @@ export function Markdown({ source }: { source: string }) {
                   <thead>
                     <tr>
                       {block.header.map((cell, n) => (
-                        <th key={`${key}-h${n}`}>{inline(cell, `${key}-h${n}`)}</th>
+                        <th key={`${key}-h${n}`} className={isExampleLabel(cell) ? "study-example-cell" : undefined}>{inline(cell, `${key}-h${n}`)}</th>
                       ))}
                     </tr>
                   </thead>
@@ -165,7 +189,7 @@ export function Markdown({ source }: { source: string }) {
                     {block.rows.map((row, r) => (
                       <tr key={`${key}-r${r}`}>
                         {row.map((cell, n) => (
-                          <td key={`${key}-r${r}c${n}`}>{inline(cell, `${key}-r${r}c${n}`)}</td>
+                          <td key={`${key}-r${r}c${n}`} className={isExampleLabel(block.header[n] ?? "") ? "study-example-cell" : undefined}>{inline(cell, `${key}-r${r}c${n}`)}</td>
                         ))}
                       </tr>
                     ))}
@@ -176,7 +200,9 @@ export function Markdown({ source }: { source: string }) {
           default:
             return <Fragment key={key} />;
         }
-      })}
-    </div>
-  );
+      });
+}
+
+export function Markdown({ source }: { source: string }) {
+  return <div className="study-prose">{renderBlocks(parse(source))}</div>;
 }

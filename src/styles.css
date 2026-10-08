@@ -7528,6 +7528,38 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 /* Illustrated worked examples */
 .worked-examples { padding: clamp(1rem, 3vw, 2rem); display: grid; gap: 1.5rem; }
 .worked-illustration, .worked-case { border: 1px solid var(--border); border-radius: 1rem; padding: clamp(.875rem, 2.5vw, 1.5rem); min-width: 0; }
+/* Pedagogical examples are visually distinct from the neutral legal text. */
+.worked-case, .study-example, .study-example-cell {
+  --example-bg: #eff6ff; --example-border: #93c5fd; --example-ink: #1e40af;
+  --resolution-bg: #f0fdf4; --resolution-border: #86efac; --resolution-ink: #166534;
+  --pitfall-bg: #fff7ed; --pitfall-border: #fdba74; --pitfall-ink: #9a3412;
+  --variation-bg: #f5f3ff; --variation-border: #c4b5fd; --variation-ink: #5b21b6;
+}
+.dark .worked-case, .dark .study-example, .dark .study-example-cell {
+  --example-bg: #132136; --example-border: #315785; --example-ink: #93c5fd;
+  --resolution-bg: #12291f; --resolution-border: #276749; --resolution-ink: #86efac;
+  --pitfall-bg: #302316; --pitfall-border: #925827; --pitfall-ink: #fdba74;
+  --variation-bg: #251d3b; --variation-border: #65508f; --variation-ink: #c4b5fd;
+}
+.worked-case, .study-prose .study-example {
+  background: var(--example-bg); border: 1px solid var(--example-border);
+  border-left: 4px solid var(--example-ink); border-radius: 1rem;
+  color: var(--foreground); padding: clamp(.875rem, 2.5vw, 1.5rem);
+  print-color-adjust: exact; -webkit-print-color-adjust: exact;
+}
+.worked-case > h3, .study-prose .study-example > h2, .study-prose .study-example > h3 { color: var(--example-ink); }
+.study-prose .study-example > :first-child { margin-top: 0; }
+.study-prose .study-example > :last-child { margin-bottom: 0; }
+.study-prose section.study-example { margin-block: 1.5rem; }
+.study-prose .study-example-cell { background: var(--example-bg); color: var(--foreground); border-left: 3px solid var(--example-border); }
+.worked-case-badge { display: inline-block; margin-bottom: .75rem; border-radius: 999px; background: var(--example-ink); color: var(--example-bg); padding: .3rem .7rem; font-size: .6875rem; font-weight: 700; letter-spacing: .04em; }
+.worked-resolution { background: var(--resolution-bg); border: 1px solid var(--resolution-border); border-radius: .75rem; padding: .875rem; }
+.worked-resolution > summary, .worked-resolution strong { color: var(--resolution-ink); }
+.worked-resolution .worked-result { background: color-mix(in srgb, var(--resolution-border) 20%, var(--resolution-bg)); }
+.worked-pitfall { background: var(--pitfall-bg); border-left: 4px solid var(--pitfall-border); border-radius: .5rem; padding: .875rem; }
+.worked-pitfall strong { color: var(--pitfall-ink); }
+.worked-variation { background: var(--variation-bg); border-color: var(--variation-border); }
+.worked-variation > summary { color: var(--variation-ink); }
 .worked-illustration { background: linear-gradient(165deg, color-mix(in oklab, var(--primary) 6%, var(--card)), var(--card)); box-shadow: 0 1px 2px color-mix(in oklab, var(--foreground) 6%, transparent); }
 .worked-illustration figcaption { margin-bottom: 1rem; }
 .worked-illustration figcaption strong { font-size: 1.0625rem; }

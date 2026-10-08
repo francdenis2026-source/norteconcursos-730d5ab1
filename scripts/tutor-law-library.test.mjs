@@ -19,6 +19,20 @@ function load(file,overrides={}) {
 const laws=load('src/lib/legalLibrary.ts');
 const chronology=load('src/lib/legalChronology.ts');
 
+test('All law case cards expose distinct presentation for case, resolution, pitfall and variation',()=>{
+ const {WorkedExampleContent}=load('src/components/library/WorkedExamples.tsx',{
+  './LearningIllustrations':{LearningIllustration:()=>null},
+  '@/lib/studyEnrichment':{},
+  '@/lib/studySourceUrl':{isStudySourceUrl:()=>true},
+ });
+ const cases=examples.flatMap((row,i)=>row.content.cases.map(c=>({...c,id:`${i}-${c.id}`})));
+ const html=renderToStaticMarkup(React.createElement(WorkedExampleContent,{enrichment:{content:{cases,illustrations:[]},sources:[],checked_at:'2026-10-07'}}));
+ assert.equal(cases.length,93);
+ for(const className of ['worked-case','worked-case-badge','worked-resolution mt-4','worked-pitfall mt-4 text-sm leading-6','worked-variation mt-4 rounded-lg border p-3']){
+  assert.equal(html.split(`class="${className}"`).length-1,93);
+ }
+});
+
 test('Current library revision migrations have distinct version identifiers',()=>{
  const versions=readdirSync('supabase/migrations').filter(name=>/^20261007\d+_.*\.sql$/.test(name)).map(name=>name.split('_')[0]);
  assert.equal(new Set(versions).size,versions.length);

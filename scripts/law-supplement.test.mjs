@@ -68,6 +68,26 @@ function compile(path,resolve=require){
 const format=compile('src/lib/questionFormat.ts');
 const sources=compile('src/lib/studySourceUrl.ts',()=>format);
 const markdown=compile('src/components/library/Markdown.tsx',name=>name==='@/lib/studySourceUrl'?sources:require(name));
+
+test('Example sections are highlighted without absorbing the following legal text',()=>{
+ const source='## Texto legal\n\nArt. 1º: regra neutra.\n\n## 3. Primeira aplicação\n\nCaso fictício para aprender.\n\n### Resolução\n\nExplicação do caso.\n\n## Outra regra legal\n\nArt. 2º: texto neutro.';
+ const html=renderToStaticMarkup(markdown.Markdown({source}));
+ const section=html.match(/<section[^>]*class="study-example"[^>]*>(.*?)<\/section>/s)?.[1];
+ assert.ok(section?.includes('Caso fictício para aprender.'));
+ assert.ok(section?.includes('Explicação do caso.'));
+ assert.ok(!section?.includes('Art. 1º'));
+ assert.ok(!section?.includes('Art. 2º'));
+ assert.ok(html.includes('Art. 2º: texto neutro.'));
+});
+
+test('Explicit inline examples and example columns are highlighted while legal mentions stay neutral',()=>{
+ const source='**Exemplo:** situação didática.\n\nArt. 10: a lei menciona, por exemplo, uma hipótese.\n\n| Regra | Exemplo prático |\n|---|---|\n| Texto legal | Caso fictício |';
+ const html=renderToStaticMarkup(markdown.Markdown({source}));
+ assert.match(html,/<p class="study-example"><strong>Exemplo:/);
+ assert.match(html,/<p>Art. 10:/);
+ assert.match(html,/<td>Texto legal<\/td>/);
+ assert.match(html,/<td class="study-example-cell">Caso fictício<\/td>/);
+});
 test('Rendered study links navigate to complements and refuse script or deceptive URLs',()=>{
  const html=renderToStaticMarkup(markdown.Markdown({source:'[Complemento](/dashboard/library/legislacao-antifaccao-marco-legal)\n\n[Lei](https://www.planalto.gov.br/ccivil_03/)\n\n[Perigo](javascript:alert)\n\n[Falso](https://www.planalto.gov.br.attacker.invalid/)'}));
  assert.match(html,/href="\/dashboard\/library\/legislacao-antifaccao-marco-legal"/);
