@@ -19,6 +19,30 @@ function load(file,overrides={}) {
 const laws=load('src/lib/legalLibrary.ts');
 const chronology=load('src/lib/legalChronology.ts');
 
+test('Antifaction comparison preserves practice, separates definitions from offences and renders five colored cases',()=>{
+ const pack=JSON.parse(readFileSync('docs/library/antifaccao-comparison-review-2026-10-07.json','utf8'));
+ assert.equal(validateLawReview(pack).materials,1);
+ const current=pack.materials[0];
+ const previous=review.materials.find(m=>m.slug===current.slug).patch;
+ assert.equal(current.slug,'legislacao-antifaccao-marco-legal');
+ assert.deepEqual(current.patch.flashcards.slice(0,previous.flashcards.length),previous.flashcards);
+ assert.equal(current.patch.flashcards.length,26);
+ assert.equal(pack.courses.length,0);
+ assert.ok(!Object.hasOwn(current.patch,'quiz'));
+ assert.equal(pack.enrichments.length,1);
+ assert.ok(pack.enrichments.every(e=>e.expected.status==='active'&&e.expected.source_body_sha256&&Object.keys(e.patch).join()==='source_body_sha256'));
+ const {Markdown}=load('src/components/library/Markdown.tsx',{'@/lib/studySourceUrl':{isStudySourceUrl:url=>/^https:\/\//.test(url)}});
+ const html=renderToStaticMarkup(React.createElement(Markdown,{source:readFileSync('docs/library/antifaccao-associacoes-comparacao-2026-10-07.md','utf8')}));
+ assert.equal((html.match(/class="study-example"/g)??[]).length,5);
+ assert.match(html,/definição não é o mesmo que tipo penal/);
+ assert.match(html,/reiteradamente ou não/);
+ assert.match(html,/no que couber/);
+ assert.match(html,/não autoriza somar os quatro crimes automaticamente/);
+ assert.equal(current.patch.legal_review.sources.filter(s=>/planalto|stj/.test(s.url)).length,7);
+ const change=current.patch.legal_review.changes.find(c=>/l15245/.test(c.url));
+ assert.match(change.vigency,/30\/10\/2025.*art\. 4º/);
+});
+
 test('All law case cards expose distinct presentation for case, resolution, pitfall and variation',()=>{
  const {WorkedExampleContent}=load('src/components/library/WorkedExamples.tsx',{
   './LearningIllustrations':{LearningIllustration:()=>null},

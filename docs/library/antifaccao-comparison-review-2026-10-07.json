@@ -1,0 +1,255 @@
+{
+  "version": "antifaccao-comparison-2026-10-07",
+  "materials": [
+    {
+      "slug": "legislacao-antifaccao-marco-legal",
+      "expected": {
+        "id": "f2dcfc58-931c-446e-af27-fc57bb35429d",
+        "title": "Lei antifacção — leitura integral — guia de estudo e aplicação",
+        "content_status": "active",
+        "updated_at": "2026-10-08T00:02:29.983109+00:00",
+        "body_sha256": "85f2f47f85d1264e0194ba63e4964416ca89bcddff76a5b46af33935bad6b471"
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Lei antifacção — leitura integral.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## Antes de começar: lei nova e edital são verificações diferentes\n\nA Lei 15.358/2026, chamada Lei Raul Jungmann, institui o Marco Legal do Combate ao Crime Organizado. A publicação foi em 25/03/2026 e a cláusula de vigência está no art. 44. Este é um aprofundamento associado ao tópico de organizações criminosas do edital cadastrado, não uma afirmação de que o edital de 2025 já cobrava uma lei de 2026. Confira a data de corte da sua prova.\n\n## Associação, tráfico, organização e facção: como não confundir\n\n**Comparação conferida nas fontes oficiais em 07/10/2026.** Os números são um primeiro filtro; a finalidade, o vínculo e a conduta completam o enquadramento. “Facção” é a denominação legal de organização criminosa ultraviolenta, não uma pena única aplicável a todo grupo.\n\n| Figura e base legal | Mínimo de pessoas | Elementos que diferenciam | Pena básica |\n| --- | --- | --- | --- |\n| Associação criminosa — CP, art. 288, caput | 3 | Vínculo estável e permanente para cometer crimes; reunião ocasional não basta, conforme STJ | Reclusão de 1 a 3 anos |\n| Associação para o tráfico — Lei 11.343/2006, art. 35 | 2 | Associação estável e permanente voltada aos arts. 33, caput e § 1º, e 34; finalidade específica relacionada às drogas | Reclusão de 3 a 10 anos e 700 a 1.200 dias-multa |\n| Organização criminosa — Lei 12.850/2013, art. 1º, § 1º | 4 | Estrutura ordenada, divisão de tarefas, ainda que informal, e busca de vantagem de qualquer natureza mediante infrações com pena máxima superior a 4 anos **ou** caráter transnacional | Art. 2º: reclusão de 3 a 8 anos e multa para promover, constituir, financiar ou integrar |\n| Facção criminosa — Lei 15.358/2026, art. 2º, § 2º | 3 | Violência, grave ameaça ou coação para controle territorial/social, intimidação de populações/autoridades ou ataques a serviços/infraestrutura/equipamentos essenciais; a definição também abrange atos destinados à execução dos crimes desta lei | A definição não possui pena isolada: classifique a conduta nos arts. 2º ou 3º |\n\n### Três perguntas antes de marcar a alternativa\n\n1. **Quantos integrantes e qual vínculo foi demonstrado?** Não confunda quantidade de presos com quantidade de integrantes comprovada. Nos crimes associativos, a atuação conjunta em um episódio não prova, sozinha, associação duradoura.\n2. **Para quê e de que forma atuam?** Diferencie o acordo para crimes em geral, o objetivo específico da Lei de Drogas, a estrutura da Lei 12.850 e a atuação descrita na Lei 15.358.\n3. **Qual conduta individual e qual dispositivo?** Uma definição de grupo não substitui a demonstração do comportamento do acusado. Use os fatos do enunciado, não o apelido dado ao grupo.\n\n### Associação para o tráfico: a pegadinha de “reiteradamente ou não”\n\nO caput do art. 35 admite essa expressão, mas o STJ exige estabilidade e permanência do vínculo associativo. Ela não transforma qualquer colaboração eventual em associação. Separe a duração do acordo da repetição dos crimes-fim. O parágrafo único, por sua vez, alcança a associação para a prática **reiterada** do financiamento/custeio do art. 36. Tráfico do art. 33 e associação do art. 35 são figuras distintas: a ocorrência de um não prova automaticamente o outro.\n\n[Lei de Drogas — arts. 35 e 36](https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm) · [STJ — estabilidade e permanência](https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/01042022-Requisitos-da-associacao-para-o-trafico-provados-na-origem-nao-podem-ser-revistos-em-habeas-corpus-no-STJ.aspx)\n\n### Associação criminosa: atenção à atualização de 2025\n\nA Lei 15.245/2025 acrescentou o § 2º ao art. 288: solicitar ou contratar crime a integrante de associação criminosa também recebe a pena do caput, independentemente da pena do crime solicitado/contratado. Isso não exige transformar o solicitante em integrante da associação. O antigo parágrafo único foi numerado como § 1º: aumento de até metade se a associação for armada ou participar criança/adolescente. O mínimo de três do caput não virou quatro nem dois.\n\n[CP — art. 288 atualizado](https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm) · [Lei 15.245/2025](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm) · [STJ — AgRg no HC 1.027.301/SC, publicado em 06/03/2026](https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202503055856)\n\n### Facção: definição não é o mesmo que tipo penal\n\nO art. 2º exige integrante do grupo definido e uma conduta dos seus incisos; pena básica de 20 a 40 anos. O art. 3º descreve favorecimento, com pena básica de 12 a 20 anos e multa. Sua modalidade de falsa alegação de pertencimento, no inciso VI, possui finalidade de obter vantagem ou intimidar e não pressupõe filiação verdadeira. Não aplique automaticamente 20 a 40 anos só porque alguém “integra facção”.\n\nO art. 4º, parágrafo único, estabelece formas especiais de organização criminosa e aplicação das disposições materiais da Lei 12.850 **no que couber**. Isso não substitui o mínimo especial de três pelo mínimo geral de quatro. Também não autoriza somar os quatro crimes automaticamente pelo mesmo vínculo: examine especialidade, condutas autônomas e eventual duplicidade de punição.\n\n[Lei 15.358/2026 — arts. 2º a 4º](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm) · [Lei 12.850/2013 — arts. 1º e 2º](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm)\n\n### Como memorizar sem perder os requisitos\n\n**“2 nas drogas; 3 no acordo geral; 4 na estrutura; 3 na definição ultraviolenta.”** Depois do número, diga em voz alta o elemento decisivo: **finalidade específica**, **vínculo duradouro**, **estrutura e tarefas**, **atuação ultraviolenta legalmente descrita**. O macete organiza a lembrança e nunca substitui a leitura dos artigos.\n\n## Caso concreto 1 — dois colaboradores em uma entrega\n\n**Situação:** duas pessoas combinam, exclusivamente para uma ocasião, uma entrega ilícita de drogas. Não há prova de acordo associativo duradouro.\n\n**Resolução:** a narrativa pode exigir exame do tráfico em concurso de pessoas, mas não permite concluir pelo art. 35 apenas porque há dois agentes. O requisito numérico existe; falta a demonstração do vínculo estável.\n\n**Variação:** mensagens comprovam pacto duradouro, reposição de estoque e tarefas contínuas. Agora há dados para analisar o art. 35, além dos crimes efetivamente praticados. Repetição de entregas é indício contextual, não substituto da prova do vínculo.\n\n## Caso concreto 2 — três pessoas dedicadas a furtos\n\n**Situação:** três pessoas mantêm acordo permanente para uma série de furtos; o enunciado não descreve drogas, domínio social ou requisitos da Lei 12.850.\n\n**Resolução:** examine associação criminosa do art. 288, além dos furtos. Três pessoas não satisfazem o mínimo de quatro da definição geral de organização criminosa. Também não bastam para demonstrar facção.\n\n**Variação:** o acordo era apenas para um furto isolado e não há vínculo duradouro. Reavalie a associação e examine concurso de pessoas no crime-fim.\n\n## Caso concreto 3 — três integrantes controlam uma comunidade\n\n**Situação:** três integrantes de agrupamento comprovado ameaçam moradores com violência para impor domínio territorial.\n\n**Resolução:** compare os fatos à definição do art. 2º, § 2º, e à conduta do inciso I. A falta de um quarto integrante não afasta, por si, o regime especial. A responsabilização exige prova da condição e da atuação individual.\n\n**Variação:** retire do enunciado a atuação descrita, mantendo apenas três conhecidos reunidos. A contagem, sozinha, não demonstra essa figura.\n\n## Caso concreto 4 — quatro agentes com tarefas financeiras\n\n**Situação:** quatro pessoas compõem estrutura ordenada, com tarefas de execução, ocultação e contabilidade, para obter vantagem mediante infrações de pena máxima superior a quatro anos. Não há fatos da definição ultraviolenta.\n\n**Resolução:** verifique organização criminosa da Lei 12.850. Estrutura complexa não significa automaticamente facção. A vantagem pode ser de qualquer natureza; a alternativa legal de caráter transnacional também precisa ser lembrada.\n\n**Variação:** se a pena máxima fosse exatamente quatro anos e não houvesse caráter transnacional, o requisito correspondente da definição geral não estaria satisfeito.\n\n## Caso concreto 5 — contratação sem ingresso no grupo\n\n**Situação:** pessoa externa solicita a um integrante de associação criminosa comprovada que pratique um crime.\n\n**Resolução:** confira o art. 288, § 2º, incluído em 2025. A figura equiparada impede concluir que a condição de pessoa externa afasta sempre o artigo; não presuma, contudo, que ela virou integrante.\n\n**Variação:** o destinatário não integra associação criminosa. A hipótese do § 2º precisa ser reavaliada; outros enquadramentos dependem dos fatos.\n\n## Fixação e limites desta comparação\n\nFeche o texto e reconstrua os quatro números, um requisito diferenciador e um contraexemplo de cada figura. Use os flashcards de comparação deste material. Os casos são autorais e didáticos, sem atribuição a banca. A lei de 2026 não integra automaticamente um edital de 2025; confira o edital e a data de corte. Os precedentes citados esclarecem os arts. 288 e 35, sem serem apresentados como jurisprudência consolidada sobre todos os dispositivos da lei nova.\n\n\n## Domínio social estruturado — art. 2º\n\nA figura exige a condição do agente e uma das condutas descritas nos incisos. O texto abrange, entre outras hipóteses, imposição de controle territorial ou econômico mediante violência ou grave ameaça, ataques a instituições prisionais e sabotagem de serviços ou infraestrutura. A pena básica indicada é reclusão de 20 a 40 anos, sem prejuízo das sanções correspondentes à violência, ameaça ou outros crimes. O § 1º contém causas de aumento; o § 5º disciplina atos preparatórios com propósito inequívoco. Não aplique a pena básica sem antes classificar a hipótese.\n\n**Caso concreto:** integrantes de um grupo descrito no § 2º intimidam comerciantes com armas para impor o controle de uma comunidade. Relacione a narrativa aos incisos I e IV e identifique prova do vínculo e da grave ameaça. Se o enunciado só menciona três amigos conversando, faltam elementos: o número de pessoas não demonstra o crime.\n\n## Favorecimento — art. 3º\n\nO artigo traz condutas próprias: fundar, aderir ou apoiar a organização, fornecer informações, disponibilizar local ou armamento nas condições legais e outras hipóteses. A pena básica é reclusão de 12 a 20 anos e multa. O inciso VI trata de quem alega falsamente pertencer ao grupo para obter vantagem ou intimidar terceiros. Compare o fato ao inciso específico, em vez de classificar toda ajuda como domínio social estruturado.\n\n**Caso concreto:** uma pessoa se apresenta falsamente como integrante de uma facção para intimidar um comerciante e obter vantagem. O roteiro é verificar o art. 3º, VI, sua finalidade e os demais elementos do fato. Não é necessário inventar um vínculo verdadeiro quando a própria hipótese trata da falsa alegação.\n\n## Investigação e provas — arts. 5º a 8º e 32\n\nNos crimes desta lei, o art. 5º indica prazo de inquérito de 90 dias para indiciado preso e 270 dias para solto, prorrogáveis por igual período. Há prazos próprios para decisões e manifestação ministerial. O § 4º afasta relaxamento ou liberdade automáticos por descumprimento desses prazos; exige avaliação concreta. Forças-tarefa, cooperação internacional e meios de obtenção de prova devem ser estudados com seus limites de competência e sigilo.\n\n**Caso concreto:** um resumo usa automaticamente os prazos gerais de outro procedimento para investigação abrangida por esta lei. Identifique primeiro a norma especial. A existência de prazo maior também não permite concluir que todo atraso seja constitucional ou que a prisão dispense controle judicial.\n\n## Patrimônio: bloqueio, perdimento e ação civil são etapas distintas\n\nOs arts. 9º e 10 disciplinam medidas cautelares, inclusive constrições patrimoniais e intervenção judicial nas condições previstas. O art. 11 trata de medidas definitivas; os arts. 12 a 28 organizam a ação civil autônoma de perdimento. Separe requisitos, legitimados, contraditório, terceiros de boa-fé, destino e restituição de valores. O texto não autoriza ensinar que qualquer suspeita permite confisco indiscriminado de bens de terceiros.\n\n**Caso concreto:** um imóvel de terceiro de boa-fé é alcançado por medida patrimonial. A solução não nasce da palavra “facção”: examine o nexo com a atividade ilícita e as proteções e meios de defesa da hipótese aplicável. Confira particularmente art. 9º, §§ 3º, 9º e 12, e o regime da ação civil.\n\n## Mapa completo da leitura\n\n| Trecho | O que recuperar sem consultar |\n| --- | --- |\n| Arts. 1º a 4º | Definições, dois tipos penais, penas e relação com hediondos |\n| Arts. 5º a 8º | Prazos especiais, forças-tarefa, cooperação e provas |\n| Arts. 9º a 11 | Medidas cautelares, intervenção e medidas definitivas |\n| Arts. 12 a 28 | Ação civil de perdimento, sujeitos, defesa e destinação |\n| Art. 29 | Banco nacional e bancos estaduais de dados |\n| Arts. 30 a 32 | Disposições próprias de custódia e investigação |\n| Arts. 33 a 42 | Alterações nos códigos e leis relacionadas |\n| Arts. 43 e 44 | Dispositivo vetado e vigência; não tratar o veto como norma ativa |\n\n## Mudanças que atravessam outras matérias\n\nO diploma altera CP, CPP, Lei dos Crimes Hediondos, LEP, Drogas, Desarmamento, Lavagem, Código Eleitoral, financiamento da segurança pública e regras de apostas. Por exemplo, o art. 36 acrescenta art. 40-A à Lei de Drogas; o art. 37 acrescenta art. 21-A ao Desarmamento; o art. 38 modifica o CPP. Leia os dispositivos também nas respectivas compilações atuais: a redação de uma lei modificadora pode ser posteriormente alterada.\n\n## Controle de constitucionalidade\n\nO STF recebeu ações questionando dispositivos do marco legal, entre elas a ADI 7952. O ajuizamento não demonstra, por si, suspensão, revogação ou validade definitiva. O percurso transcreve o texto oficial e apresenta esse alerta: não classifica cada dispositivo como constitucionalmente confirmado. Consulte as decisões aplicáveis antes de resolver um caso concreto.\n\n## Aplicação no tempo e revisão ativa\n\nUma lei penal mais gravosa não retroage para prejudicar o acusado. Separe data do fato, vigência, natureza material ou processual e eventual decisão judicial. Ao revisar, explique por que os números mínimos diferem, diferencie os dois tipos e reconstrua o mapa patrimonial. Abra o percurso para estudar todos os artigos e conferir o texto de cada resposta.\n\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 43 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| Disposições iniciais | 1 |\n| Título I — Dos crimes praticados por organização criminosa ultraviolenta, GRUPO PARAMILITAR ou MILÍCIA PRIVADA | 3 |\n| Título II — Das normas processuais e operacionais / Capítulo I — disposições Gerais | 4 |\n| Título II — Das normas processuais e operacionais / Capítulo II — Das medidas assecuratórias cautelares | 2 |\n| Título II — Das normas processuais e operacionais / Capítulo III — Das medidas definitivas | 1 |\n| Título II — Das normas processuais e operacionais / Capítulo IV — Da Ação Civil de Perdimento de Bens | 17 |\n| Título II — Das normas processuais e operacionais / Capítulo V — Do Banco Nacional e dos Bancos Estaduais de Dados de Organizações Criminosas Ultraviolentas, GRUPOS Paramilitares ou Milícias Privadas | 1 |\n| Título III — disposições finais | 14 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/antifaccao)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 5 casos comparativos do texto e os 2 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 26 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n",
+        "flashcards": [
+          {
+            "b": "Lei 12.850: 4 pessoas; definição de organização ultraviolenta da Lei 15.358: 3. Conferir os demais requisitos.",
+            "f": "Número mínimo: normas diferentes"
+          },
+          {
+            "b": "Art. 2º: domínio social estruturado; art. 3º: favorecimento. Não igualar condutas e penas.",
+            "f": "Dois tipos penais"
+          },
+          {
+            "b": "Cautelares, medidas definitivas e ação civil de perdimento possuem regimes próprios e proteção de terceiros.",
+            "f": "Mapa patrimonial"
+          },
+          {
+            "b": "Vigência em 25/03/2026 não implica inclusão automática no edital nem retroatividade penal gravosa.",
+            "f": "Lei nova e prova"
+          },
+          {
+            "b": "A ausência de filiação real não afasta automaticamente essa figura.\n\nO art. 3º, VI, contempla alegação falsa nas condições descritas, com finalidade de obter vantagem ou intimidar. Examine o grupo referido, os atos e a finalidade; não exija filiação verdadeira para essa modalidade.\nBase: Art. 3",
+            "f": "Aplicação — Uma pessoa afirma falsamente pertencer a grupo que pratica atos do art. 2º para intimidar comerciante. A falsidade da filiação exclui sempre o tipo da lei?"
+          },
+          {
+            "b": "A finalidade exigida por esse inciso deve ser demonstrada; não a presuma.\nErro a evitar: Confundir o autor dessa modalidade com membro efetivo necessário em outras.\nBase: Art. 3",
+            "f": "Análise — Alegação falsa para intimidar: E se a fala não tem finalidade de vantagem nem intimidação?"
+          },
+          {
+            "b": "Compare todos os elementos do art. 2º, inclusive a definição especial; não transplante automaticamente a Lei 12.850.\n\nO art. 2º, III, descreve obstrução por barricadas e outros meios; o § 2º delimita os grupos da lei. Demonstre a condição do agente e o vínculo da conduta com a hipótese, sem equiparar qualquer bloqueio à figura penal.\nBase: Art. 2",
+            "f": "Aplicação — Integrante de organização nas condições legais cria barricada para obstruir operação de segurança pública. Qual dispositivo examinar e o que provar?"
+          },
+          {
+            "b": "O enquadramento nesse dispositivo precisa ser revisto; outros tipos podem exigir análise própria.\nErro a evitar: Tratar toda barreira física como crime antifacção.\nBase: Art. 2",
+            "f": "Análise — Barricada vinculada à organização ultraviolenta: E se não há vínculo do agente com grupo definido pela lei?"
+          },
+          {
+            "b": "Confundir o autor dessa modalidade com membro efetivo necessário em outras.",
+            "f": "Qual erro de raciocínio evitar em “Alegação falsa para intimidar”?"
+          },
+          {
+            "b": "O art. 3º, VI, contempla alegação falsa nas condições descritas, com finalidade de obter vantagem ou intimidar.",
+            "f": "Qual é a regra decisiva em “Alegação falsa para intimidar”?"
+          },
+          {
+            "b": "Tratar toda barreira física como crime antifacção.",
+            "f": "Qual erro de raciocínio evitar em “Barricada vinculada à organização ultraviolenta”?"
+          },
+          {
+            "b": "O art. 2º, III, descreve obstrução por barricadas e outros meios; o § 2º delimita os grupos da lei.",
+            "f": "Qual é a regra decisiva em “Barricada vinculada à organização ultraviolenta”?"
+          },
+          {
+            "f": "Quais são os mínimos de pessoas das quatro figuras comparadas?",
+            "b": "Tráfico: 2; associação criminosa: 3; organização criminosa geral: 4; facção na definição especial: 3. Sempre confira os demais elementos. Bases: art. 35, art. 288, Lei 12.850 art. 1º § 1º, Lei 15.358 art. 2º § 2º."
+          },
+          {
+            "f": "Duas pessoas fazem uma entrega de drogas sem acordo duradouro. O art. 35 é automático?",
+            "b": "Não. Segundo o STJ, exige-se vínculo estável e permanente. Examine o crime-fim e o concurso de pessoas; não presuma associação apenas pela quantidade. Base: HC 721.055 e art. 35."
+          },
+          {
+            "f": "O que significa “reiteradamente ou não” no caput do art. 35?",
+            "b": "A repetição dos crimes-fim não se confunde com estabilidade do pacto. A expressão não dispensa a prova da associação duradoura exigida pelo STJ."
+          },
+          {
+            "f": "Qual diferença textual existe no parágrafo único do art. 35?",
+            "b": "Ele trata da associação para a prática reiterada do financiamento/custeio previsto no art. 36. Não copie para ele a expressão “reiteradamente ou não” do caput."
+          },
+          {
+            "f": "Três agentes dedicados permanentemente a furtos formam necessariamente facção?",
+            "b": "Não. Analise o art. 288. O mínimo de três também aparece na definição especial de facção, mas não prova os demais elementos dessa definição."
+          },
+          {
+            "f": "Que elementos diferenciam a organização criminosa geral?",
+            "b": "Quatro ou mais pessoas; estrutura ordenada e tarefas, mesmo informais; vantagem de qualquer natureza; infrações com pena máxima superior a quatro anos ou caráter transnacional. Base: Lei 12.850, art. 1º § 1º."
+          },
+          {
+            "f": "Pena máxima de exatamente quatro anos satisfaz sozinha o critério da Lei 12.850?",
+            "b": "Não: o critério é superior a quatro anos. O caráter transnacional é alternativa legal que deve ser examinado no caso concreto."
+          },
+          {
+            "f": "O número quatro da Lei 12.850 substitui o número três da definição de facção?",
+            "b": "Não. A remissão do art. 4º, parágrafo único, da Lei 15.358 vale no que couber. A definição especial permanece com três ou mais."
+          },
+          {
+            "f": "A palavra “facção” determina automaticamente pena de 20 a 40 anos?",
+            "b": "Não. Identifique a conduta: art. 2º — domínio social estruturado; art. 3º — favorecimento. A definição de grupo não é uma pena autônoma."
+          },
+          {
+            "f": "Em que se distinguem as penas básicas dos arts. 2º e 3º da Lei 15.358?",
+            "b": "Art. 2º: 20 a 40 anos; art. 3º: 12 a 20 anos e multa. Verifique modalidade e eventuais aumentos/regras específicas antes de calcular."
+          },
+          {
+            "f": "Quem mente sobre pertencer ao grupo pode ser analisado no art. 3º VI?",
+            "b": "Sim, nas condições legais e com finalidade de obter vantagem ou intimidar. Essa modalidade não exige filiação verdadeira; não generalize para outros incisos."
+          },
+          {
+            "f": "Qual novidade de 2025 afeta a pessoa externa à associação criminosa?",
+            "b": "O art. 288 § 2º equipara à pena do caput solicitar ou contratar crime a integrante da associação, independentemente da pena do crime solicitado/contratado. A pessoa externa não vira integrante por presunção."
+          },
+          {
+            "f": "Qual causa de aumento do art. 288 está hoje no § 1º?",
+            "b": "Até metade se a associação é armada ou se participa criança/adolescente. A Lei 15.245/2025 numerou o antigo parágrafo único e acrescentou o § 2º."
+          },
+          {
+            "f": "É correto somar automaticamente os quatro crimes pelo mesmo vínculo?",
+            "b": "Não. Diferencie condutas e requisitos; examine especialidade, autonomia e possível duplicidade de punição. O quadro comparativo não determina concurso automático."
+          }
+        ],
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+            "title": "Lei 15.358/2026 — arts. 2º a 4º"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+            "title": "Lei 12.850/2013 — arts. 1º e 2º"
+          },
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/associacao-questiona-no-stf-pontos-do-marco-legal-do-combate-ao-crime-organizado/",
+            "title": "STF — notícia institucional sobre ADI 7952"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "title": "Código Penal — art. 288"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+            "title": "Lei de Drogas — arts. 35 e 36"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm",
+            "title": "Lei 15.245/2025 — alteração do art. 288"
+          },
+          {
+            "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/01042022-Requisitos-da-associacao-para-o-trafico-provados-na-origem-nao-podem-ser-revistos-em-habeas-corpus-no-STJ.aspx",
+            "title": "STJ — HC 721.055, estabilidade na associação para o tráfico"
+          },
+          {
+            "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202503055856",
+            "title": "STJ — AgRg no HC 1.027.301/SC, DJEN 06/03/2026"
+          }
+        ],
+        "source_note": "Fontes oficiais conferidas em 07/10/2026. Leitura complementar vinculada ao tema do edital; não afirma inclusão expressa de todos os diplomas nem substitui a data de corte da prova. Não gera questões ativas para o banco. Comparação dos arts. 288 do CP, 35 da Lei de Drogas, 1º e 2º da Lei 12.850 e 2º a 4º da Lei 15.358 conferida em 07/10/2026; atualização de 2025 e precedentes do STJ identificados.",
+        "legal_review": {
+          "scope": "Fontes oficiais conferidas em 07/10/2026. Leitura complementar vinculada ao tema do edital; não afirma inclusão expressa de todos os diplomas nem substitui a data de corte da prova. Não gera questões ativas para o banco. Comparação dos arts. 288 do CP, 35 da Lei de Drogas, 1º e 2º da Lei 12.850 e 2º a 4º da Lei 15.358 conferida em 07/10/2026; atualização de 2025 e precedentes do STJ identificados.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "Lei 15.358/2026 — lei antifacção",
+              "summary": "Cria tipos penais e um regime próprio de enfrentamento, com alterações em códigos e leis especiais. Diferencie os dois crimes, as medidas patrimoniais e os requisitos próprios.",
+              "vigency": "Em vigor desde a publicação em 25/03/2026; art. 44. Ações de controle de constitucionalidade exigem consulta às decisões aplicáveis.",
+              "articles": [
+                "Arts. 1º a 44"
+              ]
+            },
+            {
+              "url": "https://noticias.stf.jus.br/postsnoticias/associacao-questiona-no-stf-pontos-do-marco-legal-do-combate-ao-crime-organizado/",
+              "state": "reference",
+              "title": "Controle de constitucionalidade — ADI 7952",
+              "summary": "O STF recebeu impugnação a dispositivos. A notícia comprova ajuizamento, não julgamento definitivo nem suspensão automática.",
+              "vigency": "Referência institucional; consultar decisões processuais pertinentes.",
+              "articles": []
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm",
+              "title": "Lei 15.245/2025 — art. 288, §§ 1º e 2º",
+              "summary": "Numerou a majorante como § 1º e incluiu solicitar/contratar crime a integrante de associação criminosa no § 2º, sem alterar o mínimo do caput.",
+              "articles": [
+                "CP, art. 288, §§ 1º e 2º"
+              ],
+              "state": "effective",
+              "vigency": "Em vigor desde a publicação no DOU de 30/10/2025; art. 4º da Lei 15.245/2025. Texto compilado conferido em 07/10/2026."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Lei 15.358/2026 — arts. 2º a 4º",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "sha256": "a939f065f369f2b9958a6c92e09a1619301477dad760bfec70756ca8f99d1f4d"
+            },
+            {
+              "title": "Lei 12.850/2013 — arts. 1º e 2º",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+              "sha256": "2c2d3f2a4ed1489ecee4d6a2e72a6ef13d65f6c26125cacca57cd36f362d49f3"
+            },
+            {
+              "url": "https://noticias.stf.jus.br/postsnoticias/associacao-questiona-no-stf-pontos-do-marco-legal-do-combate-ao-crime-organizado/",
+              "title": "STF — notícia institucional sobre ADI 7952",
+              "sha256": "07efe5fb3ae23bc443498ea64c3b1d8766d5e78ecb54b405979543114d312c1a"
+            },
+            {
+              "title": "Código Penal — art. 288",
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+              "sha256": "08408d2af6df4bf9dd057e07abd0419a11907117e0254dd78f5d4b88ab2c22b4"
+            },
+            {
+              "title": "Lei de Drogas — arts. 35 e 36",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+              "sha256": "5905b1321c405f5b9712d5199eee3a52193a86c863a034b61a0067ff67077703"
+            },
+            {
+              "title": "Lei 15.245/2025 — alteração do art. 288",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm",
+              "sha256": "9b40b753c48f82659f450670c00e962049ebd735d571f0a0710567cd97f4627f"
+            },
+            {
+              "title": "STJ — HC 721.055, estabilidade na associação para o tráfico",
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/01042022-Requisitos-da-associacao-para-o-trafico-provados-na-origem-nao-podem-ser-revistos-em-habeas-corpus-no-STJ.aspx",
+              "sha256": "a75a7d45bffe2c3c280cd55b29a3a15aba44923b722be7d6f351997d71d9d42a"
+            },
+            {
+              "title": "STJ — AgRg no HC 1.027.301/SC, DJEN 06/03/2026",
+              "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202503055856"
+            }
+          ],
+          "checked_at": "2026-10-08T01:00:00.464584Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma.",
+            "Comparação de quatro figuras, cinco casos autorais com variações e 14 flashcards; distinguir requisitos numéricos, vínculo, conduta e pena sem presumir concurso automático."
+          ],
+          "course_slug": "antifaccao"
+        },
+        "law_version_checked_at": "2026-10-08T01:00:00.464584Z"
+      }
+    }
+  ],
+  "courses": [],
+  "enrichments": [
+    {
+      "id": "4fcad42c-cbca-5cf0-83fa-942453273cb9",
+      "material_slug": "legislacao-antifaccao-marco-legal",
+      "patch": {
+        "source_body_sha256": "fcdf607356d5fb37185314998133fa2c7ff062464ecf30b21acd07bb5c6db769"
+      },
+      "expected": {
+        "id": "4fcad42c-cbca-5cf0-83fa-942453273cb9",
+        "status": "active",
+        "source_body_sha256": "85f2f47f85d1264e0194ba63e4964416ca89bcddff76a5b46af33935bad6b471"
+      }
+    }
+  ]
+}
