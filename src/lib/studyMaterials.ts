@@ -2,6 +2,7 @@ import { userStorageKey } from "@/lib/userStorage";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import type { LegalReview } from "@/components/library/LegalUpdateNotice";
+import type { LibrarySearchContent } from "./librarySearch";
 
 export type StudyMaterialStatus = "under_review" | "active" | "obsolete" | "archived";
 
@@ -66,6 +67,22 @@ export function useStudyMaterialList(enabled: boolean) {
     staleTime: 5 * 60 * 1000,
     queryFn: fetchStudyMaterialList,
   });
+}
+
+/** Loaded only when a student starts searching; RLS and active status still apply. */
+export async function fetchLibrarySearchContent(): Promise<LibrarySearchContent[]> {
+  const rows: LibrarySearchContent[] = [];
+  for (let offset = 0; ; ) {
+    const { data, error } = await supabase.from("study_materials").select("id,body_md,legal_basis")
+      .eq("content_status", "active").order("id").range(offset, offset + 199);
+    if (error) throw error;
+    if (!data?.length) return rows;
+    rows.push(...data as LibrarySearchContent[]);
+    offset += data.length;
+  }
+}
+export function useLibrarySearchContent(enabled: boolean, userId?: string) {
+  return useQuery({queryKey:["library-search-content",userId],enabled:enabled&&!!userId,queryFn:fetchLibrarySearchContent,staleTime:5*60*1000});
 }
 
 export function useStudyMaterial(slug: string, enabled: boolean) {

@@ -11,13 +11,63 @@ const read=name=>JSON.parse(readFileSync(`docs/library/tutor-law-${name}-2026-10
 const review=read('review'),examples=read('examples'),manifest=read('manifest');
 function load(file,overrides={}) {
  const module={exports:{}};
- const code=ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX}}).outputText;
+ const code=ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
  const native=createRequire(import.meta.url);
  vm.runInNewContext(code,{module,exports:module.exports,require:name=>overrides[name]??native(name),URL});
  return module.exports;
 }
 const laws=load('src/lib/legalLibrary.ts');
 const chronology=load('src/lib/legalChronology.ts');
+
+test('Legal highlights preserve source characters, classify full expressions and avoid diploma numbers',()=>{
+ const {legalTextParts}=load('src/lib/legalHighlights.ts');
+ const samples=['Art. 288. Associarem-se 3 (três) ou mais pessoas, para o fim específico de cometer crimes:',
+ 'Pena - reclusão, de 1 (um) a 3 (três) anos. Salvo se houver grave ameaça.','Lei 15.358/2026, conferida em 07/10/2026; <script>alert(1)</script> & íntegro.',
+ 'A pena aumenta-se de 1/3 (um terço) até a metade; 700 a 1.200 dias-multa.','mediante dolo; indolores não são dolo; desde que cumulativamente presentes.'];
+ for(const source of samples)assert.equal(legalTextParts(source).map(p=>p.text).join(''),source);
+ const parts=legalTextParts(samples[0]);
+ assert.ok(parts.some(p=>p.text==='3 (três) ou mais pessoas'&&p.kind==='quantity'));
+ assert.ok(parts.some(p=>p.text==='para o fim específico de'&&p.kind==='requirement'));
+ assert.equal(legalTextParts(samples[2]).some(p=>p.kind),false);
+ assert.equal(legalTextParts('indolores').some(p=>p.kind),false);
+ assert.ok(legalTextParts('reiteradamente ou não').some(p=>p.text==='reiteradamente ou não'&&p.kind==='exception'));
+ const highlights=load('src/lib/legalHighlights.ts');
+ const sourceUrls=load('src/lib/studySourceUrl.ts',{'./questionFormat':load('src/lib/questionFormat.ts')});
+ const markdown=load('src/components/library/Markdown.tsx',{'@/lib/studySourceUrl':sourceUrls});
+ const reading=load('src/components/library/LegalStudyReading.tsx',{'@/lib/legalHighlights':highlights,'./Markdown':markdown});
+ const html=renderToStaticMarkup(React.createElement(reading.LegalStudyReading,{source:samples[2]}));
+ assert.ok(html.includes('&lt;script&gt;'));assert.ok(!html.includes('<script>'));assert.ok(html.includes('aria-pressed="true"'));
+ const formatted=renderToStaticMarkup(React.createElement(reading.LegalStudyReading,{source:'## Caso concreto\n\n**Salvo** grave ameaça. [Lei](https://www.planalto.gov.br/ccivil_03/leis/l11343.htm)',markdown:true}));
+ assert.match(formatted,/study-example/);assert.match(formatted,/legal-highlight-exception/);assert.match(formatted,/href="https:\/\/www.planalto.gov.br/);
+ const route=readFileSync('src/routes/dashboard/legal-course.$slug.tsx','utf8');
+ assert.match(route,/\(mode === "read" \|\| revealed\)/);
+ assert.match(route,/LegalStudyReading source=\{unit.body_text\}/);
+});
+
+test('Library search finds disciplines, law names and numbers, body content and exact short acronyms',()=>{
+ const search=load('src/lib/librarySearch.ts',{'./legalLibrary':laws});
+ const sample=slug=>({id:slug,slug,title:'Guia de estudo',discipline:'Legislação',topic_label:'Estudo por lei',summary:null,contest_name:'PF'});
+ const maria=search.librarySearchText(sample('legislacao-maria-penha-revisao'),{id:'x',body_md:'Proteção e medidas protetivas de urgência.'});
+ for(const query of ['MARIA DA PENHA','lei 11.340/2006','Lei nº 11.340','11340','medidas urgencia','legislacao'])assert.equal(search.matchesLibrarySearch(maria,query),true,query);
+ const cpp=search.librarySearchText(sample('processo-penal-cpp-provas-flagrante-revisao'));
+ assert.equal(search.matchesLibrarySearch(cpp,'CPP'),true);
+ assert.equal(search.matchesLibrarySearch(cpp,'CP'),false);
+ const rlm=search.librarySearchText({...sample('rlm-a'),discipline:'Raciocínio Lógico Matemático'});
+ assert.equal(search.matchesLibrarySearch(rlm,'RLM'),true);
+ assert.equal(search.matchesLibrarySearch(rlm,'trafico'),false);
+ assert.equal(search.matchesLibrarySearch(maria,''),true);
+});
+
+test('Content search respects active publication, server page caps and failed reads',async()=>{
+ let fail=false;
+ const pages=[[{id:'a',body_md:'assunto'}],[{id:'b',body_md:'lei'}],[]];
+ const offsets=[];
+ const query={select(){return this},eq(field,value){assert.equal(field,'content_status');assert.equal(value,'active');return this},order(){return this},range(start){offsets.push(start);return Promise.resolve(fail?{error:Error('failed'),data:null}:{error:null,data:pages[start]})}};
+ const store=load('src/lib/studyMaterials.ts',{'@/lib/userStorage':{},'@tanstack/react-query':{},'@/integrations/supabase/client':{supabase:{from:table=>{assert.equal(table,'study_materials');return query}}}});
+ const rows=await store.fetchLibrarySearchContent();
+ assert.equal(rows.length,2);assert.deepEqual(offsets,[0,1,2]);
+ fail=true;await assert.rejects(store.fetchLibrarySearchContent(),/failed/);
+});
 
 test('Antifaction comparison preserves practice, separates definitions from offences and renders five colored cases',()=>{
  const pack=JSON.parse(readFileSync('docs/library/antifaccao-comparison-review-2026-10-07.json','utf8'));

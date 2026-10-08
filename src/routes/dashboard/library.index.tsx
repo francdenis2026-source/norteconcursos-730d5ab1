@@ -18,11 +18,13 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { compareMaterialRevision } from "@/lib/legalChronology";
 import { materialLawSlug } from "@/lib/legalLibrary";
+import { librarySearchText, matchesLibrarySearch } from "@/lib/librarySearch";
 import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
 import {
   groupByDiscipline,
   readSlugs,
   useStudyMaterialList,
+  useLibrarySearchContent,
   type StudyMaterialSummary,
 } from "@/lib/studyMaterials";
 
@@ -31,8 +33,6 @@ export const Route = createFileRoute("/dashboard/library/")({
   head: () => ({ meta: [{ title: "Biblioteca de estudo | Norte Concurso" }] }),
 });
 
-const normalize = (value: string) => value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
-
 function LibraryIndex() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
@@ -40,12 +40,19 @@ function LibraryIndex() {
   const [query, setQuery] = useState("");
   const [discipline, setDiscipline] = useState<string>("all");
   const [contest, setContest] = useState<string>("all");
+  const [topic, setTopic] = useState("all");
+  const content = useLibrarySearchContent(signedIn && query.trim().length >= 2, user?.id);
   const [read, setRead] = useState<Set<string>>(new Set());
 
   useEffect(() => setRead(readSlugs()), []);
 
   const items = useMemo(() => data ?? [], [data]);
   const disciplines = useMemo(() => groupByDiscipline(items), [items]);
+  const topics = useMemo(() => Array.from(new Set(items.filter(item=>discipline==="all"||item.discipline===discipline).map(item=>item.topic_label))).sort((a,b)=>a.localeCompare(b,"pt-BR")),[items,discipline]);
+  const searchIndex = useMemo(()=>{
+    const byId=new Map(content.data?.map(row=>[row.id,row]));
+    return new Map(items.map(item=>[item.id,librarySearchText(item,byId.get(item.id))]));
+  },[items,content.data]);
   const contests = useMemo(
     () =>
       Array.from(
@@ -55,18 +62,17 @@ function LibraryIndex() {
   );
 
   const visible = useMemo(() => {
-    const needle = normalize(query.trim());
     return items.filter(
       (item) =>
         (discipline === "all" || item.discipline === discipline) &&
         (contest === "all" || item.contest_name === contest) &&
-        (!needle ||
-          normalize(`${item.title} ${item.topic_label} ${item.summary ?? ""}`).includes(needle)),
+        (topic === "all" || item.topic_label === topic) &&
+        matchesLibrarySearch(searchIndex.get(item.id)??"",query),
     );
-  }, [items, query, discipline, contest]);
+  }, [items, query, discipline, contest, topic, searchIndex]);
 
   const visibleGroups = useMemo(() => groupByDiscipline(visible.filter(item => !materialLawSlug(item))).map(([name, list]) => [name, [...list].sort(compareMaterialRevision)] as [string, StudyMaterialSummary[]]).sort((a, b) => compareMaterialRevision(a[1][0]!, b[1][0]!)), [visible]);
-  const searching = query.trim() !== "" || contest !== "all";
+  const searching = query.trim() !== "" || contest !== "all" || topic !== "all";
   const readCount = items.filter((item) => read.has(item.slug)).length;
 
   if (!authLoading && !signedIn) {
@@ -147,15 +153,19 @@ function LibraryIndex() {
                   aria-hidden="true"
                   className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
                 />
-                <span className="sr-only">Buscar na biblioteca</span>
+                <span className="sr-only">Pesquisar por conteúdo, disciplina, assunto ou lei</span>
                 <input
                   type="search"
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Buscar por assunto, termo ou matéria"
+                  placeholder="Conteúdo, disciplina, assunto ou lei (ex.: CPP, Maria da Penha, 11.340)"
                   className="w-full rounded-xl border bg-background py-2.5 pl-9 pr-3 text-sm outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100"
                 />
               </label>
+              <select value={topic} onChange={event=>setTopic(event.target.value)} aria-label="Filtrar por assunto" className="rounded-xl border bg-background px-3 py-2.5 text-sm sm:max-w-64">
+                <option value="all">Todos os assuntos</option>
+                {topics.map(name=><option key={name} value={name}>{name}</option>)}
+              </select>
               {contests.length > 1 && (
                 <select
                   value={contest}
@@ -173,24 +183,27 @@ function LibraryIndex() {
               )}
             </div>
             <div className="flex flex-wrap gap-2" role="group" aria-label="Filtrar por matéria">
-              <Chip active={discipline === "all"} onClick={() => setDiscipline("all")}>
+              <Chip active={discipline === "all"} onClick={() => {setDiscipline("all");setTopic("all");}}>
                 Todas <b>{items.length}</b>
               </Chip>
               {disciplines.map(([name, list]) => (
-                <Chip key={name} active={discipline === name} onClick={() => setDiscipline(name)}>
+                <Chip key={name} active={discipline === name} onClick={() => {setDiscipline(name);setTopic("all");}}>
                   {name} <b>{list.length}</b>
                 </Chip>
               ))}
             </div>
+            <p role="status" aria-live="polite" className="text-sm text-muted-foreground">{visible.length} materiais encontrados{query.trim().length>=2&&content.isPending?" · pesquisando também o texto dos guias…":""}. Busque pelo nome ou número da lei, com ou sem acentos.</p>
+            {content.isError&&query.trim().length>=2&&<p role="alert" className="text-sm">A busca no texto não carregou; os títulos e assuntos continuam disponíveis. <button className="cursor-pointer underline" onClick={()=>void content.refetch()}>Tentar novamente</button></p>}
+            {(searching||discipline!=="all")&&<button type="button" className="cursor-pointer text-sm underline" onClick={()=>{setQuery("");setDiscipline("all");setContest("all");setTopic("all");}}>Limpar busca e filtros</button>}
           </div>
 
-          <LegalPathCatalog userId={user!.id} materials={visible} searching={query.trim() !== "" || discipline !== "all" || contest !== "all"} />
+          <LegalPathCatalog userId={user!.id} materials={visible} searching={searching || discipline !== "all"} />
 
           {visible.length === 0 ? (
             <Empty
               icon={SearchX}
-              title="Nada encontrado"
-              text="Nenhum material combina com essa busca. Tente outro termo ou limpe o filtro."
+              title={query.trim().length >= 2 && content.isPending ? "Pesquisando o conteúdo…" : "Nada encontrado"}
+              text={query.trim().length >= 2 && content.isPending ? "Aguarde a busca nos textos dos guias publicados." : "Nenhum material combina com essa busca. Tente outro termo ou limpe o filtro."}
               action={
                 <Button
                   variant="outline"
@@ -198,6 +211,7 @@ function LibraryIndex() {
                     setQuery("");
                     setDiscipline("all");
                     setContest("all");
+                    setTopic("all");
                   }}
                 >
                   Limpar filtros

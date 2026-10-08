@@ -10,7 +10,7 @@ import { LegalCoursePractice } from "@/components/library/LegalCoursePractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
-import { Markdown } from "@/components/library/Markdown";
+import { LegalStudyReading } from "@/components/library/LegalStudyReading";
 import { useStudyMaterial } from "@/lib/studyMaterials";
 import { useLegalCourses, useLegalProgress, useLegalUnits, type LegalUnit, type LegalCourse } from "@/lib/legalCourses";
 import { legalProgressSummary, selectNextLegalUnit, type LegalProgress, type ReviewRating } from "@/lib/legalLearning";
@@ -125,7 +125,7 @@ function UnitLesson({ unit, materialSlug, references, progress, userId, onNext }
       {mode === "recall" && <section className="space-y-3 rounded-xl border p-4"><h3 className="font-semibold">Explique com suas palavras</h3><ol className="list-decimal space-y-2 pl-5 text-sm">{unit.recall.prompts.map(prompt => <li key={prompt}>{prompt}</li>)}</ol><label className="block text-sm">Sua resposta de recuperação<textarea className="mt-1 min-h-36 w-full rounded-lg border bg-background p-3" value={response} onChange={e => setResponse(e.target.value)} placeholder="Responda antes de abrir a referência." /></label><Button disabled={!response.trim()} variant="outline" onClick={() => setRevealed(true)}>Conferir com o texto e os critérios</Button></section>}
       {(mode === "read" || revealed) && <>
         {references.map(ref => <aside key={ref.url} className="rounded-xl border border-amber-500/50 p-4 text-sm"><strong>{ref.title}</strong><p className="mt-2">{ref.explanation}</p>{isStudySourceUrl(ref.url) && <a className="mt-2 inline-block underline" href={ref.url} target="_blank" rel="noopener noreferrer">Fonte do tribunal</a>}</aside>)}
-        {unit.unit_key.startsWith("anexo-") ? <div className="library-body overflow-x-auto"><Markdown source={unit.body_text} /></div> : <div className="whitespace-pre-wrap break-words text-base leading-8">{unit.body_text}</div>}
+        <div className={unit.unit_key.startsWith("anexo-") ? "library-body overflow-x-auto" : undefined}><LegalStudyReading source={unit.body_text} markdown={unit.unit_key.startsWith("anexo-")} /></div>
         {unit.recall.figures?.filter(figure => isStudySourceUrl(figure.url)).map(figure => <figure key={figure.url} className="rounded-xl border p-3"><img src={figure.url} alt={figure.title} className="h-auto max-w-full" loading="lazy" onError={event => { event.currentTarget.hidden = true; }} /><figcaption className="mt-2 text-xs"><a href={figure.url} target="_blank" rel="noopener noreferrer" className="underline">{figure.title}</a></figcaption></figure>)}
         <section className="rounded-xl bg-muted/40 p-4"><h3 className="font-semibold">Como conferir sua compreensão</h3><ul className="mt-2 list-disc space-y-2 pl-5 text-sm">{unit.recall.checklist.map(item => <li key={item}>{item}</li>)}</ul></section>
         <WorkedExamples slug={materialSlug} enabled={true} articleLabel={unit.label} />

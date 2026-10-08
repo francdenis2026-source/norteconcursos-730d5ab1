@@ -14,6 +14,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { LibraryVideos } from "@/components/library/LibraryVideos";
 import { Markdown } from "@/components/library/Markdown";
+import { LegalStudyReading } from "@/components/library/LegalStudyReading";
 import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { materialLawSlug } from "@/lib/legalLibrary";
 import { StudyPractice } from "@/components/library/StudyPractice";
@@ -141,7 +142,7 @@ function MaterialPage() {
       <LegalUpdateNotice review={material.legal_review} />
 
       <div className="surface-card library-body">
-        <Markdown source={material.body_md} />
+        {materialLawSlug(material) || material.legal_review ? <LegalStudyReading source={material.body_md} markdown /> : <Markdown source={material.body_md} />}
       </div>
 
       <WorkedExamples

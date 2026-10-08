@@ -7527,6 +7527,18 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 
 /* Illustrated worked examples */
 .worked-examples { padding: clamp(1rem, 3vw, 2rem); display: grid; gap: 1.5rem; }
+.legal-highlight { border-radius: .2em; padding: .04em .12em; color: inherit; font-weight: 650; box-decoration-break: clone; -webkit-box-decoration-break: clone; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.legal-highlight-requirement { background: #dbeafe; color: #1e3a8a; }
+.legal-highlight-exception { background: #fce7f3; color: #831843; }
+.legal-highlight-quantity { background: #fef3c7; color: #78350f; }
+.legal-highlight-sanction { background: #ffedd5; color: #7c2d12; }
+.dark .legal-highlight-requirement { background: #203958; color: #bfdbfe; }
+.dark .legal-highlight-exception { background: #4b203b; color: #fbcfe8; }
+.dark .legal-highlight-quantity { background: #45371b; color: #fde68a; }
+.dark .legal-highlight-sanction { background: #482d1d; color: #fed7aa; }
+.legal-highlight-controls { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+.legal-highlight-controls p { flex-basis: 100%; margin: 0; }
+
 .worked-illustration, .worked-case { border: 1px solid var(--border); border-radius: 1rem; padding: clamp(.875rem, 2.5vw, 1.5rem); min-width: 0; }
 /* Pedagogical examples are visually distinct from the neutral legal text. */
 .worked-case, .study-example, .study-example-cell {

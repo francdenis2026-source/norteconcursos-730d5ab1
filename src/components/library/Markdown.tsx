@@ -13,26 +13,26 @@ export function studyMarkdownHref(value: string): string | null {
  * It builds React nodes directly, so no HTML is ever injected.
  */
 
-function inline(text: string, keyPrefix: string): ReactNode[] {
+function renderInline(text: string, keyPrefix: string, renderText: (text: string) => ReactNode): ReactNode[] {
   const out: ReactNode[] = [];
   const pattern = /(\[[^\]\n]+\]\([^\s)]+\)|\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`)/g;
   let last = 0;
   let index = 0;
   for (const match of text.matchAll(pattern)) {
     const start = match.index ?? 0;
-    if (start > last) out.push(text.slice(last, start));
+    if (start > last) out.push(<Fragment key={`${keyPrefix}-plain-${index}`}>{renderText(text.slice(last, start))}</Fragment>);
     const token = match[0];
     const key = `${keyPrefix}-${index++}`;
     if (token.startsWith("[")) {
       const separator = token.indexOf("](");
       const href = studyMarkdownHref(token.slice(separator + 2, -1));
       out.push(href ? <a key={key} href={href} className="cursor-pointer underline" {...(href.startsWith("https:") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{token.slice(1, separator)}</a> : token);
-    } else if (token.startsWith("**")) out.push(<strong key={key}>{token.slice(2, -2)}</strong>);
+    } else if (token.startsWith("**")) out.push(<strong key={key}>{renderText(token.slice(2, -2))}</strong>);
     else if (token.startsWith("`")) out.push(<code key={key}>{token.slice(1, -1)}</code>);
-    else out.push(<em key={key}>{token.slice(1, -1)}</em>);
+    else out.push(<em key={key}>{renderText(token.slice(1, -1))}</em>);
     last = start + token.length;
   }
-  if (last < text.length) out.push(text.slice(last));
+  if (last < text.length) out.push(<Fragment key={`${keyPrefix}-tail`}>{renderText(text.slice(last))}</Fragment>);
   return out;
 }
 
@@ -134,12 +134,13 @@ function parse(markdown: string): Block[] {
   return highlightExampleSections(blocks);
 }
 
-function renderBlocks(blocks: Block[]): ReactNode[] {
+function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode): ReactNode[] {
+  const inline = (text: string, key: string) => renderInline(text, key, renderText);
   return blocks.map((block, index) => {
         const key = `b${index}`;
         switch (block.type) {
           case "example":
-            return <section key={key} className="study-example" aria-label="Exemplo aplicado">{renderBlocks(block.blocks)}</section>;
+            return <section key={key} className="study-example" aria-label="Exemplo aplicado">{renderBlocks(block.blocks, renderText)}</section>;
           case "h2":
             return <h2 key={key}>{inline(block.text, key)}</h2>;
           case "h3":
@@ -203,6 +204,6 @@ function renderBlocks(blocks: Block[]): ReactNode[] {
       });
 }
 
-export function Markdown({ source }: { source: string }) {
-  return <div className="study-prose">{renderBlocks(parse(source))}</div>;
+export function Markdown({ source, renderText = text => text }: { source: string; renderText?: ((text: string) => ReactNode) | undefined }) {
+  return <div className="study-prose">{renderBlocks(parse(source), renderText)}</div>;
 }
