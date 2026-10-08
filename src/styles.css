@@ -7538,6 +7538,10 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .dark .legal-highlight-sanction { background: #482d1d; color: #fed7aa; }
 .legal-highlight-controls { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
 .legal-highlight-controls p { flex-basis: 100%; margin: 0; }
+.library-search-match { background: #fde68a; color: #78350f; border-radius: .2em; padding: 0 .1em; font-weight: 750; }
+.library-law-match { background: #fffbeb; border-color: #f59e0b; box-shadow: 0 0 0 1px #f59e0b; }
+.dark .library-search-match { background: #785420; color: #fef3c7; }
+.dark .library-law-match { background: #2c2416; border-color: #d97706; box-shadow: 0 0 0 1px #d97706; }
 
 .worked-illustration, .worked-case { border: 1px solid var(--border); border-radius: 1rem; padding: clamp(.875rem, 2.5vw, 1.5rem); min-width: 0; }
 /* Pedagogical examples are visually distinct from the neutral legal text. */

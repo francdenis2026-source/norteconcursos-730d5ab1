@@ -18,6 +18,24 @@ function load(file,overrides={}) {
 }
 const laws=load('src/lib/legalLibrary.ts');
 const chronology=load('src/lib/legalChronology.ts');
+const librarySearch=load('src/lib/librarySearch.ts',{'./legalLibrary':laws});
+const searchMatch=load('src/components/library/LibrarySearchMatch.tsx',{'@/lib/librarySearch':librarySearch});
+
+test('Typed law identity excludes cross references and highlights original spelling safely',()=>{
+ for(const query of ['11.340','11340','Lei nº 11.340/2006','maria da penha'])assert.equal(librarySearch.matchingLibraryLaws(query).join(','),'maria-penha');
+ assert.equal(librarySearch.matchingLibraryLaws('CP').join(','),'codigo-penal');
+ assert.equal(librarySearch.matchingLibraryLaws('CPP').join(','),'codigo-processo-penal');
+ assert.equal(librarySearch.matchingLibraryLaws('15358').join(','),'antifaccao');
+ assert.equal(librarySearch.matchingLibraryLaws('lei').length,0);
+ assert.equal(librarySearch.matchingLibraryLaws('2026').length,0);
+ for(const [text,query,matched] of [['Lei 11.340/2006','11340','11.340'],['Trânsito e proteção','transito','Trânsito'],['CP não é CPP','CP','CP']]){
+  const parts=librarySearch.libraryMatchParts(text,query);
+  assert.equal(parts.map(p=>p.text).join(''),text);
+  assert.equal(parts.filter(p=>p.match).map(p=>p.text).join(''),matched);
+ }
+ const html=renderToStaticMarkup(React.createElement(searchMatch.LibrarySearchMatch,{text:'<script>Lei 11.340</script>',query:'11340'}));
+ assert.ok(html.includes('&lt;script&gt;'));assert.match(html,/<mark class="library-search-match">11\.340<\/mark>/);assert.ok(!html.includes('<script>'));
+});
 
 test('Legal highlights preserve source characters, classify full expressions and avoid diploma numbers',()=>{
  const {legalTextParts}=load('src/lib/legalHighlights.ts');
@@ -147,6 +165,8 @@ test('Law filtering uses official diploma identity, separates CP/CPP and handles
 test('Catalog renders one study entry per law in separate areas and keeps deep reading accessible',()=>{
  const data=manifest.map(m=>({...laws.legalLibraryEntry(m.course_slug),id:m.course_slug,overview:{current_units:m.current_units,chapters:[{}]}}));
  const {LegalPathCatalog}=load('src/components/library/LegalPathCatalog.tsx',{
+  '@/lib/librarySearch':librarySearch,
+  './LibrarySearchMatch':searchMatch,
   '@/lib/legalCourses':{useLegalCourses:()=>({data,isPending:false,isError:false})},
   '@/lib/legalLibrary':laws,
   '@/lib/legalChronology':chronology,
@@ -161,6 +181,8 @@ test('Catalog renders one study entry per law in separate areas and keeps deep r
  assert.equal((only.match(/Estudar: guia, exemplos e flashcards/g)??[]).length,1);
  assert.ok(!only.includes('/dashboard/library/processo-penal-cpp-provas-flagrante-revisao'));
  assert.ok(html.indexOf('/dashboard/library/penal-principios-direito-penal')<html.indexOf('/dashboard/library/legislacao-transito-revisao'));
+ const matched=renderToStaticMarkup(React.createElement(LegalPathCatalog,{userId:'test',materials:[{slug:'legislacao-maria-penha-revisao'}],searching:true,query:'11340'}));
+ assert.match(matched,/library-law-match/);assert.match(matched,/library-search-match">11\.340/);assert.match(matched,/Lei correspondente à busca/);
 });
 
 test('Laws sort by dated official acts rather than original year or verification timestamps',()=>{

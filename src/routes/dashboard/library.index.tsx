@@ -18,7 +18,8 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { compareMaterialRevision } from "@/lib/legalChronology";
 import { materialLawSlug } from "@/lib/legalLibrary";
-import { librarySearchText, matchesLibrarySearch } from "@/lib/librarySearch";
+import { librarySearchText, matchesLibrarySearch, matchingLibraryLaws } from "@/lib/librarySearch";
+import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
 import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
 import {
   groupByDiscipline,
@@ -41,7 +42,8 @@ function LibraryIndex() {
   const [discipline, setDiscipline] = useState<string>("all");
   const [contest, setContest] = useState<string>("all");
   const [topic, setTopic] = useState("all");
-  const content = useLibrarySearchContent(signedIn && query.trim().length >= 2, user?.id);
+  const lawMatches = useMemo(()=>matchingLibraryLaws(query),[query]);
+  const content = useLibrarySearchContent(signedIn && query.trim().length >= 2 && !lawMatches.length, user?.id);
   const [read, setRead] = useState<Set<string>>(new Set());
 
   useEffect(() => setRead(readSlugs()), []);
@@ -67,9 +69,9 @@ function LibraryIndex() {
         (discipline === "all" || item.discipline === discipline) &&
         (contest === "all" || item.contest_name === contest) &&
         (topic === "all" || item.topic_label === topic) &&
-        matchesLibrarySearch(searchIndex.get(item.id)??"",query),
+        (lawMatches.length ? lawMatches.includes(materialLawSlug(item)??"") : matchesLibrarySearch(searchIndex.get(item.id)??"",query)),
     );
-  }, [items, query, discipline, contest, topic, searchIndex]);
+  }, [items, query, discipline, contest, topic, searchIndex, lawMatches]);
 
   const visibleGroups = useMemo(() => groupByDiscipline(visible.filter(item => !materialLawSlug(item))).map(([name, list]) => [name, [...list].sort(compareMaterialRevision)] as [string, StudyMaterialSummary[]]).sort((a, b) => compareMaterialRevision(a[1][0]!, b[1][0]!)), [visible]);
   const searching = query.trim() !== "" || contest !== "all" || topic !== "all";
@@ -192,18 +194,18 @@ function LibraryIndex() {
                 </Chip>
               ))}
             </div>
-            <p role="status" aria-live="polite" className="text-sm text-muted-foreground">{visible.length} materiais encontrados{query.trim().length>=2&&content.isPending?" · pesquisando também o texto dos guias…":""}. Busque pelo nome ou número da lei, com ou sem acentos.</p>
+            <p role="status" aria-live="polite" className="text-sm text-muted-foreground">{visible.length} materiais encontrados{lawMatches.length?" · mostrando as leis correspondentes à busca":query.trim().length>=2&&content.isPending?" · pesquisando também o texto dos guias…":""}. Busque pelo nome ou número da lei, com ou sem acentos.</p>
             {content.isError&&query.trim().length>=2&&<p role="alert" className="text-sm">A busca no texto não carregou; os títulos e assuntos continuam disponíveis. <button className="cursor-pointer underline" onClick={()=>void content.refetch()}>Tentar novamente</button></p>}
             {(searching||discipline!=="all")&&<button type="button" className="cursor-pointer text-sm underline" onClick={()=>{setQuery("");setDiscipline("all");setContest("all");setTopic("all");}}>Limpar busca e filtros</button>}
           </div>
 
-          <LegalPathCatalog userId={user!.id} materials={visible} searching={searching || discipline !== "all"} />
+          <LegalPathCatalog userId={user!.id} materials={visible} searching={searching || discipline !== "all"} query={query} />
 
           {visible.length === 0 ? (
             <Empty
               icon={SearchX}
-              title={query.trim().length >= 2 && content.isPending ? "Pesquisando o conteúdo…" : "Nada encontrado"}
-              text={query.trim().length >= 2 && content.isPending ? "Aguarde a busca nos textos dos guias publicados." : "Nenhum material combina com essa busca. Tente outro termo ou limpe o filtro."}
+              title={!lawMatches.length && query.trim().length >= 2 && content.isPending ? "Pesquisando o conteúdo…" : "Nada encontrado"}
+              text={!lawMatches.length && query.trim().length >= 2 && content.isPending ? "Aguarde a busca nos textos dos guias publicados." : "Nenhum material combina com essa busca. Tente outro termo ou limpe o filtro."}
               action={
                 <Button
                   variant="outline"
@@ -225,6 +227,7 @@ function LibraryIndex() {
                 name={name}
                 list={list}
                 read={read}
+                query={query}
                 defaultOpen={
                   discipline !== "all" || searching || index === 0 || visible.length <= 12
                 }
@@ -268,11 +271,13 @@ function DisciplineSection({
   list,
   read,
   defaultOpen,
+  query,
 }: {
   name: string;
   list: StudyMaterialSummary[];
   read: Set<string>;
   defaultOpen: boolean;
+  query: string;
 }) {
   const ordered = useMemo(() => [...list].sort(compareMaterialRevision), [list]);
   const position = new Map(ordered.map((item, index) => [item.slug, index + 1]));
@@ -334,6 +339,7 @@ function DisciplineSection({
                   item={item}
                   number={position.get(item.slug) ?? 0}
                   isRead={read.has(item.slug)}
+                  query={query}
                 />
               ))}
             </ol>
@@ -348,10 +354,12 @@ function MaterialRow({
   item,
   number,
   isRead,
+  query,
 }: {
   item: StudyMaterialSummary;
   number: number;
   isRead: boolean;
+  query: string;
 }) {
   return (
     <li>
@@ -371,13 +379,13 @@ function MaterialRow({
         </span>
         <span className="min-w-0 flex-1">
           <span className="block text-[10px] font-bold uppercase tracking-wide text-emerald-700">
-            {item.topic_label}
+            <LibrarySearchMatch text={item.topic_label} query={query}/>
           </span>
-          <strong className="block text-sm leading-snug">{item.title}</strong>
+          <strong className="block text-sm leading-snug"><LibrarySearchMatch text={item.title} query={query}/></strong>
           {item.updated_at && <span className="mt-1 block text-xs text-muted-foreground">Material atualizado em {new Date(item.updated_at).toLocaleDateString("pt-BR", {timeZone:"America/Rio_Branco"})}</span>}
           {item.summary && (
             <span className="mt-0.5 line-clamp-2 block text-xs text-muted-foreground">
-              {item.summary}
+              <LibrarySearchMatch text={item.summary} query={query}/>
             </span>
           )}
         </span>
