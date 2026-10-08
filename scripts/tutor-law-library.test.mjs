@@ -17,6 +17,7 @@ function load(file,overrides={}) {
  return module.exports;
 }
 const laws=load('src/lib/legalLibrary.ts');
+const chronology=load('src/lib/legalChronology.ts');
 
 test('Current library revision migrations have distinct version identifiers',()=>{
  const versions=readdirSync('supabase/migrations').filter(name=>/^20261007\d+_.*\.sql$/.test(name)).map(name=>name.split('_')[0]);
@@ -60,6 +61,7 @@ test('Catalog renders one study entry per law in separate areas and keeps deep r
  const {LegalPathCatalog}=load('src/components/library/LegalPathCatalog.tsx',{
   '@/lib/legalCourses':{useLegalCourses:()=>({data,isPending:false,isError:false})},
   '@/lib/legalLibrary':laws,
+  '@/lib/legalChronology':chronology,
   '@tanstack/react-router':{Link:({children,to,params})=>React.createElement('a',{href:to.replace('$slug',params.slug)},children)},
  });
  const materials=manifest.map(m=>({slug:m.material_slug}));
@@ -69,7 +71,29 @@ test('Catalog renders one study entry per law in separate areas and keeps deep r
  for(const group of laws.LEGAL_GROUPS)assert.ok(html.includes(group));
  const only=renderToStaticMarkup(React.createElement(LegalPathCatalog,{userId:'test',materials:[{slug:'legislacao-drogas-revisao'}],searching:true}));
  assert.equal((only.match(/Estudar: guia, exemplos e flashcards/g)??[]).length,1);
- assert.ok(!only.includes('Direito Processual Penal — CPP'));
+ assert.ok(!only.includes('/dashboard/library/processo-penal-cpp-provas-flagrante-revisao'));
+ assert.ok(html.indexOf('/dashboard/library/penal-principios-direito-penal')<html.indexOf('/dashboard/library/legislacao-transito-revisao'));
+});
+
+test('Laws sort by dated official acts rather than original year or verification timestamps',()=>{
+ const entries=laws.LEGAL_LIBRARY;
+ const ordered=[...entries].reverse().sort(chronology.compareLawChronology);
+ assert.equal(Object.keys(chronology.LAW_CHRONOLOGY).length,39);
+ assert.equal(ordered[0].slug,'codigo-penal');
+ for(let i=1;i<ordered.length;i++)assert.ok(chronology.LAW_CHRONOLOGY[ordered[i-1].slug].date>=chronology.LAW_CHRONOLOGY[ordered[i].slug].date);
+ assert.ok(ordered.findIndex(c=>c.slug==='tortura')<ordered.findIndex(c=>c.slug==='budapeste'));
+ assert.equal(chronology.compareLawChronology({slug:'unknown',title:'A'},{slug:'codigo-penal',title:'B'})>0,true);
+ assert.ok(chronology.lawChronologyLabel('codigo-penal').includes('22/09/2026'));
+ for(const value of Object.values(chronology.LAW_CHRONOLOGY)){
+  assert.match(value.date,/^\d{4}-\d{2}-\d{2}$/);
+  assert.equal(new URL(value.source_url).hostname,'www.planalto.gov.br');
+  assert.ok(!['expired','reference'].includes(value.state));
+ }
+});
+
+test('Other study material uses its own revision date, with undated entries last',()=>{
+ const rows=[{title:'Antigo',updated_at:'2024-01-01',sort_order:1},{title:'Atual',updated_at:'2026-10-07',sort_order:90},{title:'Sem data'}];
+ assert.deepEqual(rows.sort(chronology.compareMaterialRevision).map(r=>r.title),['Atual','Antigo','Sem data']);
 });
 
 test('Relevant update states stay visible and complementary laws do not acquire historical-edital quizzes',()=>{

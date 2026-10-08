@@ -16,11 +16,11 @@ import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { compareMaterialRevision } from "@/lib/legalChronology";
 import { materialLawSlug } from "@/lib/legalLibrary";
 import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
 import {
   groupByDiscipline,
-  groupByEditalTopic,
   readSlugs,
   useStudyMaterialList,
   type StudyMaterialSummary,
@@ -65,7 +65,7 @@ function LibraryIndex() {
     );
   }, [items, query, discipline, contest]);
 
-  const visibleGroups = useMemo(() => groupByDiscipline(visible.filter(item => !materialLawSlug(item))), [visible]);
+  const visibleGroups = useMemo(() => groupByDiscipline(visible.filter(item => !materialLawSlug(item))).map(([name, list]) => [name, [...list].sort(compareMaterialRevision)] as [string, StudyMaterialSummary[]]).sort((a, b) => compareMaterialRevision(a[1][0]!, b[1][0]!)), [visible]);
   const searching = query.trim() !== "" || contest !== "all";
   const readCount = items.filter((item) => read.has(item.slug)).length;
 
@@ -95,7 +95,7 @@ function LibraryIndex() {
             Biblioteca de <em>estudo</em>
           </>
         }
-        description="Resumos por matéria, na ordem do edital e revisados antes de chegar até você. Leia, fixe e depois treine com questões."
+        description="Leis da alteração mais recente à mais antiga. Nas outras matérias, materiais da revisão mais recente à mais antiga. Leia, fixe e depois treine com questões."
         actions={
           <Button asChild className="hero-btn-ghost gap-2" variant="outline">
             <Link to="/dashboard/edital">
@@ -260,9 +260,9 @@ function DisciplineSection({
   read: Set<string>;
   defaultOpen: boolean;
 }) {
-  const ordered = useMemo(() => [...list].sort((a, b) => a.sort_order - b.sort_order), [list]);
+  const ordered = useMemo(() => [...list].sort(compareMaterialRevision), [list]);
   const position = new Map(ordered.map((item, index) => [item.slug, index + 1]));
-  const groups = useMemo(() => groupByEditalTopic(ordered), [ordered]);
+  const groups = useMemo(() => [{order: null as number | null, items: ordered}], [ordered]);
   const byEdital = groups.filter((group) => group.order !== null).length > 1;
   const done = ordered.filter((item) => read.has(item.slug)).length;
   const next = ordered.find((item) => !read.has(item.slug));
@@ -360,6 +360,7 @@ function MaterialRow({
             {item.topic_label}
           </span>
           <strong className="block text-sm leading-snug">{item.title}</strong>
+          {item.updated_at && <span className="mt-1 block text-xs text-muted-foreground">Material atualizado em {new Date(item.updated_at).toLocaleDateString("pt-BR", {timeZone:"America/Rio_Branco"})}</span>}
           {item.summary && (
             <span className="mt-0.5 line-clamp-2 block text-xs text-muted-foreground">
               {item.summary}

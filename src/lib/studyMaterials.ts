@@ -19,6 +19,7 @@ export type StudyMaterialSummary = {
   syllabus_topic_order: number | null;
   law_version_checked_at: string | null;
   content_status: StudyMaterialStatus;
+  updated_at?: string;
   law_course_slug?: string | null;
 };
 
@@ -37,7 +38,7 @@ export type StudyMaterial = StudyMaterialSummary & {
 };
 
 const SUMMARY_COLUMNS =
-  "id,slug,discipline,topic_label,sort_order,title,summary,contest_name,syllabus_topic_order,law_version_checked_at,content_status,law_course_slug:legal_review->>course_slug";
+  "id,slug,discipline,topic_label,sort_order,title,summary,contest_name,syllabus_topic_order,law_version_checked_at,content_status,updated_at,law_course_slug:legal_review->>course_slug";
 
 export const STATUS_LABEL: Record<StudyMaterialStatus, string> = {
   under_review: "Em revisão",
@@ -76,7 +77,7 @@ export function useStudyMaterial(slug: string, enabled: boolean) {
       const { data, error } = await supabase
         .from("study_materials")
         .select(
-          `${SUMMARY_COLUMNS},flashcards,quiz,body_md,source_note,legal_basis,reviewed_at,updated_at,legal_review`,
+          `${SUMMARY_COLUMNS},flashcards,quiz,body_md,source_note,legal_basis,reviewed_at,legal_review`,
         )
         .eq("slug", slug)
         .eq("content_status", "active")
