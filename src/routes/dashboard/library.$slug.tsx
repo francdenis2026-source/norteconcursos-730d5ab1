@@ -14,6 +14,8 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { LibraryVideos } from "@/components/library/LibraryVideos";
 import { Markdown } from "@/components/library/Markdown";
+import { LawPracticeLink } from "@/components/library/LawPracticeLink";
+import { materialLawSlug } from "@/lib/legalLibrary";
 import { StudyPractice } from "@/components/library/StudyPractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
@@ -180,7 +182,7 @@ function MaterialPage() {
         topic={material.topic_label ?? material.title}
       />
 
-      <div className="library-cta no-print">
+      {materialLawSlug(material) ? <LawPracticeLink law={materialLawSlug(material)!} userId={user!.id} /> : <div className="library-cta no-print">
         <div>
           <strong>Hora de fixar</strong>
           <span>Resolva questões de {material.discipline} para testar o que acabou de ler.</span>
@@ -193,7 +195,7 @@ function MaterialPage() {
             <BrainCircuit className="h-4 w-4" /> Treinar questões
           </Link>
         </Button>
-      </div>
+      </div>}
 
       <nav className="library-pager no-print" aria-label="Outros materiais da matéria">
         {siblings.prev ? (

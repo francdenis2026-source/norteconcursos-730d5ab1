@@ -1,4 +1,5 @@
 import * as React from "react";
+import { legalLibraryEntry, questionMatchesLaw } from "@/lib/legalLibrary";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
   ArrowLeft,
@@ -73,6 +74,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     search: Record<string, unknown>,
   ): Partial<
     Record<
+      | "law"
       | "contest"
       | "board"
       | "career"
@@ -89,6 +91,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       string | undefined
     >
   > => ({
+    law: typeof search["law"] === "string" ? search["law"] : undefined,
     contest: typeof search["contest"] === "string" ? search["contest"] : undefined,
     board: typeof search["board"] === "string" ? search["board"] : undefined,
     career: typeof search["career"] === "string" ? search["career"] : undefined,
@@ -134,7 +137,9 @@ function QuestionTrainer() {
     if (isGuest) navigate({ to: "/desafio-diario", replace: true });
   }, [isGuest, navigate]);
   const canLoad = !authLoading && !isGuest && !!userId && userId !== "demo-user";
-  const { catalog, loading: catalogLoading, error } = useQuestionCatalog(userId, canLoad);
+  const { catalog: fullCatalog, loading: catalogLoading, error } = useQuestionCatalog(userId, canLoad);
+  const law = routeFilters.law;
+  const catalog = React.useMemo(() => law === undefined ? fullCatalog : fullCatalog.filter(q => questionMatchesLaw(q, law)), [fullCatalog, law]);
   const { data: libraryMaterials } = useStudyMaterialList(canLoad);
   const libraryByDiscipline = React.useMemo(() => {
     const map = new Map<string, StudyMaterialSummary[]>();
@@ -179,6 +184,23 @@ function QuestionTrainer() {
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
   const [results, setResults] = React.useState<("ok" | "err")[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
+  React.useEffect(() => {
+    // A new law link must never reuse a session or filters belonging to the previous law.
+    setStarted(false); setQuestions([]); setResults([]); setIndex(0); setModal(null);
+    setContest(routeFilters.contest || "all"); setBoard(routeFilters.board || "all");
+    setCareer(routeFilters.career || "all"); setYear(routeFilters.year || "all");
+    setSubject(routeFilters.subject || "all"); setSource(routeFilters.source || "all");
+    setReviewed(routeFilters.reviewed || "all"); setState(routeFilters.state || "all");
+    setCategory(routeFilters.category || "all"); setArea(routeFilters.area || "all");
+    setTopic(routeFilters.topic || "all"); setDifficulty("all"); setAppliedExam("all");
+    autoStart.current = routeFilters.go === "1";
+  }, [law]);
+  const lawNotice = law !== undefined ? <aside className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm" role="status">
+    <strong>{legalLibraryEntry(law)?.title ?? "Lei não identificada"}</strong>
+    <p className="mt-1">{catalogLoading ? "Conferindo o banco…" : `${catalog.length} questões com referência oficial a este diploma.`} O filtro não inclui questões de outras leis automaticamente.</p>
+    {!catalogLoading && !catalog.length && <p className="mt-2">Use os casos resolvidos e flashcards do material enquanto não há questões identificadas para esta lei no banco.</p>}
+    <Link to="/dashboard/question-trainer" search={{}} className="mt-2 inline-block underline">Remover o filtro de lei</Link>
+  </aside> : null;
   const correct = results.filter((r) => r === "ok").length;
   const wrong = results.filter((r) => r === "err").length;
 
@@ -406,6 +428,7 @@ function QuestionTrainer() {
   // Poucas questões classificadas naquele assunto: amplia para a matéria inteira em vez de abrir vazio.
   React.useEffect(() => {
     if (
+      law !== undefined ||
       !autoStart.current ||
       loading ||
       started ||
@@ -416,7 +439,7 @@ function QuestionTrainer() {
       return;
     setTopic("all");
     toast.info("Poucas questões desse assunto: mostrando a matéria inteira.");
-  }, [loading, started, catalog.length, pool.length, topic]);
+  }, [law, loading, started, catalog.length, pool.length, topic]);
   // Veio do cronograma com ?go=1: começa direto, com 10 questões do assunto, assim que houver questões.
   React.useEffect(() => {
     if (!autoStart.current || loading || started || pool.length === 0) return;
@@ -578,6 +601,7 @@ function QuestionTrainer() {
   if (!started)
     return (
       <div className="space-y-4">
+        {lawNotice}
         <TrainerSetup
           total={catalog.length}
           available={pool.length}
@@ -657,6 +681,7 @@ function QuestionTrainer() {
   };
   return (
     <div className="trainer-session-shell mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+      {lawNotice}
       {routeFilters.reinforce === "1" && (
         <div className="reinforce-banner">
           <BookOpenCheck className="h-5 w-5 shrink-0" />

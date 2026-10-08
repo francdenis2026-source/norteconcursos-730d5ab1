@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LegalCoursePractice } from "@/components/library/LegalCoursePractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
+import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { Markdown } from "@/components/library/Markdown";
 import { useStudyMaterial } from "@/lib/studyMaterials";
@@ -76,6 +77,7 @@ function LegalCoursePage() {
       <p className="text-sm text-muted-foreground">Este conjunto testa os conceitos indicados no resumo de aplicação. A cobertura da leitura integral é acompanhada por dispositivo.</p>
       <WorkedExamples key={`${userId}:${course.material_slug}`} slug={course.material_slug} enabled={!!userId} />
       {userId && <LegalCoursePractice key={`${userId}:${material.data.slug}`} courseId={course.id} userId={userId} material={material.data} />}
+      {userId && <LawPracticeLink law={course.slug} userId={userId} />}
       <Link to="/dashboard/library/$slug" params={{ slug: course.material_slug }} className="inline-block underline">Abrir explicações e exemplos de aplicação</Link>
     </> : <p>Não foi possível carregar os exercícios. <button onClick={() => void material.refetch()} className="underline">Tentar novamente</button></p> : <div className="grid gap-4 lg:grid-cols-[300px_minmax(0,1fr)]">
       <aside className="surface-card space-y-3 p-4">

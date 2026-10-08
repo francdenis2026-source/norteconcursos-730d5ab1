@@ -16,6 +16,7 @@ import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { materialLawSlug } from "@/lib/legalLibrary";
 import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
 import {
   groupByDiscipline,
@@ -64,7 +65,7 @@ function LibraryIndex() {
     );
   }, [items, query, discipline, contest]);
 
-  const visibleGroups = useMemo(() => groupByDiscipline(visible), [visible]);
+  const visibleGroups = useMemo(() => groupByDiscipline(visible.filter(item => !materialLawSlug(item))), [visible]);
   const searching = query.trim() !== "" || contest !== "all";
   const readCount = items.filter((item) => read.has(item.slug)).length;
 
@@ -110,7 +111,6 @@ function LibraryIndex() {
         </div>
       </PageHero>
 
-      {signedIn && <LegalPathCatalog userId={user.id} />}
 
       {isPending && signedIn ? (
         <div className="space-y-3">
@@ -183,6 +183,8 @@ function LibraryIndex() {
               ))}
             </div>
           </div>
+
+          <LegalPathCatalog userId={user!.id} materials={visible} searching={query.trim() !== "" || discipline !== "all" || contest !== "all"} />
 
           {visible.length === 0 ? (
             <Empty

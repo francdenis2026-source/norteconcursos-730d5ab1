@@ -19,6 +19,7 @@ export type StudyMaterialSummary = {
   syllabus_topic_order: number | null;
   law_version_checked_at: string | null;
   content_status: StudyMaterialStatus;
+  law_course_slug?: string | null;
 };
 
 export type Flashcard = { f: string; b: string };
@@ -36,7 +37,7 @@ export type StudyMaterial = StudyMaterialSummary & {
 };
 
 const SUMMARY_COLUMNS =
-  "id,slug,discipline,topic_label,sort_order,title,summary,contest_name,syllabus_topic_order,law_version_checked_at,content_status";
+  "id,slug,discipline,topic_label,sort_order,title,summary,contest_name,syllabus_topic_order,law_version_checked_at,content_status,law_course_slug:legal_review->>course_slug";
 
 export const STATUS_LABEL: Record<StudyMaterialStatus, string> = {
   under_review: "Em revisão",
