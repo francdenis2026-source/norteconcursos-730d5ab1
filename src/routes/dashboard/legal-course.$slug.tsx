@@ -59,7 +59,7 @@ function LegalCoursePage() {
       <p className="mt-3 text-sm"><strong>Edital de referência:</strong> {course.overview.contest}. A leitura integral inclui disposições que podem exceder o programa do cargo; confira seu edital.</p>
       {isStudySourceUrl(course.source_url) && <a href={course.source_url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm underline">Texto oficial · conferido em {new Date(course.checked_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}</a>}
     </header>
-    <LegalUpdateNotice review={course.legal_review ? { ...course.legal_review, course_slug: undefined } : null} />
+    <LegalUpdateNotice review={course.legal_review ? { ...course.legal_review, course_slug: undefined } : null} slug={course.material_slug} />
     <details className="surface-card p-5">
       <summary className="cursor-pointer font-semibold">Objetivos, atualizações e jurisprudência</summary>
       <ul className="mt-3 list-disc space-y-2 pl-5 text-sm">{course.overview.objectives.map(goal => <li key={goal}>{goal}</li>)}</ul>
