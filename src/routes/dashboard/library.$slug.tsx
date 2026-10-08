@@ -139,7 +139,7 @@ function MaterialPage() {
         </ul>
       </header>
 
-      <LegalUpdateNotice review={material.legal_review} />
+      <LegalUpdateNotice review={material.legal_review} slug={material.slug} />
 
       <div className="surface-card library-body">
         {materialLawSlug(material) || material.legal_review ? <LegalStudyReading source={material.body_md} markdown /> : <Markdown source={material.body_md} />}
