@@ -1,16 +1,16 @@
-# Caderno PF 2012: primeiro lote de revisão individual
+# Caderno PF 2012: lotes de revisão individual
 
 ## Resultado confirmado no Supabase
 
-Foram registradas **160 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
+Foram registradas **260 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
 
 | Situação | Quantidade |
 | --- | ---: |
-| Questões aprovadas e ativas | 62 |
-| Itens retidos para complementação | 95 |
-| Repetições internas excluídas da publicação | 2 |
-| Enunciado incompleto excluído da publicação | 1 |
-| Candidatos ainda sem revisão individual neste caderno | 840 |
+| Questões aprovadas e ativas | 131 |
+| Itens retidos para complementação | 124 |
+| Repetições internas excluídas da publicação | 3 |
+| Enunciados inadequados excluídos da publicação | 2 |
+| Candidatos ainda sem revisão individual neste caderno | 740 |
 | Registros privados de extração deste caderno | 1.000 |
 
 Os 1.000 registros são candidatos extraídos, não uma certificação de 1.000 questões distintas e aproveitáveis. Foram associadas respostas editoriais a 982 registros; as demais exigem conferência. A revisão das 17 apostilas está **incompleta**. Não extrapolar os números deste lote para o total do acervo.
@@ -25,8 +25,13 @@ A revisão preservou o enunciado, página, identificação e resposta extraídos
 
 As questões de extorsão têm observação sobre a distinção entre dispensa de obtenção da vantagem e necessidade de efeito do constrangimento sobre a vítima, conferida na decisão da Terceira Seção do STJ publicada em junho de 2026. Não confundir a atualidade do comentário com aplicação retroativa de norma mais gravosa a fato antigo.
 
+O lote de questões 161–260 acrescentou 69 publicações, manteve 29 itens pendentes, identificou uma duplicata e rejeitou um enunciado histórico sem período definido. A revisão contemplou patrimônio, fé pública, administração pública e inquérito. Um rótulo editorial de resposta foi removido do texto publicado, mantendo a extração original intacta. Questões sobre arquivamento do inquérito e tipificações controvertidas permaneceram retidas para confronto específico com a jurisprudência atual.
+
 Fontes específicas consultadas:
 
+- [Código de Processo Penal compilado — Planalto](https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm).
+- [STJ: uso de CNH falsa, AgRg no REsp 2.131.614/DF, DJe 19/09/2024](https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=19%2F09%2F2024&num_registro=202400978686).
+- [STJ: consunção entre falsificação e uso pelo próprio falsificador, HC 70.703/GO](https://stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?dt=20120307&formato=HTML&nreg=200602560430&seq=1123710).
 - [Código Penal compilado — Planalto](https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm).
 - [Edital PF 2025 atualizado até a retificação nº 4 — Cebraspe](https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf).
 - [Lei 7.492/1986 — Planalto](https://www.planalto.gov.br/ccivil_03/leis/l7492.htm), para análise de item mantido sem publicação.
@@ -42,11 +47,15 @@ O importador passou a aceitar o formato nativo **certo/errado**, exigindo indica
 
 - Validação offline dos pacotes e das duas etapas de revisão: concluída.
 - Testes de regressão: **86 passaram**, incluindo rejeição de respostas e alternativas incompatíveis com o formato C/E.
-- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 62 publicações; isto não certifica ausência de duplicatas semânticas.
-- Conferência de banco: 1.000 extrações privadas, 160 decisões auditadas e 62 publicações; textos, respostas originais e decisões preservados.
+- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 131 publicações; isto não certifica ausência de duplicatas semânticas.
+- Conferência de banco: 1.000 extrações privadas, 260 decisões auditadas e 131 publicações; textos, respostas originais e decisões preservados.
 
 Os PDFs privados, enunciados extraídos, pacotes de importação, capturas oficiais e relatórios detalhados permanecem nos outputs locais, fora do Git. Nenhuma credencial integra este commit. A biblioteca não foi ampliada a partir de trechos ainda sem catalogação e revisão concluídas.
 
 ## Trabalho restante
 
-Continuar a revisão dos 840 candidatos deste caderno e complementar os 95 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
+Continuar a revisão dos 740 candidatos deste caderno e complementar os 124 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
+
+## Cadência autorizada
+
+Aplicar ao Supabase e enviar à main a cada 100 decisões individuais adicionais, após validar e conferir o resultado. Monitorar os limites da conta; ao atingir 80% de uso em qualquer janela relevante, interromper a revisão, concluir o checkpoint seguro e enviar o progresso. Não interpretar os limites de extração como questões aprovadas.
