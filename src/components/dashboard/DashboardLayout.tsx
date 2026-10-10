@@ -195,6 +195,7 @@ const MENU: MenuItem[] = [
     icon: History,
     href: "/dashboard/history",
   },
+  { group: "Desempenho", label: "Ranking", icon: Trophy, href: "/dashboard/ranking" },
   { group: "Desempenho", label: "Medalhas", icon: Medal, href: "/dashboard/medals" },
   { group: "Conta", label: "Plano e uso", icon: Sparkles, href: "/dashboard/subscriptions" },
   { group: "Conta", label: "Perfil", icon: User, href: "/dashboard/profile" },

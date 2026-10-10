@@ -52,6 +52,7 @@ import { Route as DashboardProfileRouteImport } from './routes/dashboard/profile
 import { Route as DashboardQuestionBankRouteImport } from './routes/dashboard/question-bank'
 import { Route as DashboardQuestionTrainerRouteImport } from './routes/dashboard/question-trainer'
 import { Route as DashboardQuestionsRouteImport } from './routes/dashboard/questions'
+import { Route as DashboardRankingRouteImport } from './routes/dashboard/ranking'
 import { Route as DashboardStudentExamsRouteImport } from './routes/dashboard/student-exams'
 import { Route as DashboardStudyCoachRouteImport } from './routes/dashboard/study-coach'
 import { Route as DashboardStudyPlanRouteImport } from './routes/dashboard/study-plan'
@@ -284,6 +285,11 @@ const DashboardQuestionsRoute = DashboardQuestionsRouteImport.update({
   path: '/questions',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardRankingRoute = DashboardRankingRouteImport.update({
+  id: '/ranking',
+  path: '/ranking',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardStudentExamsRoute = DashboardStudentExamsRouteImport.update({
   id: '/student-exams',
   path: '/student-exams',
@@ -399,6 +405,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
   '/dashboard/question-trainer': typeof DashboardQuestionTrainerRoute
   '/dashboard/questions': typeof DashboardQuestionsRoute
+  '/dashboard/ranking': typeof DashboardRankingRoute
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-coach': typeof DashboardStudyCoachRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
@@ -455,6 +462,7 @@ export interface FileRoutesByTo {
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
   '/dashboard/question-trainer': typeof DashboardQuestionTrainerRoute
   '/dashboard/questions': typeof DashboardQuestionsRoute
+  '/dashboard/ranking': typeof DashboardRankingRoute
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-coach': typeof DashboardStudyCoachRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
@@ -515,6 +523,7 @@ export interface FileRoutesById {
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
   '/dashboard/question-trainer': typeof DashboardQuestionTrainerRoute
   '/dashboard/questions': typeof DashboardQuestionsRoute
+  '/dashboard/ranking': typeof DashboardRankingRoute
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-coach': typeof DashboardStudyCoachRoute
   '/dashboard/study-plan': typeof DashboardStudyPlanRoute
@@ -576,6 +585,7 @@ export interface FileRouteTypes {
     | '/dashboard/question-bank'
     | '/dashboard/question-trainer'
     | '/dashboard/questions'
+    | '/dashboard/ranking'
     | '/dashboard/student-exams'
     | '/dashboard/study-coach'
     | '/dashboard/study-plan'
@@ -632,6 +642,7 @@ export interface FileRouteTypes {
     | '/dashboard/question-bank'
     | '/dashboard/question-trainer'
     | '/dashboard/questions'
+    | '/dashboard/ranking'
     | '/dashboard/student-exams'
     | '/dashboard/study-coach'
     | '/dashboard/study-plan'
@@ -691,6 +702,7 @@ export interface FileRouteTypes {
     | '/dashboard/question-bank'
     | '/dashboard/question-trainer'
     | '/dashboard/questions'
+    | '/dashboard/ranking'
     | '/dashboard/student-exams'
     | '/dashboard/study-coach'
     | '/dashboard/study-plan'
@@ -1026,6 +1038,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardQuestionsRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/ranking': {
+      id: '/dashboard/ranking'
+      path: '/ranking'
+      fullPath: '/dashboard/ranking'
+      preLoaderRoute: typeof DashboardRankingRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/student-exams': {
       id: '/dashboard/student-exams'
       path: '/student-exams'
@@ -1186,6 +1205,7 @@ interface DashboardRouteChildren {
   DashboardQuestionBankRoute: typeof DashboardQuestionBankRoute
   DashboardQuestionTrainerRoute: typeof DashboardQuestionTrainerRoute
   DashboardQuestionsRoute: typeof DashboardQuestionsRoute
+  DashboardRankingRoute: typeof DashboardRankingRoute
   DashboardStudentExamsRoute: typeof DashboardStudentExamsRoute
   DashboardStudyCoachRoute: typeof DashboardStudyCoachRoute
   DashboardStudyPlanRoute: typeof DashboardStudyPlanRoute
@@ -1230,6 +1250,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardQuestionBankRoute: DashboardQuestionBankRoute,
   DashboardQuestionTrainerRoute: DashboardQuestionTrainerRoute,
   DashboardQuestionsRoute: DashboardQuestionsRoute,
+  DashboardRankingRoute: DashboardRankingRoute,
   DashboardStudentExamsRoute: DashboardStudentExamsRoute,
   DashboardStudyCoachRoute: DashboardStudyCoachRoute,
   DashboardStudyPlanRoute: DashboardStudyPlanRoute,
