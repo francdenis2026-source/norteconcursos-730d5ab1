@@ -15,3 +15,8 @@ test("cronograma: painel do dia divide blocos em etapas sem perder minutos", asy
   const { selfCheckDia } = await import("../src/lib/cronogramaDia.ts");
   selfCheckDia();
 });
+
+test("cronograma: teoria liga o conteúdo ao material certo", async () => {
+  const { selfCheckTeoria } = await import("../src/lib/cronogramaTeoria.ts");
+  selfCheckTeoria();
+});

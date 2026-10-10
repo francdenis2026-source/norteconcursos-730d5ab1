@@ -7,6 +7,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
+import { BackToPlan } from "@/components/cronograma/BackToPlan";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { LibraryVideos } from "@/components/library/LibraryVideos";
@@ -20,7 +21,13 @@ import {
   type LegalBasis,
 } from "@/lib/questionFormat";
 
-export const Route = createFileRoute("/dashboard/edital/$topicId")({ component: TopicPage });
+export const Route = createFileRoute("/dashboard/edital/$topicId")({
+  component: TopicPage,
+  validateSearch: (s: Record<string, unknown>): { back?: string | undefined; tema?: string | undefined } => ({
+    back: typeof s["back"] === "string" ? s["back"] : undefined,
+    tema: typeof s["tema"] === "string" ? s["tema"] : undefined,
+  }),
+});
 
 interface TopicRow {
   id: string;
@@ -44,6 +51,7 @@ interface StudyCard {
 }
 
 function TopicPage() {
+  const { back: backToPlan, tema } = Route.useSearch();
   const { topicId } = useParams({ from: "/dashboard/edital/$topicId" });
   const { user, isLoading: authLoading } = useAuthStatus();
   const [topic, setTopic] = React.useState<TopicRow | null>(null);
@@ -158,6 +166,7 @@ function TopicPage() {
 
   return (
     <div className="space-y-6 pb-8">
+      <BackToPlan back={backToPlan} topic={tema} />
       <Button asChild variant="ghost" size="sm" className="gap-2">
         <Link to="/dashboard/edital">
           <ArrowLeft className="h-4 w-4" /> Voltar ao edital eletrônico
