@@ -67,3 +67,40 @@ test("dry review makes no database requests", async () => {
     fs.rmSync(dir, { recursive: true, force: true });
   }
 });
+
+function heldFixture() {
+  const x = decision();
+  x.candidates[0].content_status = "reviewed";
+  return x;
+}
+function refinement() {
+  const x = heldFixture();
+  Object.assign(x.candidates[0].payload.individual_review, {
+    explanation: "Verified with the primary source",
+    refinement_reason: "Primary source resolves the previous ambiguity",
+    primary_evidence: [
+      {
+        url: "https://example.org/official",
+        title: "Synthetic primary source",
+        verified: true,
+        checked_at: new Date().toISOString(),
+      },
+    ],
+  });
+  return x;
+}
+test("held refinement requires evidence and preserves extraction", () => {
+  assert.equal(reviewChanges(heldFixture(), refinement(), true).length, 1);
+  const bad = refinement();
+  bad.candidates[0].payload.individual_review.primary_evidence = [];
+  assert.throws(() => reviewChanges(heldFixture(), bad, true), /evidência/);
+  bad.candidates[0].payload.answer = "B";
+  assert.throws(() => reviewChanges(heldFixture(), bad, true), /Extração/);
+});
+test("refinement cannot change approved or excluded decisions", () => {
+  const approved = heldFixture();
+  approved.candidates[0].payload.individual_review.publication_approved = true;
+  assert.throws(() => reviewChanges(approved, refinement(), true), /protegida/);
+  assert.throws(() => reviewChanges(decision(), refinement(), true), /protegida/);
+  assert.throws(() => reviewChanges(fixture(), refinement(), true), /protegida/);
+});

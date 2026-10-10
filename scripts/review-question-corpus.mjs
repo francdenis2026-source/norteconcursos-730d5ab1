@@ -3,7 +3,7 @@ import { pathToFileURL } from "node:url";
 import { validateCorpus } from "./import-question-corpus.mjs";
 import { sessionAuthHeaders } from "./supabase-session-auth.mjs";
 
-export function reviewChanges(previous, next) {
+export function reviewChanges(previous, next, refineHeld = false) {
   validateCorpus(previous);
   validateCorpus(next);
   if (
@@ -29,11 +29,35 @@ export function reviewChanges(previous, next) {
     )
       continue;
     if (
-      old.content_status !== "under_review" ||
+      !(
+        (old.content_status === "under_review" && !refineHeld) ||
+        (refineHeld &&
+          old.content_status === "reviewed" &&
+          !old.payload.publication &&
+          old.payload.individual_review?.publication_approved === false)
+      ) ||
       c.content_status === "under_review" ||
       !c.payload.individual_review
     )
       throw Error("Decisão anterior protegida ou revisão ausente");
+    if (refineHeld) {
+      const r = c.payload.individual_review;
+      if (
+        typeof r.refinement_reason !== "string" ||
+        r.refinement_reason.length < 12 ||
+        !Array.isArray(r.primary_evidence) ||
+        !r.primary_evidence.length ||
+        r.primary_evidence.some(
+          (e) =>
+            !/^https:\/\/[^/]+\//.test(e.url ?? "") ||
+            !e.title ||
+            e.verified !== true ||
+            !Number.isFinite(Date.parse(e.checked_at)) ||
+            Date.parse(e.checked_at) > Date.now(),
+        )
+      )
+        throw Error("Complementação exige evidência primária verificada");
+    }
     changes.push({
       candidate: c.id,
       expected_status: old.content_status,
@@ -44,11 +68,12 @@ export function reviewChanges(previous, next) {
   }
   return changes;
 }
-export async function run(previousPath, nextPath, reportPath, mode) {
+export async function run(previousPath, nextPath, reportPath, mode, refineHeld = false) {
   if (mode && mode !== "--dry-run") throw Error("Modo inválido");
   const changes = reviewChanges(
     JSON.parse(fs.readFileSync(previousPath, "utf8")),
     JSON.parse(fs.readFileSync(nextPath, "utf8")),
+    refineHeld,
   );
   const report = {
     decisions: changes.length,
@@ -66,7 +91,7 @@ export async function run(previousPath, nextPath, reportPath, mode) {
       throw Error("Defina credenciais no ambiente da sessão");
     for (const change of changes) {
       const res = await fetch(
-        `https://${project}.supabase.co/rest/v1/rpc/review_corpus_candidate`,
+        `https://${project}.supabase.co/rest/v1/rpc/${refineHeld ? "refine_held_corpus_candidate" : "review_corpus_candidate"}`,
         {
           method: "POST",
           headers: { ...sessionAuthHeaders(key), "Content-Type": "application/json" },
