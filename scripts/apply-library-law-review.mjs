@@ -1,5 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
+import { sessionAuthHeaders } from './supabase-session-auth.mjs';
 
 export function validateLawReview(packageData) {
  const hostnames=new Set(['www.planalto.gov.br','planalto.gov.br','portal.stf.jus.br','noticias.stf.jus.br','www.stj.jus.br','processo.stj.jus.br','scon.stj.jus.br']);
@@ -39,12 +40,12 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  if(!result.dry_run){
   const project=process.env.TASK_SUPABASE_PROJECT,key=process.env.TASK_SUPABASE_KEY,reviewer=process.env.TASK_LIBRARY_REVIEWER;
   if(!/^[a-z]{20}$/.test(project??'')||!key||!/^[a-f0-9-]{36}$/.test(reviewer??''))throw Error('Defina projeto, chave e revisor na sessão');
-  const response=await fetch(`https://${project}.supabase.co/rest/v1/rpc/apply_library_law_review`,{method:'POST',headers:{apikey:key,'Content-Type':'application/json'},body:JSON.stringify({p_package:packageData,p_reviewer:reviewer})});
+  const response=await fetch(`https://${project}.supabase.co/rest/v1/rpc/apply_library_law_review`,{method:'POST',headers:{...sessionAuthHeaders(key),'Content-Type':'application/json'},body:JSON.stringify({p_package:packageData,p_reviewer:reviewer})});
   if(!response.ok){const error=await response.json().catch(()=>({}));throw Error(`Publicação abortada: HTTP ${response.status}; ${error.message??'verifique o relatório de concorrência'}`);}
   Object.assign(result,await response.json());
   const read=async table=>{
    const rows=[];
-   for(let offset=0;;){const res=await fetch(`https://${project}.supabase.co/rest/v1/${table}?select=*&order=id&offset=${offset}&limit=200`,{headers:{apikey:key}});if(!res.ok)throw Error(`Leitura posterior falhou: ${table} HTTP ${res.status}`);const page=await res.json();if(!page.length)return rows;rows.push(...page);offset+=page.length;}
+   for(let offset=0;;){const res=await fetch(`https://${project}.supabase.co/rest/v1/${table}?select=*&order=id&offset=${offset}&limit=200`,{headers:sessionAuthHeaders(key)});if(!res.ok)throw Error(`Leitura posterior falhou: ${table} HTTP ${res.status}`);const page=await res.json();if(!page.length)return rows;rows.push(...page);offset+=page.length;}
   };
   for(const [table,targets,field] of [['study_materials',packageData.materials,'slug'],['legal_courses',packageData.courses,'id'],['study_material_enrichments',packageData.enrichments,'id']]){
    const rows=await read(table);if(targets.some(row=>!matchesReviewPatch(rows.find(actual=>actual[field]===row[field]),row.patch)))throw Error(`Leitura posterior diverge: ${table}`);

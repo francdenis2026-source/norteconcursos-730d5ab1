@@ -1,5 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
+import { sessionAuthHeaders } from "./supabase-session-auth.mjs";
 const [input, report, mode] = process.argv.slice(2);
 if (!input || !report || (mode && mode !== "--dry-run"))
   throw Error(
@@ -152,7 +153,7 @@ if (!result.dry_run) {
   const request = async (path, options = {}) => {
     const r = await fetch(`https://${project}.supabase.co/rest/v1${path}`, {
       ...options,
-      headers: { apikey: key, "Content-Type": "application/json", ...options.headers },
+      headers: { ...sessionAuthHeaders(key), "Content-Type": "application/json", ...options.headers },
     });
     if (!r.ok) throw Error(`Supabase HTTP ${r.status}`);
     const raw = await r.text();

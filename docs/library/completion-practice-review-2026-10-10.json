@@ -1,0 +1,1329 @@
+{
+  "version": "completion-practice-2026-10-10",
+  "materials": [
+    {
+      "slug": "penal-principios-direito-penal",
+      "expected": {
+        "id": "ae733366-1c97-43ba-b3de-91285c366f30",
+        "title": "Código Penal — leitura atualizada — guia de estudo e aplicação",
+        "content_status": "active",
+        "updated_at": "2026-10-10T02:58:33.253645+00:00",
+        "body_sha256": "c05b8e501a8ba85cdbe99f4725833ce8ea3edb05f45048f48d8aed89522c9aa0"
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Código Penal — leitura atualizada.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## Legalidade e anterioridade\n\n> *Não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal.*\n\n- **Reserva legal:** só a **lei** define as condutas que são crime.\n- **Anterioridade:** a lei deve ser anterior ao fato.\n- **Irretroatividade:** a lei penal **não retroage**, exceto **para beneficiar o réu**, inclusive com trânsito em julgado.\n- **Extra-atividade:** mesmo revogada, a lei pode continuar regulando fatos de sua vigência (**ultra-atividade**) ou retroagir (**retroatividade**).\n- **Tempus regit actum:** aplica-se a lei vigente ao tempo do fato.\n\n## Intervenção mínima, fragmentariedade e subsidiariedade\n\n- **Intervenção mínima (*ultima ratio*):** o Direito Penal só intervém quando nenhum outro ramo puder dar resposta efetiva.\n- **Fragmentariedade:** pune apenas as ações ou omissões **mais graves** contra os **bens jurídicos mais importantes**. Não sanciona todas as condutas.\n\n## Insignificância (mnemônico MARI)\n\nExclui a tipicidade material quando presentes, ao mesmo tempo:\n\n- **M**ínima ofensividade da conduta;\n- **A**usência de periculosidade social da ação;\n- **R**eduzido grau de reprovabilidade do comportamento;\n- **I**nexpressividade da lesão jurídica provocada.\n\n## Demais princípios\n\n| Princípio | Ideia |\n|---|---|\n| **Ofensividade (lesividade)** | Só há crime se houver **lesão ou ameaça de lesão** a bem jurídico |\n| **Alteridade** | A mera autolesão não é punida por si só; o contexto pode integrar outro tipo penal, como autolesão para obter indenização de seguro (CP, art. 171, § 2º, V) |\n| **Responsabilidade pessoal** | Nenhuma pena passará da pessoa do condenado |\n| **Humanidade** | São inconstitucionais penas cruéis, infamantes, tortura e maus-tratos |\n| **Consunção** | Exige relação de meio, fase de execução ou fato abrangido por outro tipo; a maior gravidade isolada não determina absorção |\n| **Especialidade** | A norma **especial** afasta a **geral** |\n\n> **Cai em prova:** a irretroatividade **tem exceção**: a lei penal **benéfica** retroage, mesmo depois do trânsito em julgado.\n\n> **Conferido nas fontes oficiais:** o art. 5º da Constituição prevê a **legalidade e anterioridade** (XXXIX: \"não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal\"), a **irretroatividade, salvo para beneficiar o réu** (XL), a **pessoalidade da pena** (XLV: nenhuma pena passará da pessoa do condenado, mas a obrigação de reparar o dano e o perdimento de bens podem ser estendidos aos sucessores, nos termos da lei) e a vedação de **penas cruéis** (XLVII). O Código Penal repete a legalidade no art. 1º e a *abolitio criminis* no art. 2º (\"ninguém pode ser punido por fato que lei posterior deixa de considerar crime\"). Já a **insignificância** e o mnemônico **MARI** vêm da **jurisprudência** (STF), e **não de texto de lei**: não os cite como dispositivo legal.\n\n## Aprofundamento atualizado\n\n[Confissão — Súmulas 545 e 630 revisadas](/dashboard/library/penal-confissao-sumulas-545-630) — Antes e depois dos enunciados, retratação, dosimetria e casos práticos.\n\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 397 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| Disposições iniciais | 11 |\n| TÍTULO II DO CRIME — Relação de causalidade (Redação dada pela Lei nº 7.209, de 11.7.1984) | 13 |\n| TÍTULO III DA IMPUTABILIDADE PENAL — Inimputáveis | 3 |\n| TÍTULO IV DO CONCURSO DE PESSOAS | 3 |\n| TÍTULO V DAS PENAS / CAPÍTULO I DAS ESPÉCIES DE PENA | 1 |\n| TÍTULO V DAS PENAS / CAPÍTULO I DAS ESPÉCIES DE PENA / SEÇÃO I DAS PENAS PRIVATIVAS DE LIBERDADE — Reclusão e detenção | 10 |\n| TÍTULO V DAS PENAS / CAPÍTULO I DAS ESPÉCIES DE PENA / SEÇÃO II DAS PENAS RESTRITIVAS DE DIREITOS — Penas restritivas de direitos | 5 |\n| TÍTULO V DAS PENAS / CAPÍTULO I DAS ESPÉCIES DE PENA / SEÇÃO III DA PENA DE MULTA — Multa | 4 |\n| TÍTULO V DAS PENAS / CAPÍTULO II DA COMINAÇÃO DAS PENAS — Penas privativas de liberdade | 6 |\n| TÍTULO V DAS PENAS / CAPÍTULO III DA APLICAÇÃO DA PENA — Fixação da pena | 18 |\n| TÍTULO V DAS PENAS / CAPÍTULO IV DA SUSPENSÃO CONDICIONAL DA PENA — Requisitos da suspensão da pena | 5 |\n| TÍTULO V DAS PENAS / CAPÍTULO V DO LIVRAMENTO CONDICIONAL — Requisitos do livramento condicional | 7 |\n| TÍTULO V DAS PENAS / CAPÍTULO VI DOS EFEITOS DA CONDENAÇÃO — Efeitos genéricos e específicos | 3 |\n| TÍTULO V DAS PENAS / CAPÍTULO VII DA REABILITAÇÃO — Reabilitação | 3 |\n| TÍTULO VI DAS MEDIDAS DE SEGURANÇA — Espécies de medidas de segurança | 4 |\n| TÍTULO VII DA AÇÃO PENAL — Ação pública e de iniciativa privada | 7 |\n| TÍTULO VIII DA EXTINÇÃO DA PUNIBILIDADE — Extinção da punibilidade | 14 |\n| TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO I DOS CRIMES CONTRA A VIDA | 10 |\n| TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO II DAS LESÕES CORPORAIS | 1 |\n| TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO III DA PERICLITAÇÃO DA VIDA E DA SAÚDE — Perigo de contágio venéreo | 8 |\n| TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO IV DA RIXA — Rixa | 1 |\n| TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO V DOS CRIMES CONTRA A HONRA — Calúnia | 8 |\n| TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO V DOS CRIMES CONTRA A HONRA — Calúnia / SEÇÃO I DOS CRIMES CONTRA A LIBERDADE PESSOAL — Constrangimento ilegal | 9 |\n| TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO V DOS CRIMES CONTRA A HONRA — Calúnia / SEÇÃO II DOS CRIMES CONTRA A INVIOLABILIDADE DO DOMICÍLIO — Violação de domicílio | 1 |\n| TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO V DOS CRIMES CONTRA A HONRA — Calúnia / SEÇÃO III DOS CRIMES CONTRA A INVIOLABILIDADE DE CORRESPONDÊNCIA — Violação de correspondência | 2 |\n| TÍTULO I DOS CRIMES CONTRA A PESSOA / CAPÍTULO V DOS CRIMES CONTRA A HONRA — Calúnia / SEÇÃO IV DOS CRIMES CONTRA A INVIOLABILIDADE DOS SEGREDOS — Divulgação de segredo | 4 |\n| TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO I DO FURTO — Furto | 2 |\n| TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO II DO ROUBO E DA EXTORSÃO — Roubo | 4 |\n| TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO III DA USURPAÇÃO — Alteração de limites | 2 |\n| TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO IV DO DANO — Dano | 5 |\n| TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO V DA APROPRIAÇÃO INDÉBITA — Apropriação indébita | 4 |\n| TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO VI DO ESTELIONATO E OUTRAS FRAUDES — Estelionato | 9 |\n| TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO VII DA RECEPTAÇÃO — Receptação | 2 |\n| TÍTULO II DOS CRIMES CONTRA O PATRIMÔNIO / CAPÍTULO VIII DISPOSIÇÕES GERAIS | 4 |\n| TÍTULO III DOS CRIMES CONTRA A PROPRIEDADE IMATERIAL / CAPÍTULO I DOS CRIMES CONTRA A PROPRIEDADE INTELECTUAL — Violação de direito autoral | 1 |\n| TÍTULO IV DOS CRIMES CONTRA A ORGANIZAÇÃO DO TRABALHO — Atentado contra a liberdade de trabalho | 11 |\n| TÍTULO V DOS CRIMES CONTRA O SENTIMENTO RELIGIOSO E CONTRA O RESPEITO AOS MORTOS / CAPÍTULO I DOS CRIMES CONTRA O SENTIMENTO RELIGIOSO — Ultraje a culto e impedimento ou perturbação de ato a ele relativo | 1 |\n| TÍTULO V DOS CRIMES CONTRA O SENTIMENTO RELIGIOSO E CONTRA O RESPEITO AOS MORTOS / CAPÍTULO II DOS CRIMES CONTRA O RESPEITO AOS MORTOS — Impedimento ou perturbação de cerimônia funerária | 4 |\n| TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO I DOS CRIMES CONTRA A LIBERDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) — Estupro | 4 |\n| TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO I-A (Incluído pela Lei nº 13.772, de 2018) — DA EXPOSIÇÃO DA INTIMIDADE SEXUAL | 6 |\n| TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO IV DISPOSIÇÕES GERAIS | 2 |\n| TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO V DO LENOCÍNIO E DO TRÁFICO DE PESSOA PARA FIM DE PROSTITUIÇÃO OU OUTRA FORMA DE EXPLORAÇÃO SEXUAL (Redação dada pela Lei nº 12.015, de 2009) — Mediação para servir a lascívia de outrem | 5 |\n| TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO VI DO ULTRAJE PÚBLICO AO PUDOR — Ato obsceno | 2 |\n| TÍTULO VI DOS CRIMES CONTRA A DIGNIDADE SEXUAL (Redação dada pela Lei nº 12.015, de 2009) / CAPÍTULO VII DISPOSIÇÕES GERAIS (Incluído pela Lei nº 12.015, de 2009) — Aumento de pena (Incluído pela Lei nº 12.015, de 2009) | 2 |\n| TÍTULO VII DOS CRIMES CONTRA A FAMÍLIA / CAPÍTULO I DOS CRIMES CONTRA O CASAMENTO — Bigamia | 5 |\n| TÍTULO VII DOS CRIMES CONTRA A FAMÍLIA / CAPÍTULO II DOS CRIMES CONTRA O ESTADO DE FILIAÇÃO — Registro de nascimento inexistente | 3 |\n| TÍTULO VII DOS CRIMES CONTRA A FAMÍLIA / CAPÍTULO III DOS CRIMES CONTRA A ASSISTÊNCIA FAMILIAR — Abandono material | 4 |\n| TÍTULO VII DOS CRIMES CONTRA A FAMÍLIA / CAPÍTULO IV DOS CRIMES CONTRA O PÁTRIO PODER, TUTELA CURATELA — Induzimento a fuga, entrega arbitrária ou sonegação de incapazes | 2 |\n| TÍTULO VIII DOS CRIMES CONTRA A INCOLUMIDADE PÚBLICA / CAPÍTULO I DOS CRIMES DE PERIGO COMUM — Incêndio | 10 |\n| TÍTULO VIII DOS CRIMES CONTRA A INCOLUMIDADE PÚBLICA / CAPÍTULO II DOS CRIMES CONTRA A SEGURANÇA DOS MEIOS DE COMUNICAÇÃO E TRANSPORTE E OUTROS SERVIÇOS PÚBLICOS — Perigo de desastre ferroviário | 7 |\n| TÍTULO VIII DOS CRIMES CONTRA A INCOLUMIDADE PÚBLICA / CAPÍTULO III DOS CRIMES CONTRA A SAÚDE PÚBLICA — Epidemia | 17 |\n| TÍTULO IX DOS CRIMES CONTRA A PAZ PÚBLICA — Incitação ao crime | 4 |\n| TÍTULO X DOS CRIMES CONTRA A FÉ PÚBLICA / CAPÍTULO I DA MOEDA FALSA — Moeda Falsa | 4 |\n| TÍTULO X DOS CRIMES CONTRA A FÉ PÚBLICA / CAPÍTULO II DA FALSIDADE DE TÍTULOS E OUTROS PAPÉIS PÚBLICOS — Falsificação de papéis públicos | 3 |\n| TÍTULO X DOS CRIMES CONTRA A FÉ PÚBLICA / CAPÍTULO III DA FALSIDADE DOCUMENTAL — Falsificação do selo ou sinal público | 10 |\n| TÍTULO X DOS CRIMES CONTRA A FÉ PÚBLICA / CAPÍTULO IV DE OUTRAS FALSIDADES — Falsificação do sinal empregado no contraste de metal precioso ou na fiscalização alfandegária, ou para outros fins | 6 |\n| TÍTULO X DOS CRIMES CONTRA A FÉ PÚBLICA / CAPÍTULO V (Incluído pela Lei 12.550. de 2011) — das fraudes em certames de interesse público (Incluído pela Lei 12.550. de 2011) | 1 |\n| TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO I DOS CRIMES PRATICADOS POR FUNCIONÁRIO PÚBLICO CONTRA A ADMINISTRAÇÃO EM GERAL — Peculato | 19 |\n| TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO II DOS CRIMES PRATICADOS POR PARTICULAR CONTRA A ADMINISTRAÇÃO EM GERAL — Usurpação de função pública | 12 |\n| TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO II-A (Incluído pela Lei nº 10.467, de 11.6.2002) — DOS CRIMES PRATICADOS POR PARTICULAR CONTRA A ADMINISTRAÇÃO PÚBLICA ESTRANGEIRA | 3 |\n| TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO II-B — DOS CRIMES EM LICITAÇÕES E CONTRATOS ADMINISTRATIVOS | 12 |\n| TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO III DOS CRIMES CONTRA A ADMINISTRAÇÃO DA JUSTIÇA — Reingresso de estrangeiro expulso | 23 |\n| TÍTULO XI DOS CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA / CAPÍTULO IV DOS CRIMES CONTRA AS FINANÇAS PÚBLICAS — Contratação de operação de crédito | 8 |\n| TÍTULO XII (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O ESTADODEMOCRÁTICO DE DIREITO / CAPÍTULO I (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA A SOBERANIA NACIONAL | 3 |\n| TÍTULO XII (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O ESTADODEMOCRÁTICO DE DIREITO / CAPÍTULO II (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA AS INSTITUIÇÕES DEMOCRÁTICAS | 4 |\n| TÍTULO XII (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O ESTADODEMOCRÁTICO DE DIREITO / CAPÍTULO III (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O FUNCIONAMENTO DAS INSTITUIÇÕES DEMOCRÁTICAS NO PROCESSO ELEITORAL | 2 |\n| TÍTULO XII (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O ESTADODEMOCRÁTICO DE DIREITO / CAPÍTULO IV (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O FUNCIONAMENTODOS SERVIÇOS ESSENCIAIS | 1 |\n| TÍTULO XII (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DOS CRIMES CONTRA O ESTADODEMOCRÁTICO DE DIREITO / CAPÍTULO VI (Incluído pela Lei nº 14.197, de 2021) (Vigência) — DISPOSIÇÕES COMUNS | 3 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/codigo-penal)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 8 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 24 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n",
+        "law_version_checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15484.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.484/2026",
+              "summary": "LEI Nº 15.484/2026",
+              "vigency": "Art. 7º Esta Lei entra em vigor após decorridos 30 (trinta) dias de sua publicação oficial. Publicação: 04/08/2026. Entrada em vigor calculada pelo prazo legal: 03/09/2026.",
+              "articles": [
+                "Art. 105"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15517.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.517/2026",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal) e a Lei nº 8.176, de 8 de fevereiro de 1991, para dispor sobre os crimes de furto e roubo de petróleo e derivados, gás natural e suas frações recuperáveis, álcool etílico hidratado carburante e demais combustíveis fluidos carburantes, inclusive biocombustíveis, e óleos lubrificantes, bem como para tipificar novos crimes contra a ordem econômica.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 155",
+                "Art. 157"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.487/2026",
+              "summary": "Institui medidas de enfrentamento e repressão ao crime de violência sexual contra criança ou adolescente, inclusive no ambiente digital e com uso de inteligência artificial; e altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), e a Lei nº 12.850, de 2 de agosto de 2013 (Lei de Combate ao Crime Organizado), para recrudescer o tratamento penal aos criminosos sexuais.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 92"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15455.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.455, DE 1º DE JULHO DE 2026/2026",
+              "summary": "LEI Nº 15.455, DE 1º DE JULHO DE 2026/2026",
+              "vigency": "Art. 10. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 129"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15438.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.438/2026",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para aumentar o prazo decadencial do direito de queixa ou de representação quando se tratar de crime praticado no âmbito de violência doméstica e familiar contra a mulher.",
+              "vigency": "Art. 5º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 103"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15425.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.425/2026",
+              "summary": "LEI Nº 15.425/2026",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 281",
+                "Art. 282"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15402.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.402/2026",
+              "summary": "LEI Nº 15.402/2026",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 359-M"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15397.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.397/2026",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), a fim de majorar as penas previstas para os crimes de furto, roubo, estelionato, receptação, receptação de animal e interrupção ou perturbação de serviço telegráfico, telefônico, informático, telemático ou de informação de utilidade pública, bem como para tipificar os crimes de receptação de animal doméstico e de fraude bancária.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 155",
+                "Art. 157",
+                "Art. 171",
+                "Art. 180",
+                "Art. 180-A",
+                "Art. 266"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15384.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.384/2026",
+              "summary": "Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para prever a violência vicária entre as formas de violência doméstica e familiar, criar o tipo penal do vicaricídio e incluí-lo no rol dos crimes hediondos.",
+              "vigency": "Art. 5º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 121-A",
+                "Art. 121-B"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.358/2026",
+              "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+              "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 91-A",
+                "Art. 92",
+                "Art. 121",
+                "Art. 129",
+                "Art. 147-C",
+                "Art. 148",
+                "Art. 155",
+                "Art. 157",
+                "Art. 158",
+                "Art. 159",
+                "Art. 180"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Lei/L15353.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.353/2026",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para prever a presunção absoluta de vulnerabilidade da vítima do crime de estupro de vulnerável e para estabelecer a aplicação das penas desse crime independentemente da experiência sexual da vítima ou da ocorrência de gravidez resultante do estupro.",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 217-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.280/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para agravar a pena dos crimes contra a dignidade sexual de pessoa vulnerável; o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para prever medidas protetivas de urgência a vítimas de crimes contra a dignidade sexual e em situação de especial vulnerabilidade; a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para prever a monitoração eletrônica dos condenados por crime contra a dignidade sexual; a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para estabelecer mecanismos de proteção a crianças e a adolescentes vítimas de crimes contra a dignidade sexual; e a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para assegurar assistência psicológica e social especializada às pessoas com deficiência vítimas de crimes contra a dignidade sexual e a suas famílias.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 217-A",
+                "Art. 218",
+                "Art. 218-A",
+                "Art. 218-B",
+                "Art. 218-C",
+                "Art. 338",
+                "Art. 338-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15245.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.245/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para dispor sobre o crime de associação criminosa, a Lei nº 12.694, de 24 de julho de 2012, para ampliar a proteção pessoal dos agentes públicos ou processuais envolvidos no combate ao crime organizado, e a Lei nº 12.850, de 2 de agosto de 2013, para tipificar as condutas de obstrução de ações contra o crime organizado e de conspiração para obstrução de ações contra o crime organizado.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 288"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15181.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.181/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para aumentar as penas aplicadas ao furto, roubo e receptação de fios, cabos ou equipamentos utilizados para fornecimento ou transmissão de energia elétrica ou de telefonia ou para transferência de dados e as aplicadas à interrupção ou perturbação de serviço telegráfico, telefônico, informático, telemático ou de informação de utilidade pública; e altera as Leis nºs 9.613, de 3 de março de 1998, para aumentar a pena dos crimes previstos no seu art. 1º, e 9.472, de 16 de julho de 1997, para estabelecer sanções aos detentores de serviço de telecomunicações pelo uso de fios, cabos ou equipamentos de telefonia ou transferência de dados que sejam produtos de crime; e dá outras providências.",
+              "vigency": "Art. 6º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 157",
+                "Art. 180"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15163.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.163/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para modificar as penas dos crimes de abandono de incapaz e de maus-tratos, a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa), para modificar as penas do crime de exposição a perigo da saúde e da integridade física ou psíquica da pessoa idosa, a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a fim de estabelecer penas para o crime de abandono de pessoa com deficiência que resulte em lesão corporal de natureza grave ou em morte, e a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para vedar a aplicação da Lei nº 9.099, de 26 de setembro de 1995, em caso de apreensão indevida de criança ou de adolescente.",
+              "vigency": "Art. 6º Esta Lei entra em vigor na data da sua publicação.",
+              "articles": [
+                "Art. 133",
+                "Art. 136"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15160.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.160/2025",
+              "summary": "Modifica os arts. 65 e 115 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para alterar circunstância atenuante e vedar a redução do prazo de prescrição para os crimes que envolvam violência sexual contra a mulher, quando o agente for, na data do fato, menor de 21 (vinte e um) anos ou, na data da sentença, maior de 70 (setenta) anos de idade.",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 65",
+                "Art. 115"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15159.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.159/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para recrudescer o tratamento penal dispensado ao autor de crime praticado nas dependências de instituição de ensino.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 61",
+                "Art. 121",
+                "Art. 129"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15134.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.134/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 12.694, de 24 de julho de 2012, e 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais), para reconhecer como atividade de risco permanente as atribuições inerentes ao Poder Judiciário, ao Ministério Público e à Defensoria Pública e garantir aos seus membros e aos oficiais de justiça medidas de proteção, bem como recrudescer o tratamento penal destinado aos crimes de homicídio e de lesão corporal dolosa contra eles e os membros da Advocacia Pública, desde que no exercício da função ou em decorrência dela, ou contra seu cônjuge, companheiro ou parente, inclusive por afinidade, até o terceiro grau, em razão dessa condição.",
+              "vigency": "Art. 11. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 121"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15123.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.123/2025",
+              "summary": "Altera o art. 147-B do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para estabelecer causa de aumento de pena no crime de violência psicológica contra a mulher quando praticado com o uso de inteligência artificial ou de qualquer outro recurso tecnológico que altere imagem ou som da vítima.",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 147-B"
+              ]
+            },
+            {
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/18092025-Repetitivo-define-que-confissao-atenua-pena-mesmo-sem-interferir-no-convencimento-do-julgador.aspx",
+              "state": "reference",
+              "title": "Súmulas 545 e 630 revisadas — Tema 1194",
+              "summary": "A utilização na formação do convencimento deixou de ser requisito obrigatório. No tráfico, admissão de posse para uso próprio recebe peso inferior ao de confissão plena; observar retratação, conteúdo e modulação.",
+              "vigency": "Julgamento em setembro de 2025; enunciados revisados publicados no DJEN em 02/12/2025. Entendimento jurisprudencial, não alteração legislativa.",
+              "articles": [
+                "CP, art. 65, III, d"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+              "title": "Código Penal — leitura atualizada — texto oficial conferido",
+              "sha256": "2daee32a3073f953391f9be2ebf79f778cae2198b5a61434174e9b3731522537"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+              "title": "Constituição Federal de 1988",
+              "sha256": "6a1f0f56efd9ee984dd432060b2ef38378b50087b291943303d5e84795ba5416"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc136.htm",
+              "title": "Emenda Constitucional 136/2025",
+              "sha256": "594bbbad74459ba2a0ee9171ac265aab581afee63d4c672486b68278c7284535"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc137.htm",
+              "title": "Emenda Constitucional 137/2025",
+              "sha256": "1933de34926fe42f01c2cbce6265aa6135c114d808058319b77e28bc8510a6d6"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc138.htm",
+              "title": "Emenda Constitucional 138/2025",
+              "sha256": "037c5be2e65c76dd2ac7e2d75e2f31914f2dea6172a230b37d2883730421fbdf"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc139.htm",
+              "title": "Emenda Constitucional 139/2026",
+              "sha256": "4a10a62e3f5c42aafcc3caa07926240bbb2042df0ed084ab30f8510eef312d85"
+            },
+            {
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/18092025-Repetitivo-define-que-confissao-atenua-pena-mesmo-sem-interferir-no-convencimento-do-julgador.aspx",
+              "title": "STJ — Tema 1194 e revisão das Súmulas 545 e 630",
+              "sha256": "0b3359d58538ce5fa9209f03f12eb8c519ab507a01bb691ec13ec6390922b40c"
+            },
+            {
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/12122025-Pagina-Sumulas-Anotadas-inclui-enunciados-sobre-efeitos-da-confissao-na-aplicacao-da-pena.aspx",
+              "title": "STJ — Súmulas Anotadas 545 e 630 atualizadas",
+              "sha256": "1abeafefb8702ea92055266c241ec237aca2a4d60d4604e79a9dae805ccf2cde"
+            },
+            {
+              "url": "https://scon.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D%27021819%27",
+              "title": "STJ — Informativo 863, Tema 1194 e modulação",
+              "sha256": "81561197b76c549f9a9b1e48b91b58f7084a459ff01c5a5b7a58e748936be256"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Retiradas máximas absolutas sobre autolesão e absorção pelo crime mais grave.",
+            "Incluídos complemento com casos práticos, ligação para leitura e alertas de atualização.",
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "codigo-penal"
+        },
+        "flashcards": [
+          {
+            "b": "A lei penal não retroage, exceto para beneficiar o réu, inclusive após o trânsito em julgado.",
+            "f": "Regra de irretroatividade penal"
+          },
+          {
+            "b": "Mínima ofensividade, Ausência de periculosidade social, Reduzido grau de reprovabilidade, Inexpressividade da lesão.",
+            "f": "Mnemônico MARI (insignificância)"
+          },
+          {
+            "b": "O Direito Penal é a última ratio: só atua quando outros ramos não bastam.",
+            "f": "Intervenção mínima"
+          },
+          {
+            "b": "A mera autolesão não é punida por si só; examinar outros elementos do caso. O CP, art. 171, § 2º, V, prevê fraude para recebimento de seguro.",
+            "f": "Alteridade"
+          },
+          {
+            "b": "Consunção depende da relação entre os fatos e tipos, não apenas da maior pena. Especialidade: a norma especial afasta a geral quando seus elementos se ajustam ao caso.",
+            "f": "Consunção × especialidade"
+          },
+          {
+            "b": "Errado. Ela retroage para beneficiar o réu, inclusive após o trânsito em julgado.",
+            "f": "Julgue e justifique: A lei penal posterior mais benéfica não retroage depois do trânsito em julgado."
+          },
+          {
+            "b": "Errado. Exigem-se os quatro vetores do MARI em conjunto.",
+            "f": "Julgue e justifique: Para o princípio da insignificância, basta a inexpressividade da lesão, sem outros requisitos."
+          },
+          {
+            "b": "Errado. O CP, art. 171, § 2º, V, prevê hipótese própria. A máxima sobre mera autolesão não exclui todo contexto fraudulento.",
+            "f": "Julgue e justifique: A autolesão para obter indenização de seguro nunca pode integrar um crime por força da alteridade."
+          },
+          {
+            "b": "A pena final ilustrativa é quatro anos, sem multa ou outras causas no exercício. Faixa abstrata e pena concreta não são sinônimos.\n\nA dosimetria distingue pena-base, agravantes/atenuantes e causas de aumento/diminuição, conforme art. 68. Neste recorte, 1/3 de seis anos = dois anos; seis menos dois = quatro anos. Não se está recalculando as etapas anteriores.\nBase: Art. 59, Art. 68",
+            "f": "Aplicação — O dispositivo define uma faixa de pena. Para um exercício de cálculo, a pena intermediária foi fixada em seis anos e há uma única causa legal de diminuição de um terço, cabível e fundamentada no caso. A pena final é o mínimo abstrato ou o resultado dessa etapa?"
+          },
+          {
+            "b": "Nesse mesmo recorte: seis menos três = três anos. Não se escolhe a fração só para obter o resultado desejado.\nErro a evitar: Afirmar que todo condenado recebe automaticamente a pena mínima ou que toda redução tem a mesma fração.\nBase: Art. 59, Art. 68",
+            "f": "Análise — Pena legal não é pena automaticamente fixada: E se a fração legal e motivadamente aplicada fosse metade?"
+          },
+          {
+            "b": "Quatro anos para a fração fornecida. Não se escolhe a fração automaticamente só pela palavra tentativa.\n\nO art. 14 admite diminuição de um a dois terços na tentativa, salvo disposição em contrário. Um terço de seis é dois; seis menos dois = quatro anos, no recorte aritmético.\nBase: Art. 14, Art. 68",
+            "f": "Aplicação — Em crime que admite tentativa, a execução foi iniciada, mas não houve consumação por circunstâncias alheias à vontade do agente. Para exercitar somente a terceira fase, a pena intermediária é seis anos; não há regra especial contrária. Qual resultado para redução fundamentada de um terço?"
+          },
+          {
+            "b": "Dois terços de seis = quatro; pena restante = dois anos. A conclusão depende da fração realmente aplicável.\nErro a evitar: Confundir diminuir em dois terços com manter dois terços, ou incluir multa e outras causas sem dados.\nBase: Art. 14, Art. 68",
+            "f": "Análise — Tentativa e fração de diminuição: E se a redução cabível e motivada for de dois terços?"
+          },
+          {
+            "b": "A condenação definitiva não impede, por si só, a incidência da regra benéfica.\n\nO art. 2º prevê cessação da execução e dos efeitos penais na abolitio criminis; seu parágrafo único alcança lei posterior favorável. Diferencie efeitos penais de efeitos civis e não limite o benefício a processos em andamento.\nBase: Art. 2",
+            "f": "Aplicação — Depois do fato, lei penal deixa de considerar a conduta criminosa. A regra alcança condenação definitiva?"
+          },
+          {
+            "b": "Não aplique retroatividade para prejudicar por analogia com a regra favorável.\nErro a evitar: Achar que toda consequência civil desaparece automaticamente.\nBase: Art. 2",
+            "f": "Análise — Lei posterior benéfica: E se a lei posterior agrava a pena?"
+          },
+          {
+            "b": "Na hipótese legal, responde pelos atos praticados, sem aplicar automaticamente tentativa do crime abandonado.\n\nO art. 15 distingue desistência voluntária e arrependimento eficaz, com responsabilidade pelos atos já praticados. Verifique voluntariedade e se a interrupção não foi imposta por obstáculo externo.\nBase: Art. 14, Art. 15",
+            "f": "Aplicação — Depois de iniciar a execução, o agente decide voluntariamente parar e não consuma o crime; os atos já praticados constituem outra infração. Responde sempre pela tentativa do crime desejado?"
+          },
+          {
+            "b": "O obstáculo externo exige reavaliar a tentativa do art. 14, II.\nErro a evitar: Confundir desistir voluntariamente e ser impedido.\nBase: Art. 14, Art. 15",
+            "f": "Análise — Desistência voluntária: E se só parou porque a polícia o conteve?"
+          },
+          {
+            "b": "O erro sobre a condição de coisa alheia é relevante para o dolo, nas condições narradas.\n\nO art. 20 exclui o dolo no erro sobre elemento constitutivo, permitindo punição culposa se prevista. Identifique o erro de fato relevante e a existência de modalidade culposa; não invente culpa para todo crime.\nBase: Art. 20, Art. 21",
+            "f": "Aplicação — Pessoa pega mala idêntica à sua acreditando ser proprietária, sem intenção de subtrair bem alheio. O erro é indiferente ao dolo?"
+          },
+          {
+            "b": "A natureza do erro muda; examine o art. 21 e seus requisitos.\nErro a evitar: Confundir erro de tipo com mero desconhecimento da lei.\nBase: Art. 20, Art. 21",
+            "f": "Análise — Erro sobre elemento do tipo: E se sabia que a mala era alheia, mas achava permitido tomá-la?"
+          },
+          {
+            "b": "A reação posterior ou excessiva não fica automaticamente protegida pela excludente.\n\nOs arts. 23 e 25 exigem os requisitos da legítima defesa e tratam da responsabilidade por excesso doloso ou culposo. Separe atualidade da agressão, necessidade e moderação em cada momento.\nBase: Art. 23, Art. 25",
+            "f": "Aplicação — Diante de agressão injusta atual, a vítima usa meio necessário moderadamente; a questão muda para reação desproporcional após o fim da agressão. A excludente cobre automaticamente a segunda reação?"
+          },
+          {
+            "b": "Os requisitos de legítima defesa podem estar presentes; demonstre-os concretamente.\nErro a evitar: Estender a defesa a vingança ou excesso ilimitado.\nBase: Art. 23, Art. 25",
+            "f": "Análise — Legítima defesa e excesso: E se a agressão continua atual e a reação permanece necessária e moderada?"
+          },
+          {
+            "b": "A hipótese específica precisa ser examinada; o nome genérico furto não resolve a pena.\n\nO art. 155, § 6º, II, contempla a subtração dos dispositivos eletrônicos descritos, com pena de quatro a dez anos e multa na redação conferida. Compare objeto, modalidade e data do fato antes de selecionar a faixa de pena; não aplique lei mais severa a fato anterior.\nBase: Art. 155, Art. 157",
+            "f": "Aplicação — Agente subtrai celular alheio sem violência ou grave ameaça, em fato posterior à vigência da alteração de 2026. Basta aplicar mecanicamente a pena do furto simples?"
+          },
+          {
+            "b": "Reavalie o roubo do art. 157, inclusive suas previsões específicas, em vez de manter automaticamente furto.\nErro a evitar: Usar resumo antigo ou ignorar a irretroatividade da lei mais grave.\nBase: Art. 155, Art. 157",
+            "f": "Análise — Furto de celular: atenção à regra atual: E se há grave ameaça para obter o aparelho?"
+          },
+          {
+            "b": "Use a estrutura atual do art. 121-A, observando aplicação temporal e requisitos.\n\nO art. 121-A é tipo autônomo introduzido pela Lei 14.994/2024, com pena de vinte a quarenta anos e causas próprias de aumento. Confira razões legais, data do fato e majorantes; nem toda morte de mulher configura o tipo.\nBase: Art. 121-A",
+            "f": "Aplicação — Mulher é morta por razões da condição do sexo feminino, em contexto de violência doméstica, sob a lei atual. A análise fica na antiga qualificadora do homicídio?"
+          },
+          {
+            "b": "Não force o art. 121-A; examine a figura penal demonstrada pelos fatos.\nErro a evitar: Reproduzir a classificação anterior ou presumir a razão apenas pelo sexo da vítima.\nBase: Art. 121-A",
+            "f": "Análise — Feminicídio como tipo autônomo: E se faltam as razões da condição do sexo feminino?"
+          },
+          {
+            "f": "Dolo eventual e culpa não são a mesma coisa\nAna atira querendo matar. Bruno causa acidente por imprudência, sem querer nem aceitar a morte.\nQual elemento subjetivo aparece em cada narrativa?",
+            "b": "Ana: dolo; Bruno: culpa, se provados nexo, violação do cuidado e modalidade culposa legal.\nVariação: Bruno prevê a morte e a aceita para prosseguir. Reavalie dolo eventual conforme os fatos; não use embriaguez ou velocidade como conclusão automática.\nBase: Art. 18"
+          },
+          {
+            "f": "Desconhecer a lei e errar sobre a ilicitude\nUm candidato confunde desconhecimento do texto legal com erro inevitável sobre a ilicitude de sua conduta.\nA lei trata os dois da mesma maneira?",
+            "b": "Não basta dizer que nunca leu o código para obter isenção.\nVariação: O erro era evitável nas circunstâncias. Examine redução, não isenção automática.\nBase: Art. 21"
+          },
+          {
+            "f": "Defesa necessária e excesso\nPara repelir agressão injusta atual, Carlos usa moderadamente o meio necessário. Depois que a agressão termina, continua agredindo por vingança.\nToda a sequência é legítima defesa?",
+            "b": "A defesa inicial pode ser justificada; a vingança posterior precisa de análise própria.\nVariação: Carlos protege uma terceira pessoa agredida. A defesa pode proteger direito de outrem, com os mesmos requisitos.\nBase: Art. 23, Art. 25"
+          },
+          {
+            "f": "Três fases do cálculo da pena\nO juiz precisa valorar circunstâncias judiciais, reincidência e uma causa legal de aumento.\nEm que ordem entram?",
+            "b": "Organize fatores por fase antes de fazer contas.\nVariação: Há duas majorantes da parte especial. O parágrafo único do art. 68 permite limitar a um aumento, prevalecendo o maior, nas condições ali descritas.\nBase: Art. 59, Art. 68"
+          },
+          {
+            "f": "Somar ou aumentar uma pena?\nDuas ações autônomas geram crimes diversos; em outro caso, ações sucessivas preenchem os requisitos de continuação de crimes da mesma espécie.\nO cálculo é necessariamente igual?",
+            "b": "Classifique o concurso antes de somar ou aplicar fração.\nVariação: Crimes dolosos com violência contra vítimas diferentes. Examine o regime especial do parágrafo único do art. 71 e seus limites; não copie simplesmente a fração do caput.\nBase: Art. 69, Art. 71"
+          },
+          {
+            "f": "Bem público ou particular sob guarda funcional\nServidor se apropria de bem particular que recebeu legitimamente sob guarda em razão do cargo.\nO fato deixa de ser peculato por o bem ser particular?",
+            "b": "Bem particular também pode ser objeto de peculato.\nVariação: Outro servidor concorre apenas culposamente para crime alheio e repara antes da sentença irrecorrível. Examine §§ 2º e 3º: a reparação tem efeito específico no peculato culposo, não isenção automática no doloso.\nBase: Art. 312"
+          },
+          {
+            "f": "Solicitar já importa\nServidor solicita vantagem indevida em razão do cargo; o particular recusa pagar.\nÉ indispensável receber o dinheiro para analisar art. 317?",
+            "b": "A recusa do particular não apaga automaticamente a solicitação criminosa.\nVariação: O servidor efetivamente retarda ato de ofício em consequência da vantagem. Examine a causa de aumento de 1/3 do § 1º, distinta do caput.\nBase: Art. 317"
+          }
+        ],
+        "quiz": [
+          {
+            "a": false,
+            "q": "A lei penal posterior mais benéfica não retroage depois do trânsito em julgado.",
+            "why": "Ela retroage para beneficiar o réu, inclusive após o trânsito em julgado."
+          },
+          {
+            "a": false,
+            "q": "Para o princípio da insignificância, basta a inexpressividade da lesão, sem outros requisitos.",
+            "why": "Exigem-se os quatro vetores do MARI em conjunto."
+          },
+          {
+            "a": false,
+            "q": "A autolesão para obter indenização de seguro nunca pode integrar um crime por força da alteridade.",
+            "why": "O CP, art. 171, § 2º, V, prevê hipótese própria. A máxima sobre mera autolesão não exclui todo contexto fraudulento."
+          },
+          {
+            "q": "O desconhecimento do texto da lei gera automaticamente a isenção por erro de proibição.",
+            "a": false,
+            "why": "CP art. 21: desconhecimento da lei é inescusável. Erro inevitável sobre ilicitude tem requisitos próprios; se evitável, a consequência pode ser redução de 1/6 a 1/3."
+          },
+          {
+            "q": "A legítima defesa pode proteger direito de outra pessoa, observados agressão injusta atual ou iminente e uso moderado dos meios necessários.",
+            "a": true,
+            "why": "CP art. 25 inclui direito seu ou de outrem. Art. 23 prevê responsabilidade pelo excesso doloso ou culposo."
+          },
+          {
+            "q": "Na dosimetria do CP, as causas de aumento entram antes da fixação da pena-base.",
+            "a": false,
+            "why": "CP art. 68: pena-base pelo art. 59; atenuantes/agravantes; por último, causas de diminuição/aumento."
+          },
+          {
+            "q": "Um bem particular jamais pode ser objeto de peculato.",
+            "a": false,
+            "why": "CP art. 312 inclui bem móvel público ou particular, com posse em razão do cargo e os demais elementos do tipo."
+          },
+          {
+            "q": "No concurso material do art. 69, mais de uma ação ou omissão e dois ou mais crimes conduzem à aplicação cumulativa das penas privativas de liberdade, observadas as regras legais.",
+            "a": true,
+            "why": "CP art. 69 prevê cumulação. Diferencie concurso formal e continuidade delitiva antes de aplicar esse regime."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "legislacao-lep-revisao",
+      "expected": {
+        "id": "c25c6b01-9db8-4083-8703-7271795f610c",
+        "title": "Lei 7.210/1984 — Lei de Execução Penal — guia de estudo e aplicação",
+        "content_status": "active",
+        "updated_at": "2026-10-10T02:58:33.253645+00:00",
+        "body_sha256": "54634bd92cc535ac5c2d2908a28ca5f9c260962a76ee17089a390a365441c7e7"
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Lei 7.210/1984 — Lei de Execução Penal.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## 1. O que você precisa compreender\n\nA execução efetiva a decisão criminal e busca integração social. Direitos não atingidos pela sentença permanecem protegidos; assistência e identificação genética têm limites próprios.\n\n## 2. Conceitos, requisitos e diferenças\n\n| Conceito | Regra de estudo | Atenção de prova |\n|---|---|---|\n| Objetivos | Efetivar sentença ou decisão e proporcionar integração social. | Não se limita à custódia física. |\n| Direitos | Condenado e internado mantêm direitos não atingidos pela sentença ou lei. | Condenação não extingue todos os direitos fundamentais. |\n| Assistência | Material, saúde, jurídica, educacional, social e religiosa; estende-se ao egresso. | Não restrinja a assistência estatal a alimentação. |\n| Perfil genético | Art. 9º-A atual: condenado a reclusão em regime inicial fechado, técnica adequada e indolor. | Use a redação de 2025, observando finalidade, sigilo e cadeia de custódia. |\n\n## 3. Primeira aplicação\n\nUma unidade atende pessoa condenada e egresso. A assistência possui várias dimensões e não cessa em toda hipótese com a saída. Na coleta genética, diferencie finalidade de identificação de usos não autorizados da amostra.\n\n> **Vigência e atualização — conferência em 07/10/2026:** A Lei 15.295/2025 modificou o art. 9º-A; a Lei 15.410/2026 alterou medidas de proteção contra reiteração de violência doméstica na execução. Progressão, saída temporária e remição demandam módulos específicos e não são resumidas por frações universais aqui.\n\n## 4. Escopo e leitura orientada\n\nArts. 1º a 3º, 9º-A e 10 a 11. Este módulo é uma revisão temática, não uma reprodução integral do diploma. A indicação de edital identifica a pertinência comprovada para aquele cargo; o candidato deve conferir o edital da sua própria carreira. A versão estudada é a vigente na data da revisão, e não o congelamento da legislação na data da prova histórica.\n\n1. Leia os dispositivos indicados no texto oficial.\n2. Compare sujeito, conduta, requisitos e exceções antes de memorizar números.\n3. Resolva os itens de certo ou errado disponíveis e revise os comentários dos erros.\n4. Retome os cartões em uma segunda sessão sem consultar a tabela.\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 216 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| TÍTULO I — Do Objeto e da Aplicação da Lei de Execução Penal | 4 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO I — Da Classificação | 6 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção I — Disposições gerais | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção II — Da assistência material | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção III — Da assistência à saúde | 1 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção IV — Da assistência jurídica | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção V — Da assistência educacional | 7 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VI — Da assistência social | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VII — Da assistência religiosa | 1 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VIII — Da assistência ao egresso | 3 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção I — Disposições Gerais | 3 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção II — Do trabalho interno | 5 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção III — Do trabalho externo | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção I — Dos Deveres | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção II — Dos Direitos | 6 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / Subseção I — Disposições gerais | 5 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / Subseção II — Das faltas disciplinares | 4 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO III — Das Sanções e das Recompensas | 4 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO IV — Da Aplicação das Sanções | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO V — Do Procedimento Disciplinar | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO I — Disposições Gerais | 1 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO II — Do Conselho Nacional de Política Criminal e Penitenciária | 3 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO III — Do Juízo da Execução | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO IV — Do Ministério Público | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO V — Do Conselho Penitenciário | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção I — Do Departamento Penitenciário Nacional | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção II — Do Departamento Penitenciário Local | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção III — Da Direção e do Pessoal dos Estabelecimentos Penais | 3 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VII — Do Patronato | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VIII — Do Conselho da Comunidade | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO IX — DA DEFENSORIA PÚBLICA (Incluído pela Lei nº 12.313, de 2010). | 2 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO I — Disposições Gerais | 7 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO II — Da Penitenciária | 4 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO III — Da Colônia Agrícola, Industrial ou Similar | 2 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO IV — Da Casa do Albergado | 3 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO V — Do Centro de Observação | 3 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO VI — Do Hospital de Custódia e Tratamento Psiquiátrico | 3 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO VII — Da Cadeia Pública | 3 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção I — Disposições Gerais | 5 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção II — Dos Regimes | 11 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção III — Das Autorizações de Saída / SUBSEÇÃO I — Da Permissão de Saída | 2 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção III — Das Autorizações de Saída / SUBSEÇÃO II — Da Saída Temporária | 3 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção IV — Da Remição | 5 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção V — Do Livramento Condicional | 16 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção VI — Da Monitoração Eletrônica (Incluído pela Lei nº 12.258, de 2010) | 3 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção I — Disposições Gerais | 2 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção II — Da Prestação de Serviços à Comunidade | 2 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção III — Da Limitação de Fim de Semana | 3 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção IV — Da Interdição Temporária de Direitos | 2 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO III — Da Suspensão Condicional | 8 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO IV — Da Pena de Multa | 7 |\n| TÍTULO VI — Da Execução das Medidas de Segurança / CAPÍTULO I — Disposições Gerais | 4 |\n| TÍTULO VI — Da Execução das Medidas de Segurança / CAPÍTULO II — Da Cessação da Periculosidade | 5 |\n| TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO I — Das Conversões | 5 |\n| TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO II — Do Excesso ou Desvio | 2 |\n| TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO III — Da Anistia e do Indulto | 7 |\n| TÍTULO VIII — Do Procedimento Judicial | 4 |\n| TÍTULO IX — Das Disposições Finais e Transitórias | 7 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/lep)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 3 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 18 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n",
+        "law_version_checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.410/2026",
+              "summary": "LEI Nº 15.410/2026",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 50",
+                "Art. 52",
+                "Art. 86"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15407.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.407/2026",
+              "summary": "Altera a Lei nº 11.671, de 8 de maio de 2008, para incluir em estabelecimentos penais federais de segurança máxima o preso, provisório ou condenado, pela prática do crime de homicídio qualificado previsto no inciso VII do § 2º do art. 121 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para dispor sobre a aplicação do regime disciplinar diferenciado, na forma que especifica.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 52",
+                "Art. 54"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15402.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.402/2026",
+              "summary": "LEI Nº 15.402/2026",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 112",
+                "Art. 126"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.358/2026",
+              "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+              "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 41-A",
+                "Art. 41-B",
+                "Art. 52",
+                "Art. 86",
+                "Art. 112"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.295/2025",
+              "summary": "LEI Nº 15.295/2025",
+              "vigency": "Art. 3º Esta Lei entra em vigor após decorridos 30 (trinta) dias de sua publicação oficial. Publicação: 22/12/2025. Entrada em vigor calculada pelo prazo legal: 21/01/2026.",
+              "articles": [
+                "Art. 9-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.280/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para agravar a pena dos crimes contra a dignidade sexual de pessoa vulnerável; o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para prever medidas protetivas de urgência a vítimas de crimes contra a dignidade sexual e em situação de especial vulnerabilidade; a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para prever a monitoração eletrônica dos condenados por crime contra a dignidade sexual; a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para estabelecer mecanismos de proteção a crianças e a adolescentes vítimas de crimes contra a dignidade sexual; e a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para assegurar assistência psicológica e social especializada às pessoas com deficiência vítimas de crimes contra a dignidade sexual e a suas famílias.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 119-A"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+              "title": "Lei 7.210/1984 — Lei de Execução Penal — texto oficial conferido",
+              "sha256": "8b95cead39cedad87abfe1d7314e2ddfef82125d22229a3b7a6ed5aba5c273d6"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm",
+              "title": "Lei 15.295/2025 — alteração do art. 9º-A da LEP",
+              "sha256": "6642779a34460af993751e7b66b44e7c7c93493b6dc089287e4f3b7390b73324"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "lep"
+        },
+        "flashcards": [
+          {
+            "b": "Efetivar sentença ou decisão e proporcionar integração social. Não se limita à custódia física.",
+            "f": "Objetivos — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Condenado e internado mantêm direitos não atingidos pela sentença ou lei. Condenação não extingue todos os direitos fundamentais.",
+            "f": "Direitos — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Material, saúde, jurídica, educacional, social e religiosa; estende-se ao egresso. Não restrinja a assistência estatal a alimentação.",
+            "f": "Assistência — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 9º-A atual: condenado a reclusão em regime inicial fechado, técnica adequada e indolor. Use a redação de 2025, observando finalidade, sigilo e cadeia de custódia.",
+            "f": "Perfil genético — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Errado. O art. 11 enumera ambas.",
+            "f": "Julgue e justifique: Assistência educacional e religiosa não integram a assistência da LEP."
+          },
+          {
+            "b": "Certo. É previsão do art. 1º.",
+            "f": "Julgue e justifique: A integração social integra os objetivos da execução penal."
+          },
+          {
+            "b": "Certo. É o art. 10, parágrafo único.",
+            "f": "Julgue e justifique: A assistência prevista na LEP se estende ao egresso."
+          },
+          {
+            "b": "Certo. É a regra do art. 3º.",
+            "f": "Julgue e justifique: São assegurados direitos não atingidos pela sentença ou lei."
+          },
+          {
+            "b": "Certo. A redação foi modificada pela Lei 15.295/2025.",
+            "f": "Julgue e justifique: O caput atual do art. 9º-A trata de reclusão em regime inicial fechado."
+          },
+          {
+            "b": "Errado. A lei estabelece finalidade e garantias próprias.",
+            "f": "Julgue e justifique: A coleta de DNA autoriza qualquer uso posterior da amostra, sem limite de finalidade."
+          },
+          {
+            "b": "Errado. A lei prevê objetivos e garantias adicionais.",
+            "f": "Julgue e justifique: A LEP tem como único objetivo manter pessoas fisicamente presas."
+          },
+          {
+            "b": "Errado. A lei preserva os direitos não atingidos.",
+            "f": "Julgue e justifique: A condenação elimina automaticamente todos os direitos do condenado."
+          },
+          {
+            "b": "No exercício, são seis dias remidos pelo trabalho; não é progressão automática de regime.\n\nO art. 126 prevê um dia de pena para cada três dias de trabalho. 18 ÷ 3 = seis dias, observados reconhecimento e controle legais.\nBase: Art. 126, Art. 127",
+            "f": "Aplicação — Uma pessoa condenada trabalha regularmente por 18 dias, com condições e comprovação exigidas pela LEP. Não há perda de dias remidos no exercício. Quantos dias de pena podem ser remidos pelo trabalho?"
+          },
+          {
+            "b": "Não aplique a regra do trabalho nem ignore a distribuição mínima prevista para estudo; são requisitos diferentes.\nErro a evitar: Confundir um dia de trabalho com um dia de pena ou remição com indulto.\nBase: Art. 126, Art. 127",
+            "f": "Análise — Remição por trabalho exige proporção: E se forem 18 horas de estudo distribuídas em apenas um dia?"
+          },
+          {
+            "b": "Um dia no recorte. Não use a razão de um dia para três dias de trabalho nessa conta.\n\nA regra é um dia de pena a cada 12 horas de frequência escolar, divididas no mínimo em três dias. Os dados preenchem horas e distribuição mínima; é necessário reconhecimento nos termos legais.\nBase: Art. 126",
+            "f": "Aplicação — Uma pessoa condenada estuda 12 horas, distribuídas em três dias, com atividade e comprovação admitidas na LEP. Quantos dias de pena o exemplo permite remir por estudo?"
+          },
+          {
+            "b": "O exemplo não satisfaz a distribuição mínima informada; horas totais sozinhas não bastam.\nErro a evitar: Dividir qualquer quantidade de horas por 12 sem verificar distribuição e atividade admitida.\nBase: Art. 126",
+            "f": "Análise — Remição por estudo tem horas e distribuição: E se as mesmas 12 horas forem concentradas em só dois dias?"
+          },
+          {
+            "b": "O resultado é três dias de remição, sujeito à apuração e decisão competentes.\n\nO art. 126, § 1º, II, prevê um dia de pena para cada três dias de trabalho. Divida os nove dias computáveis por três; não confunda trabalho com a regra de estudo.\nBase: Art. 126",
+            "f": "Aplicação — Pessoa privada de liberdade cumpre nove dias de trabalho juridicamente computáveis para remição. Qual cálculo inicial aplicar?"
+          },
+          {
+            "b": "O inciso I usa um dia a cada doze horas de frequência escolar, divididas em no mínimo três dias; confira a comprovação e demais requisitos.\nErro a evitar: Usar a fórmula de horas de estudo no trabalho.\nBase: Art. 126",
+            "f": "Análise — Remição pelo trabalho: E se a hipótese é estudo?"
+          },
+          {
+            "f": "Direitos preservados na execução\nUma unidade prisional afirma que a condenação elimina todos os direitos pessoais.\nComo responder pela LEP?",
+            "b": "Condenação não elimina indiscriminadamente os direitos.\nVariação: Uma restrição está expressamente prevista em lei. Examine seu alcance e controle, sem tratar todos os direitos como absolutos.\nBase: Art. 1, Art. 3"
+          },
+          {
+            "f": "Trabalho e estudo usam contas distintas\nApenado trabalha seis dias e estuda 24 horas certificadas distribuídas em seis dias, em horários compatíveis.\nComo calcular as bases de remição?",
+            "b": "Base de quatro dias no exemplo, sujeita à declaração pelo juiz e aos requisitos legais.\nVariação: As 24 horas de estudo estão concentradas em um único dia. Não transponha a divisão aritmética: falta distribuição mínima legal; confira apuração e documentação.\nBase: Art. 126"
+          },
+          {
+            "f": "RDD não se confunde com regime fechado\nCandidato equipara recolhimento no regime fechado com submissão automática ao regime disciplinar diferenciado.\nA equivalência é correta?",
+            "b": "Não trate todo preso fechado como submetido a RDD.\nVariação: Há hipótese do § 1º independentemente de falta grave. Examine alto risco ou fundadas suspeitas legalmente descritas e o procedimento decisório; não reduza todas as hipóteses a falta grave.\nBase: Art. 52"
+          },
+          {
+            "f": "Fração não é alvará automático\nCondenado atinge percentual temporal e pede transferência imediata sem análise dos demais requisitos.\nO relógio resolve tudo?",
+            "b": "Tempo suficiente não dispensa a decisão e os demais requisitos.\nVariação: A nova lei aumentou o percentual depois do fato. Não aplique retroativamente regra penal mais gravosa; identifique o regime temporal pertinente.\nBase: Art. 112"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "legislacao-eca-revisao",
+      "expected": {
+        "id": "4b456e05-de96-4054-ba87-0a2f5c53fa76",
+        "title": "Lei 8.069/1990 — Estatuto da Criança e do Adolescente — guia de estudo e aplicação",
+        "content_status": "active",
+        "updated_at": "2026-10-10T02:58:33.253645+00:00",
+        "body_sha256": "5be19186f5117cc6fa570d73293016965cbcee5e43a4b3eb185e28e74c341a3a"
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Lei 8.069/1990 — Estatuto da Criança e do Adolescente.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## 1. O que você precisa compreender\n\nIdade, natureza da conduta e garantias da apreensão orientam o estudo do ato infracional. Medida socioeducativa não equivale a pena criminal aplicada ao adulto.\n\n## 2. Conceitos, requisitos e diferenças\n\n| Conceito | Regra de estudo | Atenção de prova |\n|---|---|---|\n| Ato infracional | Conduta descrita como crime ou contravenção penal. | A definição não abrange qualquer comportamento socialmente reprovado. |\n| Idade | Considera-se a idade na data do fato para a regra do art. 104. | Completar dezoito anos depois não altera retroativamente essa referência. |\n| Internação provisória | Antes da sentença, o limite legal é quarenta e cinco dias. | Exige decisão fundamentada e necessidade imperiosa. |\n| Internação definitiva | Brevidade, excepcionalidade e respeito ao desenvolvimento; reavaliação no máximo semestral. | Limite máximo de três anos e liberação compulsória aos vinte e um. |\n| Medidas | Advertência, reparação, serviços à comunidade, liberdade assistida, semiliberdade, internação e medidas do art. 101 indicadas. | A gravidade não dispensa individualização e requisitos de cada medida. |\n\n## 3. Primeira aplicação\n\nUm adolescente pratica a conduta e completa dezoito anos durante a apuração. A idade relevante continua sendo a do fato. Se houver internação provisória, não confunda seu prazo com o limite da medida definitiva.\n\n> **Vigência e atualização — conferência em 07/10/2026:** A Lei 15.487/2026 alterou a proteção contra violência sexual, inclusive digital, e inseriu o art. 190-F sobre ronda virtual em ambientes públicos. Esse regime não deve ser confundido com infiltração online ou interceptação. Os exercícios deste módulo concentram-se no ato infracional e nas garantias indicadas.\n\n## 4. Escopo e leitura orientada\n\nArts. 103 a 108, 112 e 121; alerta sobre art. 190-F. Este módulo é uma revisão temática, não uma reprodução integral do diploma. A indicação de edital identifica a pertinência comprovada para aquele cargo; o candidato deve conferir o edital da sua própria carreira. A versão estudada é a vigente na data da revisão, e não o congelamento da legislação na data da prova histórica.\n\n1. Leia os dispositivos indicados no texto oficial.\n2. Compare sujeito, conduta, requisitos e exceções antes de memorizar números.\n3. Resolva os itens de certo ou errado disponíveis e revise os comentários dos erros.\n4. Retome os cartões em uma segunda sessão sem consultar a tabela.\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 326 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| Título I — Das Disposições Preliminares | 6 |\n| Título II — Dos Direitos Fundamentais / Capítulo I — Do Direito à Vida e à Saúde | 11 |\n| Título II — Dos Direitos Fundamentais / Capítulo II — Do Direito à Liberdade, ao Respeito e à Dignidade | 6 |\n| Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção I — Disposições Gerais | 8 |\n| Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção II — Da Família Natural | 3 |\n| Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção I — Disposições Gerais | 5 |\n| Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção II — Da Guarda | 2 |\n| Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção III — Da Tutela | 3 |\n| Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção IV — Da Adoção | 18 |\n| Título II — Dos Direitos Fundamentais / Capítulo IV — Do Direito à Educação, à Cultura, ao Esporte e ao Lazer | 9 |\n| Título II — Dos Direitos Fundamentais / Capítulo V — Do Direito à Profissionalização e à Proteção no Trabalho | 10 |\n| Título III — Da Prevenção / Capítulo I — Disposições Gerais | 6 |\n| Título III — Da Prevenção / Capítulo II — Da Prevenção Especial / Seção I — Da informação, Cultura, Lazer, Esportes, Diversões e Espetáculos | 7 |\n| Título III — Da Prevenção / Capítulo II — Da Prevenção Especial / Seção II — Dos Produtos e Serviços | 2 |\n| Título III — Da Prevenção / Capítulo II — Da Prevenção Especial / Seção III — Da Autorização para Viajar | 3 |\n| Título I — Da Política de Atendimento / Capítulo I — Disposições Gerais | 5 |\n| Título I — Da Política de Atendimento / Capítulo II — Das Entidades de Atendimento / Seção I — Disposições Gerais | 6 |\n| Título I — Da Política de Atendimento / Capítulo II — Das Entidades de Atendimento / Seção II — Da Fiscalização das Entidades | 3 |\n| Título II — Das Medidas de Proteção / Capítulo I — Disposições Gerais | 1 |\n| Título II — Das Medidas de Proteção / Capítulo II — Das Medidas Específicas de Proteção | 4 |\n| Título III — Da Prática de Ato Infracional / Capítulo I — Disposições Gerais | 3 |\n| Título III — Da Prática de Ato Infracional / Capítulo II — Dos Direitos Individuais | 4 |\n| Título III — Da Prática de Ato Infracional / Capítulo III — Das Garantias Processuais | 2 |\n| Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção I — Disposições Gerais | 3 |\n| Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção II — Da Advertência | 1 |\n| Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção III — Da Obrigação de Reparar o Dano | 1 |\n| Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção IV — Da Prestação de Serviços à Comunidade | 1 |\n| Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção V — Da Liberdade Assistida | 2 |\n| Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção VI — Do Regime de Semi-liberdade | 1 |\n| Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção VII — Da Internação | 5 |\n| Título III — Da Prática de Ato Infracional / Capítulo V — Da Remissão | 3 |\n| Título IV — Das Medidas Pertinentes aos Pais ou Responsável | 2 |\n| Título V — Do Conselho Tutelar / Capítulo I — Disposições Gerais | 5 |\n| Título V — Do Conselho Tutelar / Capítulo II — Das Atribuições do Conselho | 2 |\n| Título V — Do Conselho Tutelar / Capítulo III — Da Competência | 1 |\n| Título V — Do Conselho Tutelar / Capítulo IV — Da Escolha dos Conselheiros | 1 |\n| Título V — Do Conselho Tutelar / Capítulo V — Dos Impedimentos | 1 |\n| Título VI — Do Acesso à Justiça / Capítulo I — Disposições Gerais | 4 |\n| Título VI — Do Acesso à Justiça / Capítulo II — Da Justiça da Infância e da Juventude / Seção I — Disposições Gerais | 1 |\n| Título VI — Do Acesso à Justiça / Capítulo II — Da Justiça da Infância e da Juventude / Seção II — Do Juiz | 4 |\n| Título VI — Do Acesso à Justiça / Capítulo II — Da Justiça da Infância e da Juventude / Seção III — Dos Serviços Auxiliares | 2 |\n| Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção I — Disposições Gerais | 3 |\n| Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção II — Da Perda e da Suspensão do Poder Familiar (Expressão substituída pela Lei nº 12.010, de 2009) Vigência | 9 |\n| Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção III — Da Destituição da Tutela | 1 |\n| Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção IV — Da Colocação em Família Substituta | 6 |\n| Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção V — Da Apuração de Ato Infracional Atribuído a Adolescente | 20 |\n| Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção V-A (Incluído pela Lei nº 13.441, de 2017) — Da Infiltração de Agentes de Polícia para a Investigação de Crimes contra a Dignidade Sexual de Criança e de Adolescente” | 6 |\n| Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção VI — Da Apuração de Irregularidades em Entidade de Atendimento | 3 |\n| Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção VII — Da Apuração de Infração Administrativa às Normas de Proteção à Criança e ao Adolescente | 4 |\n| Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção VIII (Incluída pela Lei nº 12.010, de 2009) Vigência Da Habilitação de Pretendentes à Adoção | 6 |\n| Título VI — Do Acesso à Justiça / Capítulo IV — Dos Recursos | 7 |\n| Título VI — Do Acesso à Justiça / Capítulo V — Do Ministério Público | 6 |\n| Título VI — Do Acesso à Justiça / Capítulo VI — Do Advogado | 2 |\n| Título VI — Do Acesso à Justiça / Capítulo VII — Da Proteção Judicial dos Interesses Individuais, Difusos e Coletivos | 17 |\n| Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo I — Dos Crimes / Seção I — Disposições Gerais | 7 |\n| Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo I — Dos Crimes / Seção II — Dos Crimes em Espécie | 24 |\n| Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo II — Das Infrações Administrativas | 38 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/eca)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 2 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 16 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n",
+        "law_version_checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15512.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.512/2026",
+              "summary": "Dispõe sobre princípios e diretrizes para a formulação e a implementação de políticas públicas para a efetivação, com absoluta prioridade, do direito da criança e do adolescente à natureza; e altera a Lei nº 6.938, de 31 de agosto de 1981, a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), e a Lei nº 12.187, de 29 de dezembro de 2009.",
+              "vigency": "Art. 35. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 4"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.487/2026",
+              "summary": "Institui medidas de enfrentamento e repressão ao crime de violência sexual contra criança ou adolescente, inclusive no ambiente digital e com uso de inteligência artificial; e altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), e a Lei nº 12.850, de 2 de agosto de 2013 (Lei de Combate ao Crime Organizado), para recrudescer o tratamento penal aos criminosos sexuais.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 190-A",
+                "Art. 190-C",
+                "Art. 190-F",
+                "Art. 226-A",
+                "Art. 227-B",
+                "Art. 227-C",
+                "Art. 240",
+                "Art. 241",
+                "Art. 241-A",
+                "Art. 241-B",
+                "Art. 241-C",
+                "Art. 241-D",
+                "Art. 241-E",
+                "Art. 244-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15450.htm",
+              "state": "future",
+              "title": "LEI Nº 15.450/2026",
+              "summary": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para instituir medida destinada à prevenção do uso inadequado de psicofármacos em crianças e adolescentes.",
+              "vigency": "Art. 2º Esta Lei entra em vigor após decorridos 180 (cento e oitenta) dias de sua publicação oficial. Publicação: 01/07/2026. Entrada em vigor calculada pelo prazo legal: 28/12/2026.",
+              "articles": []
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15426.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.426/2026",
+              "summary": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para dispor sobre os Conselhos dos Direitos da Criança e do Adolescente nacional, estaduais, distrital e municipais.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 89",
+                "Art. 89-A",
+                "Art. 260-I"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15413.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.413/2026",
+              "summary": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para dispor sobre o direito da criança e do adolescente à saúde mental.",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 11-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.280/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para agravar a pena dos crimes contra a dignidade sexual de pessoa vulnerável; o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para prever medidas protetivas de urgência a vítimas de crimes contra a dignidade sexual e em situação de especial vulnerabilidade; a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para prever a monitoração eletrônica dos condenados por crime contra a dignidade sexual; a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para estabelecer mecanismos de proteção a crianças e a adolescentes vítimas de crimes contra a dignidade sexual; e a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para assegurar assistência psicológica e social especializada às pessoas com deficiência vítimas de crimes contra a dignidade sexual e a suas famílias.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 70-A",
+                "Art. 101"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15268.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.268/2025",
+              "summary": "Altera a alínea “a” do inciso III do caput do art. 136 da Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para substituir a expressão “serviço social” por “assistência social”.",
+              "vigency": "Art. 2º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 136"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15243.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.243/2025",
+              "summary": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para garantir assistência integral e multiprofissional à criança e ao adolescente dependentes químicos e/ou com problemas decorrentes do uso de drogas.",
+              "vigency": "Art. 2º Esta Lei entra em vigor após decorridos 120 (cento e vinte) dias de sua publicação oficial. Publicação: 29/10/2025. Entrada em vigor calculada pelo prazo legal: 26/02/2026.",
+              "articles": [
+                "Art. 14-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15240.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.240/2025",
+              "summary": "LEI Nº 15.240/2025",
+              "vigency": "Art. 2º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 4",
+                "Art. 5",
+                "Art. 22",
+                "Art. 56",
+                "Art. 58",
+                "Art. 129",
+                "Art. 130"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15234.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.234/2025",
+              "summary": "LEI Nº 15.234/2025",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 243"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15163.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.163/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para modificar as penas dos crimes de abandono de incapaz e de maus-tratos, a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa), para modificar as penas do crime de exposição a perigo da saúde e da integridade física ou psíquica da pessoa idosa, a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a fim de estabelecer penas para o crime de abandono de pessoa com deficiência que resulte em lesão corporal de natureza grave ou em morte, e a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para vedar a aplicação da Lei nº 9.099, de 26 de setembro de 1995, em caso de apreensão indevida de criança ou de adolescente.",
+              "vigency": "Art. 6º Esta Lei entra em vigor na data da sua publicação.",
+              "articles": [
+                "Art. 230"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+              "title": "Lei 8.069/1990 — Estatuto da Criança e do Adolescente — texto oficial conferido",
+              "sha256": "312a7f59594107e6480bd26e0d30e1884f081c8563b33c51b05c3622bdb6f56c"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+              "title": "Lei 15.487/2026 — proteção contra violência sexual e ambiente digital",
+              "sha256": "1adce1f1d6c4a2c53180c26b64f8c6f65d0146f1d3e8ac855b495c821e3c2d73"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "eca"
+        },
+        "flashcards": [
+          {
+            "b": "Conduta descrita como crime ou contravenção penal. A definição não abrange qualquer comportamento socialmente reprovado.",
+            "f": "Ato infracional — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Considera-se a idade na data do fato para a regra do art. 104. Completar dezoito anos depois não altera retroativamente essa referência.",
+            "f": "Idade — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Antes da sentença, o limite legal é quarenta e cinco dias. Exige decisão fundamentada e necessidade imperiosa.",
+            "f": "Internação provisória — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Brevidade, excepcionalidade e respeito ao desenvolvimento; reavaliação no máximo semestral. Limite máximo de três anos e liberação compulsória aos vinte e um.",
+            "f": "Internação definitiva — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Errado. O § 5º prevê vinte e um anos.",
+            "f": "Julgue e justifique: A liberação compulsória pela idade ocorre apenas aos vinte e cinco anos."
+          },
+          {
+            "b": "Certo. É a referência do art. 104, parágrafo único.",
+            "f": "Julgue e justifique: A idade é considerada na data do fato."
+          },
+          {
+            "b": "Errado. Esse prazo é limite de internação definitiva, não da provisória.",
+            "f": "Julgue e justifique: A internação provisória pode durar ordinariamente três anos."
+          },
+          {
+            "b": "Errado. A data do fato continua relevante.",
+            "f": "Julgue e justifique: Completar dezoito anos durante a apuração muda automaticamente a idade de referência."
+          },
+          {
+            "b": "Certo. É a regra do art. 121, § 2º.",
+            "f": "Julgue e justifique: A manutenção da internação deve ser reavaliada no máximo a cada seis meses."
+          },
+          {
+            "b": "Certo. O art. 108 também exige fundamentação e necessidade.",
+            "f": "Julgue e justifique: A internação antes da sentença tem limite legal de quarenta e cinco dias."
+          },
+          {
+            "b": "Certo. É a definição do art. 103.",
+            "f": "Julgue e justifique: Ato infracional pode corresponder a contravenção penal."
+          },
+          {
+            "b": "Errado. O dispositivo inclui ambas.",
+            "f": "Julgue e justifique: Ato infracional exige necessariamente conduta descrita como crime, excluídas contravenções."
+          },
+          {
+            "b": "A idade posterior não muda a referência temporal da inimputabilidade penal desse fato. Medida concreta exige seus pressupostos.\n\nO art. 104 considera a idade na data do fato. O ato infracional corresponde a conduta descrita como crime ou contravenção, com regime próprio do ECA.\nBase: Art. 103, Art. 104, Art. 105",
+            "f": "Aplicação — Um adolescente tinha 17 anos quando praticou a conduta. Ao ser ouvido, já havia completado 18. A mudança posterior de idade transforma aquele fato em crime imputável como adulto?"
+          },
+          {
+            "b": "Trata-se de criança; examinam-se medidas de proteção na forma do art. 105, não o mesmo regime de medida socioeducativa de adolescente.\nErro a evitar: Escolher o regime apenas pela idade na audiência ou impor internação automaticamente.\nBase: Art. 103, Art. 104, Art. 105",
+            "f": "Análise — A idade relevante é a do fato: E se na data do fato tivesse 11 anos?"
+          },
+          {
+            "b": "O fato é examinado pelo regime aplicável ao adolescente na data da conduta.\n\nO art. 104, parágrafo único, considera a idade na data do fato. O aniversário posterior não altera retroativamente a idade relevante.\nBase: Art. 104",
+            "f": "Aplicação — Adolescente pratica ato infracional aos 17 anos e completa 18 antes do julgamento. Qual idade define a incidência do regime juvenil?"
+          },
+          {
+            "b": "O critério temporal aponta para maioridade penal; não aplique o regime juvenil só por proximidade do aniversário.\nErro a evitar: Usar a idade do julgamento como critério.\nBase: Art. 104",
+            "f": "Análise — Idade no dia do fato: E se a conduta ocorreu depois de completar 18 anos?"
+          },
+          {
+            "f": "Idade no fato, não na audiência\nAdolescente pratica ato aos 17 anos e completa 18 antes da audiência.\nQual idade interessa à inimputabilidade?",
+            "b": "Use a idade no fato e o regime legal pertinente; efeitos posteriores dependem das regras de execução.\nVariação: Uma criança de 11 anos pratica ato infracional. Art. 105 encaminha às medidas de proteção do art. 101, não automaticamente às socioeducativas de adolescente.\nBase: Art. 104, Art. 105, Art. 101"
+          },
+          {
+            "f": "Internação não é primeira resposta automática\nAdolescente pratica ato sem violência; a decisão propõe internação só para dar exemplo, sem hipóteses legais nem inadequação das outras medidas.\nIsso atende ao ECA?",
+            "b": "A decisão exige fundamento legal e individualização; o exemplo não demonstra esses requisitos.\nVariação: Há descumprimento reiterado e injustificável de medida. Examine art. 122, III e § 1º, devido processo e limite específico de três meses.\nBase: Art. 121, Art. 122"
+          },
+          {
+            "f": "Seis meses não são duração fixa\nInternação é imposta com revisão prevista apenas depois de um ano.\nO intervalo de revisão está correto?",
+            "b": "Um ano sem revisão excede o intervalo legal.\nVariação: O jovem completa 21 anos. O § 5º estabelece liberação compulsória; não use esse marco para prolongar além dos outros limites.\nBase: Art. 121"
+          },
+          {
+            "f": "Medida compatível com o adolescente\nAutoridade seleciona medida apenas pelo nome do ato, sem avaliar capacidade de cumprimento e circunstâncias.\nQuais fatores a norma exige?",
+            "b": "A escolha exige os fatores legais e fundamentação.\nVariação: A proposta exige trabalho forçado sob pretexto educativo. O § 2º veda em qualquer hipótese e sob qualquer pretexto.\nBase: Art. 112"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "legislacao-transito-revisao",
+      "expected": {
+        "id": "569e43d1-7273-47d7-a50d-383ede8075b0",
+        "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro — guia de estudo e aplicação",
+        "content_status": "active",
+        "updated_at": "2026-10-10T02:58:33.253645+00:00",
+        "body_sha256": "c683d8c18251f28cfe33077d58a375dffe0a24716fbef78f85ff578005cae364"
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Lei 9.503/1997 — Código de Trânsito Brasileiro.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## 1. O que você precisa compreender\n\nInfração administrativa e crime de trânsito não são equivalentes. Identifique os elementos penais e os meios de comprovação antes de concluir a partir de um único dado.\n\n## 2. Conceitos, requisitos e diferenças\n\n| Conceito | Regra de estudo | Atenção de prova |\n|---|---|---|\n| Regime geral | CP e CPP aplicam-se se o capítulo não dispuser de modo diverso; Lei 9.099 no que couber. | Há exceções legais, não aplicação automática de todos os benefícios. |\n| Socorro | Art. 301: pronto e integral socorro em sinistro com vítima afasta flagrante e fiança na hipótese legal. | Não apaga automaticamente o fato ou impede investigação. |\n| Capacidade psicomotora | Art. 306 admite constatação por concentração ou sinais definidos, com meios legais de prova. | Não é indispensável sempre um teste de etilômetro. |\n| Sem habilitação | Art. 309 exige direção em via pública e perigo de dano. | Não confunda automaticamente a infração administrativa com o tipo penal. |\n\n## 3. Primeira aplicação\n\nUm condutor sem habilitação é fiscalizado. A falta do documento não permite dispensar o exame do perigo de dano exigido pelo art. 309. Em outro caso, sinais de alteração psicomotora devem ser examinados conforme os meios de prova admitidos.\n\n> **Vigência e atualização — conferência em 07/10/2026:** A Lei 14.599/2023 atualizou a redação do art. 301 para sinistros de trânsito. O módulo não pretende abranger todas as modificações administrativas do CTB nem todos os limites técnicos de medição regulamentados pelo Contran.\n\n## 4. Escopo e leitura orientada\n\nArts. 291, 301, 306 e 309. Este módulo é uma revisão temática, não uma reprodução integral do diploma. A indicação de edital identifica a pertinência comprovada para aquele cargo; o candidato deve conferir o edital da sua própria carreira. A versão estudada é a vigente na data da revisão, e não o congelamento da legislação na data da prova histórica.\n\n1. Leia os dispositivos indicados no texto oficial.\n2. Compare sujeito, conduta, requisitos e exceções antes de memorizar números.\n3. Resolva os itens de certo ou errado disponíveis e revise os comentários dos erros.\n4. Retome os cartões em uma segunda sessão sem consultar a tabela.\n\n## Alerta de vigência encerrada — MP 1.360/2026\n\nA medida provisória teve seu prazo encerrado em **15/09/2026**, conforme o Ato Declaratório 96/2026 do Congresso, publicado em 17/09/2026. Não ensine suas disposições como regra atualmente vigente. A análise das relações jurídicas do período de vigência é própria e não equivale a manter a MP em vigor. Confira o CTB compilado e as normas efetivamente vigentes para a data do fato.\n\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 365 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| CAPÍTULO I DISPOSIÇÕES PRELIMINARES | 4 |\n| CAPÍTULO II DO SISTEMA NACIONAL DE TRÂNSITO / Seção I Disposições Gerais | 2 |\n| CAPÍTULO II DO SISTEMA NACIONAL DE TRÂNSITO / Seção II Da Composição e da Competência do Sistema Nacional de Trânsito | 21 |\n| CAPÍTULO III DAS NORMAS GERAIS DE CIRCULAÇÃO E CONDUTA | 40 |\n| CAPÍTULO III-A (Incluído Lei nº 12.619, de 2012) (Vigência) — DA CONDUÇÃO DE VEÍCULOS POR MOTORISTAS PROFISSIONAIS | 3 |\n| CAPÍTULO IV DOS PEDESTRES E CONDUTORES DE VEÍCULOS NÃO MOTORIZADOS | 4 |\n| CAPÍTULO V DO CIDADÃO | 2 |\n| CAPÍTULO VI DA EDUCAÇÃO PARA O TRÂNSITO | 11 |\n| CAPÍTULO VII DA SINALIZAÇÃO DE TRÂNSITO | 12 |\n| CAPÍTULO VIII DA ENGENHARIA DE TRÁFEGO, DA OPERAÇÃO, DA FISCALIZAÇÃO E DO POLICIAMENTO OSTENSIVO DE TRÂNSITO | 4 |\n| CAPÍTULO IX DOS VEÍCULOS / Seção I Disposições Gerais | 7 |\n| CAPÍTULO IX DOS VEÍCULOS / Seção II Da Segurança dos Veículos | 10 |\n| CAPÍTULO IX DOS VEÍCULOS / Seção III Da Identificação do Veículo | 4 |\n| CAPÍTULO X DOS VEÍCULOS EM CIRCULAÇÃO INTERNACIONAL | 2 |\n| CAPÍTULO XI DO REGISTRO DE VEÍCULOS | 12 |\n| CAPÍTULO XII DO LICENCIAMENTO | 7 |\n| CAPÍTULO XIII DA CONDUÇÃO DE ESCOLARES | 4 |\n| CAPÍTULO XIII-A DA CONDUÇÃO DE MOTO-FRETE (Incluído pela Lei nº 12.009, de 2009) | 2 |\n| CAPÍTULO XIV DA HABILITAÇÃO | 21 |\n| CAPÍTULO XV DAS INFRAÇÕES | 101 |\n| CAPÍTULO XVI DAS PENALIDADES | 12 |\n| CAPÍTULO XVII DAS MEDIDAS ADMINISTRATIVAS | 13 |\n| CAPÍTULO XVIII DO PROCESSO ADMINISTRATIVO / Seção I Da Autuação | 1 |\n| CAPÍTULO XVIII DO PROCESSO ADMINISTRATIVO / Seção II Do Julgamento das Autuações e Penalidades | 13 |\n| CAPÍTULO XIX DOS CRIMES DE TRÂNSITO / Seção I Disposições Gerais | 9 |\n| CAPÍTULO XIX DOS CRIMES DE TRÂNSITO / Seção II Dos Crimes em Espécie | 13 |\n| CAPÍTULO XX DISPOSIÇÕES FINAIS E TRANSITÓRIAS | 30 |\n| Anexos / ANEXO I DOS CONCEITOS E DEFINIÇÕES | 1 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/transito)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 2 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 16 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n",
+        "law_version_checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15503.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.503/2026",
+              "summary": "LEI Nº 15.503/2026",
+              "vigency": "Art. 19. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 143"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15452.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.452/2026",
+              "summary": "LEI Nº 15.452/2026",
+              "vigency": "Art. 2º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 326-C"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15428.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.428/2026",
+              "summary": "Altera a Lei nº 9.503, de 23 de setembro de 1997 (Código de Trânsito Brasileiro).",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 147",
+                "Art. 148",
+                "Art. 159",
+                "Art. 268-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15153.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.153/2025",
+              "summary": "Altera a Lei nº 9.503, de 23 de setembro de 1997 (Código de Trânsito Brasileiro), a fim de permitir a destinação de recursos arrecadados com multas de trânsito para o custeio da habilitação de condutores de baixa renda, estabelecer regras para transferência de propriedade de veículo por meio eletrônico e exigir exame toxicológico nos casos que especifica.",
+              "vigency": "“Art. 3º Esta Lei entra em vigor na data de sua publicação.” “Art. 3º Esta Lei entra em vigor na data de sua publicação.”",
+              "articles": [
+                "Art. 123",
+                "Art. 148-A",
+                "Art. 320"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/congresso/adc-96-mpv1.360.htm",
+              "state": "expired",
+              "title": "MP 1.360/2026 — vigência encerrada",
+              "summary": "A medida provisória que alterava regras de trânsito perdeu a vigência. Não integrar suas regras à exposição de direito atual; relações do período exigem análise própria.",
+              "vigency": "Prazo encerrado em 15/09/2026; ato publicado em 17/09/2026.",
+              "articles": [
+                "Ato Declaratório 96/2026"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+              "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro — texto oficial conferido",
+              "sha256": "0bca56fb64dca5d0c3e77850cf5aed8252e12c603a32c8c6503831686623e7b9"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/congresso/adc-96-mpv1.360.htm",
+              "title": "Congresso — Ato Declaratório 96/2026",
+              "sha256": "a3d31d838b6e2804c15f9d2d48c855da726df744d8b96d312da6ffd13b2d9dca"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Separada a MP com vigência encerrada das leis de trânsito atuais.",
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "transito"
+        },
+        "flashcards": [
+          {
+            "b": "CP e CPP aplicam-se se o capítulo não dispuser de modo diverso; Lei 9.099 no que couber. Há exceções legais, não aplicação automática de todos os benefícios.",
+            "f": "Regime geral — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 301: pronto e integral socorro em sinistro com vítima afasta flagrante e fiança na hipótese legal. Não apaga automaticamente o fato ou impede investigação.",
+            "f": "Socorro — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 306 admite constatação por concentração ou sinais definidos, com meios legais de prova. Não é indispensável sempre um teste de etilômetro.",
+            "f": "Capacidade psicomotora — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 309 exige direção em via pública e perigo de dano. Não confunda automaticamente a infração administrativa com o tipo penal.",
+            "f": "Sem habilitação — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Certo. O dispositivo prevê diferentes formas de verificação.",
+            "f": "Julgue e justifique: O art. 306 admite comprovação pelos meios legalmente previstos além do etilômetro."
+          },
+          {
+            "b": "Errado. A regra não constitui extinção geral de responsabilidade.",
+            "f": "Julgue e justifique: Prestar socorro elimina necessariamente qualquer apuração penal do sinistro."
+          },
+          {
+            "b": "Certo. É elemento expresso do tipo penal.",
+            "f": "Julgue e justifique: O art. 309 exige perigo de dano."
+          },
+          {
+            "b": "Certo. O art. 291 prevê aplicação no que couber.",
+            "f": "Julgue e justifique: A aplicação da Lei 9.099 aos crimes de trânsito observa as ressalvas legais."
+          },
+          {
+            "b": "Certo. São as condições textuais da regra.",
+            "f": "Julgue e justifique: O socorro previsto no art. 301 deve ser pronto e integral."
+          },
+          {
+            "b": "Errado. A lei não impõe essa exclusividade.",
+            "f": "Julgue e justifique: Sem teste de etilômetro o art. 306 jamais pode ser comprovado."
+          },
+          {
+            "b": "Errado. É necessário verificar via pública e perigo de dano.",
+            "f": "Julgue e justifique: Toda direção sem habilitação configura automaticamente o art. 309."
+          },
+          {
+            "b": "Errado. Há condições e exceções legais.",
+            "f": "Julgue e justifique: Todos os crimes de trânsito recebem indistintamente todos os benefícios da Lei 9.099."
+          },
+          {
+            "b": "A conclusão parte do art. 306, sem importar automaticamente a pena de homicídio ou lesão no trânsito.\n\nO art. 306 prevê detenção de seis meses a três anos, multa e suspensão ou proibição de obter permissão/habilitação. Morte ou lesão e seus elementos exigem análise de outros tipos; não estão informados neste recorte.\nBase: Art. 302, Art. 306",
+            "f": "Aplicação — O enunciado informa condução de veículo automotor com capacidade psicomotora alterada por álcool, preenchidos os requisitos do art. 306. Não houve morte ou lesão. Qual hipótese penal é analisada?"
+          },
+          {
+            "b": "Reexamine esse tipo e seus requisitos; álcool e resultado não permitem ignorar a descrição legal e a imputação subjetiva.\nErro a evitar: Tratar infração administrativa por álcool e crime como equivalentes em qualquer narrativa.\nBase: Art. 302, Art. 306",
+            "f": "Análise — Não há uma pena única para dirigir após beber: E se houver morte com os elementos de uma modalidade específica do art. 302?"
+          },
+          {
+            "b": "A recusa isolada não permite concluir automaticamente pelo crime; outros meios podem comprovar seus elementos.\n\nO art. 165-A disciplina a infração de recusa; o art. 306 exige seus próprios elementos e admite meios de prova previstos em lei. Separe sanção administrativa e prova criminal.\nBase: Art. 165-A, Art. 306",
+            "f": "Aplicação — Condutor se recusa ao teste, e o enunciado não demonstra alteração da capacidade psicomotora. A recusa prova automaticamente o crime do art. 306?"
+          },
+          {
+            "b": "A falta de teste não impede toda prova do crime; confira os meios admitidos pelo art. 306.\nErro a evitar: Confundir infração administrativa e tipo penal.\nBase: Art. 165-A, Art. 306",
+            "f": "Análise — Álcool e recusa não são o mesmo fato: E se vídeos, testemunhas e exame demonstram alteração psicomotora nos termos legais?"
+          },
+          {
+            "f": "Socorro sem risco pessoal\nApós acidente, condutor pode prestar socorro sem risco pessoal ou solicitar auxílio público, mas deliberadamente não faz nenhum dos dois.\nQual dispositivo merece exame?",
+            "b": "Examine art. 304, ressalvada sua subsidiariedade quando o fato integrar crime mais grave.\nVariação: Socorro direto apresenta risco pessoal, mas há telefone disponível. A alternativa de solicitar auxílio deve ser considerada; risco ao socorro físico não autoriza omitir toda providência.\nBase: Art. 304"
+          },
+          {
+            "f": "Não habilitado: infração e crime\nCondutor sem habilitação dirige na via pública sem perigo de dano; em outro caso faz manobra perigosa que o gera.\nOs dois casos são idênticos no art. 309?",
+            "b": "Distingua análise administrativa da tipicidade penal com perigo.\nVariação: A autorização está cassada, e há perigo de dano. A cassação também consta do tipo, observados os demais elementos.\nBase: Art. 309"
+          },
+          {
+            "f": "Entregar carro a quem não pode dirigir\nProprietário permite conscientemente que pessoa não habilitada conduza o automóvel.\nQual conduta do proprietário deve ser estudada?",
+            "b": "Estude art. 310 separadamente do art. 309; não transfira automaticamente todos os requisitos de um ao outro.\nVariação: O motorista tem habilitação válida, mas está embriagado e sem condição segura. A hipótese também consta do art. 310; a existência de CNH não encerra a análise.\nBase: Art. 310"
+          },
+          {
+            "f": "Velocidade perto da escola\nCondutor transita em velocidade incompatível com segurança nas proximidades de escola, gerando perigo de dano.\nBasta ultrapassar qualquer limite para esse tipo?",
+            "b": "Examine art. 311 com todos seus elementos, além das normas administrativas pertinentes.\nVariação: Em outro local, há apenas excesso administrativo sem elementos do artigo. Não aplique art. 311 por analogia; examine a infração efetivamente demonstrada.\nBase: Art. 311"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "processo-penal-cpp-provas-flagrante-revisao",
+      "expected": {
+        "id": "128f6abf-2b59-4a4f-b3df-f60dbeb635ae",
+        "title": "Código de Processo Penal — leitura atualizada — guia de estudo e aplicação",
+        "content_status": "active",
+        "updated_at": "2026-10-10T02:58:33.253645+00:00",
+        "body_sha256": "ed39bc3216ed04c830c10e444576efebbead9d801cdc28d01af6ef8606f2da33"
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Código de Processo Penal — leitura atualizada.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## O mapa do processo penal\n\nLeia o CPP em três camadas: regra legal, garantia constitucional e interpretação judicial. O percurso oferece a transcrição do texto compilado e recuperação por dispositivo; o resumo abaixo trabalha provas, cadeia de custódia e prisão em flagrante, vinculados ao tópico do edital informado. A leitura integral do código é repertório adicional, não uma afirmação de que todo artigo é cobrado pela PF.\n\n## Prova e elemento informativo\n\nO art. 155 distingue prova sob contraditório judicial de elementos da investigação. As ressalvas são provas cautelares, não repetíveis e antecipadas. Não memorize “inquérito nunca pode ser considerado”: a vedação é à fundamentação exclusiva nas condições do artigo. O art. 157 disciplina inadmissibilidade, derivação, nexo e fonte independente.\n\n**Caso concreto:** uma testemunha apenas declara um fato no inquérito. O enunciado não traz contraditório judicial nem prova enquadrada nas ressalvas. Uma condenação fundada exclusivamente nesse elemento contraria a regra do art. 155. Se há prova não repetível, examine a ressalva e as garantias próprias; o nome “inquérito” não resolve sozinho.\n\n## Cadeia de custódia: antes do laboratório\n\nOs arts. 158-A a 158-F organizam documentação, rastreabilidade e etapas do vestígio. Reconhecimento e preservação antecedem o recebimento no laboratório; o agente que reconhece um elemento relevante responde por sua preservação. Documentar coleta, acondicionamento, transporte, recebimento e processamento permite examinar a confiabilidade da prova.\n\n**Caso concreto:** um policial encontra objeto potencialmente ligado ao fato e preserva o local. A cadeia não começa somente no laudo final. Se alguém mistura embalagens, identifique o registro comprometido e a consequência no caso concreto; não invente nulidade automática universal por qualquer falha formal.\n\n## Flagrante e controle judicial\n\nCompare as hipóteses do art. 302, o dever policial e a faculdade de qualquer do povo do art. 301. O art. 310 prevê decisões fundamentadas: relaxamento da prisão ilegal, conversão quando preenchidos os requisitos ou liberdade provisória. Flagrante não transforma a preventiva em consequência automática.\n\n**Atualização de 2026:** a Lei 15.358 alterou a redação do art. 310 para audiência de custódia por videoconferência em tempo real, com garantias de defesa, entrevista reservada, privacidade e disciplina de falhas do sistema. Estude os §§ 7º a 13 e os debates de controle de constitucionalidade do diploma. A descrição aqui corresponde ao texto oficial na conferência, sem afirmar que qualquer dispositivo dispensa análise constitucional.\n\n**Caso concreto:** o auto chega ao juiz. A decisão deve distinguir legalidade do flagrante e fundamentos de cautelar; a gravidade abstrata não basta para a preventiva (art. 312, § 4º). O cabimento do art. 313 não substitui requisitos nem fundamentação. A Lei 15.487/2026 acrescentou o inciso VI: consulte a hipótese exata no quadro de mudanças e no código.\n\n## Prazos: atenção à alteração da representação\n\nO art. 38 conserva regra geral de seis meses, com marco no conhecimento da autoria ou hipótese do art. 29. A Lei 15.438/2026 acrescentou § 2º com prazo de doze meses nos crimes praticados no âmbito de violência doméstica e familiar contra a mulher. Isso não torna todo delito nesse contexto dependente de representação: primeiro identifique o regime de ação penal. Este ponto é atualização complementar, com pertinência dependente do edital.\n\n## Lei e jurisprudência: não copie a remissão como resposta\n\nAs ADIs 6298, 6299, 6300 e 6305 exigem leitura conjunta nos dispositivos sobre juiz das garantias, arquivamento, custódia e prova. A regra de impedimento automático do juiz que conheceu prova inadmissível, do art. 157, § 5º, foi declarada inconstitucional; sua presença na compilação não é fundamento para ensiná-la como impedimento automático vigente. Consulte a decisão do STF e a interpretação de cada dispositivo. O percurso conserva a transcrição oficial e identifica essa ressalva junto ao artigo.\n\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 808 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO I — DISPOSIÇÕES PRELIMINARES | 9 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO II — DO INQUÉRITO POLICIAL | 23 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO III — DA AÇÃO PENAL | 38 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IV — DA AÇÃO CIVIL | 6 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO I — DA COMPETÊNCIA PELO LUGAR DA INFRAÇÃO | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO II — DA COMPETÊNCIA PELO DOMICÍLIO OU RESIDÊNCIA DO RÉU | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO III — DA COMPETÊNCIA PELA NATUREZA DA INFRAÇÃO | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO IV — DA COMPETÊNCIA POR DISTRIBUIÇÃO | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO V — DA COMPETÊNCIA POR CONEXÃO OU CONTINÊNCIA | 7 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO VI — DA COMPETÊNCIA POR PREVENÇÃO | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO VII — DA COMPETÊNCIA PELA PRERROGATIVA DE FUNÇÃO | 4 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO VIII — DISPOSIÇÕES ESPECIAIS | 4 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO I — DAS QUESTÕES PREJUDICIAIS | 3 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO II — DAS EXCEÇÕES | 17 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO III — DAS INCOMPATIBILIDADES E IMPEDIMENTOS | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO IV — DO CONFLITO DE JURISDIÇÃO | 5 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO V — DA RESTITUIÇÃO DAS COISAS APREENDIDAS | 8 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO VI — DAS MEDIDAS ASSECURATÓRIAS | 22 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO VII — DO INCIDENTE DE FALSIDADE | 4 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO VIII — DA INSANIDADE MENTAL DO ACUSADO | 6 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO I — DISPOSIÇÕES GERAIS | 3 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO II — DO EXAME DE CORPO DE DELITO, DA CADEIA DE | 33 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO III — DO INTERROGATÓRIO DO ACUSADO | 11 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO IV — DA CONFISSÃO | 4 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO V — DO OFENDIDO | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO VI — DAS TESTEMUNHAS | 25 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO VII — DO RECONHECIMENTO DE PESSOAS E COISAS | 3 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO VIII — DA ACAREAÇÃO | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO IX — DOS DOCUMENTOS | 8 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO X — DOS INDÍCIOS | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO XI — DA BUSCA E DA APREENSÃO | 11 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO I — DO JUIZ | 6 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO II — DO MINISTÉRIO PÚBLICO | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO III — DO ACUSADO E SEU DEFENSOR | 9 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO IV — DOS ASSISTENTES | 6 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO V — DOS FUNCIONÁRIOS DA JUSTIÇA | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO VI — DOS PERITOS E INTÉRPRETES | 7 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO I — DISPOSIÇÕES GERAIS | 20 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO II — DA PRISÃO EM FLAGRANTE | 11 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO III — DA PRISÃO PREVENTIVA | 6 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO IV DA PRISÃO DOMICILIAR (Redação dada pela Lei nº 12.403, de 2011). | 4 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO V — DAS OUTRAS MEDIDAS CAUTELARES | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO VI — DA LIBERDADE PROVISÓRIA, COM OU SEM FIANÇA | 30 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX-A — (Incluído pela Lei nº 15.280, de 2025) | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO X — DAS CITAÇÕES E INTIMAÇÕES / CAPÍTULO I — DAS CITAÇÕES | 19 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO X — DAS CITAÇÕES E INTIMAÇÕES / CAPÍTULO II — DAS INTIMAÇÕES | 3 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO XI — DA APLICAÇÃO PROVISÓRIA DE INTERDIÇÕES | 8 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO XII — DA SENTENÇA | 12 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO I — DA INSTRUÇÃO CRIMINAL | 14 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção I — Da Acusação e da Instrução Preliminar | 7 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção II — Da Pronúncia, da Impronúncia e da Absolvição Sumária | 9 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção III — Da Preparação do Processo para Julgamento em Plenário | 3 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção IV — Do Alistamento dos Jurados | 2 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção V — Do Desaforamento | 2 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção VI — Da Organização da Pauta | 3 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção VII — Do Sorteio e da Convocação dos Jurados | 4 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção VIII — Da Função do Jurado | 11 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção IX — Da Composição do Tribunal do Júri e da Formação do Conselho de Sentença | 6 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção X — Da reunião e das sessões do Tribunal do Júri | 20 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XI — Da Instrução em Plenário | 4 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XII — Dos Debates | 6 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XIII — Do Questionário e sua Votação | 10 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XIV — Da sentença | 2 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XV — Da Ata dos Trabalhos | 3 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XVI — Das Atribuições do Presidente do Tribunal do Júri | 1 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO II — DO PROCESSO E DO JULGAMENTO DOS CRIMES | 6 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO III — DO PROCESSO E DO JULGAMENTO DOS CRIMES | 5 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO IV — DO PROCESSO E DO JULGAMENTO DOS CRIMES | 16 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO V — DO PROCESSO SUMÁRIO | 7 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO VI — DO PROCESSO DE RESTAURAÇÃO DE AUTOS EXTRAVIADOS OU DESTRUÍDOS | 8 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO VII — DO PROCESSO DE APLICAÇÃO DE MEDIDA DE SEGURANÇA | 7 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO I — DAS NULIDADES | 11 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO I — DISPOSIÇÕES GERAIS | 7 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO II — DO RECURSO EM SENTIDO ESTRITO | 12 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO III — DA APELAÇÃO | 9 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO V — DO PROCESSO E DO JULGAMENTO DOS RECURSOS EM SENTIDO ESTRITO | 9 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO VI — DOS EMBARGOS | 2 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO VII — DA REVISÃO | 11 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO VIII — DO RECURSO EXTRAORDINÁRIO | 2 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO IX — DA CARTA TESTEMUNHÁVEL | 8 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO X — DO HABEAS CORPUS E SEU PROCESSO | 22 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO I — DISPOSIÇÕES GERAIS | 6 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO II — DA EXECUÇÃO DAS PENAS EM ESPÉCIE / CAPÍTULO I — DAS PENAS PRIVATIVAS DE LIBERDADE | 12 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO II — DA EXECUÇÃO DAS PENAS EM ESPÉCIE / CAPÍTULO II — DAS PENAS PECUNIÁRIAS | 5 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO II — DA EXECUÇÃO DAS PENAS EM ESPÉCIE / CAPÍTULO III — DAS PENAS ACESSÓRIAS | 5 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO III — DOS INCIDENTES DA EXECUÇÃO / CAPÍTULO I — DA SUSPENSÃO CONDICIONAL DA PENA | 13 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO III — DOS INCIDENTES DA EXECUÇÃO / CAPÍTULO II — DO LIVRAMENTO CONDICIONAL | 24 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO IV — DA GRAÇA, DO INDULTO, DA ANISTIA E DA REHABILITAÇÃO / CAPÍTULO I — DA GRAÇA, DO INDULTO E DA ANISTIA | 9 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO IV — DA GRAÇA, DO INDULTO, DA ANISTIA E DA REHABILITAÇÃO / CAPÍTULO II — DA REABILITAÇÃO | 8 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO V — DA EXECUÇÃO DAS MEDIDAS DE SEGURANÇA | 29 |\n| LIVRO V — DAS RELAÇÕES JURISDICIONAIS COM AUTORIDADE ESTRANGEIRA / TÍTULO ÚNICO / CAPÍTULO I — DISPOSIÇÕES GERAIS | 3 |\n| LIVRO V — DAS RELAÇÕES JURISDICIONAIS COM AUTORIDADE ESTRANGEIRA / TÍTULO ÚNICO / CAPÍTULO II — DAS CARTAS ROGATÓRIAS | 4 |\n| LIVRO V — DAS RELAÇÕES JURISDICIONAIS COM AUTORIDADE ESTRANGEIRA / TÍTULO ÚNICO / CAPÍTULO III — DA HOMOLOGAÇÃO DAS SENTENÇAS ESTRANGEIRAS | 4 |\n| LIVRO VI — DISPOSIÇÕES GERAIS | 22 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/codigo-processo-penal)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 8 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 28 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n",
+        "law_version_checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.487/2026",
+              "summary": "Institui medidas de enfrentamento e repressão ao crime de violência sexual contra criança ou adolescente, inclusive no ambiente digital e com uso de inteligência artificial; e altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), e a Lei nº 12.850, de 2 de agosto de 2013 (Lei de Combate ao Crime Organizado), para recrudescer o tratamento penal aos criminosos sexuais.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 313"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15438.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.438/2026",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para aumentar o prazo decadencial do direito de queixa ou de representação quando se tratar de crime praticado no âmbito de violência doméstica e familiar contra a mulher.",
+              "vigency": "Art. 5º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 38"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.358/2026",
+              "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+              "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 3-B",
+                "Art. 78",
+                "Art. 310",
+                "Art. 313",
+                "Art. 584"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.280/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para agravar a pena dos crimes contra a dignidade sexual de pessoa vulnerável; o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para prever medidas protetivas de urgência a vítimas de crimes contra a dignidade sexual e em situação de especial vulnerabilidade; a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para prever a monitoração eletrônica dos condenados por crime contra a dignidade sexual; a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para estabelecer mecanismos de proteção a crianças e a adolescentes vítimas de crimes contra a dignidade sexual; e a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para assegurar assistência psicológica e social especializada às pessoas com deficiência vítimas de crimes contra a dignidade sexual e a suas famílias.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 300-A",
+                "Art. 350",
+                "Art. 350-A",
+                "Art. 350-B"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15272.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.272/2025",
+              "summary": "Altera o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para dispor sobre as circunstâncias que recomendam a conversão da prisão em flagrante em preventiva, sobre a coleta de material biológico para obtenção e armazenamento do perfil genético do custodiado e sobre os critérios para aferição da periculosidade do agente para concessão de prisão preventiva, inclusive quando da audiência de custódia.",
+              "vigency": "Art. 2º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 310",
+                "Art. 310-A",
+                "Art. 312"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+              "title": "Código de Processo Penal — leitura atualizada — texto oficial conferido",
+              "sha256": "2d5f2332c6cb006699e0e6f040e20fdb9a8b2de6af15f1976953dcadfc0f5232"
+            },
+            {
+              "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840552",
+              "title": "STF — julgamento das ADIs do juiz das garantias"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "codigo-processo-penal"
+        },
+        "flashcards": [
+          {
+            "b": "Vedação à fundamentação exclusiva em elementos informativos; ressalvas: provas cautelares, não repetíveis e antecipadas.",
+            "f": "Art. 155: investigação e prova"
+          },
+          {
+            "b": "Preservação do local ou procedimento policial/pericial que detecta vestígio; não apenas chegada ao laboratório.",
+            "f": "Cadeia de custódia: início"
+          },
+          {
+            "b": "Não: examinar legalidade, cabimento, requisitos concretos, fundamentação e medidas alternativas.",
+            "f": "Flagrante implica preventiva?"
+          },
+          {
+            "b": "Compare art. 38, § 2º (prazo específico), art. 310 (custódia e garantias) e art. 313, VI; confira ação penal, vigência e jurisprudência.",
+            "f": "Mudanças de 2026 no CPP"
+          },
+          {
+            "b": "Errado. CPP, art. 155: a regra exige prova sob contraditório judicial, ressalvadas as provas cautelares, não repetíveis e antecipadas.",
+            "f": "Julgue e justifique: O juiz pode fundamentar a condenação exclusivamente nos elementos informativos do inquérito, sem nenhuma ressalva."
+          },
+          {
+            "b": "Certo. CPP, art. 158-A, § 3º: a definição não se limita ao que é visível.",
+            "f": "Julgue e justifique: Vestígio pode ser objeto ou material bruto, visível ou latente, relacionado à infração penal."
+          },
+          {
+            "b": "Errado. CPP, art. 158-A, § 1º: começa com preservação do local ou procedimentos policiais ou periciais que detectem vestígio.",
+            "f": "Julgue e justifique: A cadeia de custódia começa apenas quando o laboratório recebe a amostra."
+          },
+          {
+            "b": "Certo. CPP, art. 157, §§ 1º e 2º: examine o nexo e a fonte independente; não é uma autorização genérica de uso de prova ilícita.",
+            "f": "Julgue e justifique: A fonte independente deve ser examinada ao analisar prova derivada da ilícita."
+          },
+          {
+            "b": "Certo. CPP, art. 301: qualquer do povo poderá; autoridades policiais e seus agentes deverão. Não troque faculdade por obrigação de todo cidadão.",
+            "f": "Julgue e justifique: Qualquer do povo pode prender quem seja encontrado em flagrante delito."
+          },
+          {
+            "b": "Errado. CPP, art. 312, § 4º, acrescentado em 2025, exige demonstração concreta e fundamentação; observe também arts. 311, 313 e 315.",
+            "f": "Julgue e justifique: Preventiva pode ser decretada apenas com a gravidade abstrata do crime."
+          },
+          {
+            "b": "Errado. A Lei 15.358/2026 mantém expressamente entrevista prévia, reservada e inviolável. O formato não suprime a garantia.",
+            "f": "Julgue e justifique: Na literalidade atual do art. 310, § 9º, a audiência por videoconferência dispensa entrevista reservada entre preso e defensor."
+          },
+          {
+            "b": "Errado. Os artigos são complementares: cabimento não significa prisão automática nem antecipação de pena. O art. 313, § 2º, impede essa finalidade.",
+            "f": "Julgue e justifique: A hipótese de cabimento do art. 313 dispensa todos os requisitos do art. 312."
+          },
+          {
+            "b": "A base exclusivamente informativa descrita não satisfaz a regra.\n\nO art. 155 veda fundamentar exclusivamente em elementos informativos, ressalvando provas cautelares, não repetíveis e antecipadas. Confira se há prova judicial e se a hipótese é realmente uma das exceções.\nBase: Art. 155",
+            "f": "Aplicação — A sentença condena com base exclusiva em informações do inquérito, sem provas em contraditório nem exceções legais. O art. 155 admite essa base exclusiva?"
+          },
+          {
+            "b": "Examine a ressalva e sua regularidade; a conclusão não decorre apenas do rótulo inquérito.\nErro a evitar: Dizer que nenhum elemento do inquérito pode ser considerado em qualquer situação.\nBase: Art. 155",
+            "f": "Análise — Inquérito e condenação: E se há prova não repetível regularmente obtida?"
+          },
+          {
+            "b": "A confissão não substitui automaticamente o exame exigido.\n\nO art. 158 exige exame direto ou indireto quando a infração deixa vestígios e afirma que a confissão não o supre. Não confunda admitir o fato com demonstrar tecnicamente sua materialidade.\nBase: Art. 158, Art. 167",
+            "f": "Aplicação — Crime deixa vestígios, mas pretende-se dispensar exame porque o acusado confessou. A confissão substitui o exame indispensável?"
+          },
+          {
+            "b": "Examine a hipótese do art. 167 e suas condições para suprimento por prova testemunhal.\nErro a evitar: Ignorar a distinção entre prova da materialidade e admissão pessoal.\nBase: Art. 158, Art. 167",
+            "f": "Análise — Vestígios e confissão: E se os vestígios desapareceram?"
+          },
+          {
+            "b": "A falha exige análise de confiabilidade e consequências no caso concreto.\n\nO art. 158-A define procedimentos para documentar a história cronológica e rastrear posse e manuseio; o art. 158-B descreve etapas. Confronte os registros faltantes com integridade e rastreabilidade; não crie sanção automática sem exame jurídico.\nBase: Art. 158-A, Art. 158-B",
+            "f": "Aplicação — Vestígio é recolhido, mas não há registro de sua trajetória e das pessoas que o manusearam. Por que isso importa para a prova?"
+          },
+          {
+            "b": "A documentação permite rastrear o vestígio, sem tornar toda conclusão pericial imune à impugnação.\nErro a evitar: Presumir autenticidade ou nulidade automática apenas pelo nome cadeia de custódia.\nBase: Art. 158-A, Art. 158-B",
+            "f": "Análise — Cadeia de custódia: E se todas as etapas estão documentadas?"
+          },
+          {
+            "b": "O texto atual não autoriza decretar de ofício na situação descrita.\n\nO art. 311 exige requerimento do MP, querelante ou assistente, ou representação da autoridade policial; o art. 312 traz pressupostos. Separe iniciativa, necessidade e hipóteses de admissibilidade; gravidade não elimina as exigências.\nBase: Art. 311, Art. 312, Art. 313, Art. 315",
+            "f": "Aplicação — Durante investigação, o juiz decreta preventiva sem requerimento nem representação. A iniciativa está autorizada pelo texto atual?"
+          },
+          {
+            "b": "Ainda é preciso conferir os arts. 312, 313, 315 e as alternativas cautelares; o requerimento não torna a prisão automática.\nErro a evitar: Usar redação anterior para justificar iniciativa judicial.\nBase: Art. 311, Art. 312, Art. 313, Art. 315",
+            "f": "Análise — Prisão preventiva de ofício: E se há requerimento e fundamentos concretos?"
+          },
+          {
+            "b": "A confissão não é prova absoluta nem necessariamente indivisível.\n\nO art. 197 exige confronto com as demais provas; o art. 200 prevê divisibilidade e retratabilidade. Diferencie valor probatório e atenuante penal, cujo aviso de jurisprudência está no material de súmulas.\nBase: Art. 197, Art. 200",
+            "f": "Aplicação — Acusado confessa e depois se retrata; pretende-se tratar a primeira versão como prova absoluta e indivisível. Como o CPP disciplina a confissão?"
+          },
+          {
+            "b": "A compatibilidade deve ser analisada; não dispensa avaliação motivada do conjunto.\nErro a evitar: Misturar regra de prova do CPP e requisito da atenuante no CP.\nBase: Art. 197, Art. 200",
+            "f": "Análise — Confissão retratada: E se a confissão é compatível com outras provas?"
+          },
+          {
+            "b": "Não. A análise é cumulativa e deve considerar o regime vigente e o caso.\n\nO art. 28-A reúne requisitos, exclusões, condições e controle do acordo; pena mínima é apenas um elemento. Verifique ausência de violência ou grave ameaça, confissão formal e circunstanciada, adequação e impedimentos legais.\nBase: Art. 28-A",
+            "f": "Aplicação — Um investigado quer celebrar ANPP só porque a pena mínima é inferior a quatro anos. Esse dado basta?"
+          },
+          {
+            "b": "A exclusão precisa ser considerada; não ignore o contexto para aplicar só o limite de pena.\nErro a evitar: Converter um limite numérico em direito automático ao acordo.\nBase: Art. 28-A",
+            "f": "Análise — Garantias no acordo de não persecução: E se o crime envolve violência doméstica nas condições do § 2º, IV?"
+          },
+          {
+            "b": "A hipótese pode ser flagrante, sujeita ao controle de legalidade e aos dados concretos.\n\nO art. 302, IV, contempla encontro logo depois com objetos e outros elementos nas condições que descreve. Verifique proximidade temporal e relação dos objetos com a autoria; mera suspeita vaga não substitui os requisitos.\nBase: Art. 302",
+            "f": "Aplicação — Suspeito é encontrado logo depois do delito com objetos que fazem presumir sua autoria. A situação pode ser flagrante mesmo sem ser surpreendido durante o ato?"
+          },
+          {
+            "b": "Não use o inciso IV automaticamente; verifique se existe outra hipótese legal.\nErro a evitar: Limitar todo flagrante a estar cometendo o delito.\nBase: Art. 302",
+            "f": "Análise — Flagrante exige hipótese legal: E se o encontro ocorre sem proximidade temporal nem elementos que apontem autoria?"
+          },
+          {
+            "b": "A autoridade policial não pode ordenar esse arquivamento.\n\nO art. 17 veda à autoridade policial mandar arquivar autos de inquérito. Diferencie conclusão do relatório e ato de arquivamento, que segue seu regime próprio.\nBase: Art. 17",
+            "f": "Aplicação — A autoridade policial conclui que a investigação não reuniu elementos e pretende mandar arquivar os autos. Pode determinar o arquivamento?"
+          },
+          {
+            "b": "A apresentação de conclusão não é ordem de arquivamento; diferencie os atos.\nErro a evitar: Confundir presidir a investigação e dispor sobre seu arquivamento.\nBase: Art. 17",
+            "f": "Análise — Arquivamento do inquérito: E se a questão trata de encaminhar relatório com conclusão pela ausência de elementos?"
+          },
+          {
+            "f": "Confissão não substitui perícia\nApós lesão que deixa vestígios, o acusado confessa e a autoridade pretende dispensar o exame.\nA confissão basta?",
+            "b": "A confissão não dispensa a prova pericial exigida.\nVariação: O caso envolve violência contra pessoa idosa. O parágrafo único do art. 158 estabelece prioridade do exame para essa hipótese.\nBase: Art. 158, Art. 167"
+          },
+          {
+            "f": "Inquérito e prova para condenar\nA acusação pede condenação fundada exclusivamente em declarações colhidas no inquérito, sem prova judicial, cautelar, antecipada ou não repetível.\nEssa base exclusiva basta?",
+            "b": "Não se condena com fundamento exclusivamente nesses elementos.\nVariação: Há uma perícia não repetível regularmente produzida. A ressalva legal precisa ser examinada; não descarte toda prova investigativa indiscriminadamente.\nBase: Art. 155"
+          },
+          {
+            "f": "Não existe prazo universal de 24 horas\nLogo após a infração, a vítima persegue o autor sem interrupção em situação que faz presumir sua autoria.\nÉ preciso encaixar o fato num prazo fixo de 24 horas?",
+            "b": "Analise a modalidade e a conexão temporal/fática, não um relógio único.\nVariação: Sem perseguição, há encontro com objetos logo depois. Examine inciso IV e suas condições; não confunda com inciso III.\nBase: Art. 302"
+          },
+          {
+            "f": "Quatro anos exatos não são inferiores a quatro\nInfração sem violência tem pena mínima de exatamente quatro anos, já consideradas as causas incidentes.\nO requisito temporal do ANPP foi preenchido?",
+            "b": "Esse requisito não foi preenchido; não transforme menor em menor ou igual.\nVariação: Uma minorante aplicável reduz a pena mínima abaixo de quatro. Recalcule o limite e examine confissão, necessidade, suficiência, condições e impedimentos; não conceda automaticamente.\nBase: Art. 28-A"
+          },
+          {
+            "f": "Gravidade genérica não basta\nA prisão preventiva é requerida apenas porque o crime causa indignação, sem indicação de perigo concreto gerado pela liberdade.\nComo analisar o fundamento?",
+            "b": "Examine admissibilidade e necessidade, alternativas e fatos contemporâneos, com decisão fundamentada.\nVariação: Há ameaça comprovada às testemunhas. Esse fato pode indicar risco à instrução, sem dispensar os demais requisitos e exame das cautelares.\nBase: Art. 282, Art. 312, Art. 315, Art. 319"
+          },
+          {
+            "f": "Objeto apreendido sem trajetória documentada\nUm vestígio é recolhido, transferido e analisado sem documentação de quem o manipulou em cada etapa.\nQual problema o candidato deve identificar?",
+            "b": "A deficiência precisa ser avaliada concretamente; não declare nulidade ou confiabilidade automáticas.\nVariação: Todas as etapas estão registradas e lacres íntegros. Há elementos de rastreabilidade, ainda sujeitos ao contraditório e avaliação da prova.\nBase: Art. 158-A, Art. 158-B"
+          },
+          {
+            "f": "Erro formal e prejuízo\nA defesa aponta irregularidade formal e pede anulação de todo o processo sem explicar prejuízo.\nQual regra de estudo aparece?",
+            "b": "A análise exige demonstração adequada e contexto, não a palavra nulidade isolada.\nVariação: Há restrição efetiva à produção de prova defensiva. Examine o prejuízo concreto e o regime do vício, sem presumir que toda irregularidade tem o mesmo resultado.\nBase: Art. 563"
+          }
+        ]
+      }
+    }
+  ],
+  "courses": [],
+  "enrichments": []
+}

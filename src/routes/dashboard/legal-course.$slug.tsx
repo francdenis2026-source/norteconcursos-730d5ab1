@@ -11,11 +11,14 @@ import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
+import { LegalLiteralPractice } from "@/components/library/LegalLiteralPractice";
+import { LegalCoverage } from "@/components/library/LegalCoverage";
 import { useStudyMaterial } from "@/lib/studyMaterials";
 import { useLegalCourses, useLegalProgress, useLegalUnits, type LegalUnit, type LegalCourse } from "@/lib/legalCourses";
 import { legalProgressSummary, selectNextLegalUnit, type LegalProgress, type ReviewRating } from "@/lib/legalLearning";
 import { supabase } from "@/integrations/supabase/client";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
+import { legalStudyCaveat } from "@/lib/legalStudyCaveats";
 
 export const Route = createFileRoute("/dashboard/legal-course/$slug")({ component: LegalCoursePage, head: () => ({ meta: [{ title: "Percurso de legislação | Norte Concursos" }] }) });
 
@@ -60,6 +63,7 @@ function LegalCoursePage() {
       {isStudySourceUrl(course.source_url) && <a href={course.source_url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm underline">Texto oficial · conferido em {new Date(course.checked_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}</a>}
     </header>
     <LegalUpdateNotice review={course.legal_review ? { ...course.legal_review, course_slug: undefined } : null} slug={course.material_slug} />
+    {userId && <LegalCoverage course={course} units={rows} userId={userId} />}
     <details className="surface-card p-5">
       <summary className="cursor-pointer font-semibold">Objetivos, atualizações e jurisprudência</summary>
       <ul className="mt-3 list-disc space-y-2 pl-5 text-sm">{course.overview.objectives.map(goal => <li key={goal}>{goal}</li>)}</ul>
@@ -93,12 +97,13 @@ function LegalCoursePage() {
           {!visible.length && <p className="text-sm">Nenhum dispositivo neste filtro.</p>}
         </nav>
       </aside>
-      {progress.isPending ? <Skeleton className="h-80 rounded-xl" /> : selected && userId && !progress.isError && <UnitLesson key={`${userId}:${selected.id}`} unit={selected} materialSlug={course.material_slug} references={course.overview.jurisprudence.filter(ref => ref.articles.includes(selected.label))} progress={byId.get(selected.id)} userId={userId} onNext={() => { const index = current.findIndex(row => row.id === selected.id); if (current[index + 1]) setSelectedId(current[index + 1]!.id); }} />}
+      {progress.isPending ? <Skeleton className="h-80 rounded-xl" /> : selected && userId && !progress.isError && <UnitLesson key={`${userId}:${selected.id}`} unit={selected} law={course.slug} materialSlug={course.material_slug} references={course.overview.jurisprudence.filter(ref => ref.articles.includes(selected.label))} progress={byId.get(selected.id)} userId={userId} onNext={() => { const index = current.findIndex(row => row.id === selected.id); if (current[index + 1]) setSelectedId(current[index + 1]!.id); }} />}
     </div>}
   </div>;
 }
 
-function UnitLesson({ unit, materialSlug, references, progress, userId, onNext }: { unit: LegalUnit; materialSlug: string; references: LegalCourse["overview"]["jurisprudence"]; progress: LegalProgress | undefined; userId: string; onNext: () => void }) {
+function UnitLesson({ unit, law, materialSlug, references, progress, userId, onNext }: { unit: LegalUnit; law: string; materialSlug: string; references: LegalCourse["overview"]["jurisprudence"]; progress: LegalProgress | undefined; userId: string; onNext: () => void }) {
+  const caveat = legalStudyCaveat(law, unit.unit_key);
   const queryClient = useQueryClient();
   const [mode, setMode] = useState<"read" | "recall">("read");
   const [revealed, setRevealed] = useState(false);
@@ -124,8 +129,10 @@ function UnitLesson({ unit, materialSlug, references, progress, userId, onNext }
       <div className="flex flex-wrap gap-2"><Button variant={mode === "read" ? "default" : "outline"} onClick={() => setMode("read")}>Estudar o dispositivo</Button><Button variant={mode === "recall" ? "default" : "outline"} onClick={() => { setMode("recall"); setRevealed(false); setResponse(""); }}>Recuperar sem consulta</Button></div>
       {mode === "recall" && <section className="space-y-3 rounded-xl border p-4"><h3 className="font-semibold">Explique com suas palavras</h3><ol className="list-decimal space-y-2 pl-5 text-sm">{unit.recall.prompts.map(prompt => <li key={prompt}>{prompt}</li>)}</ol><label className="block text-sm">Sua resposta de recuperação<textarea className="mt-1 min-h-36 w-full rounded-lg border bg-background p-3" value={response} onChange={e => setResponse(e.target.value)} placeholder="Responda antes de abrir a referência." /></label><Button disabled={!response.trim()} variant="outline" onClick={() => setRevealed(true)}>Conferir com o texto e os critérios</Button></section>}
       {(mode === "read" || revealed) && <>
+        {caveat && <aside className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4 text-sm"><strong>{caveat.title}</strong><p className="mt-2 leading-7">{caveat.explanation}</p><a href={caveat.source} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block underline">Conferir o entendimento do STJ</a></aside>}
         {references.map(ref => <aside key={ref.url} className="rounded-xl border border-amber-500/50 p-4 text-sm"><strong>{ref.title}</strong><p className="mt-2">{ref.explanation}</p>{isStudySourceUrl(ref.url) && <a className="mt-2 inline-block underline" href={ref.url} target="_blank" rel="noopener noreferrer">Fonte do tribunal</a>}</aside>)}
         <div className={unit.unit_key.startsWith("anexo-") ? "library-body overflow-x-auto" : undefined}><LegalStudyReading source={unit.body_text} markdown={unit.unit_key.startsWith("anexo-")} /></div>
+        {caveat?.literalPractice !== false && <LegalLiteralPractice key={unit.content_sha256} source={unit.body_text} label={unit.label} />}
         {unit.recall.figures?.filter(figure => isStudySourceUrl(figure.url)).map(figure => <figure key={figure.url} className="rounded-xl border p-3"><img src={figure.url} alt={figure.title} className="h-auto max-w-full" loading="lazy" onError={event => { event.currentTarget.hidden = true; }} /><figcaption className="mt-2 text-xs"><a href={figure.url} target="_blank" rel="noopener noreferrer" className="underline">{figure.title}</a></figcaption></figure>)}
         <section className="rounded-xl bg-muted/40 p-4"><h3 className="font-semibold">Como conferir sua compreensão</h3><ul className="mt-2 list-disc space-y-2 pl-5 text-sm">{unit.recall.checklist.map(item => <li key={item}>{item}</li>)}</ul></section>
         <WorkedExamples slug={materialSlug} enabled={true} articleLabel={unit.label} />
