@@ -40,7 +40,7 @@ import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
 import { MobileHub } from "@/components/landing/MobileHub";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
-import { HeroRadar, ScrollProgress, useHomeFx } from "@/components/landing/fx";
+import { HeroContours, ScrollProgress, useHomeFx } from "@/components/landing/fx";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -274,7 +274,7 @@ function Index() {
             <HeroVideo onDone={() => setHeroReady(true)} />
           </div>
           <div className="lp-hero__shade" aria-hidden="true" />
-          <HeroRadar />
+          <HeroContours />
           <div className="lp-hero__grid" aria-hidden="true" />
           <div className="fx-grain" aria-hidden="true" />
           <div className="lp-container lp-hero__body">
