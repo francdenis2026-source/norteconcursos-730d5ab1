@@ -1,5 +1,8 @@
+import { userStorageKey } from "@/lib/userStorage";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import type { LegalReview } from "@/components/library/LegalUpdateNotice";
+import type { LibrarySearchContent } from "./librarySearch";
 
 export type StudyMaterialStatus = "under_review" | "active" | "obsolete" | "archived";
 
@@ -17,12 +20,15 @@ export type StudyMaterialSummary = {
   syllabus_topic_order: number | null;
   law_version_checked_at: string | null;
   content_status: StudyMaterialStatus;
+  updated_at?: string;
+  law_course_slug?: string | null;
 };
 
 export type Flashcard = { f: string; b: string };
 export type QuizItem = { q: string; a: boolean; why: string };
 
 export type StudyMaterial = StudyMaterialSummary & {
+  legal_review?: LegalReview | null;
   flashcards: Flashcard[] | null;
   quiz: QuizItem[] | null;
   body_md: string;
@@ -33,7 +39,7 @@ export type StudyMaterial = StudyMaterialSummary & {
 };
 
 const SUMMARY_COLUMNS =
-  "id,slug,discipline,topic_label,sort_order,title,summary,contest_name,syllabus_topic_order,law_version_checked_at,content_status";
+  "id,slug,discipline,topic_label,sort_order,title,summary,contest_name,syllabus_topic_order,law_version_checked_at,content_status,updated_at,law_course_slug:legal_review->>course_slug";
 
 export const STATUS_LABEL: Record<StudyMaterialStatus, string> = {
   under_review: "Em revisão",
@@ -63,6 +69,22 @@ export function useStudyMaterialList(enabled: boolean) {
   });
 }
 
+/** Loaded only when a student starts searching; RLS and active status still apply. */
+export async function fetchLibrarySearchContent(): Promise<LibrarySearchContent[]> {
+  const rows: LibrarySearchContent[] = [];
+  for (let offset = 0; ; ) {
+    const { data, error } = await supabase.from("study_materials").select("id,body_md,legal_basis")
+      .eq("content_status", "active").order("id").range(offset, offset + 199);
+    if (error) throw error;
+    if (!data?.length) return rows;
+    rows.push(...data as LibrarySearchContent[]);
+    offset += data.length;
+  }
+}
+export function useLibrarySearchContent(enabled: boolean, userId?: string) {
+  return useQuery({queryKey:["library-search-content",userId],enabled:enabled&&!!userId,queryFn:fetchLibrarySearchContent,staleTime:5*60*1000});
+}
+
 export function useStudyMaterial(slug: string, enabled: boolean) {
   return useQuery({
     queryKey: ["study-materials", "detail", slug],
@@ -72,7 +94,7 @@ export function useStudyMaterial(slug: string, enabled: boolean) {
       const { data, error } = await supabase
         .from("study_materials")
         .select(
-          `${SUMMARY_COLUMNS},flashcards,quiz,body_md,source_note,legal_basis,reviewed_at,updated_at`,
+          `${SUMMARY_COLUMNS},flashcards,quiz,body_md,source_note,legal_basis,reviewed_at,legal_review`,
         )
         .eq("slug", slug)
         .eq("content_status", "active")
@@ -131,7 +153,7 @@ const READ_KEY = "norte-library-read";
 /** Materiais já abertos neste navegador (conveniência local, não é dado do aluno no servidor). */
 export function readSlugs(): Set<string> {
   try {
-    const raw = localStorage.getItem(READ_KEY);
+    const raw = localStorage.getItem(userStorageKey(READ_KEY));
     const parsed: unknown = raw ? JSON.parse(raw) : [];
     return new Set(
       Array.isArray(parsed) ? parsed.filter((v): v is string => typeof v === "string") : [],
@@ -146,7 +168,7 @@ export function markSlugRead(slug: string) {
     const current = readSlugs();
     if (current.has(slug)) return;
     current.add(slug);
-    localStorage.setItem(READ_KEY, JSON.stringify([...current]));
+    localStorage.setItem(userStorageKey(READ_KEY), JSON.stringify([...current]));
   } catch {
     // sem armazenamento disponível: o marcador de lido simplesmente não persiste
   }

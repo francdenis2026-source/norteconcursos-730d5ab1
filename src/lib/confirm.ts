@@ -25,6 +25,16 @@ export function confirmDialog(opts: ConfirmOptions): Promise<boolean> {
 }
 
 /** Aviso informativo com um botão só ("Entendi"). */
-export async function alertDialog(opts: { title: string; message: string; okLabel?: string }): Promise<void> {
-  await confirmDialog({ title: opts.title, message: opts.message, confirmLabel: opts.okLabel ?? "Entendi", tone: "info", hideCancel: true });
+export async function alertDialog(opts: {
+  title: string;
+  message: string;
+  okLabel?: string;
+}): Promise<void> {
+  await confirmDialog({
+    title: opts.title,
+    message: opts.message,
+    confirmLabel: opts.okLabel ?? "Entendi",
+    tone: "info",
+    hideCancel: true,
+  });
 }

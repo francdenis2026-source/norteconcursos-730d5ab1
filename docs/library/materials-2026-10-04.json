@@ -1,0 +1,2044 @@
+[
+  {
+    "slug": "informatica-internet-intranet-vpn",
+    "discipline": "Informática",
+    "topic_label": "Redes e tecnologias de acesso",
+    "sort_order": 100,
+    "title": "Internet, intranet, extranet e VPN: acesso não é alcance",
+    "summary": "Internet, intranet e extranet descrevem o alcance e o público de uma rede. VPN é uma tecnologia de conexão: não transforma, por si só, uma intranet em extranet. Uma intranet pode ser acessada remotamente por empregados autorizados.",
+    "body_md": "## A ideia central\n\nInternet, intranet e extranet descrevem o alcance e o público de uma rede. VPN é uma tecnologia de conexão: não transforma, por si só, uma intranet em extranet. Uma intranet pode ser acessada remotamente por empregados autorizados.\n\n| Conceito | Como reconhecer | Exemplo próprio |\n|---|---|---|\n| Internet | Interconexão de redes por protocolos comuns | Consultar um edital público |\n| Intranet | Serviços internos e acesso restrito à organização | Painel de escalas dos servidores |\n| Extranet | Acesso controlado de pessoas externas a serviços selecionados | Fornecedor consulta sua entrega |\n| VPN | Rede privada virtual sobre uma infraestrutura de comunicação | Servidor acessa o painel interno de casa |\n\n## Raciocine como a banca\n\nPergunte quem tem autorização e que serviço é oferecido, antes de olhar a localização física do usuário. Um servidor fora do prédio pode continuar usando a intranet. Um parceiro externo pode usar extranet, mesmo que esteja dentro do prédio.\n\n> **Ponto de atenção:** usar tecnologias da internet não significa tornar os dados públicos. VPN também não garante anonimato universal nem substitui a proteção do dispositivo.\n\n## Exemplo aplicado\n\nFeijó disponibiliza um portal público de editais e uma área interna de documentos. Um funcionário acessa a área interna por VPN; uma empresa recebe acesso apenas aos contratos em que participa. Há internet, intranet, acesso por VPN e extranet no mesmo cenário, sem contradição.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 2,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Tipos de Redes.pdf; TJ_SP42470505-conceitos-e-tecnologias-de-internet.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 2.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Uma intranet pode usar protocolos empregados na internet. Certo ou errado?",
+        "b": "Certo. O público restrito diferencia a intranet; protocolos comuns não a tornam pública."
+      },
+      {
+        "f": "Acesso remoto por VPN transforma toda intranet em extranet. Certo ou errado?",
+        "b": "Errado. A tecnologia de acesso não muda automaticamente o público autorizado."
+      },
+      {
+        "f": "Uma extranet pode oferecer acesso controlado a fornecedores. Certo ou errado?",
+        "b": "Certo. São usuários externos com autorização a serviços específicos."
+      },
+      {
+        "f": "Toda VPN torna seu usuário anônimo para todos os participantes da comunicação. Certo ou errado?",
+        "b": "Errado. O destino, a operadora da VPN e outros agentes ainda podem ter informações."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Uma intranet pode usar protocolos empregados na internet.",
+        "a": true,
+        "why": "O público restrito diferencia a intranet; protocolos comuns não a tornam pública."
+      },
+      {
+        "q": "Acesso remoto por VPN transforma toda intranet em extranet.",
+        "a": false,
+        "why": "A tecnologia de acesso não muda automaticamente o público autorizado."
+      },
+      {
+        "q": "Uma extranet pode oferecer acesso controlado a fornecedores.",
+        "a": true,
+        "why": "São usuários externos com autorização a serviços específicos."
+      },
+      {
+        "q": "Toda VPN torna seu usuário anônimo para todos os participantes da comunicação.",
+        "a": false,
+        "why": "O destino, a operadora da VPN e outros agentes ainda podem ter informações."
+      },
+      {
+        "q": "O portal público de editais pode ser um serviço na internet.",
+        "a": true,
+        "why": "Não é necessário restringi-lo aos empregados da organização."
+      },
+      {
+        "q": "Uma rede interna precisa usar protocolos exclusivos e incompatíveis com a internet.",
+        "a": false,
+        "why": "É comum usar os mesmos padrões e protocolos."
+      },
+      {
+        "q": "Um empregado em casa pode continuar acessando serviços da intranet.",
+        "a": true,
+        "why": "A posição física não define, sozinha, o tipo de rede."
+      },
+      {
+        "q": "Extranet é sinônimo de qualquer rede sem fio.",
+        "a": false,
+        "why": "Extranet trata de acesso externo autorizado; sem fio trata do meio de comunicação."
+      }
+    ],
+    "_syllabus_topic_id": "b2a1b459-a544-41c4-8ff8-db030d25841b",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-osi-tcp-ip-camadas",
+    "discipline": "Informática",
+    "topic_label": "Modelos de redes",
+    "sort_order": 101,
+    "title": "OSI e TCP/IP: camadas, unidades e equipamentos",
+    "summary": "O OSI é um modelo de referência de sete camadas. TCP/IP é uma arquitetura de protocolos utilizada nas redes IP. A correspondência entre modelos é didática: não existe obrigação de que cada implementação reproduza sete módulos separados.",
+    "body_md": "## Entenda o caminho dos dados\n\nO OSI é um modelo de referência de sete camadas. TCP/IP é uma arquitetura de protocolos utilizada nas redes IP. A correspondência entre modelos é didática: não existe obrigação de que cada implementação reproduza sete módulos separados.\n\n| Camada OSI | Função predominante | Referência de prova |\n|---|---|---|\n| 7 Aplicação | Serviços para aplicações | HTTP, DNS, SMTP |\n| 6 Apresentação | Representação e transformação dos dados | Codificação de formatos |\n| 5 Sessão | Organização de sessões | Controle do diálogo |\n| 4 Transporte | Comunicação entre processos | TCP, UDP e portas |\n| 3 Rede | Endereçamento e encaminhamento entre redes | IP; roteador |\n| 2 Enlace | Quadros no enlace local | MAC; switch convencional |\n| 1 Física | Sinais e transmissão de bits | Meio físico; repetidor |\n\n## Encapsulamento\n\nNa transmissão, dados da aplicação recebem informações de transporte, rede e enlace. No destino ocorre a interpretação correspondente. Em uma representação usual: mensagem, segmento TCP ou datagrama UDP, pacote IP, quadro e sinais.\n\n> **Correção importante:** a camada de transporte não garante sempre entrega ordenada. TCP oferece mecanismos de confiabilidade; UDP não oferece essas garantias por si só. Não atribua a todos os protocolos as propriedades de um deles.\n\n## Padrão de cobrança\n\nAssocie função, endereço e equipamento. Porta identifica um serviço/processo no transporte; IP participa do encaminhamento; MAC é usado no enlace. Equipamentos modernos podem desempenhar funções em várias camadas, portanto a classificação deve observar a função descrita no enunciado.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 2,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Modelo OSI.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 2.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "O OSI possui sete camadas. Certo ou errado?",
+        "b": "Certo. É um modelo de referência conceitual."
+      },
+      {
+        "f": "TCP/IP precisa implementar sete camadas separadas para funcionar. Certo ou errado?",
+        "b": "Errado. A arquitetura não replica obrigatoriamente a divisão OSI."
+      },
+      {
+        "f": "Portas TCP e UDP permitem distinguir serviços no transporte. Certo ou errado?",
+        "b": "Certo. O número de porta integra a identificação de comunicação entre processos."
+      },
+      {
+        "f": "UDP sempre entrega dados na ordem e sem perdas. Certo ou errado?",
+        "b": "Errado. Essas garantias não são fornecidas pelo UDP por si só."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "O OSI possui sete camadas.",
+        "a": true,
+        "why": "É um modelo de referência conceitual."
+      },
+      {
+        "q": "TCP/IP precisa implementar sete camadas separadas para funcionar.",
+        "a": false,
+        "why": "A arquitetura não replica obrigatoriamente a divisão OSI."
+      },
+      {
+        "q": "Portas TCP e UDP permitem distinguir serviços no transporte.",
+        "a": true,
+        "why": "O número de porta integra a identificação de comunicação entre processos."
+      },
+      {
+        "q": "UDP sempre entrega dados na ordem e sem perdas.",
+        "a": false,
+        "why": "Essas garantias não são fornecidas pelo UDP por si só."
+      },
+      {
+        "q": "Um roteador encaminha pacotes entre redes IP.",
+        "a": true,
+        "why": "Sua função típica relaciona-se à camada de rede."
+      },
+      {
+        "q": "Endereço MAC e endereço IP são a mesma identificação.",
+        "a": false,
+        "why": "Relacionam-se a camadas e funções diferentes."
+      },
+      {
+        "q": "Um switch convencional usa endereços MAC no encaminhamento de quadros.",
+        "a": true,
+        "why": "Essa é uma função típica de enlace."
+      },
+      {
+        "q": "A camada física interpreta a finalidade de um pedido HTTP.",
+        "a": false,
+        "why": "Ela lida com a transmissão física, não com a semântica da aplicação."
+      }
+    ],
+    "_syllabus_topic_id": "b2a1b459-a544-41c4-8ff8-db030d25841b",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-protocolos-dns-dhcp-http",
+    "discipline": "Informática",
+    "topic_label": "Protocolos de rede",
+    "sort_order": 102,
+    "title": "DNS, DHCP, TCP, UDP e HTTPS: evite regras absolutas",
+    "summary": "DNS fornece informações associadas a nomes, inclusive endereços IP. DHCP pode distribuir configuração de rede dinamicamente. TCP e UDP são protocolos de transporte. HTTP define a comunicação de aplicações web; HTTPS protege essa comunicação",
+    "body_md": "## Serviços diferentes, problemas diferentes\n\nDNS fornece informações associadas a nomes, inclusive endereços IP. DHCP pode distribuir configuração de rede dinamicamente. TCP e UDP são protocolos de transporte. HTTP define a comunicação de aplicações web; HTTPS protege essa comunicação usando mecanismos criptográficos.\n\n| Serviço | Papel | Referência convencional |\n|---|---|---|\n| DNS | Consultar registros de nomes | Porta 53, TCP ou UDP |\n| DHCP IPv4 | Distribuir configuração de rede | UDP 67 e 68 |\n| HTTP | Trocar requisições e respostas web | Porta 80 no cenário convencional |\n| HTTPS | Comunicação HTTP protegida | Porta 443 no cenário convencional |\n| SSH | Acesso remoto protegido | TCP 22 |\n\n> **Atualização técnica — conferência em 04/10/2026:** HTTP/3 funciona sobre QUIC, que utiliza UDP. A tabela antiga “HTTPS = sempre TCP” não vale como regra universal. Referências primárias: RFC 9114 e RFC 9000.\n\n## Exemplo aplicado\n\nUm computador pode receber endereço por DHCP e depois consultar DNS para encontrar um serviço. O endereço distribuído por DHCP não responde, por si só, à pergunta sobre qual IP corresponde a um nome de domínio.\n\n## Pegadinhas frequentes\n\nPortas convencionais podem ser alteradas na configuração. DNS não é somente uma lista de páginas web; há diferentes tipos de registros. O cadeado do HTTPS não garante que o conteúdo de um site seja honesto: descreve propriedades da conexão, não a intenção do proprietário.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 2,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Modelo OSI.pdf; TJ_SP42470505-conceitos-e-tecnologias-de-internet.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 2.",
+    "legal_basis": [
+      {
+        "title": "RFC 9114 — HTTP/3",
+        "url": "https://www.rfc-editor.org/rfc/rfc9114.html"
+      },
+      {
+        "title": "RFC 9000 — QUIC",
+        "url": "https://www.rfc-editor.org/info/rfc9000/"
+      }
+    ],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "DNS e DHCP têm funções diferentes. Certo ou errado?",
+        "b": "Certo. DNS consulta registros de nomes; DHCP distribui configuração."
+      },
+      {
+        "f": "DNS só pode usar UDP. Certo ou errado?",
+        "b": "Errado. O DNS convencional também utiliza TCP."
+      },
+      {
+        "f": "DHCP IPv4 pode fornecer parâmetros de configuração de rede. Certo ou errado?",
+        "b": "Certo. Entre eles podem estar endereço, gateway e servidores DNS."
+      },
+      {
+        "f": "Toda versão de HTTP depende necessariamente de TCP. Certo ou errado?",
+        "b": "Errado. HTTP/3 usa QUIC sobre UDP."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "DNS e DHCP têm funções diferentes.",
+        "a": true,
+        "why": "DNS consulta registros de nomes; DHCP distribui configuração."
+      },
+      {
+        "q": "DNS só pode usar UDP.",
+        "a": false,
+        "why": "O DNS convencional também utiliza TCP."
+      },
+      {
+        "q": "DHCP IPv4 pode fornecer parâmetros de configuração de rede.",
+        "a": true,
+        "why": "Entre eles podem estar endereço, gateway e servidores DNS."
+      },
+      {
+        "q": "Toda versão de HTTP depende necessariamente de TCP.",
+        "a": false,
+        "why": "HTTP/3 usa QUIC sobre UDP."
+      },
+      {
+        "q": "SSH é empregado em acesso remoto protegido.",
+        "a": true,
+        "why": "É uma alternativa protegida ao cenário clássico de Telnet."
+      },
+      {
+        "q": "HTTPS prova que uma loja virtual é honesta.",
+        "a": false,
+        "why": "Proteção da conexão não certifica a intenção do site."
+      },
+      {
+        "q": "Porta 443 é uma referência convencional para HTTPS.",
+        "a": true,
+        "why": "Ela não é uma imposição a toda configuração possível."
+      },
+      {
+        "q": "Conhecer o endereço obtido por DHCP dispensa qualquer consulta de nomes.",
+        "a": false,
+        "why": "Configuração de endereço e resolução de nomes são tarefas distintas."
+      }
+    ],
+    "_syllabus_topic_id": "b2a1b459-a544-41c4-8ff8-db030d25841b",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-email-smtp-pop-imap",
+    "discipline": "Informática",
+    "topic_label": "Internet e correio eletrônico",
+    "sort_order": 103,
+    "title": "Correio eletrônico: SMTP, POP3, IMAP e destinatários",
+    "summary": "SMTP participa do envio e encaminhamento de mensagens. POP3 é usado para recuperar mensagens; IMAP permite administrar mensagens e pastas no servidor. Webmail é a interface acessada pelo navegador: não elimina os protocolos e servidores env",
+    "body_md": "## Separe enviar de acessar\n\nSMTP participa do envio e encaminhamento de mensagens. POP3 é usado para recuperar mensagens; IMAP permite administrar mensagens e pastas no servidor. Webmail é a interface acessada pelo navegador: não elimina os protocolos e servidores envolvidos no serviço.\n\n| Elemento | Uso | Atenção na prova |\n|---|---|---|\n| SMTP | Envio e encaminhamento | Não é protocolo de leitura da caixa |\n| POP3 | Recuperação de mensagens | Pode ser configurado para manter cópias no servidor |\n| IMAP | Acesso e sincronização no servidor | Facilita o uso em vários dispositivos |\n| Cc | Cópia visível | Destinatários normalmente veem os endereços |\n| Cco | Cópia oculta | Oculta o destinatário em relação aos demais |\n\n## Exemplo aplicado\n\nUma candidata lê a mesma caixa no celular e no computador, organizando mensagens em pastas sincronizadas. Esse cenário é compatível com IMAP. Se um cliente baixa mensagens por POP3, a permanência delas no servidor depende também da configuração: não conclua que o protocolo sempre apaga tudo.\n\n> **Correção da apostila:** a porta 587 não é uma exceção exclusiva do Brasil. Ela é destinada à submissão de mensagens; a porta 25 é a referência clássica para transferência entre servidores. Existem ainda configurações de TLS e portas próprias de acesso protegido.\n\n## Segurança e interpretação\n\nUm anexo não é confiável apenas porque chegou por e-mail. Verifique remetente, contexto e destino dos links. Uma mensagem na pasta spam pode ser legítima; filtros podem produzir falsos positivos. Cco não substitui criptografia nem garante que destinatários jamais divulguem a mensagem.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Email.pdf; Modelo OSI.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 1.",
+    "legal_basis": [
+      {
+        "title": "RFC 6409 — Message Submission",
+        "url": "https://www.rfc-editor.org/rfc/rfc6409.html"
+      }
+    ],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "SMTP participa do envio de e-mails. Certo ou errado?",
+        "b": "Certo. Ele não exerce o papel de acesso IMAP à caixa postal."
+      },
+      {
+        "f": "IMAP é empregado apenas para enviar mensagens entre servidores. Certo ou errado?",
+        "b": "Errado. É utilizado para acesso e gerenciamento de mensagens no servidor."
+      },
+      {
+        "f": "POP3 pode ser configurado para preservar cópias no servidor. Certo ou errado?",
+        "b": "Certo. Evite a regra absoluta de que sempre apaga as mensagens."
+      },
+      {
+        "f": "Usar webmail significa não haver servidor de correio eletrônico. Certo ou errado?",
+        "b": "Errado. A interface no navegador utiliza uma infraestrutura de serviço."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "SMTP participa do envio de e-mails.",
+        "a": true,
+        "why": "Ele não exerce o papel de acesso IMAP à caixa postal."
+      },
+      {
+        "q": "IMAP é empregado apenas para enviar mensagens entre servidores.",
+        "a": false,
+        "why": "É utilizado para acesso e gerenciamento de mensagens no servidor."
+      },
+      {
+        "q": "POP3 pode ser configurado para preservar cópias no servidor.",
+        "a": true,
+        "why": "Evite a regra absoluta de que sempre apaga as mensagens."
+      },
+      {
+        "q": "Usar webmail significa não haver servidor de correio eletrônico.",
+        "a": false,
+        "why": "A interface no navegador utiliza uma infraestrutura de serviço."
+      },
+      {
+        "q": "Cco permite ocultar destinatários dos demais destinatários.",
+        "a": true,
+        "why": "A finalidade é diferente da cópia visível Cc."
+      },
+      {
+        "q": "A porta 587 é uma particularidade exclusiva do Brasil.",
+        "a": false,
+        "why": "É uma referência internacional de submissão de mensagens."
+      },
+      {
+        "q": "Uma mensagem legítima pode ser classificada como spam.",
+        "a": true,
+        "why": "Filtros podem gerar falsos positivos."
+      },
+      {
+        "q": "Um anexo é seguro sempre que o nome do remetente parece conhecido.",
+        "a": false,
+        "why": "Nomes e remetentes podem ser falsificados ou contas comprometidas."
+      }
+    ],
+    "_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-navegadores-privacidade-download",
+    "discipline": "Informática",
+    "topic_label": "Navegação e pesquisa",
+    "sort_order": 104,
+    "title": "Navegadores: cache, cookies, downloads e modo privado",
+    "summary": "Cache armazena recursos para reutilização; cookies guardam pequenos dados vinculados a sites; histórico registra navegação conforme as configurações. São mecanismos diferentes. Limpar o cache não significa necessariamente encerrar todas as ",
+    "body_md": "## O que fica no navegador\n\nCache armazena recursos para reutilização; cookies guardam pequenos dados vinculados a sites; histórico registra navegação conforme as configurações. São mecanismos diferentes. Limpar o cache não significa necessariamente encerrar todas as sessões nem apagar todos os cookies.\n\n| Recurso | Finalidade | Limite |\n|---|---|---|\n| Cache | Reaproveitar recursos | Uma cópia antiga pode precisar de atualização |\n| Cookies | Manter estados e preferências | Podem participar de rastreamento |\n| Histórico | Consultar páginas visitadas | Não representa todas as atividades da rede |\n| Modo privado | Reduzir registros persistentes locais da sessão | Não oferece anonimato universal |\n| Download | Transferir um arquivo ao dispositivo | O arquivo pode permanecer após fechar a sessão |\n\n## Exemplo aplicado\n\nUma candidata baixa um edital em uma janela privada. Fechar a janela não significa apagar o PDF salvo. A instituição, o provedor e serviços acessados podem continuar tendo registros, de acordo com o cenário.\n\n> **Atenção à versão:** nomes de menus, complementos e botões mudam. As apostilas antigas citam recursos e produtos que não devem ser tratados como nomes atuais obrigatórios. Na prova, siga o navegador, idioma e versão expressamente indicados.\n\n## Estratégia de prova\n\nDesconfie de palavras como “sempre”, “nunca” e “totalmente anônimo”. Proteção contra rastreamento, bloqueio de pop-ups e modo privado são recursos úteis, mas têm escopos diferentes. Extensões também podem solicitar permissões e aumentar a exposição de dados.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Web.pdf; TJ_SP42471270-navegadores.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 1.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Cache e cookies são mecanismos diferentes. Certo ou errado?",
+        "b": "Certo. Um reaproveita recursos; o outro armazena dados associados a sites."
+      },
+      {
+        "f": "Modo privado torna toda navegação invisível para qualquer agente. Certo ou errado?",
+        "b": "Errado. Ele não garante anonimato universal na rede."
+      },
+      {
+        "f": "Um arquivo baixado pode permanecer após fechar uma janela privada. Certo ou errado?",
+        "b": "Certo. Arquivos salvos não são automaticamente eliminados por esse ato."
+      },
+      {
+        "f": "Limpar cache necessariamente apaga todos os cookies. Certo ou errado?",
+        "b": "Errado. As opções de limpeza são distintas."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Cache e cookies são mecanismos diferentes.",
+        "a": true,
+        "why": "Um reaproveita recursos; o outro armazena dados associados a sites."
+      },
+      {
+        "q": "Modo privado torna toda navegação invisível para qualquer agente.",
+        "a": false,
+        "why": "Ele não garante anonimato universal na rede."
+      },
+      {
+        "q": "Um arquivo baixado pode permanecer após fechar uma janela privada.",
+        "a": true,
+        "why": "Arquivos salvos não são automaticamente eliminados por esse ato."
+      },
+      {
+        "q": "Limpar cache necessariamente apaga todos os cookies.",
+        "a": false,
+        "why": "As opções de limpeza são distintas."
+      },
+      {
+        "q": "Uma extensão pode exigir permissões de acesso a dados.",
+        "a": true,
+        "why": "É necessário avaliar seu alcance e origem."
+      },
+      {
+        "q": "Bloqueio de pop-ups elimina qualquer código malicioso.",
+        "a": false,
+        "why": "É um recurso específico, não uma proteção completa."
+      },
+      {
+        "q": "A versão do navegador pode modificar nomes e posição de menus.",
+        "a": true,
+        "why": "O enunciado deve orientar a interpretação."
+      },
+      {
+        "q": "Histórico local é uma cópia completa de todos os registros de provedores e servidores.",
+        "a": false,
+        "why": "São registros de origens e alcances diferentes."
+      }
+    ],
+    "_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-seguranca-cid-controles",
+    "discipline": "Informática",
+    "topic_label": "Segurança da informação",
+    "sort_order": 105,
+    "title": "Segurança da informação: confidencialidade, integridade e disponibilidade",
+    "summary": "Confidencialidade limita o acesso a quem está autorizado. Integridade protege contra alterações indevidas. Disponibilidade busca manter informação e serviços acessíveis quando necessários. Um controle pode contribuir para vários objetivos, ",
+    "body_md": "## Identifique o objetivo antes do controle\n\nConfidencialidade limita o acesso a quem está autorizado. Integridade protege contra alterações indevidas. Disponibilidade busca manter informação e serviços acessíveis quando necessários. Um controle pode contribuir para vários objetivos, mas nenhum deles elimina todo risco.\n\n| Objetivo | Incidente típico | Controle associado |\n|---|---|---|\n| Confidencialidade | Pessoa não autorizada lê documento | Controle de acesso e criptografia |\n| Integridade | Documento é alterado indevidamente | Validação, autenticação e mecanismos de integridade |\n| Disponibilidade | Serviço fica indisponível | Redundância, contingência e recuperação |\n\n## Autenticação e autorização\n\nAutenticar é verificar a identidade apresentada. Autorizar é decidir quais ações essa identidade pode realizar. Uma senha e um PIN são ambos fatores de conhecimento; duas verificações desse tipo não constituem, por si só, dois fatores de categorias distintas. MFA combina categorias como conhecimento, posse e inerência.\n\n> **Ponto de atenção:** um hash sem proteção pode ser recalculado pelo atacante após alterar um arquivo. Comparar hashes só detecta alterações quando a referência é confiável; autenticidade requer um contexto protegido ou mecanismos como assinatura e autenticação de mensagem.\n\n## Exemplo aplicado\n\nUm aluno entra corretamente, mas só deve acessar suas próprias respostas. A senha atende à autenticação; a regra que impede consultar respostas alheias atende à autorização. Manter o servidor no ar é outra tarefa, ligada à disponibilidade.\n\n## Como resolver\n\nLocalize a falha descrita: leitura indevida, alteração indevida ou interrupção. Depois verifique se o controle proposto atende ao problema e se a afirmação indevidamente promete risco zero.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 3,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: TJ_SP42472035-seguranca-da-informacao.pdf; Cartilha de segurança.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 3.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Confidencialidade restringe o acesso à informação. Certo ou errado?",
+        "b": "Certo. Ela busca impedir divulgação a quem não tem autorização."
+      },
+      {
+        "f": "Disponibilidade significa garantir que ninguém altere um documento. Certo ou errado?",
+        "b": "Errado. Alteração indevida relaciona-se à integridade."
+      },
+      {
+        "f": "Autenticação e autorização são decisões diferentes. Certo ou errado?",
+        "b": "Certo. Identificar o usuário não determina automaticamente suas permissões."
+      },
+      {
+        "f": "Senha e PIN, sozinhos, constituem fatores de duas categorias distintas. Certo ou errado?",
+        "b": "Errado. Ambos pertencem à categoria conhecimento."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Confidencialidade restringe o acesso à informação.",
+        "a": true,
+        "why": "Ela busca impedir divulgação a quem não tem autorização."
+      },
+      {
+        "q": "Disponibilidade significa garantir que ninguém altere um documento.",
+        "a": false,
+        "why": "Alteração indevida relaciona-se à integridade."
+      },
+      {
+        "q": "Autenticação e autorização são decisões diferentes.",
+        "a": true,
+        "why": "Identificar o usuário não determina automaticamente suas permissões."
+      },
+      {
+        "q": "Senha e PIN, sozinhos, constituem fatores de duas categorias distintas.",
+        "a": false,
+        "why": "Ambos pertencem à categoria conhecimento."
+      },
+      {
+        "q": "Redundância pode contribuir para disponibilidade.",
+        "a": true,
+        "why": "Ela não elimina todos os modos possíveis de falha."
+      },
+      {
+        "q": "Comparar com um hash que o atacante também pode modificar prova autenticidade.",
+        "a": false,
+        "why": "A referência precisa de confiança e proteção."
+      },
+      {
+        "q": "Um usuário autenticado ainda pode receber acesso negado a um recurso.",
+        "a": true,
+        "why": "É uma decisão de autorização."
+      },
+      {
+        "q": "Criptografar um arquivo garante que haverá backup recuperável.",
+        "a": false,
+        "why": "Confidencialidade e recuperação são problemas distintos."
+      }
+    ],
+    "_syllabus_topic_id": "bef7a8b5-d550-4309-9e95-a911ea8f1906",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-malware-antivirus-firewall",
+    "discipline": "Informática",
+    "topic_label": "Códigos maliciosos e proteção",
+    "sort_order": 106,
+    "title": "Malwares, antimalware e firewall: ataque e defesa",
+    "summary": "Malware é software desenvolvido para executar ações maliciosas. As categorias podem se sobrepor: uma ameaça pode coletar informações, permitir controle remoto e integrar uma rede de dispositivos comprometidos.",
+    "body_md": "## Classifique pelo comportamento\n\nMalware é software desenvolvido para executar ações maliciosas. As categorias podem se sobrepor: uma ameaça pode coletar informações, permitir controle remoto e integrar uma rede de dispositivos comprometidos.\n\n| Categoria | Característica central |\n|---|---|\n| Vírus | Infecta hospedeiros e depende de contexto de execução |\n| Worm | Propaga-se automaticamente explorando meios de comunicação |\n| Trojan | Apresenta-se como programa útil ou legítimo para executar ação maliciosa |\n| Spyware | Coleta informações de forma indevida |\n| Ransomware | Restringe acesso ou explora dados para extorsão |\n| Rootkit | Oculta a presença e atividades do invasor |\n| Backdoor | Mantém uma forma de acesso ao sistema |\n| Bot | Permite controle automatizado ou remoto, podendo integrar botnet |\n\n## Controles complementares\n\nAntimalware pode combinar assinaturas, heurística e análise comportamental. Firewall regula comunicações segundo regras. Um não substitui integralmente o outro. Filtros de spam também não transformam todos os anexos recebidos em arquivos seguros.\n\n> **Cuidado com classificações antigas:** listas de “gerações de antivírus” são esquemas didáticos, não uma obrigação universal de fabricantes atuais. Não conclua que um produto elimina todo malware ou que apenas arquivos executáveis podem participar de ataques.\n\n## Exemplo aplicado\n\nUma ferramenta falsa de edição instala um componente de espionagem. O disfarce pode caracterizar trojan, enquanto a coleta indevida caracteriza spyware. A mesma ocorrência pode ter características de mais de uma categoria.\n\n## O que a banca troca\n\nPropagação automática costuma diferenciar worm de vírus. Firewall não é sinônimo de antivírus. Phishing é uma estratégia de enganar a vítima e pode ocorrer sem instalar malware.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 3,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Tipo de malware.pdf; Antivirus.pdf; fasciculo-codigos-maliciosos.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 3.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Uma ameaça pode apresentar características de mais de uma categoria. Certo ou errado?",
+        "b": "Certo. As classificações descrevem comportamentos que podem coexistir."
+      },
+      {
+        "f": "Firewall é apenas outro nome para antivírus. Certo ou errado?",
+        "b": "Errado. Seu papel principal é controlar comunicações por regras."
+      },
+      {
+        "f": "Worm é associado à propagação automática. Certo ou errado?",
+        "b": "Certo. Não deve ser confundido com a exigência de hospedeiro típica de vírus."
+      },
+      {
+        "f": "Phishing exige necessariamente instalar um vírus. Certo ou errado?",
+        "b": "Errado. O ataque pode apenas induzir a entrega de credenciais."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Uma ameaça pode apresentar características de mais de uma categoria.",
+        "a": true,
+        "why": "As classificações descrevem comportamentos que podem coexistir."
+      },
+      {
+        "q": "Firewall é apenas outro nome para antivírus.",
+        "a": false,
+        "why": "Seu papel principal é controlar comunicações por regras."
+      },
+      {
+        "q": "Worm é associado à propagação automática.",
+        "a": true,
+        "why": "Não deve ser confundido com a exigência de hospedeiro típica de vírus."
+      },
+      {
+        "q": "Phishing exige necessariamente instalar um vírus.",
+        "a": false,
+        "why": "O ataque pode apenas induzir a entrega de credenciais."
+      },
+      {
+        "q": "Um trojan pode disfarçar uma atividade de espionagem.",
+        "a": true,
+        "why": "Disfarce e coleta indevida podem coexistir."
+      },
+      {
+        "q": "Atualizar assinaturas torna impossível sofrer um ataque.",
+        "a": false,
+        "why": "Controles reduzem risco, sem garantia absoluta."
+      },
+      {
+        "q": "Rootkit pode ser usado para esconder atividades maliciosas.",
+        "a": true,
+        "why": "A ocultação é sua característica central."
+      },
+      {
+        "q": "A presença de firewall dispensa proteção dos dispositivos.",
+        "a": false,
+        "why": "São controles complementares."
+      }
+    ],
+    "_syllabus_topic_id": "bef7a8b5-d550-4309-9e95-a911ea8f1906",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-backup-incremental-diferencial",
+    "discipline": "Informática",
+    "topic_label": "Cópias e recuperação",
+    "sort_order": 107,
+    "title": "Backup: completo, incremental, diferencial e restauração",
+    "summary": "Backup é uma cópia destinada à recuperação. A regra que diferencia os métodos é quais alterações entram em cada cópia e quais conjuntos serão necessários na restauração.",
+    "body_md": "## Compare a referência da cópia\n\nBackup é uma cópia destinada à recuperação. A regra que diferencia os métodos é quais alterações entram em cada cópia e quais conjuntos serão necessários na restauração.\n\n| Método convencional | O que copia | Restauração usual |\n|---|---|---|\n| Completo | Todo o conjunto selecionado | Último completo relevante |\n| Incremental | Mudanças desde a última cópia de referência | Completo e cadeia de incrementais posteriores |\n| Diferencial | Mudanças acumuladas desde o último completo | Completo e último diferencial |\n\n> **Correção da apostila — 04/10/2026:** a definição de diferencial não deve ser “desde o último incremental”. No modelo convencional comparado aqui, ele acumula as mudanças desde o último completo. Produtos específicos podem implementar variações; o enunciado deve indicar quando esse for o caso.\n\n## Exemplo próprio\n\nDomingo: completo. Segunda: arquivo A muda. Terça: arquivo B muda. No incremental de terça entra B; no diferencial de terça entram A e B. Para restaurar o cenário incremental, são necessários o completo e as cópias posteriores da cadeia. No diferencial, o completo e a última cópia diferencial.\n\n## Segurança da recuperação\n\nSincronização e RAID não são substitutos automáticos de backup. Uma exclusão pode propagar-se pela sincronização; uma falha lógica pode atingir os discos redundantes. Testar restauração, separar cópias e controlar o acesso são partes da proteção. Uma cópia que nunca foi testada pode não atender à necessidade real.\n\n## Como resolver a questão\n\nDesenhe uma linha do tempo, marque o completo e anote as alterações de cada dia. Depois diferencie tempo de cópia de tempo de restauração. O método que copia menos não é necessariamente o que restaura mais depressa.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 3,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Backup.pdf; fasciculo-backup.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 3.",
+    "legal_basis": [
+      {
+        "title": "CERT.br/NIC.br — fascículo Backup",
+        "url": "https://www.nic.br/media/docs/publicacoes/13/fasciculo-backup.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Backup diferencial convencional acumula mudanças desde o último completo. Certo ou errado?",
+        "b": "Certo. A referência é o completo, não o último incremental."
+      },
+      {
+        "f": "Uma cadeia incremental sempre é restaurada com apenas sua última cópia. Certo ou errado?",
+        "b": "Errado. Normalmente exige o completo e os incrementais posteriores necessários."
+      },
+      {
+        "f": "RAID e backup atendem a problemas diferentes. Certo ou errado?",
+        "b": "Certo. Redundância de discos não protege automaticamente contra exclusão ou corrupção lógica."
+      },
+      {
+        "f": "Sincronização garante recuperar todo arquivo excluído, independentemente da configuração. Certo ou errado?",
+        "b": "Errado. Uma exclusão pode ser sincronizada; histórico e retenção dependem do serviço."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Backup diferencial convencional acumula mudanças desde o último completo.",
+        "a": true,
+        "why": "A referência é o completo, não o último incremental."
+      },
+      {
+        "q": "Uma cadeia incremental sempre é restaurada com apenas sua última cópia.",
+        "a": false,
+        "why": "Normalmente exige o completo e os incrementais posteriores necessários."
+      },
+      {
+        "q": "RAID e backup atendem a problemas diferentes.",
+        "a": true,
+        "why": "Redundância de discos não protege automaticamente contra exclusão ou corrupção lógica."
+      },
+      {
+        "q": "Sincronização garante recuperar todo arquivo excluído, independentemente da configuração.",
+        "a": false,
+        "why": "Uma exclusão pode ser sincronizada; histórico e retenção dependem do serviço."
+      },
+      {
+        "q": "Após completo no domingo, o diferencial de terça pode conter alterações de segunda e terça.",
+        "a": true,
+        "why": "Ele acumula alterações desde o completo."
+      },
+      {
+        "q": "O incremental de terça precisa copiar todos os arquivos inalterados do conjunto.",
+        "a": false,
+        "why": "No modelo convencional ele seleciona as mudanças desde a referência."
+      },
+      {
+        "q": "Testar a restauração ajuda a verificar a utilidade do backup.",
+        "a": true,
+        "why": "A existência da cópia não basta para provar recuperação."
+      },
+      {
+        "q": "Tempo de cópia e tempo de restauração são sempre iguais.",
+        "a": false,
+        "why": "Métodos e cadeias alteram esses tempos."
+      }
+    ],
+    "_syllabus_topic_id": "bef7a8b5-d550-4309-9e95-a911ea8f1906",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-linux-comandos-diretorios",
+    "discipline": "Informática",
+    "topic_label": "Sistemas operacionais — Linux",
+    "sort_order": 108,
+    "title": "Linux: caminhos, arquivos e comandos essenciais",
+    "summary": "Um caminho absoluto parte da raiz `/`; um relativo é interpretado a partir do diretório atual. `.` representa o diretório atual e `..` o diretório pai. Nomes podem distinguir maiúsculas de minúsculas, conforme o sistema de arquivos e a conf",
+    "body_md": "## Leia o comando como uma operação\n\nUm caminho absoluto parte da raiz `/`; um relativo é interpretado a partir do diretório atual. `.` representa o diretório atual e `..` o diretório pai. Nomes podem distinguir maiúsculas de minúsculas, conforme o sistema de arquivos e a configuração.\n\n| Comando | Função usual | Ponto de prova |\n|---|---|---|\n| `pwd` | Mostrar o diretório atual | Não altera o diretório |\n| `cd` | Mudar o diretório do shell | Caminho relativo depende do local atual |\n| `ls` | Listar conteúdo | Opções alteram a apresentação |\n| `cp` | Copiar | Não é o mesmo que mover |\n| `mv` | Mover ou renomear | O destino define a operação |\n| `mkdir` | Criar diretório | Não cria automaticamente qualquer arquivo comum |\n| `grep` | Procurar padrões em texto | Não é editor de texto |\n| `head` / `tail` | Exibir início / fim | Quantidade pode ser configurada |\n\n## Exemplo aplicado\n\nEstando em `/home/aluna/estudo`, executar `cd ..` leva a `/home/aluna`. Usar `cp resumo.txt revisao.txt` cria uma cópia no cenário comum. `mv revisao.txt final.txt` renomeia o arquivo nesse diretório.\n\n> **Correção técnica:** `Ctrl+Z` normalmente suspende o processo em primeiro plano em um shell com controle de tarefas; não é sinônimo de encerrá-lo. `Ctrl+C` envia um sinal de interrupção, cujo efeito depende do programa.\n\n## Organização e limites\n\nDiretórios como `/home`, `/etc`, `/dev` e `/tmp` têm funções convencionais. Não transforme detalhes de uma distribuição em regra de todas. “Linux é multiusuário” não significa que qualquer usuário tem permissão para acessar todos os dados.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Dicas de Linux.pdf; Linux.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 1.",
+    "legal_basis": [
+      {
+        "title": "GNU Coreutils — manual",
+        "url": "https://www.gnu.org/software/coreutils/manual/html_node/index.html"
+      }
+    ],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Um caminho absoluto começa na raiz do sistema. Certo ou errado?",
+        "b": "Certo. Na representação Unix/Linux, a raiz é indicada por barra."
+      },
+      {
+        "f": "pwd muda automaticamente para o diretório pessoal. Certo ou errado?",
+        "b": "Errado. Ele mostra o diretório atual."
+      },
+      {
+        "f": "Do diretório /home/aluna/estudo, cd .. leva ao pai /home/aluna. Certo ou errado?",
+        "b": "Certo. Dois pontos representam o diretório pai."
+      },
+      {
+        "f": "Ctrl+Z sempre encerra imediatamente o processo. Certo ou errado?",
+        "b": "Errado. Em shells com controle de tarefas, normalmente suspende o processo."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Um caminho absoluto começa na raiz do sistema.",
+        "a": true,
+        "why": "Na representação Unix/Linux, a raiz é indicada por barra."
+      },
+      {
+        "q": "pwd muda automaticamente para o diretório pessoal.",
+        "a": false,
+        "why": "Ele mostra o diretório atual."
+      },
+      {
+        "q": "Do diretório /home/aluna/estudo, cd .. leva ao pai /home/aluna.",
+        "a": true,
+        "why": "Dois pontos representam o diretório pai."
+      },
+      {
+        "q": "Ctrl+Z sempre encerra imediatamente o processo.",
+        "a": false,
+        "why": "Em shells com controle de tarefas, normalmente suspende o processo."
+      },
+      {
+        "q": "mv pode ser empregado para renomear arquivos.",
+        "a": true,
+        "why": "A operação depende dos caminhos de origem e destino."
+      },
+      {
+        "q": "grep é um comando destinado apenas a editar imagens.",
+        "a": false,
+        "why": "Seu uso típico é procurar padrões textuais."
+      },
+      {
+        "q": "cp e mv representam operações diferentes.",
+        "a": true,
+        "why": "Um copia; o outro move ou renomeia."
+      },
+      {
+        "q": "Ser multiusuário significa dar acesso irrestrito a todos os arquivos.",
+        "a": false,
+        "why": "As permissões delimitam o acesso."
+      }
+    ],
+    "_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-linux-permissoes-rwx",
+    "discipline": "Informática",
+    "topic_label": "Permissões de arquivos e diretórios",
+    "sort_order": 109,
+    "title": "Linux: permissões rwx e leitura do chmod",
+    "summary": "As permissões tradicionais distinguem proprietário, grupo e outros. Cada conjunto pode combinar leitura (`r`), escrita (`w`) e execução (`x`). Na representação octal básica, r vale 4, w vale 2 e x vale 1.",
+    "body_md": "## Três grupos, três permissões básicas\n\nAs permissões tradicionais distinguem proprietário, grupo e outros. Cada conjunto pode combinar leitura (`r`), escrita (`w`) e execução (`x`). Na representação octal básica, r vale 4, w vale 2 e x vale 1.\n\n| Permissão | Arquivo comum | Diretório |\n|---|---|---|\n| r | Ler o conteúdo | Listar nomes, sujeito às demais condições |\n| w | Alterar o conteúdo | Modificar entradas, sujeito às demais condições |\n| x | Executar, quando aplicável | Percorrer/acessar o diretório |\n\n## Exemplo próprio\n\n`chmod 640 resumo.txt` dá leitura e escrita ao proprietário, leitura ao grupo e nenhuma das três permissões aos outros. `chmod 750 pasta` permite rwx ao proprietário, r-x ao grupo e nenhuma aos demais.\n\n> **Correção importante:** permissão de escrita no arquivo não é a única variável para removê-lo. A remoção depende das permissões no diretório e pode ser limitada por sticky bit, atributos, ACLs e outros controles. Permissão x em diretório significa busca/percurso, não executar o diretório como programa.\n\n## Como a banca confunde\n\nA soma octal pertence a cada grupo, não ao conjunto todo. `r--` equivale a 4; `rw-`, a 6; `r-x`, a 5; `rwx`, a 7. Uma regra sobre arquivo comum não deve ser transferida sem ajuste para diretórios. Controles adicionais podem restringir operações mesmo quando os bits tradicionais parecem permitir.\n\n## Revisão ativa\n\nTraduza 644, 700 e 755 para grupos de permissões. Depois explique o que muda se o objeto for um diretório. Fazer as duas tarefas reduz a memorização sem compreensão.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Dicas de Linux.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 1.",
+    "legal_basis": [
+      {
+        "title": "GNU Coreutils — estrutura de permissões",
+        "url": "https://www.gnu.org/s/coreutils/manual/html_node/Mode-Structure.html"
+      },
+      {
+        "title": "GNU Coreutils — definição de permissões",
+        "url": "https://www.gnu.org/s/coreutils/manual/html_node/Setting-Permissions.html"
+      }
+    ],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "No modo octal básico, leitura vale 4 e escrita vale 2. Certo ou errado?",
+        "b": "Certo. Execução vale 1; as combinações somam dentro de cada grupo."
+      },
+      {
+        "f": "chmod 640 concede execução ao grupo. Certo ou errado?",
+        "b": "Errado. O grupo recebe apenas leitura, representada por 4."
+      },
+      {
+        "f": "Em um diretório, x está associado a busca e percurso. Certo ou errado?",
+        "b": "Certo. Não significa executar o diretório como programa."
+      },
+      {
+        "f": "A exclusão depende exclusivamente da escrita no próprio arquivo. Certo ou errado?",
+        "b": "Errado. Permissões e controles do diretório também importam."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "No modo octal básico, leitura vale 4 e escrita vale 2.",
+        "a": true,
+        "why": "Execução vale 1; as combinações somam dentro de cada grupo."
+      },
+      {
+        "q": "chmod 640 concede execução ao grupo.",
+        "a": false,
+        "why": "O grupo recebe apenas leitura, representada por 4."
+      },
+      {
+        "q": "Em um diretório, x está associado a busca e percurso.",
+        "a": true,
+        "why": "Não significa executar o diretório como programa."
+      },
+      {
+        "q": "A exclusão depende exclusivamente da escrita no próprio arquivo.",
+        "a": false,
+        "why": "Permissões e controles do diretório também importam."
+      },
+      {
+        "q": "r-x corresponde ao valor octal 5.",
+        "a": true,
+        "why": "A soma é 4+1."
+      },
+      {
+        "q": "chmod 750 concede rwx a qualquer usuário.",
+        "a": false,
+        "why": "Outros recebem 0; o proprietário recebe 7 e o grupo 5."
+      },
+      {
+        "q": "ACLs e atributos podem afetar o resultado de uma operação.",
+        "a": true,
+        "why": "Os bits tradicionais não descrevem todos os controles possíveis."
+      },
+      {
+        "q": "r em diretório e r em arquivo comum têm exatamente a mesma operação.",
+        "a": false,
+        "why": "Listagem de nomes e leitura de conteúdo são operações diferentes."
+      }
+    ],
+    "_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-windows-arquivos-suporte",
+    "discipline": "Informática",
+    "topic_label": "Sistemas operacionais — Windows",
+    "sort_order": 110,
+    "title": "Windows: arquivos, atalhos e atenção ao fim de suporte",
+    "summary": "Um sistema operacional administra recursos e oferece meios de executar programas e trabalhar com arquivos. Área de trabalho, janelas, pastas e atalhos são elementos da interface. Um atalho aponta para um recurso; não é necessariamente uma s",
+    "body_md": "## Estude a operação, depois a interface\n\nUm sistema operacional administra recursos e oferece meios de executar programas e trabalhar com arquivos. Área de trabalho, janelas, pastas e atalhos são elementos da interface. Um atalho aponta para um recurso; não é necessariamente uma segunda cópia dele.\n\n| Ação | Efeito no cenário usual | Cuidado |\n|---|---|---|\n| Copiar | Criar uma cópia no destino | A origem é preservada |\n| Mover | Alterar o local do recurso | Pode envolver transferência entre unidades |\n| Renomear | Alterar o nome | Não converte automaticamente o formato |\n| Excluir | Remover uma entrada | Lixeira depende do meio e da operação |\n| Compactar | Gerar um arquivo compactado | Não equivale automaticamente a criptografar |\n\n> **Atualização técnica — 04/10/2026:** o suporte regular do Windows 10 terminou em 14/10/2025. Isso não faz o sistema parar de funcionar. Programas de atualizações estendidas e edições com ciclos próprios devem ser distinguidos do suporte regular. Fonte: Microsoft.\n\n## Exemplo aplicado\n\nRenomear `resumo.txt` para `resumo.pdf` não transforma seu conteúdo em PDF. Excluir um atalho não equivale, em regra, a desinstalar o aplicativo apontado. A prova pode especificar uma operação diferente; leia o cenário.\n\n## Atenção a versões\n\nAs apostilas trazem telas e requisitos antigos do Windows 10. Use-os quando o enunciado cobrar expressamente essa versão; não transplante menus ou requisitos como descrição universal do Windows atual. Atalhos também podem depender do programa e do foco da janela.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Dicas de wondows.pdf; TJ_SP42468975-windows-10.pdf; [ CourseWikia.com ] Windows 10 User Guide 2021 ....pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 1.",
+    "legal_basis": [
+      {
+        "title": "Microsoft — fim do suporte regular do Windows 10",
+        "url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025"
+      }
+    ],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Um atalho pode apontar para um arquivo sem ser uma cópia de seu conteúdo. Certo ou errado?",
+        "b": "Certo. É uma referência ao destino."
+      },
+      {
+        "f": "Mudar a extensão de txt para pdf converte automaticamente o conteúdo. Certo ou errado?",
+        "b": "Errado. Renomear não realiza a conversão de formato."
+      },
+      {
+        "f": "O fim do suporte regular do Windows 10 ocorreu em 14/10/2025. Certo ou errado?",
+        "b": "Certo. A informação foi conferida na documentação Microsoft."
+      },
+      {
+        "f": "O fim do suporte faz todos os computadores Windows 10 deixarem de ligar. Certo ou errado?",
+        "b": "Errado. O sistema continua funcionando, com diferenças de suporte e atualização."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Um atalho pode apontar para um arquivo sem ser uma cópia de seu conteúdo.",
+        "a": true,
+        "why": "É uma referência ao destino."
+      },
+      {
+        "q": "Mudar a extensão de txt para pdf converte automaticamente o conteúdo.",
+        "a": false,
+        "why": "Renomear não realiza a conversão de formato."
+      },
+      {
+        "q": "O fim do suporte regular do Windows 10 ocorreu em 14/10/2025.",
+        "a": true,
+        "why": "A informação foi conferida na documentação Microsoft."
+      },
+      {
+        "q": "O fim do suporte faz todos os computadores Windows 10 deixarem de ligar.",
+        "a": false,
+        "why": "O sistema continua funcionando, com diferenças de suporte e atualização."
+      },
+      {
+        "q": "Compactação e criptografia são operações diferentes.",
+        "a": true,
+        "why": "Reduzir ou empacotar dados não garante confidencialidade."
+      },
+      {
+        "q": "Todo arquivo excluído, em qualquer unidade, obrigatoriamente vai à Lixeira.",
+        "a": false,
+        "why": "Há operações e meios que não seguem esse fluxo."
+      },
+      {
+        "q": "Nomes e posições de menus podem depender da versão do sistema.",
+        "a": true,
+        "why": "A versão do enunciado deve orientar a resposta."
+      },
+      {
+        "q": "Excluir o atalho de um aplicativo sempre desinstala o aplicativo.",
+        "a": false,
+        "why": "A referência e a instalação são objetos distintos."
+      }
+    ],
+    "_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-hardware-memorias-software",
+    "discipline": "Informática",
+    "topic_label": "Fundamentos de computadores",
+    "sort_order": 111,
+    "title": "Hardware, software e memórias: o que cada componente faz",
+    "summary": "Hardware é o conjunto de componentes físicos. Software são programas e instruções. Dados são informações tratadas pelos programas. O sistema operacional coordena recursos; um aplicativo atende a tarefas do usuário.",
+    "body_md": "## Separe componente, programa e dado\n\nHardware é o conjunto de componentes físicos. Software são programas e instruções. Dados são informações tratadas pelos programas. O sistema operacional coordena recursos; um aplicativo atende a tarefas do usuário.\n\n| Elemento | Função típica | Diferenciação |\n|---|---|---|\n| CPU | Executar instruções e operações | Não é o armazenamento permanente principal |\n| RAM convencional | Manter dados e programas em uso | É volátil |\n| SSD ou disco | Armazenar dados de forma persistente | Não é sinônimo de RAM |\n| Cache | Reduzir tempo de acesso a dados frequentes | É uma camada de apoio |\n| Dispositivo de entrada | Fornecer dados ao sistema | Teclado, por exemplo |\n| Dispositivo de saída | Apresentar resultados | Monitor, por exemplo |\n\n## Exemplo aplicado\n\nAo abrir um resumo salvo em SSD, o sistema carrega dados para processamento. Desligar o computador pode eliminar o conteúdo da RAM volátil, mas não apaga automaticamente o arquivo salvo. O programa pode ter alterações ainda não gravadas, razão pela qual salvar é uma ação distinta de visualizar.\n\n> **Não simplifique demais:** telas sensíveis ao toque têm funções de entrada e saída. Nem toda memória usa a mesma tecnologia ou apresenta as mesmas propriedades. Capacidade e desempenho são grandezas diferentes.\n\n## Padrão de cobrança\n\nPergunte se a questão trata de processamento, armazenamento, entrada/saída ou gerenciamento. “Mais memória” não equivale necessariamente a “processador mais rápido”. O efeito de uma melhoria depende da carga de trabalho e do gargalo existente.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Resumo Informática.pdf; fasciculo-computadores.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 1.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "RAM convencional é memória volátil. Certo ou errado?",
+        "b": "Certo. Seu conteúdo não é preservado como um arquivo persistente após desligamento normal."
+      },
+      {
+        "f": "SSD e RAM são o mesmo componente. Certo ou errado?",
+        "b": "Errado. Armazenamento persistente e memória de trabalho têm funções distintas."
+      },
+      {
+        "f": "Um sistema operacional gerencia recursos do computador. Certo ou errado?",
+        "b": "Certo. É diferente de um aplicativo dedicado à edição de texto."
+      },
+      {
+        "f": "Uma tela sensível ao toque só pode ser saída. Certo ou errado?",
+        "b": "Errado. Ela pode exercer entrada e saída."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "RAM convencional é memória volátil.",
+        "a": true,
+        "why": "Seu conteúdo não é preservado como um arquivo persistente após desligamento normal."
+      },
+      {
+        "q": "SSD e RAM são o mesmo componente.",
+        "a": false,
+        "why": "Armazenamento persistente e memória de trabalho têm funções distintas."
+      },
+      {
+        "q": "Um sistema operacional gerencia recursos do computador.",
+        "a": true,
+        "why": "É diferente de um aplicativo dedicado à edição de texto."
+      },
+      {
+        "q": "Uma tela sensível ao toque só pode ser saída.",
+        "a": false,
+        "why": "Ela pode exercer entrada e saída."
+      },
+      {
+        "q": "Abrir um arquivo não é necessariamente salvar alterações realizadas nele.",
+        "a": true,
+        "why": "Leitura e gravação são operações diferentes."
+      },
+      {
+        "q": "Capacidade de armazenamento e velocidade de processamento medem a mesma coisa.",
+        "a": false,
+        "why": "São grandezas distintas."
+      },
+      {
+        "q": "CPU está relacionada à execução de instruções.",
+        "a": true,
+        "why": "É um componente central do processamento."
+      },
+      {
+        "q": "Trocar qualquer componente sempre melhora igualmente todas as tarefas.",
+        "a": false,
+        "why": "O resultado depende do gargalo e da carga."
+      }
+    ],
+    "_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-word-writer-formatos-estilos",
+    "discipline": "Informática",
+    "topic_label": "Editores de texto",
+    "sort_order": 112,
+    "title": "Word e Writer: formatos, estilos e organização de documentos",
+    "summary": "Formatação direta atua sobre uma seleção. Estilos agrupam propriedades e ajudam a manter consistência. Um título apenas ampliado visualmente não recebe automaticamente a mesma estrutura de um parágrafo marcado com estilo de título.",
+    "body_md": "## Formatação local e estrutura\n\nFormatação direta atua sobre uma seleção. Estilos agrupam propriedades e ajudam a manter consistência. Um título apenas ampliado visualmente não recebe automaticamente a mesma estrutura de um parágrafo marcado com estilo de título.\n\n| Recurso | Finalidade | Exemplo próprio |\n|---|---|---|\n| Estilo de título | Organizar hierarquia | Capítulos de um resumo |\n| Sumário automático | Referenciar estrutura | Tópicos e páginas |\n| Quebra de página | Iniciar conteúdo na página seguinte | Novo capítulo |\n| Quebra de seção | Separar configurações de partes | Orientação distinta em uma parte |\n| Localizar e substituir | Procurar e alterar ocorrências | Padronizar uma expressão |\n\n## Formatos\n\nDOCX é um formato comum de documentos Word; DOCM admite conteúdo de macros. ODT é o formato de texto do OpenDocument, empregado pelo Writer. PDF costuma ser usado para distribuição com layout preservado, mas não deve ser descrito como necessariamente impossível de editar.\n\n> **Correção de classificação do acervo:** “Dicas de Word.pdf” apresenta menus e recursos do Writer. O assunto foi identificado pelo conteúdo, não pelo nome do arquivo. Atalhos variam por programa, idioma, sistema e versão.\n\n## Exemplo aplicado\n\nUm resumo de 30 capítulos utiliza estilos de títulos. Ao ajustar o estilo, a aparência dos títulos vinculados pode ser modificada de forma consistente. Inserir espaços repetidos para simular alinhamento é diferente de usar tabulações, tabelas e recursos próprios do editor.\n\n## Padrão de prova\n\nCompare salvar, salvar como e exportar. Abrir um arquivo de outro formato pode envolver conversão e alterações de compatibilidade. Nem toda aparência será idêntica em qualquer programa.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Dicas de Informática.pdf; Dicas de Word.pdf; TJ_SP42472800-word-2016.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 1.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Estilos ajudam a manter formatação consistente. Certo ou errado?",
+        "b": "Certo. Eles reúnem propriedades que podem ser reutilizadas."
+      },
+      {
+        "f": "Aumentar o tamanho de uma palavra a transforma obrigatoriamente em título estrutural. Certo ou errado?",
+        "b": "Errado. A estrutura depende do estilo e dos recursos aplicados."
+      },
+      {
+        "f": "DOCM admite conteúdo de macros. Certo ou errado?",
+        "b": "Certo. É diferente do cenário comum DOCX."
+      },
+      {
+        "f": "ODT é exclusivamente um formato de apresentação de slides. Certo ou errado?",
+        "b": "Errado. ODT é um formato de documento de texto."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Estilos ajudam a manter formatação consistente.",
+        "a": true,
+        "why": "Eles reúnem propriedades que podem ser reutilizadas."
+      },
+      {
+        "q": "Aumentar o tamanho de uma palavra a transforma obrigatoriamente em título estrutural.",
+        "a": false,
+        "why": "A estrutura depende do estilo e dos recursos aplicados."
+      },
+      {
+        "q": "DOCM admite conteúdo de macros.",
+        "a": true,
+        "why": "É diferente do cenário comum DOCX."
+      },
+      {
+        "q": "ODT é exclusivamente um formato de apresentação de slides.",
+        "a": false,
+        "why": "ODT é um formato de documento de texto."
+      },
+      {
+        "q": "Quebra de seção pode separar configurações de partes do documento.",
+        "a": true,
+        "why": "Não é sinônimo de inserir espaços vazios."
+      },
+      {
+        "q": "Todo atalho de Word funciona identicamente no Writer em qualquer idioma.",
+        "a": false,
+        "why": "Programa, idioma e versão podem alterar os atalhos."
+      },
+      {
+        "q": "Exportar para PDF não significa necessariamente eliminar toda possibilidade de edição.",
+        "a": true,
+        "why": "O formato não equivale a uma garantia absoluta de imutabilidade."
+      },
+      {
+        "q": "Compatibilidade entre formatos garante aparência sempre idêntica em qualquer aplicativo.",
+        "a": false,
+        "why": "Conversões podem alterar recursos e layout."
+      }
+    ],
+    "_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-excel-referencias-funcoes",
+    "discipline": "Informática",
+    "topic_label": "Planilhas eletrônicas",
+    "sort_order": 113,
+    "title": "Excel e Calc: referências, fórmulas e funções de prova",
+    "summary": "Uma fórmula pode usar valores, operadores, referências e funções. Planilha e pasta de trabalho não são sinônimos: uma pasta pode conter várias planilhas. Separadores e nomes de funções podem variar com idioma e configuração regional.",
+    "body_md": "## Leia primeiro o intervalo\n\nUma fórmula pode usar valores, operadores, referências e funções. Planilha e pasta de trabalho não são sinônimos: uma pasta pode conter várias planilhas. Separadores e nomes de funções podem variar com idioma e configuração regional.\n\n| Referência | Ao copiar | O que está fixo |\n|---|---|---|\n| A1 | Linha e coluna podem mudar | Nada |\n| $A$1 | Linha e coluna permanecem | Ambas |\n| $A1 | Linha pode mudar | Coluna |\n| A$1 | Coluna pode mudar | Linha |\n\n## Exemplo próprio\n\nSe B2 contém `=A2*$D$1`, copiar para B3 produz `=A3*$D$1`, no cenário convencional. A referência à taxa em D1 permanece. Para 10 em A2 e 20% em D1, o resultado é 2, não 200.\n\n## Funções essenciais\n\nSOMA agrega valores; MÉDIA calcula a média aritmética dos números considerados; CONT.NÚM conta números; CONT.VALORES conta células não vazias. SOMASE soma valores que atendem a um critério; CONT.SE conta ocorrências. SE escolhe um resultado conforme um teste lógico.\n\n> **Atenção:** células vazias, números e texto não têm necessariamente o mesmo tratamento. Na busca PROCV, correspondência aproximada e exata devem ser distinguidas. Uma tabela sem as condições necessárias à busca aproximada pode produzir resultado inesperado.\n\n## Como resolver\n\nEscreva a fórmula original, desloque a célula de destino e altere apenas as partes relativas. Em seguida, execute operadores e funções com os valores informados. Não confunda copiar fórmula com copiar apenas o resultado exibido.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Resumo Excel.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 1.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "A referência $A$1 fixa coluna e linha na cópia convencional. Certo ou errado?",
+        "b": "Certo. Os dois sinais indicam as duas partes absolutas."
+      },
+      {
+        "f": "$A1 fixa somente a linha. Certo ou errado?",
+        "b": "Errado. Ela fixa a coluna A; a linha permanece relativa."
+      },
+      {
+        "f": "Copiar =A2*$D$1 de B2 para B3 gera =A3*$D$1 no cenário convencional. Certo ou errado?",
+        "b": "Certo. A linha relativa aumenta; D1 fica fixo."
+      },
+      {
+        "f": "CONT.SE e SOMASE necessariamente retornam a mesma informação. Certo ou errado?",
+        "b": "Errado. Uma conta ocorrências; a outra soma valores."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "A referência $A$1 fixa coluna e linha na cópia convencional.",
+        "a": true,
+        "why": "Os dois sinais indicam as duas partes absolutas."
+      },
+      {
+        "q": "$A1 fixa somente a linha.",
+        "a": false,
+        "why": "Ela fixa a coluna A; a linha permanece relativa."
+      },
+      {
+        "q": "Copiar =A2*$D$1 de B2 para B3 gera =A3*$D$1 no cenário convencional.",
+        "a": true,
+        "why": "A linha relativa aumenta; D1 fica fixo."
+      },
+      {
+        "q": "CONT.SE e SOMASE necessariamente retornam a mesma informação.",
+        "a": false,
+        "why": "Uma conta ocorrências; a outra soma valores."
+      },
+      {
+        "q": "Uma pasta de trabalho pode conter várias planilhas.",
+        "a": true,
+        "why": "Não são termos equivalentes."
+      },
+      {
+        "q": "Renomear uma extensão substitui a conversão feita pelo aplicativo.",
+        "a": false,
+        "why": "A transformação de formato requer tratamento do conteúdo."
+      },
+      {
+        "q": "A média dos valores numéricos 10 e 20 é 15.",
+        "a": true,
+        "why": "A soma 30 é dividida pela quantidade 2."
+      },
+      {
+        "q": "Texto e número sempre recebem tratamento idêntico por toda função.",
+        "a": false,
+        "why": "Cada função e contexto determinam o tratamento."
+      }
+    ],
+    "_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "informatica-powerpoint-impress-apresentacoes",
+    "discipline": "Informática",
+    "topic_label": "Apresentações e multimídia",
+    "sort_order": 114,
+    "title": "PowerPoint e Impress: slides, transições e animações",
+    "summary": "Apresentações são conjuntos de slides. Layout define a disposição de elementos; tema reúne opções de aparência. Slide mestre ou página mestra ajuda a padronizar partes da apresentação. Não confunda essas funções com o conteúdo específico de",
+    "body_md": "## Organize conteúdo e exibição\n\nApresentações são conjuntos de slides. Layout define a disposição de elementos; tema reúne opções de aparência. Slide mestre ou página mestra ajuda a padronizar partes da apresentação. Não confunda essas funções com o conteúdo específico de cada slide.\n\n| Recurso | Atua sobre | Exemplo próprio |\n|---|---|---|\n| Transição | Passagem entre slides | Efeito ao mudar de página |\n| Animação | Elementos dentro do slide | Entrada de um gráfico |\n| Anotações | Apoio ao apresentador | Lembretes não destinados ao slide principal |\n| Mestre | Elementos e aparência comuns | Padronização de cabeçalhos |\n| Apresentação personalizada | Seleção de slides | Recorte para outro público |\n\n## Formatos\n\nPPTX é comum em apresentações PowerPoint; PPSX é associado à apresentação de slides; PPTM admite macros. ODP é o formato de apresentação OpenDocument, usado pelo Impress. Exportar para PDF pode preservar a aparência estática, mas não deve ser confundido com preservar todas as animações e interações.\n\n> **Classificação corrigida:** “Dicas de PDF.pdf” do acervo contém recursos do LibreOffice Impress, e não uma apostila geral sobre PDF. O conteúdo foi aproveitado na categoria de apresentações.\n\n## Exemplo aplicado\n\nUma apresentação recebe uma transição na mudança do slide 1 para o 2 e uma animação na entrada de um diagrama no slide 2. São efeitos distintos. Para distribuir uma versão estática, a autora exporta para PDF e confere o resultado.\n\n## Padrão de cobrança\n\nDiferencie editar, visualizar apresentação, trabalhar com anotações e ajustar o mestre. Recursos e atalhos são específicos de programa, idioma e versão; evite aplicar automaticamente uma tabela de 2016 a toda edição atual.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Dicas Power Point.pdf; Dicas de PDF.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Informática, tópico cadastrado 1.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Transições e animações são recursos diferentes. Certo ou errado?",
+        "b": "Certo. Uma atua na passagem de slides; a outra em elementos."
+      },
+      {
+        "f": "Uma animação é obrigatoriamente a troca de um slide inteiro pelo seguinte. Certo ou errado?",
+        "b": "Errado. Isso descreve uma transição."
+      },
+      {
+        "f": "ODP é um formato de apresentação OpenDocument. Certo ou errado?",
+        "b": "Certo. É usado pelo Impress, entre outros aplicativos compatíveis."
+      },
+      {
+        "f": "Exportar para PDF conserva obrigatoriamente todas as animações. Certo ou errado?",
+        "b": "Errado. Uma exportação estática não reproduz necessariamente efeitos e interações."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Transições e animações são recursos diferentes.",
+        "a": true,
+        "why": "Uma atua na passagem de slides; a outra em elementos."
+      },
+      {
+        "q": "Uma animação é obrigatoriamente a troca de um slide inteiro pelo seguinte.",
+        "a": false,
+        "why": "Isso descreve uma transição."
+      },
+      {
+        "q": "ODP é um formato de apresentação OpenDocument.",
+        "a": true,
+        "why": "É usado pelo Impress, entre outros aplicativos compatíveis."
+      },
+      {
+        "q": "Exportar para PDF conserva obrigatoriamente todas as animações.",
+        "a": false,
+        "why": "Uma exportação estática não reproduz necessariamente efeitos e interações."
+      },
+      {
+        "q": "O mestre pode ajudar a padronizar a apresentação.",
+        "a": true,
+        "why": "Ele organiza elementos e aparência comuns."
+      },
+      {
+        "q": "Anotações do apresentador são sempre o conteúdo principal projetado ao público.",
+        "a": false,
+        "why": "Elas têm finalidade de apoio ao apresentador."
+      },
+      {
+        "q": "Uma apresentação personalizada pode selecionar um subconjunto de slides.",
+        "a": true,
+        "why": "É um modo de adaptar o conjunto a um público."
+      },
+      {
+        "q": "PPTM e PPTX devem ser tratados como idênticos quanto a macros.",
+        "a": false,
+        "why": "PPTM admite esse tipo de conteúdo."
+      }
+    ],
+    "_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "portugues-coordenacao-subordinacao",
+    "discipline": "Língua Portuguesa",
+    "topic_label": "Sintaxe do período composto",
+    "sort_order": 115,
+    "title": "Período composto: coordenação, subordinação e funções",
+    "summary": "Orações coordenadas têm autonomia sintática entre si. Uma subordinada exerce função em relação a outra oração ou a um termo. Autonomia sintática não significa ausência de relação de sentido.",
+    "body_md": "## Classifique a relação, não apenas a conjunção\n\nOrações coordenadas têm autonomia sintática entre si. Uma subordinada exerce função em relação a outra oração ou a um termo. Autonomia sintática não significa ausência de relação de sentido.\n\n| Grupo | Característica | Exemplo próprio |\n|---|---|---|\n| Coordenada assindética | Sem conjunção coordenativa | Abri o edital, anotei os prazos |\n| Coordenada sindética | Com conjunção coordenativa | Estudei e revisei |\n| Subordinada substantiva | Exerce função típica de substantivo | Espero que o resultado seja divulgado |\n| Subordinada adjetiva | Caracteriza um termo nominal | O edital que consultei foi retificado |\n| Subordinada adverbial | Expressa circunstância | Revisei porque tinha dúvidas |\n\n## Coordenadas sindéticas\n\nAs categorias tradicionais são aditivas, adversativas, alternativas, conclusivas e explicativas. Identifique a relação no contexto. Uma palavra pode assumir funções diferentes; decorar uma lista não substitui analisar a frase.\n\n> **Correção da apostila:** no trecho sobre sindéticas, o arquivo chama por engano de “assindéticas” as orações que possuem conjunção. Neste material, a distinção foi corrigida.\n\n## Exemplo aplicado\n\n“Li o edital, mas não concluí a inscrição” estabelece oposição por coordenação. “Li o edital para que pudesse planejar o estudo” traz finalidade por subordinação adverbial. Nos dois casos há relação de sentido, mas a classificação sintática muda.\n\n## Estratégia\n\nLocalize verbos, delimite orações, identifique conectivos e teste a função exercida. A substituição de uma oração por “isso” pode ajudar a reconhecer função substantiva; é um teste auxiliar, não regra infalível para qualquer recorte.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 2,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: RESUMO - PERÍODO COMPOSTO.pdf; Resumo Português.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Língua Portuguesa, tópico cadastrado 2.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Uma coordenada assindética não apresenta conjunção coordenativa. Certo ou errado?",
+        "b": "Certo. Essa é a distinção tradicional em relação à sindética."
+      },
+      {
+        "f": "Coordenação significa que não pode haver relação semântica entre as orações. Certo ou errado?",
+        "b": "Errado. Autonomia sintática não elimina a relação de sentido."
+      },
+      {
+        "f": "Em Estudei e revisei, há coordenação aditiva. Certo ou errado?",
+        "b": "Certo. O conectivo liga ações em relação de adição."
+      },
+      {
+        "f": "Toda oração iniciada por que obrigatoriamente é adjetiva. Certo ou errado?",
+        "b": "Errado. Que pode exercer diferentes papéis conforme a estrutura."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Uma coordenada assindética não apresenta conjunção coordenativa.",
+        "a": true,
+        "why": "Essa é a distinção tradicional em relação à sindética."
+      },
+      {
+        "q": "Coordenação significa que não pode haver relação semântica entre as orações.",
+        "a": false,
+        "why": "Autonomia sintática não elimina a relação de sentido."
+      },
+      {
+        "q": "Em Estudei e revisei, há coordenação aditiva.",
+        "a": true,
+        "why": "O conectivo liga ações em relação de adição."
+      },
+      {
+        "q": "Toda oração iniciada por que obrigatoriamente é adjetiva.",
+        "a": false,
+        "why": "Que pode exercer diferentes papéis conforme a estrutura."
+      },
+      {
+        "q": "Em Espero que a lista saia, a oração pode exercer função substantiva.",
+        "a": true,
+        "why": "A oração completa o sentido do verbo esperar."
+      },
+      {
+        "q": "Orações sindéticas são definidas pela ausência de conjunção.",
+        "a": false,
+        "why": "Sindéticas apresentam conjunção coordenativa."
+      },
+      {
+        "q": "Mas pode ligar orações coordenadas com sentido adversativo.",
+        "a": true,
+        "why": "A relação é de oposição no contexto adequado."
+      },
+      {
+        "q": "Decorar apenas o conectivo dispensa analisar a frase.",
+        "a": false,
+        "why": "A função e o sentido dependem da construção."
+      }
+    ],
+    "_syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "portugues-oracoes-adverbiais-conectores",
+    "discipline": "Língua Portuguesa",
+    "topic_label": "Relações entre orações",
+    "sort_order": 116,
+    "title": "Conectores: causa, consequência, concessão e condição",
+    "summary": "Uma oração subordinada adverbial expressa circunstância em relação à principal. A classificação tradicional contempla causa, comparação, concessão, condição, conformidade, consequência, finalidade, proporção e tempo. O contexto decide a lei",
+    "body_md": "## Encontre o vínculo de sentido\n\nUma oração subordinada adverbial expressa circunstância em relação à principal. A classificação tradicional contempla causa, comparação, concessão, condição, conformidade, consequência, finalidade, proporção e tempo. O contexto decide a leitura.\n\n| Relação | Pergunta útil | Exemplo próprio |\n|---|---|---|\n| Causa | Por qual motivo? | Fiquei em casa porque chovia |\n| Consequência | Com qual resultado? | Choveu tanto que a rua alagou |\n| Concessão | Apesar de quê? | Embora chovesse, fui à prova |\n| Condição | Sob qual hipótese? | Se houver retificação, ajustarei o plano |\n| Finalidade | Para qual objetivo? | Revisei para que acertasse mais |\n| Tempo | Quando? | Assim que terminei, conferi a resposta |\n| Proporção | Que variações acompanham-se? | Quanto mais pratico, menos erro |\n| Conformidade | De acordo com quê? | Organizei os documentos conforme o edital exige |\n| Comparação | Em relação a quê? | Ela revisa como o colega revisa |\n\n## Exemplo de reescrita\n\nTrocar “embora” por “porque” não é uma simples mudança de palavra. “Embora estivesse cansada, estudou” afirma superação de um obstáculo; “Porque estava cansada, estudou” apresenta o cansaço como causa. A gramática e o sentido precisam ser avaliados juntos.\n\n> **Pegadinha:** “desde que” pode apresentar condição ou tempo; “como” pode assumir diferentes relações. Identifique o uso concreto antes de marcar a alternativa.\n\n## Método de revisão\n\nExplique a relação com palavras próprias. Depois tente uma reescrita e confira se os tempos verbais e a relação de sentido permanecem adequados. Uma substituição que exige alteração verbal não pode ser considerada automaticamente equivalente sem observar o enunciado.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 2,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: RESUMO - PERÍODO COMPOSTO.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Língua Portuguesa, tópico cadastrado 2.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Embora frequentemente introduz concessão. Certo ou errado?",
+        "b": "Certo. A ideia pode ser explicada como apesar de."
+      },
+      {
+        "f": "Causa e consequência são a mesma relação. Certo ou errado?",
+        "b": "Errado. Uma explica o motivo; a outra apresenta o resultado."
+      },
+      {
+        "f": "Em Se houver retificação, ajustarei o plano, há condição. Certo ou errado?",
+        "b": "Certo. A primeira oração apresenta uma hipótese."
+      },
+      {
+        "f": "Trocar embora por porque preserva sempre o sentido. Certo ou errado?",
+        "b": "Errado. A troca pode mudar concessão para causa."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Embora frequentemente introduz concessão.",
+        "a": true,
+        "why": "A ideia pode ser explicada como apesar de."
+      },
+      {
+        "q": "Causa e consequência são a mesma relação.",
+        "a": false,
+        "why": "Uma explica o motivo; a outra apresenta o resultado."
+      },
+      {
+        "q": "Em Se houver retificação, ajustarei o plano, há condição.",
+        "a": true,
+        "why": "A primeira oração apresenta uma hipótese."
+      },
+      {
+        "q": "Trocar embora por porque preserva sempre o sentido.",
+        "a": false,
+        "why": "A troca pode mudar concessão para causa."
+      },
+      {
+        "q": "Para que pode introduzir finalidade.",
+        "a": true,
+        "why": "Expressa um objetivo no contexto adequado."
+      },
+      {
+        "q": "Como tem uma única classificação em todas as frases.",
+        "a": false,
+        "why": "Pode apresentar relações diferentes."
+      },
+      {
+        "q": "Quanto mais pratico, menos erro expressa proporção.",
+        "a": true,
+        "why": "As variações são relacionadas."
+      },
+      {
+        "q": "Uma reescrita pode ser aprovada sem examinar concordância e tempos verbais.",
+        "a": false,
+        "why": "Sentido e adequação gramatical devem ser conferidos."
+      }
+    ],
+    "_syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "portugues-adjetivas-substantivas-pontuacao",
+    "discipline": "Língua Portuguesa",
+    "topic_label": "Subordinação e pontuação",
+    "sort_order": 117,
+    "title": "Orações adjetivas e substantivas: função e efeito das vírgulas",
+    "summary": "Uma oração adjetiva caracteriza um termo nominal. Restritiva delimita o grupo referido; explicativa acrescenta informação sobre o referente já identificado e é normalmente isolada por vírgulas. As vírgulas podem mudar o alcance do enunciado",
+    "body_md": "## O recorte muda a interpretação\n\nUma oração adjetiva caracteriza um termo nominal. Restritiva delimita o grupo referido; explicativa acrescenta informação sobre o referente já identificado e é normalmente isolada por vírgulas. As vírgulas podem mudar o alcance do enunciado, não apenas sua aparência.\n\n| Construção | Leitura no contexto proposto |\n|---|---|\n| Os alunos que entregaram os documentos foram chamados | O chamado refere-se ao subconjunto que entregou |\n| Os alunos, que entregaram os documentos, foram chamados | A informação sobre entrega refere-se ao grupo já identificado |\n\n## Substantivas e suas funções\n\nUma subordinada substantiva pode ser subjetiva, objetiva direta, objetiva indireta, completiva nominal, predicativa ou apositiva. “É necessário que você revise” apresenta uma oração em função de sujeito. “Tenho certeza de que você revisou” apresenta complemento do nome certeza.\n\n> **Não exagere a inferência:** a oração restritiva seleciona um grupo, mas nem sempre autoriza afirmar, fora do contexto, o número total de pessoas existentes. Analise o referente e a intenção da frase.\n\n## Desenvolvidas e reduzidas\n\nOrações desenvolvidas costumam apresentar verbo flexionado e conectivo apropriado. Reduzidas podem utilizar infinitivo, gerúndio ou particípio. A análise exige função e contexto, não apenas a presença de uma forma verbal.\n\n## Exemplo aplicado\n\n“Os candidatos aprovados na primeira etapa farão a segunda” restringe o grupo pela expressão adjetiva. “Espero concluir a revisão” apresenta uma construção reduzida com infinitivo. Não classifique as duas como iguais só porque são curtas.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 2,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: RESUMO - PERÍODO COMPOSTO.pdf; Resumo Português.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Língua Portuguesa, tópico cadastrado 2.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Uma oração adjetiva restritiva delimita o referente. Certo ou errado?",
+        "b": "Certo. Ela seleciona um recorte no contexto."
+      },
+      {
+        "f": "Vírgulas em uma oração adjetiva jamais alteram a interpretação. Certo ou errado?",
+        "b": "Errado. Restrição e explicação podem produzir alcances diferentes."
+      },
+      {
+        "f": "Em É necessário que você revise, a oração pode funcionar como sujeito. Certo ou errado?",
+        "b": "Certo. Trata-se de subordinada substantiva subjetiva."
+      },
+      {
+        "f": "Toda oração substantiva exerce apenas função de objeto direto. Certo ou errado?",
+        "b": "Errado. Há diferentes funções substantivas."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Uma oração adjetiva restritiva delimita o referente.",
+        "a": true,
+        "why": "Ela seleciona um recorte no contexto."
+      },
+      {
+        "q": "Vírgulas em uma oração adjetiva jamais alteram a interpretação.",
+        "a": false,
+        "why": "Restrição e explicação podem produzir alcances diferentes."
+      },
+      {
+        "q": "Em É necessário que você revise, a oração pode funcionar como sujeito.",
+        "a": true,
+        "why": "Trata-se de subordinada substantiva subjetiva."
+      },
+      {
+        "q": "Toda oração substantiva exerce apenas função de objeto direto.",
+        "a": false,
+        "why": "Há diferentes funções substantivas."
+      },
+      {
+        "q": "Em Tenho certeza de que você revisou, a oração complementa um nome.",
+        "a": true,
+        "why": "É completiva nominal no contexto apresentado."
+      },
+      {
+        "q": "Toda forma de infinitivo corresponde a uma oração adjetiva.",
+        "a": false,
+        "why": "A função depende da estrutura."
+      },
+      {
+        "q": "Uma oração reduzida pode empregar gerúndio.",
+        "a": true,
+        "why": "Infinitivo e particípio também podem aparecer nesse tipo de construção."
+      },
+      {
+        "q": "Classificar a oração exige observar apenas o tamanho da frase.",
+        "a": false,
+        "why": "É preciso analisar função sintática e sentido."
+      }
+    ],
+    "_syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "portugues-coesao-reescrita-sentido",
+    "discipline": "Língua Portuguesa",
+    "topic_label": "Compreensão e coesão textual",
+    "sort_order": 118,
+    "title": "Coesão e reescrita: preserve referente, lógica e sentido",
+    "summary": "Coesão reúne mecanismos que conectam partes do texto: referência, substituição, repetição, conectores e sequenciação. Coerência envolve a construção de sentido. Um período gramaticalmente possível pode alterar a informação original.",
+    "body_md": "## Reescrever não é apenas trocar palavras\n\nCoesão reúne mecanismos que conectam partes do texto: referência, substituição, repetição, conectores e sequenciação. Coerência envolve a construção de sentido. Um período gramaticalmente possível pode alterar a informação original.\n\n| Verificação | O que perguntar |\n|---|---|\n| Referente | A quem o pronome ou expressão aponta? |\n| Relação lógica | Houve troca de causa por conclusão, oposição ou condição? |\n| Alcance | A afirmação fala de todos, alguns ou nenhum? |\n| Tempo e modalidade | Mantém passado, hipótese, obrigação ou possibilidade? |\n| Vocabulário | O sinônimo funciona neste contexto? |\n\n## Exemplo próprio\n\n“O edital foi publicado. Esse documento define os requisitos” utiliza referência ao edital. Substituir “esse documento” por “a prova” altera o referente. Em “Alguns alunos revisaram”, substituir alguns por todos amplia a afirmação e não preserva o sentido.\n\n> **Pegadinha:** sinônimos de dicionário não são intercambiáveis em qualquer uso. Uma palavra pode assumir sentido técnico, figurado ou dependente de contexto.\n\n## Aplicação na prova\n\nLeia o trecho anterior e o posterior antes de resolver uma questão sobre pronome. Na reescrita, verifique sujeito, negação, tempo verbal e conectivo. Trocar posição de uma oração também pode exigir pontuação diferente.\n\n## Roteiro de decisão\n\nPrimeiro explique a informação do original. Depois explique a da versão proposta. Se as duas explicações divergem, a preservação de sentido falhou, mesmo que ambas as frases sejam gramaticais. A correção gramatical e a equivalência semântica são critérios relacionados, mas diferentes.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Resumo Português.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Língua Portuguesa, tópico cadastrado 1.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Um pronome pode retomar uma expressão anterior. Certo ou errado?",
+        "b": "Certo. É um mecanismo de coesão referencial."
+      },
+      {
+        "f": "Uma frase gramaticalmente correta sempre preserva o sentido de outra. Certo ou errado?",
+        "b": "Errado. Correção e equivalência são critérios diferentes."
+      },
+      {
+        "f": "Trocar alguns por todos pode ampliar o alcance da afirmação. Certo ou errado?",
+        "b": "Certo. As quantificações são distintas."
+      },
+      {
+        "f": "Qualquer sinônimo pode substituir uma palavra em qualquer contexto. Certo ou errado?",
+        "b": "Errado. O contexto condiciona o sentido."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Um pronome pode retomar uma expressão anterior.",
+        "a": true,
+        "why": "É um mecanismo de coesão referencial."
+      },
+      {
+        "q": "Uma frase gramaticalmente correta sempre preserva o sentido de outra.",
+        "a": false,
+        "why": "Correção e equivalência são critérios diferentes."
+      },
+      {
+        "q": "Trocar alguns por todos pode ampliar o alcance da afirmação.",
+        "a": true,
+        "why": "As quantificações são distintas."
+      },
+      {
+        "q": "Qualquer sinônimo pode substituir uma palavra em qualquer contexto.",
+        "a": false,
+        "why": "O contexto condiciona o sentido."
+      },
+      {
+        "q": "Conectivos podem sinalizar relações lógicas.",
+        "a": true,
+        "why": "Causa, oposição e conclusão são exemplos."
+      },
+      {
+        "q": "Ler apenas o pronome isolado basta para identificar sempre seu referente.",
+        "a": false,
+        "why": "O contexto é essencial."
+      },
+      {
+        "q": "Reordenar orações pode exigir ajuste de pontuação.",
+        "a": true,
+        "why": "A estrutura da frase deve ser conferida."
+      },
+      {
+        "q": "Hipótese e certeza podem ser trocadas sem afetar a informação.",
+        "a": false,
+        "why": "Modalidade e grau de compromisso alteram o sentido."
+      }
+    ],
+    "_syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "rlm-proposicoes-negacao-condicionais",
+    "discipline": "Raciocínio Lógico",
+    "topic_label": "Lógica proposicional",
+    "sort_order": 119,
+    "title": "Proposições, condicionais e negações: pense pela tabela-verdade",
+    "summary": "Uma proposição declarativa pode receber verdadeiro ou falso no contexto da lógica clássica. Perguntas e ordens não são, por si só, proposições desse tipo. Conectivos combinam proposições segundo regras determinadas.",
+    "body_md": "## Uma frase, um valor lógico\n\nUma proposição declarativa pode receber verdadeiro ou falso no contexto da lógica clássica. Perguntas e ordens não são, por si só, proposições desse tipo. Conectivos combinam proposições segundo regras determinadas.\n\n| Construção | Quando é verdadeira | Negação equivalente |\n|---|---|---|\n| p e q | Ambas verdadeiras | não p ou não q |\n| p ou q, inclusivo | Pelo menos uma verdadeira | não p e não q |\n| Se p, então q | Exceto p verdadeiro e q falso | p e não q |\n| p se e somente se q | Valores iguais | Valores diferentes |\n\n## Condicional sem confusão\n\n“Se estudo, então melhoro” não permite concluir automaticamente “Se melhoro, então estudo”. A contrapositiva equivalente é “Se não melhoro, então não estudo”. Na lógica proposicional, p implica q equivale a não p ou q.\n\n## Exemplo calculado\n\nPara p verdadeiro e q falso: p e q é falso; p ou q é verdadeiro; p implica q é falso. Essa linha resolve muitas alternativas que confundem negação da condicional com outra condicional.\n\n> **Ponto de atenção:** o “ou” da lógica inclusiva admite as duas proposições verdadeiras. Se o enunciado exige exatamente uma, trata-se de exclusividade e a regra muda.\n\n## Como revisar\n\nMonte as quatro combinações de valores para duas proposições. Teste uma equivalência em todas as linhas; um único contraexemplo a derruba. Não use uma situação real particular como prova de equivalência universal.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Resumo RLM.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Raciocínio Lógico, tópico cadastrado 1.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Uma condicional p implica q é falsa quando p é verdadeiro e q falso. Certo ou errado?",
+        "b": "Certo. Essa é sua única combinação falsa na lógica clássica."
+      },
+      {
+        "f": "A negação de p implica q é não p implica não q. Certo ou errado?",
+        "b": "Errado. A negação correta é p e não q."
+      },
+      {
+        "f": "Não p ou q é equivalente a p implica q. Certo ou errado?",
+        "b": "Certo. A tabela-verdade confirma em todas as linhas."
+      },
+      {
+        "f": "A recíproca q implica p sempre equivale a p implica q. Certo ou errado?",
+        "b": "Errado. A recíproca não é equivalente em geral."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Uma condicional p implica q é falsa quando p é verdadeiro e q falso.",
+        "a": true,
+        "why": "Essa é sua única combinação falsa na lógica clássica."
+      },
+      {
+        "q": "A negação de p implica q é não p implica não q.",
+        "a": false,
+        "why": "A negação correta é p e não q."
+      },
+      {
+        "q": "Não p ou q é equivalente a p implica q.",
+        "a": true,
+        "why": "A tabela-verdade confirma em todas as linhas."
+      },
+      {
+        "q": "A recíproca q implica p sempre equivale a p implica q.",
+        "a": false,
+        "why": "A recíproca não é equivalente em geral."
+      },
+      {
+        "q": "P e Q é falso se pelo menos um componente for falso.",
+        "a": true,
+        "why": "A conjunção exige ambos verdadeiros."
+      },
+      {
+        "q": "O ou inclusivo proíbe ambos os componentes verdadeiros.",
+        "a": false,
+        "why": "Essa proibição caracteriza exclusividade."
+      },
+      {
+        "q": "A contrapositiva não q implica não p equivale a p implica q.",
+        "a": true,
+        "why": "Ela preserva a tabela-verdade."
+      },
+      {
+        "q": "Um único caso coincidente prova equivalência para todas as combinações.",
+        "a": false,
+        "why": "Todas as linhas precisam ser consideradas."
+      }
+    ],
+    "_syllabus_topic_id": "a7ae3924-db95-4f19-9d59-67f2c3011458",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "rlm-conjuntos-quantificadores",
+    "discipline": "Raciocínio Lógico",
+    "topic_label": "Conjuntos e lógica de primeira ordem",
+    "sort_order": 120,
+    "title": "Conjuntos, quantificadores e inclusão-exclusão",
+    "summary": "Um elemento pertence a um conjunto. Um conjunto pode estar contido em outro. União reúne elementos presentes em pelo menos um dos conjuntos; interseção reúne os comuns. O vazio é subconjunto de qualquer conjunto, mas não é obrigatoriamente ",
+    "body_md": "## Diferencie pertencer e estar contido\n\nUm elemento pertence a um conjunto. Um conjunto pode estar contido em outro. União reúne elementos presentes em pelo menos um dos conjuntos; interseção reúne os comuns. O vazio é subconjunto de qualquer conjunto, mas não é obrigatoriamente elemento de todos.\n\n| Afirmação | Negação correta |\n|---|---|\n| Todo aluno revisou | Pelo menos um aluno não revisou |\n| Algum aluno revisou | Nenhum aluno revisou |\n| Nenhum aluno revisou | Pelo menos um aluno revisou |\n\n## Conte sem duplicar\n\nPara conjuntos finitos, a quantidade na união A e B é a soma das quantidades de A e B menos a interseção. Subtrair a interseção corrige a dupla contagem.\n\n## Exemplo próprio\n\nDe 30 alunos, 18 estudam Português, 16 estudam Informática e 8 estudam as duas matérias. A união tem 18+16−8=26. Se esse é o universo de 30, quatro não estudam nenhuma das duas. Somar 18 e 16 sem retirar a interseção produziria 34 e contaria alguns alunos duas vezes.\n\n> **Pegadinha:** negar “todos” não é afirmar “nenhum”. Basta encontrar um contraexemplo para derrubar uma afirmação universal. Quantificadores exigem atenção ao universo indicado.\n\n## Análise de argumentos\n\nSe todo ciclista joga futebol, a ausência de futebol implica ausência da condição de ciclista. Isso não autoriza concluir que todo jogador de futebol seja ciclista. O diagrama deve representar a inclusão na direção correta.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 2,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Resumo RLM.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Raciocínio Lógico, tópico cadastrado 2.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "A união reúne elementos de pelo menos um dos conjuntos. Certo ou errado?",
+        "b": "Certo. O sentido é inclusivo."
+      },
+      {
+        "f": "A interseção reúne apenas elementos que não pertencem a nenhum conjunto. Certo ou errado?",
+        "b": "Errado. Ela reúne os comuns."
+      },
+      {
+        "f": "A negação de todo aluno revisou é algum aluno não revisou. Certo ou errado?",
+        "b": "Certo. Um contraexemplo basta para negar a universal."
+      },
+      {
+        "f": "Negar todos revisaram equivale necessariamente a nenhum revisou. Certo ou errado?",
+        "b": "Errado. A negação é existencial, não outra afirmação universal."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "A união reúne elementos de pelo menos um dos conjuntos.",
+        "a": true,
+        "why": "O sentido é inclusivo."
+      },
+      {
+        "q": "A interseção reúne apenas elementos que não pertencem a nenhum conjunto.",
+        "a": false,
+        "why": "Ela reúne os comuns."
+      },
+      {
+        "q": "A negação de todo aluno revisou é algum aluno não revisou.",
+        "a": true,
+        "why": "Um contraexemplo basta para negar a universal."
+      },
+      {
+        "q": "Negar todos revisaram equivale necessariamente a nenhum revisou.",
+        "a": false,
+        "why": "A negação é existencial, não outra afirmação universal."
+      },
+      {
+        "q": "Para 18, 16 e interseção 8, a união tem 26 elementos.",
+        "a": true,
+        "why": "Calcula-se 18+16−8."
+      },
+      {
+        "q": "O conjunto vazio é obrigatoriamente elemento de qualquer conjunto.",
+        "a": false,
+        "why": "Ele é subconjunto de qualquer conjunto; pertencimento é outra relação."
+      },
+      {
+        "q": "Um universo de 30 com união 26 deixa quatro fora da união.",
+        "a": true,
+        "why": "A diferença é 30−26."
+      },
+      {
+        "q": "Se todo ciclista joga futebol, todo jogador de futebol é ciclista.",
+        "a": false,
+        "why": "A inclusão não pode ser invertida sem premissa adicional."
+      }
+    ],
+    "_syllabus_topic_id": "3c989c30-37f2-41c5-84f0-65d9bf9e7a45",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "rlm-contagem-probabilidade-basica",
+    "discipline": "Raciocínio Lógico",
+    "topic_label": "Contagem e probabilidade",
+    "sort_order": 121,
+    "title": "Contagem e probabilidade: ordem, repetição e espaço amostral",
+    "summary": "A ordem importa? Pode haver repetição? As escolhas são sucessivas ou alternativas? Essas perguntas orientam a contagem. Probabilidade, em um espaço finito equiprovável, é a razão entre casos favoráveis e casos possíveis.",
+    "body_md": "## Três perguntas antes de calcular\n\nA ordem importa? Pode haver repetição? As escolhas são sucessivas ou alternativas? Essas perguntas orientam a contagem. Probabilidade, em um espaço finito equiprovável, é a razão entre casos favoráveis e casos possíveis.\n\n| Situação | Raciocínio |\n|---|---|\n| Etapas sucessivas | Multiplicar possibilidades, respeitando restrições |\n| Alternativas disjuntas | Somar possibilidades |\n| Seleção sem importância da ordem | Evitar contar várias vezes o mesmo grupo |\n| Escolha sem reposição | Atualizar possibilidades após cada retirada |\n\n## Exemplos próprios\n\nUma senha de três posições com dez dígitos e repetição permitida tem 10×10×10=1000 possibilidades, incluindo zero inicial. Se forem números de três algarismos distintos, o primeiro não pode ser zero: 9×9×8=648. Senhas e números não têm necessariamente a mesma restrição.\n\nEscolher duas pessoas entre cinco, sem cargos distintos, dá dez duplas. Se a primeira é coordenadora e a segunda secretária, a ordem importa e há 5×4=20 escolhas.\n\n> **Ponto de atenção:** independência não é sinônimo de eventos disjuntos. Para multiplicar probabilidades sem condicionamento, é necessário justificar independência. Sem reposição, as probabilidades podem mudar entre as retiradas.\n\n## Estratégia de prova\n\nDefina o universo, descreva uma escolha completa e verifique duplicações. Na probabilidade, não assuma equiprobabilidade apenas porque os resultados receberam nomes. Um espaço amostral precisa representar o experimento de modo adequado.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 2,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Resumo RLM.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Raciocínio Lógico, tópico cadastrado 2.",
+    "legal_basis": [],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Uma senha de três dígitos com repetição e zero inicial permitido tem mil possibilidades. Certo ou errado?",
+        "b": "Certo. São 10 escolhas em cada uma das três posições."
+      },
+      {
+        "f": "Números de três algarismos distintos podem começar por zero. Certo ou errado?",
+        "b": "Errado. Nesse caso deixariam de ser números de três algarismos."
+      },
+      {
+        "f": "Escolher duas pessoas sem cargos entre cinco produz dez duplas. Certo ou errado?",
+        "b": "Certo. A ordem não distingue a mesma dupla."
+      },
+      {
+        "f": "Escolher coordenador e secretário entre cinco produz também apenas dez possibilidades. Certo ou errado?",
+        "b": "Errado. Os cargos distinguem a ordem, produzindo vinte."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Uma senha de três dígitos com repetição e zero inicial permitido tem mil possibilidades.",
+        "a": true,
+        "why": "São 10 escolhas em cada uma das três posições."
+      },
+      {
+        "q": "Números de três algarismos distintos podem começar por zero.",
+        "a": false,
+        "why": "Nesse caso deixariam de ser números de três algarismos."
+      },
+      {
+        "q": "Escolher duas pessoas sem cargos entre cinco produz dez duplas.",
+        "a": true,
+        "why": "A ordem não distingue a mesma dupla."
+      },
+      {
+        "q": "Escolher coordenador e secretário entre cinco produz também apenas dez possibilidades.",
+        "a": false,
+        "why": "Os cargos distinguem a ordem, produzindo vinte."
+      },
+      {
+        "q": "Sem reposição, a quantidade disponível pode mudar após a retirada.",
+        "a": true,
+        "why": "É preciso atualizar o cenário."
+      },
+      {
+        "q": "Eventos disjuntos e eventos independentes são sempre a mesma coisa.",
+        "a": false,
+        "why": "São conceitos distintos."
+      },
+      {
+        "q": "Casos favoráveis sobre possíveis exige cuidado com equiprobabilidade.",
+        "a": true,
+        "why": "A razão simples aplica-se ao cenário finito equiprovável."
+      },
+      {
+        "q": "Sempre se somam as possibilidades de todas as etapas sucessivas.",
+        "a": false,
+        "why": "Etapas sucessivas normalmente exigem multiplicação, com restrições."
+      }
+    ],
+    "_syllabus_topic_id": "3c989c30-37f2-41c5-84f0-65d9bf9e7a45",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "penal-lei-no-tempo",
+    "discipline": "Direito Penal",
+    "topic_label": "Aplicação da lei penal no tempo",
+    "sort_order": 122,
+    "title": "Lei penal no tempo: organize a linha temporal",
+    "summary": "O momento da ação ou omissão orienta a análise temporal. Compare a lei desse momento com a posterior, identificando se há benefício ao agente. Não confunda a data do resultado com o tempo do crime.",
+    "body_md": "## Comece pela data da conduta\n\nO momento da ação ou omissão orienta a análise temporal. Compare a lei desse momento com a posterior, identificando se há benefício ao agente. Não confunda a data do resultado com o tempo do crime.\n\n| Instituto | Pergunta de revisão |\n|---|---|\n| Legalidade | Havia lei anterior definindo crime e cominando pena? |\n| Abolitio criminis | A lei posterior deixou de considerar o fato criminoso? |\n| Lei mais benéfica | A norma posterior favorece o agente? |\n| Lei temporária ou excepcional | O fato ocorreu durante sua vigência? |\n| Teoria da atividade | Quando ocorreu a ação ou omissão? |\n\n## Exemplo próprio\n\nUma conduta ocorre sob uma lei e o resultado aparece depois de sua substituição. Para o tempo do crime, observe a conduta; para eventual benefício posterior, examine a nova norma. São perguntas diferentes.\n\n> **Conferência jurídica — 04/10/2026:** escopo restrito aos arts. 1º a 4º do Código Penal compilado. A abolitio criminis alcança a execução e os efeitos penais da condenação. Não significa apagar automaticamente toda consequência civil. A norma temporária ou excepcional conserva aplicação aos fatos praticados durante sua vigência.\n\n## Evite a pegadinha\n\nTrânsito em julgado não impede a aplicação de lei penal posterior benéfica. Já uma lei mais severa posterior não retroage para agravar o fato. Não combine trechos de leis diferentes sem examinar os limites jurídicos dessa operação.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Resumo - CPP.pdf; Mapeando direito penal.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Direito Penal e Processual Penal, tópico cadastrado 1.",
+    "legal_basis": [
+      {
+        "title": "Código Penal compilado — arts. 1º a 8º",
+        "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      }
+    ],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "O tempo do crime considera a ação ou omissão. Certo ou errado?",
+        "b": "Certo. O art. 4º adota a teoria da atividade."
+      },
+      {
+        "f": "A data do resultado sempre define o tempo do crime. Certo ou errado?",
+        "b": "Errado. O art. 4º considera a conduta, ainda que o resultado ocorra depois."
+      },
+      {
+        "f": "A lei posterior benéfica pode alcançar condenação definitiva. Certo ou errado?",
+        "b": "Certo. O art. 2º, parágrafo único, prevê esse alcance."
+      },
+      {
+        "f": "Uma lei posterior mais severa pode retroagir para aumentar a pena do fato anterior. Certo ou errado?",
+        "b": "Errado. A retroatividade admitida beneficia o agente."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "O tempo do crime considera a ação ou omissão.",
+        "a": true,
+        "why": "O art. 4º adota a teoria da atividade."
+      },
+      {
+        "q": "A data do resultado sempre define o tempo do crime.",
+        "a": false,
+        "why": "O art. 4º considera a conduta, ainda que o resultado ocorra depois."
+      },
+      {
+        "q": "A lei posterior benéfica pode alcançar condenação definitiva.",
+        "a": true,
+        "why": "O art. 2º, parágrafo único, prevê esse alcance."
+      },
+      {
+        "q": "Uma lei posterior mais severa pode retroagir para aumentar a pena do fato anterior.",
+        "a": false,
+        "why": "A retroatividade admitida beneficia o agente."
+      },
+      {
+        "q": "A abolitio criminis faz cessar a execução e os efeitos penais da condenação.",
+        "a": true,
+        "why": "Esse é o alcance penal do art. 2º."
+      },
+      {
+        "q": "A abolitio criminis apaga necessariamente toda consequência civil.",
+        "a": false,
+        "why": "A regra citada trata de efeitos penais."
+      },
+      {
+        "q": "Lei temporária aplica-se ao fato cometido durante sua vigência mesmo após o prazo.",
+        "a": true,
+        "why": "É a regra do art. 3º."
+      },
+      {
+        "q": "Pode haver pena sem prévia cominação legal.",
+        "a": false,
+        "why": "O art. 1º exige prévia cominação."
+      }
+    ],
+    "_syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "penal-lei-no-espaco",
+    "discipline": "Direito Penal",
+    "topic_label": "Territorialidade e extraterritorialidade",
+    "sort_order": 123,
+    "title": "Lei penal no espaço: lugar e aplicação são perguntas diferentes",
+    "summary": "Primeiro determine onde se considera praticado o crime. Depois examine se a lei brasileira se aplica. Lugar do crime e âmbito de aplicação da lei não são conceitos idênticos.",
+    "body_md": "## Separe duas decisões\n\nPrimeiro determine onde se considera praticado o crime. Depois examine se a lei brasileira se aplica. Lugar do crime e âmbito de aplicação da lei não são conceitos idênticos.\n\n| Conceito | Chave de leitura |\n|---|---|\n| Lugar do crime | Conduta ou resultado ocorrido ou pretendido: ubiquidade |\n| Territorialidade | Regra de aplicação em território nacional, com ressalvas legais |\n| Extensão territorial | Hipóteses de embarcações e aeronaves do art. 5º |\n| Extraterritorialidade | Hipóteses específicas do art. 7º |\n| Pena cumprida fora | Tratamento previsto no art. 8º |\n\n## Exemplo próprio\n\nUma ação ocorre no Brasil, mas o resultado é pretendido no exterior. A regra sobre lugar do crime alcança ambos os pontos. Isso não dispensa a análise da jurisdição e das normas aplicáveis ao caso.\n\n> **Conferência jurídica — 04/10/2026:** arts. 5º a 8º do Código Penal compilado. Não transforme nacionalidade brasileira em uma autorização irrestrita para punir qualquer fato praticado fora do país. As hipóteses condicionadas do art. 7º exigem requisitos cumulativos; há exigências adicionais na hipótese do § 3º.\n\n## Como revisar\n\nEm embarcações e aeronaves, identifique nacionalidade, natureza pública ou privada, local e função. Não use a frase “qualquer veículo brasileiro é território brasileiro em qualquer lugar”. No art. 8º, diferencie penas iguais, que são computadas, de penas diversas, que atenuam a pena brasileira pelo mesmo crime.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Resumo - CPP.pdf; Mapeando direito penal.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Direito Penal e Processual Penal, tópico cadastrado 1.",
+    "legal_basis": [
+      {
+        "title": "Código Penal compilado — arts. 1º a 8º",
+        "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      }
+    ],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "O lugar do crime abrange a ação ou omissão, no todo ou em parte. Certo ou errado?",
+        "b": "Certo. É parte da regra de ubiquidade do art. 6º."
+      },
+      {
+        "f": "O resultado pretendido é sempre irrelevante para o lugar do crime. Certo ou errado?",
+        "b": "Errado. O art. 6º também o considera."
+      },
+      {
+        "f": "Lugar do crime e aplicação da lei brasileira são análises distintas. Certo ou errado?",
+        "b": "Certo. É necessário examinar ambos os conjuntos de regras."
+      },
+      {
+        "f": "Qualquer aeronave privada brasileira é extensão territorial em qualquer lugar. Certo ou errado?",
+        "b": "Errado. O art. 5º estabelece condições próprias."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "O lugar do crime abrange a ação ou omissão, no todo ou em parte.",
+        "a": true,
+        "why": "É parte da regra de ubiquidade do art. 6º."
+      },
+      {
+        "q": "O resultado pretendido é sempre irrelevante para o lugar do crime.",
+        "a": false,
+        "why": "O art. 6º também o considera."
+      },
+      {
+        "q": "Lugar do crime e aplicação da lei brasileira são análises distintas.",
+        "a": true,
+        "why": "É necessário examinar ambos os conjuntos de regras."
+      },
+      {
+        "q": "Qualquer aeronave privada brasileira é extensão territorial em qualquer lugar.",
+        "a": false,
+        "why": "O art. 5º estabelece condições próprias."
+      },
+      {
+        "q": "A extraterritorialidade condicionada exige os requisitos cumulativos legais.",
+        "a": true,
+        "why": "O art. 7º, § 2º, enumera condições."
+      },
+      {
+        "q": "Ser brasileiro elimina todas as condições do art. 7º, inciso II.",
+        "a": false,
+        "why": "Essa hipótese permanece condicionada."
+      },
+      {
+        "q": "Pena igual cumprida no estrangeiro é computada na pena brasileira pelo mesmo crime.",
+        "a": true,
+        "why": "É a regra do art. 8º."
+      },
+      {
+        "q": "Penas diversas cumpridas fora são simplesmente ignoradas.",
+        "a": false,
+        "why": "O art. 8º prevê atenuação quando diversas."
+      }
+    ],
+    "_syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "legislacao-armas-posse-porte",
+    "discipline": "Legislação Especial",
+    "topic_label": "Estatuto do Desarmamento",
+    "sort_order": 124,
+    "title": "Armas: posse, porte e a atualização de 2026",
+    "summary": "A classificação de uma conduta com arma depende de seus elementos legais. Posse e porte não são termos intercambiáveis. Registro também não equivale, por si só, a autorização para circular armado.",
+    "body_md": "## Identifique local, conduta e categoria\n\nA classificação de uma conduta com arma depende de seus elementos legais. Posse e porte não são termos intercambiáveis. Registro também não equivale, por si só, a autorização para circular armado.\n\n| Referência | Elemento para revisar |\n|---|---|\n| Art. 5º | Registro e manutenção nos locais legalmente previstos |\n| Art. 12 | Posse irregular de arma de uso permitido nos locais descritos |\n| Art. 14 | Porte e outras condutas com arma de uso permitido sem autorização |\n| Art. 16 | Arma de uso restrito e hipóteses equiparadas; uso proibido no § 2º |\n\n## Exemplo próprio\n\nGuardar uma arma irregular em casa e transportá-la sem autorização são situações que precisam ser examinadas separadamente. A propriedade do objeto não resolve a autorização da conduta. Nos exemplos, observe também munições e acessórios quando o dispositivo os abrange.\n\n> **Atualização legislativa — 04/10/2026:** a Lei 15.358/2026 acrescentou o art. 21-A ao Estatuto. Ele estabelece aumento de dois terços para os crimes dos arts. 12, 14 e 16 nas situações descritas no novo dispositivo, relacionadas à lei de drogas, ao comércio ilícito de entorpecentes ou ao uso do artefato para assegurar a mercancia. Leia as condições no texto oficial; não aplique o aumento automaticamente a todo crime com arma. Vigência da alteração: publicação em 25/03/2026.\n\n## Limites deste módulo\n\nO arquivo denominado “SINASE” no acervo trata, na realidade, de armas e SINARM. Este material foi classificado em legislação de armas. Não é um resumo do sistema socioeducativo. O módulo não esgota regulamentos, exceções de porte ou decisões sobre fiança e liberdade provisória; esses pontos exigem estudo específico da norma e da jurisprudência vigente.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 2,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Resumo SINASE.pdf. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Legislação Especial, tópico cadastrado 2.",
+    "legal_basis": [
+      {
+        "title": "Estatuto do Desarmamento compilado — arts. 5º, 12, 14, 16 e 21-A",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      },
+      {
+        "title": "Lei 15.358/2026 — arts. 37 e 44",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      }
+    ],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "Registro de arma não equivale automaticamente a autorização geral de porte. Certo ou errado?",
+        "b": "Certo. Registro e porte possuem regimes próprios."
+      },
+      {
+        "f": "Posse e porte são sempre a mesma conduta. Certo ou errado?",
+        "b": "Errado. Os tipos descrevem condutas e circunstâncias distintas."
+      },
+      {
+        "f": "O local da conduta importa na diferenciação dos arts. 12 e 14. Certo ou errado?",
+        "b": "Certo. O art. 12 descreve locais específicos."
+      },
+      {
+        "f": "A propriedade da arma dispensa autorização de toda conduta. Certo ou errado?",
+        "b": "Errado. A titularidade não afasta as exigências legais."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Registro de arma não equivale automaticamente a autorização geral de porte.",
+        "a": true,
+        "why": "Registro e porte possuem regimes próprios."
+      },
+      {
+        "q": "Posse e porte são sempre a mesma conduta.",
+        "a": false,
+        "why": "Os tipos descrevem condutas e circunstâncias distintas."
+      },
+      {
+        "q": "O local da conduta importa na diferenciação dos arts. 12 e 14.",
+        "a": true,
+        "why": "O art. 12 descreve locais específicos."
+      },
+      {
+        "q": "A propriedade da arma dispensa autorização de toda conduta.",
+        "a": false,
+        "why": "A titularidade não afasta as exigências legais."
+      },
+      {
+        "q": "O art. 16 distingue situações de uso restrito e de uso proibido.",
+        "a": true,
+        "why": "O § 2º prevê tratamento próprio para uso proibido."
+      },
+      {
+        "q": "O arquivo chamado SINASE justifica classificar seu conteúdo de armas como direito socioeducativo.",
+        "a": false,
+        "why": "A classificação deve seguir o conteúdo efetivo."
+      },
+      {
+        "q": "O art. 21-A foi acrescentado pela Lei 15.358/2026.",
+        "a": true,
+        "why": "A alteração consta do texto compilado e da lei modificadora."
+      },
+      {
+        "q": "O aumento do art. 21-A aplica-se automaticamente a qualquer crime com arma.",
+        "a": false,
+        "why": "É necessário verificar os crimes e as situações previstas no dispositivo."
+      }
+    ],
+    "_syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "constitucional-privacidade-dados",
+    "discipline": "Direito Constitucional",
+    "topic_label": "Direitos e garantias fundamentais",
+    "sort_order": 125,
+    "title": "Privacidade e dados pessoais: proteção constitucional",
+    "summary": "A Constituição protege intimidade, vida privada, honra e imagem. A proteção de dados pessoais passou a figurar expressamente entre os direitos fundamentais. Não confunda essa proteção com a ideia de que qualquer tratamento de informação exi",
+    "body_md": "## Direitos próximos, objetos diferentes\n\nA Constituição protege intimidade, vida privada, honra e imagem. A proteção de dados pessoais passou a figurar expressamente entre os direitos fundamentais. Não confunda essa proteção com a ideia de que qualquer tratamento de informação exige sempre consentimento.\n\n| Referência constitucional | Tema |\n|---|---|\n| Art. 5º, X | Intimidade, vida privada, honra e imagem |\n| Art. 5º, LXXIX | Proteção de dados pessoais, inclusive nos meios digitais |\n| Art. 21, XXVI | Competência da União para organizar e fiscalizar a proteção e o tratamento |\n| Art. 22, XXX | Competência privativa da União para legislar sobre proteção e tratamento |\n\n> **Atualização a observar em apostilas antigas:** a EC 115/2022 incluiu a proteção de dados expressamente no art. 5º e definiu as competências acima. Conferência em 04/10/2026 no texto constitucional compilado e na emenda oficial.\n\n## Exemplo próprio\n\nUma plataforma pede dados de identificação para cadastro. O candidato pode perguntar qual é a finalidade do tratamento, quem recebe os dados e que proteção é utilizada. A mera coleta de um dado não permite concluir, isoladamente, que houve violação constitucional; é necessário examinar finalidade, fundamento e garantias aplicáveis.\n\n## Pegadinhas de competência\n\nOrganizar e fiscalizar não é o mesmo que legislar. A leitura conjunta dos arts. 21 e 22 evita trocar a competência material pela legislativa. A proteção também alcança dados fora do ambiente digital: “inclusive” amplia a explicitação, não restringe o direito às telas.\n\n## Escopo\n\nEste módulo trata dos dispositivos constitucionais indicados. Bases legais, sanções e exceções da LGPD exigem um módulo próprio; não se deduz todo o regime da lei apenas desses quatro dispositivos.\n\n## Roteiro de revisão\n\n1. Explique as diferenças da tabela sem consultar o texto.\n2. Resolva os oito itens de fixação e leia o comentário de cada resposta.\n3. Salve os cartões no seu baralho e retome os conceitos que errou.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral de revisão assistida, elaborado a partir dos temas identificados no acervo: Resumão CF Vampiro.pdf; Mapa mental Dir. Constitucional.PDF. Exemplos e exercícios próprios. As apostilas antigas são referências temáticas; as atualizações estão indicadas no texto. Vínculo: Noções de Direito Constitucional, tópico cadastrado 1.",
+    "legal_basis": [
+      {
+        "title": "Constituição compilada — arts. 5º, 21 e 22",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
+      },
+      {
+        "title": "EC 115/2022 — proteção de dados pessoais",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc115.htm"
+      }
+    ],
+    "law_version_checked_at": "2026-10-05T01:16:55.117596+00:00",
+    "flashcards": [
+      {
+        "f": "A proteção constitucional de dados pessoais inclui meios digitais. Certo ou errado?",
+        "b": "Certo. É a previsão expressa do art. 5º, LXXIX."
+      },
+      {
+        "f": "Esse direito protege exclusivamente dados digitais. Certo ou errado?",
+        "b": "Errado. A palavra inclusive não limita a proteção a esses meios."
+      },
+      {
+        "f": "A EC 115/2022 introduziu esse inciso expressamente. Certo ou errado?",
+        "b": "Certo. A emenda também alterou competências da União."
+      },
+      {
+        "f": "Organizar e fiscalizar é a mesma competência que legislar. Certo ou errado?",
+        "b": "Errado. São atribuições material e legislativa distintas."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "A proteção constitucional de dados pessoais inclui meios digitais.",
+        "a": true,
+        "why": "É a previsão expressa do art. 5º, LXXIX."
+      },
+      {
+        "q": "Esse direito protege exclusivamente dados digitais.",
+        "a": false,
+        "why": "A palavra inclusive não limita a proteção a esses meios."
+      },
+      {
+        "q": "A EC 115/2022 introduziu esse inciso expressamente.",
+        "a": true,
+        "why": "A emenda também alterou competências da União."
+      },
+      {
+        "q": "Organizar e fiscalizar é a mesma competência que legislar.",
+        "a": false,
+        "why": "São atribuições material e legislativa distintas."
+      },
+      {
+        "q": "O art. 22, XXX, prevê competência privativa da União para legislar sobre o tema.",
+        "a": true,
+        "why": "É a redação acrescentada pela EC 115."
+      },
+      {
+        "q": "A Constituição exige consentimento para qualquer tratamento, sem exceções.",
+        "a": false,
+        "why": "Essa conclusão não decorre dos dispositivos indicados."
+      },
+      {
+        "q": "Intimidade e vida privada recebem proteção no art. 5º, X.",
+        "a": true,
+        "why": "São direitos expressamente mencionados."
+      },
+      {
+        "q": "A mera existência de um cadastro prova, por si só, violação constitucional.",
+        "a": false,
+        "why": "O tratamento deve ser examinado no contexto de suas finalidades e garantias."
+      }
+    ],
+    "_syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  }
+]

@@ -38,6 +38,8 @@ import { HeroVideo } from "@/components/landing/HeroVideo";
 import { TestingSeal } from "@/components/landing/TestingSeal";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
+import { MobileHub } from "@/components/landing/MobileHub";
+import { ThemeToggle } from "@/components/landing/ThemeToggle";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -196,6 +198,7 @@ const delay = (n: number) => ({ "--reveal-delay": n }) as CSSProperties;
 
 function Index() {
   const scrolled = useScrolled();
+  const [heroReady, setHeroReady] = useState(false);
   useReveal();
 
   return (
@@ -222,6 +225,7 @@ function Index() {
             <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
               Começar grátis <ArrowRight />
             </Link>
+            <ThemeToggle />
             <Sheet>
               <SheetTrigger asChild>
                 <button type="button" className="lp-menu-btn" aria-label="Abrir menu">
@@ -262,9 +266,9 @@ function Index() {
       </header>
 
       <main>
-        <section className="lp-hero">
+        <section className={`lp-hero${heroReady ? " is-ready" : ""}`}>
           <div className="lp-hero__media" aria-hidden="true">
-            <HeroVideo />
+            <HeroVideo onDone={() => setHeroReady(true)} />
           </div>
           <div className="lp-hero__shade" aria-hidden="true" />
           <div className="lp-hero__grid" aria-hidden="true" />
@@ -343,6 +347,13 @@ function Index() {
             </div>
           </div>
         </section>
+
+        <MobileHub
+          steps={STEPS as [string, string][]}
+          tools={TOOLS}
+          careers={CAREERS}
+          pillars={PILLARS}
+        />
 
         <div className="lp-marquee" aria-hidden="true">
           <div className="lp-marquee__track">
@@ -423,7 +434,15 @@ function Index() {
                 <li className="lp-step" key={title} data-reveal style={delay(i)}>
                   <span className="lp-step__node">
                     <i className="app-ico" data-hue={STEP_HUES[i]} aria-hidden="true">
-                      {i === 0 ? <Target /> : i === 1 ? <FileSearch /> : i === 2 ? <BrainCircuit /> : <Trophy />}
+                      {i === 0 ? (
+                        <Target />
+                      ) : i === 1 ? (
+                        <FileSearch />
+                      ) : i === 2 ? (
+                        <BrainCircuit />
+                      ) : (
+                        <Trophy />
+                      )}
                     </i>
                     <b>0{i + 1}</b>
                   </span>
@@ -471,7 +490,7 @@ function Index() {
                       <Check /> Filtros por banca e cargo
                     </li>
                     <li>
-                      <Check /> Resolução passo a passo com IA
+                      <Check /> Resolução passo a passo com IA · em breve
                     </li>
                     <li>
                       <Check /> Salva no seu caderno de revisão
@@ -622,6 +641,7 @@ function Index() {
         </div>
         <div className="lp-container lp-footer__bottom">
           <span>© 2026 Norte Concurso. Todos os direitos reservados.</span>
+          <span className="lp-footer__dev">Desenvolvido por Franc D'nis</span>
           <span className="lp-coord">
             <b>N</b> · De Feijó-Acre para todo o Brasil
           </span>
@@ -702,8 +722,12 @@ function ProductMock() {
           </div>
         </div>
         <div className="lp-mock__stats">
-          <span><b>83%</b> acertos</span>
-          <span><b>9</b> em sequência</span>
+          <span>
+            <b>83%</b> acertos
+          </span>
+          <span>
+            <b>9</b> em sequência
+          </span>
           <span className="lp-mock__ai">✦ IA explicou · salvo no caderno</span>
         </div>
       </div>

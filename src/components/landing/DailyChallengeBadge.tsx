@@ -3,7 +3,12 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, Clock } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { formatCountdown, secondsUntilAcreMidnight } from "@/lib/acreTime";
-import { GUEST_DAILY_LIMIT, getAcreDateKey, getGuestRemainingToday, onAcreDayChange } from "@/lib/guestQuota";
+import {
+  GUEST_DAILY_LIMIT,
+  getAcreDateKey,
+  getGuestRemainingToday,
+  onAcreDayChange,
+} from "@/lib/guestQuota";
 
 /**
  * Selo de destaque no topo da hero: chama o visitante para o Desafio diário
@@ -32,7 +37,10 @@ export function DailyChallengeBadge() {
       const left = secondsUntilAcreMidnight();
       setSeconds(left);
       // Virou o dia: força a data do servidor e renova a contagem das questões.
-      if (left >= 86_399) void getAcreDateKey(true).then(() => getGuestRemainingToday()).then(setRemaining);
+      if (left >= 86_399)
+        void getAcreDateKey(true)
+          .then(() => getGuestRemainingToday())
+          .then(setRemaining);
     };
     tick();
     const id = window.setInterval(tick, 1000);

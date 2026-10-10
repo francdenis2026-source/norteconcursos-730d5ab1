@@ -26,13 +26,17 @@ export function AiResolutionsSection() {
         <CardTitle className="flex items-center gap-2 text-lg">
           <Sparkles className="h-5 w-5 text-primary" aria-hidden /> Resoluções salvas pela IA
         </CardTitle>
-        <CardDescription>Questões que você resolveu com IA, guardadas para revisar depois.</CardDescription>
+        <CardDescription>
+          Questões que você resolveu com IA, guardadas para revisar depois.
+        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
         {items.length === 0 ? (
           <p className="text-sm text-muted-foreground">
             Nenhuma resolução ainda.{" "}
-            <Link to="/dashboard/ai-solver" className="font-medium text-primary underline">Resolver uma questão</Link>
+            <Link to="/dashboard/ai-solver" className="font-medium text-primary underline">
+              Resolver uma questão
+            </Link>
           </p>
         ) : (
           items.map((r) => (
@@ -46,7 +50,12 @@ export function AiResolutionsSection() {
                 >
                   {r.question}
                 </button>
-                <Button variant="ghost" size="icon" aria-label="Excluir resolução" onClick={() => remove(r.id)}>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  aria-label="Excluir resolução"
+                  onClick={() => remove(r.id)}
+                >
                   <Trash2 className="h-4 w-4" />
                 </Button>
               </div>

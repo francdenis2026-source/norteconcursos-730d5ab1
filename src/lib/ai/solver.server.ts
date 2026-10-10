@@ -6,29 +6,48 @@ import { AI_ENABLED, effectiveTier } from "@/lib/launch.config";
 import { checkFeatureAccess } from "@/lib/subscriptions.config";
 import type { SubscriptionTier } from "@/types";
 
-const SUPABASE_URL = process.env["VITE_SUPABASE_URL"] ?? process.env["SUPABASE_URL"] ?? "https://gkwphadbveiyjcwiiizw.supabase.co";
-const SUPABASE_KEY = process.env["VITE_SUPABASE_PUBLISHABLE_KEY"] ?? process.env["SUPABASE_PUBLISHABLE_KEY"] ?? "";
+const SUPABASE_URL =
+  process.env["VITE_SUPABASE_URL"] ??
+  process.env["SUPABASE_URL"] ??
+  "https://gkwphadbveiyjcwiiizw.supabase.co";
+const SUPABASE_KEY =
+  process.env["VITE_SUPABASE_PUBLISHABLE_KEY"] ?? process.env["SUPABASE_PUBLISHABLE_KEY"] ?? "";
 
 /** Confere no servidor quem está chamando e se o plano em vigor inclui IA (Gratuito não inclui). */
 async function checkAiAccess(request: Request): Promise<Response | null> {
   const token = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
-  if (!token) return Response.json({ error: "Entre na sua conta para usar a IA." }, { status: 401 });
+  if (!token)
+    return Response.json({ error: "Entre na sua conta para usar a IA." }, { status: 401 });
   const headers = { apikey: SUPABASE_KEY, Authorization: `Bearer ${token}` };
   const who = await fetch(`${SUPABASE_URL}/auth/v1/user`, { headers });
   if (!who.ok) return Response.json({ error: "Sessão inválida." }, { status: 401 });
   const { id } = (await who.json()) as { id: string };
   const [prof, role] = await Promise.all([
-    fetch(`${SUPABASE_URL}/rest/v1/profiles?id=eq.${id}&select=subscription_tier,subscription_expires_at,created_at`, { headers }),
-    fetch(`${SUPABASE_URL}/rest/v1/user_roles?user_id=eq.${id}&role=eq.admin&select=role`, { headers }),
+    fetch(
+      `${SUPABASE_URL}/rest/v1/profiles?id=eq.${id}&select=subscription_tier,subscription_expires_at,created_at`,
+      { headers },
+    ),
+    fetch(`${SUPABASE_URL}/rest/v1/user_roles?user_id=eq.${id}&role=eq.admin&select=role`, {
+      headers,
+    }),
   ]);
   const isAdmin = role.ok && ((await role.json()) as unknown[]).length > 0;
   let limit: number | null = null; // nulo = ilimitado
   if (!isAdmin) {
-    const [p] = prof.ok ? ((await prof.json()) as { subscription_tier: string; subscription_expires_at: string | null; created_at: string }[]) : [];
+    const [p] = prof.ok
+      ? ((await prof.json()) as {
+          subscription_tier: string;
+          subscription_expires_at: string | null;
+          created_at: string;
+        }[])
+      : [];
     const { tier } = effectiveTier(p?.subscription_tier, p?.created_at, p?.subscription_expires_at);
     const feature = checkFeatureAccess(tier as SubscriptionTier, "aiSolver");
     if (!feature.included) {
-      return Response.json({ error: "A resolução com IA não está incluída no plano Gratuito." }, { status: 403 });
+      return Response.json(
+        { error: "A resolução com IA não está incluída no plano Gratuito." },
+        { status: 403 },
+      );
     }
     limit = typeof feature.limit === "number" ? feature.limit : null;
   }
@@ -39,7 +58,13 @@ async function checkAiAccess(request: Request): Promise<Response | null> {
     body: JSON.stringify({ _limit: limit }),
   });
   if (!consume.ok || (await consume.json()) !== true) {
-    return Response.json({ error: "Você usou todas as resoluções de IA de hoje. O limite renova à meia-noite (horário do Acre)." }, { status: 429 });
+    return Response.json(
+      {
+        error:
+          "Você usou todas as resoluções de IA de hoje. O limite renova à meia-noite (horário do Acre).",
+      },
+      { status: 429 },
+    );
   }
   return null;
 }
@@ -70,10 +95,11 @@ Regras: cite o dispositivo legal (lei, artigo) quando aplicável, mas avise que 
 
 export async function handleSolveQuestion(request: Request): Promise<Response> {
   if (!AI_ENABLED) {
-    return Response.json({ error: "A resolução com IA estará disponível em breve." }, { status: 503 });
+    return Response.json(
+      { error: "A resolução com IA estará disponível em breve." },
+      { status: 503 },
+    );
   }
-  const denied = await checkAiAccess(request);
-  if (denied) return denied;
   const apiKey = process.env["LOVABLE_API_KEY"];
   if (!apiKey) {
     return Response.json({ error: "Serviço de IA não configurado." }, { status: 500 });
@@ -86,6 +112,9 @@ export async function handleSolveQuestion(request: Request): Promise<Response> {
     const message = err instanceof z.ZodError ? err.issues[0]?.message : "Requisição inválida.";
     return Response.json({ error: message }, { status: 400 });
   }
+
+  const denied = await checkAiAccess(request);
+  if (denied) return denied;
 
   const runIdFetch = createLovableAiGatewayRunIdFetch(getLovableAiGatewayRunId(request));
   const provider = createOpenAI({

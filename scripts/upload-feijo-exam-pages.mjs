@@ -24,22 +24,46 @@ const EXAMS = [
     year: "2017",
     folder: "CONCURSO PROFESSOR 2017",
     pages: {
-      cf9c81cc: 3, e843f048: 4, efb03c3f: 5, "983bd507": 6, "48b3b28f": 7,
-      c9004da8: 8, "07ea15e7": 9, db53b26c: 10, "7d534149": 11, be883067: 12,
+      cf9c81cc: 3,
+      e843f048: 4,
+      efb03c3f: 5,
+      "983bd507": 6,
+      "48b3b28f": 7,
+      c9004da8: 8,
+      "07ea15e7": 9,
+      db53b26c: 10,
+      "7d534149": 11,
+      be883067: 12,
     },
   },
   {
     year: "2018",
     folder: "CONCURSO PROFESSOR FEIJO 2018",
     pages: {
-      "6e085482": 1, "5afdca81": 2, "791ecf44": 3, "1e65bf03": 4, a7261e62: 5, e3cc5258: 6,
-      "0e9240ac": 7, c1914d64: 8, "52fe44c3": 9, "8d7c4237": 10, a3471628: 11, f246ed9c: 12,
-      fdc250cc: 13, "55b5d5c8": 14, bc756a5f: 15, "6d525871": 16, fdd34cb7: 17,
+      "6e085482": 1,
+      "5afdca81": 2,
+      "791ecf44": 3,
+      "1e65bf03": 4,
+      a7261e62: 5,
+      e3cc5258: 6,
+      "0e9240ac": 7,
+      c1914d64: 8,
+      "52fe44c3": 9,
+      "8d7c4237": 10,
+      a3471628: 11,
+      f246ed9c: 12,
+      fdc250cc: 13,
+      "55b5d5c8": 14,
+      bc756a5f: 15,
+      "6d525871": 16,
+      fdd34cb7: 17,
     },
   },
 ];
 
-const db = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, { auth: { persistSession: false } });
+const db = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
+  auth: { persistSession: false },
+});
 const { data: profile, error: pErr } = await db
   .from("profiles")
   .select("id")
@@ -56,7 +80,9 @@ for (const exam of EXAMS) {
     if (!page) throw new Error(`Arquivo sem página mapeada: ${exam.folder}/${file}`);
     const storagePath = `${userId}/feijo-${exam.year}/pagina-${String(page).padStart(2, "0")}.jpg`;
     const bytes = fs.readFileSync(path.join(dir, file));
-    console.log(`${apply ? "ENVIANDO" : "simulando"} ${exam.year} pág ${page} -> ${storagePath} (${bytes.length} B)`);
+    console.log(
+      `${apply ? "ENVIANDO" : "simulando"} ${exam.year} pág ${page} -> ${storagePath} (${bytes.length} B)`,
+    );
     if (!apply) continue;
     const up = await db.storage
       .from("student-exams")

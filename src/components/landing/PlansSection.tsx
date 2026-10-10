@@ -1,48 +1,17 @@
+import { PLAN_ROWS, planValue, FAQ } from "@/lib/planPresentation";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Minus } from "lucide-react";
-import { SUBSCRIPTION_PLANS, type TierFeature } from "@/lib/subscriptions.config";
-import { AI_ENABLED, PAYMENTS_ENABLED, TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
-
-const ROWS: [string, string][] = [
-  ["questions", "Questões"],
-  ["mockExams", "Simulados"],
-  ["aiSolver", "Resolução com IA"],
-  ["studyPlan", "Plano de estudos"],
-  ["performanceAnalytics", "Análise de desempenho"],
-  ["examRegistration", "Análise das suas provas"],
-  ["prioritySupport", "Suporte prioritário"],
-];
-
-function value(key: string, f: TierFeature | undefined): string | null {
-  if (!f || !f.included) return null;
-  if (key === "aiSolver" && !AI_ENABLED) return "Em breve";
-  if (f.limit === "unlimited") return "Ilimitado";
-  if (typeof f.limit === "number") return key === "questions" ? `${f.limit}/dia` : key === "aiSolver" ? `${f.limit}/dia` : `${f.limit}`;
-  return "Incluído";
-}
-
-const FAQ: [string, string][] = [
-  [
-    "Como funciona o período de testes?",
-    `Por ${TESTING_DAYS} dias a plataforma está aberta e gratuita: ao criar a conta você usa os recursos do plano Essencial, sem cartão e sem cobrança.`,
-  ],
-  [
-    "O que acontece quando os 30 dias terminam?",
-    "A conta volta automaticamente para o plano Gratuito, que continua disponível. Você vê um aviso e pode escolher renovar para um plano pago quando eles estiverem ativos. Nada é cobrado sem você pedir.",
-  ],
-  [
-    "Os planos pagos já estão disponíveis?",
-    "Ainda não. Eles serão ativados em breve; durante o teste os preços abaixo são apenas informativos.",
-  ],
-  [
-    "Preciso me cadastrar para testar?",
-    "Não para começar: o Desafio diário libera 10 questões oficiais por dia sem cadastro. Para salvar seu progresso, ranking e medalhas, crie a conta gratuita.",
-  ],
-];
+import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
+import { PAYMENTS_ENABLED, TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 
 export function PlansSection() {
   return (
-    <section id="planos" className="lp-section" style={{ background: "var(--ink-deep)" }} aria-labelledby="planos-title">
+    <section
+      id="planos"
+      className="lp-section"
+      style={{ background: "var(--ink-deep)" }}
+      aria-labelledby="planos-title"
+    >
       <div className="lp-container space-y-10">
         <div className="max-w-3xl" data-reveal>
           <span className="lp-kicker">Planos</span>
@@ -63,7 +32,9 @@ export function PlansSection() {
               <article
                 key={plan.id}
                 className={`relative flex flex-col rounded-2xl border p-5 backdrop-blur ${
-                  plan.isPopular ? "border-amber-400/60 bg-amber-400/[0.07]" : "border-white/12 bg-white/[0.04]"
+                  plan.isPopular
+                    ? "border-amber-400/60 bg-amber-400/[0.07]"
+                    : "border-white/12 bg-white/[0.04]"
                 }`}
               >
                 {(testing || plan.isPopular) && (
@@ -75,19 +46,30 @@ export function PlansSection() {
                 <p className="mt-1 min-h-10 text-sm text-white/65">{plan.description}</p>
                 <p className="mt-4 text-3xl font-black text-white">
                   {plan.price === 0 ? "Grátis" : `R$ ${plan.price.toFixed(2).replace(".", ",")}`}
-                  {plan.price > 0 && <span className="text-sm font-medium text-white/55"> /mês</span>}
+                  {plan.price > 0 && (
+                    <span className="text-sm font-medium text-white/55"> /mês</span>
+                  )}
                 </p>
                 {plan.price > 0 && !PAYMENTS_ENABLED && (
                   <p className="mt-1 text-xs text-amber-300">
-                    {testing ? `Grátis por ${TESTING_DAYS} dias · cobrança em breve` : "Disponível em breve"}
+                    {testing
+                      ? `Grátis por ${TESTING_DAYS} dias · cobrança em breve`
+                      : "Disponível em breve"}
                   </p>
                 )}
                 <ul className="mt-5 flex-1 space-y-2.5 text-sm">
-                  {ROWS.map(([key, label]) => {
-                    const v = value(key, plan.features[key]);
+                  {PLAN_ROWS.map(([key, label]) => {
+                    const v = planValue(key, plan.features[key]);
                     return (
-                      <li key={key} className={`flex items-start gap-2 ${v ? "text-white/90" : "text-white/35"}`}>
-                        {v ? <Check className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" aria-hidden /> : <Minus className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />}
+                      <li
+                        key={key}
+                        className={`flex items-start gap-2 ${v ? "text-white/90" : "text-white/35"}`}
+                      >
+                        {v ? (
+                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" aria-hidden />
+                        ) : (
+                          <Minus className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+                        )}
                         <span>
                           {label}
                           {v && <span className="text-white/60"> · {v}</span>}
@@ -97,8 +79,16 @@ export function PlansSection() {
                     );
                   })}
                 </ul>
-                <Link to="/auth" search={{ mode: "register" }} className={`${plan.price === 0 || testing ? "btn-brass" : "btn-glass"} mt-6 justify-center`}>
-                  {plan.price === 0 ? "Criar conta grátis" : testing ? "Testar grátis" : "Começar grátis e evoluir depois"}
+                <Link
+                  to="/auth"
+                  search={{ mode: "register" }}
+                  className={`${plan.price === 0 || testing ? "btn-brass" : "btn-glass"} mt-6 justify-center`}
+                >
+                  {plan.price === 0
+                    ? "Criar conta grátis"
+                    : testing
+                      ? "Testar grátis"
+                      : "Começar grátis e evoluir depois"}
                   <ArrowRight />
                 </Link>
               </article>
@@ -108,8 +98,13 @@ export function PlansSection() {
 
         <div className="grid gap-3 md:grid-cols-2" data-reveal>
           {FAQ.map(([q, a]) => (
-            <details key={q} className="group rounded-xl border border-white/12 bg-white/[0.03] p-4 text-white">
-              <summary className="cursor-pointer list-none font-semibold marker:hidden">{q}</summary>
+            <details
+              key={q}
+              className="group rounded-xl border border-white/12 bg-white/[0.03] p-4 text-white"
+            >
+              <summary className="cursor-pointer list-none font-semibold marker:hidden">
+                {q}
+              </summary>
               <p className="mt-2 text-sm leading-relaxed text-white/70">{a}</p>
             </details>
           ))}

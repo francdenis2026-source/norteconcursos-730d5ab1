@@ -23,9 +23,9 @@ export function maskCPF(cpf: string) {
 export function validateCPF(cpf: string) {
   const digits = cpf.replace(/\D/g, "");
   if (digits.length !== 11 || !!digits.match(/(\d)\1{10}/)) return false;
-  
+
   const values = digits.split("").map(Number);
-  
+
   const calculate = (multiplier: number) => {
     let sum = 0;
     for (let i = 0; i < multiplier - 1; i++) {

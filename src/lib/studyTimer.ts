@@ -53,7 +53,11 @@ export const initialState = (segments: Segment[]): TimerState => ({
 });
 
 /** Avança o relógio até `now`: soma foco, troca de segmento e informa se mudou de fase. */
-export function advance(state: TimerState, segments: Segment[], now: number): { state: TimerState; changed: boolean } {
+export function advance(
+  state: TimerState,
+  segments: Segment[],
+  now: number,
+): { state: TimerState; changed: boolean } {
   if (!state.running || state.endAt === null || state.finished) return { state, changed: false };
   let s = { ...state };
   let changed = false;
@@ -75,10 +79,22 @@ export function advance(state: TimerState, segments: Segment[], now: number): { 
     const nextSeg = segments[s.seg + 1]!;
     s = { ...s, seg: s.seg + 1, remainingMs: nextSeg.ms, endAt: s.endAt + nextSeg.ms };
   }
-  return { state: { ...s, lastTick: now, remainingMs: s.endAt !== null ? Math.max(0, s.endAt - now) : s.remainingMs }, changed };
+  return {
+    state: {
+      ...s,
+      lastTick: now,
+      remainingMs: s.endAt !== null ? Math.max(0, s.endAt - now) : s.remainingMs,
+    },
+    changed,
+  };
 }
 
-export const start = (s: TimerState, now: number): TimerState => ({ ...s, running: true, endAt: now + s.remainingMs, lastTick: now });
+export const start = (s: TimerState, now: number): TimerState => ({
+  ...s,
+  running: true,
+  endAt: now + s.remainingMs,
+  lastTick: now,
+});
 
 export function pause(s: TimerState, segments: Segment[], now: number): TimerState {
   const { state } = advance(s, segments, now);
@@ -89,9 +105,16 @@ export function pause(s: TimerState, segments: Segment[], now: number): TimerSta
 export function skip(s: TimerState, segments: Segment[], now: number): TimerState {
   if (s.finished) return s;
   const cur = advance(s, segments, now).state;
-  if (cur.seg + 1 >= segments.length) return { ...cur, running: false, endAt: null, lastTick: null, remainingMs: 0, finished: true };
+  if (cur.seg + 1 >= segments.length)
+    return { ...cur, running: false, endAt: null, lastTick: null, remainingMs: 0, finished: true };
   const next = segments[cur.seg + 1]!;
-  return { ...cur, seg: cur.seg + 1, remainingMs: next.ms, endAt: cur.running ? now + next.ms : null, lastTick: cur.running ? now : null };
+  return {
+    ...cur,
+    seg: cur.seg + 1,
+    remainingMs: next.ms,
+    endAt: cur.running ? now + next.ms : null,
+    lastTick: cur.running ? now : null,
+  };
 }
 
 export const fmtClock = (ms: number) => {
@@ -104,9 +127,13 @@ export function selfCheck() {
   const a = makeSegments(25);
   const b = makeSegments(60);
   const c = makeSegments(120);
-  const focusSum = (s: Segment[]) => s.filter((x) => x.type === "focus").reduce((n, x) => n + x.ms, 0) / MIN;
+  const focusSum = (s: Segment[]) =>
+    s.filter((x) => x.type === "focus").reduce((n, x) => n + x.ms, 0) / MIN;
   console.assert(a.length === 1 && focusSum(a) === 25, "25 min = um foco");
-  console.assert(focusSum(b) === 60 && b.some((x) => x.type === "break"), "60 min = 60 de foco com pausa");
+  console.assert(
+    focusSum(b) === 60 && b.some((x) => x.type === "break"),
+    "60 min = 60 de foco com pausa",
+  );
   console.assert(focusSum(c) === 120, "120 min = 120 de foco");
   // avança 30 min: o foco de 25 acaba, 5 de pausa, sem somar a pausa
   let s = start(initialState(b), 0);

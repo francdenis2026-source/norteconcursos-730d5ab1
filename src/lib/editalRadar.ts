@@ -71,6 +71,24 @@ export interface DisciplineStat {
 
 export type TopicTier = "alta" | "media" | "baixa" | "nunca" | "amostra";
 
+// Rótulo e estilo de cada faixa de probabilidade — compartilhados entre o Raio-X dos editais e o
+// Panorama das provas, para que o mesmo tópico apareça com a mesma cor e o mesmo texto nas duas áreas.
+export const TIER_LABEL: Record<TopicTier, string> = {
+  alta: "Quase sempre cai",
+  media: "Cai com frequência",
+  baixa: "Cai de vez em quando",
+  nunca: "Nunca caiu",
+  amostra: "Poucos dados",
+};
+
+export const TIER_STYLE: Record<TopicTier, string> = {
+  alta: "bg-rose-100 text-rose-800 dark:bg-rose-950/40 dark:text-rose-200",
+  media: "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200",
+  baixa: "bg-sky-100 text-sky-800 dark:bg-sky-950/40 dark:text-sky-200",
+  nunca: "bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-200",
+  amostra: "bg-slate-100 text-slate-500 dark:bg-slate-900 dark:text-slate-400",
+};
+
 export interface TopicStat {
   key: string;
   discipline: string;
@@ -81,6 +99,8 @@ export interface TopicStat {
   lastYear: number | null;
   score: number; // 0..1: frequência ponderada pela recência
   tier: TopicTier;
+  /** IDs de syllabus_topics (de todas as edições) que geraram este agregado — para linkar ao resumo do assunto. */
+  topicIds: string[];
 }
 
 export interface EditalChange {
@@ -209,6 +229,7 @@ export function analyzeEditals(
       last: number | null;
       wAsked: number;
       wTotal: number;
+      topicIds: Set<string>;
     }
   >();
   let examsWithSyllabus = 0;
@@ -228,9 +249,11 @@ export function analyzeEditals(
         last: null,
         wAsked: 0,
         wTotal: 0,
+        topicIds: new Set<string>(),
       };
       item.inEdital += 1;
       item.wTotal += w;
+      item.topicIds.add(t.id);
       const count = e.byTopic.get(key) ?? 0;
       if (count > 0) {
         item.asked += 1;
@@ -263,6 +286,7 @@ export function analyzeEditals(
       lastYear: item.last,
       score,
       tier,
+      topicIds: [...item.topicIds],
     };
   });
   topicStats.sort((a, b) => b.score - a.score || b.questions - a.questions);

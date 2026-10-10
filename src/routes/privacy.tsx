@@ -25,9 +25,10 @@ function Privacy() {
           <section id="dados">
             <h2>01. Informações da sua conta e dos seus estudos</h2>
             <p>
-              A criação da conta utiliza nome, CPF, e-mail de contato e credenciais de acesso. O CPF
-              é utilizado como identificador no login. Ao estudar, são registrados dados como
-              respostas, resultados de simulados, progresso, cadernos e preferências de preparação.
+              A criação da conta utiliza nome, CPF, e-mail e credenciais de acesso. O e-mail permite
+              entrar e recuperar a senha; contas antigas também aceitam CPF no login. Ao estudar,
+              são registrados dados como respostas, resultados de simulados, progresso, cadernos e
+              preferências de preparação.
             </p>
             <p>
               Forneça apenas as informações necessárias para usar cada recurso. Não envie senhas,
@@ -79,9 +80,11 @@ function Privacy() {
               .
             </p>
             <p>
-              Você pode revisar seus dados na área Meu perfil. Para outras solicitações, consulte a{" "}
-              <Link to="/suporte">central de suporte</Link> e prepare um relato com o assunto
-              “Privacidade”, sem incluir dados sensíveis desnecessários.
+              Pedidos enviados pelo suporte incluem seu e-mail e relato, são recebidos pela
+              administração e têm acesso restrito. Você pode revisar seus dados na área Meu perfil.
+              Para outras solicitações, consulte a <Link to="/suporte">central de suporte</Link> e
+              prepare um relato com o assunto “Privacidade”, sem incluir dados sensíveis
+              desnecessários.
             </p>
           </section>
         </div>

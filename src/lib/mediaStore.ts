@@ -52,28 +52,53 @@ export function buildCatalog(videos: VideoRow[], podcasts: PodcastRow[]): MediaC
   const topicVideos: MediaCatalog["topicVideos"] = {};
   const playlists: VideoPlaylist[] = [];
   for (const v of videos) {
-    const item: TopicVideo = { id: v.youtube_id, title: v.title, ...(v.channel ? { channel: v.channel } : {}), ...(v.embeddable ? {} : { embeddable: false as const }) };
+    const item: TopicVideo = {
+      id: v.youtube_id,
+      title: v.title,
+      ...(v.channel ? { channel: v.channel } : {}),
+      ...(v.embeddable ? {} : { embeddable: false as const }),
+    };
     ((topicVideos[v.subject] ??= {})[v.topic] ??= []).push(item);
-    if (v.topic === "*" && v.is_playlist) playlists.push({ id: v.youtube_id, title: v.title, discipline: v.subject });
+    if (v.topic === "*" && v.is_playlist)
+      playlists.push({ id: v.youtube_id, title: v.title, discipline: v.subject });
   }
   return {
     topicVideos,
     playlists,
-    podcasts: podcasts.map((p) => ({ id: p.id, title: p.title, discipline: p.subject, src: p.audio_url, ...(p.description ? { description: p.description } : {}) })),
+    podcasts: podcasts.map((p) => ({
+      id: p.id,
+      title: p.title,
+      discipline: p.subject,
+      src: p.audio_url,
+      ...(p.description ? { description: p.description } : {}),
+    })),
     fromDb: true,
   };
 }
 
-export const STATIC_CATALOG: MediaCatalog = { topicVideos: { ...TOPIC_VIDEOS, ...ENEM_VIDEOS }, playlists: PLAYLISTS, podcasts: PODCASTS, fromDb: false };
+export const STATIC_CATALOG: MediaCatalog = {
+  topicVideos: { ...TOPIC_VIDEOS, ...ENEM_VIDEOS },
+  playlists: PLAYLISTS,
+  podcasts: PODCASTS,
+  fromDb: false,
+};
 
 export async function fetchMediaCatalog(): Promise<MediaCatalog> {
   try {
     const [v, p] = await Promise.all([
       supabase.from("media_videos").select("*").eq("active", true).order("sort_order").limit(5000),
-      supabase.from("media_podcasts").select("*").eq("active", true).order("sort_order").limit(1000),
+      supabase
+        .from("media_podcasts")
+        .select("*")
+        .eq("active", true)
+        .order("sort_order")
+        .limit(1000),
     ]);
     if (v.error || !v.data?.length) return STATIC_CATALOG; // tabela ausente, vazia (ex.: visitante sem permissão) ou banco fora do ar
-    return buildCatalog((v.data ?? []) as VideoRow[], p.error ? [] : ((p.data ?? []) as PodcastRow[]));
+    return buildCatalog(
+      (v.data ?? []) as VideoRow[],
+      p.error ? [] : ((p.data ?? []) as PodcastRow[]),
+    );
   } catch {
     return STATIC_CATALOG;
   }
@@ -109,12 +134,20 @@ export interface OEmbedResult {
 /** Confere no YouTube (oEmbed): 200 = disponível; 401/403 = não permite exibir fora do YouTube; 404/400 = removido. */
 export async function checkYoutube(id: string): Promise<OEmbedResult | null> {
   const playlist = id.startsWith("PL") && id.length > 12;
-  const url = playlist ? `https://www.youtube.com/playlist?list=${id}` : `https://www.youtube.com/watch?v=${id}`;
+  const url = playlist
+    ? `https://www.youtube.com/playlist?list=${id}`
+    : `https://www.youtube.com/watch?v=${id}`;
   try {
-    const r = await fetch(`https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`);
+    const r = await fetch(
+      `https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`,
+    );
     if (r.ok) {
       const j = (await r.json()) as { title?: string; author_name?: string };
-      return { status: "ok", ...(j.title ? { title: j.title } : {}), ...(j.author_name ? { channel: j.author_name } : {}) };
+      return {
+        status: "ok",
+        ...(j.title ? { title: j.title } : {}),
+        ...(j.author_name ? { channel: j.author_name } : {}),
+      };
     }
     if (r.status === 401 || r.status === 403) return { status: "blocked" };
     if (r.status === 404 || r.status === 400) return { status: "gone" };

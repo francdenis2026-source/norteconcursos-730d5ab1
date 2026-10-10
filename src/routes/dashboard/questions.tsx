@@ -1,231 +1,244 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import {
-  Search,
-  Filter,
-  MapPin,
-  GraduationCap,
-  Calendar,
-  Briefcase,
-  Trophy,
-  CheckCircle2,
-  Lock,
-  Zap,
-  ShieldCheck,
-} from "lucide-react";
-import { MockService } from "@/services/mockService";
-import { Contest } from "@/types";
-import { cn } from "@/lib/utils";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
-import { useAuthStatus } from "@/hooks/useDashboard";
-import { checkFeatureAccess } from "@/lib/subscriptions.config";
-import { Link } from "@tanstack/react-router";
+import { MockService } from "@/services/mockService";
+import type { Contest } from "@/types";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 export const Route = createFileRoute("/dashboard/questions")({
   component: QuestionsCatalog,
+  head: () => ({ meta: [{ title: "Concursos disponíveis | Norte Concursos" }] }),
 });
-
 function QuestionsCatalog() {
-  const { user } = useAuthStatus();
-  const [searchTerm, setSearchTerm] = useState("");
   const [contests, setContests] = useState<Contest[]>([]);
-  const [focusedContest, setFocusedContest] = useState<Contest | undefined>(undefined);
+  const [focus, setFocus] = useState<string>();
+  const [search, setSearch] = useState("");
+  const [career, setCareer] = useState("");
+  const [board, setBoard] = useState("");
   const [loading, setLoading] = useState(true);
-
-  const featureAccess = checkFeatureAccess(user?.subscription_tier || "free", "questions");
-
+  const [error, setError] = useState(false);
+  const [refresh, setRefresh] = useState(0);
+  const [detail, setDetail] = useState<Contest | null>(null);
+  const [saving, setSaving] = useState<string | null>(null);
   useEffect(() => {
-    const load = async () => {
-      const c = await MockService.getContests();
-      const f = await MockService.getFocusedContest();
-      setContests(c);
-      setFocusedContest(f);
-
-      // Daily Limit Check
-      const responses = MockService.getUserResponses();
-      const today = new Date().toISOString().split("T")[0];
-      const todayCount = responses.filter((r) => {
-        const d = (r as any).createdAt;
-        return typeof d === "string" && d.slice(0, 10) === today;
-      }).length;
-
-      const userRole = (user?.role || "free") as string;
-      const limit = userRole === "free" ? 10 : userRole === "essential" ? 100 : Infinity;
-
-      if (todayCount >= (limit as number)) {
-        await MockService.logAccessAttempt("questions_daily_limit", userRole, true, {
-          count: todayCount,
-          limit,
-        });
-        toast.error(
-          <div className="flex flex-col gap-1">
-            <p className="font-bold">Limite diário atingido</p>
-            <p className="text-sm">
-              Você já respondeu {todayCount} questões hoje no plano {userRole.toUpperCase()}.
-            </p>
-            <Button
-              size="sm"
-              variant="secondary"
-              className="mt-2 w-full"
-              onClick={() => (window.location.href = "/dashboard/profile")}
-            >
-              Fazer Upgrade para Ilimitado
-            </Button>
-          </div>,
-          { duration: 8000 },
-        );
-      }
-
-      setLoading(false);
+    let active = true;
+    setLoading(true);
+    setError(false);
+    void Promise.all([MockService.getContests(), MockService.getFocusedContest()])
+      .then(([rows, focused]) => {
+        if (active) {
+          setContests(rows);
+          setFocus(focused?.id);
+        }
+      })
+      .catch(() => {
+        if (active) setError(true);
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+    return () => {
+      active = false;
     };
-    load();
-  }, [user]);
-
-  const filteredContests = contests.filter(
-    (c) =>
-      c.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      c.agency.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      c.role.toLowerCase().includes(searchTerm.toLowerCase()),
+  }, [refresh]);
+  const visible = useMemo(
+    () =>
+      contests.filter(
+        (c) =>
+          (!career || c.career === career) &&
+          (!board || c.examBoard === board) &&
+          `${c.name} ${c.agency} ${c.role} ${c.examBoard}`
+            .toLocaleLowerCase("pt-BR")
+            .includes(search.toLocaleLowerCase("pt-BR")),
+      ),
+    [contests, career, board, search],
   );
-
-  const handleSetFocus = (contest: Contest) => {
-    MockService.setFocusedContest(contest.id);
-    toast.success(`${contest.agency} definido como seu concurso foco!`);
-    window.location.reload();
-  };
-
+  async function choose(c: Contest) {
+    setSaving(c.id);
+    try {
+      await MockService.setFocusedContest(c.id);
+      setFocus(c.id);
+      toast.success("Concurso em foco atualizado na sua conta.");
+    } catch {
+      toast.error("Não foi possível definir o foco. Tente novamente.");
+    } finally {
+      setSaving(null);
+    }
+  }
+  const date = (value?: string) =>
+    value ? new Date(`${value.slice(0, 10)}T12:00:00`).toLocaleDateString("pt-BR") : "A confirmar";
+  const money = (value: number) =>
+    value > 0
+      ? value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
+      : "A confirmar";
   return (
-    <div className="space-y-6">
-      <section className="catalog-command-hero tactical-feature-hero">
-        <span className="internal-hero-kicker">
-          <ShieldCheck className="h-4 w-4" /> Inteligência de carreira
-        </span>
-        <h1>Catálogo de concursos policiais</h1>
-        <p>{loading ? "Carregando concursos..." : "Encontre e foque no seu objetivo principal."}</p>
-      </section>
-
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
-        <div className="lg:col-span-3 relative">
-          <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+    <section className="space-y-6">
+      <header className="catalog-command-hero tactical-feature-hero">
+        <span className="internal-hero-kicker">Seu próximo objetivo</span>
+        <h1>Concursos disponíveis</h1>
+        <p>Consulte os concursos cadastrados e escolha o foco da sua preparação.</p>
+      </header>
+      <div className="grid gap-4 md:grid-cols-3">
+        <label>
+          Pesquisar
           <Input
-            placeholder="Pesquisar por órgão, cargo ou banca..."
-            className="pl-10"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Órgão, cargo ou banca"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
-        </div>
-        <div className="grid grid-cols-2 gap-2">
-          <Button variant="outline" className="gap-2 text-xs">
-            <Filter className="h-4 w-4" />
-            Assunto
-          </Button>
-          <Button variant="outline" className="gap-2 text-xs">
-            <Zap className="h-4 w-4" />
-            Dificuldade
-          </Button>
-        </div>
+        </label>
+        <label>
+          Carreira
+          <select
+            className="institutional-input w-full"
+            value={career}
+            onChange={(e) => setCareer(e.target.value)}
+          >
+            <option value="">Todas as carreiras</option>
+            {[...new Set(contests.map((c) => c.career))].sort().map((c) => (
+              <option key={c}>{c}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Banca
+          <select
+            className="institutional-input w-full"
+            value={board}
+            onChange={(e) => setBoard(e.target.value)}
+          >
+            <option value="">Todas as bancas</option>
+            {[...new Set(contests.map((c) => c.examBoard))]
+              .filter(Boolean)
+              .sort()
+              .map((b) => (
+                <option key={b}>{b}</option>
+              ))}
+          </select>
+        </label>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-        {filteredContests.map((contest, index) => {
-          const isLocked =
-            !featureAccess.included ||
-            (featureAccess.limit !== "unlimited" && index >= (featureAccess.limit || 0));
-          return (
-            <Card
-              key={contest.id}
-              className={cn(
-                "command-panel",
-                "flex flex-col border-2 transition-all hover:shadow-md relative",
-                focusedContest?.id === contest.id ? "border-secondary" : "border-border",
-                isLocked ? "opacity-75" : "",
-              )}
-            >
-              {isLocked && (
-                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-background/40 backdrop-blur-[1px] p-4 text-center rounded-lg">
-                  <Lock className="h-8 w-8 text-muted-foreground mb-2" />
-                  <p className="text-xs font-bold text-muted-foreground uppercase">
-                    Limite do Plano Atingido
-                  </p>
-                  <Button
-                    asChild
-                    variant="link"
-                    size="sm"
-                    className="text-secondary h-auto p-0 mt-1"
-                  >
-                    <Link to="/dashboard/profile">Liberar Acesso</Link>
-                  </Button>
-                </div>
-              )}
-
-              <CardHeader className="pb-3">
-                <div className="flex justify-between items-start gap-2">
-                  <div className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-secondary/10 text-secondary border border-secondary/20">
-                    {contest.career}
-                  </div>
-                  {focusedContest?.id === contest.id && (
-                    <div className="inline-flex items-center gap-1 text-[10px] font-bold text-secondary">
-                      <CheckCircle2 className="h-3 w-3" />
-                      FOCO ATUAL
-                    </div>
-                  )}
-                </div>
-                <CardTitle className="text-lg leading-tight mt-2">{contest.name}</CardTitle>
+      {loading ? (
+        <p role="status">Carregando concursos…</p>
+      ) : error ? (
+        <div role="alert">
+          <p>Não foi possível consultar o catálogo.</p>
+          <Button onClick={() => setRefresh((r) => r + 1)}>Tentar novamente</Button>
+        </div>
+      ) : contests.length === 0 ? (
+        <Card>
+          <CardContent className="p-8 space-y-4">
+            <h2 className="text-xl font-bold">O catálogo de editais está sendo atualizado.</h2>
+            <p>
+              Os concursos aparecerão aqui quando forem cadastrados. Você já pode estudar com o
+              acervo de provas e questões.
+            </p>
+            <Button asChild>
+              <Link to="/dashboard/question-bank">Abrir banco de questões</Link>
+            </Button>
+          </CardContent>
+        </Card>
+      ) : visible.length === 0 ? (
+        <p>Nenhum concurso encontrado com estes filtros.</p>
+      ) : (
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {visible.map((c) => (
+            <Card key={c.id} className="command-panel">
+              <CardHeader>
+                <span>
+                  {c.career} · {c.status}
+                </span>
+                <CardTitle>{c.name}</CardTitle>
+                {focus === c.id && <strong>Seu foco atual</strong>}
               </CardHeader>
-              <CardContent className="flex-1 space-y-4">
-                <div className="grid grid-cols-2 gap-y-3 gap-x-2 text-sm">
-                  <InfoItem icon={Briefcase} label="Banca" value={contest.examBoard} />
-                  <InfoItem icon={GraduationCap} label="Nível" value={contest.educationLevel} />
-                  <InfoItem icon={MapPin} label="Local" value={contest.location} />
-                  <InfoItem icon={Trophy} label="Vagas" value={contest.vacancies.toString()} />
-                  <InfoItem icon={Calendar} label="Prova" value={contest.examDate || "A definir"} />
-                </div>
-
-                <div className="pt-2">
-                  <div className="text-xs text-muted-foreground mb-1">Remuneração estimada</div>
-                  <div className="text-xl font-bold text-primary">
-                    {new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(
-                      contest.salary,
-                    )}
-                  </div>
-                </div>
+              <CardContent className="space-y-2">
+                <p>
+                  {c.role} · {c.examBoard || "Banca a confirmar"}
+                </p>
+                <p>
+                  {c.location} · {c.educationLevel}
+                </p>
+                <p>
+                  Inscrições: {date(c.startDate)} até {date(c.endDate)}
+                </p>
+                <p>Prova: {date(c.examDate)}</p>
+                <p>Vagas: {c.vacancies > 0 ? c.vacancies : "A confirmar"}</p>
+                <p>Remuneração informada: {money(c.salary)}</p>
               </CardContent>
-              <CardFooter className="pt-4 border-t gap-2">
-                <Button variant="outline" className="flex-1 text-xs">
-                  Ver Detalhes
+              <CardFooter className="flex-wrap gap-2">
+                <Button variant="outline" onClick={() => setDetail(c)}>
+                  Ver detalhes
                 </Button>
-                <Button
-                  className={cn(
-                    "flex-1 text-xs",
-                    focusedContest?.id === contest.id
-                      ? "bg-muted text-muted-foreground"
-                      : "bg-primary",
-                  )}
-                  disabled={focusedContest?.id === contest.id}
-                  onClick={() => handleSetFocus(contest)}
-                >
-                  Definir Foco
+                <Button disabled={!!saving || focus === c.id} onClick={() => void choose(c)}>
+                  {saving === c.id
+                    ? "Salvando…"
+                    : focus === c.id
+                      ? "Foco definido"
+                      : "Definir foco"}
                 </Button>
+                {c.status === "Inscrições Abertas" && c.registrationUrl && (
+                  <Button asChild variant="secondary">
+                    <a href={c.registrationUrl} target="_blank" rel="noreferrer">
+                      Inscreva-se
+                    </a>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
-function InfoItem({ icon: Icon, label, value }: any) {
-  return (
-    <div className="flex items-center gap-2">
-      <Icon className="h-3.5 w-3.5 text-muted-foreground shrink-0" />
-      <div className="flex flex-col">
-        <span className="text-[10px] text-muted-foreground uppercase">{label}</span>
-        <span className="font-medium truncate">{value}</span>
-      </div>
-    </div>
+          ))}
+        </div>
+      )}
+      <Dialog
+        open={!!detail}
+        onOpenChange={(open) => {
+          if (!open) setDetail(null);
+        }}
+      >
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{detail?.name}</DialogTitle>
+          </DialogHeader>
+          {detail && (
+            <div className="space-y-3">
+              <p>Órgão: {detail.agency}</p>
+              <p>Cargo: {detail.role}</p>
+              <p>Banca: {detail.examBoard || "A confirmar"}</p>
+              <p>Situação: {detail.status}</p>
+              <p>
+                Inscrições: {date(detail.startDate)} até {date(detail.endDate)}
+              </p>
+              <p>Prova: {date(detail.examDate)}</p>
+              {detail.studyTips && (
+                <div className="rounded-lg border border-primary/20 bg-primary/5 p-3">
+                  <p className="text-sm font-semibold text-foreground">Dicas de estudo</p>
+                  <p className="whitespace-pre-line text-sm text-foreground/90">
+                    {detail.studyTips}
+                  </p>
+                </div>
+              )}
+              <div className="flex flex-wrap gap-2">
+                {detail.officialEditalUrl && (
+                  <Button asChild variant="outline" size="sm">
+                    <a href={detail.officialEditalUrl} target="_blank" rel="noreferrer">
+                      Ver edital oficial
+                    </a>
+                  </Button>
+                )}
+                {detail.registrationUrl && (
+                  <Button asChild size="sm">
+                    <a href={detail.registrationUrl} target="_blank" rel="noreferrer">
+                      Página de inscrição
+                    </a>
+                  </Button>
+                )}
+              </div>
+              <p>Confirme prazos e condições no edital oficial antes de se inscrever.</p>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+    </section>
   );
 }

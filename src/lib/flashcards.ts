@@ -19,12 +19,18 @@ export interface CardNext extends CardState {
 const MIN_EASE = 1.3;
 const AGAIN_MINUTES = 10;
 
-export const RATING_LABEL: Record<Rating, string> = { again: "Errei", hard: "Difícil", good: "Bom", easy: "Fácil" };
+export const RATING_LABEL: Record<Rating, string> = {
+  again: "Errei",
+  hard: "Difícil",
+  good: "Bom",
+  easy: "Fácil",
+};
 
 export function formatInterval(days: number, minutes = 0): string {
   if (days <= 0) return `${minutes || AGAIN_MINUTES} min`;
   if (days < 30) return `${days} ${days === 1 ? "dia" : "dias"}`;
-  if (days < 365) return `${Math.round(days / 30)} ${Math.round(days / 30) === 1 ? "mês" : "meses"}`;
+  if (days < 365)
+    return `${Math.round(days / 30)} ${Math.round(days / 30) === 1 ? "mês" : "meses"}`;
   return `${(days / 365).toFixed(1).replace(".", ",")} anos`;
 }
 
@@ -36,7 +42,14 @@ export function nextState(card: CardState, rating: Rating, now = new Date()): Ca
     reps = 0;
     ease = Math.max(MIN_EASE, ease - 0.2);
     const due = new Date(now.getTime() + AGAIN_MINUTES * 60_000);
-    return { ease, interval_days: 0, reps, lapses, due_at: due.toISOString(), label: formatInterval(0) };
+    return {
+      ease,
+      interval_days: 0,
+      reps,
+      lapses,
+      due_at: due.toISOString(),
+      label: formatInterval(0),
+    };
   }
 
   if (rating === "hard") {
@@ -51,7 +64,14 @@ export function nextState(card: CardState, rating: Rating, now = new Date()): Ca
   reps += 1;
   interval = Math.min(interval, 365);
   const due = new Date(now.getTime() + interval * 86_400_000);
-  return { ease: Math.round(ease * 100) / 100, interval_days: interval, reps, lapses, due_at: due.toISOString(), label: formatInterval(interval) };
+  return {
+    ease: Math.round(ease * 100) / 100,
+    interval_days: interval,
+    reps,
+    lapses,
+    due_at: due.toISOString(),
+    label: formatInterval(interval),
+  };
 }
 
 /** Verificação rápida da lógica: node --experimental-strip-types src/lib/flashcards.ts */
@@ -60,9 +80,15 @@ export function selfCheck() {
   const a = nextState(fresh, "good");
   const b = nextState(a, "good");
   const c = nextState(b, "good");
-  console.assert(a.interval_days === 1 && b.interval_days === 3 && c.interval_days === 8, "good: 1, 3, ~8 dias");
+  console.assert(
+    a.interval_days === 1 && b.interval_days === 3 && c.interval_days === 8,
+    "good: 1, 3, ~8 dias",
+  );
   const lost = nextState(c, "again");
-  console.assert(lost.interval_days === 0 && lost.lapses === 1 && lost.ease < c.ease, "errar zera e reduz a facilidade");
+  console.assert(
+    lost.interval_days === 0 && lost.lapses === 1 && lost.ease < c.ease,
+    "errar zera e reduz a facilidade",
+  );
   console.assert(nextState(fresh, "easy").interval_days === 4, "fácil de primeira = 4 dias");
   return [a.label, b.label, c.label, lost.label];
 }

@@ -5,6 +5,7 @@ import os, re, sys, json
 sys.path.insert(0, os.path.dirname(__file__))
 import pymupdf
 import parse_fgv as F
+from fgv_key import answer_token
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SP = r"C:\Users\familia\AppData\Local\Temp\claude\C--Users-familia-Desktop-PROVAS-FEITAS-POR-MIM\eea12891-4053-4f7f-9f29-6eb433a8dbb7\scratchpad\csv\fgv"
@@ -28,8 +29,9 @@ def gab_pairs(pdf, start_re, stop_re):
             on = True
         elif re.search(stop_re, l):
             on = False
-        elif on and re.fullmatch(r"\d{1,3}", l) and i + 1 < len(lines) and re.fullmatch(r"[A-E*]", lines[i + 1]):
-            res[int(l)] = lines[i + 1]
+        elif on and re.fullmatch(r"\d{1,3}", l) and i + 1 < len(lines) and re.fullmatch(r"[A-E]\*{0,3}|\*", lines[i + 1]):
+            token = answer_token(lines[i + 1])
+            res[int(l)] = "*" if token == "X" else token
             i += 1
         i += 1
     return res
@@ -52,8 +54,9 @@ def gab_blocks(pdf, tipo):
             if lets:                       # começou um novo bloco de números
                 nums, lets = [], []
             nums.append(int(l))
-        elif re.fullmatch(r"[A-E*]", l):
-            lets.append(l)
+        elif re.fullmatch(r"[A-E]\*{0,3}|\*", l):
+            token = answer_token(l)
+            lets.append("*" if token == "X" else token)
             if len(lets) == len(nums):
                 res.update(dict(zip(nums, lets)))
                 nums, lets = [], []
@@ -142,7 +145,7 @@ def build_exam(e, out):
             f"join public.content_sources qs on qs.url={q(pu)} join public.content_sources gs on gs.url={q(gu)}\n"
             f"join public.syllabus_editions ed on ed.{ed.replace(' and ', ' and ed.')}\n"
             f"join public.syllabus_topics t on t.edition_id=ed.id and t.discipline=v.subj\n"
-            f"on conflict (contest_name,exam_year,item_number) do update set official_answer=excluded.official_answer, question_text=excluded.question_text, raw_extraction=excluded.raw_extraction, subject=excluded.subject, review_note=excluded.review_note;\n" + SEP)
+            f"on conflict (contest_name,exam_year,item_number) do nothing;\n" + SEP)
         batch, size = [], 0
 
     for it in items:

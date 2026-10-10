@@ -1,0 +1,198 @@
+[
+  {
+    "id": "d414e1e1-8ccf-4dd1-8417-bd10482894cb",
+    "material_slug": "legislacao-armas-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 6
+  },
+  {
+    "id": "dcf5fb70-c1b4-45a9-8d63-0806f9af9536",
+    "material_slug": "legislacao-lep-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "0577896c-6dcd-597f-9275-cef1b4d11583",
+    "material_slug": "legislacao-organizacoes-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 4
+  },
+  {
+    "id": "61ae837a-fa3c-4181-b47e-4b6fb62780a1",
+    "material_slug": "legislacao-terrorismo-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "ab183c95-2009-42f7-a379-e6f6f4ea8a1c",
+    "material_slug": "legislacao-idosa-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "5720c742-13d9-4ba5-b1b3-844e7bac2d41",
+    "material_slug": "legislacao-contravencoes-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "e236c4ef-0940-4a10-bb07-a7fda8d2564f",
+    "material_slug": "legislacao-identificacao-criminal-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "0b162723-a81c-4e84-a232-7ce250839376",
+    "material_slug": "legislacao-pf-interestadual-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "95c5b3d8-a75d-4907-a37a-eca8f2a381eb",
+    "material_slug": "legislacao-abuso-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 3
+  },
+  {
+    "id": "3ef79962-afe2-5b02-86ae-ef25e2ab2314",
+    "material_slug": "legislacao-antifaccao-marco-legal",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 7
+  },
+  {
+    "id": "85f46f0c-b3bb-433c-ab1a-9dfdec7b9d32",
+    "material_slug": "legislacao-eca-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 3
+  },
+  {
+    "id": "b85e54cd-5cba-459f-8777-367fde0e116e",
+    "material_slug": "legislacao-migracao-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "b0384ad0-5383-4421-949c-f57f7c7ed67a",
+    "material_slug": "legislacao-racismo-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "3b049fff-9f38-488b-b642-282bacea8a53",
+    "material_slug": "legislacao-pcd-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "770f1ae2-c2e7-492f-81d8-ffc38c239f7a",
+    "material_slug": "legislacao-maria-penha-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 3
+  },
+  {
+    "id": "c01c6132-5f7b-4fff-afaf-e1bba1bcfc69",
+    "material_slug": "legislacao-hediondos-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 3
+  },
+  {
+    "id": "226c11e5-5a00-4783-8064-ff819b5afbef",
+    "material_slug": "legislacao-lavagem-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 3
+  },
+  {
+    "id": "8768eb68-ffaf-4161-9b8e-ef25e062f1b7",
+    "material_slug": "legislacao-trafico-pessoas-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "61734e3c-f572-419a-ba56-22be508fb719",
+    "material_slug": "legislacao-interceptacao-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 3
+  },
+  {
+    "id": "b66c15c2-152c-4998-8ad1-bd85525ebd29",
+    "material_slug": "legislacao-transito-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "3fd4b03f-7c58-48eb-88ac-ec41f50ea39a",
+    "material_slug": "legislacao-henry-borel-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "8888fe41-3739-4129-af9d-df0715f2bf55",
+    "material_slug": "legislacao-delegado-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "11b2d79c-cd90-49c4-baa6-c5a2969585ef",
+    "material_slug": "legislacao-tortura-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 3
+  },
+  {
+    "id": "b9853cd4-e842-4f6a-8749-62915859b115",
+    "material_slug": "legislacao-ambientais-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "714fafa7-ed00-4641-80e2-d373a43faa67",
+    "material_slug": "legislacao-testemunhas-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 1
+  },
+  {
+    "id": "c8ee6427-19ec-4ad9-b2c4-fe6598312bb3",
+    "material_slug": "legislacao-temporaria-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "149bcc9b-36db-403f-be75-c0a687b11dd9",
+    "material_slug": "legislacao-juizados-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 2
+  },
+  {
+    "id": "7db4ee71-a751-4bc2-9355-44401d02b397",
+    "material_slug": "legislacao-drogas-revisao",
+    "version": "2026-10-08",
+    "decision": "superseded_by_reviewed_version",
+    "reviewed_cases": 6
+  }
+]

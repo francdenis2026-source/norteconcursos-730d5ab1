@@ -22,7 +22,14 @@ export type QuestionStats = {
   official: number;
   curated: number;
   /** Por disciplina (nome canônico): total cadastrado, disponíveis no treino, revisadas, oficiais e autorais. */
-  bySubject: { subject: string; total: number; eligible: number; reviewed: number; official: number; curated: number }[];
+  bySubject: {
+    subject: string;
+    total: number;
+    eligible: number;
+    reviewed: number;
+    official: number;
+    curated: number;
+  }[];
   /** Questões por banca organizadora. */
   byBoard: { board: string; total: number; official: number; curated: number }[];
 };
@@ -74,6 +81,7 @@ async function loadStats(): Promise<QuestionStats> {
   const board = boardRaw.map((r) => ({
     ...r,
     exam_board: r["board"],
+    review_note: r["explanation"],
     context_review_required: r["needs_visual"],
     legal_audit_completed: !r["legal_review_required"] || !!r["law_version_checked_at"],
   }));
@@ -85,12 +93,26 @@ async function loadStats(): Promise<QuestionStats> {
     for (const row of rows) {
       const name = canonicalSubject(String(row["subject"] ?? "")) || "Sem disciplina";
       const board = canonicalBoard(String(row["exam_board"] ?? "")) || "NÃO INFORMADA";
-      const s = subjects.get(name) ?? { subject: name, total: 0, eligible: 0, reviewed: 0, official: 0, curated: 0 };
+      const s = subjects.get(name) ?? {
+        subject: name,
+        total: 0,
+        eligible: 0,
+        reviewed: 0,
+        official: 0,
+        curated: 0,
+      };
       const bd = boards.get(board) ?? { board, total: 0, official: 0, curated: 0 };
-      s.total++; s[kind]++; bd.total++; bd[kind]++;
+      s.total++;
+      s[kind]++;
+      bd.total++;
+      bd[kind]++;
       if (isEligibleQuestion(row)) {
-        s.eligible++; eligible++;
-        if (isReviewed(row, row[kind === "official" ? "review_note" : "explanation"])) { s.reviewed++; reviewed++; }
+        s.eligible++;
+        eligible++;
+        if (isReviewed(row, row[kind === "official" ? "review_note" : "explanation"])) {
+          s.reviewed++;
+          reviewed++;
+        }
       }
       subjects.set(name, s);
       boards.set(board, bd);

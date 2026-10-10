@@ -5,11 +5,17 @@
 
 export type Answer = "A" | "B" | "C" | "D" | "E";
 export type Source = "official" | "curated" | "personal";
+// Tabela física de origem. "source" agrupa official_exam_questions e
+// board_exam_questions sob "official" pro Treinador; quando uma ação precisa
+// saber a tabela exata (corrigir a questão na fonte, por exemplo), use "table".
+export type QuestionTable =
+  "official_exam_questions" | "curated_question_catalog" | "question_bank" | "board_exam_questions";
 export type Difficulty = "fácil" | "média" | "difícil";
 export type LegalBasis = { title?: string; lei?: string; artigo?: string; url?: string };
 export type Question = {
   id: string;
   source: Source;
+  table?: QuestionTable;
   contest: string;
   year: string;
   career: string;
@@ -39,9 +45,12 @@ export const DIFFICULTY_LABEL: Record<Difficulty, string> = {
   difícil: "Difícil",
 };
 export const DIFFICULTY_STYLE: Record<Difficulty, string> = {
-  fácil: "border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300",
-  média: "border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-400/40 dark:bg-amber-400/10 dark:text-amber-300",
-  difícil: "border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300",
+  fácil:
+    "border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300",
+  média:
+    "border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-400/40 dark:bg-amber-400/10 dark:text-amber-300",
+  difícil:
+    "border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300",
 };
 
 export const parseBasis = (value: unknown): LegalBasis[] =>

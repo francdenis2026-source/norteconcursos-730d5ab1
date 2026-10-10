@@ -1,0 +1,38 @@
+[
+  {
+    "source_type": "lei",
+    "title": "Lei 9.454/1997 — Registro de Identidade Civil",
+    "issuer": "Presidência da República",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+    "published_on": "1997-04-08",
+    "checked_at": "2026-10-10T03:26:45.530718+00:00",
+    "status": "parcialmente_revogado",
+    "is_official": true,
+    "notes": "Texto compilado oficial conferido; alterações e redações históricas comentadas no guia.",
+    "_sha256_html": "19fa04063b8a22c80114b0c629f96968cba39263111dc61171d6959598bc4e3d"
+  },
+  {
+    "source_type": "lei",
+    "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo",
+    "issuer": "Presidência da República",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+    "published_on": "2014-12-23",
+    "checked_at": "2026-10-10T03:26:45.530718+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Texto compilado oficial conferido; alterações e redações históricas comentadas no guia.",
+    "_sha256_html": "8703d5d7600933f44d7847d2bbe2bc1d54389dcf1fe3d5c55d8b0aba8f65600a"
+  },
+  {
+    "source_type": "decreto",
+    "title": "Decreto 12.341/2024 — Uso Diferenciado da Força",
+    "issuer": "Presidência da República",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+    "published_on": "2024-12-24",
+    "checked_at": "2026-10-10T03:26:45.530718+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Texto compilado oficial conferido; alterações e redações históricas comentadas no guia.",
+    "_sha256_html": "1a6aedbbcd84328a60d5134ac0728d38fcb3e487c798c166151b327e41bfb54e"
+  }
+]

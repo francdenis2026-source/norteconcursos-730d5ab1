@@ -13,8 +13,8 @@ export function useDashboardData() {
     const loadData = async () => {
       setIsLoading(true);
       const performance = await MockService.getPerformanceStats();
-      const contest = await MockService.getFocusedContest();
-      const allContests = await MockService.getContests();
+      const contest = await MockService.getFocusedContest().catch(() => undefined);
+      const allContests = await MockService.getContests().catch(() => []);
       setStats(performance);
       setFocusedContest(contest);
       setContests(allContests);
@@ -32,6 +32,7 @@ export function useDashboardData() {
 }
 
 import { SubscriptionTier, UserProfile } from "../types";
+import { setStorageOwner } from "@/lib/userStorage";
 import { effectiveTier, planEndsAt } from "@/lib/launch.config";
 
 export function useAuthStatus() {
@@ -43,6 +44,7 @@ export function useAuthStatus() {
     const applySession = async (
       session: Awaited<ReturnType<typeof supabase.auth.getSession>>["data"]["session"],
     ) => {
+      setStorageOwner(session?.user.id ?? null);
       if (session) {
         // Buscando perfil e roles diretamente do banco
         const [profileRes, rolesRes] = await Promise.all([
@@ -60,10 +62,16 @@ export function useAuthStatus() {
 
         // Lógica de data efetiva: se o plano expirou, volta para free
         // Plano em vigor: vencimento próprio e fase de testes (regra única em launch.config).
-        const eff = effectiveTier(profile?.subscription_tier, profile?.created_at, profile?.subscription_expires_at);
+        const eff = effectiveTier(
+          profile?.subscription_tier,
+          profile?.created_at,
+          profile?.subscription_expires_at,
+        );
         const currentTier = eff.tier as SubscriptionTier;
         const expiredFrom = eff.expiredFrom;
-        const expiredByDate = !!profile?.subscription_expires_at && new Date(profile.subscription_expires_at) < new Date();
+        const expiredByDate =
+          !!profile?.subscription_expires_at &&
+          new Date(profile.subscription_expires_at) < new Date();
         const isActivated = expiredByDate ? false : !!profile?.is_activated;
 
         if (!active) return;
@@ -75,7 +83,9 @@ export function useAuthStatus() {
           email: session.user.email || "",
           subscription_tier: currentTier,
           subscription_expires_at: profile?.subscription_expires_at,
-          plan_ends_at: expiredFrom ? null : planEndsAt(profile?.created_at, currentTier, profile?.subscription_expires_at),
+          plan_ends_at: expiredFrom
+            ? null
+            : planEndsAt(profile?.created_at, currentTier, profile?.subscription_expires_at),
           expired_plan: expiredFrom,
           onboarding_completed: !!profile?.onboarding_completed,
           onboarding_progress: profile?.onboarding_progress || {},
@@ -85,17 +95,7 @@ export function useAuthStatus() {
       } else {
         // Fallback para modo demo/visitante
         if (!active) return;
-        setUser({
-          id: "demo-user",
-          full_name: "João Silva (Demo)",
-          name: "João Silva (Demo)",
-          email: "joao.demo@norteconcurso.com.br",
-          subscription_tier: "plus",
-          onboarding_completed: false,
-          onboarding_progress: {},
-          is_activated: true,
-          role: "user",
-        });
+        setUser(null);
       }
     };
 

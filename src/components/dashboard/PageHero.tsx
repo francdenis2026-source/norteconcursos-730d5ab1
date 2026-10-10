@@ -79,10 +79,18 @@ export function LockedState({
       description={description}
       actions={
         <>
-          <Link to="/auth" search={{ mode: "register" }} className="hero-btn-ghost inline-flex items-center px-4 text-sm">
+          <Link
+            to="/auth"
+            search={{ mode: "register" }}
+            className="hero-btn-ghost inline-flex items-center px-4 text-sm"
+          >
             Criar conta grátis
           </Link>
-          <Link to="/auth" search={{ mode: undefined }} className="hero-btn-primary inline-flex items-center gap-2 px-4 text-sm">
+          <Link
+            to="/auth"
+            search={{ mode: undefined }}
+            className="hero-btn-primary inline-flex items-center gap-2 px-4 text-sm"
+          >
             Entrar com CPF <ArrowRight className="h-4 w-4" />
           </Link>
         </>

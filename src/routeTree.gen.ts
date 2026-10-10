@@ -22,12 +22,15 @@ import { Route as ApiSolveQuestionRouteImport } from './routes/api/solve-questio
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
+import { Route as DashboardAdminContestsRouteImport } from './routes/dashboard/admin-contests'
 import { Route as DashboardAdminFinanceRouteImport } from './routes/dashboard/admin-finance'
 import { Route as DashboardAdminMediaRouteImport } from './routes/dashboard/admin-media'
 import { Route as DashboardAdminMetricsRouteImport } from './routes/dashboard/admin-metrics'
+import { Route as DashboardAdminQuestionReportsRouteImport } from './routes/dashboard/admin-question-reports'
 import { Route as DashboardAdminQuestionsRouteImport } from './routes/dashboard/admin-questions'
 import { Route as DashboardAdminSignupsRouteImport } from './routes/dashboard/admin-signups'
 import { Route as DashboardAdminStudentsRouteImport } from './routes/dashboard/admin-students'
+import { Route as DashboardAdminSupportRouteImport } from './routes/dashboard/admin-support'
 import { Route as DashboardAiSolverRouteImport } from './routes/dashboard/ai-solver'
 import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers'
 import { Route as DashboardEditalRouteImport } from './routes/dashboard/edital'
@@ -61,6 +64,7 @@ import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/
 import { Route as DashboardAdminStudentIdRouteImport } from './routes/dashboard/admin-student.$id'
 import { Route as DashboardEditalIndexRouteImport } from './routes/dashboard/edital.index'
 import { Route as DashboardEditalTopicIdRouteImport } from './routes/dashboard/edital.$topicId'
+import { Route as DashboardLegalCourseSlugRouteImport } from './routes/dashboard/legal-course.$slug'
 import { Route as DashboardLibraryIndexRouteImport } from './routes/dashboard/library.index'
 import { Route as DashboardLibrarySlugRouteImport } from './routes/dashboard/library.$slug'
 
@@ -129,6 +133,11 @@ const DashboardAdminRoute = DashboardAdminRouteImport.update({
   path: '/admin',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardAdminContestsRoute = DashboardAdminContestsRouteImport.update({
+  id: '/admin-contests',
+  path: '/admin-contests',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardAdminFinanceRoute = DashboardAdminFinanceRouteImport.update({
   id: '/admin-finance',
   path: '/admin-finance',
@@ -144,6 +153,12 @@ const DashboardAdminMetricsRoute = DashboardAdminMetricsRouteImport.update({
   path: '/admin-metrics',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardAdminQuestionReportsRoute =
+  DashboardAdminQuestionReportsRouteImport.update({
+    id: '/admin-question-reports',
+    path: '/admin-question-reports',
+    getParentRoute: () => DashboardRoute,
+  } as any)
 const DashboardAdminQuestionsRoute = DashboardAdminQuestionsRouteImport.update({
   id: '/admin-questions',
   path: '/admin-questions',
@@ -157,6 +172,11 @@ const DashboardAdminSignupsRoute = DashboardAdminSignupsRouteImport.update({
 const DashboardAdminStudentsRoute = DashboardAdminStudentsRouteImport.update({
   id: '/admin-students',
   path: '/admin-students',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardAdminSupportRoute = DashboardAdminSupportRouteImport.update({
+  id: '/admin-support',
+  path: '/admin-support',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardAiSolverRoute = DashboardAiSolverRouteImport.update({
@@ -325,6 +345,12 @@ const DashboardEditalTopicIdRoute = DashboardEditalTopicIdRouteImport.update({
   path: '/$topicId',
   getParentRoute: () => DashboardEditalRoute,
 } as any)
+const DashboardLegalCourseSlugRoute =
+  DashboardLegalCourseSlugRouteImport.update({
+    id: '/legal-course/$slug',
+    path: '/legal-course/$slug',
+    getParentRoute: () => DashboardRoute,
+  } as any)
 const DashboardLibraryIndexRoute = DashboardLibraryIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -349,12 +375,15 @@ export interface FileRoutesByFullPath {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
   '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-media': typeof DashboardAdminMediaRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
+  '/dashboard/admin-question-reports': typeof DashboardAdminQuestionReportsRoute
   '/dashboard/admin-questions': typeof DashboardAdminQuestionsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
+  '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
@@ -388,6 +417,7 @@ export interface FileRoutesByFullPath {
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
+  '/dashboard/legal-course/$slug': typeof DashboardLegalCourseSlugRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
   '/dashboard/edital/': typeof DashboardEditalIndexRoute
   '/dashboard/library/': typeof DashboardLibraryIndexRoute
@@ -404,12 +434,15 @@ export interface FileRoutesByTo {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
   '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-media': typeof DashboardAdminMediaRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
+  '/dashboard/admin-question-reports': typeof DashboardAdminQuestionReportsRoute
   '/dashboard/admin-questions': typeof DashboardAdminQuestionsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
+  '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
@@ -441,6 +474,7 @@ export interface FileRoutesByTo {
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
+  '/dashboard/legal-course/$slug': typeof DashboardLegalCourseSlugRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
   '/dashboard/edital': typeof DashboardEditalIndexRoute
   '/dashboard/library': typeof DashboardLibraryIndexRoute
@@ -459,12 +493,15 @@ export interface FileRoutesById {
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
   '/dashboard/admin-finance': typeof DashboardAdminFinanceRoute
   '/dashboard/admin-media': typeof DashboardAdminMediaRoute
   '/dashboard/admin-metrics': typeof DashboardAdminMetricsRoute
+  '/dashboard/admin-question-reports': typeof DashboardAdminQuestionReportsRoute
   '/dashboard/admin-questions': typeof DashboardAdminQuestionsRoute
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
+  '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
@@ -498,6 +535,7 @@ export interface FileRoutesById {
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
+  '/dashboard/legal-course/$slug': typeof DashboardLegalCourseSlugRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
   '/dashboard/edital/': typeof DashboardEditalIndexRoute
   '/dashboard/library/': typeof DashboardLibraryIndexRoute
@@ -517,12 +555,15 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-contests'
     | '/dashboard/admin-finance'
     | '/dashboard/admin-media'
     | '/dashboard/admin-metrics'
+    | '/dashboard/admin-question-reports'
     | '/dashboard/admin-questions'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
+    | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital'
@@ -556,6 +597,7 @@ export interface FileRouteTypes {
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
     | '/dashboard/edital/$topicId'
+    | '/dashboard/legal-course/$slug'
     | '/dashboard/library/$slug'
     | '/dashboard/edital/'
     | '/dashboard/library/'
@@ -572,12 +614,15 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-contests'
     | '/dashboard/admin-finance'
     | '/dashboard/admin-media'
     | '/dashboard/admin-metrics'
+    | '/dashboard/admin-question-reports'
     | '/dashboard/admin-questions'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
+    | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital-radar'
@@ -609,6 +654,7 @@ export interface FileRouteTypes {
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
     | '/dashboard/edital/$topicId'
+    | '/dashboard/legal-course/$slug'
     | '/dashboard/library/$slug'
     | '/dashboard/edital'
     | '/dashboard/library'
@@ -626,12 +672,15 @@ export interface FileRouteTypes {
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
+    | '/dashboard/admin-contests'
     | '/dashboard/admin-finance'
     | '/dashboard/admin-media'
     | '/dashboard/admin-metrics'
+    | '/dashboard/admin-question-reports'
     | '/dashboard/admin-questions'
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
+    | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
     | '/dashboard/careers'
     | '/dashboard/edital'
@@ -665,6 +714,7 @@ export interface FileRouteTypes {
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
     | '/dashboard/edital/$topicId'
+    | '/dashboard/legal-course/$slug'
     | '/dashboard/library/$slug'
     | '/dashboard/edital/'
     | '/dashboard/library/'
@@ -778,6 +828,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAdminRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/admin-contests': {
+      id: '/dashboard/admin-contests'
+      path: '/admin-contests'
+      fullPath: '/dashboard/admin-contests'
+      preLoaderRoute: typeof DashboardAdminContestsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/admin-finance': {
       id: '/dashboard/admin-finance'
       path: '/admin-finance'
@@ -799,6 +856,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAdminMetricsRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/admin-question-reports': {
+      id: '/dashboard/admin-question-reports'
+      path: '/admin-question-reports'
+      fullPath: '/dashboard/admin-question-reports'
+      preLoaderRoute: typeof DashboardAdminQuestionReportsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/admin-questions': {
       id: '/dashboard/admin-questions'
       path: '/admin-questions'
@@ -818,6 +882,13 @@ declare module '@tanstack/react-router' {
       path: '/admin-students'
       fullPath: '/dashboard/admin-students'
       preLoaderRoute: typeof DashboardAdminStudentsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/admin-support': {
+      id: '/dashboard/admin-support'
+      path: '/admin-support'
+      fullPath: '/dashboard/admin-support'
+      preLoaderRoute: typeof DashboardAdminSupportRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/ai-solver': {
@@ -1051,6 +1122,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardEditalTopicIdRouteImport
       parentRoute: typeof DashboardEditalRoute
     }
+    '/dashboard/legal-course/$slug': {
+      id: '/dashboard/legal-course/$slug'
+      path: '/legal-course/$slug'
+      fullPath: '/dashboard/legal-course/$slug'
+      preLoaderRoute: typeof DashboardLegalCourseSlugRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/library/': {
       id: '/dashboard/library/'
       path: '/'
@@ -1097,12 +1175,15 @@ const DashboardLibraryRouteWithChildren =
 
 interface DashboardRouteChildren {
   DashboardAdminRoute: typeof DashboardAdminRoute
+  DashboardAdminContestsRoute: typeof DashboardAdminContestsRoute
   DashboardAdminFinanceRoute: typeof DashboardAdminFinanceRoute
   DashboardAdminMediaRoute: typeof DashboardAdminMediaRoute
   DashboardAdminMetricsRoute: typeof DashboardAdminMetricsRoute
+  DashboardAdminQuestionReportsRoute: typeof DashboardAdminQuestionReportsRoute
   DashboardAdminQuestionsRoute: typeof DashboardAdminQuestionsRoute
   DashboardAdminSignupsRoute: typeof DashboardAdminSignupsRoute
   DashboardAdminStudentsRoute: typeof DashboardAdminStudentsRoute
+  DashboardAdminSupportRoute: typeof DashboardAdminSupportRoute
   DashboardAiSolverRoute: typeof DashboardAiSolverRoute
   DashboardCareersRoute: typeof DashboardCareersRoute
   DashboardEditalRoute: typeof DashboardEditalRouteWithChildren
@@ -1134,16 +1215,20 @@ interface DashboardRouteChildren {
   DashboardTimerRoute: typeof DashboardTimerRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
   DashboardAdminStudentIdRoute: typeof DashboardAdminStudentIdRoute
+  DashboardLegalCourseSlugRoute: typeof DashboardLegalCourseSlugRoute
 }
 
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminRoute: DashboardAdminRoute,
+  DashboardAdminContestsRoute: DashboardAdminContestsRoute,
   DashboardAdminFinanceRoute: DashboardAdminFinanceRoute,
   DashboardAdminMediaRoute: DashboardAdminMediaRoute,
   DashboardAdminMetricsRoute: DashboardAdminMetricsRoute,
+  DashboardAdminQuestionReportsRoute: DashboardAdminQuestionReportsRoute,
   DashboardAdminQuestionsRoute: DashboardAdminQuestionsRoute,
   DashboardAdminSignupsRoute: DashboardAdminSignupsRoute,
   DashboardAdminStudentsRoute: DashboardAdminStudentsRoute,
+  DashboardAdminSupportRoute: DashboardAdminSupportRoute,
   DashboardAiSolverRoute: DashboardAiSolverRoute,
   DashboardCareersRoute: DashboardCareersRoute,
   DashboardEditalRoute: DashboardEditalRouteWithChildren,
@@ -1175,6 +1260,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardTimerRoute: DashboardTimerRoute,
   DashboardIndexRoute: DashboardIndexRoute,
   DashboardAdminStudentIdRoute: DashboardAdminStudentIdRoute,
+  DashboardLegalCourseSlugRoute: DashboardLegalCourseSlugRoute,
 }
 
 const DashboardRouteWithChildren = DashboardRoute._addFileChildren(

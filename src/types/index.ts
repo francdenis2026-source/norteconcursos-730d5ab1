@@ -1,9 +1,10 @@
-export type Career = 'Policial' | 'Administrativa' | 'Tribunal' | 'Fiscal' | 'Bancária' | 'Saúde' | 'Educação';
+export type Career =
+  "Policial" | "Administrativa" | "Tribunal" | "Fiscal" | "Bancária" | "Saúde" | "Educação";
 
-export type ContestStatus = 'Previsto' | 'Autorizado' | 'Edital Publicado' | 'Inscrições Abertas' | 'Encerrado';
+export type ContestStatus =
+  "Previsto" | "Autorizado" | "Edital Publicado" | "Inscrições Abertas" | "Encerrado";
 
-export type SubscriptionTier = 'free' | 'essential' | 'plus' | 'premium';
-
+export type SubscriptionTier = "free" | "essential" | "plus" | "premium";
 
 export interface Contest {
   id: string;
@@ -12,7 +13,7 @@ export interface Contest {
   career: Career;
   role: string;
   examBoard: string;
-  educationLevel: 'Médio' | 'Superior';
+  educationLevel: "Médio" | "Superior";
   location: string;
   status: ContestStatus;
   vacancies: number;
@@ -21,6 +22,9 @@ export interface Contest {
   startDate?: string;
   endDate?: string;
   isDemo?: boolean;
+  registrationUrl?: string;
+  officialEditalUrl?: string;
+  studyTips?: string;
 }
 
 export interface Subject {
@@ -35,8 +39,8 @@ export interface Discipline {
   name: string;
 }
 
-export type QuestionType = 'Múltipla Escolha' | 'Certo ou Errado';
-export type Difficulty = 'Fácil' | 'Média' | 'Difícil';
+export type QuestionType = "Múltipla Escolha" | "Certo ou Errado";
+export type Difficulty = "Fácil" | "Média" | "Difícil";
 
 export interface Question {
   id: string;
@@ -50,8 +54,8 @@ export interface Question {
   correctAnswer?: boolean; // For Certo/Errado
   explanation: string;
   teacherComment?: string;
-  theoryLinks?: { title: string, url: string }[];
-  media?: { id: string, file_path: string, media_type: string, label?: string }[];
+  theoryLinks?: { title: string; url: string }[];
+  media?: { id: string; file_path: string; media_type: string; label?: string }[];
   disciplineId: string;
   subjectId: string;
   difficulty: Difficulty;
@@ -91,8 +95,8 @@ export interface StudyBlock {
   startTime: string;
   duration: number; // minutes
   disciplineId: string;
-  type: 'Teoria' | 'Questões' | 'Revisão' | 'Simulado';
-  status: 'Pendente' | 'Em andamento' | 'Concluído' | 'Adiado' | 'Vencido';
+  type: "Teoria" | "Questões" | "Revisão" | "Simulado";
+  status: "Pendente" | "Em andamento" | "Concluído" | "Adiado" | "Vencido";
 }
 
 export interface PerformanceStats {
@@ -134,20 +138,20 @@ export interface UserProfile {
   /** Plano que acabou de vencer (o aluno voltou ao Gratuito e deve ver o convite de renovação). */
   expired_plan?: string | undefined;
   onboarding_completed: boolean;
-  onboarding_progress: any;
+  onboarding_progress: Record<string, unknown>;
   activation_code?: string;
   activation_attempts?: number;
   activation_expires_at?: string;
   is_activated: boolean;
-  role: 'admin' | 'moderator' | 'user';
+  role: "admin" | "moderator" | "user";
 }
 
 export interface SubscriptionAuditLog {
   id: string;
   user_id: string;
-  event_type: 'activation' | 'upgrade' | 'downgrade' | 'cancellation' | 'trial_start';
+  event_type: "activation" | "upgrade" | "downgrade" | "cancellation" | "trial_start";
   old_tier?: string;
   new_tier: string;
-  metadata?: any;
+  metadata?: Record<string, unknown>;
   created_at: string;
 }

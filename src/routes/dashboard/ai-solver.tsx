@@ -16,9 +16,16 @@ export const Route = createFileRoute("/dashboard/ai-solver")({
   head: () => ({
     meta: [
       { title: "Resolver questão com IA | Norte Concurso" },
-      { name: "description", content: "Cole uma questão de concurso e receba a resolução passo a passo com explicação dos conceitos." },
+      {
+        name: "description",
+        content:
+          "Cole uma questão de concurso e receba a resolução passo a passo com explicação dos conceitos.",
+      },
       { property: "og:title", content: "Resolver questão com IA | Norte Concurso" },
-      { property: "og:description", content: "Resolução passo a passo e conceitos cobrados em questões de concurso." },
+      {
+        property: "og:description",
+        content: "Resolução passo a passo e conceitos cobrados em questões de concurso.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -51,20 +58,34 @@ function AiSolverPage() {
           size="sm"
           kicker="Resolução com IA"
           icon={Sparkles}
-          title={<>Resolver questão <em>com IA</em></>}
+          title={
+            <>
+              Resolver questão <em>com IA</em>
+            </>
+          }
           description="Em breve: cole uma questão e receba a resolução passo a passo."
           actions={<SoonBadge />}
         />
         <Card>
           <CardContent className="space-y-3 pt-6 text-sm text-muted-foreground">
-            <p className="text-base font-semibold text-foreground">Estamos preparando este recurso.</p>
-            <p>
-              Em breve você poderá colar uma questão de concurso e receber a resolução passo a passo, com a análise das
-              alternativas e os conceitos cobrados. Por enquanto, o recurso está desativado para todos os planos.
+            <p className="text-base font-semibold text-foreground">
+              Estamos preparando este recurso.
             </p>
             <p>
-              Enquanto isso, continue com o <Link to="/dashboard/question-trainer" className="font-medium text-primary underline">treinador de questões</Link>{" "}
-              e o <Link to="/dashboard/mock-exams" className="font-medium text-primary underline">simulador</Link>.
+              Em breve você poderá colar uma questão de concurso e receber a resolução passo a
+              passo, com a análise das alternativas e os conceitos cobrados. Por enquanto, o recurso
+              está desativado para todos os planos.
+            </p>
+            <p>
+              Enquanto isso, continue com o{" "}
+              <Link to="/dashboard/question-trainer" className="font-medium text-primary underline">
+                treinador de questões
+              </Link>{" "}
+              e o{" "}
+              <Link to="/dashboard/mock-exams" className="font-medium text-primary underline">
+                simulador
+              </Link>
+              .
             </p>
           </CardContent>
         </Card>
@@ -96,7 +117,10 @@ function AiSolverPage() {
         signal: controller.signal,
       });
       if (!res.ok || !res.body) {
-        const data = (await res.json().catch(() => null)) as { error?: string; message?: string } | null;
+        const data = (await res.json().catch(() => null)) as {
+          error?: string;
+          message?: string;
+        } | null;
         const fallback =
           res.status === 402
             ? "Créditos de IA esgotados. Tente novamente mais tarde."
@@ -138,7 +162,11 @@ function AiSolverPage() {
         size="sm"
         kicker="Resolução com IA"
         icon={Sparkles}
-        title={<>Resolver <em>questão</em></>}
+        title={
+          <>
+            Resolver <em>questão</em>
+          </>
+        }
         description="Cole o enunciado e as alternativas. A IA explica a resolução passo a passo e os conceitos cobrados."
       />
 
@@ -152,21 +180,38 @@ function AiSolverPage() {
               : `Hoje: ${used} de ${limit} resoluções do seu plano`}
         </span>
         <div className="flex gap-3">
-          <Link to="/dashboard/notebooks" className="font-medium text-primary hover:underline">Meu caderno</Link>
-          <Link to="/dashboard/subscriptions" className="font-medium text-primary hover:underline">Ver planos</Link>
+          <Link to="/dashboard/notebooks" className="font-medium text-primary hover:underline">
+            Meu caderno
+          </Link>
+          <Link to="/dashboard/subscriptions" className="font-medium text-primary hover:underline">
+            Ver planos
+          </Link>
         </div>
       </div>
 
       {noAccess && (
-        <div role="status" className="rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground">
-          A resolução com IA é um recurso dos planos pagos. <Link to="/dashboard/subscriptions" className="font-semibold text-primary underline">Veja os planos</Link>.
+        <div
+          role="status"
+          className="rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground"
+        >
+          A resolução com IA é um recurso dos planos pagos.{" "}
+          <Link to="/dashboard/subscriptions" className="font-semibold text-primary underline">
+            Veja os planos
+          </Link>
+          .
         </div>
       )}
 
       {!noAccess && reachedLimit && (
-        <div role="status" className="rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground">
+        <div
+          role="status"
+          className="rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground"
+        >
           Você usou todas as resoluções de hoje. O limite renova amanhã — ou{" "}
-          <Link to="/dashboard/subscriptions" className="font-semibold text-primary underline">mude de plano</Link>.
+          <Link to="/dashboard/subscriptions" className="font-semibold text-primary underline">
+            mude de plano
+          </Link>
+          .
         </div>
       )}
 
@@ -184,7 +229,16 @@ function AiSolverPage() {
           <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="text-xs text-muted-foreground">{question.length}/8000</span>
             <div className="flex gap-2">
-              <Button variant="ghost" onClick={() => { setQuestion(""); setAnswer(""); setError(null); setStatus("idle"); }} disabled={isLoading}>
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  setQuestion("");
+                  setAnswer("");
+                  setError(null);
+                  setStatus("idle");
+                }}
+                disabled={isLoading}
+              >
                 <Eraser className="h-4 w-4" /> Limpar
               </Button>
               {isLoading ? (
@@ -202,7 +256,10 @@ function AiSolverPage() {
       </Card>
 
       {error && (
-        <div role="alert" className="rounded-md border border-destructive/40 bg-destructive/10 p-4 text-sm text-destructive">
+        <div
+          role="alert"
+          className="rounded-md border border-destructive/40 bg-destructive/10 p-4 text-sm text-destructive"
+        >
           {error}
         </div>
       )}
@@ -214,17 +271,23 @@ function AiSolverPage() {
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />} Resolução
             </CardTitle>
             <CardDescription>
-              Conteúdo gerado por IA — confira leis no texto oficial do Planalto e jurisprudência no tribunal competente.
+              Conteúdo gerado por IA — confira leis no texto oficial do Planalto e jurisprudência no
+              tribunal competente.
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="whitespace-pre-wrap text-sm leading-relaxed text-foreground" aria-live="polite">
+            <div
+              className="whitespace-pre-wrap text-sm leading-relaxed text-foreground"
+              aria-live="polite"
+            >
               {answer || "Analisando a questão..."}
             </div>
             {saved && (
               <p className="mt-4 flex items-center gap-2 text-sm text-primary">
                 <BookmarkCheck className="h-4 w-4" aria-hidden /> Salva no seu caderno.{" "}
-                <Link to="/dashboard/notebooks" className="underline">Abrir caderno</Link>
+                <Link to="/dashboard/notebooks" className="underline">
+                  Abrir caderno
+                </Link>
               </p>
             )}
           </CardContent>

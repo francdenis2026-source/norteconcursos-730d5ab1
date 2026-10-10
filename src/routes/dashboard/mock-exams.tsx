@@ -1,6 +1,6 @@
 import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   AlertTriangle,
   ArrowLeft,
@@ -13,6 +13,7 @@ import {
   Flag,
   Gauge,
   History,
+  Lock,
   Loader2,
   Play,
   RotateCcw,
@@ -27,6 +28,7 @@ import {
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { checkFeatureAccess } from "@/lib/subscriptions.config";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -130,7 +132,9 @@ const DURATIONS = [15, 30, 60, 120];
 
 function ProfessionalSimulator() {
   const routeSearch = Route.useSearch();
-  const { user, isLoading: authLoading } = useAuthStatus();
+  const { user, isLoading: authLoading, isAdmin } = useAuthStatus();
+  const hasMockExamAccess =
+    isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "mockExams").included;
   const [stage, setStage] = React.useState<SimulatorStage>("setup");
   const [catalog, setCatalog] = React.useState<SimulatorQuestion[]>([]);
   const [history, setHistory] = React.useState<AttemptHistory[]>([]);
@@ -161,35 +165,34 @@ function ProfessionalSimulator() {
     setLoading(true);
     setLoadError(null);
     try {
-      const [officialResult, curatedResult, historyResult, rankResult] =
-        await Promise.all([
-          supabase
-            .from("official_exam_questions")
-            .select(
-              "id,contest_name,exam_year,career_name,exam_board,subject,item_number,question_text,official_answer,review_note,legal_basis",
-            )
-            .eq("content_status", "active")
-            .neq("official_answer", "X"),
-          supabase
-            .from("curated_question_catalog")
-            .select(
-              "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,legal_basis",
-            )
-            .eq("content_status", "active"),
-          user && user.id !== "demo-user"
-            ? supabase
-                .from("simulator_attempts")
-                .select(
-                  "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at",
-                )
-                .eq("user_id", user.id)
-                .order("finished_at", { ascending: false })
-                .limit(8)
-            : Promise.resolve({ data: [], error: null }),
-          user && user.id !== "demo-user"
-            ? supabase.rpc("my_rank_summary", { _period: "all", _metric: "points" }).maybeSingle()
-            : Promise.resolve({ data: null, error: null }),
-        ]);
+      const [officialResult, curatedResult, historyResult, rankResult] = await Promise.all([
+        supabase
+          .from("official_exam_questions")
+          .select(
+            "id,contest_name,exam_year,career_name,exam_board,subject,item_number,question_text,official_answer,review_note,legal_basis",
+          )
+          .eq("content_status", "active")
+          .neq("official_answer", "X"),
+        supabase
+          .from("curated_question_catalog")
+          .select(
+            "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,legal_basis",
+          )
+          .eq("content_status", "active"),
+        user && user.id !== "demo-user"
+          ? supabase
+              .from("simulator_attempts")
+              .select(
+                "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at",
+              )
+              .eq("user_id", user.id)
+              .order("finished_at", { ascending: false })
+              .limit(8)
+          : Promise.resolve({ data: [], error: null }),
+        user && user.id !== "demo-user"
+          ? supabase.rpc("my_rank_summary", { _period: "all", _metric: "points" }).maybeSingle()
+          : Promise.resolve({ data: null, error: null }),
+      ]);
       if (officialResult.error) throw officialResult.error;
       if (curatedResult.error) throw curatedResult.error;
       const official = ((officialResult.data || []) as Array<Record<string, unknown>>).map(
@@ -318,6 +321,10 @@ function ProfessionalSimulator() {
   const result = React.useMemo(() => calculateResult(questions, answers), [questions, answers]);
 
   function startSimulator() {
+    if (!hasMockExamAccess) {
+      toast.error("Simulados completos são um recurso dos planos pagos.");
+      return;
+    }
     if (!available.length) {
       toast.error("Nenhuma questão ativa corresponde aos filtros escolhidos.");
       return;
@@ -615,12 +622,30 @@ function ProfessionalSimulator() {
                   setWarningAccepted(false);
                   setStartWarningOpen(true);
                 }}
-                disabled={!available.length}
+                disabled={!available.length || !hasMockExamAccess}
                 className="hero-primary-action gap-2 rounded-lg"
               >
                 <Play className="h-4 w-4 fill-current" /> Iniciar simulado
               </Button>
             </div>
+            {!hasMockExamAccess && (
+              <div
+                role="status"
+                className="flex items-start gap-2 rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground"
+              >
+                <Lock className="mt-0.5 h-4 w-4 shrink-0" />
+                <span>
+                  Simulados completos e cronometrados são um recurso dos planos pagos.{" "}
+                  <Link
+                    to="/dashboard/subscriptions"
+                    className="font-semibold text-primary underline"
+                  >
+                    Veja os planos
+                  </Link>
+                  .
+                </span>
+              </div>
+            )}
           </CardContent>
         </Card>
         <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
@@ -822,7 +847,9 @@ function Leaderboard({ userId }: { userId?: string | undefined }) {
   const pill = (active: boolean) =>
     cn(
       "rounded-full px-3 py-1 text-xs font-semibold transition-colors",
-      active ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:text-foreground",
+      active
+        ? "bg-primary text-primary-foreground"
+        : "bg-muted text-muted-foreground hover:text-foreground",
     );
 
   return (
@@ -832,20 +859,35 @@ function Leaderboard({ userId }: { userId?: string | undefined }) {
           <Trophy className="h-5 w-5 text-amber-500" /> Ranking
         </CardTitle>
         <CardDescription>
-          Simulados e questões do Treinador valem pontos (+1 por questão, +2 se acertar sem ajuda). Só a primeira resposta de cada
-          questão conta. Administradores ficam fora. Sobrenomes ficam protegidos.
+          Simulados e questões do Treinador valem pontos (+1 por questão, +2 se acertar sem ajuda).
+          Só a primeira resposta de cada questão conta. Administradores ficam fora. Sobrenomes ficam
+          protegidos.
         </CardDescription>
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="flex gap-1.5" role="tablist" aria-label="Período">
             {PERIODS.map(([id, label]) => (
-              <button key={id} type="button" role="tab" aria-selected={period === id} className={pill(period === id)} onClick={() => setPeriod(id)}>
+              <button
+                key={id}
+                type="button"
+                role="tab"
+                aria-selected={period === id}
+                className={pill(period === id)}
+                onClick={() => setPeriod(id)}
+              >
                 {label}
               </button>
             ))}
           </div>
           <div className="flex gap-1.5" role="tablist" aria-label="Ordenar por">
             {METRICS.map(([id, label]) => (
-              <button key={id} type="button" role="tab" aria-selected={metric === id} className={pill(metric === id)} onClick={() => setMetric(id)}>
+              <button
+                key={id}
+                type="button"
+                role="tab"
+                aria-selected={metric === id}
+                className={pill(metric === id)}
+                onClick={() => setMetric(id)}
+              >
                 {label}
               </button>
             ))}
@@ -855,7 +897,10 @@ function Leaderboard({ userId }: { userId?: string | undefined }) {
       <CardContent>
         {loading ? (
           <div className="flex justify-center py-8">
-            <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" aria-label="Carregando" />
+            <Loader2
+              className="h-5 w-5 animate-spin text-muted-foreground"
+              aria-label="Carregando"
+            />
           </div>
         ) : rows.length ? (
           <div className="space-y-2">
@@ -891,7 +936,9 @@ function Leaderboard({ userId }: { userId?: string | undefined }) {
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="font-black">{metric === "questions" ? `${item.questions} questões` : `${item.points} pts`}</p>
+                  <p className="font-black">
+                    {metric === "questions" ? `${item.questions} questões` : `${item.points} pts`}
+                  </p>
                   <p className="text-[11px] text-muted-foreground">
                     {metric === "questions" ? `${item.points} pts` : `${item.questions} questões`}
                   </p>
@@ -899,7 +946,10 @@ function Leaderboard({ userId }: { userId?: string | undefined }) {
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star
                         key={star}
-                        className={cn("h-3 w-3", star <= item.stars ? "fill-amber-400 text-amber-500" : "text-slate-200")}
+                        className={cn(
+                          "h-3 w-3",
+                          star <= item.stars ? "fill-amber-400 text-amber-500" : "text-slate-200",
+                        )}
                       />
                     ))}
                   </div>
@@ -909,7 +959,8 @@ function Leaderboard({ userId }: { userId?: string | undefined }) {
           </div>
         ) : (
           <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
-            Ninguém pontuou neste período ainda. Resolva questões ou faça um simulado para abrir o ranking.
+            Ninguém pontuou neste período ainda. Resolva questões ou faça um simulado para abrir o
+            ranking.
           </div>
         )}
       </CardContent>
@@ -1000,7 +1051,7 @@ function ActiveSimulator(p: {
   const [cancelPhrase, setCancelPhrase] = React.useState("");
   return (
     <div className="space-y-5 pb-8">
-      <div className="exam-status-bar sticky top-[82px] z-10 rounded-xl border bg-background/95 p-4 shadow-lg backdrop-blur">
+      <div className="exam-status-bar sticky z-10 rounded-xl border bg-background/95 p-4 shadow-lg backdrop-blur">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-xs font-bold uppercase tracking-wider text-emerald-600">

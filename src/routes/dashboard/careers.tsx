@@ -18,28 +18,38 @@ function CareersPage() {
 
   React.useEffect(() => {
     const load = async () => {
-      const [examsRes, questionsRes] = await Promise.all([
+      const [examsRes, questionsRes, boardQuestionsRes] = await Promise.all([
         supabase.from("student_exam_documents").select("contest_name"),
         supabase.from("question_bank").select("contest_name"),
+        supabase.from("board_exam_questions").select("contest_name").eq("content_status", "active"),
       ]);
       const next: Record<string, { exams: number; questions: number }> = {};
-      (examsRes.data || []).forEach((r: { contest_name: string | null }) => {
-        const c = CAREERS.find(
+      const matchCareer = (contestName: string | null | undefined) =>
+        CAREERS.find(
           (c) =>
-            r.contest_name?.toLowerCase().includes(c.agency.toLowerCase()) ||
-            r.contest_name?.toLowerCase().includes(c.name.toLowerCase()),
+            contestName?.toLowerCase().includes(c.agency.toLowerCase()) ||
+            contestName?.toLowerCase().includes(c.name.toLowerCase()),
         );
+      (examsRes.data || []).forEach((r: { contest_name: string | null }) => {
+        const c = matchCareer(r.contest_name);
         if (c) {
           next[c.id] = next[c.id] || { exams: 0, questions: 0 };
           next[c.id]!.exams++;
         }
       });
+      // "question_bank" guarda o banco pessoal/curadoria por carreira; "board_exam_questions"
+      // (ativas) é o catálogo de provas de bancas (ex.: FGV) revisado em Painel admin > Questões
+      // de bancas — sem somar as duas, carreiras com prova de banca já ativada (ex.: Bombeiro)
+      // continuavam aparecendo como "sem dados".
       (questionsRes.data || []).forEach((r: { contest_name: string | null }) => {
-        const c = CAREERS.find(
-          (c) =>
-            r.contest_name?.toLowerCase().includes(c.agency.toLowerCase()) ||
-            r.contest_name?.toLowerCase().includes(c.name.toLowerCase()),
-        );
+        const c = matchCareer(r.contest_name);
+        if (c) {
+          next[c.id] = next[c.id] || { exams: 0, questions: 0 };
+          next[c.id]!.questions++;
+        }
+      });
+      (boardQuestionsRes.data || []).forEach((r: { contest_name: string | null }) => {
+        const c = matchCareer(r.contest_name);
         if (c) {
           next[c.id] = next[c.id] || { exams: 0, questions: 0 };
           next[c.id]!.questions++;

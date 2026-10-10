@@ -1,0 +1,2619 @@
+[
+  {
+    "id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+    "slug": "drogas",
+    "title": "Lei 11.343/2006 — Lei de Drogas",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+    "source_sha256": "31af644c8e9e0d5262a92d5ccbf6c1005c564a94174793597416b63b4e0f744f",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-drogas-revisao",
+    "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+    "overview": {
+      "intro": "Separe a conduta de tráfico, a associação para esse fim e as hipóteses de redução ou agravamento. A quantidade de participantes ou a ausência de venda não resolvem, sozinhas, a classificação.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Organizar Sisnad, prevenção, atenção ao usuário e responsabilidades institucionais.",
+        "Distinguir consumo pessoal, tráfico, associação, financiamento e colaboração com o tráfico.",
+        "Comparar causas de aumento, redução, dosimetria, apreensão e investigação.",
+        "Estudar procedimento, prova, tratamento e destinação de bens, sem misturar lei e julgamento sobre cannabis."
+      ],
+      "alerts": "A Lei 15.358/2026 inseriu o art. 40-A, vigente desde 25/03/2026. O módulo não trata dos efeitos do julgamento do STF sobre cannabis para consumo pessoal; não utilize estes itens para decidir hipóteses do art. 28.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 84,
+      "excluded_units": 15,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 5
+        },
+        {
+          "title": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção I — (Incluído pela Lei nº 13.840, de 2019)",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção II — (Incluído pela Lei nº 13.840, de 2019)",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO II-A — (Incluído pela Lei nº 13.840, de 2019) / Seção I — (Incluído pela Lei nº 13.840, de 2019)",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO II-A — (Incluído pela Lei nº 13.840, de 2019) / Seção II — (Incluído pela Lei nº 13.840, de 2019)",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO IV — (Redação dada pela Lei nº 13.840, de 2019)",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO IV — (Redação dada pela Lei nº 13.840, de 2019) / Seção I — (Incluído pela Lei nº 13.840, de 2019)",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO IV — (Redação dada pela Lei nº 13.840, de 2019) / Seção II — (Incluído pela Lei nº 13.840, de 2019)",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção IV — (Incluído pela Lei nº 13.840, de 2019)",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção V — (Incluído pela Lei nº 13.840, de 2019)",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção VI — (Incluído pela Lei nº 13.840, de 2019)",
+          "count": 50
+        },
+        {
+          "title": "TÍTULO V-A — (Incluído pela Lei nº 13.840, de 2019)",
+          "count": 10
+        }
+      ],
+      "jurisprudence": [
+        {
+          "title": "STF — Tema 506, RE 635.659",
+          "explanation": "A decisão sobre porte para consumo pessoal refere-se à cannabis, sem generalizar a todas as drogas. Até 40 gramas ou seis plantas fêmeas constituem presunção relativa de uso pessoal; quantidade isolada não decide necessariamente o enquadramento. O julgamento não legalizou o tráfico.",
+          "url": "https://noticias.stf.jus.br/postsnoticias/stf-define-40-gramas-de-maconha-como-criterio-para-diferenciar-usuario-de-traficante/",
+          "articles": [
+            "Art. 28"
+          ]
+        },
+        {
+          "title": "STJ — estabilidade e permanência da associação para o tráfico",
+          "explanation": "O art. 35 exige vínculo associativo estável e permanente demonstrado concretamente. Coautoria eventual em um tráfico não basta, nem a mera presença em região dominada por facção. O número mínimo de duas pessoas não dispensa esses elementos.",
+          "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/26082022-Falta-de-demonstracao-de-vinculo-permanente-afasta-condenacao-por-associacao-para-o-trafico.aspx",
+          "articles": [
+            "Art. 35"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+    "slug": "armas",
+    "title": "Lei 10.826/2003 — Estatuto do Desarmamento",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+    "source_sha256": "bd5431a15da37ea073d3846748a6f0a09938183334e7f00c8af04bc4984a5c5c",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-armas-revisao",
+    "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+    "overview": {
+      "intro": "Complemente o módulo de posse e porte com o cadastro de armas e a responsabilidade das empresas. Sistema cadastral, registro e uso em serviço são funções distintas.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Separar competências de cadastro, registro, posse e porte.",
+        "Identificar requisitos, hipóteses especiais e validade dos atos.",
+        "Comparar os tipos penais, penas, elementos especiais e responsabilidades.",
+        "Retomar disposições finais, restrições e referências regulamentares."
+      ],
+      "alerts": "A Lei 14.967/2024 alterou o art. 7º do Estatuto. Este é módulo complementar; o material anterior de posse/porte e art. 21-A foi preservado. As mudanças regulamentares de CACs exigem conferência específica e não são deduzidas apenas do art. 3º.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 41,
+      "excluded_units": 1,
+      "chapters": [
+        {
+          "title": "CAPÍTULO I — DO SISTEMA NACIONAL DE ARMAS",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO II — DO REGISTRO",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO III — DO PORTE",
+          "count": 8
+        },
+        {
+          "title": "CAPÍTULO IV — DOS CRIMES E DAS PENAS",
+          "count": 11
+        },
+        {
+          "title": "CAPÍTULO V — DISPOSIÇÕES GERAIS",
+          "count": 14
+        },
+        {
+          "title": "CAPÍTULO VI — DISPOSIÇÕES FINAIS",
+          "count": 2
+        },
+        {
+          "title": "Anexos / ANEXO (Redação dada pela Lei nº 11.706, de 2008)",
+          "count": 1
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "a62e6ba4-bda1-5f6d-874e-73f142b9abcc",
+    "slug": "tortura",
+    "title": "Lei 9.455/1997 — Crimes de Tortura",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+    "source_sha256": "5ad33369b63c5a3e5ab0653d3831e9088a9bfaa1655a177b9f185ce780b2c6e4",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-tortura-revisao",
+    "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+    "overview": {
+      "intro": "Identifique a finalidade, a relação com a vítima e o dever de agir. Tortura não depende, em todas as modalidades, de o autor ser agente público.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Comparar todas as modalidades, finalidades, sujeitos e relações com a vítima.",
+        "Separar omissão, resultados qualificadores, aumentos e efeitos da condenação.",
+        "Confrontar extraterritorialidade e regime de pena com a jurisprudência aplicável."
+      ],
+      "alerts": "A Lei 15.410/2026 (Lei Barbara Penna), publicada em 21/05/2026, acrescentou o inciso III. Regime inicial de pena não é tratado nos exercícios: a leitura do § 7º exige confronto com a jurisprudência vigente, além do texto literal.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 4,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 4
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "4f7f5396-c8ae-55f3-82c1-6fa31751e3f0",
+    "slug": "abuso",
+    "title": "Lei 13.869/2019 — Abuso de Autoridade",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+    "source_sha256": "e05f7791ee40c9c787b723129a4295419322293cda8b09e44fb4dcdce8526dce",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-abuso-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "Nem toda ilegalidade administrativa corresponde a abuso de autoridade penal. O tipo concreto deve ser identificado e a finalidade específica examinada.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Estudar finalidade específica, sujeitos, ação penal e efeitos da condenação.",
+        "Comparar cada conduta incriminada: liberdade, investigação, prova, sigilo e garantias processuais.",
+        "Distinguir penas principais, substitutivas e efeitos que dependem de requisitos próprios."
+      ],
+      "alerts": "O texto compilado substitui a referência geral à antiga Lei 4.898/1965, revogada pelo art. 44. A revisão concentra-se nas regras gerais; não valida indistintamente todos os atos administrativos como crimes.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 40,
+      "excluded_units": 6,
+      "chapters": [
+        {
+          "title": "CAPÍTULO I — DISPOSIÇÕES GERAIS",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO II — DOS SUJEITOS DO CRIME",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO III — DA AÇÃO PENAL",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO IV — DOS EFEITOS DA CONDENAÇÃO E DAS PENAS RESTRITIVAS DE DIREITOS / Seção I — Dos Efeitos da Condenação",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO IV — DOS EFEITOS DA CONDENAÇÃO E DAS PENAS RESTRITIVAS DE DIREITOS / Seção II — Das Penas Restritivas de Direitos",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO V — DAS SANÇÕES DE NATUREZA CIVIL E ADMINISTRATIVA",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO VI — DOS CRIMES E DAS PENAS",
+          "count": 25
+        },
+        {
+          "title": "CAPÍTULO VII — DO PROCEDIMENTO",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO VIII — DISPOSIÇÕES FINAIS",
+          "count": 6
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "2f315d3d-c428-58de-bd68-9625dbaf4458",
+    "slug": "organizacoes",
+    "title": "Lei 12.850/2013 — Organizações Criminosas",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+    "source_sha256": "d3f5855f16c545d35ca49313a7d15bdfce6f0a6841e307dd0c6bf325394b9467",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-organizacoes-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "Organização criminosa envolve estrutura e finalidade, além de número mínimo de pessoas. Colaboração premiada não substitui, sozinha, a prova necessária às decisões judiciais.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Diferenciar estrutura organizada, integração e delitos relacionados.",
+        "Estudar colaboração premiada, procedimento, direitos, deveres e limites probatórios.",
+        "Comparar ação controlada, infiltração, acesso a registros e investigação.",
+        "Revisar infrações relacionadas e garantias do procedimento."
+      ],
+      "alerts": "O texto oficial contém alterações de 2025 e 2026, inclusive Lei 15.487/2026. Este módulo cobre definição e limites básicos da colaboração; não confunde a Lei 12.850 com o marco específico de organizações ultraviolentas da Lei 15.358/2026.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 37,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "CAPÍTULO I — DA ORGANIZAÇÃO CRIMINOSA",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO II — DA INVESTIGAÇÃO E DOS MEIOS DE OBTENÇÃO DA PROVA",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO II — DA INVESTIGAÇÃO E DOS MEIOS DE OBTENÇÃO DA PROVA / Seção I — Da Colaboração Premiada",
+          "count": 7
+        },
+        {
+          "title": "CAPÍTULO II — DA INVESTIGAÇÃO E DOS MEIOS DE OBTENÇÃO DA PROVA / Seção II — Da Ação Controlada",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO II — DA INVESTIGAÇÃO E DOS MEIOS DE OBTENÇÃO DA PROVA / Seção III — Da Infiltração de Agentes",
+          "count": 9
+        },
+        {
+          "title": "CAPÍTULO II — DA INVESTIGAÇÃO E DOS MEIOS DE OBTENÇÃO DA PROVA / Seção IV — Do Acesso a Registros, Dados Cadastrais, Documentos e Informações",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO II — DA INVESTIGAÇÃO E DOS MEIOS DE OBTENÇÃO DA PROVA / Seção V — Dos Crimes Ocorridos na Investigação e na Obtenção da Prova",
+          "count": 6
+        },
+        {
+          "title": "CAPÍTULO III — DISPOSIÇÕES FINAIS",
+          "count": 7
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "76d6f68b-4a4f-5b57-a7fc-b71de43cc673",
+    "slug": "hediondos",
+    "title": "Lei 8.072/1990 — Crimes Hediondos",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+    "source_sha256": "b5c6edd5fb4c7b56e1b1d38c7625a01a96f55600375f9f9d56866bc90d3bb6cd",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-hediondos-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "A hediondez decorre do enquadramento legal, e não apenas da impressão de gravidade. Identifique o tipo, a forma prevista no rol e as consequências específicas.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Reconstruir o rol atual, formas tentadas e consumadas e delitos equiparados.",
+        "Separar vedações, prisão temporária, colaboração e efeitos processuais.",
+        "Confrontar regime, execução e intertemporalidade com o texto atual da LEP e o STF."
+      ],
+      "alerts": "A Lei 14.994/2024 individualizou o feminicídio no rol; a Lei 15.384/2026 incluiu vicaricídio. Há outras alterações posteriores no texto, incluindo Lei 15.487/2026. Frações de progressão e regime inicial dependem da LEP e da jurisprudência e não são reduzidos a uma tabela universal neste módulo. Regras materiais de execução e alterações de frações exigem análise da data do fato e da lei mais benéfica. Não aplique retroativamente uma regra mais gravosa só porque ela aparece no texto atual.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 17,
+      "excluded_units": 2,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 17
+        }
+      ],
+      "jurisprudence": [
+        {
+          "title": "STF — regime inicial e individualização",
+          "explanation": "O STF afastou a imposição automática de regime inicial fechado para crimes hediondos ou equiparados. A leitura literal do art. 2º, § 1º, exige confronto com individualização e fundamentos do caso, não resposta automática baseada apenas no rótulo do delito.",
+          "url": "https://stf.jus.br/arquivo/informativo/documento/informativo702.htm",
+          "articles": [
+            "Art. 2"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+    "slug": "maria-penha",
+    "title": "Lei 11.340/2006 — Lei Maria da Penha",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+    "source_sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-maria-penha-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "Reconheça as formas de violência e separe proteção urgente de responsabilização penal. A Lei Maria da Penha não se restringe à lesão física nem exige sempre coabitação.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Identificar âmbito de proteção e todas as formas de violência.",
+        "Estudar atendimento, assistência, atuação policial e procedimento.",
+        "Comparar medidas protetivas, competência, prazos e descumprimento.",
+        "Distinguir ação penal, retratação, aplicação dos juizados e atualizações recentes."
+      ],
+      "alerts": "A Lei 15.384/2026 incluiu violência vicária no art. 7º, VI; a Lei 14.994/2024 alterou a pena do art. 24-A. O § 4º desse artigo, incluído pela Lei 15.383/2026, contém majorante ligada a áreas de exclusão e dispositivos de monitoração. São atualizações expressas do texto atual, e não regras presentes na edição original.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 56,
+      "excluded_units": 1,
+      "chapters": [
+        {
+          "title": "TÍTULO I — DISPOSIÇÕES PRELIMINARES",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO II — DA VIOLÊNCIA DOMÉSTICA E FAMILIAR CONTRA A MULHER / CAPÍTULO I — DISPOSIÇÕES GERAIS",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO II — DA VIOLÊNCIA DOMÉSTICA E FAMILIAR CONTRA A MULHER / CAPÍTULO II — DAS FORMAS DE VIOLÊNCIA DOMÉSTICA E FAMILIAR CONTRA A MULHER",
+          "count": 1
+        },
+        {
+          "title": "TÍTULO III — DA ASSISTÊNCIA À MULHER EM SITUAÇÃO DE VIOLÊNCIA DOMÉSTICA E FAMILIAR / CAPÍTULO I — DAS MEDIDAS INTEGRADAS DE PREVENÇÃO",
+          "count": 1
+        },
+        {
+          "title": "TÍTULO III — DA ASSISTÊNCIA À MULHER EM SITUAÇÃO DE VIOLÊNCIA DOMÉSTICA E FAMILIAR / CAPÍTULO II — DA ASSISTÊNCIA À MULHER EM SITUAÇÃO DE VIOLÊNCIA DOMÉSTICA E FAMILIAR",
+          "count": 1
+        },
+        {
+          "title": "TÍTULO III — DA ASSISTÊNCIA À MULHER EM SITUAÇÃO DE VIOLÊNCIA DOMÉSTICA E FAMILIAR / CAPÍTULO III — DO ATENDIMENTO PELA AUTORIDADE POLICIAL",
+          "count": 7
+        },
+        {
+          "title": "TÍTULO IV — DOS PROCEDIMENTOS / CAPÍTULO I — DISPOSIÇÕES GERAIS",
+          "count": 8
+        },
+        {
+          "title": "TÍTULO IV — DOS PROCEDIMENTOS / CAPÍTULO II — DAS MEDIDAS PROTETIVAS DE URGÊNCIA / Seção I — Disposições Gerais",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO IV — DOS PROCEDIMENTOS / CAPÍTULO II — DAS MEDIDAS PROTETIVAS DE URGÊNCIA / Seção II — Das Medidas Protetivas de Urgência que Obrigam o Agressor",
+          "count": 1
+        },
+        {
+          "title": "TÍTULO IV — DOS PROCEDIMENTOS / CAPÍTULO II — DAS MEDIDAS PROTETIVAS DE URGÊNCIA / Seção III — Das Medidas Protetivas de Urgência à Ofendida",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO IV — DOS PROCEDIMENTOS / CAPÍTULO II — DAS MEDIDAS PROTETIVAS DE URGÊNCIA / Seção IV (Incluído pela Lei nº 13.641, de 2018) — Do Crime de Descumprimento de Medidas Protetivas de Urgência Descumprimento de Medidas Protetivas de Urgência",
+          "count": 1
+        },
+        {
+          "title": "TÍTULO IV — DOS PROCEDIMENTOS / CAPÍTULO III — DA ATUAÇÃO DO MINISTÉRIO PÚBLICO",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO IV — DOS PROCEDIMENTOS / CAPÍTULO IV — DA ASSISTÊNCIA JUDICIÁRIA",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO V — DA EQUIPE DE ATENDIMENTO MULTIDISCIPLINAR",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO VI — DISPOSIÇÕES TRANSITÓRIAS",
+          "count": 1
+        },
+        {
+          "title": "TÍTULO VII — DISPOSIÇÕES FINAIS",
+          "count": 15
+        }
+      ],
+      "jurisprudence": [
+        {
+          "title": "STF — ADI 4.424",
+          "explanation": "Lesão corporal contra mulher em contexto doméstico e familiar é de ação penal pública incondicionada, inclusive quando leve. Não aplique a exigência de representação dos juizados a essa situação.",
+          "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=503333&ori=1",
+          "articles": [
+            "Art. 16",
+            "Art. 41"
+          ]
+        },
+        {
+          "title": "STJ — Súmula 600, ausência de coabitação",
+          "explanation": "O enquadramento da violência doméstica e familiar não depende de autor e vítima morarem juntos. Examine a relação e o contexto previstos no art. 5º, sem criar requisito geral de endereço comum.",
+          "url": "https://processo.stj.jus.br/SCON/pesquisar.jsp?b=SUMU&livre=SUMULA.tipo.+e+%40num%3D%27000600%27",
+          "articles": [
+            "Art. 5"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "910f1e9d-94ca-58de-8529-c949d8b40bb9",
+    "slug": "interceptacao",
+    "title": "Lei 9.296/1996 — Interceptação Telefônica",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+    "source_sha256": "4febf5f54f95b2058dd5e24565d1dd0d35796e5b9bc71b3e8007558c2ce6b2df",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-interceptacao-revisao",
+    "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+    "overview": {
+      "intro": "Diferencie a interceptação do fluxo de comunicação da captação ambiental. Finalidade, necessidade, autorização e prazo devem ser examinados antes da execução da medida.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Identificar objeto, requisitos, legitimidade, decisão e duração.",
+        "Estudar execução, sigilo, prova e responsabilização.",
+        "Distinguir comunicação telefônica, captação ambiental e gravação por interlocutor."
+      ],
+      "alerts": "A Lei 13.964/2019 acrescentou o art. 8º-A. O módulo não equipara interceptação, gravação por interlocutor, acesso a dados armazenados e ronda em conteúdo público; cada situação tem regime próprio. O número de renovações deve ser confrontado com a jurisprudência em estudo específico.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 14,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 14
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+    "slug": "lavagem",
+    "title": "Lei 9.613/1998 — Lavagem de Dinheiro",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+    "source_sha256": "3185f0484f762646a2ddebd821b556ea92e19826c31a1ed3c88d72f00ea18061",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-lavagem-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "Lavagem envolve ocultar ou dissimular bens, direitos ou valores provenientes de infração penal. A autonomia do processo não dispensa indícios da origem ilícita.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Estudar condutas, infração antecedente, penas e hipóteses especiais.",
+        "Comparar autonomia processual, competência, medidas patrimoniais e destinação.",
+        "Organizar deveres de identificação, registro, comunicação, fiscalização e COAF."
+      ],
+      "alerts": "A Lei 12.683/2012 eliminou a lista fechada de antecedentes e adotou infração penal. O texto também registra alterações posteriores, inclusive medidas da Lei 15.358/2026. Este módulo não esgota obrigações de comunicação e regras administrativas do sistema de prevenção.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 25,
+      "excluded_units": 4,
+      "chapters": [
+        {
+          "title": "CAPÍTULO I — Dos Crimes de \"Lavagem\" ou Ocultação de Bens, Direitos e Valores",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO II — Disposições Processuais Especiais",
+          "count": 6
+        },
+        {
+          "title": "CAPÍTULO III — Dos Efeitos da Condenação",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO IV — Dos Bens, Direitos ou Valores Oriundos de Crimes Praticados no Estrangeiro",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO V (Redação dada pela Lei nº 12.683, de 2012) — DAS PESSOAS SUJEITAS AO MECANISMO DE CONTROLE (Redação dada pela Lei nº 12.683, de 2012)",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO VI — Da Identificação dos Clientes e Manutenção de Registros",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO VII — Da Comunicação de Operações Financeiras",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO VIII — Da Responsabilidade Administrativa",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO IX — Do Conselho de Controle de Atividades Financeiras",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO X (Incluído pela Lei nº 12.683, de 2012) — DISPOSIÇÕES GERAIS (Incluído pela Lei nº 12.683, de 2012)",
+          "count": 6
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "67393f02-bb51-583c-b431-803ebb72386f",
+    "slug": "eca",
+    "title": "Lei 8.069/1990 — Estatuto da Criança e do Adolescente",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+    "source_sha256": "784766ddd986e094c2e8e9f38f1f42d7e2b1898f932107bda59c15d085df862d",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-eca-revisao",
+    "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+    "overview": {
+      "intro": "Idade, natureza da conduta e garantias da apreensão orientam o estudo do ato infracional. Medida socioeducativa não equivale a pena criminal aplicada ao adulto.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Estudar disposições gerais e todos os direitos fundamentais da criança e do adolescente.",
+        "Organizar prevenção, política de atendimento, entidades e medidas de proteção.",
+        "Distinguir ato infracional, garantias e cada medida socioeducativa.",
+        "Estudar Conselho Tutelar, acesso à Justiça, procedimentos, crimes e infrações administrativas.",
+        "Separar atualizações digitais, direitos da vítima e dispositivos com vigência futura."
+      ],
+      "alerts": "A Lei 15.487/2026 alterou a proteção contra violência sexual, inclusive digital, e inseriu o art. 190-F sobre ronda virtual em ambientes públicos. Esse regime não deve ser confundido com infiltração online ou interceptação. Os exercícios deste módulo concentram-se no ato infracional e nas garantias indicadas. A Lei 15.450/2026, publicada em 01/07/2026, tem vacatio de 180 dias: seu acréscimo sobre psicofármacos no art. 14 não é ensinado como regra já vigente nesta conferência.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 326,
+      "excluded_units": 3,
+      "chapters": [
+        {
+          "title": "Título I — Das Disposições Preliminares",
+          "count": 6
+        },
+        {
+          "title": "Título II — Dos Direitos Fundamentais / Capítulo I — Do Direito à Vida e à Saúde",
+          "count": 11
+        },
+        {
+          "title": "Título II — Dos Direitos Fundamentais / Capítulo II — Do Direito à Liberdade, ao Respeito e à Dignidade",
+          "count": 6
+        },
+        {
+          "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção I — Disposições Gerais",
+          "count": 8
+        },
+        {
+          "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção II — Da Família Natural",
+          "count": 3
+        },
+        {
+          "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção I — Disposições Gerais",
+          "count": 5
+        },
+        {
+          "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção II — Da Guarda",
+          "count": 2
+        },
+        {
+          "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção III — Da Tutela",
+          "count": 3
+        },
+        {
+          "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção IV — Da Adoção",
+          "count": 18
+        },
+        {
+          "title": "Título II — Dos Direitos Fundamentais / Capítulo IV — Do Direito à Educação, à Cultura, ao Esporte e ao Lazer",
+          "count": 9
+        },
+        {
+          "title": "Título II — Dos Direitos Fundamentais / Capítulo V — Do Direito à Profissionalização e à Proteção no Trabalho",
+          "count": 10
+        },
+        {
+          "title": "Título III — Da Prevenção / Capítulo I — Disposições Gerais",
+          "count": 6
+        },
+        {
+          "title": "Título III — Da Prevenção / Capítulo II — Da Prevenção Especial / Seção I — Da informação, Cultura, Lazer, Esportes, Diversões e Espetáculos",
+          "count": 7
+        },
+        {
+          "title": "Título III — Da Prevenção / Capítulo II — Da Prevenção Especial / Seção II — Dos Produtos e Serviços",
+          "count": 2
+        },
+        {
+          "title": "Título III — Da Prevenção / Capítulo II — Da Prevenção Especial / Seção III — Da Autorização para Viajar",
+          "count": 3
+        },
+        {
+          "title": "Título I — Da Política de Atendimento / Capítulo I — Disposições Gerais",
+          "count": 5
+        },
+        {
+          "title": "Título I — Da Política de Atendimento / Capítulo II — Das Entidades de Atendimento / Seção I — Disposições Gerais",
+          "count": 6
+        },
+        {
+          "title": "Título I — Da Política de Atendimento / Capítulo II — Das Entidades de Atendimento / Seção II — Da Fiscalização das Entidades",
+          "count": 3
+        },
+        {
+          "title": "Título II — Das Medidas de Proteção / Capítulo I — Disposições Gerais",
+          "count": 1
+        },
+        {
+          "title": "Título II — Das Medidas de Proteção / Capítulo II — Das Medidas Específicas de Proteção",
+          "count": 4
+        },
+        {
+          "title": "Título III — Da Prática de Ato Infracional / Capítulo I — Disposições Gerais",
+          "count": 3
+        },
+        {
+          "title": "Título III — Da Prática de Ato Infracional / Capítulo II — Dos Direitos Individuais",
+          "count": 4
+        },
+        {
+          "title": "Título III — Da Prática de Ato Infracional / Capítulo III — Das Garantias Processuais",
+          "count": 2
+        },
+        {
+          "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção I — Disposições Gerais",
+          "count": 3
+        },
+        {
+          "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção II — Da Advertência",
+          "count": 1
+        },
+        {
+          "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção III — Da Obrigação de Reparar o Dano",
+          "count": 1
+        },
+        {
+          "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção IV — Da Prestação de Serviços à Comunidade",
+          "count": 1
+        },
+        {
+          "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção V — Da Liberdade Assistida",
+          "count": 2
+        },
+        {
+          "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção VI — Do Regime de Semi-liberdade",
+          "count": 1
+        },
+        {
+          "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção VII — Da Internação",
+          "count": 5
+        },
+        {
+          "title": "Título III — Da Prática de Ato Infracional / Capítulo V — Da Remissão",
+          "count": 3
+        },
+        {
+          "title": "Título IV — Das Medidas Pertinentes aos Pais ou Responsável",
+          "count": 2
+        },
+        {
+          "title": "Título V — Do Conselho Tutelar / Capítulo I — Disposições Gerais",
+          "count": 5
+        },
+        {
+          "title": "Título V — Do Conselho Tutelar / Capítulo II — Das Atribuições do Conselho",
+          "count": 2
+        },
+        {
+          "title": "Título V — Do Conselho Tutelar / Capítulo III — Da Competência",
+          "count": 1
+        },
+        {
+          "title": "Título V — Do Conselho Tutelar / Capítulo IV — Da Escolha dos Conselheiros",
+          "count": 1
+        },
+        {
+          "title": "Título V — Do Conselho Tutelar / Capítulo V — Dos Impedimentos",
+          "count": 1
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo I — Disposições Gerais",
+          "count": 4
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo II — Da Justiça da Infância e da Juventude / Seção I — Disposições Gerais",
+          "count": 1
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo II — Da Justiça da Infância e da Juventude / Seção II — Do Juiz",
+          "count": 4
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo II — Da Justiça da Infância e da Juventude / Seção III — Dos Serviços Auxiliares",
+          "count": 2
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção I — Disposições Gerais",
+          "count": 3
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção II — Da Perda e da Suspensão do Poder Familiar (Expressão substituída pela Lei nº 12.010, de 2009) Vigência",
+          "count": 9
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção III — Da Destituição da Tutela",
+          "count": 1
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção IV — Da Colocação em Família Substituta",
+          "count": 6
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção V — Da Apuração de Ato Infracional Atribuído a Adolescente",
+          "count": 20
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção V-A (Incluído pela Lei nº 13.441, de 2017) — Da Infiltração de Agentes de Polícia para a Investigação de Crimes contra a Dignidade Sexual de Criança e de Adolescente”",
+          "count": 6
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção VI — Da Apuração de Irregularidades em Entidade de Atendimento",
+          "count": 3
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção VII — Da Apuração de Infração Administrativa às Normas de Proteção à Criança e ao Adolescente",
+          "count": 4
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção VIII (Incluída pela Lei nº 12.010, de 2009) Vigência Da Habilitação de Pretendentes à Adoção",
+          "count": 6
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo IV — Dos Recursos",
+          "count": 7
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo V — Do Ministério Público",
+          "count": 6
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo VI — Do Advogado",
+          "count": 2
+        },
+        {
+          "title": "Título VI — Do Acesso à Justiça / Capítulo VII — Da Proteção Judicial dos Interesses Individuais, Difusos e Coletivos",
+          "count": 17
+        },
+        {
+          "title": "Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo I — Dos Crimes / Seção I — Disposições Gerais",
+          "count": 7
+        },
+        {
+          "title": "Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo I — Dos Crimes / Seção II — Dos Crimes em Espécie",
+          "count": 24
+        },
+        {
+          "title": "Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo II — Das Infrações Administrativas",
+          "count": 38
+        }
+      ],
+      "jurisprudence": [
+        {
+          "title": "STJ — Súmula 492, ato infracional e internação",
+          "explanation": "Ato infracional análogo ao tráfico, isoladamente, não impõe internação obrigatória. A medida exige análise dos requisitos próprios do ECA; não se transfere automaticamente o tratamento penal de adultos ao adolescente.",
+          "url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=185&l=100&operador=AND&ordenacao=-%40NUM&p=false&tipo=SUMULA+OR+SU",
+          "articles": [
+            "Art. 121",
+            "Art. 122"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cbe217be-51a1-57de-a669-64c14199c75f",
+    "slug": "ambientais",
+    "title": "Lei 9.605/1998 — Crimes Ambientais",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+    "source_sha256": "a7aa3a374830c75a91f4b8fdaf9e89e95aa411c4cf1e1d9ab1550b1d9bd764df",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-ambientais-revisao",
+    "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+    "overview": {
+      "intro": "A responsabilidade ambiental pode alcançar pessoas físicas e jurídicas, respeitados os requisitos legais. Não confunda responsabilidade civil, administrativa e penal nem suas sanções.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Distinguir responsabilidade individual e da pessoa jurídica, penas e benefícios.",
+        "Comparar crimes contra fauna, flora, poluição, ordenamento e administração ambiental.",
+        "Estudar infrações administrativas, apuração, ação penal e cooperação."
+      ],
+      "alerts": "Foi utilizado o texto atual do Planalto. O módulo cobre regras gerais; a alteração de penas de crimes específicos exige leitura do artigo correspondente. Não trata a responsabilidade penal como objetiva nem faz a responsabilização da entidade depender automaticamente da condenação de pessoa física.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 79,
+      "excluded_units": 7,
+      "chapters": [
+        {
+          "title": "CAPÍTULO I — DISPOSIÇÕES GERAIS",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO II — DA APLICAÇÃO DA PENA",
+          "count": 19
+        },
+        {
+          "title": "CAPÍTULO III — DA APREENSÃO DO PRODUTO E DO INSTRUMENTO DE INFRAÇÃO",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO IV — DA AÇÃO E DO PROCESSO PENAL",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO V — DOS CRIMES CONTRA O MEIO AMBIENTE / Seção I — Dos Crimes contra a Fauna",
+          "count": 9
+        },
+        {
+          "title": "CAPÍTULO V — DOS CRIMES CONTRA O MEIO AMBIENTE / Seção II — Dos Crimes contra a Flora",
+          "count": 16
+        },
+        {
+          "title": "CAPÍTULO V — DOS CRIMES CONTRA O MEIO AMBIENTE / Seção III — Da Poluição e outros Crimes Ambientais",
+          "count": 6
+        },
+        {
+          "title": "CAPÍTULO V — DOS CRIMES CONTRA O MEIO AMBIENTE / Seção IV — Dos Crimes contra o Ordenamento Urbano e o Patrimônio Cultural",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO V — DOS CRIMES CONTRA O MEIO AMBIENTE / Seção V — Dos Crimes contra a Administração Ambiental",
+          "count": 5
+        },
+        {
+          "title": "CAPÍTULO VI — DA INFRAÇÃO ADMINISTRATIVA",
+          "count": 7
+        },
+        {
+          "title": "CAPÍTULO VII — DA COOPERAÇÃO INTERNACIONAL PARA A PRESERVAÇÃO DO MEIO AMBIENTE",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO VIII — DISPOSIÇÕES FINAIS",
+          "count": 4
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "f169c218-af23-5e2b-83c8-17c450927469",
+    "slug": "temporaria",
+    "title": "Lei 7.960/1989 — Prisão Temporária",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+    "source_sha256": "c5d4f790141c79d640defa80961ee16ee8208e496993a478dd9f179f662adf39",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-temporaria-revisao",
+    "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+    "overview": {
+      "intro": "Prisão temporária é medida cautelar para investigação, não instrumento para averiguações indiscriminadas. O texto legal deve ser lido com os requisitos cumulativos definidos pelo STF.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Organizar hipóteses legais e requisitos cumulativos definidos pelo STF.",
+        "Separar legitimidade, decisão, duração, prorrogação e soltura.",
+        "Comparar prazo ordinário e o regime específico de delitos hediondos."
+      ],
+      "alerts": "Nas ADIs 3360 e 4109, julgadas em 2022, o STF fixou requisitos cumulativos. A leitura isolada do inciso II é insuficiente. O módulo não atualiza por equivalência automática todas as referências históricas de crimes revogados presentes no rol.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 7,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 7
+        }
+      ],
+      "jurisprudence": [
+        {
+          "title": "STF — ADIs 3.360 e 4.109, Informativo 1043",
+          "explanation": "A decretação exige cumulativamente imprescindibilidade concreta, fundadas razões nos crimes do rol, fatos novos ou contemporâneos, adequação e insuficiência de medidas cautelares diversas. Não basta ausência de residência fixa nem averiguação genérica.",
+          "url": "https://portal.stf.jus.br/textos/verTexto.asp?pagina=casos_notorios_2022&servico=jurisprudenciaPesquisaGeral",
+          "articles": [
+            "Art. 1",
+            "Art. 2"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "f618ae86-dbda-5d68-8f77-94650dfd76bf",
+    "slug": "juizados",
+    "title": "Lei 9.099/1995 — Juizados Especiais Cíveis e Criminais",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+    "source_sha256": "ba7e0ce8298c0604d92e68e18628084b418583a07e43c24ce98600d1aba28e72",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-juizados-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "Separe menor potencial ofensivo, composição civil, transação penal e suspensão do processo. Pena máxima e pena mínima servem a perguntas diferentes.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Estudar princípios e procedimentos do juizado cível e criminal.",
+        "Distinguir competência, conciliação, instrução, sentença, recursos e execução.",
+        "Comparar termo circunstanciado, composição, transação e suspensão condicional do processo.",
+        "Identificar requisitos, impedimentos e exclusões de aplicação."
+      ],
+      "alerts": "O art. 61 utiliza a redação da Lei 11.313/2006. O art. 41 da Lei Maria da Penha afasta a Lei 9.099 para a violência doméstica e familiar contra a mulher. Este módulo não promete benefícios automáticos nem ignora impedimentos de leis especiais.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 98,
+      "excluded_units": 1,
+      "chapters": [
+        {
+          "title": "CAPÍTULO I — Disposições Gerais",
+          "count": 2
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção I — Da Competência",
+          "count": 2
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção II — Do Juiz, dos Conciliadores e dos Juízes Leigos",
+          "count": 3
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção III — Das Partes",
+          "count": 4
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção IV — Dos atos processuais",
+          "count": 3
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção V — Do pedido",
+          "count": 4
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção VI — Das Citações e Intimações",
+          "count": 2
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção VII — Da Revelia",
+          "count": 1
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção VIII — Da Conciliação e do Juízo Arbitral",
+          "count": 6
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção IX — Da Instrução e Julgamento",
+          "count": 3
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção X — Da Resposta do Réu",
+          "count": 2
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção XI — Das Provas",
+          "count": 6
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção XII — Da Sentença",
+          "count": 9
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção XIII — Dos Embargos de Declaração",
+          "count": 3
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção XIV — Da Extinção do Processo Sem Julgamento do Mérito",
+          "count": 1
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção XV — Da Execução",
+          "count": 2
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção XVI — Das Despesas",
+          "count": 2
+        },
+        {
+          "title": "Capítulo II — Dos Juizados Especiais Cíveis / Seção XVII — Disposições Finais",
+          "count": 4
+        },
+        {
+          "title": "Capítulo III — Dos Juizados Especiais Criminais",
+          "count": 3
+        },
+        {
+          "title": "Capítulo III — Dos Juizados Especiais Criminais / Seção I — Da Competência e dos Atos Processuais",
+          "count": 6
+        },
+        {
+          "title": "Capítulo III — Dos Juizados Especiais Criminais / Seção II — Da Fase Preliminar",
+          "count": 8
+        },
+        {
+          "title": "Capítulo III — Dos Juizados Especiais Criminais / Seção III — Do Procedimento Sumariíssimo",
+          "count": 7
+        },
+        {
+          "title": "Capítulo III — Dos Juizados Especiais Criminais / Seção IV — Da Execução",
+          "count": 3
+        },
+        {
+          "title": "Capítulo III — Dos Juizados Especiais Criminais / Seção V — Das Despesas Processuais",
+          "count": 1
+        },
+        {
+          "title": "Capítulo III — Dos Juizados Especiais Criminais / Seção VI — Disposições Finais",
+          "count": 6
+        },
+        {
+          "title": "Capítulo IV — Disposições Finais Comuns",
+          "count": 5
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "a1562aa3-b35a-56e9-a334-ff2f57086e97",
+    "slug": "delegado",
+    "title": "Lei 12.830/2013 — Investigação conduzida pelo Delegado",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+    "source_sha256": "4348ff4dfb72fd754ba00ecda9746ba86bcef7647e98f06e4ae42b9e18a76cd9",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-delegado-revisao",
+    "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+    "overview": {
+      "intro": "Condução da investigação, requisição de elementos e indiciamento têm fundamentos distintos. O ato de indiciar exige análise técnico-jurídica, não mero preenchimento de formulário.",
+      "contest": "Polícia Federal — Delegado — Edital 1/2025 atualizado",
+      "objectives": [
+        "Distinguir investigação, requisição, indiciamento e garantias de atuação.",
+        "Identificar exigências de fundamentação para atos e hipóteses de avocação ou redistribuição.",
+        "Evitar confundir presidência de inquérito e exclusividade absoluta de investigação penal."
+      ],
+      "alerts": "Texto oficial conferido. O art. 2º, § 1º, remete à ADI 5043: a norma não deve ser usada para afirmar monopólio absoluto de toda investigação criminal. Os exercícios evitam essa conclusão e se restringem às atribuições e garantias textuais indicadas.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 4,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 4
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "489822eb-a512-582d-91a7-b4e83f2e88c1",
+    "slug": "identificacao-criminal",
+    "title": "Lei 12.037/2009 — Identificação Criminal",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+    "source_sha256": "6f26e0ee5deb294b595d7e1a280bf27fbe339de61240ee8b35122b757b85bff0",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-identificacao-criminal-revisao",
+    "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+    "overview": {
+      "intro": "Identificação civil, identificação criminal e coleta de perfil genético não são sinônimos. Comece pela regra geral e só então examine as exceções legais.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Separar identificação civil e criminal, documentos e hipóteses legais.",
+        "Estudar procedimentos, cautelas de exposição e identificação genética.",
+        "Comparar banco de perfis, sigilo, acesso, cadeia de custódia e exclusão."
+      ],
+      "alerts": "A Lei 15.295/2025 foi publicada em 22/12/2025 e previu trinta dias de vacância, já transcorridos na revisão. Incluiu o inciso VII do art. 3º e modificou o art. 5º, inclusive para hipóteses de flagrante dos crimes indicados. O texto antigo “poderá incluir” não representa sozinho a regra atual.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 13,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 13
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "3906b370-4f54-55b1-8973-f87badc8444d",
+    "slug": "terrorismo",
+    "title": "Lei 13.260/2016 — Lei Antiterrorismo",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+    "source_sha256": "8883b767742a3bac2b918312d688cf0a700ea2c3749dc98b1cb2ab772e203d45",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-terrorismo-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "Terrorismo tem elementos legais específicos. Repercussão social, violência ou protesto não substituem a análise de atos, motivos e finalidade previstos na lei.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Identificar motivação, finalidade, atos e exclusões legais.",
+        "Comparar organização, preparação, financiamento e penas.",
+        "Estudar competências, investigação, medidas patrimoniais e procedimento."
+      ],
+      "alerts": "Texto oficial conferido. Não se confunde organização terrorista com qualquer associação de pessoas, nem se utiliza a lei para criminalizar automaticamente manifestações constitucionalmente protegidas. O módulo não esgota financiamento e medidas patrimoniais.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 17,
+      "excluded_units": 3,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 17
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+    "slug": "trafico-pessoas",
+    "title": "Lei 13.344/2016 — Tráfico de Pessoas",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+    "source_sha256": "d600dcaa4b9fd44e77195327c33d2bf0d8e92a6bd1532e08ec4879e36715a618",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-trafico-pessoas-revisao",
+    "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+    "overview": {
+      "intro": "O tráfico de pessoas combina condutas, meios e finalidades determinados. Não exige sempre passagem de fronteira e não se limita à exploração sexual.",
+      "contest": "PCDF — Delegado — Edital 2026 — crimes contra a pessoa",
+      "objectives": [
+        "Estudar prevenção, repressão, cooperação e proteção das vítimas.",
+        "Reconstruir condutas, meios, finalidades, aumentos e redução do CP 149-A.",
+        "Separar regras do diploma modificador e redação atual dos códigos alterados."
+      ],
+      "alerts": "O conteúdo penal foi confrontado com o Código Penal compilado, evitando usar apenas o texto modificador de 2016 como fonte permanente. O vínculo é com crimes contra a pessoa do edital PCDF; não se afirma que a Lei 13.344 seja nominalmente enumerada ali.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 18,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO I — DOS PRINCÍPIOS E DAS DIRETRIZES",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO II — DA PREVENÇÃO AO TRÁFICO DE PESSOAS",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO III — DA REPRESSÃO AO TRÁFICO DE PESSOAS",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO IV — DA PROTEÇÃO E DA ASSISTÊNCIA ÀS VÍTIMAS",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO V — DISPOSIÇÕES PROCESSUAIS",
+          "count": 7
+        },
+        {
+          "title": "CAPÍTULO VI — DAS CAMPANHAS RELACIONADAS AO ENFRENTAMENTO AO TRÁFICO DE PESSOAS",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO VII — DISPOSIÇÕES FINAIS",
+          "count": 2
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "e921665c-1b68-5469-b020-7aeb10cb1951",
+    "slug": "testemunhas",
+    "title": "Lei 9.807/1999 — Proteção a Vítimas e Testemunhas",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+    "source_sha256": "40fc886cf750f8458c346d829d0b681f98f610cc0ca432f34ec40cbd2cb2730f",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-testemunhas-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "A proteção considera ameaça, dificuldade de prevenção e importância da prova. Medidas de segurança, extensão familiar e alteração de nome possuem condições diferentes.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Identificar beneficiários, requisitos, admissão e limites de proteção.",
+        "Comparar medidas, duração, exclusão e alteração excepcional de nome.",
+        "Separar colaboração, perdão judicial, redução e proteção do colaborador."
+      ],
+      "alerts": "Texto oficial conferido. A proteção de réus colaboradores possui capítulo próprio; não confunda o programa de vítimas/testemunhas com qualquer benefício de colaboração premiada. O módulo não afirma perdão judicial automático.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 22,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "CAPÍTULO I — DA PROTEÇÃO ESPECIAL A VÍTIMAS E A TESTEMUNHAS",
+          "count": 12
+        },
+        {
+          "title": "CAPÍTULO II — DA PROTEÇÃO AOS RÉUS COLABORADORES",
+          "count": 10
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "68052bc9-35e9-502b-ae8d-a27703aa3dec",
+    "slug": "racismo",
+    "title": "Lei 7.716/1989 — Crimes de Racismo e Preconceito",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+    "source_sha256": "e756ef7105fedd3f897b117a3ea2117d726f988c7f54c64419e1cf6afe3a8b75",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-racismo-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "Compare discriminação e ofensa individual pelos elementos de cada dispositivo. O contexto de brincadeira não cria uma imunidade penal para condutas racistas.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Identificar âmbito da lei e comparar as condutas dos tipos penais.",
+        "Separar injúria racial, discriminação, impedimentos de acesso e divulgação.",
+        "Estudar majorantes, contextos especiais e efeitos da condenação."
+      ],
+      "alerts": "A Lei 14.532/2023 introduziu o art. 2º-A na Lei 7.716 e as regras dos arts. 20-A e 20-B. O módulo não atribui automaticamente a todo fundamento religioso o enquadramento do art. 2º-A; outras normas e a jurisprudência exigem análise específica.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 23,
+      "excluded_units": 4,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 23
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+    "slug": "idosa",
+    "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+    "source_sha256": "3ae065416958cf50488597865b491d5dd51ce47dc74ed29d6123875d7b793cfb",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-idosa-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "A proteção começa aos sessenta anos. Discriminação, omissão de assistência, desvio de rendimentos e retenção de documentos possuem elementos próprios.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Estudar direitos, prioridades, políticas e medidas de proteção.",
+        "Organizar atendimento, entidades, fiscalização e acesso à Justiça.",
+        "Comparar crimes, elementos especiais, penas e exceções."
+      ],
+      "alerts": "A Lei 14.423/2022 atualizou a nomenclatura para Estatuto da Pessoa Idosa. Não conclua que o limite geral passou a sessenta e cinco anos. Penas e formas de crimes não tratados neste módulo devem ser consultadas separadamente no texto atual.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 117,
+      "excluded_units": 1,
+      "chapters": [
+        {
+          "title": "TÍTULO I Disposições Preliminares",
+          "count": 7
+        },
+        {
+          "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO I Do Direito à Vida",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO II — Do Direito à Liberdade, ao Respeito e à Dignidade",
+          "count": 1
+        },
+        {
+          "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO III Dos Alimentos",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO IV Do Direito à Saúde",
+          "count": 5
+        },
+        {
+          "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO V Da Educação, Cultura, Esporte e Lazer",
+          "count": 6
+        },
+        {
+          "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VI Da Profissionalização e do Trabalho",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VII Da Previdência Social",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VIII Da Assistência Social",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO IX Da Habitação",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO X Do Transporte",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO III Das Medidas de Proteção / CAPÍTULO I Das Disposições Gerais",
+          "count": 1
+        },
+        {
+          "title": "TÍTULO III Das Medidas de Proteção / CAPÍTULO II Das Medidas Específicas de Proteção",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO I Disposições Gerais",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO II Das Entidades de Atendimento ao Idoso",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO III Da Fiscalização das Entidades de Atendimento",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO IV Das Infrações Administrativas",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO V — Da Apuração Administrativa de Infração às Normas de Proteção à Pessoa Idosa (Redação dada pela Lei nº 14.423, de 2022)",
+          "count": 5
+        },
+        {
+          "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO VI Da Apuração Judicial de Irregularidades em Entidade de Atendimento",
+          "count": 5
+        },
+        {
+          "title": "TÍTULO V Do Acesso à Justiça / CAPÍTULO I Disposições Gerais",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO V Do Acesso à Justiça / CAPÍTULO II Do Ministério Público",
+          "count": 5
+        },
+        {
+          "title": "TÍTULO V Do Acesso à Justiça / CAPÍTULO III Da Proteção Judicial dos Interesses Difusos, Coletivos e Individuais Indisponíveis ou Homogêneos",
+          "count": 15
+        },
+        {
+          "title": "TÍTULO VI Dos Crimes / CAPÍTULO I Disposições Gerais",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO VI Dos Crimes / CAPÍTULO II Dos Crimes em Espécie",
+          "count": 14
+        },
+        {
+          "title": "TÍTULO VII Disposições Finais e Transitórias",
+          "count": 10
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+    "slug": "pcd",
+    "title": "Lei 13.146/2015 — Estatuto da Pessoa com Deficiência",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+    "source_sha256": "f26d770fc9214e83d2e6691ca1c3b982fba1e616cb1c044e8a5ddfc0a577ef89",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-pcd-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "Compare discriminação, apropriação de valores, abandono e uso de documento para vantagem indevida. A existência de curatela não autoriza violação dos direitos da pessoa.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Distinguir conceitos, barreiras, acessibilidade e avaliação da deficiência.",
+        "Estudar direitos em saúde, educação, trabalho, moradia, transporte e participação.",
+        "Organizar capacidade, curatela, decisão apoiada e acesso à Justiça.",
+        "Comparar os crimes e as alterações dos demais diplomas."
+      ],
+      "alerts": "A Lei 15.163/2025 alterou o art. 90, com nova pena básica e formas por lesão grave e morte. A revisão concentra-se no capítulo penal; não esgota acessibilidade, capacidade civil e curatela.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 127,
+      "excluded_units": 3,
+      "chapters": [
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO I — DISPOSIÇÕES PRELIMINARES / CAPÍTULO I — DISPOSIÇÕES GERAIS",
+          "count": 4
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO I — DISPOSIÇÕES PRELIMINARES / CAPÍTULO II — DA IGUALDADE E DA NÃO DISCRIMINAÇÃO",
+          "count": 5
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO I — DISPOSIÇÕES PRELIMINARES / CAPÍTULO II — DA IGUALDADE E DA NÃO DISCRIMINAÇÃO / Seção Única — Do Atendimento Prioritário",
+          "count": 1
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO I — DO DIREITO À VIDA",
+          "count": 4
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO II — DO DIREITO À HABILITAÇÃO E À REABILITAÇÃO",
+          "count": 4
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO III — DO DIREITO À SAÚDE",
+          "count": 9
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO IV — DO DIREITO À EDUCAÇÃO",
+          "count": 3
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO V — DO DIREITO À MORADIA",
+          "count": 3
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO VI — DO DIREITO AO TRABALHO / Seção I — Disposições Gerais",
+          "count": 2
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO VI — DO DIREITO AO TRABALHO / Seção II — Da Habilitação Profissional e Reabilitação Profissional",
+          "count": 1
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO VI — DO DIREITO AO TRABALHO / Seção III — Da Inclusão da Pessoa com Deficiência no Trabalho",
+          "count": 2
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO VII — DO DIREITO À ASSISTÊNCIA SOCIAL",
+          "count": 2
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO VIII — DO DIREITO À PREVIDÊNCIA SOCIAL",
+          "count": 1
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO IX — DO DIREITO À CULTURA, AO ESPORTE, AO TURISMO E AO LAZER",
+          "count": 4
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO II — DOS DIREITOS FUNDAMENTAIS / CAPÍTULO X — DO DIREITO AO TRANSPORTE E À MOBILIDADE",
+          "count": 7
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO III — DA ACESSIBILIDADE / CAPÍTULO I — DISPOSIÇÕES GERAIS",
+          "count": 11
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO III — DA ACESSIBILIDADE / CAPÍTULO II — DO ACESSO À INFORMAÇÃO E À COMUNICAÇÃO",
+          "count": 12
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO III — DA ACESSIBILIDADE / CAPÍTULO III — DA TECNOLOGIA ASSISTIVA",
+          "count": 2
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO III — DA ACESSIBILIDADE / CAPÍTULO IV — DO DIREITO À PARTICIPAÇÃO NA VIDA PÚBLICA E POLÍTICA",
+          "count": 1
+        },
+        {
+          "title": "LIVRO I — PARTE GERAL / TÍTULO IV — DA CIÊNCIA E TECNOLOGIA",
+          "count": 2
+        },
+        {
+          "title": "LIVRO II — PARTE ESPECIAL / TÍTULO I — DO ACESSO À JUSTIÇA / CAPÍTULO I — DISPOSIÇÕES GERAIS",
+          "count": 4
+        },
+        {
+          "title": "LIVRO II — PARTE ESPECIAL / TÍTULO I — DO ACESSO À JUSTIÇA / CAPÍTULO II — DO RECONHECIMENTO IGUAL PERANTE A LEI",
+          "count": 4
+        },
+        {
+          "title": "LIVRO II — PARTE ESPECIAL / TÍTULO II — DOS CRIMES E DAS INFRAÇÕES ADMINISTRATIVAS",
+          "count": 4
+        },
+        {
+          "title": "LIVRO II — PARTE ESPECIAL / TÍTULO III — DISPOSIÇÕES FINAIS E TRANSITÓRIAS",
+          "count": 35
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "95081c9c-54f2-5ba0-8e1c-1236f94d7aff",
+    "slug": "henry-borel",
+    "title": "Lei 14.344/2022 — Lei Henry Borel",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+    "source_sha256": "994df0a2b1c83700a2b74a95da17e2bb2479c07689bf064e1a5a34ce33661cf3",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-henry-borel-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "A proteção da criança e do adolescente envolve prevenção, afastamento em risco e responsabilização. Compare a lei com o ECA e evite copiar automaticamente regras da Lei Maria da Penha.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Identificar formas e âmbito da violência contra criança e adolescente.",
+        "Estudar atendimento, assistência, atuação policial e medidas protetivas.",
+        "Comparar descumprimento, omissões, deveres e alterações de outros diplomas."
+      ],
+      "alerts": "O texto atual foi conferido. Os dispositivos de proteção e suas penas devem ser estudados separadamente das modificações da Lei Maria da Penha: leis próximas não recebem, por analogia, a mesma redação ou sanção.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 34,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO I — DA VIOLÊNCIA DOMÉSTICA E FAMILIAR CONTRA A CRIANÇA E O ADOLESCENTE",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO II — DA ASSISTÊNCIA À CRIANÇA E AO ADOLESCENTE EM SITUAÇÃO DE VIOLÊNCIA DOMÉSTICA E FAMILIAR",
+          "count": 5
+        },
+        {
+          "title": "CAPÍTULO III — DO ATENDIMENTO PELA AUTORIDADE POLICIAL",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO IV — DOS PROCEDIMENTOS / Seção I — Das Medidas Protetivas de Urgência",
+          "count": 5
+        },
+        {
+          "title": "CAPÍTULO IV — DOS PROCEDIMENTOS / Seção II — Das Medidas Protetivas de Urgência que Obrigam o Agressor",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO IV — DOS PROCEDIMENTOS / Seção III — Das Medidas Protetivas de Urgência à Vítima",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO V — DO MINISTÉRIO PÚBLICO",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO VI — DA PROTEÇÃO AO NOTICIANTE OU DENUNCIANTE DE VIOLÊNCIA DOMÉSTICA E FAMILIAR",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO VII — DOS CRIMES",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO VIII — DISPOSIÇÕES FINAIS",
+          "count": 8
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+    "slug": "transito",
+    "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+    "source_sha256": "e416025318d609360d0993407cbf6a8b635db47e999769675e8fe11434b3d11c",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-transito-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "Infração administrativa e crime de trânsito não são equivalentes. Identifique os elementos penais e os meios de comprovação antes de concluir a partir de um único dado.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Organizar sistema, circulação, sinalização, habilitação e educação.",
+        "Estudar veículos, registro, licenciamento, infrações, penalidades e processo administrativo.",
+        "Comparar todos os crimes de trânsito, penas, elementos de perigo e efeitos.",
+        "Distinguir regras administrativas e penais mesmo quando relacionadas à mesma conduta."
+      ],
+      "alerts": "A Lei 14.599/2023 atualizou a redação do art. 301 para sinistros de trânsito. O módulo não pretende abranger todas as modificações administrativas do CTB nem todos os limites técnicos de medição regulamentados pelo Contran.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 365,
+      "excluded_units": 27,
+      "chapters": [
+        {
+          "title": "CAPÍTULO I DISPOSIÇÕES PRELIMINARES",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO II DO SISTEMA NACIONAL DE TRÂNSITO / Seção I Disposições Gerais",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO II DO SISTEMA NACIONAL DE TRÂNSITO / Seção II Da Composição e da Competência do Sistema Nacional de Trânsito",
+          "count": 21
+        },
+        {
+          "title": "CAPÍTULO III DAS NORMAS GERAIS DE CIRCULAÇÃO E CONDUTA",
+          "count": 40
+        },
+        {
+          "title": "CAPÍTULO III-A (Incluído Lei nº 12.619, de 2012) (Vigência) — DA CONDUÇÃO DE VEÍCULOS POR MOTORISTAS PROFISSIONAIS",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO IV DOS PEDESTRES E CONDUTORES DE VEÍCULOS NÃO MOTORIZADOS",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO V DO CIDADÃO",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO VI DA EDUCAÇÃO PARA O TRÂNSITO",
+          "count": 11
+        },
+        {
+          "title": "CAPÍTULO VII DA SINALIZAÇÃO DE TRÂNSITO",
+          "count": 12
+        },
+        {
+          "title": "CAPÍTULO VIII DA ENGENHARIA DE TRÁFEGO, DA OPERAÇÃO, DA FISCALIZAÇÃO E DO POLICIAMENTO OSTENSIVO DE TRÂNSITO",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO IX DOS VEÍCULOS / Seção I Disposições Gerais",
+          "count": 7
+        },
+        {
+          "title": "CAPÍTULO IX DOS VEÍCULOS / Seção II Da Segurança dos Veículos",
+          "count": 10
+        },
+        {
+          "title": "CAPÍTULO IX DOS VEÍCULOS / Seção III Da Identificação do Veículo",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO X DOS VEÍCULOS EM CIRCULAÇÃO INTERNACIONAL",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO XI DO REGISTRO DE VEÍCULOS",
+          "count": 12
+        },
+        {
+          "title": "CAPÍTULO XII DO LICENCIAMENTO",
+          "count": 7
+        },
+        {
+          "title": "CAPÍTULO XIII DA CONDUÇÃO DE ESCOLARES",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO XIII-A DA CONDUÇÃO DE MOTO-FRETE (Incluído pela Lei nº 12.009, de 2009)",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO XIV DA HABILITAÇÃO",
+          "count": 21
+        },
+        {
+          "title": "CAPÍTULO XV DAS INFRAÇÕES",
+          "count": 101
+        },
+        {
+          "title": "CAPÍTULO XVI DAS PENALIDADES",
+          "count": 12
+        },
+        {
+          "title": "CAPÍTULO XVII DAS MEDIDAS ADMINISTRATIVAS",
+          "count": 13
+        },
+        {
+          "title": "CAPÍTULO XVIII DO PROCESSO ADMINISTRATIVO / Seção I Da Autuação",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO XVIII DO PROCESSO ADMINISTRATIVO / Seção II Do Julgamento das Autuações e Penalidades",
+          "count": 13
+        },
+        {
+          "title": "CAPÍTULO XIX DOS CRIMES DE TRÂNSITO / Seção I Disposições Gerais",
+          "count": 9
+        },
+        {
+          "title": "CAPÍTULO XIX DOS CRIMES DE TRÂNSITO / Seção II Dos Crimes em Espécie",
+          "count": 13
+        },
+        {
+          "title": "CAPÍTULO XX DISPOSIÇÕES FINAIS E TRANSITÓRIAS",
+          "count": 30
+        },
+        {
+          "title": "Anexos / ANEXO I DOS CONCEITOS E DEFINIÇÕES",
+          "count": 1
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+    "slug": "lep",
+    "title": "Lei 7.210/1984 — Lei de Execução Penal",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+    "source_sha256": "d3bb988d8df11609f17cd99a405b0cd20dc84f7c579774696f8cb44bfa6b1045",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-lep-revisao",
+    "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+    "overview": {
+      "intro": "A execução efetiva a decisão criminal e busca integração social. Direitos não atingidos pela sentença permanecem protegidos; assistência e identificação genética têm limites próprios.",
+      "contest": "Polícia Federal — Delegado — Edital 1/2025 atualizado",
+      "objectives": [
+        "Organizar classificação, assistência, trabalho, direitos, deveres e disciplina.",
+        "Estudar órgãos da execução, estabelecimentos e execução das espécies de pena.",
+        "Comparar regimes, progressão, regressão, saídas, remição e incidentes.",
+        "Estudar medidas de segurança, procedimento e intertemporalidade das alterações."
+      ],
+      "alerts": "A Lei 15.295/2025 modificou o art. 9º-A; a Lei 15.410/2026 alterou medidas de proteção contra reiteração de violência doméstica na execução. Progressão, saída temporária e remição demandam módulos específicos e não são resumidas por frações universais aqui. Regras materiais de execução e alterações de frações exigem análise da data do fato e da lei mais benéfica. Não aplique retroativamente uma regra mais gravosa só porque ela aparece no texto atual.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 216,
+      "excluded_units": 3,
+      "chapters": [
+        {
+          "title": "TÍTULO I — Do Objeto e da Aplicação da Lei de Execução Penal",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO I — Da Classificação",
+          "count": 6
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção I — Disposições gerais",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção II — Da assistência material",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção III — Da assistência à saúde",
+          "count": 1
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção IV — Da assistência jurídica",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção V — Da assistência educacional",
+          "count": 7
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VI — Da assistência social",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VII — Da assistência religiosa",
+          "count": 1
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VIII — Da assistência ao egresso",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção I — Disposições Gerais",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção II — Do trabalho interno",
+          "count": 5
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção III — Do trabalho externo",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção I — Dos Deveres",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção II — Dos Direitos",
+          "count": 6
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / Subseção I — Disposições gerais",
+          "count": 5
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / Subseção II — Das faltas disciplinares",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO III — Das Sanções e das Recompensas",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO IV — Da Aplicação das Sanções",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO V — Do Procedimento Disciplinar",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO I — Disposições Gerais",
+          "count": 1
+        },
+        {
+          "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO II — Do Conselho Nacional de Política Criminal e Penitenciária",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO III — Do Juízo da Execução",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO IV — Do Ministério Público",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO V — Do Conselho Penitenciário",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção I — Do Departamento Penitenciário Nacional",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção II — Do Departamento Penitenciário Local",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção III — Da Direção e do Pessoal dos Estabelecimentos Penais",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VII — Do Patronato",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VIII — Do Conselho da Comunidade",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO IX — DA DEFENSORIA PÚBLICA (Incluído pela Lei nº 12.313, de 2010).",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO I — Disposições Gerais",
+          "count": 7
+        },
+        {
+          "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO II — Da Penitenciária",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO III — Da Colônia Agrícola, Industrial ou Similar",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO IV — Da Casa do Albergado",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO V — Do Centro de Observação",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO VI — Do Hospital de Custódia e Tratamento Psiquiátrico",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO VII — Da Cadeia Pública",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção I — Disposições Gerais",
+          "count": 5
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção II — Dos Regimes",
+          "count": 11
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção III — Das Autorizações de Saída / SUBSEÇÃO I — Da Permissão de Saída",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção III — Das Autorizações de Saída / SUBSEÇÃO II — Da Saída Temporária",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção IV — Da Remição",
+          "count": 5
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção V — Do Livramento Condicional",
+          "count": 16
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção VI — Da Monitoração Eletrônica (Incluído pela Lei nº 12.258, de 2010)",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção I — Disposições Gerais",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção II — Da Prestação de Serviços à Comunidade",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção III — Da Limitação de Fim de Semana",
+          "count": 3
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção IV — Da Interdição Temporária de Direitos",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO III — Da Suspensão Condicional",
+          "count": 8
+        },
+        {
+          "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO IV — Da Pena de Multa",
+          "count": 7
+        },
+        {
+          "title": "TÍTULO VI — Da Execução das Medidas de Segurança / CAPÍTULO I — Disposições Gerais",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO VI — Da Execução das Medidas de Segurança / CAPÍTULO II — Da Cessação da Periculosidade",
+          "count": 5
+        },
+        {
+          "title": "TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO I — Das Conversões",
+          "count": 5
+        },
+        {
+          "title": "TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO II — Do Excesso ou Desvio",
+          "count": 2
+        },
+        {
+          "title": "TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO III — Da Anistia e do Indulto",
+          "count": 7
+        },
+        {
+          "title": "TÍTULO VIII — Do Procedimento Judicial",
+          "count": 4
+        },
+        {
+          "title": "TÍTULO IX — Das Disposições Finais e Transitórias",
+          "count": 7
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+    "slug": "contravencoes",
+    "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+    "source_sha256": "01607d211c9fd841d8c7d8482eeeb0c5e13e3a7da3a53eb6cebd8358cc5b82cc",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-contravencoes-revisao",
+    "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+    "overview": {
+      "intro": "Contravenção é uma espécie de infração penal com regras próprias. Compare território, tentativa e espécies de pena com o regime dos crimes.",
+      "contest": "PCDF — Delegado — Edital 2026",
+      "objectives": [
+        "Separar regras gerais, territorialidade, tentativa e prisão simples.",
+        "Comparar todas as contravenções com redação ativa e seus elementos.",
+        "Identificar tipos revogados e diferenças frente aos crimes de legislação posterior."
+      ],
+      "alerts": "As regras gerais indicadas foram conferidas no texto atual. Alguns tipos da parte especial foram revogados ou substituídos ao longo do tempo; o módulo não republica contravenções antigas nem valida todo o catálogo original de 1941.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 66,
+      "excluded_units": 6,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 17
+        },
+        {
+          "title": "CAPÍTULO I — DAS CONTRAVENÇÕES REFERENTES À PESSOA",
+          "count": 9
+        },
+        {
+          "title": "CAPÍTULO III — DAS CONTRAVENÇÕES REFERENTES À INCOLUMIDADE PÚBLICA",
+          "count": 11
+        },
+        {
+          "title": "CAPíTULO IV — DAS CONTRAVENÇÕES REFERENTES À PAZ PÚBLICA",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO V — DAS CONTRAVENÇÕES REFERENTES À FÉ PÚBLICA",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO VI — DAS CONTRAVENÇÕES RELATIVAS À ORGANIZAÇÃO DO TRABALHO",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO VII — DAS CONTRAVENÇÕES RELATIVAS À POLÍCIA DE COSTUMES",
+          "count": 13
+        },
+        {
+          "title": "CAPÍTULO VIII — DAS CONTRAVENÇÕES REFERENTES À ADMINISTRAÇÃO PÚBLICA",
+          "count": 6
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "05048b0d-4611-5e5e-b10d-96d248e3bcb1",
+    "slug": "seguranca-privada",
+    "title": "Lei 14.967/2024 — Estatuto da Segurança Privada",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+    "source_sha256": "d931eda462ca6c2beb99815eb5e8c33eeec34251b877d869c123b615cd308d15",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-seguranca-privada-revisao",
+    "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+    "overview": {
+      "intro": "O novo estatuto disciplina prestação privada e competências de controle. Autorização de funcionamento, renovação e adequação são etapas distintas.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Organizar serviços, prestadores, serviço orgânico e atividades autorizadas.",
+        "Estudar habilitação, profissionais, equipamentos, autorização e fiscalização.",
+        "Comparar infrações, sanções, disposições finais e transição do estatuto anterior."
+      ],
+      "alerts": "A Lei 14.967 foi publicada e entrou em vigor em 10/09/2024, substituindo o núcleo da Lei 7.102/1983. O módulo trata das regras legais; formulários, requisitos operacionais e portarias de execução exigem consulta específica ao regulamento atual.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 72,
+      "excluded_units": 1,
+      "chapters": [
+        {
+          "title": "CAPÍTULO I — DISPOSIÇÕES GERAIS",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO II — DO SERVIÇO DE SEGURANÇA PRIVADA",
+          "count": 10
+        },
+        {
+          "title": "CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção I — Disposições Gerais",
+          "count": 8
+        },
+        {
+          "title": "CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção II — Da Empresa de Serviços de Segurança Privada",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção III — Da Escola de Formação de Profissional de Segurança Privada",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção IV — Da Empresa de Monitoramento de Sistemas Eletrônicos de Segurança",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO IV — DOS SERVIÇOS ORGÂNICOS DE SEGURANÇA PRIVADA",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO V — DOS PROFISSIONAIS DE SEGURANÇA PRIVADA",
+          "count": 5
+        },
+        {
+          "title": "CAPÍTULO VI — DA SEGURANÇA PRIVADA EM INSTITUIÇÕES FINANCEIRAS",
+          "count": 9
+        },
+        {
+          "title": "CAPÍTULO VII — DA FISCALIZAÇÃO E CONTROLE",
+          "count": 5
+        },
+        {
+          "title": "CAPÍTULO VIII — DAS INFRAÇÕES ADMINISTRATIVAS",
+          "count": 5
+        },
+        {
+          "title": "CAPÍTULO IX — DO CRIME",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO X — DAS TAXAS",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO XI — DISPOSIÇÕES FINAIS",
+          "count": 18
+        },
+        {
+          "title": "Anexos / ANEXO",
+          "count": 1
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "4973173f-05b4-51e2-95f2-5d206eda970c",
+    "slug": "quimicos",
+    "title": "Lei 10.357/2001 — Controle de Produtos Químicos",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+    "source_sha256": "d2be91a3dbb0aa1a29e6e3858ba15804c44dee1cc5d68c8eb28e4426dc7d8525",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-quimicos-revisao",
+    "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+    "overview": {
+      "intro": "A lei controla atividades com produtos que podem servir de insumo para drogas. Lista controlada, cadastro e deveres de comunicação não são a mesma exigência.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Identificar atividades, produtos sujeitos a controle e competência de fiscalização.",
+        "Comparar cadastro, licença, autorização, comunicação e documentos.",
+        "Estudar infrações, sanções e necessidade de consultar os atos regulamentares vigentes."
+      ],
+      "alerts": "Texto legal conferido. Como o art. 2º prevê atualização por portaria, o módulo não reproduz uma lista antiga de substâncias nem fornece concentrações operacionais sem revisão do ato regulamentar correspondente.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 23,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 23
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "673cfeb2-89ea-53e4-a747-a5c06369c7fc",
+    "slug": "migracao",
+    "title": "Lei 13.445/2017 — Lei de Migração",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm",
+    "source_sha256": "4aff52701fc9af17cb6f6011339639e2de76c0fbbfd3e990a385f91dc801e2b8",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-migracao-revisao",
+    "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+    "overview": {
+      "intro": "Repatriação, deportação e expulsão possuem fundamentos distintos. Compare situação de ingresso, irregularidade da permanência, condenação e garantias do procedimento.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Organizar princípios, vistos, documentação e autorização de residência.",
+        "Estudar impedimento, repatriação, deportação e expulsão e suas garantias.",
+        "Comparar nacionalidade, naturalização, cooperação e responsabilização administrativa."
+      ],
+      "alerts": "A Lei de Migração substituiu o antigo Estatuto do Estrangeiro. A não criminalização da migração não impede apuração de outros crimes; tampouco autoriza medidas coletivas de retirada. O módulo não esgota extradição, refúgio e naturalização.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 123,
+      "excluded_units": 4,
+      "chapters": [
+        {
+          "title": "CAPÍTULO I — DISPOSIÇÕES PRELIMINARES / Seção I — Disposições Gerais",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO I — DISPOSIÇÕES PRELIMINARES / Seção II — Dos Princípios e das Garantias",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO II — DA SITUAÇÃO DOCUMENTAL DO MIGRANTE E DO VISITANTE / Seção I — Dos Documentos de Viagem",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO II — DA SITUAÇÃO DOCUMENTAL DO MIGRANTE E DO VISITANTE / Seção II Dos Vistos / Subseção I Disposições Gerais",
+          "count": 6
+        },
+        {
+          "title": "CAPÍTULO II — DA SITUAÇÃO DOCUMENTAL DO MIGRANTE E DO VISITANTE / Seção II Dos Vistos / Subseção II Dos Tipos de Visto",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO II — DA SITUAÇÃO DOCUMENTAL DO MIGRANTE E DO VISITANTE / Seção II Dos Vistos / Subseção III Do Visto de Visita",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO II — DA SITUAÇÃO DOCUMENTAL DO MIGRANTE E DO VISITANTE / Seção II Dos Vistos / Subseção IV Do Visto Temporário",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO II — DA SITUAÇÃO DOCUMENTAL DO MIGRANTE E DO VISITANTE / Seção II Dos Vistos / Subseção V Dos Vistos Diplomático, Oficial e de Cortesia",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO II — DA SITUAÇÃO DOCUMENTAL DO MIGRANTE E DO VISITANTE / Seção III Do Registro e da Identificação Civil do Imigrante e dos Detentores de Vistos Diplomático, Oficial e de Cortesia",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO III DA CONDIÇÃO JURÍDICA DO MIGRANTE E DO VISITANTE / Seção I Do Residente Fronteiriço",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO III DA CONDIÇÃO JURÍDICA DO MIGRANTE E DO VISITANTE / Seção II Da Proteção do Apátrida e da Redução da Apatridia",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO III DA CONDIÇÃO JURÍDICA DO MIGRANTE E DO VISITANTE / Seção III Do Asilado",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO III DA CONDIÇÃO JURÍDICA DO MIGRANTE E DO VISITANTE / Seção IV Da Autorização de Residência",
+          "count": 7
+        },
+        {
+          "title": "CAPÍTULO III DA CONDIÇÃO JURÍDICA DO MIGRANTE E DO VISITANTE / Seção V Da Reunião Familiar",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO IV DA ENTRADA E DA SAÍDA DO TERRITÓRIO NACIONAL / Seção I Da Fiscalização Marítima, Aeroportuária e de Fronteira",
+          "count": 6
+        },
+        {
+          "title": "CAPÍTULO IV DA ENTRADA E DA SAÍDA DO TERRITÓRIO NACIONAL / Seção II Do Impedimento de Ingresso",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO V DAS MEDIDAS DE RETIRADA COMPULSÓRIA / Seção I Disposições Gerais",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO V DAS MEDIDAS DE RETIRADA COMPULSÓRIA / Seção II Da Repatriação",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO V DAS MEDIDAS DE RETIRADA COMPULSÓRIA / Seção III Da Deportação",
+          "count": 4
+        },
+        {
+          "title": "CAPÍTULO V DAS MEDIDAS DE RETIRADA COMPULSÓRIA / Seção IV Da Expulsão",
+          "count": 7
+        },
+        {
+          "title": "CAPÍTULO V DAS MEDIDAS DE RETIRADA COMPULSÓRIA / Seção V Das Vedações",
+          "count": 2
+        },
+        {
+          "title": "CAPÍTULO VI DA OPÇÃO DE NACIONALIDADE E DA NATURALIZAÇÃO / Seção I Da Opção de Nacionalidade",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO VI DA OPÇÃO DE NACIONALIDADE E DA NATURALIZAÇÃO / Seção II Das Condições da Naturalização",
+          "count": 9
+        },
+        {
+          "title": "CAPÍTULO VI DA OPÇÃO DE NACIONALIDADE E DA NATURALIZAÇÃO / Seção III Dos Efeitos da Naturalização",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO VI DA OPÇÃO DE NACIONALIDADE E DA NATURALIZAÇÃO / Seção IV Da Perda da Nacionalidade",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO VI DA OPÇÃO DE NACIONALIDADE E DA NATURALIZAÇÃO / Seção V Da Reaquisição da Nacionalidade",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO VII DO EMIGRANTE / Seção I Das Políticas Públicas para os Emigrantes",
+          "count": 1
+        },
+        {
+          "title": "CAPÍTULO VII DO EMIGRANTE / Seção II Dos Direitos do Emigrante",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO VIII DAS MEDIDAS DE COOPERAÇÃO / Seção I Da Extradição",
+          "count": 19
+        },
+        {
+          "title": "CAPÍTULO VIII DAS MEDIDAS DE COOPERAÇÃO / Seção II Da Transferência de Execução da Pena",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO VIII DAS MEDIDAS DE COOPERAÇÃO / Seção III Da Transferência de Pessoa Condenada",
+          "count": 3
+        },
+        {
+          "title": "CAPÍTULO IX DAS INFRAÇÕES E DAS PENALIDADES ADMINISTRATIVAS",
+          "count": 5
+        },
+        {
+          "title": "CAPÍTULO X DISPOSIÇÕES FINAIS E TRANSITÓRIAS",
+          "count": 14
+        },
+        {
+          "title": "Anexos / ANEXO",
+          "count": 1
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "49804a78-208e-5414-a7ca-d26eaf5b5421",
+    "slug": "pf-interestadual",
+    "title": "Lei 10.446/2002 — Investigações de repercussão interestadual ou internacional",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10446.htm",
+    "source_sha256": "5fb4c0ed93e9e7275ed0b7458746a147ca6307a3862ca45d34b452ae39423d98",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-pf-interestadual-revisao",
+    "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+    "overview": {
+      "intro": "Atribuição de investigação não se confunde com competência de julgamento. Repercussão interestadual ou internacional e necessidade de repressão uniforme orientam a aplicação da lei.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Identificar o requisito de repercussão interestadual ou internacional e repressão uniforme.",
+        "Estudar todas as hipóteses, possibilidade ministerial e preservação das atribuições de outras polícias."
+      ],
+      "alerts": "A Lei 14.967/2024 alterou incisos do art. 1º, inclusive cargas com produtos controlados e crimes contra empresas especializadas em transporte de valores. O módulo utiliza o texto atual, sem confundir investigação federal com federalização automática do julgamento.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 2,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 2
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "53016afd-0056-55c9-8394-a354e0ae10dc",
+    "slug": "icn",
+    "title": "Lei 13.444/2017 — Identificação Civil Nacional",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+    "source_sha256": "43e0b829a30b0d4fae8839fdf5d7ec7514892b2e59977fd22d6b83b9327521ca",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-icn-revisao",
+    "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+    "overview": {
+      "intro": "Distinga a identificação como infraestrutura de dados, o documento e o número usado para identificar o cidadão. Gestão, acesso e comercialização têm regimes diferentes.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Distinguir finalidade, bases, gestão, acesso e conferência biométrica.",
+        "Organizar comitê, recomendações e DNI, sem confundi-los com CIN e CPF."
+      ],
+      "alerts": "A Lei 14.534/2023 modificou a identificação numérica, inclusive novos DNIs. A diferença entre ICN, DNI e CIN aparece como ponto de revisão: siglas próximas não designam necessariamente o mesmo objeto.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 13,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 13
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "f793312f-4637-5b43-a0d9-eec28b379ac0",
+    "slug": "cpf",
+    "title": "Lei 14.534/2023 — CPF como identificador único",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+    "source_sha256": "f840330b530470fad33a6b82f65dccde19117cd04ad0d31139ff8bc4b1f35889",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-cpf-revisao",
+    "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+    "overview": {
+      "intro": "Distinga o número de identificação, o documento e a autenticação. A centralidade do CPF nos serviços públicos não o transforma em senha nem impõe login por CPF a toda plataforma privada.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Organizar abrangência do identificador e alterações em cada diploma.",
+        "Separar identificação numérica, documentos, autenticação e prazos de implementação."
+      ],
+      "alerts": "A lei de 2023 alterou a Lei 7.116 e a Lei 13.444. Leia o texto combinado: CPF, documento de identidade e credencial de autenticação têm funções diferentes.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 7,
+      "excluded_units": 2,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 7
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "cba6a2cf-5f5d-5b17-83a0-0fe524fd458f",
+    "slug": "identidade",
+    "title": "Lei 7.116/1983 — Carteira de Identidade",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+    "source_sha256": "efbd0cd86815037558c3f3e333ded1a33dd31197de817c80a4c0bbb671132846",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-identidade-revisao",
+    "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+    "overview": {
+      "intro": "Revise validade nacional, gratuidade inicial e identificação numérica atual. O documento comprova os dados que contém; não substitui provas de fatos que nele não constam.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Estudar validade, emissão, dados, comprovação e gratuidade inicial.",
+        "Integrar o CPF e o regime de transição regulamentar."
+      ],
+      "alerts": "A Lei 14.534/2023 alterou o art. 3º e adotou o CPF nas novas carteiras. A transição dos modelos antigos deve ser lida também no Decreto 10.977; não se conclui que todos os documentos anteriores perderam validade imediatamente.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 13,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 13
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "01439ef7-5c42-5de3-a83a-cda0ad2d3cd8",
+    "slug": "cin",
+    "title": "Decreto 10.977/2022 — Carteira de Identidade Nacional",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+    "source_sha256": "3f289220faa7af7ccc985ce71d385a00d80598a2f5b0c34ca0fa597048d8786b",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-cin-revisao",
+    "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+    "overview": {
+      "intro": "Organize a emissão da CIN e sua validade por idade. A forma digital complementa o processo de expedição; não é um cadastro independente da emissão física.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Estudar emissão, modelos físico e digital, dados e procedimentos.",
+        "Comparar validade por faixa etária, perda de validade e modelos antigos.",
+        "Organizar interoperabilidade, responsabilidades e transição."
+      ],
+      "alerts": "O Decreto 11.797/2023 alterou o regime de emissão e sua integração. Observe os prazos próprios para documentos novos e a regra de transição dos antigos, sem confundir as datas de referência.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 30,
+      "excluded_units": 1,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 27
+        },
+        {
+          "title": "Anexos / ANEXO I",
+          "count": 1
+        },
+        {
+          "title": "Anexos / ANEXO II",
+          "count": 1
+        },
+        {
+          "title": "Anexos / ANEXO III",
+          "count": 1
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "9839789e-e071-5d2e-81ab-0a5aa4b58104",
+    "slug": "sic",
+    "title": "Decreto 11.797/2023 — Serviço de Identificação do Cidadão",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+    "source_sha256": "c80fe72bc294ba666c1a867c8b04344b7dafe784468a5c74baf2f4192fc40a39",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-sic-revisao",
+    "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+    "overview": {
+      "intro": "O SIC organiza procedimentos e integração de identificação. Diferencie serviço, documento e chave de vinculação dos dados, observando as exceções e a proteção de informações pessoais.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Organizar finalidades, obrigatoriedade, faculdades e proteção de dados.",
+        "Estudar governança, Cefic, grupos técnicos e órgãos executores.",
+        "Comparar compartilhamento, cadastros, integração e implementação."
+      ],
+      "alerts": "O decreto de 2023 organiza o SIC e altera o Decreto 10.977. SIC, ICN e CIN se relacionam, mas não são expressões intercambiáveis; a integração permanece sujeita à proteção de dados.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 29,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 29
+        }
+      ],
+      "jurisprudence": []
+    }
+  },
+  {
+    "id": "f2ac465d-7a87-561f-9e48-7415e3b1afce",
+    "slug": "budapeste",
+    "title": "Decreto 11.491/2023 — Convenção de Budapeste",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11491.htm",
+    "source_sha256": "e8d53fa93454ff882f1d25124b4ded9cec14383d75fb26effb4603ba110ddbb1",
+    "checked_at": "2026-10-05T01:54:44.443514+00:00",
+    "material_slug": "legislacao-budapeste-revisao",
+    "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+    "overview": {
+      "intro": "Estude os instrumentos de investigação e cooperação sobre crime cibernético, com seus limites. Preservar dados para evitar perda não equivale automaticamente a autorizar acesso ao seu conteúdo.",
+      "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+      "objectives": [
+        "Estudar decreto de promulgação, definições e todos os artigos da Convenção anexa.",
+        "Comparar delitos materiais, poderes processuais, preservação, acesso e garantias.",
+        "Organizar jurisdição, cooperação, extradição, assistência e rede 24/7.",
+        "Estudar reservas, vigência, efeitos e demais disposições finais."
+      ],
+      "alerts": "O decreto brasileiro é de 2023 e o tema consta expressamente do edital PF 2025 indicado. O módulo apresenta poderes e salvaguardas selecionados; não transforma a Convenção em autorização genérica para interceptar ou acessar dados.",
+      "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões.",
+      "current_units": 51,
+      "excluded_units": 0,
+      "chapters": [
+        {
+          "title": "Disposições iniciais",
+          "count": 3
+        },
+        {
+          "title": "Capítulo I - Terminologia",
+          "count": 1
+        },
+        {
+          "title": "Capítulo II - Medidas a serem adotadas nas jurisdições nacionais / Seção 1 - Direito Penal / Título 1 - Crimes contra a confidencialidade, integridade e disponibilidade de dados e sistemas de computador",
+          "count": 5
+        },
+        {
+          "title": "Capítulo II - Medidas a serem adotadas nas jurisdições nacionais / Seção 1 - Direito Penal / Título 2 - Crimes informáticos",
+          "count": 2
+        },
+        {
+          "title": "Capítulo II - Medidas a serem adotadas nas jurisdições nacionais / Seção 1 - Direito Penal / Título 3 - Crimes relacionados ao conteúdo da informação",
+          "count": 1
+        },
+        {
+          "title": "Capítulo II - Medidas a serem adotadas nas jurisdições nacionais / Seção 1 - Direito Penal / Título 4 - Violação de direitos autorais e de direitos correlatos",
+          "count": 1
+        },
+        {
+          "title": "Capítulo II - Medidas a serem adotadas nas jurisdições nacionais / Seção 1 - Direito Penal / Título 5 - Outras formas de responsabilidade e sanções",
+          "count": 3
+        },
+        {
+          "title": "Capítulo II - Medidas a serem adotadas nas jurisdições nacionais / Seção 2 - Direito Processual / Título 1 - Disposições gerais",
+          "count": 2
+        },
+        {
+          "title": "Capítulo II - Medidas a serem adotadas nas jurisdições nacionais / Seção 2 - Direito Processual / Título 2 - Preservação expedita de dados armazenados em computador",
+          "count": 2
+        },
+        {
+          "title": "Capítulo II - Medidas a serem adotadas nas jurisdições nacionais / Seção 2 - Direito Processual / Título 3 - Ordem de exibição",
+          "count": 1
+        },
+        {
+          "title": "Capítulo II - Medidas a serem adotadas nas jurisdições nacionais / Seção 2 - Direito Processual / Título 4 - Busca e apreensão de dados de computador",
+          "count": 1
+        },
+        {
+          "title": "Capítulo II - Medidas a serem adotadas nas jurisdições nacionais / Seção 2 - Direito Processual / Título 5 - Obtenção de dados de computador em tempo real",
+          "count": 2
+        },
+        {
+          "title": "Capítulo II - Medidas a serem adotadas nas jurisdições nacionais / Seção 3 - Jurisdição",
+          "count": 1
+        },
+        {
+          "title": "Capítulo III - Cooperação internacional / Seção 1 - Princípios gerais / Título 1 - Princípios gerais da cooperação internacional",
+          "count": 1
+        },
+        {
+          "title": "Capítulo III - Cooperação internacional / Seção 1 - Princípios gerais / Título 2 - Princípios relativos à extradição",
+          "count": 1
+        },
+        {
+          "title": "Capítulo III - Cooperação internacional / Seção 1 - Princípios gerais / Título 3 - Princípios gerais da assistência mútua",
+          "count": 2
+        },
+        {
+          "title": "Capítulo III - Cooperação internacional / Seção 1 - Princípios gerais / Título 4 - Procedimentos relativos a pedidos de assistência mútua na falta de acordos internacionais aplicáveis",
+          "count": 2
+        },
+        {
+          "title": "Capítulo III - Cooperação internacional / Seção 2 - Disposições específicas / Título 1 - Assistência mútua em relação a medidas cautelares",
+          "count": 2
+        },
+        {
+          "title": "Capítulo III - Cooperação internacional / Seção 2 - Disposições específicas / Título 2 - Assistência mútua em relação a poderes investigativos",
+          "count": 4
+        },
+        {
+          "title": "Capítulo III - Cooperação internacional / Seção 2 - Disposições específicas / Título 3 - Sistema de plantão 24 por 7",
+          "count": 1
+        },
+        {
+          "title": "Capítulo IV - Disposições finais",
+          "count": 13
+        }
+      ],
+      "jurisprudence": []
+    }
+  }
+]

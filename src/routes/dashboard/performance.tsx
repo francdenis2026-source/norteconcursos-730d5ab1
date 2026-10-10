@@ -15,12 +15,20 @@ import {
   Activity,
   AlertTriangle,
   BarChart3,
+  BookOpenCheck,
+  Brain,
   CheckCircle2,
+  Compass,
   FileStack,
   Flag,
+  Flame,
+  Gauge,
   Landmark,
+  Lightbulb,
+  ListChecks,
   Sparkles,
   Target,
+  Trophy,
   TrendingUp,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -32,6 +40,8 @@ import { LockedState } from "@/components/dashboard/PageHero";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { StudyTimeCard } from "@/components/dashboard/StudyTimeCard";
+import { usePerformanceOverview, type SubjectAccuracy } from "@/hooks/usePerformanceOverview";
+import { useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
 
 export const Route = createFileRoute("/dashboard/performance")({
   component: PerformancePage,
@@ -114,6 +124,9 @@ function buildSubjectStats(
 
 function PerformancePage() {
   const { user, isLoading: authLoading } = useAuthStatus();
+  const real = !!user && user.id !== "demo-user";
+  const { data: overview, loading: overviewLoading } = usePerformanceOverview(user?.id, real);
+  const { data: libraryMaterials } = useStudyMaterialList(real);
   const [groups, setGroups] = React.useState<ExamGroup[]>([]);
   const [subjectByExam, setSubjectByExam] = React.useState<Map<string, Record<string, string>>>(
     new Map(),
@@ -236,13 +249,6 @@ function PerformancePage() {
       />
     );
   if (errorMessage) return <EmptyState title="Falha ao carregar" description={errorMessage} />;
-  if (!groups.length)
-    return (
-      <EmptyState
-        title="Ainda não há provas suficientes"
-        description="Envie ao menos uma prova em Minhas Provas para começar seu raio-X de desempenho."
-      />
-    );
 
   const totalCorrect = groups.reduce((sum, g) => sum + metric(g.correct), 0);
   const totalWrong = groups.reduce((sum, g) => sum + metric(g.wrong), 0);
@@ -280,14 +286,30 @@ function PerformancePage() {
         weakestSubject={weakSubjects[0]?.subject ?? globalSubjects[0]?.subject ?? null}
       />
 
-      <Tabs defaultValue="geral" className="space-y-6">
+      <Tabs defaultValue="x360" className="space-y-6">
         <TabsList className="bg-muted/50 p-1">
-          <TabsTrigger value="geral">Visão geral</TabsTrigger>
+          <TabsTrigger value="x360">Visão 360°</TabsTrigger>
+          <TabsTrigger value="geral">Provas enviadas</TabsTrigger>
           <TabsTrigger value="materias">Raio-X por matéria</TabsTrigger>
           <TabsTrigger value="federal">Nível federal</TabsTrigger>
         </TabsList>
 
+        <TabsContent value="x360" className="space-y-6">
+          <PerformanceOverviewTab
+            userId={user.id}
+            overview={overview}
+            loading={overviewLoading}
+            libraryMaterials={libraryMaterials ?? []}
+          />
+        </TabsContent>
+
         <TabsContent value="geral" className="space-y-6">
+          {groups.length === 0 && (
+            <div className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground">
+              Envie ao menos uma prova em Minhas Provas para ver o raio-X por prova e por matéria
+              aqui.
+            </div>
+          )}
           <StudyTimeCard userId={user.id} />
           <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             <MetricCard
@@ -319,61 +341,63 @@ function PerformancePage() {
             />
           </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-lg">
-                <TrendingUp className="h-5 w-5 text-emerald-600" />
-                Aproveitamento por prova
-              </CardTitle>
-              <CardDescription>Acertos líquidos de cada concurso já registrado.</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              {[...groups]
-                .sort(
-                  (a, b) =>
-                    a.contest_name.localeCompare(b.contest_name) ||
-                    a.contest_year.localeCompare(b.contest_year),
-                )
-                .map((group) => {
-                  const answered = metric(group.correct) + metric(group.wrong);
-                  const accuracy = answered
-                    ? Math.round((metric(group.correct) / answered) * 100)
-                    : 0;
-                  return (
-                    <div key={group.key} className="space-y-1.5 text-sm">
-                      <div className="flex items-baseline justify-between gap-3">
-                        <span className="min-w-0 font-semibold leading-snug">
-                          {group.contest_name} — {group.contest_year}
-                        </span>
-                        <span className="shrink-0 text-right text-xs text-muted-foreground">
-                          {metric(group.correct)}/{answered} ({accuracy}%)
-                        </span>
+          {groups.length > 0 && (
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <TrendingUp className="h-5 w-5 text-emerald-600" />
+                  Aproveitamento por prova
+                </CardTitle>
+                <CardDescription>Acertos líquidos de cada concurso já registrado.</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {[...groups]
+                  .sort(
+                    (a, b) =>
+                      a.contest_name.localeCompare(b.contest_name) ||
+                      a.contest_year.localeCompare(b.contest_year),
+                  )
+                  .map((group) => {
+                    const answered = metric(group.correct) + metric(group.wrong);
+                    const accuracy = answered
+                      ? Math.round((metric(group.correct) / answered) * 100)
+                      : 0;
+                    return (
+                      <div key={group.key} className="space-y-1.5 text-sm">
+                        <div className="flex items-baseline justify-between gap-3">
+                          <span className="min-w-0 font-semibold leading-snug">
+                            {group.contest_name} — {group.contest_year}
+                          </span>
+                          <span className="shrink-0 text-right text-xs text-muted-foreground">
+                            {metric(group.correct)}/{answered} ({accuracy}%)
+                          </span>
+                        </div>
+                        <div className="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
+                          <div
+                            className={cn(
+                              "h-full rounded-full",
+                              accuracy < 50
+                                ? "bg-rose-500"
+                                : accuracy < 75
+                                  ? "bg-amber-500"
+                                  : "bg-emerald-500",
+                            )}
+                            style={{ width: `${accuracy}%` }}
+                          />
+                        </div>
                       </div>
-                      <div className="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
-                        <div
-                          className={cn(
-                            "h-full rounded-full",
-                            accuracy < 50
-                              ? "bg-rose-500"
-                              : accuracy < 75
-                                ? "bg-amber-500"
-                                : "bg-emerald-500",
-                          )}
-                          style={{ width: `${accuracy}%` }}
-                        />
-                      </div>
-                    </div>
-                  );
-                })}
-            </CardContent>
-          </Card>
+                    );
+                  })}
+              </CardContent>
+            </Card>
+          )}
         </TabsContent>
 
         <TabsContent value="materias" className="space-y-6">
           {globalSubjects.length === 0 ? (
             <EmptyState
               title="Ainda sem matérias mapeadas"
-              description="Suas provas ainda não têm banco de questões oficial vinculado para detalhar por matéria — o aproveitamento geral continua disponível na aba Visão geral."
+              description="Suas provas ainda não têm banco de questões oficial vinculado para detalhar por matéria — o aproveitamento geral continua disponível na aba Provas enviadas."
             />
           ) : (
             <>
@@ -556,6 +580,358 @@ function HeroStat({
   );
 }
 
+function PerformanceOverviewTab({
+  userId,
+  overview,
+  loading,
+  libraryMaterials,
+}: {
+  userId: string;
+  overview: import("@/hooks/usePerformanceOverview").PerformanceOverview | null;
+  loading: boolean;
+  libraryMaterials: StudyMaterialSummary[];
+}) {
+  if (loading || !overview)
+    return (
+      <div className="p-8 text-center text-sm text-muted-foreground">
+        Reunindo tempo de estudo, questões, simulados e revisões…
+      </div>
+    );
+
+  const { trainer, simulators, errors, streak, rank, cutoffGaps } = overview;
+  const weakSubjects = trainer.bySubject.filter(
+    (s) => s.total >= MIN_ITEMS_FOR_SIGNAL && s.accuracy < WEAK_THRESHOLD,
+  );
+  const strongSubjects = trainer.bySubject.filter(
+    (s) => s.total >= MIN_ITEMS_FOR_SIGNAL && s.accuracy >= 80,
+  );
+  const libraryByDiscipline = new Map<string, StudyMaterialSummary>();
+  for (const item of libraryMaterials) {
+    const key = canonicalSubject(item.discipline);
+    if (!libraryByDiscipline.has(key)) libraryByDiscipline.set(key, item);
+  }
+
+  const suggestions = buildSuggestions({
+    weakSubjects,
+    errors,
+    simulators,
+    streak,
+    libraryByDiscipline,
+  });
+
+  return (
+    <div className="space-y-6">
+      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <MetricCard
+          icon={ListChecks}
+          label="Questões respondidas"
+          value={String(trainer.totalAnswered)}
+          detail={
+            trainer.totalAnswered ? `${trainer.accuracy}% de aproveitamento` : "Comece no Treinador"
+          }
+          tone="navy"
+        />
+        <MetricCard
+          icon={Brain}
+          label="Simulados realizados"
+          value={String(simulators.count)}
+          detail={
+            simulators.count
+              ? `melhor resultado: ${simulators.bestAccuracy}%`
+              : "Ainda nenhum simulado"
+          }
+          tone="amber"
+        />
+        <MetricCard
+          icon={Flame}
+          label="Sequência de estudo"
+          value={`${streak.current} dia${streak.current === 1 ? "" : "s"}`}
+          detail={`recorde: ${streak.longest} dia${streak.longest === 1 ? "" : "s"}`}
+          tone={streak.current > 0 ? "emerald" : "rose"}
+        />
+        <MetricCard
+          icon={Trophy}
+          label={rank ? rank.levelName : "Nível"}
+          value={rank ? `${rank.totalPoints} pts` : "—"}
+          detail={
+            rank
+              ? `${rank.stars} estrela${rank.stars === 1 ? "" : "s"}`
+              : "Responda questões para pontuar"
+          }
+          tone="navy"
+        />
+      </section>
+
+      <div className="grid gap-4 lg:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <Gauge className="h-5 w-5 text-primary" />
+              Pontos fortes e fracos no Treinador
+            </CardTitle>
+            <CardDescription>
+              A partir de todas as questões que você já respondeu, por matéria.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {trainer.bySubject.length === 0 ? (
+              <p className="text-sm text-muted-foreground">
+                Responda questões no Treinador para ver seus pontos fortes e fracos aqui.
+              </p>
+            ) : (
+              <>
+                {strongSubjects.length > 0 && (
+                  <div>
+                    <p className="mb-1.5 text-xs font-black uppercase tracking-wider text-emerald-700">
+                      Pontos fortes
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {strongSubjects.map((s) => (
+                        <Badge
+                          key={s.subject}
+                          variant="outline"
+                          className="border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300"
+                        >
+                          {s.subject} · {s.accuracy}%
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {weakSubjects.length > 0 && (
+                  <div>
+                    <p className="mb-1.5 text-xs font-black uppercase tracking-wider text-rose-700">
+                      Precisam de reforço
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {weakSubjects.map((s) => (
+                        <Badge
+                          key={s.subject}
+                          variant="outline"
+                          className="border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300"
+                        >
+                          {s.subject} · {s.accuracy}%
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                <SubjectTable subjects={trainer.bySubject} />
+              </>
+            )}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <BookOpenCheck className="h-5 w-5 text-primary" />
+              Caderno de erros
+            </CardTitle>
+            <CardDescription>Questões que você errou no Treinador, por status.</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            {errors.total === 0 ? (
+              <p className="text-sm text-muted-foreground">
+                Nenhum erro registrado ainda — ótimo sinal, ou você ainda não treinou.
+              </p>
+            ) : (
+              <div className="flex flex-wrap gap-3 text-sm">
+                <span className="flex items-center gap-1.5 rounded-full border border-rose-300 bg-rose-50 px-3 py-1 font-semibold text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300">
+                  {errors.pendente} pendentes
+                </span>
+                <span className="flex items-center gap-1.5 rounded-full border border-amber-300 bg-amber-50 px-3 py-1 font-semibold text-amber-700 dark:border-amber-400/40 dark:bg-amber-400/10 dark:text-amber-300">
+                  {errors.revisado} revisadas
+                </span>
+                <span className="flex items-center gap-1.5 rounded-full border border-emerald-300 bg-emerald-50 px-3 py-1 font-semibold text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300">
+                  {errors.dominado} dominadas
+                </span>
+              </div>
+            )}
+            <Link
+              to="/dashboard/errors"
+              className="inline-block text-xs font-bold text-primary hover:underline"
+            >
+              Abrir o Caderno de erros →
+            </Link>
+          </CardContent>
+        </Card>
+      </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-lg">
+            <Lightbulb className="h-5 w-5 text-amber-500" />
+            Sugestões e estratégia de estudo
+          </CardTitle>
+          <CardDescription>
+            Geradas a partir do seu desempenho real — focam no que mais vai pesar na sua nota.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          {suggestions.length === 0 ? (
+            <p className="text-sm text-muted-foreground">
+              Continue respondendo questões e fazendo simulados para receber sugestões
+              personalizadas.
+            </p>
+          ) : (
+            suggestions.map((s, i) => (
+              <div key={i} className="flex items-start gap-3 rounded-xl border p-3 text-sm">
+                <s.icon className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
+                <div className="min-w-0">
+                  <p>{s.text}</p>
+                  {s.link?.kind === "library" && (
+                    <Link
+                      to="/dashboard/library/$slug"
+                      params={{ slug: s.link.slug }}
+                      className="mt-1 inline-block text-xs font-bold text-primary hover:underline"
+                    >
+                      {s.link.label} →
+                    </Link>
+                  )}
+                  {s.link?.kind === "errors" && (
+                    <Link
+                      to="/dashboard/errors"
+                      className="mt-1 inline-block text-xs font-bold text-primary hover:underline"
+                    >
+                      {s.link.label} →
+                    </Link>
+                  )}
+                  {s.link?.kind === "mock-exams" && (
+                    <Link
+                      to="/dashboard/mock-exams"
+                      className="mt-1 inline-block text-xs font-bold text-primary hover:underline"
+                    >
+                      {s.link.label} →
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))
+          )}
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-lg">
+            <Compass className="h-5 w-5 text-primary" />
+            Quanto falta para a aprovação
+          </CardTitle>
+          <CardDescription>
+            Compara sua melhor nota líquida enviada com a nota de corte do mesmo concurso (quando
+            conhecida).
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          {cutoffGaps.length === 0 ? (
+            <p className="text-sm text-muted-foreground">
+              Ainda não temos nota de corte conhecida para cruzar com suas provas enviadas. Envie
+              provas em Minhas Provas; quando a banca divulgar a nota de corte, o comparativo
+              aparece aqui automaticamente.
+            </p>
+          ) : (
+            cutoffGaps
+              .sort((a, b) => a.gap - b.gap)
+              .map((g) => (
+                <div
+                  key={`${g.contestName}-${g.contestYear}`}
+                  className="rounded-xl border p-3 text-sm"
+                >
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <span className="font-semibold">
+                      {g.contestName} — {g.contestYear}
+                    </span>
+                    <Badge
+                      variant="outline"
+                      className={cn(
+                        "font-bold",
+                        g.gap >= 0
+                          ? "border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300"
+                          : "border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300",
+                      )}
+                    >
+                      {g.gap >= 0
+                        ? `+${g.gap.toFixed(1)} acima do corte`
+                        : `${Math.abs(g.gap).toFixed(1)} pontos para o corte`}
+                    </Badge>
+                  </div>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    Sua nota: {g.bestScore.toFixed(1)} · Nota de corte: {g.cutoffScore.toFixed(1)} (
+                    {g.source})
+                  </p>
+                </div>
+              ))
+          )}
+        </CardContent>
+      </Card>
+
+      <StudyTimeCard userId={userId} />
+    </div>
+  );
+}
+
+type SuggestionLink =
+  | { kind: "library"; slug: string; label: string }
+  | { kind: "errors"; label: string }
+  | { kind: "mock-exams"; label: string };
+
+interface Suggestion {
+  icon: React.ComponentType<{ className?: string }>;
+  text: string;
+  link?: SuggestionLink | undefined;
+}
+
+function buildSuggestions({
+  weakSubjects,
+  errors,
+  simulators,
+  streak,
+  libraryByDiscipline,
+}: {
+  weakSubjects: SubjectAccuracy[];
+  errors: { pendente: number; total: number };
+  simulators: { count: number };
+  streak: { current: number };
+  libraryByDiscipline: Map<string, StudyMaterialSummary>;
+}): Suggestion[] {
+  const suggestions: Suggestion[] = [];
+  for (const subject of weakSubjects.slice(0, 3)) {
+    const material = libraryByDiscipline.get(subject.subject);
+    suggestions.push({
+      icon: Target,
+      text: `${subject.subject} está com ${subject.accuracy}% de acerto — abaixo do ideal. Revise a teoria e volte a praticar.`,
+      link: material
+        ? {
+            kind: "library",
+            slug: material.slug,
+            label: `Estudar "${material.title}" na Biblioteca`,
+          }
+        : undefined,
+    });
+  }
+  if (errors.pendente > 0)
+    suggestions.push({
+      icon: AlertTriangle,
+      text: `Você tem ${errors.pendente} questão${errors.pendente === 1 ? "" : "s"} marcada${
+        errors.pendente === 1 ? "" : "s"
+      } como "ainda tenho dúvida" no Caderno de erros. Revisá-las é o jeito mais rápido de ganhar pontos.`,
+      link: { kind: "errors", label: "Abrir o Caderno de erros" },
+    });
+  if (simulators.count === 0)
+    suggestions.push({
+      icon: Brain,
+      text: "Você ainda não fez nenhum simulado cronometrado. Simular a prova real ajuda a treinar ritmo e ansiedade, além de medir sua nota estimada.",
+      link: { kind: "mock-exams", label: "Fazer um simulado" },
+    });
+  if (streak.current === 0)
+    suggestions.push({
+      icon: Flame,
+      text: "Sua sequência de estudo está zerada. Estudar um pouco todo dia rende mais do que maratonas espaçadas — comece hoje.",
+    });
+  return suggestions;
+}
+
 const TONE_STYLES: Record<string, string> = {
   navy: "bg-ink text-white",
   emerald: "bg-emerald-50 text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-200",
@@ -629,7 +1005,11 @@ function SubjectBarChart({ data }: { data: SubjectStat[] }) {
   );
 }
 
-function SubjectTable({ subjects }: { subjects: SubjectStat[] }) {
+function SubjectTable({
+  subjects,
+}: {
+  subjects: { subject: string; correct: number; total: number; accuracy: number }[];
+}) {
   return (
     <Card>
       <CardHeader>

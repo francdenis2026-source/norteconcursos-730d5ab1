@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { toast } from "sonner";
 import { Link } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
@@ -9,32 +9,77 @@ import type { Flashcard, QuizItem } from "@/lib/studyMaterials";
 const HUES = [250, 160, 30, 310, 200];
 
 /** Copia os flashcards revisados do material para o baralho do aluno (sem duplicar se já copiou). */
-function SaveToDeck({ cards, slug, subject, topic }: { cards: Flashcard[]; slug: string; subject: string; topic: string }) {
+function SaveToDeck({
+  cards,
+  slug,
+  subject,
+  topic,
+}: {
+  cards: Flashcard[];
+  slug: string;
+  subject: string;
+  topic: string;
+}) {
   const [state, setState] = useState<"idle" | "busy" | "done">("idle");
   async function save() {
     setState("busy");
     const { data } = await supabase.auth.getSession();
     const uid = data.session?.user.id;
-    if (!uid) { toast.error("Entre na sua conta para salvar os cartões."); setState("idle"); return; }
-    const rows = cards.map((c, i) => ({ user_id: uid, subject, topic, front: c.f, back: c.b, source: "library", source_key: `${slug}:${i}` }));
-    const { error } = await supabase.from("flashcards").upsert(rows, { onConflict: "user_id,source_key", ignoreDuplicates: true });
-    if (error) { toast.error("Não foi possível salvar os cartões."); setState("idle"); return; }
+    if (!uid) {
+      toast.error("Entre na sua conta para salvar os cartões.");
+      setState("idle");
+      return;
+    }
+    const rows = cards.map((c, i) => ({
+      user_id: uid,
+      subject,
+      topic,
+      front: c.f,
+      back: c.b,
+      source: "library",
+      source_key: `${slug}:${i}`,
+    }));
+    const { error } = await supabase
+      .from("flashcards")
+      .upsert(rows, { onConflict: "user_id,source_key", ignoreDuplicates: true });
+    if (error) {
+      toast.error("Não foi possível salvar os cartões.");
+      setState("idle");
+      return;
+    }
     toast.success("Cartões salvos. Eles entram na sua revisão de hoje.");
     setState("done");
   }
   return (
     <div className="mt-3 flex flex-wrap items-center gap-3 text-sm">
       <Button size="sm" variant="outline" disabled={state !== "idle"} onClick={() => void save()}>
-        <Layers className="h-4 w-4" /> {state === "done" ? "Salvos no baralho" : "Salvar no meu baralho"}
+        <Layers className="h-4 w-4" />{" "}
+        {state === "done" ? "Salvos no baralho" : "Salvar no meu baralho"}
       </Button>
-      {state === "done" && <Link to="/dashboard/flashcards" className="font-semibold text-primary hover:underline">Ir revisar</Link>}
+      {state === "done" && (
+        <Link to="/dashboard/flashcards" className="font-semibold text-primary hover:underline">
+          Ir revisar
+        </Link>
+      )}
     </div>
   );
 }
 
 export function StudyPractice({
-  flashcards, quiz, slug, subject, topic,
-}: { flashcards: Flashcard[]; quiz: QuizItem[]; slug?: string; subject?: string; topic?: string }) {
+  flashcards,
+  quiz,
+  slug,
+  subject,
+  topic,
+  onQuizComplete,
+}: {
+  flashcards: Flashcard[];
+  quiz: QuizItem[];
+  slug?: string;
+  subject?: string;
+  topic?: string;
+  onQuizComplete?: ((answers: boolean[]) => void) | undefined;
+}) {
   const [tab, setTab] = useState<"cards" | "quiz">(flashcards.length ? "cards" : "quiz");
   if (!flashcards.length && !quiz.length) return null;
   return (
@@ -51,8 +96,10 @@ export function StudyPractice({
           </button>
         )}
       </div>
-      {tab === "cards" ? <Cards cards={flashcards} /> : <Quiz items={quiz} />}
-      {tab === "cards" && slug && subject && <SaveToDeck cards={flashcards} slug={slug} subject={subject} topic={topic ?? ""} />}
+      {tab === "cards" ? <Cards cards={flashcards} /> : <Quiz items={quiz} onComplete={onQuizComplete} />}
+      {tab === "cards" && slug && subject && (
+        <SaveToDeck cards={flashcards} slug={slug} subject={subject} topic={topic ?? ""} />
+      )}
     </section>
   );
 }
@@ -102,7 +149,8 @@ function Cards({ cards }: { cards: Flashcard[] }) {
   );
 }
 
-function Quiz({ items }: { items: QuizItem[] }) {
+function Quiz({ items, onComplete }: { items: QuizItem[]; onComplete?: ((answers: boolean[]) => void) | undefined }) {
+  const completed = useRef(false);
   const [i, setI] = useState(0);
   const [answers, setAnswers] = useState<(boolean | null)[]>(() => items.map(() => null));
   const score = answers.filter((a, n) => a === items[n]!.a).length;
@@ -118,6 +166,7 @@ function Quiz({ items }: { items: QuizItem[] }) {
           variant="outline"
           className="gap-2"
           onClick={() => {
+            completed.current = false;
             setAnswers(items.map(() => null));
             setI(0);
           }}
@@ -137,10 +186,20 @@ function Quiz({ items }: { items: QuizItem[] }) {
     <>
       <p className="quiz-q">{item.q}</p>
       <div className="quiz-opts">
-        <button type="button" disabled={given !== null} className={cls(true)} onClick={() => pick(true)}>
+        <button
+          type="button"
+          disabled={given !== null}
+          className={cls(true)}
+          onClick={() => pick(true)}
+        >
           Certo
         </button>
-        <button type="button" disabled={given !== null} className={cls(false)} onClick={() => pick(false)}>
+        <button
+          type="button"
+          disabled={given !== null}
+          className={cls(false)}
+          onClick={() => pick(false)}
+        >
           Errado
         </button>
       </div>
@@ -155,11 +214,13 @@ function Quiz({ items }: { items: QuizItem[] }) {
           {answers.map((a, n) => (
             <i
               key={n}
-              className={a === null ? (n === i ? "is-on" : "") : a === items[n]!.a ? "is-ok" : "is-bad"}
+              className={
+                a === null ? (n === i ? "is-on" : "") : a === items[n]!.a ? "is-ok" : "is-bad"
+              }
             />
           ))}
         </div>
-        <Button disabled={given === null} onClick={() => setI(i + 1)} className="gap-2">
+        <Button disabled={given === null} onClick={() => { if (i === items.length - 1 && !completed.current && answers.every(answer => answer !== null)) { completed.current = true; onComplete?.(answers as boolean[]); } setI(i + 1); }} className="gap-2">
           {i === items.length - 1 ? "Ver resultado" : "Próxima"} <ArrowRight className="h-4 w-4" />
         </Button>
       </div>

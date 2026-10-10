@@ -1,0 +1,161 @@
+[
+  {
+    "slug": "processo-penal-cpp-provas-flagrante-revisao",
+    "discipline": "Direito Processual Penal",
+    "topic_label": "Prova penal, cadeia de custódia e prisão em flagrante",
+    "sort_order": 14,
+    "title": "CPP — provas, cadeia de custódia e prisões",
+    "summary": "Regras de prova, preservação de vestígios e controle da prisão, com exemplos e alterações de 2025 e 2026.",
+    "body_md": "## O mapa do processo penal\n\nLeia o CPP em três camadas: regra legal, garantia constitucional e interpretação judicial. O percurso oferece a transcrição do texto compilado e recuperação por dispositivo; o resumo abaixo trabalha provas, cadeia de custódia e prisão em flagrante, vinculados ao tópico do edital informado. A leitura integral do código é repertório adicional, não uma afirmação de que todo artigo é cobrado pela PF.\n\n## Prova e elemento informativo\n\nO art. 155 distingue prova sob contraditório judicial de elementos da investigação. As ressalvas são provas cautelares, não repetíveis e antecipadas. Não memorize “inquérito nunca pode ser considerado”: a vedação é à fundamentação exclusiva nas condições do artigo. O art. 157 disciplina inadmissibilidade, derivação, nexo e fonte independente.\n\n**Caso concreto:** uma testemunha apenas declara um fato no inquérito. O enunciado não traz contraditório judicial nem prova enquadrada nas ressalvas. Uma condenação fundada exclusivamente nesse elemento contraria a regra do art. 155. Se há prova não repetível, examine a ressalva e as garantias próprias; o nome “inquérito” não resolve sozinho.\n\n## Cadeia de custódia: antes do laboratório\n\nOs arts. 158-A a 158-F organizam documentação, rastreabilidade e etapas do vestígio. Reconhecimento e preservação antecedem o recebimento no laboratório; o agente que reconhece um elemento relevante responde por sua preservação. Documentar coleta, acondicionamento, transporte, recebimento e processamento permite examinar a confiabilidade da prova.\n\n**Caso concreto:** um policial encontra objeto potencialmente ligado ao fato e preserva o local. A cadeia não começa somente no laudo final. Se alguém mistura embalagens, identifique o registro comprometido e a consequência no caso concreto; não invente nulidade automática universal por qualquer falha formal.\n\n## Flagrante e controle judicial\n\nCompare as hipóteses do art. 302, o dever policial e a faculdade de qualquer do povo do art. 301. O art. 310 prevê decisões fundamentadas: relaxamento da prisão ilegal, conversão quando preenchidos os requisitos ou liberdade provisória. Flagrante não transforma a preventiva em consequência automática.\n\n**Atualização de 2026:** a Lei 15.358 alterou a redação do art. 310 para audiência de custódia por videoconferência em tempo real, com garantias de defesa, entrevista reservada, privacidade e disciplina de falhas do sistema. Estude os §§ 7º a 13 e os debates de controle de constitucionalidade do diploma. A descrição aqui corresponde ao texto oficial na conferência, sem afirmar que qualquer dispositivo dispensa análise constitucional.\n\n**Caso concreto:** o auto chega ao juiz. A decisão deve distinguir legalidade do flagrante e fundamentos de cautelar; a gravidade abstrata não basta para a preventiva (art. 312, § 4º). O cabimento do art. 313 não substitui requisitos nem fundamentação. A Lei 15.487/2026 acrescentou o inciso VI: consulte a hipótese exata no quadro de mudanças e no código.\n\n## Prazos: atenção à alteração da representação\n\nO art. 38 conserva regra geral de seis meses, com marco no conhecimento da autoria ou hipótese do art. 29. A Lei 15.438/2026 acrescentou § 2º com prazo de doze meses nos crimes praticados no âmbito de violência doméstica e familiar contra a mulher. Isso não torna todo delito nesse contexto dependente de representação: primeiro identifique o regime de ação penal. Este ponto é atualização complementar, com pertinência dependente do edital.\n\n## Lei e jurisprudência: não copie a remissão como resposta\n\nAs ADIs 6298, 6299, 6300 e 6305 exigem leitura conjunta nos dispositivos sobre juiz das garantias, arquivamento, custódia e prova. A regra de impedimento automático do juiz que conheceu prova inadmissível, do art. 157, § 5º, foi declarada inconstitucional; sua presença na compilação não é fundamento para ensiná-la como impedimento automático vigente. Consulte a decisão do STF e a interpretação de cada dispositivo. O percurso conserva a transcrição oficial e identifica essa ressalva junto ao artigo.\n",
+    "contest_name": "Polícia Federal — carreira policial — Edital 2025",
+    "syllabus_topic_order": 4,
+    "source_note": "Síntese autoral e texto oficial conferidos em 07/10/2026. Prática vinculada ao tópico de prova e flagrante; leitura integral e atualização de outros temas são aprofundamento, sujeitos ao edital.",
+    "legal_basis": [
+      {
+        "title": "CPP — texto compilado oficial",
+        "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      }
+    ],
+    "law_version_checked_at": "2026-10-07T21:34:23.650731+00:00",
+    "quiz": [
+      {
+        "q": "O juiz pode fundamentar a condenação exclusivamente nos elementos informativos do inquérito, sem nenhuma ressalva.",
+        "a": false,
+        "why": "CPP, art. 155: a regra exige prova sob contraditório judicial, ressalvadas as provas cautelares, não repetíveis e antecipadas."
+      },
+      {
+        "q": "Vestígio pode ser objeto ou material bruto, visível ou latente, relacionado à infração penal.",
+        "a": true,
+        "why": "CPP, art. 158-A, § 3º: a definição não se limita ao que é visível."
+      },
+      {
+        "q": "A cadeia de custódia começa apenas quando o laboratório recebe a amostra.",
+        "a": false,
+        "why": "CPP, art. 158-A, § 1º: começa com preservação do local ou procedimentos policiais ou periciais que detectem vestígio."
+      },
+      {
+        "q": "A fonte independente deve ser examinada ao analisar prova derivada da ilícita.",
+        "a": true,
+        "why": "CPP, art. 157, §§ 1º e 2º: examine o nexo e a fonte independente; não é uma autorização genérica de uso de prova ilícita."
+      },
+      {
+        "q": "Qualquer do povo pode prender quem seja encontrado em flagrante delito.",
+        "a": true,
+        "why": "CPP, art. 301: qualquer do povo poderá; autoridades policiais e seus agentes deverão. Não troque faculdade por obrigação de todo cidadão."
+      },
+      {
+        "q": "Preventiva pode ser decretada apenas com a gravidade abstrata do crime.",
+        "a": false,
+        "why": "CPP, art. 312, § 4º, acrescentado em 2025, exige demonstração concreta e fundamentação; observe também arts. 311, 313 e 315."
+      },
+      {
+        "q": "Na literalidade atual do art. 310, § 9º, a audiência por videoconferência dispensa entrevista reservada entre preso e defensor.",
+        "a": false,
+        "why": "A Lei 15.358/2026 mantém expressamente entrevista prévia, reservada e inviolável. O formato não suprime a garantia."
+      },
+      {
+        "q": "A hipótese de cabimento do art. 313 dispensa todos os requisitos do art. 312.",
+        "a": false,
+        "why": "Os artigos são complementares: cabimento não significa prisão automática nem antecipação de pena. O art. 313, § 2º, impede essa finalidade."
+      }
+    ],
+    "flashcards": [
+      {
+        "f": "Art. 155: investigação e prova",
+        "b": "Vedação à fundamentação exclusiva em elementos informativos; ressalvas: provas cautelares, não repetíveis e antecipadas."
+      },
+      {
+        "f": "Cadeia de custódia: início",
+        "b": "Preservação do local ou procedimento policial/pericial que detecta vestígio; não apenas chegada ao laboratório."
+      },
+      {
+        "f": "Flagrante implica preventiva?",
+        "b": "Não: examinar legalidade, cabimento, requisitos concretos, fundamentação e medidas alternativas."
+      },
+      {
+        "f": "Mudanças de 2026 no CPP",
+        "b": "Compare art. 38, § 2º (prazo específico), art. 310 (custódia e garantias) e art. 313, VI; confira ação penal, vigência e jurisprudência."
+      }
+    ],
+    "_syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+    "legal_review": {
+      "checked_at": "2026-10-07T21:34:23.650731+00:00",
+      "scope": "Conferência das fontes oficiais deste módulo em 07/10/2026. Mudanças de 2025 e 2026 nos diplomas consultados estão destacadas abaixo; sua cobrança depende do recorte e da data de corte do edital.",
+      "course_slug": "codigo-processo-penal",
+      "corrections": [],
+      "sources": [
+        {
+          "title": "CPP — texto compilado oficial",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "sha256": "743a2fde545bc442626317b4092ff360e05f4eac2f633ddfd4f5379cbdc2c18e"
+        },
+        {
+          "title": "STF — julgamento das ADIs do juiz das garantias",
+          "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840552"
+        }
+      ],
+      "changes": [
+        {
+          "title": "LEI Nº 15.487/2026",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+          "articles": [
+            "Art. 313"
+          ],
+          "summary": "Institui medidas de enfrentamento e repressão ao crime de violência sexual contra criança ou adolescente, inclusive no ambiente digital e com uso de inteligência artificial; e altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), e a Lei nº 12.850, de 2 de agosto de 2013 (Lei de Combate ao Crime Organizado), para recrudescer o tratamento penal aos criminosos sexuais.",
+          "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+          "state": "effective"
+        },
+        {
+          "title": "LEI Nº 15.438/2026",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15438.htm",
+          "articles": [
+            "Art. 38"
+          ],
+          "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para aumentar o prazo decadencial do direito de queixa ou de representação quando se tratar de crime praticado no âmbito de violência doméstica e familiar contra a mulher.",
+          "vigency": "Art. 5º Esta Lei entra em vigor na data de sua publicação.",
+          "state": "effective"
+        },
+        {
+          "title": "LEI Nº 15.358/2026",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+          "articles": [
+            "Art. 3-B",
+            "Art. 78",
+            "Art. 310",
+            "Art. 313",
+            "Art. 584"
+          ],
+          "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+          "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+          "state": "effective"
+        },
+        {
+          "title": "LEI Nº 15.280/2025",
+          "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm",
+          "articles": [
+            "Art. 300-A",
+            "Art. 350",
+            "Art. 350-A",
+            "Art. 350-B"
+          ],
+          "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para agravar a pena dos crimes contra a dignidade sexual de pessoa vulnerável; o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para prever medidas protetivas de urgência a vítimas de crimes contra a dignidade sexual e em situação de especial vulnerabilidade; a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para prever a monitoração eletrônica dos condenados por crime contra a dignidade sexual; a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para estabelecer mecanismos de proteção a crianças e a adolescentes vítimas de crimes contra a dignidade sexual; e a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para assegurar assistência psicológica e social especializada às pessoas com deficiência vítimas de crimes contra a dignidade sexual e a suas famílias.",
+          "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+          "state": "effective"
+        },
+        {
+          "title": "LEI Nº 15.272/2025",
+          "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15272.htm",
+          "articles": [
+            "Art. 310",
+            "Art. 310-A",
+            "Art. 312"
+          ],
+          "summary": "Altera o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para dispor sobre as circunstâncias que recomendam a conversão da prisão em flagrante em preventiva, sobre a coleta de material biológico para obtenção e armazenamento do perfil genético do custodiado e sobre os critérios para aferição da periculosidade do agente para concessão de prisão preventiva, inclusive quando da audiência de custódia.",
+          "vigency": "Art. 2º Esta Lei entra em vigor na data de sua publicação.",
+          "state": "effective"
+        }
+      ]
+    }
+  }
+]

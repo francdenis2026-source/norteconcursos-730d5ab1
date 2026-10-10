@@ -43,6 +43,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { PageHero } from "@/components/dashboard/PageHero";
 import { LibraryAdmin } from "@/components/library/LibraryAdmin";
+import { EnrichmentAdmin } from "@/components/library/EnrichmentAdmin";
 import { Download } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { confirmDialog } from "@/lib/confirm";
@@ -71,9 +72,16 @@ export const Route = createFileRoute("/dashboard/admin")({
   head: () => ({
     meta: [
       { title: "Conteúdo da plataforma | Norte Concurso" },
-      { name: "description", content: "Administração de concursos, questões, editais, biblioteca e provas do Norte Concurso." },
+      {
+        name: "description",
+        content:
+          "Administração de concursos, questões, editais, biblioteca e provas do Norte Concurso.",
+      },
       { property: "og:title", content: "Conteúdo da plataforma | Norte Concurso" },
-      { property: "og:description", content: "Central administrativa de conteúdo e provas da plataforma." },
+      {
+        property: "og:description",
+        content: "Central administrativa de conteúdo e provas da plataforma.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "robots", content: "noindex" },
@@ -87,7 +95,18 @@ function AdminPanel() {
   const { user, isAdmin, isLoading: isAuthLoading } = useAuthStatus();
   const [contests, setContests] = React.useState<Contest[]>([]);
   const [questions, setQuestions] = React.useState<Question[]>([]);
-  const [auditLogs, setAuditLogs] = React.useState<any[]>([]);
+  const [auditLogs, setAuditLogs] = React.useState<
+    {
+      id: string;
+      created_at: string;
+      action: string;
+      old_values: unknown;
+      new_values: { reason?: string } | null;
+      entity_type?: string | null;
+      entity_id?: string | null;
+      admin?: { full_name?: string; email?: string };
+    }[]
+  >([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState("");
 
@@ -194,7 +213,15 @@ function AdminPanel() {
       const [c, q, logs] = await Promise.all([
         MockService.getContests(),
         MockService.getQuestions(),
-        (MockService as any).getAdminAuditLogs?.() || [],
+        supabase
+          .from("admin_audit_logs")
+          .select("id,created_at,action,old_values,new_values,entity_type,entity_id")
+          .order("created_at", { ascending: false })
+          .limit(100)
+          .then(({ data, error }) => {
+            if (error) throw error;
+            return data ?? [];
+          }),
       ]);
       setContests(c);
       setQuestions(q);
@@ -231,7 +258,14 @@ function AdminPanel() {
   }, []);
 
   const handleDeleteContest = async (id: string) => {
-    if (!(await confirmDialog({ title: "Excluir concurso?", message: "O concurso será removido da plataforma.", confirmLabel: "Excluir" }))) return;
+    if (
+      !(await confirmDialog({
+        title: "Excluir concurso?",
+        message: "O concurso será removido da plataforma.",
+        confirmLabel: "Excluir",
+      }))
+    )
+      return;
     const success = await MockService.deleteContest(id);
     if (success) {
       toast.success("Concurso excluído com sucesso");
@@ -242,7 +276,14 @@ function AdminPanel() {
   };
 
   const handleDeleteQuestion = async (id: string) => {
-    if (!(await confirmDialog({ title: "Excluir questão?", message: "A questão será removida da plataforma.", confirmLabel: "Excluir" }))) return;
+    if (
+      !(await confirmDialog({
+        title: "Excluir questão?",
+        message: "A questão será removida da plataforma.",
+        confirmLabel: "Excluir",
+      }))
+    )
+      return;
     const success = await MockService.deleteQuestion(id);
     if (success) {
       toast.success("Questão excluída com sucesso");
@@ -643,7 +684,18 @@ function AdminPanel() {
         </TabsContent>
 
         <TabsContent value="library" className="mt-6">
-          <LibraryAdmin />
+          <Tabs defaultValue="materials">
+            <TabsList>
+              <TabsTrigger value="materials">Materiais</TabsTrigger>
+              <TabsTrigger value="enrichments">Exemplos e ilustrações</TabsTrigger>
+            </TabsList>
+            <TabsContent value="materials" className="mt-4">
+              <LibraryAdmin />
+            </TabsContent>
+            <TabsContent value="enrichments" className="mt-4">
+              <EnrichmentAdmin />
+            </TabsContent>
+          </Tabs>
         </TabsContent>
 
         <TabsContent value="syllabus" className="mt-6 space-y-4">
@@ -935,14 +987,18 @@ function AdminPanel() {
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Data de Início</label>
                   <DatePicker
-                    value={editingContest.startDate ? (editingContest.startDate.split("T")[0] ?? "") : ""}
+                    value={
+                      editingContest.startDate ? (editingContest.startDate.split("T")[0] ?? "") : ""
+                    }
                     onChange={(v) => setEditingContest({ ...editingContest, startDate: v })}
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Data de Fim</label>
                   <DatePicker
-                    value={editingContest.endDate ? (editingContest.endDate.split("T")[0] ?? "") : ""}
+                    value={
+                      editingContest.endDate ? (editingContest.endDate.split("T")[0] ?? "") : ""
+                    }
                     onChange={(v) => setEditingContest({ ...editingContest, endDate: v })}
                   />
                 </div>
@@ -1017,11 +1073,10 @@ function AdminPanel() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
-
     </div>
   );
 }
 
-function cn(...classes: any[]) {
+function cn(...classes: (string | false | null | undefined)[]) {
   return classes.filter(Boolean).join(" ");
 }

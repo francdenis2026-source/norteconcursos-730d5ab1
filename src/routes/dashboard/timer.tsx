@@ -1,70 +1,98 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { createFileRoute } from '@tanstack/react-router';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Coffee, 
-  Brain, 
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import type { LucideIcon } from "lucide-react";
+import { userStorageKey } from "@/lib/userStorage";
+import { createFileRoute } from "@tanstack/react-router";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Play,
+  Pause,
+  RotateCcw,
+  Coffee,
+  Brain,
   History,
   Timer as TimerIcon,
-  CheckCircle2
-} from 'lucide-react';
-import { PageHero, HeroStat } from '@/components/dashboard/PageHero';
-import { Progress } from '@/components/ui/progress';
-import { toast } from 'sonner';
-import { MockService } from '@/services/mockService';
-import { cn } from '@/lib/utils';
+  CheckCircle2,
+} from "lucide-react";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
+import { Progress } from "@/components/ui/progress";
+import { toast } from "sonner";
+import { MockService } from "@/services/mockService";
+import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute('/dashboard/timer')({
-  component: TimerPage
+export const Route = createFileRoute("/dashboard/timer")({
+  component: TimerPage,
 });
 
-type TimerMode = 'study' | 'short-break' | 'long-break';
+type TimerMode = "study" | "short-break" | "long-break";
 
-const MODES: Record<TimerMode, { label: string, minutes: number, icon: any, color: string }> = {
-  study: { label: 'Foco Total', minutes: 25, icon: Brain, color: 'text-primary' },
-  'short-break': { label: 'Pausa Curta', minutes: 5, icon: Coffee, color: 'text-emerald-500' },
-  'long-break': { label: 'Pausa Longa', minutes: 15, icon: Coffee, color: 'text-secondary' },
+const MODES: Record<
+  TimerMode,
+  { label: string; minutes: number; icon: LucideIcon; color: string }
+> = {
+  study: { label: "Foco Total", minutes: 25, icon: Brain, color: "text-primary" },
+  "short-break": { label: "Pausa Curta", minutes: 5, icon: Coffee, color: "text-emerald-500" },
+  "long-break": { label: "Pausa Longa", minutes: 15, icon: Coffee, color: "text-secondary" },
 };
 
 function TimerPage() {
-  const [mode, setMode] = useState<TimerMode>('study');
+  const [mode, setMode] = useState<TimerMode>("study");
   const [timeLeft, setTimeLeft] = useState(MODES.study.minutes * 60);
   const [isActive, setIsActive] = useState(false);
   const [sessionsCompleted, setSessionsCompleted] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval>>(null);
 
   useEffect(() => {
-    const active = localStorage.getItem('norte_timer_active');
+    const active = localStorage.getItem(userStorageKey("norte_timer_active"));
     if (active) {
       const parsed = JSON.parse(active);
       const elapsed = Math.floor((Date.now() - parsed.timestamp) / 1000);
       const remaining = parsed.timeLeft - elapsed;
-      
+
       if (remaining > 0) {
         setMode(parsed.mode);
         setTimeLeft(remaining);
         setIsActive(true);
       } else {
-        localStorage.removeItem('norte_timer_active');
+        localStorage.removeItem(userStorageKey("norte_timer_active"));
       }
     }
   }, []);
 
   useEffect(() => {
     if (isActive) {
-      localStorage.setItem('norte_timer_active', JSON.stringify({
-        mode,
-        timeLeft,
-        timestamp: Date.now()
-      }));
+      localStorage.setItem(
+        userStorageKey("norte_timer_active"),
+        JSON.stringify({
+          mode,
+          timeLeft,
+          timestamp: Date.now(),
+        }),
+      );
     } else {
-      localStorage.removeItem('norte_timer_active');
+      localStorage.removeItem(userStorageKey("norte_timer_active"));
     }
   }, [isActive, timeLeft, mode]);
+
+  const handleTimerComplete = useCallback(() => {
+    setIsActive(false);
+    if (intervalRef.current) clearInterval(intervalRef.current);
+
+    const audio = new Audio("https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3");
+    audio.play().catch(() => {});
+
+    if (mode === "study") {
+      setSessionsCompleted((prev) => prev + 1);
+      toast.success("Sessão de foco concluída! Hora de uma pausa.");
+      // Tempo de permanência é registrado pelo studyClock, sem criar respostas fictícias.
+      setMode("short-break");
+      setTimeLeft(MODES["short-break"].minutes * 60);
+    } else {
+      toast.info("Pausa finalizada. Vamos voltar ao foco?");
+      setMode("study");
+      setTimeLeft(MODES.study.minutes * 60);
+    }
+  }, [mode]);
 
   useEffect(() => {
     if (isActive && timeLeft > 0) {
@@ -79,36 +107,10 @@ function TimerPage() {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [isActive, timeLeft]);
-
-  const handleTimerComplete = () => {
-    setIsActive(false);
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    
-    const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3');
-    audio.play().catch(() => {});
-
-    if (mode === 'study') {
-      setSessionsCompleted(prev => prev + 1);
-      toast.success("Sessão de foco concluída! Hora de uma pausa.");
-      // Persistência simulada de tempo estudado
-      MockService.saveResponse({
-        questionId: 'timer-session-' + Date.now(),
-        isCorrect: true,
-        timeSpent: MODES.study.minutes * 60,
-        createdAt: new Date().toISOString()
-      });
-      setMode('short-break');
-      setTimeLeft(MODES['short-break'].minutes * 60);
-    } else {
-      toast.info("Pausa finalizada. Vamos voltar ao foco?");
-      setMode('study');
-      setTimeLeft(MODES.study.minutes * 60);
-    }
-  };
+  }, [isActive, timeLeft, handleTimerComplete]);
 
   const toggle = () => setIsActive(!isActive);
-  
+
   const reset = () => {
     setIsActive(false);
     setTimeLeft(MODES[mode].minutes * 60);
@@ -120,8 +122,11 @@ function TimerPage() {
     setTimeLeft(MODES[newMode].minutes * 60);
   };
 
-  const format = (s: number) => `${Math.floor(s / 60).toString().padStart(2, '0')}:${(s % 60).toString().padStart(2, '0')}`;
-  
+  const format = (s: number) =>
+    `${Math.floor(s / 60)
+      .toString()
+      .padStart(2, "0")}:${(s % 60).toString().padStart(2, "0")}`;
+
   const progress = ((MODES[mode].minutes * 60 - timeLeft) / (MODES[mode].minutes * 60)) * 100;
 
   return (
@@ -146,7 +151,7 @@ function TimerPage() {
               {(Object.keys(MODES) as TimerMode[]).map((m) => (
                 <Button
                   key={m}
-                  variant={mode === m ? 'secondary' : 'ghost'}
+                  variant={mode === m ? "secondary" : "ghost"}
                   size="sm"
                   onClick={() => changeMode(m)}
                   className="text-xs h-8"
@@ -176,7 +181,10 @@ function TimerPage() {
                   fill="transparent"
                   strokeDasharray={753.98}
                   strokeDashoffset={753.98 * (1 - progress / 100)}
-                  className={cn("transition-all duration-1000", MODES[mode].color.replace('text-', 'stroke-'))}
+                  className={cn(
+                    "transition-all duration-1000",
+                    MODES[mode].color.replace("text-", "stroke-"),
+                  )}
                   strokeLinecap="round"
                 />
               </svg>
@@ -186,22 +194,24 @@ function TimerPage() {
             </div>
 
             <div className="flex gap-4 z-10">
-              <Button 
-                onClick={toggle} 
+              <Button
+                onClick={toggle}
                 size="lg"
                 className={cn(
                   "w-32 h-14 text-lg font-bold shadow-lg transition-transform active:scale-95",
-                  isActive ? "bg-muted text-foreground hover:bg-muted/80" : "bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                  isActive
+                    ? "bg-muted text-foreground hover:bg-muted/80"
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/90",
                 )}
               >
                 {isActive ? <Pause className="mr-2" /> : <Play className="mr-2" />}
-                {isActive ? 'Pausar' : 'Iniciar'}
+                {isActive ? "Pausar" : "Iniciar"}
               </Button>
               <Button variant="outline" size="lg" onClick={reset} className="h-14 w-14 border-2">
                 <RotateCcw className="h-6 w-6" />
               </Button>
             </div>
-            
+
             <div className="absolute bottom-6 right-6 opacity-10">
               {React.createElement(MODES[mode].icon, { className: "h-24 w-24" })}
             </div>
@@ -225,7 +235,8 @@ function TimerPage() {
                 <Progress value={100} className="h-1" />
               </div>
               <div className="p-3 bg-secondary/5 border border-secondary/10 rounded-lg text-[11px] leading-relaxed italic">
-                "A técnica Pomodoro ajuda a manter o cérebro fresco e focado, evitando a fadiga mental durante longas maratonas de estudo."
+                "A técnica Pomodoro ajuda a manter o cérebro fresco e focado, evitando a fadiga
+                mental durante longas maratonas de estudo."
               </div>
             </CardContent>
           </Card>
@@ -241,10 +252,18 @@ function TimerPage() {
               <div className="divide-y divide-border">
                 {sessionsCompleted > 0 ? (
                   [...Array(sessionsCompleted)].map((_, i) => (
-                    <div key={i} className="flex items-center justify-between p-3 px-6 hover:bg-muted/50 transition-colors">
+                    <div
+                      key={i}
+                      className="flex items-center justify-between p-3 px-6 hover:bg-muted/50 transition-colors"
+                    >
                       <div className="flex flex-col">
                         <span className="text-xs font-bold">Foco Total</span>
-                        <span className="text-[10px] text-muted-foreground">{new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                        <span className="text-[10px] text-muted-foreground">
+                          {new Date().toLocaleTimeString([], {
+                            hour: "2-digit",
+                            minute: "2-digit",
+                          })}
+                        </span>
                       </div>
                       <span className="text-xs font-medium text-emerald-600">+25m</span>
                     </div>

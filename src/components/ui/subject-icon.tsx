@@ -1,37 +1,31 @@
-import { Atom, BookOpen, BookText, Dna, FlaskConical, Map as MapIcon, PenLine, ScrollText, Brain, Building2, Calculator, Coins, Fingerprint, Gavel, Globe, HeartHandshake, Landmark, Laptop, Scale, Shield, Stethoscope, TrafficCone, type LucideIcon } from "lucide-react";
+import {
+  Atom,
+  BookOpen,
+  BookText,
+  Dna,
+  FlaskConical,
+  Map as MapIcon,
+  PenLine,
+  ScrollText,
+  Brain,
+  Building2,
+  Calculator,
+  Coins,
+  Fingerprint,
+  Gavel,
+  Globe,
+  HeartHandshake,
+  Landmark,
+  Laptop,
+  Scale,
+  Shield,
+  Stethoscope,
+  TrafficCone,
+  type LucideIcon,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal";
-
-/** Ícone e cor de cada matéria (reconhece o nome por palavras-chave). */
-const RULES: [RegExp, LucideIcon, Hue][] = [
-  [/reda[çc]/i, PenLine, "rose"],
-  [/literat/i, BookOpen, "rose"],
-  [/biolog/i, Dna, "emerald"],
-  [/qu[ií]mica/i, FlaskConical, "violet"],
-  [/hist[óo]ria/i, ScrollText, "orange"],
-  [/geograf/i, MapIcon, "teal"],
-  [/filosof|sociolog/i, Brain, "violet"],
-  [/portugu/i, BookText, "rose"],
-  [/racioc|estat|matem/i, Calculator, "sky"],
-  [/constitucional/i, Landmark, "gold"],
-  [/processual/i, Scale, "orange"],
-  [/penal|crimin/i, Gavel, "rose"],
-  [/administrativ/i, Building2, "teal"],
-  [/inform/i, Laptop, "violet"],
-  [/legisla|human/i, Scale, "emerald"],
-  [/contab/i, Coins, "orange"],
-  [/f[ií]sica/i, Atom, "sky"],
-  [/medicina|pericia|criminal[ií]stica/i, Stethoscope, "rose"],
-  [/geopol|estrang|ingl|espanh/i, Globe, "teal"],
-  [/[ée]tica/i, HeartHandshake, "emerald"],
-  [/tr[âa]nsito/i, TrafficCone, "orange"],
-];
-
-export function subjectStyle(subject: string): { Icon: LucideIcon; hue: Hue } {
-  const hit = RULES.find(([re]) => re.test(subject));
-  return hit ? { Icon: hit[1], hue: hit[2] } : { Icon: Shield, hue: "gold" };
-}
+import { subjectStyle } from "@/lib/subjectStyle";
 
 export function SubjectIcon({ subject, className }: { subject: string; className?: string }) {
   const { Icon, hue } = subjectStyle(subject);

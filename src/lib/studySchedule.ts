@@ -11,7 +11,8 @@ import type { CoachPlan } from "@/lib/studyEngine";
 import { topicsFor } from "@/data/studyTopics";
 import { PODCASTS } from "@/data/mediaCatalog";
 
-export type BlockKind = "Teoria" | "Flashcards" | "Questões" | "Revisão de erros" | "Redação" | "Simulado" | "Podcast";
+export type BlockKind =
+  "Teoria" | "Flashcards" | "Questões" | "Revisão de erros" | "Redação" | "Simulado" | "Podcast";
 
 export interface ScheduleBlock {
   key: string;
@@ -89,9 +90,14 @@ function howTo(kind: BlockKind, minutes: number): string {
   }
 }
 
-function searchFor(kind: BlockKind, subject: string, topics: string[]): Record<string, string> | undefined {
+function searchFor(
+  kind: BlockKind,
+  subject: string,
+  topics: string[],
+): Record<string, string> | undefined {
   if (kind === "Flashcards") return { subject, ...(topics[0] ? { topic: topics[0] } : {}) };
-  if (kind === "Questões") return { area: subject, go: "1", ...(topics[0] ? { topic: topics[0] } : {}) };
+  if (kind === "Questões")
+    return { area: subject, go: "1", ...(topics[0] ? { topic: topics[0] } : {}) };
   return undefined;
 }
 
@@ -111,8 +117,15 @@ interface Raw {
   group?: string;
 }
 
-export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boolean, opts: ScheduleOptions): ScheduleDay[] {
-  const days = [...new Set(studyDays)].filter((d) => d >= 0 && d <= 6).sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7));
+export function buildSchedule(
+  plan: CoachPlan,
+  studyDays: number[],
+  essay: boolean,
+  opts: ScheduleOptions,
+): ScheduleDay[] {
+  const days = [...new Set(studyDays)]
+    .filter((d) => d >= 0 && d <= 6)
+    .sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7));
   if (days.length === 0) return [];
   const total = plan.hoursPerWeek * 60;
   const mix = PHASE_MIX[plan.phase.id];
@@ -140,20 +153,38 @@ export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boole
     out.get(day)!.push(b);
     cap.set(day, (cap.get(day) ?? 0) - b.minutes);
   };
-  const richest = (pool: number[]) => pool.reduce((best, d) => ((cap.get(d) ?? 0) > (cap.get(best) ?? 0) ? d : best), pool[0]!);
+  const richest = (pool: number[]) =>
+    pool.reduce((best, d) => ((cap.get(d) ?? 0) > (cap.get(best) ?? 0) ? d : best), pool[0]!);
 
   const last = days[days.length - 1]!;
   const penultimate = days[Math.max(0, days.length - 2)]!;
   if (simMin) place(last, { kind: "Simulado", subject: "Simulado completo", minutes: simMin });
-  if (errorsMin) place(penultimate, { kind: "Revisão de erros", subject: "Caderno de erros", minutes: errorsMin });
+  if (errorsMin)
+    place(penultimate, {
+      kind: "Revisão de erros",
+      subject: "Caderno de erros",
+      minutes: errorsMin,
+    });
   if (essayMin) {
     const first = days[Math.min(1, days.length - 1)]!;
     if (essayMin < 90) {
-      place(first, { kind: "Redação", subject: "Treino de redação (30 linhas) e revisão", minutes: essayMin });
+      place(first, {
+        kind: "Redação",
+        subject: "Treino de redação (30 linhas) e revisão",
+        minutes: essayMin,
+      });
     } else {
       const review = round15(essayMin / 3);
-      place(first, { kind: "Redação", subject: "Treino de redação (30 linhas)", minutes: essayMin - review });
-      place(days[Math.min(days.length - 1, Math.floor(days.length / 2) + 1)]!, { kind: "Redação", subject: "Revisão e reescrita da redação", minutes: review });
+      place(first, {
+        kind: "Redação",
+        subject: "Treino de redação (30 linhas)",
+        minutes: essayMin - review,
+      });
+      place(days[Math.min(days.length - 1, Math.floor(days.length / 2) + 1)]!, {
+        kind: "Redação",
+        subject: "Revisão e reescrita da redação",
+        minutes: review,
+      });
     }
   }
 
@@ -169,7 +200,7 @@ export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boole
   const interleave = (items: { name: string; blocks: number; size: number }[]) => {
     const seen = new Map<string, number>();
     const seq: { name: string; minutes: number; n: number }[] = [];
-    for (let again = true; again; ) {
+    for (let again = true; again;) {
       again = false;
       for (const p of items) {
         const n = seen.get(p.name) ?? 0;
@@ -197,7 +228,9 @@ export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boole
   const theoryDay = new Map<string, number>(); // matéria -> dia da (primeira) teoria da semana
   const groupDay: { name: string; day: number; minutes: number }[] = [];
   theorySeq.forEach((blk, i) => {
-    const free = days.filter((d) => !out.get(d)!.some((b) => b.kind === "Teoria" && b.subject === blk.name));
+    const free = days.filter(
+      (d) => !out.get(d)!.some((b) => b.kind === "Teoria" && b.subject === blk.name),
+    );
     const day = richest(free.length ? free : days);
     const group = `${blk.name}#${blk.n}`;
     place(day, { kind: "Teoria", subject: blk.name, minutes: blk.minutes, group });
@@ -211,7 +244,9 @@ export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boole
     const size = g.minutes >= 60 ? 45 : 30;
     if (questionsPool < size) break;
     const after = days.slice(days.indexOf(g.day) + 1);
-    const free = after.filter((d) => !out.get(d)!.some((b) => b.kind === "Questões" && b.subject === g.name));
+    const free = after.filter(
+      (d) => !out.get(d)!.some((b) => b.kind === "Questões" && b.subject === g.name),
+    );
     const day = free.length ? richest(free) : after.length ? richest(after) : g.day;
     place(day, { kind: "Questões", subject: g.name, minutes: size });
     questionsPool -= size;
@@ -224,19 +259,32 @@ export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boole
     if (td !== undefined) {
       const ti = days.indexOf(td);
       const after = days.slice(ti + 1);
-      const free = after.filter((d) => !out.get(d)!.some((b) => b.kind === "Questões" && b.subject === blk.name));
-      day = free.length ? richest(free) : (after.length ? richest(after) : td);
+      const free = after.filter(
+        (d) => !out.get(d)!.some((b) => b.kind === "Questões" && b.subject === blk.name),
+      );
+      day = free.length ? richest(free) : after.length ? richest(after) : td;
     } else {
-      const free = days.filter((d) => !out.get(d)!.some((b) => b.kind === "Questões" && b.subject === blk.name));
+      const free = days.filter(
+        (d) => !out.get(d)!.some((b) => b.kind === "Questões" && b.subject === blk.name),
+      );
       day = richest(free.length ? free : days);
     }
     place(day, { kind: "Questões", subject: blk.name, minutes: blk.minutes });
   }
 
-  if (podcastMin) place(richest(days), { kind: "Podcast", subject: "Podcast de estudo", minutes: podcastMin });
+  if (podcastMin)
+    place(richest(days), { kind: "Podcast", subject: "Podcast de estudo", minutes: podcastMin });
 
   // 4) Ordem do dia, horários e assuntos.
-  const rank: Record<BlockKind, number> = { Teoria: 0, Flashcards: 0, Questões: 1, Podcast: 2, Redação: 3, "Revisão de erros": 4, Simulado: 5 };
+  const rank: Record<BlockKind, number> = {
+    Teoria: 0,
+    Flashcards: 0,
+    Questões: 1,
+    Podcast: 2,
+    Redação: 3,
+    "Revisão de erros": 4,
+    Simulado: 5,
+  };
   const taken = new Map<string, number>();
   const topicsByGroup = new Map<string, string[]>();
   const startBase = toMin(opts.startTime);
@@ -245,7 +293,9 @@ export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boole
     const raws = out.get(d)!;
     // Dentro de Teoria/Flashcards, mantém cada flashcard logo depois da sua teoria.
     const groupOrder = new Map<string, number>();
-    raws.forEach((r) => r.group && !groupOrder.has(r.group) && groupOrder.set(r.group, groupOrder.size));
+    raws.forEach(
+      (r) => r.group && !groupOrder.has(r.group) && groupOrder.set(r.group, groupOrder.size),
+    );
     raws.sort(
       (a, b) =>
         rank[a.kind] - rank[b.kind] ||
@@ -267,11 +317,19 @@ export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boole
       } else if (r.kind === "Flashcards") {
         topics = (r.group && topicsByGroup.get(r.group)) || topicsFor(r.subject).slice(0, 1);
       } else if (r.kind === "Questões") {
-        const recent = [...topicsByGroup.entries()].filter(([g]) => g.startsWith(`${r.subject}#`)).pop();
+        const recent = [...topicsByGroup.entries()]
+          .filter(([g]) => g.startsWith(`${r.subject}#`))
+          .pop();
         const list = topicsFor(r.subject);
-        topics = recent?.[1] ?? (list.length ? [list[Math.max(0, ((opts.doneBefore[r.subject] ?? 0) - 1)) % list.length]!] : []);
+        topics =
+          recent?.[1] ??
+          (list.length
+            ? [list[Math.max(0, (opts.doneBefore[r.subject] ?? 0) - 1) % list.length]!]
+            : []);
       } else if (r.kind === "Redação") {
-        topics = r.subject.startsWith("Revisão") ? ["Texto escrito no treino anterior"] : ["Tema de segurança pública (use um tema da aba Modelos)"];
+        topics = r.subject.startsWith("Revisão")
+          ? ["Texto escrito no treino anterior"]
+          : ["Tema de segurança pública (use um tema da aba Modelos)"];
       } else if (r.kind === "Podcast") {
         topics = PODCASTS.slice(0, 2).map((p) => p.title);
       }
@@ -289,7 +347,9 @@ export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boole
         topics,
         how: howTo(r.kind, r.minutes),
         href: HREF[r.kind],
-        ...(searchFor(r.kind, r.subject, topics) ? { search: searchFor(r.kind, r.subject, topics)! } : {}),
+        ...(searchFor(r.kind, r.subject, topics)
+          ? { search: searchFor(r.kind, r.subject, topics)! }
+          : {}),
       };
     });
     return { day: d, blocks, minutes: blocks.reduce((n, b) => n + b.minutes, 0) };
@@ -300,25 +360,58 @@ export function buildSchedule(plan: CoachPlan, studyDays: number[], essay: boole
 export function mixSummary(schedule: ScheduleDay[]) {
   const by = new Map<BlockKind, number>();
   let total = 0;
-  for (const d of schedule) for (const b of d.blocks) { by.set(b.kind, (by.get(b.kind) ?? 0) + b.minutes); total += b.minutes; }
-  return { total, items: [...by.entries()].map(([kind, minutes]) => ({ kind, minutes, pct: total ? Math.round((100 * minutes) / total) : 0 })).sort((a, b) => b.minutes - a.minutes) };
+  for (const d of schedule)
+    for (const b of d.blocks) {
+      by.set(b.kind, (by.get(b.kind) ?? 0) + b.minutes);
+      total += b.minutes;
+    }
+  return {
+    total,
+    items: [...by.entries()]
+      .map(([kind, minutes]) => ({
+        kind,
+        minutes,
+        pct: total ? Math.round((100 * minutes) / total) : 0,
+      }))
+      .sort((a, b) => b.minutes - a.minutes),
+  };
 }
 
 // ───────────────────────── Revisão espaçada (1, 7 e 30 dias) ─────────────────────────
 
 export const REVIEW_OFFSETS = [1, 7, 30];
-export interface DueReview { subject: string; topic: string; stage: number; overdueDays: number }
+export interface DueReview {
+  subject: string;
+  topic: string;
+  stage: number;
+  overdueDays: number;
+}
 
-interface CheckLike { kind: string; subject: string; topics: string[]; done_at: string; plan_id: string | null }
+interface CheckLike {
+  kind: string;
+  subject: string;
+  topics: string[];
+  done_at: string;
+  plan_id: string | null;
+}
 
-const acreDay = (iso: string) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(new Date(iso));
-const dayDiff = (a: string, b: string) => Math.round((new Date(`${b}T00:00:00Z`).getTime() - new Date(`${a}T00:00:00Z`).getTime()) / 86_400_000);
+const acreDay = (iso: string) =>
+  new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(new Date(iso));
+const dayDiff = (a: string, b: string) =>
+  Math.round(
+    (new Date(`${b}T00:00:00Z`).getTime() - new Date(`${a}T00:00:00Z`).getTime()) / 86_400_000,
+  );
 
 /**
  * Assuntos que o aluno estudou (teoria marcada) e já chegaram na hora de revisar: 1, 7 e 30 dias
  * depois. O estágio é o número de revisões já feitas daquele assunto depois do último estudo.
  */
-export function dueReviews(checks: CheckLike[], planId: string, now = new Date(), limit = 6): DueReview[] {
+export function dueReviews(
+  checks: CheckLike[],
+  planId: string,
+  now = new Date(),
+  limit = 6,
+): DueReview[] {
   const today = acreDay(now.toISOString());
   const mine = checks.filter((c) => c.plan_id === planId);
   const origin = new Map<string, { subject: string; at: string }>();
@@ -331,7 +424,9 @@ export function dueReviews(checks: CheckLike[], planId: string, now = new Date()
   }
   const due: DueReview[] = [];
   for (const [topic, o] of origin) {
-    const stage = mine.filter((c) => c.kind === "Revisão espaçada" && c.done_at > o.at && c.topics.includes(topic)).length;
+    const stage = mine.filter(
+      (c) => c.kind === "Revisão espaçada" && c.done_at > o.at && c.topics.includes(topic),
+    ).length;
     if (stage >= REVIEW_OFFSETS.length) continue;
     const overdue = dayDiff(acreDay(o.at), today) - REVIEW_OFFSETS[stage]!;
     if (overdue >= 0) due.push({ subject: o.subject, topic, stage, overdueDays: overdue });

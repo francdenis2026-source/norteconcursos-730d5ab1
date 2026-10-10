@@ -4,9 +4,23 @@ import { supabase } from "@/integrations/supabase/client";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const TZ = "America/Rio_Branco";
-const day = new Intl.DateTimeFormat("pt-BR", { timeZone: TZ, weekday: "short", day: "2-digit", month: "2-digit" });
-const hm = new Intl.DateTimeFormat("pt-BR", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hour12: false });
-const full = new Intl.DateTimeFormat("pt-BR", { timeZone: TZ, dateStyle: "full", timeStyle: "medium" });
+const day = new Intl.DateTimeFormat("pt-BR", {
+  timeZone: TZ,
+  weekday: "short",
+  day: "2-digit",
+  month: "2-digit",
+});
+const hm = new Intl.DateTimeFormat("pt-BR", {
+  timeZone: TZ,
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+});
+const full = new Intl.DateTimeFormat("pt-BR", {
+  timeZone: TZ,
+  dateStyle: "full",
+  timeStyle: "medium",
+});
 
 /**
  * Data e hora oficiais da plataforma (horário do Acre, UTC−5). Usa o relógio do servidor
@@ -41,7 +55,11 @@ export function AcreClock() {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <span className="app-streak app-clock" role="timer" aria-label={`Horário do Acre: ${full.format(d)}`}>
+        <span
+          className="app-streak app-clock"
+          role="timer"
+          aria-label={`Horário do Acre: ${full.format(d)}`}
+        >
           <CalendarClock />
           <span className="tabular capitalize">{day.format(d).replace(".", "")}</span>
           <span className="tabular">{hm.format(d)}</span>

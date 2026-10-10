@@ -1,6 +1,8 @@
+import { Input } from "@/components/ui/input";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Copy, Download, ArrowUpRight } from "lucide-react";
+import { Copy, Download, ArrowUpRight, Send } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 import { InstitutionalLayout } from "@/components/landing/InstitutionalLayout";
 
 export const Route = createFileRoute("/suporte")({
@@ -22,7 +24,7 @@ const FAQ = [
   ],
   [
     "Não consigo entrar na minha conta.",
-    "Confira o CPF, a senha de acesso e eventuais mensagens exibidas na tela. O e-mail informado no cadastro é um contato; o login utiliza seu CPF. Tente novamente em uma janela privada para descartar uma sessão antiga. Nunca compartilhe sua senha no relato de suporte.",
+    "Entre com o e-mail cadastrado e a senha. Contas antigas também aceitam CPF. Se esqueceu a senha, use “Esqueci minha senha” na tela de acesso. Tente novamente em uma janela privada para descartar uma sessão antiga. Nunca compartilhe sua senha no relato de suporte.",
   ],
   [
     "Meu acesso ao plano está diferente do esperado.",
@@ -37,6 +39,31 @@ function Support() {
   const [topic, setTopic] = useState("Acesso à conta");
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("");
+  const [replyEmail, setReplyEmail] = useState("");
+  const [sending, setSending] = useState(false);
+  const [protocol, setProtocol] = useState<string | null>(null);
+  const [sendError, setSendError] = useState("");
+  async function send() {
+    if (sending || protocol) return;
+    setSending(true);
+    setSendError("");
+    try {
+      const { data, error } = await supabase.rpc("submit_support_request", {
+        p_topic: topic,
+        p_description: description.trim(),
+        p_reply_email: replyEmail.trim().toLowerCase(),
+      });
+      if (error) throw error;
+      setProtocol(String(data));
+      setStatus("Pedido enviado à central de atendimento. Guarde o protocolo abaixo.");
+    } catch {
+      setSendError(
+        "Não foi possível enviar. Confira os dados; se já enviou três pedidos nesta hora, aguarde. Seu relato continua disponível para copiar ou baixar.",
+      );
+    } finally {
+      setSending(false);
+    }
+  }
   const email = import.meta.env["VITE_SUPPORT_EMAIL"] as string | undefined;
   const report = () =>
     `Norte Concursos — ${topic}\n\n${description.trim()}\n\nData: ${new Date().toLocaleDateString("pt-BR")}`;
@@ -123,6 +150,17 @@ function Support() {
               <option key={t}>{t}</option>
             ))}
           </select>
+          <label htmlFor="support-email">E-mail para retorno</label>
+          <Input
+            id="support-email"
+            className="institutional-input"
+            type="email"
+            autoComplete="email"
+            maxLength={254}
+            value={replyEmail}
+            onChange={(e) => setReplyEmail(e.target.value)}
+            disabled={!!protocol}
+          />
           <label htmlFor="support-description">O que aconteceu?</label>
           <textarea
             id="support-description"
@@ -136,6 +174,18 @@ function Support() {
             placeholder="Ex.: na questão…, encontrei o trecho… A fonte consultada foi…"
           />
           <div className="support-actions">
+            <button
+              className="btn-brass"
+              disabled={
+                sending ||
+                !!protocol ||
+                description.trim().length < 10 ||
+                !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(replyEmail.trim())
+              }
+              onClick={send}
+            >
+              <Send size={16} /> {protocol ? "Enviado" : sending ? "Enviando…" : "Enviar pedido"}
+            </button>
             <button className="btn-brass" disabled={!description.trim()} onClick={copy}>
               <Copy size={16} /> Copiar relato
             </button>
@@ -146,6 +196,12 @@ function Support() {
           <p role="status" className="support-status">
             {status}
           </p>
+          {protocol && (
+            <p className="break-all">
+              Protocolo: <strong>{protocol}</strong>
+            </p>
+          )}
+          {sendError && <p role="alert">{sendError}</p>}
           {email ? (
             <a
               className="founder-link"
@@ -155,8 +211,9 @@ function Support() {
             </a>
           ) : (
             <p className="support-channel">
-              O canal direto de atendimento ainda não está divulgado. Você pode salvar seu relato;
-              esta página não envia solicitações automaticamente.
+              Seu pedido pode ser enviado por esta página e será recebido pela administração da
+              Norte Concursos. Não inclua senhas ou dados de pagamento. Para recuperar a senha, use
+              “Esqueci minha senha” na tela de acesso.
             </p>
           )}
         </section>

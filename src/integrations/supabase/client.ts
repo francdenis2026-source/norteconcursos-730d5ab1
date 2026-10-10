@@ -9,6 +9,10 @@ const supabaseAnonKey =
   import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"] ??
   "sb_publishable_hF4jXHTs4tapaOMX2KdqvA_N_A5Tyqf";
 
+// Capture the recovery intent before the SDK consumes the URL fragment.
+export const passwordRecoveryPending =
+  typeof window !== "undefined" &&
+  new URLSearchParams(window.location.hash.slice(1)).get("type") === "recovery";
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 /** Cliente isolado para fluxos de autenticação que não podem substituir a sessão atual. */

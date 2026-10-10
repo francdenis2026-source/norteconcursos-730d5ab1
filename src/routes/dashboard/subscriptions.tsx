@@ -10,14 +10,25 @@ import { fetchUsedToday, getDailyLimit } from "@/lib/aiSolverStore";
 import { cn } from "@/lib/utils";
 import { SoonBadge } from "@/components/SoonBadge";
 import { PlanCountdown } from "@/components/dashboard/PlanCountdown";
-import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE, TESTING_NOTICE, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
+import {
+  AI_ENABLED,
+  PAYMENTS_ENABLED,
+  PAYMENTS_NOTICE,
+  TESTING_NOTICE,
+  TESTING_PHASE,
+  isTestingTier,
+} from "@/lib/launch.config";
 import { PageHero } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/subscriptions")({
   head: () => ({
     meta: [
       { title: "Planos e assinatura | Norte Concurso" },
-      { name: "description", content: "Compare os planos do Norte Concurso e veja quantas resoluções com IA você pode usar por dia." },
+      {
+        name: "description",
+        content:
+          "Compare os planos do Norte Concurso e veja quantas resoluções com IA você pode usar por dia.",
+      },
       { property: "og:title", content: "Planos e assinatura | Norte Concurso" },
       { property: "og:description", content: "Planos com limites diários do Treinador com IA." },
       { property: "og:type", content: "website" },
@@ -35,7 +46,8 @@ function SubscriptionsPage() {
   useEffect(() => {
     if (user?.id && user.id !== "demo-user") void fetchUsedToday().then(setUsed);
   }, [user?.id]);
-  const pct = limit === "unlimited" ? 100 : Math.min(100, Math.round((used / Math.max(1, limit)) * 100));
+  const pct =
+    limit === "unlimited" ? 100 : Math.min(100, Math.round((used / Math.max(1, limit)) * 100));
 
   return (
     <div className="mx-auto max-w-6xl space-y-6 p-4 md:p-6">
@@ -44,7 +56,11 @@ function SubscriptionsPage() {
         size="sm"
         kicker="Assinatura"
         icon={Crown}
-        title={<>Planos e <em>uso</em></>}
+        title={
+          <>
+            Planos e <em>uso</em>
+          </>
+        }
         description="Seu plano, o uso de recursos e o que cada plano oferece."
       />
 
@@ -57,14 +73,18 @@ function SubscriptionsPage() {
       )}
 
       {user?.plan_ends_at && (
-        <PlanCountdown endsAt={user.plan_ends_at} planName={SUBSCRIPTION_PLANS.find((p) => p.id === tier)?.name ?? "Gratuito"} />
+        <PlanCountdown
+          endsAt={user.plan_ends_at}
+          planName={SUBSCRIPTION_PLANS.find((p) => p.id === tier)?.name ?? "Gratuito"}
+        />
       )}
 
       <Card>
         <CardContent className="space-y-2 pt-6">
           <div className="flex flex-wrap justify-between gap-2 text-sm">
             <span className="text-foreground">
-              Plano atual: <strong>{SUBSCRIPTION_PLANS.find((p) => p.id === tier)?.name ?? "Gratuito"}</strong>
+              Plano atual:{" "}
+              <strong>{SUBSCRIPTION_PLANS.find((p) => p.id === tier)?.name ?? "Gratuito"}</strong>
               {isAdmin && " (administrador)"}
             </span>
             {AI_ENABLED ? (
@@ -72,11 +92,19 @@ function SubscriptionsPage() {
                 Resoluções com IA hoje: {used} / {limit === "unlimited" ? "ilimitado" : limit}
               </span>
             ) : (
-              <span className="flex items-center gap-2 text-muted-foreground">Resoluções com IA <SoonBadge /></span>
+              <span className="flex items-center gap-2 text-muted-foreground">
+                Resoluções com IA <SoonBadge />
+              </span>
             )}
           </div>
           {AI_ENABLED && (
-            <div className="h-2 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
+            <div
+              className="h-2 overflow-hidden rounded-full bg-muted"
+              role="progressbar"
+              aria-valuenow={pct}
+              aria-valuemin={0}
+              aria-valuemax={100}
+            >
               <div className="h-full bg-primary transition-all" style={{ width: `${pct}%` }} />
             </div>
           )}
@@ -87,39 +115,65 @@ function SubscriptionsPage() {
         {SUBSCRIPTION_PLANS.map((plan) => {
           const current = plan.id === tier;
           return (
-            <Card key={plan.id} className={cn("flex flex-col", current && "border-primary ring-1 ring-primary")}>
+            <Card
+              key={plan.id}
+              className={cn("flex flex-col", current && "border-primary ring-1 ring-primary")}
+            >
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-lg">{plan.name}</CardTitle>
-                  {current ? <Badge>Atual</Badge> : plan.isPopular && <Badge variant="secondary">Popular</Badge>}
+                  {current ? (
+                    <Badge>Atual</Badge>
+                  ) : (
+                    plan.isPopular && <Badge variant="secondary">Popular</Badge>
+                  )}
                 </div>
                 <CardDescription>{plan.description}</CardDescription>
                 <p className="pt-2 text-2xl font-bold text-foreground">
                   {plan.price === 0 ? "Grátis" : `R$ ${plan.price.toFixed(2).replace(".", ",")}`}
-                  {plan.price > 0 && <span className="text-sm font-normal text-muted-foreground">/mês</span>}
+                  {plan.price > 0 && (
+                    <span className="text-sm font-normal text-muted-foreground">/mês</span>
+                  )}
                 </p>
               </CardHeader>
               <CardContent className="flex flex-1 flex-col gap-4">
                 <ul className="flex-1 space-y-2 text-sm">
                   {Object.entries(plan.features).map(([key, f]) => (
-                    <li key={key} className={cn("flex gap-2", !f.included && "text-muted-foreground")}>
-                      {f.included ? <Check className="h-4 w-4 shrink-0 text-primary" /> : <X className="h-4 w-4 shrink-0" />}
+                    <li
+                      key={key}
+                      className={cn("flex gap-2", !f.included && "text-muted-foreground")}
+                    >
+                      {f.included ? (
+                        <Check className="h-4 w-4 shrink-0 text-primary" />
+                      ) : (
+                        <X className="h-4 w-4 shrink-0" />
+                      )}
                       <span className="flex flex-wrap items-center gap-2">
                         {f.name}
-                        {key === "aiSolver" && !AI_ENABLED ? <SoonBadge /> : typeof f.limit === "number" && `: ${f.limit}`}
+                        {key === "aiSolver" && !AI_ENABLED ? (
+                          <SoonBadge />
+                        ) : (
+                          typeof f.limit === "number" && `: ${f.limit}`
+                        )}
                       </span>
                     </li>
                   ))}
                 </ul>
                 {current ? (
-                  <Button variant="outline" disabled>Seu plano</Button>
+                  <Button variant="outline" disabled>
+                    Seu plano
+                  </Button>
                 ) : plan.price > 0 ? (
                   PAYMENTS_ENABLED ? (
                     <Button asChild>
-                      <Link to="/checkout/$planId" params={{ planId: plan.id }}>Assinar {plan.name}</Link>
+                      <Link to="/checkout/$planId" params={{ planId: plan.id }}>
+                        Assinar {plan.name}
+                      </Link>
                     </Button>
                   ) : (
-                    <Button disabled aria-label={`Assinar ${plan.name} — em breve`}>Em breve</Button>
+                    <Button disabled aria-label={`Assinar ${plan.name} — em breve`}>
+                      Em breve
+                    </Button>
                   )
                 ) : null}
               </CardContent>

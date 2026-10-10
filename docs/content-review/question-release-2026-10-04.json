@@ -1,0 +1,1425 @@
+{
+  "released": 177,
+  "counts": {
+    "board_exam_questions": 130,
+    "curated_question_catalog": 47
+  },
+  "receipts": [
+    {
+      "table": "board_exam_questions",
+      "id": "02dc4521-42c7-4274-9f2d-92e387abce6b",
+      "patch_sha256": "60648ba480cc52f65f6240334926a6ca4c9e84c0a8fb560d12bdbb2069ecc095",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:46.757138+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "0470a746-5036-48d0-84a5-7359ea97c415",
+      "patch_sha256": "42e9de070eaaebbafa439162ea0db8382f2a96018f3e65a12b59261d7f96a569",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:46.757138+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "076a6869-bfdd-42ac-abcf-0f408ed338c0",
+      "patch_sha256": "5bc8339ea82daa0855356696dd0d9602d535a8c42ddf824ce28fbe6ee79aa82f",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:46.757138+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "07c52be2-c15f-491f-8cf0-4a83974585c5",
+      "patch_sha256": "9c96bd3b1250f1b909c51a3fc52601daa3dbf3795723ee965d29478946c5404c",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:46.757138+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "08738ae0-5260-47fd-8eda-dfeaba3bf5d8",
+      "patch_sha256": "f0101cfb4cd45e6ba339fb0da2e50ab7889077d36e2e8e7a37f7bcf1ff01fa26",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:46.757138+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "092aec2a-ac78-456f-abc2-489e5d095b9a",
+      "patch_sha256": "b52492e61d70ecde3be62d15a67cea9906bc2b5cea58652a89c030eac7cb72aa",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:49.779367+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "0aa6c0d7-04a4-440e-9fb9-faac274285cc",
+      "patch_sha256": "9455c1a4de92b5b2509fea2f200c19182ef94a7c1f879f8bd7180c18b42ec21d",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:49.779367+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "0d703edd-dc65-476b-8bba-affeb1f59f5d",
+      "patch_sha256": "6876636fb8c588302f670ec260e12d77da480f5e2fbef644088c5afd83511873",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:49.779367+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "0db1e665-6e0c-4893-a213-99d3727d1437",
+      "patch_sha256": "b91ec9daa0f1f2ae125e1d3383e62c6475c2c64e984b494bafb071407e8e62d8",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:49.779367+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "16405e9d-cdea-46da-9223-34d39f696148",
+      "patch_sha256": "4e15b85acd7dba0ba64ee0c2599121cac66d56ced97efdbed29ff625872f5d22",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:52.930928+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "171244e5-9ce4-4eb3-abe2-0b62c906f25b",
+      "patch_sha256": "0cd7e8c62507caeba212de0298529f487d27042dba7355d9a16351e148b25ba0",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:55.784889+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "1bf24b17-8123-42da-ad1b-55f02da7bf02",
+      "patch_sha256": "2c48da16fddea34587820a475f029fa99f5aa103e0a029a6ecc36a7b1d0e164b",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:55.784889+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "1cef52af-155b-4bce-a6a4-cca0b908cf56",
+      "patch_sha256": "9374e97d320245b0efce7cbefbab5c2e75ed8f9f616b3b805fe3c54782ecd803",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:55.784889+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "1d77e01f-2175-4ebc-aa81-39d98fda7daf",
+      "patch_sha256": "8fb4c2d05549df384cf4b51acf4f6e7449aae7f93bf241096383f58faaaaf602",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:59.376988+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "1db31b8c-bd22-4626-b581-58c5238f0e56",
+      "patch_sha256": "5ae316e382620309e2606c2cb176ae5c6bee46aa0ed13eaa6536ccdc34e90e47",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:59.376988+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "1ee4cb1a-a8e9-4315-aa42-1656fde02d1f",
+      "patch_sha256": "eb878560cdc7ef3d6aab95fbaa45ac361cbd1909827773362546b4ab37ae1e6b",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:23:59.376988+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "22095ecd-d20b-4625-91bf-764097f5ea53",
+      "patch_sha256": "a955359c4f972a64df5eae04a7bb8f2480a31a0fc1fe6aee58807ed41d4d30f8",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:02.568831+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "22bcd96d-668f-446a-949e-8ed6df34c9b4",
+      "patch_sha256": "4003c5c339b14915d039ffae91c68e68f88964f35360f2f47e6a962cff0ba375",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:05.741282+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "249d6d6d-5a09-4c6e-a397-3cf1f1bfed5e",
+      "patch_sha256": "41a478ae2e3033dd104106be4b6b49283e305cf4108d18a5b218f7e714c04f85",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:05.741282+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "2b1112de-6a67-4800-9701-2adfb01d6a60",
+      "patch_sha256": "a5eac0b1d00c5ab5084c85d5798951bbd79f1c739c310f3d9b0b0ec573a0c8f3",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:05.741282+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "2e12bdea-d511-474c-9bcb-a6fdfdffc116",
+      "patch_sha256": "6800a6c1329cd628ca24919d1653fd19a2964517f91acee8943eea1377ac862f",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:05.741282+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "2f31eef0-3659-46df-a2bc-1e37820eef31",
+      "patch_sha256": "860bb7335e6a463f73a6ec3a1a16a1326733348a2fd2f5f568c137b87aa9ff8b",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:08.976592+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "3003d360-3122-4a4f-8e7c-a9f332273a8a",
+      "patch_sha256": "2323039156c4bb375b47f1709883b5556b3277049f2d99fbd8b6a63880cca52a",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:08.976592+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "31464b5a-a7ec-4fd6-b883-0701ac19dc5b",
+      "patch_sha256": "7f9ec3400428238e632c967640a1aff957320c8c5515a40e57eca2106f3ec5fc",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:08.976592+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "3176dc3b-43bf-4245-b26b-0187a2bc1f5d",
+      "patch_sha256": "03b58b392ed6f520dc8d3786faa3b06e59ba2897f54c4ee47f33d25ab508c270",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:12.524871+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "33af0822-f169-49ee-9d50-3b65bb3a11d2",
+      "patch_sha256": "bdac9db4f068d8271c94ff9ec244981ba7a259c90469e92ca787619e5bc22871",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:12.524871+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "33e941ce-8da0-42c7-b48b-c6191ff18838",
+      "patch_sha256": "df430479678d0e15a003896a18dfbb3e4a32b1662d818f3c48d2a90a83c283a3",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:12.524871+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "344d1d6a-8324-4be4-a206-3e3c59a0d2b9",
+      "patch_sha256": "4855d17f0dc0b1790fee818016b6d9b6b87d237cd0853a84d971ddeab17812fb",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:12.524871+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "368b32a3-b1ce-416a-9fe5-0ab190887697",
+      "patch_sha256": "8bb8fcb337cecd6c9ca1473f2b06bdee6bedfc8a5b5983b65623444309c8f2ec",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:12.524871+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "36df89bd-2a93-4501-893f-7da18ac0c8ec",
+      "patch_sha256": "59f4879602a37734e8cfc11e0f769fce9f680982aca24596e9d3efea3e94fafe",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:15.955129+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "3701186a-d7d4-43f3-9f6d-e8f0b89635f1",
+      "patch_sha256": "ee45d0ce0dbbf75d830044c2d87ec3ed4521a300d4d16b1593de6fbfa80f3c0b",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:15.955129+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "3907b2bf-a1c4-4bc4-9e05-2b73c4bf7c48",
+      "patch_sha256": "cf19533be6f838aacf5afdf2da625f3c06675ef5f2c5f9fed4f1ca693fb2db50",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:15.955129+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "399be2e0-26a9-46e2-ba60-f928aee95517",
+      "patch_sha256": "df195f6eee7e54313cc449c7285fdfcc2b0dfa62968d2fe90f431fa42d42af56",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:15.955129+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "3a4f7dfb-3d57-4214-bbee-d9d62ce5b886",
+      "patch_sha256": "87e57e34c84d8b5475f8051f4713cda315fcdfa3d00feabf1d2e3579f5629dfb",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:15.955129+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "3d2fed2a-d0c6-4238-bd23-b45a7a6e5fca",
+      "patch_sha256": "0cab475e0878bfaf49c31d7f111e153b30c4ebce2be30e7429bddd1ddbc267a7",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:19.53056+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "3eba5063-554a-4e75-8577-3181f8d75867",
+      "patch_sha256": "fe087a364021ee7d600aec9bca28a73248b572d35ce64acee241c7acb746bf6b",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:19.53056+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "4029b011-f56e-4f3a-a243-4f2893a000ed",
+      "patch_sha256": "f17a349fb69599ed8d127e30e197c2ce7bf2191850993664903c1d24c20f16b6",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:23.615003+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "477de08d-0311-43f8-838c-c54e9dae2fb1",
+      "patch_sha256": "53385374d03b689cbf582e17594f205c9efd5ad4617bba3219d51160964ebbe5",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:27.303575+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "48cc9952-0580-498a-b536-8533616101ea",
+      "patch_sha256": "56078b2a47b0d36b2381dd06027a7602cbe750269ceedeca9cadb2c64250ce85",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:27.303575+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "4b02cb44-c9eb-412b-bce8-b1b54e70f52b",
+      "patch_sha256": "22e55dc9778b01ca90eaaedec6e825ae7ebcf72d5e49fd31e6a5105023c8ee13",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:27.303575+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "4c6a3f4c-6c84-4046-af39-8d3876cc9ee3",
+      "patch_sha256": "59eb255702ea6c556edf7038baeb83d71f3b5b5b36b01843ac92022f3be03566",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:30.713414+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "53ab3975-df89-40d4-83ac-2e5f5d37e51d",
+      "patch_sha256": "2f9b9b2bc98a79012d2689dab8b4ecbb8c9ef2cd464e2b965ace67c65ab0264a",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:30.713414+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "55b83e63-c0d5-4c54-90e5-67d24037fb63",
+      "patch_sha256": "9678e7de0dc10c8ae15a06a47bd38ed0b0ecc9db409dbb57459b33577ae202d6",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:30.713414+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "55f70aa4-e3da-41e8-a40b-092ca351e836",
+      "patch_sha256": "3a90861f2ce6eb1f7b2cf4c1d48972093696eb47563f12de05f9255cb17fc978",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:30.713414+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "5610ae7d-2f3e-41fa-b66d-e553572e5b8a",
+      "patch_sha256": "65c1f8a00c5ee60cc1376b109abbaf76c95a9f32d432cc74cda5611ddcd646cc",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:30.713414+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "57cbc57d-6607-4bea-84f6-e8b9963de6a2",
+      "patch_sha256": "64d081298295c1de9a662316361c1d85fe5a585d5d99392310acef6bbf098c64",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:34.068172+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "58a5f8e3-3227-4ffc-ace5-97055c1691f0",
+      "patch_sha256": "0e1a4c2a0c10366c3a9d20301d1e50942d6b5524144284312014ebb2a0b522da",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:34.068172+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "59b0dec5-716f-4ed5-8ad5-b8b513507ed9",
+      "patch_sha256": "b60cd59d725a1e3a854ccc15787d295300f191c5a8be0fe715641bcfb272eb87",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:37.172759+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "5b4c00cb-f9be-416f-99fa-32ad0434aed8",
+      "patch_sha256": "655b9a264e4ca858edb0ff1ff467fc1c84f8392c9b726509f3aaa405589ab56f",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:37.172759+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "5d3b8d50-f95a-424e-8136-465939122c84",
+      "patch_sha256": "83ecfc611e962e3588249fbdc6290046a0da2972c96a2b12f519ac712cc3c9b9",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:40.527098+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "5e820a57-2193-4f58-999e-9fcc16358c48",
+      "patch_sha256": "2e09999d1de2aa456f0283665524e4c2ae616f964f22b1e5bee01d81f24ceb61",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:40.527098+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "6319f957-3add-4cb5-b42f-10825fbacf67",
+      "patch_sha256": "1a67b2947c45508dbd21ee3319ab47a9a5145c76d942880de99674a4222273ac",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:40.527098+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "6370b5d8-fe84-4103-aec4-fa51da08e167",
+      "patch_sha256": "cf1817d2ac0578da7702c92f86b7e0dd865a5490ead5d81fc048707083ce2036",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:43.761856+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "63c79f78-de4e-4be3-a095-c7f1b38d8031",
+      "patch_sha256": "128cfb60f6cebd6a55bb4a18e58381efff92cfd1bb34a3e76895c9ea2addd9f7",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:43.761856+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "64ad0e2a-9ee6-4217-b44b-817c96ed08ca",
+      "patch_sha256": "62b151dbb965074b6c48a0cad5e08da4ccd7968b5dcf07b7b3953cbf25d35dd6",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:43.761856+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "6694b9f9-19e9-4518-88ad-e3b5eaaf09cf",
+      "patch_sha256": "b0536a1c1dac0aba9d856875f00ddf72e05584ea6d54fc27aaa81fe78cc61c91",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:47.082351+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "69b69083-6806-499b-a66b-bdec00070d5c",
+      "patch_sha256": "87d99c95ff6fdf8d753af24530832e1c3a4127f2e34fe8dcf365616eeb7402dc",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:47.082351+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "6c9e4ba6-c44c-435e-98ca-e1d1de41ebf1",
+      "patch_sha256": "e97f3a2687fedf9be10866d35bb887beb12f06590c4a0911baa8bb2733a068a1",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:47.082351+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "6df80c00-3dea-42e4-9776-02d2c7ccb0ec",
+      "patch_sha256": "85b11717a755338dbd89cea586357622b75cf777d8cfd49586c660fa953b6391",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:47.082351+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "6fc538b9-4d1a-42d6-8b51-330e45a6eb5d",
+      "patch_sha256": "7075bff248d144339ea42b09f86472f1b7f28fc2bea4768444608c2cf7ee9436",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:47.082351+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "80a17f14-3989-48f8-990a-bccb17c6421a",
+      "patch_sha256": "7b57a4f998ccb2b9d2639a507a03d89105d9846aa0f4a674bf1ab22244817505",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:50.552858+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "83138941-ca09-4cd5-ae8b-6ce835aa5cc0",
+      "patch_sha256": "87989461eafd8d9b38ce128ccae0f945bd6814246c60e2720e5eb539a803d317",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:50.552858+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "8350023f-734a-47e7-896f-7f581df0f1f1",
+      "patch_sha256": "2f1f65b4427b70e58a485a85c0fe14d9756e21a90c935eae5c7855989a01dcf7",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:50.552858+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "8365b24b-7d21-4fd0-9475-098ee1283dcd",
+      "patch_sha256": "8972aef61901d25b9ed7645d56a941db28ed88ec12d90843513284e25ae15b15",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:50.552858+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "87221500-4629-4b76-b55a-ac7d44800a08",
+      "patch_sha256": "cc62caaedad38fda9ad3d58eb0f94a39ac8226fd8f492561951bb631b0eff5c0",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:50.552858+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "87cd46f7-b737-47f1-99aa-4287ccacf6a5",
+      "patch_sha256": "157f8c5a5eb6ccc2889dc20f75a4dbefe3ef7d3e134c9b9275930f888a0af422",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:53.840051+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "8accc2bc-cb65-4310-a8cf-6909a576a466",
+      "patch_sha256": "5356eeabfb22cec9671668d4607699bc349d2802380b13525193478188008d3a",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:53.840051+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "8b553106-8a84-4a16-b0ff-93ab93bf8828",
+      "patch_sha256": "f42a7a506d584b8717734aca9ae384a89cbb62304157d9306fa9ad29d7252b7a",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:53.840051+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "8ce45e61-7c15-4145-b33f-dbbc68f28601",
+      "patch_sha256": "daaee974131dac3618213881626bd55709758d2da5bb3159e11a7c95928a648a",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:53.840051+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "8e56a7fc-d3a1-4d35-ba3d-81e46287d05d",
+      "patch_sha256": "ef8bfbc8c13f48d5bc68c33feade089a9fb737cab83af27ae7dfb775d0367bd4",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:53.840051+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "915701db-855b-4805-a3b8-be7398aa798b",
+      "patch_sha256": "5bad7e0061fe9db7147e611440443dd565ec525c8551d8e46053d445e8c43a76",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:57.100654+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "927b4987-15cb-49fe-b4c6-3fa96ede7fb4",
+      "patch_sha256": "64aa42bf3bce036b81faff8b36f86ed8a1e4b7abcbb47666dddb5311d0f49e87",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:57.100654+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "952543d0-cfe0-4758-adf4-370e74a211ff",
+      "patch_sha256": "3426215b452e20deb09ece72c76fa3d66705cad2620dbfaf7ef3075b183769b7",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:24:57.100654+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "968d7f30-02f1-403f-aaf5-7cf830584d88",
+      "patch_sha256": "fff750b2b86496c78f2e9d33b1d7e87913ce45fbbae28873069020c60b2b6e49",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:00.719796+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "9723a01e-9ad9-4b90-b9e2-37cd517afd4c",
+      "patch_sha256": "333704149543c904070f9b5256423b8d07bcf6bb5b87b919549afa2dbe81ce4a",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:00.719796+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "97eb5584-e4b0-4bf3-82f8-d3f12835e6fd",
+      "patch_sha256": "e441d86e480723b1d053cf3b27b3dbefa89a8c7ae203fdd3ce9633ecac11c009",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:03.985689+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "993c4aab-2820-4a47-8d23-22ca6d8ab39f",
+      "patch_sha256": "8ea78a4efbc6f3abfd3d39f6a4bc514a361c9549cb3eb2bf49aec864e30cedf6",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:03.985689+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "99dbd2df-2000-466f-a54c-52a6b84e8e2c",
+      "patch_sha256": "2b7d91e50c0c3e76e6b2fc4ebaf7fa7cbd9f465b1321c21faf5a1de5e7c76f8e",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:03.985689+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "9afce7dd-9d2c-46f1-8e64-78c1bed56238",
+      "patch_sha256": "239ccbbd89af8236f59e5c842f612ac0e390f3ef09abf4c61379c6fe2c15eadd",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:07.245614+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "9c5996d6-0630-4176-a4bc-7fa150e970bf",
+      "patch_sha256": "0ae845c6d2e32720087917a41bed808d3a1cbcfa3403bfbaaceae8df88b44987",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:10.580673+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "9d579334-b5a5-41c5-838d-4f53b4fc196e",
+      "patch_sha256": "0bc769b334cfff151ae6a8117445720cd592d2b3e92ed7c5f28a17767d730d29",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:10.580673+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "9f9ac99b-76d6-4edf-adad-932e10ba352f",
+      "patch_sha256": "580cbbe100115057f93a66af333e850e4152c88e946a57ad777e1c5b4e62337b",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:10.580673+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "9faba175-5d87-4595-8052-8f3279ebf830",
+      "patch_sha256": "11092d01721e7f4e17f9e47108b3e67e65f70c00377e3f4e7c147073cdb32197",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:10.580673+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "a738a6fb-34ce-4847-ac55-d98661f36708",
+      "patch_sha256": "df28a13112b59690e2595f4bec64a1b375aa9e4117cbe09ca719fb39cc2de305",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:10.580673+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "a82bc507-0281-4a64-b21d-fb9c237fb4ad",
+      "patch_sha256": "046e0898998b6516573620dfdc9a93314afca8a7a0b4464783e810e25803e28f",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:13.714009+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "ab272500-3966-4f50-92a1-24345d19162c",
+      "patch_sha256": "a1dd4cb3bed2733c1d810bf14ce73caf5066f580fabd3d180d36ade7db450b1a",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:13.714009+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "ac898c6c-b0f6-46d4-8a2e-a514b8675b87",
+      "patch_sha256": "0a9e66567fe9de71da2501befe1ec1f6f8bfe63c55c934de5df0f8f053316b35",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:17.186854+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "b2955dc0-28bf-48f1-b815-9bd50525f258",
+      "patch_sha256": "554a526d4ab4b9eef2f8dbed8bbdaa93f6da19486d938db6ca981ea8bb1dd106",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:20.587436+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "b47fc6b0-37da-43c3-a85a-39bfec6dfa68",
+      "patch_sha256": "7622d4084528c19212df2eb86202d859de6b1a5a6aaa792bdcc7a8777c4adf56",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:20.587436+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "b93dab8f-99b2-4f89-81ea-a0366532d943",
+      "patch_sha256": "b7957b6adcc09161ff57905e5f69767b9dea257b220d854751acbfa80b7830fd",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:20.587436+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "b9594ec4-9e9b-4069-8042-e1ec3191ff8d",
+      "patch_sha256": "297a19d0b492feadaa19383f3609932c8f39a3b4540126fa146a94bc4eee50eb",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:24.254144+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "bad6c332-c0c7-4c38-921e-61b4d106c352",
+      "patch_sha256": "abf72f64a7042ed19e6655c290fa1236a0675dc4de9aa69fc486b3e8e1c36fdb",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:28.027936+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "bae096c2-cfe2-43a0-a47d-0fb00de78a21",
+      "patch_sha256": "d83ebc9a60417fc27c2396ddd41a196b2e51e955bc86366a67b4bab7743ffa5b",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:28.027936+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "c6cb0db1-d562-4b1c-a825-783f470a8f5c",
+      "patch_sha256": "cbd436f1e0f61ef36c32b6d17b956b3b8097b28c2f4fdaf9556d5356ed64e3e3",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:31.281465+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "c8ad10ef-e815-4185-85d9-1c77456bcac5",
+      "patch_sha256": "a1dc63faeeeb36cf80c01275ce1d872727f1b2b2c6630e79990e62b89c72bf23",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:31.281465+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "c8e44ceb-30e7-4057-a47a-403da13736bd",
+      "patch_sha256": "6569e0ff01b7df606dd781520aa85bf788a14d704a9a83b5b9ac0bd217d58b3f",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:31.281465+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "cac844c1-6904-4f57-9c33-cfbf9885ef05",
+      "patch_sha256": "5136fa774bbbbb4b88384c6605d61216d06f0a821a7d1fa9d8b32281bfd47571",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:31.281465+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "cc042ccd-a3dc-420f-80d0-8b5e3fe678cd",
+      "patch_sha256": "f3f1511bb389f5b3e8782ebebca9d428137bf958c57562d3f5662d4a54e928d7",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:34.679813+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "cea505ea-987a-4485-91a7-f55e5521b88e",
+      "patch_sha256": "98b79d0a36e461961f05d3ecb58c85f3cb6401f28005862004cf08a2937a0159",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:38.022173+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "d09bf805-f4d0-492e-9ea1-70dc81d4feca",
+      "patch_sha256": "d2ab679109e041976eaec3d37fdc910529f078fc79b337592af000e95b13734a",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:41.806968+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "d11025ff-6a5f-49d4-b571-123d6c107079",
+      "patch_sha256": "0d6dfe89a3e9f5d9a08aadbb534a804bdfe620e5df4dd67dd392ed31278bdab4",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:45.287248+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "d14ea9ba-59d7-4852-9928-003d0d9582d4",
+      "patch_sha256": "0946955324080fbb7df0677f266d23acec56532ae7d939b641eec9a5b304968f",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:45.287248+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "d245826a-7503-4c85-b917-5436a700b175",
+      "patch_sha256": "29e459fffafed50104ad7cedd8b1cc3b478d6a6a1f4349483484b90f599f03f5",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:49.095568+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "d2f743a1-21e5-4e6d-ad66-067bec36daa1",
+      "patch_sha256": "d150eca837394f70efb6a79e666c04d53abf0e6ace98b7be834bd7f248ed6b3c",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:49.095568+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "d41de176-6745-4128-9b88-0a4b1ead6b24",
+      "patch_sha256": "cd2ba7418ceb32f47fcd0950659936cae04740d8449fa65d8b77528830b9861b",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:52.470537+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "d64184f7-df85-4e58-b617-29d6da9ba345",
+      "patch_sha256": "4077053b3947abc3faeaf92a148fa41cb8a9f86f92cd708cb67a773514768767",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:52.470537+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "d6fc0f07-55dc-49cd-b61a-724db975b70d",
+      "patch_sha256": "77a53abbee791de88fce75c66a9c44b0977507d66bf0ae87f76f4eb9331c4a22",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:55.819786+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "d7e93ef2-1bd3-481d-bf9c-18b0655fef1f",
+      "patch_sha256": "244e59e4ce3cf843dccbd658cceac09cfaffb96b7e1d6447cbdd1e7e03c456a4",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:55.819786+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "d83a4a74-308c-4e24-9310-b9ecd0b0c349",
+      "patch_sha256": "7651d16ab84acc36cfbbcfbb012f06cede8a2e5774bb6509d85845e113cd952a",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:25:58.910084+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "d8e3a10e-9e5e-4182-a997-7f804a2f2317",
+      "patch_sha256": "17b228a7a693871f03b38da9e9642d3773e1bd39d004eb6f13a328cf6d2b3b12",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:02.532534+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "dea2416b-4bf3-47ba-b90f-7a9c7fbd2735",
+      "patch_sha256": "ba839ef1086d1a083841e005d080953deee3f596ac1cb12c9ed6e9258eb7a179",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:02.532534+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "df19d917-0c1d-4c38-a0d2-f67d4c6d840d",
+      "patch_sha256": "d569152c65e71ae692d0c424d1ef30154d4658f35a0d39696e9e596196a9372f",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:02.532534+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "df1ee0de-82d8-4c91-8818-71a21f7b9a4a",
+      "patch_sha256": "82b5512bdcf88409d60b4456dfeaec30da377074f0c9bc51dba79d1763ff617d",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:05.835764+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "dfa69d08-bb48-4d7a-8833-f07f525e8eae",
+      "patch_sha256": "f6534e0f730988dc56c018983d91b2e58343d7602c501fe896e4e1c653cc397d",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:05.835764+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "e04dca94-a040-4657-bb66-90bc9aa03b6d",
+      "patch_sha256": "22f483f4a4373611748f8e2ec456f49f9714141a3fa959b49a5983f67e6a7540",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:05.835764+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "e09b2798-ad34-430e-9e3d-54c21a381dda",
+      "patch_sha256": "34aa4d0353cc6650b8b7e3f06c9c4760e21fbabae87a493e68ee33ab723bc1f4",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:05.835764+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "e79e6c6f-e912-4d15-a31e-6f7039b0590d",
+      "patch_sha256": "fc9957a90f346ad98234ba1ee17c0c3efe3d2da924e421fa24b68ba1e189122d",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:09.012918+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "ea45e9e5-7a0b-4736-82f0-2c819ceaed4d",
+      "patch_sha256": "23ddda97393fdcd9a3786ca2853ba8611b1e9b5fe583ac26e6f053cf3a154258",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:12.182704+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "ebc947f5-668b-4a08-a6b2-11563776bfdd",
+      "patch_sha256": "0c29cf71cd1bcbf27eb55d7ebe3790333c698ce3678ae29a7f4a9d48e58c0b44",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:15.618275+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "ebceb5ba-08fb-4204-92c6-26556b887e35",
+      "patch_sha256": "e68807e1617bfffd1022c90ea2aff71bf7046e6e9b24a8ef59da5a7a27a50b38",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:15.618275+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "ed678113-6390-4737-88e4-4e1bb76d4ba7",
+      "patch_sha256": "0820ebc46b16a624eb4f1469651235833b75f9efc84b6457b7ac6a38d850f1f5",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:19.142395+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "f030f6c1-074c-4315-aec4-bff3142acabb",
+      "patch_sha256": "4ebe045e47117a08b57fc1bdd56201cc87b725d86854ab664704fd413c5390a7",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:19.142395+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "f411c161-3908-4c3b-af72-2963bf70ce7a",
+      "patch_sha256": "e9fadfbedfe221593a5ef1d86a83b7ebcbc545ae74ab0ca3033341a80baccd05",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:19.142395+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "f4f525a5-2373-4745-bf0d-60b49fce74d3",
+      "patch_sha256": "4ec0fefc1b34fb711f542b53bb4baef1e7dfb81af1b22f875fa15aacfc7cfec6",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:22.908594+00:00",
+      "syllabus_topic_id": "5873244d-48e6-4241-a474-b5db3317d27f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "f8703356-79c3-43c7-ac93-769f68d4b263",
+      "patch_sha256": "22660457fde537b7756fef5e1d7182365c467ac36292ed243326bc8b81f68db0",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:25.992702+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "f91dafaf-297b-4db3-8fc7-2ff5e89378d9",
+      "patch_sha256": "8c3dbf17065928c46a0daf0c96545c0d4b40116c98321e568b62e6f1985f9006",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:29.381456+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "f9d7b565-aeaa-4f35-8aa0-fbda3d236f69",
+      "patch_sha256": "fb6ddf43c526689e8ed41cf4ea75f4bc28929296de08d58b1fe158d3a42f7bae",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:29.381456+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "fc774922-b79c-4dbb-9178-9baba2449e4c",
+      "patch_sha256": "66ad2ed97f07f38d9357473647704d2cf2b1aae0902b64dfac8ad9aa2809d36f",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:29.381456+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "fcec84b5-31e2-4e03-bccd-5004e7543403",
+      "patch_sha256": "38e5c68c0ba141602a4b51d47a665a1779bdda0818b5cc69796da8feac456acd",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:32.541152+00:00",
+      "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "fec0686e-268c-4291-8b93-2bd89a2dd6d8",
+      "patch_sha256": "96c6dd3020f340a4b7d1acc6fb7f1628412b4a4c5acf985cb0024a53a25ed855",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:35.788715+00:00",
+      "syllabus_topic_id": "13a80069-1852-447d-a71b-1c8f2489c487"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "e06bf3d3-f210-4909-8a75-f8fd1f486988",
+      "patch_sha256": "dd5d15a3b43d42925f889695644f04de33d76ec6c126426a9972257c083907c1",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:35.788715+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "a4a36530-3af4-4339-bfbc-b4a98cf788ca",
+      "patch_sha256": "99e8a5a19cec8a180261ea3976003c2781698e5d8384c3f31396086defa00889",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:35.788715+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "870e2d1a-2a94-4201-9d46-bbaec6cfdcb6",
+      "patch_sha256": "f8160dfc9715de7d0399d87d4d48b44ee099c8674576abe5a06e1c01d34dea42",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:35.788715+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "021a23ac-7615-431c-b0ea-8a467c8f77f6",
+      "patch_sha256": "8cd171b2ec2f13267af784f99cc59f41f9e0f565141f470b6c55367feba92883",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:35.788715+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "82bcfb24-779d-463a-86b1-a7815ac325db",
+      "patch_sha256": "2407158da784051f41b5f56522548ff328917f3e76559f130bf94f1a12b46341",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:39.053912+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "205cfcbc-f4bb-440f-aea5-25f010195294",
+      "patch_sha256": "165cd68ab1663e70f4889181f811ea6267217173a124fa397b6b56b0e4873295",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:39.053912+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "a27fce46-c9ff-43e2-bd91-fea44a13dc62",
+      "patch_sha256": "13637e50a0272dbab6b5d3e14ddcfbae14225332519fd0cd1e4eddb3a93321ab",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:39.053912+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "7ed26ffb-50df-4ee0-9694-1f11e9b98f7f",
+      "patch_sha256": "13f078a7251f1a3c623f16ebce4837d847690b609bfe934e7a7f3f0c1e05f8c2",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:39.053912+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "399a0587-26e7-4038-b9dc-9cca6275ee8c",
+      "patch_sha256": "f625f317f2304e8985374047ae2b7ddd4255c05a71aadd6d358ff130512fb58d",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:39.053912+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "5655fded-bcde-4044-a5e9-b1e3f0190ad2",
+      "patch_sha256": "734f6dc4adda3a958967d1be0a767e6d758036b7f492a271f49634cf6ee2171b",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:39.053912+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "545c3cb1-6016-4d4d-92dc-81edb23be543",
+      "patch_sha256": "e3952b653b266cc5c6f73b2af3e6f1488309716251bcd889a21e862c7322ba74",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:39.053912+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "93142939-4747-4b86-812c-5a681d148579",
+      "patch_sha256": "006a8353f4a2c4b2bb6daf5a90d5fe758658f8f0d217df7f27c082478bb31425",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:39.053912+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "5f0914bb-c327-475f-85be-bccbd9fc2e75",
+      "patch_sha256": "c255545c25598fa8d22d3587d8cc16dc87bda052891935a5bb5edf3f4987aa15",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:39.053912+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "d54d76f3-0b04-46a0-adff-74858b0f94c3",
+      "patch_sha256": "22c354fecd74abd43163ca58737d91642e9fe982c4829bf8dbf059c3e6fac7c5",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:42.728063+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "f028fa6b-95ae-4843-95fe-5ac44415fb58",
+      "patch_sha256": "a4535be85192f2a4fe7088bc3e4de449869e383c2f929c9920d623810ade937f",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:42.728063+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "3e36ac63-2b94-4edf-8839-4a688d12de6a",
+      "patch_sha256": "9aab6154948c763bf72c321f1fbe241e8980085dc0b6fc9dbe8e4beda40aef41",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:42.728063+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "0ae246e4-e07d-4309-bc8a-0a61edf76a91",
+      "patch_sha256": "0e3653f994c8b858c075623b2c2d2dc359318cc8914b4f66b3b979807ac2cd27",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:42.728063+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "35e6273e-847d-48e0-a598-fba88cffd1ac",
+      "patch_sha256": "b13d74cbfdb99828b19ed6b991111e32f0ffec69904621956a05cac358da8a54",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:42.728063+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "0f147774-8c7c-4489-8fac-934f90229477",
+      "patch_sha256": "32e4cdf198b92439072810a45df14769ce814eeb1247bae55e1fb81a342b7970",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:42.728063+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "1e920f8f-67bd-4d7f-ae9a-5bed42a92f6d",
+      "patch_sha256": "1ca049dec8bd35cd1847caab7fec402f8058742b8681440b25bd77d44b0e7d51",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:42.728063+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "f2343ef9-7189-4c62-8658-eda46a303798",
+      "patch_sha256": "aa19dd76ab3cfa980a8c0561d58e19ce0d7801b0ae89bfce4b2ca1d915a5ce39",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:42.728063+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "ee93da1a-4b60-44df-bb87-8d422abf9461",
+      "patch_sha256": "43c0f92ac18620ae4c75228b06cefd46bed7e774bf843250be326a78786a7423",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:42.728063+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "25575789-0838-4b6b-8e54-373d22036a0c",
+      "patch_sha256": "46f5bf8b6dee0ac58192693f8e30fce200aa8fd8fa1c19812d6586a704239b9a",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:46.097612+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "e4fda5f7-294f-486e-a3eb-8aaef8d0312a",
+      "patch_sha256": "13505201d28b3bc9b6d61edcd77c60eeae7af701adf921bdfc5d0868c8cd1c8b",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:46.097612+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "de7df57e-c64f-4efb-8935-932559a5d630",
+      "patch_sha256": "3cce39a570d4ed1a6e0169423de853574748d9f1516d6ada7f057bf2ba125406",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:46.097612+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "d5f178ea-d532-4729-948c-18a436d3a018",
+      "patch_sha256": "27ce820e096d6877d2cf2939fb0dcca190d11cedac93ca03d750451fa43f238e",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:46.097612+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "6e0b3b57-9855-4841-a280-8826ff2b8dfa",
+      "patch_sha256": "230e9af41fa93f368d9872b8929f272bd655e0f7fcb25f29242a9065e3e33935",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:46.097612+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "30916218-c874-43ae-aed8-13178f145119",
+      "patch_sha256": "04f5b79168422ec0e443e5a166c596453592ad0692e19eb2aa0482d27d25efc7",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:46.097612+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "444a349d-69b3-4905-8d5e-a46690c8211d",
+      "patch_sha256": "a9cdfb15b30a8ed9ab86e3b229d7b39ca1b220c7ecc76305a0170dd772a4cd69",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:46.097612+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "b087c8ce-9ee0-4557-8918-4feb87406ae8",
+      "patch_sha256": "4967404392e17b5744ec3e1b8ecddaa7069354bb7661aa32023ba58e38ca6aa9",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:46.097612+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "d6f646d1-ea48-40f3-a717-6e85477e23cb",
+      "patch_sha256": "768cf9852786bcae058c43bf52ac6859ddc5e18d4f327fc42a8c6c6fe7c9963d",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:46.097612+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "b5886b10-bca1-4a93-b2b3-8c80f7ee6d54",
+      "patch_sha256": "f1999c1f990d21385272a787332a36416d58fad91612f7bfa0bb8fc99a67ef5a",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:49.453925+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "5ee88dbf-497c-4723-b110-90c88272b3b2",
+      "patch_sha256": "ca0483ba40c83685212685f283a6c0b998f34dc2d5579af19e55a12e5760d3c7",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:49.453925+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "98bde148-8574-429e-86a0-1f7edae1b4d1",
+      "patch_sha256": "dbe63a82100316f788f9cc4b40a328e042e48c9d9c230755912226442cb233aa",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:49.453925+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "c6a0519e-f09b-4656-a013-09c5a6f117df",
+      "patch_sha256": "fe6fc300c237b9d3daf87701be1ced018daf482867722d1549f062d1bd5ee834",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:49.453925+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "17b86a59-9ec3-41d0-a70b-f6130dc047bf",
+      "patch_sha256": "33699ea24e42b4353bfff59d6e001312b947f5d95f646275f7b7880e62bb9413",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:49.453925+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "8656d5ed-bb30-442b-b19e-f915b4ea422e",
+      "patch_sha256": "c8ad6056604e3793d52dc5264b15319087877aa208d104a59b01bed343d7f0b5",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:49.453925+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "b2554fa1-e99f-442e-92c0-b45552e20998",
+      "patch_sha256": "237f6ca6b1443ab1b2a386b5287048893a9b0d3c74932b6af31d8c4cbfd915e2",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:49.453925+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "67ae8de1-3b54-4433-8a1d-c84dc39a8126",
+      "patch_sha256": "95575139e806f77d4d60fd82413735a0f9ddf98e5c451917b38a0ff846709bd1",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:49.453925+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "4d318e72-20a0-4aee-8e19-286481ab7c83",
+      "patch_sha256": "562cd39f7d3d5f1282939b865923d7d9998f31ba88539fe29e2cfc2a35517c45",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:49.453925+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "cad615cc-ba32-4e5b-b5c2-a8807ce71d34",
+      "patch_sha256": "b3061226f698e55821ab1496a6e44834115a52eb9e174a7a5b43e6f30fd0b891",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:52.565792+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "44b4014c-ef7b-419e-9a41-8453fad3e84b",
+      "patch_sha256": "59b21dd8e63c920a8735be50b0bf8c985ecdcf96b26ef69af54504808acc88e5",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:52.565792+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "bc1299c3-b4de-4e91-9c3d-f9afdbe79bfa",
+      "patch_sha256": "5f6d8027d02b40908f1bdb86bf2f9882bfff506c2756c607bf00cde6c3a3cfdc",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:52.565792+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "5070647c-5bd3-4c12-8e63-9fb9d39de998",
+      "patch_sha256": "c5c49f015f91a23d8cd684852ac735085182231580847a238b9ea9a8f8006478",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:52.565792+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "7a1d1a68-91a8-41c0-a1cf-f0a171ed9b2c",
+      "patch_sha256": "1c7bd0ba0fab94bfa0aa3040517d7d24c34d8127817bb303835b9cd62f60a746",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:52.565792+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "6f6188eb-5af0-451c-a6af-786654630241",
+      "patch_sha256": "c3dfb3387fef321fe63e9ba25677abb4dccf96852dde8f7670261bcf93932c90",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:52.565792+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    },
+    {
+      "table": "curated_question_catalog",
+      "id": "29237002-de18-4f18-b175-71ddf1c47cac",
+      "patch_sha256": "6f39c448652f275cddf34f9c10ed2897ce87d50e0b0d4ebf8be8342589d9024f",
+      "content_status": "active",
+      "verified_at": "2026-10-04T19:26:52.565792+00:00",
+      "syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2"
+    }
+  ]
+}
