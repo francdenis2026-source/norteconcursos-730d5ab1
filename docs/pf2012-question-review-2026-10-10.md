@@ -2,15 +2,16 @@
 
 ## Resultado confirmado no Supabase
 
-Foram registradas **260 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
+Foram registradas **360 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
 
 | Situação | Quantidade |
 | --- | ---: |
-| Questões aprovadas e ativas | 131 |
-| Itens retidos para complementação | 124 |
-| Repetições internas excluídas da publicação | 3 |
+| Questões aprovadas e ativas | 189 |
+| Itens retidos para complementação | 162 |
+| Repetições internas excluídas da publicação | 5 |
 | Enunciados inadequados excluídos da publicação | 2 |
-| Candidatos ainda sem revisão individual neste caderno | 740 |
+| Candidatos ainda sem revisão individual neste caderno | 640 |
+| Gabaritos históricos superados excluídos da publicação | 2 |
 | Registros privados de extração deste caderno | 1.000 |
 
 Os 1.000 registros são candidatos extraídos, não uma certificação de 1.000 questões distintas e aproveitáveis. Foram associadas respostas editoriais a 982 registros; as demais exigem conferência. A revisão das 17 apostilas está **incompleta**. Não extrapolar os números deste lote para o total do acervo.
@@ -47,15 +48,23 @@ O importador passou a aceitar o formato nativo **certo/errado**, exigindo indica
 
 - Validação offline dos pacotes e das duas etapas de revisão: concluída.
 - Testes de regressão: **86 passaram**, incluindo rejeição de respostas e alternativas incompatíveis com o formato C/E.
-- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 131 publicações; isto não certifica ausência de duplicatas semânticas.
-- Conferência de banco: 1.000 extrações privadas, 260 decisões auditadas e 131 publicações; textos, respostas originais e decisões preservados.
+- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 189 publicações; isto não certifica ausência de duplicatas semânticas.
+- Conferência de banco: 1.000 extrações privadas, 360 decisões auditadas e 189 publicações; textos, respostas originais e decisões preservados.
 
 Os PDFs privados, enunciados extraídos, pacotes de importação, capturas oficiais e relatórios detalhados permanecem nos outputs locais, fora do Git. Nenhuma credencial integra este commit. A biblioteca não foi ampliada a partir de trechos ainda sem catalogação e revisão concluídas.
 
 ## Trabalho restante
 
-Continuar a revisão dos 740 candidatos deste caderno e complementar os 124 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
+Continuar a revisão dos 640 candidatos deste caderno e complementar os 162 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
 
 ## Cadência autorizada
 
 Aplicar ao Supabase e enviar à main a cada 100 decisões individuais adicionais, após validar e conferir o resultado. Monitorar os limites da conta; ao atingir 80% de uso em qualquer janela relevante, interromper a revisão, concluir o checkpoint seguro e enviar o progresso. Não interpretar os limites de extração como questões aprovadas.
+
+## Checkpoint 261–360
+
+Mais 100 decisões aplicadas: 58 questões publicadas, 38 retidas, duas duplicatas e dois gabaritos históricos superados. Corrigido de E para C o item sobre dispensabilidade do inquérito, preservando o gabarito editorial original. Um item sem resposta extraída recebeu resposta independentemente fundamentada na Lei 9.296/1996.
+
+As duas exclusões por superação dizem respeito ao reconhecimento de pessoas, confrontado com o [Tema 1.258/STJ, Informativo 856](https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=021716). A regra de alinhamento é obrigatória também em juízo; confirmação posterior não saneia por si o reconhecimento inválido. Provas independentes têm análise própria.
+
+Releitura do Supabase confirmou 1.000 candidatos privados, 360 decisões auditadas e 189 questões ativas. Textos e respostas originais foram preservados. O relatório é agregado; nenhum PDF ou pacote privado foi adicionado ao Git.
