@@ -170,13 +170,14 @@ test('Catalog renders one study entry per law in separate areas and keeps deep r
   '@/lib/legalCourses':{useLegalCourses:()=>({data,isPending:false,isError:false})},
   '@/lib/legalLibrary':laws,
   '@/lib/legalChronology':chronology,
+  '@/lib/libraryOrganization':load('src/lib/libraryOrganization.ts',{'./legalLibrary':laws}),
   '@tanstack/react-router':{Link:({children,to,params})=>React.createElement('a',{href:to.replace('$slug',params.slug)},children)},
  });
  const materials=manifest.map(m=>({slug:m.material_slug}));
  const html=renderToStaticMarkup(React.createElement(LegalPathCatalog,{userId:'test',materials,searching:false}));
  assert.equal((html.match(/Estudar: guia, exemplos e flashcards/g)??[]).length,39);
  assert.equal((html.match(/Leitura integral e revisão por dispositivo/g)??[]).length,39);
- for(const group of laws.LEGAL_GROUPS)assert.ok(html.includes(group));
+ for(const group of new Set(data.map(c=>c.group)))assert.ok(html.includes(group));
  const only=renderToStaticMarkup(React.createElement(LegalPathCatalog,{userId:'test',materials:[{slug:'legislacao-drogas-revisao'}],searching:true}));
  assert.equal((only.match(/Estudar: guia, exemplos e flashcards/g)??[]).length,1);
  assert.ok(!only.includes('/dashboard/library/processo-penal-cpp-provas-flagrante-revisao'));

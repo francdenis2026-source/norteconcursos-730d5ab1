@@ -8,7 +8,6 @@ import {
   Library,
   MapPin,
   PlayCircle,
-  Search,
   SearchX,
 } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
@@ -20,9 +19,10 @@ import { compareMaterialRevision } from "@/lib/legalChronology";
 import { materialLawSlug } from "@/lib/legalLibrary";
 import { librarySearchText, matchesLibrarySearch, matchingLibraryLaws } from "@/lib/librarySearch";
 import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
+import { LibraryNavigation } from "@/components/library/LibraryNavigation";
+import { libraryArea, libraryDiscipline, libraryDisciplines, libraryTone, type LibraryArea } from "@/lib/libraryOrganization";
 import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
 import {
-  groupByDiscipline,
   readSlugs,
   useStudyMaterialList,
   useLibrarySearchContent,
@@ -39,6 +39,7 @@ function LibraryIndex() {
   const signedIn = !!user && user.id !== "demo-user";
   const { data, isPending, isError, refetch } = useStudyMaterialList(signedIn);
   const [query, setQuery] = useState("");
+  const [area, setArea] = useState<LibraryArea>("all");
   const [discipline, setDiscipline] = useState<string>("all");
   const [contest, setContest] = useState<string>("all");
   const [topic, setTopic] = useState("all");
@@ -49,8 +50,9 @@ function LibraryIndex() {
   useEffect(() => setRead(readSlugs()), []);
 
   const items = useMemo(() => data ?? [], [data]);
-  const disciplines = useMemo(() => groupByDiscipline(items), [items]);
-  const topics = useMemo(() => Array.from(new Set(items.filter(item=>discipline==="all"||item.discipline===discipline).map(item=>item.topic_label))).sort((a,b)=>a.localeCompare(b,"pt-BR")),[items,discipline]);
+  const areaItems = useMemo(() => items.filter(item => area === "all" || libraryArea(item) === area), [items, area]);
+  const disciplines = useMemo(() => libraryDisciplines(areaItems), [areaItems]);
+  const topics = useMemo(() => Array.from(new Set(areaItems.filter(item=>discipline==="all"||libraryDiscipline(item)===discipline).map(item=>item.topic_label))).sort((a,b)=>a.localeCompare(b,"pt-BR")),[areaItems,discipline]);
   const searchIndex = useMemo(()=>{
     const byId=new Map(content.data?.map(row=>[row.id,row]));
     return new Map(items.map(item=>[item.id,librarySearchText(item,byId.get(item.id))]));
@@ -66,15 +68,17 @@ function LibraryIndex() {
   const visible = useMemo(() => {
     return items.filter(
       (item) =>
-        (discipline === "all" || item.discipline === discipline) &&
+        (area === "all" || libraryArea(item) === area) &&
+        (discipline === "all" || libraryDiscipline(item) === discipline) &&
         (contest === "all" || item.contest_name === contest) &&
         (topic === "all" || item.topic_label === topic) &&
         (lawMatches.length ? lawMatches.includes(materialLawSlug(item)??"") : matchesLibrarySearch(searchIndex.get(item.id)??"",query)),
     );
-  }, [items, query, discipline, contest, topic, searchIndex, lawMatches]);
+  }, [items, query, area, discipline, contest, topic, searchIndex, lawMatches]);
 
-  const visibleGroups = useMemo(() => groupByDiscipline(visible.filter(item => !materialLawSlug(item))).map(([name, list]) => [name, [...list].sort(compareMaterialRevision)] as [string, StudyMaterialSummary[]]).sort((a, b) => compareMaterialRevision(a[1][0]!, b[1][0]!)), [visible]);
+  const visibleGroups = useMemo(() => libraryDisciplines(visible.filter(item => !materialLawSlug(item))).map(([name, list]) => [name, [...list].sort(compareMaterialRevision)] as [string, StudyMaterialSummary[]]).sort((a, b) => compareMaterialRevision(a[1][0]!, b[1][0]!)), [visible]);
   const searching = query.trim() !== "" || contest !== "all" || topic !== "all";
+  const resetFilters = () => {setQuery("");setArea("all");setDiscipline("all");setContest("all");setTopic("all");};
   const readCount = items.filter((item) => read.has(item.slug)).length;
 
   if (!authLoading && !signedIn) {
@@ -103,7 +107,7 @@ function LibraryIndex() {
             Biblioteca de <em>estudo</em>
           </>
         }
-        description="Leis da alteração mais recente à mais antiga. Nas outras matérias, materiais da revisão mais recente à mais antiga. Leia, fixe e depois treine com questões."
+        description="Seu estudo organizado por área: encontre a disciplina, compreenda com exemplos e pratique. Leis e materiais atualizados, com o caminho de revisão sempre à mão."
         actions={
           <Button asChild className="hero-btn-ghost gap-2" variant="outline">
             <Link to="/dashboard/edital">
@@ -114,7 +118,7 @@ function LibraryIndex() {
       >
         <div className="page-hero__stats max-w-xl">
           <HeroStat icon={BookMarked} label="Materiais" value={isPending ? "—" : items.length} />
-          <HeroStat icon={Library} label="Matérias" value={isPending ? "—" : disciplines.length} />
+          <HeroStat icon={Library} label="Matérias" value={isPending ? "—" : libraryDisciplines(items).length} />
           <HeroStat icon={Check} label="Já lidos" value={isPending ? "—" : readCount} />
         </div>
       </PageHero>
@@ -148,56 +152,15 @@ function LibraryIndex() {
         />
       ) : (
         <>
-          <div className="space-y-3 rounded-2xl border bg-background p-4 shadow-sm">
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <label className="relative flex-1">
-                <Search
-                  aria-hidden="true"
-                  className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
-                />
-                <span className="sr-only">Pesquisar por conteúdo, disciplina, assunto ou lei</span>
-                <input
-                  type="search"
-                  value={query}
-                  onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Conteúdo, disciplina, assunto ou lei (ex.: CPP, Maria da Penha, 11.340)"
-                  className="w-full rounded-xl border bg-background py-2.5 pl-9 pr-3 text-sm outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100"
-                />
-              </label>
-              <select value={topic} onChange={event=>setTopic(event.target.value)} aria-label="Filtrar por assunto" className="rounded-xl border bg-background px-3 py-2.5 text-sm sm:max-w-64">
-                <option value="all">Todos os assuntos</option>
-                {topics.map(name=><option key={name} value={name}>{name}</option>)}
-              </select>
-              {contests.length > 1 && (
-                <select
-                  value={contest}
-                  onChange={(event) => setContest(event.target.value)}
-                  aria-label="Filtrar por concurso"
-                  className="rounded-xl border bg-background px-3 py-2.5 text-sm sm:w-64"
-                >
-                  <option value="all">Todos os concursos</option>
-                  {contests.map((name) => (
-                    <option key={name} value={name}>
-                      {name}
-                    </option>
-                  ))}
-                </select>
-              )}
-            </div>
-            <div className="flex flex-wrap gap-2" role="group" aria-label="Filtrar por matéria">
-              <Chip active={discipline === "all"} onClick={() => {setDiscipline("all");setTopic("all");}}>
-                Todas <b>{items.length}</b>
-              </Chip>
-              {disciplines.map(([name, list]) => (
-                <Chip key={name} active={discipline === name} onClick={() => {setDiscipline(name);setTopic("all");}}>
-                  {name} <b>{list.length}</b>
-                </Chip>
-              ))}
-            </div>
-            <p role="status" aria-live="polite" className="text-sm text-muted-foreground">{visible.length} materiais encontrados{lawMatches.length?" · mostrando as leis correspondentes à busca":query.trim().length>=2&&content.isPending?" · pesquisando também o texto dos guias…":""}. Busque pelo nome ou número da lei, com ou sem acentos.</p>
-            {content.isError&&query.trim().length>=2&&<p role="alert" className="text-sm">A busca no texto não carregou; os títulos e assuntos continuam disponíveis. <button className="cursor-pointer underline" onClick={()=>void content.refetch()}>Tentar novamente</button></p>}
-            {(searching||discipline!=="all")&&<button type="button" className="cursor-pointer text-sm underline" onClick={()=>{setQuery("");setDiscipline("all");setContest("all");setTopic("all");}}>Limpar busca e filtros</button>}
-          </div>
+          <LibraryNavigation items={items} area={area}
+            onArea={value => {setArea(value);setDiscipline("all");setTopic("all");}}
+            query={query} onQuery={setQuery}
+            discipline={discipline} onDiscipline={value => {setDiscipline(value);setTopic("all");}}
+            disciplines={disciplines} topic={topic} onTopic={setTopic} topics={topics}
+            contest={contest} onContest={setContest} contests={contests}
+            count={visible.length} searchingContent={!lawMatches.length && query.trim().length >= 2 && content.isPending}
+            onReset={resetFilters}/>
+          {content.isError && query.trim().length >= 2 && <p role="alert" className="rounded-xl border p-4 text-sm">A busca nos textos não carregou; títulos e assuntos continuam disponíveis. <button className="cursor-pointer underline" onClick={() => void content.refetch()}>Tentar novamente</button></p>}
 
           <LegalPathCatalog userId={user!.id} materials={visible} searching={searching || discipline !== "all"} query={query} />
 
@@ -211,6 +174,7 @@ function LibraryIndex() {
                   variant="outline"
                   onClick={() => {
                     setQuery("");
+                    setArea("all");
                     setDiscipline("all");
                     setContest("all");
                     setTopic("all");
@@ -240,32 +204,6 @@ function LibraryIndex() {
   );
 }
 
-function Chip({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      aria-pressed={active}
-      onClick={onClick}
-      className={cn(
-        "rounded-full border px-3.5 py-1.5 text-xs font-semibold transition [&_b]:ml-1 [&_b]:font-black",
-        active
-          ? "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40"
-          : "border-slate-200 text-muted-foreground hover:border-emerald-300",
-      )}
-    >
-      {children}
-    </button>
-  );
-}
-
 function DisciplineSection({
   name,
   list,
@@ -288,10 +226,10 @@ function DisciplineSection({
   const percent = ordered.length ? Math.round((done / ordered.length) * 100) : 0;
 
   return (
-    <details open={defaultOpen} className="group rounded-2xl border bg-background shadow-sm">
-      <summary className="flex cursor-pointer list-none flex-wrap items-center gap-x-4 gap-y-2 px-5 py-4">
+    <details open={defaultOpen} className={`group library-subject library-tone-${libraryTone(name)}`}>
+      <summary className="library-subject__heading">
         <div className="min-w-0 flex-1">
-          <h2 className="text-lg font-black text-primary">{name}</h2>
+          <h2 className="library-discipline-title">{name}</h2>
           <p className="text-xs text-muted-foreground">
             {ordered.length} {ordered.length === 1 ? "material" : "materiais"} · {done} lido
             {done === 1 ? "" : "s"}
@@ -366,7 +304,7 @@ function MaterialRow({
       <Link
         to="/dashboard/library/$slug"
         params={{ slug: item.slug }}
-        className="group/row flex h-full items-start gap-3 rounded-xl border bg-background p-3.5 transition hover:border-emerald-300 hover:shadow-sm"
+        className="group/row library-material-row"
       >
         <span
           className={cn(
@@ -378,7 +316,7 @@ function MaterialRow({
           {isRead ? <Check className="h-4 w-4" /> : number}
         </span>
         <span className="min-w-0 flex-1">
-          <span className="block text-[10px] font-bold uppercase tracking-wide text-emerald-700">
+          <span className="library-material-topic">
             <LibrarySearchMatch text={item.topic_label} query={query}/>
           </span>
           <strong className="block text-sm leading-snug"><LibrarySearchMatch text={item.title} query={query}/></strong>
@@ -389,7 +327,7 @@ function MaterialRow({
             </span>
           )}
         </span>
-        <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-muted-foreground transition group-hover/row:translate-x-0.5 group-hover/row:text-emerald-600" />
+        <ArrowRight className="library-material-arrow mt-1 h-4 w-4 shrink-0 transition group-hover/row:translate-x-0.5" />
       </Link>
     </li>
   );
