@@ -74,6 +74,20 @@ test("review does not authorize missing alternatives", () => {
   a.candidates[0].payload.publication.question_text = "Exemplo\n(A) Um\n(C) Três\n(D) Quatro";
   assert.throws(() => validateCorpus(a), /Alternativas/);
 });
+
+test("true-false format requires explicit review and C/E answers, without invented options", () => {
+  const a = approved(), c = a.candidates[0];
+  c.payload.publication.question_text = "Assertiva sintética conferida individualmente.";
+  c.payload.publication.official_answer = "C";
+  assert.throws(() => validateCorpus(a), /Alternativas/);
+  c.payload.individual_review.question_format = "true_false";
+  assert.equal(validateCorpus(a), a);
+  c.payload.publication.official_answer = "A";
+  assert.throws(() => validateCorpus(a), /gabarito/);
+  c.payload.publication.official_answer = "E";
+  c.payload.publication.question_text += "\n(A) Alternativa indevida";
+  assert.throws(() => validateCorpus(a), /Alternativas/);
+});
 test("empty figure alternatives cannot be published", () => {
   const a = approved();
   a.candidates[0].payload.publication.question_text = "Exemplo\n(A) Um\n(B)\n(C) Três\n(D) Quatro";

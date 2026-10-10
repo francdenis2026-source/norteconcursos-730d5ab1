@@ -48,7 +48,9 @@ export function validateCorpus(data) {
     )
       throw Error("Publicação sem revisão individual");
     const labels = Array.from(q.question_text.matchAll(/^\(([ABCDE])\)/gm), (m) => m[1]).join("");
-    if (!["ABCD", "ABCDE"].includes(labels) || !labels.includes(q.official_answer))
+    const trueFalse = r.question_format === "true_false";
+    if (trueFalse ? (labels !== "" || !["C", "E"].includes(q.official_answer)) :
+      (!["ABCD", "ABCDE"].includes(labels) || !labels.includes(q.official_answer)))
       throw Error("Alternativas incompletas ou gabarito incompatível");
     if (
       q.question_text
