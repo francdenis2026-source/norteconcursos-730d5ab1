@@ -1,4 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
+import { sessionAuthHeaders } from './supabase-session-auth.mjs';
+import { isDeepStrictEqual } from 'node:util';
 
 const [input, report, mode] = process.argv.slice(2);
 if (!input || !report || (mode && mode !== '--dry-run')) {
@@ -30,9 +32,9 @@ if (!result.dry_run) {
   if (!/^[a-z]{20}$/.test(project ?? '') || !key || !reviewer) throw new Error('Defina TASK_SUPABASE_PROJECT, TASK_SUPABASE_KEY e TASK_LIBRARY_REVIEWER na sessão');
   const base = `https://${project}.supabase.co/rest/v1`;
   const request = async (path, options = {}) => {
-    const response = await fetch(base + path, { ...options, headers: { apikey: key, 'Content-Type': 'application/json', ...options.headers } });
+    const response = await fetch(base + path, { ...options, headers: { ...sessionAuthHeaders(key), 'Content-Type': 'application/json', ...options.headers } });
     if (!response.ok) throw new Error(`Supabase HTTP ${response.status}`);
-    return response.json();
+    return response.status === 204 ? null : response.json();
   };
   const topics = await request('/syllabus_topics?select=id,discipline,topic_order,content_status,edition_id&content_status=eq.current&limit=1000');
   const editions = await request('/syllabus_editions?select=id,status&status=eq.active&limit=1000');
@@ -40,17 +42,39 @@ if (!result.dry_run) {
   for (const row of records) {
     if (!topics.some(t => t.id === row._syllabus_topic_id && t.edition_id === row._syllabus_edition_id && t.topic_order === row.syllabus_topic_order && editions.some(e => e.id === t.edition_id))) throw new Error(`Tópico não vigente: ${row.slug}`);
   }
-  const existing = await request('/study_materials?select=slug&limit=1000');
-  const present = new Set(existing.map(r => r.slug));
-  for (const row of records) {
-    if (present.has(row.slug)) { result.preserved++; continue; }
+  const existing = [];
+  for (let offset = 0;;) {
+    const page = await request(`/study_materials?select=*&order=id&limit=200&offset=${offset}`);
+    if (!page.length) break;
+    existing.push(...page); offset += page.length;
+  }
+  const materialData = row => {
     const { _syllabus_topic_id, _syllabus_edition_id, _supplemental_scope, ...material } = row;
-    const inserted = await request('/study_materials?on_conflict=slug', {
-      method: 'POST', headers: { Prefer: 'resolution=ignore-duplicates,return=representation' },
-      body: JSON.stringify({ ...material, content_status: 'active', reviewed_by: reviewer, reviewed_at: new Date().toISOString() }),
+    return material;
+  };
+  const matches = (actual, expected) => !!actual && Object.keys(expected).every(k =>
+    k === 'law_version_checked_at' ? Date.parse(actual[k]) === Date.parse(expected[k]) : isDeepStrictEqual(actual[k], expected[k]));
+  for (const row of records) {
+    const found = existing.find(r => r.slug === row.slug);
+    if (found && (!matches(found, materialData(row)) || !['active','under_review'].includes(found.content_status))) throw new Error(`Material existente diverge: ${row.slug}; não será sobrescrito`);
+  }
+  for (const row of records) {
+    const material = materialData(row);
+    if (!existing.some(r => r.slug === row.slug)) {
+      const inserted = await request('/study_materials?on_conflict=slug', {
+        method: 'POST', headers: { Prefer: 'resolution=ignore-duplicates,return=representation' },
+        body: JSON.stringify({ ...material, content_status: 'under_review' }),
+      });
+      result.inserted += inserted.length;
+      result.preserved += inserted.length === 0 ? 1 : 0;
+    } else result.preserved++;
+    const [actual] = await request(`/study_materials?slug=eq.${row.slug}&select=*`);
+    if (!matches(actual, material)) throw new Error(`Leitura posterior diverge: ${row.slug}`);
+    if (actual.content_status === 'under_review') await request(`/study_materials?id=eq.${actual.id}&content_status=eq.under_review`, {
+      method: 'PATCH', headers: { Prefer: 'return=minimal' },
+      body: JSON.stringify({content_status:'active',reviewed_by:reviewer,reviewed_at:new Date().toISOString()}),
     });
-    result.inserted += inserted.length;
-    result.preserved += inserted.length === 0 ? 1 : 0;
+    else if (actual.content_status !== 'active') throw new Error('Material arquivado não será republicado automaticamente');
   }
 }
 await writeFile(report, JSON.stringify(result, null, 2) + '\n');

@@ -1,0 +1,378 @@
+[
+  {
+    "id": "d70307d2-f973-5d74-b165-cc1fc6c96d1b",
+    "material_slug": "legislacao-ric-revisao",
+    "version": "2026-10-10",
+    "source_body_sha256": "38476c770471d15b959a20979ae0e7b4e3990c81ea066023dcf255d205d595d7",
+    "checked_at": "2026-10-10T03:26:45.530718+00:00",
+    "sources": [
+      {
+        "title": "Lei 9.454/1997 — Registro de Identidade Civil",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+        "sha256": "19fa04063b8a22c80114b0c629f96968cba39263111dc61171d6959598bc4e3d",
+        "checked_at": "2026-10-10T03:26:45.530718+00:00"
+      }
+    ],
+    "content": {
+      "cases": [
+        {
+          "id": "ric-1",
+          "title": "Um cidadão, um número",
+          "articles": [
+            "Art. 1"
+          ],
+          "scenario": "Marina, brasileira naturalizada, recebe documento novo. O atendente propõe criar número de RIC diferente de seu CPF.",
+          "question": "A criação de outro número respeita a regra atual?",
+          "steps": [
+            "O art. 1º inclui brasileiros natos e naturalizados.",
+            "O § 2º adota o CPF nos documentos novos; o § 3º define esse número como único e definitivo."
+          ],
+          "conclusion": "Não. Neste caso o documento novo utiliza o CPF para o número único.",
+          "pitfall": "Confundir novo documento com novo número identificador.",
+          "variation": {
+            "scenario": "Marina pede segunda via do documento. O número muda?",
+            "answer": "Não por esse motivo: o CPF permanece único e definitivo."
+          }
+        },
+        {
+          "id": "ric-2",
+          "title": "Cadastro não é carteira",
+          "articles": [
+            "Art. 2",
+            "Art. 3"
+          ],
+          "scenario": "Um candidato afirma que a Lei 9.454 cria apenas um modelo de carteira e que a lei já nomeia a PF como única operadora nacional.",
+          "question": "As duas afirmações decorrem dos arts. 2º e 3º?",
+          "steps": [
+            "O art. 2º institui cadastro nacional com número único e dados de identificação.",
+            "O art. 3º remete ao Executivo a definição da entidade centralizadora e prevê participação de estados e DF signatários de convênio."
+          ],
+          "conclusion": "Não. Cadastro e documento são distintos; esses artigos não nomeiam a PF como operadora exclusiva.",
+          "pitfall": "Transportar a competência de outra norma para esta lei.",
+          "variation": {
+            "scenario": "Um estado assina convênio com a União. Quem operacionaliza e atualiza o cadastro em seu território?",
+            "answer": "O estado signatário, em compartilhamento com o órgão central, conforme art. 3º, § 2º, redação de 2009."
+          }
+        },
+        {
+          "id": "ric-3",
+          "title": "Prazo antigo e regra revogada",
+          "articles": [
+            "Art. 5",
+            "Art. 6"
+          ],
+          "scenario": "Um curso diz que todas as identidades vencem cinco anos após cada emissão, citando o art. 6º da Lei 9.454.",
+          "question": "É uma regra atual?",
+          "steps": [
+            "O art. 6º foi revogado pela Lei 12.058/2009.",
+            "Seu texto anterior tratava de cinco anos da promulgação, e não de cinco anos de cada emissão; nem essa redação antiga pode ser apresentada como vigente."
+          ],
+          "conclusion": "Não. Verifique as regras atuais do documento correspondente, sem usar o art. 6º revogado.",
+          "pitfall": "Confundir validade de carteira com prazo histórico de implantação do sistema.",
+          "variation": {
+            "scenario": "O art. 5º cita 180 e 360 dias. São prazos que recomeçam quando alguém pede uma carteira?",
+            "answer": "Não. Referem-se à regulamentação e início da implementação da lei de 1997."
+          }
+        },
+        {
+          "id": "ric-4",
+          "title": "Orçamento e vigência",
+          "articles": [
+            "Art. 4",
+            "Art. 7",
+            "Art. 8"
+          ],
+          "scenario": "O órgão central organiza orçamento de implantação; o estudante confunde a entrada em vigor com um cronograma individual de emissão.",
+          "question": "O que cada dispositivo trata?",
+          "steps": [
+            "O art. 4º exige previsão de meios e cronograma na proposta orçamentária do órgão central.",
+            "O art. 7º prevê vigência na publicação; o art. 8º contém cláusula de revogação de disposições em contrário."
+          ],
+          "conclusion": "Orçamento, vigência e emissão individual são assuntos distintos. A lei entrou em vigor em 08/04/1997.",
+          "pitfall": "Trocar a data de conferência da biblioteca pela data de vigência da lei.",
+          "variation": {
+            "scenario": "Um edital menciona Lei 9.455 para número único. Como conferir?",
+            "answer": "A Lei 9.455 é de tortura. Na PF 2025 houve erro 9.545 na abertura corrigido para 9.454 pela retificação de 12/06/2025; use o edital retificado."
+          }
+        }
+      ],
+      "illustrations": [
+        {
+          "kind": "flow",
+          "title": "Roteiro de análise",
+          "caption": "Use este roteiro antes de abrir a resposta; confirme cada requisito no dispositivo.",
+          "nodes": [
+            "Identifique o diploma",
+            "Sujeito e finalidade",
+            "Requisitos e exceções",
+            "Consequência e vigência"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "15467c44-f8f9-5148-9d06-096afe41fcb2",
+    "material_slug": "legislacao-menor-potencial-ofensivo-revisao",
+    "version": "2026-10-10",
+    "source_body_sha256": "084b62e11e9da740049392a1c011f6202b057d4e362154567921ccddc74cf758",
+    "checked_at": "2026-10-10T03:26:45.530718+00:00",
+    "sources": [
+      {
+        "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+        "sha256": "8703d5d7600933f44d7847d2bbe2bc1d54389dcf1fe3d5c55d8b0aba8f65600a",
+        "checked_at": "2026-10-10T03:26:45.530718+00:00"
+      }
+    ],
+    "content": {
+      "cases": [
+        {
+          "id": "mpo-1",
+          "title": "Prioridade com condição",
+          "articles": [
+            "Art. 1",
+            "Art. 2"
+          ],
+          "scenario": "Uma situação exige contenção. Há recurso de menor potencial ofensivo adequado, cujo uso não expõe a integridade física ou psíquica dos policiais a risco.",
+          "question": "Qual é a orientação da lei?",
+          "steps": [
+            "O art. 1º estabelece aplicação em todo o território nacional.",
+            "Pelo art. 2º, a prioridade existe sob a condição de integridade indicada; também devem ser observados os princípios."
+          ],
+          "conclusion": "Priorizar esse recurso na situação descrita, dentro dos limites legais.",
+          "pitfall": "Apagar a condição do art. 2º ou presumir que toda situação pede emprego de força.",
+          "variation": {
+            "scenario": "A utilização desse recurso colocaria em risco a integridade dos policiais. A prioridade da lei é absoluta?",
+            "answer": "Não. A condição deve ser examinada; isso não autoriza automaticamente qualquer outro meio ou intensidade."
+          }
+        },
+        {
+          "id": "mpo-2",
+          "title": "Fuga não autoriza por si só",
+          "articles": [
+            "Art. 2"
+          ],
+          "scenario": "Uma pessoa desarmada foge, sem representar risco imediato de morte ou lesão aos agentes ou a terceiros.",
+          "question": "A fuga, isoladamente, legitima arma de fogo?",
+          "steps": [
+            "O parágrafo único, I, do art. 2º trata de pessoa em fuga desarmada ou sem risco imediato.",
+            "O exemplo reúne as condições de vedação; não existe autorização automática por desobediência."
+          ],
+          "conclusion": "Não é legítimo o uso de arma de fogo nessa hipótese.",
+          "pitfall": "Converter fuga em ameaça à vida sem fatos que sustentem isso.",
+          "variation": {
+            "scenario": "Um veículo ultrapassa bloqueio sem risco de morte ou lesão. A mera infração legitima disparo?",
+            "answer": "Não. O inciso II ressalva a hipótese em que o ato represente risco de morte ou lesão; a mera desobediência não basta."
+          }
+        },
+        {
+          "id": "mpo-3",
+          "title": "Menor potencial exige formação e fornecimento",
+          "articles": [
+            "Art. 3",
+            "Art. 4",
+            "Art. 5",
+            "Art. 7"
+          ],
+          "scenario": "Um órgão dispensa capacitação e fornecimento alegando que instrumentos de menor potencial ofensivo jamais ferem.",
+          "question": "A justificativa corresponde à lei?",
+          "steps": [
+            "O art. 4º descreve baixa probabilidade, não ausência total de mortes ou lesões permanentes.",
+            "O art. 3º exige formação habilitante, o art. 5º impõe fornecimento e o art. 7º prevê regulamentação."
+          ],
+          "conclusion": "Não. Os deveres permanecem; o risco não é zero.",
+          "pitfall": "Tomar a palavra não letal como garantia absoluta de segurança.",
+          "variation": {
+            "scenario": "O candidato afirma que o art. 3º da lei fixa capacitação anual. Está correto?",
+            "answer": "A lei exige conteúdo habilitante; a periodicidade anual é prevista no art. 4º do Decreto 12.341/2024."
+          }
+        },
+        {
+          "id": "mpo-4",
+          "title": "Após o ferimento",
+          "articles": [
+            "Art. 6",
+            "Art. 8"
+          ],
+          "scenario": "Uma pessoa fica ferida em decorrência do uso da força. A equipe pretende adiar socorro e não avisar ninguém porque usou recurso de menor potencial.",
+          "question": "Quais deveres decorrem da lei?",
+          "steps": [
+            "O art. 6º exige imediata assistência e socorro médico.",
+            "Também exige comunicação à família ou à pessoa indicada pelo ferido; o meio empregado não elimina esses deveres."
+          ],
+          "conclusion": "Assegurar socorro imediato e comunicação nos termos do artigo.",
+          "pitfall": "Condicionar o socorro ao registro da ocorrência ou à espécie de instrumento.",
+          "variation": {
+            "scenario": "O estudante associa a vigência da lei à publicação do decreto de 2024. É correto?",
+            "answer": "Não. Art. 8º da lei: vigência na própria publicação, em 23/12/2014; o decreto entrou em vigor depois."
+          }
+        }
+      ],
+      "illustrations": [
+        {
+          "kind": "flow",
+          "title": "Roteiro de análise",
+          "caption": "Use este roteiro antes de abrir a resposta; confirme cada requisito no dispositivo.",
+          "nodes": [
+            "Identifique o diploma",
+            "Sujeito e finalidade",
+            "Requisitos e exceções",
+            "Consequência e vigência"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "19d2b411-6183-5870-95c4-6b1e38c6ac47",
+    "material_slug": "legislacao-uso-forca-revisao",
+    "version": "2026-10-10",
+    "source_body_sha256": "3e65efbf928572d7d8901416253cc52efe15bcb841b4465360a8c3ea84b372f2",
+    "checked_at": "2026-10-10T03:26:45.530718+00:00",
+    "sources": [
+      {
+        "title": "Decreto 12.341/2024 — Uso Diferenciado da Força",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+        "sha256": "1a6aedbbcd84328a60d5134ac0728d38fcb3e487c798c166151b327e41bfb54e",
+        "checked_at": "2026-10-10T03:26:45.530718+00:00"
+      }
+    ],
+    "content": {
+      "cases": [
+        {
+          "id": "uf-1",
+          "title": "Princípios na decisão",
+          "articles": [
+            "Art. 1",
+            "Art. 2"
+          ],
+          "scenario": "Uma equipe escolhe maior intensidade de força sem considerar alternativas suficientes e baseia a escolha na origem social da pessoa.",
+          "question": "Que diretrizes são contrariadas?",
+          "steps": [
+            "A necessidade exige examinar recursos de menor intensidade suficientes ao objetivo legal.",
+            "Não discriminação impede escolher tratamento com base em preconceito de origem social; proporcionalidade considera gravidade da ameaça e objetivo legítimo."
+          ],
+          "conclusion": "A decisão descrita conflita com o art. 2º.",
+          "pitfall": "Tratar princípios como autorização genérica para qualquer meio.",
+          "variation": {
+            "scenario": "A atuação é questionada e o órgão pretende punir sem apuração nem defesa. O decreto permite?",
+            "answer": "Não. Art. 2º, parágrafo único, VI, prevê investigação e respeito ao devido processo, ampla defesa e contraditório."
+          }
+        },
+        {
+          "id": "uf-2",
+          "title": "Falar, avaliar e documentar",
+          "articles": [
+            "Art. 3"
+          ],
+          "scenario": "Uma ocorrência admite negociação eficaz; a equipe a ignora. Depois, o uso da força causa ferimento.",
+          "question": "Quais aspectos o art. 3º exige avaliar?",
+          "steps": [
+            "Prioridade à comunicação, negociação e técnicas de prevenção de escalada; arma de fogo é último recurso.",
+            "Quando o uso resulta em ferimento ou morte, é necessário relatório circunstanciado nos parâmetros regulamentares."
+          ],
+          "conclusion": "Negociação deve ser priorizada; o ferimento exige relatório.",
+          "pitfall": "Achar que resultado sem morte elimina documentação ou que o decreto ensina técnica operacional única.",
+          "variation": {
+            "scenario": "Houve uso de força sem ferimento nem morte. O § 5º, isoladamente, resolve todas as obrigações de registro?",
+            "answer": "Não. Confira o art. 7º, a regulamentação complementar e o contexto; o § 5º trata especificamente de ferimento ou morte."
+          }
+        },
+        {
+          "id": "uf-3",
+          "title": "Capacitação não é renovação de habilitação",
+          "articles": [
+            "Art. 4"
+          ],
+          "scenario": "Um servidor recebeu renovação de habilitação para arma e conclui que só precisa capacitar-se de novo daqui a três anos.",
+          "question": "A conclusão respeita o decreto?",
+          "steps": [
+            "Art. 4º: capacitação obrigatória anual e no horário de serviço.",
+            "Renovação de habilitação é instituto diferente: art. 11 da Portaria 855, alterado em 2026, prevê três anos e exames técnicos e psicológicos."
+          ],
+          "conclusion": "Não. A capacitação anual não é substituída pela renovação da habilitação.",
+          "pitfall": "Trocar o prazo da portaria pelo prazo do decreto.",
+          "variation": {
+            "scenario": "Uma questão histórica cobra exclusivamente o Decreto 12.341 vigente no edital PF 2025. Deve receber o prazo de três anos da portaria de 2026?",
+            "answer": "Não. Responda ao instituto e ao diploma cobrados; destaque a atualização posterior como estudo atual, sem retroagir o recorte histórico."
+          }
+        },
+        {
+          "id": "uf-4",
+          "title": "Deveres de implementação",
+          "articles": [
+            "Art. 5",
+            "Art. 6"
+          ],
+          "scenario": "Um órgão estadual fornece só um instrumento de menor potencial por profissional em serviço e não prevê atenção à saúde mental após ocorrências de alto risco.",
+          "question": "Quais diretrizes devem ser conferidas?",
+          "steps": [
+            "Art. 6º, III: proteção individual e no mínimo dois instrumentos de menor potencial ofensivo por profissional em serviço.",
+            "Art. 6º, IV: programas continuados de saúde mental para profissionais envolvidos em ocorrências de alto risco; o art. 5º lista atribuições próprias do MJSP."
+          ],
+          "conclusion": "A providência descrita não satisfaz essas diretrizes.",
+          "pitfall": "Atribuir automaticamente ao profissional individual todos os deveres institucionais de compra e planejamento.",
+          "variation": {
+            "scenario": "A questão atribui consultoria técnica especializada do art. 5º a cada policial individualmente. Correto?",
+            "answer": "Não. O art. 5º dirige essa competência ao MJSP; distinga sujeito institucional e dever profissional."
+          }
+        },
+        {
+          "id": "uf-5",
+          "title": "Ambiente prisional e controle",
+          "articles": [
+            "Art. 7",
+            "Art. 8"
+          ],
+          "scenario": "Em ambiente prisional há emprego de instrumento de menor potencial ofensivo sem lesão. O órgão conclui que não precisa formalizar registro porque ninguém se feriu.",
+          "question": "O art. 7º afasta o registro nessa hipótese?",
+          "steps": [
+            "O parágrafo único traz alternativas: lesão ou morte; ou uso de armas ou instrumentos de menor potencial em ambiente prisional.",
+            "O registro segue parâmetros ministeriais; art. 8º prevê comitê de monitoramento, que não substitui controle interno ou canais de denúncia."
+          ],
+          "conclusion": "Não. A segunda hipótese abrange o uso nesse ambiente mesmo sem lesão.",
+          "pitfall": "Ler hipóteses alternativas como requisitos cumulativos.",
+          "variation": {
+            "scenario": "A portaria atual admite dispensa justificada de registro individualizado em certas situações de multidões ou risco. Isso elimina todo relatório de ferimento?",
+            "answer": "Não. A exceção tem objeto e hipóteses delimitados; não é uma dispensa genérica dos deveres do decreto."
+          }
+        },
+        {
+          "id": "uf-6",
+          "title": "Repasse e norma complementar",
+          "articles": [
+            "Art. 9",
+            "Art. 10",
+            "Art. 11"
+          ],
+          "scenario": "Um estado solicita recursos do Fundo Nacional de Segurança Pública para ações envolvendo uso da força e afirma que as exigências do decreto são opcionais.",
+          "question": "Qual condição o art. 9º prevê?",
+          "steps": [
+            "O repasse desses fundos para ações envolvendo uso da força está condicionado à observância da Lei 13.060 e deste decreto.",
+            "O art. 10 prevê normas complementares ministeriais; o art. 11 estabelece vigência na publicação, em 24/12/2024."
+          ],
+          "conclusion": "O repasse descrito está sujeito à condição legal; as complementações devem ser consultadas na versão atual.",
+          "pitfall": "Usar o art. 9º para afirmar que qualquer verba pública de qualquer finalidade está condicionada a ele.",
+          "variation": {
+            "scenario": "A atualização de 2026 menciona emendas e doações. Está escrito no art. 9º deste decreto?",
+            "answer": "Não. A ampliação identificada está no art. 3º da Portaria 855/2025, alterado pela Portaria 1.121/2026."
+          }
+        }
+      ],
+      "illustrations": [
+        {
+          "kind": "flow",
+          "title": "Roteiro de análise",
+          "caption": "Use este roteiro antes de abrir a resposta; confirme cada requisito no dispositivo.",
+          "nodes": [
+            "Identifique o diploma",
+            "Sujeito e finalidade",
+            "Requisitos e exceções",
+            "Consequência e vigência"
+          ]
+        }
+      ]
+    }
+  }
+]

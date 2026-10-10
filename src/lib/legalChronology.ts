@@ -233,6 +233,24 @@ export const LAW_CHRONOLOGY: Record<string, {date:string;source_url:string;kind:
     "source_url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Lei/L15358.htm",
     "kind": "amendment",
     "state": "effective"
+  },
+  "ric": {
+    "date": "2023-01-11",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+    "kind": "amendment",
+    "state": "effective"
+  },
+  "menor-potencial-ofensivo": {
+    "date": "2014-12-22",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+    "kind": "original",
+    "state": "effective"
+  },
+  "uso-forca": {
+    "date": "2024-12-23",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+    "kind": "original",
+    "state": "effective"
   }
 };
 export function compareLawChronology(a:{slug:string;title:string},b:{slug:string;title:string}) {

@@ -188,7 +188,7 @@ test('Catalog renders one study entry per law in separate areas and keeps deep r
 test('Laws sort by dated official acts rather than original year or verification timestamps',()=>{
  const entries=laws.LEGAL_LIBRARY;
  const ordered=[...entries].reverse().sort(chronology.compareLawChronology);
- assert.equal(Object.keys(chronology.LAW_CHRONOLOGY).length,39);
+ assert.equal(Object.keys(chronology.LAW_CHRONOLOGY).length,entries.length);
  assert.equal(ordered[0].slug,'codigo-penal');
  for(let i=1;i<ordered.length;i++)assert.ok(chronology.LAW_CHRONOLOGY[ordered[i-1].slug].date>=chronology.LAW_CHRONOLOGY[ordered[i].slug].date);
  assert.ok(ordered.findIndex(c=>c.slug==='tortura')<ordered.findIndex(c=>c.slug==='budapeste'));

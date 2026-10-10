@@ -1,5 +1,5 @@
 import type { LegalBasis } from "./questionFormat";
-export const LEGAL_GROUPS = ["Legislação penal extravagante", "Direito Penal — Código Penal", "Direito Processual Penal — CPP", "Trânsito — CTB", "Proteção de pessoas e violência doméstica", "Legislação específica da Polícia Federal", "Proteção social — pensões"] as const;
+export const LEGAL_GROUPS = ["Legislação penal extravagante", "Direito Penal — Código Penal", "Direito Processual Penal — CPP", "Trânsito — CTB", "Proteção de pessoas e violência doméstica", "Legislação específica da Polícia Federal", "Proteção social — pensões", "Direitos humanos — uso da força"] as const;
 export const LEGAL_LIBRARY = [
   {
     "slug": "cin",
@@ -273,6 +273,27 @@ export const LEGAL_LIBRARY = [
     "title": "Lei 11.343/2006 — Lei de Drogas",
     "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
     "group": "Legislação penal extravagante"
+  },
+  {
+    "slug": "ric",
+    "material_slug": "legislacao-ric-revisao",
+    "title": "Lei 9.454/1997 — Registro de Identidade Civil",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+    "group": "Legislação específica da Polícia Federal"
+  },
+  {
+    "slug": "menor-potencial-ofensivo",
+    "material_slug": "legislacao-menor-potencial-ofensivo-revisao",
+    "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+    "group": "Direitos humanos — uso da força"
+  },
+  {
+    "slug": "uso-forca",
+    "material_slug": "legislacao-uso-forca-revisao",
+    "title": "Decreto 12.341/2024 — Uso Diferenciado da Força",
+    "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+    "group": "Direitos humanos — uso da força"
   }
 ] as const;
 export function legalLibraryEntry(slug: string) { return LEGAL_LIBRARY.find(entry => entry.slug === slug); }

@@ -1,0 +1,349 @@
+[
+  {
+    "slug": "legislacao-ric-revisao",
+    "title": "Lei 9.454/1997 — Registro de Identidade Civil — guia de estudo e aplicação",
+    "discipline": "Legislação Especial",
+    "topic_label": "Lei 9.454/1997 — Registro de Identidade Civil",
+    "sort_order": 280,
+    "summary": "4 casos com variações, oito itens comentados, quatro cartões e leitura integral oficial.",
+    "body_md": "> **Guia conferido em 10/10/2026.** Exercícios autorais de fixação; não são questões atribuídas à banca.\n\n## 1. Compreenda a norma\n\nEstude a instituição do número único, o cadastro nacional, a coordenação e a atualização para CPF. RIC, ICN e CIN são conceitos relacionados, mas correspondem a diplomas e funções diferentes.\n\n## 2. Requisitos e diferenças\n\n| Conceito | Regra | Erro a evitar |\n|---|---|---|\n| Número e destinatários | Identificação de cidadão brasileiro nato ou naturalizado nas relações previstas no art. 1º. | Número identificador não se confunde com o documento que o apresenta. |\n| CPF nos documentos novos | O art. 1º, §§ 2º e 3º adota o CPF e o qualifica como único e definitivo. | Lei 14.534/2023 atualizou a regra; não invente número novo por emissão. |\n| Cadastro e governança | Arts. 2º a 4º: cadastro, órgão central definido pelo Executivo, convênios e previsão orçamentária. | A lei não atribui por esses artigos toda a operação exclusivamente à PF. |\n| Histórico e edital | Lei 12.058/2009 alterou a organização e revogou o art. 6º. Edital 2/PF/2025 corrigiu 9.545 para 9.454. | Não confunda com a Lei 9.455/1997, que trata de tortura. |\n\n## 3. Vigência e mudanças\n\nA Lei 14.534/2023 incluiu o CPF nos documentos novos. O art. 6º, que previa perda de validade geral em cinco anos, foi revogado em 2009. A página do Planalto conserva no art. 3º uma redação antiga do § 2º ao lado da redação de 2009; use a versão com remissão à Lei 12.058. O art. 5º contém prazos de implementação da lei de 1997: não reiniciam a cada documento emitido.\n\n## 4. Leitura integral\n\n- Disposições iniciais: 7 dispositivos.\n\n[Abrir leitura, grifos e revisão por dispositivo](/dashboard/legal-course/ric)\n\n## 5. Resolva antes de consultar\n\nLeia os 4 casos coloridos abaixo. Escreva uma resposta, abra a resolução e teste a variação dos fatos. Depois julgue os oito itens comentados e revise os cartões em outra sessão. A prática não equivale a aplicação exaustiva de cada inciso.\n\n## 6. Recorte do concurso\n\nPF Agente, Edital 1/2025 retificado: Legislação Especial, item 14; retificação de 12/06/2025 corrigiu o número para Lei 9.454/1997. A legislação vigente hoje e o recorte histórico da prova são apresentados separadamente.\n",
+    "source_note": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 4,
+    "law_version_checked_at": "2026-10-10T03:26:45.530718+00:00",
+    "legal_basis": [
+      {
+        "title": "Lei 9.454/1997 — Registro de Identidade Civil",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm"
+      },
+      {
+        "title": "Edital PF 2025 retificado — programa oficial",
+        "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/208B2F9CD7C49B6E7FF2FB6F027B9D7D7904F50E049EF749BD4C2DEA8ED30B3D.pdf"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "A Lei 9.454 trata de número único de Registro de Identidade Civil.",
+        "a": true,
+        "why": "Art. 1º. Não é a Lei 9.455, de tortura."
+      },
+      {
+        "q": "Documentos novos abrangidos pelo art. 1º, § 2º, adotam o número de inscrição no CPF.",
+        "a": true,
+        "why": "Redação incluída pela Lei 14.534/2023."
+      },
+      {
+        "q": "Cada nova emissão cria obrigatoriamente outro CPF.",
+        "a": false,
+        "why": "Art. 1º, § 3º: número único e definitivo."
+      },
+      {
+        "q": "Brasileiros naturalizados estão fora do art. 1º.",
+        "a": false,
+        "why": "O artigo inclui natos e naturalizados."
+      },
+      {
+        "q": "O cadastro nacional reúne número e dados de identificação.",
+        "a": true,
+        "why": "Art. 2º, redação de 2009."
+      },
+      {
+        "q": "O art. 3º atribui expressamente toda a operação à PF, com exclusão dos estados.",
+        "a": false,
+        "why": "Prevê órgão central definido pelo Executivo e participação de estados e DF por convênio."
+      },
+      {
+        "q": "O art. 6º continua impondo perda geral de validade em cinco anos.",
+        "a": false,
+        "why": "Foi revogado pela Lei 12.058/2009."
+      },
+      {
+        "q": "O art. 4º exige provisão de meios e cronograma na proposta orçamentária do órgão central.",
+        "a": true,
+        "why": "Não é um prazo individual para emissão de documento."
+      }
+    ],
+    "flashcards": [
+      {
+        "f": "Número e destinatários — explique a regra e o erro a evitar.",
+        "b": "Identificação de cidadão brasileiro nato ou naturalizado nas relações previstas no art. 1º. Número identificador não se confunde com o documento que o apresenta."
+      },
+      {
+        "f": "CPF nos documentos novos — explique a regra e o erro a evitar.",
+        "b": "O art. 1º, §§ 2º e 3º adota o CPF e o qualifica como único e definitivo. Lei 14.534/2023 atualizou a regra; não invente número novo por emissão."
+      },
+      {
+        "f": "Cadastro e governança — explique a regra e o erro a evitar.",
+        "b": "Arts. 2º a 4º: cadastro, órgão central definido pelo Executivo, convênios e previsão orçamentária. A lei não atribui por esses artigos toda a operação exclusivamente à PF."
+      },
+      {
+        "f": "Histórico e edital — explique a regra e o erro a evitar.",
+        "b": "Lei 12.058/2009 alterou a organização e revogou o art. 6º. Edital 2/PF/2025 corrigiu 9.545 para 9.454. Não confunda com a Lei 9.455/1997, que trata de tortura."
+      }
+    ],
+    "legal_review": {
+      "checked_at": "2026-10-10T03:26:45.530718+00:00",
+      "scope": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital.",
+      "course_slug": "ric",
+      "corrections": [
+        "Inclusão de diploma ausente com guia, leitura por dispositivos e prática autoral."
+      ],
+      "sources": [
+        {
+          "title": "Lei 9.454/1997 — Registro de Identidade Civil",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+          "sha256": "19fa04063b8a22c80114b0c629f96968cba39263111dc61171d6959598bc4e3d"
+        }
+      ],
+      "changes": [
+        {
+          "title": "Lei 14.534/2023 — CPF no registro único",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+          "articles": [
+            "Art. 1º, §§ 2º e 3º"
+          ],
+          "summary": "Documentos novos usam o CPF; o número é único e definitivo. Não significa que todas as carteiras anteriores perderam validade automaticamente.",
+          "vigency": "Publicação em 12/01/2023; confira os prazos de adequação dos sistemas na norma alteradora.",
+          "state": "effective"
+        },
+        {
+          "title": "Lei 12.058/2009 — organização do cadastro e revogação",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+          "articles": [
+            "Arts. 1º a 3º",
+            "Art. 6º revogado"
+          ],
+          "summary": "Alterou cadastro e coordenação e revogou a regra de invalidação geral em cinco anos. O texto antigo do § 2º do art. 3º não deve ser memorizado como versão atual.",
+          "vigency": "Redações alteradas e revogações assinaladas na compilação oficial.",
+          "state": "effective"
+        }
+      ]
+    },
+    "_syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "legislacao-menor-potencial-ofensivo-revisao",
+    "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo — guia de estudo e aplicação",
+    "discipline": "Direitos Humanos",
+    "topic_label": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo",
+    "sort_order": 281,
+    "summary": "4 casos com variações, oito itens comentados, quatro cartões e leitura integral oficial.",
+    "body_md": "> **Guia conferido em 10/10/2026.** Exercícios autorais de fixação; não são questões atribuídas à banca.\n\n## 1. Compreenda a norma\n\nA lei disciplina o uso racional da força, a prioridade condicionada de instrumentos de menor potencial ofensivo e os deveres de formação, fornecimento, socorro e comunicação.\n\n## 2. Requisitos e diferenças\n\n| Conceito | Regra | Erro a evitar |\n|---|---|---|\n| Prioridade condicionada | Art. 2º: priorizar instrumentos de menor potencial ofensivo, desde que não coloquem em risco a integridade física ou psíquica dos policiais. | Prioridade não é obrigação absoluta que ignore o risco. |\n| Princípios da lei | Legalidade, necessidade, razoabilidade e proporcionalidade. | O decreto lista princípios adicionais: identifique qual diploma a questão cita. |\n| Fuga e bloqueio | Não legitimar disparo apenas pela fuga ou desobediência ao bloqueio. | Preserve as alternativas e condições de risco descritas no parágrafo único. |\n| Definição e deveres | Baixa probabilidade de morte ou lesão permanente; capacitação, fornecimento, assistência e comunicação. | Menor potencial não equivale a risco zero ou dispensa de socorro. |\n\n## 3. Vigência e mudanças\n\nO Decreto 12.341/2024 regulamenta a lei, com deveres próprios de capacitação anual, habilitação e documentação. A Portaria MJSP 1.121/2026 alterou a Portaria 855/2025, não o texto desta lei. Atualização operacional posterior deve ser estudada separadamente do recorte temporal do edital PF 2025.\n\n## 4. Leitura integral\n\n- Disposições iniciais: 8 dispositivos.\n\n[Abrir leitura, grifos e revisão por dispositivo](/dashboard/legal-course/menor-potencial-ofensivo)\n\n## 5. Resolva antes de consultar\n\nLeia os 4 casos coloridos abaixo. Escreva uma resposta, abra a resolução e teste a variação dos fatos. Depois julgue os oito itens comentados e revise os cartões em outra sessão. A prática não equivale a aplicação exaustiva de cada inciso.\n\n## 6. Recorte do concurso\n\nPF Agente, Edital 1/2025 retificado: Direitos Humanos, itens 11 e 12. A legislação vigente hoje e o recorte histórico da prova são apresentados separadamente.\n",
+    "source_note": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 3,
+    "law_version_checked_at": "2026-10-10T03:26:45.530718+00:00",
+    "legal_basis": [
+      {
+        "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      },
+      {
+        "title": "Edital PF 2025 retificado — programa oficial",
+        "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/208B2F9CD7C49B6E7FF2FB6F027B9D7D7904F50E049EF749BD4C2DEA8ED30B3D.pdf"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "A prioridade do art. 2º está condicionada a não colocar em risco a integridade física ou psíquica dos policiais.",
+        "a": true,
+        "why": "Não é uma prioridade absoluta."
+      },
+      {
+        "q": "A mera fuga de pessoa desarmada e sem risco imediato legitima disparo.",
+        "a": false,
+        "why": "Art. 2º, parágrafo único, I, veda essa hipótese."
+      },
+      {
+        "q": "Qualquer veículo que ultrapasse bloqueio autoriza uso de arma de fogo.",
+        "a": false,
+        "why": "Art. 2º, parágrafo único, II: a exceção exige risco de morte ou lesão."
+      },
+      {
+        "q": "Menor potencial ofensivo significa impossibilidade de morte.",
+        "a": false,
+        "why": "Art. 4º: baixa probabilidade, e não risco zero."
+      },
+      {
+        "q": "Os cursos devem habilitar os agentes ao uso dos instrumentos não letais.",
+        "a": true,
+        "why": "Art. 3º."
+      },
+      {
+        "q": "O poder público deve fornecer instrumentos de menor potencial ofensivo.",
+        "a": true,
+        "why": "Art. 5º, para uso racional da força."
+      },
+      {
+        "q": "Ferimento decorrente do uso da força exige socorro imediato e comunicação à família ou pessoa indicada.",
+        "a": true,
+        "why": "Art. 6º; não depende da espécie de instrumento."
+      },
+      {
+        "q": "Os sete princípios do decreto estão todos expressamente enumerados no art. 2º desta lei.",
+        "a": false,
+        "why": "O art. 2º da lei cita legalidade, necessidade, razoabilidade e proporcionalidade."
+      }
+    ],
+    "flashcards": [
+      {
+        "f": "Prioridade condicionada — explique a regra e o erro a evitar.",
+        "b": "Art. 2º: priorizar instrumentos de menor potencial ofensivo, desde que não coloquem em risco a integridade física ou psíquica dos policiais. Prioridade não é obrigação absoluta que ignore o risco."
+      },
+      {
+        "f": "Princípios da lei — explique a regra e o erro a evitar.",
+        "b": "Legalidade, necessidade, razoabilidade e proporcionalidade. O decreto lista princípios adicionais: identifique qual diploma a questão cita."
+      },
+      {
+        "f": "Fuga e bloqueio — explique a regra e o erro a evitar.",
+        "b": "Não legitimar disparo apenas pela fuga ou desobediência ao bloqueio. Preserve as alternativas e condições de risco descritas no parágrafo único."
+      },
+      {
+        "f": "Definição e deveres — explique a regra e o erro a evitar.",
+        "b": "Baixa probabilidade de morte ou lesão permanente; capacitação, fornecimento, assistência e comunicação. Menor potencial não equivale a risco zero ou dispensa de socorro."
+      }
+    ],
+    "legal_review": {
+      "checked_at": "2026-10-10T03:26:45.530718+00:00",
+      "scope": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital.",
+      "course_slug": "menor-potencial-ofensivo",
+      "corrections": [
+        "Inclusão de diploma ausente com guia, leitura por dispositivos e prática autoral."
+      ],
+      "sources": [
+        {
+          "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+          "sha256": "8703d5d7600933f44d7847d2bbe2bc1d54389dcf1fe3d5c55d8b0aba8f65600a"
+        }
+      ],
+      "changes": [
+        {
+          "title": "Decreto 12.341/2024 — regulamentação",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+          "articles": [
+            "Arts. 1º a 11 do decreto"
+          ],
+          "summary": "Detalha princípios, uso diferenciado, capacitação, controles e implementação. Não transforma a prioridade condicionada da lei em obrigação absoluta.",
+          "vigency": "Em vigor desde a publicação em 24/12/2024.",
+          "state": "effective"
+        }
+      ]
+    },
+    "_syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  },
+  {
+    "slug": "legislacao-uso-forca-revisao",
+    "title": "Decreto 12.341/2024 — Uso Diferenciado da Força — guia de estudo e aplicação",
+    "discipline": "Direitos Humanos",
+    "topic_label": "Decreto 12.341/2024 — Uso Diferenciado da Força",
+    "sort_order": 282,
+    "summary": "6 casos com variações, oito itens comentados, quatro cartões e leitura integral oficial.",
+    "body_md": "> **Guia conferido em 10/10/2026.** Exercícios autorais de fixação; não são questões atribuídas à banca.\n\n## 1. Compreenda a norma\n\nPercorra princípios, escolha proporcional do nível de força, capacitação, implementação e controle. Diferencie os deveres dos profissionais, dos órgãos de segurança e do Ministério da Justiça.\n\n## 2. Requisitos e diferenças\n\n| Conceito | Regra | Erro a evitar |\n|---|---|---|\n| Sete princípios | Legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização e não discriminação. | A responsabilização respeita investigação e devido processo. |\n| Uso diferenciado | Priorizar comunicação e negociação; arma de fogo como último recurso. | Adequação e ameaça concreta não se substituem por uma escada obrigatória mecânica. |\n| Capacitação e equipamento | Capacitação anual, em serviço; equipamento de proteção e ao menos dois instrumentos de menor potencial em serviço. | Capacitação anual não é o prazo de renovação da habilitação para arma. |\n| Controle e recursos | Relatório em ferimento ou morte, registros, transparência e requisitos de repasse. | Registro de uso no ambiente prisional pode ser exigido mesmo sem ferimento. |\n\n## 3. Vigência e mudanças\n\nTexto do decreto conferido em 10/10/2026. Atualização regulamentar: a Portaria MJSP 1.121, publicada em 07/01/2026, alterou a Portaria 855/2025 nos arts. 3º, 11 e 16, § 1º. Não se trata de alteração dos arts. 3º, 11 e 16 do decreto: ele só possui 11 artigos. A habilitação para arma é renovada a cada três anos na portaria atualizada; a capacitação anual do art. 4º do decreto permanece distinta.\n\n## 4. Leitura integral\n\n- CAPÍTULO I — DISPOSIÇÕES PRELIMINARES: 2 dispositivos.\n- CAPÍTULO II — DO USO DIFERENCIADO DA FORÇA: 1 dispositivos.\n- CAPÍTULO III — DA CAPACITAÇÃO: 1 dispositivos.\n- CAPÍTULO IV — DA IMPLEMENTAÇÃO: 2 dispositivos.\n- CAPÍTULO V — DOS MECANISMOS DE CONTROLE E MONITORAMENTO: 2 dispositivos.\n- CAPÍTULO VI — DISPOSIÇÕES FINAIS: 3 dispositivos.\n\n[Abrir leitura, grifos e revisão por dispositivo](/dashboard/legal-course/uso-forca)\n\n## 5. Resolva antes de consultar\n\nLeia os 6 casos coloridos abaixo. Escreva uma resposta, abra a resolução e teste a variação dos fatos. Depois julgue os oito itens comentados e revise os cartões em outra sessão. A prática não equivale a aplicação exaustiva de cada inciso.\n\n## 6. Recorte do concurso\n\nPF Agente, Edital 1/2025 retificado: Direitos Humanos, itens 11 e 12. A legislação vigente hoje e o recorte histórico da prova são apresentados separadamente.\n",
+    "source_note": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital.",
+    "contest_name": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+    "syllabus_topic_order": 3,
+    "law_version_checked_at": "2026-10-10T03:26:45.530718+00:00",
+    "legal_basis": [
+      {
+        "title": "Decreto 12.341/2024 — Uso Diferenciado da Força",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm"
+      },
+      {
+        "title": "Edital PF 2025 retificado — programa oficial",
+        "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/208B2F9CD7C49B6E7FF2FB6F027B9D7D7904F50E049EF749BD4C2DEA8ED30B3D.pdf"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "O decreto inclui precaução, responsabilização e não discriminação entre seus princípios.",
+        "a": true,
+        "why": "Art. 2º; são sete princípios."
+      },
+      {
+        "q": "Arma de fogo é tratada como primeiro recurso obrigatório.",
+        "a": false,
+        "why": "Art. 3º, § 2º: último recurso."
+      },
+      {
+        "q": "Capacitação sobre uso da força é obrigatória anual e realizada em horário de serviço.",
+        "a": true,
+        "why": "Art. 4º, I e II."
+      },
+      {
+        "q": "A alteração da habilitação na portaria para três anos revogou a capacitação anual do decreto.",
+        "a": false,
+        "why": "São institutos distintos; art. 4º do decreto permanece."
+      },
+      {
+        "q": "Todo profissional em serviço deve dispor de proteção e ao menos dois instrumentos de menor potencial, segundo art. 6º, III.",
+        "a": true,
+        "why": "Diretriz dirigida aos órgãos de segurança."
+      },
+      {
+        "q": "O registro do art. 7º em ambiente prisional exige sempre lesão ou morte além do emprego do instrumento.",
+        "a": false,
+        "why": "São hipóteses alternativas no parágrafo único."
+      },
+      {
+        "q": "O uso da força com ferimento ou morte exige relatório circunstanciado.",
+        "a": true,
+        "why": "Art. 3º, § 5º, segundo parâmetros ministeriais."
+      },
+      {
+        "q": "O art. 9º condiciona qualquer receita pública de qualquer finalidade ao decreto.",
+        "a": false,
+        "why": "Descreve fundos e ações de uso da força delimitados; distinga a portaria complementar."
+      }
+    ],
+    "flashcards": [
+      {
+        "f": "Sete princípios — explique a regra e o erro a evitar.",
+        "b": "Legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização e não discriminação. A responsabilização respeita investigação e devido processo."
+      },
+      {
+        "f": "Uso diferenciado — explique a regra e o erro a evitar.",
+        "b": "Priorizar comunicação e negociação; arma de fogo como último recurso. Adequação e ameaça concreta não se substituem por uma escada obrigatória mecânica."
+      },
+      {
+        "f": "Capacitação e equipamento — explique a regra e o erro a evitar.",
+        "b": "Capacitação anual, em serviço; equipamento de proteção e ao menos dois instrumentos de menor potencial em serviço. Capacitação anual não é o prazo de renovação da habilitação para arma."
+      },
+      {
+        "f": "Controle e recursos — explique a regra e o erro a evitar.",
+        "b": "Relatório em ferimento ou morte, registros, transparência e requisitos de repasse. Registro de uso no ambiente prisional pode ser exigido mesmo sem ferimento."
+      }
+    ],
+    "legal_review": {
+      "checked_at": "2026-10-10T03:26:45.530718+00:00",
+      "scope": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital.",
+      "course_slug": "uso-forca",
+      "corrections": [
+        "Inclusão de diploma ausente com guia, leitura por dispositivos e prática autoral."
+      ],
+      "sources": [
+        {
+          "title": "Decreto 12.341/2024 — Uso Diferenciado da Força",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+          "sha256": "1a6aedbbcd84328a60d5134ac0728d38fcb3e487c798c166151b327e41bfb54e"
+        }
+      ],
+      "changes": [
+        {
+          "title": "Portaria MJSP 1.121/2026 — atualização complementar",
+          "url": "https://dspace.mj.gov.br/bitstream/1/16517/2/PRT_GM_2026_1121.pdf",
+          "articles": [
+            "Portaria 855/2025: arts. 3º, 11 e 16, § 1º"
+          ],
+          "summary": "Ampliou os recursos abrangidos no art. 3º da portaria; fixou renovação de habilitação para arma a cada três anos após exames técnicos e psicológicos; admitiu dispensa justificada do registro individualizado nas hipóteses delimitadas do art. 16, § 1º. Não dispensa genericamente relatório de ferimento ou morte.",
+          "vigency": "Publicação em 07/01/2026; atualização posterior ao recorte do edital PF 2025.",
+          "state": "effective"
+        }
+      ]
+    },
+    "_syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff"
+  }
+]

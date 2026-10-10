@@ -1,0 +1,859 @@
+{
+  "courses": [
+    {
+      "id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "slug": "ric",
+      "title": "Lei 9.454/1997 — Registro de Identidade Civil",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "source_sha256": "19fa04063b8a22c80114b0c629f96968cba39263111dc61171d6959598bc4e3d",
+      "checked_at": "2026-10-10T03:26:45.530718+00:00",
+      "material_slug": "legislacao-ric-revisao",
+      "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+      "overview": {
+        "intro": "Estude a instituição do número único, o cadastro nacional, a coordenação e a atualização para CPF. RIC, ICN e CIN são conceitos relacionados, mas correspondem a diplomas e funções diferentes.",
+        "alerts": "A Lei 14.534/2023 incluiu o CPF nos documentos novos. O art. 6º, que previa perda de validade geral em cinco anos, foi revogado em 2009. A página do Planalto conserva no art. 3º uma redação antiga do § 2º ao lado da redação de 2009; use a versão com remissão à Lei 12.058. O art. 5º contém prazos de implementação da lei de 1997: não reiniciam a cada documento emitido.",
+        "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+        "objectives": [
+          "Número e destinatários: Identificação de cidadão brasileiro nato ou naturalizado nas relações previstas no art. 1º.",
+          "CPF nos documentos novos: O art. 1º, §§ 2º e 3º adota o CPF e o qualifica como único e definitivo.",
+          "Cadastro e governança: Arts. 2º a 4º: cadastro, órgão central definido pelo Executivo, convênios e previsão orçamentária.",
+          "Histórico e edital: Lei 12.058/2009 alterou a organização e revogou o art. 6º. Edital 2/PF/2025 corrigiu 9.545 para 9.454."
+        ],
+        "chapters": [
+          {
+            "title": "Disposições iniciais",
+            "count": 7
+          }
+        ],
+        "current_units": 7,
+        "excluded_units": 1,
+        "editorial_scope": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital. Casos aplicados cobrem os conceitos indicados, sem promessa de todos os incisos.",
+        "jurisprudence": []
+      },
+      "legal_review": {
+        "checked_at": "2026-10-10T03:26:45.530718+00:00",
+        "scope": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital.",
+        "course_slug": "ric",
+        "corrections": [
+          "Inclusão de diploma ausente com guia, leitura por dispositivos e prática autoral."
+        ],
+        "sources": [
+          {
+            "title": "Lei 9.454/1997 — Registro de Identidade Civil",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+            "sha256": "19fa04063b8a22c80114b0c629f96968cba39263111dc61171d6959598bc4e3d"
+          }
+        ],
+        "changes": [
+          {
+            "title": "Lei 14.534/2023 — CPF no registro único",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+            "articles": [
+              "Art. 1º, §§ 2º e 3º"
+            ],
+            "summary": "Documentos novos usam o CPF; o número é único e definitivo. Não significa que todas as carteiras anteriores perderam validade automaticamente.",
+            "vigency": "Publicação em 12/01/2023; confira os prazos de adequação dos sistemas na norma alteradora.",
+            "state": "effective"
+          },
+          {
+            "title": "Lei 12.058/2009 — organização do cadastro e revogação",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+            "articles": [
+              "Arts. 1º a 3º",
+              "Art. 6º revogado"
+            ],
+            "summary": "Alterou cadastro e coordenação e revogou a regra de invalidação geral em cinco anos. O texto antigo do § 2º do art. 3º não deve ser memorizado como versão atual.",
+            "vigency": "Redações alteradas e revogações assinaladas na compilação oficial.",
+            "state": "effective"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "slug": "menor-potencial-ofensivo",
+      "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "source_sha256": "8703d5d7600933f44d7847d2bbe2bc1d54389dcf1fe3d5c55d8b0aba8f65600a",
+      "checked_at": "2026-10-10T03:26:45.530718+00:00",
+      "material_slug": "legislacao-menor-potencial-ofensivo-revisao",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "overview": {
+        "intro": "A lei disciplina o uso racional da força, a prioridade condicionada de instrumentos de menor potencial ofensivo e os deveres de formação, fornecimento, socorro e comunicação.",
+        "alerts": "O Decreto 12.341/2024 regulamenta a lei, com deveres próprios de capacitação anual, habilitação e documentação. A Portaria MJSP 1.121/2026 alterou a Portaria 855/2025, não o texto desta lei. Atualização operacional posterior deve ser estudada separadamente do recorte temporal do edital PF 2025.",
+        "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+        "objectives": [
+          "Prioridade condicionada: Art. 2º: priorizar instrumentos de menor potencial ofensivo, desde que não coloquem em risco a integridade física ou psíquica dos policiais.",
+          "Princípios da lei: Legalidade, necessidade, razoabilidade e proporcionalidade.",
+          "Fuga e bloqueio: Não legitimar disparo apenas pela fuga ou desobediência ao bloqueio.",
+          "Definição e deveres: Baixa probabilidade de morte ou lesão permanente; capacitação, fornecimento, assistência e comunicação."
+        ],
+        "chapters": [
+          {
+            "title": "Disposições iniciais",
+            "count": 8
+          }
+        ],
+        "current_units": 8,
+        "excluded_units": 0,
+        "editorial_scope": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital. Casos aplicados cobrem os conceitos indicados, sem promessa de todos os incisos.",
+        "jurisprudence": []
+      },
+      "legal_review": {
+        "checked_at": "2026-10-10T03:26:45.530718+00:00",
+        "scope": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital.",
+        "course_slug": "menor-potencial-ofensivo",
+        "corrections": [
+          "Inclusão de diploma ausente com guia, leitura por dispositivos e prática autoral."
+        ],
+        "sources": [
+          {
+            "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+            "sha256": "8703d5d7600933f44d7847d2bbe2bc1d54389dcf1fe3d5c55d8b0aba8f65600a"
+          }
+        ],
+        "changes": [
+          {
+            "title": "Decreto 12.341/2024 — regulamentação",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+            "articles": [
+              "Arts. 1º a 11 do decreto"
+            ],
+            "summary": "Detalha princípios, uso diferenciado, capacitação, controles e implementação. Não transforma a prioridade condicionada da lei em obrigação absoluta.",
+            "vigency": "Em vigor desde a publicação em 24/12/2024.",
+            "state": "effective"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "slug": "uso-forca",
+      "title": "Decreto 12.341/2024 — Uso Diferenciado da Força",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "source_sha256": "1a6aedbbcd84328a60d5134ac0728d38fcb3e487c798c166151b327e41bfb54e",
+      "checked_at": "2026-10-10T03:26:45.530718+00:00",
+      "material_slug": "legislacao-uso-forca-revisao",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "overview": {
+        "intro": "Percorra princípios, escolha proporcional do nível de força, capacitação, implementação e controle. Diferencie os deveres dos profissionais, dos órgãos de segurança e do Ministério da Justiça.",
+        "alerts": "Texto do decreto conferido em 10/10/2026. Atualização regulamentar: a Portaria MJSP 1.121, publicada em 07/01/2026, alterou a Portaria 855/2025 nos arts. 3º, 11 e 16, § 1º. Não se trata de alteração dos arts. 3º, 11 e 16 do decreto: ele só possui 11 artigos. A habilitação para arma é renovada a cada três anos na portaria atualizada; a capacitação anual do art. 4º do decreto permanece distinta.",
+        "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+        "objectives": [
+          "Sete princípios: Legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização e não discriminação.",
+          "Uso diferenciado: Priorizar comunicação e negociação; arma de fogo como último recurso.",
+          "Capacitação e equipamento: Capacitação anual, em serviço; equipamento de proteção e ao menos dois instrumentos de menor potencial em serviço.",
+          "Controle e recursos: Relatório em ferimento ou morte, registros, transparência e requisitos de repasse."
+        ],
+        "chapters": [
+          {
+            "title": "CAPÍTULO I — DISPOSIÇÕES PRELIMINARES",
+            "count": 2
+          },
+          {
+            "title": "CAPÍTULO II — DO USO DIFERENCIADO DA FORÇA",
+            "count": 1
+          },
+          {
+            "title": "CAPÍTULO III — DA CAPACITAÇÃO",
+            "count": 1
+          },
+          {
+            "title": "CAPÍTULO IV — DA IMPLEMENTAÇÃO",
+            "count": 2
+          },
+          {
+            "title": "CAPÍTULO V — DOS MECANISMOS DE CONTROLE E MONITORAMENTO",
+            "count": 2
+          },
+          {
+            "title": "CAPÍTULO VI — DISPOSIÇÕES FINAIS",
+            "count": 3
+          }
+        ],
+        "current_units": 11,
+        "excluded_units": 0,
+        "editorial_scope": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital. Casos aplicados cobrem os conceitos indicados, sem promessa de todos os incisos.",
+        "jurisprudence": []
+      },
+      "legal_review": {
+        "checked_at": "2026-10-10T03:26:45.530718+00:00",
+        "scope": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital.",
+        "course_slug": "uso-forca",
+        "corrections": [
+          "Inclusão de diploma ausente com guia, leitura por dispositivos e prática autoral."
+        ],
+        "sources": [
+          {
+            "title": "Decreto 12.341/2024 — Uso Diferenciado da Força",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+            "sha256": "1a6aedbbcd84328a60d5134ac0728d38fcb3e487c798c166151b327e41bfb54e"
+          }
+        ],
+        "changes": [
+          {
+            "title": "Portaria MJSP 1.121/2026 — atualização complementar",
+            "url": "https://dspace.mj.gov.br/bitstream/1/16517/2/PRT_GM_2026_1121.pdf",
+            "articles": [
+              "Portaria 855/2025: arts. 3º, 11 e 16, § 1º"
+            ],
+            "summary": "Ampliou os recursos abrangidos no art. 3º da portaria; fixou renovação de habilitação para arma a cada três anos após exames técnicos e psicológicos; admitiu dispensa justificada do registro individualizado nas hipóteses delimitadas do art. 16, § 1º. Não dispensa genericamente relatório de ferimento ou morte.",
+            "vigency": "Publicação em 07/01/2026; atualização posterior ao recorte do edital PF 2025.",
+            "state": "effective"
+          }
+        ]
+      }
+    }
+  ],
+  "units": [
+    {
+      "id": "039ebe7d-b2b0-591c-a58c-6d3fb4fc792b",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "unit_key": "art-1",
+      "label": "Art. 1",
+      "chapter": "Disposições iniciais",
+      "position": 0,
+      "body_text": "Art. 1o É instituído o número único de Registro de Identidade Civil, pelo qual cada cidadão brasileiro, nato ou naturalizado, será identificado em suas relações com a sociedade e com os organismos governamentais e privados. (Redação dada pela Lei nº 12.058, de 2009)\n\n§ 1º. (VETADO) (Incluído pela Lei nº 14.534, de 2023)\n\nI - (VETADO)\n\nII - (VETADO)\n\nIII - (VETADO)\n\n§ 2º Será adotado, nos documentos novos, para o número único de que trata este artigo, o número de inscrição no Cadastro de Pessoas Físicas (CPF). (Incluído pela Lei nº 14.534, de 2023)\n\n§ 3º O número de inscrição no CPF é único e definitivo para cada pessoa física. (Incluído pela Lei nº 14.534, de 2023)",
+      "content_sha256": "d0667d4a6722f947e93b12bf0a33895d9a50dda3afe48210a1a1cbb7899e1296",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "b3c96b35-1fc7-53ea-9922-601bc808ac2a",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "unit_key": "art-2",
+      "label": "Art. 2",
+      "chapter": "Disposições iniciais",
+      "position": 1,
+      "body_text": "Art. 2o É instituído o Cadastro Nacional de Registro de Identificação Civil, destinado a conter o número único de Registro de Identidade Civil, acompanhado dos dados de identificação de cada cidadão. (Redação dada pela Lei nº 12.058, de 2009)",
+      "content_sha256": "f89e572152f6498ef018c43dcf2e168ec36383d9ea44369e87e9a9592b25167b",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "69ab257d-5d03-562f-b2c4-fa9021703f8e",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "unit_key": "art-3",
+      "label": "Art. 3",
+      "chapter": "Disposições iniciais",
+      "position": 2,
+      "body_text": "Art. 3º O Poder Executivo definirá a entidade que centralizará as atividades de implementação, coordenação e controle do Cadastro Nacional de Registro de Identificação Civil, que se constituirá em órgão central do Sistema Nacional de Registro de Identificação Civil.\n\n§ 1o Fica a União autorizada a firmar convênio com os Estados e o Distrito Federal para a implementação do número único de registro de identificação civil. (Redação dada pela Lei nº 12.058, de 2009)\n\n§ 2º Os órgãos regionais exercerão a coordenação no âmbito de cada Unidade da Federação, repassando aos órgãos locais as instruções do órgão central e reportando a este as informações e dados daqueles.\n\n§ 2o Os Estados e o Distrito Federal, signatários do convênio, participarão do Sistema Nacional de Registro de Identificação Civil e ficarão responsáveis pela operacionalização e atualização, nos respectivos territórios, do Cadastro Nacional de Registro de Identificação Civil, em regime de compartilhamento com o órgão central, a quem caberá disciplinar a forma de compartilhamento a que se refere este parágrafo. (Redação dada pela Lei nº 12.058, de 2009)\n\n(Revogado pela Lei nº 12.058, de 2009)",
+      "content_sha256": "57bc1c135d7ece6b16a492ca751d8102b821a8c96d55a611094761154ae7ea44",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "169c5373-7f06-5971-9b60-1496a611ed45",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "unit_key": "art-4",
+      "label": "Art. 4",
+      "chapter": "Disposições iniciais",
+      "position": 3,
+      "body_text": "Art. 4º Será incluída, na proposta orçamentária do órgão central do sistema, a provisão de meios necessários, acompanhada do cronograma de implementação e manutenção do sistema.",
+      "content_sha256": "ebd7eedeea248a94f5736fe7b3d372b4ebc5a5e6834bd2d8ad80d2efd4d13725",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "b63721a0-5c97-5cd3-ac1b-fe7ff2607f4a",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "unit_key": "art-5",
+      "label": "Art. 5",
+      "chapter": "Disposições iniciais",
+      "position": 4,
+      "body_text": "Art. 5º O Poder Executivo providenciará, no prazo de cento e oitenta dias, a regulamentação desta Lei e, no prazo de trezentos e sessenta dias, o início de sua implementação.\n\n. (Revogado pela Lei nº 12.058, de 2009)",
+      "content_sha256": "e30b7dd5be1e8050c34fce1419a137473b5f61eb84cece8fa21ea211cc898e9e",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "177224d3-a968-5923-bf86-9a4d63279d1e",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "unit_key": "art-7",
+      "label": "Art. 7",
+      "chapter": "Disposições iniciais",
+      "position": 5,
+      "body_text": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+      "content_sha256": "7f0ace71f32e64b020d5db883464095c5b0776931c92ab094368c80f9cc361b3",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "2e2ed55a-2a0a-5c5a-8fe6-91ba8c43f313",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "unit_key": "art-8",
+      "label": "Art. 8",
+      "chapter": "Disposições iniciais",
+      "position": 6,
+      "body_text": "Art. 8º Revogam-se as disposições em contrário.",
+      "content_sha256": "bf2e2abfe960551d2cd1f67eda5aa10e1f93837a9d86010db62319e490b11ff3",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "9550cd83-ff97-5ae9-91be-4264ccf91166",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "unit_key": "art-6",
+      "label": "Art. 6",
+      "chapter": "Dispositivos excluídos da leitura ativa",
+      "position": 7,
+      "body_text": "Art. 6 — dispositivo excluído da leitura normativa ativa; consulte a indicação de veto, revogação ou redação suprimida no texto oficial.",
+      "content_sha256": "dc20b457024dd2af8517ba032692a90bf7af9b0e2944d670459285e17ead4dc0",
+      "content_status": "excluded",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "4cce1450-96e0-50a2-9d28-1ed1c0dd2d5a",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "unit_key": "art-1",
+      "label": "Art. 1",
+      "chapter": "Disposições iniciais",
+      "position": 0,
+      "body_text": "Art. 1º Esta Lei disciplina o uso dos instrumentos de menor potencial ofensivo pelos agentes de segurança pública em todo o território nacional.",
+      "content_sha256": "51a2a68b13137e6a90050847077f383b0007631bef38654389adc0f3355167de",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "44a84df7-f2f9-50a8-aaa9-e82495ab49a6",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "unit_key": "art-2",
+      "label": "Art. 2",
+      "chapter": "Disposições iniciais",
+      "position": 1,
+      "body_text": "Art. 2º Os órgãos de segurança pública deverão priorizar a utilização dos instrumentos de menor potencial ofensivo, desde que o seu uso não coloque em risco a integridade física ou psíquica dos policiais, e deverão obedecer aos seguintes princípios:\n\nI - legalidade;\n\nII - necessidade;\n\nIII - razoabilidade e proporcionalidade.\n\nParágrafo único. Não é legítimo o uso de arma de fogo:\n\nI - contra pessoa em fuga que esteja desarmada ou que não represente risco imediato de morte ou de lesão aos agentes de segurança pública ou a terceiros; e\n\nII - contra veículo que desrespeite bloqueio policial em via pública, exceto quando o ato represente risco de morte ou lesão aos agentes de segurança pública ou a terceiros.",
+      "content_sha256": "e385c48ce7f22bbc6296e9413bc391c591e5d7be37d44445376ee2a735d8d494",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "9f844e77-10bd-571b-bad2-a27dd48c687b",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "unit_key": "art-3",
+      "label": "Art. 3",
+      "chapter": "Disposições iniciais",
+      "position": 2,
+      "body_text": "Art. 3º Os cursos de formação e capacitação dos agentes de segurança pública deverão incluir conteúdo programático que os habilite ao uso dos instrumentos não letais.",
+      "content_sha256": "ed001fa0c0d60fb744c7fc9d1cf1211c5a5f567116ecaf6de3bb3c2e87979fb1",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "1b39a0bc-3adf-5dfd-ba38-87e683150e0a",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "unit_key": "art-4",
+      "label": "Art. 4",
+      "chapter": "Disposições iniciais",
+      "position": 3,
+      "body_text": "Art. 4º Para os efeitos desta Lei, consideram-se instrumentos de menor potencial ofensivo aqueles projetados especificamente para, com baixa probabilidade de causar mortes ou lesões permanentes, conter, debilitar ou incapacitar temporariamente pessoas.",
+      "content_sha256": "e7d67c240a39d3701364cc799dc71d3924964a9535d29f3c60e9fa03383ce3bb",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "02b63957-598b-53cc-a139-500ed780443d",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "unit_key": "art-5",
+      "label": "Art. 5",
+      "chapter": "Disposições iniciais",
+      "position": 4,
+      "body_text": "Art. 5º O poder público tem o dever de fornecer a todo agente de segurança pública instrumentos de menor potencial ofensivo para o uso racional da força.",
+      "content_sha256": "a7d4b981f13325ab58bd3522b5c2fe79be7e78dc19159f291fac34ba86d5205c",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "9792e351-20e7-5eb0-9329-8fcac570016d",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "unit_key": "art-6",
+      "label": "Art. 6",
+      "chapter": "Disposições iniciais",
+      "position": 5,
+      "body_text": "Art. 6º Sempre que do uso da força praticada pelos agentes de segurança pública decorrerem ferimentos em pessoas, deverá ser assegurada a imediata prestação de assistência e socorro médico aos feridos, bem como a comunicação do ocorrido à família ou à pessoa por eles indicada.",
+      "content_sha256": "a915bab0eafe30080d5fc40f2dbab660c97bc8c477dae9ccbe3f4aa4b31001d8",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "fbdb02b3-2ba4-5412-b828-c78666b713c5",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "unit_key": "art-7",
+      "label": "Art. 7",
+      "chapter": "Disposições iniciais",
+      "position": 6,
+      "body_text": "Art. 7º O Poder Executivo editará regulamento classificando e disciplinando a utilização dos instrumentos não letais.",
+      "content_sha256": "c9c1640726cfe9f9366f48029e0b855c6034f037997754a80d4adebc05a4bfd7",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "8a2af30f-be1c-5f35-97f8-e940e05f32fc",
+      "course_id": "a5c204d9-7203-5dc6-801d-80c49f4cdd09",
+      "unit_key": "art-8",
+      "label": "Art. 8",
+      "chapter": "Disposições iniciais",
+      "position": 7,
+      "body_text": "Art. 8º Esta Lei entra em vigor na data de sua publicação.",
+      "content_sha256": "4d4fd028ac7ab6ae0cdf2c0625b5628951de256695b974a315d92beb410e0ef9",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "bfaf454b-0e7b-58b1-85b9-652a1db6ee3e",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "unit_key": "art-1",
+      "label": "Art. 1",
+      "chapter": "CAPÍTULO I — DISPOSIÇÕES PRELIMINARES",
+      "position": 0,
+      "body_text": "Art. 1º Este Decreto disciplina o uso da força e dos instrumentos de menor potencial ofensivo pelos profissionais de segurança pública, com vistas a promover eficiência, transparência, valorização dos profissionais de segurança pública e respeito aos direitos humanos.\n\nParágrafo único. A classificação dos instrumentos de menor potencial ofensivo obedecerá ao disposto no art. 23 da Lei nº 10.826, de 22 de dezembro de 2003, nos art. 4º e art. 7º da Lei nº 13.060, de 22 de dezembro de 2014, e no Decreto nº 10.030, de 30 de setembro de 2019.",
+      "content_sha256": "8c57e53766964ae2b709074ab18ba1cb36930b6a9efe59bb4e795be31a1f25ab",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "9960f2a1-746d-56c0-a1fa-a5dfd703338a",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "unit_key": "art-2",
+      "label": "Art. 2",
+      "chapter": "CAPÍTULO I — DISPOSIÇÕES PRELIMINARES",
+      "position": 1,
+      "body_text": "Art. 2º São princípios gerais de uso da força em segurança pública:\n\nI - a legalidade;\n\nII - a precaução;\n\nIII - a necessidade;\n\nIV - a proporcionalidade;\n\nV - a razoabilidade;\n\nVI - a responsabilização; e\n\nVII - a não discriminação.\n\nParágrafo único. O uso da força em segurança pública deverá observar as seguintes diretrizes gerais:\n\nI - o uso da força e de instrumentos de menor potencial ofensivo somente poderá ocorrer para a consecução de um objetivo legal e nos estritos limites da lei;\n\nII - as operações e as ações de aplicação da lei devem ser planejadas e executadas mediante a adoção de todas as medidas necessárias para prevenir ou minimizar o uso da força e para mitigar a gravidade de qualquer dano direto ou indireto que possa ser causado a quaisquer pessoas;\n\nIII - um recurso de força somente poderá ser empregado quando outros recursos de menor intensidade não forem suficientes para atingir os objetivos legais pretendidos;\n\nIV - o nível da força utilizado deve ser compatível com a gravidade da ameaça apresentada pela conduta das pessoas envolvidas e os objetivos legítimos da ação do profissional de segurança pública;\n\nV - a força deve ser empregada com bom senso, prudência e equilíbrio, de acordo com as circunstâncias do caso concreto, com vistas a atingir um objetivo legítimo da aplicação da lei;\n\nVI - os órgãos e os profissionais de segurança pública devem assumir a responsabilidade pelo uso inadequado da força, após a conclusão de processo de investigação, respeitado o devido processo legal, a ampla defesa e o contraditório; e\n\nVII - os profissionais de segurança pública devem atuar de forma não discriminatória, sem preconceitos de raça, etnia, cor, gênero, orientação sexual, idioma, religião, nacionalidade, origem social, deficiência, situação econômica, opinião política ou de outra natureza.",
+      "content_sha256": "6931d5972431e3ef48a62abf7c44c4e1fcaff0537124243d65227bb41bc07b9b",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "c703ca84-9852-55b8-a27b-c901a0258b2d",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "unit_key": "art-3",
+      "label": "Art. 3",
+      "chapter": "CAPÍTULO II — DO USO DIFERENCIADO DA FORÇA",
+      "position": 2,
+      "body_text": "Art. 3º A força deverá ser utilizada de forma diferenciada, com a seleção apropriada do nível a ser empregado, em resposta a uma ameaça real ou potencial, com vistas a minimizar o uso de meios que possam causar ofensas, ferimentos ou mortes.\n\n§ 1º Os profissionais de segurança pública deverão priorizar a comunicação, a negociação e o emprego de técnicas que impeçam uma escalada da violência.\n\n§ 2º O emprego de arma de fogo será medida de último recurso.\n\n§ 3º Não é legítimo o uso de arma de fogo contra:\n\nI - pessoa em fuga que esteja desarmada ou que não represente risco imediato de morte ou de lesão aos profissionais de segurança pública ou a terceiros; e\n\nII - veículo que desrespeite bloqueio policial em via pública, exceto quando o ato represente risco de morte ou lesão aos profissionais de segurança pública ou a terceiros.\n\n§ 4º O emprego de arma de fogo ou de instrumento de menor potencial ofensivo deverá ser restrito aos profissionais devidamente habilitados para sua utilização.\n\n§ 5º Sempre que o uso da força resultar em ferimento ou morte, deverá ser elaborado relatório circunstanciado, segundo os parâmetros estabelecidos em ato do Ministro de Estado da Justiça e Segurança Pública.",
+      "content_sha256": "4b26f50ff2bd60e896785ffc3432ba259b7cab4180e318a7fb54813c2ce28a90",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "173109a7-d494-5b82-9224-d79984620ce8",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "unit_key": "art-4",
+      "label": "Art. 4",
+      "chapter": "CAPÍTULO III — DA CAPACITAÇÃO",
+      "position": 3,
+      "body_text": "Art. 4º Na capacitação de profissionais de segurança pública sobre o uso da força, os órgãos de segurança pública deverão observar as seguintes diretrizes:\n\nI - obrigatoriedade e periodicidade anual da capacitação sobre uso da força;\n\nII - realização da capacitação no horário de serviço; e\n\nIII - adoção de conteúdo que aborde procedimentos sobre o emprego adequado de diferentes tipos de armas de fogo e de instrumentos de menor potencial ofensivo.\n\nParágrafo único. A matriz curricular nacional de que trata a Lei nº 13.675, de 11 de junho de 2018, deverá ser atualizada para adequação ao disposto na Lei nº 13.060, de 22 de dezembro de 2014, e neste Decreto.",
+      "content_sha256": "1024fd80b19fc54cf6ca295994d73994d2efa9be969af084ab1c02a1003133f1",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "67827005-8fe0-50b7-9503-ef5544c25496",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "unit_key": "art-5",
+      "label": "Art. 5",
+      "chapter": "CAPÍTULO IV — DA IMPLEMENTAÇÃO",
+      "position": 4,
+      "body_text": "Art. 5º Para implementação do disposto na\n\nI - financiar, conforme a disponibilidade orçamentária, ações que se destinem a implementar o disposto na\n\nII - formular, implementar, monitorar e avaliar ações relacionadas ao uso da força que incluam diagnósticos, padronização de procedimentos, doutrina, capacitação e aquisições de equipamentos, entre outros aspectos;\n\nIII - ofertar consultoria técnica especializada para ações relacionadas ao uso da força pelos órgãos de segurança pública;\n\nIV - desenvolver, com a participação dos órgãos de segurança pública, materiais de referência para subsidiar a implementação do disposto na\n\na) ao uso de algemas;\n\nb) à busca pessoal e domiciliar; e\n\nc) à atuação em ambientes prisionais;\n\nV - disponibilizar atas de registro de preços para aquisição de armas de fogo, de instrumentos de menor potencial ofensivo e de equipamentos de proteção individual, para eventual adesão dos órgãos de segurança pública;\n\nVI - realizar ações de capacitação sobre o uso da força;\n\nVII - incentivar ações de conscientização, discussão e integração dos órgãos de segurança pública com a sociedade civil sobre o uso da força;\n\nVIII - promover a difusão e o intercâmbio de boas práticas sobre o uso da força;\n\nIX - fomentar pesquisas e estudos, com ênfase na avaliação de impacto, sobre o uso da força;\n\nX - estabelecer ações para a redução da vitimização dos profissionais de segurança pública e da letalidade policial;\n\nXI - consolidar e publicar dados nacionais relativos ao uso da força pelos profissionais de segurança pública; e\n\nXII - desenvolver medidas para informar a população sobre as políticas de uso da força e como reportar condutas inadequadas na ação dos profissionais de segurança pública.",
+      "content_sha256": "54c88083af688b6dbc474cd6c9f3c33a2692c3bfe867f1c4fac708150960818b",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "d31612d2-471d-5f2b-8343-13f218cddba3",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "unit_key": "art-6",
+      "label": "Art. 6",
+      "chapter": "CAPÍTULO IV — DA IMPLEMENTAÇÃO",
+      "position": 5,
+      "body_text": "Art. 6º Para implementação do disposto na\n\nI - elaboração e atualização de atos normativos que disciplinem o uso diferenciado da força, inclusive de instrumentos de menor potencial ofensivo;\n\nII - registro e publicação de dados sobre o uso da força;\n\nIII - disponibilização de equipamento de proteção individual e de, no mínimo, dois instrumentos de menor potencial ofensivo a todo profissional de segurança pública em serviço;\n\nIV - instituição de programas continuados de atenção à saúde mental dos profissionais de segurança pública que se envolvam em ocorrências de alto risco;\n\nV - implementação, monitoramento e avaliação de ações relacionadas ao uso diferenciado da força, que incluam diagnósticos, padronização de procedimentos e aquisições, entre outros aspectos;\n\nVI - implementação de ações para a redução da vitimização dos profissionais de segurança pública e da letalidade policial;\n\nVII - capacitação sobre o uso diferenciado da força;\n\nVIII - fomento a pesquisas e estudos sobre o uso da força, com ênfase na avaliação de impacto;\n\nIX - normatização e fiscalização da identificação dos profissionais de segurança pública, de forma a possibilitar a individualização de suas ações durante o serviço; e\n\nX - normatização da atuação dos profissionais de segurança pública em situações que envolvam gerenciamento de crises, busca pessoal, busca domiciliar, uso de algemas e providências a serem adotadas nos casos em que o uso da força resultar em lesão corporal ou morte.",
+      "content_sha256": "c78ae6adf7d7d1fec60af2fc6e77bb756bb2e97d8b6553a8832172a4b3ce3e4d",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "d4701703-179c-5c48-b2d4-fd4212037cf3",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "unit_key": "art-7",
+      "label": "Art. 7",
+      "chapter": "CAPÍTULO V — DOS MECANISMOS DE CONTROLE E MONITORAMENTO",
+      "position": 6,
+      "body_text": "Art.7º São diretrizes para atuação dos mecanismos de fiscalização e de controle interno dos órgãos de segurança pública na supervisão do uso da força:\n\nI - garantia da transparência e do acesso público a dados e informações sobre o uso da força;\n\nII - disponibilização de canais de denúncia e orientações de registro e acompanhamento de reclamações sobre o uso da força, nos meios de comunicação oficiais, de forma clara e acessível;\n\nIII - garantia do processamento eficaz e transparente das reclamações sobre o uso da força; e\n\nIV - fortalecimento da atuação das corregedorias e ouvidorias dos órgãos de segurança pública.\n\nParágrafo único. Para fins do disposto no art. 5º, caput, inciso XI, as ocorrências relacionadas ao uso da força serão formalmente registradas pelos órgãos de segurança pública, segundo parâmetros estabelecidos em ato do Ministro de Estado da Justiça e Segurança Pública, quando:\n\nI - resultarem em lesão corporal ou morte; ou\n\nII - envolverem o emprego de armas de fogo ou de instrumentos de menor potencial ofensivo em ambientes prisionais.",
+      "content_sha256": "7db5cd7c47e2d3269b3547f99b579b080b77d6ae9d6768696d1ed78db1d0ee58",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "9ff7919e-232d-5742-9615-29b62565a380",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "unit_key": "art-8",
+      "label": "Art. 8",
+      "chapter": "CAPÍTULO V — DOS MECANISMOS DE CONTROLE E MONITORAMENTO",
+      "position": 7,
+      "body_text": "Art. 8º Ato do Ministro de Estado da Justiça e Segurança Pública instituirá Comitê Nacional de Monitoramento do Uso da Força – CNMUDF, com a finalidade de monitorar e avaliar a implementação das políticas relativas ao uso da força de que trata este Decreto.\n\n§ 1º O ato de que trata o caput:\n\nI - disporá sobre:\n\na) a composição do colegiado, garantida a participação da sociedade civil;\n\nb) as suas competências; e\n\nc) a sua forma de funcionamento;\n\nII - observará o disposto no\n\nIII - preverá, entre as finalidades do comitê:\n\na) a produção de relatórios que contenham análises e orientações sobre temas relacionados a este Decreto;\n\nb) o acompanhamento da implementação do Plano Nacional de Segurança Pública, em relação à redução da letalidade policial e da vitimização de profissionais de segurança pública;\n\nc) a proposição de indicadores de monitoramento e avaliação do uso da força;\n\nd) o estímulo à produção e à difusão de conhecimentos técnico-científicos relacionados ao uso da força;\n\ne) a elaboração de orientações para programas e ações relacionados ao uso da força; e\n\nf) a articulação com os comitês estaduais e distrital sobre o uso da força, de modo a promover o intercâmbio de informações e experiências e a redução da letalidade policial e da vitimização de profissionais de segurança pública.\n\n§ 2º Os Estados, o Distrito Federal e os Municípios, quando instituírem comitês de monitoramento do uso da força, observarão as mesmas finalidades previstas para o comitê de que trata o caput, garantida, no que couber, a participação de representantes da sociedade civil.",
+      "content_sha256": "2fc725a03d71c41ad93bac517d0cc8184bc90b46a5f6797d52a6d54e27cb8483",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "35973d52-ecfa-59c0-8c75-cbadce685154",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "unit_key": "art-9",
+      "label": "Art. 9",
+      "chapter": "CAPÍTULO VI — DISPOSIÇÕES FINAIS",
+      "position": 8,
+      "body_text": "Art. 9º O repasse de recursos do Fundo Nacional de Segurança Pública e do Fundo Penitenciário Nacional para ações que envolvam o uso da força pelos órgãos de segurança pública dos Estados, do Distrito Federal e dos Municípios está condicionado à observância do disposto na",
+      "content_sha256": "ad6bc0b0c68c40202d99fcc95b1cbd14fdf5330e0351795d7f2361c8ef8d1b75",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "72f68e20-2e4f-536b-96d6-1e37a70d4b91",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "unit_key": "art-10",
+      "label": "Art. 10",
+      "chapter": "CAPÍTULO VI — DISPOSIÇÕES FINAIS",
+      "position": 9,
+      "body_text": "Art. 10. O Ministro de Estado da Justiça e Segurança Pública editará normas complementares necessárias à execução do disposto neste Decreto.",
+      "content_sha256": "14ba87793a5bbc4332db3475feba53beef775b43c3abd784f3ab2fcf9dd15682",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    },
+    {
+      "id": "15329da6-21cc-5eda-82d1-501be8af3e4b",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "unit_key": "art-11",
+      "label": "Art. 11",
+      "chapter": "CAPÍTULO VI — DISPOSIÇÕES FINAIS",
+      "position": 10,
+      "body_text": "Art. 11. Este Decreto entra em vigor na data de sua publicação.",
+      "content_sha256": "8fa70b154e94b2c59c3be4c039296a0d44c16c03332a9d32230f8427ea07fadf",
+      "content_status": "current",
+      "recall": {
+        "prompts": [
+          "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+          "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+          "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+        ],
+        "checklist": [
+          "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+          "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+          "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+          "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+        ]
+      }
+    }
+  ]
+}

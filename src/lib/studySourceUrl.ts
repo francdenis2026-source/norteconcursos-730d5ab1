@@ -5,6 +5,7 @@ const technicalHosts = new Set([
   "www.nic.br", "nic.br", "cartilha.cert.br", "www.cert.br", "cert.br",
   "support.microsoft.com", "learn.microsoft.com", "help.libreoffice.org",
   "cdn.cebraspe.org.br",
+  "dspace.mj.gov.br", "bibliotecadigital.mj.gov.br",
   "www.cpc.org.br", "cpc.org.br", "www.cfc.org.br", "cfc.org.br",
   "man7.org",
 ]);

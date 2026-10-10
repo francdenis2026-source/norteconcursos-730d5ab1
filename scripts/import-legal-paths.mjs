@@ -1,5 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { sessionAuthHeaders } from './supabase-session-auth.mjs';
 
 const [input, report, mode] = process.argv.slice(2);
 if (!input || !report || (mode && mode !== '--dry-run')) throw new Error('Uso: node scripts/import-legal-paths.mjs PACOTE_JSON RELATORIO_JSON [--dry-run]');
@@ -32,7 +33,7 @@ if (!result.dry_run) {
   const project = process.env.TASK_SUPABASE_PROJECT, key = process.env.TASK_SUPABASE_KEY, reviewer = process.env.TASK_LIBRARY_REVIEWER;
   if (!/^[a-z]{20}$/.test(project ?? '') || !key || !uuid.test(reviewer ?? '')) throw new Error('Defina projeto, chave e revisor autorizado na sessão');
   const request = async (path, options = {}) => {
-    const response = await fetch(`https://${project}.supabase.co/rest/v1${path}`, { ...options, headers: { apikey: key, 'Content-Type': 'application/json', ...options.headers } });
+    const response = await fetch(`https://${project}.supabase.co/rest/v1${path}`, { ...options, headers: { ...sessionAuthHeaders(key), 'Content-Type': 'application/json', ...options.headers } });
     if (!response.ok) throw new Error(`Supabase HTTP ${response.status}`);
     return response.status === 204 ? null : response.json();
   };

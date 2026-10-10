@@ -3,6 +3,7 @@ import type { StudyMaterialSummary } from "./studyMaterials";
 export type LibrarySearchContent = {id:string;body_md:string;legal_basis?:{title?:string;url?:string}[]};
 export const normalizeLibrarySearch = (text:string) => text.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/\bn[º°o.]?\s*(?=\d)/g,"").replace(/(\d)\.(?=\d)/g,"$1").replace(/[^a-z0-9]+/g," ").trim();
 const aliases: Record<string,string> = {
+ ric:"RIC registro de identidade civil", "menor-potencial-ofensivo":"instrumentos de menor potencial ofensivo uso da força", "uso-forca":"uso diferenciado da força",
  "codigo-penal":"CP", "codigo-processo-penal":"CPP código de processo penal", transito:"CTB código de trânsito brasileiro", eca:"ECA estatuto da criança e do adolescente", lep:"LEP", antifaccao:"15358 2026 lei Raul Jungmann antifaccao anti faccao", drogas:"lei de drogas", armas:"estatuto do desarmamento",
 };
 export function libraryLawResultTitle(slug:string): string {
