@@ -62,3 +62,26 @@ export function useLegalProgress(userId?: string) {
       return rows;
     } });
 }
+
+export type LegalExplanation = {
+  unit_id: string; content_sha256: string; simples: string; pontos: string[]; atencao: string[]; exemplo: string;
+  prova: string[]; termos: { termo: string; significado: string }[]; remissoes: string[];
+  status: "under_review" | "published";
+};
+/** Explicação didática do artigo (RLS: aluno só vê publicada e com o texto oficial inalterado; admin vê também em revisão). */
+export function useLegalExplanation(unitId?: string, userId?: string) {
+  return useQuery({ queryKey: ["legal-explanation", unitId, userId], enabled: !!unitId && !!userId, staleTime: 5 * 60 * 1000,
+    queryFn: async () => {
+      const { data, error } = await supabase.from("legal_unit_explanations").select("*").eq("unit_id", unitId!).maybeSingle();
+      if (error) throw error;
+      return (data ?? null) as LegalExplanation | null;
+    } });
+}
+export function useLegalExplanationCoverage(userId?: string) {
+  return useQuery({ queryKey: ["legal-explanation-coverage", userId], enabled: !!userId, staleTime: 5 * 60 * 1000,
+    queryFn: async () => {
+      const { data, error } = await supabase.rpc("legal_explanation_coverage");
+      if (error) throw error;
+      return (data ?? []) as { course_slug: string; total_units: number; explained: number }[];
+    } });
+}
