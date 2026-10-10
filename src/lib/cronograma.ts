@@ -27,7 +27,8 @@ export function canonicalDiscipline(raw: string): string {
   return clean.charAt(0).toUpperCase() + clean.slice(1);
 }
 /** Disciplinas genéricas de um edital específico não servem para montar um cronograma do zero. */
-export const isGenericDiscipline = (nome: string) => /^conhecimentos (especificos|tecnicos)$/.test(strip(nome));
+export const isGenericDiscipline = (nome: string) =>
+  /^(conhecimentos (especificos|tecnicos)|atualidades e conhecimentos sobre sergipe)$/.test(strip(nome));
 
 export interface CronoTopic { id: string; t: string }
 export interface CronoDisc { id: string; nome: string; peso: 1 | 2; topicos: CronoTopic[] }
@@ -36,6 +37,9 @@ export interface CronoConfig {
   days: number[]; // 0 = domingo … 6 = sábado
   startTime: string; // HH:MM
   weeklyHours: number;
+  /** Painel do dia: simulado no último dia de estudo e redação no penúltimo (ou único). */
+  simulado?: boolean;
+  essay?: boolean;
 }
 export interface TopicProgress {
   video: boolean; pdf: boolean; podcast: boolean;
