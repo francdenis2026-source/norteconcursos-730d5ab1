@@ -1,6 +1,5 @@
 import { BookOpenCheck, ArrowUpRight } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
-import { Odometer } from "@/components/landing/fx";
 import { supabase } from "@/integrations/supabase/client";
 
 export function QuestionCountBadge() {
@@ -22,7 +21,7 @@ export function QuestionCountBadge() {
       <span className="question-count-content">
         <span className="question-count-eyebrow">Seu próximo nível começa aqui</span>
         <span className="question-count-main">
-          <strong>{data ? <Odometer value={data.available} /> : "Questões"}</strong>
+          <strong>{data ? format(data.available) : "Questões"}</strong>
           <span>{data ? "questões disponíveis" : "para sua preparação"}</span>
         </span>
         <span className="question-count-detail">
