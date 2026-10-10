@@ -91,6 +91,12 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
       <a href="/" className="btn-glass">
         Voltar ao início
       </a>
+      <details className="w-full max-w-xl text-left text-xs text-white/80">
+        <summary className="cursor-pointer text-center">Detalhes técnicos (para o suporte)</summary>
+        <pre className="mt-2 max-h-40 overflow-auto whitespace-pre-wrap rounded-lg bg-black/40 p-3">
+          {String((error as Error | undefined)?.message ?? error).slice(0, 600)}
+        </pre>
+      </details>
     </StatusScreen>
   );
 }
