@@ -112,5 +112,6 @@ export function theoryTarget(hit: TheoryHit | undefined, topic: string, back: st
     return { to: "/dashboard/library/$slug", params: { slug: hit.id }, search: { back, tema }, direct: true, label: hit.label, kind: "material" };
   if (hit?.kind === "edital")
     return { to: "/dashboard/edital/$topicId", params: { topicId: hit.id }, search: { back, tema }, direct: true, label: hit.label, kind: "edital" };
-  return { to: "/dashboard/library", search: { q: searchWords(topic), back }, direct: false, label: "Procurar na Biblioteca", kind: "busca" };
+  // "/dashboard/library/" = rota índice; sem a barra final o TanStack Router quebra ao navegar com ?search a partir de outra página
+  return { to: "/dashboard/library/", search: { q: searchWords(topic), back }, direct: false, label: "Procurar na Biblioteca", kind: "busca" };
 }
