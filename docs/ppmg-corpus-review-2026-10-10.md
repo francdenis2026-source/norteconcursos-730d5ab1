@@ -5,13 +5,13 @@
 - 123 páginas catalogadas integralmente, incluindo textos de apoio e gabaritos.
 - 503 blocos de questões preservados no acervo privado de revisão: Português 166, RLM 120, Informática 100, Constitucional 80, Penal 22 e Direitos Humanos 15.
 - Há duas questões diferentes numeradas 46 em Português, mas só uma entrada 46 no gabarito. Ambas ficam bloqueadas, com identificadores por ocorrência. O título comercial “500 questões” não corresponde à contagem dos blocos.
-- 350 candidatos receberam decisões individuais: 248 aprovados e confirmados no catálogo ativo, 49 revisados mas retidos sem publicação e 53 excluídos (40 rejeitados, 11 duplicados e dois superados). Os originais permanecem privados para auditoria.
-- O primeiro lote publicou 31 questões; as etapas seguintes acrescentaram 149, 55 e 13. A retomada de Informática preservou 97 decisões já gravadas e concluiu as três restantes.
-- 153 candidatos de Português continuam em revisão. A revisão integral de todas as questões ainda NÃO está concluída. Textos compartilhados, ilustrações, ambiguidades e a numeração repetida exigem conferência individual antes de publicar.
-- Comparação exata normalizada dos 248 aprovados com 5.326 textos distintos dos bancos existentes: nenhuma duplicata externa exata encontrada, desconsiderando os próprios registros já importados. Isso não certifica ausência de duplicatas semânticas.
+- 371 candidatos receberam decisões individuais: 268 aprovados e confirmados no catálogo ativo, 49 revisados mas retidos sem publicação e 54 excluídos (41 rejeitados, 11 duplicados e dois superados). Os originais permanecem privados para auditoria.
+- O primeiro lote publicou 31 questões; as etapas seguintes acrescentaram 149, 55, 13 e 20. A retomada de Informática preservou 97 decisões já gravadas e concluiu as três restantes.
+- 132 candidatos de Português continuam em revisão. A revisão integral de todas as questões ainda NÃO está concluída. Textos compartilhados, ilustrações, ambiguidades e a numeração repetida exigem conferência individual antes de publicar.
+- Comparação exata normalizada dos 268 aprovados com 5.346 textos distintos dos bancos existentes: nenhuma duplicata externa exata encontrada, desconsiderando os próprios registros já importados. Isso não certifica ausência de duplicatas semânticas.
 - Dois guias autorais publicados após a catalogação, usando recuperação ativa da skill Tutor: erros/tentativa/dolo e acumulação de cargos. Incluem seis casos coloridos com variações, duas ilustrações, dezesseis itens comentados e oito flashcards.
-- A leitura posterior confirmou os 503 candidatos, seus estados e respectivos payloads, os 248 registros ativos e suas chaves de origem. As 315 decisões novas têm histórico individual de auditoria; as 35 anteriores foram preservadas. Todas as fontes jurídicas citadas no lote aprovado estão cadastradas como oficiais.
-- Reexecução: zero novas questões/candidatos; os dois guias e os dois conjuntos de exemplos foram preservados. O total geral retornado pelo sistema ao fechar o lote foi de 6.019 registradas e 3.603 disponíveis para treino; essa contagem inclui outros acervos.
+- A leitura posterior confirmou os 503 candidatos, seus estados e respectivos payloads, os 268 registros ativos e suas chaves de origem. As 336 decisões novas têm histórico individual de auditoria; as 35 anteriores foram preservadas. Todas as fontes jurídicas citadas no lote aprovado estão cadastradas como oficiais.
+- Reexecução: zero novas questões/candidatos; os dois guias e os dois conjuntos de exemplos foram preservados. O total geral retornado pelo sistema ao fechar o lote foi de 6.039 registradas e 3.623 disponíveis para treino; essa contagem inclui outros acervos.
 
 A apostila particular não foi cadastrada como prova oficial ou gabarito definitivo da SELECON. A origem da editora, o ano de publicação e a natureza das respostas estão registrados separadamente. Questões importadas são `is_original=false`; exercícios dos guias são autorais.
 
@@ -42,8 +42,9 @@ O PDF, a extração completa, os candidatos, as evidências de leitura e os rela
 3. Importar um acervo revisado com `node scripts/import-question-corpus.mjs ACERVO_JSON RELATORIO_JSON --dry-run`; retirar `--dry-run` para gravar, usando `TASK_SUPABASE_PROJECT` e `TASK_SUPABASE_KEY` somente no ambiente.
 4. Registrar decisões novas com `node scripts/review-question-corpus.mjs ANTERIOR_JSON NOVO_JSON RELATORIO_JSON [--dry-run]`. A RPC exige administrador ou service role, verifica o estado e payload anteriores, preserva a extração original e grava histórico na mesma transação. Repetir a mesma decisão retorna `unchanged`; revisões existentes não são substituídas.
 5. O importador preserva registros e revisões existentes. Reexecutá-lo não promove pendências automaticamente. Credenciais permanecem apenas no ambiente da sessão; PDF, JSON privados e relatórios de execução não entram no Git.
-6. Continuar as 153 revisões de Português e resolver as 49 retenções antes de qualquer nova ativação. Este fechamento abrange o lote concluído, sem declarar aprovação integral da apostila.
+6. Continuar as 132 revisões de Português e resolver as 49 retenções antes de qualquer nova ativação. Este fechamento abrange o lote concluído, sem declarar aprovação integral da apostila.
 
 ## Validação
 
 77 testes do projeto aprovados. Cobrem alternativas incompletas ou vazias, fonte falsa, conferência futura, revisão insuficiente, IDs duplicados, proteção da extração e das decisões anteriores, e dry-run sem rede. Validações offline dos materiais e exemplos aprovadas. A RPC foi exercitada no banco em teste com rollback: autorização, rejeição de atualização desatualizada, imutabilidade, histórico, idempotência e proteção das decisões foram confirmados, sem deixar registros sintéticos. Gravação, leitura posterior e reexecução do lote confirmadas no Supabase.
+
