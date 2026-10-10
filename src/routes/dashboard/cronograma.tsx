@@ -241,6 +241,7 @@ function PlanView({ plan, userId, onBack, onChange, onDeleted }: {
 }) {
   const [progress, setProgress] = React.useState<Record<string, TopicProgress> | null>(null);
   const [studiedMin, setStudiedMin] = React.useState<number | null>(null);
+  const [running, setRunning] = React.useState(false); // hooks sempre antes de qualquer return antecipado
   const timers = React.useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const cfg = plan.config;
 
@@ -308,7 +309,6 @@ function PlanView({ plan, userId, onBack, onChange, onDeleted }: {
   const pct = total ? Math.round((100 * done) / total) : 0;
   const week = buildWeek(cfg, progress);
   const next = nextTopic(cfg, progress);
-  const [running, setRunning] = React.useState(false);
   const dateKey = acreDateKey();
   const todayDow = new Date(`${dateKey}T12:00:00Z`).getUTCDay();
   const studyDays = [...cfg.days].sort((a, b) => a - b);
