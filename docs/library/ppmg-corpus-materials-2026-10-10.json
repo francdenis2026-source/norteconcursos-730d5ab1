@@ -1,0 +1,209 @@
+[
+  {
+    "slug": "penal-erros-tentativa-dolo-fixacao",
+    "title": "Código Penal — erros, tentativa e dolo: laboratório de casos",
+    "discipline": "Direito Penal",
+    "topic_label": "Código Penal — erros, tentativa e dolo: laboratório de casos",
+    "sort_order": 810,
+    "summary": "Três casos com variações, ilustração, oito itens comentados e quatro cartões de fixação.",
+    "body_md": "## 1. Leia os fatos antes de escolher o instituto\n\n| Pergunta | Instituto | Atenção |\n|---|---|---|\n| O erro recai sobre elemento do tipo? | **Erro de tipo** — art. 20 | Exclui dolo; culpa só se prevista. |\n| O erro recai sobre a proibição? | **Erro de proibição** — art. 21 | Inevitável isenta; evitável pode reduzir. |\n| A execução foi interrompida por causa externa? | **Tentativa** — art. 14, II | Início da execução é indispensável. |\n| O agente podia continuar e decidiu parar? | **Desistência voluntária** — art. 15 | Analise os atos já praticados. |\n| O agente assumiu o risco do resultado? | **Dolo eventual** — art. 18, I | Previsão isolada não equivale a aceitação. |\n\n## 2. Penas e condições\n\nNa tentativa, a redução geral é de **um a dois terços**, salvo disposição em contrário. Arrependimento posterior exige crime sem violência ou grave ameaça, reparação/restituição voluntária e momento anterior ao recebimento da denúncia ou queixa. Não transforme requisito ausente do enunciado em fato presumido.\n\n## 3. Exercite a recuperação ativa\n\nResponda aos casos coloridos antes de abrir as resoluções. Depois mude um fato na variação e explique por que a conclusão muda. Retorne aos cartões em outra sessão.\n\n## 4. Fonte e atualização\n\nArts. 14 a 21 do texto compilado oficial conferidos em 10/10/2026. As questões da apostila foram catalogadas separadamente; este laboratório é autoral e não reproduz nem certifica os gabaritos da editora.\n\n[Treinar Direito Penal](/dashboard/question-trainer?subject=Direito%20Penal)",
+    "contest_name": "Polícia Federal — Agente — preparação pelo tema do edital",
+    "syllabus_topic_order": 1,
+    "source_note": "Material autoral elaborado com recuperação ativa da skill Tutor após a catalogação completa da apostila. Fontes oficiais conferidas em 10/10/2026; não atribuído à SELECON.",
+    "law_version_checked_at": "2026-10-10T04:16:33.957406+00:00",
+    "legal_basis": [
+      {
+        "title": "Código Penal — texto compilado",
+        "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Erro sobre elemento constitutivo do tipo exclui o dolo.",
+        "a": true,
+        "why": "CP, art. 20. Verifique separadamente a previsão de modalidade culposa."
+      },
+      {
+        "q": "Todo erro de tipo impede qualquer punição por culpa.",
+        "a": false,
+        "why": "A modalidade culposa pode subsistir quando prevista em lei."
+      },
+      {
+        "q": "Desconhecimento da lei e erro inevitável sobre a ilicitude são expressões equivalentes.",
+        "a": false,
+        "why": "CP, art. 21: desconhecimento da lei é inescusável; erro sobre ilicitude tem regime próprio."
+      },
+      {
+        "q": "A tentativa exige início da execução e não consumação por circunstâncias alheias à vontade.",
+        "a": true,
+        "why": "CP, art. 14, II."
+      },
+      {
+        "q": "Na desistência voluntária, o agente responde somente pelos atos já praticados.",
+        "a": true,
+        "why": "CP, art. 15, desde que esses atos constituam infração penal."
+      },
+      {
+        "q": "Prever um resultado, por si só, sempre configura dolo eventual.",
+        "a": false,
+        "why": "CP, art. 18, I: é necessário assumir o risco de produzi-lo."
+      },
+      {
+        "q": "A tentativa recebe sempre redução fixa de metade da pena.",
+        "a": false,
+        "why": "CP, art. 14, parágrafo único: regra de diminuição de um a dois terços, salvo disposição em contrário."
+      },
+      {
+        "q": "O arrependimento posterior do art. 16 pode ocorrer indistintamente antes ou depois do recebimento da denúncia.",
+        "a": false,
+        "why": "Exige reparação ou restituição voluntária até o recebimento da denúncia ou queixa, em crime sem violência ou grave ameaça."
+      }
+    ],
+    "flashcards": [
+      {
+        "f": "Erro de tipo e erro de proibição: qual a diferença?",
+        "b": "Elemento do tipo: art. 20. Consciência da ilicitude: art. 21."
+      },
+      {
+        "f": "Tentativa ou desistência voluntária?",
+        "b": "Circunstância externa: art. 14, II. Decisão voluntária quando podia continuar: art. 15."
+      },
+      {
+        "f": "Qual é a redução geral da tentativa?",
+        "b": "Um a dois terços, salvo disposição em contrário."
+      },
+      {
+        "f": "Previsão do resultado basta para dolo eventual?",
+        "b": "Não. É preciso assumir o risco de produzi-lo."
+      }
+    ],
+    "_syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+    "legal_review": {
+      "checked_at": "2026-10-10T04:16:33.957406+00:00",
+      "scope": "Recorte de fixação; não substitui a leitura integral nem cobre todo o Código ou Constituição.",
+      "sources": [
+        {
+          "title": "Código Penal — texto compilado",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "sha256": "ae5b2f65d608d26a5f3539e1718907d16e2b0708ec514744b700b915129aa484",
+          "checked_at": "2026-10-10T04:16:33.957406+00:00"
+        }
+      ],
+      "changes": []
+    }
+  },
+  {
+    "slug": "constitucional-acumulacao-ec138-casos",
+    "title": "Constituição — acumulação de cargos: atualização da EC 138/2025",
+    "discipline": "Direito Constitucional",
+    "topic_label": "Constituição — acumulação de cargos: atualização da EC 138/2025",
+    "sort_order": 811,
+    "summary": "Três casos com variações, ilustração, oito itens comentados e quatro cartões de fixação.",
+    "body_md": "## 1. Mudança que deve ficar em evidência\n\n**EC 138/2025, publicada em 22/12/2025:** a hipótese de professor com outro cargo passou de **técnico ou científico** para **qualquer natureza**. A compatibilidade de horários e a observância do teto permanecem necessárias.\n\n| Hipótese | Quantidade e condições |\n|---|---|\n| Professor + professor | Dois cargos; compatibilidade de horários. |\n| Professor + outro cargo | Outro cargo de qualquer natureza; compatibilidade de horários. |\n| Saúde + saúde | Dois cargos ou empregos privativos de profissionais da saúde, com profissões regulamentadas; compatibilidade. |\n\n## 2. Como ler uma questão antiga\n\nUm exemplo de professor com cargo técnico pode continuar correto, pois técnico é uma das naturezas possíveis. Entretanto, afirmar que **somente** técnico ou científico é permitido não reflete a redação atual. Não descarte todo item antigo apenas pela data: compare o comando e cada alternativa.\n\n## 3. Data de corte do edital\n\nA legislação vigente hoje não altera automaticamente a legislação exigida por uma prova histórica. No PP-MG 01/2025, o item 1.6 estabelece a data de publicação do edital como referência. Leia retificações antes de usar a emenda para responder à prova daquele certame.\n\n## 4. Recupere e aplique\n\nNos casos coloridos, responda antes de revelar a solução. Explique por que o número de cargos e a compatibilidade são requisitos diferentes. Os cartões e os itens abaixo são autorais.\n\n[Treinar Direito Constitucional](/dashboard/question-trainer?subject=Direito%20Constitucional)",
+    "contest_name": "Polícia Federal — Agente — preparação pelo tema do edital",
+    "syllabus_topic_order": 2,
+    "source_note": "Material autoral elaborado com recuperação ativa da skill Tutor após a catalogação completa da apostila. Fontes oficiais conferidas em 10/10/2026; não atribuído à SELECON.",
+    "law_version_checked_at": "2026-10-10T04:16:33.957406+00:00",
+    "legal_basis": [
+      {
+        "title": "Constituição Federal — texto compilado",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
+      },
+      {
+        "title": "EC 138/2025 — acumulação de cargos",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc138.htm"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "A redação atual permite acumular um cargo de professor com outro de qualquer natureza.",
+        "a": true,
+        "why": "EC 138/2025, art. 1º."
+      },
+      {
+        "q": "Após a EC 138/2025, a compatibilidade de horários deixou de ser necessária.",
+        "a": false,
+        "why": "A emenda alterou a alínea b, preservando as condições do art. 37, XVI."
+      },
+      {
+        "q": "A acumulação de dois cargos de professor continua prevista constitucionalmente.",
+        "a": true,
+        "why": "CF, art. 37, XVI, a."
+      },
+      {
+        "q": "A exceção dos profissionais de saúde admite quatro cargos quando todos os horários forem compatíveis.",
+        "a": false,
+        "why": "CF, art. 37, XVI, c: dois cargos ou empregos privativos de profissionais da saúde, com profissões regulamentadas."
+      },
+      {
+        "q": "A EC 138/2025 entrou em vigor na data de sua publicação.",
+        "a": true,
+        "why": "Art. 2º da emenda; publicação no DOU de 22/12/2025."
+      },
+      {
+        "q": "Um cargo de professor com outro técnico continua sendo uma hipótese possível na regra atual.",
+        "a": true,
+        "why": "Técnico está compreendido em qualquer natureza, mas os demais requisitos permanecem."
+      },
+      {
+        "q": "Uma apostila de 2021 já reflete necessariamente a ampliação promovida pela EC 138/2025.",
+        "a": false,
+        "why": "O material antecede a emenda e precisa de comentário de atualização."
+      },
+      {
+        "q": "A legislação atual do treino e a legislação congelada de uma prova histórica devem ser identificadas separadamente.",
+        "a": true,
+        "why": "A data de corte depende do edital e de suas retificações."
+      }
+    ],
+    "flashcards": [
+      {
+        "f": "O que mudou na acumulação de cargo de professor?",
+        "b": "A EC 138/2025 permite outro cargo de qualquer natureza."
+      },
+      {
+        "f": "Compatibilidade de horários foi dispensada?",
+        "b": "Não. Continua requisito constitucional."
+      },
+      {
+        "f": "Qual o limite da exceção dos profissionais de saúde?",
+        "b": "Dois cargos ou empregos privativos, com profissões regulamentadas."
+      },
+      {
+        "f": "Qual data de lei usar em prova histórica?",
+        "b": "A data de corte prevista no edital e nas retificações; separar do texto atual."
+      }
+    ],
+    "_syllabus_topic_id": "2e8560fa-c1c5-4753-8ec6-275261802195",
+    "_syllabus_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+    "legal_review": {
+      "checked_at": "2026-10-10T04:16:33.957406+00:00",
+      "scope": "Recorte de fixação; não substitui a leitura integral nem cobre todo o Código ou Constituição.",
+      "sources": [
+        {
+          "title": "Constituição Federal — texto compilado",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "sha256": "cc8f4a924ca804c16b7661d78a0cac6a1b10721dd742acc0de2d6d746ccce8f3",
+          "checked_at": "2026-10-10T04:16:33.957406+00:00"
+        },
+        {
+          "title": "EC 138/2025 — acumulação de cargos",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc138.htm",
+          "sha256": "21791537a579f8b457b8b7b0ecd3bd53bafaf1fed8cc08e154031d9006403e3e",
+          "checked_at": "2026-10-10T04:16:33.957406+00:00"
+        }
+      ],
+      "changes": [
+        {
+          "title": "EC 138/2025",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc138.htm",
+          "articles": ["Art. 37, XVI, b"],
+          "summary": "Professor pode acumular com outro cargo de qualquer natureza, observadas as condições constitucionais.",
+          "vigency": "Publicação em 22/12/2025.",
+          "state": "effective"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,174 @@
+[
+  {
+    "id": "328006f3-52b7-5b06-938d-74e07476aba1",
+    "material_slug": "penal-erros-tentativa-dolo-fixacao",
+    "version": "2026-10-10",
+    "source_body_sha256": "0b24cf5f9fe9e264f0d061818a37f933071f93f6119979034fb98e589943c67c",
+    "content": {
+      "cases": [
+        {
+          "id": "tipo",
+          "title": "Erro de tipo: dolo e culpa",
+          "scenario": "Lia leva um guarda-chuva igual ao seu, acreditando sinceramente que é de sua propriedade. Os fatos comprovam o engano sobre a propriedade do objeto.",
+          "question": "O erro sobre elemento do tipo exclui automaticamente toda responsabilidade penal?",
+          "steps": [
+            "Identifique o erro sobre a coisa alheia, elemento do furto.",
+            "Aplique o art. 20: exclui o dolo; verifique se existe modalidade culposa do delito."
+          ],
+          "conclusion": "O erro exclui o dolo. Como não há furto culposo, não se pune por essa modalidade.",
+          "pitfall": "Confundir erro de tipo com desconhecimento da proibição.",
+          "variation": {
+            "scenario": "E se Lia soubesse que o objeto era de outra pessoa e apenas acreditasse que pegá-lo era permitido?",
+            "answer": "A análise passa ao erro sobre a ilicitude, art. 21, e depende de ser inevitável ou evitável."
+          },
+          "articles": ["CP, arts. 20 e 21"]
+        },
+        {
+          "id": "tentativa",
+          "title": "Tentativa e desistência voluntária",
+          "scenario": "Rui começa a executar um homicídio. Ainda poderia continuar, mas decide voluntariamente parar. A vítima sofreu lesão e sobreviveu.",
+          "question": "Toda interrupção antes da morte é tentativa de homicídio?",
+          "steps": [
+            "Pergunte se a interrupção foi externa ou voluntária.",
+            "Aplique o art. 15 à desistência voluntária: responsabilidade pelos atos já praticados."
+          ],
+          "conclusion": "Responde pelos atos já praticados, se criminosos, e não pela tentativa do homicídio abandonado voluntariamente.",
+          "pitfall": "Concluir pela desistência só porque o agente saiu do local, sem saber se podia prosseguir.",
+          "variation": {
+            "scenario": "E se terceiros impedissem Rui de continuar, contra sua vontade?",
+            "answer": "Havendo início da execução e não consumação por circunstância alheia à vontade, analise tentativa, art. 14, II."
+          },
+          "articles": ["CP, arts. 14, II, e 15"]
+        },
+        {
+          "id": "risco",
+          "title": "Dolo eventual exige assumir o risco",
+          "scenario": "Um condutor prevê a possibilidade de atropelamento. O caso informa expressamente que ele aceita o resultado e prossegue.",
+          "question": "Basta prever o resultado para caracterizar dolo eventual?",
+          "steps": [
+            "Separe previsão do resultado de aceitação do risco.",
+            "Leia o dado explícito de aceitação e confronte com o art. 18, I."
+          ],
+          "conclusion": "No exemplo, há dolo eventual porque o agente assume o risco; a conclusão depende dos fatos provados.",
+          "pitfall": "Presumir dolo eventual automaticamente em qualquer racha ou acidente com morte.",
+          "variation": {
+            "scenario": "E se ele previsse o resultado, mas confiasse sinceramente que conseguiria evitá-lo?",
+            "answer": "Examine culpa consciente e as provas do caso, sem tratar previsão como aceitação automática."
+          },
+          "articles": ["CP, art. 18, I e II"]
+        }
+      ],
+      "illustrations": [
+        {
+          "kind": "flow",
+          "title": "Roteiro de decisão",
+          "caption": "Identifique os fatos, leia as condições e teste a mudança de um fato.",
+          "nodes": [
+            "Qual é o fato relevante?",
+            "Qual regra e qual data de vigência?",
+            "Todos os requisitos foram narrados?",
+            "Responda e teste a variação"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "Código Penal — texto compilado",
+        "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "sha256": "ae5b2f65d608d26a5f3539e1718907d16e2b0708ec514744b700b915129aa484",
+        "checked_at": "2026-10-10T04:16:33.957406+00:00"
+      }
+    ],
+    "checked_at": "2026-10-10T04:16:33.957406+00:00"
+  },
+  {
+    "id": "9b5ca748-53f3-5e57-9697-f3dd58e2b13d",
+    "material_slug": "constitucional-acumulacao-ec138-casos",
+    "version": "2026-10-10",
+    "source_body_sha256": "9e6ae5f7ef19b15d3d93b00b8f0bbd9a5d6afc191743791b1f92f13cb8684b96",
+    "content": {
+      "cases": [
+        {
+          "id": "cargo",
+          "title": "Professor e cargo de outra natureza",
+          "scenario": "Uma professora aprovada em cargo administrativo pergunta se a natureza não técnica desse segundo cargo impede a acumulação. Há compatibilidade de horários e observância do teto.",
+          "question": "A natureza do segundo cargo continua limitada a técnico ou científico?",
+          "steps": [
+            "Identifique a redação atual do art. 37, XVI, b.",
+            "A EC 138/2025 substituiu a restrição pela expressão qualquer natureza; continue verificando horários e demais requisitos."
+          ],
+          "conclusion": "A natureza administrativa, isoladamente, não impede a exceção constitucional atual.",
+          "pitfall": "Memorizar a redação de uma apostila de 2021 como se fosse a redação atual.",
+          "variation": {
+            "scenario": "E se os horários forem incompatíveis?",
+            "answer": "A ampliação da natureza do cargo não elimina a exigência de compatibilidade de horários."
+          },
+          "articles": ["CF, art. 37, XVI, b; EC 138/2025"]
+        },
+        {
+          "id": "saude",
+          "title": "Médico não acumula quatro cargos",
+          "scenario": "Um médico pretende exercer quatro cargos públicos privativos de profissional da saúde. Alega que todos os horários são compatíveis.",
+          "question": "A compatibilidade autoriza qualquer quantidade de cargos?",
+          "steps": [
+            "Identifique a exceção dos profissionais de saúde com profissão regulamentada.",
+            "O art. 37, XVI, c, limita essa hipótese a dois cargos ou empregos."
+          ],
+          "conclusion": "Quatro cargos não são autorizados por essa exceção.",
+          "pitfall": "Confundir compatibilidade de horários com autorização ilimitada.",
+          "variation": {
+            "scenario": "E se forem apenas dois cargos médicos com horários compatíveis?",
+            "answer": "A hipótese constitucional pode ser atendida, observados a profissão regulamentada e os demais requisitos aplicáveis."
+          },
+          "articles": ["CF, art. 37, XVI, c"]
+        },
+        {
+          "id": "corte",
+          "title": "Data da lei e data de corte do edital",
+          "scenario": "Um edital publicado antes da EC 138/2025 manda considerar a legislação vigente na publicação. O aluno compara uma questão histórica com o texto atual.",
+          "question": "Deve aplicar a redação atual à prova histórica sem ler a data de corte?",
+          "steps": [
+            "Identifique a data de publicação do edital e eventuais retificações.",
+            "Separe a resposta na legislação histórica da preparação para a lei atualmente vigente."
+          ],
+          "conclusion": "O comentário do treino deve sinalizar as duas referências; a emenda entrou em vigor na publicação em 22/12/2025.",
+          "pitfall": "Usar a data da revisão do material como se alterasse automaticamente a regra do edital.",
+          "variation": {
+            "scenario": "E se o edital considerar a legislação vigente na aplicação da prova?",
+            "answer": "Confira o texto específico do edital e as retificações; a data de corte será diferente."
+          },
+          "articles": ["EC 138/2025, art. 2º; regra temporal do edital"]
+        }
+      ],
+      "illustrations": [
+        {
+          "kind": "flow",
+          "title": "Roteiro de decisão",
+          "caption": "Identifique os fatos, leia as condições e teste a mudança de um fato.",
+          "nodes": [
+            "Qual é o fato relevante?",
+            "Qual regra e qual data de vigência?",
+            "Todos os requisitos foram narrados?",
+            "Responda e teste a variação"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "Constituição Federal — texto compilado",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+        "sha256": "cc8f4a924ca804c16b7661d78a0cac6a1b10721dd742acc0de2d6d746ccce8f3",
+        "checked_at": "2026-10-10T04:16:33.957406+00:00"
+      },
+      {
+        "title": "EC 138/2025 — acumulação de cargos",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc138.htm",
+        "sha256": "21791537a579f8b457b8b7b0ecd3bd53bafaf1fed8cc08e154031d9006403e3e",
+        "checked_at": "2026-10-10T04:16:33.957406+00:00"
+      }
+    ],
+    "checked_at": "2026-10-10T04:16:33.957406+00:00"
+  }
+]
