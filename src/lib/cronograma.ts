@@ -36,6 +36,9 @@ export interface CronoConfig {
   days: number[]; // 0 = domingo … 6 = sábado
   startTime: string; // HH:MM
   weeklyHours: number;
+  /** Painel do dia: simulado no último dia de estudo e redação no penúltimo (ou único). */
+  simulado?: boolean;
+  essay?: boolean;
 }
 export interface TopicProgress {
   video: boolean; pdf: boolean; podcast: boolean;

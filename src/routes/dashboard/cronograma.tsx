@@ -1,7 +1,7 @@
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  ArrowLeft, BookOpen, CalendarClock, Layers, Loader2, Mic, NotebookPen, Plus, Sparkles, Target, Trash2, Trophy,
+  ArrowLeft, BookOpen, Play, CalendarClock, Layers, Loader2, Mic, NotebookPen, Plus, Sparkles, Target, Trash2, Trophy,
 } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
@@ -17,10 +17,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LockedState, PageHero } from "@/components/dashboard/PageHero";
 import { MODELOS_CRONOGRAMA, type ModeloCronograma } from "@/data/cronogramaModelos";
 import {
-  accuracy, buildWeek, discStats, isGenericDiscipline, EMPTY_PROGRESS, nextTopic, topicDone,
+  canonicalDiscipline, accuracy, buildWeek, discStats, isGenericDiscipline, EMPTY_PROGRESS, nextTopic, topicDone,
   type CronoConfig, type CronoDisc, type TopicProgress,
 } from "@/lib/cronograma";
 import { confirmDialog } from "@/lib/confirm";
+import { acreDateKey } from "@/lib/acreTime";
+import { DayRun } from "@/components/cronograma/DayRun";
+import { buildDaySteps, discColor } from "@/lib/cronogramaDia";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/cronograma")({ component: CronogramaPage });
@@ -36,6 +39,7 @@ interface Plan {
 
 const DAY_SHORT = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 const DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
+const DAY_NAMES_FULL = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 const uid = () => Math.random().toString(36).slice(2, 8);
 const fmtH = (min: number) => `${Math.floor(min / 60)}h${min % 60 ? String(min % 60).padStart(2, "0") : ""}`;
 
@@ -61,7 +65,7 @@ function CronogramaPage() {
 
   const load = React.useCallback(async () => {
     const { data } = await supabase.from("cronograma_plans").select("*").order("updated_at", { ascending: false });
-    setPlans((data ?? []) as Plan[]);
+    setPlans(((data ?? []) as Plan[]).map((p) => ({ ...p, config: { ...p.config, discs: p.config.discs.map((d) => ({ ...d, nome: canonicalDiscipline(d.nome) })) } })));
   }, []);
   React.useEffect(() => {
     if (!isLoading && real) void load();
@@ -166,7 +170,7 @@ function NewPlan({ userId, onBack, onCreated }: { userId: string; onBack: () => 
     setSaving(true);
     const { data, error } = await supabase.from("cronograma_plans").insert({
       user_id: userId, name: name.trim() || "Meu cronograma", model_id: model === "custom" ? null : model.id,
-      custom: model === "custom", exam_date: examDate || null, config: { ...cfg, discs },
+      custom: model === "custom", exam_date: examDate || null, config: { ...cfg, simulado: true, essay: false, discs },
     }).select("id").single();
     setSaving(false);
     if (error || !data) {
@@ -304,6 +308,18 @@ function PlanView({ plan, userId, onBack, onChange, onDeleted }: {
   const pct = total ? Math.round((100 * done) / total) : 0;
   const week = buildWeek(cfg, progress);
   const next = nextTopic(cfg, progress);
+  const [running, setRunning] = React.useState(false);
+  const dateKey = acreDateKey();
+  const todayDow = new Date(`${dateKey}T12:00:00Z`).getUTCDay();
+  const studyDays = [...cfg.days].sort((a, b) => a - b);
+  const todayBlocks = week[todayDow];
+  const todaySteps = todayBlocks
+    ? buildDaySteps(cfg, todayBlocks, progress, {
+        simulado: !!cfg.simulado, essay: !!cfg.essay,
+        isLastStudyDay: studyDays.at(-1) === todayDow,
+        isSecondLastOrOnly: (studyDays.length > 1 ? studyDays.at(-2) : studyDays[0]) === todayDow,
+      })
+    : [];
   const daysLeft = plan.exam_date ? Math.ceil((new Date(`${plan.exam_date}T12:00:00`).getTime() - Date.now()) / 864e5) : null;
 
   return (
@@ -312,37 +328,58 @@ function PlanView({ plan, userId, onBack, onChange, onDeleted }: {
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="mr-1 h-4 w-4" /> Meus cronogramas</Button>
         <Button variant="ghost" size="sm" className="text-destructive" onClick={remove}><Trash2 className="mr-1 h-4 w-4" /> Excluir</Button>
       </div>
-      <Card>
-        <CardContent className="grid gap-4 p-4 sm:grid-cols-[1fr_auto_auto] sm:items-center">
+      <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 p-5 text-white shadow-lg">
+        <div className="grid gap-4 sm:grid-cols-[1fr_auto_auto] sm:items-center">
           <div>
-            <p className="text-lg font-black">{plan.name}</p>
-            <div className="mt-2 flex items-center gap-2"><Progress value={pct} className="h-2" /><span className="text-sm font-bold tabular-nums">{pct}%</span></div>
-            <p className="mt-1 text-xs text-muted-foreground">{done} de {total} conteúdos concluídos</p>
+            <p className="text-xl font-black">{plan.name}</p>
+            <div className="mt-3 flex items-center gap-2"><div className="h-2.5 flex-1 overflow-hidden rounded-full bg-white/25"><div className="h-full rounded-full bg-white transition-all" style={{ width: `${pct}%` }} /></div><span className="text-sm font-bold tabular-nums">{pct}%</span></div>
+            <p className="mt-1 text-xs text-white/80">{done} de {total} conteúdos concluídos</p>
           </div>
           <Stat label="Estudado (7 dias)" value={studiedMin === null ? "…" : fmtH(studiedMin)} sub={`meta ${cfg.weeklyHours} h`} />
           <Stat label="Prova" value={daysLeft === null ? "—" : daysLeft >= 0 ? `${daysLeft} dias` : "passou"} sub={plan.exam_date ? plan.exam_date.split("-").reverse().join("/") : "sem data"} />
-        </CardContent>
-      </Card>
+        </div>
+      </div>
+      <div className={cn("flex flex-wrap items-center gap-3 rounded-2xl border-2 p-4", todaySteps.length ? "border-emerald-300 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30" : "border-dashed bg-muted/30")}>
+        <span className="text-3xl" aria-hidden="true">{todaySteps.length ? "🚀" : "😴"}</span>
+        <div className="min-w-0 flex-1">
+          {todaySteps.length ? (
+            <>
+              <p className="font-black">Hoje é dia de estudo: {DAY_NAMES_FULL[todayDow]}</p>
+              <p className="text-xs text-muted-foreground">
+                {todayBlocks!.length} {todayBlocks!.length === 1 ? "disciplina" : "disciplinas"} · {fmtH(todayBlocks!.reduce((s, b) => s + b.minutes, 0))} de estudo, a partir das {todayBlocks![0]!.start}. O painel guia você etapa por etapa, com cronômetro.
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="font-black">Hoje é dia de descanso</p>
+              <p className="text-xs text-muted-foreground">Seus dias de estudo: {studyDays.map((d) => DAY_SHORT[d]).join(", ")}. Descansar também faz parte do plano.</p>
+            </>
+          )}
+        </div>
+        {todaySteps.length > 0 && <Button size="lg" onClick={() => setRunning(true)} className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow"><Play className="mr-2 h-5 w-5" /> Iniciar o dia de estudo</Button>}
+      </div>
+      {running && <DayRun planId={plan.id} dateKey={dateKey} title={plan.name} cfg={cfg} steps={todaySteps} progress={progress} setTopic={setTopic} onClose={() => setRunning(false)} />}
       {next && (
-        <div className="flex flex-wrap items-center gap-3 rounded-xl border border-primary/30 bg-primary/5 p-3 text-sm">
-          <Target className="h-4 w-4 text-primary" />
+        <div className="flex flex-wrap items-center gap-3 rounded-xl border border-sky-300 bg-gradient-to-r from-sky-50 to-indigo-50 p-3 text-sm dark:from-sky-950/30 dark:to-indigo-950/30">
+          <Target className="h-4 w-4 text-sky-600" />
           <span className="min-w-0 flex-1"><b>Próximo passo:</b> {next.d.nome} — {next.t.t}</span>
           <ToolLinks nome={next.d.nome} />
         </div>
       )}
       <Tabs defaultValue="semana">
-        <TabsList className="grid w-full grid-cols-3"><TabsTrigger value="semana">Semana</TabsTrigger><TabsTrigger value="conteudo">Conteúdo</TabsTrigger><TabsTrigger value="ajustes">Ajustes</TabsTrigger></TabsList>
+        <TabsList className="grid h-auto w-full grid-cols-3 bg-gradient-to-r from-indigo-100 via-violet-100 to-fuchsia-100 p-1 dark:from-indigo-950/40 dark:via-violet-950/40 dark:to-fuchsia-950/40"><TabsTrigger value="semana">Semana</TabsTrigger><TabsTrigger value="conteudo">Conteúdo</TabsTrigger><TabsTrigger value="ajustes">Ajustes</TabsTrigger></TabsList>
 
         <TabsContent value="semana" className="space-y-3">
           <p className="text-xs text-muted-foreground">Tempo por disciplina = peso × o que falta × reforço para desempenho abaixo de 70%. Mude o progresso e a semana se reorganiza.</p>
           {DAY_ORDER.filter((d) => week[d]).map((d) => (
             <Card key={d}>
-              <CardHeader className="pb-2"><CardTitle className="text-base">{DAY_SHORT[d]} <span className="text-xs font-normal text-muted-foreground">· {fmtH(week[d]!.reduce((s, b) => s + b.minutes, 0))}</span></CardTitle></CardHeader>
+              <CardHeader className="pb-2"><CardTitle className="text-base">{DAY_NAMES_FULL[d]} {d === todayDow && <Badge className="ml-1 bg-emerald-500 hover:bg-emerald-500">hoje</Badge>} <span className="text-xs font-normal text-muted-foreground">· {fmtH(week[d]!.reduce((s, b) => s + b.minutes, 0))}</span></CardTitle></CardHeader>
               <CardContent className="space-y-2">
                 {week[d]!.map((b, i) => (
-                  <div key={i} className="flex flex-wrap items-center gap-2 rounded-lg border p-2 text-sm">
+                  <div key={i} className="relative flex flex-wrap items-center gap-2 overflow-hidden rounded-lg border p-2 pl-4 text-sm">
+                    <span className={cn("absolute inset-y-0 left-0 w-1.5", discColor(cfg, b.discId).bar)} aria-hidden="true" />
                     <span className="w-28 shrink-0 font-mono text-xs text-muted-foreground">{b.start} – {b.end}</span>
-                    <span className="min-w-0 flex-1 font-semibold">{b.nome}{b.first && <Badge variant="secondary" className="ml-2">1ª vez</Badge>}</span>
+                    <span className="min-w-0 flex-1 font-semibold">{b.nome}{b.first && <Badge className="ml-2 bg-amber-400 text-amber-950 hover:bg-amber-400">1ª vez</Badge>}</span>
                     <ToolLinks nome={b.nome} />
                   </div>
                 ))}
@@ -355,10 +392,11 @@ function PlanView({ plan, userId, onBack, onChange, onDeleted }: {
           {all.map(({ d, s }) => {
             const acc = accuracy(s);
             return (
-              <details key={d.id} className="rounded-xl border bg-card">
+              <details key={d.id} className={cn("overflow-hidden rounded-xl border border-l-4 bg-card", discColor(cfg, d.id).border)}>
                 <summary className="flex cursor-pointer flex-wrap items-center gap-2 p-3">
-                  <span className="min-w-0 flex-1 font-bold">{d.nome}</span>
-                  <Badge variant={d.peso === 2 ? "default" : "secondary"}>Peso {d.peso}</Badge>
+                  <span className={cn("rounded-full px-3 py-1 text-sm font-bold", discColor(cfg, d.id).chip)}>{d.nome}</span>
+                  <span className="min-w-24 flex-1"><span className="block h-1.5 overflow-hidden rounded-full bg-muted"><span className={cn("block h-full rounded-full", discColor(cfg, d.id).bar)} style={{ width: `${s.total ? (100 * s.done) / s.total : 0}%` }} /></span></span>
+                  <Badge className={d.peso === 2 ? "bg-orange-500 hover:bg-orange-500" : ""} variant={d.peso === 2 ? "default" : "secondary"}>Peso {d.peso}</Badge>
                   <span className="text-xs text-muted-foreground">{s.done}/{s.total} · {acc === null ? "sem questões" : `${acc}% de acertos`}</span>
                 </summary>
                 <div className="space-y-2 border-t p-3">
@@ -400,6 +438,11 @@ function PlanView({ plan, userId, onBack, onChange, onDeleted }: {
                 <div className="space-y-1.5"><Label>Data da prova</Label><Input type="date" value={plan.exam_date ?? ""} onChange={(e) => void save({ exam_date: e.target.value || null })} /></div>
               </div>
               <SettingsFields cfg={cfg} onChange={setCfg} />
+              <div className="space-y-2 rounded-xl border bg-gradient-to-r from-amber-50 to-fuchsia-50 p-3 dark:from-amber-950/20 dark:to-fuchsia-950/20">
+                <p className="text-sm font-bold">Extras no painel do dia</p>
+                <label className="flex items-center gap-2 text-sm"><Checkbox checked={!!cfg.simulado} onCheckedChange={(v) => setCfg({ simulado: !!v })} />🏆 Simulado de 1 h no último dia de estudo da semana</label>
+                <label className="flex items-center gap-2 text-sm"><Checkbox checked={!!cfg.essay} onCheckedChange={(v) => setCfg({ essay: !!v })} />✍️ Redação de 40 min no penúltimo dia de estudo</label>
+              </div>
             </CardContent>
           </Card>
           <Card>
@@ -475,10 +518,10 @@ function CustomEditor({ cfg, setCfg }: { cfg: CronoConfig; setCfg: (p: Partial<C
 
 function Stat({ label, value, sub }: { label: string; value: string; sub: string }) {
   return (
-    <div className="rounded-lg bg-muted/50 px-4 py-2 text-center">
-      <p className="text-[11px] uppercase tracking-wide text-muted-foreground">{label}</p>
+    <div className="rounded-xl bg-white/15 px-4 py-2 text-center backdrop-blur">
+      <p className="text-[11px] uppercase tracking-wide text-white/80">{label}</p>
       <p className="text-xl font-black tabular-nums">{value}</p>
-      <p className="text-[11px] text-muted-foreground">{sub}</p>
+      <p className="text-[11px] text-white/80">{sub}</p>
     </div>
   );
 }

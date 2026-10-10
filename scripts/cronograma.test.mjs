@@ -10,3 +10,8 @@ test("cronograma: nomes de disciplinas padronizados", () => {
   if (canonicalDiscipline("Língua Portuguesa") !== "Língua Portuguesa") throw new Error("português mudou");
   if (!isGenericDiscipline("Conhecimentos Específicos")) throw new Error("genérica");
 });
+
+test("cronograma: painel do dia divide blocos em etapas sem perder minutos", async () => {
+  const { selfCheckDia } = await import("../src/lib/cronogramaDia.ts");
+  selfCheckDia();
+});
