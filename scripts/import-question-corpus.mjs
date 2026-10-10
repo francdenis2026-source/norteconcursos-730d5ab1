@@ -75,6 +75,25 @@ export function validateCorpus(data) {
         ))
     )
       throw Error("Publicação jurídica sem fonte oficial vigente");
+    const normativeKinds = new Set(c.payload.normative_review_required ?? []);
+    if (/contabilidade|normas? contábeis/i.test(c.discipline + " " + q.subject) || /\bNBC\s+(TG|TSP|PG|TA)\b/i.test(q.question_text))
+      normativeKinds.add("accounting");
+    if (/redação oficial|manual de redação/i.test(c.discipline + " " + q.subject))
+      normativeKinds.add("official_writing");
+    for (const kind of normativeKinds) {
+      if (!["accounting", "official_writing"].includes(kind))
+        throw Error("Categoria de revisão normativa desconhecida");
+      const evidence = r.normative_evidence?.filter((e) => e.kind === kind) ?? [];
+      if (!evidence.length || evidence.some((e) => {
+        let host;
+        try { const url = new URL(e.url); if (url.protocol !== "https:") return true; host = url.hostname; } catch { return true; }
+        const official = kind === "accounting"
+          ? /(^|\.)cfc\.org\.br$/.test(host)
+          : /(^|\.)planalto\.gov\.br$|(^|\.)gov\.br$/.test(host);
+        return !official || e.verified !== true || !e.scope?.trim() ||
+          !Number.isFinite(Date.parse(e.checked_at)) || Date.parse(e.checked_at) > Date.now();
+      })) throw Error("Publicação normativa sem conferência oficial individual");
+    }
   }
   return data;
 }

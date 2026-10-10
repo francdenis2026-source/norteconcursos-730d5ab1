@@ -94,6 +94,26 @@ test("quarantined original cannot be published by a rerun", () => {
   a.candidates[0].content_status = "obsolete";
   assert.throws(() => validateCorpus(a), /revisão individual/);
 });
+
+test("accounting requires current CFC evidence even without an explicit flag", () => {
+  const a = approved(), c = a.candidates[0];
+  c.discipline = c.payload.publication.subject = "Contabilidade";
+  assert.throws(() => validateCorpus(a), /normativa/);
+  c.payload.individual_review.normative_evidence = [{ kind: "accounting", url: "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/", verified: true, checked_at: "2026-01-01", scope: "Norma e versão pertinentes à questão sintética." }];
+  assert.equal(validateCorpus(a), a);
+  c.payload.individual_review.normative_evidence[0].url = "https://cfc.org.br.example.com/";
+  assert.throws(() => validateCorpus(a), /normativa/);
+});
+
+test("official writing requires evidence and rejects future verification dates", () => {
+  const a = approved(), c = a.candidates[0];
+  c.discipline = c.payload.publication.subject = "Redação Oficial";
+  assert.throws(() => validateCorpus(a), /normativa/);
+  c.payload.individual_review.normative_evidence = [{ kind: "official_writing", url: "https://www.planalto.gov.br/legislacao/", verified: true, checked_at: "2999-01-01", scope: "Regra aplicável e âmbito de aplicação." }];
+  assert.throws(() => validateCorpus(a), /normativa/);
+  c.payload.individual_review.normative_evidence[0].checked_at = "2026-01-01";
+  assert.equal(validateCorpus(a), a);
+});
 test("dry run validates without contacting database", async () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "corpus-test-"));
   const input = path.join(dir, "pack.json"),
