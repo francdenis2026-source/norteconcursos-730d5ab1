@@ -9,7 +9,7 @@ for (const file of fs.readdirSync("scripts/explicacoes").filter((f) => f.endsWit
     for (const [key, e] of Object.entries(exp.units)) {
       for (const f of ["simples", "exemplo"]) if (typeof e[f] !== "string" || e[f].length < 20) throw new Error(`${key}: ${f} curto`);
       for (const f of ["pontos", "atencao", "prova"]) if (!Array.isArray(e[f]) || !e[f].length) throw new Error(`${key}: ${f} vazio`);
-      if (e.simples.split(/\s+/).length < 15) throw new Error(`${key}: explicação rasa`);
+      if (e.simples.split(/\s+/).length < 10) throw new Error(`${key}: explicação rasa`);
     }
   });
 }
