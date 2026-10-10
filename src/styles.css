@@ -7717,3 +7717,155 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .library-section-heading { flex-wrap:wrap; }
   .library-section-heading .library-total { margin-left:60px; }
 }
+
+
+/* ===== Efeitos da homepage (src/components/landing/fx.tsx) ===== */
+.fx-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 80;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, oklch(0.92 0.08 86), oklch(0.8 0.13 78), oklch(0.7 0.13 66));
+  box-shadow: 0 0 12px oklch(0.8 0.13 78 / 0.7);
+  pointer-events: none;
+}
+.fx-radar {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mask-image: linear-gradient(90deg, transparent 8%, black 45%);
+}
+.fx-grain {
+  position: absolute;
+  inset: -50%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.09;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: fx-grain 0.9s steps(6) infinite;
+}
+@keyframes fx-grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-4%, 3%); }
+  40% { transform: translate(3%, -5%); }
+  60% { transform: translate(-6%, -2%); }
+  80% { transform: translate(5%, 4%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Odômetro */
+.fx-odo {
+  display: inline-flex;
+  line-height: 1;
+}
+.fx-odo__col {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+}
+.fx-odo__strip {
+  display: flex;
+  flex-direction: column;
+  transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fx-odo__strip > span {
+  height: 1em;
+  line-height: 1;
+}
+
+/* Títulos palavra a palavra */
+.fx-ready .fx-w {
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+  vertical-align: top;
+}
+.fx-ready .fx-w > span {
+  display: inline-block;
+  transform: translateY(110%) rotate(4deg);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fx-ready .fx-in .fx-w > span,
+.fx-ready .fx-w:where(.fx-in *) > span {
+  transform: none;
+}
+
+/* Rota do Método: a linha enche com a rolagem e as etapas acendem */
+.lp-steps::after {
+  position: absolute;
+  top: 27px;
+  right: 12%;
+  left: 12%;
+  height: 2px;
+  content: "";
+  transform: scaleX(var(--p, 0));
+  transform-origin: left;
+  background: linear-gradient(90deg, oklch(0.92 0.08 86), oklch(0.8 0.13 78));
+  box-shadow: 0 0 14px oklch(0.8 0.13 78 / 0.85);
+  pointer-events: none;
+}
+@media (max-width: 1100px) {
+  .lp-steps::after {
+    display: none;
+  }
+}
+.fx-ready .lp-step__node {
+  transition:
+    background 0.5s,
+    color 0.5s,
+    transform 0.5s var(--ease-out),
+    box-shadow 0.5s;
+}
+.fx-ready .lp-step.is-lit .lp-step__node {
+  border-color: var(--brass);
+  box-shadow:
+    0 0 0 6px var(--ink-deep),
+    0 0 26px oklch(0.8 0.13 78 / 0.55);
+}
+.fx-ready .lp-step.is-lit .lp-step__card {
+  border-color: oklch(0.8 0.13 78 / 0.3);
+}
+
+/* Cartões: inclinação 3D + brilho que segue o cursor */
+.fx-tilt {
+  transform: perspective(900px) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateY(-4px) !important;
+  transition: transform 0.12s linear !important;
+}
+.lp-bento .lp-tile::after,
+.lp-step__card::after,
+.lp-career::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), oklch(0.8 0.13 78 / 0.22), transparent 65%);
+}
+.lp-step__card,
+.lp-career {
+  position: relative;
+}
+.fx-tilt::after {
+  opacity: 1 !important;
+}
+
+/* Botões magnéticos */
+.btn-brass.fx-magnet {
+  transform: translate(var(--bx, 0), var(--by, 0));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-grain,
+  .fx-radar {
+    display: none;
+  }
+}
