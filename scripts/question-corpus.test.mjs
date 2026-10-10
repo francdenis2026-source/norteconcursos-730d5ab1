@@ -74,6 +74,11 @@ test("review does not authorize missing alternatives", () => {
   a.candidates[0].payload.publication.question_text = "Exemplo\n(A) Um\n(C) Três\n(D) Quatro";
   assert.throws(() => validateCorpus(a), /Alternativas/);
 });
+test("empty figure alternatives cannot be published", () => {
+  const a = approved();
+  a.candidates[0].payload.publication.question_text = "Exemplo\n(A) Um\n(B)\n(C) Três\n(D) Quatro";
+  assert.throws(() => validateCorpus(a), /sem conteúdo/);
+});
 test("future legal check and unofficial host are rejected", () => {
   for (const [k, v] of [
     ["law_version_checked_at", "2999-01-01"],

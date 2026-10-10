@@ -50,6 +50,13 @@ export function validateCorpus(data) {
     const labels = Array.from(q.question_text.matchAll(/^\(([ABCDE])\)/gm), (m) => m[1]).join("");
     if (!["ABCD", "ABCDE"].includes(labels) || !labels.includes(q.official_answer))
       throw Error("Alternativas incompletas ou gabarito incompatível");
+    if (
+      q.question_text
+        .split(/^\([ABCDE]\)/m)
+        .slice(1)
+        .some((text) => !text.trim())
+    )
+      throw Error("Alternativa sem conteúdo; recupere a figura antes da publicação");
     const legal =
       c.payload.legal_review_required ||
       /direito|legisla/i.test(c.discipline + " " + q.subject) ||
@@ -160,6 +167,31 @@ export async function run(input, report, mode) {
         c.payload.publication,
     )
     .map((c) => c.payload.publication);
+  // Register each checked legal authority separately from the private publisher source.
+  const authorities = new Map();
+  for (const q of approved)
+    for (const b of q.legal_basis ?? []) {
+      if (
+        !/^https:\/\/([\w-]+\.)*(planalto\.gov\.br|stf\.jus\.br|stj\.jus\.br)\//.test(b.url ?? "")
+      )
+        continue;
+      authorities.set(b.url, {
+        source_type: /st[fj]\.jus\.br/.test(b.url) ? "jurisprudencia" : "lei",
+        title: b.title || "Fonte oficial conferida",
+        issuer: /stf\.jus\.br/.test(b.url)
+          ? "Supremo Tribunal Federal"
+          : /stj\.jus\.br/.test(b.url)
+            ? "Superior Tribunal de Justiça"
+            : "Presidência da República",
+        url: b.url,
+        is_official: true,
+        status: "em_revisao",
+        checked_at: q.law_version_checked_at,
+        notes:
+          "Dispositivos citados conferidos na revisão individual. Esta conferência não certifica a íntegra de toda a norma.",
+      });
+    }
+  if (authorities.size) await insert("content_sources", [...authorities.values()], "url");
   const sourceUrl = "urn:sha256:" + data.source.id;
   await insert(
     "content_sources",
