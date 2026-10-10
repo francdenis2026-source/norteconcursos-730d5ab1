@@ -3,6 +3,32 @@
  * A semana é determinística e se ajusta ao que o aluno já fez (menos conteúdo concluído e
  * desempenho abaixo de 70% aumentam o tempo da disciplina).
  */
+const strip = (t: string) => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
+/** Nomes que os editais escrevem de jeitos diferentes viram um só (chave sem acento/minúscula → nome padrão). */
+const ALIAS: Record<string, string> = {
+  "arquivologia (somente escrivao)": "Arquivologia",
+  "contabilidade geral": "Contabilidade",
+  "etica": "Ética no Serviço Público",
+  "etica e cidadania": "Ética no Serviço Público",
+  "legislacao": "Legislação Especial",
+  "direitos humanos e participacao social": "Direitos Humanos",
+  "probabilidade e estatistica": "Estatística",
+  "direito penal e de direito processual penal": "Direito Penal e Processual Penal",
+  "atualidades e conhecimentos sobre o estado": "Atualidades e Conhecimentos sobre Sergipe",
+  "administracao / situacoes gerenciais": "Administração Geral e Situações Gerenciais",
+};
+/** Nome padrão da disciplina: sem "Noções de"/"Conhecimentos de", com variações de Informática, Raciocínio Lógico etc. unificadas. */
+export function canonicalDiscipline(raw: string): string {
+  const key = strip(raw).replace(/^(nocoes|conhecimentos) de /, "");
+  if (key.startsWith("raciocinio logico")) return "Raciocínio Lógico";
+  if (key.startsWith("informatica")) return "Informática";
+  if (ALIAS[key]) return ALIAS[key];
+  const clean = raw.trim().replace(/^(Noções|Conhecimentos) de /i, "");
+  return clean.charAt(0).toUpperCase() + clean.slice(1);
+}
+/** Disciplinas genéricas de um edital específico não servem para montar um cronograma do zero. */
+export const isGenericDiscipline = (nome: string) => /^conhecimentos (especificos|tecnicos)$/.test(strip(nome));
+
 export interface CronoTopic { id: string; t: string }
 export interface CronoDisc { id: string; nome: string; peso: 1 | 2; topicos: CronoTopic[] }
 export interface CronoConfig {
@@ -126,4 +152,17 @@ export function selfCheck() {
   const b2 = blocks.filter((b) => b.discId === "b").reduce((s, b) => s + b.minutes, 0);
   if (a <= b2) throw new Error("peso 2 deve receber mais tempo");
   return true;
+}
+
+/** Self-check: nomes unificados e sem repetição. */
+export function disciplineNamesCheck(names: string[]) {
+  const out = names.map(canonicalDiscipline);
+  const want: [string, string][] = [
+    ["Noções de Direito Penal", "Direito Penal"], ["Informática", "Informática"], ["Conhecimentos de Informática", "Informática"],
+    ["Noções de Informática", "Informática"], ["Raciocínio Lógico Quantitativo", "Raciocínio Lógico"],
+    ["Raciocínio Lógico-Matemático", "Raciocínio Lógico"], ["Ética", "Ética no Serviço Público"], ["Contabilidade Geral", "Contabilidade"],
+    ["Noções de Legislação Especial", "Legislação Especial"],
+  ];
+  for (const [a, b] of want) if (canonicalDiscipline(a) !== b) throw new Error(`${a} -> ${canonicalDiscipline(a)} != ${b}`);
+  return out;
 }

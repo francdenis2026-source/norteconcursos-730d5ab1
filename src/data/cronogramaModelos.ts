@@ -1,3 +1,5 @@
+import { canonicalDiscipline } from "@/lib/cronograma";
+
 // Modelos fixos de cronograma, extraídos dos cronogramas do Método Focus (edital → disciplinas → conteúdo programático).
 // "peso" é a sugestão inicial (2 = disciplina de maior peso/dificuldade: bloco inicial de 2 h); o aluno pode ajustar.
 export interface ModeloDisciplina { nome: string; peso: 1 | 2; topicos: string[] }
@@ -6,7 +8,7 @@ export interface ModeloCronograma {
   disciplinas: ModeloDisciplina[];
 }
 
-export const MODELOS_CRONOGRAMA: ModeloCronograma[] = [
+const MODELOS_BRUTOS: ModeloCronograma[] = [
  {
   "id": "caixa-cesgranrio-tec-banc-novo",
   "orgao": "Caixa Econômica Federal",
@@ -2144,3 +2146,25 @@ export const MODELOS_CRONOGRAMA: ModeloCronograma[] = [
   ]
  }
 ] as ModeloCronograma[];
+
+const semRepetir = (topicos: string[]) => {
+  const vistos = new Set<string>();
+  return topicos.filter((t) => {
+    const k = t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    return !vistos.has(k) && !!vistos.add(k);
+  });
+};
+
+/** Modelos com os nomes das disciplinas padronizados; nomes que viram o mesmo no mesmo edital são fundidos. */
+export const MODELOS_CRONOGRAMA: ModeloCronograma[] = MODELOS_BRUTOS.map((m) => {
+  const por = new Map<string, ModeloDisciplina>();
+  for (const d of m.disciplinas) {
+    const nome = canonicalDiscipline(d.nome);
+    const cur = por.get(nome);
+    if (cur) {
+      cur.topicos = semRepetir([...cur.topicos, ...d.topicos]);
+      cur.peso = Math.max(cur.peso, d.peso) as 1 | 2;
+    } else por.set(nome, { nome, peso: d.peso, topicos: semRepetir(d.topicos) });
+  }
+  return { ...m, disciplinas: [...por.values()] };
+});

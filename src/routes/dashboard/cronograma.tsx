@@ -17,7 +17,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LockedState, PageHero } from "@/components/dashboard/PageHero";
 import { MODELOS_CRONOGRAMA, type ModeloCronograma } from "@/data/cronogramaModelos";
 import {
-  accuracy, buildWeek, discStats, EMPTY_PROGRESS, nextTopic, topicDone,
+  accuracy, buildWeek, discStats, isGenericDiscipline, EMPTY_PROGRESS, nextTopic, topicDone,
   type CronoConfig, type CronoDisc, type TopicProgress,
 } from "@/lib/cronograma";
 import { confirmDialog } from "@/lib/confirm";
@@ -49,7 +49,7 @@ function discsFromModel(m: ModeloCronograma): CronoDisc[] {
 const CATALOGO = (() => {
   const map = new Map<string, ModeloCronograma["disciplinas"][number]>();
   for (const m of MODELOS_CRONOGRAMA)
-    for (const d of m.disciplinas) if (!map.has(d.nome) || d.topicos.length > map.get(d.nome)!.topicos.length) map.set(d.nome, d);
+    for (const d of m.disciplinas) if (!isGenericDiscipline(d.nome) && (!map.has(d.nome) || d.topicos.length > map.get(d.nome)!.topicos.length)) map.set(d.nome, d);
   return [...map.values()].sort((a, b) => a.nome.localeCompare(b.nome));
 })();
 
