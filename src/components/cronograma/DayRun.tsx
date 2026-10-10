@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import type { CronoConfig, TopicProgress } from "@/lib/cronograma";
 import { EMPTY_PROGRESS } from "@/lib/cronograma";
 import { discColor, KINDS, stepLink, stepMinutes, type DayStep } from "@/lib/cronogramaDia";
+import type { TheoryTarget } from "@/lib/cronogramaTeoria";
 import { cn } from "@/lib/utils";
 
 type Mark = "done" | "skip";
@@ -51,9 +52,10 @@ function Ring({ total, left, stroke }: { total: number; left: number; stroke: st
   );
 }
 
-export function DayRun({ planId, dateKey, title, cfg, steps, progress, setTopic, onClose }: {
+export function DayRun({ planId, dateKey, title, cfg, steps, progress, setTopic, theoryOf, onClose }: {
   planId: string; dateKey: string; title: string; cfg: CronoConfig; steps: DayStep[];
-  progress: Record<string, TopicProgress>; setTopic: (topicId: string, patch: Partial<TopicProgress>) => void; onClose: () => void;
+  progress: Record<string, TopicProgress>; setTopic: (topicId: string, patch: Partial<TopicProgress>) => void;
+  theoryOf: (nome: string, topic: string) => TheoryTarget; onClose: () => void;
 }) {
   const key = `crono-run:${planId}:${dateKey}`;
   const [run, setRun] = React.useState<Run>(() => {
@@ -137,7 +139,8 @@ export function DayRun({ planId, dateKey, title, cfg, steps, progress, setTopic,
   const clock = new Date(now).toLocaleTimeString("pt-BR", { timeZone: "America/Rio_Branco", hour: "2-digit", minute: "2-digit", second: "2-digit" });
   const weekday = new Date(`${dateKey}T12:00:00Z`).toLocaleDateString("pt-BR", { weekday: "long", day: "2-digit", month: "long", timeZone: "UTC" });
   const next = steps[run.i + 1];
-  const link = step ? stepLink(step) : null;
+  const link = step && step.kind !== "teoria" ? stepLink(step) : null;
+  const theory = step?.kind === "teoria" ? theoryOf(step.nome, step.topic ?? step.nome) : null;
   const dc = step?.discId ? discColor(cfg, step.discId) : null;
 
   const reset = () => { setRun(initial(steps)); setLogging(false); };
@@ -197,6 +200,17 @@ export function DayRun({ planId, dateKey, title, cfg, steps, progress, setTopic,
                 <div className="min-w-0 flex-1 space-y-3">
                   <p className="text-sm leading-relaxed text-muted-foreground">{meta.guide}</p>
                   {step.topic && <p className={cn("rounded-lg border-l-4 bg-muted/50 p-3 text-sm font-semibold", dc?.border)}>🎯 {step.topic}</p>}
+                  {theory && (
+                    <div className="space-y-1.5">
+                      <Link to={theory.to as never} params={theory.params as never} search={theory.search as never}
+                        className={cn("inline-flex items-center gap-2 rounded-lg bg-gradient-to-r px-4 py-2 text-sm font-bold text-white shadow", meta.bg)}>
+                        <ExternalLink className="h-4 w-4" /> {theory.direct ? "Abrir o material deste assunto" : "Procurar a teoria deste assunto"}
+                      </Link>
+                      <p className="text-xs text-muted-foreground">
+                        {theory.direct ? `📌 ${theory.label}` : "Sem material específico: abre a Biblioteca já pesquisando o assunto."} Lá você tem o botão <b>Voltar ao painel do dia</b>; o cronômetro continua.
+                      </p>
+                    </div>
+                  )}
                   {link && (
                     <Link to={link.to as never} search={link.search as never} target="_blank" rel="noreferrer"
                       className={cn("inline-flex items-center gap-2 rounded-lg bg-gradient-to-r px-4 py-2 text-sm font-bold text-white shadow", meta.bg)}>

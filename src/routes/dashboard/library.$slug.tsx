@@ -21,6 +21,7 @@ import { StudyPractice } from "@/components/library/StudyPractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { Button } from "@/components/ui/button";
+import { BackToPlan } from "@/components/cronograma/BackToPlan";
 import { Skeleton } from "@/components/ui/skeleton";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
 import { useMediaCatalog } from "@/lib/mediaStore";
@@ -32,10 +33,17 @@ import {
   useStudyMaterialList,
 } from "@/lib/studyMaterials";
 
-export const Route = createFileRoute("/dashboard/library/$slug")({ component: MaterialPage });
+export const Route = createFileRoute("/dashboard/library/$slug")({
+  component: MaterialPage,
+  validateSearch: (s: Record<string, unknown>): { back?: string | undefined; tema?: string | undefined } => ({
+    back: typeof s["back"] === "string" ? s["back"] : undefined,
+    tema: typeof s["tema"] === "string" ? s["tema"] : undefined,
+  }),
+});
 
 function MaterialPage() {
   const { slug } = useParams({ from: "/dashboard/library/$slug" });
+  const { back: backToPlan, tema } = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const { data: material, isPending, isError } = useStudyMaterial(slug, signedIn);
@@ -117,6 +125,7 @@ function MaterialPage() {
 
   return (
     <article className="mx-auto max-w-3xl space-y-6 pb-10">
+      <BackToPlan back={backToPlan} topic={tema} />
       {back}
 
       <header className="library-header">

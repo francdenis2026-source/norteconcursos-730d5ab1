@@ -23,10 +23,20 @@ import {
 import { confirmDialog } from "@/lib/confirm";
 import { acreDateKey } from "@/lib/acreTime";
 import { DayRun } from "@/components/cronograma/DayRun";
+import { ContentTab, TheoryButton } from "@/components/cronograma/ContentTab";
+import { useQuery } from "@tanstack/react-query";
+import { useStudyMaterialList } from "@/lib/studyMaterials";
+import { buildTheoryIndex, findTheory, theoryTarget, type TheorySyllabus, type TheoryTarget } from "@/lib/cronogramaTeoria";
 import { buildDaySteps, discColor } from "@/lib/cronogramaDia";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/dashboard/cronograma")({ component: CronogramaPage });
+export const Route = createFileRoute("/dashboard/cronograma")({
+  component: CronogramaPage,
+  validateSearch: (s: Record<string, unknown>): { plano?: string | undefined; painel?: string | undefined } => ({
+    plano: typeof s["plano"] === "string" ? s["plano"] : undefined,
+    painel: typeof s["painel"] === "string" || typeof s["painel"] === "number" ? String(s["painel"]) : undefined,
+  }),
+});
 
 interface Plan {
   id: string;
@@ -62,6 +72,8 @@ function CronogramaPage() {
   const real = !!user && user.id !== "demo-user";
   const [plans, setPlans] = React.useState<Plan[] | null>(null);
   const [openId, setOpenId] = React.useState<string | "new" | null>(null);
+  const { plano, painel } = Route.useSearch();
+  const consumed = React.useRef(false);
 
   const load = React.useCallback(async () => {
     const { data } = await supabase.from("cronograma_plans").select("*").order("updated_at", { ascending: false });
@@ -70,6 +82,13 @@ function CronogramaPage() {
   React.useEffect(() => {
     if (!isLoading && real) void load();
   }, [isLoading, real, load]);
+
+  // voltando da Biblioteca/Edital (?plano=…&painel=1): reabre o plano e o painel do dia uma única vez
+  React.useEffect(() => {
+    if (consumed.current || !plans || !plano) return;
+    consumed.current = true;
+    if (plans.some((p) => p.id === plano)) setOpenId(plano);
+  }, [plans, plano]);
 
   if (isLoading || (real && !plans))
     return <div className="flex justify-center py-16"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Carregando" /></div>;
@@ -84,7 +103,7 @@ function CronogramaPage() {
       {openId === "new" ? (
         <NewPlan userId={user!.id} onBack={() => setOpenId(null)} onCreated={async (id) => { await load(); setOpenId(id); }} />
       ) : open ? (
-        <PlanView key={open.id} plan={open} userId={user!.id} onBack={() => setOpenId(null)}
+        <PlanView key={open.id} plan={open} userId={user!.id} autoRun={painel === "1" && open.id === plano} onBack={() => setOpenId(null)}
           onChange={(p) => setPlans((all) => all!.map((x) => (x.id === p.id ? p : x)))}
           onDeleted={async () => { setOpenId(null); await load(); }} />
       ) : (
@@ -236,12 +255,28 @@ function NewPlan({ userId, onBack, onCreated }: { userId: string; onBack: () => 
   );
 }
 
-function PlanView({ plan, userId, onBack, onChange, onDeleted }: {
-  plan: Plan; userId: string; onBack: () => void; onChange: (p: Plan) => void; onDeleted: () => void;
+function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
+  plan: Plan; userId: string; autoRun: boolean; onBack: () => void; onChange: (p: Plan) => void; onDeleted: () => void;
 }) {
   const [progress, setProgress] = React.useState<Record<string, TopicProgress> | null>(null);
   const [studiedMin, setStudiedMin] = React.useState<number | null>(null);
-  const [running, setRunning] = React.useState(false); // hooks sempre antes de qualquer return antecipado
+  const [running, setRunning] = React.useState(autoRun); // hooks sempre antes de qualquer return antecipado
+  // teoria específica: guias da Biblioteca + assuntos do Edital eletrônico (hooks antes de qualquer return antecipado)
+  const materials = useStudyMaterialList(true);
+  const syllabus = useQuery({
+    queryKey: ["cronograma-syllabus"], staleTime: 10 * 60_000,
+    queryFn: async (): Promise<TheorySyllabus[]> => {
+      const { data, error } = await supabase.from("syllabus_topics").select("id,discipline,topic_text").limit(1000);
+      if (error) throw error;
+      return (data ?? []) as TheorySyllabus[];
+    },
+  });
+  const theoryIndex = React.useMemo(() => buildTheoryIndex(materials.data ?? [], syllabus.data ?? []), [materials.data, syllabus.data]);
+  const backUrl = `/dashboard/cronograma?plano=${plan.id}&painel=1`;
+  const theoryOf = React.useCallback(
+    (nome: string, topic: string) => theoryTarget(findTheory(theoryIndex, nome, topic, 1)[0], topic, backUrl),
+    [theoryIndex, backUrl],
+  );
   const timers = React.useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const cfg = plan.config;
 
@@ -358,12 +393,12 @@ function PlanView({ plan, userId, onBack, onChange, onDeleted }: {
         </div>
         {todaySteps.length > 0 && <Button size="lg" onClick={() => setRunning(true)} className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow"><Play className="mr-2 h-5 w-5" /> Iniciar o dia de estudo</Button>}
       </div>
-      {running && <DayRun planId={plan.id} dateKey={dateKey} title={plan.name} cfg={cfg} steps={todaySteps} progress={progress} setTopic={setTopic} onClose={() => setRunning(false)} />}
+      {running && <DayRun planId={plan.id} dateKey={dateKey} title={plan.name} cfg={cfg} steps={todaySteps} progress={progress} setTopic={setTopic} theoryOf={theoryOf} onClose={() => setRunning(false)} />}
       {next && (
         <div className="flex flex-wrap items-center gap-3 rounded-xl border border-sky-300 bg-gradient-to-r from-sky-50 to-indigo-50 p-3 text-sm dark:from-sky-950/30 dark:to-indigo-950/30">
           <Target className="h-4 w-4 text-sky-600" />
           <span className="min-w-0 flex-1"><b>Próximo passo:</b> {next.d.nome} — {next.t.t}</span>
-          <ToolLinks nome={next.d.nome} />
+          <ToolLinks nome={next.d.nome} theory={theoryOf(next.d.nome, next.t.t)} />
         </div>
       )}
       <Tabs defaultValue="semana">
@@ -380,7 +415,7 @@ function PlanView({ plan, userId, onBack, onChange, onDeleted }: {
                     <span className={cn("absolute inset-y-0 left-0 w-1.5", discColor(cfg, b.discId).bar)} aria-hidden="true" />
                     <span className="w-28 shrink-0 font-mono text-xs text-muted-foreground">{b.start} – {b.end}</span>
                     <span className="min-w-0 flex-1 font-semibold">{b.nome}{b.first && <Badge className="ml-2 bg-amber-400 text-amber-950 hover:bg-amber-400">1ª vez</Badge>}</span>
-                    <ToolLinks nome={b.nome} />
+                    <ToolLinks nome={b.nome} theory={(() => { const nt = cfg.discs.find((d) => d.id === b.discId)?.topicos.find((t) => !topicDone(progress[t.id])); return nt ? theoryOf(b.nome, nt.t) : undefined; })()} />
                   </div>
                 ))}
               </CardContent>
@@ -388,45 +423,8 @@ function PlanView({ plan, userId, onBack, onChange, onDeleted }: {
           ))}
         </TabsContent>
 
-        <TabsContent value="conteudo" className="space-y-3">
-          {all.map(({ d, s }) => {
-            const acc = accuracy(s);
-            return (
-              <details key={d.id} className={cn("overflow-hidden rounded-xl border border-l-4 bg-card", discColor(cfg, d.id).border)}>
-                <summary className="flex cursor-pointer flex-wrap items-center gap-2 p-3">
-                  <span className={cn("rounded-full px-3 py-1 text-sm font-bold", discColor(cfg, d.id).chip)}>{d.nome}</span>
-                  <span className="min-w-24 flex-1"><span className="block h-1.5 overflow-hidden rounded-full bg-muted"><span className={cn("block h-full rounded-full", discColor(cfg, d.id).bar)} style={{ width: `${s.total ? (100 * s.done) / s.total : 0}%` }} /></span></span>
-                  <Badge className={d.peso === 2 ? "bg-orange-500 hover:bg-orange-500" : ""} variant={d.peso === 2 ? "default" : "secondary"}>Peso {d.peso}</Badge>
-                  <span className="text-xs text-muted-foreground">{s.done}/{s.total} · {acc === null ? "sem questões" : `${acc}% de acertos`}</span>
-                </summary>
-                <div className="space-y-2 border-t p-3">
-                  <ToolLinks nome={d.nome} />
-                  {d.topicos.map((t, i) => {
-                    const p = progress[t.id] ?? EMPTY_PROGRESS;
-                    const a = accuracy(p);
-                    const ck = (label: string, key: keyof TopicProgress) => (
-                      <label className="flex items-center gap-1 text-xs"><Checkbox checked={!!p[key]} onCheckedChange={(v) => setTopic(t.id, { [key]: !!v })} />{label}</label>
-                    );
-                    return (
-                      <div key={t.id} className={cn("rounded-lg border p-2 text-sm", topicDone(p) && "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/20")}>
-                        <p><span className="mr-1 text-muted-foreground">{i + 1}.</span>{t.t}</p>
-                        <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2">
-                          <span className="flex gap-3">{ck("Vídeo", "video")}{ck("PDF", "pdf")}{ck("Podcast", "podcast")}</span>
-                          <span className="flex items-center gap-1 text-xs">Questões
-                            <Input aria-label="Quantidade de questões" type="number" min={0} className="h-7 w-16" value={p.qtde || ""} onChange={(e) => setTopic(t.id, { qtde: Number(e.target.value) })} />
-                            acertos
-                            <Input aria-label="Acertos" type="number" min={0} className="h-7 w-16" value={p.acertos || ""} onChange={(e) => setTopic(t.id, { acertos: Number(e.target.value) })} />
-                            <b className="w-10 tabular-nums">{a === null ? "—" : `${a}%`}</b>
-                          </span>
-                          <span className="flex gap-3 text-xs"><span className="text-muted-foreground">Revisão:</span>{ck("Aula/PDF", "revPdf")}{ck("Questões", "revQuestoes")}</span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </details>
-            );
-          })}
+        <TabsContent value="conteudo">
+          <ContentTab cfg={cfg} progress={progress} setTopic={setTopic} theoryOf={theoryOf} />
         </TabsContent>
 
         <TabsContent value="ajustes" className="space-y-4">
@@ -527,11 +525,11 @@ function Stat({ label, value, sub }: { label: string; value: string; sub: string
 }
 
 /** Atalhos para as ferramentas da plataforma já filtradas pela disciplina. */
-function ToolLinks({ nome }: { nome: string }) {
+function ToolLinks({ nome, theory }: { nome: string; theory?: TheoryTarget | undefined }) {
   const cls = "inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-semibold hover:bg-primary hover:text-primary-foreground";
   return (
     <span className="flex flex-wrap gap-1.5">
-      <Link to="/dashboard/library" className={cls}><BookOpen className="h-3 w-3" />Teoria</Link>
+      {theory ? <TheoryButton target={theory} /> : <Link to="/dashboard/library" className={cls}><BookOpen className="h-3 w-3" />Teoria</Link>}
       <Link to="/dashboard/question-trainer" search={{ area: nome, go: "1" }} className={cls}><Target className="h-3 w-3" />Questões</Link>
       <Link to="/dashboard/flashcards" search={{ subject: nome }} className={cls}><Layers className="h-3 w-3" />Flashcards</Link>
       <Link to="/dashboard/media" className={cls}><Mic className="h-3 w-3" />Podcast</Link>

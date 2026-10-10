@@ -20,6 +20,7 @@ import { materialLawSlug } from "@/lib/legalLibrary";
 import { librarySearchText, matchesLibrarySearch, matchingLibraryLaws } from "@/lib/librarySearch";
 import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
 import { LibraryNavigation } from "@/components/library/LibraryNavigation";
+import { BackToPlan } from "@/components/cronograma/BackToPlan";
 import { libraryArea, libraryDiscipline, libraryDisciplines, libraryTone, type LibraryArea } from "@/lib/libraryOrganization";
 import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
 import {
@@ -31,6 +32,10 @@ import {
 
 export const Route = createFileRoute("/dashboard/library/")({
   component: LibraryIndex,
+  validateSearch: (s: Record<string, unknown>): { q?: string | undefined; back?: string | undefined } => ({
+    q: typeof s["q"] === "string" || typeof s["q"] === "number" ? String(s["q"]) : undefined,
+    back: typeof s["back"] === "string" ? s["back"] : undefined,
+  }),
   head: () => ({ meta: [{ title: "Biblioteca de estudo | Norte Concurso" }] }),
 });
 
@@ -38,7 +43,8 @@ function LibraryIndex() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const { data, isPending, isError, refetch } = useStudyMaterialList(signedIn);
-  const [query, setQuery] = useState("");
+  const { q: initialQuery, back } = Route.useSearch();
+  const [query, setQuery] = useState(initialQuery ?? "");
   const [area, setArea] = useState<LibraryArea>("all");
   const [discipline, setDiscipline] = useState<string>("all");
   const [contest, setContest] = useState<string>("all");
@@ -97,6 +103,7 @@ function LibraryIndex() {
 
   return (
     <div className="space-y-6 pb-8">
+      <BackToPlan back={back} topic={initialQuery} />
       <PageHero
         image="study-desk"
         size="lg"
