@@ -40,6 +40,7 @@ import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
 import { MobileHub } from "@/components/landing/MobileHub";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
+import { HeroRadar, ScrollProgress, useHomeFx } from "@/components/landing/fx";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -200,9 +201,11 @@ function Index() {
   const scrolled = useScrolled();
   const [heroReady, setHeroReady] = useState(false);
   useReveal();
+  useHomeFx();
 
   return (
     <div className="lp">
+      <ScrollProgress />
       <header className="lp-header" data-scrolled={scrolled}>
         <div className="lp-container lp-header__bar">
           <Link to="/" aria-label="Norte Concurso — início">
@@ -271,7 +274,9 @@ function Index() {
             <HeroVideo onDone={() => setHeroReady(true)} />
           </div>
           <div className="lp-hero__shade" aria-hidden="true" />
+          <HeroRadar />
           <div className="lp-hero__grid" aria-hidden="true" />
+          <div className="fx-grain" aria-hidden="true" />
           <div className="lp-container lp-hero__body">
             <div className="lp-hero__layout">
               <div className="lp-hero__content">
