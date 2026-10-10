@@ -33,6 +33,7 @@ import { Route as DashboardAdminStudentsRouteImport } from './routes/dashboard/a
 import { Route as DashboardAdminSupportRouteImport } from './routes/dashboard/admin-support'
 import { Route as DashboardAiSolverRouteImport } from './routes/dashboard/ai-solver'
 import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers'
+import { Route as DashboardCronogramaRouteImport } from './routes/dashboard/cronograma'
 import { Route as DashboardEditalRouteImport } from './routes/dashboard/edital'
 import { Route as DashboardEditalRadarRouteImport } from './routes/dashboard/edital-radar'
 import { Route as DashboardEnemRouteImport } from './routes/dashboard/enem'
@@ -187,6 +188,11 @@ const DashboardAiSolverRoute = DashboardAiSolverRouteImport.update({
 const DashboardCareersRoute = DashboardCareersRouteImport.update({
   id: '/careers',
   path: '/careers',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardCronogramaRoute = DashboardCronogramaRouteImport.update({
+  id: '/cronograma',
+  path: '/cronograma',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardEditalRoute = DashboardEditalRouteImport.update({
@@ -386,6 +392,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
+  '/dashboard/cronograma': typeof DashboardCronogramaRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
   '/dashboard/enem': typeof DashboardEnemRoute
@@ -445,6 +452,7 @@ export interface FileRoutesByTo {
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
+  '/dashboard/cronograma': typeof DashboardCronogramaRoute
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
   '/dashboard/enem': typeof DashboardEnemRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
@@ -504,6 +512,7 @@ export interface FileRoutesById {
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/careers': typeof DashboardCareersRoute
+  '/dashboard/cronograma': typeof DashboardCronogramaRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
   '/dashboard/enem': typeof DashboardEnemRoute
@@ -566,6 +575,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
     | '/dashboard/careers'
+    | '/dashboard/cronograma'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
     | '/dashboard/enem'
@@ -625,6 +635,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
     | '/dashboard/careers'
+    | '/dashboard/cronograma'
     | '/dashboard/edital-radar'
     | '/dashboard/enem'
     | '/dashboard/errors'
@@ -683,6 +694,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
     | '/dashboard/careers'
+    | '/dashboard/cronograma'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
     | '/dashboard/enem'
@@ -903,6 +915,13 @@ declare module '@tanstack/react-router' {
       path: '/careers'
       fullPath: '/dashboard/careers'
       preLoaderRoute: typeof DashboardCareersRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/cronograma': {
+      id: '/dashboard/cronograma'
+      path: '/cronograma'
+      fullPath: '/dashboard/cronograma'
+      preLoaderRoute: typeof DashboardCronogramaRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/edital': {
@@ -1186,6 +1205,7 @@ interface DashboardRouteChildren {
   DashboardAdminSupportRoute: typeof DashboardAdminSupportRoute
   DashboardAiSolverRoute: typeof DashboardAiSolverRoute
   DashboardCareersRoute: typeof DashboardCareersRoute
+  DashboardCronogramaRoute: typeof DashboardCronogramaRoute
   DashboardEditalRoute: typeof DashboardEditalRouteWithChildren
   DashboardEditalRadarRoute: typeof DashboardEditalRadarRoute
   DashboardEnemRoute: typeof DashboardEnemRoute
@@ -1231,6 +1251,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminSupportRoute: DashboardAdminSupportRoute,
   DashboardAiSolverRoute: DashboardAiSolverRoute,
   DashboardCareersRoute: DashboardCareersRoute,
+  DashboardCronogramaRoute: DashboardCronogramaRoute,
   DashboardEditalRoute: DashboardEditalRouteWithChildren,
   DashboardEditalRadarRoute: DashboardEditalRadarRoute,
   DashboardEnemRoute: DashboardEnemRoute,
