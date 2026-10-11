@@ -1,0 +1,384 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 04: arts. 101 a 140",
+  "units": {
+    "art-101": {
+      "simples": "Julgada procedente a suspeição, ficam nulos os atos do processo principal, pagando o juiz as custas, no caso de erro inescusável. Rejeitada, evidenciando-se a malícia do excipiente, a este será imposta multa de duzentos mil-réis a dois contos de réis.",
+      "pontos": ["Suspeição procedente: nulidade dos atos do processo principal.", "Juiz paga as custas se houve erro inescusável.", "Suspeição rejeitada com malícia do excipiente: multa."],
+      "atencao": ["Os valores da multa constam em moeda antiga; interessa a lógica da sanção."],
+      "exemplo": "Suspeição reconhecida: os atos praticados pelo juiz suspeito no processo são anulados.",
+      "prova": ["Assertiva que preserva todos os atos do processo principal após a suspeição reconhecida erra: eles ficam nulos."],
+      "termos": [{ "termo": "Excipiente", "significado": "Quem opõe a exceção." }],
+      "remissoes": ["Art. 100"]
+    },
+    "art-102": {
+      "simples": "Quando a parte contrária reconhecer a procedência da arguição, poderá ser sustado, a seu requerimento, o processo principal, até que se julgue o incidente da suspeição.",
+      "pontos": ["Parte contrária reconhece a suspeição.", "Processo principal pode ser sustado a requerimento até o julgamento do incidente."],
+      "atencao": ["A suspensão depende de requerimento."],
+      "exemplo": "A acusação concorda com a suspeição do juiz e pede a suspensão do processo principal.",
+      "prova": ["Assertiva que determina a suspensão automática do processo principal com o reconhecimento da parte contrária erra: depende de requerimento."],
+      "termos": [],
+      "remissoes": ["Art. 100", "Art. 101"]
+    },
+    "art-103": {
+      "simples": "No Supremo Tribunal Federal e nos Tribunais de Apelação, o juiz que se julgar suspeito declarará nos autos e, se for revisor, passará o feito ao substituto na ordem de precedência, ou, se for relator, apresentará os autos em mesa para nova distribuição. O juiz que não for relator nem revisor declara a suspeição verbalmente na sessão, registrando-se em ata. Se o presidente do tribunal se der por suspeito, caberá ao substituto designar dia para o julgamento e presidi-lo. Quanto à arguição pela parte, observam-se os arts. 98 a 101. Não reconhecida, a suspeição será julgada pelo tribunal pleno, funcionando como relator o presidente. Se o recusado for o presidente, o relator será o vice-presidente.",
+      "pontos": ["Suspeição de membro de tribunal: declaração nos autos.", "Revisor: passa ao substituto; relator: nova distribuição.", "Quem não é relator nem revisor declara verbalmente em ata.", "Presidente suspeito: o substituto preside o julgamento.", "Suspeição não reconhecida: tribunal pleno, relator o presidente.", "Presidente recusado: relator o vice-presidente."],
+      "atencao": ["Procedimento de suspeição nos tribunais."],
+      "exemplo": "Desembargador relator se declara suspeito e os autos são redistribuídos.",
+      "prova": ["Assertiva que mantém a relatoria com o juiz suspeito erra: os autos são redistribuídos."],
+      "termos": [],
+      "remissoes": ["Art. 98", "Art. 101"]
+    },
+    "art-104": {
+      "simples": "Se for arguida a suspeição do órgão do Ministério Público, o juiz, depois de ouvi-lo, decidirá, sem recurso, podendo antes admitir a produção de provas no prazo de três dias.",
+      "pontos": ["Suspeição do Ministério Público: o juiz ouve o MP e decide.", "Decisão sem recurso.", "Pode admitir provas em três dias."],
+      "atencao": ["Prazo de provas: três dias."],
+      "exemplo": "A defesa argui a suspeição do promotor; o juiz o ouve e decide sem recurso.",
+      "prova": ["Assertiva que admite recurso contra a decisão sobre suspeição do MP erra."],
+      "termos": [],
+      "remissoes": ["Art. 258"]
+    },
+    "art-105": {
+      "simples": "As partes poderão também arguir de suspeitos os peritos, os intérpretes e os serventuários ou funcionários de justiça, decidindo o juiz de plano e sem recurso, à vista da matéria alegada e da prova imediata.",
+      "pontos": ["Suspeição de peritos, intérpretes e serventuários.", "Juiz decide de plano, sem recurso, com prova imediata."],
+      "atencao": ["Decisão sem recurso."],
+      "exemplo": "A defesa argui a suspeição do perito, e o juiz decide de plano.",
+      "prova": ["Assertiva que exige rito formal e recurso contra a decisão sobre suspeição do perito erra."],
+      "termos": [],
+      "remissoes": ["Art. 280"]
+    },
+    "art-106": {
+      "simples": "A suspeição dos jurados deverá ser arguida oralmente, decidindo de plano o presidente do Tribunal do Júri, que a rejeitará se, negada pelo recusado, não for imediatamente comprovada, o que tudo constará da ata.",
+      "pontos": ["Suspeição de jurados é arguida oralmente.", "Presidente do Júri decide de plano.", "Rejeita se negada e não comprovada imediatamente.", "Tudo consta da ata."],
+      "atencao": ["Arguição oral e decisão imediata."],
+      "exemplo": "A defesa argui oralmente a suspeição de um jurado, e o presidente decide na hora.",
+      "prova": ["Assertiva que exige petição escrita para arguir a suspeição de jurados erra: é oral."],
+      "termos": [],
+      "remissoes": ["Art. 448"]
+    },
+    "art-107": {
+      "simples": "Não se poderá opor suspeição às autoridades policiais nos atos do inquérito, mas elas deverão declarar-se suspeitas quando ocorrer motivo legal.",
+      "pontos": ["Não cabe oposição de suspeição à autoridade policial no inquérito.", "A autoridade deve declarar-se suspeita quando houver motivo legal."],
+      "atencao": ["O inquérito é peça informativa: a lei não admite exceção contra o delegado."],
+      "exemplo": "Delegado parente da vítima deve declarar-se suspeito.",
+      "prova": ["Assertiva que admite a oposição formal de suspeição contra o delegado no inquérito erra."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-108": {
+      "simples": "A exceção de incompetência do juízo pode ser oposta, verbalmente ou por escrito, no prazo de defesa. Se, ouvido o Ministério Público, for aceita a declinatória, o feito é remetido ao juízo competente, onde, ratificados os atos anteriores, o processo prossegue. Recusada a incompetência, o juiz continua no feito, fazendo tomar por termo a declinatória, se formulada verbalmente.",
+      "pontos": ["Exceção de incompetência: oral ou escrita, no prazo de defesa.", "Aceita a declinatória: remessa ao juízo competente, com ratificação dos atos.", "Recusada: o juiz continua e toma a declinatória por termo."],
+      "atencao": ["Prazo: o de defesa.", "A incompetência absoluta pode ser declarada a qualquer tempo."],
+      "exemplo": "A defesa opõe, na resposta à acusação, exceção de incompetência territorial.",
+      "prova": ["Assertiva que exige forma escrita para a exceção de incompetência erra: pode ser verbal."],
+      "termos": [{ "termo": "Declinatória", "significado": "Alegação de que o juízo é incompetente." }],
+      "remissoes": ["Art. 109", "Art. 110"]
+    },
+    "art-109": {
+      "simples": "Se em qualquer fase do processo o juiz reconhecer motivo que o torne incompetente, declará-lo-á nos autos, haja ou não alegação da parte, prosseguindo-se na forma do artigo anterior.",
+      "pontos": ["Juiz reconhece incompetência em qualquer fase.", "Declara nos autos, com ou sem alegação da parte."],
+      "atencao": ["Conhecimento de ofício da incompetência."],
+      "exemplo": "Juiz percebe que o crime é da Justiça Federal e declina da competência.",
+      "prova": ["Assertiva que exige alegação da parte para o juiz reconhecer a incompetência erra."],
+      "termos": [],
+      "remissoes": ["Art. 108"]
+    },
+    "art-110": {
+      "simples": "Nas exceções de litispendência, ilegitimidade de parte e coisa julgada, observa-se, no que for aplicável, o disposto sobre a exceção de incompetência do juízo. Se a parte tiver de opor mais de uma dessas exceções, deve fazê-lo numa só petição ou articulado. A exceção de coisa julgada somente pode ser oposta em relação ao fato principal, que tiver sido objeto da sentença.",
+      "pontos": ["Litispendência, ilegitimidade de parte e coisa julgada seguem o rito da incompetência.", "Várias exceções: numa só petição.", "Coisa julgada: só em relação ao fato principal objeto da sentença."],
+      "atencao": ["Coisa julgada refere-se ao FATO principal."],
+      "exemplo": "O réu opõe numa só petição as exceções de litispendência e coisa julgada.",
+      "prova": ["Assertiva que exige petições separadas para cada exceção erra."],
+      "termos": [],
+      "remissoes": ["Art. 108"]
+    },
+    "art-111": {
+      "simples": "As exceções serão processadas em autos apartados e não suspenderão, em regra, o andamento da ação penal.",
+      "pontos": ["Exceções em autos apartados.", "Em regra, não suspendem a ação penal."],
+      "atencao": ["A regra é a não suspensão."],
+      "exemplo": "A exceção de suspeição tramita em apartado, e o processo principal segue.",
+      "prova": ["Assertiva que suspende sempre a ação penal durante o processamento de exceções erra."],
+      "termos": [],
+      "remissoes": ["Art. 102"]
+    },
+    "art-112": {
+      "simples": "O juiz, o órgão do Ministério Público, os serventuários ou funcionários de justiça e os peritos ou intérpretes devem abster-se de servir no processo quando houver incompatibilidade ou impedimento legal, que declararão nos autos. Se não se der a abstenção, a incompatibilidade ou impedimento pode ser arguido pelas partes, seguindo-se o processo estabelecido para a exceção de suspeição.",
+      "pontos": ["Dever de abstenção diante de incompatibilidade ou impedimento legal.", "Declaração nos autos.", "Sem abstenção: arguição pelas partes pelo rito da suspeição."],
+      "atencao": ["Impedimento e incompatibilidade seguem o rito da suspeição."],
+      "exemplo": "O promotor impedido deve declarar o impedimento e deixar o processo.",
+      "prova": ["Assertiva que cria rito distinto da suspeição para o impedimento erra: segue o da suspeição."],
+      "termos": [],
+      "remissoes": ["Art. 252", "Art. 253"]
+    },
+    "art-113": {
+      "simples": "As questões atinentes à competência resolvem-se não só pela exceção própria, como também pelo conflito positivo ou negativo de jurisdição.",
+      "pontos": ["Competência pode ser discutida por exceção.", "Também por conflito positivo ou negativo de jurisdição."],
+      "atencao": ["Duas vias: exceção e conflito."],
+      "exemplo": "Dois juízes se consideram competentes para o mesmo fato: conflito positivo.",
+      "prova": ["Assertiva que restringe a discussão de competência à exceção erra: cabe também conflito."],
+      "termos": [],
+      "remissoes": ["Art. 114"]
+    },
+    "art-114": {
+      "simples": "Haverá conflito de jurisdição quando duas ou mais autoridades judiciárias se considerarem competentes ou incompetentes para conhecer do mesmo fato criminoso, ou quando surgir controvérsia entre elas sobre unidade de juízo, junção ou separação de processos.",
+      "pontos": ["Conflito positivo: ambos se consideram competentes.", "Conflito negativo: ambos se consideram incompetentes.", "Controvérsia sobre unidade de juízo, junção ou separação de processos."],
+      "atencao": ["Conflito pode ser positivo ou negativo."],
+      "exemplo": "Dois juízes declinam da competência para o mesmo crime: conflito negativo.",
+      "prova": ["Assertiva que admite conflito de competência apenas quando ambos se declaram competentes erra."],
+      "termos": [],
+      "remissoes": ["Art. 115"]
+    },
+    "art-115": {
+      "simples": "O conflito poderá ser suscitado pela parte interessada, pelos órgãos do Ministério Público junto a qualquer dos juízos em dissídio, ou por qualquer dos juízes ou tribunais em causa.",
+      "pontos": ["Parte interessada.", "Ministério Público junto a qualquer dos juízos.", "Qualquer dos juízes ou tribunais em causa."],
+      "atencao": ["Três legitimados."],
+      "exemplo": "O juiz suscita conflito de competência com outro juízo.",
+      "prova": ["Assertiva que nega legitimidade ao Ministério Público para suscitar o conflito erra."],
+      "termos": [],
+      "remissoes": ["Art. 116"]
+    },
+    "art-116": {
+      "simples": "Os juízes e tribunais, sob a forma de representação, e a parte interessada, sob a de requerimento, darão parte escrita e circunstanciada do conflito, perante o tribunal competente, expondo os fundamentos e juntando os documentos comprobatórios. Quando negativo o conflito, juízes e tribunais podem suscitá-lo nos próprios autos. Se positivo, o relator pode determinar imediatamente que se suspenda o andamento do processo. O relator requisita informações às autoridades em conflito, no prazo marcado. Recebidas as informações e ouvido o procurador-geral, o conflito é decidido na primeira sessão, salvo diligência. Proferida a decisão, as cópias necessárias são remetidas às autoridades envolvidas.",
+      "pontos": ["Juízes: representação; parte: requerimento; ambos por escrito e circunstanciados.", "Conflito negativo: pode ser suscitado nos próprios autos.", "Conflito positivo: relator pode suspender o processo.", "Informações das autoridades e parecer do procurador-geral.", "Decisão na primeira sessão."],
+      "atencao": ["Juiz suscita por REPRESENTAÇÃO; parte, por REQUERIMENTO."],
+      "exemplo": "Juiz representa ao tribunal para decidir o conflito negativo.",
+      "prova": ["Assertiva que exige que a parte suscite conflito por representação erra: é requerimento."],
+      "termos": [],
+      "remissoes": ["Art. 115", "Art. 117"]
+    },
+    "art-117": {
+      "simples": "O Supremo Tribunal Federal, mediante avocatória, restabelecerá a sua jurisdição sempre que exercida por qualquer dos juízes ou tribunais inferiores.",
+      "pontos": ["Avocatória do STF para restabelecer sua jurisdição usurpada."],
+      "atencao": ["Instituto raro; hoje o meio usual é a reclamação ao STF."],
+      "exemplo": "Juiz inferior julga causa de competência do STF: a avocatória restabelece a jurisdição.",
+      "prova": ["Assertiva que atribui a avocatória ao Superior Tribunal de Justiça erra: o artigo menciona o STF."],
+      "termos": [],
+      "remissoes": ["Art. 116"]
+    },
+    "art-118": {
+      "simples": "Antes de transitar em julgado a sentença final, as coisas apreendidas não poderão ser restituídas enquanto interessarem ao processo.",
+      "pontos": ["Coisas apreendidas não são restituídas antes do trânsito, enquanto interessarem ao processo."],
+      "atencao": ["Critério: interesse para o processo."],
+      "exemplo": "A arma usada no crime fica apreendida até o fim do processo.",
+      "prova": ["Assertiva que determina a restituição imediata das coisas apreendidas erra: elas ficam retidas enquanto interessarem ao processo."],
+      "termos": [],
+      "remissoes": ["Art. 119", "Art. 120"]
+    },
+    "art-119": {
+      "simples": "As coisas a que se referem os arts. 74 e 100 do Código Penal não podem ser restituídas, mesmo depois de transitar em julgado a sentença final, salvo se pertencerem ao lesado ou a terceiro de boa-fé.",
+      "pontos": ["Instrumentos e produtos do crime perdidos em favor da União não são restituídos.", "Exceção: pertencentes ao lesado ou a terceiro de boa-fé."],
+      "atencao": ["Efeito da condenação: perda de instrumentos e produto do crime."],
+      "exemplo": "Instrumento ilícito do crime não é devolvido ao autor após a condenação.",
+      "prova": ["Assertiva que determina a restituição ao réu dos instrumentos do crime após o trânsito erra."],
+      "termos": [],
+      "remissoes": ["Art. 118"]
+    },
+    "art-120": {
+      "simples": "A restituição, quando cabível, pode ser ordenada pela autoridade policial ou pelo juiz, mediante termo nos autos, desde que não exista dúvida quanto ao direito do reclamante. Se duvidoso o direito, o pedido autua-se em apartado, com prazo de cinco dias para a prova ao requerente, e só o juiz criminal decide. Se as coisas forem apreendidas em poder de terceiro de boa-fé, o incidente é autuado em apartado e só a autoridade judicial o resolve, com intimação do terceiro, em prazo igual e sucessivo, e dois dias para arrazoar. Sempre será ouvido o Ministério Público. Em dúvida sobre o verdadeiro dono, o juiz remete as partes ao juízo cível e ordena o depósito. Coisas facilmente deterioráveis serão avaliadas e levadas a leilão, ou entregues ao terceiro idôneo mediante termo de responsabilidade.",
+      "pontos": ["Sem dúvida sobre o direito: restituição pela autoridade policial ou pelo juiz, mediante termo.", "Direito duvidoso: autuação em apartado e prazo de cinco dias para a prova; só o juiz decide.", "Coisa em poder de terceiro de boa-fé: só a autoridade judicial; prazo de dois dias para arrazoar.", "Ministério Público sempre ouvido.", "Dúvida sobre o dono: remessa ao juízo cível e depósito.", "Coisas deterioráveis: avaliação e leilão ou entrega ao terceiro idôneo."],
+      "atencao": ["A autoridade policial pode restituir apenas quando NÃO há dúvida."],
+      "exemplo": "Veículo apreendido, sem dúvida sobre a propriedade, é restituído mediante termo.",
+      "prova": ["Assertiva que permite à autoridade policial decidir restituição com direito duvidoso erra: só o juiz criminal."],
+      "termos": [],
+      "remissoes": ["Art. 118", "Art. 119"]
+    },
+    "art-121": {
+      "simples": "No caso de apreensão de coisa adquirida com os proventos da infração, aplica-se o disposto no art. 133 e seu parágrafo.",
+      "pontos": ["Bem adquirido com proventos da infração: aplica-se o art. 133 (avaliação e venda em leilão)."],
+      "atencao": ["Remissão ao art. 133."],
+      "exemplo": "Imóvel comprado com dinheiro do crime segue o procedimento de leilão do art. 133.",
+      "prova": ["Assertiva que determina a restituição ao réu da coisa adquirida com os proventos do crime erra."],
+      "termos": [],
+      "remissoes": ["Art. 133"]
+    },
+    "art-122": {
+      "simples": "Sem prejuízo do disposto no art. 120, as coisas apreendidas serão alienadas nos termos do art. 133 do Código. O parágrafo único foi revogado.",
+      "pontos": ["Coisas apreendidas são alienadas nos termos do art. 133.", "Sem prejuízo da restituição do art. 120."],
+      "atencao": ["Redação dada pela Lei nº 13.964, de 2019."],
+      "exemplo": "Bem apreendido sem dono reclamante é alienado em leilão conforme o art. 133.",
+      "prova": ["Assertiva que mantém o parágrafo único do art. 122 em vigor erra: foi revogado."],
+      "termos": [],
+      "remissoes": ["Art. 120", "Art. 133"]
+    },
+    "art-123": {
+      "simples": "Fora dos casos dos artigos anteriores, se dentro do prazo de 90 dias, a contar do trânsito em julgado da sentença final, condenatória ou absolutória, os objetos apreendidos não forem reclamados ou não pertencerem ao réu, serão vendidos em leilão, depositando-se o saldo à disposição do juízo de ausentes.",
+      "pontos": ["Prazo de 90 dias do trânsito em julgado.", "Objetos não reclamados ou que não pertencem ao réu: leilão.", "Saldo depositado à disposição do juízo de ausentes."],
+      "atencao": ["Prazo de 90 dias."],
+      "exemplo": "Objeto não reclamado em 90 dias após o trânsito vai a leilão.",
+      "prova": ["Assertiva que fixa em 30 dias o prazo para reclamar os objetos apreendidos erra: são 90 dias."],
+      "termos": [],
+      "remissoes": ["Art. 133"]
+    },
+    "art-124": {
+      "simples": "Os instrumentos do crime, cuja perda em favor da União for decretada, e as coisas confiscadas nos termos do art. 100 do Código Penal serão inutilizados ou recolhidos a museu criminal, se houver interesse na sua conservação.",
+      "pontos": ["Instrumentos do crime perdidos em favor da União: inutilização ou museu criminal.", "Museu somente se houver interesse na conservação."],
+      "atencao": ["Destino dos instrumentos confiscados."],
+      "exemplo": "Arma confiscada e sem interesse de conservação é inutilizada.",
+      "prova": ["Assertiva que determina a venda em leilão dos instrumentos ilícitos do crime, nos termos do art. 124, erra."],
+      "termos": [],
+      "remissoes": ["Art. 119"]
+    },
+    "art-124-a": {
+      "simples": "Na hipótese de decretação de perdimento de obras de arte ou de outros bens de relevante valor cultural ou artístico, se o crime não tiver vítima determinada, poderá haver destinação dos bens a museus públicos.",
+      "pontos": ["Perdimento de obras de arte ou bens de valor cultural ou artístico.", "Crime sem vítima determinada: destinação possível a museus públicos."],
+      "atencao": ["Incluído pela Lei nº 13.964, de 2019."],
+      "exemplo": "Obra de arte confiscada em crime sem vítima determinada é destinada a museu público.",
+      "prova": ["Assertiva que obriga a destinação a museus em qualquer crime erra: é possibilidade, quando não há vítima determinada."],
+      "termos": [],
+      "remissoes": ["Art. 124"]
+    },
+    "art-125": {
+      "simples": "Caberá o sequestro dos bens imóveis adquiridos pelo indiciado com os proventos da infração, ainda que já tenham sido transferidos a terceiro.",
+      "pontos": ["Sequestro de imóveis adquiridos com proventos do crime.", "Cabe mesmo que transferidos a terceiro."],
+      "atencao": ["Medida assecuratória sobre bens imóveis."],
+      "exemplo": "Imóvel comprado com dinheiro do crime e passado a um parente pode ser sequestrado.",
+      "prova": ["Assertiva que impede o sequestro de imóvel já transferido a terceiro erra."],
+      "termos": [{ "termo": "Sequestro", "significado": "Medida cautelar que retém bens adquiridos com proventos do crime." }],
+      "remissoes": ["Art. 126"]
+    },
+    "art-126": {
+      "simples": "Para a decretação do sequestro, basta a existência de indícios veementes da proveniência ilícita dos bens.",
+      "pontos": ["Basta indício veemente da proveniência ilícita dos bens."],
+      "atencao": ["Exigência menor do que a certeza."],
+      "exemplo": "Há indícios veementes de que o carro foi comprado com dinheiro do crime: cabe o sequestro.",
+      "prova": ["Assertiva que exige prova plena da origem ilícita para o sequestro erra: bastam indícios veementes."],
+      "termos": [],
+      "remissoes": ["Art. 125"]
+    },
+    "art-127": {
+      "simples": "O juiz, de ofício, a requerimento do Ministério Público ou do ofendido, ou mediante representação da autoridade policial, poderá ordenar o sequestro, em qualquer fase do processo ou ainda antes de oferecida a denúncia ou queixa.",
+      "pontos": ["Sequestro ordenado de ofício, por requerimento do MP ou do ofendido, ou por representação policial.", "Em qualquer fase do processo ou antes da denúncia."],
+      "atencao": ["Pode ser decretado antes da denúncia."],
+      "exemplo": "Na fase de inquérito, o juiz sequestra bens por representação do delegado.",
+      "prova": ["Assertiva que exige denúncia já oferecida para decretar o sequestro erra."],
+      "termos": [],
+      "remissoes": ["Art. 125"]
+    },
+    "art-128": {
+      "simples": "Realizado o sequestro, o juiz ordenará a sua inscrição no Registro de Imóveis.",
+      "pontos": ["Sequestro de imóvel: inscrição no Registro de Imóveis."],
+      "atencao": ["Dá publicidade à constrição."],
+      "exemplo": "Depois de sequestrar o imóvel, o juiz determina o registro da medida na matrícula.",
+      "prova": ["Assertiva que dispensa a inscrição do sequestro no Registro de Imóveis erra."],
+      "termos": [],
+      "remissoes": ["Art. 129"]
+    },
+    "art-129": {
+      "simples": "O sequestro autuar-se-á em apartado e admitirá embargos de terceiro.",
+      "pontos": ["Sequestro tramita em autos apartados.", "Admite embargos de terceiro."],
+      "atencao": ["Autos apartados."],
+      "exemplo": "Terceiro de boa-fé opõe embargos contra o sequestro de seu imóvel.",
+      "prova": ["Assertiva que veda embargos de terceiro contra o sequestro erra."],
+      "termos": [],
+      "remissoes": ["Art. 130"]
+    },
+    "art-130": {
+      "simples": "O sequestro poderá ainda ser embargado pelo acusado, sob o fundamento de não terem os bens sido adquiridos com os proventos da infração, e pelo terceiro a quem houverem sido transferidos os bens a título oneroso, sob o fundamento de tê-los adquirido de boa-fé. Não poderá ser pronunciada decisão nesses embargos antes de passar em julgado a sentença condenatória.",
+      "pontos": ["Embargos do acusado: bens não adquiridos com proventos da infração.", "Embargos do terceiro: aquisição onerosa de boa-fé.", "Decisão só depois do trânsito em julgado da sentença condenatória."],
+      "atencao": ["A decisão dos embargos fica DIFERIDA até o trânsito em julgado."],
+      "exemplo": "Terceiro comprador de boa-fé embarga o sequestro, mas a decisão só vem após o trânsito.",
+      "prova": ["Assertiva que permite decidir os embargos antes do trânsito da condenação erra."],
+      "termos": [],
+      "remissoes": ["Art. 129"]
+    },
+    "art-131": {
+      "simples": "O sequestro será levantado se a ação penal não for intentada no prazo de sessenta dias, contado da data em que ficar concluída a diligência; se o terceiro, a quem tiverem sido transferidos os bens, prestar caução que assegure a aplicação do disposto no art. 74, II, b, segunda parte, do Código Penal; ou se for julgada extinta a punibilidade ou absolvido o réu, por sentença transitada em julgado.",
+      "pontos": ["I: ação penal não intentada em sessenta dias da diligência.", "II: terceiro presta caução.", "III: extinção da punibilidade ou absolvição transitada em julgado."],
+      "atencao": ["Prazo de sessenta dias para a ação penal."],
+      "exemplo": "Passados sessenta dias sem ação penal, o sequestro é levantado.",
+      "prova": ["Assertiva que mantém o sequestro após a absolvição transitada em julgado erra."],
+      "termos": [],
+      "remissoes": ["Art. 125"]
+    },
+    "art-132": {
+      "simples": "Procede-se ao sequestro dos bens móveis se, verificadas as condições previstas no art. 126, não for cabível a medida de busca e apreensão regulada no Capítulo XI do Título VII deste Livro.",
+      "pontos": ["Sequestro de bens móveis, quando preenchidas as condições do art. 126.", "Subsidiário à busca e apreensão."],
+      "atencao": ["Subsidiariedade: só se não couber busca e apreensão."],
+      "exemplo": "Bem móvel obtido com proventos do crime e que não comporta busca e apreensão é sequestrado.",
+      "prova": ["Assertiva que torna o sequestro de bens móveis preferencial à busca e apreensão erra: é subsidiário."],
+      "termos": [],
+      "remissoes": ["Art. 126"]
+    },
+    "art-133": {
+      "simples": "Transitada em julgado a sentença condenatória, o juiz, de ofício ou a requerimento do interessado ou do Ministério Público, determinará a avaliação e a venda dos bens em leilão público cujo perdimento tenha sido decretado. Do dinheiro apurado, será recolhido aos cofres públicos o que não couber ao lesado ou a terceiro de boa-fé. O valor apurado deverá ser recolhido ao Fundo Penitenciário Nacional, exceto se houver previsão diversa em lei especial.",
+      "pontos": ["Após o trânsito da condenação: avaliação e leilão dos bens com perdimento decretado.", "Pode ser de ofício ou a requerimento.", "O que não couber ao lesado ou terceiro de boa-fé vai aos cofres públicos.", "Valor ao Fundo Penitenciário Nacional, salvo lei especial."],
+      "atencao": ["Destino: Fundo Penitenciário Nacional."],
+      "exemplo": "Imóvel com perdimento decretado é leiloado e o valor vai ao Fundo Penitenciário Nacional.",
+      "prova": ["Assertiva que destina o valor apurado ao Tesouro estadual erra: vai ao Fundo Penitenciário Nacional, salvo lei especial."],
+      "termos": [],
+      "remissoes": ["Art. 122"]
+    },
+    "art-133-a": {
+      "simples": "O juiz poderá autorizar, constatado o interesse público, a utilização de bem sequestrado, apreendido ou sujeito a qualquer medida assecuratória pelos órgãos de segurança pública do art. 144 da Constituição, do sistema prisional, do sistema socioeducativo, da Força Nacional de Segurança Pública e do Instituto Geral de Perícia, para o desempenho de suas atividades. O órgão participante das ações de investigação ou repressão da infração que ensejou a constrição do bem tem prioridade. Fora dessas hipóteses, demonstrado o interesse público, o juiz pode autorizar o uso pelos demais órgãos públicos. Se o bem for veículo, embarcação ou aeronave, o juiz ordenará à autoridade de trânsito ou ao órgão de registro a expedição de certificado provisório de registro e licenciamento em favor do órgão beneficiário, isento de multas, encargos e tributos anteriores à disponibilização do bem, que serão cobrados do responsável.",
+      "pontos": ["Uso de bem constrito por órgãos de segurança pública, sistema prisional e socioeducativo, Força Nacional e perícia.", "Prioridade do órgão que participou da investigação.", "Demais órgãos públicos: uso autorizado por interesse público.", "Veículos, embarcações e aeronaves: certificado provisório e isenção de encargos anteriores."],
+      "atencao": ["Exige interesse público e autorização judicial."],
+      "exemplo": "Viatura apreendida é cedida à polícia que participou da investigação, com certificado provisório.",
+      "prova": ["Assertiva que dispensa autorização judicial para a utilização do bem apreendido erra."],
+      "termos": [],
+      "remissoes": ["Art. 133"]
+    },
+    "art-134": {
+      "simples": "A hipoteca legal sobre os imóveis do indiciado poderá ser requerida pelo ofendido em qualquer fase do processo, desde que haja certeza da infração e indícios suficientes da autoria.",
+      "pontos": ["Hipoteca legal sobre imóveis do indiciado, requerida pelo ofendido.", "Em qualquer fase do processo.", "Exige certeza da infração e indícios suficientes da autoria."],
+      "atencao": ["Exigência: certeza da infração e indícios suficientes de autoria (diferente do sequestro)."],
+      "exemplo": "Ofendido requer a hipoteca legal sobre imóvel do acusado para garantir a reparação.",
+      "prova": ["Assertiva que admite a hipoteca legal com simples suspeita da infração erra."],
+      "termos": [{ "termo": "Hipoteca legal", "significado": "Garantia sobre imóveis do indiciado para assegurar a reparação do dano." }],
+      "remissoes": ["Art. 135"]
+    },
+    "art-135": {
+      "simples": "Pedida a especialização mediante requerimento, em que a parte estimará o valor da responsabilidade civil e designará e estimará o imóvel ou imóveis que ficarão especialmente hipotecados, o juiz mandará proceder ao arbitramento do valor da responsabilidade e à avaliação dos imóveis. A petição é instruída com as provas da estimação, com a relação dos imóveis do responsável e com os documentos do domínio. O arbitramento e a avaliação são feitos por perito nomeado pelo juiz, onde não houver avaliador judicial. O juiz, ouvidas as partes em dois dias, pode corrigir o arbitramento. Autorizará somente a inscrição da hipoteca dos imóveis necessários à garantia. O valor da responsabilidade será liquidado definitivamente após a condenação, podendo ser requerido novo arbitramento.",
+      "pontos": ["Requerimento estima o valor da responsabilidade civil e indica os imóveis.", "Arbitramento e avaliação por perito.", "Partes ouvidas em dois dias; juiz pode corrigir o valor.", "Hipoteca somente dos imóveis necessários.", "Liquidação definitiva após a condenação."],
+      "atencao": ["Hipoteca limitada aos imóveis necessários à garantia."],
+      "exemplo": "Juiz autoriza a hipoteca de apenas um imóvel, suficiente para garantir o valor arbitrado.",
+      "prova": ["Assertiva que autoriza a hipoteca de todos os imóveis do acusado independentemente do valor erra."],
+      "termos": [],
+      "remissoes": ["Art. 134"]
+    },
+    "art-136": {
+      "simples": "O arresto do imóvel poderá ser decretado de início, revogando-se, porém, se no prazo de 15 dias não for promovido o processo de inscrição da hipoteca legal.",
+      "pontos": ["Arresto do imóvel decretado desde logo.", "Revogado se, em 15 dias, a hipoteca legal não for promovida."],
+      "atencao": ["Prazo de 15 dias."],
+      "exemplo": "Imóvel arrestado cautelarmente: a medida cai se a hipoteca não for requerida em 15 dias.",
+      "prova": ["Assertiva que fixa em 60 dias o prazo para promover a hipoteca legal após o arresto erra: são 15 dias."],
+      "termos": [{ "termo": "Arresto", "significado": "Medida cautelar prévia que garante o bem até a hipoteca legal." }],
+      "remissoes": ["Art. 134"]
+    },
+    "art-137": {
+      "simples": "Se o responsável não possuir bens imóveis ou os possuir de valor insuficiente, poderão ser arrestados bens móveis suscetíveis de penhora, nos termos em que é facultada a hipoteca legal dos imóveis. Se forem coisas fungíveis e facilmente deterioráveis, procede-se na forma do § 5º do art. 120. Das rendas dos bens móveis poderão ser fornecidos recursos arbitrados pelo juiz para a manutenção do indiciado e de sua família.",
+      "pontos": ["Sem imóveis ou com valor insuficiente: arresto de bens móveis penhoráveis.", "Coisas fungíveis e deterioráveis: procedimento do art. 120, §5º.", "Rendas podem manter o indiciado e sua família, conforme arbitramento."],
+      "atencao": ["O juiz pode arbitrar recursos para a subsistência do indiciado e da família."],
+      "exemplo": "Réu sem imóveis tem bens móveis penhoráveis arrestados.",
+      "prova": ["Assertiva que impede o fornecimento de recursos ao indiciado e à família das rendas dos bens arrestados erra."],
+      "termos": [],
+      "remissoes": ["Art. 120", "Art. 136"]
+    },
+    "art-138": {
+      "simples": "O processo de especialização da hipoteca e do arresto correrá em autos apartados.",
+      "pontos": ["Hipoteca e arresto em autos apartados."],
+      "atencao": ["Apartados do processo principal."],
+      "exemplo": "A hipoteca legal tramita em apenso, sem tumultuar a ação penal.",
+      "prova": ["Assertiva que determina a tramitação da hipoteca nos próprios autos da ação penal erra."],
+      "termos": [],
+      "remissoes": ["Art. 135"]
+    },
+    "art-139": {
+      "simples": "O depósito e a administração dos bens arrestados ficarão sujeitos ao regime do processo civil.",
+      "pontos": ["Depósito e administração dos bens arrestados seguem o processo civil."],
+      "atencao": ["Aplicação supletiva do processo civil."],
+      "exemplo": "A administração do bem arrestado segue as regras do depósito do processo civil.",
+      "prova": ["Assertiva que cria regime próprio do processo penal para depósito e administração dos bens arrestados erra."],
+      "termos": [],
+      "remissoes": ["Art. 137"]
+    },
+    "art-140": {
+      "simples": "As garantias do ressarcimento do dano alcançarão também as despesas processuais e as penas pecuniárias, tendo preferência sobre estas a reparação do dano ao ofendido.",
+      "pontos": ["As garantias abrangem despesas processuais e penas pecuniárias.", "A reparação do dano ao ofendido tem preferência."],
+      "atencao": ["Preferência: primeiro a vítima."],
+      "exemplo": "Com patrimônio limitado, a reparação à vítima é satisfeita antes da multa.",
+      "prova": ["Assertiva que dá preferência às penas pecuniárias sobre a reparação do dano erra."],
+      "termos": [],
+      "remissoes": ["Art. 134"]
+    }
+  }
+}

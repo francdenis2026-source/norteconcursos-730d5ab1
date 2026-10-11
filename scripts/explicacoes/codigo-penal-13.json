@@ -1,0 +1,204 @@
+{
+  "course_slug": "codigo-penal",
+  "law": "Código Penal — lote 13: arts. 337-I a 349-A",
+  "units": {
+    "art-337-i": {
+      "simples": "Perturbação de processo licitatório: impedir, perturbar ou fraudar a realização de qualquer ato de processo licitatório. Pena: detenção de 6 meses a 3 anos e multa.",
+      "pontos": ["Impedir, perturbar ou fraudar a realização de qualquer ato do processo licitatório.", "Detenção de 6 meses a 3 anos e multa."],
+      "atencao": ["Abrange QUALQUER ato do processo licitatório."],
+      "exemplo": "Tumultuar a sessão pública da licitação para impedir a abertura das propostas.",
+      "prova": ["Assertiva que restringe o art. 337-I à fase de julgamento das propostas erra: abrange qualquer ato do processo."],
+      "termos": [],
+      "remissoes": ["Art. 335", "Art. 337-F"]
+    },
+    "art-337-j": {
+      "simples": "Violação de sigilo em licitação: devassar o sigilo de proposta apresentada em processo licitatório ou proporcionar a terceiro o ensejo de devassá-lo. Pena: detenção de 2 anos a 3 anos e multa.",
+      "pontos": ["Devassar o sigilo de proposta apresentada em processo licitatório.", "Ou proporcionar a terceiro o ensejo de devassá-lo.", "Detenção de 2 a 3 anos e multa."],
+      "atencao": ["Pena maior que a do art. 326, que tratava da concorrência pública."],
+      "exemplo": "Revelar a um concorrente o valor da proposta de outro licitante.",
+      "prova": ["Assertiva que aplica ao art. 337-J a pena de três meses a um ano erra."],
+      "termos": [],
+      "remissoes": ["Art. 326"]
+    },
+    "art-337-k": {
+      "simples": "Afastamento de licitante: afastar ou tentar afastar licitante por meio de violência, grave ameaça, fraude ou oferecimento de vantagem de qualquer tipo. Pena: reclusão de 3 a 5 anos e multa, além da pena correspondente à violência. Incorre na mesma pena quem se abstém ou desiste de licitar em razão de vantagem oferecida.",
+      "pontos": ["Afastar ou tentar afastar licitante por violência, grave ameaça, fraude ou vantagem.", "Reclusão de 3 a 5 anos e multa, além da pena da violência.", "Parágrafo único: quem se abstém ou desiste de licitar em razão da vantagem."],
+      "atencao": ["Pune também a TENTATIVA de afastar (crime de atentado)."],
+      "exemplo": "Pagar a um concorrente para que desista da licitação.",
+      "prova": ["Assertiva que isenta quem desiste de licitar em razão da vantagem oferecida erra."],
+      "termos": [],
+      "remissoes": ["Art. 335"]
+    },
+    "art-337-l": {
+      "simples": "Fraude em licitação ou contrato: fraudar, em prejuízo da Administração Pública, licitação ou contrato dela decorrente, mediante entrega de mercadoria ou prestação de serviços com qualidade ou quantidade diversas das previstas no edital ou nos instrumentos contratuais; fornecimento, como verdadeira ou perfeita, de mercadoria falsificada, deteriorada, inservível para consumo ou com prazo de validade vencido; entrega de uma mercadoria por outra; alteração da substância, qualidade ou quantidade da mercadoria ou do serviço fornecido; ou qualquer meio fraudulento que torne injustamente mais onerosa para a Administração a proposta ou a execução do contrato. Pena: reclusão de 4 a 8 anos e multa.",
+      "pontos": ["Fraudar licitação ou contrato, em prejuízo da Administração.", "Cinco modalidades (qualidade ou quantidade diversas; mercadoria falsificada ou vencida; entrega de uma por outra; alteração; meio fraudulento que encareça).", "Reclusão de 4 a 8 anos e multa."],
+      "atencao": ["Exige PREJUÍZO à Administração Pública."],
+      "exemplo": "Entregar produto diferente do especificado no contrato.",
+      "prova": ["Assertiva que dispensa o prejuízo à Administração no art. 337-L erra."],
+      "termos": [],
+      "remissoes": ["Art. 337-F"]
+    },
+    "art-337-m": {
+      "simples": "Contratação inidônea: admitir à licitação empresa ou profissional declarado inidôneo. Pena: reclusão de 1 a 3 anos e multa. Celebrar contrato com empresa ou profissional declarado inidôneo: reclusão de 3 a 6 anos e multa. Incide na pena do caput aquele que, declarado inidôneo, venha a participar de licitação, e na pena do §1º aquele que, declarado inidôneo, venha a contratar com a Administração Pública.",
+      "pontos": ["Caput: admitir à licitação empresa ou profissional declarado inidôneo (1 a 3 anos).", "§1º: celebrar contrato com inidôneo (3 a 6 anos).", "§2º: o próprio inidôneo que participa de licitação ou contrata."],
+      "atencao": ["O §2º alcança também o próprio declarado inidôneo."],
+      "exemplo": "Empresa declarada inidônea participa de nova licitação.",
+      "prova": ["Assertiva que pune só o agente público no art. 337-M erra: o §2º alcança o declarado inidôneo."],
+      "termos": [],
+      "remissoes": ["Art. 337-E"]
+    },
+    "art-337-n": {
+      "simples": "Impedimento indevido: obstar, impedir ou dificultar injustamente a inscrição de qualquer interessado nos registros cadastrais ou promover indevidamente a alteração, a suspensão ou o cancelamento de registro do inscrito. Pena: reclusão de 6 meses a 2 anos e multa.",
+      "pontos": ["Obstar, impedir ou dificultar injustamente a inscrição em registros cadastrais.", "Ou promover indevidamente alteração, suspensão ou cancelamento de registro.", "Reclusão de 6 meses a 2 anos e multa."],
+      "atencao": ["Exige que o ato seja injusto ou indevido."],
+      "exemplo": "Servidor cancela, sem motivo legal, o registro cadastral de um fornecedor.",
+      "prova": ["Assertiva que pune qualquer recusa de inscrição, ainda que justa, erra."],
+      "termos": [],
+      "remissoes": ["Art. 337-M"]
+    },
+    "art-337-o": {
+      "simples": "Omissão grave de dado ou de informação por projetista: omitir, modificar ou entregar à Administração Pública levantamento cadastral ou condição de contorno em relevante dissonância com a realidade, em frustração ao caráter competitivo da licitação ou em detrimento da seleção da proposta mais vantajosa, em contratação para a elaboração de projeto básico, projeto executivo ou anteprojeto, em diálogo competitivo ou em procedimento de manifestação de interesse. Pena: reclusão de 6 meses a 3 anos e multa. Condição de contorno: informações e levantamentos suficientes e necessários para a definição da solução de projeto e dos preços pelo licitante, incluídos sondagens, topografia, estudos de demanda e condições ambientais. Se o crime é praticado com o fim de obter benefício, direto ou indireto, próprio ou de outrem, aplica-se em dobro a pena do caput.",
+      "pontos": ["Omitir, modificar ou entregar levantamento cadastral ou condição de contorno em relevante dissonância com a realidade.", "Em contratação de projeto básico, executivo ou anteprojeto, diálogo competitivo ou manifestação de interesse.", "Reclusão de 6 meses a 3 anos e multa.", "§1º: conceito de condição de contorno.", "§2º: fim de benefício próprio ou alheio: pena em dobro."],
+      "atencao": ["A dissonância com a realidade deve ser RELEVANTE.", "O fim de benefício dobra a pena."],
+      "exemplo": "Projetista entrega levantamento topográfico muito diferente da realidade, frustrando a competição.",
+      "prova": ["Assertiva que fixa a pena em dobro para qualquer caso do art. 337-O erra: o dobro depende do fim de benefício."],
+      "termos": [],
+      "remissoes": ["Art. 337-F"]
+    },
+    "art-337-p": {
+      "simples": "Multa nos crimes contra licitações e contratos: a pena de multa cominada aos crimes previstos neste Capítulo seguirá a metodologia de cálculo prevista neste Código e não poderá ser inferior a 2% do valor do contrato licitado ou celebrado com contratação direta.",
+      "pontos": ["Multa segue a metodologia de cálculo do Código Penal.", "Piso: não inferior a 2% do valor do contrato licitado ou celebrado por contratação direta."],
+      "atencao": ["O piso é de 2% do valor do contrato."],
+      "exemplo": "Em fraude a contrato de valor elevado, a multa não pode ficar abaixo de 2% do contrato.",
+      "prova": ["Assertiva que fixa o piso da multa em 5% do contrato erra: é de 2%."],
+      "termos": [],
+      "remissoes": ["Art. 337-E", "Art. 49"]
+    },
+    "art-338": {
+      "simples": "Reingresso de estrangeiro expulso: reingressar no território nacional o estrangeiro que dele foi expulso. Pena: reclusão de um a quatro anos, sem prejuízo de nova expulsão após o cumprimento da pena.",
+      "pontos": ["Estrangeiro expulso reingressa no território nacional.", "Reclusão de um a quatro anos.", "Sem prejuízo de nova expulsão após cumprir a pena."],
+      "atencao": ["Crime próprio de estrangeiro que foi expulso."],
+      "exemplo": "Estrangeiro expulso volta ao Brasil clandestinamente.",
+      "prova": ["Assertiva que aplica o art. 338 a estrangeiro apenas deportado erra: o tipo fala em expulso."],
+      "termos": [],
+      "remissoes": ["Art. 232-A"]
+    },
+    "art-338-a": {
+      "simples": "Descumprimento de medidas protetivas de urgência: descumprir decisão judicial que defere medidas protetivas de urgência. Pena: reclusão de 2 a 5 anos e multa. A configuração do crime independe da competência civil ou criminal do juiz que deferiu as medidas. Na prisão em flagrante, apenas a autoridade judicial pode conceder fiança. O disposto não exclui a aplicação de outras sanções cabíveis.",
+      "pontos": ["Descumprir decisão judicial que defere medidas protetivas de urgência.", "Reclusão de 2 a 5 anos e multa.", "§1º: independe da competência civil ou criminal do juiz.", "§2º: em flagrante, só a autoridade judicial concede fiança.", "§3º: não exclui outras sanções."],
+      "atencao": ["A fiança no flagrante só pode ser concedida pelo JUIZ, não pelo delegado."],
+      "exemplo": "Agressor descumpre decisão que o proíbe de se aproximar da vítima.",
+      "prova": ["Assertiva que permite ao delegado conceder fiança no art. 338-A erra: apenas a autoridade judicial."],
+      "termos": [],
+      "remissoes": ["Lei nº 11.340, de 2006"]
+    },
+    "art-339": {
+      "simples": "Denunciação caluniosa: dar causa à instauração de inquérito policial, de procedimento investigatório criminal, de processo judicial, de processo administrativo disciplinar, de inquérito civil ou de ação de improbidade administrativa contra alguém, imputando-lhe crime, infração ético-disciplinar ou ato ímprobo de que o sabe inocente. Pena: reclusão de dois a oito anos e multa. A pena é aumentada de sexta parte se o agente se serve de anonimato ou de nome suposto. É diminuída de metade se a imputação é de prática de contravenção.",
+      "pontos": ["Dar causa à instauração de procedimento contra alguém que sabe inocente.", "Reclusão de dois a oito anos e multa.", "§1º: anonimato ou nome suposto: aumento de sexta parte.", "§2º: imputação de contravenção: diminuição de metade."],
+      "atencao": ["Exige que o agente SAIBA da inocência da vítima (dolo direto).", "A imputação de contravenção reduz a pena."],
+      "exemplo": "Pessoa acusa falsamente alguém de crime para que seja instaurado inquérito, sabendo que é inocente.",
+      "prova": ["Assertiva que admite dolo eventual na denunciação caluniosa erra: exige o conhecimento da inocência."],
+      "termos": [],
+      "remissoes": ["Art. 138", "Art. 340"]
+    },
+    "art-340": {
+      "simples": "Comunicação falsa de crime ou de contravenção: provocar a ação de autoridade, comunicando-lhe a ocorrência de crime ou de contravenção que sabe não se ter verificado. Pena: detenção de um a seis meses, ou multa.",
+      "pontos": ["Provocar a ação de autoridade comunicando crime ou contravenção que sabe não ter ocorrido.", "Detenção de um a seis meses, ou multa."],
+      "atencao": ["Não há imputação a pessoa determinada (diferença da denunciação caluniosa)."],
+      "exemplo": "Ligar para a polícia informando assalto inexistente.",
+      "prova": ["Assertiva que exige imputação a pessoa determinada no art. 340 erra."],
+      "termos": [],
+      "remissoes": ["Art. 339"]
+    },
+    "art-341": {
+      "simples": "Autoacusação falsa: acusar-se, perante a autoridade, de crime inexistente ou praticado por outrem. Pena: detenção de três meses a dois anos, ou multa.",
+      "pontos": ["Acusar-se de crime inexistente ou praticado por outra pessoa.", "Perante a autoridade.", "Detenção de três meses a dois anos, ou multa."],
+      "atencao": ["Crime de quem assume falsamente a autoria."],
+      "exemplo": "Pessoa se apresenta como autora de crime cometido por seu filho.",
+      "prova": ["Assertiva que aplica o art. 341 à acusação falsa contra terceiro erra: isso seria denunciação caluniosa."],
+      "termos": [],
+      "remissoes": ["Art. 339"]
+    },
+    "art-342": {
+      "simples": "Falso testemunho ou falsa perícia: fazer afirmação falsa, ou negar ou calar a verdade como testemunha, perito, contador, tradutor ou intérprete em processo judicial, ou administrativo, inquérito policial, ou em juízo arbitral. As penas aumentam-se de um sexto a um terço, se o crime é praticado mediante suborno ou com o fim de obter prova destinada a produzir efeito em processo penal, ou em processo civil em que for parte entidade da administração pública direta ou indireta. O fato deixa de ser punível se, antes da sentença no processo em que ocorreu o ilícito, o agente se retrata ou declara a verdade.",
+      "pontos": ["Fazer afirmação falsa, negar ou calar a verdade como testemunha, perito, contador, tradutor ou intérprete.", "Em processo judicial ou administrativo, inquérito policial ou juízo arbitral.", "§1º: aumento de um sexto a um terço (suborno; processo penal; processo civil com entidade da administração).", "§2º: retratação antes da sentença torna o fato não punível."],
+      "atencao": ["Crime PRÓPRIO.", "A retratação até a sentença extingue a punibilidade do fato."],
+      "exemplo": "Testemunha mente em audiência, mas se retrata antes da sentença: fato não punível.",
+      "prova": ["Assertiva que admite a retratação após a sentença, para afastar a punição, erra: deve ser antes da sentença."],
+      "termos": [],
+      "remissoes": ["Art. 343"]
+    },
+    "art-343": {
+      "simples": "Corrupção ativa de testemunha ou perito: dar, oferecer ou prometer dinheiro ou qualquer outra vantagem a testemunha, perito, contador, tradutor ou intérprete, para fazer afirmação falsa, negar ou calar a verdade em depoimento, perícia, cálculos, tradução ou interpretação.",
+      "pontos": ["Dar, oferecer ou prometer dinheiro ou vantagem a testemunha, perito, contador, tradutor ou intérprete.", "Para fazer afirmação falsa, negar ou calar a verdade."],
+      "atencao": ["Quem corrompe a testemunha responde por este artigo; a testemunha, pelo art. 342."],
+      "exemplo": "Oferecer dinheiro a uma testemunha para que minta em juízo.",
+      "prova": ["Assertiva que absorve a corrupção da testemunha pelo falso testemunho erra: são crimes distintos."],
+      "termos": [],
+      "remissoes": ["Art. 342"]
+    },
+    "art-344": {
+      "simples": "Coação no curso do processo: usar de violência ou grave ameaça, com o fim de favorecer interesse próprio ou alheio, contra autoridade, parte, ou qualquer outra pessoa que funciona ou é chamada a intervir em processo judicial, policial ou administrativo, ou em juízo arbitral. Pena: reclusão de um a quatro anos e multa, além da pena correspondente à violência. A pena aumenta-se de 1/3 até a metade se o processo envolver crime contra a dignidade sexual.",
+      "pontos": ["Violência ou grave ameaça para favorecer interesse próprio ou alheio.", "Contra autoridade, parte ou quem intervém no processo.", "Reclusão de um a quatro anos e multa, além da pena da violência.", "Parágrafo único: processo de crime contra a dignidade sexual: aumento de 1/3 até a metade."],
+      "atencao": ["Exige que a coação seja no curso de processo (judicial, policial, administrativo ou arbitral)."],
+      "exemplo": "Ameaçar a testemunha para que altere seu depoimento.",
+      "prova": ["Assertiva que dispensa a violência ou grave ameaça na coação no curso do processo erra."],
+      "termos": [],
+      "remissoes": ["Art. 342"]
+    },
+    "art-345": {
+      "simples": "Exercício arbitrário das próprias razões: fazer justiça pelas próprias mãos, para satisfazer pretensão, embora legítima, salvo quando a lei o permite. Pena: detenção de quinze dias a um mês, ou multa, além da pena correspondente à violência. Se não há emprego de violência, somente se procede mediante queixa.",
+      "pontos": ["Fazer justiça pelas próprias mãos para satisfazer pretensão, ainda que legítima.", "Detenção de quinze dias a um mês, ou multa, além da pena da violência.", "Parágrafo único: sem violência, ação por queixa."],
+      "atencao": ["A pretensão pode ser LEGÍTIMA.", "Sem violência: ação privada."],
+      "exemplo": "Credor invade a casa do devedor e toma um bem para pagar a dívida.",
+      "prova": ["Assertiva que exige pretensão ilegítima no art. 345 erra: o tipo admite pretensão legítima."],
+      "termos": [],
+      "remissoes": ["Art. 346"]
+    },
+    "art-346": {
+      "simples": "Subtração ou dano de coisa própria em poder de terceiro: tirar, suprimir, destruir ou danificar coisa própria, que se acha em poder de terceiro por determinação judicial ou convenção. Pena: detenção de seis meses a dois anos e multa.",
+      "pontos": ["Tirar, suprimir, destruir ou danificar coisa PRÓPRIA.", "Em poder de terceiro por determinação judicial ou convenção.", "Detenção de seis meses a dois anos e multa."],
+      "atencao": ["A coisa é PRÓPRIA do agente, mas está em poder de terceiro por decisão judicial ou contrato."],
+      "exemplo": "Dono retira bem penhorado que está sob guarda judicial de terceiro.",
+      "prova": ["Assertiva que aplica o art. 346 a coisa alheia erra."],
+      "termos": [],
+      "remissoes": ["Art. 345"]
+    },
+    "art-347": {
+      "simples": "Fraude processual: inovar artificiosamente, na pendência de processo civil ou administrativo, o estado de lugar, de coisa ou de pessoa, com o fim de induzir a erro o juiz ou o perito. Pena: detenção de três meses a dois anos e multa. Se a inovação se destina a produzir efeito em processo penal, ainda que não iniciado, as penas aplicam-se em dobro.",
+      "pontos": ["Inovar artificiosamente o estado de lugar, coisa ou pessoa.", "Na pendência de processo civil ou administrativo.", "Fim de induzir a erro o juiz ou o perito.", "Detenção de três meses a dois anos e multa.", "Parágrafo único: efeito em processo penal, ainda que não iniciado: pena em dobro."],
+      "atencao": ["Em processo penal, mesmo que ainda NÃO iniciado, a pena é em dobro."],
+      "exemplo": "Alterar a cena de um crime antes da perícia para induzir o perito a erro.",
+      "prova": ["Assertiva que exige processo penal já iniciado para o dobro da pena erra: vale ainda que não iniciado."],
+      "termos": [],
+      "remissoes": ["Art. 342"]
+    },
+    "art-348": {
+      "simples": "Favorecimento pessoal: auxiliar a subtrair-se à ação de autoridade pública autor de crime a que é cominada pena de reclusão. Pena: detenção de um a seis meses e multa. Se ao crime não é cominada pena de reclusão: detenção de quinze dias a três meses e multa. Se quem presta o auxílio é ascendente, descendente, cônjuge ou irmão do criminoso, fica isento de pena.",
+      "pontos": ["Auxiliar autor de crime a subtrair-se à ação da autoridade.", "Crime com pena de reclusão: detenção de um a seis meses e multa.", "Crime sem pena de reclusão: detenção de quinze dias a três meses e multa.", "§2º: isenção para ascendente, descendente, cônjuge ou irmão."],
+      "atencao": ["A pena depende de o crime auxiliado ter, ou não, pena de reclusão.", "A isenção familiar não alcança companheiro e outros parentes (a doutrina discute)."],
+      "exemplo": "Esconder em sua casa um foragido autor de crime punido com reclusão.",
+      "prova": ["Assertiva que pune o irmão que esconde o criminoso erra: ele fica isento de pena."],
+      "termos": [],
+      "remissoes": ["Art. 349"]
+    },
+    "art-349": {
+      "simples": "Favorecimento real: prestar a criminoso, fora dos casos de coautoria ou de receptação, auxílio destinado a tornar seguro o proveito do crime. Pena: detenção de um a seis meses e multa.",
+      "pontos": ["Prestar auxílio ao criminoso para tornar seguro o proveito do crime.", "Fora dos casos de coautoria ou receptação.", "Detenção de um a seis meses e multa."],
+      "atencao": ["Subsidiário em relação à coautoria e à receptação.", "Auxilia o PROVEITO, e não a pessoa (diferença do art. 348)."],
+      "exemplo": "Guardar o dinheiro do roubo para que o criminoso não seja alcançado.",
+      "prova": ["Assertiva que confunde favorecimento real com pessoal erra: o real auxilia o proveito do crime."],
+      "termos": [],
+      "remissoes": ["Art. 348", "Art. 180"]
+    },
+    "art-349-a": {
+      "simples": "Ingresso de aparelho telefônico em estabelecimento prisional: ingressar, promover, intermediar, auxiliar ou facilitar a entrada de aparelho telefônico de comunicação móvel, de rádio ou similar, sem autorização legal, em estabelecimento prisional. Pena: detenção de 3 meses a 1 ano.",
+      "pontos": ["Ingressar, promover, intermediar, auxiliar ou facilitar a entrada de aparelho telefônico, rádio ou similar.", "Sem autorização legal.", "Em estabelecimento prisional.", "Detenção de 3 meses a 1 ano."],
+      "atencao": ["O art. 319-A pune o agente público que deixa de vedar o acesso do preso."],
+      "exemplo": "Visitante tenta entrar com celular em presídio.",
+      "prova": ["Assertiva que aplica o art. 349-A só a servidores públicos erra: o crime é comum."],
+      "termos": [],
+      "remissoes": ["Art. 319-A"]
+    }
+  }
+}

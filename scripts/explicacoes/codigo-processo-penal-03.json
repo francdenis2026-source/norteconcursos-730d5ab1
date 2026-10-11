@@ -1,0 +1,303 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 03: arts. 68 a 100",
+  "units": {
+    "art-68": {
+      "simples": "Quando o titular do direito à reparação do dano for pobre, a execução da sentença condenatória ou a ação civil será promovida, a seu requerimento, pelo Ministério Público.",
+      "pontos": ["Titular pobre do direito à reparação.", "MP promove, a requerimento, a execução da sentença penal (art. 63) ou a ação civil (art. 64)."],
+      "atencao": ["O STF reconheceu a inconstitucionalidade progressiva: onde houver Defensoria Pública, a legitimidade é dela."],
+      "exemplo": "Vítima pobre, em comarca sem Defensoria, pede ao MP que execute a sentença condenatória.",
+      "prova": ["Assertiva que atribui ao Ministério Público a execução cível do dano para qualquer vítima, mesmo não pobre, erra."],
+      "termos": [],
+      "remissoes": ["Art. 32", "Art. 63", "Art. 64"]
+    },
+    "art-69": {
+      "simples": "Determinam a competência jurisdicional: o lugar da infração; o domicílio ou a residência do réu; a natureza da infração; a distribuição; a conexão ou continência; a prevenção; e a prerrogativa de função.",
+      "pontos": ["Lugar da infração.", "Domicílio ou residência do réu.", "Natureza da infração.", "Distribuição.", "Conexão ou continência.", "Prevenção.", "Prerrogativa de função."],
+      "atencao": ["Rol de critérios de competência; cada um é detalhado nos artigos seguintes."],
+      "exemplo": "O crime ocorrido na comarca A é, em regra, julgado ali, pelo critério do lugar da infração.",
+      "prova": ["Assertiva que exclui a prevenção do rol de critérios de competência erra."],
+      "termos": [],
+      "remissoes": ["Art. 70", "Art. 84"]
+    },
+    "art-70": {
+      "simples": "A competência será, de regra, determinada pelo lugar em que se consumar a infração (teoria do resultado) ou, no caso de tentativa, pelo lugar do último ato de execução. Se a execução começou no território nacional e a infração se consumou fora dele, a competência é do lugar do último ato de execução no Brasil. Se o último ato de execução foi praticado fora do território nacional, é competente o juiz do lugar em que o crime, embora parcialmente, tenha produzido ou devia produzir seu resultado. Quando incerto o limite territorial entre jurisdições, ou quando a infração for praticada nas divisas, a competência firma-se pela prevenção. Nos crimes de estelionato praticados mediante depósito, cheque sem fundos ou com pagamento frustrado, ou transferência de valores, a competência é definida pelo domicílio da vítima; havendo várias vítimas, firma-se pela prevenção.",
+      "pontos": ["Regra: lugar da consumação.", "Tentativa: lugar do último ato de execução.", "§1º e §2º: crimes que cruzam a fronteira.", "§3º: limites incertos ou divisas: prevenção.", "§4º: estelionato por depósito, cheque, transferência: domicílio da vítima; várias vítimas: prevenção."],
+      "atencao": ["O §4º (Lei nº 14.155, de 2021) fixa o domicílio da VÍTIMA para certas fraudes.", "Regra geral: teoria do resultado."],
+      "exemplo": "Estelionato por transferência de valores é julgado no domicílio da vítima.",
+      "prova": ["Assertiva que fixa o domicílio do réu como regra geral de competência erra: a regra é o lugar da consumação."],
+      "termos": [],
+      "remissoes": ["Art. 69", "Art. 71", "Art. 72"]
+    },
+    "art-71": {
+      "simples": "Tratando-se de infração continuada ou permanente, praticada em território de duas ou mais jurisdições, a competência firmar-se-á pela prevenção.",
+      "pontos": ["Crime continuado ou permanente em mais de uma jurisdição: prevenção."],
+      "atencao": ["Prevenção: o juiz que primeiro conhece do caso."],
+      "exemplo": "Sequestro que se prolonga por dois municípios: competente o juízo prevento.",
+      "prova": ["Assertiva que fixa o domicílio do réu para crimes permanentes em várias jurisdições erra: aplica-se a prevenção."],
+      "termos": [],
+      "remissoes": ["Art. 83"]
+    },
+    "art-72": {
+      "simples": "Não sendo conhecido o lugar da infração, a competência regula-se pelo domicílio ou residência do réu. Se o réu tiver mais de uma residência, firma-se pela prevenção. Se não tiver residência certa ou for ignorado seu paradeiro, é competente o juiz que primeiro tomar conhecimento do fato.",
+      "pontos": ["Lugar da infração desconhecido: domicílio ou residência do réu.", "Mais de uma residência: prevenção.", "Sem residência certa ou paradeiro ignorado: o juiz que primeiro conhecer do fato."],
+      "atencao": ["Critério subsidiário ao lugar da infração."],
+      "exemplo": "Não se sabe onde o crime ocorreu: vale o domicílio do réu.",
+      "prova": ["Assertiva que aplica o domicílio do réu mesmo quando conhecido o lugar da infração, no art. 72, erra."],
+      "termos": [],
+      "remissoes": ["Art. 70", "Art. 83"]
+    },
+    "art-73": {
+      "simples": "Nos casos de exclusiva ação privada, o querelante poderá preferir o foro de domicílio ou da residência do réu, ainda quando conhecido o lugar da infração.",
+      "pontos": ["Ação exclusivamente privada: o querelante pode escolher o foro do domicílio do réu."],
+      "atencao": ["Faculdade do querelante, apenas na ação EXCLUSIVAMENTE privada."],
+      "exemplo": "Em calúnia, o querelante ajuíza a queixa no domicílio do querelado.",
+      "prova": ["Assertiva que estende a escolha do foro à ação pública erra."],
+      "termos": [],
+      "remissoes": ["Art. 70"]
+    },
+    "art-74": {
+      "simples": "A competência pela natureza da infração é regulada pelas leis de organização judiciária, salvo a competência privativa do Tribunal do Júri. Compete ao Tribunal do Júri julgar os crimes dolosos contra a vida: homicídio doloso (simples e qualificado), induzimento, instigação ou auxílio a suicídio, infanticídio e aborto, consumados ou tentados. Se, iniciado o processo perante um juiz, houver desclassificação para infração da competência de outro, o processo é remetido a este, salvo se mais graduada for a jurisdição do primeiro, que terá sua competência prorrogada. Se o juiz da pronúncia desclassificar para infração de competência de juiz singular, aplica-se o art. 410; se a desclassificação for do próprio Júri, o presidente profere a sentença.",
+      "pontos": ["Natureza da infração: leis de organização judiciária, ressalvado o Júri.", "§1º: Júri julga crimes dolosos contra a vida, consumados ou tentados.", "§2º: desclassificação leva o processo ao juízo competente, salvo jurisdição mais graduada.", "§3º: desclassificação na pronúncia (art. 410) ou pelo Júri (presidente sentencia)."],
+      "atencao": ["O homicídio culposo NÃO é do Júri.", "Desclassificação feita pelo Júri: o presidente sentencia (art. 492, §2º)."],
+      "exemplo": "Homicídio doloso tentado é julgado pelo Tribunal do Júri.",
+      "prova": ["Assertiva que atribui ao Júri o homicídio culposo erra: o Júri julga crimes dolosos contra a vida."],
+      "termos": [],
+      "remissoes": ["Art. 410", "Art. 492"]
+    },
+    "art-75": {
+      "simples": "A precedência da distribuição fixa a competência quando, na mesma circunscrição judiciária, houver mais de um juiz igualmente competente. A distribuição realizada para a concessão de fiança, a decretação de prisão preventiva ou qualquer diligência anterior à denúncia ou queixa previne a da ação penal.",
+      "pontos": ["Mais de um juiz igualmente competente: vale a precedência da distribuição.", "Distribuição de fiança, preventiva ou diligência prévia previne a ação penal."],
+      "atencao": ["Há conexão com a prevenção do art. 83."],
+      "exemplo": "A distribuição do pedido de prisão preventiva torna aquele juiz prevento para a futura ação penal.",
+      "prova": ["Assertiva que nega efeito preventivo à distribuição de diligência anterior à denúncia erra."],
+      "termos": [],
+      "remissoes": ["Art. 83"]
+    },
+    "art-76": {
+      "simples": "A competência será determinada pela conexão: se, ocorrendo duas ou mais infrações, houverem sido praticadas ao mesmo tempo por várias pessoas reunidas, ou por várias pessoas em concurso, embora diverso o tempo e o lugar, ou por várias pessoas umas contra as outras (conexão intersubjetiva); se umas houverem sido praticadas para facilitar ou ocultar as outras, ou para conseguir impunidade ou vantagem (conexão consequencial ou teleológica); ou quando a prova de uma infração ou de suas circunstâncias elementares influir na prova de outra (conexão probatória).",
+      "pontos": ["I: conexão intersubjetiva (por simultaneidade, por concurso ou por reciprocidade).", "II: conexão teleológica ou consequencial.", "III: conexão probatória (instrumental)."],
+      "atencao": ["Três espécies de conexão."],
+      "exemplo": "Crime praticado para ocultar outro: conexão consequencial.",
+      "prova": ["Assertiva que limita a conexão à hipótese de várias pessoas reunidas erra."],
+      "termos": [{ "termo": "Conexão", "significado": "Vínculo entre infrações que justifica o julgamento conjunto." }],
+      "remissoes": ["Art. 77", "Art. 78", "Art. 79"]
+    },
+    "art-77": {
+      "simples": "A competência é determinada pela continência quando duas ou mais pessoas forem acusadas pela mesma infração (cumulação subjetiva), ou no caso de infração cometida nas condições previstas nos arts. 51, § 1º, 53, segunda parte, e 54 do Código Penal (concurso formal, erro na execução e resultado diverso do pretendido).",
+      "pontos": ["I: várias pessoas acusadas pela mesma infração.", "II: concurso formal, aberratio ictus e aberratio criminis com resultado duplo."],
+      "atencao": ["Continência: um fato com várias pessoas ou várias consequências de uma só conduta."],
+      "exemplo": "Dois acusados do mesmo roubo: continência por cumulação subjetiva.",
+      "prova": ["Assertiva que identifica a continência com a conexão probatória erra."],
+      "termos": [{ "termo": "Continência", "significado": "Uma causa está contida em outra; o julgamento é conjunto." }],
+      "remissoes": ["Art. 76", "Art. 79"]
+    },
+    "art-78": {
+      "simples": "Na determinação da competência por conexão ou continência, observam-se as seguintes regras: no concurso entre a competência do júri e a de outro órgão da jurisdição comum, prevalece o júri, salvo os casos de homicídios cometidos por membros de organizações criminosas ultraviolentas, grupo paramilitar ou milícia privada, ou sua tentativa; no concurso de jurisdições da mesma categoria, preponderará a do lugar da infração à qual for cominada a pena mais grave, prevalecerá a do lugar com maior número de infrações se as penas forem de igual gravidade, e firmar-se-á a prevenção nos demais casos; no concurso de jurisdições de diversas categorias, predomina a de maior graduação; e no concurso entre a jurisdição comum e a especial, prevalece esta.",
+      "pontos": ["I: júri prevalece sobre outros órgãos da jurisdição comum (com exceção para organizações ultraviolentas, grupo paramilitar ou milícia).", "II, a: pena mais grave.", "II, b: maior número de infrações, se penas iguais.", "II, c: prevenção nos demais casos.", "III: maior graduação.", "IV: jurisdição especial prevalece sobre a comum."],
+      "atencao": ["Exceção do inciso I incluída pela Lei nº 15.358, de 2026.", "Ordem: júri; mesma categoria (pena, número, prevenção); maior graduação; especial."],
+      "exemplo": "Crime comum conexo a homicídio doloso: prevalece o Tribunal do Júri, em regra.",
+      "prova": ["Assertiva que faz prevalecer a jurisdição comum sobre a especial na conexão erra."],
+      "termos": [],
+      "remissoes": ["Art. 76", "Art. 77", "Art. 83"]
+    },
+    "art-79": {
+      "simples": "A conexão e a continência importam unidade de processo e julgamento, salvo no concurso entre a jurisdição comum e a militar, e no concurso entre a jurisdição comum e a do juízo de menores. Cessa, em qualquer caso, a unidade do processo se, em relação a algum corréu, sobrevier o caso do art. 152 (doença mental superveniente). A unidade do processo não importará a do julgamento se houver corréu foragido que não possa ser julgado à revelia, ou ocorrer a hipótese do art. 461.",
+      "pontos": ["Regra: unidade de processo e julgamento.", "Exceções: jurisdição militar e juízo de menores.", "§1º: cessa se sobrevier doença mental a algum corréu.", "§2º: corréu foragido ou hipótese do art. 461 não impede o julgamento dos demais."],
+      "atencao": ["Exceções clássicas: militar e menores (justiça da infância)."],
+      "exemplo": "Corréu foragido não impede o julgamento dos outros acusados.",
+      "prova": ["Assertiva que obriga a unidade de julgamento entre jurisdição comum e militar erra."],
+      "termos": [],
+      "remissoes": ["Art. 76", "Art. 152", "Art. 461"]
+    },
+    "art-80": {
+      "simples": "É facultativa a separação dos processos quando as infrações tiverem sido praticadas em circunstâncias de tempo ou de lugar diferentes, ou quando, pelo excessivo número de acusados e para não lhes prolongar a prisão provisória, ou por outro motivo relevante, o juiz reputar conveniente a separação.",
+      "pontos": ["Separação facultativa dos processos.", "Hipóteses: tempo ou lugar diferentes; número excessivo de acusados; outro motivo relevante."],
+      "atencao": ["A separação é discricionária do juiz."],
+      "exemplo": "Juiz separa o processo de acusados presos para não alongar a prisão provisória.",
+      "prova": ["Assertiva que torna obrigatória a separação em razão do número de acusados erra: é facultativa."],
+      "termos": [],
+      "remissoes": ["Art. 79"]
+    },
+    "art-81": {
+      "simples": "Verificada a reunião dos processos por conexão ou continência, ainda que no processo da sua competência própria o juiz ou tribunal venha a proferir sentença absolutória ou a desclassificar a infração para outra que não se inclua na sua competência, continuará competente em relação aos demais processos (perpetuação da jurisdição). Reconhecida inicialmente ao júri a competência por conexão ou continência, o juiz que desclassificar a infração, impronunciar ou absolver o acusado de modo a excluir a competência do júri remeterá o processo ao juízo competente.",
+      "pontos": ["Reunidos os processos, o juízo continua competente mesmo com absolvição ou desclassificação.", "Parágrafo único: exclusão da competência do júri leva à remessa ao juízo competente."],
+      "atencao": ["Perpetuação da jurisdição na conexão e continência, com exceção do Júri."],
+      "exemplo": "O juiz absolve do crime de sua competência própria, mas continua julgando os conexos.",
+      "prova": ["Assertiva que determina o declínio da competência após a absolvição pelo crime de competência própria erra."],
+      "termos": [],
+      "remissoes": ["Art. 78"]
+    },
+    "art-82": {
+      "simples": "Se, não obstante a conexão ou continência, forem instaurados processos diferentes, a autoridade de jurisdição prevalente deve avocar os processos que corram perante os outros juízes, salvo se já estiverem com sentença definitiva. Neste caso, a unidade dos processos só se dará, ulteriormente, para efeito de soma ou unificação das penas.",
+      "pontos": ["Processos separados apesar da conexão: o juízo prevalente avoca os demais.", "Exceção: processo já com sentença definitiva.", "Nesse caso, a unidade só serve à soma ou unificação das penas."],
+      "atencao": ["Súmula 235 do STJ: a conexão não determina a reunião de processos se um deles já foi julgado."],
+      "exemplo": "Dois processos conexos tramitam separados: o do juízo prevalente avoca o outro, se ainda não sentenciado.",
+      "prova": ["Assertiva que determina a avocação de processo já com sentença definitiva erra."],
+      "termos": [],
+      "remissoes": ["Art. 78"]
+    },
+    "art-83": {
+      "simples": "Verifica-se a competência por prevenção toda vez que, concorrendo dois ou mais juízes igualmente competentes ou com jurisdição cumulativa, um deles tiver antecedido aos outros na prática de algum ato do processo ou de medida a este relativa, ainda que anterior ao oferecimento da denúncia ou da queixa.",
+      "pontos": ["Prevenção: o juiz que primeiro pratica ato do processo ou medida a ele relativa.", "Vale mesmo para ato anterior à denúncia ou queixa."],
+      "atencao": ["Remissões do artigo: arts. 70, §3º, 71, 72, §2º, e 78, II, c."],
+      "exemplo": "O juiz que decretou a quebra de sigilo na investigação previne a competência para a ação.",
+      "prova": ["Assertiva que restringe a prevenção a atos posteriores à denúncia erra."],
+      "termos": [{ "termo": "Prevenção", "significado": "Fixação da competência pelo juiz que primeiro conheceu do caso." }],
+      "remissoes": ["Art. 75"]
+    },
+    "art-84": {
+      "simples": "A competência pela prerrogativa de função é do Supremo Tribunal Federal, do Superior Tribunal de Justiça, dos Tribunais Regionais Federais e dos Tribunais de Justiça dos Estados e do Distrito Federal, relativamente às pessoas que devam responder perante eles por crimes comuns e de responsabilidade. Os parágrafos foram objeto de ação direta de inconstitucionalidade.",
+      "pontos": ["Prerrogativa de função: STF, STJ, TRFs e TJs.", "Aplica-se a quem responde perante esses tribunais por crimes comuns e de responsabilidade."],
+      "atencao": ["Os §§1º e 2º foram declarados inconstitucionais no STF (ADIN)."],
+      "exemplo": "Governador de Estado é julgado, nos crimes comuns, pelo Superior Tribunal de Justiça.",
+      "prova": ["Assertiva que afasta o STF do rol de tribunais com competência por prerrogativa de função erra."],
+      "termos": [{ "termo": "Foro por prerrogativa de função", "significado": "Competência de tribunal em razão do cargo do acusado." }],
+      "remissoes": ["Art. 86", "Art. 87"]
+    },
+    "art-85": {
+      "simples": "Nos processos por crime contra a honra em que forem querelantes as pessoas sujeitas à jurisdição do Supremo Tribunal Federal e dos Tribunais de Apelação, a eles caberá o julgamento quando oposta e admitida a exceção da verdade.",
+      "pontos": ["Crime contra a honra com querelante de foro especial.", "Exceção da verdade oposta e admitida desloca o julgamento ao tribunal competente."],
+      "atencao": ["Relaciona-se com a exceção da verdade (arts. 138, §3º e 139 do Código Penal)."],
+      "exemplo": "Querelado em calúnia contra autoridade com foro opõe exceção da verdade, e o tribunal a julga.",
+      "prova": ["Assertiva que desloca a competência sem a admissão da exceção da verdade erra."],
+      "termos": [{ "termo": "Exceção da verdade", "significado": "Defesa em que o querelado tenta provar a veracidade da imputação." }],
+      "remissoes": ["Art. 84"]
+    },
+    "art-86": {
+      "simples": "Ao Supremo Tribunal Federal compete privativamente processar e julgar seus ministros nos crimes comuns; os ministros de Estado, salvo nos crimes conexos com os do Presidente da República; e o procurador-geral da República, os desembargadores dos Tribunais de Apelação, os ministros do Tribunal de Contas e os embaixadores e ministros diplomáticos, nos crimes comuns e de responsabilidade.",
+      "pontos": ["Ministros do STF nos crimes comuns.", "Ministros de Estado, salvo crimes conexos com os do Presidente.", "Procurador-geral da República, desembargadores, ministros do Tribunal de Contas e diplomatas, nos crimes comuns e de responsabilidade."],
+      "atencao": ["Texto anterior à Constituição atual: a competência vigente é a prevista na Constituição."],
+      "exemplo": "A competência atual do STF segue o art. 102 da Constituição.",
+      "prova": ["Assertiva que aplica literalmente o art. 86 sem observar a Constituição atual erra."],
+      "termos": [],
+      "remissoes": ["Art. 84"]
+    },
+    "art-87": {
+      "simples": "Compete, originariamente, aos Tribunais de Apelação o julgamento dos governadores ou interventores nos Estados ou Territórios, do prefeito do Distrito Federal, seus respectivos secretários e chefes de Polícia, juízes de instância inferior e órgãos do Ministério Público.",
+      "pontos": ["Tribunais de Apelação julgam originariamente governadores, secretários, chefes de Polícia, juízes de instância inferior e membros do Ministério Público."],
+      "atencao": ["Dispositivo histórico: a competência atual é fixada pela Constituição e pelas constituições estaduais."],
+      "exemplo": "Hoje, um juiz estadual é julgado nos crimes comuns pelo Tribunal de Justiça.",
+      "prova": ["Assertiva que aplica o art. 87 sem considerar a Constituição atual erra."],
+      "termos": [],
+      "remissoes": ["Art. 84"]
+    },
+    "art-88": {
+      "simples": "No processo por crimes praticados fora do território brasileiro, será competente o juízo da Capital do Estado onde houver por último residido o acusado. Se este nunca tiver residido no Brasil, será competente o juízo da Capital da República.",
+      "pontos": ["Crime no exterior: Capital do Estado da última residência do acusado.", "Se nunca residiu no Brasil: juízo da Capital da República."],
+      "atencao": ["Aplicável quando a lei brasileira alcança crime cometido no exterior (extraterritorialidade)."],
+      "exemplo": "Brasileiro que cometeu crime no exterior, com última residência em Rio Branco, é julgado na Capital do Estado.",
+      "prova": ["Assertiva que fixa o foro no local do crime no exterior erra: é a Capital do Estado da última residência."],
+      "termos": [],
+      "remissoes": ["Art. 7º do Código Penal"]
+    },
+    "art-89": {
+      "simples": "Os crimes cometidos em qualquer embarcação nas águas territoriais da República, ou nos rios e lagos fronteiriços, bem como a bordo de embarcações nacionais em alto-mar, são processados e julgados pela justiça do primeiro porto brasileiro em que tocar a embarcação após o crime ou, quando se afastar do País, pela do último em que houver tocado.",
+      "pontos": ["Crimes em embarcações: justiça do primeiro porto brasileiro em que tocar após o crime.", "Se se afastar do País: justiça do último porto em que tocou."],
+      "atencao": ["Na Justiça Federal, a competência é regulada pela Constituição (crimes a bordo de navios)."],
+      "exemplo": "Crime a bordo de navio nacional em alto-mar: julga-se no primeiro porto brasileiro tocado.",
+      "prova": ["Assertiva que fixa o foro no porto de partida da embarcação erra."],
+      "termos": [],
+      "remissoes": ["Art. 90", "Art. 91"]
+    },
+    "art-90": {
+      "simples": "Os crimes praticados a bordo de aeronave nacional, dentro do espaço aéreo correspondente ao território brasileiro ou ao alto-mar, ou a bordo de aeronave estrangeira dentro do espaço aéreo correspondente ao território nacional, são processados e julgados pela justiça da comarca em cujo território se verificar o pouso após o crime, ou pela da comarca de onde houver partido a aeronave.",
+      "pontos": ["Crime em aeronave: comarca do pouso após o crime ou da partida da aeronave."],
+      "atencao": ["Observa a Constituição quanto à competência federal."],
+      "exemplo": "Crime durante voo: pode ser julgado na comarca do pouso.",
+      "prova": ["Assertiva que fixa só a comarca da partida erra: o pouso também é critério."],
+      "termos": [],
+      "remissoes": ["Art. 89", "Art. 91"]
+    },
+    "art-91": {
+      "simples": "Quando incerta e não se determinar de acordo com as normas estabelecidas nos arts. 89 e 90, a competência se firmará pela prevenção.",
+      "pontos": ["Competência incerta nos casos de embarcação e aeronave: prevenção."],
+      "atencao": ["Critério subsidiário."],
+      "exemplo": "Quando não se determinar o foro pelos arts. 89 e 90, decide a prevenção.",
+      "prova": ["Assertiva que aplica a prevenção antes dos critérios dos arts. 89 e 90 erra."],
+      "termos": [],
+      "remissoes": ["Art. 89", "Art. 90"]
+    },
+    "art-92": {
+      "simples": "Se a decisão sobre a existência da infração depender da solução de controvérsia, que o juiz repute séria e fundada, sobre o estado civil das pessoas, o curso da ação penal ficará suspenso até que no juízo cível a controvérsia seja dirimida por sentença transitada em julgado, sem prejuízo da inquirição das testemunhas e de outras provas urgentes. Se for crime de ação pública, o Ministério Público, quando necessário, promoverá a ação civil ou prosseguirá na que tiver sido iniciada, com a citação dos interessados.",
+      "pontos": ["Questão prejudicial obrigatória: estado civil das pessoas.", "Suspensão da ação penal até a sentença cível transitar em julgado.", "Provas urgentes e oitiva de testemunhas continuam.", "MP promove a ação civil, se necessário."],
+      "atencao": ["Prejudicial OBRIGATÓRIA: controvérsia séria e fundada sobre o estado civil."],
+      "exemplo": "Bigamia: validade do primeiro casamento é questão cível prejudicial.",
+      "prova": ["Assertiva que torna facultativa a suspensão por questão de estado civil erra: é obrigatória, se séria e fundada."],
+      "termos": [{ "termo": "Questão prejudicial", "significado": "Questão de outro ramo que deve ser resolvida antes do mérito penal." }],
+      "remissoes": ["Art. 93", "Art. 94"]
+    },
+    "art-93": {
+      "simples": "Se o reconhecimento da existência da infração penal depender de decisão sobre questão diversa da do artigo anterior, da competência do juízo cível, e se neste houver sido proposta ação para resolvê-la, o juiz criminal pode, desde que a questão seja de difícil solução e não verse sobre direito cuja prova a lei civil limite, suspender o curso do processo, após a inquirição das testemunhas e a realização das outras provas urgentes. O juiz marcará o prazo da suspensão, que poderá ser razoavelmente prorrogado se a demora não for imputável à parte; expirado o prazo sem decisão do juiz cível, o criminal prosseguirá e resolverá toda a matéria. Do despacho que denegar a suspensão não cabe recurso. Suspenso o processo, no crime de ação pública, o MP intervém na causa cível para promover-lhe o rápido andamento.",
+      "pontos": ["Prejudicial FACULTATIVA: questão cível de difícil solução, com ação cível já proposta.", "Suspensão após provas urgentes.", "§1º: prazo marcado, prorrogável; esgotado, o juiz criminal resolve tudo.", "§2º: sem recurso contra a denegação.", "§3º: MP intervém na causa cível."],
+      "atencao": ["Na prejudicial facultativa, a suspensão é discricionária e exige ação cível já proposta."],
+      "exemplo": "Discussão cível sobre a propriedade de um bem pode suspender o processo do crime de furto.",
+      "prova": ["Assertiva que admite recurso contra o despacho que denega a suspensão erra: o §2º veda."],
+      "termos": [],
+      "remissoes": ["Art. 92", "Art. 94"]
+    },
+    "art-94": {
+      "simples": "A suspensão do curso da ação penal, nos casos dos artigos anteriores, será decretada pelo juiz, de ofício ou a requerimento das partes.",
+      "pontos": ["Suspensão por questão prejudicial: decretada de ofício ou a requerimento."],
+      "atencao": ["Vale para os arts. 92 e 93."],
+      "exemplo": "Juiz decreta de ofício a suspensão do processo por questão prejudicial.",
+      "prova": ["Assertiva que exige requerimento das partes para suspender o processo por prejudicial erra."],
+      "termos": [],
+      "remissoes": ["Art. 92", "Art. 93"]
+    },
+    "art-95": {
+      "simples": "Poderão ser opostas as exceções de suspeição, incompetência de juízo, litispendência, ilegitimidade de parte e coisa julgada.",
+      "pontos": ["Suspeição.", "Incompetência de juízo.", "Litispendência.", "Ilegitimidade de parte.", "Coisa julgada."],
+      "atencao": ["Exceções são defesas processuais indiretas; veja o rito nos artigos seguintes."],
+      "exemplo": "Réu processado duas vezes pelo mesmo fato opõe exceção de litispendência.",
+      "prova": ["Assertiva que inclui a exceção de pré-executividade entre as do art. 95 erra."],
+      "termos": [{ "termo": "Litispendência", "significado": "Existência de duas ações idênticas em curso." }],
+      "remissoes": ["Art. 96", "Art. 108"]
+    },
+    "art-96": {
+      "simples": "A arguição de suspeição precederá a qualquer outra, salvo quando fundada em motivo superveniente.",
+      "pontos": ["A suspeição deve ser arguida antes de qualquer outra exceção.", "Exceção: motivo superveniente."],
+      "atencao": ["Antes de qualquer outra."],
+      "exemplo": "A defesa arguiu a suspeição do juiz antes de qualquer outra exceção.",
+      "prova": ["Assertiva que permite arguir a suspeição por último, sem exceção, erra."],
+      "termos": [],
+      "remissoes": ["Art. 95", "Art. 254"]
+    },
+    "art-97": {
+      "simples": "O juiz que espontaneamente afirmar suspeição deverá fazê-lo por escrito, declarando o motivo legal, e remeterá imediatamente o processo ao seu substituto, intimadas as partes.",
+      "pontos": ["Suspeição espontânea do juiz: por escrito.", "Declara o motivo legal.", "Remete o processo ao substituto e intima as partes."],
+      "atencao": ["Cabe ao juiz afirmar espontaneamente."],
+      "exemplo": "Juiz declara-se suspeito por escrito e envia os autos ao substituto.",
+      "prova": ["Assertiva que dispensa a forma escrita na suspeição espontânea erra."],
+      "termos": [],
+      "remissoes": ["Art. 254"]
+    },
+    "art-98": {
+      "simples": "Quando qualquer das partes pretender recusar o juiz, deverá fazê-lo em petição assinada por ela própria ou por procurador com poderes especiais, aduzindo as suas razões acompanhadas de prova documental ou do rol de testemunhas.",
+      "pontos": ["Recusa do juiz por petição assinada pela parte ou procurador com poderes especiais.", "Razões acompanhadas de prova documental ou rol de testemunhas."],
+      "atencao": ["Exige poderes ESPECIAIS do procurador."],
+      "exemplo": "A defesa, com procuração com poderes especiais, recusa o juiz por suspeição.",
+      "prova": ["Assertiva que dispensa poderes especiais na recusa do juiz erra."],
+      "termos": [],
+      "remissoes": ["Art. 254"]
+    },
+    "art-99": {
+      "simples": "Se reconhecer a suspeição, o juiz sustará a marcha do processo, mandará juntar aos autos a petição do recusante com os documentos que a instruam e, por despacho, declarar-se-á suspeito, ordenando a remessa dos autos ao substituto.",
+      "pontos": ["Juiz reconhece a suspeição: suspende o processo.", "Junta a petição do recusante.", "Declara-se suspeito por despacho e remete ao substituto."],
+      "atencao": ["Procedimento do reconhecimento da suspeição pelo próprio juiz."],
+      "exemplo": "Juiz aceita a recusa, sustando o processo e passando os autos ao substituto.",
+      "prova": ["Assertiva que mantém a marcha do processo após o reconhecimento da suspeição erra."],
+      "termos": [],
+      "remissoes": ["Art. 100"]
+    },
+    "art-100": {
+      "simples": "Não aceitando a suspeição, o juiz mandará autuar em apartado a petição, dará sua resposta em três dias, podendo instruí-la e oferecer testemunhas, e determinará a remessa dos autos da exceção, em 24 horas, ao juiz ou tribunal competente para julgá-la. Reconhecida, preliminarmente, a relevância da arguição, o juiz ou tribunal, com citação das partes, marcará dia e hora para a inquirição das testemunhas, seguindo-se o julgamento, independentemente de mais alegações. Se a suspeição for de manifesta improcedência, o juiz ou relator a rejeitará liminarmente.",
+      "pontos": ["Juiz não aceita a suspeição: autua em apartado.", "Resposta em três dias.", "Remessa em 24 horas ao órgão competente para julgar.", "§1º: relevância reconhecida: oitiva de testemunhas e julgamento.", "§2º: manifesta improcedência: rejeição liminar."],
+      "atencao": ["Prazos: três dias para a resposta e 24 horas para a remessa."],
+      "exemplo": "Juiz recusa a suspeição, responde em três dias e remete a exceção ao tribunal.",
+      "prova": ["Assertiva que fixa em cinco dias a resposta do juiz erra: são três dias."],
+      "termos": [],
+      "remissoes": ["Art. 99", "Art. 254"]
+    }
+  }
+}

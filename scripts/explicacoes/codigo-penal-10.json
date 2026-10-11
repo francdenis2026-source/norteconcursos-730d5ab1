@@ -1,0 +1,321 @@
+{
+  "course_slug": "codigo-penal",
+  "law": "Código Penal — lote 10: arts. 245 a 280",
+  "units": {
+    "art-245": {
+      "simples": "Entrega de filho menor a pessoa inidônea: entregar filho menor de 18 anos a pessoa em cuja companhia saiba ou deva saber que o menor fica moral ou materialmente em perigo. Pena: detenção de um a dois anos. Se o agente pratica o delito para obter lucro, ou se o menor é enviado para o exterior: reclusão de um a quatro anos. Incorre na mesma pena quem, embora excluído o perigo, auxilia ato destinado ao envio de menor para o exterior com o fito de lucro.",
+      "pontos": ["Entregar filho menor de 18 anos a pessoa inidônea.", "Detenção de um a dois anos.", "§1º: fim de lucro ou envio ao exterior: reclusão de um a quatro anos.", "§2º: auxiliar o envio de menor ao exterior com fito de lucro, mesmo sem perigo."],
+      "atencao": ["Exige que o agente SAIBA ou DEVA SABER do perigo moral ou material."],
+      "exemplo": "Pai entrega o filho a uma pessoa que sabe explorá-lo.",
+      "prova": ["Assertiva que dispensa que o agente saiba ou deva saber do perigo erra."],
+      "termos": [],
+      "remissoes": ["Art. 244", "Art. 249"]
+    },
+    "art-246": {
+      "simples": "Abandono intelectual: deixar, sem justa causa, de prover à instrução primária de filho em idade escolar. Pena: detenção de quinze dias a um mês, ou multa.",
+      "pontos": ["Deixar de prover a instrução primária de filho em idade escolar.", "Sem justa causa.", "Detenção de quinze dias a um mês, ou multa."],
+      "atencao": ["Exige ausência de justa causa."],
+      "exemplo": "Pai que, podendo, não matricula o filho em idade escolar.",
+      "prova": ["Assertiva que pune o fato mesmo havendo justa causa erra."],
+      "termos": [],
+      "remissoes": ["Art. 244"]
+    },
+    "art-247": {
+      "simples": "Abandono moral: permitir alguém que menor de dezoito anos, sujeito a seu poder ou confiado à sua guarda ou vigilância, frequente casa de jogo ou mal-afamada, ou conviva com pessoa viciosa ou de má vida; frequente espetáculo capaz de pervertê-lo ou de ofender-lhe o pudor; resida ou trabalhe em casa de prostituição; ou mendigue ou sirva a mendigo para excitar a comiseração pública. Pena: detenção de um a três meses, ou multa.",
+      "pontos": ["Permitir que o menor frequente casa de jogo, mal-afamada ou conviva com pessoa viciosa.", "Permitir espetáculo que o perverta ou ofenda o pudor.", "Permitir que resida ou trabalhe em casa de prostituição.", "Permitir que mendigue ou sirva a mendigo.", "Detenção de um a três meses, ou multa."],
+      "atencao": ["O crime é PERMITIR, ou seja, omissão de quem tem poder, guarda ou vigilância."],
+      "exemplo": "Responsável permite que o menor trabalhe em casa de prostituição.",
+      "prova": ["Assertiva que aplica o art. 247 a qualquer pessoa, sem poder, guarda ou vigilância sobre o menor, erra."],
+      "termos": [],
+      "remissoes": ["Art. 218-B"]
+    },
+    "art-248": {
+      "simples": "Induzimento a fuga, entrega arbitrária ou sonegação de incapazes: induzir menor de dezoito anos, ou interdito, a fugir do lugar em que se acha por determinação de quem sobre ele exerce autoridade; confiar a outrem, sem ordem do pai, do tutor ou do curador, algum menor de dezoito anos ou interdito; ou deixar, sem justa causa, de entregá-lo a quem legitimamente o reclame. Pena: detenção de um mês a um ano, ou multa.",
+      "pontos": ["Induzir menor ou interdito a fugir.", "Confiar menor ou interdito a outrem sem ordem do responsável.", "Deixar de entregá-lo, sem justa causa, a quem legitimamente o reclame.", "Detenção de um mês a um ano, ou multa."],
+      "atencao": ["Três condutas no mesmo artigo."],
+      "exemplo": "Pessoa se recusa, sem justa causa, a devolver o menor a quem legitimamente o reclama.",
+      "prova": ["Assertiva que pune a conduta de entregar o menor a quem legitimamente o reclame erra: o crime é deixar de entregar."],
+      "termos": [],
+      "remissoes": ["Art. 249"]
+    },
+    "art-249": {
+      "simples": "Subtração de incapazes: subtrair menor de dezoito anos ou interdito ao poder de quem o tem sob sua guarda em virtude de lei ou de ordem judicial. Pena: detenção de dois meses a dois anos, se o fato não constitui elemento de outro crime. Ser o agente pai ou tutor do menor ou curador do interdito não o exime de pena, se destituído ou temporariamente privado do poder, tutela, curatela ou guarda. Se há restituição do menor ou do interdito sem maus-tratos ou privações, o juiz pode deixar de aplicar pena.",
+      "pontos": ["Subtrair menor ou interdito de quem o tem sob guarda legal ou judicial.", "Detenção de dois meses a dois anos, se não for elemento de outro crime.", "§1º: pai ou tutor destituído ou privado temporariamente também responde.", "§2º: restituição sem maus-tratos ou privações: perdão judicial."],
+      "atencao": ["Crime subsidiário.", "O próprio pai pode ser sujeito ativo se perdeu a guarda."],
+      "exemplo": "Pai privado da guarda por decisão judicial leva o filho sem autorização.",
+      "prova": ["Assertiva que isenta o pai de qualquer responsabilidade no art. 249 erra: se destituído ou privado da guarda, responde."],
+      "termos": [],
+      "remissoes": ["Art. 248"]
+    },
+    "art-250": {
+      "simples": "Incêndio: causar incêndio, expondo a perigo a vida, a integridade física ou o patrimônio de outrem. Pena: reclusão de três a seis anos e multa. As penas aumentam-se de um terço se o crime é cometido com intuito de obter vantagem pecuniária, ou se o incêndio é em casa habitada ou destinada a habitação; em edifício público ou de uso público, obra de assistência social ou de cultura; em embarcação, aeronave, comboio ou veículo de transporte coletivo; em estação ferroviária ou aeródromo; em estaleiro, fábrica ou oficina; em depósito de explosivo, combustível ou inflamável; em poço petrolífico ou galeria de mineração; ou em lavoura, pastagem, mata ou floresta. Se culposo: detenção de seis meses a dois anos.",
+      "pontos": ["Causar incêndio, expondo a perigo vida, integridade física ou patrimônio de outrem.", "Reclusão de três a seis anos e multa.", "§1º: aumento de um terço (vantagem pecuniária; locais e meios listados).", "§2º: culposo: detenção de seis meses a dois anos."],
+      "atencao": ["É crime de PERIGO COMUM: exige perigo concreto a pessoas ou patrimônio.", "Há modalidade culposa."],
+      "exemplo": "Incendiar um edifício público expondo pessoas a perigo.",
+      "prova": ["Assertiva que dispensa a exposição a perigo no crime de incêndio erra."],
+      "termos": [{ "termo": "Crime de perigo comum", "significado": "Atinge número indeterminado de pessoas ou coisas." }],
+      "remissoes": ["Art. 251", "Art. 258"]
+    },
+    "art-251": {
+      "simples": "Explosão: expor a perigo a vida, a integridade física ou o patrimônio de outrem, mediante explosão, arremesso ou simples colocação de engenho de dinamite ou de substância de efeitos análogos. Pena: reclusão de três a seis anos e multa. Se a substância não é dinamite ou explosivo de efeitos análogos: reclusão de um a quatro anos e multa. As penas aumentam-se de um terço nas hipóteses do art. 250, §1º, I ou II. No caso de culpa: detenção de seis meses a dois anos, se a explosão é de dinamite ou substância análoga; nos demais casos, de três meses a um ano.",
+      "pontos": ["Expor a perigo mediante explosão, arremesso ou colocação de engenho.", "Dinamite ou análoga: reclusão de três a seis anos e multa.", "§1º: outra substância: reclusão de um a quatro anos e multa.", "§2º: aumento de um terço nas hipóteses do art. 250.", "§3º: culposo: detenção de seis meses a dois anos (dinamite) ou de três meses a um ano (demais)."],
+      "atencao": ["A pena varia conforme a substância usada."],
+      "exemplo": "Detonar dinamite em local movimentado expondo pessoas a perigo.",
+      "prova": ["Assertiva que aplica a mesma pena para dinamite e para outras substâncias erra."],
+      "termos": [],
+      "remissoes": ["Art. 250", "Art. 258"]
+    },
+    "art-252": {
+      "simples": "Uso de gás tóxico ou asfixiante: expor a perigo a vida, a integridade física ou o patrimônio de outrem, usando de gás tóxico ou asfixiante. Pena: reclusão de um a quatro anos e multa. Se culposo: detenção de três meses a um ano.",
+      "pontos": ["Expor a perigo usando gás tóxico ou asfixiante.", "Reclusão de um a quatro anos e multa.", "Culposo: detenção de três meses a um ano."],
+      "atencao": ["Há modalidade culposa."],
+      "exemplo": "Liberar gás tóxico em ambiente fechado com pessoas.",
+      "prova": ["Assertiva que nega a modalidade culposa no art. 252 erra."],
+      "termos": [],
+      "remissoes": ["Art. 253"]
+    },
+    "art-253": {
+      "simples": "Fabrico, fornecimento, aquisição, posse ou transporte de explosivos ou gás tóxico ou asfixiante: fabricar, fornecer, adquirir, possuir ou transportar, sem licença da autoridade, substância ou engenho explosivo, gás tóxico ou asfixiante, ou material destinado à sua fabricação. Pena: detenção de seis meses a dois anos e multa.",
+      "pontos": ["Fabricar, fornecer, adquirir, possuir ou transportar sem licença.", "Objeto: explosivo, gás tóxico ou asfixiante, ou material para fabricação.", "Detenção de seis meses a dois anos e multa."],
+      "atencao": ["Exige ausência de LICENÇA da autoridade."],
+      "exemplo": "Transportar explosivo sem licença da autoridade.",
+      "prova": ["Assertiva que dispensa a ausência de licença no art. 253 erra."],
+      "termos": [],
+      "remissoes": ["Art. 251", "Art. 252"]
+    },
+    "art-254": {
+      "simples": "Inundação: causar inundação, expondo a perigo a vida, a integridade física ou o patrimônio de outrem. Pena: reclusão de três a seis anos e multa, no caso de dolo, ou detenção de seis meses a dois anos, no caso de culpa.",
+      "pontos": ["Causar inundação expondo a perigo.", "Doloso: reclusão de três a seis anos e multa.", "Culposo: detenção de seis meses a dois anos."],
+      "atencao": ["As penas dolosa e culposa estão no mesmo caput."],
+      "exemplo": "Abrir comportas deliberadamente, expondo moradores a perigo.",
+      "prova": ["Assertiva que pune a inundação só se dolosa erra: há forma culposa."],
+      "termos": [],
+      "remissoes": ["Art. 255"]
+    },
+    "art-255": {
+      "simples": "Perigo de inundação: remover, destruir ou inutilizar, em prédio próprio ou alheio, expondo a perigo a vida, a integridade física ou o patrimônio de outrem, obstáculo natural ou obra destinada a impedir inundação. Pena: reclusão de um a três anos e multa.",
+      "pontos": ["Remover, destruir ou inutilizar obstáculo natural ou obra contra inundação.", "Em prédio próprio ou alheio.", "Reclusão de um a três anos e multa."],
+      "atencao": ["Vale também em prédio PRÓPRIO."],
+      "exemplo": "Destruir um dique em sua propriedade, expondo vizinhos a perigo.",
+      "prova": ["Assertiva que exclui o prédio próprio do art. 255 erra."],
+      "termos": [],
+      "remissoes": ["Art. 254"]
+    },
+    "art-256": {
+      "simples": "Desabamento ou desmoronamento: causar desabamento ou desmoronamento, expondo a perigo a vida, a integridade física ou o patrimônio de outrem. Pena: reclusão de um a quatro anos e multa. Se culposo: detenção de seis meses a um ano.",
+      "pontos": ["Causar desabamento ou desmoronamento expondo a perigo.", "Reclusão de um a quatro anos e multa.", "Culposo: detenção de seis meses a um ano."],
+      "atencao": ["Há modalidade culposa."],
+      "exemplo": "Demolir estrutura de forma que causa desabamento perigoso aos vizinhos.",
+      "prova": ["Assertiva que nega a forma culposa do art. 256 erra."],
+      "termos": [],
+      "remissoes": ["Art. 258"]
+    },
+    "art-257": {
+      "simples": "Subtração, ocultação ou inutilização de material de salvamento: subtrair, ocultar ou inutilizar, por ocasião de incêndio, inundação, naufrágio ou outro desastre ou calamidade, aparelho, material ou qualquer meio destinado a serviço de combate ao perigo, de socorro ou salvamento; ou impedir ou dificultar serviço de tal natureza. Pena: reclusão de dois a cinco anos e multa.",
+      "pontos": ["Subtrair, ocultar ou inutilizar material de socorro ou salvamento.", "Ou impedir/dificultar serviço de socorro.", "Por ocasião de desastre ou calamidade.", "Reclusão de dois a cinco anos e multa."],
+      "atencao": ["Exige que ocorra por OCASIÃO de desastre ou calamidade."],
+      "exemplo": "Esconder equipamento de combate ao fogo durante um incêndio.",
+      "prova": ["Assertiva que dispensa o contexto de desastre ou calamidade erra."],
+      "termos": [],
+      "remissoes": ["Art. 250"]
+    },
+    "art-258": {
+      "simples": "Formas qualificadas de crime de perigo comum: se do crime doloso de perigo comum resulta lesão corporal de natureza grave, a pena privativa de liberdade é aumentada de metade; se resulta morte, é aplicada em dobro. No caso de culpa, se do fato resulta lesão corporal, a pena aumenta-se de metade; se resulta morte, aplica-se a pena cominada ao homicídio culposo, aumentada de um terço.",
+      "pontos": ["Doloso + lesão grave: aumento de metade.", "Doloso + morte: pena em dobro.", "Culposo + lesão corporal: aumento de metade.", "Culposo + morte: pena do homicídio culposo, aumentada de um terço."],
+      "atencao": ["Diferencie o resultado agravador no crime doloso e no culposo."],
+      "exemplo": "Incêndio doloso do qual resulta morte tem a pena em dobro.",
+      "prova": ["Assertiva que aplica a pena em dobro no crime culposo com morte erra: aplica-se a pena do homicídio culposo aumentada de um terço."],
+      "termos": [],
+      "remissoes": ["Art. 250", "Art. 263"]
+    },
+    "art-259": {
+      "simples": "Difusão de doença ou praga: difundir doença ou praga que possa causar dano a floresta, plantação ou animais de utilidade econômica. Pena: reclusão de dois a cinco anos e multa. No caso de culpa: detenção de um a seis meses, ou multa.",
+      "pontos": ["Difundir doença ou praga que cause dano a floresta, plantação ou animais de utilidade econômica.", "Reclusão de dois a cinco anos e multa.", "Culposo: detenção de um a seis meses, ou multa."],
+      "atencao": ["O objeto protegido é de utilidade econômica."],
+      "exemplo": "Espalhar praga que atinge lavouras da região.",
+      "prova": ["Assertiva que aplica o art. 259 a doença que ataca pessoas erra: o tipo protege floresta, plantação e animais."],
+      "termos": [],
+      "remissoes": ["Art. 267"]
+    },
+    "art-260": {
+      "simples": "Perigo de desastre ferroviário: impedir ou perturbar serviço de estrada de ferro destruindo, danificando ou desarranjando linha férrea, material rodante ou de tração, obra-de-arte ou instalação; colocando obstáculo na linha; transmitindo falso aviso acerca do movimento dos veículos ou interrompendo ou embaraçando o funcionamento de telégrafo, telefone ou radiotelegrafia; ou praticando outro ato de que possa resultar desastre. Pena: reclusão de dois a cinco anos e multa. Se resulta desastre: reclusão de quatro a doze anos e multa. No caso de culpa, ocorrendo desastre: detenção de seis meses a dois anos. Estrada de ferro: qualquer via em que circulem veículos de tração mecânica, em trilhos ou por meio de cabo aéreo.",
+      "pontos": ["Impedir ou perturbar serviço de estrada de ferro por quatro meios.", "Reclusão de dois a cinco anos e multa.", "§1º: resulta desastre: reclusão de quatro a doze anos e multa.", "§2º: culposo com desastre: detenção de seis meses a dois anos.", "§3º: conceito de estrada de ferro."],
+      "atencao": ["O conceito de estrada de ferro inclui cabo aéreo."],
+      "exemplo": "Colocar obstáculo na linha férrea.",
+      "prova": ["Assertiva que restringe o conceito de estrada de ferro a trilhos erra: inclui cabo aéreo."],
+      "termos": [],
+      "remissoes": ["Art. 261", "Art. 263"]
+    },
+    "art-261": {
+      "simples": "Atentado contra a segurança de transporte marítimo, fluvial ou aéreo: expor a perigo embarcação ou aeronave, própria ou alheia, ou praticar qualquer ato tendente a impedir ou dificultar navegação marítima, fluvial ou aérea. Pena: reclusão de dois a cinco anos. Se resulta naufrágio, submersão ou encalhe de embarcação ou queda ou destruição de aeronave: reclusão de quatro a doze anos. Com intuito de vantagem econômica: também multa. No caso de culpa, se ocorre o sinistro: detenção de seis meses a dois anos.",
+      "pontos": ["Expor a perigo embarcação ou aeronave, ou dificultar navegação.", "Reclusão de dois a cinco anos.", "§1º: sinistro (naufrágio, submersão, encalhe, queda ou destruição): reclusão de quatro a doze anos.", "§2º: fim de lucro: também multa.", "§3º: culposo com sinistro: detenção de seis meses a dois anos."],
+      "atencao": ["Embarcação ou aeronave própria ou alheia."],
+      "exemplo": "Sabotar aeronave expondo-a a perigo.",
+      "prova": ["Assertiva que limita o art. 261 a embarcação ou aeronave alheia erra: vale também a própria."],
+      "termos": [],
+      "remissoes": ["Art. 260", "Art. 262"]
+    },
+    "art-262": {
+      "simples": "Atentado contra a segurança de outro meio de transporte: expor a perigo outro meio de transporte público, impedir-lhe ou dificultar-lhe o funcionamento. Pena: detenção de um a dois anos. Se resulta desastre: reclusão de dois a cinco anos. No caso de culpa, se ocorre desastre: detenção de três meses a um ano.",
+      "pontos": ["Expor a perigo outro meio de transporte público.", "Detenção de um a dois anos.", "§1º: resulta desastre: reclusão de dois a cinco anos.", "§2º: culposo com desastre: detenção de três meses a um ano."],
+      "atencao": ["Abrange meios de transporte público diversos de trem, embarcação e aeronave."],
+      "exemplo": "Sabotar ônibus de transporte público para dificultar seu funcionamento.",
+      "prova": ["Assertiva que aplica o art. 262 a transporte privado erra: o tipo exige transporte público."],
+      "termos": [],
+      "remissoes": ["Art. 260", "Art. 261"]
+    },
+    "art-263": {
+      "simples": "Forma qualificada: se de qualquer dos crimes previstos nos arts. 260 a 262, no caso de desastre ou sinistro, resulta lesão corporal ou morte, aplica-se o disposto no art. 258.",
+      "pontos": ["Crimes dos arts. 260 a 262 com desastre ou sinistro.", "Se resulta lesão corporal ou morte, aplica-se o art. 258."],
+      "atencao": ["Remissão ao art. 258."],
+      "exemplo": "Desastre ferroviário doloso que causa morte tem a pena aplicada em dobro.",
+      "prova": ["Assertiva que cria aumento próprio no art. 263 erra: ele remete ao art. 258."],
+      "termos": [],
+      "remissoes": ["Art. 258"]
+    },
+    "art-264": {
+      "simples": "Arremesso de projétil: arremessar projétil contra veículo, em movimento, destinado ao transporte público por terra, por água ou pelo ar. Pena: detenção de um a seis meses. Se resulta lesão corporal: detenção de seis meses a dois anos; se resulta morte, a pena é a do art. 121, §3º, aumentada de um terço.",
+      "pontos": ["Arremessar projétil contra veículo de transporte público em movimento.", "Detenção de um a seis meses.", "Lesão corporal: detenção de seis meses a dois anos.", "Morte: pena do art. 121, §3º, aumentada de um terço."],
+      "atencao": ["O veículo deve estar EM MOVIMENTO e ser de transporte público."],
+      "exemplo": "Atirar pedra contra ônibus em movimento.",
+      "prova": ["Assertiva que aplica o art. 264 a veículo parado erra."],
+      "termos": [],
+      "remissoes": ["Art. 121, §3º"]
+    },
+    "art-265": {
+      "simples": "Atentado contra a segurança de serviço de utilidade pública: atentar contra a segurança ou o funcionamento de serviço de água, luz, força ou calor, ou qualquer outro de utilidade pública. Pena: reclusão de um a cinco anos e multa. Aumenta-se a pena de 1/3 até a metade se o dano ocorrer em virtude de subtração de material essencial ao funcionamento dos serviços.",
+      "pontos": ["Atentar contra a segurança ou o funcionamento de serviço de utilidade pública.", "Reclusão de um a cinco anos e multa.", "Parágrafo único: subtração de material essencial: aumento de 1/3 até a metade."],
+      "atencao": ["Serviços como água, luz, força ou calor."],
+      "exemplo": "Subtrair cabos essenciais que causam interrupção do serviço de energia.",
+      "prova": ["Assertiva que fixa o aumento em dobro na subtração de material essencial erra: é de 1/3 até a metade."],
+      "termos": [],
+      "remissoes": ["Art. 266"]
+    },
+    "art-266": {
+      "simples": "Interrupção ou perturbação de serviço telegráfico, telefônico, informático, telemático ou de informação de utilidade pública: interromper ou perturbar serviço telegráfico, radiotelegráfico ou telefônico, impedir ou dificultar-lhe o restabelecimento. Pena: reclusão de 2 a 4 anos e multa (Lei nº 15.397, de 2026). Na mesma pena quem interrompe serviço telemático ou de informação de utilidade pública, ou impede ou dificulta o restabelecimento. As penas se aplicam em dobro se o crime é cometido por ocasião de calamidade pública ou mediante subtração, dano ou destruição de equipamento instalado em estrutura utilizada para telecomunicações.",
+      "pontos": ["Interromper ou perturbar serviço telegráfico, radiotelegráfico ou telefônico.", "Reclusão de 2 a 4 anos e multa.", "§1º: serviço telemático ou de informação de utilidade pública.", "§2º: penas em dobro (calamidade pública; subtração, dano ou destruição de equipamento de telecomunicações)."],
+      "atencao": ["Conferir a redação vigente, pois a pena foi alterada em 2026."],
+      "exemplo": "Derrubar serviço de internet de utilidade pública durante calamidade pública: penas em dobro.",
+      "prova": ["Assertiva que não prevê aumento por calamidade pública erra: as penas se aplicam em dobro."],
+      "termos": [],
+      "remissoes": ["Art. 265"]
+    },
+    "art-267": {
+      "simples": "Epidemia: causar epidemia, mediante a propagação de germes patogênicos. Se do fato resulta morte, a pena é aplicada em dobro. No caso de culpa: detenção de um a dois anos, ou, se resulta morte, de dois a quatro anos.",
+      "pontos": ["Causar epidemia mediante propagação de germes patogênicos.", "§1º: resulta morte: pena em dobro.", "§2º: culposo: detenção de um a dois anos, ou de dois a quatro anos se resulta morte."],
+      "atencao": ["Crime hediondo na forma dolosa com resultado morte (conforme a Lei dos Crimes Hediondos)."],
+      "exemplo": "Propagar deliberadamente germes patogênicos entre a população.",
+      "prova": ["Assertiva que afasta a modalidade culposa da epidemia erra."],
+      "termos": [{ "termo": "Germes patogênicos", "significado": "Microrganismos capazes de causar doença." }],
+      "remissoes": ["Art. 268"]
+    },
+    "art-268": {
+      "simples": "Infração de medida sanitária preventiva: infringir determinação do poder público destinada a impedir introdução ou propagação de doença contagiosa. Pena: detenção de um mês a um ano e multa. A pena é aumentada de um terço se o agente é funcionário da saúde pública ou exerce a profissão de médico, farmacêutico, dentista ou enfermeiro.",
+      "pontos": ["Infringir determinação do poder público contra doença contagiosa.", "Detenção de um mês a um ano e multa.", "Parágrafo único: aumento de um terço (funcionário da saúde pública, médico, farmacêutico, dentista ou enfermeiro)."],
+      "atencao": ["Norma penal em branco: depende da determinação do poder público."],
+      "exemplo": "Descumprir quarentena determinada pela autoridade sanitária.",
+      "prova": ["Assertiva que dispensa a existência de determinação do poder público erra."],
+      "termos": [{ "termo": "Norma penal em branco", "significado": "Norma cuja descrição depende de complementação por outra norma." }],
+      "remissoes": ["Art. 267"]
+    },
+    "art-269": {
+      "simples": "Omissão de notificação de doença: deixar o médico de denunciar à autoridade pública doença cuja notificação é compulsória. Pena: detenção de seis meses a dois anos e multa.",
+      "pontos": ["Médico deixa de denunciar à autoridade pública doença de notificação compulsória.", "Detenção de seis meses a dois anos e multa."],
+      "atencao": ["Crime PRÓPRIO: só o médico é sujeito ativo."],
+      "exemplo": "Médico não notifica à autoridade um caso de doença de notificação compulsória.",
+      "prova": ["Assertiva que admite como autor qualquer pessoa no art. 269 erra: apenas o médico."],
+      "termos": [],
+      "remissoes": ["Art. 268"]
+    },
+    "art-270": {
+      "simples": "Envenenamento de água potável ou de substância alimentícia ou medicinal: envenenar água potável, de uso comum ou particular, ou substância alimentícia ou medicinal destinada a consumo. Pena: reclusão de dez a quinze anos. Está sujeito à mesma pena quem entrega a consumo ou tem em depósito, para o fim de ser distribuída, a água ou a substância envenenada. Se culposo: detenção de seis meses a dois anos.",
+      "pontos": ["Envenenar água potável (comum ou particular) ou substância alimentícia ou medicinal.", "Reclusão de dez a quinze anos.", "§1º: entregar a consumo ou ter em depósito para distribuir.", "§2º: culposo: detenção de seis meses a dois anos."],
+      "atencao": ["Crime hediondo (pena fixada pela Lei dos Crimes Hediondos)."],
+      "exemplo": "Envenenar o reservatório de água de um bairro.",
+      "prova": ["Assertiva que fixa pena de detenção para o caput do art. 270 erra: é reclusão de dez a quinze anos."],
+      "termos": [],
+      "remissoes": ["Art. 271"]
+    },
+    "art-271": {
+      "simples": "Corrupção ou poluição de água potável: corromper ou poluir água potável, de uso comum ou particular, tornando-a imprópria para consumo ou nociva à saúde. Pena: reclusão de dois a cinco anos. Se culposo: detenção de dois meses a um ano.",
+      "pontos": ["Corromper ou poluir água potável tornando-a imprópria ou nociva.", "Reclusão de dois a cinco anos.", "Culposo: detenção de dois meses a um ano."],
+      "atencao": ["Diferença para o art. 270: aqui a água é corrompida ou poluída; lá, envenenada."],
+      "exemplo": "Despejar substância que torna imprópria a água potável de uso comum.",
+      "prova": ["Assertiva que confunde poluição com envenenamento erra: o art. 270 trata do envenenamento."],
+      "termos": [],
+      "remissoes": ["Art. 270"]
+    },
+    "art-272": {
+      "simples": "Falsificação, corrupção, adulteração ou alteração de substância ou produtos alimentícios: corromper, adulterar, falsificar ou alterar substância ou produto alimentício destinado a consumo, tornando-o nocivo à saúde ou reduzindo-lhe o valor nutritivo. Pena: reclusão de 4 a 8 anos e multa. Incorre nas penas quem fabrica, vende, expõe à venda, importa, tem em depósito para vender ou, de qualquer forma, distribui ou entrega a consumo o produto falsificado, corrompido ou adulterado. Aplica-se também a bebidas, com ou sem teor alcoólico. Se culposo: detenção de 1 a 2 anos e multa.",
+      "pontos": ["Corromper, adulterar, falsificar ou alterar produto alimentício, tornando-o nocivo ou reduzindo-lhe o valor nutritivo.", "Reclusão de 4 a 8 anos e multa.", "§1º-A: fabricar, vender, expor à venda, importar, ter em depósito, distribuir ou entregar a consumo.", "§1º: aplica-se a bebidas, com ou sem teor alcoólico.", "§2º: culposo: detenção de 1 a 2 anos e multa."],
+      "atencao": ["Inclui bebidas, com ou sem álcool."],
+      "exemplo": "Adulterar alimento para vender, reduzindo seu valor nutritivo.",
+      "prova": ["Assertiva que exclui as bebidas do art. 272 erra: o §1º as inclui."],
+      "termos": [],
+      "remissoes": ["Art. 273"]
+    },
+    "art-273": {
+      "simples": "Falsificação, corrupção, adulteração ou alteração de produto destinado a fins terapêuticos ou medicinais: falsificar, corromper, adulterar ou alterar produto destinado a fins terapêuticos ou medicinais. Pena: reclusão de 10 a 15 anos e multa. Nas mesmas penas incorre quem importa, vende, expõe à venda, tem em depósito para vender ou, de qualquer forma, distribui ou entrega a consumo o produto falsificado, corrompido, adulterado ou alterado. Incluem-se entre os produtos os medicamentos, as matérias-primas, os insumos farmacêuticos, os cosméticos, os saneantes e os de uso em diagnóstico. Também responde quem pratica as ações do §1º em relação a produtos sem registro, quando exigível, no órgão de vigilância sanitária competente, em desacordo com a fórmula do registro ou sem as características de identidade e qualidade admitidas para a comercialização, entre outras hipóteses do dispositivo.",
+      "pontos": ["Falsificar, corromper, adulterar ou alterar produto terapêutico ou medicinal.", "Reclusão de 10 a 15 anos e multa.", "§1º: importar, vender, expor à venda, ter em depósito, distribuir ou entregar a consumo.", "§1º-A: medicamentos, matérias-primas, insumos farmacêuticos, cosméticos, saneantes e produtos de diagnóstico.", "§1º-B: produtos sem registro, em desacordo com a fórmula, sem identidade e qualidade, entre outros."],
+      "atencao": ["A pena é muito severa; confira no texto integral as hipóteses do §1º-B."],
+      "exemplo": "Vender medicamento sem o registro exigível no órgão de vigilância sanitária.",
+      "prova": ["Assertiva que exclui cosméticos e saneantes do rol do art. 273 erra: o §1º-A os inclui."],
+      "termos": [],
+      "remissoes": ["Art. 272", "Art. 274"]
+    },
+    "art-274": {
+      "simples": "Emprego de processo proibido ou de substância não permitida: empregar, no fabrico de produto destinado a consumo, revestimento, gaseificação artificial, matéria corante, substância aromática, anti-séptica, conservadora ou qualquer outra não expressamente permitida pela legislação sanitária. Pena: reclusão de 1 a 5 anos e multa.",
+      "pontos": ["Empregar substância não permitida pela legislação sanitária no fabrico de produto destinado a consumo.", "Reclusão de 1 a 5 anos e multa."],
+      "atencao": ["Norma penal em branco: depende da legislação sanitária."],
+      "exemplo": "Usar corante não permitido pela legislação sanitária em alimento.",
+      "prova": ["Assertiva que dispensa a referência à legislação sanitária erra."],
+      "termos": [],
+      "remissoes": ["Art. 275", "Art. 276"]
+    },
+    "art-275": {
+      "simples": "Invólucro ou recipiente com falsa indicação: inculcar, em invólucro ou recipiente de produtos alimentícios, terapêuticos ou medicinais, a existência de substância que não se encontra em seu conteúdo ou que nele existe em quantidade menor que a mencionada. Pena: reclusão de 1 a 5 anos e multa.",
+      "pontos": ["Inculcar em invólucro ou recipiente substância inexistente ou em menor quantidade.", "Produtos alimentícios, terapêuticos ou medicinais.", "Reclusão de 1 a 5 anos e multa."],
+      "atencao": ["O foco é a FALSA INDICAÇÃO no recipiente."],
+      "exemplo": "Rótulo de medicamento que afirma conter substância ausente.",
+      "prova": ["Assertiva que aplica o art. 275 a qualquer produto erra: são alimentícios, terapêuticos ou medicinais."],
+      "termos": [],
+      "remissoes": ["Art. 274", "Art. 276"]
+    },
+    "art-276": {
+      "simples": "Produto ou substância nas condições dos dois artigos anteriores: vender, expor à venda, ter em depósito para vender ou, de qualquer forma, entregar a consumo produto nas condições dos arts. 274 e 275. Pena: reclusão de 1 a 5 anos e multa.",
+      "pontos": ["Vender, expor à venda, ter em depósito ou entregar a consumo.", "Produto nas condições dos arts. 274 e 275.", "Reclusão de 1 a 5 anos e multa."],
+      "atencao": ["Complementa os arts. 274 e 275 (comercialização)."],
+      "exemplo": "Vender produto com rótulo de falsa indicação.",
+      "prova": ["Assertiva que aplica o art. 276 sem referência aos arts. 274 e 275 erra."],
+      "termos": [],
+      "remissoes": ["Art. 274", "Art. 275"]
+    },
+    "art-277": {
+      "simples": "Substância destinada à falsificação: vender, expor à venda, ter em depósito ou ceder substância destinada à falsificação de produtos alimentícios, terapêuticos ou medicinais. Pena: reclusão de 1 a 5 anos e multa.",
+      "pontos": ["Vender, expor à venda, ter em depósito ou ceder substância destinada à falsificação.", "Produtos alimentícios, terapêuticos ou medicinais.", "Reclusão de 1 a 5 anos e multa."],
+      "atencao": ["O objeto é a SUBSTÂNCIA destinada à falsificação."],
+      "exemplo": "Vender substância usada para falsificar medicamentos.",
+      "prova": ["Assertiva que dispensa a destinação à falsificação erra."],
+      "termos": [],
+      "remissoes": ["Art. 273"]
+    },
+    "art-278": {
+      "simples": "Outras substâncias nocivas à saúde pública: fabricar, vender, expor à venda, ter em depósito para vender ou, de qualquer forma, entregar a consumo coisa ou substância nociva à saúde, ainda que não destinada à alimentação ou a fim medicinal. Pena: detenção de um a três anos e multa. Se culposo: detenção de dois meses a um ano.",
+      "pontos": ["Fabricar, vender, expor à venda, ter em depósito ou entregar a consumo coisa nociva à saúde.", "Ainda que não destinada à alimentação ou a fim medicinal.", "Detenção de um a três anos e multa.", "Culposo: detenção de dois meses a um ano."],
+      "atencao": ["Tipo residual: não exige finalidade alimentar ou medicinal."],
+      "exemplo": "Vender produto de uso doméstico sabidamente nocivo à saúde.",
+      "prova": ["Assertiva que restringe o art. 278 a alimentos e remédios erra."],
+      "termos": [],
+      "remissoes": ["Art. 272", "Art. 273"]
+    },
+    "art-280": {
+      "simples": "Medicamento em desacordo com receita médica: fornecer substância medicinal em desacordo com receita médica. Pena: detenção de um a três anos, ou multa. Se culposo: detenção de dois meses a um ano.",
+      "pontos": ["Fornecer substância medicinal em desacordo com receita médica.", "Detenção de um a três anos, ou multa.", "Culposo: detenção de dois meses a um ano."],
+      "atencao": ["Há modalidade culposa."],
+      "exemplo": "Farmacêutico entrega medicamento diferente do receitado.",
+      "prova": ["Assertiva que nega a forma culposa do art. 280 erra."],
+      "termos": [],
+      "remissoes": ["Art. 278"]
+    }
+  }
+}

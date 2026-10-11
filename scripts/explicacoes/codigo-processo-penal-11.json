@@ -1,0 +1,411 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 11: arts. 394 a 436",
+  "units": {
+    "art-394": {
+      "simples": "O procedimento será comum ou especial. O comum será ordinário (crime com sanção máxima igual ou superior a 4 anos de pena privativa de liberdade), sumário (sanção máxima inferior a 4 anos) ou sumaríssimo (infrações de menor potencial ofensivo, na forma da lei). Aplica-se a todos os processos o procedimento comum, salvo disposições em contrário do Código ou de lei especial. Nos processos de competência do Tribunal do Júri, o procedimento observa os arts. 406 a 497. As disposições dos arts. 395 a 398 aplicam-se a todos os procedimentos penais de primeiro grau, ainda que não regulados no Código.",
+      "pontos": ["Procedimento comum (ordinário, sumário, sumaríssimo) ou especial.", "Ordinário: pena máxima igual ou superior a 4 anos.", "Sumário: pena máxima inferior a 4 anos.", "Sumaríssimo: menor potencial ofensivo.", "Júri: arts. 406 a 497.", "Arts. 395 a 398 valem para todos os procedimentos de primeiro grau."],
+      "atencao": ["Ordinário: IGUAL ou SUPERIOR a 4 anos; sumário: INFERIOR a 4 anos.", "O critério é a pena MÁXIMA."],
+      "exemplo": "Crime com pena máxima de 6 anos segue o rito ordinário.",
+      "prova": ["Assertiva que fixa o rito sumário para crimes com pena máxima igual a 4 anos erra: igual a 4 anos é ordinário."],
+      "termos": [],
+      "remissoes": ["Art. 395", "Art. 406"]
+    },
+    "art-394-a": {
+      "simples": "Os processos que apurem a prática de crime hediondo ou violência contra a mulher terão prioridade de tramitação em todas as instâncias. Os processos que apurem violência contra a mulher independem do pagamento de custas, taxas ou despesas processuais, salvo má-fé. As isenções aplicam-se apenas à vítima e, em caso de morte, ao cônjuge, ascendente, descendente ou irmão, quando a estes couber o direito de representação, de queixa ou de prosseguir a ação.",
+      "pontos": ["Prioridade de tramitação: crime hediondo e violência contra a mulher, em todas as instâncias.", "Violência contra a mulher: sem custas, salvo má-fé.", "Isenção só para a vítima e, em caso de morte, para familiares legitimados."],
+      "atencao": ["A isenção de custas não alcança o acusado."],
+      "exemplo": "A vítima de violência doméstica não paga custas processuais.",
+      "prova": ["Assertiva que estende a isenção de custas ao acusado erra: aplica-se à vítima e aos familiares legitimados."],
+      "termos": [],
+      "remissoes": ["Art. 31"]
+    },
+    "art-395": {
+      "simples": "A denúncia ou queixa será rejeitada quando for manifestamente inepta; quando faltar pressuposto processual ou condição para o exercício da ação penal; ou quando faltar justa causa para o exercício da ação penal. O parágrafo único está revogado.",
+      "pontos": ["I: denúncia ou queixa manifestamente inepta.", "II: falta de pressuposto processual ou de condição da ação.", "III: falta de justa causa."],
+      "atencao": ["Rejeição liminar da peça acusatória: cabe recurso em sentido estrito (art. 581, I)."],
+      "exemplo": "Denúncia que não descreve o fato criminoso é rejeitada por inépcia.",
+      "prova": ["Assertiva que recebe a denúncia sem justa causa erra: ela deve ser rejeitada."],
+      "termos": [{ "termo": "Justa causa", "significado": "Lastro probatório mínimo para a ação penal." }],
+      "remissoes": ["Art. 41", "Art. 396"]
+    },
+    "art-396": {
+      "simples": "Nos procedimentos ordinário e sumário, oferecida a denúncia ou queixa, o juiz, se não a rejeitar liminarmente, a receberá e ordenará a citação do acusado para responder à acusação, por escrito, no prazo de 10 dias. No caso de citação por edital, o prazo para a defesa começa a fluir a partir do comparecimento pessoal do acusado ou do defensor constituído.",
+      "pontos": ["Recebimento da denúncia e citação para resposta escrita em 10 dias.", "Citação por edital: o prazo começa com o comparecimento do acusado ou do defensor constituído."],
+      "atencao": ["Prazo de 10 dias.", "Prazo contado da citação pessoal (ou do comparecimento, no edital)."],
+      "exemplo": "O acusado é citado e tem 10 dias para apresentar a resposta à acusação.",
+      "prova": ["Assertiva que fixa em 5 dias o prazo de resposta à acusação erra: são 10 dias."],
+      "termos": [],
+      "remissoes": ["Art. 396-A", "Art. 399"]
+    },
+    "art-396-a": {
+      "simples": "Na resposta, o acusado poderá arguir preliminares e alegar tudo o que interesse à sua defesa, oferecer documentos e justificações, especificar as provas pretendidas e arrolar testemunhas, qualificando-as e requerendo sua intimação, quando necessário. A exceção será processada em apartado. Não apresentada a resposta no prazo legal, ou se o acusado, citado, não constituir defensor, o juiz nomeará defensor para oferecê-la, concedendo-lhe vista dos autos por 10 dias.",
+      "pontos": ["Resposta à acusação: preliminares, defesa, documentos, provas e rol de testemunhas.", "Exceções em apartado (arts. 95 a 112).", "Sem resposta no prazo: defensor nomeado, com vista de 10 dias."],
+      "atencao": ["A resposta é OBRIGATÓRIA; sem ela, o juiz nomeia defensor.", "Momento de arrolar testemunhas da defesa (preclusão)."],
+      "exemplo": "Na resposta, a defesa arrola testemunhas e junta documentos.",
+      "prova": ["Assertiva que dispensa a apresentação da resposta, seguindo o processo sem defensor, erra."],
+      "termos": [],
+      "remissoes": ["Art. 396", "Art. 397"]
+    },
+    "art-397": {
+      "simples": "Após o cumprimento do disposto no art. 396-A e parágrafos, o juiz deverá absolver sumariamente o acusado quando verificar a existência manifesta de causa excludente da ilicitude do fato; a existência manifesta de causa excludente da culpabilidade do agente, salvo inimputabilidade; que o fato narrado evidentemente não constitui crime; ou extinta a punibilidade do agente.",
+      "pontos": ["I: excludente de ilicitude manifesta.", "II: excludente de culpabilidade manifesta, salvo inimputabilidade.", "III: fato evidentemente atípico.", "IV: extinção da punibilidade."],
+      "atencao": ["Inimputabilidade não autoriza absolvição sumária (a absolvição seria imprópria)."],
+      "exemplo": "Legítima defesa manifestamente demonstrada: absolvição sumária.",
+      "prova": ["Assertiva que permite a absolvição sumária por inimputabilidade erra: a exceção do inciso II a afasta."],
+      "termos": [],
+      "remissoes": ["Art. 396-A", "Art. 415"]
+    },
+    "art-399": {
+      "simples": "Recebida a denúncia ou queixa, o juiz designará dia e hora para a audiência, ordenando a intimação do acusado, de seu defensor, do Ministério Público e, se for o caso, do querelante e do assistente. O acusado preso será requisitado para comparecer ao interrogatório, devendo o poder público providenciar sua apresentação. O juiz que presidiu a instrução deverá proferir a sentença (identidade física do juiz).",
+      "pontos": ["Designação de audiência e intimação das partes.", "Réu preso requisitado ao interrogatório.", "§2º: o juiz que presidiu a instrução sentencia (identidade física do juiz)."],
+      "atencao": ["Identidade física do juiz: prevista no §2º (com exceções admitidas pela jurisprudência)."],
+      "exemplo": "O juiz que colheu toda a prova profere a sentença.",
+      "prova": ["Assertiva que dispensa a intimação do assistente, se houver, para a audiência erra."],
+      "termos": [],
+      "remissoes": ["Art. 400"]
+    },
+    "art-400": {
+      "simples": "Na audiência de instrução e julgamento, a ser realizada no prazo máximo de 60 dias, proceder-se-á à tomada de declarações do ofendido, à inquirição das testemunhas arroladas pela acusação e pela defesa, nesta ordem, ressalvado o disposto no art. 222, bem como aos esclarecimentos dos peritos, às acareações e ao reconhecimento de pessoas e coisas, interrogando-se, em seguida, o acusado e procedendo-se o debate. As provas serão produzidas numa só audiência, podendo o juiz indeferir as consideradas irrelevantes, impertinentes ou protelatórias. Os esclarecimentos dos peritos dependerão de prévio requerimento das partes.",
+      "pontos": ["Audiência no prazo máximo de 60 dias.", "Ordem: ofendido, testemunhas da acusação, testemunhas da defesa, peritos, acareações, reconhecimentos, interrogatório, debates.", "Provas em uma só audiência; indeferimento das irrelevantes, impertinentes ou protelatórias.", "Esclarecimentos dos peritos dependem de requerimento prévio."],
+      "atencao": ["Interrogatório por ÚLTIMO (STF fixou que vale para todos os ritos).", "Prazo máximo de 60 dias para a audiência."],
+      "exemplo": "O interrogatório do acusado ocorre ao final da instrução, antes dos debates.",
+      "prova": ["Assertiva que coloca o interrogatório do acusado no início da audiência erra: ele ocorre ao final da produção da prova."],
+      "termos": [],
+      "remissoes": ["Art. 396", "Art. 399"]
+    },
+    "art-400-a": {
+      "simples": "Na audiência de instrução e julgamento, e em especial nas que apurem crimes contra a dignidade sexual, todas as partes e demais sujeitos processuais deverão zelar pela integridade física e psicológica da vítima, sob pena de responsabilização civil, penal e administrativa, cabendo ao juiz garantir o cumprimento do disposto, sendo vedadas a manifestação sobre circunstâncias ou elementos alheios aos fatos objeto de apuração nos autos e a utilização de linguagem, informações ou material que ofendam a dignidade da vítima ou de testemunhas.",
+      "pontos": ["Todos devem zelar pela integridade física e psicológica da vítima.", "Responsabilidade civil, penal e administrativa.", "Juiz garante o cumprimento.", "Vedada manifestação sobre elementos alheios aos fatos.", "Vedada linguagem ou material que ofenda a dignidade da vítima ou de testemunhas."],
+      "atencao": ["Incluído pela Lei nº 14.245, de 2021 (Lei Mariana Ferrer)."],
+      "exemplo": "O juiz impede a defesa de usar linguagem ofensiva contra a vítima.",
+      "prova": ["Assertiva que restringe o art. 400-A aos crimes contra a dignidade sexual erra: aplica-se a toda audiência, em especial a esses crimes."],
+      "termos": [],
+      "remissoes": ["Art. 400"]
+    },
+    "art-401": {
+      "simples": "Na instrução poderão ser inquiridas até 8 testemunhas arroladas pela acusação e 8 pela defesa. Nesse número não se compreendem as que não prestem compromisso e as referidas. A parte poderá desistir da inquirição de qualquer das testemunhas arroladas, ressalvado o disposto no art. 209.",
+      "pontos": ["Até 8 testemunhas para a acusação e 8 para a defesa.", "Não entram no cômputo as que não prestam compromisso e as referidas.", "A parte pode desistir de testemunha, ressalvado o art. 209."],
+      "atencao": ["Rito ordinário: 8 testemunhas por parte.", "Informantes e testemunhas referidas não contam."],
+      "exemplo": "A defesa arrola 8 testemunhas, e informantes ouvidos não entram na conta.",
+      "prova": ["Assertiva que limita a 5 as testemunhas por parte no rito ordinário erra: são 8."],
+      "termos": [],
+      "remissoes": ["Art. 209", "Art. 532"]
+    },
+    "art-402": {
+      "simples": "Produzidas as provas, ao final da audiência, o Ministério Público, o querelante e o assistente e, a seguir, o acusado poderão requerer diligências cuja necessidade se origine de circunstâncias ou fatos apurados na instrução.",
+      "pontos": ["Ao final da audiência, as partes podem requerer diligências.", "Ordem: MP, querelante e assistente, depois acusado.", "Só diligências nascidas de circunstâncias ou fatos da instrução."],
+      "atencao": ["Diligências decorrentes da instrução, e não para recomeçar a prova."],
+      "exemplo": "Um fato novo surgiu no depoimento, e a defesa requer uma diligência.",
+      "prova": ["Assertiva que permite requerer qualquer diligência, sem relação com a instrução, no art. 402, erra."],
+      "termos": [],
+      "remissoes": ["Art. 403", "Art. 404"]
+    },
+    "art-403": {
+      "simples": "Não havendo requerimento de diligências, ou sendo indeferido, serão oferecidas alegações finais orais por 20 minutos, respectivamente, pela acusação e pela defesa, prorrogáveis por mais 10, proferindo o juiz, a seguir, sentença. Havendo mais de um acusado, o tempo previsto para a defesa de cada um é individual. Ao assistente do MP, após a manifestação deste, serão concedidos 10 minutos, prorrogando-se por igual período o tempo da defesa. O juiz poderá, considerada a complexidade do caso ou o número de acusados, conceder às partes o prazo de 5 dias sucessivamente para a apresentação de memoriais, tendo então 10 dias para proferir a sentença.",
+      "pontos": ["Alegações finais orais: 20 minutos para a acusação e 20 para a defesa, prorrogáveis por mais 10.", "Vários acusados: tempo individual.", "Assistente: 10 minutos, com igual prorrogação para a defesa.", "Memoriais em 5 dias sucessivos; sentença em 10 dias."],
+      "atencao": ["Memoriais: 5 dias para cada parte, sentença em 10 dias."],
+      "exemplo": "Caso complexo: o juiz concede memoriais em 5 dias e sentencia em 10.",
+      "prova": ["Assertiva que fixa em 30 minutos o tempo básico das alegações finais orais erra: são 20 minutos, prorrogáveis por mais 10."],
+      "termos": [],
+      "remissoes": ["Art. 404"]
+    },
+    "art-404": {
+      "simples": "Ordenada diligência considerada imprescindível, de ofício ou a requerimento da parte, a audiência será concluída sem as alegações finais. Realizada, em seguida, a diligência determinada, as partes apresentarão, no prazo sucessivo de 5 dias, suas alegações finais, por memorial, e, no prazo de 10 dias, o juiz proferirá a sentença.",
+      "pontos": ["Diligência imprescindível: audiência concluída sem alegações finais.", "Realizada a diligência: memoriais sucessivos de 5 dias.", "Sentença em 10 dias."],
+      "atencao": ["Alegações por memorial, 5 dias sucessivos."],
+      "exemplo": "Perícia imprescindível é ordenada, e as alegações finais vêm em memoriais depois dela.",
+      "prova": ["Assertiva que mantém as alegações finais orais mesmo após diligência imprescindível erra."],
+      "termos": [],
+      "remissoes": ["Art. 403"]
+    },
+    "art-405": {
+      "simples": "Do ocorrido em audiência será lavrado termo em livro próprio, assinado pelo juiz e pelas partes, contendo breve resumo dos fatos relevantes nela ocorridos. Sempre que possível, o registro dos depoimentos do investigado, indiciado, ofendido e testemunhas será feito pelos meios ou recursos de gravação magnética, estenotipia, digital ou técnica similar, inclusive audiovisual, destinada a obter maior fidelidade das informações. No caso de registro audiovisual, será encaminhada às partes cópia do registro original, sem necessidade de transcrição.",
+      "pontos": ["Termo da audiência assinado pelo juiz e pelas partes, com breve resumo.", "Depoimentos registrados, sempre que possível, por gravação ou meios audiovisuais.", "Registro audiovisual: cópia às partes, sem transcrição."],
+      "atencao": ["Registro audiovisual dispensa transcrição."],
+      "exemplo": "Os depoimentos são gravados em vídeo, e as partes recebem cópia, sem transcrição.",
+      "prova": ["Assertiva que exige transcrição integral do registro audiovisual dos depoimentos erra."],
+      "termos": [],
+      "remissoes": ["Art. 216"]
+    },
+    "art-406": {
+      "simples": "No procedimento do Júri, o juiz, ao receber a denúncia ou queixa, ordenará a citação do acusado para responder à acusação, por escrito, no prazo de 10 dias. O prazo será contado a partir do efetivo cumprimento do mandado ou do comparecimento, em juízo, do acusado ou de defensor constituído, no caso de citação inválida ou por edital. A acusação deverá arrolar testemunhas, até o máximo de 8, na denúncia ou queixa. Na resposta, o acusado poderá arguir preliminares, alegar tudo que interesse à sua defesa, oferecer documentos, especificar provas e arrolar testemunhas, até o máximo de 8.",
+      "pontos": ["Citação para resposta escrita em 10 dias.", "Prazo conta do cumprimento do mandado ou do comparecimento (se inválida ou por edital).", "Acusação arrola até 8 testemunhas na denúncia ou queixa.", "Defesa arrola até 8 na resposta."],
+      "atencao": ["Primeira fase do Júri (judicium accusationis): 8 testemunhas por parte."],
+      "exemplo": "Na primeira fase do Júri, a defesa responde por escrito em 10 dias e arrola até 8 testemunhas.",
+      "prova": ["Assertiva que limita a 5 testemunhas por parte na primeira fase do Júri erra: são 8 (5 é o limite do plenário)."],
+      "termos": [{ "termo": "Sumário da culpa", "significado": "Primeira fase do Júri, até a pronúncia." }],
+      "remissoes": ["Art. 422"]
+    },
+    "art-407": {
+      "simples": "As exceções serão processadas em apartado, nos termos dos arts. 95 a 112 do Código.",
+      "pontos": ["Exceções no Júri tramitam em apartado, pelos arts. 95 a 112."],
+      "atencao": ["Rito idêntico ao das exceções gerais."],
+      "exemplo": "A exceção de suspeição do juiz é processada em apartado na primeira fase do Júri.",
+      "prova": ["Assertiva que cria rito próprio das exceções no Júri erra: segue os arts. 95 a 112."],
+      "termos": [],
+      "remissoes": ["Art. 95"]
+    },
+    "art-408": {
+      "simples": "Não apresentada a resposta no prazo legal, o juiz nomeará defensor para oferecê-la em até 10 dias, concedendo-lhe vista dos autos.",
+      "pontos": ["Sem resposta no prazo: juiz nomeia defensor.", "Defensor oferece a resposta em até 10 dias, com vista dos autos."],
+      "atencao": ["Mesmo prazo de 10 dias."],
+      "exemplo": "O acusado não responde, e o juiz nomeia defensor para oferecer a resposta.",
+      "prova": ["Assertiva que dispensa a nomeação de defensor se não houver resposta erra."],
+      "termos": [],
+      "remissoes": ["Art. 396-A"]
+    },
+    "art-409": {
+      "simples": "Apresentada a defesa, o juiz ouvirá o Ministério Público ou o querelante sobre preliminares e documentos, em 5 dias.",
+      "pontos": ["Juiz ouve o MP ou o querelante sobre preliminares e documentos.", "Prazo de 5 dias."],
+      "atencao": ["Contraditório sobre as preliminares da defesa."],
+      "exemplo": "A defesa apresenta preliminares, e o MP se manifesta em 5 dias.",
+      "prova": ["Assertiva que fixa em 10 dias a manifestação do MP sobre as preliminares erra: são 5 dias."],
+      "termos": [],
+      "remissoes": ["Art. 410"]
+    },
+    "art-410": {
+      "simples": "O juiz determinará a inquirição das testemunhas e a realização das diligências requeridas pelas partes, no prazo máximo de 10 dias.",
+      "pontos": ["Inquirição de testemunhas e diligências em até 10 dias."],
+      "atencao": ["Prazo de 10 dias para a determinação."],
+      "exemplo": "Em até 10 dias, o juiz determina a inquirição das testemunhas.",
+      "prova": ["Assertiva que fixa em 30 dias esse prazo erra: são 10 dias."],
+      "termos": [],
+      "remissoes": ["Art. 409", "Art. 411"]
+    },
+    "art-411": {
+      "simples": "Na audiência de instrução do Júri, proceder-se-á à tomada de declarações do ofendido, se possível, à inquirição das testemunhas arroladas pela acusação e pela defesa, nesta ordem, bem como aos esclarecimentos dos peritos, às acareações e ao reconhecimento de pessoas e coisas, interrogando-se, em seguida, o acusado e procedendo-se o debate. Os esclarecimentos dos peritos dependerão de prévio requerimento e deferimento pelo juiz. As provas serão produzidas em uma só audiência. Encerrada a instrução, observar-se-á, se for o caso, o art. 384. As alegações serão orais, concedendo-se a palavra à acusação e à defesa pelo prazo de 20 minutos, prorrogáveis por mais 10. Havendo mais de 1 acusado, o tempo é individual. Ao assistente do MP serão concedidos 10 minutos, entre outras disposições do dispositivo.",
+      "pontos": ["Ordem da prova: ofendido, testemunhas (acusação e defesa), peritos, acareações, reconhecimentos, interrogatório, debate.", "Peritos: esclarecimentos dependem de requerimento e deferimento.", "Provas em uma só audiência.", "Art. 384 se necessário (mutatio libelli).", "Alegações orais: 20 minutos, prorrogáveis por mais 10.", "Mais de um acusado: tempo individual."],
+      "atencao": ["Mesmo desenho da audiência do rito ordinário.", "Fecha com debate oral."],
+      "exemplo": "Na primeira fase do Júri, o acusado é interrogado por último e as partes debatem oralmente.",
+      "prova": ["Assertiva que fixa em 10 minutos o tempo básico das alegações orais na primeira fase do Júri erra: são 20, prorrogáveis por mais 10."],
+      "termos": [],
+      "remissoes": ["Art. 400", "Art. 384"]
+    },
+    "art-412": {
+      "simples": "O procedimento da primeira fase do Júri será concluído no prazo máximo de 90 dias.",
+      "pontos": ["Prazo máximo de 90 dias para concluir a primeira fase."],
+      "atencao": ["Prazo impróprio, mas parâmetro de duração razoável."],
+      "exemplo": "A primeira fase do procedimento do Júri deve terminar em até 90 dias.",
+      "prova": ["Assertiva que fixa em 60 dias o prazo máximo da primeira fase do Júri erra: são 90 dias."],
+      "termos": [],
+      "remissoes": ["Art. 411"]
+    },
+    "art-413": {
+      "simples": "O juiz, fundamentadamente, pronunciará o acusado, se convencido da materialidade do fato e da existência de indícios suficientes de autoria ou de participação. A fundamentação da pronúncia limitar-se-á à indicação da materialidade do fato e da existência de indícios suficientes de autoria ou de participação, devendo o juiz declarar o dispositivo legal em que julgar incurso o acusado e especificar as circunstâncias qualificadoras e as causas de aumento de pena. Se o crime for afiançável, o juiz arbitrará o valor da fiança para a concessão ou manutenção da liberdade provisória. O juiz decidirá, motivadamente, sobre a manutenção, revogação ou substituição da prisão ou medida restritiva de liberdade anteriormente decretada e, tratando-se de acusado solto, sobre a necessidade da prisão ou das medidas do Título IX do Livro I.",
+      "pontos": ["Pronúncia: materialidade do fato e indícios suficientes de autoria ou participação.", "Fundamentação limitada a esses pontos (sem juízo de mérito aprofundado).", "Declara o dispositivo legal e especifica qualificadoras e causas de aumento.", "Fiança, se afiançável.", "Decide sobre prisão e medidas cautelares."],
+      "atencao": ["Na pronúncia vale 'in dubio pro societate' (indícios suficientes, e não prova plena).", "Qualificadoras devem ser especificadas."],
+      "exemplo": "O juiz pronuncia o acusado, apontando a materialidade e os indícios de autoria.",
+      "prova": ["Assertiva que exige prova plena da autoria para a pronúncia erra: bastam indícios suficientes."],
+      "termos": [{ "termo": "Pronúncia", "significado": "Decisão que envia o acusado a julgamento pelo Júri." }],
+      "remissoes": ["Art. 414", "Art. 415"]
+    },
+    "art-414": {
+      "simples": "Não se convencendo da materialidade do fato ou da existência de indícios suficientes de autoria ou de participação, o juiz, fundamentadamente, impronunciará o acusado. Enquanto não ocorrer a extinção da punibilidade, poderá ser formulada nova denúncia ou queixa se houver prova nova.",
+      "pontos": ["Impronúncia: ausência de materialidade ou de indícios suficientes de autoria.", "Nova denúncia possível com prova nova, enquanto não extinta a punibilidade."],
+      "atencao": ["Impronúncia não faz coisa julgada material: pode haver nova denúncia com prova nova."],
+      "exemplo": "Não há indício suficiente de autoria: o juiz impronuncia o acusado.",
+      "prova": ["Assertiva que impede nova denúncia após a impronúncia, mesmo com prova nova, erra."],
+      "termos": [],
+      "remissoes": ["Art. 413", "Art. 416"]
+    },
+    "art-415": {
+      "simples": "O juiz, fundamentadamente, absolverá desde logo o acusado quando provada a inexistência do fato; provado não ser ele autor ou partícipe do fato; o fato não constituir infração penal; ou demonstrada causa de isenção de pena ou de exclusão do crime. Não se aplica o inciso IV ao caso de inimputabilidade do caput do art. 26 do Código Penal, salvo quando esta for a única tese defensiva.",
+      "pontos": ["I: inexistência do fato provada.", "II: provado que não é autor ou partícipe.", "III: fato não constitui infração penal.", "IV: isenção de pena ou exclusão do crime demonstrada.", "Parágrafo único: inimputabilidade só absolve sumariamente se for a única tese defensiva."],
+      "atencao": ["Absolvição sumária no Júri (diferente da impronúncia).", "Inimputabilidade é exceção, salvo se for a única tese."],
+      "exemplo": "Provado que o acusado não foi o autor, o juiz o absolve sumariamente.",
+      "prova": ["Assertiva que sempre permite a absolvição sumária por inimputabilidade erra, ela só cabe se for a única tese defensiva."],
+      "termos": [],
+      "remissoes": ["Art. 397", "Art. 416"]
+    },
+    "art-416": {
+      "simples": "Contra a sentença de impronúncia ou de absolvição sumária caberá apelação.",
+      "pontos": ["Impronúncia e absolvição sumária: apelação."],
+      "atencao": ["Contra a pronúncia, o recurso é o RESE (art. 581, IV)."],
+      "exemplo": "Impronunciado o acusado, o Ministério Público pode apelar.",
+      "prova": ["Assertiva que prevê recurso em sentido estrito contra a impronúncia erra: cabe apelação."],
+      "termos": [],
+      "remissoes": ["Art. 414", "Art. 415"]
+    },
+    "art-417": {
+      "simples": "Se houver indícios de autoria ou de participação de outras pessoas não incluídas na acusação, o juiz, ao pronunciar ou impronunciar o acusado, determinará o retorno dos autos ao Ministério Público, por 15 dias, aplicável, no que couber, o art. 80.",
+      "pontos": ["Indícios de outros envolvidos: juiz devolve os autos ao MP.", "Prazo de 15 dias.", "Aplica-se, no que couber, o art. 80 (separação dos processos)."],
+      "atencao": ["Prazo de 15 dias."],
+      "exemplo": "O juiz percebe indícios contra um terceiro e devolve os autos ao MP por 15 dias.",
+      "prova": ["Assertiva que fixa em 5 dias o prazo de retorno dos autos ao MP erra: são 15 dias."],
+      "termos": [],
+      "remissoes": ["Art. 80"]
+    },
+    "art-418": {
+      "simples": "O juiz poderá dar ao fato definição jurídica diversa da constante da acusação, embora o acusado fique sujeito a pena mais grave.",
+      "pontos": ["Na pronúncia, o juiz pode alterar a definição jurídica do fato.", "Ainda que implique pena mais grave."],
+      "atencao": ["Emendatio libelli na pronúncia."],
+      "exemplo": "O juiz pronuncia o acusado por homicídio qualificado quando a denúncia o capitulava como simples, sem alterar os fatos.",
+      "prova": ["Assertiva que proíbe a pronúncia com definição jurídica diversa e pena mais grave erra."],
+      "termos": [],
+      "remissoes": ["Art. 383"]
+    },
+    "art-419": {
+      "simples": "Quando o juiz se convencer, em discordância com a acusação, da existência de crime diverso dos referidos no §1º do art. 74 e não for competente para o julgamento, remeterá os autos ao juiz que o seja. Remetidos os autos a outro juiz, à disposição deste ficará o acusado preso.",
+      "pontos": ["Crime diverso dos dolosos contra a vida: remessa ao juiz competente.", "Acusado preso fica à disposição do novo juiz."],
+      "atencao": ["Desclassificação na primeira fase."],
+      "exemplo": "O juiz entende que o crime não é doloso contra a vida e remete os autos ao juízo competente.",
+      "prova": ["Assertiva que mantém o processo no juízo do Júri após a desclassificação erra."],
+      "termos": [],
+      "remissoes": ["Art. 74"]
+    },
+    "art-420": {
+      "simples": "A intimação da decisão de pronúncia será feita pessoalmente ao acusado, ao defensor nomeado e ao Ministério Público; ao defensor constituído, ao querelante e ao assistente do MP, na forma do §1º do art. 370. Será intimado por edital o acusado solto que não for encontrado.",
+      "pontos": ["Intimação pessoal: acusado, defensor nomeado e MP.", "Defensor constituído, querelante e assistente: por publicação (art. 370, §1º).", "Acusado solto não encontrado: edital."],
+      "atencao": ["Edital só para acusado SOLTO."],
+      "exemplo": "O acusado preso é intimado pessoalmente da pronúncia.",
+      "prova": ["Assertiva que admite a intimação por edital do acusado preso, da pronúncia, erra."],
+      "termos": [],
+      "remissoes": ["Art. 370"]
+    },
+    "art-421": {
+      "simples": "Preclusa a decisão de pronúncia, os autos serão encaminhados ao juiz presidente do Tribunal do Júri. Ainda que preclusa a pronúncia, havendo circunstância superveniente que altere a classificação do crime, o juiz ordenará a remessa dos autos ao Ministério Público. Em seguida, os autos serão conclusos ao juiz para decisão.",
+      "pontos": ["Preclusa a pronúncia: autos ao juiz presidente do Júri.", "Circunstância superveniente que altera a classificação: remessa ao MP.", "Depois, autos conclusos ao juiz."],
+      "atencao": ["Remessa ao MP em caso de circunstância superveniente."],
+      "exemplo": "A vítima morre depois da pronúncia, mudando a classificação do crime, e os autos vão ao MP.",
+      "prova": ["Assertiva que impede qualquer alteração da classificação após a preclusão da pronúncia erra."],
+      "termos": [],
+      "remissoes": ["Art. 413", "Art. 422"]
+    },
+    "art-422": {
+      "simples": "Ao receber os autos, o presidente do Tribunal do Júri determinará a intimação do Ministério Público ou do querelante, no caso de queixa, e do defensor, para, no prazo de 5 dias, apresentarem rol de testemunhas que irão depor em plenário, até o máximo de 5, oportunidade em que poderão juntar documentos e requerer diligência.",
+      "pontos": ["Fase de preparação do plenário.", "Prazo de 5 dias para o rol de testemunhas.", "Máximo de 5 testemunhas em plenário.", "Possibilidade de juntar documentos e requerer diligência."],
+      "atencao": ["No plenário: até 5 testemunhas por parte (na primeira fase, até 8)."],
+      "exemplo": "Preclusa a pronúncia, as partes têm 5 dias para apresentar o rol de até 5 testemunhas.",
+      "prova": ["Assertiva que fixa em 8 testemunhas o limite do rol para o plenário erra: são 5."],
+      "termos": [],
+      "remissoes": ["Art. 406", "Art. 423"]
+    },
+    "art-423": {
+      "simples": "Deliberando sobre os requerimentos de provas a serem produzidas ou exibidas no plenário do júri, e adotadas as providências devidas, o juiz presidente ordenará as diligências necessárias para sanar qualquer nulidade ou esclarecer fato que interesse ao julgamento da causa, e fará relatório sucinto do processo, determinando sua inclusão em pauta da reunião do Tribunal do Júri.",
+      "pontos": ["Juiz presidente delibera sobre as provas requeridas.", "Ordena diligências para sanar nulidades e esclarecer fatos.", "Faz relatório sucinto e inclui o processo em pauta."],
+      "atencao": ["Relatório sucinto, que será lido em plenário (art. 472)."],
+      "exemplo": "O juiz presidente faz o relatório e inclui o processo na pauta da reunião.",
+      "prova": ["Assertiva que dispensa o relatório sucinto do processo erra."],
+      "termos": [],
+      "remissoes": ["Art. 422"]
+    },
+    "art-424": {
+      "simples": "Quando a lei local de organização judiciária não atribuir ao presidente do Tribunal do Júri o preparo para julgamento, o juiz competente remeter-lhe-á os autos do processo preparado até 5 dias antes do sorteio a que se refere o art. 433. Deverão ser remetidos também os processos preparados até o encerramento da reunião, para a realização de julgamento.",
+      "pontos": ["Juiz do preparo remete os autos ao presidente do Júri até 5 dias antes do sorteio.", "Remessa também dos processos preparados até o fim da reunião."],
+      "atencao": ["Prazo de 5 dias antes do sorteio."],
+      "exemplo": "O juiz do preparo remete os autos ao presidente do Júri 5 dias antes do sorteio.",
+      "prova": ["Assertiva que fixa em 15 dias antes do sorteio o prazo de remessa erra: são 5 dias."],
+      "termos": [],
+      "remissoes": ["Art. 433"]
+    },
+    "art-425": {
+      "simples": "Anualmente, serão alistados pelo presidente do Tribunal do Júri de 800 a 1.500 jurados nas comarcas de mais de 1.000.000 de habitantes, de 300 a 700 nas comarcas de mais de 100.000 habitantes e de 80 a 400 nas comarcas de menor população. Nas comarcas onde for necessário, poderá ser aumentado o número de jurados e organizada lista de suplentes. O juiz presidente requisitará às autoridades locais, associações, entidades culturais, instituições de ensino, universidades, sindicatos, repartições públicas e outros núcleos comunitários a indicação de pessoas que reúnam as condições para exercer a função de jurado.",
+      "pontos": ["800 a 1.500 jurados em comarcas com mais de 1.000.000 de habitantes.", "300 a 700 em comarcas com mais de 100.000 habitantes.", "80 a 400 nas comarcas menores.", "Possibilidade de aumentar o número e organizar suplentes.", "Indicação de jurados por entidades da comunidade."],
+      "atencao": ["Faixas conforme a população da comarca."],
+      "exemplo": "Comarca com menos de 100.000 habitantes alista de 80 a 400 jurados.",
+      "prova": ["Assertiva que fixa o alistamento de 800 a 1.500 jurados para comarcas de menor população erra."],
+      "termos": [],
+      "remissoes": ["Art. 426"]
+    },
+    "art-426": {
+      "simples": "A lista geral dos jurados, com indicação das respectivas profissões, será publicada pela imprensa até o dia 10 de outubro de cada ano e divulgada em editais afixados à porta do Tribunal do Júri. A lista poderá ser alterada, de ofício ou mediante reclamação de qualquer do povo ao juiz presidente até o dia 10 de novembro, data de sua publicação definitiva. Juntamente com a lista, serão transcritos os arts. 436 a 446. Os nomes e endereços dos alistados, em cartões iguais, após serem verificados na presença do Ministério Público, de advogado indicado pela OAB e de defensor indicado pelas Defensorias Públicas, permanecerão guardados em urna fechada a chave, sob responsabilidade do juiz presidente. O jurado que tiver integrado o Conselho de Sentença nos 12 meses que antecederem à publicação da lista geral fica dela excluído. Anualmente, a lista geral de jurados será, obrigatoriamente, completada.",
+      "pontos": ["Lista publicada até 10 de outubro.", "Reclamações até 10 de novembro, data da publicação definitiva.", "Transcrição dos arts. 436 a 446.", "Cartões guardados em urna sob responsabilidade do juiz.", "Excluído quem integrou o Conselho de Sentença nos 12 meses anteriores.", "Lista completada anualmente."],
+      "atencao": ["Datas: 10 de outubro (publicação) e 10 de novembro (definitiva).", "Exclusão de quem serviu nos 12 meses anteriores."],
+      "exemplo": "Qualquer pessoa pode reclamar contra a lista até 10 de novembro.",
+      "prova": ["Assertiva que fixa em 10 de dezembro a publicação definitiva da lista de jurados erra: é 10 de novembro."],
+      "termos": [],
+      "remissoes": ["Art. 425"]
+    },
+    "art-427": {
+      "simples": "Se o interesse da ordem pública o reclamar ou houver dúvida sobre a imparcialidade do júri ou a segurança pessoal do acusado, o Tribunal, a requerimento do Ministério Público, do assistente, do querelante ou do acusado, ou mediante representação do juiz competente, poderá determinar o desaforamento do julgamento para outra comarca da mesma região, onde não existam aqueles motivos. O pedido será distribuído imediatamente e terá preferência de julgamento. Sendo relevantes os motivos, o relator poderá determinar, fundamentadamente, a suspensão do julgamento pelo júri. Será ouvido o juiz presidente, quando a medida não tiver sido por ele solicitada. Na pendência de recurso contra a pronúncia ou quando efetivado o julgamento, não se admitirá o desaforamento, salvo, nesta última hipótese, quanto a fato ocorrido durante ou após julgamento anulado.",
+      "pontos": ["Motivos: interesse da ordem pública, dúvida sobre a imparcialidade do júri ou sobre a segurança do acusado.", "Competência: o Tribunal, a pedido de MP, assistente, querelante, acusado ou por representação do juiz.", "Desaforamento para comarca da mesma região.", "Preferência de julgamento e possível suspensão do júri.", "Não cabe na pendência de recurso contra a pronúncia nem após o julgamento, salvo fato novo."],
+      "atencao": ["Quem decide é o TRIBUNAL.", "Mesma região, sem os mesmos motivos."],
+      "exemplo": "Dúvida sobre a imparcialidade do júri local leva ao desaforamento para outra comarca da mesma região.",
+      "prova": ["Assertiva que atribui ao juiz presidente a decisão sobre o desaforamento erra: decide o Tribunal."],
+      "termos": [{ "termo": "Desaforamento", "significado": "Deslocamento do julgamento do Júri para outra comarca." }],
+      "remissoes": ["Art. 428"]
+    },
+    "art-428": {
+      "simples": "O desaforamento também poderá ser determinado, em razão do comprovado excesso de serviço, ouvidos o juiz presidente e a parte contrária, se o julgamento não puder ser realizado no prazo de 6 meses, contado do trânsito em julgado da decisão de pronúncia. Para a contagem do prazo, não se computará o tempo de adiamentos, diligências ou incidentes de interesse da defesa. Não havendo excesso de serviço ou existência de processos aguardando julgamento em quantidade que ultrapasse a possibilidade de apreciação pelo Tribunal do Júri nas reuniões periódicas, o acusado poderá requerer ao Tribunal que determine a imediata realização do julgamento.",
+      "pontos": ["Desaforamento por excesso de serviço comprovado.", "Prazo de 6 meses contado do trânsito em julgado da pronúncia.", "Não conta o tempo de adiamentos e diligências de interesse da defesa.", "Sem excesso de serviço: acusado pode requerer a imediata realização do julgamento."],
+      "atencao": ["Prazo de 6 meses."],
+      "exemplo": "O julgamento não é realizado em 6 meses por excesso comprovado de serviço: cabe desaforamento.",
+      "prova": ["Assertiva que fixa em 1 ano o prazo para o desaforamento por excesso de serviço erra: são 6 meses."],
+      "termos": [],
+      "remissoes": ["Art. 427"]
+    },
+    "art-429": {
+      "simples": "Salvo motivo relevante que autorize alteração na ordem dos julgamentos, terão preferência os acusados presos; dentre os acusados presos, aqueles que estiverem há mais tempo na prisão; e, em igualdade de condições, os precedentemente pronunciados. Antes do dia designado para o primeiro julgamento da reunião periódica, será afixada na porta do edifício do Tribunal do Júri a lista dos processos a serem julgados. O juiz presidente reservará datas na mesma reunião periódica para a inclusão de processo que tiver o julgamento adiado.",
+      "pontos": ["Preferência: acusados presos.", "Entre os presos, os há mais tempo na prisão.", "Em igualdade, os pronunciados há mais tempo.", "Lista afixada na porta do Tribunal do Júri.", "Datas reservadas para processos adiados."],
+      "atencao": ["Ordem de preferência: presos, presos há mais tempo, pronunciados há mais tempo."],
+      "exemplo": "Réu preso há mais tempo é julgado antes dos demais.",
+      "prova": ["Assertiva que dá preferência ao acusado solto erra."],
+      "termos": [],
+      "remissoes": ["Art. 431"]
+    },
+    "art-430": {
+      "simples": "O assistente somente será admitido se tiver requerido sua habilitação até 5 dias antes da data da sessão na qual pretenda atuar.",
+      "pontos": ["Assistente deve requerer habilitação até 5 dias antes da sessão em que pretenda atuar."],
+      "atencao": ["Prazo de 5 dias antes da sessão."],
+      "exemplo": "A vítima se habilita como assistente 5 dias antes do plenário.",
+      "prova": ["Assertiva que permite a habilitação do assistente no dia do julgamento no plenário erra."],
+      "termos": [],
+      "remissoes": ["Art. 268"]
+    },
+    "art-431": {
+      "simples": "Estando o processo em ordem, o juiz presidente mandará intimar as partes, o ofendido, se for possível, as testemunhas e os peritos, quando houver requerimento, para a sessão de instrução e julgamento, observando, no que couber, o disposto no art. 420.",
+      "pontos": ["Intimação das partes, do ofendido (se possível), testemunhas e peritos (se requeridos).", "Observa o art. 420 no que couber."],
+      "atencao": ["Peritos só quando houver requerimento."],
+      "exemplo": "O juiz presidente intima as partes e testemunhas para a sessão do Júri.",
+      "prova": ["Assertiva que dispensa a intimação das partes para a sessão de julgamento erra."],
+      "termos": [],
+      "remissoes": ["Art. 420"]
+    },
+    "art-432": {
+      "simples": "Em seguida à organização da pauta, o juiz presidente determinará a intimação do Ministério Público, da Ordem dos Advogados do Brasil e da Defensoria Pública para acompanharem, em dia e hora designados, o sorteio dos jurados que atuarão na reunião periódica.",
+      "pontos": ["Intimação do MP, da OAB e da Defensoria Pública para acompanhar o sorteio dos jurados."],
+      "atencao": ["Fiscalização do sorteio por MP, OAB e Defensoria."],
+      "exemplo": "OAB e Defensoria acompanham o sorteio dos jurados da reunião.",
+      "prova": ["Assertiva que restringe o acompanhamento do sorteio ao Ministério Público erra."],
+      "termos": [],
+      "remissoes": ["Art. 433"]
+    },
+    "art-433": {
+      "simples": "O sorteio, presidido pelo juiz, far-se-á a portas abertas, cabendo-lhe retirar as cédulas até completar o número de 25 jurados, para a reunião periódica ou extraordinária. O sorteio será realizado entre o 15º e o 10º dia útil antecedente à instalação da reunião. A audiência de sorteio não será adiada pelo não comparecimento das partes. O jurado não sorteado poderá ter o seu nome novamente incluído para as reuniões futuras.",
+      "pontos": ["Sorteio público, presidido pelo juiz.", "25 jurados por reunião.", "Entre o 15º e o 10º dia útil antes da reunião.", "Não é adiado pela ausência das partes.", "Jurado não sorteado pode ser incluído em reuniões futuras."],
+      "atencao": ["25 jurados.", "Do 15º ao 10º dia útil antes."],
+      "exemplo": "O juiz sorteia, a portas abertas, 25 jurados para a reunião.",
+      "prova": ["Assertiva que fixa em 21 o número de jurados sorteados para a reunião erra: são 25."],
+      "termos": [],
+      "remissoes": ["Art. 432", "Art. 434"]
+    },
+    "art-434": {
+      "simples": "Os jurados sorteados serão convocados pelo correio ou por qualquer outro meio hábil para comparecer no dia e hora designados para a reunião, sob as penas da lei. No mesmo expediente de convocação serão transcritos os arts. 436 a 446 do Código.",
+      "pontos": ["Convocação por correio ou outro meio hábil.", "Sob as penas da lei.", "Transcrição dos arts. 436 a 446."],
+      "atencao": ["A convocação traz os deveres e as sanções."],
+      "exemplo": "Os jurados recebem convocação com a transcrição dos arts. 436 a 446.",
+      "prova": ["Assertiva que dispensa a transcrição dos arts. 436 a 446 na convocação erra."],
+      "termos": [],
+      "remissoes": ["Art. 433", "Art. 436"]
+    },
+    "art-435": {
+      "simples": "Serão afixados na porta do edifício do Tribunal do Júri a relação dos jurados convocados, os nomes do acusado e dos procuradores das partes, além do dia, hora e local das sessões de instrução e julgamento.",
+      "pontos": ["Afixação na porta do Tribunal do Júri: jurados convocados, acusado, procuradores, dia, hora e local."],
+      "atencao": ["Publicidade da pauta e dos jurados convocados."],
+      "exemplo": "A porta do fórum exibe a lista dos jurados e os dados da sessão.",
+      "prova": ["Assertiva que mantém sigilo da relação dos jurados convocados erra: ela é afixada."],
+      "termos": [],
+      "remissoes": ["Art. 434"]
+    },
+    "art-436": {
+      "simples": "O serviço do júri é obrigatório. O alistamento compreenderá os cidadãos maiores de 18 anos de notória idoneidade. Nenhum cidadão poderá ser excluído dos trabalhos do júri ou deixar de ser alistado em razão de cor ou etnia, raça, credo, sexo, profissão, classe social ou econômica, origem ou grau de instrução. A recusa injustificada ao serviço do júri acarretará multa no valor de 1 a 10 salários mínimos, a critério do juiz, de acordo com a condição econômica do jurado.",
+      "pontos": ["Serviço do júri obrigatório.", "Alistamento: maiores de 18 anos de notória idoneidade.", "Vedada a exclusão por cor, etnia, raça, credo, sexo, profissão, classe social, origem ou instrução.", "Recusa injustificada: multa de 1 a 10 salários mínimos."],
+      "atencao": ["Multa de 1 a 10 salários mínimos.", "Maioridade de 18 anos."],
+      "exemplo": "Recusa injustificada ao serviço do júri gera multa.",
+      "prova": ["Assertiva que torna facultativo o serviço do júri erra: é obrigatório."],
+      "termos": [],
+      "remissoes": ["Art. 437"]
+    }
+  }
+}

@@ -1,0 +1,618 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 18: arts. 745 a 811",
+  "units": {
+    "art-745": {
+      "simples": "O juiz poderá ordenar as diligências necessárias para apreciação do pedido, cercando-as do sigilo possível e, antes da decisão final, ouvirá o Ministério Público.",
+      "pontos": ["Juiz ordena as diligências necessárias, com sigilo possível.", "Antes da decisão final, ouve o Ministério Público."],
+      "atencao": ["Oitiva do MP antes da decisão sobre a reabilitação."],
+      "exemplo": "O juiz determina diligências sigilosas e ouve o MP antes de decidir o pedido.",
+      "prova": ["Assertiva que dispensa a oitiva do Ministério Público antes da decisão da reabilitação erra."],
+      "termos": [],
+      "remissoes": ["Art. 743"]
+    },
+    "art-746": {
+      "simples": "Da decisão que conceder a reabilitação haverá recurso de ofício, ou seja, o juiz deve submetê-la ao tribunal independentemente de recurso das partes.",
+      "pontos": ["Concessão da reabilitação: recurso de ofício."],
+      "atencao": ["Recurso de ofício, e não voluntário."],
+      "exemplo": "Concedida a reabilitação, o juiz envia a decisão ao tribunal por recurso de ofício.",
+      "prova": ["Assertiva que dispensa o recurso de ofício contra a concessão da reabilitação erra."],
+      "termos": [],
+      "remissoes": ["Art. 574"]
+    },
+    "art-747": {
+      "simples": "A reabilitação, depois de sentença irrecorrível, será comunicada ao Instituto de Identificação e Estatística ou repartição congênere.",
+      "pontos": ["Reabilitação irrecorrível é comunicada ao Instituto de Identificação ou repartição congênere."],
+      "atencao": ["Comunicação para efeitos registrais."],
+      "exemplo": "Transitada em julgado a reabilitação, o juízo comunica o instituto de identificação.",
+      "prova": ["Assertiva que dispensa a comunicação da reabilitação ao instituto de identificação erra."],
+      "termos": [],
+      "remissoes": ["Art. 748"]
+    },
+    "art-748": {
+      "simples": "A condenação ou condenações anteriores não serão mencionadas na folha de antecedentes do reabilitado, nem em certidão extraída dos livros do juízo, salvo quando requisitadas por juiz criminal.",
+      "pontos": ["Condenações anteriores não constam da folha de antecedentes do reabilitado.", "Nem em certidões, salvo requisição de juiz criminal."],
+      "atencao": ["Sigilo dos antecedentes, com exceção para o juiz criminal."],
+      "exemplo": "O reabilitado pede certidão de antecedentes e a condenação anterior não aparece.",
+      "prova": ["Assertiva que impede o juiz criminal de requisitar as condenações do reabilitado erra."],
+      "termos": [],
+      "remissoes": ["Art. 743"]
+    },
+    "art-749": {
+      "simples": "Indeferida a reabilitação, o condenado não poderá renovar o pedido senão após o decurso de dois anos, salvo se o indeferimento tiver resultado de falta ou insuficiência de documentos.",
+      "pontos": ["Reabilitação indeferida: novo pedido só após dois anos.", "Exceção: indeferimento por falta ou insuficiência de documentos."],
+      "atencao": ["Prazo de dois anos."],
+      "exemplo": "O pedido foi negado por mérito, e o condenado aguarda dois anos para renová-lo.",
+      "prova": ["Assertiva que permite renovar imediatamente o pedido negado por mérito erra."],
+      "termos": [],
+      "remissoes": ["Art. 743"]
+    },
+    "art-750": {
+      "simples": "A revogação de reabilitação, prevista no Código Penal, será decretada pelo juiz, de ofício ou a requerimento do Ministério Público.",
+      "pontos": ["Revogação da reabilitação decretada pelo juiz, de ofício ou a pedido do MP."],
+      "atencao": ["Ocorre se o reabilitado for condenado por decisão definitiva a pena que não seja de multa."],
+      "exemplo": "O reabilitado é condenado definitivamente por novo crime, e o juiz revoga a reabilitação.",
+      "prova": ["Assertiva que exige provocação do MP para a revogação da reabilitação erra: pode ser de ofício."],
+      "termos": [],
+      "remissoes": ["Art. 743"]
+    },
+    "art-751": {
+      "simples": "Durante a execução da pena ou durante o tempo em que a ela se furtar o condenado, poderá ser imposta medida de segurança se o juiz ou o tribunal, na sentença, omitir sua decretação nos casos de periculosidade presumida, deixar de aplicá-la ou de excluí-la expressamente, ou declarar os elementos do processo insuficientes e ordenar indagações para verificar a periculosidade; ou se, tendo sido expressamente excluída a periculosidade na sentença, novos fatos demonstrarem ser o condenado perigoso.",
+      "pontos": ["Medida de segurança durante a execução ou a fuga do condenado.", "Sentença omissa nos casos de periculosidade presumida.", "Sentença que não aplicou nem excluiu expressamente.", "Elementos insuficientes, com indagações sobre a periculosidade.", "Novos fatos após exclusão expressa da periculosidade."],
+      "atencao": ["Regras do sistema duplo binário, hoje superado pelo sistema vicariante."],
+      "exemplo": "Texto histórico, de aplicação rara com o sistema atual.",
+      "prova": ["Assertiva que aplica hoje a periculosidade presumida do art. 751 sem considerar a reforma penal erra."],
+      "termos": [],
+      "remissoes": ["Art. 752"]
+    },
+    "art-752": {
+      "simples": "Poderá ser imposta medida de segurança, depois de transitar em julgado a sentença, ainda quando não iniciada a execução da pena, por motivo diverso de fuga ou ocultação do condenado, nos casos da letra a do inciso I do artigo anterior, bem como da letra b, se tiver sido alegada a periculosidade, e no caso da letra c.",
+      "pontos": ["Medida de segurança após o trânsito, mesmo sem início da execução.", "Hipóteses do art. 751, I, a, b (se alegada a periculosidade) e c."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que exige o início da execução da pena para a medida de segurança do art. 752 erra."],
+      "termos": [],
+      "remissoes": ["Art. 751"]
+    },
+    "art-753": {
+      "simples": "Ainda depois de transitar em julgado a sentença absolutória, poderá ser imposta a medida de segurança, enquanto não decorrido tempo equivalente ao da sua duração mínima, a indivíduo que a lei presuma perigoso.",
+      "pontos": ["Após a absolvição definitiva, medida de segurança ao presumidamente perigoso.", "Enquanto não decorrido tempo equivalente ao da duração mínima."],
+      "atencao": ["Periculosidade presumida: conceito superado."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que aplica hoje a periculosidade presumida para impor medida de segurança erra."],
+      "termos": [],
+      "remissoes": ["Art. 751"]
+    },
+    "art-754": {
+      "simples": "A aplicação da medida de segurança, nos casos previstos nos arts. 751 e 752, competirá ao juiz da execução da pena e, no caso do art. 753, ao juiz da sentença.",
+      "pontos": ["Arts. 751 e 752: juiz da execução da pena.", "Art. 753: juiz da sentença."],
+      "atencao": ["Competência conforme o artigo aplicado."],
+      "exemplo": "A medida do art. 751 é aplicada pelo juiz da execução da pena.",
+      "prova": ["Assertiva que atribui ao juiz da sentença a medida do art. 751 erra: é o juiz da execução."],
+      "termos": [],
+      "remissoes": ["Art. 751", "Art. 753"]
+    },
+    "art-755": {
+      "simples": "A imposição da medida de segurança, nos casos dos arts. 751 a 753, poderá ser decretada de ofício ou a requerimento do Ministério Público. O diretor do estabelecimento penal que tiver conhecimento de fatos indicativos da periculosidade do condenado, a quem não tenha sido imposta medida de segurança, deverá logo comunicá-los ao juiz.",
+      "pontos": ["Decretada de ofício ou a requerimento do MP.", "Diretor do estabelecimento comunica ao juiz fatos indicativos da periculosidade."],
+      "atencao": ["Dever de comunicação do diretor."],
+      "exemplo": "O diretor informa ao juiz fatos que indicam a periculosidade do preso.",
+      "prova": ["Assertiva que dispensa a comunicação do diretor ao juiz erra."],
+      "termos": [],
+      "remissoes": ["Art. 754"]
+    },
+    "art-756": {
+      "simples": "Nos casos do inciso I, a e b, do art. 751, e no inciso I do art. 752, poderá ser dispensada nova audiência do condenado.",
+      "pontos": ["Nesses casos, pode ser dispensada nova audiência do condenado."],
+      "atencao": ["Dispensa facultativa."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que exige sempre nova audiência do condenado, nesses casos, erra."],
+      "termos": [],
+      "remissoes": ["Art. 757"]
+    },
+    "art-757": {
+      "simples": "Nos casos do art. 751, I, c, e II, e do art. 752, II, o juiz, depois de proceder às diligências que julgar convenientes, ouvirá o Ministério Público e concederá ao condenado o prazo de três dias para alegações, devendo a prova requerida ou reputada necessária ser produzida em prazo determinado. O juiz nomeará defensor ao condenado que o requerer. Se o réu estiver foragido, o juiz procederá às diligências convenientes, concedendo prazo de provas se requerido pelo MP. Findo o prazo de provas, o juiz proferirá a sentença dentro de três dias.",
+      "pontos": ["Diligências, oitiva do MP e três dias para as alegações do condenado.", "Defensor nomeado se requerido.", "Foragido: diligências e prazo de provas a pedido do MP.", "Sentença em três dias."],
+      "atencao": ["Prazos de três dias."],
+      "exemplo": "O juiz ouve o MP, concede três dias ao condenado e sentencia em três dias após as provas.",
+      "prova": ["Assertiva que fixa em cinco dias o prazo da sentença após as provas erra: são três."],
+      "termos": [],
+      "remissoes": ["Art. 751"]
+    },
+    "art-758": {
+      "simples": "A execução da medida de segurança incumbirá ao juiz da execução da sentença.",
+      "pontos": ["Execução da medida de segurança cabe ao juiz da execução."],
+      "atencao": ["Juízo da execução."],
+      "exemplo": "O juiz da execução cuida da internação do condenado inimputável.",
+      "prova": ["Assertiva que atribui ao juiz da sentença a execução da medida de segurança erra."],
+      "termos": [],
+      "remissoes": ["Art. 754"]
+    },
+    "art-759": {
+      "simples": "No caso do art. 753, o juiz ouvirá o curador já nomeado ou que então nomear, podendo mandar submeter o condenado a exame mental, internando-o, desde logo, em estabelecimento adequado.",
+      "pontos": ["No caso do art. 753, o juiz ouve o curador, já nomeado ou novo.", "Pode determinar exame mental e a internação imediata."],
+      "atencao": ["Dispositivo histórico ligado à periculosidade presumida."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que dispensa o curador na hipótese do art. 759 erra."],
+      "termos": [],
+      "remissoes": ["Art. 753"]
+    },
+    "art-760": {
+      "simples": "Para a verificação da periculosidade, no caso do §3º do art. 78 do Código Penal, observar-se-á o disposto no art. 757, no que for aplicável.",
+      "pontos": ["Verificação da periculosidade nesse caso segue, no que couber, o art. 757."],
+      "atencao": ["Remissão ao Código Penal em redação original."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que cria rito próprio no art. 760 erra: ele remete ao art. 757."],
+      "termos": [],
+      "remissoes": ["Art. 757"]
+    },
+    "art-761": {
+      "simples": "Para a providência determinada no art. 84, §2º, do Código Penal, se as sentenças forem proferidas por juízes diferentes, será competente o juiz que tiver sentenciado por último ou a autoridade de jurisdição prevalente no caso do art. 82.",
+      "pontos": ["Sentenças de juízes diferentes: competente o juiz da última sentença.", "Ou a autoridade de jurisdição prevalente (art. 82)."],
+      "atencao": ["Dispositivo ligado a normas do Código Penal em redação original."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que atribui ao juiz da primeira sentença a providência do art. 761 erra: é o da última sentença."],
+      "termos": [],
+      "remissoes": ["Art. 82"]
+    },
+    "art-762": {
+      "simples": "A ordem de internação, expedida para executar-se medida de segurança detentiva, conterá a qualificação do internando, o teor da decisão que tiver imposto a medida de segurança e a data em que terminará o prazo mínimo da internação.",
+      "pontos": ["Qualificação do internando.", "Teor da decisão que impôs a medida.", "Data de término do prazo mínimo da internação."],
+      "atencao": ["Conteúdo da ordem de internação."],
+      "exemplo": "A ordem de internação traz o teor da decisão e a data do fim do prazo mínimo.",
+      "prova": ["Assertiva que dispensa a data do fim do prazo mínimo na ordem de internação erra."],
+      "termos": [],
+      "remissoes": ["Art. 763"]
+    },
+    "art-763": {
+      "simples": "Se estiver solto o internando, expedir-se-á mandado de captura, que será cumprido por oficial de justiça ou por autoridade policial.",
+      "pontos": ["Internando solto: mandado de captura.", "Cumprido por oficial de justiça ou autoridade policial."],
+      "atencao": ["Mandado de captura para internar."],
+      "exemplo": "O juiz expede mandado de captura do internando que está solto.",
+      "prova": ["Assertiva que dispensa mandado para internar quem está solto erra."],
+      "termos": [],
+      "remissoes": ["Art. 762"]
+    },
+    "art-764": {
+      "simples": "O trabalho nos estabelecimentos referidos no art. 88, §1º, III, do Código Penal, será educativo e remunerado, de modo que assegure ao internado meios de subsistência quando cessar a internação. O trabalho poderá ser praticado ao ar livre. Nos outros estabelecimentos, o trabalho dependerá das condições pessoais do internado.",
+      "pontos": ["Trabalho educativo e remunerado nesses estabelecimentos.", "Pode ser ao ar livre.", "Nos demais estabelecimentos, depende das condições pessoais do internado."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "O internado trabalha, com remuneração, para ter meios de subsistência ao sair.",
+      "prova": ["Assertiva que torna gratuito o trabalho do internado erra: é remunerado."],
+      "termos": [],
+      "remissoes": ["Art. 765"]
+    },
+    "art-765": {
+      "simples": "A quarta parte do salário caberá ao Estado ou, no Distrito Federal e nos Territórios, à União, e o restante será depositado em nome do internado ou, se este preferir, entregue à sua família.",
+      "pontos": ["Um quarto do salário vai ao Estado (ou à União).", "O restante é depositado em nome do internado ou entregue à família."],
+      "atencao": ["Um quarto ao ente público."],
+      "exemplo": "Do salário do internado, a quarta parte é recolhida ao Estado.",
+      "prova": ["Assertiva que destina metade do salário ao Estado erra: é a quarta parte."],
+      "termos": [],
+      "remissoes": ["Art. 764"]
+    },
+    "art-766": {
+      "simples": "A internação das mulheres será feita em estabelecimento próprio ou em seção especial.",
+      "pontos": ["Mulheres internadas em estabelecimento próprio ou seção especial."],
+      "atencao": ["Separação por sexo."],
+      "exemplo": "A mulher submetida a internação fica em ala própria.",
+      "prova": ["Assertiva que permite internar mulheres junto com homens, sem seção separada, erra."],
+      "termos": [],
+      "remissoes": ["Art. 762"]
+    },
+    "art-767": {
+      "simples": "O juiz fixará as normas de conduta que serão observadas durante a liberdade vigiada. São obrigatórias: tomar ocupação, dentro de prazo razoável, se apto para o trabalho, e não mudar do território da jurisdição do juiz sem prévia autorização. Poderão ser impostas, entre outras, não mudar de habitação sem aviso prévio, recolher-se cedo à habitação, não trazer consigo armas ofensivas e não frequentar casas de bebidas ou de tavolagem, nem certas reuniões, espetáculos ou diversões. Será entregue ao indivíduo uma caderneta, de que constarão as obrigações impostas.",
+      "pontos": ["Normas de conduta fixadas pelo juiz.", "Obrigatórias: ocupação lícita e não mudar de jurisdição sem autorização.", "Facultativas: aviso de mudança, recolhimento, sem armas, sem certos locais.", "Caderneta com as obrigações."],
+      "atencao": ["Liberdade vigiada: medida de segurança histórica."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que dispensa a caderneta de obrigações da liberdade vigiada erra."],
+      "termos": [],
+      "remissoes": ["Art. 698"]
+    },
+    "art-768": {
+      "simples": "As obrigações estabelecidas na sentença serão comunicadas à autoridade policial.",
+      "pontos": ["Obrigações da sentença comunicadas à autoridade policial."],
+      "atencao": ["Comunicação à polícia."],
+      "exemplo": "O juiz comunica à polícia as obrigações impostas ao sujeito à liberdade vigiada.",
+      "prova": ["Assertiva que dispensa a comunicação das obrigações à autoridade policial erra."],
+      "termos": [],
+      "remissoes": ["Art. 767"]
+    },
+    "art-769": {
+      "simples": "A vigilância será exercida discretamente, de modo que não prejudique o indivíduo a ela sujeito.",
+      "pontos": ["Vigilância discreta, sem prejudicar o indivíduo."],
+      "atencao": ["Discrição na fiscalização."],
+      "exemplo": "A fiscalização é feita de modo discreto, sem expor o indivíduo.",
+      "prova": ["Assertiva que autoriza vigilância ostensiva e prejudicial erra."],
+      "termos": [],
+      "remissoes": ["Art. 767"]
+    },
+    "art-770": {
+      "simples": "Mediante representação da autoridade incumbida da vigilância, a requerimento do Ministério Público ou de ofício, poderá o juiz modificar as normas fixadas ou estabelecer outras.",
+      "pontos": ["Juiz pode modificar as normas ou criar outras.", "Por representação da autoridade, a pedido do MP ou de ofício."],
+      "atencao": ["Modificação das condições."],
+      "exemplo": "O juiz altera as normas de conduta por representação da autoridade que fiscaliza.",
+      "prova": ["Assertiva que torna imutáveis as normas fixadas na sentença erra."],
+      "termos": [],
+      "remissoes": ["Art. 767"]
+    },
+    "art-771": {
+      "simples": "Para execução do exílio local, o juiz comunicará sua decisão à autoridade policial do lugar ou dos lugares onde o exilado está proibido de permanecer ou de residir. O infrator da medida será conduzido à presença do juiz, que poderá mantê-lo detido até proferir decisão. Reconhecida a transgressão e imposta a liberdade vigiada, o juiz determinará que a autoridade policial providencie para que o infrator siga imediatamente para o lugar de residência por ele escolhido, oficiando à autoridade policial desse lugar.",
+      "pontos": ["Exílio local comunicado à autoridade policial dos lugares proibidos.", "Infrator conduzido ao juiz, que pode mantê-lo detido até decidir.", "Transgressão reconhecida: liberdade vigiada e remoção ao lugar de residência escolhido."],
+      "atencao": ["Medida histórica, sem aplicação atual."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que aplica hoje o exílio local como medida de segurança erra."],
+      "termos": [],
+      "remissoes": ["Art. 772"]
+    },
+    "art-772": {
+      "simples": "A proibição de frequentar determinados lugares será comunicada pelo juiz à autoridade policial, que lhe dará conhecimento de qualquer transgressão.",
+      "pontos": ["Proibição de frequentar lugares comunicada à autoridade policial.", "A polícia informa ao juiz qualquer transgressão."],
+      "atencao": ["Medida histórica."],
+      "exemplo": "A polícia avisa o juiz quando o proibido frequenta o lugar vedado.",
+      "prova": ["Assertiva que dispensa a comunicação da transgressão ao juiz erra."],
+      "termos": [],
+      "remissoes": ["Art. 771"]
+    },
+    "art-773": {
+      "simples": "A medida de fechamento de estabelecimento ou de interdição de associação será comunicada pelo juiz à autoridade policial, para que a execute.",
+      "pontos": ["Fechamento de estabelecimento ou interdição de associação comunicados à autoridade policial.", "A polícia executa."],
+      "atencao": ["Medida histórica."],
+      "exemplo": "O juiz determina o fechamento de um estabelecimento, e a polícia o executa.",
+      "prova": ["Assertiva que atribui ao próprio juiz a execução material do fechamento erra: cabe à polícia."],
+      "termos": [],
+      "remissoes": ["Art. 772"]
+    },
+    "art-774": {
+      "simples": "Nos casos do parágrafo único do art. 83 do Código Penal, ou quando a transgressão de uma medida de segurança importar a imposição de outra, observar-se-á o disposto no art. 757, no que for aplicável.",
+      "pontos": ["Transgressão que leva a outra medida de segurança: aplica-se, no que couber, o art. 757."],
+      "atencao": ["Remissão ao art. 757."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que cria rito próprio para a transgressão da medida erra: aplica-se o art. 757."],
+      "termos": [],
+      "remissoes": ["Art. 757"]
+    },
+    "art-775": {
+      "simples": "A cessação ou não da periculosidade se verificará ao fim do prazo mínimo de duração da medida de segurança pelo exame das condições da pessoa a que tiver sido imposta, observando-se que o diretor do estabelecimento de internação ou a autoridade policial remeterá ao juiz da execução minucioso relatório, até um mês antes de expirado o prazo mínimo se não for inferior a um ano, ou até quinze dias nos outros casos; que, se o indivíduo estiver internado em manicômio judiciário ou casa de custódia, o relatório será acompanhado do laudo de exame pericial feito por dois médicos designados pelo diretor; e que o diretor ou a autoridade deverá concluir pela conveniência da revogação ou não da medida.",
+      "pontos": ["Verificação da periculosidade ao fim do prazo mínimo.", "Relatório até um mês antes (prazo mínimo igual ou superior a um ano) ou quinze dias nos demais casos.", "Internado: laudo de dois médicos.", "Conclusão sobre a revogação ou não da medida."],
+      "atencao": ["Um mês ou quinze dias de antecedência para o relatório."],
+      "exemplo": "O diretor envia o relatório e o laudo de dois médicos antes do fim do prazo mínimo.",
+      "prova": ["Assertiva que dispensa o laudo médico do internado no relatório do diretor erra."],
+      "termos": [],
+      "remissoes": ["Art. 776", "Art. 777"]
+    },
+    "art-776": {
+      "simples": "Nos exames sucessivos a que se referem o §1º, II, e §2º do art. 81 do Código Penal, observar-se-á, no que lhes for aplicável, o disposto no artigo anterior.",
+      "pontos": ["Exames sucessivos seguem, no que couber, o art. 775."],
+      "atencao": ["Remissão ao art. 775."],
+      "exemplo": "Os exames periódicos seguem o procedimento do art. 775.",
+      "prova": ["Assertiva que cria rito próprio para os exames sucessivos erra."],
+      "termos": [],
+      "remissoes": ["Art. 775"]
+    },
+    "art-777": {
+      "simples": "Em qualquer tempo, ainda durante o prazo mínimo de duração da medida de segurança, poderá o tribunal, câmara ou turma, a requerimento do Ministério Público ou do interessado, seu defensor ou curador, ordenar o exame para a verificação da cessação da periculosidade. Designado o relator e ouvido o procurador-geral, se a medida não tiver sido por ele requerida, o pedido será julgado na primeira sessão. Deferido o pedido, a decisão será imediatamente comunicada ao juiz, que requisitará, marcando prazo, o relatório e o exame ou ordenará as diligências.",
+      "pontos": ["A qualquer tempo, o tribunal pode ordenar o exame de cessação da periculosidade.", "Requerimento do MP, do interessado, do defensor ou do curador.", "Julgamento na primeira sessão.", "Deferido, o juiz requisita o relatório e o exame."],
+      "atencao": ["Exame possível mesmo antes do prazo mínimo."],
+      "exemplo": "O defensor pede ao tribunal o exame de cessação da periculosidade antes do prazo mínimo.",
+      "prova": ["Assertiva que exige o fim do prazo mínimo para pedir o exame de cessação da periculosidade erra."],
+      "termos": [],
+      "remissoes": ["Art. 775"]
+    },
+    "art-778": {
+      "simples": "Transitando em julgado a sentença de revogação, o juiz expedirá ordem para a desinternação, quando se tratar de medida detentiva, ou para que cesse a vigilância ou a proibição, nos outros casos.",
+      "pontos": ["Revogação da medida transitada em julgado: ordem de desinternação.", "Nas demais medidas: cessa a vigilância ou a proibição."],
+      "atencao": ["Efeito da revogação."],
+      "exemplo": "Revogada definitivamente a medida, o juiz expede a ordem de desinternação.",
+      "prova": ["Assertiva que mantém a internação após o trânsito da revogação erra."],
+      "termos": [],
+      "remissoes": ["Art. 775"]
+    },
+    "art-779": {
+      "simples": "O confisco dos instrumentos e produtos do crime, no caso previsto no art. 100 do Código Penal, será decretado no despacho de arquivamento do inquérito, na sentença de impronúncia ou na sentença absolutória.",
+      "pontos": ["Confisco de instrumentos e produtos do crime decretado no arquivamento, na impronúncia ou na absolvição."],
+      "atencao": ["Confisco independe de condenação nesses casos."],
+      "exemplo": "Na sentença absolutória, o juiz decreta o confisco do instrumento ilícito.",
+      "prova": ["Assertiva que condiciona o confisco do art. 779 à condenação erra."],
+      "termos": [],
+      "remissoes": ["Art. 119", "Art. 124"]
+    },
+    "art-780": {
+      "simples": "Sem prejuízo de convenções ou tratados, aplicar-se-á o disposto neste Título à homologação de sentenças penais estrangeiras e à expedição e ao cumprimento de cartas rogatórias para citações, inquirições e outras diligências necessárias à instrução de processo penal.",
+      "pontos": ["O Título rege a homologação de sentenças penais estrangeiras.", "Rege também as cartas rogatórias, sem prejuízo de tratados."],
+      "atencao": ["Tratados e convenções prevalecem."],
+      "exemplo": "A carta rogatória para ouvir testemunha no exterior segue este Título, salvo tratado.",
+      "prova": ["Assertiva que afasta os tratados internacionais em favor do CPP erra."],
+      "termos": [],
+      "remissoes": ["Art. 783"]
+    },
+    "art-781": {
+      "simples": "As sentenças estrangeiras não serão homologadas, nem as cartas rogatórias cumpridas, se contrárias à ordem pública e aos bons costumes.",
+      "pontos": ["Sentenças estrangeiras e cartas rogatórias contrárias à ordem pública e aos bons costumes não são homologadas ou cumpridas."],
+      "atencao": ["Limite da ordem pública."],
+      "exemplo": "Uma carta rogatória contrária à ordem pública brasileira não é cumprida.",
+      "prova": ["Assertiva que obriga o cumprimento de carta rogatória contrária à ordem pública erra."],
+      "termos": [],
+      "remissoes": ["Art. 780"]
+    },
+    "art-782": {
+      "simples": "O trânsito, por via diplomática, dos documentos apresentados constituirá prova bastante de sua autenticidade.",
+      "pontos": ["Documentos transmitidos por via diplomática têm autenticidade comprovada."],
+      "atencao": ["Via diplomática comprova a autenticidade."],
+      "exemplo": "O documento enviado por via diplomática dispensa outra prova de autenticidade.",
+      "prova": ["Assertiva que exige nova autenticação de documento que tramitou por via diplomática erra."],
+      "termos": [],
+      "remissoes": ["Art. 783"]
+    },
+    "art-783": {
+      "simples": "As cartas rogatórias serão, pelo respectivo juiz, remetidas ao Ministro da Justiça, a fim de ser pedido o seu cumprimento, por via diplomática, às autoridades estrangeiras competentes.",
+      "pontos": ["Cartas rogatórias remetidas pelo juiz ao Ministro da Justiça.", "Cumprimento pedido por via diplomática."],
+      "atencao": ["Trâmite por via diplomática."],
+      "exemplo": "O juiz remete ao Ministro da Justiça a carta rogatória para ouvir testemunha no exterior.",
+      "prova": ["Assertiva que permite ao juiz enviar a carta rogatória diretamente à autoridade estrangeira erra."],
+      "termos": [],
+      "remissoes": ["Art. 780"]
+    },
+    "art-784": {
+      "simples": "As cartas rogatórias emanadas de autoridades estrangeiras competentes não dependem de homologação e serão atendidas se encaminhadas por via diplomática e desde que o crime, segundo a lei brasileira, não exclua a extradição. As rogatórias, acompanhadas de tradução, serão, após exequatur do presidente do Supremo Tribunal Federal, cumpridas pelo juiz criminal do lugar onde as diligências tenham de efetuar-se. A carta rogatória será remetida pelo presidente do STF ao presidente do Tribunal de Apelação do Estado, do Distrito Federal ou do Território. Versando sobre crime de ação privada, o andamento depende do interessado, a quem incumbirá o pagamento das despesas. Ficará sempre na secretaria do STF cópia da carta rogatória.",
+      "pontos": ["Rogatória estrangeira dispensa homologação, mas exige via diplomática e crime que não exclua a extradição.", "Tradução e exequatur do presidente do STF.", "Cumprimento pelo juiz criminal do lugar.", "Crime de ação privada: andamento e despesas pelo interessado.", "Cópia fica no STF."],
+      "atencao": ["Hoje o exequatur é do Superior Tribunal de Justiça (Emenda Constitucional 45)."],
+      "exemplo": "A rogatória estrangeira vem por via diplomática e recebe exequatur antes de ser cumprida.",
+      "prova": ["Assertiva que exige homologação das rogatórias estrangeiras erra: elas dependem de exequatur, e não de homologação."],
+      "termos": [{ "termo": "Exequatur", "significado": "Autorização para cumprir no Brasil ato de autoridade estrangeira." }],
+      "remissoes": ["Art. 783"]
+    },
+    "art-785": {
+      "simples": "Concluídas as diligências, a carta rogatória será devolvida ao presidente do Supremo Tribunal Federal, por intermédio do presidente do Tribunal de Apelação, o qual, antes de devolvê-la, mandará completar qualquer diligência ou sanar qualquer nulidade.",
+      "pontos": ["Rogatória cumprida volta ao presidente do STF, por intermédio do presidente do Tribunal de Apelação.", "O presidente completa diligências ou sana nulidades antes de devolver."],
+      "atencao": ["Devolução com saneamento."],
+      "exemplo": "Antes de devolver a rogatória, o presidente do tribunal manda completar uma diligência.",
+      "prova": ["Assertiva que dispensa o saneamento de nulidades antes da devolução erra."],
+      "termos": [],
+      "remissoes": ["Art. 784"]
+    },
+    "art-786": {
+      "simples": "O despacho que conceder o exequatur marcará, para o cumprimento da diligência, prazo razoável, que poderá ser excedido, havendo justa causa, ficando esta consignada em ofício dirigido ao presidente do Supremo Tribunal Federal, juntamente com a carta rogatória.",
+      "pontos": ["Exequatur fixa prazo razoável para o cumprimento.", "Pode ser excedido por justa causa, consignada em ofício ao presidente do STF."],
+      "atencao": ["Justa causa registrada em ofício."],
+      "exemplo": "O prazo da diligência é excedido, e a justa causa é informada em ofício.",
+      "prova": ["Assertiva que veda qualquer excesso do prazo fixado no exequatur erra."],
+      "termos": [],
+      "remissoes": ["Art. 784"]
+    },
+    "art-787": {
+      "simples": "As sentenças estrangeiras deverão ser previamente homologadas pelo Supremo Tribunal Federal para que produzam os efeitos do art. 7º do Código Penal. Hoje a competência é do Superior Tribunal de Justiça.",
+      "pontos": ["Sentença estrangeira precisa de homologação prévia para produzir os efeitos do art. 7º do CP.", "A competência passou ao STJ."],
+      "atencao": ["Homologação é do STJ após a Emenda Constitucional 45."],
+      "exemplo": "A sentença penal estrangeira só produz efeitos no Brasil depois de homologada.",
+      "prova": ["Assertiva que dispensa a homologação da sentença estrangeira para produzir efeitos erra."],
+      "termos": [],
+      "remissoes": ["Art. 788"]
+    },
+    "art-788": {
+      "simples": "A sentença penal estrangeira será homologada, quando a aplicação da lei brasileira produzir na espécie as mesmas consequências e concorrerem os seguintes requisitos: estar revestida das formalidades externas necessárias, segundo a legislação do país de origem; haver sido proferida por juiz competente, mediante citação regular, segundo a mesma legislação; ter passado em julgado; estar devidamente autenticada por cônsul brasileiro; e estar acompanhada de tradução feita por tradutor público.",
+      "pontos": ["Mesmas consequências pela lei brasileira.", "Formalidades externas segundo a lei do país de origem.", "Juiz competente e citação regular.", "Trânsito em julgado.", "Autenticação por cônsul brasileiro e tradução por tradutor público."],
+      "atencao": ["Cinco requisitos, além da equivalência de consequências."],
+      "exemplo": "A sentença estrangeira transitada em julgado, autenticada e traduzida pode ser homologada.",
+      "prova": ["Assertiva que dispensa o trânsito em julgado da sentença estrangeira erra."],
+      "termos": [],
+      "remissoes": ["Art. 787"]
+    },
+    "art-789": {
+      "simples": "O procurador-geral da República, sempre que tiver conhecimento da existência de sentença penal estrangeira, emanada de Estado que tenha com o Brasil tratado de extradição e que haja imposto medida de segurança pessoal ou pena acessória que deva ser cumprida no Brasil, pedirá ao Ministro da Justiça providências para a homologação. A homologação de sentença de Estado que não tiver tratado de extradição dependerá de requisição do Ministro da Justiça. Distribuído o requerimento, o relator mandará citar o interessado para deduzir embargos, dentro de dez dias se residir no Distrito Federal, de trinta dias no caso contrário. Se o interessado não deduzir embargos, será nomeado defensor, que produzirá a defesa em dez dias. Os embargos somente poderão fundar-se em dúvida sobre a autenticidade do documento, sobre a inteligência da sentença ou sobre a falta de requisito dos arts. 781 e 788.",
+      "pontos": ["PGR provoca a homologação de sentença de Estado com tratado de extradição.", "Sem tratado: requisição do Ministro da Justiça.", "Embargos em dez dias (Distrito Federal) ou trinta dias (demais).", "Sem embargos: defensor nomeado, com dez dias.", "Embargos só por dúvida sobre autenticidade, inteligência da sentença ou falta de requisito."],
+      "atencao": ["Prazos de embargos: 10 e 30 dias."],
+      "exemplo": "O interessado que reside fora do Distrito Federal tem trinta dias para embargar.",
+      "prova": ["Assertiva que fixa em dez dias o prazo de embargos para quem reside fora do Distrito Federal erra: são trinta."],
+      "termos": [],
+      "remissoes": ["Art. 787", "Art. 788"]
+    },
+    "art-790": {
+      "simples": "O interessado na execução de sentença penal estrangeira, para a reparação do dano, restituição e outros efeitos civis, poderá requerer ao Supremo Tribunal Federal a sua homologação, observando-se o que a respeito prescreve o Código de Processo Civil.",
+      "pontos": ["Interessado na reparação do dano e efeitos civis pode requerer a homologação.", "Segue o Código de Processo Civil."],
+      "atencao": ["Hoje a competência é do STJ."],
+      "exemplo": "A vítima busca homologar a sentença estrangeira para executar a reparação do dano.",
+      "prova": ["Assertiva que restringe a homologação aos efeitos penais erra: abrange efeitos civis."],
+      "termos": [],
+      "remissoes": ["Art. 787"]
+    },
+    "art-791": {
+      "simples": "Em todos os juízos e tribunais do crime, além das audiências e sessões ordinárias, haverá as extraordinárias, de acordo com as necessidades do rápido andamento dos feitos.",
+      "pontos": ["Além das ordinárias, haverá audiências e sessões extraordinárias, conforme a necessidade."],
+      "atencao": ["Celeridade processual."],
+      "exemplo": "O juízo marca audiência extraordinária para acelerar um processo com réu preso.",
+      "prova": ["Assertiva que proíbe audiências extraordinárias erra."],
+      "termos": [],
+      "remissoes": ["Art. 792"]
+    },
+    "art-792": {
+      "simples": "As audiências, sessões e atos processuais serão, em regra, públicos e se realizarão nas sedes dos juízos e tribunais, com assistência dos escrivães, do secretário e do oficial de justiça que servir de porteiro, em dia e hora certos. Se da publicidade puder resultar escândalo, inconveniente grave ou perigo de perturbação da ordem, o juiz ou tribunal poderá, de ofício ou a requerimento, determinar que o ato seja realizado a portas fechadas. Em caso de necessidade, poderão realizar-se na residência do juiz, ou em outra casa por ele designada.",
+      "pontos": ["Regra: publicidade.", "Realizam-se nas sedes dos juízos e tribunais, em dia e hora certos.", "Escândalo, inconveniente grave ou perigo de perturbação: portas fechadas.", "Necessidade: na residência do juiz ou outra casa designada."],
+      "atencao": ["Segredo de justiça só em hipóteses legais (Constituição, art. 93, IX)."],
+      "exemplo": "Por risco de perturbação da ordem, o juiz determina audiência a portas fechadas.",
+      "prova": ["Assertiva que torna o sigilo das audiências a regra erra: a regra é a publicidade."],
+      "termos": [],
+      "remissoes": ["Art. 793"]
+    },
+    "art-793": {
+      "simples": "Nas audiências e nas sessões, os advogados, as partes, os escrivães e os espectadores poderão estar sentados. Todos, porém, se levantarão quando se dirigirem aos juízes ou quando estes se levantarem para qualquer ato do processo. Nos atos da instrução criminal, perante os juízes singulares, os advogados poderão requerer sentados.",
+      "pontos": ["Todos podem permanecer sentados nas audiências.", "Levantam-se ao se dirigir aos juízes ou quando eles se levantam.", "Perante juiz singular, os advogados podem requerer sentados."],
+      "atencao": ["Norma de etiqueta forense."],
+      "exemplo": "O advogado requer sentado na instrução diante do juiz singular.",
+      "prova": ["Assertiva que obriga os advogados a requerer sempre em pé erra: perante juiz singular podem requerer sentados."],
+      "termos": [],
+      "remissoes": ["Art. 794"]
+    },
+    "art-794": {
+      "simples": "A polícia das audiências e das sessões compete aos respectivos juízes ou ao presidente do tribunal, câmara ou turma, que poderão determinar o que for conveniente à manutenção da ordem. Para tal fim, requisitarão força pública, que ficará exclusivamente à sua disposição.",
+      "pontos": ["Juízes e presidentes mantêm a ordem nas audiências e sessões.", "Podem requisitar força pública, sob sua exclusiva disposição."],
+      "atencao": ["Poder de polícia das audiências."],
+      "exemplo": "O presidente da sessão requisita a força pública para manter a ordem.",
+      "prova": ["Assertiva que atribui a polícia das audiências à autoridade policial erra: compete ao juiz ou ao presidente."],
+      "termos": [],
+      "remissoes": ["Art. 251"]
+    },
+    "art-795": {
+      "simples": "Os espectadores das audiências ou das sessões não poderão manifestar-se. O juiz ou o presidente fará retirar da sala os desobedientes, que, em caso de resistência, serão presos e autuados.",
+      "pontos": ["Espectadores não podem se manifestar.", "Desobedientes são retirados da sala.", "Resistência: prisão e autuação."],
+      "atencao": ["Silêncio dos espectadores."],
+      "exemplo": "Um espectador que grita é retirado da sala pelo juiz.",
+      "prova": ["Assertiva que permite manifestação dos espectadores nas audiências erra."],
+      "termos": [],
+      "remissoes": ["Art. 794"]
+    },
+    "art-796": {
+      "simples": "Os atos de instrução ou julgamento prosseguirão com a assistência do defensor, se o réu se portar inconvenientemente.",
+      "pontos": ["Réu que se porta inconvenientemente: o ato prossegue com o defensor."],
+      "atencao": ["O defensor sempre acompanha o ato."],
+      "exemplo": "O réu perturba a audiência, que continua com a presença do defensor.",
+      "prova": ["Assertiva que suspende o ato por mau comportamento do réu, sem prosseguir com o defensor, erra."],
+      "termos": [],
+      "remissoes": ["Art. 497, VI"]
+    },
+    "art-797": {
+      "simples": "Excetuadas as sessões de julgamento, que não serão marcadas para domingo ou dia feriado, os demais atos do processo poderão ser praticados em período de férias, em domingos e dias feriados. Todavia, os julgamentos iniciados em dia útil não se interromperão pela superveniência de feriado ou domingo.",
+      "pontos": ["Sessões de julgamento não são marcadas em domingo ou feriado.", "Demais atos podem ocorrer em férias, domingos e feriados.", "Julgamento iniciado em dia útil não se interrompe por feriado ou domingo."],
+      "atencao": ["Exceção só às sessões de julgamento."],
+      "exemplo": "Um ato de investigação é praticado em feriado; a sessão do Júri, não.",
+      "prova": ["Assertiva que permite marcar sessão de julgamento para domingo erra."],
+      "termos": [],
+      "remissoes": ["Art. 798"]
+    },
+    "art-798": {
+      "simples": "Todos os prazos correrão em cartório e serão contínuos e peremptórios, não se interrompendo por férias, domingo ou dia feriado. Não se computará no prazo o dia do começo, incluindo-se, porém, o do vencimento. A terminação dos prazos será certificada nos autos pelo escrivão, mas será considerado findo o prazo ainda que omitida aquela formalidade. O prazo que terminar em domingo ou feriado considerar-se-á prorrogado até o dia útil imediato. Não correrão os prazos se houver impedimento do juiz, força maior ou obstáculo judicial oposto pela parte contrária. Salvo casos expressos, os prazos correrão da intimação, da audiência ou sessão em que for proferida a decisão, se presente a parte, ou do dia em que a parte manifestar nos autos ciência inequívoca da sentença ou despacho.",
+      "pontos": ["Prazos contínuos e peremptórios.", "Exclui-se o dia do começo e inclui-se o do vencimento.", "Prazo que termina em domingo ou feriado prorroga-se para o dia útil seguinte.", "Não correm por impedimento do juiz, força maior ou obstáculo judicial da parte contrária.", "Contagem: da intimação, da audiência (se presente) ou da ciência inequívoca."],
+      "atencao": ["Prazos CONTÍNUOS (sem suspensão por feriados), mas prorrogados se o último dia não for útil."],
+      "exemplo": "O prazo termina no sábado e passa para a segunda-feira seguinte.",
+      "prova": ["Assertiva que conta o dia do começo do prazo erra: ele é excluído."],
+      "termos": [],
+      "remissoes": ["Art. 798-A"]
+    },
+    "art-798-a": {
+      "simples": "Suspende-se o curso do prazo processual nos dias compreendidos entre 20 de dezembro e 20 de janeiro, inclusive, salvo nos casos que envolvam réus presos, nos processos vinculados a essas prisões; nos procedimentos regidos pela Lei Maria da Penha; e nas medidas consideradas urgentes, mediante despacho fundamentado do juízo competente. Durante o período, fica vedada a realização de audiências e de sessões de julgamento, salvo nas hipóteses dos incisos I, II e III.",
+      "pontos": ["Prazos suspensos de 20 de dezembro a 20 de janeiro.", "Exceções: réus presos, Lei Maria da Penha e medidas urgentes fundamentadas.", "Vedadas audiências e sessões de julgamento no período, salvo as exceções."],
+      "atencao": ["Incluído pela Lei nº 14.365, de 2022.", "Período: 20 de dezembro a 20 de janeiro."],
+      "exemplo": "Em processo de réu preso, os prazos continuam correndo em janeiro.",
+      "prova": ["Assertiva que suspende também os prazos dos processos com réu preso erra: eles continuam a correr."],
+      "termos": [],
+      "remissoes": ["Art. 798"]
+    },
+    "art-799": {
+      "simples": "O escrivão, sob pena de multa e, na reincidência, suspensão até 30 dias, executará dentro do prazo de dois dias os atos determinados em lei ou ordenados pelo juiz.",
+      "pontos": ["Escrivão cumpre os atos em dois dias.", "Sanção: multa e, na reincidência, suspensão de até 30 dias."],
+      "atencao": ["Prazo de dois dias."],
+      "exemplo": "O escrivão cumpre em dois dias a ordem do juiz, sob pena de multa.",
+      "prova": ["Assertiva que fixa em cinco dias o prazo do escrivão para cumprir os atos erra: são dois dias."],
+      "termos": [],
+      "remissoes": ["Art. 800"]
+    },
+    "art-800": {
+      "simples": "Os juízes singulares darão seus despachos e decisões dentro dos seguintes prazos, quando outros não estiverem estabelecidos: de dez dias, se a decisão for definitiva ou interlocutória mista; de cinco dias, se for interlocutória simples; e de um dia, se se tratar de despacho de expediente. Os prazos para o juiz contam-se do termo de conclusão; os do Ministério Público, do termo de vista, salvo para recurso. Em qualquer instância, declarando motivo justo, poderá o juiz exceder por igual tempo os prazos. O escrivão que não enviar os autos no dia em que assinar termo de conclusão ou de vista sujeita-se à sanção do art. 799.",
+      "pontos": ["Decisão definitiva ou interlocutória mista: dez dias.", "Interlocutória simples: cinco dias.", "Despacho de expediente: um dia.", "Prazos do juiz contam da conclusão; do MP, da vista.", "Pode exceder por igual tempo, com motivo justo."],
+      "atencao": ["Prazos impróprios para o juiz: dez, cinco e um dia."],
+      "exemplo": "O juiz profere a sentença em dez dias do termo de conclusão.",
+      "prova": ["Assertiva que fixa em cinco dias o prazo para decisão definitiva erra: são dez dias."],
+      "termos": [],
+      "remissoes": ["Art. 799", "Art. 801"]
+    },
+    "art-801": {
+      "simples": "Findos os respectivos prazos, os juízes e os órgãos do Ministério Público, responsáveis pelo retardamento, perderão tantos dias de vencimentos quantos forem os excedidos. Na contagem do tempo de serviço, para efeito de promoção e aposentadoria, a perda será do dobro dos dias excedidos.",
+      "pontos": ["Juízes e membros do MP perdem tantos dias de vencimentos quantos excederem o prazo.", "Tempo de serviço: perda do dobro dos dias excedidos."],
+      "atencao": ["Dispositivo raramente aplicado."],
+      "exemplo": "Texto de aplicação rara, sobre desconto de vencimentos por atraso.",
+      "prova": ["Assertiva que isenta o MP da sanção por atraso nos prazos erra."],
+      "termos": [],
+      "remissoes": ["Art. 802"]
+    },
+    "art-802": {
+      "simples": "O desconto referido no artigo antecedente far-se-á à vista da certidão do escrivão do processo ou do secretário do tribunal, que deverão, de ofício ou a requerimento de qualquer interessado, remetê-la às repartições encarregadas do pagamento e da contagem do tempo de serviço.",
+      "pontos": ["Desconto feito à vista de certidão do escrivão ou secretário.", "Remessa, de ofício ou a requerimento, às repartições de pagamento e de contagem do tempo."],
+      "atencao": ["Procedimento do desconto do art. 801."],
+      "exemplo": "O escrivão expede certidão do atraso para o desconto de vencimentos.",
+      "prova": ["Assertiva que dispensa a certidão do escrivão para o desconto do art. 801 erra."],
+      "termos": [],
+      "remissoes": ["Art. 801"]
+    },
+    "art-803": {
+      "simples": "Salvo nos casos expressos em lei, é proibida a retirada de autos do cartório, ainda que em confiança, sob pena de responsabilidade do escrivão.",
+      "pontos": ["Proibida a retirada de autos do cartório, salvo casos legais.", "Escrivão responde pelo descumprimento."],
+      "atencao": ["Hoje vale o processo eletrônico e o direito do advogado à carga, na forma da lei."],
+      "exemplo": "O escrivão não entrega os autos físicos a quem não tem direito legal à carga.",
+      "prova": ["Assertiva que permite a retirada de autos do cartório em confiança, sem previsão legal, erra."],
+      "termos": [],
+      "remissoes": ["Art. 801"]
+    },
+    "art-804": {
+      "simples": "A sentença ou o acórdão que julgar a ação, qualquer incidente ou recurso, condenará nas custas o vencido.",
+      "pontos": ["O vencido é condenado nas custas."],
+      "atencao": ["Princípio da sucumbência quanto às custas."],
+      "exemplo": "O réu condenado paga as custas processuais.",
+      "prova": ["Assertiva que isenta o vencido das custas, sempre, erra."],
+      "termos": [],
+      "remissoes": ["Art. 805"]
+    },
+    "art-805": {
+      "simples": "As custas serão contadas e cobradas de acordo com os regulamentos expedidos pela União e pelos Estados.",
+      "pontos": ["Custas contadas e cobradas segundo regulamentos da União e dos Estados."],
+      "atencao": ["Regulamentação fora do CPP."],
+      "exemplo": "As custas seguem o regimento estadual de custas.",
+      "prova": ["Assertiva que fixa as custas apenas pelo CPP erra: seguem os regulamentos da União e dos Estados."],
+      "termos": [],
+      "remissoes": ["Art. 804"]
+    },
+    "art-806": {
+      "simples": "Salvo o caso do art. 32, nas ações intentadas mediante queixa, nenhum ato ou diligência se realizará sem que seja depositada em cartório a importância das custas. Igualmente, nenhum ato requerido no interesse da defesa será realizado sem o prévio pagamento das custas, salvo se o acusado for pobre. A falta do pagamento das custas, nos prazos fixados em lei, ou marcados pelo juiz, importará renúncia à diligência requerida ou deserção do recurso interposto. A falta de qualquer prova ou diligência que deixe de realizar-se em virtude do não pagamento de custas não implicará a nulidade do processo, se a prova de pobreza do acusado só posteriormente foi feita.",
+      "pontos": ["Ação por queixa: custas depositadas antes dos atos, salvo ofendido pobre.", "Defesa: pagamento prévio das custas, salvo acusado pobre.", "Falta de pagamento: renúncia à diligência ou deserção do recurso.", "Falta de prova por custas não anula o processo se a pobreza só foi provada depois."],
+      "atencao": ["Pobreza dispensa o pagamento."],
+      "exemplo": "O querelante não deposita as custas e o ato não é realizado.",
+      "prova": ["Assertiva que exige o pagamento prévio de custas do acusado pobre erra."],
+      "termos": [],
+      "remissoes": ["Art. 32"]
+    },
+    "art-807": {
+      "simples": "O disposto no artigo anterior não obstará à faculdade atribuída ao juiz de determinar de ofício inquirição de testemunhas ou outras diligências.",
+      "pontos": ["A exigência de custas não impede o juiz de determinar, de ofício, testemunhas ou diligências."],
+      "atencao": ["Iniciativa do juiz independe de custas."],
+      "exemplo": "Mesmo sem custas pagas, o juiz determina de ofício a oitiva de uma testemunha.",
+      "prova": ["Assertiva que condiciona as diligências de ofício do juiz ao pagamento de custas erra."],
+      "termos": [],
+      "remissoes": ["Art. 806"]
+    },
+    "art-808": {
+      "simples": "Na falta ou impedimento do escrivão e seu substituto, servirá pessoa idônea, nomeada pela autoridade, perante quem prestará compromisso, lavrando o respectivo termo.",
+      "pontos": ["Sem escrivão nem substituto, serve pessoa idônea nomeada pela autoridade.", "Presta compromisso e lavra termo."],
+      "atencao": ["Compromisso do escrivão ad hoc."],
+      "exemplo": "Sem escrivão, a autoridade nomeia pessoa idônea, que presta compromisso.",
+      "prova": ["Assertiva que dispensa o compromisso da pessoa nomeada para suprir o escrivão erra."],
+      "termos": [],
+      "remissoes": ["Art. 305"]
+    },
+    "art-809": {
+      "simples": "A estatística judiciária criminal, a cargo do Instituto de Identificação e Estatística ou repartições congêneres, terá por base o boletim individual, parte integrante dos processos, e versará sobre crimes e contravenções, armas apreendidas, número de delinquentes e seus dados pessoais, casos de codelinquência, reincidência e antecedentes, sentenças, natureza das penas e medidas de segurança, suspensão condicional da pena e concessões ou denegações de habeas corpus. Os dados constituem o mínimo exigível e serão lançados semestralmente em mapa.",
+      "pontos": ["Estatística criminal feita com base no boletim individual.", "Abrange crimes, armas, delinquentes, reincidência, sentenças, penas, medidas de segurança, sursis e habeas corpus.", "Dados mínimos, acrescidos de outros úteis.", "Lançados semestralmente em mapa."],
+      "atencao": ["Estatística semestral."],
+      "exemplo": "O instituto compila semestralmente as estatísticas criminais a partir do boletim individual.",
+      "prova": ["Assertiva que dispensa o boletim individual das estatísticas criminais erra."],
+      "termos": [],
+      "remissoes": ["Art. 23"]
+    },
+    "art-810": {
+      "simples": "Este Código entrará em vigor no dia 1º de janeiro de 1942, dispositivo hoje meramente histórico.",
+      "pontos": ["Cláusula de vigência do Código de Processo Penal original."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "O artigo apenas marca o início de vigência do Código.",
+      "prova": ["Assertiva que atribui ao art. 810 efeito prático sobre os processos atuais erra."],
+      "termos": [],
+      "remissoes": ["Art. 811"]
+    },
+    "art-811": {
+      "simples": "Revogam-se as disposições em contrário, cláusula final do Código de Processo Penal, que encerra o texto com a data e a assinatura originais.",
+      "pontos": ["Cláusula de revogação das disposições em contrário.", "Encerra o texto original do Código."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "A cláusula apenas revoga normas anteriores incompatíveis com o Código.",
+      "prova": ["Assertiva que atribui ao art. 811 efeito prático sobre os processos atuais erra."],
+      "termos": [],
+      "remissoes": ["Art. 810"]
+    }
+  }
+}

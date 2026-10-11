@@ -1,0 +1,429 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 16: arts. 649 a 695",
+  "units": {
+    "art-649": {
+      "simples": "O juiz ou o tribunal, dentro dos limites da sua jurisdição, fará passar imediatamente a ordem impetrada, nos casos em que tenha cabimento, seja qual for a autoridade coatora.",
+      "pontos": ["Juiz ou tribunal expede imediatamente a ordem de habeas corpus, nos limites da sua jurisdição.", "Independe da autoridade coatora."],
+      "atencao": ["Imediatidade e independência da autoridade coatora."],
+      "exemplo": "O tribunal concede imediatamente a ordem, qualquer que seja a autoridade coatora.",
+      "prova": ["Assertiva que condiciona a expedição da ordem à identidade da autoridade coatora erra."],
+      "termos": [],
+      "remissoes": ["Art. 650"]
+    },
+    "art-650": {
+      "simples": "Compete conhecer, originariamente, do pedido de habeas corpus ao Supremo Tribunal Federal, nos casos previstos na Constituição, e aos Tribunais de Apelação, sempre que os atos de violência ou coação forem atribuídos aos governadores ou interventores dos Estados ou Territórios e ao prefeito do Distrito Federal, ou a seus secretários, ou aos chefes de Polícia. A competência do juiz cessará sempre que a violência ou coação provier de autoridade judiciária de igual ou superior jurisdição. Não cabe habeas corpus contra a prisão administrativa, atual ou iminente, dos responsáveis por dinheiro ou valor pertencente à Fazenda Pública, alcançados ou omissos em fazer o seu recolhimento nos prazos legais, salvo se o pedido for acompanhado de prova de quitação ou de depósito, ou se a prisão exceder o prazo legal.",
+      "pontos": ["STF e Tribunais de Apelação têm competência originária.", "Juiz não conhece de coação de autoridade judiciária de igual ou superior jurisdição.", "Não cabe contra a prisão administrativa de responsáveis por dinheiro público, salvo exceções."],
+      "atencao": ["Texto histórico: a competência atual está na Constituição.", "A prisão administrativa foi extinta pela ordem constitucional atual."],
+      "exemplo": "O habeas corpus contra ato de um tribunal é impetrado em tribunal superior.",
+      "prova": ["Assertiva que permite ao juiz de primeira instância julgar habeas corpus contra ato de tribunal erra."],
+      "termos": [],
+      "remissoes": ["Art. 647"]
+    },
+    "art-651": {
+      "simples": "A concessão do habeas corpus não obstará, nem porá termo ao processo, desde que este não esteja em conflito com os fundamentos daquela.",
+      "pontos": ["Concessão do habeas corpus não encerra o processo.", "Desde que o processo não conflite com os fundamentos da ordem."],
+      "atencao": ["Não extingue, por si, a ação penal."],
+      "exemplo": "A ordem concedida para soltar o réu não impede o prosseguimento do processo.",
+      "prova": ["Assertiva que extingue o processo com a concessão do habeas corpus, em qualquer caso, erra."],
+      "termos": [],
+      "remissoes": ["Art. 652"]
+    },
+    "art-652": {
+      "simples": "Se o habeas corpus for concedido em virtude de nulidade do processo, este será renovado.",
+      "pontos": ["Habeas corpus por nulidade do processo: o processo é renovado."],
+      "atencao": ["Renovação dos atos nulos."],
+      "exemplo": "Concedido o habeas corpus por nulidade, os atos viciados são refeitos.",
+      "prova": ["Assertiva que arquiva o processo definitivamente após habeas corpus por nulidade erra: ele é renovado."],
+      "termos": [],
+      "remissoes": ["Art. 573"]
+    },
+    "art-653": {
+      "simples": "Ordenada a soltura do paciente em virtude de habeas corpus, será condenada nas custas a autoridade que, por má-fé ou evidente abuso de poder, tiver determinado a coação. Neste caso, será remetida ao Ministério Público cópia das peças necessárias para ser promovida a responsabilidade da autoridade.",
+      "pontos": ["Autoridade que agiu com má-fé ou abuso de poder paga as custas.", "Cópia das peças ao MP para apurar a responsabilidade."],
+      "atencao": ["Responsabilização da autoridade coatora."],
+      "exemplo": "Soltura por habeas corpus decorrente de abuso evidente: a autoridade paga as custas.",
+      "prova": ["Assertiva que isenta a autoridade que agiu com abuso de poder das custas erra."],
+      "termos": [],
+      "remissoes": ["Art. 654"]
+    },
+    "art-654": {
+      "simples": "O habeas corpus poderá ser impetrado por qualquer pessoa, em seu favor ou de outrem, bem como pelo Ministério Público. A petição conterá o nome da pessoa que sofre ou está ameaçada de sofrer violência ou coação e o de quem exercer a violência, coação ou ameaça; a declaração da espécie de constrangimento ou, em caso de simples ameaça, as razões em que funda o seu temor; e a assinatura do impetrante, ou de alguém a seu rogo, e a designação das respectivas residências. Os juízes e os tribunais têm competência para expedir de ofício ordem de habeas corpus, quando no curso de processo verificarem que alguém sofre ou está na iminência de sofrer coação ilegal.",
+      "pontos": ["Impetrado por qualquer pessoa, em favor próprio ou alheio, ou pelo MP.", "Petição: paciente, coator, espécie de constrangimento ou razões do temor, assinatura.", "Habeas corpus de ofício por juízes e tribunais."],
+      "atencao": ["Não exige advogado nem capacidade postulatória.", "Impetrante e paciente podem ser pessoas diferentes."],
+      "exemplo": "Qualquer pessoa pode impetrar habeas corpus em favor de um preso.",
+      "prova": ["Assertiva que exige advogado para impetrar habeas corpus erra."],
+      "termos": [{ "termo": "Paciente", "significado": "A pessoa que sofre ou ameaça sofrer a coação." }],
+      "remissoes": ["Art. 647-A"]
+    },
+    "art-655": {
+      "simples": "O carcereiro ou o diretor da prisão, o escrivão, o oficial de justiça ou a autoridade judiciária ou policial que embaraçar ou procrastinar a expedição de ordem de habeas corpus, as informações sobre a causa da prisão, a condução e apresentação do paciente, ou a sua soltura, será multado, sem prejuízo da responsabilidade criminal.",
+      "pontos": ["Quem embaraça ou procrastina a expedição da ordem, informações, apresentação ou soltura é multado.", "Alcança carcereiro, diretor, escrivão, oficial de justiça e autoridades."],
+      "atencao": ["Sanção para quem retarda o habeas corpus."],
+      "exemplo": "O diretor da prisão retarda a soltura determinada e é multado.",
+      "prova": ["Assertiva que isenta o oficial de justiça de multa por procrastinar a ordem erra."],
+      "termos": [],
+      "remissoes": ["Art. 656"]
+    },
+    "art-656": {
+      "simples": "Recebida a petição de habeas corpus, o juiz, se julgar necessário, e estando preso o paciente, mandará que este lhe seja imediatamente apresentado em dia e hora que designar. Em caso de desobediência, será expedido mandado de prisão contra o detentor, que será processado na forma da lei, e o juiz providenciará para que o paciente seja tirado da prisão e apresentado em juízo.",
+      "pontos": ["Apresentação imediata do paciente preso, se necessária.", "Desobediência: prisão do detentor.", "Juiz providencia a retirada do paciente da prisão."],
+      "atencao": ["Apresentação do paciente em juízo."],
+      "exemplo": "O juiz determina que o preso seja apresentado em audiência.",
+      "prova": ["Assertiva que dispensa a apresentação do paciente preso quando o juiz a julga necessária erra."],
+      "termos": [],
+      "remissoes": ["Art. 657"]
+    },
+    "art-657": {
+      "simples": "Se o paciente estiver preso, nenhum motivo escusará a sua apresentação, salvo grave enfermidade do paciente; não estar ele sob a guarda da pessoa a quem se atribui a detenção; ou se o comparecimento não tiver sido determinado pelo juiz ou pelo tribunal. O juiz poderá ir ao local em que o paciente se encontrar, se este não puder ser apresentado por motivo de doença.",
+      "pontos": ["Regra: nenhum motivo escusa a apresentação do preso.", "Exceções: grave enfermidade; paciente não está sob a guarda do detentor; comparecimento não determinado.", "O juiz pode ir ao local, se o paciente estiver doente."],
+      "atencao": ["Exceções restritas à apresentação."],
+      "exemplo": "Paciente gravemente enfermo não é apresentado, e o juiz vai até ele.",
+      "prova": ["Assertiva que escusa a apresentação por qualquer inconveniente erra."],
+      "termos": [],
+      "remissoes": ["Art. 656"]
+    },
+    "art-658": {
+      "simples": "O detentor declarará à ordem de quem o paciente estiver preso.",
+      "pontos": ["O detentor declara à ordem de quem o paciente está preso."],
+      "atencao": ["Declaração do detentor."],
+      "exemplo": "O diretor informa que o paciente está preso à ordem de determinado juiz.",
+      "prova": ["Assertiva que dispensa a declaração do detentor sobre a ordem de prisão erra."],
+      "termos": [],
+      "remissoes": ["Art. 656"]
+    },
+    "art-659": {
+      "simples": "Se o juiz ou o tribunal verificar que já cessou a violência ou coação ilegal, julgará prejudicado o pedido.",
+      "pontos": ["Cessada a coação ilegal, o pedido é julgado prejudicado."],
+      "atencao": ["Perda do objeto."],
+      "exemplo": "O paciente já foi solto, e o habeas corpus é julgado prejudicado.",
+      "prova": ["Assertiva que concede a ordem mesmo após a cessação da coação erra: o pedido fica prejudicado."],
+      "termos": [],
+      "remissoes": ["Art. 660"]
+    },
+    "art-660": {
+      "simples": "Efetuadas as diligências, e interrogado o paciente, o juiz decidirá, fundamentadamente, dentro de 24 horas. Se a decisão for favorável ao paciente, será logo posto em liberdade, salvo se por outro motivo dever ser mantido na prisão. Se os documentos que instruírem a petição evidenciarem a ilegalidade da coação, o juiz ou o tribunal ordenará que cesse imediatamente o constrangimento. Se a ilegalidade decorrer do fato de não ter sido o paciente admitido a prestar fiança, o juiz arbitrará o valor desta. Se a ordem for concedida para evitar ameaça de violência ou coação ilegal, dar-se-á ao paciente salvo-conduto assinado pelo juiz. Será incontinenti enviada cópia da decisão à autoridade que tiver ordenado a prisão.",
+      "pontos": ["Decisão fundamentada em 24 horas.", "Decisão favorável: soltura imediata, salvo outra causa.", "Ilegalidade evidente: cessa imediatamente o constrangimento.", "Fiança negada ilegalmente: juiz arbitra o valor.", "Habeas corpus preventivo: salvo-conduto.", "Cópia da decisão à autoridade coatora."],
+      "atencao": ["Salvo-conduto no habeas corpus preventivo.", "Prazo de 24 horas."],
+      "exemplo": "O juiz concede habeas corpus preventivo e entrega ao paciente um salvo-conduto.",
+      "prova": ["Assertiva que fixa em 48 horas o prazo para o juiz decidir o habeas corpus erra: são 24 horas."],
+      "termos": [{ "termo": "Salvo-conduto", "significado": "Documento que protege contra a prisão ilegal no habeas corpus preventivo." }],
+      "remissoes": ["Art. 647"]
+    },
+    "art-661": {
+      "simples": "Em caso de competência originária do Tribunal de Apelação, a petição de habeas corpus será apresentada ao secretário, que a enviará imediatamente ao presidente do tribunal, ou da câmara criminal, ou da turma, que estiver reunida, ou primeiro tiver de reunir-se.",
+      "pontos": ["Petição apresentada ao secretário do tribunal.", "Enviada de imediato ao presidente do tribunal, da câmara ou da turma."],
+      "atencao": ["Tramitação rápida na competência originária do tribunal."],
+      "exemplo": "A petição vai imediatamente ao presidente da câmara criminal.",
+      "prova": ["Assertiva que retarda o envio ao presidente para a próxima sessão ordinária erra."],
+      "termos": [],
+      "remissoes": ["Art. 662"]
+    },
+    "art-662": {
+      "simples": "Se a petição contiver os requisitos do art. 654, §1º, o presidente, se necessário, requisitará da autoridade indicada como coatora informações por escrito. Faltando, porém, qualquer daqueles requisitos, o presidente mandará preenchê-lo, logo que lhe for apresentada a petição.",
+      "pontos": ["Petição regular: o presidente requisita informações da autoridade coatora, se necessário.", "Faltando requisito: manda preenchê-lo."],
+      "atencao": ["Informalismo: o vício é sanado, e não rejeitado de plano."],
+      "exemplo": "Faltou indicar a residência do impetrante: o presidente manda completar.",
+      "prova": ["Assertiva que rejeita a petição incompleta sem oportunidade de correção erra."],
+      "termos": [],
+      "remissoes": ["Art. 654"]
+    },
+    "art-663": {
+      "simples": "As diligências do artigo anterior não serão ordenadas, se o presidente entender que o habeas corpus deva ser indeferido in limine. Nesse caso, levará a petição ao tribunal, câmara ou turma, para que delibere a respeito.",
+      "pontos": ["Indeferimento liminar dispensa as diligências.", "O presidente leva a petição ao órgão colegiado para deliberar."],
+      "atencao": ["A decisão final cabe ao colegiado."],
+      "exemplo": "O presidente entende ser caso de indeferimento liminar e leva a petição ao órgão colegiado.",
+      "prova": ["Assertiva que permite ao presidente indeferir sozinho, sem levar a petição ao colegiado, erra, segundo a letra do art. 663."],
+      "termos": [],
+      "remissoes": ["Art. 662"]
+    },
+    "art-664": {
+      "simples": "Recebidas as informações, ou dispensadas, o habeas corpus será julgado na primeira sessão, podendo, entretanto, adiar-se o julgamento para a sessão seguinte. A decisão será tomada por maioria de votos. Havendo empate, se o presidente não tiver tomado parte na votação, proferirá voto de desempate; no caso contrário, prevalecerá a decisão mais favorável ao paciente.",
+      "pontos": ["Julgamento na primeira sessão, com adiamento possível para a seguinte.", "Decisão por maioria.", "Empate: voto de desempate do presidente se não votou; senão, a decisão mais favorável ao paciente."],
+      "atencao": ["Empate favorece o paciente (art. 615, §1º)."],
+      "exemplo": "O julgamento empata e prevalece a decisão mais favorável ao paciente.",
+      "prova": ["Assertiva que resolve o empate contra o paciente erra."],
+      "termos": [],
+      "remissoes": ["Art. 615"]
+    },
+    "art-665": {
+      "simples": "O secretário do tribunal lavrará a ordem que, assinada pelo presidente do tribunal, câmara ou turma, será dirigida, por ofício ou telegrama, ao detentor, ao carcereiro ou autoridade que exercer ou ameaçar exercer o constrangimento. A ordem transmitida por telegrama obedecerá ao disposto no art. 289, parágrafo único, in fine.",
+      "pontos": ["Secretário lavra a ordem, assinada pelo presidente.", "Dirigida por ofício ou telegrama ao detentor ou autoridade coatora."],
+      "atencao": ["Hoje se usam meios eletrônicos."],
+      "exemplo": "A ordem é enviada ao diretor do presídio para a soltura.",
+      "prova": ["Assertiva que dispensa a assinatura do presidente na ordem de habeas corpus erra."],
+      "termos": [],
+      "remissoes": ["Art. 289"]
+    },
+    "art-666": {
+      "simples": "Os regimentos dos Tribunais de Apelação estabelecerão as normas complementares para o processo e julgamento do pedido de habeas corpus de sua competência originária.",
+      "pontos": ["Regimentos dos tribunais complementam o processo do habeas corpus de competência originária."],
+      "atencao": ["Normas regimentais complementares."],
+      "exemplo": "O regimento interno regula detalhes do julgamento do habeas corpus no tribunal.",
+      "prova": ["Assertiva que veda ao regimento complementar o rito do habeas corpus erra."],
+      "termos": [],
+      "remissoes": ["Art. 667"]
+    },
+    "art-667": {
+      "simples": "No processo e julgamento do habeas corpus de competência originária do Supremo Tribunal Federal, bem como nos de recurso das decisões de última ou única instância denegatórias de habeas corpus, observar-se-á, no que lhes for aplicável, o disposto nos artigos anteriores, devendo o regimento interno do tribunal estabelecer as normas complementares.",
+      "pontos": ["Habeas corpus originário do STF e recursos contra a denegação: aplicam-se, no que couber, as regras anteriores.", "Regimento interno completa."],
+      "atencao": ["Remissão ao rito geral."],
+      "exemplo": "O STF aplica o rito geral do habeas corpus, complementado pelo regimento interno.",
+      "prova": ["Assertiva que afasta as regras gerais do habeas corpus no STF erra."],
+      "termos": [],
+      "remissoes": ["Art. 666"]
+    },
+    "art-668": {
+      "simples": "A execução, onde não houver juiz especial, incumbirá ao juiz da sentença, ou, se a decisão for do Tribunal do Júri, ao seu presidente. Se a decisão for de tribunal superior, nos casos de sua competência originária, caberá ao respectivo presidente prover-lhe a execução.",
+      "pontos": ["Execução cabe ao juiz da sentença (ou ao presidente do Júri), se não houver juiz especial.", "Decisão de tribunal em competência originária: execução pelo respectivo presidente."],
+      "atencao": ["Hoje a Lei de Execução Penal prevê o juízo da execução."],
+      "exemplo": "Sem vara de execuções, o juiz da sentença executa a pena.",
+      "prova": ["Assertiva que sempre atribui a execução ao Ministério Público erra."],
+      "termos": [],
+      "remissoes": ["Art. 669"]
+    },
+    "art-669": {
+      "simples": "Só depois de passar em julgado, será exequível a sentença, salvo quando condenatória, para o efeito de sujeitar o réu a prisão, ainda no caso de crime afiançável, enquanto não for prestada a fiança; e quando absolutória, para o fim de imediata soltura do réu, desde que não proferida em processo por crime a que a lei comine pena de reclusão, no máximo, por tempo igual ou superior a oito anos.",
+      "pontos": ["Regra: a sentença só é exequível após o trânsito em julgado.", "Exceção condenatória: prisão enquanto não prestada a fiança.", "Exceção absolutória: soltura imediata, salvo reclusão com máximo igual ou superior a oito anos."],
+      "atencao": ["Dispositivo anterior ao art. 596, que determina a soltura imediata em qualquer absolvição."],
+      "exemplo": "A sentença absolutória permite a soltura imediata do réu.",
+      "prova": ["Assertiva que torna a sentença condenatória exequível antes do trânsito em julgado sempre erra."],
+      "termos": [],
+      "remissoes": ["Art. 596"]
+    },
+    "art-670": {
+      "simples": "No caso de decisão absolutória confirmada ou proferida em grau de apelação, incumbirá ao relator fazer expedir o alvará de soltura, de que dará imediatamente conhecimento ao juiz de primeira instância.",
+      "pontos": ["Absolvição confirmada ou proferida na apelação: o relator expede o alvará de soltura.", "Comunica de imediato o juiz de primeira instância."],
+      "atencao": ["O relator expede o alvará."],
+      "exemplo": "O tribunal absolve o réu em apelação, e o relator expede o alvará de soltura.",
+      "prova": ["Assertiva que atribui a expedição do alvará ao juiz de primeira instância apenas erra."],
+      "termos": [],
+      "remissoes": ["Art. 596"]
+    },
+    "art-671": {
+      "simples": "Os incidentes da execução, como pedidos de progressão e livramento, serão resolvidos pelo respectivo juiz da execução.",
+      "pontos": ["Incidentes da execução são resolvidos pelo juiz da execução."],
+      "atencao": ["Juízo da execução."],
+      "exemplo": "O pedido de progressão de regime é decidido pelo juiz da execução.",
+      "prova": ["Assertiva que remete os incidentes da execução ao tribunal erra."],
+      "termos": [],
+      "remissoes": ["Art. 668"]
+    },
+    "art-672": {
+      "simples": "Computar-se-á na pena privativa da liberdade o tempo de prisão preventiva no Brasil ou no estrangeiro; de prisão provisória no Brasil ou no estrangeiro; e de internação em hospital ou manicômio.",
+      "pontos": ["Computa-se o tempo de prisão preventiva.", "Prisão provisória.", "Internação em hospital ou manicômio."],
+      "atencao": ["Detração penal."],
+      "exemplo": "Quem ficou preso preventivamente tem esse tempo descontado da pena.",
+      "prova": ["Assertiva que não computa a prisão cumprida no estrangeiro erra."],
+      "termos": [{ "termo": "Detração", "significado": "Desconto do tempo de prisão provisória da pena." }],
+      "remissoes": ["Art. 387, §2º"]
+    },
+    "art-673": {
+      "simples": "Verificado que o réu, pendente a apelação por ele interposta, já sofreu prisão por tempo igual ao da pena a que foi condenado, o relator do feito mandará pô-lo imediatamente em liberdade, sem prejuízo do julgamento do recurso, salvo se, no caso de crime a que a lei comine pena de reclusão, no máximo, por tempo igual ou superior a oito anos, o tribunal entender conveniente a manutenção da prisão, nos termos do dispositivo.",
+      "pontos": ["Apelação do réu pendente e prisão já igual à pena imposta: liberdade imediata pelo relator.", "O recurso segue em julgamento.", "Exceção para reclusão de máximo igual ou superior a oito anos."],
+      "atencao": ["Evita cumprimento da pena além do imposto."],
+      "exemplo": "O réu já cumpriu a pena aplicada enquanto aguarda a apelação: o relator o solta.",
+      "prova": ["Assertiva que mantém o réu preso após cumprir o tempo da pena aplicada, sem exceção, erra."],
+      "termos": [],
+      "remissoes": ["Art. 672"]
+    },
+    "art-674": {
+      "simples": "Transitando em julgado a sentença que impuser pena privativa de liberdade, se o réu já estiver preso, ou vier a ser preso, o juiz ordenará a expedição de carta de guia para o cumprimento da pena. Na hipótese do art. 82, última parte, a expedição da carta de guia será ordenada pelo juiz competente para a soma ou unificação das penas.",
+      "pontos": ["Trânsito em julgado: carta de guia para o cumprimento da pena.", "Soma ou unificação das penas: carta de guia pelo juiz competente."],
+      "atencao": ["Hoje se fala em guia de recolhimento (LEP)."],
+      "exemplo": "Com o trânsito em julgado, o juiz expede a carta de guia.",
+      "prova": ["Assertiva que dispensa a carta de guia para o início da pena erra."],
+      "termos": [{ "termo": "Carta de guia", "significado": "Documento que autoriza o cumprimento da pena privativa de liberdade." }],
+      "remissoes": ["Art. 676"]
+    },
+    "art-675": {
+      "simples": "No caso de ainda não ter sido expedido mandado de prisão, por tratar-se de infração penal em que o réu se livra solto ou por estar afiançado, o juiz, ou o presidente da câmara ou tribunal, se tiver havido recurso, fará expedir o mandado de prisão, logo que transite em julgado a sentença condenatória. Reformada pela superior instância a sentença absolutória, estando o réu solto, o presidente da câmara ou do tribunal fará, logo após a sessão de julgamento, remeter ao chefe de Polícia o mandado de prisão do condenado. Se o réu estiver em prisão especial, deverá ser expedida ordem para sua imediata remoção para prisão comum, até a expedição de carta de guia, ressalvada a legislação relativa aos militares.",
+      "pontos": ["Réu solto ou afiançado: mandado de prisão após o trânsito em julgado.", "Reforma da absolvição: mandado remetido ao chefe de Polícia.", "Prisão especial: remoção para a comum até a carta de guia."],
+      "atencao": ["Dispositivo antecede as regras atuais da Lei de Execução Penal."],
+      "exemplo": "Transitada em julgado a condenação, o juiz expede o mandado de prisão do réu solto.",
+      "prova": ["Assertiva que dispensa mandado de prisão para o réu solto após o trânsito em julgado erra."],
+      "termos": [],
+      "remissoes": ["Art. 674"]
+    },
+    "art-676": {
+      "simples": "A carta de guia, extraída pelo escrivão e assinada pelo juiz, que a rubricará em todas as folhas, será remetida ao diretor do estabelecimento em que tenha de ser cumprida a sentença condenatória, e conterá o nome do réu e a alcunha por que for conhecido; a sua qualificação civil, instrução e, se constar, número do registro geral do Instituto de Identificação; e o teor integral da sentença condenatória e a data da terminação da pena. Expedida carta de guia para cumprimento de uma pena, se o réu estiver cumprindo outra, só depois de terminada a execução desta será aquela executada. Retificar-se-á a carta de guia sempre que sobrevenha modificação quanto ao início da execução ou ao tempo de duração da pena.",
+      "pontos": ["Carta de guia extraída pelo escrivão, assinada e rubricada pelo juiz.", "Conteúdo: nome, alcunha, qualificação, teor da sentença e data de término.", "Nova guia aguarda a conclusão da pena em curso.", "Retificação sempre que mudar o início ou a duração."],
+      "atencao": ["Conteúdo obrigatório da carta de guia."],
+      "exemplo": "A carta de guia traz a qualificação do réu e o teor integral da sentença.",
+      "prova": ["Assertiva que dispensa o teor integral da sentença na carta de guia erra."],
+      "termos": [],
+      "remissoes": ["Art. 674"]
+    },
+    "art-677": {
+      "simples": "Da carta de guia e seus aditamentos se remeterá cópia ao Conselho Penitenciário.",
+      "pontos": ["Cópia da carta de guia e aditamentos ao Conselho Penitenciário."],
+      "atencao": ["Comunicação ao Conselho Penitenciário."],
+      "exemplo": "O juiz remete cópia da carta de guia ao Conselho Penitenciário.",
+      "prova": ["Assertiva que dispensa o envio ao Conselho Penitenciário erra."],
+      "termos": [],
+      "remissoes": ["Art. 676"]
+    },
+    "art-678": {
+      "simples": "O diretor do estabelecimento em que o réu tiver de cumprir a pena passará recibo da carta de guia para juntar-se aos autos do processo.",
+      "pontos": ["Diretor do estabelecimento passa recibo da carta de guia.", "Recibo é juntado aos autos."],
+      "atencao": ["Recibo juntado aos autos."],
+      "exemplo": "O diretor assina o recibo, e o juiz o junta aos autos.",
+      "prova": ["Assertiva que dispensa o recibo do diretor erra."],
+      "termos": [],
+      "remissoes": ["Art. 676"]
+    },
+    "art-679": {
+      "simples": "As cartas de guia serão registradas em livro especial, segundo a ordem cronológica do recebimento, fazendo-se no curso da execução as anotações necessárias.",
+      "pontos": ["Registro em livro especial, por ordem cronológica.", "Anotações durante a execução."],
+      "atencao": ["Registro cronológico."],
+      "exemplo": "As cartas de guia constam do livro especial, em ordem de recebimento.",
+      "prova": ["Assertiva que dispensa o registro das cartas de guia erra."],
+      "termos": [],
+      "remissoes": ["Art. 678"]
+    },
+    "art-680": {
+      "simples": "Computar-se-á no tempo da pena o período em que o condenado, por sentença irrecorrível, permanecer preso em estabelecimento diverso do destinado ao cumprimento dela.",
+      "pontos": ["O tempo preso em estabelecimento diverso do destinado à pena é computado."],
+      "atencao": ["Computa-se o tempo, ainda que em local inadequado."],
+      "exemplo": "O condenado aguarda vaga em delegacia, e esse tempo conta para a pena.",
+      "prova": ["Assertiva que desconsidera o tempo preso em estabelecimento diverso erra."],
+      "termos": [],
+      "remissoes": ["Art. 672"]
+    },
+    "art-681": {
+      "simples": "Se impostas cumulativamente penas privativas da liberdade, será executada primeiro a de reclusão, depois a de detenção e por último a de prisão simples.",
+      "pontos": ["Ordem de execução: reclusão, detenção e prisão simples."],
+      "atencao": ["Primeiro a pena mais grave."],
+      "exemplo": "Reclusão e detenção cumulativas: cumpre-se primeiro a reclusão.",
+      "prova": ["Assertiva que inverte a ordem de execução, começando pela prisão simples, erra."],
+      "termos": [],
+      "remissoes": ["Art. 676"]
+    },
+    "art-682": {
+      "simples": "O sentenciado a que sobrevier doença mental, verificada por perícia médica, será internado em manicômio judiciário, ou, à falta, em outro estabelecimento adequado, onde lhe seja assegurada a custódia. Em caso de urgência, o diretor do estabelecimento penal poderá determinar a remoção do sentenciado, comunicando imediatamente ao juiz, que, em face da perícia médica, ratificará ou revogará a medida. Se a internação se prolongar até o término do prazo restante da pena e não houver sido imposta medida de segurança detentiva, o indivíduo terá o destino aconselhado pela sua enfermidade, feita a devida comunicação ao juiz de incapazes.",
+      "pontos": ["Doença mental superveniente na execução: internação em manicômio judiciário ou outro estabelecimento adequado.", "Urgência: o diretor remove e comunica o juiz.", "Fim do prazo restante da pena sem medida de segurança: destino aconselhado pela enfermidade."],
+      "atencao": ["Hoje se aplica a Lei de Execução Penal (art. 183)."],
+      "exemplo": "O condenado desenvolve doença mental e é internado em estabelecimento adequado.",
+      "prova": ["Assertiva que mantém o sentenciado em doença mental no presídio comum erra."],
+      "termos": [],
+      "remissoes": ["Art. 154"]
+    },
+    "art-683": {
+      "simples": "O diretor da prisão a que o réu tiver sido recolhido provisoriamente ou em cumprimento de pena comunicará imediatamente ao juiz o óbito, a fuga ou a soltura do detido ou sentenciado para que fique constando dos autos. A certidão de óbito acompanhará a comunicação.",
+      "pontos": ["Diretor comunica imediatamente ao juiz óbito, fuga ou soltura.", "Certidão de óbito acompanha a comunicação."],
+      "atencao": ["Comunicação imediata."],
+      "exemplo": "O diretor comunica a fuga do sentenciado ao juiz.",
+      "prova": ["Assertiva que dispensa a comunicação da fuga ao juiz erra."],
+      "termos": [],
+      "remissoes": ["Art. 684"]
+    },
+    "art-684": {
+      "simples": "A recaptura do réu evadido não depende de prévia ordem judicial e poderá ser efetuada por qualquer pessoa.",
+      "pontos": ["Recaptura do evadido sem prévia ordem judicial.", "Qualquer pessoa pode efetuá-la."],
+      "atencao": ["Dispensa nova ordem."],
+      "exemplo": "Qualquer pessoa pode recapturar o preso que fugiu.",
+      "prova": ["Assertiva que exige nova ordem judicial para a recaptura do evadido erra."],
+      "termos": [],
+      "remissoes": ["Art. 683"]
+    },
+    "art-685": {
+      "simples": "Cumprida ou extinta a pena, o condenado será posto, imediatamente, em liberdade, mediante alvará do juiz, no qual se ressalvará a hipótese de dever o condenado continuar na prisão por outro motivo legal. Se tiver sido imposta medida de segurança detentiva, o condenado será removido para estabelecimento adequado.",
+      "pontos": ["Pena cumprida ou extinta: liberdade imediata por alvará.", "Ressalva de outra causa legal de prisão.", "Medida de segurança detentiva: remoção para estabelecimento adequado."],
+      "atencao": ["Liberdade imediata."],
+      "exemplo": "Cumprida a pena, o juiz expede o alvará de soltura.",
+      "prova": ["Assertiva que mantém o condenado preso após o cumprimento da pena, sem outro motivo, erra."],
+      "termos": [],
+      "remissoes": ["Art. 762"]
+    },
+    "art-686": {
+      "simples": "A pena de multa será paga dentro de 10 dias após haver transitado em julgado a sentença que a impuser. Se interposto recurso da sentença, esse prazo será contado do dia em que o juiz ordenar o cumprimento da decisão da superior instância.",
+      "pontos": ["Multa paga em 10 dias do trânsito em julgado.", "Com recurso: prazo conta da ordem de cumprimento da decisão superior."],
+      "atencao": ["Hoje a multa é dívida de valor, cobrada conforme a Lei de Execução Penal."],
+      "exemplo": "Transitada em julgado a sentença, o condenado paga a multa em 10 dias.",
+      "prova": ["Assertiva que fixa em 30 dias o prazo para pagar a multa erra: são 10 dias."],
+      "termos": [],
+      "remissoes": ["Art. 687"]
+    },
+    "art-687": {
+      "simples": "O juiz poderá, desde que o condenado o requeira, prorrogar o prazo do pagamento da multa até três meses, se as circunstâncias justificarem essa prorrogação; e permitir, nas mesmas circunstâncias, que o pagamento se faça em parcelas mensais, no prazo que fixar, mediante caução real ou fidejussória, quando necessário. O requerimento, em ambos os casos, será feito dentro do decêndio concedido para o pagamento da multa. A permissão para o pagamento em parcelas será revogada se o juiz verificar que o condenado dela se vale para fraudar a execução da pena, hipótese em que a caução se resolve em valor monetário.",
+      "pontos": ["Prorrogação do prazo em até três meses, a requerimento.", "Pagamento em parcelas mensais, com caução, se necessário.", "Requerimento em dez dias.", "Revogação se houver fraude à execução."],
+      "atencao": ["Prazo de requerimento: o decêndio (dez dias)."],
+      "exemplo": "O condenado pede o parcelamento da multa dentro dos dez dias concedidos.",
+      "prova": ["Assertiva que permite prorrogar o pagamento da multa por prazo indeterminado erra: é até três meses."],
+      "termos": [],
+      "remissoes": ["Art. 686"]
+    },
+    "art-688": {
+      "simples": "Findo o decêndio ou a prorrogação sem que o condenado efetue o pagamento, ou ocorrendo a hipótese do §2º do artigo anterior, observar-se-á o seguinte: possuindo o condenado bens sobre os quais possa recair a execução, será extraída certidão da sentença condenatória, a fim de que o Ministério Público proceda à cobrança judicial; sendo o condenado insolvente, far-se-á a cobrança mediante desconto de quarta parte de sua remuneração quando cumprir pena privativa de liberdade cumulativamente imposta com a de multa, mediante desconto em seu vencimento ou salário se, cumprida a pena privativa de liberdade ou concedido o livramento condicional, a multa não houver sido resgatada, ou mediante esse desconto se a multa for a única pena imposta ou no caso de suspensão condicional da pena. O desconto será feito mediante ordem ao empregador, à repartição competente ou à administração da entidade paraestatal, e o empregador será intimado sob pena de desobediência.",
+      "pontos": ["Não pago: com bens, certidão para cobrança judicial pelo MP.", "Insolvente: desconto de quarta parte da remuneração (preso), desconto em vencimento ou salário (após a pena ou no livramento), ou na multa como pena única.", "Desconto por ordem ao empregador, sob pena de desobediência."],
+      "atencao": ["Regras anteriores à reforma (a multa é dívida de valor)."],
+      "exemplo": "Multa não paga por condenado com bens: o MP promove a cobrança judicial.",
+      "prova": ["Assertiva que prevê a prisão como primeira consequência do não pagamento da multa erra."],
+      "termos": [],
+      "remissoes": ["Art. 687"]
+    },
+    "art-689": {
+      "simples": "A multa será convertida, à razão de dez mil-réis por dia, em detenção ou prisão simples, no caso de crime ou de contravenção, se o condenado solvente frustrar o pagamento da multa ou se não forem pagas pelo condenado solvente as parcelas mensais autorizadas sem garantia. Se o juiz reconhecer desde logo a existência de causa para a conversão, a ela procederá de ofício ou a requerimento do Ministério Público, independentemente de audiência do condenado; caso contrário, depois de ouvir o condenado, poderá admitir a apresentação de prova pelas partes. O juiz, desde que transite em julgado a decisão, ordenará a expedição de mandado de prisão ou aditamento à carta de guia. Na hipótese do inciso II, a conversão será feita pelo valor das parcelas não pagas.",
+      "pontos": ["Conversão da multa em detenção ou prisão simples, se o solvente frustrar o pagamento.", "Também se o solvente não pagar as parcelas autorizadas sem garantia.", "Conversão de ofício ou a requerimento do MP.", "Mandado de prisão ou aditamento à carta de guia."],
+      "atencao": ["Conversão da multa em prisão foi eliminada pelo Código Penal reformado (a multa é dívida de valor).", "Valor em moeda antiga."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que admite a conversão da multa em prisão hoje erra, à luz do Código Penal reformado."],
+      "termos": [],
+      "remissoes": ["Art. 690"]
+    },
+    "art-690": {
+      "simples": "O juiz tornará sem efeito a conversão, expedindo alvará de soltura ou cassando a ordem de prisão, se o condenado, em qualquer tempo, pagar a multa ou prestar caução real ou fidejussória que lhe assegure o pagamento. No caso da caução, antes de homologada, será ouvido o Ministério Público dentro do prazo de dois dias.",
+      "pontos": ["Conversão sem efeito se o condenado pagar a multa ou prestar caução.", "Em qualquer tempo.", "Caução: oitiva do MP em dois dias antes da homologação."],
+      "atencao": ["Prazo de dois dias para o MP."],
+      "exemplo": "Pagando a multa, o condenado tem a conversão cassada.",
+      "prova": ["Assertiva que impede a revogação da conversão após certo prazo erra: é em qualquer tempo."],
+      "termos": [],
+      "remissoes": ["Art. 689"]
+    },
+    "art-691": {
+      "simples": "O juiz dará à autoridade administrativa competente conhecimento da sentença transitada em julgado que impuser ou de que resultar a perda da função pública ou a incapacidade temporária para investidura em função pública ou para exercício de profissão ou atividade.",
+      "pontos": ["Comunicação à autoridade administrativa da sentença que impuser perda de função pública ou incapacidade temporária."],
+      "atencao": ["Efeito da condenação."],
+      "exemplo": "O juiz comunica ao órgão público a perda do cargo decorrente da condenação.",
+      "prova": ["Assertiva que dispensa a comunicação à autoridade administrativa erra."],
+      "termos": [],
+      "remissoes": ["Art. 92 do Código Penal"]
+    },
+    "art-692": {
+      "simples": "No caso de incapacidade temporária ou permanente para o exercício do pátrio poder, da tutela ou da curatela, o juiz providenciará para que sejam acautelados, no juízo competente, a pessoa e os bens do menor ou do interdito.",
+      "pontos": ["Incapacidade para o poder familiar, tutela ou curatela: o juiz providencia a proteção da pessoa e dos bens do menor ou interdito."],
+      "atencao": ["Proteção do incapaz."],
+      "exemplo": "O condenado perde o poder familiar, e o juiz providencia a proteção do filho.",
+      "prova": ["Assertiva que dispensa providências quanto aos bens do menor ou interdito erra."],
+      "termos": [],
+      "remissoes": ["Art. 693"]
+    },
+    "art-693": {
+      "simples": "A incapacidade permanente ou temporária para o exercício da autoridade marital ou do pátrio poder será averbada no registro civil.",
+      "pontos": ["Incapacidade para a autoridade marital ou o pátrio poder é averbada no registro civil."],
+      "atencao": ["Averbação no registro civil."],
+      "exemplo": "A perda do poder familiar é averbada no registro civil.",
+      "prova": ["Assertiva que dispensa a averbação no registro civil erra."],
+      "termos": [],
+      "remissoes": ["Art. 692"]
+    },
+    "art-694": {
+      "simples": "As penas acessórias consistentes em interdições de direitos serão comunicadas ao Instituto de Identificação e Estatística ou estabelecimento congênere, figurarão na folha de antecedentes do condenado e serão mencionadas no rol de culpados.",
+      "pontos": ["Interdições de direitos são comunicadas ao Instituto de Identificação.", "Constam da folha de antecedentes e do rol de culpados."],
+      "atencao": ["Efeitos registrais."],
+      "exemplo": "A interdição é anotada na folha de antecedentes do condenado.",
+      "prova": ["Assertiva que dispensa a menção das interdições na folha de antecedentes erra."],
+      "termos": [],
+      "remissoes": ["Art. 695"]
+    },
+    "art-695": {
+      "simples": "Iniciada a execução das interdições temporárias, o juiz, de ofício, a requerimento do Ministério Público ou do condenado, fixará o seu termo final, completando as providências determinadas nos artigos anteriores.",
+      "pontos": ["Iniciada a interdição temporária, o juiz fixa o termo final.", "De ofício ou a requerimento do MP ou do condenado."],
+      "atencao": ["Fixação do termo final da interdição."],
+      "exemplo": "O juiz fixa a data final da interdição temporária de direitos.",
+      "prova": ["Assertiva que deixa a interdição temporária sem termo final erra."],
+      "termos": [],
+      "remissoes": ["Art. 694"]
+    }
+  }
+}
