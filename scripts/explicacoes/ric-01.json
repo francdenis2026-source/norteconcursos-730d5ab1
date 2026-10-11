@@ -1,0 +1,69 @@
+{
+  "course_slug": "ric",
+  "law": "Lei do Registro de Identidade Civil (Lei nº 9.454, de 1997) — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "É instituído o número único de Registro de Identidade Civil, pelo qual cada cidadão brasileiro, nato ou naturalizado, será identificado em suas relações com a sociedade e com os organismos governamentais e privados. Nos documentos novos será adotado, como número único, o número de inscrição no Cadastro de Pessoas Físicas (CPF), que é único e definitivo para cada pessoa física.",
+      "pontos": ["Número único de Registro de Identidade Civil.", "Aplica-se ao brasileiro nato ou naturalizado.", "O número do CPF é adotado nos documentos novos.", "O CPF é único e definitivo."],
+      "atencao": ["ATUALIZAÇÃO: os §§2º e 3º foram incluídos pela Lei do CPF como documento único (CPF como número único).", "O §1º foi vetado."],
+      "exemplo": "Os novos documentos trazem o CPF como número único do cidadão.",
+      "prova": ["Assertiva que cria novo número para cada documento erra: o CPF é o número único."],
+      "termos": [{ "termo": "RIC", "significado": "Registro de Identidade Civil." }],
+      "remissoes": ["Lei do CPF"]
+    },
+    "art-2": {
+      "simples": "É instituído o Cadastro Nacional de Registro de Identificação Civil, destinado a conter o número único de Registro de Identidade Civil, acompanhado dos dados de identificação de cada cidadão.",
+      "pontos": ["Cadastro Nacional de Registro de Identificação Civil.", "Contém o número único e os dados de identificação."],
+      "atencao": ["Base nacional unificada."],
+      "exemplo": "O cadastro nacional reúne o número único e os dados de cada cidadão.",
+      "prova": ["Assertiva que mantém cadastros estaduais isolados sem base nacional erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-3": {
+      "simples": "O Poder Executivo definirá a entidade que centralizará as atividades de implementação, coordenação e controle do Cadastro Nacional, que será o órgão central do Sistema Nacional de Registro de Identificação Civil. A União fica autorizada a firmar convênio com os Estados e o Distrito Federal para a implementação do número único. Os órgãos regionais coordenarão no âmbito de cada Unidade da Federação, repassando aos órgãos locais as instruções do órgão central e reportando a este as informações.",
+      "pontos": ["Executivo define o órgão central do Sistema.", "Convênios da União com Estados e DF.", "Órgãos regionais coordenam em cada Unidade da Federação."],
+      "atencao": ["ATUALIZAÇÃO: parte do dispositivo foi revogada pela Lei nº 12.058, de 2009."],
+      "exemplo": "A União firma convênio com um Estado para implantar o número único.",
+      "prova": ["Assertiva que atribui a escolha do órgão central ao Poder Legislativo erra: é do Executivo."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-4": {
+      "simples": "Será incluída, na proposta orçamentária do órgão central do sistema, a provisão de meios necessários, acompanhada do cronograma de implementação e manutenção do sistema.",
+      "pontos": ["Provisão orçamentária para o sistema.", "Acompanhada de cronograma."],
+      "atencao": ["Dispositivo orçamentário."],
+      "exemplo": "O órgão central inclui na proposta orçamentária os recursos do sistema.",
+      "prova": ["Assertiva que dispensa a previsão orçamentária erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-5": {
+      "simples": "O Poder Executivo providenciará, no prazo de cento e oitenta dias, a regulamentação desta Lei e, no prazo de trezentos e sessenta dias, o início de sua implementação.",
+      "pontos": ["Regulamentação em cento e oitenta dias.", "Início da implementação em trezentos e sessenta dias."],
+      "atencao": ["Dispositivo transitório."],
+      "exemplo": "A lei fixou prazos para regulamentar e iniciar o sistema.",
+      "prova": ["Assertiva que fixa em noventa dias o prazo de regulamentação erra: são cento e oitenta dias."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-7": {
+      "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo final."],
+      "exemplo": "A Lei passou a valer na data da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis erra."],
+      "termos": [],
+      "remissoes": ["Art. 8º"]
+    },
+    "art-8": {
+      "simples": "Revogam-se as disposições em contrário, isto é, ficam sem efeito as normas anteriores incompatíveis com esta Lei.",
+      "pontos": ["Cláusula de revogação genérica."],
+      "atencao": ["Dispositivo final."],
+      "exemplo": "Normas incompatíveis foram revogadas.",
+      "prova": ["Assertiva que vê revogação expressa de lei específica erra: é cláusula genérica."],
+      "termos": [],
+      "remissoes": ["Art. 7º"]
+    }
+  }
+}

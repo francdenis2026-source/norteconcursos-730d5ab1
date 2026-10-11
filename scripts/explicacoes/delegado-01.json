@@ -1,0 +1,42 @@
+{
+  "course_slug": "delegado",
+  "law": "Lei do Delegado de Polícia (Lei nº 12.830, de 2013) — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "Esta Lei dispõe sobre a investigação criminal conduzida pelo delegado de polícia, regulamentando suas atribuições e prerrogativas.",
+      "pontos": ["Trata da investigação criminal conduzida pelo delegado de polícia."],
+      "atencao": ["Lei federal geral, que vale para delegados da Polícia Federal e das Polícias Civis."],
+      "exemplo": "O delegado conduz o inquérito policial conforme esta Lei.",
+      "prova": ["Assertiva que restringe a Lei aos delegados federais erra: trata do delegado de polícia em geral."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-2": {
+      "simples": "As funções de polícia judiciária e a apuração de infrações penais exercidas pelo delegado de polícia são de natureza jurídica, essenciais e exclusivas de Estado. Ao delegado, como autoridade policial, cabe a condução da investigação criminal por inquérito policial ou outro procedimento previsto em lei, para apurar circunstâncias, materialidade e autoria. Cabe-lhe requisitar perícia, informações, documentos e dados. O inquérito em curso só poderá ser avocado ou redistribuído por superior hierárquico mediante despacho fundamentado, por interesse público ou por inobservância de procedimentos que prejudique a investigação. A remoção do delegado dá-se somente por ato fundamentado. O indiciamento, privativo do delegado, dá-se por ato fundamentado, mediante análise técnico-jurídica do fato, indicando autoria, materialidade e circunstâncias.",
+      "pontos": ["Função jurídica, essencial e exclusiva de Estado.", "Condução da investigação criminal pelo delegado.", "Requisição de perícia, informações, documentos e dados.", "Avocação ou redistribuição só por despacho fundamentado.", "Remoção por ato fundamentado.", "Indiciamento privativo do delegado, fundamentado."],
+      "atencao": ["O §3º foi vetado.", "INDICIAMENTO é privativo do delegado e deve ser fundamentado.", "Remoção sem fundamentação viola a Lei."],
+      "exemplo": "O delegado indicia o investigado por ato fundamentado, apontando autoria e materialidade.",
+      "prova": ["Assertiva que permite ao Ministério Público indiciar o investigado erra: o indiciamento é privativo do delegado."],
+      "termos": [{ "termo": "Indiciamento", "significado": "Ato do delegado que aponta alguém como provável autor do crime." }],
+      "remissoes": ["Código de Processo Penal (inquérito)"]
+    },
+    "art-3": {
+      "simples": "O cargo de delegado de polícia é privativo de bacharel em Direito, devendo-lhe ser dispensado o mesmo tratamento protocolar que recebem os magistrados, os membros da Defensoria Pública e do Ministério Público e os advogados.",
+      "pontos": ["Cargo privativo de bacharel em Direito.", "Tratamento protocolar igual ao de magistrados, defensores, promotores e advogados."],
+      "atencao": ["Exige formação em Direito."],
+      "exemplo": "Só quem é bacharel em Direito pode ocupar o cargo de delegado.",
+      "prova": ["Assertiva que permite o cargo a qualquer bacharel de nível superior erra: é privativo de bacharel em Direito."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-4": {
+      "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo final."],
+      "exemplo": "A Lei passou a valer na data da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    }
+  }
+}
