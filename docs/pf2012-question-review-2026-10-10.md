@@ -2,16 +2,16 @@
 
 ## Resultado confirmado no Supabase
 
-Foram registradas **760 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
+Foram registradas **860 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
 
 | Situação | Quantidade |
 | --- | ---: |
-| Questões aprovadas e ativas | 409 |
-| Itens retidos para complementação | 313 |
-| Repetições internas excluídas da publicação | 21 |
+| Questões aprovadas e ativas | 455 |
+| Itens retidos para complementação | 324 |
+| Repetições internas excluídas da publicação | 24 |
 | Enunciados inadequados excluídos da publicação | 4 |
-| Candidatos ainda sem revisão individual neste caderno | 240 |
-| Gabaritos históricos superados excluídos da publicação | 13 |
+| Candidatos ainda sem revisão individual neste caderno | 140 |
+| Gabaritos históricos superados excluídos da publicação | 53 |
 | Registros privados de extração deste caderno | 1.000 |
 
 Os 1.000 registros são candidatos extraídos, não uma certificação de 1.000 questões distintas e aproveitáveis. Foram associadas respostas editoriais a 982 registros; as demais exigem conferência. A revisão das 17 apostilas está **incompleta**. Não extrapolar os números deste lote para o total do acervo.
@@ -48,14 +48,14 @@ O importador passou a aceitar o formato nativo **certo/errado**, exigindo indica
 
 - Validação offline dos pacotes e das duas etapas de revisão: concluída.
 - Testes de regressão: **86 passaram**, incluindo rejeição de respostas e alternativas incompatíveis com o formato C/E.
-- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 409 publicações; isto não certifica ausência de duplicatas semânticas.
-- Conferência de banco: 1.000 extrações privadas, 760 decisões auditadas e 409 publicações; textos, respostas originais e decisões preservados.
+- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 455 publicações; isto não certifica ausência de duplicatas semânticas.
+- Conferência de banco: 1.000 extrações privadas, 860 decisões auditadas e 455 publicações; textos, respostas originais e decisões preservados.
 
 Os PDFs privados, enunciados extraídos, pacotes de importação, capturas oficiais e relatórios detalhados permanecem nos outputs locais, fora do Git. Nenhuma credencial integra este commit. A biblioteca não foi ampliada a partir de trechos ainda sem catalogação e revisão concluídas.
 
 ## Trabalho restante
 
-Continuar a revisão dos 240 candidatos deste caderno e complementar os 313 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
+Continuar a revisão dos 140 candidatos deste caderno e complementar os 324 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
 
 ## Cadência autorizada
 
@@ -94,3 +94,9 @@ Os comentários distinguem aviso de reunião e autorização, conforme o Tema 85
 Mais 100 decisões: 57 publicações, 38 retidos, quatro repetições e um gabarito histórico superado. Banco confirmado em 760 decisões e 409 questões ativas. Os comentários sobre nacionalidade incluem a EC 131/2023 e distinguem a atual sentença judicial de cancelamento das antigas formulações administrativas.
 
 A questão sobre contribuição sindical obrigatória foi excluída: a [orientação atual do Ministério do Trabalho](https://www.gov.br/trabalho-e-emprego/pt-br/servicos/sindicatos/contribuicao-sindical) exige autorização prévia e expressa na contribuição sindical da CLT. Não se generalizou essa regra para contribuição assistencial.
+
+## Checkpoint 761–860
+
+Mais 100 decisões: 46 publicações, 11 retidos, três repetições e 40 exclusões por superação. Releitura confirmou 860 decisões e 455 questões ativas. Dois itens de produtos químicos sem resposta editorial extraída receberam respostas próprias diretamente fundamentadas no art. 1º, § 2º, da Lei 10.357/2001.
+
+Foram excluídos 39 itens da seção baseada na Lei 7.102/1983, expressamente revogada pelo [art. 70 da Lei 14.967/2024](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm). O item sobre cooperativas ficou retido para normas de transição. Também foi excluída a proibição geral antiga de policiamento ostensivo pelas guardas: o [Tema 656/STF](https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=3832832&numeroProcesso=608588&numeroTema=656) admite segurança urbana e policiamento ostensivo e comunitário nos limites da tese, sem atividade de polícia judiciária.
