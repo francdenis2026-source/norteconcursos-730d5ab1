@@ -16,7 +16,8 @@ import { LegalCoverage } from "@/components/library/LegalCoverage";
 import { useStudyMaterial } from "@/lib/studyMaterials";
 import { UnitExplanation } from "@/components/library/UnitExplanation";
 import { LegalRefProvider } from "@/components/library/LegalRefText";
-import { useLegalCourses, useLegalProgress, useLegalUnits, useLegalExplanationCoverage, useLegalRefIndex, type LegalUnit, type LegalCourse } from "@/lib/legalCourses";
+import { rememberLegal } from "@/components/library/StartHere";
+import { useLegalCourses, useLegalProgress, useLegalUnits, useLegalExplanationCoverage, useLegalRefIndex, useLegalExplanation, type LegalUnit, type LegalCourse } from "@/lib/legalCourses";
 import { legalProgressSummary, selectNextLegalUnit, type LegalProgress, type ReviewRating } from "@/lib/legalLearning";
 import { supabase } from "@/integrations/supabase/client";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
@@ -63,6 +64,7 @@ function LegalCoursePage() {
   };
   // link novo (?art=…&par=…) enquanto a página já está aberta: troca o dispositivo escolhido
   useEffect(() => { if (art) setSelectedIdState(undefined); }, [art, par]);
+  useEffect(() => { if (course && selected) rememberLegal({ slug: course.slug, art: selected.unit_key, label: selected.label, title: course.title.replace(/ — leitura atualizada$/, "") }); }, [course?.slug, selected?.unit_key]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!art || !selected) return;
     const t = setTimeout(() => document.getElementById("dispositivo-aberto")?.scrollIntoView({ block: "start", behavior: "smooth" }), 250);
@@ -136,7 +138,11 @@ function LegalCoursePage() {
 function UnitLesson({ unit, law, materialSlug, references, progress, userId, highlightPar, onNext }: { highlightPar?: string | undefined; unit: LegalUnit; law: string; materialSlug: string; references: LegalCourse["overview"]["jurisprudence"]; progress: LegalProgress | undefined; userId: string; onNext: () => void }) {
   const caveat = legalStudyCaveat(law, unit.unit_key);
   const queryClient = useQueryClient();
-  const [mode, setMode] = useState<"read" | "recall">("read");
+  const [step, setStep] = useState<"entender" | "texto" | "fixar">(highlightPar ? "texto" : "entender");
+  const explanation = useLegalExplanation(unit.id, userId);
+  // sem explicação publicada para este artigo: começa direto no texto oficial
+  useEffect(() => { if (explanation.isSuccess && !explanation.data && !highlightPar) setStep(cur => (cur === "entender" ? "texto" : cur)); }, [explanation.isSuccess, explanation.data, highlightPar]);
+  const mode = step === "fixar" ? "recall" : "read";
   const [revealed, setRevealed] = useState(false);
   const [notes, setNotes] = useState(progress?.notes ?? "");
   const [response, setResponse] = useState("");
@@ -157,15 +163,29 @@ function UnitLesson({ unit, law, materialSlug, references, progress, userId, hig
   return <article id="dispositivo-aberto" className="surface-card scroll-mt-4 space-y-4 p-5 sm:p-7">
     <p className="text-xs text-muted-foreground">{unit.chapter}</p><h2 className="text-2xl font-bold">{unit.label}</h2>
     {unit.content_status === "excluded" ? <p className="rounded-xl border border-amber-500 p-4 text-sm">Este dispositivo está vetado, revogado ou sem redação ativa no texto compilado. Não integra o progresso nem a recuperação de regras vigentes. Consulte o ato modificador na fonte oficial.</p> : <>
-      <div className="flex flex-wrap gap-2"><Button variant={mode === "read" ? "default" : "outline"} onClick={() => setMode("read")}>Estudar o dispositivo</Button><Button variant={mode === "recall" ? "default" : "outline"} onClick={() => { setMode("recall"); setRevealed(false); setResponse(""); }}>Recuperar sem consulta</Button></div>
+      <nav className="grid gap-2 sm:grid-cols-3" aria-label="Passos de estudo deste artigo">
+        {([["entender", "1", "Entender", "Explicação em palavras simples", "from-sky-500 to-indigo-600"], ["texto", "2", "Ler o texto oficial", "Com grifos e leitura guiada", "from-emerald-500 to-teal-600"], ["fixar", "3", "Fixar", "Recuperar sem consulta e praticar", "from-amber-500 to-orange-600"]] as const).map(([id, n, title, sub, grad]) =>
+          <button key={id} type="button" aria-current={step === id ? "step" : undefined} onClick={() => { setStep(id); if (id === "fixar") { setRevealed(false); setResponse(""); } }}
+            className={`flex items-center gap-3 rounded-xl border p-3 text-left transition ${step === id ? `border-transparent bg-gradient-to-r ${grad} text-white shadow` : "bg-card hover:border-primary"}`}>
+            <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-full text-sm font-black ${step === id ? "bg-white/25" : "bg-muted"}`}>{n}</span>
+            <span><span className="block text-sm font-bold">{title}</span><span className={`block text-xs ${step === id ? "text-white/85" : "text-muted-foreground"}`}>{sub}</span></span>
+          </button>)}
+      </nav>
       {mode === "recall" && <section className="space-y-3 rounded-xl border p-4"><h3 className="font-semibold">Explique com suas palavras</h3><ol className="list-decimal space-y-2 pl-5 text-sm">{unit.recall.prompts.map(prompt => <li key={prompt}>{prompt}</li>)}</ol><label className="block text-sm">Sua resposta de recuperação<textarea className="mt-1 min-h-36 w-full rounded-lg border bg-background p-3" value={response} onChange={e => setResponse(e.target.value)} placeholder="Responda antes de abrir a referência." /></label><Button disabled={!response.trim()} variant="outline" onClick={() => setRevealed(true)}>Conferir com o texto e os critérios</Button></section>}
-      {(mode === "read" || revealed) && <>
+      {step === "entender" && <>
         {caveat && <aside className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4 text-sm"><strong>{caveat.title}</strong><p className="mt-2 leading-7">{caveat.explanation}</p><a href={caveat.source} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block underline">Conferir o entendimento do STJ</a></aside>}
         {references.map(ref => <aside key={ref.url} className="rounded-xl border border-amber-500/50 p-4 text-sm"><strong>{ref.title}</strong><p className="mt-2">{ref.explanation}</p>{isStudySourceUrl(ref.url) && <a className="mt-2 inline-block underline" href={ref.url} target="_blank" rel="noopener noreferrer">Fonte do tribunal</a>}</aside>)}
-        {mode === "read" && <UnitExplanation unit={unit} userId={userId} />}
+        <UnitExplanation unit={unit} userId={userId} />
+        {explanation.isSuccess && !explanation.data && <p className="rounded-xl border border-dashed p-4 text-sm text-muted-foreground">A explicação deste artigo ainda está em preparação. Leia o texto oficial no passo 2.</p>}
+        <div className="flex justify-end"><Button onClick={() => setStep("texto")}>Ler o texto oficial →</Button></div>
+      </>}
+      {(step === "texto" || (step === "fixar" && revealed)) && <>
         <div className={unit.unit_key.startsWith("anexo-") ? "library-body overflow-x-auto" : undefined}><LegalStudyReading source={unit.body_text} markdown={unit.unit_key.startsWith("anexo-")} highlightPar={highlightPar} /></div>
-        {caveat?.literalPractice !== false && <LegalLiteralPractice key={unit.content_sha256} source={unit.body_text} label={unit.label} />}
+        {step === "texto" && caveat?.literalPractice !== false && <LegalLiteralPractice key={unit.content_sha256} source={unit.body_text} label={unit.label} />}
         {unit.recall.figures?.filter(figure => isStudySourceUrl(figure.url)).map(figure => <figure key={figure.url} className="rounded-xl border p-3"><img src={figure.url} alt={figure.title} className="h-auto max-w-full" loading="lazy" onError={event => { event.currentTarget.hidden = true; }} /><figcaption className="mt-2 text-xs"><a href={figure.url} target="_blank" rel="noopener noreferrer" className="underline">{figure.title}</a></figcaption></figure>)}
+        {step === "texto" && <div className="flex justify-between gap-2"><Button variant="outline" onClick={() => setStep("entender")}>← Entender</Button><Button onClick={() => { setStep("fixar"); setRevealed(false); setResponse(""); }}>Fixar este artigo →</Button></div>}
+      </>}
+      {step === "fixar" && <>
         <section className="rounded-xl bg-muted/40 p-4"><h3 className="font-semibold">Como conferir sua compreensão</h3><ul className="mt-2 list-disc space-y-2 pl-5 text-sm">{unit.recall.checklist.map(item => <li key={item}>{item}</li>)}</ul></section>
         <WorkedExamples slug={materialSlug} enabled={true} articleLabel={unit.label} />
       </>}

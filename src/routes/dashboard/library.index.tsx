@@ -21,6 +21,7 @@ import { librarySearchText, matchesLibrarySearch, matchingLibraryLaws } from "@/
 import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
 import { LibraryNavigation } from "@/components/library/LibraryNavigation";
 import { BackToPlan } from "@/components/cronograma/BackToPlan";
+import { StartHere } from "@/components/library/StartHere";
 import { libraryArea, libraryDiscipline, libraryDisciplines, libraryTone, type LibraryArea } from "@/lib/libraryOrganization";
 import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
 import {
@@ -129,6 +130,8 @@ function LibraryIndex() {
           <HeroStat icon={Check} label="Já lidos" value={isPending ? "—" : readCount} />
         </div>
       </PageHero>
+
+      {signedIn && !searching && user && <StartHere userId={user.id} />}
 
 
       {isPending && signedIn ? (
