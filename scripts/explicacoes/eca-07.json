@@ -1,0 +1,7 @@
+{
+  "course_slug": "eca",
+  "law": "Estatuto da Criança e do Adolescente — lote 07: art. 232",
+  "units": {
+    "art-232": { "simples": "Este artigo previa o crime de submeter criança ou adolescente sob autoridade, guarda ou vigilância a vexame ou constrangimento, com pena de detenção de seis meses a dois anos. Foi revogado pela Lei de Tortura, que passou a tratar a conduta de forma mais ampla.", "pontos": ["Dispositivo revogado.", "A conduta passou a ser tratada na Lei de Tortura."], "atencao": ["ATUALIZAÇÃO: artigo revogado pela Lei de Tortura; não deve ser aplicado.", "Questões que o tratem como vigente estão desatualizadas."], "exemplo": "O constrangimento de criança sob guarda hoje é analisado à luz da Lei de Tortura.", "prova": ["Assertiva que aplica o art. 232 do Estatuto como crime vigente erra: foi revogado."], "termos": [], "remissoes": ["Lei de Tortura"] }
+  }
+}
