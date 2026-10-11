@@ -7975,3 +7975,214 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .lp-step__node,
   .mh__panel { transition: none; animation: none; }
 }
+
+/* Landing v2: less noise, faster paint and a clearer Acre / PCAC focus. */
+.lp-hero__grid,
+.lp-acre__bg::before,
+.lp-acre__bg::after {
+  display: none;
+}
+.lp-hero__video {
+  object-position: 82% center;
+}
+.lp-hero__shade {
+  background:
+    linear-gradient(90deg, oklch(0.08 0.025 263 / 0.94), oklch(0.1 0.025 263 / 0.62) 40%, transparent 76%),
+    linear-gradient(0deg, var(--ink-deep), transparent 42%),
+    linear-gradient(180deg, oklch(0.08 0.025 263 / 0.5), transparent 24%);
+}
+.lp-section {
+  padding-block: clamp(64px, 8vw, 112px);
+}
+.lp-pcac {
+  min-height: min(720px, 78svh);
+  display: grid;
+  align-items: center;
+  border-block-color: oklch(0.8 0.13 78 / 0.35);
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.06), inset 0 -1px 0 oklch(1 0 0 / 0.06);
+}
+.lp-pcac::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
+  content: "";
+  background: linear-gradient(90deg, transparent, var(--brass), transparent);
+  opacity: 0.8;
+}
+.lp-pcac .lp-photo__media {
+  background-size: cover;
+  background-position: 72% center;
+  filter: saturate(0.92) contrast(1.04);
+}
+.lp-pcac .lp-photo__shade {
+  background:
+    linear-gradient(90deg, oklch(0.07 0.023 263 / 0.98) 0%, oklch(0.09 0.025 263 / 0.88) 38%, oklch(0.09 0.025 263 / 0.35) 68%, oklch(0.09 0.025 263 / 0.12)),
+    linear-gradient(0deg, oklch(0.07 0.023 263 / 0.9), transparent 52%);
+}
+.lp-pcac__content {
+  padding: clamp(24px, 4vw, 46px);
+  border: 1px solid oklch(1 0 0 / 0.12);
+  border-radius: 24px;
+  background: linear-gradient(145deg, oklch(0.09 0.025 263 / 0.78), oklch(0.09 0.025 263 / 0.38));
+  box-shadow: 0 24px 70px -42px oklch(0 0 0 / 0.9), inset 0 1px 0 oklch(1 0 0 / 0.08);
+  backdrop-filter: blur(12px);
+}
+.lp-pcac__emblems {
+  margin-bottom: 22px;
+}
+.lp-pcac .lp-h2 {
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+}
+.lp-pcac__roles span {
+  background: oklch(0.08 0.025 263 / 0.7);
+}
+
+.lp-acre {
+  padding-top: clamp(72px, 9vw, 124px);
+  padding-bottom: clamp(72px, 9vw, 124px);
+}
+.lp-acre__top {
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(28px, 5vw, 74px);
+}
+.lp-acre__copy .lp-h2 {
+  max-width: 11ch;
+  font-size: clamp(2.5rem, 4.5vw, 4.4rem);
+}
+.lp-acre__stage {
+  aspect-ratio: 1.4;
+  margin-block: 20px 44px;
+  border: 1px solid oklch(1 0 0 / 0.1);
+  border-radius: 28px;
+  background: linear-gradient(145deg, oklch(1 0 0 / 0.07), oklch(1 0 0 / 0.015));
+  box-shadow: 0 28px 70px -44px oklch(0 0 0 / 0.95), inset 0 1px 0 oklch(1 0 0 / 0.08);
+}
+.lp-acre__stage::before {
+  position: absolute;
+  inset: 12%;
+  content: "";
+  border: 1px solid oklch(0.8 0.13 78 / 0.18);
+  border-radius: 50%;
+  transform: rotate(-14deg) scaleX(0.72);
+  pointer-events: none;
+}
+.lp-acre__map {
+  inset: 7% 5% 7%;
+  filter: drop-shadow(0 0 1px var(--brass)) drop-shadow(0 14px 24px oklch(0 0 0 / 0.34));
+  animation: none;
+}
+.lp-acre__fill {
+  background:
+    linear-gradient(135deg, oklch(0.8 0.13 78 / 0.22), oklch(0.2 0.04 262 / 0.3)),
+    url("/media/acre-seguranca.jpg") center / cover;
+}
+.lp-acre__sheen::after {
+  animation: none;
+  opacity: 0;
+}
+.lp-acre__people {
+  z-index: 2;
+  bottom: 3%;
+  left: 2%;
+  width: 96%;
+  max-width: none;
+  filter: drop-shadow(0 18px 18px oklch(0 0 0 / 0.5));
+  mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / 100% 100% no-repeat;
+  -webkit-mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / 100% 100% no-repeat;
+}
+.lp-acre__pins {
+  z-index: 4;
+}
+.lp-pin i::after {
+  animation: none;
+  opacity: 0;
+}
+.lp-pin em {
+  border-color: oklch(1 0 0 / 0.2);
+  background: oklch(0.08 0.025 263 / 0.84);
+  box-shadow: 0 6px 14px -10px oklch(0 0 0 / 0.9);
+}
+.lp-acre__badge {
+  top: 3%;
+  left: 4%;
+  z-index: 5;
+}
+.lp-acre__coords {
+  top: 5%;
+  right: 5%;
+  z-index: 5;
+}
+.lp-card {
+  min-height: 172px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, oklch(1 0 0 / 0.065), oklch(1 0 0 / 0.018));
+}
+.lp-card::before,
+.lp-card::after {
+  display: none;
+}
+.lp-card__cta {
+  opacity: 1;
+  transform: none;
+}
+.lp-card:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1000px) {
+  .lp-acre__top {
+    grid-template-columns: 1fr;
+  }
+  .lp-acre__copy .lp-h2 {
+    max-width: 14ch;
+  }
+  .lp-acre__stage {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 767px) {
+  .lp-hero__video {
+    object-position: 64% center;
+  }
+  .lp-pcac {
+    min-height: 0;
+  }
+  .lp-pcac__content {
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+  .lp-pcac .lp-h2 {
+    font-size: clamp(2.2rem, 11vw, 3.4rem);
+  }
+  .lp-acre {
+    padding-block: 64px;
+  }
+  .lp-acre__stage {
+    aspect-ratio: 1.05;
+    margin-top: 8px;
+    border-radius: 20px;
+  }
+  .lp-acre__map {
+    inset: 10% 4% 9%;
+  }
+  .lp-acre__people {
+    bottom: 7%;
+    left: 0;
+    width: 100%;
+  }
+  .lp-acre__badge {
+    top: 4%;
+    left: 4%;
+    transform: scale(0.86);
+    transform-origin: top left;
+  }
+  .lp-acre__coords {
+    top: 5%;
+    right: 5%;
+    font-size: 0.52rem;
+  }
+  .lp-acre__grid {
+    gap: 9px;
+  }
+}
