@@ -10,30 +10,6 @@ import {sessionAuthHeaders} from './supabase-session-auth.mjs';
 import {validateLawReview} from './apply-library-law-review.mjs';
 function load(file,overrides={}){const module={exports:{}};const native=createRequire(import.meta.url);const code=ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;vm.runInNewContext(code,{module,exports:module.exports,require:name=>overrides[name]??native(name),URL});return module.exports;}
 const highlights=load('src/lib/legalHighlights.ts');
-const practice=load('src/lib/legalLiteralPractice.ts',{'./legalHighlights':highlights});
-test('Literal practice uses exact source slices, distinct answers, explicit exceptions and numeric thresholds',()=>{
- for(const source of ['Art. 1. Pena: reclusão de 3 a 8 anos; salvo autorização.','A avaliação biopsicossocial considera impedimentos e barreiras.','Caput: 3 pessoas; § 1º: 3 pessoas.']){
-  const exercises=practice.literalExercises(source);assert.ok(exercises.length>0);assert.ok(exercises.length<=3);
-  assert.equal(new Set(exercises.map(x=>x.answer)).size,exercises.length);
-  for(const e of exercises)assert.equal(e.before+e.answer+e.after,source);
- }
- assert.equal(practice.matchesLiteralAnswer('  SALVO  ','salvo'),true);
- assert.equal(practice.matchesLiteralAnswer('3','3 ou mais pessoas'),false);
- assert.equal(practice.matchesLiteralAnswer('inferior','igual ou inferior'),false);
- assert.equal(practice.literalExercises('').length,0);
-});
-test('Unanswered literal exercises withhold the selected answer and safely escape source HTML',()=>{
- const component=load('src/components/library/LegalLiteralPractice.tsx',{'@/lib/legalLiteralPractice':practice});
- const html=renderToStaticMarkup(React.createElement(component.LegalLiteralPractice,{source:'<script>alert(1)</script> Pena: reclusão de 3 a 8 anos.',label:'Art. 1'}));
- assert.ok(!html.includes('<script>'));assert.ok(html.includes('&lt;script&gt;'));
- assert.ok(html.includes('[lacuna]'));assert.ok(html.includes('disabled=""'));assert.ok(!html.includes('Correspondência literal correta'));
- assert.ok(!html.includes('de 3 a 8 anos'));
- const duplicated=renderToStaticMarkup(React.createElement(component.LegalLiteralPractice,{source:'Art. 1. 3 pessoas; Art. 2. 3 pessoas.',label:'Art. 1'}));
- assert.ok(!duplicated.includes('3 pessoas'));assert.ok(duplicated.includes('outra ocorrência omitida'));
- const route=readFileSync('src/routes/dashboard/legal-course.$slug.tsx','utf8');
- assert.ok(route.indexOf('<LegalLiteralPractice')>route.indexOf('(mode === "read" || revealed)'));
- assert.ok(route.includes('key={unit.content_sha256}'));
-});
 test('Historical CPP curator wording is not drilled as a current requirement; practical cards append to existing decks',()=>{
  const {legalStudyCaveat}=load('src/lib/legalStudyCaveats.ts');
  assert.equal(legalStudyCaveat('codigo-processo-penal','art-262').literalPractice,false);

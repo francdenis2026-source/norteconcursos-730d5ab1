@@ -45,6 +45,7 @@ import {
   Wallet,
   Medal,
   Radar,
+  Gavel,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -154,6 +155,7 @@ const MENU: MenuItem[] = [
     href: "/dashboard/edital-radar",
   },
   { group: "Edital e conteúdo", label: "Biblioteca", icon: Library, href: "/dashboard/library" },
+  { group: "Edital e conteúdo", label: "Painel do CTB", icon: Gavel, href: "/dashboard/ctb" },
   {
     group: "Edital e conteúdo",
     label: "Central de mídia",
