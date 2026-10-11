@@ -721,9 +721,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               </span>
               <button
                 type="button"
-                className="app-top-btn"
+                className="app-top-btn app-theme-toggle"
                 onClick={toggleTheme}
                 aria-label={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}
+                title={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}
               >
                 {isDarkMode ? <Sun /> : <Moon />}
               </button>

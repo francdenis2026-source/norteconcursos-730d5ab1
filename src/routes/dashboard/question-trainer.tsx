@@ -62,6 +62,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { classifyTopic, subjectInArea } from "@/lib/questionTopics";
+import { filterTrainerQuestions, trainerBoard } from "@/lib/trainerFilters";
 import { canonicalSubject } from "@/lib/subjects";
 import { type StudyMaterialSummary, useStudyMaterialList } from "@/lib/studyMaterials";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
@@ -137,9 +138,16 @@ function QuestionTrainer() {
     if (isGuest) navigate({ to: "/desafio-diario", replace: true });
   }, [isGuest, navigate]);
   const canLoad = !authLoading && !isGuest && !!userId && userId !== "demo-user";
-  const { catalog: fullCatalog, loading: catalogLoading, error } = useQuestionCatalog(userId, canLoad);
+  const {
+    catalog: fullCatalog,
+    loading: catalogLoading,
+    error,
+  } = useQuestionCatalog(userId, canLoad);
   const law = routeFilters.law;
-  const catalog = React.useMemo(() => law === undefined ? fullCatalog : fullCatalog.filter(q => questionMatchesLaw(q, law)), [fullCatalog, law]);
+  const catalog = React.useMemo(
+    () => (law === undefined ? fullCatalog : fullCatalog.filter((q) => questionMatchesLaw(q, law))),
+    [fullCatalog, law],
+  );
   const { data: libraryMaterials } = useStudyMaterialList(canLoad);
   const libraryByDiscipline = React.useMemo(() => {
     const map = new Map<string, StudyMaterialSummary[]>();
@@ -155,7 +163,7 @@ function QuestionTrainer() {
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
   const [contest, setContest] = React.useState(routeFilters.contest || "all");
-  const [board, setBoard] = React.useState(routeFilters.board || "all");
+  const [board, setBoard] = React.useState(trainerBoard(routeFilters.board));
   const [career, setCareer] = React.useState(routeFilters.career || "all");
   const [year, setYear] = React.useState(routeFilters.year || "all");
   const [appliedExam, setAppliedExam] = React.useState("all");
@@ -186,21 +194,61 @@ function QuestionTrainer() {
   const [startedAt, setStartedAt] = React.useState(Date.now());
   React.useEffect(() => {
     // A new law link must never reuse a session or filters belonging to the previous law.
-    setStarted(false); setQuestions([]); setResults([]); setIndex(0); setModal(null);
-    setContest(routeFilters.contest || "all"); setBoard(routeFilters.board || "all");
-    setCareer(routeFilters.career || "all"); setYear(routeFilters.year || "all");
-    setSubject(routeFilters.subject || "all"); setSource(routeFilters.source || "all");
-    setReviewed(routeFilters.reviewed || "all"); setState(routeFilters.state || "all");
-    setCategory(routeFilters.category || "all"); setArea(routeFilters.area || "all");
-    setTopic(routeFilters.topic || "all"); setDifficulty("all"); setAppliedExam("all");
+    setStarted(false);
+    setQuestions([]);
+    setResults([]);
+    setIndex(0);
+    setModal(null);
+    setContest(routeFilters.contest || "all");
+    setBoard(trainerBoard(routeFilters.board));
+    setCareer(routeFilters.career || "all");
+    setYear(routeFilters.year || "all");
+    setSubject(routeFilters.subject || "all");
+    setSource(routeFilters.source || "all");
+    setReviewed(routeFilters.reviewed || "all");
+    setState(routeFilters.state || "all");
+    setCategory(routeFilters.category || "all");
+    setArea(routeFilters.area || "all");
+    setTopic(routeFilters.topic || "all");
+    setDifficulty("all");
+    setAppliedExam("all");
     autoStart.current = routeFilters.go === "1";
-  }, [law]);
-  const lawNotice = law !== undefined ? <aside className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm" role="status">
-    <strong>{legalLibraryEntry(law)?.title ?? "Lei não identificada"}</strong>
-    <p className="mt-1">{catalogLoading ? "Conferindo o banco…" : `${catalog.length} questões com referência oficial a este diploma.`} O filtro não inclui questões de outras leis automaticamente.</p>
-    {!catalogLoading && !catalog.length && <p className="mt-2">Use os casos resolvidos e flashcards do material enquanto não há questões identificadas para esta lei no banco.</p>}
-    <Link to="/dashboard/question-trainer" search={{}} className="mt-2 inline-block underline">Remover o filtro de lei</Link>
-  </aside> : null;
+  }, [
+    law,
+    routeFilters.contest,
+    routeFilters.board,
+    routeFilters.career,
+    routeFilters.year,
+    routeFilters.subject,
+    routeFilters.source,
+    routeFilters.reviewed,
+    routeFilters.state,
+    routeFilters.category,
+    routeFilters.area,
+    routeFilters.topic,
+    routeFilters.go,
+  ]);
+  const lawNotice =
+    law !== undefined ? (
+      <aside className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm" role="status">
+        <strong>{legalLibraryEntry(law)?.title ?? "Lei não identificada"}</strong>
+        <p className="mt-1">
+          {catalogLoading
+            ? "Conferindo o banco…"
+            : `${catalog.length} questões com referência oficial a este diploma.`}{" "}
+          O filtro não inclui questões de outras leis automaticamente.
+        </p>
+        {!catalogLoading && !catalog.length && (
+          <p className="mt-2">
+            Use os casos resolvidos e flashcards do material enquanto não há questões identificadas
+            para esta lei no banco.
+          </p>
+        )}
+        <Link to="/dashboard/question-trainer" search={{}} className="mt-2 inline-block underline">
+          Remover o filtro de lei
+        </Link>
+      </aside>
+    ) : null;
   const correct = results.filter((r) => r === "ok").length;
   const wrong = results.filter((r) => r === "err").length;
 
@@ -379,21 +427,24 @@ function QuestionTrainer() {
   ]);
   const pool = React.useMemo(
     () =>
-      catalog.filter(
-        (item) =>
-          (area === "all" || subjectInArea(area, item.subject)) &&
-          (topic === "all" || topicOf.get(item.id) === topic) &&
-          (contest === "all" || item["contest"] === contest) &&
-          (board === "all" || item["board"] === board) &&
-          (career === "all" || item["career"] === career) &&
-          (year === "all" || item["year"] === year) &&
-          (appliedExam === "all" || examKey(item) === appliedExam) &&
-          (subject === "all" || item["subject"] === subject) &&
-          (source === "all" || item["source"] === source) &&
-          (reviewed === "all" || hasReviewedExplanation(item)) &&
-          (difficulty === "all" || item["difficulty"] === difficulty) &&
-          (state === "all" || item["state"] === state) &&
-          (category === "all" || item["category"] === category),
+      filterTrainerQuestions(
+        catalog,
+        {
+          area,
+          topic,
+          contest,
+          board,
+          career,
+          year,
+          appliedExam,
+          subject,
+          source,
+          reviewed,
+          difficulty,
+          state,
+          category,
+        },
+        topicOf,
       ),
     [
       catalog,
@@ -727,28 +778,28 @@ function QuestionTrainer() {
         </div>
       </header>
       <Card
-        className="question-window dark overflow-hidden border border-white/10 bg-[oklch(0.15_0.03_262)] text-foreground shadow-2xl ring-1 ring-amber-400/15 animate-in fade-in slide-in-from-bottom-3 duration-300"
+        className="question-window overflow-hidden border border-border bg-card text-foreground shadow-2xl ring-1 ring-amber-400/15 animate-in fade-in slide-in-from-bottom-3 duration-300"
         key={question.id}
       >
-        <div className="flex items-center justify-between gap-3 border-b border-white/10 bg-black/25 px-4 py-2.5">
+        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border bg-muted/50 px-4 py-2.5">
           <div className="flex items-center gap-3">
             <span className="flex gap-1.5" aria-hidden>
-              <i className="h-2.5 w-2.5 rounded-full bg-white/20" />
-              <i className="h-2.5 w-2.5 rounded-full bg-white/20" />
-              <i className="h-2.5 w-2.5 rounded-full bg-white/20" />
+              <i className="h-2.5 w-2.5 rounded-full bg-muted-foreground/25" />
+              <i className="h-2.5 w-2.5 rounded-full bg-muted-foreground/25" />
+              <i className="h-2.5 w-2.5 rounded-full bg-muted-foreground/25" />
             </span>
-            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-white/55">
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
               Treinador de questões
             </span>
           </div>
-          <span className="flex items-center gap-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-emerald-400">
+          <span className="flex items-center gap-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-emerald-700 dark:text-emerald-400">
             <i className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" aria-hidden />{" "}
             Correção imediata
           </span>
         </div>
         <CardContent className="p-3.5 sm:p-5 md:p-7">
           <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
-            <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-300">
+            <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
               {question.subject}
             </span>
             <Badge variant="outline">{question.board}</Badge>
@@ -766,17 +817,18 @@ function QuestionTrainer() {
             </span>
           </div>
           {reviewingPast && (
-            <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-200">
+            <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
               <Lock className="h-3.5 w-3.5 shrink-0" /> Você já respondeu esta questão antes —
               revisão apenas, sem reenvio.
             </div>
           )}
           <div className="mb-3 flex items-end justify-between gap-3">
             <div>
-              <h2 className="font-display text-2xl font-extrabold leading-none text-white sm:text-3xl">
-                Questão {index + 1} <span className="text-white/45">de {questions.length}</span>
+              <h2 className="font-display text-2xl font-extrabold leading-none text-foreground sm:text-3xl">
+                Questão {index + 1}{" "}
+                <span className="text-muted-foreground">de {questions.length}</span>
               </h2>
-              <p className="mt-1.5 text-xs text-white/55">
+              <p className="mt-1.5 text-xs text-muted-foreground">
                 {correct} certas · {wrong} erradas
               </p>
             </div>
@@ -795,7 +847,7 @@ function QuestionTrainer() {
                   results[i] === "ok" && "bg-emerald-500",
                   results[i] === "err" && "bg-rose-500",
                   !results[i] && i === index && "bg-amber-400",
-                  !results[i] && i !== index && "bg-white/10",
+                  !results[i] && i !== index && "bg-muted",
                 )}
               />
             ))}
@@ -835,7 +887,7 @@ function QuestionTrainer() {
                       disabled={answered || saving}
                       onClick={() => chooseOption(option.letter)}
                       className={cn(
-                        "group flex flex-1 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] p-2.5 text-left text-sm leading-5 transition-all duration-200 hover:border-amber-400/50 hover:bg-amber-400/5 disabled:hover:bg-white/[0.03] sm:gap-3 sm:p-3 sm:leading-6",
+                        "group flex flex-1 items-center gap-2 rounded-xl border border-border bg-background p-2.5 text-left text-sm leading-5 transition-all duration-200 hover:border-amber-400/50 hover:bg-amber-400/5 disabled:hover:bg-background sm:gap-3 sm:p-3 sm:leading-6",
                         isStruck && "opacity-50",
                         isSelected &&
                           !answered &&
@@ -847,7 +899,7 @@ function QuestionTrainer() {
                     >
                       <span
                         className={cn(
-                          "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/10 font-mono text-[11px] font-bold sm:h-7 sm:w-7 sm:rounded-lg sm:text-xs",
+                          "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-muted font-mono text-[11px] font-bold sm:h-7 sm:w-7 sm:rounded-lg sm:text-xs",
                           isSelected && !answered && "bg-amber-400 text-slate-900",
                           isRight && "bg-emerald-600 text-white",
                           isWrong && "bg-rose-600 text-white",
@@ -859,12 +911,12 @@ function QuestionTrainer() {
                         {option.text}
                       </span>
                       {isRight && (
-                        <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-400">
+                        <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
                           <Check className="h-3.5 w-3.5" /> Correta
                         </span>
                       )}
                       {isWrong && (
-                        <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-rose-400">
+                        <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-rose-700 dark:text-rose-400">
                           <XCircle className="h-3.5 w-3.5" /> Sua resposta
                         </span>
                       )}
@@ -912,11 +964,11 @@ function QuestionTrainer() {
                     "scale-[1.02] border-amber-400 bg-amber-400 text-slate-900 shadow-lg shadow-amber-400/20 ring-4 ring-amber-400/15 hover:bg-amber-400 hover:text-slate-900",
                   answered &&
                     answer === question.answer &&
-                    "border-emerald-500 bg-emerald-500/10 text-emerald-300",
+                    "border-emerald-500 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300",
                   answered &&
                     selected === answer &&
                     answer !== question.answer &&
-                    "border-rose-500 bg-rose-500/10 text-rose-300",
+                    "border-rose-500 bg-rose-500/10 text-rose-700 dark:text-rose-300",
                 )}
               >
                 <span
@@ -938,7 +990,7 @@ function QuestionTrainer() {
               <>
                 <Button
                   variant="ghost"
-                  className="text-amber-300 hover:text-amber-200"
+                  className="text-amber-800 hover:text-amber-900 dark:text-amber-300 dark:hover:text-amber-200"
                   disabled={saving}
                   onClick={() => {
                     setHelpUsed(true);
@@ -1551,7 +1603,7 @@ function ElapsedTimer({ startedAt, running }: { startedAt: number; running: bool
   const ss = String(secs % 60).padStart(2, "0");
   return (
     <span
-      className="flex items-center gap-1.5 rounded-xl border border-white/10 bg-black/25 px-3 py-1.5 font-mono text-sm font-semibold tabular-nums text-white"
+      className="flex items-center gap-1.5 rounded-xl border border-border bg-muted/50 px-3 py-1.5 font-mono text-sm font-semibold tabular-nums text-foreground"
       role="timer"
       aria-label="Tempo nesta questão"
     >

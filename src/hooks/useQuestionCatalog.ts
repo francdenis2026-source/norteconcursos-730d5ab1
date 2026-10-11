@@ -3,7 +3,7 @@
 // sua pool — extraído pra um só lugar porque o Caderno de erros também
 // precisa do texto completo das questões que o aluno errou.
 import * as React from "react";
-import { canonicalSubject } from "@/lib/subjects";
+import { canonicalBoard, canonicalSubject } from "@/lib/subjects";
 import { supabase } from "@/integrations/supabase/client";
 import {
   type Answer,
@@ -13,7 +13,7 @@ import {
   parseBasis,
   parseQuestion,
 } from "@/lib/questionFormat";
-import { fetchAllRows } from "@/lib/catalog";
+import { fetchAllRows, isMissingQuestionTable } from "@/lib/catalog";
 
 export function useQuestionCatalog(userId: string | undefined, enabled: boolean) {
   const [catalog, setCatalog] = React.useState<Question[]>([]);
@@ -24,6 +24,9 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
   React.useEffect(() => {
     if (!enabled) return;
     let active = true;
+    setLoading(true);
+    setError(null);
+    setCatalog([]);
     void (async () => {
       try {
         const query = async (
@@ -73,7 +76,10 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             "id,board,contest_name,career_name,exam_year,subject,support_text,stem,options,official_answer,needs_visual,legal_review_required,law_version_checked_at,legal_basis,explanation,difficulty,state,career_category",
             "created_at",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
-          ).catch(() => ({ data: [], error: null, gated: true })), // tabela ainda não criada: segue sem elas
+          ).catch((error: unknown) => {
+            if (isMissingQuestionTable(error)) return { data: [], error: null, gated: true };
+            throw error;
+          }), // tabela ainda não criada: segue sem elas
         ]);
         let hiddenCount = 0;
         const gate = (
@@ -114,7 +120,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
               contest: String(row["contest_name"]),
               year: String(row["exam_year"]),
               career: String(row["career_name"]),
-              board: String(row["board"]),
+              board: canonicalBoard(String(row["board"] ?? "")) || "Não informada",
               subject: canonicalSubject(String(row["subject"])),
               subtopic: null,
               text: `${support}${String(row["stem"])}\n${Object.entries(opts)
@@ -146,7 +152,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             contest: String(row["contest_name"]),
             year: String(row["exam_year"]),
             career: String(row["career_name"] || "Carreira policial"),
-            board: String(row["exam_board"] || "CEBRASPE"),
+            board: canonicalBoard(String(row["exam_board"] ?? "")) || "Não informada",
             subject: canonicalSubject(String(row["subject"])),
             subtopic: null,
             text: String(row["question_text"]),
@@ -170,7 +176,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             contest: String(row["contest_name"]),
             year: String(row["contest_year"]),
             career: String(row["career_name"] || "Carreira policial"),
-            board: String(row["exam_board"] || "Banca"),
+            board: canonicalBoard(String(row["exam_board"] ?? "")) || "Não informada",
             subject: canonicalSubject(String(row["subject"])),
             subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
             text: String(row["question_text"]),

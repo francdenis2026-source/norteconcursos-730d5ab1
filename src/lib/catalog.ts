@@ -1,3 +1,9 @@
+export function isMissingQuestionTable(error: unknown): boolean {
+  if (!error || typeof error !== "object") return false;
+  const code = "code" in error ? error.code : undefined;
+  return code === "42P01" || code === "PGRST205";
+}
+
 export async function fetchAllRows<T>(
   fetchPage: (from: number, to: number) => PromiseLike<{ data: T[] | null; error: unknown }>,
   pageSize = 500,

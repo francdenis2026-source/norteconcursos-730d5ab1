@@ -4246,6 +4246,8 @@ html {
 }
 .app-topbar__actions {
   display: flex;
+  min-width: 0;
+  flex-shrink: 0;
   align-items: center;
   gap: 6px;
 }
@@ -4276,6 +4278,7 @@ html {
 }
 .app-top-btn {
   display: grid;
+  flex-shrink: 0;
   width: 36px;
   height: 36px;
   place-items: center;
@@ -4291,6 +4294,13 @@ html {
   border-color: var(--color-border);
   color: var(--color-foreground);
   background: var(--color-card);
+}
+.app-theme-toggle {
+  cursor: pointer;
+}
+.app-theme-toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 .app-top-btn svg {
   width: 17px;
@@ -4372,6 +4382,8 @@ html {
   }
   .app-mobile-bar {
     display: flex;
+    min-width: 0;
+    flex-shrink: 1;
     align-items: center;
   }
   .app-topbar .app-top-btn,
@@ -4427,6 +4439,28 @@ html {
   .app-bottom-nav a[data-active="true"] {
     color: var(--brass-soft);
     background: oklch(0.8 0.13 78 / 0.12);
+  }
+}
+
+/* Reserve a touch target for theme selection even on 320px phones. Secondary
+   counters remain available in Performance and the account menu. */
+@media (max-width: 479px) {
+  .app-topbar {
+    gap: 4px;
+    padding-inline: 8px;
+  }
+  .app-topbar__actions {
+    gap: 2px;
+    margin-left: auto;
+  }
+  .app-topbar__actions > .app-streak {
+    display: none;
+  }
+  .app-topbar .app-theme-toggle,
+  .app-topbar .app-top-search,
+  .app-mobile-bar > button {
+    width: 44px;
+    height: 44px;
   }
 }
 
