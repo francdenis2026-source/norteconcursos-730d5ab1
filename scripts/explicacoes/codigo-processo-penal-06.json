@@ -1,0 +1,384 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 06: arts. 174 a 216",
+  "units": {
+    "art-174": {
+      "simples": "No exame para o reconhecimento de escritos, por comparação de letra: a pessoa a quem se atribua o escrito será intimada para o ato, se encontrada; para a comparação servem quaisquer documentos que ela reconheça, já judicialmente reconhecidos como de seu punho, ou de autenticidade indiscutível; a autoridade requisitará documentos de arquivos ou estabelecimentos públicos, ou realizará a diligência no local; e, se não houver escritos ou forem insuficientes, mandará que a pessoa escreva o que lhe for ditado, podendo a diligência ser feita por precatória se ela estiver ausente em lugar certo.",
+      "pontos": ["Intimação da pessoa a quem se atribui o escrito.", "Documentos de comparação: reconhecidos, judicialmente reconhecidos ou de autenticidade indiscutível.", "Requisição de documentos de arquivos públicos.", "Sem escritos suficientes: a pessoa escreve o que lhe for ditado (por precatória, se ausente em lugar certo)."],
+      "atencao": ["Ninguém é obrigado a produzir prova contra si: a recusa em escrever sob ditado é discutida pela jurisprudência."],
+      "exemplo": "A autoridade pede à pessoa que escreva um texto ditado, para comparar com o documento questionado.",
+      "prova": ["Assertiva que dispensa a intimação da pessoa a quem se atribui o escrito, se ela for encontrada, erra."],
+      "termos": [],
+      "remissoes": ["Art. 159"]
+    },
+    "art-175": {
+      "simples": "Serão sujeitos a exame os instrumentos empregados para a prática da infração, a fim de se lhes verificar a natureza e a eficiência.",
+      "pontos": ["Instrumentos do crime são periciados.", "Verifica-se a natureza e a eficiência."],
+      "atencao": ["Exemplo: exame de eficiência da arma (potencialidade lesiva)."],
+      "exemplo": "A arma usada no crime é submetida a perícia para verificar se funciona.",
+      "prova": ["Assertiva que dispensa o exame do instrumento do crime erra."],
+      "termos": [],
+      "remissoes": ["Art. 158"]
+    },
+    "art-176": {
+      "simples": "A autoridade e as partes poderão formular quesitos até o ato da diligência.",
+      "pontos": ["Quesitos podem ser formulados até o ato da diligência."],
+      "atencao": ["Prazo: até a realização do ato."],
+      "exemplo": "A defesa apresenta quesitos antes do início da perícia.",
+      "prova": ["Assertiva que veda a formulação de quesitos pela autoridade erra."],
+      "termos": [{ "termo": "Quesitos", "significado": "Perguntas dirigidas aos peritos." }],
+      "remissoes": ["Art. 159"]
+    },
+    "art-177": {
+      "simples": "No exame por precatória, a nomeação dos peritos far-se-á no juízo deprecado. Havendo, porém, no caso de ação privada, acordo das partes, essa nomeação poderá ser feita pelo juiz deprecante. Os quesitos do juiz e das partes serão transcritos na precatória.",
+      "pontos": ["Exame por precatória: peritos nomeados no juízo deprecado.", "Ação privada: acordo das partes permite nomeação pelo juiz deprecante.", "Quesitos transcritos na precatória."],
+      "atencao": ["Regra: juízo deprecado nomeia."],
+      "exemplo": "Perícia em outra comarca: o juízo deprecado nomeia o perito.",
+      "prova": ["Assertiva que sempre atribui ao juízo deprecante a nomeação dos peritos erra."],
+      "termos": [],
+      "remissoes": ["Art. 159"]
+    },
+    "art-178": {
+      "simples": "No caso do art. 159, o exame será requisitado pela autoridade ao diretor da repartição, juntando-se ao processo o laudo assinado pelos peritos.",
+      "pontos": ["Exame requisitado pela autoridade ao diretor da repartição.", "Laudo assinado pelos peritos é juntado ao processo."],
+      "atencao": ["Perícia oficial é requisitada à repartição."],
+      "exemplo": "O delegado requisita o exame ao diretor do instituto de criminalística.",
+      "prova": ["Assertiva que dispensa a assinatura dos peritos no laudo erra."],
+      "termos": [],
+      "remissoes": ["Art. 159"]
+    },
+    "art-179": {
+      "simples": "No caso do §1º do art. 159 (peritos não oficiais), o escrivão lavrará o auto respectivo, que será assinado pelos peritos e, se presente ao exame, também pela autoridade. Nos casos do art. 160, parágrafo único, o laudo, que poderá ser datilografado, será subscrito e rubricado em suas folhas por todos os peritos.",
+      "pontos": ["Peritos não oficiais: o escrivão lavra o auto, assinado pelos peritos e pela autoridade, se presente.", "Laudo subscrito e rubricado em todas as folhas por todos os peritos."],
+      "atencao": ["Formalidade da perícia por peritos não oficiais."],
+      "exemplo": "Peritos leigos assinam o auto lavrado pelo escrivão.",
+      "prova": ["Assertiva que dispensa a rubrica das folhas do laudo erra."],
+      "termos": [],
+      "remissoes": ["Art. 159", "Art. 160"]
+    },
+    "art-180": {
+      "simples": "Se houver divergência entre os peritos, serão consignadas no auto do exame as declarações e respostas de um e de outro, ou cada um redigirá separadamente o seu laudo, e a autoridade nomeará um terceiro; se este divergir de ambos, a autoridade poderá mandar proceder a novo exame por outros peritos.",
+      "pontos": ["Divergência: consignam-se as respostas de cada perito, ou laudos separados.", "A autoridade nomeia um terceiro perito.", "Se o terceiro divergir de ambos, novo exame por outros peritos."],
+      "atencao": ["Terceiro perito resolve a divergência."],
+      "exemplo": "Dois peritos divergem, e a autoridade nomeia um terceiro.",
+      "prova": ["Assertiva que determina o descarte do laudo em caso de divergência entre peritos erra."],
+      "termos": [],
+      "remissoes": ["Art. 159"]
+    },
+    "art-181": {
+      "simples": "No caso de inobservância de formalidades, ou no caso de omissões, obscuridades ou contradições, a autoridade judiciária mandará suprir a formalidade, complementar ou esclarecer o laudo. A autoridade poderá também ordenar que se proceda a novo exame, por outros peritos, se julgar conveniente.",
+      "pontos": ["Falhas do laudo: a autoridade manda suprir, complementar ou esclarecer.", "Pode ordenar novo exame por outros peritos."],
+      "atencao": ["Poder da autoridade para sanar o laudo."],
+      "exemplo": "Juiz manda o perito esclarecer uma contradição no laudo.",
+      "prova": ["Assertiva que impede o juiz de determinar novo exame por outros peritos erra."],
+      "termos": [],
+      "remissoes": ["Art. 180", "Art. 182"]
+    },
+    "art-182": {
+      "simples": "O juiz não ficará adstrito ao laudo, podendo aceitá-lo ou rejeitá-lo, no todo ou em parte.",
+      "pontos": ["O juiz não está vinculado ao laudo.", "Pode aceitá-lo ou rejeitá-lo, total ou parcialmente."],
+      "atencao": ["Sistema liberatório: o laudo não vincula o juiz."],
+      "exemplo": "O juiz acolhe parte do laudo e rejeita outra, fundamentando.",
+      "prova": ["Assertiva que vincula o juiz ao laudo pericial erra."],
+      "termos": [],
+      "remissoes": ["Art. 155"]
+    },
+    "art-183": {
+      "simples": "Nos crimes em que não couber ação pública, observar-se-á o disposto no art. 19.",
+      "pontos": ["Ação privada: aplica-se o art. 19 (autos entregues ao ofendido ou aguardam sua iniciativa)."],
+      "atencao": ["Remissão ao art. 19."],
+      "exemplo": "Em crime de ação privada, os autos periciais seguem o destino do art. 19.",
+      "prova": ["Assertiva que aplica o art. 183 à ação penal pública erra."],
+      "termos": [],
+      "remissoes": ["Art. 19"]
+    },
+    "art-184": {
+      "simples": "Salvo o caso de exame de corpo de delito, o juiz ou a autoridade policial negará a perícia requerida pelas partes quando não for necessária ao esclarecimento da verdade.",
+      "pontos": ["Perícia requerida pelas partes pode ser negada se desnecessária.", "Exceção: exame de corpo de delito não pode ser negado."],
+      "atencao": ["Exame de corpo de delito é obrigatório quando há vestígios."],
+      "exemplo": "A autoridade nega uma perícia desnecessária requerida pela defesa.",
+      "prova": ["Assertiva que permite negar o exame de corpo de delito por desnecessário erra."],
+      "termos": [],
+      "remissoes": ["Art. 158"]
+    },
+    "art-185": {
+      "simples": "O acusado que comparecer perante a autoridade judiciária, no curso do processo penal, será qualificado e interrogado na presença de seu defensor, constituído ou nomeado. O interrogatório do réu preso será realizado em sala própria, no estabelecimento em que estiver recolhido, desde que garantidas a segurança do juiz, do membro do Ministério Público e dos auxiliares, a presença do defensor e a publicidade do ato. Excepcionalmente, o juiz, por decisão fundamentada, de ofício ou a requerimento das partes, pode realizar o interrogatório do réu preso por videoconferência ou outro recurso tecnológico de transmissão de sons e imagens em tempo real, desde que necessário para prevenir risco à segurança pública (suspeita de integrar organização criminosa ou de fuga durante o deslocamento), viabilizar a participação do réu quando haja relevante dificuldade para comparecer em juízo, impedir a influência do réu no ânimo de testemunha ou da vítima, ou responder a gravíssima questão de ordem pública, conforme as hipóteses do dispositivo.",
+      "pontos": ["Interrogatório na presença do defensor, constituído ou nomeado.", "Réu preso: sala própria do estabelecimento, com segurança, defensor e publicidade.", "Videoconferência: excepcional, por decisão fundamentada, em hipóteses legais.", "Hipóteses: risco à segurança pública, dificuldade de comparecimento, influência sobre testemunha ou vítima, questão de ordem pública."],
+      "atencao": ["Videoconferência é EXCEÇÃO e exige decisão fundamentada.", "A presença do defensor é obrigatória."],
+      "exemplo": "Réu preso com suspeita de integrar organização criminosa é interrogado por videoconferência, por decisão fundamentada.",
+      "prova": ["Assertiva que torna a videoconferência a regra para o interrogatório do réu preso erra: é excepcional."],
+      "termos": [],
+      "remissoes": ["Art. 186", "Art. 187"]
+    },
+    "art-186": {
+      "simples": "Depois de devidamente qualificado e cientificado do inteiro teor da acusação, o acusado será informado pelo juiz, antes de iniciar o interrogatório, do seu direito de permanecer calado e de não responder perguntas que lhe forem formuladas. O silêncio, que não importará em confissão, não poderá ser interpretado em prejuízo da defesa.",
+      "pontos": ["Qualificação e ciência da acusação antes do interrogatório.", "Juiz informa o direito de permanecer calado.", "O silêncio não é confissão e não prejudica a defesa."],
+      "atencao": ["Direito ao silêncio: nemo tenetur se detegere.", "O art. 198 trazia redação anterior de que o silêncio poderia ser elemento de convencimento; hoje prevalece o art. 186."],
+      "exemplo": "Antes do interrogatório, o juiz avisa que o acusado pode ficar em silêncio.",
+      "prova": ["Assertiva que interpreta o silêncio em prejuízo da defesa erra."],
+      "termos": [{ "termo": "Direito ao silêncio", "significado": "Ninguém é obrigado a produzir prova contra si." }],
+      "remissoes": ["Art. 198"]
+    },
+    "art-187": {
+      "simples": "O interrogatório será constituído de duas partes: sobre a pessoa do acusado e sobre os fatos. Na primeira parte, o interrogando será perguntado sobre residência, meios de vida ou profissão, oportunidades sociais, lugar onde exerce sua atividade, vida pregressa (se foi preso ou processado, juízo, suspensão condicional ou condenação, pena imposta e cumprimento) e outros dados familiares e sociais. Na segunda parte será perguntado sobre ser verdadeira a acusação; se não, o motivo particular a que atribuí-la, se conhece a pessoa a quem deva ser imputada e se com ela esteve; onde estava ao tempo da infração e se teve notícia; as provas já apuradas; se conhece as vítimas e testemunhas; e todos os demais fatos e pormenores que conduzam à elucidação dos antecedentes e circunstâncias da infração.",
+      "pontos": ["Duas partes: sobre a pessoa e sobre os fatos.", "Primeira parte: residência, profissão, vida pregressa, dados familiares e sociais.", "Segunda parte: veracidade da acusação, álibi, provas apuradas, vítimas e testemunhas, circunstâncias."],
+      "atencao": ["Estrutura em duas partes."],
+      "exemplo": "O juiz pergunta primeiro sobre a pessoa do acusado e depois sobre os fatos.",
+      "prova": ["Assertiva que divide o interrogatório em três partes erra: são duas."],
+      "termos": [],
+      "remissoes": ["Art. 186", "Art. 188"]
+    },
+    "art-188": {
+      "simples": "Após proceder ao interrogatório, o juiz indagará das partes se restou algum fato para ser esclarecido, formulando as perguntas correspondentes se o entender pertinente e relevante.",
+      "pontos": ["Após o interrogatório, o juiz pergunta às partes se resta fato a esclarecer.", "Formula perguntas pertinentes e relevantes."],
+      "atencao": ["As partes não perguntam diretamente: pedem ao juiz."],
+      "exemplo": "A defesa sugere pergunta ao juiz, que a formula ao acusado.",
+      "prova": ["Assertiva que permite às partes perguntar diretamente ao acusado, nos termos do art. 188, erra: o juiz formula as perguntas."],
+      "termos": [],
+      "remissoes": ["Art. 187"]
+    },
+    "art-189": {
+      "simples": "Se o interrogando negar a acusação, no todo ou em parte, poderá prestar esclarecimentos e indicar provas.",
+      "pontos": ["Acusado que nega a acusação pode prestar esclarecimentos e indicar provas."],
+      "atencao": ["Faculdade do acusado."],
+      "exemplo": "O acusado nega o crime e indica uma testemunha de álibi.",
+      "prova": ["Assertiva que proíbe o acusado de indicar provas no interrogatório erra."],
+      "termos": [],
+      "remissoes": ["Art. 190"]
+    },
+    "art-190": {
+      "simples": "Se confessar a autoria, o acusado será perguntado sobre os motivos e circunstâncias do fato e se outras pessoas concorreram para a infração, e quais sejam.",
+      "pontos": ["Confissão: perguntas sobre motivos e circunstâncias.", "Perguntas sobre concurso de outras pessoas."],
+      "atencao": ["Explora a confissão para identificar coautores."],
+      "exemplo": "Ao confessar, o acusado informa quem o ajudou.",
+      "prova": ["Assertiva que dispensa perguntas sobre motivos e circunstâncias na confissão erra."],
+      "termos": [],
+      "remissoes": ["Art. 189"]
+    },
+    "art-191": {
+      "simples": "Havendo mais de um acusado no processo, cada um será interrogado separadamente, sem presença dos demais corréus.",
+      "pontos": ["Interrogatório separado de cada acusado."],
+      "atencao": ["Evita a interferência entre os depoimentos."],
+      "exemplo": "Dois corréus são interrogados um de cada vez.",
+      "prova": ["Assertiva que determina o interrogatório conjunto de todos os acusados erra."],
+      "termos": [],
+      "remissoes": ["Art. 185"]
+    },
+    "art-192": {
+      "simples": "O interrogatório do mudo, do surdo ou do surdo-mudo será feito assim: ao surdo, as perguntas por escrito e a resposta oral; ao mudo, as perguntas orais e a resposta escrita; ao surdo-mudo, perguntas e respostas por escrito. Caso o interrogando não saiba ler ou escrever, intervirá no ato, como intérprete e sob compromisso, pessoa habilitada a entendê-lo.",
+      "pontos": ["Surdo: perguntas escritas, respostas orais.", "Mudo: perguntas orais, respostas escritas.", "Surdo-mudo: perguntas e respostas escritas.", "Analfabeto: intérprete sob compromisso."],
+      "atencao": ["Terminologia antiga; hoje usa-se intérprete de Libras (Lei nº 13.146, de 2015)."],
+      "exemplo": "Ao surdo, o juiz apresenta as perguntas por escrito, e ele responde oralmente.",
+      "prova": ["Assertiva que inverte as formas de comunicação do surdo e do mudo erra."],
+      "termos": [],
+      "remissoes": ["Art. 193"]
+    },
+    "art-193": {
+      "simples": "Quando o interrogando não falar a língua nacional, o interrogatório será feito por meio de intérprete.",
+      "pontos": ["Acusado que não fala português: intérprete."],
+      "atencao": ["Garantia de compreensão."],
+      "exemplo": "Réu estrangeiro que não fala português é interrogado com intérprete.",
+      "prova": ["Assertiva que dispensa intérprete para o acusado que não fala a língua nacional erra."],
+      "termos": [],
+      "remissoes": ["Art. 192"]
+    },
+    "art-195": {
+      "simples": "Se o interrogado não souber escrever, não puder ou não quiser assinar, tal fato será consignado no termo.",
+      "pontos": ["Interrogado que não sabe, não pode ou não quer assinar: registro no termo."],
+      "atencao": ["Recusa em assinar não invalida o termo."],
+      "exemplo": "O acusado se recusa a assinar, e o fato é anotado no termo.",
+      "prova": ["Assertiva que invalida o interrogatório se o acusado não assinar o termo erra."],
+      "termos": [],
+      "remissoes": ["Art. 199"]
+    },
+    "art-196": {
+      "simples": "A todo tempo o juiz poderá proceder a novo interrogatório de ofício ou a pedido fundamentado de qualquer das partes.",
+      "pontos": ["Novo interrogatório a qualquer tempo.", "De ofício ou a pedido fundamentado das partes."],
+      "atencao": ["Pedido deve ser fundamentado."],
+      "exemplo": "Surgida nova prova, o juiz determina novo interrogatório.",
+      "prova": ["Assertiva que veda novo interrogatório após o primeiro erra."],
+      "termos": [],
+      "remissoes": ["Art. 185"]
+    },
+    "art-197": {
+      "simples": "O valor da confissão se aferirá pelos critérios adotados para os outros elementos de prova, e para a sua apreciação o juiz deverá confrontá-la com as demais provas do processo, verificando se entre ela e estas existe compatibilidade ou concordância.",
+      "pontos": ["Confissão tem valor relativo, como as demais provas.", "Deve ser confrontada com o restante da prova."],
+      "atencao": ["Não há hierarquia entre provas: a confissão não é a 'rainha das provas'."],
+      "exemplo": "O juiz confronta a confissão com a perícia e os depoimentos.",
+      "prova": ["Assertiva que atribui valor absoluto à confissão erra."],
+      "termos": [],
+      "remissoes": ["Art. 155", "Art. 200"]
+    },
+    "art-198": {
+      "simples": "O silêncio do acusado não importará confissão, mas poderá constituir elemento para a formação do convencimento do juiz. A parte final do dispositivo, que permite valorar o silêncio, é considerada incompatível com a garantia constitucional do direito ao silêncio.",
+      "pontos": ["Silêncio não é confissão.", "A parte final (silêncio como elemento de convencimento) conflita com a Constituição."],
+      "atencao": ["Prevalece o art. 186, parágrafo único: o silêncio não pode ser interpretado em prejuízo da defesa."],
+      "exemplo": "O silêncio do acusado não pode ser usado para fundamentar a condenação.",
+      "prova": ["Assertiva que usa o silêncio como elemento de convencimento contra o acusado erra, à luz do art. 186 e da Constituição."],
+      "termos": [],
+      "remissoes": ["Art. 186"]
+    },
+    "art-199": {
+      "simples": "A confissão, quando feita fora do interrogatório, será tomada por termo nos autos, observado o disposto no art. 195.",
+      "pontos": ["Confissão extra-interrogatório é reduzida a termo nos autos.", "Aplica-se o art. 195 (registro de recusa ou impossibilidade de assinar)."],
+      "atencao": ["Confissão extrajudicial tomada por termo."],
+      "exemplo": "Acusado confessa por petição, e a confissão é tomada por termo nos autos.",
+      "prova": ["Assertiva que dispensa o termo para a confissão fora do interrogatório erra."],
+      "termos": [],
+      "remissoes": ["Art. 195"]
+    },
+    "art-200": {
+      "simples": "A confissão será divisível e retratável, sem prejuízo do livre convencimento do juiz, fundado no exame das provas em conjunto.",
+      "pontos": ["Confissão divisível: o juiz pode aceitar parte e rejeitar outra.", "Confissão retratável: o acusado pode voltar atrás.", "Livre convencimento fundado no conjunto das provas."],
+      "atencao": ["Divisibilidade e retratabilidade."],
+      "exemplo": "O acusado confessa o fato, mas o juiz acolhe só parte da narrativa.",
+      "prova": ["Assertiva que torna a confissão irretratável e indivisível erra."],
+      "termos": [{ "termo": "Confissão divisível", "significado": "O juiz pode acolher parte da confissão." }],
+      "remissoes": ["Art. 197"]
+    },
+    "art-201": {
+      "simples": "Sempre que possível, o ofendido será qualificado e perguntado sobre as circunstâncias da infração, quem seja ou presuma ser o seu autor e as provas que possa indicar, tomando-se por termo as suas declarações. Se, intimado, deixar de comparecer sem motivo justo, poderá ser conduzido à presença da autoridade. Será comunicado dos atos processuais relativos ao ingresso e à saída do acusado da prisão, à designação de data para audiência e à sentença e acórdãos que a mantenham ou modifiquem, no endereço indicado ou por meio eletrônico, por opção sua. Antes do início da audiência e durante sua realização, será reservado espaço separado para o ofendido. O juiz poderá encaminhá-lo para atendimento multidisciplinar (psicossocial, assistência jurídica e saúde), a expensas do ofensor ou do Estado, e tomará providências para preservar a intimidade, vida privada, honra e imagem do ofendido.",
+      "pontos": ["Declarações do ofendido tomadas por termo.", "Condução coercitiva se faltar sem motivo justo.", "Comunicação dos atos processuais ao ofendido (prisão, audiência, sentença e acórdãos).", "Espaço separado na audiência.", "Atendimento multidisciplinar, a expensas do ofensor ou do Estado.", "Preservação da intimidade e da imagem."],
+      "atencao": ["O ofendido NÃO é testemunha e não presta compromisso."],
+      "exemplo": "A vítima é comunicada da saída do acusado da prisão.",
+      "prova": ["Assertiva que obriga o ofendido a prestar compromisso de dizer a verdade como as testemunhas erra."],
+      "termos": [],
+      "remissoes": ["Art. 203"]
+    },
+    "art-202": {
+      "simples": "Toda pessoa poderá ser testemunha, salvo as exceções legais: quem pode recusar-se a depor e quem é proibido de fazê-lo.",
+      "pontos": ["Qualquer pessoa pode ser testemunha."],
+      "atencao": ["Ressalvas: pessoas proibidas de depor (art. 207) e dispensadas (art. 206)."],
+      "exemplo": "Um vizinho que presenciou o fato pode ser testemunha.",
+      "prova": ["Assertiva que restringe a testemunha a maiores de 18 anos erra: toda pessoa pode ser testemunha."],
+      "termos": [],
+      "remissoes": ["Art. 206", "Art. 207"]
+    },
+    "art-203": {
+      "simples": "A testemunha fará, sob palavra de honra, a promessa de dizer a verdade do que souber e lhe for perguntado, devendo declarar seu nome, idade, estado, residência, profissão, lugar onde exerce sua atividade, se é parente, e em que grau, de alguma das partes, ou quais suas relações com qualquer delas, e relatar o que souber, explicando sempre as razões de sua ciência ou as circunstâncias pelas quais possa avaliar-se sua credibilidade.",
+      "pontos": ["Promessa de dizer a verdade sob palavra de honra.", "Qualificação e declaração de relações com as partes.", "Relata o que sabe e explica a razão de sua ciência."],
+      "atencao": ["Explicar a razão da ciência."],
+      "exemplo": "A testemunha informa se é parente do acusado antes de depor.",
+      "prova": ["Assertiva que dispensa a testemunha de explicar a razão de sua ciência erra."],
+      "termos": [],
+      "remissoes": ["Art. 208"]
+    },
+    "art-204": {
+      "simples": "O depoimento será prestado oralmente, não sendo permitido à testemunha trazê-lo por escrito. Não será vedada à testemunha, entretanto, breve consulta a apontamentos.",
+      "pontos": ["Depoimento oral.", "Vedado trazê-lo por escrito.", "Breve consulta a apontamentos é permitida."],
+      "atencao": ["Oralidade com breve consulta."],
+      "exemplo": "A testemunha consulta rapidamente uma anotação com datas.",
+      "prova": ["Assertiva que permite à testemunha depor lendo texto escrito erra."],
+      "termos": [],
+      "remissoes": ["Art. 203"]
+    },
+    "art-205": {
+      "simples": "Se ocorrer dúvida sobre a identidade da testemunha, o juiz procederá à verificação pelos meios ao seu alcance, podendo, entretanto, tomar-lhe o depoimento desde logo.",
+      "pontos": ["Dúvida sobre a identidade: o juiz verifica pelos meios ao seu alcance.", "Pode tomar o depoimento desde logo."],
+      "atencao": ["Não impede o depoimento imediato."],
+      "exemplo": "Juiz colhe o depoimento enquanto confirma a identidade da testemunha.",
+      "prova": ["Assertiva que impede o depoimento até a confirmação da identidade erra."],
+      "termos": [],
+      "remissoes": ["Art. 203"]
+    },
+    "art-206": {
+      "simples": "A testemunha não poderá eximir-se da obrigação de depor. Poderão, entretanto, recusar-se a fazê-lo o ascendente ou descendente, o afim em linha reta, o cônjuge (ainda que desquitado), o irmão e o pai, a mãe ou o filho adotivo do acusado, salvo quando não for possível, por outro modo, obter-se ou integrar-se a prova do fato e de suas circunstâncias.",
+      "pontos": ["Regra: dever de depor.", "Podem recusar-se: ascendente, descendente, afim em linha reta, cônjuge, irmão, pais ou filho adotivo do acusado.", "Exceção: quando não for possível obter a prova de outro modo."],
+      "atencao": ["Os parentes podem recusar-se, mas, se não houver outro meio de prova, devem depor (sem compromisso)."],
+      "exemplo": "Irmão do acusado pode se recusar a depor, salvo se não houver outro modo de provar o fato.",
+      "prova": ["Assertiva que obriga o cônjuge do acusado a depor em qualquer hipótese erra: ele pode se recusar, salvo quando a prova não puder ser obtida por outro modo."],
+      "termos": [],
+      "remissoes": ["Art. 208"]
+    },
+    "art-207": {
+      "simples": "São proibidas de depor as pessoas que, em razão de função, ministério, ofício ou profissão, devam guardar segredo, salvo se, desobrigadas pela parte interessada, quiserem dar o seu testemunho.",
+      "pontos": ["Proibição de depor para quem tem dever de sigilo profissional.", "Exceção: desobrigadas pela parte interessada e dispostas a depor."],
+      "atencao": ["Sigilo profissional (advogado, médico, sacerdote etc.).", "Mesmo desobrigada, a pessoa só depõe se QUISER."],
+      "exemplo": "Advogado não pode depor sobre segredo de seu cliente, salvo desobrigado por este e querendo depor.",
+      "prova": ["Assertiva que obriga a pessoa desobrigada pela parte a depor erra: ela depõe se quiser."],
+      "termos": [],
+      "remissoes": ["Art. 214"]
+    },
+    "art-208": {
+      "simples": "Não se deferirá o compromisso a que alude o art. 203 aos doentes e deficientes mentais e aos menores de 14 anos, nem às pessoas a que se refere o art. 206.",
+      "pontos": ["Sem compromisso: doentes e deficientes mentais, menores de 14 anos e parentes do art. 206."],
+      "atencao": ["Quem depõe sem compromisso não comete falso testemunho."],
+      "exemplo": "Criança de 10 anos depõe sem prestar compromisso.",
+      "prova": ["Assertiva que exige compromisso do menor de 14 anos erra."],
+      "termos": [{ "termo": "Informante", "significado": "Quem depõe sem compromisso de dizer a verdade." }],
+      "remissoes": ["Art. 203", "Art. 206"]
+    },
+    "art-209": {
+      "simples": "O juiz, quando julgar necessário, poderá ouvir outras testemunhas, além das indicadas pelas partes. Se ao juiz parecer conveniente, serão ouvidas as pessoas a que as testemunhas se referirem. Não será computada como testemunha a pessoa que nada souber que interesse à decisão da causa.",
+      "pontos": ["Juiz pode ouvir outras testemunhas além das indicadas.", "Pessoas mencionadas pelas testemunhas podem ser ouvidas.", "Quem nada sabe de interesse não é computada como testemunha."],
+      "atencao": ["Testemunhas do juízo e referidas."],
+      "exemplo": "Juiz ouve pessoa referida por uma testemunha como conhecedora do fato.",
+      "prova": ["Assertiva que restringe a oitiva às testemunhas indicadas pelas partes erra."],
+      "termos": [{ "termo": "Testemunha referida", "significado": "Pessoa mencionada no depoimento de outra testemunha." }],
+      "remissoes": ["Art. 202"]
+    },
+    "art-210": {
+      "simples": "As testemunhas serão inquiridas cada uma de per si, de modo que umas não saibam nem ouçam os depoimentos das outras, devendo o juiz adverti-las das penas cominadas ao falso testemunho. Antes do início da audiência e durante a sua realização, serão reservados espaços separados para a garantia da incomunicabilidade das testemunhas.",
+      "pontos": ["Inquirição individual e incomunicável.", "Juiz adverte sobre as penas do falso testemunho.", "Espaços separados antes e durante a audiência."],
+      "atencao": ["Incomunicabilidade das testemunhas."],
+      "exemplo": "Testemunhas aguardam em salas separadas até serem chamadas.",
+      "prova": ["Assertiva que permite que uma testemunha ouça o depoimento da outra erra."],
+      "termos": [],
+      "remissoes": ["Art. 211"]
+    },
+    "art-211": {
+      "simples": "Se o juiz, ao pronunciar sentença final, reconhecer que alguma testemunha fez afirmação falsa, calou ou negou a verdade, remeterá cópia do depoimento à autoridade policial para a instauração de inquérito. Tendo o depoimento sido prestado em plenário de julgamento, o juiz, o tribunal ou o conselho de sentença, após a votação dos quesitos, poderão fazer apresentar imediatamente a testemunha à autoridade policial.",
+      "pontos": ["Falso testemunho reconhecido na sentença: cópia do depoimento à autoridade policial.", "Depoimento em plenário: a testemunha pode ser apresentada de imediato à autoridade policial."],
+      "atencao": ["Apresentação imediata no plenário do Júri."],
+      "exemplo": "Após a sentença, o juiz envia à polícia cópia do depoimento falso para investigar.",
+      "prova": ["Assertiva que determina que o próprio juiz instaure inquérito nesses casos erra: remete cópia à autoridade policial."],
+      "termos": [],
+      "remissoes": ["Art. 342 do Código Penal"]
+    },
+    "art-212": {
+      "simples": "As perguntas serão formuladas pelas partes diretamente à testemunha, não admitindo o juiz aquelas que puderem induzir a resposta, não tiverem relação com a causa ou importarem na repetição de outra já respondida. Sobre os pontos não esclarecidos, o juiz poderá complementar a inquirição.",
+      "pontos": ["Perguntas feitas diretamente pelas partes à testemunha (sistema presidencialista abandonado).", "Indeferidas as que induzem a resposta, sem relação com a causa ou repetitivas.", "Juiz complementa a inquirição."],
+      "atencao": ["Sistema do exame direto (cross examination): partes perguntam diretamente.", "Juiz complementa, e não inicia a inquirição."],
+      "exemplo": "A defesa pergunta diretamente à testemunha, e o juiz indefere pergunta indutiva.",
+      "prova": ["Assertiva que determina que as partes perguntem por intermédio do juiz erra: perguntam diretamente."],
+      "termos": [],
+      "remissoes": ["Art. 188"]
+    },
+    "art-213": {
+      "simples": "O juiz não permitirá que a testemunha manifeste suas apreciações pessoais, salvo quando inseparáveis da narrativa do fato.",
+      "pontos": ["Testemunha não manifesta apreciações pessoais.", "Exceção: se inseparáveis da narrativa do fato."],
+      "atencao": ["Testemunha relata fatos, não opiniões."],
+      "exemplo": "O juiz impede a testemunha de opinar sobre a culpa do acusado.",
+      "prova": ["Assertiva que permite sempre à testemunha emitir opiniões erra."],
+      "termos": [],
+      "remissoes": ["Art. 203"]
+    },
+    "art-214": {
+      "simples": "Antes de iniciado o depoimento, as partes poderão contraditar a testemunha ou arguir circunstâncias ou defeitos que a tornem suspeita de parcialidade ou indigna de fé. O juiz fará consignar a contradita ou arguição e a resposta da testemunha, mas só excluirá a testemunha ou não lhe deferirá compromisso nos casos previstos nos arts. 207 e 208.",
+      "pontos": ["Contradita antes do depoimento.", "Juiz registra a contradita e a resposta.", "Exclusão da testemunha só nos casos dos arts. 207 e 208."],
+      "atencao": ["Contradita registrada não exclui a testemunha, salvo hipóteses legais."],
+      "exemplo": "A defesa contradita a testemunha que é inimiga do acusado; o juiz registra e, em regra, mantém o depoimento.",
+      "prova": ["Assertiva que obriga o juiz a excluir toda testemunha contraditada erra."],
+      "termos": [{ "termo": "Contradita", "significado": "Impugnação da testemunha antes de depor." }],
+      "remissoes": ["Art. 207", "Art. 208"]
+    },
+    "art-215": {
+      "simples": "Na redação do depoimento, o juiz deverá cingir-se, tanto quanto possível, às expressões usadas pelas testemunhas, reproduzindo fielmente as suas frases.",
+      "pontos": ["Registro fiel das expressões usadas pelas testemunhas."],
+      "atencao": ["Fidelidade ao depoimento."],
+      "exemplo": "O termo reproduz as frases da testemunha, e não uma versão resumida do juiz.",
+      "prova": ["Assertiva que autoriza o juiz a parafrasear livremente o depoimento erra."],
+      "termos": [],
+      "remissoes": ["Art. 216"]
+    },
+    "art-216": {
+      "simples": "O depoimento da testemunha será reduzido a termo, assinado por ela, pelo juiz e pelas partes. Se a testemunha não souber assinar, ou não puder fazê-lo, pedirá a alguém que o faça por ela, depois de lido na presença de ambos.",
+      "pontos": ["Depoimento reduzido a termo.", "Assinado pela testemunha, juiz e partes.", "Se não souber ou não puder assinar, outra pessoa assina por ela, após a leitura."],
+      "atencao": ["Hoje, o registro pode ser audiovisual (art. 405)."],
+      "exemplo": "Testemunha analfabeta pede a alguém que assine por ela, depois da leitura.",
+      "prova": ["Assertiva que dispensa a assinatura do juiz no termo do depoimento erra."],
+      "termos": [],
+      "remissoes": ["Art. 215", "Art. 405"]
+    }
+  }
+}
