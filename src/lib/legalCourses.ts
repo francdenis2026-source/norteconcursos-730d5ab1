@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import type { LegalProgress } from "./legalLearning";
+import { buildRefIndex } from "./legalRefs";
 import type { LegalReview } from "@/components/library/LegalUpdateNotice";
 
 export type LegalCourse = {
@@ -83,5 +84,20 @@ export function useLegalExplanationCoverage(userId?: string) {
       const { data, error } = await supabase.rpc("legal_explanation_coverage");
       if (error) throw error;
       return (data ?? []) as { course_slug: string; total_units: number; explained: number }[];
+    } });
+}
+
+/** Índice de citações: quais artigos existem em cada lei (para só ligar o que abre de verdade). */
+export function useLegalRefIndex(courses: LegalCourse[] | undefined, userId?: string) {
+  return useQuery({ queryKey: ["legal-ref-index", userId], enabled: !!userId && !!courses?.length, staleTime: 15 * 60 * 1000,
+    queryFn: async () => {
+      const rows: { course_id: string; unit_key: string }[] = [];
+      for (let start = 0; ; start += 1000) {
+        const { data, error } = await supabase.from("legal_course_units").select("course_id,unit_key").order("course_id").order("position").range(start, start + 999);
+        if (error) throw error;
+        rows.push(...(data ?? []));
+        if ((data?.length ?? 0) < 1000) break;
+      }
+      return buildRefIndex(courses!.map(c => ({ id: c.id, slug: c.slug, title: c.title })), rows);
     } });
 }
