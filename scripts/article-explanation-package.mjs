@@ -11,6 +11,7 @@ export function validateArticlePackage(pack) {
     if(!['simples','exemplo'].every(k=>typeof row[k]==='string'&&row[k].trim().length>=20)||!['pontos','atencao','prova','termos','remissoes'].every(k=>Array.isArray(row[k]))||!['pontos','atencao','prova'].every(k=>row[k].length&&row[k].every(v=>typeof v==='string'&&v.trim())))throw Error('Explicação incompleta');
     if(['status','reviewed_by','reviewed_at'].some(k=>k in row))throw Error('Publicação definida apenas pelo importador');
   }
+  for(const law of laws.values())for(const ref of law.additional_sources??[]){const url=new URL(ref.url);if(url.protocol!=='https:'||url.hostname!=='www.planalto.gov.br'||!sha.test(ref.sha256)||!Number.isFinite(Date.parse(ref.checked_at))||Date.parse(ref.checked_at)>Date.now())throw Error('Fonte adicional inválida');}
   for(const law of laws.values())if(pack.units.filter(r=>r.course_slug===law.slug).length!==law.units)throw Error('Cobertura incompleta do lote');
   return pack;
 }
@@ -20,6 +21,7 @@ export function checkArticlePreflight(pack, snapshot){
     const course=snapshot.legal_courses.find(c=>c.slug===law.slug&&c.status==='active');
     const current=snapshot.legal_course_units.filter(u=>u.course_id===course?.id&&u.content_status==='current');
     const authored=pack.units.filter(r=>r.course_slug===law.slug);
+    for(const ref of law.additional_sources??[])if(!snapshot.content_sources.some(s=>s.url===ref.url&&s.is_official&&s.status==='vigente'))throw Error('Fonte adicional não cadastrada');
     if(law.scope_type==='targeted_correction'){
       if(current.length!==law.course_current_units||!Array.isArray(law.target_unit_keys)||law.target_unit_keys.length!==law.units||new Set(law.target_unit_keys).size!==law.units||!authored.every(r=>law.target_unit_keys.includes(r.unit_key)&&current.some(u=>u.id===r.unit_id)))throw Error(`Correção incompleta: ${law.slug}`);
     }else if(law.scope_type&&law.scope_type!=='complete_path')throw Error('Escopo desconhecido');

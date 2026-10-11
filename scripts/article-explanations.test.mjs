@@ -23,7 +23,7 @@ function fixture(){
     legal_course_units:pack.units.map(r=>({id:r.unit_id,course_id:r.course_id,unit_key:r.unit_key,content_status:'current',content_sha256:r.content_sha256})),
     syllabus_topics:pack.units.map(r=>({id:r.syllabus_topic_id,edition_id:r.edition_id,content_status:'current'})),
     syllabus_editions:pack.units.map(r=>({id:r.edition_id,status:'active'})),
-    content_sources:pack.laws.map(l=>({url:l.source_url,is_official:true,status:'vigente'})),
+    content_sources:pack.laws.flatMap(l=>[l.source_url,...(l.additional_sources??[]).map(s=>s.url)]).map(url=>({url,is_official:true,status:'vigente'})),
     legal_unit_explanations:pack.units.filter(r=>r.expected).map(r=>structuredClone(r.expected)),
   };
 }
@@ -52,6 +52,15 @@ test('targeted corrections require an explicit complete list, unchanged course c
  assert.doesNotThrow(()=>checkArticlePreflight(p,s));
  const bad=structuredClone(p);bad.laws[0].target_unit_keys[1]=bad.laws[0].target_unit_keys[0];assert.throws(()=>checkArticlePreflight(bad,s));
  const incomplete=structuredClone(p);delete incomplete.units[0].expected;assert.throws(()=>checkArticlePreflight(incomplete,s));
+});
+
+test('security covers all 72 current units and distinguishes 2027 tax effects from 2026 checking',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-security-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,72);
+ assert.equal(p.laws[0].additional_sources.length,3);
+ for(const r of p.units){assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ for(const key of ['art-67','art-68']){const r=p.units.find(r=>r.unit_key===key);assert.ok(r.atencao.some(t=>t.includes('2027')&&t.includes('futura')));}
+ const bad=structuredClone(p);bad.laws[0].additional_sources[0].url='https://unverified.invalid/lei';assert.throws(()=>validateArticlePackage(bad));
 });
 test('examples retain legal distinctions at age thresholds, biometrics and benefit review',()=>{
   const get=(slug,key)=>pack.units.find(r=>r.course_slug===slug&&r.unit_key===key);

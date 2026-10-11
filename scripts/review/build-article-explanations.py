@@ -26,10 +26,10 @@ for slug in slugs:
         assert 'Variação:' in data['exemplo'] or slug=='cin' and key=='art-17'
         assert all('?' in q and len(q.split('?',1)[1].strip())>0 for q in data['prova'])
         rows.append({'course_slug':slug,'course_id':course['id'],'syllabus_topic_id':topic['id'],'edition_id':edition['id'],'unit_key':key,'unit_id':unit['id'],'content_sha256':unit['content_sha256'],**data,**({'expected':existing[unit['id']]} if unit['id'] in existing else {})})
-    extras=references if slug=='cin' else []
+    extras=references if slug=='cin' else json.loads((folder/'tax-references-index.json').read_text(encoding='utf-8')) if slug=='seguranca-privada' else []
     for ref in extras:
         assert any(s['url']==ref['url'] and s['is_official'] and s['status']=='vigente' for s in sources)
-        assert hashlib.sha256((folder/'sources/constituicao.html').read_bytes()).hexdigest()==ref['sha256']
+        assert hashlib.sha256((folder/'sources'/('constituicao.html' if slug=='cin' else ref['name']+'.html')).read_bytes()).hexdigest()==ref['sha256']
     laws.append({'slug':slug,'title':course['title'],'units':len(current),'source_url':course['source_url'],'source_sha256':ev['source_sha256'],'source_checked_at':ev['source_checked_at'],'additional_sources':extras,'scope':'Explicação, caso com variação e recuperação ativa para cada dispositivo vigente; não certifica cobertura de toda jurisprudência.'})
 output.write_text(json.dumps({'version':'2026-10-11','checked_at':checked,'laws':laws,'units':rows},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(len(laws),'complete article explanation paths;',len(rows),'new explanations')
