@@ -1,64 +1,1120 @@
 {
-  "course_slug": "transito",
-  "law": "Código de Trânsito Brasileiro — lote 01: arts. 1 a 55",
-  "units": {
-    "art-1": { "simples": "O trânsito de qualquer natureza nas vias terrestres abertas à circulação rege-se pelo Código. Trânsito é a utilização das vias por pessoas, veículos e animais, para circulação, parada, estacionamento e operação de carga ou descarga. O trânsito em condições seguras é direito de todos e dever dos órgãos do Sistema Nacional de Trânsito.", "pontos": ["Aplica-se às vias terrestres abertas à circulação.", "Conceito amplo de trânsito.", "Trânsito seguro é direito de todos e dever dos órgãos do sistema."], "atencao": ["Trânsito inclui pessoas, veículos e animais.", "Abrange parada, estacionamento e carga ou descarga."], "exemplo": "O pedestre que atravessa a rua também está no trânsito para fins do Código.", "prova": ["Assertiva que restringe o conceito de trânsito à circulação de veículos erra."], "termos": [{ "termo": "Trânsito", "significado": "Utilização das vias por pessoas, veículos e animais para circulação, parada, estacionamento e carga ou descarga." }], "remissoes": ["Art. 2º"] },
-    "art-2": { "simples": "São vias terrestres urbanas e rurais as ruas, avenidas, logradouros, caminhos, passagens, estradas e rodovias, cujo uso é regulamentado pelo órgão com circunscrição sobre elas. Também são vias terrestres, para o Código, as praias abertas à circulação pública e as vias internas pertencentes a condomínios constituídos por unidades autônomas.", "pontos": ["Rol de vias urbanas e rurais.", "Regulamentação pelo órgão com circunscrição.", "Praias abertas e vias de condomínios também contam."], "atencao": ["Praias abertas à circulação pública e vias de condomínio são vias terrestres para o Código."], "exemplo": "A rua interna de um condomínio de unidades autônomas está sujeita ao Código.", "prova": ["Assertiva que exclui as praias abertas à circulação pública do conceito de via terrestre erra."], "termos": [], "remissoes": ["Art. 51"] },
-    "art-3": { "simples": "As disposições do Código aplicam-se a qualquer veículo, bem como aos proprietários, aos condutores de veículos nacionais ou estrangeiros e às pessoas nele expressamente mencionadas.", "pontos": ["Aplica-se a qualquer veículo.", "Alcança proprietários e condutores, nacionais ou estrangeiros."], "atencao": ["Vale para veículos nacionais E estrangeiros."], "exemplo": "O turista estrangeiro que dirige no Brasil submete-se ao Código.", "prova": ["Assertiva que isenta condutores estrangeiros do Código erra."], "termos": [], "remissoes": ["Art. 1º"] },
-    "art-4": { "simples": "Os conceitos e definições estabelecidos para os efeitos do Código são os constantes do Anexo I, que deve ser consultado para os termos técnicos.", "pontos": ["Definições no Anexo I."], "atencao": ["Consulte o Anexo I para os conceitos técnicos."], "exemplo": "O conceito de ciclomotor está no Anexo I.", "prova": ["Assertiva que dispensa o Anexo I na interpretação dos conceitos erra."], "termos": [], "remissoes": ["Anexo I"] },
-    "art-5": { "simples": "O Sistema Nacional de Trânsito é o conjunto de órgãos e entidades da União, dos Estados, do Distrito Federal e dos Municípios que tem por finalidade o exercício de atividades como planejamento, administração, normatização, pesquisa, registro e licenciamento de veículos, formação e habilitação de condutores, educação, engenharia, operação do sistema viário, policiamento, fiscalização, julgamento de infrações e recursos e aplicação de penalidades.", "pontos": ["Conjunto de órgãos de todos os entes federativos.", "Atividades de planejamento, normatização, registro, habilitação, fiscalização e julgamento."], "atencao": ["Sistema integrado por União, Estados, DF e Municípios."], "exemplo": "Detran, Contran e órgãos municipais integram o mesmo sistema.", "prova": ["Assertiva que restringe o sistema aos órgãos federais erra."], "termos": [], "remissoes": ["Art. 7º"] },
-    "art-6": { "simples": "São objetivos básicos do Sistema Nacional de Trânsito estabelecer diretrizes da Política Nacional de Trânsito, voltadas à segurança, fluidez, conforto, defesa ambiental e educação para o trânsito; fixar a padronização de critérios técnicos, financeiros e administrativos; estabelecer a sistemática de fluxos permanentes de informações; e promover o aperfeiçoamento e o intercâmbio entre os órgãos.", "pontos": ["Segurança, fluidez, conforto, defesa ambiental e educação.", "Padronização de critérios.", "Fluxo de informações e integração entre órgãos."], "atencao": ["Cinco valores da política: segurança, fluidez, conforto, defesa ambiental e educação."], "exemplo": "A padronização da sinalização em todo o país decorre desses objetivos.", "prova": ["Assertiva que exclui a defesa ambiental dos objetivos do sistema erra."], "termos": [], "remissoes": ["Art. 5º"] },
-    "art-7": { "simples": "Compõem o Sistema Nacional de Trânsito o Contran, coordenador do Sistema e órgão máximo normativo e consultivo; os Conselhos Estaduais de Trânsito e o do Distrito Federal; os órgãos e entidades executivos de trânsito da União, dos Estados, do Distrito Federal e dos Municípios; os órgãos executivos rodoviários; a Polícia Rodoviária Federal; as Polícias Militares; as Juntas Administrativas de Recursos de Infrações; e as Câmaras Temáticas, entre outros.", "pontos": ["Contran como órgão máximo normativo e consultivo.", "Cetran e Contrandife.", "Órgãos executivos de trânsito e rodoviários.", "Polícia Rodoviária Federal, Polícias Militares e JARI."], "atencao": ["Contran é o órgão máximo NORMATIVO e consultivo.", "ATUALIZAÇÃO: a composição do sistema foi alterada por leis posteriores; consulte o texto vigente."], "exemplo": "O Contran edita as resoluções que regulamentam o Código.", "prova": ["Assertiva que atribui ao Detran a função de órgão máximo normativo erra: é do Contran."], "termos": [{ "termo": "Contran", "significado": "Conselho Nacional de Trânsito, órgão máximo normativo e consultivo do sistema." }], "remissoes": ["Art. 12"] },
-    "art-7-a": { "simples": "A autoridade portuária ou a entidade concessionária de porto organizado pode celebrar convênios com os órgãos de trânsito, com a interveniência dos Municípios e Estados interessados, para facilitar a autuação por descumprimento da legislação de trânsito. O convênio vale para toda a área física do porto organizado.", "pontos": ["Convênio entre autoridade portuária e órgãos de trânsito.", "Finalidade: facilitar a autuação.", "Vale para toda a área do porto organizado."], "atencao": ["ATUALIZAÇÃO: artigo incluído por lei posterior.", "Exige interveniência de Municípios e Estados."], "exemplo": "O porto firma convênio para que infrações em suas vias internas sejam autuadas.", "prova": ["Assertiva que dispensa convênio para a autuação em área portuária erra."], "termos": [], "remissoes": ["Art. 7º"] },
-    "art-8": { "simples": "Os Estados, o Distrito Federal e os Municípios organizam os respectivos órgãos e entidades executivos de trânsito e executivos rodoviários, estabelecendo os limites circunscricionais de suas atuações.", "pontos": ["Cada ente organiza seus órgãos.", "Definição dos limites de atuação."], "atencao": ["Circunscrição define quem tem competência sobre a via."], "exemplo": "O município cria seu órgão de trânsito e define a área de atuação.", "prova": ["Assertiva que atribui à União a organização dos órgãos municipais de trânsito erra."], "termos": [], "remissoes": ["Art. 24"] },
-    "art-9": { "simples": "O Presidente da República designa o ministério ou órgão da Presidência responsável pela coordenação máxima do Sistema Nacional de Trânsito, ao qual fica vinculado o Contran e subordinado o órgão máximo executivo de trânsito da União.", "pontos": ["Designação pelo Presidente da República.", "Vinculação do Contran.", "Subordinação do órgão máximo executivo da União."], "atencao": ["O órgão máximo executivo da União é subordinado; o Contran é vinculado."], "exemplo": "O decreto presidencial define a pasta que coordena o sistema.", "prova": ["Assertiva que atribui ao Contran a designação do ministério coordenador erra."], "termos": [], "remissoes": ["Art. 10"] },
-    "art-10": { "simples": "O Contran tem sede no Distrito Federal e é composto por Ministros de Estado responsáveis por áreas definidas em lei, como ciência e tecnologia, educação, defesa, meio ambiente, saúde, justiça e relações exteriores, entre outras. Vários incisos foram revogados ou alterados por leis posteriores.", "pontos": ["Sede no Distrito Federal.", "Composto por Ministros de Estado.", "Incisos alterados ou revogados por leis posteriores."], "atencao": ["ATUALIZAÇÃO: a composição do Contran foi reorganizada; confira o texto vigente.", "É composto por Ministros de Estado."], "exemplo": "O Contran reúne representantes de várias pastas ministeriais.", "prova": ["Assertiva que compõe o Contran com representantes estaduais erra: é composto por Ministros de Estado."], "termos": [], "remissoes": ["Art. 12"] },
-    "art-10-a": { "simples": "Podem ser convidados a participar de reuniões do Contran, sem direito a voto, representantes de órgãos e entidades setoriais responsáveis ou impactados pelas propostas ou matérias em exame.", "pontos": ["Convidados participam sem direito a voto."], "atencao": ["ATUALIZAÇÃO: artigo incluído por lei posterior.", "SEM direito a voto."], "exemplo": "Representante do setor de transporte participa da reunião, mas não vota.", "prova": ["Assertiva que concede voto aos convidados das reuniões do Contran erra."], "termos": [], "remissoes": ["Art. 10"] },
-    "art-12": { "simples": "Compete ao Contran estabelecer as normas regulamentares referidas no Código e as diretrizes da Política Nacional de Trânsito; coordenar os órgãos do Sistema; criar Câmaras Temáticas; estabelecer seu regimento interno e as diretrizes para o funcionamento dos Cetran e do Contrandife; estabelecer as diretrizes do regimento das JARI; entre outras competências de normatização, padronização da sinalização e formação de condutores.", "pontos": ["Normas regulamentares e diretrizes da política.", "Coordenação dos órgãos do sistema.", "Câmaras Temáticas.", "Diretrizes para Cetran e JARI."], "atencao": ["ATUALIZAÇÃO: o rol de competências foi alterado por leis posteriores; confira o texto vigente.", "O Contran edita as resoluções."], "exemplo": "A resolução que padroniza a sinalização vem do Contran.", "prova": ["Assertiva que atribui ao Detran a edição das normas regulamentares do Código erra."], "termos": [], "remissoes": ["Art. 7º"] },
-    "art-13": { "simples": "As Câmaras Temáticas, órgãos técnicos vinculados ao Contran, são integradas por especialistas e têm por objetivo estudar e oferecer sugestões e embasamento técnico sobre assuntos específicos para as decisões do Contran. Cada Câmara é constituída por especialistas representantes de órgãos executivos da União, dos Estados, do Distrito Federal e dos Municípios, em igual número.", "pontos": ["Órgãos técnicos vinculados ao Contran.", "Integradas por especialistas.", "Composição paritária entre os entes."], "atencao": ["Função de assessoramento técnico, sem poder decisório."], "exemplo": "Uma Câmara Temática estuda a segurança de motocicletas e sugere ao Contran.", "prova": ["Assertiva que dá poder normativo final às Câmaras Temáticas erra."], "termos": [], "remissoes": ["Art. 12"] },
-    "art-14": { "simples": "Compete aos Cetran e ao Contrandife cumprir e fazer cumprir a legislação de trânsito, elaborar normas no âmbito de suas competências, responder a consultas, estimular e orientar campanhas educativas, julgar recursos nas hipóteses legais, e atuar como órgãos de coordenação, normatização e consulta em seus âmbitos, entre outras atribuições.", "pontos": ["Normatização estadual e distrital.", "Resposta a consultas.", "Julgamento de recursos nas hipóteses legais.", "Campanhas educativas."], "atencao": ["Suas normas valem no âmbito estadual ou distrital.", "ATUALIZAÇÃO: o rol foi alterado por leis posteriores."], "exemplo": "O Cetran responde a consultas sobre a aplicação da legislação no estado.", "prova": ["Assertiva que atribui ao Cetran a edição de normas nacionais erra: suas normas valem no âmbito estadual."], "termos": [], "remissoes": ["Art. 16"] },
-    "art-15": { "simples": "Os presidentes dos Cetran e do Contrandife são nomeados pelos Governadores dos Estados e do Distrito Federal e devem ter reconhecida experiência em matéria de trânsito. Os membros desses órgãos também são nomeados pelos Governadores e devem ser pessoas de reconhecida experiência em trânsito.", "pontos": ["Nomeação pelos Governadores.", "Reconhecida experiência em trânsito."], "atencao": ["Quem nomeia é o Governador."], "exemplo": "O Governador nomeia o presidente do Cetran.", "prova": ["Assertiva que atribui ao Presidente da República a nomeação dos membros do Cetran erra."], "termos": [], "remissoes": ["Art. 14"] },
-    "art-16": { "simples": "Junto a cada órgão ou entidade executivo de trânsito ou rodoviário funcionam as Juntas Administrativas de Recursos de Infrações, as JARI, órgãos colegiados responsáveis pelo julgamento dos recursos interpostos contra as penalidades por eles impostas. As JARI têm regimento próprio, observadas as diretrizes do Contran, e apoio administrativo e financeiro do órgão junto ao qual funcionam.", "pontos": ["JARI junto a cada órgão executivo.", "Colegiado que julga recursos contra penalidades.", "Regimento próprio e apoio do órgão."], "atencao": ["A JARI é a primeira instância recursal administrativa."], "exemplo": "O condutor multado recorre à JARI do órgão que o autuou.", "prova": ["Assertiva que atribui ao Contran o julgamento de recursos de multas em primeira instância erra."], "termos": [{ "termo": "JARI", "significado": "Junta Administrativa de Recursos de Infrações." }], "remissoes": ["Art. 17"] },
-    "art-17": { "simples": "Compete às JARI julgar os recursos interpostos pelos infratores; solicitar aos órgãos de trânsito e rodoviários informações complementares relativas aos recursos; e encaminhar aos órgãos informações sobre problemas observados nas autuações e apontados em recursos, para as providências cabíveis.", "pontos": ["Julgar recursos.", "Solicitar informações complementares.", "Encaminhar informações sobre problemas nas autuações."], "atencao": ["Também funcionam como fonte de retroalimentação aos órgãos."], "exemplo": "A JARI aponta ao órgão um erro recorrente em autuações.", "prova": ["Assertiva que impede a JARI de solicitar informações complementares erra."], "termos": [], "remissoes": ["Art. 16"] },
-    "art-19": { "simples": "Compete ao órgão máximo executivo de trânsito da União cumprir e fazer cumprir a legislação de trânsito e a execução das normas e diretrizes do Contran; supervisionar, coordenar e fiscalizar os órgãos delegados e a execução da Política Nacional de Trânsito; articular-se com os órgãos dos demais entes; entre outras atribuições relativas a registros, estatísticas e fiscalização.", "pontos": ["Cumprir as normas do Contran.", "Supervisão e correição dos órgãos delegados.", "Articulação com os demais entes."], "atencao": ["Executa e supervisiona; não edita as normas regulamentares."], "exemplo": "O órgão federal supervisiona a execução da política nacional.", "prova": ["Assertiva que dá ao órgão máximo executivo da União a função normativa do Contran erra."], "termos": [], "remissoes": ["Art. 12"] },
-    "art-20": { "simples": "Compete à Polícia Rodoviária Federal, no âmbito das rodovias e estradas federais, cumprir e fazer cumprir a legislação e as normas de trânsito, realizar o patrulhamento ostensivo com operações de segurança pública, executar a fiscalização de trânsito, autuar e aplicar medidas administrativas, entre outras atribuições.", "pontos": ["Atuação nas rodovias e estradas federais.", "Patrulhamento ostensivo.", "Fiscalização, autuação e medidas administrativas."], "atencao": ["Âmbito: rodovias e estradas FEDERAIS."], "exemplo": "A PRF autua o condutor que excede a velocidade na rodovia federal.", "prova": ["Assertiva que estende a competência da PRF a todas as vias urbanas erra."], "termos": [], "remissoes": ["Art. 21"] },
-    "art-21": { "simples": "Compete aos órgãos e entidades executivos rodoviários da União, dos Estados, do Distrito Federal e dos Municípios, no âmbito de sua circunscrição, cumprir e fazer cumprir a legislação de trânsito, planejar, projetar, regulamentar e operar o trânsito, implantar e manter a sinalização e os equipamentos de controle viário, e executar a fiscalização, autuar e aplicar as penalidades e medidas administrativas, entre outras atribuições.", "pontos": ["Planejamento e operação do trânsito nas rodovias.", "Sinalização e equipamentos de controle.", "Fiscalização, autuação e penalidades."], "atencao": ["Órgãos RODOVIÁRIOS atuam em rodovias; os executivos de trânsito, nas vias urbanas."], "exemplo": "O órgão rodoviário estadual sinaliza e fiscaliza a rodovia estadual.", "prova": ["Assertiva que restringe a competência dos órgãos rodoviários às vias urbanas erra."], "termos": [], "remissoes": ["Art. 20"] },
-    "art-22": { "simples": "Compete aos órgãos executivos de trânsito dos Estados e do Distrito Federal, no âmbito de sua circunscrição, cumprir a legislação, realizar e controlar o processo de formação, aperfeiçoamento, reciclagem e suspensão de condutores e expedir e cassar a Licença de Aprendizagem, a Permissão para Dirigir e a Carteira Nacional de Habilitação; vistoriar, inspecionar e registrar veículos; expedir e cassar documentos de licenciamento; e executar a fiscalização, entre outras competências.", "pontos": ["Formação e habilitação de condutores.", "Expedição e cassação de licença de aprendizagem, permissão e CNH.", "Registro e licenciamento de veículos.", "Fiscalização."], "atencao": ["É o órgão estadual (Detran) que habilita condutores e registra veículos.", "ATUALIZAÇÃO: o rol foi alterado por leis posteriores."], "exemplo": "O Detran emite a CNH e registra o veículo.", "prova": ["Assertiva que atribui aos municípios a expedição da CNH erra."], "termos": [], "remissoes": ["Art. 24"] },
-    "art-23": { "simples": "Compete às Polícias Militares dos Estados e do Distrito Federal executar a fiscalização de trânsito, quando e conforme convênio firmado, como agente do órgão ou entidade executivos de trânsito ou executivos rodoviários, concomitantemente com os demais agentes credenciados.", "pontos": ["Fiscalização de trânsito pela Polícia Militar.", "Depende de convênio.", "Atua como agente do órgão de trânsito."], "atencao": ["Depende de CONVÊNIO com o órgão de trânsito ou rodoviário.", "ATUALIZAÇÃO: outros incisos foram vetados ou revogados."], "exemplo": "A Polícia Militar fiscaliza o trânsito urbano por convênio com o órgão municipal.", "prova": ["Assertiva que dispensa convênio para a fiscalização de trânsito pela Polícia Militar erra."], "termos": [], "remissoes": ["Art. 25"] },
-    "art-24": { "simples": "Compete aos órgãos e entidades executivos de trânsito dos Municípios, no âmbito de sua circunscrição, cumprir e fazer cumprir a legislação de trânsito, planejar, projetar, regulamentar e operar o trânsito de veículos, pedestres e animais, implantar e manter a sinalização, executar a fiscalização de trânsito, autuar e aplicar as medidas administrativas e penalidades por infrações de circulação, estacionamento e parada, entre outras atribuições.", "pontos": ["Planejamento e operação do trânsito municipal.", "Sinalização.", "Fiscalização e penalidades por infrações de circulação, estacionamento e parada."], "atencao": ["O município fiscaliza as infrações de circulação, estacionamento e parada nas suas vias.", "ATUALIZAÇÃO: o rol foi ampliado por leis posteriores."], "exemplo": "A prefeitura aplica a multa de estacionamento irregular.", "prova": ["Assertiva que restringe os órgãos municipais à sinalização, sem poder de fiscalização, erra."], "termos": [], "remissoes": ["Art. 24-A"] },
-    "art-24-a": { "simples": "Compete concorrentemente aos órgãos e entidades executivos de trânsito dos Estados, do Distrito Federal e dos Municípios executar a fiscalização de trânsito, autuar e aplicar as medidas administrativas e penalidades previstas no Código, observadas as competências privativas do art. 22, §2º, e do art. 24, §4º.", "pontos": ["Competência concorrente para fiscalizar e autuar.", "Ressalvadas as competências privativas."], "atencao": ["ATUALIZAÇÃO: artigo incluído por lei posterior.", "CONCORRENTE, com ressalva das competências privativas."], "exemplo": "Município e estado podem fiscalizar o trânsito, respeitadas as competências privativas.", "prova": ["Assertiva que torna exclusiva do estado toda a fiscalização erra: a competência é concorrente."], "termos": [], "remissoes": ["Art. 22"] },
-    "art-25": { "simples": "Os órgãos e entidades executivos do Sistema Nacional de Trânsito podem celebrar convênio delegando as atividades previstas no Código, com vistas à maior eficiência e à segurança dos usuários da via. Podem ainda prestar serviços de capacitação técnica, assessoria e monitoramento das atividades relativas ao trânsito, por prazo estabelecido entre as partes, mediante ressarcimento dos custos.", "pontos": ["Convênio de delegação de atividades.", "Capacitação, assessoria e monitoramento.", "Ressarcimento de custos."], "atencao": ["A delegação se faz por CONVÊNIO."], "exemplo": "O município delega ao estado parte da fiscalização por convênio.", "prova": ["Assertiva que permite a delegação de atividades sem convênio erra."], "termos": [], "remissoes": ["Art. 23"] },
-    "art-25-a": { "simples": "Os agentes dos órgãos policiais da Câmara dos Deputados e do Senado Federal, mediante convênio com o órgão ou entidade de trânsito com circunscrição sobre a via, podem lavrar auto de infração de trânsito e remetê-lo ao órgão competente, nos casos de infração cometida nas dependências dessas Casas legislativas.", "pontos": ["Polícias legislativas lavram auto de infração.", "Depende de convênio com o órgão de trânsito."], "atencao": ["ATUALIZAÇÃO: artigo incluído por lei posterior.", "Depende de convênio."], "exemplo": "A polícia do Senado lavra auto de infração por convênio com o órgão de trânsito.", "prova": ["Assertiva que dá às polícias legislativas competência plena de trânsito sem convênio erra."], "termos": [], "remissoes": ["Art. 25"] },
-    "art-26": { "simples": "Os usuários das vias terrestres devem abster-se de todo ato que possa constituir perigo ou obstáculo para o trânsito de veículos, pessoas ou animais, ou causar danos a propriedades públicas ou privadas, e abster-se de obstruir o trânsito ou torná-lo perigoso, atirando, depositando ou abandonando na via objetos ou substâncias, ou criando qualquer outro obstáculo.", "pontos": ["Dever geral de não criar perigo ou obstáculo.", "Vedado atirar ou abandonar objetos na via."], "atencao": ["Dever de TODOS os usuários, não só condutores."], "exemplo": "Deixar entulho no meio da via viola o dever de não criar obstáculo.", "prova": ["Assertiva que restringe o dever de não obstruir a via aos condutores erra: vale para todos os usuários."], "termos": [], "remissoes": ["Art. 28"] },
-    "art-27": { "simples": "Antes de colocar o veículo em circulação nas vias públicas, o condutor deve verificar a existência e as boas condições de funcionamento dos equipamentos de uso obrigatório, bem como assegurar-se da existência de combustível suficiente para chegar ao local de destino.", "pontos": ["Verificar equipamentos obrigatórios.", "Verificar combustível suficiente."], "atencao": ["Dever ANTES de colocar o veículo em circulação."], "exemplo": "O motorista confere os equipamentos e o combustível antes da viagem.", "prova": ["Assertiva que dispensa a verificação do combustível erra."], "termos": [], "remissoes": ["Art. 28"] },
-    "art-28": { "simples": "O condutor deve, a todo momento, ter domínio de seu veículo, dirigindo-o com atenção e cuidados indispensáveis à segurança do trânsito.", "pontos": ["Domínio do veículo a todo momento.", "Atenção e cuidados indispensáveis."], "atencao": ["Princípio da direção defensiva e do domínio do veículo."], "exemplo": "Usar o celular a ponto de perder o domínio do veículo viola o art. 28.", "prova": ["Assertiva que dispensa atenção do condutor em vias vazias erra."], "termos": [], "remissoes": ["Art. 29"] },
-    "art-29": { "simples": "O trânsito de veículos nas vias terrestres abertas à circulação obedece a normas como a circulação pelo lado direito da via, admitidas exceções sinalizadas; a distância de segurança lateral e frontal entre veículos; e regras de prioridade e preferência de passagem, inclusive dos veículos de emergência em serviço.", "pontos": ["Circulação pela direita.", "Distância de segurança.", "Preferências de passagem."], "atencao": ["Rol extenso de normas gerais; consulte o texto integral dos incisos.", "Veículos de emergência têm prioridade quando em serviço."], "exemplo": "O condutor mantém distância de segurança do veículo à frente.", "prova": ["Assertiva que permite circular pela esquerda como regra erra: a regra é a direita."], "termos": [], "remissoes": ["Art. 30"] },
-    "art-30": { "simples": "Todo condutor, ao perceber que outro que o segue tem o propósito de ultrapassá-lo, deve, se estiver na faixa da esquerda, deslocar-se para a faixa da direita, sem acelerar a marcha; e, se estiver nas demais faixas, manter-se naquela em que circula, sem acelerar. Os veículos mais lentos, quando em fila, devem manter distância suficiente entre si para permitir que os que os ultrapassem possam se intercalar na fila.", "pontos": ["Quem é ultrapassado não acelera.", "Faixa da esquerda: desloca-se para a direita.", "Veículos lentos em fila mantêm distância."], "atencao": ["Quem é ultrapassado NÃO pode acelerar."], "exemplo": "O condutor na faixa da esquerda cede à direita ao perceber a ultrapassagem.", "prova": ["Assertiva que permite ao ultrapassado acelerar para impedir a manobra erra."], "termos": [], "remissoes": ["Art. 32"] },
-    "art-31": { "simples": "O condutor que tenha o propósito de ultrapassar um veículo de transporte coletivo parado, efetuando embarque ou desembarque de passageiros, deve reduzir a velocidade, dirigindo com atenção redobrada, ou parar o veículo, com vistas à segurança dos pedestres.", "pontos": ["Reduzir a velocidade ou parar.", "Atenção redobrada."], "atencao": ["Proteção do pedestre que embarca ou desembarca."], "exemplo": "Ao passar por um ônibus parado, o motorista reduz a velocidade.", "prova": ["Assertiva que permite ultrapassar o ônibus parado em velocidade normal erra."], "termos": [], "remissoes": ["Art. 32"] },
-    "art-32": { "simples": "O condutor não pode ultrapassar veículos em vias com duplo sentido de direção e pista única nos trechos em curvas e em aclives sem visibilidade suficiente, nas passagens de nível, nas pontes e viadutos e nas travessias de pedestres, exceto quando houver sinalização permitindo a ultrapassagem.", "pontos": ["Proibição em curvas e aclives sem visibilidade.", "Passagens de nível, pontes, viadutos e travessias de pedestres.", "Exceção: sinalização permissiva."], "atencao": ["Exceção só com sinalização que permita."], "exemplo": "Ultrapassar em curva sem visibilidade é proibido.", "prova": ["Assertiva que permite ultrapassar em ponte sem sinalização erra."], "termos": [], "remissoes": ["Art. 33"] },
-    "art-33": { "simples": "Nas interseções e suas proximidades, o condutor não pode efetuar ultrapassagem, regra que busca evitar colisões no ponto de encontro das vias.", "pontos": ["Proibida ultrapassagem em interseções e proximidades."], "atencao": ["Proibição absoluta no texto do artigo."], "exemplo": "Não se ultrapassa no cruzamento.", "prova": ["Assertiva que permite a ultrapassagem em interseção se a via estiver livre erra."], "termos": [], "remissoes": ["Art. 32"] },
-    "art-34": { "simples": "O condutor que queira executar uma manobra deve certificar-se de que pode executá-la sem perigo para os demais usuários da via que o seguem, precedem ou vão cruzar com ele, considerando sua posição, sua direção e sua velocidade.", "pontos": ["Certificar-se de que a manobra é segura.", "Considerar posição, direção e velocidade."], "atencao": ["Dever geral de cautela em manobras."], "exemplo": "Antes de mudar de faixa, o condutor confere o retrovisor.", "prova": ["Assertiva que dispensa a verificação dos que seguem o veículo erra."], "termos": [], "remissoes": ["Art. 35"] },
-    "art-35": { "simples": "Antes de iniciar qualquer manobra que implique um deslocamento lateral, o condutor deve indicar seu propósito de forma clara e com a devida antecedência, por meio da luz indicadora de direção do veículo ou fazendo gesto convencional de braço. Deslocamento lateral é a transposição de faixas, movimentos de conversão à direita ou à esquerda e retornos.", "pontos": ["Sinalizar com antecedência.", "Seta ou gesto de braço.", "Conceito de deslocamento lateral."], "atencao": ["Deslocamento lateral inclui transposição de faixas, conversões e retornos."], "exemplo": "O condutor liga a seta antes de mudar de faixa.", "prova": ["Assertiva que dispensa a sinalização na mudança de faixa erra."], "termos": [], "remissoes": ["Art. 34"] },
-    "art-36": { "simples": "O condutor que for ingressar numa via, procedente de um lote lindeiro a essa via, deve dar preferência aos veículos e pedestres que por ela estejam transitando.", "pontos": ["Quem sai de lote lindeiro dá preferência à via."], "atencao": ["Preferência de quem já está na via."], "exemplo": "Quem sai da garagem espera passar os veículos e pedestres.", "prova": ["Assertiva que dá preferência a quem sai do lote lindeiro erra."], "termos": [], "remissoes": ["Art. 38"] },
-    "art-37": { "simples": "Nas vias providas de acostamento, a conversão à esquerda e a operação de retorno devem ser feitas nos locais apropriados e, onde estes não existirem, o condutor deve aguardar no acostamento, à direita, para cruzar a pista com segurança.", "pontos": ["Conversão e retorno em locais apropriados.", "Na falta, aguardar no acostamento, à direita."], "atencao": ["Aguardar à DIREITA, no acostamento."], "exemplo": "Sem retorno sinalizado, o condutor aguarda no acostamento para cruzar.", "prova": ["Assertiva que manda aguardar no meio da pista para converter à esquerda erra."], "termos": [], "remissoes": ["Art. 38"] },
-    "art-38": { "simples": "Antes de entrar à direita ou à esquerda, em outra via ou em lotes lindeiros, o condutor deve, ao sair pelo lado direito, aproximar-se o máximo possível do bordo direito da pista e executar a manobra no menor espaço possível; e, ao sair pelo lado esquerdo, aproximar-se o máximo possível do eixo ou da linha divisória da pista, quando houver, em pista com circulação nos dois sentidos.", "pontos": ["Saída pela direita: junto ao bordo direito.", "Saída pela esquerda: junto ao eixo da pista."], "atencao": ["Posicionamento correto antes de converter."], "exemplo": "Para converter à direita, o condutor se aproxima do bordo direito.", "prova": ["Assertiva que manda converter à direita partindo do eixo da pista erra."], "termos": [], "remissoes": ["Art. 35"] },
-    "art-39": { "simples": "Nas vias urbanas, a operação de retorno deve ser feita nos locais para isso determinados, por meio de sinalização ou existência de locais apropriados, ou em outros locais que ofereçam condições de segurança e fluidez, observadas as características da via, do veículo, as condições meteorológicas e a movimentação de pedestres e ciclistas.", "pontos": ["Retorno em locais determinados ou seguros.", "Observância das condições da via e do ambiente."], "atencao": ["Retorno em local sem proibição e com segurança."], "exemplo": "O retorno é feito no local sinalizado.", "prova": ["Assertiva que permite retorno em qualquer ponto da via urbana erra."], "termos": [], "remissoes": ["Art. 37"] },
-    "art-40": { "simples": "O uso de luzes em veículo obedece a determinações como manter acesos os faróis, na luz baixa, à noite e, mesmo durante o dia, em túneis e sob chuva, neblina ou cerração; usar luz alta nas vias não iluminadas, exceto ao cruzar com outro veículo ou ao segui-lo; e não trocar de forma intermitente e por curto período a luz baixa e a alta, salvo para advertir ultrapassagem fora da área urbana.", "pontos": ["Luz baixa à noite e em túneis, chuva e neblina.", "Luz alta em vias não iluminadas, com exceções.", "Regras sobre a troca intermitente."], "atencao": ["Luz baixa também de dia em túneis, chuva, neblina e cerração.", "ATUALIZAÇÃO: regras sobre luzes diurnas em rodovias foram alteradas por lei posterior; confira o texto integral."], "exemplo": "Em túnel, mesmo de dia, mantém-se a luz baixa acesa.", "prova": ["Assertiva que dispensa os faróis acesos em túnel durante o dia erra."], "termos": [], "remissoes": ["Art. 41"] },
-    "art-41": { "simples": "O condutor só pode fazer uso de buzina, em toque breve, para fazer as advertências necessárias a fim de evitar sinistros e, fora das áreas urbanas, quando for conveniente advertir outro condutor de que se tem o propósito de ultrapassá-lo.", "pontos": ["Toque breve.", "Para evitar sinistros.", "Fora das áreas urbanas, para advertir ultrapassagem."], "atencao": ["Em área urbana, só para evitar sinistro."], "exemplo": "Na rodovia, o toque breve avisa que o condutor vai ultrapassar.", "prova": ["Assertiva que permite o uso livre da buzina nas áreas urbanas erra."], "termos": [], "remissoes": ["Art. 40"] },
-    "art-42": { "simples": "Nenhum condutor deve frear bruscamente seu veículo, salvo por razões de segurança.", "pontos": ["Frenagem brusca só por segurança."], "atencao": ["Exceção: razões de segurança."], "exemplo": "A frenagem brusca para evitar atropelamento é permitida.", "prova": ["Assertiva que proíbe frenagem brusca em qualquer hipótese erra."], "termos": [], "remissoes": ["Art. 43"] },
-    "art-43": { "simples": "Ao regular a velocidade, o condutor deve observar constantemente as condições físicas da via, do veículo e da carga, as condições meteorológicas e a intensidade do trânsito, obedecendo aos limites máximos de velocidade estabelecidos para a via, além de não obstruir a marcha normal dos demais veículos sem causa justificada, transitando a velocidade anormalmente reduzida.", "pontos": ["Observar condições da via, do veículo, da carga e do clima.", "Respeitar os limites máximos.", "Não transitar em velocidade anormalmente reduzida sem causa justificada."], "atencao": ["Velocidade anormalmente reduzida sem causa também é irregular."], "exemplo": "Dirigir devagar demais e atrapalhar o fluxo viola a regra.", "prova": ["Assertiva que considera irregular apenas o excesso de velocidade, e não a velocidade anormalmente reduzida, erra."], "termos": [], "remissoes": ["Art. 61"] },
-    "art-44": { "simples": "Ao aproximar-se de qualquer tipo de cruzamento, o condutor do veículo deve demonstrar prudência especial, transitando em velocidade moderada, de forma que possa deter seu veículo com segurança para dar passagem a pedestre e a veículos que tenham o direito de preferência.", "pontos": ["Prudência especial nos cruzamentos.", "Velocidade moderada.", "Dar passagem a quem tem preferência."], "atencao": ["Vale para qualquer cruzamento."], "exemplo": "Ao chegar ao cruzamento, o condutor reduz para poder parar.", "prova": ["Assertiva que dispensa prudência especial em cruzamentos sinalizados erra."], "termos": [], "remissoes": ["Art. 45"] },
-    "art-44-a": { "simples": "É livre o movimento de conversão à direita diante de sinal vermelho do semáforo onde houver sinalização indicativa que permita essa conversão, observados os arts. 44, 45 e 70.", "pontos": ["Conversão à direita no vermelho, só com sinalização permissiva."], "atencao": ["ATUALIZAÇÃO: artigo incluído por lei posterior.", "Exige SINALIZAÇÃO que permita; sem ela, é proibido."], "exemplo": "Há placa permitindo a conversão à direita no vermelho; o condutor pode converter com cautela.", "prova": ["Assertiva que permite a conversão à direita no vermelho em qualquer semáforo erra."], "termos": [], "remissoes": ["Art. 44"] },
-    "art-45": { "simples": "Mesmo que a indicação luminosa do semáforo lhe seja favorável, nenhum condutor pode entrar em uma interseção se houver possibilidade de ser obrigado a imobilizar o veículo na área do cruzamento, obstruindo ou impedindo a passagem do trânsito transversal.", "pontos": ["Proibido entrar na interseção sem espaço para sair.", "Vale mesmo com sinal verde."], "atencao": ["Mesmo com semáforo favorável."], "exemplo": "O condutor não avança no verde se o trânsito à frente está parado.", "prova": ["Assertiva que autoriza entrar no cruzamento no verde, ainda que fique parado nele, erra."], "termos": [], "remissoes": ["Art. 44"] },
-    "art-46": { "simples": "Sempre que for necessária a imobilização temporária de um veículo no leito viário, em situação de emergência, deve ser providenciada a imediata sinalização de advertência, na forma estabelecida pelo Contran.", "pontos": ["Sinalização imediata em imobilização de emergência.", "Forma definida pelo Contran."], "atencao": ["Sinalização na forma do Contran, como o triângulo."], "exemplo": "Em pane na pista, o condutor coloca o triângulo de sinalização.", "prova": ["Assertiva que dispensa a sinalização na imobilização por emergência erra."], "termos": [], "remissoes": ["Art. 47"] },
-    "art-47": { "simples": "Quando proibido o estacionamento na via, a parada deve restringir-se ao tempo indispensável para embarque ou desembarque de passageiros, desde que não interrompa ou perturbe o fluxo de veículos ou a locomoção de pedestres. A operação de carga ou descarga é regulamentada pelo órgão com circunscrição sobre a via e é considerada estacionamento.", "pontos": ["Parada só para embarque e desembarque.", "Carga e descarga é considerada estacionamento."], "atencao": ["Carga ou descarga = ESTACIONAMENTO."], "exemplo": "Em local de estacionamento proibido, só se para para embarcar ou desembarcar.", "prova": ["Assertiva que considera carga e descarga como mera parada erra: é estacionamento."], "termos": [], "remissoes": ["Art. 48"] },
-    "art-48": { "simples": "Nas paradas, operações de carga ou descarga e estacionamentos, o veículo deve ser posicionado no sentido do fluxo, paralelo ao bordo da pista de rolamento e junto à guia da calçada (meio-fio), admitidas as exceções sinalizadas. Nas vias providas de acostamento, os veículos parados, estacionados ou em operação de carga ou descarga devem estar fora da pista de rolamento.", "pontos": ["Sentido do fluxo, paralelo e junto ao meio-fio.", "Exceções sinalizadas.", "Acostamento: fora da pista de rolamento."], "atencao": ["Posição: no sentido do fluxo e junto ao meio-fio."], "exemplo": "O veículo estaciona paralelo à guia, no sentido do fluxo.", "prova": ["Assertiva que permite estacionar em sentido contrário ao fluxo sem sinalização erra."], "termos": [], "remissoes": ["Art. 47"] },
-    "art-49": { "simples": "O condutor e os passageiros não devem abrir a porta do veículo, deixá-la aberta ou descer do veículo sem antes se certificarem de que isso não constitui perigo para eles e para outros usuários da via. O embarque e o desembarque devem ocorrer sempre do lado da calçada, exceto para o condutor.", "pontos": ["Certificar-se antes de abrir a porta.", "Embarque e desembarque do lado da calçada."], "atencao": ["Exceção do lado da calçada: o condutor."], "exemplo": "Antes de abrir a porta, confere-se se vem ciclista.", "prova": ["Assertiva que manda o passageiro desembarcar sempre pelo lado da pista erra."], "termos": [], "remissoes": ["Art. 48"] },
-    "art-50": { "simples": "O uso de faixas laterais de domínio e das áreas adjacentes às estradas e rodovias obedece às condições de segurança do trânsito estabelecidas pelo órgão ou entidade com circunscrição sobre a via.", "pontos": ["Faixas de domínio e áreas adjacentes.", "Condições definidas pelo órgão com circunscrição."], "atencao": ["Quem define é o órgão com circunscrição sobre a via."], "exemplo": "O uso da faixa de domínio depende de autorização e regras do órgão rodoviário.", "prova": ["Assertiva que libera o uso das faixas de domínio sem condições de segurança erra."], "termos": [], "remissoes": ["Art. 21"] },
-    "art-51": { "simples": "Nas vias internas pertencentes a condomínios constituídos por unidades autônomas, a sinalização de regulamentação da via é implantada e mantida às expensas do condomínio, após aprovação dos projetos pelo órgão ou entidade com circunscrição sobre a via.", "pontos": ["Sinalização às expensas do condomínio.", "Aprovação dos projetos pelo órgão de trânsito."], "atencao": ["Condomínio paga, mas o órgão aprova o projeto."], "exemplo": "O condomínio instala as placas após aprovação do projeto pelo órgão.", "prova": ["Assertiva que isenta o condomínio da sinalização de suas vias erra."], "termos": [], "remissoes": ["Art. 2º"] },
-    "art-52": { "simples": "Os veículos de tração animal são conduzidos pela direita da pista, junto à guia da calçada (meio-fio) ou acostamento, sempre que não houver faixa especial a eles destinada, devendo seus condutores obedecer, no que couber, às normas de circulação do Código e às fixadas pelo órgão com circunscrição sobre a via.", "pontos": ["Circulam pela direita, junto ao meio-fio ou acostamento.", "Obedecem às normas de circulação, no que couber."], "atencao": ["Sem faixa especial, pela direita."], "exemplo": "A carroça trafega junto ao acostamento.", "prova": ["Assertiva que isenta veículos de tração animal das normas de circulação erra."], "termos": [], "remissoes": ["Art. 53"] },
-    "art-53": { "simples": "Os animais isolados ou em grupos só podem circular nas vias quando conduzidos por um guia. Para facilitar os deslocamentos, os rebanhos devem ser divididos em grupos de tamanho moderado e separados uns dos outros por espaços suficientes para não obstruir o trânsito; e os animais que circularem pela pista de rolamento devem ser mantidos junto ao bordo da pista.", "pontos": ["Animais só com guia.", "Rebanhos divididos em grupos moderados.", "Junto ao bordo da pista."], "atencao": ["Sem guia, o animal não pode circular na via."], "exemplo": "O vaqueiro conduz o gado dividido em grupos.", "prova": ["Assertiva que permite animais soltos na via erra."], "termos": [], "remissoes": ["Art. 52"] },
-    "art-54": { "simples": "Os condutores de motocicletas, motonetas e ciclomotores só podem circular nas vias utilizando capacete de segurança com viseira ou óculos protetores, segurando o guidom com as duas mãos e usando vestuário de proteção de acordo com as especificações do Contran.", "pontos": ["Capacete com viseira ou óculos.", "Guidom com as duas mãos.", "Vestuário de proteção conforme o Contran."], "atencao": ["Vestuário de proteção depende de regulamentação do Contran.", "Três exigências cumulativas."], "exemplo": "O motociclista usa capacete e segura o guidom com as duas mãos.", "prova": ["Assertiva que dispensa o capacete em trajetos curtos erra."], "termos": [], "remissoes": ["Art. 244"] },
-    "art-55": { "simples": "Os passageiros de motocicletas, motonetas e ciclomotores só podem ser transportados utilizando capacete de segurança, em carro lateral acoplado ao veículo ou em assento suplementar atrás do condutor, e usando vestuário de proteção de acordo com as especificações do Contran.", "pontos": ["Capacete.", "Carro lateral ou assento suplementar atrás do condutor.", "Vestuário de proteção conforme o Contran."], "atencao": ["O passageiro também usa capacete."], "exemplo": "O passageiro da moto usa capacete e viaja no assento atrás do condutor.", "prova": ["Assertiva que dispensa o capacete do passageiro erra."], "termos": [], "remissoes": ["Art. 54"] }
+ "course_slug": "transito",
+ "law": "Código de Trânsito Brasileiro — lote 01: arts. 1 a 55",
+ "units": {
+  "art-1": {
+   "simples": "O trânsito de qualquer natureza nas vias terrestres abertas à circulação rege-se pelo Código. Trânsito é a utilização das vias por pessoas, veículos e animais, para circulação, parada, estacionamento e operação de carga ou descarga. O trânsito em condições seguras é direito de todos e dever dos órgãos do Sistema Nacional de Trânsito.",
+   "pontos": [
+    "Aplica-se às vias terrestres abertas à circulação.",
+    "Conceito amplo de trânsito.",
+    "Trânsito seguro é direito de todos e dever dos órgãos do sistema."
+   ],
+   "atencao": [
+    "Trânsito inclui pessoas, veículos e animais.",
+    "Abrange parada, estacionamento e carga ou descarga."
+   ],
+   "exemplo": "O pedestre que atravessa a rua também está no trânsito para fins do Código.",
+   "prova": [
+    "Assertiva que restringe o conceito de trânsito à circulação de veículos erra."
+   ],
+   "termos": [
+    {
+     "termo": "Trânsito",
+     "significado": "Utilização das vias por pessoas, veículos e animais para circulação, parada, estacionamento e carga ou descarga."
+    }
+   ],
+   "remissoes": [
+    "Art. 2º"
+   ]
+  },
+  "art-2": {
+   "simples": "São vias terrestres urbanas e rurais as ruas, avenidas, logradouros, caminhos, passagens, estradas e rodovias, cujo uso é regulamentado pelo órgão com circunscrição sobre elas. Também são vias terrestres, para o Código, as praias abertas à circulação pública e as vias internas pertencentes a condomínios constituídos por unidades autônomas.",
+   "pontos": [
+    "Rol de vias urbanas e rurais.",
+    "Regulamentação pelo órgão com circunscrição.",
+    "Praias abertas e vias de condomínios também contam."
+   ],
+   "atencao": [
+    "Praias abertas à circulação pública e vias de condomínio são vias terrestres para o Código."
+   ],
+   "exemplo": "A rua interna de um condomínio de unidades autônomas está sujeita ao Código.",
+   "prova": [
+    "Assertiva que exclui as praias abertas à circulação pública do conceito de via terrestre erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 51"
+   ]
+  },
+  "art-3": {
+   "simples": "As disposições do Código aplicam-se a qualquer veículo, bem como aos proprietários, aos condutores de veículos nacionais ou estrangeiros e às pessoas nele expressamente mencionadas.",
+   "pontos": [
+    "Aplica-se a qualquer veículo.",
+    "Alcança proprietários e condutores, nacionais ou estrangeiros."
+   ],
+   "atencao": [
+    "Vale para veículos nacionais E estrangeiros."
+   ],
+   "exemplo": "O turista estrangeiro que dirige no Brasil submete-se ao Código.",
+   "prova": [
+    "Assertiva que isenta condutores estrangeiros do Código erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 1º"
+   ]
+  },
+  "art-4": {
+   "simples": "Os conceitos e definições estabelecidos para os efeitos do Código são os constantes do Anexo I, que deve ser consultado para os termos técnicos.",
+   "pontos": [
+    "Definições no Anexo I."
+   ],
+   "atencao": [
+    "Consulte o Anexo I para os conceitos técnicos."
+   ],
+   "exemplo": "O conceito de ciclomotor está no Anexo I.",
+   "prova": [
+    "Assertiva que dispensa o Anexo I na interpretação dos conceitos erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Anexo I"
+   ]
+  },
+  "art-5": {
+   "simples": "O Sistema Nacional de Trânsito é o conjunto de órgãos e entidades da União, dos Estados, do Distrito Federal e dos Municípios que tem por finalidade o exercício de atividades como planejamento, administração, normatização, pesquisa, registro e licenciamento de veículos, formação e habilitação de condutores, educação, engenharia, operação do sistema viário, policiamento, fiscalização, julgamento de infrações e recursos e aplicação de penalidades.",
+   "pontos": [
+    "Conjunto de órgãos de todos os entes federativos.",
+    "Atividades de planejamento, normatização, registro, habilitação, fiscalização e julgamento."
+   ],
+   "atencao": [
+    "Sistema integrado por União, Estados, DF e Municípios."
+   ],
+   "exemplo": "Detran, Contran e órgãos municipais integram o mesmo sistema.",
+   "prova": [
+    "Assertiva que restringe o sistema aos órgãos federais erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 7º"
+   ]
+  },
+  "art-6": {
+   "simples": "São objetivos básicos do Sistema Nacional de Trânsito estabelecer diretrizes da Política Nacional de Trânsito, voltadas à segurança, fluidez, conforto, defesa ambiental e educação para o trânsito; fixar a padronização de critérios técnicos, financeiros e administrativos; estabelecer a sistemática de fluxos permanentes de informações; e promover o aperfeiçoamento e o intercâmbio entre os órgãos.",
+   "pontos": [
+    "Segurança, fluidez, conforto, defesa ambiental e educação.",
+    "Padronização de critérios.",
+    "Fluxo de informações e integração entre órgãos."
+   ],
+   "atencao": [
+    "Cinco valores da política: segurança, fluidez, conforto, defesa ambiental e educação."
+   ],
+   "exemplo": "A padronização da sinalização em todo o país decorre desses objetivos.",
+   "prova": [
+    "Assertiva que exclui a defesa ambiental dos objetivos do sistema erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 5º"
+   ]
+  },
+  "art-7": {
+   "simples": "Compõem o Sistema Nacional de Trânsito o Contran, coordenador do Sistema e órgão máximo normativo e consultivo; os Conselhos Estaduais de Trânsito e o do Distrito Federal; os órgãos e entidades executivos de trânsito da União, dos Estados, do Distrito Federal e dos Municípios; os órgãos executivos rodoviários; a Polícia Rodoviária Federal; as Polícias Militares; as Juntas Administrativas de Recursos de Infrações; e as Câmaras Temáticas, entre outros.",
+   "pontos": [
+    "Contran como órgão máximo normativo e consultivo.",
+    "Cetran e Contrandife.",
+    "Órgãos executivos de trânsito e rodoviários.",
+    "Polícia Rodoviária Federal, Polícias Militares e JARI."
+   ],
+   "atencao": [
+    "Contran é o órgão máximo NORMATIVO e consultivo.",
+    "ATUALIZAÇÃO: a composição do sistema foi alterada por leis posteriores; consulte o texto vigente."
+   ],
+   "exemplo": "O Contran edita as resoluções que regulamentam o Código.",
+   "prova": [
+    "Assertiva que atribui ao Detran a função de órgão máximo normativo erra: é do Contran."
+   ],
+   "termos": [
+    {
+     "termo": "Contran",
+     "significado": "Conselho Nacional de Trânsito, órgão máximo normativo e consultivo do sistema."
+    }
+   ],
+   "remissoes": [
+    "Art. 12"
+   ]
+  },
+  "art-7-a": {
+   "simples": "A autoridade portuária ou a entidade concessionária de porto organizado pode celebrar convênios com os órgãos de trânsito, com a interveniência dos Municípios e Estados interessados, para facilitar a autuação por descumprimento da legislação de trânsito. O convênio vale para toda a área física do porto organizado.",
+   "pontos": [
+    "Convênio entre autoridade portuária e órgãos de trânsito.",
+    "Finalidade: facilitar a autuação.",
+    "Vale para toda a área do porto organizado."
+   ],
+   "atencao": [
+    "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+    "Exige interveniência de Municípios e Estados."
+   ],
+   "exemplo": "O porto firma convênio para que infrações em suas vias internas sejam autuadas.",
+   "prova": [
+    "Assertiva que dispensa convênio para a autuação em área portuária erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 7º"
+   ]
+  },
+  "art-8": {
+   "simples": "Os Estados, o Distrito Federal e os Municípios organizam os respectivos órgãos e entidades executivos de trânsito e executivos rodoviários, estabelecendo os limites circunscricionais de suas atuações.",
+   "pontos": [
+    "Cada ente organiza seus órgãos.",
+    "Definição dos limites de atuação."
+   ],
+   "atencao": [
+    "Circunscrição define quem tem competência sobre a via."
+   ],
+   "exemplo": "O município cria seu órgão de trânsito e define a área de atuação.",
+   "prova": [
+    "Assertiva que atribui à União a organização dos órgãos municipais de trânsito erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 24"
+   ]
+  },
+  "art-9": {
+   "simples": "O Presidente da República designa o ministério ou órgão da Presidência responsável pela coordenação máxima do Sistema Nacional de Trânsito, ao qual fica vinculado o Contran e subordinado o órgão máximo executivo de trânsito da União.",
+   "pontos": [
+    "Designação pelo Presidente da República.",
+    "Vinculação do Contran.",
+    "Subordinação do órgão máximo executivo da União."
+   ],
+   "atencao": [
+    "O órgão máximo executivo da União é subordinado; o Contran é vinculado."
+   ],
+   "exemplo": "O decreto presidencial define a pasta que coordena o sistema.",
+   "prova": [
+    "Assertiva que atribui ao Contran a designação do ministério coordenador erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 10"
+   ]
+  },
+  "art-10": {
+   "simples": "O Contran tem sede no Distrito Federal e é composto por Ministros de Estado responsáveis por áreas definidas em lei, como ciência e tecnologia, educação, defesa, meio ambiente, saúde, justiça e relações exteriores, entre outras. Vários incisos foram revogados ou alterados por leis posteriores.",
+   "pontos": [
+    "Sede no Distrito Federal.",
+    "Composto por Ministros de Estado.",
+    "Incisos alterados ou revogados por leis posteriores."
+   ],
+   "atencao": [
+    "ATUALIZAÇÃO: a composição do Contran foi reorganizada; confira o texto vigente.",
+    "É composto por Ministros de Estado."
+   ],
+   "exemplo": "O Contran reúne representantes de várias pastas ministeriais.",
+   "prova": [
+    "Assertiva que compõe o Contran com representantes estaduais erra: é composto por Ministros de Estado."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 12"
+   ]
+  },
+  "art-10-a": {
+   "simples": "Podem ser convidados a participar de reuniões do Contran, sem direito a voto, representantes de órgãos e entidades setoriais responsáveis ou impactados pelas propostas ou matérias em exame.",
+   "pontos": [
+    "Convidados participam sem direito a voto."
+   ],
+   "atencao": [
+    "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+    "SEM direito a voto."
+   ],
+   "exemplo": "Representante do setor de transporte participa da reunião, mas não vota.",
+   "prova": [
+    "Assertiva que concede voto aos convidados das reuniões do Contran erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 10"
+   ]
+  },
+  "art-12": {
+   "simples": "Compete ao Contran estabelecer as normas regulamentares do Código e as diretrizes da Política Nacional de Trânsito; coordenar os órgãos do Sistema; criar Câmaras Temáticas; fixar seu regimento e as diretrizes de funcionamento dos Cetran e do Contrandife e das JARI; zelar pela uniformidade das normas; normatizar o enquadramento das condutas, a fiscalização, as penalidades e a arrecadação das multas; responder a consultas; normatizar aprendizagem, habilitação, documentos de condutores, registro e licenciamento de veículos; aprovar a sinalização e os equipamentos de trânsito; avocar processos sobre conflitos de competência; dirimir conflitos de circunscrição; e normatizar o processo de formação do candidato à CNH, com conteúdo, carga horária, avaliações e exames. As propostas de normas regulamentares passam por consulta pública de, no mínimo, 30 dias. Em urgência, o presidente pode editar deliberação ad referendum do Plenário, que perde eficácia se não aprovada em 120 dias, mantidos os efeitos já produzidos.",
+   "pontos": [
+    "Normas regulamentares e diretrizes da política de trânsito.",
+    "Câmaras Temáticas e regimentos dos Cetran e JARI.",
+    "Normatizar habilitação, registro, licenciamento e formação do candidato.",
+    "Consulta pública de, no mínimo, 30 dias.",
+    "Deliberação ad referendum perde eficácia em 120 dias se não aprovada."
+   ],
+   "atencao": [
+    "ATUALIZAÇÃO: o inciso XV (formação do candidato) e as regras de consulta pública e deliberação ad referendum vieram de leis posteriores.",
+    "Consulta pública de no mínimo 30 dias para normas regulamentares.",
+    "Deliberação ad referendum: perde eficácia em 120 dias, mantidos os efeitos."
+   ],
+   "exemplo": "A resolução que padroniza a sinalização vem do Contran.",
+   "prova": [
+    "Assertiva que atribui ao Detran a edição das normas regulamentares do Código erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 7º"
+   ]
+  },
+  "art-13": {
+   "simples": "As Câmaras Temáticas, órgãos técnicos vinculados ao Contran, são integradas por especialistas e têm por objetivo estudar e oferecer sugestões e embasamento técnico sobre assuntos específicos para as decisões do Contran. Cada Câmara é constituída por especialistas representantes de órgãos executivos da União, dos Estados, do Distrito Federal e dos Municípios, em igual número.",
+   "pontos": [
+    "Órgãos técnicos vinculados ao Contran.",
+    "Integradas por especialistas.",
+    "Composição paritária entre os entes."
+   ],
+   "atencao": [
+    "Função de assessoramento técnico, sem poder decisório."
+   ],
+   "exemplo": "Uma Câmara Temática estuda a segurança de motocicletas e sugere ao Contran.",
+   "prova": [
+    "Assertiva que dá poder normativo final às Câmaras Temáticas erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 12"
+   ]
+  },
+  "art-14": {
+   "simples": "Compete aos Cetran e ao Contrandife cumprir e fazer cumprir a legislação de trânsito; elaborar normas no âmbito de suas competências; responder a consultas; estimular campanhas educativas; julgar os recursos interpostos contra decisões das JARI e dos órgãos executivos estaduais nos casos de inaptidão permanente constatada nos exames de aptidão física, mental ou psicológica; indicar representante para a comissão que examina candidatos com deficiência física; acompanhar e coordenar as atividades de trânsito no Estado, reportando-se ao Contran; dirimir conflitos de circunscrição entre Municípios; informar o Contran sobre o cumprimento do art. 333; e designar junta especial de saúde nos recursos deferidos. Das decisões do Cetran nos recursos do inciso V não cabe recurso na esfera administrativa.",
+   "pontos": [
+    "Normas e consultas no âmbito estadual ou distrital.",
+    "Julga recursos contra decisões das JARI.",
+    "Julga recursos de inaptidão permanente nos exames de aptidão.",
+    "Dirime conflitos de circunscrição entre Municípios.",
+    "Sem recurso administrativo contra as decisões do inciso V."
+   ],
+   "atencao": [
+    "Cetran julga recursos contra decisões das JARI e nos casos de inaptidão permanente.",
+    "Das decisões do inciso V NÃO cabe recurso administrativo.",
+    "Suas normas valem no âmbito estadual ou distrital."
+   ],
+   "exemplo": "O Cetran responde a consultas sobre a aplicação da legislação no estado.",
+   "prova": [
+    "Assertiva que atribui ao Cetran a edição de normas nacionais erra: suas normas valem no âmbito estadual."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 16"
+   ]
+  },
+  "art-15": {
+   "simples": "Os presidentes dos Cetran e do Contrandife são nomeados pelos Governadores dos Estados e do Distrito Federal e devem ter reconhecida experiência em matéria de trânsito. Os membros desses órgãos também são nomeados pelos Governadores e devem ser pessoas de reconhecida experiência em trânsito.",
+   "pontos": [
+    "Nomeação pelos Governadores.",
+    "Reconhecida experiência em trânsito."
+   ],
+   "atencao": [
+    "Quem nomeia é o Governador."
+   ],
+   "exemplo": "O Governador nomeia o presidente do Cetran.",
+   "prova": [
+    "Assertiva que atribui ao Presidente da República a nomeação dos membros do Cetran erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 14"
+   ]
+  },
+  "art-16": {
+   "simples": "Junto a cada órgão ou entidade executivo de trânsito ou rodoviário funcionam as Juntas Administrativas de Recursos de Infrações, as JARI, órgãos colegiados responsáveis pelo julgamento dos recursos interpostos contra as penalidades por eles impostas. As JARI têm regimento próprio, observadas as diretrizes do Contran, e apoio administrativo e financeiro do órgão junto ao qual funcionam.",
+   "pontos": [
+    "JARI junto a cada órgão executivo.",
+    "Colegiado que julga recursos contra penalidades.",
+    "Regimento próprio e apoio do órgão."
+   ],
+   "atencao": [
+    "A JARI é a primeira instância recursal administrativa."
+   ],
+   "exemplo": "O condutor multado recorre à JARI do órgão que o autuou.",
+   "prova": [
+    "Assertiva que atribui ao Contran o julgamento de recursos de multas em primeira instância erra."
+   ],
+   "termos": [
+    {
+     "termo": "JARI",
+     "significado": "Junta Administrativa de Recursos de Infrações."
+    }
+   ],
+   "remissoes": [
+    "Art. 17"
+   ]
+  },
+  "art-17": {
+   "simples": "Compete às JARI julgar os recursos interpostos pelos infratores; solicitar aos órgãos de trânsito e rodoviários informações complementares relativas aos recursos; e encaminhar aos órgãos informações sobre problemas observados nas autuações e apontados em recursos, para as providências cabíveis.",
+   "pontos": [
+    "Julgar recursos.",
+    "Solicitar informações complementares.",
+    "Encaminhar informações sobre problemas nas autuações."
+   ],
+   "atencao": [
+    "Também funcionam como fonte de retroalimentação aos órgãos."
+   ],
+   "exemplo": "A JARI aponta ao órgão um erro recorrente em autuações.",
+   "prova": [
+    "Assertiva que impede a JARI de solicitar informações complementares erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 16"
+   ]
+  },
+  "art-19": {
+   "simples": "Compete ao órgão máximo executivo de trânsito da União cumprir e fazer cumprir a legislação de trânsito e a execução das normas e diretrizes do Contran; supervisionar, coordenar e fiscalizar os órgãos delegados e a execução da Política Nacional de Trânsito; articular-se com os órgãos dos demais entes; entre outras atribuições relativas a registros, estatísticas e fiscalização.",
+   "pontos": [
+    "Cumprir as normas do Contran.",
+    "Supervisão e correição dos órgãos delegados.",
+    "Articulação com os sistemas de trânsito, transporte e segurança pública.",
+    "Manter o Renach, o Renavam e a estatística nacional de trânsito.",
+    "Administrar o fundo nacional de segurança e educação de trânsito."
+   ],
+   "atencao": [
+    "Executa e supervisiona; não edita as normas regulamentares, que são do Contran.",
+    "Mantém o Renach (habilitações) e o Renavam (veículos)."
+   ],
+   "exemplo": "O órgão federal supervisiona a execução da política nacional.",
+   "prova": [
+    "Assertiva que dá ao órgão máximo executivo da União a função normativa do Contran erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 12"
+   ]
+  },
+  "art-20": {
+   "simples": "Compete à Polícia Rodoviária Federal, no âmbito das rodovias e estradas federais, cumprir e fazer cumprir a legislação e as normas de trânsito, realizar o patrulhamento ostensivo com operações de segurança pública, executar a fiscalização de trânsito, autuar e aplicar medidas administrativas, entre outras atribuições.",
+   "pontos": [
+    "Atuação nas rodovias e estradas federais.",
+    "Patrulhamento ostensivo.",
+    "Fiscalização, autuação e medidas administrativas."
+   ],
+   "atencao": [
+    "Âmbito: rodovias e estradas FEDERAIS."
+   ],
+   "exemplo": "A PRF autua o condutor que excede a velocidade na rodovia federal.",
+   "prova": [
+    "Assertiva que estende a competência da PRF a todas as vias urbanas erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 21"
+   ]
+  },
+  "art-21": {
+   "simples": "Compete aos órgãos e entidades executivos rodoviários da União, dos Estados, do Distrito Federal e dos Municípios, no âmbito de sua circunscrição, cumprir e fazer cumprir a legislação de trânsito, planejar, projetar, regulamentar e operar o trânsito, implantar e manter a sinalização e os equipamentos de controle viário, e executar a fiscalização, autuar e aplicar as penalidades e medidas administrativas, entre outras atribuições.",
+   "pontos": [
+    "Planejamento e operação do trânsito nas rodovias.",
+    "Sinalização e equipamentos de controle.",
+    "Fiscalização, autuação e penalidades."
+   ],
+   "atencao": [
+    "Órgãos RODOVIÁRIOS atuam em rodovias; os executivos de trânsito, nas vias urbanas."
+   ],
+   "exemplo": "O órgão rodoviário estadual sinaliza e fiscaliza a rodovia estadual.",
+   "prova": [
+    "Assertiva que restringe a competência dos órgãos rodoviários às vias urbanas erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 20"
+   ]
+  },
+  "art-22": {
+   "simples": "Compete aos órgãos executivos de trânsito dos Estados e do Distrito Federal, no âmbito de sua circunscrição, cumprir a legislação, realizar e controlar o processo de formação, aperfeiçoamento, reciclagem e suspensão de condutores e expedir e cassar a Licença de Aprendizagem, a Permissão para Dirigir e a Carteira Nacional de Habilitação; vistoriar, inspecionar e registrar veículos; expedir e cassar documentos de licenciamento; e executar a fiscalização, entre outras competências.",
+   "pontos": [
+    "Formação e habilitação de condutores.",
+    "Expedição e cassação de licença de aprendizagem, permissão e CNH.",
+    "Registro e licenciamento de veículos.",
+    "Fiscalização."
+   ],
+   "atencao": [
+    "É o órgão estadual (Detran) que habilita condutores e registra veículos.",
+    "ATUALIZAÇÃO: o rol foi alterado por leis posteriores."
+   ],
+   "exemplo": "O Detran emite a CNH e registra o veículo.",
+   "prova": [
+    "Assertiva que atribui aos municípios a expedição da CNH erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 24"
+   ]
+  },
+  "art-23": {
+   "simples": "Compete às Polícias Militares dos Estados e do Distrito Federal executar a fiscalização de trânsito, quando e conforme convênio firmado, como agente do órgão ou entidade executivos de trânsito ou executivos rodoviários, concomitantemente com os demais agentes credenciados.",
+   "pontos": [
+    "Fiscalização de trânsito pela Polícia Militar.",
+    "Depende de convênio.",
+    "Atua como agente do órgão de trânsito."
+   ],
+   "atencao": [
+    "Depende de CONVÊNIO com o órgão de trânsito ou rodoviário.",
+    "ATUALIZAÇÃO: outros incisos foram vetados ou revogados."
+   ],
+   "exemplo": "A Polícia Militar fiscaliza o trânsito urbano por convênio com o órgão municipal.",
+   "prova": [
+    "Assertiva que dispensa convênio para a fiscalização de trânsito pela Polícia Militar erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 25"
+   ]
+  },
+  "art-24": {
+   "simples": "Compete aos órgãos e entidades executivos de trânsito dos Municípios, no âmbito de sua circunscrição, cumprir e fazer cumprir a legislação de trânsito, planejar, projetar, regulamentar e operar o trânsito de veículos, pedestres e animais, implantar e manter a sinalização, executar a fiscalização de trânsito, autuar e aplicar as medidas administrativas e penalidades por infrações de circulação, estacionamento e parada, entre outras atribuições.",
+   "pontos": [
+    "Planejamento e operação do trânsito municipal.",
+    "Sinalização.",
+    "Fiscalização e penalidades por infrações de circulação, estacionamento e parada."
+   ],
+   "atencao": [
+    "O município fiscaliza as infrações de circulação, estacionamento e parada nas suas vias.",
+    "ATUALIZAÇÃO: o rol foi ampliado por leis posteriores."
+   ],
+   "exemplo": "A prefeitura aplica a multa de estacionamento irregular.",
+   "prova": [
+    "Assertiva que restringe os órgãos municipais à sinalização, sem poder de fiscalização, erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 24-A"
+   ]
+  },
+  "art-24-a": {
+   "simples": "Compete concorrentemente aos órgãos e entidades executivos de trânsito dos Estados, do Distrito Federal e dos Municípios executar a fiscalização de trânsito, autuar e aplicar as medidas administrativas e penalidades previstas no Código, observadas as competências privativas do art. 22, §2º, e do art. 24, §4º.",
+   "pontos": [
+    "Competência concorrente para fiscalizar e autuar.",
+    "Ressalvadas as competências privativas."
+   ],
+   "atencao": [
+    "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+    "CONCORRENTE, com ressalva das competências privativas."
+   ],
+   "exemplo": "Município e estado podem fiscalizar o trânsito, respeitadas as competências privativas.",
+   "prova": [
+    "Assertiva que torna exclusiva do estado toda a fiscalização erra: a competência é concorrente."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 22"
+   ]
+  },
+  "art-25": {
+   "simples": "Os órgãos e entidades executivos do Sistema Nacional de Trânsito podem celebrar convênio delegando as atividades previstas no Código, com vistas à maior eficiência e à segurança dos usuários da via. Podem ainda prestar serviços de capacitação técnica, assessoria e monitoramento das atividades relativas ao trânsito, por prazo estabelecido entre as partes, mediante ressarcimento dos custos.",
+   "pontos": [
+    "Convênio de delegação de atividades.",
+    "Capacitação, assessoria e monitoramento.",
+    "Ressarcimento de custos."
+   ],
+   "atencao": [
+    "A delegação se faz por CONVÊNIO."
+   ],
+   "exemplo": "O município delega ao estado parte da fiscalização por convênio.",
+   "prova": [
+    "Assertiva que permite a delegação de atividades sem convênio erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 23"
+   ]
+  },
+  "art-25-a": {
+   "simples": "Os agentes dos órgãos policiais da Câmara dos Deputados e do Senado Federal, mediante convênio com o órgão ou entidade de trânsito com circunscrição sobre a via, podem lavrar auto de infração de trânsito e remetê-lo ao órgão competente, nos casos de infração cometida nas dependências dessas Casas legislativas.",
+   "pontos": [
+    "Polícias legislativas lavram auto de infração.",
+    "Depende de convênio com o órgão de trânsito."
+   ],
+   "atencao": [
+    "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+    "Depende de convênio."
+   ],
+   "exemplo": "A polícia do Senado lavra auto de infração por convênio com o órgão de trânsito.",
+   "prova": [
+    "Assertiva que dá às polícias legislativas competência plena de trânsito sem convênio erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 25"
+   ]
+  },
+  "art-26": {
+   "simples": "Os usuários das vias terrestres devem abster-se de todo ato que possa constituir perigo ou obstáculo para o trânsito de veículos, pessoas ou animais, ou causar danos a propriedades públicas ou privadas, e abster-se de obstruir o trânsito ou torná-lo perigoso, atirando, depositando ou abandonando na via objetos ou substâncias, ou criando qualquer outro obstáculo.",
+   "pontos": [
+    "Dever geral de não criar perigo ou obstáculo.",
+    "Vedado atirar ou abandonar objetos na via."
+   ],
+   "atencao": [
+    "Dever de TODOS os usuários, não só condutores."
+   ],
+   "exemplo": "Deixar entulho no meio da via viola o dever de não criar obstáculo.",
+   "prova": [
+    "Assertiva que restringe o dever de não obstruir a via aos condutores erra: vale para todos os usuários."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 28"
+   ]
+  },
+  "art-27": {
+   "simples": "Antes de colocar o veículo em circulação nas vias públicas, o condutor deve verificar a existência e as boas condições de funcionamento dos equipamentos de uso obrigatório, bem como assegurar-se da existência de combustível suficiente para chegar ao local de destino.",
+   "pontos": [
+    "Verificar equipamentos obrigatórios.",
+    "Verificar combustível suficiente."
+   ],
+   "atencao": [
+    "Dever ANTES de colocar o veículo em circulação."
+   ],
+   "exemplo": "O motorista confere os equipamentos e o combustível antes da viagem.",
+   "prova": [
+    "Assertiva que dispensa a verificação do combustível erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 28"
+   ]
+  },
+  "art-28": {
+   "simples": "O condutor deve, a todo momento, ter domínio de seu veículo, dirigindo-o com atenção e cuidados indispensáveis à segurança do trânsito.",
+   "pontos": [
+    "Domínio do veículo a todo momento.",
+    "Atenção e cuidados indispensáveis."
+   ],
+   "atencao": [
+    "Princípio da direção defensiva e do domínio do veículo."
+   ],
+   "exemplo": "Usar o celular a ponto de perder o domínio do veículo viola o art. 28.",
+   "prova": [
+    "Assertiva que dispensa atenção do condutor em vias vazias erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 29"
+   ]
+  },
+  "art-29": {
+   "simples": "O trânsito de veículos obedece a normas como a circulação pelo lado direito, admitidas exceções sinalizadas; a distância de segurança lateral e frontal; a preferência em local não sinalizado, que é de quem circula pela rodovia, de quem circula pela rotatória e, nos demais casos, de quem vem pela direita; as faixas da direita para veículos mais lentos e de maior porte e as da esquerda para ultrapassagem; o trânsito sobre passeios e acostamentos só para entrar ou sair de imóveis; a prioridade dos veículos precedidos de batedores; e a prioridade e livre circulação dos veículos de socorro, polícia, fiscalização e ambulâncias em serviço de urgência, com alarme sonoro e luz intermitente acionados, quando todos devem liberar a faixa da esquerda e os pedestres aguardar no passeio.",
+   "pontos": [
+    "Circulação pela direita.",
+    "Distância de segurança.",
+    "Preferência em local não sinalizado: rodovia, rotatória, depois quem vem pela direita.",
+    "Faixas da direita para os mais lentos e da esquerda para a ultrapassagem.",
+    "Prioridade e livre circulação dos veículos de urgência em serviço."
+   ],
+   "atencao": [
+    "Sem sinalização: preferência de quem circula pela rodovia ou pela rotatória; nos demais casos, de quem vem pela direita.",
+    "Alarme e luz intermitente só podem ser usados na efetiva prestação de serviço de urgência.",
+    "Passeios e acostamentos só podem ser usados para entrar ou sair de imóveis ou áreas especiais."
+   ],
+   "exemplo": "O condutor mantém distância de segurança do veículo à frente.",
+   "prova": [
+    "Assertiva que permite circular pela esquerda como regra erra: a regra é a direita."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 30"
+   ]
+  },
+  "art-30": {
+   "simples": "Todo condutor, ao perceber que outro que o segue tem o propósito de ultrapassá-lo, deve, se estiver na faixa da esquerda, deslocar-se para a faixa da direita, sem acelerar a marcha; e, se estiver nas demais faixas, manter-se naquela em que circula, sem acelerar. Os veículos mais lentos, quando em fila, devem manter distância suficiente entre si para permitir que os que os ultrapassem possam se intercalar na fila.",
+   "pontos": [
+    "Quem é ultrapassado não acelera.",
+    "Faixa da esquerda: desloca-se para a direita.",
+    "Veículos lentos em fila mantêm distância."
+   ],
+   "atencao": [
+    "Quem é ultrapassado NÃO pode acelerar."
+   ],
+   "exemplo": "O condutor na faixa da esquerda cede à direita ao perceber a ultrapassagem.",
+   "prova": [
+    "Assertiva que permite ao ultrapassado acelerar para impedir a manobra erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 32"
+   ]
+  },
+  "art-31": {
+   "simples": "O condutor que tenha o propósito de ultrapassar um veículo de transporte coletivo parado, efetuando embarque ou desembarque de passageiros, deve reduzir a velocidade, dirigindo com atenção redobrada, ou parar o veículo, com vistas à segurança dos pedestres.",
+   "pontos": [
+    "Reduzir a velocidade ou parar.",
+    "Atenção redobrada."
+   ],
+   "atencao": [
+    "Proteção do pedestre que embarca ou desembarca."
+   ],
+   "exemplo": "Ao passar por um ônibus parado, o motorista reduz a velocidade.",
+   "prova": [
+    "Assertiva que permite ultrapassar o ônibus parado em velocidade normal erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 32"
+   ]
+  },
+  "art-32": {
+   "simples": "O condutor não pode ultrapassar veículos em vias com duplo sentido de direção e pista única nos trechos em curvas e em aclives sem visibilidade suficiente, nas passagens de nível, nas pontes e viadutos e nas travessias de pedestres, exceto quando houver sinalização permitindo a ultrapassagem.",
+   "pontos": [
+    "Proibição em curvas e aclives sem visibilidade.",
+    "Passagens de nível, pontes, viadutos e travessias de pedestres.",
+    "Exceção: sinalização permissiva."
+   ],
+   "atencao": [
+    "Exceção só com sinalização que permita."
+   ],
+   "exemplo": "Ultrapassar em curva sem visibilidade é proibido.",
+   "prova": [
+    "Assertiva que permite ultrapassar em ponte sem sinalização erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 33"
+   ]
+  },
+  "art-33": {
+   "simples": "Nas interseções e suas proximidades, o condutor não pode efetuar ultrapassagem, regra que busca evitar colisões no ponto de encontro das vias.",
+   "pontos": [
+    "Proibida ultrapassagem em interseções e proximidades."
+   ],
+   "atencao": [
+    "Proibição absoluta no texto do artigo."
+   ],
+   "exemplo": "Não se ultrapassa no cruzamento.",
+   "prova": [
+    "Assertiva que permite a ultrapassagem em interseção se a via estiver livre erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 32"
+   ]
+  },
+  "art-34": {
+   "simples": "O condutor que queira executar uma manobra deve certificar-se de que pode executá-la sem perigo para os demais usuários da via que o seguem, precedem ou vão cruzar com ele, considerando sua posição, sua direção e sua velocidade.",
+   "pontos": [
+    "Certificar-se de que a manobra é segura.",
+    "Considerar posição, direção e velocidade."
+   ],
+   "atencao": [
+    "Dever geral de cautela em manobras."
+   ],
+   "exemplo": "Antes de mudar de faixa, o condutor confere o retrovisor.",
+   "prova": [
+    "Assertiva que dispensa a verificação dos que seguem o veículo erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 35"
+   ]
+  },
+  "art-35": {
+   "simples": "Antes de iniciar qualquer manobra que implique um deslocamento lateral, o condutor deve indicar seu propósito de forma clara e com a devida antecedência, por meio da luz indicadora de direção do veículo ou fazendo gesto convencional de braço. Deslocamento lateral é a transposição de faixas, movimentos de conversão à direita ou à esquerda e retornos.",
+   "pontos": [
+    "Sinalizar com antecedência.",
+    "Seta ou gesto de braço.",
+    "Conceito de deslocamento lateral."
+   ],
+   "atencao": [
+    "Deslocamento lateral inclui transposição de faixas, conversões e retornos."
+   ],
+   "exemplo": "O condutor liga a seta antes de mudar de faixa.",
+   "prova": [
+    "Assertiva que dispensa a sinalização na mudança de faixa erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 34"
+   ]
+  },
+  "art-36": {
+   "simples": "O condutor que for ingressar numa via, procedente de um lote lindeiro a essa via, deve dar preferência aos veículos e pedestres que por ela estejam transitando.",
+   "pontos": [
+    "Quem sai de lote lindeiro dá preferência à via."
+   ],
+   "atencao": [
+    "Preferência de quem já está na via."
+   ],
+   "exemplo": "Quem sai da garagem espera passar os veículos e pedestres.",
+   "prova": [
+    "Assertiva que dá preferência a quem sai do lote lindeiro erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 38"
+   ]
+  },
+  "art-37": {
+   "simples": "Nas vias providas de acostamento, a conversão à esquerda e a operação de retorno devem ser feitas nos locais apropriados e, onde estes não existirem, o condutor deve aguardar no acostamento, à direita, para cruzar a pista com segurança.",
+   "pontos": [
+    "Conversão e retorno em locais apropriados.",
+    "Na falta, aguardar no acostamento, à direita."
+   ],
+   "atencao": [
+    "Aguardar à DIREITA, no acostamento."
+   ],
+   "exemplo": "Sem retorno sinalizado, o condutor aguarda no acostamento para cruzar.",
+   "prova": [
+    "Assertiva que manda aguardar no meio da pista para converter à esquerda erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 38"
+   ]
+  },
+  "art-38": {
+   "simples": "Antes de entrar à direita ou à esquerda, em outra via ou em lotes lindeiros, o condutor deve, ao sair pelo lado direito, aproximar-se o máximo possível do bordo direito da pista e executar a manobra no menor espaço possível; e, ao sair pelo lado esquerdo, aproximar-se o máximo possível do eixo ou da linha divisória da pista, quando houver, em pista com circulação nos dois sentidos.",
+   "pontos": [
+    "Saída pela direita: junto ao bordo direito.",
+    "Saída pela esquerda: junto ao eixo da pista."
+   ],
+   "atencao": [
+    "Posicionamento correto antes de converter."
+   ],
+   "exemplo": "Para converter à direita, o condutor se aproxima do bordo direito.",
+   "prova": [
+    "Assertiva que manda converter à direita partindo do eixo da pista erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 35"
+   ]
+  },
+  "art-39": {
+   "simples": "Nas vias urbanas, a operação de retorno deve ser feita nos locais para isso determinados, por meio de sinalização ou existência de locais apropriados, ou em outros locais que ofereçam condições de segurança e fluidez, observadas as características da via, do veículo, as condições meteorológicas e a movimentação de pedestres e ciclistas.",
+   "pontos": [
+    "Retorno em locais determinados ou seguros.",
+    "Observância das condições da via e do ambiente."
+   ],
+   "atencao": [
+    "Retorno em local sem proibição e com segurança."
+   ],
+   "exemplo": "O retorno é feito no local sinalizado.",
+   "prova": [
+    "Assertiva que permite retorno em qualquer ponto da via urbana erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 37"
+   ]
+  },
+  "art-40": {
+   "simples": "O uso de luzes em veículo obedece a determinações como manter acesos os faróis, na luz baixa, à noite e, mesmo durante o dia, em túneis e sob chuva, neblina ou cerração; usar luz alta nas vias não iluminadas, exceto ao cruzar com outro veículo ou ao segui-lo; e não trocar de forma intermitente e por curto período a luz baixa e a alta, salvo para advertir ultrapassagem fora da área urbana.",
+   "pontos": [
+    "Luz baixa à noite e em túneis, chuva e neblina.",
+    "Luz alta em vias não iluminadas, com exceções.",
+    "Regras sobre a troca intermitente."
+   ],
+   "atencao": [
+    "Luz baixa também de dia em túneis, chuva, neblina e cerração.",
+    "ATUALIZAÇÃO: regras sobre luzes diurnas em rodovias foram alteradas por lei posterior; confira o texto integral."
+   ],
+   "exemplo": "Em túnel, mesmo de dia, mantém-se a luz baixa acesa.",
+   "prova": [
+    "Assertiva que dispensa os faróis acesos em túnel durante o dia erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 41"
+   ]
+  },
+  "art-41": {
+   "simples": "O condutor só pode fazer uso de buzina, em toque breve, para fazer as advertências necessárias a fim de evitar sinistros e, fora das áreas urbanas, quando for conveniente advertir outro condutor de que se tem o propósito de ultrapassá-lo.",
+   "pontos": [
+    "Toque breve.",
+    "Para evitar sinistros.",
+    "Fora das áreas urbanas, para advertir ultrapassagem."
+   ],
+   "atencao": [
+    "Em área urbana, só para evitar sinistro."
+   ],
+   "exemplo": "Na rodovia, o toque breve avisa que o condutor vai ultrapassar.",
+   "prova": [
+    "Assertiva que permite o uso livre da buzina nas áreas urbanas erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 40"
+   ]
+  },
+  "art-42": {
+   "simples": "Nenhum condutor deve frear bruscamente seu veículo, salvo por razões de segurança.",
+   "pontos": [
+    "Frenagem brusca só por segurança."
+   ],
+   "atencao": [
+    "Exceção: razões de segurança."
+   ],
+   "exemplo": "A frenagem brusca para evitar atropelamento é permitida.",
+   "prova": [
+    "Assertiva que proíbe frenagem brusca em qualquer hipótese erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 43"
+   ]
+  },
+  "art-43": {
+   "simples": "Ao regular a velocidade, o condutor deve observar constantemente as condições físicas da via, do veículo e da carga, as condições meteorológicas e a intensidade do trânsito, obedecendo aos limites máximos de velocidade estabelecidos para a via, além de não obstruir a marcha normal dos demais veículos sem causa justificada, transitando a velocidade anormalmente reduzida.",
+   "pontos": [
+    "Observar condições da via, do veículo, da carga e do clima.",
+    "Respeitar os limites máximos.",
+    "Não transitar em velocidade anormalmente reduzida sem causa justificada."
+   ],
+   "atencao": [
+    "Velocidade anormalmente reduzida sem causa também é irregular."
+   ],
+   "exemplo": "Dirigir devagar demais e atrapalhar o fluxo viola a regra.",
+   "prova": [
+    "Assertiva que considera irregular apenas o excesso de velocidade, e não a velocidade anormalmente reduzida, erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 61"
+   ]
+  },
+  "art-44": {
+   "simples": "Ao aproximar-se de qualquer tipo de cruzamento, o condutor do veículo deve demonstrar prudência especial, transitando em velocidade moderada, de forma que possa deter seu veículo com segurança para dar passagem a pedestre e a veículos que tenham o direito de preferência.",
+   "pontos": [
+    "Prudência especial nos cruzamentos.",
+    "Velocidade moderada.",
+    "Dar passagem a quem tem preferência."
+   ],
+   "atencao": [
+    "Vale para qualquer cruzamento."
+   ],
+   "exemplo": "Ao chegar ao cruzamento, o condutor reduz para poder parar.",
+   "prova": [
+    "Assertiva que dispensa prudência especial em cruzamentos sinalizados erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 45"
+   ]
+  },
+  "art-44-a": {
+   "simples": "É livre o movimento de conversão à direita diante de sinal vermelho do semáforo onde houver sinalização indicativa que permita essa conversão, observados os arts. 44, 45 e 70.",
+   "pontos": [
+    "Conversão à direita no vermelho, só com sinalização permissiva."
+   ],
+   "atencao": [
+    "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+    "Exige SINALIZAÇÃO que permita; sem ela, é proibido."
+   ],
+   "exemplo": "Há placa permitindo a conversão à direita no vermelho; o condutor pode converter com cautela.",
+   "prova": [
+    "Assertiva que permite a conversão à direita no vermelho em qualquer semáforo erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 44"
+   ]
+  },
+  "art-45": {
+   "simples": "Mesmo que a indicação luminosa do semáforo lhe seja favorável, nenhum condutor pode entrar em uma interseção se houver possibilidade de ser obrigado a imobilizar o veículo na área do cruzamento, obstruindo ou impedindo a passagem do trânsito transversal.",
+   "pontos": [
+    "Proibido entrar na interseção sem espaço para sair.",
+    "Vale mesmo com sinal verde."
+   ],
+   "atencao": [
+    "Mesmo com semáforo favorável."
+   ],
+   "exemplo": "O condutor não avança no verde se o trânsito à frente está parado.",
+   "prova": [
+    "Assertiva que autoriza entrar no cruzamento no verde, ainda que fique parado nele, erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 44"
+   ]
+  },
+  "art-46": {
+   "simples": "Sempre que for necessária a imobilização temporária de um veículo no leito viário, em situação de emergência, deve ser providenciada a imediata sinalização de advertência, na forma estabelecida pelo Contran.",
+   "pontos": [
+    "Sinalização imediata em imobilização de emergência.",
+    "Forma definida pelo Contran."
+   ],
+   "atencao": [
+    "Sinalização na forma do Contran, como o triângulo."
+   ],
+   "exemplo": "Em pane na pista, o condutor coloca o triângulo de sinalização.",
+   "prova": [
+    "Assertiva que dispensa a sinalização na imobilização por emergência erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 47"
+   ]
+  },
+  "art-47": {
+   "simples": "Quando proibido o estacionamento na via, a parada deve restringir-se ao tempo indispensável para embarque ou desembarque de passageiros, desde que não interrompa ou perturbe o fluxo de veículos ou a locomoção de pedestres. A operação de carga ou descarga é regulamentada pelo órgão com circunscrição sobre a via e é considerada estacionamento.",
+   "pontos": [
+    "Parada só para embarque e desembarque.",
+    "Carga e descarga é considerada estacionamento."
+   ],
+   "atencao": [
+    "Carga ou descarga = ESTACIONAMENTO."
+   ],
+   "exemplo": "Em local de estacionamento proibido, só se para para embarcar ou desembarcar.",
+   "prova": [
+    "Assertiva que considera carga e descarga como mera parada erra: é estacionamento."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 48"
+   ]
+  },
+  "art-48": {
+   "simples": "Nas paradas, operações de carga ou descarga e estacionamentos, o veículo deve ser posicionado no sentido do fluxo, paralelo ao bordo da pista de rolamento e junto à guia da calçada (meio-fio), admitidas as exceções sinalizadas. Nas vias providas de acostamento, os veículos parados, estacionados ou em operação de carga ou descarga devem estar fora da pista de rolamento.",
+   "pontos": [
+    "Sentido do fluxo, paralelo e junto ao meio-fio.",
+    "Exceções sinalizadas.",
+    "Acostamento: fora da pista de rolamento."
+   ],
+   "atencao": [
+    "Posição: no sentido do fluxo e junto ao meio-fio."
+   ],
+   "exemplo": "O veículo estaciona paralelo à guia, no sentido do fluxo.",
+   "prova": [
+    "Assertiva que permite estacionar em sentido contrário ao fluxo sem sinalização erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 47"
+   ]
+  },
+  "art-49": {
+   "simples": "O condutor e os passageiros não devem abrir a porta do veículo, deixá-la aberta ou descer do veículo sem antes se certificarem de que isso não constitui perigo para eles e para outros usuários da via. O embarque e o desembarque devem ocorrer sempre do lado da calçada, exceto para o condutor.",
+   "pontos": [
+    "Certificar-se antes de abrir a porta.",
+    "Embarque e desembarque do lado da calçada."
+   ],
+   "atencao": [
+    "Exceção do lado da calçada: o condutor."
+   ],
+   "exemplo": "Antes de abrir a porta, confere-se se vem ciclista.",
+   "prova": [
+    "Assertiva que manda o passageiro desembarcar sempre pelo lado da pista erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 48"
+   ]
+  },
+  "art-50": {
+   "simples": "O uso de faixas laterais de domínio e das áreas adjacentes às estradas e rodovias obedece às condições de segurança do trânsito estabelecidas pelo órgão ou entidade com circunscrição sobre a via.",
+   "pontos": [
+    "Faixas de domínio e áreas adjacentes.",
+    "Condições definidas pelo órgão com circunscrição."
+   ],
+   "atencao": [
+    "Quem define é o órgão com circunscrição sobre a via."
+   ],
+   "exemplo": "O uso da faixa de domínio depende de autorização e regras do órgão rodoviário.",
+   "prova": [
+    "Assertiva que libera o uso das faixas de domínio sem condições de segurança erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 21"
+   ]
+  },
+  "art-51": {
+   "simples": "Nas vias internas pertencentes a condomínios constituídos por unidades autônomas, a sinalização de regulamentação da via é implantada e mantida às expensas do condomínio, após aprovação dos projetos pelo órgão ou entidade com circunscrição sobre a via.",
+   "pontos": [
+    "Sinalização às expensas do condomínio.",
+    "Aprovação dos projetos pelo órgão de trânsito."
+   ],
+   "atencao": [
+    "Condomínio paga, mas o órgão aprova o projeto."
+   ],
+   "exemplo": "O condomínio instala as placas após aprovação do projeto pelo órgão.",
+   "prova": [
+    "Assertiva que isenta o condomínio da sinalização de suas vias erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 2º"
+   ]
+  },
+  "art-52": {
+   "simples": "Os veículos de tração animal são conduzidos pela direita da pista, junto à guia da calçada (meio-fio) ou acostamento, sempre que não houver faixa especial a eles destinada, devendo seus condutores obedecer, no que couber, às normas de circulação do Código e às fixadas pelo órgão com circunscrição sobre a via.",
+   "pontos": [
+    "Circulam pela direita, junto ao meio-fio ou acostamento.",
+    "Obedecem às normas de circulação, no que couber."
+   ],
+   "atencao": [
+    "Sem faixa especial, pela direita."
+   ],
+   "exemplo": "A carroça trafega junto ao acostamento.",
+   "prova": [
+    "Assertiva que isenta veículos de tração animal das normas de circulação erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 53"
+   ]
+  },
+  "art-53": {
+   "simples": "Os animais isolados ou em grupos só podem circular nas vias quando conduzidos por um guia. Para facilitar os deslocamentos, os rebanhos devem ser divididos em grupos de tamanho moderado e separados uns dos outros por espaços suficientes para não obstruir o trânsito; e os animais que circularem pela pista de rolamento devem ser mantidos junto ao bordo da pista.",
+   "pontos": [
+    "Animais só com guia.",
+    "Rebanhos divididos em grupos moderados.",
+    "Junto ao bordo da pista."
+   ],
+   "atencao": [
+    "Sem guia, o animal não pode circular na via."
+   ],
+   "exemplo": "O vaqueiro conduz o gado dividido em grupos.",
+   "prova": [
+    "Assertiva que permite animais soltos na via erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 52"
+   ]
+  },
+  "art-54": {
+   "simples": "Os condutores de motocicletas, motonetas e ciclomotores só podem circular nas vias utilizando capacete de segurança com viseira ou óculos protetores, segurando o guidom com as duas mãos e usando vestuário de proteção de acordo com as especificações do Contran.",
+   "pontos": [
+    "Capacete com viseira ou óculos.",
+    "Guidom com as duas mãos.",
+    "Vestuário de proteção conforme o Contran."
+   ],
+   "atencao": [
+    "Vestuário de proteção depende de regulamentação do Contran.",
+    "Três exigências cumulativas."
+   ],
+   "exemplo": "O motociclista usa capacete e segura o guidom com as duas mãos.",
+   "prova": [
+    "Assertiva que dispensa o capacete em trajetos curtos erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 244"
+   ]
+  },
+  "art-55": {
+   "simples": "Os passageiros de motocicletas, motonetas e ciclomotores só podem ser transportados utilizando capacete de segurança, em carro lateral acoplado ao veículo ou em assento suplementar atrás do condutor, e usando vestuário de proteção de acordo com as especificações do Contran.",
+   "pontos": [
+    "Capacete.",
+    "Carro lateral ou assento suplementar atrás do condutor.",
+    "Vestuário de proteção conforme o Contran."
+   ],
+   "atencao": [
+    "O passageiro também usa capacete."
+   ],
+   "exemplo": "O passageiro da moto usa capacete e viaja no assento atrás do condutor.",
+   "prova": [
+    "Assertiva que dispensa o capacete do passageiro erra."
+   ],
+   "termos": [],
+   "remissoes": [
+    "Art. 54"
+   ]
   }
+ }
 }
