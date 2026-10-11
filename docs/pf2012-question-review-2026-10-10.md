@@ -2,16 +2,16 @@
 
 ## Resultado confirmado no Supabase
 
-Foram registradas **660 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
+Foram registradas **760 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
 
 | Situação | Quantidade |
 | --- | ---: |
-| Questões aprovadas e ativas | 352 |
-| Itens retidos para complementação | 275 |
-| Repetições internas excluídas da publicação | 17 |
+| Questões aprovadas e ativas | 409 |
+| Itens retidos para complementação | 313 |
+| Repetições internas excluídas da publicação | 21 |
 | Enunciados inadequados excluídos da publicação | 4 |
-| Candidatos ainda sem revisão individual neste caderno | 340 |
-| Gabaritos históricos superados excluídos da publicação | 12 |
+| Candidatos ainda sem revisão individual neste caderno | 240 |
+| Gabaritos históricos superados excluídos da publicação | 13 |
 | Registros privados de extração deste caderno | 1.000 |
 
 Os 1.000 registros são candidatos extraídos, não uma certificação de 1.000 questões distintas e aproveitáveis. Foram associadas respostas editoriais a 982 registros; as demais exigem conferência. A revisão das 17 apostilas está **incompleta**. Não extrapolar os números deste lote para o total do acervo.
@@ -48,14 +48,14 @@ O importador passou a aceitar o formato nativo **certo/errado**, exigindo indica
 
 - Validação offline dos pacotes e das duas etapas de revisão: concluída.
 - Testes de regressão: **86 passaram**, incluindo rejeição de respostas e alternativas incompatíveis com o formato C/E.
-- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 352 publicações; isto não certifica ausência de duplicatas semânticas.
-- Conferência de banco: 1.000 extrações privadas, 660 decisões auditadas e 352 publicações; textos, respostas originais e decisões preservados.
+- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 409 publicações; isto não certifica ausência de duplicatas semânticas.
+- Conferência de banco: 1.000 extrações privadas, 760 decisões auditadas e 409 publicações; textos, respostas originais e decisões preservados.
 
 Os PDFs privados, enunciados extraídos, pacotes de importação, capturas oficiais e relatórios detalhados permanecem nos outputs locais, fora do Git. Nenhuma credencial integra este commit. A biblioteca não foi ampliada a partir de trechos ainda sem catalogação e revisão concluídas.
 
 ## Trabalho restante
 
-Continuar a revisão dos 340 candidatos deste caderno e complementar os 275 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
+Continuar a revisão dos 240 candidatos deste caderno e complementar os 313 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
 
 ## Cadência autorizada
 
@@ -88,3 +88,9 @@ Fontes adicionais: [Lei 9.873/1999](https://www.planalto.gov.br/ccivil_03/leis/l
 Mais 100 decisões: 52 publicações, 42 retidos e seis repetições. Releitura do banco confirmou 660 decisões, 352 questões ativas e preservação dos originais. Cinco itens receberam o contexto compartilhado, conferido na página 176; o enunciado anterior foi separado desse contexto sem alterar a transcrição original. Um item sem resposta editorial extraída recebeu resposta independente fundamentada na Constituição.
 
 Os comentários distinguem aviso de reunião e autorização, conforme o Tema 855/STF reproduzido em acórdão do STJ de 30/03/2026, e exigem razões concretas prévias para ingresso domiciliar, segundo o Tema 280/STF aplicado no AgRg no HC 1.061.341/SP. Súmulas Vinculantes 5 e 25 foram verificadas em conteúdo oficial do STF, com registro do método de consulta nas evidências privadas.
+
+## Checkpoint 661–760
+
+Mais 100 decisões: 57 publicações, 38 retidos, quatro repetições e um gabarito histórico superado. Banco confirmado em 760 decisões e 409 questões ativas. Os comentários sobre nacionalidade incluem a EC 131/2023 e distinguem a atual sentença judicial de cancelamento das antigas formulações administrativas.
+
+A questão sobre contribuição sindical obrigatória foi excluída: a [orientação atual do Ministério do Trabalho](https://www.gov.br/trabalho-e-emprego/pt-br/servicos/sindicatos/contribuicao-sindical) exige autorização prévia e expressa na contribuição sindical da CLT. Não se generalizou essa regra para contribuição assistencial.
