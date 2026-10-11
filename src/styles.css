@@ -10139,3 +10139,9 @@ html body[data-scroll-locked] .right-scroll-bar-position {
       linear-gradient(90deg, oklch(0.08 0.025 263 / 0.3), transparent 72%);
   }
 }
+
+/* Internal heroes use the upper third of the team image so faces remain
+   visible in the shallow desktop banner. */
+.app-shell [data-hero="dashboard"] {
+  --hero-position: 82% 18%;
+}
