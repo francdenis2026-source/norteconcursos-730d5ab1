@@ -10167,4 +10167,31 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     -webkit-backdrop-filter: blur(6px) saturate(1.12);
     box-shadow: 0 18px 40px -30px oklch(0.04 0.02 263 / 0.85);
   }
+  .mh {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--ink-deep);
+  }
+  .mh::before,
+  .mh::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+  }
+  .mh::before {
+    z-index: -2;
+    background: url("/media/textura-acre-cinco-carreiras-v3.webp") center 42% / cover no-repeat;
+    opacity: 0.28;
+    filter: saturate(0.82) contrast(1.08);
+  }
+  .mh::after {
+    z-index: -1;
+    background: linear-gradient(180deg, oklch(0.08 0.025 263 / 0.7), oklch(0.08 0.025 263 / 0.93) 68%, oklch(0.08 0.025 263 / 0.98));
+  }
+  .mh > * {
+    position: relative;
+    z-index: 1;
+  }
 }
