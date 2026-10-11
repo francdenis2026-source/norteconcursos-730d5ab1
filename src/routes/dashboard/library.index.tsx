@@ -177,7 +177,7 @@ function LibraryIndex() {
   if (!authLoading && !signedIn) {
     return (
       <LockedState
-        image="study-desk"
+        image="dashboard"
         title={
           <>
             Biblioteca de <em>estudo</em>
@@ -192,7 +192,7 @@ function LibraryIndex() {
     <div className="space-y-6 pb-8">
       <BackToPlan back={back} topic={initialQuery} />
       <PageHero
-        image="study-desk"
+        image="dashboard"
         size="lg"
         kicker="Treinamento"
         icon={Library}

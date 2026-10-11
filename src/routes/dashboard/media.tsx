@@ -402,7 +402,7 @@ function MediaCenterPage() {
   return (
     <div className="mx-auto max-w-6xl space-y-6">
       <PageHero
-        image="study-desk"
+        image="command-room"
         size="sm"
         kicker="Conteúdo"
         icon={PlayCircle}

@@ -336,7 +336,7 @@ function FlashcardsPage() {
   if (!real)
     return (
       <LockedState
-        image="study-desk"
+        image="toolkit"
         title={
           <>
             Meus <em>flashcards</em>
@@ -358,7 +358,7 @@ function FlashcardsPage() {
   return (
     <div className="mx-auto max-w-4xl space-y-6">
       <PageHero
-        image="study-desk"
+        image="toolkit"
         size="sm"
         kicker="Questões"
         icon={Layers}

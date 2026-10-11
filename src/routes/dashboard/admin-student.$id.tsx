@@ -261,7 +261,7 @@ function StudentDetailPage() {
         </Link>
       </Button>
       <PageHero
-        image="study-desk"
+        image="dashboard"
         size="sm"
         kicker={`Plano ${plan}${data.time?.online ? " · online agora" : ""}`}
         icon={UserRound}

@@ -93,12 +93,12 @@ function CronogramaPage() {
   if (isLoading || (real && !plans))
     return <div className="flex justify-center py-16"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Carregando" /></div>;
   if (!real)
-    return <LockedState image="study-desk" title={<>Meu <em>cronograma</em></>} description="Entre na sua conta para montar e acompanhar o seu cronograma de estudos por edital." />;
+    return <LockedState image="journey" title={<>Meu <em>cronograma</em></>} description="Entre na sua conta para montar e acompanhar o seu cronograma de estudos por edital." />;
 
   const open = plans!.find((p) => p.id === openId);
   return (
     <div className="mx-auto max-w-5xl space-y-6">
-      <PageHero image="study-desk" size="sm" kicker="Hoje" icon={CalendarClock} title={<>Meu <em>cronograma</em></>}
+      <PageHero image="journey" size="sm" kicker="Hoje" icon={CalendarClock} title={<>Meu <em>cronograma</em></>}
         description="Escolha um modelo de edital ou monte o seu. A semana se ajusta ao que você já estudou e ao seu desempenho." />
       {openId === "new" ? (
         <NewPlan userId={user!.id} onBack={() => setOpenId(null)} onCreated={async (id) => { await load(); setOpenId(id); }} />

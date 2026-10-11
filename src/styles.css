@@ -9506,3 +9506,110 @@ html body[data-scroll-locked] .right-scroll-bar-position {
       url('/media/acre-floresta.webp') center / cover no-repeat;
   }
 }
+
+/* Internal areas: denser composition, thematic imagery and a restrained cursor light. */
+.page-hero,
+.tactical-feature-hero,
+.catalog-command-hero {
+  --hero-x: 78%;
+  --hero-y: 22%;
+  min-height: 196px;
+  padding: clamp(22px, 2.8vw, 34px);
+  background-position: var(--hero-position, 70% center);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.page-hero--lg {
+  min-height: 252px;
+}
+.page-hero--sm {
+  min-height: 144px;
+}
+.page-hero::after,
+.tactical-feature-hero::after,
+.catalog-command-hero::after {
+  opacity: 0.5;
+  background-image:
+    radial-gradient(260px circle at var(--hero-x) var(--hero-y), oklch(0.86 0.12 82 / 0.14), transparent 72%),
+    linear-gradient(oklch(1 0 0 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.035) 1px, transparent 1px);
+  background-size: auto, 44px 44px, 44px 44px;
+  transition: opacity 0.3s ease;
+}
+.page-hero:hover,
+.tactical-feature-hero:hover,
+.catalog-command-hero:hover {
+  border-color: color-mix(in oklab, var(--brass) 34%, transparent);
+  box-shadow: 0 26px 62px -42px oklch(0.12 0.03 262 / 0.95), inset 0 1px 0 oklch(1 0 0 / 0.1);
+}
+.page-hero h1,
+.tactical-feature-hero h1,
+.catalog-command-hero h1 {
+  max-width: 20ch;
+}
+.app-content {
+  padding-block: clamp(16px, 2.2vw, 28px) 44px;
+}
+.app-content__inner {
+  max-width: 1440px;
+}
+.app-content__inner > .space-y-6 {
+  row-gap: 1rem;
+}
+.app-footer {
+  margin-top: 34px;
+}
+
+/* Image focal points match the meaning of each internal area. */
+[data-hero="journey"] { --hero-position: 72% 56%; }
+[data-hero="study-desk"] { --hero-position: 76% 58%; }
+[data-hero="trainer"] { --hero-position: 82% 55%; }
+[data-hero="exam-hall"] { --hero-position: 74% 48%; }
+[data-hero="command-room"] { --hero-position: 78% 44%; }
+[data-hero="careers-team"] { --hero-position: 82% 48%; }
+[data-hero="field-map"] { --hero-position: 68% 52%; }
+[data-hero="toolkit"] { --hero-position: 74% 52%; }
+
+/* Homepage interaction: one soft directional highlight, no permanent overlay or canvas. */
+.lp {
+  --spot-x: 72vw;
+  --spot-y: 18vh;
+}
+.lp::before {
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+  content: "";
+  background: radial-gradient(300px circle at var(--spot-x) var(--spot-y), oklch(0.86 0.12 82 / 0.09), transparent 72%);
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  transition: background-position 0.15s ease;
+}
+.lp-tile,
+.lp-step,
+.lp-careers__item,
+.lp-platform__card {
+  transition: transform 0.25s var(--ease-out), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .lp-tile:hover,
+  .lp-step:hover,
+  .lp-careers__item:hover,
+  .lp-platform__card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in oklab, var(--brass) 38%, transparent);
+    box-shadow: 0 18px 40px -30px oklch(0 0 0 / 0.9), 0 0 0 1px oklch(0.8 0.13 78 / 0.08);
+  }
+}
+@media (max-width: 767px) {
+  .page-hero,
+  .tactical-feature-hero,
+  .catalog-command-hero {
+    min-height: 164px;
+    padding: 18px !important;
+  }
+  .page-hero--lg { min-height: 210px; }
+  .page-hero--sm { min-height: 132px; }
+  .app-content { padding-block: 12px 94px; }
+  .lp::before { display: none; }
+}

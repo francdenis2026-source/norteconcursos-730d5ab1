@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Lock } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -39,8 +39,33 @@ export function PageHero({
   size = "md",
   className,
 }: PageHeroProps) {
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    if (!finePointer.matches) return;
+    const onMove = (event: PointerEvent) => {
+      const rect = hero.getBoundingClientRect();
+      hero.style.setProperty("--hero-x", `${((event.clientX - rect.left) / rect.width) * 100}%`);
+      hero.style.setProperty("--hero-y", `${((event.clientY - rect.top) / rect.height) * 100}%`);
+    };
+    const onLeave = () => {
+      hero.style.setProperty("--hero-x", "78%");
+      hero.style.setProperty("--hero-y", "22%");
+    };
+    hero.addEventListener("pointermove", onMove, { passive: true });
+    hero.addEventListener("pointerleave", onLeave, { passive: true });
+    return () => {
+      hero.removeEventListener("pointermove", onMove);
+      hero.removeEventListener("pointerleave", onLeave);
+    };
+  }, []);
+
   return (
     <section
+      ref={heroRef}
       className={cn("page-hero", size !== "md" && `page-hero--${size}`, className)}
       data-hero={image}
     >

@@ -293,7 +293,7 @@ function ErrorsPage() {
   if (!authLoading && !real)
     return (
       <LockedState
-        image="study-desk"
+        image="trainer"
         title={
           <>
             Caderno de <em>erros</em>
@@ -398,7 +398,7 @@ function ErrorsPage() {
   return (
     <div className="space-y-6">
       <PageHero
-        image="study-desk"
+        image="trainer"
         kicker="Treinamento"
         icon={AlertCircle}
         title={

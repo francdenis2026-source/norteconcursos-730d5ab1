@@ -194,12 +194,28 @@ function useReveal() {
   }, []);
 }
 
+function useLandingSpotlight() {
+  useEffect(() => {
+    const root = document.querySelector<HTMLElement>(".lp");
+    if (!root || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const pointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    if (!pointer.matches) return;
+    const onMove = (event: PointerEvent) => {
+      root.style.setProperty("--spot-x", `${event.clientX}px`);
+      root.style.setProperty("--spot-y", `${event.clientY}px`);
+    };
+    root.addEventListener("pointermove", onMove, { passive: true });
+    return () => root.removeEventListener("pointermove", onMove);
+  }, []);
+}
+
 const delay = (n: number) => ({ "--reveal-delay": n }) as CSSProperties;
 
 function Index() {
   const scrolled = useScrolled();
   const [heroReady, setHeroReady] = useState(false);
   useReveal();
+  useLandingSpotlight();
 
   return (
     <div className="lp">

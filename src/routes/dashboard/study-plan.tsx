@@ -327,7 +327,7 @@ function StudyPlanPage() {
 
   return (
     <div className="space-y-7 pb-10">
-      <section className="page-hero page-hero--lg" data-hero="journey">
+      <section className="page-hero page-hero--lg" data-hero="careers-team">
         <div className="grid gap-7 lg:grid-cols-[1.5fr_1fr] lg:items-end">
           <div>
             <span className="hero-chip">
