@@ -2,16 +2,16 @@
 
 ## Resultado confirmado no Supabase
 
-Foram registradas **460 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
+Foram registradas **560 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
 
 | Situação | Quantidade |
 | --- | ---: |
-| Questões aprovadas e ativas | 246 |
-| Itens retidos para complementação | 201 |
-| Repetições internas excluídas da publicação | 8 |
-| Enunciados inadequados excluídos da publicação | 3 |
-| Candidatos ainda sem revisão individual neste caderno | 540 |
-| Gabaritos históricos superados excluídos da publicação | 2 |
+| Questões aprovadas e ativas | 300 |
+| Itens retidos para complementação | 233 |
+| Repetições internas excluídas da publicação | 11 |
+| Enunciados inadequados excluídos da publicação | 4 |
+| Candidatos ainda sem revisão individual neste caderno | 440 |
+| Gabaritos históricos superados excluídos da publicação | 12 |
 | Registros privados de extração deste caderno | 1.000 |
 
 Os 1.000 registros são candidatos extraídos, não uma certificação de 1.000 questões distintas e aproveitáveis. Foram associadas respostas editoriais a 982 registros; as demais exigem conferência. A revisão das 17 apostilas está **incompleta**. Não extrapolar os números deste lote para o total do acervo.
@@ -48,14 +48,14 @@ O importador passou a aceitar o formato nativo **certo/errado**, exigindo indica
 
 - Validação offline dos pacotes e das duas etapas de revisão: concluída.
 - Testes de regressão: **86 passaram**, incluindo rejeição de respostas e alternativas incompatíveis com o formato C/E.
-- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 246 publicações; isto não certifica ausência de duplicatas semânticas.
-- Conferência de banco: 1.000 extrações privadas, 460 decisões auditadas e 246 publicações; textos, respostas originais e decisões preservados.
+- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 300 publicações; isto não certifica ausência de duplicatas semânticas.
+- Conferência de banco: 1.000 extrações privadas, 560 decisões auditadas e 300 publicações; textos, respostas originais e decisões preservados.
 
 Os PDFs privados, enunciados extraídos, pacotes de importação, capturas oficiais e relatórios detalhados permanecem nos outputs locais, fora do Git. Nenhuma credencial integra este commit. A biblioteca não foi ampliada a partir de trechos ainda sem catalogação e revisão concluídas.
 
 ## Trabalho restante
 
-Continuar a revisão dos 540 candidatos deste caderno e complementar os 201 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
+Continuar a revisão dos 440 candidatos deste caderno e complementar os 233 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
 
 ## Cadência autorizada
 
@@ -74,3 +74,11 @@ Releitura do Supabase confirmou 1.000 candidatos privados, 360 decisões auditad
 Mais 100 decisões individuais: 57 publicações, 39 itens retidos, três repetições e uma extração rejeitada por reunir duas perguntas sob uma resposta. Conferência do banco: 460 decisões auditadas e 246 questões ativas deste caderno.
 
 Este lote trata de Direito Administrativo e um item de nacionalidade. Fontes oficiais adicionais: [Lei 8.112/1990](https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm), [Lei 9.784/1999](https://www.planalto.gov.br/ccivil_03/leis/l9784.htm), [Lei 13.303/2016](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13303.htm), [Lei 13.848/2019](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13848.htm), [Decreto-Lei 200/1967](https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm) e [Constituição compilada](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm). Regras antigas do Decreto-Lei foram confrontadas com a autorização constitucional e o regime atual de empresas estatais. Nenhuma conclusão sobre a totalidade da jurisprudência foi presumida a partir da leitura das leis.
+
+## Checkpoint 461–560
+
+Mais 100 decisões: 54 publicações, 32 itens retidos, três repetições, dez exclusões por superação e uma extração incompleta rejeitada. Releitura do Supabase: 560 decisões auditadas e 300 questões ativas deste caderno.
+
+O lote confrontou licitações com a [Lei 14.133/2021](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm), incluindo distinção entre dispensa e inexigibilidade. Ficaram fora do treinamento vigente as regras históricas de convite/tomada de preços, imóvel por dispensa nas condições antigas, emergência em 180 dias e subsidiariedade geral da Lei 8.666 para pregão. Instrumentos válidos de transição têm análise própria; a exclusão da pergunta não declara inválido todo contrato antigo.
+
+Fontes adicionais: [Lei 9.873/1999](https://www.planalto.gov.br/ccivil_03/leis/l9873.htm), [Lei 8.745/1993](https://www.planalto.gov.br/ccivil_03/leis/l8745cons.htm), [LC 152/2015](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp152.htm) e [Lei 8.429 compilada](https://www.planalto.gov.br/ccivil_03/leis/l8429.htm). A lista patrimonial antiga do § 1º do art. 13 da LIA foi excluída por revogação; o caput atual refere-se à declaração de imposto de renda apresentada à Receita. O item de isonomia da Lei 8.112 foi retido para compatibilização constitucional, sem atribuir revogação inexistente.
