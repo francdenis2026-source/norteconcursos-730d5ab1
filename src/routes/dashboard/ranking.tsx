@@ -102,7 +102,7 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
               <Row2 k="Horas de estudo" v={`${p.study_hours} h`} />
               <Row2 k="Pontos de questões" v={p.question_points} />
               <Row2 k="Pontos de simulados" v={p.simulator_points} />
-              <Row2 k="Pontos de estudo (horas)" v={p.study_points} />
+              <Row2 k="Horas de estudo (métrica)" v={`${p.study_hours} h`} />
               <Row2 k="Flashcards / redação / constância" v={`${p.flashcard_points} / ${p.essay_points} / ${p.consistency_points}`} />
               <Row2 k="Maior sequência de dias" v={<span className="inline-flex items-center gap-1"><Flame className="h-3.5 w-3.5 text-orange-500" />{p.streak}</span>} />
             </div>
@@ -162,7 +162,7 @@ function RankingPage() {
               <li><b>Questões:</b> certo sem ajuda +3, com ajuda +1, errado -2. O acerto é conferido no servidor com o gabarito oficial. Só vale por inteiro com 70% ou mais de acertos no dia (50% ou menos não pontua), então chutar não compensa. Até 100 questões pontuadas por dia.</li>
               <li><b>Cada questão conta uma vez só</b>, somando Treinador e Simulados: refazer a mesma questão não rende ponto. Respostas em menos de 4 segundos não contam.</li>
               <li><b>Simulados:</b> mesma conta das questões; a tentativa precisa durar pelo menos 10 s por questão. Bônus de precisão (+25, +50, +100 com 70%, 80%, 90%) a partir de 20 questões inéditas.</li>
-              <li><b>Estudo:</b> 5 pontos por hora ativa, até 3 horas por dia. <b>Flashcards:</b> +1 por cartão revisado (até 50 por dia). <b>Redação:</b> +20 por texto de 150 palavras ou mais (1 por dia). <b>Constância:</b> +5 por dia de estudo real (20 min ou 10 questões).</li>
+              <li><b>Estudo:</b> as horas ficam visíveis como métrica de dedicação e não geram pontos. <b>Flashcards:</b> +1 por cartão revisado (até 50 por dia). <b>Redação:</b> +20 por texto de 150 palavras ou mais (1 por dia).</li>
               <li>Níveis na pontuação geral: Competidor 250, Avançado 750, Especialista 1.500, Elite 3.000. Administradores ficam fora.</li>
             </ul>
           </details>

@@ -10157,3 +10157,14 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     transition: opacity 0.45s var(--ease-out);
   }
 }
+
+/* The mobile hero panel supports readability without hiding its visual field. */
+@media (max-width: 767px) {
+  .lp.is-ready .lp-hero__content {
+    border-color: oklch(1 0 0 / 0.18);
+    background: linear-gradient(160deg, oklch(0.08 0.025 263 / 0.48), oklch(0.08 0.025 263 / 0.16));
+    backdrop-filter: blur(6px) saturate(1.12);
+    -webkit-backdrop-filter: blur(6px) saturate(1.12);
+    box-shadow: 0 18px 40px -30px oklch(0.04 0.02 263 / 0.85);
+  }
+}
