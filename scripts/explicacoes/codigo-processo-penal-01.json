@@ -1,0 +1,366 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 01: arts. 1º a 30",
+  "units": {
+    "art-1": {
+      "simples": "O Código de Processo Penal vale em todo o território brasileiro. Há ressalvas: tratados, convenções e regras de direito internacional; prerrogativas constitucionais do Presidente da República, dos ministros de Estado e dos ministros do Supremo Tribunal Federal nos crimes de responsabilidade; processos da Justiça Militar; processos do tribunal especial; e crimes de imprensa. Aos dois últimos, o Código se aplica quando as leis especiais não dispuserem de modo diverso.",
+      "pontos": ["Regra: o CPP rege o processo penal em todo o território brasileiro.", "Ressalvas: tratados e regras internacionais; prerrogativas constitucionais; Justiça Militar; tribunal especial; crimes de imprensa.", "Parágrafo único: aplica-se aos processos do tribunal especial e de imprensa, se a lei especial não dispuser diferente."],
+      "atencao": ["O texto remete a normas de constituição anterior: é leitura histórica.", "Há referência à ADPF nº 130 no texto compilado (crimes de imprensa)."],
+      "exemplo": "Um processo da competência da Justiça Militar segue a legislação militar, e não o CPP.",
+      "prova": ["Assertiva que aplica o CPP a processos da Justiça Militar erra: ela é ressalvada."],
+      "termos": [],
+      "remissoes": ["Art. 2º", "Art. 3º"]
+    },
+    "art-2": {
+      "simples": "A lei processual penal aplica-se desde logo (aplicação imediata), sem prejuízo da validade dos atos realizados sob a vigência da lei anterior (princípio do tempus regit actum).",
+      "pontos": ["Aplicação imediata da lei processual penal.", "Os atos já praticados sob a lei anterior continuam válidos."],
+      "atencao": ["Normas processuais penais materiais (mistas) seguem a lei penal: retroatividade benéfica."],
+      "exemplo": "Nova regra de intimação vale para os atos futuros; as intimações já feitas continuam válidas.",
+      "prova": ["Assertiva que invalida os atos realizados sob a lei anterior, por força da nova lei processual, erra: eles permanecem válidos."],
+      "termos": [{ "termo": "Tempus regit actum", "significado": "O ato se rege pela lei vigente quando praticado." }],
+      "remissoes": ["Art. 1º"]
+    },
+    "art-3": {
+      "simples": "A lei processual penal admite interpretação extensiva e aplicação analógica, bem como o suplemento dos princípios gerais de direito.",
+      "pontos": ["Interpretação extensiva é admitida.", "Aplicação analógica é admitida.", "Princípios gerais de direito suplementam a lei."],
+      "atencao": ["Diferente do direito penal material, a analogia em prejuízo do réu é debatida: a doutrina distingue normas processuais das de caráter material."],
+      "exemplo": "Aplicar por analogia regra processual civil a lacuna do CPP.",
+      "prova": ["Assertiva que veda interpretação extensiva e analogia na lei processual penal erra: ambas são admitidas."],
+      "termos": [{ "termo": "Interpretação extensiva", "significado": "Amplia o alcance literal da norma para o que o legislador quis dizer." }],
+      "remissoes": ["Art. 1º"]
+    },
+    "art-3-a": {
+      "simples": "O processo penal terá estrutura acusatória, vedadas a iniciativa do juiz na fase de investigação e a substituição da atuação probatória do órgão de acusação. O texto compilado indica discussão de sua eficácia no Supremo Tribunal Federal (ADIs).",
+      "pontos": ["Estrutura acusatória do processo penal.", "Veda a iniciativa do juiz na fase de investigação.", "Veda a substituição da atuação probatória do órgão de acusação."],
+      "atencao": ["Dispositivo incluído pela Lei nº 13.964, de 2019 (Pacote Anticrime).", "Eficácia discutida em ADIs: confira a situação atual."],
+      "exemplo": "O juiz não pode determinar, por conta própria, a produção de prova em substituição ao Ministério Público.",
+      "prova": ["Assertiva que permite ao juiz a iniciativa na fase de investigação, segundo o art. 3º-A, erra."],
+      "termos": [{ "termo": "Sistema acusatório", "significado": "Separação entre quem acusa, quem defende e quem julga." }],
+      "remissoes": ["Art. 3º-B", "Art. 156"]
+    },
+    "art-3-b": {
+      "simples": "O juiz das garantias é responsável pelo controle da legalidade da investigação criminal e pela salvaguarda dos direitos individuais cuja franquia tenha sido reservada à autorização prévia do Poder Judiciário. Entre outras funções, recebe a comunicação imediata da prisão e o auto de prisão em flagrante, zela pelos direitos do preso, decide sobre prisão provisória e medidas cautelares, e decide sobre a homologação de acordo de não persecução penal ou de colaboração premiada formalizados durante a investigação. O preso será encaminhado à audiência de custódia no prazo de 24 horas. Se o investigado estiver preso, o juiz das garantias pode prorrogar o inquérito, uma única vez, por até 15 dias, após o que a prisão será relaxada.",
+      "pontos": ["Controla a legalidade da investigação e protege direitos individuais sob reserva de jurisdição.", "Recebe a comunicação da prisão e o auto de flagrante.", "Decide sobre prisão provisória e outras cautelares.", "Homologa ANPP e colaboração premiada na fase de investigação.", "§1º: audiência de custódia em 24 horas, por videoconferência.", "§2º: prorrogação única do inquérito do preso, por até 15 dias; depois, relaxamento."],
+      "atencao": ["Eficácia do instituto discutida em ADIs: confira a situação atual.", "A redação do §1º veio da Lei nº 15.358, de 2026."],
+      "exemplo": "O juiz das garantias decide sobre pedido de interceptação durante o inquérito.",
+      "prova": ["Assertiva que atribui ao juiz das garantias o julgamento do mérito da ação penal erra: sua função é a legalidade da investigação."],
+      "termos": [],
+      "remissoes": ["Art. 3º-C", "Art. 310"]
+    },
+    "art-3-c": {
+      "simples": "A competência do juiz das garantias abrange todas as infrações penais, exceto as de menor potencial ofensivo, e cessa com o recebimento da denúncia ou queixa. Recebida a denúncia, as questões pendentes serão decididas pelo juiz da instrução e julgamento. As decisões do juiz das garantias não vinculam o juiz da instrução e julgamento, que, após o recebimento da denúncia ou queixa, deverá reexaminar a necessidade das medidas cautelares em curso, no prazo máximo de 10 dias. Os autos das matérias do juiz das garantias ficam acautelados na secretaria desse juízo, à disposição do Ministério Público e da defesa, e não são apensados ao processo, ressalvados os documentos relativos às provas irrepetíveis, medidas de obtenção de provas ou de antecipação de provas. Fica assegurado às partes o amplo acesso aos autos acautelados.",
+      "pontos": ["Abrange todas as infrações, exceto as de menor potencial ofensivo.", "Cessa com o recebimento da denúncia ou queixa.", "Juiz da instrução reexamina as cautelares em até 10 dias.", "Autos do juízo das garantias ficam na secretaria, com acesso amplo às partes.", "Exceção ao não apensamento: provas irrepetíveis, medidas de obtenção e antecipação de provas."],
+      "atencao": ["Eficácia discutida em ADIs.", "Prazo de 10 dias para reexame das cautelares."],
+      "exemplo": "Após o recebimento da denúncia, outro juiz assume o processo e reexamina a prisão preventiva em até 10 dias.",
+      "prova": ["Assertiva que estende a competência do juiz das garantias às infrações de menor potencial ofensivo erra: elas são excluídas."],
+      "termos": [],
+      "remissoes": ["Art. 3º-B", "Art. 399"]
+    },
+    "art-3-d": {
+      "simples": "O juiz que, na fase de investigação, praticar qualquer ato incluído nas competências dos arts. 4º e 5º do Código ficará impedido de funcionar no processo. Nas comarcas em que funcionar apenas um juiz, os tribunais criarão um sistema de rodízio de magistrados.",
+      "pontos": ["Juiz que atua na investigação fica impedido de funcionar no processo.", "Comarca com um só juiz: rodízio de magistrados criado pelos tribunais."],
+      "atencao": ["Eficácia discutida em ADIs."],
+      "exemplo": "O juiz que decretou medida cautelar na investigação não julga o processo.",
+      "prova": ["Assertiva que permite ao juiz da investigação julgar o processo, segundo o art. 3º-D, erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º-B"]
+    },
+    "art-3-e": {
+      "simples": "O juiz das garantias será designado conforme as normas de organização judiciária da União, dos Estados e do Distrito Federal, observando critérios objetivos a serem periodicamente divulgados pelo respectivo tribunal.",
+      "pontos": ["Designação conforme a organização judiciária.", "Critérios objetivos, periodicamente divulgados pelo tribunal."],
+      "atencao": ["Eficácia discutida em ADIs."],
+      "exemplo": "O tribunal divulga os critérios objetivos para designar o juiz das garantias.",
+      "prova": ["Assertiva que dispensa critérios objetivos na designação do juiz das garantias erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º-B"]
+    },
+    "art-3-f": {
+      "simples": "O juiz das garantias deve assegurar o cumprimento das regras para o tratamento dos presos, impedindo o acordo ou ajuste de qualquer autoridade com órgãos da imprensa para explorar a imagem da pessoa submetida à prisão, sob pena de responsabilidade civil, administrativa e penal. Por regulamento, as autoridades disciplinarão, em 180 dias, o modo padronizado de transmitir à imprensa as informações sobre a prisão e a identidade do preso.",
+      "pontos": ["Garantir as regras de tratamento dos presos.", "Impedir acordo com a imprensa para explorar a imagem do preso.", "Responsabilidade civil, administrativa e penal.", "Parágrafo único: regulamento em 180 dias para padronizar as informações à imprensa."],
+      "atencao": ["Eficácia discutida em ADIs."],
+      "exemplo": "Autoridade combina com a imprensa a exposição da imagem do preso: pode ser responsabilizada.",
+      "prova": ["Assertiva que permite a exploração da imagem do preso mediante acordo com a imprensa erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º-B"]
+    },
+    "art-4": {
+      "simples": "A polícia judiciária será exercida pelas autoridades policiais no território de suas respectivas circunscrições e terá por fim a apuração das infrações penais e da sua autoria. A competência não exclui a de autoridades administrativas a quem a lei atribua a mesma função.",
+      "pontos": ["Polícia judiciária exercida por autoridades policiais nas suas circunscrições.", "Finalidade: apurar infrações penais e autoria.", "Parágrafo único: não exclui outras autoridades administrativas com a mesma função."],
+      "atencao": ["Exemplo clássico: Comissões Parlamentares de Inquérito têm poderes de investigação próprios."],
+      "exemplo": "O delegado de polícia apura o crime na sua circunscrição.",
+      "prova": ["Assertiva que torna a polícia judiciária exclusiva das autoridades policiais erra: o parágrafo único admite outras autoridades."],
+      "termos": [{ "termo": "Polícia judiciária", "significado": "Apura infrações penais e autoria, auxiliando o Judiciário e o Ministério Público." }],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-5": {
+      "simples": "Nos crimes de ação pública, o inquérito policial é iniciado de ofício ou mediante requisição da autoridade judiciária ou do Ministério Público, ou a requerimento do ofendido ou de quem tiver qualidade para representá-lo. O requerimento conterá, sempre que possível, a narração do fato com as circunstâncias; a individualização do indiciado e as razões de convicção; e a nomeação das testemunhas. Do despacho que indeferir o requerimento cabe recurso para o chefe de Polícia. Qualquer pessoa do povo pode comunicar a infração à autoridade (delatio criminis). Nos crimes de ação pública condicionada à representação, o inquérito não pode ser iniciado sem ela. Nos crimes de ação privada, a autoridade só procede a inquérito a requerimento de quem tenha qualidade para intentar a ação.",
+      "pontos": ["Ação pública: inquérito de ofício, por requisição ou a requerimento do ofendido.", "§1º: conteúdo do requerimento (fato, indiciado, testemunhas).", "§2º: recurso ao chefe de Polícia contra o indeferimento.", "§3º: qualquer pessoa pode comunicar o fato.", "§4º: representação é condição para iniciar o inquérito.", "§5º: ação privada: só a requerimento do legitimado."],
+      "atencao": ["Requisição do Ministério Público ou do juiz não pode ser recusada sem fundamento.", "Sem representação, não há inquérito na ação pública condicionada."],
+      "exemplo": "Vítima de crime de ação pública condicionada precisa representar para que o inquérito se instaure.",
+      "prova": ["Assertiva que permite instaurar inquérito em ação pública condicionada sem representação erra: o §4º veda."],
+      "termos": [{ "termo": "Delatio criminis", "significado": "Comunicação de crime à autoridade." }],
+      "remissoes": ["Art. 24", "Art. 39"]
+    },
+    "art-6": {
+      "simples": "Logo que tiver conhecimento da prática da infração penal, a autoridade policial deve: dirigir-se ao local e preservá-lo até a chegada dos peritos; apreender os objetos relacionados ao fato, após liberados pelos peritos; colher todas as provas; ouvir o ofendido; ouvir o indiciado; proceder a reconhecimento de pessoas e coisas e a acareações; determinar exame de corpo de delito e outras perícias; ordenar a identificação datiloscópica e juntar a folha de antecedentes; averiguar a vida pregressa do indiciado; e colher informações sobre a existência de filhos, idades, eventual deficiência e o responsável pelos cuidados indicado pela pessoa presa.",
+      "pontos": ["Preservar o local do crime até a chegada dos peritos.", "Apreender objetos após liberados pelos peritos.", "Colher provas, ouvir ofendido e indiciado.", "Reconhecimento de pessoas e coisas, acareações.", "Exame de corpo de delito e perícias.", "Identificação datiloscópica e folha de antecedentes.", "Vida pregressa do indiciado.", "Informações sobre filhos da pessoa presa."],
+      "atencao": ["O termo do interrogatório do indiciado é assinado por duas testemunhas que ouviram a leitura.", "O inciso X (filhos) veio da Lei nº 13.257, de 2016."],
+      "exemplo": "Ao chegar ao local do crime, o delegado providencia que nada seja alterado até a perícia.",
+      "prova": ["Assertiva que autoriza a apreensão de objetos antes de liberados pelos peritos erra."],
+      "termos": [],
+      "remissoes": ["Art. 5º", "Art. 158"]
+    },
+    "art-7": {
+      "simples": "Para verificar a possibilidade de a infração ter sido praticada de determinado modo, a autoridade policial pode proceder à reprodução simulada dos fatos (reconstituição), desde que esta não contrarie a moralidade ou a ordem pública.",
+      "pontos": ["Reprodução simulada dos fatos (reconstituição).", "Limite: não contrariar a moralidade ou a ordem pública."],
+      "atencao": ["O investigado não pode ser obrigado a participar (direito de não produzir prova contra si)."],
+      "exemplo": "Reconstituição do crime no local, com a participação voluntária do investigado.",
+      "prova": ["Assertiva que obriga o investigado a participar da reconstituição erra."],
+      "termos": [],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-8": {
+      "simples": "Havendo prisão em flagrante, será observado o disposto no Capítulo II do Título IX deste Livro.",
+      "pontos": ["Prisão em flagrante segue o Capítulo II do Título IX do Livro I."],
+      "atencao": ["Remissão às regras do flagrante (arts. 301 e seguintes)."],
+      "exemplo": "Preso em flagrante, o indivíduo é conduzido à autoridade e o auto é lavrado.",
+      "prova": ["Assertiva que cria rito próprio no art. 8º para o flagrante erra: ele remete ao Título da prisão."],
+      "termos": [],
+      "remissoes": ["Art. 301"]
+    },
+    "art-9": {
+      "simples": "Todas as peças do inquérito policial serão, num só processado, reduzidas a escrito ou datilografadas e, neste caso, rubricadas pela autoridade.",
+      "pontos": ["Peças do inquérito reunidas em um só processado.", "Reduzidas a escrito ou datilografadas.", "Se datilografadas, rubricadas pela autoridade."],
+      "atencao": ["Regra de forma do inquérito; na prática, usa-se o meio digital."],
+      "exemplo": "Os termos e depoimentos do inquérito são reunidos e rubricados pelo delegado.",
+      "prova": ["Assertiva que dispensa a rubrica da autoridade nas peças datilografadas erra."],
+      "termos": [],
+      "remissoes": ["Art. 10"]
+    },
+    "art-10": {
+      "simples": "O inquérito deverá terminar no prazo de 10 dias, se o indiciado tiver sido preso em flagrante ou estiver preso preventivamente (contado, nesta hipótese, do dia em que se executar a ordem de prisão), ou no prazo de 30 dias, quando estiver solto, mediante fiança ou sem ela. A autoridade fará minucioso relatório do que apurou e enviará os autos ao juiz competente, podendo indicar testemunhas não inquiridas. Quando o fato for de difícil elucidação e o indiciado estiver solto, a autoridade pode requerer ao juiz a devolução dos autos para ulteriores diligências no prazo marcado pelo juiz.",
+      "pontos": ["Preso: 10 dias.", "Solto: 30 dias, com ou sem fiança.", "§1º: relatório minucioso e remessa ao juiz competente.", "§2º: pode indicar testemunhas não inquiridas.", "§3º: fato de difícil elucidação, indiciado solto: devolução dos autos para novas diligências."],
+      "atencao": ["Em preventiva, o prazo conta do cumprimento da ordem de prisão.", "Em leis especiais, os prazos podem ser diferentes."],
+      "exemplo": "Indiciado preso em flagrante: inquérito conclui em 10 dias.",
+      "prova": ["Assertiva que fixa em 30 dias o prazo do inquérito com indiciado preso erra: são 10 dias."],
+      "termos": [],
+      "remissoes": ["Art. 3º-B"]
+    },
+    "art-11": {
+      "simples": "Os instrumentos do crime, bem como os objetos que interessarem à prova, acompanharão os autos do inquérito.",
+      "pontos": ["Instrumentos do crime acompanham os autos.", "Objetos de interesse para a prova também."],
+      "atencao": ["Relaciona-se à cadeia de custódia da prova."],
+      "exemplo": "A arma usada no crime é encaminhada junto com os autos do inquérito.",
+      "prova": ["Assertiva que determina o descarte dos instrumentos do crime após o inquérito erra: eles acompanham os autos."],
+      "termos": [],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-12": {
+      "simples": "O inquérito policial acompanhará a denúncia ou queixa, sempre que servir de base a uma ou outra.",
+      "pontos": ["O inquérito acompanha a denúncia ou queixa quando serve de base a elas."],
+      "atencao": ["O inquérito é peça informativa, dispensável para o oferecimento da denúncia se houver elementos suficientes."],
+      "exemplo": "A denúncia é oferecida com o inquérito anexo.",
+      "prova": ["Assertiva que torna o inquérito indispensável ao oferecimento da denúncia erra."],
+      "termos": [],
+      "remissoes": ["Art. 39"]
+    },
+    "art-13": {
+      "simples": "Incumbe ainda à autoridade policial: fornecer às autoridades judiciárias as informações necessárias à instrução e ao julgamento; realizar as diligências requisitadas pelo juiz ou pelo Ministério Público; cumprir os mandados de prisão expedidos pelas autoridades judiciárias; e representar acerca da prisão preventiva.",
+      "pontos": ["Fornecer informações ao Judiciário.", "Realizar diligências requisitadas pelo juiz ou Ministério Público.", "Cumprir mandados de prisão.", "Representar pela prisão preventiva."],
+      "atencao": ["A autoridade policial REPRESENTA pela preventiva; quem decreta é o juiz."],
+      "exemplo": "Delegado representa ao juiz pela prisão preventiva do investigado.",
+      "prova": ["Assertiva que atribui à autoridade policial o poder de decretar a prisão preventiva erra: ela representa."],
+      "termos": [],
+      "remissoes": ["Art. 311"]
+    },
+    "art-13-a": {
+      "simples": "Nos crimes de sequestro e cárcere privado, redução à condição análoga à de escravo, tráfico de pessoas, extorsão com restrição da liberdade da vítima, extorsão mediante sequestro e no art. 239 do Estatuto da Criança e do Adolescente, o membro do Ministério Público ou o delegado de polícia pode requisitar, de órgãos do poder público ou de empresas privadas, dados e informações cadastrais da vítima ou de suspeitos. A requisição será atendida no prazo de 24 horas e conterá o nome da autoridade requisitante, o número do inquérito policial e a identificação da unidade de polícia judiciária responsável.",
+      "pontos": ["Requisição de dados cadastrais da vítima ou de suspeitos por MP ou delegado.", "Crimes: arts. 148, 149, 149-A, 158 §3º, 159 do CP e art. 239 do ECA.", "Prazo de atendimento: 24 horas.", "A requisição indica a autoridade, o número do inquérito e a unidade responsável."],
+      "atencao": ["Dados cadastrais; o conteúdo de comunicação depende de ordem judicial."],
+      "exemplo": "Delegado requisita dados cadastrais de suspeito de extorsão mediante sequestro.",
+      "prova": ["Assertiva que fixa o prazo de atendimento em 72 horas erra: são 24 horas."],
+      "termos": [],
+      "remissoes": ["Art. 13-B"]
+    },
+    "art-13-b": {
+      "simples": "Se necessário à prevenção e à repressão dos crimes relacionados ao tráfico de pessoas, o membro do Ministério Público ou o delegado de polícia podem requisitar, mediante autorização judicial, às empresas de telecomunicações e/ou telemática que disponibilizem imediatamente os meios técnicos adequados, como sinais e informações, que permitam localizar a vítima ou os suspeitos do delito em curso. Sinal significa posicionamento da estação de cobertura, setorização e intensidade de radiofrequência. O sinal não permite acesso ao conteúdo da comunicação, será fornecido por período não superior a 30 dias, renovável uma única vez por igual período; períodos superiores exigem ordem judicial. O inquérito deverá ser instaurado em até 72 horas do registro da ocorrência. Se não houver manifestação judicial em 12 horas, a autoridade competente requisitará os meios, com imediata comunicação ao juiz.",
+      "pontos": ["Requisição às operadoras para localizar vítima ou suspeitos, mediante autorização judicial.", "Sinal: estação de cobertura, setorização e intensidade de radiofrequência.", "Sem acesso ao conteúdo da comunicação.", "Fornecimento por até 30 dias, renovável por igual período, uma única vez.", "Inquérito instaurado em até 72 horas.", "Sem manifestação judicial em 12 horas, a autoridade requisita, comunicando ao juiz."],
+      "atencao": ["Prazos: 30 dias (renovável uma vez), 72 horas para o inquérito, 12 horas para a manifestação judicial."],
+      "exemplo": "Delegado, com autorização judicial, requisita o sinal do celular de vítima de tráfico de pessoas.",
+      "prova": ["Assertiva que permite o acesso ao conteúdo das comunicações pelo mero sinal erra."],
+      "termos": [],
+      "remissoes": ["Art. 13-A"]
+    },
+    "art-14": {
+      "simples": "O ofendido, ou seu representante legal, e o indiciado podem requerer qualquer diligência, que será realizada, ou não, a juízo da autoridade.",
+      "pontos": ["Ofendido, representante legal e indiciado podem requerer diligências.", "A autoridade decide se realiza ou não."],
+      "atencao": ["Exceção: o exame de corpo de delito, quando a infração deixa vestígios, é obrigatório (art. 158)."],
+      "exemplo": "A vítima requer a oitiva de uma testemunha, e a autoridade decide se o faz.",
+      "prova": ["Assertiva que obriga a autoridade a realizar qualquer diligência requerida pelo indiciado erra."],
+      "termos": [],
+      "remissoes": ["Art. 158"]
+    },
+    "art-14-a": {
+      "simples": "Quando servidores das instituições do art. 144 da Constituição figurarem como investigados em inquéritos policiais, inquéritos policiais militares e procedimentos extrajudiciais sobre fatos relacionados ao uso da força letal praticados no exercício profissional, de forma consumada ou tentada, incluindo as situações do art. 23 do Código Penal, o indiciado pode constituir defensor. O investigado será citado da instauração e poderá constituir defensor em até 48 horas. Esgotado o prazo sem nomeação, a autoridade intimará a instituição a que o investigado estava vinculado, para que, em 48 horas, indique defensor. Havendo necessidade de defesa técnica, a escolha recairá preferencialmente na Defensoria Pública; onde não houver, a União ou a Unidade da Federação disponibilizará profissional. Na ausência da Defensoria, os custos correm por conta do orçamento da instituição a que o investigado estava vinculado. Aplica-se aos militares do art. 142 da Constituição em missões de Garantia da Lei e da Ordem.",
+      "pontos": ["Aplica-se a servidores do art. 144 da Constituição investigados por uso da força letal.", "Citação do investigado e prazo de 48 horas para constituir defensor.", "Sem defensor, a instituição indica um em 48 horas.", "Preferência pela Defensoria Pública.", "Custos da defesa, na ausência da Defensoria, correm por conta da instituição.", "Estende-se a militares em missões de Garantia da Lei e da Ordem."],
+      "atencao": ["Prazos de 48 horas para constituir e para indicar defensor."],
+      "exemplo": "Policial investigado por morte em serviço é citado e tem 48 horas para constituir defensor.",
+      "prova": ["Assertiva que fixa em 24 horas o prazo para o investigado constituir defensor erra: são 48 horas."],
+      "termos": [],
+      "remissoes": ["Art. 23 do Código Penal"]
+    },
+    "art-15": {
+      "simples": "Se o indiciado for menor, ser-lhe-á nomeado curador pela autoridade policial.",
+      "pontos": ["Indiciado menor: nomeação de curador pela autoridade policial."],
+      "atencao": ["Dispositivo anterior ao Código Civil de 2002: a menoridade processual hoje é discutida em relação aos menores de 18 anos, inimputáveis."],
+      "exemplo": "Indiciado menor de 21 anos teria curador nomeado na vigência original do dispositivo.",
+      "prova": ["Assertiva que dispensa curador para o indiciado menor, segundo o art. 15, erra."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-16": {
+      "simples": "O Ministério Público não pode requerer a devolução do inquérito à autoridade policial, senão para novas diligências imprescindíveis ao oferecimento da denúncia.",
+      "pontos": ["Devolução do inquérito à polícia só para diligências imprescindíveis ao oferecimento da denúncia."],
+      "atencao": ["Evita a devolução meramente protelatória."],
+      "exemplo": "MP devolve o inquérito para a oitiva de uma testemunha essencial.",
+      "prova": ["Assertiva que permite a devolução do inquérito por qualquer motivo erra: só diligências imprescindíveis."],
+      "termos": [],
+      "remissoes": ["Art. 10"]
+    },
+    "art-17": {
+      "simples": "A autoridade policial não pode mandar arquivar autos de inquérito.",
+      "pontos": ["Vedado à autoridade policial arquivar inquérito."],
+      "atencao": ["O arquivamento é ato do Ministério Público (art. 28)."],
+      "exemplo": "Delegado conclui o inquérito e o remete ao juízo; não pode arquivá-lo.",
+      "prova": ["Assertiva que permite ao delegado arquivar o inquérito por falta de provas erra."],
+      "termos": [],
+      "remissoes": ["Art. 28"]
+    },
+    "art-18": {
+      "simples": "Depois de ordenado o arquivamento do inquérito pela autoridade judiciária, por falta de base para a denúncia, a autoridade policial poderá proceder a novas pesquisas, se de outras provas tiver notícia.",
+      "pontos": ["Arquivamento por falta de base para a denúncia.", "A polícia pode fazer novas pesquisas se tiver notícia de outras provas."],
+      "atencao": ["Súmula 524 do STF: arquivado por falta de provas, só se instaura ação com novas provas."],
+      "exemplo": "Arquivado o inquérito, surge nova testemunha e a polícia retoma as investigações.",
+      "prova": ["Assertiva que veda qualquer nova investigação após o arquivamento por falta de base erra."],
+      "termos": [],
+      "remissoes": ["Art. 28"]
+    },
+    "art-19": {
+      "simples": "Nos crimes em que não couber ação pública, os autos do inquérito serão remetidos ao juízo competente, onde aguardarão a iniciativa do ofendido ou de seu representante legal, ou serão entregues ao requerente, se o pedir, mediante traslado.",
+      "pontos": ["Ação privada: autos remetidos ao juízo, onde aguardam a iniciativa do ofendido.", "Ou entregues ao requerente, mediante traslado."],
+      "atencao": ["Vale para crimes de ação privada."],
+      "exemplo": "Inquérito de crime de ação privada fica no juízo à espera da queixa.",
+      "prova": ["Assertiva que manda arquivar de ofício o inquérito de ação privada erra: os autos aguardam o ofendido."],
+      "termos": [],
+      "remissoes": ["Art. 30"]
+    },
+    "art-20": {
+      "simples": "A autoridade assegurará no inquérito o sigilo necessário à elucidação do fato ou exigido pelo interesse da sociedade. Nos atestados de antecedentes solicitados, a autoridade policial não pode mencionar anotações referentes à instauração de inquérito contra os requerentes.",
+      "pontos": ["Sigilo do inquérito, quando necessário à elucidação ou ao interesse da sociedade.", "Atestados de antecedentes não mencionam a instauração de inquérito."],
+      "atencao": ["O sigilo não alcança o advogado (Súmula Vinculante 14), quanto às provas já documentadas."],
+      "exemplo": "Atestado de antecedentes não pode informar que há inquérito em curso contra o requerente.",
+      "prova": ["Assertiva que oponibiliza o sigilo do inquérito ao advogado em relação a provas já documentadas erra."],
+      "termos": [],
+      "remissoes": ["Art. 7º do Estatuto da Advocacia"]
+    },
+    "art-21": {
+      "simples": "A incomunicabilidade do indiciado depende de despacho nos autos e somente será permitida quando o interesse da sociedade ou a conveniência da investigação o exigir. A incomunicabilidade, que não excederá três dias, será decretada por despacho fundamentado do juiz, a requerimento da autoridade policial ou do Ministério Público, respeitado o Estatuto da Ordem dos Advogados.",
+      "pontos": ["Incomunicabilidade depende de despacho nos autos.", "Prazo máximo de três dias.", "Decretada por despacho fundamentado do juiz.", "Respeita a prerrogativa do advogado."],
+      "atencao": ["Entende-se majoritariamente que o dispositivo não foi recepcionado pela Constituição vigente."],
+      "exemplo": "Dispositivo hoje tem pouca aplicação prática.",
+      "prova": ["Assertiva que permite incomunicabilidade por prazo indeterminado erra: o texto fixa limite de três dias."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-22": {
+      "simples": "No Distrito Federal e nas comarcas com mais de uma circunscrição policial, a autoridade com exercício em uma delas pode, nos inquéritos que presidir, ordenar diligências em circunscrição de outra, independentemente de precatórias ou requisições, e providenciará, até que compareça a autoridade competente, sobre qualquer fato que ocorra em sua presença noutra circunscrição.",
+      "pontos": ["Diligências em outra circunscrição da mesma comarca, sem precatória.", "Providências urgentes em outra circunscrição até a chegada da autoridade competente."],
+      "atencao": ["Aplica-se ao Distrito Federal e às comarcas com mais de uma circunscrição policial."],
+      "exemplo": "Delegado de uma delegacia da comarca realiza diligência na área de outra, sem precisar de precatória.",
+      "prova": ["Assertiva que exige precatória para diligências em circunscrições da mesma comarca erra."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-23": {
+      "simples": "Ao remeter os autos do inquérito ao juiz competente, a autoridade policial oficiará ao Instituto de Identificação e Estatística, ou repartição congênere, mencionando o juízo a que forem distribuídos e os dados relativos à infração penal e ao indiciado.",
+      "pontos": ["Na remessa ao juiz, a polícia oficia o Instituto de Identificação e Estatística.", "Informa o juízo, a infração e o indiciado."],
+      "atencao": ["Finalidade: manter atualizados os registros e estatísticas criminais."],
+      "exemplo": "Ao encaminhar o inquérito, o delegado comunica ao instituto de identificação o juízo de distribuição.",
+      "prova": ["Assertiva que dispensa a comunicação ao Instituto de Identificação erra."],
+      "termos": [],
+      "remissoes": ["Art. 10"]
+    },
+    "art-24": {
+      "simples": "Nos crimes de ação pública, a ação é promovida por denúncia do Ministério Público, mas dependerá, quando a lei o exigir, de requisição do Ministro da Justiça ou de representação do ofendido ou de quem tiver qualidade para representá-lo. No caso de morte do ofendido ou quando declarado ausente por decisão judicial, o direito de representação passa ao cônjuge, ascendente, descendente ou irmão. Qualquer que seja o crime, quando praticado em detrimento do patrimônio ou interesse da União, Estado e Município, a ação penal será pública.",
+      "pontos": ["Ação pública: denúncia do Ministério Público.", "Pode depender de requisição do Ministro da Justiça ou representação do ofendido.", "§1º: morte ou ausência do ofendido: representação passa ao cônjuge, ascendente, descendente ou irmão.", "§2º: crime contra patrimônio ou interesse da União, Estado e Município: ação pública."],
+      "atencao": ["Ordem de sucessão: cônjuge, ascendente, descendente, irmão (CADI)."],
+      "exemplo": "Morte do ofendido: o cônjuge pode oferecer a representação.",
+      "prova": ["Assertiva que torna privada a ação penal de crime contra o patrimônio da União erra: será pública."],
+      "termos": [{ "termo": "Representação", "significado": "Autorização da vítima para o Ministério Público agir." }],
+      "remissoes": ["Art. 25", "Art. 5º"]
+    },
+    "art-25": {
+      "simples": "A representação será irretratável depois de oferecida a denúncia.",
+      "pontos": ["Representação pode ser retratada até o oferecimento da denúncia.", "Oferecida a denúncia, é irretratável."],
+      "atencao": ["Marco: OFERECIMENTO da denúncia (não o recebimento)."],
+      "exemplo": "A vítima se arrepende após a denúncia: não pode retratar a representação.",
+      "prova": ["Assertiva que fixa o recebimento da denúncia como marco da irretratabilidade erra: é o oferecimento."],
+      "termos": [],
+      "remissoes": ["Art. 24"]
+    },
+    "art-26": {
+      "simples": "A ação penal, nas contravenções, será iniciada com o auto de prisão em flagrante ou por meio de portaria expedida pela autoridade judiciária ou policial.",
+      "pontos": ["Contravenções: início pelo auto de prisão em flagrante ou por portaria."],
+      "atencao": ["Dispositivo não recepcionado pela Constituição vigente (privatividade da ação penal pública do Ministério Público)."],
+      "exemplo": "Dispositivo hoje sem aplicação, pois a ação pública é privativa do Ministério Público.",
+      "prova": ["Assertiva que admite portaria da autoridade policial para iniciar a ação penal hoje erra."],
+      "termos": [{ "termo": "Processo judicialiforme", "significado": "Ação iniciada de ofício por portaria ou auto de prisão." }],
+      "remissoes": ["Art. 24"]
+    },
+    "art-27": {
+      "simples": "Qualquer pessoa do povo pode provocar a iniciativa do Ministério Público, nos casos em que caiba a ação pública, fornecendo-lhe, por escrito, informações sobre o fato e a autoria e indicando o tempo, o lugar e os elementos de convicção.",
+      "pontos": ["Qualquer pessoa pode provocar o Ministério Público.", "Por escrito, informando fato, autoria, tempo, lugar e elementos de convicção."],
+      "atencao": ["A provocação não vincula o Ministério Público."],
+      "exemplo": "Cidadão envia ao MP, por escrito, informações sobre um crime de ação pública.",
+      "prova": ["Assertiva que obriga o MP a denunciar após a provocação de qualquer pessoa erra."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-28": {
+      "simples": "Ordenado o arquivamento do inquérito policial ou de elementos informativos de mesma natureza, o órgão do Ministério Público comunicará à vítima, ao investigado e à autoridade policial e encaminhará os autos para a instância de revisão ministerial para homologação. Se a vítima ou seu representante legal não concordar, poderá, no prazo de 30 dias do recebimento da comunicação, submeter a matéria à revisão da instância competente do órgão ministerial. Nas ações relativas a crimes em detrimento da União, Estados e Municípios, a revisão pode ser provocada pela chefia do órgão a quem couber a representação judicial.",
+      "pontos": ["O MP ordena o arquivamento e comunica vítima, investigado e polícia.", "Autos seguem à instância de revisão ministerial para homologação.", "Vítima discordante: 30 dias para submeter à revisão.", "Crimes contra entes públicos: revisão pode ser provocada pela chefia do órgão de representação judicial."],
+      "atencao": ["Eficácia discutida em ADIs.", "O arquivamento deixou de ser homologado pelo juiz."],
+      "exemplo": "Vítima discorda do arquivamento e, em 30 dias, pede revisão ao órgão superior do MP.",
+      "prova": ["Assertiva que mantém a homologação do arquivamento pelo juiz, nos termos do art. 28, erra: ela é feita pela instância de revisão ministerial."],
+      "termos": [],
+      "remissoes": ["Art. 17", "Art. 18"]
+    },
+    "art-28-a": {
+      "simples": "Não sendo caso de arquivamento e tendo o investigado confessado formal e circunstancialmente a prática de infração penal sem violência ou grave ameaça e com pena mínima inferior a 4 anos, o Ministério Público pode propor acordo de não persecução penal, desde que necessário e suficiente para reprovação e prevenção do crime, mediante condições ajustadas cumulativa e alternativamente: reparar o dano ou restituir a coisa; renunciar a bens e direitos instrumentos, produto ou proveito do crime; prestar serviço à comunidade; pagar prestação pecuniária; ou cumprir outra condição indicada pelo Ministério Público. A vítima é intimada da homologação do acordo e de seu descumprimento. Descumpridas as condições, o MP comunica o juízo para rescisão e oferece a denúncia; o descumprimento pode também justificar o não oferecimento de suspensão condicional do processo. A celebração e o cumprimento do acordo não constam de certidão de antecedentes, salvo para os fins do inciso III do §2º. Cumprido integralmente, o juízo decreta a extinção de punibilidade. Em caso de recusa do MP em propor o acordo, o investigado pode requerer a remessa dos autos a órgão superior, na forma do art. 28.",
+      "pontos": ["Requisitos: confissão formal e circunstanciada; infração sem violência ou grave ameaça; pena mínima inferior a 4 anos.", "Acordo necessário e suficiente para reprovação e prevenção do crime.", "Condições: reparar o dano, renunciar a bens, prestar serviço, pagar prestação pecuniária, outra condição.", "A vítima é intimada da homologação e do descumprimento.", "Descumprimento: rescisão e denúncia; pode impedir a suspensão condicional do processo.", "Cumprimento integral: extinção de punibilidade.", "Recusa do MP: remessa a órgão superior (art. 28)."],
+      "atencao": ["O limite é a pena MÍNIMA inferior a 4 anos.", "Eficácia discutida em ADIs.", "Cumprido o acordo, não constam antecedentes (salvo exceção)."],
+      "exemplo": "Investigado confesso de furto sem violência, com pena mínima baixa, aceita acordo e repara o dano.",
+      "prova": ["Assertiva que exige pena máxima inferior a 4 anos para o ANPP erra: o critério é a pena mínima."],
+      "termos": [{ "termo": "ANPP", "significado": "Acordo de não persecução penal." }],
+      "remissoes": ["Art. 28", "Art. 395"]
+    },
+    "art-29": {
+      "simples": "Será admitida ação privada nos crimes de ação pública se esta não for intentada no prazo legal. Cabe ao Ministério Público aditar a queixa, repudiá-la e oferecer denúncia substitutiva, intervir em todos os termos do processo, fornecer elementos de prova, interpor recurso e, a todo tempo, no caso de negligência do querelante, retomar a ação como parte principal.",
+      "pontos": ["Ação privada subsidiária da pública, se a denúncia não for oferecida no prazo legal.", "MP pode aditar a queixa, repudiá-la e oferecer denúncia substitutiva.", "MP intervém em todos os termos, fornece prova e recorre.", "Em caso de negligência do querelante, o MP retoma a ação como parte principal."],
+      "atencao": ["Exige INÉRCIA do Ministério Público. Pedido de arquivamento ou requisição de diligências não autoriza a ação subsidiária."],
+      "exemplo": "O MP não oferece denúncia no prazo legal, e a vítima ajuíza queixa subsidiária.",
+      "prova": ["Assertiva que permite a ação subsidiária mesmo quando o MP pede o arquivamento erra."],
+      "termos": [{ "termo": "Querelante", "significado": "Quem ajuíza a queixa-crime." }],
+      "remissoes": ["Art. 5º, LIX da Constituição"]
+    },
+    "art-30": {
+      "simples": "Ao ofendido ou a quem tenha qualidade para representá-lo caberá intentar a ação privada.",
+      "pontos": ["Legitimado a propor a ação privada: o ofendido ou quem o represente."],
+      "atencao": ["Para pessoa menor ou incapaz, a legitimidade passa ao representante legal."],
+      "exemplo": "Vítima de calúnia ajuíza queixa-crime contra o ofensor.",
+      "prova": ["Assertiva que atribui ao Ministério Público a propositura da ação privada erra: cabe ao ofendido ou seu representante."],
+      "termos": [],
+      "remissoes": ["Art. 31"]
+    }
+  }
+}
