@@ -9555,6 +9555,20 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   border-right: 1px solid color-mix(in oklab, var(--color-border) 74%, transparent);
   box-shadow: 10px 0 28px -32px oklch(0 0 0 / 0.9);
 }
+.app-shell[data-area="student"] .app-sidebar[data-collapsed="true"] {
+  width: 76px;
+}
+.app-shell[data-area="student"] .app-sidebar[data-collapsed="true"] .app-nav__group {
+  height: 10px;
+  margin: 8px 0;
+  background: transparent;
+  border: 0;
+  color: transparent;
+}
+.app-shell[data-area="student"] .app-sidebar[data-collapsed="true"] .app-nav__link {
+  width: 42px;
+  margin-inline: auto;
+}
 .app-shell[data-area="student"] .app-sidebar__head {
   height: 70px;
   padding-inline: 16px 12px;
@@ -9629,6 +9643,10 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   background-size: cover;
   background-position: var(--hero-position, 78% center);
   box-shadow: 0 18px 44px -36px oklch(0 0 0 / 0.85), inset 0 1px 0 oklch(1 0 0 / 0.1);
+}
+[data-hero="dashboard"] {
+  --hero-image: url("/media/hero/careers-team.webp");
+  --hero-position: 82% center;
 }
 .app-shell .page-hero--lg {
   min-height: 238px;
@@ -9830,4 +9848,141 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 :where([cmdk-input]:not(:disabled)) {
   cursor: text;
   caret-color: currentColor;
+}
+
+
+/* Mobile homepage v2: image-led hero, readable type, and a calmer platform hub. */
+@media (max-width: 767px) {
+  .lp-hero {
+    min-height: 700px;
+    justify-content: flex-end;
+    background: var(--ink-deep);
+  }
+  .lp-hero__media::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: "";
+    background:
+      linear-gradient(180deg, oklch(0.08 0.025 263 / 0.1) 0%, oklch(0.08 0.025 263 / 0.18) 32%, oklch(0.08 0.025 263 / 0.92) 82%, var(--ink-deep) 100%),
+      url("/media/hero/careers-team.webp") 72% center / cover no-repeat;
+    opacity: 0.82;
+  }
+  .lp-hero__shade {
+    z-index: 2;
+    background: linear-gradient(180deg, oklch(0.08 0.025 263 / 0.18) 0%, transparent 34%, oklch(0.08 0.025 263 / 0.88) 85%, var(--ink-deep) 100%);
+  }
+  .lp-hero__body {
+    z-index: 3;
+    padding-top: 118px;
+    padding-bottom: 34px;
+  }
+  .lp-hero__content {
+    padding: 20px 18px 18px;
+    border: 1px solid oklch(1 0 0 / 0.16);
+    border-radius: 20px;
+    background: linear-gradient(160deg, oklch(0.08 0.025 263 / 0.72), oklch(0.08 0.025 263 / 0.38));
+    box-shadow: 0 22px 55px -36px oklch(0 0 0 / 0.95);
+    backdrop-filter: blur(8px);
+  }
+  .lp-hero__content > * {
+    animation-play-state: running !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .lp-hero__content .chip-brass {
+    font-size: 0.72rem;
+  }
+  .lp-hero__title {
+    max-width: 12ch;
+    margin-top: 16px;
+    font-size: clamp(2.45rem, 12vw, 3.55rem);
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+  }
+  .lp-hero__lead {
+    max-width: 33ch;
+    margin-top: 16px;
+    color: oklch(1 0 0 / 0.86);
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .lp-hero__ctas {
+    display: grid;
+    gap: 9px;
+    margin-top: 20px;
+  }
+  .lp-hero__ctas > * {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 0.88rem;
+  }
+  .lp-hero__aside,
+  .lp-hero__panel,
+  .lp-hero__pillars {
+    display: none;
+  }
+  .mh {
+    padding: 22px 14px 92px;
+    background: var(--color-background);
+  }
+  .mh__tabs {
+    gap: 7px;
+    margin: 0 -2px 20px;
+    padding: 3px 2px 8px;
+  }
+  .mh__tab {
+    min-height: 42px;
+    padding: 0 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-card);
+    color: var(--color-muted-foreground);
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+  .mh__tab.is-on {
+    border-color: var(--brass);
+    color: var(--brass-deep);
+    background: color-mix(in oklab, var(--brass) 14%, var(--color-card));
+    box-shadow: 0 8px 18px -14px var(--brass);
+  }
+  .mh__lead {
+    margin: 0 2px 16px;
+    color: var(--color-foreground);
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .mh__grid {
+    gap: 10px;
+  }
+  .mh__grid li {
+    min-height: 112px;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 15px;
+    background: var(--color-card);
+    box-shadow: 0 12px 26px -24px oklch(0 0 0 / 0.7);
+  }
+  .mh__grid strong {
+    margin-top: 8px;
+    font-size: 0.95rem;
+  }
+  .mh__grid span {
+    margin-top: 6px;
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+  .mh__cta {
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    background: color-mix(in oklab, var(--color-background) 88%, transparent);
+  }
+  .mh__cta > * {
+    min-height: 46px;
+    font-size: 0.82rem;
+  }
 }
