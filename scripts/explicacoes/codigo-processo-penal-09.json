@@ -1,0 +1,420 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 09: arts. 305 a 347",
+  "units": {
+    "art-305": {
+      "simples": "Na falta ou no impedimento do escrivão, qualquer pessoa designada pela autoridade lavrará o auto de prisão em flagrante, depois de prestado o compromisso legal.",
+      "pontos": ["Falta ou impedimento do escrivão: qualquer pessoa designada pela autoridade lavra o auto.", "Exige o compromisso legal."],
+      "atencao": ["Compromisso legal prévio do substituto do escrivão."],
+      "exemplo": "Sem escrivão na delegacia, outra pessoa designada presta compromisso e lavra o auto.",
+      "prova": ["Assertiva que dispensa o compromisso legal da pessoa designada para lavrar o auto erra."],
+      "termos": [],
+      "remissoes": ["Art. 304"]
+    },
+    "art-306": {
+      "simples": "A prisão de qualquer pessoa e o local onde se encontre serão comunicados imediatamente ao juiz competente, ao Ministério Público e à família do preso ou à pessoa por ele indicada. Em até 24 horas após a prisão, será encaminhado ao juiz competente o auto de prisão em flagrante e, caso o autuado não informe o nome de seu advogado, cópia integral para a Defensoria Pública. No mesmo prazo, será entregue ao preso, mediante recibo, a nota de culpa, assinada pela autoridade, com o motivo da prisão, o nome do condutor e os das testemunhas.",
+      "pontos": ["Comunicação imediata ao juiz, ao MP e à família ou pessoa indicada.", "Em até 24 horas: auto ao juiz e, se não houver advogado, cópia à Defensoria Pública.", "Mesmo prazo: nota de culpa entregue ao preso, com recibo."],
+      "atencao": ["24 horas para o auto e para a nota de culpa.", "A nota de culpa traz motivo, condutor e testemunhas."],
+      "exemplo": "Em 24 horas da prisão, o preso recebe a nota de culpa e o auto segue ao juiz.",
+      "prova": ["Assertiva que fixa em 48 horas o prazo para encaminhar o auto de prisão em flagrante ao juiz erra: são 24 horas."],
+      "termos": [{ "termo": "Nota de culpa", "significado": "Documento que informa ao preso o motivo da prisão, o condutor e as testemunhas." }],
+      "remissoes": ["Art. 304", "Art. 310"]
+    },
+    "art-307": {
+      "simples": "Quando o fato for praticado em presença da autoridade, ou contra esta, no exercício de suas funções, constarão do auto a narração do fato, a voz de prisão, as declarações do preso e os depoimentos das testemunhas, assinados pela autoridade, pelo preso e pelas testemunhas, e remetidos imediatamente ao juiz a quem couber conhecer do fato delituoso.",
+      "pontos": ["Fato praticado na presença da autoridade ou contra ela, no exercício das funções.", "Auto narra o fato, a voz de prisão, declarações do preso e depoimentos.", "Assinado por autoridade, preso e testemunhas, e remetido ao juiz."],
+      "atencao": ["Procedimento simplificado quando o fato ocorre diante da autoridade."],
+      "exemplo": "Desacato praticado diante do juiz: lavra-se o auto e remete-se ao juízo competente.",
+      "prova": ["Assertiva que dispensa a remessa imediata do auto ao juiz competente nesses casos erra."],
+      "termos": [],
+      "remissoes": ["Art. 304"]
+    },
+    "art-308": {
+      "simples": "Não havendo autoridade no lugar em que se tiver efetuado a prisão, o preso será logo apresentado à do lugar mais próximo.",
+      "pontos": ["Sem autoridade no local da prisão: apresentação à autoridade do lugar mais próximo."],
+      "atencao": ["Apresentação imediata."],
+      "exemplo": "Preso em área remota é levado à delegacia do município mais próximo.",
+      "prova": ["Assertiva que manda aguardar a instalação de autoridade no local da prisão erra: o preso é apresentado à mais próxima."],
+      "termos": [],
+      "remissoes": ["Art. 304"]
+    },
+    "art-309": {
+      "simples": "Se o réu se livrar solto, deverá ser posto em liberdade depois de lavrado o auto de prisão em flagrante.",
+      "pontos": ["Réu que se livra solto é posto em liberdade após a lavratura do auto."],
+      "atencao": ["Relaciona-se à liberdade provisória e à fiança."],
+      "exemplo": "Em infração em que se livra solto, o autuado é liberado após o auto.",
+      "prova": ["Assertiva que mantém preso quem se livra solto, após o auto, erra."],
+      "termos": [],
+      "remissoes": ["Art. 321"]
+    },
+    "art-310": {
+      "simples": "Após receber o auto de prisão em flagrante, no prazo máximo de até 24 horas após a prisão, o juiz deverá promover, por videoconferência em tempo real, audiência de custódia com a presença do acusado, seu advogado constituído ou membro da Defensoria Pública e o membro do Ministério Público, e, nessa audiência, deverá, fundamentadamente: relaxar a prisão ilegal; converter a prisão em flagrante em preventiva, quando presentes os requisitos do art. 312 e se revelarem inadequadas ou insuficientes as medidas cautelares diversas da prisão; ou conceder liberdade provisória, com ou sem fiança. Se o juiz verificar, pelo auto, que o agente praticou o fato nas condições do art. 23, I, II ou III, do Código Penal (excludentes de ilicitude), poderá, fundamentadamente, conceder liberdade provisória mediante termo de comparecimento obrigatório. O texto vigente tem outros parágrafos sobre vedações e consequências da falta de audiência.",
+      "pontos": ["Audiência de custódia em até 24 horas da prisão, por videoconferência em tempo real.", "Presenças: acusado, advogado ou Defensoria, Ministério Público.", "Opções do juiz: relaxar a prisão ilegal; converter em preventiva; conceder liberdade provisória, com ou sem fiança.", "§1º: excludentes de ilicitude do art. 23 do CP permitem liberdade provisória."],
+      "atencao": ["Três caminhos fundamentados: relaxar, converter em preventiva ou conceder liberdade.", "Prazo de até 24 horas após a prisão."],
+      "exemplo": "Na audiência de custódia, o juiz relaxa a prisão por ilegalidade.",
+      "prova": ["Assertiva que permite ao juiz manter a prisão em flagrante, sem converter em preventiva, erra: ele deve relaxar, converter ou conceder liberdade."],
+      "termos": [],
+      "remissoes": ["Art. 287", "Art. 312"]
+    },
+    "art-310-a": {
+      "simples": "No caso de prisão em flagrante por crime praticado com violência ou grave ameaça contra a pessoa, por crime contra a dignidade sexual ou por crime praticado por agente integrante de organização criminosa armada, entre outras hipóteses do dispositivo, o juiz determinará a coleta de material biológico para obtenção do perfil genético. A coleta deverá ser feita, preferencialmente, na própria audiência de custódia ou no prazo de 10 dias, contado de sua realização. Será realizada por agente público treinado e respeitará os procedimentos de cadeia de custódia definidos pela legislação e complementados pelo órgão de perícia oficial de natureza criminal.",
+      "pontos": ["Prisão em flagrante por crime com violência ou grave ameaça, crime contra a dignidade sexual ou crime de integrante de organização criminosa armada, entre outras hipóteses.", "Coleta de material biológico para o perfil genético.", "Preferencialmente na audiência de custódia ou em até 10 dias.", "Agente público treinado e cadeia de custódia."],
+      "atencao": ["Incluído pela Lei nº 15.272, de 2025.", "Confira o texto integral do caput para as hipóteses completas."],
+      "exemplo": "Preso em flagrante por crime violento tem o DNA coletado na audiência de custódia.",
+      "prova": ["Assertiva que dispensa a observância da cadeia de custódia na coleta do material biológico erra."],
+      "termos": [],
+      "remissoes": ["Art. 310", "Art. 158-A"]
+    },
+    "art-311": {
+      "simples": "Em qualquer fase da investigação policial ou do processo penal, caberá a prisão preventiva decretada pelo juiz, a requerimento do Ministério Público, do querelante ou do assistente, ou por representação da autoridade policial.",
+      "pontos": ["Preventiva cabe em qualquer fase da investigação ou do processo.", "Decretada pelo juiz.", "A requerimento do MP, querelante ou assistente, ou por representação policial."],
+      "atencao": ["A Lei nº 13.964, de 2019, retirou a decretação de ofício pelo juiz."],
+      "exemplo": "O delegado representa pela preventiva, e o juiz decide.",
+      "prova": ["Assertiva que permite ao juiz decretar a preventiva de ofício erra, segundo a redação atual do art. 311."],
+      "termos": [],
+      "remissoes": ["Art. 312"]
+    },
+    "art-312": {
+      "simples": "A prisão preventiva poderá ser decretada como garantia da ordem pública, da ordem econômica, por conveniência da instrução criminal ou para assegurar a aplicação da lei penal, quando houver prova da existência do crime e indício suficiente de autoria e de perigo gerado pelo estado de liberdade do imputado. Também poderá ser decretada em caso de descumprimento de obrigações impostas por outras medidas cautelares. A decisão deve ser motivada e fundamentada em receio de perigo e na existência concreta de fatos novos ou contemporâneos que justifiquem a medida. Na aferição da periculosidade do agente, geradora de riscos à ordem pública, devem ser considerados o modus operandi (uso reiterado de violência ou grave ameaça, premeditação), a participação em organização criminosa e a natureza, quantidade e variedade de drogas, entre outros fatores.",
+      "pontos": ["Fundamentos: ordem pública, ordem econômica, conveniência da instrução, aplicação da lei penal.", "Requisitos: prova da existência do crime, indício suficiente de autoria e perigo da liberdade (fumus commissi delicti e periculum libertatis).", "§1º: descumprimento de outras cautelares.", "§2º: motivação com fatos novos ou contemporâneos.", "§3º: critérios de periculosidade (modus operandi, organização criminosa, drogas)."],
+      "atencao": ["Prova do CRIME e INDÍCIO de AUTORIA (não prova de autoria).", "Exige contemporaneidade dos fatos."],
+      "exemplo": "Preventiva por risco concreto de fuga para garantir a aplicação da lei penal.",
+      "prova": ["Assertiva que exige prova plena da autoria para a preventiva erra: basta indício suficiente."],
+      "termos": [{ "termo": "Periculum libertatis", "significado": "Perigo gerado pela liberdade do imputado." }],
+      "remissoes": ["Art. 311", "Art. 313", "Art. 315"]
+    },
+    "art-313": {
+      "simples": "Nos termos do art. 312, será admitida a decretação da prisão preventiva nos crimes dolosos punidos com pena privativa de liberdade máxima superior a 4 anos; se o agente tiver sido condenado por outro crime doloso, em sentença transitada em julgado, ressalvado o inciso I do art. 64 do Código Penal (período depurador); se o crime envolver violência doméstica e familiar contra a mulher, criança, adolescente, idoso, enfermo ou pessoa com deficiência, para garantir a execução das medidas protetivas de urgência; se o crime for cometido por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada; e nos crimes contra a dignidade sexual praticados contra criança ou adolescente, entre outras hipóteses do dispositivo.",
+      "pontos": ["I: crimes dolosos com pena máxima superior a 4 anos.", "II: reincidente em crime doloso, ressalvado o período depurador.", "III: violência doméstica e familiar, para garantir medidas protetivas.", "V: organização criminosa ultraviolenta, grupo paramilitar ou milícia.", "VI: crimes contra a dignidade sexual de criança ou adolescente e outros listados."],
+      "atencao": ["Pena máxima SUPERIOR a 4 anos (não 'igual ou superior').", "Inciso IV revogado."],
+      "exemplo": "Crime doloso com pena máxima de 8 anos admite preventiva, se presentes os requisitos do art. 312.",
+      "prova": ["Assertiva que admite a preventiva em crime culposo punido com pena máxima superior a 4 anos, pelo inciso I, erra: o inciso trata de crimes dolosos."],
+      "termos": [],
+      "remissoes": ["Art. 312", "Art. 314"]
+    },
+    "art-314": {
+      "simples": "A prisão preventiva em nenhum caso será decretada se o juiz verificar, pelas provas constantes dos autos, ter o agente praticado o fato nas condições previstas nos incisos I, II e III do caput do art. 23 do Código Penal (estado de necessidade, legítima defesa e estrito cumprimento do dever legal ou exercício regular de direito).",
+      "pontos": ["Preventiva vedada se o fato foi praticado sob excludente de ilicitude (art. 23, I, II e III, do CP)."],
+      "atencao": ["Vedação absoluta ('em nenhum caso')."],
+      "exemplo": "Juiz percebe, pelas provas, que houve legítima defesa e não decreta a preventiva.",
+      "prova": ["Assertiva que permite a preventiva mesmo diante de excludente de ilicitude evidente erra."],
+      "termos": [],
+      "remissoes": ["Art. 310, §1º"]
+    },
+    "art-315": {
+      "simples": "A decisão que decretar, substituir ou denegar a prisão preventiva será sempre motivada e fundamentada. Na motivação da decretação da preventiva ou de qualquer outra cautelar, o juiz deverá indicar concretamente a existência de fatos novos ou contemporâneos que justifiquem a medida. Não se considera fundamentada qualquer decisão judicial, seja interlocutória, sentença ou acórdão, que se limite à indicação, reprodução ou paráfrase de ato normativo sem explicar sua relação com a causa; empregue conceitos jurídicos indeterminados sem explicar o motivo concreto de sua incidência; invoque motivos que se prestariam a justificar qualquer outra decisão; não enfrente todos os argumentos capazes de, em tese, infirmar a conclusão; ou se limite a invocar precedente ou enunciado de súmula sem identificar seus fundamentos determinantes nem demonstrar que o caso se ajusta a eles, entre outras hipóteses do dispositivo.",
+      "pontos": ["Decisão sobre preventiva sempre motivada e fundamentada.", "Fatos novos ou contemporâneos indicados concretamente.", "§2º: decisão genérica não é fundamentada (paráfrase de norma, conceitos indeterminados sem explicação, motivos genéricos, argumentos não enfrentados, precedente sem fundamentos determinantes)."],
+      "atencao": ["§2º aplica-se a qualquer decisão judicial, não só à preventiva."],
+      "exemplo": "Decisão que apenas repete a fórmula 'garantia da ordem pública', sem fatos concretos, é considerada não fundamentada.",
+      "prova": ["Assertiva que aceita decisão que apenas reproduz o texto da lei como fundamentada erra."],
+      "termos": [],
+      "remissoes": ["Art. 312"]
+    },
+    "art-316": {
+      "simples": "O juiz poderá, de ofício ou a pedido das partes, revogar a prisão preventiva se, no correr da investigação ou do processo, verificar a falta de motivo para que ela subsista, bem como novamente decretá-la, se sobrevierem razões que a justifiquem. Decretada a prisão preventiva, o órgão emissor da decisão deverá revisar a necessidade de sua manutenção a cada 90 dias, mediante decisão fundamentada, de ofício, sob pena de tornar a prisão ilegal. O texto indica ADIs sobre o parágrafo único.",
+      "pontos": ["Revogação da preventiva se faltar motivo para sua manutenção.", "Nova decretação se sobrevierem razões.", "Revisão a cada 90 dias, de ofício, por decisão fundamentada.", "A falta de revisão pode tornar a prisão ilegal."],
+      "atencao": ["Revisão a cada 90 DIAS.", "O STF decidiu que a inobservância dos 90 dias não gera revogação automática da prisão (ADI 6581)."],
+      "exemplo": "O juiz revisa, a cada 90 dias, se subsistem os motivos da preventiva.",
+      "prova": ["Assertiva que fixa a revisão da preventiva a cada 60 dias erra: são 90 dias."],
+      "termos": [],
+      "remissoes": ["Art. 312"]
+    },
+    "art-317": {
+      "simples": "A prisão domiciliar consiste no recolhimento do indiciado ou acusado em sua residência, só podendo dela ausentar-se com autorização judicial.",
+      "pontos": ["Recolhimento na residência.", "Saída somente com autorização judicial."],
+      "atencao": ["Não confundir com o recolhimento domiciliar noturno (art. 319, V)."],
+      "exemplo": "O acusado fica recolhido em casa e só sai com autorização do juiz.",
+      "prova": ["Assertiva que permite saída livre do acusado em prisão domiciliar erra."],
+      "termos": [],
+      "remissoes": ["Art. 318"]
+    },
+    "art-318": {
+      "simples": "Poderá o juiz substituir a prisão preventiva pela domiciliar quando o agente for maior de 80 anos; extremamente debilitado por motivo de doença grave; imprescindível aos cuidados especiais de pessoa menor de 6 anos de idade ou com deficiência; gestante; mulher com filho de até 12 anos de idade incompletos; ou homem, caso seja o único responsável pelos cuidados do filho de até 12 anos incompletos. Para a substituição, o juiz exigirá prova idônea dos requisitos.",
+      "pontos": ["Maior de 80 anos.", "Extremamente debilitado por doença grave.", "Imprescindível aos cuidados de pessoa menor de 6 anos ou com deficiência.", "Gestante.", "Mulher com filho até 12 anos incompletos.", "Homem único responsável por filho até 12 anos incompletos.", "Prova idônea dos requisitos."],
+      "atencao": ["Hipóteses facultativas ('poderá'); o art. 318-A trata do caso obrigatório."],
+      "exemplo": "Preso maior de 80 anos pode ter a preventiva substituída pela domiciliar.",
+      "prova": ["Assertiva que fixa a idade de 70 anos para a domiciliar do art. 318, I, erra: são 80 anos."],
+      "termos": [],
+      "remissoes": ["Art. 318-A", "Art. 317"]
+    },
+    "art-318-a": {
+      "simples": "A prisão preventiva imposta à mulher gestante ou que for mãe ou responsável por crianças ou pessoas com deficiência será substituída por prisão domiciliar, desde que não tenha cometido crime com violência ou grave ameaça a pessoa e não tenha cometido o crime contra seu filho ou dependente.",
+      "pontos": ["Gestante, mãe ou responsável por crianças ou pessoas com deficiência.", "Substituição por domiciliar (regra).", "Condições: sem crime com violência ou grave ameaça; sem crime contra filho ou dependente."],
+      "atencao": ["A substituição é a regra, quando presentes os requisitos.", "O HC coletivo 143.641 do STF fundamentou a mudança, com ressalvas excepcionais."],
+      "exemplo": "Gestante presa por crime sem violência tem a preventiva substituída por domiciliar.",
+      "prova": ["Assertiva que torna facultativa a substituição do art. 318-A, mesmo presentes os requisitos, erra."],
+      "termos": [],
+      "remissoes": ["Art. 318"]
+    },
+    "art-318-b": {
+      "simples": "A substituição de que tratam os arts. 318 e 318-A poderá ser efetuada sem prejuízo da aplicação concomitante das medidas alternativas previstas no art. 319 do Código.",
+      "pontos": ["A prisão domiciliar pode ser acompanhada das medidas cautelares do art. 319."],
+      "atencao": ["Cumulação com medidas alternativas."],
+      "exemplo": "Preventiva substituída por domiciliar com monitoração eletrônica.",
+      "prova": ["Assertiva que veda a cumulação da domiciliar com medidas do art. 319 erra."],
+      "termos": [],
+      "remissoes": ["Art. 319"]
+    },
+    "art-319": {
+      "simples": "São medidas cautelares diversas da prisão: comparecimento periódico em juízo; proibição de acesso ou frequência a determinados lugares; proibição de manter contato com pessoa determinada; proibição de ausentar-se da comarca; recolhimento domiciliar no período noturno e nos dias de folga, quando o investigado ou acusado tenha residência e trabalho fixos; suspensão do exercício de função pública ou de atividade de natureza econômica ou financeira; internação provisória do acusado nas hipóteses de crimes praticados com violência ou grave ameaça, quando os peritos concluírem ser inimputável ou semi-imputável e houver risco de reiteração; fiança; e monitoração eletrônica.",
+      "pontos": ["I: comparecimento periódico em juízo.", "II: proibição de acesso ou frequência a certos lugares.", "III: proibição de contato com pessoa determinada.", "IV: proibição de ausentar-se da comarca.", "V: recolhimento domiciliar noturno e nos dias de folga.", "VI: suspensão de função pública ou atividade econômica.", "VII: internação provisória.", "VIII: fiança.", "IX: monitoração eletrônica."],
+      "atencao": ["Rol de nove medidas.", "A internação provisória depende de perícia e de risco de reiteração."],
+      "exemplo": "Proibição de contato com a vítima somada a monitoração eletrônica.",
+      "prova": ["Assertiva que inclui a prisão temporária entre as medidas cautelares diversas da prisão erra."],
+      "termos": [],
+      "remissoes": ["Art. 282", "Art. 320"]
+    },
+    "art-320": {
+      "simples": "A proibição de ausentar-se do País será comunicada pelo juiz às autoridades encarregadas de fiscalizar as saídas do território nacional, intimando-se o indiciado ou acusado para entregar o passaporte, no prazo de 24 horas.",
+      "pontos": ["Proibição de sair do País: comunicação às autoridades de fiscalização das saídas.", "Entrega do passaporte em 24 horas."],
+      "atencao": ["Prazo de 24 horas."],
+      "exemplo": "O acusado é intimado a entregar o passaporte em 24 horas.",
+      "prova": ["Assertiva que fixa em 5 dias o prazo para entrega do passaporte erra: são 24 horas."],
+      "termos": [],
+      "remissoes": ["Art. 319"]
+    },
+    "art-321": {
+      "simples": "Ausentes os requisitos que autorizam a decretação da prisão preventiva, o juiz deverá conceder liberdade provisória, impondo, se for o caso, as medidas cautelares previstas no art. 319 e observados os critérios do art. 282. Os incisos I e II estão revogados.",
+      "pontos": ["Ausentes os requisitos da preventiva: liberdade provisória.", "Pode impor medidas do art. 319, observado o art. 282."],
+      "atencao": ["Liberdade provisória é a regra quando faltam os requisitos da preventiva."],
+      "exemplo": "Sem requisitos da preventiva, o juiz concede liberdade provisória com comparecimento periódico.",
+      "prova": ["Assertiva que mantém a prisão sem requisitos da preventiva erra."],
+      "termos": [],
+      "remissoes": ["Art. 312", "Art. 319"]
+    },
+    "art-322": {
+      "simples": "A autoridade policial somente poderá conceder fiança nos casos de infração cuja pena privativa de liberdade máxima não seja superior a 4 anos. Nos demais casos, a fiança será requerida ao juiz, que decidirá em 48 horas.",
+      "pontos": ["Delegado concede fiança se a pena máxima não for superior a 4 anos.", "Demais casos: pedido ao juiz, que decide em 48 horas."],
+      "atencao": ["Pena MÁXIMA não superior a 4 anos.", "Juiz decide em 48 horas."],
+      "exemplo": "Em infração com pena máxima de 3 anos, o delegado pode arbitrar fiança.",
+      "prova": ["Assertiva que atribui ao delegado a concessão de fiança para pena máxima de 6 anos erra."],
+      "termos": [],
+      "remissoes": ["Art. 325"]
+    },
+    "art-323": {
+      "simples": "Não será concedida fiança nos crimes de racismo; nos crimes de tortura, tráfico ilícito de entorpecentes e drogas afins, terrorismo e nos definidos como crimes hediondos; e nos crimes cometidos por grupos armados, civis ou militares, contra a ordem constitucional e o Estado Democrático. Os incisos IV e V foram revogados.",
+      "pontos": ["Racismo.", "Tortura, tráfico, terrorismo e crimes hediondos.", "Crimes de grupos armados contra a ordem constitucional e o Estado Democrático."],
+      "atencao": ["Rol de crimes inafiançáveis (veja também a Constituição, art. 5º, XLII, XLIII e XLIV)."],
+      "exemplo": "Crime de racismo é inafiançável.",
+      "prova": ["Assertiva que admite fiança em crime de tortura erra."],
+      "termos": [],
+      "remissoes": ["Art. 324"]
+    },
+    "art-324": {
+      "simples": "Não será, igualmente, concedida fiança: aos que, no mesmo processo, tiverem quebrado fiança anteriormente concedida ou infringido, sem motivo justo, qualquer das obrigações dos arts. 327 e 328; em caso de prisão civil ou militar; e quando presentes os motivos que autorizam a decretação da prisão preventiva (art. 312). O inciso III está revogado.",
+      "pontos": ["Quem quebrou fiança no mesmo processo ou infringiu obrigações dos arts. 327 e 328.", "Prisão civil ou militar.", "Presentes os motivos da prisão preventiva."],
+      "atencao": ["Se há motivos para a preventiva, não cabe fiança."],
+      "exemplo": "Acusado que quebrou fiança anterior no mesmo processo não tem nova fiança.",
+      "prova": ["Assertiva que permite fiança quando presentes os motivos da preventiva erra."],
+      "termos": [],
+      "remissoes": ["Art. 323"]
+    },
+    "art-325": {
+      "simples": "O valor da fiança será fixado pela autoridade que a conceder nos seguintes limites: de 1 a 100 salários mínimos, quando se tratar de infração cuja pena privativa de liberdade, no grau máximo, não for superior a 4 anos; e de 10 a 200 salários mínimos, quando o máximo da pena privativa de liberdade cominada for superior a 4 anos. Se assim recomendar a situação econômica do preso, a fiança poderá ser dispensada, reduzida até o máximo de 2/3 ou aumentada em até 1.000 vezes.",
+      "pontos": ["Pena máxima até 4 anos: 1 a 100 salários mínimos.", "Pena máxima superior a 4 anos: 10 a 200 salários mínimos.", "Dispensa, redução de até 2/3 ou aumento de até 1.000 vezes, conforme a situação econômica."],
+      "atencao": ["Faixas de valor e possibilidade de ajuste pela situação econômica."],
+      "exemplo": "Preso muito rico tem a fiança aumentada em até 1.000 vezes.",
+      "prova": ["Assertiva que fixa o teto da redução da fiança em metade erra: pode ser reduzida até 2/3."],
+      "termos": [],
+      "remissoes": ["Art. 322", "Art. 326"]
+    },
+    "art-326": {
+      "simples": "Para determinar o valor da fiança, a autoridade terá em consideração a natureza da infração, as condições pessoais de fortuna e vida pregressa do acusado, as circunstâncias indicativas de sua periculosidade, bem como a importância provável das custas do processo, até final julgamento.",
+      "pontos": ["Natureza da infração.", "Condições pessoais de fortuna e vida pregressa.", "Circunstâncias indicativas de periculosidade.", "Custas prováveis do processo."],
+      "atencao": ["Critérios de fixação do valor."],
+      "exemplo": "O delegado considera a situação econômica do preso ao fixar a fiança.",
+      "prova": ["Assertiva que desconsidera as condições de fortuna do acusado ao fixar a fiança erra."],
+      "termos": [],
+      "remissoes": ["Art. 325"]
+    },
+    "art-327": {
+      "simples": "A fiança tomada por termo obrigará o afiançado a comparecer perante a autoridade, todas as vezes que for intimado para atos do inquérito e da instrução criminal e para o julgamento. Quando o réu não comparecer, a fiança será havida como quebrada.",
+      "pontos": ["Afiançado deve comparecer a todos os atos do inquérito, da instrução e do julgamento.", "Não comparecimento: fiança quebrada."],
+      "atencao": ["Obrigação de comparecimento."],
+      "exemplo": "Afiançado falta à audiência sem justificativa: fiança quebrada.",
+      "prova": ["Assertiva que dispensa o comparecimento do afiançado aos atos do inquérito erra."],
+      "termos": [],
+      "remissoes": ["Art. 341"]
+    },
+    "art-328": {
+      "simples": "O réu afiançado não poderá, sob pena de quebramento da fiança, mudar de residência sem prévia permissão da autoridade processante, ou ausentar-se por mais de 8 dias de sua residência sem comunicar àquela autoridade o lugar onde será encontrado.",
+      "pontos": ["Mudança de residência exige prévia permissão.", "Ausência por mais de 8 dias exige comunicação do local."],
+      "atencao": ["Prazo de 8 dias."],
+      "exemplo": "Afiançado viaja por 10 dias sem comunicar onde estará: quebra de fiança.",
+      "prova": ["Assertiva que fixa em 15 dias o limite de ausência sem comunicação erra: são 8 dias."],
+      "termos": [],
+      "remissoes": ["Art. 341"]
+    },
+    "art-329": {
+      "simples": "Nos juízos criminais e delegacias de polícia, haverá um livro especial, com termos de abertura e de encerramento, numerado e rubricado em todas as suas folhas pela autoridade, destinado especialmente aos termos de fiança. O termo será lavrado pelo escrivão e assinado pela autoridade e por quem prestar a fiança, e dele extrair-se-á certidão para juntar-se aos autos. O réu e quem prestar a fiança serão notificados pelo escrivão das obrigações e da sanção previstas nos arts. 327 e 328, o que constará dos autos.",
+      "pontos": ["Livro especial de termos de fiança, numerado e rubricado.", "Termo lavrado pelo escrivão e assinado pela autoridade e por quem presta a fiança.", "Certidão juntada aos autos.", "Notificação das obrigações e sanções dos arts. 327 e 328."],
+      "atencao": ["Formalidades do termo de fiança."],
+      "exemplo": "O escrivão lavra o termo de fiança no livro especial.",
+      "prova": ["Assertiva que dispensa a notificação do réu quanto às obrigações da fiança erra."],
+      "termos": [],
+      "remissoes": ["Art. 327", "Art. 328"]
+    },
+    "art-330": {
+      "simples": "A fiança, que será sempre definitiva, consistirá em depósito de dinheiro, pedras, objetos ou metais preciosos, títulos da dívida pública, federal, estadual ou municipal, ou em hipoteca inscrita em primeiro lugar. A avaliação de imóvel, pedras, objetos ou metais preciosos será feita imediatamente por perito nomeado pela autoridade. Quando a fiança consistir em caução de títulos da dívida pública, o valor será determinado pela sua cotação em Bolsa, e, sendo nominativos, exigir-se-á prova de que estão livres de ônus.",
+      "pontos": ["Fiança sempre definitiva.", "Modalidades: depósito de dinheiro, pedras, objetos ou metais preciosos, títulos da dívida pública, ou hipoteca em primeiro lugar.", "Avaliação imediata por perito.", "Títulos: cotação em Bolsa e prova de que estão livres de ônus."],
+      "atencao": ["Fiança sempre DEFINITIVA."],
+      "exemplo": "A fiança é prestada mediante depósito em dinheiro.",
+      "prova": ["Assertiva que admite fiança provisória no art. 330 erra: ela é sempre definitiva."],
+      "termos": [],
+      "remissoes": ["Art. 331"]
+    },
+    "art-331": {
+      "simples": "O valor em que consistir a fiança será recolhido à repartição arrecadadora federal ou estadual, ou entregue ao depositário público, juntando-se aos autos os respectivos conhecimentos. Nos lugares em que o depósito não se puder fazer de pronto, o valor será entregue ao escrivão ou pessoa abonada, a critério da autoridade, e dentro de três dias dar-se-á ao valor o destino que lhe assina o artigo, o que tudo constará do termo de fiança.",
+      "pontos": ["Valor recolhido à repartição arrecadadora ou entregue ao depositário público.", "Conhecimentos juntados aos autos.", "Sem depósito imediato: entrega ao escrivão ou pessoa abonada e destinação em três dias."],
+      "atencao": ["Prazo de três dias para a destinação."],
+      "exemplo": "Em local sem banco, a fiança é entregue ao escrivão e depositada em três dias.",
+      "prova": ["Assertiva que fixa em 10 dias o prazo para dar destino ao valor entregue ao escrivão erra: são três dias."],
+      "termos": [],
+      "remissoes": ["Art. 330"]
+    },
+    "art-332": {
+      "simples": "Em caso de prisão em flagrante, será competente para conceder a fiança a autoridade que presidir ao respectivo auto e, em caso de prisão por mandado, o juiz que o houver expedido, ou a autoridade judiciária ou policial a quem tiver sido requisitada a prisão.",
+      "pontos": ["Flagrante: autoridade que preside o auto.", "Prisão por mandado: juiz que o expediu, ou autoridade a quem foi requisitada a prisão."],
+      "atencao": ["Competência para conceder a fiança."],
+      "exemplo": "Delegado que preside o auto de flagrante pode conceder a fiança, nos limites da lei.",
+      "prova": ["Assertiva que atribui ao Ministério Público a concessão da fiança erra."],
+      "termos": [],
+      "remissoes": ["Art. 322"]
+    },
+    "art-333": {
+      "simples": "Depois de prestada a fiança, que será concedida independentemente de audiência do Ministério Público, este terá vista do processo a fim de requerer o que julgar conveniente.",
+      "pontos": ["Fiança concedida sem oitiva prévia do MP.", "Depois de prestada, o MP tem vista para requerer o que entender."],
+      "atencao": ["Oitiva do MP apenas posterior."],
+      "exemplo": "O MP examina o processo após a prestação da fiança.",
+      "prova": ["Assertiva que exige a prévia oitiva do MP para conceder a fiança erra."],
+      "termos": [],
+      "remissoes": ["Art. 332"]
+    },
+    "art-334": {
+      "simples": "A fiança poderá ser prestada enquanto não transitar em julgado a sentença condenatória.",
+      "pontos": ["Fiança pode ser prestada até o trânsito em julgado da sentença condenatória."],
+      "atencao": ["Limite temporal: o trânsito em julgado."],
+      "exemplo": "Mesmo após a sentença condenatória recorrível, a fiança ainda pode ser prestada.",
+      "prova": ["Assertiva que limita a fiança à fase de inquérito erra."],
+      "termos": [],
+      "remissoes": ["Art. 330"]
+    },
+    "art-335": {
+      "simples": "Recusando ou retardando a autoridade policial a concessão da fiança, o preso, ou alguém por ele, poderá prestá-la, mediante simples petição, perante o juiz competente, que decidirá em 48 horas.",
+      "pontos": ["Recusa ou retardo do delegado: petição ao juiz.", "Juiz decide em 48 horas."],
+      "atencao": ["Prazo de 48 horas."],
+      "exemplo": "O delegado retarda a fiança, e o preso pede ao juiz por simples petição.",
+      "prova": ["Assertiva que exige habeas corpus para a fiança recusada pela autoridade policial erra: basta simples petição."],
+      "termos": [],
+      "remissoes": ["Art. 322"]
+    },
+    "art-336": {
+      "simples": "O dinheiro ou objetos dados como fiança servirão ao pagamento das custas, da indenização do dano, da prestação pecuniária e da multa, se o réu for condenado. Este dispositivo terá aplicação ainda no caso da prescrição depois da sentença condenatória.",
+      "pontos": ["Fiança paga custas, indenização, prestação pecuniária e multa, se condenado.", "Aplica-se também na prescrição após a sentença condenatória."],
+      "atencao": ["Mesmo com prescrição posterior à condenação."],
+      "exemplo": "Condenado o réu, o valor da fiança cobre custas e multa.",
+      "prova": ["Assertiva que devolve a fiança ao réu na prescrição posterior à sentença condenatória erra."],
+      "termos": [],
+      "remissoes": ["Art. 337"]
+    },
+    "art-337": {
+      "simples": "Se a fiança for declarada sem efeito ou passar em julgado sentença que houver absolvido o acusado ou declarada extinta a ação penal, o valor que a constituir, atualizado, será restituído sem desconto, salvo o disposto no parágrafo único do art. 336.",
+      "pontos": ["Fiança sem efeito, absolvição ou extinção da ação: restituição do valor atualizado, sem desconto.", "Ressalva do parágrafo único do art. 336."],
+      "atencao": ["Valor devolvido atualizado e sem desconto."],
+      "exemplo": "Acusado absolvido recebe de volta o valor da fiança, atualizado.",
+      "prova": ["Assertiva que autoriza descontar custas do valor devolvido na absolvição erra."],
+      "termos": [],
+      "remissoes": ["Art. 336"]
+    },
+    "art-338": {
+      "simples": "A fiança que se reconheça não ser cabível na espécie será cassada em qualquer fase do processo.",
+      "pontos": ["Fiança incabível é cassada em qualquer fase do processo."],
+      "atencao": ["Cassação por incabimento."],
+      "exemplo": "Percebe-se que o crime é inafiançável, e a fiança é cassada.",
+      "prova": ["Assertiva que impede a cassação da fiança após certa fase do processo erra."],
+      "termos": [],
+      "remissoes": ["Art. 339"]
+    },
+    "art-339": {
+      "simples": "Será também cassada a fiança quando reconhecida a existência de delito inafiançável, no caso de inovação na classificação do delito.",
+      "pontos": ["Cassação da fiança se a nova classificação revelar delito inafiançável."],
+      "atencao": ["Inovação na classificação do delito."],
+      "exemplo": "Desclassificação para crime hediondo faz cassar a fiança.",
+      "prova": ["Assertiva que mantém a fiança após reclassificação para crime inafiançável erra."],
+      "termos": [],
+      "remissoes": ["Art. 338"]
+    },
+    "art-340": {
+      "simples": "Será exigido o reforço da fiança quando a autoridade tomar, por engano, fiança insuficiente; quando houver depreciação material ou perecimento dos bens hipotecados ou caucionados, ou depreciação dos metais ou pedras preciosas; ou quando for inovada a classificação do delito. A fiança ficará sem efeito e o réu será recolhido à prisão quando, na conformidade deste artigo, não for reforçada.",
+      "pontos": ["I: fiança insuficiente por engano.", "II: depreciação ou perecimento dos bens dados em garantia.", "III: nova classificação do delito.", "Sem reforço: fiança sem efeito e réu recolhido à prisão."],
+      "atencao": ["Falta de reforço leva à prisão."],
+      "exemplo": "Os bens caucionados se depreciam, e o juiz exige o reforço da fiança.",
+      "prova": ["Assertiva que dispensa o reforço da fiança quando os bens se depreciam erra."],
+      "termos": [],
+      "remissoes": ["Art. 341"]
+    },
+    "art-341": {
+      "simples": "Julgar-se-á quebrada a fiança quando o acusado, regularmente intimado para ato do processo, deixar de comparecer sem motivo justo; deliberadamente praticar ato de obstrução ao andamento do processo; descumprir medida cautelar imposta cumulativamente com a fiança; resistir injustificadamente a ordem judicial; ou praticar nova infração penal dolosa.",
+      "pontos": ["I: falta injustificada a ato do processo.", "II: obstrução deliberada do processo.", "III: descumprimento de cautelar cumulada.", "IV: resistência injustificada a ordem judicial.", "V: nova infração penal dolosa."],
+      "atencao": ["Rol de cinco hipóteses de quebramento."],
+      "exemplo": "Afiançado comete novo crime doloso: fiança quebrada.",
+      "prova": ["Assertiva que considera a prática de infração culposa hipótese de quebramento da fiança erra: o inciso V fala em infração dolosa."],
+      "termos": [],
+      "remissoes": ["Art. 343"]
+    },
+    "art-342": {
+      "simples": "Se vier a ser reformado o julgamento em que se declarou quebrada a fiança, esta subsistirá em todos os seus efeitos.",
+      "pontos": ["Reformada a decisão que declarou a fiança quebrada, ela subsiste com todos os efeitos."],
+      "atencao": ["A reforma restabelece a fiança."],
+      "exemplo": "O tribunal reforma a decisão que quebrou a fiança, e ela volta a valer.",
+      "prova": ["Assertiva que mantém a fiança quebrada mesmo após a reforma da decisão erra."],
+      "termos": [],
+      "remissoes": ["Art. 341"]
+    },
+    "art-343": {
+      "simples": "O quebramento injustificado da fiança importará na perda de metade do seu valor, cabendo ao juiz decidir sobre a imposição de outras medidas cautelares ou, se for o caso, a decretação da prisão preventiva.",
+      "pontos": ["Quebramento injustificado: perda de metade do valor.", "O juiz decide sobre outras cautelares ou preventiva."],
+      "atencao": ["Perda de METADE (e não da totalidade)."],
+      "exemplo": "Fiança quebrada sem justificativa: o acusado perde metade do valor.",
+      "prova": ["Assertiva que determina a perda total do valor no quebramento erra: é metade."],
+      "termos": [],
+      "remissoes": ["Art. 344"]
+    },
+    "art-344": {
+      "simples": "Entender-se-á perdido, na totalidade, o valor da fiança, se, condenado, o acusado não se apresentar para o início do cumprimento da pena definitivamente imposta.",
+      "pontos": ["Condenado que não se apresenta para cumprir a pena definitiva perde a totalidade da fiança."],
+      "atencao": ["Perda TOTAL."],
+      "exemplo": "Condenado definitivo foge e não se apresenta: perde todo o valor da fiança.",
+      "prova": ["Assertiva que limita a perda à metade nessa hipótese erra: é a totalidade."],
+      "termos": [],
+      "remissoes": ["Art. 343"]
+    },
+    "art-345": {
+      "simples": "No caso de perda da fiança, o seu valor, deduzidas as custas e mais encargos a que o acusado estiver obrigado, será recolhido ao fundo penitenciário, na forma da lei.",
+      "pontos": ["Perda da fiança: valor líquido de custas e encargos vai ao fundo penitenciário."],
+      "atencao": ["Destino: fundo penitenciário."],
+      "exemplo": "Fiança perdida, deduzidas as custas, vai ao fundo penitenciário.",
+      "prova": ["Assertiva que destina a fiança perdida ao ofendido, nos termos do art. 345, erra."],
+      "termos": [],
+      "remissoes": ["Art. 344"]
+    },
+    "art-346": {
+      "simples": "No caso de quebramento de fiança, feitas as deduções previstas no art. 345, o valor restante será recolhido ao fundo penitenciário, na forma da lei.",
+      "pontos": ["Quebramento: após as deduções do art. 345, o valor restante vai ao fundo penitenciário."],
+      "atencao": ["Mesmo destino da fiança perdida."],
+      "exemplo": "Na quebra da fiança, o valor restante é recolhido ao fundo penitenciário.",
+      "prova": ["Assertiva que devolve ao acusado o valor restante da fiança quebrada erra."],
+      "termos": [],
+      "remissoes": ["Art. 345"]
+    },
+    "art-347": {
+      "simples": "Não ocorrendo a hipótese do art. 345, o saldo será entregue a quem houver prestado a fiança, depois de deduzidos os encargos a que o réu estiver obrigado.",
+      "pontos": ["Não havendo perda, o saldo é devolvido a quem prestou a fiança.", "Deduzidos os encargos do réu."],
+      "atencao": ["Devolução a quem prestou a fiança, e não necessariamente ao réu."],
+      "exemplo": "Terceiro que prestou a fiança recebe o saldo após as deduções.",
+      "prova": ["Assertiva que destina o saldo sempre ao réu erra: vai a quem prestou a fiança."],
+      "termos": [],
+      "remissoes": ["Art. 345"]
+    }
+  }
+}
