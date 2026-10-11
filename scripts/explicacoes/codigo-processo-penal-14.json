@@ -1,0 +1,420 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 14: arts. 534 a 589",
+  "units": {
+    "art-534": {
+      "simples": "No procedimento sumário, as alegações finais serão orais, concedendo-se a palavra, respectivamente, à acusação e à defesa, pelo prazo de 20 minutos, prorrogáveis por mais 10, proferindo o juiz, a seguir, sentença. Havendo mais de um acusado, o tempo previsto para a defesa de cada um será individual. Ao assistente do Ministério Público, após a manifestação deste, serão concedidos 10 minutos, prorrogando-se por igual período o tempo da defesa.",
+      "pontos": ["Alegações finais orais: 20 minutos, prorrogáveis por mais 10.", "Acusação e defesa, nessa ordem; sentença em seguida.", "Mais de um acusado: tempo individual.", "Assistente: 10 minutos, com igual prorrogação para a defesa."],
+      "atencao": ["Mesmos tempos do rito ordinário."],
+      "exemplo": "No rito sumário, o juiz profere a sentença logo após as alegações orais.",
+      "prova": ["Assertiva que fixa alegações finais por memoriais obrigatórios no rito sumário erra: são orais."],
+      "termos": [],
+      "remissoes": ["Art. 403"]
+    },
+    "art-535": {
+      "simples": "Nenhum ato será adiado, salvo quando imprescindível a prova faltante, determinando o juiz a condução coercitiva de quem deva comparecer. Os §§ 1º e 2º foram revogados.",
+      "pontos": ["Regra: nenhum ato é adiado.", "Exceção: prova faltante imprescindível, com condução coercitiva de quem deva comparecer."],
+      "atencao": ["Princípio da concentração dos atos."],
+      "exemplo": "Testemunha essencial não comparece, e o juiz determina sua condução coercitiva.",
+      "prova": ["Assertiva que permite adiar os atos do rito sumário livremente erra."],
+      "termos": [],
+      "remissoes": ["Art. 536"]
+    },
+    "art-536": {
+      "simples": "A testemunha que comparecer será inquirida, independentemente da suspensão da audiência, observada em qualquer caso a ordem estabelecida no art. 531.",
+      "pontos": ["Testemunha presente é inquirida mesmo que a audiência esteja suspensa.", "Respeita-se a ordem do art. 531."],
+      "atencao": ["A ordem do art. 531 é mantida."],
+      "exemplo": "A testemunha presente é ouvida, observada a ordem legal.",
+      "prova": ["Assertiva que adia a inquirição da testemunha presente até a localização das demais erra."],
+      "termos": [],
+      "remissoes": ["Art. 531"]
+    },
+    "art-538": {
+      "simples": "Nas infrações penais de menor potencial ofensivo, quando o juizado especial criminal encaminhar ao juízo comum as peças existentes para a adoção de outro procedimento, observar-se-á o procedimento sumário previsto neste Capítulo. Os §§ 1º a 4º foram revogados.",
+      "pontos": ["Menor potencial ofensivo remetido ao juízo comum: procedimento sumário."],
+      "atencao": ["Ocorre, por exemplo, quando o réu não é encontrado para citação no Juizado."],
+      "exemplo": "O Juizado Especial remete as peças ao juízo comum, que adota o rito sumário.",
+      "prova": ["Assertiva que adota o rito ordinário nesse caso erra: aplica-se o sumário."],
+      "termos": [],
+      "remissoes": ["Art. 394"]
+    },
+    "art-541": {
+      "simples": "Os autos originais de processo penal extraviados ou destruídos, em primeira ou segunda instância, serão restaurados. Se existir e for exibida cópia autêntica ou certidão do processo, será uma ou outra considerada como original. Na falta, o juiz mandará, de ofício ou a requerimento, que o escrivão certifique o estado do processo segundo sua lembrança e reproduza o que houver nos protocolos; que sejam requisitadas cópias do que constar em institutos e repartições; e que as partes sejam citadas pessoalmente, ou por edital com o prazo de dez dias. A restauração será na primeira instância, ainda que os autos se tenham extraviado na segunda.",
+      "pontos": ["Autos extraviados ou destruídos são restaurados.", "Cópia autêntica ou certidão vale como original.", "Sem elas: certidão do escrivão, requisição de cópias e citação das partes (edital de dez dias).", "Restauração na primeira instância."],
+      "atencao": ["Edital de dez dias."],
+      "exemplo": "Os autos são perdidos, e o escrivão certifica o estado do processo para a restauração.",
+      "prova": ["Assertiva que fixa a restauração na segunda instância, se lá o extravio ocorreu, erra: ocorre na primeira."],
+      "termos": [{ "termo": "Restauração de autos", "significado": "Procedimento para reconstituir autos perdidos ou destruídos." }],
+      "remissoes": ["Art. 542"]
+    },
+    "art-542": {
+      "simples": "No dia designado, as partes serão ouvidas, mencionando-se em termo circunstanciado os pontos em que estiverem acordes e a exibição e a conferência das certidões e mais reproduções do processo apresentadas e conferidas.",
+      "pontos": ["Partes ouvidas no dia designado.", "Termo circunstanciado: pontos de acordo e conferência das certidões e reproduções."],
+      "atencao": ["Termo circunstanciado."],
+      "exemplo": "No dia da restauração, as partes confirmam os pontos de acordo em termo.",
+      "prova": ["Assertiva que dispensa o termo circunstanciado na restauração de autos erra."],
+      "termos": [],
+      "remissoes": ["Art. 541"]
+    },
+    "art-543": {
+      "simples": "O juiz determinará as diligências necessárias para a restauração, observando-se o seguinte: se ainda não foi proferida a sentença, reinquirir-se-ão as testemunhas, podendo ser substituídas as que tiverem falecido ou se encontrarem em lugar não sabido; os exames periciais, quando possível, serão repetidos, de preferência pelos mesmos peritos; a prova documental será reproduzida por cópia autêntica ou, quando impossível, por testemunhas; poderão ser inquiridas autoridades, serventuários, peritos e outras pessoas que tenham funcionado; e o Ministério Público e as partes poderão oferecer testemunhas e produzir documentos para provar o teor do processo extraviado ou destruído.",
+      "pontos": ["Reinquirição de testemunhas (substituição das que faleceram ou estão em local ignorado).", "Repetição dos exames periciais, de preferência pelos mesmos peritos.", "Prova documental por cópia autêntica ou testemunhas.", "Oitiva de autoridades, serventuários e peritos que atuaram.", "Partes produzem provas do teor do processo."],
+      "atencao": ["Repetição, quando possível, das provas."],
+      "exemplo": "Testemunhas são reinquiridas para reconstituir o processo.",
+      "prova": ["Assertiva que dispensa a repetição de exames periciais na restauração erra."],
+      "termos": [],
+      "remissoes": ["Art. 541"]
+    },
+    "art-544": {
+      "simples": "Realizadas as diligências que, salvo motivo de força maior, deverão concluir-se dentro de vinte dias, serão os autos conclusos para julgamento. No curso do processo, e depois de subirem os autos conclusos para sentença, o juiz poderá, dentro em cinco dias, requisitar de autoridades ou de repartições todos os esclarecimentos para a restauração.",
+      "pontos": ["Diligências em vinte dias, salvo força maior.", "Autos conclusos para julgamento.", "O juiz pode requisitar esclarecimentos em cinco dias."],
+      "atencao": ["Vinte dias para as diligências."],
+      "exemplo": "Concluídas as diligências em vinte dias, os autos vão a julgamento.",
+      "prova": ["Assertiva que fixa em trinta dias o prazo das diligências de restauração erra: são vinte dias."],
+      "termos": [],
+      "remissoes": ["Art. 541"]
+    },
+    "art-545": {
+      "simples": "Os selos e as taxas judiciárias, já pagos nos autos originais, não serão novamente cobrados.",
+      "pontos": ["Selos e taxas já pagos nos autos originais não são cobrados de novo."],
+      "atencao": ["Evita cobrança dupla."],
+      "exemplo": "As custas pagas nos autos perdidos não são cobradas na restauração.",
+      "prova": ["Assertiva que cobra novamente as taxas já pagas erra."],
+      "termos": [],
+      "remissoes": ["Art. 546"]
+    },
+    "art-546": {
+      "simples": "Os causadores de extravio de autos responderão pelas custas, em dobro, sem prejuízo da responsabilidade criminal.",
+      "pontos": ["Quem causa o extravio paga as custas em dobro.", "Sem prejuízo da responsabilidade criminal."],
+      "atencao": ["Custas em dobro."],
+      "exemplo": "O responsável pelo extravio paga custas em dobro.",
+      "prova": ["Assertiva que isenta o causador do extravio de responsabilidade criminal erra."],
+      "termos": [],
+      "remissoes": ["Art. 545"]
+    },
+    "art-547": {
+      "simples": "Julgada a restauração, os autos respectivos valerão pelos originais. Se no curso da restauração aparecerem os autos originais, nestes continuará o processo, apensos a eles os autos da restauração.",
+      "pontos": ["Restauração julgada: os autos restaurados valem como originais.", "Reaparecidos os originais: o processo continua neles, com a restauração apensa."],
+      "atencao": ["Original reaparecido prevalece."],
+      "exemplo": "Os autos originais surgem durante a restauração: o processo continua neles.",
+      "prova": ["Assertiva que prefere os autos restaurados aos originais reencontrados erra."],
+      "termos": [],
+      "remissoes": ["Art. 541"]
+    },
+    "art-548": {
+      "simples": "Até a decisão que julgue restaurados os autos, a sentença condenatória em execução continuará a produzir efeito, desde que conste da respectiva guia arquivada na cadeia ou na penitenciária, onde o réu estiver cumprindo a pena, ou de registro que torne a sua existência inequívoca.",
+      "pontos": ["Sentença condenatória em execução continua a produzir efeito até a restauração.", "Exige guia arquivada ou registro que torne sua existência inequívoca."],
+      "atencao": ["A condenação continua válida."],
+      "exemplo": "Autos perdidos: o condenado continua cumprindo a pena pela guia arquivada.",
+      "prova": ["Assertiva que suspende a execução da pena até a restauração dos autos erra."],
+      "termos": [],
+      "remissoes": ["Art. 541"]
+    },
+    "art-549": {
+      "simples": "Se a autoridade policial tiver conhecimento de fato que, embora não constituindo infração penal, possa determinar a aplicação de medida de segurança (arts. 14 e 27 do Código Penal em sua redação original), deverá proceder a inquérito, a fim de apurá-lo e averiguar todos os elementos que possam interessar à verificação da periculosidade do agente.",
+      "pontos": ["Fato que não é infração penal, mas pode levar à medida de segurança.", "A autoridade policial instaura inquérito para apurar a periculosidade."],
+      "atencao": ["Dispositivo ligado à medida de segurança sem crime (instituto superado)."],
+      "exemplo": "Texto histórico, de aplicação rara.",
+      "prova": ["Assertiva que exige infração penal para o inquérito do art. 549 erra, porque o texto trata de fato que não constitui infração."],
+      "termos": [],
+      "remissoes": ["Art. 550"]
+    },
+    "art-550": {
+      "simples": "O processo será promovido pelo Ministério Público, mediante requerimento que conterá a exposição sucinta do fato, as suas circunstâncias e todos os elementos em que se fundar o pedido.",
+      "pontos": ["O MP promove o processo por requerimento.", "Contém exposição sucinta do fato, circunstâncias e elementos do pedido."],
+      "atencao": ["Rito especial para fato não criminoso."],
+      "exemplo": "O MP requer o processo por fato não criminoso, expondo as circunstâncias.",
+      "prova": ["Assertiva que atribui a promoção desse processo à autoridade policial erra: é do Ministério Público."],
+      "termos": [],
+      "remissoes": ["Art. 549"]
+    },
+    "art-551": {
+      "simples": "O juiz, ao deferir o requerimento, ordenará a intimação do interessado para comparecer em juízo, a fim de ser interrogado.",
+      "pontos": ["Deferido o requerimento, o interessado é intimado para interrogatório."],
+      "atencao": ["Interrogatório do interessado."],
+      "exemplo": "O juiz defere o requerimento e intima o interessado para ser interrogado.",
+      "prova": ["Assertiva que dispensa o interrogatório do interessado erra."],
+      "termos": [],
+      "remissoes": ["Art. 550"]
+    },
+    "art-552": {
+      "simples": "Após o interrogatório ou dentro do prazo de dois dias, o interessado ou seu defensor poderá oferecer alegações. O juiz nomeará defensor ao interessado que não o tiver.",
+      "pontos": ["Alegações após o interrogatório ou em dois dias.", "Defensor nomeado ao interessado sem defensor."],
+      "atencao": ["Prazo de dois dias."],
+      "exemplo": "O interessado, sem advogado, recebe defensor nomeado para oferecer alegações.",
+      "prova": ["Assertiva que fixa em cinco dias o prazo das alegações erra: são dois dias."],
+      "termos": [],
+      "remissoes": ["Art. 553"]
+    },
+    "art-553": {
+      "simples": "O Ministério Público, ao fazer o requerimento inicial, e a defesa, no prazo estabelecido no artigo anterior, poderão requerer exames, diligências e arrolar até três testemunhas.",
+      "pontos": ["MP e defesa podem requerer exames e diligências.", "Arrolar até três testemunhas."],
+      "atencao": ["Limite de três testemunhas."],
+      "exemplo": "A defesa arrola três testemunhas e requer um exame.",
+      "prova": ["Assertiva que fixa em cinco o número de testemunhas desse rito erra: são três."],
+      "termos": [],
+      "remissoes": ["Art. 552"]
+    },
+    "art-554": {
+      "simples": "Após o prazo de defesa ou a realização dos exames e diligências ordenados pelo juiz, de ofício ou a requerimento das partes, será marcada audiência, em que, inquiridas as testemunhas e produzidas alegações orais pelo Ministério Público e pelo defensor, dentro de dez minutos para cada um, o juiz proferirá sentença. Se o juiz não se julgar habilitado a proferir a decisão, designará, desde logo, outra audiência, que se realizará dentro de cinco dias, para publicar a sentença.",
+      "pontos": ["Audiência após o prazo de defesa e as diligências.", "Alegações orais de dez minutos para cada parte.", "Sentença proferida; se necessário, nova audiência em cinco dias para publicá-la."],
+      "atencao": ["Dez minutos e, se necessário, cinco dias para publicar a sentença."],
+      "exemplo": "O juiz designa nova audiência em cinco dias para publicar a sentença.",
+      "prova": ["Assertiva que fixa em vinte minutos as alegações orais desse rito erra: são dez."],
+      "termos": [],
+      "remissoes": ["Art. 555"]
+    },
+    "art-555": {
+      "simples": "Quando, instaurado processo por infração penal, o juiz, absolvendo ou impronunciando o réu, reconhecer a existência de qualquer dos fatos previstos nos arts. 14 ou 27 do Código Penal (redação original), aplicar-lhe-á, se for o caso, medida de segurança.",
+      "pontos": ["Absolvição ou impronúncia com reconhecimento de fato previsto nos arts. 14 ou 27 do CP.", "Aplicação de medida de segurança, se for o caso."],
+      "atencao": ["Dispositivo histórico ligado ao sistema anterior de medidas de segurança."],
+      "exemplo": "Texto histórico, de aplicação rara hoje.",
+      "prova": ["Assertiva que aplica o art. 555 sem considerar a reforma do Código Penal erra."],
+      "termos": [],
+      "remissoes": ["Art. 549"]
+    },
+    "art-563": {
+      "simples": "Nenhum ato será declarado nulo, se da nulidade não resultar prejuízo para a acusação ou para a defesa (princípio pas de nullité sans grief).",
+      "pontos": ["Sem prejuízo, não há nulidade.", "Vale para acusação e defesa."],
+      "atencao": ["Exige a demonstração de prejuízo."],
+      "exemplo": "Vício formal que não prejudicou a defesa não leva à nulidade.",
+      "prova": ["Assertiva que declara nulidade sem demonstração de prejuízo erra, em regra."],
+      "termos": [{ "termo": "Pas de nullité sans grief", "significado": "Não há nulidade sem prejuízo." }],
+      "remissoes": ["Art. 566"]
+    },
+    "art-564": {
+      "simples": "A nulidade ocorrerá por incompetência, suspeição ou suborno do juiz; por ilegitimidade de parte; por falta das fórmulas ou dos termos como a denúncia ou a queixa e a representação, o exame do corpo de delito nos crimes que deixam vestígios, a nomeação de defensor ao réu presente que não tiver, a intervenção do Ministério Público em todos os termos da ação pública, a citação do réu, o interrogatório, os prazos, a sentença de pronúncia e as formalidades do Júri; por omissão de formalidade que constitua elemento essencial do ato; e por outras hipóteses previstas no dispositivo.",
+      "pontos": ["I: incompetência, suspeição ou suborno do juiz.", "II: ilegitimidade de parte.", "III: falta de fórmulas ou termos essenciais (denúncia, exame de corpo de delito, defensor, MP, citação, interrogatório, pronúncia, formalidades do Júri).", "IV: omissão de formalidade essencial do ato."],
+      "atencao": ["Nulidade relativa exige alegação oportuna e prejuízo; a absoluta pode ser reconhecida de ofício.", "A redação do inciso III alude a institutos do Júri anteriores à reforma."],
+      "exemplo": "A falta de citação do réu para ver-se processar gera nulidade.",
+      "prova": ["Assertiva que não considera nulidade a falta de exame de corpo de delito nos crimes que deixam vestígios erra."],
+      "termos": [],
+      "remissoes": ["Art. 563", "Art. 572"]
+    },
+    "art-565": {
+      "simples": "Nenhuma das partes poderá arguir nulidade a que haja dado causa, ou para que tenha concorrido, ou referente a formalidade cuja observância só à parte contrária interesse.",
+      "pontos": ["A parte não pode arguir nulidade que ela causou.", "Nem a que só interessa à parte contrária."],
+      "atencao": ["Vedação do venire contra factum proprium."],
+      "exemplo": "A defesa não pode alegar nulidade que ela mesma provocou.",
+      "prova": ["Assertiva que permite à parte alegar nulidade que ela mesma causou erra."],
+      "termos": [],
+      "remissoes": ["Art. 563"]
+    },
+    "art-566": {
+      "simples": "Não será declarada a nulidade de ato processual que não houver influído na apuração da verdade substancial ou na decisão da causa.",
+      "pontos": ["Sem influência na apuração da verdade ou na decisão, não se declara a nulidade."],
+      "atencao": ["Outra face do princípio do prejuízo."],
+      "exemplo": "Erro formal irrelevante para a decisão não anula o ato.",
+      "prova": ["Assertiva que anula todo ato irregular, ainda que sem influência na decisão, erra."],
+      "termos": [],
+      "remissoes": ["Art. 563"]
+    },
+    "art-567": {
+      "simples": "A incompetência do juízo anula somente os atos decisórios, devendo o processo, quando for declarada a nulidade, ser remetido ao juiz competente.",
+      "pontos": ["Incompetência anula somente os atos decisórios.", "O processo segue ao juiz competente."],
+      "atencao": ["Atos instrutórios podem ser aproveitados (teoria prevalente, ainda que a jurisprudência distinga a incompetência absoluta)."],
+      "exemplo": "Declarada a incompetência, as decisões são anuladas e o processo vai ao juízo competente.",
+      "prova": ["Assertiva que anula todos os atos do processo, incluindo a instrução, na incompetência, erra segundo a letra do art. 567."],
+      "termos": [],
+      "remissoes": ["Art. 108"]
+    },
+    "art-568": {
+      "simples": "A nulidade por ilegitimidade do representante da parte poderá ser a todo tempo sanada, mediante ratificação dos atos processuais.",
+      "pontos": ["Ilegitimidade do representante pode ser sanada a todo tempo.", "Por ratificação dos atos processuais."],
+      "atencao": ["Sanável por ratificação."],
+      "exemplo": "O representante legítimo ratifica os atos praticados pelo ilegítimo.",
+      "prova": ["Assertiva que torna insanável a ilegitimidade do representante da parte erra."],
+      "termos": [],
+      "remissoes": ["Art. 564"]
+    },
+    "art-569": {
+      "simples": "As omissões da denúncia ou da queixa, da representação, ou, nos processos das contravenções penais, da portaria ou do auto de prisão em flagrante, poderão ser supridas a todo o tempo, antes da sentença final.",
+      "pontos": ["Omissões da denúncia, queixa ou representação são supridas até a sentença."],
+      "atencao": ["Limite: antes da sentença final."],
+      "exemplo": "O MP supre uma omissão da denúncia antes da sentença.",
+      "prova": ["Assertiva que impede suprir omissões da denúncia após o recebimento erra."],
+      "termos": [],
+      "remissoes": ["Art. 564"]
+    },
+    "art-570": {
+      "simples": "A falta ou a nulidade da citação, da intimação ou notificação estará sanada, desde que o interessado compareça antes de o ato consumar-se, embora declare que o faz para o único fim de arguí-la. O juiz ordenará, todavia, a suspensão ou o adiamento do ato, quando reconhecer que a irregularidade poderá prejudicar direito da parte.",
+      "pontos": ["Comparecimento do interessado sana a falta ou nulidade da citação, intimação ou notificação.", "Mesmo que compareça apenas para arguir.", "O juiz suspende ou adia o ato se houver risco de prejuízo."],
+      "atencao": ["Comparecimento = sanação (com ressalva de prejuízo)."],
+      "exemplo": "O réu comparece mesmo sem citação válida: a nulidade é sanada, salvo risco de prejuízo.",
+      "prova": ["Assertiva que mantém a nulidade da citação mesmo com o comparecimento do réu erra."],
+      "termos": [],
+      "remissoes": ["Art. 572"]
+    },
+    "art-571": {
+      "simples": "As nulidades deverão ser arguidas: as da instrução criminal dos processos do júri, nos prazos do art. 406; as da instrução dos processos do juiz singular e dos especiais, nos prazos do art. 500; as do processo sumário, no prazo do art. 537 ou logo depois de aberta a audiência e apregoadas as partes; as ocorridas posteriormente à pronúncia, logo depois de anunciado o julgamento e apregoadas as partes; as de instrução dos processos de competência do STF e dos tribunais, nos prazos do art. 500; as verificadas após a decisão de primeira instância, nas razões de recurso ou logo depois de anunciado o julgamento do recurso; e as do julgamento em plenário, em audiência ou em sessão do tribunal, logo depois de ocorrerem.",
+      "pontos": ["Momentos de arguição variam conforme o rito e a fase.", "Nulidades do plenário e de sessões: logo depois de ocorrerem.", "Pós-pronúncia: logo depois de anunciado o julgamento.", "Após a decisão de primeira instância: nas razões do recurso."],
+      "atencao": ["Preclusão: a nulidade relativa não alegada a tempo fica sanada."],
+      "exemplo": "A nulidade ocorrida no plenário deve ser arguida logo depois de ocorrer.",
+      "prova": ["Assertiva que permite arguir qualquer nulidade ao final do processo, sem preclusão, erra."],
+      "termos": [{ "termo": "Preclusão", "significado": "Perda da oportunidade processual por não exercê-la no momento certo." }],
+      "remissoes": ["Art. 572"]
+    },
+    "art-572": {
+      "simples": "As nulidades previstas no art. 564, III, d e e (segunda parte), g e h, e IV, considerar-se-ão sanadas se não forem arguidas em tempo oportuno, de acordo com o artigo anterior; se, praticado o ato por outra forma, tiver atingido o seu fim; ou se a parte, ainda que tacitamente, tiver aceito os seus efeitos.",
+      "pontos": ["Sanam-se se não forem arguidas a tempo.", "Sanam-se se o ato atingiu seu fim por outra forma.", "Sanam-se se a parte aceitou seus efeitos, ainda que tacitamente."],
+      "atencao": ["Três formas de sanação."],
+      "exemplo": "O ato praticado de outra forma atingiu sua finalidade: nulidade sanada.",
+      "prova": ["Assertiva que torna insanáveis essas nulidades erra: elas se sanam nas três hipóteses do art. 572."],
+      "termos": [],
+      "remissoes": ["Art. 571"]
+    },
+    "art-573": {
+      "simples": "Os atos cuja nulidade não tiver sido sanada serão renovados ou retificados. A nulidade de um ato, uma vez declarada, causará a dos atos que dele diretamente dependam ou sejam consequência. O juiz que pronunciar a nulidade declarará os atos a que ela se estende.",
+      "pontos": ["Atos nulos não sanados são renovados ou retificados.", "Nulidade contamina os atos dependentes ou consequentes (nulidade derivada).", "O juiz declara os atos a que a nulidade se estende."],
+      "atencao": ["Nulidade por derivação."],
+      "exemplo": "A nulidade da citação atinge os atos posteriores dela dependentes.",
+      "prova": ["Assertiva que limita a nulidade ao ato viciado, sem alcançar os dependentes, erra."],
+      "termos": [],
+      "remissoes": ["Art. 564"]
+    },
+    "art-574": {
+      "simples": "Os recursos serão voluntários, excetuando-se os casos em que deverão ser interpostos, de ofício, pelo juiz: da sentença que conceder habeas corpus e da que absolver desde logo o réu com fundamento na existência de circunstância que exclua o crime ou isente o réu de pena, nos termos do art. 411 (hipótese da absolvição sumária no Júri).",
+      "pontos": ["Regra: recursos voluntários.", "Recurso de ofício: sentença que concede habeas corpus.", "Recurso de ofício: absolvição sumária por excludente de crime ou isenção de pena."],
+      "atencao": ["O recurso de ofício da absolvição sumária no Júri foi retirado pela reforma de 2008; a referência é histórica."],
+      "exemplo": "A concessão de habeas corpus sujeita-se a recurso de ofício.",
+      "prova": ["Assertiva que torna obrigatórios todos os recursos erra: a regra é a voluntariedade."],
+      "termos": [{ "termo": "Recurso de ofício", "significado": "Reexame necessário imposto ao juiz." }],
+      "remissoes": ["Art. 581"]
+    },
+    "art-575": {
+      "simples": "Não serão prejudicados os recursos que, por erro, falta ou omissão dos funcionários, não tiverem seguimento ou não forem apresentados dentro do prazo.",
+      "pontos": ["Falha dos funcionários não prejudica o recurso."],
+      "atencao": ["Proteção da parte contra erro do serviço judiciário."],
+      "exemplo": "O recurso não subiu por omissão do cartório, e a parte não é prejudicada.",
+      "prova": ["Assertiva que prejudica a parte por erro dos funcionários da justiça erra."],
+      "termos": [],
+      "remissoes": ["Art. 586"]
+    },
+    "art-576": {
+      "simples": "O Ministério Público não poderá desistir de recurso que haja interposto.",
+      "pontos": ["MP não desiste de recurso interposto (indisponibilidade)."],
+      "atencao": ["Coerência com o art. 42."],
+      "exemplo": "Interposta a apelação, o MP não pode desistir dela.",
+      "prova": ["Assertiva que permite ao MP desistir do recurso que interpôs erra."],
+      "termos": [],
+      "remissoes": ["Art. 42"]
+    },
+    "art-577": {
+      "simples": "O recurso poderá ser interposto pelo Ministério Público, ou pelo querelante, ou pelo réu, seu procurador ou seu defensor. Não se admitirá, entretanto, recurso da parte que não tiver interesse na reforma ou modificação da decisão.",
+      "pontos": ["Legitimados: MP, querelante, réu, procurador ou defensor.", "Exige interesse na reforma ou modificação."],
+      "atencao": ["Interesse recursal."],
+      "exemplo": "O réu absolvido não tem interesse em recorrer da absolvição.",
+      "prova": ["Assertiva que dispensa o interesse recursal erra."],
+      "termos": [],
+      "remissoes": ["Art. 578"]
+    },
+    "art-578": {
+      "simples": "O recurso será interposto por petição ou por termo nos autos, assinado pelo recorrente ou por seu representante. Não sabendo ou não podendo o réu assinar o nome, o termo será assinado por alguém, a seu rogo, na presença de duas testemunhas. A petição de interposição, com o despacho do juiz, será, até o dia seguinte ao último do prazo, entregue ao escrivão, que certificará no termo da juntada a data da entrega. Interposto por termo o recurso, o escrivão, sob pena de suspensão por dez a trinta dias, fará conclusos os autos ao juiz, até o dia seguinte ao último do prazo.",
+      "pontos": ["Interposição por petição ou termo nos autos.", "Réu que não sabe assinar: alguém assina a rogo, com duas testemunhas.", "Petição entregue ao escrivão até o dia seguinte ao último do prazo.", "Escrivão faz os autos conclusos até o dia seguinte ao último do prazo, sob pena de suspensão."],
+      "atencao": ["Duas testemunhas na assinatura a rogo."],
+      "exemplo": "O réu analfabeto interpõe o recurso por termo, assinado a rogo na presença de duas testemunhas.",
+      "prova": ["Assertiva que dispensa testemunhas na assinatura a rogo do réu erra."],
+      "termos": [],
+      "remissoes": ["Art. 586"]
+    },
+    "art-579": {
+      "simples": "Salvo a hipótese de má-fé, a parte não será prejudicada pela interposição de um recurso por outro (princípio da fungibilidade). Se o juiz, desde logo, reconhecer a impropriedade do recurso interposto, mandará processá-lo de acordo com o rito do recurso cabível.",
+      "pontos": ["Fungibilidade recursal, salvo má-fé.", "O juiz manda processar pelo rito do recurso cabível."],
+      "atencao": ["A má-fé afasta a fungibilidade."],
+      "exemplo": "Apelação interposta no lugar do recurso em sentido estrito é processada pelo rito correto.",
+      "prova": ["Assertiva que aplica a fungibilidade mesmo em caso de má-fé erra."],
+      "termos": [{ "termo": "Fungibilidade", "significado": "Aproveitamento de um recurso por outro." }],
+      "remissoes": ["Art. 581"]
+    },
+    "art-580": {
+      "simples": "No caso de concurso de agentes (art. 25 do Código Penal), a decisão do recurso interposto por um dos réus, se fundado em motivos que não sejam de caráter exclusivamente pessoal, aproveitará aos outros.",
+      "pontos": ["Concurso de agentes: o recurso de um aproveita aos demais.", "Desde que o fundamento não seja exclusivamente pessoal."],
+      "atencao": ["Efeito extensivo do recurso."],
+      "exemplo": "A absolvição por inexistência do fato, obtida por um corréu, aproveita aos outros.",
+      "prova": ["Assertiva que nega o efeito extensivo mesmo quando os motivos não são pessoais erra."],
+      "termos": [{ "termo": "Efeito extensivo", "significado": "O resultado do recurso de um beneficia os corréus." }],
+      "remissoes": ["Art. 581"]
+    },
+    "art-581": {
+      "simples": "Caberá recurso, no sentido estrito, da decisão, despacho ou sentença que não receber a denúncia ou a queixa; que concluir pela incompetência do juízo; que julgar procedentes as exceções, salvo a de suspeição; que pronunciar o réu; que conceder, negar, arbitrar, cassar ou julgar inidônea a fiança, indeferir requerimento de prisão preventiva ou revogá-la, conceder liberdade provisória ou relaxar a prisão em flagrante; que julgar quebrada a fiança ou perdido o seu valor; que decretar a prescrição ou julgar, por outro modo, extinta a punibilidade; que indeferir o pedido de reconhecimento da prescrição ou de outra causa extintiva; que conceder ou negar habeas corpus; que conceder, negar ou revogar a suspensão condicional da pena; que conceder, negar ou revogar livramento condicional; que anular o processo da instrução criminal, no todo ou em parte; que incluir jurado na lista geral ou dela o excluir; que denegar a apelação ou a julgar deserta; que ordenar a suspensão do processo em virtude de questão prejudicial; entre outras hipóteses.",
+      "pontos": ["I: não receber denúncia ou queixa.", "II: incompetência do juízo.", "III: exceções procedentes (salvo suspeição).", "IV: pronúncia.", "V: fiança, preventiva, liberdade provisória e relaxamento.", "VII e VIII: fiança quebrada; extinção da punibilidade.", "X: habeas corpus; XI e XII: sursis e livramento.", "XIII: anulação da instrução; XIV: lista de jurados.", "XV: denegar apelação; XVI: questão prejudicial."],
+      "atencao": ["Rol é taxativo, mas admite interpretação extensiva (STF/STJ).", "Contra a impronúncia e a absolvição sumária cabe apelação (art. 416)."],
+      "exemplo": "Contra a decisão que rejeita a denúncia, cabe recurso em sentido estrito.",
+      "prova": ["Assertiva que prevê apelação contra a decisão de pronúncia erra: cabe recurso em sentido estrito."],
+      "termos": [],
+      "remissoes": ["Art. 582", "Art. 416"]
+    },
+    "art-582": {
+      "simples": "Os recursos em sentido estrito serão sempre para o Tribunal de Apelação, salvo nos casos dos incisos V, X e XIV. O recurso, no caso do inciso XIV (lista de jurados), será para o presidente do Tribunal de Apelação.",
+      "pontos": ["Regra: Tribunal de Apelação.", "Exceções: incisos V, X e XIV do art. 581.", "Inciso XIV (lista de jurados): para o presidente do Tribunal."],
+      "atencao": ["Texto anterior à organização atual dos tribunais."],
+      "exemplo": "O recurso contra a inclusão de jurado na lista vai ao presidente do tribunal.",
+      "prova": ["Assertiva que envia todos os recursos em sentido estrito ao presidente do tribunal erra."],
+      "termos": [],
+      "remissoes": ["Art. 581"]
+    },
+    "art-583": {
+      "simples": "Subirão nos próprios autos os recursos interpostos de ofício; nos casos do art. 581, I, III, IV, VI, VIII e X; e quando o recurso não prejudicar o andamento do processo. O recurso da pronúncia subirá em traslado quando, havendo dois ou mais réus, qualquer deles se conformar com a decisão ou todos não tiverem sido ainda intimados.",
+      "pontos": ["Sobem nos próprios autos: recursos de ofício, os de certos incisos do art. 581 e os que não prejudicam o andamento.", "Pronúncia: sobe em traslado se houver mais de um réu e um se conformar ou nem todos forem intimados."],
+      "atencao": ["Instrumento (traslado) × próprios autos."],
+      "exemplo": "O recurso contra a pronúncia sobe em traslado quando um dos réus se conforma.",
+      "prova": ["Assertiva que manda subir sempre em traslado o recurso da pronúncia erra."],
+      "termos": [],
+      "remissoes": ["Art. 587"]
+    },
+    "art-584": {
+      "simples": "Os recursos terão efeito suspensivo nos casos de perda da fiança, de concessão de livramento condicional e dos incisos XV, XVII e XXIV do art. 581. Ao recurso de sentença de impronúncia ou no caso do inciso VIII do art. 581, aplica-se o disposto nos arts. 596 e 598. O recurso da pronúncia suspenderá tão somente o julgamento. O recurso do despacho que julgar quebrada a fiança suspenderá unicamente o efeito de perda da metade do seu valor. No caso do inciso V do art. 581, o recorrente poderá pedir ao Tribunal, a qualquer tempo, até o julgamento, a concessão de efeito suspensivo ou ativo ao recurso, demonstrando a relevância dos motivos, a plausibilidade do direito alegado e a probabilidade de dano.",
+      "pontos": ["Efeito suspensivo: perda da fiança, livramento condicional e certos incisos do art. 581.", "Pronúncia: suspende apenas o julgamento.", "Fiança quebrada: suspende só a perda de metade do valor.", "Inciso V: possibilidade de pedir efeito suspensivo ou ativo ao tribunal."],
+      "atencao": ["Efeito suspensivo restrito."],
+      "exemplo": "O recurso da pronúncia suspende o julgamento pelo Júri.",
+      "prova": ["Assertiva que atribui efeito suspensivo amplo ao recurso em sentido estrito erra."],
+      "termos": [],
+      "remissoes": ["Art. 581"]
+    },
+    "art-585": {
+      "simples": "O réu não poderá recorrer da pronúncia senão depois de preso, salvo se prestar fiança, nos casos em que a lei a admitir. O dispositivo é considerado superado, pois a Constituição e a legislação posterior vedam condicionar o recurso ao recolhimento à prisão.",
+      "pontos": ["Previa que o recurso da pronúncia dependia da prisão do réu ou de fiança.", "Considerado superado."],
+      "atencao": ["Dispositivo superado: o recurso independe da prisão."],
+      "exemplo": "Hoje, o réu solto pode recorrer da pronúncia.",
+      "prova": ["Assertiva que exige a prisão do réu para recorrer da pronúncia erra."],
+      "termos": [],
+      "remissoes": ["Art. 581, IV"]
+    },
+    "art-586": {
+      "simples": "O recurso voluntário poderá ser interposto no prazo de cinco dias. No caso do art. 581, XIV (lista de jurados), o prazo será de vinte dias, contado da data da publicação definitiva da lista de jurados.",
+      "pontos": ["Prazo geral do recurso em sentido estrito: cinco dias.", "Lista de jurados: vinte dias, da publicação definitiva."],
+      "atencao": ["Cinco dias; vinte dias para a lista de jurados."],
+      "exemplo": "A parte tem cinco dias para interpor o recurso em sentido estrito.",
+      "prova": ["Assertiva que fixa em dez dias o prazo do recurso em sentido estrito erra: são cinco dias."],
+      "termos": [],
+      "remissoes": ["Art. 581"]
+    },
+    "art-587": {
+      "simples": "Quando o recurso houver de subir por instrumento, a parte indicará, no respectivo termo ou em requerimento avulso, as peças dos autos de que pretenda traslado. O traslado será extraído, conferido e concertado no prazo de cinco dias, e dele constarão sempre a decisão recorrida, a certidão de sua intimação, se por outra forma não for possível verificar a oportunidade do recurso, e o termo de interposição.",
+      "pontos": ["Recurso por instrumento: a parte indica as peças a transladar.", "Traslado extraído e conferido em cinco dias.", "Constam sempre a decisão recorrida, a certidão da intimação e o termo de interposição."],
+      "atencao": ["Peças obrigatórias do traslado."],
+      "exemplo": "A parte indica as peças que quer ver transladadas no recurso por instrumento.",
+      "prova": ["Assertiva que dispensa a decisão recorrida no traslado erra."],
+      "termos": [],
+      "remissoes": ["Art. 583"]
+    },
+    "art-588": {
+      "simples": "Dentro de dois dias, contados da interposição do recurso, ou do dia em que o escrivão, extraído o traslado, o fizer com vista ao recorrente, este oferecerá as razões e, em seguida, será aberta vista ao recorrido por igual prazo. Se o recorrido for o réu, será intimado do prazo na pessoa do defensor.",
+      "pontos": ["Razões do recorrente em dois dias.", "Contrarrazões do recorrido por igual prazo.", "Réu recorrido: intimado na pessoa do defensor."],
+      "atencao": ["Prazo de dois dias para razões e contrarrazões."],
+      "exemplo": "O recorrente apresenta as razões em dois dias, e o recorrido, em igual prazo.",
+      "prova": ["Assertiva que fixa em cinco dias as razões do recurso em sentido estrito erra: são dois dias."],
+      "termos": [],
+      "remissoes": ["Art. 589"]
+    },
+    "art-589": {
+      "simples": "Com a resposta do recorrido ou sem ela, será o recurso concluso ao juiz, que, dentro de dois dias, reformará ou sustentará o seu despacho, mandando instruir o recurso com os traslados que lhe parecerem necessários. Se o juiz reformar o despacho recorrido, a parte contrária, por simples petição, poderá recorrer da nova decisão, se couber recurso, não sendo mais lícito ao juiz modificá-la. Neste caso, independentemente de novos arrazoados, subirá o recurso nos próprios autos ou em traslado.",
+      "pontos": ["Juiz tem dois dias para reformar ou sustentar a decisão (juízo de retratação).", "Reformada a decisão: a parte contrária pode recorrer por simples petição.", "Não se admite nova modificação pelo juiz."],
+      "atencao": ["Juízo de retratação no recurso em sentido estrito."],
+      "exemplo": "O juiz se retrata em dois dias, e a parte contrária recorre da nova decisão por simples petição.",
+      "prova": ["Assertiva que veda ao juiz reformar sua decisão no recurso em sentido estrito erra: há juízo de retratação."],
+      "termos": [{ "termo": "Juízo de retratação", "significado": "Possibilidade de o juiz reformar a própria decisão." }],
+      "remissoes": ["Art. 588"]
+    }
+  }
+}
