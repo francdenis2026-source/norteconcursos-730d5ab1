@@ -85,7 +85,7 @@ const PINS: { name: string; left: number; top: number; side?: "left" }[] = [
   { name: "Feijó", left: 49.4, top: 26.8 },
   { name: "Sena Madureira", left: 72, top: 48.6 },
   { name: "Rio Branco", left: 83.4, top: 70.3 },
-  { name: "Brasiléia", left: 71, top: 94.5 },
+  { name: "Brasiléia", left: 71, top: 78, side: "left" },
 ];
 
 const delay = (n: number) => ({ "--reveal-delay": n }) as CSSProperties;
