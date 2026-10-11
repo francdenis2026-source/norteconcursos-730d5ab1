@@ -525,7 +525,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   return (
     <TooltipProvider delayDuration={150}>
-      <div className="app-shell">
+      <div className="app-shell" data-area={isAdmin ? "admin" : "student"}>
         <aside className="app-sidebar no-print" data-collapsed={isCollapsed}>
           <div className="app-sidebar__head">
             <Link to="/dashboard" aria-label="Norte Concurso — visão geral">

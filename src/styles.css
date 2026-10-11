@@ -8250,3 +8250,416 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     gap: 9px;
   }
 }
+
+/* ==========================================================================
+   Application shell refresh: student and admin workspaces
+   ========================================================================== */
+.app-shell {
+  --app-sidebar-width: 280px;
+  color: var(--color-foreground);
+  background:
+    radial-gradient(900px 500px at 100% -10%, color-mix(in oklab, var(--brass) 8%, transparent), transparent 70%),
+    var(--color-background);
+}
+.app-sidebar {
+  width: var(--app-sidebar-width);
+  background:
+    radial-gradient(560px 340px at -15% -8%, oklch(0.8 0.13 78 / 0.13), transparent 70%),
+    linear-gradient(180deg, color-mix(in oklab, var(--sidebar) 96%, black), var(--sidebar));
+  box-shadow: 14px 0 36px -32px oklch(0 0 0 / 0.8);
+}
+.app-sidebar[data-collapsed="true"] {
+  width: 78px;
+}
+.app-sidebar__head {
+  height: 78px;
+  padding-inline: 20px 14px;
+  border-bottom: 1px solid oklch(1 0 0 / 0.07);
+}
+.app-sidebar__search {
+  height: 42px;
+  margin: 14px 16px 10px;
+  border-radius: 12px;
+  background: oklch(1 0 0 / 0.055);
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.06);
+}
+.app-nav {
+  padding: 8px 14px 18px;
+}
+.app-nav__group {
+  padding: 20px 12px 8px;
+  color: oklch(1 0 0 / 0.48);
+  font-size: 0.58rem;
+}
+.app-nav__link {
+  height: 44px;
+  margin-block: 2px;
+  padding-inline: 13px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  transition:
+    color 0.2s var(--ease-out),
+    background 0.2s var(--ease-out),
+    border-color 0.2s var(--ease-out),
+    transform 0.2s var(--ease-out);
+}
+.app-nav__link:hover {
+  transform: translateX(2px);
+  border-color: oklch(1 0 0 / 0.08);
+  background: oklch(1 0 0 / 0.07);
+}
+.app-nav__link[data-active="true"] {
+  border-color: color-mix(in oklab, var(--brass) 25%, transparent);
+  background: linear-gradient(100deg, color-mix(in oklab, var(--brass) 21%, transparent), oklch(1 0 0 / 0.04));
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08), 0 10px 22px -18px color-mix(in oklab, var(--brass) 90%, transparent);
+}
+.app-nav__link[data-active="true"]::before {
+  top: 8px;
+  bottom: 8px;
+  left: -14px;
+  width: 4px;
+}
+.app-sidebar__foot {
+  padding: 14px;
+  background: linear-gradient(180deg, transparent, oklch(0 0 0 / 0.12));
+}
+.app-stats {
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.app-stat {
+  border-radius: 12px;
+  background: oklch(1 0 0 / 0.045);
+}
+.app-user {
+  padding: 10px;
+  border: 1px solid transparent;
+}
+.app-user:hover {
+  border-color: oklch(1 0 0 / 0.08);
+}
+.app-main {
+  min-width: 0;
+}
+.app-topbar {
+  height: calc(72px + env(safe-area-inset-top));
+  padding-inline: clamp(20px, 3.4vw, 48px);
+  border-bottom-color: color-mix(in oklab, var(--color-border) 72%, transparent);
+  background: color-mix(in oklab, var(--color-background) 84%, transparent);
+  box-shadow: 0 10px 30px -28px oklch(0 0 0 / 0.8);
+}
+.app-crumbs {
+  gap: 10px;
+  font-size: 0.9rem;
+}
+.app-crumbs strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.app-topbar__actions {
+  gap: 8px;
+}
+.app-top-search {
+  width: 244px;
+  height: 40px;
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--color-card) 82%, transparent);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+.app-top-search:hover {
+  box-shadow: 0 8px 20px -16px var(--color-foreground);
+  transform: translateY(-1px);
+}
+.app-top-btn,
+.app-streak {
+  height: 40px;
+  border-radius: 12px;
+}
+.app-streak {
+  padding-inline: 11px;
+}
+.app-content {
+  min-width: 0;
+  overflow-x: clip;
+  padding: clamp(20px, 3vw, 38px) clamp(16px, 3.4vw, 48px) 56px;
+  background:
+    radial-gradient(680px 420px at 100% 0%, color-mix(in oklab, var(--brass) 5%, transparent), transparent 74%),
+    var(--color-background);
+}
+.app-content__inner {
+  min-width: 0;
+  max-width: 1320px;
+}
+.app-content__inner > * {
+  min-width: 0;
+  max-width: 100%;
+}
+.app-footer {
+  max-width: 1320px;
+  margin-top: 56px;
+}
+
+/* Shared internal hero */
+.page-hero,
+.tactical-feature-hero,
+.catalog-command-hero {
+  border-radius: 22px;
+  background-position: var(--hero-position, 70% center);
+  box-shadow: 0 24px 58px -40px oklch(0.12 0.03 262 / 0.9), inset 0 1px 0 oklch(1 0 0 / 0.08);
+}
+.page-hero::after,
+.tactical-feature-hero::after,
+.catalog-command-hero::after {
+  opacity: 0.45;
+}
+.page-hero__text {
+  min-width: 0;
+}
+.page-hero__actions {
+  align-items: center;
+}
+.page-hero__actions > * {
+  min-height: 40px;
+}
+.hero-stat {
+  border-color: oklch(1 0 0 / 0.13);
+  background: linear-gradient(145deg, oklch(0.16 0.03 262 / 0.7), oklch(0.1 0.025 263 / 0.5));
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.06);
+}
+
+/* Tables and dense cards stay usable inside narrow workspaces. */
+.app-content .surface-card,
+.app-content .card,
+.app-content [data-slot="card"] {
+  min-width: 0;
+  border-radius: 16px;
+}
+.app-content table {
+  max-width: 100%;
+}
+.app-content .overflow-x-auto {
+  scrollbar-width: thin;
+}
+
+/* Admin workspace: clearer operational identity without changing permissions. */
+.app-shell[data-area="admin"] {
+  --admin-accent: oklch(0.77 0.14 72);
+  background:
+    radial-gradient(900px 500px at 100% -10%, oklch(0.77 0.14 72 / 0.08), transparent 70%),
+    var(--color-background);
+}
+.app-shell[data-area="admin"] .app-sidebar {
+  background:
+    radial-gradient(560px 340px at 100% -8%, oklch(0.77 0.14 72 / 0.18), transparent 70%),
+    linear-gradient(180deg, oklch(0.16 0.03 262), oklch(0.105 0.025 263));
+}
+.app-shell[data-area="admin"] .app-sidebar__head::after {
+  content: "CENTRAL ADMINISTRATIVA";
+  position: absolute;
+  left: 20px;
+  bottom: 5px;
+  color: oklch(0.77 0.14 72 / 0.7);
+  font-family: var(--font-mono);
+  font-size: 0.48rem;
+  letter-spacing: 0.14em;
+}
+.app-shell[data-area="admin"] .app-sidebar__head {
+  position: relative;
+}
+.app-shell[data-area="admin"] .app-nav__admin .app-nav__link {
+  border-color: oklch(0.77 0.14 72 / 0.28);
+  background: linear-gradient(100deg, oklch(0.77 0.14 72 / 0.18), transparent);
+}
+.app-shell[data-area="admin"] .page-hero,
+.app-shell[data-area="admin"] .tactical-feature-hero,
+.app-shell[data-area="admin"] .catalog-command-hero {
+  border-color: oklch(0.77 0.14 72 / 0.3);
+}
+
+@media (max-width: 1023px) {
+  .app-sidebar {
+    width: 248px;
+  }
+  .app-topbar {
+    padding-inline: 20px;
+  }
+  .app-top-search {
+    width: 40px;
+    padding-inline: 0;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .app-shell {
+    --app-topbar-h: 60px;
+    display: block;
+    min-height: 100svh;
+  }
+  .app-topbar {
+    height: calc(60px + env(safe-area-inset-top));
+    padding-inline: 12px;
+    box-shadow: 0 8px 24px -20px oklch(0 0 0 / 0.9);
+  }
+  .app-mobile-bar {
+    gap: 6px;
+  }
+  .app-mobile-bar > a {
+    min-width: 0;
+  }
+  .app-mobile-bar .norte-brand {
+    max-width: 128px;
+  }
+  .app-topbar__actions {
+    gap: 4px;
+  }
+  .app-topbar .app-top-btn,
+  .app-topbar .app-top-search,
+  .app-topbar .app-streak {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+  .app-topbar__actions > .app-streak span {
+    display: none;
+  }
+  .app-content {
+    padding: 14px 12px 104px;
+  }
+  .app-content__inner {
+    width: 100%;
+  }
+  .app-footer {
+    display: none;
+  }
+  .page-hero,
+  .tactical-feature-hero,
+  .catalog-command-hero {
+    border-radius: 16px;
+    padding: 16px !important;
+  }
+  .page-hero__row {
+    align-items: stretch;
+    gap: 16px;
+  }
+  .page-hero h1,
+  .tactical-feature-hero h1,
+  .catalog-command-hero h1 {
+    max-width: 15ch;
+    font-size: clamp(1.55rem, 7.2vw, 2.25rem) !important;
+  }
+  .page-hero__desc,
+  .catalog-command-hero > p {
+    max-width: 100%;
+    font-size: 0.86rem;
+  }
+  .page-hero__actions {
+    width: 100%;
+  }
+  .page-hero__actions > * {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+  .page-hero__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero-stat {
+    padding: 10px;
+  }
+  .app-bottom-nav {
+    right: 8px;
+    bottom: max(8px, env(safe-area-inset-bottom));
+    left: 8px;
+    border-radius: 16px;
+    padding: 5px;
+    box-shadow: 0 18px 40px -20px oklch(0 0 0 / 0.8), inset 0 1px 0 oklch(1 0 0 / 0.08);
+  }
+  .app-bottom-nav a {
+    min-height: 48px;
+    align-content: center;
+    border-radius: 11px;
+    font-size: 0.62rem;
+  }
+  .app-shell[data-area="admin"] .app-sidebar__head::after {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-nav__link,
+  .app-top-search {
+    transition: none;
+  }
+}
+
+/* Admin entry keeps the same visual language as the workspace. */
+.admin-access {
+  background:
+    radial-gradient(780px 520px at 0% 0%, color-mix(in oklab, var(--brass) 10%, transparent), transparent 72%),
+    var(--color-background);
+}
+.admin-access__visual {
+  border-right: 1px solid var(--color-border);
+  background: var(--ink-deep);
+}
+.admin-access__visual::after {
+  background:
+    linear-gradient(90deg, oklch(0.08 0.025 263 / 0.94), oklch(0.08 0.025 263 / 0.34)),
+    linear-gradient(0deg, oklch(0.08 0.025 263 / 0.9), transparent 60%);
+}
+.admin-access__visual-copy {
+  gap: 14px;
+  padding: clamp(36px, 6vw, 80px);
+}
+.admin-access__visual-copy > span {
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  border-color: oklch(0.8 0.13 78 / 0.35);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--brass-soft);
+  background: oklch(0.8 0.13 78 / 0.1);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.admin-access__visual-copy h2 {
+  max-width: 11ch;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 0.95;
+}
+.admin-access__visual-copy p {
+  max-width: 42ch;
+  color: oklch(1 0 0 / 0.72);
+}
+.admin-access__panel {
+  background: color-mix(in oklab, var(--color-background) 90%, var(--brass) 2%);
+}
+.admin-access__form {
+  width: min(100%, 460px);
+  padding: clamp(28px, 5vw, 72px);
+}
+@media (max-width: 1023px) {
+  .admin-access {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .admin-access__visual {
+    display: none;
+  }
+  .admin-access__panel {
+    min-height: 100svh;
+  }
+  .admin-access__form {
+    margin-inline: auto;
+  }
+}
+.app-sidebar[data-collapsed="true"] .app-sidebar__head::after {
+  display: none;
+}
