@@ -1,0 +1,420 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 12: arts. 437 a 481",
+  "units": {
+    "art-437": {
+      "simples": "Estão isentos do serviço do júri o Presidente da República e os Ministros de Estado; os Governadores e seus Secretários; os membros do Congresso Nacional, das Assembleias Legislativas e das Câmaras Distrital e Municipais; os Prefeitos Municipais; os Magistrados e membros do Ministério Público e da Defensoria Pública; os servidores do Judiciário, do Ministério Público e da Defensoria; as autoridades e servidores da polícia e da segurança pública; os militares em serviço ativo; os cidadãos maiores de 70 anos que requeiram sua dispensa; e aqueles que o requererem, demonstrando justo impedimento.",
+      "pontos": ["Isenção de agentes políticos, magistrados, MP, Defensoria, servidores, polícia e militares em serviço ativo.", "Maiores de 70 anos: isenção se requererem.", "Quem demonstrar justo impedimento."],
+      "atencao": ["Maiores de 70 anos: dispensa a REQUERIMENTO."],
+      "exemplo": "Cidadão de 72 anos requer a dispensa do serviço do júri.",
+      "prova": ["Assertiva que isenta automaticamente os maiores de 70 anos, sem requerimento, erra."],
+      "termos": [],
+      "remissoes": ["Art. 436"]
+    },
+    "art-438": {
+      "simples": "A recusa ao serviço do júri fundada em convicção religiosa, filosófica ou política importará no dever de prestar serviço alternativo, sob pena de suspensão dos direitos políticos, enquanto não prestar o serviço imposto. Entende-se por serviço alternativo o exercício de atividades de caráter administrativo, assistencial, filantrópico ou mesmo produtivo, no Poder Judiciário, na Defensoria Pública, no Ministério Público ou em entidade conveniada. O juiz fixará o serviço alternativo atendendo aos princípios da proporcionalidade e da razoabilidade.",
+      "pontos": ["Escusa de consciência: serviço alternativo.", "Sob pena de suspensão dos direitos políticos.", "Serviço alternativo: atividades administrativas, assistenciais, filantrópicas ou produtivas.", "Fixação com proporcionalidade e razoabilidade."],
+      "atencao": ["Escusa de consciência gera serviço alternativo."],
+      "exemplo": "Jurado que recusa por convicção religiosa presta serviço alternativo definido pelo juiz.",
+      "prova": ["Assertiva que isenta totalmente quem recusa por convicção religiosa erra: deve prestar serviço alternativo."],
+      "termos": [],
+      "remissoes": ["Art. 436"]
+    },
+    "art-439": {
+      "simples": "O exercício efetivo da função de jurado constituirá serviço público relevante e estabelecerá presunção de idoneidade moral.",
+      "pontos": ["Serviço público relevante.", "Presunção de idoneidade moral."],
+      "atencao": ["Exercício EFETIVO da função."],
+      "exemplo": "O jurado que efetivamente atuou goza de presunção de idoneidade moral.",
+      "prova": ["Assertiva que concede presunção de idoneidade a quem apenas foi alistado erra: exige exercício efetivo."],
+      "termos": [],
+      "remissoes": ["Art. 440"]
+    },
+    "art-440": {
+      "simples": "Constitui também direito do jurado, na condição do art. 439, preferência, em igualdade de condições, nas licitações públicas e no provimento, mediante concurso, de cargo ou função pública, bem como nos casos de promoção funcional ou remoção voluntária.",
+      "pontos": ["Preferência, em igualdade de condições, em licitações públicas.", "Preferência em provimento por concurso, promoção funcional ou remoção voluntária."],
+      "atencao": ["Preferência apenas em igualdade de condições."],
+      "exemplo": "Em empate num concurso, o candidato que foi jurado tem preferência.",
+      "prova": ["Assertiva que dá ao jurado preferência independentemente de igualdade de condições erra."],
+      "termos": [],
+      "remissoes": ["Art. 439"]
+    },
+    "art-441": {
+      "simples": "Nenhum desconto será feito nos vencimentos ou salário do jurado sorteado que comparecer à sessão do júri.",
+      "pontos": ["Sem desconto nos vencimentos ou salário do jurado que comparecer à sessão."],
+      "atencao": ["Estende-se às testemunhas a serviço do Júri (art. 459)."],
+      "exemplo": "O empregador não pode descontar o dia de trabalho do jurado que compareceu.",
+      "prova": ["Assertiva que permite o desconto do dia do jurado no salário erra."],
+      "termos": [],
+      "remissoes": ["Art. 459"]
+    },
+    "art-442": {
+      "simples": "Ao jurado que, sem causa legítima, deixar de comparecer no dia marcado para a sessão ou retirar-se antes de ser dispensado pelo presidente será aplicada multa de 1 a 10 salários mínimos, a critério do juiz, de acordo com a sua condição econômica.",
+      "pontos": ["Falta sem causa legítima ou saída antes da dispensa.", "Multa de 1 a 10 salários mínimos, conforme a condição econômica."],
+      "atencao": ["Mesma faixa de multa do art. 436, §2º."],
+      "exemplo": "O jurado se retira antes da dispensa e sofre multa.",
+      "prova": ["Assertiva que fixa a multa em até 100 salários mínimos para o jurado faltoso erra: é de 1 a 10."],
+      "termos": [],
+      "remissoes": ["Art. 436", "Art. 443"]
+    },
+    "art-443": {
+      "simples": "Somente será aceita escusa fundada em motivo relevante devidamente comprovado e apresentada, ressalvadas as hipóteses de força maior, até o momento da chamada dos jurados.",
+      "pontos": ["Escusa: motivo relevante, comprovado.", "Apresentada até a chamada dos jurados, salvo força maior."],
+      "atencao": ["Prazo: até a chamada dos jurados."],
+      "exemplo": "O jurado apresenta o atestado médico antes da chamada.",
+      "prova": ["Assertiva que aceita escusa apresentada depois do julgamento, sem força maior, erra."],
+      "termos": [],
+      "remissoes": ["Art. 444"]
+    },
+    "art-444": {
+      "simples": "O jurado somente será dispensado por decisão motivada do juiz presidente, consignada na ata dos trabalhos.",
+      "pontos": ["Dispensa por decisão motivada do juiz presidente.", "Consignada na ata."],
+      "atencao": ["Dispensa não é automática."],
+      "exemplo": "O juiz presidente dispensa o jurado por decisão motivada, registrada em ata.",
+      "prova": ["Assertiva que permite ao próprio jurado dispensar-se erra."],
+      "termos": [],
+      "remissoes": ["Art. 443"]
+    },
+    "art-445": {
+      "simples": "O jurado, no exercício da função ou a pretexto de exercê-la, será responsável criminalmente nos mesmos termos em que o são os juízes togados.",
+      "pontos": ["Jurado tem responsabilidade criminal equiparada à dos juízes togados."],
+      "atencao": ["Equiparação para fins de responsabilidade penal."],
+      "exemplo": "O jurado que recebe vantagem para votar responde como um juiz.",
+      "prova": ["Assertiva que isenta o jurado de responsabilidade criminal pelo voto erra."],
+      "termos": [],
+      "remissoes": ["Art. 446"]
+    },
+    "art-446": {
+      "simples": "Aos suplentes, quando convocados, serão aplicáveis os dispositivos referentes às dispensas, faltas e escusas e à equiparação de responsabilidade penal prevista no art. 445.",
+      "pontos": ["Suplentes convocados seguem as regras de dispensa, falta e escusa.", "Responsabilidade penal equiparada à dos juízes."],
+      "atencao": ["Aplica-se quando convocados."],
+      "exemplo": "O suplente convocado que falta sem causa legítima também sofre multa.",
+      "prova": ["Assertiva que isenta o suplente convocado das regras de falta e escusa erra."],
+      "termos": [],
+      "remissoes": ["Art. 445"]
+    },
+    "art-447": {
+      "simples": "O Tribunal do Júri é composto por 1 juiz togado, seu presidente, e por 25 jurados que serão sorteados dentre os alistados, 7 dos quais constituirão o Conselho de Sentença em cada sessão de julgamento.",
+      "pontos": ["1 juiz togado como presidente.", "25 jurados sorteados.", "7 compõem o Conselho de Sentença."],
+      "atencao": ["25 sorteados; 7 julgam."],
+      "exemplo": "Dos 25 jurados sorteados, 7 compõem o Conselho de Sentença.",
+      "prova": ["Assertiva que fixa em 21 o número de jurados sorteados erra: são 25."],
+      "termos": [{ "termo": "Conselho de Sentença", "significado": "Os 7 jurados que julgam o caso." }],
+      "remissoes": ["Art. 433", "Art. 467"]
+    },
+    "art-448": {
+      "simples": "São impedidos de servir no mesmo Conselho: marido e mulher; ascendente e descendente; sogro e genro ou nora; irmãos e cunhados, durante o cunhadio; tio e sobrinho; e padrasto, madrasta ou enteado. O mesmo impedimento ocorre em relação às pessoas que mantenham união estável reconhecida como entidade familiar. Aplica-se aos jurados o disposto sobre os impedimentos, a suspeição e as incompatibilidades dos juízes togados.",
+      "pontos": ["Impedidos no mesmo Conselho: cônjuges, ascendente e descendente, sogro e genro ou nora, irmãos e cunhados, tio e sobrinho, padrasto, madrasta ou enteado.", "União estável equipara-se.", "Impedimentos e suspeição dos juízes aplicam-se aos jurados."],
+      "atencao": ["Inclui companheiros em união estável."],
+      "exemplo": "Marido e mulher não podem compor o mesmo Conselho de Sentença.",
+      "prova": ["Assertiva que exclui companheiros em união estável do impedimento erra."],
+      "termos": [],
+      "remissoes": ["Art. 449", "Art. 252"]
+    },
+    "art-449": {
+      "simples": "Não poderá servir o jurado que tiver funcionado em julgamento anterior do mesmo processo, independentemente da causa determinante do julgamento posterior; que, no caso de concurso de pessoas, houver integrado o Conselho de Sentença que julgou o outro acusado; ou que tiver manifestado prévia disposição para condenar ou absolver o acusado.",
+      "pontos": ["I: já funcionou em julgamento anterior do mesmo processo.", "II: integrou o Conselho que julgou o corréu.", "III: manifestou prévia disposição para condenar ou absolver."],
+      "atencao": ["Três hipóteses de incompatibilidade."],
+      "exemplo": "Quem julgou o corréu em sessão anterior não integra o Conselho que julgará o outro.",
+      "prova": ["Assertiva que permite ao jurado de julgamento anterior do mesmo processo atuar no novo julgamento erra."],
+      "termos": [],
+      "remissoes": ["Art. 448"]
+    },
+    "art-450": {
+      "simples": "Dos impedidos entre si por parentesco ou relação de convivência, servirá o que houver sido sorteado em primeiro lugar.",
+      "pontos": ["Entre jurados impedidos entre si, serve o sorteado primeiro."],
+      "atencao": ["Critério do primeiro sorteado."],
+      "exemplo": "Dois irmãos são sorteados, e apenas o sorteado primeiro integra o Conselho.",
+      "prova": ["Assertiva que permite a ambos atuar no Conselho erra."],
+      "termos": [],
+      "remissoes": ["Art. 448"]
+    },
+    "art-451": {
+      "simples": "Os jurados excluídos por impedimento, suspeição ou incompatibilidade serão considerados para a constituição do número legal exigível para a realização da sessão.",
+      "pontos": ["Jurados excluídos por impedimento, suspeição ou incompatibilidade contam para o quorum de instalação."],
+      "atencao": ["Contam para o quorum, embora excluídos do Conselho."],
+      "exemplo": "Jurado impedido não julga, mas conta para completar o número legal de presentes.",
+      "prova": ["Assertiva que desconta os jurados excluídos do número legal para a sessão erra."],
+      "termos": [],
+      "remissoes": ["Art. 463"]
+    },
+    "art-452": {
+      "simples": "O mesmo Conselho de Sentença poderá conhecer de mais de um processo, no mesmo dia, se as partes o aceitarem, hipótese em que seus integrantes deverão prestar novo compromisso.",
+      "pontos": ["Mesmo Conselho em mais de um processo no mesmo dia, se as partes aceitarem.", "Novo compromisso dos jurados."],
+      "atencao": ["Depende da aceitação das partes."],
+      "exemplo": "Com a concordância das partes, o mesmo Conselho julga dois processos no mesmo dia.",
+      "prova": ["Assertiva que dispensa a aceitação das partes para o mesmo Conselho julgar dois processos erra."],
+      "termos": [],
+      "remissoes": ["Art. 447"]
+    },
+    "art-453": {
+      "simples": "O Tribunal do Júri reunir-se-á para as sessões de instrução e julgamento nos períodos e na forma estabelecida pela lei local de organização judiciária.",
+      "pontos": ["Períodos e forma das sessões definidos pela lei local de organização judiciária."],
+      "atencao": ["Definição local."],
+      "exemplo": "A lei de organização judiciária local fixa os períodos das reuniões do Júri.",
+      "prova": ["Assertiva que fixa os períodos das reuniões do Júri no próprio CPP erra."],
+      "termos": [],
+      "remissoes": ["Art. 447"]
+    },
+    "art-454": {
+      "simples": "Até o momento de abertura dos trabalhos da sessão, o juiz presidente decidirá os casos de isenção e dispensa de jurados e o pedido de adiamento de julgamento, mandando consignar em ata as deliberações.",
+      "pontos": ["Juiz presidente decide, até a abertura dos trabalhos, isenções, dispensas e pedidos de adiamento.", "Deliberações em ata."],
+      "atencao": ["Momento: até a abertura dos trabalhos."],
+      "exemplo": "Antes de abrir a sessão, o presidente decide os pedidos de dispensa.",
+      "prova": ["Assertiva que permite pedir isenção apenas após o início dos trabalhos erra."],
+      "termos": [],
+      "remissoes": ["Art. 444"]
+    },
+    "art-455": {
+      "simples": "Se o Ministério Público não comparecer, o juiz presidente adiará o julgamento para o primeiro dia desimpedido da mesma reunião, cientificadas as partes e as testemunhas. Se a ausência não for justificada, o fato será imediatamente comunicado ao Procurador-Geral de Justiça com a data designada para a nova sessão.",
+      "pontos": ["Ausência do MP: adiamento para o primeiro dia desimpedido da mesma reunião.", "Ausência injustificada: comunicação ao Procurador-Geral de Justiça."],
+      "atencao": ["Comunicação ao Procurador-Geral de Justiça."],
+      "exemplo": "O promotor falta sem justificativa, e o julgamento é adiado, com comunicação ao PGJ.",
+      "prova": ["Assertiva que permite o julgamento sem o Ministério Público erra."],
+      "termos": [],
+      "remissoes": ["Art. 456"]
+    },
+    "art-456": {
+      "simples": "Se a falta, sem escusa legítima, for do advogado do acusado, e se outro não for por este constituído, o fato será imediatamente comunicado ao presidente da seccional da OAB, com a data designada para a nova sessão. Não havendo escusa legítima, o julgamento será adiado somente uma vez, devendo o acusado ser julgado quando chamado novamente. Nessa hipótese, o juiz intimará a Defensoria Pública para o novo julgamento, que será adiado para o primeiro dia desimpedido, observado o prazo mínimo de 10 dias.",
+      "pontos": ["Falta injustificada do advogado: comunicação à OAB.", "Adiamento uma única vez.", "Defensoria Pública intimada para o novo julgamento.", "Prazo mínimo de 10 dias."],
+      "atencao": ["Adiamento somente UMA vez.", "Prazo mínimo de 10 dias para a Defensoria se preparar."],
+      "exemplo": "O advogado falta sem escusa; o julgamento é adiado uma vez e a Defensoria é intimada.",
+      "prova": ["Assertiva que permite sucessivos adiamentos pela falta injustificada do advogado erra: só uma vez."],
+      "termos": [],
+      "remissoes": ["Art. 455"]
+    },
+    "art-457": {
+      "simples": "O julgamento não será adiado pelo não comparecimento do acusado solto, do assistente ou do advogado do querelante, que tiver sido regularmente intimado. Os pedidos de adiamento e as justificações de não comparecimento deverão ser, salvo comprovado motivo de força maior, previamente submetidos à apreciação do juiz presidente. Se o acusado preso não for conduzido, o julgamento será adiado para o primeiro dia desimpedido da mesma reunião, salvo se houver pedido de dispensa de comparecimento subscrito por ele e seu defensor.",
+      "pontos": ["Ausência do acusado solto, do assistente ou do advogado do querelante não adia o julgamento.", "Pedidos de adiamento previamente submetidos ao juiz presidente.", "Acusado preso não conduzido: adiamento, salvo dispensa subscrita por ele e seu defensor."],
+      "atencao": ["Acusado SOLTO ausente: não adia; acusado PRESO não conduzido: adia."],
+      "exemplo": "O réu solto regularmente intimado falta, e o julgamento ocorre sem ele.",
+      "prova": ["Assertiva que adia o julgamento pela ausência do acusado solto erra."],
+      "termos": [],
+      "remissoes": ["Art. 455"]
+    },
+    "art-458": {
+      "simples": "Se a testemunha, sem justa causa, deixar de comparecer, o juiz presidente, sem prejuízo da ação penal pela desobediência, aplicar-lhe-á a multa prevista no §2º do art. 436.",
+      "pontos": ["Testemunha faltosa: multa do art. 436, §2º.", "Sem prejuízo da ação penal por desobediência."],
+      "atencao": ["Multa de 1 a 10 salários mínimos."],
+      "exemplo": "A testemunha falta sem justa causa e é multada pelo juiz presidente.",
+      "prova": ["Assertiva que afasta a ação por desobediência diante da multa erra."],
+      "termos": [],
+      "remissoes": ["Art. 436"]
+    },
+    "art-459": {
+      "simples": "Aplicar-se-á às testemunhas a serviço do Tribunal do Júri o disposto no art. 441.",
+      "pontos": ["Testemunhas a serviço do Júri não sofrem desconto nos vencimentos."],
+      "atencao": ["Estende a garantia do art. 441."],
+      "exemplo": "A testemunha convocada para o Júri não tem desconto salarial.",
+      "prova": ["Assertiva que permite desconto nos vencimentos da testemunha a serviço do Júri erra."],
+      "termos": [],
+      "remissoes": ["Art. 441"]
+    },
+    "art-460": {
+      "simples": "Antes de constituído o Conselho de Sentença, as testemunhas serão recolhidas a lugar onde umas não possam ouvir os depoimentos das outras.",
+      "pontos": ["Testemunhas recolhidas em local onde não ouçam os depoimentos das outras antes do Conselho."],
+      "atencao": ["Incomunicabilidade das testemunhas."],
+      "exemplo": "As testemunhas aguardam em sala separada, sem ouvir os depoimentos.",
+      "prova": ["Assertiva que permite às testemunhas acompanhar os depoimentos anteriores erra."],
+      "termos": [],
+      "remissoes": ["Art. 210"]
+    },
+    "art-461": {
+      "simples": "O julgamento não será adiado se a testemunha deixar de comparecer, salvo se uma das partes tiver requerido a sua intimação por mandado, na oportunidade do art. 422, declarando não prescindir do depoimento e indicando a sua localização. Se, intimada, a testemunha não comparecer, o juiz presidente suspenderá os trabalhos e mandará conduzi-la ou adiará o julgamento para o primeiro dia desimpedido, ordenando a sua condução. O julgamento será realizado mesmo na hipótese de a testemunha não ser encontrada no local indicado, se assim for certificado por oficial de justiça.",
+      "pontos": ["Regra: a ausência da testemunha não adia o julgamento.", "Exceção: parte requereu intimação por mandado (art. 422), declarando não prescindir do depoimento e indicando a localização.", "Intimada e ausente: condução imediata ou adiamento com condução.", "Testemunha não encontrada, certificado pelo oficial: julgamento realizado."],
+      "atencao": ["A cláusula 'não prescindir' (art. 422) é essencial."],
+      "exemplo": "A parte declarou não prescindir do depoimento e indicou o endereço; a testemunha faltou: condução ou adiamento.",
+      "prova": ["Assertiva que adia sempre o julgamento pela ausência de qualquer testemunha erra."],
+      "termos": [],
+      "remissoes": ["Art. 422"]
+    },
+    "art-462": {
+      "simples": "Realizadas as diligências referidas nos arts. 454 a 461, o juiz presidente verificará se a urna contém as cédulas dos 25 jurados sorteados, mandando que o escrivão proceda à chamada deles.",
+      "pontos": ["Juiz verifica se a urna contém as cédulas dos 25 jurados sorteados.", "Escrivão procede à chamada."],
+      "atencao": ["Verificação das cédulas antes da chamada."],
+      "exemplo": "O juiz confere as 25 cédulas na urna e manda chamar os jurados.",
+      "prova": ["Assertiva que dispensa a verificação da urna antes da chamada erra."],
+      "termos": [],
+      "remissoes": ["Art. 463"]
+    },
+    "art-463": {
+      "simples": "Comparecendo, pelo menos, 15 jurados, o juiz presidente declarará instalados os trabalhos, anunciando o processo que será submetido a julgamento. O oficial de justiça fará o pregão, certificando a diligência nos autos. Os jurados excluídos por impedimento ou suspeição serão computados para a constituição do número legal.",
+      "pontos": ["Quorum de instalação: pelo menos 15 jurados.", "Pregão pelo oficial de justiça.", "Jurados excluídos contam para o número legal."],
+      "atencao": ["Quorum de 15 jurados."],
+      "exemplo": "Com 15 jurados presentes, o juiz instala os trabalhos.",
+      "prova": ["Assertiva que fixa em 21 o quorum mínimo de instalação erra: são 15."],
+      "termos": [],
+      "remissoes": ["Art. 464", "Art. 451"]
+    },
+    "art-464": {
+      "simples": "Não havendo o número referido no art. 463, proceder-se-á ao sorteio de tantos suplentes quantos necessários, e designar-se-á nova data para a sessão do júri.",
+      "pontos": ["Sem o quorum de 15 jurados: sorteio de suplentes.", "Nova data para a sessão."],
+      "atencao": ["Sorteio de suplentes e remarcação."],
+      "exemplo": "Só 12 jurados comparecem: sorteiam-se suplentes e designa-se nova data.",
+      "prova": ["Assertiva que prossegue com a sessão sem o quorum mínimo erra."],
+      "termos": [],
+      "remissoes": ["Art. 463"]
+    },
+    "art-465": {
+      "simples": "Os nomes dos suplentes serão consignados em ata, remetendo-se o expediente de convocação, com observância do disposto nos arts. 434 e 435.",
+      "pontos": ["Suplentes consignados em ata.", "Convocação segue os arts. 434 e 435."],
+      "atencao": ["Convocação com as formalidades dos arts. 434 e 435."],
+      "exemplo": "Os suplentes sorteados são registrados em ata e convocados.",
+      "prova": ["Assertiva que dispensa a convocação formal dos suplentes erra."],
+      "termos": [],
+      "remissoes": ["Art. 434", "Art. 435"]
+    },
+    "art-466": {
+      "simples": "Antes do sorteio dos membros do Conselho de Sentença, o juiz presidente esclarecerá sobre os impedimentos, a suspeição e as incompatibilidades constantes dos arts. 448 e 449. O juiz presidente também advertirá os jurados de que, uma vez sorteados, não poderão comunicar-se entre si e com outrem, nem manifestar sua opinião sobre o processo, sob pena de exclusão do Conselho e multa, na forma do §2º do art. 436. A incomunicabilidade será certificada nos autos pelo oficial de justiça.",
+      "pontos": ["Esclarecimento sobre impedimentos, suspeição e incompatibilidades (arts. 448 e 449).", "Advertência de incomunicabilidade e proibição de opinar.", "Sanção: exclusão do Conselho e multa.", "Incomunicabilidade certificada pelo oficial de justiça."],
+      "atencao": ["Incomunicabilidade dos jurados sorteados."],
+      "exemplo": "O juiz adverte os jurados de que não podem comentar o caso entre si.",
+      "prova": ["Assertiva que permite aos jurados sorteados conversar sobre o processo erra."],
+      "termos": [],
+      "remissoes": ["Art. 448", "Art. 449"]
+    },
+    "art-467": {
+      "simples": "Verificando que se encontram na urna as cédulas relativas aos jurados presentes, o juiz presidente sorteará 7 dentre eles para a formação do Conselho de Sentença.",
+      "pontos": ["Verificação das cédulas dos jurados presentes na urna.", "Sorteio de 7 para o Conselho de Sentença."],
+      "atencao": ["Sete jurados."],
+      "exemplo": "O juiz presidente sorteia 7 jurados presentes para o Conselho.",
+      "prova": ["Assertiva que fixa em 5 o número de sorteados para o Conselho erra: são 7."],
+      "termos": [],
+      "remissoes": ["Art. 447", "Art. 468"]
+    },
+    "art-468": {
+      "simples": "À medida que as cédulas forem sendo retiradas da urna, o juiz presidente as lerá, e a defesa e, depois dela, o Ministério Público poderão recusar os jurados sorteados, até 3 cada parte, sem motivar a recusa. O jurado recusado imotivadamente por qualquer das partes será excluído daquela sessão, prosseguindo-se o sorteio com os jurados remanescentes.",
+      "pontos": ["Recusa imotivada (peremptória): até 3 por parte.", "A defesa recusa primeiro, depois o MP.", "Jurado recusado é excluído da sessão."],
+      "atencao": ["Defesa primeiro, MP depois.", "3 recusas por parte."],
+      "exemplo": "A defesa recusa três jurados sem dar motivos, e o MP faz o mesmo.",
+      "prova": ["Assertiva que permite 5 recusas imotivadas por parte erra: são 3."],
+      "termos": [{ "termo": "Recusa peremptória", "significado": "Recusa de jurado sem necessidade de motivar." }],
+      "remissoes": ["Art. 467", "Art. 469"]
+    },
+    "art-469": {
+      "simples": "Se forem 2 ou mais os acusados, as recusas poderão ser feitas por um só defensor. A separação dos julgamentos somente ocorrerá se, em razão das recusas, não for obtido o número mínimo de 7 jurados para compor o Conselho de Sentença. Determinada a separação, será julgado em primeiro lugar o acusado a quem foi atribuída a autoria do fato ou, em caso de coautoria, aplicar-se-á o critério de preferência do art. 429.",
+      "pontos": ["Vários acusados: recusas por um só defensor.", "Separação dos julgamentos só se faltarem 7 jurados por causa das recusas.", "Primeiro julga-se o autor; na coautoria, o critério do art. 429."],
+      "atencao": ["Separação apenas se faltar o número mínimo de 7."],
+      "exemplo": "As recusas esgotam os jurados, e os julgamentos são separados.",
+      "prova": ["Assertiva que separa os julgamentos sempre que há mais de um acusado erra."],
+      "termos": [],
+      "remissoes": ["Art. 429", "Art. 468"]
+    },
+    "art-470": {
+      "simples": "Desacolhida a arguição de impedimento, de suspeição ou de incompatibilidade contra o juiz presidente do Tribunal do Júri, órgão do Ministério Público, jurado ou qualquer funcionário, o julgamento não será suspenso, devendo, entretanto, constar da ata o seu fundamento e a decisão.",
+      "pontos": ["Arguição desacolhida não suspende o julgamento.", "Fundamento e decisão constam da ata."],
+      "atencao": ["A ata registra o fundamento (para eventual recurso)."],
+      "exemplo": "A defesa argui a suspeição de um jurado; rejeitada, o julgamento prossegue e a ata registra.",
+      "prova": ["Assertiva que suspende o julgamento diante de arguição desacolhida erra."],
+      "termos": [],
+      "remissoes": ["Art. 471"]
+    },
+    "art-471": {
+      "simples": "Se, em consequência do impedimento, suspeição, incompatibilidade, dispensa ou recusa, não houver número para a formação do Conselho, o julgamento será adiado para o primeiro dia desimpedido, após sorteados os suplentes, com observância do art. 464.",
+      "pontos": ["Sem número para formar o Conselho: adiamento para o primeiro dia desimpedido.", "Sorteio de suplentes, segundo o art. 464."],
+      "atencao": ["Adiamento e sorteio de suplentes."],
+      "exemplo": "Recusas e impedimentos esgotam os jurados: adia-se e sorteiam-se suplentes.",
+      "prova": ["Assertiva que forma o Conselho com menos de 7 jurados erra."],
+      "termos": [],
+      "remissoes": ["Art. 464"]
+    },
+    "art-472": {
+      "simples": "Formado o Conselho de Sentença, o presidente, levantando-se, e, com ele, todos os presentes, fará aos jurados a exortação: 'Em nome da lei, concito-vos a examinar esta causa com imparcialidade e a proferir a vossa decisão de acordo com a vossa consciência e os ditames da justiça.' Os jurados, nominalmente chamados, responderão: 'Assim o prometo.' O jurado, em seguida, receberá cópias da pronúncia ou das decisões posteriores que julgaram admissível a acusação e do relatório do processo.",
+      "pontos": ["Compromisso solene dos jurados.", "Todos de pé; resposta 'Assim o prometo'.", "Entrega aos jurados de cópias da pronúncia e do relatório."],
+      "atencao": ["Jurados recebem a pronúncia e o relatório."],
+      "exemplo": "Os jurados prestam o compromisso e recebem cópia da pronúncia.",
+      "prova": ["Assertiva que dispensa a entrega de cópia da pronúncia aos jurados erra."],
+      "termos": [],
+      "remissoes": ["Art. 473"]
+    },
+    "art-473": {
+      "simples": "Prestado o compromisso pelos jurados, será iniciada a instrução plenária, quando o juiz presidente, o Ministério Público, o assistente, o querelante e o defensor do acusado tomarão, sucessiva e diretamente, as declarações do ofendido, se possível, e inquirirão as testemunhas arroladas pela acusação. Para a inquirição das testemunhas da defesa, o defensor formulará as perguntas antes do Ministério Público e do assistente. Os jurados poderão formular perguntas ao ofendido e às testemunhas, por intermédio do juiz presidente. As partes e os jurados poderão requerer acareações, reconhecimento de pessoas e coisas e esclarecimento dos peritos, bem como a leitura de peças que se refiram, exclusivamente, às provas colhidas por carta precatória e às provas cautelares, antecipadas ou não repetíveis.",
+      "pontos": ["Instrução plenária: juiz, MP, assistente, querelante e defensor perguntam sucessiva e diretamente.", "Testemunhas da defesa: o defensor pergunta primeiro.", "Jurados perguntam por intermédio do juiz presidente.", "Acareações, reconhecimentos, esclarecimentos de peritos e leitura restrita de peças."],
+      "atencao": ["Jurados perguntam POR INTERMÉDIO do juiz.", "Testemunha de defesa: o defensor inicia."],
+      "exemplo": "Um jurado submete sua pergunta ao juiz presidente, que a formula à testemunha.",
+      "prova": ["Assertiva que permite ao jurado perguntar diretamente à testemunha erra."],
+      "termos": [],
+      "remissoes": ["Art. 474"]
+    },
+    "art-474": {
+      "simples": "Em seguida, o acusado será interrogado, se estiver presente, na forma estabelecida no Capítulo III do Título VII do Livro I do Código, com as alterações introduzidas nesta Seção. O Ministério Público, o assistente, o querelante e o defensor, nessa ordem, poderão formular, diretamente, perguntas ao acusado. Os jurados formularão perguntas por intermédio do juiz presidente. Não se permitirá o uso de algemas no acusado durante o período em que permanecer no plenário do júri, salvo se absolutamente necessário à ordem dos trabalhos, à segurança das testemunhas ou à garantia da integridade física dos presentes.",
+      "pontos": ["Acusado interrogado no plenário, se presente.", "Perguntas diretas: MP, assistente, querelante e defensor, nessa ordem.", "Jurados por intermédio do juiz presidente.", "Sem algemas no plenário, salvo absoluta necessidade."],
+      "atencao": ["Algemas: exceção por absoluta necessidade (e Súmula Vinculante 11)."],
+      "exemplo": "O acusado é interrogado sem algemas no plenário.",
+      "prova": ["Assertiva que permite o uso rotineiro de algemas no plenário erra."],
+      "termos": [],
+      "remissoes": ["Art. 473"]
+    },
+    "art-474-a": {
+      "simples": "Durante a instrução em plenário, todas as partes e demais sujeitos processuais presentes no ato deverão respeitar a dignidade da vítima, sob pena de responsabilização civil, penal e administrativa, cabendo ao juiz presidente garantir o cumprimento do disposto, sendo vedadas a manifestação sobre circunstâncias ou elementos alheios aos fatos objeto de apuração nos autos e a utilização de linguagem, informações ou material que ofendam a dignidade da vítima ou de testemunhas.",
+      "pontos": ["Respeito à dignidade da vítima no plenário.", "Responsabilidade civil, penal e administrativa.", "Vedadas manifestações alheias aos fatos e linguagem ofensiva."],
+      "atencao": ["Incluído pela Lei nº 14.245, de 2021."],
+      "exemplo": "O juiz presidente impede o uso de material ofensivo à vítima no plenário.",
+      "prova": ["Assertiva que restringe o art. 474-A aos crimes sexuais erra."],
+      "termos": [],
+      "remissoes": ["Art. 400-A"]
+    },
+    "art-475": {
+      "simples": "O registro dos depoimentos e do interrogatório será feito pelos meios ou recursos de gravação magnética, eletrônica, estenotipia ou técnica similar, destinada a obter maior fidelidade e celeridade na colheita da prova. A transcrição do registro, após feita a degravação, constará dos autos.",
+      "pontos": ["Registro por gravação magnética, eletrônica, estenotipia ou técnica similar.", "Transcrição, após degravação, consta dos autos."],
+      "atencao": ["Fidelidade e celeridade."],
+      "exemplo": "Os depoimentos no plenário são gravados e degravados.",
+      "prova": ["Assertiva que dispensa a transcrição do registro nos autos erra."],
+      "termos": [],
+      "remissoes": ["Art. 405"]
+    },
+    "art-476": {
+      "simples": "Encerrada a instrução, será concedida a palavra ao Ministério Público, que fará a acusação, nos limites da pronúncia ou das decisões posteriores que julgaram admissível a acusação, sustentando, se for o caso, a existência de circunstância agravante. O assistente falará depois do Ministério Público. Na ação penal privada, falará em primeiro lugar o querelante e, em seguida, o Ministério Público, salvo se este houver retomado a titularidade da ação. Finda a acusação, terá a palavra a defesa. A acusação poderá replicar e a defesa treplicar, sendo admitida a reinquirição de testemunha já ouvida em plenário.",
+      "pontos": ["Acusação pelo MP nos limites da pronúncia.", "Assistente depois do MP.", "Ação privada: querelante primeiro.", "Defesa após a acusação.", "Réplica e tréplica, com reinquirição possível."],
+      "atencao": ["Acusação limitada pela PRONÚNCIA."],
+      "exemplo": "O MP sustenta a acusação nos limites da pronúncia e a defesa responde em seguida.",
+      "prova": ["Assertiva que permite ao MP ampliar a acusação além dos limites da pronúncia erra."],
+      "termos": [],
+      "remissoes": ["Art. 477"]
+    },
+    "art-477": {
+      "simples": "O tempo destinado à acusação e à defesa será de uma hora e meia para cada, e de uma hora para a réplica e outro tanto para a tréplica. Havendo mais de um acusador ou mais de um defensor, combinarão entre si a distribuição do tempo, que, na falta de acordo, será dividido pelo juiz presidente, de forma a não exceder o determinado. Havendo mais de 1 acusado, o tempo para a acusação e a defesa será acrescido de 1 hora e elevado ao dobro o da réplica e da tréplica.",
+      "pontos": ["Acusação e defesa: uma hora e meia cada.", "Réplica e tréplica: uma hora cada.", "Vários acusadores ou defensores dividem o tempo.", "Mais de 1 acusado: acréscimo de 1 hora e réplica e tréplica em dobro."],
+      "atencao": ["Tempos: 1h30 (debate) e 1h (réplica/tréplica).", "Mais de um acusado: +1 hora e dobro da réplica e da tréplica."],
+      "exemplo": "Em plenário com um acusado, cada parte tem uma hora e meia para o debate.",
+      "prova": ["Assertiva que fixa em duas horas o tempo de debate com um só acusado erra: é uma hora e meia."],
+      "termos": [],
+      "remissoes": ["Art. 476"]
+    },
+    "art-478": {
+      "simples": "Durante os debates as partes não poderão, sob pena de nulidade, fazer referências à decisão de pronúncia, às decisões posteriores que julgaram admissível a acusação ou à determinação do uso de algemas como argumento de autoridade que beneficiem ou prejudiquem o acusado; nem ao silêncio do acusado ou à ausência de interrogatório por falta de requerimento, em seu prejuízo.",
+      "pontos": ["Proibido invocar a pronúncia como argumento de autoridade.", "Proibido usar o uso de algemas como argumento de autoridade.", "Proibido usar o silêncio do acusado em seu prejuízo.", "Sob pena de nulidade."],
+      "atencao": ["Nulidade se as vedações forem descumpridas."],
+      "exemplo": "O promotor diz aos jurados que o juiz já entendeu pela culpa ao pronunciar: nulidade.",
+      "prova": ["Assertiva que permite ao MP citar o silêncio do acusado como indício de culpa erra."],
+      "termos": [],
+      "remissoes": ["Art. 186"]
+    },
+    "art-479": {
+      "simples": "Durante o julgamento não será permitida a leitura de documento ou a exibição de objeto que não tiver sido juntado aos autos com a antecedência mínima de 3 dias úteis, dando-se ciência à outra parte. Compreende-se na proibição a leitura de jornais ou qualquer outro escrito, bem como a exibição de vídeos, gravações, fotografias, laudos, quadros, croqui ou qualquer outro meio assemelhado, cujo conteúdo versar sobre a matéria de fato submetida à apreciação e julgamento dos jurados.",
+      "pontos": ["Documento ou objeto deve ser juntado aos autos com antecedência mínima de 3 dias úteis, com ciência à outra parte.", "A vedação abrange jornais, vídeos, gravações, fotografias, laudos, quadros e croqui sobre a matéria de fato."],
+      "atencao": ["Antecedência de 3 dias ÚTEIS."],
+      "exemplo": "A defesa não pode exibir no plenário um vídeo juntado no dia do julgamento.",
+      "prova": ["Assertiva que fixa em 24 horas a antecedência para exibir documentos no plenário erra: são 3 dias úteis."],
+      "termos": [],
+      "remissoes": ["Art. 231"]
+    },
+    "art-480": {
+      "simples": "A acusação, a defesa e os jurados poderão, a qualquer momento e por intermédio do juiz presidente, pedir ao orador que indique a folha dos autos onde se encontra a peça por ele lida ou citada, facultando-se, ainda, aos jurados solicitar-lhe, pelo mesmo meio, o esclarecimento de fato por ele alegado. Concluídos os debates, o presidente indagará dos jurados se estão habilitados a julgar ou se necessitam de outros esclarecimentos. Se houver dúvida sobre questão de fato, o presidente prestará esclarecimentos à vista dos autos. Os jurados, nesta fase, terão acesso aos autos e aos instrumentos do crime se solicitarem ao juiz presidente.",
+      "pontos": ["Pedido de indicação da folha dos autos, por intermédio do juiz presidente.", "Jurados podem pedir esclarecimento de fato alegado.", "Fim dos debates: presidente pergunta se estão habilitados a julgar.", "Dúvida de fato: esclarecimentos à vista dos autos.", "Acesso aos autos e instrumentos do crime, se solicitado."],
+      "atencao": ["Tudo por intermédio do juiz presidente."],
+      "exemplo": "Um jurado pede ao juiz que o orador indique a folha dos autos de onde leu.",
+      "prova": ["Assertiva que permite aos jurados dirigirem-se diretamente ao orador erra: é por intermédio do juiz presidente."],
+      "termos": [],
+      "remissoes": ["Art. 481"]
+    },
+    "art-481": {
+      "simples": "Se a verificação de qualquer fato, reconhecida como essencial para o julgamento da causa, não puder ser realizada imediatamente, o juiz presidente dissolverá o Conselho, ordenando a realização das diligências entendidas necessárias. Se a diligência consistir na produção de prova pericial, o juiz presidente, desde logo, nomeará perito e formulará quesitos, facultando às partes também formulá-los e indicar assistentes técnicos, no prazo de 5 dias.",
+      "pontos": ["Fato essencial não verificável de imediato: dissolução do Conselho e diligências.", "Prova pericial: perito nomeado e quesitos do juiz.", "Partes formulam quesitos e indicam assistentes técnicos em 5 dias."],
+      "atencao": ["Dissolução do Conselho de Sentença."],
+      "exemplo": "Uma perícia essencial é necessária; o Conselho é dissolvido e o perito, nomeado.",
+      "prova": ["Assertiva que mantém o Conselho de Sentença enquanto aguarda a diligência essencial erra."],
+      "termos": [],
+      "remissoes": ["Art. 480"]
+    }
+  }
+}
