@@ -40,6 +40,7 @@ import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
 import { MobileHub } from "@/components/landing/MobileHub";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
+import { HeroGeometry } from "@/components/landing/fx";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -194,28 +195,12 @@ function useReveal() {
   }, []);
 }
 
-function useLandingSpotlight() {
-  useEffect(() => {
-    const root = document.querySelector<HTMLElement>(".lp");
-    if (!root || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const pointer = window.matchMedia("(hover: hover) and (pointer: fine)");
-    if (!pointer.matches) return;
-    const onMove = (event: PointerEvent) => {
-      root.style.setProperty("--spot-x", `${event.clientX}px`);
-      root.style.setProperty("--spot-y", `${event.clientY}px`);
-    };
-    root.addEventListener("pointermove", onMove, { passive: true });
-    return () => root.removeEventListener("pointermove", onMove);
-  }, []);
-}
-
 const delay = (n: number) => ({ "--reveal-delay": n }) as CSSProperties;
 
 function Index() {
   const scrolled = useScrolled();
   const [heroReady, setHeroReady] = useState(false);
   useReveal();
-  useLandingSpotlight();
 
   return (
     <div className="lp">
@@ -288,6 +273,7 @@ function Index() {
           </div>
           <div className="lp-hero__shade" aria-hidden="true" />
           <div className="lp-hero__grid" aria-hidden="true" />
+          <HeroGeometry />
           <div className="lp-container lp-hero__body">
             <div className="lp-hero__layout">
               <div className="lp-hero__content">

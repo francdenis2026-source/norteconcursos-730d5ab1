@@ -9613,3 +9613,32 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .app-content { padding-block: 12px 94px; }
   .lp::before { display: none; }
 }
+
+/* Replace the cursor glow with a quiet geometric mesh. */
+.lp::before {
+  display: none;
+}
+.fx-geometry {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.72;
+  mask-image: linear-gradient(90deg, transparent 4%, #000 38%, #000 84%, transparent 100%);
+}
+.page-hero,
+.tactical-feature-hero,
+.catalog-command-hero {
+  --hero-x: 78%;
+  --hero-y: 22%;
+}
+.page-hero::after,
+.tactical-feature-hero::after,
+.catalog-command-hero::after {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
