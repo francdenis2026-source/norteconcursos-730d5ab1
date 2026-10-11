@@ -12,6 +12,13 @@ class CurriculumTests(unittest.TestCase):
  def test_legacy_inline_reference_is_not_truncated(self):
   rows=self.parse('<p>Art. 5º Aplica-se a <b><font><p></font></b><font>Lei nº 13.060</font></p><font> e este Decreto.</font></p>')
   self.assertIn('Lei nº 13.060',rows[0]['text'])
+ def test_revoked_article_annotations_do_not_revoke_previous_current_article(self):
+  rows=self.parse('<p>Art. 232. Vexame ou constrangimento.</p><p>Pena — detenção de seis meses a dois anos.</p><p><strike>Art. 233. Tortura.</strike> (Revogado pela Lei nº 9.455)</p><p><strike>Pena antiga.</strike> (Revogado pela Lei nº 9.455)</p><p>Art. 234. Regra vigente seguinte.</p>')
+  current={r['key']:r for r in rows if r['status']=='current'}
+  self.assertIn('art-232',current);self.assertNotIn('Revogado',current['art-232']['text']);self.assertNotIn('art-233',current)
+ def test_unstruck_old_penalty_stays_out_of_previous_article(self):
+  rows=self.parse('<p>Art. 239. Regra atual.</p><p><strike>Art. 240. Caput antigo.</strike></p><p>Pena antiga — quatro a oito anos.</p><p>Art. 240. Caput novo.</p><p>Pena atual — quatro a dez anos.</p>')
+  self.assertNotIn('Pena antiga',rows[0]['text']);self.assertIn('dez anos',rows[1]['text'])
  def parse(self,text,slug='fixture'):
   return builder.parse_law(('<html><body>'+text+'</body></html>').encode('utf-8'),slug)
  def test_dash_and_article_suffix_are_distinct(self):

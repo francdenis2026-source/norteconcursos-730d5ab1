@@ -21,7 +21,7 @@ if(!result.dry_run){
   const c=courses.find(c=>c.id===law.expected.id);if(!c||c.source_url!==law.source_url||c.source_sha256!==law.expected.source_sha256||c.syllabus_topic_id!==law.expected.syllabus_topic_id)throw Error('Fonte ou vínculo alterado');
   const [topic]=await request(`syllabus_topics?id=eq.${c.syllabus_topic_id}&content_status=eq.current&select=edition_id`);
   if(!topic||(await request(`syllabus_editions?id=eq.${topic.edition_id}&status=eq.active&select=id`)).length!==1)throw Error('Edital inativo');
-  if(!(await request(`content_sources?url=eq.${encodeURIComponent(law.source_url)}&is_official=eq.true&status=eq.vigente&select=id`)).length)throw Error('Fonte não cadastrada');
+  if(!(await request(`content_sources?url=eq.${encodeURIComponent(law.source_url)}&is_official=eq.true&status=in.(vigente,parcialmente_revogado)&select=id`)).length)throw Error('Fonte não cadastrada');
  }
  // Preflight the whole batch before any mutation.
  for(const row of pack.changes){const [u]=await request(`legal_course_units?id=eq.${row.expected.id}&select=*`);if(!u||(!isDeepStrictEqual(u,row.expected)&&u.body_text!==row.body_text))throw Error('Dispositivo alterado por outra revisão');current.set(u.id,u);}

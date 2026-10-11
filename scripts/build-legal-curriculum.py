@@ -36,16 +36,19 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
     # Unicode serialization so a legacy charset declaration cannot re-decode it.
     repaired=html5lib.parse(decoded,treebuilder='lxml',namespaceHTMLElements=False)
     tree=html.fromstring(etree.tostring(repaired,encoding='unicode',method='html'))
-    original=[clean(e.text_content()) for e in tree.xpath('//p')]
+    original_paragraphs=list(tree.xpath('//p'))
+    original_text={e:clean(e.text_content()) for e in original_paragraphs}
+    original=list(original_text.values())
     for element in tree.xpath('//strike|//del|//s|//script|//style'):
      element.drop_tree()
     for element in tree.xpath('//*[@style]'):
      if 'line-through' in element.get('style',''):element.drop_tree()
     # Paragraph boundaries, not line-wrapped text, define article headings.
     blocks=[]
-    for element in tree.xpath('//p'):
-     value=clean(element.text_content())
-     if value:blocks.append(value)
+    remaining=set(tree.xpath('//p'))
+    for element in original_paragraphs:
+     value=clean(element.text_content()) if element in remaining else ''
+     blocks.append((value,original_text[element]))
     article=re.compile(r'^(?:[“"\s]*Art\.?\s*(\d+(?:[º°o])?(?:[-–]\s*[A-Z]{1,2}|\s+[-–][A-Z]{1,2}|[A-Z]{1,2})?)(?!\.\d)(?=\s|[.\-–:]|$)\s*[.\-–:]?|Artigo\s+(\d+)\s*[-–:]?)',re.I)
     units=[];chapter='Disposições iniciais';pending=[];annex=False;hierarchy={};pending_level=0
     levels={'livro':0,'titulo':1,'capitulo':2,'secao':3,'seccao':3,'subsecao':4}
@@ -55,7 +58,16 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
       if level>=pending_level:del hierarchy[level]
      hierarchy[pending_level]=' — '.join(pending)
      return ' / '.join(hierarchy[k] for k in sorted(hierarchy))
-    for value in blocks:
+    inactive_article=False
+    for value,unstripped in blocks:
+     current_head=article.match(value)
+     original_head=article.match(unstripped)
+     if original_head and not unstripped.startswith(('“','"')) and not current_head:
+      # A removed article still owns its following penalty and revocation
+      # annotations. Do not attach them to the previous current article.
+      inactive_article=True
+     if current_head and not value.startswith(('“','"')):inactive_article=False
+     if inactive_article or not value:continue
      if value.startswith('Este texto não substitui') or value.startswith('Brasília,'):
       if slug!='budapeste':break
       if value.startswith('Brasília,'):continue

@@ -1,5 +1,8 @@
 import {isDeepStrictEqual} from 'node:util';
 export const explanationFields=['unit_id','content_sha256','simples','pontos','atencao','exemplo','prova','termos','remissoes'];
+// Partial revocation does not repeal the surviving current articles. Never
+// admit a fully revoked source; unit status and exact body hash remain required.
+export function usableArticleSource(source) {return source?.is_official&&['vigente','parcialmente_revogado'].includes(source.status);}
 export function explanationPayload(row) {return Object.fromEntries(explanationFields.map(k=>[k,row[k]??[]]));}
 export function sameExplanation(actual, expected) {return explanationFields.every(k=>isDeepStrictEqual(actual[k],expected[k]));}
 export function validateArticlePackage(pack) {
@@ -21,7 +24,7 @@ export function checkArticlePreflight(pack, snapshot){
     const course=snapshot.legal_courses.find(c=>c.slug===law.slug&&c.status==='active');
     const current=snapshot.legal_course_units.filter(u=>u.course_id===course?.id&&u.content_status==='current');
     const authored=pack.units.filter(r=>r.course_slug===law.slug);
-    for(const ref of law.additional_sources??[])if(!snapshot.content_sources.some(s=>s.url===ref.url&&s.is_official&&s.status==='vigente'))throw Error('Fonte adicional não cadastrada');
+    for(const ref of law.additional_sources??[])if(!snapshot.content_sources.some(s=>s.url===ref.url&&usableArticleSource(s)))throw Error('Fonte adicional não cadastrada');
     if(law.scope_type==='targeted_correction'){
       if(current.length!==law.course_current_units||!Array.isArray(law.target_unit_keys)||law.target_unit_keys.length!==law.units||new Set(law.target_unit_keys).size!==law.units||!authored.every(r=>law.target_unit_keys.includes(r.unit_key)&&current.some(u=>u.id===r.unit_id)))throw Error(`Correção incompleta: ${law.slug}`);
     }else if(law.scope_type&&law.scope_type!=='complete_path')throw Error('Escopo desconhecido');
@@ -33,7 +36,7 @@ export function checkArticlePreflight(pack, snapshot){
     const unit=snapshot.legal_course_units.find(u=>u.id===row.unit_id&&u.course_id===row.course_id&&u.unit_key===row.unit_key&&u.content_status==='current'&&u.content_sha256===row.content_sha256);
     const topic=snapshot.syllabus_topics.find(t=>t.id===row.syllabus_topic_id&&t.edition_id===row.edition_id&&t.content_status==='current');
     const edition=snapshot.syllabus_editions.find(e=>e.id===row.edition_id&&e.status==='active');
-    const source=snapshot.content_sources.find(s=>s.url===law.source_url&&s.is_official&&s.status==='vigente');
+    const source=snapshot.content_sources.find(s=>s.url===law.source_url&&usableArticleSource(s));
     const old=snapshot.legal_unit_explanations.find(e=>e.unit_id===row.unit_id);
     if(!course||course.syllabus_topic_id!==row.syllabus_topic_id||course.source_url!==law.source_url||!unit||!topic||!edition||!source)throw Error(`Vínculo ou texto mudou: ${row.course_slug}/${row.unit_key}`);
     if(old&&!sameExplanation(old,explanationPayload(row))&&(!row.expected||!isDeepStrictEqual(old,row.expected)))throw Error(`Preserve a revisão existente: ${row.unit_id}`);
