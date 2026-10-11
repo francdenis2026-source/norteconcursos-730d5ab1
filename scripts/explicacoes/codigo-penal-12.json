@@ -1,0 +1,321 @@
+{
+  "course_slug": "codigo-penal",
+  "law": "Código Penal — lote 12: arts. 313-B a 337-H",
+  "units": {
+    "art-313-b": {
+      "simples": "Modificação ou alteração não autorizada de sistema de informações: modificar ou alterar, o funcionário, sistema de informações ou programa de informática sem autorização ou solicitação de autoridade competente. Pena: detenção de 3 meses a 2 anos e multa. As penas são aumentadas de um terço até a metade se da modificação ou alteração resulta dano para a Administração Pública ou para o administrado.",
+      "pontos": ["Funcionário modifica ou altera sistema ou programa de informática sem autorização.", "Detenção de 3 meses a 2 anos e multa.", "Parágrafo único: dano à Administração ou ao administrado: aumento de um terço até a metade."],
+      "atencao": ["Aqui NÃO há dolo específico de vantagem (diferença para o art. 313-A)."],
+      "exemplo": "Servidor altera o programa do órgão sem autorização da autoridade competente.",
+      "prova": ["Assertiva que exige fim de vantagem indevida no art. 313-B erra: o tipo não traz essa finalidade."],
+      "termos": [],
+      "remissoes": ["Art. 313-A"]
+    },
+    "art-314": {
+      "simples": "Extravio, sonegação ou inutilização de livro ou documento: extraviar livro oficial ou qualquer documento, de que tem a guarda em razão do cargo; sonegá-lo ou inutilizá-lo, total ou parcialmente. Pena: reclusão de um a quatro anos, se o fato não constitui crime mais grave.",
+      "pontos": ["Extraviar, sonegar ou inutilizar livro oficial ou documento sob guarda em razão do cargo.", "Reclusão de um a quatro anos.", "Subsidiário."],
+      "atencao": ["Crime subsidiário.", "O agente tem a GUARDA do documento em razão do cargo."],
+      "exemplo": "Servidor inutiliza processo que estava sob sua guarda.",
+      "prova": ["Assertiva que aplica o art. 314 mesmo havendo crime mais grave erra."],
+      "termos": [],
+      "remissoes": ["Art. 337"]
+    },
+    "art-315": {
+      "simples": "Emprego irregular de verbas ou rendas públicas: dar às verbas ou rendas públicas aplicação diversa da estabelecida em lei. Pena: detenção de um a três meses, ou multa.",
+      "pontos": ["Dar às verbas ou rendas públicas aplicação diversa da legal.", "Detenção de um a três meses, ou multa."],
+      "atencao": ["Não há proveito próprio: a verba é aplicada em outra finalidade pública."],
+      "exemplo": "Administrador usa verba da educação para outra finalidade não prevista em lei.",
+      "prova": ["Assertiva que exige apropriação da verba no art. 315 erra: há apenas aplicação diversa da legal."],
+      "termos": [],
+      "remissoes": ["Art. 312"]
+    },
+    "art-316": {
+      "simples": "Concussão: exigir, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida. Pena: reclusão de 2 a 12 anos e multa. Excesso de exação (§1º): se o funcionário exige tributo ou contribuição social que sabe ou deveria saber indevido, ou, quando devido, emprega na cobrança meio vexatório ou gravoso que a lei não autoriza: reclusão de 3 a 8 anos e multa. Se o funcionário desvia, em proveito próprio ou de outrem, o que recebeu indevidamente para recolher aos cofres públicos: reclusão de dois a doze anos e multa.",
+      "pontos": ["Caput: EXIGIR vantagem indevida em razão da função.", "Reclusão de 2 a 12 anos e multa.", "§1º excesso de exação: exigir tributo indevido ou cobrar de modo vexatório: reclusão de 3 a 8 anos e multa.", "§2º: desviar o que recebeu indevidamente para recolher aos cofres públicos."],
+      "atencao": ["Concussão = EXIGIR (corrupção passiva = SOLICITAR/RECEBER/ACEITAR).", "Pode ser praticada fora da função ou antes de assumi-la, desde que em razão dela."],
+      "exemplo": "Fiscal exige dinheiro do contribuinte para não lavrar a autuação.",
+      "prova": ["Assertiva que confunde concussão com corrupção passiva erra: concussão exige; corrupção passiva solicita, recebe ou aceita."],
+      "termos": [{ "termo": "Excesso de exação", "significado": "Cobrar tributo indevido ou cobrar de modo vexatório ou gravoso." }],
+      "remissoes": ["Art. 317", "Art. 333"]
+    },
+    "art-317": {
+      "simples": "Corrupção passiva: solicitar ou receber, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida, ou aceitar promessa de tal vantagem. Pena: reclusão de 2 a 12 anos e multa. A pena é aumentada de um terço se, em consequência da vantagem ou promessa, o funcionário retarda ou deixa de praticar qualquer ato de ofício ou o pratica infringindo dever funcional. Se o funcionário pratica, deixa de praticar ou retarda ato de ofício, com infração de dever funcional, cedendo a pedido ou influência de outrem: detenção de três meses a um ano, ou multa.",
+      "pontos": ["Solicitar, receber ou aceitar promessa de vantagem indevida.", "Reclusão de 2 a 12 anos e multa.", "§1º: aumento de um terço se o funcionário retarda ou deixa de praticar ato de ofício, ou o pratica infringindo dever funcional.", "§2º (privilegiada): cede a pedido ou influência de outrem: detenção de três meses a um ano, ou multa."],
+      "atencao": ["Crime formal: consuma-se com a solicitação, recebimento ou aceitação da promessa; o ato de ofício apenas aumenta a pena.", "Corrupção passiva é crime próprio de funcionário público (com particulares possíveis em concurso)."],
+      "exemplo": "Servidor aceita promessa de dinheiro para agilizar processo.",
+      "prova": ["Assertiva que exige a prática do ato de ofício para consumar a corrupção passiva erra: ele só gera o aumento do §1º."],
+      "termos": [],
+      "remissoes": ["Art. 316", "Art. 333"]
+    },
+    "art-318": {
+      "simples": "Facilitação de contrabando ou descaminho: facilitar, com infração de dever funcional, a prática de contrabando ou descaminho (art. 334). Pena: reclusão de 3 a 8 anos e multa.",
+      "pontos": ["Facilitar, com infração de dever funcional, o contrabando ou o descaminho.", "Reclusão de 3 a 8 anos e multa."],
+      "atencao": ["Exceção à teoria monista: o funcionário responde por crime próprio, e o particular, pelo art. 334."],
+      "exemplo": "Agente aduaneiro deixa de fiscalizar para facilitar a entrada irregular de mercadorias.",
+      "prova": ["Assertiva que aplica o art. 318 a particular que não infringe dever funcional erra."],
+      "termos": [],
+      "remissoes": ["Art. 334", "Art. 334-A"]
+    },
+    "art-319": {
+      "simples": "Prevaricação: retardar ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal. Pena: detenção de três meses a um ano e multa.",
+      "pontos": ["Retardar ou deixar de praticar ato de ofício, ou praticá-lo contra expressa disposição de lei.", "Fim de satisfazer interesse ou sentimento pessoal.", "Detenção de três meses a um ano e multa."],
+      "atencao": ["Exige dolo específico: INTERESSE ou SENTIMENTO PESSOAL.", "Não há vantagem indevida (senão seria corrupção)."],
+      "exemplo": "Servidor deixa de atender um requerimento por inimizade com o interessado.",
+      "prova": ["Assertiva que dispensa o interesse ou sentimento pessoal na prevaricação erra."],
+      "termos": [],
+      "remissoes": ["Art. 317", "Art. 320"]
+    },
+    "art-319-a": {
+      "simples": "Prevaricação em estabelecimento penal: deixar o Diretor de Penitenciária e/ou agente público de cumprir seu dever de vedar ao preso o acesso a aparelho telefônico, de rádio ou similar, que permita a comunicação com outros presos ou com o ambiente externo. Pena: detenção de 3 meses a 1 ano.",
+      "pontos": ["Diretor de penitenciária ou agente público deixa de vedar ao preso acesso a telefone, rádio ou similar.", "Detenção de 3 meses a 1 ano."],
+      "atencao": ["Crime omissivo próprio.", "A conduta do preso que usa o aparelho é falta grave (Lei de Execução Penal)."],
+      "exemplo": "Agente penitenciário permite que o preso mantenha celular na cela.",
+      "prova": ["Assertiva que pune o preso que usa celular, por esse artigo, erra: o tipo pune quem deixa de vedar o acesso."],
+      "termos": [],
+      "remissoes": ["Art. 349-A"]
+    },
+    "art-320": {
+      "simples": "Condescendência criminosa: deixar o funcionário, por indulgência, de responsabilizar subordinado que cometeu infração no exercício do cargo ou, quando lhe falte competência, não levar o fato ao conhecimento da autoridade competente. Pena: detenção de quinze dias a um mês, ou multa.",
+      "pontos": ["Deixar de responsabilizar subordinado por indulgência.", "Ou não levar o fato ao conhecimento da autoridade competente, quando faltar competência.", "Detenção de quinze dias a um mês, ou multa."],
+      "atencao": ["Motivo é a INDULGÊNCIA (tolerância).", "O infrator é SUBORDINADO."],
+      "exemplo": "Chefe deixa de punir subordinado por pena do colega.",
+      "prova": ["Assertiva que exige vantagem indevida na condescendência criminosa erra: o motivo é a indulgência."],
+      "termos": [],
+      "remissoes": ["Art. 319"]
+    },
+    "art-321": {
+      "simples": "Advocacia administrativa: patrocinar, direta ou indiretamente, interesse privado perante a administração pública, valendo-se da qualidade de funcionário. Pena: detenção de um a três meses, ou multa. Se o interesse é ilegítimo: detenção de três meses a um ano, além da multa.",
+      "pontos": ["Patrocinar interesse privado perante a administração, valendo-se da qualidade de funcionário.", "Detenção de um a três meses, ou multa.", "Parágrafo único: interesse ilegítimo: detenção de três meses a um ano, além da multa."],
+      "atencao": ["Interesse ilegítimo agrava a pena."],
+      "exemplo": "Servidor intercede em favor de um conhecido perante outro setor, usando seu cargo.",
+      "prova": ["Assertiva que exige que o interesse seja ilegítimo no caput erra: ele agrava a pena no parágrafo único."],
+      "termos": [],
+      "remissoes": ["Art. 337-G"]
+    },
+    "art-322": {
+      "simples": "Violência arbitrária: praticar violência, no exercício de função ou a pretexto de exercê-la. Pena: detenção de seis meses a três anos, além da pena correspondente à violência.",
+      "pontos": ["Praticar violência no exercício de função ou a pretexto de exercê-la.", "Detenção de seis meses a três anos, além da pena da violência."],
+      "atencao": ["Hoje o abuso de autoridade é regido pela Lei nº 13.869, de 2019, o que reduz a incidência prática do art. 322."],
+      "exemplo": "Funcionário agride alguém a pretexto de cumprir suas funções.",
+      "prova": ["Assertiva que absorve a pena da violência no art. 322 erra: a pena é somada."],
+      "termos": [],
+      "remissoes": ["Lei nº 13.869, de 2019"]
+    },
+    "art-323": {
+      "simples": "Abandono de função: abandonar cargo público, fora dos casos permitidos em lei. Pena: detenção de quinze dias a um mês, ou multa. Se resulta prejuízo público: detenção de três meses a um ano e multa. Se ocorre em lugar compreendido na faixa de fronteira: detenção de um a três anos e multa.",
+      "pontos": ["Abandonar cargo público fora dos casos permitidos em lei.", "Detenção de quinze dias a um mês, ou multa.", "§1º: prejuízo público: detenção de três meses a um ano e multa.", "§2º: faixa de fronteira: detenção de um a três anos e multa."],
+      "atencao": ["Faixa de fronteira tem a pena mais alta."],
+      "exemplo": "Servidor abandona o cargo na faixa de fronteira.",
+      "prova": ["Assertiva que fixa a mesma pena para o caput e a faixa de fronteira erra."],
+      "termos": [],
+      "remissoes": ["Art. 324"]
+    },
+    "art-324": {
+      "simples": "Exercício funcional ilegalmente antecipado ou prolongado: entrar no exercício de função pública antes de satisfeitas as exigências legais, ou continuar a exercê-la, sem autorização, depois de saber oficialmente que foi exonerado, removido, substituído ou suspenso. Pena: detenção de quinze dias a um mês, ou multa.",
+      "pontos": ["Entrar no exercício da função antes de cumprir as exigências legais.", "Continuar a exercê-la, sem autorização, depois de saber oficialmente da exoneração, remoção, substituição ou suspensão.", "Detenção de quinze dias a um mês, ou multa."],
+      "atencao": ["Exige ciência OFICIAL no caso do exercício prolongado."],
+      "exemplo": "Servidor continua trabalhando após ser oficialmente informado de sua exoneração.",
+      "prova": ["Assertiva que dispensa a ciência oficial na modalidade prolongada erra."],
+      "termos": [],
+      "remissoes": ["Art. 323"]
+    },
+    "art-325": {
+      "simples": "Violação de sigilo funcional: revelar fato de que tem ciência em razão do cargo e que deva permanecer em segredo, ou facilitar-lhe a revelação. Pena: detenção de seis meses a dois anos, ou multa, se o fato não constitui crime mais grave. Nas mesmas penas quem permite ou facilita, mediante atribuição, fornecimento e empréstimo de senha ou qualquer outra forma, o acesso de pessoas não autorizadas a sistemas de informações ou banco de dados da Administração Pública, ou se utiliza indevidamente do acesso restrito. Se resulta dano à Administração ou a outrem: reclusão de 2 a 6 anos e multa.",
+      "pontos": ["Revelar fato sigiloso de que tem ciência em razão do cargo, ou facilitar a revelação.", "Detenção de seis meses a dois anos, ou multa (subsidiário).", "§1º: permitir acesso de pessoas não autorizadas a sistemas, ou usar indevidamente o acesso restrito.", "§2º: dano à Administração ou a outrem: reclusão de 2 a 6 anos e multa."],
+      "atencao": ["Empréstimo de senha pode configurar o §1º.", "Subsidiário no caput."],
+      "exemplo": "Servidor empresta sua senha a pessoa não autorizada para acessar o sistema.",
+      "prova": ["Assertiva que não pune o servidor que empresta sua senha erra: configura o §1º, I."],
+      "termos": [],
+      "remissoes": ["Art. 153", "Art. 313-A"]
+    },
+    "art-326": {
+      "simples": "Violação do sigilo de proposta de concorrência: devassar o sigilo de proposta de concorrência pública, ou proporcionar a terceiro o ensejo de devassá-lo. Pena: detenção de três meses a um ano e multa.",
+      "pontos": ["Devassar o sigilo de proposta de concorrência pública.", "Ou proporcionar a terceiro a oportunidade de devassá-lo.", "Detenção de três meses a um ano e multa."],
+      "atencao": ["Atenção ao regime de licitações da Lei nº 14.133, de 2021."],
+      "exemplo": "Servidor abre propostas lacradas antes do momento e informa um concorrente.",
+      "prova": ["Assertiva que aplica o art. 326 a qualquer sigilo funcional erra: o tipo trata do sigilo de proposta de concorrência pública."],
+      "termos": [],
+      "remissoes": ["Art. 325"]
+    },
+    "art-327": {
+      "simples": "Conceito de funcionário público: considera-se funcionário público, para os efeitos penais, quem, embora transitoriamente ou sem remuneração, exerce cargo, emprego ou função pública. Equipara-se a funcionário público quem exerce cargo, emprego ou função em entidade paraestatal, e quem trabalha para empresa prestadora de serviço contratada ou conveniada para a execução de atividade típica da Administração Pública. A pena será aumentada da terça parte quando os autores dos crimes deste Capítulo forem ocupantes de cargos em comissão ou de função de direção ou assessoramento de órgão da administração direta, sociedade de economia mista, empresa pública ou fundação instituída pelo poder público.",
+      "pontos": ["Funcionário público: quem exerce cargo, emprego ou função pública, ainda que transitoriamente ou sem remuneração.", "§1º: equiparados (paraestatal; empresa contratada para atividade típica da Administração).", "§2º: aumento da terça parte para cargos em comissão ou função de direção ou assessoramento."],
+      "atencao": ["Conceito AMPLO: transitoriedade e ausência de remuneração não afastam.", "O aumento de terça parte aplica-se aos crimes DESTE Capítulo."],
+      "exemplo": "Mesário voluntário em eleição pode ser considerado funcionário público para fins penais.",
+      "prova": ["Assertiva que exige remuneração para ser funcionário público para fins penais erra: basta exercer, ainda que sem remuneração."],
+      "termos": [{ "termo": "Entidade paraestatal", "significado": "Entidade que atua ao lado do Estado em atividades de interesse público." }],
+      "remissoes": ["Art. 312", "Art. 317"]
+    },
+    "art-328": {
+      "simples": "Usurpação de função pública: usurpar o exercício de função pública. Pena: detenção de três meses a dois anos e multa. Se o agente aufere vantagem: reclusão de dois a cinco anos e multa.",
+      "pontos": ["Usurpar o exercício de função pública.", "Detenção de três meses a dois anos e multa.", "Parágrafo único: vantagem auferida: reclusão de dois a cinco anos e multa."],
+      "atencao": ["O usurpador é PARTICULAR (não é funcionário)."],
+      "exemplo": "Particular se passa por fiscal e exerce atos de fiscalização.",
+      "prova": ["Assertiva que considera o usurpador funcionário público erra: ele exerce função pública sem ter cargo."],
+      "termos": [],
+      "remissoes": ["Art. 324"]
+    },
+    "art-329": {
+      "simples": "Resistência: opor-se à execução de ato legal, mediante violência ou ameaça a funcionário competente para executá-lo ou a quem lhe esteja prestando auxílio. Pena: detenção de dois meses a dois anos. Se o ato, em razão da resistência, não se executa: reclusão de um a três anos. As penas são aplicáveis sem prejuízo das correspondentes à violência.",
+      "pontos": ["Opor-se à execução de ato legal mediante violência ou ameaça.", "Detenção de dois meses a dois anos.", "§1º: o ato não se executa: reclusão de um a três anos.", "§2º: sem prejuízo da pena da violência."],
+      "atencao": ["O ato deve ser LEGAL.", "Exige violência ou ameaça (sem elas, pode ser desobediência)."],
+      "exemplo": "Ameaçar o oficial de justiça para impedir o cumprimento de mandado legal.",
+      "prova": ["Assertiva que configura resistência sem violência ou ameaça erra: seria desobediência, se cabível."],
+      "termos": [],
+      "remissoes": ["Art. 330"]
+    },
+    "art-330": {
+      "simples": "Desobediência: desobedecer a ordem legal de funcionário público. Pena: detenção de quinze dias a seis meses e multa.",
+      "pontos": ["Desobedecer a ordem LEGAL de funcionário público.", "Detenção de quinze dias a seis meses e multa."],
+      "atencao": ["A ordem deve ser legal e emanada de funcionário público competente.", "Sem violência ou ameaça."],
+      "exemplo": "Particular descumpre ordem legal de autoridade, sem violência.",
+      "prova": ["Assertiva que configura desobediência pela recusa de ordem ilegal erra: a ordem deve ser legal."],
+      "termos": [],
+      "remissoes": ["Art. 329"]
+    },
+    "art-331": {
+      "simples": "Desacato: desacatar funcionário público no exercício da função ou em razão dela. Pena: detenção de seis meses a dois anos, ou multa.",
+      "pontos": ["Desacatar funcionário público.", "No exercício da função ou em razão dela.", "Detenção de seis meses a dois anos, ou multa."],
+      "atencao": ["Exige relação com a função."],
+      "exemplo": "Ofender policial durante a abordagem.",
+      "prova": ["Assertiva que dispensa a relação com a função pública no desacato erra."],
+      "termos": [],
+      "remissoes": ["Art. 330"]
+    },
+    "art-332": {
+      "simples": "Tráfico de influência: solicitar, exigir, cobrar ou obter, para si ou para outrem, vantagem ou promessa de vantagem, a pretexto de influir em ato praticado por funcionário público no exercício da função. Pena: reclusão de 2 a 5 anos e multa. A pena é aumentada da metade, se o agente alega ou insinua que a vantagem é também destinada ao funcionário.",
+      "pontos": ["Solicitar, exigir, cobrar ou obter vantagem a pretexto de influir em ato de funcionário público.", "Reclusão de 2 a 5 anos e multa.", "Parágrafo único: alegar ou insinuar que a vantagem também se destina ao funcionário: aumento da metade."],
+      "atencao": ["O agente apenas ALEGA ter influência."],
+      "exemplo": "Pessoa cobra dinheiro dizendo ter influência para destravar um processo.",
+      "prova": ["Assertiva que exige que o agente seja funcionário público no art. 332 erra: o crime é comum."],
+      "termos": [],
+      "remissoes": ["Art. 357", "Art. 317"]
+    },
+    "art-333": {
+      "simples": "Corrupção ativa: oferecer ou prometer vantagem indevida a funcionário público, para determiná-lo a praticar, omitir ou retardar ato de ofício. Pena: reclusão de 2 a 12 anos e multa. A pena é aumentada de um terço, se, em razão da vantagem ou promessa, o funcionário retarda ou omite ato de ofício, ou o pratica infringindo dever funcional.",
+      "pontos": ["Oferecer ou prometer vantagem indevida a funcionário público.", "Fim de determiná-lo a praticar, omitir ou retardar ato de ofício.", "Reclusão de 2 a 12 anos e multa.", "Parágrafo único: aumento de um terço se o funcionário retarda, omite ou pratica o ato infringindo dever funcional."],
+      "atencao": ["Núcleos do tipo: OFERECER e PROMETER (não há 'dar' no caput).", "Crime formal."],
+      "exemplo": "Particular oferece dinheiro ao fiscal para que deixe de autuá-lo.",
+      "prova": ["Assertiva que exige a aceitação da vantagem pelo funcionário na corrupção ativa erra: o crime se consuma com o oferecimento ou a promessa."],
+      "termos": [],
+      "remissoes": ["Art. 317"]
+    },
+    "art-334": {
+      "simples": "Descaminho: iludir, no todo ou em parte, o pagamento de direito ou imposto devido pela entrada, pela saída ou pelo consumo de mercadoria. Pena: reclusão de 1 a 4 anos. Incorre na mesma pena quem pratica navegação de cabotagem fora dos casos permitidos em lei; pratica fato assimilado, em lei especial, a descaminho; vende, expõe à venda, mantém em depósito ou utiliza, no exercício de atividade comercial ou industrial, mercadoria de procedência estrangeira que introduziu clandestinamente no País ou importou fraudulentamente, ou que sabe ser produto de introdução clandestina ou de importação fraudulenta por parte de outrem; adquire, recebe ou oculta, no exercício de atividade comercial ou industrial, mercadoria de procedência estrangeira, desacompanhada de documentação legal ou acompanhada de documentos que sabe serem falsos.",
+      "pontos": ["Iludir, total ou parcialmente, o pagamento de direito ou imposto devido pela entrada, saída ou consumo de mercadoria.", "Reclusão de 1 a 4 anos.", "§1º: cabotagem irregular; fato assimilado; venda e utilização de mercadoria estrangeira clandestina; aquisição sem documentação legal."],
+      "atencao": ["Descaminho: mercadoria PERMITIDA, com fraude no pagamento do imposto.", "Contrabando (art. 334-A): mercadoria PROIBIDA."],
+      "exemplo": "Trazer do exterior mercadorias permitidas sem pagar o imposto devido.",
+      "prova": ["Assertiva que confunde descaminho com contrabando erra: descaminho envolve mercadoria permitida; contrabando, proibida."],
+      "termos": [{ "termo": "Descaminho", "significado": "Fraude no pagamento do imposto devido em mercadoria permitida." }],
+      "remissoes": ["Art. 334-A", "Art. 318"]
+    },
+    "art-334-a": {
+      "simples": "Contrabando: importar ou exportar mercadoria proibida. Pena: reclusão de 2 a 5 anos. Incorre na mesma pena quem pratica fato assimilado, em lei especial, a contrabando; importa ou exporta clandestinamente mercadoria que dependa de registro, análise ou autorização de órgão público competente; reinsere no território nacional mercadoria brasileira destinada à exportação; vende, expõe à venda, mantém em depósito ou utiliza, no exercício de atividade comercial ou industrial, mercadoria proibida pela lei brasileira; adquire, recebe ou oculta, em proveito próprio ou alheio, no exercício de atividade comercial ou industrial, mercadoria proibida. Equipara-se às atividades comerciais qualquer forma de comércio irregular ou clandestino de mercadorias estrangeiras, inclusive o exercido em residências, entre outras previsões do dispositivo.",
+      "pontos": ["Importar ou exportar mercadoria PROIBIDA.", "Reclusão de 2 a 5 anos.", "§1º: fato assimilado; mercadoria dependente de autorização; reinserção de mercadoria destinada à exportação; venda, utilização e aquisição de mercadoria proibida.", "§2º: equipara-se às atividades comerciais o comércio irregular ou clandestino de mercadorias estrangeiras."],
+      "atencao": ["Contrabando = mercadoria PROIBIDA; descaminho = fraude fiscal em mercadoria permitida."],
+      "exemplo": "Importar mercadoria que a lei brasileira proíbe.",
+      "prova": ["Assertiva que fixa pena de detenção para o contrabando erra: é reclusão de 2 a 5 anos."],
+      "termos": [],
+      "remissoes": ["Art. 334"]
+    },
+    "art-335": {
+      "simples": "Impedimento, perturbação ou fraude de concorrência: impedir, perturbar ou fraudar concorrência pública ou venda em hasta pública, promovida pela administração federal, estadual ou municipal, ou por entidade paraestatal; afastar ou procurar afastar concorrente ou licitante, por meio de violência, grave ameaça, fraude ou oferecimento de vantagem. Pena: detenção de seis meses a dois anos, ou multa, além da pena correspondente à violência. Incorre na mesma pena quem se abstém de concorrer ou licitar, em razão da vantagem oferecida.",
+      "pontos": ["Impedir, perturbar ou fraudar concorrência pública ou hasta pública.", "Afastar ou procurar afastar concorrente por violência, grave ameaça, fraude ou oferecimento de vantagem.", "Detenção de seis meses a dois anos, ou multa, além da pena da violência.", "Parágrafo único: quem se abstém de concorrer em razão da vantagem."],
+      "atencao": ["Quem aceita a vantagem para não concorrer também responde."],
+      "exemplo": "Pagar a um concorrente para que não participe da licitação.",
+      "prova": ["Assertiva que isenta quem se abstém de licitar em razão de vantagem erra: ele incorre na mesma pena."],
+      "termos": [],
+      "remissoes": ["Art. 337-F"]
+    },
+    "art-336": {
+      "simples": "Inutilização de edital ou de sinal: rasgar ou, de qualquer forma, inutilizar ou conspurcar edital afixado por ordem de funcionário público; violar ou inutilizar selo ou sinal empregado, por determinação legal ou por ordem de funcionário público, para identificar ou cerrar qualquer objeto. Pena: detenção de um mês a um ano, ou multa.",
+      "pontos": ["Rasgar, inutilizar ou conspurcar edital afixado por ordem de funcionário.", "Violar ou inutilizar selo ou sinal de identificação ou fechamento.", "Detenção de um mês a um ano, ou multa."],
+      "atencao": ["O edital deve ter sido afixado por ordem de funcionário público."],
+      "exemplo": "Arrancar edital afixado na porta do fórum.",
+      "prova": ["Assertiva que aplica o art. 336 a qualquer cartaz particular erra: o edital deve ser afixado por ordem de funcionário público."],
+      "termos": [],
+      "remissoes": ["Art. 337"]
+    },
+    "art-337": {
+      "simples": "Subtração ou inutilização de livro ou documento: subtrair, ou inutilizar, total ou parcialmente, livro oficial, processo ou documento confiado à custódia de funcionário, em razão de ofício, ou de particular em serviço público. Pena: reclusão de dois a cinco anos, se o fato não constitui crime mais grave.",
+      "pontos": ["Subtrair ou inutilizar livro oficial, processo ou documento sob custódia.", "Custódia de funcionário ou de particular em serviço público.", "Reclusão de dois a cinco anos.", "Subsidiário."],
+      "atencao": ["Diferença para o art. 314: lá, o agente tem a guarda em razão do cargo; aqui, o agente é terceiro que subtrai ou inutiliza."],
+      "exemplo": "Particular subtrai processo que está sob custódia do cartório.",
+      "prova": ["Assertiva que exige que o autor seja o próprio custodiante do documento erra: o art. 337 é crime comum."],
+      "termos": [],
+      "remissoes": ["Art. 314"]
+    },
+    "art-337-a": {
+      "simples": "Sonegação de contribuição previdenciária: suprimir ou reduzir contribuição social previdenciária e qualquer acessório, omitindo de folha de pagamento ou de documento de informações segurados que prestem serviços; deixando de lançar mensalmente na contabilidade as quantias descontadas dos segurados ou devidas pelo empregador; ou omitindo, total ou parcialmente, receitas, lucros, remunerações pagas ou demais fatos geradores. Pena: reclusão de 2 a 5 anos e multa. É extinta a punibilidade se o agente, espontaneamente, declara e confessa as contribuições, importâncias ou valores e presta as informações devidas à previdência social antes do início da ação fiscal. É facultado ao juiz deixar de aplicar a pena ou aplicar somente a multa nas hipóteses previstas em lei.",
+      "pontos": ["Suprimir ou reduzir contribuição previdenciária mediante omissão em folha, contabilidade ou receitas.", "Reclusão de 2 a 5 anos e multa.", "§1º: declaração e confissão espontâneas antes da ação fiscal extinguem a punibilidade.", "§2º: possibilidade de perdão judicial ou só multa."],
+      "atencao": ["A espontaneidade deve ser ANTES do início da ação fiscal.", "Crime material: exige a supressão ou redução do tributo."],
+      "exemplo": "Empresa omite empregados da folha para reduzir contribuição previdenciária.",
+      "prova": ["Assertiva que extingue a punibilidade pela confissão depois do início da ação fiscal erra: deve ser antes."],
+      "termos": [],
+      "remissoes": ["Art. 168-A"]
+    },
+    "art-337-b": {
+      "simples": "Corrupção ativa em transação comercial internacional: prometer, oferecer ou dar, direta ou indiretamente, vantagem indevida a funcionário público estrangeiro, ou a terceira pessoa, para determiná-lo a praticar, omitir ou retardar ato de ofício relacionado à transação comercial internacional. Pena: reclusão de 1 a 8 anos e multa. A pena é aumentada de 1/3, se, em razão da vantagem ou promessa, o funcionário público estrangeiro retarda ou omite o ato de ofício, ou o pratica infringindo dever funcional.",
+      "pontos": ["Prometer, oferecer ou dar vantagem indevida a funcionário público estrangeiro (ou a terceiro).", "Fim relacionado a transação comercial internacional.", "Reclusão de 1 a 8 anos e multa.", "Parágrafo único: aumento de 1/3."],
+      "atencao": ["Aqui o núcleo inclui DAR (diferente do art. 333)."],
+      "exemplo": "Empresário oferece vantagem a funcionário estrangeiro para obter contrato internacional.",
+      "prova": ["Assertiva que limita o art. 337-B a funcionário público nacional erra: o tipo trata de funcionário público estrangeiro."],
+      "termos": [],
+      "remissoes": ["Art. 333", "Art. 337-D"]
+    },
+    "art-337-c": {
+      "simples": "Tráfico de influência em transação comercial internacional: solicitar, exigir, cobrar ou obter, para si ou para outrem, direta ou indiretamente, vantagem ou promessa de vantagem a pretexto de influir em ato praticado por funcionário público estrangeiro no exercício de suas funções, relacionado a transação comercial internacional. Pena: reclusão de 2 a 5 anos e multa. A pena é aumentada da metade, se o agente alega ou insinua que a vantagem é também destinada a funcionário estrangeiro.",
+      "pontos": ["Solicitar, exigir, cobrar ou obter vantagem a pretexto de influir em ato de funcionário estrangeiro.", "Transação comercial internacional.", "Reclusão de 2 a 5 anos e multa.", "Parágrafo único: aumento da metade."],
+      "atencao": ["Paralelo ao art. 332, com funcionário público estrangeiro."],
+      "exemplo": "Pessoa cobra dinheiro dizendo influenciar funcionário estrangeiro em contrato internacional.",
+      "prova": ["Assertiva que aplica o art. 337-C a ato de funcionário público nacional erra."],
+      "termos": [],
+      "remissoes": ["Art. 332", "Art. 337-B"]
+    },
+    "art-337-d": {
+      "simples": "Funcionário público estrangeiro: considera-se funcionário público estrangeiro, para os efeitos penais, quem, ainda que transitoriamente ou sem remuneração, exerce cargo, emprego ou função pública em entidades estatais ou em representações diplomáticas de país estrangeiro. Equipara-se a funcionário público estrangeiro quem exerce cargo, emprego ou função em empresas controladas, direta ou indiretamente, pelo Poder Público de país estrangeiro ou em organizações públicas internacionais.",
+      "pontos": ["Conceito: quem exerce cargo, emprego ou função pública em entidades estatais ou representações diplomáticas de país estrangeiro.", "Ainda que transitoriamente ou sem remuneração.", "Equiparação: empresas controladas pelo Poder Público estrangeiro e organizações públicas internacionais."],
+      "atencao": ["Estende-se a organizações públicas internacionais."],
+      "exemplo": "Empregado de empresa controlada pelo governo de outro país.",
+      "prova": ["Assertiva que exclui organizações públicas internacionais do conceito erra: são equiparadas."],
+      "termos": [],
+      "remissoes": ["Art. 327", "Art. 337-B"]
+    },
+    "art-337-e": {
+      "simples": "Contratação direta ilegal: admitir, possibilitar ou dar causa à contratação direta fora das hipóteses previstas em lei. Pena: reclusão de 4 a 8 anos e multa.",
+      "pontos": ["Admitir, possibilitar ou dar causa à contratação direta fora das hipóteses legais.", "Reclusão de 4 a 8 anos e multa."],
+      "atencao": ["Incluído pela Lei nº 14.133, de 2021 (nova Lei de Licitações)."],
+      "exemplo": "Gestor contrata diretamente, sem licitação, fora das hipóteses de dispensa ou inexigibilidade previstas em lei.",
+      "prova": ["Assertiva que fixa pena de detenção no art. 337-E erra: é reclusão de 4 a 8 anos e multa."],
+      "termos": [],
+      "remissoes": ["Art. 337-F"]
+    },
+    "art-337-f": {
+      "simples": "Frustração do caráter competitivo de licitação: frustrar ou fraudar, com o intuito de obter para si ou para outrem vantagem decorrente da adjudicação do objeto da licitação, o caráter competitivo do processo licitatório. Pena: reclusão de 4 a 8 anos e multa.",
+      "pontos": ["Frustrar ou fraudar o caráter competitivo do processo licitatório.", "Intuito de obter vantagem decorrente da adjudicação do objeto.", "Reclusão de 4 a 8 anos e multa."],
+      "atencao": ["Exige dolo específico: vantagem decorrente da adjudicação."],
+      "exemplo": "Combinar com concorrentes os preços das propostas para fraudar a competição.",
+      "prova": ["Assertiva que dispensa o intuito de obter vantagem no art. 337-F erra."],
+      "termos": [],
+      "remissoes": ["Art. 335", "Art. 337-E"]
+    },
+    "art-337-g": {
+      "simples": "Patrocínio de contratação indevida: patrocinar, direta ou indiretamente, interesse privado perante a Administração Pública, dando causa à instauração de licitação ou à celebração de contrato cuja invalidação vier a ser decretada pelo Poder Judiciário. Pena: reclusão de 6 meses a 3 anos e multa.",
+      "pontos": ["Patrocinar interesse privado perante a Administração.", "Dar causa à instauração de licitação ou à celebração de contrato.", "Invalidação decretada pelo Poder Judiciário.", "Reclusão de 6 meses a 3 anos e multa."],
+      "atencao": ["Exige a INVALIDAÇÃO judicial da licitação ou do contrato."],
+      "exemplo": "Agente patrocina contrato que depois é anulado pelo Judiciário.",
+      "prova": ["Assertiva que dispensa a invalidação pelo Poder Judiciário erra."],
+      "termos": [],
+      "remissoes": ["Art. 321"]
+    },
+    "art-337-h": {
+      "simples": "Modificação ou pagamento irregular em contrato administrativo: admitir, possibilitar ou dar causa a qualquer modificação ou vantagem, inclusive prorrogação contratual, em favor do contratado, durante a execução dos contratos celebrados com a Administração Pública, sem autorização em lei, no edital da licitação ou nos respectivos instrumentos contratuais, ou, ainda, pagar fatura com preterição da ordem cronológica de sua exigibilidade. Pena: reclusão de 4 a 8 anos e multa.",
+      "pontos": ["Admitir ou dar causa a modificação ou vantagem em favor do contratado, inclusive prorrogação.", "Sem autorização em lei, no edital ou no contrato.", "Ou pagar fatura com preterição da ordem cronológica.", "Reclusão de 4 a 8 anos e multa."],
+      "atencao": ["Pagamento fora da ordem cronológica também é crime."],
+      "exemplo": "Administrador prorroga contrato sem previsão legal, no edital ou no instrumento.",
+      "prova": ["Assertiva que exclui o pagamento fora da ordem cronológica do art. 337-H erra."],
+      "termos": [],
+      "remissoes": ["Art. 337-E", "Art. 337-I"]
+    }
+  }
+}
