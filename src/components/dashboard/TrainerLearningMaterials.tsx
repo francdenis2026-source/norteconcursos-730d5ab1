@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
-import { BookOpenCheck, ExternalLink, Loader2 } from "lucide-react";
+import { BookOpenCheck, ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useStudyMaterial, type StudyMaterialSummary } from "@/lib/studyMaterials";
 
@@ -59,12 +59,9 @@ export function TrainerLearningMaterials({
           <Link
             to="/dashboard/library/$slug"
             params={{ slug: chosen.slug }}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline underline-offset-4"
           >
-            Estudar o material completo <ExternalLink className="h-3.5 w-3.5" />
-            <span className="sr-only"> (abre em outra aba)</span>
+            Estudar o material completo <ArrowRight className="h-3.5 w-3.5" />
           </Link>
           {detail.isLoading ? (
             <p role="status" className="flex items-center gap-2 text-xs text-muted-foreground">

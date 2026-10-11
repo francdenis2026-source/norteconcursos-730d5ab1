@@ -1,5 +1,5 @@
 import { matchesTopicFilter, scopedTopic, topicLabels } from "@/lib/filterTaxonomy";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -60,6 +60,47 @@ function LibraryIndex() {
   const [discipline, setDiscipline] = useState<string>("all");
   const [contest, setContest] = useState<string>("all");
   const [topic, setTopic] = useState("all");
+  const restoredFilters = useRef(false);
+  const filterKey = `library-filters:${user?.id}:${initialQuery ?? ""}:${back ?? ""}`;
+  useEffect(() => {
+    restoredFilters.current = false;
+    try {
+      const raw = sessionStorage.getItem(filterKey);
+      const saved = raw ? JSON.parse(raw) : null;
+      if (
+        saved &&
+        [saved.query, saved.area, saved.discipline, saved.contest, saved.topic].every(
+          (v) => typeof v === "string",
+        )
+      ) {
+        setQuery(saved.query);
+        setArea(saved.area);
+        setDiscipline(saved.discipline);
+        setContest(saved.contest);
+        setTopic(saved.topic);
+      } else {
+        setQuery(initialQuery ?? "");
+        setArea("all");
+        setDiscipline("all");
+        setContest("all");
+        setTopic("all");
+      }
+    } catch {
+      /* Session storage is optional. */
+    }
+    restoredFilters.current = true;
+  }, [filterKey, initialQuery]);
+  useEffect(() => {
+    if (!restoredFilters.current) return;
+    try {
+      sessionStorage.setItem(
+        filterKey,
+        JSON.stringify({ query, area, discipline, contest, topic }),
+      );
+    } catch {
+      /* Session storage is optional. */
+    }
+  }, [filterKey, query, area, discipline, contest, topic]);
   const lawMatches = useMemo(() => matchingLibraryLaws(query), [query]);
   const content = useLibrarySearchContent(
     signedIn && query.trim().length >= 2 && !lawMatches.length,

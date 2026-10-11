@@ -1,4 +1,9 @@
 import * as React from "react";
+import {
+  trainerRouteKey,
+  restoreTrainerBookmark,
+  type TrainerBookmark,
+} from "@/lib/internalNavigation";
 import { legalLibraryEntry, questionMatchesLaw } from "@/lib/legalLibrary";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
@@ -183,6 +188,56 @@ function QuestionTrainer() {
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
   const [results, setResults] = React.useState<("ok" | "err")[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
+  const routeKey = trainerRouteKey(routeFilters);
+  const pendingRestore = React.useRef(false);
+  const restoredSelection = React.useRef<string | null>(null);
+  const bookmarkRef = React.useRef<{ userId: string; value: TrainerBookmark } | null>(null);
+  bookmarkRef.current =
+    userId && started
+      ? {
+          userId,
+          value: {
+            version: 1,
+            savedAt: Date.now(),
+            route: routeKey,
+            questions: questions.map(({ id, source, table }) => ({ id, source, table })),
+            index,
+            selected,
+            struck,
+            results,
+            startedAt,
+            filters: {
+              contest,
+              board,
+              career,
+              year,
+              appliedExam,
+              subject,
+              source,
+              reviewed,
+              state,
+              category,
+              area,
+              topic,
+              difficulty,
+              limit,
+              orderMode,
+            },
+          },
+        }
+      : null;
+  React.useEffect(
+    () => () => {
+      const saved = bookmarkRef.current;
+      if (!saved) return;
+      try {
+        sessionStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
+      } catch {
+        /* Storage can be unavailable; navigation must still work. */
+      }
+    },
+    [],
+  );
   React.useEffect(() => {
     // A new law link must never reuse a session or filters belonging to the previous law.
     setStarted(false);
@@ -204,6 +259,7 @@ function QuestionTrainer() {
     setDifficulty("all");
     setAppliedExam("all");
     autoStart.current = routeFilters.go === "1";
+    pendingRestore.current = true;
   }, [
     law,
     routeFilters.contest,
@@ -219,6 +275,48 @@ function QuestionTrainer() {
     routeFilters.topic,
     routeFilters.go,
   ]);
+  React.useEffect(() => {
+    if (!pendingRestore.current || loading || error || !userId) return;
+    pendingRestore.current = false;
+    try {
+      const storageKey = `trainer-bookmark:${userId}`;
+      const raw = sessionStorage.getItem(storageKey);
+      if (!raw) return;
+      const restored = restoreTrainerBookmark(JSON.parse(raw), routeKey, catalog);
+      if (!restored) return;
+      sessionStorage.removeItem(storageKey);
+      const b = restored.bookmark;
+      setQuestions(restored.questions);
+      setIndex(b.index);
+      setResults(b.results);
+      setSelected(b.selected as Answer | null);
+      setStruck(b.struck as Answer[]);
+      setStartedAt(b.startedAt);
+      setStarted(true);
+      setModal(null);
+      setAnswered(false); // The saved-answer gate is always reconstructed from the database.
+      restoredSelection.current = restored.questions[b.index]?.id ?? null;
+      const f = b.filters;
+      setContest(f.contest);
+      setBoard(f.board);
+      setCareer(f.career);
+      setYear(f.year);
+      setAppliedExam(f.appliedExam);
+      setSubject(f.subject);
+      setSource(f.source);
+      setReviewed(f.reviewed);
+      setState(f.state);
+      setCategory(f.category);
+      setArea(f.area);
+      setTopic(f.topic);
+      setDifficulty(f.difficulty);
+      setLimit(f.limit);
+      setOrderMode(f.orderMode === "exam" ? "exam" : "random");
+      autoStart.current = false;
+    } catch {
+      /* Corrupt or unavailable storage is never a prerequisite for training. */
+    }
+  }, [loading, error, userId, routeKey, catalog]);
   const lawNotice =
     law !== undefined ? (
       <aside className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm" role="status">
@@ -415,6 +513,12 @@ function QuestionTrainer() {
         return copy;
       });
     } else {
+      if (restoredSelection.current === question.id) {
+        restoredSelection.current = null;
+        setAnswered(false);
+        setReviewingPast(false);
+        return;
+      }
       setSelected(null);
       setAnswered(false);
       setReviewingPast(false);

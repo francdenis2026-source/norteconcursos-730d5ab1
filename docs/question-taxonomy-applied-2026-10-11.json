@@ -1,0 +1,11 @@
+{
+  "verified_records": 755,
+  "classifications_changed": 747,
+  "classifications_retained": 8,
+  "missing_legal_evidence_held": 378,
+  "other_fields_changed": 0,
+  "statuses": {
+    "active": 377,
+    "under_review": 378
+  }
+}

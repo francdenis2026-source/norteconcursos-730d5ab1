@@ -67,7 +67,8 @@ function compile(path,resolve=require){
 }
 const format=compile('src/lib/questionFormat.ts');
 const sources=compile('src/lib/studySourceUrl.ts',()=>format);
-const markdown=compile('src/components/library/Markdown.tsx',name=>name==='@/lib/studySourceUrl'?sources:require(name));
+const React = require('react');
+const markdown=compile('src/components/library/Markdown.tsx',name=>name==='@/lib/studySourceUrl'?sources:name==='@tanstack/react-router'?{Link:({to,children,...props})=>React.createElement('a',{...props,href:to},children)}:require(name));
 
 test('Example sections are highlighted without absorbing the following legal text',()=>{
  const source='## Texto legal\n\nArt. 1º: regra neutra.\n\n## 3. Primeira aplicação\n\nCaso fictício para aprender.\n\n### Resolução\n\nExplicação do caso.\n\n## Outra regra legal\n\nArt. 2º: texto neutro.';
@@ -92,6 +93,7 @@ test('Rendered study links navigate to complements and refuse script or deceptiv
  const html=renderToStaticMarkup(markdown.Markdown({source:'[Complemento](/dashboard/library/legislacao-antifaccao-marco-legal)\n\n[Lei](https://www.planalto.gov.br/ccivil_03/)\n\n[Perigo](javascript:alert)\n\n[Falso](https://www.planalto.gov.br.attacker.invalid/)'}));
  assert.match(html,/href="\/dashboard\/library\/legislacao-antifaccao-marco-legal"/);
  assert.match(html,/rel="noopener noreferrer"/);
+ assert.doesNotMatch(html,/<a[^>]*href="\/dashboard\/[^>]*target="_blank"/);
  assert.equal((html.match(/<a /g)||[]).length,2);
  for(const value of ['//attacker.invalid','/dashboard/library/../conta','/dashboard/library/lei?redirect=bad','javascript:alert'])assert.equal(markdown.studyMarkdownHref(value),null);
 });

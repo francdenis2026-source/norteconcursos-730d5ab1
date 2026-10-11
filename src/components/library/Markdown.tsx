@@ -1,8 +1,17 @@
 import { Fragment, type ReactNode } from "react";
+import { Link } from "@tanstack/react-router";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
+import { dashboardHref } from "@/lib/internalNavigation";
 
 export function studyMarkdownHref(value: string): string | null {
-  if (/^\/dashboard\/(?:library|legal-course)\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)) return value;
+  const internal = dashboardHref(value);
+  if (
+    internal &&
+    /^\/dashboard\/(?:library|legal-course)\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(internal) &&
+    !value.includes("..") &&
+    !value.startsWith("//")
+  )
+    return internal;
   return isStudySourceUrl(value) ? value : null;
 }
 
@@ -13,26 +22,57 @@ export function studyMarkdownHref(value: string): string | null {
  * It builds React nodes directly, so no HTML is ever injected.
  */
 
-function renderInline(text: string, keyPrefix: string, renderText: (text: string) => ReactNode): ReactNode[] {
+function renderInline(
+  text: string,
+  keyPrefix: string,
+  renderText: (text: string) => ReactNode,
+): ReactNode[] {
   const out: ReactNode[] = [];
   const pattern = /(\[[^\]\n]+\]\([^\s)]+\)|\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`)/g;
   let last = 0;
   let index = 0;
   for (const match of text.matchAll(pattern)) {
     const start = match.index ?? 0;
-    if (start > last) out.push(<Fragment key={`${keyPrefix}-plain-${index}`}>{renderText(text.slice(last, start))}</Fragment>);
+    if (start > last)
+      out.push(
+        <Fragment key={`${keyPrefix}-plain-${index}`}>
+          {renderText(text.slice(last, start))}
+        </Fragment>,
+      );
     const token = match[0];
     const key = `${keyPrefix}-${index++}`;
     if (token.startsWith("[")) {
       const separator = token.indexOf("](");
       const href = studyMarkdownHref(token.slice(separator + 2, -1));
-      out.push(href ? <a key={key} href={href} className="cursor-pointer underline" {...(href.startsWith("https:") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{token.slice(1, separator)}</a> : token);
-    } else if (token.startsWith("**")) out.push(<strong key={key}>{renderText(token.slice(2, -2))}</strong>);
+      out.push(
+        href ? (
+          href.startsWith("/dashboard/") ? (
+            <Link key={key} to={href as never} className="cursor-pointer underline">
+              {token.slice(1, separator)}
+            </Link>
+          ) : (
+            <a
+              key={key}
+              href={href}
+              className="cursor-pointer underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {token.slice(1, separator)}
+            </a>
+          )
+        ) : (
+          token
+        ),
+      );
+    } else if (token.startsWith("**"))
+      out.push(<strong key={key}>{renderText(token.slice(2, -2))}</strong>);
     else if (token.startsWith("`")) out.push(<code key={key}>{token.slice(1, -1)}</code>);
     else out.push(<em key={key}>{renderText(token.slice(1, -1))}</em>);
     last = start + token.length;
   }
-  if (last < text.length) out.push(<Fragment key={`${keyPrefix}-tail`}>{renderText(text.slice(last))}</Fragment>);
+  if (last < text.length)
+    out.push(<Fragment key={`${keyPrefix}-tail`}>{renderText(text.slice(last))}</Fragment>);
   return out;
 }
 
@@ -52,9 +92,16 @@ const cells = (line: string) =>
 
 /** Explicit pedagogical labels only: mentions inside a legal provision stay neutral. */
 function isExampleLabel(text: string): boolean {
-  const label = text.replace(/[*_`]/g, "").replace(/^\s*\d+(?:\.\d+)*[.)-]?\s*/, "")
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-  return /^(?:exemplos?\b|casos?\s+(?:\d+|concretos?|praticos?|ilustrativos?)\b|situacao\s+(?:aplicada|hipotetica|pratica|problema)\b|primeira aplicacao\b|aplicacao (?:pratica|na prova)\b|na pratica\b|exercicio resolvido\b)/.test(label);
+  const label = text
+    .replace(/[*_`]/g, "")
+    .replace(/^\s*\d+(?:\.\d+)*[.)-]?\s*/, "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+  return /^(?:exemplos?\b|casos?\s+(?:\d+|concretos?|praticos?|ilustrativos?)\b|situacao\s+(?:aplicada|hipotetica|pratica|problema)\b|primeira aplicacao\b|aplicacao (?:pratica|na prova)\b|na pratica\b|exercicio resolvido\b)/.test(
+    label,
+  );
 }
 
 function highlightExampleSections(blocks: Block[]): Block[] {
@@ -66,9 +113,10 @@ function highlightExampleSections(blocks: Block[]): Block[] {
       while (index + 1 < blocks.length) {
         const next = blocks[index + 1]!;
         if (next.type === "h2" || (block.type === "h3" && next.type === "h3")) break;
-        section.push(next); index++;
+        section.push(next);
+        index++;
       }
-      result.push({type: "example", blocks: section});
+      result.push({ type: "example", blocks: section });
     } else result.push(block);
   }
   return result;
@@ -137,73 +185,105 @@ function parse(markdown: string): Block[] {
 function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode): ReactNode[] {
   const inline = (text: string, key: string) => renderInline(text, key, renderText);
   return blocks.map((block, index) => {
-        const key = `b${index}`;
-        switch (block.type) {
-          case "example":
-            return <section key={key} className="study-example" aria-label="Exemplo aplicado">{renderBlocks(block.blocks, renderText)}</section>;
-          case "h2":
-            return <h2 key={key}>{inline(block.text, key)}</h2>;
-          case "h3":
-            return <h3 key={key}>{inline(block.text, key)}</h3>;
-          case "p":
-            return <p key={key} className={isExampleLabel(block.text) ? "study-example" : undefined}>{inline(block.text, key)}</p>;
-          case "quote":
-            return (
-              <blockquote key={key} className={isExampleLabel(block.lines[0] ?? "") ? "study-example" : undefined}>
-                {block.lines.map((line, n) => (
-                  <p key={`${key}-${n}`}>{inline(line, `${key}-${n}`)}</p>
-                ))}
-              </blockquote>
-            );
-          case "ul":
-          case "ol": {
-            const List = block.type === "ol" ? "ol" : "ul";
-            return (
-              <List key={key}>
-                {block.items.map((item, n) => (
-                  <li key={`${key}-${n}`} className={isExampleLabel(item.text) ? "study-example" : undefined}>
-                    {inline(item.text, `${key}-${n}`)}
-                    {item.children.length > 0 && (
-                      <ul>
-                        {item.children.map((child, c) => (
-                          <li key={`${key}-${n}-${c}`}>{inline(child, `${key}-${n}-${c}`)}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
-              </List>
-            );
-          }
-          case "table":
-            return (
-              <div className="study-table" key={key} tabIndex={0} role="region" aria-label="Tabela">
-                <table>
-                  <thead>
-                    <tr>
-                      {block.header.map((cell, n) => (
-                        <th key={`${key}-h${n}`} className={isExampleLabel(cell) ? "study-example-cell" : undefined}>{inline(cell, `${key}-h${n}`)}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {block.rows.map((row, r) => (
-                      <tr key={`${key}-r${r}`}>
-                        {row.map((cell, n) => (
-                          <td key={`${key}-r${r}c${n}`} className={isExampleLabel(block.header[n] ?? "") ? "study-example-cell" : undefined}>{inline(cell, `${key}-r${r}c${n}`)}</td>
-                        ))}
-                      </tr>
+    const key = `b${index}`;
+    switch (block.type) {
+      case "example":
+        return (
+          <section key={key} className="study-example" aria-label="Exemplo aplicado">
+            {renderBlocks(block.blocks, renderText)}
+          </section>
+        );
+      case "h2":
+        return <h2 key={key}>{inline(block.text, key)}</h2>;
+      case "h3":
+        return <h3 key={key}>{inline(block.text, key)}</h3>;
+      case "p":
+        return (
+          <p key={key} className={isExampleLabel(block.text) ? "study-example" : undefined}>
+            {inline(block.text, key)}
+          </p>
+        );
+      case "quote":
+        return (
+          <blockquote
+            key={key}
+            className={isExampleLabel(block.lines[0] ?? "") ? "study-example" : undefined}
+          >
+            {block.lines.map((line, n) => (
+              <p key={`${key}-${n}`}>{inline(line, `${key}-${n}`)}</p>
+            ))}
+          </blockquote>
+        );
+      case "ul":
+      case "ol": {
+        const List = block.type === "ol" ? "ol" : "ul";
+        return (
+          <List key={key}>
+            {block.items.map((item, n) => (
+              <li
+                key={`${key}-${n}`}
+                className={isExampleLabel(item.text) ? "study-example" : undefined}
+              >
+                {inline(item.text, `${key}-${n}`)}
+                {item.children.length > 0 && (
+                  <ul>
+                    {item.children.map((child, c) => (
+                      <li key={`${key}-${n}-${c}`}>{inline(child, `${key}-${n}-${c}`)}</li>
                     ))}
-                  </tbody>
-                </table>
-              </div>
-            );
-          default:
-            return <Fragment key={key} />;
-        }
-      });
+                  </ul>
+                )}
+              </li>
+            ))}
+          </List>
+        );
+      }
+      case "table":
+        return (
+          <div className="study-table" key={key} tabIndex={0} role="region" aria-label="Tabela">
+            <table>
+              <thead>
+                <tr>
+                  {block.header.map((cell, n) => (
+                    <th
+                      key={`${key}-h${n}`}
+                      className={isExampleLabel(cell) ? "study-example-cell" : undefined}
+                    >
+                      {inline(cell, `${key}-h${n}`)}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {block.rows.map((row, r) => (
+                  <tr key={`${key}-r${r}`}>
+                    {row.map((cell, n) => (
+                      <td
+                        key={`${key}-r${r}c${n}`}
+                        className={
+                          isExampleLabel(block.header[n] ?? "") ? "study-example-cell" : undefined
+                        }
+                      >
+                        {inline(cell, `${key}-r${r}c${n}`)}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      default:
+        return <Fragment key={key} />;
+    }
+  });
 }
 
-export function Markdown({ source, renderText = text => text }: { source: string; renderText?: ((text: string) => ReactNode) | undefined }) {
+export function Markdown({
+  source,
+  renderText = (text) => text,
+}: {
+  source: string;
+  renderText?: ((text: string) => ReactNode) | undefined;
+}) {
   return <div className="study-prose">{renderBlocks(parse(source), renderText)}</div>;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { PlatformBack } from "./PlatformBack";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import { SoonBadge } from "@/components/SoonBadge";
 import { AI_ENABLED, SOON_LABEL, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
@@ -738,7 +739,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               "gold"
             }
           >
-            <div className="app-content__inner">{children}</div>
+            <div className="app-content__inner">
+              <PlatformBack />
+              {children}
+            </div>
             <footer className="app-footer no-print">
               <span>© 2026 Norte Concurso</span>
               <span>

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useDashboardData } from "@/hooks/useDashboard";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -41,9 +41,9 @@ function MyContestPage() {
         description="Selecione um concurso no catálogo para acompanhar edital, prazo e progresso detalhado."
         actions={
           <Button asChild className="hero-btn-primary gap-2">
-            <a href="/dashboard/questions">
+            <Link to="/dashboard/questions">
               Ir para o catálogo <ChevronRight className="h-4 w-4" />
-            </a>
+            </Link>
           </Button>
         }
       />

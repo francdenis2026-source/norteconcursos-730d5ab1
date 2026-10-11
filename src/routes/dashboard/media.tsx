@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ExternalLink,
   FileAudio,
@@ -452,9 +452,9 @@ function EnemMediaTab() {
       <p className="text-sm text-muted-foreground">
         Videoaulas gratuitas do ENEM por matéria e assunto. Para plano de estudos, redação e
         checklist, abra a{" "}
-        <a className="font-semibold text-primary underline" href="/dashboard/enem">
+        <Link className="font-semibold text-primary underline" to="/dashboard/enem">
           área ENEM
-        </a>
+        </Link>
         .
       </p>
       <EnemVideos subject={subject} onSubject={setSubject} />
