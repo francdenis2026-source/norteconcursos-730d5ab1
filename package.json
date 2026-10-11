@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "test": "node --import ./scripts/alias.mjs --test scripts/question-regression.test.mjs scripts/drive-review-import.test.mjs scripts/platform-audit-regression.test.mjs scripts/library-materials.test.mjs scripts/legal-learning.test.mjs scripts/study-enrichment.test.mjs scripts/library-law-review.test.mjs scripts/law-supplement.test.mjs scripts/tutor-law-library.test.mjs scripts/library-completion.test.mjs scripts/library-gaps.test.mjs scripts/library-navigation.test.mjs scripts/question-corpus.test.mjs scripts/corpus-review.test.mjs scripts/cronograma.test.mjs",
+    "test": "node --import ./scripts/alias.mjs --test scripts/question-regression.test.mjs scripts/drive-review-import.test.mjs scripts/platform-audit-regression.test.mjs scripts/library-materials.test.mjs scripts/legal-learning.test.mjs scripts/study-enrichment.test.mjs scripts/library-law-review.test.mjs scripts/law-supplement.test.mjs scripts/tutor-law-library.test.mjs scripts/library-completion.test.mjs scripts/library-gaps.test.mjs scripts/library-navigation.test.mjs scripts/question-corpus.test.mjs scripts/corpus-review.test.mjs scripts/cronograma.test.mjs scripts/legal-explanations.test.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

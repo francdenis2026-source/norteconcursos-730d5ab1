@@ -14,7 +14,8 @@ import { LegalStudyReading } from "@/components/library/LegalStudyReading";
 import { LegalLiteralPractice } from "@/components/library/LegalLiteralPractice";
 import { LegalCoverage } from "@/components/library/LegalCoverage";
 import { useStudyMaterial } from "@/lib/studyMaterials";
-import { useLegalCourses, useLegalProgress, useLegalUnits, type LegalUnit, type LegalCourse } from "@/lib/legalCourses";
+import { UnitExplanation } from "@/components/library/UnitExplanation";
+import { useLegalCourses, useLegalProgress, useLegalUnits, useLegalExplanationCoverage, type LegalUnit, type LegalCourse } from "@/lib/legalCourses";
 import { legalProgressSummary, selectNextLegalUnit, type LegalProgress, type ReviewRating } from "@/lib/legalLearning";
 import { supabase } from "@/integrations/supabase/client";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
@@ -30,6 +31,7 @@ function LegalCoursePage() {
   const course = courses.data?.find(row => row.slug === slug);
   const units = useLegalUnits(course?.id, userId);
   const progress = useLegalProgress(userId);
+  const coverage = useLegalExplanationCoverage(userId).data?.find(row => row.course_slug === slug);
   const material = useStudyMaterial(course?.material_slug ?? "", !!course && !!userId);
   const [selectedId, setSelectedId] = useState<string>();
   const [search, setSearch] = useState("");
@@ -53,6 +55,7 @@ function LegalCoursePage() {
     <header className="surface-card p-5 sm:p-7">
       <p className="text-xs font-semibold uppercase tracking-widest text-primary">Percurso de legislação</p>
       <h1 className="mt-2 text-2xl font-bold sm:text-3xl">{course.title}</h1>
+      {coverage && <p className="mt-1 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-3 py-1 text-xs font-bold text-indigo-900 dark:bg-indigo-500/20 dark:text-indigo-100">💡 Explicação por artigo: {coverage.explained} de {coverage.total_units} dispositivos{coverage.explained === 0 ? " (em preparação)" : ""}</p>}
       <p className="mt-3 text-muted-foreground">{course.overview.intro}</p>
       <div className="mt-4 flex flex-wrap gap-3 text-sm" aria-label="Seu progresso nesta lei">
         <span>{summary.read}/{current.length} lidos</span><span>{summary.practiced} praticados sem consulta</span><span>{summary.difficult} dificuldades</span><span>{summary.due} revisões pendentes</span>
@@ -131,6 +134,7 @@ function UnitLesson({ unit, law, materialSlug, references, progress, userId, onN
       {(mode === "read" || revealed) && <>
         {caveat && <aside className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4 text-sm"><strong>{caveat.title}</strong><p className="mt-2 leading-7">{caveat.explanation}</p><a href={caveat.source} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block underline">Conferir o entendimento do STJ</a></aside>}
         {references.map(ref => <aside key={ref.url} className="rounded-xl border border-amber-500/50 p-4 text-sm"><strong>{ref.title}</strong><p className="mt-2">{ref.explanation}</p>{isStudySourceUrl(ref.url) && <a className="mt-2 inline-block underline" href={ref.url} target="_blank" rel="noopener noreferrer">Fonte do tribunal</a>}</aside>)}
+        {mode === "read" && <UnitExplanation unit={unit} userId={userId} />}
         <div className={unit.unit_key.startsWith("anexo-") ? "library-body overflow-x-auto" : undefined}><LegalStudyReading source={unit.body_text} markdown={unit.unit_key.startsWith("anexo-")} /></div>
         {caveat?.literalPractice !== false && <LegalLiteralPractice key={unit.content_sha256} source={unit.body_text} label={unit.label} />}
         {unit.recall.figures?.filter(figure => isStudySourceUrl(figure.url)).map(figure => <figure key={figure.url} className="rounded-xl border p-3"><img src={figure.url} alt={figure.title} className="h-auto max-w-full" loading="lazy" onError={event => { event.currentTarget.hidden = true; }} /><figcaption className="mt-2 text-xs"><a href={figure.url} target="_blank" rel="noopener noreferrer" className="underline">{figure.title}</a></figcaption></figure>)}
