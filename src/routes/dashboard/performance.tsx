@@ -1015,13 +1015,26 @@ function SubjectTable({
       <CardHeader>
         <CardTitle className="text-lg">Detalhamento por matéria</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-2">
+      <CardContent className="space-y-4">
         {subjects.map((s) => (
-          <div key={s.subject} className="flex items-center gap-3 text-xs">
-            <span className="w-48 shrink-0 truncate font-semibold" title={s.subject}>
+          <div
+            key={s.subject}
+            className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-2 text-xs"
+          >
+            <span className="col-span-2 min-w-0 break-words font-semibold sm:col-span-1">
               {s.subject}
             </span>
-            <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
+            <div className="col-span-2 flex min-w-0 flex-wrap items-center gap-2 sm:col-span-1 sm:justify-end">
+              <span className="tabular-nums text-muted-foreground">
+                {s.correct}/{s.total} ({s.accuracy}%)
+              </span>
+              {s.total < MIN_ITEMS_FOR_SIGNAL && (
+                <Badge variant="outline" className="text-[10px] text-muted-foreground">
+                  amostra pequena
+                </Badge>
+              )}
+            </div>
+            <div className="col-span-2 h-2 min-w-0 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
               <div
                 className={cn(
                   "h-full rounded-full",
@@ -1034,14 +1047,6 @@ function SubjectTable({
                 style={{ width: `${s.accuracy}%` }}
               />
             </div>
-            <span className="w-32 shrink-0 text-right text-muted-foreground">
-              {s.correct}/{s.total} ({s.accuracy}%)
-            </span>
-            {s.total < MIN_ITEMS_FOR_SIGNAL && (
-              <Badge variant="outline" className="shrink-0 text-[10px] text-muted-foreground">
-                amostra pequena
-              </Badge>
-            )}
           </div>
         ))}
       </CardContent>
