@@ -1,0 +1,1279 @@
+{
+  "course_slug": "seguranca-privada",
+  "law": "Lei 14.967/2024 — Segurança Privada",
+  "units": {
+    "art-1": {
+      "simples": "O estatuto regula a segurança privada e a segurança das instituições financeiras em âmbito nacional. Os serviços privados são exercidos por pessoas jurídicas e, excepcionalmente, por pessoas físicas nas hipóteses legais; a matéria é de interesse nacional.",
+      "pontos": [
+        "Serviços privados e segurança das instituições financeiras.",
+        "Âmbito nacional e interesse nacional."
+      ],
+      "atencao": [
+        "Não use a referência excepcional a pessoas físicas para autorizar trabalho autônomo vedado no art. 2º."
+      ],
+      "exemplo": "Um banco busca organizar sua segurança e contrata serviço privado. A matéria está abrangida pelo estatuto. Variação: uma pessoa física invoca o caput para vender vigilância autônoma; a leitura deve respeitar a vedação do artigo seguinte.",
+      "prova": [
+        "A lei se limita à segurança bancária? Não; também estabelece o estatuto geral da segurança privada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 2º",
+        "Art. 4º"
+      ]
+    },
+    "art-2": {
+      "simples": "O serviço pode ser prestado por empresa especializada ou por serviço orgânico de empresa ou condomínio, neste último caso em proveito próprio. Exige profissionais habilitados e equipamentos permitidos. Prestação cooperada ou autônoma é vedada.",
+      "pontos": [
+        "Especializada: prestação a contratantes.",
+        "Orgânico: em proveito próprio.",
+        "Vedação de forma cooperada ou autônoma."
+      ],
+      "atencao": [
+        "Serviço orgânico não autoriza vender vigilância a terceiros."
+      ],
+      "exemplo": "Um condomínio mantém serviço orgânico para proteger suas dependências. Variação: passa a vender vigilância a outro condomínio; extrapola a finalidade em proveito próprio dessa modalidade.",
+      "prova": [
+        "A ausência de arma permite prestação autônoma? Não; a vedação não depende de estar armado."
+      ],
+      "termos": [
+        {
+          "termo": "Serviço orgânico",
+          "significado": "Segurança mantida pela própria empresa ou condomínio em seu proveito."
+        }
+      ],
+      "remissoes": [
+        "Art. 25"
+      ]
+    },
+    "art-3": {
+      "simples": "A atividade respeita dignidade humana, vida, interesse público e normas trabalhistas. O contratante deve analisar previamente a regularidade formal da empresa; modelos de contratação e concorrência não podem dispensar essa verificação.",
+      "pontos": [
+        "Proteção à vida e dignidade humana.",
+        "Respeito às relações de trabalho.",
+        "Análise prévia da regularidade formal."
+      ],
+      "atencao": [
+        "Menor preço não substitui a verificação de regularidade."
+      ],
+      "exemplo": "Uma seleção de empresa escolhe apenas pelo preço e dispensa checar a regularidade. O critério contraria o parágrafo único. Variação: checa a regularidade antes da seleção; atende a esse requisito, sem dispensar os demais.",
+      "prova": [
+        "O contratante pode transferir integralmente a análise de regularidade para depois da contratação? Não; a lei exige análise prévia."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 4º",
+        "Art. 19"
+      ]
+    },
+    "art-4": {
+      "simples": "A prestação depende de autorização prévia da Polícia Federal, responsável pelo controle e fiscalização. Registrar a empresa ou obter licença municipal não substitui essa autorização federal.",
+      "pontos": [
+        "Autorização prévia da PF.",
+        "Controle e fiscalização da atividade."
+      ],
+      "atencao": [
+        "Pedido em tramitação não equivale a autorização concedida."
+      ],
+      "exemplo": "Uma empresa tem CNPJ, mas ainda não recebeu autorização da PF e pretende iniciar vigilância. Falta a autorização prévia. Variação: apresenta apenas protocolo do pedido; isso não demonstra que a autorização foi concedida.",
+      "prova": [
+        "Alvará municipal basta para iniciar o serviço? Não; a prestação depende de autorização da PF."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 40"
+      ]
+    },
+    "art-5": {
+      "simples": "A lei enumera os serviços privados e distingue possibilidades de armas de fogo e de menor potencial ofensivo. Segurança privada não substitui nem pode embaraçar os órgãos públicos. Algumas hipóteses dependem de regulamentação ou autorização específica.",
+      "pontos": [
+        "Vigilância, eventos, transporte, escolta, segurança pessoal e outras atividades enumeradas.",
+        "Nem todo serviço tem igual possibilidade de arma de fogo.",
+        "Transporte coletivo: possibilidade de autorização específica da PF."
+      ],
+      "atencao": [
+        "Não aplique a lista de armas de fogo como se fosse idêntica à de menor potencial ofensivo.",
+        "Nos serviços dependentes de regulamento, não invente autorização automática."
+      ],
+      "exemplo": "Uma empresa interpreta a lista de serviços como autorização geral para usar arma de fogo em todos eles. A lei diferencia hipóteses e condições. Variação: segurança em transporte coletivo pode ter arma de fogo quando autorizada pela PF nas condições do §6º.",
+      "prova": [
+        "A segurança privada pode impedir a atuação da polícia no local? Não; o §7º afasta exclusão, impedimento e embaraço."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 6º",
+        "Art. 7º",
+        "Art. 8º"
+      ]
+    },
+    "art-6": {
+      "simples": "No suprimento ou recolhimento de numerário ou valores de instituições financeiras, a regra exige veículo especial blindado e quatro vigilantes, incluindo o motorista. O artigo prevê modalidade regulamentada de veículo com proteção específica e dois vigilantes, além de limites de horário e atividades complementares.",
+      "pontos": [
+        "Regra geral: quatro vigilantes, um deles motorista.",
+        "Modalidade dos §§5º e 6º: condições regulamentadas e mínimo de dois.",
+        "Vedação de locomoção entre as vinte horas e as oito horas, salvo casos regulamentados."
+      ],
+      "atencao": [
+        "Não use a exceção de dois vigilantes sem demonstrar que o veículo e a atividade se enquadram nela.",
+        "Livre parada ou estacionamento não é autorização genérica para descumprir o trânsito."
+      ],
+      "exemplo": "Uma equipe da modalidade geral tem três vigilantes contando o motorista. Não atende ao mínimo de quatro. Variação: trata-se do veículo e das condições dos §§5º e 6º, regulamentados para a hipótese; o mínimo legal nessa modalidade é dois.",
+      "prova": [
+        "Pode-se preparar e contar numerário no local do caixa eletrônico? Não; o §2º, II, veda essas operações ali."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 5º"
+      ]
+    },
+    "art-7": {
+      "simples": "O monitoramento eletrônico envolve projeto, equipamentos, instalação, manutenção e suporte técnico. A inspeção no local do sinal é realizada por profissional desarmado, para verificar, registrar e comunicar o evento à central.",
+      "pontos": [
+        "Projeto integrado e suporte de equipamentos.",
+        "Inspeção técnica por profissional desarmado."
+      ],
+      "atencao": [
+        "Não confunda inspeção técnica com resposta armada de vigilância."
+      ],
+      "exemplo": "Um alarme gera sinal, e a empresa envia técnico para conferir e comunicar o evento. A inspeção prevista é desarmada. Variação: quer armar o técnico apenas por se tratar de alarme; isso contraria a característica expressa da inspeção.",
+      "prova": [
+        "O §1º autoriza o inspetor técnico a portar arma nessa inspeção? Não; descreve profissional desarmado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 13"
+      ]
+    },
+    "art-8": {
+      "simples": "Eventos que, pela magnitude e complexidade, exijam planejamento detalhado conforme regulamento precisam de projeto prévio à autoridade local. O projeto inclui público estimado, disposição dos vigilantes e análise de risco.",
+      "pontos": [
+        "Projeto apresentado previamente.",
+        "Hipóteses definidas em regulamento.",
+        "Riscos de localização, acesso, circulação e dispositivos existentes."
+      ],
+      "atencao": [
+        "Não transforme apresentação prévia em entrega só depois do evento."
+      ],
+      "exemplo": "Um evento abrangido pela hipótese regulamentada apresenta o projeto apenas após sua realização. A exigência é prévia. Variação: o projeto só indica o público, sem quantidade e disposição de vigilantes nem análise de risco; está incompleto.",
+      "prova": [
+        "A análise de risco pode ignorar as entradas e saídas? Não; esses pontos integram a lista do artigo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 5º",
+        "Art. 9º"
+      ]
+    },
+    "art-9": {
+      "simples": "Em estádios, ginásios e locais semelhantes, a segurança privada pode complementar a segurança pública, com integração entre as atividades. A contratação privada não retira a atribuição dos órgãos públicos.",
+      "pontos": [
+        "Atuação complementar.",
+        "Integração com a segurança pública."
+      ],
+      "atencao": [
+        "Complementar não é substituir nem impedir a atuação policial."
+      ],
+      "exemplo": "Um estádio contrata vigilância para atuar de forma integrada com os órgãos públicos. A lei admite a complementação. Variação: o contrato pretende impedir a atuação policial no evento; essa pretensão não decorre do artigo.",
+      "prova": [
+        "O estádio deve escolher entre segurança pública e privada como opções excludentes? Não; a lei prevê complementação integrada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 5º",
+        "Art. 8º"
+      ]
+    },
+    "art-10": {
+      "simples": "Empresas de segurança podem prestar serviço de bombeiro civil por profissionais capacitados, conforme a lei própria. O mesmo profissional não pode exercer simultaneamente vigilância e prevenção ou combate a incêndios. Bombeiro militar inativo deve respeitar os requisitos indicados.",
+      "pontos": [
+        "Profissional capacitado.",
+        "Vedação de exercício simultâneo das duas funções.",
+        "Inatividade militar não dispensa os requisitos legais."
+      ],
+      "atencao": [
+        "A vedação é de simultaneidade; não conclua uma proibição vitalícia de exercer outra função em momento distinto."
+      ],
+      "exemplo": "O contrato exige que o mesmo empregado vigie a entrada e combata incêndios simultaneamente. A lei veda esse acúmulo simultâneo. Variação: funções exercidas por profissionais distintos; desaparece essa vedação específica.",
+      "prova": [
+        "O militar inativo fica dispensado de todos os requisitos da lei do bombeiro civil? Não; o parágrafo único manda respeitá-los."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 16"
+      ]
+    },
+    "art-11": {
+      "simples": "Produtos controlados de uso restrito são proibidos na segurança privada, salvo as hipóteses definidas em regulamento. A regra é a vedação, e a exceção precisa de fundamento regulamentar.",
+      "pontos": [
+        "Vedação como regra.",
+        "Exceções definidas em regulamento."
+      ],
+      "atencao": [
+        "Não confunda produto de uso permitido com produto de uso restrito."
+      ],
+      "exemplo": "Uma empresa quer usar produto restrito apenas porque o comprou regularmente. A aquisição não demonstra a exceção regulamentada para a prestação do serviço. Variação: existe hipótese regulamentar aplicável; ainda se observam suas condições e as demais autorizações.",
+      "prova": [
+        "Qualquer contratante pode autorizar o uso restrito por contrato? Não; a exceção depende do regulamento."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 5º",
+        "Art. 17"
+      ]
+    },
+    "art-12": {
+      "simples": "Prestador de serviço de segurança privada, para a lei, é a pessoa jurídica autorizada a realizar os serviços enumerados. A mera existência da pessoa jurídica não basta sem autorização.",
+      "pontos": [
+        "Pessoa jurídica.",
+        "Autorização para serviços do art. 5º."
+      ],
+      "atencao": [
+        "Não identifique prestador regular apenas pelo nome empresarial ou pelo cadastro tributário."
+      ],
+      "exemplo": "Uma empresa coloca segurança no nome, mas não possui autorização para os serviços. Isso não a torna prestador autorizado. Variação: recebe a autorização pertinente; passa a preencher esse elemento da definição legal.",
+      "prova": [
+        "O artigo define como prestador qualquer pessoa que ofereça vigilância? Não; exige pessoa jurídica autorizada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 4º",
+        "Art. 13"
+      ]
+    },
+    "art-13": {
+      "simples": "Há empresas de serviço, escolas de formação e empresas de monitoramento eletrônico. Escolas e empresas de monitoramento não podem oferecer os serviços reservados ao primeiro grupo. A PF classifica outros serviços previstos na lei em uma dessas categorias.",
+      "pontos": [
+        "Três categorias de prestadores.",
+        "Empresas de serviço podem usar sistemas eletrônicos na prestação.",
+        "Escolas e monitoramento não recebem automaticamente autorização para vigilância."
+      ],
+      "atencao": [
+        "Utilizar monitoramento em um serviço não é o mesmo que ser uma empresa especializada apenas em monitoramento."
+      ],
+      "exemplo": "Uma escola de formação pretende prestar vigilância patrimonial com sua autorização de escola. A categoria não autoriza os serviços do inciso I. Variação: uma empresa de serviço usa tecnologia eletrônica na vigilância; o §1º permite esse uso.",
+      "prova": [
+        "Todas as categorias podem oferecer indistintamente todos os serviços? Não; o §2º impõe restrição."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 5º",
+        "Art. 14"
+      ]
+    },
+    "art-14": {
+      "simples": "A lei fixa capital mínimo integralizado por atividade, adicionais por serviço autorizado e uma redução específica para certas atividades desarmadas. Também exige proteção financeira para obrigações trabalhistas, tributárias, previdenciárias e civis. Os valores são sujeitos a revisão regulamentar.",
+      "pontos": [
+        "Transporte: R$ 2.920.000; risco e escola: R$ 292.000; demais empresas: R$ 730.000; monitoramento: R$ 146.000, nos valores legais.",
+        "Serviço adicional: soma de R$ 146.000.",
+        "Redução a um quarto na hipótese específica do §2º."
+      ],
+      "atencao": [
+        "Valores acima são os da lei; verifique eventual revisão regulamentar antes de aplicá-los a uma operação real.",
+        "Capital integralizado não é apenas capital prometido pelos sócios."
+      ],
+      "exemplo": "Uma empresa se enquadra exatamente no §2º, exclusivamente nas atividades indicadas e sem arma de fogo. Um quarto de R$ 730.000 é R$ 182.500, tomando os valores legais como hipótese do exercício. Variação: usa arma de fogo; a condição dessa redução não está atendida.",
+      "prova": [
+        "O adicional por outro serviço elimina o capital mínimo básico? Não; ele é somado ao mínimo aplicável."
+      ],
+      "termos": [
+        {
+          "termo": "Integralizado",
+          "significado": "Capital efetivamente aportado, e não apenas subscrito."
+        }
+      ],
+      "remissoes": [
+        "Art. 19"
+      ]
+    },
+    "art-15": {
+      "simples": "A autorização dos prestadores precisa ser renovada periodicamente, na forma da competência indicada para a PF. A autorização inicial não é uma licença perpétua.",
+      "pontos": [
+        "Renovação periódica.",
+        "Leia as condições e a competência do art. 40."
+      ],
+      "atencao": [
+        "Não invente um prazo único neste artigo, que remete à disciplina indicada."
+      ],
+      "exemplo": "Uma empresa afirma que jamais precisará renovar porque recebeu autorização inicial. A lei exige renovação periódica. Variação: pergunta-se o prazo exato aplicável; é necessário examinar a disciplina correspondente, não deduzi-lo do caput.",
+      "prova": [
+        "A autorização de funcionamento é indefinida e sem renovação? Não; a renovação periódica está prevista."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 19",
+        "Art. 40"
+      ]
+    },
+    "art-16": {
+      "simples": "Os prestadores devem empregar profissionais habilitados nas categorias previstas no art. 26. Não basta chamar o trabalhador de vigilante; a habilitação legal da função deve estar atendida.",
+      "pontos": [
+        "Profissionais habilitados.",
+        "Categorias previstas na lei."
+      ],
+      "atencao": [
+        "Não confunda experiência informal com cumprimento dos requisitos profissionais."
+      ],
+      "exemplo": "Uma empresa contrata trabalhador sem a habilitação exigida para a função de segurança. A autorização da empresa não dispensa a habilitação de seus profissionais. Variação: o trabalhador é habilitado em outra categoria; confira se ela corresponde ao serviço exercido.",
+      "prova": [
+        "A autorização da empresa substitui a habilitação dos empregados? Não."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 26"
+      ]
+    },
+    "art-17": {
+      "simples": "As armas do serviço são de propriedade do prestador, com cadastro no Sinarm e registro e controle pela PF. Na transferência entre prestadores, a PF pode autorizar o uso enquanto tramita o novo registro; não é autorização automática.",
+      "pontos": [
+        "Propriedade do prestador.",
+        "Cadastro no Sinarm e controle da PF.",
+        "Uso provisório na transferência depende da PF."
+      ],
+      "atencao": [
+        "Arma pessoal do vigilante não deve ser tratada como arma do serviço apenas por ele estar contratado."
+      ],
+      "exemplo": "Uma empresa compra armas de outra e quer usá-las antes do novo registro. A PF pode autorizar o uso na tramitação, mas a compra não gera essa permissão sozinha. Variação: há autorização da PF para o uso provisório; aplica-se a hipótese do parágrafo único.",
+      "prova": [
+        "O uso durante a transferência de registro é automaticamente livre? Não; depende da autorização prevista."
+      ],
+      "termos": [
+        {
+          "termo": "Sinarm",
+          "significado": "Sistema Nacional de Armas."
+        }
+      ],
+      "remissoes": [
+        "Art. 11"
+      ]
+    },
+    "art-18": {
+      "simples": "A PF deve instituir sistema informatizado para cadastrar prestadores, serviços orgânicos, segurança das instituições financeiras e profissionais. O compartilhamento e a divulgação para controle social seguem regulamento, sigilo legal e níveis de acesso.",
+      "pontos": [
+        "Cadastro informatizado pela PF.",
+        "Compartilhamento com órgãos públicos conforme níveis de acesso.",
+        "Divulgação para controle social regulamentada."
+      ],
+      "atencao": [
+        "Cadastro não significa publicidade irrestrita de toda informação sensível."
+      ],
+      "exemplo": "Um órgão de segurança pública solicita informações do sistema. O compartilhamento deve respeitar o sigilo e o nível de acesso. Variação: propõe disponibilizar todos os registros em página aberta; o artigo não dispensa as restrições legais.",
+      "prova": [
+        "O sistema registra apenas as empresas prestadoras? Não; inclui serviços orgânicos, instituições financeiras e profissionais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 40"
+      ]
+    },
+    "art-19": {
+      "simples": "A autorização e renovação dependem dos requisitos listados: regularidade, antecedentes dos responsáveis, capital integralizado e outras condições. A verificação de origem do capital é exigida quando houver indícios, nas hipóteses regulamentadas. A renovação também exige pagamento das multas aplicadas.",
+      "pontos": [
+        "Requisitos da empresa e dos responsáveis indicados.",
+        "Antecedentes nas jurisdições enumeradas.",
+        "Capital mínimo conforme o art. 14."
+      ],
+      "atencao": [
+        "Não transforme requisito específico da renovação em descrição indistinta de toda autorização inicial.",
+        "O inciso sobre origem do capital tem condição expressa de indícios e regulamento."
+      ],
+      "exemplo": "Na renovação, a empresa não comprova o pagamento das multas por descumprir o estatuto. Falta o requisito do inciso II. Variação: só comprova regularidade fiscal, mas não o capital integralizado; atender a um requisito não substitui os demais.",
+      "prova": [
+        "O capital mínimo pode ser apenas prometido para depois da autorização? Não; o inciso VII exige integralização."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 14",
+        "Art. 20"
+      ]
+    },
+    "art-20": {
+      "simples": "A empresa de serviços deve adotar uma das formas societárias permitidas, com as restrições de negociação de ações previstas. A autorização depende ainda dos requisitos próprios dos serviços, instalações, veículos, pessoal, armas e bases operacionais, conforme regulamento.",
+      "pontos": [
+        "Sociedade limitada ou anônima nas condições legais.",
+        "Requisitos específicos de cada serviço.",
+        "Instalações e guarda segura de armas, entre outras exigências."
+      ],
+      "atencao": [
+        "Não simplifique a regra como autorização para negociar ações em bolsa: o caput traz a restrição.",
+        "Os parágrafos vetados não criam obrigações vigentes."
+      ],
+      "exemplo": "A empresa tem forma societária admitida, mas não cumpre as condições de segurança das instalações. A forma societária, sozinha, não basta para a autorização. Variação: oferece serviços diferentes; devem ser examinados os requisitos específicos de cada um.",
+      "prova": [
+        "Regularidade societária dispensa os requisitos operacionais? Não; o §1º exige condições específicas dos serviços."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 13",
+        "Art. 19"
+      ]
+    },
+    "art-21": {
+      "simples": "A empresa pode empregar diferentes tecnologias para executar seus serviços, respeitando os limites legais. A tecnologia não amplia suas competências nem elimina requisitos de autorização e proteção de dados.",
+      "pontos": [
+        "Uso de tecnologias permitido.",
+        "Limites legais continuam aplicáveis."
+      ],
+      "atencao": [
+        "Não deduza autorização irrestrita para vigilância de pessoas de qualquer forma."
+      ],
+      "exemplo": "Uma empresa usa câmeras na prestação regular do serviço. A tecnologia é admitida dentro dos limites legais. Variação: alega que usar tecnologia dispensa autorização da PF; o artigo não cria essa dispensa.",
+      "prova": [
+        "A tecnologia pode afastar os limites da lei? Não; a permissão é expressamente condicionada a eles."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 4º"
+      ]
+    },
+    "art-22": {
+      "simples": "Escola de formação é a pessoa jurídica voltada à formação, aperfeiçoamento e atualização de profissionais de segurança privada. Sua definição não lhe atribui automaticamente a prestação de vigilância ou transporte de valores.",
+      "pontos": [
+        "Formação e aperfeiçoamento de profissionais.",
+        "Categoria própria de prestador."
+      ],
+      "atencao": [
+        "Ensinar vigilância não é prestar vigilância ao contratante."
+      ],
+      "exemplo": "Uma escola oferece curso de atualização a vigilantes. A atividade integra sua finalidade. Variação: oferece equipe para guardar patrimônio de terceiros com a autorização da escola; essa categoria não permite o serviço reservado à empresa de segurança.",
+      "prova": [
+        "A escola pode prestar todos os serviços do art. 5º só por ser escola? Não; sua categoria está vinculada ao inciso X."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 13",
+        "Art. 23"
+      ]
+    },
+    "art-23": {
+      "simples": "Excepcionalmente, a escola pode ensinar outra atividade destinada ao aprimoramento da segurança privada, mediante autorização da PF. Também pode ceder instalações para testes relativos às necessidades do Sinarm, conforme a legislação específica.",
+      "pontos": [
+        "Atividade distinta: finalidade de aprimoramento e autorização.",
+        "Cessão de instalações para os testes previstos."
+      ],
+      "atencao": [
+        "A exceção não permite qualquer curso desvinculado da segurança privada."
+      ],
+      "exemplo": "Uma escola propõe ensino distinto para aprimorar a segurança privada e obtém autorização da PF. A exceção pode ser aplicada. Variação: oferece atividade sem vínculo com esse aprimoramento; a autorização para cursos regulares não resolve essa falta.",
+      "prova": [
+        "A atividade excepcional independe de autorização da PF? Não; a autorização é condição expressa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 22"
+      ]
+    },
+    "art-24": {
+      "simples": "A empresa de monitoramento é constituída para prestar o serviço de sistemas eletrônicos, ressalvada a comercialização isolada de produtos. Pode monitorar remotamente estabelecimentos sem eliminar a atuação das empresas de serviço de segurança.",
+      "pontos": [
+        "Monitoramento remoto.",
+        "Venda isolada de produtos ressalvada na definição."
+      ],
+      "atencao": [
+        "Vender equipamento isoladamente não deve ser confundido com prestar o serviço regulado de monitoramento."
+      ],
+      "exemplo": "Uma empresa instala e opera monitoramento remoto de um estabelecimento. Isso se enquadra na atividade. Variação: uma loja apenas vende um produto isolado; a ressalva impede tratá-la automaticamente como empresa de monitoramento por essa venda.",
+      "prova": [
+        "O monitoramento remoto exclui a atuação da empresa de vigilância? Não; o parágrafo único a preserva."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 7º",
+        "Art. 13"
+      ]
+    },
+    "art-25": {
+      "simples": "O serviço orgânico é facultativo, com pessoal próprio e em proveito da empresa ou condomínio, sem prestar segurança a terceiros e sem a atividade de formação excluída. Aplica regras de autorização, pessoal e armas; a portaria típica desarmada possui ressalva específica.",
+      "pontos": [
+        "Pessoal próprio e proveito próprio.",
+        "Vedação de serviços a terceiros.",
+        "Ressalva da portaria típica exige ausência de arma de fogo."
+      ],
+      "atencao": [
+        "Não omita a condição de serviço de portaria desarmado do §5º."
+      ],
+      "exemplo": "Um condomínio usa pessoal próprio para sua segurança, sem vender serviços. Variação: o controle de entrada é típico serviço de portaria, mas passa a usar arma de fogo; não cabe aplicar a ressalva destinada à portaria desarmada.",
+      "prova": [
+        "O serviço orgânico pode funcionar como escola de formação do inciso X? Não; essa atividade é excluída do caput."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 2º",
+        "Art. 19"
+      ]
+    },
+    "art-26": {
+      "simples": "A lei distingue gestor, vigilante supervisor, vigilante, supervisor de monitoramento, técnico externo e operador. Técnico externo e operador têm vedações específicas; a formação do vigilante exige duzentas horas, e aperfeiçoamento e atualização, cinquenta.",
+      "pontos": [
+        "Funções diferentes exigem atribuições e habilitações próprias.",
+        "Técnico externo: sem arma de fogo, intervenção direta ou revista pessoal.",
+        "Operador: sem arma de fogo ou revista pessoal."
+      ],
+      "atencao": [
+        "Não transfira as atribuições do vigilante para o operador de monitoramento."
+      ],
+      "exemplo": "Um técnico externo verifica um alarme e pretende revistar as pessoas no local. A lei proíbe revista pessoal por esse profissional. Variação: um operador recebe ordem de portar arma de fogo; há vedação específica também para ele.",
+      "prova": [
+        "O curso de formação do vigilante tem mínimo de cinquenta horas? Não; são duzentas, enquanto aperfeiçoamento e atualização têm mínimo de cinquenta."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 28"
+      ]
+    },
+    "art-27": {
+      "simples": "Gestor, vigilante supervisor e vigilante devem usar o documento de identificação de padrão único quando estão em serviço. A obrigação de identificação profissional não se resume a portar documento civil comum.",
+      "pontos": [
+        "Padrão único de identificação profissional.",
+        "Uso obrigatório em serviço nas categorias indicadas."
+      ],
+      "atencao": [
+        "O artigo enumera as categorias; não acrescente outras por analogia sem examinar sua disciplina."
+      ],
+      "exemplo": "Um vigilante está em serviço e apresenta apenas identidade civil, recusando o documento profissional exigido. Falta o uso da identificação prevista. Variação: a questão trata da emissão do documento; examine a competência da PF no art. 40.",
+      "prova": [
+        "O uso do documento é facultativo quando em serviço? Não; o artigo o torna obrigatório."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 30",
+        "Art. 40"
+      ]
+    },
+    "art-28": {
+      "simples": "Vigilante e supervisor exigem nacionalidade brasileira, vinte e um anos e os demais requisitos do caput. As funções de monitoramento indicadas têm requisitos próprios, incluindo dezoito anos e ensino médio. Matrícula não exige contratação prévia, e há ressalva escolar para profissionais formados antes da vigência.",
+      "pontos": [
+        "Vigilante: fundamental; vigilante supervisor: médio.",
+        "Monitoramento, técnico externo e operador: requisitos do §3º.",
+        "Ressalva escolar para a situação anterior descrita no §7º."
+      ],
+      "atencao": [
+        "Não omita a ressalva transitória nem exija emprego prévio para a matrícula."
+      ],
+      "exemplo": "Uma pessoa de vinte anos pretende ser vigilante. Não atende à idade de vinte e um anos. Variação: pretende ser operador de sistema eletrônico e cumpre os demais requisitos próprios; a idade mínima dessa categoria é dezoito anos.",
+      "prova": [
+        "É obrigatório já estar contratado para matricular-se na escola? Não; o §4º dispensa essa contratação para a matrícula."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 26",
+        "Art. 54"
+      ]
+    },
+    "art-29": {
+      "simples": "A lei prevê direitos custeados pelo empregador, como atualização, equipamentos, assistência jurídica e outros listados. Porte de arma depende de efetivo serviço e legislação própria. As categorias eletrônicas recebem apenas os direitos indicados no §3º, e a jornada especial depende da negociação coletiva prevista.",
+      "pontos": [
+        "Custeio pelo empregador.",
+        "Porte relacionado ao efetivo serviço e normas específicas.",
+        "Jornada de doze por trinta e seis: condições do §4º."
+      ],
+      "atencao": [
+        "Não estenda automaticamente todos os direitos do caput às categorias eletrônicas."
+      ],
+      "exemplo": "O empregador exige que o vigilante pague pelos equipamentos de proteção previstos. O custeio é do empregador. Variação: um operador invoca o caput para portar arma; o §3º não lhe assegura esse direito, e há vedação no art. 26.",
+      "prova": [
+        "O direito de porte autoriza usar arma fora do efetivo serviço sem outras condições? Não; o inciso III delimita o direito e remete à legislação própria."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 17",
+        "Art. 26"
+      ]
+    },
+    "art-30": {
+      "simples": "Os profissionais devem agir com dignidade, probidade e urbanidade, comunicar incidentes e falhas, usar identificação e equipamentos e manter sigilo com a ressalva da denúncia de delito. O empregador continua obrigado a fiscalizar o cumprimento.",
+      "pontos": [
+        "Comunicação de incidentes e equipamentos deficientes.",
+        "Sigilo profissional com ressalva da denúncia.",
+        "Fiscalização do empregador não é afastada."
+      ],
+      "atencao": [
+        "Não use sigilo como pretexto para omitir denúncia de ação delituosa."
+      ],
+      "exemplo": "Um vigilante identifica defeito no equipamento e comunica ao chefe. Cumpre o dever do inciso III. Variação: o empregador afirma que não precisa fiscalizar porque o empregado já tem deveres; o §2º mantém sua obrigação.",
+      "prova": [
+        "Uniforme é sempre dispensável? Não; a regra exige uniforme, ressalvadas as hipóteses regulamentadas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 27"
+      ]
+    },
+    "art-31": {
+      "simples": "Dependências financeiras com atendimento ao público e guarda ou movimentação de valores, simultaneamente, precisam de plano aprovado pela PF. Há exceção para agências e postos de cooperativas singulares em municípios com menos de vinte mil habitantes, com segurança regulamentada.",
+      "pontos": [
+        "Simultaneidade das condições do caput.",
+        "Aprovação do plano pela PF.",
+        "Exceção específica de cooperativas e população inferior ao limite."
+      ],
+      "atencao": [
+        "Menos de vinte mil não inclui município com exatamente vinte mil habitantes."
+      ],
+      "exemplo": "Uma agência de cooperativa singular está em município com dezenove mil habitantes. Examina-se a exceção e seus requisitos regulamentares. Variação: o município tem exatamente vinte mil; não preenche a condição de população inferior.",
+      "prova": [
+        "A exceção alcança automaticamente qualquer banco em município pequeno? Não; o §2º trata das cooperativas singulares indicadas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 33",
+        "Art. 34"
+      ]
+    },
+    "art-32": {
+      "simples": "A segurança financeira e o transporte dos valores destinados às instituições seguem procedimentos específicos estabelecidos pela PF, respeitando a lei e o regulamento. A atribuição não permite procedimentos incompatíveis com a norma superior.",
+      "pontos": [
+        "Procedimentos específicos da PF.",
+        "Limites da lei e regulamentação."
+      ],
+      "atencao": [
+        "Norma administrativa complementa a execução; não pode eliminar uma exigência legal."
+      ],
+      "exemplo": "A PF detalha procedimento operacional para transporte de valores. A atuação deve respeitar os mínimos legais. Variação: um contrato particular pretende afastar esses procedimentos; a vontade das partes não cria essa dispensa.",
+      "prova": [
+        "A empresa escolhe livremente qualquer procedimento sem observar a PF? Não; aplicam-se os procedimentos específicos previstos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 6º",
+        "Art. 36"
+      ]
+    },
+    "art-33": {
+      "simples": "A PF fiscaliza os requisitos de segurança, diferenciados por tipo de dependência. Agências e postos possuem mínimos distintos; há possibilidades condicionadas de redução, exceções e implantação gradual de alguns itens. Instalações, vigilantes e alarme têm obrigatoriedade desde a vigência.",
+      "pontos": [
+        "Agência: mínimo de dois vigilantes; posto abrangido: um.",
+        "Imagens das hipóteses dos §§1º e 2º: mínimo de sessenta dias.",
+        "Itens IV a VII do §1º: cronograma de vinte e cinco, cinquenta, setenta e cinco e cem por cento."
+      ],
+      "atencao": [
+        "Não trate todos os requisitos como adiados por quatro anos; os itens I a III são imediatos.",
+        "Redução depende da autorização da PF e das condições previstas."
+      ],
+      "exemplo": "Uma agência alega que pode dispensar vigilantes até terminar o cronograma gradual. O mínimo de vigilantes está entre as exigências imediatas. Variação: trata-se do cofre temporizado; ele integra os itens sujeitos ao cronograma específico.",
+      "prova": [
+        "O cronograma permite postergar todas as exigências de segurança? Não; o §7º torna os itens I a III obrigatórios desde a vigência."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 31",
+        "Art. 60"
+      ]
+    },
+    "art-34": {
+      "simples": "O plano deve abranger toda a área e descrever vigilantes, instalações, acessos, guarda de valores e armas, dispositivos e projetos eletrônicos. A PF pode pedir informações adicionais. O acesso é restrito ao órgão fiscalizador e às pessoas autorizadas pela instituição.",
+      "pontos": [
+        "Cobertura de toda a área.",
+        "Planta e informações operacionais.",
+        "Acesso restrito."
+      ],
+      "atencao": [
+        "Não confunda transparência administrativa com divulgar livremente o plano de segurança bancária."
+      ],
+      "exemplo": "A instituição apresenta plano que omite uma área de guarda de valores. O plano deve abranger toda a área. Variação: quer publicar integralmente o plano para acesso irrestrito; o §2º restringe os destinatários.",
+      "prova": [
+        "A PF pode disciplinar informações adicionais no plano? Sim; o §1º admite ato normativo próprio."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 31",
+        "Art. 40"
+      ]
+    },
+    "art-35": {
+      "simples": "Normas de segurança financeira devem ser precedidas de análise técnica que, a critério da PF, demonstre sua efetividade. A produção normativa envolve essa avaliação, não apenas uma escolha sem suporte técnico.",
+      "pontos": [
+        "Análise técnica prévia.",
+        "Efetividade avaliada pela PF."
+      ],
+      "atencao": [
+        "Prévia significa antes da edição, não apenas depois de um problema."
+      ],
+      "exemplo": "Uma proposta normativa é editada sem a análise técnica exigida. Falta a etapa prévia. Variação: a análise é realizada antes e orienta a efetividade da norma; atende a esse requisito, sem dispensar os demais limites legais.",
+      "prova": [
+        "A análise técnica pode ser substituída automaticamente por conveniência comercial? Não; o artigo exige avaliação técnica."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 32"
+      ]
+    },
+    "art-36": {
+      "simples": "Transporte, guarda e manuseio para suprir ou recolher valores financeiros cabem a empresas autorizadas para transporte ou ao serviço orgânico, conforme regulamento. Impossibilidade ou inviabilidade terrestre comprovada perante a PF permite meios alternativos com segurança e vigilantes habilitados.",
+      "pontos": [
+        "Prestador autorizado ou serviço orgânico.",
+        "Alternativa de transporte depende de comprovação à PF.",
+        "Normas do meio e mínimos de segurança preservados."
+      ],
+      "atencao": [
+        "A particularidade regional não dispensa comprovação nem proteção legal."
+      ],
+      "exemplo": "Em região acessível por rio, comprova-se à PF a inviabilidade do veículo terrestre. Pode ser usada a via fluvial nas condições legais. Variação: o prestador apenas prefere um meio mais barato e ignora os requisitos; preferência econômica não substitui a hipótese legal.",
+      "prova": [
+        "O transporte alternativo dispensa vigilantes habilitados? Não; o parágrafo único mantém essa exigência."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 6º",
+        "Art. 37"
+      ]
+    },
+    "art-37": {
+      "simples": "Empregados da instituição financeira não podem executar transporte de numerário ou valores. A operação deve seguir a disciplina dos prestadores autorizados e do serviço orgânico prevista no artigo anterior.",
+      "pontos": [
+        "Vedação para empregados da instituição financeira.",
+        "Regra específica para transporte de valores."
+      ],
+      "atencao": [
+        "Não crie exceção pelo baixo valor ou pela curta distância sem fundamento legal."
+      ],
+      "exemplo": "Uma agência manda um caixa transportar valores até outra unidade. O artigo veda essa execução pelo empregado da instituição. Variação: o transporte é realizado por prestador autorizado conforme a lei; deve ser examinado pelos requisitos próprios da atividade.",
+      "prova": [
+        "Consentimento do empregado afasta a vedação? Não; a lei não condiciona a proibição à discordância dele."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 36"
+      ]
+    },
+    "art-38": {
+      "simples": "Chaves dos cofres e dependências financeiras podem ser guardadas nas instalações de empresas de serviços de segurança. A permissão se refere às instalações dessa categoria de empresa, não a qualquer pessoa escolhida informalmente.",
+      "pontos": [
+        "Guarda de chaves permitida nas instalações indicadas.",
+        "Empresa de serviços de segurança."
+      ],
+      "atencao": [
+        "Guardar a chave não significa receber autorização para prestar qualquer outro serviço."
+      ],
+      "exemplo": "A instituição guarda a chave do cofre na instalação da empresa de serviços de segurança. O artigo permite essa guarda. Variação: pretende usar a permissão como fundamento para dispensar o plano de segurança; são obrigações diferentes.",
+      "prova": [
+        "A lei proíbe toda guarda externa dessas chaves? Não; admite a guarda nas instalações previstas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 34"
+      ]
+    },
+    "art-39": {
+      "simples": "A PF disciplina tecnologias de inutilização de numerário e dispositivos antifurto. O Banco Central é ouvido quando necessário. A competência normativa não é transferida ao fornecedor do equipamento.",
+      "pontos": [
+        "Disciplina pela PF.",
+        "Oitiva do Banco Central quando necessária."
+      ],
+      "atencao": [
+        "Quando necessário não significa que toda deliberação dependa obrigatoriamente da mesma oitiva."
+      ],
+      "exemplo": "Uma tecnologia antifurto exige disciplina dos parâmetros de uso. A PF tem a competência prevista. Variação: há questão que torna necessária a participação do Banco Central; ele deve ser ouvido nessa condição.",
+      "prova": [
+        "A disciplina cabe exclusivamente ao Banco Central? Não; cabe à PF, com a oitiva indicada quando necessária."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 40"
+      ]
+    },
+    "art-40": {
+      "simples": "A PF autoriza, renova, fiscaliza, sanciona e define padrões dentro das competências listadas. A renovação é de dois anos para segurança, escolas e serviços orgânicos, e cinco para monitoramento. Planos financeiros renovam em dois anos, com pelo menos uma vistoria anual; há regras próprias de comunicação e protocolo temporário.",
+      "pontos": [
+        "Início comunicado à secretaria estadual em dez dias úteis após a autorização.",
+        "Plano: renovação bienal e vistoria anual mínima.",
+        "Renovação não solucionada em trinta dias: protocolo temporário e precário, até decisão."
+      ],
+      "atencao": [
+        "A regra de protocolo do §5º vale para renovação; não a transporte para autorização inicial.",
+        "Acesso da fiscalização aos postos excepciona o interior de residências."
+      ],
+      "exemplo": "Um pedido de renovação abrangido pelo §5º permanece sem solução depois de trinta dias da entrada da documentação. O protocolo serve de renovação temporária e precária até a manifestação definitiva. Variação: é pedido inicial; essa regra não autoriza iniciar o serviço.",
+      "prova": [
+        "Renovação do plano a cada dois anos dispensa vistoria anual? Não; o inciso VIII exige ao menos uma vistoria por ano."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 4º",
+        "Art. 15",
+        "Art. 34"
+      ]
+    },
+    "art-41": {
+      "simples": "Empresas de segurança e escolas informam periodicamente à PF empregados, armas, munições, veículos e contratos. O serviço orgânico presta as informações correspondentes. O transporte de valores mantém registro diário de operações.",
+      "pontos": [
+        "Informação periódica e registro diário têm objetos e frequências distintos."
+      ],
+      "atencao": [
+        "Não trate registro diário de operações como substituto da informação periódica à PF."
+      ],
+      "exemplo": "A transportadora mantém registro diário das operações e informações periódicas de frota: os dois deveres coexistem. Variação: Mantém apenas a lista de empregados e não o registro diário de transporte: falta o dever específico do parágrafo correspondente.",
+      "prova": [
+        "O registro de operações do transporte é apenas anual? Não; o artigo exige registro diário."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-42": {
+      "simples": "Empresas de monitoramento eletrônico devem informar periodicamente à PF a relação de profissionais empregados nas atividades técnicas de instalação, operação e manutenção previstas no artigo.",
+      "pontos": [
+        "É obrigação específica da categoria de monitoramento eletrônico."
+      ],
+      "atencao": [
+        "Não copie automaticamente para esta relação o cadastro de armas de empresa armada do artigo anterior."
+      ],
+      "exemplo": "A empresa de monitoramento atualiza a lista de técnicos empregados e a apresenta à PF: cumpre o dever específico de informação. Variação: Alega que, por não usar armas, não precisa informar seus técnicos: o art. 42 não limita o dever a empresas armadas.",
+      "prova": [
+        "A ausência de armas dispensa a informação do art. 42? Não; o dever é sobre os profissionais técnicos da empresa de monitoramento."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-43": {
+      "simples": "Contratantes de serviços de segurança privada que não sejam instituições financeiras devem fornecer à PF os dados de seus contratos quando solicitados.",
+      "pontos": [
+        "Sujeito: contratante não financeiro; gatilho: solicitação da PF."
+      ],
+      "atencao": [
+        "Não confunda este fornecimento sob solicitação com a informação periódica dos prestadores."
+      ],
+      "exemplo": "Uma empresa comercial contratante recebe solicitação da PF sobre o contrato de segurança: deve prestar os dados. Variação: O exercício atribui a esse artigo prazo fixo anual independente de solicitação: essa periodicidade não está prevista aqui.",
+      "prova": [
+        "Qual evento aciona o dever descrito? A solicitação da PF ao contratante não financeiro."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-44": {
+      "simples": "Instituições financeiras, prestadores de segurança, serviços orgânicos e profissionais fornecem informações e documentos à PF nas condições do artigo, permitindo fiscalização de serviços, segurança e ocorrências.",
+      "pontos": [
+        "A fiscalização exige cooperação documental e informação sobre ocorrências."
+      ],
+      "atencao": [
+        "Não confunda informar a ocorrência à PF com dispensar outras comunicações exigidas por lei."
+      ],
+      "exemplo": "A PF solicita documentos sobre uma ocorrência de segurança ao prestador: a obrigação de cooperação deve ser atendida. Variação: O prestador comunica a ocorrência, mas se recusa a produzir os documentos solicitados: informar não substitui o dever documental.",
+      "prova": [
+        "A prestação de uma informação elimina a obrigação de apresentar documentos solicitados? Não; são deveres complementares no artigo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-45": {
+      "simples": "Cabe à Polícia Federal aplicar as penalidades administrativas por infração à lei, assegurado o processo legal. A Lei 9.784/1999 se aplica subsidiariamente ao processo administrativo.",
+      "pontos": [
+        "Competência sancionadora da PF e processo administrativo."
+      ],
+      "atencao": [
+        "Subsidiariedade não permite afastar regra especial do estatuto."
+      ],
+      "exemplo": "A PF apura infração de prestador com defesa e aplica a penalidade prevista: atua na competência do artigo. Variação: Uma prefeitura pretende substituir a PF na aplicação das penalidades deste estatuto apenas por emitir alvará: o art. 45 atribui essa competência à PF.",
+      "prova": [
+        "Qual lei processual se aplica subsidiariamente? A Lei 9.784/1999, respeitadas as normas especiais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-46": {
+      "simples": "Para prestadores e serviços orgânicos, o artigo prevê advertência, multa de mil a quinze mil reais e cancelamento da autorização, nas hipóteses e critérios legais. Também alcança contratantes quando expressamente previsto. A multa pode chegar ao triplo nas condições de capacidade econômica e discriminação descritas.",
+      "pontos": [
+        "Não existe pena administrativa única para toda infração."
+      ],
+      "atencao": [
+        "O triplo exige a hipótese legal; não é aumento automático em qualquer multa."
+      ],
+      "exemplo": "A PF verifica que a multa máxima é ineficaz em razão da capacidade econômica e examina a elevação admitida pelo artigo. Variação: A empresa é pequena e não há condição legal para triplicar: não se pode aplicar o triplo apenas por preferência do fiscal.",
+      "prova": [
+        "Toda infração leva automaticamente ao cancelamento? Não; o artigo prevê espécies e critérios próprios de penalidade."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-47": {
+      "simples": "Instituições financeiras podem receber advertência, multa e interdição nos termos do artigo. A multa geral vai de dez a trinta mil reais; para cooperativas de crédito, de mil a dez mil. As regras tratam de reincidência por dependência, discriminação, regularização e plano de segurança.",
+      "pontos": [
+        "Não há interdição cautelar nesta disciplina; a sanção exige o procedimento com defesa."
+      ],
+      "atencao": [
+        "Plano aprovado antes da decisão final de interdição leva à conversão em multa conforme regra legal, não a perdão irrestrito."
+      ],
+      "exemplo": "A dependência obtém aprovação do plano antes da decisão final de interdição: aplica-se a regra de conversão prevista. Variação: A autoridade pretende interdição cautelar sem o procedimento: o dispositivo a veda.",
+      "prova": [
+        "A multa da cooperativa tem o mesmo intervalo geral? Não; é de mil a dez mil reais, diferente de dez a trinta mil para a regra geral."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-48": {
+      "simples": "Organizar, oferecer ou contratar segurança irregular sujeita-se à multa prevista na remissão ao art. 47, II, e à cessação imediata da atividade. O dispositivo também disciplina fechamento de estabelecimento não autorizado e apreensão, com destinação do material após o procedimento administrativo e ressalvas legais.",
+      "pontos": [
+        "Cessação imediata não equivale a destruição imediata dos bens apreendidos."
+      ],
+      "atencao": [
+        "A capacidade econômica pode permitir elevação da multa; a destinação de material respeita o procedimento e normas específicas."
+      ],
+      "exemplo": "Constata-se atividade não autorizada: pode haver cessação imediata e medidas administrativas previstas. Variação: O fiscal quer destruir imediatamente todo material apreendido, antes do procedimento: isso ignora a condição processual e as ressalvas do artigo.",
+      "prova": [
+        "A destruição de material apreendido é automática no momento da apreensão? Não; o artigo prevê procedimento administrativo e ressalvas legais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-49": {
+      "simples": "A PF pode celebrar termo de compromisso antes do julgamento administrativo, com obrigações para corrigir irregularidades e multa por descumprimento. O termo é título executivo extrajudicial, suspende o processo enquanto cumprido e permite arquivamento após cumprimento integral.",
+      "pontos": [
+        "Descumprimento retoma o procedimento e as consequências legais."
+      ],
+      "atencao": [
+        "Não confunda assinatura do termo com arquivamento imediato."
+      ],
+      "exemplo": "A empresa firma termo, cumpre os ajustes e conclui integralmente as obrigações: pode haver arquivamento nos termos do artigo. Variação: Assina, mas descumpre prazo essencial: não conserva automaticamente a suspensão; o processo retoma.",
+      "prova": [
+        "O processo é arquivado só pela assinatura? Não; a conclusão e o cumprimento integral das obrigações são necessários."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-50": {
+      "simples": "Organizar, prestar ou oferecer serviço de segurança privada armado, como sócio ou proprietário, sem autorização, constitui o crime específico do artigo. A pena é detenção de um a três anos e multa.",
+      "pontos": [
+        "Forma armada, posição do agente e falta de autorização compõem o tipo."
+      ],
+      "atencao": [
+        "Atividade desarmada irregular pode sofrer consequências administrativas; não transfira para ela automaticamente este tipo penal armado."
+      ],
+      "exemplo": "O proprietário oferece vigilância armada sem autorização: estão presentes os elementos descritos a serem examinados. Variação: O serviço irregular é desarmado: a irregularidade não satisfaz, por esse fato isolado, o elemento armado do art. 50.",
+      "prova": [
+        "A pena do art. 50 é reclusão? Não; é detenção de um a três anos e multa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-51": {
+      "simples": "O artigo institui as taxas pelos serviços da PF relacionados no anexo e disciplina seu recolhimento nos prazos e condições correspondentes.",
+      "pontos": [
+        "Taxa de serviço é distinta de multa por infração."
+      ],
+      "atencao": [
+        "Não invente valor: identifique o item do anexo e eventual ato oficial aplicável."
+      ],
+      "exemplo": "A empresa solicita autorização de funcionamento: verifica o item específico e recolhe a taxa correspondente. Variação: A cobrança decorre de punição por irregularidade: trata-se de multa, não da taxa por serviço do anexo.",
+      "prova": [
+        "Taxa e multa têm a mesma finalidade? Não; taxa refere-se ao serviço relacionado no anexo, multa é sanção por infração."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-52": {
+      "simples": "As infrações e o procedimento seguem a disciplina da PF com garantia de defesa. A cobrança dos créditos observa o Decreto 70.235/1972 na remissão do artigo.",
+      "pontos": [
+        "Apuração e defesa não se confundem com a fase de cobrança."
+      ],
+      "atencao": [
+        "Não use o rito de cobrança para eliminar a defesa na apuração da infração."
+      ],
+      "exemplo": "Concluída a apuração com defesa, inicia-se a cobrança do crédito na forma da remissão legal. Variação: A autoridade tenta cobrar sem observar o procedimento de apuração devido: a regra de cobrança não supre essa etapa.",
+      "prova": [
+        "A remissão sobre cobrança afasta o direito de defesa? Não; o artigo preserva as garantias procedimentais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-53": {
+      "simples": "A PF, por intermédio do Ministério da Justiça e Segurança Pública, pode celebrar convênios com Estados para delegar parte da fiscalização e controle. Há disciplina de participação em taxas e multas, sem subdelegação e sem criar cobranças estaduais adicionais pela atividade regulada.",
+      "pontos": [
+        "Delegação parcial por convênio não admite subdelegação."
+      ],
+      "atencao": [
+        "Não confunda participação na receita com instituição de nova taxa estadual do estatuto."
+      ],
+      "exemplo": "O Estado atua na fiscalização delimitada pelo convênio com a PF. Variação: Pretende repassar a competência recebida a outro órgão por subdelegação: a lei não autoriza essa transferência.",
+      "prova": [
+        "O Estado conveniado pode subdelegar livremente a fiscalização? Não; o artigo veda a subdelegação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-54": {
+      "simples": "A adequação dos requisitos de escolaridade de profissionais abrangidos segue a disciplina de transição regulamentar prevista no artigo.",
+      "pontos": [
+        "Transição de escolaridade precisa ser lida com os requisitos do art. 28 e a regulamentação."
+      ],
+      "atencao": [
+        "Não transforme transição em dispensa permanente para todo novo ingressante."
+      ],
+      "exemplo": "Um profissional já atuante busca saber como adequar sua escolaridade: examina a regra de transição e a regulamentação. Variação: Um novo candidato assume que ninguém precisa atender à escolaridade: a transição não elimina os requisitos gerais.",
+      "prova": [
+        "A transição elimina a escolaridade de todo novo candidato? Não; deve ser interpretada com os requisitos legais e a disciplina regulamentar."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-55": {
+      "simples": "O transporte internacional de valores será regulado conjuntamente pelos Ministérios da Justiça e Segurança Pública, da Fazenda, da Defesa e das Relações Exteriores.",
+      "pontos": [
+        "Quatro áreas ministeriais participam da disciplina conjunta."
+      ],
+      "atencao": [
+        "Não atribua a regulamentação exclusivamente à PF por ela fiscalizar o setor."
+      ],
+      "exemplo": "A operação pretende transportar valores internacionalmente e precisa observar a disciplina conjunta. Variação: É operação exclusivamente doméstica: a característica internacional que aciona esta regra não está presente.",
+      "prova": [
+        "A PF sozinha recebe aqui a competência regulamentar? Não; o artigo prevê atuação conjunta dos quatro Ministérios indicados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-56": {
+      "simples": "Armas de uso controlado apreendidas judicialmente podem ser alienadas ou adjudicadas apenas a outros prestadores de segurança privada, mediante manifestação favorável da PF, nas condições legais.",
+      "pontos": [
+        "Apreensão judicial, destinatário permitido e manifestação favorável são condições relevantes."
+      ],
+      "atencao": [
+        "A venda judicial não dispensa o controle da PF nem permite qualquer comprador."
+      ],
+      "exemplo": "Outro prestador de segurança pretende adquirir arma apreendida judicialmente e há manifestação favorável da PF: examina-se a hipótese legal. Variação: Um particular sem essa condição pretende adquiri-la na mesma operação: não atende à restrição de destinatário.",
+      "prova": [
+        "A alienação judicial permite venda a qualquer pessoa? Não; o artigo limita os destinatários e exige manifestação favorável da PF."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-57": {
+      "simples": "Órgãos de registro empresarial comunicam à PF, no prazo de quinze dias contado do registro, os atos relacionados às atividades abrangidas, conforme o artigo.",
+      "pontos": [
+        "O marco inicial é o registro do ato."
+      ],
+      "atencao": [
+        "Registro empresarial não substitui autorização de segurança da PF."
+      ],
+      "exemplo": "Um ato empresarial é registrado e o órgão comunica à PF dentro dos quinze dias: observa o prazo. Variação: A empresa usa o registro para começar serviço antes da autorização: a comunicação não autoriza início da atividade.",
+      "prova": [
+        "O prazo começa na primeira prestação do serviço? Não; é contado do registro do ato."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-58": {
+      "simples": "O estatuto preserva a aplicação da legislação trabalhista e os direitos decorrentes de negociação coletiva na forma prevista.",
+      "pontos": [
+        "Regras de segurança e proteção trabalhista coexistem."
+      ],
+      "atencao": [
+        "Autorização da PF não dispensa cumprimento de obrigações trabalhistas."
+      ],
+      "exemplo": "O prestador autorizado organiza a jornada observando a lei e o instrumento coletivo aplicável. Variação: Alega que a fiscalização da PF elimina o acordo coletivo: essa conclusão contraria a preservação do artigo.",
+      "prova": [
+        "Autorização de funcionamento afasta direitos trabalhistas? Não; o estatuto preserva sua aplicação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-59": {
+      "simples": "As atividades do Banco Central ligadas à segurança e ao transporte de moeda nacional nos termos do artigo não se submetem ao estatuto. A exceção não se estende automaticamente às empresas privadas de segurança que o Banco Central contrata.",
+      "pontos": [
+        "Distinguir atividade própria do Banco Central e prestador privado contratado."
+      ],
+      "atencao": [
+        "Não conceda uma imunidade geral a qualquer empresa que atenda ao Banco Central."
+      ],
+      "exemplo": "O Banco Central executa sua atividade própria abrangida pela exceção. Variação: Contrata empresa privada de segurança: a empresa deve observar o estatuto conforme o artigo.",
+      "prova": [
+        "Toda contratada do Banco Central fica dispensada do estatuto? Não; a exceção não abrange automaticamente os prestadores privados contratados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-60": {
+      "simples": "Os abrangidos dispõem do prazo máximo de três anos da publicação para adequação, salvo prazos específicos que a lei estabelece.",
+      "pontos": [
+        "Regra geral de transição não substitui o cronograma específico de outro artigo."
+      ],
+      "atencao": [
+        "O art. 33 possui etapas próprias; não use os três anos para apagar a etapa de 48 meses que ele prevê."
+      ],
+      "exemplo": "A instituição verifica um requisito sem prazo específico e consulta o limite geral de adaptação. Variação: O requisito tem cronograma próprio no art. 33: deve aplicar esse cronograma, não substituir todas as etapas por três anos.",
+      "prova": [
+        "O prazo geral revoga os prazos específicos? Não; o próprio artigo ressalva esses prazos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-61": {
+      "simples": "O seguro das instituições financeiras contra roubo e furto qualificado depende da prova de cumprimento das exigências legais de segurança. Contrato irregular não tem cobertura de resseguro nos termos do artigo.",
+      "pontos": [
+        "Segurança exigida e contratação de seguro não são alternativas intercambiáveis."
+      ],
+      "atencao": [
+        "Seguro não autoriza instituição a descumprir o plano de segurança."
+      ],
+      "exemplo": "A instituição comprova o atendimento às exigências para contratar o seguro previsto. Variação: Pretende substituir a segurança exigida por uma apólice: isso não satisfaz a condição legal.",
+      "prova": [
+        "A apólice pode substituir o cumprimento das exigências de segurança? Não; sua contratação depende da comprovação prevista."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-62": {
+      "simples": "Medidas adicionais de segurança que superem o mínimo exigido podem gerar desconto no prêmio do seguro, conforme regulamentação.",
+      "pontos": [
+        "Proteção adicional, desconto e disciplina regulamentar."
+      ],
+      "atencao": [
+        "Não confunda desconto no prêmio com dispensa de recolher taxa à PF."
+      ],
+      "exemplo": "A instituição instala medidas adicionais acima do mínimo e solicita o desconto conforme a regulamentação. Variação: Apenas cumpre o mínimo obrigatório e exige o mesmo desconto automaticamente: o artigo trata de proteção adicional.",
+      "prova": [
+        "Cumprir só o mínimo gera automaticamente o desconto? Não; a hipótese considera medidas adicionais e a regulamentação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-63": {
+      "simples": "Atividades de proteção da aviação civil contra atos de interferência ilícita nas áreas restritas de segurança são ressalvadas na delimitação prevista. A exceção não torna toda atividade privada em aeroportos imune ao estatuto.",
+      "pontos": [
+        "Objeto específico e área restrita são decisivos."
+      ],
+      "atencao": [
+        "Não generalize a exclusão para vigilância de qualquer loja ou estacionamento de aeroporto."
+      ],
+      "exemplo": "A atividade é a proteção da aviação civil contra interferência ilícita em área restrita: examina-se a ressalva. Variação: É vigilância de estabelecimento comercial comum no aeroporto: a localização aeroportuária, sozinha, não satisfaz a ressalva.",
+      "prova": [
+        "Todo serviço prestado em aeroporto está excluído? Não; é necessário atender ao objeto e âmbito específicos do artigo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-64": {
+      "simples": "O transporte dos produtos controlados enumerados, como pólvora, explosivos e artigos pirotécnicos, em quantidade superior a cinquenta quilogramas exige veículos rastreados e monitorados, com escolta armada, conforme as condições legais.",
+      "pontos": [
+        "A expressão é superior a 50 kg."
+      ],
+      "atencao": [
+        "Exatamente 50 kg não preenche esse limite específico, sem afastar outras exigências de transporte ou controle aplicáveis."
+      ],
+      "exemplo": "A carga abrangida pesa 51 kg: o limite quantitativo do artigo é ultrapassado. Variação: Pesa exatamente 50 kg: o limite superior a cinquenta não está preenchido por esse dado isolado.",
+      "prova": [
+        "Uma carga de exatamente cinquenta quilos supera o limite do artigo? Não; superior exige quantidade maior que cinquenta, ressalvadas outras regras aplicáveis."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-65": {
+      "simples": "O artigo modifica o Estatuto do Desarmamento quanto a armas das empresas de segurança, uso em serviço, registros e recarga por escolas. É norma modificadora e precisa ser estudada junto aos arts. 7º e 23 da Lei 10.826/2003 compilada.",
+      "pontos": [
+        "Propriedade e controle da empresa; porte em serviço nas condições legais."
+      ],
+      "atencao": [
+        "Não transforme porte funcional em permissão de uso pessoal fora do serviço; recarga depende da autorização e finalidade próprias."
+      ],
+      "exemplo": "O vigilante usa arma da empresa no serviço, observados os registros e controles legais. Variação: Pretende levar a arma para uso particular após o turno: a alteração não concede essa permissão geral.",
+      "prova": [
+        "A alteração autoriza porte pessoal irrestrito fora do serviço? Não; devem ser respeitadas as condições do Estatuto do Desarmamento vigente."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-66": {
+      "simples": "Modifica a Lei 10.446/2002, incluindo infrações relacionadas a instituições financeiras e prestadores de transporte de valores nas hipóteses de atuação investigativa federal descritas. Deve ser lido com o caput e os incisos IV e VIII do art. 1º dessa lei compilada.",
+      "pontos": [
+        "Investigação pela PF e competência jurisdicional federal são questões distintas."
+      ],
+      "atencao": [
+        "A inclusão no rol não torna toda infração automaticamente de competência da Justiça Federal; examine repercussão e necessidade de repressão uniforme previstas."
+      ],
+      "exemplo": "Uma infração atende à hipótese do rol e às condições de repercussão e repressão uniforme: examina-se a atuação investigativa da PF. Variação: Só se informa que a vítima é banco: esse fato não permite concluir automaticamente por competência jurisdicional federal.",
+      "prova": [
+        "O rol de atuação investigativa da PF resolve sozinho a competência judicial? Não; são análises jurídicas distintas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-67": {
+      "simples": "O artigo alterou a remissão do inciso I do art. 8º da Lei 10.637/2002 para o Estatuto da Segurança Privada. É alteração de enquadramento legal em matéria de PIS/Pasep, não uma isenção geral criada para qualquer atividade de segurança.",
+      "pontos": [
+        "Estude a alteração de 2024 junto à lei tributária compilada e à produção de efeitos de normas posteriores."
+      ],
+      "atencao": [
+        "O texto oficial remete à LC 214/2025 e a datas próprias da transição tributária; publicação e produção de efeitos não são a mesma coisa. Não use esta unidade isoladamente para calcular tributo atual.",
+        "ATUALIZAÇÃO COM EFEITO FUTURO: a LC 214/2025, art. 542, XVIII, b, prevê revogação do dispositivo tributário alterado a partir de 1º de janeiro de 2027. Na conferência de 11/10/2026, essa data ainda é futura. O art. 544, III, confirma a produção de efeitos; leia o texto compilado, inclusive a LC 227/2026, sem antecipar a revogação."
+      ],
+      "exemplo": "O aluno identifica a remissão atualizada de uma lei revogada para o novo estatuto: esse é o objeto modificador do artigo. Variação: Interpreta a troca de remissão como dispensa total de PIS/Pasep: a alteração não contém essa isenção geral.",
+      "prova": [
+        "Atualizar a referência ao estatuto significa conceder isenção geral? Não; é necessário examinar o enquadramento e as regras tributárias compiladas, inclusive seus efeitos temporais.",
+        "A revogação tributária prevista para janeiro de 2027 já produz esses efeitos em outubro de 2026? Não; a produção de efeitos desse ponto é futura, embora a lei complementar já tenha sido publicada."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-68": {
+      "simples": "Altera a remissão do inciso I do art. 10 da Lei 10.833/2003 para o Estatuto da Segurança Privada, na disciplina da Cofins. A análise atual requer a lei tributária compilada e as normas posteriores de transição, não apenas a transcrição de 2024.",
+      "pontos": [
+        "Art. 67 trata de PIS/Pasep; art. 68 trata de Cofins."
+      ],
+      "atencao": [
+        "A LC 214/2025 é indicada na fonte oficial com produção de efeitos própria; não confunda a existência da lei com vigência imediata de toda mudança tributária.",
+        "ATUALIZAÇÃO COM EFEITO FUTURO: a LC 214/2025, art. 542, XXI, a, prevê revogação do dispositivo tributário alterado a partir de 1º de janeiro de 2027. Na conferência de 11/10/2026, essa data ainda é futura. O art. 544, III, confirma a produção de efeitos; leia o texto compilado, inclusive a LC 227/2026, sem antecipar a revogação."
+      ],
+      "exemplo": "O exercício pede qual contribuição recebe a mudança do art. 68: é Cofins, na remissão à Lei 10.833/2003. Variação: Troca essa contribuição por PIS/Pasep: essa é a alteração distinta do art. 67.",
+      "prova": [
+        "Qual a diferença entre os arts. 67 e 68? O art. 67 modifica a Lei do PIS/Pasep; o art. 68 modifica a Lei da Cofins.",
+        "A revogação tributária prevista para janeiro de 2027 já produz esses efeitos em outubro de 2026? Não; a produção de efeitos desse ponto é futura, embora a lei complementar já tenha sido publicada."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-69": {
+      "simples": "Acrescenta o art. 183-A ao Código Penal, aumentando de um terço até o dobro as penas dos crimes do título patrimonial contra instituições financeiras e prestadores de segurança privada abrangidos.",
+      "pontos": [
+        "É causa de aumento inserida no CP, não novo crime autônomo."
+      ],
+      "atencao": [
+        "A unidade correta do CP é art. 183-A. A violação de direito autoral pertence ao art. 184, separado após correção de extração."
+      ],
+      "exemplo": "Um crime patrimonial é praticado contra instituição financeira: examina-se a causa de aumento no Código Penal atual. Variação: O assunto é violação de direito autoral: não se usa a pena do art. 184 como se integrasse esta majorante.",
+      "prova": [
+        "O art. 69 cria um novo crime com pena de detenção? Não; insere causa de aumento nas penas dos crimes patrimoniais abrangidos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-70": {
+      "simples": "O artigo revoga os diplomas e dispositivos enumerados, incluindo a Lei 7.102/1983 e as alterações relacionadas ao regime substituído. A lista deve ser conferida literalmente, sem estender a revogação a toda legislação de armas ou segurança.",
+      "pontos": [
+        "Regime revogado não deve ser apresentado como estatuto atual da segurança privada."
+      ],
+      "atencao": [
+        "Revogação e regras de adaptação são análises distintas: consultar os prazos do novo estatuto."
+      ],
+      "exemplo": "Uma apostila apresenta a Lei 7.102/1983 como estatuto vigente: a revogação exige atualizar a referência. Variação: O aluno conclui que o Estatuto do Desarmamento inteiro também foi revogado: a conclusão não está na lista deste artigo.",
+      "prova": [
+        "Toda norma sobre armas foi revogada pelo art. 70? Não; ele revoga os diplomas e dispositivos expressamente enumerados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-72": {
+      "simples": "A Lei 14.967/2024 entra em vigor na data de sua publicação, nos termos do artigo. Entrada em vigor não apaga os prazos de adequação específicos previstos no próprio estatuto.",
+      "pontos": [
+        "Vigência imediata e adaptação temporal são planos distintos."
+      ],
+      "atencao": [
+        "Não use o prazo geral de três anos como se adiasse a vigência de toda a lei."
+      ],
+      "exemplo": "O aluno procura a data de vigência e encontra a regra de publicação do art. 72. Variação: Uma empresa tem prazo de adaptação: isso não altera a cláusula de entrada em vigor da lei.",
+      "prova": [
+        "O prazo de adequação adia toda a vigência por três anos? Não; o art. 72 estabelece vigência na publicação, com transições próprias."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "anexo-1": {
+      "simples": "O anexo relaciona taxas de serviços da PF, com identificação de cada serviço e valor. Autorização de funcionamento de empresa de segurança e de serviço orgânico são itens distintos; o mesmo vale para vistorias, documentos e alterações.",
+      "pontos": [
+        "Na tabela: autorização de empresa, R$ 2.190; autorização de serviço orgânico, R$ 730. Conferir eventual atualização oficial do valor antes de recolher."
+      ],
+      "atencao": [
+        "Taxa não é multa. Não confunda vistoria com autorização ou renovação."
+      ],
+      "exemplo": "O exercício pede o valor tabelado da autorização de empresa de segurança: consulte o item 3, R$ 2.190. Variação: Pede autorização do serviço orgânico: o item 5 traz R$ 730, e não o valor da empresa prestadora.",
+      "prova": [
+        "O anexo cobra o mesmo valor de autorização para empresa e serviço orgânico? Não; os itens indicam R$ 2.190 e R$ 730, respectivamente, na tabela legal."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

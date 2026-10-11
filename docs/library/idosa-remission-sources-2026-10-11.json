@@ -1,0 +1,38 @@
+[
+  {
+    "id": "32e7007c-33a4-5ffb-818d-2970c3ea2e8a",
+    "source_type": "lei",
+    "title": "Código de Processo Civil — Lei 13.105/2015",
+    "issuer": "Presidência da República — Planalto",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+    "published_on": null,
+    "checked_at": "2026-10-11T20:20:46.544237+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Fonte primária obtida diretamente para conferência de remissões. SHA-256 edc3ec5e2a3478b48415fa251382d487caa41a899e85c47acf8a33c4be9c5fc3"
+  },
+  {
+    "id": "7c24a9d2-35dc-5e9b-a24b-984248faa4e1",
+    "source_type": "lei",
+    "title": "Atendimento prioritário — Lei 10.048/2000",
+    "issuer": "Presidência da República — Planalto",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l10048.htm",
+    "published_on": null,
+    "checked_at": "2026-10-11T20:20:46.544237+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Fonte primária obtida diretamente para conferência de remissões. SHA-256 77615455be63a05cd524f7873197b82d4898ee5d53bee34118bac3168d138e64"
+  },
+  {
+    "id": "e334cdb2-7dfc-5b67-b565-b76d2802fa06",
+    "source_type": "lei",
+    "title": "Fundo Nacional da Pessoa Idosa — Lei 12.213/2010",
+    "issuer": "Presidência da República — Planalto",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12213.htm",
+    "published_on": null,
+    "checked_at": "2026-10-11T20:20:46.544237+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Fonte primária obtida diretamente para conferência de remissões. SHA-256 b3bc43086980781f820395f224ef4e30124c6855dae454fb97b5160d238ea872"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "179b36bf-04ec-50a8-a60e-13afeb79d381",
+    "source_type": "jurisprudencia",
+    "title": "STJ — Tema Repetitivo 952 — reajuste etário de plano de saúde",
+    "issuer": "STJ",
+    "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=952&cod_tema_inicial=952&novaConsulta=true&tipo_pesquisa=T",
+    "published_on": null,
+    "checked_at": "2026-10-11T20:12:45.788329+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Fonte primária de precedente qualificado conferida diretamente. SHA-256 b532b1887c3c6593176e3bc320faa9c9b6a86eca3725eeb98c34baec3f84455f"
+  },
+  {
+    "id": "0c892120-47ad-55fc-a1de-11488324f316",
+    "source_type": "jurisprudencia",
+    "title": "STJ — Tema Repetitivo 1016 — reajuste etário de plano de saúde",
+    "issuer": "STJ",
+    "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1016&cod_tema_inicial=1016&novaConsulta=true&tipo_pesquisa=T",
+    "published_on": null,
+    "checked_at": "2026-10-11T20:12:45.788329+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Fonte primária de precedente qualificado conferida diretamente. SHA-256 83e37e410198b56340953c9c1b4b4263e810b5965cc3d66e247f57306e3443cd"
+  }
+]

@@ -1,0 +1,1721 @@
+{
+  "version": "2026-10-11",
+  "checked_at": "2026-10-11T20:05:34.804528+00:00",
+  "scope": "Remoção de parágrafos órfãos de versões suprimidas. Não certifica toda jurisprudência.",
+  "laws": [
+    {
+      "expected": {
+        "id": "01439ef7-5c42-5de3-a83a-cda0ad2d3cd8",
+        "slug": "cin",
+        "title": "Decreto 10.977/2022 — Carteira de Identidade Nacional",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "source_sha256": "34cda60d5a0a15d7fa44019415193ab535265921536ee737024276f60656126f",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-cin-revisao",
+        "syllabus_topic_id": "cbe51652-703c-468d-a370-58100d8ef40c",
+        "overview": {
+          "intro": "Organize a emissão da CIN e sua validade por idade. A forma digital complementa o processo de expedição; não é um cadastro independente da emissão física.",
+          "alerts": "O Decreto 11.797/2023 alterou o regime de emissão e sua integração. Observe os prazos próprios para documentos novos e a regra de transição dos antigos, sem confundir as datas de referência.",
+          "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+          "chapters": [
+            {
+              "count": 27,
+              "title": "Disposições iniciais"
+            },
+            {
+              "count": 1,
+              "title": "Anexos / ANEXO I"
+            },
+            {
+              "count": 1,
+              "title": "Anexos / ANEXO II"
+            },
+            {
+              "count": 1,
+              "title": "Anexos / ANEXO III"
+            }
+          ],
+          "objectives": [
+            "Estudar emissão, modelos físico e digital, dados e procedimentos.",
+            "Comparar validade por faixa etária, perda de validade e modelos antigos.",
+            "Organizar interoperabilidade, responsabilidades e transição."
+          ],
+          "current_units": 30,
+          "jurisprudence": [],
+          "excluded_units": 1,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+              "title": "Decreto 10.977/2022 — Carteira de Identidade Nacional — texto oficial conferido",
+              "sha256": "34cda60d5a0a15d7fa44019415193ab535265921536ee737024276f60656126f"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "cin"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "source_sha256": "8a8133a72b1c53c256743b780c1630bf887b33afd384d175d6d465e46e7443b9",
+      "source_checked_at": "2026-10-11T18:39:25.901340+00:00"
+    },
+    {
+      "expected": {
+        "id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+        "slug": "lep",
+        "title": "Lei 7.210/1984 — Lei de Execução Penal",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "source_sha256": "8b95cead39cedad87abfe1d7314e2ddfef82125d22229a3b7a6ed5aba5c273d6",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-lep-revisao",
+        "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+        "overview": {
+          "intro": "A execução efetiva a decisão criminal e busca integração social. Direitos não atingidos pela sentença permanecem protegidos; assistência e identificação genética têm limites próprios.",
+          "alerts": "A Lei 15.295/2025 modificou o art. 9º-A; a Lei 15.410/2026 alterou medidas de proteção contra reiteração de violência doméstica na execução. Progressão, saída temporária e remição demandam módulos específicos e não são resumidas por frações universais aqui. Regras materiais de execução e alterações de frações exigem análise da data do fato e da lei mais benéfica. Não aplique retroativamente uma regra mais gravosa só porque ela aparece no texto atual.",
+          "contest": "Polícia Federal — Delegado — Edital 1/2025 atualizado",
+          "chapters": [
+            {
+              "count": 4,
+              "title": "TÍTULO I — Do Objeto e da Aplicação da Lei de Execução Penal"
+            },
+            {
+              "count": 6,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO I — Da Classificação"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção I — Disposições gerais"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção II — Da assistência material"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção III — Da assistência à saúde"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção IV — Da assistência jurídica"
+            },
+            {
+              "count": 7,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção V — Da assistência educacional"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VI — Da assistência social"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VII — Da assistência religiosa"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VIII — Da assistência ao egresso"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção I — Disposições Gerais"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção II — Do trabalho interno"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção III — Do trabalho externo"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção I — Dos Deveres"
+            },
+            {
+              "count": 6,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção II — Dos Direitos"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / Subseção I — Disposições gerais"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / Subseção II — Das faltas disciplinares"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO III — Das Sanções e das Recompensas"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO IV — Da Aplicação das Sanções"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO V — Do Procedimento Disciplinar"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO I — Disposições Gerais"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO II — Do Conselho Nacional de Política Criminal e Penitenciária"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO III — Do Juízo da Execução"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO IV — Do Ministério Público"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO V — Do Conselho Penitenciário"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção I — Do Departamento Penitenciário Nacional"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção II — Do Departamento Penitenciário Local"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção III — Da Direção e do Pessoal dos Estabelecimentos Penais"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VII — Do Patronato"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VIII — Do Conselho da Comunidade"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO IX — DA DEFENSORIA PÚBLICA (Incluído pela Lei nº 12.313, de 2010)."
+            },
+            {
+              "count": 7,
+              "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO I — Disposições Gerais"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO II — Da Penitenciária"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO III — Da Colônia Agrícola, Industrial ou Similar"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO IV — Da Casa do Albergado"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO V — Do Centro de Observação"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO VI — Do Hospital de Custódia e Tratamento Psiquiátrico"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO VII — Da Cadeia Pública"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção I — Disposições Gerais"
+            },
+            {
+              "count": 11,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção II — Dos Regimes"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção III — Das Autorizações de Saída / SUBSEÇÃO I — Da Permissão de Saída"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção III — Das Autorizações de Saída / SUBSEÇÃO II — Da Saída Temporária"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção IV — Da Remição"
+            },
+            {
+              "count": 16,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção V — Do Livramento Condicional"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção VI — Da Monitoração Eletrônica (Incluído pela Lei nº 12.258, de 2010)"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção I — Disposições Gerais"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção II — Da Prestação de Serviços à Comunidade"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção III — Da Limitação de Fim de Semana"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção IV — Da Interdição Temporária de Direitos"
+            },
+            {
+              "count": 8,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO III — Da Suspensão Condicional"
+            },
+            {
+              "count": 7,
+              "title": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO IV — Da Pena de Multa"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO VI — Da Execução das Medidas de Segurança / CAPÍTULO I — Disposições Gerais"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO VI — Da Execução das Medidas de Segurança / CAPÍTULO II — Da Cessação da Periculosidade"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO I — Das Conversões"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO II — Do Excesso ou Desvio"
+            },
+            {
+              "count": 7,
+              "title": "TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO III — Da Anistia e do Indulto"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO VIII — Do Procedimento Judicial"
+            },
+            {
+              "count": 7,
+              "title": "TÍTULO IX — Das Disposições Finais e Transitórias"
+            }
+          ],
+          "objectives": [
+            "Organizar classificação, assistência, trabalho, direitos, deveres e disciplina.",
+            "Estudar órgãos da execução, estabelecimentos e execução das espécies de pena.",
+            "Comparar regimes, progressão, regressão, saídas, remição e incidentes.",
+            "Estudar medidas de segurança, procedimento e intertemporalidade das alterações."
+          ],
+          "current_units": 215,
+          "jurisprudence": [],
+          "excluded_units": 4,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.410/2026",
+              "summary": "LEI Nº 15.410/2026",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 50",
+                "Art. 52",
+                "Art. 86"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15407.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.407/2026",
+              "summary": "Altera a Lei nº 11.671, de 8 de maio de 2008, para incluir em estabelecimentos penais federais de segurança máxima o preso, provisório ou condenado, pela prática do crime de homicídio qualificado previsto no inciso VII do § 2º do art. 121 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para dispor sobre a aplicação do regime disciplinar diferenciado, na forma que especifica.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 52",
+                "Art. 54"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15402.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.402/2026",
+              "summary": "LEI Nº 15.402/2026",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 112",
+                "Art. 126"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.358/2026",
+              "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+              "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 41-A",
+                "Art. 41-B",
+                "Art. 52",
+                "Art. 86",
+                "Art. 112"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.295/2025",
+              "summary": "LEI Nº 15.295/2025",
+              "vigency": "Art. 3º Esta Lei entra em vigor após decorridos 30 (trinta) dias de sua publicação oficial. Publicação: 22/12/2025. Entrada em vigor calculada pelo prazo legal: 21/01/2026.",
+              "articles": [
+                "Art. 9-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.280/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para agravar a pena dos crimes contra a dignidade sexual de pessoa vulnerável; o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para prever medidas protetivas de urgência a vítimas de crimes contra a dignidade sexual e em situação de especial vulnerabilidade; a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para prever a monitoração eletrônica dos condenados por crime contra a dignidade sexual; a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para estabelecer mecanismos de proteção a crianças e a adolescentes vítimas de crimes contra a dignidade sexual; e a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para assegurar assistência psicológica e social especializada às pessoas com deficiência vítimas de crimes contra a dignidade sexual e a suas famílias.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 119-A"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+              "title": "Lei 7.210/1984 — Lei de Execução Penal — texto oficial conferido",
+              "sha256": "8b95cead39cedad87abfe1d7314e2ddfef82125d22229a3b7a6ed5aba5c273d6"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm",
+              "title": "Lei 15.295/2025 — alteração do art. 9º-A da LEP",
+              "sha256": "6642779a34460af993751e7b66b44e7c7c93493b6dc089287e4f3b7390b73324"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "lep"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "source_sha256": "fff708f29f1e99c2cd87ad5babab7b8607220dc0d83ae0248a2572344ae6e549",
+      "source_checked_at": "2026-10-11T18:39:28.622733+00:00"
+    },
+    {
+      "expected": {
+        "id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+        "slug": "idosa",
+        "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+        "source_sha256": "e808a5881fc4e1ec0734fc1737bcf4d0c1707e5a0844d7b05efb3ca9e733ee57",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-idosa-revisao",
+        "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+        "overview": {
+          "intro": "A proteção começa aos sessenta anos. Discriminação, omissão de assistência, desvio de rendimentos e retenção de documentos possuem elementos próprios.",
+          "alerts": "A Lei 14.423/2022 atualizou a nomenclatura para Estatuto da Pessoa Idosa. Não conclua que o limite geral passou a sessenta e cinco anos. Penas e formas de crimes não tratados neste módulo devem ser consultadas separadamente no texto atual.",
+          "contest": "PCDF — Delegado — Edital 2026",
+          "chapters": [
+            {
+              "count": 7,
+              "title": "TÍTULO I Disposições Preliminares"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO I Do Direito à Vida"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO II — Do Direito à Liberdade, ao Respeito e à Dignidade"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO III Dos Alimentos"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO IV Do Direito à Saúde"
+            },
+            {
+              "count": 6,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO V Da Educação, Cultura, Esporte e Lazer"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VI Da Profissionalização e do Trabalho"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VII Da Previdência Social"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VIII Da Assistência Social"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO IX Da Habitação"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO X Do Transporte"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO III Das Medidas de Proteção / CAPÍTULO I Das Disposições Gerais"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO III Das Medidas de Proteção / CAPÍTULO II Das Medidas Específicas de Proteção"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO I Disposições Gerais"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO II Das Entidades de Atendimento ao Idoso"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO III Da Fiscalização das Entidades de Atendimento"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO IV Das Infrações Administrativas"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO V — Da Apuração Administrativa de Infração às Normas de Proteção à Pessoa Idosa (Redação dada pela Lei nº 14.423, de 2022)"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO VI Da Apuração Judicial de Irregularidades em Entidade de Atendimento"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO V Do Acesso à Justiça / CAPÍTULO I Disposições Gerais"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO V Do Acesso à Justiça / CAPÍTULO II Do Ministério Público"
+            },
+            {
+              "count": 15,
+              "title": "TÍTULO V Do Acesso à Justiça / CAPÍTULO III Da Proteção Judicial dos Interesses Difusos, Coletivos e Individuais Indisponíveis ou Homogêneos"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO VI Dos Crimes / CAPÍTULO I Disposições Gerais"
+            },
+            {
+              "count": 14,
+              "title": "TÍTULO VI Dos Crimes / CAPÍTULO II Dos Crimes em Espécie"
+            },
+            {
+              "count": 10,
+              "title": "TÍTULO VII Disposições Finais e Transitórias"
+            }
+          ],
+          "objectives": [
+            "Estudar direitos, prioridades, políticas e medidas de proteção.",
+            "Organizar atendimento, entidades, fiscalização e acesso à Justiça.",
+            "Comparar crimes, elementos especiais, penas e exceções."
+          ],
+          "current_units": 117,
+          "jurisprudence": [],
+          "excluded_units": 1,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15163.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.163/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para modificar as penas dos crimes de abandono de incapaz e de maus-tratos, a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa), para modificar as penas do crime de exposição a perigo da saúde e da integridade física ou psíquica da pessoa idosa, a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a fim de estabelecer penas para o crime de abandono de pessoa com deficiência que resulte em lesão corporal de natureza grave ou em morte, e a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para vedar a aplicação da Lei nº 9.099, de 26 de setembro de 1995, em caso de apreensão indevida de criança ou de adolescente.",
+              "vigency": "Art. 6º Esta Lei entra em vigor na data da sua publicação.",
+              "articles": [
+                "Art. 94",
+                "Art. 99"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+              "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa — texto oficial conferido",
+              "sha256": "e808a5881fc4e1ec0734fc1737bcf4d0c1707e5a0844d7b05efb3ca9e733ee57"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "idosa"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+      "source_sha256": "bbddf3d14cc4877d4f62341acf29efdaef9010cd45c8760a7e75040237cd4ea5",
+      "source_checked_at": "2026-10-11T18:39:29.554167+00:00"
+    },
+    {
+      "expected": {
+        "id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+        "slug": "contravencoes",
+        "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "source_sha256": "9210d2f83f90e6aa1ed2403fe963a916ec589c3963548ce0fa3db3751cd3c7da",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-contravencoes-revisao",
+        "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+        "overview": {
+          "intro": "Contravenção é uma espécie de infração penal com regras próprias. Compare território, tentativa e espécies de pena com o regime dos crimes.",
+          "alerts": "As regras gerais indicadas foram conferidas no texto atual. Alguns tipos da parte especial foram revogados ou substituídos ao longo do tempo; o módulo não republica contravenções antigas nem valida todo o catálogo original de 1941.",
+          "contest": "PCDF — Delegado — Edital 2026",
+          "chapters": [
+            {
+              "count": 17,
+              "title": "Disposições iniciais"
+            },
+            {
+              "count": 9,
+              "title": "CAPÍTULO I — DAS CONTRAVENÇÕES REFERENTES À PESSOA"
+            },
+            {
+              "count": 11,
+              "title": "CAPÍTULO III — DAS CONTRAVENÇÕES REFERENTES À INCOLUMIDADE PÚBLICA"
+            },
+            {
+              "count": 3,
+              "title": "CAPíTULO IV — DAS CONTRAVENÇÕES REFERENTES À PAZ PÚBLICA"
+            },
+            {
+              "count": 4,
+              "title": "CAPÍTULO V — DAS CONTRAVENÇÕES REFERENTES À FÉ PÚBLICA"
+            },
+            {
+              "count": 3,
+              "title": "CAPÍTULO VI — DAS CONTRAVENÇÕES RELATIVAS À ORGANIZAÇÃO DO TRABALHO"
+            },
+            {
+              "count": 13,
+              "title": "CAPÍTULO VII — DAS CONTRAVENÇÕES RELATIVAS À POLÍCIA DE COSTUMES"
+            },
+            {
+              "count": 6,
+              "title": "CAPÍTULO VIII — DAS CONTRAVENÇÕES REFERENTES À ADMINISTRAÇÃO PÚBLICA"
+            }
+          ],
+          "objectives": [
+            "Separar regras gerais, territorialidade, tentativa e prisão simples.",
+            "Comparar todas as contravenções com redação ativa e seus elementos.",
+            "Identificar tipos revogados e diferenças frente aos crimes de legislação posterior."
+          ],
+          "current_units": 66,
+          "jurisprudence": [],
+          "excluded_units": 6,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+              "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais — texto oficial conferido",
+              "sha256": "9210d2f83f90e6aa1ed2403fe963a916ec589c3963548ce0fa3db3751cd3c7da"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "contravencoes"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+      "source_sha256": "117cc3fea572b8ddc50eef709ffd63672a4944102afbf4f46d11680e44b5b032",
+      "source_checked_at": "2026-10-11T18:39:29.583665+00:00"
+    },
+    {
+      "expected": {
+        "id": "67393f02-bb51-583c-b431-803ebb72386f",
+        "slug": "eca",
+        "title": "Lei 8.069/1990 — Estatuto da Criança e do Adolescente",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+        "source_sha256": "312a7f59594107e6480bd26e0d30e1884f081c8563b33c51b05c3622bdb6f56c",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-eca-revisao",
+        "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+        "overview": {
+          "intro": "Idade, natureza da conduta e garantias da apreensão orientam o estudo do ato infracional. Medida socioeducativa não equivale a pena criminal aplicada ao adulto.",
+          "alerts": "A Lei 15.487/2026 alterou a proteção contra violência sexual, inclusive digital, e inseriu o art. 190-F sobre ronda virtual em ambientes públicos. Esse regime não deve ser confundido com infiltração online ou interceptação. Os exercícios deste módulo concentram-se no ato infracional e nas garantias indicadas. A Lei 15.450/2026, publicada em 01/07/2026, tem vacatio de 180 dias: seu acréscimo sobre psicofármacos no art. 14 não é ensinado como regra já vigente nesta conferência.",
+          "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+          "chapters": [
+            {
+              "count": 6,
+              "title": "Título I — Das Disposições Preliminares"
+            },
+            {
+              "count": 11,
+              "title": "Título II — Dos Direitos Fundamentais / Capítulo I — Do Direito à Vida e à Saúde"
+            },
+            {
+              "count": 6,
+              "title": "Título II — Dos Direitos Fundamentais / Capítulo II — Do Direito à Liberdade, ao Respeito e à Dignidade"
+            },
+            {
+              "count": 8,
+              "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção I — Disposições Gerais"
+            },
+            {
+              "count": 3,
+              "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção II — Da Família Natural"
+            },
+            {
+              "count": 5,
+              "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção I — Disposições Gerais"
+            },
+            {
+              "count": 2,
+              "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção II — Da Guarda"
+            },
+            {
+              "count": 3,
+              "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção III — Da Tutela"
+            },
+            {
+              "count": 18,
+              "title": "Título II — Dos Direitos Fundamentais / Capítulo III — Do Direito à Convivência Familiar e Comunitária / Seção III — Da Família Substituta / Subseção IV — Da Adoção"
+            },
+            {
+              "count": 9,
+              "title": "Título II — Dos Direitos Fundamentais / Capítulo IV — Do Direito à Educação, à Cultura, ao Esporte e ao Lazer"
+            },
+            {
+              "count": 10,
+              "title": "Título II — Dos Direitos Fundamentais / Capítulo V — Do Direito à Profissionalização e à Proteção no Trabalho"
+            },
+            {
+              "count": 6,
+              "title": "Título III — Da Prevenção / Capítulo I — Disposições Gerais"
+            },
+            {
+              "count": 7,
+              "title": "Título III — Da Prevenção / Capítulo II — Da Prevenção Especial / Seção I — Da informação, Cultura, Lazer, Esportes, Diversões e Espetáculos"
+            },
+            {
+              "count": 2,
+              "title": "Título III — Da Prevenção / Capítulo II — Da Prevenção Especial / Seção II — Dos Produtos e Serviços"
+            },
+            {
+              "count": 3,
+              "title": "Título III — Da Prevenção / Capítulo II — Da Prevenção Especial / Seção III — Da Autorização para Viajar"
+            },
+            {
+              "count": 5,
+              "title": "Título I — Da Política de Atendimento / Capítulo I — Disposições Gerais"
+            },
+            {
+              "count": 6,
+              "title": "Título I — Da Política de Atendimento / Capítulo II — Das Entidades de Atendimento / Seção I — Disposições Gerais"
+            },
+            {
+              "count": 3,
+              "title": "Título I — Da Política de Atendimento / Capítulo II — Das Entidades de Atendimento / Seção II — Da Fiscalização das Entidades"
+            },
+            {
+              "count": 1,
+              "title": "Título II — Das Medidas de Proteção / Capítulo I — Disposições Gerais"
+            },
+            {
+              "count": 4,
+              "title": "Título II — Das Medidas de Proteção / Capítulo II — Das Medidas Específicas de Proteção"
+            },
+            {
+              "count": 3,
+              "title": "Título III — Da Prática de Ato Infracional / Capítulo I — Disposições Gerais"
+            },
+            {
+              "count": 4,
+              "title": "Título III — Da Prática de Ato Infracional / Capítulo II — Dos Direitos Individuais"
+            },
+            {
+              "count": 2,
+              "title": "Título III — Da Prática de Ato Infracional / Capítulo III — Das Garantias Processuais"
+            },
+            {
+              "count": 3,
+              "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção I — Disposições Gerais"
+            },
+            {
+              "count": 1,
+              "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção II — Da Advertência"
+            },
+            {
+              "count": 1,
+              "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção III — Da Obrigação de Reparar o Dano"
+            },
+            {
+              "count": 1,
+              "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção IV — Da Prestação de Serviços à Comunidade"
+            },
+            {
+              "count": 2,
+              "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção V — Da Liberdade Assistida"
+            },
+            {
+              "count": 1,
+              "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção VI — Do Regime de Semi-liberdade"
+            },
+            {
+              "count": 5,
+              "title": "Título III — Da Prática de Ato Infracional / Capítulo IV — Das Medidas Sócio-Educativas / Seção VII — Da Internação"
+            },
+            {
+              "count": 3,
+              "title": "Título III — Da Prática de Ato Infracional / Capítulo V — Da Remissão"
+            },
+            {
+              "count": 2,
+              "title": "Título IV — Das Medidas Pertinentes aos Pais ou Responsável"
+            },
+            {
+              "count": 5,
+              "title": "Título V — Do Conselho Tutelar / Capítulo I — Disposições Gerais"
+            },
+            {
+              "count": 2,
+              "title": "Título V — Do Conselho Tutelar / Capítulo II — Das Atribuições do Conselho"
+            },
+            {
+              "count": 1,
+              "title": "Título V — Do Conselho Tutelar / Capítulo III — Da Competência"
+            },
+            {
+              "count": 1,
+              "title": "Título V — Do Conselho Tutelar / Capítulo IV — Da Escolha dos Conselheiros"
+            },
+            {
+              "count": 1,
+              "title": "Título V — Do Conselho Tutelar / Capítulo V — Dos Impedimentos"
+            },
+            {
+              "count": 4,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo I — Disposições Gerais"
+            },
+            {
+              "count": 1,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo II — Da Justiça da Infância e da Juventude / Seção I — Disposições Gerais"
+            },
+            {
+              "count": 4,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo II — Da Justiça da Infância e da Juventude / Seção II — Do Juiz"
+            },
+            {
+              "count": 2,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo II — Da Justiça da Infância e da Juventude / Seção III — Dos Serviços Auxiliares"
+            },
+            {
+              "count": 3,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção I — Disposições Gerais"
+            },
+            {
+              "count": 9,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção II — Da Perda e da Suspensão do Poder Familiar (Expressão substituída pela Lei nº 12.010, de 2009) Vigência"
+            },
+            {
+              "count": 1,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção III — Da Destituição da Tutela"
+            },
+            {
+              "count": 6,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção IV — Da Colocação em Família Substituta"
+            },
+            {
+              "count": 20,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção V — Da Apuração de Ato Infracional Atribuído a Adolescente"
+            },
+            {
+              "count": 6,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção V-A (Incluído pela Lei nº 13.441, de 2017) — Da Infiltração de Agentes de Polícia para a Investigação de Crimes contra a Dignidade Sexual de Criança e de Adolescente”"
+            },
+            {
+              "count": 3,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção VI — Da Apuração de Irregularidades em Entidade de Atendimento"
+            },
+            {
+              "count": 4,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção VII — Da Apuração de Infração Administrativa às Normas de Proteção à Criança e ao Adolescente"
+            },
+            {
+              "count": 6,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo III — Dos Procedimentos / Seção VIII (Incluída pela Lei nº 12.010, de 2009) Vigência Da Habilitação de Pretendentes à Adoção"
+            },
+            {
+              "count": 7,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo IV — Dos Recursos"
+            },
+            {
+              "count": 6,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo V — Do Ministério Público"
+            },
+            {
+              "count": 2,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo VI — Do Advogado"
+            },
+            {
+              "count": 17,
+              "title": "Título VI — Do Acesso à Justiça / Capítulo VII — Da Proteção Judicial dos Interesses Individuais, Difusos e Coletivos"
+            },
+            {
+              "count": 7,
+              "title": "Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo I — Dos Crimes / Seção I — Disposições Gerais"
+            },
+            {
+              "count": 24,
+              "title": "Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo I — Dos Crimes / Seção II — Dos Crimes em Espécie"
+            },
+            {
+              "count": 38,
+              "title": "Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo II — Das Infrações Administrativas"
+            }
+          ],
+          "objectives": [
+            "Estudar disposições gerais e todos os direitos fundamentais da criança e do adolescente.",
+            "Organizar prevenção, política de atendimento, entidades e medidas de proteção.",
+            "Distinguir ato infracional, garantias e cada medida socioeducativa.",
+            "Estudar Conselho Tutelar, acesso à Justiça, procedimentos, crimes e infrações administrativas.",
+            "Separar atualizações digitais, direitos da vítima e dispositivos com vigência futura."
+          ],
+          "current_units": 326,
+          "jurisprudence": [
+            {
+              "url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=185&l=100&operador=AND&ordenacao=-%40NUM&p=false&tipo=SUMULA+OR+SU",
+              "title": "STJ — Súmula 492, ato infracional e internação",
+              "articles": [
+                "Art. 121",
+                "Art. 122"
+              ],
+              "explanation": "Ato infracional análogo ao tráfico, isoladamente, não impõe internação obrigatória. A medida exige análise dos requisitos próprios do ECA; não se transfere automaticamente o tratamento penal de adultos ao adolescente."
+            }
+          ],
+          "excluded_units": 3,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15512.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.512/2026",
+              "summary": "Dispõe sobre princípios e diretrizes para a formulação e a implementação de políticas públicas para a efetivação, com absoluta prioridade, do direito da criança e do adolescente à natureza; e altera a Lei nº 6.938, de 31 de agosto de 1981, a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), e a Lei nº 12.187, de 29 de dezembro de 2009.",
+              "vigency": "Art. 35. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 4"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.487/2026",
+              "summary": "Institui medidas de enfrentamento e repressão ao crime de violência sexual contra criança ou adolescente, inclusive no ambiente digital e com uso de inteligência artificial; e altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), e a Lei nº 12.850, de 2 de agosto de 2013 (Lei de Combate ao Crime Organizado), para recrudescer o tratamento penal aos criminosos sexuais.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 190-A",
+                "Art. 190-C",
+                "Art. 190-F",
+                "Art. 226-A",
+                "Art. 227-B",
+                "Art. 227-C",
+                "Art. 240",
+                "Art. 241",
+                "Art. 241-A",
+                "Art. 241-B",
+                "Art. 241-C",
+                "Art. 241-D",
+                "Art. 241-E",
+                "Art. 244-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15450.htm",
+              "state": "future",
+              "title": "LEI Nº 15.450/2026",
+              "summary": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para instituir medida destinada à prevenção do uso inadequado de psicofármacos em crianças e adolescentes.",
+              "vigency": "Art. 2º Esta Lei entra em vigor após decorridos 180 (cento e oitenta) dias de sua publicação oficial. Publicação: 01/07/2026. Entrada em vigor calculada pelo prazo legal: 28/12/2026.",
+              "articles": []
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15426.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.426/2026",
+              "summary": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para dispor sobre os Conselhos dos Direitos da Criança e do Adolescente nacional, estaduais, distrital e municipais.",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 89",
+                "Art. 89-A",
+                "Art. 260-I"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15413.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.413/2026",
+              "summary": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para dispor sobre o direito da criança e do adolescente à saúde mental.",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 11-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.280/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para agravar a pena dos crimes contra a dignidade sexual de pessoa vulnerável; o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para prever medidas protetivas de urgência a vítimas de crimes contra a dignidade sexual e em situação de especial vulnerabilidade; a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para prever a monitoração eletrônica dos condenados por crime contra a dignidade sexual; a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para estabelecer mecanismos de proteção a crianças e a adolescentes vítimas de crimes contra a dignidade sexual; e a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para assegurar assistência psicológica e social especializada às pessoas com deficiência vítimas de crimes contra a dignidade sexual e a suas famílias.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 70-A",
+                "Art. 101"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15268.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.268/2025",
+              "summary": "Altera a alínea “a” do inciso III do caput do art. 136 da Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para substituir a expressão “serviço social” por “assistência social”.",
+              "vigency": "Art. 2º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 136"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15243.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.243/2025",
+              "summary": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para garantir assistência integral e multiprofissional à criança e ao adolescente dependentes químicos e/ou com problemas decorrentes do uso de drogas.",
+              "vigency": "Art. 2º Esta Lei entra em vigor após decorridos 120 (cento e vinte) dias de sua publicação oficial. Publicação: 29/10/2025. Entrada em vigor calculada pelo prazo legal: 26/02/2026.",
+              "articles": [
+                "Art. 14-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15240.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.240/2025",
+              "summary": "LEI Nº 15.240/2025",
+              "vigency": "Art. 2º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 4",
+                "Art. 5",
+                "Art. 22",
+                "Art. 56",
+                "Art. 58",
+                "Art. 129",
+                "Art. 130"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15234.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.234/2025",
+              "summary": "LEI Nº 15.234/2025",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 243"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15163.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.163/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para modificar as penas dos crimes de abandono de incapaz e de maus-tratos, a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa), para modificar as penas do crime de exposição a perigo da saúde e da integridade física ou psíquica da pessoa idosa, a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a fim de estabelecer penas para o crime de abandono de pessoa com deficiência que resulte em lesão corporal de natureza grave ou em morte, e a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para vedar a aplicação da Lei nº 9.099, de 26 de setembro de 1995, em caso de apreensão indevida de criança ou de adolescente.",
+              "vigency": "Art. 6º Esta Lei entra em vigor na data da sua publicação.",
+              "articles": [
+                "Art. 230"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+              "title": "Lei 8.069/1990 — Estatuto da Criança e do Adolescente — texto oficial conferido",
+              "sha256": "312a7f59594107e6480bd26e0d30e1884f081c8563b33c51b05c3622bdb6f56c"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+              "title": "Lei 15.487/2026 — proteção contra violência sexual e ambiente digital",
+              "sha256": "1adce1f1d6c4a2c53180c26b64f8c6f65d0146f1d3e8ac855b495c821e3c2d73"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "eca"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+      "source_sha256": "b43295cb76828f625682bd4b142739269747189b3065725ba6402951b9dc6e0e",
+      "source_checked_at": "2026-10-11T18:39:33.277470+00:00"
+    },
+    {
+      "expected": {
+        "id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+        "slug": "ric",
+        "title": "Lei 9.454/1997 — Registro de Identidade Civil",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+        "source_sha256": "19fa04063b8a22c80114b0c629f96968cba39263111dc61171d6959598bc4e3d",
+        "checked_at": "2026-10-10T03:26:45.530718+00:00",
+        "material_slug": "legislacao-ric-revisao",
+        "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+        "overview": {
+          "intro": "Estude a instituição do número único, o cadastro nacional, a coordenação e a atualização para CPF. RIC, ICN e CIN são conceitos relacionados, mas correspondem a diplomas e funções diferentes.",
+          "alerts": "A Lei 14.534/2023 incluiu o CPF nos documentos novos. O art. 6º, que previa perda de validade geral em cinco anos, foi revogado em 2009. A página do Planalto conserva no art. 3º uma redação antiga do § 2º ao lado da redação de 2009; use a versão com remissão à Lei 12.058. O art. 5º contém prazos de implementação da lei de 1997: não reiniciam a cada documento emitido.",
+          "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+          "chapters": [
+            {
+              "count": 7,
+              "title": "Disposições iniciais"
+            }
+          ],
+          "objectives": [
+            "Número e destinatários: Identificação de cidadão brasileiro nato ou naturalizado nas relações previstas no art. 1º.",
+            "CPF nos documentos novos: O art. 1º, §§ 2º e 3º adota o CPF e o qualifica como único e definitivo.",
+            "Cadastro e governança: Arts. 2º a 4º: cadastro, órgão central definido pelo Executivo, convênios e previsão orçamentária.",
+            "Histórico e edital: Lei 12.058/2009 alterou a organização e revogou o art. 6º. Edital 2/PF/2025 corrigiu 9.545 para 9.454."
+          ],
+          "current_units": 7,
+          "jurisprudence": [],
+          "excluded_units": 1,
+          "editorial_scope": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital. Casos aplicados cobrem os conceitos indicados, sem promessa de todos os incisos."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T03:30:22.659+00:00",
+        "legal_review": {
+          "scope": "Texto compilado oficial conferido em 10/10/2026; guia autoral vinculado ao programa PF Agente 2025. Atualizações posteriores são identificadas separadamente, sem alterar a data de corte do edital.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+              "state": "effective",
+              "title": "Lei 14.534/2023 — CPF no registro único",
+              "summary": "Documentos novos usam o CPF; o número é único e definitivo. Não significa que todas as carteiras anteriores perderam validade automaticamente.",
+              "vigency": "Publicação em 12/01/2023; confira os prazos de adequação dos sistemas na norma alteradora.",
+              "articles": [
+                "Art. 1º, §§ 2º e 3º"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+              "state": "effective",
+              "title": "Lei 12.058/2009 — organização do cadastro e revogação",
+              "summary": "Alterou cadastro e coordenação e revogou a regra de invalidação geral em cinco anos. O texto antigo do § 2º do art. 3º não deve ser memorizado como versão atual.",
+              "vigency": "Redações alteradas e revogações assinaladas na compilação oficial.",
+              "articles": [
+                "Arts. 1º a 3º",
+                "Art. 6º revogado"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+              "title": "Lei 9.454/1997 — Registro de Identidade Civil",
+              "sha256": "19fa04063b8a22c80114b0c629f96968cba39263111dc61171d6959598bc4e3d"
+            }
+          ],
+          "checked_at": "2026-10-10T03:26:45.530718+00:00",
+          "corrections": [
+            "Inclusão de diploma ausente com guia, leitura por dispositivos e prática autoral."
+          ],
+          "course_slug": "ric"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "source_sha256": "f9ba0a13573f7a7664da260c432a221ea44d938da9a9df47dc86062addc31bba",
+      "source_checked_at": "2026-10-11T18:39:32.184912+00:00"
+    },
+    {
+      "expected": {
+        "id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+        "slug": "lavagem",
+        "title": "Lei 9.613/1998 — Lavagem de Dinheiro",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+        "source_sha256": "a2e378a41fe90c79443008102f732801e90defcf9d1ef6ad05a39bbf4544e020",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-lavagem-revisao",
+        "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+        "overview": {
+          "intro": "Lavagem envolve ocultar ou dissimular bens, direitos ou valores provenientes de infração penal. A autonomia do processo não dispensa indícios da origem ilícita.",
+          "alerts": "A Lei 12.683/2012 eliminou a lista fechada de antecedentes e adotou infração penal. O texto também registra alterações posteriores, inclusive medidas da Lei 15.358/2026. Este módulo não esgota obrigações de comunicação e regras administrativas do sistema de prevenção.",
+          "contest": "PCDF — Delegado — Edital 2026",
+          "chapters": [
+            {
+              "count": 1,
+              "title": "CAPÍTULO I — Dos Crimes de \"Lavagem\" ou Ocultação de Bens, Direitos e Valores"
+            },
+            {
+              "count": 6,
+              "title": "CAPÍTULO II — Disposições Processuais Especiais"
+            },
+            {
+              "count": 1,
+              "title": "CAPÍTULO III — Dos Efeitos da Condenação"
+            },
+            {
+              "count": 1,
+              "title": "CAPÍTULO IV — Dos Bens, Direitos ou Valores Oriundos de Crimes Praticados no Estrangeiro"
+            },
+            {
+              "count": 1,
+              "title": "CAPÍTULO V (Redação dada pela Lei nº 12.683, de 2012) — DAS PESSOAS SUJEITAS AO MECANISMO DE CONTROLE (Redação dada pela Lei nº 12.683, de 2012)"
+            },
+            {
+              "count": 2,
+              "title": "CAPÍTULO VI — Da Identificação dos Clientes e Manutenção de Registros"
+            },
+            {
+              "count": 2,
+              "title": "CAPÍTULO VII — Da Comunicação de Operações Financeiras"
+            },
+            {
+              "count": 2,
+              "title": "CAPÍTULO VIII — Da Responsabilidade Administrativa"
+            },
+            {
+              "count": 3,
+              "title": "CAPÍTULO IX — Do Conselho de Controle de Atividades Financeiras"
+            },
+            {
+              "count": 6,
+              "title": "CAPÍTULO X (Incluído pela Lei nº 12.683, de 2012) — DISPOSIÇÕES GERAIS (Incluído pela Lei nº 12.683, de 2012)"
+            }
+          ],
+          "objectives": [
+            "Estudar condutas, infração antecedente, penas e hipóteses especiais.",
+            "Comparar autonomia processual, competência, medidas patrimoniais e destinação.",
+            "Organizar deveres de identificação, registro, comunicação, fiscalização e COAF."
+          ],
+          "current_units": 25,
+          "jurisprudence": [],
+          "excluded_units": 4,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.358/2026",
+              "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+              "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 4-A",
+                "Art. 7"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+              "title": "Lei 9.613/1998 — Lavagem de Dinheiro — texto oficial conferido",
+              "sha256": "a2e378a41fe90c79443008102f732801e90defcf9d1ef6ad05a39bbf4544e020"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "lavagem"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "source_sha256": "c73ac4ccad1d9a771934f78c127a4562d93918d16b5ec0413d6fce16d31e4f3a",
+      "source_checked_at": "2026-10-11T18:39:34.504923+00:00"
+    }
+  ],
+  "changes": [
+    {
+      "course_slug": "cin",
+      "expected": {
+        "id": "5ccda841-a85b-5821-9d90-6e9f454d5ef2",
+        "course_id": "01439ef7-5c42-5de3-a83a-cda0ad2d3cd8",
+        "unit_key": "art-17",
+        "label": "Art. 17",
+        "chapter": "Disposições iniciais",
+        "position": 16,
+        "body_text": "Art. 17. O português beneficiado pelo disposto no § 1º do art. 12 da Constituição que perder essa condição e o brasileiro que perder a nacionalidade conforme o disposto no § 4º do art. 12 da Constituição terão a Carteira de Identidade recolhida pela Polícia Federal e encaminhada ao órgão expedidor para cancelamento.\n\nCompetência da CEFIC\n\nRevogado pelo Decreto nº 11.797, de 2023\n\nCompetências dos Estados e do Distrito Federal",
+        "content_sha256": "05842904b16347a78ff4df2fab7e1f8859a5762694d119b34ce89662b82f4d81",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 17. O português beneficiado pelo disposto no § 1º do art. 12 da Constituição que perder essa condição e o brasileiro que perder a nacionalidade conforme o disposto no § 4º do art. 12 da Constituição terão a Carteira de Identidade recolhida pela Polícia Federal e encaminhada ao órgão expedidor para cancelamento.\n\nCompetência da CEFIC",
+      "content_sha256": "54784fefeea4bc8a4a981f179eac8930f784970a9870fdc97a806a22f4c124df"
+    },
+    {
+      "course_slug": "lep",
+      "expected": {
+        "id": "c65ddc4f-4ae2-5616-a777-735ddeb07a06",
+        "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+        "unit_key": "art-123",
+        "label": "Art. 123",
+        "chapter": "TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção III — Das Autorizações de Saída / SUBSEÇÃO II — Da Saída Temporária",
+        "position": 132,
+        "body_text": "Art. 123. A autorização será concedida por ato motivado do Juiz da execução, ouvidos o Ministério Público e a administração penitenciária e dependerá da satisfação dos seguintes requisitos:\n\nI - comportamento adequado;\n\nII - cumprimento mínimo de 1/6 (um sexto) da pena, se o condenado for primário, e 1/4 (um quarto), se reincidente;\n\nIII - compatibilidade do benefício com os objetivos da pena.\n\n(Revogado pela Lei nº 14.843, de 2024)\n\n(Revogado pela Lei nº 14.843, de 2024)\n\n(Revogado pela Lei nº 14.843, de 2024)\n\n(Revogado pela Lei nº 14.843, de 2024)\n\n(Revogado pela Lei nº 14.843, de 2024)\n\n(Revogado pela Lei nº 14.843, de 2024)\n\n(Revogado pela Lei nº 14.843, de 2024)\n\n(Revogado pela Lei nº 14.843, de 2024)",
+        "content_sha256": "652569e7902be4d9167b95a52948486cdf2bb1e57a4d689807d31e94e3789339",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 123. A autorização será concedida por ato motivado do Juiz da execução, ouvidos o Ministério Público e a administração penitenciária e dependerá da satisfação dos seguintes requisitos:\n\nI - comportamento adequado;\n\nII - cumprimento mínimo de 1/6 (um sexto) da pena, se o condenado for primário, e 1/4 (um quarto), se reincidente;\n\nIII - compatibilidade do benefício com os objetivos da pena.",
+      "content_sha256": "5055c0af6b2c81cee15ef2364bf993c8a3e80808bef7c92a957147e7da9f86ea"
+    },
+    {
+      "course_slug": "idosa",
+      "expected": {
+        "id": "716ceda9-7018-5352-976f-9fd91d578ff6",
+        "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+        "unit_key": "art-50",
+        "label": "Art. 50",
+        "chapter": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO II Das Entidades de Atendimento ao Idoso",
+        "position": 49,
+        "body_text": "Art. 50. Constituem obrigações das entidades de atendimento:\n\nI – celebrar contrato escrito de prestação de serviço com a pessoa idosa, especificando o tipo de atendimento, as obrigações da entidade e prestações decorrentes do contrato, com os respectivos preços, se for o caso; (Redação dada pela Lei nº 14.423, de 2022)\n\nII – observar os direitos e as garantias de que são titulares as pessoas idosas; (Redação dada pela Lei nº 14.423, de 2022)\n\nIII – fornecer vestuário adequado, se for pública, e alimentação suficiente;\n\nIV – oferecer instalações físicas em condições adequadas de habitabilidade;\n\nV – oferecer atendimento personalizado;\n\nVI – diligenciar no sentido da preservação dos vínculos familiares;\n\nVII – oferecer acomodações apropriadas para recebimento de visitas;\n\nVIII – proporcionar cuidados à saúde, conforme a necessidade da pessoa idosa; (Redação dada pela Lei nº 14.423, de 2022)\n\nIX – promover atividades educacionais, esportivas, culturais e de lazer;\n\nX – propiciar assistência religiosa àqueles que desejarem, de acordo com suas crenças;\n\nXI – proceder a estudo social e pessoal de cada caso;\n\nXII – comunicar à autoridade competente de saúde toda ocorrência de pessoa idosa com doenças infectocontagiosas; (Redação dada pela Lei nº 14.423, de 2022)\n\nXIII – providenciar ou solicitar que o Ministério Público requisite os documentos necessários ao exercício da cidadania àqueles que não os tiverem, na forma da lei;\n\nXIV – fornecer comprovante de depósito dos bens móveis que receberem das pessoas idosas; (Redação dada pela Lei nº 14.423, de 2022)\n\nXV – manter arquivo de anotações no qual constem data e circunstâncias do atendimento, nome da pessoa idosa, responsável, parentes, endereços, cidade, relação de seus pertences, bem como o valor de contribuições, e suas alterações, se houver, e demais dados que possibilitem sua identificação e a individualização do atendimento; (Redação dada pela Lei nº 14.423, de 2022)\n\nXVI – comunicar ao Ministério Público, para as providências cabíveis, a situação de abandono moral ou material por parte dos familiares;\n\nXVII – manter no quadro de pessoal profissionais com formação específica.\n\ngratuita.",
+        "content_sha256": "924213dc7e8d5173d3b34d4d35fa4e913a0ecb17277aa4a5aa6bd0ecd2d1c1b3",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 50. Constituem obrigações das entidades de atendimento:\n\nI – celebrar contrato escrito de prestação de serviço com a pessoa idosa, especificando o tipo de atendimento, as obrigações da entidade e prestações decorrentes do contrato, com os respectivos preços, se for o caso; (Redação dada pela Lei nº 14.423, de 2022)\n\nII – observar os direitos e as garantias de que são titulares as pessoas idosas; (Redação dada pela Lei nº 14.423, de 2022)\n\nIII – fornecer vestuário adequado, se for pública, e alimentação suficiente;\n\nIV – oferecer instalações físicas em condições adequadas de habitabilidade;\n\nV – oferecer atendimento personalizado;\n\nVI – diligenciar no sentido da preservação dos vínculos familiares;\n\nVII – oferecer acomodações apropriadas para recebimento de visitas;\n\nVIII – proporcionar cuidados à saúde, conforme a necessidade da pessoa idosa; (Redação dada pela Lei nº 14.423, de 2022)\n\nIX – promover atividades educacionais, esportivas, culturais e de lazer;\n\nX – propiciar assistência religiosa àqueles que desejarem, de acordo com suas crenças;\n\nXI – proceder a estudo social e pessoal de cada caso;\n\nXII – comunicar à autoridade competente de saúde toda ocorrência de pessoa idosa com doenças infectocontagiosas; (Redação dada pela Lei nº 14.423, de 2022)\n\nXIII – providenciar ou solicitar que o Ministério Público requisite os documentos necessários ao exercício da cidadania àqueles que não os tiverem, na forma da lei;\n\nXIV – fornecer comprovante de depósito dos bens móveis que receberem das pessoas idosas; (Redação dada pela Lei nº 14.423, de 2022)\n\nXV – manter arquivo de anotações no qual constem data e circunstâncias do atendimento, nome da pessoa idosa, responsável, parentes, endereços, cidade, relação de seus pertences, bem como o valor de contribuições, e suas alterações, se houver, e demais dados que possibilitem sua identificação e a individualização do atendimento; (Redação dada pela Lei nº 14.423, de 2022)\n\nXVI – comunicar ao Ministério Público, para as providências cabíveis, a situação de abandono moral ou material por parte dos familiares;\n\nXVII – manter no quadro de pessoal profissionais com formação específica.",
+      "content_sha256": "99c991088be31d956857a7c0f0a39924f8270c4abc65ba1a55c1dd0c6580ef7f"
+    },
+    {
+      "course_slug": "idosa",
+      "expected": {
+        "id": "debda221-c294-5085-a94d-b7b59f7d9377",
+        "course_id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+        "unit_key": "art-100",
+        "label": "Art. 100",
+        "chapter": "TÍTULO VI Dos Crimes / CAPÍTULO II Dos Crimes em Espécie",
+        "position": 99,
+        "body_text": "Art. 100. Constitui crime punível com reclusão de 6 (seis) meses a 1 (um) ano e multa:\n\nI – obstar o acesso de alguém a qualquer cargo público por motivo de idade;\n\nII – negar a alguém, por motivo de idade, emprego ou trabalho;\n\nIII – recusar, retardar ou dificultar atendimento ou deixar de prestar assistência à saúde, sem justa causa, a pessoa idosa;\n\nIV – deixar de cumprir, retardar ou frustrar, sem justo motivo, a execução de ordem judicial expedida na ação civil a que alude esta Lei;\n\nV – recusar, retardar ou omitir dados técnicos indispensáveis à propositura da ação civil objeto desta Lei, quando requisitados pelo Ministério Público.\n\ne cumprir, retardar ou frustrar, sem justo motivo, a execução de ordem judicial expedida nas ações em que for parte ou interveniente o idoso:",
+        "content_sha256": "06cc5740f2c82a7d37f97c2e6fb6d51c2f84323c12bf15634caaedb604b3bbe2",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 100. Constitui crime punível com reclusão de 6 (seis) meses a 1 (um) ano e multa:\n\nI – obstar o acesso de alguém a qualquer cargo público por motivo de idade;\n\nII – negar a alguém, por motivo de idade, emprego ou trabalho;\n\nIII – recusar, retardar ou dificultar atendimento ou deixar de prestar assistência à saúde, sem justa causa, a pessoa idosa;\n\nIV – deixar de cumprir, retardar ou frustrar, sem justo motivo, a execução de ordem judicial expedida na ação civil a que alude esta Lei;\n\nV – recusar, retardar ou omitir dados técnicos indispensáveis à propositura da ação civil objeto desta Lei, quando requisitados pelo Ministério Público.",
+      "content_sha256": "7568eb98fefbbf0cf607724b10d30c20a58623a2951befd4ec61e30e8173a57c"
+    },
+    {
+      "course_slug": "contravencoes",
+      "expected": {
+        "id": "618ae013-1ed6-5fa7-bc46-c16094b664b5",
+        "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+        "unit_key": "art-26",
+        "label": "Art. 26",
+        "chapter": "CAPÍTULO I — DAS CONTRAVENÇÕES REFERENTES À PESSOA",
+        "position": 25,
+        "body_text": "Art. 26. Abrir alguem, no exercício de profissão de serralheiro ou oficio análogo, a pedido ou por incumbência de pessoa de cuja legitimidade não se tenha certificado previamente, fechadura ou qualquer outro aparelho destinado à defesa de lugar nu objeto:\n\nPena – prisão simples, de quinze dias a três meses, ou multa, de duzentos mil réis a um conto de réis.\n\nExploração da credulidade pública\n\n(Revogado pela Lei nº 9.521, de 27.11.1997)\n\n(Revogado pela Lei nº 9.521, de 27.11.1997)\n\nDisparo de arma de fogo",
+        "content_sha256": "c15c9e942cbf306c79cc32edab99c9301aa99a42037c1b8ca429337cdf79355f",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 26. Abrir alguem, no exercício de profissão de serralheiro ou oficio análogo, a pedido ou por incumbência de pessoa de cuja legitimidade não se tenha certificado previamente, fechadura ou qualquer outro aparelho destinado à defesa de lugar nu objeto:\n\nPena – prisão simples, de quinze dias a três meses, ou multa, de duzentos mil réis a um conto de réis.\n\nExploração da credulidade pública",
+      "content_sha256": "7e9ea640d35ef3731ed23adcd9a9ec21adc3ee713d61c0a21fa8276f03e18a40"
+    },
+    {
+      "course_slug": "contravencoes",
+      "expected": {
+        "id": "93281adb-7fff-54de-8cad-132f909d123a",
+        "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+        "unit_key": "art-68",
+        "label": "Art. 68",
+        "chapter": "CAPÍTULO VIII — DAS CONTRAVENÇÕES REFERENTES À ADMINISTRAÇÃO PÚBLICA",
+        "position": 62,
+        "body_text": "Art. 68. Recusar à autoridade, quando por esta, justificadamente solicitados ou exigidos, dados ou indicações concernentes à própria identidade, estado, profissão, domicílio e residência:\n\nPena – multa, de duzentos mil réis a dois contos de réis.\n\nParágrafo único. Incorre na pena de prisão simples, de um a seis meses, e multa, de duzentos mil réis a dois contos de réis, se o fato não constitue infração penal mais grave, quem, nas mesmas circunstâncias, f'az declarações inverídicas a respeito de sua identidade pessoal, estado, profissão, domicílio e residência.\n\nProibição de atividade remunerada a estrangeiro\n\n(Revogado pela Lei nº 6.815, de 19.8.1980)\n\n(Revogado pela Lei nº 6.815, de 19.8.1980)\n\nViolação do privilégio postal da União",
+        "content_sha256": "db0688e88d73fea03310320fdbc2317514ce74f40703d74962911a70a5cad04c",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 68. Recusar à autoridade, quando por esta, justificadamente solicitados ou exigidos, dados ou indicações concernentes à própria identidade, estado, profissão, domicílio e residência:\n\nPena – multa, de duzentos mil réis a dois contos de réis.\n\nParágrafo único. Incorre na pena de prisão simples, de um a seis meses, e multa, de duzentos mil réis a dois contos de réis, se o fato não constitue infração penal mais grave, quem, nas mesmas circunstâncias, f'az declarações inverídicas a respeito de sua identidade pessoal, estado, profissão, domicílio e residência.\n\nProibição de atividade remunerada a estrangeiro",
+      "content_sha256": "f0ca62d724ff32ce95eb4b0a8c6160ade19b42f6f6bd9acca2cecde077b0d969"
+    },
+    {
+      "course_slug": "contravencoes",
+      "expected": {
+        "id": "95ba5079-122d-5b15-98f6-35e883e6d37b",
+        "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+        "unit_key": "art-59",
+        "label": "Art. 59",
+        "chapter": "CAPÍTULO VII — DAS CONTRAVENÇÕES RELATIVAS À POLÍCIA DE COSTUMES",
+        "position": 56,
+        "body_text": "Art. 59. Entregar-se alguem habitualmente à ociosidade, sendo válido para o trabalho, sem ter renda que lhe assegure meios bastantes de subsistência, ou prover à própria subsistência mediante ocupação ilícita:\n\nPena – prisão simples, de quinze dias a três meses.\n\nParágrafo único. A aquisição superveniente de renda, que assegure ao condenado meios bastantes de subsistência, extingue a pena.\n\nMendicância\n\n(Revogado pela Lei nº 11.983, de 2009)\n\n(Revogado pela Lei nº 11.983, de 2009)\n\n(Revogado pela Lei nº 11.983, de 2009)\n\n(Revogado pela Lei nº 11.983, de 2009)\n\n(Revogado pela Lei nº 11.983, de 2009)\n\n(Revogado pela Lei nº 11.983, de 2009)\n\nImportunação ofensiva ao pudor\n\n(Revogado pela Lei nº 13.718, de 2018)\n\n(Revogado pela Lei nº 13.718, de 2018)\n\nEmbriaguez",
+        "content_sha256": "5be01a71ebc7bd0f5555123158372a5bb4a1dccf7681fa32f4ae12ff1762f6c0",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 59. Entregar-se alguem habitualmente à ociosidade, sendo válido para o trabalho, sem ter renda que lhe assegure meios bastantes de subsistência, ou prover à própria subsistência mediante ocupação ilícita:\n\nPena – prisão simples, de quinze dias a três meses.\n\nParágrafo único. A aquisição superveniente de renda, que assegure ao condenado meios bastantes de subsistência, extingue a pena.\n\nMendicância",
+      "content_sha256": "3430717048ca6b99ebc789e4d6bf6cce590b404fd21f8ed7a717e304623b5a5d"
+    },
+    {
+      "course_slug": "contravencoes",
+      "expected": {
+        "id": "9e841a37-7a45-5cad-a11e-e8d488946386",
+        "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+        "unit_key": "art-38",
+        "label": "Art. 38",
+        "chapter": "CAPÍTULO III — DAS CONTRAVENÇÕES REFERENTES À INCOLUMIDADE PÚBLICA",
+        "position": 36,
+        "body_text": "Art. 38. Provocar, abusivamente, emissão de fumaça, vapor ou gás, que possa ofender ou molestar alguem:\n\nPena – multa, de duzentos mil réis a dois contos de réis.\n\nAssociação secreta\n\n(Revogado pela pela Lei nº 14.197, de 2021) (Vigência)\n\n(Revogado pela pela Lei nº 14.197, de 2021) (Vigência)\n\n(Revogado pela pela Lei nº 14.197, de 2021) (Vigência)\n\nProvocação de tumulto. Conduta inconveniente",
+        "content_sha256": "ca9af75c5ea80b78ce63d39125a1dc96c2e721ba27c88f12ab1d9f8f986f5249",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 38. Provocar, abusivamente, emissão de fumaça, vapor ou gás, que possa ofender ou molestar alguem:\n\nPena – multa, de duzentos mil réis a dois contos de réis.\n\nAssociação secreta",
+      "content_sha256": "f861600229ce4d4a7a066b54d59f314240baac1d0dd970e5bab4baea6005955d"
+    },
+    {
+      "course_slug": "contravencoes",
+      "expected": {
+        "id": "fa583bf6-f17d-5328-99d8-3cbe903437d2",
+        "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+        "unit_key": "art-64",
+        "label": "Art. 64",
+        "chapter": "CAPÍTULO VII — DAS CONTRAVENÇÕES RELATIVAS À POLÍCIA DE COSTUMES",
+        "position": 59,
+        "body_text": "Art. 64. Tratar animal com crueldade ou submetê-lo a trabalho excessivo:\n\nPena – prisão simples, de dez dias a um mês, ou multa, de cem a quinhentos mil réis.\n\n§ 1º Na mesma pena incorre aquele que, embora para fins didáticos ou científicos, realiza em lugar público ou exposto ao publico, experiência dolorosa ou cruel em animal vivo.\n\n§ 2º Aplica-se a pena com aumento de metade, se o animal é submetido a trabalho excessivo ou tratado com crueldade, em exibição ou espetáculo público.\n\nPerturbação da tranquilidade\n\n(Revogado pela Lei nº 14.132, de 2021)\n\n(Revogado pela Lei nº 14.132, de 2021)\n\nOmissão de comunicação de crime",
+        "content_sha256": "e4b519a0ecd320b301c74fdb705691a5c46c1f1f4fcf059bc578389e0455a97e",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 64. Tratar animal com crueldade ou submetê-lo a trabalho excessivo:\n\nPena – prisão simples, de dez dias a um mês, ou multa, de cem a quinhentos mil réis.\n\n§ 1º Na mesma pena incorre aquele que, embora para fins didáticos ou científicos, realiza em lugar público ou exposto ao publico, experiência dolorosa ou cruel em animal vivo.\n\n§ 2º Aplica-se a pena com aumento de metade, se o animal é submetido a trabalho excessivo ou tratado com crueldade, em exibição ou espetáculo público.\n\nPerturbação da tranquilidade",
+      "content_sha256": "3a2d8d9a8511f0de11b765fc5853b9e4968056ea3f65b7b2ed42f332b33af321"
+    },
+    {
+      "course_slug": "eca",
+      "expected": {
+        "id": "2f915949-a28f-5d78-b654-942686ab8271",
+        "course_id": "67393f02-bb51-583c-b431-803ebb72386f",
+        "unit_key": "art-247",
+        "label": "Art. 247",
+        "chapter": "Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo II — Das Infrações Administrativas",
+        "position": 291,
+        "body_text": "Art. 247. Divulgar, total ou parcialmente, sem autorização devida, por qualquer meio de comunicação, nome, ato ou documento de procedimento policial, administrativo ou judicial relativo a criança ou adolescente a que se atribua ato infracional:\n\nPena - multa de três a vinte salários de referência, aplicando-se o dobro em caso de reincidência.\n\n§ 1º Incorre na mesma pena quem exibe ou transmite imagem, vídeo ou corrente de vídeo de criança ou adolescente envolvido em ato infracional ou em outro ato ilícito que lhe seja atribuído, de forma a permitir sua identificação. (Redação dada pela Lei nº 14.811, de 2024)\n\n§ 2º Se o fato for praticado por órgão de imprensa ou emissora de rádio ou televisão, além da pena prevista neste artigo, a autoridade judiciária poderá determinar a apreensão da publicação (Expressão declarada inconstitucional pela ADIN 869).\n\n(Revogado pela Lei nº 13.431, de 2017) (Vigência)\n\n(Revogado pela Lei nº 13.431, de 2017) (Vigência)",
+        "content_sha256": "885457f83faa0eb07d62f31ef763a73c5943aaaf549cc1d028ab7eb1b2eaad8b",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 247. Divulgar, total ou parcialmente, sem autorização devida, por qualquer meio de comunicação, nome, ato ou documento de procedimento policial, administrativo ou judicial relativo a criança ou adolescente a que se atribua ato infracional:\n\nPena - multa de três a vinte salários de referência, aplicando-se o dobro em caso de reincidência.\n\n§ 1º Incorre na mesma pena quem exibe ou transmite imagem, vídeo ou corrente de vídeo de criança ou adolescente envolvido em ato infracional ou em outro ato ilícito que lhe seja atribuído, de forma a permitir sua identificação. (Redação dada pela Lei nº 14.811, de 2024)\n\n§ 2º Se o fato for praticado por órgão de imprensa ou emissora de rádio ou televisão, além da pena prevista neste artigo, a autoridade judiciária poderá determinar a apreensão da publicação (Expressão declarada inconstitucional pela ADIN 869).",
+      "content_sha256": "7212f8b0af0b11bca83aa401e131f1233bfef38a7d2c60da2cf051eb4d6206f2"
+    },
+    {
+      "course_slug": "eca",
+      "expected": {
+        "id": "2ff468da-601d-5b35-a66c-be6bc0103f23",
+        "course_id": "67393f02-bb51-583c-b431-803ebb72386f",
+        "unit_key": "art-232",
+        "label": "Art. 232",
+        "chapter": "Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo I — Dos Crimes / Seção II — Dos Crimes em Espécie",
+        "position": 269,
+        "body_text": "Art. 232. Submeter criança ou adolescente sob sua autoridade, guarda ou vigilância a vexame ou a constrangimento:\n\nPena - detenção de seis meses a dois anos.\n\n(Revogado pela Lei nº 9.455, de 7.4.1997\n\n(Revogado pela Lei nº 9.455, de 7.4.1997 :\n\n(Revogado pela Lei nº 9.455, de 7.4.1997 :\n\n(Revogado pela Lei nº 9.455, de 7.4.1997 :\n\n(Revogado pela Lei nº 9.455, de 7.4.1997 :\n\n(Revogado pela Lei nº 9.455, de 7.4.1997 :\n\n(Revogado pela Lei nº 9.455, de 7.4.1997 :\n\n(Revogado pela Lei nº 9.455, de 7.4.1997 :",
+        "content_sha256": "3e749c4533b31eaad8e7acd82ccf47bfd293d340c16dad397a4a45cdb61d5860",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 232. Submeter criança ou adolescente sob sua autoridade, guarda ou vigilância a vexame ou a constrangimento:\n\nPena - detenção de seis meses a dois anos.",
+      "content_sha256": "7378844b0fd40f58be832fd0dd48ee32b8dfda00cd9fb18e70f797b9061ff642"
+    },
+    {
+      "course_slug": "eca",
+      "expected": {
+        "id": "4624a2ee-dc73-5094-a532-764203fe6284",
+        "course_id": "67393f02-bb51-583c-b431-803ebb72386f",
+        "unit_key": "art-239",
+        "label": "Art. 239",
+        "chapter": "Título VII — Dos Crimes e Das Infrações Administrativas / Capítulo I — Dos Crimes / Seção II — Dos Crimes em Espécie",
+        "position": 275,
+        "body_text": "Art. 239. Promover ou auxiliar a efetivação de ato destinado ao envio de criança ou adolescente para o exterior com inobservância das formalidades legais ou com o fito de obter lucro:\n\nPena - reclusão de quatro a seis anos, e multa.\n\nParágrafo único. Se há emprego de violência, grave ameaça ou fraude: (Incluído pela Lei nº 10.764, de 12.11.2003)\n\nPena - reclusão, de 6 (seis) a 8 (oito) anos, além da pena correspondente à violência.\n\nA",
+        "content_sha256": "ad72cfbb03b185a1cd35c8d2de1481ea2aeb35faaa56753eb0f9ae382ec2ba00",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 239. Promover ou auxiliar a efetivação de ato destinado ao envio de criança ou adolescente para o exterior com inobservância das formalidades legais ou com o fito de obter lucro:\n\nPena - reclusão de quatro a seis anos, e multa.\n\nParágrafo único. Se há emprego de violência, grave ameaça ou fraude: (Incluído pela Lei nº 10.764, de 12.11.2003)\n\nPena - reclusão, de 6 (seis) a 8 (oito) anos, além da pena correspondente à violência.",
+      "content_sha256": "c7251a7166c320eca8965348a2487ff08b6a41002145bac7038c866bf69ca532"
+    },
+    {
+      "course_slug": "ric",
+      "expected": {
+        "id": "b63721a0-5c97-5cd3-ac1b-fe7ff2607f4a",
+        "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+        "unit_key": "art-5",
+        "label": "Art. 5",
+        "chapter": "Disposições iniciais",
+        "position": 4,
+        "body_text": "Art. 5º O Poder Executivo providenciará, no prazo de cento e oitenta dias, a regulamentação desta Lei e, no prazo de trezentos e sessenta dias, o início de sua implementação.\n\n. (Revogado pela Lei nº 12.058, de 2009)",
+        "content_sha256": "e30b7dd5be1e8050c34fce1419a137473b5f61eb84cece8fa21ea211cc898e9e",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 5º O Poder Executivo providenciará, no prazo de cento e oitenta dias, a regulamentação desta Lei e, no prazo de trezentos e sessenta dias, o início de sua implementação.",
+      "content_sha256": "94dd3b94abd3a1535d9ad0f11db1b9662090f90567513fb3211658278b418dbc"
+    },
+    {
+      "course_slug": "lavagem",
+      "expected": {
+        "id": "b19c9dab-59d4-5419-adbb-8a68984fd0d3",
+        "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+        "unit_key": "art-17-e",
+        "label": "Art. 17-E",
+        "chapter": "CAPÍTULO X (Incluído pela Lei nº 12.683, de 2012) — DISPOSIÇÕES GERAIS (Incluído pela Lei nº 12.683, de 2012)",
+        "position": 26,
+        "body_text": "Art. 17-E. A Secretaria da Receita Federal do Brasil conservará os dados fiscais dos contribuintes pelo prazo mínimo de 5 (cinco) anos, contado a partir do início do exercício seguinte ao da declaração de renda respectiva ou ao do pagamento do tributo. (Incluído pela Lei nº 12.683, de 2012)\n\nVigência encerrada\n\nVigência encerrada\n\nVigência encerrada\n\nVigência encerrada\n\nVigência encerrada\n\nVigência encerrada\n\nVigência encerrada\n\nVigência encerrada\n\nVigência encerrada\n\nVigência encerrada",
+        "content_sha256": "9cdd58789d0d326d46ffdedfa1dabcfdff7050cdbc5c4c1950bad23290cd84ef",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 17-E. A Secretaria da Receita Federal do Brasil conservará os dados fiscais dos contribuintes pelo prazo mínimo de 5 (cinco) anos, contado a partir do início do exercício seguinte ao da declaração de renda respectiva ou ao do pagamento do tributo. (Incluído pela Lei nº 12.683, de 2012)",
+      "content_sha256": "e159f8c52577b780cc6cf0f63f916c5b35df3f29ffbfc2c1383efadc54ea4380"
+    }
+  ],
+  "additions": [],
+  "status_changes": [
+    {
+      "course_slug": "lavagem",
+      "expected": {
+        "id": "b7f569f4-ba9c-5d69-b5f4-3141b22407cf",
+        "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+        "unit_key": "art-16",
+        "label": "Art. 16",
+        "chapter": "CAPÍTULO IX — Do Conselho de Controle de Atividades Financeiras",
+        "position": 20,
+        "body_text": "Art. 16.\n\n(Revogado pela Lei nº 13.974, de 2020)\n\n(Revogado pela Lei nº 13.974, de 2020)\n\nVigência encerrada\n\n§ 2o Caberá recurso das decisões do Coaf relativas às aplicações de penas administrativas ao Conselho de Recursos do Sistema Financeiro Nacional. (Redação dada pela Lei nº 13.506, de 2017) (Vide Decreto nº 9.889, de 2019) (Revogado pela Lei nº 13.974, de 2020)",
+        "content_sha256": "2f6d5dc6513aaa0aa7b3b2d80ed4463285a390f422471e52647d5c0d4c9d97d6",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 16. (Revogado pela Lei nº 13.974, de 2020). Não integra a leitura normativa ativa.",
+      "content_sha256": "f669c6451cc09d630dd37ca090ee8d251d00a8c3362a5b9a7f4fa6d4c84837bc",
+      "content_status": "excluded",
+      "reason": "Revogação expressa confirmada na Lei 13.974/2020; preserve identidade e histórico."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "course_slug": "eca",
+  "law": "Estatuto da Criança e do Adolescente — lote 07: art. 232",
+  "units": {
+    "art-232": {
+      "simples": "Submeter criança ou adolescente sob sua autoridade, guarda ou vigilância a vexame ou constrangimento é a conduta do art. 232, com detenção de seis meses a dois anos. Este artigo permanece vigente no texto oficial.",
+      "pontos": [
+        "A relação de autoridade, guarda ou vigilância integra o tipo."
+      ],
+      "atencao": [
+        "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+        "A Lei 9.455/1997 revogou o art. 233, não o art. 232. Tortura tem requisitos próprios: não transforme automaticamente qualquer constrangimento no crime da Lei de Tortura."
+      ],
+      "exemplo": "Um responsável submete adolescente sob sua guarda a situação vexatória: examine os elementos do art. 232, sem pressupor os requisitos de outro tipo. Variação: O enunciado descreve tortura com os requisitos específicos da Lei 9.455: compare os tipos em suas fontes, sem afirmar que o art. 232 foi revogado.",
+      "prova": [
+        "A Lei de Tortura revogou o art. 232? Não; seu art. 4º revogou o art. 233 do ECA. O art. 232 continua no texto vigente."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

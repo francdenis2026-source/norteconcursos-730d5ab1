@@ -1,4 +1,5 @@
-// Valida as explicações por artigo contra o texto oficial (units.json exportado do banco) e gera a migration SQL.
+// Valida estrutura e números contra um snapshot do banco e gera rascunhos SQL.
+// Isto não substitui revisão jurídica, fonte oficial atual ou publicação revisada.
 // Uso: node scripts/explicacoes/build.mjs <explicacoes.json> <units.json> [--sql <saida.sql>]
 // Regras checadas:
 //  - todo artigo do curso (status "current") tem explicação, e toda explicação aponta um artigo existente;
@@ -41,14 +42,18 @@ if (i >= 0) {
   const j = (o) => q(JSON.stringify(o)) + "::jsonb";
   const lines = [
     `-- Explicações por artigo — ${exp.law}. Texto-base: dispositivos oficiais já cadastrados em legal_course_units.`,
-    "-- Entram como 'under_review': só administradores veem até a publicação (update ... set status = 'published').",
+    "-- Entram como 'under_review'. Publicar somente com revisão e precondições explícitas; reexecução preserva qualquer registro existente.",
   ];
   for (const [k, e] of Object.entries(exp.units)) {
+    const unit=byKey.get(k);
+    if(unit.content_status!=='current')continue;
     lines.push(
       `insert into public.legal_unit_explanations (unit_id, content_sha256, simples, pontos, atencao, exemplo, prova, termos, remissoes, status, authored_by)\n` +
       `select u.id, u.content_sha256, ${q(e.simples)}, ${j(e.pontos)}, ${j(e.atencao)}, ${q(e.exemplo)}, ${j(e.prova)}, ${j(e.termos ?? [])}, ${j(e.remissoes ?? [])}, 'under_review', 'claude'\n` +
-      `from public.legal_course_units u join public.legal_courses c on c.id = u.course_id where c.slug = ${q(exp.course_slug)} and u.unit_key = ${q(k)}\n` +
-      `on conflict (unit_id) do update set content_sha256 = excluded.content_sha256, simples = excluded.simples, pontos = excluded.pontos, atencao = excluded.atencao, exemplo = excluded.exemplo, prova = excluded.prova, termos = excluded.termos, remissoes = excluded.remissoes, status = case when public.legal_unit_explanations.status = 'published' then 'published' else 'under_review' end, updated_at = now();`,
+      `from public.legal_course_units u join public.legal_courses c on c.id = u.course_id where c.slug = ${q(exp.course_slug)} and u.unit_key = ${q(k)} and u.content_status = 'current' and c.status = 'active' and u.content_sha256 = ${q(unit.content_sha256)}\n` +
+      `and exists (select 1 from public.syllabus_topics t join public.syllabus_editions d on d.id = t.edition_id where t.id = c.syllabus_topic_id and t.content_status = 'current' and d.status = 'active')\n` +
+      `and exists (select 1 from public.content_sources s where s.url = c.source_url and s.is_official and s.status = 'vigente')\n` +
+      `on conflict (unit_id) do nothing;`,
     );
   }
   fs.writeFileSync(rest[i + 1], lines.join("\n\n") + "\n");

@@ -1,0 +1,1342 @@
+{
+  "version": "2026-10-11",
+  "materials": [
+    {
+      "slug": "legislacao-penal-especial-estatuto-idoso",
+      "expected": {
+        "id": "1b8c18d1-e6e0-40bb-8f7b-1cfdfc52cbaf",
+        "title": "Lei 10.741/2003 — proteção penal da pessoa idosa — revisão aplicada",
+        "updated_at": "2026-10-07T21:37:20.649815+00:00",
+        "content_status": "active",
+        "body_sha256": "4a6e656a7dd4a5ab105f1f5c7d97bea41c18b4c4c25fd18d57fc73c062a4ffc6",
+        "quiz": [
+          {
+            "a": true,
+            "q": "O art. 97 considera a possibilidade de prestar assistência sem risco pessoal.",
+            "why": "A leitura deve observar as condições e alternativas legais."
+          },
+          {
+            "a": false,
+            "q": "O art. 97 exige socorro pessoal mesmo quando impossível sem risco ao agente.",
+            "why": "Essa afirmação elimina condição prevista no tipo."
+          },
+          {
+            "a": false,
+            "q": "Toda negativa de crédito a pessoa idosa é necessariamente crime do art. 96.",
+            "why": "Há ressalva expressa para negativa motivada por superendividamento."
+          },
+          {
+            "a": true,
+            "q": "O limite geral do art. 1º é sessenta anos.",
+            "why": "A proteção não começa apenas aos sessenta e cinco."
+          },
+          {
+            "a": true,
+            "q": "A discriminação por idade no acesso a operações pode integrar o art. 96.",
+            "why": "Os elementos do tipo devem ser analisados."
+          },
+          {
+            "a": false,
+            "q": "O estatuto só alcança pessoas a partir de sessenta e cinco anos.",
+            "why": "O art. 1º fixa sessenta anos."
+          },
+          {
+            "a": false,
+            "q": "O parentesco autoriza livre apropriação da pensão.",
+            "why": "Não existe essa autorização geral."
+          },
+          {
+            "a": true,
+            "q": "Desvio de pensão pode integrar o art. 102.",
+            "why": "A norma protege rendimentos da pessoa idosa."
+          }
+        ],
+        "flashcards": [
+          {
+            "b": "O estatuto regula direitos de pessoas com sessenta anos ou mais. Não confunda com idades específicas de prioridade especial.",
+            "f": "Idade — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 96 protege acesso a operações e exercício da cidadania por motivo de idade. Negativa de crédito motivada por superendividamento tem ressalva própria.",
+            "f": "Discriminação — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 97 exige observar possibilidade de ajuda sem risco pessoal e demais condutas previstas. Não se presume dever de executar pessoalmente socorro impossível.",
+            "f": "Omissão de assistência — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 102 pune apropriação/desvio de rendimentos; art. 104 trata de retenção para assegurar dívida. Ter vínculo familiar não elimina a proteção patrimonial.",
+            "f": "Patrimônio — qual é a regra e a ressalva?"
+          }
+        ],
+        "legal_review": {
+          "scope": "Conferência das fontes oficiais deste módulo em 07/10/2026. Mudanças de 2025 e 2026 nos diplomas consultados estão destacadas abaixo; sua cobrança depende do recorte e da data de corte do edital.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15163.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.163/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para modificar as penas dos crimes de abandono de incapaz e de maus-tratos, a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa), para modificar as penas do crime de exposição a perigo da saúde e da integridade física ou psíquica da pessoa idosa, a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a fim de estabelecer penas para o crime de abandono de pessoa com deficiência que resulte em lesão corporal de natureza grave ou em morte, e a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para vedar a aplicação da Lei nº 9.099, de 26 de setembro de 1995, em caso de apreensão indevida de criança ou de adolescente.",
+              "vigency": "Art. 6º Esta Lei entra em vigor na data da sua publicação.",
+              "articles": [
+                "Art. 94",
+                "Art. 99"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+              "title": "Lei 10.741/2003 — proteção penal da pessoa idosa — texto oficial atualizado",
+              "sha256": "09f1f1abbd408b2a5559933b193b254119e100fc0bd0575c75992d92e81a04bf"
+            }
+          ],
+          "checked_at": "2026-10-07T21:34:23.650731+00:00",
+          "corrections": [
+            "Resumo, exercícios e cartões anteriores foram substituídos pela revisão temática conferida e por dispositivos oficiais, retirando afirmações incompatíveis com a legislação atual.",
+            "Incluídas alterações de 2025 no art. 94 e nas penas do art. 99. Retirada a aplicação automática da agravante etária quando ela repetiria elemento do próprio tipo (CP, art. 61)."
+          ],
+          "course_slug": "idosa"
+        }
+      },
+      "patch": {
+        "body_md": "## Objetivo do módulo\n\nA proteção começa aos sessenta anos. Discriminação, omissão de assistência, desvio de rendimentos e retenção de documentos possuem elementos próprios.\n\n## Conceitos e diferenças\n\n| Conceito | Regra de estudo | Atenção de prova |\n|---|---|---|\n| Idade | O estatuto regula direitos de pessoas com sessenta anos ou mais. | Não confunda com idades específicas de prioridade especial. |\n| Discriminação | Art. 96 protege acesso a operações e exercício da cidadania por motivo de idade. | Negativa de crédito motivada por superendividamento tem ressalva própria. |\n| Omissão de assistência | Art. 97 exige observar possibilidade de ajuda sem risco pessoal e demais condutas previstas. | Não se presume dever de executar pessoalmente socorro impossível. |\n| Patrimônio | Art. 102 pune apropriação/desvio de rendimentos; art. 104 trata de retenção para assegurar dívida. | Ter vínculo familiar não elimina a proteção patrimonial. |\n\n## Situação aplicada\n\nUm familiar desvia a pensão para finalidade própria; outra pessoa retém cartão para garantir dívida. Compare os arts. 102 e 104, sem tratar toda controvérsia patrimonial como o mesmo tipo penal.\n\n> **Vigência e atualização — conferência em 07/10/2026:** A Lei 14.423/2022 atualizou a nomenclatura para Estatuto da Pessoa Idosa. Não conclua que o limite geral passou a sessenta e cinco anos. Penas e formas de crimes não tratados neste módulo devem ser consultadas separadamente no texto atual.\n\n## Escopo e roteiro de leitura\n\nArts. 1º, 96, 97, 102 e 104. Este módulo é uma revisão temática, não uma reprodução integral do diploma. A indicação de edital identifica a pertinência comprovada para aquele cargo; o candidato deve conferir o edital da sua própria carreira. A versão estudada é a vigente na data da revisão, e não o congelamento da legislação na data da prova histórica.\n\n1. Leia os dispositivos indicados no texto oficial.\n2. Compare sujeito, conduta, requisitos e exceções antes de memorizar números.\n3. Resolva os oito itens e revise os comentários dos erros.\n4. Retome os cartões em uma segunda sessão sem consultar a tabela.\n\n## Dispositivos para aprofundar a leitura\n\nAbaixo estão dispositivos do texto compilado oficial. A indicação de redações e atos modificadores pertence à fonte. Uma remissão a outra lei ou a decisão judicial deve ser lida em conjunto com os alertas desta revisão.\n\n### Art. 1\n\nArt. 1º É instituído o Estatuto da Pessoa Idosa, destinado a regular os direitos assegurados às pessoas com idade igual ou superior a 60 (sessenta) anos. (Redação dada pela Lei nº 14.423, de 2022)\n\n### Art. 71\n\nArt. 71. É assegurada prioridade na tramitação dos processos e procedimentos e na execução dos atos e diligências judiciais em que figure como parte ou interveniente pessoa com idade igual ou superior a 60 (sessenta) anos, em qualquer instância.\n\n§ 1o O interessado na obtenção da prioridade a que alude este artigo, fazendo prova de sua idade, requererá o benefício à autoridade judiciária competente para decidir o feito, que determinará as providências a serem cumpridas, anotando-se essa circunstância em local visível nos autos do processo.\n\n§ 2o A prioridade não cessará com a morte do beneficiado, estendendo-se em favor do cônjuge supérstite, companheiro ou companheira, com união estável, maior de 60 (sessenta) anos.\n\n§ 3o A prioridade se estende aos processos e procedimentos na Administração Pública, empresas prestadoras de serviços públicos e instituições financeiras, ao atendimento preferencial junto à Defensoria Publica da União, dos Estados e do Distrito Federal em relação aos Serviços de Assistência Judiciária.\n\n§ 4º Para o atendimento prioritário, será garantido à pessoa idosa o fácil acesso aos assentos e caixas, identificados com a destinação a pessoas idosas em local visível e caracteres legíveis. (Redação dada pela Lei nº 14.423, de 2022)\n\n§ 5º Dentre os processos de pessoas idosas, dar-se-á prioridade especial aos das maiores de 80 (oitenta) anos. (Redação dada pela Lei nº 14.423, de 2022)\n\n### Art. 94\n\nArt. 94. Aos crimes previstos nesta Lei aplicam-se, no que couber, as disposições do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e do Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal). (Redação dada pela Lei nº 15.163, de 2025)\n\nParágrafo único. Aos crimes previstos nesta Lei e aos crimes praticados com violência contra a pessoa idosa, independentemente da pena prevista, não se aplica a Lei nº 9.099, de 26 de setembro de 1995. (Incluído pela Lei nº 15.163, de 2025)\n\n### Art. 96\n\nArt. 96. Discriminar pessoa idosa, impedindo ou dificultando seu acesso a operações bancárias, aos meios de transporte, ao direito de contratar ou por qualquer outro meio ou instrumento necessário ao exercício da cidadania, por motivo de idade:\n\nPena – reclusão de 6 (seis) meses a 1 (um) ano e multa.\n\n§ 1o Na mesma pena incorre quem desdenhar, humilhar, menosprezar ou discriminar pessoa idosa, por qualquer motivo.\n\n§ 2o A pena será aumentada de 1/3 (um terço) se a vítima se encontrar sob os cuidados ou responsabilidade do agente.\n\n§ 3º Não constitui crime a negativa de crédito motivada por superendividamento da pessoa idosa. (Redação dada pela Lei nº 14.423, de 2022)\n\n### Art. 98\n\nArt. 98. Abandonar a pessoa idosa em hospitais, casas de saúde, entidades de longa permanência, ou congêneres, ou não prover suas necessidades básicas, quando obrigado por lei ou mandado: (Redação dada pela Lei nº 14.423, de 2022)\n\nPena – detenção de 6 (seis) meses a 3 (três) anos e multa.\n\n### Art. 99\n\nArt. 99. Expor a perigo a integridade e a saúde, física ou psíquica, da pessoa idosa, submetendo-a a condições desumanas ou degradantes ou privando-a de alimentos e cuidados indispensáveis, quando obrigado a fazê-lo, ou sujeitando-a a trabalho excessivo ou inadequado: (Redação dada pela Lei nº 14.423, de 2022)\n\nPena - reclusão, de 2 (dois) a 5 (cinco) anos. (Redação dada pela Lei nº 15.163, de 2025)\n\n§ 1o Se do fato resulta lesão corporal de natureza grave:\n\nPena - reclusão, de 3 (três) a 7 (sete) anos. (Redação dada pela Lei nº 15.163, de 2025)\n\n§ 2o Se resulta a morte:\n\nPena - reclusão, de 8 (oito) a 14 (quatorze) anos. (Redação dada pela Lei nº 15.163, de 2025)\n\n### Art. 102\n\nArt. 102. Apropriar-se de ou desviar bens, proventos, pensão ou qualquer outro rendimento da pessoa idosa, dando-lhes aplicação diversa da de sua finalidade: (Redação dada pela Lei nº 14.423, de 2022)\n\nPena – reclusão de 1 (um) a 4 (quatro) anos e multa.\n\n## Percurso completo e pontos de atualização\n\nOs 117 dispositivos vigentes cadastrados têm explicação individual, caso concreto, variação e exercício com resposta comentada. [Estudar o Estatuto por artigo](/dashboard/legal-course/idosa).\n\n- **Penas e processo — alteração de 2025:** consulte os arts. 94 e 99; compare penas atuais com antigas e a aplicação temporal.\n- **Planos de saúde:** leia o art. 15 com os Temas 952 e 1016 do STJ; vedação de discriminação não significa invalidade automática de todo reajuste.\n- **Remissões históricas:** arts. 69 e 83 citam o CPC antigo; o art. 113 cita a antiga Lei de Drogas revogada. Consulte os diplomas atuais e alertas do percurso.\n",
+        "flashcards": [
+          {
+            "b": "O estatuto regula direitos de pessoas com sessenta anos ou mais. Não confunda com idades específicas de prioridade especial.",
+            "f": "Idade — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 96 protege acesso a operações e exercício da cidadania por motivo de idade. Negativa de crédito motivada por superendividamento tem ressalva própria.",
+            "f": "Discriminação — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 97 exige observar possibilidade de ajuda sem risco pessoal e demais condutas previstas. Não se presume dever de executar pessoalmente socorro impossível.",
+            "f": "Omissão de assistência — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 102 pune apropriação/desvio de rendimentos; art. 104 trata de retenção para assegurar dívida. Ter vínculo familiar não elimina a proteção patrimonial.",
+            "f": "Patrimônio — qual é a regra e a ressalva?"
+          },
+          {
+            "f": "Art. 1 — É preciso ter sessenta e cinco anos para ser abrangido?",
+            "b": "Não; a regra geral começa aos sessenta."
+          },
+          {
+            "f": "Art. 3 — A restituição do Imposto de Renda está na lista de prioridades?",
+            "b": "Sim; consta do inciso IX do §1º."
+          },
+          {
+            "f": "Art. 15 — Todo reajuste etário é necessariamente inválido?",
+            "b": "Não; examine os requisitos do Tema 952 e, para coletivos, o Tema 1016. Reajuste abusivo ou discriminatório não é legitimado."
+          },
+          {
+            "f": "Art. 19 — Somente hospitais públicos precisam notificar?",
+            "b": "Não; serviços públicos e privados estão abrangidos."
+          },
+          {
+            "f": "Art. 23 — Desconto de sessenta por cento contraria o artigo?",
+            "b": "Não; supera o mínimo de cinquenta."
+          },
+          {
+            "f": "Art. 27 — O desempate previsto favorece o mais jovem?",
+            "b": "Não; favorece a idade mais elevada."
+          },
+          {
+            "f": "Art. 34 — O benefício exige contribuição previdenciária neste artigo?",
+            "b": "Não; é assistencial, nos termos da Loas."
+          },
+          {
+            "f": "Art. 35 — A participação no custeio é obrigatória no §1º?",
+            "b": "Não; a cobrança é facultada."
+          },
+          {
+            "f": "Art. 39 — A reserva urbana é de duas vagas por veículo?",
+            "b": "Não; o §2º prevê dez por cento dos assentos. As duas vagas pertencem ao art. 40."
+          },
+          {
+            "f": "Art. 40 — O desconto pode ser inferior a cinquenta por cento?",
+            "b": "Não; cinquenta é o mínimo legal."
+          },
+          {
+            "f": "Art. 69 — A remissão autoriza ignorar prazos do Estatuto?",
+            "b": "Não; o artigo expressamente os preserva."
+          },
+          {
+            "f": "Art. 77 — Somente uma parte pode pedir a nulidade?",
+            "b": "Não; também pode ser declarada de ofício ou requerida por interessado."
+          },
+          {
+            "f": "Art. 94 — A exclusão depende da pena máxima superar dois anos?",
+            "b": "Não; o parágrafo único usa independentemente da pena prevista."
+          },
+          {
+            "f": "Art. 99 — A forma com morte tem pena atual de quatro a doze anos?",
+            "b": "Não; oito a quatorze anos de reclusão."
+          },
+          {
+            "f": "Art. 110 — Toda transcrição modificadora de 2003 é automaticamente a redação atual do CP?",
+            "b": "Não; precisa ser confrontada com alterações posteriores."
+          },
+          {
+            "f": "Art. 113 — A Lei 6.368 continua vigente por ser citada aqui?",
+            "b": "Não; foi revogada pelo art. 75 da Lei 11.343/2006."
+          },
+          {
+            "f": "Art. 114 — O rol reproduzido aqui esgota os beneficiários atuais?",
+            "b": "Não; houve alterações posteriores."
+          },
+          {
+            "f": "Art. 115 — A condição até criação demonstra inexistência atual do fundo?",
+            "b": "Não; ele foi instituído em 2010."
+          }
+        ],
+        "law_version_checked_at": "2026-10-11T20:38:07.939265+00:00",
+        "legal_review": {
+          "scope": "117 dispositivos vigentes cadastrados conferidos na fonte oficial, com explicação, caso, variação e resposta de fixação para cada um. Jurisprudência e remissões históricas identificadas; não certifica todas as decisões ou todos os editais.",
+          "changes": [
+            {
+              "title": "Lei 15.163/2025 — penas e processo penal",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15163.htm",
+              "state": "effective",
+              "articles": [
+                "Art. 94",
+                "Art. 99"
+              ],
+              "summary": "Art. 94: Lei 9.099 não se aplica aos crimes do Estatuto nem aos crimes com violência contra pessoa idosa, independentemente da pena. Art. 99: reclusão de 2–5 anos; lesão grave 3–7; morte 8–14. Compare a lei penal no tempo; não copie penas antigas como atuais.",
+              "vigency": "Alteração de 2025 em vigor; art. 6º da lei alteradora prevê vigência na publicação."
+            },
+            {
+              "title": "STJ — Temas 952 e 1016: reajuste por faixa etária",
+              "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=952&cod_tema_inicial=952&novaConsulta=true&tipo_pesquisa=T",
+              "state": "reference",
+              "articles": [
+                "Art. 15, §3º"
+              ],
+              "summary": "Vedação de discriminação não invalida automaticamente todo reajuste etário. Exigem-se previsão contratual, normas regulatórias e base atuarial idônea, sem abuso ou discriminação. O Tema 1016 aplica as teses aos coletivos, ressalvando autogestão quanto ao CDC.",
+              "vigency": "Precedentes qualificados conferidos diretamente em 11/10/2026; não são alteração da redação legal."
+            },
+            {
+              "title": "CPC vigente: remissões e nulidades",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+              "state": "reference",
+              "articles": [
+                "Art. 69",
+                "Art. 77",
+                "Art. 83"
+              ],
+              "summary": "O CPC de 1973 foi revogado. Confira correspondência e transição do art. 1.046. A nulidade por falta de intervenção do MP requer sua intimação para manifestação sobre prejuízo, conforme art. 279, §2º.",
+              "vigency": "Aplicar a disciplina processual vigente, com regras especiais e transitórias do caso."
+            },
+            {
+              "title": "Remissão histórica: antiga Lei de Drogas revogada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+              "state": "expired",
+              "articles": [
+                "Art. 113"
+              ],
+              "summary": "A Lei 6.368/1976 citada no art. 113 foi revogada pelo art. 75 da Lei 11.343/2006. Para drogas, estudar a lei atual, sem copiar a antiga majorante de menores de 21 anos.",
+              "vigency": "Transcrição modificadora histórica; o diploma antigo não está vigente."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+              "sha256": "bbddf3d14cc4877d4f62341acf29efdaef9010cd45c8760a7e75040237cd4ea5"
+            },
+            {
+              "title": "stj-tema-952",
+              "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=952&cod_tema_inicial=952&novaConsulta=true&tipo_pesquisa=T",
+              "sha256": "b532b1887c3c6593176e3bc320faa9c9b6a86eca3725eeb98c34baec3f84455f"
+            },
+            {
+              "title": "stj-tema-1016",
+              "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1016&cod_tema_inicial=1016&novaConsulta=true&tipo_pesquisa=T",
+              "sha256": "83e37e410198b56340953c9c1b4b4263e810b5965cc3d66e247f57306e3443cd"
+            },
+            {
+              "title": "Código de Processo Civil — Lei 13.105/2015",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+              "sha256": "edc3ec5e2a3478b48415fa251382d487caa41a899e85c47acf8a33c4be9c5fc3"
+            },
+            {
+              "title": "Política Nacional da Pessoa Idosa — Lei 8.842/1994",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8842.htm",
+              "sha256": "2ba610d2e599f04839e837915fdcf112f49517263e892ab3291df337554ae0e1"
+            },
+            {
+              "title": "Atendimento prioritário — Lei 10.048/2000",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l10048.htm",
+              "sha256": "77615455be63a05cd524f7873197b82d4898ee5d53bee34118bac3168d138e64"
+            },
+            {
+              "title": "Fundo Nacional da Pessoa Idosa — Lei 12.213/2010",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12213.htm",
+              "sha256": "b3bc43086980781f820395f224ef4e30124c6855dae454fb97b5160d238ea872"
+            },
+            {
+              "title": "codigo-penal",
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+              "sha256": "dcfa2d2a605de5ac6896cc79e85c8880b11ef51a5a8b96f797660c582a5c52ff"
+            },
+            {
+              "title": "codigo-processo-penal",
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+              "sha256": "8b203895d0121a54facae748f4423f5a245c037b0eca13039e8ebb30bb11c0ee"
+            },
+            {
+              "title": "tortura",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+              "sha256": "dde1996257896984a2789c926f6936732209dda9cb6e73313f917870550ac53e"
+            },
+            {
+              "title": "contravencoes",
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+              "sha256": "117cc3fea572b8ddc50eef709ffd63672a4944102afbf4f46d11680e44b5b032"
+            },
+            {
+              "title": "drogas",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+              "sha256": "dfc0e50e441f34a61ab249ccf0b9aee9982ea4eb2bc5471439e3daaf2f1e3ed8"
+            },
+            {
+              "title": "Constituição Federal — art. 12, §4º, redação da EC 131/2023",
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+              "sha256": "249bc8f42e023faf2d7e70152e8f01fe06166ec28b6e2b75cd27c5e1a8e664ef"
+            }
+          ],
+          "checked_at": "2026-10-11T20:38:07.939265+00:00",
+          "corrections": [
+            "Completado o percurso por dispositivo, preservando o veto do art. 72 fora da leitura ativa.",
+            "Conferidos diretamente os Temas 952 e 1016 do STJ e remissões ao CPC vigente.",
+            "Destacadas penas de 2025 e exclusão da Lei 9.099; identificadas transcrições históricas substituídas."
+          ],
+          "course_slug": "idosa"
+        }
+      }
+    },
+    {
+      "slug": "legislacao-idosa-revisao",
+      "expected": {
+        "id": "f2e21de7-4559-4c7c-bc66-44c4f47296fc",
+        "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa — guia de estudo e aplicação",
+        "updated_at": "2026-10-10T02:58:33.253645+00:00",
+        "content_status": "active",
+        "body_sha256": "456eaa256483ea9bd1fdbfd66aa6f7e3a8e291a7f5ddd2ac921640e6dd7038a1",
+        "quiz": [
+          {
+            "a": true,
+            "q": "O art. 97 considera a possibilidade de prestar assistência sem risco pessoal.",
+            "why": "A leitura deve observar as condições e alternativas legais."
+          },
+          {
+            "a": false,
+            "q": "O art. 97 exige socorro pessoal mesmo quando impossível sem risco ao agente.",
+            "why": "Essa afirmação elimina condição prevista no tipo."
+          },
+          {
+            "a": false,
+            "q": "Toda negativa de crédito a pessoa idosa é necessariamente crime do art. 96.",
+            "why": "Há ressalva expressa para negativa motivada por superendividamento."
+          },
+          {
+            "a": true,
+            "q": "O limite geral do art. 1º é sessenta anos.",
+            "why": "A proteção não começa apenas aos sessenta e cinco."
+          },
+          {
+            "a": true,
+            "q": "A discriminação por idade no acesso a operações pode integrar o art. 96.",
+            "why": "Os elementos do tipo devem ser analisados."
+          },
+          {
+            "a": false,
+            "q": "O estatuto só alcança pessoas a partir de sessenta e cinco anos.",
+            "why": "O art. 1º fixa sessenta anos."
+          },
+          {
+            "a": false,
+            "q": "O parentesco autoriza livre apropriação da pensão.",
+            "why": "Não existe essa autorização geral."
+          },
+          {
+            "a": true,
+            "q": "Desvio de pensão pode integrar o art. 102.",
+            "why": "A norma protege rendimentos da pessoa idosa."
+          }
+        ],
+        "flashcards": [
+          {
+            "b": "O estatuto regula direitos de pessoas com sessenta anos ou mais. Não confunda com idades específicas de prioridade especial.",
+            "f": "Idade — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 96 protege acesso a operações e exercício da cidadania por motivo de idade. Negativa de crédito motivada por superendividamento tem ressalva própria.",
+            "f": "Discriminação — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 97 exige observar possibilidade de ajuda sem risco pessoal e demais condutas previstas. Não se presume dever de executar pessoalmente socorro impossível.",
+            "f": "Omissão de assistência — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 102 pune apropriação/desvio de rendimentos; art. 104 trata de retenção para assegurar dívida. Ter vínculo familiar não elimina a proteção patrimonial.",
+            "f": "Patrimônio — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Certo. A leitura deve observar as condições e alternativas legais.",
+            "f": "Julgue e justifique: O art. 97 considera a possibilidade de prestar assistência sem risco pessoal."
+          },
+          {
+            "b": "Errado. Essa afirmação elimina condição prevista no tipo.",
+            "f": "Julgue e justifique: O art. 97 exige socorro pessoal mesmo quando impossível sem risco ao agente."
+          },
+          {
+            "b": "Errado. Há ressalva expressa para negativa motivada por superendividamento.",
+            "f": "Julgue e justifique: Toda negativa de crédito a pessoa idosa é necessariamente crime do art. 96."
+          },
+          {
+            "b": "Certo. A proteção não começa apenas aos sessenta e cinco.",
+            "f": "Julgue e justifique: O limite geral do art. 1º é sessenta anos."
+          },
+          {
+            "b": "Certo. Os elementos do tipo devem ser analisados.",
+            "f": "Julgue e justifique: A discriminação por idade no acesso a operações pode integrar o art. 96."
+          },
+          {
+            "b": "Errado. O art. 1º fixa sessenta anos.",
+            "f": "Julgue e justifique: O estatuto só alcança pessoas a partir de sessenta e cinco anos."
+          },
+          {
+            "b": "Errado. Não existe essa autorização geral.",
+            "f": "Julgue e justifique: O parentesco autoriza livre apropriação da pensão."
+          },
+          {
+            "b": "Certo. A norma protege rendimentos da pessoa idosa.",
+            "f": "Julgue e justifique: Desvio de pensão pode integrar o art. 102."
+          },
+          {
+            "b": "O fato narrado demanda exame desse tipo, não simples aceitação da justificativa de cuidado.\n\nO art. 102 alcança apropriar-se ou desviar bens, proventos, pensão ou qualquer outro rendimento, dando aplicação diversa de sua finalidade. A pena prevista é reclusão de um a quatro anos e multa; o vínculo de cuidado não torna a renda propriedade do cuidador.\nBase: Art. 102",
+            "f": "Aplicação — Alguém se apropria do benefício de uma pessoa idosa e o desvia para finalidade diversa, nas condições do art. 102. A alegação de cuidar da vítima elimina o tipo?"
+          },
+          {
+            "b": "Não se presume incapacidade ou crime somente pela idade; autonomia e fatos importam.\nErro a evitar: Tratar toda pessoa idosa como civilmente incapaz.\nBase: Art. 102",
+            "f": "Análise — Idade não autoriza apropriação: E se a pessoa idosa administrar livremente seu dinheiro sem a conduta típica de terceiro?"
+          },
+          {
+            "b": "O caso exige considerar a prioridade especial da pessoa com 83 anos.\n\nO art. 3º, § 2º, assegura prioridade especial aos maiores de 80 anos em relação às demais pessoas idosas. Não confunda o marco geral de 60 anos com a prioridade especial; saúde tem regra e ressalva próprias.\nBase: Art. 3, Art. 15",
+            "f": "Aplicação — Duas pessoas idosas aguardam atendimento; uma tem 68 anos e outra 83. Existe prioridade especial dentro desse grupo?"
+          },
+          {
+            "b": "Na saúde, confira o art. 15, § 7º, que ressalva as emergências; prioridade não substitui a análise clínica.\nErro a evitar: Trocar o marco geral de pessoa idosa pelo de prioridade especial.\nBase: Art. 3, Art. 15",
+            "f": "Análise — Prioridade entre pessoas idosas: E se houver emergência médica de outra pessoa?"
+          }
+        ],
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15163.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.163/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para modificar as penas dos crimes de abandono de incapaz e de maus-tratos, a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa), para modificar as penas do crime de exposição a perigo da saúde e da integridade física ou psíquica da pessoa idosa, a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a fim de estabelecer penas para o crime de abandono de pessoa com deficiência que resulte em lesão corporal de natureza grave ou em morte, e a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para vedar a aplicação da Lei nº 9.099, de 26 de setembro de 1995, em caso de apreensão indevida de criança ou de adolescente.",
+              "vigency": "Art. 6º Esta Lei entra em vigor na data da sua publicação.",
+              "articles": [
+                "Art. 94",
+                "Art. 99"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+              "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa — texto oficial conferido",
+              "sha256": "e808a5881fc4e1ec0734fc1737bcf4d0c1707e5a0844d7b05efb3ca9e733ee57"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "idosa"
+        }
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Lei 10.741/2003 — Estatuto da Pessoa Idosa.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## 1. O que você precisa compreender\n\nA proteção começa aos sessenta anos. Discriminação, omissão de assistência, desvio de rendimentos e retenção de documentos possuem elementos próprios.\n\n## 2. Conceitos, requisitos e diferenças\n\n| Conceito | Regra de estudo | Atenção de prova |\n|---|---|---|\n| Idade | O estatuto regula direitos de pessoas com sessenta anos ou mais. | Não confunda com idades específicas de prioridade especial. |\n| Discriminação | Art. 96 protege acesso a operações e exercício da cidadania por motivo de idade. | Negativa de crédito motivada por superendividamento tem ressalva própria. |\n| Omissão de assistência | Art. 97 exige observar possibilidade de ajuda sem risco pessoal e demais condutas previstas. | Não se presume dever de executar pessoalmente socorro impossível. |\n| Patrimônio | Art. 102 pune apropriação/desvio de rendimentos; art. 104 trata de retenção para assegurar dívida. | Ter vínculo familiar não elimina a proteção patrimonial. |\n\n## 3. Primeira aplicação\n\nUm familiar desvia a pensão para finalidade própria; outra pessoa retém cartão para garantir dívida. Compare os arts. 102 e 104, sem tratar toda controvérsia patrimonial como o mesmo tipo penal.\n\n> **Vigência e atualização — conferência em 07/10/2026:** A Lei 14.423/2022 atualizou a nomenclatura para Estatuto da Pessoa Idosa. Não conclua que o limite geral passou a sessenta e cinco anos. Penas e formas de crimes não tratados neste módulo devem ser consultadas separadamente no texto atual.\n\n## 4. Escopo e leitura orientada\n\nArts. 1º, 96, 97, 102 e 104. Este módulo é uma revisão temática, não uma reprodução integral do diploma. A indicação de edital identifica a pertinência comprovada para aquele cargo; o candidato deve conferir o edital da sua própria carreira. A versão estudada é a vigente na data da revisão, e não o congelamento da legislação na data da prova histórica.\n\n1. Leia os dispositivos indicados no texto oficial.\n2. Compare sujeito, conduta, requisitos e exceções antes de memorizar números.\n3. Resolva os itens de certo ou errado disponíveis e revise os comentários dos erros.\n4. Retome os cartões em uma segunda sessão sem consultar a tabela.\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 117 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| TÍTULO I Disposições Preliminares | 7 |\n| TÍTULO II Dos Direitos Fundamentais / CAPÍTULO I Do Direito à Vida | 2 |\n| TÍTULO II Dos Direitos Fundamentais / CAPÍTULO II — Do Direito à Liberdade, ao Respeito e à Dignidade | 1 |\n| TÍTULO II Dos Direitos Fundamentais / CAPÍTULO III Dos Alimentos | 4 |\n| TÍTULO II Dos Direitos Fundamentais / CAPÍTULO IV Do Direito à Saúde | 5 |\n| TÍTULO II Dos Direitos Fundamentais / CAPÍTULO V Da Educação, Cultura, Esporte e Lazer | 6 |\n| TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VI Da Profissionalização e do Trabalho | 3 |\n| TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VII Da Previdência Social | 4 |\n| TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VIII Da Assistência Social | 4 |\n| TÍTULO II Dos Direitos Fundamentais / CAPÍTULO IX Da Habitação | 2 |\n| TÍTULO II Dos Direitos Fundamentais / CAPÍTULO X Do Transporte | 4 |\n| TÍTULO III Das Medidas de Proteção / CAPÍTULO I Das Disposições Gerais | 1 |\n| TÍTULO III Das Medidas de Proteção / CAPÍTULO II Das Medidas Específicas de Proteção | 2 |\n| TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO I Disposições Gerais | 2 |\n| TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO II Das Entidades de Atendimento ao Idoso | 4 |\n| TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO III Da Fiscalização das Entidades de Atendimento | 4 |\n| TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO IV Das Infrações Administrativas | 3 |\n| TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO V — Da Apuração Administrativa de Infração às Normas de Proteção à Pessoa Idosa (Redação dada pela Lei nº 14.423, de 2022) | 5 |\n| TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO VI Da Apuração Judicial de Irregularidades em Entidade de Atendimento | 5 |\n| TÍTULO V Do Acesso à Justiça / CAPÍTULO I Disposições Gerais | 3 |\n| TÍTULO V Do Acesso à Justiça / CAPÍTULO II Do Ministério Público | 5 |\n| TÍTULO V Do Acesso à Justiça / CAPÍTULO III Da Proteção Judicial dos Interesses Difusos, Coletivos e Individuais Indisponíveis ou Homogêneos | 15 |\n| TÍTULO VI Dos Crimes / CAPÍTULO I Disposições Gerais | 2 |\n| TÍTULO VI Dos Crimes / CAPÍTULO II Dos Crimes em Espécie | 14 |\n| TÍTULO VII Disposições Finais e Transitórias | 10 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/idosa)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 2 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 34 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n\n\n## Percurso completo e pontos de atualização\n\nOs 117 dispositivos vigentes cadastrados têm explicação individual, caso concreto, variação e exercício com resposta comentada. [Estudar o Estatuto por artigo](/dashboard/legal-course/idosa).\n\n- **Penas e processo — alteração de 2025:** consulte os arts. 94 e 99; compare penas atuais com antigas e a aplicação temporal.\n- **Planos de saúde:** leia o art. 15 com os Temas 952 e 1016 do STJ; vedação de discriminação não significa invalidade automática de todo reajuste.\n- **Remissões históricas:** arts. 69 e 83 citam o CPC antigo; o art. 113 cita a antiga Lei de Drogas revogada. Consulte os diplomas atuais e alertas do percurso.\n",
+        "flashcards": [
+          {
+            "b": "O estatuto regula direitos de pessoas com sessenta anos ou mais. Não confunda com idades específicas de prioridade especial.",
+            "f": "Idade — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 96 protege acesso a operações e exercício da cidadania por motivo de idade. Negativa de crédito motivada por superendividamento tem ressalva própria.",
+            "f": "Discriminação — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 97 exige observar possibilidade de ajuda sem risco pessoal e demais condutas previstas. Não se presume dever de executar pessoalmente socorro impossível.",
+            "f": "Omissão de assistência — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 102 pune apropriação/desvio de rendimentos; art. 104 trata de retenção para assegurar dívida. Ter vínculo familiar não elimina a proteção patrimonial.",
+            "f": "Patrimônio — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Certo. A leitura deve observar as condições e alternativas legais.",
+            "f": "Julgue e justifique: O art. 97 considera a possibilidade de prestar assistência sem risco pessoal."
+          },
+          {
+            "b": "Errado. Essa afirmação elimina condição prevista no tipo.",
+            "f": "Julgue e justifique: O art. 97 exige socorro pessoal mesmo quando impossível sem risco ao agente."
+          },
+          {
+            "b": "Errado. Há ressalva expressa para negativa motivada por superendividamento.",
+            "f": "Julgue e justifique: Toda negativa de crédito a pessoa idosa é necessariamente crime do art. 96."
+          },
+          {
+            "b": "Certo. A proteção não começa apenas aos sessenta e cinco.",
+            "f": "Julgue e justifique: O limite geral do art. 1º é sessenta anos."
+          },
+          {
+            "b": "Certo. Os elementos do tipo devem ser analisados.",
+            "f": "Julgue e justifique: A discriminação por idade no acesso a operações pode integrar o art. 96."
+          },
+          {
+            "b": "Errado. O art. 1º fixa sessenta anos.",
+            "f": "Julgue e justifique: O estatuto só alcança pessoas a partir de sessenta e cinco anos."
+          },
+          {
+            "b": "Errado. Não existe essa autorização geral.",
+            "f": "Julgue e justifique: O parentesco autoriza livre apropriação da pensão."
+          },
+          {
+            "b": "Certo. A norma protege rendimentos da pessoa idosa.",
+            "f": "Julgue e justifique: Desvio de pensão pode integrar o art. 102."
+          },
+          {
+            "b": "O fato narrado demanda exame desse tipo, não simples aceitação da justificativa de cuidado.\n\nO art. 102 alcança apropriar-se ou desviar bens, proventos, pensão ou qualquer outro rendimento, dando aplicação diversa de sua finalidade. A pena prevista é reclusão de um a quatro anos e multa; o vínculo de cuidado não torna a renda propriedade do cuidador.\nBase: Art. 102",
+            "f": "Aplicação — Alguém se apropria do benefício de uma pessoa idosa e o desvia para finalidade diversa, nas condições do art. 102. A alegação de cuidar da vítima elimina o tipo?"
+          },
+          {
+            "b": "Não se presume incapacidade ou crime somente pela idade; autonomia e fatos importam.\nErro a evitar: Tratar toda pessoa idosa como civilmente incapaz.\nBase: Art. 102",
+            "f": "Análise — Idade não autoriza apropriação: E se a pessoa idosa administrar livremente seu dinheiro sem a conduta típica de terceiro?"
+          },
+          {
+            "b": "O caso exige considerar a prioridade especial da pessoa com 83 anos.\n\nO art. 3º, § 2º, assegura prioridade especial aos maiores de 80 anos em relação às demais pessoas idosas. Não confunda o marco geral de 60 anos com a prioridade especial; saúde tem regra e ressalva próprias.\nBase: Art. 3, Art. 15",
+            "f": "Aplicação — Duas pessoas idosas aguardam atendimento; uma tem 68 anos e outra 83. Existe prioridade especial dentro desse grupo?"
+          },
+          {
+            "b": "Na saúde, confira o art. 15, § 7º, que ressalva as emergências; prioridade não substitui a análise clínica.\nErro a evitar: Trocar o marco geral de pessoa idosa pelo de prioridade especial.\nBase: Art. 3, Art. 15",
+            "f": "Análise — Prioridade entre pessoas idosas: E se houver emergência médica de outra pessoa?"
+          },
+          {
+            "f": "Art. 1 — É preciso ter sessenta e cinco anos para ser abrangido?",
+            "b": "Não; a regra geral começa aos sessenta."
+          },
+          {
+            "f": "Art. 3 — A restituição do Imposto de Renda está na lista de prioridades?",
+            "b": "Sim; consta do inciso IX do §1º."
+          },
+          {
+            "f": "Art. 15 — Todo reajuste etário é necessariamente inválido?",
+            "b": "Não; examine os requisitos do Tema 952 e, para coletivos, o Tema 1016. Reajuste abusivo ou discriminatório não é legitimado."
+          },
+          {
+            "f": "Art. 19 — Somente hospitais públicos precisam notificar?",
+            "b": "Não; serviços públicos e privados estão abrangidos."
+          },
+          {
+            "f": "Art. 23 — Desconto de sessenta por cento contraria o artigo?",
+            "b": "Não; supera o mínimo de cinquenta."
+          },
+          {
+            "f": "Art. 27 — O desempate previsto favorece o mais jovem?",
+            "b": "Não; favorece a idade mais elevada."
+          },
+          {
+            "f": "Art. 34 — O benefício exige contribuição previdenciária neste artigo?",
+            "b": "Não; é assistencial, nos termos da Loas."
+          },
+          {
+            "f": "Art. 35 — A participação no custeio é obrigatória no §1º?",
+            "b": "Não; a cobrança é facultada."
+          },
+          {
+            "f": "Art. 39 — A reserva urbana é de duas vagas por veículo?",
+            "b": "Não; o §2º prevê dez por cento dos assentos. As duas vagas pertencem ao art. 40."
+          },
+          {
+            "f": "Art. 40 — O desconto pode ser inferior a cinquenta por cento?",
+            "b": "Não; cinquenta é o mínimo legal."
+          },
+          {
+            "f": "Art. 69 — A remissão autoriza ignorar prazos do Estatuto?",
+            "b": "Não; o artigo expressamente os preserva."
+          },
+          {
+            "f": "Art. 77 — Somente uma parte pode pedir a nulidade?",
+            "b": "Não; também pode ser declarada de ofício ou requerida por interessado."
+          },
+          {
+            "f": "Art. 94 — A exclusão depende da pena máxima superar dois anos?",
+            "b": "Não; o parágrafo único usa independentemente da pena prevista."
+          },
+          {
+            "f": "Art. 99 — A forma com morte tem pena atual de quatro a doze anos?",
+            "b": "Não; oito a quatorze anos de reclusão."
+          },
+          {
+            "f": "Art. 110 — Toda transcrição modificadora de 2003 é automaticamente a redação atual do CP?",
+            "b": "Não; precisa ser confrontada com alterações posteriores."
+          },
+          {
+            "f": "Art. 113 — A Lei 6.368 continua vigente por ser citada aqui?",
+            "b": "Não; foi revogada pelo art. 75 da Lei 11.343/2006."
+          },
+          {
+            "f": "Art. 114 — O rol reproduzido aqui esgota os beneficiários atuais?",
+            "b": "Não; houve alterações posteriores."
+          },
+          {
+            "f": "Art. 115 — A condição até criação demonstra inexistência atual do fundo?",
+            "b": "Não; ele foi instituído em 2010."
+          }
+        ],
+        "law_version_checked_at": "2026-10-11T20:38:07.939265+00:00",
+        "legal_review": {
+          "scope": "117 dispositivos vigentes cadastrados conferidos na fonte oficial, com explicação, caso, variação e resposta de fixação para cada um. Jurisprudência e remissões históricas identificadas; não certifica todas as decisões ou todos os editais.",
+          "changes": [
+            {
+              "title": "Lei 15.163/2025 — penas e processo penal",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15163.htm",
+              "state": "effective",
+              "articles": [
+                "Art. 94",
+                "Art. 99"
+              ],
+              "summary": "Art. 94: Lei 9.099 não se aplica aos crimes do Estatuto nem aos crimes com violência contra pessoa idosa, independentemente da pena. Art. 99: reclusão de 2–5 anos; lesão grave 3–7; morte 8–14. Compare a lei penal no tempo; não copie penas antigas como atuais.",
+              "vigency": "Alteração de 2025 em vigor; art. 6º da lei alteradora prevê vigência na publicação."
+            },
+            {
+              "title": "STJ — Temas 952 e 1016: reajuste por faixa etária",
+              "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=952&cod_tema_inicial=952&novaConsulta=true&tipo_pesquisa=T",
+              "state": "reference",
+              "articles": [
+                "Art. 15, §3º"
+              ],
+              "summary": "Vedação de discriminação não invalida automaticamente todo reajuste etário. Exigem-se previsão contratual, normas regulatórias e base atuarial idônea, sem abuso ou discriminação. O Tema 1016 aplica as teses aos coletivos, ressalvando autogestão quanto ao CDC.",
+              "vigency": "Precedentes qualificados conferidos diretamente em 11/10/2026; não são alteração da redação legal."
+            },
+            {
+              "title": "CPC vigente: remissões e nulidades",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+              "state": "reference",
+              "articles": [
+                "Art. 69",
+                "Art. 77",
+                "Art. 83"
+              ],
+              "summary": "O CPC de 1973 foi revogado. Confira correspondência e transição do art. 1.046. A nulidade por falta de intervenção do MP requer sua intimação para manifestação sobre prejuízo, conforme art. 279, §2º.",
+              "vigency": "Aplicar a disciplina processual vigente, com regras especiais e transitórias do caso."
+            },
+            {
+              "title": "Remissão histórica: antiga Lei de Drogas revogada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+              "state": "expired",
+              "articles": [
+                "Art. 113"
+              ],
+              "summary": "A Lei 6.368/1976 citada no art. 113 foi revogada pelo art. 75 da Lei 11.343/2006. Para drogas, estudar a lei atual, sem copiar a antiga majorante de menores de 21 anos.",
+              "vigency": "Transcrição modificadora histórica; o diploma antigo não está vigente."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+              "sha256": "bbddf3d14cc4877d4f62341acf29efdaef9010cd45c8760a7e75040237cd4ea5"
+            },
+            {
+              "title": "stj-tema-952",
+              "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=952&cod_tema_inicial=952&novaConsulta=true&tipo_pesquisa=T",
+              "sha256": "b532b1887c3c6593176e3bc320faa9c9b6a86eca3725eeb98c34baec3f84455f"
+            },
+            {
+              "title": "stj-tema-1016",
+              "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1016&cod_tema_inicial=1016&novaConsulta=true&tipo_pesquisa=T",
+              "sha256": "83e37e410198b56340953c9c1b4b4263e810b5965cc3d66e247f57306e3443cd"
+            },
+            {
+              "title": "Código de Processo Civil — Lei 13.105/2015",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+              "sha256": "edc3ec5e2a3478b48415fa251382d487caa41a899e85c47acf8a33c4be9c5fc3"
+            },
+            {
+              "title": "Política Nacional da Pessoa Idosa — Lei 8.842/1994",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8842.htm",
+              "sha256": "2ba610d2e599f04839e837915fdcf112f49517263e892ab3291df337554ae0e1"
+            },
+            {
+              "title": "Atendimento prioritário — Lei 10.048/2000",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l10048.htm",
+              "sha256": "77615455be63a05cd524f7873197b82d4898ee5d53bee34118bac3168d138e64"
+            },
+            {
+              "title": "Fundo Nacional da Pessoa Idosa — Lei 12.213/2010",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12213.htm",
+              "sha256": "b3bc43086980781f820395f224ef4e30124c6855dae454fb97b5160d238ea872"
+            },
+            {
+              "title": "codigo-penal",
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+              "sha256": "dcfa2d2a605de5ac6896cc79e85c8880b11ef51a5a8b96f797660c582a5c52ff"
+            },
+            {
+              "title": "codigo-processo-penal",
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+              "sha256": "8b203895d0121a54facae748f4423f5a245c037b0eca13039e8ebb30bb11c0ee"
+            },
+            {
+              "title": "tortura",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+              "sha256": "dde1996257896984a2789c926f6936732209dda9cb6e73313f917870550ac53e"
+            },
+            {
+              "title": "contravencoes",
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+              "sha256": "117cc3fea572b8ddc50eef709ffd63672a4944102afbf4f46d11680e44b5b032"
+            },
+            {
+              "title": "drogas",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+              "sha256": "dfc0e50e441f34a61ab249ccf0b9aee9982ea4eb2bc5471439e3daaf2f1e3ed8"
+            },
+            {
+              "title": "Constituição Federal — art. 12, §4º, redação da EC 131/2023",
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+              "sha256": "249bc8f42e023faf2d7e70152e8f01fe06166ec28b6e2b75cd27c5e1a8e664ef"
+            }
+          ],
+          "checked_at": "2026-10-11T20:38:07.939265+00:00",
+          "corrections": [
+            "Completado o percurso por dispositivo, preservando o veto do art. 72 fora da leitura ativa.",
+            "Conferidos diretamente os Temas 952 e 1016 do STJ e remissões ao CPC vigente.",
+            "Destacadas penas de 2025 e exclusão da Lei 9.099; identificadas transcrições históricas substituídas."
+          ],
+          "course_slug": "idosa"
+        }
+      }
+    }
+  ],
+  "courses": [
+    {
+      "id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+      "expected": {
+        "id": "4467b2b1-5e53-50fb-b1c3-de787cec438c",
+        "slug": "idosa",
+        "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+        "source_sha256": "e808a5881fc4e1ec0734fc1737bcf4d0c1707e5a0844d7b05efb3ca9e733ee57",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-idosa-revisao",
+        "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+        "overview": {
+          "intro": "A proteção começa aos sessenta anos. Discriminação, omissão de assistência, desvio de rendimentos e retenção de documentos possuem elementos próprios.",
+          "alerts": "A Lei 14.423/2022 atualizou a nomenclatura para Estatuto da Pessoa Idosa. Não conclua que o limite geral passou a sessenta e cinco anos. Penas e formas de crimes não tratados neste módulo devem ser consultadas separadamente no texto atual.",
+          "contest": "PCDF — Delegado — Edital 2026",
+          "chapters": [
+            {
+              "count": 7,
+              "title": "TÍTULO I Disposições Preliminares"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO I Do Direito à Vida"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO II — Do Direito à Liberdade, ao Respeito e à Dignidade"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO III Dos Alimentos"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO IV Do Direito à Saúde"
+            },
+            {
+              "count": 6,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO V Da Educação, Cultura, Esporte e Lazer"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VI Da Profissionalização e do Trabalho"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VII Da Previdência Social"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO VIII Da Assistência Social"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO IX Da Habitação"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO II Dos Direitos Fundamentais / CAPÍTULO X Do Transporte"
+            },
+            {
+              "count": 1,
+              "title": "TÍTULO III Das Medidas de Proteção / CAPÍTULO I Das Disposições Gerais"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO III Das Medidas de Proteção / CAPÍTULO II Das Medidas Específicas de Proteção"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO I Disposições Gerais"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO II Das Entidades de Atendimento ao Idoso"
+            },
+            {
+              "count": 4,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO III Da Fiscalização das Entidades de Atendimento"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO IV Das Infrações Administrativas"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO V — Da Apuração Administrativa de Infração às Normas de Proteção à Pessoa Idosa (Redação dada pela Lei nº 14.423, de 2022)"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO IV Da Política de Atendimento ao Idoso / CAPÍTULO VI Da Apuração Judicial de Irregularidades em Entidade de Atendimento"
+            },
+            {
+              "count": 3,
+              "title": "TÍTULO V Do Acesso à Justiça / CAPÍTULO I Disposições Gerais"
+            },
+            {
+              "count": 5,
+              "title": "TÍTULO V Do Acesso à Justiça / CAPÍTULO II Do Ministério Público"
+            },
+            {
+              "count": 15,
+              "title": "TÍTULO V Do Acesso à Justiça / CAPÍTULO III Da Proteção Judicial dos Interesses Difusos, Coletivos e Individuais Indisponíveis ou Homogêneos"
+            },
+            {
+              "count": 2,
+              "title": "TÍTULO VI Dos Crimes / CAPÍTULO I Disposições Gerais"
+            },
+            {
+              "count": 14,
+              "title": "TÍTULO VI Dos Crimes / CAPÍTULO II Dos Crimes em Espécie"
+            },
+            {
+              "count": 10,
+              "title": "TÍTULO VII Disposições Finais e Transitórias"
+            }
+          ],
+          "objectives": [
+            "Estudar direitos, prioridades, políticas e medidas de proteção.",
+            "Organizar atendimento, entidades, fiscalização e acesso à Justiça.",
+            "Comparar crimes, elementos especiais, penas e exceções."
+          ],
+          "current_units": 117,
+          "jurisprudence": [],
+          "excluded_units": 1,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15163.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.163/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para modificar as penas dos crimes de abandono de incapaz e de maus-tratos, a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa), para modificar as penas do crime de exposição a perigo da saúde e da integridade física ou psíquica da pessoa idosa, a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a fim de estabelecer penas para o crime de abandono de pessoa com deficiência que resulte em lesão corporal de natureza grave ou em morte, e a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para vedar a aplicação da Lei nº 9.099, de 26 de setembro de 1995, em caso de apreensão indevida de criança ou de adolescente.",
+              "vigency": "Art. 6º Esta Lei entra em vigor na data da sua publicação.",
+              "articles": [
+                "Art. 94",
+                "Art. 99"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+              "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa — texto oficial conferido",
+              "sha256": "e808a5881fc4e1ec0734fc1737bcf4d0c1707e5a0844d7b05efb3ca9e733ee57"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "idosa"
+        }
+      },
+      "patch": {
+        "checked_at": "2026-10-11T20:38:07.939265+00:00",
+        "source_sha256": "bbddf3d14cc4877d4f62341acf29efdaef9010cd45c8760a7e75040237cd4ea5",
+        "legal_review": {
+          "scope": "117 dispositivos vigentes cadastrados conferidos na fonte oficial, com explicação, caso, variação e resposta de fixação para cada um. Jurisprudência e remissões históricas identificadas; não certifica todas as decisões ou todos os editais.",
+          "changes": [
+            {
+              "title": "Lei 15.163/2025 — penas e processo penal",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15163.htm",
+              "state": "effective",
+              "articles": [
+                "Art. 94",
+                "Art. 99"
+              ],
+              "summary": "Art. 94: Lei 9.099 não se aplica aos crimes do Estatuto nem aos crimes com violência contra pessoa idosa, independentemente da pena. Art. 99: reclusão de 2–5 anos; lesão grave 3–7; morte 8–14. Compare a lei penal no tempo; não copie penas antigas como atuais.",
+              "vigency": "Alteração de 2025 em vigor; art. 6º da lei alteradora prevê vigência na publicação."
+            },
+            {
+              "title": "STJ — Temas 952 e 1016: reajuste por faixa etária",
+              "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=952&cod_tema_inicial=952&novaConsulta=true&tipo_pesquisa=T",
+              "state": "reference",
+              "articles": [
+                "Art. 15, §3º"
+              ],
+              "summary": "Vedação de discriminação não invalida automaticamente todo reajuste etário. Exigem-se previsão contratual, normas regulatórias e base atuarial idônea, sem abuso ou discriminação. O Tema 1016 aplica as teses aos coletivos, ressalvando autogestão quanto ao CDC.",
+              "vigency": "Precedentes qualificados conferidos diretamente em 11/10/2026; não são alteração da redação legal."
+            },
+            {
+              "title": "CPC vigente: remissões e nulidades",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+              "state": "reference",
+              "articles": [
+                "Art. 69",
+                "Art. 77",
+                "Art. 83"
+              ],
+              "summary": "O CPC de 1973 foi revogado. Confira correspondência e transição do art. 1.046. A nulidade por falta de intervenção do MP requer sua intimação para manifestação sobre prejuízo, conforme art. 279, §2º.",
+              "vigency": "Aplicar a disciplina processual vigente, com regras especiais e transitórias do caso."
+            },
+            {
+              "title": "Remissão histórica: antiga Lei de Drogas revogada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+              "state": "expired",
+              "articles": [
+                "Art. 113"
+              ],
+              "summary": "A Lei 6.368/1976 citada no art. 113 foi revogada pelo art. 75 da Lei 11.343/2006. Para drogas, estudar a lei atual, sem copiar a antiga majorante de menores de 21 anos.",
+              "vigency": "Transcrição modificadora histórica; o diploma antigo não está vigente."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+              "sha256": "bbddf3d14cc4877d4f62341acf29efdaef9010cd45c8760a7e75040237cd4ea5"
+            },
+            {
+              "title": "stj-tema-952",
+              "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=952&cod_tema_inicial=952&novaConsulta=true&tipo_pesquisa=T",
+              "sha256": "b532b1887c3c6593176e3bc320faa9c9b6a86eca3725eeb98c34baec3f84455f"
+            },
+            {
+              "title": "stj-tema-1016",
+              "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1016&cod_tema_inicial=1016&novaConsulta=true&tipo_pesquisa=T",
+              "sha256": "83e37e410198b56340953c9c1b4b4263e810b5965cc3d66e247f57306e3443cd"
+            },
+            {
+              "title": "Código de Processo Civil — Lei 13.105/2015",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+              "sha256": "edc3ec5e2a3478b48415fa251382d487caa41a899e85c47acf8a33c4be9c5fc3"
+            },
+            {
+              "title": "Política Nacional da Pessoa Idosa — Lei 8.842/1994",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8842.htm",
+              "sha256": "2ba610d2e599f04839e837915fdcf112f49517263e892ab3291df337554ae0e1"
+            },
+            {
+              "title": "Atendimento prioritário — Lei 10.048/2000",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l10048.htm",
+              "sha256": "77615455be63a05cd524f7873197b82d4898ee5d53bee34118bac3168d138e64"
+            },
+            {
+              "title": "Fundo Nacional da Pessoa Idosa — Lei 12.213/2010",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12213.htm",
+              "sha256": "b3bc43086980781f820395f224ef4e30124c6855dae454fb97b5160d238ea872"
+            },
+            {
+              "title": "codigo-penal",
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+              "sha256": "dcfa2d2a605de5ac6896cc79e85c8880b11ef51a5a8b96f797660c582a5c52ff"
+            },
+            {
+              "title": "codigo-processo-penal",
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+              "sha256": "8b203895d0121a54facae748f4423f5a245c037b0eca13039e8ebb30bb11c0ee"
+            },
+            {
+              "title": "tortura",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+              "sha256": "dde1996257896984a2789c926f6936732209dda9cb6e73313f917870550ac53e"
+            },
+            {
+              "title": "contravencoes",
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+              "sha256": "117cc3fea572b8ddc50eef709ffd63672a4944102afbf4f46d11680e44b5b032"
+            },
+            {
+              "title": "drogas",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+              "sha256": "dfc0e50e441f34a61ab249ccf0b9aee9982ea4eb2bc5471439e3daaf2f1e3ed8"
+            },
+            {
+              "title": "Constituição Federal — art. 12, §4º, redação da EC 131/2023",
+              "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+              "sha256": "249bc8f42e023faf2d7e70152e8f01fe06166ec28b6e2b75cd27c5e1a8e664ef"
+            }
+          ],
+          "checked_at": "2026-10-11T20:38:07.939265+00:00",
+          "corrections": [
+            "Completado o percurso por dispositivo, preservando o veto do art. 72 fora da leitura ativa.",
+            "Conferidos diretamente os Temas 952 e 1016 do STJ e remissões ao CPC vigente.",
+            "Destacadas penas de 2025 e exclusão da Lei 9.099; identificadas transcrições históricas substituídas."
+          ],
+          "course_slug": "idosa"
+        }
+      }
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "30fac07a-2a32-5dba-8417-b5e37300562d",
+      "expected": {
+        "id": "30fac07a-2a32-5dba-8417-b5e37300562d",
+        "material_slug": "legislacao-penal-especial-estatuto-idoso",
+        "version": "2026-10-05",
+        "source_body_sha256": "4a6e656a7dd4a5ab105f1f5c7d97bea41c18b4c4c25fd18d57fc73c062a4ffc6",
+        "content": {
+          "cases": [
+            {
+              "id": "case-1",
+              "steps": [
+                "O art. 102 alcança apropriar-se ou desviar bens, proventos, pensão ou qualquer outro rendimento, dando aplicação diversa de sua finalidade.",
+                "A pena prevista é reclusão de um a quatro anos e multa; o vínculo de cuidado não torna a renda propriedade do cuidador."
+              ],
+              "title": "Idade não autoriza apropriação",
+              "pitfall": "Tratar toda pessoa idosa como civilmente incapaz.",
+              "articles": [
+                "Art. 102"
+              ],
+              "question": "A alegação de cuidar da vítima elimina o tipo?",
+              "scenario": "Alguém se apropria do benefício de uma pessoa idosa e o desvia para finalidade diversa, nas condições do art. 102.",
+              "variation": {
+                "answer": "Não se presume incapacidade ou crime somente pela idade; autonomia e fatos importam.",
+                "scenario": "E se a pessoa idosa administrar livremente seu dinheiro sem a conduta típica de terceiro?"
+              },
+              "conclusion": "O fato narrado demanda exame desse tipo, não simples aceitação da justificativa de cuidado."
+            }
+          ],
+          "illustrations": [
+            {
+              "kind": "flow",
+              "nodes": [
+                "Idade não autoriza apropriação",
+                "A alegação de cuidar da vítima elimina o tipo?",
+                "Separar os dados relevantes da regra aplicável",
+                "Conferir as condições e testar a variação"
+              ],
+              "title": "Mapa do raciocínio",
+              "caption": "Observe a sequência de análise e confira os dados do caso abaixo."
+            }
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+            "title": "Lei 10.741/2003 — proteção penal da pessoa idosa — texto oficial atualizado",
+            "sha256": "16786b7193386e79eda9e03197fae11f0b3eee99a3bbecd158f60a2f138723ca",
+            "checked_at": "2026-10-05T04:33:23.250940+00:00"
+          }
+        ],
+        "checked_at": "2026-10-05T04:50:24.464194+00:00",
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-05T05:00:59.964+00:00"
+      },
+      "patch": {
+        "source_body_sha256": "9c21c6fae4534663346eb2a171a92c36643651b8dc0d3fabf1f6fa54bc3e6d55"
+      }
+    },
+    {
+      "id": "219dc579-7581-5f11-96f9-252ca577c675",
+      "expected": {
+        "id": "219dc579-7581-5f11-96f9-252ca577c675",
+        "material_slug": "legislacao-idosa-revisao",
+        "version": "2026-10-05",
+        "source_body_sha256": "456eaa256483ea9bd1fdbfd66aa6f7e3a8e291a7f5ddd2ac921640e6dd7038a1",
+        "content": {
+          "cases": [
+            {
+              "id": "case-1",
+              "steps": [
+                "O art. 102 alcança apropriar-se ou desviar bens, proventos, pensão ou qualquer outro rendimento, dando aplicação diversa de sua finalidade.",
+                "A pena prevista é reclusão de um a quatro anos e multa; o vínculo de cuidado não torna a renda propriedade do cuidador."
+              ],
+              "title": "Idade não autoriza apropriação",
+              "pitfall": "Tratar toda pessoa idosa como civilmente incapaz.",
+              "articles": [
+                "Art. 102"
+              ],
+              "question": "A alegação de cuidar da vítima elimina o tipo?",
+              "scenario": "Alguém se apropria do benefício de uma pessoa idosa e o desvia para finalidade diversa, nas condições do art. 102.",
+              "variation": {
+                "answer": "Não se presume incapacidade ou crime somente pela idade; autonomia e fatos importam.",
+                "scenario": "E se a pessoa idosa administrar livremente seu dinheiro sem a conduta típica de terceiro?"
+              },
+              "conclusion": "O fato narrado demanda exame desse tipo, não simples aceitação da justificativa de cuidado."
+            }
+          ],
+          "illustrations": [
+            {
+              "kind": "flow",
+              "nodes": [
+                "Idade não autoriza apropriação",
+                "A alegação de cuidar da vítima elimina o tipo?",
+                "Separar os dados relevantes da regra aplicável",
+                "Conferir as condições e testar a variação"
+              ],
+              "title": "Mapa do raciocínio",
+              "caption": "Observe a sequência de análise e confira os dados do caso abaixo."
+            }
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+            "title": "Lei 10.741/2003 — proteção penal da pessoa idosa — texto oficial atualizado",
+            "sha256": "16786b7193386e79eda9e03197fae11f0b3eee99a3bbecd158f60a2f138723ca",
+            "checked_at": "2026-10-05T04:33:23.250940+00:00"
+          }
+        ],
+        "checked_at": "2026-10-05T04:50:24.464194+00:00",
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-05T05:00:51.522+00:00"
+      },
+      "patch": {
+        "source_body_sha256": "e417311c3cad5e5d809fc329a0fbf7976c8747af633a68d503c637da6f1086af"
+      }
+    },
+    {
+      "id": "3e2db317-12c3-56d4-9e8e-e6d9e3a40a62",
+      "expected": {
+        "id": "3e2db317-12c3-56d4-9e8e-e6d9e3a40a62",
+        "material_slug": "legislacao-idosa-revisao",
+        "version": "2026-10-07",
+        "source_body_sha256": "456eaa256483ea9bd1fdbfd66aa6f7e3a8e291a7f5ddd2ac921640e6dd7038a1",
+        "content": {
+          "cases": [
+            {
+              "id": "case-1",
+              "steps": [
+                "O art. 102 alcança apropriar-se ou desviar bens, proventos, pensão ou qualquer outro rendimento, dando aplicação diversa de sua finalidade.",
+                "A pena prevista é reclusão de um a quatro anos e multa; o vínculo de cuidado não torna a renda propriedade do cuidador."
+              ],
+              "title": "Idade não autoriza apropriação",
+              "pitfall": "Tratar toda pessoa idosa como civilmente incapaz.",
+              "articles": [
+                "Art. 102"
+              ],
+              "question": "A alegação de cuidar da vítima elimina o tipo?",
+              "scenario": "Alguém se apropria do benefício de uma pessoa idosa e o desvia para finalidade diversa, nas condições do art. 102.",
+              "variation": {
+                "answer": "Não se presume incapacidade ou crime somente pela idade; autonomia e fatos importam.",
+                "scenario": "E se a pessoa idosa administrar livremente seu dinheiro sem a conduta típica de terceiro?"
+              },
+              "conclusion": "O fato narrado demanda exame desse tipo, não simples aceitação da justificativa de cuidado."
+            },
+            {
+              "id": "tutor-1",
+              "steps": [
+                "O art. 3º, § 2º, assegura prioridade especial aos maiores de 80 anos em relação às demais pessoas idosas.",
+                "Não confunda o marco geral de 60 anos com a prioridade especial; saúde tem regra e ressalva próprias."
+              ],
+              "title": "Prioridade entre pessoas idosas",
+              "pitfall": "Trocar o marco geral de pessoa idosa pelo de prioridade especial.",
+              "articles": [
+                "Art. 3",
+                "Art. 15"
+              ],
+              "question": "Existe prioridade especial dentro desse grupo?",
+              "scenario": "Duas pessoas idosas aguardam atendimento; uma tem 68 anos e outra 83.",
+              "variation": {
+                "answer": "Na saúde, confira o art. 15, § 7º, que ressalva as emergências; prioridade não substitui a análise clínica.",
+                "scenario": "E se houver emergência médica de outra pessoa?"
+              },
+              "conclusion": "O caso exige considerar a prioridade especial da pessoa com 83 anos."
+            }
+          ],
+          "illustrations": [
+            {
+              "kind": "flow",
+              "nodes": [
+                "Identifique os fatos e a norma",
+                "Confira sujeitos e requisitos",
+                "Compare exceções e vigência",
+                "Aplique a consequência e teste a variação"
+              ],
+              "title": "Como analisar Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+              "caption": "Use a sequência nos casos, depois explique por que a variação muda (ou mantém) a conclusão."
+            }
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+            "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa — texto oficial",
+            "sha256": "17d71abe283e5a9c10cf82e6bc533e82f6b65ec3d71b03b9a3d19ab49471107e",
+            "checked_at": "2026-10-08T00:00:42.689713Z"
+          }
+        ],
+        "checked_at": "2026-10-08T00:00:42.689713+00:00",
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-08T00:06:39.241+00:00"
+      },
+      "patch": {
+        "source_body_sha256": "e417311c3cad5e5d809fc329a0fbf7976c8747af633a68d503c637da6f1086af"
+      }
+    },
+    {
+      "id": "d49509d7-4443-5712-b4ba-c343fea8d38f",
+      "expected": {
+        "id": "d49509d7-4443-5712-b4ba-c343fea8d38f",
+        "material_slug": "legislacao-idosa-revisao",
+        "version": "2026-10-09",
+        "source_body_sha256": "456eaa256483ea9bd1fdbfd66aa6f7e3a8e291a7f5ddd2ac921640e6dd7038a1",
+        "content": {
+          "cases": [
+            {
+              "id": "case-1",
+              "steps": [
+                "O art. 102 alcança apropriar-se ou desviar bens, proventos, pensão ou qualquer outro rendimento, dando aplicação diversa de sua finalidade.",
+                "A pena prevista é reclusão de um a quatro anos e multa; o vínculo de cuidado não torna a renda propriedade do cuidador."
+              ],
+              "title": "Idade não autoriza apropriação",
+              "pitfall": "Tratar toda pessoa idosa como civilmente incapaz.",
+              "articles": [
+                "Art. 102"
+              ],
+              "question": "A alegação de cuidar da vítima elimina o tipo?",
+              "scenario": "Alguém se apropria do benefício de uma pessoa idosa e o desvia para finalidade diversa, nas condições do art. 102.",
+              "variation": {
+                "answer": "Não se presume incapacidade ou crime somente pela idade; autonomia e fatos importam.",
+                "scenario": "E se a pessoa idosa administrar livremente seu dinheiro sem a conduta típica de terceiro?"
+              },
+              "conclusion": "O fato narrado demanda exame desse tipo, não simples aceitação da justificativa de cuidado."
+            },
+            {
+              "id": "tutor-1",
+              "steps": [
+                "O art. 3º, § 2º, assegura prioridade especial aos maiores de 80 anos em relação às demais pessoas idosas.",
+                "Não confunda o marco geral de 60 anos com a prioridade especial; saúde tem regra e ressalva próprias."
+              ],
+              "title": "Prioridade entre pessoas idosas",
+              "pitfall": "Trocar o marco geral de pessoa idosa pelo de prioridade especial.",
+              "articles": [
+                "Art. 3",
+                "Art. 15"
+              ],
+              "question": "Existe prioridade especial dentro desse grupo?",
+              "scenario": "Duas pessoas idosas aguardam atendimento; uma tem 68 anos e outra 83.",
+              "variation": {
+                "answer": "Na saúde, confira o art. 15, § 7º, que ressalva as emergências; prioridade não substitui a análise clínica.",
+                "scenario": "E se houver emergência médica de outra pessoa?"
+              },
+              "conclusion": "O caso exige considerar a prioridade especial da pessoa com 83 anos."
+            },
+            {
+              "id": "idosa-1",
+              "steps": [
+                "A Lei 9.099/1995 trata como menor potencial ofensivo o crime cuja pena máxima não passa de 2 anos.",
+                "O parágrafo único do art. 94 do Estatuto (incluído pela Lei 15.163/2025) afasta a Lei 9.099 dos crimes previstos no Estatuto e dos crimes praticados com violência contra a pessoa idosa, independentemente da pena prevista.",
+                "Houve violência contra pessoa idosa. Logo, não cabem transação penal nem rito sumaríssimo."
+              ],
+              "title": "Agressão leve contra pessoa idosa não vai ao Juizado",
+              "pitfall": "Decidir só pela pena máxima. Para a pessoa idosa, a violência tira o caso do Juizado.",
+              "articles": [
+                "Art. 94"
+              ],
+              "question": "A Lei 9.099 pode ser aplicada ao caso só porque a pena máxima é baixa?",
+              "scenario": "Um filho agride levemente a mãe, de 72 anos, causando uma lesão leve. A pena máxima do crime comum, isoladamente, caberia no Juizado Especial.",
+              "variation": {
+                "answer": "O parágrafo único do art. 94 alcança os crimes do Estatuto e os cometidos com violência. Sem uma dessas situações, vale a regra geral da Lei 9.099.",
+                "scenario": "E se o crime fosse comum, sem violência, com pena máxima de 1 ano?"
+              },
+              "conclusion": "Não. O parágrafo único do art. 94 afasta a Lei 9.099 na hipótese de crime com violência contra pessoa idosa, independentemente da pena prevista."
+            },
+            {
+              "id": "idosa-2",
+              "steps": [
+                "O art. 99 pune expor a perigo a integridade e a saúde, física ou psíquica, da pessoa idosa, submetendo-a a condições desumanas ou degradantes ou privando-a de alimentos e cuidados indispensáveis.",
+                "Conforme a conferência na fonte oficial, a pena hoje é reclusão de 2 a 5 anos (redação da Lei 15.163/2025). Antes era detenção de 2 meses a 1 ano.",
+                "Como é crime do Estatuto, o parágrafo único do art. 94 afasta a Lei 9.099."
+              ],
+              "title": "Privar a pessoa idosa de alimentos e cuidados",
+              "pitfall": "Usar a pena antiga (detenção, 2 meses a 1 ano) do art. 99.",
+              "articles": [
+                "Art. 99",
+                "Art. 94",
+                "Art. 102"
+              ],
+              "question": "Que crime é esse e qual é a pena atual?",
+              "scenario": "Uma cuidadora deixa uma idosa acamada sem alimentação adequada e sem os cuidados indispensáveis por vários dias.",
+              "variation": {
+                "answer": "O fato se aproxima do art. 102, apropriação ou desvio de bens e proventos da pessoa idosa, com reclusão de 1 a 4 anos e multa.",
+                "scenario": "E se um parente apenas usasse a aposentadoria da idosa para pagar contas dele?"
+              },
+              "conclusion": "Com os elementos de exposição a perigo e dever de cuidado descritos, o caso deve ser confrontado com o art. 99, cuja pena atual do caput é reclusão de 2 a 5 anos. O art. 94 afasta a Lei 9.099 para os crimes do Estatuto."
+            }
+          ],
+          "illustrations": [
+            {
+              "kind": "flow",
+              "nodes": [
+                "Identifique os fatos e a norma",
+                "Confira sujeitos e requisitos",
+                "Compare exceções e vigência",
+                "Aplique a consequência e teste a variação"
+              ],
+              "title": "Como analisar Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+              "caption": "Use a sequência nos casos, depois explique por que a variação muda (ou mantém) a conclusão."
+            }
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+            "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa — texto oficial conferido",
+            "sha256": "e808a5881fc4e1ec0734fc1737bcf4d0c1707e5a0844d7b05efb3ca9e733ee57",
+            "checked_at": "2026-10-10T02:44:16.419918+00:00"
+          }
+        ],
+        "checked_at": "2026-10-11T20:33:52.668+00:00",
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T20:33:52.668+00:00"
+      },
+      "patch": {
+        "source_body_sha256": "e417311c3cad5e5d809fc329a0fbf7976c8747af633a68d503c637da6f1086af"
+      }
+    }
+  ]
+}

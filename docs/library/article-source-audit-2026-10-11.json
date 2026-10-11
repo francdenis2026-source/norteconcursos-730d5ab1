@@ -5809,5 +5809,6 @@
       "source_sha256": "dfc0e50e441f34a61ab249ccf0b9aee9982ea4eb2bc5471439e3daaf2f1e3ed8",
       "source_checked_at": "2026-10-11T18:39:41.491868+00:00"
     }
-  ]
+  ],
+  "qualification": "Historical same-parser comparison. Superseded as an integrity claim by article-html5-audit-2026-10-11.json: omissions and boundary errors were found and corrected. Do not interpret source_mismatches=0 as proof of complete extraction."
 }
