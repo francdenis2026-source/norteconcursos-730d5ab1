@@ -59,7 +59,7 @@ test('Legal highlights preserve source characters, classify full expressions and
  const formatted=renderToStaticMarkup(React.createElement(reading.LegalStudyReading,{source:'## Caso concreto\n\n**Salvo** grave ameaça. [Lei](https://www.planalto.gov.br/ccivil_03/leis/l11343.htm)',markdown:true}));
  assert.match(formatted,/study-example/);assert.match(formatted,/legal-highlight-exception/);assert.match(formatted,/href="https:\/\/www.planalto.gov.br/);
  const route=readFileSync('src/routes/dashboard/legal-course.$slug.tsx','utf8');
- assert.match(route,/\(mode === "read" \|\| revealed\)/);
+ assert.match(route,/step === "texto" \|\| \(step === "fixar" && revealed\)/);
  assert.match(route,/LegalStudyReading source=\{unit.body_text\}/);
 });
 

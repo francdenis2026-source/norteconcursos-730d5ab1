@@ -1,0 +1,682 @@
+{
+  "course_slug": "codigo-penal",
+  "law": "Código Penal (Decreto-Lei 2.848/1940) — lote 01: arts. 2º a 29",
+  "units": {
+    "art-2": {
+      "simples": "Trata da lei penal no tempo. Ninguém pode ser punido por fato que lei posterior deixa de considerar crime (abolitio criminis): cessam a execução e os efeitos penais da condenação. E a lei posterior que, de qualquer modo, favorecer o agente se aplica aos fatos anteriores, mesmo que já exista sentença condenatória transitada em julgado.",
+      "pontos": [
+        "Abolitio criminis: a lei nova deixa de considerar o fato crime e cessam a execução e os efeitos penais da sentença.",
+        "Lei posterior mais favorável retroage, inclusive sobre fatos já decididos por sentença com trânsito em julgado."
+      ],
+      "atencao": [
+        "Retroage a lei MAIS BENÉFICA (novatio legis in mellius); a lei mais gravosa não retroage.",
+        "A abolição elimina os efeitos PENAIS da condenação; efeitos civis (como a obrigação de reparar) são tema à parte."
+      ],
+      "exemplo": "Uma lei nova descriminaliza uma conduta. Quem cumpre pena por ela tem a execução encerrada, mesmo com condenação definitiva.",
+      "prova": [
+        "Assertiva que nega retroatividade à lei posterior mais benéfica após o trânsito em julgado contraria o parágrafo único."
+      ],
+      "termos": [
+        {
+          "termo": "Abolitio criminis",
+          "significado": "Lei nova que torna o fato atípico, apagando o crime."
+        },
+        {
+          "termo": "Trânsito em julgado",
+          "significado": "Decisão da qual não cabe mais recurso."
+        }
+      ],
+      "remissoes": [
+        "Art. 3º (lei excepcional ou temporária)",
+        "Art. 4º (tempo do crime)"
+      ]
+    },
+    "art-3": {
+      "simples": "Lei excepcional ou temporária é ultra-ativa: mesmo depois de acabar o período de sua duração ou de cessarem as circunstâncias que a motivaram, ela continua a ser aplicada ao fato praticado durante sua vigência.",
+      "pontos": [
+        "Aplica-se a lei excepcional ou temporária ao fato praticado enquanto ela vigorava, mesmo após o fim do prazo ou das circunstâncias."
+      ],
+      "atencao": [
+        "É exceção à regra de que a lei posterior mais benéfica retroage: aqui a lei vencida ainda alcança o fato praticado na sua vigência."
+      ],
+      "exemplo": "Uma lei criada só para o período de uma calamidade define um crime. Passada a calamidade, quem o cometeu durante ela ainda responde por ele.",
+      "prova": [
+        "Assertiva que afirma que o fim da vigência da lei temporária impede punir fatos ocorridos durante ela contraria o art. 3º."
+      ],
+      "termos": [
+        {
+          "termo": "Ultra-atividade",
+          "significado": "Aplicação da lei mesmo depois de revogada ou vencida."
+        }
+      ],
+      "remissoes": [
+        "Art. 2º (abolitio criminis e lei mais benéfica)"
+      ]
+    },
+    "art-4": {
+      "simples": "Define o tempo do crime: considera-se praticado no momento da ação ou omissão, ainda que outro seja o momento do resultado (teoria da atividade).",
+      "pontos": [
+        "Tempo do crime = momento da ação ou omissão.",
+        "O momento do resultado pode ser outro e não muda o tempo do crime."
+      ],
+      "atencao": [
+        "Diferente do lugar do crime (art. 6º), que considera ação ou omissão E resultado.",
+        "O tempo do crime define, por exemplo, qual lei se aplica e a imputabilidade."
+      ],
+      "exemplo": "A vítima é ferida em março e morre em junho. O crime é considerado praticado em março, quando houve a ação.",
+      "prova": [
+        "Assertiva que fixa o tempo do crime no momento do resultado erra: vale o da ação ou omissão (teoria da atividade)."
+      ],
+      "termos": [
+        {
+          "termo": "Teoria da atividade",
+          "significado": "O crime considera-se praticado quando se age (ou se omite), não quando o resultado ocorre."
+        }
+      ],
+      "remissoes": [
+        "Art. 6º (lugar do crime)",
+        "Art. 27 (menoridade)"
+      ]
+    },
+    "art-5": {
+      "simples": "Territorialidade: aplica-se a lei brasileira ao crime cometido no território nacional, sem prejuízo de convenções, tratados e regras de direito internacional. O território, para fins penais, inclui por extensão embarcações e aeronaves brasileiras públicas ou a serviço do governo onde quer que estejam, e as mercantes ou privadas brasileiras que estejam no espaço aéreo correspondente ou em alto-mar. Também se aplica a lei brasileira a crimes a bordo de aeronaves e embarcações estrangeiras privadas que estejam em pouso no território nacional ou em voo no espaço aéreo correspondente, ou em porto ou mar territorial do Brasil.",
+      "pontos": [
+        "Regra: lei brasileira para crimes cometidos no território nacional (ressalvados tratados e direito internacional).",
+        "§1º: extensão do território: embarcações e aeronaves brasileiras públicas ou a serviço do governo, onde quer que estejam.",
+        "§1º: mercantes ou privadas brasileiras: extensão quando no espaço aéreo correspondente ou em alto-mar.",
+        "§2º: também se aplica a crimes a bordo de aeronaves/embarcações estrangeiras privadas em pouso, voo no espaço aéreo correspondente, porto ou mar territorial do Brasil."
+      ],
+      "atencao": [
+        "Públicas ou a serviço do governo: extensão do território onde quer que estejam. Privadas ou mercantes: só em alto-mar ou no espaço aéreo correspondente.",
+        "O art. 5º ressalva tratados e convenções: a regra é de territorialidade MITIGADA."
+      ],
+      "exemplo": "Um crime ocorre dentro de uma aeronave militar brasileira em outro país: considera-se cometido em território brasileiro por extensão.",
+      "prova": [
+        "Assertiva que aplica extensão do território a qualquer navio privado brasileiro, em qualquer lugar, ignora a distinção do §1º (alto-mar ou espaço aéreo correspondente)."
+      ],
+      "termos": [
+        {
+          "termo": "Território por extensão",
+          "significado": "Locais que a lei equipara ao território nacional, como certas aeronaves e embarcações."
+        }
+      ],
+      "remissoes": [
+        "Art. 6º (lugar do crime)",
+        "Art. 7º (extraterritorialidade)"
+      ]
+    },
+    "art-6": {
+      "simples": "Define o lugar do crime pela teoria da ubiquidade: considera-se praticado no lugar em que ocorreu a ação ou omissão, no todo ou em parte, bem como onde se produziu ou deveria produzir-se o resultado.",
+      "pontos": [
+        "Lugar do crime: onde ocorreu a ação ou omissão (no todo ou em parte).",
+        "Também onde se produziu, ou deveria produzir-se, o resultado."
+      ],
+      "atencao": [
+        "Teoria da ubiquidade (mista): vale tanto o lugar da conduta quanto o do resultado, ao contrário do tempo do crime (art. 4º).",
+        "Inclui o lugar onde o resultado DEVERIA ocorrer (útil na tentativa)."
+      ],
+      "exemplo": "Um disparo é feito em um país e a vítima morre no Brasil. O crime considera-se praticado também no Brasil.",
+      "prova": [
+        "Assertiva que limita o lugar do crime ao local da ação erra: o art. 6º adota a ubiquidade."
+      ],
+      "termos": [
+        {
+          "termo": "Ubiquidade",
+          "significado": "O crime se considera praticado tanto onde se agiu quanto onde o resultado ocorreu ou deveria ocorrer."
+        }
+      ],
+      "remissoes": [
+        "Art. 4º (tempo do crime)",
+        "Art. 5º (territorialidade)"
+      ]
+    },
+    "art-7": {
+      "simples": "Extraterritorialidade: casos em que a lei brasileira se aplica a crimes cometidos no estrangeiro. Há hipóteses incondicionadas (crimes contra a vida ou a liberdade do Presidente, contra o patrimônio ou a fé pública de entes públicos, contra a administração pública por quem a serve, e genocídio quando o agente é brasileiro ou domiciliado no Brasil) e condicionadas (crimes que o Brasil se obrigou a reprimir por tratado, praticados por brasileiro, e os ocorridos em aeronaves ou embarcações brasileiras mercantes ou privadas, quando não julgados no estrangeiro), que exigem os requisitos dos parágrafos.",
+      "pontos": [
+        "I: sujeitos à lei brasileira, no exterior: crimes contra a vida ou a liberdade do Presidente da República; contra o patrimônio ou a fé pública da União, DF, Estados, Territórios, Municípios, empresas públicas, sociedades de economia mista, autarquias ou fundações públicas; contra a administração pública, por quem está a seu serviço; genocídio, quando o agente for brasileiro ou domiciliado no Brasil.",
+        "II: crimes que, por tratado ou convenção, o Brasil se obrigou a reprimir; praticados por brasileiro; praticados em aeronaves ou embarcações brasileiras, mercantes ou privadas, quando em território estrangeiro e aí não julgados.",
+        "Os parágrafos do artigo estabelecem condições (como entrada do agente no território nacional) para as hipóteses do inciso II e para casos de estrangeiro."
+      ],
+      "atencao": [
+        "Inciso I = extraterritorialidade INCONDICIONADA; inciso II = CONDICIONADA.",
+        "No genocídio, a lei brasileira se aplica se o agente for brasileiro ou domiciliado no Brasil.",
+        "Confira no texto oficial os parágrafos com as condições antes de responder questões sobre hipóteses do inciso II."
+      ],
+      "exemplo": "Brasileiro comete um crime na Argentina e entra no território nacional: pode responder no Brasil se atendidas as condições do inciso II.",
+      "prova": [
+        "Assertiva que trata como condicionada a extraterritorialidade dos crimes contra a vida ou a liberdade do Presidente da República erra: é incondicionada."
+      ],
+      "termos": [
+        {
+          "termo": "Extraterritorialidade",
+          "significado": "Aplicação da lei brasileira a crimes cometidos fora do Brasil."
+        }
+      ],
+      "remissoes": [
+        "Art. 5º (territorialidade)",
+        "Art. 8º (pena cumprida no estrangeiro)"
+      ]
+    },
+    "art-8": {
+      "simples": "Evita punição dupla pelo mesmo crime: a pena cumprida no estrangeiro atenua a pena imposta no Brasil pelo mesmo crime, quando diversas, ou é computada nela, quando idênticas.",
+      "pontos": [
+        "Penas diversas: a pena cumprida fora atenua a imposta no Brasil.",
+        "Penas idênticas: a pena cumprida fora é computada (descontada)."
+      ],
+      "atencao": [
+        "A regra distingue pena DIVERSA (atenua) de pena IDÊNTICA (computa)."
+      ],
+      "exemplo": "Quem cumpriu 2 anos de prisão no exterior pelo mesmo crime tem esse tempo computado se a condenação no Brasil também for de prisão.",
+      "prova": [
+        "Assertiva que ignora a pena cumprida no exterior na fixação da pena no Brasil contraria o art. 8º."
+      ],
+      "termos": [
+        {
+          "termo": "Bis in idem",
+          "significado": "Dupla punição pelo mesmo fato."
+        }
+      ],
+      "remissoes": [
+        "Art. 7º (extraterritorialidade)"
+      ]
+    },
+    "art-9": {
+      "simples": "Trata da eficácia de sentença estrangeira: quando a aplicação da lei brasileira produziria as mesmas consequências, ela pode ser homologada no Brasil para obrigar o condenado à reparação do dano, restituições e outros efeitos civis, ou sujeitá-lo a medida de segurança. A homologação depende de pedido da parte interessada (efeitos civis) ou, para os outros efeitos, de tratado de extradição com o país de origem da sentença ou, sem tratado, de requisição do Ministro da Justiça.",
+      "pontos": [
+        "Homologação para efeitos civis (reparação, restituições) ou medida de segurança.",
+        "Efeitos civis: depende de pedido da parte interessada.",
+        "Outros efeitos: depende de tratado de extradição ou, na falta, de requisição do Ministro da Justiça."
+      ],
+      "atencao": [
+        "A sentença estrangeira só é homologada para os efeitos listados, e conforme as condições do parágrafo único."
+      ],
+      "exemplo": "Sentença estrangeira que condena à reparação do dano pode ser homologada no Brasil a pedido da vítima.",
+      "prova": [
+        "Assertiva que dispensa qualquer requisito para homologar sentença estrangeira contraria o parágrafo único."
+      ],
+      "termos": [
+        {
+          "termo": "Homologação",
+          "significado": "Reconhecimento oficial da validade da sentença estrangeira no Brasil."
+        }
+      ],
+      "remissoes": [
+        "Art. 7º"
+      ]
+    },
+    "art-10": {
+      "simples": "Contagem de prazo penal: o dia do começo inclui-se no cômputo e os dias, meses e anos contam-se pelo calendário comum.",
+      "pontos": [
+        "O dia do começo inclui-se no prazo.",
+        "Conta-se pelo calendário comum (dias, meses e anos)."
+      ],
+      "atencao": [
+        "Diferente do prazo processual, em que em regra se exclui o dia do começo: o prazo penal inclui o dia inicial e é improrrogável."
+      ],
+      "exemplo": "Uma pena de um mês que começa a contar em dez de março termina em nove de abril, pois o dia do começo entra na contagem.",
+      "prova": [
+        "Assertiva que manda excluir o dia do começo na contagem do prazo penal contraria o art. 10."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 11 (frações não computáveis)"
+      ]
+    },
+    "art-11": {
+      "simples": "Frações não computáveis: nas penas privativas de liberdade e restritivas de direitos desprezam-se as frações de dia, e na pena de multa as frações da unidade monetária.",
+      "pontos": [
+        "Penas privativas de liberdade e restritivas de direitos: desprezam-se frações de dia.",
+        "Pena de multa: desprezam-se frações da moeda (o texto cita cruzeiro)."
+      ],
+      "atencao": [
+        "O artigo mantém a referência histórica ao cruzeiro; a ideia é desprezar frações da unidade monetária."
+      ],
+      "exemplo": "Ao diminuir a pena e sobrar fração de dia, ela é desprezada.",
+      "prova": [
+        "Assertiva que manda arredondar para cima as frações de dia contraria o art. 11, que as despreza."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 10 (contagem de prazo)"
+      ]
+    },
+    "art-12": {
+      "simples": "Legislação especial: as regras gerais do Código Penal aplicam-se aos fatos incriminados por lei especial, se esta não dispuser de modo diverso (princípio da especialidade).",
+      "pontos": [
+        "Regras gerais do Código valem para leis especiais.",
+        "Exceção: se a lei especial dispuser de modo diverso."
+      ],
+      "atencao": [
+        "Prevalece a lei especial quando ela trata do tema de forma diferente."
+      ],
+      "exemplo": "Em um crime previsto em lei extravagante, aplicam-se as regras sobre tentativa e concurso de pessoas do Código, se a lei não disser o contrário.",
+      "prova": [
+        "Assertiva que afasta a parte geral do Código Penal de qualquer lei especial erra: ela se aplica se a lei especial não dispuser diferente."
+      ],
+      "termos": [
+        {
+          "termo": "Lei especial",
+          "significado": "Lei que trata de matéria específica fora do Código."
+        }
+      ],
+      "remissoes": []
+    },
+    "art-13": {
+      "simples": "Trata do nexo causal. O resultado de que depende a existência do crime só é imputável a quem lhe deu causa; causa é a ação ou omissão sem a qual o resultado não teria ocorrido (teoria da equivalência dos antecedentes). A superveniência de causa relativamente independente exclui a imputação quando, por si só, produziu o resultado, imputando-se porém os fatos anteriores. A omissão é penalmente relevante quando o omitente devia e podia agir para evitar o resultado, e o dever de agir incumbe a quem tenha por lei obrigação de cuidado, proteção ou vigilância, assumiu a responsabilidade de impedir o resultado ou criou o risco com seu comportamento anterior.",
+      "pontos": [
+        "Causa: ação ou omissão sem a qual o resultado não teria ocorrido.",
+        "§1º: causa superveniente relativamente independente que, por si só, produz o resultado exclui a imputação do resultado; os fatos anteriores continuam imputados.",
+        "§2º: omissão relevante quando o omitente devia e podia agir.",
+        "Dever de agir: obrigação legal de cuidado, proteção ou vigilância; assunção de responsabilidade; criação do risco por comportamento anterior."
+      ],
+      "atencao": [
+        "Só exclui a imputação a causa superveniente que, POR SI SÓ, produziu o resultado.",
+        "A omissão penalmente relevante exige PODER agir, além do dever de agir.",
+        "As três hipóteses de dever de agir são cobradas literalmente."
+      ],
+      "exemplo": "A vítima é ferida e, no caminho do hospital, morre em um incêndio sem relação com o ferimento. A causa superveniente produziu sozinha a morte: o agente responde pelos atos anteriores (lesão), não pelo homicídio.",
+      "prova": [
+        "Assertiva que dispensa a possibilidade de agir para a omissão relevante erra: o texto exige que o omitente devia e podia agir."
+      ],
+      "termos": [
+        {
+          "termo": "Nexo causal",
+          "significado": "Ligação entre a conduta e o resultado."
+        },
+        {
+          "termo": "Equivalência dos antecedentes",
+          "significado": "Teoria segundo a qual toda condição sem a qual o resultado não ocorreria é causa."
+        }
+      ],
+      "remissoes": [
+        "Art. 18 (dolo e culpa)"
+      ]
+    },
+    "art-14": {
+      "simples": "Define crime consumado (quando reúne todos os elementos de sua definição legal) e crime tentado (iniciada a execução, não se consuma por circunstâncias alheias à vontade do agente). Salvo disposição em contrário, a tentativa é punida com a pena do crime consumado diminuída de um a dois terços.",
+      "pontos": [
+        "Consumado: reúnem-se todos os elementos da definição legal.",
+        "Tentado: execução iniciada e não consumação por circunstâncias alheias à vontade do agente.",
+        "Pena da tentativa: a do crime consumado, diminuída de um a dois terços, salvo disposição em contrário."
+      ],
+      "atencao": [
+        "A não consumação deve ocorrer por circunstâncias ALHEIAS à vontade do agente (se for voluntária, veja o art. 15).",
+        "A diminuição é de um a dois terços, e a lei pode dispor de modo diverso."
+      ],
+      "exemplo": "O agente dispara para matar, mas a vítima é socorrida e sobrevive: tentativa, com pena reduzida de um a dois terços.",
+      "prova": [
+        "Assertiva que fixa a redução da tentativa em até a metade erra: é de um a dois terços."
+      ],
+      "termos": [
+        {
+          "termo": "Iter criminis",
+          "significado": "Caminho percorrido do crime, da cogitação à consumação."
+        }
+      ],
+      "remissoes": [
+        "Art. 15 (desistência voluntária)",
+        "Art. 17 (crime impossível)"
+      ]
+    },
+    "art-15": {
+      "simples": "Desistência voluntária e arrependimento eficaz: o agente que voluntariamente desiste de prosseguir na execução ou impede que o resultado se produza só responde pelos atos já praticados.",
+      "pontos": [
+        "Desistência voluntária: desiste de prosseguir na execução.",
+        "Arrependimento eficaz: impede que o resultado se produza.",
+        "Em ambos: responde só pelos atos já praticados."
+      ],
+      "atencao": [
+        "Exige VOLUNTARIEDADE (não necessariamente espontaneidade).",
+        "Não é tentativa: a não consumação decorre da vontade do agente, não de circunstâncias alheias."
+      ],
+      "exemplo": "O agente, podendo continuar, para de agredir e socorre a vítima: responde só pelas lesões já causadas.",
+      "prova": [
+        "Assertiva que pune o agente que desistiu voluntariamente como se tivesse tentado o crime inteiro contraria o art. 15."
+      ],
+      "termos": [
+        {
+          "termo": "Arrependimento eficaz",
+          "significado": "O agente esgota os atos de execução, mas age para evitar o resultado e consegue."
+        }
+      ],
+      "remissoes": [
+        "Art. 14, II (tentativa)",
+        "Art. 16 (arrependimento posterior)"
+      ]
+    },
+    "art-16": {
+      "simples": "Arrependimento posterior: nos crimes cometidos sem violência ou grave ameaça à pessoa, se o agente repara o dano ou restitui a coisa, por ato voluntário, até o recebimento da denúncia ou da queixa, a pena é reduzida de um a dois terços.",
+      "pontos": [
+        "Só em crimes sem violência ou grave ameaça à pessoa.",
+        "Reparação do dano ou restituição da coisa, por ato voluntário.",
+        "Até o recebimento da denúncia ou da queixa.",
+        "Efeito: redução de pena de um a dois terços."
+      ],
+      "atencao": [
+        "É causa de DIMINUIÇÃO de pena (não exclui o crime).",
+        "O marco temporal é o RECEBIMENTO da denúncia ou queixa."
+      ],
+      "exemplo": "Quem comete um estelionato e devolve o valor integralmente antes do recebimento da denúncia pode ter a pena reduzida de um a dois terços.",
+      "prova": [
+        "Assertiva que aplica o arrependimento posterior a crime com grave ameaça à pessoa contraria o art. 16."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 15 (desistência e arrependimento eficaz)"
+      ]
+    },
+    "art-17": {
+      "simples": "Crime impossível: não se pune a tentativa quando, por ineficácia absoluta do meio ou por absoluta impropriedade do objeto, é impossível consumar-se o crime.",
+      "pontos": [
+        "Ineficácia ABSOLUTA do meio.",
+        "Absoluta impropriedade do objeto.",
+        "Em ambos: impossível consumar o crime e a tentativa não é punida."
+      ],
+      "atencao": [
+        "Só a ineficácia ou impropriedade ABSOLUTAS afastam a punição; se forem relativas, pode haver tentativa."
+      ],
+      "exemplo": "Tentar matar uma pessoa que já está morta (objeto absolutamente impróprio): crime impossível.",
+      "prova": [
+        "Assertiva que pune como tentativa o crime impossível por ineficácia absoluta do meio contraria o art. 17."
+      ],
+      "termos": [
+        {
+          "termo": "Crime impossível",
+          "significado": "Tentativa que jamais poderia consumar-se, por isso não punida."
+        }
+      ],
+      "remissoes": [
+        "Art. 14, II"
+      ]
+    },
+    "art-18": {
+      "simples": "Define crime doloso (o agente quis o resultado ou assumiu o risco de produzi-lo) e culposo (o agente deu causa ao resultado por imprudência, negligência ou imperícia). Salvo os casos expressos em lei, ninguém pode ser punido por fato previsto como crime senão quando o pratica dolosamente.",
+      "pontos": [
+        "Doloso: quis o resultado ou assumiu o risco de produzi-lo.",
+        "Culposo: imprudência, negligência ou imperícia.",
+        "Parágrafo único: a regra é a punição por dolo; a culpa só pune quando a lei expressamente prevê."
+      ],
+      "atencao": [
+        "Dolo inclui o dolo direto (quis) e o eventual (assumiu o risco).",
+        "Crime culposo só existe quando previsto em lei."
+      ],
+      "exemplo": "Quem dirige em alta velocidade na contramão, sem querer matar mas sabendo do risco e aceitando-o, pode ter dolo eventual.",
+      "prova": [
+        "Assertiva que pune qualquer fato típico mesmo a título de culpa, sem previsão legal, contraria o parágrafo único."
+      ],
+      "termos": [
+        {
+          "termo": "Imprudência, negligência e imperícia",
+          "significado": "Modalidades de culpa: agir sem cautela, deixar de agir com o cuidado devido e falta de aptidão técnica."
+        }
+      ],
+      "remissoes": [
+        "Art. 19 (crime preterdoloso)",
+        "Art. 20 (erro de tipo)"
+      ]
+    },
+    "art-19": {
+      "simples": "Agravação pelo resultado: pelo resultado que agrava especialmente a pena só responde o agente que o houver causado ao menos culposamente (afasta a responsabilidade objetiva).",
+      "pontos": [
+        "O resultado mais grave só é imputado se causado ao menos por culpa."
+      ],
+      "atencao": [
+        "Veda a responsabilidade objetiva: não basta o nexo causal, é preciso culpa pelo resultado agravador."
+      ],
+      "exemplo": "Em uma lesão corporal seguida de morte, o resultado morte só é imputado se ao menos previsível ao agente.",
+      "prova": [
+        "Assertiva que imputa resultado agravador sem exigir dolo ou culpa contraria o art. 19."
+      ],
+      "termos": [
+        {
+          "termo": "Responsabilidade objetiva",
+          "significado": "Responsabilização sem dolo ou culpa, vedada no Direito Penal."
+        }
+      ],
+      "remissoes": [
+        "Art. 18"
+      ]
+    },
+    "art-20": {
+      "simples": "Erro sobre elemento do tipo: o erro sobre elemento constitutivo do tipo legal de crime exclui o dolo, mas permite a punição por crime culposo, se previsto em lei. Descriminantes putativas: é isento de pena quem, por erro plenamente justificado pelas circunstâncias, supõe situação de fato que, se existisse, tornaria a ação legítima; não há isenção quando o erro deriva de culpa e o fato é punível como culposo. Erro determinado por terceiro: responde pelo crime o terceiro que determina o erro. Erro sobre a pessoa: não isenta de pena e consideram-se as condições da pessoa contra quem o agente queria praticar o crime.",
+      "pontos": [
+        "Caput: erro sobre elemento do tipo exclui o dolo; pode responder por culpa, se prevista.",
+        "§1º: descriminante putativa por erro plenamente justificado isenta de pena; se o erro deriva de culpa e há crime culposo, não há isenção.",
+        "§2º: responde o terceiro que determinou o erro.",
+        "§3º: erro sobre a pessoa não isenta de pena; valem as condições da pessoa visada."
+      ],
+      "atencao": [
+        "Erro de tipo EXCLUI o dolo (e pode deixar culpa).",
+        "Erro sobre a pessoa não beneficia o agente: consideram-se as qualidades da vítima VISADA.",
+        "No §1º a isenção só vale para erro plenamente justificado."
+      ],
+      "exemplo": "Alguém atira em um vulto que, pelas circunstâncias, acredita ser um assaltante armado prestes a atacá-lo, mas era um vizinho. Se o erro era plenamente justificado, há descriminante putativa e o agente fica isento de pena (§1º).",
+      "prova": [
+        "Assertiva que diz que o erro sobre a pessoa isenta o agente de pena erra: não isenta."
+      ],
+      "termos": [
+        {
+          "termo": "Descriminante putativa",
+          "significado": "Situação imaginada pelo agente que, se real, tornaria sua conduta legítima."
+        }
+      ],
+      "remissoes": [
+        "Art. 21 (erro de proibição)",
+        "Art. 23 a 25 (excludentes de ilicitude)"
+      ]
+    },
+    "art-21": {
+      "simples": "Erro sobre a ilicitude do fato (erro de proibição): o desconhecimento da lei é inescusável; o erro sobre a ilicitude do fato, se inevitável, isenta de pena; se evitável, pode diminuí-la de um sexto a um terço. Considera-se evitável o erro se o agente atua ou se omite sem consciência da ilicitude, quando lhe era possível, nas circunstâncias, ter ou atingir essa consciência.",
+      "pontos": [
+        "O desconhecimento da lei é inescusável.",
+        "Erro de proibição inevitável: isenta de pena.",
+        "Erro de proibição evitável: pena diminuída de um sexto a um terço.",
+        "Evitável: era possível ter ou atingir a consciência da ilicitude."
+      ],
+      "atencao": [
+        "Desconhecer a LEI não exime (inescusável); o que pode isentar é o erro sobre a ILICITUDE do fato.",
+        "Inevitável isenta; evitável diminui de um sexto a um terço."
+      ],
+      "exemplo": "Estrangeiro recém-chegado pratica um ato permitido em seu país e proibido aqui, sem como saber: erro inevitável, isento de pena.",
+      "prova": [
+        "Assertiva que afirma que o desconhecimento da lei isenta de pena erra: o art. 21 o declara inescusável."
+      ],
+      "termos": [
+        {
+          "termo": "Erro de proibição",
+          "significado": "Erro sobre a ilicitude do fato, isto é, o agente pensa que a conduta é permitida."
+        }
+      ],
+      "remissoes": [
+        "Art. 20 (erro de tipo)"
+      ]
+    },
+    "art-22": {
+      "simples": "Coação irresistível e obediência hierárquica: se o fato é cometido sob coação irresistível ou em estrita obediência a ordem, não manifestamente ilegal, de superior hierárquico, só é punível o autor da coação ou da ordem.",
+      "pontos": [
+        "Coação irresistível: só responde quem coagiu.",
+        "Obediência hierárquica: ordem NÃO manifestamente ilegal de superior hierárquico; só responde quem deu a ordem."
+      ],
+      "atencao": [
+        "A ordem não pode ser manifestamente ilegal; se for, o subordinado responde.",
+        "Exclui a culpabilidade (inexigibilidade de conduta diversa)."
+      ],
+      "exemplo": "Funcionário cumpre ordem do chefe aparentemente regular, que depois se revela ilegal: só o chefe é punido.",
+      "prova": [
+        "Assertiva que isenta o subordinado que cumpre ordem manifestamente ilegal erra."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 21"
+      ]
+    },
+    "art-23": {
+      "simples": "Excludentes de ilicitude: não há crime quando o agente pratica o fato em estado de necessidade, em legítima defesa ou em estrito cumprimento de dever legal ou no exercício regular de direito. O parágrafo único diz que, em qualquer dessas hipóteses, o agente responde pelo excesso doloso ou culposo.",
+      "pontos": [
+        "Estado de necessidade.",
+        "Legítima defesa.",
+        "Estrito cumprimento de dever legal ou exercício regular de direito.",
+        "Excesso doloso ou culposo é punível."
+      ],
+      "atencao": [
+        "Excludentes de ilicitude: o fato é típico, mas lícito (não há crime).",
+        "O excesso, doloso ou culposo, é punido (parágrafo único).",
+        "O texto indica 'Vide ADPF 779' no inciso II: confira a decisão do STF."
+      ],
+      "exemplo": "O policial que, em estrito cumprimento do dever legal, efetua a prisão em flagrante não comete crime.",
+      "prova": [
+        "Assertiva que afasta a responsabilidade pelo excesso nas excludentes de ilicitude contraria o parágrafo único."
+      ],
+      "termos": [
+        {
+          "termo": "Excludente de ilicitude",
+          "significado": "Situação que retira o caráter ilícito do fato típico."
+        }
+      ],
+      "remissoes": [
+        "Arts. 24 e 25"
+      ]
+    },
+    "art-24": {
+      "simples": "Estado de necessidade: pratica o fato para salvar de perigo atual, que não provocou por sua vontade nem podia de outro modo evitar, direito próprio ou alheio, cujo sacrifício, nas circunstâncias, não era razoável exigir-se. Não pode alegá-lo quem tinha o dever legal de enfrentar o perigo. Se era razoável exigir o sacrifício do direito ameaçado, a pena pode ser reduzida de um a dois terços.",
+      "pontos": [
+        "Perigo atual, não provocado voluntariamente, inevitável de outro modo.",
+        "Direito próprio ou alheio que não era razoável sacrificar.",
+        "§1º: quem tem o dever legal de enfrentar o perigo não pode alegar.",
+        "§2º: se era razoável exigir o sacrifício, a pena pode ser reduzida de um a dois terços."
+      ],
+      "atencao": [
+        "O perigo deve ser ATUAL (diferente da legítima defesa, que admite agressão atual OU iminente).",
+        "O bombeiro e o policial têm o dever legal de enfrentar o perigo (§1º)."
+      ],
+      "exemplo": "Em naufrágio, alguém toma o único colete disponível para salvar a vida, sem poder evitar o perigo de outra forma: estado de necessidade.",
+      "prova": [
+        "Assertiva que permite a quem tem o dever legal de enfrentar o perigo invocar estado de necessidade contraria o §1º."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 23",
+        "Art. 25 (legítima defesa)"
+      ]
+    },
+    "art-25": {
+      "simples": "Legítima defesa: usando moderadamente dos meios necessários, repele injusta agressão, atual ou iminente, a direito seu ou de outrem. O parágrafo único considera também em legítima defesa o agente de segurança pública que repele agressão ou risco de agressão a vítima mantida refém durante a prática de crimes.",
+      "pontos": [
+        "Requisitos: injusta agressão atual ou iminente; direito próprio ou de outrem; meios necessários usados moderadamente.",
+        "Parágrafo único: agente de segurança pública que repele agressão ou risco de agressão a refém também age em legítima defesa."
+      ],
+      "atencao": [
+        "Agressão ATUAL ou IMINENTE (a futura ou passada não autoriza).",
+        "A reação deve usar meios necessários E de forma moderada; o excesso é punível (art. 23).",
+        "O texto indica 'Vide ADPF 779': confira a decisão do STF."
+      ],
+      "exemplo": "Policial atira em sequestrador que ameaça matar o refém no momento da ação: legítima defesa de terceiro (parágrafo único).",
+      "prova": [
+        "Assertiva que admite legítima defesa contra agressão futura incerta erra: exige agressão atual ou iminente."
+      ],
+      "termos": [
+        {
+          "termo": "Moderação",
+          "significado": "Uso proporcional dos meios necessários para repelir a agressão."
+        }
+      ],
+      "remissoes": [
+        "Art. 23, parágrafo único (excesso)",
+        "Art. 24"
+      ]
+    },
+    "art-26": {
+      "simples": "Inimputáveis: é isento de pena o agente que, por doença mental ou desenvolvimento mental incompleto ou retardado, era, ao tempo da ação ou omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento. A pena pode ser reduzida de um a dois terços se o agente, por perturbação da saúde mental ou desenvolvimento mental incompleto ou retardado, não era inteiramente capaz (semi-imputabilidade).",
+      "pontos": [
+        "Caput: inteiramente incapaz ao tempo da conduta: isento de pena (inimputável).",
+        "Parágrafo único: não inteiramente capaz: pena reduzida de um a dois terços (semi-imputável)."
+      ],
+      "atencao": [
+        "A capacidade é aferida ao TEMPO da ação ou omissão.",
+        "Inimputável: isento de pena; semi-imputável: redução de um a dois terços."
+      ],
+      "exemplo": "Pessoa em surto psicótico, incapaz de compreender a ilicitude no momento do fato: isenta de pena.",
+      "prova": [
+        "Assertiva que fixa a redução do semi-imputável em até a metade erra: é de um a dois terços."
+      ],
+      "termos": [
+        {
+          "termo": "Inimputável",
+          "significado": "Quem, por condição mental, não pode ser responsabilizado penalmente."
+        }
+      ],
+      "remissoes": [
+        "Art. 27",
+        "Art. 28"
+      ]
+    },
+    "art-27": {
+      "simples": "Menores de 18 anos são penalmente inimputáveis, ficando sujeitos às normas estabelecidas na legislação especial.",
+      "pontos": [
+        "Menores de 18 anos: inimputáveis.",
+        "Sujeitam-se à legislação especial."
+      ],
+      "atencao": [
+        "A inimputabilidade é fixada por critério biológico (idade), sem exame de maturidade."
+      ],
+      "exemplo": "Adolescente de 17 anos que pratica ato infracional responde pela legislação especial, não pelo Código Penal.",
+      "prova": [
+        "Assertiva que sujeita o menor de 18 anos às penas do Código Penal erra."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 26 (inimputabilidade por doença mental)"
+      ]
+    },
+    "art-28": {
+      "simples": "Emoção, paixão e embriaguez: não excluem a imputabilidade penal a emoção ou a paixão e a embriaguez, voluntária ou culposa, pelo álcool ou substância de efeitos análogos. É isento de pena quem, por embriaguez completa proveniente de caso fortuito ou força maior, era inteiramente incapaz de entender o caráter ilícito do fato ou de se determinar; a pena pode ser reduzida de um a dois terços se, nessas condições, não possuía plena capacidade.",
+      "pontos": [
+        "Não excluem a imputabilidade: emoção, paixão, embriaguez voluntária ou culposa.",
+        "§1º: embriaguez completa por caso fortuito ou força maior, com incapacidade total: isento de pena.",
+        "§2º: embriaguez por caso fortuito ou força maior com capacidade reduzida: pena reduzida de um a dois terços."
+      ],
+      "atencao": [
+        "A embriaguez VOLUNTÁRIA ou CULPOSA não exclui a imputabilidade; só a fortuita ou de força maior pode isentar ou reduzir.",
+        "Fortuita/força maior + completa = isenção; + incompleta = redução."
+      ],
+      "exemplo": "Quem bebe por vontade própria e comete crime não é isento de pena. Quem é forçado a ingerir álcool, ficando completamente incapaz, pode ser isento.",
+      "prova": [
+        "Assertiva que isenta de pena o agente em embriaguez voluntária completa contraria o art. 28, II."
+      ],
+      "termos": [
+        {
+          "termo": "Caso fortuito e força maior",
+          "significado": "Fatos imprevisíveis ou inevitáveis que fogem ao controle do agente."
+        }
+      ],
+      "remissoes": [
+        "Art. 26"
+      ]
+    },
+    "art-29": {
+      "simples": "Concurso de pessoas: quem, de qualquer modo, concorre para o crime incide nas penas a ele cominadas, na medida de sua culpabilidade. Se a participação for de menor importância, a pena pode ser diminuída de um sexto a um terço. Se algum dos concorrentes quis participar de crime menos grave, aplica-se-lhe a pena deste, aumentada até metade se o resultado mais grave era previsível.",
+      "pontos": [
+        "Quem concorre de qualquer modo responde pelo crime, na medida de sua culpabilidade.",
+        "§1º: participação de menor importância: redução de um sexto a um terço.",
+        "§2º: quis participar de crime menos grave: pena deste, aumentada até metade se o resultado mais grave era previsível."
+      ],
+      "atencao": [
+        "Cada concorrente responde na medida da SUA culpabilidade.",
+        "§2º: a pena aumenta até metade somente se o resultado mais grave era PREVISÍVEL."
+      ],
+      "exemplo": "Dois combinam um furto, e um deles, sem o outro querer, comete roubo. O que quis só o furto responde pelo crime menos grave, com aumento até metade se o roubo era previsível.",
+      "prova": [
+        "Assertiva que fixa a redução da participação de menor importância em até dois terços erra: é de um sexto a um terço."
+      ],
+      "termos": [
+        {
+          "termo": "Participação de menor importância",
+          "significado": "Colaboração de pouca relevância para o crime."
+        }
+      ],
+      "remissoes": [
+        "Art. 30 (circunstâncias incomunicáveis)"
+      ]
+    }
+  }
+}

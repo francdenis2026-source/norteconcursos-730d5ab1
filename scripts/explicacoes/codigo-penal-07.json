@@ -1,0 +1,240 @@
+{
+  "course_slug": "codigo-penal",
+  "law": "Código Penal — lote 07: arts. 154-B a 178",
+  "units": {
+    "art-154-b": {
+      "simples": "Ação penal na invasão de dispositivo informático: nos crimes do art. 154-A somente se procede mediante representação, salvo se o crime é cometido contra a administração pública direta ou indireta de qualquer dos Poderes da União, Estados, Distrito Federal ou Municípios, ou contra empresas concessionárias de serviços públicos.",
+      "pontos": ["Regra: ação pública condicionada à representação.", "Exceção: crime contra a administração pública direta ou indireta, ou contra concessionárias de serviços públicos: incondicionada."],
+      "atencao": ["Regra: representação; contra a Administração ou concessionárias: ação pública incondicionada."],
+      "exemplo": "Invasão do sistema de um órgão municipal: ação pública incondicionada.",
+      "prova": ["Assertiva que exige representação mesmo na invasão de dispositivo de órgão da administração direta erra: nesse caso a ação é incondicionada."],
+      "termos": [],
+      "remissoes": ["Art. 154-A"]
+    },
+    "art-155": {
+      "simples": "Furto: subtrair, para si ou para outrem, coisa alheia móvel. Pena: reclusão de 1 a 6 anos e multa (texto atual). Aumento de metade se praticado durante o repouso noturno. Furto privilegiado (§2º): se o criminoso é primário e a coisa é de pequeno valor, o juiz pode substituir reclusão por detenção, diminuir de um a dois terços ou aplicar só multa. Energia elétrica e outras com valor econômico equiparam-se a coisa móvel (§3º). Furto qualificado (§4º, reclusão de 2 a 8 anos e multa): destruição ou rompimento de obstáculo; abuso de confiança, fraude, escalada ou destreza; chave falsa; concurso de duas ou mais pessoas; bens que comprometam o funcionamento de órgãos públicos ou serviços essenciais. Há ainda formas com pena de 4 a 10 anos (explosivo, fraude eletrônica, veículo levado a outro Estado ou ao exterior, animais, celulares e computadores, armas etc.) e causas de aumento para fraude eletrônica (servidor no exterior; idoso ou vulnerável). Confira o texto completo.",
+      "pontos": ["Caput: subtrair coisa alheia móvel; reclusão de 1 a 6 anos e multa.", "§1º: aumento de metade no repouso noturno.", "§2º: furto privilegiado (primário + pequeno valor).", "§3º: equipara-se à coisa móvel a energia elétrica ou outra com valor econômico.", "§4º: qualificadoras (obstáculo; confiança, fraude, escalada ou destreza; chave falsa; concurso de pessoas; bens essenciais): reclusão de 2 a 8 anos e multa.", "§4º-A e seguintes: formas específicas com pena de 4 a 10 anos (explosivo, fraude por dispositivo eletrônico, veículo para outro Estado ou exterior, semovente ou animal doméstico, celular e computador, arma de fogo, substâncias explosivas)."],
+      "atencao": ["Repouso noturno é causa de AUMENTO (metade) no furto simples; privilégio exige primariedade e coisa de pequeno valor.", "Qualificadoras do §4º: reclusão de 2 a 8 anos.", "As penas e hipóteses seguem a redação atual do texto (leis de 2018, 2021 e 2026)."],
+      "exemplo": "Subtrair um celular de dentro de uma bolsa, sem violência: furto (e, conforme o texto atual, forma com pena de 4 a 10 anos se for celular).",
+      "prova": ["Assertiva que confunde furto com roubo por exigir violência ou grave ameaça no furto erra: o furto é sem violência."],
+      "termos": [{ "termo": "Subtrair", "significado": "Retirar a coisa da posse de quem a detém, sem violência ou grave ameaça." }, { "termo": "Furto privilegiado", "significado": "Furto de pequeno valor por réu primário, com benefícios na pena." }],
+      "remissoes": ["Art. 157 (roubo)", "Art. 156", "Art. 170"]
+    },
+    "art-156": {
+      "simples": "Furto de coisa comum: subtrair o condômino, coerdeiro ou sócio, para si ou para outrem, a quem legitimamente a detém, a coisa comum. Pena: detenção de 6 meses a 2 anos, ou multa. Somente se procede mediante representação. Não é punível a subtração de coisa comum fungível cujo valor não excede a quota a que tem direito o agente.",
+      "pontos": ["Sujeito: condômino, coerdeiro ou sócio.", "Subtrai coisa comum de quem legitimamente a detém.", "Pena: detenção de 6 meses a 2 anos, ou multa.", "Ação condicionada à representação.", "Não é punível a subtração de coisa comum fungível até o valor da quota do agente."],
+      "atencao": ["A coisa é COMUM (do próprio agente em parte)."],
+      "exemplo": "Um sócio retira de quem a guarda mercadoria que pertence à sociedade, acima da sua quota.",
+      "prova": ["Assertiva que pune a subtração de coisa comum fungível cujo valor não excede a quota do agente erra: o §2º a declara não punível."],
+      "termos": [{ "termo": "Coisa fungível", "significado": "Coisa que pode ser substituída por outra do mesmo gênero, quantidade e qualidade, como dinheiro." }],
+      "remissoes": ["Art. 155"]
+    },
+    "art-157": {
+      "simples": "Roubo: subtrair coisa móvel alheia, para si ou para outrem, mediante grave ameaça ou violência a pessoa, ou depois de havê-la, por qualquer meio, reduzido à impossibilidade de resistência. Pena: reclusão de 6 a 10 anos e multa (texto atual). Aumento de 1/3 até metade (§2º) em hipóteses como concurso de duas ou mais pessoas, vítima em serviço de transporte de valores, manutenção da vítima em poder do agente, subtração de explosivos, emprego de arma branca, subtração de certos bens (fios e cabos, celulares e computadores, armas de fogo, combustíveis). Aumento de 2/3 (§2º-A): arma de fogo, ou destruição de obstáculo com explosivo. Se a arma é de uso restrito ou proibido, pena em dobro (§2º-B). Roubo qualificado pelo resultado (§3º): lesão grave: reclusão de 7 a 18 anos e multa; morte (latrocínio): reclusão de 24 a 30 anos e multa.",
+      "pontos": ["Caput: grave ameaça, violência ou redução à impossibilidade de resistência; reclusão de 6 a 10 anos e multa.", "§2º: aumento de 1/3 até metade (concurso de pessoas; transporte de valores; vítima mantida em poder do agente; explosivos; arma branca; certos bens).", "§2º-A: aumento de 2/3 (arma de fogo; explosivo para romper obstáculo).", "§2º-B: arma de fogo de uso restrito ou proibido: pena em dobro.", "§3º, I: lesão grave: reclusão de 7 a 18 anos e multa.", "§3º, II: morte: reclusão de 24 a 30 anos e multa.", "§4º e §5º: formas com organização ultraviolenta, paramilitar ou milícia (pena em triplo; reclusão de 20 a 40 anos se há morte)."],
+      "atencao": ["Roubo = subtração + VIOLÊNCIA, GRAVE AMEAÇA ou redução da resistência.", "Latrocínio (§3º, II) é o roubo com resultado MORTE e é crime hediondo.", "Arma de fogo: aumento de 2/3 (§2º-A); arma branca: aumento de 1/3 a metade (§2º, VII); arma de fogo de uso restrito ou proibido: dobro (§2º-B)."],
+      "exemplo": "Assaltante rende a vítima com uma arma de fogo e leva seu celular: roubo com aumento de 2/3 (e, conforme o texto, também causa de aumento pelo objeto).",
+      "prova": ["Assertiva que aplica aumento de metade ao roubo com arma de fogo troca o percentual: o §2º-A fixa 2/3."],
+      "termos": [{ "termo": "Latrocínio", "significado": "Roubo seguido de morte (art. 157, §3º, II)." }],
+      "remissoes": ["Art. 155", "Art. 158 (extorsão)", "Lei dos crimes hediondos"]
+    },
+    "art-158": {
+      "simples": "Extorsão: constranger alguém, mediante violência ou grave ameaça, e com o intuito de obter indevida vantagem econômica, a fazer, tolerar que se faça ou deixar de fazer alguma coisa. Pena: reclusão de 4 a 10 anos e multa. Aumenta-se de um terço até metade se por duas ou mais pessoas ou com arma. Aplica-se à extorsão com violência o disposto no §3º do art. 157. Se o crime é cometido mediante restrição da liberdade da vítima, e essa condição é necessária para a vantagem econômica (sequestro-relâmpago), a pena é de reclusão de 6 a 12 anos, além da multa; se resulta lesão grave ou morte, aplicam-se as penas do art. 159, §§2º e 3º. Organização criminosa ultraviolenta, paramilitar ou milícia: pena em triplo.",
+      "pontos": ["Constranger com violência ou grave ameaça para obter vantagem econômica indevida.", "Caput: reclusão de 4 a 10 anos e multa.", "§1º: duas ou mais pessoas ou arma: aumento de 1/3 até metade.", "§3º: restrição da liberdade da vítima necessária para a vantagem (sequestro-relâmpago): 6 a 12 anos; lesão grave ou morte: penas do art. 159, §§2º e 3º.", "§4º: organização ultraviolenta, paramilitar ou milícia: pena em triplo."],
+      "atencao": ["Extorsão: a colaboração da vítima é necessária (ela faz, tolera ou deixa de fazer); no roubo a subtração ocorre sem tal colaboração.", "Sequestro-relâmpago: §3º, com pena de 6 a 12 anos."],
+      "exemplo": "O agente ameaça o dono de um comércio, exigindo dinheiro periódico para não lhe causar mal: extorsão.",
+      "prova": ["Assertiva que dispensa a finalidade de vantagem econômica na extorsão erra: é elementar do tipo."],
+      "termos": [{ "termo": "Sequestro-relâmpago", "significado": "Restrição da liberdade da vítima por pouco tempo para obter vantagem econômica." }],
+      "remissoes": ["Art. 157", "Art. 159"]
+    },
+    "art-159": {
+      "simples": "Extorsão mediante sequestro: sequestrar pessoa com o fim de obter, para si ou para outrem, qualquer vantagem, como condição ou preço do resgate. Pena: reclusão de 8 a 15 anos. Se resulta lesão grave: reclusão de 16 a 24 anos; se resulta morte, pena maior, conforme o texto completo (o texto traz a indicação 'Vide Lei nº 8.072/90'). No concurso, o concorrente que denunciar à autoridade, facilitando a libertação do sequestrado, tem pena reduzida de um a dois terços. Se o crime é cometido por integrante de organização criminosa ultraviolenta, paramilitar ou milícia, aumenta-se a pena em 2/3.",
+      "pontos": ["Sequestrar pessoa para obter qualquer vantagem como condição ou preço do resgate.", "Caput: reclusão de 8 a 15 anos.", "§2º: lesão grave: reclusão de 16 a 24 anos.", "§3º: morte (pena maior).", "§4º: delação premiada: redução de 1/3 a 2/3 ao concorrente que denunciar e facilitar a libertação.", "§5º: organização ultraviolenta, paramilitar ou milícia: aumento de 2/3."],
+      "atencao": ["Vantagem de QUALQUER natureza (não só econômica).", "É crime hediondo (lei especial).", "§4º: delação eficaz reduz a pena de um a dois terços."],
+      "exemplo": "Sequestradores exigem pagamento da família para libertar a vítima: art. 159.",
+      "prova": ["Assertiva que exige vantagem econômica no art. 159 erra: o texto fala em qualquer vantagem."],
+      "termos": [],
+      "remissoes": ["Art. 148", "Art. 158"]
+    },
+    "art-160": {
+      "simples": "Extorsão indireta: exigir ou receber, como garantia de dívida, abusando da situação de alguém, documento que pode dar causa a procedimento criminal contra a vítima ou contra terceiro. Pena: reclusão de 1 a 3 anos e multa.",
+      "pontos": ["Exigir ou receber documento como garantia de dívida.", "Abusando da situação de alguém.", "Documento que pode dar causa a procedimento criminal.", "Reclusão de 1 a 3 anos e multa."],
+      "atencao": ["Típico do 'agiota' que exige documento comprometedor como garantia."],
+      "exemplo": "O credor exige, como garantia da dívida, um documento que pode incriminar o devedor.",
+      "prova": ["Assertiva que dispensa o abuso da situação da vítima no art. 160 erra: é parte do tipo."],
+      "termos": [],
+      "remissoes": ["Art. 158"]
+    },
+    "art-161": {
+      "simples": "Alteração de limites, usurpação de águas e esbulho possessório: suprimir ou deslocar tapume, marco ou outro sinal de linha divisória para apropriar-se de coisa imóvel alheia. Pena: detenção de 1 a 6 meses e multa. Na mesma pena quem desvia ou represa águas alheias em proveito próprio ou de outrem, ou invade, com violência a pessoa ou grave ameaça, ou mediante concurso de mais de duas pessoas, terreno ou edifício alheio para esbulho possessório. Se há violência, pune-se também a violência. Se a propriedade é particular e sem violência, somente se procede mediante queixa.",
+      "pontos": ["Caput: suprimir ou deslocar marco divisório para apropriar-se de imóvel.", "§1º, I: usurpação de águas.", "§1º, II: esbulho possessório (violência, grave ameaça ou mais de duas pessoas).", "§2º: também a pena da violência.", "§3º: propriedade particular e sem violência: queixa."],
+      "atencao": ["Concurso de MAIS DE DUAS pessoas no esbulho (inciso II)."],
+      "exemplo": "Grupo de mais de duas pessoas invade terreno alheio para se apossar dele: esbulho possessório (§1º, II).",
+      "prova": ["Assertiva que exige apenas duas pessoas para o esbulho do §1º, II, erra: exige mais de duas."],
+      "termos": [{ "termo": "Esbulho possessório", "significado": "Invasão de imóvel para tomar-lhe a posse." }],
+      "remissoes": ["Art. 163"]
+    },
+    "art-162": {
+      "simples": "Supressão ou alteração de marca em animais: suprimir ou alterar, indevidamente, em gado ou rebanho alheio, marca ou sinal indicativo de propriedade. Pena: detenção de 6 meses a 3 anos e multa.",
+      "pontos": ["Suprimir ou alterar marca ou sinal de propriedade em gado ou rebanho alheio.", "Detenção de 6 meses a 3 anos e multa."],
+      "atencao": ["O objeto é a MARCA (sinal indicativo de propriedade), não a subtração do animal."],
+      "exemplo": "Alterar a marca a ferro em bois alheios para dificultar a identificação do dono.",
+      "prova": ["Assertiva que aplica o art. 162 à simples subtração de animal erra: ele pune a supressão ou alteração da marca."],
+      "termos": [],
+      "remissoes": ["Art. 155"]
+    },
+    "art-163": {
+      "simples": "Dano: destruir, inutilizar ou deteriorar coisa alheia. Pena: detenção de 1 a 6 meses, ou multa. Dano qualificado (detenção de 6 meses a 3 anos e multa, além da pena da violência) quando cometido com violência à pessoa ou grave ameaça; com emprego de substância inflamável ou explosiva, se o fato não constitui crime mais grave; ou por motivo egoístico ou com prejuízo considerável para a vítima. Confira o texto completo para as demais hipóteses de dano qualificado.",
+      "pontos": ["Caput: destruir, inutilizar ou deteriorar coisa alheia: detenção de 1 a 6 meses, ou multa.", "Parágrafo único: qualificadoras (violência ou grave ameaça; substância inflamável ou explosiva; motivo egoístico ou prejuízo considerável).", "Pena do dano qualificado: detenção de 6 meses a 3 anos e multa, além da violência."],
+      "atencao": ["Dano exige DOLO de destruir/inutilizar/deteriorar; não há dano culposo.", "A coisa deve ser ALHEIA."],
+      "exemplo": "Quebrar de propósito o vidro do carro do vizinho: dano.",
+      "prova": ["Assertiva que pune o dano culposo erra: o crime só existe na forma dolosa."],
+      "termos": [],
+      "remissoes": ["Art. 167 (ação penal)"]
+    },
+    "art-164": {
+      "simples": "Introdução ou abandono de animais em propriedade alheia: introduzir ou deixar animais em propriedade alheia, sem consentimento de quem de direito, desde que do fato resulte prejuízo. Pena: detenção de 15 dias a 6 meses, ou multa.",
+      "pontos": ["Introduzir ou deixar animais em propriedade alheia sem consentimento.", "Exige prejuízo.", "Detenção de 15 dias a 6 meses, ou multa."],
+      "atencao": ["Só há crime se resultar PREJUÍZO."],
+      "exemplo": "Soltar o gado no pasto do vizinho, que sofre prejuízo.",
+      "prova": ["Assertiva que dispensa o prejuízo no art. 164 erra: é condição do tipo."],
+      "termos": [],
+      "remissoes": ["Art. 167"]
+    },
+    "art-165": {
+      "simples": "Dano em coisa de valor artístico, arqueológico ou histórico: destruir, inutilizar ou deteriorar coisa tombada pela autoridade competente em virtude de valor artístico, arqueológico ou histórico. Pena: detenção de 6 meses a 2 anos e multa.",
+      "pontos": ["Coisa tombada pela autoridade competente.", "Valor artístico, arqueológico ou histórico.", "Detenção de 6 meses a 2 anos e multa."],
+      "atencao": ["A coisa deve ser TOMBADA pela autoridade."],
+      "exemplo": "Pichar um monumento tombado como patrimônio histórico.",
+      "prova": ["Assertiva que aplica o art. 165 a bens sem tombamento erra."],
+      "termos": [{ "termo": "Tombamento", "significado": "Proteção oficial de bens de valor cultural." }],
+      "remissoes": ["Art. 163"]
+    },
+    "art-166": {
+      "simples": "Alteração de local especialmente protegido: alterar, sem licença da autoridade competente, o aspecto de local especialmente protegido por lei. Pena: detenção de 1 mês a 1 ano, ou multa.",
+      "pontos": ["Alterar o aspecto de local especialmente protegido por lei.", "Sem licença da autoridade competente.", "Detenção de 1 mês a 1 ano, ou multa."],
+      "atencao": ["A proteção deve decorrer de LEI."],
+      "exemplo": "Reformar a fachada de um local protegido sem licença da autoridade.",
+      "prova": ["Assertiva que dispensa a ausência de licença da autoridade erra: é elemento do tipo."],
+      "termos": [],
+      "remissoes": ["Art. 165"]
+    },
+    "art-167": {
+      "simples": "Ação penal: nos casos do art. 163 (dano simples), do inciso IV do seu parágrafo (dano por motivo egoístico ou com prejuízo considerável) e do art. 164, somente se procede mediante queixa.",
+      "pontos": ["Ação penal privada nos arts. 163 (simples), 163, parágrafo único, IV, e 164."],
+      "atencao": ["As demais qualificadoras do dano (violência, substância inflamável) são de ação pública."],
+      "exemplo": "No dano simples, a vítima precisa oferecer queixa.",
+      "prova": ["Assertiva que torna pública incondicionada a ação no dano simples erra: é por queixa."],
+      "termos": [],
+      "remissoes": ["Arts. 163 e 164"]
+    },
+    "art-168": {
+      "simples": "Apropriação indébita: apropriar-se de coisa alheia móvel, de que tem a posse ou a detenção. Pena: reclusão de 1 a 4 anos e multa. A pena aumenta-se de um terço quando o agente recebeu a coisa em depósito necessário; na qualidade de tutor, curador, síndico, liquidatário, inventariante, testamenteiro ou depositário judicial; ou em razão de ofício, emprego ou profissão.",
+      "pontos": ["O agente JÁ tem a posse ou detenção legítima e inverte o ânimo, apropriando-se.", "Pena: reclusão de 1 a 4 anos e multa.", "§1º: aumento de 1/3 (depósito necessário; tutor, curador, síndico, liquidatário, inventariante, testamenteiro ou depositário judicial; ofício, emprego ou profissão)."],
+      "atencao": ["Diferença para o furto: na apropriação indébita a posse é LEGÍTIMA no início; no furto há subtração."],
+      "exemplo": "O depositário de um bem se recusa a devolvê-lo e passa a tratá-lo como seu: apropriação indébita.",
+      "prova": ["Assertiva que exige subtração da coisa na apropriação indébita erra: o agente já tem a posse ou detenção."],
+      "termos": [],
+      "remissoes": ["Art. 155", "Art. 168-A"]
+    },
+    "art-168-a": {
+      "simples": "Apropriação indébita previdenciária: deixar de repassar à previdência social as contribuições recolhidas dos contribuintes, no prazo e forma legal ou convencional. Pena: reclusão de 2 a 5 anos e multa. Na mesma pena quem deixa de recolher no prazo contribuição descontada de pagamento a segurados, a terceiros ou arrecadada do público; de recolher contribuições que integraram despesas contábeis ou custos relativos à venda de produtos ou prestação de serviços; ou de pagar benefício devido a segurado quando já reembolsado pela previdência. É extinta a punibilidade se o agente espontaneamente declara, confessa e paga antes do início da ação fiscal. O juiz pode deixar de aplicar a pena ou aplicar só a multa se o agente é primário e de bons antecedentes, em hipóteses do §3º. Os §§5º e 6º, incluídos em 2026, afastam a extinção de punibilidade do §2º para o devedor contumaz declarado em decisão administrativa definitiva e inscrito no Cadin.",
+      "pontos": ["Caput: não repassar contribuições recolhidas: reclusão de 2 a 5 anos e multa.", "§1º: não recolher contribuição descontada; contribuições embutidas em custos; não pagar benefício já reembolsado.", "§2º: extinção da punibilidade com declaração, confissão e pagamento antes da ação fiscal.", "§3º: perdão judicial ou multa (primário e bons antecedentes) com pagamento ou valor mínimo.", "§§5º e 6º: devedor contumaz inscrito no Cadin não tem a extinção do §2º."],
+      "atencao": ["Extinção da punibilidade só com pagamento ANTES do início da ação fiscal.", "O devedor contumaz declarado e inscrito no Cadin não se beneficia do §2º (texto atual)."],
+      "exemplo": "Empresa desconta a contribuição previdenciária do salário e não a repassa à previdência: art. 168-A.",
+      "prova": ["Assertiva que permite extinguir a punibilidade mesmo após o início da ação fiscal erra: o §2º exige pagamento antes dela."],
+      "termos": [{ "termo": "Cadin", "significado": "Cadastro Informativo dos créditos não quitados do setor público federal." }],
+      "remissoes": ["Art. 168"]
+    },
+    "art-169": {
+      "simples": "Apropriação de coisa havida por erro, caso fortuito ou força da natureza: apropriar-se alguém de coisa alheia vinda ao seu poder por erro, caso fortuito ou força da natureza. Pena: detenção de 1 mês a 1 ano, ou multa. Na mesma pena quem acha tesouro em prédio alheio e se apropria, no todo ou em parte, da quota do proprietário do prédio, e quem acha coisa alheia perdida e dela se apropria, total ou parcialmente, deixando de restituí-la ao dono ou legítimo possuidor ou de entregá-la à autoridade competente no prazo de 15 dias.",
+      "pontos": ["Caput: coisa que chegou por erro, caso fortuito ou força da natureza.", "Parágrafo único, I: apropriação de tesouro (quota do dono do prédio).", "Parágrafo único, II: apropriação de coisa achada: prazo de 15 dias para restituir ou entregar à autoridade.", "Detenção de 1 mês a 1 ano, ou multa."],
+      "atencao": ["Coisa achada: 15 dias para devolver ou entregar à autoridade."],
+      "exemplo": "Quem encontra uma carteira com documentos e a guarda sem procurar o dono nem entregar à autoridade em 15 dias comete o crime.",
+      "prova": ["Assertiva que fixa em 30 dias o prazo para entregar a coisa achada erra: são 15 dias."],
+      "termos": [{ "termo": "Tesouro", "significado": "Depósito antigo de coisas preciosas, sem dono conhecido." }],
+      "remissoes": ["Art. 168"]
+    },
+    "art-170": {
+      "simples": "Nos crimes previstos neste capítulo (crimes contra o patrimônio da apropriação indébita, entre outros), aplica-se o disposto no art. 155, §2º, isto é, o privilégio (primário e de pequeno valor).",
+      "pontos": ["Extensão do furto privilegiado (art. 155, §2º) aos crimes do capítulo (apropriação indébita, estelionato etc.)."],
+      "atencao": ["O privilégio exige primariedade e coisa de pequeno valor."],
+      "exemplo": "Em apropriação indébita de objeto de pequeno valor por réu primário, o juiz pode reduzir a pena nos termos do art. 155, §2º.",
+      "prova": ["Assertiva que nega o privilégio do furto aos crimes de apropriação erra: o art. 170 o estende."],
+      "termos": [],
+      "remissoes": ["Art. 155, §2º"]
+    },
+    "art-171": {
+      "simples": "Estelionato: obter, para si ou para outrem, vantagem ilícita, em prejuízo alheio, induzindo ou mantendo alguém em erro, mediante artifício, ardil ou qualquer outro meio fraudulento. Pena: reclusão de 1 a 5 anos e multa (texto atual). Se primário e de pequeno valor o prejuízo, aplica-se o art. 155, §2º. Nas mesmas penas incorre quem pratica as fraudes do §2º: disposição de coisa alheia como própria; alienação ou oneração fraudulenta de coisa própria; defraudação de penhor; fraude na entrega de coisa; fraude para recebimento de seguro; fraude no pagamento por cheque sem provisão de fundos; e cessão de conta bancária para fins criminosos (conta laranja). Fraude eletrônica (§2º-A): reclusão de 4 a 8 anos e multa; aumento de 1/3 a 2/3 se servidor fora do país. Aumento de um terço contra entidade de direito público ou de assistência social (§3º), e de 1/3 ao dobro contra idoso ou vulnerável (§4º).",
+      "pontos": ["Caput: vantagem ilícita em prejuízo alheio, induzindo ou mantendo em erro, por fraude; reclusão de 1 a 5 anos e multa.", "§1º: privilégio (primário e pequeno valor).", "§2º, I a VII: fraudes equiparadas (coisa alheia como própria; coisa própria inalienável; penhor; entrega de coisa; seguro; cheque sem fundos; conta laranja).", "§2º-A: fraude eletrônica: reclusão de 4 a 8 anos e multa.", "§2º-B: servidor fora do país: aumento de 1/3 a 2/3.", "§3º: aumento de 1/3 contra entidade de direito público, economia popular, assistência social ou beneficência.", "§4º: aumento de 1/3 ao dobro contra idoso ou vulnerável."],
+      "atencao": ["Estelionato exige FRAUDE e erro da vítima, que entrega voluntariamente a vantagem (diferente do furto e do roubo).", "O §5º, sobre a ação penal, está revogado no texto atual.", "A fraude eletrônica do §2º-A tem pena de 4 a 8 anos."],
+      "exemplo": "Vender, por meio de anúncio falso na internet, um produto que não existe, recebendo o pagamento: estelionato.",
+      "prova": ["Assertiva que dispensa o emprego de fraude no estelionato erra: o meio fraudulento é elementar."],
+      "termos": [{ "termo": "Ardil", "significado": "Astúcia, manobra para enganar alguém." }],
+      "remissoes": ["Art. 155", "Art. 170"]
+    },
+    "art-171-a": {
+      "simples": "Fraude com ativos virtuais, valores mobiliários ou ativos financeiros: organizar, gerir, ofertar ou distribuir carteiras ou intermediar operações que envolvam ativos virtuais, valores mobiliários ou quaisquer ativos financeiros com o fim de obter vantagem ilícita, em prejuízo alheio, induzindo ou mantendo alguém em erro, mediante artifício, ardil ou qualquer outro meio fraudulento. Pena: reclusão de 4 a 8 anos e multa. (Na plataforma, o texto desta unidade vem seguido da duplicata simulada, com pena de detenção de 2 a 4 anos e multa, e seu parágrafo único sobre falsificação da escrituração do Livro de Registro de Duplicatas.)",
+      "pontos": ["Organizar, gerir, ofertar, distribuir carteiras ou intermediar operações com ativos virtuais, valores mobiliários ou ativos financeiros.", "Fim de obter vantagem ilícita, em prejuízo alheio, com fraude.", "Pena: reclusão de 4 a 8 anos e multa.", "O texto exibido a seguir traz a duplicata simulada: detenção de 2 a 4 anos e multa."],
+      "atencao": ["O tipo exige fraude e indução em erro (como no estelionato).", "A duplicata simulada é crime autônomo, cujo texto aparece junto a esta unidade."],
+      "exemplo": "Oferecer investimento em criptomoedas prometendo lucros certos para enganar clientes.",
+      "prova": ["Assertiva que dispensa a fraude para configurar o art. 171-A erra."],
+      "termos": [{ "termo": "Ativo virtual", "significado": "Representação digital de valor negociável (como criptoativos)." }],
+      "remissoes": ["Art. 171"]
+    },
+    "art-173": {
+      "simples": "Abuso de incapazes: abusar, em proveito próprio ou alheio, de necessidade, paixão ou inexperiência de menor, ou da alienação ou debilidade mental de outrem, induzindo qualquer deles à prática de ato suscetível de produzir efeito jurídico, em prejuízo próprio ou de terceiro. Pena: reclusão de 2 a 6 anos e multa.",
+      "pontos": ["Abusar da necessidade, paixão ou inexperiência de menor, ou da alienação ou debilidade mental.", "Induzir à prática de ato com efeito jurídico em prejuízo próprio ou de terceiro.", "Reclusão de 2 a 6 anos e multa."],
+      "atencao": ["A vítima é MENOR ou pessoa com alienação ou debilidade mental."],
+      "exemplo": "Fazer pessoa com debilidade mental assinar um contrato que a prejudica.",
+      "prova": ["Assertiva que aplica o art. 173 a qualquer vítima adulta capaz erra."],
+      "termos": [],
+      "remissoes": ["Art. 171"]
+    },
+    "art-174": {
+      "simples": "Induzimento à especulação: abusar, em proveito próprio ou alheio, da inexperiência ou da simplicidade ou inferioridade mental de outrem, induzindo-o à prática de jogo ou aposta, ou à especulação com títulos ou mercadorias, sabendo ou devendo saber que a operação é ruinosa. Pena: reclusão de 1 a 3 anos e multa.",
+      "pontos": ["Abusar da inexperiência, simplicidade ou inferioridade mental.", "Induzir a jogo, aposta ou especulação com títulos ou mercadorias.", "Operação sabidamente ruinosa.", "Reclusão de 1 a 3 anos e multa."],
+      "atencao": ["Exige que o agente SAIBA ou DEVA SABER que a operação é ruinosa."],
+      "exemplo": "Convencer pessoa ingênua a investir suas economias em uma operação que sabe ser ruinosa.",
+      "prova": ["Assertiva que dispensa o conhecimento do caráter ruinoso da operação erra."],
+      "termos": [],
+      "remissoes": ["Art. 171", "Art. 173"]
+    },
+    "art-175": {
+      "simples": "Fraude no comércio: enganar, no exercício de atividade comercial, o adquirente ou consumidor, vendendo como verdadeira ou perfeita mercadoria falsificada ou deteriorada, ou entregando uma mercadoria por outra. Pena: detenção de 6 meses a 2 anos, ou multa. Também quem altera, em obra encomendada, a qualidade ou o peso de metal, substitui pedra verdadeira por falsa ou menos valiosa, vende pedra falsa por verdadeira ou como precioso metal de outra qualidade: reclusão de 1 a 5 anos e multa. Aplica-se o art. 155, §2º.",
+      "pontos": ["Enganar o adquirente ou consumidor no exercício de atividade comercial.", "I – vender como verdadeira mercadoria falsificada ou deteriorada; II – entregar mercadoria por outra.", "Detenção de 6 meses a 2 anos, ou multa.", "§1º: fraudes com metais e pedras: reclusão de 1 a 5 anos e multa.", "§2º: privilégio do art. 155, §2º."],
+      "atencao": ["Exige atividade COMERCIAL.", "As fraudes com metais e pedras têm pena de reclusão."],
+      "exemplo": "Lojista vende como original uma mercadoria falsificada.",
+      "prova": ["Assertiva que aplica o art. 175 a quem não exerce atividade comercial erra."],
+      "termos": [],
+      "remissoes": ["Art. 171"]
+    },
+    "art-176": {
+      "simples": "Outras fraudes: tomar refeição em restaurante, alojar-se em hotel ou utilizar-se de meio de transporte sem dispor de recursos para efetuar o pagamento. Pena: detenção de 15 dias a 2 meses, ou multa. Somente se procede mediante representação, e o juiz pode, conforme as circunstâncias, deixar de aplicar a pena.",
+      "pontos": ["Consumir refeição, hospedagem ou transporte sem recursos para pagar.", "Detenção de 15 dias a 2 meses, ou multa.", "Ação condicionada à representação.", "O juiz pode deixar de aplicar a pena."],
+      "atencao": ["Hipótese conhecida como 'calote'; ação condicionada à representação."],
+      "exemplo": "Pessoa almoça em restaurante sabendo que não tem dinheiro para pagar.",
+      "prova": ["Assertiva que torna incondicionada a ação do art. 176 erra: exige representação."],
+      "termos": [],
+      "remissoes": ["Art. 171"]
+    },
+    "art-177": {
+      "simples": "Fraudes e abusos na fundação ou administração de sociedade por ações: promover a fundação de sociedade por ações fazendo, em prospecto ou comunicação ao público ou à assembleia, afirmação falsa sobre a constituição da sociedade, ou ocultando fraudulentamente fato a ela relativo. Pena: reclusão de 1 a 4 anos e multa, se o fato não constitui crime contra a economia popular. Na mesma pena incorrem diretor, gerente ou fiscal que faz afirmação falsa sobre as condições econômicas da sociedade, promove falsa cotação das ações, toma empréstimo à sociedade ou usa bens sociais sem autorização da assembleia, compra ou vende ações da própria sociedade fora dos casos permitidos, ou aceita em penhor ou caução ações da própria sociedade como garantia de crédito social.",
+      "pontos": ["Falsa afirmação ou ocultação fraudulenta na fundação de sociedade por ações.", "Pena: reclusão de 1 a 4 anos e multa, se não for crime contra a economia popular.", "§1º, I a V: condutas de diretor, gerente ou fiscal (afirmação falsa; falsa cotação; uso de bens da sociedade; negociação de ações próprias; aceitar ações próprias em penhor)."],
+      "atencao": ["Subsidiário ao crime contra a economia popular (ressalva expressa)."],
+      "exemplo": "O diretor promove falsa cotação das ações da companhia para atrair investidores.",
+      "prova": ["Assertiva que aplica o art. 177 mesmo quando o fato constitui crime contra a economia popular erra: a ressalva afasta o tipo."],
+      "termos": [{ "termo": "Prospecto", "significado": "Documento de oferta pública de valores mobiliários." }],
+      "remissoes": ["Art. 171"]
+    },
+    "art-178": {
+      "simples": "Emissão irregular de conhecimento de depósito ou warrant: emitir conhecimento de depósito ou warrant em desacordo com disposição legal. Pena: reclusão de 1 a 4 anos e multa.",
+      "pontos": ["Emitir conhecimento de depósito ou warrant em desacordo com a lei.", "Reclusão de 1 a 4 anos e multa."],
+      "atencao": ["Crime próprio de quem emite esses títulos (armazéns gerais)."],
+      "exemplo": "Armazém emite warrant sem a mercadoria correspondente.",
+      "prova": ["Assertiva que prevê detenção para o art. 178 erra: a pena é de reclusão."],
+      "termos": [{ "termo": "Warrant", "significado": "Título que representa mercadoria depositada e permite sua oneração como garantia." }],
+      "remissoes": ["Art. 171"]
+    }
+  }
+}

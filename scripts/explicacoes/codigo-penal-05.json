@@ -1,0 +1,168 @@
+{
+  "course_slug": "codigo-penal",
+  "law": "Código Penal — lote 05: arts. 121 a 135-A",
+  "units": {
+    "art-121": {
+      "simples": "Homicídio: matar alguém, com pena de reclusão de 6 a 20 anos. Há formas privilegiada (redução de um sexto a um terço se o agente age por relevante valor social ou moral, ou sob violenta emoção logo em seguida a injusta provocação da vítima), qualificada (reclusão de 12 a 30 anos, nos casos do §2º), culposa (detenção de 1 a 3 anos) e várias causas de aumento. Nas qualificadoras estão: paga, promessa de recompensa ou outro motivo torpe; motivo fútil; veneno, fogo, explosivo, asfixia, tortura ou meio insidioso, cruel ou de perigo comum; traição, emboscada, dissimulação ou recurso que dificulte ou impossibilite a defesa; para assegurar execução, ocultação, impunidade ou vantagem de outro crime; contra autoridades e agentes de segurança pública, do sistema prisional, membros do Judiciário, MP, Defensoria, Advocacia Pública e oficial de justiça (e seus familiares) em razão da função; arma de fogo de uso restrito ou proibido; contra menor de 14 anos; e nas dependências de instituição de ensino.",
+      "pontos": ["Caput: reclusão de 6 a 20 anos.", "§1º (privilégio): relevante valor social ou moral, ou violenta emoção logo após injusta provocação: redução de um sexto a um terço.", "§2º (qualificado): reclusão de 12 a 30 anos. Incisos I a V (motivos e meios) e VII a X (vítimas e circunstâncias especiais); o inciso VI foi revogado (feminicídio agora no art. 121-A).", "§2º-B e §2º-C: causas de aumento para homicídio contra menor de 14 anos e nas dependências de instituição de ensino.", "§2º-D: homicídio doloso por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada: reclusão de 20 a 40 anos (texto atual).", "§3º: homicídio culposo: detenção de 1 a 3 anos.", "§4º: culposo, aumento de 1/3 se inobservância de regra técnica, ou se o agente deixa de prestar socorro, não procura diminuir as consequências ou foge; doloso: aumento de 1/3 se a vítima é menor de 14 ou maior de 60 anos.", "§5º: no culposo, perdão judicial se as consequências atingirem o próprio agente de modo grave.", "§6º: aumento de 1/3 até a metade se praticado por milícia privada sob pretexto de segurança ou por grupo de extermínio."],
+      "atencao": ["Homicídio qualificado É crime hediondo (regra da lei especial); privilegiado e qualificado podem coexistir se as qualificadoras forem objetivas (tema de doutrina e jurisprudência).", "O privilégio é causa de DIMINUIÇÃO de pena (1/6 a 1/3), e o homicídio qualificado tem pena de 12 a 30 anos.", "As causas do §4º se dividem: culposo (inobservância de regra técnica, omissão de socorro, fuga) e doloso (vítima menor de 14 ou maior de 60).", "Confira no texto as redações recentes (leis de 2024 e 2026) dos incisos VII a X e dos parágrafos 2º-B a 2º-D."],
+      "exemplo": "Matar alguém por motivo fútil, como uma discussão de trânsito banal, é homicídio qualificado (pena de 12 a 30 anos).",
+      "prova": ["Assertiva que fixa a pena do homicídio simples em 12 a 30 anos confunde com a forma qualificada: o caput prevê reclusão de 6 a 20 anos.", "Assertiva que dispensa a vítima ser maior de 60 anos para o aumento do §4º, parte final, erra: o aumento exige vítima menor de 14 ou maior de 60 anos no homicídio doloso."],
+      "termos": [{ "termo": "Dolo e culpa", "significado": "No homicídio doloso o agente quer ou assume o risco do resultado; no culposo, dá causa por imprudência, negligência ou imperícia." }, { "termo": "Meio insidioso", "significado": "Meio disfarçado, que surpreende a vítima, como o veneno." }],
+      "remissoes": ["Art. 121-A (feminicídio)", "Art. 18 (dolo e culpa)", "Art. 61 (agravantes)"]
+    },
+    "art-121-a": {
+      "simples": "Feminicídio: matar mulher por razões da condição do sexo feminino, com reclusão de 20 a 40 anos. Há razões da condição do sexo feminino quando o crime envolve violência doméstica e familiar ou menosprezo ou discriminação à condição de mulher. A pena aumenta de 1/3 até a metade em situações como gestação ou até 3 meses após o parto, vítima mãe ou responsável por criança, adolescente ou pessoa com deficiência, vítima menor de 14, maior de 60 ou com deficiência ou doença degenerativa, presença física ou virtual de descendente ou ascendente, descumprimento de medidas protetivas e nas circunstâncias dos incisos III, IV e VIII do §2º do art. 121. As circunstâncias pessoais elementares do §1º comunicam-se ao coautor ou partícipe.",
+      "pontos": ["Caput: reclusão de 20 a 40 anos.", "§1º: razões da condição do sexo feminino: I – violência doméstica e familiar; II – menosprezo ou discriminação à condição de mulher.", "§2º: aumento de 1/3 até a metade em cinco hipóteses (gestação ou 3 meses pós-parto etc.; vulnerabilidades da vítima; presença de descendente ou ascendente; descumprimento de medidas protetivas; circunstâncias de III, IV e VIII do §2º do art. 121).", "§3º: as circunstâncias pessoais elementares do §1º se comunicam ao coautor ou partícipe."],
+      "atencao": ["O feminicídio agora é crime autônomo (art. 121-A), com pena de 20 a 40 anos.", "A mulher deve ser vítima por razões da condição do sexo feminino (violência doméstica ou menosprezo/discriminação).", "O aumento vai de 1/3 até a metade."],
+      "exemplo": "Marido mata a esposa no contexto de violência doméstica e familiar: feminicídio (pena de 20 a 40 anos).",
+      "prova": ["Assertiva que trata o feminicídio como qualificadora do art. 121 desatualiza a norma: hoje é o crime autônomo do art. 121-A."],
+      "termos": [{ "termo": "Razões da condição do sexo feminino", "significado": "Violência doméstica e familiar, ou menosprezo ou discriminação à condição de mulher." }],
+      "remissoes": ["Art. 121", "Art. 92, II"]
+    },
+    "art-121-b": {
+      "simples": "Vicaricídio: matar descendente, ascendente, dependente, enteado ou pessoa sob guarda ou responsabilidade direta da mulher, com o fim específico de causar-lhe sofrimento, punição ou controle, no contexto de violência doméstica e familiar. Pena: reclusão de 20 a 40 anos, aumentada de 1/3 até a metade se praticado na presença da mulher visada, contra criança, adolescente, pessoa idosa ou com deficiência, ou em descumprimento de medida protetiva de urgência.",
+      "pontos": ["Matar parente, dependente ou pessoa sob guarda da mulher, para causar-lhe sofrimento, punição ou controle.", "Contexto de violência doméstica e familiar.", "Reclusão de 20 a 40 anos.", "Aumento de 1/3 até a metade: na presença da mulher; contra criança, adolescente, idoso ou pessoa com deficiência; descumprimento de medida protetiva."],
+      "atencao": ["Exige FIM ESPECÍFICO (sofrimento, punição ou controle da mulher).", "A vítima direta é terceiro ligado à mulher, não a mulher."],
+      "exemplo": "O agressor mata o filho da ex-companheira para fazê-la sofrer: vicaricídio.",
+      "prova": ["Assertiva que dispensa o fim específico de causar sofrimento, punição ou controle contraria o caput."],
+      "termos": [{ "termo": "Vicaricídio", "significado": "Nome dado ao crime de matar pessoa próxima à mulher para atingi-la." }],
+      "remissoes": ["Art. 121-A"]
+    },
+    "art-122": {
+      "simples": "Induzimento, instigação ou auxílio a suicídio ou a automutilação: induzir ou instigar alguém a suicidar-se ou a praticar automutilação, ou prestar auxílio material para que o faça. Pena base: reclusão de 6 meses a 2 anos. Se resulta lesão grave ou gravíssima: reclusão de 1 a 3 anos; se o suicídio se consuma ou da automutilação resulta morte: reclusão de 2 a 6 anos. A pena é duplicada por motivo egoístico, torpe ou fútil ou se a vítima é menor ou tem diminuída a capacidade de resistência; aumentada até o dobro se por rede de computadores, rede social ou transmissão em tempo real; e em dobro se o autor é líder, coordenador ou administrador de grupo, comunidade ou rede virtual. Casos de menor de 14 anos ou sem discernimento remetem a lesão gravíssima ou homicídio.",
+      "pontos": ["Condutas: induzir, instigar ou auxiliar materialmente.", "Caput: reclusão de 6 meses a 2 anos.", "§1º: lesão grave ou gravíssima: 1 a 3 anos.", "§2º: suicídio consumado ou morte pela automutilação: 2 a 6 anos.", "§3º: pena duplicada por motivo egoístico, torpe ou fútil, ou vítima menor ou com resistência diminuída.", "§4º: aumentada até o dobro por meio de rede de computadores, rede social ou transmissão em tempo real.", "§5º: pena em dobro se o autor é líder, coordenador ou administrador de grupo ou rede virtual.", "§6º e §7º: vítima menor de 14 anos ou sem discernimento: responde por lesão gravíssima (art. 129, §2º) ou homicídio (art. 121)."],
+      "atencao": ["O crime só se consuma nas formas dos §§1º e 2º se houver resultado (lesão grave ou morte); o caput pune a conduta em si.", "Confira os §§6º e 7º: contra menor de 14 anos ou sem discernimento, desloca-se para lesão gravíssima ou homicídio."],
+      "exemplo": "O líder de um grupo em rede social instiga participantes ao suicídio: aplica-se a pena em dobro (§5º) e pode haver aumento pelo meio (§4º).",
+      "prova": ["Assertiva que trata o induzimento ao suicídio como crime impunível se não há resultado erra: o caput pune a conduta."],
+      "termos": [{ "termo": "Automutilação", "significado": "Lesão que a pessoa causa a si mesma." }],
+      "remissoes": ["Art. 121 (homicídio)", "Art. 129 (lesão corporal)"]
+    },
+    "art-123": {
+      "simples": "Infanticídio: matar, sob a influência do estado puerperal, o próprio filho, durante o parto ou logo após. O texto exibido traz apenas a descrição da conduta; a pena do infanticídio é de detenção (consulte o texto oficial completo).",
+      "pontos": ["Autora: a mãe, sob a influência do estado puerperal.", "Vítima: o próprio filho, durante o parto ou logo após.", "Tipo especial em relação ao homicídio (privilegiado em razão do estado puerperal)."],
+      "atencao": ["Elementares: ESTADO PUERPERAL + durante o parto ou logo após.", "Na doutrina, o estado puerperal e a qualidade de mãe são elementares, e por isso se comunicam ao coautor (art. 30)."],
+      "exemplo": "Mãe, em estado puerperal, mata o recém-nascido logo após o parto: infanticídio, não homicídio.",
+      "prova": ["Assertiva que aplica o infanticídio à morte do filho muito tempo depois do parto, sem relação com o estado puerperal, erra."],
+      "termos": [{ "termo": "Estado puerperal", "significado": "Alteração física e psíquica da mulher durante e logo após o parto." }],
+      "remissoes": ["Art. 121", "Art. 30"]
+    },
+    "art-124": {
+      "simples": "Autoaborto e aborto consentido: provocar aborto em si mesma ou consentir que outrem o provoque. O texto oficial traz a indicação 'Vide ADPF 54': confira a decisão do STF sobre o tema.",
+      "pontos": ["Gestante que provoca aborto em si mesma.", "Gestante que consente que outra pessoa lho provoque."],
+      "atencao": ["É crime próprio: só a gestante pratica. O terceiro que provoca com consentimento responde pelo art. 126.", "O texto remete à ADPF 54: antes de memorizar o alcance, confira o julgamento."],
+      "exemplo": "A gestante toma substância abortiva por conta própria: art. 124.",
+      "prova": ["Assertiva que aplica o art. 124 ao médico que realiza o aborto com consentimento da gestante erra: ele responde pelo art. 126."],
+      "termos": [{ "termo": "Crime próprio", "significado": "Crime que só pode ser praticado por determinada pessoa (aqui, a gestante)." }],
+      "remissoes": ["Arts. 125 a 128"]
+    },
+    "art-125": {
+      "simples": "Aborto provocado por terceiro sem o consentimento da gestante. É a forma mais grave do aborto provocado por terceiro; a pena é de reclusão (confira o texto oficial).",
+      "pontos": ["Terceiro provoca aborto, sem consentimento da gestante."],
+      "atencao": ["Diferença entre os arts. 125 e 126: ausência ou presença de consentimento da gestante."],
+      "exemplo": "Alguém agride a gestante com o fim de provocar aborto, sem o seu consentimento: art. 125.",
+      "prova": ["Assertiva que exige o consentimento da gestante para o art. 125 inverte o tipo: ele pressupõe a ausência de consentimento."],
+      "termos": [],
+      "remissoes": ["Art. 124", "Art. 126", "Art. 127"]
+    },
+    "art-126": {
+      "simples": "Aborto provocado por terceiro com o consentimento da gestante. Aplica-se a pena do artigo anterior (aborto sem consentimento) se a gestante não é maior de 14 anos, é alienada ou débil mental, ou se o consentimento é obtido mediante fraude, grave ameaça ou violência. O texto oficial traz 'Vide ADPF 54'.",
+      "pontos": ["Terceiro provoca aborto com o consentimento da gestante.", "Parágrafo único: consentimento irrelevante se a gestante não é maior de 14 anos, é alienada ou débil mental, ou o consentimento é viciado por fraude, grave ameaça ou violência: pena do art. 125."],
+      "atencao": ["Consentimento inválido (menor de 14, alienada mental ou obtido por fraude/ameaça/violência) equipara-se à ausência de consentimento.", "Confira a ADPF 54 indicada no texto."],
+      "exemplo": "Quem realiza aborto em gestante de 13 anos, mesmo com seu consentimento, responde com a pena do art. 125.",
+      "prova": ["Assertiva que valida o consentimento de gestante menor de 14 anos erra: o parágrafo único o desconsidera."],
+      "termos": [],
+      "remissoes": ["Arts. 124, 125, 127"]
+    },
+    "art-127": {
+      "simples": "Forma qualificada: as penas dos dois artigos anteriores são aumentadas de um terço se, em consequência do aborto ou dos meios empregados, a gestante sofre lesão corporal de natureza grave, e duplicadas se lhe sobrevém a morte.",
+      "pontos": ["Lesão grave na gestante: aumento de um terço.", "Morte da gestante: pena duplicada.", "Vale para os crimes dos arts. 125 e 126 (terceiro)."],
+      "atencao": ["Aumenta 1/3 (lesão grave) ou duplica (morte)."],
+      "exemplo": "Procedimento de aborto clandestino causa a morte da gestante: pena duplicada.",
+      "prova": ["Assertiva que aplica o art. 127 ao autoaborto da gestante (art. 124) erra: refere-se aos arts. 125 e 126."],
+      "termos": [],
+      "remissoes": ["Arts. 125 e 126"]
+    },
+    "art-128": {
+      "simples": "Aborto legal: não se pune o aborto praticado por médico se não há outro meio de salvar a vida da gestante (aborto necessário) ou se a gravidez resulta de estupro e o aborto é precedido de consentimento da gestante ou, quando incapaz, de seu representante legal (aborto sentimental). O texto traz as indicações 'Vide ADPF 54' e 'Vide ADPF 1207 MC/DF': confira as decisões do STF.",
+      "pontos": ["Só o MÉDICO pratica o aborto legal.", "I – aborto necessário: não há outro meio de salvar a vida da gestante.", "II – gravidez resultante de estupro, com consentimento da gestante (ou do representante legal, se incapaz)."],
+      "atencao": ["No inciso I não se exige consentimento (nem autorização judicial); no II exige-se consentimento da gestante.", "O art. 128 afasta a PUNIÇÃO (não é causa de justificação de qualquer pessoa: é para o médico).", "Confira as ADPFs citadas no texto."],
+      "exemplo": "Médico realiza aborto porque a gravidez coloca em risco a vida da gestante e não há outro meio de salvá-la: não se pune.",
+      "prova": ["Assertiva que exige autorização judicial para o aborto necessário erra: o texto não a exige.", "Assertiva que permite que enfermeira realize o aborto do art. 128 contraria o caput (aborto praticado por médico)."],
+      "termos": [{ "termo": "Aborto necessário", "significado": "Aborto para salvar a vida da gestante." }],
+      "remissoes": ["Arts. 124 a 127"]
+    },
+    "art-129": {
+      "simples": "Lesão corporal: ofender a integridade corporal ou a saúde de outrem, com detenção de 3 meses a 1 ano (lesão leve). Lesão grave (§1º): incapacidade para as ocupações habituais por mais de 30 dias, perigo de vida, debilidade permanente de membro, sentido ou função, ou aceleração de parto: reclusão de 1 a 5 anos. Lesão gravíssima (§2º): incapacidade permanente para o trabalho, enfermidade incurável, perda ou inutilização de membro, sentido ou função, deformidade permanente ou aborto: reclusão de 2 a 8 anos. Lesão seguida de morte (§3º): reclusão de 4 a 12 anos. Há ainda diminuição de pena (§4º), substituição por multa (§5º), forma culposa (§6º, detenção de 2 meses a 1 ano), aumentos (§§7º a 8º-A), violência doméstica (§9º, reclusão de 2 a 5 anos) e aumentos específicos (§§10 a 12).",
+      "pontos": ["Caput: detenção de 3 meses a 1 ano.", "§1º: grave (incapacidade por mais de 30 dias; perigo de vida; debilidade permanente; aceleração de parto): reclusão de 1 a 5 anos.", "§2º: gravíssima (incapacidade permanente; enfermidade incurável; perda ou inutilização; deformidade permanente; aborto): reclusão de 2 a 8 anos.", "§3º: lesão seguida de morte, sem dolo quanto à morte: reclusão de 4 a 12 anos.", "§4º: redução de um sexto a um terço (valor social ou moral, ou violenta emoção).", "§5º: se as lesões não são graves, o juiz pode substituir a detenção por multa (nas hipóteses do §4º ou lesões recíprocas).", "§6º: culposa: detenção de 2 meses a 1 ano.", "§9º: violência doméstica (ascendente, descendente, irmão, cônjuge, companheiro, convivência, relações domésticas): reclusão de 2 a 5 anos.", "§§10 a 12: aumentos de um terço (violência doméstica nos §§1º a 3º, vítima com deficiência) e de 1/3 a 2/3 contra agentes públicos listados e seus familiares."],
+      "atencao": ["Grave: incapacidade por MAIS de 30 dias; gravíssima: incapacidade PERMANENTE para o trabalho.", "A lesão seguida de morte (§3º) é preterdolosa: dolo na lesão, culpa na morte.", "O §9º trata de violência doméstica e exige a relação descrita no texto atual."],
+      "exemplo": "Uma agressão que deixa a vítima impossibilitada de suas atividades por 40 dias é lesão grave (§1º, I).",
+      "prova": ["Assertiva que classifica a incapacidade por 20 dias como lesão grave erra: exige mais de 30 dias.", "Assertiva que atribui à lesão seguida de morte pena de detenção erra: é reclusão de 4 a 12 anos."],
+      "termos": [{ "termo": "Preterdolo", "significado": "Dolo no resultado inicial (lesão) e culpa no resultado mais grave (morte)." }],
+      "remissoes": ["Art. 121, §§4º e 5º", "Art. 19 (agravação pelo resultado)"]
+    },
+    "art-130": {
+      "simples": "Perigo de contágio venéreo: expor alguém, por meio de relações sexuais ou qualquer ato libidinoso, a contágio de moléstia venérea de que sabe ou deve saber que está contaminado. Pena: detenção de 3 meses a 1 ano, ou multa. Se a intenção é transmitir a moléstia: reclusão de 1 a 4 anos e multa. Somente se procede mediante representação.",
+      "pontos": ["Expor a contágio por ato sexual ou libidinoso, sabendo ou devendo saber estar contaminado.", "Caput: detenção de 3 meses a 1 ano, ou multa.", "§1º: intenção de transmitir: reclusão de 1 a 4 anos e multa.", "§2º: ação penal condicionada à representação."],
+      "atencao": ["Ação penal pública CONDICIONADA à representação (§2º)."],
+      "exemplo": "Pessoa que sabe estar contaminada pratica relação sexual sem informar o parceiro, expondo-o a contágio.",
+      "prova": ["Assertiva que torna incondicionada a ação do art. 130 contraria o §2º."],
+      "termos": [],
+      "remissoes": ["Art. 131"]
+    },
+    "art-131": {
+      "simples": "Perigo de contágio de moléstia grave: praticar, com o fim de transmitir a outrem moléstia grave de que está contaminado, ato capaz de produzir o contágio. Pena: reclusão de 1 a 4 anos e multa.",
+      "pontos": ["Exige fim de transmitir moléstia grave.", "Ato capaz de produzir o contágio.", "Reclusão de 1 a 4 anos e multa."],
+      "atencao": ["Exige DOLO ESPECÍFICO: fim de transmitir.", "Se há transmissão e resultado mais grave, pode responder por lesão ou homicídio, conforme o caso."],
+      "exemplo": "Quem sabe estar contaminado pratica ato com o fim de transmitir a doença grave a outra pessoa.",
+      "prova": ["Assertiva que dispensa o fim de transmitir no art. 131 erra: ele é elementar do tipo."],
+      "termos": [],
+      "remissoes": ["Art. 130"]
+    },
+    "art-132": {
+      "simples": "Perigo para a vida ou saúde de outrem: expor a vida ou a saúde de outrem a perigo direto e iminente. Pena: detenção de 3 meses a 1 ano, se o fato não constitui crime mais grave (crime subsidiário). A pena aumenta de um sexto a um terço se a exposição decorre do transporte de pessoas para a prestação de serviços em estabelecimentos de qualquer natureza, em desacordo com as normas legais.",
+      "pontos": ["Perigo DIRETO e IMINENTE.", "Detenção de 3 meses a 1 ano.", "Subsidiário: só se não há crime mais grave.", "Aumento de 1/6 a 1/3 no transporte de pessoas para prestar serviços em desacordo com as normas."],
+      "atencao": ["Crime de perigo concreto (perigo direto e iminente).", "Subsidiariedade expressa: 'se o fato não constitui crime mais grave'."],
+      "exemplo": "Transportar trabalhadores em veículo inadequado, em desacordo com as normas, expondo-os a perigo: pena aumentada.",
+      "prova": ["Assertiva que aplica o art. 132 mesmo havendo crime mais grave erra: o tipo é subsidiário."],
+      "termos": [{ "termo": "Crime subsidiário", "significado": "Crime que só se aplica se o fato não constituir crime mais grave." }],
+      "remissoes": ["Art. 133"]
+    },
+    "art-133": {
+      "simples": "Abandono de incapaz: abandonar pessoa que está sob seu cuidado, guarda, vigilância ou autoridade e que, por qualquer motivo, é incapaz de defender-se dos riscos do abandono. Pena: reclusão de 2 a 5 anos. Se resulta lesão grave: 3 a 7 anos; se resulta morte: 8 a 14 anos. As penas aumentam-se de um terço se o abandono ocorre em lugar ermo, se o agente é ascendente, descendente, cônjuge, irmão, tutor ou curador da vítima, ou se a vítima é maior de 60 anos.",
+      "pontos": ["Abandonar pessoa sob cuidado, guarda, vigilância ou autoridade, incapaz de se defender.", "Caput: reclusão de 2 a 5 anos.", "§1º: lesão grave: 3 a 7 anos.", "§2º: morte: 8 a 14 anos.", "§3º: aumento de 1/3 se lugar ermo; se o agente é ascendente, descendente, cônjuge, irmão, tutor ou curador; ou vítima maior de 60 anos."],
+      "atencao": ["Penas e aumentos seguem a redação atual do texto (pena de 2 a 5 anos no caput).", "Exige relação de cuidado, guarda, vigilância ou autoridade."],
+      "exemplo": "Cuidador abandona idoso acamado em local isolado: abandono de incapaz, com aumento por lugar ermo e vítima idosa.",
+      "prova": ["Assertiva que aplica o art. 133 a qualquer pessoa que encontre incapaz em perigo erra: exige a relação de cuidado, guarda, vigilância ou autoridade (para o simples encontro, veja a omissão de socorro, art. 135)."],
+      "termos": [],
+      "remissoes": ["Art. 134", "Art. 135"]
+    },
+    "art-134": {
+      "simples": "Exposição ou abandono de recém-nascido: expor ou abandonar recém-nascido para ocultar desonra própria. Pena: detenção de 6 meses a 2 anos. Se resulta lesão grave: detenção de 1 a 3 anos; se resulta morte: detenção de 2 a 6 anos.",
+      "pontos": ["Fim especial: ocultar desonra própria.", "Caput: detenção de 6 meses a 2 anos.", "§1º: lesão grave: 1 a 3 anos.", "§2º: morte: 2 a 6 anos."],
+      "atencao": ["Exige a finalidade de ocultar desonra PRÓPRIA.", "As penas são de detenção."],
+      "exemplo": "Mãe abandona o recém-nascido para esconder a gravidez: art. 134.",
+      "prova": ["Assertiva que dispensa o fim de ocultar desonra própria erra: é elementar."],
+      "termos": [],
+      "remissoes": ["Art. 133"]
+    },
+    "art-135": {
+      "simples": "Omissão de socorro: deixar de prestar assistência, quando possível fazê-lo sem risco pessoal, à criança abandonada ou extraviada, ou à pessoa inválida ou ferida, ao desamparo ou em grave e iminente perigo; ou não pedir, nesses casos, o socorro da autoridade pública. Pena: detenção de 1 a 6 meses, ou multa. A pena é aumentada de metade se da omissão resulta lesão corporal grave, e triplicada se resulta a morte.",
+      "pontos": ["Deixar de prestar assistência, sem risco pessoal, à criança abandonada ou extraviada, pessoa inválida ou ferida, ao desamparo ou em grave e iminente perigo.", "Ou não pedir o socorro da autoridade pública.", "Pena: detenção de 1 a 6 meses, ou multa.", "Aumento de metade (lesão grave) e triplicação (morte)."],
+      "atencao": ["Só há omissão de socorro se for POSSÍVEL ajudar SEM RISCO PESSOAL.", "Alternativas: prestar assistência OU pedir socorro à autoridade.", "Aumento de metade na lesão grave; pena triplicada na morte."],
+      "exemplo": "Motorista vê uma pessoa ferida na estrada, nada faz e nem chama o socorro: omissão de socorro.",
+      "prova": ["Assertiva que exige que o omitente assuma risco pessoal para prestar socorro erra: o tipo ressalva o risco pessoal."],
+      "termos": [],
+      "remissoes": ["Art. 13, §2º (omissão relevante)", "Art. 135-A"]
+    },
+    "art-135-a": {
+      "simples": "Condicionamento de atendimento médico-hospitalar emergencial: exigir cheque-caução, nota promissória ou qualquer garantia, bem como o preenchimento prévio de formulários administrativos, como condição para o atendimento médico-hospitalar emergencial. Pena: detenção de 3 meses a 1 ano e multa. A pena aumenta até o dobro se da negativa de atendimento resulta lesão grave, e até o triplo se resulta morte.",
+      "pontos": ["Exigir garantia ou formulário prévio como condição para atendimento de emergência.", "Detenção de 3 meses a 1 ano e multa.", "Aumento: até o dobro (lesão grave) e até o triplo (morte)."],
+      "atencao": ["Protege o atendimento EMERGENCIAL.", "Aumentos: até o dobro e até o triplo (diferente da omissão de socorro, que aumenta de metade e tripla)."],
+      "exemplo": "O hospital exige cheque-caução antes de atender paciente em emergência: art. 135-A.",
+      "prova": ["Assertiva que aplica o art. 135-A ao atendimento eletivo erra: trata de atendimento médico-hospitalar emergencial."],
+      "termos": [],
+      "remissoes": ["Art. 135"]
+    }
+  }
+}
