@@ -1,0 +1,213 @@
+{
+  "course_slug": "quimicos",
+  "law": "Lei de Controle de Produtos Químicos (Lei nº 10.357, de 2001) — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "Estão sujeitos a controle e fiscalização, em todas as etapas (fabricação, armazenamento, compra, venda, posse, transporte, importação, exportação, utilização, entre outras), todos os produtos químicos que possam ser utilizados como insumo na elaboração de substâncias entorpecentes, psicotrópicas ou que determinem dependência física ou psíquica. O controle aplica-se também a essas substâncias quando não estiverem sob controle do Ministério da Saúde. Considera-se produto químico a substância química e as formulações que a contenham, nas concentrações estabelecidas em portaria, em qualquer estado físico, independentemente do nome fantasia e do uso lícito a que se destina.",
+      "pontos": ["Controle de todos os produtos químicos usados como insumo de drogas.", "Abrange todas as etapas, da fabricação à utilização.", "Aplica-se a substâncias sem controle do Ministério da Saúde.", "Conceito de produto químico por concentração em portaria."],
+      "atencao": ["O controle vale mesmo para uso LÍCITO e independe do nome fantasia."],
+      "exemplo": "Um solvente usado na indústria também se sujeita ao controle se puder servir de insumo para drogas.",
+      "prova": ["Assertiva que dispensa o controle quando o produto tem uso lícito erra."],
+      "termos": [{ "termo": "Insumo", "significado": "Produto usado como matéria-prima na fabricação de outro." }],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-2": {
+      "simples": "O Ministro de Estado da Justiça, de ofício ou por proposta do Departamento de Polícia Federal, da Secretaria Nacional Antidrogas ou da Anvisa, definirá, em portaria, os produtos químicos a serem controlados e, quando necessário, promoverá sua atualização, incluindo ou excluindo produtos, bem como estabelecerá os critérios e as formas de controle.",
+      "pontos": ["Lista de produtos controlados definida por portaria do Ministro da Justiça.", "Pode agir de ofício ou por proposta da PF, da Secretaria Nacional Antidrogas ou da Anvisa.", "Atualização para incluir ou excluir produtos."],
+      "atencao": ["A lista é infralegal (portaria), e não da lei."],
+      "exemplo": "Uma portaria inclui novo produto na lista de controlados.",
+      "prova": ["Assertiva que fixa a lista de produtos na própria lei erra: ela é por portaria."],
+      "termos": [],
+      "remissoes": ["Art. 1º"]
+    },
+    "art-3": {
+      "simples": "Compete ao Departamento de Polícia Federal o controle e a fiscalização dos produtos químicos a que se refere o art. 1º e a aplicação das sanções administrativas decorrentes.",
+      "pontos": ["Controle e fiscalização pela Polícia Federal.", "Aplicação das sanções administrativas."],
+      "atencao": ["Quem fiscaliza produtos químicos controlados é a POLÍCIA FEDERAL (e não o Exército)."],
+      "exemplo": "A PF fiscaliza o depósito de produtos químicos controlados.",
+      "prova": ["Assertiva que atribui ao Exército a fiscalização dos produtos químicos desta Lei erra: é da Polícia Federal."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-4": {
+      "simples": "Para exercer qualquer atividade sujeita a controle e fiscalização, a pessoa física ou jurídica deverá se cadastrar e requerer licença de funcionamento ao Departamento de Polícia Federal, nos termos da portaria do art. 2º, independentemente de outras exigências legais. As pessoas jurídicas já cadastradas providenciarão o recadastramento. Quem exercer a atividade de modo eventual deverá se cadastrar e requerer autorização especial para suas operações.",
+      "pontos": ["Cadastro e licença de funcionamento na PF.", "Recadastramento das já cadastradas.", "Atividade eventual: cadastro e autorização especial."],
+      "atencao": ["Licença para atividade REGULAR; autorização especial para atividade EVENTUAL."],
+      "exemplo": "A empresa que revende solventes controlados exige licença de funcionamento da PF.",
+      "prova": ["Assertiva que dispensa o cadastro de quem exerce a atividade apenas eventualmente erra: exige autorização especial."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-5": {
+      "simples": "A pessoa jurídica referida no caput do art. 4º deverá requerer, anualmente, a renovação da licença de funcionamento para o prosseguimento de suas atividades.",
+      "pontos": ["Renovação anual da licença de funcionamento."],
+      "atencao": ["Periodicidade ANUAL."],
+      "exemplo": "A empresa renova sua licença da PF todo ano.",
+      "prova": ["Assertiva que fixa a renovação a cada cinco anos erra: é anual."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-6": {
+      "simples": "Todas as partes envolvidas deverão possuir licença de funcionamento, exceto quando se tratar de quantidades de produtos químicos inferiores aos limites a serem estabelecidos em portaria do Ministro da Justiça.",
+      "pontos": ["Todas as partes da operação devem ter licença.", "Exceção: quantidades inferiores aos limites da portaria."],
+      "atencao": ["Vendedor e comprador precisam estar licenciados."],
+      "exemplo": "Quem compra de fornecedor sem licença descumpre a Lei, salvo quantidade abaixo do limite.",
+      "prova": ["Assertiva que exige licença apenas do vendedor erra: todas as partes devem tê-la."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-7": {
+      "simples": "Para importar, exportar ou reexportar os produtos químicos controlados é necessária autorização prévia do Departamento de Polícia Federal, nos casos previstos em portaria, sem prejuízo da exigência de licença às partes e dos procedimentos de outros órgãos competentes.",
+      "pontos": ["Autorização prévia da PF para importar, exportar e reexportar.", "Nos casos previstos em portaria."],
+      "atencao": ["Autorização PRÉVIA."],
+      "exemplo": "A empresa solicita à PF a autorização antes de importar o produto controlado.",
+      "prova": ["Assertiva que dispensa a autorização prévia na importação erra."],
+      "termos": [],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-8": {
+      "simples": "A pessoa jurídica que realizar qualquer das atividades do art. 1º é obrigada a fornecer ao Departamento de Polícia Federal, periodicamente, informações sobre suas operações. Os documentos que consubstanciam essas informações deverão ser arquivados pelo prazo de cinco anos e apresentados à PF quando solicitados.",
+      "pontos": ["Informações periódicas à PF.", "Arquivo dos documentos por cinco anos."],
+      "atencao": ["Guarda por CINCO anos."],
+      "exemplo": "A empresa envia à PF mapas periódicos de suas operações e guarda os documentos.",
+      "prova": ["Assertiva que fixa em dois anos a guarda dos documentos erra: são cinco anos."],
+      "termos": [],
+      "remissoes": ["Art. 9º"]
+    },
+    "art-9": {
+      "simples": "Os modelos de mapas e formulários necessários à implementação das normas dos artigos anteriores serão publicados em portaria ministerial.",
+      "pontos": ["Modelos de mapas e formulários por portaria ministerial."],
+      "atencao": ["Matéria regulamentar."],
+      "exemplo": "A portaria fixa o formulário de prestação de informações.",
+      "prova": ["Assertiva que prevê a edição dos modelos por lei erra: é por portaria."],
+      "termos": [],
+      "remissoes": ["Art. 8º"]
+    },
+    "art-10": {
+      "simples": "A pessoa física ou jurídica que, por qualquer motivo, suspender o exercício de atividade sujeita a controle e fiscalização ou mudar de atividade controlada deverá comunicar a paralisação ou alteração à Polícia Federal no prazo de trinta dias da suspensão ou mudança.",
+      "pontos": ["Comunicação de suspensão ou mudança de atividade.", "Prazo de trinta dias."],
+      "atencao": ["Prazo de TRINTA dias."],
+      "exemplo": "A empresa que para de revender o produto controlado avisa a PF em trinta dias.",
+      "prova": ["Assertiva que fixa em vinte e quatro horas o prazo para comunicar a suspensão erra: são trinta dias."],
+      "termos": [],
+      "remissoes": ["Art. 11"]
+    },
+    "art-11": {
+      "simples": "A pessoa física ou jurídica que exerça atividade sujeita a controle e fiscalização deverá informar à Polícia Federal, no prazo máximo de vinte e quatro horas, qualquer suspeita de desvio de produto químico a que se refere a Lei.",
+      "pontos": ["Comunicação de suspeita de desvio.", "Prazo máximo de vinte e quatro horas."],
+      "atencao": ["Prazo curto para suspeita de desvio: vinte e quatro horas."],
+      "exemplo": "A distribuidora avisa a PF no mesmo dia de uma compra suspeita de grande volume.",
+      "prova": ["Assertiva que fixa em trinta dias o prazo para informar suspeita de desvio erra: são vinte e quatro horas."],
+      "termos": [],
+      "remissoes": ["Art. 12"]
+    },
+    "art-12": {
+      "simples": "Constitui infração administrativa: deixar de cadastrar-se ou licenciar-se no prazo legal; deixar de comunicar à PF, em trinta dias, qualquer alteração cadastral ou estatutária, bem como a suspensão ou mudança de atividade; omitir informações ou prestá-las incompletas ou inexatas; não apresentar documentos de controle quando solicitado; exercer a atividade sem licença ou autorização especial; exercer a atividade com pessoa não autorizada ou irregular; deixar de informar suspeita de desvio; importar, exportar ou reexportar sem autorização prévia; alterar a composição de produto controlado sem comunicação; adulterar laudos, notas fiscais, rótulos e embalagens; deixar de informar a concentração do produto na embalagem ou rótulo; deixar de comunicar à PF furto, roubo ou extravio em quarenta e oito horas; e dificultar a ação do órgão de controle.",
+      "pontos": ["Treze hipóteses de infração administrativa.", "Falta de cadastro ou licença.", "Omissão ou inexatidão de informações.", "Adulteração de laudos, notas e rótulos.", "Furto, roubo ou extravio: comunicar em quarenta e oito horas.", "Dificultar a fiscalização."],
+      "atencao": ["Prazos distintos: trinta dias (alteração), vinte e quatro horas (suspeita de desvio, art. 11) e quarenta e oito horas (furto, roubo ou extravio)."],
+      "exemplo": "Empresa que perde um lote e não avisa a PF em quarenta e oito horas comete infração administrativa.",
+      "prova": ["Assertiva que fixa em vinte e quatro horas o prazo para comunicar furto ou extravio erra: são quarenta e oito horas."],
+      "termos": [],
+      "remissoes": ["Art. 14"]
+    },
+    "art-13": {
+      "simples": "Os procedimentos realizados no exercício da fiscalização deverão ser formalizados mediante a elaboração de documento próprio.",
+      "pontos": ["Formalização por documento próprio."],
+      "atencao": ["Exigência formal da fiscalização."],
+      "exemplo": "O agente da PF lavra termo de fiscalização.",
+      "prova": ["Assertiva que dispensa a formalização da fiscalização erra."],
+      "termos": [],
+      "remissoes": ["Art. 14"]
+    },
+    "art-14": {
+      "simples": "O descumprimento das normas da Lei, independentemente de responsabilidade penal, sujeitará os infratores, cumulativa ou isoladamente, a advertência formal; apreensão do produto químico em situação irregular; suspensão ou cancelamento de licença de funcionamento; revogação da autorização especial; e multa de R$ 2.128,20 a R$ 1.064.100,00. Na dosimetria consideram-se a situação econômica, a conduta, a reincidência, a natureza da infração, a quantidade dos produtos e as circunstâncias. A multa poderá ser paga em até cinco parcelas mensais. Cabe recurso ao Diretor-Geral da Polícia Federal.",
+      "pontos": ["Medidas: advertência, apreensão, suspensão ou cancelamento de licença, revogação de autorização especial e multa.", "Aplicadas cumulativa ou isoladamente.", "Multa de R$ 2.128,20 a R$ 1.064.100,00.", "Parcelamento da multa em até cinco parcelas.", "Recurso ao Diretor-Geral da PF."],
+      "atencao": ["As medidas administrativas independem de responsabilidade penal."],
+      "exemplo": "Empresa reincidente na omissão de informações recebe multa e suspensão da licença.",
+      "prova": ["Assertiva que condiciona as medidas à condenação penal erra: elas independem da esfera penal."],
+      "termos": [],
+      "remissoes": ["Art. 12"]
+    },
+    "art-15": {
+      "simples": "Quem cometer qualquer infração terá prazo de trinta dias, a contar da fiscalização, para sanar as irregularidades, sem prejuízo das medidas do art. 14. Sanadas, os produtos apreendidos serão devolvidos ao proprietário. Os produtos não regularizados serão destruídos, alienados ou doados pela PF a instituições de ensino, pesquisa ou saúde pública, após o trânsito em julgado da decisão no processo administrativo. Em caso de risco iminente à saúde pública ou ao meio ambiente, o órgão fiscalizador poderá dar destinação imediata aos produtos apreendidos.",
+      "pontos": ["Trinta dias para sanar as irregularidades.", "Devolução dos produtos após a regularização.", "Destruição, alienação ou doação dos não regularizados.", "Destinação imediata em caso de risco iminente."],
+      "atencao": ["Trinta dias contados da FISCALIZAÇÃO."],
+      "exemplo": "A empresa regulariza a licença no prazo e recupera o produto apreendido.",
+      "prova": ["Assertiva que fixa em quinze dias o prazo para sanar as irregularidades erra: são trinta dias."],
+      "termos": [],
+      "remissoes": ["Art. 14"]
+    },
+    "art-16": {
+      "simples": "Fica instituída a Taxa de Controle e Fiscalização de Produtos Químicos, cujo fato gerador é o exercício do poder de polícia conferido ao Departamento de Polícia Federal para controle e fiscalização das atividades do art. 1º.",
+      "pontos": ["Taxa de Controle e Fiscalização de Produtos Químicos.", "Fato gerador: exercício do poder de polícia da PF."],
+      "atencao": ["É uma TAXA (tributo), cobrada pelo poder de polícia."],
+      "exemplo": "A empresa paga taxa pela fiscalização da PF sobre seus produtos controlados.",
+      "prova": ["Assertiva que classifica a cobrança como imposto erra: é taxa."],
+      "termos": [{ "termo": "Poder de polícia", "significado": "Atividade estatal que limita direitos em prol do interesse público." }],
+      "remissoes": ["Art. 17"]
+    },
+    "art-17": {
+      "simples": "São sujeitos passivos da Taxa de Controle e Fiscalização de Produtos Químicos as pessoas físicas e jurídicas que exerçam qualquer das atividades sujeitas a controle e fiscalização de que trata o art. 1º.",
+      "pontos": ["Sujeito passivo: quem exerce as atividades controladas."],
+      "atencao": ["Alcança pessoas físicas e jurídicas."],
+      "exemplo": "A distribuidora e o importador pagam a taxa.",
+      "prova": ["Assertiva que limita a taxa a pessoas jurídicas erra: inclui as físicas."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-18": {
+      "simples": "São isentos da taxa, sem prejuízo das demais obrigações da Lei, os órgãos da Administração Pública direta federal, estadual e municipal; as instituições públicas de ensino, pesquisa e saúde; e as entidades particulares de caráter assistencial, filantrópico e sem fins lucrativos que comprovem essa condição na forma da lei.",
+      "pontos": ["Isenção para órgãos da Administração direta.", "Isenção para instituições públicas de ensino, pesquisa e saúde.", "Isenção para entidades assistenciais e filantrópicas comprovadas."],
+      "atencao": ["A isenção é da TAXA; as demais obrigações permanecem."],
+      "exemplo": "A universidade pública não paga a taxa, mas continua obrigada a se licenciar.",
+      "prova": ["Assertiva que dispensa as isentas das obrigações de controle erra: a isenção é só da taxa."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-19": {
+      "simples": "A Taxa é devida pela prática dos atos de controle e fiscalização: R$ 500,00 para emissão e alteração do Certificado de Registro Cadastral e para segunda via; R$ 1.000,00 para emissão, segunda via e renovação do Certificado de Licença de Funcionamento; e R$ 50,00 para emissão e segunda via da Autorização Especial. Os valores dos dois primeiros grupos são reduzidos em quarenta por cento para empresa de pequeno porte, cinquenta por cento para filial de empresa já cadastrada e setenta por cento para microempresa.",
+      "pontos": ["Registro cadastral: R$ 500,00.", "Licença de funcionamento: R$ 1.000,00.", "Autorização especial: R$ 50,00.", "Reduções de quarenta, cinquenta e setenta por cento para empresa de pequeno porte, filial e microempresa."],
+      "atencao": ["Reduções não se aplicam à autorização especial (apenas aos grupos I e II)."],
+      "exemplo": "A microempresa paga o valor do registro com redução de setenta por cento.",
+      "prova": ["Assertiva que aplica as reduções à autorização especial erra: valem só para os grupos I e II."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-20": {
+      "simples": "A Taxa será recolhida nos prazos e nas condições estabelecidos em ato do Departamento de Polícia Federal.",
+      "pontos": ["Prazos e condições de recolhimento definidos pela PF."],
+      "atencao": ["Matéria regulamentar."],
+      "exemplo": "A PF fixa o prazo para pagamento da taxa.",
+      "prova": ["Assertiva que fixa o prazo de recolhimento em lei erra: é por ato da PF."],
+      "termos": [],
+      "remissoes": ["Art. 19"]
+    },
+    "art-21": {
+      "simples": "Os recursos da Taxa, da aplicação de multa e da alienação de produtos químicos constituem receita do Fundo Nacional Antidrogas (Funad). O Funad destinará oitenta por cento desses recursos ao Departamento de Polícia Federal, para o reaparelhamento e custeio das atividades de controle e fiscalização de produtos químicos e de repressão ao tráfico ilícito de drogas.",
+      "pontos": ["Receita do Fundo Nacional Antidrogas.", "Oitenta por cento destinados à Polícia Federal."],
+      "atencao": ["Oitenta por cento para a PF."],
+      "exemplo": "A multa aplicada a uma empresa vai para o Funad.",
+      "prova": ["Assertiva que destina cem por cento dos recursos à PF erra: são oitenta por cento."],
+      "termos": [{ "termo": "Funad", "significado": "Fundo Nacional Antidrogas." }],
+      "remissoes": ["Art. 14"]
+    },
+    "art-22": {
+      "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "A lei passou a valer na data da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis erra."],
+      "termos": [],
+      "remissoes": ["Art. 23"]
+    },
+    "art-23": {
+      "simples": "Ficam revogados os arts. 1º a 13 e 18 da Lei nº 9.017, de 30 de março de 1995, que tratavam do controle dos produtos químicos antes desta Lei.",
+      "pontos": ["Revoga dispositivos da lei anterior."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "A nova lei substituiu o regime anterior.",
+      "prova": ["Assertiva que mantém em vigor os dispositivos da lei anterior erra."],
+      "termos": [],
+      "remissoes": ["Art. 22"]
+    }
+  }
+}
