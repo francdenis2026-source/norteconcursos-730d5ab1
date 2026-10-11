@@ -10145,3 +10145,15 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .app-shell [data-hero="dashboard"] {
   --hero-position: 82% 18%;
 }
+
+/* Mobile intro handoff: finish the video fade before releasing the hero. */
+@media (max-width: 767px) {
+  .lp-hero__media::before {
+    transition: opacity 0.45s var(--ease-out);
+    animation: none !important;
+  }
+  .lp-hero__video {
+    z-index: 2;
+    transition: opacity 0.45s var(--ease-out);
+  }
+}
