@@ -1,0 +1,258 @@
+{
+  "course_slug": "codigo-penal",
+  "law": "Código Penal — lote 09: arts. 215-A a 244",
+  "units": {
+    "art-215-a": {
+      "simples": "Importunação sexual: praticar contra alguém e sem a sua anuência ato libidinoso com o objetivo de satisfazer a própria lascívia ou a de terceiro. Pena: reclusão de 1 a 5 anos, se o ato não constitui crime mais grave.",
+      "pontos": ["Ato libidinoso contra alguém, sem anuência.", "Objetivo de satisfazer a própria lascívia ou a de terceiro.", "Reclusão de 1 a 5 anos, se não for crime mais grave."],
+      "atencao": ["Crime subsidiário: se há violência ou grave ameaça, trata-se de estupro (art. 213).", "Não exige violência ou grave ameaça."],
+      "exemplo": "Alguém se esfrega em passageira no transporte público, sem consentimento: importunação sexual.",
+      "prova": ["Assertiva que exige violência ou grave ameaça na importunação sexual erra: com violência ou ameaça, é estupro."],
+      "termos": [],
+      "remissoes": ["Art. 213"]
+    },
+    "art-216-a": {
+      "simples": "Assédio sexual: constranger alguém com o intuito de obter vantagem ou favorecimento sexual, prevalecendo-se o agente da sua condição de superior hierárquico ou ascendência inerentes ao exercício de emprego, cargo ou função. Pena: detenção de 1 a 2 anos. A pena é aumentada em até um terço se a vítima é menor de 18 anos.",
+      "pontos": ["Constranger para obter vantagem ou favorecimento sexual.", "Prevalecendo-se de superioridade hierárquica ou ascendência do emprego, cargo ou função.", "Detenção de 1 a 2 anos.", "Vítima menor de 18 anos: aumento de até um terço."],
+      "atencao": ["Exige RELAÇÃO HIERÁRQUICA ou de ascendência no trabalho.", "A pena é de detenção."],
+      "exemplo": "Chefe condiciona a promoção da subordinada a favores sexuais: assédio sexual.",
+      "prova": ["Assertiva que dispensa relação de superioridade hierárquica ou ascendência no assédio sexual erra."],
+      "termos": [],
+      "remissoes": ["Art. 213"]
+    },
+    "art-216-b": {
+      "simples": "Registro não autorizado da intimidade sexual: produzir, fotografar, filmar ou registrar, por qualquer meio, conteúdo com cena de nudez ou ato sexual ou libidinoso de caráter íntimo e privado sem autorização dos participantes. Pena: detenção de 6 meses a 1 ano e multa. Na mesma pena quem realiza montagem em fotografia, vídeo, áudio ou qualquer registro para incluir pessoa em cena de nudez ou ato sexual ou libidinoso de caráter íntimo.",
+      "pontos": ["Registrar cena de nudez ou ato íntimo sem autorização dos participantes.", "Detenção de 6 meses a 1 ano e multa.", "Parágrafo único: montagem para incluir pessoa em cena íntima (inclusive por meios tecnológicos)."],
+      "atencao": ["A divulgação desse material é crime à parte (art. 218-C)."],
+      "exemplo": "Filmar escondido o ato íntimo de um casal sem o consentimento deles.",
+      "prova": ["Assertiva que exige divulgação do registro para configurar o art. 216-B erra: basta produzir ou registrar sem autorização."],
+      "termos": [],
+      "remissoes": ["Art. 218-C"]
+    },
+    "art-217-a": {
+      "simples": "Estupro de vulnerável: ter conjunção carnal ou praticar outro ato libidinoso com menor de 14 anos. Pena: reclusão de 10 a 18 anos e multa (texto atual). Incorre na mesma pena quem pratica as ações com alguém que, por enfermidade ou deficiência mental, não tem o necessário discernimento ou que, por qualquer outra causa, não pode oferecer resistência. Lesão corporal grave: reclusão de 12 a 24 anos e multa; morte: reclusão de 20 a 40 anos e multa. É absoluta a presunção de vulnerabilidade, inadmissível relativizá-la (§4º-A). As penas se aplicam independentemente do consentimento da vítima, de sua experiência sexual e de outras circunstâncias do §5º.",
+      "pontos": ["Caput: menor de 14 anos: reclusão de 10 a 18 anos e multa.", "§1º: pessoa sem discernimento por enfermidade ou deficiência, ou sem poder de resistência: mesma pena.", "§3º: lesão grave: 12 a 24 anos e multa.", "§4º: morte: 20 a 40 anos e multa.", "§4º-A: presunção de vulnerabilidade ABSOLUTA.", "§5º: aplica-se independentemente do consentimento da vítima e de outras circunstâncias."],
+      "atencao": ["A vulnerabilidade do menor de 14 anos é ABSOLUTA: o consentimento é irrelevante.", "Crime hediondo."],
+      "exemplo": "Relação sexual com adolescente de 13 anos, ainda que ele diga consentir: estupro de vulnerável.",
+      "prova": ["Assertiva que admite afastar o crime pelo consentimento do menor de 14 anos erra: a presunção é absoluta."],
+      "termos": [{ "termo": "Vulnerável", "significado": "Menor de 14 anos ou pessoa sem discernimento ou sem poder de resistência." }],
+      "remissoes": ["Art. 213", "Art. 218"]
+    },
+    "art-218": {
+      "simples": "Corrupção de menores: induzir alguém menor de 14 anos a satisfazer a lascívia de outrem. Pena: reclusão de 6 a 14 anos e multa (texto atual).",
+      "pontos": ["Induzir menor de 14 anos a satisfazer a lascívia de outrem.", "Reclusão de 6 a 14 anos e multa."],
+      "atencao": ["Vítima menor de 14 anos.", "O agente induz; quem pratica o ato com o menor responde por estupro de vulnerável (art. 217-A)."],
+      "exemplo": "Aliciar uma criança para que satisfaça os desejos sexuais de outra pessoa.",
+      "prova": ["Assertiva que aplica o art. 218 à vítima de 15 anos erra: o tipo exige menor de 14 anos."],
+      "termos": [],
+      "remissoes": ["Art. 217-A"]
+    },
+    "art-218-a": {
+      "simples": "Satisfação de lascívia mediante presença de criança ou adolescente: praticar, na presença de alguém menor de 14 anos, ou induzi-lo a presenciar, conjunção carnal ou outro ato libidinoso, a fim de satisfazer lascívia própria ou de outrem. Pena: reclusão de 5 a 12 anos e multa (texto atual).",
+      "pontos": ["Praticar, na presença de menor de 14 anos (ou induzi-lo a presenciar), ato libidinoso.", "Fim de satisfazer lascívia própria ou alheia.", "Reclusão de 5 a 12 anos e multa."],
+      "atencao": ["O menor apenas PRESENCIA o ato; não é sujeito do ato."],
+      "exemplo": "Praticar ato sexual na frente de uma criança de 10 anos para satisfazer a própria lascívia.",
+      "prova": ["Assertiva que exige contato físico com o menor erra: o crime ocorre pela presença do menor."],
+      "termos": [],
+      "remissoes": ["Art. 217-A"]
+    },
+    "art-218-b": {
+      "simples": "Favorecimento da prostituição ou de outra forma de exploração sexual de criança ou adolescente ou de vulnerável: submeter, induzir ou atrair à prostituição ou outra forma de exploração sexual alguém menor de 18 anos ou que, por enfermidade ou deficiência mental, não tem discernimento, facilitá-la, impedir ou dificultar que a abandone. Pena: reclusão de 7 a 16 anos e multa (texto atual). Incorre nas mesmas penas quem pratica ato libidinoso com menor de 18 e maior de 14 anos nessa situação, e o proprietário, gerente ou responsável pelo local. Para o responsável pelo local, é efeito obrigatório da condenação a cassação da licença de localização e funcionamento do estabelecimento.",
+      "pontos": ["Submeter, induzir, atrair, facilitar ou impedir o abandono da exploração sexual de menor de 18 anos ou vulnerável.", "Reclusão de 7 a 16 anos e multa.", "§2º, I: quem pratica ato libidinoso com menor de 18 e maior de 14 anos na situação descrita.", "§2º, II: proprietário, gerente ou responsável pelo local.", "§3º: cassação obrigatória da licença do estabelecimento (no caso do §2º, II)."],
+      "atencao": ["Vítima menor de 18 anos ou vulnerável.", "Cassação da licença é EFEITO OBRIGATÓRIO da condenação do responsável pelo local."],
+      "exemplo": "O dono de um estabelecimento mantém adolescentes em exploração sexual no local: responde pelo art. 218-B, §2º, II, e perde a licença.",
+      "prova": ["Assertiva que torna facultativa a cassação da licença do estabelecimento erra: é efeito obrigatório."],
+      "termos": [],
+      "remissoes": ["Art. 228", "Art. 149-A"]
+    },
+    "art-218-c": {
+      "simples": "Divulgação de cena de estupro, de sexo, nudez ou pornografia: oferecer, trocar, disponibilizar, transmitir, vender ou expor à venda, distribuir, publicar ou divulgar, por qualquer meio, fotografia, vídeo ou outro registro audiovisual que contenha cena de estupro ou de estupro de vulnerável, ou que faça apologia ou induza a sua prática, ou, sem o consentimento da vítima, cena de sexo, nudez ou pornografia. Pena: reclusão de 4 a 10 anos e multa (texto atual), se o fato não constitui crime mais grave. A pena aumenta de 1/3 a 2/3 se o agente mantém ou manteve relação íntima de afeto com a vítima ou age com fim de vingança ou humilhação. Não há crime em publicação de natureza jornalística, científica, cultural ou acadêmica com recurso que impossibilite a identificação da vítima, ressalvada autorização prévia se maior de 18 anos.",
+      "pontos": ["Condutas: oferecer, trocar, disponibilizar, transmitir, vender, expor à venda, distribuir, publicar ou divulgar.", "Objeto: cena de estupro ou apologia, ou cena de sexo, nudez ou pornografia sem consentimento da vítima.", "Pena: reclusão de 4 a 10 anos e multa, se não houver crime mais grave.", "§1º: aumento de 1/3 a 2/3 (relação íntima de afeto, vingança ou humilhação).", "§2º: exclusão do crime em publicação jornalística, científica, cultural ou acadêmica sem identificar a vítima."],
+      "atencao": ["Pena aumentada na 'vingança pornográfica' (relação de afeto, fim de vingança ou humilhação)."],
+      "exemplo": "Ex-namorado divulga em redes sociais vídeo íntimo da ex-companheira para humilhá-la: art. 218-C, com aumento.",
+      "prova": ["Assertiva que exige que a vítima seja maior de 18 anos para o art. 218-C erra: o consentimento é a base para cena de sexo, nudez ou pornografia, e a cena de estupro é crime por si."],
+      "termos": [],
+      "remissoes": ["Art. 216-B"]
+    },
+    "art-225": {
+      "simples": "Ação penal nos crimes contra a liberdade sexual e contra vulneráveis (Capítulos I e II do Título): procede-se mediante ação penal pública incondicionada. O parágrafo único está revogado.",
+      "pontos": ["Ação penal pública INCONDICIONADA nos Capítulos I e II do Título."],
+      "atencao": ["Hoje a regra é ação pública incondicionada (mudança de 2018)."],
+      "exemplo": "O Ministério Público denuncia o autor de estupro independentemente de representação da vítima.",
+      "prova": ["Assertiva que exige representação da vítima para o estupro erra: a ação é pública incondicionada."],
+      "termos": [],
+      "remissoes": ["Arts. 213 a 218-C"]
+    },
+    "art-226": {
+      "simples": "Aumentos de pena nos crimes sexuais: aumenta-se de quarta parte se o crime é cometido com o concurso de 2 ou mais pessoas; de metade se o agente é ascendente, padrasto, madrasta, tio, irmão, cônjuge, companheiro, tutor, curador, preceptor ou empregador da vítima ou por qualquer título tem autoridade sobre ela; e de 1/3 a 2/3 se o crime é praticado mediante concurso de 2 ou mais agentes (estupro coletivo) ou para controlar o comportamento social ou sexual da vítima (estupro corretivo).",
+      "pontos": ["I – concurso de 2 ou mais pessoas: aumento de quarta parte.", "II – agente com autoridade sobre a vítima (ascendente, padrasto, tutor, empregador etc.): aumento de metade.", "IV, a – estupro coletivo: aumento de 1/3 a 2/3.", "IV, b – estupro corretivo (controlar comportamento social ou sexual): 1/3 a 2/3."],
+      "atencao": ["Concurso de 2 ou mais pessoas: quarta parte (inciso I) OU, no estupro coletivo, 1/3 a 2/3 (inciso IV, a): cuidado com a aplicação.", "O inciso III está revogado."],
+      "exemplo": "Padrasto que comete estupro contra a enteada tem a pena aumentada de metade.",
+      "prova": ["Assertiva que fixa em dobro o aumento pelo agente com autoridade sobre a vítima erra: é de metade."],
+      "termos": [],
+      "remissoes": ["Art. 213", "Art. 234-A"]
+    },
+    "art-227": {
+      "simples": "Mediação para servir a lascívia de outrem: induzir alguém a satisfazer a lascívia de outrem. Pena: reclusão de 1 a 3 anos. Se a vítima é maior de 14 e menor de 18 anos, ou se o agente é seu ascendente, descendente, cônjuge ou companheiro, irmão, tutor, curador ou pessoa a quem esteja confiada para educação, tratamento ou guarda: reclusão de 2 a 5 anos. Com violência, grave ameaça ou fraude: reclusão de 2 a 8 anos, além da pena da violência. Com fim de lucro: também multa.",
+      "pontos": ["Caput: reclusão de 1 a 3 anos.", "§1º: vítima entre 14 e 18 anos ou agente com vínculo de cuidado: reclusão de 2 a 5 anos.", "§2º: violência, grave ameaça ou fraude: reclusão de 2 a 8 anos.", "§3º: fim de lucro: também multa."],
+      "atencao": ["Vítima menor de 14 anos: outro crime (art. 218)."],
+      "exemplo": "Aliciar mulher adulta para que satisfaça a lascívia de outra pessoa.",
+      "prova": ["Assertiva que aplica o caput do art. 227 a vítima menor de 14 anos erra: o art. 218 trata desse caso."],
+      "termos": [],
+      "remissoes": ["Art. 218", "Art. 228"]
+    },
+    "art-228": {
+      "simples": "Favorecimento da prostituição ou de outra forma de exploração sexual: induzir ou atrair alguém à prostituição ou outra forma de exploração sexual, facilitá-la, impedir ou dificultar que alguém a abandone. Pena: reclusão de 2 a 5 anos e multa. Se o agente é ascendente, padrasto, madrasta, irmão, enteado, cônjuge, companheiro, tutor, curador, preceptor ou empregador da vítima, ou assumiu obrigação de cuidado, proteção ou vigilância: reclusão de 3 a 8 anos. Com violência, grave ameaça ou fraude: reclusão de 4 a 10 anos, além da violência. Com fim de lucro: também multa.",
+      "pontos": ["Caput: reclusão de 2 a 5 anos e multa.", "§1º: vínculo familiar, de autoridade ou de cuidado: 3 a 8 anos.", "§2º: violência, grave ameaça ou fraude: 4 a 10 anos, além da violência.", "§3º: fim de lucro: também multa."],
+      "atencao": ["A PROSTITUIÇÃO em si não é crime; o crime é o favorecimento ou a exploração por terceiros."],
+      "exemplo": "Pessoa impede, com ameaças, que uma mulher abandone a exploração sexual: art. 228, §2º.",
+      "prova": ["Assertiva que considera crime o exercício da prostituição pela própria pessoa erra: o tipo pune quem a favorece ou explora."],
+      "termos": [],
+      "remissoes": ["Arts. 218-B, 229 e 230"]
+    },
+    "art-229": {
+      "simples": "Casa de exploração sexual: manter, por conta própria ou de terceiro, estabelecimento em que ocorra exploração sexual, haja ou não intuito de lucro ou mediação direta do proprietário ou gerente. Pena: reclusão de 2 a 5 anos e multa.",
+      "pontos": ["Manter estabelecimento em que ocorra exploração sexual.", "Com ou sem intuito de lucro ou mediação direta.", "Reclusão de 2 a 5 anos e multa."],
+      "atencao": ["Independe de lucro."],
+      "exemplo": "Dono de um imóvel mantém local onde se explora sexualmente pessoas.",
+      "prova": ["Assertiva que exige intuito de lucro para o art. 229 erra: o tipo dispensa."],
+      "termos": [],
+      "remissoes": ["Art. 228"]
+    },
+    "art-230": {
+      "simples": "Rufianismo: tirar proveito da prostituição alheia, participando diretamente de seus lucros ou fazendo-se sustentar, no todo ou em parte, por quem a exerça. Pena: reclusão de 1 a 4 anos e multa. Se a vítima é menor de 18 e maior de 14 anos, ou se o agente é ascendente, padrasto, madrasta, irmão, enteado, cônjuge, companheiro, tutor, curador, preceptor ou empregador, ou assumiu dever de cuidado, proteção ou vigilância: reclusão de 3 a 6 anos e multa. Com violência, grave ameaça, fraude ou outro meio que impeça a livre manifestação da vontade: reclusão de 2 a 8 anos, sem prejuízo da violência.",
+      "pontos": ["Tirar proveito da prostituição alheia (participar dos lucros ou ser sustentado).", "Caput: reclusão de 1 a 4 anos e multa.", "§1º: vítima entre 14 e 18 anos ou vínculo de cuidado ou autoridade: reclusão de 3 a 6 anos e multa.", "§2º: violência, grave ameaça, fraude ou outro meio: reclusão de 2 a 8 anos."],
+      "atencao": ["Crime de quem VIVE à custa da prostituição de outra pessoa."],
+      "exemplo": "Pessoa vive sustentada pelos ganhos da prostituição de outra e participa dos lucros.",
+      "prova": ["Assertiva que pune a pessoa que exerce a prostituição por conta própria erra: o rufianismo pune quem tira proveito dela."],
+      "termos": [{ "termo": "Rufianismo", "significado": "Viver às custas da prostituição alheia." }],
+      "remissoes": ["Art. 228"]
+    },
+    "art-232-a": {
+      "simples": "Promoção de migração ilegal: promover, por qualquer meio, com o fim de obter vantagem econômica, a entrada ilegal de estrangeiro em território nacional ou de brasileiro em país estrangeiro. Pena: reclusão de 2 a 5 anos e multa. Na mesma pena quem promove, com o mesmo fim, a saída de estrangeiro do território nacional para ingressar ilegalmente em país estrangeiro. A pena aumenta de 1/6 a 1/3 se há violência ou se a vítima é submetida a condição desumana ou degradante, e é aplicada sem prejuízo das infrações conexas.",
+      "pontos": ["Promover entrada ilegal de estrangeiro no país ou de brasileiro em país estrangeiro, com vantagem econômica.", "Reclusão de 2 a 5 anos e multa.", "§1º: saída de estrangeiro para ingressar ilegalmente em outro país.", "§2º: aumento de 1/6 a 1/3 (violência; condição desumana ou degradante).", "§3º: sem prejuízo das infrações conexas."],
+      "atencao": ["Exige FIM DE VANTAGEM ECONÔMICA."],
+      "exemplo": "Pessoa cobra para levar estrangeiros ao Brasil por vias ilegais.",
+      "prova": ["Assertiva que dispensa a finalidade de vantagem econômica no art. 232-A erra."],
+      "termos": [],
+      "remissoes": ["Art. 149-A (tráfico de pessoas)"]
+    },
+    "art-233": {
+      "simples": "Ato obsceno: praticar ato obsceno em lugar público, ou aberto ou exposto ao público. Pena: detenção de 3 meses a 1 ano, ou multa.",
+      "pontos": ["Praticar ato obsceno.", "Em lugar público, ou aberto ou exposto ao público.", "Detenção de 3 meses a 1 ano, ou multa."],
+      "atencao": ["O lugar deve ser público, aberto ou exposto ao público."],
+      "exemplo": "Pessoa pratica ato obsceno em praça pública.",
+      "prova": ["Assertiva que aplica o art. 233 a ato obsceno praticado em ambiente privado, sem exposição ao público, erra."],
+      "termos": [],
+      "remissoes": ["Art. 234"]
+    },
+    "art-234": {
+      "simples": "Escrito ou objeto obsceno: fazer, importar, exportar, adquirir ou ter sob sua guarda, para fim de comércio, de distribuição ou de exposição pública, escrito, desenho, pintura, estampa ou qualquer objeto obsceno. Pena: detenção de 6 meses a 2 anos, ou multa. Na mesma pena quem vende, distribui ou expõe à venda ou ao público esses objetos; realiza, em lugar público ou acessível ao público, representação teatral ou exibição cinematográfica de caráter obsceno ou qualquer espetáculo do mesmo caráter; ou realiza, em lugar público ou acessível ao público, ou pelo rádio, audição ou recitação de caráter obsceno.",
+      "pontos": ["Fazer, importar, exportar, adquirir ou guardar objeto obsceno para comércio, distribuição ou exposição pública.", "Detenção de 6 meses a 2 anos, ou multa.", "Parágrafo único: vender, distribuir, expor; espetáculos, exibições, audições ou recitações obscenas em lugar público."],
+      "atencao": ["O fim é comércio, distribuição ou exposição pública."],
+      "exemplo": "Comerciante expõe à venda ao público objeto de caráter obsceno.",
+      "prova": ["Assertiva que pune a posse de objeto obsceno para uso exclusivamente privado erra: o tipo exige fim de comércio, distribuição ou exposição."],
+      "termos": [],
+      "remissoes": ["Art. 233"]
+    },
+    "art-234-a": {
+      "simples": "Aumentos nos crimes sexuais do Título: de metade a 2/3 se do crime resulta gravidez; de 1/3 a 2/3 se o agente transmite à vítima doença sexualmente transmissível de que sabe ou deveria saber ser portador, ou se a vítima é idosa ou pessoa com deficiência. Os incisos I e II foram vetados.",
+      "pontos": ["III – gravidez: aumento de metade a 2/3.", "IV – transmissão de DST que sabe ou deveria saber ser portador, ou vítima idosa ou com deficiência: 1/3 a 2/3."],
+      "atencao": ["Gravidez: de METADE a 2/3; DST ou vítima idosa/com deficiência: de 1/3 a 2/3."],
+      "exemplo": "Estupro de que resulta gravidez: pena aumentada de metade a 2/3.",
+      "prova": ["Assertiva que fixa em 1/3 a 2/3 o aumento por gravidez erra: é de metade a 2/3."],
+      "termos": [],
+      "remissoes": ["Art. 226"]
+    },
+    "art-234-b": {
+      "simples": "Segredo de justiça: os processos em que se apuram crimes definidos no Título correrão em segredo de justiça. A partir da condenação em primeira instância pelos crimes dos arts. 213, 216-B, 217-A, 218-B, 227, 228, 229 e 230, o sistema de consulta processual torna público o nome completo do réu, seu CPF e a tipificação penal, com os dados da pena ou medida de segurança, salvo decisão fundamentada do juiz que mantenha o sigilo. Se absolvido em grau recursal, o sigilo é restabelecido. O réu condenado passa a ser monitorado por dispositivo eletrônico.",
+      "pontos": ["Processos em segredo de justiça.", "§1º: após condenação em primeira instância (arts. 213, 216-B, 217-A, 218-B, 227, 228, 229 e 230): nome, CPF e tipificação passam a ser públicos.", "§2º: absolvição em grau recursal restabelece o sigilo.", "§3º: réu condenado monitorado por dispositivo eletrônico."],
+      "atencao": ["A regra é o sigilo; a publicidade dos dados vem com a condenação em PRIMEIRA instância (salvo decisão em contrário)."],
+      "exemplo": "Réu condenado por estupro em primeira instância tem nome e CPF públicos no sistema de consulta (salvo decisão contrária).",
+      "prova": ["Assertiva que torna públicos os dados do réu antes de qualquer condenação erra."],
+      "termos": [],
+      "remissoes": ["Art. 213", "Art. 217-A"]
+    },
+    "art-235": {
+      "simples": "Bigamia: contrair alguém, sendo casado, novo casamento. Pena: reclusão de 2 a 6 anos. Quem, não sendo casado, contrai casamento com pessoa casada, conhecendo essa circunstância, é punido com reclusão ou detenção de 1 a 3 anos. Anulado por qualquer motivo o primeiro casamento, ou o outro por motivo que não a bigamia, considera-se inexistente o crime.",
+      "pontos": ["Caput: casar-se sendo casado: reclusão de 2 a 6 anos.", "§1º: casar-se com pessoa casada, conhecendo a circunstância: reclusão ou detenção de 1 a 3 anos.", "§2º: anulado o primeiro casamento (ou o outro por outro motivo), inexiste o crime."],
+      "atencao": ["O §1º exige que o outro contraente CONHEÇA o estado de casado."],
+      "exemplo": "Pessoa já casada celebra novo casamento: bigamia.",
+      "prova": ["Assertiva que pune o contraente do §1º mesmo sem conhecer o estado de casado do outro erra."],
+      "termos": [],
+      "remissoes": ["Art. 111, IV (prescrição)"]
+    },
+    "art-236": {
+      "simples": "Induzimento a erro essencial e ocultação de impedimento: contrair casamento, induzindo em erro essencial o outro contraente, ou ocultando-lhe impedimento que não seja casamento anterior. Pena: detenção de 6 meses a 2 anos. A ação penal depende de queixa do contraente enganado e só pode ser intentada depois de transitar em julgado a sentença que, por erro ou impedimento, anule o casamento.",
+      "pontos": ["Induzir em erro essencial ou ocultar impedimento (que não seja casamento anterior).", "Detenção de 6 meses a 2 anos.", "Ação por QUEIXA, só após o trânsito em julgado da sentença que anule o casamento."],
+      "atencao": ["Condição de procedibilidade: anulação do casamento transitada em julgado."],
+      "exemplo": "Ocultar do cônjuge um impedimento ao casamento que o torna anulável.",
+      "prova": ["Assertiva que permite a queixa antes da anulação transitada em julgado erra."],
+      "termos": [],
+      "remissoes": ["Art. 235", "Art. 237"]
+    },
+    "art-237": {
+      "simples": "Conhecimento prévio de impedimento: contrair casamento, conhecendo a existência de impedimento que lhe cause a nulidade absoluta. Pena: detenção de 3 meses a 1 ano.",
+      "pontos": ["Casar-se conhecendo impedimento que gera nulidade absoluta.", "Detenção de 3 meses a 1 ano."],
+      "atencao": ["Exige CONHECIMENTO do impedimento."],
+      "exemplo": "Casar-se com parente em grau proibido, sabendo do impedimento.",
+      "prova": ["Assertiva que dispensa o conhecimento do impedimento no art. 237 erra."],
+      "termos": [],
+      "remissoes": ["Art. 236"]
+    },
+    "art-238": {
+      "simples": "Simulação de autoridade para celebração de casamento: atribuir-se falsamente autoridade para celebração de casamento. Pena: detenção de 1 a 3 anos, se o fato não constitui crime mais grave.",
+      "pontos": ["Atribuir-se falsamente autoridade para celebrar casamento.", "Detenção de 1 a 3 anos, se não for crime mais grave."],
+      "atencao": ["Subsidiário: só se o fato não constitui crime mais grave."],
+      "exemplo": "Pessoa finge ser juiz de paz para celebrar um casamento.",
+      "prova": ["Assertiva que aplica o art. 238 mesmo havendo crime mais grave erra: o tipo é subsidiário."],
+      "termos": [],
+      "remissoes": ["Art. 239"]
+    },
+    "art-239": {
+      "simples": "Simulação de casamento: simular casamento mediante engano de outra pessoa. Pena: detenção de 1 a 3 anos, se o fato não constitui elemento de crime mais grave.",
+      "pontos": ["Simular casamento enganando outra pessoa.", "Detenção de 1 a 3 anos, se não for elemento de crime mais grave."],
+      "atencao": ["Subsidiário."],
+      "exemplo": "Fingir uma cerimônia de casamento para enganar a vítima.",
+      "prova": ["Assertiva que dispensa o engano da outra pessoa no art. 239 erra."],
+      "termos": [],
+      "remissoes": ["Art. 238"]
+    },
+    "art-241": {
+      "simples": "Registro de nascimento inexistente: promover no registro civil a inscrição de nascimento inexistente. Pena: reclusão de 2 a 6 anos.",
+      "pontos": ["Promover, no registro civil, inscrição de nascimento inexistente.", "Reclusão de 2 a 6 anos."],
+      "atencao": ["O nascimento é INEXISTENTE (diferente do art. 242, em que o filho existe)."],
+      "exemplo": "Registrar no cartório o nascimento de uma criança que não nasceu.",
+      "prova": ["Assertiva que aplica o art. 241 ao registro de filho de outrem como seu erra: isso é o art. 242."],
+      "termos": [],
+      "remissoes": ["Art. 242"]
+    },
+    "art-242": {
+      "simples": "Parto suposto e supressão ou alteração de direito inerente ao estado civil de recém-nascido: dar parto alheio como próprio; registrar como seu o filho de outrem; ocultar recém-nascido ou substituí-lo, suprimindo ou alterando direito inerente ao estado civil. Pena: reclusão de 2 a 6 anos. Se praticado por motivo de reconhecida nobreza: detenção de 1 a 2 anos, podendo o juiz deixar de aplicar a pena.",
+      "pontos": ["Condutas: dar parto alheio como próprio; registrar como seu filho de outrem; ocultar ou substituir recém-nascido.", "Reclusão de 2 a 6 anos.", "Parágrafo único: motivo de reconhecida nobreza: detenção de 1 a 2 anos, com possibilidade de perdão judicial."],
+      "atencao": ["'Adoção à brasileira': registrar filho alheio como seu, podendo ter o privilégio por nobreza."],
+      "exemplo": "Pessoa registra como seu o filho recém-nascido de outra, sem adoção legal.",
+      "prova": ["Assertiva que pune com reclusão de 2 a 6 anos o fato cometido por reconhecida nobreza erra: aplica-se o parágrafo único (detenção de 1 a 2 anos, com possível perdão judicial)."],
+      "termos": [],
+      "remissoes": ["Art. 241", "Art. 243"]
+    },
+    "art-243": {
+      "simples": "Sonegação de estado de filiação: deixar em asilo de expostos ou outra instituição de assistência filho próprio ou alheio, ocultando-lhe a filiação ou atribuindo-lhe outra, com o fim de prejudicar direito inerente ao estado civil. Pena: reclusão de 1 a 5 anos e multa.",
+      "pontos": ["Deixar filho (próprio ou alheio) em instituição, ocultando ou alterando a filiação.", "Fim de prejudicar direito inerente ao estado civil.", "Reclusão de 1 a 5 anos e multa."],
+      "atencao": ["Exige o fim de prejudicar o estado civil."],
+      "exemplo": "Deixar criança em instituição com filiação falsa para prejudicar seus direitos.",
+      "prova": ["Assertiva que dispensa o fim de prejudicar direito inerente ao estado civil erra."],
+      "termos": [],
+      "remissoes": ["Art. 242"]
+    },
+    "art-244": {
+      "simples": "Abandono material: deixar, sem justa causa, de prover a subsistência do cônjuge, de filho menor de 18 anos ou inapto para o trabalho, ou de ascendente inválido ou maior de 60 anos, não lhes proporcionando os recursos necessários ou faltando ao pagamento de pensão alimentícia judicialmente acordada, fixada ou majorada; ou deixar, sem justa causa, de socorrer descendente ou ascendente gravemente enfermo. Pena: detenção de 1 a 4 anos e multa de uma a dez vezes o maior salário mínimo vigente. Nas mesmas penas incide quem, sendo solvente, frustra ou ilide o pagamento de pensão alimentícia, inclusive por abandono injustificado de emprego ou função.",
+      "pontos": ["Deixar de prover a subsistência de cônjuge, filho menor de 18 ou inapto, ascendente inválido ou maior de 60 anos.", "Faltar ao pagamento de pensão alimentícia judicial.", "Deixar de socorrer descendente ou ascendente gravemente enfermo.", "Detenção de 1 a 4 anos e multa de uma a dez vezes o maior salário mínimo.", "Parágrafo único: quem, sendo solvente, frustra o pagamento da pensão (inclusive por abandono de emprego)."],
+      "atencao": ["Exige AUSÊNCIA de justa causa.", "O parágrafo único trata do devedor SOLVENTE que frustra o pagamento."],
+      "exemplo": "Pai deixa de pagar, sem justa causa, a pensão alimentícia fixada em juízo, embora possa pagar.",
+      "prova": ["Assertiva que pune o devedor de pensão que está sem condições de pagar por justa causa erra: o tipo exige ausência de justa causa."],
+      "termos": [],
+      "remissoes": ["Art. 245"]
+    }
+  }
+}
