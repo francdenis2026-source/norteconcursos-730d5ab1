@@ -2,15 +2,15 @@
 
 ## Resultado confirmado no Supabase
 
-Foram registradas **960 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
+Foram registradas **1000 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
 
 | Situação | Quantidade |
 | --- | ---: |
-| Questões aprovadas e ativas | 498 |
-| Itens retidos para complementação | 339 |
-| Repetições internas excluídas da publicação | 29 |
+| Questões aprovadas e ativas | 535 |
+| Itens retidos para complementação | 341 |
+| Repetições internas excluídas da publicação | 30 |
 | Enunciados inadequados excluídos da publicação | 4 |
-| Candidatos ainda sem revisão individual neste caderno | 40 |
+| Candidatos ainda sem revisão individual neste caderno | 0 |
 | Gabaritos históricos superados excluídos da publicação | 90 |
 | Registros privados de extração deste caderno | 1.000 |
 
@@ -48,14 +48,14 @@ O importador passou a aceitar o formato nativo **certo/errado**, exigindo indica
 
 - Validação offline dos pacotes e das duas etapas de revisão: concluída.
 - Testes de regressão: **86 passaram**, incluindo rejeição de respostas e alternativas incompatíveis com o formato C/E.
-- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 498 publicações; isto não certifica ausência de duplicatas semânticas.
-- Conferência de banco: 1.000 extrações privadas, 960 decisões auditadas e 498 publicações; textos, respostas originais e decisões preservados.
+- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 535 publicações; isto não certifica ausência de duplicatas semânticas.
+- Conferência de banco: 1.000 extrações privadas, 1000 decisões auditadas e 535 publicações; textos, respostas originais e decisões preservados.
 
 Os PDFs privados, enunciados extraídos, pacotes de importação, capturas oficiais e relatórios detalhados permanecem nos outputs locais, fora do Git. Nenhuma credencial integra este commit. A biblioteca não foi ampliada a partir de trechos ainda sem catalogação e revisão concluídas.
 
 ## Trabalho restante
 
-Continuar a revisão dos 40 candidatos deste caderno e complementar os 339 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
+Complementar os 341 itens retidos deste caderno. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
 
 ## Cadência autorizada
 
@@ -112,3 +112,16 @@ Quinze itens do antigo Estatuto do Estrangeiro foram excluídos pela revogação
 Itens do art. 28 da Lei de Drogas permaneceram retidos para confronto específico com o Tema 506/STF. Itens de armas permanecem retidos para correspondência curricular específica e, quando aplicável, regulamentação e julgamentos indicados na fonte. Não foram apresentados como aprovados apenas por coincidirem com o gabarito histórico.
 
 A cadência de atualização foi cumprida em oito checkpoints de 100 decisões nesta sessão, do item 161 ao 960, com atualização de banco, conferência e envio à main. A janela principal de uso atingiu 80% consumidos, deixando 20% restantes; novas revisões foram interrompidas nesse ponto e somente a publicação, conferência e envio do lote já validado foram concluídos. Revisão das outras 16 apostilas e enriquecimento da biblioteca permanecem pendentes.
+
+
+## Fechamento dos itens 961–1.000 e complementações
+
+O fechamento de 40 candidatos concluiu a análise inicial dos 1.000 itens deste caderno: 28 novas publicações, 11 retenções e uma repetição. Foram depois resolvidas nove retenções anteriores, mediante fontes oficiais e vínculo curricular específico. Esta continuação acrescentou **37 questões ativas** ao checkpoint anterior de 498, chegando a **535**. O acervo completo de 17 apostilas continua em revisão; este número corresponde somente ao caderno PF 2012.
+
+A releitura do Supabase confirmou 1.000 candidatos com decisões iniciais, 1.009 eventos de auditoria, 535 questões ativas, 341 itens retidos, 30 repetições, quatro enunciados rejeitados e 90 gabaritos históricos superados. Textos e respostas editoriais originais foram preservados; os controles de elegibilidade para publicação passaram na conferência.
+
+A releitura integral do edital confirmou a inclusão de armas e crimes ambientais em Legislação Especial, com recorte de aspectos penais e processuais penais. Isso resolveu sete bloqueios específicos; uma resposta ausente foi determinada independentemente pelo art. 1º da Lei 10.826/2003. Questões gerais de sanções administrativas e cooperação ambiental ficaram retidas quando o vínculo curricular específico não estava comprovado. O recorte do edital também exige revalidação curricular dos demais itens limítrofes já avaliados, sem presumir que toda disposição civil ou administrativa de uma lei tenha cobertura automática.
+
+O comentário sobre reparação mínima ambiental passou a distinguir previsão legal e requisitos processuais: pedido expresso, valor indicado na acusação e contraditório, conforme o [REsp 2.165.832/MG, DJEN 17/11/2025](https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=17%2F11%2F2025&num_registro=202403157892). O item sobre critérios de consumo pessoal foi complementado com a presunção relativa aplicável à cannabis e sua apreciação no contexto probatório, conferida no [AgRg no HC 1.067.438/SP, DJEN 23/04/2026](https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=23%2F04%2F2026&num_registro=202600117719). O parâmetro quantitativo não foi generalizado para outras drogas.
+
+A instrução mais recente do usuário substituiu o limite anterior de 20% restantes por **5% restantes**. Novas revisões foram interrompidas quando a janela principal indicou 95% consumidos. Depois disso, apenas publicação, conferência e envio deste fechamento foram concluídos. PDFs, transcrições, pacotes individuais, evidências privadas e credenciais permaneceram fora do Git. Permanecem pendentes a complementação dos 341 retidos, a revisão individual das outras 16 apostilas e o enriquecimento da biblioteca.
