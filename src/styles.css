@@ -387,80 +387,6 @@ html {
   }
 }
 
-/* Radix ScrollArea thumb */
-[data-radix-scroll-area-thumb] {
-  background: var(--scroll-thumb) !important;
-  transition: background-color 0.2s;
-}
-[data-radix-scroll-area-thumb]:hover {
-  background: var(--scroll-thumb-hover) !important;
-}
-
-/* ==========================================================================
-   Cursor: hand on everything interactive
-   Kept outside any @layer so it also wins over utility classes such as
-   `cursor-default` baked into the dropdown, select and menu components.
-   ========================================================================== */
-
-:where(
-  a[href],
-  button,
-  summary,
-  select,
-  label[for],
-  label:has(> input[type="checkbox"]),
-  label:has(> input[type="radio"]),
-  label:has(> [role="checkbox"]),
-  label:has(> [role="radio"]),
-  input[type="checkbox"],
-  input[type="radio"],
-  input[type="submit"],
-  input[type="button"],
-  input[type="reset"],
-  input[type="file"],
-  input[type="color"],
-  [role="button"],
-  [role="link"],
-  [role="tab"],
-  [role="menuitem"],
-  [role="menuitemcheckbox"],
-  [role="menuitemradio"],
-  [role="option"],
-  [role="switch"],
-  [role="checkbox"],
-  [role="radio"],
-  [role="combobox"],
-  [role="treeitem"],
-  [aria-haspopup],
-  [cmdk-item],
-  [data-radix-collection-item],
-  .cursor-pointer
-) {
-  cursor: pointer;
-}
-:where([role="slider"], input[type="range"]) {
-  cursor: grab;
-}
-:where([role="slider"], input[type="range"]):active {
-  cursor: grabbing;
-}
-:where(
-  :disabled,
-  [aria-disabled="true"],
-  [data-disabled="true"],
-  [data-disabled="true"] *,
-  [data-disabled=""],
-  [data-disabled=""] *,
-  label:has(> :disabled)
-) {
-  cursor: not-allowed;
-}
-
-:where([cmdk-input]:not(:disabled)) {
-  cursor: text;
-  caret-color: currentColor;
-}
-
 /* ==========================================================================
    Typography helpers
    ========================================================================== */
@@ -9614,4 +9540,294 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     linear-gradient(oklch(1 0 0 / 0.035) 1px, transparent 1px),
     linear-gradient(90deg, oklch(1 0 0 / 0.035) 1px, transparent 1px);
   background-size: 44px 44px;
+}
+
+
+/* Internal workspace v4: a denser, calmer system for every student area. */
+.app-shell[data-area="student"] {
+  --app-sidebar-width: 248px;
+  background: var(--color-background);
+}
+.app-shell[data-area="student"] .app-sidebar {
+  width: var(--app-sidebar-width);
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--sidebar) 96%, #111827), var(--sidebar));
+  border-right: 1px solid color-mix(in oklab, var(--color-border) 74%, transparent);
+  box-shadow: 10px 0 28px -32px oklch(0 0 0 / 0.9);
+}
+.app-shell[data-area="student"] .app-sidebar__head {
+  height: 70px;
+  padding-inline: 16px 12px;
+}
+.app-shell[data-area="student"] .app-sidebar__search {
+  height: 38px;
+  margin: 12px 12px 8px;
+  border: 1px solid oklch(1 0 0 / 0.08);
+  border-radius: 10px;
+  background: oklch(1 0 0 / 0.045);
+}
+.app-shell[data-area="student"] .app-nav {
+  padding: 6px 10px 14px;
+}
+.app-shell[data-area="student"] .app-nav__group {
+  padding: 16px 10px 6px;
+  color: oklch(1 0 0 / 0.42);
+  font-size: 0.55rem;
+}
+.app-shell[data-area="student"] .app-nav__link {
+  height: 40px;
+  margin-block: 1px;
+  padding-inline: 11px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+.app-shell[data-area="student"] .app-sidebar__foot {
+  padding: 10px 12px;
+}
+.app-main {
+  min-width: 0;
+}
+.app-shell[data-area="student"] .app-topbar {
+  height: calc(64px + env(safe-area-inset-top));
+  padding-inline: clamp(16px, 2.8vw, 38px);
+  background: color-mix(in oklab, var(--color-background) 92%, transparent);
+  backdrop-filter: blur(16px);
+}
+.app-shell[data-area="student"] .app-topbar__actions {
+  gap: 6px;
+}
+.app-shell[data-area="student"] .app-top-search {
+  width: 214px;
+  height: 36px;
+  border-radius: 10px;
+}
+.app-shell[data-area="student"] .app-top-btn,
+.app-shell[data-area="student"] .app-streak {
+  height: 36px;
+  border-radius: 10px;
+}
+.app-shell[data-area="student"] .app-content {
+  padding: clamp(14px, 2vw, 26px) clamp(14px, 2.8vw, 40px) 48px;
+  background:
+    radial-gradient(760px 420px at 100% 0%, color-mix(in oklab, var(--brass) 4%, transparent), transparent 72%),
+    var(--color-background);
+}
+.app-shell[data-area="student"] .app-content__inner {
+  max-width: 1440px;
+}
+.app-shell[data-area="student"] .app-content__inner > .space-y-6 {
+  row-gap: 14px;
+}
+
+/* Every internal hero gets a clear text column and a restrained image field. */
+.app-shell .page-hero,
+.app-shell .tactical-feature-hero,
+.app-shell .catalog-command-hero {
+  min-height: 190px;
+  padding: clamp(20px, 2.8vw, 34px);
+  border-radius: 18px;
+  background-size: cover;
+  background-position: var(--hero-position, 78% center);
+  box-shadow: 0 18px 44px -36px oklch(0 0 0 / 0.85), inset 0 1px 0 oklch(1 0 0 / 0.1);
+}
+.app-shell .page-hero--lg {
+  min-height: 238px;
+}
+.app-shell .page-hero--sm {
+  min-height: 136px;
+}
+.app-shell .page-hero::before,
+.app-shell .tactical-feature-hero::before,
+.app-shell .catalog-command-hero::before {
+  background:
+    linear-gradient(90deg, oklch(0.09 0.025 263 / 0.98) 0%, oklch(0.09 0.025 263 / 0.84) 38%, oklch(0.09 0.025 263 / 0.32) 72%, oklch(0.09 0.025 263 / 0.12) 100%),
+    linear-gradient(0deg, oklch(0.09 0.025 263 / 0.55), transparent 65%);
+}
+.app-shell .page-hero::after,
+.app-shell .tactical-feature-hero::after,
+.app-shell .catalog-command-hero::after {
+  opacity: 0.3;
+}
+.app-shell .page-hero__row {
+  gap: 16px 28px;
+}
+.app-shell .page-hero h1,
+.app-shell .tactical-feature-hero h1,
+.app-shell .catalog-command-hero h1 {
+  max-width: 18ch;
+  font-size: clamp(1.9rem, 3.1vw, 3rem) !important;
+}
+.app-shell .page-hero__desc,
+.app-shell .catalog-command-hero > p {
+  max-width: 560px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.app-shell .hero-stat {
+  padding: 11px 13px;
+  border-radius: 11px;
+}
+.app-shell .page-hero__stats {
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* Shared surfaces use one rhythm, so lists, metrics and tools feel like one product. */
+.app-shell .surface-card,
+.app-shell .card,
+.app-shell [data-slot="card"] {
+  border-color: color-mix(in oklab, var(--color-border) 80%, transparent);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px -26px oklch(0 0 0 / 0.85);
+}
+.app-shell .metric-tile,
+.app-shell .quick-action,
+.app-shell .command-panel,
+.app-shell .question-window,
+.app-shell .exam-question-window {
+  border-color: color-mix(in oklab, var(--color-border) 76%, transparent);
+  border-radius: 14px;
+  box-shadow: 0 14px 30px -28px oklch(0 0 0 / 0.9);
+}
+.app-shell .quick-action {
+  min-height: 72px;
+  padding: 13px 14px;
+}
+.app-shell .metric-tile {
+  padding: 14px;
+}
+.app-shell .metric-tile:hover,
+.app-shell .quick-action:hover,
+.app-shell [data-slot="card"]:has(a:hover) {
+  border-color: color-mix(in oklab, var(--brass) 36%, var(--color-border));
+  box-shadow: 0 18px 36px -28px color-mix(in oklab, var(--brass) 32%, transparent);
+}
+.app-shell table th {
+  color: var(--color-muted-foreground);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.app-shell table td,
+.app-shell table th {
+  padding-block: 11px;
+}
+
+@media (max-width: 1023px) {
+  .app-shell[data-area="student"] .app-sidebar { width: 232px; }
+  .app-shell[data-area="student"] .app-top-search { width: 40px; }
+}
+@media (max-width: 767px) {
+  .app-shell[data-area="student"] .app-topbar {
+    height: calc(58px + env(safe-area-inset-top));
+    padding-inline: 10px;
+  }
+  .app-shell[data-area="student"] .app-content {
+    padding: 10px 10px 92px;
+  }
+  .app-shell .page-hero,
+  .app-shell .tactical-feature-hero,
+  .app-shell .catalog-command-hero {
+    min-height: 154px;
+    padding: 16px !important;
+    border-radius: 14px;
+    background-position: 76% center;
+  }
+  .app-shell .page-hero--lg { min-height: 192px; }
+  .app-shell .page-hero--sm { min-height: 124px; }
+  .app-shell .page-hero::before,
+  .app-shell .tactical-feature-hero::before,
+  .app-shell .catalog-command-hero::before {
+    background: linear-gradient(90deg, oklch(0.09 0.025 263 / 0.96), oklch(0.09 0.025 263 / 0.66) 62%, oklch(0.09 0.025 263 / 0.24));
+  }
+  .app-shell .page-hero h1,
+  .app-shell .tactical-feature-hero h1,
+  .app-shell .catalog-command-hero h1 {
+    max-width: 16ch;
+    font-size: clamp(1.5rem, 7vw, 2.2rem) !important;
+  }
+  .app-shell .page-hero__desc,
+  .app-shell .catalog-command-hero > p {
+    font-size: 0.82rem;
+  }
+  .app-shell .page-hero__actions { gap: 6px; }
+  .app-shell .page-hero__actions > * { min-height: 38px; }
+  .app-shell .page-hero__stats { margin-top: 12px; }
+  .app-shell .hero-stat { padding: 9px; }
+}
+
+/* Radix ScrollArea thumb */
+[data-radix-scroll-area-thumb] {
+  background: var(--scroll-thumb) !important;
+  transition: background-color 0.2s;
+}
+[data-radix-scroll-area-thumb]:hover {
+  background: var(--scroll-thumb-hover) !important;
+}
+
+/* ==========================================================================
+   Cursor: hand on everything interactive
+   Kept outside any @layer so it also wins over utility classes such as
+   `cursor-default` baked into the dropdown, select and menu components.
+   ========================================================================== */
+
+:where(
+  a[href],
+  button,
+  summary,
+  select,
+  label[for],
+  label:has(> input[type="checkbox"]),
+  label:has(> input[type="radio"]),
+  label:has(> [role="checkbox"]),
+  label:has(> [role="radio"]),
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  input[type="file"],
+  input[type="color"],
+  [role="button"],
+  [role="link"],
+  [role="tab"],
+  [role="menuitem"],
+  [role="menuitemcheckbox"],
+  [role="menuitemradio"],
+  [role="option"],
+  [role="switch"],
+  [role="checkbox"],
+  [role="radio"],
+  [role="combobox"],
+  [role="treeitem"],
+  [aria-haspopup],
+  [cmdk-item],
+  [data-radix-collection-item],
+  .cursor-pointer
+) {
+  cursor: pointer;
+}
+:where([role="slider"], input[type="range"]) {
+  cursor: grab;
+}
+:where([role="slider"], input[type="range"]):active {
+  cursor: grabbing;
+}
+:where(
+  :disabled,
+  [aria-disabled="true"],
+  [data-disabled="true"],
+  [data-disabled="true"] *,
+  [data-disabled=""],
+  [data-disabled=""] *,
+  label:has(> :disabled)
+) {
+  cursor: not-allowed;
+}
+
+:where([cmdk-input]:not(:disabled)) {
+  cursor: text;
+  caret-color: currentColor;
 }

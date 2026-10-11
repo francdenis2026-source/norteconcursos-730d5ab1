@@ -141,7 +141,7 @@ function RankingPage() {
 
   return (
     <div className="space-y-6">
-      <PageHero image="dashboard" size="sm" kicker="Desempenho" icon={Trophy} title={<>Ranking <em>geral</em></>}
+      <PageHero image="command-room" size="sm" kicker="Desempenho" icon={Trophy} title={<>Ranking <em>geral</em></>}
         description="Veja quem mais estuda. Administradores ficam fora e sobrenomes ficam protegidos." />
       <Card className="border-0 shadow-lg ring-1 ring-border/70">
         <CardHeader className="space-y-3">

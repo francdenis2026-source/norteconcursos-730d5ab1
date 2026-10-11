@@ -107,7 +107,7 @@ function HistoryPage() {
   if (!real)
     return (
       <LockedState
-        image="journey"
+        image="dashboard"
         title={
           <>
             Histórico de <em>estudos</em>
@@ -120,7 +120,7 @@ function HistoryPage() {
   return (
     <div className="space-y-6">
       <PageHero
-        image="journey"
+        image="dashboard"
         kicker="Desempenho"
         icon={History}
         title={

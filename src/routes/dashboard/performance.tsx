@@ -239,7 +239,7 @@ function PerformancePage() {
   if (!user || user.id === "demo-user")
     return (
       <LockedState
-        image="command-room"
+        image="dashboard"
         title={
           <>
             Raio-X <em>completo</em>
@@ -537,7 +537,7 @@ function RaioXHero({
   weakestSubject: string | null;
 }) {
   return (
-    <section className="page-hero page-hero--lg" data-hero="command-room">
+    <section className="page-hero page-hero--lg" data-hero="dashboard">
       <div className="page-hero__row">
         <div className="page-hero__text">
           <span className="hero-chip">

@@ -72,7 +72,7 @@ function MaterialPage() {
   if (!authLoading && !signedIn) {
     return (
       <LockedState
-        image="dashboard"
+        image="study-desk"
         title={
           <>
             Material de <em>estudo</em>

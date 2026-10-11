@@ -198,7 +198,7 @@ function MedalsPage() {
   if (!real)
     return (
       <LockedState
-        image="command-room"
+        image="careers-team"
         title={
           <>
             Minhas <em>medalhas</em>
@@ -219,7 +219,7 @@ function MedalsPage() {
   return (
     <div className="mx-auto max-w-5xl space-y-6">
       <PageHero
-        image="command-room"
+        image="careers-team"
         size="sm"
         kicker="Desempenho"
         icon={Medal}

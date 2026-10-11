@@ -87,7 +87,7 @@ function EditalRadarPage() {
   return (
     <div className="space-y-7 pb-10">
       <PageHero
-        image="field-map"
+        image="dashboard"
         size="sm"
         kicker="Inteligência de editais"
         icon={Radar}
