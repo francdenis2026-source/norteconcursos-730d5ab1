@@ -25,7 +25,7 @@ for(const row of pack.units){
   if(old?.status==='published'&&sameExplanation(old,payload)){result.preserved++;continue;}
   if(!old)await request('legal_unit_explanations?on_conflict=unit_id','POST',{...payload,status:'under_review',authored_by:'codex'},'resolution=ignore-duplicates');
   else if(!sameExplanation(old,payload)){
-    const updated=await request(`legal_unit_explanations?unit_id=eq.${row.unit_id}&content_sha256=eq.${row.content_sha256}&updated_at=eq.${encodeURIComponent(row.expected.updated_at)}&status=eq.${row.expected.status}`,'PATCH',{...payload,status:'under_review',authored_by:'codex',reviewed_by:null,reviewed_at:null,updated_at:new Date().toISOString()},'return=representation');
+    const updated=await request(`legal_unit_explanations?unit_id=eq.${row.unit_id}&content_sha256=eq.${row.expected.content_sha256}&updated_at=eq.${encodeURIComponent(row.expected.updated_at)}&status=eq.${row.expected.status}`,'PATCH',{...payload,status:'under_review',authored_by:'codex',reviewed_by:null,reviewed_at:null,updated_at:new Date().toISOString()},'return=representation');
     if(updated?.length!==1||!sameExplanation(updated[0],payload))throw Error('Revisão concorrente; atualização interrompida');
     result.improved++;
   }

@@ -1,9 +1,12 @@
 """Build official legal reading paths offline from reviewed local HTML.
 Usage: python scripts/build-legal-curriculum.py SOURCE_DIRECTORY OUTPUT_JSON
-Requires lxml. No network, credentials or private source files in Git.
+Requires lxml and html5lib (scripts/requirements-legal.txt).
+No network, credentials or private source files in Git.
 """
 import pathlib,json,re,hashlib,uuid,sys,urllib.parse
 from lxml import html
+from lxml import etree
+import html5lib
 
 clean=lambda value:' '.join(value.translate({i:bytes([i]).decode('cp1252',errors='replace') for i in range(128,160)}).split())
 def number(value):
@@ -11,12 +14,28 @@ def number(value):
  return re.sub(r'^(\d+)([A-Z]+)$',r'\1-\2',value)
 
 def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
-    if raw.startswith((b'\xff\xfe',b'\xfe\xff')) or re.search(rb'charset\s*=',raw,re.I):
-        tree=html.fromstring(raw)
+    if raw.startswith((b'\xff\xfe',b'\xfe\xff')):
+        try:decoded=raw.decode('utf-16')
+        except UnicodeDecodeError:
+            # Some official pages append single-byte HTTP whitespace after
+            # their UTF-16 closing HTML tag. Never repair a corrupted law body.
+            decoded=raw.decode('utf-16',errors='replace')
+            end=decoded.lower().rfind('</html>')
+            if end<0 or '\ufffd' in decoded[:end+7]:raise
+            decoded=decoded[:end+7]
     else:
-        try:raw.decode('utf-8');encoding='utf-8'
-        except UnicodeDecodeError:encoding='windows-1252'
-        tree=html.fromstring(raw,parser=html.HTMLParser(encoding=encoding))
+        declared=re.search(rb'charset\s*=\s*["\']?\s*([\w-]+)',raw,re.I)
+        if declared:encoding=declared.group(1).decode('ascii')
+        else:
+            try:raw.decode('utf-8');encoding='utf-8'
+            except UnicodeDecodeError:encoding='windows-1252'
+        decoded=raw.decode(encoding,errors='replace')
+    # Planalto legacy markup closes formatting elements across <p> boundaries.
+    # libxml alone drops those paragraph bodies (e.g. CP arts. 1, 43, 172, 184).
+    # Repair with the HTML5 tree algorithm before querying paragraphs. Keep a
+    # Unicode serialization so a legacy charset declaration cannot re-decode it.
+    repaired=html5lib.parse(decoded,treebuilder='lxml',namespaceHTMLElements=False)
+    tree=html.fromstring(etree.tostring(repaired,encoding='unicode',method='html'))
     original=[clean(e.text_content()) for e in tree.xpath('//p')]
     for element in tree.xpath('//strike|//del|//s|//script|//style'):
      element.drop_tree()

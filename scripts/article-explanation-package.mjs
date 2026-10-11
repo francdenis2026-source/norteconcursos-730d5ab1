@@ -20,7 +20,10 @@ export function checkArticlePreflight(pack, snapshot){
     const course=snapshot.legal_courses.find(c=>c.slug===law.slug&&c.status==='active');
     const current=snapshot.legal_course_units.filter(u=>u.course_id===course?.id&&u.content_status==='current');
     const authored=pack.units.filter(r=>r.course_slug===law.slug);
-    if(current.length!==law.units||!current.every(u=>authored.some(r=>r.unit_id===u.id)))throw Error(`Cobertura mudou: ${law.slug}`);
+    if(law.scope_type==='targeted_correction'){
+      if(current.length!==law.course_current_units||!Array.isArray(law.target_unit_keys)||law.target_unit_keys.length!==law.units||new Set(law.target_unit_keys).size!==law.units||!authored.every(r=>law.target_unit_keys.includes(r.unit_key)&&current.some(u=>u.id===r.unit_id)))throw Error(`Correção incompleta: ${law.slug}`);
+    }else if(law.scope_type&&law.scope_type!=='complete_path')throw Error('Escopo desconhecido');
+    else if(current.length!==law.units||!current.every(u=>authored.some(r=>r.unit_id===u.id)))throw Error(`Cobertura mudou: ${law.slug}`);
   }
   for(const row of pack.units){
     const course=snapshot.legal_courses.find(c=>c.id===row.course_id&&c.slug===row.course_slug&&c.status==='active');

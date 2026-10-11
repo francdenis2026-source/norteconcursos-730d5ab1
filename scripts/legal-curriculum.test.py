@@ -4,6 +4,14 @@ spec=importlib.util.spec_from_file_location('legal_builder',path)
 builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
 
 class CurriculumTests(unittest.TestCase):
+ def test_legacy_crossed_formatting_preserves_article_and_penalty(self):
+  rows=self.parse('<p>Art. 183-A. Majorante patrimonial.</p><b><font><p></font></b><font>Art. 184. Violar direitos de autor:</font></p><font><p>Pena — detenção, de três meses a um ano.</p></font><p>Art. 185. (Revogado)</p>')
+  self.assertEqual([r['key'] for r in rows],['art-183-a','art-184','art-185'])
+  self.assertNotIn('detenção',rows[0]['text'])
+  self.assertIn('detenção',rows[1]['text'])
+ def test_legacy_inline_reference_is_not_truncated(self):
+  rows=self.parse('<p>Art. 5º Aplica-se a <b><font><p></font></b><font>Lei nº 13.060</font></p><font> e este Decreto.</font></p>')
+  self.assertIn('Lei nº 13.060',rows[0]['text'])
  def parse(self,text,slug='fixture'):
   return builder.parse_law(('<html><body>'+text+'</body></html>').encode('utf-8'),slug)
  def test_dash_and_article_suffix_are_distinct(self):
@@ -31,6 +39,10 @@ class CurriculumTests(unittest.TestCase):
   for encoding in ['utf-16','cp1252']:
    rows=builder.parse_law(text.encode(encoding),'fixture')
    self.assertIn('identificação',rows[0]['text'])
+ def test_utf16_trailing_transport_padding_does_not_corrupt_article(self):
+  raw='<html><body><p>Art. 1º Identificação válida.</p></body></html>'.encode('utf-16')+b'   '
+  rows=builder.parse_law(raw,'fixture')
+  self.assertIn('Identificação válida',rows[0]['text'])
  def test_annex_tables_and_figures_survive_the_signature_boundary(self):
   rows=self.parse('<p>Art. 1º Regra.</p><p>Brasília, assinatura.</p><p>ANEXO I</p><p>Definições.</p><table><tr><td>Termo</td><td>Definição</td></tr><tr><td>Veículo</td><td>Conceito oficial</td></tr></table><img src="/modelo.png">')
   self.assertEqual(rows[-1]['key'],'anexo-1')
