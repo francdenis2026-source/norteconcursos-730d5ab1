@@ -1,0 +1,123 @@
+{
+  "course_slug": "icn",
+  "law": "Lei da Identificação Civil Nacional (Lei nº 13.444, de 2017) — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "É criada a Identificação Civil Nacional (ICN), com o objetivo de identificar o brasileiro em suas relações com a sociedade e com os órgãos e entidades governamentais e privados.",
+      "pontos": ["Cria a Identificação Civil Nacional.", "Identifica o brasileiro perante a sociedade, o governo e entidades privadas."],
+      "atencao": ["Alcança o BRASILEIRO."],
+      "exemplo": "A ICN permite identificar o cidadão em órgãos públicos e privados.",
+      "prova": ["Assertiva que limita a ICN às relações com órgãos públicos erra: abrange entidades privadas."],
+      "termos": [{ "termo": "ICN", "significado": "Identificação Civil Nacional." }],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-2": {
+      "simples": "A ICN utilizará a base de dados biométricos da Justiça Eleitoral; a base do Sistema Nacional de Informações de Registro Civil e da Central Nacional de Informações do Registro Civil; e outras informações de bases da Justiça Eleitoral, dos institutos de identificação dos Estados e do Distrito Federal ou do Instituto Nacional de Identificação, conforme o Comitê Gestor. A base da ICN será armazenada e gerida pelo Tribunal Superior Eleitoral, que assegura integridade, disponibilidade, autenticidade, confidencialidade e interoperabilidade, observando as recomendações do e-Ping.",
+      "pontos": ["Bases: biometria da Justiça Eleitoral e registro civil.", "Outras bases definidas pelo Comitê Gestor.", "Base armazenada e gerida pelo TSE.", "Interoperabilidade conforme o e-Ping."],
+      "atencao": ["Quem gere a base da ICN é o TSE."],
+      "exemplo": "O TSE mantém a base e a atualiza.",
+      "prova": ["Assertiva que atribui a gestão da base ao Ministério da Justiça erra: é do TSE."],
+      "termos": [{ "termo": "e-Ping", "significado": "Padrões de Interoperabilidade de Governo Eletrônico." }],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-3": {
+      "simples": "O Tribunal Superior Eleitoral garantirá aos Poderes Executivo e Legislativo da União, dos Estados, do Distrito Federal e dos Municípios acesso gratuito à base de dados da ICN, exceto quanto às informações eleitorais. O Poder Executivo dos entes poderá integrar aos seus bancos as informações da base, com exceção dos dados biométricos. Ato do TSE disporá sobre a integração dos registros biométricos pelas Polícias Federal e Civil, com exclusividade, às suas bases de dados.",
+      "pontos": ["Acesso gratuito aos Poderes Executivo e Legislativo dos entes.", "Excluídas as informações eleitorais.", "Executivos podem integrar a base, exceto biometria.", "Biometria: integração exclusiva das Polícias Federal e Civil."],
+      "atencao": ["Dados biométricos: só as polícias Federal e Civil integram às suas bases."],
+      "exemplo": "A Polícia Civil integra os registros biométricos à sua base, conforme ato do TSE.",
+      "prova": ["Assertiva que permite a integração da biometria por qualquer Executivo erra: é exclusiva das polícias."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-4": {
+      "simples": "É vedada a comercialização, total ou parcial, da base de dados da ICN. Isso não impede o serviço de conferência de dados que envolvam a biometria prestado a particulares, a ser realizado exclusivamente pelo Tribunal Superior Eleitoral.",
+      "pontos": ["Vedada a comercialização da base.", "Conferência de dados biométricos a particulares: só pelo TSE."],
+      "atencao": ["O §1º foi vetado.", "A conferência a particulares é prestada exclusivamente pelo TSE."],
+      "exemplo": "Um banco paga ao TSE pela conferência da biometria do cliente, sem comprar a base.",
+      "prova": ["Assertiva que permite vender a base a particulares erra: é vedado."],
+      "termos": [],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-5": {
+      "simples": "É criado o Comitê Gestor da ICN, composto por três representantes do Poder Executivo federal, três do Tribunal Superior Eleitoral, um da Câmara dos Deputados, um do Senado Federal e um do Conselho Nacional de Justiça. Compete-lhe recomendar o padrão biométrico, o padrão e os documentos para o DNI, os parâmetros do serviço de conferência de dados e as diretrizes do Fundo da ICN; orientar a interoperabilidade entre o Executivo federal e a Justiça Eleitoral; e estabelecer o regimento. As decisões são tomadas por maioria de 2/3 dos membros. O Comitê poderá criar grupos técnicos paritários. A participação é serviço público relevante, não remunerado.",
+      "pontos": ["Composição: três do Executivo federal, três do TSE, um da Câmara, um do Senado e um do CNJ.", "Recomenda padrões e diretrizes e orienta a interoperabilidade.", "Decisões por maioria de 2/3.", "Participação não remunerada."],
+      "atencao": ["ATUALIZAÇÃO: uma das alíneas do inciso I do §2º foi revogada pela Lei nº 14.534, de 2023.", "Maioria de 2/3 para decidir."],
+      "exemplo": "O Comitê recomenda o padrão biométrico da ICN.",
+      "prova": ["Assertiva que fixa maioria simples nas decisões do Comitê erra: é de 2/3."],
+      "termos": [],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-6": {
+      "simples": "É instituído o Fundo da Identificação Civil Nacional (FICN), de natureza contábil, gerido pelo Tribunal Superior Eleitoral, para constituir fonte de recursos para o desenvolvimento e a manutenção da ICN e das bases por ela utilizadas. Constituem recursos do FICN os do orçamento da União, o resultado de aplicações financeiras, a receita do serviço de conferência de dados e outros recursos, como convênios e doações. O saldo positivo é transferido para o exercício seguinte. O FICN deverá garantir o funcionamento, a integração, a padronização e a interoperabilidade das bases biométricas no âmbito da União.",
+      "pontos": ["Fundo contábil gerido pelo TSE.", "Recursos: orçamento da União, aplicações, conferência de dados, convênios e doações.", "Saldo positivo passa ao exercício seguinte."],
+      "atencao": ["Os recursos do orçamento da União não se confundem com os da Justiça Eleitoral."],
+      "exemplo": "A receita da conferência biométrica abastece o FICN.",
+      "prova": ["Assertiva que atribui a gestão do FICN ao Ministério da Fazenda erra: é do TSE."],
+      "termos": [{ "termo": "FICN", "significado": "Fundo da Identificação Civil Nacional." }],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-7": {
+      "simples": "O Tribunal Superior Eleitoral estabelecerá cronograma das etapas de implementação da ICN e de coleta das informações biométricas.",
+      "pontos": ["Cronograma de implementação e coleta definido pelo TSE."],
+      "atencao": ["O cronograma é do TSE."],
+      "exemplo": "O TSE define as etapas de coleta biométrica.",
+      "prova": ["Assertiva que atribui o cronograma ao Poder Executivo erra: é do TSE."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-8": {
+      "simples": "É criado o Documento Nacional de Identidade (DNI), com fé pública e validade em todo o território nacional, que faz prova de todos os dados nele incluídos. Será emitido pela Justiça Eleitoral, pelos institutos de identificação civil dos Estados e do Distrito Federal, com certificação da Justiça Eleitoral, ou por outros órgãos, mediante delegação do TSE e com certificação da Justiça Eleitoral. Poderá substituir o título de eleitor, conforme regulamento do TSE. Nos novos DNIs será adotado o CPF como número único.",
+      "pontos": ["DNI com fé pública e validade nacional.", "Faz prova dos dados nele incluídos.", "Emissão pela Justiça Eleitoral, institutos estaduais ou outros órgãos delegados.", "Pode substituir o título de eleitor.", "CPF como número único."],
+      "atencao": ["ATUALIZAÇÃO: o §6º (CPF como número único) foi incluído por lei posterior.", "Os §§2º e 5º foram vetados."],
+      "exemplo": "O DNI emitido pela Justiça Eleitoral pode substituir o título de eleitor.",
+      "prova": ["Assertiva que atribui a emissão do DNI exclusivamente aos Estados erra: a Justiça Eleitoral também emite."],
+      "termos": [{ "termo": "DNI", "significado": "Documento Nacional de Identidade." }],
+      "remissoes": ["Art. 9º"]
+    },
+    "art-9": {
+      "simples": "O número de inscrição no CPF será incorporado, de forma gratuita, aos documentos de identidade civil da União, dos Estados e do Distrito Federal.",
+      "pontos": ["Incorporação gratuita do CPF aos documentos de identidade civil."],
+      "atencao": ["Gratuita."],
+      "exemplo": "A identidade passa a trazer o CPF sem custo adicional.",
+      "prova": ["Assertiva que cobra taxa para incluir o CPF na identidade erra: é gratuita."],
+      "termos": [],
+      "remissoes": ["Art. 8º"]
+    },
+    "art-10": {
+      "simples": "O documento emitido por entidade de classe somente será validado se atender aos requisitos de biometria e de fotografia estabelecidos para o DNI. As entidades de classe terão 2 anos para adequar seus documentos.",
+      "pontos": ["Documentos de entidades de classe devem atender aos requisitos do DNI.", "Prazo de 2 anos para adequação."],
+      "atencao": ["Prazo de 2 anos."],
+      "exemplo": "A carteira profissional precisa seguir a biometria e a foto do DNI para ser validada.",
+      "prova": ["Assertiva que dispensa a biometria nos documentos das entidades de classe erra."],
+      "termos": [],
+      "remissoes": ["Art. 8º"]
+    },
+    "art-11": {
+      "simples": "O poder público deverá oferecer mecanismos que possibilitem o cruzamento de informações de bases oficiais, a partir do CPF do solicitante, para que a verificação do cumprimento dos requisitos de elegibilidade para a concessão e a manutenção de benefícios sociais possa ser feita pelo órgão concedente.",
+      "pontos": ["Cruzamento de informações pelo CPF.", "Verificação de elegibilidade para benefícios sociais."],
+      "atencao": ["O CPF é a chave de cruzamento."],
+      "exemplo": "O órgão confere pelo CPF se o beneficiário ainda cumpre os requisitos.",
+      "prova": ["Assertiva que impede o cruzamento de dados para benefícios sociais erra."],
+      "termos": [],
+      "remissoes": ["Art. 9º"]
+    },
+    "art-12": {
+      "simples": "O Poder Executivo federal e o Tribunal Superior Eleitoral editarão, no âmbito de suas competências, atos complementares para a execução do disposto nesta Lei.",
+      "pontos": ["Atos complementares do Executivo federal e do TSE."],
+      "atencao": ["Competência regulamentar compartilhada."],
+      "exemplo": "O TSE edita resolução para detalhar a coleta biométrica.",
+      "prova": ["Assertiva que atribui os atos complementares apenas ao Executivo federal erra: o TSE também edita."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-13": {
+      "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo final."],
+      "exemplo": "A Lei passou a valer na data da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis erra."],
+      "termos": [],
+      "remissoes": ["Art. 12"]
+    }
+  }
+}
