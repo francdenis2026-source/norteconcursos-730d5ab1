@@ -1,0 +1,3003 @@
+[
+ {
+  "term": "Aberratio criminis",
+  "meaning": "Resultado diverso do pretendido por erro na execução.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Aberratio ictus",
+  "meaning": "Erro na execução: o golpe atinge pessoa ou coisa diversa da pretendida.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Abolitio criminis",
+  "meaning": "Lei nova que torna o fato atípico, apagando o crime.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Abono anual",
+  "meaning": "Pagamento anual adicional; este decreto não o prevê para a pensão especial.",
+  "laws": [
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "Aborto necessário",
+  "meaning": "Aborto para salvar a vida da gestante.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Absoluta prioridade",
+  "meaning": "Preferência incondicional da criança e do adolescente em atendimento e recursos.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Ação controlada",
+  "meaning": "Retardamento da intervenção policial para obter melhor resultado investigativo.",
+  "laws": [
+   "drogas"
+  ]
+ },
+ {
+  "term": "Acareação",
+  "meaning": "Confronto entre pessoas que deram declarações divergentes.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Adaptação razoável",
+  "meaning": "Modificação necessária que não impõe ônus desproporcional.",
+  "laws": [
+   "pcd"
+  ]
+ },
+ {
+  "term": "AET",
+  "meaning": "Autorização especial de trânsito.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Agravante genérica",
+  "meaning": "Circunstância legal que aumenta a pena em qualquer crime, na segunda fase.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Agravo em execução",
+  "meaning": "Recurso cabível contra decisões do juiz da execução.",
+  "laws": [
+   "lep"
+  ]
+ },
+ {
+  "term": "Alvará judicial",
+  "meaning": "Autorização individual concedida pelo juiz para um caso específico.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Anistia",
+  "meaning": "Perdão legal que apaga o crime.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "ANPD",
+  "meaning": "Autoridade Nacional de Proteção de Dados.",
+  "laws": [
+   "sic"
+  ]
+ },
+ {
+  "term": "ANPP",
+  "meaning": "Acordo de não persecução penal.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Apátrida",
+  "meaning": "Pessoa que nenhum Estado considera como nacional.",
+  "laws": [
+   "migracao"
+  ]
+ },
+ {
+  "term": "Apensar",
+  "meaning": "Juntar autos para que tramitem em conjunto.",
+  "laws": [
+   "interceptacao"
+  ]
+ },
+ {
+  "term": "Ardil",
+  "meaning": "Astúcia, manobra para enganar alguém.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Área de preservação permanente",
+  "meaning": "Área protegida, como margens de rios e topos de morros.",
+  "laws": [
+   "ambientais"
+  ]
+ },
+ {
+  "term": "Arrependimento eficaz",
+  "meaning": "O agente esgota os atos de execução, mas age para evitar o resultado e consegue.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Arresto",
+  "meaning": "Medida cautelar prévia que garante o bem até a hipoteca legal.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Asilo diplomático",
+  "meaning": "Concedido em embaixada ou consulado.",
+  "laws": [
+   "migracao"
+  ]
+ },
+ {
+  "term": "Assistente de acusação",
+  "meaning": "Quem auxilia o MP na ação penal pública.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Atendimento educacional especializado",
+  "meaning": "Serviço complementar ao ensino regular para alunos com deficiência.",
+  "laws": [
+   "pcd"
+  ]
+ },
+ {
+  "term": "Ativo virtual",
+  "meaning": "Representação digital de valor negociável (como criptoativos).",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Ato infracional",
+  "meaning": "Conduta descrita como crime ou contravenção penal.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Ato libidinoso",
+  "meaning": "Ato de natureza sexual, além da conjunção carnal.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Ato preparatório",
+  "meaning": "Conduta anterior à execução, em regra impunível, mas punida aqui por exceção.",
+  "laws": [
+   "terrorismo"
+  ]
+ },
+ {
+  "term": "Atos preparatórios",
+  "meaning": "Atos anteriores ao início da execução do crime.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Audiência admonitória",
+  "meaning": "Audiência em que o condenado é advertido das condições do sursis.",
+  "laws": [
+   "lep"
+  ]
+ },
+ {
+  "term": "Audiência de custódia",
+  "meaning": "Apresentação do preso ao juiz para controle da legalidade da prisão.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Audiodescrição",
+  "meaning": "Narração de elementos visuais para pessoas cegas.",
+  "laws": [
+   "pcd"
+  ]
+ },
+ {
+  "term": "Auto circunstanciado",
+  "meaning": "Documento que resume as operações realizadas.",
+  "laws": [
+   "interceptacao",
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Auto de infração",
+  "meaning": "Documento que registra a infração de trânsito constatada.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Auto de prisão em flagrante",
+  "meaning": "Peça que documenta a prisão em flagrante.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Automutilação",
+  "meaning": "Lesão que a pessoa causa a si mesma.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Autoria e materialidade",
+  "meaning": "Quem praticou o crime (autoria) e a prova de que ele ocorreu (materialidade).",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Autoridade central",
+  "meaning": "Órgão designado para enviar e receber pedidos de cooperação.",
+  "laws": [
+   "budapeste"
+  ]
+ },
+ {
+  "term": "Autos apartados",
+  "meaning": "Conjunto de documentos separado do processo principal, mas ligado a ele.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Avaliação biopsicossocial",
+  "meaning": "Análise que une aspectos biológicos, psicológicos e sociais.",
+  "laws": [
+   "pcd"
+  ]
+ },
+ {
+  "term": "Bis in idem",
+  "meaning": "Dupla punição pelo mesmo fato.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "BPC",
+  "meaning": "Benefício de Prestação Continuada, da assistência social.",
+  "laws": [
+   "idosa",
+   "pcd",
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "CAC",
+  "meaning": "Colecionadores, atiradores desportivos e caçadores.",
+  "laws": [
+   "armas"
+  ]
+ },
+ {
+  "term": "Caçador para subsistência",
+  "meaning": "Categoria de porte para quem depende da arma para o sustento familiar na zona rural.",
+  "laws": [
+   "armas"
+  ]
+ },
+ {
+  "term": "Cadin",
+  "meaning": "Cadastro Informativo dos créditos não quitados do setor público federal.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "CadÚnico",
+  "meaning": "Cadastro Único para Programas Sociais do Governo Federal.",
+  "laws": [
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "Captação ambiental",
+  "meaning": "Gravação de sons e imagens do ambiente.",
+  "laws": [
+   "interceptacao"
+  ]
+ },
+ {
+  "term": "Cárcere privado",
+  "meaning": "Privação da liberdade mantendo a vítima confinada em local fechado.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Carta de guia",
+  "meaning": "Documento que autoriza o cumprimento da pena privativa de liberdade.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Carta precatória",
+  "meaning": "Pedido de um juízo a outro para praticar ato em sua jurisdição.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Carta rogatória",
+  "meaning": "Pedido de cooperação a autoridade estrangeira.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Carta testemunhável",
+  "meaning": "Recurso contra a denegação ou o trancamento de outro recurso.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Carteirada",
+  "meaning": "Uso do cargo para obter vantagem ou eximir-se de obrigação.",
+  "laws": [
+   "abuso"
+  ]
+ },
+ {
+  "term": "Casa de albergado",
+  "meaning": "Estabelecimento do regime aberto, onde o condenado se recolhe à noite e nos dias de folga.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Caso fortuito e força maior",
+  "meaning": "Fatos imprevisíveis ou inevitáveis que fogem ao controle do agente.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Castigo físico",
+  "meaning": "Ação punitiva com força física que cause sofrimento ou lesão.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "CCE",
+  "meaning": "Cargo Comissionado Executivo, conforme o nível exigido no decreto.",
+  "laws": [
+   "sic"
+  ]
+ },
+ {
+  "term": "Cefic",
+  "meaning": "Câmara-Executiva Federal de Identificação do Cidadão.",
+  "laws": [
+   "cin",
+   "sic"
+  ]
+ },
+ {
+  "term": "Celebrante",
+  "meaning": "Quem firma o acordo em nome do Estado (Ministério Público ou delegado de polícia).",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Charlatanismo",
+  "meaning": "Anunciar cura por meio secreto ou infalível.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Citação",
+  "meaning": "Ato que chama o réu a juízo para se defender.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Citação com hora certa",
+  "meaning": "Citação ficta feita quando o réu se oculta.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Coaf",
+  "meaning": "Conselho de Controle de Atividades Financeiras.",
+  "laws": [
+   "lavagem"
+  ]
+ },
+ {
+  "term": "Coisa fungível",
+  "meaning": "Coisa que pode ser substituída por outra do mesmo gênero, quantidade e qualidade, como dinheiro.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Comunidade terapêutica acolhedora",
+  "meaning": "Entidade de acolhimento voluntário, de caráter residencial e transitório.",
+  "laws": [
+   "drogas"
+  ]
+ },
+ {
+  "term": "Comutação",
+  "meaning": "Substituição da pena por outra mais branda.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Conad",
+  "meaning": "Conselho Nacional de Políticas sobre Drogas.",
+  "laws": [
+   "drogas"
+  ]
+ },
+ {
+  "term": "Conexão",
+  "meaning": "Vínculo entre infrações que justifica o julgamento conjunto.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Confisco ampliado",
+  "meaning": "Perda de bens incompatíveis com a renda lícita do condenado.",
+  "laws": [
+   "antifaccao"
+  ]
+ },
+ {
+  "term": "Confissão divisível",
+  "meaning": "O juiz pode acolher parte da confissão.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Conselho de Sentença",
+  "meaning": "Os 7 jurados que julgam o caso.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Conselho Tutelar",
+  "meaning": "Órgão permanente, autônomo e não jurisdicional de proteção dos direitos da infância.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Conspiração",
+  "meaning": "Ajuste entre pessoas para praticar o crime, antes da execução.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Continência",
+  "meaning": "Uma causa está contida em outra; o julgamento é conjunto.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Contradita",
+  "meaning": "Impugnação da testemunha antes de depor.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Contraditório diferido",
+  "meaning": "A defesa se manifesta depois da decisão.",
+  "laws": [
+   "antifaccao"
+  ]
+ },
+ {
+  "term": "Contrafé",
+  "meaning": "Cópia do mandado entregue ao citando.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Contran",
+  "meaning": "Conselho Nacional de Trânsito, órgão máximo normativo e consultivo do sistema.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Contravenção",
+  "meaning": "Infração penal menos grave que o crime, punida com prisão simples ou multa.",
+  "laws": [
+   "contravencoes"
+  ]
+ },
+ {
+  "term": "Corréu",
+  "meaning": "Outro acusado no mesmo processo.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Corrupção de menores",
+  "meaning": "Praticar infração penal com menor de dezoito anos ou induzi-lo a praticá-la.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Cota",
+  "meaning": "Parcela do valor total atribuída a cada beneficiário.",
+  "laws": [
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "CPF",
+  "meaning": "Cadastro de Pessoas Físicas da Receita Federal.",
+  "laws": [
+   "cpf"
+  ]
+ },
+ {
+  "term": "Crime complexo",
+  "meaning": "Crime formado pela fusão de dois ou mais outros crimes ou fatos típicos.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Crime continuado",
+  "meaning": "Ficção legal que trata várias condutas semelhantes como um só crime para fins de pena.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Crime de atentado",
+  "meaning": "Tentativa punida com a mesma pena do crime consumado.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Crime de perigo abstrato",
+  "meaning": "O perigo é presumido pela lei, sem necessidade de prova.",
+  "laws": [
+   "armas"
+  ]
+ },
+ {
+  "term": "Crime de perigo comum",
+  "meaning": "Atinge número indeterminado de pessoas ou coisas.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Crime impossível",
+  "meaning": "Tentativa que jamais poderia consumar-se, por isso não punida.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Crime permanente",
+  "meaning": "Consumação que se prolonga no tempo.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Crime próprio",
+  "meaning": "Crime que só pode ser praticado por determinada pessoa (aqui, a gestante).",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Crime subsidiário",
+  "meaning": "Crime que só se aplica se o fato não constituir crime mais grave.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Crimes equiparados a hediondos",
+  "meaning": "Tortura, tráfico de drogas e terrorismo, que recebem tratamento similar.",
+  "laws": [
+   "hediondos"
+  ]
+ },
+ {
+  "term": "Critério legal",
+  "meaning": "Hediondo é só o crime que a lei lista expressamente.",
+  "laws": [
+   "hediondos"
+  ]
+ },
+ {
+  "term": "CRLV",
+  "meaning": "Certificado de Registro e Licenciamento de Veículo, o licenciamento anual.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "CRNM",
+  "meaning": "Carteira de Registro Nacional Migratório.",
+  "laws": [
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "CRV",
+  "meaning": "Certificado de Registro de Veículo.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Cúmulo material",
+  "meaning": "Soma das penas de cada crime.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Curatela",
+  "meaning": "Encargo de administrar bens e atos patrimoniais de pessoa curatelada.",
+  "laws": [
+   "pcd"
+  ]
+ },
+ {
+  "term": "Dados cadastrais",
+  "meaning": "Nome e endereço de quem é o assinante ou usuário da conexão.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Dados de conexão",
+  "meaning": "Informações técnicas da conexão: data, hora, duração, IP e terminal de origem.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Dados de tráfego",
+  "meaning": "Metadados da comunicação, como origem, destino e horário.",
+  "laws": [
+   "budapeste"
+  ]
+ },
+ {
+  "term": "Datiloscopia",
+  "meaning": "Identificação por impressões digitais.",
+  "laws": [
+   "identidade"
+  ]
+ },
+ {
+  "term": "Datiloscópico",
+  "meaning": "Relativo às impressões digitais.",
+  "laws": [
+   "identificacao-criminal"
+  ]
+ },
+ {
+  "term": "Deam",
+  "meaning": "Delegacia Especializada de Atendimento à Mulher.",
+  "laws": [
+   "maria-penha"
+  ]
+ },
+ {
+  "term": "Decadência",
+  "meaning": "Perda do direito pelo decurso do prazo para exercê-lo.",
+  "laws": [
+   "codigo-penal",
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Declinatória",
+  "meaning": "Alegação de que o juízo é incompetente.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Defensor dativo",
+  "meaning": "Defensor nomeado pelo juiz para quem não tem advogado.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Defeso",
+  "meaning": "Período em que a pesca ou a caça de certas espécies é proibida.",
+  "laws": [
+   "ambientais"
+  ]
+ },
+ {
+  "term": "Delatio criminis",
+  "meaning": "Comunicação de crime à autoridade.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Denúncia",
+  "meaning": "Ato pelo qual um Estado se retira de um tratado.",
+  "laws": [
+   "budapeste"
+  ]
+ },
+ {
+  "term": "Depen",
+  "meaning": "Departamento Penitenciário Nacional.",
+  "laws": [
+   "lep"
+  ]
+ },
+ {
+  "term": "Depoimento especial",
+  "meaning": "Oitiva protegida da criança ou do adolescente vítima ou testemunha.",
+  "laws": [
+   "henry-borel"
+  ]
+ },
+ {
+  "term": "Desaforamento",
+  "meaning": "Deslocamento do julgamento do Júri para outra comarca.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Descaminho",
+  "meaning": "Fraude no pagamento do imposto devido em mercadoria permitida.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Descriminante putativa",
+  "meaning": "Situação imaginada pelo agente que, se real, tornaria sua conduta legítima.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Deserção",
+  "meaning": "Não conhecimento do recurso por falta de preparo.",
+  "laws": [
+   "juizados"
+  ]
+ },
+ {
+  "term": "Desígnios autônomos",
+  "meaning": "Propósitos distintos do agente para cada resultado.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Desistência voluntária",
+  "meaning": "O agente interrompe voluntariamente a execução e responde só pelo já praticado.",
+  "laws": [
+   "terrorismo"
+  ]
+ },
+ {
+  "term": "Despenalização",
+  "meaning": "Retirada da pena de prisão, mantendo o fato como infração.",
+  "laws": [
+   "drogas"
+  ]
+ },
+ {
+  "term": "Detração",
+  "meaning": "Desconto, da pena, do tempo de prisão ou internação anteriores.",
+  "laws": [
+   "codigo-penal",
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Dia-multa",
+  "meaning": "Unidade em que se calcula a multa, multiplicando-se a quantidade de dias pelo valor de cada dia.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Direito ao silêncio",
+  "meaning": "Ninguém é obrigado a produzir prova contra si.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Dispositivo informático",
+  "meaning": "Computador, celular, tablet e equipamentos semelhantes que armazenam ou processam dados.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Disque 100",
+  "meaning": "Canal nacional de denúncias de violações de direitos humanos.",
+  "laws": [
+   "henry-borel"
+  ]
+ },
+ {
+  "term": "Distribuição",
+  "meaning": "Sorteio do processo ou pedido para um juiz.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Dívida de valor",
+  "meaning": "Débito cobrado como dívida em dinheiro, sem converter-se em pena de prisão.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "DNI",
+  "meaning": "Documento Nacional de Identidade.",
+  "laws": [
+   "icn"
+  ]
+ },
+ {
+  "term": "Dolo e culpa",
+  "meaning": "No homicídio doloso o agente quer ou assume o risco do resultado; no culposo, dá causa por imprudência, negligência ou imperícia.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Dolo específico",
+  "meaning": "Finalidade especial exigida pelo tipo, além da vontade da conduta.",
+  "laws": [
+   "abuso"
+  ]
+ },
+ {
+  "term": "Domínio social estruturado",
+  "meaning": "Controle de territórios ou comunidades por violência organizada.",
+  "laws": [
+   "antifaccao"
+  ]
+ },
+ {
+  "term": "Dupla incriminação",
+  "meaning": "O fato deve ser crime nos dois países.",
+  "laws": [
+   "migracao"
+  ]
+ },
+ {
+  "term": "Dupla tipicidade",
+  "meaning": "O fato deve ser crime nos dois países.",
+  "laws": [
+   "budapeste"
+  ]
+ },
+ {
+  "term": "e-Ping",
+  "meaning": "Padrões de Interoperabilidade de Governo Eletrônico.",
+  "laws": [
+   "icn"
+  ]
+ },
+ {
+  "term": "Efeito devolutivo",
+  "meaning": "O recurso devolve a matéria ao tribunal, sem suspender a decisão.",
+  "laws": [
+   "lavagem"
+  ]
+ },
+ {
+  "term": "Efeito extensivo",
+  "meaning": "O resultado do recurso de um beneficia os corréus.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Elementar",
+  "meaning": "Dado essencial da definição do crime; sem ele o crime não existe ou muda de natureza.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Elementos de corroboração",
+  "meaning": "Indícios e provas que confirmam o que o colaborador afirma.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Embargos de declaração",
+  "meaning": "Pedido para esclarecer obscuridade, contradição ou omissão.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Embargos infringentes",
+  "meaning": "Recurso contra decisão não unânime desfavorável ao réu.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Emendatio libelli",
+  "meaning": "Correção da definição jurídica dos mesmos fatos.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Entidade paraestatal",
+  "meaning": "Entidade que atua ao lado do Estado em atividades de interesse público.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Equidade",
+  "meaning": "Justiça aplicada ao caso concreto, com razoabilidade.",
+  "laws": [
+   "juizados"
+  ]
+ },
+ {
+  "term": "Equivalência dos antecedentes",
+  "meaning": "Teoria segundo a qual toda condição sem a qual o resultado não ocorreria é causa.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Erro de proibição",
+  "meaning": "Erro sobre a ilicitude do fato, isto é, o agente pensa que a conduta é permitida.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Esbulho possessório",
+  "meaning": "Invasão de imóvel para tomar-lhe a posse.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Escusa absolutória",
+  "meaning": "Causa que isenta o agente de pena por razões de política criminal, mesmo havendo crime.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Especialidade",
+  "meaning": "O extraditado só responde pelo fato objeto do pedido.",
+  "laws": [
+   "migracao"
+  ]
+ },
+ {
+  "term": "Estado puerperal",
+  "meaning": "Alteração física e psíquica da mulher durante e logo após o parto.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Estágio de convivência",
+  "meaning": "Período de convivência prévia entre adotantes e adotando, acompanhado pela equipe técnica.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Estruturalmente ordenada",
+  "meaning": "Organizada, com papéis e ordem interna, ainda que sem formalidade.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Exame criminológico",
+  "meaning": "Avaliação do condenado para individualizar a execução da pena.",
+  "laws": [
+   "codigo-penal",
+   "lep"
+  ]
+ },
+ {
+  "term": "Exame de corpo de delito",
+  "meaning": "Perícia sobre os vestígios materiais da infração.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Exceção da verdade",
+  "meaning": "Direito de provar que o fato imputado é verdadeiro.",
+  "laws": [
+   "codigo-penal",
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Excesso de exação",
+  "meaning": "Cobrar tributo indevido ou cobrar de modo vexatório ou gravoso.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Excipiente",
+  "meaning": "Quem opõe a exceção.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Excludente de ilicitude",
+  "meaning": "Situação que retira o caráter ilícito do fato típico.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Exequatur",
+  "meaning": "Autorização para cumprir no Brasil ato de autoridade estrangeira.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Extraterritorialidade",
+  "meaning": "Aplicação da lei brasileira a crimes cometidos fora do Brasil.",
+  "laws": [
+   "codigo-penal",
+   "tortura"
+  ]
+ },
+ {
+  "term": "Exumação",
+  "meaning": "Retirada do cadáver da sepultura para exame.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Falsidade ideológica",
+  "meaning": "Documento formalmente verdadeiro com conteúdo falso.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Fauna silvestre",
+  "meaning": "Animais nativos ou migratórios cujo ciclo de vida ocorre no território brasileiro.",
+  "laws": [
+   "ambientais"
+  ]
+ },
+ {
+  "term": "Fé pública",
+  "meaning": "Presunção legal de autenticidade do documento.",
+  "laws": [
+   "cin",
+   "icn",
+   "identidade"
+  ]
+ },
+ {
+  "term": "Feminicídio",
+  "meaning": "Homicídio de mulher por razões da condição de sexo feminino.",
+  "laws": [
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "FICN",
+  "meaning": "Fundo da Identificação Civil Nacional.",
+  "laws": [
+   "icn"
+  ]
+ },
+ {
+  "term": "Fiel depositário",
+  "meaning": "Quem guarda o bem à disposição do juízo.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Fim específico",
+  "meaning": "Objetivo determinado que a lei exige além da conduta (aqui, cometer crimes).",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Flagrante impróprio",
+  "meaning": "Perseguição logo após o crime em situação que faz presumir a autoria.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "FNSP",
+  "meaning": "Fundo Nacional de Segurança Pública.",
+  "laws": [
+   "antifaccao"
+  ]
+ },
+ {
+  "term": "Fonte aberta",
+  "meaning": "Informação disponível ao público.",
+  "laws": [
+   "budapeste"
+  ]
+ },
+ {
+  "term": "Fonte independente",
+  "meaning": "Origem autônoma que conduziria ao fato por si só.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Foro por prerrogativa de função",
+  "meaning": "Competência de tribunal em razão do cargo do acusado.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Funad",
+  "meaning": "Fundo Nacional Antidrogas.",
+  "laws": [
+   "drogas",
+   "quimicos"
+  ]
+ },
+ {
+  "term": "Fungibilidade",
+  "meaning": "Aproveitamento de um recurso por outro.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Furto privilegiado",
+  "meaning": "Furto de pequeno valor por réu primário, com benefícios na pena.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Gaeco",
+  "meaning": "Grupo de Atuação Especial de Combate ao Crime Organizado.",
+  "laws": [
+   "antifaccao"
+  ]
+ },
+ {
+  "term": "Gazua",
+  "meaning": "Instrumento usado para abrir fechaduras sem a chave.",
+  "laws": [
+   "contravencoes"
+  ]
+ },
+ {
+  "term": "Germes patogênicos",
+  "meaning": "Microrganismos capazes de causar doença.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Graça",
+  "meaning": "Clemência individual concedida pelo Presidente da República.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Grafite",
+  "meaning": "Manifestação artística em muros, com consentimento.",
+  "laws": [
+   "ambientais"
+  ]
+ },
+ {
+  "term": "Habeas corpus preventivo",
+  "meaning": "Impetrado contra ameaça de coação ilegal.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Hidróbio",
+  "meaning": "Vegetal que vive na água.",
+  "laws": [
+   "ambientais"
+  ]
+ },
+ {
+  "term": "Hipossuficiente",
+  "meaning": "Quem não tem condições econômicas ou técnicas de se defender sozinho.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Hipoteca legal",
+  "meaning": "Garantia sobre imóveis do indiciado para assegurar a reparação do dano.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Homologação",
+  "meaning": "Reconhecimento oficial da validade da sentença estrangeira no Brasil.",
+  "laws": [
+   "codigo-penal",
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Honra objetiva",
+  "meaning": "Reputação: o que os outros pensam da pessoa.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Honra subjetiva",
+  "meaning": "Sentimento que a pessoa tem sobre si mesma (dignidade e decoro).",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "ICN",
+  "meaning": "Identificação Civil Nacional.",
+  "laws": [
+   "icn"
+  ]
+ },
+ {
+  "term": "Identidade fictícia",
+  "meaning": "Identidade criada para proteger o agente e permitir a infiltração.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Identificação criminal",
+  "meaning": "Coleta de dados datiloscópicos, fotográficos e, em certos casos, genéticos.",
+  "laws": [
+   "identificacao-criminal"
+  ]
+ },
+ {
+  "term": "Impedimento",
+  "meaning": "Causa objetiva que proíbe o juiz de atuar no processo.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Imprudência, negligência e imperícia",
+  "meaning": "Modalidades de culpa: agir sem cautela, deixar de agir com o cuidado devido e falta de aptidão técnica.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Incidente de insanidade mental",
+  "meaning": "Procedimento para avaliar a integridade mental do acusado.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Indiciamento",
+  "meaning": "Ato do delegado que aponta alguém como provável autor do crime.",
+  "laws": [
+   "delegado"
+  ]
+ },
+ {
+  "term": "Indisponibilidade",
+  "meaning": "Iniciada a ação pública, o MP não pode abrir mão dela.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Indivisibilidade",
+  "meaning": "Se processa todos os autores ou nenhum.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Indulto",
+  "meaning": "Clemência coletiva concedida por decreto presidencial.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Inexigibilidade de conduta diversa",
+  "meaning": "Situação em que não se podia exigir outro comportamento da pessoa.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Infiltração",
+  "meaning": "Agente de polícia que se insere na organização para colher informações, sob autorização judicial.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Infiltração de agentes",
+  "meaning": "Atuação de policial com identidade oculta para colher provas.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Informante",
+  "meaning": "Quem depõe sem compromisso de dizer a verdade.",
+  "laws": [
+   "codigo-processo-penal",
+   "drogas"
+  ]
+ },
+ {
+  "term": "Infração de menor potencial ofensivo",
+  "meaning": "Contravenção ou crime com pena máxima não superior a 2 anos.",
+  "laws": [
+   "juizados"
+  ]
+ },
+ {
+  "term": "Infração penal antecedente",
+  "meaning": "Crime ou contravenção que gerou os bens lavados.",
+  "laws": [
+   "lavagem"
+  ]
+ },
+ {
+  "term": "Inimputável",
+  "meaning": "Quem, por condição mental, não pode ser responsabilizado penalmente.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Inquérito civil",
+  "meaning": "Procedimento investigatório presidido pelo Ministério Público para apurar fatos de interesse coletivo.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Instrução criminal",
+  "meaning": "Fase de produção de provas no processo.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Instrumento de menor potencial ofensivo",
+  "meaning": "Equipamento projetado para conter sem causar morte, como o spray de pimenta.",
+  "laws": [
+   "uso-forca"
+  ]
+ },
+ {
+  "term": "Instrumento não letal",
+  "meaning": "Equipamento concebido para reduzir o risco de morte.",
+  "laws": [
+   "menor-potencial-ofensivo"
+  ]
+ },
+ {
+  "term": "Insumo",
+  "meaning": "Produto usado como matéria-prima na fabricação de outro.",
+  "laws": [
+   "quimicos"
+  ]
+ },
+ {
+  "term": "Integralizado",
+  "meaning": "Capital efetivamente aportado, e não apenas subscrito.",
+  "laws": [
+   "seguranca-privada"
+  ]
+ },
+ {
+  "term": "Integridade",
+  "meaning": "Preservação dos dados contra alteração indevida.",
+  "laws": [
+   "cin"
+  ]
+ },
+ {
+  "term": "Interceptação",
+  "meaning": "Captação da comunicação por terceiro, sem o conhecimento dos interlocutores.",
+  "laws": [
+   "interceptacao"
+  ]
+ },
+ {
+  "term": "Internação",
+  "meaning": "Medida socioeducativa privativa de liberdade, breve e excepcional.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Internação provisória",
+  "meaning": "Privação de liberdade antes da sentença, por prazo máximo de quarenta e cinco dias.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Interoperabilidade",
+  "meaning": "Capacidade de sistemas trocarem dados entre si.",
+  "laws": [
+   "cpf",
+   "icn"
+  ]
+ },
+ {
+  "term": "Interpol",
+  "meaning": "Organização Internacional de Polícia Criminal.",
+  "laws": [
+   "migracao"
+  ]
+ },
+ {
+  "term": "Interposta pessoa",
+  "meaning": "Quem figura como dono dos bens para esconder o verdadeiro proprietário.",
+  "laws": [
+   "lavagem",
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Interpretação extensiva",
+  "meaning": "Amplia o alcance literal da norma para o que o legislador quis dizer.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Interventor judicial",
+  "meaning": "Profissional nomeado pelo juiz para administrar a empresa.",
+  "laws": [
+   "antifaccao"
+  ]
+ },
+ {
+  "term": "Irretratável",
+  "meaning": "Que não pode mais ser desfeita ou retirada.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Iter criminis",
+  "meaning": "Caminho percorrido do crime, da cogitação à consumação.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "ITI",
+  "meaning": "Instituto Nacional de Tecnologia da Informação.",
+  "laws": [
+   "sic"
+  ]
+ },
+ {
+  "term": "JARI",
+  "meaning": "Junta Administrativa de Recursos de Infrações.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Jogo de azar",
+  "meaning": "Jogo em que o ganho ou a perda dependem principalmente da sorte.",
+  "laws": [
+   "contravencoes"
+  ]
+ },
+ {
+  "term": "Juiz leigo",
+  "meaning": "Auxiliar da Justiça, advogado, que conduz a instrução e propõe a decisão.",
+  "laws": [
+   "juizados"
+  ]
+ },
+ {
+  "term": "Juízo a quo / ad quem",
+  "meaning": "Juízo de origem e juízo de destino do recurso.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Juízo de retratação",
+  "meaning": "Possibilidade de o juiz reformar a própria decisão.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Justa causa",
+  "meaning": "Lastro probatório mínimo para a ação penal.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Laissez-passer",
+  "meaning": "Documento de viagem provisório para quem não tem passaporte.",
+  "laws": [
+   "migracao"
+  ]
+ },
+ {
+  "term": "Latrocínio",
+  "meaning": "Roubo seguido de morte (art. 157, §3º, II).",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Laudo de constatação",
+  "meaning": "Laudo preliminar da natureza e quantidade da droga.",
+  "laws": [
+   "drogas"
+  ]
+ },
+ {
+  "term": "Lei especial",
+  "meaning": "Lei que trata de matéria específica fora do Código.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Liberdade assistida",
+  "meaning": "Medida em meio aberto com acompanhamento e orientação do adolescente.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Litispendência",
+  "meaning": "Existência de duas ações idênticas em curso.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Livramento condicional",
+  "meaning": "Liberdade antecipada do condenado, mediante condições, após cumprir parte da pena.",
+  "laws": [
+   "codigo-penal",
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Livre convencimento motivado",
+  "meaning": "O juiz avalia a prova livremente, mas fundamenta a decisão.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Medida de segurança",
+  "meaning": "Medida de cunho curativo aplicada a inimputáveis (ou semi-imputáveis em certos casos).",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Medida socioeducativa",
+  "meaning": "Resposta estatal ao ato infracional do adolescente, com finalidade pedagógica.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Medidas assecuratórias",
+  "meaning": "Medidas cautelares para garantir bens, como o sequestro.",
+  "laws": [
+   "codigo-penal",
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Meio de obtenção de prova",
+  "meaning": "Instrumento usado para encontrar ou conseguir a prova (diferente da prova em si).",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Meio insidioso",
+  "meaning": "Meio disfarçado, que surpreende a vítima, como o veneno.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Mérito",
+  "meaning": "Exame do direito ao benefício, distinto do encerramento apenas por pendência processual.",
+  "laws": [
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "Moderação",
+  "meaning": "Uso proporcional dos meios necessários para repelir a agressão.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Monitoração eletrônica",
+  "meaning": "Fiscalização por tornozeleira ou dispositivo similar.",
+  "laws": [
+   "lep"
+  ]
+ },
+ {
+  "term": "MRZ",
+  "meaning": "Zona de leitura mecânica, conforme o padrão da OACI.",
+  "laws": [
+   "cin"
+  ]
+ },
+ {
+  "term": "Municipalização",
+  "meaning": "Descentralização do atendimento para o nível municipal.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Mutatio libelli",
+  "meaning": "Alteração dos fatos da acusação por aditamento.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Necessidade",
+  "meaning": "Limitação dos dados tratados ao mínimo adequado à finalidade informada.",
+  "laws": [
+   "sic"
+  ]
+ },
+ {
+  "term": "Negócio jurídico processual",
+  "meaning": "Acordo entre as partes que organiza como o processo vai andar.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Nexo causal",
+  "meaning": "Ligação entre a conduta e o resultado.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Nome social",
+  "meaning": "Nome pelo qual a pessoa se identifica socialmente.",
+  "laws": [
+   "cin"
+  ]
+ },
+ {
+  "term": "Non-refoulement",
+  "meaning": "Proibição de devolver a pessoa a local onde corra risco de vida ou perseguição.",
+  "laws": [
+   "migracao"
+  ]
+ },
+ {
+  "term": "Norma penal em branco",
+  "meaning": "Norma cuja descrição depende de complementação por outra norma.",
+  "laws": [
+   "codigo-penal",
+   "drogas"
+  ]
+ },
+ {
+  "term": "Nota de culpa",
+  "meaning": "Documento que informa ao preso o motivo da prisão, o condutor e as testemunhas.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "OACI",
+  "meaning": "Organização da Aviação Civil Internacional.",
+  "laws": [
+   "cin"
+  ]
+ },
+ {
+  "term": "Oitiva informal",
+  "meaning": "Audiência do adolescente pelo Ministério Público sem formalidades processuais.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Organização criminosa ultraviolenta",
+  "meaning": "Facção de três ou mais pessoas que usa violência para controle territorial ou social.",
+  "laws": [
+   "antifaccao"
+  ]
+ },
+ {
+  "term": "Paciente",
+  "meaning": "A pessoa que sofre ou ameaça sofrer a coação.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Parentalidade positiva",
+  "meaning": "Educação dos filhos sem violência, com afeto e limites.",
+  "laws": [
+   "henry-borel"
+  ]
+ },
+ {
+  "term": "Participação de menor importância",
+  "meaning": "Colaboração de pouca relevância para o crime.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Pas de nullité sans grief",
+  "meaning": "Não há nulidade sem prejuízo.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Passagem inocente",
+  "meaning": "Passagem de navio pelo mar territorial sem escala e sem prejuízo ao Estado.",
+  "laws": [
+   "migracao"
+  ]
+ },
+ {
+  "term": "Peculato-furto",
+  "meaning": "Funcionário sem a posse subtrai bem valendo-se da facilidade do cargo.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Pecúlio",
+  "meaning": "Reserva de dinheiro do preso, entregue na liberdade.",
+  "laws": [
+   "lep"
+  ]
+ },
+ {
+  "term": "Pedido contraposto",
+  "meaning": "Pedido do réu contra o autor, na própria contestação.",
+  "laws": [
+   "juizados"
+  ]
+ },
+ {
+  "term": "Pena-base",
+  "meaning": "Pena fixada na primeira fase, a partir das circunstâncias judiciais.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "PEP",
+  "meaning": "Pessoa exposta politicamente.",
+  "laws": [
+   "lavagem"
+  ]
+ },
+ {
+  "term": "Per capita",
+  "meaning": "Por pessoa: renda familiar dividida pelo total de integrantes da família definida pelo decreto.",
+  "laws": [
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "Perda alargada",
+  "meaning": "Confisco da diferença entre o patrimônio e o rendimento lícito do condenado.",
+  "laws": [
+   "codigo-penal",
+   "drogas"
+  ]
+ },
+ {
+  "term": "Perdão do ofendido",
+  "meaning": "Desistência da ação privada já iniciada, que depende de aceitação.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Perdão judicial",
+  "meaning": "Dispensa de pena concedida pelo juiz nos casos previstos em lei.",
+  "laws": [
+   "codigo-penal",
+   "organizacoes",
+   "testemunhas"
+  ]
+ },
+ {
+  "term": "Perempção",
+  "meaning": "Perda do direito de prosseguir na ação privada por negligência do querelante.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Periculosidade",
+  "meaning": "Probabilidade de o agente voltar a delinquir, que justifica a medida de segurança.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Periculum libertatis",
+  "meaning": "Perigo gerado pela liberdade do imputado.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Período depurador",
+  "meaning": "Tempo após o qual a condenação anterior deixa de gerar reincidência.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Permissão para Dirigir",
+  "meaning": "Habilitação provisória válida por um ano.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Persecução penal",
+  "meaning": "Todo o caminho da apuração e punição: investigação mais processo.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Pessoas obrigadas",
+  "meaning": "Setores sujeitos ao cadastro e à comunicação de operações ao Coaf.",
+  "laws": [
+   "lavagem"
+  ]
+ },
+ {
+  "term": "PIA",
+  "meaning": "Plano Individual de Atendimento.",
+  "laws": [
+   "drogas"
+  ]
+ },
+ {
+  "term": "Plano Individual de Atendimento",
+  "meaning": "Documento que organiza as ações para a reintegração familiar da criança acolhida.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Pnatrans",
+  "meaning": "Plano Nacional de Redução de Mortes e Lesões no Trânsito.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Poder de polícia",
+  "meaning": "Atividade estatal que limita direitos em prol do interesse público.",
+  "laws": [
+   "quimicos"
+  ]
+ },
+ {
+  "term": "Poder familiar",
+  "meaning": "Conjunto de direitos e deveres dos pais sobre os filhos menores.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Polícia judiciária",
+  "meaning": "Apura infrações penais e autoria, auxiliando o Judiciário e o Ministério Público.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Posse",
+  "meaning": "Manter a arma em casa ou no local de trabalho, com registro.",
+  "laws": [
+   "armas"
+  ]
+ },
+ {
+  "term": "Posse irregular",
+  "meaning": "Manter arma sem registro dentro de casa ou do local de trabalho.",
+  "laws": [
+   "armas"
+  ]
+ },
+ {
+  "term": "Preclusão",
+  "meaning": "Perda da oportunidade processual por não exercê-la no momento certo.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Preposto",
+  "meaning": "Representante da empresa na audiência.",
+  "laws": [
+   "juizados"
+  ]
+ },
+ {
+  "term": "Prescrição da pretensão executória",
+  "meaning": "Perda do direito de executar a pena após a condenação definitiva.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Prescrição da pretensão punitiva",
+  "meaning": "Perda do direito de punir pelo tempo decorrido antes da condenação definitiva.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Preterdolo",
+  "meaning": "Dolo no resultado inicial (lesão) e culpa no resultado mais grave (morte).",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Prevenção",
+  "meaning": "O juízo da primeira ação fica competente para as seguintes ligadas a ela.",
+  "laws": [
+   "antifaccao",
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Prisão especial",
+  "meaning": "Recolhimento em local distinto da prisão comum, antes da condenação definitiva.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Prisão simples",
+  "meaning": "Pena das contravenções, cumprida sem rigor penitenciário.",
+  "laws": [
+   "contravencoes"
+  ]
+ },
+ {
+  "term": "Prisão temporária",
+  "meaning": "Prisão cautelar de curta duração, para a investigação de crimes graves.",
+  "laws": [
+   "temporaria"
+  ]
+ },
+ {
+  "term": "Processo judicialiforme",
+  "meaning": "Ação iniciada de ofício por portaria ou auto de prisão.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Progressão de regime",
+  "meaning": "Passagem para regime menos rigoroso conforme o mérito do condenado.",
+  "laws": [
+   "codigo-penal",
+   "lep"
+  ]
+ },
+ {
+  "term": "Promulgação",
+  "meaning": "Ato que dá validade interna ao tratado ratificado.",
+  "laws": [
+   "budapeste"
+  ]
+ },
+ {
+  "term": "Pronúncia",
+  "meaning": "Decisão que envia o acusado a julgamento pelo Júri.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Propalar",
+  "meaning": "Espalhar, divulgar para muitas pessoas.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Proporcionalidade",
+  "meaning": "Adequação entre o que se faz e o objetivo da investigação.",
+  "laws": [
+   "organizacoes",
+   "uso-forca"
+  ]
+ },
+ {
+  "term": "Prospecto",
+  "meaning": "Documento de oferta pública de valores mobiliários.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Proteção integral",
+  "meaning": "Garantia de todos os direitos fundamentais a toda criança e adolescente.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Prova de vida",
+  "meaning": "Verificação de que a biometria facial apresentada corresponde a uma pessoa presente, conforme a tecnologia prevista.",
+  "laws": [
+   "cin"
+  ]
+ },
+ {
+  "term": "Prova eletrônica",
+  "meaning": "Prova obtida em meio digital.",
+  "laws": [
+   "budapeste"
+  ]
+ },
+ {
+  "term": "Prova indiciária",
+  "meaning": "Prova indireta construída por indução.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Pública-forma",
+  "meaning": "Cópia de documento autenticada por oficial público.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Punibilidade",
+  "meaning": "Possibilidade jurídica de o Estado punir o agente.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Queixa",
+  "meaning": "Petição inicial da ação penal privada.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Querelado",
+  "meaning": "Réu na ação penal privada.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Querelante",
+  "meaning": "Quem ajuíza a queixa-crime.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Quesito genérico",
+  "meaning": "'O jurado absolve o acusado?', terceiro quesito da série.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Quesitos",
+  "meaning": "Perguntas dirigidas aos peritos.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Questão prejudicial",
+  "meaning": "Questão de outro ramo que deve ser resolvida antes do mérito penal.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Quórum",
+  "meaning": "Quantidade de membros ou votos exigida para uma deliberação.",
+  "laws": [
+   "icn"
+  ]
+ },
+ {
+  "term": "Ratificação",
+  "meaning": "Confirmação do ato pela instância indicada no decreto.",
+  "laws": [
+   "sic"
+  ]
+ },
+ {
+  "term": "Razões da condição do sexo feminino",
+  "meaning": "Violência doméstica e familiar, ou menosprezo ou discriminação à condição de mulher.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "RDD",
+  "meaning": "Regime disciplinar diferenciado.",
+  "laws": [
+   "lep"
+  ]
+ },
+ {
+  "term": "Reabilitação",
+  "meaning": "Medida que assegura o sigilo da condenação e pode afastar certos efeitos dela.",
+  "laws": [
+   "codigo-penal",
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Receptação",
+  "meaning": "Lidar com coisa que se sabe (ou deve saber) ser produto de crime.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Reciprocidade",
+  "meaning": "Promessa de tratar o outro país da mesma forma em casos semelhantes.",
+  "laws": [
+   "lavagem",
+   "terrorismo"
+  ]
+ },
+ {
+  "term": "Recurso de ofício",
+  "meaning": "Reexame necessário imposto ao juiz.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Recusa peremptória",
+  "meaning": "Recusa de jurado sem necessidade de motivar.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Referendo",
+  "meaning": "Consulta popular sobre lei já aprovada.",
+  "laws": [
+   "armas"
+  ]
+ },
+ {
+  "term": "Reformatio in pejus",
+  "meaning": "Piorar a situação do recorrente em seu próprio recurso.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Registro geral",
+  "meaning": "Número de cadastro do cidadão no órgão emissor (RG).",
+  "laws": [
+   "identidade"
+  ]
+ },
+ {
+  "term": "Reincidente",
+  "meaning": "Quem comete novo crime após condenação definitiva por crime anterior.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Reincidente específico",
+  "meaning": "Quem reincide em crime da mesma natureza.",
+  "laws": [
+   "drogas",
+   "hediondos"
+  ]
+ },
+ {
+  "term": "Remição",
+  "meaning": "Abatimento da pena por trabalho ou estudo.",
+  "laws": [
+   "lep"
+  ]
+ },
+ {
+  "term": "Remissão",
+  "meaning": "Perdão ou exclusão do processo, com ou sem medida, concedida ao adolescente.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Renach",
+  "meaning": "Registro Nacional de Carteiras de Habilitação.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Renavam",
+  "meaning": "Registro Nacional de Veículos Automotores.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Renúncia",
+  "meaning": "Abrir mão do direito de queixa antes da ação.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Representação",
+  "meaning": "Manifestação da vítima autorizando o MP a processar em certos crimes.",
+  "laws": [
+   "codigo-penal",
+   "codigo-processo-penal",
+   "eca"
+  ]
+ },
+ {
+  "term": "Repressão uniforme",
+  "meaning": "Atuação coordenada em mais de um Estado ou país.",
+  "laws": [
+   "pf-interestadual"
+  ]
+ },
+ {
+  "term": "Reserva",
+  "meaning": "Declaração que exclui ou modifica o efeito de certa disposição do tratado.",
+  "laws": [
+   "budapeste"
+  ]
+ },
+ {
+  "term": "Responsabilidade objetiva",
+  "meaning": "Responsabilização sem dolo ou culpa, vedada no Direito Penal.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Restauração de autos",
+  "meaning": "Procedimento para reconstituir autos perdidos ou destruídos.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Restos a pagar",
+  "meaning": "Despesas empenhadas e não pagas até o fim do exercício.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Retratação",
+  "meaning": "Desdizer-se, retirando a ofensa de forma completa.",
+  "laws": [
+   "codigo-penal",
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Réus incertos",
+  "meaning": "Pessoas não identificadas que possam ter direito sobre os bens.",
+  "laws": [
+   "antifaccao"
+  ]
+ },
+ {
+  "term": "Revelia",
+  "meaning": "Ausência injustificada do acusado citado pessoalmente.",
+  "laws": [
+   "codigo-processo-penal",
+   "juizados"
+  ]
+ },
+ {
+  "term": "Revisão criminal",
+  "meaning": "Ação para rever condenação definitiva em favor do réu.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Revitimização",
+  "meaning": "Nova exposição da vítima ao sofrimento por repetidos relatos ou atendimentos inadequados.",
+  "laws": [
+   "maria-penha",
+   "trafico-pessoas"
+  ]
+ },
+ {
+  "term": "Revogação",
+  "meaning": "Retirada de vigência de uma norma pela norma posterior competente.",
+  "laws": [
+   "cin"
+  ]
+ },
+ {
+  "term": "RGPS",
+  "meaning": "Regime Geral de Previdência Social.",
+  "laws": [
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "RIC",
+  "meaning": "Registro de Identidade Civil.",
+  "laws": [
+   "ric"
+  ]
+ },
+ {
+  "term": "Rito sumaríssimo",
+  "meaning": "Procedimento simplificado e rápido.",
+  "laws": [
+   "testemunhas"
+  ]
+ },
+ {
+  "term": "Rixa",
+  "meaning": "Briga tumultuária entre três ou mais pessoas, com agressões recíprocas.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "RPPS",
+  "meaning": "Regime Próprio de Previdência Social.",
+  "laws": [
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "Rufianismo",
+  "meaning": "Viver às custas da prostituição alheia.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Sabotagem",
+  "meaning": "Dano ou obstrução deliberada à produção.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Sala especial",
+  "meaning": "Local da votação dos quesitos, com acesso restrito.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Salvo-conduto",
+  "meaning": "Documento que protege contra a prisão ilegal no habeas corpus preventivo.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Semovente",
+  "meaning": "Animal que se move por si, como o gado.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Senad",
+  "meaning": "Secretaria Nacional de Políticas sobre Drogas.",
+  "laws": [
+   "drogas"
+  ]
+ },
+ {
+  "term": "Senasp",
+  "meaning": "Secretaria Nacional de Segurança Pública.",
+  "laws": [
+   "sic"
+  ]
+ },
+ {
+  "term": "Separação de corpos",
+  "meaning": "Afastamento dos cônjuges ou companheiros da convivência.",
+  "laws": [
+   "maria-penha"
+  ]
+ },
+ {
+  "term": "Sequestro",
+  "meaning": "Medida cautelar que retém bens adquiridos com proventos do crime.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Sequestro-relâmpago",
+  "meaning": "Restrição da liberdade da vítima por pouco tempo para obter vantagem econômica.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Serviço orgânico",
+  "meaning": "Segurança organizada pela própria empresa ou condomínio, em proveito próprio.",
+  "laws": [
+   "seguranca-privada"
+  ]
+ },
+ {
+  "term": "Servidão",
+  "meaning": "Sujeição da pessoa a dependência que limita sua liberdade.",
+  "laws": [
+   "trafico-pessoas"
+  ]
+ },
+ {
+  "term": "Sigma",
+  "meaning": "Sistema de Gerenciamento Militar de Armas, do Exército.",
+  "laws": [
+   "armas"
+  ]
+ },
+ {
+  "term": "Sinal",
+  "meaning": "Posicionamento da estação de cobertura, setorização e intensidade de radiofrequência.",
+  "laws": [
+   "trafico-pessoas"
+  ]
+ },
+ {
+  "term": "Sinarm",
+  "meaning": "Sistema Nacional de Armas.",
+  "laws": [
+   "armas",
+   "seguranca-privada"
+  ]
+ },
+ {
+  "term": "Sinistro de trânsito",
+  "meaning": "Evento com dano ao veículo, à carga ou a pessoas, em que ao menos uma parte está em movimento.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Sisnad",
+  "meaning": "Sistema Nacional de Políticas Públicas sobre Drogas.",
+  "laws": [
+   "drogas"
+  ]
+ },
+ {
+  "term": "SISNAMA",
+  "meaning": "Sistema Nacional do Meio Ambiente.",
+  "laws": [
+   "ambientais"
+  ]
+ },
+ {
+  "term": "Sistema acusatório",
+  "meaning": "Separação entre quem acusa, quem defende e quem julga.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Sistema trifásico",
+  "meaning": "Método de cálculo da pena em três fases sucessivas.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Sistema vicariante",
+  "meaning": "Pena ou medida de segurança, nunca as duas ao mesmo tempo.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Solidária",
+  "meaning": "Cada devedor responde pela dívida inteira.",
+  "laws": [
+   "idosa"
+  ]
+ },
+ {
+  "term": "Stalking",
+  "meaning": "Perseguição reiterada que invade a esfera de liberdade ou privacidade da vítima.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "SUAS",
+  "meaning": "Sistema Único de Assistência Social.",
+  "laws": [
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "Subsidiariedade",
+  "meaning": "A medida só cabe se não houver outro meio de prova.",
+  "laws": [
+   "interceptacao",
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Subtrair",
+  "meaning": "Retirar a coisa da posse de quem a detém, sem violência ou grave ameaça.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Sumário da culpa",
+  "meaning": "Primeira fase do Júri, até a pronúncia.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Sursis",
+  "meaning": "Suspensão condicional da pena, mediante condições.",
+  "laws": [
+   "codigo-penal",
+   "codigo-processo-penal",
+   "contravencoes"
+  ]
+ },
+ {
+  "term": "Sursis processual",
+  "meaning": "Suspensão do processo mediante condições e período de prova.",
+  "laws": [
+   "juizados"
+  ]
+ },
+ {
+  "term": "Susp",
+  "meaning": "Sistema Único de Segurança Pública.",
+  "laws": [
+   "antifaccao"
+  ]
+ },
+ {
+  "term": "Suspeição",
+  "meaning": "Causa subjetiva que compromete a imparcialidade do juiz.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Sustar",
+  "meaning": "Interromper a operação.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "TAC",
+  "meaning": "Termo de ajustamento de conduta, título executivo extrajudicial.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "TCO",
+  "meaning": "Termo circunstanciado de ocorrência, registro simplificado do fato.",
+  "laws": [
+   "juizados"
+  ]
+ },
+ {
+  "term": "Tecnologia assistiva",
+  "meaning": "Recursos que ampliam a autonomia da pessoa com deficiência.",
+  "laws": [
+   "pcd"
+  ]
+ },
+ {
+  "term": "Tempus regit actum",
+  "meaning": "O ato se rege pela lei vigente quando praticado.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Teoria da atividade",
+  "meaning": "O crime considera-se praticado quando se age (ou se omite), não quando o resultado ocorre.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Tergiversação",
+  "meaning": "Defender partes contrárias na mesma causa.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Termo circunstanciado",
+  "meaning": "Registro simplificado de infração de menor potencial ofensivo.",
+  "laws": [
+   "drogas"
+  ]
+ },
+ {
+  "term": "Termo de acordo",
+  "meaning": "Documento escrito que formaliza a colaboração premiada.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Terra devoluta",
+  "meaning": "Terra pública sem destinação definida.",
+  "laws": [
+   "ambientais"
+  ]
+ },
+ {
+  "term": "Território por extensão",
+  "meaning": "Locais que a lei equipara ao território nacional, como certas aeronaves e embarcações.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Terror social ou generalizado",
+  "meaning": "Finalidade de infundir medo coletivo.",
+  "laws": [
+   "terrorismo"
+  ]
+ },
+ {
+  "term": "Tesouro",
+  "meaning": "Depósito antigo de coisas preciosas, sem dono conhecido.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Testemunha referida",
+  "meaning": "Pessoa mencionada no depoimento de outra testemunha.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Tolerância zero",
+  "meaning": "Qualquer concentração de álcool configura infração administrativa.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Tomada de decisão apoiada",
+  "meaning": "Apoio escolhido pela pessoa com deficiência para decidir, sem perder a capacidade.",
+  "laws": [
+   "pcd"
+  ]
+ },
+ {
+  "term": "Tombamento",
+  "meaning": "Proteção oficial de bens de valor cultural.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Tortura-prova",
+  "meaning": "Tortura para obter informação, declaração ou confissão.",
+  "laws": [
+   "tortura"
+  ]
+ },
+ {
+  "term": "Trabalho com apoio",
+  "meaning": "Emprego competitivo com suportes individualizados.",
+  "laws": [
+   "pcd"
+  ]
+ },
+ {
+  "term": "Trabalho educativo",
+  "meaning": "Atividade em que o aspecto pedagógico prevalece sobre o produtivo.",
+  "laws": [
+   "eca"
+  ]
+ },
+ {
+  "term": "Tráfico privilegiado",
+  "meaning": "Causa de diminuição de pena para o réu primário, de bons antecedentes, que não integra organização criminosa.",
+  "laws": [
+   "drogas"
+  ]
+ },
+ {
+  "term": "Transação penal",
+  "meaning": "Acordo em que o autor aceita pena alternativa imediata, sem processo.",
+  "laws": [
+   "juizados"
+  ]
+ },
+ {
+  "term": "Trânsito",
+  "meaning": "Utilização das vias por pessoas, veículos e animais para circulação, parada, estacionamento e carga ou descarga.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Trânsito em julgado",
+  "meaning": "Decisão da qual não cabe mais recurso.",
+  "laws": [
+   "codigo-penal",
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Transnacional",
+  "meaning": "Crime cuja execução ou resultado ultrapassa as fronteiras do país.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Transposição de fronteiras",
+  "meaning": "Passagem do investigado ou da carga de um país para outro.",
+  "laws": [
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Transversalidade",
+  "meaning": "Incorporar uma preocupação em todas as políticas públicas.",
+  "laws": [
+   "trafico-pessoas"
+  ]
+ },
+ {
+  "term": "Turma Recursal",
+  "meaning": "Órgão do próprio Juizado que julga os recursos.",
+  "laws": [
+   "juizados"
+  ]
+ },
+ {
+  "term": "Ubiquidade",
+  "meaning": "O crime se considera praticado tanto onde se agiu quanto onde o resultado ocorreu ou deveria ocorrer.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Ultra-atividade",
+  "meaning": "Aplicação da lei mesmo depois de revogada ou vencida.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Unificação das penas",
+  "meaning": "Redução da soma das penas ao limite máximo de cumprimento.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Vacância",
+  "meaning": "Período entre a publicação e o início da vigência da norma.",
+  "laws": [
+   "pensao-regulamento"
+  ]
+ },
+ {
+  "term": "Vacatio legis",
+  "meaning": "Intervalo entre a publicação de uma norma e o início de sua vigência.",
+  "laws": [
+   "icn",
+   "organizacoes"
+  ]
+ },
+ {
+  "term": "Vestígio",
+  "meaning": "Todo objeto ou material relacionado à infração penal.",
+  "laws": [
+   "codigo-processo-penal"
+  ]
+ },
+ {
+  "term": "Via de trânsito rápido",
+  "meaning": "Via com acessos especiais, sem interseções em nível e sem travessia de pedestres em nível.",
+  "laws": [
+   "transito"
+  ]
+ },
+ {
+  "term": "Vias de fato",
+  "meaning": "Agressão física sem ferimento, como empurrões ou tapas leves.",
+  "laws": [
+   "contravencoes"
+  ]
+ },
+ {
+  "term": "Vicaricídio",
+  "meaning": "Nome dado ao crime de matar pessoa próxima à mulher para atingi-la.",
+  "laws": [
+   "codigo-penal",
+   "hediondos"
+  ]
+ },
+ {
+  "term": "Vilipendiar",
+  "meaning": "Tratar com desprezo, ultrajar.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Violência institucional",
+  "meaning": "Revitimização da vítima por agentes públicos no atendimento.",
+  "laws": [
+   "abuso"
+  ]
+ },
+ {
+  "term": "Vulnerável",
+  "meaning": "Menor de 14 anos ou pessoa sem discernimento ou sem poder de resistência.",
+  "laws": [
+   "codigo-penal"
+  ]
+ },
+ {
+  "term": "Warrant",
+  "meaning": "Título que representa mercadoria depositada e permite sua oneração como garantia.",
+  "laws": [
+   "codigo-penal"
+  ]
+ }
+]
