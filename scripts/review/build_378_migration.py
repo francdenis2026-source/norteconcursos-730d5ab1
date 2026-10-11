@@ -1,5 +1,6 @@
 """Generate a bounded, transactional and idempotent migration from reviewed decisions."""
 import json
+import argparse
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -16,7 +17,11 @@ def literal(value, field=None):
     return "'"+str(value).replace("'","''")+"'"+cast
 
 def main():
-    manifest=json.loads((ROOT/'docs/question-legal-review-378-2026-10-11.json').read_text(encoding='utf-8'))
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--manifest',type=Path,default=ROOT/'docs/question-legal-review-378-2026-10-11.json')
+    parser.add_argument('--output',type=Path,default=ROOT/'supabase/migrations/20261011130000_official_source_review_378_batch01.sql')
+    args=parser.parse_args()
+    manifest=json.loads(args.manifest.read_text(encoding='utf-8'))
     ds=manifest['decisions']
     sources={b['url']:b for d in ds for b in d['patch']['legal_basis']}
     for d in ds:
@@ -60,7 +65,7 @@ def main():
                    ', '.join(f'{f}='+literal(v,f) for f,v in patch.items())+' WHERE '+' AND '.join(expected)+';\n'+
                    '    GET DIAGNOSTICS changed=ROW_COUNT;\n    IF changed<>1 THEN RAISE EXCEPTION '+literal('Stale or incomplete review: '+d['id'])+'; END IF;\n  END IF;\nEND; $review$;')
     sql.append('COMMIT;\n')
-    path=ROOT/'supabase/migrations/20261011130000_official_source_review_378_batch01.sql'
+    path=args.output
     path.write_text('\n'.join(sql),encoding='utf-8')
     print('Bounded migration entries:',len(ds))
 

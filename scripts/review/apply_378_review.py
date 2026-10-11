@@ -9,6 +9,7 @@ import json
 import os
 from pathlib import Path
 import sys
+import argparse
 import time
 from urllib.error import URLError, HTTPError
 from urllib.parse import urlencode, urlparse
@@ -53,7 +54,11 @@ def filter_value(value):
     return 'eq.'+str(value)
 
 def main():
-    manifest=json.loads(MANIFEST.read_text(encoding='utf-8'))
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--manifest',type=Path,default=MANIFEST)
+    parser.add_argument('--apply',action='store_true')
+    args=parser.parse_args()
+    manifest=json.loads(args.manifest.read_text(encoding='utf-8'))
     scope=json.loads((ROOT/'docs/question-taxonomy-review-2026-10-11.json').read_text(encoding='utf-8'))
     held={(d['table'],d['id']) for d in scope['decisions'] if d['quarantine']}
     ds=manifest['decisions']
@@ -89,7 +94,7 @@ def main():
     print('Preflight verified:',len(ds),flush=True)
     sources={b['url']:b for d in ds for b in d['patch']['legal_basis']}
     sources.update({d['syllabus_source']:{'url':d['syllabus_source'],'title':'PCDF Delegado 2026: edital oficial retificado'} for d in ds if d.get('syllabus_source')})
-    if '--apply' in sys.argv:
+    if args.apply:
         for b in sources.values():
             host=urlparse(b['url']).hostname
             typ='edital' if host=='cdn.cebraspe.org.br' else 'jurisprudencia' if 'jus.br' in host else 'manual' if 'unodc.org' in host else 'lei'
@@ -104,7 +109,7 @@ def main():
     for d in ds:
         row=before[d['id']]
         status=validate_decision(d,row,topic_ids)
-        if '--apply' in sys.argv and status!='already_applied':
+        if args.apply and status!='already_applied':
             guards={'id':filter_value(d['id']),'select':'*'}
             for f in ['question_text','official_answer','content_status','legal_basis','law_version_checked_at',
                       'current_syllabus_topic_id','review_note','explanation','context_review_required',
@@ -118,8 +123,8 @@ def main():
             if validate_decision(d,check,topic_ids)!='already_applied':raise ValueError('Read-back failed')
             status='applied'
         results.append({'id':d['id'],'result':status,'decision':d['decision'],'publication_status':d['patch']['content_status']})
-    output={'scope_total':378,'processed':len(results),'remaining_individual_review':378-len(results),'results':results}
-    path=ROOT/'outputs/legal-review-378'/('applied.json' if '--apply' in sys.argv else 'validated.json')
+    output={'scope_total':378,'processed':len(results),'remaining_individual_review':manifest['pending_individual_review'],'results':results}
+    path=ROOT/'outputs/legal-review-378'/(args.manifest.stem+('-applied.json' if args.apply else '-validated.json'))
     path.write_text(json.dumps(output,ensure_ascii=False,indent=2),encoding='utf-8')
     from collections import Counter
     print(dict(Counter(r['result'] for r in results)),dict(Counter(r['publication_status'] for r in results)),flush=True)

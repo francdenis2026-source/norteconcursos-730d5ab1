@@ -2,6 +2,7 @@
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 import datetime
+import argparse
 import json
 import os
 import time
@@ -13,9 +14,19 @@ from apply_378_review import same
 
 ROOT=Path(__file__).resolve().parents[2]
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--extra-manifest',type=Path,action='append',default=[])
+    parser.add_argument('--batch',choices=['batch01','batch02'],default='batch01')
+    args=parser.parse_args()
     baseline=json.loads((ROOT/'outputs/legal-review-378/baseline.json').read_text(encoding='utf-8'))
     manifest=json.loads((ROOT/'docs/question-legal-review-378-2026-10-11.json').read_text(encoding='utf-8'))
     decisions={(d['table'],d['id']):d for d in manifest['decisions']}
+    for path in args.extra_manifest:
+        extra=json.loads(path.read_text(encoding='utf-8'))
+        for d in extra['decisions']:
+            key=d['table'],d['id']
+            if key in decisions:raise ValueError('Overlapping review manifests')
+            decisions[key]=d
     base=os.environ['TASK_SUPABASE_URL'].rstrip('/')+'/rest/v1/'
     headers={'apikey':os.environ['TASK_SUPABASE_SECRET']}
     jobs=[]
@@ -52,8 +63,8 @@ def main():
             'individual_decisions':len(decisions),'remaining_individual_review':378-len(decisions),
             'publication_statuses':dict(status),'decisions':dict(Counter(d['decision'] for d in decisions.values())),
             'unexpected_changes':errors,'preserved_original_text_and_keys':not errors}
-    (ROOT/'outputs/legal-review-378/after-batch01.json').write_text(json.dumps(list(actual.values()),ensure_ascii=False,indent=2),encoding='utf-8')
-    (ROOT/'docs/question-legal-review-378-batch01-applied-2026-10-11.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (ROOT/f'outputs/legal-review-378/after-{args.batch}.json').write_text(json.dumps(list(actual.values()),ensure_ascii=False,indent=2),encoding='utf-8')
+    (ROOT/f'docs/question-legal-review-378-{args.batch}-applied-2026-10-11.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False))
     if errors:raise SystemExit(1)
 
