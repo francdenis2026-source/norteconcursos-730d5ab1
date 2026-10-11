@@ -1,0 +1,159 @@
+{
+  "course_slug": "terrorismo",
+  "law": "Lei Antiterrorismo (Lei nº 13.260, de 2016) — lote 01: arts. 1º a 20",
+  "units": {
+    "art-1": {
+      "simples": "Esta Lei regulamenta o disposto no inciso XLIII do art. 5º da Constituição, disciplinando o terrorismo, tratando de disposições investigatórias e processuais e reformulando o conceito de organização terrorista.",
+      "pontos": ["Regulamenta o inciso XLIII do art. 5º da Constituição.", "Disciplina o terrorismo.", "Traz disposições investigatórias e processuais.", "Reformula o conceito de organização terrorista."],
+      "atencao": ["O inciso XLIII da Constituição trata do terrorismo como crime inafiançável e insuscetível de graça ou anistia."],
+      "exemplo": "A lei concretiza o mandado constitucional de criminalização do terrorismo.",
+      "prova": ["Assertiva que restringe a lei ao aspecto penal, sem disposições processuais e investigatórias, erra."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-2": {
+      "simples": "O terrorismo consiste na prática por um ou mais indivíduos dos atos previstos no artigo, por razões de xenofobia, discriminação ou preconceito de raça, cor, etnia e religião, quando cometidos com a finalidade de provocar terror social ou generalizado, expondo a perigo pessoa, patrimônio, a paz pública ou a incolumidade pública. São atos de terrorismo usar ou ameaçar usar, transportar, guardar, portar ou trazer consigo explosivos, gases tóxicos, venenos, conteúdos biológicos, químicos, nucleares ou outros meios capazes de causar danos ou destruição em massa; sabotar o funcionamento ou apoderar-se, com violência, grave ameaça ou por mecanismos cibernéticos, do controle total ou parcial, ainda que temporário, de meios de comunicação ou de transporte, portos, aeroportos, estações, hospitais, escolas, estádios, instalações públicas ou de serviços essenciais, de energia, militares, de petróleo e gás e instituições bancárias; e atentar contra a vida ou a integridade física de pessoa. Pena: reclusão de doze a trinta anos, além das sanções correspondentes à ameaça ou à violência. A lei não se aplica à conduta de pessoas em manifestações políticas, movimentos sociais, sindicais, religiosos, de classe ou de categoria profissional, com propósitos sociais ou reivindicatórios, para contestar, criticar, protestar ou apoiar, com o objetivo de defender direitos, garantias e liberdades constitucionais.",
+      "pontos": ["Motivação: xenofobia, discriminação ou preconceito de raça, cor, etnia e religião.", "Finalidade: provocar terror social ou generalizado.", "Atos: explosivos e meios de destruição em massa; sabotagem ou controle de meios de comunicação, transporte e instalações essenciais; atentado contra a vida ou a integridade física.", "Pena: reclusão de doze a trinta anos, além das sanções da ameaça ou violência.", "Excludente: manifestações políticas e movimentos sociais com propósitos reivindicatórios."],
+      "atencao": ["Exige motivação DISCRIMINATÓRIA (xenofobia, raça, cor, etnia ou religião) e FINALIDADE de terror social.", "Motivação política ou ideológica NÃO está no tipo.", "Os incisos II e III foram vetados.", "Movimentos sociais são excluídos do conceito."],
+      "exemplo": "Ataque com explosivos a um templo religioso, para causar terror social por preconceito religioso, é terrorismo.",
+      "prova": ["Assertiva que inclui a motivação política como elemento do terrorismo erra: o tipo exige xenofobia, discriminação ou preconceito de raça, cor, etnia ou religião."],
+      "termos": [{ "termo": "Terror social ou generalizado", "significado": "Finalidade de infundir medo coletivo." }],
+      "remissoes": ["Art. 1º", "Art. 17"]
+    },
+    "art-3": {
+      "simples": "Promover, constituir, integrar ou prestar auxílio, pessoalmente ou por interposta pessoa, a organização terrorista. Pena: reclusão de cinco a oito anos e multa.",
+      "pontos": ["Promover, constituir, integrar ou auxiliar organização terrorista.", "Pessoalmente ou por interposta pessoa.", "Reclusão de cinco a oito anos e multa."],
+      "atencao": ["Crime autônomo, de natureza associativa.", "Os §§ 1º e 2º foram vetados."],
+      "exemplo": "Quem integra grupo organizado para praticar atos de terrorismo responde pelo art. 3º.",
+      "prova": ["Assertiva que aplica a mesma pena do terrorismo (doze a trinta anos) à participação em organização terrorista erra: é de cinco a oito anos."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-5": {
+      "simples": "Realizar atos preparatórios de terrorismo com o propósito inequívoco de consumar tal delito. Pena: a correspondente ao delito consumado, diminuída de um quarto até a metade. Incorre nas mesmas penas o agente que, com o propósito de praticar atos de terrorismo, recruta, organiza, transporta ou municia indivíduos que viajem para país distinto daquele de sua residência ou nacionalidade, ou fornece ou recebe treinamento em país distinto. Quando a conduta não envolver treinamento ou viagem para país distinto, a pena será a do delito consumado, diminuída de metade a dois terços.",
+      "pontos": ["Atos preparatórios com propósito inequívoco de consumar o terrorismo.", "Pena do consumado diminuída de 1/4 até a metade.", "Recrutar, organizar, transportar ou municiar indivíduos que viajem; fornecer ou receber treinamento no exterior.", "Sem viagem ou treinamento no exterior: diminuição de metade a 2/3."],
+      "atencao": ["Punição EXCEPCIONAL de ato preparatório.", "Exige propósito INEQUÍVOCO de consumar o terrorismo."],
+      "exemplo": "Quem recebe treinamento no exterior para praticar atos de terrorismo pratica o crime do art. 5º.",
+      "prova": ["Assertiva que pune qualquer ato preparatório sem exigir propósito inequívoco erra."],
+      "termos": [{ "termo": "Ato preparatório", "significado": "Conduta anterior à execução, em regra impunível, mas punida aqui por exceção." }],
+      "remissoes": ["Art. 10"]
+    },
+    "art-6": {
+      "simples": "Receber, prover, oferecer, obter, guardar, manter em depósito, solicitar, investir, de qualquer modo, direta ou indiretamente, recursos, ativos, bens, direitos, valores ou serviços de qualquer natureza, para o planejamento, a preparação ou a execução dos crimes previstos na Lei. Pena: reclusão de quinze a trinta anos. Incorre na mesma pena quem oferecer, receber, obter, guardar, mantiver em depósito, solicitar, investir ou de qualquer modo contribuir para a obtenção de ativo, bem ou recurso financeiro, com a finalidade de financiar, total ou parcialmente, pessoa, grupo, associação, entidade ou organização criminosa que tenha como atividade principal ou secundária, mesmo em caráter eventual, a prática dos crimes da Lei.",
+      "pontos": ["Financiamento do terrorismo em sentido amplo.", "Reclusão de quinze a trinta anos.", "Também financiar organização que pratique terrorismo, mesmo em caráter eventual."],
+      "atencao": ["Pena do financiamento (quinze a trinta anos) é MAIOR que a do próprio terrorismo (doze a trinta anos).", "Financiar organização atinge quem apoia, ainda que o apoio seja eventual."],
+      "exemplo": "Quem doa recursos a grupo para planejar atentado responde pelo art. 6º.",
+      "prova": ["Assertiva que fixa a pena do financiamento em reclusão de doze a trinta anos erra: é de quinze a trinta anos."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-7": {
+      "simples": "Salvo quando for elementar da prática de qualquer crime previsto na Lei, se de algum deles resultar lesão corporal grave, aumenta-se a pena de um terço; se resultar morte, aumenta-se a pena da metade.",
+      "pontos": ["Lesão corporal grave: aumento de um terço.", "Morte: aumento da metade.", "Não se aplica se o resultado for elementar do crime."],
+      "atencao": ["Evita bis in idem quando o resultado já é elementar do tipo."],
+      "exemplo": "Do ato de terrorismo resulta morte não prevista como elementar: pena aumentada da metade.",
+      "prova": ["Assertiva que aumenta a pena em dobro quando há morte erra: é aumentada da metade."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-10": {
+      "simples": "Mesmo antes de iniciada a execução do crime de terrorismo, na hipótese do art. 5º da Lei (atos preparatórios), aplicam-se as disposições do art. 15 do Código Penal (desistência voluntária e arrependimento eficaz).",
+      "pontos": ["Atos preparatórios do art. 5º admitem a desistência voluntária e o arrependimento eficaz.", "Aplica-se o art. 15 do Código Penal."],
+      "atencao": ["Mesmo antes do início da execução."],
+      "exemplo": "Quem, durante os atos preparatórios, desiste voluntariamente, responde só pelos atos já praticados.",
+      "prova": ["Assertiva que afasta a desistência voluntária nos atos preparatórios do terrorismo erra."],
+      "termos": [{ "termo": "Desistência voluntária", "significado": "O agente interrompe voluntariamente a execução e responde só pelo já praticado." }],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-11": {
+      "simples": "Para todos os efeitos legais, considera-se que os crimes previstos na Lei são praticados contra o interesse da União, cabendo à Polícia Federal a investigação criminal, em sede de inquérito policial, e à Justiça Federal o seu processamento e julgamento, nos termos do inciso IV do art. 109 da Constituição.",
+      "pontos": ["Crimes presumidos contra o interesse da União.", "Investigação pela Polícia Federal, em inquérito policial.", "Processo e julgamento pela Justiça Federal."],
+      "atencao": ["Competência da POLÍCIA FEDERAL e da JUSTIÇA FEDERAL."],
+      "exemplo": "Um atentado terrorista é investigado pela Polícia Federal e julgado pela Justiça Federal.",
+      "prova": ["Assertiva que atribui à Polícia Civil a investigação do terrorismo erra: é da Polícia Federal."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-12": {
+      "simples": "O juiz, de ofício, a requerimento do Ministério Público ou mediante representação do delegado de polícia, ouvido o Ministério Público em vinte e quatro horas, havendo indícios suficientes de crime previsto na Lei, poderá decretar, no curso da investigação ou da ação penal, medidas assecuratórias de bens, direitos ou valores do investigado ou acusado, ou existentes em nome de interpostas pessoas, que sejam instrumento, produto ou proveito dos crimes. Proceder-se-á à alienação antecipada para preservação do valor dos bens sujeitos a deterioração ou depreciação. O juiz determinará a liberação, total ou parcial, dos bens quando comprovada a licitude de sua origem e destinação, mantendo a constrição necessária à reparação dos danos, prestações pecuniárias, multas e custas. Nenhum pedido de liberação será conhecido sem o comparecimento pessoal do acusado ou de interposta pessoa. Poderão ser decretadas medidas assecuratórias para reparação do dano ou pagamento de prestação pecuniária, multa e custas.",
+      "pontos": ["Medidas assecuratórias de bens, decretadas de ofício, a pedido do MP ou por representação do delegado.", "MP ouvido em vinte e quatro horas.", "Havendo indícios suficientes do crime.", "Alienação antecipada de bens que se deterioram.", "Liberação se comprovada a licitude da origem e da destinação.", "Pedido de liberação exige comparecimento pessoal."],
+      "atencao": ["Bens em nome de INTERPOSTAS pessoas também podem ser atingidos.", "Prazo de vinte e quatro horas para a oitiva do MP."],
+      "exemplo": "O juiz sequestra bens do investigado registrados em nome de um laranja.",
+      "prova": ["Assertiva que dispensa o comparecimento pessoal do acusado para o pedido de liberação de bens erra."],
+      "termos": [],
+      "remissoes": ["Art. 13"]
+    },
+    "art-13": {
+      "simples": "Quando as circunstâncias o aconselharem, o juiz, ouvido o Ministério Público, nomeará pessoa física ou jurídica qualificada para a administração dos bens, direitos ou valores sujeitos a medidas assecuratórias, mediante termo de compromisso.",
+      "pontos": ["Juiz pode nomear administrador qualificado para os bens constritos.", "Ouvido o MP e mediante termo de compromisso."],
+      "atencao": ["Nomeação facultativa, conforme as circunstâncias."],
+      "exemplo": "O juiz nomeia uma empresa qualificada para administrar um negócio sequestrado.",
+      "prova": ["Assertiva que dispensa a oitiva do MP para nomear o administrador dos bens erra."],
+      "termos": [],
+      "remissoes": ["Art. 14"]
+    },
+    "art-14": {
+      "simples": "A pessoa responsável pela administração dos bens fará jus a uma remuneração, fixada pelo juiz, satisfeita preferencialmente com o produto dos bens objeto da administração, e prestará, por determinação judicial, informações periódicas da situação dos bens, bem como explicações sobre investimentos e reinvestimentos realizados. Os atos relativos à administração serão levados ao conhecimento do Ministério Público, que requererá o que entender cabível.",
+      "pontos": ["Administrador é remunerado, conforme fixado pelo juiz.", "Remuneração preferencialmente com o produto dos bens.", "Presta informações periódicas ao juízo.", "Atos levados ao conhecimento do MP."],
+      "atencao": ["Controle judicial e ministerial da administração."],
+      "exemplo": "O administrador presta contas periódicas ao juiz sobre os bens sequestrados.",
+      "prova": ["Assertiva que isenta o administrador de prestar informações periódicas erra."],
+      "termos": [],
+      "remissoes": ["Art. 13"]
+    },
+    "art-15": {
+      "simples": "O juiz determinará, na hipótese de existência de tratado ou convenção internacional e por solicitação de autoridade estrangeira competente, medidas assecuratórias sobre bens, direitos ou valores oriundos de crimes descritos na Lei praticados no estrangeiro. Aplica-se o disposto, independentemente de tratado ou convenção, quando houver reciprocidade do governo do país solicitante. Na falta de tratado ou convenção, os bens ou os recursos provenientes da sua alienação serão repartidos entre o Estado requerente e o Brasil, na proporção de metade, ressalvado o direito do lesado ou de terceiro de boa-fé.",
+      "pontos": ["Cooperação internacional: medidas assecuratórias sobre bens de crimes praticados no exterior.", "Com tratado, ou sem tratado, havendo reciprocidade.", "Sem tratado: partilha de metade entre o Estado requerente e o Brasil."],
+      "atencao": ["Reciprocidade dispensa o tratado.", "Partilha na proporção de METADE."],
+      "exemplo": "A pedido de país estrangeiro, o juiz bloqueia bens ligados a um atentado praticado lá.",
+      "prova": ["Assertiva que exige sempre tratado para a cooperação em medidas assecuratórias erra: basta a reciprocidade."],
+      "termos": [{ "termo": "Reciprocidade", "significado": "Compromisso de o país solicitante agir igualmente com o Brasil." }],
+      "remissoes": ["Art. 12"]
+    },
+    "art-16": {
+      "simples": "Aplicam-se as disposições da Lei de Organizações Criminosas para a investigação, processo e julgamento dos crimes previstos na Lei Antiterrorismo.",
+      "pontos": ["Aplica-se a Lei de Organizações Criminosas à investigação, ao processo e ao julgamento do terrorismo."],
+      "atencao": ["Permite colaboração premiada, ação controlada, infiltração e outros meios de prova da lei de organizações criminosas."],
+      "exemplo": "Na investigação de terrorismo, cabe a colaboração premiada da lei de organizações criminosas.",
+      "prova": ["Assertiva que afasta a Lei de Organizações Criminosas da investigação do terrorismo erra."],
+      "termos": [],
+      "remissoes": ["Art. 17"]
+    },
+    "art-17": {
+      "simples": "Aplicam-se as disposições da Lei dos Crimes Hediondos aos crimes previstos na Lei Antiterrorismo.",
+      "pontos": ["Aplica-se a Lei dos Crimes Hediondos ao terrorismo."],
+      "atencao": ["Terrorismo é equiparado a hediondo."],
+      "exemplo": "O terrorismo é insuscetível de anistia, graça, indulto e fiança.",
+      "prova": ["Assertiva que considera o terrorismo crime comum, sem o tratamento dos hediondos, erra."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-18": {
+      "simples": "O inciso III do art. 1º da Lei da Prisão Temporária passa a vigorar acrescido da alínea p, incluindo os crimes previstos na Lei Antiterrorismo entre os que admitem a prisão temporária.",
+      "pontos": ["Terrorismo passa a admitir prisão temporária.", "Acrescenta alínea ao rol da Lei da Prisão Temporária."],
+      "atencao": ["Alteração da Lei da Prisão Temporária; o prazo segue a Lei dos Crimes Hediondos."],
+      "exemplo": "O juiz decreta a prisão temporária de suspeito de terrorismo.",
+      "prova": ["Assertiva que veda a prisão temporária nos crimes de terrorismo erra."],
+      "termos": [],
+      "remissoes": ["Lei dos Crimes Hediondos"]
+    },
+    "art-19": {
+      "simples": "O art. 1º da Lei de Organizações Criminosas passa a vigorar com a seguinte alteração: aplica-se também às organizações terroristas, entendidas como aquelas voltadas para a prática dos atos de terrorismo legalmente definidos.",
+      "pontos": ["A Lei de Organizações Criminosas aplica-se também às organizações terroristas.", "Organização terrorista: voltada à prática dos atos de terrorismo legalmente definidos."],
+      "atencao": ["Conceito de organização terrorista fixado na própria lei."],
+      "exemplo": "Grupo organizado para praticar atos de terrorismo é uma organização terrorista.",
+      "prova": ["Assertiva que exclui as organizações terroristas da Lei de Organizações Criminosas erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-20": {
+      "simples": "Esta Lei entra em vigor na data de sua publicação.",
+      "pontos": ["Vigência imediata, na data da publicação."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "A lei começou a valer no mesmo dia da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis para a Lei Antiterrorismo erra: ela vigora na data da publicação."],
+      "termos": [],
+      "remissoes": ["Art. 19"]
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "course_slug": "hediondos",
+  "law": "Lei dos Crimes Hediondos (Lei dos Crimes Hediondos, de 1990) — lote 01: arts. 1º a 13",
+  "units": {
+    "art-1": {
+      "simples": "A lei lista, em rol taxativo, os crimes considerados hediondos, tipificados no Código Penal, consumados ou tentados: homicídio praticado em atividade típica de grupo de extermínio (ainda que por um só agente) e homicídio qualificado; lesão corporal dolosa gravíssima e lesão seguida de morte, quando praticadas contra autoridades e agentes de segurança, do sistema prisional, do Judiciário, do Ministério Público e outros, em razão da função, ou nas dependências de instituição de ensino; feminicídio; vicaricídio; roubo circunstanciado pela restrição de liberdade da vítima, pelo emprego de arma de fogo ou de arma de uso proibido ou restrito, e roubo qualificado pelo resultado lesão grave ou morte; extorsão qualificada; extorsão mediante sequestro e na forma qualificada; estupro; estupro de vulnerável; epidemia com resultado morte; falsificação de produto terapêutico ou medicinal; favorecimento da prostituição de criança, adolescente ou vulnerável; furto qualificado pelo emprego de explosivo; induzimento, instigação ou auxílio a suicídio ou automutilação pela internet; sequestro e cárcere privado contra menor de 18 anos; e tráfico de pessoas contra criança ou adolescente. O parágrafo único inclui o genocídio, o porte ou posse ilegal de arma de fogo de uso proibido, o comércio ilegal e o tráfico internacional de armas, a organização criminosa direcionada a crime hediondo ou equiparado, crimes do Código Penal Militar com identidade com os do artigo, crimes do Estatuto da Criança e do Adolescente sobre pornografia infantil e favorecimento da prostituição, e os crimes de domínio social estruturado.",
+      "pontos": ["Rol TAXATIVO: só é hediondo o que a lei lista (critério legal).", "I: homicídio de grupo de extermínio e homicídio qualificado.", "I-A: lesão gravíssima ou seguida de morte contra autoridades e agentes de segurança e em escolas.", "I-B: feminicídio. I-C: vicaricídio.", "II e III: roubo e extorsão qualificados.", "IV a VII: extorsão mediante sequestro, estupro, estupro de vulnerável, epidemia com morte, falsificação de medicamentos.", "VIII a XII: favorecimento da exploração sexual infantil, furto com explosivo, indução ao suicídio pela internet, sequestro de menor e tráfico de pessoas de criança ou adolescente.", "Parágrafo único: genocídio, armas, organização criminosa para crime hediondo, crimes do ECA e domínio social estruturado."],
+      "atencao": ["ATUALIZAÇÃO: redação dos incisos I e I-A dada pela Lei nº 15.159, de 2025; incluídos o feminicídio (I-B) e o vicaricídio (I-C) e, no parágrafo único, os crimes de domínio social estruturado.", "A lei adota o critério LEGAL (lista), e não o judicial ou misto.", "Tentado ou consumado: ambos são hediondos."],
+      "exemplo": "O feminicídio, consumado ou tentado, é crime hediondo.",
+      "prova": ["Assertiva que considera hediondo qualquer crime praticado com extrema crueldade, ainda que fora do rol legal, erra: o critério é o legal."],
+      "termos": [{ "termo": "Critério legal", "significado": "Hediondo é só o crime que a lei lista expressamente." }, { "termo": "Vicaricídio", "significado": "Homicídio de terceiro (em regra, filho) para atingir a mulher." }],
+      "remissoes": ["Art. 2º", "Código Penal"]
+    },
+    "art-2": {
+      "simples": "Os crimes hediondos, a prática da tortura, o tráfico ilícito de entorpecentes e drogas afins e o terrorismo são insuscetíveis de anistia, graça e indulto, e de fiança. A pena por esses crimes será cumprida inicialmente em regime fechado. O §2º foi revogado. Em caso de sentença condenatória, o juiz decidirá fundamentadamente se o réu poderá apelar em liberdade. A prisão temporária, nos crimes previstos no artigo, terá o prazo de 30 dias, prorrogável por igual período em caso de extrema e comprovada necessidade.",
+      "pontos": ["Insuscetíveis de anistia, graça, indulto e fiança.", "Regime inicial fechado.", "Apelar em liberdade: decisão fundamentada do juiz.", "Prisão temporária de 30 dias, prorrogável por igual período."],
+      "atencao": ["ATUALIZAÇÃO: o §2º (vedação de progressão) foi revogado e a progressão hoje segue o Código Penal e a LEP, com frações próprias.", "Equiparados a hediondos: tortura, tráfico de drogas e terrorismo.", "STF: o regime inicial fechado obrigatório foi declarado inconstitucional (o juiz deve fundamentar)."],
+      "exemplo": "A prisão temporária por crime hediondo dura 30 dias, prorrogável por mais 30.",
+      "prova": ["Assertiva que fixa em 5 dias, prorrogável por mais 5, a prisão temporária nos crimes hediondos erra: são 30 dias, prorrogáveis por igual período."],
+      "termos": [{ "termo": "Crimes equiparados a hediondos", "significado": "Tortura, tráfico de drogas e terrorismo, que recebem tratamento similar." }],
+      "remissoes": ["Art. 1º", "Lei de Execução Penal"]
+    },
+    "art-3": {
+      "simples": "A União manterá estabelecimentos penais de segurança máxima, destinados ao cumprimento de penas impostas a condenados de alta periculosidade, cuja permanência em presídios estaduais ponha em risco a ordem ou a incolumidade pública.",
+      "pontos": ["União mantém presídios de segurança máxima.", "Destino: condenados de alta periculosidade que ponham em risco a ordem ou a incolumidade pública."],
+      "atencao": ["Dever da UNIÃO (presídios federais)."],
+      "exemplo": "Líder de facção é transferido a presídio federal de segurança máxima.",
+      "prova": ["Assertiva que atribui aos Estados a manutenção dos presídios de segurança máxima da lei erra: é da União."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-5": {
+      "simples": "Ao art. 83 do Código Penal é acrescido o inciso V (livramento condicional): cumprido mais de dois terços da pena, nos casos de condenação por crime hediondo, prática da tortura, tráfico ilícito de entorpecentes e drogas afins e terrorismo, se o apenado não for reincidente específico em crimes dessa natureza.",
+      "pontos": ["Livramento condicional após mais de dois terços da pena.", "Para hediondos, tortura, tráfico e terrorismo.", "Vedado ao reincidente específico."],
+      "atencao": ["Hoje o art. 83 do Código Penal tem frações próprias e distingue o reincidente específico; confira a redação vigente."],
+      "exemplo": "Condenado primário por crime hediondo só obtém livramento após mais de 2/3 da pena.",
+      "prova": ["Assertiva que permite o livramento condicional a qualquer tempo, nos crimes hediondos, erra."],
+      "termos": [{ "termo": "Reincidente específico", "significado": "Quem reincide em crime da mesma natureza." }],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-6": {
+      "simples": "O artigo alterou a redação de dispositivos do Código Penal relativos a crimes depois classificados como hediondos (roubo qualificado, extorsão mediante sequestro, estupro, atentado violento ao pudor, corrupção de menores e epidemia, entre outros), elevando suas penas. Por exemplo, no roubo qualificado pelo resultado, lesão grave tem reclusão de cinco a quinze anos e morte, de vinte a trinta anos; na extorsão mediante sequestro, o caput tem de oito a quinze anos, e as formas qualificadas, de doze a vinte, de dezesseis a vinte e quatro e de vinte e quatro a trinta anos.",
+      "pontos": ["Alterou penas de crimes do Código Penal depois tratados como hediondos.", "Roubo com lesão grave: cinco a quinze anos; com morte: vinte a trinta anos.", "Extorsão mediante sequestro: de oito a quinze anos no caput e agravamentos nas formas qualificadas."],
+      "atencao": ["Texto histórico: várias penas foram posteriormente alteradas.", "A redação atual dos tipos está no Código Penal."],
+      "exemplo": "Texto de alteração legislativa; a pena vigente deve ser consultada no Código Penal.",
+      "prova": ["Assertiva que aplica hoje, sem conferir o Código Penal, as penas do art. 6º da Lei dos Crimes Hediondos erra."],
+      "termos": [],
+      "remissoes": ["Código Penal"]
+    },
+    "art-159": {
+      "simples": "Trata-se da nova redação dada ao crime de extorsão mediante sequestro: o caput passa a ter pena de reclusão de oito a quinze anos; o §1º (sequestro de longa duração, vítima menor ou idosa, ou crime cometido por bando ou quadrilha), de doze a vinte anos; o §2º (lesão corporal de natureza grave), de dezesseis a vinte e quatro anos; e o §3º (morte), de vinte e quatro a trinta anos.",
+      "pontos": ["Caput: reclusão de oito a quinze anos.", "§1º: doze a vinte anos.", "§2º: dezesseis a vinte e quatro anos.", "§3º: vinte e quatro a trinta anos."],
+      "atencao": ["Texto histórico: confira a redação vigente do art. 159 do Código Penal."],
+      "exemplo": "Extorsão mediante sequestro com resultado morte: reclusão de vinte e quatro a trinta anos.",
+      "prova": ["Assertiva que fixa em vinte a trinta anos a pena da extorsão mediante sequestro com morte erra: é de vinte e quatro a trinta."],
+      "termos": [],
+      "remissoes": ["Código Penal"]
+    },
+    "art-213": {
+      "simples": "Trata-se da redação dada ao crime de estupro (então art. 213 do Código Penal): pena de reclusão de seis a dez anos. O dispositivo foi alterado posteriormente pela Lei nº 12.015, de 2009, que unificou estupro e atentado violento ao pudor.",
+      "pontos": ["Pena de reclusão de 6 a 10 anos (redação histórica)."],
+      "atencao": ["Texto histórico: a Lei nº 12.015, de 2009, alterou o crime de estupro."],
+      "exemplo": "Texto de alteração legislativa; consulte o Código Penal para a pena vigente.",
+      "prova": ["Assertiva que aplica a pena de 6 a 10 anos sem considerar a reforma de 2009 erra."],
+      "termos": [],
+      "remissoes": ["Art. 213 do Código Penal"]
+    },
+    "art-214": {
+      "simples": "Trata-se da redação dada ao antigo crime de atentado violento ao pudor (art. 214 do Código Penal): pena de reclusão de seis a dez anos. O tipo foi revogado e absorvido pelo estupro com a reforma de 2009.",
+      "pontos": ["Pena de reclusão de 6 a 10 anos (redação histórica).", "Tipo posteriormente revogado."],
+      "atencao": ["Texto histórico: o atentado violento ao pudor foi absorvido pelo estupro."],
+      "exemplo": "Texto histórico, sem aplicação autônoma hoje.",
+      "prova": ["Assertiva que considera vigente o crime autônomo de atentado violento ao pudor erra."],
+      "termos": [],
+      "remissoes": ["Art. 213 do Código Penal"]
+    },
+    "art-223": {
+      "simples": "Trata-se da redação dada ao antigo art. 223 do Código Penal (formas qualificadas do estupro e do atentado violento ao pudor): reclusão de oito a doze anos no caput, e de doze a vinte e cinco anos no parágrafo único. O dispositivo foi revogado pela Lei nº 12.015, de 2009.",
+      "pontos": ["Caput: reclusão de oito a doze anos.", "Parágrafo único: reclusão de doze a vinte e cinco anos."],
+      "atencao": ["Texto histórico: dispositivo revogado em 2009."],
+      "exemplo": "Texto histórico, sem aplicação prática hoje.",
+      "prova": ["Assertiva que aplica hoje as penas do antigo art. 223 erra."],
+      "termos": [],
+      "remissoes": ["Art. 213 do Código Penal"]
+    },
+    "art-267": {
+      "simples": "Trata-se da redação dada ao crime de epidemia (art. 267 do Código Penal): reclusão de dez a quinze anos. O dispositivo atual do Código Penal traz a estrutura vigente do tipo.",
+      "pontos": ["Pena de reclusão de 10 a 15 anos (redação histórica da Lei)."],
+      "atencao": ["Texto histórico: confira o art. 267 do Código Penal vigente."],
+      "exemplo": "Texto de alteração legislativa; consulte o Código Penal.",
+      "prova": ["Assertiva que aplica a pena sem conferir a redação vigente do Código Penal erra."],
+      "termos": [],
+      "remissoes": ["Código Penal"]
+    },
+    "art-270": {
+      "simples": "Trata-se da redação dada ao crime de envenenamento de água potável ou de substância alimentícia ou medicinal (art. 270 do Código Penal): reclusão de dez a quinze anos.",
+      "pontos": ["Envenenamento de água potável: reclusão de 10 a 15 anos."],
+      "atencao": ["O crime consta do rol de hediondos? Confira o art. 1º; a lista está no próprio artigo."],
+      "exemplo": "Texto de alteração legislativa; a pena consta no Código Penal.",
+      "prova": ["Assertiva que fixa em 5 a 10 anos a pena do envenenamento de água potável nessa alteração erra."],
+      "termos": [],
+      "remissoes": ["Código Penal"]
+    },
+    "art-7": {
+      "simples": "Ao art. 159 do Código Penal fica acrescido o §4º: se o crime é cometido por quadrilha ou bando, o coautor que o denunciar à autoridade, facilitando a libertação do sequestrado, terá sua pena reduzida de um a dois terços (delação premiada na extorsão mediante sequestro).",
+      "pontos": ["Delação premiada na extorsão mediante sequestro cometida por quadrilha ou bando.", "Redução de um a dois terços da pena.", "Exige que a denúncia facilite a libertação do sequestrado."],
+      "atencao": ["Exige EFICÁCIA: a libertação do sequestrado deve ser facilitada."],
+      "exemplo": "O integrante do bando que denuncia o grupo e permite libertar a vítima tem a pena reduzida.",
+      "prova": ["Assertiva que concede a redução ao coautor que denuncia sem facilitar a libertação do sequestrado erra."],
+      "termos": [],
+      "remissoes": ["Código Penal"]
+    },
+    "art-8": {
+      "simples": "Será de três a seis anos de reclusão a pena da associação criminosa prevista no art. 288 do Código Penal, quando se tratar de crimes hediondos, prática da tortura, tráfico ilícito de entorpecentes e drogas afins ou terrorismo. O participante e o associado que denunciar à autoridade o bando ou quadrilha, possibilitando seu desmantelamento, terá a pena reduzida de um a dois terços.",
+      "pontos": ["Associação para crimes hediondos ou equiparados: reclusão de 3 a 6 anos.", "Delação que possibilite o desmantelamento do bando: redução de 1/3 a 2/3."],
+      "atencao": ["A pena do art. 288 comum é menor; aqui é de 3 a 6 anos.", "A delação deve possibilitar o DESMANTELAMENTO."],
+      "exemplo": "Quem integra um bando para praticar crimes hediondos responde com pena de 3 a 6 anos.",
+      "prova": ["Assertiva que fixa em 1 a 3 anos a pena da associação para crimes hediondos erra: é de 3 a 6 anos."],
+      "termos": [],
+      "remissoes": ["Associação criminosa (Código Penal)"]
+    },
+    "art-9": {
+      "simples": "As penas fixadas no art. 6º para os crimes de roubo qualificado, extorsão qualificada, extorsão mediante sequestro, estupro e atentado violento ao pudor (este, em combinação com o art. 223) são acrescidas de metade, respeitado o limite superior de trinta anos de reclusão, estando a vítima em qualquer das hipóteses do art. 224 do Código Penal (presunção de violência).",
+      "pontos": ["Acréscimo de metade às penas dos crimes sexuais e patrimoniais violentos.", "Limite superior de trinta anos de reclusão.", "Vítima nas hipóteses de presunção de violência do art. 224 do CP."],
+      "atencao": ["Dispositivo histórico: o art. 224 do Código Penal foi revogado em 2009."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que aplica hoje o acréscimo de metade do art. 9º erra, porque o art. 224 foi revogado."],
+      "termos": [],
+      "remissoes": ["Código Penal"]
+    },
+    "art-10": {
+      "simples": "O art. 35 da antiga Lei de Tóxicos (lei antiga de tóxicos) passou a vigorar acrescido de parágrafo único: os prazos procedimentais do capítulo serão contados em dobro quando se tratar dos crimes dos arts. 12, 13 e 14 daquela lei. A lei antiga foi revogada pela Lei de Drogas atual.",
+      "pontos": ["Prazos procedimentais em dobro nos crimes de tráfico da lei antiga."],
+      "atencao": ["Dispositivo histórico: a lei antiga de tóxicos, foi revogada."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que aplica hoje a contagem em dobro dos prazos da lei antiga de tóxicos erra."],
+      "termos": [],
+      "remissoes": ["Lei de Drogas"]
+    },
+    "art-12": {
+      "simples": "Esta lei entra em vigor na data de sua publicação.",
+      "pontos": ["Vigência imediata, na data da publicação."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "A lei começou a valer no mesmo dia em que foi publicada.",
+      "prova": ["Assertiva que prevê vacatio legis para a Lei dos Crimes Hediondos erra: vigora na data da publicação."],
+      "termos": [],
+      "remissoes": ["Art. 13"]
+    },
+    "art-13": {
+      "simples": "Revogam-se as disposições em contrário, cláusula final da lei que afasta normas anteriores incompatíveis com a Lei dos Crimes Hediondos.",
+      "pontos": ["Cláusula de revogação das disposições em contrário."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "A cláusula apenas afasta normas anteriores incompatíveis com a lei.",
+      "prova": ["Assertiva que atribui ao art. 13 efeito prático sobre os crimes atuais erra."],
+      "termos": [],
+      "remissoes": ["Art. 12"]
+    }
+  }
+}
