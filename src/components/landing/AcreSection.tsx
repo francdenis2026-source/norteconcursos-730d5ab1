@@ -195,6 +195,10 @@ export function AcreSection() {
             role="img"
             aria-label="Mapa do Acre com profissionais da segurança pública"
           >
+            <div className="lp-acre__stage-meta" aria-hidden="true">
+              <span>Rede de preparação</span>
+              <b>Acre · Brasil</b>
+            </div>
             <div className="lp-acre__map" aria-hidden="true">
               <div className="lp-acre__fill" />
               <div className="lp-acre__sheen" />

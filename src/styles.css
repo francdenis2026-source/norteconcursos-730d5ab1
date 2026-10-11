@@ -9986,3 +9986,111 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     font-size: 0.82rem;
   }
 }
+
+/* Acre map: a single, restrained visual system for the regional careers. */
+.lp-acre__stage {
+  aspect-ratio: 1.42;
+  overflow: hidden;
+  border: 1px solid oklch(1 0 0 / 0.12);
+  border-radius: 24px;
+  background:
+    linear-gradient(120deg, oklch(0.06 0.02 263 / 0.96), oklch(0.08 0.03 263 / 0.82)),
+    url("/media/acre-seguranca.jpg") center / cover;
+  box-shadow: 0 24px 54px -36px oklch(0 0 0 / 0.95), inset 0 1px 0 oklch(1 0 0 / 0.08);
+  isolation: isolate;
+}
+.lp-acre__stage::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(115deg, oklch(0.8 0.13 78 / 0.08), transparent 38%, oklch(0.18 0.04 263 / 0.35));
+}
+.lp-acre__stage-meta {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: oklch(1 0 0 / 0.58);
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.lp-acre__stage-meta::before {
+  width: 7px;
+  height: 7px;
+  content: "";
+  border: 1px solid var(--brass-soft);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px oklch(0.8 0.13 78 / 0.12);
+}
+.lp-acre__stage-meta b {
+  color: var(--brass-soft);
+  font-weight: 600;
+}
+.lp-acre__map {
+  inset: 12% 12% 8%;
+  z-index: 1;
+  opacity: 0.78;
+  filter: drop-shadow(0 0 1px var(--brass)) drop-shadow(0 18px 26px oklch(0 0 0 / 0.42));
+  transform: none;
+  animation: none;
+}
+.lp-acre__fill {
+  background:
+    linear-gradient(135deg, oklch(0.8 0.13 78 / 0.22), oklch(0.08 0.03 263 / 0.32)),
+    url("/media/acre-seguranca.jpg") center / cover;
+}
+.lp-acre__sheen::after {
+  display: none;
+}
+.lp-acre__people {
+  z-index: 3;
+  bottom: -1%;
+  left: 12%;
+  width: 76%;
+  max-width: 680px;
+  mask-image: none;
+  -webkit-mask-image: none;
+  filter: drop-shadow(0 20px 22px oklch(0 0 0 / 0.62));
+  transform: none;
+}
+.lp-acre__pins {
+  z-index: 5;
+  transform: none;
+}
+.lp-pin i::after {
+  display: none;
+}
+.lp-pin em {
+  border-color: oklch(1 0 0 / 0.16);
+  background: oklch(0.06 0.02 263 / 0.86);
+  box-shadow: 0 8px 18px -12px oklch(0 0 0 / 0.9);
+}
+.lp-pin--cruzeiro em {
+  background: oklch(0.08 0.025 263 / 0.94);
+}
+@media (max-width: 767px) {
+  .lp-acre__stage {
+    aspect-ratio: 1.06;
+    border-radius: 18px;
+  }
+  .lp-acre__stage-meta {
+    top: 14px;
+    left: 15px;
+    font-size: 0.46rem;
+  }
+  .lp-acre__map {
+    inset: 15% 5% 8%;
+  }
+  .lp-acre__people {
+    bottom: 1%;
+    left: 5%;
+    width: 90%;
+  }
+}
