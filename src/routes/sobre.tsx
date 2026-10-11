@@ -10,10 +10,34 @@ function About() {
   return (
     <InstitutionalLayout
       eyebrow="Raízes no Acre. Ambição de ir além."
-      title="A experiência vira método."
-      intro="Conheça a pessoa, a trajetória e os princípios por trás da Norte Concursos."
-      heroImage="/media/franc-denis-retrato-v1.webp"
+      title="Estudar pode caber na vida real."
+      intro="A Norte Concursos nasceu em Feijó, no Acre, para transformar a experiência de quem ensina e de quem estuda em um caminho mais claro para a aprovação."
+      heroImage="/media/hero/journey.webp"
+      className="institutional-page--about"
     >
+      <section className="about-proof lp-container" aria-label="A Norte em três ideias">
+        <div className="about-proof__intro">
+          <span className="lp-kicker">O ponto de partida</span>
+          <h2>Uma plataforma feita de experiência, método e presença.</h2>
+        </div>
+        <div className="about-proof__items">
+          <article>
+            <strong>01</strong>
+            <span>Origem</span>
+            <p>Feijó, Acre. Uma história local com horizonte nacional.</p>
+          </article>
+          <article>
+            <strong>02</strong>
+            <span>Prática</span>
+            <p>Quem estuda encontra rotina, correção e próximos passos.</p>
+          </article>
+          <article>
+            <strong>03</strong>
+            <span>Progresso</span>
+            <p>Dados e tecnologia para enxergar o que fazer a seguir.</p>
+          </article>
+        </div>
+      </section>
       <FounderStory full />
       <section className="institutional-values lp-container">
         <article>

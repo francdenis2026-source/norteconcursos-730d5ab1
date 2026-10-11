@@ -7,16 +7,18 @@ export function InstitutionalLayout({
   eyebrow,
   intro,
   heroImage,
+  className = "",
   children,
 }: {
   title: string;
   eyebrow: string;
   intro: string;
   heroImage?: string;
+  className?: string;
   children: ReactNode;
 }) {
   return (
-    <div className="institutional-page">
+    <div className={`institutional-page ${className}`.trim()}>
       <header className="institutional-header lp-container">
         <Link to="/" aria-label="Norte Concursos — início">
           <NorteBrand light />

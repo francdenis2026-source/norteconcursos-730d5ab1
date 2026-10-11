@@ -3230,6 +3230,182 @@ html {
   }
 }
 
+/* About page: editorial layout with one intentional image and a clearer story arc. */
+.institutional-page--about {
+  background:
+    linear-gradient(180deg, #0b1421 0%, #080e17 32%, #080e17 100%);
+}
+.institutional-page--about .institutional-header {
+  max-width: 1240px;
+  padding-block: 18px;
+}
+.institutional-page--about .institutional-heading--visual {
+  min-height: 500px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+  gap: clamp(34px, 7vw, 110px);
+  padding-block: clamp(56px, 8vw, 110px);
+}
+.institutional-page--about .institutional-heading__copy {
+  max-width: 680px;
+}
+.institutional-page--about .institutional-heading h1 {
+  max-width: 620px;
+  font-size: clamp(44px, 6.3vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+.institutional-page--about .institutional-heading__copy > p {
+  max-width: 570px;
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.65;
+}
+.institutional-page--about .institutional-heading__visual {
+  width: 100%;
+  max-width: 620px;
+  justify-self: end;
+  padding: 0;
+  border: 0;
+  border-radius: 26px;
+  overflow: hidden;
+  aspect-ratio: 1.42;
+  background: #132033;
+  box-shadow: 0 28px 90px #00000055;
+}
+.institutional-page--about .institutional-heading__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #08111dcc 0%, transparent 54%, #08111d22 100%);
+  pointer-events: none;
+}
+.institutional-page--about .institutional-heading__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  filter: saturate(0.86) contrast(1.06);
+}
+.institutional-page--about .institutional-heading__visual > span {
+  position: absolute;
+  z-index: 1;
+  left: 22px;
+  bottom: 18px;
+  padding: 0;
+  color: #f1cf85;
+  font-size: 9px;
+  text-shadow: 0 1px 14px #000;
+}
+.about-proof {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(32px, 7vw, 110px);
+  align-items: end;
+  padding-block: 42px 82px;
+}
+.about-proof__intro h2 {
+  max-width: 360px;
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+.about-proof__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  border-block: 1px solid #ffffff18;
+}
+.about-proof__items article {
+  min-height: 154px;
+  padding: 22px 18px 20px;
+  border-inline: 1px solid #ffffff0e;
+}
+.about-proof__items strong {
+  display: block;
+  color: #d2aa5b;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+.about-proof__items span {
+  display: block;
+  margin-top: 24px;
+  color: #edf0f4;
+  font-size: 14px;
+  font-weight: 650;
+}
+.about-proof__items p {
+  margin-top: 8px;
+  color: #8996a8;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.institutional-page--about .founder-section {
+  background: #0a111c;
+}
+.institutional-page--about .founder-identity {
+  border-radius: 18px;
+  background: #101c2b;
+  box-shadow: 0 22px 70px #00000025;
+}
+.institutional-page--about .founder-portrait {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 18%;
+}
+.institutional-page--about .institutional-values {
+  padding-top: 84px;
+}
+
+@media (max-width: 900px) {
+  .institutional-page--about .institutional-heading--visual {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    padding-block: 48px 60px;
+  }
+  .institutional-page--about .institutional-heading__visual {
+    justify-self: start;
+    max-width: 600px;
+  }
+  .about-proof {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 30px 64px;
+  }
+  .about-proof__intro h2 {
+    max-width: 520px;
+  }
+}
+@media (max-width: 620px) {
+  .institutional-page--about .institutional-heading h1 {
+    font-size: clamp(40px, 13vw, 62px);
+  }
+  .institutional-page--about .institutional-heading__visual {
+    aspect-ratio: 1.22;
+    border-radius: 18px;
+  }
+  .institutional-page--about .institutional-heading__visual > span {
+    left: 14px;
+    bottom: 12px;
+    font-size: 8px;
+  }
+  .about-proof__items {
+    grid-template-columns: 1fr;
+  }
+  .about-proof__items article {
+    min-height: 0;
+    padding: 18px 16px;
+    border-block: 1px solid #ffffff0e;
+    border-inline: 0;
+  }
+  .about-proof__items span {
+    margin-top: 12px;
+  }
+}
+
 /* Footer */
 .lp-footer {
   border-top: 1px solid oklch(1 0 0 / 0.07);
