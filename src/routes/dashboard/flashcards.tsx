@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
@@ -198,7 +199,12 @@ function FlashcardsPage() {
       .eq("user_id", user.id)
       .order("due_at", { ascending: true })
       .limit(3000);
-    setCards((data as Card_[] | null) ?? []);
+    setCards(
+      ((data as Card_[] | null) ?? []).map((card) => ({
+        ...card,
+        subject: canonicalSubject(card.subject),
+      })),
+    );
     setLoading(false);
   }, [user]);
 

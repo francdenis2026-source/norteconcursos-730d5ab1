@@ -1,0 +1,214 @@
+{
+  "tables": {
+    "official_exam_questions": {
+      "inspected": 4149,
+      "activeMetadata": 3401
+    },
+    "curated_question_catalog": {
+      "inspected": 1792,
+      "activeMetadata": 1791
+    },
+    "board_exam_questions": {
+      "inspected": 754,
+      "activeMetadata": 447
+    },
+    "study_materials": {
+      "inspected": 152,
+      "activeMetadata": 141
+    }
+  },
+  "equivalentNames": [
+    {
+      "canonical": "Direito Constitucional",
+      "variants": {
+        "Direito Constitucional": 465,
+        "Noções de Direito Constitucional": 34
+      }
+    },
+    {
+      "canonical": "Legislação Penal Extravagante",
+      "variants": {
+        "Legislação Penal Especial": 68,
+        "Noções de Legislação Penal e Processual Extravagante": 4,
+        "Legislação de Direito Penal e Processual Penal Especial": 12
+      }
+    },
+    {
+      "canonical": "Direito Penal",
+      "variants": {
+        "Direito Penal": 319,
+        "Noções de Direito Penal": 32
+      }
+    },
+    {
+      "canonical": "Conhecimentos Específicos",
+      "variants": {
+        "Conhecimentos Específicos": 50,
+        "Conhecimentos Especificos": 290
+      }
+    },
+    {
+      "canonical": "Direito Administrativo",
+      "variants": {
+        "Direito Administrativo": 378,
+        "Noções de Direito Administrativo": 33
+      }
+    },
+    {
+      "canonical": "Língua Inglesa",
+      "variants": {
+        "Língua Inglesa": 21,
+        "Língua Estrangeira - Inglês": 7
+      }
+    },
+    {
+      "canonical": "Raciocínio Lógico",
+      "variants": {
+        "Raciocínio Lógico-Matemático": 87,
+        "Raciocínio Lógico": 220
+      }
+    },
+    {
+      "canonical": "Direitos Humanos",
+      "variants": {
+        "Direitos Humanos": 162,
+        "Noções de Direitos Humanos": 3,
+        "Direito Humanos": 6
+      }
+    },
+    {
+      "canonical": "Criminologia",
+      "variants": {
+        "Criminologia": 53,
+        "Noções de Criminologia": 5
+      }
+    },
+    {
+      "canonical": "Direito Processual Penal",
+      "variants": {
+        "Direito Processual Penal": 224,
+        "Noções de Direito Processual Penal": 17,
+        "Noções de Processo Penal": 7,
+        "Processual Penal": 11
+      }
+    },
+    {
+      "canonical": "Informática",
+      "variants": {
+        "Noções de Informática": 33,
+        "Informática": 381,
+        "Informática Básica": 40,
+        "Microsoft Office e Informática": 6
+      }
+    },
+    {
+      "canonical": "Contabilidade Geral",
+      "variants": {
+        "Contabilidade": 22,
+        "Contabilidade Geral": 157
+      }
+    },
+    {
+      "canonical": "Estatística",
+      "variants": {
+        "Estatística": 39,
+        "Estatística e Probabilidade": 27
+      }
+    },
+    {
+      "canonical": "Medicina Legal",
+      "variants": {
+        "Medicina Legal": 55,
+        "Noções de Medicina Legal": 31
+      }
+    },
+    {
+      "canonical": "Lei Orgânica da PCMG",
+      "variants": {
+        "Lei Orgânica da PCMG": 20,
+        "Lei Orgânica da Polícia Civil do Estado de Minas Gerais": 6
+      }
+    }
+  ],
+  "ambiguousLabels": [
+    {
+      "table": "official_exam_questions",
+      "label": "Conhecimentos Específicos",
+      "count": 30,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "official_exam_questions",
+      "label": "Eixo Geral",
+      "count": 13,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "official_exam_questions",
+      "label": "Eixo Específico",
+      "count": 30,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "official_exam_questions",
+      "label": "Conhecimentos do cargo de Delegado",
+      "count": 200,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "official_exam_questions",
+      "label": "Conhecimentos Específicos - Auxiliar de Perícia",
+      "count": 30,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "official_exam_questions",
+      "label": "https://g1.globo.com",
+      "count": 7,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "official_exam_questions",
+      "label": "Conhecimentos Especificos",
+      "count": 290,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "official_exam_questions",
+      "label": "Conhecimentos Regionais (Piauí)",
+      "count": 8,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "official_exam_questions",
+      "label": "Conhecimentos Gerais",
+      "count": 93,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "official_exam_questions",
+      "label": "• Boa prova! Legislação e Conhecimentos Regionais",
+      "count": 12,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "official_exam_questions",
+      "label": "Eixo Legislação",
+      "count": 15,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "official_exam_questions",
+      "label": "Conhecimentos Gerais e Atualidades",
+      "count": 7,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    },
+    {
+      "table": "curated_question_catalog",
+      "label": "Conhecimentos Específicos",
+      "count": 20,
+      "action": "Revisar a classificação no enunciado e no edital; não inferir apenas pelo título."
+    }
+  ],
+  "topicSpellingVariants": []
+}

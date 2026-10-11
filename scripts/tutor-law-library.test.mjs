@@ -1,3 +1,5 @@
+import * as sharedSubjects from "../src/lib/subjects.ts";
+import * as sharedTaxonomy from "../src/lib/filterTaxonomy.ts";
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
@@ -18,7 +20,7 @@ function load(file,overrides={}) {
 }
 const laws=load('src/lib/legalLibrary.ts');
 const chronology=load('src/lib/legalChronology.ts');
-const librarySearch=load('src/lib/librarySearch.ts',{'./legalLibrary':laws});
+const librarySearch=load('src/lib/librarySearch.ts',{'./legalLibrary':laws,'./subjects':sharedSubjects});
 const searchMatch=load('src/components/library/LibrarySearchMatch.tsx',{'@/lib/librarySearch':librarySearch});
 
 test('Typed law identity excludes cross references and highlights original spelling safely',()=>{
@@ -64,7 +66,7 @@ test('Legal highlights preserve source characters, classify full expressions and
 });
 
 test('Library search finds disciplines, law names and numbers, body content and exact short acronyms',()=>{
- const search=load('src/lib/librarySearch.ts',{'./legalLibrary':laws});
+ const search=load('src/lib/librarySearch.ts',{'./legalLibrary':laws,'./subjects':sharedSubjects});
  const sample=slug=>({id:slug,slug,title:'Guia de estudo',discipline:'Legislação',topic_label:'Estudo por lei',summary:null,contest_name:'PF'});
  const maria=search.librarySearchText(sample('legislacao-maria-penha-revisao'),{id:'x',body_md:'Proteção e medidas protetivas de urgência.'});
  for(const query of ['MARIA DA PENHA','lei 11.340/2006','Lei nº 11.340','11340','medidas urgencia','legislacao'])assert.equal(search.matchesLibrarySearch(maria,query),true,query);
@@ -82,7 +84,7 @@ test('Content search respects active publication, server page caps and failed re
  const pages=[[{id:'a',body_md:'assunto'}],[{id:'b',body_md:'lei'}],[]];
  const offsets=[];
  const query={select(){return this},eq(field,value){assert.equal(field,'content_status');assert.equal(value,'active');return this},order(){return this},range(start){offsets.push(start);return Promise.resolve(fail?{error:Error('failed'),data:null}:{error:null,data:pages[start]})}};
- const store=load('src/lib/studyMaterials.ts',{'@/lib/userStorage':{},'@tanstack/react-query':{},'@/integrations/supabase/client':{supabase:{from:table=>{assert.equal(table,'study_materials');return query}}}});
+ const store=load('src/lib/studyMaterials.ts',{'@/lib/subjects':sharedSubjects,'@/lib/userStorage':{},'@tanstack/react-query':{},'@/integrations/supabase/client':{supabase:{from:table=>{assert.equal(table,'study_materials');return query}}}});
  const rows=await store.fetchLibrarySearchContent();
  assert.equal(rows.length,2);assert.deepEqual(offsets,[0,1,2]);
  fail=true;await assert.rejects(store.fetchLibrarySearchContent(),/failed/);
@@ -171,7 +173,7 @@ test('Catalog renders one study entry per law in separate areas and keeps deep r
   '@/lib/legalCourses':{useLegalCourses:()=>({data,isPending:false,isError:false})},
   '@/lib/legalLibrary':laws,
   '@/lib/legalChronology':chronology,
-  '@/lib/libraryOrganization':load('src/lib/libraryOrganization.ts',{'./legalLibrary':laws}),
+  '@/lib/libraryOrganization':load('src/lib/libraryOrganization.ts',{'./legalLibrary':laws,'./subjects':sharedSubjects}),
   '@tanstack/react-router':{Link:({children,to,params})=>React.createElement('a',{href:to.replace('$slug',params.slug)},children)},
  });
  const materials=manifest.map(m=>({slug:m.material_slug}));

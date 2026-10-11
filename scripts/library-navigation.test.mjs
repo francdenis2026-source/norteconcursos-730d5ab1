@@ -1,3 +1,5 @@
+import * as sharedSubjects from "../src/lib/subjects.ts";
+import * as sharedTaxonomy from "../src/lib/filterTaxonomy.ts";
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -9,7 +11,7 @@ import {renderToStaticMarkup} from 'react-dom/server';
 const native=createRequire(import.meta.url);
 function load(file,overrides={}) { const module={exports:{}}; const code=ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText; vm.runInNewContext(code,{module,exports:module.exports,require:n=>overrides[n]??native(n),URL}); return module.exports; }
 const laws=load('src/lib/legalLibrary.ts');
-const organization=load('src/lib/libraryOrganization.ts',{'./legalLibrary':laws});
+const organization=load('src/lib/libraryOrganization.ts',{'./legalLibrary':laws,'./subjects':sharedSubjects});
 const sample=(slug,discipline)=>({id:slug,slug,discipline,title:slug,topic_label:slug,summary:null,contest_name:'PF',content_status:'active',sort_order:1,syllabus_topic_order:1,law_version_checked_at:null});
 const items=[
  sample('legislacao-armas-revisao','Legislação Especial'),
@@ -33,7 +35,7 @@ test('Canonical study taxonomy separates laws despite historical mixed labels an
  assert.equal(organization.LIBRARY_AREAS.filter(a=>a.id!=='all').reduce((sum,a)=>sum+items.filter(i=>organization.libraryArea(i)===a.id).length,0),items.length);
 });
 test('Navigator has four colored areas, three labelled dependent selectors and a single clear search',()=>{
- const {LibraryNavigation}=load('src/components/library/LibraryNavigation.tsx',{'@/lib/libraryOrganization':organization});
+ const {LibraryNavigation}=load('src/components/library/LibraryNavigation.tsx',{'@/lib/libraryOrganization':organization,'@/lib/filterTaxonomy':sharedTaxonomy});
  const noop=()=>{};
  const html=renderToStaticMarkup(React.createElement(LibraryNavigation,{items,area:'legislation',onArea:noop,query:'11.340',onQuery:noop,discipline:'all',onDiscipline:noop,disciplines:organization.libraryDisciplines(items.filter(i=>organization.libraryArea(i)==='legislation')),topic:'all',onTopic:noop,topics:['Armas'],contest:'all',onContest:noop,contests:['PF','PC'],count:1,searchingContent:false,onReset:noop}));
  assert.equal((html.match(/aria-pressed="true"/g)??[]).length,1);
@@ -46,7 +48,7 @@ test('Navigator has four colored areas, three labelled dependent selectors and a
 });
 test('Each legal section contains only its own discipline and retains chronology within that section',()=>{
  const chronology=load('src/lib/legalChronology.ts');
- const search=load('src/lib/librarySearch.ts',{'./legalLibrary':laws});
+ const search=load('src/lib/librarySearch.ts',{'./legalLibrary':laws,'./subjects':sharedSubjects});
  const match=load('src/components/library/LibrarySearchMatch.tsx',{'@/lib/librarySearch':search});
  const data=laws.LEGAL_LIBRARY.map(c=>({...c,id:c.slug,overview:{current_units:2,chapters:[]}}));
  const {LegalPathCatalog}=load('src/components/library/LegalPathCatalog.tsx',{'@/lib/legalCourses':{useLegalCourses:()=>({data,isPending:false,isError:false})},'@/lib/legalLibrary':laws,'@/lib/legalChronology':chronology,'@/lib/libraryOrganization':organization,'@/lib/librarySearch':search,'./LibrarySearchMatch':match,'@tanstack/react-router':{Link:({to,params,children,...props})=>React.createElement('a',{...props,href:to.replace('$slug',params.slug)},children)}});

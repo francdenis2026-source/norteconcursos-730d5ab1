@@ -1,4 +1,5 @@
-import { canonicalSubject } from "@/lib/subjects";
+import { filterCatalogMetadata, catalogMetadataFacets } from "@/lib/catalogMetadataFilters";
+import { canonicalSubject, canonicalBoard, canonicalCareerName } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -31,7 +32,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { fetchAllRows } from "@/lib/catalog";
+import { fetchAllRows, isMissingQuestionTable } from "@/lib/catalog";
 import { isEligibleQuestion } from "@/lib/questionFormat";
 import { cn } from "@/lib/utils";
 
@@ -76,7 +77,11 @@ function QuestionBankPage() {
     setError(null);
     try {
       const query = async (
-        table: "question_bank" | "curated_question_catalog" | "official_exam_questions",
+        table:
+          | "question_bank"
+          | "curated_question_catalog"
+          | "official_exam_questions"
+          | "board_exam_questions",
         fields: string,
         userId?: string,
       ) => ({
@@ -92,7 +97,7 @@ function QuestionBankPage() {
         }),
         error: null,
       });
-      const [personal, curated, official] = await Promise.all([
+      const [personal, curated, official, boardQuestions] = await Promise.all([
         query(
           "question_bank",
           "id,contest_name,contest_year,subject,state,career_category",
@@ -106,6 +111,13 @@ function QuestionBankPage() {
           "official_exam_questions",
           "id,contest_name,exam_year,career_name,exam_board,subject,state,career_category,legal_review_required,legal_audit_completed,context_review_required",
         ),
+        query(
+          "board_exam_questions",
+          "id,contest_name,exam_year,career_name,board,subject,state,career_category,legal_review_required,needs_visual",
+        ).catch((error: unknown) => {
+          if (isMissingQuestionTable(error)) return { data: [], error: null };
+          throw error;
+        }),
       ]);
       if (personal.error) throw personal.error;
       if (curated.error) throw curated.error;
@@ -114,6 +126,14 @@ function QuestionBankPage() {
         .filter(isEligibleQuestion)
         .map((row) => normalize(row, "personal"));
       setItems([
+        ...((boardQuestions.data || []) as Array<Record<string, unknown>>)
+          .map((row) => ({
+            ...row,
+            context_review_required: row["needs_visual"],
+            legal_audit_completed: !row["legal_review_required"] || !!row["law_version_checked_at"],
+          }))
+          .filter(isEligibleQuestion)
+          .map((row) => normalize(row, "official")),
         ...((official.data || []) as Array<Record<string, unknown>>)
           .filter(isEligibleQuestion)
           .map((row) => normalize(row, "official")),
@@ -131,32 +151,27 @@ function QuestionBankPage() {
   React.useEffect(() => {
     void load();
   }, [load]);
-  const options = React.useMemo(
-    () => ({
-      contests: unique(items.map((i) => i.contest)),
-      boards: unique(items.map((i) => i.board).filter((i) => i !== "Não informada")),
-      careers: unique(items.map((i) => i.career)),
-      years: unique(items.map((i) => i.year).sort((a, b) => Number(b) - Number(a))),
-      subjects: unique(items.map((i) => i.subject)),
-      states: unique(items.map((i) => i.state)),
-      categories: unique(items.map((i) => i.category)),
-    }),
-    [items],
+  const selections = React.useMemo(
+    () => ({ contest, board, career, year, subject, source, state, category }),
+    [contest, board, career, year, subject, source, state, category],
   );
+  const facets = React.useMemo(() => catalogMetadataFacets(items, selections), [items, selections]);
+  const options = React.useMemo(() => {
+    const values = (key: keyof typeof selections) =>
+      unique([...facets[key].keys(), ...(selections[key] !== "all" ? [selections[key]] : [])]);
+    return {
+      contests: values("contest"),
+      boards: values("board"),
+      careers: values("career"),
+      years: values("year").sort((a, b) => Number(b) - Number(a)),
+      subjects: values("subject"),
+      states: values("state"),
+      categories: values("category"),
+    };
+  }, [facets, selections]);
   const filtered = React.useMemo(
-    () =>
-      items.filter(
-        (i) =>
-          (contest === "all" || i.contest === contest) &&
-          (board === "all" || i.board === board) &&
-          (career === "all" || i.career === career) &&
-          (year === "all" || i.year === year) &&
-          (subject === "all" || i.subject === subject) &&
-          (source === "all" || i.source === source) &&
-          (state === "all" || i.state === state) &&
-          (category === "all" || i.category === category),
-      ),
-    [items, contest, board, career, year, subject, source, state, category],
+    () => filterCatalogMetadata(items, selections),
+    [items, selections],
   );
   const bySubject = React.useMemo(() => groupBy(filtered, "subject"), [filtered]);
   const byBoard = React.useMemo(() => groupBy(filtered, "board"), [filtered]);
@@ -197,9 +212,24 @@ function QuestionBankPage() {
         </p>
         <div className="mt-7 grid grid-cols-2 gap-3 md:grid-cols-4">
           <Metric icon={LibraryBig} value={items.length} label="questões ativas" />
-          <Metric icon={Building2} value={options.boards.length} label="bancas" />
-          <Metric icon={UsersRound} value={options.careers.length} label="carreiras" />
-          <Metric icon={Layers3} value={options.subjects.length} label="disciplinas" />
+          <Metric
+            icon={Building2}
+            value={
+              new Set(items.map((item) => item.board).filter((board) => board !== "Não informada"))
+                .size
+            }
+            label="bancas"
+          />
+          <Metric
+            icon={UsersRound}
+            value={new Set(items.map((item) => item.career)).size}
+            label="carreiras"
+          />
+          <Metric
+            icon={Layers3}
+            value={new Set(items.map((item) => item.subject)).size}
+            label="disciplinas"
+          />
         </div>
       </section>
       <div className="grid gap-6 xl:grid-cols-[1.1fr_.9fr]">
@@ -215,30 +245,58 @@ function QuestionBankPage() {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid gap-4 sm:grid-cols-2">
-              <Filter label="Concurso" value={contest} set={setContest} values={options.contests} />
-              <Filter label="Banca" value={board} set={setBoard} values={options.boards} />
+              <Filter
+                label="Concurso"
+                counts={facets.contest}
+                value={contest}
+                set={setContest}
+                values={options.contests}
+              />
+              <Filter
+                label="Banca"
+                counts={facets.board}
+                value={board}
+                set={setBoard}
+                values={options.boards}
+              />
               <Filter
                 label="Carreira ou cargo"
+                counts={facets.career}
                 value={career}
                 set={setCareer}
                 values={options.careers}
               />
-              <Filter label="Estado" value={state} set={setState} values={options.states} />
+              <Filter
+                label="Estado"
+                counts={facets.state}
+                value={state}
+                set={setState}
+                values={options.states}
+              />
               <Filter
                 label="Categoria"
+                counts={facets.category}
                 value={category}
                 set={setCategory}
                 values={options.categories}
               />
-              <Filter label="Ano" value={year} set={setYear} values={options.years} />
+              <Filter
+                label="Ano"
+                counts={facets.year}
+                value={year}
+                set={setYear}
+                values={options.years}
+              />
               <Filter
                 label="Disciplina"
+                counts={facets.subject}
                 value={subject}
                 set={setSubject}
                 values={options.subjects}
               />
               <Filter
                 label="Origem"
+                counts={facets.source}
                 value={source}
                 set={setSource}
                 values={["official", "curated", "personal"]}
@@ -411,12 +469,14 @@ function Filter({
   set,
   values,
   labels,
+  counts,
 }: {
   label: string;
   value: string;
   set: (value: string) => void;
   values: string[];
   labels?: Record<string, string>;
+  counts?: Map<string, number>;
 }) {
   return (
     <label className="space-y-1.5">
@@ -427,11 +487,13 @@ function Filter({
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="all">Todos</SelectItem>
-          {values.map((value) => (
-            <SelectItem key={value} value={value}>
-              {labels?.[value] || value}
-            </SelectItem>
-          ))}
+          {values
+            .filter((option) => !counts || (counts.get(option) ?? 0) > 0 || option === value)
+            .map((value) => (
+              <SelectItem key={value} value={value}>
+                {labels?.[value] || value} {counts ? `(${counts.get(value) ?? 0})` : ""}
+              </SelectItem>
+            ))}
         </SelectContent>
       </Select>
     </label>
@@ -496,9 +558,15 @@ function normalize(row: Record<string, unknown>, source: SourceKind): CatalogIte
   return {
     id: String(row["id"]),
     contest: String(row["contest_name"] || "Não informado"),
-    year: String(source === "official" ? row["exam_year"] : row["contest_year"] || "—"),
-    career: String(row["career_name"] || row["contest_name"] || "Não informada"),
-    board: String(row["exam_board"] || "Não informada"),
+    year: String((source === "official" ? row["exam_year"] : row["contest_year"]) || "—"),
+    career:
+      source === "personal"
+        ? "Meu caderno"
+        : canonicalCareerName(String(row["career_name"] || "Carreira policial")),
+    board:
+      source === "personal"
+        ? "Meu caderno"
+        : canonicalBoard(String(row["board"] || row["exam_board"] || "Não informada")),
     subject: canonicalSubject(String(row["subject"] || "Sem disciplina")),
     source,
     state: String(row["state"] || ""),

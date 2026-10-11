@@ -1,10 +1,16 @@
 import type { Question } from "./questionFormat";
 import { examKey, hasReviewedExplanation } from "./questionFormat";
 import { subjectInArea } from "./questionTopics";
-import { canonicalBoard } from "./subjects";
+import { canonicalBoard, canonicalSubject, canonicalCareerName } from "./subjects";
+import {
+  matchesTopicFilter,
+  scopedTopic,
+  topicLabels,
+  filterTopicIdentity,
+} from "./filterTaxonomy";
 
 export function trainerBoard(value?: string) {
-  return !value || value === "all" ? "all" : canonicalBoard(value);
+  return !value || value.trim().toLowerCase() === "all" ? "all" : canonicalBoard(value);
 }
 
 export type TrainerFilters = Record<
@@ -34,17 +40,93 @@ export function filterTrainerQuestions(
   return catalog.filter(
     (q) =>
       (f.area === "all" || subjectInArea(f.area, q.subject)) &&
-      (f.topic === "all" || topics.get(q.id) === f.topic) &&
+      matchesTopicFilter(q.subject, topics.get(q.id), f.topic) &&
       (f.contest === "all" || q.contest === f.contest) &&
       (f.board === "all" || canonicalBoard(q.board) === trainerBoard(f.board)) &&
-      (f.career === "all" || q.career === f.career) &&
+      (f.career === "all" || canonicalCareerName(q.career) === canonicalCareerName(f.career)) &&
       (f.year === "all" || q.year === f.year) &&
       (f.appliedExam === "all" || examKey(q) === f.appliedExam) &&
-      (f.subject === "all" || q.subject === f.subject) &&
+      (f.subject === "all" || canonicalSubject(q.subject) === canonicalSubject(f.subject)) &&
       (f.source === "all" || q.source === f.source) &&
-      (f.reviewed === "all" || hasReviewedExplanation(q)) &&
+      (f.reviewed === "all" ||
+        (f.reviewed === "reviewed"
+          ? hasReviewedExplanation(q)
+          : f.reviewed === "pending" && !hasReviewedExplanation(q))) &&
       (f.difficulty === "all" || q.difficulty === f.difficulty) &&
       (f.state === "all" || q.state === f.state) &&
       (f.category === "all" || q.category === f.category),
   );
+}
+
+export const TRAINER_FACET_KEYS = [
+  "board",
+  "subject",
+  "topic",
+  "contest",
+  "career",
+  "state",
+  "category",
+  "year",
+  "exam",
+  "source",
+  "reviewed",
+  "difficulty",
+] as const;
+export function trainerFilterFacets(
+  catalog: Question[],
+  filters: TrainerFilters,
+  topics: ReadonlyMap<string, string | null>,
+) {
+  const counts = {} as Record<(typeof TRAINER_FACET_KEYS)[number], Map<string, number>>;
+  const totals = {} as Record<(typeof TRAINER_FACET_KEYS)[number], number>;
+  for (const key of TRAINER_FACET_KEYS) {
+    const field = key === "exam" ? "appliedExam" : key;
+    const rows = filterTrainerQuestions(catalog, { ...filters, [field]: "all" }, topics);
+    const map = new Map<string, number>();
+    const topicNames =
+      key === "topic"
+        ? topicLabels(
+            rows
+              .map((q) => (topics.get(q.id) ? scopedTopic(q.subject, topics.get(q.id)!) : ""))
+              .filter(Boolean),
+          )
+        : [];
+    const topicNamesByIdentity = new Map(
+      topicNames.map((name) => [filterTopicIdentity(name), name]),
+    );
+    for (const q of rows) {
+      const rawTopic = topics.get(q.id);
+      const value =
+        key === "exam"
+          ? examKey(q)
+          : key === "board"
+            ? canonicalBoard(q.board)
+            : key === "subject"
+              ? canonicalSubject(q.subject)
+              : key === "reviewed"
+                ? hasReviewedExplanation(q)
+                  ? "reviewed"
+                  : "pending"
+                : key === "topic"
+                  ? rawTopic
+                    ? (topicNamesByIdentity.get(
+                        filterTopicIdentity(scopedTopic(q.subject, rawTopic)),
+                      ) ?? "")
+                    : ""
+                  : key === "career"
+                    ? canonicalCareerName(q.career)
+                    : q[key];
+      if (value) map.set(value, (map.get(value) ?? 0) + 1);
+    }
+    // Preserve counts for older plan URLs whose topic has no discipline prefix.
+    if (key === "topic" && filters.topic !== "all" && !map.has(filters.topic)) {
+      map.set(
+        filters.topic,
+        rows.filter((q) => matchesTopicFilter(q.subject, topics.get(q.id), filters.topic)).length,
+      );
+    }
+    counts[key] = map;
+    totals[key] = rows.length;
+  }
+  return { counts, totals };
 }

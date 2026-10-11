@@ -1,4 +1,8 @@
-import { canonicalSubject } from "@/lib/subjects";
+import { trainerBoard } from "@/lib/trainerFilters";
+import { filterSimulatorQuestions } from "@/lib/simulatorFilters";
+import { fetchAllRows, isMissingQuestionTable } from "@/lib/catalog";
+import { isEligibleQuestion } from "@/lib/questionFormat";
+import { canonicalSubject, canonicalBoard, canonicalCareerName } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -76,6 +80,9 @@ export const Route = createFileRoute("/dashboard/mock-exams")({
     year: typeof search["year"] === "string" ? search["year"] : undefined,
     subject: typeof search["subject"] === "string" ? search["subject"] : undefined,
     source: typeof search["source"] === "string" ? search["source"] : undefined,
+    state: typeof search["state"] === "string" ? search["state"] : undefined,
+    category: typeof search["category"] === "string" ? search["category"] : undefined,
+    reviewed: typeof search["reviewed"] === "string" ? search["reviewed"] : undefined,
   }),
   component: ProfessionalSimulator,
 });
@@ -92,6 +99,9 @@ interface SimulatorQuestion {
   subject: string;
   subtopic: string | null;
   itemNumber: number | null;
+  state: string;
+  category: string;
+  checkedAt: string | null;
   text: string;
   answer: Answer;
   explanation: string;
@@ -142,11 +152,35 @@ function ProfessionalSimulator() {
   const [loading, setLoading] = React.useState(true);
   const [loadError, setLoadError] = React.useState<string | null>(null);
   const [contest, setContest] = React.useState(routeSearch.contest || "all");
-  const [subject, setSubject] = React.useState(routeSearch.subject || "all");
-  const [board, setBoard] = React.useState(routeSearch.board || "all");
-  const [career, setCareer] = React.useState(routeSearch.career || "all");
+  const [subject, setSubject] = React.useState(canonicalSubject(routeSearch.subject) || "all");
+  const [board, setBoard] = React.useState(trainerBoard(routeSearch.board));
+  const [career, setCareer] = React.useState(canonicalCareerName(routeSearch.career) || "all");
   const [year, setYear] = React.useState(routeSearch.year || "all");
   const [sourceKind, setSourceKind] = React.useState(routeSearch.source || "all");
+  const [state, setState] = React.useState(routeSearch.state || "all");
+  const [category, setCategory] = React.useState(routeSearch.category || "all");
+  const [reviewed, setReviewed] = React.useState(routeSearch.reviewed || "all");
+  React.useEffect(() => {
+    setContest(routeSearch.contest || "all");
+    setSubject(canonicalSubject(routeSearch.subject) || "all");
+    setBoard(trainerBoard(routeSearch.board));
+    setCareer(canonicalCareerName(routeSearch.career) || "all");
+    setYear(routeSearch.year || "all");
+    setSourceKind(routeSearch.source || "all");
+    setState(routeSearch.state || "all");
+    setCategory(routeSearch.category || "all");
+    setReviewed(routeSearch.reviewed || "all");
+  }, [
+    routeSearch.contest,
+    routeSearch.subject,
+    routeSearch.board,
+    routeSearch.career,
+    routeSearch.year,
+    routeSearch.source,
+    routeSearch.state,
+    routeSearch.category,
+    routeSearch.reviewed,
+  ]);
   const [limit, setLimit] = React.useState(20);
   const [durationMinutes, setDurationMinutes] = React.useState(30);
   const [startWarningOpen, setStartWarningOpen] = React.useState(false);
@@ -165,45 +199,67 @@ function ProfessionalSimulator() {
     setLoading(true);
     setLoadError(null);
     try {
-      const [officialResult, curatedResult, historyResult, rankResult] = await Promise.all([
-        supabase
-          .from("official_exam_questions")
-          .select(
-            "id,contest_name,exam_year,career_name,exam_board,subject,item_number,question_text,official_answer,review_note,legal_basis",
-          )
-          .eq("content_status", "active")
-          .neq("official_answer", "X"),
-        supabase
-          .from("curated_question_catalog")
-          .select(
+      const query = async (
+        table: "official_exam_questions" | "curated_question_catalog" | "board_exam_questions",
+        fields: string,
+      ) => ({
+        error: null,
+        data: await fetchAllRows<Record<string, unknown>>((from, to) =>
+          supabase
+            .from(table)
+            .select(fields + ",content_status,law_version_checked_at,state,career_category")
+            .eq("content_status", "active")
+            .order("id")
+            .range(from, to)
+            .returns<Record<string, unknown>[]>(),
+        ),
+      });
+      const [officialResult, curatedResult, boardResult, historyResult, rankResult] =
+        await Promise.all([
+          query(
+            "official_exam_questions",
+            "id,contest_name,exam_year,career_name,exam_board,subject,item_number,question_text,official_answer,review_note,legal_basis,legal_review_required,legal_audit_completed,context_review_required",
+          ),
+          query(
+            "curated_question_catalog",
             "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,legal_basis",
-          )
-          .eq("content_status", "active"),
-        user && user.id !== "demo-user"
-          ? supabase
-              .from("simulator_attempts")
-              .select(
-                "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at",
-              )
-              .eq("user_id", user.id)
-              .order("finished_at", { ascending: false })
-              .limit(8)
-          : Promise.resolve({ data: [], error: null }),
-        user && user.id !== "demo-user"
-          ? supabase.rpc("my_rank_summary", { _period: "all", _metric: "points" }).maybeSingle()
-          : Promise.resolve({ data: null, error: null }),
-      ]);
+          ),
+          query(
+            "board_exam_questions",
+            "id,contest_name,exam_year,career_name,board,subject,support_text,stem,options,official_answer,explanation,legal_basis,legal_review_required,needs_visual",
+          ).catch((error: unknown) => {
+            if (isMissingQuestionTable(error)) return { data: [], error: null };
+            throw error;
+          }),
+          user && user.id !== "demo-user"
+            ? supabase
+                .from("simulator_attempts")
+                .select(
+                  "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at",
+                )
+                .eq("user_id", user.id)
+                .order("finished_at", { ascending: false })
+                .limit(8)
+            : Promise.resolve({ data: [], error: null }),
+          user && user.id !== "demo-user"
+            ? supabase.rpc("my_rank_summary", { _period: "all", _metric: "points" }).maybeSingle()
+            : Promise.resolve({ data: null, error: null }),
+        ]);
       if (officialResult.error) throw officialResult.error;
       if (curatedResult.error) throw curatedResult.error;
-      const official = ((officialResult.data || []) as Array<Record<string, unknown>>).map(
-        (row): SimulatorQuestion => ({
+      const official = ((officialResult.data || []) as Array<Record<string, unknown>>)
+        .filter(isEligibleQuestion)
+        .map((row): SimulatorQuestion => ({
           id: String(row["id"]),
           sourceKind: "official",
           contest: String(row["contest_name"]),
           year: Number(row["exam_year"]),
-          career: String(row["career_name"]),
-          board: String(row["exam_board"]),
+          career: canonicalCareerName(String(row["career_name"] || "Carreira policial")),
+          board: canonicalBoard(String(row["exam_board"] || "Não informada")),
           subject: canonicalSubject(String(row["subject"])),
+          state: String(row["state"] || ""),
+          category: String(row["career_category"] || ""),
+          checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
           subtopic: null,
           itemNumber: Number(row["item_number"]),
           text: String(row["question_text"]),
@@ -213,17 +269,20 @@ function ProfessionalSimulator() {
           ),
           difficulty: null,
           legalBasis: parseLegalBasis(row["legal_basis"]),
-        }),
-      );
-      const curated = ((curatedResult.data || []) as Array<Record<string, unknown>>).map(
-        (row): SimulatorQuestion => ({
+        }));
+      const curated = ((curatedResult.data || []) as Array<Record<string, unknown>>)
+        .filter(isEligibleQuestion)
+        .map((row): SimulatorQuestion => ({
           id: String(row["id"]),
           sourceKind: "curated",
           contest: String(row["contest_name"]),
           year: Number(row["contest_year"]),
-          career: String(row["career_name"]),
-          board: String(row["exam_board"]),
+          career: canonicalCareerName(String(row["career_name"] || "Carreira policial")),
+          board: canonicalBoard(String(row["exam_board"] || "Não informada")),
           subject: canonicalSubject(String(row["subject"])),
+          state: String(row["state"] || ""),
+          category: String(row["career_category"] || ""),
+          checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
           subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
           itemNumber: null,
           text: String(row["question_text"]),
@@ -231,9 +290,40 @@ function ProfessionalSimulator() {
           explanation: String(row["explanation"]),
           difficulty: row["difficulty"] ? String(row["difficulty"]) : null,
           legalBasis: parseLegalBasis(row["legal_basis"]),
-        }),
-      );
-      setCatalog([...official, ...curated]);
+        }));
+      const boardQuestions = boardResult.data
+        .map((row): Record<string, unknown> => ({
+          ...row,
+          context_review_required: row["needs_visual"],
+          legal_audit_completed: !row["legal_review_required"] || !!row["law_version_checked_at"],
+        }))
+        .filter(isEligibleQuestion)
+        .map((row): SimulatorQuestion => ({
+          id: String(row["id"]),
+          sourceKind: "official",
+          contest: String(row["contest_name"]),
+          year: Number(row["exam_year"]),
+          career: canonicalCareerName(String(row["career_name"] || "Carreira policial")),
+          board: canonicalBoard(String(row["board"] || "Não informada")),
+          subject: canonicalSubject(String(row["subject"])),
+          subtopic: null,
+          itemNumber: null,
+          state: String(row["state"] || ""),
+          category: String(row["career_category"] || ""),
+          checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
+          text: `${row["support_text"] ? "Texto-base:\n" + String(row["support_text"]) + "\n\n" : ""}${String(row["stem"])}\n${Object.entries(
+            (row["options"] || {}) as Record<string, string>,
+          )
+            .map(([letter, text]) => `(${letter}) ${text}`)
+            .join("\n")}`,
+          answer: String(row["official_answer"]) as Answer,
+          explanation: String(
+            row["explanation"] || "Gabarito definitivo da banca. Comentário em preparação.",
+          ),
+          difficulty: null,
+          legalBasis: parseLegalBasis(row["legal_basis"]),
+        }));
+      setCatalog([...official, ...curated, ...boardQuestions]);
       setHistory((historyResult.data || []) as AttemptHistory[]);
       setRankProfile((rankResult.data || null) as RankProfile | null);
     } catch (error) {
@@ -305,16 +395,18 @@ function ProfessionalSimulator() {
   );
   const available = React.useMemo(
     () =>
-      catalog.filter(
-        (item) =>
-          (contest === "all" || item["contest"] === contest) &&
-          (subject === "all" || item["subject"] === subject) &&
-          (board === "all" || item["board"] === board) &&
-          (career === "all" || item["career"] === career) &&
-          (year === "all" || item["year"] === Number(year)) &&
-          (sourceKind === "all" || item["sourceKind"] === sourceKind),
-      ),
-    [catalog, contest, subject, board, career, year, sourceKind],
+      filterSimulatorQuestions(catalog, {
+        contest,
+        subject,
+        board,
+        career,
+        year,
+        source: sourceKind,
+        state,
+        category,
+        reviewed,
+      }),
+    [catalog, contest, subject, board, career, year, sourceKind, state, category, reviewed],
   );
   const current = questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
@@ -574,6 +666,51 @@ function ProfessionalSimulator() {
                         {i}
                       </SelectItem>
                     ))}
+                  </SelectContent>
+                </Select>
+              </Field>
+              <Field label="Estado">
+                <Select value={state} onValueChange={setState}>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Todos os estados</SelectItem>
+                    {[...new Set(catalog.map((item) => item.state).filter(Boolean))]
+                      .sort()
+                      .map((value) => (
+                        <SelectItem key={value} value={value}>
+                          {value}
+                        </SelectItem>
+                      ))}
+                  </SelectContent>
+                </Select>
+              </Field>
+              <Field label="Categoria">
+                <Select value={category} onValueChange={setCategory}>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Todas as categorias</SelectItem>
+                    {[...new Set(catalog.map((item) => item.category).filter(Boolean))]
+                      .sort()
+                      .map((value) => (
+                        <SelectItem key={value} value={value}>
+                          {value}
+                        </SelectItem>
+                      ))}
+                  </SelectContent>
+                </Select>
+              </Field>
+              <Field label="Comentário didático">
+                <Select value={reviewed} onValueChange={setReviewed}>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Todos</SelectItem>
+                    <SelectItem value="reviewed">Com exemplo e fontes conferidas</SelectItem>
                   </SelectContent>
                 </Select>
               </Field>

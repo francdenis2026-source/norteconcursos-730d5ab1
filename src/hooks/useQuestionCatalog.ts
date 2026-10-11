@@ -3,7 +3,12 @@
 // sua pool — extraído pra um só lugar porque o Caderno de erros também
 // precisa do texto completo das questões que o aluno errou.
 import * as React from "react";
-import { canonicalBoard, canonicalSubject } from "@/lib/subjects";
+import {
+  canonicalBoard,
+  canonicalSubject,
+  canonicalTopic,
+  canonicalCareerName,
+} from "@/lib/subjects";
 import { supabase } from "@/integrations/supabase/client";
 import {
   type Answer,
@@ -119,7 +124,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
               table: "board_exam_questions" as const,
               contest: String(row["contest_name"]),
               year: String(row["exam_year"]),
-              career: String(row["career_name"]),
+              career: canonicalCareerName(String(row["career_name"])),
               board: canonicalBoard(String(row["board"] ?? "")) || "Não informada",
               subject: canonicalSubject(String(row["subject"])),
               subtopic: null,
@@ -151,7 +156,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             table: "official_exam_questions" as const,
             contest: String(row["contest_name"]),
             year: String(row["exam_year"]),
-            career: String(row["career_name"] || "Carreira policial"),
+            career: canonicalCareerName(String(row["career_name"] || "Carreira policial")),
             board: canonicalBoard(String(row["exam_board"] ?? "")) || "Não informada",
             subject: canonicalSubject(String(row["subject"])),
             subtopic: null,
@@ -175,10 +180,10 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             table: "curated_question_catalog" as const,
             contest: String(row["contest_name"]),
             year: String(row["contest_year"]),
-            career: String(row["career_name"] || "Carreira policial"),
+            career: canonicalCareerName(String(row["career_name"] || "Carreira policial")),
             board: canonicalBoard(String(row["exam_board"] ?? "")) || "Não informada",
             subject: canonicalSubject(String(row["subject"])),
-            subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
+            subtopic: canonicalTopic(row["subtopic"] ? String(row["subtopic"]) : null),
             text: String(row["question_text"]),
             answer: String(row["official_answer"]) as Answer,
             explanation: String(row["explanation"] || "Explicação editorial em revisão."),
@@ -202,7 +207,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
                 ? ("multiple_choice" as const)
                 : ("true_false" as const),
               subject: canonicalSubject(String(row["subject"])),
-              subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
+              subtopic: canonicalTopic(row["subtopic"] ? String(row["subtopic"]) : null),
               text: String(row["question_text"]),
               answer: String(row["official_answer"]) as Answer,
               explanation: String(row["explanation"] || "Explicação pedagógica em revisão."),

@@ -1,3 +1,4 @@
+import { canonicalSubject, canonicalTopic } from "@/lib/subjects";
 import { userStorageKey } from "@/lib/userStorage";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -57,7 +58,11 @@ export async function fetchStudyMaterialList(): Promise<StudyMaterialSummary[]> 
     .order("discipline")
     .order("sort_order");
   if (error) throw error;
-  return (data ?? []) as StudyMaterialSummary[];
+  return ((data ?? []) as StudyMaterialSummary[]).map((item) => ({
+    ...item,
+    discipline: canonicalSubject(item.discipline),
+    topic_label: canonicalTopic(item.topic_label) ?? "Assunto não classificado",
+  }));
 }
 
 export function useStudyMaterialList(enabled: boolean) {
@@ -72,17 +77,26 @@ export function useStudyMaterialList(enabled: boolean) {
 /** Loaded only when a student starts searching; RLS and active status still apply. */
 export async function fetchLibrarySearchContent(): Promise<LibrarySearchContent[]> {
   const rows: LibrarySearchContent[] = [];
-  for (let offset = 0; ; ) {
-    const { data, error } = await supabase.from("study_materials").select("id,body_md,legal_basis")
-      .eq("content_status", "active").order("id").range(offset, offset + 199);
+  for (let offset = 0; ;) {
+    const { data, error } = await supabase
+      .from("study_materials")
+      .select("id,body_md,legal_basis")
+      .eq("content_status", "active")
+      .order("id")
+      .range(offset, offset + 199);
     if (error) throw error;
     if (!data?.length) return rows;
-    rows.push(...data as LibrarySearchContent[]);
+    rows.push(...(data as LibrarySearchContent[]));
     offset += data.length;
   }
 }
 export function useLibrarySearchContent(enabled: boolean, userId?: string) {
-  return useQuery({queryKey:["library-search-content",userId],enabled:enabled&&!!userId,queryFn:fetchLibrarySearchContent,staleTime:5*60*1000});
+  return useQuery({
+    queryKey: ["library-search-content", userId],
+    enabled: enabled && !!userId,
+    queryFn: fetchLibrarySearchContent,
+    staleTime: 5 * 60 * 1000,
+  });
 }
 
 export function useStudyMaterial(slug: string, enabled: boolean) {
@@ -100,7 +114,13 @@ export function useStudyMaterial(slug: string, enabled: boolean) {
         .eq("content_status", "active")
         .maybeSingle();
       if (error) throw error;
-      return (data ?? null) as StudyMaterial | null;
+      return data
+        ? ({
+            ...data,
+            discipline: canonicalSubject(data.discipline),
+            topic_label: canonicalTopic(data.topic_label) ?? "Assunto não classificado",
+          } as StudyMaterial)
+        : null;
     },
   });
 }
@@ -108,9 +128,10 @@ export function useStudyMaterial(slug: string, enabled: boolean) {
 export function groupByDiscipline(items: StudyMaterialSummary[]) {
   const map = new Map<string, StudyMaterialSummary[]>();
   for (const item of items) {
-    const list = map.get(item.discipline) ?? [];
+    const discipline = canonicalSubject(item.discipline);
+    const list = map.get(discipline) ?? [];
     list.push(item);
-    map.set(item.discipline, list);
+    map.set(discipline, list);
   }
   return Array.from(map.entries()).sort((a, b) => a[0].localeCompare(b[0], "pt-BR"));
 }

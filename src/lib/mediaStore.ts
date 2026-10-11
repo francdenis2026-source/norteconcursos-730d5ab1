@@ -1,3 +1,4 @@
+import { canonicalSubject, canonicalTopic } from "@/lib/subjects";
 /**
  * Catálogo da Central de mídia lido do banco (tabelas `media_videos` e `media_podcasts`, geridas por
  * Admin → Central de mídia). Se o banco ainda não tiver as tabelas (migration não aplicada) ou estiver
@@ -58,9 +59,11 @@ export function buildCatalog(videos: VideoRow[], podcasts: PodcastRow[]): MediaC
       ...(v.channel ? { channel: v.channel } : {}),
       ...(v.embeddable ? {} : { embeddable: false as const }),
     };
-    ((topicVideos[v.subject] ??= {})[v.topic] ??= []).push(item);
+    const subject = canonicalSubject(v.subject);
+    const topic = canonicalTopic(v.topic) ?? "*";
+    ((topicVideos[subject] ??= {})[topic] ??= []).push(item);
     if (v.topic === "*" && v.is_playlist)
-      playlists.push({ id: v.youtube_id, title: v.title, discipline: v.subject });
+      playlists.push({ id: v.youtube_id, title: v.title, discipline: subject });
   }
   return {
     topicVideos,
@@ -68,7 +71,7 @@ export function buildCatalog(videos: VideoRow[], podcasts: PodcastRow[]): MediaC
     podcasts: podcasts.map((p) => ({
       id: p.id,
       title: p.title,
-      discipline: p.subject,
+      discipline: canonicalSubject(p.subject),
       src: p.audio_url,
       ...(p.description ? { description: p.description } : {}),
     })),

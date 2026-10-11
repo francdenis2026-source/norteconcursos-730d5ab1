@@ -1,3 +1,4 @@
+import { matchesTopicFilter, scopedTopic, topicLabels } from "@/lib/filterTaxonomy";
 import { useEffect, useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -22,7 +23,14 @@ import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
 import { LibraryNavigation } from "@/components/library/LibraryNavigation";
 import { BackToPlan } from "@/components/cronograma/BackToPlan";
 import { StartHere } from "@/components/library/StartHere";
-import { libraryArea, libraryDiscipline, libraryDisciplines, libraryTone, type LibraryArea } from "@/lib/libraryOrganization";
+import {
+  libraryArea,
+  libraryDiscipline,
+  libraryDisciplines,
+  libraryTopic,
+  libraryTone,
+  type LibraryArea,
+} from "@/lib/libraryOrganization";
 import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
 import {
   readSlugs,
@@ -33,7 +41,9 @@ import {
 
 export const Route = createFileRoute("/dashboard/library/")({
   component: LibraryIndex,
-  validateSearch: (s: Record<string, unknown>): { q?: string | undefined; back?: string | undefined } => ({
+  validateSearch: (
+    s: Record<string, unknown>,
+  ): { q?: string | undefined; back?: string | undefined } => ({
     q: typeof s["q"] === "string" || typeof s["q"] === "number" ? String(s["q"]) : undefined,
     back: typeof s["back"] === "string" ? s["back"] : undefined,
   }),
@@ -50,20 +60,38 @@ function LibraryIndex() {
   const [discipline, setDiscipline] = useState<string>("all");
   const [contest, setContest] = useState<string>("all");
   const [topic, setTopic] = useState("all");
-  const lawMatches = useMemo(()=>matchingLibraryLaws(query),[query]);
-  const content = useLibrarySearchContent(signedIn && query.trim().length >= 2 && !lawMatches.length, user?.id);
+  const lawMatches = useMemo(() => matchingLibraryLaws(query), [query]);
+  const content = useLibrarySearchContent(
+    signedIn && query.trim().length >= 2 && !lawMatches.length,
+    user?.id,
+  );
   const [read, setRead] = useState<Set<string>>(new Set());
 
   useEffect(() => setRead(readSlugs()), []);
 
   const items = useMemo(() => data ?? [], [data]);
-  const areaItems = useMemo(() => items.filter(item => area === "all" || libraryArea(item) === area), [items, area]);
+  const areaItems = useMemo(
+    () => items.filter((item) => area === "all" || libraryArea(item) === area),
+    [items, area],
+  );
   const disciplines = useMemo(() => libraryDisciplines(areaItems), [areaItems]);
-  const topics = useMemo(() => Array.from(new Set(areaItems.filter(item=>discipline==="all"||libraryDiscipline(item)===discipline).map(item=>item.topic_label))).sort((a,b)=>a.localeCompare(b,"pt-BR")),[areaItems,discipline]);
-  const searchIndex = useMemo(()=>{
-    const byId=new Map(content.data?.map(row=>[row.id,row]));
-    return new Map(items.map(item=>[item.id,librarySearchText(item,byId.get(item.id))]));
-  },[items,content.data]);
+  const topics = useMemo(
+    () =>
+      topicLabels(
+        areaItems
+          .filter(
+            (item) =>
+              (discipline === "all" || libraryDiscipline(item) === discipline) &&
+              (contest === "all" || item.contest_name === contest),
+          )
+          .map((item) => scopedTopic(libraryDiscipline(item), libraryTopic(item))),
+      ).sort((a, b) => a.localeCompare(b, "pt-BR")),
+    [areaItems, discipline, contest],
+  );
+  const searchIndex = useMemo(() => {
+    const byId = new Map(content.data?.map((row) => [row.id, row]));
+    return new Map(items.map((item) => [item.id, librarySearchText(item, byId.get(item.id))]));
+  }, [items, content.data]);
   const contests = useMemo(
     () =>
       Array.from(
@@ -78,14 +106,31 @@ function LibraryIndex() {
         (area === "all" || libraryArea(item) === area) &&
         (discipline === "all" || libraryDiscipline(item) === discipline) &&
         (contest === "all" || item.contest_name === contest) &&
-        (topic === "all" || item.topic_label === topic) &&
-        (lawMatches.length ? lawMatches.includes(materialLawSlug(item)??"") : matchesLibrarySearch(searchIndex.get(item.id)??"",query)),
+        matchesTopicFilter(libraryDiscipline(item), libraryTopic(item), topic) &&
+        (lawMatches.length
+          ? lawMatches.includes(materialLawSlug(item) ?? "")
+          : matchesLibrarySearch(searchIndex.get(item.id) ?? "", query)),
     );
   }, [items, query, area, discipline, contest, topic, searchIndex, lawMatches]);
 
-  const visibleGroups = useMemo(() => libraryDisciplines(visible.filter(item => !materialLawSlug(item))).map(([name, list]) => [name, [...list].sort(compareMaterialRevision)] as [string, StudyMaterialSummary[]]).sort((a, b) => compareMaterialRevision(a[1][0]!, b[1][0]!)), [visible]);
+  const visibleGroups = useMemo(
+    () =>
+      libraryDisciplines(visible.filter((item) => !materialLawSlug(item)))
+        .map(
+          ([name, list]) =>
+            [name, [...list].sort(compareMaterialRevision)] as [string, StudyMaterialSummary[]],
+        )
+        .sort((a, b) => compareMaterialRevision(a[1][0]!, b[1][0]!)),
+    [visible],
+  );
   const searching = query.trim() !== "" || contest !== "all" || topic !== "all";
-  const resetFilters = () => {setQuery("");setArea("all");setDiscipline("all");setContest("all");setTopic("all");};
+  const resetFilters = () => {
+    setQuery("");
+    setArea("all");
+    setDiscipline("all");
+    setContest("all");
+    setTopic("all");
+  };
   const readCount = items.filter((item) => read.has(item.slug)).length;
 
   if (!authLoading && !signedIn) {
@@ -126,13 +171,16 @@ function LibraryIndex() {
       >
         <div className="page-hero__stats max-w-xl">
           <HeroStat icon={BookMarked} label="Materiais" value={isPending ? "—" : items.length} />
-          <HeroStat icon={Library} label="Matérias" value={isPending ? "—" : libraryDisciplines(items).length} />
+          <HeroStat
+            icon={Library}
+            label="Matérias"
+            value={isPending ? "—" : libraryDisciplines(items).length}
+          />
           <HeroStat icon={Check} label="Já lidos" value={isPending ? "—" : readCount} />
         </div>
       </PageHero>
 
       {signedIn && !searching && user && <StartHere userId={user.id} />}
-
 
       {isPending && signedIn ? (
         <div className="space-y-3">
@@ -162,23 +210,64 @@ function LibraryIndex() {
         />
       ) : (
         <>
-          <LibraryNavigation items={items} area={area}
-            onArea={value => {setArea(value);setDiscipline("all");setTopic("all");}}
-            query={query} onQuery={setQuery}
-            discipline={discipline} onDiscipline={value => {setDiscipline(value);setTopic("all");}}
-            disciplines={disciplines} topic={topic} onTopic={setTopic} topics={topics}
-            contest={contest} onContest={setContest} contests={contests}
-            count={visible.length} searchingContent={!lawMatches.length && query.trim().length >= 2 && content.isPending}
-            onReset={resetFilters}/>
-          {content.isError && query.trim().length >= 2 && <p role="alert" className="rounded-xl border p-4 text-sm">A busca nos textos não carregou; títulos e assuntos continuam disponíveis. <button className="cursor-pointer underline" onClick={() => void content.refetch()}>Tentar novamente</button></p>}
+          <LibraryNavigation
+            items={items}
+            area={area}
+            onArea={(value) => {
+              setArea(value);
+              setDiscipline("all");
+              setTopic("all");
+            }}
+            query={query}
+            onQuery={setQuery}
+            discipline={discipline}
+            onDiscipline={(value) => {
+              setDiscipline(value);
+              setTopic("all");
+            }}
+            disciplines={disciplines}
+            topic={topic}
+            onTopic={setTopic}
+            topics={topics}
+            contest={contest}
+            onContest={(value) => {
+              setContest(value);
+              setTopic("all");
+            }}
+            contests={contests}
+            count={visible.length}
+            searchingContent={!lawMatches.length && query.trim().length >= 2 && content.isPending}
+            onReset={resetFilters}
+          />
+          {content.isError && query.trim().length >= 2 && (
+            <p role="alert" className="rounded-xl border p-4 text-sm">
+              A busca nos textos não carregou; títulos e assuntos continuam disponíveis.{" "}
+              <button className="cursor-pointer underline" onClick={() => void content.refetch()}>
+                Tentar novamente
+              </button>
+            </p>
+          )}
 
-          <LegalPathCatalog userId={user!.id} materials={visible} searching={searching || discipline !== "all"} query={query} />
+          <LegalPathCatalog
+            userId={user!.id}
+            materials={visible}
+            searching={searching || discipline !== "all"}
+            query={query}
+          />
 
           {visible.length === 0 ? (
             <Empty
               icon={SearchX}
-              title={!lawMatches.length && query.trim().length >= 2 && content.isPending ? "Pesquisando o conteúdo…" : "Nada encontrado"}
-              text={!lawMatches.length && query.trim().length >= 2 && content.isPending ? "Aguarde a busca nos textos dos guias publicados." : "Nenhum material combina com essa busca. Tente outro termo ou limpe o filtro."}
+              title={
+                !lawMatches.length && query.trim().length >= 2 && content.isPending
+                  ? "Pesquisando o conteúdo…"
+                  : "Nada encontrado"
+              }
+              text={
+                !lawMatches.length && query.trim().length >= 2 && content.isPending
+                  ? "Aguarde a busca nos textos dos guias publicados."
+                  : "Nenhum material combina com essa busca. Tente outro termo ou limpe o filtro."
+              }
               action={
                 <Button
                   variant="outline"
@@ -229,14 +318,17 @@ function DisciplineSection({
 }) {
   const ordered = useMemo(() => [...list].sort(compareMaterialRevision), [list]);
   const position = new Map(ordered.map((item, index) => [item.slug, index + 1]));
-  const groups = useMemo(() => [{order: null as number | null, items: ordered}], [ordered]);
+  const groups = useMemo(() => [{ order: null as number | null, items: ordered }], [ordered]);
   const byEdital = groups.filter((group) => group.order !== null).length > 1;
   const done = ordered.filter((item) => read.has(item.slug)).length;
   const next = ordered.find((item) => !read.has(item.slug));
   const percent = ordered.length ? Math.round((done / ordered.length) * 100) : 0;
 
   return (
-    <details open={defaultOpen} className={`group library-subject library-tone-${libraryTone(name)}`}>
+    <details
+      open={defaultOpen}
+      className={`group library-subject library-tone-${libraryTone(name)}`}
+    >
       <summary className="library-subject__heading">
         <div className="min-w-0 flex-1">
           <h2 className="library-discipline-title">{name}</h2>
@@ -327,13 +419,22 @@ function MaterialRow({
         </span>
         <span className="min-w-0 flex-1">
           <span className="library-material-topic">
-            <LibrarySearchMatch text={item.topic_label} query={query}/>
+            <LibrarySearchMatch text={item.topic_label} query={query} />
           </span>
-          <strong className="block text-sm leading-snug"><LibrarySearchMatch text={item.title} query={query}/></strong>
-          {item.updated_at && <span className="mt-1 block text-xs text-muted-foreground">Material atualizado em {new Date(item.updated_at).toLocaleDateString("pt-BR", {timeZone:"America/Rio_Branco"})}</span>}
+          <strong className="block text-sm leading-snug">
+            <LibrarySearchMatch text={item.title} query={query} />
+          </strong>
+          {item.updated_at && (
+            <span className="mt-1 block text-xs text-muted-foreground">
+              Material atualizado em{" "}
+              {new Date(item.updated_at).toLocaleDateString("pt-BR", {
+                timeZone: "America/Rio_Branco",
+              })}
+            </span>
+          )}
           {item.summary && (
             <span className="mt-0.5 line-clamp-2 block text-xs text-muted-foreground">
-              <LibrarySearchMatch text={item.summary} query={query}/>
+              <LibrarySearchMatch text={item.summary} query={query} />
             </span>
           )}
         </span>

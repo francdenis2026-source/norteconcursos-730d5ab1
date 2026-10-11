@@ -1,3 +1,4 @@
+import { subjectAreas } from "@/lib/questionTopics";
 /**
  * Assuntos de cada matéria para montar as sessões de estudo do cronograma.
  * São NOMES de assuntos recorrentes em editais policiais, em ordem didática (base → avançado).
@@ -129,15 +130,31 @@ const T = {
     "Correlação e regressão",
     "Amostragem e inferência",
   ],
-  humanos: [
-    "Teoria geral dos direitos humanos",
-    "Tratados e convenções internacionais",
+  humanos: ["Teoria geral dos direitos humanos", "Tratados e convenções internacionais"],
+  legislacao: [
     "Lei de Drogas (Lei 11.343/2006)",
     "Abuso de autoridade (Lei 13.869/2019)",
     "Organizações criminosas (Lei 12.850/2013)",
     "Estatuto da Criança e do Adolescente",
     "Lei de Migração (Lei 13.445/2017)",
   ],
+  "legislacao-pf": [
+    "Estatuto da Segurança Privada",
+    "Controle de Produtos Químicos",
+    "Lei de Migração",
+    "Investigações de repercussão interestadual ou internacional",
+    "Identificação civil",
+    "Convenção de Budapeste",
+  ],
+  matematica: [
+    "Porcentagem",
+    "Razão, proporção e regra de três",
+    "Equações e sistemas",
+    "Geometria",
+  ],
+  financeira: ["Juros simples e compostos", "Descontos", "Equivalência de capitais"],
+  publica: ["Contabilidade aplicada ao setor público", "Plano de contas aplicado ao setor público"],
+  custos: ["Custos e despesas", "Métodos de custeio"],
   atualidades: [
     "Política nacional e internacional",
     "Economia e finanças públicas",
@@ -172,27 +189,10 @@ export function topicsFor(subject: string): string[] {
   const n = strip(subject);
   const out: string[] = [];
   const add = (list: readonly string[]) => out.push(...list);
-  if (/portugues/.test(n)) add(T.portugues);
-  if (/raciocinio|logic/.test(n) && !/estatistica/.test(n)) add(T.raciocinio);
-  if (/estatistica/.test(n)) {
-    add(T.estatistica);
-    add(T.raciocinio.slice(0, 5));
+  for (const area of subjectAreas(subject)) {
+    if (area in T) add(T[area as keyof typeof T]);
   }
-  if (/constitucional/.test(n)) add(T.constitucional);
-  if (/administrativ/.test(n)) add(T.administrativo);
-  if (/penal/.test(n) && !/^direito processual penal$/.test(n) && !/legislacao/.test(n))
-    add(T.penal);
-  if (/processual/.test(n)) add(T.processual);
-  if (/informatica|tecnologia/.test(n)) add(T.informatica);
-  if (/transito/.test(n)) add(T.transito);
-  if (/fisica/.test(n)) add(T.fisica);
-  if (/contabilidade/.test(n)) add(T.contabilidade);
-  if (/direitos humanos|legislacao especial|legislacao penal|legislacao especifica/.test(n))
-    add(T.humanos);
-  if (/atualidades|economia/.test(n)) add(T.atualidades);
-  if (/medicina|criminalistica/.test(n)) add(T.medicina);
-  if (/geopolitica|estrangeira|ingles/.test(n)) add(T.idiomas);
-  if (/etica|cidadania/.test(n) && !/direitos humanos/.test(n)) add(T.etica);
+  if (/ingles/.test(n)) add(T.idiomas.filter((topic) => !topic.startsWith("Geopolítica")));
   return out.length
     ? [...new Set(out)]
     : ["Conceitos fundamentais", "Pontos mais cobrados em provas", "Questões comentadas da banca"];

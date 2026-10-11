@@ -59,8 +59,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { classifyTopic, subjectInArea } from "@/lib/questionTopics";
-import { filterTrainerQuestions, trainerBoard } from "@/lib/trainerFilters";
+import { canonicalSubject, canonicalCareerName } from "@/lib/subjects";
+import { questionTopic, topicFilterLabel } from "@/lib/filterTaxonomy";
+import { filterTrainerQuestions, trainerBoard, trainerFilterFacets } from "@/lib/trainerFilters";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
@@ -153,10 +154,10 @@ function QuestionTrainer() {
   const [started, setStarted] = React.useState(false);
   const [contest, setContest] = React.useState(routeFilters.contest || "all");
   const [board, setBoard] = React.useState(trainerBoard(routeFilters.board));
-  const [career, setCareer] = React.useState(routeFilters.career || "all");
+  const [career, setCareer] = React.useState(canonicalCareerName(routeFilters.career) || "all");
   const [year, setYear] = React.useState(routeFilters.year || "all");
   const [appliedExam, setAppliedExam] = React.useState("all");
-  const [subject, setSubject] = React.useState(routeFilters.subject || "all");
+  const [subject, setSubject] = React.useState(canonicalSubject(routeFilters.subject) || "all");
   const [source, setSource] = React.useState(routeFilters.source || "all");
   const [reviewed, setReviewed] = React.useState(routeFilters.reviewed || "all");
   const [state, setState] = React.useState(routeFilters.state || "all");
@@ -191,9 +192,9 @@ function QuestionTrainer() {
     setModal(null);
     setContest(routeFilters.contest || "all");
     setBoard(trainerBoard(routeFilters.board));
-    setCareer(routeFilters.career || "all");
+    setCareer(canonicalCareerName(routeFilters.career) || "all");
     setYear(routeFilters.year || "all");
-    setSubject(routeFilters.subject || "all");
+    setSubject(canonicalSubject(routeFilters.subject) || "all");
     setSource(routeFilters.source || "all");
     setReviewed(routeFilters.reviewed || "all");
     setState(routeFilters.state || "all");
@@ -243,178 +244,72 @@ function QuestionTrainer() {
   const wrong = results.filter((r) => r === "err").length;
 
   // Cada lista mostra só o que existe combinado com os OUTROS filtros já escolhidos,
-  // para nunca montar uma combinação sem questões.
-  const choices = React.useMemo(() => {
-    const filters = {
+  const topicOf = React.useMemo(
+    () => new Map(catalog.map((q) => [q.id, questionTopic(q)])),
+    [catalog],
+  );
+  const facets = React.useMemo(
+    () =>
+      trainerFilterFacets(
+        catalog,
+        {
+          area,
+          topic,
+          contest,
+          board,
+          career,
+          year,
+          appliedExam,
+          subject,
+          source,
+          reviewed,
+          difficulty,
+          state,
+          category,
+        },
+        topicOf,
+      ),
+    [
+      catalog,
+      area,
+      topic,
       contest,
       board,
       career,
       year,
+      appliedExam,
       subject,
       source,
       reviewed,
       difficulty,
       state,
       category,
-    } as const;
-    const fields = {
-      contest: (item: Question) => item["contest"],
-      board: (item: Question) => item["board"],
-      career: (item: Question) => item["career"],
-      year: (item: Question) => item["year"],
-      subject: (item: Question) => item["subject"],
-      source: (item: Question) => item["source"],
-      reviewed: (item: Question) => (hasReviewedExplanation(item) ? "reviewed" : "pending"),
-      difficulty: (item: Question) => item["difficulty"],
-      state: (item: Question) => item["state"],
-      category: (item: Question) => item["category"],
-    };
-    const scoped = (skip: keyof typeof fields) =>
-      catalog.filter((item) =>
-        (Object.keys(fields) as Array<keyof typeof fields>).every(
-          (key) => key === skip || filters[key] === "all" || fields[key](item) === filters[key],
-        ),
-      );
-    const exams = Array.from(
-      new Map(
-        scoped("contest").map((item) => [
-          examKey(item),
-          `${item["contest"]} — ${item["career"]} · ${item["board"]} · ${item["year"]}`,
-        ]),
-      ).entries(),
-    ).sort((a, b) => b[1].localeCompare(a[1], "pt-BR", { numeric: true }));
+      topicOf,
+    ],
+  );
+  const choices = React.useMemo(() => {
+    const options = (key: keyof typeof facets.counts, selected: string) =>
+      unique([...facets.counts[key].keys(), ...(selected !== "all" ? [selected] : [])]);
     return {
-      contests: unique(scoped("contest").map(fields.contest)),
-      boards: unique(scoped("board").map(fields.board)),
-      careers: unique(scoped("career").map(fields.career)),
-      years: unique(scoped("year").map(fields.year)).sort((x, y) => Number(y) - Number(x)),
-      subjects: unique(scoped("subject").map(fields.subject)),
-      topics: [] as string[],
-      states: unique(scoped("state").map(fields.state)),
-      categories: unique(scoped("category").map(fields.category)),
-      exams: exams.filter(([key]) => {
-        const [c, ca, b, y] = key.split("::");
-        return (
-          (contest === "all" || c === contest) &&
-          (career === "all" || ca === career) &&
-          (board === "all" || b === board) &&
-          (year === "all" || y === year)
-        );
-      }),
+      contests: options("contest", contest),
+      boards: options("board", board),
+      careers: options("career", career),
+      years: options("year", year).sort((a, b) => Number(b) - Number(a)),
+      subjects: options("subject", subject),
+      topics: options("topic", topic),
+      states: options("state", state),
+      categories: options("category", category),
+      exams: options("exam", appliedExam).map(
+        (key) => [key, key.split("::").join(" · ")] as [string, string],
+      ),
     };
-  }, [
-    catalog,
-    contest,
-    board,
-    career,
-    year,
-    subject,
-    source,
-    reviewed,
-    difficulty,
-    state,
-    category,
-  ]);
-  // Ao mexer em um filtro individual, a "prova aplicada" escolhida antes deixa de valer.
+  }, [facets, contest, board, career, year, subject, topic, state, category, appliedExam]);
   const manual =
     <T,>(setter: (value: T) => void) =>
     (value: T) => {
       setAppliedExam("all");
       setter(value);
     };
-  const topicOf = React.useMemo(() => {
-    const m = new Map<string, string | null>();
-    for (const q of catalog) m.set(q.id, classifyTopic(q.subject, q.text));
-    return m;
-  }, [catalog]);
-  const topicChoices = React.useMemo(() => {
-    const set = new Set<string>();
-    for (const q of catalog) {
-      if (subject !== "all" && q.subject !== subject) continue;
-      if (area !== "all" && !subjectInArea(area, q.subject)) continue;
-      const t = topicOf.get(q.id);
-      if (t) set.add(t);
-    }
-    return [...set].sort((a, b) => a.localeCompare(b, "pt-BR"));
-  }, [catalog, subject, area, topicOf]);
-  // Para cada filtro: quantas questões existem em cada opção, respeitando TODOS os outros filtros.
-  const facets = React.useMemo(() => {
-    const keys = [
-      "board",
-      "subject",
-      "topic",
-      "contest",
-      "career",
-      "state",
-      "category",
-      "year",
-      "exam",
-      "source",
-      "reviewed",
-      "difficulty",
-    ] as const;
-    type K = (typeof keys)[number];
-    const val: Record<K, (q: Question) => string> = {
-      board: (q) => q.board,
-      subject: (q) => q.subject,
-      topic: (q) => topicOf.get(q.id) ?? "",
-      contest: (q) => q.contest,
-      career: (q) => q.career,
-      state: (q) => q.state ?? "",
-      category: (q) => q.category ?? "",
-      year: (q) => q.year,
-      exam: (q) => examKey(q),
-      source: (q) => q.source,
-      reviewed: (q) => (hasReviewedExplanation(q) ? "reviewed" : ""),
-      difficulty: (q) => q.difficulty,
-    };
-    const sel: Record<K, string> = {
-      board,
-      subject,
-      topic,
-      contest,
-      career,
-      state,
-      category,
-      year,
-      exam: appliedExam,
-      source,
-      reviewed,
-      difficulty,
-    };
-    const base = area === "all" ? catalog : catalog.filter((q) => subjectInArea(area, q.subject));
-    const counts = {} as Record<K, Map<string, number>>;
-    const totals = {} as Record<K, number>;
-    for (const k of keys) {
-      const m = new Map<string, number>();
-      let all = 0;
-      for (const q of base) {
-        if (!keys.every((o) => o === k || sel[o] === "all" || val[o](q) === sel[o])) continue;
-        all++;
-        const v = val[k](q);
-        if (v) m.set(v, (m.get(v) ?? 0) + 1);
-      }
-      counts[k] = m;
-      totals[k] = all;
-    }
-    return { counts, totals };
-  }, [
-    catalog,
-    area,
-    topicOf,
-    board,
-    subject,
-    topic,
-    contest,
-    career,
-    state,
-    category,
-    year,
-    appliedExam,
-    source,
-    reviewed,
-    difficulty,
-  ]);
   const pool = React.useMemo(
     () =>
       filterTrainerQuestions(
@@ -466,21 +361,6 @@ function QuestionTrainer() {
     setStartedAt(Date.now());
     setStarted(true);
   };
-  // Poucas questões classificadas naquele assunto: amplia para a matéria inteira em vez de abrir vazio.
-  React.useEffect(() => {
-    if (
-      law !== undefined ||
-      !autoStart.current ||
-      loading ||
-      started ||
-      catalog.length === 0 ||
-      pool.length > 0 ||
-      topic === "all"
-    )
-      return;
-    setTopic("all");
-    toast.info("Poucas questões desse assunto: mostrando a matéria inteira.");
-  }, [law, loading, started, catalog.length, pool.length, topic]);
   // Veio do cronograma com ?go=1: começa direto, com 10 questões do assunto, assim que houver questões.
   React.useEffect(() => {
     if (!autoStart.current || loading || started || pool.length === 0) return;
@@ -647,7 +527,7 @@ function QuestionTrainer() {
         <TrainerSetup
           total={catalog.length}
           available={pool.length}
-          choices={{ ...choices, topics: topicChoices }}
+          choices={choices}
           facets={facets}
           values={{
             contest,
@@ -672,13 +552,20 @@ function QuestionTrainer() {
             setCareer: manual(setCareer),
             setYear: manual(setYear),
             setAppliedExam: selectAppliedExam,
-            setSubject: manual(setSubject),
+            setSubject: manual((value: string) => {
+              setSubject(value);
+              setTopic("all");
+            }),
             setSource: manual(setSource),
             setReviewed: manual(setReviewed),
             setDifficulty: manual(setDifficulty),
             setState: manual(setState),
             setCategory: manual(setCategory),
-            setArea,
+            setArea: (value: string) => {
+              setArea(value);
+              setSubject("all");
+              setTopic("all");
+            },
             setTopic: manual(setTopic),
             setLimit,
             setOrderMode,
@@ -1326,10 +1213,13 @@ function TrainerSetup({
             <TrainerFilter
               counts={facets.counts["topic"]}
               allCount={facets.totals["topic"]}
-              label="Assunto (classificação automática)"
+              label="Assunto"
               value={values.topic}
               setValue={setters.setTopic}
               options={choices.topics}
+              labels={Object.fromEntries(
+                choices.topics.map((value) => [value, topicFilterLabel(value)]),
+              )}
               allLabel="Todos os assuntos"
             />
             <TrainerFilter

@@ -1,3 +1,4 @@
+import { canonicalSubject } from "./subjects";
 /**
  * Classificação AUTOMÁTICA das questões por assunto, por palavras-chave do enunciado.
  * É aproximada: serve para o aluno treinar um assunto do cronograma, não para estatística oficial.
@@ -21,7 +22,16 @@ type AreaKey =
   | "contabilidade"
   | "humanos"
   | "atualidades"
-  | "medicina";
+  | "medicina"
+  | "legislacao"
+  | "legislacao-pf"
+  | "etica"
+  | "matematica"
+  | "financeira"
+  | "custos"
+  | "publica"
+  | "penal-militar"
+  | "processual-militar";
 
 const RULES: Record<AreaKey, Rule[]> = {
   portugues: [
@@ -290,7 +300,7 @@ const RULES: Record<AreaKey, Rule[]> = {
       /conceito|objeto da contabilidade|usuarios|finalidade|principios de contabilidade/,
     ],
   ],
-  humanos: [
+  legislacao: [
     ["Lei de Drogas (Lei 11.343/2006)", /11\.?343|drogas|trafico|entorpecente|usuario de drogas/],
     ["Abuso de autoridade (Lei 13.869/2019)", /13\.?869|abuso de autoridade/],
     [
@@ -302,12 +312,34 @@ const RULES: Record<AreaKey, Rule[]> = {
       "Lei de Migração (Lei 13.445/2017)",
       /13\.?445|migracao|imigrante|refugiado|deportacao|expulsao/,
     ],
+  ],
+  humanos: [
     [
       "Tratados e convenções internacionais",
       /tratado|convencao|pacto|corte interamericana|declaracao universal/,
     ],
     ["Teoria geral dos direitos humanos", /direitos humanos|geracao|dimensao|universalidade/],
   ],
+  etica: [["Ética no serviço público", /etica|moral|conduta|dever/]],
+  "legislacao-pf": [
+    ["Lei de Migração", /migracao|13\.?445/],
+    ["Estatuto da Segurança Privada", /seguranca privada|14\.?967/],
+    ["Controle de Produtos Químicos", /produtos quimicos|10\.?357/],
+    ["Identificação civil", /identificacao civil|carteira de identidade|\bcpf\b|\bcin\b/],
+    ["Convenção de Budapeste", /budapeste/],
+  ],
+  matematica: [
+    ["Porcentagem", /porcent|por cento|%/],
+    ["Razão, proporção e regra de três", /razao|proporc|regra de tres/],
+  ],
+  financeira: [
+    ["Juros simples e compostos", /juros|capitaliz|montante/],
+    ["Descontos", /desconto/],
+  ],
+  custos: [["Custos e despesas", /custo|despesa|custeio/]],
+  publica: [["Contabilidade aplicada ao setor público", /nbc tsp|setor publico|pcasp/]],
+  "penal-militar": [],
+  "processual-militar": [],
   atualidades: [
     ["Segurança pública no Brasil", /seguranca publica|crime organizado|violencia|facc/],
     ["Economia e finanças públicas", /economia|inflacao|pib|juros|orcamento/],
@@ -325,27 +357,48 @@ const RULES: Record<AreaKey, Rule[]> = {
   ],
 };
 
-/** Qual grande área a matéria do banco pertence (chave das regras acima). */
-export function areaOfSubject(subject: string): AreaKey | null {
-  const n = strip(subject);
-  if (/portugues/.test(n)) return "portugues";
-  if (/estatistica/.test(n)) return "estatistica";
-  if (/raciocinio|logic|matematica/.test(n)) return "raciocinio";
-  if (/constitucional/.test(n)) return "constitucional";
-  if (/administrativ/.test(n)) return "administrativo";
-  if (/processual penal|processo penal/.test(n)) return "processual";
-  if (/legislacao especial|legislacao penal|direitos humanos|etica/.test(n)) return "humanos";
-  if (/penal/.test(n)) return "penal";
-  if (/informatica|tecnologia/.test(n)) return "informatica";
-  if (/transito/.test(n)) return "transito";
-  if (/fisica/.test(n)) return "fisica";
-  if (/contabilidade/.test(n)) return "contabilidade";
-  if (/atualidades|economia/.test(n)) return "atualidades";
-  if (/medicina|criminalistica/.test(n)) return "medicina";
-  return null;
+/** Explicit areas keep ethics, special laws, mathematical and military disciplines separate. */
+export function subjectAreas(subject: string): AreaKey[] {
+  const n = strip(canonicalSubject(subject)).replace(/^nocoes de /, "");
+  const out = new Set<AreaKey>();
+  const add = (area: AreaKey) => out.add(area);
+  if (/portugues/.test(n)) add("portugues");
+  if (/estatistica/.test(n)) add("estatistica");
+  if (/raciocinio|logico/.test(n)) add("raciocinio");
+  if (/matematica financeira/.test(n)) add("financeira");
+  else if (/^matematica$/.test(n)) add("matematica");
+  if (/constitucional/.test(n)) add("constitucional");
+  if (/administrativo/.test(n)) add("administrativo");
+  const processual = /processual penal|processo penal/.test(n);
+  if (/militar/.test(n)) add(processual ? "processual-militar" : "penal-militar");
+  else {
+    if (processual) add("processual");
+    if (/^direito penal|direito penal,|penal e processual/.test(n)) add("penal");
+  }
+  if (n === "legislacao especifica da pf") add("legislacao-pf");
+  else if (/legislacao|lei de abuso/.test(n)) add("legislacao");
+  if (/direitos humanos/.test(n)) add("humanos");
+  if (/etica/.test(n)) add("etica");
+  if (/^informatica$|^tecnologia da informacao$/.test(n)) add("informatica");
+  if (/transito/.test(n)) {
+    out.delete("legislacao");
+    add("transito");
+  }
+  if (/^fisica$/.test(n)) add("fisica");
+  if (/contabilidade publica/.test(n)) add("publica");
+  else if (/contabilidade de custos/.test(n)) add("custos");
+  else if (/contabilidade|contabil/.test(n)) add("contabilidade");
+  if (/atualidades/.test(n)) add("atualidades");
+  if (/^medicina legal$|^criminalistica$|^pericia criminal$/.test(n)) add("medicina");
+  return [...out];
 }
 
-/** Assunto provável da questão (ou null se nenhuma regra casar). */
+/** A composite discipline has no single inferred topic family. */
+export function areaOfSubject(subject: string): AreaKey | null {
+  const areas = subjectAreas(subject);
+  return areas.length === 1 ? areas[0]! : null;
+}
+
 export function classifyTopic(subject: string, text: string): string | null {
   const area = areaOfSubject(subject);
   if (!area) return null;
@@ -354,31 +407,11 @@ export function classifyTopic(subject: string, text: string): string | null {
   return null;
 }
 
-/**
- * A matéria do cronograma ("Direito Penal e Processual Penal") cobre quais matérias do banco?
- * Nomes compostos juntam as áreas.
- */
 export function subjectInArea(plannedArea: string, questionSubject: string): boolean {
-  const p = strip(plannedArea);
-  const q = areaOfSubject(questionSubject);
-  if (!q) return strip(questionSubject).includes(p) || p.includes(strip(questionSubject));
-  const wanted = new Set<AreaKey>();
-  if (/portugues/.test(p)) wanted.add("portugues");
-  if (/estatistica/.test(p)) wanted.add("estatistica");
-  if (/raciocinio|logic/.test(p)) wanted.add("raciocinio");
-  if (/constitucional/.test(p)) wanted.add("constitucional");
-  if (/administrativ/.test(p)) wanted.add("administrativo");
-  if (/processual/.test(p)) wanted.add("processual");
-  if (/penal/.test(p) && !/^direito processual penal$/.test(p) && !/legislacao/.test(p))
-    wanted.add("penal");
-  if (/legislacao|direitos humanos|etica/.test(p)) wanted.add("humanos");
-  if (/informatica|tecnologia/.test(p)) wanted.add("informatica");
-  if (/transito/.test(p)) wanted.add("transito");
-  if (/fisica/.test(p)) wanted.add("fisica");
-  if (/contabilidade/.test(p)) wanted.add("contabilidade");
-  if (/atualidades|economia/.test(p)) wanted.add("atualidades");
-  if (/medicina|criminalistica/.test(p)) wanted.add("medicina");
-  return wanted.has(q);
+  if (strip(canonicalSubject(plannedArea)) === strip(canonicalSubject(questionSubject)))
+    return true;
+  const wanted = subjectAreas(plannedArea);
+  return subjectAreas(questionSubject).some((area) => wanted.includes(area));
 }
 
 /** Verificação rápida: node --experimental-strip-types src/lib/questionTopics.ts */

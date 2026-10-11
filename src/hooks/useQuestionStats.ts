@@ -1,7 +1,7 @@
 import { canonicalBoard, canonicalSubject } from "@/lib/subjects";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { fetchAllRows } from "@/lib/catalog";
+import { fetchAllRows, isMissingQuestionTable } from "@/lib/catalog";
 import {
   hasReviewedExplanation,
   isEligibleQuestion,
@@ -74,7 +74,10 @@ async function loadStats(): Promise<QuestionStats> {
           .select(BOARD_COLUMNS)
           .order("id")
           .range(from, to) as unknown as Page,
-    ).catch(() => [] as Row[]), // tabela ainda não criada
+    ).catch((error: unknown) => {
+      if (isMissingQuestionTable(error)) return [] as Row[];
+      throw error;
+    }),
   ]);
 
   // Provas de bancas (FGV etc.): contam como oficiais; "needs_visual" equivale a revisão de contexto pendente.

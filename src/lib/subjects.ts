@@ -10,22 +10,94 @@ const strip = (text: string) =>
     .replace(/\s+/g, " ")
     .trim();
 
+export const SUBJECT_ALIASES: Record<string, string> = {};
+const families: Record<string, string[]> = {
+  "Língua Portuguesa": ["Português", "Língua Portuguesa"],
+  "Língua Inglesa": ["Inglês", "Língua Inglesa", "Língua Estrangeira - Inglês"],
+  "Raciocínio Lógico": [
+    "RLM",
+    "Raciocínio Lógico",
+    "Raciocínio Lógico-Matemático",
+    "Raciocínio Lógico Matemático",
+  ],
+  Informática: [
+    "Informática",
+    "Noções de Informática",
+    "Informática Básica",
+    "Microsoft Office e Informática",
+  ],
+  "Direito Penal": ["Direito Penal", "Noções de Direito Penal"],
+  "Direito Processual Penal": [
+    "Direito Processual Penal",
+    "Noções de Direito Processual Penal",
+    "Direito de Processo Penal",
+    "Processo Penal",
+    "Processual Penal",
+    "CPP",
+    "Noções de Processo Penal",
+  ],
+  "Direito Constitucional": ["Direito Constitucional", "Noções de Direito Constitucional"],
+  "Direito Administrativo": ["Direito Administrativo", "Noções de Direito Administrativo"],
+  "Contabilidade Geral": ["Contabilidade", "Contabilidade Geral", "Noções de Contabilidade"],
+  Estatística: ["Estatística", "Estatística e Probabilidade", "Noções de Estatística"],
+  "Direitos Humanos": ["Direitos Humanos", "Direito Humanos", "Noções de Direitos Humanos"],
+  "Medicina Legal": ["Medicina Legal", "Noções de Medicina Legal"],
+  Criminalística: ["Criminalística", "Noções de Criminalística"],
+  Criminologia: ["Criminologia", "Noções de Criminologia"],
+  "Legislação de Trânsito": ["Legislação de Trânsito", "Direito de Trânsito", "CTB"],
+  "Legislação Penal Extravagante": [
+    "Legislação Penal Extravagante",
+    "Legislação Penal Especial",
+    "Legislação Extravagante",
+    "Legislação de Direito Penal e Processual Penal Especial",
+    "Noções de Legislação Penal e Processual Extravagante",
+  ],
+  "Legislação Específica da PF": [
+    "Legislação Específica da PF",
+    "Legislação específica da Polícia Federal",
+  ],
+  "Lei Orgânica da PCMG": [
+    "Lei Orgânica da PCMG",
+    "Lei Orgânica da Polícia Civil do Estado de Minas Gerais",
+  ],
+  "Conhecimentos Específicos": ["Conhecimentos Específicos", "Conhecimentos Especificos"],
+};
+for (const [name, aliases] of Object.entries(families))
+  for (const alias of aliases) SUBJECT_ALIASES[strip(alias)] = name;
+
+/** Exact aliases only: combined disciplines, military law and specialist subjects stay distinct. */
 export function canonicalSubject(raw: string | null | undefined): string {
-  const text = (raw ?? "").trim();
+  const text = (raw ?? "").replace(/\s+/g, " ").trim();
   if (!text) return text;
-  // "Matemática Financeira — Juros simples": a família é o que vem antes do travessão com espaços.
-  const key = strip(text.split(/\s[—–]\s/)[0] ?? text);
-  if (key.startsWith("raciocinio logico")) return "Raciocínio Lógico";
-  if (key.startsWith("informatica") || key.startsWith("nocoes de informatica"))
-    return "Informática";
-  if (key === "portugues" || key.startsWith("lingua portuguesa")) return "Língua Portuguesa";
-  if (/\bingles\b/.test(key)) return "Língua Inglesa";
-  return text;
+  if (/^https?:\/\//i.test(text)) return "Disciplina não classificada";
+  return SUBJECT_ALIASES[strip(text)] ?? text.replace(/^•\s*Boa prova!\s*/i, "");
+}
+
+/** Match case/accent/spacing variants without merging different articles or narrower subjects. */
+export function topicIdentity(raw: string | null | undefined) {
+  return strip((raw ?? "").replace(/\s+/g, " ").trim()).replace(/[.。]+$/, "");
+}
+
+export function canonicalTopic(raw: string | null | undefined): string | null {
+  const text = (raw ?? "").replace(/\s+/g, " ").trim();
+  if (!text) return null;
+  const aliases: Record<string, string> = {
+    "tabela verdade": "Tabela-verdade",
+    crase: "Crase",
+    pontuacao: "Pontuação",
+    "regime de competencia": "Regime de competência",
+    "lei maria da penha": "Lei Maria da Penha",
+    "inquerito policial": "Inquérito policial",
+    "cadeia de custodia": "Cadeia de custódia",
+  };
+  return aliases[topicIdentity(text)] ?? text;
 }
 
 /** Banca em maiúsculas e sem variações ("Cebraspe", "CESPE/CEBRASPE" → "CEBRASPE"). Vazio fica vazio. */
 export function canonicalBoard(raw: string | null | undefined): string {
   const b = (raw ?? "").trim().replace(/\s+/g, " ").toUpperCase();
+  if (["nao informada", "nao informado", "banca nao informada"].includes(strip(b)))
+    return "Não informada";
   return /^CESPE\b|^CEBRASPE\b/.test(b) ? "CEBRASPE" : b;
 }
 
