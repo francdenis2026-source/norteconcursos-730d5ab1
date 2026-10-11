@@ -40,7 +40,6 @@ import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
 import { MobileHub } from "@/components/landing/MobileHub";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
-import { HeroGeometry } from "@/components/landing/fx";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -273,7 +272,6 @@ function Index() {
           </div>
           <div className="lp-hero__shade" aria-hidden="true" />
           <div className="lp-hero__grid" aria-hidden="true" />
-          <HeroGeometry />
           <div className="lp-container lp-hero__body">
             <div className="lp-hero__layout">
               <div className="lp-hero__content">

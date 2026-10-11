@@ -7929,23 +7929,6 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 }
 
 
-/* Constelação da hero (src/components/landing/fx.tsx) */
-.fx-constellation {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  mask-image: linear-gradient(90deg, transparent 8%, black 45%);
-}
-@media (prefers-reduced-motion: reduce) {
-  .fx-constellation {
-    display: none;
-  }
-}
-
-
 /* Landing polish: hierarquia, toque e microinterações da nova homepage */
 .lp-header {
   background: linear-gradient(180deg, oklch(0.08 0.025 263 / 0.72), transparent);
@@ -9614,19 +9597,9 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .lp::before { display: none; }
 }
 
-/* Replace the cursor glow with a quiet geometric mesh. */
+/* Homepage remains clean: no cursor spotlight or canvas decoration. */
 .lp::before {
   display: none;
-}
-.fx-geometry {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  opacity: 0.72;
-  mask-image: linear-gradient(90deg, transparent 4%, #000 38%, #000 84%, transparent 100%);
 }
 .page-hero,
 .tactical-feature-hero,
