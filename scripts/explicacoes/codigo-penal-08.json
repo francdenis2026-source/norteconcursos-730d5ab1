@@ -1,0 +1,240 @@
+{
+  "course_slug": "codigo-penal",
+  "law": "Código Penal — lote 08: arts. 179 a 215",
+  "units": {
+    "art-179": {
+      "simples": "Fraude à execução: fraudar execução, alienando, desviando, destruindo ou danificando bens, ou simulando dívidas. Pena: detenção de 6 meses a 2 anos, ou multa. Somente se procede mediante queixa.",
+      "pontos": ["Alienar, desviar, destruir ou danificar bens, ou simular dívidas, para fraudar execução.", "Detenção de 6 meses a 2 anos, ou multa.", "Ação penal privada (queixa)."],
+      "atencao": ["Ação penal por QUEIXA (privada)."],
+      "exemplo": "O devedor, já sendo executado, vende seu único imóvel a um parente por preço simbólico para frustrar a cobrança.",
+      "prova": ["Assertiva que torna pública incondicionada a ação na fraude à execução erra: é por queixa."],
+      "termos": [],
+      "remissoes": ["Art. 171"]
+    },
+    "art-180": {
+      "simples": "Receptação: adquirir, receber, transportar, conduzir ou ocultar, em proveito próprio ou alheio, coisa que sabe ser produto de crime, ou influir para que terceiro, de boa-fé, a adquira, receba ou oculte. Pena: reclusão de 2 a 6 anos e multa (texto atual). Receptação qualificada (§1º): no exercício de atividade comercial ou industrial, coisa que deve saber ser produto de crime (reclusão de 3 a 8 anos e multa), e o §2º equipara à atividade comercial qualquer forma de comércio irregular ou clandestino, inclusive em residência. Receptação culposa (§3º): adquirir ou receber coisa que, por sua natureza, pela desproporção entre valor e preço ou pela condição de quem a oferece, deve presumir-se obtida por meio criminoso: detenção de 1 mês a 1 ano, ou multa, ou ambas. A receptação é punível ainda que desconhecido ou isento de pena o autor do crime anterior (§4º). Bens de entes públicos: pena em dobro (§6º); fios, cabos e equipamentos de energia, telefonia, dados ou cargas ferroviárias ou metroviárias: em dobro (§7º).",
+      "pontos": ["Caput: sabe ser produto de crime; reclusão de 2 a 6 anos e multa.", "§1º: qualificada (atividade comercial ou industrial; 'deve saber'): reclusão de 3 a 8 anos e multa.", "§2º: comércio irregular ou clandestino, inclusive em residência, equipara-se à atividade comercial.", "§3º: culposa (deve presumir-se obtida por meio criminoso): detenção de 1 mês a 1 ano, ou multa, ou ambas.", "§4º: punível ainda que o autor do crime anterior seja desconhecido ou isento de pena.", "§6º: bens da União, Estados, DF, Municípios e entes públicos: pena em dobro.", "§7º: fios, cabos, equipamentos e cargas citados: pena em dobro."],
+      "atencao": ["Caput exige DOLO DIRETO ('sabe ser produto de crime'); no §1º basta 'deve saber'.", "Receptação CULPOSA: §3º, com pena de detenção.", "A receptação é crime AUTÔNOMO: independe da punição do autor do crime antecedente (§4º)."],
+      "exemplo": "Quem compra, por preço muito abaixo do mercado, celular oferecido por desconhecido na rua pode responder por receptação culposa (§3º).",
+      "prova": ["Assertiva que exige a condenação do autor do crime anterior para punir a receptação erra: o §4º a dispensa."],
+      "termos": [{ "termo": "Receptação", "significado": "Lidar com coisa que se sabe (ou deve saber) ser produto de crime." }],
+      "remissoes": ["Art. 180-A", "Art. 155"]
+    },
+    "art-180-a": {
+      "simples": "Receptação de animais: adquirir, receber, transportar, conduzir, ocultar, ter em depósito ou vender, com a finalidade de produção ou comercialização, semovente domesticável de produção, ainda que abatido ou dividido em partes, ou animal doméstico, que sabe ou deve saber ser produto de crime. Pena: reclusão de 3 a 8 anos e multa (texto atual).",
+      "pontos": ["Objeto: semovente domesticável de produção (mesmo abatido ou dividido em partes) ou animal doméstico.", "Finalidade de produção ou comercialização.", "Sabe ou deve saber que é produto de crime.", "Reclusão de 3 a 8 anos e multa."],
+      "atencao": ["Basta 'sabe ou deve saber'."],
+      "exemplo": "Frigorífico recebe gado abatido de origem criminosa para comercializar.",
+      "prova": ["Assertiva que exige finalidade de lucro direto para o crime erra: o tipo fala em finalidade de produção ou comercialização."],
+      "termos": [{ "termo": "Semovente", "significado": "Animal que se move por si, como o gado." }],
+      "remissoes": ["Art. 180"]
+    },
+    "art-181": {
+      "simples": "Imunidades absolutas: é isento de pena quem comete qualquer dos crimes contra o patrimônio em prejuízo do cônjuge, na constância da sociedade conjugal, ou de ascendente ou descendente, seja o parentesco legítimo ou ilegítimo, civil ou natural. O texto traz a indicação 'Vide Lei nº 10.741/2003' (Estatuto da Pessoa Idosa).",
+      "pontos": ["Isento de pena: crime patrimonial contra o cônjuge na constância da sociedade conjugal.", "Isento de pena: contra ascendente ou descendente (qualquer parentesco)."],
+      "atencao": ["É escusa absolutória (imunidade absoluta); o texto remete ao Estatuto da Pessoa Idosa para conferir exceções.", "Não vale se o crime é roubo ou extorsão, ou com grave ameaça ou violência (art. 183)."],
+      "exemplo": "Filho que furta objeto do pai é isento de pena (salvo exceções legais).",
+      "prova": ["Assertiva que aplica a imunidade do art. 181 ao roubo praticado contra o pai erra: o art. 183 a afasta quando há violência ou grave ameaça."],
+      "termos": [{ "termo": "Escusa absolutória", "significado": "Causa que isenta o agente de pena por razões de política criminal, mesmo havendo crime." }],
+      "remissoes": ["Art. 182", "Art. 183"]
+    },
+    "art-182": {
+      "simples": "Imunidades relativas: somente se procede mediante representação se o crime patrimonial é cometido em prejuízo de cônjuge desquitado ou judicialmente separado; de irmão, legítimo ou ilegítimo; ou de tio ou sobrinho com quem o agente coabita. O texto remete ao Estatuto da Pessoa Idosa.",
+      "pontos": ["Ação condicionada à representação: cônjuge separado; irmão; tio ou sobrinho que coabita com o agente."],
+      "atencao": ["Imunidade RELATIVA: há crime, mas a ação depende de representação."],
+      "exemplo": "Furto contra o irmão: o processo depende de representação da vítima.",
+      "prova": ["Assertiva que isenta de pena o furto praticado contra o irmão erra: a hipótese é de ação condicionada, não de isenção."],
+      "termos": [],
+      "remissoes": ["Arts. 181 e 183"]
+    },
+    "art-183": {
+      "simples": "Exceções às imunidades: não se aplicam os arts. 181 e 182 se o crime é roubo ou extorsão, ou, em geral, quando haja emprego de grave ameaça ou violência à pessoa; e ao estranho que participa do crime.",
+      "pontos": ["Roubo, extorsão ou, em geral, grave ameaça ou violência: sem imunidade.", "O estranho que participa do crime não se beneficia."],
+      "atencao": ["A imunidade é pessoal: não se comunica ao estranho (art. 30)."],
+      "exemplo": "O filho que rouba o pai com ameaça não é isento de pena.",
+      "prova": ["Assertiva que estende a imunidade do art. 181 ao coautor estranho à família erra."],
+      "termos": [],
+      "remissoes": ["Arts. 181 e 182", "Art. 30"]
+    },
+    "art-183-a": {
+      "simples": "Aumento de pena nos crimes patrimoniais cometidos contra instituições financeiras e prestadores de serviço de segurança privada (Estatuto da Segurança Privada): penas aumentadas de 1/3 até o dobro. (Na plataforma, o texto desta unidade traz em seguida a violação de direito autoral, art. 184, com detenção de 3 meses a 1 ano ou multa; reclusão de 2 a 4 anos e multa na reprodução com intuito de lucro e no oferecimento ao público por sistema que permita a seleção da obra; e a exceção do §4º para limitações ao direito de autor e cópia privada de um só exemplar sem lucro.)",
+      "pontos": ["Crimes do título contra instituições financeiras e prestadores de segurança privada: aumento de 1/3 até o dobro.", "Violação de direito autoral: detenção de 3 meses a 1 ano, ou multa; formas com intuito de lucro: reclusão de 2 a 4 anos e multa.", "§4º: não se aplica às limitações ao direito de autor nem à cópia privada de um só exemplar sem lucro."],
+      "atencao": ["O aumento é de 1/3 até o DOBRO.", "A violação de direito autoral com intuito de lucro tem pena de reclusão."],
+      "exemplo": "Roubo a uma agência bancária: pena aumentada nos termos do art. 183-A.",
+      "prova": ["Assertiva que fixa o aumento de 183-A em até metade erra: é de um terço até o dobro."],
+      "termos": [],
+      "remissoes": ["Art. 186 (ação penal nos crimes contra a propriedade imaterial)"]
+    },
+    "art-186": {
+      "simples": "Ação penal nos crimes contra a propriedade imaterial: procede-se mediante queixa nos crimes do caput do art. 184; ação penal pública incondicionada nos crimes dos §§1º e 2º do art. 184; ação pública incondicionada nos crimes cometidos em desfavor de entidades de direito público, autarquia, empresa pública, sociedade de economia mista ou fundação pública; e ação pública condicionada à representação nos crimes do §3º do art. 184.",
+      "pontos": ["Caput do art. 184: queixa.", "§§1º e 2º do art. 184: pública incondicionada.", "Contra entes públicos: pública incondicionada.", "§3º do art. 184: pública condicionada à representação."],
+      "atencao": ["Quatro regimes de ação penal: queixa; incondicionada; incondicionada (entes públicos); condicionada (§3º)."],
+      "exemplo": "Violação simples de direito autoral (caput): o titular deve oferecer queixa.",
+      "prova": ["Assertiva que torna pública incondicionada a ação do caput do art. 184 erra: é por queixa."],
+      "termos": [],
+      "remissoes": ["Art. 183-A (texto do art. 184)"]
+    },
+    "art-197": {
+      "simples": "Atentado contra a liberdade de trabalho: constranger alguém, mediante violência ou grave ameaça, a exercer ou não exercer arte, ofício, profissão ou indústria, ou a trabalhar ou não trabalhar durante certo período ou em determinados dias (detenção de 1 mês a 1 ano e multa, além da pena da violência); ou a abrir ou fechar o seu estabelecimento de trabalho, ou a participar de parede ou paralisação de atividade econômica (detenção de 3 meses a 1 ano e multa, além da violência).",
+      "pontos": ["I – constranger a exercer ou não exercer profissão ou a trabalhar ou não: detenção de 1 mês a 1 ano e multa.", "II – constranger a abrir ou fechar estabelecimento ou a participar de greve ou paralisação: detenção de 3 meses a 1 ano e multa.", "Em ambos, além da pena da violência."],
+      "atencao": ["Exige violência ou grave ameaça."],
+      "exemplo": "Ameaçar um comerciante para que feche o estabelecimento em dia de paralisação.",
+      "prova": ["Assertiva que dispensa violência ou grave ameaça no art. 197 erra."],
+      "termos": [],
+      "remissoes": ["Arts. 198 a 200"]
+    },
+    "art-198": {
+      "simples": "Atentado contra a liberdade de contrato de trabalho e boicotagem violenta: constranger alguém, mediante violência ou grave ameaça, a celebrar contrato de trabalho, ou a não fornecer a outrem ou não adquirir de outrem matéria-prima ou produto industrial ou agrícola. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência.",
+      "pontos": ["Constranger a celebrar contrato de trabalho.", "Ou a não fornecer ou não adquirir matéria-prima ou produto (boicote violento).", "Detenção de 1 mês a 1 ano, multa e pena da violência."],
+      "atencao": ["Boicotagem violenta: coação para não fornecer ou não comprar."],
+      "exemplo": "Ameaçar um fornecedor para que deixe de vender a um concorrente.",
+      "prova": ["Assertiva que torna lícita a boicotagem pacífica como crime erra: o tipo exige violência ou grave ameaça."],
+      "termos": [],
+      "remissoes": ["Art. 197"]
+    },
+    "art-199": {
+      "simples": "Atentado contra a liberdade de associação: constranger alguém, mediante violência ou grave ameaça, a participar ou deixar de participar de determinado sindicato ou associação profissional. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência.",
+      "pontos": ["Constranger a participar ou deixar de participar de sindicato ou associação profissional.", "Violência ou grave ameaça.", "Detenção de 1 mês a 1 ano, multa e pena da violência."],
+      "atencao": ["Protege a liberdade de filiação sindical ou profissional (para ingressar ou para sair)."],
+      "exemplo": "Ameaçar um trabalhador para que se desfilie do sindicato.",
+      "prova": ["Assertiva que restringe o art. 199 à coação para participar (e não para deixar de participar) erra."],
+      "termos": [],
+      "remissoes": ["Art. 197"]
+    },
+    "art-200": {
+      "simples": "Paralisação de trabalho seguida de violência ou perturbação da ordem: participar de suspensão ou abandono coletivo de trabalho, praticando violência contra pessoa ou contra coisa. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência. Para considerar-se coletivo, o abandono exige o concurso de, pelo menos, três empregados.",
+      "pontos": ["Participar de suspensão ou abandono coletivo de trabalho com violência contra pessoa ou coisa.", "Detenção de 1 mês a 1 ano, multa e pena da violência.", "Parágrafo único: mínimo de TRÊS empregados."],
+      "atencao": ["A greve em si não é crime; o crime é a violência na paralisação.", "Coletivo = pelo menos três empregados."],
+      "exemplo": "Em uma greve, grupo de trabalhadores depreda máquinas da empresa.",
+      "prova": ["Assertiva que considera crime a mera adesão pacífica à greve erra: o tipo exige violência."],
+      "termos": [],
+      "remissoes": ["Art. 201"]
+    },
+    "art-201": {
+      "simples": "Paralisação de trabalho de interesse coletivo: participar de suspensão ou abandono coletivo de trabalho, provocando a interrupção de obra pública ou serviço de interesse coletivo. Pena: detenção de 6 meses a 2 anos e multa.",
+      "pontos": ["Participar de suspensão ou abandono coletivo de trabalho.", "Resultado: interrupção de obra pública ou serviço de interesse coletivo.", "Detenção de 6 meses a 2 anos e multa."],
+      "atencao": ["Diferente do art. 200 (violência), aqui o foco é a interrupção de obra pública ou serviço coletivo."],
+      "exemplo": "Paralisação que interrompe o fornecimento de serviço essencial de interesse coletivo.",
+      "prova": ["Assertiva que exige violência no art. 201 erra: o tipo se configura pela interrupção da obra ou serviço."],
+      "termos": [],
+      "remissoes": ["Art. 200"]
+    },
+    "art-202": {
+      "simples": "Invasão de estabelecimento industrial, comercial ou agrícola e sabotagem: invadir ou ocupar estabelecimento industrial, comercial ou agrícola, com o intuito de impedir ou embaraçar o curso normal do trabalho, ou com o mesmo fim danificar o estabelecimento ou as coisas nele existentes ou delas dispor. Pena: reclusão de 1 a 3 anos e multa.",
+      "pontos": ["Invadir ou ocupar estabelecimento industrial, comercial ou agrícola.", "Intuito de impedir ou embaraçar o trabalho (ou danificar ou dispor das coisas).", "Reclusão de 1 a 3 anos e multa."],
+      "atencao": ["Exige o intuito específico de impedir ou embaraçar o trabalho."],
+      "exemplo": "Grupo ocupa a fábrica para paralisar a produção e danifica equipamentos.",
+      "prova": ["Assertiva que dispensa o intuito de impedir ou embaraçar o trabalho erra."],
+      "termos": [{ "termo": "Sabotagem", "significado": "Dano ou obstrução deliberada à produção." }],
+      "remissoes": ["Art. 163 (dano)"]
+    },
+    "art-203": {
+      "simples": "Frustração de direito assegurado por lei trabalhista: frustrar, mediante fraude ou violência, direito assegurado pela legislação do trabalho. Pena: detenção de 1 a 2 anos e multa, além da pena da violência. Na mesma pena quem obriga ou coage alguém a usar mercadorias de determinado estabelecimento para impossibilitar o desligamento em virtude de dívida, ou impede alguém de se desligar de serviços mediante coação ou retenção de documentos pessoais ou contratuais. A pena aumenta de um sexto a um terço se a vítima é menor de 18 anos, idosa, gestante, indígena ou portadora de deficiência física ou mental.",
+      "pontos": ["Frustrar direito trabalhista mediante fraude ou violência.", "Detenção de 1 a 2 anos, multa e pena da violência.", "§1º: coagir a usar mercadorias do estabelecimento (servidão por dívida) ou impedir o desligamento por coação ou retenção de documentos.", "§2º: aumento de 1/6 a 1/3 (menor de 18, idosa, gestante, indígena, pessoa com deficiência)."],
+      "atencao": ["Reter documentos para impedir o desligamento é conduta do §1º, II."],
+      "exemplo": "O empregador retém a carteira de trabalho para impedir que o empregado deixe o serviço.",
+      "prova": ["Assertiva que exige violência física para o art. 203 erra: pode ser fraude ou violência."],
+      "termos": [],
+      "remissoes": ["Art. 149 (trabalho análogo ao de escravo)"]
+    },
+    "art-204": {
+      "simples": "Frustração de lei sobre a nacionalização do trabalho: frustrar, mediante fraude ou violência, obrigação legal relativa à nacionalização do trabalho. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência.",
+      "pontos": ["Frustrar obrigação legal de nacionalização do trabalho, mediante fraude ou violência.", "Detenção de 1 mês a 1 ano, multa e pena da violência."],
+      "atencao": ["Exige fraude ou violência."],
+      "exemplo": "Fraude para burlar a cota legal de trabalhadores nacionais.",
+      "prova": ["Assertiva que pune a simples omissão sem fraude ou violência erra: o tipo exige o meio fraudulento ou violento."],
+      "termos": [],
+      "remissoes": ["Art. 203"]
+    },
+    "art-205": {
+      "simples": "Exercício de atividade com infração de decisão administrativa: exercer atividade de que está impedido por decisão administrativa. Pena: detenção de 3 meses a 2 anos, ou multa.",
+      "pontos": ["Exercer atividade da qual está impedido por decisão administrativa.", "Detenção de 3 meses a 2 anos, ou multa."],
+      "atencao": ["O impedimento decorre de decisão ADMINISTRATIVA (não judicial)."],
+      "exemplo": "Profissional suspenso pelo conselho de classe continua a exercer a atividade.",
+      "prova": ["Assertiva que exige decisão judicial para o impedimento erra: o tipo fala em decisão administrativa."],
+      "termos": [],
+      "remissoes": ["Art. 47, II"]
+    },
+    "art-206": {
+      "simples": "Aliciamento para fim de emigração: recrutar trabalhadores, mediante fraude, com o fim de levá-los para território estrangeiro. Pena: detenção de 1 a 3 anos e multa.",
+      "pontos": ["Recrutar trabalhadores mediante fraude.", "Fim de levá-los para território estrangeiro.", "Detenção de 1 a 3 anos e multa."],
+      "atencao": ["Exige FRAUDE e fim de levar os trabalhadores ao exterior."],
+      "exemplo": "Enganar trabalhadores com promessas falsas de emprego no exterior para levá-los ao estrangeiro.",
+      "prova": ["Assertiva que aplica o art. 206 ao recrutamento para outra localidade do Brasil erra: para isso há o art. 207."],
+      "termos": [],
+      "remissoes": ["Art. 207", "Art. 149-A"]
+    },
+    "art-207": {
+      "simples": "Aliciamento de trabalhadores de um local para outro do território nacional: aliciar trabalhadores com o fim de levá-los de uma para outra localidade. Pena: detenção de 1 a 3 anos e multa. Incorre na mesma pena quem recruta trabalhadores fora da localidade de execução do trabalho, dentro do território nacional, mediante fraude ou cobrança de qualquer quantia do trabalhador, ou não assegura condições do seu retorno ao local de origem. A pena aumenta de um sexto a um terço se a vítima é menor de 18 anos, idosa, gestante, indígena ou portadora de deficiência física ou mental.",
+      "pontos": ["Aliciar trabalhadores para levá-los de uma localidade a outra do país.", "Detenção de 1 a 3 anos e multa.", "§1º: recrutar fraudulentamente ou cobrando quantia; ou não assegurar o retorno.", "§2º: aumento de 1/6 a 1/3 (menor de 18, idosa, gestante, indígena, pessoa com deficiência)."],
+      "atencao": ["Dentro do território nacional (diferente do art. 206)."],
+      "exemplo": "Aliciar trabalhadores rurais para outro estado e deixá-los sem condições de retornar.",
+      "prova": ["Assertiva que aplica o art. 207 ao aliciamento para o exterior erra: esse é o art. 206."],
+      "termos": [],
+      "remissoes": ["Art. 206"]
+    },
+    "art-208": {
+      "simples": "Ultraje a culto e impedimento ou perturbação de ato a ele relativo: escarnecer de alguém publicamente, por motivo de crença ou função religiosa; impedir ou perturbar cerimônia ou prática de culto religioso; vilipendiar publicamente ato ou objeto de culto religioso. Pena: detenção de 1 mês a 1 ano, ou multa. Se há emprego de violência, a pena é aumentada de um terço, sem prejuízo da correspondente à violência.",
+      "pontos": ["Escarnecer publicamente por crença ou função religiosa.", "Impedir ou perturbar cerimônia ou prática de culto.", "Vilipendiar publicamente ato ou objeto de culto.", "Detenção de 1 mês a 1 ano, ou multa.", "Violência: aumento de 1/3, mais a pena da violência."],
+      "atencao": ["Três condutas alternativas."],
+      "exemplo": "Invadir um templo durante o culto, gritando para interromper a cerimônia.",
+      "prova": ["Assertiva que exige violência para configurar o crime do art. 208 erra: a violência apenas aumenta a pena."],
+      "termos": [{ "termo": "Vilipendiar", "significado": "Tratar com desprezo, ultrajar." }],
+      "remissoes": ["Art. 209"]
+    },
+    "art-209": {
+      "simples": "Impedimento ou perturbação de cerimônia funerária: impedir ou perturbar enterro ou cerimônia funerária. Pena: detenção de 1 mês a 1 ano, ou multa. Com violência, a pena aumenta de um terço, sem prejuízo da pena da violência.",
+      "pontos": ["Impedir ou perturbar enterro ou cerimônia funerária.", "Detenção de 1 mês a 1 ano, ou multa.", "Violência: aumento de 1/3 e pena da violência."],
+      "atencao": ["O aumento de um terço vale se há emprego de violência."],
+      "exemplo": "Tumultuar um velório para impedir a cerimônia.",
+      "prova": ["Assertiva que dispensa a cerimônia ou enterro como objeto do crime erra."],
+      "termos": [],
+      "remissoes": ["Art. 208"]
+    },
+    "art-210": {
+      "simples": "Violação de sepultura: violar ou profanar sepultura ou urna funerária. Pena: reclusão de 1 a 3 anos e multa.",
+      "pontos": ["Violar ou profanar sepultura ou urna funerária.", "Reclusão de 1 a 3 anos e multa."],
+      "atencao": ["A pena é de RECLUSÃO."],
+      "exemplo": "Abrir uma sepultura sem autorização, desrespeitando o local.",
+      "prova": ["Assertiva que prevê detenção para a violação de sepultura erra: é reclusão."],
+      "termos": [],
+      "remissoes": ["Arts. 211 e 212"]
+    },
+    "art-211": {
+      "simples": "Destruição, subtração ou ocultação de cadáver: destruir, subtrair ou ocultar cadáver ou parte dele. Pena: reclusão de 1 a 3 anos e multa.",
+      "pontos": ["Destruir, subtrair ou ocultar cadáver ou parte dele.", "Reclusão de 1 a 3 anos e multa."],
+      "atencao": ["O objeto jurídico é o respeito devido aos mortos; as três condutas (destruir, subtrair, ocultar) são alternativas."],
+      "exemplo": "Esconder o corpo de uma pessoa morta.",
+      "prova": ["Assertiva que restringe o crime à destruição total do cadáver erra: inclui subtrair, ocultar e parte dele."],
+      "termos": [],
+      "remissoes": ["Art. 212"]
+    },
+    "art-212": {
+      "simples": "Vilipêndio a cadáver: vilipendiar cadáver ou suas cinzas. Pena: detenção de 1 a 3 anos e multa.",
+      "pontos": ["Vilipendiar (tratar com desprezo) cadáver ou suas cinzas.", "Detenção de 1 a 3 anos e multa."],
+      "atencao": ["Alcança também as cinzas."],
+      "exemplo": "Profanar o corpo de uma pessoa morta, desrespeitando-o.",
+      "prova": ["Assertiva que exclui as cinzas do objeto do art. 212 erra."],
+      "termos": [],
+      "remissoes": ["Arts. 210 e 211"]
+    },
+    "art-213": {
+      "simples": "Estupro: constranger alguém, mediante violência ou grave ameaça, a ter conjunção carnal ou a praticar ou permitir que com ele se pratique outro ato libidinoso. Pena: reclusão de 6 a 10 anos. Se resulta lesão corporal grave ou se a vítima é menor de 18 e maior de 14 anos: reclusão de 8 a 12 anos. Se resulta morte: reclusão de 12 a 30 anos.",
+      "pontos": ["Constranger mediante violência ou grave ameaça a conjunção carnal ou outro ato libidinoso.", "Caput: reclusão de 6 a 10 anos.", "§1º: lesão grave ou vítima entre 14 e 18 anos: reclusão de 8 a 12 anos.", "§2º: morte: reclusão de 12 a 30 anos."],
+      "atencao": ["O estupro abrange conjunção carnal E outros atos libidinosos.", "Vítima menor de 14 anos: estupro de vulnerável (art. 217-A, fora deste artigo).", "Estupro é crime hediondo (lei especial)."],
+      "exemplo": "Constranger alguém, com grave ameaça, a praticar ato libidinoso diverso da conjunção carnal: estupro.",
+      "prova": ["Assertiva que restringe o estupro à conjunção carnal erra: inclui outros atos libidinosos."],
+      "termos": [{ "termo": "Ato libidinoso", "significado": "Ato de natureza sexual, além da conjunção carnal." }],
+      "remissoes": ["Art. 215", "Art. 217-A"]
+    },
+    "art-215": {
+      "simples": "Violação sexual mediante fraude: ter conjunção carnal ou praticar outro ato libidinoso com alguém, mediante fraude ou outro meio que impeça ou dificulte a livre manifestação de vontade da vítima. Pena: reclusão de 2 a 6 anos. Se o crime é cometido com o fim de obter vantagem econômica, aplica-se também multa.",
+      "pontos": ["Ato libidinoso mediante fraude ou outro meio que dificulte a livre manifestação de vontade.", "Reclusão de 2 a 6 anos.", "Fim de vantagem econômica: também multa."],
+      "atencao": ["Sem violência ou grave ameaça (diferente do estupro): o meio é a fraude ou obstáculo à vontade."],
+      "exemplo": "O agente se faz passar por outra pessoa para ter relação com a vítima, que o aceita por engano.",
+      "prova": ["Assertiva que exige violência ou grave ameaça para o art. 215 erra: o tipo prevê fraude ou outro meio."],
+      "termos": [],
+      "remissoes": ["Art. 213"]
+    }
+  }
+}
