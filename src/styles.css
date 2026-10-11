@@ -9073,3 +9073,123 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     margin-top: 28px;
   }
 }
+
+/* Homepage cleanup: remove the decorative radar treatment and enforce viewport rhythm. */
+.lp-hero {
+  height: min(760px, 100svh);
+  min-height: 600px;
+  max-height: 760px;
+}
+.lp-hero__body {
+  padding-top: 78px;
+  padding-bottom: 52px;
+}
+.lp-hero__panel {
+  transform: scale(0.94);
+  transform-origin: center right;
+}
+.lp-acre__stage {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.lp-acre__stage::before,
+.lp-acre__badge,
+.lp-acre__coords {
+  display: none;
+}
+.lp-acre__map {
+  inset: 2% 4% 3%;
+  filter: drop-shadow(0 0 1px var(--brass)) drop-shadow(0 16px 24px oklch(0 0 0 / 0.34));
+}
+.lp-acre__people {
+  bottom: 0;
+  left: 1%;
+  width: 98%;
+}
+.lp-acre__pins {
+  pointer-events: none;
+}
+.lp-pin em {
+  padding: 3px 7px;
+  border: 0;
+  color: oklch(1 0 0 / 0.82);
+  background: oklch(0.08 0.025 263 / 0.8);
+  box-shadow: none;
+  backdrop-filter: blur(4px);
+}
+.lp-pin i {
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 0 2px oklch(0.08 0.025 263 / 0.7), 0 0 14px var(--brass);
+}
+.lp-pin--cruzeiro em {
+  color: var(--brass-soft);
+  background: transparent;
+}
+.lp-acre__grid {
+  margin-top: 12px;
+}
+.lp-platform,
+.lp-method,
+.lp-careers,
+.lp-trust,
+.lp-final {
+  min-height: 0;
+}
+.lp-platform,
+.lp-method,
+.lp-careers,
+.lp-trust {
+  padding-block: clamp(52px, 6vw, 78px);
+}
+.lp-final {
+  padding-top: clamp(52px, 6vw, 80px);
+}
+@media (max-width: 900px) {
+  .lp-hero {
+    height: auto;
+    min-height: 680px;
+    max-height: none;
+  }
+  .lp-hero__panel {
+    transform: none;
+  }
+}
+@media (max-width: 767px) {
+  .lp-hero {
+    min-height: min(650px, 100svh);
+  }
+  .lp-hero__body {
+    padding-top: 78px;
+    padding-bottom: 64px;
+  }
+  .lp-hero__panel {
+    display: none;
+  }
+  .lp-acre__stage {
+    aspect-ratio: 1.2;
+    margin-bottom: 20px;
+  }
+  .lp-acre__map {
+    inset: 3% 2% 4%;
+  }
+  .lp-acre__people {
+    bottom: 1%;
+    left: 0;
+    width: 100%;
+  }
+  .lp-pin em {
+    display: none;
+  }
+  .lp-pin--cruzeiro em {
+    display: inline-block;
+    max-width: 104px;
+    overflow: hidden;
+    padding: 2px 5px;
+    font-size: 0.46rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
