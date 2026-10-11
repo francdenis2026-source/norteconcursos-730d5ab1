@@ -1,0 +1,393 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 07: arts. 217 a 258",
+  "units": {
+    "art-217": {
+      "simples": "Se o juiz verificar que a presença do réu poderá causar humilhação, temor ou sério constrangimento à testemunha ou ao ofendido, de modo que prejudique a verdade do depoimento, fará a inquirição por videoconferência e, somente na impossibilidade dessa forma, determinará a retirada do réu, prosseguindo na inquirição com a presença do defensor. A adoção de qualquer dessas medidas deverá constar do termo, com os motivos.",
+      "pontos": ["Presença do réu que cause constrangimento à testemunha ou ao ofendido, a ponto de prejudicar a verdade do depoimento.", "Preferência: videoconferência.", "Só se impossível: retirada do réu, com o defensor presente.", "Medida e motivos constam do termo."],
+      "atencao": ["Ordem: primeiro videoconferência; depois, retirada do réu.", "O defensor permanece."],
+      "exemplo": "Vítima de ameaça tem medo do réu; o juiz a ouve por videoconferência.",
+      "prova": ["Assertiva que determina a retirada do réu como primeira providência, antes da videoconferência, erra."],
+      "termos": [],
+      "remissoes": ["Art. 210"]
+    },
+    "art-218": {
+      "simples": "Se, regularmente intimada, a testemunha deixar de comparecer sem motivo justificado, o juiz poderá requisitar à autoridade policial a sua apresentação ou determinar seja conduzida por oficial de justiça, que poderá solicitar o auxílio da força pública.",
+      "pontos": ["Testemunha regularmente intimada que falta sem motivo justificado.", "Juiz requisita à polícia sua apresentação ou determina a condução por oficial de justiça.", "Oficial pode pedir auxílio da força pública."],
+      "atencao": ["Condução coercitiva da TESTEMUNHA faltosa (permitida).", "Para o investigado, a condução coercitiva para interrogatório é vedada pelo STF (ADPF 444)."],
+      "exemplo": "A testemunha, regularmente intimada, não comparece e é conduzida pelo oficial de justiça.",
+      "prova": ["Assertiva que veda a condução coercitiva da testemunha faltosa erra."],
+      "termos": [],
+      "remissoes": ["Art. 219"]
+    },
+    "art-219": {
+      "simples": "O juiz poderá aplicar à testemunha faltosa a multa prevista no art. 453, sem prejuízo do processo penal por crime de desobediência, e condená-la ao pagamento das custas da diligência.",
+      "pontos": ["Multa à testemunha faltosa.", "Sem prejuízo do processo por desobediência.", "Pagamento das custas da diligência."],
+      "atencao": ["As sanções se acumulam."],
+      "exemplo": "A testemunha faltosa paga multa e as custas da condução.",
+      "prova": ["Assertiva que impede a multa se houver processo por desobediência erra."],
+      "termos": [],
+      "remissoes": ["Art. 218"]
+    },
+    "art-220": {
+      "simples": "As pessoas impossibilitadas, por enfermidade ou por velhice, de comparecer para depor, serão inquiridas onde estiverem.",
+      "pontos": ["Testemunhas impossibilitadas por doença ou velhice são ouvidas no local onde estiverem."],
+      "atencao": ["Inquirição no local em que se encontram."],
+      "exemplo": "Idoso acamado é ouvido em sua residência.",
+      "prova": ["Assertiva que obriga a testemunha enferma a comparecer à sede do juízo erra."],
+      "termos": [],
+      "remissoes": ["Art. 221"]
+    },
+    "art-221": {
+      "simples": "Algumas autoridades têm a prerrogativa de serem inquiridas em local, dia e hora previamente ajustados com o juiz: o Presidente e o Vice-Presidente da República, senadores e deputados federais, ministros de Estado, governadores, secretários de Estado, prefeitos, deputados estaduais, membros do Poder Judiciário, ministros e juízes dos Tribunais de Contas, entre outros. O Presidente e o Vice-Presidente da República e os presidentes do Senado Federal, da Câmara dos Deputados e do Supremo Tribunal Federal podem optar por depoimento por escrito, com perguntas formuladas pelas partes e deferidas pelo juiz, transmitidas por ofício. Os militares são requisitados à autoridade superior. Aos funcionários públicos aplica-se o art. 218, comunicando-se imediatamente ao chefe da repartição a expedição do mandado, com indicação do dia e da hora.",
+      "pontos": ["Altas autoridades têm prerrogativa de combinar dia, hora e local do depoimento.", "Presidente, Vice-Presidente e presidentes do Senado, da Câmara e do STF podem depor por escrito.", "Militares são requisitados à autoridade superior.", "Funcionários públicos: condução do art. 218, com comunicação ao chefe da repartição."],
+      "atencao": ["A prerrogativa é de ajustar data e local, e não de dispensa do depoimento."],
+      "exemplo": "O governador é ouvido como testemunha em dia e hora previamente ajustados com o juiz.",
+      "prova": ["Assertiva que dispensa as altas autoridades do dever de depor erra: elas têm a prerrogativa de ajustar dia, hora e local."],
+      "termos": [],
+      "remissoes": ["Art. 218"]
+    },
+    "art-222": {
+      "simples": "A testemunha que morar fora da jurisdição do juiz será inquirida pelo juiz do lugar de sua residência, expedindo-se carta precatória com prazo razoável, intimadas as partes. A expedição da precatória não suspende a instrução criminal. Findo o prazo marcado, poderá realizar-se o julgamento, mas a precatória, uma vez devolvida, será junta aos autos a todo tempo. A oitiva poderá ser feita por videoconferência ou outro recurso tecnológico de transmissão de sons e imagens em tempo real, permitida a presença do defensor, inclusive durante a audiência de instrução e julgamento.",
+      "pontos": ["Testemunha de outra jurisdição: ouvida pelo juiz do lugar de sua residência (precatória).", "Partes são intimadas da expedição.", "A precatória não suspende a instrução.", "Findo o prazo, o julgamento pode ocorrer; a precatória é juntada quando devolvida.", "Videoconferência admitida, com possibilidade de o defensor estar presente."],
+      "atencao": ["Precatória NÃO suspende a instrução."],
+      "exemplo": "Testemunha em outra comarca é ouvida por videoconferência durante a audiência.",
+      "prova": ["Assertiva que suspende a instrução criminal até a devolução da precatória erra."],
+      "termos": [{ "termo": "Carta precatória", "significado": "Pedido de um juízo a outro para praticar ato em sua jurisdição." }],
+      "remissoes": ["Art. 222-A"]
+    },
+    "art-222-a": {
+      "simples": "As cartas rogatórias só serão expedidas se demonstrada previamente a sua imprescindibilidade, arcando a parte requerente com os custos de envio. Aplica-se às cartas rogatórias o disposto nos §§ 1º e 2º do art. 222.",
+      "pontos": ["Carta rogatória só se demonstrada previamente a imprescindibilidade.", "Custos de envio pela parte requerente.", "Aplicam-se os §§ 1º e 2º do art. 222 (não suspende a instrução; julgamento após o prazo)."],
+      "atencao": ["Carta rogatória é dirigida à autoridade estrangeira."],
+      "exemplo": "Para ouvir testemunha no exterior, a parte demonstra a imprescindibilidade e paga o envio.",
+      "prova": ["Assertiva que dispensa a demonstração prévia da imprescindibilidade da carta rogatória erra."],
+      "termos": [{ "termo": "Carta rogatória", "significado": "Pedido de cooperação a autoridade estrangeira." }],
+      "remissoes": ["Art. 222"]
+    },
+    "art-223": {
+      "simples": "Quando a testemunha não conhecer a língua nacional, será nomeado intérprete para traduzir as perguntas e respostas. Tratando-se de mudo, surdo ou surdo-mudo, procede-se conforme o art. 192.",
+      "pontos": ["Testemunha que não fala o idioma nacional: intérprete.", "Mudo, surdo ou surdo-mudo: forma do art. 192."],
+      "atencao": ["Mesma sistemática do interrogatório."],
+      "exemplo": "Testemunha estrangeira depõe com a ajuda de intérprete nomeado.",
+      "prova": ["Assertiva que dispensa intérprete para testemunha que não conhece a língua nacional erra."],
+      "termos": [],
+      "remissoes": ["Art. 192", "Art. 193"]
+    },
+    "art-224": {
+      "simples": "As testemunhas comunicarão ao juiz, dentro de um ano, qualquer mudança de residência, sujeitando-se, pela simples omissão, às penas do não comparecimento.",
+      "pontos": ["Testemunha comunica ao juiz, em um ano, mudança de residência.", "A omissão sujeita às penas do não comparecimento."],
+      "atencao": ["Prazo de um ano."],
+      "exemplo": "Testemunha muda de endereço e deixa de avisar o juízo: sujeita-se às penas da falta.",
+      "prova": ["Assertiva que dispensa a comunicação de mudança de residência pela testemunha erra."],
+      "termos": [],
+      "remissoes": ["Art. 219"]
+    },
+    "art-225": {
+      "simples": "Se qualquer testemunha houver de ausentar-se, ou, por enfermidade ou por velhice, inspirar receio de que ao tempo da instrução criminal já não exista, o juiz poderá, de ofício ou a requerimento de qualquer das partes, tomar-lhe antecipadamente o depoimento.",
+      "pontos": ["Testemunha que vai se ausentar ou corre risco de não existir ao tempo da instrução.", "Juiz colhe o depoimento antecipadamente, de ofício ou a requerimento."],
+      "atencao": ["Produção antecipada de prova testemunhal."],
+      "exemplo": "Testemunha idosa e muito doente é ouvida antecipadamente.",
+      "prova": ["Assertiva que exige requerimento das partes para a oitiva antecipada erra: pode ser de ofício."],
+      "termos": [],
+      "remissoes": ["Art. 156"]
+    },
+    "art-226": {
+      "simples": "Quando houver necessidade de fazer-se o reconhecimento de pessoa, procede-se assim: a pessoa que tiver de fazer o reconhecimento é convidada a descrever a pessoa a ser reconhecida; esta será colocada, se possível, ao lado de outras que tiverem qualquer semelhança, convidando-se quem faz o reconhecimento a apontá-la; se houver razão para recear que a pessoa chamada não diga a verdade em face da que deve ser reconhecida, por intimidação ou outra influência, a autoridade providenciará para que esta não veja aquela; do ato lavra-se auto pormenorizado, subscrito pela autoridade, pela pessoa que reconheceu e por duas testemunhas presenciais. O inciso III não se aplica na instrução criminal ou em plenário.",
+      "pontos": ["I: descrição prévia da pessoa a ser reconhecida.", "II: colocação ao lado de pessoas semelhantes, se possível.", "III: se houver receio de intimidação, a pessoa a reconhecer não vê a reconhecenda.", "IV: auto pormenorizado, subscrito pela autoridade, pelo reconhecedor e por duas testemunhas.", "Parágrafo único: o inciso III não se aplica na instrução ou no plenário."],
+      "atencao": ["O STJ tem exigido a observância do procedimento do art. 226 sob pena de invalidade do reconhecimento.", "O parágrafo único afasta o inciso III na instrução e no plenário."],
+      "exemplo": "A vítima descreve o autor e depois o aponta entre pessoas parecidas.",
+      "prova": ["Assertiva que dispensa a descrição prévia pela pessoa que fará o reconhecimento erra."],
+      "termos": [],
+      "remissoes": ["Art. 227", "Art. 228"]
+    },
+    "art-227": {
+      "simples": "No reconhecimento de objeto, proceder-se-á com as cautelas estabelecidas no artigo anterior, no que for aplicável.",
+      "pontos": ["Reconhecimento de objeto segue as cautelas do art. 226, no que couber."],
+      "atencao": ["Aplicação subsidiária das regras do reconhecimento de pessoas."],
+      "exemplo": "Vítima descreve o objeto subtraído antes de reconhecê-lo entre outros semelhantes.",
+      "prova": ["Assertiva que dispensa as cautelas do art. 226 no reconhecimento de objeto erra."],
+      "termos": [],
+      "remissoes": ["Art. 226"]
+    },
+    "art-228": {
+      "simples": "Se várias forem as pessoas chamadas a efetuar o reconhecimento de pessoa ou de objeto, cada uma fará a prova em separado, evitando-se qualquer comunicação entre elas.",
+      "pontos": ["Vários reconhecedores: provas em separado.", "Evita-se comunicação entre eles."],
+      "atencao": ["Evita contaminação entre os reconhecimentos."],
+      "exemplo": "Duas vítimas fazem o reconhecimento separadamente, sem conversar entre si.",
+      "prova": ["Assertiva que permite o reconhecimento conjunto por várias pessoas erra."],
+      "termos": [],
+      "remissoes": ["Art. 226"]
+    },
+    "art-229": {
+      "simples": "A acareação será admitida entre acusados, entre acusado e testemunha, entre testemunhas, entre acusado ou testemunha e a pessoa ofendida, e entre as pessoas ofendidas, sempre que divergirem, em suas declarações, sobre fatos ou circunstâncias relevantes. Os acareados serão reperguntados, para que expliquem os pontos de divergência, reduzindo-se a termo o ato.",
+      "pontos": ["Cabe entre acusados, testemunhas, ofendidos e entre esses grupos.", "Pressuposto: divergência sobre fatos ou circunstâncias relevantes.", "Acareados são reperguntados.", "O ato é reduzido a termo."],
+      "atencao": ["Exige divergência RELEVANTE."],
+      "exemplo": "Duas testemunhas dão versões divergentes sobre ponto essencial e são acareadas.",
+      "prova": ["Assertiva que admite acareação mesmo sem divergência erra."],
+      "termos": [{ "termo": "Acareação", "significado": "Confronto entre pessoas que deram declarações divergentes." }],
+      "remissoes": ["Art. 230"]
+    },
+    "art-230": {
+      "simples": "Se ausente alguma testemunha cujas declarações divirjam das de outra que esteja presente, a esta se darão a conhecer os pontos da divergência, consignando-se no auto o que explicar ou observar. Se subsistir a discordância, expedir-se-á precatória à autoridade do lugar onde resida a testemunha ausente, transcrevendo-se as declarações desta e as da testemunha presente, nos pontos em que divergirem, bem como o texto do referido auto, para que essa autoridade possa ouvir a testemunha ausente.",
+      "pontos": ["Testemunha ausente divergente da presente: dá-se conhecimento à presente dos pontos divergentes.", "Subsistindo a discordância: precatória ao lugar de residência da ausente.", "Transcrevem-se as declarações divergentes."],
+      "atencao": ["Acareação por precatória."],
+      "exemplo": "Testemunha em outra comarca é ouvida por precatória sobre a divergência.",
+      "prova": ["Assertiva que dispensa a transcrição das declarações divergentes na precatória erra."],
+      "termos": [],
+      "remissoes": ["Art. 229"]
+    },
+    "art-231": {
+      "simples": "Salvo os casos expressos em lei, as partes poderão apresentar documentos em qualquer fase do processo.",
+      "pontos": ["Documentos podem ser juntados em qualquer fase do processo.", "Exceções expressas em lei."],
+      "atencao": ["Exemplo de exceção: no Júri, documentos devem ser juntados com antecedência mínima (art. 479)."],
+      "exemplo": "A defesa junta um documento novo na fase de instrução.",
+      "prova": ["Assertiva que limita a juntada de documentos à fase inicial, sem ressalvas, erra."],
+      "termos": [],
+      "remissoes": ["Art. 479"]
+    },
+    "art-232": {
+      "simples": "Consideram-se documentos quaisquer escritos, instrumentos ou papéis, públicos ou particulares. À fotografia do documento, devidamente autenticada, se dará o mesmo valor do original.",
+      "pontos": ["Documento: quaisquer escritos, instrumentos ou papéis, públicos ou particulares.", "Fotografia autenticada tem o valor do original."],
+      "atencao": ["Conceito amplo de documento."],
+      "exemplo": "Cópia fotográfica autenticada de um contrato vale como original.",
+      "prova": ["Assertiva que restringe documento aos papéis públicos erra."],
+      "termos": [],
+      "remissoes": ["Art. 231"]
+    },
+    "art-233": {
+      "simples": "As cartas particulares, interceptadas ou obtidas por meios criminosos, não serão admitidas em juízo. As cartas poderão ser exibidas em juízo pelo respectivo destinatário, para a defesa de seu direito, ainda que não haja consentimento do signatário.",
+      "pontos": ["Cartas interceptadas ou obtidas por meio criminoso: inadmissíveis.", "O destinatário pode exibi-las para defender seu direito, sem consentimento do signatário."],
+      "atencao": ["Aplicação da vedação às provas ilícitas."],
+      "exemplo": "O destinatário apresenta em juízo a carta que recebeu para defender seu direito.",
+      "prova": ["Assertiva que exige o consentimento do signatário para que o destinatário exiba a carta erra."],
+      "termos": [],
+      "remissoes": ["Art. 157"]
+    },
+    "art-234": {
+      "simples": "Se o juiz tiver notícia da existência de documento relativo a ponto relevante da acusação ou da defesa, providenciará, independentemente de requerimento de qualquer das partes, para sua juntada aos autos, se possível.",
+      "pontos": ["Juiz providencia, de ofício, a juntada de documento relevante da acusação ou da defesa, se possível."],
+      "atencao": ["Iniciativa oficial do juiz."],
+      "exemplo": "O juiz determina de ofício a juntada de certidão relevante à defesa.",
+      "prova": ["Assertiva que exige requerimento das partes para a juntada de documento relevante pelo juiz erra."],
+      "termos": [],
+      "remissoes": ["Art. 156"]
+    },
+    "art-235": {
+      "simples": "A letra e firma dos documentos particulares serão submetidas a exame pericial quando contestada a sua autenticidade.",
+      "pontos": ["Contestada a autenticidade, a letra e a firma de documentos particulares são periciadas."],
+      "atencao": ["Só cabe a perícia se houver contestação."],
+      "exemplo": "A defesa contesta a assinatura de documento particular, e se determina a perícia.",
+      "prova": ["Assertiva que obriga a perícia de todo documento particular, mesmo sem contestação, erra."],
+      "termos": [],
+      "remissoes": ["Art. 174"]
+    },
+    "art-236": {
+      "simples": "Os documentos em língua estrangeira, sem prejuízo de sua juntada imediata, serão, se necessário, traduzidos por tradutor público ou, na falta, por pessoa idônea nomeada pela autoridade.",
+      "pontos": ["Documento em língua estrangeira é juntado de imediato.", "Se necessário, é traduzido por tradutor público ou pessoa idônea."],
+      "atencao": ["A tradução não impede a juntada."],
+      "exemplo": "Documento em inglês é juntado e, depois, traduzido por tradutor público.",
+      "prova": ["Assertiva que impede a juntada do documento estrangeiro antes da tradução erra."],
+      "termos": [],
+      "remissoes": ["Art. 232"]
+    },
+    "art-237": {
+      "simples": "As públicas-formas só terão valor quando conferidas com o original, em presença da autoridade.",
+      "pontos": ["Pública-forma (cópia autenticada por oficial público) só vale se conferida com o original perante a autoridade."],
+      "atencao": ["Conferência com o original."],
+      "exemplo": "A cópia é cotejada com o original na presença do juiz.",
+      "prova": ["Assertiva que dispensa a conferência com o original das públicas-formas erra."],
+      "termos": [{ "termo": "Pública-forma", "significado": "Cópia de documento autenticada por oficial público." }],
+      "remissoes": ["Art. 232"]
+    },
+    "art-238": {
+      "simples": "Os documentos originais, juntos a processo findo, quando não exista motivo relevante que justifique a sua conservação nos autos, poderão, mediante requerimento e ouvido o Ministério Público, ser entregues à parte que os produziu, ficando traslado nos autos.",
+      "pontos": ["Documentos originais de processo findo podem ser devolvidos à parte que os produziu.", "Sem motivo relevante para mantê-los.", "Mediante requerimento e oitiva do MP, ficando traslado nos autos."],
+      "atencao": ["Fica o traslado (cópia) nos autos."],
+      "exemplo": "Terminado o processo, a parte pede os originais de volta e deixa cópia nos autos.",
+      "prova": ["Assertiva que dispensa a oitiva do Ministério Público na devolução de documentos originais erra."],
+      "termos": [],
+      "remissoes": ["Art. 232"]
+    },
+    "art-239": {
+      "simples": "Considera-se indício a circunstância conhecida e provada que, tendo relação com o fato, autorize, por indução, concluir-se a existência de outra ou outras circunstâncias.",
+      "pontos": ["Indício: circunstância conhecida e provada.", "Relaciona-se ao fato.", "Permite concluir, por indução, a existência de outras circunstâncias."],
+      "atencao": ["Indício é prova indireta, que se vale do raciocínio indutivo."],
+      "exemplo": "A presença do réu no local do crime pode ser indício de participação.",
+      "prova": ["Assertiva que considera o indício mera suspeita, sem exigir a circunstância provada, erra."],
+      "termos": [{ "termo": "Prova indiciária", "significado": "Prova indireta construída por indução." }],
+      "remissoes": ["Art. 155"]
+    },
+    "art-240": {
+      "simples": "A busca será domiciliar ou pessoal. A busca domiciliar, quando fundadas razões a autorizarem, serve para prender criminosos; apreender coisas achadas ou obtidas por meios criminosos; apreender instrumentos de falsificação ou contrafação e objetos falsificados; apreender armas, munições e instrumentos utilizados na prática de crime; descobrir objetos necessários à prova da infração ou à defesa do réu; apreender cartas destinadas ao acusado ou em seu poder, quando houver suspeita de que o conteúdo seja útil à elucidação do fato; apreender pessoas vítimas de crimes; e colher qualquer elemento de convicção. A busca pessoal ocorrerá quando houver fundada suspeita de que alguém oculte consigo arma proibida ou os objetos das letras b a f e h do parágrafo anterior.",
+      "pontos": ["Busca domiciliar ou pessoal.", "Domiciliar: fundadas razões; finalidades das alíneas a a h.", "Pessoal: fundada suspeita de arma proibida ou dos objetos listados."],
+      "atencao": ["Exige FUNDADAS razões (domiciliar) e FUNDADA SUSPEITA (pessoal).", "A Constituição protege o domicílio (art. 5º, XI)."],
+      "exemplo": "Busca domiciliar para apreender arma usada no crime, com fundadas razões.",
+      "prova": ["Assertiva que permite a busca pessoal sem fundada suspeita erra."],
+      "termos": [],
+      "remissoes": ["Art. 241", "Art. 244"]
+    },
+    "art-241": {
+      "simples": "Quando a própria autoridade policial ou judiciária não a realizar pessoalmente, a busca domiciliar deverá ser precedida da expedição de mandado.",
+      "pontos": ["Busca domiciliar por terceiros exige mandado.", "A autoridade que a realiza pessoalmente fica dispensada do mandado pelo texto, mas a Constituição exige ordem judicial."],
+      "atencao": ["Na Constituição, a busca domiciliar de dia exige ordem judicial; o dispositivo deve ser lido à luz dela."],
+      "exemplo": "O delegado cumpre o mandado de busca expedido pelo juiz.",
+      "prova": ["Assertiva que dispensa mandado para a busca domiciliar realizada por agentes subordinados erra."],
+      "termos": [],
+      "remissoes": ["Art. 243"]
+    },
+    "art-242": {
+      "simples": "A busca poderá ser determinada de ofício ou a requerimento de qualquer das partes.",
+      "pontos": ["Busca determinada de ofício ou a requerimento das partes."],
+      "atencao": ["Mesmo de ofício, deve respeitar a Constituição e o sistema acusatório."],
+      "exemplo": "A defesa requer busca para localizar documento útil à sua tese.",
+      "prova": ["Assertiva que restringe o pedido de busca ao Ministério Público erra: qualquer das partes pode requerer."],
+      "termos": [],
+      "remissoes": ["Art. 240"]
+    },
+    "art-243": {
+      "simples": "O mandado de busca deverá indicar, o mais precisamente possível, a casa em que será realizada a diligência e o nome do respectivo proprietário ou morador, ou, no caso de busca pessoal, o nome da pessoa ou os sinais que a identifiquem; mencionar o motivo e os fins da diligência; e ser subscrito pelo escrivão e assinado pela autoridade que o fizer expedir. Se houver ordem de prisão, constará do próprio texto do mandado de busca. Não será permitida a apreensão de documento em poder do defensor do acusado, salvo quando constituir elemento do corpo de delito.",
+      "pontos": ["Indicar a casa e o morador (ou a pessoa, na busca pessoal).", "Mencionar motivo e fins.", "Subscrito pelo escrivão e assinado pela autoridade.", "Ordem de prisão consta do próprio mandado.", "Documentos em poder do defensor não podem ser apreendidos, salvo se forem corpo de delito."],
+      "atencao": ["Proteção do sigilo profissional do advogado."],
+      "exemplo": "O mandado indica precisamente o endereço e a finalidade da busca.",
+      "prova": ["Assertiva que permite a apreensão de qualquer documento em poder do defensor erra."],
+      "termos": [],
+      "remissoes": ["Art. 240", "Art. 245"]
+    },
+    "art-244": {
+      "simples": "A busca pessoal independerá de mandado, no caso de prisão ou quando houver fundada suspeita de que a pessoa esteja na posse de arma proibida ou de objetos ou papéis que constituam corpo de delito, ou quando a medida for determinada no curso de busca domiciliar.",
+      "pontos": ["Busca pessoal sem mandado em caso de prisão.", "Ou fundada suspeita de arma proibida ou corpo de delito.", "Ou no curso de busca domiciliar."],
+      "atencao": ["Exige FUNDADA SUSPEITA, baseada em elementos concretos, e não mero estereótipo."],
+      "exemplo": "Policial, com fundada suspeita, revista pessoa que esconde arma proibida.",
+      "prova": ["Assertiva que exige mandado para toda busca pessoal erra."],
+      "termos": [],
+      "remissoes": ["Art. 240, §2º"]
+    },
+    "art-245": {
+      "simples": "As buscas domiciliares serão executadas de dia, salvo se o morador consentir que se realizem à noite, e, antes de penetrarem na casa, os executores mostrarão e lerão o mandado ao morador, ou a quem o represente, intimando-o a abrir a porta. Se a própria autoridade der a busca, declarará previamente sua qualidade e o objeto da diligência. Em caso de desobediência, será arrombada a porta e forçada a entrada. Recalcitrando o morador, será permitido o emprego de força contra coisas existentes no interior da casa. Ausentes os moradores, será intimado a assistir à diligência qualquer vizinho presente. Se determinada a pessoa ou coisa a procurar, o morador será intimado a mostrá-la. Descoberta, será imediatamente apreendida e posta sob custódia. Finda a diligência, lavra-se auto circunstanciado, assinado com duas testemunhas presenciais.",
+      "pontos": ["Busca de dia, salvo consentimento do morador para a noite.", "Mostrar e ler o mandado antes de entrar e intimar a abrir a porta.", "Desobediência: arrombamento da porta.", "Morador recalcitrante: força contra coisas.", "Ausência de moradores: vizinho assiste.", "Auto circunstanciado com duas testemunhas."],
+      "atencao": ["Dia/noite: a Constituição permite o ingresso sem consentimento, com ordem judicial, apenas de dia."],
+      "exemplo": "A equipe lê o mandado ao morador e o intima a abrir a porta antes de entrar.",
+      "prova": ["Assertiva que autoriza a busca domiciliar à noite com mandado, sem consentimento do morador, erra."],
+      "termos": [],
+      "remissoes": ["Art. 243", "Art. 246"]
+    },
+    "art-246": {
+      "simples": "Aplicar-se-á também o disposto no artigo anterior quando se tiver de proceder a busca em compartimento habitado ou em aposento ocupado de habitação coletiva ou em compartimento não aberto ao público, onde alguém exercer profissão ou atividade.",
+      "pontos": ["As regras do art. 245 valem para compartimento habitado ou aposento ocupado de habitação coletiva.", "Também para compartimento não aberto ao público onde se exerce profissão ou atividade."],
+      "atencao": ["Conceito amplo de 'casa' (STF)."],
+      "exemplo": "Escritório profissional fechado ao público equipara-se à casa para fins de busca.",
+      "prova": ["Assertiva que exclui o escritório profissional da proteção do domicílio erra."],
+      "termos": [],
+      "remissoes": ["Art. 245"]
+    },
+    "art-247": {
+      "simples": "Não sendo encontrada a pessoa ou coisa procurada, os motivos da diligência serão comunicados a quem tiver sofrido a busca, se o requerer.",
+      "pontos": ["Busca infrutífera: comunicam-se os motivos a quem sofreu a busca, se requerer."],
+      "atencao": ["Depende de requerimento."],
+      "exemplo": "Nada foi encontrado, e o morador pede explicações sobre os motivos da diligência.",
+      "prova": ["Assertiva que obriga a comunicação automática dos motivos da busca infrutífera erra: depende de requerimento."],
+      "termos": [],
+      "remissoes": ["Art. 245"]
+    },
+    "art-248": {
+      "simples": "Em casa habitada, a busca será feita de modo que não moleste os moradores mais do que o indispensável para o êxito da diligência.",
+      "pontos": ["Busca em casa habitada sem molestar os moradores além do indispensável."],
+      "atencao": ["Princípio da proporcionalidade na execução."],
+      "exemplo": "A equipe conduz a busca com discrição para não constranger os moradores.",
+      "prova": ["Assertiva que autoriza molestar os moradores livremente durante a busca erra."],
+      "termos": [],
+      "remissoes": ["Art. 245"]
+    },
+    "art-249": {
+      "simples": "A busca em mulher será feita por outra mulher, se não importar retardamento ou prejuízo da diligência.",
+      "pontos": ["Busca em mulher feita por outra mulher.", "Exceção: se importar retardamento ou prejuízo da diligência."],
+      "atencao": ["Exceção quando houver prejuízo à diligência."],
+      "exemplo": "Policial feminina realiza a busca pessoal em suspeita do sexo feminino.",
+      "prova": ["Assertiva que torna absoluta a regra de busca em mulher por outra mulher erra: há exceção."],
+      "termos": [],
+      "remissoes": ["Art. 240, §2º"]
+    },
+    "art-250": {
+      "simples": "A autoridade ou seus agentes poderão penetrar no território de jurisdição alheia, ainda que de outro Estado, quando, para o fim de apreensão, forem no seguimento de pessoa ou coisa, devendo apresentar-se à competente autoridade local antes da diligência ou após, conforme a urgência. Entende-se que vão em seguimento quando, tendo conhecimento direto da remoção ou transporte, a seguirem sem interrupção, embora a percam de vista; ou, mesmo sem avistá-la, sabendo por informações fidedignas ou circunstâncias indiciárias que está sendo removida em determinada direção, forem ao seu encalço. As autoridades locais, havendo fundadas razões para duvidar da legitimidade das pessoas ou da legalidade dos mandados, poderão exigir as provas, mas sem frustrar a diligência.",
+      "pontos": ["Seguimento de pessoa ou coisa em outra jurisdição, mesmo de outro Estado.", "Apresentação à autoridade local antes ou depois, conforme a urgência.", "Seguimento: conhecimento direto e perseguição sem interrupção; ou informações fidedignas.", "Autoridade local pode exigir provas de legitimidade, sem frustrar a diligência."],
+      "atencao": ["Apresentação à autoridade local, antes ou depois, conforme a urgência."],
+      "exemplo": "Policiais perseguem veículo com produto do crime para outro Estado e depois se apresentam à autoridade local.",
+      "prova": ["Assertiva que exige sempre a apresentação prévia à autoridade local erra: pode ser depois, conforme a urgência."],
+      "termos": [],
+      "remissoes": ["Art. 240"]
+    },
+    "art-251": {
+      "simples": "Ao juiz incumbirá prover à regularidade do processo e manter a ordem no curso dos respectivos atos, podendo, para tal fim, requisitar a força pública.",
+      "pontos": ["Juiz zela pela regularidade do processo e pela ordem dos atos.", "Pode requisitar a força pública."],
+      "atencao": ["Poder de polícia do juiz nas audiências."],
+      "exemplo": "O juiz requisita a força pública para manter a ordem na audiência.",
+      "prova": ["Assertiva que impede o juiz de requisitar a força pública erra."],
+      "termos": [],
+      "remissoes": ["Art. 252"]
+    },
+    "art-252": {
+      "simples": "O juiz não poderá exercer jurisdição no processo em que tiver funcionado seu cônjuge ou parente, consanguíneo ou afim, em linha reta ou colateral até o terceiro grau, inclusive, como defensor ou advogado, órgão do Ministério Público, autoridade policial, auxiliar da justiça ou perito; em que ele próprio houver desempenhado qualquer dessas funções ou servido como testemunha; em que tiver funcionado como juiz de outra instância, pronunciando-se de fato ou de direito sobre a questão; ou em que ele próprio, seu cônjuge ou parente, até o terceiro grau, for parte ou diretamente interessado.",
+      "pontos": ["I: cônjuge ou parente (até o terceiro grau) funcionou no processo como defensor, MP, autoridade policial, auxiliar ou perito.", "II: o próprio juiz atuou em tais funções ou foi testemunha.", "III: já decidiu a questão em outra instância.", "IV: o juiz ou seus parentes são parte ou diretamente interessados."],
+      "atencao": ["Hipóteses de IMPEDIMENTO (não de suspeição).", "Rol taxativo segundo a doutrina majoritária."],
+      "exemplo": "Juiz que já atuou no processo como membro do Ministério Público está impedido.",
+      "prova": ["Assertiva que trata as hipóteses do art. 252 como suspeição erra: são casos de impedimento."],
+      "termos": [{ "termo": "Impedimento", "significado": "Causa objetiva que proíbe o juiz de atuar no processo." }],
+      "remissoes": ["Art. 254", "Art. 112"]
+    },
+    "art-253": {
+      "simples": "Nos juízos coletivos, não poderão servir no mesmo processo os juízes que forem entre si parentes, consanguíneos ou afins, em linha reta ou colateral até o terceiro grau, inclusive.",
+      "pontos": ["Juízos coletivos: juízes parentes até o terceiro grau não atuam no mesmo processo."],
+      "atencao": ["Impedimento por parentesco entre magistrados."],
+      "exemplo": "Dois desembargadores primos-irmãos não integram a mesma turma no mesmo processo.",
+      "prova": ["Assertiva que permite a atuação conjunta de juízes parentes em juízo coletivo erra."],
+      "termos": [],
+      "remissoes": ["Art. 252"]
+    },
+    "art-254": {
+      "simples": "O juiz dar-se-á por suspeito, e, se não o fizer, poderá ser recusado por qualquer das partes: se for amigo íntimo ou inimigo capital de qualquer deles; se ele, seu cônjuge, ascendente ou descendente estiver respondendo a processo por fato análogo, sobre cujo caráter criminoso haja controvérsia; se ele, seu cônjuge ou parente até o terceiro grau sustentar demanda ou responder a processo que tenha de ser julgado por qualquer das partes; se tiver aconselhado qualquer das partes; se for credor ou devedor, tutor ou curador de qualquer das partes; ou se for sócio, acionista ou administrador de sociedade interessada no processo.",
+      "pontos": ["I: amigo íntimo ou inimigo capital.", "II: ele ou parentes respondem a processo por fato análogo.", "III: ele ou parentes têm demanda a ser julgada por qualquer das partes.", "IV: aconselhou a parte.", "V: credor, devedor, tutor ou curador.", "VI: sócio, acionista ou administrador de sociedade interessada."],
+      "atencao": ["Hipóteses de SUSPEIÇÃO (subjetivas), de rol discutido na doutrina."],
+      "exemplo": "Juiz amigo íntimo do réu deve declarar-se suspeito.",
+      "prova": ["Assertiva que classifica o juiz amigo íntimo da parte como caso de impedimento erra: é suspeição."],
+      "termos": [{ "termo": "Suspeição", "significado": "Causa subjetiva que compromete a imparcialidade do juiz." }],
+      "remissoes": ["Art. 252", "Art. 97"]
+    },
+    "art-255": {
+      "simples": "O impedimento ou suspeição decorrente de parentesco por afinidade cessará pela dissolução do casamento que lhe tiver dado causa, salvo sobrevindo descendentes; mas, ainda que dissolvido o casamento sem descendentes, não funcionará como juiz o sogro, o padrasto, o cunhado, o genro ou enteado de quem for parte no processo.",
+      "pontos": ["Afinidade cessa com a dissolução do casamento, salvo se houver descendentes.", "Mesmo dissolvido sem descendentes, sogro, padrasto, cunhado, genro ou enteado não funcionam como juiz."],
+      "atencao": ["Exceções à cessação da afinidade."],
+      "exemplo": "Juiz que é ex-genro da parte continua impedido, ainda que o casamento tenha acabado.",
+      "prova": ["Assertiva que permite ao ex-genro da parte funcionar como juiz erra."],
+      "termos": [],
+      "remissoes": ["Art. 252", "Art. 254"]
+    },
+    "art-256": {
+      "simples": "A suspeição não poderá ser declarada nem reconhecida quando a parte injuriar o juiz ou de propósito der motivo para criá-la.",
+      "pontos": ["Suspeição não pode ser declarada nem reconhecida se a parte injuria o juiz.", "Nem se a parte, de propósito, dá motivo para criá-la."],
+      "atencao": ["Vedação à suspeição provocada."],
+      "exemplo": "A parte ofende o juiz para forçar sua suspeição; ela não será reconhecida.",
+      "prova": ["Assertiva que reconhece a suspeição criada propositalmente pela parte erra."],
+      "termos": [],
+      "remissoes": ["Art. 254"]
+    },
+    "art-257": {
+      "simples": "Ao Ministério Público cabe promover, privativamente, a ação penal pública, na forma estabelecida no Código, e fiscalizar a execução da lei.",
+      "pontos": ["Promover, privativamente, a ação penal pública.", "Fiscalizar a execução da lei."],
+      "atencao": ["Privatividade da ação pública (Constituição, art. 129, I)."],
+      "exemplo": "O MP oferece denúncia e atua como fiscal da lei.",
+      "prova": ["Assertiva que torna a ação penal pública exclusiva da polícia erra."],
+      "termos": [],
+      "remissoes": ["Art. 24"]
+    },
+    "art-258": {
+      "simples": "Os órgãos do Ministério Público não funcionarão nos processos em que o juiz ou qualquer das partes for seu cônjuge ou parente, consanguíneo ou afim, em linha reta ou colateral, até o terceiro grau, inclusive, e a eles se estendem, no que lhes for aplicável, as prescrições relativas à suspeição e aos impedimentos dos juízes.",
+      "pontos": ["Membro do MP não atua em processo em que juiz ou parte seja seu cônjuge ou parente até o terceiro grau.", "Aplicam-se as regras de suspeição e impedimento dos juízes."],
+      "atencao": ["Impedimento e suspeição valem também para o MP."],
+      "exemplo": "Promotor não atua em processo em que o réu é seu irmão.",
+      "prova": ["Assertiva que isenta o MP das regras de impedimento e suspeição erra."],
+      "termos": [],
+      "remissoes": ["Art. 104"]
+    }
+  }
+}
