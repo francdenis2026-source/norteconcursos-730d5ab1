@@ -8,8 +8,6 @@ import {
   BrainCircuit,
   Check,
   CheckCircle2,
-  CircleHelp,
-  ExternalLink,
   Flame,
   Lock,
   Loader2,
@@ -63,8 +61,9 @@ import {
 } from "@/components/ui/select";
 import { classifyTopic, subjectInArea } from "@/lib/questionTopics";
 import { filterTrainerQuestions, trainerBoard } from "@/lib/trainerFilters";
-import { canonicalSubject } from "@/lib/subjects";
-import { type StudyMaterialSummary, useStudyMaterialList } from "@/lib/studyMaterials";
+import { useStudyMaterialList } from "@/lib/studyMaterials";
+import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
+import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { toast } from "sonner";
@@ -148,17 +147,7 @@ function QuestionTrainer() {
     () => (law === undefined ? fullCatalog : fullCatalog.filter((q) => questionMatchesLaw(q, law))),
     [fullCatalog, law],
   );
-  const { data: libraryMaterials } = useStudyMaterialList(canLoad);
-  const libraryByDiscipline = React.useMemo(() => {
-    const map = new Map<string, StudyMaterialSummary[]>();
-    for (const item of libraryMaterials ?? []) {
-      const list = map.get(item.discipline) ?? [];
-      list.push(item);
-      map.set(item.discipline, list);
-    }
-    for (const list of map.values()) list.sort((a, b) => a.sort_order - b.sort_order);
-    return map;
-  }, [libraryMaterials]);
+  const library = useStudyMaterialList(canLoad);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
@@ -188,7 +177,8 @@ function QuestionTrainer() {
   const responseIdRef = React.useRef(crypto.randomUUID());
   const [answered, setAnswered] = React.useState(false);
   const [reviewingPast, setReviewingPast] = React.useState(false);
-  const [helpUsed, setHelpUsed] = React.useState(false);
+  const [supportNotice, setSupportNotice] = React.useState(false);
+  const supportNoticeId = React.useId();
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
   const [results, setResults] = React.useState<("ok" | "err")[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
@@ -472,7 +462,7 @@ function QuestionTrainer() {
     setSelected(null);
     setStruck([]);
     setAnswered(false);
-    setHelpUsed(false);
+    setSupportNotice(false);
     setStartedAt(Date.now());
     setStarted(true);
   };
@@ -503,7 +493,7 @@ function QuestionTrainer() {
     setSelected(null);
     setStruck([]);
     setAnswered(false);
-    setHelpUsed(false);
+    setSupportNotice(false);
     setStartedAt(Date.now());
     setStarted(true);
   }, [loading, started, pool]);
@@ -536,7 +526,7 @@ function QuestionTrainer() {
       setSelected(past.selected);
       setAnswered(true);
       setReviewingPast(true);
-      setHelpUsed(false);
+      setSupportNotice(false);
       setStruck([]);
       setResults((prev) => {
         if (prev[index]) return prev;
@@ -548,7 +538,7 @@ function QuestionTrainer() {
       setSelected(null);
       setAnswered(false);
       setReviewingPast(false);
-      setHelpUsed(false);
+      setSupportNotice(false);
       setStruck([]);
       setStartedAt(Date.now());
     }
@@ -580,7 +570,8 @@ function QuestionTrainer() {
           selected_answer: selected,
           official_answer: question.answer,
           is_correct: isCorrect,
-          asked_for_help: helpUsed,
+          // Learning support is available only after this answer is saved.
+          asked_for_help: false,
           response_seconds: Math.max(0, Math.round((Date.now() - startedAt) / 1000)),
         },
         { onConflict: "id" },
@@ -617,7 +608,7 @@ function QuestionTrainer() {
     setStruck([]);
     setAnswered(false);
     setReviewingPast(false);
-    setHelpUsed(false);
+    setSupportNotice(false);
     setStartedAt(Date.now());
     setQuestions((items) => (orderMode === "random" ? shuffled(items) : [...items]));
   };
@@ -713,7 +704,21 @@ function QuestionTrainer() {
   const parsed = parseQuestion(question.text);
   const hasOptions = parsed.options.length > 0;
   const explanation = splitExplanation(question.explanation);
-  const relatedMaterial = libraryByDiscipline.get(canonicalSubject(question.subject))?.[0] ?? null;
+  const relatedMaterials = relatedTrainerMaterials(question, library.data ?? []);
+  const supportAvailable = canOpenTrainerLearning(
+    answered && locked.has(lockedKey(question.source, question.id)),
+    saving,
+    lockedLoading,
+  );
+  const openLearning = () => {
+    if (!supportAvailable || savingRef.current) {
+      setSupportNotice(true);
+      return;
+    }
+    setSupportNotice(false);
+    setModal("help");
+    if (library.isError) void library.refetch();
+  };
   const correctOption = parsed.options.find((option) => option.letter === question.answer);
   const certoErrado = !hasOptions && questionAnswers(question).join("") === "CE";
   const labelFor = (answer: Answer) =>
@@ -774,7 +779,7 @@ function QuestionTrainer() {
           <Badge variant="secondary">
             <Flame className="mr-1 h-3.5 w-3.5 text-orange-500" /> Treinador
           </Badge>
-          <Badge variant="outline">Não afeta ranking</Badge>
+          <Badge variant="outline">Ranking de questões</Badge>
         </div>
       </header>
       <Card
@@ -990,14 +995,12 @@ function QuestionTrainer() {
               <>
                 <Button
                   variant="ghost"
-                  className="text-amber-800 hover:text-amber-900 dark:text-amber-300 dark:hover:text-amber-200"
-                  disabled={saving}
-                  onClick={() => {
-                    setHelpUsed(true);
-                    setModal("help");
-                  }}
+                  aria-disabled={!supportAvailable}
+                  aria-describedby={supportNotice ? supportNoticeId : undefined}
+                  className="text-muted-foreground"
+                  onClick={openLearning}
                 >
-                  <CircleHelp className="mr-2 h-4 w-4" /> Estou em dúvida
+                  <Lock className="mr-2 h-4 w-4" aria-hidden="true" /> Entender este assunto
                 </Button>
                 <Button
                   size="lg"
@@ -1010,8 +1013,9 @@ function QuestionTrainer() {
               </>
             ) : (
               <>
-                <Button variant="outline" onClick={() => setModal("result")}>
-                  Ver comentário da questão
+                <Button variant="outline" onClick={openLearning}>
+                  <BookOpenCheck className="mr-2 h-4 w-4" aria-hidden="true" /> Entender este
+                  assunto
                 </Button>
                 <Button
                   size="lg"
@@ -1024,151 +1028,145 @@ function QuestionTrainer() {
               </>
             )}
           </div>
+          {supportNotice && !supportAvailable && (
+            <div
+              id={supportNoticeId}
+              role="status"
+              className="mt-3 flex items-start gap-2 rounded-lg border bg-muted/40 px-3 py-2 text-xs leading-5 text-muted-foreground"
+            >
+              <Lock className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+              <p>
+                {saving
+                  ? "Sua resposta está sendo salva. A revisão será liberada em seguida."
+                  : "Confirme sua resposta para acessar a explicação, os materiais e os exercícios de revisão."}
+              </p>
+            </div>
+          )}
           {answered && (
             <QuestionSocialPanel questionId={question.id} questionSource={question.source} />
           )}
         </CardContent>
       </Card>
-      <Dialog open={modal !== null} onOpenChange={(open) => !open && setModal(null)}>
+      <Dialog
+        open={modal !== null && supportAvailable}
+        onOpenChange={(open) => !open && setModal(null)}
+      >
         <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto">
-          {modal === "help" ? (
-            <>
-              <DialogHeader>
-                <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-100 text-amber-700 sm:mx-0">
-                  <BrainCircuit />
-                </div>
-                <DialogTitle>Rota de raciocínio</DialogTitle>
-                <DialogDescription>
-                  Orientação sem revelar o gabarito. Volte à questão e decida com método.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="space-y-3 text-sm">
-                <GuideStep
-                  number="1"
-                  text={`Identifique a regra central de ${question.subject}${question.subtopic ? `: ${question.subtopic}` : ""}.`}
-                />
-                <GuideStep
-                  number="2"
-                  text={
-                    certoErrado
-                      ? "Procure termos absolutos, exceções e relações de causa. Uma única parte falsa torna o item errado."
-                      : "Elimine primeiro as alternativas incompatíveis com o enunciado e compare as restantes."
-                  }
-                />
-                <GuideStep
-                  number="3"
-                  text={
-                    question.legalBasis.length
-                      ? "Use a fonte oficial indicada como eixo; não responda apenas pela intuição."
-                      : "Reescreva mentalmente a afirmação em uma frase simples e teste cada premissa."
-                  }
-                />
+          <>
+            <DialogHeader>
+              <div
+                className={cn(
+                  "mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-2xl sm:mx-0",
+                  isCorrect ? "bg-emerald-100 text-emerald-700" : "bg-rose-100 text-rose-700",
+                )}
+              >
+                {modal === "help" ? <BrainCircuit /> : isCorrect ? <CheckCircle2 /> : <X />}
               </div>
-              <DialogFooter>
-                <Button onClick={() => setModal(null)}>Voltar e responder</Button>
-              </DialogFooter>
-            </>
-          ) : (
-            <>
-              <DialogHeader>
-                <div
-                  className={cn(
-                    "mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-2xl sm:mx-0",
-                    isCorrect ? "bg-emerald-100 text-emerald-700" : "bg-rose-100 text-rose-700",
-                  )}
-                >
-                  {isCorrect ? <CheckCircle2 /> : <X />}
+              <DialogTitle>
+                {modal === "help"
+                  ? "Entenda, revise e fixe"
+                  : isCorrect
+                    ? "Resposta correta"
+                    : "Vamos corrigir este ponto"}
+              </DialogTitle>
+              <DialogDescription>
+                {modal === "help" && (
+                  <span className="mb-1 block">
+                    Revise o raciocínio e aprofunde o assunto com o conteúdo da plataforma.
+                  </span>
+                )}
+                Você marcou {selected ? labelFor(selected) : "—"}. O gabarito é{" "}
+                {labelFor(question.answer)}.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4">
+              {!isCorrect && (
+                <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
+                  <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
+                    Resposta correta
+                  </p>
+                  <p className="text-sm font-bold">{labelFor(question.answer)}</p>
+                  {correctOption && <p className="mt-1 text-sm leading-6">{correctOption.text}</p>}
                 </div>
-                <DialogTitle>
-                  {isCorrect ? "Resposta correta" : "Vamos corrigir este ponto"}
-                </DialogTitle>
-                <DialogDescription>
-                  Você marcou {selected ? labelFor(selected) : "—"}. O gabarito é{" "}
-                  {labelFor(question.answer)}.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="space-y-4">
-                {!isCorrect && (
-                  <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
-                    <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
-                      Resposta correta
-                    </p>
-                    <p className="text-sm font-bold">{labelFor(question.answer)}</p>
-                    {correctOption && (
-                      <p className="mt-1 text-sm leading-6">{correctOption.text}</p>
+              )}
+              {isPlaceholderExplanation(explanation.main) ? (
+                <p className="rounded-xl border bg-muted/30 p-4 text-sm text-muted-foreground">
+                  Esta questão ainda não tem um comentário detalhado. Consulte as fontes e os
+                  materiais relacionados abaixo, quando disponíveis.
+                </p>
+              ) : (
+                <div className="rounded-xl border bg-muted/30 p-4">
+                  <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
+                    Comentário da questão
+                  </p>
+                  <p className="text-sm leading-6">{explanation.main}</p>
+                </div>
+              )}
+              {explanation.example && (
+                <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 dark:bg-amber-950/30">
+                  <p className="mb-1 text-xs font-black uppercase tracking-wider text-amber-700">
+                    Exemplo do dia a dia
+                  </p>
+                  <p className="text-sm leading-6">{explanation.example}</p>
+                </div>
+              )}
+              {question.checkedAt && question.legalBasis.length > 0 && (
+                <p className="text-xs text-muted-foreground">
+                  Vigência conferida na fonte oficial em {formatDate(question.checkedAt)}.
+                </p>
+              )}
+              {question.legalBasis.length > 0 && (
+                <div>
+                  <p className="mb-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
+                    Fontes oficiais vinculadas
+                  </p>
+                  <div className="space-y-2">
+                    {question.legalBasis.map((basis, basisIndex) =>
+                      basis.url ? (
+                        <a
+                          key={`${basis.url}-${basisIndex}`}
+                          href={basisHref(basis)}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="block rounded-lg border p-3 text-sm font-medium text-primary hover:bg-muted"
+                        >
+                          {basis.title || basis.lei || "Fonte oficial"}
+                          {basis.artigo ? ` · ${basis.artigo}` : ""}
+                        </a>
+                      ) : (
+                        <div key={basisIndex} className="rounded-lg border p-3 text-sm">
+                          {basis.title || basis.lei || "Fonte oficial"}
+                        </div>
+                      ),
                     )}
                   </div>
-                )}
-                {!isPlaceholderExplanation(explanation.main) && (
-                  <div className="rounded-xl border bg-muted/30 p-4">
-                    <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
-                      Comentário da questão
-                    </p>
-                    <p className="text-sm leading-6">{explanation.main}</p>
-                  </div>
-                )}
-                {explanation.example && (
-                  <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 dark:bg-amber-950/30">
-                    <p className="mb-1 text-xs font-black uppercase tracking-wider text-amber-700">
-                      Exemplo do dia a dia
-                    </p>
-                    <p className="text-sm leading-6">{explanation.example}</p>
-                  </div>
-                )}
-                {question.checkedAt && question.legalBasis.length > 0 && (
-                  <p className="text-xs text-muted-foreground">
-                    Vigência conferida na fonte oficial em {formatDate(question.checkedAt)}.
-                  </p>
-                )}
-                {question.legalBasis.length > 0 && (
-                  <div>
-                    <p className="mb-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
-                      Fontes oficiais vinculadas
-                    </p>
-                    <div className="space-y-2">
-                      {question.legalBasis.map((basis, basisIndex) =>
-                        basis.url ? (
-                          <a
-                            key={`${basis.url}-${basisIndex}`}
-                            href={basisHref(basis)}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="block rounded-lg border p-3 text-sm font-medium text-primary hover:bg-muted"
-                          >
-                            {basis.title || basis.lei || "Fonte oficial"}
-                            {basis.artigo ? ` · ${basis.artigo}` : ""}
-                          </a>
-                        ) : (
-                          <div key={basisIndex} className="rounded-lg border p-3 text-sm">
-                            {basis.title || basis.lei || "Fonte oficial"}
-                          </div>
-                        ),
-                      )}
-                    </div>
-                  </div>
-                )}
-                {relatedMaterial && (
-                  <Link
-                    to="/dashboard/library/$slug"
-                    params={{ slug: relatedMaterial.slug }}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-primary hover:underline"
-                  >
-                    <BookOpenCheck className="h-3.5 w-3.5" />
-                    Quer entender melhor esse assunto? Veja "{relatedMaterial.title}" na Biblioteca
-                    <ExternalLink className="h-3 w-3" />
-                  </Link>
-                )}
-              </div>
-              <DialogFooter>
-                <Button onClick={next}>
-                  {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                </div>
+              )}
+              {modal === "help" ? (
+                <TrainerLearningMaterials
+                  key={question.source + question.id}
+                  materials={relatedMaterials}
+                  loading={library.isLoading}
+                  error={library.isError}
+                />
+              ) : (
+                <Button variant="outline" className="w-full" onClick={openLearning}>
+                  <BookOpenCheck className="mr-2 h-4 w-4" /> Revisar com materiais e flashcards
                 </Button>
-              </DialogFooter>
-            </>
-          )}
+              )}
+            </div>
+            <DialogFooter>
+              {modal === "help" && (
+                <Button variant="outline" onClick={() => setModal(null)}>
+                  Voltar à questão
+                </Button>
+              )}
+              <Button onClick={next}>
+                {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </DialogFooter>
+          </>
         </DialogContent>
       </Dialog>
     </div>
@@ -1529,16 +1527,6 @@ function unique(values: string[]) {
   );
 }
 
-function GuideStep({ number, text }: { number: string; text: string }) {
-  return (
-    <div className="flex gap-3 rounded-xl border p-3">
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-amber-100 font-black text-amber-700">
-        {number}
-      </span>
-      <p className="leading-6">{text}</p>
-    </div>
-  );
-}
 function Center({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-[55vh] flex-col items-center justify-center gap-4 text-center text-muted-foreground">
