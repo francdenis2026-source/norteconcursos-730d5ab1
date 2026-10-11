@@ -52,7 +52,8 @@ test('Legal highlights preserve source characters, classify full expressions and
  const highlights=load('src/lib/legalHighlights.ts');
  const sourceUrls=load('src/lib/studySourceUrl.ts',{'./questionFormat':load('src/lib/questionFormat.ts')});
  const markdown=load('src/components/library/Markdown.tsx',{'@/lib/studySourceUrl':sourceUrls});
- const reading=load('src/components/library/LegalStudyReading.tsx',{'@/lib/legalHighlights':highlights,'./Markdown':markdown});
+ const refText={LegalRefText:({text})=>React.createElement(React.Fragment,null,text)};
+ const reading=load('src/components/library/LegalStudyReading.tsx',{'@/lib/legalHighlights':highlights,'./Markdown':markdown,'./LegalRefText':refText,'@/lib/legalRefs':load('src/lib/legalRefs.ts')});
  const html=renderToStaticMarkup(React.createElement(reading.LegalStudyReading,{source:samples[2]}));
  assert.ok(html.includes('&lt;script&gt;'));assert.ok(!html.includes('<script>'));assert.ok(html.includes('aria-pressed="true"'));
  const formatted=renderToStaticMarkup(React.createElement(reading.LegalStudyReading,{source:'## Caso concreto\n\n**Salvo** grave ameaça. [Lei](https://www.planalto.gov.br/ccivil_03/leis/l11343.htm)',markdown:true}));
