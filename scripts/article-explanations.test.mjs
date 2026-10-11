@@ -62,6 +62,22 @@ test('security covers all 72 current units and distinguishes 2027 tax effects fr
  for(const key of ['art-67','art-68']){const r=p.units.find(r=>r.unit_key===key);assert.ok(r.atencao.some(t=>t.includes('2027')&&t.includes('futura')));}
  const bad=structuredClone(p);bad.laws[0].additional_sources[0].url='https://unverified.invalid/lei';assert.throws(()=>validateArticlePackage(bad));
 });
+
+test('idosa covers every current article, excludes veto and distinguishes current penalties and historical remissions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-idosa-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,117);assert.ok(!p.units.some(u=>u.unit_key==='art-72'));
+ for(const r of p.units){assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const unit=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(unit('art-94').simples,/não se aplica.*independentemente da pena/);
+ assert.match(unit('art-99').simples,/dois a cinco.*três a sete.*oito a quatorze/);
+ assert.match(unit('art-113').simples,/revogada.*art\. 75/);
+ assert.match(unit('art-15').pontos.join(' '),/Tema 952.*Tema 1016/);
+ assert.ok(p.laws[0].additional_sources.filter(r=>new URL(r.url).hostname==='processo.stj.jus.br').length===2);
+ const guide=JSON.parse(readFileSync('docs/library/idosa-complete-path-review-2026-10-11.json','utf8'));
+ assert.equal(guide.materials.length,2);
+ for(const m of guide.materials){assert.ok(m.patch.body_md.includes('/dashboard/legal-course/idosa'));for(const old of m.expected.flashcards)assert.ok(m.patch.flashcards.some(c=>c.f===old.f&&c.b===old.b));}
+ const bad=structuredClone(p);bad.laws[0].additional_sources[0].url='https://processo.stj.jus.br.unverified.invalid/';assert.throws(()=>validateArticlePackage(bad));
+});
 test('examples retain legal distinctions at age thresholds, biometrics and benefit review',()=>{
   const get=(slug,key)=>pack.units.find(r=>r.course_slug===slug&&r.unit_key===key);
   assert.match(get('cin','art-15').exemplo,/cinquenta e nove/);assert.match(get('cin','art-25').atencao.join(' '),/Não conte os dez anos da emissão/);

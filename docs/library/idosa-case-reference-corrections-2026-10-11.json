@@ -1,0 +1,219 @@
+[
+  {
+    "expected": {
+      "id": "d49509d7-4443-5712-b4ba-c343fea8d38f",
+      "material_slug": "legislacao-idosa-revisao",
+      "version": "2026-10-09",
+      "source_body_sha256": "456eaa256483ea9bd1fdbfd66aa6f7e3a8e291a7f5ddd2ac921640e6dd7038a1",
+      "content": {
+        "cases": [
+          {
+            "id": "case-1",
+            "steps": [
+              "O art. 102 alcança apropriar-se ou desviar bens, proventos, pensão ou qualquer outro rendimento, dando aplicação diversa de sua finalidade.",
+              "A pena prevista é reclusão de um a quatro anos e multa; o vínculo de cuidado não torna a renda propriedade do cuidador."
+            ],
+            "title": "Idade não autoriza apropriação",
+            "pitfall": "Tratar toda pessoa idosa como civilmente incapaz.",
+            "articles": [
+              "Art. 102"
+            ],
+            "question": "A alegação de cuidar da vítima elimina o tipo?",
+            "scenario": "Alguém se apropria do benefício de uma pessoa idosa e o desvia para finalidade diversa, nas condições do art. 102.",
+            "variation": {
+              "answer": "Não se presume incapacidade ou crime somente pela idade; autonomia e fatos importam.",
+              "scenario": "E se a pessoa idosa administrar livremente seu dinheiro sem a conduta típica de terceiro?"
+            },
+            "conclusion": "O fato narrado demanda exame desse tipo, não simples aceitação da justificativa de cuidado."
+          },
+          {
+            "id": "tutor-1",
+            "steps": [
+              "O art. 3º, § 2º, assegura prioridade especial aos maiores de 80 anos em relação às demais pessoas idosas.",
+              "Não confunda o marco geral de 60 anos com a prioridade especial; saúde tem regra e ressalva próprias."
+            ],
+            "title": "Prioridade entre pessoas idosas",
+            "pitfall": "Trocar o marco geral de pessoa idosa pelo de prioridade especial.",
+            "articles": [
+              "Art. 3",
+              "Art. 15"
+            ],
+            "question": "Existe prioridade especial dentro desse grupo?",
+            "scenario": "Duas pessoas idosas aguardam atendimento; uma tem 68 anos e outra 83.",
+            "variation": {
+              "answer": "Na saúde, confira o art. 15, § 7º, que ressalva as emergências; prioridade não substitui a análise clínica.",
+              "scenario": "E se houver emergência médica de outra pessoa?"
+            },
+            "conclusion": "O caso exige considerar a prioridade especial da pessoa com 83 anos."
+          },
+          {
+            "id": "idosa-1",
+            "steps": [
+              "A Lei 9.099/1995 trata como menor potencial ofensivo o crime cuja pena máxima não passa de 2 anos.",
+              "O parágrafo único do art. 95 do Estatuto (incluído pela Lei 15.163/2025) afasta a Lei 9.099 dos crimes previstos no Estatuto e dos crimes praticados com violência contra a pessoa idosa, independentemente da pena prevista.",
+              "Houve violência contra pessoa idosa. Logo, não cabem transação penal nem rito sumaríssimo."
+            ],
+            "title": "Agressão leve contra pessoa idosa não vai ao Juizado",
+            "pitfall": "Decidir só pela pena máxima. Para a pessoa idosa, a violência tira o caso do Juizado.",
+            "articles": [
+              "Art. 95"
+            ],
+            "question": "O caso é tratado como infração de menor potencial ofensivo?",
+            "scenario": "Um filho agride levemente a mãe, de 72 anos, causando uma lesão leve. A pena máxima do crime comum, isoladamente, caberia no Juizado Especial.",
+            "variation": {
+              "answer": "O parágrafo único do art. 95 alcança os crimes do Estatuto e os cometidos com violência. Sem uma dessas situações, vale a regra geral da Lei 9.099.",
+              "scenario": "E se o crime fosse comum, sem violência, com pena máxima de 1 ano?"
+            },
+            "conclusion": "Não. Com violência contra pessoa idosa, a Lei 9.099 não se aplica, mesmo que a pena seja baixa."
+          },
+          {
+            "id": "idosa-2",
+            "steps": [
+              "O art. 99 pune expor a perigo a integridade e a saúde, física ou psíquica, da pessoa idosa, submetendo-a a condições desumanas ou degradantes ou privando-a de alimentos e cuidados indispensáveis.",
+              "Conforme a conferência na fonte oficial, a pena hoje é reclusão de 2 a 5 anos (redação da Lei 15.163/2025). Antes era detenção de 2 meses a 1 ano.",
+              "Como é crime do Estatuto, o parágrafo único do art. 95 afasta a Lei 9.099."
+            ],
+            "title": "Privar a pessoa idosa de alimentos e cuidados",
+            "pitfall": "Usar a pena antiga (detenção, 2 meses a 1 ano) do art. 99.",
+            "articles": [
+              "Art. 99",
+              "Art. 102"
+            ],
+            "question": "Que crime é esse e qual é a pena atual?",
+            "scenario": "Uma cuidadora deixa uma idosa acamada sem alimentação adequada e sem os cuidados indispensáveis por vários dias.",
+            "variation": {
+              "answer": "O fato se aproxima do art. 102, apropriação ou desvio de bens e proventos da pessoa idosa, com reclusão de 1 a 4 anos e multa.",
+              "scenario": "E se um parente apenas usasse a aposentadoria da idosa para pagar contas dele?"
+            },
+            "conclusion": "Cuidadora responde pelo art. 99, com reclusão de 2 a 5 anos, e o caso não vai ao Juizado."
+          }
+        ],
+        "illustrations": [
+          {
+            "kind": "flow",
+            "nodes": [
+              "Identifique os fatos e a norma",
+              "Confira sujeitos e requisitos",
+              "Compare exceções e vigência",
+              "Aplique a consequência e teste a variação"
+            ],
+            "title": "Como analisar Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+            "caption": "Use a sequência nos casos, depois explique por que a variação muda (ou mantém) a conclusão."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+          "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa — texto oficial conferido",
+          "sha256": "e808a5881fc4e1ec0734fc1737bcf4d0c1707e5a0844d7b05efb3ca9e733ee57",
+          "checked_at": "2026-10-10T02:44:16.419918+00:00"
+        }
+      ],
+      "checked_at": "2026-10-10T02:56:29.131965+00:00",
+      "status": "active",
+      "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+      "reviewed_at": "2026-10-10T03:00:19.468+00:00"
+    },
+    "material_body_sha256": "456eaa256483ea9bd1fdbfd66aa6f7e3a8e291a7f5ddd2ac921640e6dd7038a1",
+    "content": {
+      "cases": [
+        {
+          "id": "case-1",
+          "steps": [
+            "O art. 102 alcança apropriar-se ou desviar bens, proventos, pensão ou qualquer outro rendimento, dando aplicação diversa de sua finalidade.",
+            "A pena prevista é reclusão de um a quatro anos e multa; o vínculo de cuidado não torna a renda propriedade do cuidador."
+          ],
+          "title": "Idade não autoriza apropriação",
+          "pitfall": "Tratar toda pessoa idosa como civilmente incapaz.",
+          "articles": [
+            "Art. 102"
+          ],
+          "question": "A alegação de cuidar da vítima elimina o tipo?",
+          "scenario": "Alguém se apropria do benefício de uma pessoa idosa e o desvia para finalidade diversa, nas condições do art. 102.",
+          "variation": {
+            "answer": "Não se presume incapacidade ou crime somente pela idade; autonomia e fatos importam.",
+            "scenario": "E se a pessoa idosa administrar livremente seu dinheiro sem a conduta típica de terceiro?"
+          },
+          "conclusion": "O fato narrado demanda exame desse tipo, não simples aceitação da justificativa de cuidado."
+        },
+        {
+          "id": "tutor-1",
+          "steps": [
+            "O art. 3º, § 2º, assegura prioridade especial aos maiores de 80 anos em relação às demais pessoas idosas.",
+            "Não confunda o marco geral de 60 anos com a prioridade especial; saúde tem regra e ressalva próprias."
+          ],
+          "title": "Prioridade entre pessoas idosas",
+          "pitfall": "Trocar o marco geral de pessoa idosa pelo de prioridade especial.",
+          "articles": [
+            "Art. 3",
+            "Art. 15"
+          ],
+          "question": "Existe prioridade especial dentro desse grupo?",
+          "scenario": "Duas pessoas idosas aguardam atendimento; uma tem 68 anos e outra 83.",
+          "variation": {
+            "answer": "Na saúde, confira o art. 15, § 7º, que ressalva as emergências; prioridade não substitui a análise clínica.",
+            "scenario": "E se houver emergência médica de outra pessoa?"
+          },
+          "conclusion": "O caso exige considerar a prioridade especial da pessoa com 83 anos."
+        },
+        {
+          "id": "idosa-1",
+          "steps": [
+            "A Lei 9.099/1995 trata como menor potencial ofensivo o crime cuja pena máxima não passa de 2 anos.",
+            "O parágrafo único do art. 94 do Estatuto (incluído pela Lei 15.163/2025) afasta a Lei 9.099 dos crimes previstos no Estatuto e dos crimes praticados com violência contra a pessoa idosa, independentemente da pena prevista.",
+            "Houve violência contra pessoa idosa. Logo, não cabem transação penal nem rito sumaríssimo."
+          ],
+          "title": "Agressão leve contra pessoa idosa não vai ao Juizado",
+          "pitfall": "Decidir só pela pena máxima. Para a pessoa idosa, a violência tira o caso do Juizado.",
+          "articles": [
+            "Art. 94"
+          ],
+          "question": "A Lei 9.099 pode ser aplicada ao caso só porque a pena máxima é baixa?",
+          "scenario": "Um filho agride levemente a mãe, de 72 anos, causando uma lesão leve. A pena máxima do crime comum, isoladamente, caberia no Juizado Especial.",
+          "variation": {
+            "answer": "O parágrafo único do art. 94 alcança os crimes do Estatuto e os cometidos com violência. Sem uma dessas situações, vale a regra geral da Lei 9.099.",
+            "scenario": "E se o crime fosse comum, sem violência, com pena máxima de 1 ano?"
+          },
+          "conclusion": "Não. O parágrafo único do art. 94 afasta a Lei 9.099 na hipótese de crime com violência contra pessoa idosa, independentemente da pena prevista."
+        },
+        {
+          "id": "idosa-2",
+          "steps": [
+            "O art. 99 pune expor a perigo a integridade e a saúde, física ou psíquica, da pessoa idosa, submetendo-a a condições desumanas ou degradantes ou privando-a de alimentos e cuidados indispensáveis.",
+            "Conforme a conferência na fonte oficial, a pena hoje é reclusão de 2 a 5 anos (redação da Lei 15.163/2025). Antes era detenção de 2 meses a 1 ano.",
+            "Como é crime do Estatuto, o parágrafo único do art. 94 afasta a Lei 9.099."
+          ],
+          "title": "Privar a pessoa idosa de alimentos e cuidados",
+          "pitfall": "Usar a pena antiga (detenção, 2 meses a 1 ano) do art. 99.",
+          "articles": [
+            "Art. 99",
+            "Art. 94",
+            "Art. 102"
+          ],
+          "question": "Que crime é esse e qual é a pena atual?",
+          "scenario": "Uma cuidadora deixa uma idosa acamada sem alimentação adequada e sem os cuidados indispensáveis por vários dias.",
+          "variation": {
+            "answer": "O fato se aproxima do art. 102, apropriação ou desvio de bens e proventos da pessoa idosa, com reclusão de 1 a 4 anos e multa.",
+            "scenario": "E se um parente apenas usasse a aposentadoria da idosa para pagar contas dele?"
+          },
+          "conclusion": "Com os elementos de exposição a perigo e dever de cuidado descritos, o caso deve ser confrontado com o art. 99, cuja pena atual do caput é reclusão de 2 a 5 anos. O art. 94 afasta a Lei 9.099 para os crimes do Estatuto."
+        }
+      ],
+      "illustrations": [
+        {
+          "kind": "flow",
+          "nodes": [
+            "Identifique os fatos e a norma",
+            "Confira sujeitos e requisitos",
+            "Compare exceções e vigência",
+            "Aplique a consequência e teste a variação"
+          ],
+          "title": "Como analisar Lei 10.741/2003 — Estatuto da Pessoa Idosa",
+          "caption": "Use a sequência nos casos, depois explique por que a variação muda (ou mantém) a conclusão."
+        }
+      ]
+    },
+    "reason": "Dois casos indicavam indevidamente art. 95 para a vedação da Lei 9.099. A redação atual de 2025 está no art. 94, parágrafo único; preservar IDs, cenários e demais casos."
+  }
+]

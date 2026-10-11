@@ -1,0 +1,22 @@
+{
+  "verified_at": "2026-10-11T20:41:36.967247+00:00",
+  "guide_updates": {
+    "study_materials": {
+      "targets_verified": 2,
+      "non_targets_preserved": 150
+    },
+    "legal_courses": {
+      "targets_verified": 1,
+      "non_targets_preserved": 41
+    },
+    "study_material_enrichments": {
+      "targets_verified": 4,
+      "non_targets_preserved": 240
+    }
+  },
+  "corrected_case_references": 2,
+  "archived_enrichments_untouched": true,
+  "published_article_explanations_preserved": 117,
+  "question_trainer_mutations": 0,
+  "case_source": "Lei 10.741/2003, art. 94, parágrafo único, redação da Lei 15.163/2025"
+}

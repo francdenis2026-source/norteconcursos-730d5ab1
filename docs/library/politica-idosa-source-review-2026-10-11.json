@@ -1,0 +1,20 @@
+{
+  "expected": {
+    "id": "5ce5701e-a9df-469b-9277-c260b6c83486",
+    "source_type": "lei",
+    "title": "Lei 8.842/1994, art. 3º, II",
+    "issuer": "Presidência da República",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8842.htm",
+    "published_on": null,
+    "checked_at": "2026-10-10T04:53:01.679891+00:00",
+    "status": "em_revisao",
+    "is_official": true,
+    "notes": "Dispositivos citados conferidos na revisão individual. Esta conferência não certifica a íntegra de toda a norma."
+  },
+  "sha256": "2ba610d2e599f04839e837915fdcf112f49517263e892ab3291df337554ae0e1",
+  "patch": {
+    "status": "vigente",
+    "checked_at": "2026-10-11T20:20:46.544237+00:00",
+    "notes": "Dispositivos citados conferidos na revisão individual. Esta conferência não certifica a íntegra de toda a norma. Conferido diretamente o texto compilado em 11/10/2026, inclusive art. 7º alterado pelo Estatuto. Vetos distinguem dispositivos não ativos; norma em vigor. SHA-256 2ba610d2e599f04839e837915fdcf112f49517263e892ab3291df337554ae0e1"
+  }
+}

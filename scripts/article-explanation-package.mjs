@@ -14,7 +14,7 @@ export function validateArticlePackage(pack) {
     if(!['simples','exemplo'].every(k=>typeof row[k]==='string'&&row[k].trim().length>=20)||!['pontos','atencao','prova','termos','remissoes'].every(k=>Array.isArray(row[k]))||!['pontos','atencao','prova'].every(k=>row[k].length&&row[k].every(v=>typeof v==='string'&&v.trim())))throw Error('Explicação incompleta');
     if(['status','reviewed_by','reviewed_at'].some(k=>k in row))throw Error('Publicação definida apenas pelo importador');
   }
-  for(const law of laws.values())for(const ref of law.additional_sources??[]){const url=new URL(ref.url);if(url.protocol!=='https:'||url.hostname!=='www.planalto.gov.br'||!sha.test(ref.sha256)||!Number.isFinite(Date.parse(ref.checked_at))||Date.parse(ref.checked_at)>Date.now())throw Error('Fonte adicional inválida');}
+  for(const law of laws.values())for(const ref of law.additional_sources??[]){const url=new URL(ref.url);if(url.protocol!=='https:'||!['www.planalto.gov.br','processo.stj.jus.br'].includes(url.hostname)||!sha.test(ref.sha256)||!Number.isFinite(Date.parse(ref.checked_at))||Date.parse(ref.checked_at)>Date.now())throw Error('Fonte adicional inválida');}
   for(const law of laws.values())if(pack.units.filter(r=>r.course_slug===law.slug).length!==law.units)throw Error('Cobertura incompleta do lote');
   return pack;
 }

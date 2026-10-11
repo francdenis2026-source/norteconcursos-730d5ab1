@@ -4,7 +4,7 @@ import {sessionAuthHeaders} from './supabase-session-auth.mjs';
 const [input,report,mode]=process.argv.slice(2);
 if(!input||!report||(mode&&mode!=='--dry-run'))throw Error('Uso: node scripts/register-reviewed-sources.mjs FONTES RELATORIO [--dry-run]');
 const rows=JSON.parse(await readFile(input,'utf8'));
-for(const r of rows){const u=new URL(r.url);if(u.protocol!=='https:'||u.hostname!=='www.planalto.gov.br'||!r.is_official||r.status!=='vigente'||!r.title||!Number.isFinite(Date.parse(r.checked_at))||Date.parse(r.checked_at)>Date.now())throw Error('Fonte inválida');}
+for(const r of rows){const u=new URL(r.url);const official=u.hostname==='www.planalto.gov.br'||u.hostname==='processo.stj.jus.br'&&r.source_type==='jurisprudencia'&&r.issuer==='STJ';if(u.protocol!=='https:'||!official||!r.is_official||r.status!=='vigente'||!r.title||!Number.isFinite(Date.parse(r.checked_at))||Date.parse(r.checked_at)>Date.now())throw Error('Fonte inválida');}
 const result={dry_run:mode==='--dry-run',registered:0,preserved:0};
 if(!result.dry_run){
  const key=process.env.TASK_SUPABASE_KEY,project=process.env.TASK_SUPABASE_PROJECT;if(!key||project!=='gkwphadbveiyjcwiiizw')throw Error('Defina a sessão do projeto');
