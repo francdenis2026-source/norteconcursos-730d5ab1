@@ -19,6 +19,7 @@ export function HeroGeometry() {
     let frame = 0;
     let visible = true;
     let phase = 0;
+    const pointer = { x: 0, y: 0, targetX: 0, targetY: 0, active: false };
     let columns = 11;
     let points: { x: number; y: number; seed: number }[] = [];
 
@@ -49,12 +50,27 @@ export function HeroGeometry() {
       frame = requestAnimationFrame(draw);
       if (!visible || document.hidden) return;
       phase += 0.006;
+      pointer.x += (pointer.targetX - pointer.x) * 0.06;
+      pointer.y += (pointer.targetY - pointer.y) * 0.06;
       context.clearRect(0, 0, width, height);
       const drifted = points.map((point) => ({
         ...point,
         x: point.x + Math.sin(phase + point.seed) * 2.5,
         y: point.y + Math.cos(phase * 0.8 + point.seed) * 2,
       }));
+      if (pointer.active) {
+        for (const point of drifted) {
+          const dx = point.x - pointer.x;
+          const dy = point.y - pointer.y;
+          const distance = Math.hypot(dx, dy);
+          const influence = Math.max(0, 1 - distance / 220);
+          if (influence > 0) {
+            const direction = distance || 1;
+            point.x += (dx / direction) * influence * 7;
+            point.y += (dy / direction) * influence * 7;
+          }
+        }
+      }
       context.lineWidth = 0.8;
       for (let index = 0; index < drifted.length; index += 1) {
         const point = drifted[index]!;
@@ -63,7 +79,12 @@ export function HeroGeometry() {
         const diagonal = drifted[index + columns + 1];
         for (const target of [right, below, diagonal]) {
           if (!target || (target === right && (index + 1) % columns === 0)) continue;
-          context.strokeStyle = `rgba(212, 168, 83, ${0.08 + 0.025 * Math.sin(phase * 2 + index)})`;
+          const midpointDistance = Math.hypot(
+            (point.x + target.x) / 2 - pointer.x,
+            (point.y + target.y) / 2 - pointer.y,
+          );
+          const localResponse = pointer.active ? Math.max(0, 1 - midpointDistance / 260) * 0.045 : 0;
+          context.strokeStyle = `rgba(212, 168, 83, ${0.08 + localResponse + 0.025 * Math.sin(phase * 2 + index)})`;
           context.beginPath();
           context.moveTo(point.x, point.y);
           context.lineTo(target.x, target.y);
@@ -84,11 +105,31 @@ export function HeroGeometry() {
     observer.observe(parent);
     resize();
     window.addEventListener("resize", resize);
+    const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const onPointerMove = (event: PointerEvent) => {
+      const rect = parent.getBoundingClientRect();
+      pointer.targetX = event.clientX - rect.left;
+      pointer.targetY = event.clientY - rect.top;
+      pointer.active = true;
+    };
+    const onPointerLeave = () => {
+      pointer.active = false;
+      pointer.targetX = width * 0.5;
+      pointer.targetY = height * 0.5;
+    };
+    if (canHover) {
+      parent.addEventListener("pointermove", onPointerMove, { passive: true });
+      parent.addEventListener("pointerleave", onPointerLeave, { passive: true });
+    }
     draw();
     return () => {
       cancelAnimationFrame(frame);
       observer.disconnect();
       window.removeEventListener("resize", resize);
+      if (canHover) {
+        parent.removeEventListener("pointermove", onPointerMove);
+        parent.removeEventListener("pointerleave", onPointerLeave);
+      }
     };
   }, []);
 
