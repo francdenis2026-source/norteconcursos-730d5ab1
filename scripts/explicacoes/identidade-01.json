@@ -1,0 +1,123 @@
+{
+  "course_slug": "identidade",
+  "law": "Lei da Carteira de Identidade (Lei nº 7.116, de 1983) — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "A Carteira de Identidade emitida por órgãos de Identificação dos Estados, do Distrito Federal e dos Territórios tem fé pública e validade em todo o território nacional.",
+      "pontos": ["Emitida pelos órgãos de identificação estaduais, distritais e territoriais.", "Tem fé pública.", "Validade em todo o território nacional."],
+      "atencao": ["A validade nacional independe do Estado emissor."],
+      "exemplo": "A identidade emitida em um Estado vale em qualquer outro.",
+      "prova": ["Assertiva que restringe a validade da identidade ao Estado emissor erra: vale em todo o território nacional."],
+      "termos": [{ "termo": "Fé pública", "significado": "Presunção de veracidade do documento." }],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-2": {
+      "simples": "Para a expedição da Carteira de Identidade não será exigida do interessado a apresentação de qualquer outro documento, além da certidão de nascimento ou de casamento. A requerente do sexo feminino apresentará obrigatoriamente a certidão de casamento, caso seu nome de solteira tenha sido alterado em consequência do matrimônio. O brasileiro naturalizado apresentará o Certificado de Naturalização. A primeira emissão da Carteira de Identidade é gratuita.",
+      "pontos": ["Basta a certidão de nascimento ou de casamento.", "Quem mudou o nome pelo casamento apresenta a certidão de casamento.", "Naturalizado apresenta o Certificado de Naturalização.", "Primeira emissão gratuita."],
+      "atencao": ["ATUALIZAÇÃO: o §3º (gratuidade da primeira emissão) foi incluído por lei posterior.", "Nenhum outro documento pode ser exigido."],
+      "exemplo": "O cidadão obtém a primeira identidade sem pagar taxa, apresentando a certidão de nascimento.",
+      "prova": ["Assertiva que cobra taxa da primeira emissão da identidade erra: ela é gratuita."],
+      "termos": [],
+      "remissoes": ["Art. 7º"]
+    },
+    "art-3": {
+      "simples": "A Carteira de Identidade conterá as Armas da República e a inscrição República Federativa do Brasil; o nome da Unidade da Federação; a identificação do órgão expedidor; o registro geral, local e data da expedição; nome, filiação, local e data de nascimento e dados resumidos do registro de nascimento; fotografia 3 x 4, assinatura e impressão digital do polegar direito; assinatura do dirigente do órgão; e o número do CPF. Na emissão de novos documentos, o órgão deve usar o número do CPF como número de registro geral, pesquisar a base do CPF para verificar a integridade das informações e disponibilizar dados cadastrais e biométricos à Receita Federal. Se o requerente não tiver CPF, o órgão fará a inscrição.",
+      "pontos": ["Elementos obrigatórios do documento.", "Fotografia 3 x 4, assinatura e impressão digital do polegar direito.", "Número do CPF.", "CPF como número de registro geral nos novos documentos.", "Órgão inscreve no CPF quem ainda não tiver."],
+      "atencao": ["ATUALIZAÇÃO: CPF como registro geral e a Carteira de Identidade Nacional decorrem de alterações recentes.", "Impressão digital do polegar DIREITO."],
+      "exemplo": "A nova identidade traz o CPF como número de registro geral.",
+      "prova": ["Assertiva que prevê a impressão digital do polegar esquerdo erra: é do polegar direito."],
+      "termos": [{ "termo": "Registro geral", "significado": "Número de cadastro do cidadão no órgão emissor (RG)." }],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-4": {
+      "simples": "Desde que o interessado o solicite, a Carteira de Identidade conterá, além dos elementos do art. 3º, os números de inscrição do titular no PIS ou no PASEP e no CPF. O Poder Executivo Federal poderá aprovar a inclusão de outros dados opcionais. A inclusão poderá ser parcial e dependerá exclusivamente da apresentação dos respectivos documentos comprobatórios.",
+      "pontos": ["PIS ou PASEP e CPF, a pedido do interessado.", "Outros dados opcionais, por aprovação do Executivo.", "Inclusão parcial e mediante documentos comprobatórios."],
+      "atencao": ["Dados OPCIONAIS dependem de pedido do titular."],
+      "exemplo": "O cidadão pede que o número do PIS conste na sua identidade.",
+      "prova": ["Assertiva que torna obrigatória a inclusão do PIS na identidade erra: depende de solicitação."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-5": {
+      "simples": "A Carteira de Identidade do português beneficiado pelo Estatuto da Igualdade será expedida conforme esta Lei, devendo constar referência à sua nacionalidade e à Convenção promulgada pelo Decreto nº 70.391, de 12 de abril de 1972.",
+      "pontos": ["Identidade do português beneficiado pelo Estatuto da Igualdade.", "Constam a nacionalidade e a referência à Convenção."],
+      "atencao": ["Regra especial para portugueses sob o Estatuto da Igualdade."],
+      "exemplo": "O português com igualdade de direitos recebe identidade com menção à sua nacionalidade.",
+      "prova": ["Assertiva que dispensa menção à nacionalidade na identidade do português erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-6": {
+      "simples": "A Carteira de Identidade fará prova de todos os dados nela incluídos, dispensando a apresentação dos documentos que lhe deram origem ou que nela tenham sido mencionados.",
+      "pontos": ["Faz prova de todos os dados nela incluídos.", "Dispensa os documentos de origem."],
+      "atencao": ["Efeito probatório amplo do documento."],
+      "exemplo": "Quem apresenta a identidade não precisa exibir também a certidão de nascimento para comprovar a filiação.",
+      "prova": ["Assertiva que exige a certidão de nascimento junto com a identidade para provar a filiação erra."],
+      "termos": [],
+      "remissoes": ["Art. 1º"]
+    },
+    "art-7": {
+      "simples": "A expedição de segunda via da Carteira de Identidade será efetuada mediante simples solicitação do interessado, vedada qualquer outra exigência, além daquela prevista no art. 2º.",
+      "pontos": ["Segunda via a simples pedido.", "Vedadas outras exigências."],
+      "atencao": ["Só a exigência do art. 2º é admitida."],
+      "exemplo": "O cidadão que perdeu o documento pede a segunda via sem apresentar outros papéis.",
+      "prova": ["Assertiva que permite exigir comprovantes adicionais para a segunda via erra."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-8": {
+      "simples": "A Carteira de Identidade será expedida com base no processo de identificação datiloscópica.",
+      "pontos": ["Base: identificação datiloscópica (impressões digitais)."],
+      "atencao": ["Datiloscopia é a base da emissão."],
+      "exemplo": "A coleta das digitais subsidia a emissão do documento.",
+      "prova": ["Assertiva que dispensa a datiloscopia na emissão erra."],
+      "termos": [{ "termo": "Datiloscopia", "significado": "Identificação por impressões digitais." }],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-9": {
+      "simples": "A apresentação dos documentos a que se refere o art. 2º poderá ser feita por cópia regularmente autenticada.",
+      "pontos": ["Cópia autenticada é aceita."],
+      "atencao": ["A cópia deve ser regularmente autenticada."],
+      "exemplo": "O cidadão apresenta cópia autenticada da certidão de nascimento.",
+      "prova": ["Assertiva que exige sempre o documento original erra: basta cópia autenticada."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-10": {
+      "simples": "O Poder Executivo Federal aprovará o modelo da Carteira de Identidade e expedirá as normas complementares que se fizerem necessárias ao cumprimento da Lei.",
+      "pontos": ["Executivo federal aprova o modelo.", "Edita normas complementares."],
+      "atencao": ["O modelo é definido pelo Executivo federal."],
+      "exemplo": "Um decreto define o modelo nacional do documento.",
+      "prova": ["Assertiva que atribui a cada Estado a definição do modelo erra."],
+      "termos": [],
+      "remissoes": ["Art. 1º"]
+    },
+    "art-11": {
+      "simples": "As Carteiras de Identidade emitidas anteriormente à vigência desta Lei continuarão válidas em todo o território nacional.",
+      "pontos": ["Documentos antigos continuam válidos."],
+      "atencao": ["Dispositivo de transição."],
+      "exemplo": "A identidade antiga permanece válida em todo o país.",
+      "prova": ["Assertiva que invalida as identidades anteriores à Lei erra."],
+      "termos": [],
+      "remissoes": ["Art. 1º"]
+    },
+    "art-12": {
+      "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "A lei passou a valer na data da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis erra."],
+      "termos": [],
+      "remissoes": ["Art. 13"]
+    },
+    "art-13": {
+      "simples": "Revogam-se as disposições em contrário, isto é, ficam sem efeito as normas anteriores incompatíveis com esta Lei.",
+      "pontos": ["Cláusula de revogação genérica."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "Normas incompatíveis foram revogadas.",
+      "prova": ["Assertiva que vê revogação expressa de lei específica erra: é cláusula genérica."],
+      "termos": [],
+      "remissoes": ["Art. 12"]
+    }
+  }
+}

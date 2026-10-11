@@ -1,0 +1,69 @@
+{
+  "course_slug": "temporaria",
+  "law": "Lei da Prisão Temporária (Lei nº 7.960, de 1989) — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "Caberá prisão temporária quando imprescindível para as investigações do inquérito policial; quando o indiciado não tiver residência fixa ou não fornecer elementos necessários ao esclarecimento de sua identidade; ou quando houver fundadas razões de autoria ou participação do indiciado em crimes como homicídio doloso, sequestro ou cárcere privado, roubo, extorsão, extorsão mediante sequestro, estupro, atentado violento ao pudor, rapto violento, epidemia com resultado de morte, envenenamento de água potável ou substância alimentícia ou medicinal qualificado pela morte, quadrilha ou bando, genocídio, tráfico de drogas, crimes contra o sistema financeiro e crimes da Lei de Terrorismo.",
+      "pontos": ["I: imprescindível para o inquérito policial.", "II: sem residência fixa ou sem identidade esclarecida.", "III: fundadas razões de autoria em crimes do rol (homicídio doloso, sequestro, roubo, extorsão, estupro, tráfico, terrorismo, entre outros)."],
+      "atencao": ["ATUALIZAÇÃO: a alínea p (crimes da Lei de Terrorismo) foi incluída por lei posterior; o rol possui expressões de leis antigas, e a doutrina exige combinar os incisos.", "Doutrina e STF: o inciso III exige, em regra, também a imprescindibilidade ou a falta de identidade (leitura conjunta).", "Cabe apenas na fase de INQUÉRITO."],
+      "exemplo": "Suspeito de homicídio doloso, sem residência fixa, pode ser preso temporariamente.",
+      "prova": ["Assertiva que admite a prisão temporária na fase processual erra: ela é cabível na investigação (inquérito)."],
+      "termos": [{ "termo": "Prisão temporária", "significado": "Prisão cautelar de curta duração, para a investigação de crimes graves." }],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-2": {
+      "simples": "A prisão temporária será decretada pelo juiz, em face da representação da autoridade policial ou de requerimento do Ministério Público, e terá o prazo de 5 dias, prorrogável por igual período em caso de extrema e comprovada necessidade. Na representação da autoridade policial, o juiz ouvirá antes o Ministério Público. O despacho será fundamentado e prolatado dentro de 24 horas do recebimento. O juiz poderá determinar que o preso lhe seja apresentado e submetê-lo a exame de corpo de delito. Expede-se mandado em duas vias, uma entregue ao indiciado como nota de culpa, e o mandado conterá o período de duração e o dia da libertação. A prisão só pode ser executada após o mandado judicial. Efetuada a prisão, a autoridade informará o preso de seus direitos constitucionais. Decorrido o prazo, a autoridade custodiante deve soltar o preso, independentemente de nova ordem, salvo comunicação de prorrogação ou de prisão preventiva. O dia do cumprimento do mandado entra no cômputo do prazo.",
+      "pontos": ["Decretada pelo juiz, por representação da autoridade policial ou requerimento do MP.", "Prazo de 5 dias, prorrogável por igual período.", "Despacho fundamentado em 24 horas.", "Mandado em duas vias, com duração e dia da libertação.", "Soltura automática ao fim do prazo.", "Dia do cumprimento do mandado conta no prazo."],
+      "atencao": ["ATUALIZAÇÃO: §§4º-A, 7º e 8º incluídos pela Lei nº 13.869, de 2019 (Lei de Abuso de Autoridade).", "O juiz NÃO decreta de ofício.", "Crimes hediondos e equiparados têm prazo próprio, mais longo (veja a Lei dos Crimes Hediondos) (Lei dos Crimes Hediondos)."],
+      "exemplo": "O delegado representa pela prisão temporária, o juiz ouve o MP e decide em 24 horas.",
+      "prova": ["Assertiva que permite ao juiz decretar a prisão temporária de ofício erra: depende de representação ou requerimento."],
+      "termos": [],
+      "remissoes": ["Art. 1º", "Lei dos Crimes Hediondos"]
+    },
+    "art-3": {
+      "simples": "Os presos temporários deverão permanecer, obrigatoriamente, separados dos demais detentos.",
+      "pontos": ["Separação obrigatória dos demais detentos."],
+      "atencao": ["Evita contato com presos definitivos."],
+      "exemplo": "O preso temporário fica em cela ou ala separada.",
+      "prova": ["Assertiva que permite misturar o preso temporário com os condenados erra."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-4": {
+      "simples": "O art. 4º da antiga Lei de Abuso de Autoridade foi acrescido da alínea i, que considerava abuso de autoridade prolongar a execução de prisão temporária, de pena ou de medida de segurança, deixando de expedir em tempo oportuno ou de cumprir imediatamente ordem de liberdade.",
+      "pontos": ["Alterou a antiga Lei de Abuso de Autoridade.", "Prolongar a execução da prisão era abuso."],
+      "atencao": ["Dispositivo histórico: a antiga lei foi substituída pela Lei de Abuso de Autoridade atual."],
+      "exemplo": "Demorar para soltar o preso temporário ao fim do prazo era abuso de autoridade.",
+      "prova": ["Assertiva que considera a alínea i vigente na antiga lei erra: ela foi substituída."],
+      "termos": [],
+      "remissoes": ["Lei de Abuso de Autoridade"]
+    },
+    "art-5": {
+      "simples": "Em todas as comarcas e seções judiciárias haverá um plantão permanente de vinte e quatro horas do Poder Judiciário e do Ministério Público para apreciação dos pedidos de prisão temporária.",
+      "pontos": ["Plantão permanente de vinte e quatro horas.", "Judiciário e Ministério Público.", "Em todas as comarcas e seções judiciárias."],
+      "atencao": ["Garante a apreciação a qualquer hora."],
+      "exemplo": "O pedido de prisão temporária feito na madrugada é apreciado pelo juiz de plantão.",
+      "prova": ["Assertiva que restringe o plantão ao Judiciário erra: inclui o Ministério Público."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-6": {
+      "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "A lei passou a valer na data da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis erra."],
+      "termos": [],
+      "remissoes": ["Art. 7º"]
+    },
+    "art-7": {
+      "simples": "Revogam-se as disposições em contrário, isto é, ficam sem efeito as normas anteriores incompatíveis com esta Lei.",
+      "pontos": ["Cláusula de revogação genérica."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "Normas incompatíveis foram revogadas.",
+      "prova": ["Assertiva que vê revogação expressa de lei específica erra: é cláusula genérica."],
+      "termos": [],
+      "remissoes": ["Art. 6º"]
+    }
+  }
+}
