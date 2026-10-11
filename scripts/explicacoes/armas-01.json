@@ -1,0 +1,375 @@
+{
+  "course_slug": "armas",
+  "law": "Estatuto do Desarmamento (Lei nº 10.826, de 2003) — lote 01: arts. 1º a 37 e anexo",
+  "units": {
+    "art-1": {
+      "simples": "O Sistema Nacional de Armas (Sinarm), instituído no Ministério da Justiça, no âmbito da Polícia Federal, tem circunscrição em todo o território nacional.",
+      "pontos": ["Sinarm: instituído no Ministério da Justiça, no âmbito da Polícia Federal.", "Circunscrição em todo o território nacional."],
+      "atencao": ["O Sinarm é vinculado à POLÍCIA FEDERAL; o Exército tem o Sigma (armas de uso restrito)."],
+      "exemplo": "O cadastro de uma pistola de uso permitido é feito no Sinarm, da Polícia Federal.",
+      "prova": ["Assertiva que vincula o Sinarm ao Comando do Exército erra: ele atua no âmbito da Polícia Federal."],
+      "termos": [{ "termo": "Sinarm", "significado": "Sistema Nacional de Armas." }],
+      "remissoes": ["Art. 2º", "Art. 3º"]
+    },
+    "art-2": {
+      "simples": "Ao Sinarm compete identificar as características e a propriedade de armas de fogo, mediante cadastro; cadastrar as armas produzidas, importadas e vendidas no País; cadastrar as autorizações de porte e as renovações expedidas pela Polícia Federal; cadastrar as transferências de propriedade, extravio, furto, roubo e outras ocorrências; identificar as modificações que alterem as características ou o funcionamento; integrar no cadastro os acervos policiais; cadastrar as apreensões; cadastrar os armeiros e conceder licença para a atividade; cadastrar mediante registro produtores, atacadistas, varejistas, exportadores e importadores autorizados; cadastrar a identificação do cano e as características das impressões de raiamento e microestriamento do projétil; entre outras competências.",
+      "pontos": ["Cadastro das armas produzidas, importadas e vendidas.", "Cadastro das autorizações de porte e renovações.", "Cadastro de ocorrências: transferência, extravio, furto, roubo, apreensões.", "Licença e cadastro de armeiros.", "Registro de produtores, comerciantes, exportadores e importadores.", "Cadastro do cano e das características balísticas."],
+      "atencao": ["O Sinarm CADASTRA e identifica; a concessão do porte é da Polícia Federal."],
+      "exemplo": "A apreensão de uma arma em operação policial é cadastrada no Sinarm.",
+      "prova": ["Assertiva que atribui ao Sinarm a produção e a venda das armas erra: ele as cadastra."],
+      "termos": [],
+      "remissoes": ["Art. 1º"]
+    },
+    "art-3": {
+      "simples": "É obrigatório o registro de arma de fogo no órgão competente. As armas de fogo de uso restrito serão registradas no Comando do Exército, na forma do regulamento da Lei.",
+      "pontos": ["Registro obrigatório.", "Uso permitido: Polícia Federal (Sinarm).", "Uso restrito: Comando do Exército."],
+      "atencao": ["Registro de arma de USO RESTRITO: Comando do Exército."],
+      "exemplo": "Um fuzil de uso restrito é registrado no Comando do Exército.",
+      "prova": ["Assertiva que atribui à Polícia Federal o registro das armas de uso restrito erra: é do Comando do Exército."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-4": {
+      "simples": "Para adquirir arma de fogo de uso permitido, o interessado deverá, além de declarar a efetiva necessidade, comprovar idoneidade, com certidões negativas de antecedentes criminais das Justiças Federal, Estadual, Militar e Eleitoral e de não estar respondendo a inquérito policial ou processo criminal; apresentar documento comprobatório de ocupação lícita e de residência certa; e comprovar capacidade técnica e aptidão psicológica para o manuseio de arma de fogo. O Sinarm expedirá autorização de compra em nome do requerente e para a arma indicada, intransferível. A aquisição de munição só poderá ser feita no calibre correspondente à arma registrada e na quantidade estabelecida no regulamento. A empresa que comercializar arma de fogo é obrigada a comunicar a venda à autoridade competente.",
+      "pontos": ["Declaração de efetiva necessidade.", "Idoneidade: certidões negativas e inexistência de inquérito ou processo.", "Ocupação lícita e residência certa.", "Capacidade técnica e aptidão psicológica.", "Autorização de compra intransferível.", "Munição: calibre da arma registrada e quantidade regulamentar."],
+      "atencao": ["ATUALIZAÇÃO: redação do inciso I dada pela Lei nº 11.706, de 2008; o texto remete a ADIs sobre a aquisição de munição (ADI 6466 e ADI 6139).", "A efetiva necessidade e os requisitos são cumulativos."],
+      "exemplo": "Quem responde a processo criminal não preenche o requisito de idoneidade para comprar arma.",
+      "prova": ["Assertiva que dispensa a aptidão psicológica para adquirir arma de fogo de uso permitido erra."],
+      "termos": [],
+      "remissoes": ["Art. 5º", "Art. 10"]
+    },
+    "art-5": {
+      "simples": "O certificado de Registro de Arma de Fogo, com validade em todo o território nacional, autoriza o proprietário a manter a arma de fogo exclusivamente no interior de sua residência ou domicílio, ou dependência desses, ou no seu local de trabalho, desde que seja ele o titular ou o responsável legal pelo estabelecimento ou empresa. O certificado será expedido pela Polícia Federal e precedido de autorização do Sinarm. Os requisitos dos incisos I, II e III do art. 4º devem ser comprovados periodicamente, em período não inferior a 3 anos, para a renovação do certificado. O proprietário de arma com registro estadual anterior que não optasse pela entrega espontânea deveria renová-lo no registro federal até o dia 31 de dezembro de 2008.",
+      "pontos": ["Registro autoriza manter a arma NA RESIDÊNCIA ou no local de trabalho (titular ou responsável).", "Expedido pela Polícia Federal, após autorização do Sinarm.", "Renovação com comprovação periódica dos requisitos, em período não inferior a 3 anos.", "Registro estadual antigo: renovação federal até 31 de dezembro de 2008."],
+      "atencao": ["O REGISTRO não autoriza portar a arma fora de casa; isso exige o PORTE.", "Renovação: não inferior a 3 anos."],
+      "exemplo": "O dono de arma registrada pode guardá-la em casa, mas não levá-la na rua sem porte.",
+      "prova": ["Assertiva que permite ao titular do registro portar a arma em vias públicas erra: o registro autoriza mantê-la na residência ou no local de trabalho."],
+      "termos": [{ "termo": "Posse", "significado": "Manter a arma em casa ou no local de trabalho, com registro." }],
+      "remissoes": ["Art. 6º", "Art. 12"]
+    },
+    "art-6": {
+      "simples": "É proibido o porte de arma de fogo em todo o território nacional, salvo para os casos previstos em legislação própria e para os integrantes das Forças Armadas; dos órgãos referidos nos incisos I a V do art. 144 da Constituição e da Força Nacional de Segurança Pública; das guardas municipais, nas condições do regulamento; dos agentes operacionais da ABIN e do Departamento de Segurança do GSI; das polícias legislativas; dos agentes e guardas prisionais, das escoltas de presos e das guardas portuárias; das empresas de segurança privada e de transporte de valores; das entidades de desporto cujas atividades demandem armas de fogo; das carreiras de Auditoria da Receita Federal e de Auditoria-Fiscal do Trabalho; e dos tribunais e Ministérios Públicos, para servidores que exerçam funções de segurança. Integrantes de certas categorias podem portar mesmo fora de serviço. A autorização para guardas municipais depende de formação funcional, fiscalização e controle interno. Residentes em áreas rurais, maiores de 25 anos, que dependam da arma para subsistência alimentar, podem obter o porte na categoria caçador para subsistência. Guardas municipais de Municípios integrantes de regiões metropolitanas têm porte quando em serviço.",
+      "pontos": ["Regra: porte PROIBIDO.", "Exceções: Forças Armadas, órgãos de segurança do art. 144, Força Nacional, ABIN e GSI, polícias legislativas, agentes prisionais, escoltas, guardas portuárias, empresas de segurança privada, entidades desportivas, Receita e auditores do trabalho, tribunais e MPs (segurança).", "Guardas municipais: nas condições do regulamento, com formação e fiscalização.", "Caçador para subsistência: rural, maior de 25 anos, arma de uso permitido, tiro simples.", "Uso fora de serviço para integrantes de certas categorias."],
+      "atencao": ["ATUALIZAÇÃO: inciso VI com redação da Lei nº 15.306, de 2025 (polícias legislativas); partes do dispositivo foram declaradas inconstitucionais pelo STF (ADI 5538) quanto às guardas municipais.", "Porte é EXCEÇÃO à proibição geral.", "O caçador para subsistência que der outro uso à arma responde por porte ilegal ou disparo."],
+      "exemplo": "O policial civil pode portar arma fora de serviço, nos termos do regulamento.",
+      "prova": ["Assertiva que torna o porte de arma regra geral para qualquer cidadão com registro erra: o porte é proibido, salvo exceções legais."],
+      "termos": [{ "termo": "Caçador para subsistência", "significado": "Categoria de porte para quem depende da arma para o sustento familiar na zona rural." }],
+      "remissoes": ["Art. 10", "Art. 14"]
+    },
+    "art-7": {
+      "simples": "As armas de fogo utilizadas pelos profissionais de segurança privada dos prestadores de serviços e das empresas e condomínios com serviços orgânicos de segurança privada serão de propriedade, responsabilidade e guarda das respectivas empresas, somente podendo ser utilizadas quando em serviço, observadas as condições de uso e armazenagem estabelecidas pelo órgão competente, sendo o certificado de registro e a autorização de porte expedidos pela Polícia Federal em nome da empresa. O proprietário ou diretor responsável de empresa de segurança privada e de transporte de valores responderá pelo crime do parágrafo único do art. 13, sem prejuízo das demais sanções, se deixar de registrar ocorrência e comunicar à Polícia Federal perda, furto, roubo ou outra forma de extravio de armas, acessórios e munições sob sua guarda nas primeiras 24 horas depois de ocorrido o fato.",
+      "pontos": ["Armas da segurança privada pertencem às empresas e só são usadas em serviço.", "Registro e porte em nome da empresa, expedidos pela Polícia Federal.", "Comunicar perda, furto ou roubo à PF e à polícia em 24 horas, sob pena do art. 13, parágrafo único."],
+      "atencao": ["ATUALIZAÇÃO: redação do caput dada pela Lei nº 14.967, de 2024 (Estatuto da Segurança Privada).", "Prazo de 24 horas para comunicar extravio."],
+      "exemplo": "A empresa de vigilância comunica à PF, em 24 horas, o roubo de uma arma sob sua guarda.",
+      "prova": ["Assertiva que atribui ao vigilante a propriedade da arma usada em serviço erra: é da empresa."],
+      "termos": [],
+      "remissoes": ["Art. 13"]
+    },
+    "art-7-a": {
+      "simples": "As armas de fogo utilizadas pelos servidores dos tribunais e Ministérios Públicos (instituições do inciso XI do art. 6º) serão de propriedade, responsabilidade e guarda das respectivas instituições, somente podendo ser utilizadas quando em serviço, sendo o certificado de registro e a autorização de porte expedidos pela Polícia Federal em nome da instituição. A autorização independe de pagamento de taxa. O presidente do tribunal ou o chefe do Ministério Público designará os servidores com funções de segurança que poderão portar arma, respeitado o limite máximo de 50% dos servidores que exerçam essas funções. O porte fica condicionado à comprovação dos requisitos do art. 4º, à formação funcional em estabelecimentos de ensino policial e à existência de mecanismos de fiscalização e controle interno.",
+      "pontos": ["Armas pertencem às instituições e só são usadas em serviço.", "Porte em nome da instituição, sem taxa.", "Limite de 50% dos servidores que exerçam funções de segurança.", "Condições: requisitos do art. 4º, formação policial e controle interno."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 12.694, de 2012; há questionamento no STF (ADI 5157).", "Limite de 50% dos servidores de segurança."],
+      "exemplo": "O tribunal designa parte dos seus agentes de segurança para portar arma, respeitado o teto de 50%.",
+      "prova": ["Assertiva que permite o porte de arma a todos os servidores de segurança do tribunal erra: há teto de 50%."],
+      "termos": [],
+      "remissoes": ["Art. 6º, XI"]
+    },
+    "art-8": {
+      "simples": "As armas de fogo utilizadas em entidades desportivas legalmente constituídas devem obedecer às condições de uso e de armazenagem estabelecidas pelo órgão competente, respondendo o possuidor ou o autorizado a portar a arma pela sua guarda, na forma do regulamento.",
+      "pontos": ["Armas das entidades desportivas seguem as condições de uso e armazenagem do órgão competente.", "O possuidor ou autorizado responde pela guarda."],
+      "atencao": ["Responsabilidade pela GUARDA recai sobre o possuidor ou autorizado."],
+      "exemplo": "O clube de tiro guarda as armas conforme as normas do órgão competente.",
+      "prova": ["Assertiva que isenta o possuidor da responsabilidade pela guarda da arma da entidade desportiva erra."],
+      "termos": [],
+      "remissoes": ["Art. 6º, IX"]
+    },
+    "art-9": {
+      "simples": "Compete ao Ministério da Justiça a autorização do porte de arma para os responsáveis pela segurança de cidadãos estrangeiros em visita ou sediados no Brasil e, ao Comando do Exército, nos termos do regulamento, o registro e a concessão de porte de trânsito de arma de fogo para colecionadores, atiradores e caçadores e de representantes estrangeiros em competição internacional oficial de tiro realizada no território nacional.",
+      "pontos": ["Ministério da Justiça: porte para quem faz a segurança de estrangeiros.", "Comando do Exército: registro e porte de trânsito para colecionadores, atiradores e caçadores (CAC) e competidores estrangeiros."],
+      "atencao": ["Os CAC têm registro e porte de TRÂNSITO concedidos pelo EXÉRCITO."],
+      "exemplo": "O atirador desportivo obtém porte de trânsito no Comando do Exército.",
+      "prova": ["Assertiva que atribui à Polícia Federal o registro dos colecionadores, atiradores e caçadores erra: é do Comando do Exército."],
+      "termos": [{ "termo": "CAC", "significado": "Colecionadores, atiradores desportivos e caçadores." }],
+      "remissoes": ["Art. 24"]
+    },
+    "art-10": {
+      "simples": "A autorização para o porte de arma de fogo de uso permitido, em todo o território nacional, é de competência da Polícia Federal e somente será concedida após autorização do Sinarm. Poderá ser concedida com eficácia temporária e territorial limitada, nos termos de atos regulamentares, e dependerá de o requerente demonstrar a sua efetiva necessidade por exercício de atividade profissional de risco ou de ameaça à sua integridade física; atender às exigências do art. 4º; e apresentar documentação de propriedade da arma, bem como seu registro. A autorização perderá automaticamente sua eficácia caso o portador seja detido ou abordado em estado de embriaguez ou sob efeito de substâncias químicas ou alucinógenas.",
+      "pontos": ["Porte de arma de uso permitido: competência da Polícia Federal, após autorização do Sinarm.", "Eficácia temporária e territorial limitada.", "Requisitos: efetiva necessidade (atividade profissional de risco ou ameaça), requisitos do art. 4º, documentação e registro.", "Perde a eficácia se o portador estiver embriagado ou sob efeito de drogas."],
+      "atencao": ["Perda AUTOMÁTICA da autorização em caso de embriaguez ou drogas.", "Porte é competência da POLÍCIA FEDERAL."],
+      "exemplo": "Portador de arma abordado embriagado perde automaticamente o porte.",
+      "prova": ["Assertiva que exige decisão judicial para a perda da eficácia do porte em caso de embriaguez erra: a perda é automática."],
+      "termos": [],
+      "remissoes": ["Art. 4º", "Art. 14"]
+    },
+    "art-11": {
+      "simples": "Fica instituída a cobrança de taxas, nos valores do Anexo da Lei, pela prestação de serviços relativos ao registro de arma de fogo, à renovação de registro, à expedição de segunda via de registro, à expedição de porte federal, à renovação de porte e à expedição de segunda via de porte federal. Os valores arrecadados destinam-se ao custeio e à manutenção das atividades do Sinarm, da Polícia Federal e do Comando do Exército. São isentas as pessoas e instituições referidas nos incisos I a VII e X e no §5º do art. 6º.",
+      "pontos": ["Taxas para registro, renovação, segunda via e porte federal.", "Valores destinam-se ao Sinarm, à Polícia Federal e ao Comando do Exército.", "Isenção para as categorias listadas do art. 6º."],
+      "atencao": ["Valores no Anexo da lei."],
+      "exemplo": "O cidadão paga taxa para expedir o porte federal, enquanto as Forças Armadas são isentas.",
+      "prova": ["Assertiva que cobra taxas dos integrantes das Forças Armadas na expedição do porte erra: eles são isentos."],
+      "termos": [],
+      "remissoes": ["Anexo"]
+    },
+    "art-11-a": {
+      "simples": "O Ministério da Justiça disciplinará a forma e as condições do credenciamento de profissionais pela Polícia Federal para comprovação da aptidão psicológica e da capacidade técnica para o manuseio de arma de fogo. O valor cobrado pelo psicólogo não poderá exceder o valor médio dos honorários para avaliação psicológica da tabela do Conselho Federal de Psicologia. O valor cobrado pelo instrutor de armamento e tiro não poderá exceder R$ 80,00, acrescido do custo da munição. A cobrança de valores superiores implicará o descredenciamento do profissional pela Polícia Federal.",
+      "pontos": ["Credenciamento de psicólogos e instrutores pela Polícia Federal.", "Teto de honorários do psicólogo: valor médio da tabela do CFP.", "Teto do instrutor: R$ 80,00, mais o custo da munição.", "Cobrança acima do teto: descredenciamento."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 11.706, de 2008."],
+      "exemplo": "Instrutor que cobra acima do limite legal é descredenciado pela Polícia Federal.",
+      "prova": ["Assertiva que permite ao instrutor cobrar livremente pela avaliação de capacidade técnica erra: há teto legal."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-12": {
+      "simples": "Posse irregular de arma de fogo de uso permitido: possuir ou manter sob sua guarda arma de fogo, acessório ou munição, de uso permitido, em desacordo com determinação legal ou regulamentar, no interior de sua residência ou dependência desta, ou no seu local de trabalho, desde que seja o titular ou o responsável legal do estabelecimento ou empresa. Pena: detenção de 1 a 3 anos e multa.",
+      "pontos": ["Posse de arma, acessório ou munição de USO PERMITIDO.", "Em desacordo com a lei, na residência, dependência ou local de trabalho do titular.", "Detenção de 1 a 3 anos e multa."],
+      "atencao": ["POSSE (dentro de casa ou do trabalho) × PORTE (fora): a posse é o art. 12; o porte, o art. 14.", "Pena de DETENÇÃO."],
+      "exemplo": "Manter em casa pistola de uso permitido sem registro configura posse irregular.",
+      "prova": ["Assertiva que aplica o art. 12 a quem anda com a arma na rua erra: seria porte ilegal (art. 14)."],
+      "termos": [{ "termo": "Posse irregular", "significado": "Manter arma sem registro dentro de casa ou do local de trabalho." }],
+      "remissoes": ["Art. 14", "Art. 32"]
+    },
+    "art-13": {
+      "simples": "Omissão de cautela: deixar de observar as cautelas necessárias para impedir que menor de 18 anos ou pessoa portadora de deficiência mental se apodere de arma de fogo que esteja sob sua posse ou que seja de sua propriedade. Pena: detenção de 1 a 2 anos e multa. Nas mesmas penas incorrem o proprietário ou diretor responsável de empresa de segurança e transporte de valores que deixarem de registrar ocorrência policial e de comunicar à Polícia Federal perda, furto, roubo ou outras formas de extravio de arma de fogo, acessório ou munição sob sua guarda, nas primeiras 24 horas depois de ocorrido o fato.",
+      "pontos": ["Deixar de tomar cautelas para impedir que menor de 18 anos ou pessoa com deficiência mental se apodere da arma.", "Detenção de 1 a 2 anos e multa.", "Empresa de segurança: não comunicar o extravio à PF em 24 horas."],
+      "atencao": ["Crime de omissão (culposo na essência).", "Prazo de 24 horas para a empresa comunicar o extravio."],
+      "exemplo": "O pai deixa a arma ao alcance do filho menor, que se apodera dela.",
+      "prova": ["Assertiva que exige que o menor use a arma para configurar o art. 13 erra: basta a omissão de cautela e o apoderamento."],
+      "termos": [],
+      "remissoes": ["Art. 7º"]
+    },
+    "art-14": {
+      "simples": "Porte ilegal de arma de fogo de uso permitido: portar, deter, adquirir, fornecer, receber, ter em depósito, transportar, ceder, ainda que gratuitamente, emprestar, remeter, empregar, manter sob guarda ou ocultar arma de fogo, acessório ou munição, de uso permitido, sem autorização e em desacordo com determinação legal ou regulamentar. Pena: reclusão de 2 a 4 anos e multa. O crime é inafiançável, salvo quando a arma de fogo estiver registrada em nome do agente.",
+      "pontos": ["Tipo misto alternativo com 14 núcleos.", "Arma, acessório ou munição de USO PERMITIDO.", "Reclusão de 2 a 4 anos e multa.", "Inafiançável, salvo arma registrada em nome do agente."],
+      "atencao": ["Crime de perigo abstrato: dispensa a demonstração de perigo concreto.", "Arma desmuniciada também configura o crime (entendimento do STF e do STJ).", "O STF julgou inconstitucional a vedação de fiança e liberdade provisória em ação direta de inconstitucionalidade."],
+      "exemplo": "Portar pistola registrada sem porte, na rua, caracteriza o art. 14.",
+      "prova": ["Assertiva que exige perigo concreto à incolumidade pública para o art. 14 erra: é crime de perigo abstrato."],
+      "termos": [{ "termo": "Crime de perigo abstrato", "significado": "O perigo é presumido pela lei, sem necessidade de prova." }],
+      "remissoes": ["Art. 12", "Art. 16"]
+    },
+    "art-15": {
+      "simples": "Disparo de arma de fogo: disparar arma de fogo ou acionar munição em lugar habitado ou em suas adjacências, em via pública ou em direção a ela, desde que essa conduta não tenha como finalidade a prática de outro crime. Pena: reclusão de 2 a 4 anos e multa. O crime é inafiançável.",
+      "pontos": ["Disparar ou acionar munição em lugar habitado, adjacências ou via pública.", "Subsidiário: não pode ter finalidade de outro crime.", "Reclusão de 2 a 4 anos e multa.", "Inafiançável."],
+      "atencao": ["Crime SUBSIDIÁRIO: se o disparo visava a outro crime (por exemplo, homicídio), aplica-se este.", "Perigo abstrato."],
+      "exemplo": "Dar tiros para o alto numa rua movimentada, sem intenção de ferir ninguém, é disparo de arma de fogo.",
+      "prova": ["Assertiva que aplica o art. 15 mesmo quando o disparo visava matar alguém erra: o tipo é subsidiário."],
+      "termos": [],
+      "remissoes": ["Art. 14"]
+    },
+    "art-16": {
+      "simples": "Posse ou porte ilegal de arma de fogo de uso restrito: possuir, deter, portar, adquirir, fornecer, receber, ter em depósito, transportar, ceder, emprestar, remeter, empregar, manter sob guarda ou ocultar arma de fogo, acessório ou munição de uso restrito, sem autorização. Pena: reclusão de 3 a 6 anos e multa. Nas mesmas penas incorre quem suprime ou altera marca, numeração ou sinal de identificação; modifica as características da arma para torná-la equivalente a de uso proibido ou restrito ou para induzir a erro autoridade, perito ou juiz; possui, detém, fabrica ou emprega artefato explosivo ou incendiário sem autorização; porta, possui, adquire, transporta ou fornece arma com numeração raspada, suprimida ou adulterada; vende, entrega ou fornece arma, acessório, munição ou explosivo a criança ou adolescente; e produz, recarrega ou recicla, sem autorização, ou adultera munição ou explosivo. Se envolver arma de uso proibido, a pena é reclusão de 4 a 12 anos.",
+      "pontos": ["Posse e porte de arma, acessório ou munição de USO RESTRITO: reclusão de 3 a 6 anos e multa.", "§1º: arma raspada ou adulterada; artefato explosivo; venda a criança ou adolescente; recarga de munição.", "§2º: arma de USO PROIBIDO: reclusão de 4 a 12 anos."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pela Lei nº 13.964, de 2019 (Pacote Anticrime); o §2º elevou a pena para arma de uso proibido.", "Equiparado a hediondo quando o objeto é arma de uso PROIBIDO (parágrafo único do art. 1º da Lei dos Crimes Hediondos).", "Posse e porte de uso restrito: MESMA pena (não distingue posse de porte)."],
+      "exemplo": "Quem guarda em casa um fuzil de uso restrito sem autorização responde pelo art. 16.",
+      "prova": ["Assertiva que aplica ao uso restrito a pena de detenção do art. 12 erra: é reclusão de 3 a 6 anos."],
+      "termos": [],
+      "remissoes": ["Art. 14", "Art. 17"]
+    },
+    "art-17": {
+      "simples": "Comércio ilegal de arma de fogo: adquirir, alugar, receber, transportar, conduzir, ocultar, ter em depósito, desmontar, montar, remontar, adulterar, vender, expor à venda, ou de qualquer forma utilizar, em proveito próprio ou alheio, no exercício de atividade comercial ou industrial, arma de fogo, acessório ou munição, sem autorização. Pena: reclusão de 6 a 12 anos e multa. Equipara-se à atividade comercial ou industrial qualquer forma de prestação de serviços, fabricação ou comércio irregular ou clandestino, inclusive o exercido em residência. Incorre na mesma pena quem vende ou entrega arma, acessório ou munição, sem autorização, a agente policial disfarçado, quando presentes elementos probatórios razoáveis de conduta criminal preexistente.",
+      "pontos": ["Condutas no exercício de atividade comercial ou industrial.", "Reclusão de 6 a 12 anos e multa.", "Equipara-se: comércio clandestino, mesmo em residência.", "Venda a policial disfarçado, com elementos de conduta preexistente."],
+      "atencao": ["ATUALIZAÇÃO: pena elevada pela Lei nº 13.964, de 2019; §2º incluído (policial disfarçado).", "Exige a atividade COMERCIAL ou industrial."],
+      "exemplo": "Quem vende armas clandestinamente em casa pratica o comércio ilegal.",
+      "prova": ["Assertiva que dispensa a atividade comercial ou industrial no art. 17 erra."],
+      "termos": [],
+      "remissoes": ["Art. 16", "Art. 19"]
+    },
+    "art-18": {
+      "simples": "Tráfico internacional de arma de fogo: importar, exportar, favorecer a entrada ou saída do território nacional, a qualquer título, de arma de fogo, acessório ou munição, sem autorização da autoridade competente. Pena: reclusão de 8 a 16 anos e multa. Incorre na mesma pena quem vende ou entrega arma, acessório ou munição, em operação de importação, sem autorização, a agente policial disfarçado, quando presentes elementos probatórios razoáveis de conduta criminal preexistente.",
+      "pontos": ["Importar, exportar ou favorecer a entrada ou saída de armas, acessórios ou munições.", "Reclusão de 8 a 16 anos e multa.", "Venda a agente policial disfarçado em operação de importação."],
+      "atencao": ["ATUALIZAÇÃO: pena e §1º dados pela Lei nº 13.964, de 2019.", "Competência da JUSTIÇA FEDERAL (tráfico internacional)."],
+      "exemplo": "Contrabandear munição de outro país sem autorização é tráfico internacional de arma.",
+      "prova": ["Assertiva que fixa a pena do tráfico internacional de arma em 6 a 12 anos erra: é de 8 a 16 anos."],
+      "termos": [],
+      "remissoes": ["Art. 17", "Art. 19"]
+    },
+    "art-19": {
+      "simples": "Nos crimes previstos nos arts. 17 e 18, a pena é aumentada da metade se a arma de fogo, acessório ou munição forem de uso proibido ou restrito.",
+      "pontos": ["Comércio ilegal e tráfico internacional: pena aumentada da metade.", "Se o objeto for de uso PROIBIDO ou RESTRITO."],
+      "atencao": ["Aumento da METADE."],
+      "exemplo": "Comerciar ilegalmente fuzis de uso restrito eleva a pena em metade.",
+      "prova": ["Assertiva que aplica o aumento do art. 19 aos arts. 14 e 15 erra: vale para os arts. 17 e 18."],
+      "termos": [],
+      "remissoes": ["Art. 17", "Art. 18"]
+    },
+    "art-20": {
+      "simples": "Nos crimes previstos nos arts. 14, 15, 16, 17 e 18, a pena é aumentada da metade se forem praticados por integrante dos órgãos e empresas referidas nos arts. 6º, 7º e 8º, ou se o agente for reincidente específico em crimes dessa natureza.",
+      "pontos": ["Aumento da metade nos arts. 14 a 18.", "Agente integrante dos órgãos e empresas dos arts. 6º, 7º e 8º.", "Reincidente específico."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pela Lei nº 13.964, de 2019.", "Aumento da metade para o agente que tem DEVER legal de cautela (policial, vigilante)."],
+      "exemplo": "Policial que comete crime de comércio ilegal de arma tem a pena aumentada da metade.",
+      "prova": ["Assertiva que aplica o aumento do art. 20 ao art. 12 erra: vale para os arts. 14 a 18."],
+      "termos": [],
+      "remissoes": ["Art. 19"]
+    },
+    "art-21": {
+      "simples": "Os crimes previstos nos arts. 16, 17 e 18 são insuscetíveis de liberdade provisória. O texto remete a ação direta de inconstitucionalidade.",
+      "pontos": ["Vedada a liberdade provisória nos arts. 16, 17 e 18."],
+      "atencao": ["O STF declarou inconstitucional a vedação absoluta de liberdade provisória."],
+      "exemplo": "Texto legal declarado inconstitucional: a liberdade provisória é analisada caso a caso.",
+      "prova": ["Assertiva que mantém hoje a vedação absoluta de liberdade provisória do art. 21 erra, à luz da decisão do STF."],
+      "termos": [],
+      "remissoes": ["Art. 14, parágrafo único"]
+    },
+    "art-21-a": {
+      "simples": "Nos crimes previstos nos arts. 12, 14 e 16, a pena é aumentada de 2/3 se o crime for praticado em concurso com crime da Lei de Drogas, estiver diretamente ligado ao comércio ilícito de entorpecentes ou o artefato tiver sido utilizado para assegurar o sucesso da mercancia.",
+      "pontos": ["Arts. 12, 14 e 16: aumento de 2/3.", "Concurso com crime da Lei de Drogas, ligação direta ao comércio ilícito de entorpecentes ou uso da arma para assegurar a mercancia."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 15.358, de 2026."],
+      "exemplo": "Traficante que porta arma de uso permitido para assegurar a venda de drogas tem a pena aumentada de 2/3.",
+      "prova": ["Assertiva que aplica o aumento de 2/3 ao crime de disparo (art. 15) erra: o art. 21-A cita os arts. 12, 14 e 16."],
+      "termos": [],
+      "remissoes": ["Lei de Drogas (causas de aumento)"]
+    },
+    "art-22": {
+      "simples": "O Ministério da Justiça poderá celebrar convênios com os Estados e o Distrito Federal para o cumprimento do disposto na Lei.",
+      "pontos": ["Convênios do Ministério da Justiça com Estados e Distrito Federal."],
+      "atencao": ["Faculdade ('poderá')."],
+      "exemplo": "O Ministério firma convênio com um Estado para ações de controle de armas.",
+      "prova": ["Assertiva que torna obrigatória a celebração de convênios erra: é faculdade."],
+      "termos": [],
+      "remissoes": ["Art. 1º"]
+    },
+    "art-23": {
+      "simples": "A classificação legal, técnica e geral, bem como a definição das armas de fogo e demais produtos controlados, de usos proibidos, restritos, permitidos ou obsoletos e de valor histórico, serão disciplinadas em ato do chefe do Poder Executivo Federal, mediante proposta do Comando do Exército. Todas as munições comercializadas deverão estar em embalagens com código de barras que permita identificar o fabricante e o adquirente. Para os órgãos do art. 6º, somente serão expedidas autorizações de compra de munição com identificação do lote e do adquirente no culote dos projéteis. As armas fabricadas a partir de um ano da publicação conterão dispositivo intrínseco de segurança e de identificação. Instituições de ensino policial, guardas municipais e escolas de formação de segurança privada poderão adquirir insumos e máquinas de recarga.",
+      "pontos": ["Classificação de uso proibido, restrito, permitido ou obsoleto por ato do chefe do Executivo, a proposta do Exército.", "Munição com código de barras.", "Identificação do lote e do adquirente no culote para os órgãos do art. 6º.", "Dispositivo de segurança e identificação nas armas fabricadas depois de um ano."],
+      "atencao": ["A CLASSIFICAÇÃO (permitido, restrito, proibido) vem de ATO DO EXECUTIVO (decreto), com proposta do Exército.", "Redação dada pela Lei nº 11.706, de 2008."],
+      "exemplo": "Um decreto define quais armas são de uso permitido e quais são de uso restrito.",
+      "prova": ["Assertiva que fixa na própria lei a lista de armas de uso restrito erra: a classificação é por ato do chefe do Executivo."],
+      "termos": [],
+      "remissoes": ["Art. 24"]
+    },
+    "art-24": {
+      "simples": "Excetuadas as atribuições do art. 2º (Sinarm), compete ao Comando do Exército autorizar e fiscalizar a produção, exportação, importação, desembaraço alfandegário e o comércio de armas de fogo e demais produtos controlados, inclusive o registro e o porte de trânsito de arma de fogo de colecionadores, atiradores e caçadores.",
+      "pontos": ["Comando do Exército autoriza e fiscaliza produção, exportação, importação, desembaraço e comércio.", "Também registro e porte de trânsito de colecionadores, atiradores e caçadores."],
+      "atencao": ["O EXÉRCITO fiscaliza a produção e o comércio; o SINARM (PF) cadastra."],
+      "exemplo": "A fábrica de armas é autorizada e fiscalizada pelo Comando do Exército.",
+      "prova": ["Assertiva que atribui à Polícia Federal a fiscalização da produção de armas erra: é do Comando do Exército."],
+      "termos": [],
+      "remissoes": ["Art. 2º", "Art. 9º"]
+    },
+    "art-25": {
+      "simples": "As armas de fogo apreendidas, após a elaboração do laudo pericial e sua juntada aos autos, quando não mais interessarem à persecução penal, serão encaminhadas pelo juiz competente ao Comando do Exército, no prazo de até 48 horas, para destruição ou doação aos órgãos de segurança pública ou às Forças Armadas, na forma do regulamento. As armas e munições apreendidas em decorrência do tráfico de drogas, perdidas em favor da União, devem ser, após perícia que ateste seu bom estado, destinadas com prioridade para os órgãos de segurança pública e do sistema penitenciário da unidade da federação responsável pela apreensão. O Comando do Exército encaminha a relação das armas a serem doadas ao juiz, que determina o perdimento em favor da instituição beneficiada. O Poder Judiciário instituirá instrumentos para o encaminhamento semestral ao Sinarm ou ao Sigma da relação de armas acauteladas em juízo.",
+      "pontos": ["Arma apreendida sem interesse penal: juiz a envia ao Exército em até 48 horas.", "Destino: destruição ou doação a órgãos de segurança ou Forças Armadas.", "Armas do tráfico de drogas: prioridade para a segurança pública e o sistema penitenciário do Estado da apreensão.", "Relação semestral de armas acauteladas em juízo ao Sinarm ou Sigma."],
+      "atencao": ["ATUALIZAÇÃO: caput com redação da Lei nº 13.886, de 2019 (prazo de 48 horas).", "Prazo de 48 HORAS."],
+      "exemplo": "Após a perícia, o juiz envia a arma ao Exército em 48 horas para destruição ou doação.",
+      "prova": ["Assertiva que fixa em 10 dias o prazo de envio da arma ao Exército erra: são 48 horas."],
+      "termos": [{ "termo": "Sigma", "significado": "Sistema de Gerenciamento Militar de Armas, do Exército." }],
+      "remissoes": ["Art. 24"]
+    },
+    "art-26": {
+      "simples": "São vedadas a fabricação, a venda, a comercialização e a importação de brinquedos, réplicas e simulacros de armas de fogo, que com estas se possam confundir. Excetuam-se da proibição as réplicas e os simulacros destinados à instrução, ao adestramento ou à coleção de usuário autorizado, nas condições fixadas pelo Comando do Exército.",
+      "pontos": ["Vedados brinquedos, réplicas e simulacros que se possam confundir com armas de fogo.", "Exceção: instrução, adestramento ou coleção de usuário autorizado."],
+      "atencao": ["Exceção condicionada a regras do Comando do Exército."],
+      "exemplo": "A venda de pistola de brinquedo idêntica à real é proibida.",
+      "prova": ["Assertiva que permite a venda de simulacros indistinguíveis de armas a qualquer pessoa erra."],
+      "termos": [],
+      "remissoes": ["Art. 24"]
+    },
+    "art-27": {
+      "simples": "Caberá ao Comando do Exército autorizar, excepcionalmente, a aquisição de armas de fogo de uso restrito. O disposto não se aplica às aquisições dos Comandos Militares. O texto remete a ação direta de inconstitucionalidade.",
+      "pontos": ["Aquisição de arma de uso restrito: autorização EXCEPCIONAL do Comando do Exército.", "Não se aplica às aquisições dos Comandos Militares."],
+      "atencao": ["Autorização EXCEPCIONAL."],
+      "exemplo": "A compra de arma de uso restrito por particular exige autorização excepcional do Exército.",
+      "prova": ["Assertiva que torna regra a autorização de aquisição de arma de uso restrito erra: é excepcional."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-28": {
+      "simples": "É vedado ao menor de 25 anos adquirir arma de fogo, ressalvados os integrantes das entidades constantes dos incisos I, II, III, V, VI, VII e X do art. 6º.",
+      "pontos": ["Menor de 25 anos não pode adquirir arma de fogo.", "Ressalva: integrantes de certas entidades do art. 6º."],
+      "atencao": ["Idade mínima: 25 ANOS (a regra do art. 4º exige, no caso comum, requisitos adicionais)."],
+      "exemplo": "Um jovem de 22 anos não pode comprar arma de fogo, salvo se integrar entidade ressalvada.",
+      "prova": ["Assertiva que fixa em 21 anos a idade mínima para adquirir arma de fogo erra: são 25 anos."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-29": {
+      "simples": "As autorizações de porte de armas de fogo já concedidas expirar-se-ão 90 dias após a publicação da Lei. O detentor de autorização com prazo de validade superior a 90 dias poderá renová-la, perante a Polícia Federal, nas condições dos arts. 4º, 6º e 10, no prazo de 90 dias após sua publicação, sem ônus para o requerente.",
+      "pontos": ["Portes anteriores expiram em 90 dias da publicação da lei.", "Renovação na PF, nas condições da lei, sem custo, em 90 dias."],
+      "atencao": ["Dispositivo transitório."],
+      "exemplo": "Texto transitório da época da edição do Estatuto.",
+      "prova": ["Assertiva que aplica hoje o prazo de 90 dias do art. 29 erra: é dispositivo transitório."],
+      "termos": [],
+      "remissoes": ["Art. 10"]
+    },
+    "art-30": {
+      "simples": "Os possuidores e proprietários de arma de fogo de uso permitido ainda não registrada deveriam solicitar seu registro até o dia 31 de dezembro de 2008, mediante documento de identificação pessoal e comprovante de residência fixa, acompanhados de nota fiscal de compra ou comprovação da origem lícita da posse, ou declaração firmada com as características da arma e a condição de proprietário, dispensados de taxas e de parte das exigências do art. 4º. O proprietário poderia obter, na Polícia Federal, certificado de registro provisório.",
+      "pontos": ["Regularização do registro até 31 de dezembro de 2008.", "Documentos: identificação, residência e nota fiscal ou prova da origem lícita da posse.", "Dispensa de taxas e de exigências do art. 4º.", "Certificado de registro provisório."],
+      "atencao": ["Dispositivo transitório com prazos prorrogados por leis posteriores."],
+      "exemplo": "Texto transitório de regularização de armas antigas.",
+      "prova": ["Assertiva que mantém aberto indefinidamente o prazo do art. 30 erra: o prazo foi fixado para dezembro de 2008, com prorrogações."],
+      "termos": [],
+      "remissoes": ["Art. 32"]
+    },
+    "art-31": {
+      "simples": "Os possuidores e proprietários de armas de fogo adquiridas regularmente poderão, a qualquer tempo, entregá-las à Polícia Federal, mediante recibo e indenização, nos termos do regulamento da Lei.",
+      "pontos": ["Entrega voluntária à Polícia Federal, a qualquer tempo.", "Mediante recibo e indenização."],
+      "atencao": ["Para armas adquiridas REGULARMENTE."],
+      "exemplo": "O proprietário entrega a arma regular à PF e recebe indenização.",
+      "prova": ["Assertiva que restringe a entrega com indenização a um prazo certo erra: pode ser feita a qualquer tempo."],
+      "termos": [],
+      "remissoes": ["Art. 32"]
+    },
+    "art-32": {
+      "simples": "Os possuidores e proprietários de arma de fogo poderão entregá-la, espontaneamente, mediante recibo e, presumindo-se de boa-fé, serão indenizados, na forma do regulamento, ficando extinta a punibilidade de eventual posse irregular da referida arma.",
+      "pontos": ["Entrega espontânea mediante recibo.", "Presunção de boa-fé e indenização.", "Extingue-se a punibilidade da posse irregular."],
+      "atencao": ["Extingue a punibilidade da POSSE irregular (não abrange outros crimes).", "ATUALIZAÇÃO: redação dada pela Lei nº 11.706, de 2008."],
+      "exemplo": "O dono de arma sem registro a entrega à PF e fica livre da punição pela posse irregular.",
+      "prova": ["Assertiva que extingue a punibilidade de qualquer crime praticado com a arma entregue erra: o benefício é da posse irregular."],
+      "termos": [],
+      "remissoes": ["Art. 12", "Art. 31"]
+    },
+    "art-33": {
+      "simples": "Será aplicada multa de R$ 100.000,00 a R$ 300.000,00, conforme especificar o regulamento, à empresa de transporte aéreo, rodoviário, ferroviário, marítimo, fluvial ou lacustre que deliberadamente, por qualquer meio, faça, promova, facilite ou permita o transporte de arma ou munição sem a devida autorização ou com inobservância das normas de segurança; e à empresa de produção ou comércio de armamentos que realize publicidade para venda, estimulando o uso indiscriminado de armas de fogo, exceto nas publicações especializadas.",
+      "pontos": ["Multa de R$ 100.000,00 a R$ 300.000,00.", "Empresa de transporte que permite o transporte irregular de arma ou munição.", "Empresa de armamentos que faz publicidade estimulando o uso indiscriminado."],
+      "atencao": ["Sanção ADMINISTRATIVA (multa), e não crime."],
+      "exemplo": "A transportadora que facilita o transporte de armas sem autorização sofre multa.",
+      "prova": ["Assertiva que trata o art. 33 como crime com pena de reclusão erra: prevê multa administrativa."],
+      "termos": [],
+      "remissoes": ["Art. 34"]
+    },
+    "art-34": {
+      "simples": "Os promotores de eventos em locais fechados, com aglomeração superior a 1000 pessoas, adotarão, sob pena de responsabilidade, as providências necessárias para evitar o ingresso de pessoas armadas, ressalvados os eventos garantidos pelo inciso VI do art. 5º da Constituição. As empresas responsáveis pelo transporte internacional e interestadual de passageiros adotarão as providências necessárias para evitar o embarque de passageiros armados.",
+      "pontos": ["Eventos fechados com mais de 1000 pessoas: providências para evitar o ingresso de pessoas armadas.", "Transporte internacional e interestadual: evitar o embarque de passageiros armados.", "Ressalva: eventos garantidos pelo art. 5º, VI, da Constituição (cultos religiosos)."],
+      "atencao": ["Limite: mais de 1000 pessoas."],
+      "exemplo": "O organizador de um show com mais de mil pessoas deve impedir a entrada de pessoas armadas.",
+      "prova": ["Assertiva que fixa em 500 o número de pessoas a partir do qual se aplica o art. 34 erra: são mais de 1000."],
+      "termos": [],
+      "remissoes": ["Art. 33"]
+    },
+    "art-34-a": {
+      "simples": "Os dados relacionados à coleta de registros balísticos serão armazenados no Banco Nacional de Perfis Balísticos, que tem por objetivo cadastrar armas de fogo e armazenar características de classe e individualizadoras de projéteis e de estojos de munição deflagrados por arma de fogo. Será constituído pelos registros de elementos de munição deflagrados por armas relacionados a crimes, para subsidiar apurações criminais federais, estaduais e distritais, e gerido pela unidade oficial de perícia criminal. Os dados terão caráter sigiloso, e quem permitir ou promover seu uso para fins diversos responderá civil, penal e administrativamente. É vedada a comercialização da base de dados.",
+      "pontos": ["Banco Nacional de Perfis Balísticos: dados de projéteis e estojos de munição deflagrados.", "Subsidia apurações criminais federais, estaduais e distritais.", "Gerido pela unidade oficial de perícia criminal.", "Dados sigilosos, com responsabilização por uso indevido.", "Vedada a comercialização da base."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 13.964, de 2019."],
+      "exemplo": "O estojo encontrado na cena do crime é comparado com o banco balístico.",
+      "prova": ["Assertiva que permite a comercialização da base de dados balísticos erra: é vedada."],
+      "termos": [],
+      "remissoes": ["Art. 2º, X"]
+    },
+    "art-35": {
+      "simples": "É proibida a comercialização de arma de fogo e munição em todo o território nacional, salvo para as entidades previstas no art. 6º, dispositivo que dependia, para entrar em vigor, de aprovação mediante referendo popular a ser realizado em outubro de 2005. O referendo realizou-se e a proibição não foi aprovada, de modo que o dispositivo não vigora.",
+      "pontos": ["Previa a proibição da comercialização de armas e munições, salvo para as entidades do art. 6º.", "Dependia de referendo popular em outubro de 2005.", "Referendo rejeitou a proibição."],
+      "atencao": ["O referendo de 2005 REJEITOU a proibição: a comercialização continua permitida, na forma da lei."],
+      "exemplo": "A proibição geral do comércio de armas não entrou em vigor.",
+      "prova": ["Assertiva que considera em vigor a proibição geral do comércio de armas e munições erra."],
+      "termos": [{ "termo": "Referendo", "significado": "Consulta popular sobre lei já aprovada." }],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-37": {
+      "simples": "Esta Lei entra em vigor na data de sua publicação.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "A lei começou a valer na data da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis para o Estatuto do Desarmamento erra."],
+      "termos": [],
+      "remissoes": ["Art. 35"]
+    },
+    "anexo-1": {
+      "simples": "O Anexo traz a tabela de taxas dos atos administrativos relativos às armas de fogo: o registro (gratuito até 31 de dezembro de 2008 e, depois, R$ 60,00), a renovação do certificado de registro, o registro para empresa de segurança privada e de transporte de valores (R$ 60,00), a renovação para essas empresas (R$ 30,00, R$ 45,00 e R$ 60,00, conforme o período), a expedição de porte de arma de fogo (R$ 1.000,00), a renovação do porte (R$ 1.000,00) e a segunda via de certificado de registro e de porte (R$ 60,00 cada).",
+      "pontos": ["Registro e renovação: R$ 60,00 a partir de 2009.", "Empresas de segurança privada: registro de R$ 60,00 e renovação escalonada.", "Porte e renovação do porte: R$ 1.000,00.", "Segunda via: R$ 60,00."],
+      "atencao": ["Valores previstos na redação da Lei nº 11.706, de 2008; confira atualizações regulamentares."],
+      "exemplo": "A expedição do porte federal tem a taxa de R$ 1.000,00.",
+      "prova": ["Assertiva que fixa a taxa do porte de arma de fogo em R$ 60,00 erra: é de R$ 1.000,00."],
+      "termos": [],
+      "remissoes": ["Art. 11"]
+    }
+  }
+}
