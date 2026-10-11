@@ -1,0 +1,105 @@
+{
+  "course_slug": "uso-forca",
+  "law": "Decreto sobre o Uso da Força pelos Profissionais de Segurança Pública — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "Este Decreto disciplina o uso da força e dos instrumentos de menor potencial ofensivo pelos profissionais de segurança pública, com vistas a promover eficiência, transparência, valorização dos profissionais e respeito aos direitos humanos. A classificação dos instrumentos de menor potencial ofensivo obedece ao Estatuto do Desarmamento, à Lei nº 13.060, de 22 de dezembro de 2014, e a decreto específico.",
+      "pontos": ["Regula o uso da força e dos instrumentos de menor potencial ofensivo.", "Objetivos: eficiência, transparência, valorização dos profissionais e direitos humanos.", "Classificação dos instrumentos segue o Estatuto do Desarmamento, a Lei nº 13.060 e decreto próprio."],
+      "atencao": ["É um DECRETO (ato do Executivo), e não uma lei.", "Complementa a Lei nº 13.060, de 22 de dezembro de 2014."],
+      "exemplo": "O decreto orienta a polícia a empregar a força de forma proporcional e a respeitar direitos humanos.",
+      "prova": ["Assertiva que classifica o ato como lei ordinária erra: é decreto do Executivo."],
+      "termos": [{ "termo": "Instrumento de menor potencial ofensivo", "significado": "Equipamento projetado para conter sem causar morte, como o spray de pimenta." }],
+      "remissoes": ["Lei do Uso Diferenciado da Força"]
+    },
+    "art-2": {
+      "simples": "São princípios gerais do uso da força em segurança pública: legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização e não discriminação. O uso da força deve observar diretrizes como: ocorrer para um objetivo legal e nos estritos limites da lei; planejar as ações para prevenir ou minimizar o uso da força e mitigar danos; empregar um recurso de força somente quando recursos de menor intensidade não bastarem; compatibilizar o nível da força com a gravidade da ameaça; empregá-la com bom senso, prudência e equilíbrio; responsabilizar órgãos e profissionais pelo uso inadequado, respeitados o devido processo legal, a ampla defesa e o contraditório; e atuar sem discriminação de raça, etnia, cor, gênero, orientação sexual, idioma, religião, nacionalidade, origem social, deficiência, situação econômica ou opinião política.",
+      "pontos": ["Sete princípios: legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização e não discriminação.", "Força só quando meios menos intensos forem insuficientes.", "Nível da força compatível com a gravidade da ameaça.", "Responsabilização com devido processo legal.", "Atuação sem discriminação."],
+      "atencao": ["Mnemônico dos princípios: LPNPRRN (legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização, não discriminação).", "A força é progressiva (do menor ao maior nível)."],
+      "exemplo": "O policial usa a verbalização antes de recorrer a instrumentos de menor potencial ofensivo.",
+      "prova": ["Assertiva que omite a necessidade e a proporcionalidade do rol de princípios erra."],
+      "termos": [{ "termo": "Proporcionalidade", "significado": "Resposta compatível com a gravidade da ameaça." }],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-3": {
+      "simples": "A força deverá ser utilizada de forma diferenciada, com a seleção apropriada do nível a ser empregado, em resposta a uma ameaça real ou potencial, para minimizar o uso de meios que possam causar ofensas, ferimentos ou mortes. Os profissionais priorizarão a comunicação, a negociação e as técnicas que impeçam uma escalada da violência. O emprego de arma de fogo será medida de último recurso. Não é legítimo o uso de arma de fogo contra pessoa em fuga desarmada ou que não represente risco imediato de morte ou lesão, nem contra veículo que desrespeite bloqueio policial, exceto quando o ato represente risco de morte ou lesão. O emprego de arma de fogo ou de instrumento de menor potencial ofensivo é restrito a profissionais habilitados. Sempre que o uso da força resultar em ferimento ou morte, será elaborado relatório circunstanciado.",
+      "pontos": ["Uso diferenciado da força.", "Prioridade para comunicação e negociação.", "Arma de fogo é último recurso.", "Vedada contra fugitivo desarmado sem risco imediato e contra veículo que fure bloqueio, salvo risco de morte ou lesão.", "Somente profissionais habilitados.", "Relatório circunstanciado em caso de ferimento ou morte."],
+      "atencao": ["Arma de fogo: ÚLTIMO recurso.", "Veículo que fura bloqueio: só há uso legítimo se houver risco de morte ou lesão."],
+      "exemplo": "O policial não pode atirar em fugitivo desarmado que não represente risco imediato.",
+      "prova": ["Assertiva que autoriza tiro contra qualquer veículo que desrespeite bloqueio erra: exige risco de morte ou lesão."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-4": {
+      "simples": "Na capacitação de profissionais de segurança pública sobre o uso da força, os órgãos deverão observar a obrigatoriedade e a periodicidade anual da capacitação; sua realização no horário de serviço; e a adoção de conteúdo sobre o emprego adequado de diferentes tipos de armas de fogo e de instrumentos de menor potencial ofensivo. A matriz curricular nacional deverá ser atualizada para adequação à Lei nº 13.060, de 22 de dezembro de 2014, e a este Decreto.",
+      "pontos": ["Capacitação obrigatória e anual.", "Realizada no horário de serviço.", "Conteúdo sobre armas de fogo e instrumentos de menor potencial ofensivo.", "Atualização da matriz curricular nacional."],
+      "atencao": ["Periodicidade ANUAL."],
+      "exemplo": "A corporação realiza o treinamento anual sobre uso da força em horário de serviço.",
+      "prova": ["Assertiva que torna facultativa a capacitação anual erra: é obrigatória."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-5": {
+      "simples": "Compete ao órgão federal responsável pela segurança pública, para implementar o Decreto, entre outras ações: financiar, conforme a disponibilidade orçamentária, ações de implementação; formular, implementar, monitorar e avaliar ações relacionadas ao uso da força, como diagnósticos, padronização de procedimentos, doutrina, capacitação e aquisições; ofertar consultoria técnica; desenvolver materiais de referência sobre uso de algemas, busca pessoal e domiciliar e atuação em ambientes prisionais; disponibilizar atas de registro de preços para armas e equipamentos; realizar capacitação; incentivar a conscientização e a integração com a sociedade civil; promover boas práticas; fomentar pesquisas; reduzir a vitimização dos profissionais e a letalidade policial; consolidar e publicar dados nacionais; e informar a população sobre as políticas e como reportar condutas inadequadas.",
+      "pontos": ["Financiamento e consultoria técnica.", "Materiais de referência sobre algemas, busca pessoal e domiciliar e ambientes prisionais.", "Atas de registro de preços para aquisição de armas e equipamentos.", "Redução da vitimização dos profissionais e da letalidade policial.", "Consolidação e publicação de dados nacionais."],
+      "atencao": ["Rol exemplificativo de ações do órgão federal."],
+      "exemplo": "O órgão federal publica dados nacionais sobre o uso da força.",
+      "prova": ["Assertiva que restringe as ações do órgão federal ao financiamento erra."],
+      "termos": [],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-6": {
+      "simples": "Para implementar o Decreto, os órgãos de segurança pública deverão, entre outras medidas: elaborar e atualizar atos normativos sobre o uso diferenciado da força; registrar e publicar dados; disponibilizar equipamento de proteção individual e, no mínimo, dois instrumentos de menor potencial ofensivo a todo profissional em serviço; instituir programas de atenção à saúde mental de profissionais em ocorrências de alto risco; monitorar e avaliar as ações; reduzir a vitimização e a letalidade policial; capacitar; fomentar pesquisas; normatizar e fiscalizar a identificação dos profissionais, de modo a individualizar suas ações; e normatizar a atuação em gerenciamento de crises, busca pessoal e domiciliar, uso de algemas e providências nos casos de lesão corporal ou morte.",
+      "pontos": ["Equipamento de proteção e, no mínimo, dois instrumentos de menor potencial ofensivo por profissional.", "Programas de saúde mental.", "Identificação que permita individualizar as ações.", "Normas sobre crises, buscas, algemas e lesão ou morte."],
+      "atencao": ["Mínimo de DOIS instrumentos de menor potencial ofensivo por profissional em serviço."],
+      "exemplo": "Cada policial em serviço recebe coletes e, no mínimo, dois instrumentos de menor potencial ofensivo.",
+      "prova": ["Assertiva que prevê apenas um instrumento de menor potencial ofensivo por profissional erra: são no mínimo dois."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-7": {
+      "simples": "São diretrizes para os mecanismos de fiscalização e controle interno na supervisão do uso da força: garantir a transparência e o acesso público a dados; disponibilizar canais de denúncia e orientações de registro e acompanhamento de reclamações; garantir o processamento eficaz e transparente das reclamações; e fortalecer corregedorias e ouvidorias. As ocorrências relacionadas ao uso da força serão formalmente registradas quando resultarem em lesão corporal ou morte, ou envolverem o emprego de armas de fogo ou de instrumentos de menor potencial ofensivo em ambientes prisionais.",
+      "pontos": ["Transparência e acesso a dados.", "Canais de denúncia e acompanhamento de reclamações.", "Fortalecimento de corregedorias e ouvidorias.", "Registro formal quando houver lesão ou morte, ou uso de armas em ambiente prisional."],
+      "atencao": ["Registro obrigatório nas hipóteses do parágrafo único."],
+      "exemplo": "Ocorrência com morte durante ação policial é registrada formalmente.",
+      "prova": ["Assertiva que dispensa o registro em caso de lesão corporal erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º, §5º"]
+    },
+    "art-8": {
+      "simples": "Ato do Ministro da Justiça e Segurança Pública instituirá o Comitê Nacional de Monitoramento do Uso da Força, com a finalidade de monitorar e avaliar a implementação das políticas de uso da força. O ato disporá sobre a composição, garantida a participação da sociedade civil, as competências e o funcionamento, e preverá, entre as finalidades, relatórios, o acompanhamento do Plano Nacional de Segurança Pública quanto à redução da letalidade policial e da vitimização dos profissionais, indicadores, produção de conhecimento, orientações para programas e articulação com os comitês estaduais e distrital. Estados, Distrito Federal e Municípios, se instituírem comitês, observarão as mesmas finalidades.",
+      "pontos": ["Comitê Nacional de Monitoramento do Uso da Força.", "Participação da sociedade civil.", "Relatórios, indicadores e articulação com comitês estaduais.", "Entes locais seguem as mesmas finalidades se criarem comitês."],
+      "atencao": ["Instituído por ato do Ministro da Justiça e Segurança Pública."],
+      "exemplo": "O comitê nacional produz relatórios sobre a letalidade policial.",
+      "prova": ["Assertiva que exclui a sociedade civil do comitê erra: sua participação é garantida."],
+      "termos": [],
+      "remissoes": ["Art. 7º"]
+    },
+    "art-9": {
+      "simples": "O repasse de recursos do Fundo Nacional de Segurança Pública e do Fundo Penitenciário Nacional para ações que envolvam o uso da força pelos órgãos de segurança pública dos Estados, do Distrito Federal e dos Municípios está condicionado à observância do disposto no Decreto.",
+      "pontos": ["Repasses do Fundo Nacional de Segurança Pública e do Fundo Penitenciário Nacional.", "Condicionados à observância do Decreto."],
+      "atencao": ["Mecanismo de indução: sem cumprir o Decreto, não há repasse."],
+      "exemplo": "O Estado que ignora as regras do Decreto pode perder repasses federais.",
+      "prova": ["Assertiva que dispensa a observância do Decreto para receber repasses erra."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-10": {
+      "simples": "O Ministro de Estado da Justiça e Segurança Pública editará normas complementares necessárias à execução do disposto neste Decreto.",
+      "pontos": ["Normas complementares pelo Ministro da Justiça e Segurança Pública."],
+      "atencao": ["Competência regulamentar do Ministro."],
+      "exemplo": "Uma portaria do Ministro detalha o relatório circunstanciado.",
+      "prova": ["Assertiva que atribui a edição das normas complementares ao Congresso erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º, §5º"]
+    },
+    "art-11": {
+      "simples": "Este Decreto entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo final."],
+      "exemplo": "O Decreto passou a valer na data da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis erra."],
+      "termos": [],
+      "remissoes": ["Art. 10"]
+    }
+  }
+}

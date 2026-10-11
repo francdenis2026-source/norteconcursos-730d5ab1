@@ -1,0 +1,78 @@
+{
+  "course_slug": "menor-potencial-ofensivo",
+  "law": "Lei do Uso de Instrumentos de Menor Potencial Ofensivo (Lei nº 13.060, de 2014) — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "Esta Lei disciplina o uso dos instrumentos de menor potencial ofensivo pelos agentes de segurança pública em todo o território nacional.",
+      "pontos": ["Disciplina o uso dos instrumentos de menor potencial ofensivo.", "Aplica-se em todo o território nacional."],
+      "atencao": ["Abrangência nacional."],
+      "exemplo": "A Lei vale para as polícias de todos os Estados.",
+      "prova": ["Assertiva que restringe a Lei à Polícia Federal erra: aplica-se a todos os agentes de segurança pública."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-2": {
+      "simples": "Os órgãos de segurança pública deverão priorizar a utilização dos instrumentos de menor potencial ofensivo, desde que seu uso não coloque em risco a integridade física ou psíquica dos policiais, e obedecer aos princípios da legalidade, necessidade, razoabilidade e proporcionalidade. Não é legítimo o uso de arma de fogo contra pessoa em fuga desarmada ou que não represente risco imediato de morte ou de lesão aos agentes ou a terceiros, nem contra veículo que desrespeite bloqueio policial em via pública, exceto quando o ato represente risco de morte ou lesão.",
+      "pontos": ["Priorizar instrumentos de menor potencial ofensivo, sem pôr em risco o policial.", "Princípios: legalidade, necessidade, razoabilidade e proporcionalidade.", "Vedado atirar em fugitivo desarmado que não ofereça risco imediato.", "Vedado atirar contra veículo que fure bloqueio, salvo risco de morte ou lesão."],
+      "atencao": ["Veículo que fura bloqueio: arma de fogo só se houver risco de morte ou lesão.", "A prioridade não obriga o policial a se expor a risco."],
+      "exemplo": "O policial usa dispositivo de choque em vez de arma de fogo ao conter pessoa agressiva que não porta arma.",
+      "prova": ["Assertiva que autoriza o disparo contra qualquer veículo que desrespeite o bloqueio erra: exige risco de morte ou lesão."],
+      "termos": [],
+      "remissoes": ["Decreto do Uso da Força"]
+    },
+    "art-3": {
+      "simples": "Os cursos de formação e capacitação dos agentes de segurança pública deverão incluir conteúdo programático que os habilite ao uso dos instrumentos não letais.",
+      "pontos": ["Formação e capacitação incluem o uso de instrumentos não letais."],
+      "atencao": ["Dever de capacitação nos cursos de formação."],
+      "exemplo": "O curso de formação policial inclui treinamento com instrumentos não letais.",
+      "prova": ["Assertiva que dispensa o treinamento em instrumentos não letais nos cursos erra."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-4": {
+      "simples": "Consideram-se instrumentos de menor potencial ofensivo aqueles projetados especificamente para, com baixa probabilidade de causar mortes ou lesões permanentes, conter, debilitar ou incapacitar temporariamente pessoas.",
+      "pontos": ["Projetados para conter, debilitar ou incapacitar temporariamente.", "Baixa probabilidade de causar morte ou lesões permanentes."],
+      "atencao": ["Baixa probabilidade, e não ausência, de risco de morte."],
+      "exemplo": "Spray de pimenta e arma de choque são instrumentos de menor potencial ofensivo.",
+      "prova": ["Assertiva que afirma que esses instrumentos nunca causam morte erra: a definição fala em baixa probabilidade."],
+      "termos": [{ "termo": "Instrumento não letal", "significado": "Equipamento concebido para reduzir o risco de morte." }],
+      "remissoes": ["Art. 7º"]
+    },
+    "art-5": {
+      "simples": "O poder público tem o dever de fornecer a todo agente de segurança pública instrumentos de menor potencial ofensivo para o uso racional da força.",
+      "pontos": ["Dever do poder público de fornecer os instrumentos.", "Para todo agente de segurança pública.", "Finalidade: uso racional da força."],
+      "atencao": ["O dever é do PODER PÚBLICO, e não do agente."],
+      "exemplo": "A corporação fornece spray de pimenta e arma de choque aos policiais.",
+      "prova": ["Assertiva que obriga o agente a comprar o próprio equipamento erra: o dever de fornecer é do poder público."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-6": {
+      "simples": "Sempre que do uso da força praticada pelos agentes de segurança pública decorrerem ferimentos em pessoas, deverá ser assegurada a imediata prestação de assistência e socorro médico aos feridos, bem como a comunicação do ocorrido à família ou à pessoa por eles indicada.",
+      "pontos": ["Assistência e socorro médico imediatos aos feridos.", "Comunicação à família ou à pessoa indicada."],
+      "atencao": ["Dever de socorro e de comunicação."],
+      "exemplo": "Após ferir alguém na ação, a polícia presta socorro e avisa a família.",
+      "prova": ["Assertiva que dispensa a comunicação à família erra."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-7": {
+      "simples": "O Poder Executivo editará regulamento classificando e disciplinando a utilização dos instrumentos não letais.",
+      "pontos": ["Regulamento do Executivo classifica e disciplina os instrumentos."],
+      "atencao": ["A classificação é regulamentar."],
+      "exemplo": "Um decreto lista os instrumentos não letais e regras de uso.",
+      "prova": ["Assertiva que fixa na lei a classificação dos instrumentos erra: é por regulamento."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-8": {
+      "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo final."],
+      "exemplo": "A Lei passou a valer na data da publicação.",
+      "prova": ["Assertiva que prevê vacatio legis erra."],
+      "termos": [],
+      "remissoes": ["Art. 7º"]
+    }
+  }
+}

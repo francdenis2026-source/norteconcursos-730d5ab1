@@ -1,0 +1,402 @@
+{
+  "course_slug": "drogas",
+  "law": "Lei de Drogas (Lei nº 11.343, de 2006) — lote 01: arts. 1º a 44",
+  "units": {
+    "art-1": {
+      "simples": "A Lei de Drogas institui o Sisnad (Sistema Nacional de Políticas Públicas sobre Drogas), prescreve medidas de prevenção do uso indevido, atenção e reinserção social de usuários e dependentes, estabelece normas de repressão à produção não autorizada e ao tráfico ilícito e define crimes. Drogas são as substâncias ou produtos capazes de causar dependência, especificados em lei ou em listas atualizadas periodicamente pelo Poder Executivo da União.",
+      "pontos": ["Institui o Sisnad.", "Prevenção, atenção e reinserção social de usuários e dependentes.", "Repressão à produção não autorizada e ao tráfico.", "Droga: substância capaz de causar dependência, definida em lei ou em lista do Poder Executivo."],
+      "atencao": ["A definição de 'droga' depende de lista atualizada pelo Executivo (norma penal em branco).", "A lista é a Portaria SVS/MS nº 344, de 1998, e suas atualizações."],
+      "exemplo": "Uma nova substância incluída na lista oficial passa a ser 'droga' para os efeitos penais.",
+      "prova": ["Assertiva que define droga por critério exclusivamente jurídico, sem a lista oficial do Poder Executivo, erra."],
+      "termos": [{ "termo": "Norma penal em branco", "significado": "Norma cuja descrição depende de complemento por outra norma." }],
+      "remissoes": ["Art. 2º", "Art. 66"]
+    },
+    "art-2": {
+      "simples": "Ficam proibidas, em todo o território nacional, as drogas, bem como o plantio, a cultura, a colheita e a exploração de vegetais e substratos dos quais possam ser extraídas ou produzidas drogas, ressalvada a hipótese de autorização legal ou regulamentar e o uso estritamente ritualístico-religioso da Convenção de Viena de 1971. A União pode autorizar o plantio, a cultura e a colheita desses vegetais exclusivamente para fins medicinais ou científicos, em local e prazo predeterminados, mediante fiscalização.",
+      "pontos": ["Proibição geral de drogas e do cultivo de vegetais que as produzam.", "Ressalvas: autorização legal ou regulamentar e plantas de uso ritualístico-religioso.", "Parágrafo único: a União pode autorizar plantio para fins medicinais ou científicos."],
+      "atencao": ["A autorização é da UNIÃO e exclusiva para fins MEDICINAIS ou CIENTÍFICOS.", "A proibição abrange também as plantas, e não só as substâncias."],
+      "exemplo": "Pesquisa científica com planta autorizada pela União, em local e prazo definidos, é lícita.",
+      "prova": ["Assertiva que permite ao Estado autorizar o plantio de plantas psicotrópicas para fins medicinais erra: a competência é da União."],
+      "termos": [],
+      "remissoes": ["Art. 1º", "Art. 33, §1º, II"]
+    },
+    "art-3": {
+      "simples": "O Sisnad tem a finalidade de articular, integrar, organizar e coordenar as atividades de prevenção do uso indevido, atenção e reinserção social de usuários e dependentes de drogas e de repressão da produção não autorizada e do tráfico ilícito. Sisnad é o conjunto ordenado de princípios, regras, critérios e recursos materiais e humanos das políticas sobre drogas, incluindo por adesão os sistemas dos Estados, do Distrito Federal e dos Municípios. Atua em articulação com o SUS e o SUAS.",
+      "pontos": ["Duas frentes: prevenção, atenção e reinserção; e repressão.", "Estados, DF e Municípios integram por adesão.", "Atuação articulada com o SUS e o SUAS."],
+      "atencao": ["ATUALIZAÇÃO: §§ 1º e 2º incluídos pela Lei nº 13.840, de 2019."],
+      "exemplo": "Um município adere ao Sisnad e integra sua política local sobre drogas.",
+      "prova": ["Assertiva que torna obrigatória a integração dos Municípios ao Sisnad erra: é por adesão."],
+      "termos": [{ "termo": "Sisnad", "significado": "Sistema Nacional de Políticas Públicas sobre Drogas." }],
+      "remissoes": ["Art. 4º", "Art. 5º"]
+    },
+    "art-4": {
+      "simples": "São princípios do Sisnad, entre outros, o respeito aos direitos fundamentais, especialmente à autonomia e à liberdade; o respeito à diversidade; a promoção dos valores éticos, culturais e de cidadania; a promoção de consensos nacionais; a responsabilidade compartilhada entre Estado e sociedade; o reconhecimento da intersetorialidade dos fatores; a integração das estratégias nacionais e internacionais; a articulação com o Ministério Público e os Poderes Legislativo e Judiciário; e a abordagem multidisciplinar.",
+      "pontos": ["Respeito aos direitos fundamentais, à autonomia e à liberdade.", "Respeito à diversidade.", "Responsabilidade compartilhada entre Estado e sociedade.", "Intersetorialidade e abordagem multidisciplinar.", "Articulação com o MP e os Poderes."],
+      "atencao": ["Rol de princípios, cobrado literalmente em provas."],
+      "exemplo": "A política local de drogas envolve saúde, educação e assistência social: intersetorialidade.",
+      "prova": ["Assertiva que exclui o respeito à diversidade dos princípios do Sisnad erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-5": {
+      "simples": "O Sisnad tem os seguintes objetivos: contribuir para a inclusão social do cidadão, tornando-o menos vulnerável a comportamentos de risco; promover a construção e a socialização do conhecimento sobre drogas no país; promover a integração entre as políticas de prevenção, atenção e reinserção e de repressão e as políticas setoriais dos órgãos do Poder Executivo; e assegurar as condições para a coordenação, a integração e a articulação das atividades do art. 3º.",
+      "pontos": ["Inclusão social.", "Construção e socialização do conhecimento sobre drogas.", "Integração entre as políticas de prevenção e repressão e as políticas setoriais.", "Coordenação, integração e articulação das atividades."],
+      "atencao": ["Quatro objetivos."],
+      "exemplo": "Programa de qualificação profissional para jovens vulneráveis atende ao objetivo de inclusão social.",
+      "prova": ["Assertiva que lista cinco objetivos do Sisnad, incluindo o julgamento de crimes, erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-7": {
+      "simples": "A organização do Sisnad assegura a orientação central e a execução descentralizada das atividades realizadas em seu âmbito, nas esferas federal, distrital, estadual e municipal, e se constitui matéria definida no regulamento da Lei.",
+      "pontos": ["Orientação central e execução descentralizada.", "Esferas federal, distrital, estadual e municipal.", "Organização definida em regulamento."],
+      "atencao": ["Modelo: orientação CENTRAL e execução DESCENTRALIZADA."],
+      "exemplo": "A União fixa as diretrizes, e os Municípios executam as ações locais.",
+      "prova": ["Assertiva que centraliza a execução das atividades do Sisnad na União erra."],
+      "termos": [],
+      "remissoes": ["Art. 8º-A"]
+    },
+    "art-8-a": {
+      "simples": "Compete à União formular e coordenar a execução da Política Nacional sobre Drogas; elaborar o Plano Nacional de Políticas sobre Drogas, em parceria com Estados, Distrito Federal, Municípios e a sociedade; coordenar o Sisnad; estabelecer diretrizes e normas de referência; elaborar objetivos, ações estratégicas, metas e indicadores e definir formas de financiamento e gestão; promover a integração com os demais entes; financiar, com eles, a execução das políticas; e estabelecer formas de colaboração com os entes federados, entre outras competências.",
+      "pontos": ["Formular e coordenar a Política Nacional sobre Drogas.", "Elaborar o Plano Nacional.", "Coordenar o Sisnad.", "Integrar e financiar com Estados, DF e Municípios."],
+      "atencao": ["ATUALIZAÇÃO: artigo incluído pela Lei nº 13.840, de 2019.", "Os incisos VI e VII foram vetados."],
+      "exemplo": "A União elabora o Plano Nacional em parceria com Estados e Municípios.",
+      "prova": ["Assertiva que atribui ao Município a coordenação do Sisnad erra: é da União."],
+      "termos": [],
+      "remissoes": ["Art. 7º"]
+    },
+    "art-8-d": {
+      "simples": "São objetivos do Plano Nacional de Políticas sobre Drogas, dentre outros, promover a interdisciplinaridade e a integração dos programas nas áreas de saúde, educação, trabalho, assistência social, previdência social, habitação, cultura, desporto e lazer; viabilizar a ampla participação social; priorizar programas articulados com estabelecimentos de ensino, sociedade e família; ampliar as alternativas de inserção social e econômica do usuário ou dependente, priorizando escolarização e qualificação profissional; e promover o acesso do usuário ou dependente a todos os serviços públicos.",
+      "pontos": ["Interdisciplinaridade e integração de programas.", "Ampla participação social.", "Articulação com escolas, sociedade e família.", "Inserção social e econômica do usuário.", "Acesso a todos os serviços públicos."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 13.840, de 2019 (Capítulo II-A)."],
+      "exemplo": "O plano prioriza ações nas escolas para prevenir o uso de drogas.",
+      "prova": ["Assertiva que restringe o Plano Nacional à área da saúde erra: abrange várias áreas."],
+      "termos": [],
+      "remissoes": ["Art. 8º-A", "Art. 8º-E"]
+    },
+    "art-8-e": {
+      "simples": "Os conselhos de políticas sobre drogas, constituídos por Estados, Distrito Federal e Municípios, terão os objetivos de auxiliar na elaboração de políticas sobre drogas; colaborar com os órgãos governamentais no planejamento e na execução das políticas; propor a celebração de instrumentos de cooperação para programas de prevenção, tratamento, acolhimento, reinserção e repressão ao tráfico; promover estudos; propor políticas que permitam a integração do usuário ou dependente no processo social, econômico, político e cultural; e desenvolver outras atividades relacionadas.",
+      "pontos": ["Auxiliar na elaboração das políticas.", "Colaborar no planejamento e na execução.", "Propor instrumentos de cooperação.", "Promover estudos.", "Propor a integração do usuário no processo social."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 13.840, de 2019."],
+      "exemplo": "O conselho municipal propõe convênio para um programa de reinserção no trabalho.",
+      "prova": ["Assertiva que atribui aos conselhos estaduais e municipais o poder de legislar sobre drogas erra: eles auxiliam e propõem."],
+      "termos": [],
+      "remissoes": ["Art. 8º-D"]
+    },
+    "art-16": {
+      "simples": "As instituições com atuação nas áreas da atenção à saúde e da assistência social que atendam usuários ou dependentes de drogas devem comunicar ao órgão competente do respectivo sistema municipal de saúde os casos atendidos e os óbitos ocorridos, preservando a identidade das pessoas, conforme orientações emanadas da União.",
+      "pontos": ["Instituições de saúde e assistência comunicam os casos e os óbitos.", "Comunicação ao sistema municipal de saúde.", "Identidade das pessoas preservada."],
+      "atencao": ["A identidade das pessoas deve ser PRESERVADA."],
+      "exemplo": "Uma clínica informa à secretaria municipal os casos atendidos, sem identificar os pacientes.",
+      "prova": ["Assertiva que obriga a identificação dos usuários na comunicação erra: a identidade é preservada."],
+      "termos": [],
+      "remissoes": ["Art. 17"]
+    },
+    "art-17": {
+      "simples": "Os dados estatísticos nacionais de repressão ao tráfico ilícito de drogas integrarão sistema de informações do Poder Executivo.",
+      "pontos": ["Dados estatísticos de repressão ao tráfico integram sistema de informações do Executivo."],
+      "atencao": ["Dados de REPRESSÃO integram o sistema do Poder Executivo."],
+      "exemplo": "As apreensões de drogas alimentam a estatística nacional do Executivo.",
+      "prova": ["Assertiva que atribui ao Poder Judiciário o sistema de dados de repressão ao tráfico erra: é do Executivo."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-18": {
+      "simples": "Constituem atividades de prevenção do uso indevido de drogas, para efeito da Lei, aquelas direcionadas para a redução dos fatores de vulnerabilidade e risco e para a promoção e o fortalecimento dos fatores de proteção.",
+      "pontos": ["Prevenção: reduzir fatores de vulnerabilidade e risco.", "Prevenção: promover e fortalecer fatores de proteção."],
+      "atencao": ["Dois eixos: reduzir riscos e fortalecer proteção."],
+      "exemplo": "Programa de esporte na escola fortalece fatores de proteção.",
+      "prova": ["Assertiva que define prevenção apenas como repressão policial erra."],
+      "termos": [],
+      "remissoes": ["Art. 19"]
+    },
+    "art-19": {
+      "simples": "As atividades de prevenção do uso indevido de drogas devem observar princípios e diretrizes como o reconhecimento do uso indevido como fator de interferência na qualidade de vida; a adoção de conceitos objetivos e de fundamentação científica; o fortalecimento da autonomia e da responsabilidade individual; o compartilhamento de responsabilidades com o setor privado e a sociedade; estratégias diferenciadas conforme as populações e as drogas; o reconhecimento do 'não-uso', do 'retardamento do uso' e da redução de riscos como resultados desejáveis; e o tratamento especial às parcelas mais vulneráveis da população.",
+      "pontos": ["Fundamentação científica e conceitos objetivos.", "Autonomia e responsabilidade individual.", "Estratégias diferenciadas para cada população e droga.", "Resultados desejáveis: não-uso, retardamento do uso e redução de riscos."],
+      "atencao": ["A lei reconhece a redução de riscos como resultado desejável."],
+      "exemplo": "Campanha adaptada à realidade de jovens de uma região aplica estratégia diferenciada.",
+      "prova": ["Assertiva que considera apenas a abstinência total como resultado desejável da prevenção erra."],
+      "termos": [],
+      "remissoes": ["Art. 18"]
+    },
+    "art-19-a": {
+      "simples": "Fica instituída a Semana Nacional de Políticas sobre Drogas, comemorada anualmente, na quarta semana de junho. No período, serão intensificadas as ações de difusão de informações sobre os problemas decorrentes do uso de drogas; promoção de eventos para o debate público; difusão de boas práticas de prevenção, tratamento, acolhimento e reinserção; divulgação de iniciativas e campanhas; mobilização da comunidade; e mobilização dos sistemas de ensino.",
+      "pontos": ["Semana Nacional de Políticas sobre Drogas, na quarta semana de junho.", "Difusão de informações e debate público.", "Mobilização da comunidade e dos sistemas de ensino."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 13.840, de 2019.", "Data: QUARTA semana de junho."],
+      "exemplo": "Escolas realizam palestras de prevenção na quarta semana de junho.",
+      "prova": ["Assertiva que fixa a semana nacional na primeira semana de junho erra: é a quarta semana."],
+      "termos": [],
+      "remissoes": ["Art. 19"]
+    },
+    "art-20": {
+      "simples": "Constituem atividades de atenção ao usuário e dependente de drogas e respectivos familiares, para efeito da Lei, aquelas que visem à melhoria da qualidade de vida e à redução dos riscos e dos danos associados ao uso de drogas.",
+      "pontos": ["Atenção: melhoria da qualidade de vida.", "Atenção: redução dos riscos e danos associados ao uso."],
+      "atencao": ["Atenção alcança também os FAMILIARES."],
+      "exemplo": "Atendimento psicossocial à família do dependente é atividade de atenção.",
+      "prova": ["Assertiva que restringe a atenção ao próprio usuário, sem os familiares, erra."],
+      "termos": [],
+      "remissoes": ["Art. 21"]
+    },
+    "art-21": {
+      "simples": "Constituem atividades de reinserção social do usuário ou do dependente de drogas e respectivos familiares, para efeito da Lei, aquelas direcionadas para sua integração ou reintegração em redes sociais.",
+      "pontos": ["Reinserção social: integração ou reintegração em redes sociais.", "Alcança usuário, dependente e familiares."],
+      "atencao": ["Conceito de reinserção: integração ou REINTEGRAÇÃO em redes sociais."],
+      "exemplo": "Grupo de apoio que reintegra o dependente à comunidade é atividade de reinserção social.",
+      "prova": ["Assertiva que define reinserção como internação compulsória erra."],
+      "termos": [],
+      "remissoes": ["Art. 20"]
+    },
+    "art-22": {
+      "simples": "As atividades de atenção e de reinserção social do usuário e do dependente e de seus familiares devem observar princípios como o respeito ao usuário independentemente de quaisquer condições; estratégias diferenciadas conforme as peculiaridades socioculturais; projeto terapêutico individualizado; atenção multidisciplinar, por equipes multiprofissionais; observância das normas do Conad; alinhamento às diretrizes dos órgãos de controle social; estímulo à capacitação técnica e profissional; e políticas de reinserção voltadas à educação continuada e ao trabalho.",
+      "pontos": ["Respeito ao usuário, independentemente de condições.", "Projeto terapêutico individualizado.", "Atenção multidisciplinar.", "Observância das normas do Conad.", "Capacitação e políticas de educação continuada e trabalho."],
+      "atencao": ["ATUALIZAÇÃO: incisos VII e VIII incluídos pela Lei nº 13.840, de 2019."],
+      "exemplo": "A equipe multiprofissional elabora um projeto terapêutico individual para cada usuário.",
+      "prova": ["Assertiva que dispensa o projeto terapêutico individualizado erra."],
+      "termos": [{ "termo": "Conad", "significado": "Conselho Nacional de Políticas sobre Drogas." }],
+      "remissoes": ["Art. 23-B"]
+    },
+    "art-22-a": {
+      "simples": "As pessoas atendidas por órgãos integrantes do Sisnad terão atendimento nos programas de educação profissional e tecnológica, educação de jovens e adultos e alfabetização.",
+      "pontos": ["Pessoas atendidas pelo Sisnad têm acesso à educação profissional e tecnológica, EJA e alfabetização."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 13.840, de 2019."],
+      "exemplo": "O usuário atendido pelo Sisnad é matriculado em curso de educação de jovens e adultos.",
+      "prova": ["Assertiva que restringe o benefício a quem já concluiu o tratamento erra: aplica-se às pessoas atendidas."],
+      "termos": [],
+      "remissoes": ["Art. 22"]
+    },
+    "art-23": {
+      "simples": "As redes dos serviços de saúde da União, dos Estados, do Distrito Federal e dos Municípios desenvolverão programas de atenção ao usuário e ao dependente de drogas, respeitadas as diretrizes do Ministério da Saúde e os princípios do art. 22, obrigatória a previsão orçamentária adequada. Será criada estratégia específica de assistência multiprofissional e interdisciplinar às mulheres usuárias e dependentes de álcool, em especial às gestantes e às puérperas.",
+      "pontos": ["Redes de saúde de todos os entes desenvolvem programas de atenção.", "Previsão orçamentária obrigatória.", "Estratégia específica para mulheres usuárias de álcool, especialmente gestantes e puérperas."],
+      "atencao": ["ATUALIZAÇÃO: parágrafo único incluído pela Lei nº 15.581, de 2025 (mulheres usuárias de álcool)."],
+      "exemplo": "A rede municipal cria atendimento especializado a gestantes dependentes de álcool.",
+      "prova": ["Assertiva que dispensa previsão orçamentária para os programas de atenção erra: é obrigatória."],
+      "termos": [],
+      "remissoes": ["Art. 22"]
+    },
+    "art-23-a": {
+      "simples": "O tratamento do usuário ou dependente de drogas deverá ser ordenado em uma rede de atenção à saúde, com prioridade para as modalidades ambulatoriais, incluindo excepcionalmente formas de internação em unidades de saúde e hospitais gerais, nos termos de normas da União e articuladas com os serviços de assistência social, em etapas que permitam articular a atenção com ações preventivas; orientar-se por protocolos técnicos baseados em evidências; preparar para a reinserção social e econômica; e acompanhar os resultados pelo SUS, Suas e Sisnad. Caberá à União dispor sobre os protocolos técnicos de tratamento.",
+      "pontos": ["Prioridade ao tratamento ambulatorial; internação é exceção.", "Protocolos técnicos baseados em evidências científicas.", "Preparação para a reinserção social e econômica.", "União dispõe sobre os protocolos técnicos."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 13.840, de 2019.", "A internação é EXCEPCIONAL."],
+      "exemplo": "O usuário é atendido em ambulatório, e a internação só ocorre em caso excepcional.",
+      "prova": ["Assertiva que torna a internação a modalidade prioritária de tratamento erra: a prioridade é ambulatorial."],
+      "termos": [],
+      "remissoes": ["Art. 23-B"]
+    },
+    "art-23-b": {
+      "simples": "O atendimento ao usuário ou dependente de drogas na rede de atenção à saúde dependerá de avaliação prévia por equipe técnica multidisciplinar e multissetorial e da elaboração de um Plano Individual de Atendimento (PIA). A avaliação levantará no mínimo o tipo de droga e o padrão de seu uso e o risco à saúde física e mental do usuário ou das pessoas com as quais convive. O PIA deverá contemplar a participação dos familiares ou responsáveis, os quais têm o dever de contribuir com o processo, sendo passíveis de responsabilização, no caso de crianças e adolescentes, nos termos do Estatuto da Criança e do Adolescente.",
+      "pontos": ["Avaliação prévia por equipe multidisciplinar e multissetorial.", "Plano Individual de Atendimento (PIA).", "Avaliação: tipo de droga, padrão de uso e riscos.", "Participação dos familiares ou responsáveis no PIA."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 13.840, de 2019.", "Dois requisitos: avaliação prévia E PIA."],
+      "exemplo": "Antes do atendimento, a equipe avalia o padrão de uso e elabora o PIA com a família.",
+      "prova": ["Assertiva que dispensa a avaliação prévia da equipe técnica para o atendimento erra."],
+      "termos": [{ "termo": "PIA", "significado": "Plano Individual de Atendimento." }],
+      "remissoes": ["Art. 23-A", "Art. 26-A"]
+    },
+    "art-24": {
+      "simples": "A União, os Estados, o Distrito Federal e os Municípios poderão conceder benefícios às instituições privadas que desenvolverem programas de reinserção no mercado de trabalho, do usuário e do dependente de drogas encaminhados por órgão oficial.",
+      "pontos": ["Benefícios às instituições privadas que reinserem usuários no mercado de trabalho.", "Usuário encaminhado por órgão oficial."],
+      "atencao": ["Concessão FACULTATIVA ('poderão')."],
+      "exemplo": "Empresa que contrata usuários encaminhados por órgão oficial recebe incentivo.",
+      "prova": ["Assertiva que torna obrigatória a concessão de benefícios às instituições erra: é facultativa."],
+      "termos": [],
+      "remissoes": ["Art. 22"]
+    },
+    "art-25": {
+      "simples": "As instituições da sociedade civil, sem fins lucrativos, com atuação nas áreas da atenção à saúde e da assistência social, que atendam usuários ou dependentes de drogas poderão receber recursos do Funad, condicionados à sua disponibilidade orçamentária e financeira.",
+      "pontos": ["Entidades sem fins lucrativos podem receber recursos do Funad.", "Condicionados à disponibilidade orçamentária e financeira."],
+      "atencao": ["Funad: Fundo Nacional Antidrogas."],
+      "exemplo": "Entidade filantrópica de acolhimento recebe recursos do Funad, se houver disponibilidade.",
+      "prova": ["Assertiva que garante recursos do Funad independentemente de disponibilidade orçamentária erra."],
+      "termos": [{ "termo": "Funad", "significado": "Fundo Nacional Antidrogas." }],
+      "remissoes": ["Art. 24"]
+    },
+    "art-26": {
+      "simples": "O usuário e o dependente de drogas que, em razão da prática de infração penal, estiverem cumprindo pena privativa de liberdade ou submetidos a medida de segurança, têm garantidos os serviços de atenção à sua saúde, definidos pelo respectivo sistema penitenciário.",
+      "pontos": ["Preso usuário ou dependente tem garantidos serviços de atenção à saúde.", "Serviços definidos pelo sistema penitenciário."],
+      "atencao": ["Vale para pena privativa de liberdade e medida de segurança."],
+      "exemplo": "O preso dependente recebe atendimento de saúde no próprio sistema penitenciário.",
+      "prova": ["Assertiva que exclui o preso do direito à atenção à saúde por drogas erra."],
+      "termos": [],
+      "remissoes": ["Art. 20"]
+    },
+    "art-26-a": {
+      "simples": "O acolhimento do usuário ou dependente de drogas na comunidade terapêutica acolhedora caracteriza-se pela oferta de projetos terapêuticos que visam à abstinência; adesão e permanência voluntária, formalizadas por escrito, como etapa transitória para a reinserção; ambiente residencial propício à formação de vínculos; avaliação médica prévia; elaboração de plano individual de atendimento; e vedação de isolamento físico do usuário.",
+      "pontos": ["Projeto terapêutico visando à abstinência.", "Adesão e permanência VOLUNTÁRIAS, por escrito.", "Ambiente residencial.", "Avaliação médica prévia e PIA.", "Vedado o isolamento físico."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 13.840, de 2019.", "Acolhimento é voluntário e não se confunde com internação compulsória."],
+      "exemplo": "O usuário adere por escrito ao acolhimento na comunidade terapêutica e pode sair quando quiser.",
+      "prova": ["Assertiva que admite o isolamento físico do acolhido na comunidade terapêutica erra: é vedado."],
+      "termos": [{ "termo": "Comunidade terapêutica acolhedora", "significado": "Entidade de acolhimento voluntário, de caráter residencial e transitório." }],
+      "remissoes": ["Art. 23-B"]
+    },
+    "art-27": {
+      "simples": "As penas previstas para o usuário (art. 28) poderão ser aplicadas isolada ou cumulativamente, bem como substituídas a qualquer tempo, ouvidos o Ministério Público e o defensor.",
+      "pontos": ["Penas do art. 28 podem ser isoladas ou cumulativas.", "Podem ser substituídas a qualquer tempo.", "Ouvidos o MP e o defensor."],
+      "atencao": ["O texto remete a debate no STF (RE 635659) sobre o art. 28."],
+      "exemplo": "O juiz substitui a prestação de serviços por advertência, ouvidos o MP e o defensor.",
+      "prova": ["Assertiva que impede a substituição das penas do art. 28 após a sentença erra: pode ocorrer a qualquer tempo."],
+      "termos": [],
+      "remissoes": ["Art. 28"]
+    },
+    "art-28": {
+      "simples": "Quem adquirir, guardar, tiver em depósito, transportar ou trouxer consigo, para consumo pessoal, drogas sem autorização ou em desacordo com determinação legal ou regulamentar será submetido a advertência sobre os efeitos das drogas, prestação de serviços à comunidade e medida educativa de comparecimento a programa ou curso educativo. Às mesmas medidas submete-se quem, para seu consumo pessoal, semeia, cultiva ou colhe plantas destinadas à preparação de pequena quantidade de substância capaz de causar dependência. Para determinar se a droga destinava-se a consumo pessoal, o juiz atenderá à natureza e à quantidade da substância, ao local e às condições da ação, às circunstâncias sociais e pessoais e à conduta e aos antecedentes do agente. As penas dos incisos II e III duram no máximo 5 meses (10 meses na reincidência).",
+      "pontos": ["Núcleos: adquirir, guardar, ter em depósito, transportar ou trazer consigo, para consumo pessoal.", "Penas: advertência, prestação de serviços à comunidade e curso educativo (sem prisão).", "§1º: cultivo para consumo pessoal.", "§2º: critérios para distinguir usuário de traficante.", "Prazo máximo: 5 meses; reincidência: 10 meses."],
+      "atencao": ["O art. 28 NÃO prevê pena privativa de liberdade (despenalização).", "O STF discute a constitucionalidade do artigo (RE 635659).", "Prazo de 5 meses (10 na reincidência) para as penas dos incisos II e III."],
+      "exemplo": "Quem é flagrado com pequena quantidade para uso próprio é advertido e pode prestar serviços à comunidade.",
+      "prova": ["Assertiva que prevê pena de detenção para o porte para consumo pessoal erra: o art. 28 não prevê pena de prisão."],
+      "termos": [{ "termo": "Despenalização", "significado": "Retirada da pena de prisão, mantendo o fato como infração." }],
+      "remissoes": ["Art. 33", "Art. 48"]
+    },
+    "art-29": {
+      "simples": "Na imposição da multa prevista como medida educativa ao usuário que se recusa a cumprir as medidas (art. 28, §6º, II), o juiz, atendendo à reprovabilidade da conduta, fixará o número de dias-multa, em quantidade nunca inferior a 40 nem superior a 100, atribuindo depois a cada um, segundo a capacidade econômica do agente, o valor de um trinta avos até 3 vezes o valor do maior salário mínimo. Os valores da multa serão creditados à conta do Fundo Nacional Antidrogas.",
+      "pontos": ["Multa de 40 a 100 dias-multa.", "Valor do dia-multa: de um trinta avos até 3 vezes o maior salário mínimo.", "Valores creditados ao Funad."],
+      "atencao": ["A multa só incide sobre quem se recusa a cumprir as medidas do art. 28."],
+      "exemplo": "O usuário que se recusa a cumprir as medidas paga multa fixada entre 40 e 100 dias-multa.",
+      "prova": ["Assertiva que destina a multa do art. 29 ao Tesouro Estadual erra: é creditada ao Funad."],
+      "termos": [],
+      "remissoes": ["Art. 28"]
+    },
+    "art-30": {
+      "simples": "Prescrevem em 2 anos a imposição e a execução das penas do usuário (art. 28), observado, no tocante à interrupção do prazo, o disposto nos arts. 107 e seguintes do Código Penal.",
+      "pontos": ["Prescrição de 2 anos para a imposição e a execução das penas do art. 28.", "Interrupção segue os arts. 107 e seguintes do CP."],
+      "atencao": ["Prazo prescricional de 2 anos."],
+      "exemplo": "Passados 2 anos sem decisão, prescreve a pretensão de punir o usuário.",
+      "prova": ["Assertiva que fixa a prescrição do art. 28 em 4 anos erra: são 2 anos."],
+      "termos": [],
+      "remissoes": ["Art. 28"]
+    },
+    "art-31": {
+      "simples": "É indispensável a licença prévia da autoridade competente para produzir, extrair, fabricar, transformar, preparar, possuir, manter em depósito, importar, exportar, reexportar, remeter, transportar, expor, oferecer, vender, comprar, trocar, ceder ou adquirir, para qualquer fim, drogas ou matéria-prima destinada à sua preparação, observadas as demais exigências legais.",
+      "pontos": ["Licença prévia da autoridade competente para lidar com drogas ou matéria-prima.", "Aplica-se a qualquer fim.", "Rol amplo de condutas."],
+      "atencao": ["Exige LICENÇA PRÉVIA, e não apenas comunicação."],
+      "exemplo": "Laboratório farmacêutico precisa de licença para produzir substância controlada.",
+      "prova": ["Assertiva que dispensa a licença quando a finalidade é científica erra: a licença é exigida para qualquer fim."],
+      "termos": [],
+      "remissoes": ["Art. 33"]
+    },
+    "art-32": {
+      "simples": "As plantações ilícitas serão imediatamente destruídas pelo delegado de polícia na forma do art. 50-A, que recolherá quantidade suficiente para exame pericial, de tudo lavrando auto de levantamento das condições encontradas, com a delimitação do local, asseguradas as medidas necessárias para a preservação da prova. Em caso de queimada, observar-se-á o Decreto nº 2.661, de 1998, dispensada a autorização prévia do Sisnama. As glebas cultivadas com plantações ilícitas serão expropriadas, conforme o art. 243 da Constituição.",
+      "pontos": ["Destruição imediata pelo delegado de polícia.", "Recolhe amostra para perícia e lavra auto de levantamento.", "Queimada: cautelas ambientais, sem autorização prévia do Sisnama.", "Glebas expropriadas (art. 243 da Constituição)."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pela Lei nº 12.961, de 2014 (destruição pelo delegado).", "Os §§ 1º e 2º foram revogados."],
+      "exemplo": "O delegado destrói a plantação de maconha após coletar amostra e lavrar o auto.",
+      "prova": ["Assertiva que exige autorização judicial prévia para destruir a plantação ilícita erra, segundo a redação dada pela Lei nº 12.961, de 2014."],
+      "termos": [],
+      "remissoes": ["Art. 50-A"]
+    },
+    "art-33": {
+      "simples": "Tráfico de drogas: importar, exportar, remeter, preparar, produzir, fabricar, adquirir, vender, expor à venda, oferecer, ter em depósito, transportar, trazer consigo, guardar, prescrever, ministrar, entregar a consumo ou fornecer drogas, ainda que gratuitamente, sem autorização ou em desacordo com determinação legal ou regulamentar. Pena: reclusão de 5 a 15 anos e 500 a 1.500 dias-multa. Nas mesmas penas incorre quem pratica condutas relativas a matéria-prima, insumo ou produto químico destinado à preparação de drogas; quem semeia, cultiva ou colhe plantas que sejam matéria-prima; e quem utiliza local ou bem de que tem a posse ou guarda, ou consente que outrem o utilize, para o tráfico. Há ainda figuras do §1º, IV (venda a policial disfarçado), do §2º (induzir, instigar ou auxiliar ao uso: detenção de 1 a 3 anos), do §3º (oferecer droga eventualmente, sem lucro, a pessoa de relacionamento, para consumirem juntos: detenção de 6 meses a 1 ano) e o tráfico privilegiado do §4º.",
+      "pontos": ["Tipo misto alternativo com 18 núcleos.", "Pena: reclusão de 5 a 15 anos e 500 a 1.500 dias-multa.", "§1º: matéria-prima, insumos, plantio e cessão de local.", "§2º: induzir, instigar ou auxiliar o uso.", "§3º: oferecer droga eventualmente, sem lucro, a pessoa de relacionamento.", "§4º: tráfico privilegiado (redução de pena para o primário, de bons antecedentes, que não se dedique ao crime nem integre organização)."],
+      "atencao": ["Crime de ação múltipla: praticar mais de um núcleo no mesmo contexto é crime único.", "O tráfico privilegiado (§4º) NÃO é equiparado a hediondo (STF).", "Equiparado a hediondo na forma do caput e do §1º."],
+      "exemplo": "Quem guarda drogas em casa para entregar a terceiros pratica tráfico, ainda que sem lucro.",
+      "prova": ["Assertiva que considera hediondo o tráfico privilegiado do §4º erra, conforme o STF."],
+      "termos": [{ "termo": "Tráfico privilegiado", "significado": "Causa de diminuição de pena para o réu primário, de bons antecedentes, que não integra organização criminosa." }],
+      "remissoes": ["Art. 28", "Art. 40", "Art. 44"]
+    },
+    "art-34": {
+      "simples": "Fabricar, adquirir, utilizar, transportar, oferecer, vender, distribuir, entregar a qualquer título, possuir, guardar ou fornecer, ainda que gratuitamente, maquinário, aparelho, instrumento ou qualquer objeto destinado à fabricação, preparação, produção ou transformação de drogas, sem autorização ou em desacordo com determinação legal ou regulamentar. Pena: reclusão de 3 a 10 anos e 1.200 a 2.000 dias-multa.",
+      "pontos": ["Crime de petrechos para o tráfico.", "Objeto destinado à fabricação, preparação, produção ou transformação de drogas.", "Reclusão de 3 a 10 anos e 1.200 a 2.000 dias-multa."],
+      "atencao": ["O objeto deve ser DESTINADO à produção de drogas."],
+      "exemplo": "Quem guarda uma prensa destinada à produção de drogas comete o crime do art. 34.",
+      "prova": ["Assertiva que aplica o art. 34 a qualquer objeto, ainda que sem destinação ao preparo de drogas, erra."],
+      "termos": [],
+      "remissoes": ["Art. 33"]
+    },
+    "art-35": {
+      "simples": "Associação para o tráfico: associarem-se duas ou mais pessoas para o fim de praticar, reiteradamente ou não, qualquer dos crimes previstos nos arts. 33, caput e §1º, e 34. Pena: reclusão de 3 a 10 anos e 700 a 1.200 dias-multa. Nas mesmas penas incorre quem se associa para a prática reiterada do crime de financiamento do tráfico (art. 36).",
+      "pontos": ["Associação de 2 ou mais pessoas.", "Fim de praticar, reiteradamente ou não, os crimes dos arts. 33 e 34.", "Reclusão de 3 a 10 anos e 700 a 1.200 dias-multa.", "Parágrafo único: associação para a prática reiterada do financiamento (art. 36)."],
+      "atencao": ["Basta a associação de DUAS pessoas (diferente da associação criminosa do CP, que exige 3).", "Exige estabilidade e permanência da associação."],
+      "exemplo": "Duas pessoas se unem de forma estável para traficar: associação para o tráfico.",
+      "prova": ["Assertiva que exige 3 ou mais pessoas para o art. 35 erra: bastam duas."],
+      "termos": [],
+      "remissoes": ["Art. 36", "Associação criminosa (Código Penal)"]
+    },
+    "art-36": {
+      "simples": "Financiar ou custear a prática de qualquer dos crimes previstos nos arts. 33, caput e §1º, e 34. Pena: reclusão de 8 a 20 anos e 1.500 a 4.000 dias-multa.",
+      "pontos": ["Financiar ou custear o tráfico ou os petrechos.", "Reclusão de 8 a 20 anos e 1.500 a 4.000 dias-multa."],
+      "atencao": ["Pena MAIS ALTA da Lei de Drogas.", "Pune o financiador, ainda que não pratique o tráfico."],
+      "exemplo": "Quem custeia a compra de uma carga de droga responde pelo art. 36.",
+      "prova": ["Assertiva que fixa a pena do financiamento em 5 a 15 anos erra: é de 8 a 20 anos."],
+      "termos": [],
+      "remissoes": ["Art. 33", "Art. 40, VII"]
+    },
+    "art-37": {
+      "simples": "Colaborar, como informante, com grupo, organização ou associação destinados à prática de qualquer dos crimes previstos nos arts. 33, caput e §1º, e 34. Pena: reclusão de 2 a 6 anos e 300 a 700 dias-multa.",
+      "pontos": ["Colaborar como informante com grupo destinado ao tráfico.", "Reclusão de 2 a 6 anos e 300 a 700 dias-multa."],
+      "atencao": ["Crime autônomo, de quem apenas informa (olheiro)."],
+      "exemplo": "Quem avisa à quadrilha da chegada da polícia comete o crime de colaboração como informante.",
+      "prova": ["Assertiva que absorve o informante pela associação para o tráfico, sem crime autônomo, erra."],
+      "termos": [{ "termo": "Informante", "significado": "Quem colabora passando informações ao grupo do tráfico." }],
+      "remissoes": ["Art. 35"]
+    },
+    "art-38": {
+      "simples": "Prescrever ou ministrar, culposamente, drogas, sem que delas necessite o paciente, ou fazê-lo em doses excessivas ou em desacordo com determinação legal ou regulamentar. Pena: detenção de 6 meses a 2 anos e 50 a 200 dias-multa. O juiz comunicará a condenação ao Conselho Federal da categoria profissional a que pertença o agente.",
+      "pontos": ["Prescrever ou ministrar CULPOSAMENTE drogas.", "Detenção de 6 meses a 2 anos e 50 a 200 dias-multa.", "Condenação comunicada ao Conselho Federal da categoria profissional."],
+      "atencao": ["Único crime CULPOSO da Lei de Drogas.", "Pena de DETENÇÃO."],
+      "exemplo": "Médico prescreve dose excessiva de substância controlada por imprudência.",
+      "prova": ["Assertiva que torna dolosa a conduta do art. 38 erra: o crime é culposo."],
+      "termos": [],
+      "remissoes": ["Art. 33"]
+    },
+    "art-39": {
+      "simples": "Conduzir embarcação ou aeronave após o consumo de drogas, expondo a dano potencial a incolumidade de outrem. Pena: detenção de 6 meses a 3 anos, além da apreensão do veículo, cassação da habilitação ou proibição de obtê-la, pelo mesmo prazo da pena privativa de liberdade, e 200 a 400 dias-multa. Se o veículo for de transporte coletivo de passageiros, as penas de prisão e multa serão de 4 a 6 anos e de 400 a 600 dias-multa.",
+      "pontos": ["Conduzir embarcação ou aeronave após consumir drogas.", "Exige exposição de outrem a dano potencial (perigo concreto).", "Detenção de 6 meses a 3 anos, apreensão do veículo e cassação da habilitação.", "Transporte coletivo: 4 a 6 anos."],
+      "atencao": ["Aplica-se a embarcação e aeronave; para veículos terrestres vale o Código de Trânsito."],
+      "exemplo": "Piloto conduz aeronave após consumir droga, expondo passageiros a perigo.",
+      "prova": ["Assertiva que aplica o art. 39 à condução de automóvel erra: trata de embarcação e aeronave."],
+      "termos": [],
+      "remissoes": ["Código de Trânsito Brasileiro"]
+    },
+    "art-40": {
+      "simples": "As penas previstas nos arts. 33 a 37 são aumentadas de um sexto a dois terços se a natureza, a procedência da substância e as circunstâncias evidenciarem a transnacionalidade do delito; se o agente praticar o crime prevalecendo-se de função pública ou no desempenho de missão de educação, poder familiar, guarda ou vigilância; se a infração for cometida nas dependências ou imediações de estabelecimentos prisionais, de ensino, hospitalares, de entidades estudantis, sociais, culturais, recreativas, esportivas ou beneficentes, de locais de trabalho coletivo, de recintos de espetáculos, de serviços de tratamento, de unidades militares ou policiais ou em transportes públicos; se o crime for praticado com violência, grave ameaça, emprego de arma de fogo ou intimidação difusa ou coletiva; se caracterizado o tráfico interestadual; se envolver ou visar a atingir criança ou adolescente ou quem tenha diminuída a capacidade de entendimento; e se o agente financiar ou custear o crime, entre outras hipóteses.",
+      "pontos": ["Aumento de 1/6 a 2/3 para os arts. 33 a 37.", "I: transnacionalidade.", "II: função pública ou missão de educação, poder familiar, guarda ou vigilância.", "III: proximidade de escolas, hospitais, presídios, transporte público etc.", "IV: violência, grave ameaça, arma de fogo.", "V: tráfico interestadual.", "VI: criança, adolescente ou pessoa com capacidade diminuída.", "VII: financiamento ou custeio."],
+      "atencao": ["Não se aplica ao art. 38 nem ao art. 39.", "Súmula do STJ: para o tráfico interestadual basta a destinação a outro Estado, sem exigir a transposição efetiva da divisa."],
+      "exemplo": "Venda de droga na porta de uma escola atrai o aumento do art. 40, III.",
+      "prova": ["Assertiva que aplica as causas de aumento do art. 40 ao porte para consumo pessoal erra: elas valem para os arts. 33 a 37."],
+      "termos": [],
+      "remissoes": ["Art. 33", "Art. 40-A"]
+    },
+    "art-40-a": {
+      "simples": "As penas previstas nos arts. 33 a 37 serão aplicadas em dobro se o crime tiver sido praticado por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada, no contexto da atuação ou para a consecução das condutas previstas no art. 2º da lei que institui o marco legal do combate ao crime organizado no Brasil. Aplica-se a pena do concurso material do art. 69 do Código Penal se o crime tiver sido praticado com o emprego de arma de fogo, independentemente de o seu uso estar diretamente ligado ao comércio ilícito de entorpecentes ou de o artefato ter sido utilizado para assegurar o sucesso da mercancia.",
+      "pontos": ["Penas dos arts. 33 a 37 em DOBRO para integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada.", "Emprego de arma de fogo: concurso material (art. 69 do CP).", "Independe de o uso da arma estar ligado ao comércio da droga."],
+      "atencao": ["ATUALIZAÇÃO: artigo incluído pela Lei nº 15.358, de 2026.", "Aplicação das penas em DOBRO, e não em fração."],
+      "exemplo": "Miliciano que trafica drogas tem as penas dobradas.",
+      "prova": ["Assertiva que fixa o aumento do art. 40-A em um sexto a dois terços erra: as penas são aplicadas em dobro."],
+      "termos": [],
+      "remissoes": ["Art. 40"]
+    },
+    "art-41": {
+      "simples": "O indiciado ou acusado que colaborar voluntariamente com a investigação policial e o processo criminal na identificação dos demais coautores ou partícipes do crime e na recuperação total ou parcial do produto do crime, no caso de condenação, terá pena reduzida de um terço a dois terços.",
+      "pontos": ["Colaboração voluntária na identificação de coautores ou partícipes.", "Ou na recuperação do produto do crime.", "Redução de 1/3 a 2/3 da pena, em caso de condenação."],
+      "atencao": ["A colaboração deve ser VOLUNTÁRIA e eficaz."],
+      "exemplo": "O acusado aponta os demais integrantes do grupo e ajuda a recuperar a droga: a pena é reduzida.",
+      "prova": ["Assertiva que torna a delação premiada do art. 41 obrigatória para o juiz reduzir a pena erra: exige colaboração voluntária e eficaz."],
+      "termos": [],
+      "remissoes": ["Art. 33"]
+    },
+    "art-42": {
+      "simples": "O juiz, na fixação das penas, considerará, com preponderância sobre o previsto no art. 59 do Código Penal, a natureza e a quantidade da substância ou do produto, a personalidade e a conduta social do agente.",
+      "pontos": ["Natureza e quantidade da substância.", "Personalidade e conduta social do agente.", "Preponderam sobre o art. 59 do CP."],
+      "atencao": ["Critérios com PREPONDERÂNCIA sobre o art. 59 do Código Penal."],
+      "exemplo": "A grande quantidade de crack apreendida pesa na fixação da pena-base.",
+      "prova": ["Assertiva que dá ao art. 59 do CP preponderância sobre o art. 42 da Lei de Drogas erra."],
+      "termos": [],
+      "remissoes": ["Art. 59 do Código Penal"]
+    },
+    "art-43": {
+      "simples": "Na fixação da multa a que se referem os arts. 33 a 39, o juiz, atendendo ao que dispõe o art. 42, determinará o número de dias-multa, atribuindo a cada um, segundo as condições econômicas dos acusados, valor não inferior a um trinta avos nem superior a 5 vezes o maior salário mínimo. As multas, que em caso de concurso de crimes serão impostas sempre cumulativamente, podem ser aumentadas até o décuplo se, em virtude da situação econômica do acusado, considerá-las o juiz ineficazes, ainda que aplicadas no máximo.",
+      "pontos": ["Dia-multa: de um trinta avos a 5 vezes o maior salário mínimo.", "Concurso de crimes: multas sempre cumuladas.", "Podem ser aumentadas até o décuplo se ineficazes."],
+      "atencao": ["Aumento até o DÉCUPLO."],
+      "exemplo": "Réu muito rico tem a multa aumentada até o décuplo por ser considerada ineficaz.",
+      "prova": ["Assertiva que limita o dia-multa a 3 vezes o maior salário mínimo, no art. 43, erra: é de até 5 vezes."],
+      "termos": [],
+      "remissoes": ["Art. 42"]
+    },
+    "art-44": {
+      "simples": "Os crimes previstos nos arts. 33, caput e §1º, e 34 a 37 são inafiançáveis e insuscetíveis de sursis, graça, indulto, anistia e liberdade provisória, vedada a conversão de suas penas em restritivas de direitos. Nos crimes previstos no caput, dar-se-á o livramento condicional após o cumprimento de dois terços da pena, vedada sua concessão ao reincidente específico.",
+      "pontos": ["Inafiançáveis e insuscetíveis de sursis, graça, indulto, anistia e liberdade provisória.", "Vedada a conversão em penas restritivas de direitos.", "Livramento condicional após 2/3 da pena, vedado ao reincidente específico."],
+      "atencao": ["O STF declarou inconstitucionais a vedação de liberdade provisória e a de conversão em restritivas de direitos (a conversão é possível no tráfico privilegiado).", "Livramento: 2/3, e não a fração do Código Penal."],
+      "exemplo": "Condenado por tráfico só pode pedir livramento condicional após cumprir dois terços da pena, se não for reincidente específico.",
+      "prova": ["Assertiva que fixa o livramento condicional do tráfico em metade da pena erra: são dois terços."],
+      "termos": [{ "termo": "Reincidente específico", "significado": "Quem reincide em crime da mesma natureza." }],
+      "remissoes": ["Art. 33", "Lei dos Crimes Hediondos"]
+    }
+  }
+}

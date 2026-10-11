@@ -1,0 +1,132 @@
+{
+  "course_slug": "interceptacao",
+  "law": "Lei de Interceptação Telefônica (Lei nº 9.296, de 1996) — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "A interceptação de comunicações telefônicas, de qualquer natureza, para prova em investigação criminal e em instrução processual penal, observará esta Lei e dependerá de ordem do juiz competente da ação principal, sob segredo de justiça. O disposto na Lei aplica-se à interceptação do fluxo de comunicações em sistemas de informática e telemática.",
+      "pontos": ["Interceptação telefônica depende de ordem do juiz competente da ação principal.", "Segredo de justiça.", "Serve de prova em investigação criminal e instrução processual penal.", "Aplica-se ao fluxo de comunicações em informática e telemática."],
+      "atencao": ["Cláusula de reserva de jurisdição: só o juiz autoriza (Constituição, art. 5º, XII).", "Não se aplica a processos cíveis."],
+      "exemplo": "A Polícia Federal só grampeia um telefone com ordem do juiz.",
+      "prova": ["Assertiva que permite ao delegado ou ao Ministério Público determinar a interceptação erra: depende de ordem judicial."],
+      "termos": [{ "termo": "Interceptação", "significado": "Captação da comunicação por terceiro, sem o conhecimento dos interlocutores." }],
+      "remissoes": ["Art. 2º", "Art. 10"]
+    },
+    "art-2": {
+      "simples": "Não será admitida a interceptação de comunicações telefônicas quando não houver indícios razoáveis da autoria ou participação em infração penal; quando a prova puder ser feita por outros meios disponíveis; ou quando o fato investigado constituir infração penal punida, no máximo, com pena de detenção. Em qualquer hipótese deve ser descrita com clareza a situação objeto da investigação, inclusive com a indicação e qualificação dos investigados, salvo impossibilidade manifesta, devidamente justificada.",
+      "pontos": ["Vedada sem indícios razoáveis de autoria ou participação.", "Vedada se a prova puder ser feita por outros meios (subsidiariedade).", "Vedada para crime punido apenas com detenção.", "Descrição clara da situação e qualificação dos investigados."],
+      "atencao": ["Só cabe para crimes punidos com RECLUSÃO.", "Subsidiariedade: é o último recurso."],
+      "exemplo": "Contravenção ou crime punido só com detenção não permite interceptação.",
+      "prova": ["Assertiva que admite a interceptação para crime punido apenas com detenção erra."],
+      "termos": [{ "termo": "Subsidiariedade", "significado": "A medida só cabe se não houver outro meio de prova." }],
+      "remissoes": ["Art. 1º"]
+    },
+    "art-3": {
+      "simples": "A interceptação das comunicações telefônicas poderá ser determinada pelo juiz, de ofício ou a requerimento da autoridade policial, na investigação criminal, ou do representante do Ministério Público, na investigação criminal e na instrução processual penal.",
+      "pontos": ["Juiz pode determinar de ofício.", "Autoridade policial requer na investigação criminal.", "Ministério Público requer na investigação e na instrução."],
+      "atencao": ["A autoridade policial NÃO pede na fase processual; o MP pede nas duas fases."],
+      "exemplo": "O delegado representa pela interceptação durante o inquérito.",
+      "prova": ["Assertiva que permite ao delegado requerer a interceptação na instrução processual erra: lá só o MP requer."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-4": {
+      "simples": "O pedido de interceptação conterá a demonstração de que a sua realização é necessária à apuração de infração penal, com indicação dos meios a serem empregados. Excepcionalmente, o juiz poderá admitir que o pedido seja formulado verbalmente, desde que presentes os pressupostos que autorizem a interceptação, caso em que a concessão será condicionada à sua redução a termo. O juiz, no prazo máximo de vinte e quatro horas, decidirá sobre o pedido.",
+      "pontos": ["Pedido demonstra necessidade e indica os meios.", "Pedido verbal em caráter excepcional, reduzido a termo.", "Decisão do juiz em até vinte e quatro horas."],
+      "atencao": ["Prazo curto para o juiz decidir: vinte e quatro horas."],
+      "exemplo": "Em caso excepcional, o pedido feito de forma verbal é reduzido a termo.",
+      "prova": ["Assertiva que fixa em dois dias o prazo para decidir erra: são vinte e quatro horas."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-5": {
+      "simples": "A decisão será fundamentada, sob pena de nulidade, indicando também a forma de execução da diligência, que não poderá exceder o prazo de quinze dias, renovável por igual tempo uma vez comprovada a indispensabilidade do meio de prova.",
+      "pontos": ["Decisão fundamentada, sob pena de nulidade.", "Indica a forma de execução.", "Prazo de quinze dias, renovável por igual tempo."],
+      "atencao": ["Jurisprudência admite renovações sucessivas, desde que fundamentadas e comprovada a indispensabilidade.", "Prazo inicial de quinze dias."],
+      "exemplo": "O juiz autoriza por quinze dias e renova, com fundamentação, por mais quinze.",
+      "prova": ["Assertiva que fixa em um mês o prazo inicial erra: são quinze dias."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-6": {
+      "simples": "Deferido o pedido, a autoridade policial conduzirá os procedimentos de interceptação, dando ciência ao Ministério Público, que poderá acompanhar a sua realização. Havendo gravação, será determinada a sua transcrição. Cumprida a diligência, a autoridade policial encaminhará o resultado ao juiz, com auto circunstanciado contendo o resumo das operações realizadas. Recebidos esses elementos, o juiz determinará a providência do art. 8º, ciente o Ministério Público.",
+      "pontos": ["Autoridade policial conduz os procedimentos.", "Ciência ao Ministério Público, que pode acompanhar.", "Transcrição das gravações.", "Auto circunstanciado ao juiz."],
+      "atencao": ["A interceptação é conduzida pela POLÍCIA, com ciência ao MP.", "Há discussão jurisprudencial sobre a necessidade de transcrição integral."],
+      "exemplo": "A polícia envia ao juiz as gravações e o auto circunstanciado ao fim da diligência.",
+      "prova": ["Assertiva que atribui ao Ministério Público a condução da interceptação erra: é da autoridade policial."],
+      "termos": [{ "termo": "Auto circunstanciado", "significado": "Documento que resume as operações realizadas." }],
+      "remissoes": ["Art. 8º"]
+    },
+    "art-7": {
+      "simples": "Para os procedimentos de interceptação, a autoridade policial poderá requisitar serviços e técnicos especializados às concessionárias de serviço público.",
+      "pontos": ["Requisição de serviços e técnicos às concessionárias de serviço público."],
+      "atencao": ["A operadora atua apenas na execução técnica."],
+      "exemplo": "A polícia requisita à operadora de telefonia o desvio das chamadas.",
+      "prova": ["Assertiva que torna a requisição à operadora dependente de nova ordem a cada ligação erra."],
+      "termos": [],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-8": {
+      "simples": "A interceptação de comunicação telefônica ocorrerá em autos apartados, apensados aos autos do inquérito policial ou do processo criminal, preservando-se o sigilo das diligências, gravações e transcrições. A apensação somente poderá ser realizada imediatamente antes do relatório da autoridade, no inquérito, ou na conclusão do processo ao juiz para o despacho dos arts. 407, 502 ou 538 do Código de Processo Penal.",
+      "pontos": ["Autos apartados, apensados ao inquérito ou processo.", "Sigilo das diligências, gravações e transcrições.", "Apensação só antes do relatório do delegado ou na conclusão ao juiz."],
+      "atencao": ["Sigilo é a regra; a apensação é tardia."],
+      "exemplo": "As gravações ficam em autos separados e sigilosos até a apensação.",
+      "prova": ["Assertiva que permite juntar as gravações ao inquérito desde o início erra: a apensação é tardia."],
+      "termos": [{ "termo": "Apensar", "significado": "Juntar autos para que tramitem em conjunto." }],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-8-a": {
+      "simples": "Para investigação ou instrução criminal, o juiz poderá autorizar, a requerimento da autoridade policial ou do Ministério Público, a captação ambiental de sinais eletromagnéticos, ópticos ou acústicos, quando a prova não puder ser feita por outros meios igualmente eficazes e houver elementos probatórios razoáveis de autoria e participação em infrações cujas penas máximas sejam superiores a 4 anos ou em infrações conexas. O requerimento descreve o local e a forma de instalação do dispositivo. A instalação pode ocorrer por operação policial disfarçada ou no período noturno, exceto na casa. O prazo não pode exceder quinze dias, renovável por iguais períodos, se comprovada a indispensabilidade e presente atividade criminal permanente, habitual ou continuada. A captação feita por um dos interlocutores sem prévio conhecimento da autoridade poderá ser usada em matéria de defesa, se demonstrada a integridade da gravação. Aplicam-se subsidiariamente as regras da interceptação telefônica e telemática.",
+      "pontos": ["Captação ambiental com autorização judicial, a requerimento da polícia ou do MP.", "Subsidiariedade e elementos razoáveis de autoria.", "Infrações com pena máxima superior a 4 anos ou conexas.", "Instalação por operação disfarçada ou à noite, exceto em casa.", "Prazo de quinze dias, renovável.", "Gravação de um dos interlocutores pode ser usada pela defesa."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 13.964, de 2019 (Pacote Anticrime).", "Limite: pena máxima SUPERIOR a 4 anos.", "Em casa, a instalação não pode ser feita à noite."],
+      "exemplo": "Com autorização judicial, a polícia instala um microfone em um veículo usado pela organização criminosa.",
+      "prova": ["Assertiva que permite instalar o dispositivo de captação no período noturno dentro da casa erra: a ressalva é a inviolabilidade do domicílio."],
+      "termos": [{ "termo": "Captação ambiental", "significado": "Gravação de sons e imagens do ambiente." }],
+      "remissoes": ["Art. 10-A"]
+    },
+    "art-9": {
+      "simples": "A gravação que não interessar à prova será inutilizada por decisão judicial, durante o inquérito, a instrução processual ou após esta, em virtude de requerimento do Ministério Público ou da parte interessada. O incidente de inutilização será assistido pelo Ministério Público, sendo facultada a presença do acusado ou de seu representante legal.",
+      "pontos": ["Gravação irrelevante é inutilizada por decisão judicial.", "A pedido do MP ou da parte interessada.", "Assistido pelo Ministério Público, com presença facultada ao acusado."],
+      "atencao": ["Protege a intimidade de terceiros."],
+      "exemplo": "Conversas pessoais sem relação com o crime são destruídas por decisão judicial.",
+      "prova": ["Assertiva que permite à polícia inutilizar as gravações por conta própria erra: exige decisão judicial."],
+      "termos": [],
+      "remissoes": ["Art. 8º"]
+    },
+    "art-10": {
+      "simples": "Constitui crime realizar interceptação de comunicações telefônicas, de informática ou telemática, promover escuta ambiental ou quebrar segredo da Justiça, sem autorização judicial ou com objetivos não autorizados em lei. Pena: reclusão de dois a quatro anos e multa. Incorre na mesma pena a autoridade judicial que determina a execução dessa conduta com objetivo não autorizado em lei.",
+      "pontos": ["Interceptação, escuta ambiental ou quebra de segredo de justiça sem autorização ou com objetivo ilegal.", "Reclusão de dois a quatro anos e multa.", "Juiz que determina a conduta com objetivo ilegal responde igualmente."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pela Lei nº 13.869, de 2019 (Lei de Abuso de Autoridade).", "O próprio juiz pode ser sujeito ativo."],
+      "exemplo": "Policial que grampeia telefone sem ordem judicial pratica o crime.",
+      "prova": ["Assertiva que isenta o juiz que determina a medida com objetivo ilegal erra: ele incorre na mesma pena."],
+      "termos": [],
+      "remissoes": ["Art. 10-A"]
+    },
+    "art-10-a": {
+      "simples": "Realizar captação ambiental de sinais eletromagnéticos, ópticos ou acústicos para investigação ou instrução criminal sem autorização judicial, quando esta for exigida: reclusão de dois a quatro anos e multa. Não há crime se a captação é realizada por um dos interlocutores. A pena será aplicada em dobro ao funcionário público que descumprir determinação de sigilo das investigações que envolvam a captação ambiental ou revelar o conteúdo das gravações enquanto mantido o sigilo judicial.",
+      "pontos": ["Captação ambiental sem autorização judicial: dois a quatro anos e multa.", "Atípica se feita por um dos interlocutores.", "Pena em dobro ao funcionário que violar o sigilo."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 13.964, de 2019.", "Gravação por um dos interlocutores não é crime."],
+      "exemplo": "Quem grava a própria conversa não comete o crime, ainda que sem autorização.",
+      "prova": ["Assertiva que tipifica a gravação feita por um dos interlocutores erra: o §1º afasta o crime."],
+      "termos": [],
+      "remissoes": ["Art. 8º-A"]
+    },
+    "art-11": {
+      "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+      "pontos": ["Vigência imediata."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "A lei passou a valer no dia em que foi publicada.",
+      "prova": ["Assertiva que prevê vacatio legis erra."],
+      "termos": [],
+      "remissoes": ["Art. 12"]
+    },
+    "art-12": {
+      "simples": "Revogam-se as disposições em contrário, isto é, ficam sem efeito as normas anteriores incompatíveis com esta Lei.",
+      "pontos": ["Cláusula de revogação genérica."],
+      "atencao": ["Dispositivo histórico."],
+      "exemplo": "Normas incompatíveis com a lei foram revogadas.",
+      "prova": ["Assertiva que vê revogação expressa de lei específica erra: é cláusula genérica."],
+      "termos": [],
+      "remissoes": ["Art. 11"]
+    }
+  }
+}
