@@ -1,0 +1,438 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 17: arts. 696 a 744",
+  "units": {
+    "art-696": {
+      "simples": "O juiz poderá suspender, por tempo não inferior a 2 nem superior a 6 anos, a execução das penas de reclusão e de detenção que não excedam 2 anos, ou, por tempo não inferior a 1 nem superior a 3 anos, a execução da pena de prisão simples, desde que o sentenciado não haja sofrido condenação irrecorrível por outro crime a pena privativa de liberdade (salvo o parágrafo único do art. 46 do Código Penal) e que seus antecedentes, personalidade, motivos e circunstâncias autorizem a presunção de que não tornará a delinquir. Processado o beneficiário por outro crime ou contravenção, o prazo da suspensão considera-se prorrogado até o julgamento definitivo.",
+      "pontos": ["Sursis: reclusão ou detenção até 2 anos, suspensa por 2 a 6 anos.", "Prisão simples: suspensão por 1 a 3 anos.", "Requisitos: sem condenação irrecorrível anterior a pena de prisão; presunção de que não voltará a delinquir.", "Processado por novo crime: prazo prorrogado até o julgamento."],
+      "atencao": ["Hoje a suspensão condicional da pena está nos arts. 77 e seguintes do Código Penal e na Lei de Execução Penal; prevalecem estas regras."],
+      "exemplo": "Condenado a 1 ano de detenção, sem antecedentes, pode ter a pena suspensa por 2 a 6 anos.",
+      "prova": ["Assertiva que aplica a suspensão a pena de reclusão de 3 anos erra: o limite no texto é de 2 anos."],
+      "termos": [{ "termo": "Sursis", "significado": "Suspensão condicional da execução da pena." }],
+      "remissoes": ["Art. 697", "Art. 698"]
+    },
+    "art-697": {
+      "simples": "O juiz ou tribunal, na decisão que aplicar pena privativa da liberdade não superior a 2 anos, deverá pronunciar-se, motivadamente, sobre a suspensão condicional, quer a conceda quer a denegue.",
+      "pontos": ["Pena até 2 anos: o juiz deve se manifestar sobre a suspensão condicional.", "Concedendo ou negando, com motivação."],
+      "atencao": ["Dever de pronunciamento, e não de concessão automática."],
+      "exemplo": "Na sentença que fixa 1 ano de detenção, o juiz decide expressamente sobre o sursis.",
+      "prova": ["Assertiva que dispensa o juiz de se manifestar sobre o sursis quando o negar erra: deve fundamentar."],
+      "termos": [],
+      "remissoes": ["Art. 696"]
+    },
+    "art-698": {
+      "simples": "Concedida a suspensão, o juiz especificará as condições a que fica sujeito o condenado, pelo prazo previsto, começando este a correr da audiência em que se der conhecimento da sentença ao beneficiário e lhe for entregue documento similar ao do art. 724. As condições serão adequadas ao delito e à personalidade do condenado. Poderão ser impostas, além das do art. 767, frequentar curso de habilitação profissional ou de instrução escolar; prestar serviços em favor da comunidade; atender aos encargos de família; e submeter-se a tratamento de desintoxicação. O juiz poderá fixar, a qualquer tempo, de ofício ou a requerimento do Ministério Público, outras condições, desde que as circunstâncias o aconselhem.",
+      "pontos": ["Juiz especifica as condições; o prazo corre da audiência.", "Condições adequadas ao delito e à personalidade.", "Exemplos: curso, serviços à comunidade, encargos de família, desintoxicação.", "Condições adicionais a qualquer tempo, de ofício ou a pedido do MP."],
+      "atencao": ["O prazo conta da audiência de advertência."],
+      "exemplo": "O juiz impõe curso profissionalizante e comparecimento periódico como condições do sursis.",
+      "prova": ["Assertiva que fixa condições imutáveis na sentença erra: podem ser acrescidas a qualquer tempo."],
+      "termos": [],
+      "remissoes": ["Art. 703", "Art. 724"]
+    },
+    "art-699": {
+      "simples": "No caso de condenação pelo Tribunal do Júri, a suspensão condicional da pena competirá ao seu presidente.",
+      "pontos": ["Condenação pelo Júri: o presidente decide a suspensão condicional."],
+      "atencao": ["O presidente do Júri é o juiz togado."],
+      "exemplo": "O juiz presidente decide sobre o sursis da condenação do Júri.",
+      "prova": ["Assertiva que atribui o sursis do Júri aos jurados erra: compete ao presidente."],
+      "termos": [],
+      "remissoes": ["Art. 492"]
+    },
+    "art-700": {
+      "simples": "A suspensão não compreende a multa, as penas acessórias, os efeitos da condenação nem as custas.",
+      "pontos": ["A suspensão não alcança multa, penas acessórias, efeitos da condenação e custas."],
+      "atencao": ["Só a pena privativa de liberdade é suspensa."],
+      "exemplo": "O condenado com sursis ainda deve pagar a multa e as custas.",
+      "prova": ["Assertiva que estende a suspensão condicional à multa erra."],
+      "termos": [],
+      "remissoes": ["Art. 701"]
+    },
+    "art-701": {
+      "simples": "O juiz, ao conceder a suspensão, fixará, tendo em conta as condições econômicas ou profissionais do réu, o prazo para o pagamento, integral ou em prestações, das custas do processo e taxa penitenciária.",
+      "pontos": ["Juiz fixa o prazo de pagamento das custas e da taxa penitenciária.", "Considera as condições econômicas ou profissionais do réu."],
+      "atencao": ["Pode ser em prestações."],
+      "exemplo": "O juiz permite que o condenado pague as custas em parcelas.",
+      "prova": ["Assertiva que dispensa o pagamento das custas por quem tem sursis erra."],
+      "termos": [],
+      "remissoes": ["Art. 700"]
+    },
+    "art-702": {
+      "simples": "Em caso de coautoria, a suspensão poderá ser concedida a uns e negada a outros réus.",
+      "pontos": ["Coautoria: a suspensão pode ser concedida a alguns e negada a outros."],
+      "atencao": ["Análise individualizada."],
+      "exemplo": "Um coautor primário recebe o sursis e o reincidente, não.",
+      "prova": ["Assertiva que estende automaticamente o sursis a todos os coautores erra."],
+      "termos": [],
+      "remissoes": ["Art. 696"]
+    },
+    "art-703": {
+      "simples": "O juiz que conceder a suspensão lerá ao réu, em audiência, a sentença respectiva, e o advertirá das consequências de nova infração penal e da transgressão das obrigações impostas.",
+      "pontos": ["Audiência de advertência: leitura da sentença ao réu.", "Advertência sobre nova infração e descumprimento das obrigações."],
+      "atencao": ["Marco inicial do período de prova (art. 698)."],
+      "exemplo": "Na audiência, o juiz lê a sentença e adverte o réu sobre as consequências de nova infração.",
+      "prova": ["Assertiva que dispensa a audiência de advertência erra."],
+      "termos": [],
+      "remissoes": ["Art. 705"]
+    },
+    "art-704": {
+      "simples": "Quando for concedida a suspensão pela superior instância, a esta caberá estabelecer-lhe as condições, podendo a audiência ser presidida por qualquer membro do tribunal ou câmara, pelo juiz do processo ou por outro designado pelo presidente do tribunal ou câmara.",
+      "pontos": ["Sursis concedido pelo tribunal: ele fixa as condições.", "Audiência presidida por membro do tribunal, juiz do processo ou outro designado."],
+      "atencao": ["Competência do tribunal para fixar as condições."],
+      "exemplo": "O tribunal concede o sursis e define as condições; o juiz do processo preside a audiência.",
+      "prova": ["Assertiva que deixa ao juiz de primeira instância definir as condições do sursis concedido pelo tribunal erra."],
+      "termos": [],
+      "remissoes": ["Art. 703"]
+    },
+    "art-705": {
+      "simples": "Se, intimado pessoalmente ou por edital com prazo de 20 dias, o réu não comparecer à audiência a que se refere o art. 703, a suspensão ficará sem efeito e será executada imediatamente a pena, salvo prova de justo impedimento, caso em que será marcada nova audiência.",
+      "pontos": ["Réu não comparece à audiência, intimado pessoalmente ou por edital de 20 dias: suspensão sem efeito.", "Pena executada imediatamente.", "Exceção: justo impedimento, com nova audiência."],
+      "atencao": ["Edital de 20 dias."],
+      "exemplo": "O réu falta à audiência sem justificativa: o sursis perde o efeito.",
+      "prova": ["Assertiva que mantém o sursis diante da ausência injustificada à audiência erra."],
+      "termos": [],
+      "remissoes": ["Art. 703"]
+    },
+    "art-706": {
+      "simples": "A suspensão também ficará sem efeito se, em virtude de recurso, for aumentada a pena de modo que exclua a concessão do benefício.",
+      "pontos": ["Aumento da pena em recurso, que exclua o benefício, torna a suspensão sem efeito."],
+      "atencao": ["Depende do novo patamar da pena."],
+      "exemplo": "O tribunal eleva a pena acima do limite do sursis, e a suspensão perde o efeito.",
+      "prova": ["Assertiva que mantém o sursis mesmo se a pena for aumentada acima do limite legal erra."],
+      "termos": [],
+      "remissoes": ["Art. 696"]
+    },
+    "art-708": {
+      "simples": "Expirado o prazo de suspensão ou a prorrogação, sem que tenha ocorrido motivo de revogação, a pena privativa de liberdade será declarada extinta. O juiz, quando julgar necessário, requisitará, antes do julgamento, nova folha de antecedentes do beneficiário.",
+      "pontos": ["Fim do período de prova sem revogação: pena declarada extinta.", "Juiz pode requisitar nova folha de antecedentes."],
+      "atencao": ["Cumprido o período de prova, a pena se extingue."],
+      "exemplo": "Terminado o prazo do sursis sem motivo de revogação, o juiz declara extinta a pena.",
+      "prova": ["Assertiva que obriga o cumprimento da pena após o fim do período de prova sem revogação erra."],
+      "termos": [],
+      "remissoes": ["Art. 696"]
+    },
+    "art-709": {
+      "simples": "A condenação será inscrita, com a nota de suspensão, em livros especiais do Instituto de Identificação e Estatística, ou repartição congênere, averbando-se, mediante comunicação do juiz ou do tribunal, a revogação da suspensão ou a extinção da pena. Nos lugares onde não houver o Instituto, o registro e a averbação serão feitos em livro próprio no juízo ou no tribunal. O registro será secreto, salvo para efeito de informações requisitadas por autoridade judiciária, no caso de novo processo. Não se aplica o sigilo quando houver sido imposta ou resultar de condenação pena acessória consistente em interdição de direitos.",
+      "pontos": ["Condenação inscrita com nota de suspensão.", "Averbação da revogação ou da extinção da pena.", "Sem Instituto: livro próprio no juízo.", "Registro secreto, exceto para autoridade judiciária em novo processo.", "Sigilo afastado se houver interdição de direitos."],
+      "atencao": ["Registro sigiloso."],
+      "exemplo": "O registro do sursis só é revelado a autoridade judiciária em novo processo.",
+      "prova": ["Assertiva que torna público o registro do sursis erra."],
+      "termos": [],
+      "remissoes": ["Art. 694"]
+    },
+    "art-710": {
+      "simples": "O livramento condicional poderá ser concedido ao condenado a pena privativa da liberdade igual ou superior a 2 anos, desde que se verifiquem as condições seguintes: cumprimento de mais da metade da pena, ou mais de três quartos, se reincidente; ausência ou cessação de periculosidade; bom comportamento durante a vida carcerária; aptidão para prover à própria subsistência mediante trabalho honesto; e reparação do dano causado pela infração, salvo impossibilidade de fazê-lo.",
+      "pontos": ["Pena igual ou superior a 2 anos.", "Cumprimento de mais da metade (mais de três quartos se reincidente).", "Ausência de periculosidade e bom comportamento.", "Aptidão para o trabalho honesto.", "Reparação do dano, salvo impossibilidade."],
+      "atencao": ["Hoje o livramento condicional é regulado pelo art. 83 do Código Penal (frações atuais)."],
+      "exemplo": "O condenado que cumpriu a fração exigida, com bom comportamento, pede o livramento condicional.",
+      "prova": ["Assertiva que dispensa a reparação do dano, mesmo havendo possibilidade de repará-lo, erra."],
+      "termos": [{ "termo": "Livramento condicional", "significado": "Liberdade antecipada, sob condições, no final da pena." }],
+      "remissoes": ["Art. 83 do Código Penal"]
+    },
+    "art-711": {
+      "simples": "As penas que correspondem a infrações diversas podem somar-se, para efeito do livramento.",
+      "pontos": ["Penas de infrações diversas podem ser somadas para o livramento condicional."],
+      "atencao": ["Soma das penas."],
+      "exemplo": "Duas condenações são somadas para calcular a fração do livramento.",
+      "prova": ["Assertiva que veda a soma de penas de infrações diversas para o livramento erra."],
+      "termos": [],
+      "remissoes": ["Art. 710"]
+    },
+    "art-712": {
+      "simples": "O livramento condicional poderá ser concedido mediante requerimento do sentenciado, de seu cônjuge ou de parente em linha reta, ou por proposta do diretor do estabelecimento penal, ou por iniciativa do Conselho Penitenciário.",
+      "pontos": ["Legitimados: sentenciado, cônjuge, parente em linha reta, diretor do estabelecimento ou Conselho Penitenciário."],
+      "atencao": ["Vários legitimados."],
+      "exemplo": "O diretor do presídio propõe o livramento condicional de um preso.",
+      "prova": ["Assertiva que restringe o pedido ao próprio sentenciado erra."],
+      "termos": [],
+      "remissoes": ["Art. 713"]
+    },
+    "art-713": {
+      "simples": "As condições de admissibilidade, conveniência e oportunidade da concessão do livramento serão verificadas pelo Conselho Penitenciário, a cujo parecer não ficará, entretanto, adstrito o juiz.",
+      "pontos": ["Conselho Penitenciário verifica as condições.", "Parecer não vincula o juiz."],
+      "atencao": ["Parecer opinativo."],
+      "exemplo": "O juiz concede o livramento mesmo contra o parecer do Conselho, fundamentando.",
+      "prova": ["Assertiva que vincula o juiz ao parecer do Conselho Penitenciário erra."],
+      "termos": [],
+      "remissoes": ["Art. 714"]
+    },
+    "art-714": {
+      "simples": "O diretor do estabelecimento penal remeterá ao Conselho Penitenciário minucioso relatório sobre o caráter do sentenciado, revelado pelos seus antecedentes e conduta na prisão; o procedimento do liberando na prisão, sua aplicação ao trabalho e seu trato com companheiros e funcionários; suas relações com a família e estranhos; seu grau de instrução e aptidão profissional; e sua situação financeira e propósitos quanto ao futuro meio de vida. O relatório será remetido em quinze dias, com o prontuário do sentenciado; na falta, o Conselho opinará livremente.",
+      "pontos": ["Relatório do diretor sobre caráter, conduta, relações, instrução e situação financeira.", "Prazo de quinze dias.", "Sem relatório, o Conselho opina livremente e comunica a omissão."],
+      "atencao": ["Prazo de quinze dias para o relatório."],
+      "exemplo": "O diretor envia em quinze dias o relatório sobre o comportamento do preso.",
+      "prova": ["Assertiva que fixa em cinco dias o prazo do relatório do diretor erra: são quinze dias."],
+      "termos": [],
+      "remissoes": ["Art. 713"]
+    },
+    "art-715": {
+      "simples": "Se tiver sido imposta medida de segurança detentiva, o livramento não poderá ser concedido sem que se verifique, mediante exame das condições do sentenciado, a cessação da periculosidade. Consistindo a medida de segurança em internação em casa de custódia e tratamento, proceder-se-á a exame mental do sentenciado.",
+      "pontos": ["Medida de segurança detentiva: livramento só com cessação da periculosidade.", "Internação em casa de custódia: exame mental."],
+      "atencao": ["Exame da periculosidade."],
+      "exemplo": "Antes do livramento, faz-se exame mental do sentenciado internado.",
+      "prova": ["Assertiva que concede o livramento sem verificar a cessação da periculosidade erra."],
+      "termos": [],
+      "remissoes": ["Art. 710"]
+    },
+    "art-716": {
+      "simples": "A petição ou a proposta de livramento será remetida ao juiz ou ao tribunal por ofício do presidente do Conselho Penitenciário, com a cópia do respectivo parecer e do relatório do diretor da prisão. Para emitir parecer, o Conselho poderá determinar diligências e requisitar os autos do processo. O juiz ou o tribunal mandará juntar a petição ou a proposta aos autos e proferirá sua decisão, previamente ouvido o Ministério Público.",
+      "pontos": ["Petição enviada pelo presidente do Conselho, com parecer e relatório.", "Conselho pode determinar diligências.", "Decisão após ouvir o MP."],
+      "atencao": ["Oitiva prévia do MP."],
+      "exemplo": "O juiz decide o livramento depois de ouvir o Ministério Público.",
+      "prova": ["Assertiva que dispensa a oitiva do MP antes da decisão sobre o livramento erra."],
+      "termos": [],
+      "remissoes": ["Art. 714"]
+    },
+    "art-717": {
+      "simples": "Na ausência da condição prevista no art. 710, I (cumprimento da fração da pena), o requerimento será liminarmente indeferido.",
+      "pontos": ["Sem o tempo mínimo de pena cumprida, indeferimento liminar."],
+      "atencao": ["Requisito objetivo."],
+      "exemplo": "O preso pede o livramento sem ter cumprido a fração exigida: indeferimento imediato.",
+      "prova": ["Assertiva que processa o pedido sem a fração mínima cumprida erra."],
+      "termos": [],
+      "remissoes": ["Art. 710"]
+    },
+    "art-718": {
+      "simples": "Deferido o pedido, o juiz, ao especificar as condições a que ficará subordinado o livramento, atenderá ao disposto no art. 698, §§ 1º, 2º e 5º. Se for permitido ao liberado residir fora da jurisdição do juiz da execução, remeter-se-á cópia da sentença do livramento à autoridade judiciária do lugar para onde ele se transferir e à entidade de observação cautelar e proteção. O liberado será advertido da obrigação de apresentar-se imediatamente à autoridade judiciária e à entidade de observação cautelar e proteção.",
+      "pontos": ["Condições segundo o art. 698, §§ 1º, 2º e 5º.", "Residência fora da jurisdição: cópia da sentença à autoridade do novo local.", "Advertência da obrigação de apresentação imediata."],
+      "atencao": ["Comunicação ao novo local de residência."],
+      "exemplo": "O liberado muda de comarca, e a sentença é enviada ao juízo local.",
+      "prova": ["Assertiva que dispensa a comunicação ao juízo do novo local de residência erra."],
+      "termos": [],
+      "remissoes": ["Art. 698"]
+    },
+    "art-719": {
+      "simples": "O livramento ficará também subordinado à obrigação de pagamento das custas do processo e da taxa penitenciária, salvo caso de insolvência comprovada. O juiz poderá fixar o prazo para o pagamento integral ou em prestações, tendo em consideração as condições econômicas ou profissionais do liberado.",
+      "pontos": ["Livramento subordinado ao pagamento das custas e da taxa penitenciária.", "Exceção: insolvência comprovada.", "Prazo e parcelamento fixados pelo juiz."],
+      "atencao": ["Insolvência comprovada afasta a obrigação."],
+      "exemplo": "O liberado insolvente comprovado fica dispensado das custas.",
+      "prova": ["Assertiva que obriga o pagamento das custas mesmo na insolvência comprovada erra."],
+      "termos": [],
+      "remissoes": ["Art. 701"]
+    },
+    "art-720": {
+      "simples": "A forma de pagamento da multa, ainda não paga pelo liberando, será determinada de acordo com o disposto no art. 688.",
+      "pontos": ["Pagamento da multa pendente segue o art. 688."],
+      "atencao": ["Remissão ao art. 688."],
+      "exemplo": "A multa pendente do liberando segue o rito de cobrança do art. 688.",
+      "prova": ["Assertiva que cria forma própria de pagamento da multa no livramento erra: aplica-se o art. 688."],
+      "termos": [],
+      "remissoes": ["Art. 688"]
+    },
+    "art-721": {
+      "simples": "Reformada a sentença denegatória do livramento, os autos baixarão ao juiz da primeira instância, a fim de que determine as condições que devam ser impostas ao liberando.",
+      "pontos": ["Reformada a negativa: autos voltam à primeira instância.", "O juiz fixa as condições do livramento."],
+      "atencao": ["O juiz de primeiro grau fixa as condições."],
+      "exemplo": "O tribunal reforma a negativa, e o juiz da execução define as condições.",
+      "prova": ["Assertiva que atribui ao tribunal a fixação das condições após reformar a negativa erra."],
+      "termos": [],
+      "remissoes": ["Art. 718"]
+    },
+    "art-722": {
+      "simples": "Concedido o livramento, será expedida carta de guia, com a cópia integral da sentença em duas vias, remetendo-se uma ao diretor do estabelecimento penal e outra ao presidente do Conselho Penitenciário.",
+      "pontos": ["Carta de guia com cópia integral da sentença em duas vias.", "Uma ao diretor e outra ao presidente do Conselho Penitenciário."],
+      "atencao": ["Duas vias."],
+      "exemplo": "A carta de guia do livramento segue ao diretor e ao Conselho Penitenciário.",
+      "prova": ["Assertiva que dispensa a carta de guia no livramento erra."],
+      "termos": [],
+      "remissoes": ["Art. 676"]
+    },
+    "art-723": {
+      "simples": "A cerimônia do livramento condicional será realizada solenemente, em dia marcado pela autoridade que deva presidi-la, observando-se que a sentença será lida ao liberando, na presença dos demais presos, salvo motivo relevante, pelo presidente do Conselho Penitenciário, seu representante ou, na falta, pela autoridade judiciária local; o diretor do estabelecimento chamará a atenção do liberando para as condições impostas; e o preso declarará se aceita as condições. De tudo se lavrará termo em livro próprio, subscrito por quem presidir a cerimônia e pelo liberando, ou alguém a seu rogo, enviando-se cópia ao juiz do processo.",
+      "pontos": ["Cerimônia solene, em dia marcado.", "Leitura da sentença na presença dos demais presos.", "Diretor chama a atenção para as condições.", "O preso declara se aceita as condições.", "Termo em livro próprio, com cópia ao juiz."],
+      "atencao": ["O liberando precisa aceitar as condições."],
+      "exemplo": "Na cerimônia, o preso declara aceitar as condições do livramento.",
+      "prova": ["Assertiva que dispensa a aceitação das condições pelo liberando erra."],
+      "termos": [],
+      "remissoes": ["Art. 724"]
+    },
+    "art-724": {
+      "simples": "Ao sair da prisão, o liberado receberá, além do saldo do seu pecúlio e do que lhe pertencer, uma caderneta que exibirá à autoridade judiciária ou administrativa sempre que lhe for exigido, contendo a reprodução da ficha de identidade ou o retrato do liberado, sua qualificação e sinais; o texto impresso dos artigos do capítulo; as condições impostas; e a pena acessória a que esteja sujeito. Na falta de caderneta, será entregue um salvo-conduto com as condições e a pena acessória. Na caderneta e no salvo-conduto deve haver espaço para consignar o cumprimento das condições do art. 718.",
+      "pontos": ["Liberado recebe pecúlio e caderneta.", "Caderneta: identificação, texto dos artigos, condições e pena acessória.", "Na falta: salvo-conduto.", "Espaço para anotar o cumprimento das condições."],
+      "atencao": ["Caderneta ou salvo-conduto do liberado."],
+      "exemplo": "Ao sair, o liberado recebe a caderneta com as condições do livramento.",
+      "prova": ["Assertiva que dispensa a entrega de caderneta ou salvo-conduto ao liberado erra."],
+      "termos": [],
+      "remissoes": ["Art. 718", "Art. 723"]
+    },
+    "art-725": {
+      "simples": "A observação cautelar e proteção realizadas por serviço social penitenciário, patronato, conselho de comunidade ou entidades similares terá a finalidade de fazer observar o cumprimento da pena acessória, bem como das condições especificadas na sentença concessiva do benefício, e de proteger o beneficiário, orientando-o na execução de suas obrigações e auxiliando-o na obtenção de atividade laborativa. As entidades apresentarão relatório ao Conselho Penitenciário, para efeito da representação prevista nos arts. 730 e 731.",
+      "pontos": ["Observação cautelar: fiscalizar o cumprimento da pena acessória e das condições.", "Proteger e orientar o beneficiário, inclusive na obtenção de trabalho.", "Relatórios ao Conselho Penitenciário."],
+      "atencao": ["Fiscalização e proteção ao mesmo tempo."],
+      "exemplo": "O patronato acompanha o liberado e o ajuda a conseguir emprego.",
+      "prova": ["Assertiva que restringe a observação cautelar à fiscalização, sem proteção ao beneficiário, erra."],
+      "termos": [],
+      "remissoes": ["Art. 730"]
+    },
+    "art-726": {
+      "simples": "Revogar-se-á o livramento condicional se o liberado vier, por crime ou contravenção, a ser condenado por sentença irrecorrível a pena privativa de liberdade.",
+      "pontos": ["Revogação obrigatória: condenação irrecorrível a pena privativa de liberdade, por crime ou contravenção."],
+      "atencao": ["Revogação obrigatória."],
+      "exemplo": "O liberado é condenado definitivamente a prisão por novo crime: o livramento é revogado.",
+      "prova": ["Assertiva que torna facultativa a revogação por condenação irrecorrível a pena de prisão erra: é obrigatória."],
+      "termos": [],
+      "remissoes": ["Art. 727"]
+    },
+    "art-727": {
+      "simples": "O juiz pode, também, revogar o livramento se o liberado deixar de cumprir qualquer das obrigações constantes da sentença, de observar proibições inerentes à pena acessória ou for irrecorrivelmente condenado, por crime, à pena que não seja privativa da liberdade. Se o juiz não revogar o livramento, deverá advertir o liberado ou exacerbar as condições.",
+      "pontos": ["Revogação facultativa: descumprimento das obrigações, violação de proibições da pena acessória, condenação a pena não privativa de liberdade.", "Sem revogação: advertência ou exacerbação das condições."],
+      "atencao": ["Facultativa ('pode')."],
+      "exemplo": "O liberado descumpre uma condição, e o juiz opta por advertência em vez de revogar.",
+      "prova": ["Assertiva que torna obrigatória a revogação por descumprimento de condição erra: é facultativa."],
+      "termos": [],
+      "remissoes": ["Art. 726"]
+    },
+    "art-728": {
+      "simples": "Se a revogação for motivada por infração penal anterior à vigência do livramento, computar-se-á no tempo da pena o período em que esteve solto o liberado, sendo permitida, para a concessão de novo livramento, a soma do tempo das duas penas.",
+      "pontos": ["Revogação por infração anterior ao livramento: o tempo solto é computado.", "Soma das penas para novo livramento."],
+      "atencao": ["Consequência mais branda que a do art. 729."],
+      "exemplo": "A revogação decorre de crime anterior ao livramento: o tempo em liberdade conta como pena cumprida.",
+      "prova": ["Assertiva que desconta o tempo solto quando a infração é anterior ao livramento erra: ele é computado."],
+      "termos": [],
+      "remissoes": ["Art. 729"]
+    },
+    "art-729": {
+      "simples": "No caso de revogação por outro motivo, não se computará na pena o tempo em que esteve solto o liberado, e tampouco se concederá, em relação à mesma pena, novo livramento.",
+      "pontos": ["Revogação por outro motivo: o tempo solto não é computado.", "Não há novo livramento em relação à mesma pena."],
+      "atencao": ["Consequência mais grave; compare com o art. 728."],
+      "exemplo": "O livramento é revogado por descumprimento de condição: o tempo solto não conta.",
+      "prova": ["Assertiva que permite novo livramento da mesma pena após revogação por descumprimento erra."],
+      "termos": [],
+      "remissoes": ["Art. 728"]
+    },
+    "art-730": {
+      "simples": "A revogação do livramento será decretada mediante representação do Conselho Penitenciário, ou a requerimento do Ministério Público, ou de ofício, pelo juiz, que, antes, ouvirá o liberado, podendo ordenar diligências e permitir a produção de prova, no prazo de cinco dias.",
+      "pontos": ["Revogação por representação do Conselho, requerimento do MP ou de ofício.", "Antes, o juiz ouve o liberado.", "Prova e diligências em cinco dias."],
+      "atencao": ["Contraditório prévio: oitiva do liberado."],
+      "exemplo": "O MP requer a revogação, e o juiz ouve o liberado antes de decidir.",
+      "prova": ["Assertiva que dispensa a oitiva do liberado antes da revogação erra."],
+      "termos": [],
+      "remissoes": ["Art. 726", "Art. 727"]
+    },
+    "art-731": {
+      "simples": "O juiz, de ofício, a requerimento do Ministério Público, ou mediante representação do Conselho Penitenciário, poderá modificar as condições ou normas de conduta especificadas na sentença, devendo a respectiva decisão ser lida ao liberado por uma das autoridades ou por um dos funcionários indicados no inciso I do art. 723, observado o disposto nos incisos II e III do mesmo artigo.",
+      "pontos": ["Modificação das condições de ofício, a pedido do MP ou por representação do Conselho.", "Decisão lida ao liberado, observado o art. 723."],
+      "atencao": ["Leitura da decisão ao liberado."],
+      "exemplo": "O juiz acrescenta uma condição e a decisão é lida ao liberado.",
+      "prova": ["Assertiva que dispensa a leitura da decisão que modifica as condições ao liberado erra."],
+      "termos": [],
+      "remissoes": ["Art. 723"]
+    },
+    "art-732": {
+      "simples": "Praticada pelo liberado nova infração, o juiz ou o tribunal poderá ordenar a sua prisão, ouvido o Conselho Penitenciário, suspendendo o curso do livramento condicional, cuja revogação ficará, entretanto, dependendo da decisão final no novo processo.",
+      "pontos": ["Nova infração: o juiz pode ordenar a prisão do liberado.", "Suspende o curso do livramento.", "Revogação depende da decisão final no novo processo."],
+      "atencao": ["Suspensão cautelar, e não revogação imediata."],
+      "exemplo": "O liberado é acusado de novo crime, e o livramento fica suspenso até o julgamento.",
+      "prova": ["Assertiva que revoga imediatamente o livramento pela simples acusação de nova infração erra."],
+      "termos": [],
+      "remissoes": ["Art. 733"]
+    },
+    "art-733": {
+      "simples": "O juiz, de ofício, ou a requerimento do interessado, do Ministério Público, ou do Conselho Penitenciário, julgará extinta a pena privativa de liberdade, se expirar o prazo do livramento sem revogação, ou, na hipótese do artigo anterior, for o liberado absolvido por sentença irrecorrível.",
+      "pontos": ["Pena extinta se expirar o prazo do livramento sem revogação.", "Ou se o liberado for absolvido da nova infração por sentença irrecorrível."],
+      "atencao": ["Extinção da pena."],
+      "exemplo": "Findo o período do livramento sem revogação, a pena é declarada extinta.",
+      "prova": ["Assertiva que mantém a pena após o fim do livramento sem revogação erra."],
+      "termos": [],
+      "remissoes": ["Art. 732"]
+    },
+    "art-734": {
+      "simples": "A graça poderá ser provocada por petição do condenado, de qualquer pessoa do povo, do Conselho Penitenciário ou do Ministério Público, ressalvada, entretanto, ao Presidente da República, a faculdade de concedê-la espontaneamente.",
+      "pontos": ["Provocada por petição do condenado, de qualquer pessoa, do Conselho ou do MP.", "O Presidente pode concedê-la espontaneamente."],
+      "atencao": ["A graça é individual; o indulto é coletivo."],
+      "exemplo": "Familiares peticionam a graça em favor do condenado.",
+      "prova": ["Assertiva que restringe a provocação da graça ao próprio condenado erra."],
+      "termos": [{ "termo": "Graça", "significado": "Clemência individual concedida pelo Presidente da República." }],
+      "remissoes": ["Art. 735"]
+    },
+    "art-735": {
+      "simples": "A petição de graça, acompanhada dos documentos com que o impetrante a instruir, será remetida ao ministro da Justiça por intermédio do Conselho Penitenciário.",
+      "pontos": ["Petição de graça vai ao ministro da Justiça por meio do Conselho Penitenciário."],
+      "atencao": ["Trâmite pelo Conselho Penitenciário."],
+      "exemplo": "O Conselho Penitenciário encaminha ao ministro da Justiça a petição de graça.",
+      "prova": ["Assertiva que envia a petição diretamente ao Presidente da República sem passar pelo Conselho erra."],
+      "termos": [],
+      "remissoes": ["Art. 734"]
+    },
+    "art-736": {
+      "simples": "O Conselho Penitenciário, à vista dos autos do processo, e depois de ouvir o diretor do estabelecimento penal a que estiver recolhido o condenado, fará, em relatório, a narração do fato criminoso, examinará as provas, mencionará qualquer formalidade ou circunstância omitida na petição e exporá os antecedentes do condenado e seu procedimento depois do ato delituoso, opinando sobre o mérito do pedido.",
+      "pontos": ["Conselho ouve o diretor do estabelecimento.", "Relatório: fato criminoso, provas, omissões da petição, antecedentes e conduta posterior.", "Opina sobre o mérito."],
+      "atencao": ["Relatório do Conselho Penitenciário."],
+      "exemplo": "O Conselho elabora relatório e opina sobre o pedido de graça.",
+      "prova": ["Assertiva que dispensa o relatório do Conselho Penitenciário erra."],
+      "termos": [],
+      "remissoes": ["Art. 735"]
+    },
+    "art-737": {
+      "simples": "Processada no Ministério da Justiça, com os documentos e o relatório do Conselho Penitenciário, a petição subirá a despacho do Presidente da República, a quem serão presentes os autos do processo ou a certidão de qualquer de suas peças, se ele o determinar.",
+      "pontos": ["Petição processada no Ministério da Justiça.", "Segue ao despacho do Presidente da República.", "Autos ou certidões se ele determinar."],
+      "atencao": ["Decisão final do Presidente da República."],
+      "exemplo": "O Ministério da Justiça encaminha a petição ao Presidente para despacho.",
+      "prova": ["Assertiva que atribui ao ministro da Justiça a decisão final da graça erra."],
+      "termos": [],
+      "remissoes": ["Art. 736"]
+    },
+    "art-738": {
+      "simples": "Concedida a graça e junta aos autos cópia do decreto, o juiz declarará extinta a pena ou penas, ou ajustará a execução aos termos do decreto, no caso de redução ou comutação de pena.",
+      "pontos": ["Graça concedida: o juiz declara extinta a pena ou ajusta a execução.", "Redução ou comutação: execução ajustada ao decreto."],
+      "atencao": ["Extinção ou ajuste conforme o decreto."],
+      "exemplo": "Com a graça, o juiz declara extinta a pena.",
+      "prova": ["Assertiva que mantém a execução intacta após a graça erra."],
+      "termos": [{ "termo": "Comutação", "significado": "Substituição da pena por outra mais branda." }],
+      "remissoes": ["Art. 734"]
+    },
+    "art-739": {
+      "simples": "O condenado poderá recusar a comutação da pena, isto é, a substituição por outra mais branda concedida pela graça.",
+      "pontos": ["O condenado pode recusar a comutação."],
+      "atencao": ["A recusa vale para a comutação."],
+      "exemplo": "O condenado recusa a comutação e prefere manter a pena original.",
+      "prova": ["Assertiva que impõe a comutação ao condenado erra: ele pode recusá-la."],
+      "termos": [],
+      "remissoes": ["Art. 738"]
+    },
+    "art-740": {
+      "simples": "Os autos da petição de graça serão arquivados no Ministério da Justiça.",
+      "pontos": ["Autos da petição de graça arquivados no Ministério da Justiça."],
+      "atencao": ["Arquivo no Ministério."],
+      "exemplo": "O Ministério da Justiça arquiva os autos da petição de graça.",
+      "prova": ["Assertiva que determina o arquivamento dos autos da graça no juízo da execução erra."],
+      "termos": [],
+      "remissoes": ["Art. 735"]
+    },
+    "art-741": {
+      "simples": "Se o réu for beneficiado por indulto, o juiz, de ofício ou a requerimento do interessado, do Ministério Público ou por iniciativa do Conselho Penitenciário, providenciará de acordo com o disposto no art. 738.",
+      "pontos": ["Indulto: o juiz providencia conforme o art. 738.", "De ofício ou a requerimento do interessado, do MP ou por iniciativa do Conselho."],
+      "atencao": ["Indulto é coletivo; a graça, individual."],
+      "exemplo": "O decreto de indulto abrange o condenado, e o juiz declara extinta a pena.",
+      "prova": ["Assertiva que exige petição do condenado para aplicar o indulto erra: o juiz pode agir de ofício."],
+      "termos": [{ "termo": "Indulto", "significado": "Clemência coletiva concedida por decreto presidencial." }],
+      "remissoes": ["Art. 738"]
+    },
+    "art-742": {
+      "simples": "Concedida a anistia após transitar em julgado a sentença condenatória, o juiz, de ofício ou a requerimento do interessado, do Ministério Público ou por iniciativa do Conselho Penitenciário, declarará extinta a pena.",
+      "pontos": ["Anistia após o trânsito em julgado: o juiz declara extinta a pena.", "De ofício ou a requerimento."],
+      "atencao": ["Anistia é concedida por lei."],
+      "exemplo": "A lei de anistia alcança o condenado, e o juiz declara extinta a pena.",
+      "prova": ["Assertiva que exige novo processo para aplicar a anistia após o trânsito erra."],
+      "termos": [{ "termo": "Anistia", "significado": "Perdão legal que apaga o crime." }],
+      "remissoes": ["Art. 741"]
+    },
+    "art-743": {
+      "simples": "A reabilitação será requerida ao juiz da condenação, após o decurso de quatro ou oito anos, pelo menos, conforme se trate de condenado ou reincidente, contados do dia em que houver terminado a execução da pena principal ou da medida de segurança detentiva, devendo o requerente indicar as comarcas em que haja residido durante esse tempo. O dispositivo foi superado pelo prazo de dois anos do Código Penal.",
+      "pontos": ["Reabilitação requerida ao juiz da condenação.", "Prazos do texto: quatro anos (condenado) ou oito anos (reincidente).", "Contados do fim da execução da pena principal ou da medida de segurança.", "Indicar as comarcas de residência."],
+      "atencao": ["Hoje a reabilitação segue o Código Penal (art. 94): prazo de dois anos."],
+      "exemplo": "O condenado que terminou a pena pede a reabilitação ao juiz da condenação.",
+      "prova": ["Assertiva que aplica hoje o prazo de oito anos para a reabilitação do reincidente erra, à luz do Código Penal."],
+      "termos": [{ "termo": "Reabilitação", "significado": "Direito de sigilo dos antecedentes e de recuperar direitos após a pena." }],
+      "remissoes": ["Art. 94 do Código Penal"]
+    },
+    "art-744": {
+      "simples": "O requerimento de reabilitação será instruído com certidões comprobatórias de não ter o requerente respondido, nem estar respondendo a processo penal, nas comarcas em que houver residido; atestados de autoridades policiais ou outros documentos que comprovem ter residido nas comarcas indicadas e mantido bom comportamento; atestados de bom comportamento fornecidos por pessoas a cujo serviço tenha estado; quaisquer outros documentos que sirvam como prova de sua regeneração; e prova de haver ressarcido o dano causado pelo crime ou persistir a impossibilidade de fazê-lo.",
+      "pontos": ["Certidões negativas de processos penais.", "Atestados de residência e bom comportamento.", "Atestados de quem o contratou.", "Outras provas de regeneração.", "Prova do ressarcimento do dano ou da impossibilidade."],
+      "atencao": ["Provas da regeneração e do ressarcimento."],
+      "exemplo": "O requerente junta certidões negativas e atestados de bom comportamento.",
+      "prova": ["Assertiva que dispensa a prova de ressarcimento do dano ou da impossibilidade erra."],
+      "termos": [],
+      "remissoes": ["Art. 743"]
+    }
+  }
+}
