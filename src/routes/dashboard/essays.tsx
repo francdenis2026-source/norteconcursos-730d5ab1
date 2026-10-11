@@ -72,7 +72,7 @@ function EssaysPage() {
   if (!user || user.id === "demo-user") {
     return (
       <LockedState
-        image="study-desk"
+        image="toolkit"
         title={
           <>
             Treino de <em>redação</em>
@@ -86,7 +86,7 @@ function EssaysPage() {
   return (
     <div className="space-y-6">
       <PageHero
-        image="study-desk"
+        image="toolkit"
         kicker="Provas"
         icon={PenLine}
         title={

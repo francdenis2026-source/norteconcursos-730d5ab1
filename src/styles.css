@@ -387,80 +387,6 @@ html {
   }
 }
 
-/* Radix ScrollArea thumb */
-[data-radix-scroll-area-thumb] {
-  background: var(--scroll-thumb) !important;
-  transition: background-color 0.2s;
-}
-[data-radix-scroll-area-thumb]:hover {
-  background: var(--scroll-thumb-hover) !important;
-}
-
-/* ==========================================================================
-   Cursor: hand on everything interactive
-   Kept outside any @layer so it also wins over utility classes such as
-   `cursor-default` baked into the dropdown, select and menu components.
-   ========================================================================== */
-
-:where(
-  a[href],
-  button,
-  summary,
-  select,
-  label[for],
-  label:has(> input[type="checkbox"]),
-  label:has(> input[type="radio"]),
-  label:has(> [role="checkbox"]),
-  label:has(> [role="radio"]),
-  input[type="checkbox"],
-  input[type="radio"],
-  input[type="submit"],
-  input[type="button"],
-  input[type="reset"],
-  input[type="file"],
-  input[type="color"],
-  [role="button"],
-  [role="link"],
-  [role="tab"],
-  [role="menuitem"],
-  [role="menuitemcheckbox"],
-  [role="menuitemradio"],
-  [role="option"],
-  [role="switch"],
-  [role="checkbox"],
-  [role="radio"],
-  [role="combobox"],
-  [role="treeitem"],
-  [aria-haspopup],
-  [cmdk-item],
-  [data-radix-collection-item],
-  .cursor-pointer
-) {
-  cursor: pointer;
-}
-:where([role="slider"], input[type="range"]) {
-  cursor: grab;
-}
-:where([role="slider"], input[type="range"]):active {
-  cursor: grabbing;
-}
-:where(
-  :disabled,
-  [aria-disabled="true"],
-  [data-disabled="true"],
-  [data-disabled="true"] *,
-  [data-disabled=""],
-  [data-disabled=""] *,
-  label:has(> :disabled)
-) {
-  cursor: not-allowed;
-}
-
-:where([cmdk-input]:not(:disabled)) {
-  cursor: text;
-  caret-color: currentColor;
-}
-
 /* ==========================================================================
    Typography helpers
    ========================================================================== */
@@ -3227,6 +3153,182 @@ html {
   }
   .institutional-header .norte-brand {
     max-width: 150px;
+  }
+}
+
+/* About page: editorial layout with one intentional image and a clearer story arc. */
+.institutional-page--about {
+  background:
+    linear-gradient(180deg, #0b1421 0%, #080e17 32%, #080e17 100%);
+}
+.institutional-page--about .institutional-header {
+  max-width: 1240px;
+  padding-block: 18px;
+}
+.institutional-page--about .institutional-heading--visual {
+  min-height: 500px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+  gap: clamp(34px, 7vw, 110px);
+  padding-block: clamp(56px, 8vw, 110px);
+}
+.institutional-page--about .institutional-heading__copy {
+  max-width: 680px;
+}
+.institutional-page--about .institutional-heading h1 {
+  max-width: 620px;
+  font-size: clamp(44px, 6.3vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+.institutional-page--about .institutional-heading__copy > p {
+  max-width: 570px;
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.65;
+}
+.institutional-page--about .institutional-heading__visual {
+  width: 100%;
+  max-width: 620px;
+  justify-self: end;
+  padding: 0;
+  border: 0;
+  border-radius: 26px;
+  overflow: hidden;
+  aspect-ratio: 1.42;
+  background: #132033;
+  box-shadow: 0 28px 90px #00000055;
+}
+.institutional-page--about .institutional-heading__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #08111dcc 0%, transparent 54%, #08111d22 100%);
+  pointer-events: none;
+}
+.institutional-page--about .institutional-heading__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  filter: saturate(0.86) contrast(1.06);
+}
+.institutional-page--about .institutional-heading__visual > span {
+  position: absolute;
+  z-index: 1;
+  left: 22px;
+  bottom: 18px;
+  padding: 0;
+  color: #f1cf85;
+  font-size: 9px;
+  text-shadow: 0 1px 14px #000;
+}
+.about-proof {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(32px, 7vw, 110px);
+  align-items: end;
+  padding-block: 42px 82px;
+}
+.about-proof__intro h2 {
+  max-width: 360px;
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+.about-proof__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  border-block: 1px solid #ffffff18;
+}
+.about-proof__items article {
+  min-height: 154px;
+  padding: 22px 18px 20px;
+  border-inline: 1px solid #ffffff0e;
+}
+.about-proof__items strong {
+  display: block;
+  color: #d2aa5b;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+.about-proof__items span {
+  display: block;
+  margin-top: 24px;
+  color: #edf0f4;
+  font-size: 14px;
+  font-weight: 650;
+}
+.about-proof__items p {
+  margin-top: 8px;
+  color: #8996a8;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.institutional-page--about .founder-section {
+  background: #0a111c;
+}
+.institutional-page--about .founder-identity {
+  border-radius: 18px;
+  background: #101c2b;
+  box-shadow: 0 22px 70px #00000025;
+}
+.institutional-page--about .founder-portrait {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 18%;
+}
+.institutional-page--about .institutional-values {
+  padding-top: 84px;
+}
+
+@media (max-width: 900px) {
+  .institutional-page--about .institutional-heading--visual {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    padding-block: 48px 60px;
+  }
+  .institutional-page--about .institutional-heading__visual {
+    justify-self: start;
+    max-width: 600px;
+  }
+  .about-proof {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 30px 64px;
+  }
+  .about-proof__intro h2 {
+    max-width: 520px;
+  }
+}
+@media (max-width: 620px) {
+  .institutional-page--about .institutional-heading h1 {
+    font-size: clamp(40px, 13vw, 62px);
+  }
+  .institutional-page--about .institutional-heading__visual {
+    aspect-ratio: 1.22;
+    border-radius: 18px;
+  }
+  .institutional-page--about .institutional-heading__visual > span {
+    left: 14px;
+    bottom: 12px;
+    font-size: 8px;
+  }
+  .about-proof__items {
+    grid-template-columns: 1fr;
+  }
+  .about-proof__items article {
+    min-height: 0;
+    padding: 18px 16px;
+    border-block: 1px solid #ffffff0e;
+    border-inline: 0;
+  }
+  .about-proof__items span {
+    margin-top: 12px;
   }
 }
 
@@ -7753,18 +7855,2343 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 }
 
 
-/* Constelação da hero (src/components/landing/fx.tsx) */
-.fx-constellation {
+/* Landing polish: hierarquia, toque e microinterações da nova homepage */
+.lp-header {
+  background: linear-gradient(180deg, oklch(0.08 0.025 263 / 0.72), transparent);
+}
+.lp-header[data-scrolled="true"] {
+  box-shadow: 0 12px 32px -24px oklch(0 0 0 / 0.9);
+}
+.lp-nav a,
+.lp-header__login,
+.lp-menu-btn,
+.lp-hero__ctas a,
+.lp-footer a {
+  -webkit-tap-highlight-color: transparent;
+}
+.lp-nav a:focus-visible,
+.lp-header__login:focus-visible,
+.lp-menu-btn:focus-visible {
+  outline: 2px solid var(--brass-soft);
+  outline-offset: 3px;
+}
+.lp-hero__content {
+  text-wrap: pretty;
+}
+.lp-hero__title {
+  text-wrap: balance;
+  text-shadow: 0 12px 38px oklch(0.04 0.02 263 / 0.42);
+}
+.lp-hero__lead {
+  text-wrap: pretty;
+}
+.lp-hero__ctas .btn-brass,
+.lp-hero__ctas .btn-glass,
+.lp-final__actions .btn-brass,
+.lp-final__actions .btn-glass {
+  transition:
+    transform 0.22s var(--ease-out),
+    box-shadow 0.22s var(--ease-out),
+    border-color 0.22s;
+}
+.lp-hero__ctas .btn-brass:hover,
+.lp-hero__ctas .btn-glass:hover,
+.lp-final__actions .btn-brass:hover,
+.lp-final__actions .btn-glass:hover {
+  transform: translateY(-3px);
+}
+.lp-hero__panel > * {
+  box-shadow: 0 18px 48px -30px oklch(0 0 0 / 0.9);
+}
+.lp-rail {
+  border-top-color: oklch(1 0 0 / 0.12);
+  background: linear-gradient(180deg, oklch(0.05 0.018 263 / 0.08), transparent);
+}
+.lp-marquee {
+  border-block-color: oklch(1 0 0 / 0.08);
+  background: oklch(0.07 0.02 263 / 0.72);
+}
+.lp-section {
+  scroll-margin-top: 80px;
+}
+.lp-head .lp-h2,
+.lp-pcac__content .lp-h2,
+.lp-trust__content .lp-h2 {
+  text-wrap: balance;
+}
+.lp-step,
+.lp-tile,
+.lp-career,
+.lp-pillar {
+  transition-timing-function: var(--ease-out);
+}
+.lp-step:hover .lp-step__node {
+  transform: translateY(-3px) scale(1.04);
+  border-color: var(--brass);
+  box-shadow: 0 10px 24px -14px oklch(0.8 0.13 78 / 0.8);
+}
+.lp-step__node {
+  transition:
+    transform 0.25s var(--ease-out),
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+.lp-tile:focus-within,
+.lp-career:focus-within {
+  border-color: oklch(0.8 0.13 78 / 0.55);
+}
+
+@media (max-width: 767px) {
+  .lp-header {
+    background: linear-gradient(180deg, oklch(0.07 0.022 263 / 0.9), transparent);
+  }
+  .lp-header__bar {
+    height: 62px;
+    gap: 10px;
+  }
+  .lp-header__bar > a {
+    min-width: 0;
+  }
+  .lp-header__bar .norte-brand {
+    transform: scale(0.9);
+    transform-origin: left center;
+  }
+  .lp-header__actions {
+    gap: 5px;
+  }
+  .lp-header__login {
+    padding-inline: 8px;
+    font-size: 0.78rem;
+  }
+  .lp-header__actions > .btn-brass {
+    display: none;
+  }
+  .lp-menu-btn {
+    display: grid;
+    width: 40px;
+    height: 40px;
+  }
+  .lp-hero {
+    min-height: min(760px, 100svh);
+  }
+  .lp-hero__media,
+  .lp-hero__shade {
+    min-height: 100%;
+  }
+  .lp-hero__body {
+    padding-top: 96px;
+    padding-bottom: 26px;
+  }
+  .lp-hero__content {
+    padding: 18px 16px 16px;
+    border-radius: 24px;
+    background: linear-gradient(155deg, oklch(0.11 0.03 263 / 0.46), oklch(0.08 0.02 263 / 0.22));
+    box-shadow: 0 22px 50px -34px oklch(0 0 0 / 0.95);
+  }
+  .lp-hero__title {
+    max-width: 13ch;
+    font-size: clamp(2.25rem, 11vw, 3.1rem);
+    line-height: 0.96;
+  }
+  .lp-hero__lead {
+    max-width: 34ch;
+    color: oklch(1 0 0 / 0.84);
+  }
+  .lp-hero__ctas {
+    gap: 9px;
+  }
+  .lp-hero__ctas .btn-brass,
+  .lp-hero__ctas .btn-glass {
+    min-height: 3rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+  }
+  .lp-hero__panel {
+    margin-top: 2px;
+  }
+  .lp-hero__panel .testing-seal,
+  .lp-hero__panel .daily-badge {
+    border-radius: 15px;
+  }
+  .mh {
+    padding-top: 18px;
+    background: linear-gradient(180deg, var(--ink-deep), oklch(0.08 0.025 263));
+  }
+  .mh__tabs {
+    margin-bottom: 16px;
+  }
+  .mh__tab {
+    min-height: 40px;
+    padding-inline: 14px;
+    box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.06);
+  }
+  .mh__panel {
+    animation: mh-panel-in 0.3s var(--ease-out) both;
+  }
+  .mh__grid li,
+  .mh__plan {
+    background: linear-gradient(145deg, oklch(1 0 0 / 0.075), oklch(1 0 0 / 0.025));
+    box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.06);
+  }
+  .mh__cta {
+    position: sticky;
+    bottom: 10px;
+    z-index: 5;
+    margin-inline: -2px;
+    padding: 8px;
+    border: 1px solid oklch(1 0 0 / 0.12);
+    border-radius: 16px;
+    background: oklch(0.08 0.025 263 / 0.82);
+    box-shadow: 0 14px 32px -20px oklch(0 0 0 / 0.9);
+    backdrop-filter: blur(14px);
+  }
+}
+
+@keyframes mh-panel-in {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-hero__ctas .btn-brass,
+  .lp-hero__ctas .btn-glass,
+  .lp-final__actions .btn-brass,
+  .lp-final__actions .btn-glass,
+  .lp-step__node,
+  .mh__panel { transition: none; animation: none; }
+}
+
+/* Landing v2: less noise, faster paint and a clearer Acre / PCAC focus. */
+.lp-hero__grid,
+.lp-acre__bg::before,
+.lp-acre__bg::after {
+  display: none;
+}
+.lp,
+.lp-container,
+.lp-section,
+.lp-photo {
+  min-width: 0;
+  max-width: 100%;
+}
+.lp-container {
+  width: min(1160px, calc(100% - 48px));
+}
+.lp-hero {
+  min-height: clamp(640px, 100svh, 900px);
+}
+.lp-hero__body {
+  padding-top: clamp(104px, 13vh, 148px);
+  padding-bottom: clamp(32px, 5vh, 56px);
+}
+.lp-hero__layout {
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 22rem);
+  gap: clamp(32px, 4vw, 58px);
+}
+.lp-hero__title {
+  max-width: 13ch;
+  font-size: clamp(2.8rem, 5vw, 4.75rem);
+}
+.lp-hero__lead {
+  max-width: 510px;
+}
+.lp-pcac {
+  min-height: clamp(540px, 74svh, 680px);
+}
+.lp-hero__video {
+  object-position: 82% center;
+}
+.lp-hero__shade {
+  background:
+    linear-gradient(90deg, oklch(0.08 0.025 263 / 0.94), oklch(0.1 0.025 263 / 0.62) 40%, transparent 76%),
+    linear-gradient(0deg, var(--ink-deep), transparent 42%),
+    linear-gradient(180deg, oklch(0.08 0.025 263 / 0.5), transparent 24%);
+}
+.lp-section {
+  padding-block: clamp(64px, 8vw, 112px);
+}
+.lp-pcac {
+  min-height: min(720px, 78svh);
+  display: grid;
+  align-items: center;
+  border-block-color: oklch(0.8 0.13 78 / 0.35);
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.06), inset 0 -1px 0 oklch(1 0 0 / 0.06);
+}
+.lp-pcac::after {
   position: absolute;
-  inset: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
+  inset: auto 0 0;
+  height: 3px;
+  content: "";
+  background: linear-gradient(90deg, transparent, var(--brass), transparent);
+  opacity: 0.8;
+}
+.lp-pcac .lp-photo__media {
+  background-size: cover;
+  background-position: 72% center;
+  filter: saturate(0.92) contrast(1.04);
+}
+.lp-pcac .lp-photo__shade {
+  background:
+    linear-gradient(90deg, oklch(0.07 0.023 263 / 0.98) 0%, oklch(0.09 0.025 263 / 0.88) 38%, oklch(0.09 0.025 263 / 0.35) 68%, oklch(0.09 0.025 263 / 0.12)),
+    linear-gradient(0deg, oklch(0.07 0.023 263 / 0.9), transparent 52%);
+}
+.lp-pcac__content {
+  padding: clamp(24px, 4vw, 46px);
+  border: 1px solid oklch(1 0 0 / 0.12);
+  border-radius: 24px;
+  background: linear-gradient(145deg, oklch(0.09 0.025 263 / 0.78), oklch(0.09 0.025 263 / 0.38));
+  box-shadow: 0 24px 70px -42px oklch(0 0 0 / 0.9), inset 0 1px 0 oklch(1 0 0 / 0.08);
+  backdrop-filter: blur(12px);
+}
+.lp-pcac__emblems {
+  margin-bottom: 22px;
+}
+.lp-pcac .lp-h2 {
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+}
+.lp-pcac__roles span {
+  background: oklch(0.08 0.025 263 / 0.7);
+}
+
+.lp-acre {
+  padding-top: clamp(72px, 9vw, 124px);
+  padding-bottom: clamp(72px, 9vw, 124px);
+}
+.lp-acre__top {
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(28px, 5vw, 74px);
+}
+.lp-acre__copy .lp-h2 {
+  max-width: 11ch;
+  font-size: clamp(2.5rem, 4.5vw, 4.4rem);
+}
+.lp-acre__stage {
+  aspect-ratio: 1.4;
+  margin-block: 20px 44px;
+  border: 1px solid oklch(1 0 0 / 0.1);
+  border-radius: 28px;
+  background: linear-gradient(145deg, oklch(1 0 0 / 0.07), oklch(1 0 0 / 0.015));
+  box-shadow: 0 28px 70px -44px oklch(0 0 0 / 0.95), inset 0 1px 0 oklch(1 0 0 / 0.08);
+}
+.lp-acre__stage::before {
+  position: absolute;
+  inset: 12%;
+  content: "";
+  border: 1px solid oklch(0.8 0.13 78 / 0.18);
+  border-radius: 50%;
+  transform: rotate(-14deg) scaleX(0.72);
   pointer-events: none;
-  mask-image: linear-gradient(90deg, transparent 8%, black 45%);
+}
+.lp-acre__map {
+  inset: 7% 5% 7%;
+  filter: drop-shadow(0 0 1px var(--brass)) drop-shadow(0 14px 24px oklch(0 0 0 / 0.34));
+  animation: none;
+}
+.lp-acre__fill {
+  background:
+    linear-gradient(135deg, oklch(0.8 0.13 78 / 0.22), oklch(0.2 0.04 262 / 0.3)),
+    url("/media/acre-seguranca.jpg") center / cover;
+}
+.lp-acre__sheen::after {
+  animation: none;
+  opacity: 0;
+}
+.lp-acre__people {
+  z-index: 2;
+  bottom: 3%;
+  left: 2%;
+  width: 96%;
+  max-width: none;
+  filter: drop-shadow(0 18px 18px oklch(0 0 0 / 0.5));
+  mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / 100% 100% no-repeat;
+  -webkit-mask: url("/media/mapa-acre-silhueta-ibge-2024.svg") center / 100% 100% no-repeat;
+}
+.lp-acre__pins {
+  z-index: 4;
+}
+.lp-pin i::after {
+  animation: none;
+  opacity: 0;
+}
+.lp-pin em {
+  border-color: oklch(1 0 0 / 0.2);
+  background: oklch(0.08 0.025 263 / 0.84);
+  box-shadow: 0 6px 14px -10px oklch(0 0 0 / 0.9);
+}
+.lp-pin--cruzeiro {
+  left: 22% !important;
+  top: 18% !important;
+  z-index: 8;
+}
+.lp-pin--cruzeiro em {
+  color: var(--brass-soft);
+  border-color: oklch(0.8 0.13 78 / 0.46);
+  background: oklch(0.08 0.025 263 / 0.94);
+}
+.lp-acre__badge {
+  top: 3%;
+  left: 4%;
+  z-index: 5;
+}
+.lp-acre__coords {
+  top: 5%;
+  right: 5%;
+  z-index: 5;
+}
+.lp-card {
+  min-height: 172px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, oklch(1 0 0 / 0.065), oklch(1 0 0 / 0.018));
+}
+.lp-card::before,
+.lp-card::after {
+  display: none;
+}
+.lp-card__cta {
+  opacity: 1;
+  transform: none;
+}
+.lp-card:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1000px) {
+  .lp-acre__top {
+    grid-template-columns: 1fr;
+  }
+  .lp-acre__copy .lp-h2 {
+    max-width: 14ch;
+  }
+  .lp-acre__stage {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 767px) {
+  .lp-container {
+    width: min(100% - 28px, 620px);
+  }
+  .lp-hero {
+    min-height: min(760px, 100svh);
+  }
+  .lp-hero__body {
+    padding-top: 92px;
+    padding-bottom: 22px;
+  }
+  .lp-hero__video {
+    object-position: 64% center;
+  }
+  .lp-pcac {
+    min-height: 0;
+  }
+  .lp-pcac__content {
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+  .lp-pcac .lp-h2 {
+    font-size: clamp(2.2rem, 11vw, 3.4rem);
+  }
+  .lp-acre {
+    padding-block: 64px;
+  }
+  .lp-acre__stage {
+    aspect-ratio: 1.05;
+    margin-top: 8px;
+    border-radius: 20px;
+  }
+  .lp-pin--cruzeiro {
+    left: 24% !important;
+    top: 18% !important;
+  }
+  .lp-pin--cruzeiro em {
+    display: inline-block;
+    max-width: 108px;
+    overflow: hidden;
+    padding-inline: 6px;
+    font-size: 0.48rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .lp-acre__map {
+    inset: 10% 4% 9%;
+  }
+  .lp-acre__people {
+    bottom: 7%;
+    left: 0;
+    width: 100%;
+  }
+  .lp-acre__badge {
+    top: 4%;
+    left: 4%;
+    transform: scale(0.86);
+    transform-origin: top left;
+  }
+  .lp-acre__coords {
+    top: 5%;
+    right: 5%;
+    font-size: 0.52rem;
+  }
+  .lp-acre__grid {
+    gap: 9px;
+  }
+}
+
+/* ==========================================================================
+   Application shell refresh: student and admin workspaces
+   ========================================================================== */
+.app-shell {
+  --app-sidebar-width: 280px;
+  color: var(--color-foreground);
+  background:
+    radial-gradient(900px 500px at 100% -10%, color-mix(in oklab, var(--brass) 8%, transparent), transparent 70%),
+    var(--color-background);
+}
+.app-sidebar {
+  width: var(--app-sidebar-width);
+  background:
+    radial-gradient(560px 340px at -15% -8%, oklch(0.8 0.13 78 / 0.13), transparent 70%),
+    linear-gradient(180deg, color-mix(in oklab, var(--sidebar) 96%, black), var(--sidebar));
+  box-shadow: 14px 0 36px -32px oklch(0 0 0 / 0.8);
+}
+.app-sidebar[data-collapsed="true"] {
+  width: 78px;
+}
+.app-sidebar__head {
+  height: 78px;
+  padding-inline: 20px 14px;
+  border-bottom: 1px solid oklch(1 0 0 / 0.07);
+}
+.app-sidebar__search {
+  height: 42px;
+  margin: 14px 16px 10px;
+  border-radius: 12px;
+  background: oklch(1 0 0 / 0.055);
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.06);
+}
+.app-nav {
+  padding: 8px 14px 18px;
+}
+.app-nav__group {
+  padding: 20px 12px 8px;
+  color: oklch(1 0 0 / 0.48);
+  font-size: 0.58rem;
+}
+.app-nav__link {
+  height: 44px;
+  margin-block: 2px;
+  padding-inline: 13px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  transition:
+    color 0.2s var(--ease-out),
+    background 0.2s var(--ease-out),
+    border-color 0.2s var(--ease-out),
+    transform 0.2s var(--ease-out);
+}
+.app-nav__link:hover {
+  transform: translateX(2px);
+  border-color: oklch(1 0 0 / 0.08);
+  background: oklch(1 0 0 / 0.07);
+}
+.app-nav__link[data-active="true"] {
+  border-color: color-mix(in oklab, var(--brass) 25%, transparent);
+  background: linear-gradient(100deg, color-mix(in oklab, var(--brass) 21%, transparent), oklch(1 0 0 / 0.04));
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08), 0 10px 22px -18px color-mix(in oklab, var(--brass) 90%, transparent);
+}
+.app-nav__link[data-active="true"]::before {
+  top: 8px;
+  bottom: 8px;
+  left: -14px;
+  width: 4px;
+}
+.app-sidebar__foot {
+  padding: 14px;
+  background: linear-gradient(180deg, transparent, oklch(0 0 0 / 0.12));
+}
+.app-stats {
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.app-stat {
+  border-radius: 12px;
+  background: oklch(1 0 0 / 0.045);
+}
+.app-user {
+  padding: 10px;
+  border: 1px solid transparent;
+}
+.app-user:hover {
+  border-color: oklch(1 0 0 / 0.08);
+}
+.app-main {
+  min-width: 0;
+}
+.app-topbar {
+  height: calc(72px + env(safe-area-inset-top));
+  padding-inline: clamp(20px, 3.4vw, 48px);
+  border-bottom-color: color-mix(in oklab, var(--color-border) 72%, transparent);
+  background: color-mix(in oklab, var(--color-background) 84%, transparent);
+  box-shadow: 0 10px 30px -28px oklch(0 0 0 / 0.8);
+}
+.app-crumbs {
+  gap: 10px;
+  font-size: 0.9rem;
+}
+.app-crumbs strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.app-topbar__actions {
+  gap: 8px;
+}
+.app-top-search {
+  width: 244px;
+  height: 40px;
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--color-card) 82%, transparent);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+.app-top-search:hover {
+  box-shadow: 0 8px 20px -16px var(--color-foreground);
+  transform: translateY(-1px);
+}
+.app-top-btn,
+.app-streak {
+  height: 40px;
+  border-radius: 12px;
+}
+.app-streak {
+  padding-inline: 11px;
+}
+.app-content {
+  min-width: 0;
+  overflow-x: clip;
+  padding: clamp(20px, 3vw, 38px) clamp(16px, 3.4vw, 48px) 56px;
+  background:
+    radial-gradient(680px 420px at 100% 0%, color-mix(in oklab, var(--brass) 5%, transparent), transparent 74%),
+    var(--color-background);
+}
+.app-content__inner {
+  min-width: 0;
+  max-width: 1320px;
+}
+.app-content__inner > * {
+  min-width: 0;
+  max-width: 100%;
+}
+.app-footer {
+  max-width: 1320px;
+  margin-top: 56px;
+}
+
+/* Shared internal hero */
+.page-hero,
+.tactical-feature-hero,
+.catalog-command-hero {
+  border-radius: 22px;
+  background-position: var(--hero-position, 70% center);
+  box-shadow: 0 24px 58px -40px oklch(0.12 0.03 262 / 0.9), inset 0 1px 0 oklch(1 0 0 / 0.08);
+}
+.page-hero::after,
+.tactical-feature-hero::after,
+.catalog-command-hero::after {
+  opacity: 0.45;
+}
+.page-hero__text {
+  min-width: 0;
+}
+.page-hero__actions {
+  align-items: center;
+}
+.page-hero__actions > * {
+  min-height: 40px;
+}
+.hero-stat {
+  border-color: oklch(1 0 0 / 0.13);
+  background: linear-gradient(145deg, oklch(0.16 0.03 262 / 0.7), oklch(0.1 0.025 263 / 0.5));
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.06);
+}
+
+/* Tables and dense cards stay usable inside narrow workspaces. */
+.app-content .surface-card,
+.app-content .card,
+.app-content [data-slot="card"] {
+  min-width: 0;
+  border-radius: 16px;
+}
+.app-content table {
+  max-width: 100%;
+}
+.app-content .overflow-x-auto {
+  scrollbar-width: thin;
+}
+
+/* Admin workspace: clearer operational identity without changing permissions. */
+.app-shell[data-area="admin"] {
+  --admin-accent: oklch(0.77 0.14 72);
+  background:
+    radial-gradient(900px 500px at 100% -10%, oklch(0.77 0.14 72 / 0.08), transparent 70%),
+    var(--color-background);
+}
+.app-shell[data-area="admin"] .app-sidebar {
+  background:
+    radial-gradient(560px 340px at 100% -8%, oklch(0.77 0.14 72 / 0.18), transparent 70%),
+    linear-gradient(180deg, oklch(0.16 0.03 262), oklch(0.105 0.025 263));
+}
+.app-shell[data-area="admin"] .app-sidebar__head::after {
+  content: "CENTRAL ADMINISTRATIVA";
+  position: absolute;
+  left: 20px;
+  bottom: 5px;
+  color: oklch(0.77 0.14 72 / 0.7);
+  font-family: var(--font-mono);
+  font-size: 0.48rem;
+  letter-spacing: 0.14em;
+}
+.app-shell[data-area="admin"] .app-sidebar__head {
+  position: relative;
+}
+.app-shell[data-area="admin"] .app-nav__admin .app-nav__link {
+  border-color: oklch(0.77 0.14 72 / 0.28);
+  background: linear-gradient(100deg, oklch(0.77 0.14 72 / 0.18), transparent);
+}
+.app-shell[data-area="admin"] .page-hero,
+.app-shell[data-area="admin"] .tactical-feature-hero,
+.app-shell[data-area="admin"] .catalog-command-hero {
+  border-color: oklch(0.77 0.14 72 / 0.3);
+}
+
+@media (max-width: 1023px) {
+  .app-sidebar {
+    width: 248px;
+  }
+  .app-topbar {
+    padding-inline: 20px;
+  }
+  .app-top-search {
+    width: 40px;
+    padding-inline: 0;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .app-shell {
+    --app-topbar-h: 60px;
+    display: block;
+    min-height: 100svh;
+  }
+  .app-topbar {
+    height: calc(60px + env(safe-area-inset-top));
+    padding-inline: 12px;
+    box-shadow: 0 8px 24px -20px oklch(0 0 0 / 0.9);
+  }
+  .app-mobile-bar {
+    gap: 6px;
+  }
+  .app-mobile-bar > a {
+    min-width: 0;
+  }
+  .app-mobile-bar .norte-brand {
+    max-width: 128px;
+  }
+  .app-topbar__actions {
+    gap: 4px;
+  }
+  .app-topbar .app-top-btn,
+  .app-topbar .app-top-search,
+  .app-topbar .app-streak {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+  .app-topbar__actions > .app-streak span {
+    display: none;
+  }
+  .app-content {
+    padding: 14px 12px 104px;
+  }
+  .app-content__inner {
+    width: 100%;
+  }
+  .app-footer {
+    display: none;
+  }
+  .page-hero,
+  .tactical-feature-hero,
+  .catalog-command-hero {
+    border-radius: 16px;
+    padding: 16px !important;
+  }
+  .page-hero__row {
+    align-items: stretch;
+    gap: 16px;
+  }
+  .page-hero h1,
+  .tactical-feature-hero h1,
+  .catalog-command-hero h1 {
+    max-width: 15ch;
+    font-size: clamp(1.55rem, 7.2vw, 2.25rem) !important;
+  }
+  .page-hero__desc,
+  .catalog-command-hero > p {
+    max-width: 100%;
+    font-size: 0.86rem;
+  }
+  .page-hero__actions {
+    width: 100%;
+  }
+  .page-hero__actions > * {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+  .page-hero__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero-stat {
+    padding: 10px;
+  }
+  .app-bottom-nav {
+    right: 8px;
+    bottom: max(8px, env(safe-area-inset-bottom));
+    left: 8px;
+    border-radius: 16px;
+    padding: 5px;
+    box-shadow: 0 18px 40px -20px oklch(0 0 0 / 0.8), inset 0 1px 0 oklch(1 0 0 / 0.08);
+  }
+  .app-bottom-nav a {
+    min-height: 48px;
+    align-content: center;
+    border-radius: 11px;
+    font-size: 0.62rem;
+  }
+  .app-shell[data-area="admin"] .app-sidebar__head::after {
+    display: none;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-  .fx-constellation {
+  .app-nav__link,
+  .app-top-search {
+    transition: none;
+  }
+}
+
+/* Admin entry keeps the same visual language as the workspace. */
+.admin-access {
+  background:
+    radial-gradient(780px 520px at 0% 0%, color-mix(in oklab, var(--brass) 10%, transparent), transparent 72%),
+    var(--color-background);
+}
+.admin-access__visual {
+  border-right: 1px solid var(--color-border);
+  background: var(--ink-deep);
+}
+.admin-access__visual::after {
+  background:
+    linear-gradient(90deg, oklch(0.08 0.025 263 / 0.94), oklch(0.08 0.025 263 / 0.34)),
+    linear-gradient(0deg, oklch(0.08 0.025 263 / 0.9), transparent 60%);
+}
+.admin-access__visual-copy {
+  gap: 14px;
+  padding: clamp(36px, 6vw, 80px);
+}
+.admin-access__visual-copy > span {
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  border-color: oklch(0.8 0.13 78 / 0.35);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--brass-soft);
+  background: oklch(0.8 0.13 78 / 0.1);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.admin-access__visual-copy h2 {
+  max-width: 11ch;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 0.95;
+}
+.admin-access__visual-copy p {
+  max-width: 42ch;
+  color: oklch(1 0 0 / 0.72);
+}
+.admin-access__panel {
+  background: color-mix(in oklab, var(--color-background) 90%, var(--brass) 2%);
+}
+.admin-access__form {
+  width: min(100%, 460px);
+  padding: clamp(28px, 5vw, 72px);
+}
+@media (max-width: 1023px) {
+  .admin-access {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .admin-access__visual {
     display: none;
+  }
+  .admin-access__panel {
+    min-height: 100svh;
+  }
+  .admin-access__form {
+    margin-inline: auto;
+  }
+}
+.app-sidebar[data-collapsed="true"] .app-sidebar__head::after {
+  display: none;
+}
+
+/* Homepage v3: editorial composition with a shorter first fold. */
+.lp-home,
+.lp {
+  --lp-gutter: clamp(16px, 3vw, 36px);
+}
+.lp-header__bar,
+.lp-hero__body,
+.lp-rail__grid,
+.lp-container {
+  width: min(1180px, calc(100% - var(--lp-gutter) * 2));
+}
+.lp-hero {
+  min-height: min(780px, 92svh);
+  max-height: 900px;
+  justify-content: center;
+}
+.lp-hero__body {
+  padding-top: 92px;
+  padding-bottom: 42px;
+}
+.lp-hero__layout {
+  grid-template-columns: minmax(0, 1.18fr) minmax(270px, 330px);
+  gap: clamp(32px, 5vw, 82px);
+  align-items: center;
+}
+.lp-hero__content {
+  max-width: 650px;
+}
+.lp-hero__title {
+  max-width: 11ch;
+  margin-top: 20px;
+  font-size: clamp(2.75rem, 5.3vw, 5rem);
+  line-height: 0.93;
+}
+.lp-hero__lead {
+  max-width: 520px;
+  margin-top: 20px;
+  font-size: clamp(0.96rem, 1.2vw, 1.08rem);
+  line-height: 1.56;
+}
+.lp-hero__ctas {
+  margin-top: 24px;
+}
+.lp-hero__pillars {
+  gap: 8px 18px;
+  margin-top: 24px;
+  padding-top: 18px;
+}
+.lp-hero__pillars li {
+  font-size: 0.74rem;
+}
+.lp-hero__panel {
+  max-width: 330px;
+  gap: 8px;
+}
+.lp-hero__panel > * {
+  border-radius: 14px !important;
+}
+.lp-hero__aside {
+  display: none;
+}
+.lp-rail {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top-color: oklch(1 0 0 / 0.12);
+  background: oklch(0.06 0.02 263 / 0.54);
+  backdrop-filter: blur(14px);
+}
+.lp-rail__grid {
+  min-height: 58px;
+}
+.lp-rail__item {
+  padding-block: 10px;
+}
+.lp-rail__text span {
+  font-size: 0.56rem;
+}
+.lp-rail__text strong {
+  font-size: 0.76rem;
+}
+.lp-marquee {
+  display: none;
+}
+
+.lp-section {
+  padding-block: clamp(58px, 7vw, 96px);
+}
+.lp-head {
+  gap: 32px;
+  margin-bottom: clamp(28px, 4vw, 48px);
+}
+.lp-h2 {
+  font-size: clamp(2.15rem, 4.2vw, 3.65rem);
+}
+.lp-lead {
+  margin-top: 14px;
+  font-size: 0.98rem;
+  line-height: 1.62;
+}
+
+.lp-pcac {
+  min-height: 0;
+  padding-block: clamp(56px, 7vw, 88px);
+}
+.lp-pcac .lp-photo__media {
+  background-position: 78% center;
+}
+.lp-pcac__content {
+  max-width: 560px;
+  padding: clamp(22px, 3.2vw, 36px);
+  border-radius: 18px;
+  background: linear-gradient(145deg, oklch(0.08 0.025 263 / 0.88), oklch(0.08 0.025 263 / 0.56));
+}
+.lp-pcac__emblems {
+  margin-bottom: 18px;
+}
+.lp-pcac__emblem {
+  width: 48px;
+  height: 48px;
+  border-radius: 11px;
+}
+.lp-pcac__emblem img {
+  width: 38px;
+  height: 38px;
+}
+.lp-pcac .lp-h2 {
+  margin-top: 14px;
+  font-size: clamp(2.3rem, 4.5vw, 4rem);
+}
+.lp-pcac__roles {
+  gap: 6px;
+  margin-top: 20px;
+}
+.lp-pcac__roles span {
+  padding: 8px 10px;
+  font-size: 0.76rem;
+}
+.lp-pcac__actions {
+  gap: 12px;
+  margin-top: 24px;
+}
+.lp-pcac__disclaimer {
+  margin-top: 18px;
+  font-size: 0.68rem;
+}
+
+.lp-acre {
+  padding-block: clamp(58px, 7vw, 96px);
+}
+.lp-acre__top {
+  gap: clamp(24px, 4vw, 56px);
+}
+.lp-acre__copy .lp-h2 {
+  max-width: 12ch;
+  font-size: clamp(2.25rem, 4.2vw, 3.8rem);
+}
+.lp-acre__stage {
+  aspect-ratio: 1.46;
+  margin-block: 8px 30px;
+  border-radius: 22px;
+}
+.lp-acre__map {
+  inset: 6% 4% 7%;
+}
+.lp-acre__people {
+  bottom: 2%;
+  left: 1%;
+  width: 98%;
+}
+.lp-acre__badge {
+  top: 3%;
+  left: 3%;
+  padding: 8px 12px 8px 9px;
+}
+.lp-acre__badge b {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  font-size: 1.25rem;
+}
+.lp-acre__badge span {
+  font-size: 0.66rem;
+}
+.lp-acre__bar {
+  margin-bottom: 14px;
+}
+.lp-acre__grid {
+  gap: 10px;
+}
+.lp-card {
+  min-height: 150px;
+  padding: 16px;
+  border-radius: 14px;
+}
+.lp-card__head {
+  margin-bottom: 10px;
+}
+.lp-card__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+.lp-card strong {
+  font-size: 1.2rem;
+}
+.lp-card small {
+  font-size: 0.74rem;
+}
+.lp-card__cta {
+  margin-top: 7px;
+  font-size: 0.74rem;
+}
+
+.lp-method,
+.lp-careers,
+.lp-trust {
+  min-height: 0;
+}
+.lp-method .lp-photo__shade,
+.lp-careers .lp-photo__shade,
+.lp-trust .lp-photo__shade {
+  opacity: 0.9;
+}
+.lp-steps {
+  gap: 12px;
+}
+.lp-step__card {
+  padding: 18px 20px;
+  border-radius: 14px;
+}
+.lp-bento {
+  gap: 10px;
+}
+.lp-tile {
+  padding: 20px;
+  border-radius: 16px;
+}
+.lp-tile h3 {
+  padding-top: 18px;
+  font-size: 1.25rem;
+}
+.lp-tile--feature h3 {
+  font-size: 1.7rem;
+}
+.lp-careers__list {
+  margin-top: 30px;
+}
+.lp-career {
+  padding-block: 15px;
+}
+.lp-career strong {
+  font-size: 1.12rem;
+}
+.lp-pillars {
+  margin-top: 28px;
+}
+.lp-pillar {
+  padding-block: 16px;
+}
+.lp-final .lp-h2 {
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+}
+
+@media (max-width: 900px) {
+  .lp-hero {
+    min-height: 760px;
+  }
+  .lp-hero__layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .lp-hero__content {
+    max-width: 700px;
+  }
+  .lp-hero__panel {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: none;
+  }
+  .lp-hero__panel > * {
+    min-width: 0;
+  }
+}
+@media (max-width: 767px) {
+  .lp-header__bar,
+  .lp-hero__body,
+  .lp-rail__grid,
+  .lp-container {
+    width: min(100% - 28px, 620px);
+  }
+  .lp-hero {
+    min-height: min(700px, 100svh);
+    max-height: none;
+    justify-content: flex-end;
+  }
+  .lp-hero__body {
+    padding-top: 92px;
+    padding-bottom: 72px;
+  }
+  .lp-hero__layout {
+    gap: 12px;
+  }
+  .lp-hero__title {
+    max-width: 12ch;
+    margin-top: 12px;
+    font-size: clamp(2.2rem, 10.5vw, 3rem);
+  }
+  .lp-hero__lead {
+    max-width: 34ch;
+    margin-top: 12px;
+    font-size: 0.88rem;
+  }
+  .lp-hero__ctas {
+    margin-top: 16px;
+  }
+  .lp-hero__pillars {
+    display: none;
+  }
+  .lp-hero__panel {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .lp-hero__panel > * {
+    width: 100%;
+  }
+  .lp-rail {
+    display: none;
+  }
+  .lp-pcac {
+    padding-block: 48px;
+  }
+  .lp-pcac__content {
+    padding: 18px 16px;
+  }
+  .lp-pcac .lp-h2 {
+    font-size: clamp(2.05rem, 10vw, 3.1rem);
+  }
+  .lp-pcac__actions,
+  .lp-pcac__actions > * {
+    width: 100%;
+  }
+  .lp-pcac__status {
+    justify-content: center;
+  }
+  .lp-acre__stage {
+    aspect-ratio: 1.08;
+    margin-top: 4px;
+    border-radius: 18px;
+  }
+  .lp-acre__map {
+    inset: 9% 3% 8%;
+  }
+  .lp-acre__people {
+    bottom: 6%;
+  }
+  .lp-acre__copy .lp-h2 {
+    max-width: 13ch;
+    font-size: clamp(2.15rem, 10vw, 3rem);
+  }
+  .lp-acre__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lp-card {
+    min-height: 142px;
+    padding: 13px;
+  }
+  .lp-card__tag {
+    display: none;
+  }
+  .lp-card strong {
+    font-size: 1rem;
+  }
+  .lp-card small {
+    font-size: 0.68rem;
+  }
+  .lp-card__cta {
+    font-size: 0.68rem;
+  }
+  .lp-head {
+    display: block;
+  }
+  .lp-head .lp-lead {
+    margin-top: 12px;
+  }
+  .lp-bento {
+    grid-template-columns: 1fr;
+  }
+  .lp-tile--feature,
+  .lp-tile--wide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .lp-feature__window {
+    min-height: 240px;
+  }
+  .lp-careers__list {
+    grid-template-columns: 1fr;
+  }
+  .lp-career:nth-child(odd),
+  .lp-career:nth-child(even) {
+    padding-inline: 0;
+    border-right: 0;
+  }
+  .lp-final__lineup {
+    margin-top: 28px;
+  }
+}
+
+/* Homepage cleanup: remove the decorative radar treatment and enforce viewport rhythm. */
+.lp-hero {
+  height: min(760px, 100svh);
+  min-height: 600px;
+  max-height: 760px;
+}
+.lp-hero__body {
+  padding-top: 78px;
+  padding-bottom: 52px;
+}
+.lp-hero__panel {
+  transform: scale(0.94);
+  transform-origin: center right;
+}
+.lp-acre__stage {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.lp-acre__stage::before,
+.lp-acre__badge,
+.lp-acre__coords {
+  display: none;
+}
+.lp-acre__map {
+  inset: 2% 4% 3%;
+  filter: drop-shadow(0 0 1px var(--brass)) drop-shadow(0 16px 24px oklch(0 0 0 / 0.34));
+}
+.lp-acre__people {
+  bottom: 0;
+  left: 1%;
+  width: 98%;
+}
+.lp-acre__pins {
+  pointer-events: none;
+}
+.lp-pin em {
+  padding: 3px 7px;
+  border: 0;
+  color: oklch(1 0 0 / 0.82);
+  background: oklch(0.08 0.025 263 / 0.8);
+  box-shadow: none;
+  backdrop-filter: blur(4px);
+}
+.lp-pin i {
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 0 2px oklch(0.08 0.025 263 / 0.7), 0 0 14px var(--brass);
+}
+.lp-pin--cruzeiro em {
+  color: var(--brass-soft);
+  background: transparent;
+}
+.lp-acre__grid {
+  margin-top: 12px;
+}
+.lp-platform,
+.lp-method,
+.lp-careers,
+.lp-trust,
+.lp-final {
+  min-height: 0;
+}
+.lp-platform,
+.lp-method,
+.lp-careers,
+.lp-trust {
+  padding-block: clamp(52px, 6vw, 78px);
+}
+.lp-final {
+  padding-top: clamp(52px, 6vw, 80px);
+}
+@media (max-width: 900px) {
+  .lp-hero {
+    height: auto;
+    min-height: 680px;
+    max-height: none;
+  }
+  .lp-hero__panel {
+    transform: none;
+  }
+}
+@media (max-width: 767px) {
+  .lp-hero {
+    min-height: min(650px, 100svh);
+  }
+  .lp-hero__body {
+    padding-top: 78px;
+    padding-bottom: 64px;
+  }
+  .lp-hero__panel {
+    display: none;
+  }
+  .lp-acre__stage {
+    aspect-ratio: 1.2;
+    margin-bottom: 20px;
+  }
+  .lp-acre__map {
+    inset: 3% 2% 4%;
+  }
+  .lp-acre__people {
+    bottom: 1%;
+    left: 0;
+    width: 100%;
+  }
+  .lp-pin em {
+    display: none;
+  }
+  .lp-pin--cruzeiro em {
+    display: inline-block;
+    max-width: 104px;
+    overflow: hidden;
+    padding: 2px 5px;
+    font-size: 0.46rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* Homepage: reserve navigation space and let content determine section height. */
+.lp-header__bar,
+.lp-header[data-scrolled="true"] .lp-header__bar {
+  height: 68px;
+}
+.lp-section {
+  scroll-margin-top: 88px;
+}
+.lp-hero {
+  height: auto;
+  min-height: min(720px, 100svh);
+  max-height: none;
+  justify-content: flex-start;
+}
+.lp-hero__body {
+  flex: 1 0 auto;
+  padding-top: 112px;
+  padding-bottom: 36px;
+}
+.lp-hero__layout {
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 310px);
+  gap: 40px;
+  align-items: center;
+}
+.lp-hero__title {
+  max-width: 21ch;
+  font-size: clamp(2.5rem, 4.1vw, 3.6rem);
+  line-height: 1.04;
+}
+.lp-hero__panel {
+  transform: none;
+}
+.lp-rail {
+  position: relative;
+  inset: auto;
+  flex: 0 0 auto;
+}
+.lp-pcac {
+  background: #080e17;
+  padding-block: 48px;
+}
+.lp-pcac__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+}
+.lp-pcac__content {
+  max-width: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.lp-pcac .lp-h2 {
+  max-width: 23ch;
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  line-height: 1.08;
+}
+.lp-pcac__visual {
+  margin: 0;
+  min-width: 0;
+}
+.lp-pcac__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+  border: 1px solid #ffffff18;
+  border-radius: 16px;
+  background: #101925;
+}
+.lp-pcac__visual figcaption {
+  margin-top: 12px;
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.lp-acre__bg {
+  background:
+    linear-gradient(90deg, #080e17f2 0%, #080e17cc 48%, #080e1799 100%),
+    linear-gradient(180deg, #080e17 0%, transparent 20%, transparent 70%, #080e17 100%),
+    url('/media/acre-floresta.webp') center top / cover no-repeat;
+}
+.lp-acre__bg::before,
+.lp-acre__bg::after {
+  display: none;
+}
+.lp-acre__copy .lp-h2 {
+  max-width: 19ch;
+  font-size: clamp(2rem, 3.5vw, 3.1rem);
+  line-height: 1.08;
+}
+@media (max-width: 900px) {
+  .lp-hero__layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .lp-pcac__layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .lp-pcac__visual {
+    width: min(100%, 560px);
+  }
+}
+@media (max-width: 767px) {
+  .lp-hero {
+    min-height: 0;
+  }
+  .lp-hero__body {
+    padding-top: 96px;
+    padding-bottom: 32px;
+  }
+  .lp-hero__title {
+    max-width: 21ch;
+    font-size: clamp(2rem, 8.5vw, 3rem);
+  }
+  .lp-hero__lead {
+    display: block;
+    max-width: none;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+  }
+  .lp-pcac {
+    padding-block: 36px;
+  }
+  .lp-pcac__visual img {
+    max-height: 240px;
+  }
+  .lp-acre__bg {
+    background:
+      linear-gradient(180deg, #080e17ed 0%, #080e17b3 40%, #080e17f5 100%),
+      url('/media/acre-floresta.webp') center / cover no-repeat;
+  }
+}
+
+/* Internal areas: denser composition, thematic imagery and a restrained cursor light. */
+.page-hero,
+.tactical-feature-hero,
+.catalog-command-hero {
+  --hero-x: 78%;
+  --hero-y: 22%;
+  min-height: 196px;
+  padding: clamp(22px, 2.8vw, 34px);
+  background-position: var(--hero-position, 70% center);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.page-hero--lg {
+  min-height: 252px;
+}
+.page-hero--sm {
+  min-height: 144px;
+}
+.page-hero::after,
+.tactical-feature-hero::after,
+.catalog-command-hero::after {
+  opacity: 0.5;
+  background-image:
+    radial-gradient(260px circle at var(--hero-x) var(--hero-y), oklch(0.86 0.12 82 / 0.14), transparent 72%),
+    linear-gradient(oklch(1 0 0 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.035) 1px, transparent 1px);
+  background-size: auto, 44px 44px, 44px 44px;
+  transition: opacity 0.3s ease;
+}
+.page-hero:hover,
+.tactical-feature-hero:hover,
+.catalog-command-hero:hover {
+  border-color: color-mix(in oklab, var(--brass) 34%, transparent);
+  box-shadow: 0 26px 62px -42px oklch(0.12 0.03 262 / 0.95), inset 0 1px 0 oklch(1 0 0 / 0.1);
+}
+.page-hero h1,
+.tactical-feature-hero h1,
+.catalog-command-hero h1 {
+  max-width: 20ch;
+}
+.app-content {
+  padding-block: clamp(16px, 2.2vw, 28px) 44px;
+}
+.app-content__inner {
+  max-width: 1440px;
+}
+.app-content__inner > .space-y-6 {
+  row-gap: 1rem;
+}
+.app-footer {
+  margin-top: 34px;
+}
+
+/* Image focal points match the meaning of each internal area. */
+[data-hero="journey"] { --hero-position: 72% 56%; }
+[data-hero="study-desk"] { --hero-position: 76% 58%; }
+[data-hero="trainer"] { --hero-position: 82% 55%; }
+[data-hero="exam-hall"] { --hero-position: 74% 48%; }
+[data-hero="command-room"] { --hero-position: 78% 44%; }
+[data-hero="careers-team"] { --hero-position: 82% 48%; }
+[data-hero="field-map"] { --hero-position: 68% 52%; }
+[data-hero="toolkit"] { --hero-position: 74% 52%; }
+
+/* Homepage interaction: one soft directional highlight, no permanent overlay or canvas. */
+.lp {
+  --spot-x: 72vw;
+  --spot-y: 18vh;
+}
+.lp::before {
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+  content: "";
+  background: radial-gradient(300px circle at var(--spot-x) var(--spot-y), oklch(0.86 0.12 82 / 0.09), transparent 72%);
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  transition: background-position 0.15s ease;
+}
+.lp-tile,
+.lp-step,
+.lp-careers__item,
+.lp-platform__card {
+  transition: transform 0.25s var(--ease-out), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .lp-tile:hover,
+  .lp-step:hover,
+  .lp-careers__item:hover,
+  .lp-platform__card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in oklab, var(--brass) 38%, transparent);
+    box-shadow: 0 18px 40px -30px oklch(0 0 0 / 0.9), 0 0 0 1px oklch(0.8 0.13 78 / 0.08);
+  }
+}
+@media (max-width: 767px) {
+  .page-hero,
+  .tactical-feature-hero,
+  .catalog-command-hero {
+    min-height: 164px;
+    padding: 18px !important;
+  }
+  .page-hero--lg { min-height: 210px; }
+  .page-hero--sm { min-height: 132px; }
+  .app-content { padding-block: 12px 94px; }
+  .lp::before { display: none; }
+}
+
+/* Homepage remains clean: no cursor spotlight or canvas decoration. */
+.lp::before {
+  display: none;
+}
+.page-hero,
+.tactical-feature-hero,
+.catalog-command-hero {
+  --hero-x: 78%;
+  --hero-y: 22%;
+}
+.page-hero::after,
+.tactical-feature-hero::after,
+.catalog-command-hero::after {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+
+/* Internal workspace v4: a denser, calmer system for every student area. */
+.app-shell[data-area="student"] {
+  --app-sidebar-width: 248px;
+  background: var(--color-background);
+}
+.app-shell[data-area="student"] .app-sidebar {
+  width: var(--app-sidebar-width);
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--sidebar) 96%, #111827), var(--sidebar));
+  border-right: 1px solid color-mix(in oklab, var(--color-border) 74%, transparent);
+  box-shadow: 10px 0 28px -32px oklch(0 0 0 / 0.9);
+}
+.app-shell[data-area="student"] .app-sidebar[data-collapsed="true"] {
+  width: 76px;
+}
+.app-shell[data-area="student"] .app-sidebar[data-collapsed="true"] .app-nav__group {
+  height: 10px;
+  margin: 8px 0;
+  background: transparent;
+  border: 0;
+  color: transparent;
+}
+.app-shell[data-area="student"] .app-sidebar[data-collapsed="true"] .app-nav__link {
+  width: 42px;
+  margin-inline: auto;
+}
+.app-shell[data-area="student"] .app-sidebar__head {
+  height: 70px;
+  padding-inline: 16px 12px;
+}
+.app-shell[data-area="student"] .app-sidebar__search {
+  height: 38px;
+  margin: 12px 12px 8px;
+  border: 1px solid oklch(1 0 0 / 0.08);
+  border-radius: 10px;
+  background: oklch(1 0 0 / 0.045);
+}
+.app-shell[data-area="student"] .app-nav {
+  padding: 6px 10px 14px;
+}
+.app-shell[data-area="student"] .app-nav__group {
+  padding: 16px 10px 6px;
+  color: oklch(1 0 0 / 0.42);
+  font-size: 0.55rem;
+}
+.app-shell[data-area="student"] .app-nav__link {
+  height: 40px;
+  margin-block: 1px;
+  padding-inline: 11px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+.app-shell[data-area="student"] .app-sidebar__foot {
+  padding: 10px 12px;
+}
+.app-main {
+  min-width: 0;
+}
+.app-shell[data-area="student"] .app-topbar {
+  height: calc(64px + env(safe-area-inset-top));
+  padding-inline: clamp(16px, 2.8vw, 38px);
+  background: color-mix(in oklab, var(--color-background) 92%, transparent);
+  backdrop-filter: blur(16px);
+}
+.app-shell[data-area="student"] .app-topbar__actions {
+  gap: 6px;
+}
+.app-shell[data-area="student"] .app-top-search {
+  width: 214px;
+  height: 36px;
+  border-radius: 10px;
+}
+.app-shell[data-area="student"] .app-top-btn,
+.app-shell[data-area="student"] .app-streak {
+  height: 36px;
+  border-radius: 10px;
+}
+.app-shell[data-area="student"] .app-content {
+  padding: clamp(14px, 2vw, 26px) clamp(14px, 2.8vw, 40px) 48px;
+  background:
+    radial-gradient(760px 420px at 100% 0%, color-mix(in oklab, var(--brass) 4%, transparent), transparent 72%),
+    var(--color-background);
+}
+.app-shell[data-area="student"] .app-content__inner {
+  max-width: 1440px;
+}
+.app-shell[data-area="student"] .app-content__inner > .space-y-6 {
+  row-gap: 14px;
+}
+
+/* Every internal hero gets a clear text column and a restrained image field. */
+.app-shell .page-hero,
+.app-shell .tactical-feature-hero,
+.app-shell .catalog-command-hero {
+  min-height: 190px;
+  padding: clamp(20px, 2.8vw, 34px);
+  border-radius: 18px;
+  background-size: cover;
+  background-position: var(--hero-position, 78% center);
+  box-shadow: 0 18px 44px -36px oklch(0 0 0 / 0.85), inset 0 1px 0 oklch(1 0 0 / 0.1);
+}
+[data-hero="dashboard"] {
+  --hero-image: url("/media/hero/careers-team.webp");
+  --hero-position: 82% center;
+}
+.app-shell .page-hero--lg {
+  min-height: 238px;
+}
+.app-shell .page-hero--sm {
+  min-height: 136px;
+}
+.app-shell .page-hero::before,
+.app-shell .tactical-feature-hero::before,
+.app-shell .catalog-command-hero::before {
+  background:
+    linear-gradient(90deg, oklch(0.09 0.025 263 / 0.98) 0%, oklch(0.09 0.025 263 / 0.84) 38%, oklch(0.09 0.025 263 / 0.32) 72%, oklch(0.09 0.025 263 / 0.12) 100%),
+    linear-gradient(0deg, oklch(0.09 0.025 263 / 0.55), transparent 65%);
+}
+.app-shell .page-hero::after,
+.app-shell .tactical-feature-hero::after,
+.app-shell .catalog-command-hero::after {
+  opacity: 0.3;
+}
+.app-shell .page-hero__row {
+  gap: 16px 28px;
+}
+.app-shell .page-hero h1,
+.app-shell .tactical-feature-hero h1,
+.app-shell .catalog-command-hero h1 {
+  max-width: 18ch;
+  font-size: clamp(1.9rem, 3.1vw, 3rem) !important;
+}
+.app-shell .page-hero__desc,
+.app-shell .catalog-command-hero > p {
+  max-width: 560px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.app-shell .hero-stat {
+  padding: 11px 13px;
+  border-radius: 11px;
+}
+.app-shell .page-hero__stats {
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* Shared surfaces use one rhythm, so lists, metrics and tools feel like one product. */
+.app-shell .surface-card,
+.app-shell .card,
+.app-shell [data-slot="card"] {
+  border-color: color-mix(in oklab, var(--color-border) 80%, transparent);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px -26px oklch(0 0 0 / 0.85);
+}
+.app-shell .metric-tile,
+.app-shell .quick-action,
+.app-shell .command-panel,
+.app-shell .question-window,
+.app-shell .exam-question-window {
+  border-color: color-mix(in oklab, var(--color-border) 76%, transparent);
+  border-radius: 14px;
+  box-shadow: 0 14px 30px -28px oklch(0 0 0 / 0.9);
+}
+.app-shell .quick-action {
+  min-height: 72px;
+  padding: 13px 14px;
+}
+.app-shell .metric-tile {
+  padding: 14px;
+}
+.app-shell .metric-tile:hover,
+.app-shell .quick-action:hover,
+.app-shell [data-slot="card"]:has(a:hover) {
+  border-color: color-mix(in oklab, var(--brass) 36%, var(--color-border));
+  box-shadow: 0 18px 36px -28px color-mix(in oklab, var(--brass) 32%, transparent);
+}
+.app-shell table th {
+  color: var(--color-muted-foreground);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.app-shell table td,
+.app-shell table th {
+  padding-block: 11px;
+}
+
+@media (max-width: 1023px) {
+  .app-shell[data-area="student"] .app-sidebar { width: 232px; }
+  .app-shell[data-area="student"] .app-top-search { width: 40px; }
+}
+@media (max-width: 767px) {
+  .app-shell[data-area="student"] .app-topbar {
+    height: calc(58px + env(safe-area-inset-top));
+    padding-inline: 10px;
+  }
+  .app-shell[data-area="student"] .app-content {
+    padding: 10px 10px 92px;
+  }
+  .app-shell .page-hero,
+  .app-shell .tactical-feature-hero,
+  .app-shell .catalog-command-hero {
+    min-height: 154px;
+    padding: 16px !important;
+    border-radius: 14px;
+    background-position: 76% center;
+  }
+  .app-shell .page-hero--lg { min-height: 192px; }
+  .app-shell .page-hero--sm { min-height: 124px; }
+  .app-shell .page-hero::before,
+  .app-shell .tactical-feature-hero::before,
+  .app-shell .catalog-command-hero::before {
+    background: linear-gradient(90deg, oklch(0.09 0.025 263 / 0.96), oklch(0.09 0.025 263 / 0.66) 62%, oklch(0.09 0.025 263 / 0.24));
+  }
+  .app-shell .page-hero h1,
+  .app-shell .tactical-feature-hero h1,
+  .app-shell .catalog-command-hero h1 {
+    max-width: 16ch;
+    font-size: clamp(1.5rem, 7vw, 2.2rem) !important;
+  }
+  .app-shell .page-hero__desc,
+  .app-shell .catalog-command-hero > p {
+    font-size: 0.82rem;
+  }
+  .app-shell .page-hero__actions { gap: 6px; }
+  .app-shell .page-hero__actions > * { min-height: 38px; }
+  .app-shell .page-hero__stats { margin-top: 12px; }
+  .app-shell .hero-stat { padding: 9px; }
+}
+
+/* Radix ScrollArea thumb */
+[data-radix-scroll-area-thumb] {
+  background: var(--scroll-thumb) !important;
+  transition: background-color 0.2s;
+}
+[data-radix-scroll-area-thumb]:hover {
+  background: var(--scroll-thumb-hover) !important;
+}
+
+/* ==========================================================================
+   Cursor: hand on everything interactive
+   Kept outside any @layer so it also wins over utility classes such as
+   `cursor-default` baked into the dropdown, select and menu components.
+   ========================================================================== */
+
+:where(
+  a[href],
+  button,
+  summary,
+  select,
+  label[for],
+  label:has(> input[type="checkbox"]),
+  label:has(> input[type="radio"]),
+  label:has(> [role="checkbox"]),
+  label:has(> [role="radio"]),
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  input[type="file"],
+  input[type="color"],
+  [role="button"],
+  [role="link"],
+  [role="tab"],
+  [role="menuitem"],
+  [role="menuitemcheckbox"],
+  [role="menuitemradio"],
+  [role="option"],
+  [role="switch"],
+  [role="checkbox"],
+  [role="radio"],
+  [role="combobox"],
+  [role="treeitem"],
+  [aria-haspopup],
+  [cmdk-item],
+  [data-radix-collection-item],
+  .cursor-pointer
+) {
+  cursor: pointer;
+}
+:where([role="slider"], input[type="range"]) {
+  cursor: grab;
+}
+:where([role="slider"], input[type="range"]):active {
+  cursor: grabbing;
+}
+:where(
+  :disabled,
+  [aria-disabled="true"],
+  [data-disabled="true"],
+  [data-disabled="true"] *,
+  [data-disabled=""],
+  [data-disabled=""] *,
+  label:has(> :disabled)
+) {
+  cursor: not-allowed;
+}
+
+:where([cmdk-input]:not(:disabled)) {
+  cursor: text;
+  caret-color: currentColor;
+}
+
+
+/* Mobile homepage v2: image-led hero, readable type, and a calmer platform hub. */
+@media (max-width: 767px) {
+  .lp-hero {
+    min-height: 700px;
+    justify-content: flex-end;
+    background: var(--ink-deep);
+  }
+  .lp-hero__media::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: "";
+    background:
+      linear-gradient(180deg, oklch(0.08 0.025 263 / 0.1) 0%, oklch(0.08 0.025 263 / 0.18) 32%, oklch(0.08 0.025 263 / 0.92) 82%, var(--ink-deep) 100%),
+      url("/media/hero/careers-team.webp") 72% center / cover no-repeat;
+    opacity: 0.82;
+  }
+  .lp-hero__shade {
+    z-index: 2;
+    background: linear-gradient(180deg, oklch(0.08 0.025 263 / 0.18) 0%, transparent 34%, oklch(0.08 0.025 263 / 0.88) 85%, var(--ink-deep) 100%);
+  }
+  .lp-hero__body {
+    z-index: 3;
+    padding-top: 118px;
+    padding-bottom: 34px;
+  }
+  .lp-hero__content {
+    padding: 20px 18px 18px;
+    border: 1px solid oklch(1 0 0 / 0.16);
+    border-radius: 20px;
+    background: linear-gradient(160deg, oklch(0.08 0.025 263 / 0.72), oklch(0.08 0.025 263 / 0.38));
+    box-shadow: 0 22px 55px -36px oklch(0 0 0 / 0.95);
+    backdrop-filter: blur(8px);
+  }
+  .lp-hero__content > * {
+    animation-play-state: running !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .lp-hero__content .chip-brass {
+    font-size: 0.72rem;
+  }
+  .lp-hero__title {
+    max-width: 12ch;
+    margin-top: 16px;
+    font-size: clamp(2.45rem, 12vw, 3.55rem);
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+  }
+  .lp-hero__lead {
+    max-width: 33ch;
+    margin-top: 16px;
+    color: oklch(1 0 0 / 0.86);
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .lp-hero__ctas {
+    display: grid;
+    gap: 9px;
+    margin-top: 20px;
+  }
+  .lp-hero__ctas > * {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 0.88rem;
+  }
+  .lp-hero__aside,
+  .lp-hero__panel,
+  .lp-hero__pillars {
+    display: none;
+  }
+  .mh {
+    padding: 22px 14px 92px;
+    background: var(--color-background);
+  }
+  .mh__tabs {
+    gap: 7px;
+    margin: 0 -2px 20px;
+    padding: 3px 2px 8px;
+  }
+  .mh__tab {
+    min-height: 42px;
+    padding: 0 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-card);
+    color: var(--color-muted-foreground);
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+  .mh__tab.is-on {
+    border-color: var(--brass);
+    color: var(--brass-deep);
+    background: color-mix(in oklab, var(--brass) 14%, var(--color-card));
+    box-shadow: 0 8px 18px -14px var(--brass);
+  }
+  .mh__lead {
+    margin: 0 2px 16px;
+    color: var(--color-foreground);
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .mh__grid {
+    gap: 10px;
+  }
+  .mh__grid li {
+    min-height: 112px;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 15px;
+    background: var(--color-card);
+    box-shadow: 0 12px 26px -24px oklch(0 0 0 / 0.7);
+  }
+  .mh__grid strong {
+    margin-top: 8px;
+    font-size: 0.95rem;
+  }
+  .mh__grid span {
+    margin-top: 6px;
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+  .mh__cta {
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    background: color-mix(in oklab, var(--color-background) 88%, transparent);
+  }
+  .mh__cta > * {
+    min-height: 46px;
+    font-size: 0.82rem;
+  }
+}
+
+/* Acre map: a single, restrained visual system for the regional careers. */
+.lp-acre__stage {
+  aspect-ratio: 1.42;
+  overflow: hidden;
+  border: 1px solid oklch(1 0 0 / 0.12);
+  border-radius: 24px;
+  background:
+    linear-gradient(120deg, oklch(0.06 0.02 263 / 0.96), oklch(0.08 0.03 263 / 0.82)),
+    url("/media/acre-seguranca.jpg") center / cover;
+  box-shadow: 0 24px 54px -36px oklch(0 0 0 / 0.95), inset 0 1px 0 oklch(1 0 0 / 0.08);
+  isolation: isolate;
+}
+.lp-acre__stage::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(115deg, oklch(0.8 0.13 78 / 0.08), transparent 38%, oklch(0.18 0.04 263 / 0.35));
+}
+.lp-acre__stage::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  height: 24%;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 0%, oklch(0.055 0.02 263 / 0.78) 68%, oklch(0.055 0.02 263 / 0.98) 100%);
+}
+.lp-acre__stage-meta {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: oklch(1 0 0 / 0.58);
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.lp-acre__stage-meta::before {
+  width: 7px;
+  height: 7px;
+  content: "";
+  border: 1px solid var(--brass-soft);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px oklch(0.8 0.13 78 / 0.12);
+}
+.lp-acre__stage-meta b {
+  color: var(--brass-soft);
+  font-weight: 600;
+}
+.lp-acre__map {
+  inset: 11% 12% 15%;
+  z-index: 1;
+  opacity: 0.78;
+  filter: drop-shadow(0 0 1px var(--brass)) drop-shadow(0 18px 26px oklch(0 0 0 / 0.42));
+  transform: none;
+  animation: none;
+}
+.lp-acre__fill {
+  background:
+    linear-gradient(135deg, oklch(0.8 0.13 78 / 0.22), oklch(0.08 0.03 263 / 0.32)),
+    url("/media/acre-seguranca.jpg") center / cover;
+}
+.lp-acre__sheen::after {
+  display: none;
+}
+.lp-acre__people {
+  z-index: 3;
+  bottom: -7%;
+  left: 17%;
+  width: 68%;
+  max-width: 680px;
+  mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+  filter: drop-shadow(0 20px 22px oklch(0 0 0 / 0.62));
+  transform: none;
+}
+.lp-acre__pins {
+  z-index: 5;
+  transform: none;
+}
+.lp-pin i::after {
+  display: none;
+}
+.lp-pin em {
+  border-color: oklch(1 0 0 / 0.16);
+  background: oklch(0.06 0.02 263 / 0.86);
+  box-shadow: 0 8px 18px -12px oklch(0 0 0 / 0.9);
+}
+.lp-pin--cruzeiro em {
+  background: oklch(0.08 0.025 263 / 0.94);
+}
+@media (max-width: 767px) {
+  .lp-acre__stage {
+    aspect-ratio: 1.06;
+    border-radius: 18px;
+  }
+  .lp-acre__stage-meta {
+    top: 14px;
+    left: 15px;
+    font-size: 0.46rem;
+  }
+  .lp-acre__map {
+    inset: 14% 5% 17%;
+  }
+  .lp-acre__people {
+    bottom: -5%;
+    left: 8%;
+    width: 84%;
+  }
+}
+
+/* Mobile opening sequence: the intro video owns the first viewport, then the
+   hero content enters after the video finishes instead of stacking over it. */
+@media (max-width: 767px) {
+  .lp.is-intro .lp-header {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .lp.is-intro .lp-hero {
+    min-height: 100svh;
+  }
+  .lp.is-intro .lp-hero__body {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .lp.is-intro .lp-hero__shade {
+    background: linear-gradient(180deg, oklch(0.05 0.02 263 / 0.18), oklch(0.05 0.02 263 / 0.48));
+  }
+  .lp.is-ready .lp-header,
+  .lp.is-ready .lp-hero__body {
+    opacity: 1;
+    transition: opacity 0.7s var(--ease-out);
+  }
+  .lp-hero__media::before {
+    background-image: url("/media/hero/careers-team.webp");
+    background-position: 68% center;
+    filter: saturate(1.08) contrast(1.05);
+  }
+  .lp-hero__shade {
+    background:
+      linear-gradient(180deg, oklch(0.08 0.025 263 / 0.16) 0%, transparent 30%, oklch(0.08 0.025 263 / 0.9) 88%, var(--ink-deep) 100%),
+      linear-gradient(90deg, oklch(0.08 0.025 263 / 0.3), transparent 72%);
+  }
+}
+
+/* Internal heroes use the upper third of the team image so faces remain
+   visible in the shallow desktop banner. */
+.app-shell [data-hero="dashboard"] {
+  --hero-position: 82% 18%;
+}
+
+/* Mobile intro handoff: finish the video fade before releasing the hero. */
+@media (max-width: 767px) {
+  .lp-hero__media::before {
+    transition: opacity 0.45s var(--ease-out);
+    animation: none !important;
+  }
+  .lp-hero__video {
+    z-index: 2;
+    transition: opacity 0.45s var(--ease-out);
+  }
+}
+
+/* The mobile hero panel supports readability without hiding its visual field. */
+@media (max-width: 767px) {
+  .lp.is-ready .lp-hero__content {
+    border-color: oklch(1 0 0 / 0.18);
+    background: linear-gradient(160deg, oklch(0.08 0.025 263 / 0.48), oklch(0.08 0.025 263 / 0.16));
+    backdrop-filter: blur(6px) saturate(1.12);
+    -webkit-backdrop-filter: blur(6px) saturate(1.12);
+    box-shadow: 0 18px 40px -30px oklch(0.04 0.02 263 / 0.85);
+  }
+  .mh {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--ink-deep);
+  }
+  .mh::before,
+  .mh::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+  }
+  .mh::before {
+    z-index: -2;
+    background: url("/media/textura-acre-cinco-carreiras-v3.webp") center 42% / cover no-repeat;
+    opacity: 0.28;
+    filter: saturate(0.82) contrast(1.08);
+  }
+  .mh::after {
+    z-index: -1;
+    background: linear-gradient(180deg, oklch(0.08 0.025 263 / 0.7), oklch(0.08 0.025 263 / 0.93) 68%, oklch(0.08 0.025 263 / 0.98));
+  }
+  .mh > * {
+    position: relative;
+    z-index: 1;
   }
 }

@@ -1,0 +1,1714 @@
+{
+  "version": "2026-10-11",
+  "checked_at": "2026-10-11T19:31:22.581905+00:00",
+  "laws": [
+    {
+      "slug": "codigo-penal",
+      "title": "Código Penal — leitura atualizada",
+      "units": 19,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-1",
+        "art-42",
+        "art-43",
+        "art-47",
+        "art-123",
+        "art-124",
+        "art-125",
+        "art-126",
+        "art-157",
+        "art-159",
+        "art-163",
+        "art-171-a",
+        "art-172",
+        "art-183",
+        "art-183-a",
+        "art-184",
+        "art-267",
+        "art-342",
+        "art-343"
+      ],
+      "course_current_units": 401,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "dcfa2d2a605de5ac6896cc79e85c8880b11ef51a5a8b96f797660c582a5c52ff",
+      "source_checked_at": "2026-10-11T18:39:27.835549+00:00",
+      "scope": "Revisão pedagógica dos dispositivos corrigidos pelo reparo HTML5. Não declara concluído todo o percurso."
+    },
+    {
+      "slug": "lep",
+      "title": "Lei 7.210/1984 — Lei de Execução Penal",
+      "units": 8,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-9-a",
+        "art-34",
+        "art-83-a",
+        "art-83-b",
+        "art-114",
+        "art-146-b",
+        "art-146-c",
+        "art-146-e"
+      ],
+      "course_current_units": 216,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "source_sha256": "fff708f29f1e99c2cd87ad5babab7b8607220dc0d83ae0248a2572344ae6e549",
+      "source_checked_at": "2026-10-11T18:39:28.622733+00:00",
+      "scope": "Revisão pedagógica dos dispositivos corrigidos pelo reparo HTML5. Não declara concluído todo o percurso."
+    },
+    {
+      "slug": "eca",
+      "title": "Lei 8.069/1990 — Estatuto da Criança e do Adolescente",
+      "units": 1,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-87"
+      ],
+      "course_current_units": 326,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+      "source_sha256": "b43295cb76828f625682bd4b142739269747189b3065725ba6402951b9dc6e0e",
+      "source_checked_at": "2026-10-11T18:39:33.277470+00:00",
+      "scope": "Revisão pedagógica dos dispositivos corrigidos pelo reparo HTML5. Não declara concluído todo o percurso."
+    },
+    {
+      "slug": "maria-penha",
+      "title": "Lei 11.340/2006 — Lei Maria da Penha",
+      "units": 1,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-9"
+      ],
+      "course_current_units": 56,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "source_sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+      "source_checked_at": "2026-10-11T18:39:34.902543+00:00",
+      "scope": "Revisão pedagógica dos dispositivos corrigidos pelo reparo HTML5. Não declara concluído todo o percurso."
+    },
+    {
+      "slug": "lavagem",
+      "title": "Lei 9.613/1998 — Lavagem de Dinheiro",
+      "units": 2,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-2",
+        "art-17-a"
+      ],
+      "course_current_units": 25,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "source_sha256": "c73ac4ccad1d9a771934f78c127a4562d93918d16b5ec0413d6fce16d31e4f3a",
+      "source_checked_at": "2026-10-11T18:39:34.504923+00:00",
+      "scope": "Revisão pedagógica dos dispositivos corrigidos pelo reparo HTML5. Não declara concluído todo o percurso."
+    },
+    {
+      "slug": "transito",
+      "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro",
+      "units": 5,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-108",
+        "art-147",
+        "art-148",
+        "art-159",
+        "art-282"
+      ],
+      "course_current_units": 365,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "source_sha256": "5aba3440961659f7b5d65b7303d71905e386ab8e09ce50001fd98a547ce77136",
+      "source_checked_at": "2026-10-11T18:39:38.261932+00:00",
+      "scope": "Revisão pedagógica dos dispositivos corrigidos pelo reparo HTML5. Não declara concluído todo o percurso."
+    },
+    {
+      "slug": "uso-forca",
+      "title": "Decreto 12.341/2024 — Uso Diferenciado da Força",
+      "units": 4,
+      "scope_type": "targeted_correction",
+      "target_unit_keys": [
+        "art-5",
+        "art-6",
+        "art-8",
+        "art-9"
+      ],
+      "course_current_units": 11,
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "source_sha256": "041526f9ecae2926a48938de00ba75876a9a18b348ccf277b9bbf2aa9aef452d",
+      "source_checked_at": "2026-10-11T18:39:38.937924+00:00",
+      "scope": "Revisão pedagógica dos dispositivos corrigidos pelo reparo HTML5. Não declara concluído todo o percurso."
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "15366985-c480-53a4-8777-3ba8af0aa050",
+      "content_sha256": "1379144251dc0e3f17e0e38c7315a381678ea38faacc6546a3894390d07fafb9",
+      "simples": "Só há crime definido por lei anterior ao fato e pena previamente cominada. O artigo reúne reserva legal e anterioridade, protegendo contra incriminações e penas criadas depois da conduta.",
+      "pontos": [
+        "Crime e pena dependem de previsão legal anterior."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não transforme desaprovação moral em definição penal nem use lei posterior mais grave para o fato anterior."
+      ],
+      "exemplo": "Uma conduta ocorre antes da lei que a criminaliza; essa lei posterior não pode tornar aquele fato crime. Variação: A conduta é praticada depois da vigência da lei incriminadora: a anterioridade está atendida, sem dispensar os demais elementos do crime.",
+      "prova": [
+        "Pode uma lei posterior criar pena para um fato anterior? Não; é necessária prévia cominação legal."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-42",
+      "unit_id": "a8af499a-1c2c-5619-ac71-ecdc7a580449",
+      "content_sha256": "89ddc218b1aee73009abd0bb559dcdaeda7d8f7d0a7b51c6cef160cc78980654",
+      "simples": "Detração é o cômputo, na pena privativa de liberdade ou medida de segurança, do tempo de prisão provisória no Brasil ou no exterior, de prisão administrativa e de internação nos estabelecimentos referidos no artigo anterior.",
+      "pontos": [
+        "O artigo trata de tempo já suportado, não enumera penas restritivas de direitos."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "A lista de restritivas de direitos está no art. 43, agora separado."
+      ],
+      "exemplo": "Uma pessoa cumpre seis meses de prisão provisória no processo e recebe pena privativa de liberdade; esse tempo integra o cômputo da detração. Variação: O tempo de prisão provisória foi suportado no exterior: o texto também inclui essa hipótese.",
+      "prova": [
+        "A detração está limitada à prisão provisória no Brasil? Não; o art. 42 menciona expressamente o Brasil e o estrangeiro."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a8af499a-1c2c-5619-ac71-ecdc7a580449",
+        "content_sha256": "17b7c4354586f960a759d37f084e867b06d8810f45b4962545b5cef09c603043",
+        "simples": "Detração: computam-se na pena privativa de liberdade e na medida de segurança o tempo de prisão provisória, no Brasil ou no estrangeiro, o de prisão administrativa e o de internação em hospital de custódia ou estabelecimento adequado. (Na plataforma, o texto desta unidade aparece seguido da lista de penas restritivas de direitos do art. 43.)",
+        "pontos": [
+          "Computam-se: prisão provisória (no Brasil ou no exterior), prisão administrativa e internação.",
+          "Vale para pena privativa de liberdade e para medida de segurança.",
+          "O texto exibido a seguir traz as penas restritivas de direitos: prestação pecuniária, perda de bens e valores, prestação de serviço à comunidade ou a entidades públicas, interdição temporária de direitos e limitação de fim de semana."
+        ],
+        "atencao": [
+          "Detração desconta o tempo de prisão provisória da pena final.",
+          "A lista de penas restritivas de direitos pertence ao art. 43, que aparece junto ao texto desta unidade."
+        ],
+        "exemplo": "Quem ficou preso provisoriamente por 6 meses e é condenado tem esses 6 meses descontados da pena.",
+        "prova": [
+          "Assertiva que não desconta o tempo de prisão provisória cumprido no exterior contraria o art. 42."
+        ],
+        "termos": [
+          {
+            "termo": "Detração",
+            "significado": "Desconto, da pena, do tempo de prisão ou internação anteriores."
+          }
+        ],
+        "remissoes": [
+          "Art. 44 (substituição por restritivas de direitos)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-43",
+      "unit_id": "e4b5a04a-2ea8-551c-a823-bc0742c3705a",
+      "content_sha256": "cbee141fedaf8b3e5ecabbb33c4b67f967d88636143a5f840b6cdb52d4c2ac6a",
+      "simples": "O artigo enumera penas restritivas de direitos: prestação pecuniária, perda de bens e valores, limitação de fim de semana, prestação de serviço à comunidade ou a entidades públicas e interdição temporária de direitos.",
+      "pontos": [
+        "O texto compilado conserva a limitação de fim de semana nos incisos III e VI; isso não cria duas espécies diferentes."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "A enumeração não dispensa os requisitos de substituição do art. 44."
+      ],
+      "exemplo": "Um exercício pede espécie de pena restritiva: prestação de serviço à comunidade é uma das previstas. Variação: O exercício apresenta reclusão como restritiva de direitos; ela é pena privativa de liberdade, não item desta enumeração.",
+      "prova": [
+        "A limitação de fim de semana aparece em quais incisos do texto? Nos incisos III e VI; preserve a redação oficial e reconheça a mesma espécie."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-47",
+      "unit_id": "5b7bff5f-cf02-597b-9f0f-07804f964b2b",
+      "content_sha256": "4ebeeec1c84dbec92d949d840e13e0d24e6d772deab7d93dab488ca2fb7ca948",
+      "simples": "As interdições temporárias podem proibir cargo ou mandato público, exercício de profissão dependente de habilitação, suspender autorização ou habilitação para dirigir, proibir frequentar determinados lugares e proibir inscrição em concurso, avaliação ou exame públicos.",
+      "pontos": [
+        "Cinco hipóteses: função pública, profissão habilitada, direção, lugares e certames públicos."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não omita o inciso IV: a proibição de frequentar lugares foi recuperada na extração."
+      ],
+      "exemplo": "A sentença impõe proibição temporária de frequentar determinado local: a espécie consta do inciso IV. Variação: A restrição é à inscrição em concurso público: corresponde ao inciso V, não ao IV.",
+      "prova": [
+        "A proibição de frequentar lugares está prevista no art. 47? Sim, no inciso IV; inscrição em concurso é a hipótese distinta do inciso V."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "5b7bff5f-cf02-597b-9f0f-07804f964b2b",
+        "content_sha256": "7d453f74877de232b2327d22135a8e3dd172fdf0bb273c78f4c32b5ce0d255e0",
+        "simples": "Penas de interdição temporária de direitos: proibição do exercício de cargo, função ou atividade pública e de mandato eletivo; proibição do exercício de profissão, atividade ou ofício que dependam de habilitação especial, licença ou autorização do poder público; suspensão de autorização ou habilitação para dirigir veículo; e proibição de inscrever-se em concurso, avaliação ou exame públicos (o texto oficial lista os incisos I, II, III e V).",
+        "pontos": [
+          "I – cargo, função ou atividade pública e mandato eletivo.",
+          "II – profissão, atividade ou ofício que dependam de habilitação, licença ou autorização.",
+          "III – suspensão de autorização ou habilitação para dirigir.",
+          "V – proibição de inscrever-se em concurso, avaliação ou exame públicos."
+        ],
+        "atencao": [
+          "A proibição de concursos públicos (inciso V) foi incluída por lei de 2011 e é frequentemente cobrada."
+        ],
+        "exemplo": "Condenado por crime no exercício da função pública pode ficar proibido de exercer cargo público por um tempo.",
+        "prova": [
+          "Assertiva que exclui a proibição de inscrever-se em concurso público do rol de interdições contraria o inciso V."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 56 e 57 (aplicação das interdições)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:12:36.832519+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-123",
+      "unit_id": "a9ea1660-3ebc-5f61-bab5-dcfd6ba7ccdc",
+      "content_sha256": "613daeb20671aeb2f3488cdbead634b9c2f74efd0caceff6b5e613c2e476f696",
+      "simples": "Infanticídio é matar, sob influência do estado puerperal, o próprio filho, durante o parto ou logo após. A pena legal é detenção de dois a seis anos.",
+      "pontos": [
+        "Estado puerperal, próprio filho e momento do parto ou logo após são elementos do texto."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não basta afirmar que a autora é mãe; o caso precisa demonstrar os demais elementos. Não confunda detenção com reclusão."
+      ],
+      "exemplo": "A mãe, sob influência comprovada do estado puerperal, mata o próprio filho logo após o parto: a descrição corresponde ao art. 123. Variação: O enunciado não demonstra influência do estado puerperal; não se pode concluir pelo infanticídio apenas pela maternidade.",
+      "prova": [
+        "Qual a pena do art. 123? Detenção de dois a seis anos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a9ea1660-3ebc-5f61-bab5-dcfd6ba7ccdc",
+        "content_sha256": "9a3bdc1330cfffa48d0da9aa642590cfe432b16c389914f87e285e1f37727cd2",
+        "simples": "Infanticídio: matar, sob a influência do estado puerperal, o próprio filho, durante o parto ou logo após. O texto exibido traz apenas a descrição da conduta; a pena do infanticídio é de detenção (consulte o texto oficial completo).",
+        "pontos": [
+          "Autora: a mãe, sob a influência do estado puerperal.",
+          "Vítima: o próprio filho, durante o parto ou logo após.",
+          "Tipo especial em relação ao homicídio (privilegiado em razão do estado puerperal)."
+        ],
+        "atencao": [
+          "Elementares: ESTADO PUERPERAL + durante o parto ou logo após.",
+          "Na doutrina, o estado puerperal e a qualidade de mãe são elementares, e por isso se comunicam ao coautor (art. 30)."
+        ],
+        "exemplo": "Mãe, em estado puerperal, mata o recém-nascido logo após o parto: infanticídio, não homicídio.",
+        "prova": [
+          "Assertiva que aplica o infanticídio à morte do filho muito tempo depois do parto, sem relação com o estado puerperal, erra."
+        ],
+        "termos": [
+          {
+            "termo": "Estado puerperal",
+            "significado": "Alteração física e psíquica da mulher durante e logo após o parto."
+          }
+        ],
+        "remissoes": [
+          "Art. 121",
+          "Art. 30"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-124",
+      "unit_id": "d46aea80-d655-5a92-81d1-241c7b630fa6",
+      "content_sha256": "c9e95a3595ba539c55a7ceb85f917ff4b9e07980f8adfaa67ac57d75887bfcdb",
+      "simples": "A gestante que provoca aborto em si mesma ou consente que terceiro o provoque está descrita no art. 124. A pena é detenção de um a três anos.",
+      "pontos": [
+        "Duas condutas: provocar em si ou consentir que outra pessoa provoque."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Distinguir a responsabilidade da gestante daquela do terceiro, tratada nos arts. 125 e 126. As hipóteses legais e a ADPF 54 indicada na fonte precisam ser consideradas; a descrição isolada não resolve todo caso."
+      ],
+      "exemplo": "A gestante provoca aborto em si; para identificar a conduta descrita, consulte o art. 124 e depois examine as hipóteses de exclusão aplicáveis. Variação: O terceiro provoca com consentimento válido: sua conduta é tratada no art. 126, sem transferir para ele a pena da gestante.",
+      "prova": [
+        "Qual a pena prevista para a gestante no art. 124? Detenção de um a três anos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d46aea80-d655-5a92-81d1-241c7b630fa6",
+        "content_sha256": "c0ae98fa3cdc5278e52dc6cb370d34b22f841ebe94950f7e2d3c573b9b8174a2",
+        "simples": "Autoaborto e aborto consentido: provocar aborto em si mesma ou consentir que outrem o provoque. O texto oficial traz a indicação 'Vide ADPF 54': confira a decisão do STF sobre o tema.",
+        "pontos": [
+          "Gestante que provoca aborto em si mesma.",
+          "Gestante que consente que outra pessoa lho provoque."
+        ],
+        "atencao": [
+          "É crime próprio: só a gestante pratica. O terceiro que provoca com consentimento responde pelo art. 126.",
+          "O texto remete à ADPF 54: antes de memorizar o alcance, confira o julgamento."
+        ],
+        "exemplo": "A gestante toma substância abortiva por conta própria: art. 124.",
+        "prova": [
+          "Assertiva que aplica o art. 124 ao médico que realiza o aborto com consentimento da gestante erra: ele responde pelo art. 126."
+        ],
+        "termos": [
+          {
+            "termo": "Crime próprio",
+            "significado": "Crime que só pode ser praticado por determinada pessoa (aqui, a gestante)."
+          }
+        ],
+        "remissoes": [
+          "Arts. 125 a 128"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-125",
+      "unit_id": "dc8d5b30-8387-5eb7-b411-0bef8774e984",
+      "content_sha256": "dd0359f71caa343744ff823ab952a5dd75b2f45e77769823b3496b5027922e33",
+      "simples": "Provocar aborto sem consentimento da gestante tem pena de reclusão de três a dez anos. O sujeito que provoca é terceiro; a ausência de consentimento distingue esta figura da do art. 126.",
+      "pontos": [
+        "Ausência de consentimento; reclusão de três a dez anos."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não transporte a pena de um a quatro anos do art. 126 para esta figura. Examine também as consequências qualificadoras do art. 127 quando o caso as apresentar."
+      ],
+      "exemplo": "Um terceiro provoca aborto sem consentimento da gestante: a descrição é a do art. 125. Variação: Há consentimento válido: a distinção inicial passa ao art. 126, ressalvadas as condições do parágrafo único.",
+      "prova": [
+        "A pena do aborto sem consentimento é detenção? Não; é reclusão de três a dez anos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "dc8d5b30-8387-5eb7-b411-0bef8774e984",
+        "content_sha256": "ffe33bb7d0b3a2c47efd519a6df63a8f5cd708d6294f74e66efc632348556248",
+        "simples": "Aborto provocado por terceiro sem o consentimento da gestante. É a forma mais grave do aborto provocado por terceiro; a pena é de reclusão (confira o texto oficial).",
+        "pontos": [
+          "Terceiro provoca aborto, sem consentimento da gestante."
+        ],
+        "atencao": [
+          "Diferença entre os arts. 125 e 126: ausência ou presença de consentimento da gestante."
+        ],
+        "exemplo": "Alguém agride a gestante com o fim de provocar aborto, sem o seu consentimento: art. 125.",
+        "prova": [
+          "Assertiva que exige o consentimento da gestante para o art. 125 inverte o tipo: ele pressupõe a ausência de consentimento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 124",
+          "Art. 126",
+          "Art. 127"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-126",
+      "unit_id": "fc8f34bb-5912-5980-9761-625d8009db16",
+      "content_sha256": "2aa0537611ac5762ef287e611ca2da81bd9331c54842b3fa4bf29811efa3b351",
+      "simples": "O terceiro que provoca aborto com consentimento da gestante tem pena de reclusão de um a quatro anos. Aplica-se a pena do art. 125 se a gestante não é maior de quatorze anos, é alienada ou débil mental, ou se o consentimento decorre de fraude, grave ameaça ou violência, nos termos literais do parágrafo único.",
+      "pontos": [
+        "O consentimento precisa ser juridicamente válido; o limite etário do texto é não ser maior de quatorze anos."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Exatamente quatorze anos também está dentro da expressão não é maior de quatorze. A ADPF 54 indicada na fonte exige exame separado da hipótese concreta."
+      ],
+      "exemplo": "Um terceiro provoca aborto em gestante de quatorze anos, com seu consentimento: o parágrafo único remete à pena do art. 125. Variação: A gestante adulta consente, mas foi enganada por fraude: a remissão ao art. 125 continua relevante.",
+      "prova": [
+        "Consentimento de gestante com exatamente quatorze anos afasta o parágrafo único? Não; ela ainda não é maior de quatorze anos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "fc8f34bb-5912-5980-9761-625d8009db16",
+        "content_sha256": "51117fa375349fdd29ff32ebdd91cd72b34e53bb0bad6d1dc34db8ca02e292a5",
+        "simples": "Aborto provocado por terceiro com o consentimento da gestante. Aplica-se a pena do artigo anterior (aborto sem consentimento) se a gestante não é maior de 14 anos, é alienada ou débil mental, ou se o consentimento é obtido mediante fraude, grave ameaça ou violência. O texto oficial traz 'Vide ADPF 54'.",
+        "pontos": [
+          "Terceiro provoca aborto com o consentimento da gestante.",
+          "Parágrafo único: consentimento irrelevante se a gestante não é maior de 14 anos, é alienada ou débil mental, ou o consentimento é viciado por fraude, grave ameaça ou violência: pena do art. 125."
+        ],
+        "atencao": [
+          "Consentimento inválido (menor de 14, alienada mental ou obtido por fraude/ameaça/violência) equipara-se à ausência de consentimento.",
+          "Confira a ADPF 54 indicada no texto."
+        ],
+        "exemplo": "Quem realiza aborto em gestante de 13 anos, mesmo com seu consentimento, responde com a pena do art. 125.",
+        "prova": [
+          "Assertiva que valida o consentimento de gestante menor de 14 anos erra: o parágrafo único o desconsidera."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 124, 125, 127"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-157",
+      "unit_id": "17312c10-e97f-5084-9f27-273499e1f6a6",
+      "content_sha256": "5a96e9a3253bf688a053fba44ac36664886ee85c948a8b2afdb49fadc7bf1b97",
+      "simples": "Roubo reúne subtração de coisa móvel alheia e violência, grave ameaça ou redução da resistência. O §1º também alcança violência ou ameaça empregadas logo depois da subtração para assegurar impunidade ou a detenção da coisa. O §2º, IV, prevê aumento quando o veículo automotor subtraído venha a ser transportado para outro Estado ou exterior.",
+      "pontos": [
+        "O texto atual contém penas e circunstâncias alteradas em 2026; leia cada hipótese separadamente, inclusive formas qualificadas e organizações ultraviolentas."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Violência posterior exige a finalidade descrita no §1º. Para o inciso IV, a efetiva hipótese de transporte não se confunde com qualquer roubo de veículo. Não some majorantes automaticamente sem examinar as regras aplicáveis."
+      ],
+      "exemplo": "Após subtrair o bem, o agente ameaça a vítima para conservá-lo: a sequência e a finalidade ilustram o §1º. Variação: Um veículo é roubado e transportado para outro Estado: o §2º, IV, deve ser examinado, além dos demais elementos do caso.",
+      "prova": [
+        "Violência empregada logo depois da subtração pode configurar roubo? Sim, quando busca assegurar a impunidade ou a detenção da coisa, conforme §1º."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "17312c10-e97f-5084-9f27-273499e1f6a6",
+        "content_sha256": "492b4c868c2a10fa6b9de633057d73ad766bad2140b835235ce55ecd1d29fe56",
+        "simples": "Roubo: subtrair coisa móvel alheia, para si ou para outrem, mediante grave ameaça ou violência a pessoa, ou depois de havê-la, por qualquer meio, reduzido à impossibilidade de resistência. Pena: reclusão de 6 a 10 anos e multa (texto atual). Aumento de 1/3 até metade (§2º) em hipóteses como concurso de duas ou mais pessoas, vítima em serviço de transporte de valores, manutenção da vítima em poder do agente, subtração de explosivos, emprego de arma branca, subtração de certos bens (fios e cabos, celulares e computadores, armas de fogo, combustíveis). Aumento de 2/3 (§2º-A): arma de fogo, ou destruição de obstáculo com explosivo. Se a arma é de uso restrito ou proibido, pena em dobro (§2º-B). Roubo qualificado pelo resultado (§3º): lesão grave: reclusão de 7 a 18 anos e multa; morte (latrocínio): reclusão de 24 a 30 anos e multa.",
+        "pontos": [
+          "Caput: grave ameaça, violência ou redução à impossibilidade de resistência; reclusão de 6 a 10 anos e multa.",
+          "§2º: aumento de 1/3 até metade (concurso de pessoas; transporte de valores; vítima mantida em poder do agente; explosivos; arma branca; certos bens).",
+          "§2º-A: aumento de 2/3 (arma de fogo; explosivo para romper obstáculo).",
+          "§2º-B: arma de fogo de uso restrito ou proibido: pena em dobro.",
+          "§3º, I: lesão grave: reclusão de 7 a 18 anos e multa.",
+          "§3º, II: morte: reclusão de 24 a 30 anos e multa.",
+          "§4º e §5º: formas com organização ultraviolenta, paramilitar ou milícia (pena em triplo; reclusão de 20 a 40 anos se há morte)."
+        ],
+        "atencao": [
+          "Roubo = subtração + VIOLÊNCIA, GRAVE AMEAÇA ou redução da resistência.",
+          "Latrocínio (§3º, II) é o roubo com resultado MORTE e é crime hediondo.",
+          "Arma de fogo: aumento de 2/3 (§2º-A); arma branca: aumento de 1/3 a metade (§2º, VII); arma de fogo de uso restrito ou proibido: dobro (§2º-B)."
+        ],
+        "exemplo": "Assaltante rende a vítima com uma arma de fogo e leva seu celular: roubo com aumento de 2/3 (e, conforme o texto, também causa de aumento pelo objeto).",
+        "prova": [
+          "Assertiva que aplica aumento de metade ao roubo com arma de fogo troca o percentual: o §2º-A fixa 2/3."
+        ],
+        "termos": [
+          {
+            "termo": "Latrocínio",
+            "significado": "Roubo seguido de morte (art. 157, §3º, II)."
+          }
+        ],
+        "remissoes": [
+          "Art. 155",
+          "Art. 158 (extorsão)",
+          "Lei dos crimes hediondos"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-159",
+      "unit_id": "05dcc074-4e75-5aff-82bb-2ae98e0400ce",
+      "content_sha256": "f1539dd8c25b0c1c7af8cb84d2da356fd9fcda7a6fcaf04b43cd6aa83bf573cf",
+      "simples": "Extorsão mediante sequestro envolve sequestrar para obter vantagem como condição ou preço do resgate. O caput prevê reclusão de oito a quinze anos. O §1º eleva para doze a vinte anos nas condições que enumera; lesão grave leva a dezesseis a vinte e quatro, e morte a vinte e quatro a trinta anos.",
+      "pontos": [
+        "§1º: duração maior que 24 horas, vítima menor de 18 ou maior de 60, ou crime cometido por bando ou quadrilha, conforme redação literal."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Exatamente 24 horas não satisfaz a condição temporal; exatamente 60 anos não é maior de 60. O artigo também contém redução por colaboração eficaz e aumento relacionado a organizações, a serem distinguidos."
+      ],
+      "exemplo": "O sequestro para resgate dura 25 horas: a condição temporal do §1º está presente. Variação: Dura 24 horas e a vítima tem exatamente 60 anos: esses dois fatos, isoladamente, não atendem aos respectivos limites do §1º; outras hipóteses ainda podem incidir.",
+      "prova": [
+        "Qual a pena se do fato resulta morte no §3º? Reclusão de vinte e quatro a trinta anos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "05dcc074-4e75-5aff-82bb-2ae98e0400ce",
+        "content_sha256": "026f35f3d65524a014d96bf9f270cdbdd438b550f5038239b2f42e669a132d41",
+        "simples": "Extorsão mediante sequestro: sequestrar pessoa com o fim de obter, para si ou para outrem, qualquer vantagem, como condição ou preço do resgate. Pena: reclusão de 8 a 15 anos. Se resulta lesão grave: reclusão de 16 a 24 anos; se resulta morte, pena maior, conforme o texto completo (o texto traz a indicação 'Vide Lei nº 8.072/90'). No concurso, o concorrente que denunciar à autoridade, facilitando a libertação do sequestrado, tem pena reduzida de um a dois terços. Se o crime é cometido por integrante de organização criminosa ultraviolenta, paramilitar ou milícia, aumenta-se a pena em 2/3.",
+        "pontos": [
+          "Sequestrar pessoa para obter qualquer vantagem como condição ou preço do resgate.",
+          "Caput: reclusão de 8 a 15 anos.",
+          "§2º: lesão grave: reclusão de 16 a 24 anos.",
+          "§3º: morte (pena maior).",
+          "§4º: delação premiada: redução de 1/3 a 2/3 ao concorrente que denunciar e facilitar a libertação.",
+          "§5º: organização ultraviolenta, paramilitar ou milícia: aumento de 2/3."
+        ],
+        "atencao": [
+          "Vantagem de QUALQUER natureza (não só econômica).",
+          "É crime hediondo (lei especial).",
+          "§4º: delação eficaz reduz a pena de um a dois terços."
+        ],
+        "exemplo": "Sequestradores exigem pagamento da família para libertar a vítima: art. 159.",
+        "prova": [
+          "Assertiva que exige vantagem econômica no art. 159 erra: o texto fala em qualquer vantagem."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 148",
+          "Art. 158"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-163",
+      "unit_id": "7df48aa8-1dc7-5e63-beb5-10a0918f92a6",
+      "content_sha256": "4dd1f218f3a0a0ee37bce1f3231e5dceba0792b0cee6b7bbba9eca28c2b273bf",
+      "simples": "Dano é destruir, inutilizar ou deteriorar coisa alheia. O caput prevê detenção de um a seis meses ou multa. O parágrafo único qualifica hipóteses de violência ou ameaça, substância inflamável ou explosiva nas condições previstas, patrimônio público enumerado e motivo egoístico ou prejuízo considerável.",
+      "pontos": [
+        "O inciso III inclui entidades públicas enumeradas e empresa concessionária de serviços públicos."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "No dano qualificado: detenção de seis meses a três anos e multa, além da pena correspondente à violência. Identifique a titularidade do patrimônio antes de usar o inciso III."
+      ],
+      "exemplo": "O agente destrói bem de empresa concessionária de serviço público: a hipótese patrimonial do inciso III deve ser examinada. Variação: O bem pertence ao vizinho e não há outra qualificadora: o simples fato de ser coisa alheia não satisfaz o inciso III.",
+      "prova": [
+        "A concessionária está abrangida pela qualificadora patrimonial? Sim; o inciso III a inclui expressamente."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "7df48aa8-1dc7-5e63-beb5-10a0918f92a6",
+        "content_sha256": "aa32912ab9303649eec9d35bcd6d65cb8407de1c0d285b4c23b6386eb8c48f63",
+        "simples": "Dano: destruir, inutilizar ou deteriorar coisa alheia. Pena: detenção de 1 a 6 meses, ou multa. Dano qualificado (detenção de 6 meses a 3 anos e multa, além da pena da violência) quando cometido com violência à pessoa ou grave ameaça; com emprego de substância inflamável ou explosiva, se o fato não constitui crime mais grave; ou por motivo egoístico ou com prejuízo considerável para a vítima. Confira o texto completo para as demais hipóteses de dano qualificado.",
+        "pontos": [
+          "Caput: destruir, inutilizar ou deteriorar coisa alheia: detenção de 1 a 6 meses, ou multa.",
+          "Parágrafo único: qualificadoras (violência ou grave ameaça; substância inflamável ou explosiva; motivo egoístico ou prejuízo considerável).",
+          "Pena do dano qualificado: detenção de 6 meses a 3 anos e multa, além da violência."
+        ],
+        "atencao": [
+          "Dano exige DOLO de destruir/inutilizar/deteriorar; não há dano culposo.",
+          "A coisa deve ser ALHEIA."
+        ],
+        "exemplo": "Quebrar de propósito o vidro do carro do vizinho: dano.",
+        "prova": [
+          "Assertiva que pune o dano culposo erra: o crime só existe na forma dolosa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 167 (ação penal)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-171-a",
+      "unit_id": "efcb7a24-7edc-5c75-8e76-a7fe351700c9",
+      "content_sha256": "d3a24d2d2f0bc6e1d9793b58f5dadaef6d3d453fdde6b0bcd6e59be218c0a1ef",
+      "simples": "O tipo envolve organizar, gerir, ofertar ou distribuir carteiras ou intermediar operações com ativos virtuais, valores mobiliários ou financeiros, buscando vantagem ilícita em prejuízo alheio por indução ou manutenção em erro mediante fraude. A pena é reclusão de quatro a oito anos e multa.",
+      "pontos": [
+        "Finalidade ilícita, prejuízo e meio fraudulento integram a descrição."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "A duplicata simulada do art. 172 é crime separado; sua pena não pertence a esta unidade."
+      ],
+      "exemplo": "Uma operação de ativos virtuais é ofertada mediante ardil para induzir investidores em erro e obter vantagem ilícita: o enunciado deve ser confrontado com os elementos do art. 171-A. Variação: Há operação regular que sofreu perda de mercado, sem fraude demonstrada: a perda, por si, não comprova o tipo.",
+      "prova": [
+        "A pena da duplicata simulada integra o art. 171-A? Não; a duplicata simulada está no art. 172."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "efcb7a24-7edc-5c75-8e76-a7fe351700c9",
+        "content_sha256": "4beb8c2b397d7ccf025b9024010b6a48d14b84f577eb2867bdfbd6291eb5e91a",
+        "simples": "Fraude com ativos virtuais, valores mobiliários ou ativos financeiros: organizar, gerir, ofertar ou distribuir carteiras ou intermediar operações que envolvam ativos virtuais, valores mobiliários ou quaisquer ativos financeiros com o fim de obter vantagem ilícita, em prejuízo alheio, induzindo ou mantendo alguém em erro, mediante artifício, ardil ou qualquer outro meio fraudulento. Pena: reclusão de 4 a 8 anos e multa. (Na plataforma, o texto desta unidade vem seguido da duplicata simulada, com pena de detenção de 2 a 4 anos e multa, e seu parágrafo único sobre falsificação da escrituração do Livro de Registro de Duplicatas.)",
+        "pontos": [
+          "Organizar, gerir, ofertar, distribuir carteiras ou intermediar operações com ativos virtuais, valores mobiliários ou ativos financeiros.",
+          "Fim de obter vantagem ilícita, em prejuízo alheio, com fraude.",
+          "Pena: reclusão de 4 a 8 anos e multa.",
+          "O texto exibido a seguir traz a duplicata simulada: detenção de 2 a 4 anos e multa."
+        ],
+        "atencao": [
+          "O tipo exige fraude e indução em erro (como no estelionato).",
+          "A duplicata simulada é crime autônomo, cujo texto aparece junto a esta unidade."
+        ],
+        "exemplo": "Oferecer investimento em criptomoedas prometendo lucros certos para enganar clientes.",
+        "prova": [
+          "Assertiva que dispensa a fraude para configurar o art. 171-A erra."
+        ],
+        "termos": [
+          {
+            "termo": "Ativo virtual",
+            "significado": "Representação digital de valor negociável (como criptoativos)."
+          }
+        ],
+        "remissoes": [
+          "Art. 171"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-172",
+      "unit_id": "fa196b1d-b6da-589a-a20a-7ac90ae66f9c",
+      "content_sha256": "ad4b850133235d68b4e8405fdbeffce26ebe0d19f258e5edadffa6a927b1873b",
+      "simples": "Duplicata simulada é emitir fatura, duplicata ou nota de venda que não corresponda à mercadoria vendida em quantidade ou qualidade, ou ao serviço prestado. A pena é detenção de dois a quatro anos e multa. O parágrafo único inclui falsificar ou adulterar a escrituração do Livro de Registro de Duplicatas.",
+      "pontos": [
+        "Não correspondência à mercadoria ou serviço; falsificação ou adulteração do livro também abrangida."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não confunda emissão de duplicata simulada com a fraude de ativos virtuais do art. 171-A."
+      ],
+      "exemplo": "A empresa emite duplicata por quantidade de mercadoria que não foi vendida: a descrição deve ser confrontada com o caput. Variação: O agente adultera o Livro de Registro de Duplicatas: o parágrafo único prevê as mesmas penas.",
+      "prova": [
+        "O parágrafo único tem pena própria mais branda? Não; determina aplicação das mesmas penas do caput."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-183",
+      "unit_id": "0bf55541-354e-5776-8755-258a8501c936",
+      "content_sha256": "9aec87bd38075718b93eef3d02046c4dd132289bea6fc7c541af23b46431090b",
+      "simples": "As imunidades dos arts. 181 e 182 não se aplicam em roubo, extorsão ou, em geral, grave ameaça ou violência à pessoa; ao estranho participante; nem quando o crime é praticado contra pessoa com idade igual ou superior a sessenta anos.",
+      "pontos": [
+        "O limite do inciso III é igual ou superior a 60 anos."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não memorize a imunidade familiar sem conferir as três exceções."
+      ],
+      "exemplo": "O filho pratica crime patrimonial contra pai com exatamente sessenta anos: o inciso III afasta as imunidades referidas. Variação: A vítima tem 59 anos: esse inciso não incide pela idade, mas as demais exceções e os arts. 181 e 182 ainda precisam ser examinados.",
+      "prova": [
+        "A vítima precisa ter mais de sessenta anos? Não; exatamente sessenta já satisfaz o inciso III."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "0bf55541-354e-5776-8755-258a8501c936",
+        "content_sha256": "3f06fdf075b8d06ee3e68aa59e5a418a2c398aeef820ee6a33b576687997eab9",
+        "simples": "Exceções às imunidades: não se aplicam os arts. 181 e 182 se o crime é roubo ou extorsão, ou, em geral, quando haja emprego de grave ameaça ou violência à pessoa; e ao estranho que participa do crime.",
+        "pontos": [
+          "Roubo, extorsão ou, em geral, grave ameaça ou violência: sem imunidade.",
+          "O estranho que participa do crime não se beneficia."
+        ],
+        "atencao": [
+          "A imunidade é pessoal: não se comunica ao estranho (art. 30)."
+        ],
+        "exemplo": "O filho que rouba o pai com ameaça não é isento de pena.",
+        "prova": [
+          "Assertiva que estende a imunidade do art. 181 ao coautor estranho à família erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 181 e 182",
+          "Art. 30"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-183-a",
+      "unit_id": "66dbc21e-214a-5a3a-b206-375312e5fe99",
+      "content_sha256": "24333fec254d8c20f79800eefa9dcd1b98804bf8f209bc565552d20233f949b0",
+      "simples": "As penas dos crimes do título patrimonial, cometidos contra instituições financeiras e prestadores de serviço de segurança privada regidos pelo Estatuto da Segurança Privada, aumentam de um terço até o dobro. É causa de aumento, não crime autônomo.",
+      "pontos": [
+        "Incluído pela Lei 14.967/2024; pertence ao título dos crimes contra o patrimônio."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não inclui as penas de direito autoral do art. 184. Diferencie o intervalo de aumento da pena-base do crime patrimonial."
+      ],
+      "exemplo": "Um crime do título patrimonial é cometido contra instituição financeira: examina-se a causa de aumento do art. 183-A. Variação: A discussão é sobre violação de direito autoral: o art. 184 está em outro título e não é texto deste artigo.",
+      "prova": [
+        "O art. 183-A cria pena autônoma de detenção? Não; aumenta as penas dos crimes patrimoniais abrangidos de um terço até o dobro."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "66dbc21e-214a-5a3a-b206-375312e5fe99",
+        "content_sha256": "a06ed90a3095b6b398e6239e399badfc7645c96a1ea1138215d32b9644c76b64",
+        "simples": "Aumento de pena nos crimes patrimoniais cometidos contra instituições financeiras e prestadores de serviço de segurança privada (Estatuto da Segurança Privada): penas aumentadas de 1/3 até o dobro. (Na plataforma, o texto desta unidade traz em seguida a violação de direito autoral, art. 184, com detenção de 3 meses a 1 ano ou multa; reclusão de 2 a 4 anos e multa na reprodução com intuito de lucro e no oferecimento ao público por sistema que permita a seleção da obra; e a exceção do §4º para limitações ao direito de autor e cópia privada de um só exemplar sem lucro.)",
+        "pontos": [
+          "Crimes do título contra instituições financeiras e prestadores de segurança privada: aumento de 1/3 até o dobro.",
+          "Violação de direito autoral: detenção de 3 meses a 1 ano, ou multa; formas com intuito de lucro: reclusão de 2 a 4 anos e multa.",
+          "§4º: não se aplica às limitações ao direito de autor nem à cópia privada de um só exemplar sem lucro."
+        ],
+        "atencao": [
+          "O aumento é de 1/3 até o DOBRO.",
+          "A violação de direito autoral com intuito de lucro tem pena de reclusão."
+        ],
+        "exemplo": "Roubo a uma agência bancária: pena aumentada nos termos do art. 183-A.",
+        "prova": [
+          "Assertiva que fixa o aumento de 183-A em até metade erra: é de um terço até o dobro."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 186 (ação penal nos crimes contra a propriedade imaterial)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-184",
+      "unit_id": "25f6d384-700e-5062-bbca-f8a384274333",
+      "content_sha256": "fa22d31798291c94c12310a61689b4a5df70e5910ad7bba19a2fe665f6600e4a",
+      "simples": "O caput pune violação de direitos de autor e conexos com detenção de três meses a um ano ou multa. As formas dos §§1º a 3º envolvem reprodução, circulação ou oferta ao público nas condições e com intuito de lucro descritos, com reclusão de dois a quatro anos e multa.",
+      "pontos": [
+        "§4º exclui a aplicação dos §§1º a 3º nas limitações ou exceções legais e na cópia de um só exemplar para uso privado, sem lucro direto ou indireto."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "A exceção do §4º tem alcance expresso sobre os §§1º a 3º; não formule autorização genérica para toda cópia. As limitações de direito autoral dependem também da Lei 9.610/1998."
+      ],
+      "exemplo": "A pessoa reproduz obra sem autorização para vendê-la e lucrar: o §1º deve ser examinado. Variação: Faz um só exemplar para uso privado e sem lucro: compare com a ressalva específica do §4º, sem extrapolá-la para venda ou múltiplas cópias.",
+      "prova": [
+        "A pena do caput é a mesma das formas com intuito de lucro? Não; caput: detenção de três meses a um ano ou multa; §§1º a 3º: reclusão de dois a quatro anos e multa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-267",
+      "unit_id": "d5dd97bc-c6a5-5ca0-ab42-bdb6997f7e5a",
+      "content_sha256": "32181a676f2731e85cc0bdcc872f35316329774bfefa2adc36c1cce323a8aac7",
+      "simples": "Causar epidemia por propagação de germes patogênicos tem pena de reclusão de dez a quinze anos. Havendo morte, a pena é aplicada em dobro. Na modalidade culposa, prevê detenção de um a dois anos, ou de dois a quatro anos se resulta morte.",
+      "pontos": [
+        "Dolo: reclusão; culpa: detenção nos intervalos próprios do §2º."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não aplique automaticamente o dobro do §1º à modalidade culposa, que tem regra expressa própria."
+      ],
+      "exemplo": "O agente dolosamente causa epidemia por germes patogênicos e dela resulta morte: examina-se a aplicação em dobro do §1º. Variação: O resultado decorre de culpa e ocorre morte: a pena descrita no §2º é detenção de dois a quatro anos.",
+      "prova": [
+        "Qual a pena da epidemia culposa com morte? Detenção de dois a quatro anos, conforme §2º."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d5dd97bc-c6a5-5ca0-ab42-bdb6997f7e5a",
+        "content_sha256": "21c1db82a45bc0b55357f685214b877a213ccb634dc804eb5f4990d99a79157a",
+        "simples": "Epidemia: causar epidemia, mediante a propagação de germes patogênicos. Se do fato resulta morte, a pena é aplicada em dobro. No caso de culpa: detenção de um a dois anos, ou, se resulta morte, de dois a quatro anos.",
+        "pontos": [
+          "Causar epidemia mediante propagação de germes patogênicos.",
+          "§1º: resulta morte: pena em dobro.",
+          "§2º: culposo: detenção de um a dois anos, ou de dois a quatro anos se resulta morte."
+        ],
+        "atencao": [
+          "Crime hediondo na forma dolosa com resultado morte (conforme a Lei dos Crimes Hediondos)."
+        ],
+        "exemplo": "Propagar deliberadamente germes patogênicos entre a população.",
+        "prova": [
+          "Assertiva que afasta a modalidade culposa da epidemia erra."
+        ],
+        "termos": [
+          {
+            "termo": "Germes patogênicos",
+            "significado": "Microrganismos capazes de causar doença."
+          }
+        ],
+        "remissoes": [
+          "Art. 268"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-342",
+      "unit_id": "7054a5b3-db6f-56fe-a6ca-c9f3fb27927c",
+      "content_sha256": "f2b19e9eef9a66551bf9c2ca266080f1c9fb1267eec0899a7a9ce8b3a1954ff5",
+      "simples": "Falso testemunho ou falsa perícia envolve afirmar falsidade, negar ou calar a verdade na qualidade de testemunha, perito, contador, tradutor ou intérprete, nos procedimentos enumerados. A pena é reclusão de dois a quatro anos e multa. O §1º prevê aumento de um sexto a um terço; o §2º disciplina retratação antes da sentença no processo do ilícito.",
+      "pontos": [
+        "Os ambientes incluem processo administrativo, inquérito policial e juízo arbitral, não apenas processo judicial."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não confunda a testemunha que mente com a pessoa que lhe oferece vantagem, descrita no art. 343."
+      ],
+      "exemplo": "Uma testemunha faz afirmação falsa em processo administrativo: o ambiente está no caput. Variação: Ela se retrata antes da sentença no processo em que ocorreu o ilícito: o §2º determina que o fato deixa de ser punível.",
+      "prova": [
+        "O falso testemunho tem pena de detenção? Não; o caput prevê reclusão de dois a quatro anos e multa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "7054a5b3-db6f-56fe-a6ca-c9f3fb27927c",
+        "content_sha256": "f6dc519f15741cf07f473bad8fac52ee5eb34a4c47e70b615fed429686cf387f",
+        "simples": "Falso testemunho ou falsa perícia: fazer afirmação falsa, ou negar ou calar a verdade como testemunha, perito, contador, tradutor ou intérprete em processo judicial, ou administrativo, inquérito policial, ou em juízo arbitral. As penas aumentam-se de um sexto a um terço, se o crime é praticado mediante suborno ou com o fim de obter prova destinada a produzir efeito em processo penal, ou em processo civil em que for parte entidade da administração pública direta ou indireta. O fato deixa de ser punível se, antes da sentença no processo em que ocorreu o ilícito, o agente se retrata ou declara a verdade.",
+        "pontos": [
+          "Fazer afirmação falsa, negar ou calar a verdade como testemunha, perito, contador, tradutor ou intérprete.",
+          "Em processo judicial ou administrativo, inquérito policial ou juízo arbitral.",
+          "§1º: aumento de um sexto a um terço (suborno; processo penal; processo civil com entidade da administração).",
+          "§2º: retratação antes da sentença torna o fato não punível."
+        ],
+        "atencao": [
+          "Crime PRÓPRIO.",
+          "A retratação até a sentença extingue a punibilidade do fato."
+        ],
+        "exemplo": "Testemunha mente em audiência, mas se retrata antes da sentença: fato não punível.",
+        "prova": [
+          "Assertiva que admite a retratação após a sentença, para afastar a punição, erra: deve ser antes da sentença."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 343"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-343",
+      "unit_id": "70f44f3f-729a-50f4-8ed6-149c283959c2",
+      "content_sha256": "ea922abd58d68c6b1534db92729fa5f254b958c38ccb8bee991aa5e7790bfa00",
+      "simples": "Dar, oferecer ou prometer dinheiro ou vantagem a testemunha, perito, contador, tradutor ou intérprete, para afirmar falsidade, negar ou calar a verdade nas atividades enumeradas, tem pena de reclusão de três a quatro anos e multa. O parágrafo único aumenta de um sexto a um terço nas finalidades processuais especificadas.",
+      "pontos": [
+        "O tipo enumera dar, oferecer e prometer; não exige no texto que a vantagem já tenha sido entregue."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "O aumento cobre prova para processo penal ou processo civil com entidade da administração pública direta ou indireta como parte."
+      ],
+      "exemplo": "O agente promete dinheiro para a testemunha mentir em processo penal: o verbo prometer e a finalidade do parágrafo único são relevantes. Variação: A oferta é para processo civil entre particulares: esse dado não satisfaz, isoladamente, a hipótese civil de aumento do parágrafo único.",
+      "prova": [
+        "É necessária a entrega do dinheiro para o verbo prometer estar descrito? Não; prometer é conduta expressamente prevista no caput."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "70f44f3f-729a-50f4-8ed6-149c283959c2",
+        "content_sha256": "65abbadf25f8c07e1e1475b8f7aa74da00efcd30a075b1ef90daecdaaa36c281",
+        "simples": "Corrupção ativa de testemunha ou perito: dar, oferecer ou prometer dinheiro ou qualquer outra vantagem a testemunha, perito, contador, tradutor ou intérprete, para fazer afirmação falsa, negar ou calar a verdade em depoimento, perícia, cálculos, tradução ou interpretação.",
+        "pontos": [
+          "Dar, oferecer ou prometer dinheiro ou vantagem a testemunha, perito, contador, tradutor ou intérprete.",
+          "Para fazer afirmação falsa, negar ou calar a verdade."
+        ],
+        "atencao": [
+          "Quem corrompe a testemunha responde por este artigo; a testemunha, pelo art. 342."
+        ],
+        "exemplo": "Oferecer dinheiro a uma testemunha para que minta em juízo.",
+        "prova": [
+          "Assertiva que absorve a corrupção da testemunha pelo falso testemunho erra: são crimes distintos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 342"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-9-a",
+      "unit_id": "23b573e4-04dd-54bd-ac72-1694ff667d24",
+      "content_sha256": "d5e3afbe6d8d49b2d5b87c6d3d3d3d40bfd396e0b5d8aa828bbe3c1840e76979",
+      "simples": "O texto atual exige identificação genética do condenado à reclusão em regime inicial fechado, por técnica adequada e indolor no ingresso. A Lei 15.295/2025 alterou o caput, a utilização e guarda da amostra, a coleta e o laudo. O banco é sigiloso e o acesso do titular e à cadeia de custódia deve permitir contraditório.",
+      "pontos": [
+        "Coleta por agente público treinado; laudo por perito oficial. Recusa é falta grave. Em hediondos e equiparados, o §10 prevê, se possível, processamento e inclusão até 30 dias da recepção no laboratório."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não use apenas o caput anterior, limitado a certos crimes. A vedação de fenotipagem permanece; o descarte considera a guarda de material suficiente para eventual nova perícia, nos termos regulamentares."
+      ],
+      "exemplo": "Um condenado à reclusão em regime inicial fechado ingressa no estabelecimento: aplica-se o critério do caput atual. Variação: A coleta é feita por agente treinado; isso não autoriza que ele substitua o perito oficial na elaboração do laudo do §9º.",
+      "prova": [
+        "Quem elabora o laudo da amostra coletada? Perito oficial, conforme §9º; a coleta do §7º é função de agente público treinado."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-34",
+      "unit_id": "a47d1ffa-3154-523b-a5cd-55fcb955beb4",
+      "content_sha256": "2f9556a1f2379b57f93ac18ad98afc1043353983448527eac17440d681818760",
+      "simples": "O trabalho pode ser gerenciado por fundação ou empresa pública com autonomia administrativa, para formação profissional do condenado. A entidade gerenciadora supervisiona produção e comercialização, suporta despesas e remuneração. Governos federal, estadual e municipal podem celebrar convênios com iniciativa privada para oficinas de apoio dos presídios.",
+      "pontos": [
+        "Gerenciamento do caput e convênio do §2º são previsões distintas."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Convênio para oficinas de trabalho não autoriza delegar classificação ou sanções disciplinares, vedadas no art. 83-B."
+      ],
+      "exemplo": "O Município celebra convênio com empresa privada para oficina de setor de apoio do presídio: a hipótese aparece no §2º. Variação: O convênio pretende também transferir aplicação de sanções aos presos: essa atribuição não é autorizada por este artigo.",
+      "prova": [
+        "Só o governo federal pode celebrar o convênio do §2º? Não; governos federal, estadual e municipal são mencionados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-83-a",
+      "unit_id": "6f23094b-31d4-5a27-b5b5-a8564f69229f",
+      "content_sha256": "3a0ad7fa207ecdd48c6a33847053aebbecb79d63f6ce73c0f30171221e2676cb",
+      "simples": "Atividades materiais acessórias, instrumentais ou complementares do estabelecimento penal podem ter execução indireta. O rol inclui limpeza, informática, lavanderia, manutenção e serviços ligados ao trabalho do preso, sempre sob supervisão e fiscalização públicas.",
+      "pontos": [
+        "A execução pode envolver fornecimento de materiais, equipamentos, máquinas e profissionais."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Execução indireta de apoio não equivale à transferência das funções de poder de polícia listadas no art. 83-B."
+      ],
+      "exemplo": "O estabelecimento contrata serviço de lavanderia sob fiscalização pública: é atividade de apoio do rol. Variação: O mesmo contrato inclui controle de rebeliões: essa função deve ser confrontada com a indelegabilidade do artigo seguinte.",
+      "prova": [
+        "A execução indireta dispensa supervisão pública? Não; o §1º a exige expressamente."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-83-b",
+      "unit_id": "d130baac-d206-541a-879d-3ccb61a271cc",
+      "content_sha256": "bf2bf428a99073c0fb731d2dd83bb41dd67b57619c5af6dd249ae015cb359e46",
+      "simples": "Direção, chefia e coordenação do sistema penal, assim como atividades que exigem poder de polícia, são indelegáveis. O artigo destaca classificação de condenados, sanções disciplinares, controle de rebeliões e transporte externo de presos aos locais enumerados.",
+      "pontos": [
+        "A lista destaca funções indelegáveis; o critério geral é poder de polícia, além de direção, chefia e coordenação."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não confunda portaria de apoio do art. 83-A com aplicação de sanção disciplinar."
+      ],
+      "exemplo": "A empresa de apoio pretende decidir punição disciplinar de um condenado: o inciso II veda a delegação dessa função. Variação: A atividade é limpeza sem decisão de autoridade: consulte a possibilidade de execução indireta do art. 83-A.",
+      "prova": [
+        "O transporte de presos a hospitais aparece como indelegável? Sim; o inciso IV inclui hospitais, órgãos judiciais e outros locais externos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-114",
+      "unit_id": "a963f20d-ae87-57b4-bc92-be86db6b0346",
+      "content_sha256": "ef197a1867d9c80444a4c865e0c90e5b8d58e28c8151b8a719d9341cee4e85ae",
+      "simples": "O ingresso no regime aberto exige trabalho ou possibilidade de trabalhar imediatamente, além dos indícios fundados de adaptação com autodisciplina, baixa periculosidade e responsabilidade, aferidos pelos antecedentes e resultados do exame criminológico no texto atual. Pessoas referidas no art. 117 podem ser dispensadas do trabalho.",
+      "pontos": [
+        "Inciso II com redação da Lei 14.843/2024; trabalho é condição separada no inciso I."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "A dispensa do parágrafo único refere-se ao trabalho e não elimina automaticamente os demais requisitos. A aplicação temporal da exigência nova deve ser examinada separadamente; não retroaja norma mais gravosa por suposição."
+      ],
+      "exemplo": "O condenado comprova possibilidade de trabalhar imediatamente: isso atende à alternativa do inciso I, sem resolver o inciso II. Variação: A pessoa está entre as hipóteses do art. 117: pode haver dispensa do trabalho, mas não declaração automática de todos os requisitos atendidos.",
+      "prova": [
+        "É indispensável já estar trabalhando na data do pedido? O inciso I admite também comprovar possibilidade de fazê-lo imediatamente, ressalvada a dispensa legal."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-146-b",
+      "unit_id": "4978c810-42b4-5629-b651-b29f8a918231",
+      "content_sha256": "a401f0b5cd2a0f706be2a446f367ed1aacc9591ae722ed91ceffdca65af3abd8",
+      "simples": "O juiz pode definir monitoração eletrônica nas hipóteses atuais de saída temporária no semiaberto, prisão domiciliar, cumprimento ou progressão aos regimes aberto e semiaberto, restritiva de direitos que limite frequência a lugares e livramento condicional.",
+      "pontos": [
+        "Incisos VI, VII e VIII incluídos pela Lei 14.843/2024."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "O verbo deste artigo é poderá. Não confunda com a fiscalização obrigatória nas condições específicas do art. 146-E."
+      ],
+      "exemplo": "O juiz concede livramento condicional e examina a monitoração: a hipótese consta do inciso VIII. Variação: A restritiva proíbe frequência a lugares específicos: o inciso VII fornece outra hipótese, sem equipará-la à prisão domiciliar.",
+      "prova": [
+        "O livramento condicional está no rol? Sim, no inciso VIII, incluído pela Lei 14.843/2024."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-146-c",
+      "unit_id": "589372d4-2dd0-585c-a00c-71bf4643d228",
+      "content_sha256": "b764a715e53119b08fb9fe8c820327429b3de177613ef2a4a070003fda8334c4",
+      "simples": "O condenado deve receber visitas e contatos do servidor, cumprir orientações e preservar o dispositivo de monitoração, sem removê-lo ou permitir adulteração. A violação comprovada pode levar às medidas do parágrafo único, por decisão judicial e ouvidos Ministério Público e defesa.",
+      "pontos": [
+        "Medidas incluem regressão, revogações de saída temporária, prisão domiciliar e livramento, advertência escrita e conversão de restritiva em privativa de liberdade."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não trate rompimento da tornozeleira como regressão automática: o artigo exige violação comprovada, decisão e oitiva das partes."
+      ],
+      "exemplo": "Há prova de adulteração do dispositivo e o juiz, após ouvir MP e defesa, examina revogar o livramento: o inciso VIII está no rol. Variação: Há apenas suspeita de defeito técnico: não se pode presumir, sem comprovação, a violação dos deveres.",
+      "prova": [
+        "A violação leva necessariamente à regressão? Não; o texto prevê medidas a critério do juiz da execução, ouvidos MP e defesa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "lep",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "unit_key": "art-146-e",
+      "unit_id": "2d9f26e0-4af7-5991-a9cf-0278858c967c",
+      "content_sha256": "54a8b5e3930a84414de4039ae451635a6241b90cc6ed43e03bb526d5fd0cb88d",
+      "simples": "No texto da Lei 15.280/2025, o condenado por crime contra mulher por razões da condição do sexo feminino, nos termos do art. 121-A, §1º, do CP, ou por crime contra a dignidade sexual, será monitorado eletronicamente ao usufruir benefício que envolva saída do estabelecimento penal.",
+      "pontos": [
+        "Critérios: crime indicado no artigo e benefício com saída do estabelecimento."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "O texto usa será, distinguindo-se da possibilidade do art. 146-B. A mudança de 2025 não autoriza aplicação retroativa prejudicial sem exame da regra temporal."
+      ],
+      "exemplo": "Condenado por crime contra a dignidade sexual recebe benefício com saída do estabelecimento: a hipótese literal do artigo exige monitoração. Variação: O crime é diferente e não atende à condição descrita: não use este artigo como obrigação genérica; examine as demais bases legais.",
+      "prova": [
+        "Este artigo se limita ao crime de feminicídio consumado? Não; a redação abrange as categorias que descreve, incluindo crimes contra a dignidade sexual."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "eca",
+      "course_id": "67393f02-bb51-583c-b431-803ebb72386f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-87",
+      "unit_id": "27c468ad-c016-5c4c-94cb-5415dc8eefb3",
+      "content_sha256": "2dd63955f62b3a567e5be72a1dafb2bdc61d9f58d41d412c873f237dbbcd2bbd",
+      "simples": "As linhas da política de atendimento incluem políticas sociais básicas, assistência social, serviços especializados, localização de desaparecidos, proteção jurídico-social, convivência familiar e campanhas de acolhimento e adoção. O inciso III foi ampliado em 2024 para crianças e adolescentes com pais ou responsáveis vitimados por grave violência ou presos em regime fechado.",
+      "pontos": [
+        "Localização de desaparecidos deve cooperar com cadastros nacionais e outros cadastros estaduais ou municipais, conforme parágrafo único incluído em 2023."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Cooperação entre cadastros não significa divulgação irrestrita de dados pessoais. Não omita o atendimento aos filhos de responsáveis nas situações acrescidas em 2024."
+      ],
+      "exemplo": "Uma criança tem responsável preso em regime fechado e necessita atendimento psicossocial: o inciso III contempla essa situação. Variação: Na busca de adolescente desaparecido, o serviço utiliza cooperação entre cadastros nacionais e locais: é a articulação descrita no parágrafo único.",
+      "prova": [
+        "A localização pode ignorar os demais cadastros estaduais e municipais? Não; o parágrafo único prevê cooperação também com os demais cadastros."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "76d52d2a-5fce-5acf-9589-7c3ccab82a1e",
+      "content_sha256": "52270909920eb0a35574e936bdaa21e5cf8ece10293f2ff7ab35b602c460918a",
+      "simples": "A assistência prioritária e articulada envolve SUS, Susp e políticas sociais. O artigo prevê inclusão em programas assistenciais, proteção do vínculo trabalhista por até seis meses nas condições legais, assistência jurídica e cuidados de saúde. Também disciplina ressarcimento pelo agressor, prioridade escolar dos dependentes e sigilo dos dados.",
+      "pontos": [
+        "O §4º inclui ressarcimento de danos e custos de saúde ao SUS; o §5º trata de dispositivos de segurança."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "O ressarcimento não pode onerar a mulher ou seus dependentes, configurar atenuante nem permitir substituição da pena. Prioridade e integração no caput foram atualizadas pela Lei 14.887/2024."
+      ],
+      "exemplo": "O agressor causa lesões que exigem tratamento no SUS: o §4º prevê ressarcir esses custos, nos termos descritos. Variação: Ele pretende usar o ressarcimento como atenuante ou transferir o custo à vítima: o §6º afasta essas consequências.",
+      "prova": [
+        "Ressarcir o SUS autoriza reduzir a pena por esse motivo? Não; o §6º impede que esse ressarcimento configure atenuante ou enseje substituição da pena."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "76d52d2a-5fce-5acf-9589-7c3ccab82a1e",
+        "content_sha256": "72f8dc24cd21bc78718a215eac4f6c65a954fade831692f54cc30355c9a01b09",
+        "simples": "A assistência à mulher em situação de violência doméstica e familiar será prestada em caráter prioritário no SUS e no Susp, de forma articulada, conforme a Lei Orgânica da Assistência Social e outras políticas públicas, e emergencialmente, quando for o caso. O juiz determinará, por prazo certo, a inclusão da mulher no cadastro de programas assistenciais do governo federal, estadual e municipal. O juiz assegurará à mulher, para preservar sua integridade, o acesso prioritário à remoção quando servidora pública; a manutenção do vínculo trabalhista, quando necessário o afastamento do local de trabalho, por até seis meses; e o encaminhamento à assistência judiciária, inclusive para ação de separação judicial, divórcio, anulação de casamento ou dissolução de união estável.",
+        "pontos": [
+          "Assistência prioritária no SUS e no Susp.",
+          "Inclusão em programas assistenciais por prazo certo.",
+          "Remoção prioritária da servidora pública.",
+          "Manutenção do vínculo trabalhista por até seis meses.",
+          "Encaminhamento à assistência judiciária."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: caput com redação da Lei nº 14.887, de 2024; inciso III do §2º incluído pela Lei nº 13.894, de 2019.",
+          "Afastamento do trabalho: até SEIS MESES, com manutenção do vínculo."
+        ],
+        "exemplo": "A servidora pública vítima tem acesso prioritário à remoção, para preservar sua integridade.",
+        "prova": [
+          "Assertiva que limita a manutenção do vínculo trabalhista a três meses erra: é por até seis meses."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 23"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "94387394-1a1d-59a5-89f3-539b1c8ba114",
+      "content_sha256": "d8e72990bce3e808de2004cb7c6852b94edde2d9cc63c1f09cffeaa4ce2641ad",
+      "simples": "O processo da lavagem segue as regras descritas e independe do processo e julgamento do antecedente. A competência federal depende das hipóteses enumeradas, e a denúncia exige indícios suficientes do antecedente. O §2º contém regra especial de citação por edital, prosseguimento e defensor dativo para acusado que não comparece nem constitui advogado.",
+      "pontos": [
+        "O §2º afasta expressamente o art. 366 do CPP no processo por crime previsto nesta lei."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não aplique automaticamente a suspensão do processo e da prescrição do art. 366 ao cenário regido pela regra especial. O §2º tem formulação específica que deve ser estudada com seu texto completo."
+      ],
+      "exemplo": "No caso regido pelo §2º, o acusado não comparece nem constitui advogado: o texto determina prosseguimento até julgamento com defensor dativo, após citação por edital. Variação: O exercício trata de delito fora da Lei de Lavagem: não transporte a exceção especial para qualquer processo criminal.",
+      "prova": [
+        "A aplicação do art. 366 do CPP é automática no processo de lavagem? Não; o §2º deste artigo o afasta expressamente."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "94387394-1a1d-59a5-89f3-539b1c8ba114",
+        "content_sha256": "43b15f67819ec8e994b5631ac9340ad9ab60d2c20bc1adce6e14eb04eb9a0011",
+        "simples": "O processo e julgamento dos crimes da Lei obedecem ao procedimento comum dos crimes punidos com reclusão, da competência do juiz singular; independem do processo e julgamento das infrações penais antecedentes, ainda que praticados em outro país, cabendo ao juiz competente para a lavagem decidir sobre a unidade de processo e julgamento; e são da competência da Justiça Federal quando praticados contra o sistema financeiro e a ordem econômico-financeira, ou em detrimento de bens, serviços ou interesses da União, ou quando a infração antecedente for de competência federal. A denúncia será instruída com indícios suficientes da existência da infração penal antecedente, sendo puníveis os fatos ainda que o autor seja desconhecido ou isento de pena, ou extinta a punibilidade da infração antecedente.",
+        "pontos": [
+          "Procedimento comum dos crimes punidos com reclusão, com juiz singular (sem júri).",
+          "Autonomia em relação ao processo da infração antecedente.",
+          "Justiça Federal: crimes contra o sistema financeiro, a ordem econômico-financeira ou a União, ou antecedente federal.",
+          "Denúncia com indícios suficientes da infração antecedente.",
+          "Punível mesmo se o autor do antecedente é desconhecido, isento de pena ou com punibilidade extinta."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação do inciso II e dos incisos do III dada pela Lei nº 12.683, de 2012.",
+          "Basta INDÍCIOS da infração antecedente na denúncia, e não prova plena.",
+          "Competência federal depende do caso."
+        ],
+        "exemplo": "A lavagem do dinheiro de um crime contra a União é julgada pela Justiça Federal.",
+        "prova": [
+          "Assertiva que exige condenação prévia pela infração antecedente erra: bastam indícios na denúncia."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "lavagem",
+      "course_id": "88125f1a-c616-50d1-b907-e40e0a9c93d9",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17-a",
+      "unit_id": "89ece92d-a2d4-57d4-a1f6-385090d519f6",
+      "content_sha256": "d8cbbf4ccc95eca1fe7b70e5cc83eaccad5a686da2e03c74792dbf1137fe20f0",
+      "simples": "As disposições do CPP se aplicam subsidiariamente à Lei de Lavagem quando não forem incompatíveis com ela. A regra completa foi recuperada, evitando a frase truncada que omitia o diploma e a condição.",
+      "pontos": [
+        "Subsidiariedade e compatibilidade são requisitos cumulativos da remissão."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "A aplicação subsidiária não substitui regra especial contrária, como a do art. 2º, §2º."
+      ],
+      "exemplo": "Há questão processual sem disciplina específica e a norma do CPP é compatível com a lei: examina-se sua aplicação subsidiária. Variação: A norma do CPP conflita com regra expressa da Lei de Lavagem: a remissão não autoriza ignorar a incompatibilidade.",
+      "prova": [
+        "Toda regra do CPP deve prevalecer sobre a Lei de Lavagem? Não; a aplicação é subsidiária e limitada à compatibilidade."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "89ece92d-a2d4-57d4-a1f6-385090d519f6",
+        "content_sha256": "2914c0671fad088d62206e0dc42821c85c926f108e6da446fd1f956ff8adb51b",
+        "simples": "Aplicam-se, subsidiariamente, as disposições do Código de Processo Penal, no que não forem incompatíveis com esta Lei.",
+        "pontos": [
+          "Aplicação subsidiária do Código de Processo Penal."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 12.683, de 2012."
+        ],
+        "exemplo": "Na ausência de regra específica, aplica-se o Código de Processo Penal.",
+        "prova": [
+          "Assertiva que afasta o Código de Processo Penal da lavagem erra: ele se aplica subsidiariamente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:45.883484+00:00",
+        "updated_at": "2026-10-11T14:20:45.883484+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-108",
+      "unit_id": "4c4434e6-3917-5d9d-948c-56bac712cabf",
+      "content_sha256": "2bd196ca87db144501a1b039d2e77538bd27277dbaf71c8ab0349b6180722c90",
+      "simples": "Onde não houver linha regular de ônibus, a autoridade com circunscrição pode autorizar precariamente transporte de passageiros em veículo de carga ou misto, observadas as condições de segurança do CTB e do Contran. A autorização não pode exceder doze meses; depois, a autoridade responsável deve implantar serviço regular.",
+      "pontos": [
+        "Falta de linha regular, caráter precário, segurança e limite de doze meses."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não transforme autorização excepcional em transporte permanente de passageiros em qualquer veículo de carga."
+      ],
+      "exemplo": "Uma região sem linha regular recebe autorização precária por oito meses com as condições legais: o prazo está dentro do limite. Variação: A autorização pretende durar dezoito meses: excede o teto do parágrafo único.",
+      "prova": [
+        "Qual o limite da autorização? Doze meses; a partir daí deve ser implantado serviço regular conforme a legislação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-147",
+      "unit_id": "f9e42493-540f-58cb-a7cf-609cabd76594",
+      "content_sha256": "cfa90ffa766810e7ad864dbaaf321ee7735745f859fe92f16b73c3a9847a23d9",
+      "simples": "O candidato realiza exames de aptidão física e mental, legislação, primeiros socorros e direção nos termos do artigo. A renovação da aptidão física e mental segue faixas de idade: dez anos antes dos cinquenta; cinco dos cinquenta até antes dos setenta; três a partir dos setenta. Há condições específicas para avaliação psicológica e atividade remunerada.",
+      "pontos": [
+        "Faixas de renovação de 10, 5 e 3 anos; os prazos podem ser reduzidos por proposta do perito nas condições do §4º."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "As faixas não são prazos mínimos garantidos. O texto compilado contém revogações dos §§6º e 7º pela Lei 15.428/2026; não memorize a redação revogada como vigente."
+      ],
+      "exemplo": "Condutor com exatamente cinquenta anos está na faixa de renovação de cinco anos, ressalvada redução legal do prazo. Variação: Com exatamente setenta anos, passa à faixa de três anos; não permanece na de cinco.",
+      "prova": [
+        "Qual faixa se aplica a quem tem exatamente cinquenta anos? Cinco anos, porque é idade igual ou superior a cinquenta e inferior a setenta, ressalvado §4º."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-148",
+      "unit_id": "71b8ec55-81f3-533d-aa68-b5a73aa8309b",
+      "content_sha256": "d37fe1855aefdc56b8f5469b53bac122ddf97154f18ecccd217ee80aee394322",
+      "simples": "A habilitação provisória dura um ano; a obtenção da CNH ao fim desse período depende das condições de infrações do §3º. Exames, profissionais e credenciamento seguem as competências legais. O §5º admite dispensa de aptidão física e mental para tripulantes com o cartão de saúde especificado, por decisão normativa do Contran.",
+      "pontos": [
+        "§§6º e 7º incluídos em 2026 tratam de peritos autorizados e preço público dos exames com atualização anual."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "A dispensa do §5º não é automática nem elimina todos os exames. Não confunda infração média isolada com reincidência em média no §3º."
+      ],
+      "exemplo": "Tripulante apresenta o cartão de saúde previsto e busca dispensa de aptidão física e mental: o Contran poderá discipliná-la conforme §5º. Variação: Ele pretende ficar dispensado de direção veicular pelo mesmo motivo: esse exame não é a dispensa descrita no §5º.",
+      "prova": [
+        "O §5º dispensa automaticamente todos os exames de habilitação? Não; prevê possibilidade de dispensa específica de aptidão física e mental pelo Contran."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-159",
+      "unit_id": "6319b08f-381a-5362-954a-6839388558b2",
+      "content_sha256": "0e2b133ef94342e1e5b920f34bc666a77bfd2c7e79fc5892a76c3444360518e0",
+      "simples": "A CNH pode ser física ou digital, contém fotografia, nome, CPF e requisitos do Contran, e tem fé pública como documento de identidade, conforme redação de 2026. Há regras de porte, dispensa por consulta ao sistema, originalidade, registro único no Renach, quitação de débitos, aviso de vencimento e vínculo da validade ao exame médico.",
+      "pontos": [
+        "A validade para dirigir depende da vigência do exame de aptidão física e mental, conforme §10."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Dispensa do porte físico por consulta disponível não regulariza habilitação vencida. Não confunda uso como identidade com validade para conduzir."
+      ],
+      "exemplo": "A fiscalização acessa o sistema e confirma habilitação válida: examina-se a dispensa de porte do §1º-A. Variação: O sistema mostra exame vencido: a possibilidade de consultar dados não elimina a condição de validade do §10.",
+      "prova": [
+        "A consulta ao sistema torna válida uma habilitação com exame vencido? Não; dispensa de porte e validade são condições diferentes."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-282",
+      "unit_id": "ec9d0b82-6bd4-536a-8884-3ea45df80b5f",
+      "content_sha256": "143c82b4dc17a65d6794171c41e02eb9dc449f0f9ce6046c99de322170a7807a",
+      "simples": "Após indeferimento ou ausência de defesa prévia, aplica-se a penalidade e expede-se notificação por meio que assegure ciência, observadas as regras do artigo. A notificação deve indicar prazo de recurso de pelo menos trinta dias. Expedição segue prazos de 180 ou 360 dias nos marcos próprios, e seu descumprimento gera decadência.",
+      "pontos": [
+        "Trinta dias: prazo mínimo de recurso; 180 ou 360 dias: prazo de expedição nas condições do §6º."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não confunda expedição com interposição de recurso nem tome o marco inicial como igual para toda penalidade."
+      ],
+      "exemplo": "A notificação dá vinte dias para recurso: fica abaixo do mínimo de trinta dias do §4º. Variação: Dá quarenta dias: atende ao mínimo, sem resolver os requisitos de expedição e ciência.",
+      "prova": [
+        "O prazo de recurso pode ser de vinte dias? Não; o §4º exige pelo menos trinta dias contados da notificação da penalidade."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "67827005-8fe0-50b7-9503-ef5544c25496",
+      "content_sha256": "7bad4d150e240ffdbfdaacabbd7eae45046ac0a56210cdd14b3957a285388737",
+      "simples": "Cabe ao Ministério da Justiça e Segurança Pública implementar as ações federais enumeradas para a Lei 13.060/2014 e o decreto: financiamento conforme orçamento, consultoria, capacitação, materiais, boas práticas, pesquisa, dados nacionais e informação pública.",
+      "pontos": [
+        "A competência federal não elimina as diretrizes próprias de cada órgão previstas no art. 6º."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "O financiamento está condicionado à disponibilidade orçamentária; não trate o inciso I como promessa de recurso irrestrito."
+      ],
+      "exemplo": "O MJSP elabora referências sobre algemas com participação dos órgãos de segurança: o inciso IV prevê essa atuação. Variação: Um órgão local ignora suas diretrizes alegando que o MJSP é responsável: o art. 6º também lhe impõe deveres.",
+      "prova": [
+        "Qual órgão recebe as competências do art. 5º? O Ministério da Justiça e Segurança Pública, sem dispensar os deveres dos demais órgãos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "67827005-8fe0-50b7-9503-ef5544c25496",
+        "content_sha256": "54c88083af688b6dbc474cd6c9f3c33a2692c3bfe867f1c4fac708150960818b",
+        "simples": "Compete ao órgão federal responsável pela segurança pública, para implementar o Decreto, entre outras ações: financiar, conforme a disponibilidade orçamentária, ações de implementação; formular, implementar, monitorar e avaliar ações relacionadas ao uso da força, como diagnósticos, padronização de procedimentos, doutrina, capacitação e aquisições; ofertar consultoria técnica; desenvolver materiais de referência sobre uso de algemas, busca pessoal e domiciliar e atuação em ambientes prisionais; disponibilizar atas de registro de preços para armas e equipamentos; realizar capacitação; incentivar a conscientização e a integração com a sociedade civil; promover boas práticas; fomentar pesquisas; reduzir a vitimização dos profissionais e a letalidade policial; consolidar e publicar dados nacionais; e informar a população sobre as políticas e como reportar condutas inadequadas.",
+        "pontos": [
+          "Financiamento e consultoria técnica.",
+          "Materiais de referência sobre algemas, busca pessoal e domiciliar e ambientes prisionais.",
+          "Atas de registro de preços para aquisição de armas e equipamentos.",
+          "Redução da vitimização dos profissionais e da letalidade policial.",
+          "Consolidação e publicação de dados nacionais."
+        ],
+        "atencao": [
+          "Rol exemplificativo de ações do órgão federal."
+        ],
+        "exemplo": "O órgão federal publica dados nacionais sobre o uso da força.",
+        "prova": [
+          "Assertiva que restringe as ações do órgão federal ao financiamento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-6",
+      "unit_id": "d31612d2-471d-5f2b-8343-13f218cddba3",
+      "content_sha256": "981243095a0561374a5b855bd4dc18719e7e3e643c702332b58871c3a6018ed9",
+      "simples": "Os órgãos de segurança devem observar diretrizes sobre normas de uso da força, dados, equipamentos, saúde mental, capacitação, identificação individualizável e atuação em crises, buscas, algemas e ocorrências com lesão ou morte.",
+      "pontos": [
+        "Todo profissional em serviço deve receber proteção individual e, no mínimo, dois instrumentos de menor potencial ofensivo."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Mínimo de dois não significa exatamente dois nem elimina treinamento e observância das demais normas."
+      ],
+      "exemplo": "Um profissional em serviço recebe proteção, mas apenas um instrumento de menor potencial ofensivo: falta o mínimo do inciso III. Variação: Recebe dois instrumentos, mas sem capacitação: o atendimento ao inciso III não supre a diretriz de capacitação do inciso VII.",
+      "prova": [
+        "Dois instrumentos dispensam capacitação? Não; equipamento e capacitação são diretrizes distintas e devem ser observadas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d31612d2-471d-5f2b-8343-13f218cddba3",
+        "content_sha256": "c78ae6adf7d7d1fec60af2fc6e77bb756bb2e97d8b6553a8832172a4b3ce3e4d",
+        "simples": "Para implementar o Decreto, os órgãos de segurança pública deverão, entre outras medidas: elaborar e atualizar atos normativos sobre o uso diferenciado da força; registrar e publicar dados; disponibilizar equipamento de proteção individual e, no mínimo, dois instrumentos de menor potencial ofensivo a todo profissional em serviço; instituir programas de atenção à saúde mental de profissionais em ocorrências de alto risco; monitorar e avaliar as ações; reduzir a vitimização e a letalidade policial; capacitar; fomentar pesquisas; normatizar e fiscalizar a identificação dos profissionais, de modo a individualizar suas ações; e normatizar a atuação em gerenciamento de crises, busca pessoal e domiciliar, uso de algemas e providências nos casos de lesão corporal ou morte.",
+        "pontos": [
+          "Equipamento de proteção e, no mínimo, dois instrumentos de menor potencial ofensivo por profissional.",
+          "Programas de saúde mental.",
+          "Identificação que permita individualizar as ações.",
+          "Normas sobre crises, buscas, algemas e lesão ou morte."
+        ],
+        "atencao": [
+          "Mínimo de DOIS instrumentos de menor potencial ofensivo por profissional em serviço."
+        ],
+        "exemplo": "Cada policial em serviço recebe coletes e, no mínimo, dois instrumentos de menor potencial ofensivo.",
+        "prova": [
+          "Assertiva que prevê apenas um instrumento de menor potencial ofensivo por profissional erra: são no mínimo dois."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8",
+      "unit_id": "9ff7919e-232d-5742-9615-29b62565a380",
+      "content_sha256": "49747d8a39511af36847036eb11277c28c3133447c96c2794e1b630a56a164bc",
+      "simples": "Ato do Ministro da Justiça e Segurança Pública instituirá o Comitê Nacional de Monitoramento do Uso da Força. Deve regular composição com sociedade civil, competências, funcionamento e finalidades de relatórios, indicadores, conhecimento e articulação. Também observa o Capítulo VI do Decreto 12.002/2024.",
+      "pontos": [
+        "Entes locais, quando criarem comitês, observarão as mesmas finalidades, com sociedade civil no que couber."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não converta a expressão quando instituírem em obrigação de criação automática de comitês em todos os municípios."
+      ],
+      "exemplo": "Um Estado cria comitê de monitoramento: deve observar as finalidades correspondentes e participação civil no que couber. Variação: Um município ainda não criou comitê: o §2º enuncia condições quando houver criação, não uma ordem expressa de criação universal.",
+      "prova": [
+        "O decreto exige criação automática de comitê em cada Município? O §2º usa quando instituírem; regula a criação quando ocorrer, sem impor ali a criação universal."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "9ff7919e-232d-5742-9615-29b62565a380",
+        "content_sha256": "2fc725a03d71c41ad93bac517d0cc8184bc90b46a5f6797d52a6d54e27cb8483",
+        "simples": "Ato do Ministro da Justiça e Segurança Pública instituirá o Comitê Nacional de Monitoramento do Uso da Força, com a finalidade de monitorar e avaliar a implementação das políticas de uso da força. O ato disporá sobre a composição, garantida a participação da sociedade civil, as competências e o funcionamento, e preverá, entre as finalidades, relatórios, o acompanhamento do Plano Nacional de Segurança Pública quanto à redução da letalidade policial e da vitimização dos profissionais, indicadores, produção de conhecimento, orientações para programas e articulação com os comitês estaduais e distrital. Estados, Distrito Federal e Municípios, se instituírem comitês, observarão as mesmas finalidades.",
+        "pontos": [
+          "Comitê Nacional de Monitoramento do Uso da Força.",
+          "Participação da sociedade civil.",
+          "Relatórios, indicadores e articulação com comitês estaduais.",
+          "Entes locais seguem as mesmas finalidades se criarem comitês."
+        ],
+        "atencao": [
+          "Instituído por ato do Ministro da Justiça e Segurança Pública."
+        ],
+        "exemplo": "O comitê nacional produz relatórios sobre a letalidade policial.",
+        "prova": [
+          "Assertiva que exclui a sociedade civil do comitê erra: sua participação é garantida."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-9",
+      "unit_id": "35973d52-ecfa-59c0-8c75-cbadce685154",
+      "content_sha256": "b321fd39073dfd006b1db59831c1c512a11dc553bf2ab5fdd698801e349beae4",
+      "simples": "Repasses do Fundo Nacional de Segurança Pública e do Fundo Penitenciário Nacional para ações que envolvam uso da força por órgãos estaduais, distritais e municipais dependem da observância da Lei 13.060/2014 e do decreto.",
+      "pontos": [
+        "São mencionados dois fundos, tipos determinados de ações e três níveis de entes beneficiários."
+      ],
+      "atencao": [
+        "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+        "Não formule perda automática de todo recurso federal: a condição deste artigo tem o escopo descrito."
+      ],
+      "exemplo": "O Estado solicita recurso de um dos fundos para ação envolvendo uso da força: a observância de lei e decreto é condição do repasse. Variação: A discussão é sobre verba distinta e ação sem esse objeto: não se pode aplicar automaticamente esta condição específica sem examinar a base do repasse.",
+      "prova": [
+        "Cumprir apenas o decreto basta para a condição do artigo? Não; o texto menciona também a Lei 13.060/2014."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "35973d52-ecfa-59c0-8c75-cbadce685154",
+        "content_sha256": "ad6bc0b0c68c40202d99fcc95b1cbd14fdf5330e0351795d7f2361c8ef8d1b75",
+        "simples": "O repasse de recursos do Fundo Nacional de Segurança Pública e do Fundo Penitenciário Nacional para ações que envolvam o uso da força pelos órgãos de segurança pública dos Estados, do Distrito Federal e dos Municípios está condicionado à observância do disposto no Decreto.",
+        "pontos": [
+          "Repasses do Fundo Nacional de Segurança Pública e do Fundo Penitenciário Nacional.",
+          "Condicionados à observância do Decreto."
+        ],
+        "atencao": [
+          "Mecanismo de indução: sem cumprir o Decreto, não há repasse."
+        ],
+        "exemplo": "O Estado que ignora as regras do Decreto pode perder repasses federais.",
+        "prova": [
+          "Assertiva que dispensa a observância do Decreto para receber repasses erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    }
+  ]
+}

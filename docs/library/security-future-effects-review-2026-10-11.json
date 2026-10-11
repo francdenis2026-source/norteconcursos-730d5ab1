@@ -1,0 +1,245 @@
+{
+  "version": "2026-10-11-security-effects",
+  "materials": [
+    {
+      "slug": "legislacao-seguranca-privada-revisao",
+      "expected": {
+        "id": "d3e55479-1357-4483-b440-d66077d58959",
+        "title": "Lei 14.967/2024 — Estatuto da Segurança Privada — guia de estudo e aplicação",
+        "updated_at": "2026-10-10T02:58:33.253645+00:00",
+        "content_status": "active",
+        "body_sha256": "fc79fcdbabd0b9da4bdc60b30aa2f521ff7e5c7ec8e157301066181dfac47542"
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Lei 14.967/2024 — Estatuto da Segurança Privada.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## 1. O que você precisa compreender\n\nO novo estatuto disciplina prestação privada e competências de controle. Autorização de funcionamento, renovação e adequação são etapas distintas.\n\n## 2. Conceitos, requisitos e diferenças\n\n| Conceito | Regra de estudo | Atenção de prova |\n|---|---|---|\n| Autorização | A prestação depende de autorização prévia da Polícia Federal. | Registro empresarial isolado não substitui a autorização. |\n| Prestadores | A lei prevê empresas especializadas e serviços orgânicos em proveito próprio. | O art. 2º veda prestação cooperada ou autônoma. |\n| Renovação | Art. 40: dois anos para categorias indicadas e cinco para empresas de monitoramento eletrônico. | Não atribua um único prazo a todos os prestadores. |\n| Transição | Art. 60: limite máximo de três anos, ressalvados prazos expressos específicos. | Transição não elimina automaticamente autorização e fiscalização. |\n| Revogação | A Lei 7.102/1983 foi revogada pelo art. 70. | Apostilas baseadas apenas no regime antigo precisam de revisão. |\n\n## 3. Primeira aplicação\n\nUma empresa de monitoramento e uma empresa de vigilância pedem renovação. Compare suas categorias antes de escolher o prazo. O fato de ambas prestarem segurança privada não torna idênticas todas as regras.\n\n> **Vigência e atualização — conferência em 07/10/2026:** A Lei 14.967 foi publicada e entrou em vigor em 10/09/2024, substituindo o núcleo da Lei 7.102/1983. O módulo trata das regras legais; formulários, requisitos operacionais e portarias de execução exigem consulta específica ao regulamento atual.\n\n## 4. Escopo e leitura orientada\n\nArts. 2º, 4º, 40, 60 e 70. Este módulo é uma revisão temática, não uma reprodução integral do diploma. A indicação de edital identifica a pertinência comprovada para aquele cargo; o candidato deve conferir o edital da sua própria carreira. A versão estudada é a vigente na data da revisão, e não o congelamento da legislação na data da prova histórica.\n\n1. Leia os dispositivos indicados no texto oficial.\n2. Compare sujeito, conduta, requisitos e exceções antes de memorizar números.\n3. Resolva os itens de certo ou errado disponíveis e revise os comentários dos erros.\n4. Retome os cartões em uma segunda sessão sem consultar a tabela.\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 72 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| CAPÍTULO I — DISPOSIÇÕES GERAIS | 1 |\n| CAPÍTULO II — DO SERVIÇO DE SEGURANÇA PRIVADA | 10 |\n| CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção I — Disposições Gerais | 8 |\n| CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção II — Da Empresa de Serviços de Segurança Privada | 2 |\n| CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção III — Da Escola de Formação de Profissional de Segurança Privada | 2 |\n| CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção IV — Da Empresa de Monitoramento de Sistemas Eletrônicos de Segurança | 1 |\n| CAPÍTULO IV — DOS SERVIÇOS ORGÂNICOS DE SEGURANÇA PRIVADA | 1 |\n| CAPÍTULO V — DOS PROFISSIONAIS DE SEGURANÇA PRIVADA | 5 |\n| CAPÍTULO VI — DA SEGURANÇA PRIVADA EM INSTITUIÇÕES FINANCEIRAS | 9 |\n| CAPÍTULO VII — DA FISCALIZAÇÃO E CONTROLE | 5 |\n| CAPÍTULO VIII — DAS INFRAÇÕES ADMINISTRATIVAS | 5 |\n| CAPÍTULO IX — DO CRIME | 1 |\n| CAPÍTULO X — DAS TAXAS | 3 |\n| CAPÍTULO XI — DISPOSIÇÕES FINAIS | 18 |\n| Anexos / ANEXO | 1 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/seguranca-privada)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 2 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 16 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n",
+        "legal_review": {
+          "checked_at": "2026-10-11T19:50:09.274223+00:00",
+          "course_slug": "seguranca-privada",
+          "scope": "72 dispositivos vigentes deste percurso conferidos contra a fonte oficial com extração HTML5. Explicações individuais com casos, variações e fixação. A conferência distingue alterações tributárias com efeito em 2027 e não certifica cobertura integral de jurisprudência.",
+          "corrections": [
+            "Completadas as explicações individuais dos 72 dispositivos vigentes, incluindo o anexo de taxas.",
+            "Separados vigência da lei e produção de efeitos da revogação tributária futura."
+          ],
+          "sources": [
+            {
+              "title": "Lei 14.967/2024 — Estatuto da Segurança Privada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+              "sha256": "19943b67f6a8dec0cbff4ff533f8741fa7670ca04b4d75e9120cb3ab00db8a8e"
+            },
+            {
+              "title": "Lei 10.637/2002 — PIS/Pasep — texto compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10637.htm",
+              "sha256": "44da13dcd16acd7db50fd0e73ed13cf7258923e743ce48313ade6c9d26c45066"
+            },
+            {
+              "title": "Lei 10.833/2003 — Cofins — texto compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.833.htm",
+              "sha256": "77e767c1ecdfbd7aa93367d25be829607c341fdd9b67f3bccf5c687ac22cd278"
+            },
+            {
+              "title": "LC 214/2025 — reforma tributária — texto compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+              "sha256": "596ca4c8299b4a0c0422a06f7b8335a1b1f4159f7d0551b44612305f5857a2a2"
+            }
+          ],
+          "changes": [
+            {
+              "title": "Reforma tributária: efeitos futuros nos dispositivos de PIS/Pasep e Cofins alterados pelo estatuto",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+              "articles": [
+                "Lei 14.967/2024, arts. 67 e 68",
+                "LC 214/2025, art. 542, XVIII, b, e XXI, a; art. 544, III"
+              ],
+              "summary": "A LC 214/2025 prevê revogação do art. 8º da Lei 10.637/2002 e dos arts. 1º a 16 da Lei 10.833/2003 a partir de 1º de janeiro de 2027. Não antecipar esse efeito nem interpretar a alteração de remissão de 2024 como isenção geral. Texto compilado conferido, inclusive a redação do art. 544 pela LC 227/2026.",
+              "vigency": "Produção de efeitos desses dispositivos: 01/01/2027; data futura na conferência de 11/10/2026.",
+              "state": "future"
+            }
+          ]
+        },
+        "law_version_checked_at": "2026-10-11T19:50:09.274223+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+            "title": "Lei 14.967/2024 — segurança privada e fiscalização — texto oficial atualizado"
+          },
+          {
+            "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+            "title": "Edital oficial do cargo indicado — pertinência temática"
+          },
+          {
+            "title": "Lei 10.637/2002 — PIS/Pasep — texto compilado",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10637.htm"
+          },
+          {
+            "title": "Lei 10.833/2003 — Cofins — texto compilado",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.833.htm"
+          },
+          {
+            "title": "LC 214/2025 — reforma tributária — texto compilado",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"
+          }
+        ],
+        "source_note": "72 dispositivos vigentes deste percurso conferidos contra a fonte oficial com extração HTML5. Explicações individuais com casos, variações e fixação. A conferência distingue alterações tributárias com efeito em 2027 e não certifica cobertura integral de jurisprudência."
+      }
+    }
+  ],
+  "courses": [
+    {
+      "id": "05048b0d-4611-5e5e-b10d-96d248e3bcb1",
+      "expected": {
+        "id": "05048b0d-4611-5e5e-b10d-96d248e3bcb1",
+        "slug": "seguranca-privada",
+        "title": "Lei 14.967/2024 — Estatuto da Segurança Privada",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+        "source_sha256": "fe32db3653bc4c9face168268c5defbcca61e49dd12e2ad5ecf9ffd1fd46c219",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-seguranca-privada-revisao",
+        "syllabus_topic_id": "9dfc55b7-7ad4-4b76-9b5f-ea1a7a421254",
+        "overview": {
+          "intro": "O novo estatuto disciplina prestação privada e competências de controle. Autorização de funcionamento, renovação e adequação são etapas distintas.",
+          "alerts": "A Lei 14.967 foi publicada e entrou em vigor em 10/09/2024, substituindo o núcleo da Lei 7.102/1983. O módulo trata das regras legais; formulários, requisitos operacionais e portarias de execução exigem consulta específica ao regulamento atual.",
+          "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+          "chapters": [
+            {
+              "count": 1,
+              "title": "CAPÍTULO I — DISPOSIÇÕES GERAIS"
+            },
+            {
+              "count": 10,
+              "title": "CAPÍTULO II — DO SERVIÇO DE SEGURANÇA PRIVADA"
+            },
+            {
+              "count": 8,
+              "title": "CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção I — Disposições Gerais"
+            },
+            {
+              "count": 2,
+              "title": "CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção II — Da Empresa de Serviços de Segurança Privada"
+            },
+            {
+              "count": 2,
+              "title": "CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção III — Da Escola de Formação de Profissional de Segurança Privada"
+            },
+            {
+              "count": 1,
+              "title": "CAPÍTULO III — DOS PRESTADORES DE SERVIÇOS DE SEGURANÇA PRIVADA / Seção IV — Da Empresa de Monitoramento de Sistemas Eletrônicos de Segurança"
+            },
+            {
+              "count": 1,
+              "title": "CAPÍTULO IV — DOS SERVIÇOS ORGÂNICOS DE SEGURANÇA PRIVADA"
+            },
+            {
+              "count": 5,
+              "title": "CAPÍTULO V — DOS PROFISSIONAIS DE SEGURANÇA PRIVADA"
+            },
+            {
+              "count": 9,
+              "title": "CAPÍTULO VI — DA SEGURANÇA PRIVADA EM INSTITUIÇÕES FINANCEIRAS"
+            },
+            {
+              "count": 5,
+              "title": "CAPÍTULO VII — DA FISCALIZAÇÃO E CONTROLE"
+            },
+            {
+              "count": 5,
+              "title": "CAPÍTULO VIII — DAS INFRAÇÕES ADMINISTRATIVAS"
+            },
+            {
+              "count": 1,
+              "title": "CAPÍTULO IX — DO CRIME"
+            },
+            {
+              "count": 3,
+              "title": "CAPÍTULO X — DAS TAXAS"
+            },
+            {
+              "count": 18,
+              "title": "CAPÍTULO XI — DISPOSIÇÕES FINAIS"
+            },
+            {
+              "count": 1,
+              "title": "Anexos / ANEXO"
+            }
+          ],
+          "objectives": [
+            "Organizar serviços, prestadores, serviço orgânico e atividades autorizadas.",
+            "Estudar habilitação, profissionais, equipamentos, autorização e fiscalização.",
+            "Comparar infrações, sanções, disposições finais e transição do estatuto anterior."
+          ],
+          "current_units": 72,
+          "jurisprudence": [],
+          "excluded_units": 1,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+              "title": "Lei 14.967/2024 — Estatuto da Segurança Privada — texto oficial conferido",
+              "sha256": "fe32db3653bc4c9face168268c5defbcca61e49dd12e2ad5ecf9ffd1fd46c219"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "seguranca-privada"
+        }
+      },
+      "patch": {
+        "checked_at": "2026-10-11T19:50:09.274223+00:00",
+        "source_sha256": "19943b67f6a8dec0cbff4ff533f8741fa7670ca04b4d75e9120cb3ab00db8a8e",
+        "legal_review": {
+          "checked_at": "2026-10-11T19:50:09.274223+00:00",
+          "course_slug": "seguranca-privada",
+          "scope": "72 dispositivos vigentes deste percurso conferidos contra a fonte oficial com extração HTML5. Explicações individuais com casos, variações e fixação. A conferência distingue alterações tributárias com efeito em 2027 e não certifica cobertura integral de jurisprudência.",
+          "corrections": [
+            "Completadas as explicações individuais dos 72 dispositivos vigentes, incluindo o anexo de taxas.",
+            "Separados vigência da lei e produção de efeitos da revogação tributária futura."
+          ],
+          "sources": [
+            {
+              "title": "Lei 14.967/2024 — Estatuto da Segurança Privada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+              "sha256": "19943b67f6a8dec0cbff4ff533f8741fa7670ca04b4d75e9120cb3ab00db8a8e"
+            },
+            {
+              "title": "Lei 10.637/2002 — PIS/Pasep — texto compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10637.htm",
+              "sha256": "44da13dcd16acd7db50fd0e73ed13cf7258923e743ce48313ade6c9d26c45066"
+            },
+            {
+              "title": "Lei 10.833/2003 — Cofins — texto compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.833.htm",
+              "sha256": "77e767c1ecdfbd7aa93367d25be829607c341fdd9b67f3bccf5c687ac22cd278"
+            },
+            {
+              "title": "LC 214/2025 — reforma tributária — texto compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+              "sha256": "596ca4c8299b4a0c0422a06f7b8335a1b1f4159f7d0551b44612305f5857a2a2"
+            }
+          ],
+          "changes": [
+            {
+              "title": "Reforma tributária: efeitos futuros nos dispositivos de PIS/Pasep e Cofins alterados pelo estatuto",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+              "articles": [
+                "Lei 14.967/2024, arts. 67 e 68",
+                "LC 214/2025, art. 542, XVIII, b, e XXI, a; art. 544, III"
+              ],
+              "summary": "A LC 214/2025 prevê revogação do art. 8º da Lei 10.637/2002 e dos arts. 1º a 16 da Lei 10.833/2003 a partir de 1º de janeiro de 2027. Não antecipar esse efeito nem interpretar a alteração de remissão de 2024 como isenção geral. Texto compilado conferido, inclusive a redação do art. 544 pela LC 227/2026.",
+              "vigency": "Produção de efeitos desses dispositivos: 01/01/2027; data futura na conferência de 11/10/2026.",
+              "state": "future"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "enrichments": []
+}

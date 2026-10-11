@@ -24,6 +24,7 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AddExamDialog } from "@/components/dashboard/AddExamDialog";
 import {
@@ -1113,6 +1114,9 @@ function ContestCard({
   onUploaded: () => void;
 }) {
   const answered = group.correct + group.wrong;
+  const [previewPage, setPreviewPage] = React.useState<{ url: string; number: number } | null>(
+    null,
+  );
   const accuracy = percent(group.correct, answered);
   const reviewItems = Object.entries(group.analysis?.items || {})
     .flatMap(([itemText, verdict]) => {
@@ -1270,11 +1274,12 @@ function ContestCard({
               </h3>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
                 {group.pages.map((page, index) => (
-                  <a
+                  <button
                     key={page.id}
-                    href={pageUrls[page.id]}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    type="button"
+                    disabled={!pageUrls[page.id]}
+                    onClick={() => setPreviewPage({ url: pageUrls[page.id]!, number: index + 1 })}
+                    aria-label={`Ampliar página ${index + 1} do caderno`}
                     className="relative aspect-[3/4] overflow-hidden rounded-xl border bg-muted shadow-sm transition hover:-translate-y-1 hover:ring-2 hover:ring-emerald-400"
                   >
                     {pageUrls[page.id] ? (
@@ -1292,13 +1297,31 @@ function ContestCard({
                     <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-5 text-[10px] font-bold text-white">
                       Página {index + 1}
                     </span>
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>
           )}
         </CardContent>
       )}
+      <Dialog
+        open={!!previewPage}
+        onOpenChange={(value) => {
+          if (!value) setPreviewPage(null);
+        }}
+      >
+        <DialogContent className="max-h-[95dvh] max-w-4xl overflow-auto">
+          <DialogTitle>Página {previewPage?.number} do caderno</DialogTitle>
+          <DialogDescription>Feche a imagem para voltar à sua prova.</DialogDescription>
+          {previewPage && (
+            <img
+              src={previewPage.url}
+              alt={`Página ${previewPage.number} ampliada`}
+              className="h-auto w-full"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </Card>
   );
 }

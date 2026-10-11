@@ -150,8 +150,6 @@ function ErrorArsenal({
           <Link
             to="/dashboard/library/$slug"
             params={{ slug: relatedMaterial.slug }}
-            target="_blank"
-            rel="noreferrer"
             className="flex items-center gap-2 text-sm font-medium text-primary hover:underline"
           >
             <BookOpenCheck className="h-4 w-4" />
@@ -173,8 +171,6 @@ function ErrorArsenal({
         <Link
           to="/dashboard/question-trainer"
           search={{ subject: question.subject, go: "1", reinforce: "1" }}
-          target="_blank"
-          rel="noreferrer"
         >
           <Target className="h-4 w-4" /> Praticar mais questões de {question.subject}
         </Link>
@@ -297,7 +293,7 @@ function ErrorsPage() {
   if (!authLoading && !real)
     return (
       <LockedState
-        image="study-desk"
+        image="trainer"
         title={
           <>
             Caderno de <em>erros</em>
@@ -402,7 +398,7 @@ function ErrorsPage() {
   return (
     <div className="space-y-6">
       <PageHero
-        image="study-desk"
+        image="trainer"
         kicker="Treinamento"
         icon={AlertCircle}
         title={

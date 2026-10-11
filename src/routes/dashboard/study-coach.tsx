@@ -563,7 +563,7 @@ function StudyCoachPage() {
   if (!real) {
     return (
       <LockedState
-        image="study-desk"
+        image="journey"
         title={
           <>
             Assistente de <em>estudos</em>
@@ -584,7 +584,7 @@ function StudyCoachPage() {
   return (
     <div className="mx-auto max-w-5xl space-y-6">
       <PageHero
-        image="study-desk"
+        image="journey"
         size="sm"
         kicker="Hoje"
         icon={Compass}

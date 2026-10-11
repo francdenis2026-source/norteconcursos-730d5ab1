@@ -220,7 +220,7 @@ function ExamPanoramaPage() {
   if (!real) {
     return (
       <LockedState
-        image="exam-hall"
+        image="field-map"
         title={
           <>
             Panorama das <em>provas</em>
@@ -237,7 +237,7 @@ function ExamPanoramaPage() {
   return (
     <div className="mx-auto max-w-5xl space-y-6">
       <PageHero
-        image="exam-hall"
+        image="field-map"
         size="sm"
         kicker="Objetivo"
         icon={BarChart3}

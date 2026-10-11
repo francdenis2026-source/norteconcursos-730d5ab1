@@ -1,0 +1,39 @@
+{
+  "scope_total": 378,
+  "checked_at": "2026-10-11T15:56:32.503763+00:00",
+  "previous_individual_decisions": 100,
+  "pending_individual_review": 277,
+  "decisions": [
+    {
+      "table": "official_exam_questions",
+      "id": "760c2113-2af1-4622-b286-71fae4ee1750",
+      "exam": "PCRO Escrivão 2022",
+      "item": 70,
+      "question_md5": "8d85f9fa9ea0226fcb81dfa906173812",
+      "expected_answer": "B",
+      "expected_status": "under_review",
+      "expected_basis": [],
+      "expected_checked_at": null,
+      "expected_current_topic": null,
+      "expected_review_note_md5": "db1e5dfdac8ba6123787390638dff859",
+      "decision": "obsolete_archived",
+      "reason": "Questão histórica de 2022, superada para treino da legislação vigente: a Lei 15.397/2026, art. 3, revogou o §5 do art. 171 do CP, que condicionava em regra o estelionato à representação. Publicada no DOU de 04/05/2026, entrou em vigor nessa data (art. 4). A alternativa B permanece apenas como gabarito histórico; não deve orientar o regime atual. Texto e resposta originais preservados. Aplicações intertemporais a fatos anteriores exigem análise própria.",
+      "evidence_url": "https://www2.camara.leg.br/legin/fed/lei/2026/lei-15397-30-abril-2026-799020-publicacaooriginal-179083-pl.html",
+      "patch": {
+        "content_status": "archived",
+        "legal_basis": [
+          {
+            "title": "Código Penal",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+          },
+          {
+            "title": "Lei 15.397/2026",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15397.htm"
+          }
+        ],
+        "law_version_checked_at": "2026-10-11T15:56:32.503763+00:00",
+        "review_note": "Questão histórica de 2022, superada para treino da legislação vigente: a Lei 15.397/2026, art. 3, revogou o §5 do art. 171 do CP, que condicionava em regra o estelionato à representação. Publicada no DOU de 04/05/2026, entrou em vigor nessa data (art. 4). A alternativa B permanece apenas como gabarito histórico; não deve orientar o regime atual. Texto e resposta originais preservados. Aplicações intertemporais a fatos anteriores exigem análise própria."
+      }
+    }
+  ]
+}

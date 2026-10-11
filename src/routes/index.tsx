@@ -40,7 +40,6 @@ import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { AcreSection } from "@/components/landing/AcreSection";
 import { MobileHub } from "@/components/landing/MobileHub";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
-import { HeroConstellation } from "@/components/landing/fx";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -203,7 +202,7 @@ function Index() {
   useReveal();
 
   return (
-    <div className="lp">
+    <div className={`lp${heroReady ? " is-ready" : " is-intro"}`}>
       <header className="lp-header" data-scrolled={scrolled}>
         <div className="lp-container lp-header__bar">
           <Link to="/" aria-label="Norte Concurso — início">
@@ -272,7 +271,6 @@ function Index() {
             <HeroVideo onDone={() => setHeroReady(true)} />
           </div>
           <div className="lp-hero__shade" aria-hidden="true" />
-          <HeroConstellation />
           <div className="lp-hero__grid" aria-hidden="true" />
           <div className="lp-container lp-hero__body">
             <div className="lp-hero__layout">
@@ -368,9 +366,7 @@ function Index() {
         </div>
 
         <section id="pcac" className="lp-section lp-photo lp-pcac" aria-labelledby="pcac-title">
-          <div className="lp-photo__media" aria-hidden="true" />
-          <div className="lp-photo__shade" aria-hidden="true" />
-          <div className="lp-container">
+          <div className="lp-container lp-pcac__layout">
             <div className="lp-pcac__content" data-reveal>
               <div className="lp-pcac__emblems" aria-label="Identidade institucional do Acre">
                 <span className="lp-pcac__emblem">
@@ -410,6 +406,17 @@ function Index() {
                 institucional do Governo do Acre ou da Polícia Civil.
               </p>
             </div>
+            <figure className="lp-pcac__visual">
+              <img
+                src="/media/hero/landing-pcac.webp"
+                alt="Composição ilustrativa de profissionais da Polícia Civil do Acre"
+                width={1672}
+                height={941}
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Preparação direcionada · Polícia Civil do Acre</figcaption>
+            </figure>
           </div>
         </section>
 

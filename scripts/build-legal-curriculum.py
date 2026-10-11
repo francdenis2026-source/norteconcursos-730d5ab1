@@ -1,9 +1,12 @@
 """Build official legal reading paths offline from reviewed local HTML.
 Usage: python scripts/build-legal-curriculum.py SOURCE_DIRECTORY OUTPUT_JSON
-Requires lxml. No network, credentials or private source files in Git.
+Requires lxml and html5lib (scripts/requirements-legal.txt).
+No network, credentials or private source files in Git.
 """
 import pathlib,json,re,hashlib,uuid,sys,urllib.parse
 from lxml import html
+from lxml import etree
+import html5lib
 
 clean=lambda value:' '.join(value.translate({i:bytes([i]).decode('cp1252',errors='replace') for i in range(128,160)}).split())
 def number(value):
@@ -11,22 +14,41 @@ def number(value):
  return re.sub(r'^(\d+)([A-Z]+)$',r'\1-\2',value)
 
 def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
-    if raw.startswith((b'\xff\xfe',b'\xfe\xff')) or re.search(rb'charset\s*=',raw,re.I):
-        tree=html.fromstring(raw)
+    if raw.startswith((b'\xff\xfe',b'\xfe\xff')):
+        try:decoded=raw.decode('utf-16')
+        except UnicodeDecodeError:
+            # Some official pages append single-byte HTTP whitespace after
+            # their UTF-16 closing HTML tag. Never repair a corrupted law body.
+            decoded=raw.decode('utf-16',errors='replace')
+            end=decoded.lower().rfind('</html>')
+            if end<0 or '\ufffd' in decoded[:end+7]:raise
+            decoded=decoded[:end+7]
     else:
-        try:raw.decode('utf-8');encoding='utf-8'
-        except UnicodeDecodeError:encoding='windows-1252'
-        tree=html.fromstring(raw,parser=html.HTMLParser(encoding=encoding))
-    original=[clean(e.text_content()) for e in tree.xpath('//p')]
+        declared=re.search(rb'charset\s*=\s*["\']?\s*([\w-]+)',raw,re.I)
+        if declared:encoding=declared.group(1).decode('ascii')
+        else:
+            try:raw.decode('utf-8');encoding='utf-8'
+            except UnicodeDecodeError:encoding='windows-1252'
+        decoded=raw.decode(encoding,errors='replace')
+    # Planalto legacy markup closes formatting elements across <p> boundaries.
+    # libxml alone drops those paragraph bodies (e.g. CP arts. 1, 43, 172, 184).
+    # Repair with the HTML5 tree algorithm before querying paragraphs. Keep a
+    # Unicode serialization so a legacy charset declaration cannot re-decode it.
+    repaired=html5lib.parse(decoded,treebuilder='lxml',namespaceHTMLElements=False)
+    tree=html.fromstring(etree.tostring(repaired,encoding='unicode',method='html'))
+    original_paragraphs=list(tree.xpath('//p'))
+    original_text={e:clean(e.text_content()) for e in original_paragraphs}
+    original=list(original_text.values())
     for element in tree.xpath('//strike|//del|//s|//script|//style'):
      element.drop_tree()
     for element in tree.xpath('//*[@style]'):
      if 'line-through' in element.get('style',''):element.drop_tree()
     # Paragraph boundaries, not line-wrapped text, define article headings.
     blocks=[]
-    for element in tree.xpath('//p'):
-     value=clean(element.text_content())
-     if value:blocks.append(value)
+    remaining=set(tree.xpath('//p'))
+    for element in original_paragraphs:
+     value=clean(element.text_content()) if element in remaining else ''
+     blocks.append((value,original_text[element]))
     article=re.compile(r'^(?:[“"\s]*Art\.?\s*(\d+(?:[º°o])?(?:[-–]\s*[A-Z]{1,2}|\s+[-–][A-Z]{1,2}|[A-Z]{1,2})?)(?!\.\d)(?=\s|[.\-–:]|$)\s*[.\-–:]?|Artigo\s+(\d+)\s*[-–:]?)',re.I)
     units=[];chapter='Disposições iniciais';pending=[];annex=False;hierarchy={};pending_level=0
     levels={'livro':0,'titulo':1,'capitulo':2,'secao':3,'seccao':3,'subsecao':4}
@@ -36,7 +58,16 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
       if level>=pending_level:del hierarchy[level]
      hierarchy[pending_level]=' — '.join(pending)
      return ' / '.join(hierarchy[k] for k in sorted(hierarchy))
-    for value in blocks:
+    inactive_article=False
+    for value,unstripped in blocks:
+     current_head=article.match(value)
+     original_head=article.match(unstripped)
+     if original_head and not unstripped.startswith(('“','"')) and not current_head:
+      # A removed article still owns its following penalty and revocation
+      # annotations. Do not attach them to the previous current article.
+      inactive_article=True
+     if current_head and not value.startswith(('“','"')):inactive_article=False
+     if inactive_article or not value:continue
      if value.startswith('Este texto não substitui') or value.startswith('Brasília,'):
       if slug!='budapeste':break
       if value.startswith('Brasília,'):continue

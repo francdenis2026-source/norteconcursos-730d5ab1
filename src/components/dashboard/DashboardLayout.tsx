@@ -1,4 +1,5 @@
 import React from "react";
+import { PlatformBack } from "./PlatformBack";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import { SoonBadge } from "@/components/SoonBadge";
 import { AI_ENABLED, SOON_LABEL, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
@@ -526,7 +527,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   return (
     <TooltipProvider delayDuration={150}>
-      <div className="app-shell">
+      <div className="app-shell" data-area={isAdmin ? "admin" : "student"}>
         <aside className="app-sidebar no-print" data-collapsed={isCollapsed}>
           <div className="app-sidebar__head">
             <Link to="/dashboard" aria-label="Norte Concurso — visão geral">
@@ -740,7 +741,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               "gold"
             }
           >
-            <div className="app-content__inner">{children}</div>
+            <div className="app-content__inner">
+              <PlatformBack />
+              {children}
+            </div>
             <footer className="app-footer no-print">
               <span>© 2026 Norte Concurso</span>
               <span>

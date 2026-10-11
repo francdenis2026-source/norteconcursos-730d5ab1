@@ -71,6 +71,25 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   const router = useRouter();
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    const message = String((error as Error | undefined)?.message ?? error);
+    const staleChunk = /failed to fetch dynamically imported module|loading chunk|importing a module script failed/i.test(
+      message,
+    );
+    if (staleChunk) {
+      try {
+        const key = "norte-stale-chunk-recovery";
+        const previous = Number(sessionStorage.getItem(key) ?? 0);
+        const now = Date.now();
+        // Um único reload resolve chunks antigos após deploy, sem criar loop caso
+        // o erro seja persistente ou a rede esteja indisponível.
+        if (!previous || now - previous > 10_000) {
+          sessionStorage.setItem(key, String(now));
+          window.location.reload();
+        }
+      } catch {
+        // Alguns modos privados bloqueiam sessionStorage; a tela de erro continua utilizável.
+      }
+    }
   }, [error]);
 
   return (

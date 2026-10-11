@@ -179,7 +179,7 @@ function NotebooksPage() {
   return (
     <div className="space-y-6">
       <PageHero
-        image="trainer"
+        image="study-desk"
         kicker="Treinamento"
         icon={BookOpen}
         title={

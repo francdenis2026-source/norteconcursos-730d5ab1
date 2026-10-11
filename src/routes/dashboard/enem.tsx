@@ -105,7 +105,7 @@ function EnemPage() {
   return (
     <div className="space-y-6">
       <PageHero
-        image="journey"
+        image="exam-hall"
         kicker="ENEM"
         icon={GraduationCap}
         title={

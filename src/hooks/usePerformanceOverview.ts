@@ -10,6 +10,17 @@ export interface SubjectAccuracy {
   avgSeconds: number;
 }
 
+export interface DifficultyStat {
+  subject: string;
+  topic: string;
+  answered: number;
+  correct: number;
+  accuracy: number;
+  avgSeconds: number;
+  medianSeconds: number;
+  difficultyScore: number;
+}
+
 export interface PerformanceOverview {
   trainer: {
     totalAnswered: number;
@@ -18,6 +29,7 @@ export interface PerformanceOverview {
     avgSeconds: number;
     bySubject: SubjectAccuracy[];
   };
+  difficulty: DifficultyStat[];
   simulators: {
     count: number;
     avgAccuracy: number;
@@ -66,7 +78,7 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
     let active = true;
     setLoading(true);
     (async () => {
-      const [responsesRes, attemptsRes, reviewsRes, streakRes, rankRes, examDocsRes] =
+      const [responsesRes, attemptsRes, reviewsRes, streakRes, rankRes, examDocsRes, difficultyRes] =
         await Promise.all([
           supabase
             .from("question_training_responses")
@@ -94,6 +106,7 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
             .from("student_exam_documents")
             .select("contest_name,contest_year,score_net,score_raw")
             .eq("user_id", userId),
+          supabase.rpc("my_difficulty_analysis"),
         ]);
       if (!active) return;
 
@@ -175,6 +188,25 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
           avgSeconds: responses.length ? Math.round(totalSeconds / responses.length) : 0,
           bySubject,
         },
+        difficulty: ((difficultyRes.data ?? []) as {
+          subject: string;
+          topic: string;
+          answered: number;
+          correct: number;
+          accuracy: number;
+          avg_seconds: number;
+          median_seconds: number;
+          difficulty_score: number;
+        }[]).map((row) => ({
+          subject: row.subject,
+          topic: row.topic,
+          answered: row.answered,
+          correct: row.correct,
+          accuracy: row.accuracy,
+          avgSeconds: row.avg_seconds,
+          medianSeconds: row.median_seconds,
+          difficultyScore: row.difficulty_score,
+        })),
         simulators: {
           count: attempts.length,
           avgAccuracy: attempts.length

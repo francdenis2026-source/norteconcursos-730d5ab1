@@ -85,7 +85,7 @@ const PINS: { name: string; left: number; top: number; side?: "left" }[] = [
   { name: "Feijó", left: 49.4, top: 26.8 },
   { name: "Sena Madureira", left: 72, top: 48.6 },
   { name: "Rio Branco", left: 83.4, top: 70.3 },
-  { name: "Brasiléia", left: 71, top: 94.5 },
+  { name: "Brasiléia", left: 71, top: 78, side: "left" },
 ];
 
 const delay = (n: number) => ({ "--reveal-delay": n }) as CSSProperties;
@@ -195,6 +195,10 @@ export function AcreSection() {
             role="img"
             aria-label="Mapa do Acre com profissionais da segurança pública"
           >
+            <div className="lp-acre__stage-meta" aria-hidden="true">
+              <span>Rede de preparação</span>
+              <b>Acre · Brasil</b>
+            </div>
             <div className="lp-acre__map" aria-hidden="true">
               <div className="lp-acre__fill" />
               <div className="lp-acre__sheen" />
@@ -203,7 +207,9 @@ export function AcreSection() {
               {PINS.map((pin) => (
                 <span
                   key={pin.name}
-                  className={pin.side === "left" ? "lp-pin lp-pin--left" : "lp-pin"}
+                  className={`${pin.side === "left" ? "lp-pin lp-pin--left" : "lp-pin"}${
+                    pin.name === "Cruzeiro do Sul" ? " lp-pin--cruzeiro" : ""
+                  }`}
                   style={{ left: `${pin.left}%`, top: `${pin.top}%` }}
                 >
                   <i aria-hidden="true" />
