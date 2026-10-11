@@ -9,11 +9,19 @@ import { useEffect, useRef, useState } from "react";
  */
 export function HeroVideo({ onDone }: { onDone?: () => void }) {
   const ref = useRef<HTMLVideoElement>(null);
+  const completed = useRef(false);
+  const revealTimer = useRef<number | null>(null);
   const [done, setDone] = useState(false);
 
-  const finish = () => {
+  const finish = (waitForFade = false) => {
+    if (completed.current) return;
+    completed.current = true;
     setDone(true);
-    onDone?.();
+    if (waitForFade) {
+      revealTimer.current = window.setTimeout(() => onDone?.(), 520);
+    } else {
+      onDone?.();
+    }
   };
 
   useEffect(() => {
@@ -44,6 +52,7 @@ export function HeroVideo({ onDone }: { onDone?: () => void }) {
     io.observe(el);
     return () => {
       window.clearTimeout(timer);
+      if (revealTimer.current !== null) window.clearTimeout(revealTimer.current);
       window.removeEventListener("load", onLoad);
       io.disconnect();
     };
@@ -57,10 +66,10 @@ export function HeroVideo({ onDone }: { onDone?: () => void }) {
       poster="/media/hero/hero-intro-poster.webp"
       muted
       playsInline
-      preload="none"
+      preload="auto"
       aria-hidden="true"
-      onEnded={finish}
-      onError={finish}
+      onEnded={() => finish(true)}
+      onError={() => finish()}
     >
       <source src="/media/hero/hero-intro.webm" type="video/webm" />
       <source src="/media/hero/hero-intro.mp4" type="video/mp4" />

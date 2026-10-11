@@ -598,7 +598,7 @@ function PerformanceOverviewTab({
       </div>
     );
 
-  const { trainer, simulators, errors, streak, rank, cutoffGaps } = overview;
+  const { trainer, difficulty, simulators, errors, streak, rank, cutoffGaps } = overview;
   const weakSubjects = trainer.bySubject.filter(
     (s) => s.total >= MIN_ITEMS_FOR_SIGNAL && s.accuracy < WEAK_THRESHOLD,
   );
@@ -757,6 +757,56 @@ function PerformanceOverviewTab({
           </CardContent>
         </Card>
       </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-lg">
+            <Lightbulb className="h-5 w-5 text-amber-500" />
+            Onde você precisa de mais atenção
+          </CardTitle>
+          <CardDescription>
+            Cruzamos seus erros e o tempo mediano por questão para apontar a disciplina e o assunto
+            que merecem reforço.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          {difficulty.length === 0 ? (
+            <p className="text-sm text-muted-foreground">
+              Responda questões no Treinador para criar seu diagnóstico de dificuldade.
+            </p>
+          ) : (
+            <div className="grid gap-2 sm:grid-cols-2">
+              {difficulty.slice(0, 6).map((item) => (
+                <div key={`${item.subject}-${item.topic}`} className="rounded-xl border bg-muted/20 p-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-bold" title={item.subject}>
+                        {item.subject}
+                      </p>
+                      <p className="truncate text-xs text-muted-foreground" title={item.topic}>
+                        {item.topic}
+                      </p>
+                    </div>
+                    <Badge variant="outline" className="shrink-0 text-[10px]">
+                      {item.difficultyScore}% atenção
+                    </Badge>
+                  </div>
+                  <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground">
+                    <span>{item.accuracy}% de acertos · {item.answered} {item.answered === 1 ? "questão" : "questões"}</span>
+                    <span className="tabular-nums">mediana {item.medianSeconds}s</span>
+                  </div>
+                  <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted">
+                    <div
+                      className="h-full rounded-full bg-amber-500"
+                      style={{ width: `${Math.max(4, item.difficultyScore)}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </CardContent>
+      </Card>
 
       <Card>
         <CardHeader>
@@ -1015,13 +1065,26 @@ function SubjectTable({
       <CardHeader>
         <CardTitle className="text-lg">Detalhamento por matéria</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-2">
+      <CardContent className="space-y-4">
         {subjects.map((s) => (
-          <div key={s.subject} className="flex items-center gap-3 text-xs">
-            <span className="w-48 shrink-0 truncate font-semibold" title={s.subject}>
+          <div
+            key={s.subject}
+            className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-2 text-xs"
+          >
+            <span className="col-span-2 min-w-0 break-words font-semibold sm:col-span-1">
               {s.subject}
             </span>
-            <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
+            <div className="col-span-2 flex min-w-0 flex-wrap items-center gap-2 sm:col-span-1 sm:justify-end">
+              <span className="tabular-nums text-muted-foreground">
+                {s.correct}/{s.total} ({s.accuracy}%)
+              </span>
+              {s.total < MIN_ITEMS_FOR_SIGNAL && (
+                <Badge variant="outline" className="text-[10px] text-muted-foreground">
+                  amostra pequena
+                </Badge>
+              )}
+            </div>
+            <div className="col-span-2 h-2 min-w-0 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
               <div
                 className={cn(
                   "h-full rounded-full",
@@ -1034,14 +1097,6 @@ function SubjectTable({
                 style={{ width: `${s.accuracy}%` }}
               />
             </div>
-            <span className="w-32 shrink-0 text-right text-muted-foreground">
-              {s.correct}/{s.total} ({s.accuracy}%)
-            </span>
-            {s.total < MIN_ITEMS_FOR_SIGNAL && (
-              <Badge variant="outline" className="shrink-0 text-[10px] text-muted-foreground">
-                amostra pequena
-              </Badge>
-            )}
           </div>
         ))}
       </CardContent>
