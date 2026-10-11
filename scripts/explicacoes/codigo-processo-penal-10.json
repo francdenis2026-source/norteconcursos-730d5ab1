@@ -1,0 +1,429 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 10: arts. 348 a 392",
+  "units": {
+    "art-348": {
+      "simples": "Nos casos em que a fiança tiver sido prestada por meio de hipoteca, a execução será promovida no juízo cível pelo órgão do Ministério Público.",
+      "pontos": ["Fiança por hipoteca: execução no juízo cível.", "Promovida pelo Ministério Público."],
+      "atencao": ["Execução no JUÍZO CÍVEL, e não no criminal."],
+      "exemplo": "Fiança prestada por hipoteca é executada pelo MP na esfera cível quando perdida.",
+      "prova": ["Assertiva que atribui a execução da fiança hipotecária ao juízo criminal erra."],
+      "termos": [],
+      "remissoes": ["Art. 330"]
+    },
+    "art-349": {
+      "simples": "Se a fiança consistir em pedras, objetos ou metais preciosos, o juiz determinará a venda por leiloeiro ou corretor.",
+      "pontos": ["Fiança em pedras, objetos ou metais preciosos: venda por leiloeiro ou corretor."],
+      "atencao": ["Determinação do juiz."],
+      "exemplo": "Joias dadas em fiança são vendidas por leiloeiro quando houver perda.",
+      "prova": ["Assertiva que manda restituir as joias dadas em fiança, sem venda, erra."],
+      "termos": [],
+      "remissoes": ["Art. 330"]
+    },
+    "art-350": {
+      "simples": "Nos casos em que couber fiança, o juiz, verificando a situação econômica do preso, poderá conceder-lhe liberdade provisória, sujeitando-o às obrigações dos arts. 327 e 328 e a outras medidas cautelares, se for o caso. Se o beneficiado descumprir, sem motivo justo, qualquer das obrigações ou medidas impostas, aplica-se o disposto no § 4º do art. 282.",
+      "pontos": ["Preso pobre: liberdade provisória sem fiança, com as obrigações dos arts. 327 e 328.", "Pode haver outras cautelares.", "Descumprimento sem justo motivo: aplica-se o art. 282, §4º."],
+      "atencao": ["Dispensa da fiança pela situação econômica."],
+      "exemplo": "Preso sem recursos recebe liberdade provisória sem fiança, mas deve comparecer aos atos.",
+      "prova": ["Assertiva que exige sempre o pagamento da fiança para que haja liberdade provisória erra."],
+      "termos": [],
+      "remissoes": ["Art. 325", "Art. 282"]
+    },
+    "art-350-a": {
+      "simples": "Constatada a existência de indícios da prática de crime contra a dignidade sexual, o juiz poderá aplicar, de imediato, ao autor, em conjunto ou separadamente, medidas protetivas de urgência, entre outras: suspensão da posse ou restrição do porte de armas; afastamento do lar, domicílio ou local de convivência com a vítima; proibição de aproximação da vítima, de seus familiares e das testemunhas, de contato por qualquer meio e de frequentação de determinados lugares; e restrição ou suspensão de visitas aos dependentes menores, ouvida a equipe de atendimento multidisciplinar.",
+      "pontos": ["Indícios de crime contra a dignidade sexual.", "Juiz aplica de imediato, em conjunto ou separadamente, medidas protetivas de urgência.", "Exemplos: restrição de armas, afastamento do lar, proibição de aproximação e contato, restrição de visitas a dependentes menores."],
+      "atencao": ["Incluído pela Lei nº 15.280, de 2025.", "Rol exemplificativo ('entre outras')."],
+      "exemplo": "O autor de crime sexual é proibido de se aproximar da vítima e de seus familiares.",
+      "prova": ["Assertiva que exige sentença condenatória para aplicar as medidas do art. 350-A erra: bastam indícios."],
+      "termos": [],
+      "remissoes": ["Art. 350-B"]
+    },
+    "art-350-b": {
+      "simples": "Em qualquer fase da investigação policial ou do processo penal, a pedido da autoridade policial, do Ministério Público ou da vítima, o juiz poderá determinar a proibição do autor de exercer atividades que envolvam contato direto com pessoa em situação de vulnerabilidade, quando houver prova da existência do crime, indício suficiente de autoria e perigo gerado pelo estado de liberdade do imputado.",
+      "pontos": ["Em qualquer fase da investigação ou do processo.", "A pedido da autoridade policial, do MP ou da vítima.", "Proibição de atividades que envolvam contato direto com pessoa vulnerável.", "Requisitos: prova do crime, indício suficiente de autoria e perigo da liberdade."],
+      "atencao": ["Mesmos requisitos centrais da preventiva (art. 312)."],
+      "exemplo": "O juiz proíbe o investigado de trabalhar com crianças enquanto durar o processo.",
+      "prova": ["Assertiva que dispensa prova da existência do crime e indício de autoria no art. 350-B erra."],
+      "termos": [],
+      "remissoes": ["Art. 312", "Art. 350-A"]
+    },
+    "art-351": {
+      "simples": "A citação inicial far-se-á por mandado, quando o réu estiver no território sujeito à jurisdição do juiz que a houver ordenado.",
+      "pontos": ["Citação por mandado quando o réu está na jurisdição do juiz."],
+      "atencao": ["Citação por mandado é a regra dentro da jurisdição."],
+      "exemplo": "O oficial de justiça cita o réu na comarca por mandado.",
+      "prova": ["Assertiva que usa precatória para réu dentro da jurisdição do juiz erra."],
+      "termos": [{ "termo": "Citação", "significado": "Ato que chama o réu a juízo para se defender." }],
+      "remissoes": ["Art. 353"]
+    },
+    "art-352": {
+      "simples": "O mandado de citação indicará o nome do juiz; o nome do querelante nas ações iniciadas por queixa; o nome do réu, ou, se desconhecido, seus sinais característicos; a residência do réu, se conhecida; o fim para que é feita a citação; o juízo e o lugar, o dia e a hora em que o réu deverá comparecer; e a subscrição do escrivão e a rubrica do juiz.",
+      "pontos": ["Juiz e querelante (se houver).", "Nome ou sinais característicos do réu e residência.", "Finalidade da citação.", "Juízo, lugar, dia e hora do comparecimento.", "Subscrição do escrivão e rubrica do juiz."],
+      "atencao": ["Requisitos formais do mandado de citação."],
+      "exemplo": "O mandado traz o dia e a hora do comparecimento e a rubrica do juiz.",
+      "prova": ["Assertiva que dispensa a rubrica do juiz no mandado de citação erra."],
+      "termos": [],
+      "remissoes": ["Art. 351"]
+    },
+    "art-353": {
+      "simples": "Quando o réu estiver fora do território da jurisdição do juiz processante, será citado mediante precatória.",
+      "pontos": ["Réu fora da jurisdição: citação por precatória."],
+      "atencao": ["Precatória para réu em outra jurisdição."],
+      "exemplo": "Réu que mora em outra comarca é citado por carta precatória.",
+      "prova": ["Assertiva que usa mandado direto para réu em outra jurisdição erra."],
+      "termos": [],
+      "remissoes": ["Art. 354"]
+    },
+    "art-354": {
+      "simples": "A precatória indicará o juiz deprecado e o juiz deprecante; a sede da jurisdição de um e de outro; o fim para que é feita a citação, com todas as especificações; e o juízo do lugar, o dia e a hora em que o réu deverá comparecer.",
+      "pontos": ["Juiz deprecado e deprecante.", "Sede da jurisdição de ambos.", "Finalidade da citação.", "Juízo, dia e hora do comparecimento."],
+      "atencao": ["Requisitos da precatória de citação."],
+      "exemplo": "A precatória informa o juízo, o dia e a hora do comparecimento do réu.",
+      "prova": ["Assertiva que dispensa a indicação da finalidade da citação na precatória erra."],
+      "termos": [],
+      "remissoes": ["Art. 353"]
+    },
+    "art-355": {
+      "simples": "A precatória será devolvida ao juiz deprecante, independentemente de traslado, depois de lançado o 'cumpra-se' e de feita a citação por mandado do juiz deprecado. Verificado que o réu se encontra em território sujeito à jurisdição de outro juiz, a este o juiz deprecado remeterá os autos para efetivação da diligência, desde que haja tempo. Certificado pelo oficial de justiça que o réu se oculta para não ser citado, a precatória será imediatamente devolvida, para o fim previsto no art. 362.",
+      "pontos": ["Devolução da precatória ao juiz deprecante, sem traslado, após o 'cumpra-se' e a citação.", "Réu em outra jurisdição: remessa ao juiz competente, se houver tempo.", "Réu que se oculta: devolução imediata para citação com hora certa."],
+      "atencao": ["Ocultação do réu leva à citação com hora certa (art. 362)."],
+      "exemplo": "O oficial certifica que o réu se oculta, e a precatória volta para a citação com hora certa.",
+      "prova": ["Assertiva que mantém a precatória no juízo deprecado após constatada a ocultação do réu erra."],
+      "termos": [],
+      "remissoes": ["Art. 362"]
+    },
+    "art-356": {
+      "simples": "Se houver urgência, a precatória, que conterá em resumo os requisitos do art. 354, poderá ser expedida por via telegráfica, depois de reconhecida a firma do juiz, o que a estação expedidora mencionará.",
+      "pontos": ["Urgência: precatória por via telegráfica.", "Contém resumo dos requisitos do art. 354.", "Firma do juiz reconhecida."],
+      "atencao": ["Meio telegráfico; hoje se usam meios eletrônicos."],
+      "exemplo": "Texto histórico, adaptado hoje aos meios eletrônicos.",
+      "prova": ["Assertiva que dispensa o reconhecimento da firma do juiz na precatória telegráfica erra."],
+      "termos": [],
+      "remissoes": ["Art. 354"]
+    },
+    "art-357": {
+      "simples": "São requisitos da citação por mandado a leitura do mandado ao citando pelo oficial e a entrega da contrafé, na qual se mencionarão dia e hora da citação; e a declaração do oficial, na certidão, da entrega da contrafé e sua aceitação ou recusa.",
+      "pontos": ["Leitura do mandado ao citando e entrega da contrafé, com dia e hora.", "Certidão do oficial sobre a entrega da contrafé e sua aceitação ou recusa."],
+      "atencao": ["Contrafé é a cópia do mandado entregue ao citando."],
+      "exemplo": "O oficial lê o mandado, entrega a contrafé e certifica a aceitação.",
+      "prova": ["Assertiva que dispensa a certidão do oficial quanto à entrega da contrafé erra."],
+      "termos": [{ "termo": "Contrafé", "significado": "Cópia do mandado entregue ao citando." }],
+      "remissoes": ["Art. 352"]
+    },
+    "art-358": {
+      "simples": "A citação do militar far-se-á por intermédio do chefe do respectivo serviço.",
+      "pontos": ["Citação do militar por intermédio do chefe do serviço."],
+      "atencao": ["Rito próprio para o militar."],
+      "exemplo": "A citação do policial militar é feita por meio do comandante.",
+      "prova": ["Assertiva que cita o militar diretamente, sem o chefe do serviço, erra."],
+      "termos": [],
+      "remissoes": ["Art. 359"]
+    },
+    "art-359": {
+      "simples": "O dia designado para funcionário público comparecer em juízo, como acusado, será notificado assim a ele como ao chefe de sua repartição.",
+      "pontos": ["Funcionário público acusado: notificação ao acusado e ao chefe da repartição."],
+      "atencao": ["Dupla notificação."],
+      "exemplo": "O servidor e seu chefe são notificados do dia do comparecimento.",
+      "prova": ["Assertiva que dispensa a notificação do chefe da repartição erra."],
+      "termos": [],
+      "remissoes": ["Art. 358"]
+    },
+    "art-360": {
+      "simples": "Se o réu estiver preso, será pessoalmente citado, não se admitindo, nesse caso, a citação por edital ou outra forma ficta.",
+      "pontos": ["Réu preso: citação pessoal."],
+      "atencao": ["Vedada a citação por edital do réu preso."],
+      "exemplo": "O réu preso é citado no estabelecimento prisional.",
+      "prova": ["Assertiva que admite a citação por edital do réu preso erra."],
+      "termos": [],
+      "remissoes": ["Art. 361"]
+    },
+    "art-361": {
+      "simples": "Se o réu não for encontrado, será citado por edital, com o prazo de 15 dias.",
+      "pontos": ["Réu não encontrado: citação por edital.", "Prazo de 15 dias."],
+      "atencao": ["Prazo de 15 dias."],
+      "exemplo": "O réu não é localizado, e o juiz determina a citação por edital.",
+      "prova": ["Assertiva que fixa em 30 dias o prazo do edital de citação erra neste art. 361: são 15 dias."],
+      "termos": [],
+      "remissoes": ["Art. 363", "Art. 365"]
+    },
+    "art-362": {
+      "simples": "Verificando que o réu se oculta para não ser citado, o oficial de justiça certificará a ocorrência e procederá à citação com hora certa, na forma estabelecida no Código de Processo Civil. Completada a citação com hora certa, se o acusado não comparecer, ser-lhe-á nomeado defensor dativo.",
+      "pontos": ["Réu que se oculta: oficial certifica e cita com hora certa.", "Se o acusado não comparecer, defensor dativo."],
+      "atencao": ["Citação ficta com hora certa."],
+      "exemplo": "O oficial constata a ocultação do réu e o cita com hora certa.",
+      "prova": ["Assertiva que determina a citação por edital quando o réu se oculta erra: é com hora certa."],
+      "termos": [{ "termo": "Citação com hora certa", "significado": "Citação ficta feita quando o réu se oculta." }],
+      "remissoes": ["Art. 355"]
+    },
+    "art-363": {
+      "simples": "O processo terá completada a sua formação quando realizada a citação do acusado. Não sendo encontrado o acusado, será procedida a citação por edital. Comparecendo o acusado citado por edital, em qualquer tempo, o processo observará o disposto nos arts. 394 e seguintes. Os incisos I e II foram revogados.",
+      "pontos": ["A formação do processo se completa com a citação.", "Não encontrado: citação por edital.", "Comparecimento do citado por edital: segue o rito dos arts. 394 e seguintes."],
+      "atencao": ["Citação válida completa a relação processual."],
+      "exemplo": "Citado por edital, o acusado comparece depois e o processo segue.",
+      "prova": ["Assertiva que considera completa a relação processual antes da citação erra."],
+      "termos": [],
+      "remissoes": ["Art. 361", "Art. 394"]
+    },
+    "art-364": {
+      "simples": "No caso do artigo anterior, no inciso I, o prazo será fixado pelo juiz entre 15 e 90 dias, de acordo com as circunstâncias, e, no caso do inciso II, o prazo será de trinta dias.",
+      "pontos": ["Prazo do edital fixado pelo juiz entre 15 e 90 dias (inciso I).", "Trinta dias (inciso II)."],
+      "atencao": ["Dispositivo ligado a incisos revogados do art. 363; leitura histórica."],
+      "exemplo": "Texto histórico, sem aplicação prática atual.",
+      "prova": ["Assertiva que aplica hoje o art. 364 sem considerar a revogação dos incisos do art. 363 erra."],
+      "termos": [],
+      "remissoes": ["Art. 363"]
+    },
+    "art-365": {
+      "simples": "O edital de citação indicará o nome do juiz que a determinar; o nome do réu ou seus sinais característicos, residência e profissão, se constarem do processo; o fim para que é feita a citação; o juízo, o dia, a hora e o lugar em que o réu deverá comparecer; e o prazo, que será contado do dia da publicação na imprensa, se houver, ou da afixação. O edital será afixado à porta do edifício onde funcionar o juízo e publicado pela imprensa, onde houver, devendo a afixação ser certificada pelo oficial e a publicação provada por exemplar do jornal ou certidão do escrivão.",
+      "pontos": ["Nome do juiz.", "Nome ou sinais, residência e profissão do réu.", "Finalidade da citação.", "Juízo, dia, hora e lugar.", "Prazo contado da publicação ou afixação.", "Afixação certificada e publicação provada."],
+      "atencao": ["Prazo conta da publicação na imprensa ou da afixação."],
+      "exemplo": "O edital é afixado à porta do fórum e publicado no jornal.",
+      "prova": ["Assertiva que dispensa a afixação do edital à porta do fórum erra."],
+      "termos": [],
+      "remissoes": ["Art. 361"]
+    },
+    "art-366": {
+      "simples": "Se o acusado, citado por edital, não comparecer, nem constituir advogado, ficarão suspensos o processo e o curso do prazo prescricional, podendo o juiz determinar a produção antecipada das provas consideradas urgentes e, se for o caso, decretar prisão preventiva, nos termos do art. 312.",
+      "pontos": ["Citado por edital, sem comparecer nem constituir advogado: suspensão do processo e da prescrição.", "Possível produção antecipada de provas urgentes.", "Possível prisão preventiva, nos termos do art. 312."],
+      "atencao": ["Suspensão do processo E da prescrição.", "Súmula 415 do STJ: o período de suspensão da prescrição é regulado pelo máximo da pena cominada."],
+      "exemplo": "Réu citado por edital não comparece: o processo e a prescrição ficam suspensos.",
+      "prova": ["Assertiva que suspende apenas o processo, sem suspender a prescrição, no art. 366 erra."],
+      "termos": [],
+      "remissoes": ["Art. 361", "Art. 367"]
+    },
+    "art-367": {
+      "simples": "O processo seguirá sem a presença do acusado que, citado ou intimado pessoalmente para qualquer ato, deixar de comparecer sem motivo justificado, ou, no caso de mudança de residência, não comunicar o novo endereço ao juízo.",
+      "pontos": ["Acusado citado ou intimado pessoalmente que falta sem justificativa: o processo segue sem ele.", "Mudança de endereço não comunicada: mesmo efeito."],
+      "atencao": ["Revelia: citação pessoal + ausência injustificada."],
+      "exemplo": "Réu citado pessoalmente não comparece e o processo prossegue sem ele.",
+      "prova": ["Assertiva que suspende o processo na revelia do réu citado pessoalmente erra: o processo segue."],
+      "termos": [{ "termo": "Revelia", "significado": "Ausência injustificada do acusado citado pessoalmente." }],
+      "remissoes": ["Art. 366"]
+    },
+    "art-368": {
+      "simples": "Estando o acusado no estrangeiro, em lugar sabido, será citado mediante carta rogatória, suspendendo-se o curso do prazo de prescrição até o seu cumprimento.",
+      "pontos": ["Acusado no exterior em lugar sabido: citação por carta rogatória.", "Suspensão do prazo prescricional até o cumprimento."],
+      "atencao": ["Suspende a prescrição."],
+      "exemplo": "Réu residente em outro país é citado por carta rogatória.",
+      "prova": ["Assertiva que cita por edital o acusado no exterior em lugar sabido erra: é por carta rogatória."],
+      "termos": [],
+      "remissoes": ["Art. 369"]
+    },
+    "art-369": {
+      "simples": "As citações que houverem de ser feitas em legações estrangeiras serão efetuadas mediante carta rogatória.",
+      "pontos": ["Citação em legação estrangeira: carta rogatória."],
+      "atencao": ["Legações estrangeiras (embaixadas)."],
+      "exemplo": "A citação de pessoa em embaixada estrangeira segue por carta rogatória.",
+      "prova": ["Assertiva que cita em legação estrangeira por mandado comum erra."],
+      "termos": [],
+      "remissoes": ["Art. 368"]
+    },
+    "art-370": {
+      "simples": "Nas intimações dos acusados, das testemunhas e demais pessoas que devam tomar conhecimento de qualquer ato, será observado, no que for aplicável, o disposto sobre a citação. A intimação do defensor constituído, do advogado do querelante e do assistente far-se-á por publicação no órgão incumbido da publicidade dos atos judiciais, incluindo, sob pena de nulidade, o nome do acusado. Não havendo órgão de publicação, a intimação far-se-á pelo escrivão, por mandado, via postal com comprovante ou outro meio idôneo. A intimação pessoal pelo escrivão dispensa a publicação. A intimação do Ministério Público e do defensor nomeado será pessoal.",
+      "pontos": ["Intimações seguem, no que couber, as regras da citação.", "Defensor constituído, advogado do querelante e assistente: publicação com o nome do acusado, sob pena de nulidade.", "Sem órgão de publicação: escrivão, por mandado, correio ou outro meio idôneo.", "MP e defensor nomeado: intimação pessoal."],
+      "atencao": ["Intimação PESSOAL do MP e do defensor nomeado (dativo/público)."],
+      "exemplo": "O defensor público é intimado pessoalmente; o advogado constituído, por publicação com o nome do acusado.",
+      "prova": ["Assertiva que admite a intimação por publicação do defensor nomeado erra: deve ser pessoal."],
+      "termos": [],
+      "remissoes": ["Art. 351"]
+    },
+    "art-371": {
+      "simples": "Será admissível a intimação por despacho na petição em que for requerida, observado o disposto no art. 357.",
+      "pontos": ["Intimação por despacho na própria petição que a requer, observado o art. 357."],
+      "atencao": ["Observar as formalidades do art. 357."],
+      "exemplo": "O juiz despacha na petição e determina a intimação do interessado.",
+      "prova": ["Assertiva que veda a intimação por despacho na petição erra."],
+      "termos": [],
+      "remissoes": ["Art. 357"]
+    },
+    "art-372": {
+      "simples": "Adiada, por qualquer motivo, a instrução criminal, o juiz marcará desde logo, na presença das partes e testemunhas, dia e hora para seu prosseguimento, do que se lavrará termo nos autos.",
+      "pontos": ["Instrução adiada: o juiz marca desde logo novo dia e hora.", "Presença das partes e testemunhas.", "Termo nos autos."],
+      "atencao": ["Evita nova intimação: todos saem intimados."],
+      "exemplo": "A audiência é adiada, e o juiz já marca nova data na presença de todos.",
+      "prova": ["Assertiva que exige nova intimação das partes após o adiamento marcado na presença delas erra."],
+      "termos": [],
+      "remissoes": ["Art. 370"]
+    },
+    "art-373": {
+      "simples": "A aplicação provisória de interdições de direitos poderá ser determinada pelo juiz, de ofício ou a requerimento do Ministério Público, do querelante, do assistente, do ofendido ou de seu representante legal, ainda que este não se tenha constituído assistente: durante a instrução criminal após a apresentação da defesa ou do prazo concedido; na sentença de pronúncia; na decisão confirmatória da pronúncia ou na que, em grau de recurso, pronunciar o réu; e na sentença condenatória recorrível. No primeiro caso, havendo requerimento, o réu ou seu defensor será ouvido no prazo de 2 dias. Decretada a medida, serão feitas as comunicações para a sua execução.",
+      "pontos": ["Aplicação provisória de interdições de direitos pelo juiz, de ofício ou a requerimento.", "Momentos: instrução (após a defesa), pronúncia, confirmação da pronúncia e sentença condenatória recorrível.", "Instrução: defesa ouvida em 2 dias."],
+      "atencao": ["Quatro momentos."],
+      "exemplo": "Na sentença condenatória recorrível, o juiz aplica provisoriamente a interdição de direitos.",
+      "prova": ["Assertiva que permite a aplicação provisória de interdição antes da apresentação da defesa erra."],
+      "termos": [],
+      "remissoes": ["Art. 374"]
+    },
+    "art-374": {
+      "simples": "Não caberá recurso do despacho ou da parte da sentença que decretar ou denegar a aplicação provisória de interdições de direitos, mas estas poderão ser substituídas ou revogadas: se aplicadas no curso da instrução criminal, durante esta ou pelas sentenças a que se referem os incisos II, III e IV do artigo anterior; se aplicadas na sentença de pronúncia, pela decisão que, em grau de recurso, a confirmar, total ou parcialmente, ou pela sentença condenatória recorrível; e se aplicadas na decisão a que se refere o inciso III do artigo anterior, pela sentença condenatória recorrível.",
+      "pontos": ["Decisão sobre aplicação provisória de interdição: sem recurso.", "Pode ser substituída ou revogada em momentos posteriores."],
+      "atencao": ["Sem recurso, mas com possibilidade de revogação ou substituição."],
+      "exemplo": "A interdição aplicada na pronúncia é revogada na sentença condenatória recorrível.",
+      "prova": ["Assertiva que prevê recurso em sentido estrito contra a decisão sobre interdição provisória erra."],
+      "termos": [],
+      "remissoes": ["Art. 373"]
+    },
+    "art-375": {
+      "simples": "O despacho que aplicar provisoriamente, substituir ou revogar interdição de direito será fundamentado.",
+      "pontos": ["Decisão sobre interdição provisória deve ser fundamentada."],
+      "atencao": ["Dever de fundamentação."],
+      "exemplo": "O juiz fundamenta a imposição provisória da interdição.",
+      "prova": ["Assertiva que dispensa a fundamentação da interdição provisória erra."],
+      "termos": [],
+      "remissoes": ["Art. 374"]
+    },
+    "art-376": {
+      "simples": "A decisão que impronunciar ou absolver o réu fará cessar a aplicação provisória da interdição anteriormente determinada.",
+      "pontos": ["Impronúncia ou absolvição faz cessar a interdição provisória."],
+      "atencao": ["Efeito imediato."],
+      "exemplo": "O réu é absolvido, e a interdição provisória cessa.",
+      "prova": ["Assertiva que mantém a interdição provisória após a absolvição erra."],
+      "termos": [],
+      "remissoes": ["Art. 373"]
+    },
+    "art-377": {
+      "simples": "Transitando em julgado a sentença condenatória, serão executadas somente as interdições nela aplicadas ou que derivarem da imposição da pena principal.",
+      "pontos": ["Após o trânsito: executam-se só as interdições aplicadas na sentença ou derivadas da pena principal."],
+      "atencao": ["Interdições provisórias anteriores não se executam por si."],
+      "exemplo": "Só a interdição fixada na sentença condenatória é executada.",
+      "prova": ["Assertiva que executa todas as interdições provisórias após o trânsito erra."],
+      "termos": [],
+      "remissoes": ["Art. 373"]
+    },
+    "art-378": {
+      "simples": "A aplicação provisória de medida de segurança obedecerá ao disposto nos artigos anteriores, com modificações: o juiz poderá aplicá-la de ofício ou a requerimento do Ministério Público; poderá ser determinada ainda no curso do inquérito, mediante representação da autoridade policial; a aplicação, substituição ou revogação poderão ocorrer também na sentença absolutória; e decretada a medida, atender-se-á ao Título V do Livro IV.",
+      "pontos": ["Juiz aplica de ofício ou a requerimento do MP.", "Possível no inquérito, por representação da autoridade policial.", "Possível na sentença absolutória.", "Execução segue o Título V do Livro IV."],
+      "atencao": ["Medida de segurança provisória pode ser aplicada já no inquérito."],
+      "exemplo": "No inquérito, a autoridade policial representa pela medida de segurança provisória.",
+      "prova": ["Assertiva que veda a aplicação provisória de medida de segurança no inquérito erra."],
+      "termos": [],
+      "remissoes": ["Art. 373"]
+    },
+    "art-379": {
+      "simples": "Transitando em julgado a sentença, observar-se-á, quanto à execução das medidas de segurança definitivamente aplicadas, o disposto no Título V do Livro IV.",
+      "pontos": ["Execução das medidas de segurança definitivas segue o Título V do Livro IV."],
+      "atencao": ["Remissão ao Livro da execução."],
+      "exemplo": "Após o trânsito, a medida de segurança é executada conforme o Título V do Livro IV.",
+      "prova": ["Assertiva que aplica regras próprias do Livro I à execução das medidas definitivas erra."],
+      "termos": [],
+      "remissoes": ["Art. 378"]
+    },
+    "art-380": {
+      "simples": "A aplicação provisória de medida de segurança obstará a concessão de fiança e tornará sem efeito a anteriormente concedida.",
+      "pontos": ["Medida de segurança provisória impede fiança.", "Torna sem efeito a fiança anterior."],
+      "atencao": ["Incompatibilidade com a fiança."],
+      "exemplo": "Com a medida de segurança provisória, a fiança anterior perde o efeito.",
+      "prova": ["Assertiva que admite fiança cumulada com medida de segurança provisória erra."],
+      "termos": [],
+      "remissoes": ["Art. 378"]
+    },
+    "art-381": {
+      "simples": "A sentença conterá os nomes das partes ou as indicações necessárias para identificá-las; a exposição sucinta da acusação e da defesa; a indicação dos motivos de fato e de direito em que se fundar a decisão; a indicação dos artigos de lei aplicados; o dispositivo; e a data e a assinatura do juiz.",
+      "pontos": ["I: partes.", "II: relatório (exposição sucinta da acusação e da defesa).", "III: fundamentação (motivos de fato e de direito).", "IV: artigos de lei aplicados.", "V: dispositivo.", "VI: data e assinatura do juiz."],
+      "atencao": ["Estrutura: relatório, fundamentação e dispositivo."],
+      "exemplo": "A sentença traz relatório, fundamentação, dispositivo, data e assinatura.",
+      "prova": ["Assertiva que dispensa a fundamentação de fato e de direito na sentença erra."],
+      "termos": [],
+      "remissoes": ["Art. 387"]
+    },
+    "art-382": {
+      "simples": "Qualquer das partes poderá, no prazo de 2 dias, pedir ao juiz que declare a sentença, sempre que nela houver obscuridade, ambiguidade, contradição ou omissão (embargos de declaração).",
+      "pontos": ["Embargos de declaração ao juiz.", "Prazo de 2 dias.", "Cabimento: obscuridade, ambiguidade, contradição ou omissão."],
+      "atencao": ["Prazo de 2 dias."],
+      "exemplo": "A parte opõe embargos por contradição na sentença em até 2 dias.",
+      "prova": ["Assertiva que fixa em 5 dias o prazo dos embargos de declaração de sentença erra neste artigo: são 2 dias."],
+      "termos": [{ "termo": "Embargos de declaração", "significado": "Pedido para esclarecer obscuridade, contradição ou omissão." }],
+      "remissoes": ["Art. 381"]
+    },
+    "art-383": {
+      "simples": "O juiz, sem modificar a descrição do fato contida na denúncia ou queixa, poderá atribuir-lhe definição jurídica diversa, ainda que, em consequência, tenha de aplicar pena mais grave (emendatio libelli). Se, em consequência de definição jurídica diversa, houver possibilidade de proposta de suspensão condicional do processo, o juiz procederá de acordo com a lei. Tratando-se de infração da competência de outro juízo, a este serão encaminhados os autos.",
+      "pontos": ["Emendatio libelli: nova definição jurídica sem alterar os fatos.", "Pode agravar a pena.", "§1º: possibilidade de suspensão condicional do processo.", "§2º: infração de competência de outro juízo: remessa dos autos."],
+      "atencao": ["Os FATOS não mudam; muda a capitulação jurídica.", "Não exige aditamento."],
+      "exemplo": "O juiz corrige a capitulação do crime sem alterar os fatos narrados na denúncia.",
+      "prova": ["Assertiva que exige aditamento da denúncia para a emendatio libelli erra."],
+      "termos": [{ "termo": "Emendatio libelli", "significado": "Correção da definição jurídica dos mesmos fatos." }],
+      "remissoes": ["Art. 384"]
+    },
+    "art-384": {
+      "simples": "Encerrada a instrução probatória, se entender cabível nova definição jurídica do fato, em consequência de prova existente nos autos de elemento ou circunstância da infração penal não contida na acusação, o Ministério Público deverá aditar a denúncia ou queixa, no prazo de 5 dias, se em virtude desta houver sido instaurado o processo em crime de ação pública (mutatio libelli). Não procedendo o MP ao aditamento, aplica-se o art. 28. Ouvido o defensor no prazo de 5 dias e admitido o aditamento, o juiz, a requerimento de qualquer das partes, designará dia e hora para continuação da audiência, com inquirição de testemunhas, novo interrogatório, debates e julgamento. Havendo aditamento, cada parte poderá arrolar até 3 testemunhas, no prazo de 5 dias, ficando o juiz, na sentença, adstrito aos termos do aditamento.",
+      "pontos": ["Mutatio libelli: nova definição jurídica por elemento ou circunstância não contida na acusação.", "MP adita em 5 dias.", "Sem aditamento: aplica-se o art. 28.", "Defensor ouvido em 5 dias.", "Até 3 testemunhas por parte, em 5 dias.", "Juiz fica adstrito ao aditamento."],
+      "atencao": ["Os FATOS mudam (elemento ou circunstância nova).", "Depende de aditamento pelo MP, na ação pública."],
+      "exemplo": "A prova revela circunstância nova, e o MP adita a denúncia em 5 dias.",
+      "prova": ["Assertiva que permite ao juiz condenar por fato novo sem aditamento pelo MP erra."],
+      "termos": [{ "termo": "Mutatio libelli", "significado": "Alteração dos fatos da acusação por aditamento." }],
+      "remissoes": ["Art. 383", "Art. 28"]
+    },
+    "art-385": {
+      "simples": "Nos crimes de ação pública, o juiz poderá proferir sentença condenatória, ainda que o Ministério Público tenha opinado pela absolvição, bem como reconhecer agravantes, embora nenhuma tenha sido alegada.",
+      "pontos": ["Juiz pode condenar mesmo com pedido de absolvição do MP.", "Pode reconhecer agravantes não alegadas."],
+      "atencao": ["Muito discutido à luz do sistema acusatório (art. 3º-A): parte da doutrina entende o dispositivo incompatível."],
+      "exemplo": "O MP pede absolvição, mas o juiz condena com base na prova.",
+      "prova": ["Assertiva que vincula o juiz ao pedido de absolvição do MP, conforme o texto do art. 385, erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º-A"]
+    },
+    "art-386": {
+      "simples": "O juiz absolverá o réu, mencionando a causa na parte dispositiva, desde que reconheça estar provada a inexistência do fato; não haver prova da existência do fato; não constituir o fato infração penal; estar provado que o réu não concorreu para a infração; não existir prova de ter o réu concorrido para a infração; existirem circunstâncias que excluam o crime ou isentem o réu de pena (arts. 20, 21, 22, 23, 26 e §1º do art. 28 do Código Penal), ou mesmo se houver fundada dúvida sobre sua existência; ou não existir prova suficiente para a condenação. Na sentença absolutória, o juiz mandará pôr o réu em liberdade, ordenará a cessação das medidas cautelares e provisoriamente aplicadas e aplicará medida de segurança, se cabível.",
+      "pontos": ["I: provada a inexistência do fato.", "II: não há prova da existência do fato.", "III: o fato não constitui infração penal.", "IV: provado que o réu não concorreu.", "V: não há prova de que o réu concorreu.", "VI: excludentes de ilicitude ou culpabilidade, ou dúvida sobre elas.", "VII: prova insuficiente para a condenação.", "Parágrafo único: liberdade, cessação das cautelares e medida de segurança, se cabível."],
+      "atencao": ["Inexistência do fato (I) e prova de que o réu não concorreu (IV) repercutem no cível; já a atipicidade (III) não impede a ação civil (art. 67, III).", "Dúvida sobre excludente leva à absolvição (VI)."],
+      "exemplo": "Provado que o fato não existiu, o juiz absolve com base no inciso I.",
+      "prova": ["Assertiva que dispensa mencionar a causa da absolvição na parte dispositiva erra."],
+      "termos": [],
+      "remissoes": ["Art. 65", "Art. 66", "Art. 67"]
+    },
+    "art-387": {
+      "simples": "O juiz, ao proferir sentença condenatória, mencionará as circunstâncias agravantes ou atenuantes do Código Penal; mencionará as outras circunstâncias apuradas e tudo o mais que deva ser levado em conta na aplicação da pena, nos termos dos arts. 59 e 60 do Código Penal; aplicará as penas de acordo com essas conclusões; fixará valor mínimo para reparação dos danos causados pela infração, considerando os prejuízos sofridos pelo ofendido; atenderá ao disposto sobre aplicação provisória de interdições de direitos e medidas de segurança; e determinará se a sentença deverá ser publicada na íntegra ou em resumo. O juiz decidirá, fundamentadamente, sobre a manutenção ou imposição de prisão preventiva ou outra medida cautelar, sem prejuízo da apelação. O tempo de prisão provisória, de prisão administrativa ou de internação, no Brasil ou no estrangeiro, será computado para fins de determinação do regime inicial de pena privativa de liberdade.",
+      "pontos": ["Agravantes, atenuantes e circunstâncias dos arts. 59 e 60 do CP.", "Aplicação das penas.", "IV: valor mínimo para reparação dos danos.", "V: interdições de direitos e medidas de segurança provisórias.", "VI: publicação da sentença.", "§1º: decide sobre prisão preventiva ou cautelar.", "§2º: detração para o regime inicial."],
+      "atencao": ["O valor mínimo de reparação do dano depende de pedido e de contraditório sobre o tema.", "Detração: o tempo de prisão provisória é computado para o regime inicial."],
+      "exemplo": "A sentença fixa o valor mínimo de reparação à vítima.",
+      "prova": ["Assertiva que dispensa a fixação do valor mínimo de reparação dos danos na sentença condenatória erra."],
+      "termos": [{ "termo": "Detração", "significado": "Desconto do tempo de prisão provisória na pena." }],
+      "remissoes": ["Art. 63", "Art. 381"]
+    },
+    "art-388": {
+      "simples": "A sentença poderá ser datilografada e, neste caso, o juiz a rubricará em todas as folhas.",
+      "pontos": ["Sentença datilografada: rubrica do juiz em todas as folhas."],
+      "atencao": ["Hoje a regra é o meio eletrônico."],
+      "exemplo": "Texto histórico, adaptado hoje ao processo eletrônico.",
+      "prova": ["Assertiva que dispensa a rubrica do juiz em todas as folhas da sentença datilografada erra."],
+      "termos": [],
+      "remissoes": ["Art. 389"]
+    },
+    "art-389": {
+      "simples": "A sentença será publicada em mão do escrivão, que lavrará nos autos o respectivo termo, registrando-a em livro especialmente destinado a esse fim.",
+      "pontos": ["Publicação da sentença em mão do escrivão.", "Termo nos autos e registro em livro especial."],
+      "atencao": ["Rito formal de publicação."],
+      "exemplo": "O juiz entrega a sentença ao escrivão, que a registra.",
+      "prova": ["Assertiva que dispensa o registro da sentença em livro próprio erra."],
+      "termos": [],
+      "remissoes": ["Art. 390"]
+    },
+    "art-390": {
+      "simples": "O escrivão, dentro de três dias após a publicação, e sob pena de suspensão de cinco dias, dará conhecimento da sentença ao órgão do Ministério Público.",
+      "pontos": ["Escrivão comunica a sentença ao MP em três dias.", "Pena de suspensão de cinco dias."],
+      "atencao": ["Prazo de três dias."],
+      "exemplo": "O escrivão dá ciência ao MP da sentença em três dias.",
+      "prova": ["Assertiva que fixa em 10 dias o prazo do escrivão para dar ciência ao MP erra: são três dias."],
+      "termos": [],
+      "remissoes": ["Art. 389"]
+    },
+    "art-391": {
+      "simples": "O querelante ou o assistente será intimado da sentença, pessoalmente ou na pessoa de seu advogado. Se nenhum deles for encontrado no lugar da sede do juízo, a intimação será feita mediante edital com o prazo de 10 dias, afixado no lugar de costume.",
+      "pontos": ["Querelante ou assistente intimados pessoalmente ou na pessoa do advogado.", "Se não encontrados: edital de 10 dias."],
+      "atencao": ["Edital de 10 dias."],
+      "exemplo": "Nem o assistente nem seu advogado são encontrados: intimação por edital de 10 dias.",
+      "prova": ["Assertiva que fixa em 90 dias o prazo do edital para o querelante erra: são 10 dias."],
+      "termos": [],
+      "remissoes": ["Art. 392"]
+    },
+    "art-392": {
+      "simples": "A intimação da sentença será feita ao réu, pessoalmente, se estiver preso; ao réu, pessoalmente, ou ao defensor por ele constituído, quando se livrar solto ou, sendo afiançável a infração, tiver prestado fiança; ao defensor constituído pelo réu, se este, expedido o mandado de prisão, não tiver sido encontrado; e por edital nos demais casos em que o réu e o defensor não forem encontrados, conforme certidão do oficial de justiça. O prazo do edital será de 90 dias, se tiver sido imposta pena privativa de liberdade por tempo igual ou superior a um ano, e de 60 dias, nos outros casos. O prazo para apelação correrá após o término do fixado no edital, salvo se, no curso deste, for feita a intimação por outra forma.",
+      "pontos": ["Réu preso: pessoalmente.", "Réu solto ou afiançado: ele ou o defensor constituído.", "Mandado de prisão sem localização do réu: defensor constituído.", "Demais casos de não localização: edital.", "Prazo do edital: 90 dias (pena igual ou superior a um ano) ou 60 dias (demais casos).", "Prazo de apelação corre após o fim do edital."],
+      "atencao": ["Edital: 90 dias se a pena privativa de liberdade for igual ou superior a um ano; senão 60 dias."],
+      "exemplo": "Condenado a um ano de reclusão e não localizado: edital de 90 dias.",
+      "prova": ["Assertiva que fixa em 60 dias o edital para pena igual ou superior a um ano erra: são 90 dias."],
+      "termos": [],
+      "remissoes": ["Art. 391"]
+    }
+  }
+}
