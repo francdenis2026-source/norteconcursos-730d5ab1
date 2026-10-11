@@ -11,6 +11,7 @@ import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
+import { SafeBoundary } from "@/components/library/SafeBoundary";
 import { UnitTrueFalse } from "@/components/library/UnitTrueFalse";
 import { LegalCoverage } from "@/components/library/LegalCoverage";
 import { useStudyMaterial } from "@/lib/studyMaterials";
@@ -183,7 +184,7 @@ function UnitLesson({ unit, law, materialSlug, references, progress, userId, hig
       </>}
       {(step === "texto" || (step === "fixar" && revealed)) && <>
         <div className={unit.unit_key.startsWith("anexo-") ? "library-body overflow-x-auto" : undefined}><LegalStudyReading source={unit.body_text} markdown={unit.unit_key.startsWith("anexo-")} highlightPar={highlightPar} /></div>
-        {step === "texto" && caveat?.literalPractice !== false && <UnitTrueFalse key={unit.id} unit={unit} userId={userId} />}
+        {step === "texto" && caveat?.literalPractice !== false && <SafeBoundary><UnitTrueFalse key={unit.id} unit={unit} userId={userId} /></SafeBoundary>}
         {unit.recall.figures?.filter(figure => isStudySourceUrl(figure.url)).map(figure => <figure key={figure.url} className="rounded-xl border p-3"><img src={figure.url} alt={figure.title} className="h-auto max-w-full" loading="lazy" onError={event => { event.currentTarget.hidden = true; }} /><figcaption className="mt-2 text-xs"><a href={figure.url} target="_blank" rel="noopener noreferrer" className="underline">{figure.title}</a></figcaption></figure>)}
         {step === "texto" && <div className="flex justify-between gap-2"><Button variant="outline" onClick={() => setStep("entender")}>← Entender</Button><Button onClick={() => { setStep("fixar"); setRevealed(false); setResponse(""); }}>Fixar este artigo →</Button></div>}
       </>}

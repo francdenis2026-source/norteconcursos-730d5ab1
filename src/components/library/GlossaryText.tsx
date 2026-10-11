@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { annotate, type GlossaryEntry } from "@/lib/glossary";
+import { SafeBoundary } from "./SafeBoundary";
 
 function Term({ entry, children }: { entry: GlossaryEntry; children: string }) {
   const [open, setOpen] = useState(false);
@@ -24,7 +25,7 @@ function Term({ entry, children }: { entry: GlossaryEntry; children: string }) {
 }
 
 /** Texto comum com verbetes do dicionário sublinhados; ao passar o mouse (ou tocar) mostra significado, sinônimos e exemplo. */
-export function GlossaryText({ text }: { text: string }) {
+function Annotated({ text }: { text: string }) {
   const parts = useMemo(() => annotate(text), [text]);
   if (parts.length === 1 && !parts[0]!.entry) return <>{text}</>;
   return (
@@ -32,4 +33,9 @@ export function GlossaryText({ text }: { text: string }) {
       {parts.map((p, i) => (p.entry ? <Term key={i} entry={p.entry}>{p.text}</Term> : <span key={i}>{p.text}</span>))}
     </TooltipProvider>
   );
+}
+
+export function GlossaryText({ text }: { text: string }) {
+  if (typeof text !== "string" || !text) return <>{text ?? null}</>;
+  return <SafeBoundary fallback={<>{text}</>}><Annotated text={text} /></SafeBoundary>;
 }
