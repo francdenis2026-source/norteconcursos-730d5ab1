@@ -178,11 +178,11 @@ test('Catalog renders one study entry per law in separate areas and keeps deep r
  });
  const materials=manifest.map(m=>({slug:m.material_slug}));
  const html=renderToStaticMarkup(React.createElement(LegalPathCatalog,{userId:'test',materials,searching:false}));
- assert.equal((html.match(/Estudar: guia, exemplos e flashcards/g)??[]).length,39);
- assert.equal((html.match(/Leitura integral e revisão por dispositivo/g)??[]).length,39);
+ assert.equal((html.match(/Estudar artigo por artigo/g)??[]).length,39);
+ assert.equal((html.match(/Resumo da lei, exemplos e flashcards/g)??[]).length,39);
  for(const group of new Set(data.map(c=>c.group)))assert.ok(html.includes(group));
  const only=renderToStaticMarkup(React.createElement(LegalPathCatalog,{userId:'test',materials:[{slug:'legislacao-drogas-revisao'}],searching:true}));
- assert.equal((only.match(/Estudar: guia, exemplos e flashcards/g)??[]).length,1);
+ assert.equal((only.match(/Estudar artigo por artigo/g)??[]).length,1);
  assert.ok(!only.includes('/dashboard/library/processo-penal-cpp-provas-flagrante-revisao'));
  assert.ok(html.indexOf('/dashboard/library/penal-principios-direito-penal')<html.indexOf('/dashboard/library/legislacao-transito-revisao'));
  const matched=renderToStaticMarkup(React.createElement(LegalPathCatalog,{userId:'test',materials:[{slug:'legislacao-maria-penha-revisao'}],searching:true,query:'11340'}));
