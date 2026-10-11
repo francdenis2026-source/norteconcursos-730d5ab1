@@ -1,0 +1,420 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 13: arts. 482 a 533",
+  "units": {
+    "art-482": {
+      "simples": "O Conselho de Sentença será questionado sobre matéria de fato e se o acusado deve ser absolvido. Os quesitos serão redigidos em proposições afirmativas, simples e distintas, de modo que cada um possa ser respondido com suficiente clareza e necessária precisão, levando o presidente em conta os termos da pronúncia, do interrogatório e das alegações das partes.",
+      "pontos": ["Os jurados respondem sobre matéria de FATO e sobre a absolvição.", "Quesitos: afirmativos, simples e distintos.", "Redação com base na pronúncia, no interrogatório e nas alegações das partes."],
+      "atencao": ["Os jurados não decidem questões de direito."],
+      "exemplo": "O quesito é formulado de forma afirmativa e simples, para ser respondido com 'sim' ou 'não'.",
+      "prova": ["Assertiva que permite quesitos complexos e negativos erra: devem ser afirmativos, simples e distintos."],
+      "termos": [],
+      "remissoes": ["Art. 483"]
+    },
+    "art-483": {
+      "simples": "Os quesitos serão formulados na seguinte ordem: materialidade do fato; autoria ou participação; se o acusado deve ser absolvido; se existe causa de diminuição de pena alegada pela defesa; e se existe circunstância qualificadora ou causa de aumento de pena reconhecidas na pronúncia. A resposta negativa, de mais de 3 jurados, a qualquer dos quesitos dos incisos I e II encerra a votação e implica a absolvição. Respondidos afirmativamente por mais de 3 jurados os quesitos I e II, será formulado o quesito: 'O jurado absolve o acusado?'. Decidindo os jurados pela condenação, o julgamento prossegue, com quesitos sobre causa de diminuição de pena e circunstância qualificadora ou causa de aumento. O dispositivo remete à ADPF 779.",
+      "pontos": ["Ordem: I materialidade; II autoria ou participação; III absolvição; IV causa de diminuição; V qualificadora ou causa de aumento.", "Negativa de mais de 3 jurados em I ou II: absolvição.", "Afirmativa em I e II: quesito genérico 'O jurado absolve o acusado?'.", "Condenação: quesitos sobre diminuição e qualificadora/aumento."],
+      "atencao": ["Mais de 3 jurados = maioria (de 7).", "O quesito da absolvição (genérico) é obrigatório."],
+      "exemplo": "Quatro jurados negam a autoria: o acusado é absolvido e a votação se encerra.",
+      "prova": ["Assertiva que coloca o quesito de qualificadora antes da autoria erra: autoria vem antes."],
+      "termos": [{ "termo": "Quesito genérico", "significado": "'O jurado absolve o acusado?', terceiro quesito da série." }],
+      "remissoes": ["Art. 482", "Art. 489"]
+    },
+    "art-484": {
+      "simples": "O presidente lerá os quesitos e indagará das partes se têm requerimento ou reclamação a fazer, devendo qualquer deles, bem como a decisão, constar da ata. Ainda em plenário, o juiz presidente explicará aos jurados o significado de cada quesito.",
+      "pontos": ["Leitura dos quesitos e oportunidade de requerimento ou reclamação.", "Requerimentos e decisão constam da ata.", "Explicação do significado de cada quesito aos jurados."],
+      "atencao": ["Reclamação não registrada em ata gera preclusão."],
+      "exemplo": "A defesa reclama de um quesito, e a ata registra a reclamação e a decisão.",
+      "prova": ["Assertiva que dispensa o registro em ata das reclamações sobre os quesitos erra."],
+      "termos": [],
+      "remissoes": ["Art. 483"]
+    },
+    "art-485": {
+      "simples": "Não havendo dúvida a ser esclarecida, o juiz presidente, os jurados, o Ministério Público, o assistente, o querelante, o defensor do acusado, o escrivão e o oficial de justiça dirigir-se-ão à sala especial a fim de ser procedida a votação. Na falta de sala especial, o juiz presidente determinará que o público se retire, permanecendo somente as pessoas mencionadas. O juiz presidente advertirá as partes de que não será permitida qualquer intervenção que possa perturbar a livre manifestação do Conselho e fará retirar da sala quem se portar inconvenientemente.",
+      "pontos": ["Votação em sala especial, com presentes limitados.", "Sem sala especial: público se retira.", "Proibida intervenção que perturbe a livre manifestação do Conselho."],
+      "atencao": ["Sigilo da votação, mas com a presença de partes e escrivão."],
+      "exemplo": "Sem sala especial, o público é retirado e a votação ocorre no plenário.",
+      "prova": ["Assertiva que permite a presença do público na votação, na falta de sala especial, erra."],
+      "termos": [{ "termo": "Sala especial", "significado": "Local da votação dos quesitos, com acesso restrito." }],
+      "remissoes": ["Art. 486"]
+    },
+    "art-486": {
+      "simples": "Antes de proceder-se à votação de cada quesito, o juiz presidente mandará distribuir aos jurados pequenas cédulas, feitas de papel opaco e facilmente dobráveis, contendo 7 delas a palavra sim, 7 a palavra não.",
+      "pontos": ["Cédulas de papel opaco e facilmente dobráveis.", "7 com 'sim' e 7 com 'não' para cada jurado."],
+      "atencao": ["7 cédulas 'sim' e 7 'não'."],
+      "exemplo": "Cada jurado recebe 7 cédulas 'sim' e 7 'não' antes de cada quesito.",
+      "prova": ["Assertiva que fixa em 3 cédulas de cada tipo a distribuição erra: são 7 de cada."],
+      "termos": [],
+      "remissoes": ["Art. 487"]
+    },
+    "art-487": {
+      "simples": "Para assegurar o sigilo do voto, o oficial de justiça recolherá em urnas separadas as cédulas correspondentes aos votos e as não utilizadas.",
+      "pontos": ["Urnas separadas para as cédulas votadas e para as não utilizadas."],
+      "atencao": ["Mantém o sigilo do voto, evitando identificar a votação."],
+      "exemplo": "Voto e cédulas restantes vão para urnas diferentes.",
+      "prova": ["Assertiva que recolhe em uma só urna os votos e as cédulas não utilizadas erra."],
+      "termos": [],
+      "remissoes": ["Art. 486"]
+    },
+    "art-488": {
+      "simples": "Após a resposta, verificados os votos e as cédulas não utilizadas, o presidente determinará que o escrivão registre no termo a votação de cada quesito, bem como o resultado do julgamento. Do termo também constará a conferência das cédulas não utilizadas.",
+      "pontos": ["Verificação dos votos e das cédulas não utilizadas.", "Registro no termo da votação de cada quesito e do resultado.", "Conferência das cédulas não utilizadas consta do termo."],
+      "atencao": ["A apuração é interrompida quando se alcança maioria (sigilo da unanimidade)."],
+      "exemplo": "O escrivão registra no termo o resultado de cada quesito.",
+      "prova": ["Assertiva que dispensa a conferência das cédulas não utilizadas erra."],
+      "termos": [],
+      "remissoes": ["Art. 491"]
+    },
+    "art-489": {
+      "simples": "As decisões do Tribunal do Júri serão tomadas por maioria de votos.",
+      "pontos": ["Decisões do Júri por maioria de votos."],
+      "atencao": ["Voto secreto e soberania dos veredictos (Constituição, art. 5º, XXXVIII)."],
+      "exemplo": "Quatro votos 'sim' decidem o quesito.",
+      "prova": ["Assertiva que exige unanimidade para as decisões do Júri erra: basta maioria."],
+      "termos": [],
+      "remissoes": ["Art. 483"]
+    },
+    "art-490": {
+      "simples": "Se a resposta a qualquer dos quesitos estiver em contradição com outra ou outras já dadas, o presidente, explicando aos jurados em que consiste a contradição, submeterá novamente à votação os quesitos a que se referirem tais respostas. Se, pela resposta dada a um dos quesitos, o presidente verificar que ficam prejudicados os seguintes, assim o declarará, dando por finda a votação.",
+      "pontos": ["Respostas contraditórias: o presidente explica a contradição e submete novamente a votação.", "Quesitos prejudicados: o presidente declara e encerra a votação."],
+      "atencao": ["Contradição leva a nova votação (e não a nulidade imediata)."],
+      "exemplo": "Duas respostas se contradizem, e os jurados votam novamente.",
+      "prova": ["Assertiva que anula o julgamento diante de contradição sem nova votação erra."],
+      "termos": [],
+      "remissoes": ["Art. 483"]
+    },
+    "art-491": {
+      "simples": "Encerrada a votação, será o termo a que se refere o art. 488 assinado pelo presidente, pelos jurados e pelas partes.",
+      "pontos": ["Termo de votação assinado pelo presidente, jurados e partes."],
+      "atencao": ["Assinatura de todos."],
+      "exemplo": "Ao fim da votação, o termo é assinado por todos.",
+      "prova": ["Assertiva que dispensa a assinatura dos jurados no termo de votação erra."],
+      "termos": [],
+      "remissoes": ["Art. 488"]
+    },
+    "art-492": {
+      "simples": "Em seguida, o presidente proferirá sentença. No caso de condenação: fixará a pena-base; considerará as circunstâncias agravantes ou atenuantes alegadas nos debates; imporá os aumentos ou diminuições, em atenção às causas admitidas pelo júri; observará as demais disposições do art. 387; mandará o acusado recolher-se ou o recomendará à prisão em que se encontra, se presentes os requisitos da preventiva, ou, no caso de condenação a pena igual ou superior a 15 anos de reclusão, determinará a execução provisória das penas, com expedição de mandado de prisão, sem prejuízo do conhecimento de recursos; e estabelecerá os efeitos genéricos e específicos da condenação. No caso de absolvição, mandará colocar em liberdade o acusado se por outro motivo não estiver preso, entre outras providências.",
+      "pontos": ["Condenação: pena-base, agravantes e atenuantes alegadas, aumentos e diminuições, art. 387.", "Prisão: se presentes os requisitos da preventiva; pena igual ou superior a 15 anos: execução provisória.", "Efeitos genéricos e específicos da condenação.", "Absolvição: liberdade, se por outro motivo não estiver preso."],
+      "atencao": ["Pena igual ou superior a 15 anos: execução provisória (texto do dispositivo), tema debatido no STF.", "O juiz presidente fixa a pena; os jurados decidem apenas sobre os fatos."],
+      "exemplo": "O juiz presidente fixa a pena-base após o veredicto condenatório.",
+      "prova": ["Assertiva que atribui aos jurados a fixação da pena erra: ela cabe ao juiz presidente."],
+      "termos": [],
+      "remissoes": ["Art. 387", "Art. 483"]
+    },
+    "art-493": {
+      "simples": "A sentença será lida em plenário pelo presidente antes de encerrada a sessão de instrução e julgamento.",
+      "pontos": ["Sentença lida em plenário, antes de encerrada a sessão."],
+      "atencao": ["Leitura pública."],
+      "exemplo": "O juiz lê a sentença em plenário ao fim da sessão.",
+      "prova": ["Assertiva que dispensa a leitura da sentença em plenário erra."],
+      "termos": [],
+      "remissoes": ["Art. 492"]
+    },
+    "art-494": {
+      "simples": "De cada sessão de julgamento o escrivão lavrará ata, assinada pelo presidente e pelas partes.",
+      "pontos": ["Ata de cada sessão, lavrada pelo escrivão.", "Assinada pelo presidente e pelas partes."],
+      "atencao": ["A ata é peça essencial para recursos."],
+      "exemplo": "O escrivão lavra a ata da sessão do Júri.",
+      "prova": ["Assertiva que dispensa a ata da sessão de julgamento erra."],
+      "termos": [],
+      "remissoes": ["Art. 495", "Art. 496"]
+    },
+    "art-495": {
+      "simples": "A ata descreverá fielmente todas as ocorrências, mencionando obrigatoriamente, entre outros itens: a data e a hora da instalação dos trabalhos; o magistrado que presidiu a sessão e os jurados presentes; os jurados que deixaram de comparecer, com escusa ou sem ela, e as sanções aplicadas; o ofício ou requerimento de isenção ou dispensa; o sorteio dos suplentes; o adiamento da sessão, com o motivo; a abertura da sessão e a presença do MP, do querelante, do assistente e do defensor; o pregão e a sanção imposta, no caso de não comparecimento; as testemunhas dispensadas de depor; e o recolhimento das testemunhas a lugar onde umas não ouvissem as outras.",
+      "pontos": ["Ata fiel, com elementos obrigatórios.", "Instalação, magistrado, jurados presentes e faltosos.", "Isenções, dispensas, suplentes e adiamentos.", "Presença das partes, pregão, testemunhas dispensadas e incomunicabilidade."],
+      "atencao": ["Rol extenso de itens obrigatórios."],
+      "exemplo": "A ata registra o horário de instalação e os jurados presentes.",
+      "prova": ["Assertiva que dispensa a menção dos jurados faltosos na ata erra."],
+      "termos": [],
+      "remissoes": ["Art. 494"]
+    },
+    "art-496": {
+      "simples": "A falta da ata sujeitará o responsável a sanções administrativa e penal.",
+      "pontos": ["Falta da ata: sanções administrativa e penal ao responsável."],
+      "atencao": ["Responsabilidade do escrivão."],
+      "exemplo": "O responsável que não lavra a ata sofre sanção administrativa e penal.",
+      "prova": ["Assertiva que sanciona a falta da ata apenas civilmente erra."],
+      "termos": [],
+      "remissoes": ["Art. 494"]
+    },
+    "art-497": {
+      "simples": "São atribuições do juiz presidente do Tribunal do Júri, além de outras referidas no Código: regular a polícia das sessões e prender os desobedientes; requisitar o auxílio da força pública, que ficará sob sua exclusiva autoridade; dirigir os debates, intervindo em caso de abuso, excesso de linguagem ou mediante requerimento de uma das partes; resolver as questões incidentes que não dependam de pronunciamento do júri; nomear defensor ao acusado, quando considerá-lo indefeso, podendo dissolver o Conselho e designar novo dia; mandar retirar da sala o acusado que dificultar a realização do julgamento, o qual prosseguirá sem a sua presença; e suspender a sessão pelo tempo indispensável à realização das diligências, mantida a incomunicabilidade dos jurados, entre outras atribuições.",
+      "pontos": ["Polícia das sessões e prisão dos desobedientes.", "Força pública sob sua exclusiva autoridade.", "Direção dos debates e coibição de excessos.", "Questões incidentes que não dependam do júri.", "Nomeação de defensor se o acusado estiver indefeso, com possível dissolução do Conselho.", "Retirada do acusado que dificulta o julgamento.", "Suspensão da sessão para diligências, com incomunicabilidade dos jurados."],
+      "atencao": ["Defesa deficiente: o juiz nomeia defensor e pode dissolver o Conselho."],
+      "exemplo": "O juiz presidente considera o acusado indefeso, nomeia novo defensor e dissolve o Conselho.",
+      "prova": ["Assertiva que impede o juiz presidente de dissolver o Conselho por defesa deficiente erra."],
+      "termos": [],
+      "remissoes": ["Art. 481"]
+    },
+    "art-513": {
+      "simples": "Nos crimes de responsabilidade dos funcionários públicos, cujo processo e julgamento competirão aos juízes de direito, a queixa ou a denúncia será instruída com documentos ou justificação que façam presumir a existência do delito ou com declaração fundamentada da impossibilidade de apresentação de qualquer dessas provas.",
+      "pontos": ["Crimes de responsabilidade de funcionários públicos julgados por juiz de direito.", "Denúncia ou queixa instruída com documentos ou justificação.", "Ou declaração fundamentada de impossibilidade."],
+      "atencao": ["Início do procedimento especial dos crimes funcionais afiançáveis."],
+      "exemplo": "A denúncia contra o servidor vem acompanhada de documentos que indicam o delito.",
+      "prova": ["Assertiva que dispensa documentos ou justificação para a denúncia do art. 513 erra."],
+      "termos": [],
+      "remissoes": ["Art. 514"]
+    },
+    "art-514": {
+      "simples": "Nos crimes afiançáveis, estando a denúncia ou queixa em devida forma, o juiz mandará autuá-la e ordenará a notificação do acusado, para responder por escrito, dentro do prazo de quinze dias. Se não for conhecida a residência do acusado, ou este se achar fora da jurisdição do juiz, ser-lhe-á nomeado defensor, a quem caberá apresentar a resposta preliminar.",
+      "pontos": ["Crimes afiançáveis de funcionários: notificação para resposta preliminar em quinze dias.", "Sem residência conhecida ou fora da jurisdição: defensor nomeado."],
+      "atencao": ["A Súmula 330 do STJ dispensa a defesa preliminar se a ação é instruída por inquérito policial."],
+      "exemplo": "O servidor é notificado para responder por escrito em quinze dias.",
+      "prova": ["Assertiva que fixa em 10 dias a resposta preliminar do art. 514 erra: são quinze dias."],
+      "termos": [],
+      "remissoes": ["Art. 513", "Art. 516"]
+    },
+    "art-515": {
+      "simples": "No caso do artigo anterior, durante o prazo concedido para a resposta, os autos permanecerão em cartório, onde poderão ser examinados pelo acusado ou por seu defensor. A resposta poderá ser instruída com documentos e justificações.",
+      "pontos": ["Autos permanecem em cartório durante o prazo de resposta.", "Acusado ou defensor podem examiná-los.", "Resposta pode ter documentos e justificações."],
+      "atencao": ["Acesso aos autos em cartório."],
+      "exemplo": "O defensor examina os autos em cartório e junta documentos à resposta.",
+      "prova": ["Assertiva que impede o exame dos autos durante o prazo de resposta erra."],
+      "termos": [],
+      "remissoes": ["Art. 514"]
+    },
+    "art-516": {
+      "simples": "O juiz rejeitará a queixa ou denúncia, em despacho fundamentado, se convencido, pela resposta do acusado ou do seu defensor, da inexistência do crime ou da improcedência da ação.",
+      "pontos": ["Rejeição fundamentada da denúncia ou queixa.", "Convencimento pela resposta preliminar da inexistência do crime ou da improcedência da ação."],
+      "atencao": ["Despacho fundamentado."],
+      "exemplo": "Pela resposta, o juiz se convence da inexistência do crime e rejeita a denúncia.",
+      "prova": ["Assertiva que dispensa a fundamentação do despacho de rejeição erra."],
+      "termos": [],
+      "remissoes": ["Art. 514"]
+    },
+    "art-517": {
+      "simples": "Recebida a denúncia ou a queixa, será o acusado citado, na forma estabelecida no Capítulo I do Título X do Livro I.",
+      "pontos": ["Recebida a peça acusatória, citação do acusado na forma do Capítulo I do Título X do Livro I."],
+      "atencao": ["Citação segue as regras gerais."],
+      "exemplo": "Recebida a denúncia contra o servidor, ele é citado conforme as regras gerais.",
+      "prova": ["Assertiva que dispensa a citação após o recebimento da denúncia erra."],
+      "termos": [],
+      "remissoes": ["Art. 351"]
+    },
+    "art-518": {
+      "simples": "Na instrução criminal e nos demais termos do processo, observar-se-á o disposto nos Capítulos I e III, Título I, deste Livro.",
+      "pontos": ["Instrução e demais termos seguem o rito comum (Capítulos I e III do Título I)."],
+      "atencao": ["Remissão ao procedimento comum."],
+      "exemplo": "A instrução dos crimes funcionais segue o rito comum.",
+      "prova": ["Assertiva que cria rito de instrução próprio no art. 518 erra."],
+      "termos": [],
+      "remissoes": ["Art. 394"]
+    },
+    "art-519": {
+      "simples": "No processo por crime de calúnia ou injúria, para o qual não haja outra forma estabelecida em lei especial, observar-se-á o disposto nos Capítulos I e III, Título I, deste Livro, com as modificações constantes dos artigos seguintes.",
+      "pontos": ["Calúnia e injúria seguem o rito comum com modificações.", "Aplica-se onde não houver rito de lei especial."],
+      "atencao": ["Procedimento de crimes contra a honra de competência do juiz singular."],
+      "exemplo": "A queixa por injúria segue o rito comum com a fase de reconciliação.",
+      "prova": ["Assertiva que cria rito totalmente autônomo para calúnia e injúria erra: segue o comum, com modificações."],
+      "termos": [],
+      "remissoes": ["Art. 520"]
+    },
+    "art-520": {
+      "simples": "Antes de receber a queixa, o juiz oferecerá às partes oportunidade para se reconciliarem, fazendo-as comparecer em juízo e ouvindo-as, separadamente, sem a presença dos seus advogados, não se lavrando termo.",
+      "pontos": ["Audiência de reconciliação antes de receber a queixa.", "Partes ouvidas separadamente, sem advogados.", "Sem termo."],
+      "atencao": ["Sem a presença dos advogados e sem termo."],
+      "exemplo": "O juiz ouve querelante e querelado separadamente, buscando a reconciliação.",
+      "prova": ["Assertiva que exige a presença dos advogados na audiência de reconciliação erra."],
+      "termos": [],
+      "remissoes": ["Art. 521"]
+    },
+    "art-521": {
+      "simples": "Se, depois de ouvir o querelante e o querelado, o juiz achar provável a reconciliação, promoverá entendimento entre eles, na sua presença.",
+      "pontos": ["Juiz que considera provável a reconciliação promove entendimento entre as partes, na sua presença."],
+      "atencao": ["Etapa seguinte à oitiva separada."],
+      "exemplo": "Percebendo chance de acordo, o juiz reúne as partes para conciliar.",
+      "prova": ["Assertiva que impede o juiz de promover o entendimento entre as partes erra."],
+      "termos": [],
+      "remissoes": ["Art. 520"]
+    },
+    "art-522": {
+      "simples": "No caso de reconciliação, depois de assinado pelo querelante o termo da desistência, a queixa será arquivada.",
+      "pontos": ["Reconciliação: termo de desistência assinado pelo querelante.", "Queixa arquivada."],
+      "atencao": ["Arquivamento da queixa."],
+      "exemplo": "Reconciliadas as partes, o querelante assina a desistência e a queixa é arquivada.",
+      "prova": ["Assertiva que prossegue com a ação após a reconciliação e a desistência erra."],
+      "termos": [],
+      "remissoes": ["Art. 521"]
+    },
+    "art-523": {
+      "simples": "Quando for oferecida a exceção da verdade ou da notoriedade do fato imputado, o querelante poderá contestar a exceção no prazo de dois dias, podendo ser inquiridas as testemunhas arroladas na queixa, ou outras indicadas naquele prazo, em substituição às primeiras, ou para completar o máximo legal.",
+      "pontos": ["Exceção da verdade ou da notoriedade do fato imputado.", "Querelante contesta em dois dias.", "Testemunhas da queixa ou outras indicadas, em substituição ou para completar o máximo."],
+      "atencao": ["Prazo de dois dias."],
+      "exemplo": "O querelado opõe exceção da verdade, e o querelante contesta em dois dias.",
+      "prova": ["Assertiva que fixa em cinco dias a contestação da exceção da verdade erra: são dois dias."],
+      "termos": [],
+      "remissoes": ["Art. 85"]
+    },
+    "art-524": {
+      "simples": "No processo e julgamento dos crimes contra a propriedade imaterial, observar-se-á o disposto nos Capítulos I e III do Título I deste Livro, com as modificações constantes dos artigos seguintes.",
+      "pontos": ["Crimes contra a propriedade imaterial seguem o rito comum com modificações."],
+      "atencao": ["Propriedade imaterial: por exemplo, direitos autorais."],
+      "exemplo": "A queixa por violação de direito autoral segue o rito comum com adaptações.",
+      "prova": ["Assertiva que cria rito autônomo para crimes contra a propriedade imaterial erra."],
+      "termos": [],
+      "remissoes": ["Art. 525"]
+    },
+    "art-525": {
+      "simples": "No caso de haver o crime deixado vestígio, a queixa ou a denúncia não será recebida se não for instruída com o exame pericial dos objetos que constituam o corpo de delito.",
+      "pontos": ["Crime com vestígios: a peça acusatória precisa do exame pericial dos objetos."],
+      "atencao": ["Condição para o recebimento da queixa ou denúncia."],
+      "exemplo": "Sem o laudo pericial dos objetos, a queixa não é recebida.",
+      "prova": ["Assertiva que dispensa o exame pericial dos objetos para receber a queixa nesses crimes erra."],
+      "termos": [],
+      "remissoes": ["Art. 158"]
+    },
+    "art-526": {
+      "simples": "Sem a prova de direito à ação, não será recebida a queixa, nem ordenada qualquer diligência preliminarmente requerida pelo ofendido.",
+      "pontos": ["Sem prova do direito à ação, não se recebe a queixa nem se ordenam diligências."],
+      "atencao": ["Prova do direito à ação."],
+      "exemplo": "Sem documento que comprove a titularidade do direito, a queixa é rejeitada.",
+      "prova": ["Assertiva que ordena diligências preliminares sem prova do direito à ação erra."],
+      "termos": [],
+      "remissoes": ["Art. 525"]
+    },
+    "art-527": {
+      "simples": "A diligência de busca ou de apreensão será realizada por dois peritos nomeados pelo juiz, que verificarão a existência de fundamento para a apreensão, e, quer esta se realize, quer não, o laudo pericial será apresentado dentro de 3 dias após o encerramento da diligência. O requerente da diligência poderá impugnar o laudo contrário à apreensão, e o juiz ordenará que esta se efetue, se reconhecer a improcedência das razões dos peritos.",
+      "pontos": ["Busca ou apreensão por dois peritos nomeados pelo juiz.", "Laudo em 3 dias após a diligência.", "Impugnação do laudo contrário à apreensão; o juiz pode ordenar a apreensão."],
+      "atencao": ["Prazo do laudo: 3 dias."],
+      "exemplo": "Dois peritos verificam o fundamento da apreensão e entregam o laudo em 3 dias.",
+      "prova": ["Assertiva que fixa em 10 dias o prazo do laudo dos peritos erra: são 3 dias."],
+      "termos": [],
+      "remissoes": ["Art. 528"]
+    },
+    "art-528": {
+      "simples": "Encerradas as diligências, os autos serão conclusos ao juiz para homologação do laudo.",
+      "pontos": ["Encerradas as diligências, os autos vão ao juiz para homologar o laudo."],
+      "atencao": ["Homologação do laudo pelo juiz."],
+      "exemplo": "O juiz homologa o laudo após a conclusão das diligências.",
+      "prova": ["Assertiva que dispensa a homologação do laudo pelo juiz erra."],
+      "termos": [],
+      "remissoes": ["Art. 527"]
+    },
+    "art-529": {
+      "simples": "Nos crimes de ação privativa do ofendido, não será admitida queixa com fundamento em apreensão e em perícia, se decorrido o prazo de 30 dias, após a homologação do laudo. Será dada vista ao Ministério Público dos autos de busca e apreensão requeridas pelo ofendido, se o crime for de ação pública e não tiver sido oferecida queixa no prazo fixado neste artigo.",
+      "pontos": ["Ação privada: queixa com fundamento em apreensão e perícia no prazo de 30 dias da homologação do laudo.", "Ação pública: vista ao MP se não houver queixa no prazo."],
+      "atencao": ["Prazo de 30 dias da homologação do laudo."],
+      "exemplo": "Passados 30 dias da homologação, não se admite mais a queixa baseada na apreensão.",
+      "prova": ["Assertiva que fixa em 8 dias o prazo para a queixa nesse caso, fora do flagrante, erra: são 30 dias."],
+      "termos": [],
+      "remissoes": ["Art. 530"]
+    },
+    "art-530": {
+      "simples": "Se ocorrer prisão em flagrante e o réu não for posto em liberdade, o prazo a que se refere o artigo anterior será de 8 dias.",
+      "pontos": ["Flagrante com réu preso: prazo de 8 dias para a queixa."],
+      "atencao": ["Prazo de 8 dias."],
+      "exemplo": "Réu preso em flagrante e mantido preso: a queixa deve vir em 8 dias.",
+      "prova": ["Assertiva que mantém o prazo de 30 dias para o réu preso em flagrante erra: são 8 dias."],
+      "termos": [],
+      "remissoes": ["Art. 529"]
+    },
+    "art-530-a": {
+      "simples": "O disposto nos arts. 524 a 530 será aplicável aos crimes em que se proceda mediante queixa.",
+      "pontos": ["Arts. 524 a 530 aplicam-se aos crimes de ação por queixa."],
+      "atencao": ["Alcance dos arts. 524 a 530."],
+      "exemplo": "A violação de direito autoral de ação privada segue os arts. 524 a 530.",
+      "prova": ["Assertiva que aplica os arts. 524 a 530 aos crimes de ação pública incondicionada erra: para estes valem os arts. 530-B a 530-H."],
+      "termos": [],
+      "remissoes": ["Art. 530-I"]
+    },
+    "art-530-b": {
+      "simples": "Nos casos das infrações previstas nos §§ 1º, 2º e 3º do art. 184 do Código Penal (violação de direitos autorais), a autoridade policial procederá à apreensão dos bens ilicitamente produzidos ou reproduzidos, em sua totalidade, juntamente com os equipamentos, suportes e materiais que possibilitaram a sua existência, desde que estes se destinem precipuamente à prática do ilícito.",
+      "pontos": ["Violação de direitos autorais: apreensão pela autoridade policial.", "Bens ilicitamente produzidos ou reproduzidos, em sua totalidade.", "Equipamentos, suportes e materiais destinados precipuamente ao ilícito."],
+      "atencao": ["Apreensão integral dos bens e dos equipamentos destinados ao ilícito."],
+      "exemplo": "A polícia apreende as cópias piratas e os equipamentos de reprodução.",
+      "prova": ["Assertiva que limita a apreensão a uma amostra dos bens ilícitos erra: é em sua totalidade."],
+      "termos": [],
+      "remissoes": ["Art. 184 do Código Penal"]
+    },
+    "art-530-c": {
+      "simples": "Na ocasião da apreensão será lavrado termo, assinado por 2 ou mais testemunhas, com a descrição de todos os bens apreendidos e informações sobre suas origens, o qual deverá integrar o inquérito policial ou o processo.",
+      "pontos": ["Termo de apreensão assinado por 2 ou mais testemunhas.", "Descrição de todos os bens e informações sobre suas origens.", "Integra o inquérito ou o processo."],
+      "atencao": ["Duas ou mais testemunhas."],
+      "exemplo": "O termo de apreensão lista os bens e é assinado por duas testemunhas.",
+      "prova": ["Assertiva que dispensa testemunhas no termo de apreensão erra."],
+      "termos": [],
+      "remissoes": ["Art. 530-B"]
+    },
+    "art-530-d": {
+      "simples": "Subsequente à apreensão, será realizada, por perito oficial, ou, na falta deste, por pessoa tecnicamente habilitada, perícia sobre todos os bens apreendidos e elaborado o laudo que deverá integrar o inquérito policial ou o processo.",
+      "pontos": ["Perícia sobre todos os bens apreendidos.", "Perito oficial ou, na falta, pessoa tecnicamente habilitada.", "Laudo integra o inquérito ou o processo."],
+      "atencao": ["Perícia de TODOS os bens apreendidos."],
+      "exemplo": "Um perito oficial examina os bens apreendidos e elabora o laudo.",
+      "prova": ["Assertiva que restringe a perícia a uma amostra dos bens erra."],
+      "termos": [],
+      "remissoes": ["Art. 530-C"]
+    },
+    "art-530-e": {
+      "simples": "Os titulares de direito de autor e os que lhe são conexos serão os fiéis depositários de todos os bens apreendidos, devendo colocá-los à disposição do juiz quando do ajuizamento da ação.",
+      "pontos": ["Titulares de direitos autorais e conexos são fiéis depositários dos bens apreendidos.", "Devem colocá-los à disposição do juiz quando da ação."],
+      "atencao": ["Os próprios titulares guardam os bens."],
+      "exemplo": "A associação titular dos direitos guarda os bens apreendidos até a ação.",
+      "prova": ["Assertiva que torna a polícia a depositária dos bens apreendidos nesses crimes erra."],
+      "termos": [{ "termo": "Fiel depositário", "significado": "Quem guarda o bem à disposição do juízo." }],
+      "remissoes": ["Art. 530-B"]
+    },
+    "art-530-f": {
+      "simples": "Ressalvada a possibilidade de se preservar o corpo de delito, o juiz poderá determinar, a requerimento da vítima, a destruição da produção ou reprodução apreendida quando não houver impugnação quanto à sua ilicitude ou quando a ação penal não puder ser iniciada por falta de determinação de quem seja o autor do ilícito.",
+      "pontos": ["Destruição da produção ou reprodução apreendida, a requerimento da vítima.", "Cabimento: sem impugnação da ilicitude, ou impossibilidade de iniciar a ação por falta de autoria determinada.", "Ressalvada a preservação do corpo de delito."],
+      "atencao": ["Preservar o corpo de delito."],
+      "exemplo": "Sem autoria determinada, o juiz autoriza a destruição das cópias ilícitas.",
+      "prova": ["Assertiva que destrói os bens sem preservar o corpo de delito erra."],
+      "termos": [],
+      "remissoes": ["Art. 530-G"]
+    },
+    "art-530-g": {
+      "simples": "O juiz, ao proferir a sentença condenatória, poderá determinar a destruição dos bens ilicitamente produzidos ou reproduzidos e o perdimento dos equipamentos apreendidos, desde que precipuamente destinados à produção e reprodução dos bens, em favor da Fazenda Nacional, que deverá destruí-los ou doá-los aos Estados, Municípios e Distrito Federal, a instituições públicas de ensino e pesquisa ou de assistência social, bem como incorporá-los, se houver interesse, ao patrimônio da União, que não poderá retorná-los aos canais de comércio.",
+      "pontos": ["Sentença condenatória: destruição dos bens ilícitos.", "Perdimento dos equipamentos destinados precipuamente à produção.", "Destino: Fazenda Nacional destrói, doa a entes e instituições ou incorpora ao patrimônio da União.", "Não retornam aos canais de comércio."],
+      "atencao": ["Os bens não podem voltar ao comércio."],
+      "exemplo": "Na condenação, os equipamentos de reprodução são perdidos em favor da Fazenda Nacional.",
+      "prova": ["Assertiva que permite o retorno dos bens ao comércio erra."],
+      "termos": [],
+      "remissoes": ["Art. 530-F"]
+    },
+    "art-530-h": {
+      "simples": "As associações de titulares de direitos de autor e os que lhes são conexos poderão, em seu próprio nome, funcionar como assistente da acusação nos crimes previstos no art. 184 do Código Penal, quando praticado em detrimento de qualquer de seus associados.",
+      "pontos": ["Associações de titulares de direitos autorais e conexos podem ser assistentes da acusação, em nome próprio.", "Crimes do art. 184 do CP, em detrimento de associados."],
+      "atencao": ["Legitimidade da associação como assistente."],
+      "exemplo": "A associação de autores atua como assistente da acusação em crime contra seus associados.",
+      "prova": ["Assertiva que nega às associações a possibilidade de atuar como assistente da acusação erra."],
+      "termos": [],
+      "remissoes": ["Art. 268"]
+    },
+    "art-530-i": {
+      "simples": "Nos crimes em que caiba ação penal pública incondicionada ou condicionada, observar-se-ão as normas constantes dos arts. 530-B, 530-C, 530-D, 530-E, 530-F, 530-G e 530-H.",
+      "pontos": ["Ação penal pública (incondicionada ou condicionada): aplicam-se os arts. 530-B a 530-H."],
+      "atencao": ["Os arts. 524 a 530 valem para a queixa; os 530-B a 530-H, para a ação pública."],
+      "exemplo": "Em crime de ação pública contra direitos autorais, aplicam-se as regras de apreensão e perícia dos arts. 530-B a 530-H.",
+      "prova": ["Assertiva que aplica os arts. 524 a 530 aos crimes de ação pública erra."],
+      "termos": [],
+      "remissoes": ["Art. 530-A"]
+    },
+    "art-531": {
+      "simples": "Na audiência de instrução e julgamento do procedimento sumário, a ser realizada no prazo máximo de 30 dias, proceder-se-á à tomada de declarações do ofendido, se possível, à inquirição das testemunhas arroladas pela acusação e pela defesa, nesta ordem, ressalvado o art. 222, bem como aos esclarecimentos dos peritos, às acareações e ao reconhecimento de pessoas e coisas, interrogando-se, em seguida, o acusado e procedendo-se o debate.",
+      "pontos": ["Audiência no prazo máximo de 30 dias (procedimento sumário).", "Ordem: ofendido, testemunhas da acusação e da defesa, peritos, acareações, reconhecimentos, interrogatório e debate."],
+      "atencao": ["Prazo: 30 dias (no ordinário, 60 dias)."],
+      "exemplo": "No rito sumário, a audiência ocorre no prazo máximo de 30 dias.",
+      "prova": ["Assertiva que fixa em 60 dias o prazo da audiência no rito sumário erra: são 30 dias."],
+      "termos": [],
+      "remissoes": ["Art. 400", "Art. 532"]
+    },
+    "art-532": {
+      "simples": "Na instrução do procedimento sumário, poderão ser inquiridas até 5 testemunhas arroladas pela acusação e 5 pela defesa.",
+      "pontos": ["Rito sumário: até 5 testemunhas para a acusação e 5 para a defesa."],
+      "atencao": ["Sumário: 5 por parte (no ordinário, 8)."],
+      "exemplo": "No rito sumário, cada parte arrola até 5 testemunhas.",
+      "prova": ["Assertiva que fixa em 8 testemunhas por parte no rito sumário erra: são 5."],
+      "termos": [],
+      "remissoes": ["Art. 401"]
+    },
+    "art-533": {
+      "simples": "Aplica-se ao procedimento sumário o disposto nos parágrafos do art. 400 do Código. Os §§ 1º a 4º foram revogados.",
+      "pontos": ["Procedimento sumário segue os parágrafos do art. 400.", "Parágrafos próprios revogados."],
+      "atencao": ["Remissão ao art. 400."],
+      "exemplo": "No rito sumário, as provas também são produzidas em uma só audiência.",
+      "prova": ["Assertiva que mantém os parágrafos próprios do art. 533 em vigor erra."],
+      "termos": [],
+      "remissoes": ["Art. 400"]
+    }
+  }
+}
