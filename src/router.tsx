@@ -9,7 +9,10 @@ export const getRouter = () => {
     routeTree,
     context: { queryClient },
     scrollRestoration: true,
-    defaultPreloadStaleTime: 0,
+    // Mantém as rotas pré-carregadas por um curto período. Com zero, cada
+    // passagem do cursor pelo menu refazia o carregamento do chunk e deixava
+    // a navegação interna perceptivelmente lenta.
+    defaultPreloadStaleTime: 30_000,
   });
 
   return router;
