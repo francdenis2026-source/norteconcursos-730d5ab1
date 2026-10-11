@@ -1,0 +1,888 @@
+{
+  "course_slug": "juizados",
+  "law": "Lei dos Juizados Especiais Cíveis e Criminais (Lei nº 9.099, de 1995) — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "Os Juizados Especiais Cíveis e Criminais, órgãos da Justiça Ordinária, serão criados pela União, no Distrito Federal e nos Territórios, e pelos Estados, para conciliação, processo, julgamento e execução, nas causas de sua competência.",
+      "pontos": ["Juizados Especiais Cíveis e Criminais são órgãos da Justiça Ordinária.", "Criados pela União (DF e Territórios) e pelos Estados.", "Conciliação, processo, julgamento e execução."],
+      "atencao": ["Fazem parte da Justiça comum (ordinária), e não de justiça especializada."],
+      "exemplo": "Cada Estado cria seus Juizados Especiais por lei.",
+      "prova": ["Assertiva que classifica os Juizados como Justiça especializada erra: são órgãos da Justiça Ordinária."],
+      "termos": [],
+      "remissoes": ["Art. 93"]
+    },
+    "art-2": {
+      "simples": "O processo orientar-se-á pelos critérios da oralidade, simplicidade, informalidade, economia processual e celeridade, buscando, sempre que possível, a conciliação ou a transação.",
+      "pontos": ["Oralidade, simplicidade, informalidade, economia processual e celeridade.", "Busca da conciliação ou da transação."],
+      "atencao": ["Cinco critérios: oralidade, simplicidade, informalidade, economia processual e celeridade."],
+      "exemplo": "O pedido pode ser feito oralmente à Secretaria do Juizado.",
+      "prova": ["Assertiva que inclui a solenidade entre os critérios erra: o procedimento é informal."],
+      "termos": [],
+      "remissoes": ["Art. 62"]
+    },
+    "art-3": {
+      "simples": "O Juizado Especial Cível tem competência para conciliação, processo e julgamento das causas cíveis de menor complexidade: as de valor até quarenta vezes o salário mínimo; as enumeradas no art. 275, inciso II, do antigo Código de Processo Civil; a ação de despejo para uso próprio; e as ações possessórias sobre imóveis de valor não excedente ao limite. Compete-lhe promover a execução dos seus julgados e dos títulos executivos extrajudiciais até quarenta vezes o salário mínimo. Ficam excluídas as causas de natureza alimentar, falimentar, fiscal e de interesse da Fazenda Pública, as relativas a acidentes de trabalho, a resíduos e ao estado e capacidade das pessoas. A opção pelo procedimento importa renúncia ao crédito excedente ao limite, salvo conciliação.",
+      "pontos": ["Teto: quarenta vezes o salário mínimo.", "Despejo para uso próprio e ações possessórias de imóveis dentro do teto.", "Execução dos julgados e de títulos extrajudiciais até o teto.", "Exclusões: alimentar, falimentar, fiscal, Fazenda Pública, acidentes de trabalho, resíduos e estado e capacidade das pessoas.", "Renúncia ao excedente, salvo conciliação."],
+      "atencao": ["Teto de quarenta salários mínimos.", "A opção pelo Juizado implica RENÚNCIA ao crédito excedente (exceto na conciliação)."],
+      "exemplo": "Quem cobra vinte mil reais em dívida simples pode propor a ação no Juizado Especial.",
+      "prova": ["Assertiva que permite ao Juizado Cível julgar causas de natureza fiscal erra: elas são excluídas."],
+      "termos": [],
+      "remissoes": ["Art. 8º"]
+    },
+    "art-4": {
+      "simples": "É competente, para as causas da Lei, o Juizado do foro do domicílio do réu ou, a critério do autor, do local onde aquele exerça atividades profissionais ou econômicas ou mantenha estabelecimento, filial, agência, sucursal ou escritório; do lugar onde a obrigação deva ser satisfeita; e, nas ações para reparação de dano de qualquer natureza, do domicílio do autor ou do local do ato ou fato. Em qualquer hipótese, a ação poderá ser proposta no foro do domicílio do réu.",
+      "pontos": ["Domicílio do réu (ou local de atividade, a critério do autor).", "Lugar do cumprimento da obrigação.", "Reparação de dano: domicílio do autor ou local do fato.", "O foro do réu sempre é possível."],
+      "atencao": ["Na reparação de dano, o autor pode escolher o seu domicílio."],
+      "exemplo": "Quem sofreu dano pode ajuizar a ação no Juizado do seu próprio domicílio.",
+      "prova": ["Assertiva que fixa a competência apenas no domicílio do autor erra."],
+      "termos": [],
+      "remissoes": ["Art. 51"]
+    },
+    "art-5": {
+      "simples": "O Juiz dirigirá o processo com liberdade para determinar as provas a serem produzidas, para apreciá-las e para dar especial valor às regras de experiência comum ou técnica.",
+      "pontos": ["Liberdade na direção do processo e na produção de provas.", "Valor às regras de experiência comum ou técnica."],
+      "atencao": ["Livre convencimento com regras de experiência."],
+      "exemplo": "O juiz decide quais provas são úteis ao caso.",
+      "prova": ["Assertiva que obriga o juiz a seguir rigidamente a prova tarifada erra."],
+      "termos": [],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-6": {
+      "simples": "O Juiz adotará em cada caso a decisão que reputar mais justa e equânime, atendendo aos fins sociais da lei e às exigências do bem comum.",
+      "pontos": ["Decisão mais justa e equânime.", "Fins sociais da lei e bem comum."],
+      "atencao": ["Julgamento por equidade."],
+      "exemplo": "O juiz decide com sensibilidade ao caso concreto, atendendo ao bem comum.",
+      "prova": ["Assertiva que veda a equidade no Juizado erra."],
+      "termos": [{ "termo": "Equidade", "significado": "Justiça aplicada ao caso concreto, com razoabilidade." }],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-7": {
+      "simples": "Os conciliadores e Juízes leigos são auxiliares da Justiça, recrutados, os primeiros, preferentemente entre os bacharéis em Direito, e os segundos, entre advogados com mais de cinco anos de experiência. Os Juízes leigos ficarão impedidos de exercer a advocacia perante os Juizados Especiais enquanto no desempenho de suas funções.",
+      "pontos": ["Conciliadores: preferentemente bacharéis em Direito.", "Juízes leigos: advogados com mais de cinco anos de experiência.", "Juiz leigo não advoga nos Juizados enquanto exercer a função."],
+      "atencao": ["Juiz leigo: advogado com mais de cinco anos."],
+      "exemplo": "Um advogado com seis anos de experiência pode ser juiz leigo.",
+      "prova": ["Assertiva que exige apenas dois anos de experiência para juiz leigo erra: são mais de cinco anos."],
+      "termos": [{ "termo": "Juiz leigo", "significado": "Auxiliar da Justiça, advogado, que conduz a instrução e propõe a decisão." }],
+      "remissoes": ["Art. 37"]
+    },
+    "art-8": {
+      "simples": "Não poderão ser partes, no processo da Lei, o incapaz, o preso, as pessoas jurídicas de direito público, as empresas públicas da União, a massa falida e o insolvente civil. Somente serão admitidos a propor ação as pessoas físicas capazes, excluídos os cessionários de direito de pessoas jurídicas; as microempresas, empresas de pequeno porte e microempreendedores individuais; as Organizações da Sociedade Civil de Interesse Público; e as sociedades de crédito ao microempreendedor. O maior de dezoito anos poderá ser autor, independentemente de assistência, inclusive para fins de conciliação.",
+      "pontos": ["Não podem ser partes: incapaz, preso, pessoa jurídica de direito público, empresa pública da União, massa falida e insolvente civil.", "Podem propor: pessoas físicas capazes, ME, EPP, MEI, OSCIP e sociedades de crédito ao microempreendedor.", "Maior de dezoito anos pode ser autor sem assistência."],
+      "atencao": ["ATUALIZAÇÃO: o §1º foi alterado por leis posteriores (microempresas e outras entidades como autoras).", "O RÉU pode ser pessoa jurídica de direito privado; o que se veda é a pessoa jurídica de direito público como parte."],
+      "exemplo": "A microempresa pode propor ação no Juizado Especial Cível.",
+      "prova": ["Assertiva que permite ao preso ser parte no Juizado erra: ele não pode."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-9": {
+      "simples": "Nas causas de valor até vinte salários mínimos, as partes comparecerão pessoalmente, podendo ser assistidas por advogado; nas de valor superior, a assistência é obrigatória. Sendo facultativa a assistência, se uma das partes comparecer assistida por advogado, ou se o réu for pessoa jurídica ou firma individual, terá a outra parte, se quiser, assistência judiciária prestada por órgão instituído junto ao Juizado. O Juiz alertará as partes da conveniência do patrocínio por advogado. O mandato ao advogado poderá ser verbal, salvo quanto aos poderes especiais. O réu, sendo pessoa jurídica ou titular de firma individual, poderá ser representado por preposto credenciado, com carta de preposição e poderes para transigir, sem necessidade de vínculo empregatício.",
+      "pontos": ["Até vinte salários mínimos: advogado facultativo.", "Acima de vinte: advogado obrigatório.", "Mandato verbal, salvo poderes especiais.", "Preposto credenciado, sem vínculo empregatício."],
+      "atencao": ["Limite de vinte salários mínimos para a faculdade de advogado.", "Preposto não precisa ser empregado."],
+      "exemplo": "Em causa de dez salários mínimos, a parte pode ir sem advogado.",
+      "prova": ["Assertiva que exige advogado em qualquer causa do Juizado erra: até vinte salários mínimos é facultativo."],
+      "termos": [{ "termo": "Preposto", "significado": "Representante da empresa na audiência." }],
+      "remissoes": ["Art. 41"]
+    },
+    "art-10": {
+      "simples": "Não se admitirá, no processo, qualquer forma de intervenção de terceiro nem de assistência. Admitir-se-á o litisconsórcio.",
+      "pontos": ["Sem intervenção de terceiros ou assistência.", "Litisconsórcio é admitido."],
+      "atencao": ["Litisconsórcio SIM; intervenção de terceiros NÃO."],
+      "exemplo": "Dois autores podem litigar juntos, mas não se admite a denunciação da lide.",
+      "prova": ["Assertiva que veda o litisconsórcio no Juizado erra: ele é admitido."],
+      "termos": [],
+      "remissoes": ["Art. 31"]
+    },
+    "art-11": {
+      "simples": "O Ministério Público intervirá no processo dos Juizados apenas nos casos previstos em lei.",
+      "pontos": ["Intervenção do Ministério Público apenas nos casos legais."],
+      "atencao": ["Intervenção restrita aos casos previstos em lei."],
+      "exemplo": "O Ministério Público atua apenas quando a lei o determina.",
+      "prova": ["Assertiva que torna obrigatória a presença do Ministério Público em todas as causas erra."],
+      "termos": [],
+      "remissoes": ["Art. 10"]
+    },
+    "art-12": {
+      "simples": "Os atos processuais serão públicos e poderão realizar-se em horário noturno, conforme dispuserem as normas de organização judiciária.",
+      "pontos": ["Atos públicos.", "Possibilidade de horário noturno."],
+      "atencao": ["Horário noturno conforme a organização judiciária."],
+      "exemplo": "Audiências podem ocorrer à noite.",
+      "prova": ["Assertiva que veda atos processuais à noite erra."],
+      "termos": [],
+      "remissoes": ["Art. 64"]
+    },
+    "art-12-a": {
+      "simples": "Na contagem de prazo em dias, estabelecido por lei ou pelo juiz, para a prática de qualquer ato processual, inclusive para a interposição de recursos, computar-se-ão somente os dias úteis.",
+      "pontos": ["Prazos em dias contados somente em dias úteis."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 13.728, de 2018; aplica-se a prazos processuais, e não ao de decadência de direito material."],
+      "exemplo": "O prazo de dez dias para recorrer conta apenas dias úteis.",
+      "prova": ["Assertiva que conta os prazos em dias corridos erra: contam-se dias úteis."],
+      "termos": [],
+      "remissoes": ["Art. 42"]
+    },
+    "art-13": {
+      "simples": "Os atos processuais serão válidos sempre que preencherem as finalidades para as quais forem realizados. Não se pronunciará qualquer nulidade sem que tenha havido prejuízo. A prática de atos em outras comarcas poderá ser solicitada por qualquer meio idôneo. Apenas os atos essenciais serão registrados resumidamente, e os demais poderão ser gravados, a gravação sendo inutilizada após o trânsito em julgado. As normas locais disporão sobre a conservação das peças.",
+      "pontos": ["Validade pela finalidade do ato.", "Sem nulidade sem prejuízo.", "Atos em outras comarcas por qualquer meio idôneo.", "Registro resumido dos atos essenciais; gravação dos demais."],
+      "atencao": ["Princípio da instrumentalidade das formas e do prejuízo (pas de nullité sans grief)."],
+      "exemplo": "A nulidade só é declarada se houver prejuízo comprovado.",
+      "prova": ["Assertiva que decreta nulidade independentemente de prejuízo erra."],
+      "termos": [],
+      "remissoes": ["Art. 65"]
+    },
+    "art-14": {
+      "simples": "O processo instaurar-se-á com a apresentação do pedido, escrito ou oral, à Secretaria do Juizado. Do pedido constarão, de forma simples e em linguagem acessível, o nome, a qualificação e o endereço das partes; os fatos e os fundamentos, de forma sucinta; e o objeto e seu valor. É lícito formular pedido genérico quando não for possível determinar, desde logo, a extensão da obrigação. O pedido oral será reduzido a escrito pela Secretaria.",
+      "pontos": ["Pedido escrito ou oral à Secretaria.", "Requisitos: partes, fatos e fundamentos sucintos, objeto e valor.", "Pedido genérico quando não se pode determinar a extensão.", "Pedido oral reduzido a escrito."],
+      "atencao": ["O pedido pode ser ORAL."],
+      "exemplo": "O autor vai à Secretaria e relata verbalmente o pedido, que é reduzido a escrito.",
+      "prova": ["Assertiva que exige petição escrita assinada por advogado em todos os casos erra."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-15": {
+      "simples": "Os pedidos mencionados no art. 3º poderão ser alternativos ou cumulados; nesta última hipótese, desde que conexos e a soma não ultrapasse o limite fixado naquele dispositivo.",
+      "pontos": ["Pedidos alternativos ou cumulados.", "Cumulação: conexos e dentro do limite do art. 3º."],
+      "atencao": ["A soma dos pedidos não pode passar do teto."],
+      "exemplo": "Dois pedidos conexos podem ser cumulados se a soma ficar dentro do teto.",
+      "prova": ["Assertiva que permite cumular pedidos que ultrapassem o limite erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-16": {
+      "simples": "Registrado o pedido, independentemente de distribuição e autuação, a Secretaria do Juizado designará a sessão de conciliação, a realizar-se no prazo de quinze dias.",
+      "pontos": ["Sessão de conciliação em quinze dias.", "Independe de distribuição e autuação."],
+      "atencao": ["Prazo de quinze dias."],
+      "exemplo": "Após o registro do pedido, a conciliação é marcada em até quinze dias.",
+      "prova": ["Assertiva que fixa em trinta dias o prazo da conciliação erra: são quinze."],
+      "termos": [],
+      "remissoes": ["Art. 17"]
+    },
+    "art-17": {
+      "simples": "Comparecendo inicialmente ambas as partes, instaurar-se-á, desde logo, a sessão de conciliação, dispensados o registro prévio de pedido e a citação. Havendo pedidos contrapostos, poderá ser dispensada a contestação formal e ambos serão apreciados na mesma sentença.",
+      "pontos": ["Comparecimento de ambas as partes dispensa registro e citação.", "Pedidos contrapostos: sem contestação formal, mesma sentença."],
+      "atencao": ["Conciliação imediata quando ambas comparecem."],
+      "exemplo": "Duas partes vão juntas ao Juizado e a conciliação ocorre na hora.",
+      "prova": ["Assertiva que exige citação mesmo com ambas as partes presentes erra."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-18": {
+      "simples": "A citação far-se-á por correspondência, com aviso de recebimento em mão própria; tratando-se de pessoa jurídica ou firma individual, mediante entrega ao encarregado da recepção, que será obrigatoriamente identificado; ou, se necessário, por oficial de justiça, independentemente de mandado ou carta precatória. A citação conterá cópia do pedido inicial, dia e hora de comparecimento e advertência de que, não comparecendo o citando, considerar-se-ão verdadeiras as alegações iniciais e será proferido julgamento de plano. Não se fará citação por edital. O comparecimento espontâneo supre a falta ou nulidade da citação.",
+      "pontos": ["Citação por correspondência com aviso de recebimento em mão própria.", "Pessoa jurídica: entrega ao encarregado da recepção, identificado.", "Oficial de justiça, sem mandado ou precatória.", "Vedada a citação por edital.", "Comparecimento espontâneo supre a citação."],
+      "atencao": ["NÃO cabe citação por edital."],
+      "exemplo": "O réu não localizado leva à extinção do processo, pois não cabe edital.",
+      "prova": ["Assertiva que admite a citação por edital no Juizado erra: ela é vedada."],
+      "termos": [],
+      "remissoes": ["Art. 51"]
+    },
+    "art-19": {
+      "simples": "As intimações serão feitas na forma prevista para a citação, ou por qualquer outro meio idôneo. Dos atos praticados na audiência, consideram-se desde logo cientes as partes. As partes comunicarão ao juízo as mudanças de endereço, reputando-se eficazes as intimações enviadas ao endereço anterior na ausência de comunicação.",
+      "pontos": ["Intimação como a citação ou por meio idôneo.", "Partes cientes dos atos da audiência.", "Dever de comunicar mudança de endereço."],
+      "atencao": ["Intimação no endereço antigo é eficaz se a mudança não foi comunicada."],
+      "exemplo": "A parte que se mudou sem avisar o juízo é validamente intimada no endereço antigo.",
+      "prova": ["Assertiva que invalida a intimação no endereço antigo mesmo sem comunicação da mudança erra."],
+      "termos": [],
+      "remissoes": ["Art. 18"]
+    },
+    "art-20": {
+      "simples": "Não comparecendo o demandado à sessão de conciliação ou à audiência de instrução e julgamento, reputar-se-ão verdadeiros os fatos alegados no pedido inicial, salvo se o contrário resultar da convicção do Juiz.",
+      "pontos": ["Revelia do réu: presunção de veracidade dos fatos.", "Exceção: convicção contrária do juiz."],
+      "atencao": ["A presunção de veracidade é relativa."],
+      "exemplo": "O réu que não comparece tem os fatos do pedido presumidos verdadeiros.",
+      "prova": ["Assertiva que torna a presunção absoluta, sem exceção, erra: o juiz pode formar convicção contrária."],
+      "termos": [{ "termo": "Revelia", "significado": "Ausência do réu, com presunção de veracidade dos fatos alegados." }],
+      "remissoes": ["Art. 51"]
+    },
+    "art-21": {
+      "simples": "Aberta a sessão, o Juiz togado ou leigo esclarecerá as partes presentes sobre as vantagens da conciliação, mostrando-lhes os riscos e as consequências do litígio, especialmente quanto ao disposto no §3º do art. 3º da Lei.",
+      "pontos": ["Esclarecimento das vantagens da conciliação.", "Alerta sobre os riscos do litígio e a renúncia ao excedente."],
+      "atencao": ["Dever de esclarecer, em especial sobre a renúncia ao crédito excedente."],
+      "exemplo": "O juiz explica ao autor que, sem conciliar, renuncia ao valor acima do teto.",
+      "prova": ["Assertiva que dispensa o esclarecimento sobre as consequências do litígio erra."],
+      "termos": [],
+      "remissoes": ["Art. 3º, §3º"]
+    },
+    "art-22": {
+      "simples": "A conciliação será conduzida pelo Juiz togado ou leigo ou por conciliador sob sua orientação. Obtida a conciliação, será reduzida a escrito e homologada pelo Juiz togado mediante sentença com eficácia de título executivo. É cabível a conciliação não presencial, conduzida pelo Juizado por recursos tecnológicos de transmissão de sons e imagens em tempo real, com o resultado reduzido a escrito.",
+      "pontos": ["Conduzida pelo juiz, juiz leigo ou conciliador.", "Homologação pelo juiz togado, com eficácia de título executivo.", "Conciliação não presencial por som e imagem."],
+      "atencao": ["ATUALIZAÇÃO: o §2º (conciliação não presencial) foi incluído pela Lei nº 13.994, de 2020.", "Quem homologa é o juiz TOGADO."],
+      "exemplo": "A conciliação ocorre por videoconferência, e o acordo é homologado pelo juiz.",
+      "prova": ["Assertiva que permite ao conciliador homologar o acordo erra: a homologação é do juiz togado."],
+      "termos": [],
+      "remissoes": ["Art. 23"]
+    },
+    "art-23": {
+      "simples": "Se o demandado não comparecer ou recusar-se a participar da tentativa de conciliação não presencial, o Juiz togado proferirá sentença.",
+      "pontos": ["Ausência ou recusa do réu na conciliação não presencial leva à sentença."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pela Lei nº 13.994, de 2020."],
+      "exemplo": "O réu que não participa da conciliação virtual sofre sentença do juiz togado.",
+      "prova": ["Assertiva que dispensa a sentença em caso de ausência do réu erra."],
+      "termos": [],
+      "remissoes": ["Art. 22"]
+    },
+    "art-24": {
+      "simples": "Não obtida a conciliação, as partes poderão optar, de comum acordo, pelo juízo arbitral, na forma da Lei. O juízo arbitral considerar-se-á instaurado, independentemente de termo de compromisso, com a escolha do árbitro pelas partes, e se este não estiver presente o Juiz o convocará e designará, de imediato, a data da audiência de instrução. O árbitro será escolhido dentre os juízes leigos.",
+      "pontos": ["Arbitragem por comum acordo, após a conciliação frustrada.", "Instaurada com a escolha do árbitro, sem termo de compromisso.", "Árbitro escolhido entre os juízes leigos."],
+      "atencao": ["Árbitro: sempre juiz LEIGO."],
+      "exemplo": "As partes escolhem um juiz leigo como árbitro.",
+      "prova": ["Assertiva que exige termo de compromisso para instaurar a arbitragem no Juizado erra."],
+      "termos": [],
+      "remissoes": ["Art. 25"]
+    },
+    "art-25": {
+      "simples": "O árbitro conduzirá o processo com os mesmos critérios do Juiz, na forma dos arts. 5º e 6º da Lei, podendo decidir por equidade.",
+      "pontos": ["Mesmos critérios do juiz.", "Pode decidir por equidade."],
+      "atencao": ["Decisão por equidade."],
+      "exemplo": "O árbitro decide pela solução mais justa ao caso.",
+      "prova": ["Assertiva que veda a decisão por equidade ao árbitro erra."],
+      "termos": [],
+      "remissoes": ["Arts. 5º e 6º"]
+    },
+    "art-26": {
+      "simples": "Ao término da instrução, ou nos cinco dias subsequentes, o árbitro apresentará o laudo ao Juiz togado para homologação por sentença irrecorrível.",
+      "pontos": ["Laudo arbitral em até cinco dias após a instrução.", "Homologação por sentença irrecorrível."],
+      "atencao": ["Sentença homologatória IRRECORRÍVEL."],
+      "exemplo": "O laudo do árbitro é homologado e não comporta recurso.",
+      "prova": ["Assertiva que admite recurso contra a homologação do laudo arbitral erra: ela é irrecorrível."],
+      "termos": [],
+      "remissoes": ["Art. 41"]
+    },
+    "art-27": {
+      "simples": "Não instituído o juízo arbitral, proceder-se-á imediatamente à audiência de instrução e julgamento, desde que não resulte prejuízo para a defesa. Não sendo possível a realização imediata, a audiência será designada para um dos quinze dias subsequentes, cientes desde logo as partes e testemunhas presentes.",
+      "pontos": ["Audiência de instrução e julgamento imediata, sem prejuízo à defesa.", "Se não for possível, em até quinze dias."],
+      "atencao": ["Prazo de quinze dias para a audiência, se não imediata."],
+      "exemplo": "Frustrada a conciliação, a audiência é marcada para os quinze dias seguintes.",
+      "prova": ["Assertiva que fixa em trinta dias o prazo da audiência erra: são quinze dias."],
+      "termos": [],
+      "remissoes": ["Art. 28"]
+    },
+    "art-28": {
+      "simples": "Na audiência de instrução e julgamento serão ouvidas as partes, colhida a prova e, em seguida, proferida a sentença.",
+      "pontos": ["Oitiva das partes, colheita da prova e sentença na mesma audiência."],
+      "atencao": ["Concentração dos atos."],
+      "exemplo": "Na mesma audiência o juiz ouve as partes e profere a sentença.",
+      "prova": ["Assertiva que separa a instrução do julgamento em audiências distintas obrigatoriamente erra."],
+      "termos": [],
+      "remissoes": ["Art. 29"]
+    },
+    "art-29": {
+      "simples": "Serão decididos de plano todos os incidentes que possam interferir no regular prosseguimento da audiência. As demais questões serão decididas na sentença. Sobre os documentos apresentados por uma das partes, manifestar-se-á imediatamente a parte contrária, sem interrupção da audiência.",
+      "pontos": ["Incidentes decididos de plano.", "Demais questões na sentença.", "Manifestação imediata sobre documentos."],
+      "atencao": ["Agilidade: sem interrupção da audiência."],
+      "exemplo": "O juiz decide na hora o incidente que atrapalha a audiência.",
+      "prova": ["Assertiva que suspende a audiência para a manifestação sobre documentos erra: ela é imediata."],
+      "termos": [],
+      "remissoes": ["Art. 28"]
+    },
+    "art-30": {
+      "simples": "A contestação, que será oral ou escrita, conterá toda matéria de defesa, exceto a arguição de suspeição ou impedimento do Juiz, que se processará na forma da legislação em vigor.",
+      "pontos": ["Contestação oral ou escrita.", "Toda a matéria de defesa.", "Exceção: suspeição e impedimento do juiz."],
+      "atencao": ["Contestação pode ser oral."],
+      "exemplo": "O réu contesta oralmente na audiência.",
+      "prova": ["Assertiva que exige contestação sempre escrita erra: ela pode ser oral."],
+      "termos": [],
+      "remissoes": ["Art. 31"]
+    },
+    "art-31": {
+      "simples": "Não se admitirá a reconvenção. É lícito ao réu, na contestação, formular pedido em seu favor, nos limites do art. 3º, desde que fundado nos mesmos fatos que constituem objeto da controvérsia. O autor poderá responder ao pedido do réu na própria audiência ou requerer a designação de nova data, desde logo fixada.",
+      "pontos": ["Sem reconvenção.", "Pedido contraposto na contestação, dentro do teto e com base nos mesmos fatos.", "Resposta do autor na audiência ou em nova data."],
+      "atencao": ["NÃO há reconvenção, mas há PEDIDO CONTRAPOSTO."],
+      "exemplo": "O réu pede, na contestação, indenização com base nos mesmos fatos.",
+      "prova": ["Assertiva que admite a reconvenção no Juizado erra: admite-se o pedido contraposto."],
+      "termos": [{ "termo": "Pedido contraposto", "significado": "Pedido do réu contra o autor, na própria contestação." }],
+      "remissoes": ["Art. 17"]
+    },
+    "art-32": {
+      "simples": "Todos os meios de prova moralmente legítimos, ainda que não especificados em lei, são hábeis para provar a veracidade dos fatos alegados pelas partes.",
+      "pontos": ["Todos os meios de prova moralmente legítimos, mesmo não previstos em lei."],
+      "atencao": ["Liberdade de prova limitada pela legitimidade moral."],
+      "exemplo": "Uma gravação lícita pode ser usada como prova.",
+      "prova": ["Assertiva que restringe as provas aos meios previstos em lei erra."],
+      "termos": [],
+      "remissoes": ["Art. 33"]
+    },
+    "art-33": {
+      "simples": "Todas as provas serão produzidas na audiência de instrução e julgamento, ainda que não requeridas previamente, podendo o Juiz limitar ou excluir as que considerar excessivas, impertinentes ou protelatórias.",
+      "pontos": ["Provas produzidas na audiência, ainda que não requeridas antes.", "Juiz pode limitar ou excluir as excessivas, impertinentes ou protelatórias."],
+      "atencao": ["Concentração das provas na audiência."],
+      "exemplo": "O juiz dispensa a prova que apenas protelaria o processo.",
+      "prova": ["Assertiva que exige o requerimento prévio de todas as provas erra."],
+      "termos": [],
+      "remissoes": ["Art. 32"]
+    },
+    "art-34": {
+      "simples": "As testemunhas, até o máximo de três para cada parte, comparecerão à audiência levadas pela parte que as arrolou, independentemente de intimação, ou mediante esta, se requerido. O requerimento de intimação será apresentado à Secretaria no mínimo cinco dias antes da audiência. Não comparecendo a testemunha intimada, o Juiz poderá determinar sua imediata condução, valendo-se, se necessário, da força pública.",
+      "pontos": ["No máximo três testemunhas por parte.", "A parte leva as testemunhas, ou pede a intimação cinco dias antes.", "Condução coercitiva da testemunha intimada que falta."],
+      "atencao": ["Máximo de três testemunhas por parte."],
+      "exemplo": "Cada parte pode levar até três testemunhas.",
+      "prova": ["Assertiva que fixa em cinco o número máximo de testemunhas por parte erra: são três."],
+      "termos": [],
+      "remissoes": ["Art. 33"]
+    },
+    "art-35": {
+      "simples": "Quando a prova do fato exigir, o Juiz poderá inquirir técnicos de sua confiança, permitida às partes a apresentação de parecer técnico. No curso da audiência, poderá o Juiz, de ofício ou a requerimento das partes, realizar inspeção em pessoas ou coisas, ou determinar que o faça pessoa de sua confiança, que lhe relatará informalmente o verificado.",
+      "pontos": ["Inquirição de técnicos de confiança do juiz.", "Parecer técnico das partes.", "Inspeção em pessoas ou coisas, com relato informal."],
+      "atencao": ["Não há perícia formal: o juiz ouve técnicos."],
+      "exemplo": "O juiz ouve um técnico de sua confiança sobre o defeito do produto.",
+      "prova": ["Assertiva que exige perícia formal nos Juizados erra: o juiz pode inquirir técnicos."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-36": {
+      "simples": "A prova oral não será reduzida a escrito, devendo a sentença referir, no essencial, os informes trazidos nos depoimentos.",
+      "pontos": ["Prova oral não é reduzida a escrito.", "A sentença refere o essencial dos depoimentos."],
+      "atencao": ["Sem transcrição dos depoimentos."],
+      "exemplo": "Os depoimentos não são transcritos, e a sentença resume o essencial.",
+      "prova": ["Assertiva que exige a redução a escrito da prova oral erra."],
+      "termos": [],
+      "remissoes": ["Art. 13"]
+    },
+    "art-37": {
+      "simples": "A instrução poderá ser dirigida por Juiz leigo, sob a supervisão de Juiz togado.",
+      "pontos": ["Instrução pelo juiz leigo, sob supervisão do togado."],
+      "atencao": ["Juiz leigo conduz a instrução, mas a decisão final é do togado."],
+      "exemplo": "O juiz leigo conduz a audiência e submete a decisão ao juiz togado.",
+      "prova": ["Assertiva que permite ao juiz leigo proferir sentença definitiva sozinho erra."],
+      "termos": [],
+      "remissoes": ["Art. 40"]
+    },
+    "art-38": {
+      "simples": "A sentença mencionará os elementos de convicção do Juiz, com breve resumo dos fatos relevantes ocorridos em audiência, dispensado o relatório. Não se admitirá sentença condenatória por quantia ilíquida, ainda que genérico o pedido.",
+      "pontos": ["Sem relatório.", "Elementos de convicção e breve resumo dos fatos.", "Vedada a sentença ilíquida."],
+      "atencao": ["Sentença sempre LÍQUIDA."],
+      "exemplo": "A sentença já fixa o valor exato da condenação.",
+      "prova": ["Assertiva que admite sentença condenatória ilíquida erra: é vedada."],
+      "termos": [],
+      "remissoes": ["Art. 52"]
+    },
+    "art-39": {
+      "simples": "É ineficaz a sentença condenatória na parte que exceder a alçada estabelecida nesta Lei.",
+      "pontos": ["Ineficácia da parte da sentença que excede o teto."],
+      "atencao": ["O excesso é ineficaz."],
+      "exemplo": "Se a condenação passa do teto, a parte excedente não vale.",
+      "prova": ["Assertiva que torna nula toda a sentença que passa do teto erra: é ineficaz só a parte excedente."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-40": {
+      "simples": "O Juiz leigo que tiver dirigido a instrução proferirá sua decisão e imediatamente a submeterá ao Juiz togado, que poderá homologá-la, proferir outra em substituição ou, antes de se manifestar, determinar a realização de atos probatórios indispensáveis.",
+      "pontos": ["Juiz leigo decide e submete ao togado.", "Togado homologa, substitui ou manda produzir provas."],
+      "atencao": ["A decisão do leigo depende do togado."],
+      "exemplo": "O juiz togado homologa a decisão elaborada pelo juiz leigo.",
+      "prova": ["Assertiva que dispensa a homologação do juiz togado erra."],
+      "termos": [],
+      "remissoes": ["Art. 37"]
+    },
+    "art-41": {
+      "simples": "Da sentença, excetuada a homologatória de conciliação ou laudo arbitral, caberá recurso para o próprio Juizado. O recurso será julgado por uma turma composta por três juízes togados, em exercício no primeiro grau de jurisdição, reunidos na sede do Juizado. No recurso, as partes serão obrigatoriamente representadas por advogado.",
+      "pontos": ["Recurso para o próprio Juizado (turma recursal).", "Turma de três juízes togados de primeiro grau.", "Não cabe contra sentença homologatória de conciliação ou laudo.", "Advogado obrigatório no recurso."],
+      "atencao": ["Advogado OBRIGATÓRIO no recurso.", "A turma é composta por juízes de primeiro grau."],
+      "exemplo": "O recurso contra a sentença vai à Turma Recursal, com advogado.",
+      "prova": ["Assertiva que permite o recurso sem advogado erra: é obrigatório."],
+      "termos": [{ "termo": "Turma Recursal", "significado": "Órgão do próprio Juizado que julga os recursos." }],
+      "remissoes": ["Art. 42"]
+    },
+    "art-42": {
+      "simples": "O recurso será interposto no prazo de dez dias, contados da ciência da sentença, por petição escrita com razões e pedido. O preparo será feito, independentemente de intimação, nas quarenta e oito horas seguintes à interposição, sob pena de deserção. Após o preparo, a Secretaria intimará o recorrido para oferecer resposta escrita em dez dias.",
+      "pontos": ["Prazo de dez dias.", "Preparo em quarenta e oito horas, sob pena de deserção.", "Resposta do recorrido em dez dias."],
+      "atencao": ["ATUALIZAÇÃO: os prazos contam-se em dias úteis (art. 12-A).", "Preparo em quarenta e oito horas."],
+      "exemplo": "O recorrente paga o preparo em até quarenta e oito horas após interpor o recurso.",
+      "prova": ["Assertiva que fixa em cinco dias o prazo do recurso inominado erra: são dez dias."],
+      "termos": [{ "termo": "Deserção", "significado": "Não conhecimento do recurso por falta de preparo." }],
+      "remissoes": ["Art. 12-A"]
+    },
+    "art-43": {
+      "simples": "O recurso terá somente efeito devolutivo, podendo o Juiz dar-lhe efeito suspensivo, para evitar dano irreparável para a parte.",
+      "pontos": ["Efeito devolutivo, em regra.", "Efeito suspensivo para evitar dano irreparável."],
+      "atencao": ["Regra: SÓ efeito devolutivo."],
+      "exemplo": "O recurso não suspende a sentença, salvo decisão do juiz.",
+      "prova": ["Assertiva que atribui efeito suspensivo automático ao recurso erra."],
+      "termos": [],
+      "remissoes": ["Art. 41"]
+    },
+    "art-44": {
+      "simples": "As partes poderão requerer a transcrição da gravação da fita magnética a que alude o §3º do art. 13 da Lei, correndo por conta do requerente as despesas respectivas.",
+      "pontos": ["Transcrição da gravação mediante requerimento.", "Despesas por conta do requerente."],
+      "atencao": ["Custos da transcrição ficam com quem pede."],
+      "exemplo": "A parte que quer a transcrição do depoimento arca com o custo.",
+      "prova": ["Assertiva que obriga o Estado a transcrever as gravações sem custo erra."],
+      "termos": [],
+      "remissoes": ["Art. 13"]
+    },
+    "art-45": {
+      "simples": "As partes serão intimadas da data da sessão de julgamento.",
+      "pontos": ["Intimação da data da sessão de julgamento."],
+      "atencao": ["Ciência da data do julgamento."],
+      "exemplo": "As partes são avisadas do dia em que a Turma julgará o recurso.",
+      "prova": ["Assertiva que dispensa a intimação da sessão de julgamento erra."],
+      "termos": [],
+      "remissoes": ["Art. 46"]
+    },
+    "art-46": {
+      "simples": "O julgamento em segunda instância constará apenas da ata, com a indicação suficiente do processo, fundamentação sucinta e parte dispositiva. Se a sentença for confirmada pelos próprios fundamentos, a súmula do julgamento servirá de acórdão.",
+      "pontos": ["Julgamento constará da ata, com fundamentação sucinta.", "Confirmada a sentença pelos próprios fundamentos, a súmula serve de acórdão."],
+      "atencao": ["Acórdão simplificado."],
+      "exemplo": "A Turma confirma a sentença e a súmula do julgamento substitui o acórdão.",
+      "prova": ["Assertiva que exige acórdão extenso em todos os casos erra."],
+      "termos": [],
+      "remissoes": ["Art. 45"]
+    },
+    "art-48": {
+      "simples": "Caberão embargos de declaração contra sentença ou acórdão nos casos previstos no Código de Processo Civil. Os erros materiais podem ser corrigidos de ofício.",
+      "pontos": ["Embargos de declaração nos casos do Código de Processo Civil.", "Correção de erros materiais de ofício."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pela Lei nº 13.105, de 2015 (novo Código de Processo Civil)."],
+      "exemplo": "O juiz corrige, de ofício, um erro de cálculo.",
+      "prova": ["Assertiva que veda a correção de erro material de ofício erra."],
+      "termos": [],
+      "remissoes": ["Art. 49"]
+    },
+    "art-49": {
+      "simples": "Os embargos de declaração serão interpostos por escrito ou oralmente, no prazo de cinco dias, contados da ciência da decisão.",
+      "pontos": ["Escrito ou oral.", "Prazo de cinco dias."],
+      "atencao": ["Prazo de cinco dias."],
+      "exemplo": "A parte embarga oralmente, em cinco dias.",
+      "prova": ["Assertiva que fixa em dez dias o prazo dos embargos erra: são cinco."],
+      "termos": [],
+      "remissoes": ["Art. 50"]
+    },
+    "art-50": {
+      "simples": "Os embargos de declaração interrompem o prazo para a interposição de recurso.",
+      "pontos": ["Interrupção do prazo para recurso."],
+      "atencao": ["INTERROMPEM (e não apenas suspendem) o prazo."],
+      "exemplo": "Opostos os embargos, o prazo do recurso recomeça por inteiro.",
+      "prova": ["Assertiva que apenas suspende o prazo do recurso com os embargos erra: o prazo é interrompido."],
+      "termos": [],
+      "remissoes": ["Art. 49"]
+    },
+    "art-51": {
+      "simples": "Extingue-se o processo, além dos casos previstos em lei, quando o autor deixar de comparecer a qualquer das audiências; quando inadmissível o procedimento ou seu prosseguimento após a conciliação; quando reconhecida a incompetência territorial; quando sobrevier qualquer dos impedimentos do art. 8º; quando, falecido o autor, a habilitação depender de sentença ou não se der em trinta dias; e quando, falecido o réu, o autor não promover a citação dos sucessores em trinta dias da ciência do fato. A extinção independe de prévia intimação pessoal das partes. No caso de ausência do autor, se provar força maior, poderá ser isentado das custas.",
+      "pontos": ["Ausência do autor em qualquer audiência.", "Procedimento inadmissível.", "Incompetência territorial.", "Impedimentos do art. 8º.", "Morte do autor ou do réu sem habilitação ou citação dos sucessores em trinta dias."],
+      "atencao": ["A ausência do AUTOR extingue o processo; a do RÉU gera revelia.", "A extinção independe de intimação pessoal."],
+      "exemplo": "O autor falta à audiência e o processo é extinto.",
+      "prova": ["Assertiva que exige intimação pessoal prévia para extinguir o processo erra."],
+      "termos": [],
+      "remissoes": ["Art. 20"]
+    },
+    "art-52": {
+      "simples": "A execução da sentença processar-se-á no próprio Juizado, aplicando-se, no que couber, o Código de Processo Civil, com alterações: as sentenças serão necessariamente líquidas; os cálculos serão feitos por servidor judicial; a intimação da sentença será feita na própria audiência, advertido o vencido dos efeitos do descumprimento; não cumprida a sentença transitada em julgado, procede-se à execução a pedido, que pode ser verbal, sem nova citação; e, nas obrigações de entregar, fazer ou não fazer, o juiz cominará multa diária, que pode ser elevada ou convertida em perdas e danos.",
+      "pontos": ["Execução no próprio Juizado.", "Sentenças líquidas.", "Cálculos por servidor judicial.", "Execução a pedido, que pode ser verbal, sem nova citação.", "Multa diária nas obrigações de fazer, não fazer e entregar."],
+      "atencao": ["Execução dispensa nova citação.", "O pedido de execução pode ser VERBAL."],
+      "exemplo": "O credor pede verbalmente a execução da sentença não cumprida.",
+      "prova": ["Assertiva que exige nova citação do devedor na execução erra."],
+      "termos": [],
+      "remissoes": ["Art. 53"]
+    },
+    "art-53": {
+      "simples": "A execução de título executivo extrajudicial, no valor de até quarenta salários mínimos, obedecerá ao Código de Processo Civil, com as modificações da Lei. Efetuada a penhora, o devedor será intimado a comparecer à audiência de conciliação, quando poderá oferecer embargos, por escrito ou verbalmente. Na audiência, será buscado o meio mais rápido e eficaz de solução, se possível com dispensa da alienação judicial, propondo-se pagamento a prazo, dação em pagamento ou adjudicação. Não apresentados ou improcedentes os embargos, qualquer parte poderá pedir uma das alternativas. Não encontrado o devedor ou inexistindo bens penhoráveis, o processo será imediatamente extinto.",
+      "pontos": ["Execução de título extrajudicial até quarenta salários mínimos.", "Audiência de conciliação após a penhora.", "Embargos orais ou escritos.", "Alternativas: pagamento parcelado, dação em pagamento ou adjudicação.", "Extinção se não houver devedor ou bens."],
+      "atencao": ["Execução de título extrajudicial: teto de quarenta salários mínimos."],
+      "exemplo": "A execução de um cheque até o teto segue o rito do Juizado.",
+      "prova": ["Assertiva que fixa em sessenta salários mínimos o teto da execução extrajudicial no Juizado erra: são quarenta."],
+      "termos": [],
+      "remissoes": ["Art. 3º"]
+    },
+    "art-54": {
+      "simples": "O acesso ao Juizado Especial independerá, em primeiro grau de jurisdição, do pagamento de custas, taxas ou despesas. O preparo do recurso compreenderá todas as despesas processuais, inclusive aquelas dispensadas em primeiro grau, ressalvada a assistência judiciária gratuita.",
+      "pontos": ["Gratuidade em primeiro grau.", "Preparo do recurso inclui todas as despesas."],
+      "atencao": ["Gratuito em primeiro grau; pago no recurso."],
+      "exemplo": "O autor não paga custas na petição inicial, mas paga o preparo para recorrer.",
+      "prova": ["Assertiva que isenta o recorrente de qualquer despesa no recurso erra: o preparo compreende todas as despesas."],
+      "termos": [],
+      "remissoes": ["Art. 42"]
+    },
+    "art-55": {
+      "simples": "A sentença de primeiro grau não condenará o vencido em custas e honorários de advogado, ressalvados os casos de litigância de má-fé. Em segundo grau, o recorrente vencido pagará as custas e honorários de advogado, fixados entre dez por cento e vinte por cento do valor de condenação ou, não havendo condenação, do valor corrigido da causa. Na execução não serão contadas custas, salvo se reconhecida a litigância de má-fé, improcedentes os embargos do devedor ou em execução de sentença cujo recurso do devedor foi improvido.",
+      "pontos": ["Sem condenação em custas e honorários em primeiro grau, salvo má-fé.", "Em segundo grau, o recorrente vencido paga custas e honorários de dez a vinte por cento.", "Sem custas na execução, salvo exceções."],
+      "atencao": ["Honorários em segundo grau: de dez por cento a vinte por cento."],
+      "exemplo": "O recorrente que perde o recurso paga honorários de dez a vinte por cento.",
+      "prova": ["Assertiva que condena o vencido em honorários em primeiro grau, sem má-fé, erra."],
+      "termos": [],
+      "remissoes": ["Art. 54"]
+    },
+    "art-56": {
+      "simples": "Instituído o Juizado Especial, serão implantadas as curadorias necessárias e o serviço de assistência judiciária.",
+      "pontos": ["Implantação de curadorias e assistência judiciária."],
+      "atencao": ["Estrutura de apoio ao Juizado."],
+      "exemplo": "Ao se criar o Juizado, instala-se o serviço de assistência judiciária.",
+      "prova": ["Assertiva que dispensa a assistência judiciária no Juizado erra."],
+      "termos": [],
+      "remissoes": ["Art. 9º"]
+    },
+    "art-57": {
+      "simples": "O acordo extrajudicial, de qualquer natureza ou valor, poderá ser homologado, no juízo competente, independentemente de termo, valendo a sentença como título executivo judicial. Valerá como título extrajudicial o acordo celebrado pelas partes, por instrumento escrito, referendado pelo órgão competente do Ministério Público.",
+      "pontos": ["Acordo extrajudicial de qualquer valor pode ser homologado.", "Sentença homologatória é título executivo judicial.", "Acordo referendado pelo Ministério Público é título extrajudicial."],
+      "atencao": ["Acordo extrajudicial homologado: título JUDICIAL; referendado pelo MP: título EXTRAJUDICIAL."],
+      "exemplo": "O acordo firmado fora do processo é homologado e passa a ser título judicial.",
+      "prova": ["Assertiva que limita a homologação aos acordos até o teto do Juizado erra: vale para qualquer natureza ou valor."],
+      "termos": [],
+      "remissoes": ["Art. 22"]
+    },
+    "art-58": {
+      "simples": "As normas de organização judiciária local poderão estender a conciliação prevista nos arts. 22 e 23 a causas não abrangidas por esta Lei.",
+      "pontos": ["Extensão da conciliação a causas fora da Lei."],
+      "atencao": ["Possibilidade por norma local."],
+      "exemplo": "Uma lei estadual estende a conciliação a causas mais complexas.",
+      "prova": ["Assertiva que veda qualquer extensão da conciliação erra."],
+      "termos": [],
+      "remissoes": ["Arts. 22 e 23"]
+    },
+    "art-59": {
+      "simples": "Não se admitirá ação rescisória nas causas sujeitas ao procedimento instituído por esta Lei.",
+      "pontos": ["Vedada a ação rescisória."],
+      "atencao": ["NÃO cabe ação rescisória nos Juizados."],
+      "exemplo": "A sentença transitada em julgado do Juizado não pode ser desfeita por rescisória.",
+      "prova": ["Assertiva que admite ação rescisória no Juizado erra: é vedada."],
+      "termos": [],
+      "remissoes": ["Art. 41"]
+    },
+    "art-60": {
+      "simples": "O Juizado Especial Criminal, provido por juízes togados ou togados e leigos, tem competência para a conciliação, o julgamento e a execução das infrações penais de menor potencial ofensivo, respeitadas as regras de conexão e continência. Na reunião de processos perante o juízo comum ou o tribunal do júri, decorrentes das regras de conexão e continência, observar-se-ão os institutos da transação penal e da composição dos danos civis.",
+      "pontos": ["Competência: infrações de menor potencial ofensivo.", "Conciliação, julgamento e execução.", "Conexão e continência respeitadas.", "Transação penal e composição civil preservadas na reunião de processos."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pela Lei nº 11.313, de 2006.", "Mesmo na reunião de processos no júri ou no juízo comum, aplicam-se transação e composição."],
+      "exemplo": "O crime de menor potencial ofensivo é julgado no Juizado Criminal.",
+      "prova": ["Assertiva que afasta a transação penal quando há reunião de processos no juízo comum erra."],
+      "termos": [],
+      "remissoes": ["Art. 61"]
+    },
+    "art-61": {
+      "simples": "Consideram-se infrações penais de menor potencial ofensivo, para os efeitos desta Lei, as contravenções penais e os crimes a que a lei comine pena máxima não superior a 2 anos, cumulada ou não com multa.",
+      "pontos": ["Contravenções penais.", "Crimes com pena máxima não superior a 2 anos."],
+      "atencao": ["ATUALIZAÇÃO: redação dada pela Lei nº 11.313, de 2006 (antes eram um ano; hoje, dois anos).", "Limite: pena MÁXIMA não superior a 2 anos, e não a pena mínima.", "Vale para a Justiça Estadual e para a Federal."],
+      "exemplo": "Um crime com pena máxima de dois anos é infração de menor potencial ofensivo.",
+      "prova": ["Assertiva que fixa em um ano a pena máxima das infrações de menor potencial ofensivo erra: são 2 anos."],
+      "termos": [{ "termo": "Infração de menor potencial ofensivo", "significado": "Contravenção ou crime com pena máxima não superior a 2 anos." }],
+      "remissoes": ["Art. 60"]
+    },
+    "art-62": {
+      "simples": "O processo perante o Juizado Especial Criminal orientar-se-á pelos critérios da oralidade, simplicidade, informalidade, economia processual e celeridade, objetivando, sempre que possível, a reparação dos danos sofridos pela vítima e a aplicação de pena não privativa de liberdade.",
+      "pontos": ["Oralidade, simplicidade, informalidade, economia processual e celeridade.", "Reparação do dano à vítima.", "Pena não privativa de liberdade."],
+      "atencao": ["Prioriza a reparação e as penas alternativas."],
+      "exemplo": "O Juizado busca primeiro a composição dos danos e a pena alternativa.",
+      "prova": ["Assertiva que prioriza a prisão no Juizado Criminal erra: a pena não privativa de liberdade é prioritária."],
+      "termos": [],
+      "remissoes": ["Art. 2º"]
+    },
+    "art-63": {
+      "simples": "A competência do Juizado será determinada pelo lugar em que foi praticada a infração penal.",
+      "pontos": ["Competência pelo lugar da infração."],
+      "atencao": ["Critério do lugar da INFRAÇÃO (teoria da atividade)."],
+      "exemplo": "A infração praticada em certa cidade é julgada pelo Juizado dali.",
+      "prova": ["Assertiva que fixa a competência pelo domicílio do autor do fato erra."],
+      "termos": [],
+      "remissoes": ["Art. 4º"]
+    },
+    "art-64": {
+      "simples": "Os atos processuais serão públicos e poderão realizar-se em horário noturno e em qualquer dia da semana, conforme dispuserem as normas de organização judiciária.",
+      "pontos": ["Atos públicos.", "Horário noturno e qualquer dia da semana."],
+      "atencao": ["Qualquer dia da semana."],
+      "exemplo": "Uma audiência pode ocorrer em fim de semana.",
+      "prova": ["Assertiva que limita os atos aos dias úteis erra."],
+      "termos": [],
+      "remissoes": ["Art. 12"]
+    },
+    "art-65": {
+      "simples": "Os atos processuais serão válidos sempre que preencherem as finalidades para as quais foram realizados. Não se pronunciará qualquer nulidade sem que tenha havido prejuízo. A prática de atos em outras comarcas poderá ser solicitada por qualquer meio hábil. Serão objeto de registro escrito exclusivamente os atos essenciais, e os realizados em audiência de instrução e julgamento poderão ser gravados.",
+      "pontos": ["Validade pela finalidade.", "Sem nulidade sem prejuízo.", "Registro escrito só dos atos essenciais.", "Gravação dos atos da audiência."],
+      "atencao": ["Mesmo princípio da instrumentalidade e do prejuízo no âmbito criminal."],
+      "exemplo": "Só se anula o ato que causar prejuízo.",
+      "prova": ["Assertiva que decreta nulidade sem prejuízo erra."],
+      "termos": [],
+      "remissoes": ["Art. 13"]
+    },
+    "art-66": {
+      "simples": "A citação será pessoal e far-se-á no próprio Juizado, sempre que possível, ou por mandado. Não encontrado o acusado para ser citado, o Juiz encaminhará as peças existentes ao Juízo comum para adoção do procedimento previsto em lei.",
+      "pontos": ["Citação pessoal, no Juizado ou por mandado.", "Acusado não encontrado: remessa ao juízo comum."],
+      "atencao": ["Não há citação por edital no Juizado Criminal; o caso vai ao juízo comum."],
+      "exemplo": "Se o acusado não é localizado, o processo segue para a vara criminal comum.",
+      "prova": ["Assertiva que admite a citação por edital no Juizado Criminal erra: o caso vai ao juízo comum."],
+      "termos": [],
+      "remissoes": ["Art. 77"]
+    },
+    "art-67": {
+      "simples": "A intimação far-se-á por correspondência, com aviso de recebimento pessoal ou, tratando-se de pessoa jurídica ou firma individual, mediante entrega ao encarregado da recepção, que será obrigatoriamente identificado, ou, sendo necessário, por oficial de justiça, independentemente de mandado ou carta precatória, ou ainda por qualquer meio idôneo de comunicação. Dos atos praticados em audiência, consideram-se desde logo cientes as partes, os interessados e defensores.",
+      "pontos": ["Intimação por correspondência, oficial de justiça ou meio idôneo.", "Ciência imediata dos atos praticados em audiência."],
+      "atencao": ["Quem está na audiência já fica ciente."],
+      "exemplo": "A data da próxima audiência é informada na própria audiência.",
+      "prova": ["Assertiva que exige nova intimação para atos praticados em audiência erra: todos já ficam cientes."],
+      "termos": [],
+      "remissoes": ["Art. 19"]
+    },
+    "art-68": {
+      "simples": "Do ato de intimação do autor do fato e do mandado de citação do acusado, constará a necessidade de seu comparecimento acompanhado de advogado, com a advertência de que, na sua falta, ser-lhe-á designado defensor público.",
+      "pontos": ["Comparecimento acompanhado de advogado.", "Defensor público designado se não tiver advogado."],
+      "atencao": ["A defesa técnica é obrigatória."],
+      "exemplo": "O acusado sem advogado recebe defensor público.",
+      "prova": ["Assertiva que dispensa advogado ou defensor para o acusado no Juizado Criminal erra."],
+      "termos": [],
+      "remissoes": ["Art. 9º"]
+    },
+    "art-69": {
+      "simples": "A autoridade policial que tomar conhecimento da ocorrência lavrará termo circunstanciado e o encaminhará imediatamente ao Juizado, com o autor do fato e a vítima, providenciando as requisições dos exames periciais necessários. Ao autor do fato que, após a lavratura do termo, for imediatamente encaminhado ao Juizado ou assumir o compromisso de a ele comparecer, não se imporá prisão em flagrante, nem se exigirá fiança. Em caso de violência doméstica, o juiz poderá determinar, como medida de cautela, seu afastamento do lar, domicílio ou local de convivência com a vítima.",
+      "pontos": ["Termo circunstanciado de ocorrência (TCO) em vez de inquérito.", "Encaminhamento imediato ao Juizado.", "Sem prisão em flagrante nem fiança se comparecer ou assumir o compromisso.", "Afastamento do lar em violência doméstica."],
+      "atencao": ["ATUALIZAÇÃO: redação do parágrafo único alterada por leis posteriores, inclusive a Lei Maria da Penha.", "TCO substitui o inquérito."],
+      "exemplo": "A polícia lavra termo circunstanciado e encaminha o autor ao Juizado, sem prendê-lo.",
+      "prova": ["Assertiva que exige prisão em flagrante e fiança para quem assume o compromisso de comparecer erra."],
+      "termos": [{ "termo": "TCO", "significado": "Termo circunstanciado de ocorrência, registro simplificado do fato." }],
+      "remissoes": ["Art. 77"]
+    },
+    "art-70": {
+      "simples": "Comparecendo o autor do fato e a vítima, e não sendo possível a realização imediata da audiência preliminar, será designada data próxima, da qual ambos sairão cientes.",
+      "pontos": ["Audiência preliminar em data próxima, se não for imediata."],
+      "atencao": ["Ambos saem cientes da data."],
+      "exemplo": "A audiência preliminar é marcada para a semana seguinte, e as partes saem intimadas.",
+      "prova": ["Assertiva que exige nova intimação por correspondência nesse caso erra: ambos saem cientes."],
+      "termos": [],
+      "remissoes": ["Art. 72"]
+    },
+    "art-71": {
+      "simples": "Na falta do comparecimento de qualquer dos envolvidos, a Secretaria providenciará sua intimação e, se for o caso, a do responsável civil, na forma dos arts. 67 e 68 da Lei.",
+      "pontos": ["Intimação do ausente e do responsável civil."],
+      "atencao": ["A Secretaria providencia a intimação."],
+      "exemplo": "Se a vítima falta, a Secretaria a intima novamente.",
+      "prova": ["Assertiva que extingue o processo pela ausência da vítima à primeira audiência erra: providencia-se a intimação."],
+      "termos": [],
+      "remissoes": ["Arts. 67 e 68"]
+    },
+    "art-72": {
+      "simples": "Na audiência preliminar, presente o representante do Ministério Público, o autor do fato e a vítima e, se possível, o responsável civil, acompanhados de seus advogados, o Juiz esclarecerá sobre a possibilidade da composição dos danos e da aceitação da proposta de aplicação imediata de pena não privativa de liberdade.",
+      "pontos": ["Audiência preliminar com MP, autor, vítima e advogados.", "Esclarecimento sobre composição dos danos e transação penal."],
+      "atencao": ["Primeira fase: composição civil; depois, transação penal."],
+      "exemplo": "O juiz explica ao autor do fato as possibilidades de composição e de transação.",
+      "prova": ["Assertiva que dispensa a presença do Ministério Público na audiência preliminar erra."],
+      "termos": [],
+      "remissoes": ["Art. 74", "Art. 76"]
+    },
+    "art-73": {
+      "simples": "A conciliação será conduzida pelo Juiz ou por conciliador sob sua orientação. Os conciliadores são auxiliares da Justiça, recrutados, na forma da lei local, preferentemente entre bacharéis em Direito, excluídos os que exerçam funções na administração da Justiça Criminal.",
+      "pontos": ["Conciliação pelo juiz ou por conciliador.", "Conciliadores: preferentemente bacharéis em Direito.", "Excluídos os que atuam na administração da Justiça Criminal."],
+      "atencao": ["Vedados os que exercem funções na Justiça Criminal."],
+      "exemplo": "Um bacharel em Direito atua como conciliador no Juizado Criminal.",
+      "prova": ["Assertiva que permite a delegado atuar como conciliador erra: os que exercem funções na administração da Justiça Criminal são excluídos."],
+      "termos": [],
+      "remissoes": ["Art. 7º"]
+    },
+    "art-74": {
+      "simples": "A composição dos danos civis será reduzida a escrito e, homologada pelo Juiz mediante sentença irrecorrível, terá eficácia de título a ser executado no juízo civil competente. Tratando-se de ação penal de iniciativa privada ou de ação penal pública condicionada à representação, o acordo homologado acarreta a renúncia ao direito de queixa ou representação.",
+      "pontos": ["Composição civil homologada por sentença irrecorrível, com eficácia de título.", "Execução no juízo civil.", "Em ação privada ou condicionada, o acordo importa renúncia à queixa ou representação."],
+      "atencao": ["Composição civil NÃO extingue a punibilidade nos crimes de ação pública incondicionada."],
+      "exemplo": "Na ação condicionada à representação, o acordo homologado impede que a vítima represente depois.",
+      "prova": ["Assertiva que não vê efeito penal na composição civil em ação privada erra: ela acarreta renúncia ao direito de queixa."],
+      "termos": [],
+      "remissoes": ["Art. 75"]
+    },
+    "art-75": {
+      "simples": "Não obtida a composição dos danos civis, será dada imediatamente ao ofendido a oportunidade de exercer o direito de representação verbal, que será reduzida a termo. O não oferecimento da representação na audiência preliminar não implica decadência do direito, que poderá ser exercido no prazo previsto em lei.",
+      "pontos": ["Representação verbal, reduzida a termo.", "Não representar na audiência não gera decadência."],
+      "atencao": ["A representação pode ser oferecida depois, no prazo legal."],
+      "exemplo": "A vítima não representa na audiência, mas ainda pode fazê-lo dentro do prazo.",
+      "prova": ["Assertiva que decreta decadência se a vítima não representa na audiência erra."],
+      "termos": [],
+      "remissoes": ["Art. 91"]
+    },
+    "art-76": {
+      "simples": "Transação penal: havendo representação ou tratando-se de crime de ação penal pública incondicionada, não sendo caso de arquivamento, o Ministério Público poderá propor a aplicação imediata de pena restritiva de direitos ou multas. Se a multa for a única pena aplicável, o juiz poderá reduzi-la até a metade. Não se admite a proposta se o autor foi condenado, por crime, a pena privativa de liberdade por sentença definitiva; se foi beneficiado nos cinco anos anteriores por transação; ou se os antecedentes, a conduta social e a personalidade, os motivos e as circunstâncias não indicarem ser a medida necessária e suficiente. Aceita a proposta pelo autor e seu defensor, será apreciada pelo juiz, que aplicará a pena, sem reincidência, apenas registrada para impedir novo benefício em cinco anos. Da sentença cabe apelação.",
+      "pontos": ["Proposta do Ministério Público de pena restritiva de direitos ou multa.", "Vedada se houve condenação a pena privativa de liberdade, benefício nos cinco anos anteriores ou circunstâncias desfavoráveis.", "Aceitação pelo autor e pelo defensor.", "Sem reincidência; registro só para impedir novo benefício em cinco anos.", "Apelação cabível."],
+      "atencao": ["Cinco anos de intervalo entre transações.", "Não gera reincidência nem maus antecedentes, mas impede novo benefício por cinco anos.", "É um direito subjetivo do réu, segundo a jurisprudência, se preenchidos os requisitos."],
+      "exemplo": "O Ministério Público propõe multa ao autor de uma ameaça, que aceita e não responde a processo.",
+      "prova": ["Assertiva que considera reincidente quem aceita a transação penal erra: ela não importa em reincidência."],
+      "termos": [{ "termo": "Transação penal", "significado": "Acordo em que o autor aceita pena alternativa imediata, sem processo." }],
+      "remissoes": ["Art. 89"]
+    },
+    "art-77": {
+      "simples": "Na ação penal de iniciativa pública, quando não houver aplicação de pena, pela ausência do autor do fato ou pela não ocorrência da hipótese do art. 76, o Ministério Público oferecerá ao Juiz, de imediato, denúncia oral, se não houver necessidade de diligências imprescindíveis. A denúncia será elaborada com base no termo de ocorrência, com dispensa do inquérito policial, prescindindo-se do exame de corpo de delito quando a materialidade estiver aferida por boletim médico ou prova equivalente. Se a complexidade do caso não permitir, o Ministério Público poderá requerer o encaminhamento das peças ao juízo comum. Na ação de iniciativa do ofendido poderá ser oferecida queixa oral.",
+      "pontos": ["Denúncia oral, se não houver transação.", "Com base no termo circunstanciado, dispensado o inquérito.", "Dispensa do exame de corpo de delito com boletim médico.", "Caso complexo: remessa ao juízo comum.", "Queixa oral na ação privada."],
+      "atencao": ["Denúncia ORAL, com dispensa do inquérito policial."],
+      "exemplo": "O Promotor oferece denúncia oral logo após a frustração da transação penal.",
+      "prova": ["Assertiva que exige inquérito policial prévio para a denúncia no Juizado erra: é dispensado."],
+      "termos": [],
+      "remissoes": ["Art. 66"]
+    },
+    "art-78": {
+      "simples": "Oferecida a denúncia ou queixa, será reduzida a termo, entregando-se cópia ao acusado, que com ela ficará citado e cientificado da designação de dia e hora para a audiência de instrução e julgamento, da qual também tomarão ciência o Ministério Público, o ofendido, o responsável civil e seus advogados. Se o acusado não estiver presente, será citado na forma dos arts. 66 e 68 e deverá trazer suas testemunhas ou requerer a intimação no mínimo cinco dias antes da audiência. O ofendido e o responsável civil ausentes serão intimados, e as testemunhas arroladas também.",
+      "pontos": ["Denúncia ou queixa reduzida a termo.", "Acusado presente fica citado com a entrega da cópia.", "Testemunhas trazidas ou intimação requerida cinco dias antes.", "Intimação do ofendido, do responsável civil e das testemunhas."],
+      "atencao": ["Citação na própria audiência, com entrega de cópia."],
+      "exemplo": "O acusado presente recebe a cópia da denúncia e fica citado.",
+      "prova": ["Assertiva que exige nova citação por mandado do acusado presente erra: ele fica citado com a cópia."],
+      "termos": [],
+      "remissoes": ["Art. 77"]
+    },
+    "art-79": {
+      "simples": "No dia e hora designados para a audiência de instrução e julgamento, se na fase preliminar não tiver havido possibilidade de tentativa de conciliação e de oferecimento de proposta pelo Ministério Público, proceder-se-á nos termos dos arts. 72, 73, 74 e 75 da Lei.",
+      "pontos": ["Se a fase preliminar não ocorreu, repete-se na audiência de instrução a conciliação e a proposta."],
+      "atencao": ["Garante a oportunidade de composição e transação."],
+      "exemplo": "Se o autor não foi localizado antes, a transação é tentada na audiência de instrução.",
+      "prova": ["Assertiva que dispensa a tentativa de conciliação na audiência de instrução quando não houve fase preliminar erra."],
+      "termos": [],
+      "remissoes": ["Arts. 72 a 75"]
+    },
+    "art-80": {
+      "simples": "Nenhum ato será adiado, determinando o Juiz, quando imprescindível, a condução coercitiva de quem deva comparecer.",
+      "pontos": ["Nenhum ato é adiado.", "Condução coercitiva quando imprescindível."],
+      "atencao": ["Vedado o adiamento."],
+      "exemplo": "O juiz manda conduzir coercitivamente a testemunha faltosa em vez de adiar.",
+      "prova": ["Assertiva que permite o adiamento livre dos atos erra: nenhum ato será adiado."],
+      "termos": [],
+      "remissoes": ["Art. 34"]
+    },
+    "art-81": {
+      "simples": "Aberta a audiência, será dada a palavra ao defensor para responder à acusação, após o que o Juiz receberá, ou não, a denúncia ou queixa; havendo recebimento, serão ouvidas a vítima e as testemunhas de acusação e defesa, interrogando-se a seguir o acusado, passando-se aos debates orais e à sentença. Todas as provas serão produzidas na audiência, podendo o juiz limitar ou excluir as excessivas, impertinentes ou protelatórias. Durante a audiência, todos devem respeitar a dignidade da vítima, sob pena de responsabilização civil, penal e administrativa, vedadas manifestações sobre circunstâncias alheias aos fatos e linguagem ou material que ofendam a dignidade da vítima ou de testemunhas. Será lavrado termo, assinado pelo juiz e pelas partes, e a sentença dispensará o relatório.",
+      "pontos": ["Defesa antes do recebimento da denúncia.", "Oitiva da vítima, testemunhas e interrogatório do acusado ao final.", "Debates orais e sentença na própria audiência.", "Respeito à dignidade da vítima.", "Sentença sem relatório."],
+      "atencao": ["ATUALIZAÇÃO: §1º-A incluído pela Lei nº 14.245, de 2021 (dignidade da vítima nas audiências).", "O interrogatório é o ÚLTIMO ato de instrução."],
+      "exemplo": "O juiz impede o advogado de usar linguagem ofensiva contra a vítima.",
+      "prova": ["Assertiva que inicia a audiência com o interrogatório do acusado erra: o interrogatório vem depois da prova."],
+      "termos": [],
+      "remissoes": ["Art. 78"]
+    },
+    "art-82": {
+      "simples": "Da decisão de rejeição da denúncia ou queixa e da sentença caberá apelação, que poderá ser julgada por turma composta de três juízes em exercício no primeiro grau, reunidos na sede do Juizado. A apelação será interposta no prazo de dez dias, contados da ciência da sentença, por petição escrita com razões e pedido. O recorrido será intimado para responder por escrito em dez dias. As partes poderão requerer a transcrição da gravação. As partes serão intimadas da data do julgamento pela imprensa. Se a sentença for confirmada pelos próprios fundamentos, a súmula do julgamento servirá de acórdão.",
+      "pontos": ["Apelação contra a rejeição da denúncia e contra a sentença.", "Turma de três juízes de primeiro grau.", "Prazo de dez dias.", "Resposta em dez dias.", "Súmula como acórdão."],
+      "atencao": ["Apelação em DEZ dias (no processo penal comum seriam cinco).", "Julgada por turma recursal."],
+      "exemplo": "O Ministério Público apela da rejeição da denúncia em dez dias.",
+      "prova": ["Assertiva que fixa em cinco dias o prazo da apelação no Juizado Criminal erra: são dez dias."],
+      "termos": [],
+      "remissoes": ["Art. 41"]
+    },
+    "art-83": {
+      "simples": "Cabem embargos de declaração quando, em sentença ou acórdão, houver obscuridade, contradição ou omissão. Serão opostos por escrito ou oralmente, no prazo de cinco dias, contados da ciência da decisão, e interrompem o prazo para a interposição de recurso. Os erros materiais podem ser corrigidos de ofício.",
+      "pontos": ["Embargos por obscuridade, contradição ou omissão.", "Escritos ou orais, em cinco dias.", "Interrompem o prazo do recurso.", "Erros materiais corrigíveis de ofício."],
+      "atencao": ["ATUALIZAÇÃO: o §2º (interrupção do prazo) foi alterado por lei posterior.", "Interrompem (não suspendem) o prazo."],
+      "exemplo": "A parte embarga oralmente de uma omissão na sentença.",
+      "prova": ["Assertiva que fixa em dois dias o prazo dos embargos erra: são cinco."],
+      "termos": [],
+      "remissoes": ["Art. 49"]
+    },
+    "art-84": {
+      "simples": "Aplicada exclusivamente pena de multa, seu cumprimento far-se-á mediante pagamento na Secretaria do Juizado. Efetuado o pagamento, o Juiz declarará extinta a punibilidade, determinando que a condenação não fique constando dos registros criminais, exceto para fins de requisição judicial.",
+      "pontos": ["Multa paga na Secretaria.", "Pagamento extingue a punibilidade.", "Sem registro criminal, exceto requisição judicial."],
+      "atencao": ["Pagamento extingue a punibilidade."],
+      "exemplo": "O autor paga a multa na Secretaria e o processo é extinto.",
+      "prova": ["Assertiva que mantém a condenação nos registros criminais após o pagamento erra."],
+      "termos": [],
+      "remissoes": ["Art. 85"]
+    },
+    "art-85": {
+      "simples": "Não efetuado o pagamento de multa, será feita a conversão em pena privativa da liberdade, ou restritiva de direitos, nos termos previstos em lei.",
+      "pontos": ["Conversão da multa não paga em pena privativa de liberdade ou restritiva de direitos."],
+      "atencao": ["ATUALIZAÇÃO: a conversão da multa em prisão foi vedada por lei posterior no Código Penal; verifique a aplicação."],
+      "exemplo": "A regra original previa converter a multa não paga em pena alternativa.",
+      "prova": ["Assertiva que mantém hoje a conversão da multa em prisão sem ressalvas erra: houve alteração legislativa."],
+      "termos": [],
+      "remissoes": ["Art. 84"]
+    },
+    "art-86": {
+      "simples": "A execução das penas privativas de liberdade e restritivas de direitos, ou de multa cumulada com estas, será processada perante o órgão competente, nos termos da lei.",
+      "pontos": ["Execução perante o órgão competente."],
+      "atencao": ["Não é no Juizado."],
+      "exemplo": "A pena privativa é executada pelo juízo da execução.",
+      "prova": ["Assertiva que atribui ao Juizado a execução das penas privativas de liberdade erra."],
+      "termos": [],
+      "remissoes": ["Art. 85"]
+    },
+    "art-87": {
+      "simples": "Nos casos de homologação do acordo civil e aplicação de pena restritiva de direitos ou multa (arts. 74 e 76, §4º), as despesas processuais serão reduzidas, conforme dispuser lei estadual.",
+      "pontos": ["Despesas reduzidas na composição civil e na transação."],
+      "atencao": ["Redução definida por lei estadual."],
+      "exemplo": "As custas são reduzidas quando há acordo e transação.",
+      "prova": ["Assertiva que fixa a redução em lei federal erra: depende de lei estadual."],
+      "termos": [],
+      "remissoes": ["Arts. 74 e 76"]
+    },
+    "art-88": {
+      "simples": "Além das hipóteses do Código Penal e da legislação especial, dependerá de representação a ação penal relativa aos crimes de lesões corporais leves e lesões culposas.",
+      "pontos": ["Lesão corporal leve e lesão culposa dependem de representação."],
+      "atencao": ["Exceção: violência doméstica contra a mulher, em que a ação é pública incondicionada (Lei Maria da Penha)."],
+      "exemplo": "A vítima de lesão leve precisa representar para o processo ser instaurado.",
+      "prova": ["Assertiva que torna incondicionada a lesão corporal leve em geral erra: depende de representação."],
+      "termos": [],
+      "remissoes": ["Art. 91"]
+    },
+    "art-89": {
+      "simples": "Suspensão condicional do processo: nos crimes em que a pena mínima cominada for igual ou inferior a um ano, abrangidas ou não pela Lei, o Ministério Público, ao oferecer a denúncia, poderá propor a suspensão do processo, por dois a quatro anos, desde que o acusado não esteja sendo processado ou não tenha sido condenado por outro crime e presentes os demais requisitos do sursis. Aceita a proposta, o juiz, recebendo a denúncia, poderá suspender o processo, submetendo o acusado a período de prova com as condições de reparação do dano, proibição de frequentar certos lugares, proibição de ausentar-se da comarca e comparecimento mensal a juízo. O juiz poderá fixar outras condições. A suspensão será revogada se o beneficiário vier a ser processado por outro crime ou não reparar o dano sem motivo justificado.",
+      "pontos": ["Pena mínima igual ou inferior a um ano.", "Suspensão por dois a quatro anos.", "Acusado não processado nem condenado por outro crime.", "Condições: reparar o dano, frequentar lugares, ausentar-se da comarca e comparecer mensalmente.", "Revogação obrigatória se processado por outro crime ou sem reparar o dano."],
+      "atencao": ["Critério: pena MÍNIMA de até um ano (diferente do menor potencial ofensivo, que olha a máxima).", "Aplica-se a crimes de qualquer lei, e não só aos dos Juizados."],
+      "exemplo": "O acusado de furto simples, primário, aceita a suspensão do processo por dois anos.",
+      "prova": ["Assertiva que considera a pena máxima para o sursis processual erra: o critério é a pena mínima de até um ano."],
+      "termos": [{ "termo": "Sursis processual", "significado": "Suspensão do processo mediante condições e período de prova." }],
+      "remissoes": ["Art. 76"]
+    },
+    "art-90": {
+      "simples": "As disposições da Lei não se aplicam aos processos penais cuja instrução já estiver iniciada.",
+      "pontos": ["Não se aplica aos processos com instrução já iniciada."],
+      "atencao": ["Dispositivo de direito intertemporal."],
+      "exemplo": "O processo em instrução antes da Lei seguiu o rito antigo.",
+      "prova": ["Assertiva que aplica a Lei aos processos com instrução iniciada erra."],
+      "termos": [],
+      "remissoes": ["Art. 90-A"]
+    },
+    "art-90-a": {
+      "simples": "As disposições da Lei não se aplicam no âmbito da Justiça Militar.",
+      "pontos": ["Exclui a Justiça Militar."],
+      "atencao": ["ATUALIZAÇÃO: incluído pela Lei nº 9.839, de 1999.", "Transação penal e sursis processual não valem na Justiça Militar."],
+      "exemplo": "A transação penal não se aplica aos crimes militares.",
+      "prova": ["Assertiva que estende a Lei dos Juizados à Justiça Militar erra."],
+      "termos": [],
+      "remissoes": ["Art. 90"]
+    },
+    "art-91": {
+      "simples": "Nos casos em que a Lei passa a exigir representação para a propositura da ação penal pública, o ofendido ou seu representante legal será intimado para oferecê-la no prazo de trinta dias, sob pena de decadência.",
+      "pontos": ["Intimação do ofendido para representar em trinta dias.", "Decadência em caso de omissão."],
+      "atencao": ["Norma de transição para os crimes que passaram a exigir representação."],
+      "exemplo": "A vítima de lesão leve foi intimada a representar em trinta dias.",
+      "prova": ["Assertiva que fixa em seis meses o prazo desse artigo erra: são trinta dias."],
+      "termos": [],
+      "remissoes": ["Art. 88"]
+    },
+    "art-92": {
+      "simples": "Aplicam-se subsidiariamente as disposições dos Códigos Penal e de Processo Penal, no que não forem incompatíveis com esta Lei.",
+      "pontos": ["Aplicação subsidiária do Código Penal e do Código de Processo Penal."],
+      "atencao": ["Subsidiária e compatível."],
+      "exemplo": "Na falta de regra no Juizado, aplica-se o Código de Processo Penal.",
+      "prova": ["Assertiva que afasta o Código de Processo Penal do Juizado Criminal erra."],
+      "termos": [],
+      "remissoes": ["Código de Processo Penal"]
+    },
+    "art-93": {
+      "simples": "Lei Estadual disporá sobre o Sistema de Juizados Especiais Cíveis e Criminais, sua organização, composição e competência.",
+      "pontos": ["Lei estadual organiza o sistema de Juizados."],
+      "atencao": ["Competência legislativa para a organização local."],
+      "exemplo": "Cada Estado regula a composição dos seus Juizados.",
+      "prova": ["Assertiva que atribui à União a organização dos Juizados estaduais erra."],
+      "termos": [],
+      "remissoes": ["Art. 1º"]
+    },
+    "art-94": {
+      "simples": "Os serviços de cartório poderão ser prestados, e as audiências realizadas fora da sede da Comarca, em bairros ou cidades a ela pertencentes, ocupando instalações de prédios públicos, de acordo com audiências previamente anunciadas.",
+      "pontos": ["Audiências e serviços fora da sede da Comarca.", "Uso de prédios públicos, com anúncio prévio."],
+      "atencao": ["Base dos Juizados itinerantes."],
+      "exemplo": "O Juizado realiza audiências em um bairro distante, em prédio público.",
+      "prova": ["Assertiva que veda audiências fora da sede da Comarca erra."],
+      "termos": [],
+      "remissoes": ["Art. 95"]
+    },
+    "art-95": {
+      "simples": "Os Estados, o Distrito Federal e os Territórios criarão e instalarão os Juizados Especiais no prazo de seis meses, a contar da vigência da Lei. No mesmo prazo, serão criados e instalados os Juizados Especiais Itinerantes, que dirimirão, prioritariamente, os conflitos existentes nas áreas rurais ou nos locais de menor concentração populacional.",
+      "pontos": ["Criação dos Juizados em seis meses.", "Juizados Itinerantes para áreas rurais e de menor concentração populacional."],
+      "atencao": ["Prazo de seis meses."],
+      "exemplo": "O Juizado Itinerante atende comunidades rurais distantes.",
+      "prova": ["Assertiva que fixa em um ano o prazo para criar os Juizados erra: são seis meses."],
+      "termos": [],
+      "remissoes": ["Art. 94"]
+    },
+    "art-96": {
+      "simples": "Esta Lei entra em vigor no prazo de sessenta dias após a sua publicação.",
+      "pontos": ["Vacatio legis de sessenta dias."],
+      "atencao": ["Sessenta dias de vacatio legis."],
+      "exemplo": "A Lei só passou a valer sessenta dias depois de publicada.",
+      "prova": ["Assertiva que prevê vigência imediata erra: são sessenta dias."],
+      "termos": [],
+      "remissoes": ["Art. 97"]
+    },
+    "art-97": {
+      "simples": "Ficam revogadas a Lei nº 4.611, de 2 de abril de 1965 e a Lei nº 7.244, de 7 de novembro de 1984, que tratava dos Juizados de Pequenas Causas.",
+      "pontos": ["Revoga a lei do rito sumaríssimo e a lei dos Juizados de Pequenas Causas."],
+      "atencao": ["Dispositivo de revogação."],
+      "exemplo": "Os Juizados Especiais substituíram os antigos Juizados de Pequenas Causas.",
+      "prova": ["Assertiva que mantém em vigor a lei dos Juizados de Pequenas Causas erra: foi revogada."],
+      "termos": [],
+      "remissoes": ["Art. 96"]
+    }
+  }
+}

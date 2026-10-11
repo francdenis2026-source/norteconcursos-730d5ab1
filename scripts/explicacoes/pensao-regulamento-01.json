@@ -1,0 +1,204 @@
+{
+  "course_slug": "pensao-regulamento",
+  "law": "Decreto da Pensão Especial aos Órfãos de Vítimas de Feminicídio — lote 01",
+  "units": {
+    "art-1": {
+      "simples": "A pensão especial instituída pela Lei nº 14.717, de 31 de outubro de 2023, é a garantia de um salário mínimo mensal aos filhos e aos dependentes menores de dezoito anos na data do óbito de mulher vítima de feminicídio, cuja renda familiar mensal per capita seja igual ou inferior a 1/4 do salário mínimo. Para a pensão, considera-se família a unidade de pessoas que contribuam para o rendimento ou tenham despesas atendidas pela unidade e habitem o mesmo domicílio no requerimento; renda familiar mensal a soma dos rendimentos brutos de todos os membros; renda per capita a razão entre a renda e o total de indivíduos; dependente o enteado, a criança ou o adolescente menor de dezoito anos sob guarda ou tutela da vítima, com dependência econômica comprovada; e representante legal quem é legalmente responsável pelo órgão, com termo ou certidão judicial.",
+      "pontos": ["Pensão especial de um salário mínimo mensal.", "Beneficiários: filhos e dependentes menores de dezoito anos na data do óbito.", "Renda familiar per capita de até 1/4 do salário mínimo.", "Conceitos de família, renda, dependente e representante legal."],
+      "atencao": ["Requisito de renda: até 1/4 do salário mínimo per capita.", "Dependente exige comprovação de dependência econômica."],
+      "exemplo": "O filho de dez anos de uma mulher vítima de feminicídio, em família de baixa renda, tem direito à pensão.",
+      "prova": ["Assertiva que dispensa o limite de renda para a pensão especial erra: o limite per capita é de 1/4 do salário mínimo."],
+      "termos": [{ "termo": "Feminicídio", "significado": "Homicídio de mulher por razões da condição de sexo feminino." }],
+      "remissoes": ["Art. 121-A do Código Penal"]
+    },
+    "art-2": {
+      "simples": "A pensão especial também será devida a crianças e adolescentes órfãos que estejam sob a tutela do Estado. Nesse caso, a pensão será depositada em conta bancária destinada a essa finalidade, que só poderá ser movimentada quando a criança ou o adolescente for reintegrado em família ampliada, colocado em família substituta ou completar dezoito anos, salvo decisão judicial que autorize a movimentação.",
+      "pontos": ["Órfãos sob a tutela do Estado também têm direito.", "Depósito em conta bancária específica.", "Movimentação: reintegração em família ampliada, família substituta ou dezoito anos."],
+      "atencao": ["A conta só é movimentada nas hipóteses do parágrafo único, ou por decisão judicial."],
+      "exemplo": "A criança acolhida em abrigo recebe a pensão em conta bloqueada até ser colocada em família substituta.",
+      "prova": ["Assertiva que permite a livre movimentação imediata da conta do órfão sob tutela do Estado erra."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-3": {
+      "simples": "A pensão especial não gera direito a abono anual e não está sujeita a descontos.",
+      "pontos": ["Sem abono anual (13º).", "Não sofre descontos."],
+      "atencao": ["Sem abono anual."],
+      "exemplo": "O beneficiário recebe o valor mensal integral, mas sem décimo terceiro.",
+      "prova": ["Assertiva que prevê abono anual na pensão especial erra."],
+      "termos": [],
+      "remissoes": ["Art. 1º"]
+    },
+    "art-4": {
+      "simples": "A pensão especial não é acumulável com benefícios previdenciários recebidos do Regime Geral de Previdência Social ou dos Regimes Próprios de Previdência Social, nem com pensões ou benefícios do sistema de proteção social dos militares, ressalvado o direito de opção.",
+      "pontos": ["Vedada a acumulação com benefícios previdenciários.", "Vale para RGPS, regimes próprios e sistema dos militares.", "Direito de opção."],
+      "atencao": ["Vedada a acumulação, mas há direito de OPÇÃO."],
+      "exemplo": "O beneficiário que recebe pensão por morte do INSS deve optar por um dos benefícios.",
+      "prova": ["Assertiva que permite acumular a pensão especial com pensão por morte do INSS erra: há vedação, com direito de opção."],
+      "termos": [],
+      "remissoes": ["Art. 13"]
+    },
+    "art-5": {
+      "simples": "Cabe ao Instituto Nacional do Seguro Social (INSS) receber e processar os requerimentos e decidir quanto à concessão da pensão. O requerimento será realizado por meio dos canais de atendimento do INSS.",
+      "pontos": ["INSS recebe, processa e decide.", "Requerimento pelos canais do INSS."],
+      "atencao": ["Quem decide é o INSS."],
+      "exemplo": "O representante legal pede a pensão pelo atendimento do INSS.",
+      "prova": ["Assertiva que atribui a concessão ao Ministério da Justiça erra: é do INSS."],
+      "termos": [],
+      "remissoes": ["Art. 20"]
+    },
+    "art-6": {
+      "simples": "São requisitos para a concessão, a manutenção e a revisão da pensão a inscrição regular no CPF; a apresentação de documento oficial com foto da criança ou do adolescente ou, na impossibilidade, a certidão de nascimento; a inscrição e a atualização, a cada vinte e quatro meses, no Cadastro Único, com o CPF do requerente e de todos os membros da família; e a apresentação de um documento que relacione o fato a um feminicídio, como o auto de prisão em flagrante, o decreto de prisão preventiva, a portaria inaugural do inquérito, o relatório do inquérito, a denúncia, decisão cautelar ou de mérito ou a sentença condenatória transitada em julgado. Se for dependente, deve apresentar também o termo de guarda ou de tutela ou outro documento de dependência. As equipes socioassistenciais orientarão as famílias a atualizar o CadÚnico.",
+      "pontos": ["CPF regular.", "Documento oficial com foto ou certidão de nascimento.", "CadÚnico atualizado a cada vinte e quatro meses.", "Documento que ligue o fato ao feminicídio (sete opções).", "Dependente: termo de guarda ou tutela."],
+      "atencao": ["A comprovação do feminicídio NÃO exige sentença condenatória: vários documentos servem.", "Atualização do CadÚnico a cada vinte e quatro meses."],
+      "exemplo": "O auto de prisão em flagrante basta para relacionar o fato ao feminicídio.",
+      "prova": ["Assertiva que exige sentença transitada em julgado para conceder a pensão erra: há outros documentos válidos."],
+      "termos": [{ "termo": "CadÚnico", "significado": "Cadastro Único para Programas Sociais do Governo Federal." }],
+      "remissoes": ["Art. 7º"]
+    },
+    "art-7": {
+      "simples": "Se o INSS identificar pendências quanto aos requisitos, comunicará ao requerente para regularizar a instrução. O requerente terá noventa dias, contados do recebimento da comunicação. Esgotado o prazo sem apresentação dos documentos, o processo será decidido no mérito com base nas informações constantes e nos sistemas do INSS ou encerrado, sem análise do mérito, após o prazo.",
+      "pontos": ["INSS comunica as pendências.", "Prazo de noventa dias para regularizar.", "Depois do prazo: decisão pelo conteúdo disponível ou encerramento sem análise do mérito."],
+      "atencao": ["Prazo de noventa dias."],
+      "exemplo": "O requerente recebe a comunicação do INSS e tem noventa dias para completar os documentos.",
+      "prova": ["Assertiva que fixa em trinta dias o prazo para regularizar erra: são noventa dias."],
+      "termos": [],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-8": {
+      "simples": "Para requerer a pensão, o representante legal deverá apresentar ao INSS documento pessoal com cadastro biométrico; o CPF; documento que comprove a relação do filho ou dependente com a vítima; documento que comprove a qualidade de representante legal; e um dos documentos que relacionem o fato a um feminicídio. O representante estrangeiro residente que não tiver o documento biométrico poderá usar a Carteira de Registro Nacional Migratório. É vedada a representação pelo autor, coautor ou partícipe do crime. As crianças em serviço de acolhimento poderão ser representadas pelos dirigentes das instituições.",
+      "pontos": ["Documentos do representante legal.", "Estrangeiro: Carteira de Registro Nacional Migratório até a validação biométrica.", "Vedada a representação pelo autor, coautor ou partícipe do crime.", "Dirigente da instituição representa crianças acolhidas."],
+      "atencao": ["O autor do crime NÃO pode representar os filhos para receber a pensão."],
+      "exemplo": "A avó guardiã apresenta o termo de guarda e requer a pensão pelos netos.",
+      "prova": ["Assertiva que permite ao autor do feminicídio representar os filhos erra: é vedado."],
+      "termos": [],
+      "remissoes": ["Art. 1º, §1º, V"]
+    },
+    "art-9": {
+      "simples": "Havendo mais de um filho ou dependente da vítima, a pensão será dividida em partes iguais entre os elegíveis. Cessando o direito de uma das partes, a cota é convertida em favor dos demais. A concessão não será postergada pela falta de requerimento de outro possível beneficiário, e qualquer habilitação posterior só produz efeito a contar do requerimento.",
+      "pontos": ["Divisão em partes iguais.", "Reversão da cota aos demais quando uma parte cessa.", "Concessão não é adiada por falta de requerimento de outro beneficiário.", "Habilitação posterior vale a partir do requerimento."],
+      "atencao": ["Cota que cessa REVERTE aos demais beneficiários."],
+      "exemplo": "Com dois filhos, cada um recebe metade, e se um completa dezoito anos o outro passa a receber o total.",
+      "prova": ["Assertiva que extingue a cota do beneficiário cessante sem reversão erra: ela se converte em favor dos demais."],
+      "termos": [],
+      "remissoes": ["Art. 16"]
+    },
+    "art-10": {
+      "simples": "Não serão computados como renda familiar mensal os benefícios e auxílios assistenciais de natureza eventual e temporária; os valores de programas assistenciais de transferência de renda, com exceção do benefício de prestação continuada; e as rendas de natureza eventual ou sazonal.",
+      "pontos": ["Benefícios eventuais e temporários não contam.", "Programas de transferência de renda não contam, exceto o BPC.", "Rendas eventuais ou sazonais não contam."],
+      "atencao": ["O BPC CONTA como renda; outros programas assistenciais não."],
+      "exemplo": "O valor de um auxílio emergencial temporário não entra na renda familiar.",
+      "prova": ["Assertiva que exclui o BPC do cálculo da renda erra: ele é computado."],
+      "termos": [],
+      "remissoes": ["Art. 1º, §1º"]
+    },
+    "art-11": {
+      "simples": "Os filhos e dependentes menores de dezoito anos na data de publicação da Lei nº 14.717, de 31 de outubro de 2023, terão direito à pensão, sem efeitos financeiros retroativos, ainda que o feminicídio tenha ocorrido antes. O filho ou dependente com dezoito anos ou mais nessa data não terá direito.",
+      "pontos": ["Menores de dezoito anos na data da Lei têm direito, mesmo que o crime seja anterior.", "Sem efeitos financeiros retroativos.", "Quem já tinha dezoito anos ou mais não tem direito."],
+      "atencao": ["Sem retroativos."],
+      "exemplo": "A criança de oito anos, órfã por feminicídio ocorrido antes da Lei, tem direito à pensão sem receber valores passados.",
+      "prova": ["Assertiva que paga valores retroativos à data do crime erra."],
+      "termos": [],
+      "remissoes": ["Art. 12"]
+    },
+    "art-12": {
+      "simples": "O pagamento da pensão especial será devido a partir da data do requerimento.",
+      "pontos": ["Pagamento a partir da data do requerimento."],
+      "atencao": ["Marco: data do REQUERIMENTO."],
+      "exemplo": "O pedido feito em março gera pagamento a partir de março.",
+      "prova": ["Assertiva que fixa o pagamento desde a data do crime erra."],
+      "termos": [],
+      "remissoes": ["Art. 11"]
+    },
+    "art-13": {
+      "simples": "A pensão especial deverá ser revisada a cada dois anos para avaliação da continuidade das condições. A revisão será feita pelo INSS por cruzamento de informações em bases oficiais e observará o cadastramento no CadÚnico, a manutenção do limite de renda per capita, a inexistência de sentença transitada em julgado que desqualifique a materialidade do feminicídio e o não recebimento de benefícios cuja acumulação é vedada, ressalvado o direito de opção. Identificada desconformidade, o INSS suspenderá ou cessará a pensão, observados o contraditório e a ampla defesa.",
+      "pontos": ["Revisão a cada dois anos.", "Cruzamento de bases oficiais.", "Critérios: CadÚnico, renda, sentença sobre o feminicídio e acumulação.", "Suspensão ou cessação com contraditório e ampla defesa."],
+      "atencao": ["Revisão a cada DOIS anos."],
+      "exemplo": "A cada dois anos o INSS reavalia a renda da família e o andamento do processo.",
+      "prova": ["Assertiva que dispensa o contraditório na suspensão da pensão erra."],
+      "termos": [],
+      "remissoes": ["Art. 14"]
+    },
+    "art-14": {
+      "simples": "O pagamento da cota individual será suspenso quando o beneficiário passar mais de vinte e quatro meses sem atualizar as informações do grupo familiar no CadÚnico ou sem apresentar certidão de andamento processual atualizada do processo de feminicídio, na hipótese de não haver sentença penal condenatória transitada em julgado.",
+      "pontos": ["Suspensão após mais de vinte e quatro meses sem atualizar o CadÚnico.", "Ou sem apresentar certidão de andamento do processo."],
+      "atencao": ["Prazo de vinte e quatro meses."],
+      "exemplo": "A família que não atualiza o CadÚnico por mais de dois anos tem a cota suspensa.",
+      "prova": ["Assertiva que fixa em seis meses o prazo para a suspensão erra: são mais de vinte e quatro meses."],
+      "termos": [],
+      "remissoes": ["Art. 15"]
+    },
+    "art-15": {
+      "simples": "Cabe ao INSS notificar os beneficiários, por seus canais oficiais, sobre o prazo de noventa dias para atualizar o registro familiar no CadÚnico ou a certidão do processo judicial. Se não for possível confirmar a ciência, o INSS bloqueará o pagamento por trinta dias para induzir o beneficiário a entrar em contato. O valor será desbloqueado imediatamente se o beneficiário entrar em contato nesse período. Decorrido o prazo sem manifestação, o benefício será suspenso.",
+      "pontos": ["Notificação de noventa dias para atualização.", "Sem confirmação de ciência: bloqueio por trinta dias.", "Contato desbloqueia o valor.", "Sem manifestação: suspensão."],
+      "atencao": ["Noventa dias para atualizar e trinta dias de bloqueio."],
+      "exemplo": "Se o beneficiário não confirma a notificação, o pagamento é bloqueado por trinta dias.",
+      "prova": ["Assertiva que cancela o benefício de imediato sem notificação erra."],
+      "termos": [],
+      "remissoes": ["Art. 14", "Art. 16"]
+    },
+    "art-16": {
+      "simples": "O pagamento da cota individual cessa pela morte do filho ou dependente; quando completar dezoito anos, observada a regra da conta bancária dos órfãos sob tutela do Estado; quando for identificada a superação do limite de renda per capita durante vinte e quatro meses consecutivos; pela identificação de irregularidade na concessão ou manutenção; quando a sentença transitada em julgado não qualificar o fato como feminicídio; quando for aplicada medida socioeducativa ao beneficiário por ato infracional análogo ao feminicídio, consumado ou tentado, ressalvados os incapazes e inimputáveis; e quando as informações do CadÚnico ou a certidão do processo não forem atualizadas em até noventa dias após a suspensão. A pensão cessa imediatamente nessas hipóteses, e o beneficiário fica desobrigado de ressarcir os valores, exceto se comprovada a má-fé.",
+      "pontos": ["Sete hipóteses de cessação.", "Superação do limite de renda por vinte e quatro meses consecutivos.", "Sentença que não qualifica o fato como feminicídio.", "Medida socioeducativa por ato análogo ao feminicídio.", "Sem devolução dos valores, salvo má-fé."],
+      "atencao": ["Sem ressarcimento, exceto MÁ-FÉ."],
+      "exemplo": "Quando o beneficiário completa dezoito anos, a cota cessa.",
+      "prova": ["Assertiva que exige a devolução dos valores recebidos de boa-fé erra: só se houver má-fé."],
+      "termos": [],
+      "remissoes": ["Art. 14"]
+    },
+    "art-17": {
+      "simples": "O beneficiário que tiver sua pensão cessada poderá apresentar novo requerimento, respeitada a obrigatoriedade de reavaliação de todos os requisitos de acesso.",
+      "pontos": ["Novo requerimento permitido.", "Reavaliação de todos os requisitos."],
+      "atencao": ["Os requisitos são reavaliados por inteiro."],
+      "exemplo": "A família que perdeu a pensão por renda alta pode pedir de novo se a renda cair.",
+      "prova": ["Assertiva que proíbe novo requerimento após a cessação erra."],
+      "termos": [],
+      "remissoes": ["Art. 6º"]
+    },
+    "art-18": {
+      "simples": "Das decisões do INSS quanto à pensão especial caberá recurso ao Conselho de Recursos da Previdência Social, no prazo de trinta dias, a contar da ciência da decisão.",
+      "pontos": ["Recurso ao Conselho de Recursos da Previdência Social.", "Prazo de trinta dias da ciência da decisão."],
+      "atencao": ["Prazo de trinta dias."],
+      "exemplo": "A família recorre do indeferimento no prazo de trinta dias.",
+      "prova": ["Assertiva que fixa em dez dias o prazo do recurso erra: são trinta dias."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-19": {
+      "simples": "Compete ao Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome, no âmbito do Sistema Único de Assistência Social, monitorar, orientar e regular o referenciamento e a inclusão dos beneficiários da pensão e de suas famílias nos serviços socioassistenciais da Proteção Social Básica e da Proteção Social Especial de Média e Alta Complexidade.",
+      "pontos": ["Ministério do Desenvolvimento e Assistência Social monitora, orienta e regula.", "Inclusão dos beneficiários nos serviços socioassistenciais."],
+      "atencao": ["Atuação no âmbito do Sistema Único de Assistência Social."],
+      "exemplo": "A família beneficiária é encaminhada ao serviço socioassistencial.",
+      "prova": ["Assertiva que atribui ao INSS o referenciamento socioassistencial erra."],
+      "termos": [],
+      "remissoes": ["Art. 21"]
+    },
+    "art-20": {
+      "simples": "Compete ao INSS a operacionalização da pensão especial devida aos filhos e aos dependentes de mulheres vítimas de feminicídio.",
+      "pontos": ["INSS operacionaliza a pensão."],
+      "atencao": ["Operação pelo INSS."],
+      "exemplo": "O INSS paga a pensão aos beneficiários.",
+      "prova": ["Assertiva que atribui a operação ao Ministério da Justiça erra."],
+      "termos": [],
+      "remissoes": ["Art. 5º"]
+    },
+    "art-21": {
+      "simples": "Compete ao Ministério da Previdência Social e ao Ministério do Desenvolvimento e Assistência Social a gestão da pensão especial por meio do monitoramento da concessão e das informações sobre os beneficiários pelo CadÚnico.",
+      "pontos": ["Gestão compartilhada pelos dois Ministérios.", "Monitoramento da concessão e das informações do CadÚnico."],
+      "atencao": ["Dois Ministérios na gestão."],
+      "exemplo": "Os Ministérios acompanham a concessão pelo CadÚnico.",
+      "prova": ["Assertiva que atribui a gestão apenas ao INSS erra."],
+      "termos": [],
+      "remissoes": ["Art. 20"]
+    },
+    "art-22": {
+      "simples": "Este Decreto entra em vigor sessenta dias após a data de sua publicação.",
+      "pontos": ["Vacatio legis de sessenta dias."],
+      "atencao": ["Sessenta dias de vacatio legis."],
+      "exemplo": "O Decreto só começou a valer sessenta dias depois de publicado.",
+      "prova": ["Assertiva que prevê vigência imediata erra: são sessenta dias."],
+      "termos": [],
+      "remissoes": ["Art. 21"]
+    }
+  }
+}
