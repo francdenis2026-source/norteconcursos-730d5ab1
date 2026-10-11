@@ -2,16 +2,16 @@
 
 ## Resultado confirmado no Supabase
 
-Foram registradas **860 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
+Foram registradas **960 decisões individuais** sobre o caderno particular `1.000 QUESTÕES COMENTADAS - PF.pdf`, fornecido pelo usuário. A publicação foi confirmada por releitura das tabelas de origem, candidatos, questões e auditoria:
 
 | Situação | Quantidade |
 | --- | ---: |
-| Questões aprovadas e ativas | 455 |
-| Itens retidos para complementação | 324 |
-| Repetições internas excluídas da publicação | 24 |
+| Questões aprovadas e ativas | 498 |
+| Itens retidos para complementação | 339 |
+| Repetições internas excluídas da publicação | 29 |
 | Enunciados inadequados excluídos da publicação | 4 |
-| Candidatos ainda sem revisão individual neste caderno | 140 |
-| Gabaritos históricos superados excluídos da publicação | 53 |
+| Candidatos ainda sem revisão individual neste caderno | 40 |
+| Gabaritos históricos superados excluídos da publicação | 90 |
 | Registros privados de extração deste caderno | 1.000 |
 
 Os 1.000 registros são candidatos extraídos, não uma certificação de 1.000 questões distintas e aproveitáveis. Foram associadas respostas editoriais a 982 registros; as demais exigem conferência. A revisão das 17 apostilas está **incompleta**. Não extrapolar os números deste lote para o total do acervo.
@@ -48,14 +48,14 @@ O importador passou a aceitar o formato nativo **certo/errado**, exigindo indica
 
 - Validação offline dos pacotes e das duas etapas de revisão: concluída.
 - Testes de regressão: **86 passaram**, incluindo rejeição de respostas e alternativas incompatíveis com o formato C/E.
-- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 455 publicações; isto não certifica ausência de duplicatas semânticas.
-- Conferência de banco: 1.000 extrações privadas, 860 decisões auditadas e 455 publicações; textos, respostas originais e decisões preservados.
+- Comparação com a base local de 6.160 registros: nenhuma coincidência literal normalizada encontrada entre as 498 publicações; isto não certifica ausência de duplicatas semânticas.
+- Conferência de banco: 1.000 extrações privadas, 960 decisões auditadas e 498 publicações; textos, respostas originais e decisões preservados.
 
 Os PDFs privados, enunciados extraídos, pacotes de importação, capturas oficiais e relatórios detalhados permanecem nos outputs locais, fora do Git. Nenhuma credencial integra este commit. A biblioteca não foi ampliada a partir de trechos ainda sem catalogação e revisão concluídas.
 
 ## Trabalho restante
 
-Continuar a revisão dos 140 candidatos deste caderno e complementar os 324 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
+Continuar a revisão dos 40 candidatos deste caderno e complementar os 339 retidos. Depois, seguir com as outras 16 apostilas, conferindo classificação, contextos compartilhados, imagens, gabaritos, repetições e normas vigentes. As contagens iniciais de limites de questão do acervo não devem ser usadas como quantidade de questões prontas para os alunos.
 
 ## Cadência autorizada
 
@@ -100,3 +100,15 @@ A questão sobre contribuição sindical obrigatória foi excluída: a [orienta�
 Mais 100 decisões: 46 publicações, 11 retidos, três repetições e 40 exclusões por superação. Releitura confirmou 860 decisões e 455 questões ativas. Dois itens de produtos químicos sem resposta editorial extraída receberam respostas próprias diretamente fundamentadas no art. 1º, § 2º, da Lei 10.357/2001.
 
 Foram excluídos 39 itens da seção baseada na Lei 7.102/1983, expressamente revogada pelo [art. 70 da Lei 14.967/2024](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm). O item sobre cooperativas ficou retido para normas de transição. Também foi excluída a proibição geral antiga de policiamento ostensivo pelas guardas: o [Tema 656/STF](https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=3832832&numeroProcesso=608588&numeroTema=656) admite segurança urbana e policiamento ostensivo e comunitário nos limites da tese, sem atividade de polícia judiciária.
+
+## Checkpoint 861–960 e parada pelo limite solicitado
+
+Mais 100 decisões: 43 publicações, 15 retidos, cinco repetições e 37 exclusões por superação. Releitura final do Supabase confirmou 960 decisões auditadas, 498 questões ativas, 339 retidos, 29 duplicatas, quatro rejeitados, 90 superados e 40 candidatos ainda sem revisão individual. Textos e respostas originais e os controles de elegibilidade foram conferidos.
+
+Foi corrigido de E para C o gabarito editorial sobre o prazo de trinta dias para regularização de infrações de produtos químicos: [art. 15 da Lei 10.357/2001](https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm). A resposta original permanece na extração e na trilha de auditoria.
+
+Quinze itens do antigo Estatuto do Estrangeiro foram excluídos pela revogação da Lei 6.815/1980 no [art. 124 da Lei 13.445/2017](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm). Vinte itens do antigo regime de abuso de autoridade foram excluídos pela revogação da Lei 4.898/1965 no [art. 44 da Lei 13.869/2019](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm). Também foram excluídos o regime antigo de custódia de bens na Lei de Drogas e o prazo de seis meses para reavaliar acolhimento: o [art. 19, § 1º, do ECA](https://www.planalto.gov.br/ccivil_03/leis/l8069.htm) prevê no máximo três meses desde a Lei 13.509/2017.
+
+Itens do art. 28 da Lei de Drogas permaneceram retidos para confronto específico com o Tema 506/STF. Itens de armas permanecem retidos para correspondência curricular específica e, quando aplicável, regulamentação e julgamentos indicados na fonte. Não foram apresentados como aprovados apenas por coincidirem com o gabarito histórico.
+
+A cadência de atualização foi cumprida em oito checkpoints de 100 decisões nesta sessão, do item 161 ao 960, com atualização de banco, conferência e envio à main. A janela principal de uso atingiu 80% consumidos, deixando 20% restantes; novas revisões foram interrompidas nesse ponto e somente a publicação, conferência e envio do lote já validado foram concluídos. Revisão das outras 16 apostilas e enriquecimento da biblioteca permanecem pendentes.
