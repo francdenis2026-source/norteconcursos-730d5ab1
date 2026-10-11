@@ -366,9 +366,7 @@ function Index() {
         </div>
 
         <section id="pcac" className="lp-section lp-photo lp-pcac" aria-labelledby="pcac-title">
-          <div className="lp-photo__media" aria-hidden="true" />
-          <div className="lp-photo__shade" aria-hidden="true" />
-          <div className="lp-container">
+          <div className="lp-container lp-pcac__layout">
             <div className="lp-pcac__content" data-reveal>
               <div className="lp-pcac__emblems" aria-label="Identidade institucional do Acre">
                 <span className="lp-pcac__emblem">
@@ -408,6 +406,17 @@ function Index() {
                 institucional do Governo do Acre ou da Polícia Civil.
               </p>
             </div>
+            <figure className="lp-pcac__visual">
+              <img
+                src="/media/hero/landing-pcac.webp"
+                alt="Composição ilustrativa de profissionais da Polícia Civil do Acre"
+                width={1672}
+                height={941}
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Preparação direcionada · Polícia Civil do Acre</figcaption>
+            </figure>
           </div>
         </section>
 

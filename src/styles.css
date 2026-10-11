@@ -9369,3 +9369,140 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     white-space: nowrap;
   }
 }
+
+/* Homepage: reserve navigation space and let content determine section height. */
+.lp-header__bar,
+.lp-header[data-scrolled="true"] .lp-header__bar {
+  height: 68px;
+}
+.lp-section {
+  scroll-margin-top: 88px;
+}
+.lp-hero {
+  height: auto;
+  min-height: min(720px, 100svh);
+  max-height: none;
+  justify-content: flex-start;
+}
+.lp-hero__body {
+  flex: 1 0 auto;
+  padding-top: 112px;
+  padding-bottom: 36px;
+}
+.lp-hero__layout {
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 310px);
+  gap: 40px;
+  align-items: center;
+}
+.lp-hero__title {
+  max-width: 21ch;
+  font-size: clamp(2.5rem, 4.1vw, 3.6rem);
+  line-height: 1.04;
+}
+.lp-hero__panel {
+  transform: none;
+}
+.lp-rail {
+  position: relative;
+  inset: auto;
+  flex: 0 0 auto;
+}
+.lp-pcac {
+  background: #080e17;
+  padding-block: 48px;
+}
+.lp-pcac__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+}
+.lp-pcac__content {
+  max-width: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.lp-pcac .lp-h2 {
+  max-width: 23ch;
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  line-height: 1.08;
+}
+.lp-pcac__visual {
+  margin: 0;
+  min-width: 0;
+}
+.lp-pcac__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+  border: 1px solid #ffffff18;
+  border-radius: 16px;
+  background: #101925;
+}
+.lp-pcac__visual figcaption {
+  margin-top: 12px;
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.lp-acre__bg {
+  background:
+    linear-gradient(90deg, #080e17f2 0%, #080e17cc 48%, #080e1799 100%),
+    linear-gradient(180deg, #080e17 0%, transparent 20%, transparent 70%, #080e17 100%),
+    url('/media/acre-floresta.webp') center top / cover no-repeat;
+}
+.lp-acre__bg::before,
+.lp-acre__bg::after {
+  display: none;
+}
+.lp-acre__copy .lp-h2 {
+  max-width: 19ch;
+  font-size: clamp(2rem, 3.5vw, 3.1rem);
+  line-height: 1.08;
+}
+@media (max-width: 900px) {
+  .lp-hero__layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .lp-pcac__layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .lp-pcac__visual {
+    width: min(100%, 560px);
+  }
+}
+@media (max-width: 767px) {
+  .lp-hero {
+    min-height: 0;
+  }
+  .lp-hero__body {
+    padding-top: 96px;
+    padding-bottom: 32px;
+  }
+  .lp-hero__title {
+    max-width: 21ch;
+    font-size: clamp(2rem, 8.5vw, 3rem);
+  }
+  .lp-hero__lead {
+    display: block;
+    max-width: none;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+  }
+  .lp-pcac {
+    padding-block: 36px;
+  }
+  .lp-pcac__visual img {
+    max-height: 240px;
+  }
+  .lp-acre__bg {
+    background:
+      linear-gradient(180deg, #080e17ed 0%, #080e17b3 40%, #080e17f5 100%),
+      url('/media/acre-floresta.webp') center / cover no-repeat;
+  }
+}
