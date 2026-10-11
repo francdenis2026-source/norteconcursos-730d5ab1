@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-10-11T18:28:21.472108+00:00",
+  "expanded_paths": 4,
+  "added_cases": 24,
+  "added_flashcards": 24,
+  "added_judgment_items": 24,
+  "legal_path_totals": {
+    "cases": 234,
+    "flashcards": 718,
+    "judgment_items": 352
+  },
+  "preserved_existing_cases_and_illustrations": true,
+  "preserved_prior_deck_and_quiz_indices": true,
+  "preserved_all_42_courses": true,
+  "preserved_untargeted_materials": 148,
+  "preserved_existing_enrichment_revisions": 240
+}

@@ -1,0 +1,101 @@
+{
+  "checked_at": "2026-10-11T18:19:17.319175+00:00",
+  "rows": [
+    {
+      "law": "interceptacao",
+      "material_slug": "legislacao-interceptacao-revisao",
+      "course_id": "910f1e9d-94ca-58de-8529-c949d8b40bb9",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "source_sha256": "170f7a12e22c77ab3d28bde6034b42dfda7077438e86cb90f53e9f6129360181",
+      "cases_before": 5,
+      "cases_after": 11,
+      "flashcards_before": 16,
+      "flashcards_after": 22,
+      "quiz_before": 8,
+      "quiz_after": 14,
+      "added_cases": [
+        "int-ampl-oral",
+        "int-ampl-mp",
+        "int-ampl-autos",
+        "int-ampl-descarte",
+        "int-ampl-ambiental-limite",
+        "int-ampl-ambiental-renovacao"
+      ],
+      "scope": "Dispositivos dos novos casos; não nova auditoria integral da norma."
+    },
+    {
+      "law": "juizados",
+      "material_slug": "legislacao-juizados-revisao",
+      "course_id": "f618ae86-dbda-5d68-8f77-94650dfd76bf",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+      "source_sha256": "281fba3954d4730c7b532b95e7f23a933bf424d48f4ae957074e142eac9138b4",
+      "cases_before": 4,
+      "cases_after": 10,
+      "flashcards_before": 16,
+      "flashcards_after": 22,
+      "quiz_before": 8,
+      "quiz_after": 14,
+      "added_cases": [
+        "jui-ampl-composicao",
+        "jui-ampl-representacao",
+        "jui-ampl-transacao-efeitos",
+        "jui-ampl-citacao",
+        "jui-ampl-embargos",
+        "jui-ampl-revogacao"
+      ],
+      "scope": "Dispositivos dos novos casos; não nova auditoria integral da norma."
+    },
+    {
+      "law": "lep",
+      "material_slug": "legislacao-lep-revisao",
+      "course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "source_sha256": "c58c3858f45f499f428f61838e57d69be0b890d06c52dfcc71d6a4f77b1047fa",
+      "cases_before": 9,
+      "cases_after": 15,
+      "flashcards_before": 22,
+      "flashcards_after": 28,
+      "quiz_before": 8,
+      "quiz_after": 14,
+      "added_cases": [
+        "lep-ampl-competencia",
+        "lep-ampl-isolamento",
+        "lep-ampl-defesa",
+        "lep-ampl-saidas",
+        "lep-ampl-conclusao-estudo",
+        "lep-ampl-falta-remicao"
+      ],
+      "scope": "Dispositivos dos novos casos; não nova auditoria integral da norma."
+    },
+    {
+      "law": "codigo-processo-penal",
+      "material_slug": "processo-penal-cpp-provas-flagrante-revisao",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "2364c079adebe33e8f70271338ca3d646e122bc1db9494734a881b1c91ae73e1",
+      "cases_before": 15,
+      "cases_after": 21,
+      "flashcards_before": 35,
+      "flashcards_after": 41,
+      "quiz_before": 8,
+      "quiz_after": 14,
+      "added_cases": [
+        "cpp-ampl-decadencia",
+        "cpp-ampl-indisponibilidade",
+        "cpp-ampl-segredo",
+        "cpp-ampl-compromisso",
+        "cpp-ampl-fianca",
+        "cpp-ampl-recursos"
+      ],
+      "scope": "Dispositivos dos novos casos; não nova auditoria integral da norma."
+    }
+  ]
+}

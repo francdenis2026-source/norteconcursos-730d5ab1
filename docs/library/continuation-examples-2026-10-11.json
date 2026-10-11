@@ -1,0 +1,1307 @@
+[
+  {
+    "id": "7e9f348e-b7c3-555c-9281-2ba5920ed3ec",
+    "material_slug": "legislacao-interceptacao-revisao",
+    "version": "2026-10-11",
+    "source_body_sha256": "960d96ea2b84e5bacc75ad923744230efbc9933ff17cfd2405ff8443ec60107f",
+    "content": {
+      "cases": [
+        {
+          "id": "case-1",
+          "steps": [
+            "A lei estabelece vedações no art. 2º, incluindo a hipótese de crime punido no máximo com detenção.",
+            "A interceptação também exige os demais pressupostos e decisão judicial; ser útil não torna a medida automaticamente lícita."
+          ],
+          "title": "Autorização precisa de pressupostos",
+          "pitfall": "Usar reclusão como autorização automática ou transpor regras entre meios de obtenção de prova distintos.",
+          "articles": [
+            "Art. 1",
+            "Art. 2"
+          ],
+          "question": "O pedido satisfaz a Lei 9.296/1996?",
+          "scenario": "A investigação pretende interceptar comunicações para apurar crime punido apenas com detenção, sem outra hipótese que modifique esse recorte.",
+          "variation": {
+            "answer": "Isso afasta esse obstáculo específico, mas não prova todos os demais requisitos nem dispensa juiz.",
+            "scenario": "E se a investigação envolver crime punido com reclusão?"
+          },
+          "conclusion": "Na hipótese indicada, essa interceptação não é admitida pela lei. Não confunda interceptação com gravação feita por participante ou captação ambiental."
+        },
+        {
+          "id": "tutor-1",
+          "steps": [
+            "O art. 2º, II, não admite interceptação quando a prova puder ser feita por outros meios disponíveis.",
+            "Demonstre a necessidade, não apenas a conveniência; confira também indícios e natureza da infração."
+          ],
+          "title": "Último recurso probatório",
+          "pitfall": "Tratar autorização judicial como dispensa dos requisitos legais.",
+          "articles": [
+            "Art. 2",
+            "Art. 5"
+          ],
+          "question": "A ordem é admitida só porque facilitaria a investigação?",
+          "scenario": "A polícia pede interceptação, mas a prova pode ser obtida por meio disponível e menos invasivo.",
+          "variation": {
+            "answer": "A restrição desse inciso deixa de impedir o pedido, que continua dependente de decisão judicial fundamentada e das outras condições.",
+            "scenario": "E se não existe outro meio disponível e há os demais requisitos?"
+          },
+          "conclusion": "A facilidade operacional não dispensa os requisitos da lei."
+        },
+        {
+          "id": "int-1",
+          "steps": [
+            "O art. 1º exige ordem do juiz competente, em segredo de justiça.",
+            "O art. 2º veda a interceptação quando não há indícios razoáveis, quando a prova pode ser feita por outros meios disponíveis e quando o fato investigado é punido, no máximo, com detenção.",
+            "Aqui o crime é punido com detenção e há outros meios de prova: duas vedações do art. 2º se encontram."
+          ],
+          "title": "Interceptar para investigar crime punido só com detenção",
+          "pitfall": "Achar que basta a polícia pedir. A interceptação só é autorizada quando os requisitos do art. 2º estão atendidos.",
+          "articles": [
+            "Art. 1",
+            "Art. 2"
+          ],
+          "question": "O juiz pode autorizar a interceptação?",
+          "scenario": "A polícia suspeita que um vizinho cometeu um crime punido apenas com detenção e pede ao juiz a interceptação do telefone dele. Existem outras formas simples de provar o fato, como testemunhas.",
+          "variation": {
+            "answer": "Aí as vedações do art. 2º deixam de existir e o juiz pode autorizar, desde que o pedido demonstre a necessidade e a decisão seja fundamentada.",
+            "scenario": "E se o crime fosse punido com reclusão, houvesse indícios razoáveis e a prova não pudesse ser feita por nenhum outro meio?"
+          },
+          "conclusion": "Não. A interceptação é medida excepcional; neste caso a lei a proíbe."
+        },
+        {
+          "id": "int-2",
+          "steps": [
+            "O art. 5º diz que a decisão que autoriza a interceptação deve ser fundamentada e o prazo é de 15 dias, renovável por igual tempo uma vez comprovada a indispensabilidade do meio de prova.",
+            "Quem decide sobre o pedido é o juiz, em até 24 horas (art. 4º), e quem executa é a autoridade policial, que dá ciência ao Ministério Público (art. 6º).",
+            "Passados os 15 dias sem renovação, a autorização terminou: o prazo é do juiz, e não do delegado."
+          ],
+          "title": "Quinze dias, renovável: a escuta não pode virar eterna",
+          "pitfall": "Entender que, uma vez autorizada, a interceptação vale até o fim da investigação. O prazo é de 15 dias por decisão.",
+          "articles": [
+            "Art. 4",
+            "Art. 5",
+            "Art. 6"
+          ],
+          "question": "O delegado pode continuar a interceptação?",
+          "scenario": "O juiz autorizou a interceptação do telefone de um investigado. Depois de 40 dias, o delegado continua ouvindo as ligações sem pedir nada ao juiz.",
+          "variation": {
+            "answer": "Está correto: a lei permite a renovação, desde que fundamentada e com a indispensabilidade comprovada.",
+            "scenario": "E se o delegado pedisse a renovação no 14º dia e o juiz a concedesse por decisão fundamentada?"
+          },
+          "conclusion": "Não. Sem nova decisão judicial depois do prazo, o delegado não pode continuar. É preciso pedir a renovação e demonstrar que a medida continua indispensável."
+        },
+        {
+          "id": "int-3",
+          "steps": [
+            "O art. 10-A pune a captação ambiental feita sem autorização judicial, quando esta for exigida, com reclusão de 2 a 4 anos e multa.",
+            "O § 1º do art. 10-A diz que não há crime quando a captação é feita por um dos interlocutores. Ana participa da conversa.",
+            "Rui não participa da conversa e age sem ordem. O art. 10 também pune quem promove escuta ambiental sem autorização judicial, com a mesma pena."
+          ],
+          "title": "Gravar a própria conversa e instalar escuta na sala",
+          "pitfall": "Concluir que toda gravação sem ordem é crime. A lei trata de modo diferente quem grava a conversa de que participa e o terceiro que escuta às escondidas.",
+          "articles": [
+            "Art. 10",
+            "Art. 10-A"
+          ],
+          "question": "Ana e Rui cometem crime?",
+          "scenario": "Ana grava, pelo celular, a reunião em que o chefe a ameaça. Em outro caso, Rui instala um microfone escondido na sala de reuniões da empresa para ouvir os sócios, sem autorização de ninguém e sem ordem judicial.",
+          "variation": {
+            "answer": "Sendo interlocutor, ele se enquadra na exceção do § 1º do art. 10-A e não comete esse crime.",
+            "scenario": "E se Rui fosse um dos sócios e gravasse a própria reunião de que participa?"
+          },
+          "conclusion": "Ana não comete crime. Rui responde pelo crime de captação ou escuta ambiental sem autorização (reclusão de 2 a 4 anos e multa)."
+        },
+        {
+          "id": "int-ampl-oral",
+          "title": "Pedido verbal não autoriza escuta policial imediata",
+          "scenario": "Durante investigação criminal, o delegado apresenta ao juiz pedido verbal de interceptação. Demonstra a necessidade, os indícios e os meios a empregar, mas pretende iniciar a escuta antes da decisão.",
+          "question": "A urgência e a forma verbal autorizam o início da interceptação?",
+          "steps": [
+            "O art. 4º, §1º admite excepcionalmente pedido verbal se presentes os pressupostos legais; a concessão fica condicionada à redução a termo.",
+            "O pedido não se confunde com autorização: o art. 1º exige ordem do juiz competente. O prazo máximo para decidir o pedido é de 24 horas, não uma autorização tácita."
+          ],
+          "conclusion": "Sem ordem judicial, o simples pedido verbal não permite iniciar a interceptação.",
+          "variation": {
+            "scenario": "O juiz decide fundamentadamente e o pedido verbal é reduzido a termo. Basta a forma excepcional para invalidar a medida?",
+            "answer": "Não. A forma verbal é admitida excepcionalmente com seus requisitos; confira também pressupostos, fundamentação, execução e prazo."
+          },
+          "pitfall": "Transformar prazo para decisão em silêncio autorizador ou dispensar a redução a termo.",
+          "articles": [
+            "Art. 1",
+            "Art. 4"
+          ]
+        },
+        {
+          "id": "int-ampl-mp",
+          "title": "Quem executa a medida e quem acompanha",
+          "scenario": "Depois da autorização judicial, a equipe policial inicia os procedimentos e sustenta que só precisa avisar ao Ministério Público quando finalizar a escuta.",
+          "question": "O aviso apenas ao final cumpre o art. 6º?",
+          "steps": [
+            "Deferido o pedido, a autoridade policial conduz os procedimentos dando ciência ao Ministério Público, que pode acompanhar a realização.",
+            "Cumprida a diligência, o resultado deve ser encaminhado ao juiz com auto circunstanciado contendo resumo das operações. A comunicação inicial e o encaminhamento final têm funções diferentes."
+          ],
+          "conclusion": "O aviso apenas ao final não substitui a ciência ao MP prevista para a condução da medida.",
+          "variation": {
+            "scenario": "O MP foi cientificado, mas não acompanhou pessoalmente as operações. A lei exige sua presença em cada ato?",
+            "answer": "O art. 6º diz que o MP poderá acompanhar. Não converta essa faculdade em presença obrigatória em todas as operações; os demais deveres de documentação permanecem."
+          },
+          "pitfall": "Trocar condução policial por execução exclusiva do MP ou confundir ciência com acompanhamento obrigatório.",
+          "articles": [
+            "Art. 6"
+          ]
+        },
+        {
+          "id": "int-ampl-autos",
+          "title": "Gravações em autos apartados e com sigilo",
+          "scenario": "O servidor junta imediatamente todas as gravações telefônicas ao processo principal e libera o conteúdo para consulta irrestrita, alegando que a autorização judicial tornou as conversas públicas.",
+          "question": "A autorização elimina o sigilo das gravações?",
+          "steps": [
+            "O art. 8º prevê autos apartados, apensados ao inquérito ou processo, preservando o sigilo de diligências, gravações e transcrições.",
+            "O parágrafo único também disciplina o momento da apensação. A remissão histórica do dispositivo deve ser lida com o procedimento processual vigente, não como permissão de divulgação."
+          ],
+          "conclusion": "Autorização para colher prova não autoriza divulgação irrestrita do conteúdo.",
+          "variation": {
+            "scenario": "A defesa pede acesso ao material pertinente ao exercício de seus direitos. Sigilo significa proibição absoluta de acesso defensivo?",
+            "answer": "Não se deduz essa proibição do art. 8º. O caso distingue proteção contra divulgação e acesso processual devido; as garantias da defesa precisam ser observadas no procedimento adequado."
+          },
+          "pitfall": "Confundir sigilo perante terceiros com eliminação do direito de defesa.",
+          "articles": [
+            "Art. 8"
+          ]
+        },
+        {
+          "id": "int-ampl-descarte",
+          "title": "Quem decide inutilizar gravações sem interesse probatório",
+          "scenario": "Ao separar conversas particulares sem interesse para a prova, o investigador resolve apagar os arquivos por conta própria, sem requerimento ou decisão judicial.",
+          "question": "A irrelevância do conteúdo permite apagar as gravações unilateralmente?",
+          "steps": [
+            "O art. 9º reserva a inutilização à decisão judicial, mediante requerimento do MP ou da parte interessada, durante o inquérito, a instrução ou após ela.",
+            "O incidente será assistido pelo MP; a presença do acusado ou representante legal é facultada. Não substitua o incidente por descarte informal."
+          ],
+          "conclusion": "A inutilização deve seguir o procedimento judicial, não a decisão unilateral do investigador.",
+          "variation": {
+            "scenario": "O acusado não comparece ao incidente, embora tenha sido facultada sua presença. Sua ausência, por si só, impede a inutilização?",
+            "answer": "O parágrafo único faculta sua presença. A assistência do MP e a decisão judicial permanecem exigidas."
+          },
+          "pitfall": "Trocar presença facultativa do acusado por presença facultativa do Ministério Público.",
+          "articles": [
+            "Art. 9"
+          ]
+        },
+        {
+          "id": "int-ampl-ambiental-limite",
+          "title": "Captação ambiental: quatro anos não são mais de quatro",
+          "scenario": "Em investigação de infração com pena máxima exatamente de quatro anos, sem infração conexa e sem outro fundamento normativo, pede-se instalar dispositivo ambiental. Há indícios e o requerimento descreve o local.",
+          "question": "Esse limite de pena satisfaz o art. 8º-A, II?",
+          "steps": [
+            "Para captação ambiental, o art. 8º-A exige, entre outros requisitos, penas máximas superiores a quatro anos ou infrações penais conexas.",
+            "Quatro anos exatos não são superiores a quatro. Também é preciso que a prova não possa ser feita por meios disponíveis e igualmente eficazes; descrever o local não substitui esses requisitos."
+          ],
+          "conclusion": "Nas condições narradas, o requisito do inciso II não está preenchido.",
+          "variation": {
+            "scenario": "A pena máxima é de cinco anos. A alteração torna a autorização automática?",
+            "answer": "Não. Supera esse limite numérico, mas permanecem os demais requisitos e a decisão judicial a requerimento da polícia ou do MP."
+          },
+          "pitfall": "Aplicar à captação ambiental apenas o critério de reclusão ou detenção da interceptação telefônica.",
+          "articles": [
+            "Art. 8-A"
+          ]
+        },
+        {
+          "id": "int-ampl-ambiental-renovacao",
+          "title": "Renovação ambiental exige duas verificações",
+          "scenario": "Após quinze dias de captação ambiental, pede-se renovação apenas porque o relatório de análise ainda não terminou. Não se demonstra indispensabilidade nem atividade criminal permanente, habitual ou continuada.",
+          "question": "A pendência do relatório basta para renovar?",
+          "steps": [
+            "O art. 8º-A, §3º limita a captação a quinze dias e admite renovações judiciais por iguais períodos.",
+            "A renovação exige comprovar a indispensabilidade do meio de prova e a presença de atividade criminal permanente, habitual ou continuada. A conveniência de terminar um relatório não demonstra, sozinha, essas condições."
+          ],
+          "conclusion": "A justificativa apresentada não satisfaz os requisitos específicos da renovação ambiental.",
+          "variation": {
+            "scenario": "O requerimento demonstra ambas as condições e o juiz as examina fundamentadamente. Há renovação automática por mais quinze dias?",
+            "answer": "Não. As condições permitem a análise judicial; a nova autorização continua dependente da decisão e dos demais pressupostos."
+          },
+          "pitfall": "Tratar interceptação telefônica e captação ambiental como se tivessem regras de renovação idênticas.",
+          "articles": [
+            "Art. 8-A"
+          ]
+        }
+      ],
+      "illustrations": [
+        {
+          "kind": "flow",
+          "nodes": [
+            "Identifique os fatos e a norma",
+            "Confira sujeitos e requisitos",
+            "Compare exceções e vigência",
+            "Aplique a consequência e teste a variação"
+          ],
+          "title": "Como analisar Lei 9.296/1996 — Interceptação Telefônica",
+          "caption": "Use a sequência nos casos, depois explique por que a variação muda (ou mantém) a conclusão."
+        },
+        {
+          "kind": "flow",
+          "title": "Interceptação e captação: escolha o instrumento antes de contar o prazo",
+          "nodes": [
+            "Identifique telefone, fluxo telemático ou ambiente",
+            "Confira os requisitos específicos da medida",
+            "Obtenha decisão judicial e documente a execução",
+            "Renove apenas com os pressupostos próprios",
+            "Preserve o sigilo e submeta o descarte ao juiz"
+          ],
+          "caption": "Não transporte automaticamente limites de pena e renovação de uma medida para outra."
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "Lei 9.296/1996 — Interceptação Telefônica",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+        "sha256": "170f7a12e22c77ab3d28bde6034b42dfda7077438e86cb90f53e9f6129360181",
+        "checked_at": "2026-10-11T18:11:33.888612+00:00"
+      }
+    ],
+    "checked_at": "2026-10-11T18:19:17.319175+00:00"
+  },
+  {
+    "id": "a94ca09b-50f1-57ef-92df-35cf3dfdfa09",
+    "material_slug": "legislacao-juizados-revisao",
+    "version": "2026-10-11",
+    "source_body_sha256": "6a731ebfd4d16a5c0a2d78fd0c0927970f5a712a67cc0e8ce61c24627dc644eb",
+    "content": {
+      "cases": [
+        {
+          "id": "case-1",
+          "steps": [
+            "Menor potencial ofensivo usa contravenções e crimes com pena máxima não superior a dois anos, cumulada ou não com multa, nos termos do art. 61.",
+            "Suspensão condicional do processo tem critério de pena mínima igual ou inferior a um ano, além dos outros requisitos do art. 89."
+          ],
+          "title": "Pena máxima e institutos diferentes",
+          "pitfall": "Comparar a pena máxima quando a pergunta exige a mínima.",
+          "articles": [
+            "Art. 61",
+            "Art. 89"
+          ],
+          "question": "O critério de dois anos resolve os dois temas?",
+          "scenario": "Um delito tem pena máxima de dois anos e não há causa modificadora, concurso ou regime especial informado. Outra pergunta trata da suspensão condicional do processo.",
+          "variation": {
+            "answer": "Há regime especial de exclusão da Lei 9.099/1995 no art. 41; não aplique os números isoladamente.",
+            "scenario": "E se houver violência doméstica e familiar contra a mulher no âmbito da Lei Maria da Penha?"
+          },
+          "conclusion": "Máxima e mínima respondem a perguntas diferentes; transação penal e suspensão do processo não são o mesmo instituto."
+        },
+        {
+          "id": "tutor-1",
+          "steps": [
+            "O art. 61 define infrações de menor potencial ofensivo; o art. 89 usa pena mínima igual ou inferior a um ano e outros requisitos.",
+            "Identifique instituto e espécie de pena considerada antes de comparar números."
+          ],
+          "title": "Transação e suspensão do processo",
+          "pitfall": "Misturar transação penal e suspensão condicional do processo.",
+          "articles": [
+            "Art. 61",
+            "Art. 89"
+          ],
+          "question": "O mesmo parâmetro serve aos dois institutos?",
+          "scenario": "Uma questão usa o limite de pena máxima de dois anos para definir suspensão condicional do processo.",
+          "variation": {
+            "answer": "Não é automaticamente de menor potencial ofensivo; pode exigir análise da suspensão segundo o art. 89, com todos os seus requisitos.",
+            "scenario": "E se o crime tem mínima de um ano e máxima superior a dois?"
+          },
+          "conclusion": "Não. Pena máxima e mínima cumprem funções diferentes nesses dispositivos."
+        },
+        {
+          "id": "jui-1",
+          "steps": [
+            "O art. 61 define infração de menor potencial ofensivo como as contravenções e os crimes com pena máxima não superior a 2 anos, cumulada ou não com multa.",
+            "O art. 76 permite ao MP propor pena restritiva de direitos ou multa antes da denúncia. A transação não gera reincidência.",
+            "Não cabe se o autor foi condenado por pena privativa de liberdade ou beneficiado com a medida nos 5 anos anteriores."
+          ],
+          "title": "Transação penal depois de benefício recente",
+          "pitfall": "Achar que o limite de 1 ano da regra antiga continua valendo. Desde a Lei 11.313/2006, o limite é de 2 anos.",
+          "articles": [
+            "Art. 61",
+            "Art. 76"
+          ],
+          "question": "O Ministério Público pode propor nova transação?",
+          "scenario": "Marcos responde por infração de menor potencial ofensivo (pena máxima de 1 ano). Há 3 anos, ele foi beneficiado com transação penal em outro caso.",
+          "variation": {
+            "answer": "Passado o prazo de 5 anos, o impedimento deixa de existir, e a transação pode ser proposta se os demais requisitos estiverem presentes.",
+            "scenario": "E se o benefício anterior tivesse ocorrido há 6 anos?"
+          },
+          "conclusion": "Não. O benefício anterior, dentro de 5 anos, impede nova transação."
+        },
+        {
+          "id": "jui-2",
+          "steps": [
+            "O art. 89 da Lei 9.099 permite a suspensão condicional do processo, por 2 a 4 anos, em crimes com pena mínima igual ou inferior a 1 ano, com condições.",
+            "O ANPP, previsto no art. 28-A do CPP, abrange crimes sem violência ou grave ameaça com pena mínima inferior a 4 anos, com outros requisitos.",
+            "Ana pode ter examinada a suspensão; Bia, o ANPP, observados todos os requisitos, causas modificadoras da pena e impedimentos. A pena mínima, sozinha, não determina concessão nem exclui todos os demais institutos."
+          ],
+          "title": "Suspensão do processo ou ANPP?",
+          "pitfall": "Pensar que o ANPP revogou o art. 89. A suspensão do processo continua em vigor.",
+          "articles": [
+            "Art. 89"
+          ],
+          "question": "Qual instituto cabe a cada uma?",
+          "scenario": "Duas pessoas respondem por crimes sem violência ou grave ameaça. O crime de Ana tem pena mínima de 1 ano. O de Bia tem pena mínima de 2 anos.",
+          "variation": {
+            "answer": "O ANPP exige que não haja violência ou grave ameaça. Não caberia.",
+            "scenario": "E se o crime de Bia tivesse sido cometido com violência?"
+          },
+          "conclusion": "Compare os requisitos: art. 89 para pena mínima igual ou inferior a 1 ano; art. 28-A para inferior a 4, sem violência/grave ameaça e demais condições. Não é uma escolha automática apenas entre dois números."
+        },
+        {
+          "id": "jui-ampl-composicao",
+          "title": "Acordo civil e natureza da ação penal",
+          "scenario": "Em infração submetida ao Juizado, de ação pública condicionada à representação e fora de violência doméstica contra a mulher, autor e vítima celebram composição de danos homologada judicialmente.",
+          "question": "Qual efeito o acordo homologado tem sobre a representação?",
+          "steps": [
+            "O art. 74 atribui ao acordo escrito e homologado eficácia de título executável no juízo civil competente.",
+            "Em ação privada ou pública condicionada, o parágrafo único prevê renúncia ao direito de queixa ou representação. Primeiro identifique a natureza da ação."
+          ],
+          "conclusion": "Na hipótese narrada, a composição homologada acarreta renúncia ao direito de representação.",
+          "variation": {
+            "scenario": "A ação penal é pública incondicionada. O acordo civil produz automaticamente o mesmo efeito extintivo?",
+            "answer": "Não. A regra de renúncia do parágrafo único é específica para queixa ou representação; não transporte esse efeito à ação pública incondicionada."
+          },
+          "pitfall": "Afirmar que qualquer pagamento ou acordo particular extingue qualquer ação penal.",
+          "articles": [
+            "Art. 74"
+          ]
+        },
+        {
+          "id": "jui-ampl-representacao",
+          "title": "Sair da audiência sem representar não encerra o direito",
+          "scenario": "Sem composição de danos na audiência preliminar, a vítima de infração sujeita à representação prefere refletir antes de manifestar vontade. O prazo legal ainda não terminou.",
+          "question": "A falta de representação naquela audiência provoca decadência imediata?",
+          "steps": [
+            "O art. 75 prevê oportunidade de representação verbal, reduzida a termo, quando não obtida a composição.",
+            "Seu parágrafo único esclarece que não representar na audiência não implica decadência: o direito pode ser exercido no prazo legal. O prazo e seu marco inicial devem ser verificados na legislação aplicável."
+          ],
+          "conclusion": "A audiência não cria um prazo decadencial que termina ao sair da sala.",
+          "variation": {
+            "scenario": "O prazo legal efetivamente se encerra sem manifestação. A regra do art. 75 conserva o direito indefinidamente?",
+            "answer": "Não. O artigo preserva a possibilidade de exercício dentro do prazo legal; não elimina a decadência."
+          },
+          "pitfall": "Confundir oportunidade de representar imediatamente com obrigação de fazê-lo naquele ato.",
+          "articles": [
+            "Art. 75"
+          ]
+        },
+        {
+          "id": "jui-ampl-transacao-efeitos",
+          "title": "Transação não é condenação geradora de reincidência",
+          "scenario": "Autor do fato e defensor aceitam a proposta do MP, homologada judicialmente. Mais tarde, o registro da transação é usado como se fosse condenação criminal para declarar reincidência.",
+          "question": "A transação produz esse efeito?",
+          "steps": [
+            "O art. 76, §4º estabelece que a aplicação da pena restritiva ou multa não importa reincidência e fica registrada para impedir novo benefício em cinco anos.",
+            "O §6º afasta efeitos civis e o registro em certidão de antecedentes, ressalvado o fim previsto no §4º. As pretensões civis seguem a ação cabível."
+          ],
+          "conclusion": "O registro não autoriza tratar a transação como condenação geradora de reincidência.",
+          "variation": {
+            "scenario": "O beneficiário pede nova transação dois anos depois. A ausência de reincidência elimina o impedimento?",
+            "answer": "Não. Ausência de reincidência e impedimento de novo benefício em cinco anos são efeitos distintos previstos na própria lei."
+          },
+          "pitfall": "Deduzir ausência de qualquer registro ou de qualquer consequência porque não há reincidência.",
+          "articles": [
+            "Art. 76"
+          ]
+        },
+        {
+          "id": "jui-ampl-citacao",
+          "title": "Acusado não localizado: destino das peças",
+          "scenario": "Após diligências, o acusado não é encontrado para citação pessoal no Juizado Especial Criminal. Propõe-se manter ali o procedimento e realizar citação por edital.",
+          "question": "Qual providência o art. 66 determina?",
+          "steps": [
+            "A citação criminal prevista no art. 66 é pessoal, no Juizado quando possível, ou por mandado.",
+            "Não encontrado o acusado para ser citado, o juiz encaminha as peças existentes ao juízo comum para o procedimento legal. Não confunda citação com os meios mais flexíveis de intimação do art. 67."
+          ],
+          "conclusion": "A lei determina o encaminhamento ao juízo comum; não institui citação por edital dentro desse rito criminal.",
+          "variation": {
+            "scenario": "O acusado é localizado para citação por mandado. É preciso encaminhar as peças apenas porque a citação não ocorreu na sede do Juizado?",
+            "answer": "Não. O art. 66 admite mandado; o encaminhamento do parágrafo único está relacionado ao acusado não encontrado."
+          },
+          "pitfall": "Usar as regras de intimação como se fossem regras de citação.",
+          "articles": [
+            "Art. 66",
+            "Art. 67"
+          ]
+        },
+        {
+          "id": "jui-ampl-embargos",
+          "title": "Embargos interrompem: não basta guardar o saldo",
+          "scenario": "Em sentença do Juizado Criminal, a defesa identifica omissão e apresenta embargos de declaração tempestivos. Calcula a apelação apenas com o saldo que restava antes dos embargos.",
+          "question": "O art. 83 prevê suspensão ou interrupção do prazo recursal?",
+          "steps": [
+            "O art. 83 admite embargos por obscuridade, contradição ou omissão; o prazo de oposição é de cinco dias, por escrito ou oralmente.",
+            "O §2º, alterado pela Lei 13.105/2015, prevê interrupção do prazo para recurso. Interrupção não é mera conservação do saldo anterior; confira a intimação da decisão e as regras aplicáveis ao novo prazo."
+          ],
+          "conclusion": "A premissa de simples suspensão está incorreta: a redação vigente prevê interrupção.",
+          "variation": {
+            "scenario": "Uma apostila anterior a 2015 afirma que os embargos suspendem o prazo. Essa redação deve ser memorizada como atual?",
+            "answer": "Não. Ela aparece como redação histórica riscada no texto compilado; a regra vigente usa interrupção."
+          },
+          "pitfall": "Estudar o texto revogado que aparece ao lado da redação atual no Planalto.",
+          "articles": [
+            "Art. 82",
+            "Art. 83"
+          ]
+        },
+        {
+          "id": "jui-ampl-revogacao",
+          "title": "Revogação obrigatória e facultativa não são iguais",
+          "scenario": "Durante o período de suspensão condicional do processo, o beneficiário passa a responder a processo por outra contravenção. O examinador afirma que o art. 89 exige revogação obrigatória por esse único motivo.",
+          "question": "Qual diferença a lei faz entre novo crime e contravenção?",
+          "steps": [
+            "O §3º determina revogação se o beneficiário vier a ser processado por outro crime, ou deixar de reparar o dano sem justificativa.",
+            "O §4º permite revogação se vier a ser processado por contravenção ou descumprir outra condição. A hipótese narrada é facultativa, sujeita à decisão fundamentada."
+          ],
+          "conclusion": "Processo por contravenção não deve ser tratado como a hipótese obrigatória de outro crime.",
+          "variation": {
+            "scenario": "O novo processo é por crime, durante o prazo de suspensão. Basta chamá-lo de infração para aplicar o §4º?",
+            "answer": "Não. A lei diferencia crime e contravenção; o novo crime corresponde ao §3º, observadas as condições do dispositivo e a decisão judicial."
+          },
+          "pitfall": "Trocar 'será revogada' por 'poderá ser revogada' e misturar os respectivos pressupostos.",
+          "articles": [
+            "Art. 89"
+          ]
+        }
+      ],
+      "illustrations": [
+        {
+          "kind": "flow",
+          "nodes": [
+            "Identifique os fatos e a norma",
+            "Confira sujeitos e requisitos",
+            "Compare exceções e vigência",
+            "Aplique a consequência e teste a variação"
+          ],
+          "title": "Como analisar Lei 9.099/1995 — Juizados Especiais Cíveis e Criminais",
+          "caption": "Use a sequência nos casos, depois explique por que a variação muda (ou mantém) a conclusão."
+        },
+        {
+          "kind": "flow",
+          "title": "No Juizado, identifique o instituto e seu efeito",
+          "nodes": [
+            "Confira competência e exclusões legais",
+            "Identifique ação privada, condicionada ou incondicionada",
+            "Separe composição, transação e suspensão do processo",
+            "Confira efeitos, impedimentos e prazo próprio",
+            "Compare a hipótese de revogação ou de recurso"
+          ],
+          "caption": "Pena máxima, pena mínima e natureza da ação respondem a perguntas diferentes."
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "Lei 9.099/1995 — Juizados Especiais Cíveis e Criminais",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+        "sha256": "281fba3954d4730c7b532b95e7f23a933bf424d48f4ae957074e142eac9138b4",
+        "checked_at": "2026-10-11T18:11:35.315832+00:00"
+      }
+    ],
+    "checked_at": "2026-10-11T18:19:17.319175+00:00"
+  },
+  {
+    "id": "9de29c2e-51ae-5549-9b92-269f708dc182",
+    "material_slug": "legislacao-lep-revisao",
+    "version": "2026-10-11",
+    "source_body_sha256": "5f504cb85d593a1885af511b285a2ccfc58eab980568703ab1c6a083bc2ed267",
+    "content": {
+      "cases": [
+        {
+          "id": "case-1",
+          "steps": [
+            "O art. 126 prevê um dia de pena para cada três dias de trabalho.",
+            "18 ÷ 3 = seis dias, observados reconhecimento e controle legais."
+          ],
+          "title": "Remição por trabalho exige proporção",
+          "pitfall": "Confundir um dia de trabalho com um dia de pena ou remição com indulto.",
+          "articles": [
+            "Art. 126",
+            "Art. 127"
+          ],
+          "question": "Quantos dias de pena podem ser remidos pelo trabalho?",
+          "scenario": "Uma pessoa condenada trabalha regularmente por 18 dias, com condições e comprovação exigidas pela LEP. Não há perda de dias remidos no exercício.",
+          "variation": {
+            "answer": "Não aplique a regra do trabalho nem ignore a distribuição mínima prevista para estudo; são requisitos diferentes.",
+            "scenario": "E se forem 18 horas de estudo distribuídas em apenas um dia?"
+          },
+          "conclusion": "No exercício, são seis dias remidos pelo trabalho; não é progressão automática de regime."
+        },
+        {
+          "id": "case-2",
+          "steps": [
+            "A regra é um dia de pena a cada 12 horas de frequência escolar, divididas no mínimo em três dias.",
+            "Os dados preenchem horas e distribuição mínima; é necessário reconhecimento nos termos legais."
+          ],
+          "title": "Remição por estudo tem horas e distribuição",
+          "pitfall": "Dividir qualquer quantidade de horas por 12 sem verificar distribuição e atividade admitida.",
+          "articles": [
+            "Art. 126"
+          ],
+          "question": "Quantos dias de pena o exemplo permite remir por estudo?",
+          "scenario": "Uma pessoa condenada estuda 12 horas, distribuídas em três dias, com atividade e comprovação admitidas na LEP.",
+          "variation": {
+            "answer": "O exemplo não satisfaz a distribuição mínima informada; horas totais sozinhas não bastam.",
+            "scenario": "E se as mesmas 12 horas forem concentradas em só dois dias?"
+          },
+          "conclusion": "Um dia no recorte. Não use a razão de um dia para três dias de trabalho nessa conta."
+        },
+        {
+          "id": "tutor-1",
+          "steps": [
+            "O art. 126, § 1º, II, prevê um dia de pena para cada três dias de trabalho.",
+            "Divida os nove dias computáveis por três; não confunda trabalho com a regra de estudo."
+          ],
+          "title": "Remição pelo trabalho",
+          "pitfall": "Usar a fórmula de horas de estudo no trabalho.",
+          "articles": [
+            "Art. 126"
+          ],
+          "question": "Qual cálculo inicial aplicar?",
+          "scenario": "Pessoa privada de liberdade cumpre nove dias de trabalho juridicamente computáveis para remição.",
+          "variation": {
+            "answer": "O inciso I usa um dia a cada doze horas de frequência escolar, divididas em no mínimo três dias; confira a comprovação e demais requisitos.",
+            "scenario": "E se a hipótese é estudo?"
+          },
+          "conclusion": "O resultado é três dias de remição, sujeito à apuração e decisão competentes."
+        },
+        {
+          "id": "lep-1",
+          "steps": [
+            "O art. 41, X, garante ao preso a visita do cônjuge, da companheira, de parentes e de amigos em dias determinados.",
+            "O § 1º (incluído pela Lei 14.994/2024) diz que os direitos dos incisos V, X e XV só podem ser suspensos ou restringidos por ato motivado do juiz da execução.",
+            "Antes, bastava ato do diretor do estabelecimento. A mudança reforça o controle judicial."
+          ],
+          "title": "O diretor pode suspender a visita?",
+          "pitfall": "Achar que o diretor continua podendo suspender a visita. Desde 2024, é preciso ato motivado do juiz.",
+          "articles": [
+            "Art. 41"
+          ],
+          "question": "O diretor pode fazer isso?",
+          "scenario": "Um diretor de presídio suspende, por conta própria e sem avisar o juiz, a visita do cônjuge de um preso, como castigo.",
+          "variation": {
+            "answer": "O § 1º cita os incisos V, X e XV; para os demais direitos, vale o que a lei dispuser. Confira a redação.",
+            "scenario": "E se a restrição fosse de outro direito, como a alimentação?"
+          },
+          "conclusion": "Não. Só o juiz da execução, por ato motivado, pode suspender ou restringir a visita."
+        },
+        {
+          "id": "lep-2",
+          "steps": [
+            "O art. 41, X, assegura a visita do cônjuge, companheira, parentes e amigos.",
+            "O § 2º (incluído pela Lei 14.994/2024) diz que o preso condenado por feminicídio não poderá usufruir do direito à visita íntima ou conjugal.",
+            "O pedido esbarra diretamente nessa vedação."
+          ],
+          "title": "Visita íntima para condenado por feminicídio",
+          "pitfall": "Achar que a vedação alcança todos os condenados por crimes violentos. Ela é específica para o feminicídio.",
+          "articles": [
+            "Art. 41"
+          ],
+          "question": "O pedido deve ser aceito?",
+          "scenario": "Um preso condenado por feminicídio pede à direção a visita íntima da companheira, alegando que é um direito do preso.",
+          "variation": {
+            "answer": "A vedação do § 2º é só para o condenado por feminicídio; nas demais condenações, a visita segue as regras gerais.",
+            "scenario": "E se ele fosse condenado por furto?"
+          },
+          "conclusion": "Não. A lei veda a visita íntima ao condenado por feminicídio."
+        },
+        {
+          "id": "lep-completion-finalidade",
+          "steps": [
+            "Arts. 1º e 3º combinam efetivação da sentença, integração social e preservação dos direitos não atingidos por sentença ou lei.",
+            "A restrição precisa de fundamento; não nasce de uma perda genérica de cidadania."
+          ],
+          "title": "Direitos preservados na execução",
+          "pitfall": "Confundir custódia com supressão integral de direitos.",
+          "articles": [
+            "Art. 1",
+            "Art. 3"
+          ],
+          "question": "Como responder pela LEP?",
+          "scenario": "Uma unidade prisional afirma que a condenação elimina todos os direitos pessoais.",
+          "variation": {
+            "answer": "Examine seu alcance e controle, sem tratar todos os direitos como absolutos.",
+            "scenario": "Uma restrição está expressamente prevista em lei."
+          },
+          "conclusion": "Condenação não elimina indiscriminadamente os direitos."
+        },
+        {
+          "id": "lep-completion-remicao",
+          "steps": [
+            "Art. 126: um dia por três dias de trabalho; um por 12 horas de frequência divididas no mínimo em três dias; cumulação requer compatibilidade.",
+            "Trabalho: 6/3=2 dias. Estudo: 24/12=2 dias, com distribuição e certificação demonstradas."
+          ],
+          "title": "Trabalho e estudo usam contas distintas",
+          "pitfall": "Contar horas sem examinar dias, certificação e compatibilidade.",
+          "articles": [
+            "Art. 126"
+          ],
+          "question": "Como calcular as bases de remição?",
+          "scenario": "Apenado trabalha seis dias e estuda 24 horas certificadas distribuídas em seis dias, em horários compatíveis.",
+          "variation": {
+            "answer": "Não transponha a divisão aritmética: falta distribuição mínima legal; confira apuração e documentação.",
+            "scenario": "As 24 horas de estudo estão concentradas em um único dia."
+          },
+          "conclusion": "Base de quatro dias no exemplo, sujeita à declaração pelo juiz e aos requisitos legais."
+        },
+        {
+          "id": "lep-completion-rdd",
+          "steps": [
+            "Art. 52 disciplina pressupostos e condições próprios do RDD; fechado é regime de cumprimento da pena.",
+            "Estar no fechado não demonstra, sozinho, hipótese do art. 52."
+          ],
+          "title": "RDD não se confunde com regime fechado",
+          "pitfall": "Confundir regime disciplinar, regime de pena e custódia federal.",
+          "articles": [
+            "Art. 52"
+          ],
+          "question": "A equivalência é correta?",
+          "scenario": "Candidato equipara recolhimento no regime fechado com submissão automática ao regime disciplinar diferenciado.",
+          "variation": {
+            "answer": "Examine alto risco ou fundadas suspeitas legalmente descritas e o procedimento decisório; não reduza todas as hipóteses a falta grave.",
+            "scenario": "Há hipótese do § 1º independentemente de falta grave."
+          },
+          "conclusion": "Não trate todo preso fechado como submetido a RDD."
+        },
+        {
+          "id": "lep-completion-progressao",
+          "steps": [
+            "Art. 112 exige requisitos objetivos e subjetivos, vedações específicas e decisão motivada com manifestação do MP e defensor.",
+            "Considere lei aplicável à data do fato, reincidência, resultado e hipóteses especiais antes do cálculo."
+          ],
+          "title": "Fração não é alvará automático",
+          "pitfall": "Aplicar a tabela atual indistintamente a fatos antigos.",
+          "articles": [
+            "Art. 112"
+          ],
+          "question": "O relógio resolve tudo?",
+          "scenario": "Condenado atinge percentual temporal e pede transferência imediata sem análise dos demais requisitos.",
+          "variation": {
+            "answer": "Não aplique retroativamente regra penal mais gravosa; identifique o regime temporal pertinente.",
+            "scenario": "A nova lei aumentou o percentual depois do fato."
+          },
+          "conclusion": "Tempo suficiente não dispensa a decisão e os demais requisitos."
+        },
+        {
+          "id": "lep-ampl-competencia",
+          "title": "Diretor aplica isolamento; RDD depende do juiz",
+          "scenario": "Após procedimento com defesa, o diretor aplica isolamento disciplinar motivado. Em outro caso, determina sozinho a inclusão de um preso no RDD, afirmando ter a mesma competência para ambas as medidas.",
+          "question": "As duas decisões têm a mesma autoridade competente?",
+          "steps": [
+            "O art. 54 reserva ao diretor, por ato motivado, as sanções dos incisos I a IV do art. 53. A inclusão no RDD, inciso V, depende de despacho judicial fundamentado.",
+            "Na redação da Lei 15.407/2026, o juiz decide liminarmente e profere decisão final em até quinze dias após manifestação do MP e da defesa. A ausência de manifestação não impede decidir, respeitado o prazo; isso não transfere competência ao diretor."
+          ],
+          "conclusion": "O diretor não pode impor sozinho o RDD; a competência para isolamento comum não equivale à competência para RDD.",
+          "variation": {
+            "scenario": "O diretor apresenta requerimento circunstanciado de RDD desde o recolhimento, estando presentes seus pressupostos. O pedido é vedado por ser cedo?",
+            "answer": "Não. O art. 52, §10 admite solicitar ao juiz desde o recolhimento. Pedido e decisão são atos diferentes; devem existir os pressupostos legais."
+          },
+          "pitfall": "Confundir requerimento administrativo, decisão liminar judicial e decisão final, ou memorizar apenas a redação anterior a 2026.",
+          "articles": [
+            "Art. 52",
+            "Art. 53",
+            "Art. 54"
+          ]
+        },
+        {
+          "id": "lep-ampl-isolamento",
+          "title": "Isolamento preventivo também entra na conta",
+          "scenario": "No interesse da disciplina e da averiguação, o preso permanece oito dias em isolamento preventivo. Depois se fixa sanção disciplinar de vinte dias de isolamento, e a administração pretende executar vinte dias adicionais.",
+          "question": "Os oito dias preventivos devem ser descontados da sanção?",
+          "steps": [
+            "O art. 60 permite isolamento preventivo administrativo de até dez dias e manda computar esse período no cumprimento da sanção disciplinar.",
+            "Assim, se a sanção total de vinte dias foi validamente fixada, restam doze, não vinte adicionais. O art. 58 limita o isolamento comum a trinta dias e determina comunicação ao juiz; RDD tem disciplina distinta."
+          ],
+          "conclusion": "A conta do caso é 20 − 8 = 12 dias restantes, preservados os demais requisitos do procedimento.",
+          "variation": {
+            "scenario": "A autoridade pretende fixar quinze dias de isolamento apenas preventivo. Estar abaixo do limite comum de trinta dias basta?",
+            "answer": "Não. O isolamento preventivo tem teto próprio de dez dias no art. 60; não use o limite da sanção final para ampliar a medida preventiva."
+          },
+          "pitfall": "Somar períodos que a lei manda computar ou transportar o prazo do RDD ao isolamento comum.",
+          "articles": [
+            "Art. 58",
+            "Art. 60"
+          ]
+        },
+        {
+          "id": "lep-ampl-defesa",
+          "title": "A punição não dispensa procedimento e motivação",
+          "scenario": "Um agente relata possível falta disciplinar. O diretor aplica sanção imediatamente, sem instaurar procedimento e sem permitir defesa, registrando apenas 'punido conforme relato'.",
+          "question": "O relato torna dispensável o procedimento disciplinar?",
+          "steps": [
+            "O art. 59 exige procedimento para apurar a falta conforme regulamento e assegura direito de defesa.",
+            "A decisão deve ser motivada. O art. 57 exige examinar natureza, motivos, circunstâncias, consequências, pessoa e tempo de prisão; repetir uma conclusão sem análise não atende ao modelo legal."
+          ],
+          "conclusion": "A apuração e a defesa não são substituídas pelo relato do agente; a sanção exige decisão motivada.",
+          "variation": {
+            "scenario": "Há necessidade de isolamento preventivo enquanto os fatos são apurados. Isso dispensa defesa para a sanção definitiva?",
+            "answer": "Não. A medida preventiva tem pressupostos e limites próprios no art. 60; o procedimento e a defesa permanecem exigidos para a punição."
+          },
+          "pitfall": "Tratar medida cautelar disciplinar como prova de culpa ou como substituto da apuração.",
+          "articles": [
+            "Art. 57",
+            "Art. 59",
+            "Art. 60"
+          ]
+        },
+        {
+          "id": "lep-ampl-saidas",
+          "title": "Permissão com escolta não é saída temporária",
+          "scenario": "Preso provisório pede para comparecer ao funeral de sua mãe. O servidor nega qualquer análise porque afirma que toda saída é reservada a condenados do semiaberto.",
+          "question": "Qual modalidade a LEP prevê para esse fato?",
+          "steps": [
+            "O art. 120 admite permissão com escolta para condenados no fechado ou semiaberto e presos provisórios nas hipóteses enumeradas, entre elas falecimento de ascendente.",
+            "A permissão é concedida pelo diretor e dura o necessário à finalidade (art. 121). Saída temporária do art. 122 é instituto diferente, sem vigilância direta, sujeito a seus requisitos e às alterações de 2024."
+          ],
+          "conclusion": "O pedido deve ser examinado como permissão com escolta, não recusado por confusão com saída temporária.",
+          "variation": {
+            "scenario": "Condenado do semiaberto pede saída sem escolta apenas para visita familiar, sob a legislação atual e sem questão intertemporal. O funeral autoriza generalizar essa hipótese?",
+            "answer": "Não. A Lei 14.843/2024 revogou a visita familiar do art. 122, I. Não confunda permissão do art. 120 com a antiga saída temporária; fatos anteriores exigem análise temporal própria."
+          },
+          "pitfall": "Chamar toda saída de 'saidinha' e misturar sujeitos, finalidade, autoridade competente e vigilância.",
+          "articles": [
+            "Art. 120",
+            "Art. 121",
+            "Art. 122"
+          ]
+        },
+        {
+          "id": "lep-ampl-conclusao-estudo",
+          "title": "Conclusão certificada amplia remição por estudo",
+          "scenario": "O juiz reconhece trinta dias de remição por horas de estudo regularmente certificadas. Durante a execução, o condenado também conclui o ensino médio, com certificação pelo órgão competente.",
+          "question": "Como funciona o acréscimo do art. 126, §5º sobre esses dias de estudo?",
+          "steps": [
+            "O §5º acresce um terço ao tempo a remir em função das horas de estudo quando há conclusão do ensino fundamental, médio ou superior durante o cumprimento da pena, devidamente certificada.",
+            "No caso, um terço de trinta é dez: o resultado é quarenta dias. O acréscimo se refere à remição por estudo; não aumenta indistintamente dias obtidos por trabalho."
+          ],
+          "conclusion": "Com as condições narradas, 30 + 10 = 40 dias de remição por estudo, a serem reconhecidos pelo juiz da execução.",
+          "variation": {
+            "scenario": "Há trinta dias de remição exclusivamente por trabalho, sem horas de estudo reconhecidas. A conclusão escolar permite acrescentar um terço a esses dias?",
+            "answer": "Não por essa regra: o §5º se refere ao tempo a remir em função das horas de estudo. Identifique a origem dos dias antes de calcular."
+          },
+          "pitfall": "Aplicar o bônus a todo o tempo remido ou dispensar a certificação e a conclusão durante a pena.",
+          "articles": [
+            "Art. 126"
+          ]
+        },
+        {
+          "id": "lep-ampl-falta-remicao",
+          "title": "Falta grave não apaga automaticamente toda a remição",
+          "scenario": "Condenado tem sessenta dias remidos. Após falta grave regularmente apurada, o juiz analisa a perda desses dias. A administração sustenta que todos os sessenta devem desaparecer automaticamente.",
+          "question": "Qual limite o art. 127 prevê?",
+          "steps": [
+            "O art. 127 permite ao juiz revogar até um terço do tempo remido, observando os critérios do art. 57.",
+            "Um terço de sessenta corresponde a vinte: é o teto do caso, não perda mínima ou automática. A nova contagem recomeça da data da infração disciplinar."
+          ],
+          "conclusion": "O teto é vinte dias; a perda concreta depende da decisão judicial e dos critérios legais, não do apagamento administrativo de todos os sessenta.",
+          "variation": {
+            "scenario": "O juiz fixa perda fundamentada de dez dias. A expressão 'até um terço' obriga aumentar para vinte?",
+            "answer": "Não. Ela estabelece limite máximo, permitindo quantificação inferior quando adequada e motivada."
+          },
+          "pitfall": "Estudar a antiga redação de perda integral como se ainda fosse atual ou transformar teto em valor obrigatório.",
+          "articles": [
+            "Art. 57",
+            "Art. 127"
+          ]
+        }
+      ],
+      "illustrations": [
+        {
+          "kind": "flow",
+          "nodes": [
+            "Identifique os fatos e a norma",
+            "Confira sujeitos e requisitos",
+            "Compare exceções e vigência",
+            "Aplique a consequência e teste a variação"
+          ],
+          "title": "Como analisar Lei 7.210/1984 — Lei de Execução Penal",
+          "caption": "Use a sequência nos casos, depois explique por que a variação muda (ou mantém) a conclusão."
+        },
+        {
+          "kind": "flow",
+          "title": "Execução penal: reconheça o instituto antes de aplicar a consequência",
+          "nodes": [
+            "Identifique sanção, saída ou remição",
+            "Confira regime, sujeito e autoridade competente",
+            "Assegure procedimento, defesa e motivação",
+            "Calcule limites e descontos do instituto correto",
+            "Confira atualização e aplicação temporal"
+          ],
+          "caption": "Dez dias preventivos, trinta de isolamento comum e RDD pertencem a regras distintas."
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "Lei 7.210/1984 — Lei de Execução Penal",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "sha256": "c58c3858f45f499f428f61838e57d69be0b890d06c52dfcc71d6a4f77b1047fa",
+        "checked_at": "2026-10-11T18:11:36.112350+00:00"
+      }
+    ],
+    "checked_at": "2026-10-11T18:19:17.319175+00:00"
+  },
+  {
+    "id": "76867660-0461-5e92-8923-eb112287642e",
+    "material_slug": "processo-penal-cpp-provas-flagrante-revisao",
+    "version": "2026-10-11",
+    "source_body_sha256": "0625da494d5f1a96d1268b39dd942a59b12130a8754880b60dbf9049a121a5da",
+    "content": {
+      "cases": [
+        {
+          "id": "tutor-1",
+          "steps": [
+            "O art. 155 veda fundamentar exclusivamente em elementos informativos, ressalvando provas cautelares, não repetíveis e antecipadas.",
+            "Confira se há prova judicial e se a hipótese é realmente uma das exceções."
+          ],
+          "title": "Inquérito e condenação",
+          "pitfall": "Dizer que nenhum elemento do inquérito pode ser considerado em qualquer situação.",
+          "articles": [
+            "Art. 155"
+          ],
+          "question": "O art. 155 admite essa base exclusiva?",
+          "scenario": "A sentença condena com base exclusiva em informações do inquérito, sem provas em contraditório nem exceções legais.",
+          "variation": {
+            "answer": "Examine a ressalva e sua regularidade; a conclusão não decorre apenas do rótulo inquérito.",
+            "scenario": "E se há prova não repetível regularmente obtida?"
+          },
+          "conclusion": "A base exclusivamente informativa descrita não satisfaz a regra."
+        },
+        {
+          "id": "tutor-2",
+          "steps": [
+            "O art. 158 exige exame direto ou indireto quando a infração deixa vestígios e afirma que a confissão não o supre.",
+            "Não confunda admitir o fato com demonstrar tecnicamente sua materialidade."
+          ],
+          "title": "Vestígios e confissão",
+          "pitfall": "Ignorar a distinção entre prova da materialidade e admissão pessoal.",
+          "articles": [
+            "Art. 158",
+            "Art. 167"
+          ],
+          "question": "A confissão substitui o exame indispensável?",
+          "scenario": "Crime deixa vestígios, mas pretende-se dispensar exame porque o acusado confessou.",
+          "variation": {
+            "answer": "Examine a hipótese do art. 167 e suas condições para suprimento por prova testemunhal.",
+            "scenario": "E se os vestígios desapareceram?"
+          },
+          "conclusion": "A confissão não substitui automaticamente o exame exigido."
+        },
+        {
+          "id": "tutor-3",
+          "steps": [
+            "O art. 158-A define procedimentos para documentar a história cronológica e rastrear posse e manuseio; o art. 158-B descreve etapas.",
+            "Confronte os registros faltantes com integridade e rastreabilidade; não crie sanção automática sem exame jurídico."
+          ],
+          "title": "Cadeia de custódia",
+          "pitfall": "Presumir autenticidade ou nulidade automática apenas pelo nome cadeia de custódia.",
+          "articles": [
+            "Art. 158-A",
+            "Art. 158-B"
+          ],
+          "question": "Por que isso importa para a prova?",
+          "scenario": "Vestígio é recolhido, mas não há registro de sua trajetória e das pessoas que o manusearam.",
+          "variation": {
+            "answer": "A documentação permite rastrear o vestígio, sem tornar toda conclusão pericial imune à impugnação.",
+            "scenario": "E se todas as etapas estão documentadas?"
+          },
+          "conclusion": "A falha exige análise de confiabilidade e consequências no caso concreto."
+        },
+        {
+          "id": "tutor-4",
+          "steps": [
+            "O art. 311 exige requerimento do MP, querelante ou assistente, ou representação da autoridade policial; o art. 312 traz pressupostos.",
+            "Separe iniciativa, necessidade e hipóteses de admissibilidade; gravidade não elimina as exigências."
+          ],
+          "title": "Prisão preventiva de ofício",
+          "pitfall": "Usar redação anterior para justificar iniciativa judicial.",
+          "articles": [
+            "Art. 311",
+            "Art. 312",
+            "Art. 313",
+            "Art. 315"
+          ],
+          "question": "A iniciativa está autorizada pelo texto atual?",
+          "scenario": "Durante investigação, o juiz decreta preventiva sem requerimento nem representação.",
+          "variation": {
+            "answer": "Ainda é preciso conferir os arts. 312, 313, 315 e as alternativas cautelares; o requerimento não torna a prisão automática.",
+            "scenario": "E se há requerimento e fundamentos concretos?"
+          },
+          "conclusion": "O texto atual não autoriza decretar de ofício na situação descrita."
+        },
+        {
+          "id": "tutor-5",
+          "steps": [
+            "O art. 197 exige confronto com as demais provas; o art. 200 prevê divisibilidade e retratabilidade.",
+            "Diferencie valor probatório e atenuante penal, cujo aviso de jurisprudência está no material de súmulas."
+          ],
+          "title": "Confissão retratada",
+          "pitfall": "Misturar regra de prova do CPP e requisito da atenuante no CP.",
+          "articles": [
+            "Art. 197",
+            "Art. 200"
+          ],
+          "question": "Como o CPP disciplina a confissão?",
+          "scenario": "Acusado confessa e depois se retrata; pretende-se tratar a primeira versão como prova absoluta e indivisível.",
+          "variation": {
+            "answer": "A compatibilidade deve ser analisada; não dispensa avaliação motivada do conjunto.",
+            "scenario": "E se a confissão é compatível com outras provas?"
+          },
+          "conclusion": "A confissão não é prova absoluta nem necessariamente indivisível."
+        },
+        {
+          "id": "tutor-6",
+          "steps": [
+            "O art. 28-A reúne requisitos, exclusões, condições e controle do acordo; pena mínima é apenas um elemento.",
+            "Verifique ausência de violência ou grave ameaça, confissão formal e circunstanciada, adequação e impedimentos legais."
+          ],
+          "title": "Garantias no acordo de não persecução",
+          "pitfall": "Converter um limite numérico em direito automático ao acordo.",
+          "articles": [
+            "Art. 28-A"
+          ],
+          "question": "Esse dado basta?",
+          "scenario": "Um investigado quer celebrar ANPP só porque a pena mínima é inferior a quatro anos.",
+          "variation": {
+            "answer": "A exclusão precisa ser considerada; não ignore o contexto para aplicar só o limite de pena.",
+            "scenario": "E se o crime envolve violência doméstica nas condições do § 2º, IV?"
+          },
+          "conclusion": "Não. A análise é cumulativa e deve considerar o regime vigente e o caso."
+        },
+        {
+          "id": "tutor-7",
+          "steps": [
+            "O art. 302, IV, contempla encontro logo depois com objetos e outros elementos nas condições que descreve.",
+            "Verifique proximidade temporal e relação dos objetos com a autoria; mera suspeita vaga não substitui os requisitos."
+          ],
+          "title": "Flagrante exige hipótese legal",
+          "pitfall": "Limitar todo flagrante a estar cometendo o delito.",
+          "articles": [
+            "Art. 302"
+          ],
+          "question": "A situação pode ser flagrante mesmo sem ser surpreendido durante o ato?",
+          "scenario": "Suspeito é encontrado logo depois do delito com objetos que fazem presumir sua autoria.",
+          "variation": {
+            "answer": "Não use o inciso IV automaticamente; verifique se existe outra hipótese legal.",
+            "scenario": "E se o encontro ocorre sem proximidade temporal nem elementos que apontem autoria?"
+          },
+          "conclusion": "A hipótese pode ser flagrante, sujeita ao controle de legalidade e aos dados concretos."
+        },
+        {
+          "id": "tutor-8",
+          "steps": [
+            "O art. 17 veda à autoridade policial mandar arquivar autos de inquérito.",
+            "Diferencie conclusão do relatório e ato de arquivamento, que segue seu regime próprio."
+          ],
+          "title": "Arquivamento do inquérito",
+          "pitfall": "Confundir presidir a investigação e dispor sobre seu arquivamento.",
+          "articles": [
+            "Art. 17"
+          ],
+          "question": "Pode determinar o arquivamento?",
+          "scenario": "A autoridade policial conclui que a investigação não reuniu elementos e pretende mandar arquivar os autos.",
+          "variation": {
+            "answer": "A apresentação de conclusão não é ordem de arquivamento; diferencie os atos.",
+            "scenario": "E se a questão trata de encaminhar relatório com conclusão pela ausência de elementos?"
+          },
+          "conclusion": "A autoridade policial não pode ordenar esse arquivamento."
+        },
+        {
+          "id": "codigo-processo-penal-completion-prova",
+          "steps": [
+            "Art. 158 exige exame de corpo de delito direto ou indireto quando há vestígios.",
+            "Confissão não o supre. Se os vestígios desapareceram, examine a hipótese do art. 167."
+          ],
+          "title": "Confissão não substitui perícia",
+          "pitfall": "Confundir confissão com prova material suficiente em qualquer situação.",
+          "articles": [
+            "Art. 158",
+            "Art. 167"
+          ],
+          "question": "A confissão basta?",
+          "scenario": "Após lesão que deixa vestígios, o acusado confessa e a autoridade pretende dispensar o exame.",
+          "variation": {
+            "answer": "O parágrafo único do art. 158 estabelece prioridade do exame para essa hipótese.",
+            "scenario": "O caso envolve violência contra pessoa idosa."
+          },
+          "conclusion": "A confissão não dispensa a prova pericial exigida."
+        },
+        {
+          "id": "codigo-processo-penal-completion-inquerito",
+          "steps": [
+            "Art. 155: livre apreciação da prova produzida em contraditório judicial; vedada fundamentação exclusivamente em elementos investigativos, ressalvadas as provas indicadas na norma.",
+            "O exemplo exclui expressamente as ressalvas."
+          ],
+          "title": "Inquérito e prova para condenar",
+          "pitfall": "Ler a vedação como proibição absoluta de qualquer elemento do inquérito.",
+          "articles": [
+            "Art. 155"
+          ],
+          "question": "Essa base exclusiva basta?",
+          "scenario": "A acusação pede condenação fundada exclusivamente em declarações colhidas no inquérito, sem prova judicial, cautelar, antecipada ou não repetível.",
+          "variation": {
+            "answer": "A ressalva legal precisa ser examinada; não descarte toda prova investigativa indiscriminadamente.",
+            "scenario": "Há uma perícia não repetível regularmente produzida."
+          },
+          "conclusion": "Não se condena com fundamento exclusivamente nesses elementos."
+        },
+        {
+          "id": "codigo-processo-penal-completion-flagrante",
+          "steps": [
+            "Art. 302 enumera cometer, acabar de cometer, perseguição logo após e encontro logo depois nas condições legais.",
+            "A lei não cria uma janela universal de 24 horas para todo flagrante."
+          ],
+          "title": "Não existe prazo universal de 24 horas",
+          "pitfall": "Decorar 24 horas como prazo do flagrante.",
+          "articles": [
+            "Art. 302"
+          ],
+          "question": "É preciso encaixar o fato num prazo fixo de 24 horas?",
+          "scenario": "Logo após a infração, a vítima persegue o autor sem interrupção em situação que faz presumir sua autoria.",
+          "variation": {
+            "answer": "Examine inciso IV e suas condições; não confunda com inciso III.",
+            "scenario": "Sem perseguição, há encontro com objetos logo depois."
+          },
+          "conclusion": "Analise a modalidade e a conexão temporal/fática, não um relógio único."
+        },
+        {
+          "id": "codigo-processo-penal-completion-anpp",
+          "steps": [
+            "Art. 28-A exige pena mínima inferior a 4 anos; § 1º manda considerar causas de aumento e diminuição aplicáveis.",
+            "Exatamente quatro não satisfaz inferior."
+          ],
+          "title": "Quatro anos exatos não são inferiores a quatro",
+          "pitfall": "Confundir o limite do ANPP com pena mínima igual ou inferior a um do art. 89.",
+          "articles": [
+            "Art. 28-A"
+          ],
+          "question": "O requisito temporal do ANPP foi preenchido?",
+          "scenario": "Infração sem violência tem pena mínima de exatamente quatro anos, já consideradas as causas incidentes.",
+          "variation": {
+            "answer": "Recalcule o limite e examine confissão, necessidade, suficiência, condições e impedimentos; não conceda automaticamente.",
+            "scenario": "Uma minorante aplicável reduz a pena mínima abaixo de quatro."
+          },
+          "conclusion": "Esse requisito não foi preenchido; não transforme menor em menor ou igual."
+        },
+        {
+          "id": "codigo-processo-penal-completion-cautelar",
+          "steps": [
+            "Art. 312 exige prova da existência do crime, indício suficiente de autoria e perigo gerado pela liberdade; arts. 282 e 315 exigem adequação e motivação.",
+            "Indignação e gravidade abstrata não substituem fundamentos concretos."
+          ],
+          "title": "Gravidade genérica não basta",
+          "pitfall": "Confundir prisão preventiva com antecipação de pena.",
+          "articles": [
+            "Art. 282",
+            "Art. 312",
+            "Art. 315",
+            "Art. 319"
+          ],
+          "question": "Como analisar o fundamento?",
+          "scenario": "A prisão preventiva é requerida apenas porque o crime causa indignação, sem indicação de perigo concreto gerado pela liberdade.",
+          "variation": {
+            "answer": "Esse fato pode indicar risco à instrução, sem dispensar os demais requisitos e exame das cautelares.",
+            "scenario": "Há ameaça comprovada às testemunhas."
+          },
+          "conclusion": "Examine admissibilidade e necessidade, alternativas e fatos contemporâneos, com decisão fundamentada."
+        },
+        {
+          "id": "codigo-processo-penal-completion-cadeia",
+          "steps": [
+            "Arts. 158-A e seguintes disciplinam cadeia de custódia, história cronológica e rastreabilidade do vestígio.",
+            "Identifique a etapa sem registro e o risco à identidade/integridade."
+          ],
+          "title": "Objeto apreendido sem trajetória documentada",
+          "pitfall": "Tratar cadeia como mera etiqueta ou afirmar efeito automático de qualquer falha.",
+          "articles": [
+            "Art. 158-A",
+            "Art. 158-B"
+          ],
+          "question": "Qual problema o candidato deve identificar?",
+          "scenario": "Um vestígio é recolhido, transferido e analisado sem documentação de quem o manipulou em cada etapa.",
+          "variation": {
+            "answer": "Há elementos de rastreabilidade, ainda sujeitos ao contraditório e avaliação da prova.",
+            "scenario": "Todas as etapas estão registradas e lacres íntegros."
+          },
+          "conclusion": "A deficiência precisa ser avaliada concretamente; não declare nulidade ou confiabilidade automáticas."
+        },
+        {
+          "id": "codigo-processo-penal-completion-nulidade",
+          "steps": [
+            "Art. 563: nenhum ato será declarado nulo se da nulidade não resultar prejuízo para acusação ou defesa.",
+            "Identifique o ato, a espécie de vício, oportunidade de arguição e prejuízo; normas especiais também importam."
+          ],
+          "title": "Erro formal e prejuízo",
+          "pitfall": "Estudar nulidades sem relacionar defeito a prejuízo.",
+          "articles": [
+            "Art. 563"
+          ],
+          "question": "Qual regra de estudo aparece?",
+          "scenario": "A defesa aponta irregularidade formal e pede anulação de todo o processo sem explicar prejuízo.",
+          "variation": {
+            "answer": "Examine o prejuízo concreto e o regime do vício, sem presumir que toda irregularidade tem o mesmo resultado.",
+            "scenario": "Há restrição efetiva à produção de prova defensiva."
+          },
+          "conclusion": "A análise exige demonstração adequada e contexto, não a palavra nulidade isolada."
+        },
+        {
+          "id": "cpp-ampl-decadencia",
+          "title": "Prazo geral e exceção de violência doméstica",
+          "scenario": "Pessoa adulta sofre crime de ação privada, fora de violência doméstica e sem prazo especial. Só descobre a autoria três meses após o fato. Em outro caso, ocorrido já sob a Lei 15.438/2026, a ofendida conhece a autoria de crime sujeito à queixa no âmbito de violência doméstica e familiar contra a mulher.",
+          "question": "Qual prazo e marco inicial devem ser comparados?",
+          "steps": [
+            "No primeiro caso, o art. 38 prevê seis meses a partir do conhecimento da autoria, salvo disposição em contrário; não é automaticamente a data do fato.",
+            "No segundo, o §2º prevê doze meses. A Lei 15.438/2026 entrou em vigor em 19/06/2026, ampliando essa hipótese. A lei não transforma crime de ação incondicionada em condicionado."
+          ],
+          "conclusion": "Compare seis meses na regra geral e doze na exceção atual, com o marco de conhecimento da autoria; ação privada subsidiária tem o marco próprio do fim do prazo de denúncia.",
+          "variation": {
+            "scenario": "O crime doméstico é de ação pública incondicionada. A exceção cria necessidade de representação em doze meses?",
+            "answer": "Não. Prazo de queixa ou representação só importa onde esse direito condiciona a iniciativa cabível; não altera, por si só, a natureza da ação. Fatos anteriores à alteração exigem análise intertemporal própria."
+          },
+          "pitfall": "Usar seis meses para todas as hipóteses, contar sempre da data do crime ou chamar toda violência doméstica de ação condicionada.",
+          "articles": [
+            "Art. 38"
+          ]
+        },
+        {
+          "id": "cpp-ampl-indisponibilidade",
+          "title": "Pedir absolvição não é desistir da ação",
+          "scenario": "Após a instrução, o promotor conclui que as provas não sustentam condenação e pede absolvição. Um candidato afirma que isso é impossível porque o MP não pode desistir da ação penal.",
+          "question": "Os atos descritos são equivalentes?",
+          "steps": [
+            "O art. 42 proíbe o MP de desistir da ação penal. Essa proibição não obriga a sustentar condenação sem suporte probatório.",
+            "O próprio art. 385 contempla pedido de absolvição do MP. O caso apenas distingue os atos; não pretende resolver o debate jurisprudencial sobre os limites da condenação diante desse pedido."
+          ],
+          "conclusion": "Pedido de absolvição fundamentado e desistência da ação são conceitos diferentes.",
+          "variation": {
+            "scenario": "O promotor requer encerramento da ação somente por não querer mais atuar, sem hipótese legal. O art. 42 permite essa desistência voluntária?",
+            "answer": "Não. A indisponibilidade impede tratar a ação pública como pretensão da qual o titular livremente desiste."
+          },
+          "pitfall": "Deduzir obrigação de pedir condenação em todo processo a partir da indisponibilidade da ação.",
+          "articles": [
+            "Art. 42",
+            "Art. 385"
+          ]
+        },
+        {
+          "id": "cpp-ampl-segredo",
+          "title": "Desobrigação do segredo e vontade de testemunhar",
+          "scenario": "Profissional obrigado a guardar segredo é chamado a depor sobre informação sigilosa recebida no exercício de sua função. A parte interessada o desobriga, mas ele não quer testemunhar. Considere apenas a regra processual do art. 207, sem dever profissional mais restritivo.",
+          "question": "A desobrigação, sozinha, torna obrigatório esse depoimento?",
+          "steps": [
+            "O art. 207 proíbe o depoimento de quem deve guardar segredo por função, ministério, ofício ou profissão.",
+            "A ressalva exige que, desobrigada pela parte interessada, a pessoa queira testemunhar. As duas condições devem ser verificadas; normas profissionais próprias também podem ser relevantes no caso real."
+          ],
+          "conclusion": "Pela regra examinada, desobrigação e vontade são condições distintas; a liberação sozinha não elimina a proteção.",
+          "variation": {
+            "scenario": "A pessoa quer depor, mas a parte interessada não a desobrigou do segredo. Basta a sua vontade?",
+            "answer": "Não. O art. 207 não autoriza substituir a desobrigação pela vontade individual de divulgar o segredo."
+          },
+          "pitfall": "Trocar a proibição ligada ao segredo pela mera faculdade de recusa dos parentes do art. 206.",
+          "articles": [
+            "Art. 207"
+          ]
+        },
+        {
+          "id": "cpp-ampl-compromisso",
+          "title": "Menor de quatorze: ouvir e compromissar são diferentes",
+          "scenario": "Adolescente de treze anos presenciou fato relevante e será ouvido com as cautelas cabíveis. A parte sustenta que, sem poder prestar compromisso do art. 203, ele deve ser automaticamente excluído como fonte de informação.",
+          "question": "O art. 208 proíbe ouvi-lo ou apenas afasta o compromisso?",
+          "steps": [
+            "O art. 208 determina não deferir o compromisso aos menores de quatorze anos; não estabelece incapacidade automática para narrar o que presenciaram.",
+            "A forma de oitiva e a proteção adequada devem ser observadas. Se for criança ou adolescente vítima ou testemunha de violência, há regras especiais, que este exemplo não dispensa."
+          ],
+          "conclusion": "Não confunda dispensa de compromisso com proibição de oitiva.",
+          "variation": {
+            "scenario": "A testemunha tem exatamente quatorze anos e não se enquadra em outra exceção. A idade, por si só, ainda afasta o compromisso?",
+            "answer": "Não. A expressão do art. 208 é 'menores de 14'; quatorze anos exatos não se incluem nessa faixa. Regras especiais de proteção continuam pertinentes quando cabíveis."
+          },
+          "pitfall": "Substituir 'menores de quatorze' por 'menores de dezoito' ou por 'até quatorze'.",
+          "articles": [
+            "Art. 203",
+            "Art. 208"
+          ]
+        },
+        {
+          "id": "cpp-ampl-fianca",
+          "title": "Pena máxima de quatro anos e competência policial",
+          "scenario": "Pessoa é presa por uma única infração afiançável cuja pena máxima é exatamente de quatro anos. Não há impedimento dos arts. 323 e 324, nem circunstância que altere a pena máxima. A polícia afirma que só o juiz pode analisar fiança porque quatro não é inferior a quatro.",
+          "question": "O art. 322 exige pena inferior ou não superior a quatro anos?",
+          "steps": [
+            "O art. 322 permite fiança policial quando a pena máxima não é superior a quatro anos: a igualdade está incluída.",
+            "Verifique os impedimentos dos arts. 323 e 324. A competência numérica não transforma a fiança em concessão automática nem dispensa o exame das condições legais."
+          ],
+          "conclusion": "Nas condições narradas, quatro anos exatos não retiram a competência da autoridade policial para examinar a fiança.",
+          "variation": {
+            "scenario": "A pena máxima aplicável é de cinco anos, mas o crime é afiançável. A limitação policial significa proibição de qualquer fiança?",
+            "answer": "Não. Nos demais casos, o pedido é dirigido ao juiz, que decide em 48 horas, conforme parágrafo único, observadas as vedações legais."
+          },
+          "pitfall": "Confundir competência para decidir com possibilidade jurídica do benefício, ou comparar pena mínima com o teto policial.",
+          "articles": [
+            "Art. 322",
+            "Art. 323",
+            "Art. 324"
+          ]
+        },
+        {
+          "id": "cpp-ampl-recursos",
+          "title": "Revogação da preventiva e sentença final têm recursos distintos",
+          "scenario": "No procedimento comum do CPP, o juiz revoga prisão preventiva por decisão interlocutória. Em outro processo, profere sentença definitiva de absolvição por juiz singular. Sem rito especial, o candidato aponta apelação para ambos os atos.",
+          "question": "Como identificar o recurso de cada hipótese?",
+          "steps": [
+            "A revogação de preventiva é hipótese expressa de recurso em sentido estrito no art. 581, V.",
+            "A sentença definitiva de absolvição por juiz singular, no procedimento indicado, corresponde à apelação do art. 593, I. Identifique o ato antes de escolher o recurso."
+          ],
+          "conclusion": "Na primeira hipótese, recurso em sentido estrito; na segunda, apelação. Não aplique automaticamente essa conclusão a ritos especiais.",
+          "variation": {
+            "scenario": "O recorrente do caso do art. 581, V pretende efeito suspensivo ou ativo. Basta interpor para obtê-lo automaticamente?",
+            "answer": "Não. O art. 584, §4º, incluído pela Lei 15.358/2026, permite pedir ao tribunal esse efeito até o julgamento, demonstrando relevância dos motivos, plausibilidade do direito e probabilidade de dano irreparável ou de difícil reparação; não estabelece concessão automática."
+          },
+          "pitfall": "Escolher pelo nome 'decisão' sem conferir a hipótese legal e presumir efeito suspensivo automático.",
+          "articles": [
+            "Art. 581",
+            "Art. 584",
+            "Art. 593"
+          ]
+        }
+      ],
+      "illustrations": [
+        {
+          "kind": "flow",
+          "nodes": [
+            "Identifique os fatos e a norma",
+            "Confira sujeitos e requisitos",
+            "Compare exceções e vigência",
+            "Aplique a consequência e teste a variação"
+          ],
+          "title": "Como analisar Código de Processo Penal — leitura atualizada",
+          "caption": "Use a sequência nos casos, depois explique por que a variação muda (ou mantém) a conclusão."
+        },
+        {
+          "kind": "flow",
+          "title": "CPP: detalhe do enunciado muda a resposta",
+          "nodes": [
+            "Identifique ato processual e natureza da ação",
+            "Confira regra geral e exceção vigente",
+            "Separe sujeito, autoridade e faculdade",
+            "Verifique limite numérico e marco do prazo",
+            "Escolha a consequência e o recurso adequados"
+          ],
+          "caption": "Seis ou doze meses, menos de quatorze e até quatro anos não são expressões intercambiáveis."
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "Código de Processo Penal — leitura atualizada",
+        "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "sha256": "2364c079adebe33e8f70271338ca3d646e122bc1db9494734a881b1c91ae73e1",
+        "checked_at": "2026-10-11T18:11:38.181044+00:00"
+      }
+    ],
+    "checked_at": "2026-10-11T18:19:17.319175+00:00"
+  }
+]

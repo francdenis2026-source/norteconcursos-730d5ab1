@@ -1,0 +1,1017 @@
+{
+  "version": "2026-10-11",
+  "materials": [
+    {
+      "slug": "legislacao-interceptacao-revisao",
+      "expected": {
+        "id": "fff20509-43db-42cb-8b3b-36bdacc032d3",
+        "title": "Lei 9.296/1996 — Interceptação Telefônica — guia de estudo e aplicação",
+        "content_status": "active",
+        "updated_at": "2026-10-10T02:58:33.253645+00:00",
+        "body_sha256": "09d7059d395b1e1bfc66d827ed9b893d92dd6e10df2f36a1d5eec286ee58fb6b"
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Lei 9.296/1996 — Interceptação Telefônica.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## 1. O que você precisa compreender\n\nDiferencie a interceptação do fluxo de comunicação da captação ambiental. Finalidade, necessidade, autorização e prazo devem ser examinados antes da execução da medida.\n\n## 2. Conceitos, requisitos e diferenças\n\n| Conceito | Regra de estudo | Atenção de prova |\n|---|---|---|\n| Autorização | A interceptação telefônica depende de ordem judicial e segredo de justiça. | A autoridade policial não substitui a decisão do juiz. |\n| Subsidiariedade | Não é admitida se a prova puder ser feita por outros meios disponíveis. | O pedido deve justificar a necessidade. |\n| Prazo | O art. 5º prevê quinze dias, renováveis por igual tempo com indispensabilidade comprovada. | Não conclua que renovações são automáticas ou sempre limitadas a uma. |\n| Captação ambiental | O art. 8º-A possui requisitos próprios, incluindo limite de pena e eficácia de meios alternativos. | Não transplante mecanicamente os requisitos do art. 2º. |\n\n## 3. Primeira aplicação\n\nHá um meio disponível para produzir a prova sem interceptar o fluxo telefônico. O pedido deve explicar por que a medida invasiva seria necessária; apenas citar a gravidade do fato não substitui o exame dos requisitos.\n\n> **Vigência e atualização — conferência em 07/10/2026:** A Lei 13.964/2019 acrescentou o art. 8º-A. O módulo não equipara interceptação, gravação por interlocutor, acesso a dados armazenados e ronda em conteúdo público; cada situação tem regime próprio. O número de renovações deve ser confrontado com a jurisprudência em estudo específico.\n\n## 4. Escopo e leitura orientada\n\nArts. 1º, 2º, 4º, 5º e 8º-A. Este módulo é uma revisão temática, não uma reprodução integral do diploma. A indicação de edital identifica a pertinência comprovada para aquele cargo; o candidato deve conferir o edital da sua própria carreira. A versão estudada é a vigente na data da revisão, e não o congelamento da legislação na data da prova histórica.\n\n1. Leia os dispositivos indicados no texto oficial.\n2. Compare sujeito, conduta, requisitos e exceções antes de memorizar números.\n3. Resolva os itens de certo ou errado disponíveis e revise os comentários dos erros.\n4. Retome os cartões em uma segunda sessão sem consultar a tabela.\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 14 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| Disposições iniciais | 14 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/interceptacao)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 11 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 22 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n\n\n## Aplicação guiada — ampliação de 11/10/2026\n\nDiferencie o prazo e os pressupostos da captação ambiental (art. 8º-A) dos da interceptação telefônica. Pedido verbal não é autorização tácita; não se promete monitoramento automático da lei.\n\nEste complemento acrescenta seis casos resolvidos, seis cartões de aplicação e seis itens de julgamento autorais. Antes de abrir a resolução, decida o caso; depois altere o fato indicado e explique por que a conclusão muda ou permanece.\n\n| Tema de aplicação | Dispositivos |\n|---|---|\n| Pedido verbal não autoriza escuta policial imediata | Art. 1, Art. 4 |\n| Quem executa a medida e quem acompanha | Art. 6 |\n| Gravações em autos apartados e com sigilo | Art. 8 |\n| Quem decide inutilizar gravações sem interesse probatório | Art. 9 |\n| Captação ambiental: quatro anos não são mais de quatro | Art. 8-A |\n| Renovação ambiental exige duas verificações | Art. 8-A |\n\nOs exercícios deste guia não são questões oficiais de banca. As atualizações posteriores ao edital são identificadas para estudo da legislação vigente; não se afirma que já integravam a cobrança histórica.\n",
+        "flashcards": [
+          {
+            "b": "A interceptação telefônica depende de ordem judicial e segredo de justiça. A autoridade policial não substitui a decisão do juiz.",
+            "f": "Autorização — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Não é admitida se a prova puder ser feita por outros meios disponíveis. O pedido deve justificar a necessidade.",
+            "f": "Subsidiariedade — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "O art. 5º prevê quinze dias, renováveis por igual tempo com indispensabilidade comprovada. Não conclua que renovações são automáticas ou sempre limitadas a uma.",
+            "f": "Prazo — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "O art. 8º-A possui requisitos próprios, incluindo limite de pena e eficácia de meios alternativos. Não transplante mecanicamente os requisitos do art. 2º.",
+            "f": "Captação ambiental — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Certo. A fundamentação também deve indicar a forma de execução.",
+            "f": "Julgue e justifique: O art. 5º exige decisão fundamentada."
+          },
+          {
+            "b": "Errado. A condução da diligência não substitui a autorização judicial.",
+            "f": "Julgue e justifique: O delegado pode autorizar sozinho a interceptação do fluxo telefônico."
+          },
+          {
+            "b": "Errado. O prazo legal inicial é de quinze dias.",
+            "f": "Julgue e justifique: O prazo inicial previsto no art. 5º é de sessenta dias."
+          },
+          {
+            "b": "Certo. É a regra do art. 1º.",
+            "f": "Julgue e justifique: A interceptação telefônica exige ordem judicial."
+          },
+          {
+            "b": "Errado. Há diferenças, inclusive quanto ao critério de pena e aos meios igualmente eficazes.",
+            "f": "Julgue e justifique: Os arts. 2º e 8º-A contêm requisitos absolutamente idênticos."
+          },
+          {
+            "b": "Errado. Os requisitos legais precisam ser demonstrados.",
+            "f": "Julgue e justifique: A gravidade do fato permite ignorar todos os meios alternativos disponíveis."
+          },
+          {
+            "b": "Certo. O art. 2º, II, prevê subsidiariedade.",
+            "f": "Julgue e justifique: A disponibilidade de outros meios de prova importa para o cabimento."
+          },
+          {
+            "b": "Certo. Foi inserida pela Lei 13.964/2019.",
+            "f": "Julgue e justifique: A captação ambiental possui disciplina específica no art. 8º-A."
+          },
+          {
+            "b": "Na hipótese indicada, essa interceptação não é admitida pela lei. Não confunda interceptação com gravação feita por participante ou captação ambiental.\n\nA lei estabelece vedações no art. 2º, incluindo a hipótese de crime punido no máximo com detenção. A interceptação também exige os demais pressupostos e decisão judicial; ser útil não torna a medida automaticamente lícita.\nBase: Art. 1, Art. 2",
+            "f": "Aplicação — A investigação pretende interceptar comunicações para apurar crime punido apenas com detenção, sem outra hipótese que modifique esse recorte. O pedido satisfaz a Lei 9.296/1996?"
+          },
+          {
+            "b": "Isso afasta esse obstáculo específico, mas não prova todos os demais requisitos nem dispensa juiz.\nErro a evitar: Usar reclusão como autorização automática ou transpor regras entre meios de obtenção de prova distintos.\nBase: Art. 1, Art. 2",
+            "f": "Análise — Autorização precisa de pressupostos: E se a investigação envolver crime punido com reclusão?"
+          },
+          {
+            "b": "A facilidade operacional não dispensa os requisitos da lei.\n\nO art. 2º, II, não admite interceptação quando a prova puder ser feita por outros meios disponíveis. Demonstre a necessidade, não apenas a conveniência; confira também indícios e natureza da infração.\nBase: Art. 2, Art. 5",
+            "f": "Aplicação — A polícia pede interceptação, mas a prova pode ser obtida por meio disponível e menos invasivo. A ordem é admitida só porque facilitaria a investigação?"
+          },
+          {
+            "b": "A restrição desse inciso deixa de impedir o pedido, que continua dependente de decisão judicial fundamentada e das outras condições.\nErro a evitar: Tratar autorização judicial como dispensa dos requisitos legais.\nBase: Art. 2, Art. 5",
+            "f": "Análise — Último recurso probatório: E se não existe outro meio disponível e há os demais requisitos?"
+          },
+          {
+            "f": "Durante investigação criminal, o delegado apresenta ao juiz pedido verbal de interceptação. Demonstra a necessidade, os indícios e os meios a empregar, mas pretende iniciar a escuta antes da decisão.\n\nA urgência e a forma verbal autorizam o início da interceptação?",
+            "b": "O art. 4º, §1º admite excepcionalmente pedido verbal se presentes os pressupostos legais; a concessão fica condicionada à redução a termo.\nO pedido não se confunde com autorização: o art. 1º exige ordem do juiz competente. O prazo máximo para decidir o pedido é de 24 horas, não uma autorização tácita.\n\nConclusão: Sem ordem judicial, o simples pedido verbal não permite iniciar a interceptação.\n\nVariação: O juiz decide fundamentadamente e o pedido verbal é reduzido a termo. Basta a forma excepcional para invalidar a medida?\nNão. A forma verbal é admitida excepcionalmente com seus requisitos; confira também pressupostos, fundamentação, execução e prazo.\n\nBase: Art. 1, Art. 4"
+          },
+          {
+            "f": "Depois da autorização judicial, a equipe policial inicia os procedimentos e sustenta que só precisa avisar ao Ministério Público quando finalizar a escuta.\n\nO aviso apenas ao final cumpre o art. 6º?",
+            "b": "Deferido o pedido, a autoridade policial conduz os procedimentos dando ciência ao Ministério Público, que pode acompanhar a realização.\nCumprida a diligência, o resultado deve ser encaminhado ao juiz com auto circunstanciado contendo resumo das operações. A comunicação inicial e o encaminhamento final têm funções diferentes.\n\nConclusão: O aviso apenas ao final não substitui a ciência ao MP prevista para a condução da medida.\n\nVariação: O MP foi cientificado, mas não acompanhou pessoalmente as operações. A lei exige sua presença em cada ato?\nO art. 6º diz que o MP poderá acompanhar. Não converta essa faculdade em presença obrigatória em todas as operações; os demais deveres de documentação permanecem.\n\nBase: Art. 6"
+          },
+          {
+            "f": "O servidor junta imediatamente todas as gravações telefônicas ao processo principal e libera o conteúdo para consulta irrestrita, alegando que a autorização judicial tornou as conversas públicas.\n\nA autorização elimina o sigilo das gravações?",
+            "b": "O art. 8º prevê autos apartados, apensados ao inquérito ou processo, preservando o sigilo de diligências, gravações e transcrições.\nO parágrafo único também disciplina o momento da apensação. A remissão histórica do dispositivo deve ser lida com o procedimento processual vigente, não como permissão de divulgação.\n\nConclusão: Autorização para colher prova não autoriza divulgação irrestrita do conteúdo.\n\nVariação: A defesa pede acesso ao material pertinente ao exercício de seus direitos. Sigilo significa proibição absoluta de acesso defensivo?\nNão se deduz essa proibição do art. 8º. O caso distingue proteção contra divulgação e acesso processual devido; as garantias da defesa precisam ser observadas no procedimento adequado.\n\nBase: Art. 8"
+          },
+          {
+            "f": "Ao separar conversas particulares sem interesse para a prova, o investigador resolve apagar os arquivos por conta própria, sem requerimento ou decisão judicial.\n\nA irrelevância do conteúdo permite apagar as gravações unilateralmente?",
+            "b": "O art. 9º reserva a inutilização à decisão judicial, mediante requerimento do MP ou da parte interessada, durante o inquérito, a instrução ou após ela.\nO incidente será assistido pelo MP; a presença do acusado ou representante legal é facultada. Não substitua o incidente por descarte informal.\n\nConclusão: A inutilização deve seguir o procedimento judicial, não a decisão unilateral do investigador.\n\nVariação: O acusado não comparece ao incidente, embora tenha sido facultada sua presença. Sua ausência, por si só, impede a inutilização?\nO parágrafo único faculta sua presença. A assistência do MP e a decisão judicial permanecem exigidas.\n\nBase: Art. 9"
+          },
+          {
+            "f": "Em investigação de infração com pena máxima exatamente de quatro anos, sem infração conexa e sem outro fundamento normativo, pede-se instalar dispositivo ambiental. Há indícios e o requerimento descreve o local.\n\nEsse limite de pena satisfaz o art. 8º-A, II?",
+            "b": "Para captação ambiental, o art. 8º-A exige, entre outros requisitos, penas máximas superiores a quatro anos ou infrações penais conexas.\nQuatro anos exatos não são superiores a quatro. Também é preciso que a prova não possa ser feita por meios disponíveis e igualmente eficazes; descrever o local não substitui esses requisitos.\n\nConclusão: Nas condições narradas, o requisito do inciso II não está preenchido.\n\nVariação: A pena máxima é de cinco anos. A alteração torna a autorização automática?\nNão. Supera esse limite numérico, mas permanecem os demais requisitos e a decisão judicial a requerimento da polícia ou do MP.\n\nBase: Art. 8-A"
+          },
+          {
+            "f": "Após quinze dias de captação ambiental, pede-se renovação apenas porque o relatório de análise ainda não terminou. Não se demonstra indispensabilidade nem atividade criminal permanente, habitual ou continuada.\n\nA pendência do relatório basta para renovar?",
+            "b": "O art. 8º-A, §3º limita a captação a quinze dias e admite renovações judiciais por iguais períodos.\nA renovação exige comprovar a indispensabilidade do meio de prova e a presença de atividade criminal permanente, habitual ou continuada. A conveniência de terminar um relatório não demonstra, sozinha, essas condições.\n\nConclusão: A justificativa apresentada não satisfaz os requisitos específicos da renovação ambiental.\n\nVariação: O requerimento demonstra ambas as condições e o juiz as examina fundamentadamente. Há renovação automática por mais quinze dias?\nNão. As condições permitem a análise judicial; a nova autorização continua dependente da decisão e dos demais pressupostos.\n\nBase: Art. 8-A"
+          }
+        ],
+        "quiz": [
+          {
+            "a": true,
+            "q": "O art. 5º exige decisão fundamentada.",
+            "why": "A fundamentação também deve indicar a forma de execução."
+          },
+          {
+            "a": false,
+            "q": "O delegado pode autorizar sozinho a interceptação do fluxo telefônico.",
+            "why": "A condução da diligência não substitui a autorização judicial."
+          },
+          {
+            "a": false,
+            "q": "O prazo inicial previsto no art. 5º é de sessenta dias.",
+            "why": "O prazo legal inicial é de quinze dias."
+          },
+          {
+            "a": true,
+            "q": "A interceptação telefônica exige ordem judicial.",
+            "why": "É a regra do art. 1º."
+          },
+          {
+            "a": false,
+            "q": "Os arts. 2º e 8º-A contêm requisitos absolutamente idênticos.",
+            "why": "Há diferenças, inclusive quanto ao critério de pena e aos meios igualmente eficazes."
+          },
+          {
+            "a": false,
+            "q": "A gravidade do fato permite ignorar todos os meios alternativos disponíveis.",
+            "why": "Os requisitos legais precisam ser demonstrados."
+          },
+          {
+            "a": true,
+            "q": "A disponibilidade de outros meios de prova importa para o cabimento.",
+            "why": "O art. 2º, II, prevê subsidiariedade."
+          },
+          {
+            "a": true,
+            "q": "A captação ambiental possui disciplina específica no art. 8º-A.",
+            "why": "Foi inserida pela Lei 13.964/2019."
+          },
+          {
+            "q": "Pedido verbal de interceptação, admitido excepcionalmente, dispensa ordem judicial se o juiz não responder em 24 horas.",
+            "a": false,
+            "why": "Arts. 1º e 4º: prazo para decidir não é autorização tácita; o pedido verbal exige seus pressupostos e redução a termo."
+          },
+          {
+            "q": "Deferida a interceptação, a autoridade policial conduz os procedimentos dando ciência ao MP, que poderá acompanhar sua realização.",
+            "a": true,
+            "why": "Art. 6º: distingue condução policial, ciência ao MP e faculdade de acompanhamento."
+          },
+          {
+            "q": "A autorização judicial para interceptar torna públicas todas as gravações produzidas.",
+            "a": false,
+            "why": "Art. 8º: diligências, gravações e transcrições permanecem protegidas por sigilo."
+          },
+          {
+            "q": "A inutilização de gravação sem interesse para a prova depende de decisão judicial, mediante o requerimento previsto no art. 9º.",
+            "a": true,
+            "why": "A inutilização não cabe unilateralmente ao investigador; o incidente será assistido pelo MP."
+          },
+          {
+            "q": "Sem infração conexa, pena máxima exatamente de quatro anos satisfaz o limite de pena do art. 8º-A, II.",
+            "a": false,
+            "why": "O dispositivo exige pena máxima superior a quatro anos; igualdade não satisfaz a expressão legal."
+          },
+          {
+            "q": "A renovação da captação ambiental exige indispensabilidade comprovada e atividade criminal permanente, habitual ou continuada.",
+            "a": true,
+            "why": "Art. 8º-A, §3º: a renovação judicial por iguais períodos depende das duas condições, além dos demais pressupostos."
+          }
+        ],
+        "legal_review": {
+          "scope": "Conferência pontual em 11/10/2026 dos dispositivos dos seis novos casos e exercícios deste complemento. A revisão integral anterior e os alertas preexistentes foram preservados; esta ampliação não certifica nova auditoria integral de todos os dispositivos ou da jurisprudência.",
+          "changes": [],
+          "sources": [
+            {
+              "title": "Lei 9.296/1996 — Interceptação Telefônica — fonte oficial dos novos casos",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+              "sha256": "170f7a12e22c77ab3d28bde6034b42dfda7077438e86cb90f53e9f6129360181"
+            }
+          ],
+          "checked_at": "2026-10-11T18:19:17.319175+00:00",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma.",
+            "Seis casos com variações e seis itens de julgamento adicionados; seis flashcards anexados sem alterar índices ou conteúdo dos anteriores."
+          ],
+          "course_slug": "interceptacao"
+        },
+        "law_version_checked_at": "2026-10-11T18:19:17.319175+00:00"
+      }
+    },
+    {
+      "slug": "legislacao-juizados-revisao",
+      "expected": {
+        "id": "ebf53d2d-e811-4b02-b4ca-aa1b96457b4e",
+        "title": "Lei 9.099/1995 — Juizados Especiais Cíveis e Criminais — guia de estudo e aplicação",
+        "content_status": "active",
+        "updated_at": "2026-10-10T02:58:33.253645+00:00",
+        "body_sha256": "bb720862df7d0f7fbc3a0e7f6825c2d322aad4238bdd62a4a6f4858361cdaa0b"
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Lei 9.099/1995 — Juizados Especiais Cíveis e Criminais.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## 1. O que você precisa compreender\n\nSepare menor potencial ofensivo, composição civil, transação penal e suspensão do processo. Pena máxima e pena mínima servem a perguntas diferentes.\n\n## 2. Conceitos, requisitos e diferenças\n\n| Conceito | Regra de estudo | Atenção de prova |\n|---|---|---|\n| Menor potencial ofensivo | Contravenções e crimes com pena máxima não superior a dois anos, cumulada ou não com multa. | Há leis especiais que afastam benefícios ou o próprio regime. |\n| Composição civil | Acordo homologado constitui título executivo civil. | Renúncia à queixa ou representação ocorre nas hipóteses do art. 74, parágrafo único. |\n| Transação penal | Proposta de aplicação imediata de restritiva de direitos ou multa, com requisitos do art. 76. | Não se confunde com sentença condenatória comum ou confissão obrigatória. |\n| Suspensão processual | Art. 89: pena mínima igual ou inferior a um ano e demais requisitos. | Pode alcançar crime fora da competência do Juizado; não use a pena máxima de dois anos como critério. |\n\n## 3. Primeira aplicação\n\nUm crime tem pena mínima de um ano e máxima superior a dois. Ele pode ficar fora do conceito do art. 61, mas o estudo da suspensão do processo exige os requisitos próprios do art. 89. Não troque mínima e máxima.\n\n> **Vigência e atualização — conferência em 07/10/2026:** O art. 61 utiliza a redação da Lei 11.313/2006. O art. 41 da Lei Maria da Penha afasta a Lei 9.099 para a violência doméstica e familiar contra a mulher. Este módulo não promete benefícios automáticos nem ignora impedimentos de leis especiais.\n\n## 4. Escopo e leitura orientada\n\nArts. 61, 69, 74, 76 e 89. Este módulo é uma revisão temática, não uma reprodução integral do diploma. A indicação de edital identifica a pertinência comprovada para aquele cargo; o candidato deve conferir o edital da sua própria carreira. A versão estudada é a vigente na data da revisão, e não o congelamento da legislação na data da prova histórica.\n\n1. Leia os dispositivos indicados no texto oficial.\n2. Compare sujeito, conduta, requisitos e exceções antes de memorizar números.\n3. Resolva os itens de certo ou errado disponíveis e revise os comentários dos erros.\n4. Retome os cartões em uma segunda sessão sem consultar a tabela.\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 98 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| CAPÍTULO I — Disposições Gerais | 2 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção I — Da Competência | 2 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção II — Do Juiz, dos Conciliadores e dos Juízes Leigos | 3 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção III — Das Partes | 4 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção IV — Dos atos processuais | 3 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção V — Do pedido | 4 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção VI — Das Citações e Intimações | 2 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção VII — Da Revelia | 1 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção VIII — Da Conciliação e do Juízo Arbitral | 6 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção IX — Da Instrução e Julgamento | 3 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção X — Da Resposta do Réu | 2 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção XI — Das Provas | 6 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção XII — Da Sentença | 9 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção XIII — Dos Embargos de Declaração | 3 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção XIV — Da Extinção do Processo Sem Julgamento do Mérito | 1 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção XV — Da Execução | 2 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção XVI — Das Despesas | 2 |\n| Capítulo II — Dos Juizados Especiais Cíveis / Seção XVII — Disposições Finais | 4 |\n| Capítulo III — Dos Juizados Especiais Criminais | 3 |\n| Capítulo III — Dos Juizados Especiais Criminais / Seção I — Da Competência e dos Atos Processuais | 6 |\n| Capítulo III — Dos Juizados Especiais Criminais / Seção II — Da Fase Preliminar | 8 |\n| Capítulo III — Dos Juizados Especiais Criminais / Seção III — Do Procedimento Sumariíssimo | 7 |\n| Capítulo III — Dos Juizados Especiais Criminais / Seção IV — Da Execução | 3 |\n| Capítulo III — Dos Juizados Especiais Criminais / Seção V — Das Despesas Processuais | 1 |\n| Capítulo III — Dos Juizados Especiais Criminais / Seção VI — Disposições Finais | 6 |\n| Capítulo IV — Disposições Finais Comuns | 5 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/juizados)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 10 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 22 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n\n\n## Aplicação guiada — ampliação de 11/10/2026\n\nNo art. 83, §2º, estude a interrupção do prazo recursal, introduzida em 2015, e não a antiga suspensão. Não use composição civil ou transação para hipóteses excluídas da Lei 9.099, como violência doméstica e familiar contra a mulher.\n\nEste complemento acrescenta seis casos resolvidos, seis cartões de aplicação e seis itens de julgamento autorais. Antes de abrir a resolução, decida o caso; depois altere o fato indicado e explique por que a conclusão muda ou permanece.\n\n| Tema de aplicação | Dispositivos |\n|---|---|\n| Acordo civil e natureza da ação penal | Art. 74 |\n| Sair da audiência sem representar não encerra o direito | Art. 75 |\n| Transação não é condenação geradora de reincidência | Art. 76 |\n| Acusado não localizado: destino das peças | Art. 66, Art. 67 |\n| Embargos interrompem: não basta guardar o saldo | Art. 82, Art. 83 |\n| Revogação obrigatória e facultativa não são iguais | Art. 89 |\n\nOs exercícios deste guia não são questões oficiais de banca. As atualizações posteriores ao edital são identificadas para estudo da legislação vigente; não se afirma que já integravam a cobrança histórica.\n",
+        "flashcards": [
+          {
+            "b": "Contravenções e crimes com pena máxima não superior a dois anos, cumulada ou não com multa. Há leis especiais que afastam benefícios ou o próprio regime.",
+            "f": "Menor potencial ofensivo — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Acordo homologado constitui título executivo civil. Renúncia à queixa ou representação ocorre nas hipóteses do art. 74, parágrafo único.",
+            "f": "Composição civil — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Proposta de aplicação imediata de restritiva de direitos ou multa, com requisitos do art. 76. Não se confunde com sentença condenatória comum ou confissão obrigatória.",
+            "f": "Transação penal — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 89: pena mínima igual ou inferior a um ano e demais requisitos. Pode alcançar crime fora da competência do Juizado; não use a pena máxima de dois anos como critério.",
+            "f": "Suspensão processual — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Errado. Esse não é o critério do dispositivo.",
+            "f": "Julgue e justifique: O art. 61 exige pena mínima não superior a dois anos."
+          },
+          {
+            "b": "Errado. A renúncia prevista é limitada às hipóteses legais.",
+            "f": "Julgue e justifique: A composição civil extingue indistintamente toda ação penal pública incondicionada."
+          },
+          {
+            "b": "Certo. O limite legal é dois anos, cumulada ou não com multa.",
+            "f": "Julgue e justifique: O art. 61 considera a pena máxima para os crimes de menor potencial ofensivo."
+          },
+          {
+            "b": "Errado. A lei prevê crimes abrangidos ou não pelo regime dos Juizados.",
+            "f": "Julgue e justifique: A suspensão do art. 89 só existe para crimes cuja pena máxima não ultrapassa dois anos."
+          },
+          {
+            "b": "Certo. Há outros requisitos no art. 89.",
+            "f": "Julgue e justifique: A suspensão do processo considera pena mínima igual ou inferior a um ano."
+          },
+          {
+            "b": "Certo. É previsão do art. 74.",
+            "f": "Julgue e justifique: A composição civil homologada tem eficácia de título executivo civil."
+          },
+          {
+            "b": "Errado. A lei prevê condições e impedimentos.",
+            "f": "Julgue e justifique: Qualquer infração de menor potencial ofensivo assegura transação sem examinar antecedentes e impedimentos."
+          },
+          {
+            "b": "Certo. Não decorre automaticamente do valor da pena máxima.",
+            "f": "Julgue e justifique: A transação penal exige exame dos requisitos do art. 76."
+          },
+          {
+            "b": "Máxima e mínima respondem a perguntas diferentes; transação penal e suspensão do processo não são o mesmo instituto.\n\nMenor potencial ofensivo usa contravenções e crimes com pena máxima não superior a dois anos, cumulada ou não com multa, nos termos do art. 61. Suspensão condicional do processo tem critério de pena mínima igual ou inferior a um ano, além dos outros requisitos do art. 89.\nBase: Art. 61, Art. 89",
+            "f": "Aplicação — Um delito tem pena máxima de dois anos e não há causa modificadora, concurso ou regime especial informado. Outra pergunta trata da suspensão condicional do processo. O critério de dois anos resolve os dois temas?"
+          },
+          {
+            "b": "Há regime especial de exclusão da Lei 9.099/1995 no art. 41; não aplique os números isoladamente.\nErro a evitar: Comparar a pena máxima quando a pergunta exige a mínima.\nBase: Art. 61, Art. 89",
+            "f": "Análise — Pena máxima e institutos diferentes: E se houver violência doméstica e familiar contra a mulher no âmbito da Lei Maria da Penha?"
+          },
+          {
+            "b": "Não. Pena máxima e mínima cumprem funções diferentes nesses dispositivos.\n\nO art. 61 define infrações de menor potencial ofensivo; o art. 89 usa pena mínima igual ou inferior a um ano e outros requisitos. Identifique instituto e espécie de pena considerada antes de comparar números.\nBase: Art. 61, Art. 89",
+            "f": "Aplicação — Uma questão usa o limite de pena máxima de dois anos para definir suspensão condicional do processo. O mesmo parâmetro serve aos dois institutos?"
+          },
+          {
+            "b": "Não é automaticamente de menor potencial ofensivo; pode exigir análise da suspensão segundo o art. 89, com todos os seus requisitos.\nErro a evitar: Misturar transação penal e suspensão condicional do processo.\nBase: Art. 61, Art. 89",
+            "f": "Análise — Transação e suspensão do processo: E se o crime tem mínima de um ano e máxima superior a dois?"
+          },
+          {
+            "f": "Em infração submetida ao Juizado, de ação pública condicionada à representação e fora de violência doméstica contra a mulher, autor e vítima celebram composição de danos homologada judicialmente.\n\nQual efeito o acordo homologado tem sobre a representação?",
+            "b": "O art. 74 atribui ao acordo escrito e homologado eficácia de título executável no juízo civil competente.\nEm ação privada ou pública condicionada, o parágrafo único prevê renúncia ao direito de queixa ou representação. Primeiro identifique a natureza da ação.\n\nConclusão: Na hipótese narrada, a composição homologada acarreta renúncia ao direito de representação.\n\nVariação: A ação penal é pública incondicionada. O acordo civil produz automaticamente o mesmo efeito extintivo?\nNão. A regra de renúncia do parágrafo único é específica para queixa ou representação; não transporte esse efeito à ação pública incondicionada.\n\nBase: Art. 74"
+          },
+          {
+            "f": "Sem composição de danos na audiência preliminar, a vítima de infração sujeita à representação prefere refletir antes de manifestar vontade. O prazo legal ainda não terminou.\n\nA falta de representação naquela audiência provoca decadência imediata?",
+            "b": "O art. 75 prevê oportunidade de representação verbal, reduzida a termo, quando não obtida a composição.\nSeu parágrafo único esclarece que não representar na audiência não implica decadência: o direito pode ser exercido no prazo legal. O prazo e seu marco inicial devem ser verificados na legislação aplicável.\n\nConclusão: A audiência não cria um prazo decadencial que termina ao sair da sala.\n\nVariação: O prazo legal efetivamente se encerra sem manifestação. A regra do art. 75 conserva o direito indefinidamente?\nNão. O artigo preserva a possibilidade de exercício dentro do prazo legal; não elimina a decadência.\n\nBase: Art. 75"
+          },
+          {
+            "f": "Autor do fato e defensor aceitam a proposta do MP, homologada judicialmente. Mais tarde, o registro da transação é usado como se fosse condenação criminal para declarar reincidência.\n\nA transação produz esse efeito?",
+            "b": "O art. 76, §4º estabelece que a aplicação da pena restritiva ou multa não importa reincidência e fica registrada para impedir novo benefício em cinco anos.\nO §6º afasta efeitos civis e o registro em certidão de antecedentes, ressalvado o fim previsto no §4º. As pretensões civis seguem a ação cabível.\n\nConclusão: O registro não autoriza tratar a transação como condenação geradora de reincidência.\n\nVariação: O beneficiário pede nova transação dois anos depois. A ausência de reincidência elimina o impedimento?\nNão. Ausência de reincidência e impedimento de novo benefício em cinco anos são efeitos distintos previstos na própria lei.\n\nBase: Art. 76"
+          },
+          {
+            "f": "Após diligências, o acusado não é encontrado para citação pessoal no Juizado Especial Criminal. Propõe-se manter ali o procedimento e realizar citação por edital.\n\nQual providência o art. 66 determina?",
+            "b": "A citação criminal prevista no art. 66 é pessoal, no Juizado quando possível, ou por mandado.\nNão encontrado o acusado para ser citado, o juiz encaminha as peças existentes ao juízo comum para o procedimento legal. Não confunda citação com os meios mais flexíveis de intimação do art. 67.\n\nConclusão: A lei determina o encaminhamento ao juízo comum; não institui citação por edital dentro desse rito criminal.\n\nVariação: O acusado é localizado para citação por mandado. É preciso encaminhar as peças apenas porque a citação não ocorreu na sede do Juizado?\nNão. O art. 66 admite mandado; o encaminhamento do parágrafo único está relacionado ao acusado não encontrado.\n\nBase: Art. 66, Art. 67"
+          },
+          {
+            "f": "Em sentença do Juizado Criminal, a defesa identifica omissão e apresenta embargos de declaração tempestivos. Calcula a apelação apenas com o saldo que restava antes dos embargos.\n\nO art. 83 prevê suspensão ou interrupção do prazo recursal?",
+            "b": "O art. 83 admite embargos por obscuridade, contradição ou omissão; o prazo de oposição é de cinco dias, por escrito ou oralmente.\nO §2º, alterado pela Lei 13.105/2015, prevê interrupção do prazo para recurso. Interrupção não é mera conservação do saldo anterior; confira a intimação da decisão e as regras aplicáveis ao novo prazo.\n\nConclusão: A premissa de simples suspensão está incorreta: a redação vigente prevê interrupção.\n\nVariação: Uma apostila anterior a 2015 afirma que os embargos suspendem o prazo. Essa redação deve ser memorizada como atual?\nNão. Ela aparece como redação histórica riscada no texto compilado; a regra vigente usa interrupção.\n\nBase: Art. 82, Art. 83"
+          },
+          {
+            "f": "Durante o período de suspensão condicional do processo, o beneficiário passa a responder a processo por outra contravenção. O examinador afirma que o art. 89 exige revogação obrigatória por esse único motivo.\n\nQual diferença a lei faz entre novo crime e contravenção?",
+            "b": "O §3º determina revogação se o beneficiário vier a ser processado por outro crime, ou deixar de reparar o dano sem justificativa.\nO §4º permite revogação se vier a ser processado por contravenção ou descumprir outra condição. A hipótese narrada é facultativa, sujeita à decisão fundamentada.\n\nConclusão: Processo por contravenção não deve ser tratado como a hipótese obrigatória de outro crime.\n\nVariação: O novo processo é por crime, durante o prazo de suspensão. Basta chamá-lo de infração para aplicar o §4º?\nNão. A lei diferencia crime e contravenção; o novo crime corresponde ao §3º, observadas as condições do dispositivo e a decisão judicial.\n\nBase: Art. 89"
+          }
+        ],
+        "quiz": [
+          {
+            "a": false,
+            "q": "O art. 61 exige pena mínima não superior a dois anos.",
+            "why": "Esse não é o critério do dispositivo."
+          },
+          {
+            "a": false,
+            "q": "A composição civil extingue indistintamente toda ação penal pública incondicionada.",
+            "why": "A renúncia prevista é limitada às hipóteses legais."
+          },
+          {
+            "a": true,
+            "q": "O art. 61 considera a pena máxima para os crimes de menor potencial ofensivo.",
+            "why": "O limite legal é dois anos, cumulada ou não com multa."
+          },
+          {
+            "a": false,
+            "q": "A suspensão do art. 89 só existe para crimes cuja pena máxima não ultrapassa dois anos.",
+            "why": "A lei prevê crimes abrangidos ou não pelo regime dos Juizados."
+          },
+          {
+            "a": true,
+            "q": "A suspensão do processo considera pena mínima igual ou inferior a um ano.",
+            "why": "Há outros requisitos no art. 89."
+          },
+          {
+            "a": true,
+            "q": "A composição civil homologada tem eficácia de título executivo civil.",
+            "why": "É previsão do art. 74."
+          },
+          {
+            "a": false,
+            "q": "Qualquer infração de menor potencial ofensivo assegura transação sem examinar antecedentes e impedimentos.",
+            "why": "A lei prevê condições e impedimentos."
+          },
+          {
+            "a": true,
+            "q": "A transação penal exige exame dos requisitos do art. 76.",
+            "why": "Não decorre automaticamente do valor da pena máxima."
+          },
+          {
+            "q": "A composição civil homologada do art. 74 acarreta renúncia à representação em ação pública condicionada.",
+            "a": true,
+            "why": "O parágrafo único prevê esse efeito também para o direito de queixa na ação privada, não para toda ação penal."
+          },
+          {
+            "q": "Não representar na audiência preliminar faz decair imediatamente o direito, mesmo quando o prazo legal ainda corre.",
+            "a": false,
+            "why": "Art. 75, parágrafo único: o direito pode ser exercido dentro do prazo previsto em lei."
+          },
+          {
+            "q": "A transação penal do art. 76 importa reincidência porque envolve aplicação de pena restritiva ou multa.",
+            "a": false,
+            "why": "O §4º expressamente afasta reincidência, mas mantém registro para impedir novo benefício em cinco anos."
+          },
+          {
+            "q": "Não encontrado o acusado para citação pessoal no Juizado Criminal, as peças devem ser encaminhadas ao juízo comum.",
+            "a": true,
+            "why": "Art. 66, parágrafo único; não confundir citação e intimação."
+          },
+          {
+            "q": "Na redação vigente do art. 83, embargos de declaração tempestivos interrompem o prazo para recurso.",
+            "a": true,
+            "why": "O §2º foi alterado pela Lei 13.105/2015; a redação histórica falava em suspensão."
+          },
+          {
+            "q": "Ser processado por contravenção durante a suspensão do processo é hipótese de revogação obrigatória do art. 89, §3º.",
+            "a": false,
+            "why": "Contravenção corresponde à revogação facultativa do §4º; outro crime integra o §3º."
+          }
+        ],
+        "legal_review": {
+          "scope": "Conferência pontual em 11/10/2026 dos dispositivos dos seis novos casos e exercícios deste complemento. A revisão integral anterior e os alertas preexistentes foram preservados; esta ampliação não certifica nova auditoria integral de todos os dispositivos ou da jurisprudência.",
+          "changes": [],
+          "sources": [
+            {
+              "title": "Lei 9.099/1995 — Juizados Especiais Cíveis e Criminais — fonte oficial dos novos casos",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+              "sha256": "281fba3954d4730c7b532b95e7f23a933bf424d48f4ae957074e142eac9138b4"
+            }
+          ],
+          "checked_at": "2026-10-11T18:19:17.319175+00:00",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma.",
+            "Seis casos com variações e seis itens de julgamento adicionados; seis flashcards anexados sem alterar índices ou conteúdo dos anteriores."
+          ],
+          "course_slug": "juizados"
+        },
+        "law_version_checked_at": "2026-10-11T18:19:17.319175+00:00"
+      }
+    },
+    {
+      "slug": "legislacao-lep-revisao",
+      "expected": {
+        "id": "c25c6b01-9db8-4083-8703-7271795f610c",
+        "title": "Lei 7.210/1984 — Lei de Execução Penal — guia de estudo e aplicação",
+        "content_status": "active",
+        "updated_at": "2026-10-10T03:02:57.629869+00:00",
+        "body_sha256": "54634bd92cc535ac5c2d2908a28ca5f9c260962a76ee17089a390a365441c7e7"
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Lei 7.210/1984 — Lei de Execução Penal.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## 1. O que você precisa compreender\n\nA execução efetiva a decisão criminal e busca integração social. Direitos não atingidos pela sentença permanecem protegidos; assistência e identificação genética têm limites próprios.\n\n## 2. Conceitos, requisitos e diferenças\n\n| Conceito | Regra de estudo | Atenção de prova |\n|---|---|---|\n| Objetivos | Efetivar sentença ou decisão e proporcionar integração social. | Não se limita à custódia física. |\n| Direitos | Condenado e internado mantêm direitos não atingidos pela sentença ou lei. | Condenação não extingue todos os direitos fundamentais. |\n| Assistência | Material, saúde, jurídica, educacional, social e religiosa; estende-se ao egresso. | Não restrinja a assistência estatal a alimentação. |\n| Perfil genético | Art. 9º-A atual: condenado a reclusão em regime inicial fechado, técnica adequada e indolor. | Use a redação de 2025, observando finalidade, sigilo e cadeia de custódia. |\n\n## 3. Primeira aplicação\n\nUma unidade atende pessoa condenada e egresso. A assistência possui várias dimensões e não cessa em toda hipótese com a saída. Na coleta genética, diferencie finalidade de identificação de usos não autorizados da amostra.\n\n> **Vigência e atualização — conferência em 07/10/2026:** A Lei 15.295/2025 modificou o art. 9º-A; a Lei 15.410/2026 alterou medidas de proteção contra reiteração de violência doméstica na execução. Progressão, saída temporária e remição demandam módulos específicos e não são resumidas por frações universais aqui.\n\n## 4. Escopo e leitura orientada\n\nArts. 1º a 3º, 9º-A e 10 a 11. Este módulo é uma revisão temática, não uma reprodução integral do diploma. A indicação de edital identifica a pertinência comprovada para aquele cargo; o candidato deve conferir o edital da sua própria carreira. A versão estudada é a vigente na data da revisão, e não o congelamento da legislação na data da prova histórica.\n\n1. Leia os dispositivos indicados no texto oficial.\n2. Compare sujeito, conduta, requisitos e exceções antes de memorizar números.\n3. Resolva os itens de certo ou errado disponíveis e revise os comentários dos erros.\n4. Retome os cartões em uma segunda sessão sem consultar a tabela.\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 216 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| TÍTULO I — Do Objeto e da Aplicação da Lei de Execução Penal | 4 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO I — Da Classificação | 6 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção I — Disposições gerais | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção II — Da assistência material | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção III — Da assistência à saúde | 1 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção IV — Da assistência jurídica | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção V — Da assistência educacional | 7 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VI — Da assistência social | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VII — Da assistência religiosa | 1 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO II — Da Assistência / Seção VIII — Da assistência ao egresso | 3 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção I — Disposições Gerais | 3 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção II — Do trabalho interno | 5 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO III — Do Trabalho / Seção III — Do trabalho externo | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção I — Dos Deveres | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção II — Dos Direitos | 6 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / Subseção I — Disposições gerais | 5 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / Subseção II — Das faltas disciplinares | 4 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO III — Das Sanções e das Recompensas | 4 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO IV — Da Aplicação das Sanções | 2 |\n| TÍTULO II — Do Condenado e do Internado / CAPÍTULO IV — Dos Deveres, dos Direitos e da Disciplina / Seção III — Da disciplina / SUBSEÇÃO V — Do Procedimento Disciplinar | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO I — Disposições Gerais | 1 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO II — Do Conselho Nacional de Política Criminal e Penitenciária | 3 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO III — Do Juízo da Execução | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO IV — Do Ministério Público | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO V — Do Conselho Penitenciário | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção I — Do Departamento Penitenciário Nacional | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção II — Do Departamento Penitenciário Local | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VI — Dos Departamentos Penitenciários / Seção III — Da Direção e do Pessoal dos Estabelecimentos Penais | 3 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VII — Do Patronato | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO VIII — Do Conselho da Comunidade | 2 |\n| TÍTULO III — Dos Órgãos da Execução Penal / CAPÍTULO IX — DA DEFENSORIA PÚBLICA (Incluído pela Lei nº 12.313, de 2010). | 2 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO I — Disposições Gerais | 7 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO II — Da Penitenciária | 4 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO III — Da Colônia Agrícola, Industrial ou Similar | 2 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO IV — Da Casa do Albergado | 3 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO V — Do Centro de Observação | 3 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO VI — Do Hospital de Custódia e Tratamento Psiquiátrico | 3 |\n| TÍTULO IV — Dos Estabelecimentos Penais / CAPÍTULO VII — Da Cadeia Pública | 3 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção I — Disposições Gerais | 5 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção II — Dos Regimes | 11 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção III — Das Autorizações de Saída / SUBSEÇÃO I — Da Permissão de Saída | 2 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção III — Das Autorizações de Saída / SUBSEÇÃO II — Da Saída Temporária | 3 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção IV — Da Remição | 5 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção V — Do Livramento Condicional | 16 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO I — Das Penas Privativas de Liberdade / Seção VI — Da Monitoração Eletrônica (Incluído pela Lei nº 12.258, de 2010) | 3 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção I — Disposições Gerais | 2 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção II — Da Prestação de Serviços à Comunidade | 2 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção III — Da Limitação de Fim de Semana | 3 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO II — Das Penas Restritivas de Direitos / Seção IV — Da Interdição Temporária de Direitos | 2 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO III — Da Suspensão Condicional | 8 |\n| TÍTULO V — Da Execução das Penas em Espécie / CAPÍTULO IV — Da Pena de Multa | 7 |\n| TÍTULO VI — Da Execução das Medidas de Segurança / CAPÍTULO I — Disposições Gerais | 4 |\n| TÍTULO VI — Da Execução das Medidas de Segurança / CAPÍTULO II — Da Cessação da Periculosidade | 5 |\n| TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO I — Das Conversões | 5 |\n| TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO II — Do Excesso ou Desvio | 2 |\n| TÍTULO VII — Dos Incidentes de Execução / CAPÍTULO III — Da Anistia e do Indulto | 7 |\n| TÍTULO VIII — Do Procedimento Judicial | 4 |\n| TÍTULO IX — Das Disposições Finais e Transitórias | 7 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/lep)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 15 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 28 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n\n\n## Aplicação guiada — ampliação de 11/10/2026\n\nAtualização posterior aos editais de 2025: a Lei 15.407/2026, vigente desde 12/05/2026, alterou a decisão sobre RDD no art. 54, §§2º e 3º. Separe pedido administrativo, decisão liminar e decisão final. A revogação de hipóteses de saída temporária em 2024 não elimina a permissão com escolta do art. 120. Fatos anteriores exigem análise intertemporal própria.\n\nEste complemento acrescenta seis casos resolvidos, seis cartões de aplicação e seis itens de julgamento autorais. Antes de abrir a resolução, decida o caso; depois altere o fato indicado e explique por que a conclusão muda ou permanece.\n\n| Tema de aplicação | Dispositivos |\n|---|---|\n| Diretor aplica isolamento; RDD depende do juiz | Art. 52, Art. 53, Art. 54 |\n| Isolamento preventivo também entra na conta | Art. 58, Art. 60 |\n| A punição não dispensa procedimento e motivação | Art. 57, Art. 59, Art. 60 |\n| Permissão com escolta não é saída temporária | Art. 120, Art. 121, Art. 122 |\n| Conclusão certificada amplia remição por estudo | Art. 126 |\n| Falta grave não apaga automaticamente toda a remição | Art. 57, Art. 127 |\n\nOs exercícios deste guia não são questões oficiais de banca. As atualizações posteriores ao edital são identificadas para estudo da legislação vigente; não se afirma que já integravam a cobrança histórica.\n",
+        "flashcards": [
+          {
+            "b": "Efetivar sentença ou decisão e proporcionar integração social. Não se limita à custódia física.",
+            "f": "Objetivos — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Condenado e internado mantêm direitos não atingidos pela sentença ou lei. Condenação não extingue todos os direitos fundamentais.",
+            "f": "Direitos — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Material, saúde, jurídica, educacional, social e religiosa; estende-se ao egresso. Não restrinja a assistência estatal a alimentação.",
+            "f": "Assistência — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Art. 9º-A atual: condenado a reclusão em regime inicial fechado, técnica adequada e indolor. Use a redação de 2025, observando finalidade, sigilo e cadeia de custódia.",
+            "f": "Perfil genético — qual é a regra e a ressalva?"
+          },
+          {
+            "b": "Errado. O art. 11 enumera ambas.",
+            "f": "Julgue e justifique: Assistência educacional e religiosa não integram a assistência da LEP."
+          },
+          {
+            "b": "Certo. É previsão do art. 1º.",
+            "f": "Julgue e justifique: A integração social integra os objetivos da execução penal."
+          },
+          {
+            "b": "Certo. É o art. 10, parágrafo único.",
+            "f": "Julgue e justifique: A assistência prevista na LEP se estende ao egresso."
+          },
+          {
+            "b": "Certo. É a regra do art. 3º.",
+            "f": "Julgue e justifique: São assegurados direitos não atingidos pela sentença ou lei."
+          },
+          {
+            "b": "Certo. A redação foi modificada pela Lei 15.295/2025.",
+            "f": "Julgue e justifique: O caput atual do art. 9º-A trata de reclusão em regime inicial fechado."
+          },
+          {
+            "b": "Errado. A lei estabelece finalidade e garantias próprias.",
+            "f": "Julgue e justifique: A coleta de DNA autoriza qualquer uso posterior da amostra, sem limite de finalidade."
+          },
+          {
+            "b": "Errado. A lei prevê objetivos e garantias adicionais.",
+            "f": "Julgue e justifique: A LEP tem como único objetivo manter pessoas fisicamente presas."
+          },
+          {
+            "b": "Errado. A lei preserva os direitos não atingidos.",
+            "f": "Julgue e justifique: A condenação elimina automaticamente todos os direitos do condenado."
+          },
+          {
+            "b": "No exercício, são seis dias remidos pelo trabalho; não é progressão automática de regime.\n\nO art. 126 prevê um dia de pena para cada três dias de trabalho. 18 ÷ 3 = seis dias, observados reconhecimento e controle legais.\nBase: Art. 126, Art. 127",
+            "f": "Aplicação — Uma pessoa condenada trabalha regularmente por 18 dias, com condições e comprovação exigidas pela LEP. Não há perda de dias remidos no exercício. Quantos dias de pena podem ser remidos pelo trabalho?"
+          },
+          {
+            "b": "Não aplique a regra do trabalho nem ignore a distribuição mínima prevista para estudo; são requisitos diferentes.\nErro a evitar: Confundir um dia de trabalho com um dia de pena ou remição com indulto.\nBase: Art. 126, Art. 127",
+            "f": "Análise — Remição por trabalho exige proporção: E se forem 18 horas de estudo distribuídas em apenas um dia?"
+          },
+          {
+            "b": "Um dia no recorte. Não use a razão de um dia para três dias de trabalho nessa conta.\n\nA regra é um dia de pena a cada 12 horas de frequência escolar, divididas no mínimo em três dias. Os dados preenchem horas e distribuição mínima; é necessário reconhecimento nos termos legais.\nBase: Art. 126",
+            "f": "Aplicação — Uma pessoa condenada estuda 12 horas, distribuídas em três dias, com atividade e comprovação admitidas na LEP. Quantos dias de pena o exemplo permite remir por estudo?"
+          },
+          {
+            "b": "O exemplo não satisfaz a distribuição mínima informada; horas totais sozinhas não bastam.\nErro a evitar: Dividir qualquer quantidade de horas por 12 sem verificar distribuição e atividade admitida.\nBase: Art. 126",
+            "f": "Análise — Remição por estudo tem horas e distribuição: E se as mesmas 12 horas forem concentradas em só dois dias?"
+          },
+          {
+            "b": "O resultado é três dias de remição, sujeito à apuração e decisão competentes.\n\nO art. 126, § 1º, II, prevê um dia de pena para cada três dias de trabalho. Divida os nove dias computáveis por três; não confunda trabalho com a regra de estudo.\nBase: Art. 126",
+            "f": "Aplicação — Pessoa privada de liberdade cumpre nove dias de trabalho juridicamente computáveis para remição. Qual cálculo inicial aplicar?"
+          },
+          {
+            "b": "O inciso I usa um dia a cada doze horas de frequência escolar, divididas em no mínimo três dias; confira a comprovação e demais requisitos.\nErro a evitar: Usar a fórmula de horas de estudo no trabalho.\nBase: Art. 126",
+            "f": "Análise — Remição pelo trabalho: E se a hipótese é estudo?"
+          },
+          {
+            "b": "Condenação não elimina indiscriminadamente os direitos.\nVariação: Uma restrição está expressamente prevista em lei. Examine seu alcance e controle, sem tratar todos os direitos como absolutos.\nBase: Art. 1, Art. 3",
+            "f": "Direitos preservados na execução\nUma unidade prisional afirma que a condenação elimina todos os direitos pessoais.\nComo responder pela LEP?"
+          },
+          {
+            "b": "Base de quatro dias no exemplo, sujeita à declaração pelo juiz e aos requisitos legais.\nVariação: As 24 horas de estudo estão concentradas em um único dia. Não transponha a divisão aritmética: falta distribuição mínima legal; confira apuração e documentação.\nBase: Art. 126",
+            "f": "Trabalho e estudo usam contas distintas\nApenado trabalha seis dias e estuda 24 horas certificadas distribuídas em seis dias, em horários compatíveis.\nComo calcular as bases de remição?"
+          },
+          {
+            "b": "Não trate todo preso fechado como submetido a RDD.\nVariação: Há hipótese do § 1º independentemente de falta grave. Examine alto risco ou fundadas suspeitas legalmente descritas e o procedimento decisório; não reduza todas as hipóteses a falta grave.\nBase: Art. 52",
+            "f": "RDD não se confunde com regime fechado\nCandidato equipara recolhimento no regime fechado com submissão automática ao regime disciplinar diferenciado.\nA equivalência é correta?"
+          },
+          {
+            "b": "Tempo suficiente não dispensa a decisão e os demais requisitos.\nVariação: A nova lei aumentou o percentual depois do fato. Não aplique retroativamente regra penal mais gravosa; identifique o regime temporal pertinente.\nBase: Art. 112",
+            "f": "Fração não é alvará automático\nCondenado atinge percentual temporal e pede transferência imediata sem análise dos demais requisitos.\nO relógio resolve tudo?"
+          },
+          {
+            "f": "Após procedimento com defesa, o diretor aplica isolamento disciplinar motivado. Em outro caso, determina sozinho a inclusão de um preso no RDD, afirmando ter a mesma competência para ambas as medidas.\n\nAs duas decisões têm a mesma autoridade competente?",
+            "b": "O art. 54 reserva ao diretor, por ato motivado, as sanções dos incisos I a IV do art. 53. A inclusão no RDD, inciso V, depende de despacho judicial fundamentado.\nNa redação da Lei 15.407/2026, o juiz decide liminarmente e profere decisão final em até quinze dias após manifestação do MP e da defesa. A ausência de manifestação não impede decidir, respeitado o prazo; isso não transfere competência ao diretor.\n\nConclusão: O diretor não pode impor sozinho o RDD; a competência para isolamento comum não equivale à competência para RDD.\n\nVariação: O diretor apresenta requerimento circunstanciado de RDD desde o recolhimento, estando presentes seus pressupostos. O pedido é vedado por ser cedo?\nNão. O art. 52, §10 admite solicitar ao juiz desde o recolhimento. Pedido e decisão são atos diferentes; devem existir os pressupostos legais.\n\nBase: Art. 52, Art. 53, Art. 54"
+          },
+          {
+            "f": "No interesse da disciplina e da averiguação, o preso permanece oito dias em isolamento preventivo. Depois se fixa sanção disciplinar de vinte dias de isolamento, e a administração pretende executar vinte dias adicionais.\n\nOs oito dias preventivos devem ser descontados da sanção?",
+            "b": "O art. 60 permite isolamento preventivo administrativo de até dez dias e manda computar esse período no cumprimento da sanção disciplinar.\nAssim, se a sanção total de vinte dias foi validamente fixada, restam doze, não vinte adicionais. O art. 58 limita o isolamento comum a trinta dias e determina comunicação ao juiz; RDD tem disciplina distinta.\n\nConclusão: A conta do caso é 20 − 8 = 12 dias restantes, preservados os demais requisitos do procedimento.\n\nVariação: A autoridade pretende fixar quinze dias de isolamento apenas preventivo. Estar abaixo do limite comum de trinta dias basta?\nNão. O isolamento preventivo tem teto próprio de dez dias no art. 60; não use o limite da sanção final para ampliar a medida preventiva.\n\nBase: Art. 58, Art. 60"
+          },
+          {
+            "f": "Um agente relata possível falta disciplinar. O diretor aplica sanção imediatamente, sem instaurar procedimento e sem permitir defesa, registrando apenas 'punido conforme relato'.\n\nO relato torna dispensável o procedimento disciplinar?",
+            "b": "O art. 59 exige procedimento para apurar a falta conforme regulamento e assegura direito de defesa.\nA decisão deve ser motivada. O art. 57 exige examinar natureza, motivos, circunstâncias, consequências, pessoa e tempo de prisão; repetir uma conclusão sem análise não atende ao modelo legal.\n\nConclusão: A apuração e a defesa não são substituídas pelo relato do agente; a sanção exige decisão motivada.\n\nVariação: Há necessidade de isolamento preventivo enquanto os fatos são apurados. Isso dispensa defesa para a sanção definitiva?\nNão. A medida preventiva tem pressupostos e limites próprios no art. 60; o procedimento e a defesa permanecem exigidos para a punição.\n\nBase: Art. 57, Art. 59, Art. 60"
+          },
+          {
+            "f": "Preso provisório pede para comparecer ao funeral de sua mãe. O servidor nega qualquer análise porque afirma que toda saída é reservada a condenados do semiaberto.\n\nQual modalidade a LEP prevê para esse fato?",
+            "b": "O art. 120 admite permissão com escolta para condenados no fechado ou semiaberto e presos provisórios nas hipóteses enumeradas, entre elas falecimento de ascendente.\nA permissão é concedida pelo diretor e dura o necessário à finalidade (art. 121). Saída temporária do art. 122 é instituto diferente, sem vigilância direta, sujeito a seus requisitos e às alterações de 2024.\n\nConclusão: O pedido deve ser examinado como permissão com escolta, não recusado por confusão com saída temporária.\n\nVariação: Condenado do semiaberto pede saída sem escolta apenas para visita familiar, sob a legislação atual e sem questão intertemporal. O funeral autoriza generalizar essa hipótese?\nNão. A Lei 14.843/2024 revogou a visita familiar do art. 122, I. Não confunda permissão do art. 120 com a antiga saída temporária; fatos anteriores exigem análise temporal própria.\n\nBase: Art. 120, Art. 121, Art. 122"
+          },
+          {
+            "f": "O juiz reconhece trinta dias de remição por horas de estudo regularmente certificadas. Durante a execução, o condenado também conclui o ensino médio, com certificação pelo órgão competente.\n\nComo funciona o acréscimo do art. 126, §5º sobre esses dias de estudo?",
+            "b": "O §5º acresce um terço ao tempo a remir em função das horas de estudo quando há conclusão do ensino fundamental, médio ou superior durante o cumprimento da pena, devidamente certificada.\nNo caso, um terço de trinta é dez: o resultado é quarenta dias. O acréscimo se refere à remição por estudo; não aumenta indistintamente dias obtidos por trabalho.\n\nConclusão: Com as condições narradas, 30 + 10 = 40 dias de remição por estudo, a serem reconhecidos pelo juiz da execução.\n\nVariação: Há trinta dias de remição exclusivamente por trabalho, sem horas de estudo reconhecidas. A conclusão escolar permite acrescentar um terço a esses dias?\nNão por essa regra: o §5º se refere ao tempo a remir em função das horas de estudo. Identifique a origem dos dias antes de calcular.\n\nBase: Art. 126"
+          },
+          {
+            "f": "Condenado tem sessenta dias remidos. Após falta grave regularmente apurada, o juiz analisa a perda desses dias. A administração sustenta que todos os sessenta devem desaparecer automaticamente.\n\nQual limite o art. 127 prevê?",
+            "b": "O art. 127 permite ao juiz revogar até um terço do tempo remido, observando os critérios do art. 57.\nUm terço de sessenta corresponde a vinte: é o teto do caso, não perda mínima ou automática. A nova contagem recomeça da data da infração disciplinar.\n\nConclusão: O teto é vinte dias; a perda concreta depende da decisão judicial e dos critérios legais, não do apagamento administrativo de todos os sessenta.\n\nVariação: O juiz fixa perda fundamentada de dez dias. A expressão 'até um terço' obriga aumentar para vinte?\nNão. Ela estabelece limite máximo, permitindo quantificação inferior quando adequada e motivada.\n\nBase: Art. 57, Art. 127"
+          }
+        ],
+        "quiz": [
+          {
+            "a": false,
+            "q": "Assistência educacional e religiosa não integram a assistência da LEP.",
+            "why": "O art. 11 enumera ambas."
+          },
+          {
+            "a": true,
+            "q": "A integração social integra os objetivos da execução penal.",
+            "why": "É previsão do art. 1º."
+          },
+          {
+            "a": true,
+            "q": "A assistência prevista na LEP se estende ao egresso.",
+            "why": "É o art. 10, parágrafo único."
+          },
+          {
+            "a": true,
+            "q": "São assegurados direitos não atingidos pela sentença ou lei.",
+            "why": "É a regra do art. 3º."
+          },
+          {
+            "a": true,
+            "q": "O caput atual do art. 9º-A trata de reclusão em regime inicial fechado.",
+            "why": "A redação foi modificada pela Lei 15.295/2025."
+          },
+          {
+            "a": false,
+            "q": "A coleta de DNA autoriza qualquer uso posterior da amostra, sem limite de finalidade.",
+            "why": "A lei estabelece finalidade e garantias próprias."
+          },
+          {
+            "a": false,
+            "q": "A LEP tem como único objetivo manter pessoas fisicamente presas.",
+            "why": "A lei prevê objetivos e garantias adicionais."
+          },
+          {
+            "a": false,
+            "q": "A condenação elimina automaticamente todos os direitos do condenado.",
+            "why": "A lei preserva os direitos não atingidos."
+          },
+          {
+            "q": "O diretor pode impor sozinho inclusão no RDD porque o art. 54 lhe atribui as sanções dos incisos I a IV do art. 53.",
+            "a": false,
+            "why": "RDD é inciso V e depende de decisão judicial fundamentada; não integra I a IV."
+          },
+          {
+            "q": "Oito dias de isolamento preventivo computam no cumprimento de sanção total de vinte dias, deixando doze dias restantes.",
+            "a": true,
+            "why": "Art. 60, parágrafo único: o período preventivo é computado na sanção, não somado como período extra."
+          },
+          {
+            "q": "O relato de falta por agente penitenciário permite aplicar sanção definitiva sem procedimento ou defesa.",
+            "a": false,
+            "why": "Art. 59 exige apuração com defesa e decisão motivada; art. 57 exige individualização."
+          },
+          {
+            "q": "Preso provisório pode ter analisada permissão com escolta para funeral de ascendente, nos termos do art. 120.",
+            "a": true,
+            "why": "A permissão inclui presos provisórios e é diferente de saída temporária sem vigilância direta."
+          },
+          {
+            "q": "Trinta dias remidos por estudo, com conclusão do ensino médio durante a pena devidamente certificada, podem receber acréscimo de dez dias pelo §5º do art. 126.",
+            "a": true,
+            "why": "Um terço de trinta é dez. O bônus depende das condições do §5º e se refere à remição por estudo."
+          },
+          {
+            "q": "Falta grave exige revogar integralmente todo o tempo remido, sem escolha motivada do juiz.",
+            "a": false,
+            "why": "Art. 127: o juiz poderá revogar até um terço, observados os critérios do art. 57."
+          }
+        ],
+        "legal_review": {
+          "scope": "Conferência pontual em 11/10/2026 dos dispositivos dos seis novos casos e exercícios deste complemento. A revisão integral anterior e os alertas preexistentes foram preservados; esta ampliação não certifica nova auditoria integral de todos os dispositivos ou da jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.410/2026",
+              "summary": "LEI Nº 15.410/2026",
+              "vigency": "Art. 4º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 50",
+                "Art. 52",
+                "Art. 86"
+              ]
+            },
+            {
+              "title": "Lei 15.407/2026 — procedimento do RDD",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15407.htm",
+              "articles": [
+                "Art. 52, §10",
+                "Art. 54, §§2 e 3"
+              ],
+              "summary": "Requerimento desde o recolhimento quando presentes os pressupostos; decisão liminar judicial e decisão final em até quinze dias, com a disciplina da manifestação do MP e defesa.",
+              "vigency": "Publicação em 12/05/2026; art. 4º: vigência na publicação. Retificação oficial em 22/05/2026.",
+              "state": "effective"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15402.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.402/2026",
+              "summary": "LEI Nº 15.402/2026",
+              "vigency": "Art. 3º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 112",
+                "Art. 126"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.358/2026",
+              "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+              "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 41-A",
+                "Art. 41-B",
+                "Art. 52",
+                "Art. 86",
+                "Art. 112"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.295/2025",
+              "summary": "LEI Nº 15.295/2025",
+              "vigency": "Art. 3º Esta Lei entra em vigor após decorridos 30 (trinta) dias de sua publicação oficial. Publicação: 22/12/2025. Entrada em vigor calculada pelo prazo legal: 21/01/2026.",
+              "articles": [
+                "Art. 9-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.280/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para agravar a pena dos crimes contra a dignidade sexual de pessoa vulnerável; o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para prever medidas protetivas de urgência a vítimas de crimes contra a dignidade sexual e em situação de especial vulnerabilidade; a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para prever a monitoração eletrônica dos condenados por crime contra a dignidade sexual; a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para estabelecer mecanismos de proteção a crianças e a adolescentes vítimas de crimes contra a dignidade sexual; e a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para assegurar assistência psicológica e social especializada às pessoas com deficiência vítimas de crimes contra a dignidade sexual e a suas famílias.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 119-A"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "title": "Lei 7.210/1984 — Lei de Execução Penal — fonte oficial dos novos casos",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+              "sha256": "c58c3858f45f499f428f61838e57d69be0b890d06c52dfcc71d6a4f77b1047fa"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm",
+              "title": "Lei 15.295/2025 — alteração do art. 9º-A da LEP",
+              "sha256": "6642779a34460af993751e7b66b44e7c7c93493b6dc089287e4f3b7390b73324"
+            }
+          ],
+          "checked_at": "2026-10-11T18:19:17.319175+00:00",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma.",
+            "Seis casos com variações e seis itens de julgamento adicionados; seis flashcards anexados sem alterar índices ou conteúdo dos anteriores."
+          ],
+          "course_slug": "lep"
+        },
+        "law_version_checked_at": "2026-10-11T18:19:17.319175+00:00"
+      }
+    },
+    {
+      "slug": "processo-penal-cpp-provas-flagrante-revisao",
+      "expected": {
+        "id": "128f6abf-2b59-4a4f-b3df-f60dbeb635ae",
+        "title": "Código de Processo Penal — leitura atualizada — guia de estudo e aplicação",
+        "content_status": "active",
+        "updated_at": "2026-10-10T03:02:57.629869+00:00",
+        "body_sha256": "ed39bc3216ed04c830c10e444576efebbead9d801cdc28d01af6ef8606f2da33"
+      },
+      "patch": {
+        "body_md": "> **Estudo por lei — Código de Processo Penal — leitura atualizada.** Conferência do texto oficial em 07/10/2026. O guia organiza a revisão; a leitura integral está no percurso desta norma. Casos e cartões são exercícios autorais de fixação, não questões atribuídas a banca.\n\n## O mapa do processo penal\n\nLeia o CPP em três camadas: regra legal, garantia constitucional e interpretação judicial. O percurso oferece a transcrição do texto compilado e recuperação por dispositivo; o resumo abaixo trabalha provas, cadeia de custódia e prisão em flagrante, vinculados ao tópico do edital informado. A leitura integral do código é repertório adicional, não uma afirmação de que todo artigo é cobrado pela PF.\n\n## Prova e elemento informativo\n\nO art. 155 distingue prova sob contraditório judicial de elementos da investigação. As ressalvas são provas cautelares, não repetíveis e antecipadas. Não memorize “inquérito nunca pode ser considerado”: a vedação é à fundamentação exclusiva nas condições do artigo. O art. 157 disciplina inadmissibilidade, derivação, nexo e fonte independente.\n\n**Caso concreto:** uma testemunha apenas declara um fato no inquérito. O enunciado não traz contraditório judicial nem prova enquadrada nas ressalvas. Uma condenação fundada exclusivamente nesse elemento contraria a regra do art. 155. Se há prova não repetível, examine a ressalva e as garantias próprias; o nome “inquérito” não resolve sozinho.\n\n## Cadeia de custódia: antes do laboratório\n\nOs arts. 158-A a 158-F organizam documentação, rastreabilidade e etapas do vestígio. Reconhecimento e preservação antecedem o recebimento no laboratório; o agente que reconhece um elemento relevante responde por sua preservação. Documentar coleta, acondicionamento, transporte, recebimento e processamento permite examinar a confiabilidade da prova.\n\n**Caso concreto:** um policial encontra objeto potencialmente ligado ao fato e preserva o local. A cadeia não começa somente no laudo final. Se alguém mistura embalagens, identifique o registro comprometido e a consequência no caso concreto; não invente nulidade automática universal por qualquer falha formal.\n\n## Flagrante e controle judicial\n\nCompare as hipóteses do art. 302, o dever policial e a faculdade de qualquer do povo do art. 301. O art. 310 prevê decisões fundamentadas: relaxamento da prisão ilegal, conversão quando preenchidos os requisitos ou liberdade provisória. Flagrante não transforma a preventiva em consequência automática.\n\n**Atualização de 2026:** a Lei 15.358 alterou a redação do art. 310 para audiência de custódia por videoconferência em tempo real, com garantias de defesa, entrevista reservada, privacidade e disciplina de falhas do sistema. Estude os §§ 7º a 13 e os debates de controle de constitucionalidade do diploma. A descrição aqui corresponde ao texto oficial na conferência, sem afirmar que qualquer dispositivo dispensa análise constitucional.\n\n**Caso concreto:** o auto chega ao juiz. A decisão deve distinguir legalidade do flagrante e fundamentos de cautelar; a gravidade abstrata não basta para a preventiva (art. 312, § 4º). O cabimento do art. 313 não substitui requisitos nem fundamentação. A Lei 15.487/2026 acrescentou o inciso VI: consulte a hipótese exata no quadro de mudanças e no código.\n\n## Prazos: atenção à alteração da representação\n\nO art. 38 conserva regra geral de seis meses, com marco no conhecimento da autoria ou hipótese do art. 29. A Lei 15.438/2026 acrescentou § 2º com prazo de doze meses nos crimes praticados no âmbito de violência doméstica e familiar contra a mulher. Isso não torna todo delito nesse contexto dependente de representação: primeiro identifique o regime de ação penal. Este ponto é atualização complementar, com pertinência dependente do edital.\n\n## Lei e jurisprudência: não copie a remissão como resposta\n\nAs ADIs 6298, 6299, 6300 e 6305 exigem leitura conjunta nos dispositivos sobre juiz das garantias, arquivamento, custódia e prova. A regra de impedimento automático do juiz que conheceu prova inadmissível, do art. 157, § 5º, foi declarada inconstitucional; sua presença na compilação não é fundamento para ensiná-la como impedimento automático vigente. Consulte a decisão do STF e a interpretação de cada dispositivo. O percurso conserva a transcrição oficial e identifica essa ressalva junto ao artigo.\n\n\n## 5. Mapa da leitura integral\n\nO percurso organiza 808 dispositivos vigentes. Textos revogados ou vetados permanecem identificados fora da leitura vigente.\n\n| Bloco do texto oficial | Dispositivos organizados |\n|---|---|\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO I — DISPOSIÇÕES PRELIMINARES | 9 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO II — DO INQUÉRITO POLICIAL | 23 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO III — DA AÇÃO PENAL | 38 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IV — DA AÇÃO CIVIL | 6 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO I — DA COMPETÊNCIA PELO LUGAR DA INFRAÇÃO | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO II — DA COMPETÊNCIA PELO DOMICÍLIO OU RESIDÊNCIA DO RÉU | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO III — DA COMPETÊNCIA PELA NATUREZA DA INFRAÇÃO | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO IV — DA COMPETÊNCIA POR DISTRIBUIÇÃO | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO V — DA COMPETÊNCIA POR CONEXÃO OU CONTINÊNCIA | 7 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO VI — DA COMPETÊNCIA POR PREVENÇÃO | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO VII — DA COMPETÊNCIA PELA PRERROGATIVA DE FUNÇÃO | 4 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO V — DA COMPETÊNCIA / CAPÍTULO VIII — DISPOSIÇÕES ESPECIAIS | 4 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO I — DAS QUESTÕES PREJUDICIAIS | 3 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO II — DAS EXCEÇÕES | 17 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO III — DAS INCOMPATIBILIDADES E IMPEDIMENTOS | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO IV — DO CONFLITO DE JURISDIÇÃO | 5 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO V — DA RESTITUIÇÃO DAS COISAS APREENDIDAS | 8 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO VI — DAS MEDIDAS ASSECURATÓRIAS | 22 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO VII — DO INCIDENTE DE FALSIDADE | 4 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VI — DAS QUESTÕES E PROCESSOS INCIDENTES / CAPÍTULO VIII — DA INSANIDADE MENTAL DO ACUSADO | 6 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO I — DISPOSIÇÕES GERAIS | 3 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO II — DO EXAME DE CORPO DE DELITO, DA CADEIA DE | 33 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO III — DO INTERROGATÓRIO DO ACUSADO | 11 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO IV — DA CONFISSÃO | 4 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO V — DO OFENDIDO | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO VI — DAS TESTEMUNHAS | 25 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO VII — DO RECONHECIMENTO DE PESSOAS E COISAS | 3 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO VIII — DA ACAREAÇÃO | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO IX — DOS DOCUMENTOS | 8 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO X — DOS INDÍCIOS | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VII — DA PROVA / CAPÍTULO XI — DA BUSCA E DA APREENSÃO | 11 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO I — DO JUIZ | 6 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO II — DO MINISTÉRIO PÚBLICO | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO III — DO ACUSADO E SEU DEFENSOR | 9 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO IV — DOS ASSISTENTES | 6 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO V — DOS FUNCIONÁRIOS DA JUSTIÇA | 1 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO VIII — DO JUIZ, DO MINISTÉRIO PÚBLICO, DO ACUSADO E DEFENSOR, / CAPÍTULO VI — DOS PERITOS E INTÉRPRETES | 7 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO I — DISPOSIÇÕES GERAIS | 20 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO II — DA PRISÃO EM FLAGRANTE | 11 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO III — DA PRISÃO PREVENTIVA | 6 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO IV DA PRISÃO DOMICILIAR (Redação dada pela Lei nº 12.403, de 2011). | 4 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO V — DAS OUTRAS MEDIDAS CAUTELARES | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX — DA PRISÃO, DAS MEDIDAS CAUTELARES E DA LIBERDADE PROVISÓRIA (Redação dada pela Lei nº 12.403, de 2011). / CAPÍTULO VI — DA LIBERDADE PROVISÓRIA, COM OU SEM FIANÇA | 30 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO IX-A — (Incluído pela Lei nº 15.280, de 2025) | 2 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO X — DAS CITAÇÕES E INTIMAÇÕES / CAPÍTULO I — DAS CITAÇÕES | 19 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO X — DAS CITAÇÕES E INTIMAÇÕES / CAPÍTULO II — DAS INTIMAÇÕES | 3 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO XI — DA APLICAÇÃO PROVISÓRIA DE INTERDIÇÕES | 8 |\n| LIVRO I — DO PROCESSO EM GERAL / TÍTULO XII — DA SENTENÇA | 12 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO I — DA INSTRUÇÃO CRIMINAL | 14 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção I — Da Acusação e da Instrução Preliminar | 7 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção II — Da Pronúncia, da Impronúncia e da Absolvição Sumária | 9 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção III — Da Preparação do Processo para Julgamento em Plenário | 3 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção IV — Do Alistamento dos Jurados | 2 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção V — Do Desaforamento | 2 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção VI — Da Organização da Pauta | 3 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção VII — Do Sorteio e da Convocação dos Jurados | 4 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção VIII — Da Função do Jurado | 11 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção IX — Da Composição do Tribunal do Júri e da Formação do Conselho de Sentença | 6 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção X — Da reunião e das sessões do Tribunal do Júri | 20 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XI — Da Instrução em Plenário | 4 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XII — Dos Debates | 6 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XIII — Do Questionário e sua Votação | 10 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XIV — Da sentença | 2 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XV — Da Ata dos Trabalhos | 3 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO I — DO PROCESSO COMUM / CAPÍTULO II — (Redação dada pela Lei nº 11.689, de 2008) DO PROCEDIMENTO RELATIVO AOS PROCESSOS DA COMPETÊNCIA DO TRIBUNAL DO JÚRI / Seção XVI — Das Atribuições do Presidente do Tribunal do Júri | 1 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO II — DO PROCESSO E DO JULGAMENTO DOS CRIMES | 6 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO III — DO PROCESSO E DO JULGAMENTO DOS CRIMES | 5 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO IV — DO PROCESSO E DO JULGAMENTO DOS CRIMES | 16 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO V — DO PROCESSO SUMÁRIO | 7 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO VI — DO PROCESSO DE RESTAURAÇÃO DE AUTOS EXTRAVIADOS OU DESTRUÍDOS | 8 |\n| LIVRO II — DOS PROCESSOS EM ESPÉCIE / TÍTULO II — DOS PROCESSOS ESPECIAIS / CAPÍTULO VII — DO PROCESSO DE APLICAÇÃO DE MEDIDA DE SEGURANÇA | 7 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO I — DAS NULIDADES | 11 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO I — DISPOSIÇÕES GERAIS | 7 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO II — DO RECURSO EM SENTIDO ESTRITO | 12 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO III — DA APELAÇÃO | 9 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO V — DO PROCESSO E DO JULGAMENTO DOS RECURSOS EM SENTIDO ESTRITO | 9 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO VI — DOS EMBARGOS | 2 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO VII — DA REVISÃO | 11 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO VIII — DO RECURSO EXTRAORDINÁRIO | 2 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO IX — DA CARTA TESTEMUNHÁVEL | 8 |\n| LIVRO III — DAS NULIDADES E DOS RECURSOS EM GERAL / TÍTULO II — DOS RECURSOS EM GERAL / CAPÍTULO X — DO HABEAS CORPUS E SEU PROCESSO | 22 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO I — DISPOSIÇÕES GERAIS | 6 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO II — DA EXECUÇÃO DAS PENAS EM ESPÉCIE / CAPÍTULO I — DAS PENAS PRIVATIVAS DE LIBERDADE | 12 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO II — DA EXECUÇÃO DAS PENAS EM ESPÉCIE / CAPÍTULO II — DAS PENAS PECUNIÁRIAS | 5 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO II — DA EXECUÇÃO DAS PENAS EM ESPÉCIE / CAPÍTULO III — DAS PENAS ACESSÓRIAS | 5 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO III — DOS INCIDENTES DA EXECUÇÃO / CAPÍTULO I — DA SUSPENSÃO CONDICIONAL DA PENA | 13 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO III — DOS INCIDENTES DA EXECUÇÃO / CAPÍTULO II — DO LIVRAMENTO CONDICIONAL | 24 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO IV — DA GRAÇA, DO INDULTO, DA ANISTIA E DA REHABILITAÇÃO / CAPÍTULO I — DA GRAÇA, DO INDULTO E DA ANISTIA | 9 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO IV — DA GRAÇA, DO INDULTO, DA ANISTIA E DA REHABILITAÇÃO / CAPÍTULO II — DA REABILITAÇÃO | 8 |\n| LIVRO IV — DA EXECUÇÃO / TÍTULO V — DA EXECUÇÃO DAS MEDIDAS DE SEGURANÇA | 29 |\n| LIVRO V — DAS RELAÇÕES JURISDICIONAIS COM AUTORIDADE ESTRANGEIRA / TÍTULO ÚNICO / CAPÍTULO I — DISPOSIÇÕES GERAIS | 3 |\n| LIVRO V — DAS RELAÇÕES JURISDICIONAIS COM AUTORIDADE ESTRANGEIRA / TÍTULO ÚNICO / CAPÍTULO II — DAS CARTAS ROGATÓRIAS | 4 |\n| LIVRO V — DAS RELAÇÕES JURISDICIONAIS COM AUTORIDADE ESTRANGEIRA / TÍTULO ÚNICO / CAPÍTULO III — DA HOMOLOGAÇÃO DAS SENTENÇAS ESTRANGEIRAS | 4 |\n| LIVRO VI — DISPOSIÇÕES GERAIS | 22 |\n\n[Abrir a lei por dispositivos, com marcação e revisão](/dashboard/legal-course/codigo-processo-penal)\n\n## 6. Como fixar para a prova\n\n1. Leia um bloco e explique sua regra sem consultar. Anote sujeito, conduta, requisitos, exceções e consequência.\n2. Resolva os 21 casos abaixo antes de abrir a explicação. Teste também cada mudança dos fatos.\n3. Responda aos 41 flashcards. Justifique os itens de julgamento: acertar por palpite não demonstra domínio.\n4. Salve os cartões no seu baralho. No percurso, registre os dispositivos que precisam de revisão e acompanhe as revisões programadas.\n5. Quando disponível, use o treino específico desta lei. Releia a base legal de cada erro e confira o recorte do seu edital.\n\n## 7. Atualizações: o que comparar\n\nConfira os avisos no início deste material: norma alteradora, dispositivos atingidos, início de vigência e eventual entendimento judicial. Não use norma futura como se já estivesse em vigor nem confunda lei aprovada com projeto. A data de conferência é um retrato da fonte, não uma garantia de ausência de alterações posteriores.\n\n\n## Aplicação guiada — ampliação de 11/10/2026\n\nAtualização posterior aos editais de 2025: a Lei 15.438/2026, vigente desde 19/06/2026, prevê doze meses no art. 38, §2º para queixa ou representação em violência doméstica e familiar contra a mulher, sem criar representação para ação incondicionada. O art. 584, §4º, incluído pela Lei 15.358/2026, disciplina pedido de efeito suspensivo ou ativo no caso do art. 581, V; não o torna automático.\n\nEste complemento acrescenta seis casos resolvidos, seis cartões de aplicação e seis itens de julgamento autorais. Antes de abrir a resolução, decida o caso; depois altere o fato indicado e explique por que a conclusão muda ou permanece.\n\n| Tema de aplicação | Dispositivos |\n|---|---|\n| Prazo geral e exceção de violência doméstica | Art. 38 |\n| Pedir absolvição não é desistir da ação | Art. 42, Art. 385 |\n| Desobrigação do segredo e vontade de testemunhar | Art. 207 |\n| Menor de quatorze: ouvir e compromissar são diferentes | Art. 203, Art. 208 |\n| Pena máxima de quatro anos e competência policial | Art. 322, Art. 323, Art. 324 |\n| Revogação da preventiva e sentença final têm recursos distintos | Art. 581, Art. 584, Art. 593 |\n\nOs exercícios deste guia não são questões oficiais de banca. As atualizações posteriores ao edital são identificadas para estudo da legislação vigente; não se afirma que já integravam a cobrança histórica.\n",
+        "flashcards": [
+          {
+            "b": "Vedação à fundamentação exclusiva em elementos informativos; ressalvas: provas cautelares, não repetíveis e antecipadas.",
+            "f": "Art. 155: investigação e prova"
+          },
+          {
+            "b": "Preservação do local ou procedimento policial/pericial que detecta vestígio; não apenas chegada ao laboratório.",
+            "f": "Cadeia de custódia: início"
+          },
+          {
+            "b": "Não: examinar legalidade, cabimento, requisitos concretos, fundamentação e medidas alternativas.",
+            "f": "Flagrante implica preventiva?"
+          },
+          {
+            "b": "Compare art. 38, § 2º (prazo específico), art. 310 (custódia e garantias) e art. 313, VI; confira ação penal, vigência e jurisprudência.",
+            "f": "Mudanças de 2026 no CPP"
+          },
+          {
+            "b": "Errado. CPP, art. 155: a regra exige prova sob contraditório judicial, ressalvadas as provas cautelares, não repetíveis e antecipadas.",
+            "f": "Julgue e justifique: O juiz pode fundamentar a condenação exclusivamente nos elementos informativos do inquérito, sem nenhuma ressalva."
+          },
+          {
+            "b": "Certo. CPP, art. 158-A, § 3º: a definição não se limita ao que é visível.",
+            "f": "Julgue e justifique: Vestígio pode ser objeto ou material bruto, visível ou latente, relacionado à infração penal."
+          },
+          {
+            "b": "Errado. CPP, art. 158-A, § 1º: começa com preservação do local ou procedimentos policiais ou periciais que detectem vestígio.",
+            "f": "Julgue e justifique: A cadeia de custódia começa apenas quando o laboratório recebe a amostra."
+          },
+          {
+            "b": "Certo. CPP, art. 157, §§ 1º e 2º: examine o nexo e a fonte independente; não é uma autorização genérica de uso de prova ilícita.",
+            "f": "Julgue e justifique: A fonte independente deve ser examinada ao analisar prova derivada da ilícita."
+          },
+          {
+            "b": "Certo. CPP, art. 301: qualquer do povo poderá; autoridades policiais e seus agentes deverão. Não troque faculdade por obrigação de todo cidadão.",
+            "f": "Julgue e justifique: Qualquer do povo pode prender quem seja encontrado em flagrante delito."
+          },
+          {
+            "b": "Errado. CPP, art. 312, § 4º, acrescentado em 2025, exige demonstração concreta e fundamentação; observe também arts. 311, 313 e 315.",
+            "f": "Julgue e justifique: Preventiva pode ser decretada apenas com a gravidade abstrata do crime."
+          },
+          {
+            "b": "Errado. A Lei 15.358/2026 mantém expressamente entrevista prévia, reservada e inviolável. O formato não suprime a garantia.",
+            "f": "Julgue e justifique: Na literalidade atual do art. 310, § 9º, a audiência por videoconferência dispensa entrevista reservada entre preso e defensor."
+          },
+          {
+            "b": "Errado. Os artigos são complementares: cabimento não significa prisão automática nem antecipação de pena. O art. 313, § 2º, impede essa finalidade.",
+            "f": "Julgue e justifique: A hipótese de cabimento do art. 313 dispensa todos os requisitos do art. 312."
+          },
+          {
+            "b": "A base exclusivamente informativa descrita não satisfaz a regra.\n\nO art. 155 veda fundamentar exclusivamente em elementos informativos, ressalvando provas cautelares, não repetíveis e antecipadas. Confira se há prova judicial e se a hipótese é realmente uma das exceções.\nBase: Art. 155",
+            "f": "Aplicação — A sentença condena com base exclusiva em informações do inquérito, sem provas em contraditório nem exceções legais. O art. 155 admite essa base exclusiva?"
+          },
+          {
+            "b": "Examine a ressalva e sua regularidade; a conclusão não decorre apenas do rótulo inquérito.\nErro a evitar: Dizer que nenhum elemento do inquérito pode ser considerado em qualquer situação.\nBase: Art. 155",
+            "f": "Análise — Inquérito e condenação: E se há prova não repetível regularmente obtida?"
+          },
+          {
+            "b": "A confissão não substitui automaticamente o exame exigido.\n\nO art. 158 exige exame direto ou indireto quando a infração deixa vestígios e afirma que a confissão não o supre. Não confunda admitir o fato com demonstrar tecnicamente sua materialidade.\nBase: Art. 158, Art. 167",
+            "f": "Aplicação — Crime deixa vestígios, mas pretende-se dispensar exame porque o acusado confessou. A confissão substitui o exame indispensável?"
+          },
+          {
+            "b": "Examine a hipótese do art. 167 e suas condições para suprimento por prova testemunhal.\nErro a evitar: Ignorar a distinção entre prova da materialidade e admissão pessoal.\nBase: Art. 158, Art. 167",
+            "f": "Análise — Vestígios e confissão: E se os vestígios desapareceram?"
+          },
+          {
+            "b": "A falha exige análise de confiabilidade e consequências no caso concreto.\n\nO art. 158-A define procedimentos para documentar a história cronológica e rastrear posse e manuseio; o art. 158-B descreve etapas. Confronte os registros faltantes com integridade e rastreabilidade; não crie sanção automática sem exame jurídico.\nBase: Art. 158-A, Art. 158-B",
+            "f": "Aplicação — Vestígio é recolhido, mas não há registro de sua trajetória e das pessoas que o manusearam. Por que isso importa para a prova?"
+          },
+          {
+            "b": "A documentação permite rastrear o vestígio, sem tornar toda conclusão pericial imune à impugnação.\nErro a evitar: Presumir autenticidade ou nulidade automática apenas pelo nome cadeia de custódia.\nBase: Art. 158-A, Art. 158-B",
+            "f": "Análise — Cadeia de custódia: E se todas as etapas estão documentadas?"
+          },
+          {
+            "b": "O texto atual não autoriza decretar de ofício na situação descrita.\n\nO art. 311 exige requerimento do MP, querelante ou assistente, ou representação da autoridade policial; o art. 312 traz pressupostos. Separe iniciativa, necessidade e hipóteses de admissibilidade; gravidade não elimina as exigências.\nBase: Art. 311, Art. 312, Art. 313, Art. 315",
+            "f": "Aplicação — Durante investigação, o juiz decreta preventiva sem requerimento nem representação. A iniciativa está autorizada pelo texto atual?"
+          },
+          {
+            "b": "Ainda é preciso conferir os arts. 312, 313, 315 e as alternativas cautelares; o requerimento não torna a prisão automática.\nErro a evitar: Usar redação anterior para justificar iniciativa judicial.\nBase: Art. 311, Art. 312, Art. 313, Art. 315",
+            "f": "Análise — Prisão preventiva de ofício: E se há requerimento e fundamentos concretos?"
+          },
+          {
+            "b": "A confissão não é prova absoluta nem necessariamente indivisível.\n\nO art. 197 exige confronto com as demais provas; o art. 200 prevê divisibilidade e retratabilidade. Diferencie valor probatório e atenuante penal, cujo aviso de jurisprudência está no material de súmulas.\nBase: Art. 197, Art. 200",
+            "f": "Aplicação — Acusado confessa e depois se retrata; pretende-se tratar a primeira versão como prova absoluta e indivisível. Como o CPP disciplina a confissão?"
+          },
+          {
+            "b": "A compatibilidade deve ser analisada; não dispensa avaliação motivada do conjunto.\nErro a evitar: Misturar regra de prova do CPP e requisito da atenuante no CP.\nBase: Art. 197, Art. 200",
+            "f": "Análise — Confissão retratada: E se a confissão é compatível com outras provas?"
+          },
+          {
+            "b": "Não. A análise é cumulativa e deve considerar o regime vigente e o caso.\n\nO art. 28-A reúne requisitos, exclusões, condições e controle do acordo; pena mínima é apenas um elemento. Verifique ausência de violência ou grave ameaça, confissão formal e circunstanciada, adequação e impedimentos legais.\nBase: Art. 28-A",
+            "f": "Aplicação — Um investigado quer celebrar ANPP só porque a pena mínima é inferior a quatro anos. Esse dado basta?"
+          },
+          {
+            "b": "A exclusão precisa ser considerada; não ignore o contexto para aplicar só o limite de pena.\nErro a evitar: Converter um limite numérico em direito automático ao acordo.\nBase: Art. 28-A",
+            "f": "Análise — Garantias no acordo de não persecução: E se o crime envolve violência doméstica nas condições do § 2º, IV?"
+          },
+          {
+            "b": "A hipótese pode ser flagrante, sujeita ao controle de legalidade e aos dados concretos.\n\nO art. 302, IV, contempla encontro logo depois com objetos e outros elementos nas condições que descreve. Verifique proximidade temporal e relação dos objetos com a autoria; mera suspeita vaga não substitui os requisitos.\nBase: Art. 302",
+            "f": "Aplicação — Suspeito é encontrado logo depois do delito com objetos que fazem presumir sua autoria. A situação pode ser flagrante mesmo sem ser surpreendido durante o ato?"
+          },
+          {
+            "b": "Não use o inciso IV automaticamente; verifique se existe outra hipótese legal.\nErro a evitar: Limitar todo flagrante a estar cometendo o delito.\nBase: Art. 302",
+            "f": "Análise — Flagrante exige hipótese legal: E se o encontro ocorre sem proximidade temporal nem elementos que apontem autoria?"
+          },
+          {
+            "b": "A autoridade policial não pode ordenar esse arquivamento.\n\nO art. 17 veda à autoridade policial mandar arquivar autos de inquérito. Diferencie conclusão do relatório e ato de arquivamento, que segue seu regime próprio.\nBase: Art. 17",
+            "f": "Aplicação — A autoridade policial conclui que a investigação não reuniu elementos e pretende mandar arquivar os autos. Pode determinar o arquivamento?"
+          },
+          {
+            "b": "A apresentação de conclusão não é ordem de arquivamento; diferencie os atos.\nErro a evitar: Confundir presidir a investigação e dispor sobre seu arquivamento.\nBase: Art. 17",
+            "f": "Análise — Arquivamento do inquérito: E se a questão trata de encaminhar relatório com conclusão pela ausência de elementos?"
+          },
+          {
+            "b": "A confissão não dispensa a prova pericial exigida.\nVariação: O caso envolve violência contra pessoa idosa. O parágrafo único do art. 158 estabelece prioridade do exame para essa hipótese.\nBase: Art. 158, Art. 167",
+            "f": "Confissão não substitui perícia\nApós lesão que deixa vestígios, o acusado confessa e a autoridade pretende dispensar o exame.\nA confissão basta?"
+          },
+          {
+            "b": "Não se condena com fundamento exclusivamente nesses elementos.\nVariação: Há uma perícia não repetível regularmente produzida. A ressalva legal precisa ser examinada; não descarte toda prova investigativa indiscriminadamente.\nBase: Art. 155",
+            "f": "Inquérito e prova para condenar\nA acusação pede condenação fundada exclusivamente em declarações colhidas no inquérito, sem prova judicial, cautelar, antecipada ou não repetível.\nEssa base exclusiva basta?"
+          },
+          {
+            "b": "Analise a modalidade e a conexão temporal/fática, não um relógio único.\nVariação: Sem perseguição, há encontro com objetos logo depois. Examine inciso IV e suas condições; não confunda com inciso III.\nBase: Art. 302",
+            "f": "Não existe prazo universal de 24 horas\nLogo após a infração, a vítima persegue o autor sem interrupção em situação que faz presumir sua autoria.\nÉ preciso encaixar o fato num prazo fixo de 24 horas?"
+          },
+          {
+            "b": "Esse requisito não foi preenchido; não transforme menor em menor ou igual.\nVariação: Uma minorante aplicável reduz a pena mínima abaixo de quatro. Recalcule o limite e examine confissão, necessidade, suficiência, condições e impedimentos; não conceda automaticamente.\nBase: Art. 28-A",
+            "f": "Quatro anos exatos não são inferiores a quatro\nInfração sem violência tem pena mínima de exatamente quatro anos, já consideradas as causas incidentes.\nO requisito temporal do ANPP foi preenchido?"
+          },
+          {
+            "b": "Examine admissibilidade e necessidade, alternativas e fatos contemporâneos, com decisão fundamentada.\nVariação: Há ameaça comprovada às testemunhas. Esse fato pode indicar risco à instrução, sem dispensar os demais requisitos e exame das cautelares.\nBase: Art. 282, Art. 312, Art. 315, Art. 319",
+            "f": "Gravidade genérica não basta\nA prisão preventiva é requerida apenas porque o crime causa indignação, sem indicação de perigo concreto gerado pela liberdade.\nComo analisar o fundamento?"
+          },
+          {
+            "b": "A deficiência precisa ser avaliada concretamente; não declare nulidade ou confiabilidade automáticas.\nVariação: Todas as etapas estão registradas e lacres íntegros. Há elementos de rastreabilidade, ainda sujeitos ao contraditório e avaliação da prova.\nBase: Art. 158-A, Art. 158-B",
+            "f": "Objeto apreendido sem trajetória documentada\nUm vestígio é recolhido, transferido e analisado sem documentação de quem o manipulou em cada etapa.\nQual problema o candidato deve identificar?"
+          },
+          {
+            "b": "A análise exige demonstração adequada e contexto, não a palavra nulidade isolada.\nVariação: Há restrição efetiva à produção de prova defensiva. Examine o prejuízo concreto e o regime do vício, sem presumir que toda irregularidade tem o mesmo resultado.\nBase: Art. 563",
+            "f": "Erro formal e prejuízo\nA defesa aponta irregularidade formal e pede anulação de todo o processo sem explicar prejuízo.\nQual regra de estudo aparece?"
+          },
+          {
+            "f": "Pessoa adulta sofre crime de ação privada, fora de violência doméstica e sem prazo especial. Só descobre a autoria três meses após o fato. Em outro caso, ocorrido já sob a Lei 15.438/2026, a ofendida conhece a autoria de crime sujeito à queixa no âmbito de violência doméstica e familiar contra a mulher.\n\nQual prazo e marco inicial devem ser comparados?",
+            "b": "No primeiro caso, o art. 38 prevê seis meses a partir do conhecimento da autoria, salvo disposição em contrário; não é automaticamente a data do fato.\nNo segundo, o §2º prevê doze meses. A Lei 15.438/2026 entrou em vigor em 19/06/2026, ampliando essa hipótese. A lei não transforma crime de ação incondicionada em condicionado.\n\nConclusão: Compare seis meses na regra geral e doze na exceção atual, com o marco de conhecimento da autoria; ação privada subsidiária tem o marco próprio do fim do prazo de denúncia.\n\nVariação: O crime doméstico é de ação pública incondicionada. A exceção cria necessidade de representação em doze meses?\nNão. Prazo de queixa ou representação só importa onde esse direito condiciona a iniciativa cabível; não altera, por si só, a natureza da ação. Fatos anteriores à alteração exigem análise intertemporal própria.\n\nBase: Art. 38"
+          },
+          {
+            "f": "Após a instrução, o promotor conclui que as provas não sustentam condenação e pede absolvição. Um candidato afirma que isso é impossível porque o MP não pode desistir da ação penal.\n\nOs atos descritos são equivalentes?",
+            "b": "O art. 42 proíbe o MP de desistir da ação penal. Essa proibição não obriga a sustentar condenação sem suporte probatório.\nO próprio art. 385 contempla pedido de absolvição do MP. O caso apenas distingue os atos; não pretende resolver o debate jurisprudencial sobre os limites da condenação diante desse pedido.\n\nConclusão: Pedido de absolvição fundamentado e desistência da ação são conceitos diferentes.\n\nVariação: O promotor requer encerramento da ação somente por não querer mais atuar, sem hipótese legal. O art. 42 permite essa desistência voluntária?\nNão. A indisponibilidade impede tratar a ação pública como pretensão da qual o titular livremente desiste.\n\nBase: Art. 42, Art. 385"
+          },
+          {
+            "f": "Profissional obrigado a guardar segredo é chamado a depor sobre informação sigilosa recebida no exercício de sua função. A parte interessada o desobriga, mas ele não quer testemunhar. Considere apenas a regra processual do art. 207, sem dever profissional mais restritivo.\n\nA desobrigação, sozinha, torna obrigatório esse depoimento?",
+            "b": "O art. 207 proíbe o depoimento de quem deve guardar segredo por função, ministério, ofício ou profissão.\nA ressalva exige que, desobrigada pela parte interessada, a pessoa queira testemunhar. As duas condições devem ser verificadas; normas profissionais próprias também podem ser relevantes no caso real.\n\nConclusão: Pela regra examinada, desobrigação e vontade são condições distintas; a liberação sozinha não elimina a proteção.\n\nVariação: A pessoa quer depor, mas a parte interessada não a desobrigou do segredo. Basta a sua vontade?\nNão. O art. 207 não autoriza substituir a desobrigação pela vontade individual de divulgar o segredo.\n\nBase: Art. 207"
+          },
+          {
+            "f": "Adolescente de treze anos presenciou fato relevante e será ouvido com as cautelas cabíveis. A parte sustenta que, sem poder prestar compromisso do art. 203, ele deve ser automaticamente excluído como fonte de informação.\n\nO art. 208 proíbe ouvi-lo ou apenas afasta o compromisso?",
+            "b": "O art. 208 determina não deferir o compromisso aos menores de quatorze anos; não estabelece incapacidade automática para narrar o que presenciaram.\nA forma de oitiva e a proteção adequada devem ser observadas. Se for criança ou adolescente vítima ou testemunha de violência, há regras especiais, que este exemplo não dispensa.\n\nConclusão: Não confunda dispensa de compromisso com proibição de oitiva.\n\nVariação: A testemunha tem exatamente quatorze anos e não se enquadra em outra exceção. A idade, por si só, ainda afasta o compromisso?\nNão. A expressão do art. 208 é 'menores de 14'; quatorze anos exatos não se incluem nessa faixa. Regras especiais de proteção continuam pertinentes quando cabíveis.\n\nBase: Art. 203, Art. 208"
+          },
+          {
+            "f": "Pessoa é presa por uma única infração afiançável cuja pena máxima é exatamente de quatro anos. Não há impedimento dos arts. 323 e 324, nem circunstância que altere a pena máxima. A polícia afirma que só o juiz pode analisar fiança porque quatro não é inferior a quatro.\n\nO art. 322 exige pena inferior ou não superior a quatro anos?",
+            "b": "O art. 322 permite fiança policial quando a pena máxima não é superior a quatro anos: a igualdade está incluída.\nVerifique os impedimentos dos arts. 323 e 324. A competência numérica não transforma a fiança em concessão automática nem dispensa o exame das condições legais.\n\nConclusão: Nas condições narradas, quatro anos exatos não retiram a competência da autoridade policial para examinar a fiança.\n\nVariação: A pena máxima aplicável é de cinco anos, mas o crime é afiançável. A limitação policial significa proibição de qualquer fiança?\nNão. Nos demais casos, o pedido é dirigido ao juiz, que decide em 48 horas, conforme parágrafo único, observadas as vedações legais.\n\nBase: Art. 322, Art. 323, Art. 324"
+          },
+          {
+            "f": "No procedimento comum do CPP, o juiz revoga prisão preventiva por decisão interlocutória. Em outro processo, profere sentença definitiva de absolvição por juiz singular. Sem rito especial, o candidato aponta apelação para ambos os atos.\n\nComo identificar o recurso de cada hipótese?",
+            "b": "A revogação de preventiva é hipótese expressa de recurso em sentido estrito no art. 581, V.\nA sentença definitiva de absolvição por juiz singular, no procedimento indicado, corresponde à apelação do art. 593, I. Identifique o ato antes de escolher o recurso.\n\nConclusão: Na primeira hipótese, recurso em sentido estrito; na segunda, apelação. Não aplique automaticamente essa conclusão a ritos especiais.\n\nVariação: O recorrente do caso do art. 581, V pretende efeito suspensivo ou ativo. Basta interpor para obtê-lo automaticamente?\nNão. O art. 584, §4º, incluído pela Lei 15.358/2026, permite pedir ao tribunal esse efeito até o julgamento, demonstrando relevância dos motivos, plausibilidade do direito e probabilidade de dano irreparável ou de difícil reparação; não estabelece concessão automática.\n\nBase: Art. 581, Art. 584, Art. 593"
+          }
+        ],
+        "quiz": [
+          {
+            "a": false,
+            "q": "O juiz pode fundamentar a condenação exclusivamente nos elementos informativos do inquérito, sem nenhuma ressalva.",
+            "why": "CPP, art. 155: a regra exige prova sob contraditório judicial, ressalvadas as provas cautelares, não repetíveis e antecipadas."
+          },
+          {
+            "a": true,
+            "q": "Vestígio pode ser objeto ou material bruto, visível ou latente, relacionado à infração penal.",
+            "why": "CPP, art. 158-A, § 3º: a definição não se limita ao que é visível."
+          },
+          {
+            "a": false,
+            "q": "A cadeia de custódia começa apenas quando o laboratório recebe a amostra.",
+            "why": "CPP, art. 158-A, § 1º: começa com preservação do local ou procedimentos policiais ou periciais que detectem vestígio."
+          },
+          {
+            "a": true,
+            "q": "A fonte independente deve ser examinada ao analisar prova derivada da ilícita.",
+            "why": "CPP, art. 157, §§ 1º e 2º: examine o nexo e a fonte independente; não é uma autorização genérica de uso de prova ilícita."
+          },
+          {
+            "a": true,
+            "q": "Qualquer do povo pode prender quem seja encontrado em flagrante delito.",
+            "why": "CPP, art. 301: qualquer do povo poderá; autoridades policiais e seus agentes deverão. Não troque faculdade por obrigação de todo cidadão."
+          },
+          {
+            "a": false,
+            "q": "Preventiva pode ser decretada apenas com a gravidade abstrata do crime.",
+            "why": "CPP, art. 312, § 4º, acrescentado em 2025, exige demonstração concreta e fundamentação; observe também arts. 311, 313 e 315."
+          },
+          {
+            "a": false,
+            "q": "Na literalidade atual do art. 310, § 9º, a audiência por videoconferência dispensa entrevista reservada entre preso e defensor.",
+            "why": "A Lei 15.358/2026 mantém expressamente entrevista prévia, reservada e inviolável. O formato não suprime a garantia."
+          },
+          {
+            "a": false,
+            "q": "A hipótese de cabimento do art. 313 dispensa todos os requisitos do art. 312.",
+            "why": "Os artigos são complementares: cabimento não significa prisão automática nem antecipação de pena. O art. 313, § 2º, impede essa finalidade."
+          },
+          {
+            "q": "Na regra geral do art. 38, salvo exceção legal, os seis meses para queixa começam necessariamente na data do crime, mesmo quando sua autoria era desconhecida.",
+            "a": false,
+            "why": "O marco geral é o conhecimento da autoria. A ação privada subsidiária tem o marco especial do fim do prazo da denúncia."
+          },
+          {
+            "q": "O art. 38, §2º, na redação vigente da Lei 15.438/2026, prevê doze meses para queixa ou representação nos crimes de violência doméstica e familiar contra a mulher aos quais essas iniciativas sejam pertinentes.",
+            "a": true,
+            "why": "A exceção ampliou o prazo; não cria representação para crime de ação pública incondicionada nem dispensa análise temporal de fatos anteriores."
+          },
+          {
+            "q": "No art. 207, a desobrigação do segredo pela parte interessada basta para obrigar a pessoa a testemunhar sobre o conteúdo sigiloso.",
+            "a": false,
+            "why": "A ressalva exige, além da desobrigação, vontade de dar testemunho; considere também regras profissionais próprias."
+          },
+          {
+            "q": "O art. 208 afasta o compromisso dos menores de quatorze anos sem, por isso, proibir automaticamente sua oitiva.",
+            "a": true,
+            "why": "Dispensa de compromisso e proibição de depor são categorias distintas; regras especiais de proteção permanecem aplicáveis."
+          },
+          {
+            "q": "Sem impedimentos legais ou circunstâncias modificadoras, pena máxima exatamente de quatro anos está no limite de competência policial do art. 322 para fiança.",
+            "a": true,
+            "why": "A lei usa pena máxima 'não superior a quatro anos', incluindo igualdade. A concessão não é automática."
+          },
+          {
+            "q": "No procedimento comum do CPP, a decisão interlocutória que revoga preventiva e a sentença definitiva absolutória por juiz singular são ambas impugnadas por apelação.",
+            "a": false,
+            "why": "A primeira é hipótese do art. 581, V (recurso em sentido estrito); a segunda, do art. 593, I (apelação)."
+          }
+        ],
+        "legal_review": {
+          "scope": "Conferência pontual em 11/10/2026 dos dispositivos dos seis novos casos e exercícios deste complemento. A revisão integral anterior e os alertas preexistentes foram preservados; esta ampliação não certifica nova auditoria integral de todos os dispositivos ou da jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.487/2026",
+              "summary": "Institui medidas de enfrentamento e repressão ao crime de violência sexual contra criança ou adolescente, inclusive no ambiente digital e com uso de inteligência artificial; e altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), e a Lei nº 12.850, de 2 de agosto de 2013 (Lei de Combate ao Crime Organizado), para recrudescer o tratamento penal aos criminosos sexuais.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 313"
+              ]
+            },
+            {
+              "title": "Lei 15.438/2026 — decadência em violência doméstica",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15438.htm",
+              "articles": [
+                "Art. 38, §2"
+              ],
+              "summary": "Prazo especial de doze meses para queixa ou representação na hipótese legal, distinto da regra geral de seis meses; não altera por si a natureza da ação.",
+              "vigency": "Publicação em 19/06/2026; art. 5º: vigência na publicação. Fatos anteriores exigem análise intertemporal própria.",
+              "state": "effective"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.358/2026",
+              "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+              "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 3-B",
+                "Art. 78",
+                "Art. 310",
+                "Art. 313",
+                "Art. 584"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15280.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.280/2025",
+              "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para agravar a pena dos crimes contra a dignidade sexual de pessoa vulnerável; o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para prever medidas protetivas de urgência a vítimas de crimes contra a dignidade sexual e em situação de especial vulnerabilidade; a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para prever a monitoração eletrônica dos condenados por crime contra a dignidade sexual; a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para estabelecer mecanismos de proteção a crianças e a adolescentes vítimas de crimes contra a dignidade sexual; e a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para assegurar assistência psicológica e social especializada às pessoas com deficiência vítimas de crimes contra a dignidade sexual e a suas famílias.",
+              "vigency": "Art. 7º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 300-A",
+                "Art. 350",
+                "Art. 350-A",
+                "Art. 350-B"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15272.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.272/2025",
+              "summary": "Altera o Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para dispor sobre as circunstâncias que recomendam a conversão da prisão em flagrante em preventiva, sobre a coleta de material biológico para obtenção e armazenamento do perfil genético do custodiado e sobre os critérios para aferição da periculosidade do agente para concessão de prisão preventiva, inclusive quando da audiência de custódia.",
+              "vigency": "Art. 2º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 310",
+                "Art. 310-A",
+                "Art. 312"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "title": "Código de Processo Penal — leitura atualizada — fonte oficial dos novos casos",
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+              "sha256": "2364c079adebe33e8f70271338ca3d646e122bc1db9494734a881b1c91ae73e1"
+            },
+            {
+              "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840552",
+              "title": "STF — julgamento das ADIs do juiz das garantias"
+            }
+          ],
+          "checked_at": "2026-10-11T18:19:17.319175+00:00",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma.",
+            "Seis casos com variações e seis itens de julgamento adicionados; seis flashcards anexados sem alterar índices ou conteúdo dos anteriores."
+          ],
+          "course_slug": "codigo-processo-penal"
+        },
+        "law_version_checked_at": "2026-10-11T18:19:17.319175+00:00"
+      }
+    }
+  ],
+  "courses": [],
+  "enrichments": []
+}
