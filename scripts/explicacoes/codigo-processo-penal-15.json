@@ -1,0 +1,429 @@
+{
+  "course_slug": "codigo-processo-penal",
+  "law": "Código de Processo Penal — lote 15: arts. 590 a 648",
+  "units": {
+    "art-590": {
+      "simples": "Quando for impossível ao escrivão extrair o traslado no prazo da lei, poderá o juiz prorrogá-lo até o dobro.",
+      "pontos": ["Impossibilidade de extrair o traslado no prazo: o juiz pode prorrogá-lo até o dobro."],
+      "atencao": ["Prorrogação limitada ao dobro do prazo."],
+      "exemplo": "Com muitas peças, o juiz dobra o prazo do traslado.",
+      "prova": ["Assertiva que permite prorrogação indefinida do prazo do traslado erra: é até o dobro."],
+      "termos": [],
+      "remissoes": ["Art. 587"]
+    },
+    "art-591": {
+      "simples": "Os recursos serão apresentados ao juiz ou tribunal ad quem, dentro de cinco dias da publicação da resposta do juiz a quo, ou entregues ao Correio dentro do mesmo prazo.",
+      "pontos": ["Apresentação ao juízo ad quem em cinco dias da publicação da resposta do juiz a quo.", "Ou entrega ao Correio no mesmo prazo."],
+      "atencao": ["Prazo de cinco dias."],
+      "exemplo": "A parte entrega o recurso ao Correio em cinco dias da publicação da resposta do juiz.",
+      "prova": ["Assertiva que fixa em dez dias o prazo de apresentação ao juízo ad quem erra: são cinco dias."],
+      "termos": [{ "termo": "Juízo a quo / ad quem", "significado": "Juízo de origem e juízo de destino do recurso." }],
+      "remissoes": ["Art. 589"]
+    },
+    "art-592": {
+      "simples": "Publicada a decisão do juiz ou do tribunal ad quem, deverão os autos ser devolvidos, dentro de cinco dias, ao juiz a quo.",
+      "pontos": ["Publicada a decisão do juízo ad quem, os autos voltam ao juiz a quo em cinco dias."],
+      "atencao": ["Prazo de cinco dias para devolução."],
+      "exemplo": "Julgado o recurso, os autos retornam ao juízo de origem em cinco dias.",
+      "prova": ["Assertiva que dispensa a devolução dos autos ao juiz a quo erra."],
+      "termos": [],
+      "remissoes": ["Art. 591"]
+    },
+    "art-593": {
+      "simples": "Caberá apelação no prazo de 5 dias das sentenças definitivas de condenação ou absolvição proferidas por juiz singular; das decisões definitivas, ou com força de definitivas, proferidas por juiz singular nos casos não previstos no Capítulo anterior (recurso em sentido estrito); e das decisões do Tribunal do Júri quando ocorrer nulidade posterior à pronúncia; for a sentença do juiz-presidente contrária à lei expressa ou à decisão dos jurados; houver erro ou injustiça no tocante à aplicação da pena ou da medida de segurança; ou for a decisão dos jurados manifestamente contrária à prova dos autos. Se a sentença do juiz-presidente for contrária à lei expressa ou divergir das respostas dos jurados, o tribunal fará a devida retificação.",
+      "pontos": ["I: sentenças definitivas do juiz singular.", "II: decisões definitivas ou com força de definitivas, fora do rol do recurso em sentido estrito.", "III: Júri: nulidade posterior à pronúncia; sentença contrária à lei ou à decisão dos jurados; erro ou injustiça na pena; decisão manifestamente contrária à prova.", "Prazo de 5 dias."],
+      "atencao": ["Apelação contra o Júri tem fundamentos TAXATIVOS (alíneas a a d).", "Apelação: 5 dias."],
+      "exemplo": "Decisão dos jurados manifestamente contrária à prova dos autos desafia apelação.",
+      "prova": ["Assertiva que admite apelação contra o Júri por qualquer motivo erra: os fundamentos do inciso III são taxativos."],
+      "termos": [],
+      "remissoes": ["Art. 581", "Art. 600"]
+    },
+    "art-596": {
+      "simples": "A apelação da sentença absolutória não impedirá que o réu seja posto imediatamente em liberdade. A apelação não suspenderá a execução da medida de segurança aplicada provisoriamente.",
+      "pontos": ["Apelação da absolvição não impede a liberdade imediata do réu.", "Apelação não suspende a medida de segurança provisória."],
+      "atencao": ["Absolvição: liberdade imediata."],
+      "exemplo": "O réu absolvido é solto, mesmo que o MP apele.",
+      "prova": ["Assertiva que mantém o réu preso até o julgamento da apelação contra a absolvição erra."],
+      "termos": [],
+      "remissoes": ["Art. 597"]
+    },
+    "art-597": {
+      "simples": "A apelação de sentença condenatória terá efeito suspensivo, salvo o disposto no art. 393, a aplicação provisória de interdições de direitos e de medidas de segurança (arts. 374 e 378), e o caso de suspensão condicional de pena.",
+      "pontos": ["Apelação da condenação tem efeito suspensivo, em regra.", "Ressalvas: aplicação provisória de interdições e de medidas de segurança, e suspensão condicional da pena."],
+      "atencao": ["Efeito suspensivo não impede a prisão preventiva fundamentada."],
+      "exemplo": "Apelação da condenação suspende os efeitos da sentença, salvo as ressalvas legais.",
+      "prova": ["Assertiva que nega efeito suspensivo à apelação da sentença condenatória em qualquer hipótese erra."],
+      "termos": [],
+      "remissoes": ["Art. 596"]
+    },
+    "art-598": {
+      "simples": "Nos crimes de competência do Tribunal do Júri, ou do juiz singular, se da sentença não for interposta apelação pelo Ministério Público no prazo legal, o ofendido ou qualquer das pessoas enumeradas no art. 31, ainda que não se tenha habilitado como assistente, poderá interpor apelação, que não terá, porém, efeito suspensivo. O prazo para interposição desse recurso será de quinze dias e correrá do dia em que terminar o do Ministério Público.",
+      "pontos": ["Apelação supletiva do ofendido ou legitimados do art. 31.", "Cabe se o MP não apelar no prazo legal.", "Sem efeito suspensivo.", "Prazo de quinze dias, a contar do fim do prazo do MP."],
+      "atencao": ["Ofendido NÃO habilitado como assistente tem quinze dias, a contar do fim do prazo do MP."],
+      "exemplo": "O MP não apela, e a vítima, não habilitada, apela em quinze dias.",
+      "prova": ["Assertiva que fixa em cinco dias o prazo da apelação supletiva do ofendido não habilitado erra: são quinze dias."],
+      "termos": [],
+      "remissoes": ["Art. 31", "Art. 271"]
+    },
+    "art-599": {
+      "simples": "As apelações poderão ser interpostas quer em relação a todo o julgado, quer em relação a parte dele.",
+      "pontos": ["Apelação total ou parcial."],
+      "atencao": ["Efeito devolutivo limitado ao que foi impugnado."],
+      "exemplo": "A defesa apela apenas da dosimetria da pena.",
+      "prova": ["Assertiva que obriga a impugnação de todo o julgado erra."],
+      "termos": [],
+      "remissoes": ["Art. 593"]
+    },
+    "art-600": {
+      "simples": "Assinado o termo de apelação, o apelante e, depois dele, o apelado terão o prazo de oito dias cada um para oferecer razões, salvo nos processos de contravenção, em que o prazo será de três dias. Se houver assistente, este arrazoará, no prazo de três dias, após o Ministério Público. Se a ação penal for movida pela parte ofendida, o Ministério Público terá vista dos autos no mesmo prazo. Quando forem dois ou mais os apelantes ou apelados, os prazos serão comuns. Se o apelante declarar, na petição ou no termo, que deseja arrazoar na superior instância, os autos serão remetidos ao tribunal ad quem, onde será aberta vista às partes.",
+      "pontos": ["Razões: oito dias para cada parte (contravenção: três dias).", "Assistente: três dias após o MP.", "Ação privada: MP tem vista no mesmo prazo.", "Vários apelantes ou apelados: prazos comuns.", "Razões na instância superior, se o apelante declarar."],
+      "atencao": ["Oito dias para as razões; três para contravenção e assistente."],
+      "exemplo": "O apelante tem oito dias para apresentar as razões, e o apelado, outros oito.",
+      "prova": ["Assertiva que fixa em cinco dias o prazo das razões de apelação erra: são oito dias."],
+      "termos": [],
+      "remissoes": ["Art. 593", "Art. 601"]
+    },
+    "art-601": {
+      "simples": "Findos os prazos para razões, os autos serão remetidos à instância superior, com as razões ou sem elas, no prazo de 5 dias, salvo no caso do art. 603, segunda parte, em que o prazo será de trinta dias. Se houver mais de um réu, e não houverem todos sido julgados, ou não tiverem todos apelado, caberá ao apelante promover a extração do traslado dos autos, o qual deverá ser remetido à instância superior no prazo de trinta dias. As despesas do traslado correrão por conta de quem o solicitar, salvo se o pedido for de réu pobre ou do Ministério Público.",
+      "pontos": ["Remessa à instância superior em cinco dias após as razões.", "Exceção do art. 603, segunda parte: trinta dias.", "Vários réus: traslado promovido pelo apelante, em trinta dias.", "Despesas por conta de quem solicitar, salvo réu pobre ou MP."],
+      "atencao": ["Cinco dias (regra) e trinta dias (traslado)."],
+      "exemplo": "Findo o prazo das razões, os autos sobem ao tribunal em cinco dias.",
+      "prova": ["Assertiva que cobra as despesas do traslado do réu pobre erra."],
+      "termos": [],
+      "remissoes": ["Art. 600", "Art. 603"]
+    },
+    "art-602": {
+      "simples": "Os autos serão, dentro dos prazos do artigo anterior, apresentados ao tribunal ad quem ou entregues ao Correio, sob registro.",
+      "pontos": ["Autos apresentados ao tribunal ad quem ou entregues ao Correio, sob registro, nos prazos do art. 601."],
+      "atencao": ["Envio com registro."],
+      "exemplo": "Os autos são remetidos ao tribunal por Correio registrado.",
+      "prova": ["Assertiva que dispensa registro no envio postal dos autos erra."],
+      "termos": [],
+      "remissoes": ["Art. 601"]
+    },
+    "art-603": {
+      "simples": "A apelação subirá nos autos originais e, a não ser no Distrito Federal e nas comarcas que forem sede de Tribunal de Apelação, ficará em cartório traslado dos termos essenciais do processo referidos no art. 564, III.",
+      "pontos": ["Apelação sobe nos autos originais.", "Ficam em cartório traslados dos termos essenciais (art. 564, III), salvo nas sedes de tribunal."],
+      "atencao": ["Traslado dos termos essenciais fica em cartório."],
+      "exemplo": "Os autos originais sobem, e o cartório conserva o traslado dos termos essenciais.",
+      "prova": ["Assertiva que manda enviar ao tribunal apenas o traslado, mantendo os originais em cartório, erra."],
+      "termos": [],
+      "remissoes": ["Art. 564", "Art. 601"]
+    },
+    "art-609": {
+      "simples": "Os recursos, apelações e embargos serão julgados pelos Tribunais de Justiça, câmaras ou turmas criminais, de acordo com a competência estabelecida nas leis de organização judiciária. Quando não for unânime a decisão de segunda instância desfavorável ao réu, admitem-se embargos infringentes e de nulidade, que poderão ser opostos dentro de 10 dias, a contar da publicação do acórdão. Se o desacordo for parcial, os embargos serão restritos à matéria objeto de divergência.",
+      "pontos": ["Recursos julgados por Tribunais de Justiça, câmaras ou turmas criminais.", "Decisão não unânime desfavorável ao réu: embargos infringentes e de nulidade.", "Prazo de 10 dias da publicação do acórdão.", "Divergência parcial: embargos restritos à matéria divergente."],
+      "atencao": ["Embargos infringentes: só em favor do réu e se a decisão não for unânime.", "Prazo de 10 dias."],
+      "exemplo": "Voto vencido favorável ao réu permite os embargos infringentes em 10 dias.",
+      "prova": ["Assertiva que admite embargos infringentes em favor da acusação erra: apenas em favor do réu."],
+      "termos": [{ "termo": "Embargos infringentes", "significado": "Recurso contra decisão não unânime desfavorável ao réu." }],
+      "remissoes": ["Art. 613"]
+    },
+    "art-610": {
+      "simples": "Nos recursos em sentido estrito, com exceção do de habeas corpus, e nas apelações interpostas das sentenças em processo de contravenção ou de crime a que a lei comine pena de detenção, os autos irão imediatamente com vista ao procurador-geral pelo prazo de cinco dias e, em seguida, passarão, por igual prazo, ao relator, que pedirá designação de dia para o julgamento. Anunciado o julgamento e apregoadas as partes, o relator fará a exposição do feito e o presidente concederá, pelo prazo de 10 minutos, a palavra aos advogados ou às partes que a solicitarem e ao procurador-geral, quando o requerer, por igual prazo.",
+      "pontos": ["Recursos em sentido estrito (exceto habeas corpus) e apelações em contravenção ou crime com detenção.", "Vista ao procurador-geral por cinco dias e depois ao relator por igual prazo.", "Sustentação oral de 10 minutos."],
+      "atencao": ["Rito da detenção: sem revisor.", "Sustentação oral: 10 minutos."],
+      "exemplo": "Em apelação de crime punido com detenção, os autos vão ao procurador-geral e depois ao relator.",
+      "prova": ["Assertiva que prevê revisor no rito de apelação de crime punido com detenção erra."],
+      "termos": [],
+      "remissoes": ["Art. 613"]
+    },
+    "art-612": {
+      "simples": "Os recursos de habeas corpus, designado o relator, serão julgados na primeira sessão.",
+      "pontos": ["Recursos de habeas corpus são julgados na primeira sessão após a designação do relator."],
+      "atencao": ["Celeridade do habeas corpus."],
+      "exemplo": "Designado o relator, o recurso de habeas corpus é julgado na primeira sessão.",
+      "prova": ["Assertiva que submete o recurso de habeas corpus ao rito comum, sem preferência, erra."],
+      "termos": [],
+      "remissoes": ["Art. 647"]
+    },
+    "art-613": {
+      "simples": "As apelações interpostas das sentenças proferidas em processos por crime a que a lei comine pena de reclusão deverão ser processadas e julgadas pela forma estabelecida no art. 610, com as seguintes modificações: exarado o relatório nos autos, passarão estes ao revisor, que terá igual prazo para o exame do processo e pedirá designação de dia para o julgamento; os prazos serão ampliados ao dobro; e o tempo para os debates será de um quarto de hora.",
+      "pontos": ["Apelação em crime de reclusão segue o art. 610 com modificações.", "Há revisor.", "Prazos em dobro.", "Debates de um quarto de hora."],
+      "atencao": ["Reclusão: revisor, prazos em dobro e quinze minutos de debate."],
+      "exemplo": "A apelação de crime punido com reclusão tem revisor e prazos em dobro.",
+      "prova": ["Assertiva que dispensa revisor na apelação de crime punido com reclusão erra."],
+      "termos": [],
+      "remissoes": ["Art. 610"]
+    },
+    "art-614": {
+      "simples": "No caso de impossibilidade de observância de qualquer dos prazos marcados nos arts. 610 e 613, os motivos da demora serão declarados nos autos.",
+      "pontos": ["Prazos dos arts. 610 e 613 não cumpridos: motivos da demora declarados nos autos."],
+      "atencao": ["Prazos impróprios, mas com dever de justificar."],
+      "exemplo": "O relator declara nos autos o motivo da demora para pedir o dia do julgamento.",
+      "prova": ["Assertiva que dispensa a declaração dos motivos da demora nos autos erra."],
+      "termos": [],
+      "remissoes": ["Art. 610", "Art. 613"]
+    },
+    "art-615": {
+      "simples": "O tribunal decidirá por maioria de votos. Em todos os julgamentos em matéria penal ou processual penal em órgãos colegiados, havendo empate, prevalecerá a decisão mais favorável ao indivíduo imputado, proclamando-se de imediato esse resultado, ainda que, nas hipóteses de vaga aberta a ser preenchida, de impedimento, de suspeição ou de ausência, tenha sido o julgamento tomado sem a totalidade dos membros. O acórdão será apresentado à conferência na primeira sessão seguinte à do julgamento, ou no prazo de duas sessões, pelo juiz incumbido de lavrá-lo.",
+      "pontos": ["Decisão por maioria de votos.", "Empate: prevalece a decisão mais favorável ao imputado.", "Acórdão apresentado na primeira sessão seguinte ou em duas sessões."],
+      "atencao": ["Empate favorece o IMPUTADO (in dubio pro reo)."],
+      "exemplo": "Julgamento empatado em habeas corpus: prevalece a decisão favorável ao paciente.",
+      "prova": ["Assertiva que resolve o empate pelo voto de qualidade do presidente, contra o imputado, erra."],
+      "termos": [],
+      "remissoes": ["Art. 616"]
+    },
+    "art-616": {
+      "simples": "No julgamento das apelações poderá o tribunal, câmara ou turma proceder a novo interrogatório do acusado, reinquirir testemunhas ou determinar outras diligências.",
+      "pontos": ["Na apelação, o tribunal pode reinterrogar o acusado, reinquirir testemunhas ou determinar diligências."],
+      "atencao": ["Poder instrutório do tribunal na apelação."],
+      "exemplo": "O tribunal determina nova perícia ao julgar a apelação.",
+      "prova": ["Assertiva que impede qualquer diligência instrutória pelo tribunal na apelação erra."],
+      "termos": [],
+      "remissoes": ["Art. 617"]
+    },
+    "art-617": {
+      "simples": "O tribunal, câmara ou turma atenderá nas suas decisões ao disposto nos arts. 383, 386 e 387, no que for aplicável, não podendo, porém, ser agravada a pena quando somente o réu houver apelado da sentença (proibição da reformatio in pejus).",
+      "pontos": ["Tribunal aplica os arts. 383, 386 e 387, no que couber.", "Se só o réu apelou, a pena não pode ser agravada."],
+      "atencao": ["Proibição de reformatio in pejus."],
+      "exemplo": "Apenas o réu apela, e o tribunal não pode aumentar sua pena.",
+      "prova": ["Assertiva que permite ao tribunal agravar a pena em apelação exclusiva da defesa erra."],
+      "termos": [{ "termo": "Reformatio in pejus", "significado": "Piorar a situação do recorrente em seu próprio recurso." }],
+      "remissoes": ["Art. 383", "Art. 386"]
+    },
+    "art-618": {
+      "simples": "Os regimentos dos Tribunais de Apelação estabelecerão as normas complementares para o processo e julgamento dos recursos e apelações.",
+      "pontos": ["Regimentos internos complementam o processo e julgamento dos recursos."],
+      "atencao": ["Normas complementares regimentais."],
+      "exemplo": "O regimento interno fixa detalhes da sessão de julgamento.",
+      "prova": ["Assertiva que veda aos regimentos regular o processamento dos recursos erra."],
+      "termos": [],
+      "remissoes": ["Art. 628"]
+    },
+    "art-619": {
+      "simples": "Aos acórdãos proferidos pelos Tribunais de Apelação, câmaras ou turmas, poderão ser opostos embargos de declaração, no prazo de dois dias contados da sua publicação, quando houver na sentença ambiguidade, obscuridade, contradição ou omissão.",
+      "pontos": ["Embargos de declaração contra acórdão.", "Prazo de dois dias da publicação.", "Cabimento: ambiguidade, obscuridade, contradição ou omissão."],
+      "atencao": ["Prazo de dois dias."],
+      "exemplo": "A parte opõe embargos de declaração por omissão no acórdão em dois dias.",
+      "prova": ["Assertiva que fixa em cinco dias o prazo dos embargos de declaração de acórdão erra: são dois dias."],
+      "termos": [],
+      "remissoes": ["Art. 382"]
+    },
+    "art-620": {
+      "simples": "Os embargos de declaração serão deduzidos em requerimento de que constem os pontos em que o acórdão é ambíguo, obscuro, contraditório ou omisso. O requerimento será apresentado pelo relator e julgado, independentemente de revisão, na primeira sessão. Se não preenchidas as condições enumeradas neste artigo, o relator indeferirá desde logo o requerimento.",
+      "pontos": ["Requerimento indica os pontos ambíguos, obscuros, contraditórios ou omissos.", "Julgado na primeira sessão, sem revisão.", "Indeferimento liminar pelo relator se faltarem as condições."],
+      "atencao": ["Julgados na primeira sessão."],
+      "exemplo": "O relator indefere liminarmente embargos que não indicam o ponto omisso.",
+      "prova": ["Assertiva que exige revisor no julgamento dos embargos de declaração erra."],
+      "termos": [],
+      "remissoes": ["Art. 619"]
+    },
+    "art-621": {
+      "simples": "A revisão dos processos findos será admitida quando a sentença condenatória for contrária ao texto expresso da lei penal ou à evidência dos autos; quando se fundar em depoimentos, exames ou documentos comprovadamente falsos; e quando, após a sentença, se descobrirem novas provas de inocência do condenado ou de circunstância que determine ou autorize diminuição especial da pena.",
+      "pontos": ["I: sentença contrária à lei penal ou à evidência dos autos.", "II: sentença fundada em provas comprovadamente falsas.", "III: novas provas de inocência ou de circunstância que diminua a pena."],
+      "atencao": ["A revisão criminal só beneficia o condenado (pro reo)."],
+      "exemplo": "Depois da condenação, surge prova nova de inocência: cabe revisão criminal.",
+      "prova": ["Assertiva que admite revisão criminal em favor da acusação erra."],
+      "termos": [{ "termo": "Revisão criminal", "significado": "Ação para rever condenação definitiva em favor do réu." }],
+      "remissoes": ["Art. 622"]
+    },
+    "art-622": {
+      "simples": "A revisão poderá ser requerida em qualquer tempo, antes da extinção da pena ou após. Não será admissível a reiteração do pedido, salvo se fundado em novas provas.",
+      "pontos": ["Revisão a qualquer tempo, antes ou depois da extinção da pena.", "Reiteração do pedido só com novas provas."],
+      "atencao": ["Sem prazo decadencial."],
+      "exemplo": "Mesmo extinta a pena, o condenado pode pedir revisão.",
+      "prova": ["Assertiva que fixa prazo para a revisão criminal erra: pode ser requerida a qualquer tempo."],
+      "termos": [],
+      "remissoes": ["Art. 621"]
+    },
+    "art-623": {
+      "simples": "A revisão poderá ser pedida pelo próprio réu ou por procurador legalmente habilitado ou, no caso de morte do réu, pelo cônjuge, ascendente, descendente ou irmão.",
+      "pontos": ["Legitimados: o réu, procurador habilitado.", "Morte do réu: cônjuge, ascendente, descendente ou irmão."],
+      "atencao": ["Mesma ordem de sucessão do art. 31."],
+      "exemplo": "Falecido o condenado, o cônjuge requer a revisão.",
+      "prova": ["Assertiva que nega legitimidade aos familiares após a morte do condenado erra."],
+      "termos": [],
+      "remissoes": ["Art. 31"]
+    },
+    "art-624": {
+      "simples": "As revisões criminais serão processadas e julgadas pelo Supremo Tribunal Federal, quanto às condenações por ele proferidas, e pelo Tribunal Federal de Recursos, Tribunais de Justiça ou de Alçada nos demais casos. No STF e no Tribunal Federal de Recursos, o processo e julgamento obedecerão ao regimento interno. Nos Tribunais de Justiça ou de Alçada, o julgamento será efetuado pelas câmaras ou turmas criminais, reunidas em sessão conjunta, quando houver mais de uma, e, no caso contrário, pelo tribunal pleno. Onde houver quatro ou mais câmaras ou turmas, poderão ser constituídos dois ou mais grupos de câmaras para o julgamento da revisão.",
+      "pontos": ["STF julga revisão de suas condenações.", "Tribunais de Justiça (e outros) nos demais casos.", "Câmaras reunidas em sessão conjunta ou tribunal pleno.", "Quatro ou mais câmaras: possíveis grupos de câmaras."],
+      "atencao": ["A competência atual segue a Constituição (STJ, TRFs)."],
+      "exemplo": "A revisão de condenação do Tribunal de Justiça é julgada pelas câmaras criminais reunidas.",
+      "prova": ["Assertiva que atribui ao juiz de primeira instância o julgamento da revisão criminal erra."],
+      "termos": [],
+      "remissoes": ["Art. 625"]
+    },
+    "art-625": {
+      "simples": "O requerimento será distribuído a um relator e a um revisor, devendo funcionar como relator um desembargador que não tenha pronunciado decisão em qualquer fase do processo. O requerimento será instruído com a certidão de haver passado em julgado a sentença condenatória e com as peças necessárias à comprovação dos fatos arguidos. O relator poderá determinar que se apensem os autos originais, se daí não advier dificuldade à execução normal da sentença. Se o relator julgar insuficientemente instruído o pedido, indeferi-lo-á in limine, dando recurso para as câmaras reunidas ou para o tribunal. Interposto o recurso por petição, o relator apresentará o processo em mesa para o julgamento. Se o requerimento não for indeferido in limine, abrir-se-á vista ao procurador-geral, que dará parecer no prazo de dez dias; em seguida, relator e revisor examinarão os autos em igual prazo, e o pedido será julgado na sessão designada.",
+      "pontos": ["Relator e revisor; relator não pode ter decidido o caso antes.", "Instrução com certidão do trânsito em julgado e peças.", "Apensamento dos autos originais, se possível.", "Indeferimento in limine, com recurso.", "Parecer do procurador-geral em dez dias; relator e revisor em igual prazo."],
+      "atencao": ["Relator imparcial: sem decisão prévia no processo."],
+      "exemplo": "O requerimento de revisão vem com a certidão do trânsito em julgado.",
+      "prova": ["Assertiva que permite ao desembargador que já decidiu o caso funcionar como relator da revisão erra."],
+      "termos": [],
+      "remissoes": ["Art. 624"]
+    },
+    "art-626": {
+      "simples": "Julgando procedente a revisão, o tribunal poderá alterar a classificação da infração, absolver o réu, modificar a pena ou anular o processo. De qualquer maneira, não poderá ser agravada a pena imposta pela decisão revista.",
+      "pontos": ["Revisão procedente: alterar a classificação, absolver, modificar a pena ou anular o processo.", "Vedado agravar a pena."],
+      "atencao": ["Proibição de agravamento da pena."],
+      "exemplo": "O tribunal reduz a pena na revisão criminal.",
+      "prova": ["Assertiva que permite agravar a pena na revisão criminal erra."],
+      "termos": [],
+      "remissoes": ["Art. 621"]
+    },
+    "art-627": {
+      "simples": "A absolvição implicará o restabelecimento de todos os direitos perdidos em virtude da condenação, devendo o tribunal, se for caso, impor a medida de segurança cabível.",
+      "pontos": ["Absolvição na revisão restabelece todos os direitos perdidos.", "Tribunal pode impor a medida de segurança cabível."],
+      "atencao": ["Efeito restituidor da absolvição."],
+      "exemplo": "Revisão absolve o condenado, que recupera seus direitos.",
+      "prova": ["Assertiva que mantém os efeitos da condenação após a absolvição na revisão erra."],
+      "termos": [],
+      "remissoes": ["Art. 626"]
+    },
+    "art-628": {
+      "simples": "Os regimentos internos dos Tribunais de Apelação estabelecerão as normas complementares para o processo e julgamento das revisões criminais.",
+      "pontos": ["Regimentos internos complementam o processamento das revisões criminais."],
+      "atencao": ["Normas regimentais complementares."],
+      "exemplo": "O regimento interno detalha o rito da revisão criminal.",
+      "prova": ["Assertiva que veda aos regimentos regular a revisão criminal erra."],
+      "termos": [],
+      "remissoes": ["Art. 618"]
+    },
+    "art-629": {
+      "simples": "À vista da certidão do acórdão que cassar a sentença condenatória, o juiz mandará juntá-la imediatamente aos autos, para inteiro cumprimento da decisão.",
+      "pontos": ["Certidão do acórdão que cassar a condenação é juntada imediatamente aos autos.", "Cumprimento integral da decisão."],
+      "atencao": ["Cumprimento imediato."],
+      "exemplo": "O juiz junta a certidão do acórdão e cumpre a decisão da revisão.",
+      "prova": ["Assertiva que adia a juntada da certidão do acórdão erra: é imediata."],
+      "termos": [],
+      "remissoes": ["Art. 626"]
+    },
+    "art-630": {
+      "simples": "O tribunal, se o interessado o requerer, poderá reconhecer o direito a uma justa indenização pelos prejuízos sofridos. Por essa indenização, que será liquidada no juízo cível, responderá a União, se a condenação tiver sido proferida pela justiça do Distrito Federal ou de Território, ou o Estado, se o tiver sido pela respectiva justiça. A indenização não será devida se o erro ou a injustiça da condenação proceder de ato ou falta imputável ao próprio impetrante, como a confissão ou a ocultação de prova em seu poder, ou se a acusação houver sido meramente privada.",
+      "pontos": ["Indenização por erro judiciário, a requerimento.", "Liquidação no juízo cível; responde a União ou o Estado.", "Não é devida: culpa do próprio impetrante (confissão, ocultação de prova) ou acusação meramente privada."],
+      "atencao": ["Indenização liquidada no cível."],
+      "exemplo": "Absolvido na revisão, o interessado pede indenização, liquidada no juízo cível.",
+      "prova": ["Assertiva que reconhece indenização mesmo quando o erro decorreu de confissão falsa do próprio condenado erra."],
+      "termos": [],
+      "remissoes": ["Art. 626"]
+    },
+    "art-631": {
+      "simples": "Quando, no curso da revisão, falecer a pessoa cuja condenação tiver de ser revista, o presidente do tribunal nomeará curador para a defesa.",
+      "pontos": ["Morte do condenado no curso da revisão: o presidente do tribunal nomeia curador."],
+      "atencao": ["Curador para a defesa."],
+      "exemplo": "O condenado morre durante a revisão, e um curador é nomeado.",
+      "prova": ["Assertiva que extingue a revisão com a morte do condenado erra: nomeia-se curador."],
+      "termos": [],
+      "remissoes": ["Art. 623"]
+    },
+    "art-637": {
+      "simples": "O recurso extraordinário não tem efeito suspensivo, e uma vez arrazoados pelo recorrido os autos do traslado, os originais baixarão à primeira instância, para a execução da sentença.",
+      "pontos": ["Recurso extraordinário sem efeito suspensivo.", "Após as razões do recorrido, os originais baixam à primeira instância para execução."],
+      "atencao": ["Sem efeito suspensivo: a execução não depende do julgamento do extraordinário."],
+      "exemplo": "Interposto o recurso extraordinário, a sentença pode ser executada.",
+      "prova": ["Assertiva que atribui efeito suspensivo ao recurso extraordinário erra."],
+      "termos": [],
+      "remissoes": ["Art. 638"]
+    },
+    "art-638": {
+      "simples": "O recurso extraordinário e o recurso especial serão processados e julgados no Supremo Tribunal Federal e no Superior Tribunal de Justiça na forma estabelecida por leis especiais, pela lei processual civil e pelos respectivos regimentos internos.",
+      "pontos": ["Extraordinário (STF) e especial (STJ) seguem leis especiais, a lei processual civil e os regimentos internos."],
+      "atencao": ["Processamento fora do CPP, por lei especial e CPC."],
+      "exemplo": "O recurso especial segue o rito previsto na lei processual civil e no regimento do STJ.",
+      "prova": ["Assertiva que submete o recurso especial exclusivamente ao rito do CPP erra."],
+      "termos": [],
+      "remissoes": ["Art. 637"]
+    },
+    "art-639": {
+      "simples": "Dar-se-á carta testemunhável da decisão que denegar o recurso, e da que, admitindo embora o recurso, obstar à sua expedição e seguimento para o juízo ad quem.",
+      "pontos": ["Carta testemunhável contra a decisão que denega recurso.", "Também contra a que obsta a sua expedição e seguimento."],
+      "atencao": ["Instrumento para destrancar recurso."],
+      "exemplo": "O juiz nega seguimento ao recurso, e a parte interpõe carta testemunhável.",
+      "prova": ["Assertiva que usa a carta testemunhável para impugnar o mérito da sentença erra."],
+      "termos": [{ "termo": "Carta testemunhável", "significado": "Recurso contra a denegação ou o trancamento de outro recurso." }],
+      "remissoes": ["Art. 640"]
+    },
+    "art-640": {
+      "simples": "A carta testemunhável será requerida ao escrivão ou ao secretário do tribunal, conforme o caso, nas quarenta e oito horas seguintes ao despacho que denegar o recurso, indicando o requerente as peças do processo que deverão ser trasladadas.",
+      "pontos": ["Requerida ao escrivão ou ao secretário do tribunal.", "Prazo de quarenta e oito horas do despacho que denegou o recurso.", "Indicação das peças a trasladar."],
+      "atencao": ["Prazo de 48 horas."],
+      "exemplo": "A parte requer a carta testemunhável em 48 horas e indica as peças.",
+      "prova": ["Assertiva que fixa em cinco dias o prazo da carta testemunhável erra: são quarenta e oito horas."],
+      "termos": [],
+      "remissoes": ["Art. 639"]
+    },
+    "art-641": {
+      "simples": "O escrivão ou o secretário do tribunal dará recibo da petição à parte e, no prazo máximo de cinco dias, no caso de recurso em sentido estrito, ou de sessenta dias, no caso de recurso extraordinário, fará entrega da carta, devidamente conferida e concertada.",
+      "pontos": ["Recibo da petição à parte.", "Entrega da carta em cinco dias (sentido estrito) ou sessenta dias (extraordinário)."],
+      "atencao": ["Cinco dias e sessenta dias."],
+      "exemplo": "O escrivão entrega a carta em até cinco dias, no caso de recurso em sentido estrito.",
+      "prova": ["Assertiva que fixa em trinta dias o prazo de entrega da carta no recurso extraordinário erra: são sessenta dias."],
+      "termos": [],
+      "remissoes": ["Art. 640"]
+    },
+    "art-642": {
+      "simples": "O escrivão ou o secretário do tribunal que se negar a dar o recibo, ou deixar de entregar, sob qualquer pretexto, o instrumento, será suspenso por trinta dias. O juiz ou o presidente do Tribunal de Apelação, em face de representação do testemunhante, imporá a pena e mandará que seja extraído o instrumento, sob a mesma sanção, pelo substituto do escrivão ou do secretário.",
+      "pontos": ["Recusa de recibo ou de entrega: suspensão do escrivão ou secretário por trinta dias.", "O juiz ou presidente impõe a pena e manda extrair o instrumento pelo substituto."],
+      "atencao": ["Suspensão de trinta dias."],
+      "exemplo": "O escrivão se recusa a dar recibo e sofre suspensão de trinta dias.",
+      "prova": ["Assertiva que fixa a suspensão em dez dias erra: são trinta dias."],
+      "termos": [],
+      "remissoes": ["Art. 641"]
+    },
+    "art-643": {
+      "simples": "Extraído e autuado o instrumento, observar-se-á o disposto nos arts. 588 a 592, no caso de recurso em sentido estrito, ou o processo estabelecido para o recurso extraordinário, se deste se tratar.",
+      "pontos": ["Instrumento extraído e autuado: arts. 588 a 592 (recurso em sentido estrito).", "Ou o processo do recurso extraordinário."],
+      "atencao": ["Segue o rito do recurso denegado."],
+      "exemplo": "O instrumento da carta testemunhável segue os arts. 588 a 592.",
+      "prova": ["Assertiva que cria rito próprio para a carta testemunhável erra: segue o do recurso denegado."],
+      "termos": [],
+      "remissoes": ["Art. 588"]
+    },
+    "art-644": {
+      "simples": "O tribunal, câmara ou turma a que competir o julgamento da carta, se desta tomar conhecimento, mandará processar o recurso ou, se estiver suficientemente instruída, decidirá logo, de meritis.",
+      "pontos": ["Conhecida a carta, o tribunal manda processar o recurso.", "Ou, se bem instruída, decide logo o mérito."],
+      "atencao": ["Possibilidade de julgar o mérito direto."],
+      "exemplo": "Carta bem instruída permite ao tribunal julgar desde logo o mérito.",
+      "prova": ["Assertiva que impede o tribunal de julgar o mérito pela carta testemunhável erra, se suficientemente instruída."],
+      "termos": [],
+      "remissoes": ["Art. 639"]
+    },
+    "art-645": {
+      "simples": "O processo da carta testemunhável na instância superior seguirá o processo do recurso denegado.",
+      "pontos": ["Na instância superior, a carta segue o processo do recurso denegado."],
+      "atencao": ["Rito do recurso denegado."],
+      "exemplo": "A carta contra a denegação de recurso em sentido estrito segue o rito desse recurso.",
+      "prova": ["Assertiva que cria rito autônomo para a carta na instância superior erra."],
+      "termos": [],
+      "remissoes": ["Art. 643"]
+    },
+    "art-646": {
+      "simples": "A carta testemunhável não terá efeito suspensivo, de modo que a decisão impugnada continua a produzir efeitos enquanto ela é julgada.",
+      "pontos": ["Carta testemunhável sem efeito suspensivo."],
+      "atencao": ["Não suspende a decisão impugnada."],
+      "exemplo": "A decisão continua a produzir efeitos durante a carta testemunhável.",
+      "prova": ["Assertiva que atribui efeito suspensivo à carta testemunhável erra."],
+      "termos": [],
+      "remissoes": ["Art. 639"]
+    },
+    "art-647": {
+      "simples": "Dar-se-á habeas corpus sempre que alguém sofrer ou se achar na iminência de sofrer violência ou coação ilegal na sua liberdade de ir e vir, salvo nos casos de punição disciplinar.",
+      "pontos": ["Habeas corpus contra violência ou coação ilegal à liberdade de locomoção.", "Cabe também quando há iminência (habeas corpus preventivo).", "Exceção: punição disciplinar (militar)."],
+      "atencao": ["Habeas corpus preventivo (iminência) e liberatório (já preso).", "A punição disciplinar militar: só quanto a ilegalidades formais (Constituição)."],
+      "exemplo": "Pessoa ameaçada de prisão ilegal impetra habeas corpus preventivo.",
+      "prova": ["Assertiva que restringe o habeas corpus a quem já está preso erra: cabe também na iminência de coação."],
+      "termos": [{ "termo": "Habeas corpus preventivo", "significado": "Impetrado contra ameaça de coação ilegal." }],
+      "remissoes": ["Art. 648"]
+    },
+    "art-647-a": {
+      "simples": "No âmbito de sua competência jurisdicional, qualquer autoridade judicial poderá expedir de ofício ordem de habeas corpus, individual ou coletivo, quando, no curso de qualquer processo judicial, verificar que, por violação ao ordenamento jurídico, alguém sofre ou se acha ameaçado de sofrer violência ou coação em sua liberdade de locomoção. A ordem de habeas corpus poderá ser concedida de ofício pelo juiz ou pelo tribunal em processo de competência originária ou recursal, ainda que não conhecidos a ação ou o recurso em que veiculado o pedido de cessação de coação ilegal.",
+      "pontos": ["Qualquer autoridade judicial pode expedir habeas corpus de ofício, individual ou coletivo.", "Quando verificar, em qualquer processo, coação ilegal à liberdade.", "Pode ser concedido mesmo sem conhecer a ação ou o recurso."],
+      "atencao": ["Incluído pela Lei nº 14.836, de 2024.", "Habeas corpus de ofício, individual ou coletivo."],
+      "exemplo": "O tribunal, ao analisar um recurso, concede habeas corpus de ofício diante de coação ilegal.",
+      "prova": ["Assertiva que condiciona o habeas corpus de ofício ao conhecimento do recurso erra: pode ser concedido ainda que a ação ou o recurso não seja conhecido."],
+      "termos": [],
+      "remissoes": ["Art. 647"]
+    },
+    "art-648": {
+      "simples": "A coação considerar-se-á ilegal quando não houver justa causa; quando alguém estiver preso por mais tempo do que determina a lei; quando quem ordenar a coação não tiver competência para fazê-lo; quando houver cessado o motivo que a autorizou; quando não for alguém admitido a prestar fiança, nos casos em que a lei a autoriza; quando o processo for manifestamente nulo; e quando extinta a punibilidade.",
+      "pontos": ["I: falta de justa causa.", "II: prisão por mais tempo que o legal.", "III: autoridade incompetente.", "IV: cessou o motivo da coação.", "V: negada fiança cabível.", "VI: processo manifestamente nulo.", "VII: punibilidade extinta."],
+      "atencao": ["Rol de hipóteses de coação ilegal."],
+      "exemplo": "Preso por mais tempo que a lei determina: coação ilegal.",
+      "prova": ["Assertiva que exclui a extinção da punibilidade das hipóteses de coação ilegal erra."],
+      "termos": [],
+      "remissoes": ["Art. 647"]
+    }
+  }
+}
