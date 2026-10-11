@@ -202,7 +202,7 @@ function Index() {
   useReveal();
 
   return (
-    <div className="lp">
+    <div className={`lp${heroReady ? " is-ready" : " is-intro"}`}>
       <header className="lp-header" data-scrolled={scrolled}>
         <div className="lp-container lp-header__bar">
           <Link to="/" aria-label="Norte Concurso — início">

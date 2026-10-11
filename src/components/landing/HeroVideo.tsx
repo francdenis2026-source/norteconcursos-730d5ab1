@@ -57,7 +57,7 @@ export function HeroVideo({ onDone }: { onDone?: () => void }) {
       poster="/media/hero/hero-intro-poster.webp"
       muted
       playsInline
-      preload="none"
+      preload="auto"
       aria-hidden="true"
       onEnded={finish}
       onError={finish}

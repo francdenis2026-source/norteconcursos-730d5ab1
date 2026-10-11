@@ -10105,3 +10105,37 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     width: 84%;
   }
 }
+
+/* Mobile opening sequence: the intro video owns the first viewport, then the
+   hero content enters after the video finishes instead of stacking over it. */
+@media (max-width: 767px) {
+  .lp.is-intro .lp-header {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .lp.is-intro .lp-hero {
+    min-height: 100svh;
+  }
+  .lp.is-intro .lp-hero__body {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .lp.is-intro .lp-hero__shade {
+    background: linear-gradient(180deg, oklch(0.05 0.02 263 / 0.18), oklch(0.05 0.02 263 / 0.48));
+  }
+  .lp.is-ready .lp-header,
+  .lp.is-ready .lp-hero__body {
+    opacity: 1;
+    transition: opacity 0.7s var(--ease-out);
+  }
+  .lp-hero__media::before {
+    background-image: url("/media/hero/careers-team.webp");
+    background-position: 68% center;
+    filter: saturate(1.08) contrast(1.05);
+  }
+  .lp-hero__shade {
+    background:
+      linear-gradient(180deg, oklch(0.08 0.025 263 / 0.16) 0%, transparent 30%, oklch(0.08 0.025 263 / 0.9) 88%, var(--ink-deep) 100%),
+      linear-gradient(90deg, oklch(0.08 0.025 263 / 0.3), transparent 72%);
+  }
+}
