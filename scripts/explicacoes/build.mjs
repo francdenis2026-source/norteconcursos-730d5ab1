@@ -7,16 +7,23 @@
 import fs from "node:fs";
 
 const [, , expPath, unitsPath, ...rest] = process.argv;
-const exp = JSON.parse(fs.readFileSync(expPath, "utf8"));
+const exp = { units: {} };
+for (const f of expPath.split(",")) { // vários lotes da mesma lei: arquivo1.json,arquivo2.json
+  const part = JSON.parse(fs.readFileSync(f, "utf8"));
+  exp.course_slug ??= part.course_slug; exp.law ??= part.law.replace(/ — lote.*/, "");
+  for (const k of Object.keys(part.units)) { if (exp.units[k]) throw new Error(`artigo repetido entre lotes: ${k}`); }
+  Object.assign(exp.units, part.units);
+}
 const allUnits = JSON.parse(fs.readFileSync(unitsPath, "utf8"));
 const courseId = process.env.COURSE_ID;
-const units = allUnits.filter((u) => u.course_id === courseId);
+const partial = process.argv.includes("--partial");
+const units = courseId ? allUnits.filter((u) => u.course_id === courseId) : allUnits;
 const byKey = new Map(units.map((u) => [u.unit_key, u]));
 const corpus = units.map((u) => u.body_text).join("\n");
 const corpusNums = new Set(corpus.match(/\d+/g));
 const errors = [];
 
-for (const u of units) if (u.content_status === "current" && !exp.units[u.unit_key]) errors.push(`sem explicação: ${u.unit_key}`);
+for (const u of units) if (!partial && u.content_status === "current" && !exp.units[u.unit_key]) errors.push(`sem explicação: ${u.unit_key}`);
 for (const [k, e] of Object.entries(exp.units)) {
   if (!byKey.has(k)) { errors.push(`artigo inexistente: ${k}`); continue; }
   for (const f of ["simples", "pontos", "atencao", "exemplo", "prova"]) if (!e[f] || (Array.isArray(e[f]) && !e[f].length)) errors.push(`${k}: campo vazio ${f}`);

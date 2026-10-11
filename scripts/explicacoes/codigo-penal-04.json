@@ -1,0 +1,267 @@
+{
+  "course_slug": "codigo-penal",
+  "law": "Código Penal — lote 04: arts. 92 a 120",
+  "units": {
+    "art-92": {
+      "simples": "Efeitos específicos da condenação (não são automáticos: dependem de declaração motivada na sentença). I: perda de cargo, função pública ou mandato eletivo quando aplicada pena privativa de liberdade igual ou superior a 1 ano nos crimes praticados com abuso de poder ou violação de dever para com a Administração Pública, ou superior a 4 anos nos demais casos. II: incapacidade para o poder familiar, tutela ou curatela nos crimes dolosos sujeitos à pena de reclusão contra outrem igualmente titular do mesmo poder, contra filho, descendente, tutelado ou curatelado e nos crimes contra a mulher por razões da condição do sexo feminino. III: inabilitação para dirigir veículo quando utilizado como meio para crime doloso. O inciso IV traz regra de suspensão da inscrição no CNPJ de estabelecimento (confira o texto completo).",
+      "pontos": ["I, a: perda do cargo se pena igual ou superior a 1 ano, em crime com abuso de poder ou violação de dever para com a Administração.", "I, b: perda do cargo se pena superior a 4 anos nos demais casos.", "II: incapacidade para poder familiar, tutela ou curatela em crimes dolosos de reclusão contra familiar/tutelado ou contra a mulher por razões da condição do sexo feminino.", "III: inabilitação para dirigir quando o veículo é meio para crime DOLOSO.", "IV: suspensão da inscrição no CNPJ por 180 dias, nos termos do texto."],
+      "atencao": ["Limites do inciso I: 1 ano (crimes funcionais) e MAIS DE 4 anos (demais).", "Os efeitos do art. 92 não são automáticos: devem ser motivadamente declarados na sentença (regra do parágrafo único do artigo, conforme o texto completo).", "Inabilitação para dirigir: crime doloso (para culposo de trânsito, veja o art. 47, III)."],
+      "exemplo": "Servidor condenado a 2 anos por peculato pode perder o cargo (inciso I, a).",
+      "prova": ["Assertiva que exige pena superior a 4 anos para a perda do cargo nos crimes praticados com abuso de poder erra: basta pena igual ou superior a 1 ano."],
+      "termos": [],
+      "remissoes": ["Art. 93 (reabilitação)", "Art. 47"]
+    },
+    "art-93": {
+      "simples": "A reabilitação alcança quaisquer penas aplicadas em sentença definitiva, assegurando ao condenado o sigilo dos registros sobre seu processo e condenação. Pode também atingir os efeitos da condenação do art. 92, vedada a reintegração na situação anterior nos casos dos incisos I e II.",
+      "pontos": ["Alcança quaisquer penas aplicadas em sentença definitiva.", "Assegura sigilo dos registros do processo e da condenação.", "Pode atingir os efeitos do art. 92, mas sem reintegração nos casos dos incisos I e II."],
+      "atencao": ["Mesmo reabilitado, não volta ao cargo perdido nem recupera o poder familiar (art. 92, I e II)."],
+      "exemplo": "O reabilitado tem o sigilo dos registros, mas o servidor que perdeu o cargo não é reintegrado.",
+      "prova": ["Assertiva que garante reintegração ao cargo perdido pela reabilitação erra: é vedada."],
+      "termos": [{ "termo": "Reabilitação", "significado": "Medida que assegura o sigilo da condenação e pode afastar certos efeitos dela." }],
+      "remissoes": ["Art. 92", "Art. 94"]
+    },
+    "art-94": {
+      "simples": "A reabilitação pode ser requerida decorridos 2 anos do dia em que for extinta, de qualquer modo, a pena ou terminar sua execução, computando-se o período de prova da suspensão e do livramento condicional se não houver revogação, desde que o condenado: tenha tido domicílio no País nesse prazo; demonstre bom comportamento público e privado; e tenha ressarcido o dano (ou demonstre a absoluta impossibilidade) ou exiba renúncia da vítima ou novação da dívida. Negada, pode ser requerida novamente a qualquer tempo, com novos elementos.",
+      "pontos": ["Prazo: 2 anos após a extinção ou término da execução da pena.", "I – domicílio no País durante o prazo.", "II – bom comportamento público e privado, de forma efetiva e constante.", "III – dano ressarcido (ou absoluta impossibilidade), ou renúncia da vítima/novação da dívida.", "Parágrafo único: negada, pode ser requerida de novo com novos elementos comprobatórios."],
+      "atencao": ["Prazo de 2 anos (conte o período de prova do sursis e do livramento se não revogados).", "Três requisitos cumulativos: domicílio, bom comportamento e reparação."],
+      "exemplo": "Dois anos depois do término da pena, o condenado que comprovou bom comportamento e ressarciu o dano pede a reabilitação.",
+      "prova": ["Assertiva que fixa o prazo da reabilitação em 5 anos erra: é de 2 anos."],
+      "termos": [],
+      "remissoes": ["Arts. 93 e 95"]
+    },
+    "art-95": {
+      "simples": "A reabilitação será revogada, de ofício ou a requerimento do Ministério Público, se o reabilitado for condenado, como reincidente, por decisão definitiva, a pena que não seja de multa.",
+      "pontos": ["Revogação de ofício ou a requerimento do MP.", "Condenação como reincidente, por decisão definitiva, a pena que não seja de multa."],
+      "atencao": ["Condenação só a multa NÃO revoga a reabilitação."],
+      "exemplo": "O reabilitado volta a ser condenado, como reincidente, a prisão: a reabilitação é revogada.",
+      "prova": ["Assertiva que revoga a reabilitação por condenação apenas a multa contraria o art. 95."],
+      "termos": [],
+      "remissoes": ["Arts. 93 e 94"]
+    },
+    "art-96": {
+      "simples": "As medidas de segurança são a internação em hospital de custódia e tratamento psiquiátrico (ou, à falta, em outro estabelecimento adequado) e a sujeição a tratamento ambulatorial. Extinta a punibilidade, não se impõe medida de segurança nem subsiste a que tenha sido imposta.",
+      "pontos": ["I – internação em hospital de custódia e tratamento psiquiátrico ou estabelecimento adequado.", "II – tratamento ambulatorial.", "Extinta a punibilidade: não se impõe nem subsiste a medida."],
+      "atencao": ["As medidas de segurança são duas espécies: internação e tratamento ambulatorial."],
+      "exemplo": "O inimputável que praticou fato típico e ilícito pode ser internado ou sujeito a tratamento ambulatorial.",
+      "prova": ["Assertiva que mantém a medida de segurança mesmo após extinta a punibilidade contraria o parágrafo único."],
+      "termos": [{ "termo": "Medida de segurança", "significado": "Medida de cunho curativo aplicada a inimputáveis (ou semi-imputáveis em certos casos)." }],
+      "remissoes": ["Art. 97", "Art. 98"]
+    },
+    "art-97": {
+      "simples": "Se o agente for inimputável, o juiz determina sua internação; se o fato for punível com detenção, pode submetê-lo a tratamento ambulatorial. A internação ou o tratamento é por tempo indeterminado, enquanto não for averiguada, por perícia médica, a cessação da periculosidade, com prazo mínimo de 1 a 3 anos. A perícia ocorre ao fim do prazo mínimo e deve ser repetida de ano em ano, ou a qualquer tempo se o juiz da execução determinar. A desinternação ou liberação é sempre condicional e a situação anterior é restabelecida se, antes de 1 ano, o agente pratica fato indicativo de persistência da periculosidade. Em qualquer fase do tratamento ambulatorial, o juiz pode determinar a internação, se necessária para fins curativos.",
+      "pontos": ["Inimputável: internação; se o fato é punível com detenção, o juiz pode aplicar tratamento ambulatorial.", "§1º: tempo indeterminado, até cessar a periculosidade; prazo mínimo de 1 a 3 anos.", "§2º: perícia ao fim do prazo mínimo e repetida de ano em ano.", "§3º: desinternação/liberação sempre condicional; restabelece-se a situação anterior se, antes de 1 ano, houver fato indicativo de periculosidade.", "§4º: o juiz pode converter o ambulatorial em internação, se necessário para fins curativos."],
+      "atencao": ["Prazo MÍNIMO de 1 a 3 anos e MÁXIMO indeterminado (o tema do limite é muito cobrado, conforme a jurisprudência).", "A desinternação é CONDICIONAL: período de 1 ano."],
+      "exemplo": "Inimputável que cometeu crime punido com reclusão é internado; a internação dura enquanto houver periculosidade, com perícia anual após o prazo mínimo.",
+      "prova": ["Assertiva que fixa prazo máximo definitivo de 3 anos para a medida de segurança lê o prazo MÍNIMO como máximo: o texto fala em tempo indeterminado."],
+      "termos": [{ "termo": "Periculosidade", "significado": "Probabilidade de o agente voltar a delinquir, que justifica a medida de segurança." }],
+      "remissoes": ["Art. 26", "Art. 96", "Art. 98"]
+    },
+    "art-98": {
+      "simples": "Na hipótese do parágrafo único do art. 26 (semi-imputável) e necessitando o condenado de especial tratamento curativo, a pena privativa de liberdade pode ser substituída pela internação ou tratamento ambulatorial, pelo prazo mínimo de 1 a 3 anos, nos termos do art. 97 e dos §§1º a 4º.",
+      "pontos": ["Aplica-se ao semi-imputável que necessite de especial tratamento curativo.", "A pena privativa pode ser substituída por internação ou tratamento ambulatorial.", "Prazo mínimo de 1 a 3 anos, nos termos do art. 97."],
+      "atencao": ["É o sistema vicariante: pena OU medida de segurança, não as duas."],
+      "exemplo": "Condenado semi-imputável que precisa de tratamento tem a prisão substituída por internação.",
+      "prova": ["Assertiva que cumula pena e medida de segurança para o semi-imputável contraria o art. 98 (substitui)."],
+      "termos": [{ "termo": "Sistema vicariante", "significado": "Pena ou medida de segurança, nunca as duas ao mesmo tempo." }],
+      "remissoes": ["Art. 26, parágrafo único", "Art. 97"]
+    },
+    "art-99": {
+      "simples": "O internado será recolhido a estabelecimento dotado de características hospitalares e será submetido a tratamento.",
+      "pontos": ["Estabelecimento com características hospitalares.", "Submetido a tratamento."],
+      "atencao": ["A internação tem finalidade curativa, não punitiva."],
+      "exemplo": "O inimputável internado fica em hospital de custódia e recebe tratamento.",
+      "prova": ["Assertiva que determina recolhimento do internado em presídio comum contraria o art. 99."],
+      "termos": [],
+      "remissoes": ["Arts. 96 a 98"]
+    },
+    "art-100": {
+      "simples": "Ação penal: a ação é pública, salvo quando a lei expressamente a declara privativa do ofendido. A ação pública é promovida pelo Ministério Público, dependendo, quando a lei o exige, de representação do ofendido ou de requisição do Ministro da Justiça. A ação de iniciativa privada é promovida por queixa do ofendido ou de quem o represente e pode ser intentada nos crimes de ação pública se o Ministério Público não oferecer denúncia no prazo legal (ação privada subsidiária). Em caso de morte do ofendido ou declaração de ausência, o direito de queixa ou de prosseguir passa ao cônjuge, ascendente, descendente ou irmão.",
+      "pontos": ["Regra: ação penal pública; exceção: privativa do ofendido, se a lei declarar.", "§1º: pública promovida pelo MP; pode depender de representação ou requisição do Ministro da Justiça.", "§2º: privada promovida por queixa.", "§3º: ação privada subsidiária da pública, se o MP não denunciar no prazo legal.", "§4º: morte ou ausência do ofendido: o direito passa a cônjuge, ascendente, descendente ou irmão."],
+      "atencao": ["A regra é ação PÚBLICA; a privada precisa de previsão expressa.", "Ordem de sucessão no §4º: cônjuge, ascendente, descendente ou irmão (conforme o texto)."],
+      "exemplo": "O Ministério Público deixa de denunciar no prazo legal em crime de ação pública: o ofendido pode propor queixa subsidiária.",
+      "prova": ["Assertiva que torna regra a ação privada erra: a regra é a ação pública."],
+      "termos": [{ "termo": "Queixa", "significado": "Petição inicial da ação penal privada." }, { "termo": "Representação", "significado": "Manifestação da vítima autorizando o MP a processar em certos crimes." }],
+      "remissoes": ["Arts. 101 a 106"]
+    },
+    "art-101": {
+      "simples": "Crime complexo: quando a lei considera como elemento ou circunstância do tipo legal fatos que, por si mesmos, constituem crimes, cabe ação pública em relação àquele, desde que, em relação a qualquer destes, se deva proceder por iniciativa do Ministério Público.",
+      "pontos": ["Fatos que integram o tipo e são crimes por si mesmos.", "Cabe ação pública no crime complexo se algum deles for de ação pública."],
+      "atencao": ["Prevalece a ação pública se qualquer dos crimes componentes é de ação pública."],
+      "exemplo": "O roubo é complexo (furto + violência ou ameaça); como alguns de seus componentes são de ação pública, a ação é pública.",
+      "prova": ["Assertiva que torna privada a ação do crime complexo apenas porque um componente é de ação privada, mesmo havendo componente de ação pública, contraria o art. 101."],
+      "termos": [{ "termo": "Crime complexo", "significado": "Crime formado pela fusão de dois ou mais outros crimes ou fatos típicos." }],
+      "remissoes": ["Art. 100"]
+    },
+    "art-102": {
+      "simples": "A representação será irretratável depois de oferecida a denúncia.",
+      "pontos": ["A representação pode ser retratada até o oferecimento da denúncia.", "Depois da denúncia, é irretratável."],
+      "atencao": ["O marco é o OFERECIMENTO da denúncia."],
+      "exemplo": "A vítima que ofereceu representação pode se retratar antes de o MP denunciar; depois, não.",
+      "prova": ["Assertiva que permite a retratação da representação após o recebimento da denúncia erra: o marco é o oferecimento."],
+      "termos": [{ "termo": "Irretratável", "significado": "Que não pode mais ser desfeita ou retirada." }],
+      "remissoes": ["Art. 100, §1º"]
+    },
+    "art-103": {
+      "simples": "Salvo disposição expressa em contrário, o ofendido decai do direito de queixa ou de representação se não o exerce dentro de 6 meses, contados do dia em que veio a saber quem é o autor do crime, ou, no caso da ação privada subsidiária, do dia em que se esgota o prazo para o oferecimento da denúncia. Nos crimes praticados no âmbito de violência doméstica e familiar contra a mulher, o prazo é de 12 meses, conforme o parágrafo único (incluído por lei de 2026).",
+      "pontos": ["Prazo decadencial: 6 meses, da ciência de quem é o autor.", "Ação privada subsidiária: conta-se do fim do prazo para a denúncia.", "Parágrafo único: violência doméstica e familiar contra a mulher: 12 meses."],
+      "atencao": ["O prazo conta da ciência de QUEM É O AUTOR, não da data do fato.", "Violência doméstica e familiar contra a mulher: prazo de 12 meses (conforme o texto atual)."],
+      "exemplo": "A vítima soube quem era o autor em janeiro: tem até julho para exercer a queixa ou a representação (regra geral).",
+      "prova": ["Assertiva que conta o prazo de 6 meses do dia do fato erra: conta-se da ciência de quem é o autor."],
+      "termos": [{ "termo": "Decadência", "significado": "Perda do direito pelo decurso do prazo para exercê-lo." }],
+      "remissoes": ["Art. 100", "Art. 107, IV"]
+    },
+    "art-104": {
+      "simples": "O direito de queixa não pode ser exercido quando renunciado expressa ou tacitamente. Importa renúncia tácita a prática de ato incompatível com a vontade de exercê-lo; não a implica o fato de o ofendido receber a indenização do dano causado pelo crime.",
+      "pontos": ["Renúncia expressa ou tácita impede a queixa.", "Renúncia tácita: ato incompatível com a vontade de exercê-la.", "Receber a indenização do dano NÃO implica renúncia."],
+      "atencao": ["Receber indenização não significa renúncia ao direito de queixa."],
+      "exemplo": "Quem convida o ofensor para um evento familiar pode ter praticado ato incompatível com a intenção de processá-lo (renúncia tácita).",
+      "prova": ["Assertiva que considera renúncia tácita o simples recebimento da indenização do dano erra."],
+      "termos": [],
+      "remissoes": ["Art. 105", "Art. 107, V"]
+    },
+    "art-105": {
+      "simples": "O perdão do ofendido, nos crimes em que somente se procede mediante queixa, obsta ao prosseguimento da ação.",
+      "pontos": ["O perdão do ofendido obsta o prosseguimento da ação privada."],
+      "atencao": ["Só nos crimes de ação PRIVADA; precisa ser aceito (art. 107, V)."],
+      "exemplo": "No curso da ação privada, o ofendido perdoa o querelado, que aceita: a ação não prossegue.",
+      "prova": ["Assertiva que aplica o perdão do ofendido à ação penal pública incondicionada erra."],
+      "termos": [{ "termo": "Querelado", "significado": "Réu na ação penal privada." }],
+      "remissoes": ["Art. 106", "Art. 107, V"]
+    },
+    "art-106": {
+      "simples": "Regras do perdão, no processo ou fora dele, expresso ou tácito: se concedido a qualquer dos querelados, a todos aproveita; se concedido por um dos ofendidos, não prejudica o direito dos outros; se o querelado o recusa, não produz efeito. Perdão tácito é o que resulta de ato incompatível com a vontade de prosseguir na ação. Não é admissível depois do trânsito em julgado da sentença condenatória.",
+      "pontos": ["I – perdão a um querelado aproveita a todos.", "II – perdão de um ofendido não prejudica os demais.", "III – recusado pelo querelado, não produz efeito.", "§1º: perdão tácito = ato incompatível com a vontade de prosseguir.", "§2º: não cabe depois do trânsito em julgado da condenação."],
+      "atencao": ["O perdão precisa ser ACEITO pelo querelado.", "Limite temporal: antes do trânsito em julgado da condenação."],
+      "exemplo": "Perdoado um dos querelados em ação privada, todos são beneficiados, salvo recusa.",
+      "prova": ["Assertiva que admite o perdão após o trânsito em julgado da condenação contraria o §2º."],
+      "termos": [],
+      "remissoes": ["Art. 105"]
+    },
+    "art-107": {
+      "simples": "Rol de causas de extinção da punibilidade: morte do agente; anistia, graça ou indulto; retroatividade de lei que não mais considera o fato criminoso; prescrição, decadência ou perempção; renúncia do direito de queixa ou perdão aceito nos crimes de ação privada; retratação do agente nos casos em que a lei a admite; e perdão judicial nos casos previstos em lei. Os incisos VII e VIII estão revogados.",
+      "pontos": ["I – morte do agente.", "II – anistia, graça ou indulto.", "III – abolitio criminis.", "IV – prescrição, decadência ou perempção.", "V – renúncia ao direito de queixa ou perdão aceito (ação privada).", "VI – retratação do agente, nos casos admitidos em lei.", "IX – perdão judicial, nos casos previstos em lei.", "VII e VIII: revogados."],
+      "atencao": ["O rol do art. 107 NÃO é taxativo (outras leis preveem causas de extinção).", "Perdão do ofendido só extingue se ACEITO e na ação privada."],
+      "exemplo": "Com a morte do agente, extingue-se a punibilidade.",
+      "prova": ["Assertiva que afirma que o rol do art. 107 é taxativo erra: existem outras causas em leis especiais."],
+      "termos": [{ "termo": "Punibilidade", "significado": "Possibilidade jurídica de o Estado punir o agente." }],
+      "remissoes": ["Arts. 108 a 120"]
+    },
+    "art-108": {
+      "simples": "A extinção da punibilidade de crime que é pressuposto, elemento constitutivo ou circunstância agravante de outro não se estende a este. Nos crimes conexos, a extinção da punibilidade de um deles não impede, quanto aos outros, a agravação da pena resultante da conexão.",
+      "pontos": ["Extinção da punibilidade do crime-pressuposto não se estende ao outro.", "Em crimes conexos, a extinção de um não impede a agravação nos outros."],
+      "atencao": ["Cada crime tem sua punibilidade analisada de forma independente."],
+      "exemplo": "Extinta a punibilidade do furto anterior, o receptador ainda pode responder pela receptação.",
+      "prova": ["Assertiva que estende a extinção da punibilidade de um crime ao outro de que é pressuposto contraria o art. 108."],
+      "termos": [],
+      "remissoes": ["Art. 107"]
+    },
+    "art-109": {
+      "simples": "Prescrição da pretensão punitiva antes do trânsito em julgado: regula-se pelo máximo da pena privativa de liberdade cominada ao crime (salvo o §1º do art. 110) e ocorre em 20 anos se o máximo é superior a 12; 16 anos se superior a 8 e não excede 12; 12 anos se superior a 4 e não excede 8; 8 anos se superior a 2 e não excede 4; 4 anos se igual a 1 ou, sendo superior, não excede 2; e 3 anos se inferior a 1. As penas restritivas de direitos prescrevem nos mesmos prazos das privativas.",
+      "pontos": ["Base: máximo da pena PRIVATIVA DE LIBERDADE COMINADA ao crime.", "Superior a 12 anos: 20 anos.", "Superior a 8 e até 12: 16 anos.", "Superior a 4 e até 8: 12 anos.", "Superior a 2 e até 4: 8 anos.", "Igual a 1 ou, sendo superior, até 2: 4 anos.", "Inferior a 1 ano: 3 anos.", "Parágrafo único: restritivas de direitos têm os mesmos prazos."],
+      "atencao": ["A tabela do art. 109 é o item mais cobrado de prescrição: decore os escalões.", "Antes do trânsito: regula-se pela pena MÁXIMA em abstrato; depois, pela pena aplicada (art. 110)."],
+      "exemplo": "Crime com pena máxima de 6 anos prescreve em 12 anos (inciso III).",
+      "prova": ["Assertiva que fixa em 16 anos a prescrição de crime com pena máxima de 6 anos erra: o prazo é de 12 anos."],
+      "termos": [{ "termo": "Prescrição da pretensão punitiva", "significado": "Perda do direito de punir pelo tempo decorrido antes da condenação definitiva." }],
+      "remissoes": ["Art. 110", "Art. 111", "Art. 115"]
+    },
+    "art-110": {
+      "simples": "Prescrição depois do trânsito em julgado da sentença condenatória: regula-se pela pena aplicada e verifica-se nos prazos do art. 109, aumentados de um terço se o condenado é reincidente. O §1º: depois da sentença condenatória com trânsito em julgado para a acusação ou improvido seu recurso, regula-se pela pena aplicada, não podendo ter por termo inicial data anterior à da denúncia ou queixa. O §2º foi revogado.",
+      "pontos": ["Regula-se pela pena aplicada, nos prazos do art. 109.", "Reincidente: prazos aumentados de 1/3 (apenas na prescrição da pretensão executória).", "§1º: trânsito para a acusação ou recurso improvido: pela pena aplicada; termo inicial não pode ser anterior à denúncia ou queixa."],
+      "atencao": ["O aumento de 1/3 pela reincidência vale para a prescrição DEPOIS da condenação definitiva.", "O termo inicial não retroage a data anterior à denúncia ou queixa (§1º)."],
+      "exemplo": "Condenado reincidente a pena de 3 anos: o prazo do art. 109, IV (8 anos) é aumentado em um terço.",
+      "prova": ["Assertiva que aplica o aumento de 1/3 pela reincidência à prescrição antes da sentença erra: vale após o trânsito em julgado."],
+      "termos": [{ "termo": "Prescrição da pretensão executória", "significado": "Perda do direito de executar a pena após a condenação definitiva." }],
+      "remissoes": ["Art. 109", "Art. 112"]
+    },
+    "art-111": {
+      "simples": "Termo inicial da prescrição antes do trânsito em julgado: começa a correr do dia em que o crime se consumou; na tentativa, do dia em que cessou a atividade criminosa; nos crimes permanentes, do dia em que cessou a permanência; na bigamia e na falsificação ou alteração de assentamento do registro civil, da data em que o fato se tornou conhecido; e, nos crimes contra a dignidade sexual ou que envolvam violência contra a criança e o adolescente, da data em que a vítima completar 18 anos, salvo se a ação penal já tiver sido proposta.",
+      "pontos": ["I – consumação.", "II – tentativa: cessação da atividade criminosa.", "III – crime permanente: cessação da permanência.", "IV – bigamia e falsificação de registro civil: quando o fato se tornou conhecido.", "V – crimes sexuais e contra criança e adolescente: quando a vítima completar 18 anos, salvo ação já proposta."],
+      "atencao": ["Para a prescrição, o termo inicial é a CONSUMAÇÃO (diferente do tempo do crime, art. 4º).", "No inciso V, o termo é o 18º aniversário da vítima (se a ação ainda não foi proposta)."],
+      "exemplo": "Em crime permanente, como o sequestro, a prescrição só começa quando a vítima é libertada.",
+      "prova": ["Assertiva que fixa o termo inicial da prescrição no momento da ação, e não da consumação, erra."],
+      "termos": [],
+      "remissoes": ["Art. 109", "Art. 112"]
+    },
+    "art-112": {
+      "simples": "No caso do art. 110 (prescrição depois da condenação), a prescrição começa a correr: do dia em que transita em julgado a sentença condenatória para a acusação, ou a que revoga a suspensão condicional da pena ou o livramento condicional; ou do dia em que se interrompe a execução, salvo quando o tempo da interrupção deva computar-se na pena.",
+      "pontos": ["I – trânsito em julgado da condenação para a acusação, ou decisão que revoga o sursis ou o livramento.", "II – dia em que se interrompe a execução, salvo se o tempo da interrupção é computado na pena."],
+      "atencao": ["O marco é o trânsito para a ACUSAÇÃO (não para a defesa)."],
+      "exemplo": "A condenação transita em julgado para o MP em março: a prescrição da pretensão executória começa nessa data.",
+      "prova": ["Assertiva que inicia a prescrição executória do trânsito para a defesa erra: é para a acusação."],
+      "termos": [],
+      "remissoes": ["Art. 110"]
+    },
+    "art-113": {
+      "simples": "No caso de evadir-se o condenado ou de revogar-se o livramento condicional, a prescrição é regulada pelo tempo que resta da pena.",
+      "pontos": ["Fuga do condenado ou revogação do livramento: prescrição regulada pelo tempo que resta da pena."],
+      "atencao": ["Calcula-se pelo tempo RESTANTE, não pela pena total."],
+      "exemplo": "O condenado foge com 2 anos de pena por cumprir: a prescrição considera esses 2 anos restantes.",
+      "prova": ["Assertiva que usa a pena total na prescrição após a fuga erra: usa o tempo que resta."],
+      "termos": [],
+      "remissoes": ["Art. 110"]
+    },
+    "art-114": {
+      "simples": "Prescrição da multa: ocorre em 2 anos quando a multa for a única cominada ou aplicada; e no mesmo prazo da prescrição da pena privativa de liberdade quando a multa for alternativa ou cumulativamente cominada ou cumulativamente aplicada.",
+      "pontos": ["I – 2 anos: multa única (cominada ou aplicada).", "II – mesmo prazo da privativa: multa alternativa, ou cumulativa (cominada ou aplicada)."],
+      "atencao": ["Multa isolada: 2 anos; multa junto com prisão: prazo da prisão."],
+      "exemplo": "Contravenção punida só com multa prescreve em 2 anos.",
+      "prova": ["Assertiva que fixa em 5 anos a prescrição da multa única erra: são 2 anos."],
+      "termos": [],
+      "remissoes": ["Art. 109"]
+    },
+    "art-115": {
+      "simples": "São reduzidos de metade os prazos de prescrição quando o criminoso era, ao tempo do crime, menor de 21 anos ou, na data da sentença, maior de 70 anos, salvo se o crime envolver violência sexual contra a mulher (redação de 2025).",
+      "pontos": ["Redução pela metade dos prazos de prescrição.", "Menor de 21 anos ao tempo do crime ou maior de 70 na data da sentença.", "Exceção: crime com violência sexual contra a mulher."],
+      "atencao": ["Menor de 21: ao tempo do CRIME; maior de 70: na data da SENTENÇA.", "Há exceção para violência sexual contra a mulher (texto atual)."],
+      "exemplo": "Agente de 20 anos ao tempo do fato tem os prazos de prescrição reduzidos à metade.",
+      "prova": ["Assertiva que considera a idade de 70 anos na data do crime erra: é na data da sentença."],
+      "termos": [],
+      "remissoes": ["Art. 65, I", "Art. 109"]
+    },
+    "art-116": {
+      "simples": "Causas impeditivas da prescrição: antes do trânsito em julgado, a prescrição não corre enquanto não resolvida, em outro processo, questão de que dependa o reconhecimento do crime; enquanto o agente cumpre pena no exterior; na pendência de embargos de declaração ou de recursos aos Tribunais Superiores, quando inadmissíveis; e enquanto não cumprido ou não rescindido o acordo de não persecução penal. Depois do trânsito em julgado da condenação, a prescrição não corre enquanto o condenado está preso por outro motivo.",
+      "pontos": ["I – questão prejudicial resolvida em outro processo.", "II – cumprimento de pena no exterior.", "III – embargos de declaração ou recursos aos Tribunais Superiores inadmissíveis.", "IV – acordo de não persecução penal não cumprido ou não rescindido.", "Parágrafo único: após o trânsito, não corre enquanto o condenado está preso por outro motivo."],
+      "atencao": ["Impedir é SUSPENDER o prazo (ele volta a correr de onde parou).", "Os recursos só impedem a prescrição quando INADMISSÍVEIS."],
+      "exemplo": "Enquanto o agente cumpre pena no exterior, a prescrição do crime no Brasil não corre.",
+      "prova": ["Assertiva que trata como interruptivas as causas do art. 116 erra: elas são impeditivas (suspendem)."],
+      "termos": [],
+      "remissoes": ["Art. 117"]
+    },
+    "art-117": {
+      "simples": "Causas interruptivas da prescrição: o curso da prescrição se interrompe pelo recebimento da denúncia ou da queixa; pela pronúncia; pela decisão confirmatória da pronúncia; pela publicação da sentença ou acórdão condenatórios recorríveis; pelo início ou continuação do cumprimento da pena; e pela reincidência. Salvo os incisos V e VI, a interrupção produz efeitos relativamente a todos os autores do crime, e nos crimes conexos do mesmo processo estende-se aos demais. Interrompida a prescrição, salvo no inciso V, todo o prazo começa a correr de novo.",
+      "pontos": ["I – recebimento da denúncia ou da queixa.", "II – pronúncia.", "III – decisão confirmatória da pronúncia.", "IV – publicação de sentença ou acórdão condenatórios recorríveis.", "V – início ou continuação do cumprimento da pena.", "VI – reincidência.", "§1º: exceto V e VI, a interrupção vale para todos os autores; nos crimes conexos, estende-se aos demais.", "§2º: interrompida, o prazo recomeça INTEIRO (salvo no inciso V)."],
+      "atencao": ["INTERROMPER zera o prazo; IMPEDIR/SUSPENDER apenas congela.", "Os incisos V e VI interrompem só em relação ao agente."],
+      "exemplo": "O recebimento da denúncia interrompe a prescrição e o prazo recomeça por inteiro.",
+      "prova": ["Assertiva que afirma que a interrupção apenas suspende o prazo, que depois retoma de onde parou, erra: o prazo começa a correr novamente por inteiro."],
+      "termos": [],
+      "remissoes": ["Art. 116", "Art. 109"]
+    },
+    "art-118": {
+      "simples": "As penas mais leves prescrevem com as mais graves.",
+      "pontos": ["A prescrição da pena mais grave leva a das mais leves."],
+      "atencao": ["Vale a lógica de que a pena menos grave não sobrevive à mais grave."],
+      "exemplo": "Prescrita a pena de prisão, a de multa cumulada também prescreve.",
+      "prova": ["Assertiva que mantém a pena mais leve após a prescrição da mais grave contraria o art. 118."],
+      "termos": [],
+      "remissoes": ["Art. 114"]
+    },
+    "art-119": {
+      "simples": "No concurso de crimes, a extinção da punibilidade incidirá sobre a pena de cada um, isoladamente.",
+      "pontos": ["A extinção da punibilidade, no concurso, é analisada crime a crime."],
+      "atencao": ["A prescrição não considera a pena total do concurso, e sim a pena de cada crime."],
+      "exemplo": "Em concurso de dois crimes, a prescrição de cada um é contada pela pena de cada um, e não pelo somatório.",
+      "prova": ["Assertiva que calcula a prescrição pela soma das penas do concurso contraria o art. 119."],
+      "termos": [],
+      "remissoes": ["Arts. 69 a 71", "Art. 109"]
+    },
+    "art-120": {
+      "simples": "A sentença que concede o perdão judicial não será considerada para efeitos de reincidência.",
+      "pontos": ["O perdão judicial não gera reincidência."],
+      "atencao": ["Perdão judicial é causa de extinção da punibilidade (art. 107, IX) e a sentença que o concede não é condenatória para efeito de reincidência."],
+      "exemplo": "Quem recebeu perdão judicial e depois comete novo crime não é reincidente por aquele fato.",
+      "prova": ["Assertiva que considera reincidente quem obteve perdão judicial anterior contraria o art. 120."],
+      "termos": [{ "termo": "Perdão judicial", "significado": "Dispensa de pena concedida pelo juiz nos casos previstos em lei." }],
+      "remissoes": ["Art. 107, IX", "Art. 63"]
+    }
+  }
+}

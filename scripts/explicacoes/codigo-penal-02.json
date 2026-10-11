@@ -1,0 +1,276 @@
+{
+  "course_slug": "codigo-penal",
+  "law": "Código Penal — lote 02: arts. 30 a 60",
+  "units": {
+    "art-30": {
+      "simples": "Circunstâncias e condições de caráter pessoal não se comunicam entre os coautores e partícipes, salvo quando forem elementares do crime. Elementar é o dado que faz parte da definição do crime: se ele existe, comunica-se a todos que o conhecem.",
+      "pontos": ["Regra: circunstâncias e condições de caráter pessoal NÃO se comunicam.", "Exceção: quando forem elementares do crime, comunicam-se."],
+      "atencao": ["A qualidade de funcionário público é elementar de crimes como o peculato: o particular que concorre responde junto, se souber da condição.", "Circunstância (ex.: um agravante pessoal) não se comunica; elementar sim."],
+      "exemplo": "Um particular ajuda um funcionário a desviar dinheiro público: a condição de funcionário (elementar) se comunica e o particular responde pelo mesmo crime.",
+      "prova": ["Assertiva que comunica toda circunstância pessoal a todos os coautores erra: só as elementares se comunicam."],
+      "termos": [{ "termo": "Elementar", "significado": "Dado essencial da definição do crime; sem ele o crime não existe ou muda de natureza." }],
+      "remissoes": ["Art. 29 (concurso de pessoas)"]
+    },
+    "art-31": {
+      "simples": "O ajuste, a determinação ou instigação e o auxílio, salvo disposição expressa em contrário, não são puníveis se o crime não chega, pelo menos, a ser tentado. Ou seja: atos preparatórios do partícipe não bastam sem início de execução do crime.",
+      "pontos": ["Ajuste, determinação, instigação e auxílio não são puníveis se o crime sequer chega à tentativa.", "Salvo disposição expressa em contrário."],
+      "atencao": ["A participação é acessória: depende de o autor ao menos tentar o crime.", "A ressalva 'salvo disposição expressa' permite que a lei puna certos atos preparatórios como crime autônomo."],
+      "exemplo": "Alguém instiga outro a furtar, mas o furto nem chega a ser iniciado: a instigação, por si, não é punível.",
+      "prova": ["Assertiva que pune o partícipe mesmo quando o crime não chega a ser tentado, sem exceção legal, contraria o art. 31."],
+      "termos": [{ "termo": "Atos preparatórios", "significado": "Atos anteriores ao início da execução do crime." }],
+      "remissoes": ["Art. 29", "Art. 14, II (tentativa)"]
+    },
+    "art-32": {
+      "simples": "Lista as espécies de pena: privativas de liberdade, restritivas de direitos e de multa.",
+      "pontos": ["I – privativas de liberdade.", "II – restritivas de direitos.", "III – multa."],
+      "atencao": ["Três espécies; a pena de morte não consta (a Constituição só admite em guerra declarada, tema fora deste artigo)."],
+      "exemplo": "Uma condenação pode ser de reclusão (privativa de liberdade), substituída por restritivas de direitos, com multa.",
+      "prova": ["Assertiva que inclui a prisão cautelar entre as espécies de pena erra: o art. 32 lista só as três espécies."],
+      "termos": [],
+      "remissoes": ["Arts. 33 a 52 (espécies de pena)"]
+    },
+    "art-33": {
+      "simples": "Regula os regimes de cumprimento da pena privativa de liberdade. A reclusão pode ser cumprida em regime fechado, semiaberto ou aberto. A detenção, em semiaberto ou aberto, salvo necessidade de transferência a regime fechado. O §2º traz os critérios iniciais conforme a quantidade de pena e a reincidência, e o §3º manda observar o art. 59. O §4º condiciona a progressão, para o condenado por crime contra a administração pública, à reparação do dano ou devolução do produto do ilícito.",
+      "pontos": ["Reclusão: fechado, semiaberto ou aberto. Detenção: semiaberto ou aberto, salvo necessidade de regime fechado.", "§1º: fechado = estabelecimento de segurança máxima ou média; semiaberto = colônia agrícola, industrial ou similar; aberto = casa de albergado ou estabelecimento adequado.", "§2º: execução progressiva, segundo o mérito do condenado.", "§2º, a: pena superior a 8 anos começa em regime fechado.", "§2º, b: não reincidente, pena superior a 4 e não superior a 8 anos, pode começar em semiaberto.", "§2º, c: não reincidente, pena igual ou inferior a 4 anos, pode começar em aberto.", "§3º: o regime inicial observa os critérios do art. 59.", "§4º: crime contra a administração pública: progressão condicionada à reparação do dano ou devolução do produto do ilícito."],
+      "atencao": ["Os limites de 4 e 8 anos são cobrados em quase toda prova; a letra b e a c valem para NÃO reincidente.", "Detenção não começa em regime fechado (apenas transferência posterior).", "A progressão no crime contra a administração pública exige reparação do dano."],
+      "exemplo": "Condenado não reincidente a 6 anos de reclusão pode começar em regime semiaberto (§2º, b).",
+      "prova": ["Assertiva que coloca o não reincidente condenado a pena superior a 8 anos em regime semiaberto desde o início contraria o §2º, a.", "Assertiva que permite iniciar a detenção em regime fechado contraria o caput."],
+      "termos": [{ "termo": "Progressão de regime", "significado": "Passagem para regime menos rigoroso conforme o mérito do condenado." }],
+      "remissoes": ["Art. 59 (fixação do regime)", "Art. 34 a 36 (regras de cada regime)"]
+    },
+    "art-34": {
+      "simples": "Regras do regime fechado: o condenado é submetido, no início do cumprimento, a exame criminológico de classificação para individualização da execução; fica sujeito a trabalho no período diurno e isolamento durante o repouso noturno. O trabalho é em comum dentro do estabelecimento, conforme as aptidões ou ocupações anteriores do condenado, e o trabalho externo é admissível em serviços ou obras públicas.",
+      "pontos": ["Exame criminológico de classificação no início do cumprimento.", "Trabalho durante o dia e isolamento no repouso noturno.", "Trabalho em comum dentro do estabelecimento, conforme as aptidões.", "Trabalho externo admissível em serviços ou obras públicas."],
+      "atencao": ["No fechado, o trabalho externo só em serviços ou obras PÚBLICAS."],
+      "exemplo": "Condenado em regime fechado pode trabalhar fora em uma obra pública, voltando ao estabelecimento para repousar à noite.",
+      "prova": ["Assertiva que permite trabalho externo em empresa privada no regime fechado contraria o §3º."],
+      "termos": [{ "termo": "Exame criminológico", "significado": "Avaliação do condenado para individualizar a execução da pena." }],
+      "remissoes": ["Art. 35 (semiaberto)", "Art. 33"]
+    },
+    "art-35": {
+      "simples": "Regras do regime semiaberto: aplica-se o caput do art. 34 (exame criminológico) ao condenado que inicie nesse regime; o condenado fica sujeito a trabalho em comum durante o dia em colônia agrícola, industrial ou estabelecimento similar; o trabalho externo é admissível, assim como a frequência a cursos supletivos profissionalizantes, de instrução de segundo grau ou superior.",
+      "pontos": ["Aplica-se o caput do art. 34 a quem inicia no semiaberto.", "Trabalho em comum durante o dia em colônia agrícola, industrial ou similar.", "Trabalho externo e frequência a cursos supletivos profissionalizantes, de segundo grau ou superior."],
+      "atencao": ["No semiaberto o trabalho externo é admitido sem a limitação a obras públicas própria do fechado."],
+      "exemplo": "O condenado em semiaberto pode trabalhar fora durante o dia e frequentar curso superior.",
+      "prova": ["Assertiva que proíbe cursos de instrução superior no semiaberto contraria o §2º."],
+      "termos": [],
+      "remissoes": ["Art. 34", "Art. 36"]
+    },
+    "art-36": {
+      "simples": "Regime aberto: baseia-se na autodisciplina e no senso de responsabilidade do condenado. Ele deve, fora do estabelecimento e sem vigilância, trabalhar, frequentar curso ou exercer outra atividade autorizada, permanecendo recolhido durante o período noturno e nos dias de folga. É transferido do regime aberto se praticar fato definido como crime doloso, se frustrar os fins da execução ou se, podendo, não pagar a multa cumulativamente aplicada.",
+      "pontos": ["Baseia-se na autodisciplina e no senso de responsabilidade.", "Trabalho, curso ou atividade autorizada, fora do estabelecimento e sem vigilância.", "Recolhimento no período noturno e nos dias de folga.", "Transferência se praticar crime doloso, frustrar os fins da execução ou, podendo, não pagar a multa cumulativa."],
+      "atencao": ["A transferência por novo crime exige crime DOLOSO.", "Não pagar a multa só justifica a transferência se o condenado PODIA pagar."],
+      "exemplo": "Condenado em regime aberto que comete novo crime doloso é transferido para regime mais rigoroso.",
+      "prova": ["Assertiva que transfere o condenado de regime aberto por qualquer crime, inclusive culposo, contraria o §2º."],
+      "termos": [{ "termo": "Casa de albergado", "significado": "Estabelecimento do regime aberto, onde o condenado se recolhe à noite e nos dias de folga." }],
+      "remissoes": ["Art. 33, §1º, c"]
+    },
+    "art-37": {
+      "simples": "As mulheres cumprem pena em estabelecimento próprio, observando-se os deveres e direitos inerentes à sua condição pessoal e, no que couber, as regras do capítulo.",
+      "pontos": ["Estabelecimento próprio para mulheres.", "Respeito aos deveres e direitos inerentes à condição pessoal."],
+      "atencao": ["Vale a separação por sexo no cumprimento da pena."],
+      "exemplo": "Uma condenada cumpre pena em unidade prisional feminina, não em estabelecimento misto.",
+      "prova": ["Assertiva que admite cumprimento da pena da mulher no mesmo estabelecimento dos homens contraria o art. 37."],
+      "termos": [],
+      "remissoes": ["Art. 38"]
+    },
+    "art-38": {
+      "simples": "O preso conserva todos os direitos não atingidos pela perda da liberdade, impondo-se a todas as autoridades o respeito à sua integridade física e moral.",
+      "pontos": ["Mantêm-se todos os direitos não atingidos pela perda da liberdade.", "Dever de todas as autoridades de respeitar a integridade física e moral."],
+      "atencao": ["A pena restringe a liberdade, não os demais direitos."],
+      "exemplo": "O preso não perde direito à saúde ou à integridade física: agressão por agente público é violação do art. 38.",
+      "prova": ["Assertiva que afirma que o condenado perde todos os direitos civis durante a pena erra: só os atingidos pela perda da liberdade."],
+      "termos": [],
+      "remissoes": ["Art. 39", "Art. 40"]
+    },
+    "art-39": {
+      "simples": "O trabalho do preso é sempre remunerado, sendo-lhe garantidos os benefícios da Previdência Social.",
+      "pontos": ["Trabalho do preso sempre remunerado.", "Garantidos os benefícios da Previdência Social."],
+      "atencao": ["A palavra é 'sempre' remunerado."],
+      "exemplo": "O condenado que trabalha na unidade prisional recebe remuneração e tem direito a benefícios previdenciários.",
+      "prova": ["Assertiva que permite trabalho do preso sem remuneração contraria o art. 39."],
+      "termos": [],
+      "remissoes": ["Art. 38", "Art. 40"]
+    },
+    "art-40": {
+      "simples": "Remete à legislação especial a regulação dos direitos e deveres do preso (arts. 38 e 39), os critérios de revogação e transferência de regimes e as infrações disciplinares e sanções (hoje, principalmente a Lei de Execução Penal).",
+      "pontos": ["Legislação especial regula a matéria dos arts. 38 e 39.", "Define deveres e direitos do preso, critérios para revogação e transferência de regimes e infrações disciplinares com sanções."],
+      "atencao": ["O Código só dá as bases; os detalhes da execução estão em lei especial."],
+      "exemplo": "As faltas disciplinares e suas sanções estão na lei de execução, não no Código Penal.",
+      "prova": ["Assertiva que diz que o Código Penal detalha as infrações disciplinares do preso erra: remete à legislação especial."],
+      "termos": [],
+      "remissoes": ["Art. 38", "Art. 39"]
+    },
+    "art-41": {
+      "simples": "O condenado a quem sobrevém doença mental deve ser recolhido a hospital de custódia e tratamento psiquiátrico ou, à falta, a outro estabelecimento adequado.",
+      "pontos": ["Doença mental superveniente: recolhimento a hospital de custódia e tratamento psiquiátrico.", "À falta, outro estabelecimento adequado."],
+      "atencao": ["Trata da doença que SOBREVÉM durante a execução (não da inimputabilidade ao tempo do fato)."],
+      "exemplo": "Condenado desenvolve esquizofrenia durante o cumprimento da pena e é transferido a hospital de custódia.",
+      "prova": ["Assertiva que mantém o condenado com doença mental superveniente em estabelecimento comum contraria o art. 41."],
+      "termos": [],
+      "remissoes": ["Art. 26 (inimputabilidade)", "Art. 42"]
+    },
+    "art-42": {
+      "simples": "Detração: computam-se na pena privativa de liberdade e na medida de segurança o tempo de prisão provisória, no Brasil ou no estrangeiro, o de prisão administrativa e o de internação em hospital de custódia ou estabelecimento adequado. (Na plataforma, o texto desta unidade aparece seguido da lista de penas restritivas de direitos do art. 43.)",
+      "pontos": ["Computam-se: prisão provisória (no Brasil ou no exterior), prisão administrativa e internação.", "Vale para pena privativa de liberdade e para medida de segurança.", "O texto exibido a seguir traz as penas restritivas de direitos: prestação pecuniária, perda de bens e valores, prestação de serviço à comunidade ou a entidades públicas, interdição temporária de direitos e limitação de fim de semana."],
+      "atencao": ["Detração desconta o tempo de prisão provisória da pena final.", "A lista de penas restritivas de direitos pertence ao art. 43, que aparece junto ao texto desta unidade."],
+      "exemplo": "Quem ficou preso provisoriamente por 6 meses e é condenado tem esses 6 meses descontados da pena.",
+      "prova": ["Assertiva que não desconta o tempo de prisão provisória cumprido no exterior contraria o art. 42."],
+      "termos": [{ "termo": "Detração", "significado": "Desconto, da pena, do tempo de prisão ou internação anteriores." }],
+      "remissoes": ["Art. 44 (substituição por restritivas de direitos)"]
+    },
+    "art-44": {
+      "simples": "As penas restritivas de direitos são autônomas e substituem as privativas de liberdade quando: (I) a pena aplicada não for superior a quatro anos e o crime não tiver sido cometido com violência ou grave ameaça, ou, qualquer que seja a pena, se o crime for culposo; (II) o réu não for reincidente em crime doloso; (III) culpabilidade, antecedentes, conduta social, personalidade, motivos e circunstâncias indicarem que a substituição é suficiente. Os parágrafos tratam da substituição por multa ou por uma ou duas restritivas conforme a pena, da reincidência (substituição possível se socialmente recomendável e se a reincidência não for no mesmo crime), da conversão por descumprimento (com saldo mínimo de trinta dias) e da decisão do juiz da execução em nova condenação.",
+      "pontos": ["Requisitos: pena não superior a 4 anos e crime sem violência ou grave ameaça (ou crime culposo, qualquer pena); réu não reincidente em crime doloso; circunstâncias indicam suficiência.", "§2º: condenação igual ou inferior a 1 ano: multa ou uma restritiva; superior a 1 ano: restritiva e multa, ou duas restritivas.", "§3º: reincidente pode ter substituição se socialmente recomendável e se a reincidência não for no mesmo crime.", "§4º: conversão em privativa de liberdade por descumprimento injustificado, com desconto do tempo cumprido e saldo mínimo de 30 dias.", "§5º: nova condenação a pena privativa: o juiz da execução decide sobre a conversão."],
+      "atencao": ["Crime culposo admite substituição qualquer que seja a pena.", "Reincidência em crime DOLOSO impede a substituição, salvo o §3º.", "O saldo mínimo de 30 dias na conversão é cobrado."],
+      "exemplo": "Condenação de 3 anos por furto sem violência, réu primário: pode ser substituída por restritivas de direitos.",
+      "prova": ["Assertiva que permite substituição em crime com violência à pessoa quando a pena é de 3 anos contraria o inciso I."],
+      "termos": [],
+      "remissoes": ["Art. 43 (espécies)", "Art. 45 a 48"]
+    },
+    "art-45": {
+      "simples": "A substituição segue as regras dos arts. 46, 47 e 48. A prestação pecuniária consiste em pagamento em dinheiro à vítima, a seus dependentes ou a entidade pública ou privada com destinação social, em importância fixada pelo juiz, entre 1 e 360 salários mínimos, e é deduzida de eventual reparação civil. Se o beneficiário aceitar, pode consistir em prestação de outra natureza. A perda de bens e valores reverte ao Fundo Penitenciário Nacional, ressalvada a legislação especial, com teto no prejuízo causado ou no proveito obtido (o que for maior).",
+      "pontos": ["Prestação pecuniária: de 1 a 360 salários mínimos, paga à vítima, dependentes ou entidade com destinação social.", "O valor pago é deduzido de eventual reparação civil, se coincidentes os beneficiários.", "Com aceitação do beneficiário, pode ser prestação de outra natureza.", "Perda de bens e valores: em favor do Fundo Penitenciário Nacional, ressalvada a legislação especial; teto = o maior entre prejuízo causado e proveito obtido."],
+      "atencao": ["Limites da prestação pecuniária: não inferior a 1 nem superior a 360 salários mínimos.", "A perda de bens vai para o Fundo Penitenciário Nacional."],
+      "exemplo": "O juiz fixa prestação pecuniária de 10 salários mínimos em favor da vítima; esse valor é abatido de futura ação civil de reparação.",
+      "prova": ["Assertiva que fixa o teto da prestação pecuniária em 100 salários mínimos erra: o texto diz 360."],
+      "termos": [],
+      "remissoes": ["Art. 44", "Art. 46"]
+    },
+    "art-46": {
+      "simples": "A prestação de serviços à comunidade ou a entidades públicas aplica-se a condenações superiores a seis meses de privação da liberdade e consiste em tarefas gratuitas atribuídas ao condenado, em entidades assistenciais, hospitais, escolas, orfanatos e similares, conforme suas aptidões, à razão de uma hora de tarefa por dia de condenação, sem prejudicar a jornada normal de trabalho. Se a pena substituída for superior a um ano, o condenado pode cumprir em menor tempo, nunca inferior à metade da pena privativa fixada.",
+      "pontos": ["Aplicável a condenações superiores a 6 meses.", "Tarefas gratuitas, conforme as aptidões, em entidades assistenciais, hospitais, escolas, orfanatos e similares.", "Uma hora de tarefa por dia de condenação, sem prejudicar a jornada normal.", "Pena substituída superior a 1 ano: pode cumprir em menor tempo, nunca inferior à metade."],
+      "atencao": ["Só para condenações SUPERIORES a seis meses.", "Cumprimento em menor tempo exige pena superior a um ano e respeita o mínimo de metade."],
+      "exemplo": "Condenado a 2 anos, com pena substituída por serviços, pode cumpri-la em tempo menor, mas não em menos de 1 ano.",
+      "prova": ["Assertiva que permite prestação de serviços para condenações de qualquer duração erra: só superiores a seis meses."],
+      "termos": [],
+      "remissoes": ["Art. 44", "Art. 55"]
+    },
+    "art-47": {
+      "simples": "Penas de interdição temporária de direitos: proibição do exercício de cargo, função ou atividade pública e de mandato eletivo; proibição do exercício de profissão, atividade ou ofício que dependam de habilitação especial, licença ou autorização do poder público; suspensão de autorização ou habilitação para dirigir veículo; e proibição de inscrever-se em concurso, avaliação ou exame públicos (o texto oficial lista os incisos I, II, III e V).",
+      "pontos": ["I – cargo, função ou atividade pública e mandato eletivo.", "II – profissão, atividade ou ofício que dependam de habilitação, licença ou autorização.", "III – suspensão de autorização ou habilitação para dirigir.", "V – proibição de inscrever-se em concurso, avaliação ou exame públicos."],
+      "atencao": ["A proibição de concursos públicos (inciso V) foi incluída por lei de 2011 e é frequentemente cobrada."],
+      "exemplo": "Condenado por crime no exercício da função pública pode ficar proibido de exercer cargo público por um tempo.",
+      "prova": ["Assertiva que exclui a proibição de inscrever-se em concurso público do rol de interdições contraria o inciso V."],
+      "termos": [],
+      "remissoes": ["Arts. 56 e 57 (aplicação das interdições)"]
+    },
+    "art-48": {
+      "simples": "A limitação de fim de semana consiste na obrigação de permanecer, aos sábados e domingos, por 5 horas diárias, em casa de albergado ou outro estabelecimento adequado, podendo ser ministrados cursos e palestras ou atribuídas atividades educativas durante a permanência.",
+      "pontos": ["Aos sábados e domingos, 5 horas por dia.", "Em casa de albergado ou outro estabelecimento adequado.", "Cursos, palestras ou atividades educativas podem ser ministrados."],
+      "atencao": ["Duração diária fixa: 5 horas."],
+      "exemplo": "O condenado comparece à casa de albergado nos fins de semana por 5 horas diárias.",
+      "prova": ["Assertiva que fixa a limitação de fim de semana em 8 horas diárias erra: são 5."],
+      "termos": [],
+      "remissoes": ["Art. 43"]
+    },
+    "art-49": {
+      "simples": "A pena de multa consiste no pagamento ao fundo penitenciário da quantia fixada na sentença, calculada em dias-multa, no mínimo 10 e no máximo 360. O valor do dia-multa é fixado pelo juiz, não podendo ser inferior a um trigésimo do maior salário mínimo mensal vigente ao tempo do fato, nem superior a 5 vezes esse salário. A multa é atualizada, na execução, pelos índices de correção monetária.",
+      "pontos": ["Pagamento ao fundo penitenciário, em dias-multa.", "Mínimo de 10 e máximo de 360 dias-multa.", "Valor do dia-multa: de um trigésimo a 5 vezes o maior salário mínimo mensal vigente ao tempo do fato.", "Atualização por correção monetária na execução."],
+      "atencao": ["Quantidade de dias: 10 a 360; valor do dia: 1/30 a 5 salários mínimos.", "O salário mínimo considerado é o vigente ao tempo do FATO."],
+      "exemplo": "A sentença fixa 100 dias-multa, cada um com o valor de um trigésimo do salário mínimo vigente na data do crime.",
+      "prova": ["Assertiva que fixa o máximo de dias-multa acima de 360 erra: o limite é 360."],
+      "termos": [{ "termo": "Dia-multa", "significado": "Unidade em que se calcula a multa, multiplicando-se a quantidade de dias pelo valor de cada dia." }],
+      "remissoes": ["Arts. 50 a 52", "Art. 60 (fixação da multa)"]
+    },
+    "art-50": {
+      "simples": "A multa deve ser paga dentro de 10 dias depois de transitada em julgado a sentença; a requerimento do condenado, o juiz pode permitir pagamento em parcelas mensais. A cobrança pode ser feita mediante desconto no vencimento ou salário quando a multa for aplicada isoladamente, cumulativamente com pena restritiva de direitos ou com suspensão condicional da pena. O desconto não incide sobre os recursos indispensáveis ao sustento do condenado e de sua família.",
+      "pontos": ["Prazo de pagamento: 10 dias após o trânsito em julgado.", "Parcelamento mensal a requerimento, a critério do juiz.", "Desconto em vencimento ou salário: multa isolada, com restritiva de direitos ou com suspensão condicional.", "O desconto respeita o sustento do condenado e da família."],
+      "atencao": ["Prazo de 10 dias, contado do TRÂNSITO EM JULGADO."],
+      "exemplo": "Condenado a multa isolada pode ter o valor descontado de seu salário, preservada a parte necessária ao sustento da família.",
+      "prova": ["Assertiva que permite desconto integral do salário erra: o desconto não pode atingir o necessário ao sustento."],
+      "termos": [],
+      "remissoes": ["Art. 49", "Art. 51"]
+    },
+    "art-51": {
+      "simples": "Transitada em julgado a sentença condenatória, a multa é executada perante o juiz da execução penal e considerada dívida de valor, aplicando-se as normas da dívida ativa da Fazenda Pública, inclusive as causas interruptivas e suspensivas da prescrição. Os §§1º e 2º foram revogados. O texto traz a indicação 'Vide ADI 7032': confira a decisão no STF.",
+      "pontos": ["Execução da multa perante o juiz da execução penal.", "Considerada dívida de valor, com normas da dívida ativa da Fazenda Pública.", "Aplicam-se as causas interruptivas e suspensivas da prescrição da dívida ativa."],
+      "atencao": ["O texto remete à ADI 7032: antes de memorizar a legitimidade para executar a multa, confira o que o STF decidiu."],
+      "exemplo": "Não paga a multa, ela é cobrada como dívida de valor no juízo da execução penal.",
+      "prova": ["Assertiva que converte a multa não paga em prisão contraria o art. 51 (a multa é dívida de valor)."],
+      "termos": [{ "termo": "Dívida de valor", "significado": "Débito cobrado como dívida em dinheiro, sem converter-se em pena de prisão." }],
+      "remissoes": ["Arts. 49 e 50"]
+    },
+    "art-52": {
+      "simples": "É suspensa a execução da pena de multa se sobrevém ao condenado doença mental.",
+      "pontos": ["Doença mental superveniente suspende a execução da multa."],
+      "atencao": ["É a suspensão da EXECUÇÃO, não extinção da pena."],
+      "exemplo": "Condenado a multa desenvolve doença mental: a cobrança é suspensa.",
+      "prova": ["Assertiva que extingue a multa pela doença mental superveniente erra: o texto fala em suspensão."],
+      "termos": [],
+      "remissoes": ["Art. 41 (doença mental e pena privativa)"]
+    },
+    "art-53": {
+      "simples": "Os limites das penas privativas de liberdade são estabelecidos na sanção correspondente a cada tipo legal de crime.",
+      "pontos": ["Os limites de cada pena privativa estão na sanção de cada crime."],
+      "atencao": ["A parte geral não fixa a pena de cada crime: ela vem no preceito secundário de cada tipo."],
+      "exemplo": "O furto simples tem sua pena na própria definição do crime.",
+      "prova": ["Assertiva que fixa os limites da pena de qualquer crime no art. 53 erra: dependem de cada tipo legal."],
+      "termos": [],
+      "remissoes": ["Art. 59"]
+    },
+    "art-54": {
+      "simples": "As penas restritivas de direitos são aplicáveis, independentemente de cominação na parte especial, em substituição à pena privativa de liberdade, fixada em quantidade inferior a 1 ano, ou nos crimes culposos (o texto desta unidade segue a redação ainda constante do Código; veja também o art. 44, com as regras atuais de substituição).",
+      "pontos": ["Aplicam-se em substituição, sem precisar estar previstas em cada crime.", "Pena inferior a 1 ano, ou crimes culposos."],
+      "atencao": ["As condições atuais de substituição (pena de até 4 anos) estão no art. 44; compare os dois artigos ao estudar."],
+      "exemplo": "Em crime culposo, a pena privativa pode ser substituída por restritiva de direitos.",
+      "prova": ["Assertiva que exige previsão de restritiva de direitos na parte especial para cada crime contraria o art. 54."],
+      "termos": [],
+      "remissoes": ["Art. 44"]
+    },
+    "art-55": {
+      "simples": "As penas restritivas de direitos dos incisos III, IV, V e VI do art. 43 têm a mesma duração da pena privativa de liberdade substituída, ressalvado o disposto no §4º do art. 46.",
+      "pontos": ["Mesma duração da pena privativa substituída.", "Ressalva: o cumprimento em menor tempo do §4º do art. 46."],
+      "atencao": ["A ressalva do art. 46, §4º, permite cumprir em menor tempo, nunca inferior à metade."],
+      "exemplo": "Pena de 1 ano substituída por prestação de serviços tem, em regra, duração de 1 ano.",
+      "prova": ["Assertiva que fixa duração menor da pena restritiva sem a ressalva do art. 46, §4º, contraria o art. 55."],
+      "termos": [],
+      "remissoes": ["Art. 46, §4º"]
+    },
+    "art-56": {
+      "simples": "As penas de interdição previstas nos incisos I e II do art. 47 aplicam-se para todo crime cometido no exercício de profissão, atividade, ofício, cargo ou função, sempre que houver violação dos deveres que lhes são inerentes.",
+      "pontos": ["Interdições dos incisos I e II do art. 47.", "Para crimes cometidos no exercício de profissão, atividade, ofício, cargo ou função.", "Quando há violação dos deveres inerentes."],
+      "atencao": ["Exige o crime ligado ao exercício da atividade e violação de seus deveres."],
+      "exemplo": "Médico que comete crime violando os deveres da profissão pode ser proibido de exercê-la por um período.",
+      "prova": ["Assertiva que aplica a interdição a qualquer crime, mesmo sem relação com a atividade, contraria o art. 56."],
+      "termos": [],
+      "remissoes": ["Art. 47, I e II"]
+    },
+    "art-57": {
+      "simples": "A pena de interdição do inciso III do art. 47 (suspensão de autorização ou habilitação para dirigir veículo) aplica-se aos crimes culposos de trânsito.",
+      "pontos": ["Suspensão de habilitação para dirigir: crimes CULPOSOS de trânsito."],
+      "atencao": ["O art. 57 trata dos crimes culposos de trânsito; para crimes específicos de trânsito há legislação própria."],
+      "exemplo": "Motorista condenado por homicídio culposo na direção de veículo pode ter a habilitação suspensa.",
+      "prova": ["Assertiva que aplica a suspensão do art. 47, III, a qualquer crime doloso contraria o art. 57."],
+      "termos": [],
+      "remissoes": ["Art. 47, III"]
+    },
+    "art-58": {
+      "simples": "A multa prevista em cada tipo legal de crime tem os limites fixados no art. 49 e seus parágrafos. A multa do parágrafo único do art. 44 e do §2º do art. 60 aplica-se independentemente de cominação na parte especial.",
+      "pontos": ["Limites da multa: art. 49 e parágrafos.", "Multa substitutiva (art. 44, parágrafo único e art. 60, §2º): aplicável mesmo sem previsão no tipo."],
+      "atencao": ["A multa substitutiva não depende de estar prevista no crime."],
+      "exemplo": "Pena de até 6 meses pode ser substituída por multa mesmo que o crime não preveja multa.",
+      "prova": ["Assertiva que exige previsão de multa no tipo para a multa substitutiva contraria o parágrafo único."],
+      "termos": [],
+      "remissoes": ["Arts. 49 e 60"]
+    },
+    "art-59": {
+      "simples": "Fixação da pena (primeira fase): o juiz, atendendo à culpabilidade, aos antecedentes, à conduta social, à personalidade do agente, aos motivos, às circunstâncias e consequências do crime e ao comportamento da vítima, estabelece, conforme seja necessário e suficiente para reprovação e prevenção do crime: as penas aplicáveis dentre as cominadas, a quantidade de pena dentro dos limites, o regime inicial de cumprimento e a substituição da pena privativa por outra espécie, se cabível. O texto traz 'Vide ADPF 1107': confira a decisão do STF.",
+      "pontos": ["Circunstâncias judiciais: culpabilidade, antecedentes, conduta social, personalidade, motivos, circunstâncias, consequências do crime e comportamento da vítima.", "Critério: necessário e suficiente para reprovação e prevenção do crime.", "I – penas aplicáveis dentre as cominadas; II – quantidade de pena; III – regime inicial; IV – substituição, se cabível."],
+      "atencao": ["São oito circunstâncias judiciais; o comportamento da VÍTIMA está entre elas.", "O art. 59 define o regime inicial junto com o art. 33, §3º."],
+      "exemplo": "O juiz analisa os antecedentes e a personalidade do réu para fixar a pena-base acima ou abaixo do mínimo.",
+      "prova": ["Assertiva que exclui o comportamento da vítima das circunstâncias do art. 59 contraria o caput."],
+      "termos": [{ "termo": "Pena-base", "significado": "Pena fixada na primeira fase, a partir das circunstâncias judiciais." }],
+      "remissoes": ["Art. 33, §3º", "Art. 60"]
+    },
+    "art-60": {
+      "simples": "Na fixação da pena de multa o juiz deve atender, principalmente, à situação econômica do réu. A multa pode ser aumentada até o triplo se, por essa situação, for ineficaz mesmo aplicada no máximo. A pena privativa de liberdade aplicada, não superior a 6 meses, pode ser substituída pela de multa, observados os critérios dos incisos II e III do art. 44.",
+      "pontos": ["Critério principal: situação econômica do réu.", "§1º: aumento da multa até o triplo se ineficaz mesmo no máximo.", "§2º: pena privativa não superior a 6 meses pode ser substituída por multa (critérios do art. 44, II e III)."],
+      "atencao": ["O aumento é até o TRIPLO e só se a multa for ineficaz no máximo.", "Substituição por multa: pena de até 6 meses."],
+      "exemplo": "Réu muito rico condenado ao máximo de dias-multa pode ter o valor aumentado até o triplo.",
+      "prova": ["Assertiva que permite substituir por multa pena de 1 ano erra: o §2º trata de pena não superior a 6 meses."],
+      "termos": [],
+      "remissoes": ["Art. 49", "Art. 44, II e III"]
+    }
+  }
+}

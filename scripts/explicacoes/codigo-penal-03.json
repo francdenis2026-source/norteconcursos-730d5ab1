@@ -1,0 +1,686 @@
+{
+  "course_slug": "codigo-penal",
+  "law": "Código Penal — lote 03: arts. 61 a 91-A",
+  "units": {
+    "art-61": {
+      "simples": "Lista as agravantes genéricas: circunstâncias que SEMPRE agravam a pena, quando não constituem nem qualificam o crime. São a reincidência e, no inciso II, motivos e modos de agir que tornam o fato mais reprovável: motivo fútil ou torpe; conexão com outro crime; traição, emboscada ou dissimulação; veneno, fogo, explosivo, tortura ou meio insidioso ou cruel; crime contra ascendente, descendente, irmão ou cônjuge; abuso de autoridade ou de relações domésticas, de coabitação ou hospitalidade, ou violência contra a mulher na forma da lei específica; abuso de poder ou violação de dever do cargo, ofício, ministério ou profissão; crime contra criança, maior de 60 anos, enfermo ou mulher grávida; ofendido sob proteção imediata da autoridade; e outras hipóteses do inciso II (confira o texto completo, que inclui a ocasião de calamidade).",
+      "pontos": [
+        "Só agravam quando NÃO constituem nem qualificam o crime (para evitar dupla valoração).",
+        "I – reincidência.",
+        "II, a: motivo fútil ou torpe.",
+        "II, b: para facilitar ou assegurar execução, ocultação, impunidade ou vantagem de outro crime.",
+        "II, c: traição, emboscada, dissimulação ou recurso que dificultou a defesa.",
+        "II, d: veneno, fogo, explosivo, tortura ou meio insidioso, cruel ou de perigo comum.",
+        "II, e: contra ascendente, descendente, irmão ou cônjuge.",
+        "II, f: abuso de autoridade, relações domésticas, coabitação ou hospitalidade, ou violência contra a mulher.",
+        "II, g: abuso de poder ou violação de dever inerente ao cargo, ofício, ministério ou profissão.",
+        "II, h: contra criança, maior de 60 anos, enfermo ou mulher grávida.",
+        "II, i: ofendido sob imediata proteção da autoridade."
+      ],
+      "atencao": [
+        "Se a circunstância já qualifica o crime (ex.: motivo torpe no homicídio qualificado), não pode agravar de novo.",
+        "As agravantes SEMPRE agravam, mas a lei não fixa o quanto: o juiz define."
+      ],
+      "exemplo": "O crime cometido contra o próprio irmão ou contra pessoa maior de 60 anos tem a pena agravada na segunda fase da dosimetria.",
+      "prova": [
+        "Assertiva que aplica agravante que já é qualificadora do crime erra: o artigo só vale quando a circunstância não constitui nem qualifica o crime."
+      ],
+      "termos": [
+        {
+          "termo": "Agravante genérica",
+          "significado": "Circunstância legal que aumenta a pena em qualquer crime, na segunda fase."
+        }
+      ],
+      "remissoes": [
+        "Art. 62",
+        "Art. 63 (reincidência)",
+        "Art. 68 (cálculo da pena)"
+      ]
+    },
+    "art-62": {
+      "simples": "Agravantes no concurso de pessoas: a pena é ainda agravada para o agente que promove ou organiza a cooperação no crime ou dirige a atividade dos demais; coage ou induz outrem à execução material do crime; instiga ou determina a cometer o crime alguém sujeito à sua autoridade ou não punível em virtude de condição ou qualidade pessoal; ou executa o crime, ou nele participa, mediante paga ou promessa de recompensa.",
+      "pontos": [
+        "I – promove ou organiza a cooperação ou dirige os demais.",
+        "II – coage ou induz outrem à execução material.",
+        "III – instiga ou determina a cometer o crime alguém sujeito à sua autoridade ou não punível por condição pessoal.",
+        "IV – executa ou participa mediante paga ou promessa de recompensa."
+      ],
+      "atencao": [
+        "Voltadas ao concurso de pessoas: ligam-se ao papel de cada agente."
+      ],
+      "exemplo": "O chefe que organiza o grupo e dirige os demais tem a pena agravada (inciso I).",
+      "prova": [
+        "Assertiva que aplica o art. 62 a quem comete o crime sozinho erra: pressupõe concurso de agentes."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 61",
+        "Art. 29"
+      ]
+    },
+    "art-63": {
+      "simples": "Reincidência: verifica-se quando o agente comete novo crime depois de transitar em julgado a sentença que, no País ou no estrangeiro, o tenha condenado por crime anterior.",
+      "pontos": [
+        "Novo crime depois do trânsito em julgado de sentença condenatória por crime anterior.",
+        "A condenação anterior pode ser no País ou no estrangeiro."
+      ],
+      "atencao": [
+        "O marco é o TRÂNSITO EM JULGADO da condenação anterior.",
+        "Conta condenação no estrangeiro."
+      ],
+      "exemplo": "Quem, depois de condenação definitiva por furto, comete roubo é reincidente.",
+      "prova": [
+        "Assertiva que considera reincidente quem comete novo crime com condenação anterior ainda recorrível erra: exige trânsito em julgado."
+      ],
+      "termos": [
+        {
+          "termo": "Reincidente",
+          "significado": "Quem comete novo crime após condenação definitiva por crime anterior."
+        }
+      ],
+      "remissoes": [
+        "Art. 64"
+      ]
+    },
+    "art-64": {
+      "simples": "Efeitos da reincidência: não prevalece a condenação anterior se, entre a data do cumprimento ou extinção da pena e a infração posterior, tiver decorrido período superior a 5 anos, computado o período de prova da suspensão ou do livramento condicional, se não ocorrer revogação (período depurador). Não se consideram os crimes militares próprios e políticos.",
+      "pontos": [
+        "Prazo depurador: mais de 5 anos entre cumprimento ou extinção da pena e a nova infração.",
+        "Computa-se o período de prova da suspensão ou do livramento, se não houve revogação.",
+        "Não se consideram crimes militares próprios e políticos."
+      ],
+      "atencao": [
+        "Superado o prazo de 5 anos, o agente volta a ser primário para fins de reincidência (mas os antecedentes podem ser tema à parte).",
+        "Crimes militares próprios e políticos não geram reincidência."
+      ],
+      "exemplo": "Quem terminou de cumprir pena há mais de 5 anos e comete novo crime não é reincidente.",
+      "prova": [
+        "Assertiva que fixa o prazo depurador em 10 anos erra: o texto fala em mais de 5 anos."
+      ],
+      "termos": [
+        {
+          "termo": "Período depurador",
+          "significado": "Tempo após o qual a condenação anterior deixa de gerar reincidência."
+        }
+      ],
+      "remissoes": [
+        "Art. 63"
+      ]
+    },
+    "art-65": {
+      "simples": "Atenuantes genéricas: circunstâncias que SEMPRE atenuam a pena. Incluem ser o agente menor de 21 anos na data do fato ou maior de 70 na data da sentença (salvo crime com violência sexual contra a mulher, conforme a redação do texto); o desconhecimento da lei; ter o agente cometido o crime por relevante valor social ou moral; ter procurado, espontaneamente e com eficiência, logo após o crime, evitar ou minorar as consequências ou reparado o dano antes do julgamento; coação resistível, cumprimento de ordem de autoridade superior ou violenta emoção provocada por ato injusto da vítima; confissão espontânea perante a autoridade; e influência de multidão em tumulto, se não a provocou.",
+      "pontos": [
+        "I – menor de 21 anos na data do fato ou maior de 70 na data da sentença (com a ressalva do texto).",
+        "II – desconhecimento da lei.",
+        "III, a: relevante valor social ou moral.",
+        "III, b: evitar ou minorar consequências ou reparar o dano antes do julgamento.",
+        "III, c: coação resistível, ordem de autoridade superior ou violenta emoção por ato injusto da vítima.",
+        "III, d: confissão espontânea da autoria perante a autoridade.",
+        "III, e: influência de multidão em tumulto, se não a provocou."
+      ],
+      "atencao": [
+        "Menor de 21: na data do FATO; maior de 70: na data da SENTENÇA.",
+        "Confissão deve ser ESPONTÂNEA e perante a autoridade.",
+        "A reparação do dano precisa ocorrer ANTES do julgamento (diferente do arrependimento posterior, até o recebimento da denúncia)."
+      ],
+      "exemplo": "O réu confessa espontaneamente a autoria diante do delegado: incide a atenuante do inciso III, d.",
+      "prova": [
+        "Assertiva que considera a idade do agente na data da sentença para a atenuante da menoridade erra: é a data do fato."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 66",
+        "Art. 67"
+      ]
+    },
+    "art-66": {
+      "simples": "Atenuante inominada: a pena pode ainda ser atenuada em razão de circunstância relevante, anterior ou posterior ao crime, embora não prevista expressamente em lei.",
+      "pontos": [
+        "Circunstância relevante, anterior ou posterior ao crime.",
+        "Mesmo sem previsão expressa em lei.",
+        "É faculdade do juiz ('poderá')."
+      ],
+      "atencao": [
+        "Diferente do art. 65 ('sempre atenuam'): aqui a atenuação é facultativa e aberta."
+      ],
+      "exemplo": "O juiz reconhece como relevante o fato de o réu ter prestado socorro à vítima, ainda que isso não esteja listado no art. 65.",
+      "prova": [
+        "Assertiva que restringe as atenuantes ao rol do art. 65 erra: o art. 66 admite circunstância relevante não prevista."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 65"
+      ]
+    },
+    "art-67": {
+      "simples": "Concurso de agravantes e atenuantes: a pena deve aproximar-se do limite indicado pelas circunstâncias preponderantes, entendendo-se como tais as que resultam dos motivos determinantes do crime, da personalidade do agente e da reincidência.",
+      "pontos": [
+        "Prevalecem as circunstâncias preponderantes.",
+        "Preponderantes: motivos determinantes, personalidade do agente e reincidência."
+      ],
+      "atencao": [
+        "A reincidência está entre as preponderantes."
+      ],
+      "exemplo": "Havendo confissão (atenuante) e reincidência (agravante), a reincidência pesa mais por ser preponderante.",
+      "prova": [
+        "Assertiva que exclui a reincidência das circunstâncias preponderantes contraria o art. 67."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Arts. 61 a 66"
+      ]
+    },
+    "art-68": {
+      "simples": "Cálculo da pena (critério trifásico): primeiro fixa-se a pena-base pelo art. 59; depois consideram-se as circunstâncias atenuantes e agravantes; por último, as causas de diminuição e de aumento. No concurso de causas de aumento ou diminuição da parte especial, o juiz pode limitar-se a um só aumento ou a uma só diminuição, prevalecendo a que mais aumente ou diminua.",
+      "pontos": [
+        "1ª fase: pena-base (art. 59).",
+        "2ª fase: atenuantes e agravantes.",
+        "3ª fase: causas de diminuição e de aumento.",
+        "Parágrafo único: concurso de causas da parte especial: pode aplicar só uma, prevalecendo a que mais aumente ou diminua."
+      ],
+      "atencao": [
+        "Ordem das fases: pena-base, atenuantes/agravantes, causas de aumento/diminuição.",
+        "O parágrafo único vale para causas da PARTE ESPECIAL."
+      ],
+      "exemplo": "O juiz fixa a pena-base, aplica a atenuante da confissão e, por fim, aumenta pela causa de aumento prevista no tipo.",
+      "prova": [
+        "Assertiva que inverte a ordem, aplicando as causas de aumento antes das agravantes, contraria o art. 68."
+      ],
+      "termos": [
+        {
+          "termo": "Sistema trifásico",
+          "significado": "Método de cálculo da pena em três fases sucessivas."
+        }
+      ],
+      "remissoes": [
+        "Art. 59",
+        "Arts. 61 a 67"
+      ]
+    },
+    "art-69": {
+      "simples": "Concurso material: quando o agente, mediante mais de uma ação ou omissão, pratica dois ou mais crimes, idênticos ou não, aplicam-se cumulativamente as penas privativas de liberdade. Se há reclusão e detenção, executa-se primeiro a reclusão. Se foi aplicada pena privativa de liberdade, não suspensa, por um dos crimes, é incabível a substituição do art. 44 para os demais. Penas restritivas de direitos compatíveis cumprem-se simultaneamente; as demais, sucessivamente.",
+      "pontos": [
+        "Mais de uma ação ou omissão, dois ou mais crimes: penas somadas.",
+        "Reclusão cumpre-se antes da detenção.",
+        "§1º: pena privativa não suspensa em um crime impede a substituição nos demais.",
+        "§2º: restritivas compatíveis: simultâneas; as demais: sucessivas."
+      ],
+      "atencao": [
+        "Concurso MATERIAL = pluralidade de condutas, penas somadas (cúmulo material).",
+        "A reclusão é executada primeiro."
+      ],
+      "exemplo": "Em dias diferentes, o agente comete um roubo e uma extorsão: as penas são somadas.",
+      "prova": [
+        "Assertiva que aplica o cúmulo material a uma única ação com dois resultados erra: isso é concurso formal (art. 70)."
+      ],
+      "termos": [
+        {
+          "termo": "Cúmulo material",
+          "significado": "Soma das penas de cada crime."
+        }
+      ],
+      "remissoes": [
+        "Art. 70",
+        "Art. 71"
+      ]
+    },
+    "art-70": {
+      "simples": "Concurso formal: quando o agente, mediante uma só ação ou omissão, pratica dois ou mais crimes, idênticos ou não, aplica-se a mais grave das penas, ou, se iguais, só uma, aumentada de um sexto até metade. As penas se somam, porém, se a ação ou omissão é dolosa e os crimes resultam de desígnios autônomos (concurso formal impróprio). A pena não pode exceder a que seria cabível pela regra do concurso material.",
+      "pontos": [
+        "Uma só ação ou omissão, dois ou mais crimes.",
+        "Pena: a mais grave (ou uma delas, se iguais) aumentada de um sexto até metade (exasperação).",
+        "Se dolosa e de desígnios autônomos: penas somadas (cúmulo).",
+        "Parágrafo único: limite — não pode exceder o que seria no concurso material."
+      ],
+      "atencao": [
+        "Concurso formal próprio: exasperação de 1/6 até a metade; impróprio (desígnios autônomos): cúmulo material.",
+        "A regra do art. 69 funciona como teto (parágrafo único)."
+      ],
+      "exemplo": "Com uma só explosão, o agente causa a morte de duas pessoas sem querer ambas as mortes: concurso formal.",
+      "prova": [
+        "Assertiva que fixa o aumento do concurso formal em até dois terços erra: é de um sexto até a metade."
+      ],
+      "termos": [
+        {
+          "termo": "Desígnios autônomos",
+          "significado": "Propósitos distintos do agente para cada resultado."
+        }
+      ],
+      "remissoes": [
+        "Art. 69",
+        "Art. 71"
+      ]
+    },
+    "art-71": {
+      "simples": "Crime continuado: quando o agente, mediante mais de uma ação ou omissão, pratica dois ou mais crimes da mesma espécie e, pelas condições de tempo, lugar, maneira de execução e outras semelhantes, os subsequentes devem ser havidos como continuação do primeiro, aplica-se a pena de um só dos crimes, se idênticas, ou a mais grave, se diversas, aumentada de um sexto a dois terços. O parágrafo único trata dos crimes dolosos contra vítimas diferentes, com violência ou grave ameaça, em que o juiz pode aumentar a pena até o triplo, respeitados os limites dos arts. 70, parágrafo único e 75.",
+      "pontos": [
+        "Dois ou mais crimes da mesma espécie, em condições semelhantes de tempo, lugar e modo de execução.",
+        "Pena de um só dos crimes (ou o mais grave), aumentada de um sexto a dois terços.",
+        "Parágrafo único: dolosos, vítimas diferentes, com violência ou grave ameaça: aumento até o triplo, observados os arts. 70 e 75."
+      ],
+      "atencao": [
+        "Aumento comum: de 1/6 a 2/3; no parágrafo único: até o TRIPLO.",
+        "Crimes da MESMA espécie (e condições semelhantes)."
+      ],
+      "exemplo": "Funcionário desvia pequenas quantias da empresa toda semana pelo mesmo método: crime continuado.",
+      "prova": [
+        "Assertiva que aplica a mesma pena aumentada até a metade no crime continuado simples erra: é de um sexto a dois terços."
+      ],
+      "termos": [
+        {
+          "termo": "Crime continuado",
+          "significado": "Ficção legal que trata várias condutas semelhantes como um só crime para fins de pena."
+        }
+      ],
+      "remissoes": [
+        "Art. 70",
+        "Art. 75"
+      ]
+    },
+    "art-72": {
+      "simples": "No concurso de crimes, as penas de multa são aplicadas distinta e integralmente, isto é, somam-se sem exasperação.",
+      "pontos": [
+        "Multas aplicadas de forma distinta e integral em cada crime."
+      ],
+      "atencao": [
+        "Mesmo no concurso formal ou no crime continuado, a multa é aplicada integralmente em cada crime."
+      ],
+      "exemplo": "Em dois crimes, cada multa é calculada separadamente e ambas são cobradas.",
+      "prova": [
+        "Assertiva que aplica só uma multa aumentada no concurso de crimes contraria o art. 72."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Arts. 69 a 71"
+      ]
+    },
+    "art-73": {
+      "simples": "Erro na execução (aberratio ictus com unidade simples): quando, por acidente ou erro no uso dos meios de execução, o agente, em vez de atingir a pessoa que pretendia ofender, atinge pessoa diversa, responde como se tivesse praticado o crime contra aquela, atendendo ao §3º do art. 20. Se também atinge a pessoa pretendida, aplica-se o concurso formal do art. 70.",
+      "pontos": [
+        "Atinge pessoa diversa da pretendida: responde como se tivesse atingido a visada.",
+        "Consideram-se as condições da pessoa visada (art. 20, §3º).",
+        "Se atinge também a pretendida: regra do art. 70."
+      ],
+      "atencao": [
+        "Vítima diversa: responde pelo crime como se tivesse atingido quem queria atingir.",
+        "Se atinge as duas pessoas: concurso formal."
+      ],
+      "exemplo": "O agente atira para matar o desafeto, mas acerta um transeunte: responde como se tivesse matado o desafeto.",
+      "prova": [
+        "Assertiva que isenta o agente de pena quando atinge pessoa diversa da pretendida erra: responde como se tivesse atingido a pretendida."
+      ],
+      "termos": [
+        {
+          "termo": "Aberratio ictus",
+          "significado": "Erro na execução: o golpe atinge pessoa ou coisa diversa da pretendida."
+        }
+      ],
+      "remissoes": [
+        "Art. 20, §3º",
+        "Art. 70",
+        "Art. 74"
+      ]
+    },
+    "art-74": {
+      "simples": "Resultado diverso do pretendido (aberratio criminis): fora dos casos do art. 73, quando por acidente ou erro na execução sobrevém resultado diverso do pretendido, o agente responde por culpa, se o fato é previsto como crime culposo; se ocorre também o resultado pretendido, aplica-se a regra do concurso formal do art. 70.",
+      "pontos": [
+        "Resultado diverso do pretendido: responde por culpa, se o fato é previsto como crime culposo.",
+        "Se ocorre também o resultado pretendido: art. 70."
+      ],
+      "atencao": [
+        "Só há punição se o fato diverso for previsto como crime CULPOSO.",
+        "Diferente do art. 73, em que a pessoa atingida é diversa; aqui o resultado é diverso."
+      ],
+      "exemplo": "O agente quer apenas quebrar a vidraça de uma casa com uma pedra, mas ela atinge e fere um morador: o resultado (lesão) é diverso do pretendido (dano); responde por lesão corporal culposa, se prevista como crime culposo.",
+      "prova": [
+        "Assertiva que pune sempre a título de dolo o resultado diverso do pretendido erra: a regra é a culpa, se prevista."
+      ],
+      "termos": [
+        {
+          "termo": "Aberratio criminis",
+          "significado": "Resultado diverso do pretendido por erro na execução."
+        }
+      ],
+      "remissoes": [
+        "Art. 73",
+        "Art. 70"
+      ]
+    },
+    "art-75": {
+      "simples": "Limite das penas: o tempo de cumprimento das penas privativas de liberdade não pode ser superior a 40 anos. Se a soma das penas for superior a 40 anos, elas são unificadas para atender ao limite. Sobrevindo condenação por fato posterior ao início do cumprimento, faz-se nova unificação, desprezando o período já cumprido.",
+      "pontos": [
+        "Limite de 40 anos de cumprimento.",
+        "Penas somadas acima de 40 anos são unificadas para atender ao limite.",
+        "Condenação por fato posterior: nova unificação, desprezando o período já cumprido."
+      ],
+      "atencao": [
+        "O limite é de 40 anos (alterado pela Lei 13.964/2019; antes era 30).",
+        "Na nova unificação, desconsidera-se o tempo já cumprido."
+      ],
+      "exemplo": "Condenado a 100 anos de soma de penas cumpre no máximo 40 anos, salvo nova condenação por fato posterior.",
+      "prova": [
+        "Assertiva que fixa o limite máximo de cumprimento em 30 anos contraria o art. 75 atual."
+      ],
+      "termos": [
+        {
+          "termo": "Unificação das penas",
+          "significado": "Redução da soma das penas ao limite máximo de cumprimento."
+        }
+      ],
+      "remissoes": [
+        "Art. 71, parágrafo único"
+      ]
+    },
+    "art-76": {
+      "simples": "No concurso de infrações, executa-se primeiramente a pena mais grave.",
+      "pontos": [
+        "Executa-se primeiro a pena mais grave."
+      ],
+      "atencao": [
+        "Ordem de execução: a mais grave vem primeiro."
+      ],
+      "exemplo": "Com condenações de reclusão e de detenção, cumpre-se antes a mais grave.",
+      "prova": [
+        "Assertiva que determina a execução primeiro da pena mais leve erra: o art. 76 manda executar a mais grave."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 69"
+      ]
+    },
+    "art-77": {
+      "simples": "Suspensão condicional da pena (sursis): a execução da pena privativa de liberdade não superior a 2 anos pode ser suspensa, por 2 a 4 anos, desde que o condenado não seja reincidente em crime doloso, a culpabilidade, os antecedentes, a conduta social e a personalidade, bem como os motivos e circunstâncias, autorizem o benefício, e não seja indicada ou cabível a substituição do art. 44. A condenação anterior a multa não impede o benefício. O sursis etário ou humanitário permite suspender, por 4 a 6 anos, pena não superior a 4 anos para maior de 70 anos ou por razões de saúde.",
+      "pontos": [
+        "Pena privativa não superior a 2 anos; suspensão por 2 a 4 anos.",
+        "I – não reincidente em crime doloso.",
+        "II – culpabilidade, antecedentes, conduta social, personalidade, motivos e circunstâncias autorizam.",
+        "III – não seja indicada ou cabível a substituição do art. 44.",
+        "§1º: condenação anterior a multa não impede.",
+        "§2º: pena não superior a 4 anos, maior de 70 anos ou razões de saúde: suspensão por 4 a 6 anos."
+      ],
+      "atencao": [
+        "Sursis comum: pena até 2 anos, prazo de 2 a 4 anos; etário/humanitário: pena até 4 anos, prazo de 4 a 6 anos.",
+        "A reincidência impeditiva é em crime DOLOSO."
+      ],
+      "exemplo": "Réu primário condenado a 1 ano e 6 meses, sem cabimento de substituição, pode ter a pena suspensa por 2 a 4 anos.",
+      "prova": [
+        "Assertiva que permite sursis a reincidente em crime doloso contraria o inciso I."
+      ],
+      "termos": [
+        {
+          "termo": "Sursis",
+          "significado": "Suspensão condicional da pena, mediante condições."
+        }
+      ],
+      "remissoes": [
+        "Art. 78",
+        "Art. 44"
+      ]
+    },
+    "art-78": {
+      "simples": "Durante o prazo da suspensão, o condenado fica sujeito à observação e ao cumprimento das condições do juiz. No primeiro ano do prazo, deve prestar serviços à comunidade ou submeter-se à limitação de fim de semana. Se reparou o dano, salvo impossibilidade, e as circunstâncias do art. 59 lhe forem inteiramente favoráveis, o juiz pode substituir essa exigência por condições cumulativas: proibição de frequentar determinados lugares, de ausentar-se da comarca sem autorização e comparecimento mensal a juízo para informar e justificar suas atividades.",
+      "pontos": [
+        "Sujeição à observação e às condições fixadas pelo juiz.",
+        "§1º: no 1º ano: prestação de serviços à comunidade ou limitação de fim de semana.",
+        "§2º: com dano reparado e circunstâncias do art. 59 inteiramente favoráveis: proibição de frequentar lugares, de ausentar-se da comarca sem autorização e comparecimento mensal a juízo (cumulativas)."
+      ],
+      "atencao": [
+        "As três condições do §2º são aplicadas CUMULATIVAMENTE.",
+        "A substituição do §2º exige reparação do dano (salvo impossibilidade) e circunstâncias INTEIRAMENTE favoráveis."
+      ],
+      "exemplo": "Com o dano reparado, o juiz pode trocar os serviços do primeiro ano por comparecimento mensal e proibição de sair da comarca.",
+      "prova": [
+        "Assertiva que torna alternativas as condições do §2º erra: são cumulativas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 77",
+        "Arts. 46 e 48"
+      ]
+    },
+    "art-79": {
+      "simples": "A sentença pode especificar outras condições a que fica subordinada a suspensão, desde que adequadas ao fato e à situação pessoal do condenado.",
+      "pontos": [
+        "Outras condições podem ser fixadas na sentença.",
+        "Devem ser adequadas ao fato e à situação pessoal do condenado."
+      ],
+      "atencao": [
+        "As condições adicionais devem ser adequadas (não arbitrárias)."
+      ],
+      "exemplo": "O juiz acrescenta a obrigação de frequentar curso relacionado ao crime cometido.",
+      "prova": [
+        "Assertiva que permite condições sem relação com o fato ou a pessoa do condenado contraria o art. 79."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 78"
+      ]
+    },
+    "art-80": {
+      "simples": "A suspensão condicional não se estende às penas restritivas de direitos nem à multa.",
+      "pontos": [
+        "Suspensão não alcança restritivas de direitos.",
+        "Suspensão não alcança multa."
+      ],
+      "atencao": [
+        "O sursis suspende só a pena privativa de liberdade."
+      ],
+      "exemplo": "Mesmo com a prisão suspensa, a multa aplicada continua a ser exigível.",
+      "prova": [
+        "Assertiva que estende o sursis à multa erra: o art. 80 afasta."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 77"
+      ]
+    },
+    "art-82": {
+      "simples": "Expirado o prazo da suspensão sem que tenha havido revogação, considera-se extinta a pena privativa de liberdade.",
+      "pontos": [
+        "Fim do prazo sem revogação: pena privativa de liberdade extinta."
+      ],
+      "atencao": [
+        "A extinção ocorre ao fim do período de prova sem revogação."
+      ],
+      "exemplo": "Cumpridas as condições durante todo o prazo, a pena suspensa é declarada extinta.",
+      "prova": [
+        "Assertiva que determina cumprimento da pena após o prazo sem revogação erra: a pena fica extinta."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Arts. 77 a 81"
+      ]
+    },
+    "art-83": {
+      "simples": "Livramento condicional: o juiz pode conceder ao condenado a pena privativa de liberdade igual ou superior a 2 anos, desde que: cumprida mais de um terço da pena (não reincidente em crime doloso e com bons antecedentes) ou mais da metade (reincidente em crime doloso); comprovados bom comportamento, ausência de falta grave nos últimos 12 meses, bom desempenho no trabalho e aptidão para prover a própria subsistência; reparado o dano, salvo impossibilidade; e, para os crimes de maior gravidade (hediondo, tortura, tráfico, tráfico de pessoas e terrorismo), cumpridos mais de dois terços se o apenado não for reincidente específico (confira o texto completo, que traz outros incisos e o parágrafo único).",
+      "pontos": [
+        "Pena igual ou superior a 2 anos.",
+        "I – mais de 1/3 se não reincidente em crime doloso e com bons antecedentes.",
+        "II – mais da metade se reincidente em crime doloso.",
+        "III – comprovação de bom comportamento, ausência de falta grave nos últimos 12 meses, bom desempenho no trabalho e aptidão para subsistência por trabalho honesto.",
+        "IV – dano reparado, salvo efetiva impossibilidade.",
+        "V – mais de 2/3 nos crimes hediondos, tortura, tráfico de drogas, tráfico de pessoas e terrorismo, se não reincidente específico."
+      ],
+      "atencao": [
+        "Frações: mais de 1/3 (primário com bons antecedentes), mais da metade (reincidente doloso), mais de 2/3 (hediondos e equiparados, não reincidente específico).",
+        "Falta grave: considera-se os últimos 12 meses."
+      ],
+      "exemplo": "Condenado primário e de bons antecedentes a 6 anos pode pedir livramento condicional após cumprir mais de 2 anos, se cumpridos os demais requisitos.",
+      "prova": [
+        "Assertiva que exige cumprimento de mais da metade da pena do primário com bons antecedentes erra: basta mais de um terço."
+      ],
+      "termos": [
+        {
+          "termo": "Livramento condicional",
+          "significado": "Liberdade antecipada do condenado, mediante condições, após cumprir parte da pena."
+        }
+      ],
+      "remissoes": [
+        "Arts. 84 a 90"
+      ]
+    },
+    "art-84": {
+      "simples": "As penas que correspondem a infrações diversas devem somar-se para efeito do livramento condicional.",
+      "pontos": [
+        "Para o livramento, somam-se as penas de infrações diversas."
+      ],
+      "atencao": [
+        "A soma vale para calcular a pena cumprida e o requisito temporal."
+      ],
+      "exemplo": "Duas condenações são somadas para verificar se o tempo mínimo exigido foi cumprido.",
+      "prova": [
+        "Assertiva que avalia cada condenação isoladamente para o livramento condicional contraria o art. 84."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 83"
+      ]
+    },
+    "art-85": {
+      "simples": "A sentença do livramento especificará as condições a que fica subordinado o benefício.",
+      "pontos": [
+        "Condições do livramento especificadas na sentença."
+      ],
+      "atencao": [
+        "As condições devem constar da decisão que concede o livramento."
+      ],
+      "exemplo": "A decisão fixa obrigações como comparecer periodicamente em juízo.",
+      "prova": [
+        "Assertiva que dispensa especificar condições no livramento contraria o art. 85."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 83"
+      ]
+    },
+    "art-86": {
+      "simples": "Revogação obrigatória do livramento: ocorre se o liberado vem a ser condenado a pena privativa de liberdade, em sentença irrecorrível, por crime cometido durante a vigência do benefício, ou por crime anterior, observado o art. 84.",
+      "pontos": [
+        "Condenação a pena privativa de liberdade em sentença irrecorrível.",
+        "I – por crime cometido durante o livramento.",
+        "II – por crime anterior, observado o art. 84."
+      ],
+      "atencao": [
+        "É revogação OBRIGATÓRIA e exige sentença irrecorrível e pena privativa de liberdade."
+      ],
+      "exemplo": "Quem, solto em livramento, comete e é definitivamente condenado por novo crime tem o benefício revogado.",
+      "prova": [
+        "Assertiva que revoga o livramento por simples abertura de inquérito erra: exige condenação irrecorrível."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 87",
+        "Art. 88"
+      ]
+    },
+    "art-87": {
+      "simples": "Revogação facultativa: o juiz pode revogar o livramento se o liberado deixar de cumprir qualquer das obrigações da sentença, ou for irrecorrivelmente condenado, por crime ou contravenção, a pena que não seja privativa de liberdade.",
+      "pontos": [
+        "Descumprimento de obrigação da sentença.",
+        "Condenação irrecorrível, por crime ou contravenção, a pena não privativa de liberdade."
+      ],
+      "atencao": [
+        "Aqui o juiz PODE revogar (facultativa)."
+      ],
+      "exemplo": "O liberado deixa de comparecer a juízo sem justificativa: o juiz pode revogar o livramento.",
+      "prova": [
+        "Assertiva que trata como obrigatória a revogação do art. 87 erra: é facultativa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 86"
+      ]
+    },
+    "art-88": {
+      "simples": "Efeitos da revogação: revogado o livramento, não poderá ser novamente concedido, e, salvo quando a revogação resulta de condenação por outro crime anterior àquele benefício, não se desconta na pena o tempo em que esteve solto o condenado.",
+      "pontos": [
+        "Revogado, não pode ser concedido de novo.",
+        "Em regra, o tempo solto não é descontado da pena.",
+        "Exceção: revogação por condenação por crime anterior ao benefício."
+      ],
+      "atencao": [
+        "A exceção do desconto é a revogação por crime ANTERIOR ao livramento."
+      ],
+      "exemplo": "Revogado o livramento por novo crime, o tempo em que o condenado esteve solto não é descontado.",
+      "prova": [
+        "Assertiva que permite novo livramento após a revogação contraria o art. 88."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Arts. 86 e 87"
+      ]
+    },
+    "art-89": {
+      "simples": "O juiz não poderá declarar extinta a pena enquanto não passar em julgado a sentença do processo a que responde o liberado por crime cometido na vigência do livramento.",
+      "pontos": [
+        "Extinção da pena fica condicionada ao trânsito em julgado do processo por crime cometido durante o livramento."
+      ],
+      "atencao": [
+        "Evita extinguir a pena enquanto pende processo por novo crime cometido no livramento."
+      ],
+      "exemplo": "Terminado o prazo do livramento, a extinção da pena aguarda o desfecho do processo pelo novo crime.",
+      "prova": [
+        "Assertiva que permite declarar extinta a pena enquanto ainda tramita processo por crime cometido no livramento contraria o art. 89."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 86"
+      ]
+    },
+    "art-91": {
+      "simples": "Efeitos da condenação: tornar certa a obrigação de indenizar o dano causado pelo crime e a perda em favor da União, ressalvado o direito do lesado ou de terceiro de boa-fé, dos instrumentos do crime (se consistirem em coisas cujo fabrico, alienação, uso, porte ou detenção seja ilícito) e do produto do crime ou de qualquer bem ou valor que constitua proveito auferido com o crime. O §1º permite a perda de bens ou valores equivalentes quando o produto não for encontrado ou estiver no exterior, e o §2º estende as medidas assecuratórias a bens equivalentes. O texto traz 'Vide ADPF 569'.",
+      "pontos": [
+        "I – torna certa a obrigação de indenizar o dano.",
+        "II, a: perda dos instrumentos do crime cujo fabrico, alienação, uso, porte ou detenção seja ilícito.",
+        "II, b: perda do produto do crime ou de qualquer bem ou valor que constitua proveito.",
+        "Ressalva: direito do lesado ou de terceiro de boa-fé.",
+        "§1º: perda de bens ou valores equivalentes se não encontrados ou no exterior.",
+        "§2º: medidas assecuratórias podem alcançar bens equivalentes."
+      ],
+      "atencao": [
+        "Os instrumentos só são confiscados se forem coisas ilícitas em si (fabrico, alienação, uso, porte ou detenção).",
+        "A perda é em favor da UNIÃO, ressalvado o lesado ou terceiro de boa-fé."
+      ],
+      "exemplo": "A arma sem registro usada no crime é perdida em favor da União após a condenação.",
+      "prova": [
+        "Assertiva que confisca qualquer instrumento do crime, ainda que de uso lícito, erra: só os de fabrico, alienação, uso, porte ou detenção ilícitos."
+      ],
+      "termos": [
+        {
+          "termo": "Medidas assecuratórias",
+          "significado": "Medidas cautelares para garantir bens, como o sequestro."
+        }
+      ],
+      "remissoes": [
+        "Art. 91-A"
+      ]
+    },
+    "art-91-a": {
+      "simples": "Perda alargada: na condenação por infrações com pena máxima superior a 6 anos de reclusão, pode ser decretada a perda, como produto ou proveito do crime, dos bens correspondentes à diferença entre o valor do patrimônio do condenado e o que seja compatível com seu rendimento lícito. Considera-se patrimônio todos os bens de sua titularidade ou sobre os quais tenha domínio e benefício, e os transferidos a terceiros a título gratuito ou por contraprestação irrisória desde o início da atividade criminal. O condenado pode demonstrar a origem lícita; a perda deve ser requerida expressamente pelo Ministério Público na denúncia, com indicação da diferença apurada.",
+      "pontos": [
+        "Cabimento: infrações com pena máxima superior a 6 anos de reclusão.",
+        "Objeto: diferença entre o patrimônio e o rendimento lícito.",
+        "§1º: patrimônio inclui bens titulados, de domínio e benefício, e os transferidos a terceiros gratuitamente ou por valor irrisório.",
+        "§2º: o condenado pode demonstrar a origem lícita.",
+        "§3º: requerimento expresso do MP na denúncia, com a diferença apurada."
+      ],
+      "atencao": [
+        "Pena MÁXIMA superior a 6 anos (não a pena aplicada).",
+        "A perda deve ser pedida pelo MP na denúncia."
+      ],
+      "exemplo": "Condenado por crime com pena máxima de 10 anos tem patrimônio muito acima do rendimento lícito: o excedente pode ser perdido, se o MP requereu na denúncia.",
+      "prova": [
+        "Assertiva que dispensa o requerimento expresso do Ministério Público na denúncia erra: o §3º o exige."
+      ],
+      "termos": [
+        {
+          "termo": "Perda alargada",
+          "significado": "Confisco da diferença entre o patrimônio e o rendimento lícito do condenado."
+        }
+      ],
+      "remissoes": [
+        "Art. 91"
+      ]
+    }
+  }
+}
