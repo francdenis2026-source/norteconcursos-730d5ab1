@@ -7982,6 +7982,37 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .lp-acre__bg::after {
   display: none;
 }
+.lp,
+.lp-container,
+.lp-section,
+.lp-photo {
+  min-width: 0;
+  max-width: 100%;
+}
+.lp-container {
+  width: min(1160px, calc(100% - 48px));
+}
+.lp-hero {
+  min-height: clamp(640px, 100svh, 900px);
+}
+.lp-hero__body {
+  padding-top: clamp(104px, 13vh, 148px);
+  padding-bottom: clamp(32px, 5vh, 56px);
+}
+.lp-hero__layout {
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 22rem);
+  gap: clamp(32px, 4vw, 58px);
+}
+.lp-hero__title {
+  max-width: 13ch;
+  font-size: clamp(2.8rem, 5vw, 4.75rem);
+}
+.lp-hero__lead {
+  max-width: 510px;
+}
+.lp-pcac {
+  min-height: clamp(540px, 74svh, 680px);
+}
 .lp-hero__video {
   object-position: 82% center;
 }
@@ -8102,6 +8133,16 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   background: oklch(0.08 0.025 263 / 0.84);
   box-shadow: 0 6px 14px -10px oklch(0 0 0 / 0.9);
 }
+.lp-pin--cruzeiro {
+  left: 22% !important;
+  top: 18% !important;
+  z-index: 8;
+}
+.lp-pin--cruzeiro em {
+  color: var(--brass-soft);
+  border-color: oklch(0.8 0.13 78 / 0.46);
+  background: oklch(0.08 0.025 263 / 0.94);
+}
 .lp-acre__badge {
   top: 3%;
   left: 4%;
@@ -8142,6 +8183,16 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
 }
 @media (max-width: 767px) {
+  .lp-container {
+    width: min(100% - 28px, 620px);
+  }
+  .lp-hero {
+    min-height: min(760px, 100svh);
+  }
+  .lp-hero__body {
+    padding-top: 92px;
+    padding-bottom: 22px;
+  }
   .lp-hero__video {
     object-position: 64% center;
   }
@@ -8162,6 +8213,19 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     aspect-ratio: 1.05;
     margin-top: 8px;
     border-radius: 20px;
+  }
+  .lp-pin--cruzeiro {
+    left: 24% !important;
+    top: 18% !important;
+  }
+  .lp-pin--cruzeiro em {
+    display: inline-block;
+    max-width: 108px;
+    overflow: hidden;
+    padding-inline: 6px;
+    font-size: 0.48rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .lp-acre__map {
     inset: 10% 4% 9%;

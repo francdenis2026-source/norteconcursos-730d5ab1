@@ -203,7 +203,9 @@ export function AcreSection() {
               {PINS.map((pin) => (
                 <span
                   key={pin.name}
-                  className={pin.side === "left" ? "lp-pin lp-pin--left" : "lp-pin"}
+                  className={`${pin.side === "left" ? "lp-pin lp-pin--left" : "lp-pin"}${
+                    pin.name === "Cruzeiro do Sul" ? " lp-pin--cruzeiro" : ""
+                  }`}
                   style={{ left: `${pin.left}%`, top: `${pin.top}%` }}
                 >
                   <i aria-hidden="true" />
