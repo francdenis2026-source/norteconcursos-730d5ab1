@@ -71,6 +71,11 @@ export function MobileHub({ steps, tools, careers, pillars }: Props) {
   }, []);
   return (
     <section id="hub" className="mh" aria-label="Conheça a plataforma">
+      <div className="mh__intro">
+        <span className="mh__eyebrow">NORTE CONCURSO</span>
+        <h2>Seu próximo ciclo começa aqui.</h2>
+        <p>Escolha uma frente e avance com direção, clareza e constância.</p>
+      </div>
       <div className="mh__tabs" role="tablist" aria-label="Seções">
         {TABS.map(({ id, label, icon: Icon }) => (
           <button

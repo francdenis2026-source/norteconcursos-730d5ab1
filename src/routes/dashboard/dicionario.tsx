@@ -13,7 +13,7 @@ export const Route = createFileRoute("/dashboard/dicionario")({
   head: () => ({ meta: [{ title: "Dicionário de estudo | Norte Concursos" }] }),
 });
 
-const AREAS = ["Direito", "Português", "Contabilidade", "Informática"];
+const AREAS = ["Direito", "Português", "Contabilidade", "Informática", "Estatística", "Raciocínio lógico"];
 
 function DictionaryPage() {
   const { q = "" } = Route.useSearch();
