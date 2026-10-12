@@ -437,3 +437,18 @@ test('arms final review separates expired transitions, conditioned efficacy and 
  assert.equal(new Set(packs.flatMap(pack=>pack.units.map(r=>r.unit_key))).size,41);
  for(const key of ['art-24','art-27','art-29','art-30','art-35','anexo-1']) assert.equal(legalStudyCaveat('armas',key).literalPractice,false);
 });
+
+test('Maria protection review distinguishes scope, revictimization and emergency authorities',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-maria-protection-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,16);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-5').atencao.join(' '),/1412.*2026.*fora desses vínculos/);
+ assert.match(get('art-7').atencao.join(' '),/não exige necessariamente morte.*121-B/);
+ assert.match(get('art-9').atencao.join(' '),/Não confundir vínculo.*salário/);
+ assert.match(get('art-10-a').atencao.join(' '),/não autoriza negar atendimento/);
+ assert.match(get('art-11').pontos.join(' '),/15.455\/2026.*48 horas.*MTE regional e MPT/);
+ assert.match(get('art-12-c').simples,/sexual.*moral.*patrimonial.*15.411\/2026/);
+ assert.match(get('art-12-d').pontos.join(' '),/não enumera qualquer policial.*13.084\/2026/s);
+ for(const key of ['art-1','art-2','art-5','art-12','art-12-c','art-12-d']) assert.equal(legalStudyCaveat('maria-penha',key).literalPractice,false);
+});
