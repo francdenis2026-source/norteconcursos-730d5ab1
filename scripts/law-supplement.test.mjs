@@ -68,7 +68,7 @@ function compile(path,resolve=require){
 const format=compile('src/lib/questionFormat.ts');
 const sources=compile('src/lib/studySourceUrl.ts',()=>format);
 const React = require('react');
-const markdown=compile('src/components/library/Markdown.tsx',name=>name==='@/lib/studySourceUrl'?sources:name==='@tanstack/react-router'?{Link:({to,children,...props})=>React.createElement('a',{...props,href:to},children)}:require(name));
+const markdown=compile('src/components/library/Markdown.tsx',name=>name==='./GlossaryText'?{GlossaryText:({text})=>text}:name==='@/lib/studySourceUrl'?sources:name==='@tanstack/react-router'?{Link:({to,children,...props})=>React.createElement('a',{...props,href:to},children)}:require(name));
 
 test('Example sections are highlighted without absorbing the following legal text',()=>{
  const source='## Texto legal\n\nArt. 1º: regra neutra.\n\n## 3. Primeira aplicação\n\nCaso fictício para aprender.\n\n### Resolução\n\nExplicação do caso.\n\n## Outra regra legal\n\nArt. 2º: texto neutro.';

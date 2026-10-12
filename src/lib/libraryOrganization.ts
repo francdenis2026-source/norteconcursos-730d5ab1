@@ -12,10 +12,10 @@ export const LIBRARY_AREAS = [
   {
     id: "legislation",
     title: "Legislação",
-    description: "Leis especiais, PF, trânsito e proteção",
+    description: "Código Penal, CPP, leis especiais, PF e trânsito",
     tone: "amber",
   },
-  { id: "law", title: "Direito", description: "CP, CPP e fundamentos jurídicos", tone: "blue" },
+  { id: "law", title: "Direito", description: "Fundamentos: constitucional, administrativo e humanos", tone: "blue" },
   {
     id: "general",
     title: "Demais disciplinas",
@@ -48,7 +48,8 @@ export function libraryDiscipline(item: LibraryClassifiable): string {
 }
 export function libraryArea(item: LibraryClassifiable): LibraryArea {
   const slug = materialLawSlug(item);
-  if (slug) return ["codigo-penal", "codigo-processo-penal"].includes(slug) ? "law" : "legislation";
+  // Toda lei, inclusive o Código Penal e o CPP, fica em "Legislação"; "Direito" reúne os fundamentos.
+  if (slug) return "legislation";
   if (/legislação/i.test(item.discipline)) return "legislation";
   return /direito|criminalística|uso da força/i.test(item.discipline) ? "law" : "general";
 }

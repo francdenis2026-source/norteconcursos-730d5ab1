@@ -1,3 +1,4 @@
+import { GlossaryText } from "./GlossaryText";
 import { Fragment, type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
@@ -280,7 +281,7 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
 
 export function Markdown({
   source,
-  renderText = (text) => text,
+  renderText = (text) => <GlossaryText text={text} />,
 }: {
   source: string;
   renderText?: ((text: string) => ReactNode) | undefined;
