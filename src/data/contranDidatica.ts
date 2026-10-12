@@ -691,4 +691,51 @@ export const CONTRAN_DIDATICA: Record<string, ContranDidatica> = {
       "Achar que o dono do veículo original responde pelas multas do clone: a pontuação comprovadamente do clone é excluída do prontuário.",
     ],
   },
+  "970/2022": {
+    simples: [
+      "Esta resolução trata das luzes do veículo: faróis, lanternas, retrorrefletores e, principalmente para a prova, as lanternas especiais. A ideia central é separar duas coisas: emitir luz (lanterna) é diferente de refletir a luz de fora (retrorrefletor, art. 2º, III). Farol ilumina a via; lanterna sinaliza para os outros (art. 2º, I e II).",
+      "Os detalhes técnicos de cada dispositivo ficam nos anexos: automóveis, caminhões, ônibus, reboques e semirreboques seguem os anexos I a XVI (art. 3º); motocicletas, motonetas, ciclomotores, triciclos e quadriciclos seguem os anexos XVII a XXI (art. 4º).",
+      "Lanternas especiais de emergência (azul, vermelha ou as duas combinadas) só podem ser usadas em veículos de socorro de incêndio e salvamento, salvamento difuso, polícia, fiscalização e operação de trânsito e ambulâncias (art. 5º). Só devem ser acionadas quando houver serviço de urgência, policiamento ostensivo ou preservação da ordem pública, ou seja, quando se usa a prioridade de trânsito (art. 5º, § 1º). Ao usar a livre circulação e parada, o dispositivo sonoro deve ser acionado junto com a lanterna (art. 5º, § 2º).",
+      "O livre estacionamento só vale se o veículo estiver identificado por luz rotativa ou intermitente regulamentar (art. 5º, § 3º). Serviço de urgência é o deslocamento que exige brevidade, sem a qual há risco concreto à vida de terceiros ou grande prejuízo à incolumidade pública (art. 5º, § 4º).",
+      "Lanterna amarelo-âmbar: identifica veículos prestadores de serviços de utilidade pública, com lanterna não removível (art. 6º). São eles os de manutenção de redes de energia, água e esgoto, gás canalizado e comunicações; conservação e sinalização viária a serviço da Administração; guindastes e guinchos de socorro veicular; transporte de valores; escolta de cargas superdimensionadas; recolhimento de lixo a serviço da Administração; e manutenção de linhas e estações metroferroviárias (art. 6º, § 1º). A instalação depende de autorização prévia do órgão de trânsito do Estado ou do DF onde o veículo está registrado (art. 6º, § 2º).",
+      "Esses veículos têm livre parada e estacionamento, mas só quando estiverem em efetiva operação no local do serviço e identificados pela lanterna amarelo-âmbar e, quando necessário, por sinalização auxiliar na via (art. 7º).",
+    ],
+    atualizacoes: [
+      "Resolução 1.024/2026 (em vigor desde a publicação): acrescentou aos veículos prestadores de serviços de utilidade pública os utilizados na operação e manutenção da Rede Hidrometeorológica Nacional, que passa a ser o inciso VIII do § 1º do art. 6º.",
+    ],
+    quadro: {
+      titulo: "Cor da lanterna especial: quem usa",
+      linhas: [
+        ["Azul, vermelha ou as duas", "Socorro de incêndio e salvamento, salvamento difuso, polícia, fiscalização e operação de trânsito, ambulância (art. 5º)"],
+        ["Amarelo-âmbar", "Veículos de serviço de utilidade pública, como rede elétrica, guincho, escolta de carga e recolhimento de lixo (art. 6º)"],
+        ["Quando acionar (emergência)", "Só em urgência, policiamento ostensivo ou preservação da ordem pública (art. 5º, § 1º)"],
+        ["Livre circulação e parada", "Sirene junto com a lanterna (art. 5º, § 2º)"],
+        ["Livre estacionamento", "Só com luz rotativa ou intermitente regulamentar ligada (art. 5º, § 3º)"],
+        ["Amarelo-âmbar: autorização", "Prévia, do órgão de trânsito do Estado ou do DF do registro (art. 6º, § 2º)"],
+        ["Amarelo-âmbar: livre parada", "Só em efetiva operação e identificado (art. 7º)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "Uma ambulância leva um paciente grave ao hospital. Pode usar luz azul e passar o sinal vermelho?",
+        resposta: "Pode usar a lanterna especial, pois ambulância está na lista do art. 5º, e há serviço de urgência. Ao usar a livre circulação, o dispositivo sonoro deve ser acionado junto com a lanterna (art. 5º, § 2º).",
+      },
+      {
+        situacao: "Um carro particular quer instalar uma luz giratória azul. É permitido?",
+        resposta: "Não. As lanternas especiais de emergência só podem ser usadas nos veículos listados no art. 5º, como polícia, bombeiros e ambulâncias.",
+      },
+      {
+        situacao: "Um caminhão guincho de empresa de socorro veicular, com luz amarelo-âmbar, estaciona na frente de um local proibido enquanto atende um carro quebrado. Pode?",
+        resposta: "Guinchos de socorro veicular estão entre os veículos de utilidade pública (art. 6º, § 1º, III). Têm livre parada e estacionamento se estiverem em efetiva operação e identificados pela lanterna amarelo-âmbar (art. 7º).",
+      },
+    ],
+    pegadinhas: [
+      "Confundir as cores: azul e vermelha são de emergência; amarelo-âmbar é de utilidade pública.",
+      "Dizer que a lanterna amarela pode ser removível. A lanterna especial para prestação de serviços é não removível.",
+      "Esquecer que o livre estacionamento do veículo de emergência só vale com luz rotativa ou intermitente ligada.",
+      "Achar que emitir luz e refletir luz são a mesma coisa: retrorrefletor reflete a luz que vem de fora.",
+      "Citar a lista de veículos de utilidade pública sem o item da Rede Hidrometeorológica Nacional, que foi incluído pela Resolução 1.024/2026.",
+    ],
+    fontes: ["1024/2026"],
+  },
 };
