@@ -7219,7 +7219,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     font-size: 0.7rem;
   }
   :root:not(.dark) .lp-footer {
-    background: oklch(0.99 0.004 255);
+    background: oklch(1 0 0);
     color: oklch(0.32 0.03 262 / 0.82);
     border-top-color: oklch(0.1 0.03 262 / 0.1);
   }
@@ -7569,9 +7569,9 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     color: oklch(0.72 0.012 255);
   }
   :root:not(.dark) .mh {
-    background:
-      radial-gradient(110% 80% at 0% 0%, oklch(0.96 0.025 82), transparent 58%),
-      linear-gradient(180deg, oklch(0.985 0.006 255), oklch(0.95 0.012 255));
+    /* O tema claro da homepage usa branco como superfície principal. Evita
+       que a área inferior pareça cinza por causa de gradientes translúcidos. */
+    background: oklch(1 0 0);
     color: oklch(0.19 0.03 262);
     border-top: 1px solid oklch(0.2 0.03 262 / 0.1);
   }
