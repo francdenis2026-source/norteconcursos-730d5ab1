@@ -2,8 +2,8 @@
 
 ## Estado confirmado no banco
 
-3.511 dispositivos ativos: 1.224 com metadados de aprovação editorial atual
-(revisor, data e hash correspondente), 2.287 pendentes. São unidades da
+3.511 dispositivos ativos: 1.249 com metadados de aprovação editorial atual
+(revisor, data e hash correspondente), 2.262 pendentes. São unidades da
 biblioteca, não questões do treinador. Fonte: review-coverage-2026-10-12.json.
 
 Drogas 84/84; Desarmamento 41/41; Maria da Penha 56/56;
@@ -52,7 +52,7 @@ Consultar novamente remoto, alterações locais e banco antes de escrever.
 Não duplicar revisões ambientais. Pendências registradas:
 
 - CPP: 808.
-- Código Penal: 331; prioridade atual por orientação expressa do usuário.
+- Código Penal: 306; prioridade atual por orientação expressa do usuário.
 - CTB: 348.
 - ECA: 322.
 - LEP: 206.
@@ -80,3 +80,11 @@ foi herdado nem usado como saldo atual. Esta sessão não fornece ferramenta
 de leitura dos créditos, portanto o corte exato em 5% **não foi medido**.
 Não prometer monitoramento ou retomada automática. Guardar checkpoints e
 finalizar a publicação verificada antes de interromper um bloco.
+
+## CP — dosimetria, concurso e sursis
+
+25 novas revisões publicadas e lidas integralmente, arts. 55–79. CP 95/401,
+306 pendentes. 3.488 explicações alheias e sete tabelas preservadas. Súmula
+545 revisada consultada no SCON; PDF geral antigo não usado como atual.
+326 testes, TypeScript e build passaram. Retomar arts. 80 e seguintes.
+Usuário informou 59%; não há medição automática de créditos.

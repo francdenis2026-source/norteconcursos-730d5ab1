@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-12T22:02:01.508627+00:00",
+  "sources": [
+    {
+      "id": "CP",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "7bac399f268c13eeeb6c782dc650c90a51aa8456db903a1186b2124745afc8ff"
+    },
+    {
+      "id": "STJ 545 revisada",
+      "url": "https://scon.stj.jus.br/SCON/sumstj/toc.jsp?livre=545&tipo_visualizacao=RESUMO",
+      "sha256": "a72204a98b7638dd31a9f53feb29e6a2ee15e23b2f7f502093bdcf4a8015173d"
+    },
+    {
+      "id": "STJ outras súmulas",
+      "url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "sha256": "8a7298bfd40ecac21b31f15a6f9aef6a10a4fbbecdee4fac6fd665ebec338b82"
+    },
+    {
+      "id": "STF dignidade da vítima",
+      "url": "https://noticias.stf.jus.br/postsnoticias/provas-em-processo-de-crime-sexual-em-que-houver-constrangimento-a-vitima-sao-nulas-decide-stf/",
+      "sha256": "facb7c61926491e43331aeddddeadb47b79ebdb3b6ab31ae9b8fa6b8819de873"
+    },
+    {
+      "id": "l15159",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15159.htm",
+      "sha256": "c9d9ba941b7c410a2b76ad6e229c1c31d21fbc16d9d531abddac8339e8522371"
+    },
+    {
+      "id": "l15160",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15160.htm",
+      "sha256": "69bf613a74bf7982e67480fbb2ea9700543fb80710cc9ba408d819fb0f367369"
+    }
+  ],
+  "primary_audit": {
+    "rows": [
+      {
+        "slug": "codigo-penal",
+        "parsed_current": 401,
+        "database_current": 401,
+        "missing_articles": [],
+        "unexpected_current": [],
+        "text_differences": []
+      }
+    ]
+  },
+  "limitations": [
+    "STJ 545: enunciado revisado consultado no SCON; PDF geral contém redação anterior, não usada como orientação atual. Não certificadas todas as teses do Tema 1194.",
+    "Multa no crime continuado: integração jurisprudencial específica não certificada, com alerta e treino literal bloqueado.",
+    "Notícia institucional STF consultada; não afirmada leitura integral de todos os acórdãos."
+  ]
+}

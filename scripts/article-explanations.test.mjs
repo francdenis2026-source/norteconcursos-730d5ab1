@@ -649,3 +649,19 @@ test('CP: penas separam regimes, multa e texto residual de substituição',()=>{
  assert.match(get(54).atencao.join(' '),/proibição geral atual/);
  for(const n of [33,35,36,39,41,44,51,54])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
 });
+
+test('CP: dosimetria incorpora súmula revisada e distingue fases, teto e sursis',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-dosimetria-concurso-sursis-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,25);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ assert.deepEqual(p.units.map(r=>r.unit_key),Array.from({length:25},(_,i)=>'art-'+(55+i)));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(65).simples,/15.160.*violência sexual contra mulher/);
+ assert.match(get(65).atencao.join(' '),/545 revisada.*independentemente de uso/);
+ assert.match(get(65).prova.join(' '),/depende sempre.*Não/);
+ assert.match(get(64).pontos.join(' '),/SUPERIOR a 5/);
+ assert.match(get(68).atencao.join(' '),/segunda fase.*não.*terceira fase/);
+ assert.match(get(75).atencao.join(' '),/não impor quarenta anos retroativamente/);
+ assert.match(get(77).simples,/diferente da suspensão condicional do processo/);
+ for(const n of [58,59,60,65,67,68,72,75,77])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+});
