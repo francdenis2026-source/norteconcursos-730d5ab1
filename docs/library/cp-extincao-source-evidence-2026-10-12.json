@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-12T23:21:52.561028+00:00",
+  "sources": [
+    {
+      "id": "CP",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "4aa57b9f44b3fde54e7009d761c132c987cbc313684f847fca70e894d2f99611"
+    },
+    {
+      "id": "STJ súmulas18/220/415/438",
+      "url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "sha256": "8a7298bfd40ecac21b31f15a6f9aef6a10a4fbbecdee4fac6fd665ebec338b82"
+    },
+    {
+      "id": "Tema788",
+      "url": "https://noticias.stf.jus.br/postsnoticias/prescricao-da-execucao-da-pena-comeca-a-contar-da-decisao-definitiva-para-todas-as-partes/",
+      "sha256": "6b50ec936214016df0b916febdc44957aeb100b548abd54ff7303ea5ab01918c"
+    },
+    {
+      "id": "HC176473",
+      "url": "https://noticias.stf.jus.br/postsnoticias/decisao-colegiada-que-confirma-sentenca-condenatoria-interrompe-prazo-da-prescricao/",
+      "sha256": "4c9ec185bb309de80096bd9f49194bfb64403b6c583606423e4400e8b9880b55"
+    },
+    {
+      "id": "Lei15160",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15160.htm",
+      "sha256": "8c4470b449cf19cd238a5947342fffe443768b89c550401a0b51cf60af165d50"
+    },
+    {
+      "id": "Lei14344",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "sha256": "99f5289799666c82f9046b39c1b4671c3cc074b793c29d666f3e200ca0aca61f"
+    }
+  ],
+  "primary_audit": {
+    "rows": [
+      {
+        "slug": "codigo-penal",
+        "parsed_current": 401,
+        "database_current": 401,
+        "missing_articles": [],
+        "unexpected_current": [],
+        "text_differences": []
+      }
+    ]
+  },
+  "limitations": [
+    "Tema788: consultada notícia oficial com tese e modulação; consulta processual retornou403. Não afirmada leitura integral do acórdão nem certificação da fronteira temporal específica de novembro/2020 para cálculo.",
+    "HC176473: notícia institucional de julgamento do Plenário; não alegada leitura integral de todos os precedentes.",
+    "Não certificadas todas as regras de continuidade, recursos ou causas especiais de imprescritibilidade."
+  ]
+}

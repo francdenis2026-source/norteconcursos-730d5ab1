@@ -683,3 +683,19 @@ test('CP: efeitos e ação incluem alterações de 2026 e limites de medidas',()
  assert.match(get(102).pontos.join(' '),/OFERECIMENTO/);
  for(const n of [83,89,91,'91-a',92,96,97,98,99,102,103])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
 });
+
+test('CP: prescrição não usa trânsito unilateral, pena hipotética ou reinício universal',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-extincao-prescricao-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,15);
+ assert.deepEqual(p.units.map(r=>r.unit_key),Array.from({length:15},(_,i)=>'art-'+(106+i)));
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(112).simples,/ambas as partes.*modulação/);
+ assert.match(get(112).atencao.join(' '),/não.*regra atual absoluta.*403/si);
+ assert.match(get(110).pontos.join(' '),/220.*não influi.*punitiva/);
+ assert.match(get(109).atencao.join(' '),/438/);
+ assert.match(get(115).simples,/4\/7\/2025.*não retroage/);
+ assert.match(get(117).atencao.join(' '),/inciso V.*HC 176473.*confirm/s);
+ assert.match(get(120).simples,/18.*declaratória.*sem efeito condenatório/);
+ for(const n of [107,109,110,111,112,115,116,117,119,120])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+});

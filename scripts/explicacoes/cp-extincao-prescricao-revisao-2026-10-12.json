@@ -1,0 +1,380 @@
+{
+  "course_slug": "codigo-penal",
+  "units": {
+    "art-106": {
+      "simples": "Perdão do ofendido pode ser processual ou extraprocessual, expresso ou tácito. Beneficia os querelados, mas não produz efeito para quem o recusa; perdão de um ofendido não prejudica o direito dos demais.",
+      "pontos": [
+        "Querelados: extensão; ofendidos: preservação dos outros direitos.",
+        "Vedado após trânsito da sentença condenatória."
+      ],
+      "atencao": [
+        "Não confundir perdão com renúncia anterior à ação ou perdão judicial. A extensão não elimina necessidade de aceitação nem a autonomia de outros ofendidos."
+      ],
+      "exemplo": "Ana perdoa um dos dois querelados; o outro expressamente recusa: não extinguir a ação contra o recusante só pela extensão. Variação: Se outro ofendido não concede perdão, a manifestação de Ana não retira seu direito.",
+      "prova": [
+        "O querelado que recusa recebe o efeito extintivo? Não; o inciso III o ressalva.",
+        "Cabe após trânsito condenatório? Não; o §2º veda."
+      ],
+      "termos": [
+        {
+          "termo": "Aceitação do perdão",
+          "significado": "Condição pertinente ao perdão do ofendido, distinta do perdão judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-107": {
+      "simples": "A punibilidade pode extinguir-se por morte, clemência, abolição do crime, prescrição e outras causas legais. Renúncia/perdão aceito pertencem às hipóteses de ação privada; retratação e perdão judicial exigem previsão.",
+      "pontos": [
+        "Incisos VII/VIII revogados desde Lei 11.106/2005.",
+        "Prescrição, decadência e perempção são institutos diferentes.",
+        "Existem causas em outras leis; o rol não esgota todo o sistema."
+      ],
+      "atencao": [
+        "Não ensinar casamento como causa atual pelos incisos revogados nem atribuir à morte extinção universal de obrigações civis. Retratação não extingue todo delito indiscriminadamente."
+      ],
+      "exemplo": "Uma questão usa antigo inciso revogado para dizer que casamento elimina hoje a punibilidade de crime sexual. Variação: Se há hipótese atual expressa de retratação legal, examinar seus requisitos, sem aplicar a regra revogada.",
+      "prova": [
+        "Os incisos VII/VIII são causas atuais? Não; foram revogados.",
+        "Qualquer pedido de desculpas extingue todo crime? Não; retratação exige hipótese legal."
+      ],
+      "termos": [
+        {
+          "termo": "Extinção da punibilidade",
+          "significado": "Fim da possibilidade de punição penal na hipótese legal, sem apagar automaticamente todo efeito civil."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-108": {
+      "simples": "Extinção de punibilidade de um crime não se comunica automaticamente a outro que o tenha como pressuposto, elemento ou circunstância. Nos conexos, o artigo preserva a análise própria e a agravação decorrente da conexão.",
+      "pontos": [
+        "Autonomia das causas extintivas.",
+        "Pressuposto/elemento/circunstância e crimes conexos são recortes indicados."
+      ],
+      "atencao": [
+        "Não ressuscitar punição do crime extinto nem presumir extinção de todo conjunto. Identificar o tipo e o fundamento de cada consequência."
+      ],
+      "exemplo": "A prescrição de um crime é invocada como extinção automática de outro crime conexo. Variação: Se o outro tem causa extintiva própria demonstrada, a análise muda por esse fundamento, não por contágio.",
+      "prova": [
+        "Extinção de um sempre extingue o conexo? Não.",
+        "O artigo autoriza punir novamente o crime extinto? Não; preserva análise dos outros."
+      ],
+      "termos": [
+        {
+          "termo": "Autonomia extintiva",
+          "significado": "Aplicação de causa de extinção ao objeto pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-109": {
+      "simples": "A regra de prescrição pela pena abstrata usa o máximo cominado e faixas com limites precisos, ressalvada a hipótese do art. 110, §1º. É necessário considerar marcos, causas e regras especiais antes de concluir extinção.",
+      "pontos": [
+        "Máximo: >12:20; >8 até 12:16; >4 até 8:12; >2 até 4:8 anos.",
+        "Máximo igual a 1 até 2:4; inferior a 1:3 anos.",
+        "Restritivas seguem os prazos das privativas."
+      ],
+      "atencao": [
+        "Não usar a pena mínima, somar crimes sem o art. 119 ou reconhecer prescrição por pena hipotética: Súmula 438/STJ. Imprescritibilidade e lei penal no tempo exigem disciplina específica."
+      ],
+      "exemplo": "Crime com máxima de quatro anos pertence à faixa de oito anos, não à faixa superior a quatro. Variação: Se a máxima é cinco anos, a faixa geral passa a doze, antes das demais verificações.",
+      "prova": [
+        "Máxima exatamente quatro entra em superior a quatro? Não.",
+        "Pode escolher pena futura imaginada para extinguir? Não; Súmula 438 veda prescrição hipotética."
+      ],
+      "termos": [
+        {
+          "termo": "Pena abstrata",
+          "significado": "Sanção cominada ao tipo, distinta de pena concretamente aplicada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ]
+    },
+    "art-110": {
+      "simples": "Após condenação, a pena aplicada regula hipóteses próprias de prescrição. O aumento por reincidência do caput pertence à pretensão executória; não se transporta para a punitiva. O §1º limita a retroativa segundo a redação de 2010.",
+      "pontos": [
+        "Súmula 220/STJ: reincidência não influi no prazo da pretensão punitiva.",
+        "§2º revogado; não restaurar redação anterior como atual.",
+        "§1º: pena aplicada após trânsito para acusação ou improvimento de seu recurso."
+      ],
+      "atencao": [
+        "Distinguir punitiva, retroativa e executória. Não aumentar um terço toda prescrição nem retroagir mudança prejudicial de 2010; art. 112 exige integração ao Tema 788 para o início executório."
+      ],
+      "exemplo": "A pena concreta é usada em prescrição punitiva e a questão aumenta automaticamente o prazo em um terço pela reincidência. Variação: Na pretensão executória, analisar caput e condições próprias, sem repetir os marcos da punitiva.",
+      "prova": [
+        "Reincidência aumenta prazo punitivo segundo Súmula 220? Não.",
+        "§2º revogado autoriza regra atual? Não; lei no tempo exige análise própria."
+      ],
+      "termos": [
+        {
+          "termo": "Pretensões distintas",
+          "significado": "Poder de punir e poder de executar condenação têm regimes diferentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ]
+    },
+    "art-111": {
+      "simples": "A contagem punitiva parte dos marcos legais: consumação, cessação da atividade na tentativa e cessação da permanência. Bigamia/assentamento civil e crimes indicados contra crianças/adolescentes têm marcos específicos.",
+      "pontos": [
+        "Tentativa: cessação da ATIVIDADE; permanente: cessação da PERMANÊNCIA.",
+        "Inciso V: vítima completa 18, salvo ação já proposta; redação Henry Borel de 2022."
+      ],
+      "atencao": [
+        "Não usar conhecimento da autoria, próprio de outras regras, como marco universal de prescrição. Integrar alcance do inciso V, vacância de 45 dias após publicação de 25/5/2022 da Lei 14.344 e irretroatividade de mudança prejudicial."
+      ],
+      "exemplo": "Na tentativa, a questão manda contar do início dos atos em vez do dia em que cessou a atividade. Variação: No crime permanente, verificar quando cessou a permanência; se a vítima é criança, examinar o inciso V pertinente.",
+      "prova": [
+        "Tentativa conta sempre do início? Não; cessação da atividade.",
+        "Conhecer o autor é marco universal aqui? Não; distinguir decadência e os marcos legais."
+      ],
+      "termos": [
+        {
+          "termo": "Termo inicial punitivo",
+          "significado": "Evento que inicia a contagem na hipótese específica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm"
+      ]
+    },
+    "art-112": {
+      "simples": "O trecho que fala em trânsito para a acusação exige integração constitucional. Tema 788/STF: a prescrição executória começa com trânsito da condenação para ambas as partes, com modulação que impede resposta universal para todos os processos antigos.",
+      "pontos": [
+        "ARE 848107, Tema 788, julgamento de junho/2023: trânsito para AMBAS as partes.",
+        "Modulação resguarda prescrição já reconhecida e recorte temporal de novembro/2020.",
+        "Inciso II tem ressalva quando o tempo da interrupção computa-se na pena."
+      ],
+      "atencao": [
+        "Não ensinar a literalidade para a acusação como regra atual absoluta. A notícia oficial de 5/7/2023 foi consultada; consulta processual retornou 403, sem alegar leitura integral do acórdão ou certificar fronteira temporal específica para cálculo. Conferir modulação no processo concreto; não transportar a tese executória para toda punitiva."
+      ],
+      "exemplo": "Acusação transitou em 2022, defesa em 2023, sem prescrição anteriormente reconhecida: não iniciar execução prescricional apenas pelo trânsito da acusação. Variação: Se o caso está no recorte antigo protegido pela modulação, não impor automaticamente a mesma resposta sem conferir a hipótese.",
+      "prova": [
+        "Só trânsito para acusação é regra absoluta atual? Não; integrar Tema 788.",
+        "A modulação pode ser ignorada? Não; limita a aplicação temporal."
+      ],
+      "termos": [
+        {
+          "termo": "Pretensão executória",
+          "significado": "Direito de executar a pena definitiva, com termo inicial constitucionalmente integrado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://noticias.stf.jus.br/postsnoticias/prescricao-da-execucao-da-pena-comeca-a-contar-da-decisao-definitiva-para-todas-as-partes/"
+      ]
+    },
+    "art-113": {
+      "simples": "Em evasão ou revogação do livramento, a prescrição é regulada pelo tempo restante da pena. O saldo deve ser apurado pelo regime de execução, sem fingir que todo tempo solto é necessariamente abatido.",
+      "pontos": [
+        "Base: tempo que RESTA.",
+        "Integrar efeito da revogação e art. 88."
+      ],
+      "atencao": [
+        "Não usar sempre a pena originária integral nem presumir saldo por palpite. Crédito de tempo e marcos dependem dos fatos e regras pertinentes."
+      ],
+      "exemplo": "Pena de seis anos com saldo regularmente apurado de dois: o artigo manda examinar o restante, não simplesmente toda a pena inicial. Variação: Se a revogação tem efeitos diferentes sobre tempo em liberdade, recalcular saldo antes de escolher a faixa.",
+      "prova": [
+        "A base é necessariamente a pena originária? Não; o texto usa o restante.",
+        "Pode inventar desconto de todo tempo solto? Não; verificar regime aplicável."
+      ],
+      "termos": [
+        {
+          "termo": "Saldo de pena",
+          "significado": "Tempo remanescente apurado juridicamente, distinto da condenação inicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-114": {
+      "simples": "A multa tem prazo de dois anos quando única cominada ou aplicada. Nas hipóteses de multa alternativa/cumulativa indicadas, usa-se o prazo da privativa; não há regra universal de dois anos para toda multa.",
+      "pontos": [
+        "Única cominada OU aplicada: inciso I.",
+        "Alternativa/cumulativa cominada ou cumulativa aplicada: inciso II."
+      ],
+      "atencao": [
+        "Distinguir cominação, aplicação e espécie de pretensão. A natureza de dívida de valor do art. 51 não converte toda multa em sanção administrativa nem resolve sozinha execução e prescrição."
+      ],
+      "exemplo": "O candidato lê multa cumulada com prisão e aplica dois anos apenas por ser multa. Variação: Se multa é a única aplicada na hipótese do inciso I, examinar a regra de dois, sem ignorar marcos e causas.",
+      "prova": [
+        "Toda multa prescreve em dois anos? Não; o inciso II distingue hipóteses.",
+        "Cominação e aplicação são termos idênticos? Não; um é previsão e outro é decisão concreta."
+      ],
+      "termos": [
+        {
+          "termo": "Multa única",
+          "significado": "Hipótese distinta de multa alternativa ou cumulativa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-115": {
+      "simples": "A redução pela metade usa idade inferior a 21 no fato ou superior a 70 na sentença. Lei 15.160 acrescentou exceção em violência sexual contra mulher, publicada e vigente em 4/7/2025; mudança prejudicial não retroage.",
+      "pontos": [
+        "Menor 21 no FATO; maior 70 na SENTENÇA.",
+        "Exatamente 21/70 não corresponde a menor/maior.",
+        "Exceção expressa de 2025 exige lei penal no tempo."
+      ],
+      "atencao": [
+        "Não calcular toda prescrição pela metade só por idade sem ler a exceção nem aplicar alteração mais gravosa a fato anterior automaticamente. Não confundir esta regra com atenuante do art.65, embora tenham alteração comum."
+      ],
+      "exemplo": "Agente tinha 20 no fato, fora da exceção legal: examinar redução; não exigir que ainda tenha 20 na sentença. Variação: Em violência sexual contra mulher sob regime temporal atual, a exceção muda a conclusão; fato anterior exige análise própria.",
+      "prova": [
+        "Idades são aferidas no mesmo momento? Não.",
+        "A exceção nova retroage prejudicialmente por estar no compilado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Redução etária",
+          "significado": "Regra de prazo com momentos de aferição e exceção específica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15160.htm"
+      ]
+    },
+    "art-116": {
+      "simples": "Causas impeditivas suspendem a contagem nas hipóteses legais, como questão prejudicial, pena no exterior, recursos inadmissíveis indicados e ANPP enquanto não cumprido/rescindido. Suspender não é reiniciar integralmente o prazo.",
+      "pontos": [
+        "Identificar a causa e seu período.",
+        "Após condenação definitiva: prisão por outro motivo no parágrafo.",
+        "Recursos: condição de inadmissibilidade expressa, não todo recurso."
+      ],
+      "atencao": [
+        "Não suspender automaticamente por qualquer recurso ou confundir com interrupção. CPP 366 tem regime próprio integrado à Súmula 415/STJ, não suspensão indefinida universal; esta revisão não certifica todas as teses recursais."
+      ],
+      "exemplo": "A questão diz que todo recurso aos tribunais superiores suspende pelo inciso III, sem avaliar inadmissibilidade. Variação: Se preenchida hipótese legal, delimitar período de suspensão e tempo restante, sem zerar automaticamente o prazo.",
+      "prova": [
+        "Suspensão sempre zera toda contagem? Não; é diferente de interrupção.",
+        "Qualquer recurso preenche o inciso III? Não; observar sua condição."
+      ],
+      "termos": [
+        {
+          "termo": "Suspensão prescricional",
+          "significado": "Paralisação da contagem no período legal, distinta de reinício."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ]
+    },
+    "art-117": {
+      "simples": "Interrupção ocorre nos marcos enumerados, com regras de reinício e extensão próprias. Recebimento da acusação não é simples oferecimento; o cumprimento da pena tem exceção expressa ao reinício integral do §2º.",
+      "pontos": [
+        "Recebimento de denúncia/queixa; pronúncia e confirmação.",
+        "Publicação de sentença/acórdão condenatórios recorríveis.",
+        "§1º excepciona V/VI na extensão; §2º excepciona V no reinício."
+      ],
+      "atencao": [
+        "Não trocar oferecimento por recebimento nem ensinar sempre zera sem a ressalva do inciso V. STF, HC 176473, notícia oficial de 28/4/2020: acórdão condenatório interrompe inclusive quando confirma a sentença, mantendo, reduzindo ou aumentando a pena. Não afirmar leitura integral de todos os precedentes."
+      ],
+      "exemplo": "A denúncia é oferecida, mas ainda não recebida, e a questão diz que ocorreu o marco do inciso I. Variação: Se foi recebida, muda o marco; no cumprimento da pena, observar a exceção do §2º, sem aplicar reinício universal.",
+      "prova": [
+        "Oferecimento é o marco do inciso I? Não; recebimento.",
+        "As exceções de §§1º/2º são idênticas? Não; V/VI na extensão e V no reinício."
+      ],
+      "termos": [
+        {
+          "termo": "Interrupção prescricional",
+          "significado": "Marco legal com efeitos próprios de contagem e extensão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://noticias.stf.jus.br/postsnoticias/decisao-colegiada-que-confirma-sentenca-condenatoria-interrompe-prazo-da-prescricao/"
+      ]
+    },
+    "art-118": {
+      "simples": "Penas mais leves prescrevem com as mais graves no regime legal pertinente. Isso não autoriza somar todos os crimes para afastar a análise isolada do art.119 nem ignorar hipóteses próprias da multa.",
+      "pontos": [
+        "Comparar penas pertinentes ao caso.",
+        "Integrar arts.114 e 119."
+      ],
+      "atencao": [
+        "Não aplicar uma frase isolada para cancelar autonomia de crimes diversos. Identificar natureza das sanções e pretensão examinada."
+      ],
+      "exemplo": "Duas infrações diferentes são somadas com base no art.118 para criar prazo único de todo o concurso. Variação: Se a questão trata de penas do mesmo recorte legal, examinar a regra sem transportar para todo concurso.",
+      "prova": [
+        "Dispensa art.119 no concurso? Não.",
+        "Pode ignorar as hipóteses de multa do art.114? Não; integrar o sistema."
+      ],
+      "termos": [
+        {
+          "termo": "Penas leves e graves",
+          "significado": "Relação no regime pertinente, sem unificação automática de crimes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-119": {
+      "simples": "No concurso, a extinção incide isoladamente sobre a pena de cada crime. A soma das penas da condenação não é automaticamente a base de uma prescrição única.",
+      "pontos": [
+        "Análise por crime.",
+        "Não confundir soma executória com prazo prescricional único."
+      ],
+      "atencao": [
+        "Continuidade e outras regras específicas exigem integração; não se certificam todas as teses nesta explicação. A regra isolada não apaga os marcos e causas pertinentes a cada pretensão."
+      ],
+      "exemplo": "Duas penas de dois anos são somadas para usar quatro como base única de prescrição de todos os crimes. Variação: Com análise individual, escolher faixa e marcos de cada crime, sem concluir extinção apenas pela aritmética.",
+      "prova": [
+        "Toda soma executória gera prazo único? Não.",
+        "Cada crime deve ser analisado isoladamente? Sim, no recorte do artigo."
+      ],
+      "termos": [
+        {
+          "termo": "Prescrição individual",
+          "significado": "Exame de cada crime em concurso, distinto de soma para execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-120": {
+      "simples": "Sentença que concede perdão judicial não conta para reincidência. Súmula 18/STJ qualifica-a como declaratória de extinção da punibilidade, sem efeito condenatório; o benefício exige hipótese legal.",
+      "pontos": [
+        "Não produz reincidência.",
+        "Não confundir perdão judicial com perdão do ofendido."
+      ],
+      "atencao": [
+        "Não tratar como condenação ordinária que apenas dispensa executar pena, nem conceder universalmente por simpatia. Identificar a previsão e os pressupostos do benefício."
+      ],
+      "exemplo": "Sentença concessiva de perdão judicial é usada como condenação anterior para declarar reincidência. Variação: Se existe condenação ordinária sem perdão, a análise de reincidência depende dos arts.63/64, não desta regra.",
+      "prova": [
+        "Conta para reincidência? Não.",
+        "É perdão do ofendido dependente da mesma aceitação? Não; são institutos distintos."
+      ],
+      "termos": [
+        {
+          "termo": "Perdão judicial",
+          "significado": "Causa legal concedida judicialmente, com efeito extintivo qualificado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ]
+    }
+  }
+}

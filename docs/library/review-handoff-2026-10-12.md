@@ -2,8 +2,8 @@
 
 ## Estado confirmado no banco
 
-3.511 dispositivos ativos: 1.274 com metadados de aprovação editorial atual
-(revisor, data e hash correspondente), 2.237 pendentes. São unidades da
+3.511 dispositivos ativos: 1.289 com metadados de aprovação editorial atual
+(revisor, data e hash correspondente), 2.222 pendentes. São unidades da
 biblioteca, não questões do treinador. Fonte: review-coverage-2026-10-12.json.
 
 Drogas 84/84; Desarmamento 41/41; Maria da Penha 56/56;
@@ -52,7 +52,7 @@ Consultar novamente remoto, alterações locais e banco antes de escrever.
 Não duplicar revisões ambientais. Pendências registradas:
 
 - CPP: 808.
-- Código Penal: 281; prioridade atual por orientação expressa do usuário.
+- Código Penal: 266; prioridade atual por orientação expressa do usuário.
 - CTB: 348.
 - ECA: 322.
 - LEP: 206.
@@ -93,7 +93,7 @@ Usuário informou 59%; não há medição automática de créditos.
 
 50 revisões novas confirmadas no banco: arts. 55–79, 80, 82–89, 91,
 91-A e 92–105. CP 120/401, 281 pendentes; global 1.274/3.511,
-2.237 pendentes. Comparação cumulativa preservou 3.463 explicações
+2.222 pendentes. Comparação cumulativa preservou 3.463 explicações
 alheias e sete tabelas, sem alterações de timestamps alheios.
 Primeiro bloco enviado em fa922c7; segundo bloco com pacote, dry-run,
 publicação, readback, autoria, fontes e alertas próprios.
@@ -102,3 +102,12 @@ após qualificação do art. 83. Nenhum item histórico excluído reativado.
 Retomar arts. 106 e seguintes conforme checkpoint atual, conferindo remoto
 e banco; seções anteriores descrevem os blocos históricos desta continuidade.
 Saldo de 59% foi informado pelo usuário, sem medição automática do corte de 5%.
+
+## CP — extinção e prescrição
+
+15 revisões novas nos arts. 106–120. CP135/401, 266 pendentes; global
+1.289/3.511, 2.222 pendentes. Corrigido art.112 com Tema788/STF
+(ambas as partes e modulação), sem alegar leitura integral do acórdão
+ou certificação da fronteira temporal específica; consulta processual403.
+Readback preservou 3.498 explicações alheias e sete tabelas.
+Retomar art.121 e seguintes; informações de blocos anteriores são históricas.
