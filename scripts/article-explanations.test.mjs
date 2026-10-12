@@ -385,3 +385,18 @@ test('drug structural repair preserves authored teaching and separates crime fro
  assert.equal(text.changes.length,11);assert.equal(text.additions.length,0);
  for(const r of text.changes) assert.equal(r.expected.body_text,r.body_text+'\n\n'+r.moved_captions.join('\n\n'));
 });
+
+test('arms registration review distinguishes institutional permissions and current administrative rules',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-arms-registration-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,13);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-4').pontos.join(' '),/trinta dias úteis/);
+ assert.match(get('art-5').atencao.join(' '),/não significa porte nacional/);
+ assert.match(get('art-6').atencao.join(' '),/2021.*população.*15.306\/2025/s);
+ assert.match(get('art-7-a').atencao.join(' '),/5157.*2024.*inconstitucional.*50%/);
+ assert.match(get('art-7').pontos.join(' '),/24 horas/);
+ assert.match(get('art-9').atencao.join(' '),/311\/2025.*322\/2025.*19.040\/2025/);
+ assert.match(get('art-11-a').simples,/R\$ 80 mais munição/);
+ for(const key of ['art-3','art-5','art-6','art-7-a','art-9']) assert.equal(legalStudyCaveat('armas',key).literalPractice,false);
+});

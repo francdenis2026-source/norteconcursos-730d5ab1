@@ -1,8 +1,8 @@
 {
   "current_units": 3511,
-  "current_review_metadata": 938,
-  "pending_current_review_metadata": 2573,
-  "checked_at": "2026-10-12T17:01:10.720Z",
+  "current_review_metadata": 951,
+  "pending_current_review_metadata": 2560,
+  "checked_at": "2026-10-12T17:12:07.438Z",
   "note": "Contagem de aprovações editoriais atuais com revisor, data e hash correspondente; existência de explicação publicada não equivale a revisão atual. Não certifica toda a regulamentação ou jurisprudência.",
   "courses": [
     {
@@ -26,8 +26,8 @@
     {
       "slug": "armas",
       "current": 41,
-      "review_metadata": 0,
-      "pending": 41
+      "review_metadata": 13,
+      "pending": 28
     },
     {
       "slug": "lep",
