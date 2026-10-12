@@ -72,9 +72,9 @@ test('CONTRAN library link respects discipline and contest filters, and cases ke
  assert.equal(renderToStaticMarkup(React.createElement(link,{...props,discipline:'Direito Penal'})),'');
  const reader=load('src/components/library/ContranStudy.tsx',{'@/data/contranGuides':contran,'@/lib/contranStudy':contranStudy,'@/data/ctbPanel':{RESOLUCOES_COBRADAS:[]},'@/components/ui/tabs':{Tabs:({children})=>React.createElement('div',null,children),TabsList:({children})=>React.createElement('div',null,children),TabsTrigger:({children})=>React.createElement('button',null,children),TabsContent:({children})=>React.createElement('div',null,children)}}).ContranStudy;
  const result=renderToStaticMarkup(React.createElement(reader,{query:'1031'}));
- assert.ok(result.includes('Caso prático'));assert.ok(result.includes('E se o fato mudar?'));assert.ok(result.includes('Ver resposta comentada'));
+ assert.ok(result.includes('Caso prático'));assert.ok(result.includes('Agora é com você'));assert.ok(result.includes('Ver resposta comentada'));
  assert.ok(!/<details[^>]*\bopen(?:=|\s|>)/.test(result));
- assert.ok(result.includes('border-emerald-500')&&result.includes('border-violet-500'));
+ assert.ok(result.includes('border-emerald-500')&&result.includes('border-violet-300'));
  assert.ok(!result.includes('Resolução 1.029/2026'));
 });
 const sample=(slug,discipline)=>({id:slug,slug,discipline,title:slug,topic_label:slug,summary:null,contest_name:'PF',content_status:'active',sort_order:1,syllabus_topic_order:1,law_version_checked_at:null});

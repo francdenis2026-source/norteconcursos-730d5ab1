@@ -112,10 +112,14 @@ export function ContranStudy({ query = "" }: { query?: string }) {
               <p className="mt-2 text-sm font-semibold">{guide.example.question}</p>
               <details className="mt-2 text-sm"><summary className="cursor-pointer font-semibold">Ver resposta comentada</summary><p className="mt-2 leading-6">{guide.example.answer}</p></details>
             </section>
-            <section className="rounded-xl border-l-4 border-violet-500 bg-violet-50 p-3 text-violet-950 dark:bg-violet-950/30 dark:text-violet-100">
-              <h4 className="text-sm font-bold">E se o fato mudar?</h4>
-              <p className="mt-2 text-sm leading-6">{guide.example.variation}</p>
-              <details className="mt-2 text-sm"><summary className="cursor-pointer font-semibold">Ver o que muda</summary><p className="mt-2 leading-6">{guide.example.variationAnswer}</p></details>
+            <section className="rounded-xl border border-violet-300 bg-violet-50 p-3 text-violet-950 dark:border-violet-400/30 dark:bg-violet-950/30 dark:text-violet-100">
+              <h4 className="text-sm font-bold">Agora é com você: o mesmo caso, com um detalhe diferente</h4>
+              <p className="mt-1 text-xs">Mudar um detalhe pode mudar a resposta. Leia, decida sozinho e só depois confira.</p>
+              <ol className="mt-3 space-y-3 text-sm leading-6">
+                <li><span className="font-semibold">1. Nova situação.</span> {guide.example.variation}</li>
+                <li><span className="font-semibold">2. Pense:</span> a resposta do caso anterior continua valendo?</li>
+                <li><details><summary className="cursor-pointer font-semibold underline">3. Conferir a resposta</summary><p className="mt-2 rounded-lg bg-white/70 p-2 dark:bg-black/20">{guide.example.variationAnswer}</p></details></li>
+              </ol>
             </section>
           </TabsContent>
           <TabsContent value="oficial" className="mt-4 space-y-3">
