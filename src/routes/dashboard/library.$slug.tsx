@@ -85,7 +85,7 @@ function MaterialPage() {
 
   const back = (
     <Link to="/dashboard/library" className="library-back">
-      <ArrowLeft /> Biblioteca de estudo
+      <ArrowLeft /> Biblioteca de leis
     </Link>
   );
 

@@ -49,7 +49,7 @@ export const Route = createFileRoute("/dashboard/library/")({
     q: typeof s["q"] === "string" || typeof s["q"] === "number" ? String(s["q"]) : undefined,
     back: typeof s["back"] === "string" ? s["back"] : undefined,
   }),
-  head: () => ({ meta: [{ title: "Biblioteca de estudo | Norte Concurso" }] }),
+  head: () => ({ meta: [{ title: "Biblioteca de leis | Norte Concurso" }] }),
 });
 
 export function LibraryIndex() {
@@ -182,7 +182,7 @@ export function LibraryIndex() {
         image="study-desk"
         title={
           <>
-            Biblioteca de <em>estudo</em>
+            Biblioteca de <em>leis</em>
           </>
         }
         description="Entre na sua conta para ler os resumos por matéria, ligados ao edital do seu concurso."
@@ -200,7 +200,7 @@ export function LibraryIndex() {
         icon={Library}
         title={
           <>
-            Biblioteca de <em>estudo</em>
+            Biblioteca de <em>leis</em>
           </>
         }
         description="Seu estudo organizado por área: encontre a disciplina, compreenda com exemplos e pratique. Leis e materiais atualizados, com o caminho de revisão sempre à mão."

@@ -1,5 +1,5 @@
 import React from "react";
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { CheckCircle2, ChevronLeft, ChevronRight, GraduationCap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,8 @@ import { PageHero } from "@/components/dashboard/PageHero";
 import { GlossaryText } from "@/components/library/GlossaryText";
 import { TRACKS, type Track, type TrackLesson } from "@/data/tracks";
 import { cn } from "@/lib/utils";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 
 export const Route = createFileRoute("/dashboard/trilhas")({
   component: TracksPage,
@@ -15,7 +17,7 @@ export const Route = createFileRoute("/dashboard/trilhas")({
     t: typeof s["t"] === "string" ? s["t"] : undefined,
     l: typeof s["l"] === "string" ? s["l"] : undefined,
   }),
-  head: () => ({ meta: [{ title: "Trilhas de estudo | Norte Concursos" }] }),
+  head: () => ({ meta: [{ title: "Cursos por disciplina | Norte Concursos" }] }),
 });
 
 const storeKey = (slug: string) => `trilha-feitas:${slug}`;
@@ -69,6 +71,23 @@ function Quiz({ lesson }: { lesson: TrackLesson }) {
   );
 }
 
+/** Liga a aula ao restante da plataforma: artigos de lei sobre o tema, dicionário e questões. */
+function Complement({ lesson }: { lesson: TrackLesson }) {
+  const { user } = useAuthStatus();
+  return (
+    <section className="space-y-3" aria-label="Material complementar">
+      <h3 className="text-base font-semibold">Aprofunde na plataforma</h3>
+      <div className="flex flex-wrap gap-2 text-sm">
+        <Link to="/dashboard/library" search={{ q: lesson.title, back: undefined }} className="rounded-md border px-3 py-1.5 hover:bg-muted/50">Biblioteca de leis</Link>
+        <Link to="/dashboard/dicionario" search={{ q: lesson.title } as never} className="rounded-md border px-3 py-1.5 hover:bg-muted/50">Dicionário</Link>
+        <Link to="/dashboard/question-bank" className="rounded-md border px-3 py-1.5 hover:bg-muted/50">Questões</Link>
+        <Link to="/dashboard/study-tools" className="rounded-md border px-3 py-1.5 hover:bg-muted/50">Foco e revisão</Link>
+      </div>
+      {user && user.id !== "demo-user" && <ContentSearchResults query={lesson.title} userId={user.id} />}
+    </section>
+  );
+}
+
 type LessonProps = { lesson: TrackLesson; done: boolean; toggleDone: () => void; onNext?: () => void; onPrev?: () => void };
 
 function Lesson({ lesson, onNext, onPrev, done, toggleDone }: LessonProps) {
@@ -95,6 +114,7 @@ function Lesson({ lesson, onNext, onPrev, done, toggleDone }: LessonProps) {
         <h3 className="text-sm font-semibold">Atenção: onde o candidato erra</h3>
         <ul className="mt-1 list-disc space-y-1 pl-5 leading-7">{lesson.atencao.map((p) => <li key={p}><GlossaryText text={p} /></li>)}</ul>
       </section>
+      <Complement lesson={lesson} />
       <Quiz lesson={lesson} key={`q-${lesson.id}`} />
       <footer className="flex flex-wrap items-center gap-2 border-t pt-4">
         <Button variant={done ? "outline" : "default"} onClick={toggleDone}>
@@ -130,7 +150,7 @@ function TracksPage() {
     <div className="space-y-5 pb-8">
       <PageHero
         image="study-desk"
-        kicker="Trilhas de estudo"
+        kicker="Cursos por disciplina"
         icon={GraduationCap}
         title={track.title}
         description={`${track.source}. Aulas curtas, com exemplo, pegadinhas e teste rápido, na ordem do edital.`}

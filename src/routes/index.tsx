@@ -123,7 +123,7 @@ const TOOLS: { icon: LucideIcon; title: string; text: string; variant?: string }
   },
   {
     icon: Timer,
-    title: "Central de estudos",
+    title: "Foco e revisão",
     text: "Pomodoro, flashcards e cronômetro de foco no mesmo lugar.",
     variant: "lp-tile--wide",
   },
