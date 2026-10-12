@@ -1,0 +1,643 @@
+{
+  "version": "2026-10-12-drogas-structure-reapproval",
+  "checked_at": "2026-10-12T16:58:26.857568+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "drogas",
+      "title": "Lei 11.343/2006 — Lei de Drogas",
+      "units": 11,
+      "scope_type": "targeted_correction",
+      "course_current_units": 84,
+      "target_unit_keys": [
+        "art-19",
+        "art-26",
+        "art-5",
+        "art-8-d",
+        "art-65",
+        "art-8-e",
+        "art-22-a",
+        "art-23-a",
+        "art-22",
+        "art-17",
+        "art-19-a"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "source_sha256": "6f6763a224e2dda8310d3bd971c6314d795c5fc5ffb73137953eeefe47647e98",
+      "source_checked_at": "2026-10-12T16:18:25.227571+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-19",
+      "unit_id": "66498ef9-97c5-5c56-8b73-07a93d62b99a",
+      "content_sha256": "7a0a44912cd01e2fec56b2951654e0bd0fc48ced0683c644f3de1bf80a7e41bf",
+      "simples": "As atividades de prevenção do uso indevido de drogas devem observar princípios e diretrizes como o reconhecimento do uso indevido como fator de interferência na qualidade de vida; a adoção de conceitos objetivos e de fundamentação científica; o fortalecimento da autonomia e da responsabilidade individual; o compartilhamento de responsabilidades com o setor privado e a sociedade; estratégias diferenciadas conforme as populações e as drogas; o reconhecimento do 'não-uso', do 'retardamento do uso' e da redução de riscos como resultados desejáveis; e o tratamento especial às parcelas mais vulneráveis da população.",
+      "pontos": [
+        "Fundamentação científica e conceitos objetivos devem evitar preconceito e estigma.",
+        "Não uso, retardamento do uso e redução de riscos são resultados desejáveis distintos.",
+        "Prevenção para crianças/adolescentes deve observar também as diretrizes do Conanda."
+      ],
+      "atencao": [
+        "A política não precisa tratar todas as populações e substâncias de forma idêntica; o inciso V manda adequar estratégias às especificidades."
+      ],
+      "exemplo": "Uma equipe adapta ação à faixa etária e ao contexto sociocultural com fundamento científico. Variação: rejeitar redução de riscos como resultado preventivo contradiz o inciso VI.",
+      "prova": [
+        "A lei admite redução de riscos como resultado desejável? Sim; junto do não uso e do retardamento do uso.",
+        "Toda ação deve ignorar diferenças socioculturais? Não; a lei exige estratégias adequadas às especificidades."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 18"
+      ],
+      "expected": {
+        "unit_id": "66498ef9-97c5-5c56-8b73-07a93d62b99a",
+        "content_sha256": "eed3892f82f1aaf653a6285b6dd8c8ec75c300d435855906d565e100071ebdd1",
+        "simples": "As atividades de prevenção do uso indevido de drogas devem observar princípios e diretrizes como o reconhecimento do uso indevido como fator de interferência na qualidade de vida; a adoção de conceitos objetivos e de fundamentação científica; o fortalecimento da autonomia e da responsabilidade individual; o compartilhamento de responsabilidades com o setor privado e a sociedade; estratégias diferenciadas conforme as populações e as drogas; o reconhecimento do 'não-uso', do 'retardamento do uso' e da redução de riscos como resultados desejáveis; e o tratamento especial às parcelas mais vulneráveis da população.",
+        "pontos": [
+          "Fundamentação científica e conceitos objetivos devem evitar preconceito e estigma.",
+          "Não uso, retardamento do uso e redução de riscos são resultados desejáveis distintos.",
+          "Prevenção para crianças/adolescentes deve observar também as diretrizes do Conanda."
+        ],
+        "atencao": [
+          "A política não precisa tratar todas as populações e substâncias de forma idêntica; o inciso V manda adequar estratégias às especificidades."
+        ],
+        "exemplo": "Uma equipe adapta ação à faixa etária e ao contexto sociocultural com fundamento científico. Variação: rejeitar redução de riscos como resultado preventivo contradiz o inciso VI.",
+        "prova": [
+          "A lei admite redução de riscos como resultado desejável? Sim; junto do não uso e do retardamento do uso.",
+          "Toda ação deve ignorar diferenças socioculturais? Não; a lei exige estratégias adequadas às especificidades."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 18"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T03:33:26.317+00:00",
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-12T03:33:26.317+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-26",
+      "unit_id": "8d8bb03d-a1b2-5bf4-a8ba-7f11d8444202",
+      "content_sha256": "0fcaf43c6dfa0890c0d5da0c847bb1fcc77c9cdeb2a969a01dd3786185278613",
+      "simples": "O usuário e o dependente de drogas que, em razão da prática de infração penal, estiverem cumprindo pena privativa de liberdade ou submetidos a medida de segurança, têm garantidos os serviços de atenção à sua saúde, definidos pelo respectivo sistema penitenciário.",
+      "pontos": [
+        "Condenado em pena privativa de liberdade e pessoa sob medida de segurança têm serviços de atenção à saúde garantidos.",
+        "A garantia não depende de se chamar a medida de prisão ou tratamento."
+      ],
+      "atencao": [
+        "Cumprir pena não extingue o direito à atenção à saúde; o artigo não autoriza substituição automática da condenação por atendimento."
+      ],
+      "exemplo": "Uma pessoa cumpre pena e necessita dos serviços de atenção definidos no sistema penitenciário. Variação: estar sob medida de segurança também está previsto, sem confundir a garantia de saúde com revisão automática da sanção.",
+      "prova": [
+        "A pessoa sob medida de segurança foi excluída? Não; o artigo a abrange expressamente.",
+        "Garantir atenção à saúde substitui automaticamente toda pena? Não; a garantia de atendimento não é essa regra de substituição."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 20"
+      ],
+      "expected": {
+        "unit_id": "8d8bb03d-a1b2-5bf4-a8ba-7f11d8444202",
+        "content_sha256": "ac7a58ebf8e25b55bc0699ce9b70964d516d4abb98e12db48237d841e976408a",
+        "simples": "O usuário e o dependente de drogas que, em razão da prática de infração penal, estiverem cumprindo pena privativa de liberdade ou submetidos a medida de segurança, têm garantidos os serviços de atenção à sua saúde, definidos pelo respectivo sistema penitenciário.",
+        "pontos": [
+          "Condenado em pena privativa de liberdade e pessoa sob medida de segurança têm serviços de atenção à saúde garantidos.",
+          "A garantia não depende de se chamar a medida de prisão ou tratamento."
+        ],
+        "atencao": [
+          "Cumprir pena não extingue o direito à atenção à saúde; o artigo não autoriza substituição automática da condenação por atendimento."
+        ],
+        "exemplo": "Uma pessoa cumpre pena e necessita dos serviços de atenção definidos no sistema penitenciário. Variação: estar sob medida de segurança também está previsto, sem confundir a garantia de saúde com revisão automática da sanção.",
+        "prova": [
+          "A pessoa sob medida de segurança foi excluída? Não; o artigo a abrange expressamente.",
+          "Garantir atenção à saúde substitui automaticamente toda pena? Não; a garantia de atendimento não é essa regra de substituição."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 20"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T03:33:40.502+00:00",
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-12T03:33:40.502+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "ad334685-fdd5-5526-8833-b5131944e7e8",
+      "content_sha256": "c4c6651b6af458e79bed35fa91da5557b4d74c68b8e0c6392a64cae9a86ca1bb",
+      "simples": "O Sisnad tem os seguintes objetivos: contribuir para a inclusão social do cidadão, tornando-o menos vulnerável a comportamentos de risco; promover a construção e a socialização do conhecimento sobre drogas no país; promover a integração entre as políticas de prevenção, atenção e reinserção e de repressão e as políticas setoriais dos órgãos do Poder Executivo; e assegurar as condições para a coordenação, a integração e a articulação das atividades do art. 3º.",
+      "pontos": [
+        "Inclusão social busca reduzir vulnerabilidades e riscos.",
+        "Conhecimento, integração com políticas setoriais e coordenação compõem os objetivos."
+      ],
+      "atencao": [
+        "Objetivos de inclusão e conhecimento não devem ser substituídos por uma promessa de erradicação absoluta que o dispositivo não formula."
+      ],
+      "exemplo": "Uma política combina educação e assistência para reduzir vulnerabilidade. Variação: medir apenas número de prisões não representa todos os objetivos do artigo.",
+      "prova": [
+        "A inclusão social é objetivo expresso? Sim; busca reduzir a vulnerabilidade a comportamentos de risco.",
+        "Socializar conhecimento sobre drogas fica fora dos objetivos? Não; está no inciso II."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 3º"
+      ],
+      "expected": {
+        "unit_id": "ad334685-fdd5-5526-8833-b5131944e7e8",
+        "content_sha256": "ec4dc73453127949585d2dad4f2c4a4a41532d1dd3f2480583cfdbcf785efc44",
+        "simples": "O Sisnad tem os seguintes objetivos: contribuir para a inclusão social do cidadão, tornando-o menos vulnerável a comportamentos de risco; promover a construção e a socialização do conhecimento sobre drogas no país; promover a integração entre as políticas de prevenção, atenção e reinserção e de repressão e as políticas setoriais dos órgãos do Poder Executivo; e assegurar as condições para a coordenação, a integração e a articulação das atividades do art. 3º.",
+        "pontos": [
+          "Inclusão social busca reduzir vulnerabilidades e riscos.",
+          "Conhecimento, integração com políticas setoriais e coordenação compõem os objetivos."
+        ],
+        "atencao": [
+          "Objetivos de inclusão e conhecimento não devem ser substituídos por uma promessa de erradicação absoluta que o dispositivo não formula."
+        ],
+        "exemplo": "Uma política combina educação e assistência para reduzir vulnerabilidade. Variação: medir apenas número de prisões não representa todos os objetivos do artigo.",
+        "prova": [
+          "A inclusão social é objetivo expresso? Sim; busca reduzir a vulnerabilidade a comportamentos de risco.",
+          "Socializar conhecimento sobre drogas fica fora dos objetivos? Não; está no inciso II."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T03:33:15.513+00:00",
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-12T03:33:15.513+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8-d",
+      "unit_id": "b56ba3a6-8ec2-54c3-a550-0a5e68c784e4",
+      "content_sha256": "d5f45c0b20b93f4c36faac25842b481b2096d53969f3336b15379981d3b560d0",
+      "simples": "São objetivos do Plano Nacional de Políticas sobre Drogas, dentre outros, promover a interdisciplinaridade e a integração dos programas nas áreas de saúde, educação, trabalho, assistência social, previdência social, habitação, cultura, desporto e lazer; viabilizar a ampla participação social; priorizar programas articulados com estabelecimentos de ensino, sociedade e família; ampliar as alternativas de inserção social e econômica do usuário ou dependente, priorizando escolarização e qualificação profissional; e promover o acesso do usuário ou dependente a todos os serviços públicos.",
+      "pontos": [
+        "Plano Nacional: duração de 5 anos desde sua aprovação.",
+        "O poder público deve dar ampla divulgação ao conteúdo.",
+        "Integração de áreas, participação social, escolarização e trabalho são objetivos expressos."
+      ],
+      "atencao": [
+        "Não contar os 5 anos desde a lei ou desde cada atendimento: o marco é a aprovação do plano."
+      ],
+      "exemplo": "Um plano aprovado em determinado dia inicia nesse marco sua duração quinquenal. Variação: a data de publicação da Lei 13.840 não é automaticamente a aprovação de todos os planos seguintes.",
+      "prova": [
+        "Qual é o marco dos 5 anos? A aprovação do plano, conforme o §1º.",
+        "O plano pode ter seu conteúdo mantido sigiloso como regra geral? Não; o §2º exige ampla divulgação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 8º-A",
+        "Art. 8º-E"
+      ],
+      "expected": {
+        "unit_id": "b56ba3a6-8ec2-54c3-a550-0a5e68c784e4",
+        "content_sha256": "014c3e3f39b880e5c1d44940be2b2f0e0cba75f51176d49a17be73444f43c9aa",
+        "simples": "São objetivos do Plano Nacional de Políticas sobre Drogas, dentre outros, promover a interdisciplinaridade e a integração dos programas nas áreas de saúde, educação, trabalho, assistência social, previdência social, habitação, cultura, desporto e lazer; viabilizar a ampla participação social; priorizar programas articulados com estabelecimentos de ensino, sociedade e família; ampliar as alternativas de inserção social e econômica do usuário ou dependente, priorizando escolarização e qualificação profissional; e promover o acesso do usuário ou dependente a todos os serviços públicos.",
+        "pontos": [
+          "Plano Nacional: duração de 5 anos desde sua aprovação.",
+          "O poder público deve dar ampla divulgação ao conteúdo.",
+          "Integração de áreas, participação social, escolarização e trabalho são objetivos expressos."
+        ],
+        "atencao": [
+          "Não contar os 5 anos desde a lei ou desde cada atendimento: o marco é a aprovação do plano."
+        ],
+        "exemplo": "Um plano aprovado em determinado dia inicia nesse marco sua duração quinquenal. Variação: a data de publicação da Lei 13.840 não é automaticamente a aprovação de todos os planos seguintes.",
+        "prova": [
+          "Qual é o marco dos 5 anos? A aprovação do plano, conforme o §1º.",
+          "O plano pode ter seu conteúdo mantido sigiloso como regra geral? Não; o §2º exige ampla divulgação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º-A",
+          "Art. 8º-E"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T03:33:19.661+00:00",
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-12T03:33:19.661+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-65",
+      "unit_id": "b956581a-52d7-5440-888c-e4ef13d8d605",
+      "content_sha256": "841d69ea34c4fbd98c02dcc5af12866eae2510ad07ba3ad9940b7f00348fe0cc",
+      "simples": "Cooperação internacional solicitada ou necessária respeita não intervenção, igualdade jurídica, integridade territorial, leis nacionais e instrumentos internacionais. Abrange informações de políticas, inteligência policial e dados policiais/judiciais relacionados às drogas.",
+      "pontos": [
+        "Inteligência pode incluir armas, lavagem de dinheiro e desvio de precursores.",
+        "Prevenção e reinserção também integram o intercâmbio; não só repressão."
+      ],
+      "atencao": [
+        "Cooperar não autoriza atuar livremente em território estrangeiro nem ignorar garantias e canais jurídicos de compartilhamento."
+      ],
+      "exemplo": "Brasil intercambia experiência de prevenção por instrumento de cooperação. Variação: informação policial sobre tráfico internacional exige os canais e limites legais, sem intervenção unilateral em outro país.",
+      "prova": [
+        "A cooperação dispensa respeito às leis nacionais? Não; a regra expressamente as preserva.",
+        "Pode incluir experiências de prevenção? Sim; o inciso I as prevê."
+      ],
+      "termos": [
+        "não intervenção",
+        "integridade territorial",
+        "intercâmbio"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "b956581a-52d7-5440-888c-e4ef13d8d605",
+        "content_sha256": "f432ec2c60f94dae6c422a238af4d3e80743a2bfa8aafe3944da58fb12549c61",
+        "simples": "Cooperação internacional solicitada ou necessária respeita não intervenção, igualdade jurídica, integridade territorial, leis nacionais e instrumentos internacionais. Abrange informações de políticas, inteligência policial e dados policiais/judiciais relacionados às drogas.",
+        "pontos": [
+          "Inteligência pode incluir armas, lavagem de dinheiro e desvio de precursores.",
+          "Prevenção e reinserção também integram o intercâmbio; não só repressão."
+        ],
+        "atencao": [
+          "Cooperar não autoriza atuar livremente em território estrangeiro nem ignorar garantias e canais jurídicos de compartilhamento."
+        ],
+        "exemplo": "Brasil intercambia experiência de prevenção por instrumento de cooperação. Variação: informação policial sobre tráfico internacional exige os canais e limites legais, sem intervenção unilateral em outro país.",
+        "prova": [
+          "A cooperação dispensa respeito às leis nacionais? Não; a regra expressamente as preserva.",
+          "Pode incluir experiências de prevenção? Sim; o inciso I as prevê."
+        ],
+        "termos": [
+          "não intervenção",
+          "integridade territorial",
+          "intercâmbio"
+        ],
+        "remissoes": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T16:48:35.643+00:00",
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-12T16:48:35.643+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8-e",
+      "unit_id": "babd3599-2acc-5eca-982b-8179e0ffde75",
+      "content_sha256": "eeeca482167126f9e29f4f21e7d31df61e1ecdbf229b5ca9235d8e1bb3fc8582",
+      "simples": "Os conselhos de políticas sobre drogas, constituídos por Estados, Distrito Federal e Municípios, terão os objetivos de auxiliar na elaboração de políticas sobre drogas; colaborar com os órgãos governamentais no planejamento e na execução das políticas; propor a celebração de instrumentos de cooperação para programas de prevenção, tratamento, acolhimento, reinserção e repressão ao tráfico; promover estudos; propor políticas que permitam a integração do usuário ou dependente no processo social, econômico, político e cultural; e desenvolver outras atividades relacionadas.",
+      "pontos": [
+        "Conselhos locais auxiliam, colaboram, propõem cooperação e promovem estudos.",
+        "Os objetivos alcançam prevenção, tratamento, acolhimento, reinserção e repressão."
+      ],
+      "atencao": [
+        "Propor instrumento de cooperação não é celebrar qualquer contrato automaticamente nem assumir competência policial."
+      ],
+      "exemplo": "O conselho municipal propõe cooperação e produz estudo para subsidiar a política. Variação: emitir condenação criminal não está entre os objetivos deste artigo.",
+      "prova": [
+        "Os conselhos apenas tratam de repressão? Não; têm funções também de prevenção, atendimento e integração.",
+        "Propor cooperação equivale a julgar crimes? Não; são atribuições de naturezas distintas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 8º-D"
+      ],
+      "expected": {
+        "unit_id": "babd3599-2acc-5eca-982b-8179e0ffde75",
+        "content_sha256": "8e57c787a0994f8ac066f2198838130acd19790ba08bb050ef36d28c4da8d23f",
+        "simples": "Os conselhos de políticas sobre drogas, constituídos por Estados, Distrito Federal e Municípios, terão os objetivos de auxiliar na elaboração de políticas sobre drogas; colaborar com os órgãos governamentais no planejamento e na execução das políticas; propor a celebração de instrumentos de cooperação para programas de prevenção, tratamento, acolhimento, reinserção e repressão ao tráfico; promover estudos; propor políticas que permitam a integração do usuário ou dependente no processo social, econômico, político e cultural; e desenvolver outras atividades relacionadas.",
+        "pontos": [
+          "Conselhos locais auxiliam, colaboram, propõem cooperação e promovem estudos.",
+          "Os objetivos alcançam prevenção, tratamento, acolhimento, reinserção e repressão."
+        ],
+        "atencao": [
+          "Propor instrumento de cooperação não é celebrar qualquer contrato automaticamente nem assumir competência policial."
+        ],
+        "exemplo": "O conselho municipal propõe cooperação e produz estudo para subsidiar a política. Variação: emitir condenação criminal não está entre os objetivos deste artigo.",
+        "prova": [
+          "Os conselhos apenas tratam de repressão? Não; têm funções também de prevenção, atendimento e integração.",
+          "Propor cooperação equivale a julgar crimes? Não; são atribuições de naturezas distintas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º-D"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T03:33:20.894+00:00",
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-12T03:33:20.894+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-22-a",
+      "unit_id": "c5f23eaf-a675-5500-9140-a6955cf34d95",
+      "content_sha256": "361b7afdc89ace0f89d556cb6ef1275db6b214386ff2d67df79e83164ab823a8",
+      "simples": "As pessoas atendidas por órgãos integrantes do Sisnad terão atendimento nos programas de educação profissional e tecnológica, educação de jovens e adultos e alfabetização.",
+      "pontos": [
+        "Atendidos por órgãos do Sisnad terão atendimento em educação profissional/tecnológica, EJA e alfabetização."
+      ],
+      "atencao": [
+        "Não transformar atendimento nesses programas em diploma automático ou dispensa dos requisitos educacionais aplicáveis."
+      ],
+      "exemplo": "A pessoa é encaminhada a programa de alfabetização e formação compatível com suas necessidades. Variação: participar do Sisnad não gera certificação profissional sem o percurso educativo.",
+      "prova": [
+        "A alfabetização é contemplada? Sim; junto de educação profissional/tecnológica e EJA.",
+        "O artigo concede diploma automático? Não; prevê atendimento em programas, não certificação sem aprendizagem."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 22"
+      ],
+      "expected": {
+        "unit_id": "c5f23eaf-a675-5500-9140-a6955cf34d95",
+        "content_sha256": "7b52b663654679050d0b597eef23e14593137d4b00c2b6852c169ce8f83fd029",
+        "simples": "As pessoas atendidas por órgãos integrantes do Sisnad terão atendimento nos programas de educação profissional e tecnológica, educação de jovens e adultos e alfabetização.",
+        "pontos": [
+          "Atendidos por órgãos do Sisnad terão atendimento em educação profissional/tecnológica, EJA e alfabetização."
+        ],
+        "atencao": [
+          "Não transformar atendimento nesses programas em diploma automático ou dispensa dos requisitos educacionais aplicáveis."
+        ],
+        "exemplo": "A pessoa é encaminhada a programa de alfabetização e formação compatível com suas necessidades. Variação: participar do Sisnad não gera certificação profissional sem o percurso educativo.",
+        "prova": [
+          "A alfabetização é contemplada? Sim; junto de educação profissional/tecnológica e EJA.",
+          "O artigo concede diploma automático? Não; prevê atendimento em programas, não certificação sem aprendizagem."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 22"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T03:33:32.527+00:00",
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-12T03:33:32.527+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-23-a",
+      "unit_id": "c77360b4-f8c1-58bd-92ca-dfb055fda767",
+      "content_sha256": "d3f305439827ba3e660156378625bfe4cf4c7f11a4cd88fee68b42fc8151a1df",
+      "simples": "O tratamento prioriza modalidades ambulatoriais. Internação é excepcional, em unidade de saúde ou hospital geral, com equipe multidisciplinar e autorização médica. A voluntária exige consentimento e declaração escrita; seu término decorre de decisão médica ou solicitação escrita da pessoa. A involuntária exige solicitação dos legitimados e decisão médica após avaliar drogas, padrão de uso e impossibilidade de alternativas. Não é prisão nem internação em comunidade terapêutica.",
+      "pontos": [
+        "Ambulatório tem prioridade; internação só quando recursos extra-hospitalares forem insuficientes.",
+        "Internação exige unidade de saúde/hospital geral com equipe e autorização de médico registrado no CRM do Estado.",
+        "Na involuntária, avaliar alternativas; apenas tempo necessário à desintoxicação, máximo de 90 dias. Internações e altas são informadas em até 72 horas aos órgãos indicados, com sigilo.",
+        "Na falta absoluta de familiar/responsável, a hipótese de solicitação por servidor exclui os da segurança pública; comunidade terapêutica não pode realizar internação."
+      ],
+      "atencao": [
+        "Solicitar a medida não substitui decisão médica. Os 90 dias são limite da involuntária, não duração mínima ou prazo comum do PIA. A família pode requerer ao médico a interrupção a qualquer tempo; isso não equivale a determinar alta automaticamente."
+      ],
+      "exemplo": "A equipe verifica insuficiência dos recursos extra-hospitalares e a decisão médica antes de internação involuntária. Variação: não se pode usar comunidade terapêutica para internar compulsoriamente alguém nem tratar o limite de 90 dias como permanência obrigatória.",
+      "prova": [
+        "O pedido da família sozinho substitui a decisão médica? Não; a internação exige autorização e formalização médica nas condições legais.",
+        "A internação involuntária deve durar obrigatoriamente 90 dias? Não; dura apenas o necessário à desintoxicação, com esse limite máximo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 23-B"
+      ],
+      "expected": {
+        "unit_id": "c77360b4-f8c1-58bd-92ca-dfb055fda767",
+        "content_sha256": "17fd7da112d8b6460c17a88db93160800d07369aff66182aa9283641abdb84e2",
+        "simples": "O tratamento prioriza modalidades ambulatoriais. Internação é excepcional, em unidade de saúde ou hospital geral, com equipe multidisciplinar e autorização médica. A voluntária exige consentimento e declaração escrita; seu término decorre de decisão médica ou solicitação escrita da pessoa. A involuntária exige solicitação dos legitimados e decisão médica após avaliar drogas, padrão de uso e impossibilidade de alternativas. Não é prisão nem internação em comunidade terapêutica.",
+        "pontos": [
+          "Ambulatório tem prioridade; internação só quando recursos extra-hospitalares forem insuficientes.",
+          "Internação exige unidade de saúde/hospital geral com equipe e autorização de médico registrado no CRM do Estado.",
+          "Na involuntária, avaliar alternativas; apenas tempo necessário à desintoxicação, máximo de 90 dias. Internações e altas são informadas em até 72 horas aos órgãos indicados, com sigilo.",
+          "Na falta absoluta de familiar/responsável, a hipótese de solicitação por servidor exclui os da segurança pública; comunidade terapêutica não pode realizar internação."
+        ],
+        "atencao": [
+          "Solicitar a medida não substitui decisão médica. Os 90 dias são limite da involuntária, não duração mínima ou prazo comum do PIA. A família pode requerer ao médico a interrupção a qualquer tempo; isso não equivale a determinar alta automaticamente."
+        ],
+        "exemplo": "A equipe verifica insuficiência dos recursos extra-hospitalares e a decisão médica antes de internação involuntária. Variação: não se pode usar comunidade terapêutica para internar compulsoriamente alguém nem tratar o limite de 90 dias como permanência obrigatória.",
+        "prova": [
+          "O pedido da família sozinho substitui a decisão médica? Não; a internação exige autorização e formalização médica nas condições legais.",
+          "A internação involuntária deve durar obrigatoriamente 90 dias? Não; dura apenas o necessário à desintoxicação, com esse limite máximo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 23-B"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T03:33:35.09+00:00",
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-12T03:33:35.09+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-22",
+      "unit_id": "ed3f242c-b3a8-51f5-b509-3470c83332bb",
+      "content_sha256": "a426bd0ed6c0b83a47110dc043e1eab8e91fcc61371129f4f1085f32716d420e",
+      "simples": "As atividades de atenção e de reinserção social do usuário e do dependente e de seus familiares devem observar princípios como o respeito ao usuário independentemente de quaisquer condições; estratégias diferenciadas conforme as peculiaridades socioculturais; projeto terapêutico individualizado; atenção multidisciplinar, por equipes multiprofissionais; observância das normas do Conad; alinhamento às diretrizes dos órgãos de controle social; estímulo à capacitação técnica e profissional; e políticas de reinserção voltadas à educação continuada e ao trabalho.",
+      "pontos": [
+        "Projeto terapêutico deve ser individualizado e orientado à inclusão e redução de riscos/danos.",
+        "Sempre que possível, equipes multiprofissionais e abordagem multidisciplinar.",
+        "PIA, educação continuada, trabalho e orientação adequada integram as diretrizes."
+      ],
+      "atencao": [
+        "Respeito independe das condições pessoais; tratamento padronizado que ignora peculiaridades não atende à individualização."
+      ],
+      "exemplo": "A equipe adapta projeto à pessoa e seus vínculos, com metas de saúde e inclusão. Variação: impor um roteiro idêntico sem considerar peculiaridades socioculturais afasta a diretriz do inciso II.",
+      "prova": [
+        "O projeto terapêutico deve ignorar necessidades individuais? Não; o inciso III exige individualização.",
+        "A orientação só deve tratar do uso habitual? Não; o inciso X também menciona consequências do uso ocasional."
+      ],
+      "termos": [
+        {
+          "termo": "Conad",
+          "significado": "Conselho Nacional de Políticas sobre Drogas."
+        }
+      ],
+      "remissoes": [
+        "Art. 23-B"
+      ],
+      "expected": {
+        "unit_id": "ed3f242c-b3a8-51f5-b509-3470c83332bb",
+        "content_sha256": "db1b14f58655b8ac7d137e4f0d44a0c9b2f1497fc8f3c607b4b1d647af0c1f4b",
+        "simples": "As atividades de atenção e de reinserção social do usuário e do dependente e de seus familiares devem observar princípios como o respeito ao usuário independentemente de quaisquer condições; estratégias diferenciadas conforme as peculiaridades socioculturais; projeto terapêutico individualizado; atenção multidisciplinar, por equipes multiprofissionais; observância das normas do Conad; alinhamento às diretrizes dos órgãos de controle social; estímulo à capacitação técnica e profissional; e políticas de reinserção voltadas à educação continuada e ao trabalho.",
+        "pontos": [
+          "Projeto terapêutico deve ser individualizado e orientado à inclusão e redução de riscos/danos.",
+          "Sempre que possível, equipes multiprofissionais e abordagem multidisciplinar.",
+          "PIA, educação continuada, trabalho e orientação adequada integram as diretrizes."
+        ],
+        "atencao": [
+          "Respeito independe das condições pessoais; tratamento padronizado que ignora peculiaridades não atende à individualização."
+        ],
+        "exemplo": "A equipe adapta projeto à pessoa e seus vínculos, com metas de saúde e inclusão. Variação: impor um roteiro idêntico sem considerar peculiaridades socioculturais afasta a diretriz do inciso II.",
+        "prova": [
+          "O projeto terapêutico deve ignorar necessidades individuais? Não; o inciso III exige individualização.",
+          "A orientação só deve tratar do uso habitual? Não; o inciso X também menciona consequências do uso ocasional."
+        ],
+        "termos": [
+          {
+            "termo": "Conad",
+            "significado": "Conselho Nacional de Políticas sobre Drogas."
+          }
+        ],
+        "remissoes": [
+          "Art. 23-B"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T03:33:31.306+00:00",
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-12T03:33:31.306+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-17",
+      "unit_id": "f824cc80-b4c0-5307-9d47-ba159239d6bb",
+      "content_sha256": "7316aff7ffe3b17e8a040636242923fff4ef529487b4914f473304823b558725",
+      "simples": "Os dados estatísticos nacionais de repressão ao tráfico ilícito de drogas integrarão sistema de informações do Poder Executivo.",
+      "pontos": [
+        "Dados estatísticos nacionais de repressão integram sistema de informações do Executivo.",
+        "Estatística não se confunde com prova individual de culpabilidade."
+      ],
+      "atencao": [
+        "Não trocar estatísticas nacionais de repressão por exposição indiscriminada de prontuários de saúde."
+      ],
+      "exemplo": "Um relatório agregado sobre repressão alimenta o sistema de informações. Variação: uma tabela estatística não prova por si a participação de uma pessoa em crime.",
+      "prova": [
+        "Os dados previstos integram sistema do Executivo? Sim; é o destino indicado no artigo.",
+        "Estatística nacional condena automaticamente um indivíduo? Não; informação agregada e prova individual são coisas distintas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 16"
+      ],
+      "expected": {
+        "unit_id": "f824cc80-b4c0-5307-9d47-ba159239d6bb",
+        "content_sha256": "9bd4512df61939adb611b8e6acb8610c7fcd9d78b8b9fb86c592abf834b4eef0",
+        "simples": "Os dados estatísticos nacionais de repressão ao tráfico ilícito de drogas integrarão sistema de informações do Poder Executivo.",
+        "pontos": [
+          "Dados estatísticos nacionais de repressão integram sistema de informações do Executivo.",
+          "Estatística não se confunde com prova individual de culpabilidade."
+        ],
+        "atencao": [
+          "Não trocar estatísticas nacionais de repressão por exposição indiscriminada de prontuários de saúde."
+        ],
+        "exemplo": "Um relatório agregado sobre repressão alimenta o sistema de informações. Variação: uma tabela estatística não prova por si a participação de uma pessoa em crime.",
+        "prova": [
+          "Os dados previstos integram sistema do Executivo? Sim; é o destino indicado no artigo.",
+          "Estatística nacional condena automaticamente um indivíduo? Não; informação agregada e prova individual são coisas distintas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T03:33:23.331+00:00",
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-12T03:33:23.331+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-19-a",
+      "unit_id": "ff64657e-65ca-54c8-95e6-0f82aec00483",
+      "content_sha256": "4823380251fbdab206094d0a4fe3297e4b761c5848cdd9d781e944d09b9ce475",
+      "simples": "Fica instituída a Semana Nacional de Políticas sobre Drogas, comemorada anualmente, na quarta semana de junho. No período, serão intensificadas as ações de difusão de informações sobre os problemas decorrentes do uso de drogas; promoção de eventos para o debate público; difusão de boas práticas de prevenção, tratamento, acolhimento e reinserção; divulgação de iniciativas e campanhas; mobilização da comunidade; e mobilização dos sistemas de ensino.",
+      "pontos": [
+        "Semana Nacional: quarta semana de junho, anualmente.",
+        "Intensificam-se informação, debate, boas práticas e mobilização da comunidade e ensino."
+      ],
+      "atencao": [
+        "Uma semana de intensificação não suspende ações preventivas durante o resto do ano."
+      ],
+      "exemplo": "Uma escola intensifica campanhas na quarta semana de junho. Variação: encerrar o trabalho preventivo nas demais semanas não é obrigação prevista pela norma.",
+      "prova": [
+        "A semana legal é a primeira de junho? Não; é a quarta semana de junho.",
+        "A criação da semana proíbe campanhas fora dela? Não; prevê intensificação anual, não exclusividade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 19"
+      ],
+      "expected": {
+        "unit_id": "ff64657e-65ca-54c8-95e6-0f82aec00483",
+        "content_sha256": "e956af50ed16e29e110caec1f9b9ee4fd218212ee3300f53c570b062b3436374",
+        "simples": "Fica instituída a Semana Nacional de Políticas sobre Drogas, comemorada anualmente, na quarta semana de junho. No período, serão intensificadas as ações de difusão de informações sobre os problemas decorrentes do uso de drogas; promoção de eventos para o debate público; difusão de boas práticas de prevenção, tratamento, acolhimento e reinserção; divulgação de iniciativas e campanhas; mobilização da comunidade; e mobilização dos sistemas de ensino.",
+        "pontos": [
+          "Semana Nacional: quarta semana de junho, anualmente.",
+          "Intensificam-se informação, debate, boas práticas e mobilização da comunidade e ensino."
+        ],
+        "atencao": [
+          "Uma semana de intensificação não suspende ações preventivas durante o resto do ano."
+        ],
+        "exemplo": "Uma escola intensifica campanhas na quarta semana de junho. Variação: encerrar o trabalho preventivo nas demais semanas não é obrigação prevista pela norma.",
+        "prova": [
+          "A semana legal é a primeira de junho? Não; é a quarta semana de junho.",
+          "A criação da semana proíbe campanhas fora dela? Não; prevê intensificação anual, não exclusividade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 19"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T03:33:27.54+00:00",
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-12T03:33:27.54+00:00"
+      }
+    }
+  ]
+}

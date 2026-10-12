@@ -1,0 +1,552 @@
+{
+  "version": "2026-10-12-drogas-headings",
+  "checked_at": "2026-10-12T16:55:48.703907+00:00",
+  "scope": "Transferir 11 rubricas finais para estrutura e corrigir capítulos conforme HTML oficial, sem remoção de disposição normativa ou renumeração de artigos.",
+  "laws": [
+    {
+      "expected": {
+        "id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "slug": "drogas",
+        "title": "Lei 11.343/2006 — Lei de Drogas",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "source_sha256": "9ea95c4ba7f71b22e222639ba03aa3b474578f146abccb1cb7ea54f82762d0dc",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-drogas-revisao",
+        "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+        "overview": {
+          "intro": "Separe a conduta de tráfico, a associação para esse fim e as hipóteses de redução ou agravamento. A quantidade de participantes ou a ausência de venda não resolvem, sozinhas, a classificação.",
+          "alerts": "A Lei 15.358/2026 inseriu o art. 40-A, vigente desde 25/03/2026. O módulo não trata dos efeitos do julgamento do STF sobre cannabis para consumo pessoal; não utilize estes itens para decidir hipóteses do art. 28.",
+          "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+          "chapters": [
+            {
+              "count": 5,
+              "title": "Disposições iniciais"
+            },
+            {
+              "count": 4,
+              "title": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção I — (Incluído pela Lei nº 13.840, de 2019)"
+            },
+            {
+              "count": 2,
+              "title": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção II — (Incluído pela Lei nº 13.840, de 2019)"
+            },
+            {
+              "count": 1,
+              "title": "CAPÍTULO II-A — (Incluído pela Lei nº 13.840, de 2019) / Seção I — (Incluído pela Lei nº 13.840, de 2019)"
+            },
+            {
+              "count": 1,
+              "title": "CAPÍTULO II-A — (Incluído pela Lei nº 13.840, de 2019) / Seção II — (Incluído pela Lei nº 13.840, de 2019)"
+            },
+            {
+              "count": 2,
+              "title": "CAPÍTULO IV — (Redação dada pela Lei nº 13.840, de 2019)"
+            },
+            {
+              "count": 2,
+              "title": "CAPÍTULO IV — (Redação dada pela Lei nº 13.840, de 2019) / Seção I — (Incluído pela Lei nº 13.840, de 2019)"
+            },
+            {
+              "count": 1,
+              "title": "CAPÍTULO IV — (Redação dada pela Lei nº 13.840, de 2019) / Seção II — (Incluído pela Lei nº 13.840, de 2019)"
+            },
+            {
+              "count": 2,
+              "title": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção IV — (Incluído pela Lei nº 13.840, de 2019)"
+            },
+            {
+              "count": 4,
+              "title": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção V — (Incluído pela Lei nº 13.840, de 2019)"
+            },
+            {
+              "count": 50,
+              "title": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção VI — (Incluído pela Lei nº 13.840, de 2019)"
+            },
+            {
+              "count": 10,
+              "title": "TÍTULO V-A — (Incluído pela Lei nº 13.840, de 2019)"
+            }
+          ],
+          "objectives": [
+            "Organizar Sisnad, prevenção, atenção ao usuário e responsabilidades institucionais.",
+            "Distinguir consumo pessoal, tráfico, associação, financiamento e colaboração com o tráfico.",
+            "Comparar causas de aumento, redução, dosimetria, apreensão e investigação.",
+            "Estudar procedimento, prova, tratamento e destinação de bens, sem misturar lei e julgamento sobre cannabis."
+          ],
+          "current_units": 84,
+          "jurisprudence": [
+            {
+              "url": "https://noticias.stf.jus.br/postsnoticias/stf-define-40-gramas-de-maconha-como-criterio-para-diferenciar-usuario-de-traficante/",
+              "title": "STF — Tema 506, RE 635.659",
+              "articles": [
+                "Art. 28"
+              ],
+              "explanation": "A decisão sobre porte para consumo pessoal refere-se à cannabis, sem generalizar a todas as drogas. Até 40 gramas ou seis plantas fêmeas constituem presunção relativa de uso pessoal; quantidade isolada não decide necessariamente o enquadramento. O julgamento não legalizou o tráfico."
+            },
+            {
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/26082022-Falta-de-demonstracao-de-vinculo-permanente-afasta-condenacao-por-associacao-para-o-trafico.aspx",
+              "title": "STJ — estabilidade e permanência da associação para o tráfico",
+              "articles": [
+                "Art. 35"
+              ],
+              "explanation": "O art. 35 exige vínculo associativo estável e permanente demonstrado concretamente. Coautoria eventual em um tráfico não basta, nem a mera presença em região dominada por facção. O número mínimo de duas pessoas não dispensa esses elementos."
+            }
+          ],
+          "excluded_units": 15,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.358/2026",
+              "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+              "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 40-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15281.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.281/2025",
+              "summary": "Altera a Lei nº 11.343, de 23 de agosto de 2006, para dispor sobre a criação de estratégia de saúde direcionada às mulheres alcoolistas.",
+              "vigency": "Art. 2º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 23"
+              ]
+            },
+            {
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/18092025-Repetitivo-define-que-confissao-atenua-pena-mesmo-sem-interferir-no-convencimento-do-julgador.aspx",
+              "state": "reference",
+              "title": "Súmulas 545 e 630 revisadas — Tema 1194",
+              "summary": "A utilização na formação do convencimento deixou de ser requisito obrigatório. No tráfico, admissão de posse para uso próprio recebe peso inferior ao de confissão plena; observar retratação, conteúdo e modulação.",
+              "vigency": "Julgamento em setembro de 2025; enunciados revisados publicados no DJEN em 02/12/2025. Entendimento jurisprudencial, não alteração legislativa.",
+              "articles": [
+                "CP, art. 65, III, d"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+              "title": "Lei 11.343/2006 — Lei de Drogas — texto oficial conferido",
+              "sha256": "9ea95c4ba7f71b22e222639ba03aa3b474578f146abccb1cb7ea54f82762d0dc"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "title": "Lei 15.358/2026 — art. 36 e vigência",
+              "sha256": "62fbba4249dd78d63a8deaa8312df1d800aaebbf0fc951dafeb247940f80c551"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+              "title": "Código Penal — texto compilado",
+              "sha256": "ce32e30f31032b0ac515ec8343c2829580fc1d063c3df0890ac1a5bce78665ac"
+            },
+            {
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/18092025-Repetitivo-define-que-confissao-atenua-pena-mesmo-sem-interferir-no-convencimento-do-julgador.aspx",
+              "title": "STJ — Tema 1194 e revisão das Súmulas 545 e 630",
+              "sha256": "0b3359d58538ce5fa9209f03f12eb8c519ab507a01bb691ec13ec6390922b40c"
+            },
+            {
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/12122025-Pagina-Sumulas-Anotadas-inclui-enunciados-sobre-efeitos-da-confissao-na-aplicacao-da-pena.aspx",
+              "title": "STJ — Súmulas Anotadas 545 e 630 atualizadas",
+              "sha256": "1abeafefb8702ea92055266c241ec237aca2a4d60d4604e79a9dae805ccf2cde"
+            },
+            {
+              "url": "https://scon.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D%27021819%27",
+              "title": "STJ — Informativo 863, Tema 1194 e modulação",
+              "sha256": "81561197b76c549f9a9b1e48b91b58f7084a459ff01c5a5b7a58e748936be256"
+            },
+            {
+              "url": "https://noticias.stf.jus.br/postsnoticias/stf-define-40-gramas-de-maconha-como-criterio-para-diferenciar-usuario-de-traficante/",
+              "title": "STF — Tema 506, cannabis para consumo pessoal",
+              "sha256": "40f5ee0f976ed90319d0c312f3d5fc3d8c4b645d64823c40b42df346272c42f9",
+              "checked_at": "2026-10-10T02:56:29.131965Z",
+              "evidence_format": "official-html"
+            },
+            {
+              "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/04082026-Para-Quinta-Turma--%E2%80%9Colheiro%E2%80%9D-que-atua-durante-venda-de-drogas-responde-por-trafico--nao-por-colaboracao.aspx",
+              "title": "STJ — atuação do olheiro e subsidiariedade do art. 37",
+              "sha256": "7b8259f32d0ae9f6f2d5a998d7f058755bf565e825ad6fb452e3f955b099aef5",
+              "checked_at": "2026-10-10T02:56:29.131965Z",
+              "evidence_format": "official-html"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Incluídos complemento com casos práticos, ligação para leitura e alertas de atualização.",
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "drogas"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "source_sha256": "6f6763a224e2dda8310d3bd971c6314d795c5fc5ffb73137953eeefe47647e98",
+      "source_checked_at": "2026-10-12T16:18:25.227571+00:00"
+    }
+  ],
+  "changes": [
+    {
+      "course_slug": "drogas",
+      "expected": {
+        "id": "66498ef9-97c5-5c56-8b73-07a93d62b99a",
+        "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "unit_key": "art-19",
+        "label": "Art. 19",
+        "chapter": "CAPÍTULO IV — (Redação dada pela Lei nº 13.840, de 2019) / Seção I — (Incluído pela Lei nº 13.840, de 2019)",
+        "position": 25,
+        "body_text": "Art. 19. As atividades de prevenção do uso indevido de drogas devem observar os seguintes princípios e diretrizes:\n\nI - o reconhecimento do uso indevido de drogas como fator de interferência na qualidade de vida do indivíduo e na sua relação com a comunidade à qual pertence;\n\nII - a adoção de conceitos objetivos e de fundamentação científica como forma de orientar as ações dos serviços públicos comunitários e privados e de evitar preconceitos e estigmatização das pessoas e dos serviços que as atendam;\n\nIII - o fortalecimento da autonomia e da responsabilidade individual em relação ao uso indevido de drogas;\n\nIV - o compartilhamento de responsabilidades e a colaboração mútua com as instituições do setor privado e com os diversos segmentos sociais, incluindo usuários e dependentes de drogas e respectivos familiares, por meio do estabelecimento de parcerias;\n\nV - a adoção de estratégias preventivas diferenciadas e adequadas às especificidades socioculturais das diversas populações, bem como das diferentes drogas utilizadas;\n\nVI - o reconhecimento do “não-uso”, do “retardamento do uso” e da redução de riscos como resultados desejáveis das atividades de natureza preventiva, quando da definição dos objetivos a serem alcançados;\n\nVII - o tratamento especial dirigido às parcelas mais vulneráveis da população, levando em consideração as suas necessidades específicas;\n\nVIII - a articulação entre os serviços e organizações que atuam em atividades de prevenção do uso indevido de drogas e a rede de atenção a usuários e dependentes de drogas e respectivos familiares;\n\nIX - o investimento em alternativas esportivas, culturais, artísticas, profissionais, entre outras, como forma de inclusão social e de melhoria da qualidade de vida;\n\nX - o estabelecimento de políticas de formação continuada na área da prevenção do uso indevido de drogas para profissionais de educação nos 3 (três) níveis de ensino;\n\nXI - a implantação de projetos pedagógicos de prevenção do uso indevido de drogas, nas instituições de ensino público e privado, alinhados às Diretrizes Curriculares Nacionais e aos conhecimentos relacionados a drogas;\n\nXII - a observância das orientações e normas emanadas do Conad;\n\nXIII - o alinhamento às diretrizes dos órgãos de controle social de políticas setoriais específicas.\n\nParágrafo único. As atividades de prevenção do uso indevido de drogas dirigidas à criança e ao adolescente deverão estar em consonância com as diretrizes emanadas pelo Conselho Nacional dos Direitos da Criança e do Adolescente - Conanda.\n\nDa Semana Nacional de Políticas Sobre Drogas",
+        "content_sha256": "eed3892f82f1aaf653a6285b6dd8c8ec75c300d435855906d565e100071ebdd1",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 19. As atividades de prevenção do uso indevido de drogas devem observar os seguintes princípios e diretrizes:\n\nI - o reconhecimento do uso indevido de drogas como fator de interferência na qualidade de vida do indivíduo e na sua relação com a comunidade à qual pertence;\n\nII - a adoção de conceitos objetivos e de fundamentação científica como forma de orientar as ações dos serviços públicos comunitários e privados e de evitar preconceitos e estigmatização das pessoas e dos serviços que as atendam;\n\nIII - o fortalecimento da autonomia e da responsabilidade individual em relação ao uso indevido de drogas;\n\nIV - o compartilhamento de responsabilidades e a colaboração mútua com as instituições do setor privado e com os diversos segmentos sociais, incluindo usuários e dependentes de drogas e respectivos familiares, por meio do estabelecimento de parcerias;\n\nV - a adoção de estratégias preventivas diferenciadas e adequadas às especificidades socioculturais das diversas populações, bem como das diferentes drogas utilizadas;\n\nVI - o reconhecimento do “não-uso”, do “retardamento do uso” e da redução de riscos como resultados desejáveis das atividades de natureza preventiva, quando da definição dos objetivos a serem alcançados;\n\nVII - o tratamento especial dirigido às parcelas mais vulneráveis da população, levando em consideração as suas necessidades específicas;\n\nVIII - a articulação entre os serviços e organizações que atuam em atividades de prevenção do uso indevido de drogas e a rede de atenção a usuários e dependentes de drogas e respectivos familiares;\n\nIX - o investimento em alternativas esportivas, culturais, artísticas, profissionais, entre outras, como forma de inclusão social e de melhoria da qualidade de vida;\n\nX - o estabelecimento de políticas de formação continuada na área da prevenção do uso indevido de drogas para profissionais de educação nos 3 (três) níveis de ensino;\n\nXI - a implantação de projetos pedagógicos de prevenção do uso indevido de drogas, nas instituições de ensino público e privado, alinhados às Diretrizes Curriculares Nacionais e aos conhecimentos relacionados a drogas;\n\nXII - a observância das orientações e normas emanadas do Conad;\n\nXIII - o alinhamento às diretrizes dos órgãos de controle social de políticas setoriais específicas.\n\nParágrafo único. As atividades de prevenção do uso indevido de drogas dirigidas à criança e ao adolescente deverão estar em consonância com as diretrizes emanadas pelo Conselho Nacional dos Direitos da Criança e do Adolescente - Conanda.",
+      "content_sha256": "7a0a44912cd01e2fec56b2951654e0bd0fc48ced0683c644f3de1bf80a7e41bf",
+      "moved_captions": [
+        "Da Semana Nacional de Políticas Sobre Drogas"
+      ]
+    },
+    {
+      "course_slug": "drogas",
+      "expected": {
+        "id": "8d8bb03d-a1b2-5bf4-a8ba-7f11d8444202",
+        "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "unit_key": "art-26",
+        "label": "Art. 26",
+        "chapter": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção V — (Incluído pela Lei nº 13.840, de 2019)",
+        "position": 37,
+        "body_text": "Art. 26. O usuário e o dependente de drogas que, em razão da prática de infração penal, estiverem cumprindo pena privativa de liberdade ou submetidos a medida de segurança, têm garantidos os serviços de atenção à sua saúde, definidos pelo respectivo sistema penitenciário.\n\nDo Acolhimento em Comunidade Terapêutica Acolhedora",
+        "content_sha256": "ac7a58ebf8e25b55bc0699ce9b70964d516d4abb98e12db48237d841e976408a",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 26. O usuário e o dependente de drogas que, em razão da prática de infração penal, estiverem cumprindo pena privativa de liberdade ou submetidos a medida de segurança, têm garantidos os serviços de atenção à sua saúde, definidos pelo respectivo sistema penitenciário.",
+      "content_sha256": "0fcaf43c6dfa0890c0d5da0c847bb1fcc77c9cdeb2a969a01dd3786185278613",
+      "moved_captions": [
+        "Do Acolhimento em Comunidade Terapêutica Acolhedora"
+      ]
+    },
+    {
+      "course_slug": "drogas",
+      "expected": {
+        "id": "ad334685-fdd5-5526-8833-b5131944e7e8",
+        "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "unit_key": "art-5",
+        "label": "Art. 5",
+        "chapter": "Disposições iniciais",
+        "position": 4,
+        "body_text": "Art. 5º O Sisnad tem os seguintes objetivos:\n\nI - contribuir para a inclusão social do cidadão, visando a torná-lo menos vulnerável a assumir comportamentos de risco para o uso indevido de drogas, seu tráfico ilícito e outros comportamentos correlacionados;\n\nII - promover a construção e a socialização do conhecimento sobre drogas no país;\n\nIII - promover a integração entre as políticas de prevenção do uso indevido, atenção e reinserção social de usuários e dependentes de drogas e de repressão à sua produção não autorizada e ao tráfico ilícito e as políticas públicas setoriais dos órgãos do Poder Executivo da União, Distrito Federal, Estados e Municípios;\n\nIV - assegurar as condições para a coordenação, a integração e a articulação das atividades de que trata o art. 3º desta Lei.\n\nDO SISTEMA NACIONAL DE POLÍTICAS PÚBLICAS SOBRE DROGAS\n\nDa Composição do Sistema Nacional de Políticas Públicas sobre Drogas",
+        "content_sha256": "ec4dc73453127949585d2dad4f2c4a4a41532d1dd3f2480583cfdbcf785efc44",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 5º O Sisnad tem os seguintes objetivos:\n\nI - contribuir para a inclusão social do cidadão, visando a torná-lo menos vulnerável a assumir comportamentos de risco para o uso indevido de drogas, seu tráfico ilícito e outros comportamentos correlacionados;\n\nII - promover a construção e a socialização do conhecimento sobre drogas no país;\n\nIII - promover a integração entre as políticas de prevenção do uso indevido, atenção e reinserção social de usuários e dependentes de drogas e de repressão à sua produção não autorizada e ao tráfico ilícito e as políticas públicas setoriais dos órgãos do Poder Executivo da União, Distrito Federal, Estados e Municípios;\n\nIV - assegurar as condições para a coordenação, a integração e a articulação das atividades de que trata o art. 3º desta Lei.",
+      "content_sha256": "c4c6651b6af458e79bed35fa91da5557b4d74c68b8e0c6392a64cae9a86ca1bb",
+      "moved_captions": [
+        "DO SISTEMA NACIONAL DE POLÍTICAS PÚBLICAS SOBRE DROGAS",
+        "Da Composição do Sistema Nacional de Políticas Públicas sobre Drogas"
+      ]
+    },
+    {
+      "course_slug": "drogas",
+      "expected": {
+        "id": "b56ba3a6-8ec2-54c3-a550-0a5e68c784e4",
+        "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "unit_key": "art-8-d",
+        "label": "Art. 8-D",
+        "chapter": "CAPÍTULO II-A — (Incluído pela Lei nº 13.840, de 2019) / Seção I — (Incluído pela Lei nº 13.840, de 2019)",
+        "position": 12,
+        "body_text": "Art. 8º-D. São objetivos do Plano Nacional de Políticas sobre Drogas, dentre outros: (Incluído pela Lei nº 13.840, de 2019)\n\nI - promover a interdisciplinaridade e integração dos programas, ações, atividades e projetos dos órgãos e entidades públicas e privadas nas áreas de saúde, educação, trabalho, assistência social, previdência social, habitação, cultura, desporto e lazer, visando à prevenção do uso de drogas, atenção e reinserção social dos usuários ou dependentes de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nII - viabilizar a ampla participação social na formulação, implementação e avaliação das políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIII - priorizar programas, ações, atividades e projetos articulados com os estabelecimentos de ensino, com a sociedade e com a família para a prevenção do uso de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIV - ampliar as alternativas de inserção social e econômica do usuário ou dependente de drogas, promovendo programas que priorizem a melhoria de sua escolarização e a qualificação profissional; (Incluído pela Lei nº 13.840, de 2019)\n\nV - promover o acesso do usuário ou dependente de drogas a todos os serviços públicos; (Incluído pela Lei nº 13.840, de 2019)\n\nVI - estabelecer diretrizes para garantir a efetividade dos programas, ações e projetos das políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nVII - fomentar a criação de serviço de atendimento telefônico com orientações e informações para apoio aos usuários ou dependentes de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nVIII - articular programas, ações e projetos de incentivo ao emprego, renda e capacitação para o trabalho, com objetivo de promover a inserção profissional da pessoa que haja cumprido o plano individual de atendimento nas fases de tratamento ou acolhimento; (Incluído pela Lei nº 13.840, de 2019)\n\nIX - promover formas coletivas de organização para o trabalho, redes de economia solidária e o cooperativismo, como forma de promover autonomia ao usuário ou dependente de drogas egresso de tratamento ou acolhimento, observando-se as especificidades regionais; (Incluído pela Lei nº 13.840, de 2019)\n\nX - propor a formulação de políticas públicas que conduzam à efetivação das diretrizes e princípios previstos no art. 22; (Incluído pela Lei nº 13.840, de 2019)\n\nXI - articular as instâncias de saúde, assistência social e de justiça no enfrentamento ao abuso de drogas; e (Incluído pela Lei nº 13.840, de 2019)\n\nXII - promover estudos e avaliação dos resultados das políticas sobre drogas. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 1º O plano de que trata o caput terá duração de 5 (cinco) anos a contar de sua aprovação.\n\n§ 2º O poder público deverá dar a mais ampla divulgação ao conteúdo do Plano Nacional de Políticas sobre Drogas.\n\nDos Conselhos de Políticas sobre Drogas",
+        "content_sha256": "014c3e3f39b880e5c1d44940be2b2f0e0cba75f51176d49a17be73444f43c9aa",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 8º-D. São objetivos do Plano Nacional de Políticas sobre Drogas, dentre outros: (Incluído pela Lei nº 13.840, de 2019)\n\nI - promover a interdisciplinaridade e integração dos programas, ações, atividades e projetos dos órgãos e entidades públicas e privadas nas áreas de saúde, educação, trabalho, assistência social, previdência social, habitação, cultura, desporto e lazer, visando à prevenção do uso de drogas, atenção e reinserção social dos usuários ou dependentes de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nII - viabilizar a ampla participação social na formulação, implementação e avaliação das políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIII - priorizar programas, ações, atividades e projetos articulados com os estabelecimentos de ensino, com a sociedade e com a família para a prevenção do uso de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIV - ampliar as alternativas de inserção social e econômica do usuário ou dependente de drogas, promovendo programas que priorizem a melhoria de sua escolarização e a qualificação profissional; (Incluído pela Lei nº 13.840, de 2019)\n\nV - promover o acesso do usuário ou dependente de drogas a todos os serviços públicos; (Incluído pela Lei nº 13.840, de 2019)\n\nVI - estabelecer diretrizes para garantir a efetividade dos programas, ações e projetos das políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nVII - fomentar a criação de serviço de atendimento telefônico com orientações e informações para apoio aos usuários ou dependentes de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nVIII - articular programas, ações e projetos de incentivo ao emprego, renda e capacitação para o trabalho, com objetivo de promover a inserção profissional da pessoa que haja cumprido o plano individual de atendimento nas fases de tratamento ou acolhimento; (Incluído pela Lei nº 13.840, de 2019)\n\nIX - promover formas coletivas de organização para o trabalho, redes de economia solidária e o cooperativismo, como forma de promover autonomia ao usuário ou dependente de drogas egresso de tratamento ou acolhimento, observando-se as especificidades regionais; (Incluído pela Lei nº 13.840, de 2019)\n\nX - propor a formulação de políticas públicas que conduzam à efetivação das diretrizes e princípios previstos no art. 22; (Incluído pela Lei nº 13.840, de 2019)\n\nXI - articular as instâncias de saúde, assistência social e de justiça no enfrentamento ao abuso de drogas; e (Incluído pela Lei nº 13.840, de 2019)\n\nXII - promover estudos e avaliação dos resultados das políticas sobre drogas. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 1º O plano de que trata o caput terá duração de 5 (cinco) anos a contar de sua aprovação.\n\n§ 2º O poder público deverá dar a mais ampla divulgação ao conteúdo do Plano Nacional de Políticas sobre Drogas.",
+      "content_sha256": "d5f45c0b20b93f4c36faac25842b481b2096d53969f3336b15379981d3b560d0",
+      "moved_captions": [
+        "Dos Conselhos de Políticas sobre Drogas"
+      ]
+    },
+    {
+      "course_slug": "drogas",
+      "expected": {
+        "id": "b956581a-52d7-5440-888c-e4ef13d8d605",
+        "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "unit_key": "art-65",
+        "label": "Art. 65",
+        "chapter": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção VI — (Incluído pela Lei nº 13.840, de 2019)",
+        "position": 87,
+        "body_text": "Art. 65. De conformidade com os princípios da não-intervenção em assuntos internos, da igualdade jurídica e do respeito à integridade territorial dos Estados e às leis e aos regulamentos nacionais em vigor, e observado o espírito das Convenções das Nações Unidas e outros instrumentos jurídicos internacionais relacionados à questão das drogas, de que o Brasil é parte, o governo brasileiro prestará, quando solicitado, cooperação a outros países e organismos internacionais e, quando necessário, deles solicitará a colaboração, nas áreas de:\n\nI - intercâmbio de informações sobre legislações, experiências, projetos e programas voltados para atividades de prevenção do uso indevido, de atenção e de reinserção social de usuários e dependentes de drogas;\n\nII - intercâmbio de inteligência policial sobre produção e tráfico de drogas e delitos conexos, em especial o tráfico de armas, a lavagem de dinheiro e o desvio de precursores químicos;\n\nIII - intercâmbio de informações policiais e judiciais sobre produtores e traficantes de drogas e seus precursores químicos.\n\nDO FINANCIAMENTO DAS POLÍTICAS SOBRE DROGAS",
+        "content_sha256": "f432ec2c60f94dae6c422a238af4d3e80743a2bfa8aafe3944da58fb12549c61",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 65. De conformidade com os princípios da não-intervenção em assuntos internos, da igualdade jurídica e do respeito à integridade territorial dos Estados e às leis e aos regulamentos nacionais em vigor, e observado o espírito das Convenções das Nações Unidas e outros instrumentos jurídicos internacionais relacionados à questão das drogas, de que o Brasil é parte, o governo brasileiro prestará, quando solicitado, cooperação a outros países e organismos internacionais e, quando necessário, deles solicitará a colaboração, nas áreas de:\n\nI - intercâmbio de informações sobre legislações, experiências, projetos e programas voltados para atividades de prevenção do uso indevido, de atenção e de reinserção social de usuários e dependentes de drogas;\n\nII - intercâmbio de inteligência policial sobre produção e tráfico de drogas e delitos conexos, em especial o tráfico de armas, a lavagem de dinheiro e o desvio de precursores químicos;\n\nIII - intercâmbio de informações policiais e judiciais sobre produtores e traficantes de drogas e seus precursores químicos.",
+      "content_sha256": "841d69ea34c4fbd98c02dcc5af12866eae2510ad07ba3ad9940b7f00348fe0cc",
+      "moved_captions": [
+        "DO FINANCIAMENTO DAS POLÍTICAS SOBRE DROGAS"
+      ]
+    },
+    {
+      "course_slug": "drogas",
+      "expected": {
+        "id": "babd3599-2acc-5eca-982b-8179e0ffde75",
+        "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "unit_key": "art-8-e",
+        "label": "Art. 8-E",
+        "chapter": "CAPÍTULO II-A — (Incluído pela Lei nº 13.840, de 2019) / Seção II — (Incluído pela Lei nº 13.840, de 2019)",
+        "position": 13,
+        "body_text": "Art. 8º-E. Os conselhos de políticas sobre drogas, constituídos por Estados, Distrito Federal e Municípios, terão os seguintes objetivos: (Incluído pela Lei nº 13.840, de 2019)\n\nI - auxiliar na elaboração de políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nII - colaborar com os órgãos governamentais no planejamento e na execução das políticas sobre drogas, visando à efetividade das políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIII - propor a celebração de instrumentos de cooperação, visando à elaboração de programas, ações, atividades e projetos voltados à prevenção, tratamento, acolhimento, reinserção social e econômica e repressão ao tráfico ilícito de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIV - promover a realização de estudos, com o objetivo de subsidiar o planejamento das políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nV - propor políticas públicas que permitam a integração e a participação do usuário ou dependente de drogas no processo social, econômico, político e cultural no respectivo ente federado; e (Incluído pela Lei nº 13.840, de 2019)\n\nVI - desenvolver outras atividades relacionadas às políticas sobre drogas em consonância com o Sisnad e com os respectivos planos. (Incluído pela Lei nº 13.840, de 2019)\n\nDos Membros dos Conselhos de Políticas sobre Drogas",
+        "content_sha256": "8e57c787a0994f8ac066f2198838130acd19790ba08bb050ef36d28c4da8d23f",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 8º-E. Os conselhos de políticas sobre drogas, constituídos por Estados, Distrito Federal e Municípios, terão os seguintes objetivos: (Incluído pela Lei nº 13.840, de 2019)\n\nI - auxiliar na elaboração de políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nII - colaborar com os órgãos governamentais no planejamento e na execução das políticas sobre drogas, visando à efetividade das políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIII - propor a celebração de instrumentos de cooperação, visando à elaboração de programas, ações, atividades e projetos voltados à prevenção, tratamento, acolhimento, reinserção social e econômica e repressão ao tráfico ilícito de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIV - promover a realização de estudos, com o objetivo de subsidiar o planejamento das políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nV - propor políticas públicas que permitam a integração e a participação do usuário ou dependente de drogas no processo social, econômico, político e cultural no respectivo ente federado; e (Incluído pela Lei nº 13.840, de 2019)\n\nVI - desenvolver outras atividades relacionadas às políticas sobre drogas em consonância com o Sisnad e com os respectivos planos. (Incluído pela Lei nº 13.840, de 2019)",
+      "content_sha256": "eeeca482167126f9e29f4f21e7d31df61e1ecdbf229b5ca9235d8e1bb3fc8582",
+      "moved_captions": [
+        "Dos Membros dos Conselhos de Políticas sobre Drogas"
+      ]
+    },
+    {
+      "course_slug": "drogas",
+      "expected": {
+        "id": "c5f23eaf-a675-5500-9140-a6955cf34d95",
+        "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "unit_key": "art-22-a",
+        "label": "Art. 22-A",
+        "chapter": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção II — (Incluído pela Lei nº 13.840, de 2019)",
+        "position": 30,
+        "body_text": "Art. 22-A. As pessoas atendidas por órgãos integrantes do Sisnad terão atendimento nos programas de educação profissional e tecnológica, educação de jovens e adultos e alfabetização. (Incluído pela Lei nº 13.840, de 2019)\n\nDo Trabalho na Reinserção Social e Econômica",
+        "content_sha256": "7b52b663654679050d0b597eef23e14593137d4b00c2b6852c169ce8f83fd029",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 22-A. As pessoas atendidas por órgãos integrantes do Sisnad terão atendimento nos programas de educação profissional e tecnológica, educação de jovens e adultos e alfabetização. (Incluído pela Lei nº 13.840, de 2019)",
+      "content_sha256": "361b7afdc89ace0f89d556cb6ef1275db6b214386ff2d67df79e83164ab823a8",
+      "moved_captions": [
+        "Do Trabalho na Reinserção Social e Econômica"
+      ]
+    },
+    {
+      "course_slug": "drogas",
+      "expected": {
+        "id": "c77360b4-f8c1-58bd-92ca-dfb055fda767",
+        "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "unit_key": "art-23-a",
+        "label": "Art. 23-A",
+        "chapter": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção IV — (Incluído pela Lei nº 13.840, de 2019)",
+        "position": 33,
+        "body_text": "Art. 23-A. O tratamento do usuário ou dependente de drogas deverá ser ordenado em uma rede de atenção à saúde, com prioridade para as modalidades de tratamento ambulatorial, incluindo excepcionalmente formas de internação em unidades de saúde e hospitais gerais nos termos de normas dispostas pela União e articuladas com os serviços de assistência social e em etapas que permitam: (Incluído pela Lei nº 13.840, de 2019)\n\nI - articular a atenção com ações preventivas que atinjam toda a população; (Incluído pela Lei nº 13.840, de 2019)\n\nII - orientar-se por protocolos técnicos predefinidos, baseados em evidências científicas, oferecendo atendimento individualizado ao usuário ou dependente de drogas com abordagem preventiva e, sempre que indicado, ambulatorial; (Incluído pela Lei nº 13.840, de 2019)\n\nIII - preparar para a reinserção social e econômica, respeitando as habilidades e projetos individuais por meio de programas que articulem educação, capacitação para o trabalho, esporte, cultura e acompanhamento individualizado; e (Incluído pela Lei nº 13.840, de 2019)\n\nIV - acompanhar os resultados pelo SUS, Suas e Sisnad, de forma articulada. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 1º Caberá à União dispor sobre os protocolos técnicos de tratamento, em âmbito nacional. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 2º A internação de dependentes de drogas somente será realizada em unidades de saúde ou hospitais gerais, dotados de equipes multidisciplinares e deverá ser obrigatoriamente autorizada por médico devidamente registrado no Conselho Regional de Medicina - CRM do Estado onde se localize o estabelecimento no qual se dará a internação. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 3º São considerados 2 (dois) tipos de internação: (Incluído pela Lei nº 13.840, de 2019)\n\nI - internação voluntária: aquela que se dá com o consentimento do dependente de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nII - internação involuntária: aquela que se dá, sem o consentimento do dependente, a pedido de familiar ou do responsável legal ou, na absoluta falta deste, de servidor público da área de saúde, da assistência social ou dos órgãos públicos integrantes do Sisnad, com exceção de servidores da área de segurança pública, que constate a existência de motivos que justifiquem a medida. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 4º A internação voluntária: (Incluído pela Lei nº 13.840, de 2019)\n\nI - deverá ser precedida de declaração escrita da pessoa solicitante de que optou por este regime de tratamento; (Incluído pela Lei nº 13.840, de 2019)\n\nII - seu término dar-se-á por determinação do médico responsável ou por solicitação escrita da pessoa que deseja interromper o tratamento. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 5º A internação involuntária: (Incluído pela Lei nº 13.840, de 2019)\n\nI - deve ser realizada após a formalização da decisão por médico responsável; (Incluído pela Lei nº 13.840, de 2019)\n\nII - será indicada depois da avaliação sobre o tipo de droga utilizada, o padrão de uso e na hipótese comprovada da impossibilidade de utilização de outras alternativas terapêuticas previstas na rede de atenção à saúde; (Incluído pela Lei nº 13.840, de 2019)\n\nIII - perdurará apenas pelo tempo necessário à desintoxicação, no prazo máximo de 90 (noventa) dias, tendo seu término determinado pelo médico responsável; (Incluído pela Lei nº 13.840, de 2019)\n\nIV - a família ou o representante legal poderá, a qualquer tempo, requerer ao médico a interrupção do tratamento. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 6º A internação, em qualquer de suas modalidades, só será indicada quando os recursos extra-hospitalares se mostrarem insuficientes. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 7º Todas as internações e altas de que trata esta Lei deverão ser informadas, em, no máximo, de 72 (setenta e duas) horas, ao Ministério Público, à Defensoria Pública e a outros órgãos de fiscalização, por meio de sistema informatizado único, na forma do regulamento desta Lei. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 8º É garantido o sigilo das informações disponíveis no sistema referido no § 7º e o acesso será permitido apenas às pessoas autorizadas a conhecê-las, sob pena de responsabilidade. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 9º É vedada a realização de qualquer modalidade de internação nas comunidades terapêuticas acolhedoras. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 10. O planejamento e a execução do projeto terapêutico individual deverão observar, no que couber, o previsto na Lei nº 10.216, de 6 de abril de 2001 , que dispõe sobre a proteção e os direitos das pessoas portadoras de transtornos mentais e redireciona o modelo assistencial em saúde mental. (Incluído pela Lei nº 13.840, de 2019)\n\nDo Plano Individual de Atendimento",
+        "content_sha256": "17fd7da112d8b6460c17a88db93160800d07369aff66182aa9283641abdb84e2",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 23-A. O tratamento do usuário ou dependente de drogas deverá ser ordenado em uma rede de atenção à saúde, com prioridade para as modalidades de tratamento ambulatorial, incluindo excepcionalmente formas de internação em unidades de saúde e hospitais gerais nos termos de normas dispostas pela União e articuladas com os serviços de assistência social e em etapas que permitam: (Incluído pela Lei nº 13.840, de 2019)\n\nI - articular a atenção com ações preventivas que atinjam toda a população; (Incluído pela Lei nº 13.840, de 2019)\n\nII - orientar-se por protocolos técnicos predefinidos, baseados em evidências científicas, oferecendo atendimento individualizado ao usuário ou dependente de drogas com abordagem preventiva e, sempre que indicado, ambulatorial; (Incluído pela Lei nº 13.840, de 2019)\n\nIII - preparar para a reinserção social e econômica, respeitando as habilidades e projetos individuais por meio de programas que articulem educação, capacitação para o trabalho, esporte, cultura e acompanhamento individualizado; e (Incluído pela Lei nº 13.840, de 2019)\n\nIV - acompanhar os resultados pelo SUS, Suas e Sisnad, de forma articulada. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 1º Caberá à União dispor sobre os protocolos técnicos de tratamento, em âmbito nacional. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 2º A internação de dependentes de drogas somente será realizada em unidades de saúde ou hospitais gerais, dotados de equipes multidisciplinares e deverá ser obrigatoriamente autorizada por médico devidamente registrado no Conselho Regional de Medicina - CRM do Estado onde se localize o estabelecimento no qual se dará a internação. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 3º São considerados 2 (dois) tipos de internação: (Incluído pela Lei nº 13.840, de 2019)\n\nI - internação voluntária: aquela que se dá com o consentimento do dependente de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nII - internação involuntária: aquela que se dá, sem o consentimento do dependente, a pedido de familiar ou do responsável legal ou, na absoluta falta deste, de servidor público da área de saúde, da assistência social ou dos órgãos públicos integrantes do Sisnad, com exceção de servidores da área de segurança pública, que constate a existência de motivos que justifiquem a medida. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 4º A internação voluntária: (Incluído pela Lei nº 13.840, de 2019)\n\nI - deverá ser precedida de declaração escrita da pessoa solicitante de que optou por este regime de tratamento; (Incluído pela Lei nº 13.840, de 2019)\n\nII - seu término dar-se-á por determinação do médico responsável ou por solicitação escrita da pessoa que deseja interromper o tratamento. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 5º A internação involuntária: (Incluído pela Lei nº 13.840, de 2019)\n\nI - deve ser realizada após a formalização da decisão por médico responsável; (Incluído pela Lei nº 13.840, de 2019)\n\nII - será indicada depois da avaliação sobre o tipo de droga utilizada, o padrão de uso e na hipótese comprovada da impossibilidade de utilização de outras alternativas terapêuticas previstas na rede de atenção à saúde; (Incluído pela Lei nº 13.840, de 2019)\n\nIII - perdurará apenas pelo tempo necessário à desintoxicação, no prazo máximo de 90 (noventa) dias, tendo seu término determinado pelo médico responsável; (Incluído pela Lei nº 13.840, de 2019)\n\nIV - a família ou o representante legal poderá, a qualquer tempo, requerer ao médico a interrupção do tratamento. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 6º A internação, em qualquer de suas modalidades, só será indicada quando os recursos extra-hospitalares se mostrarem insuficientes. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 7º Todas as internações e altas de que trata esta Lei deverão ser informadas, em, no máximo, de 72 (setenta e duas) horas, ao Ministério Público, à Defensoria Pública e a outros órgãos de fiscalização, por meio de sistema informatizado único, na forma do regulamento desta Lei. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 8º É garantido o sigilo das informações disponíveis no sistema referido no § 7º e o acesso será permitido apenas às pessoas autorizadas a conhecê-las, sob pena de responsabilidade. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 9º É vedada a realização de qualquer modalidade de internação nas comunidades terapêuticas acolhedoras. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 10. O planejamento e a execução do projeto terapêutico individual deverão observar, no que couber, o previsto na Lei nº 10.216, de 6 de abril de 2001 , que dispõe sobre a proteção e os direitos das pessoas portadoras de transtornos mentais e redireciona o modelo assistencial em saúde mental. (Incluído pela Lei nº 13.840, de 2019)",
+      "content_sha256": "d3f305439827ba3e660156378625bfe4cf4c7f11a4cd88fee68b42fc8151a1df",
+      "moved_captions": [
+        "Do Plano Individual de Atendimento"
+      ]
+    },
+    {
+      "course_slug": "drogas",
+      "expected": {
+        "id": "ed3f242c-b3a8-51f5-b509-3470c83332bb",
+        "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "unit_key": "art-22",
+        "label": "Art. 22",
+        "chapter": "CAPÍTULO II — (Redação dada pela Lei nº 13.840, de 2019) / Seção I — (Incluído pela Lei nº 13.840, de 2019)",
+        "position": 29,
+        "body_text": "Art. 22. As atividades de atenção e as de reinserção social do usuário e do dependente de drogas e respectivos familiares devem observar os seguintes princípios e diretrizes:\n\nI - respeito ao usuário e ao dependente de drogas, independentemente de quaisquer condições, observados os direitos fundamentais da pessoa humana, os princípios e diretrizes do Sistema Único de Saúde e da Política Nacional de Assistência Social;\n\nII - a adoção de estratégias diferenciadas de atenção e reinserção social do usuário e do dependente de drogas e respectivos familiares que considerem as suas peculiaridades socioculturais;\n\nIII - definição de projeto terapêutico individualizado, orientado para a inclusão social e para a redução de riscos e de danos sociais e à saúde;\n\nIV - atenção ao usuário ou dependente de drogas e aos respectivos familiares, sempre que possível, de forma multidisciplinar e por equipes multiprofissionais;\n\nV - observância das orientações e normas emanadas do Conad;\n\nVI - o alinhamento às diretrizes dos órgãos de controle social de políticas setoriais específicas.\n\nVII - estímulo à capacitação técnica e profissional; (Incluído pela Lei nº 13.840, de 2019)\n\nVIII - efetivação de políticas de reinserção social voltadas à educação continuada e ao trabalho; (Incluído pela Lei nº 13.840, de 2019)\n\nIX - observância do plano individual de atendimento na forma do art. 23-B desta Lei; (Incluído pela Lei nº 13.840, de 2019)\n\nX - orientação adequada ao usuário ou dependente de drogas quanto às consequências lesivas do uso de drogas, ainda que ocasional. (Incluído pela Lei nº 13.840, de 2019)\n\nDa Educação na Reinserção Social e Econômica",
+        "content_sha256": "db1b14f58655b8ac7d137e4f0d44a0c9b2f1497fc8f3c607b4b1d647af0c1f4b",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 22. As atividades de atenção e as de reinserção social do usuário e do dependente de drogas e respectivos familiares devem observar os seguintes princípios e diretrizes:\n\nI - respeito ao usuário e ao dependente de drogas, independentemente de quaisquer condições, observados os direitos fundamentais da pessoa humana, os princípios e diretrizes do Sistema Único de Saúde e da Política Nacional de Assistência Social;\n\nII - a adoção de estratégias diferenciadas de atenção e reinserção social do usuário e do dependente de drogas e respectivos familiares que considerem as suas peculiaridades socioculturais;\n\nIII - definição de projeto terapêutico individualizado, orientado para a inclusão social e para a redução de riscos e de danos sociais e à saúde;\n\nIV - atenção ao usuário ou dependente de drogas e aos respectivos familiares, sempre que possível, de forma multidisciplinar e por equipes multiprofissionais;\n\nV - observância das orientações e normas emanadas do Conad;\n\nVI - o alinhamento às diretrizes dos órgãos de controle social de políticas setoriais específicas.\n\nVII - estímulo à capacitação técnica e profissional; (Incluído pela Lei nº 13.840, de 2019)\n\nVIII - efetivação de políticas de reinserção social voltadas à educação continuada e ao trabalho; (Incluído pela Lei nº 13.840, de 2019)\n\nIX - observância do plano individual de atendimento na forma do art. 23-B desta Lei; (Incluído pela Lei nº 13.840, de 2019)\n\nX - orientação adequada ao usuário ou dependente de drogas quanto às consequências lesivas do uso de drogas, ainda que ocasional. (Incluído pela Lei nº 13.840, de 2019)",
+      "content_sha256": "a426bd0ed6c0b83a47110dc043e1eab8e91fcc61371129f4f1085f32716d420e",
+      "moved_captions": [
+        "Da Educação na Reinserção Social e Econômica"
+      ]
+    },
+    {
+      "course_slug": "drogas",
+      "expected": {
+        "id": "f824cc80-b4c0-5307-9d47-ba159239d6bb",
+        "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "unit_key": "art-17",
+        "label": "Art. 17",
+        "chapter": "CAPÍTULO IV — (Redação dada pela Lei nº 13.840, de 2019)",
+        "position": 23,
+        "body_text": "Art. 17. Os dados estatísticos nacionais de repressão ao tráfico ilícito de drogas integrarão sistema de informações do Poder Executivo.\n\nDas Diretrizes",
+        "content_sha256": "9bd4512df61939adb611b8e6acb8610c7fcd9d78b8b9fb86c592abf834b4eef0",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 17. Os dados estatísticos nacionais de repressão ao tráfico ilícito de drogas integrarão sistema de informações do Poder Executivo.",
+      "content_sha256": "7316aff7ffe3b17e8a040636242923fff4ef529487b4914f473304823b558725",
+      "moved_captions": [
+        "Das Diretrizes"
+      ]
+    },
+    {
+      "course_slug": "drogas",
+      "expected": {
+        "id": "ff64657e-65ca-54c8-95e6-0f82aec00483",
+        "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+        "unit_key": "art-19-a",
+        "label": "Art. 19-A",
+        "chapter": "CAPÍTULO IV — (Redação dada pela Lei nº 13.840, de 2019) / Seção II — (Incluído pela Lei nº 13.840, de 2019)",
+        "position": 26,
+        "body_text": "Art. 19-A. Fica instituída a Semana Nacional de Políticas sobre Drogas, comemorada anualmente, na quarta semana de junho. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 1º No período de que trata o caput , serão intensificadas as ações de: (Incluído pela Lei nº 13.840, de 2019)\n\nI - difusão de informações sobre os problemas decorrentes do uso de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nII - promoção de eventos para o debate público sobre as políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIII - difusão de boas práticas de prevenção, tratamento, acolhimento e reinserção social e econômica de usuários de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIV - divulgação de iniciativas, ações e campanhas de prevenção do uso indevido de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nV - mobilização da comunidade para a participação nas ações de prevenção e enfrentamento às drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nVI - mobilização dos sistemas de ensino previstos na Lei nº 9.394, de 20 de dezembro de 1996 - Lei de Diretrizes e Bases da Educação Nacional , na realização de atividades de prevenção ao uso de drogas. (Incluído pela Lei nº 13.840, de 2019)\n\nDAS ATIVIDADES DE PREVENÇÃO, TRATAMENTO, ACOLHIMENTO E DE REINSERÇÃO SOCIAL E ECONÔMICA DE USUÁRIOS OU DEPENDENTES DE DROGAS\n\nDisposições Gerais",
+        "content_sha256": "e956af50ed16e29e110caec1f9b9ee4fd218212ee3300f53c570b062b3436374",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 19-A. Fica instituída a Semana Nacional de Políticas sobre Drogas, comemorada anualmente, na quarta semana de junho. (Incluído pela Lei nº 13.840, de 2019)\n\n§ 1º No período de que trata o caput , serão intensificadas as ações de: (Incluído pela Lei nº 13.840, de 2019)\n\nI - difusão de informações sobre os problemas decorrentes do uso de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nII - promoção de eventos para o debate público sobre as políticas sobre drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIII - difusão de boas práticas de prevenção, tratamento, acolhimento e reinserção social e econômica de usuários de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nIV - divulgação de iniciativas, ações e campanhas de prevenção do uso indevido de drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nV - mobilização da comunidade para a participação nas ações de prevenção e enfrentamento às drogas; (Incluído pela Lei nº 13.840, de 2019)\n\nVI - mobilização dos sistemas de ensino previstos na Lei nº 9.394, de 20 de dezembro de 1996 - Lei de Diretrizes e Bases da Educação Nacional , na realização de atividades de prevenção ao uso de drogas. (Incluído pela Lei nº 13.840, de 2019)",
+      "content_sha256": "4823380251fbdab206094d0a4fe3297e4b761c5848cdd9d781e944d09b9ce475",
+      "moved_captions": [
+        "DAS ATIVIDADES DE PREVENÇÃO, TRATAMENTO, ACOLHIMENTO E DE REINSERÇÃO SOCIAL E ECONÔMICA DE USUÁRIOS OU DEPENDENTES DE DROGAS",
+        "Disposições Gerais"
+      ]
+    }
+  ],
+  "additions": [],
+  "status_changes": []
+}

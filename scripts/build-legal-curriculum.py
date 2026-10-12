@@ -36,7 +36,11 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
     # Unicode serialization so a legacy charset declaration cannot re-decode it.
     repaired=html5lib.parse(decoded,treebuilder='lxml',namespaceHTMLElements=False)
     tree=html.fromstring(etree.tostring(repaired,encoding='unicode',method='html'))
-    original_paragraphs=list(tree.xpath('//p'))
+    # This legacy page mixes current h4/h5 headings with paragraph headings.
+    # Keep those boundaries in DOM order rather than attaching their captions
+    # to the preceding article or carrying an unrelated section forward.
+    block_selector='//p|//h4|//h5' if slug=='drogas' else '//p'
+    original_paragraphs=list(tree.xpath(block_selector))
     original_text={e:clean(e.text_content()) for e in original_paragraphs}
     original=list(original_text.values())
     for element in tree.xpath('//strike|//del|//s|//script|//style'):
@@ -45,7 +49,7 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
      if 'line-through' in element.get('style',''):element.drop_tree()
     # Paragraph boundaries, not line-wrapped text, define article headings.
     blocks=[]
-    remaining=set(tree.xpath('//p'))
+    remaining=set(tree.xpath(block_selector))
     for element in original_paragraphs:
      value=clean(element.text_content()) if element in remaining else ''
      blocks.append((value,original_text[element]))
@@ -78,7 +82,11 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
       # annotations. Do not attach them to the previous current article.
       inactive_article=True
      if current_head and not value.startswith(('“','"')):inactive_article=False
-     if inactive_article or not value:continue
+     if not value:continue
+     if slug=='drogas' and re.match(r'^(?:CAP[IÍ]TULO|T[IÍ]TULO|LIVRO|Seção|Secção|Subseção)\b',value,re.I):
+      # A new structural heading ends the preceding revoked article too.
+      inactive_article=False
+     if inactive_article:continue
      if value.startswith('Este texto não substitui') or value.startswith('Brasília,'):
       if slug!='budapeste':break
       if value.startswith('Brasília,'):continue
@@ -87,6 +95,9 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
       if pending:chapter=finish_heading()
       token=value.split()[0].lower().translate(str.maketrans('íãç','iac'))
       pending_level=levels.get(token,0);pending=[value];continue
+     if slug=='drogas' and pending and re.match(r'^\((?:Redação dada|Incluído|Vide)\b',value,re.I):
+      # The following caption names the chapter; a change annotation does not.
+      continue
      if pending and len(value)<190 and not article.match(value):
       pending.append(value);chapter=finish_heading();pending=[];continue
      if pending:chapter=finish_heading();pending=[]

@@ -366,3 +366,22 @@ test('drug final review preserves third parties, historical deadlines and curren
  assert.equal(new Set(packs.flatMap(pack=>pack.units.map(r=>r.unit_key))).size,84);
  for(const key of ['art-37','art-40-a','art-63','art-63-a','art-63-c','art-66']) assert.equal(legalStudyCaveat('drogas',key).literalPractice,false);
 });
+
+test('drug structural repair preserves authored teaching and separates crime from treatment chapters',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-drug-structure-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,11);
+ for(const r of p.units){
+  assert.notEqual(r.content_sha256,r.expected.content_sha256);
+  for(const field of ['simples','pontos','atencao','exemplo','prova','termos','remissoes']) assert.deepEqual(r[field],r.expected[field]);
+ }
+ const chapters=JSON.parse(readFileSync('docs/library/drug-chapter-corrections-2026-10-12.json','utf8'));
+ assert.equal(new Set(chapters.units.map(r=>r.unit_key)).size,84);
+ const get=k=>chapters.units.find(r=>r.unit_key===k).chapter;
+ assert.match(get('art-33'),/TÍTULO IV.*DOS CRIMES/);assert.doesNotMatch(get('art-33'),/Comunidade Terapêutica/);
+ assert.match(get('art-27'),/DOS CRIMES E DAS PENAS/);
+ assert.match(get('art-50'),/Da Investigação/);assert.match(get('art-55'),/Da Instrução Criminal/);
+ assert.match(get('art-60'),/DESTINAÇÃO DE BENS/);assert.match(get('art-65'),/COOPERAÇÃO INTERNACIONAL/);
+ const text=JSON.parse(readFileSync('docs/library/drug-structural-corrections-2026-10-12.json','utf8'));
+ assert.equal(text.changes.length,11);assert.equal(text.additions.length,0);
+ for(const r of text.changes) assert.equal(r.expected.body_text,r.body_text+'\n\n'+r.moved_captions.join('\n\n'));
+});
