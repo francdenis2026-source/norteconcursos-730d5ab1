@@ -7262,6 +7262,33 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     color: white;
     padding: 14px 14px 20px;
   }
+  .mh__intro {
+    display: grid;
+    gap: 5px;
+    margin: 2px 0 16px;
+  }
+  .mh__eyebrow {
+    color: var(--brass-soft);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+  }
+  .mh__intro h2 {
+    max-width: 18ch;
+    color: inherit;
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 7vw, 1.8rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+  }
+  .mh__intro p {
+    max-width: 34ch;
+    color: oklch(1 0 0 / 0.76);
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
   .mh__tabs {
     display: flex;
     gap: 6px;
@@ -7542,8 +7569,20 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     color: oklch(0.72 0.012 255);
   }
   :root:not(.dark) .mh {
-    background: oklch(0.99 0.004 255);
+    background:
+      radial-gradient(110% 80% at 0% 0%, oklch(0.96 0.025 82), transparent 58%),
+      linear-gradient(180deg, oklch(0.985 0.006 255), oklch(0.95 0.012 255));
     color: oklch(0.19 0.03 262);
+    border-top: 1px solid oklch(0.2 0.03 262 / 0.1);
+  }
+  :root:not(.dark) .mh__eyebrow {
+    color: var(--brass-deep);
+  }
+  :root:not(.dark) .mh__intro h2 {
+    color: oklch(0.16 0.03 262);
+  }
+  :root:not(.dark) .mh__intro p {
+    color: oklch(0.34 0.03 262);
   }
   :root:not(.dark) .mh__tab {
     border-color: oklch(0.15 0.03 262 / 0.14);
@@ -7555,7 +7594,8 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
   :root:not(.dark) .mh__grid li {
     border-color: oklch(0.15 0.03 262 / 0.1);
-    background: oklch(0.15 0.03 262 / 0.035);
+    background: oklch(1 0 0 / 0.78);
+    box-shadow: 0 5px 16px oklch(0.2 0.03 262 / 0.06);
   }
   :root:not(.dark) .mh__grid span {
     color: oklch(0.3 0.03 262 / 0.75);
@@ -7572,7 +7612,12 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
   :root:not(.dark) .mh__plan {
     border-color: oklch(0.15 0.03 262 / 0.14);
-    background: oklch(0.15 0.03 262 / 0.035);
+    background: oklch(1 0 0 / 0.86);
+    box-shadow: 0 5px 18px oklch(0.2 0.03 262 / 0.07);
+  }
+  :root:not(.dark) .mh__plan.is-hot {
+    border-color: oklch(0.62 0.13 74 / 0.7);
+    background: oklch(0.98 0.045 84);
   }
   :root:not(.dark) .mh__plan li {
     color: oklch(0.25 0.03 262 / 0.88);
