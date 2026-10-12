@@ -40,3 +40,7 @@ Não houve importação ou remoção de questões nesta etapa. PDFs privados, HT
 236 testes JavaScript aprovados, 14 testes do extrator Python aprovados, build de produção concluído e relatórios de leitura independente registrados na entrega. Não foi atestado o deploy público apenas por sucesso do build ou push.
 
 As atualizações concorrentes de dicionário, navegação e vídeo-aulas da main foram integradas. A fixture do teste do dicionário foi corrigida para reproduzir a importação padrão do JSON, e esse teste passou a integrar npm test.
+
+## Continuação concluída
+
+Os 31 dispositivos restantes da LBI foram posteriormente publicados e confirmados; o percurso agora tem 127 dispositivos vigentes com revisão das explicações. A contagem atual consta de review-coverage-2026-10-11.json (474 com metadados atuais e 3.037 pendentes na biblioteca inteira). Consulte pcd-final-review-2026-10-11.md para o escopo e os limites desta continuação.

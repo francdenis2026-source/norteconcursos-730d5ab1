@@ -106,10 +106,23 @@ test('examples retain legal distinctions at age thresholds, biometrics and benef
   assert.match(get('pensao-regulamento','art-15').atencao.join(' '),/§2º remete literalmente/);assert.match(get('pensao-regulamento','art-10').atencao.join(' '),/exceção/);
 });
 
-for (const [file,count] of [['pcd-foundations',39],['pcd-accessibility',21],['pcd-communication',20],['pcd-capacity-crimes',14],['pcd-recent-communication',2]]) {
+for (const [file,count] of [['pcd-foundations',39],['pcd-accessibility',21],['pcd-communication',20],['pcd-capacity-crimes',14],['pcd-recent-communication',2],['pcd-final',31]]) {
  test(`LBI reviewed package ${file}: explicit cases and answer keys`,()=>{
   const p=JSON.parse(readFileSync(`docs/library/article-explanations-${file}-2026-10-11.json`,'utf8'));
   validateArticlePackage(p);assert.equal(p.units.length,count);
   for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
  });
 }
+
+test('LBI complete review covers 127 distinct current units and preserves historical warnings',()=>{
+ const names=['foundations','accessibility','communication','capacity-crimes','recent-communication','final'];
+ const rows=names.flatMap(n=>JSON.parse(readFileSync(`docs/library/article-explanations-pcd-${n}-2026-10-11.json`,'utf8')).units);
+ assert.equal(rows.length,127);assert.equal(new Set(rows.map(r=>r.unit_key)).size,127);
+ for(const k of ['art-29','art-82','art-106'])assert.ok(!rows.some(r=>r.unit_key===k));
+ const row=k=>rows.find(r=>r.unit_key===k);
+ assert.match(row('art-103').simples,/revogado.*14.230/);
+ assert.match(row('art-114').simples,/revogados.*CPC/);
+ assert.match(row('art-126').simples,/31\/12\/2026/);
+ assert.match(row('art-111').simples,/120 dias/);
+ assert.match(row('art-109').simples,/gravíssima/);
+});

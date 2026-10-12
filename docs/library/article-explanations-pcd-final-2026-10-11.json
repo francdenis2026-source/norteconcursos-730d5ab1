@@ -1,0 +1,1607 @@
+{
+  "version": "2026-10-11-pcd-targeted",
+  "checked_at": "2026-10-12T00:19:43.619600+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "pcd",
+      "title": "Lei 13.146/2015 — Estatuto da Pessoa com Deficiência",
+      "units": 31,
+      "scope_type": "targeted_correction",
+      "course_current_units": 127,
+      "target_unit_keys": [
+        "art-96",
+        "art-97",
+        "art-98",
+        "art-99",
+        "art-100",
+        "art-101",
+        "art-102",
+        "art-103",
+        "art-104",
+        "art-105",
+        "art-107",
+        "art-108",
+        "art-109",
+        "art-110",
+        "art-111",
+        "art-112",
+        "art-113",
+        "art-114",
+        "art-115",
+        "art-116",
+        "art-117",
+        "art-118",
+        "art-119",
+        "art-120",
+        "art-121",
+        "art-122",
+        "art-123",
+        "art-124",
+        "art-125",
+        "art-126",
+        "art-127"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+      "source_sha256": "967565f4e9ccd9c5aba4c24dd39c8d2a00f2ddb0832aeeca168f1cbc6079ec37",
+      "source_checked_at": "2026-10-11T23:22:00.590309+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-96",
+      "unit_id": "699a051f-3c3f-5e76-9061-49dbd07e5735",
+      "content_sha256": "f2ca02c9d229560828b9b212b72c6184764ff38a33017172d1fe0549a580bb80",
+      "simples": "A LBI alterou o Código Eleitoral para que os TREs orientem, a cada eleição, a escolha de locais de votação acessíveis, incluindo entorno e sistemas de transporte. A regra foi conferida no art. 135, §6º-A, do Código Eleitoral compilado.",
+      "pontos": [
+        "Local, entorno e transporte integram a acessibilidade eleitoral."
+      ],
+      "atencao": [
+        "Não limite o dever ao interior da sala de votação."
+      ],
+      "exemplo": "A escola tem sala acessível, mas o entorno impede a chegada do eleitor: a análise deve abranger esse percurso. Variação: O acesso envolve transporte coletivo: também é considerado pela regra.",
+      "prova": [
+        "O entorno do local de votação também deve ser considerado? Sim; o §6º-A inclui entorno e sistemas de transporte."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "699a051f-3c3f-5e76-9061-49dbd07e5735",
+        "content_sha256": "f2ca02c9d229560828b9b212b72c6184764ff38a33017172d1fe0549a580bb80",
+        "simples": "O §6º-A do art. 135 do Código Eleitoral passa a prever que os Tribunais Regionais Eleitorais deverão, a cada eleição, expedir instruções aos Juízes Eleitorais para orientá-los na escolha dos locais de votação, de maneira a garantir acessibilidade ao eleitor com deficiência ou mobilidade reduzida, inclusive em seu entorno e nos sistemas de transporte que lhe dão acesso.",
+        "pontos": [
+          "Instruções dos TREs para escolha de locais de votação acessíveis."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera o Código Eleitoral."
+        ],
+        "exemplo": "O TRE orienta os juízes a escolher locais de votação acessíveis.",
+        "prova": [
+          "Assertiva que dispensa a acessibilidade do entorno do local de votação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 76"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-97",
+      "unit_id": "6e7b7241-26e7-5c05-9b64-187dfacf754e",
+      "content_sha256": "be6b0dc6195e450dffc54a235eafaf44f35ffd4da02a4c641a17fddcf4824914",
+      "simples": "A alteração da CLT considera habilidades e competências na escolaridade do aprendiz com deficiência. Para aprendiz com deficiência de 18 anos ou mais, exige CTPS e matrícula/frequência no programa. A falta de acessibilidade e apoio impede usar a hipótese de desempenho insuficiente como descrita no art. 433, I.",
+      "pontos": [
+        "CLT arts. 428, §§6º e 8º, e 433, I."
+      ],
+      "atencao": [
+        "As redações atuais foram lidas diretamente na CLT: a extração automática secundária marcou esses artigos incorretamente, por isso não foi usada como prova de revogação."
+      ],
+      "exemplo": "O aprendiz tem desempenho prejudicado porque não recebeu recursos necessários: observe a ressalva do art. 433, I. Variação: Os recursos foram fornecidos: não se presume a mesma ressalva sem examinar os fatos e requisitos.",
+      "prova": [
+        "A ressalva contempla aprendiz com deficiência desprovido dos recursos e apoio necessários? Sim; esse contexto está expresso no art. 433, I."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6e7b7241-26e7-5c05-9b64-187dfacf754e",
+        "content_sha256": "be6b0dc6195e450dffc54a235eafaf44f35ffd4da02a4c641a17fddcf4824914",
+        "simples": "A CLT passa a vigorar com alterações: para fins do contrato de aprendizagem, a comprovação de escolaridade do aprendiz com deficiência considera, sobretudo, as habilidades e competências relacionadas com a profissionalização; para o aprendiz com deficiência com 18 anos ou mais, a validade do contrato pressupõe anotação na CTPS e matrícula e frequência em programa de aprendizagem; e o desempenho insuficiente ou a inadaptação do aprendiz não justificam a extinção do contrato quando o aprendiz com deficiência estiver desprovido de recursos de acessibilidade, tecnologias assistivas e apoio necessário.",
+        "pontos": [
+          "Escolaridade do aprendiz com deficiência avaliada pelas habilidades.",
+          "Contrato de aprendizagem com CTPS e programa.",
+          "Sem extinção por inadaptação se faltar acessibilidade."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera os arts. 428 e 433 da CLT."
+        ],
+        "exemplo": "O aprendiz com deficiência não pode ser desligado por inadaptação se faltaram recursos de acessibilidade.",
+        "prova": [
+          "Assertiva que permite extinguir o contrato por inadaptação mesmo sem recursos de acessibilidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "CLT"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-98",
+      "unit_id": "3450030c-f0b2-5f7a-ad23-2e1cc35627a6",
+      "content_sha256": "43946c8a3e88311d9a0923e354f2ec65aa208840880dd8cbb65bf6cbee78f771",
+      "simples": "A Lei 7.853/1989 passou a prever legitimados para medidas judiciais coletivas e crimes de discriminação na educação, trabalho, concurso e saúde. O art. 8º prevê reclusão de dois a cinco anos e multa, com aumentos de um terço para vítima menor de 18 anos e atendimento de urgência/emergência.",
+      "pontos": [
+        "Medidas coletivas e tipos penais são regras distintas."
+      ],
+      "atencao": [
+        "Diferencie estes crimes dos arts. 88–91 da LBI. Associação legitimada exige constituição há mais de um ano e os requisitos legais."
+      ],
+      "exemplo": "A escola cobra adicional por deficiência do aluno: examine a conduta do art. 8º, I, da lei alterada. Variação: A vítima tem menos de 18 anos: há previsão específica de aumento, sem confundir a faixa básica com a majorada.",
+      "prova": [
+        "O art. 8º da Lei 7.853 prevê pena básica de dois a cinco anos e multa? Sim; essa faixa consta da compilação conferida."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7853.htm"
+      ],
+      "expected": {
+        "unit_id": "3450030c-f0b2-5f7a-ad23-2e1cc35627a6",
+        "content_sha256": "43946c8a3e88311d9a0923e354f2ec65aa208840880dd8cbb65bf6cbee78f771",
+        "simples": "A Lei nº 7.853, de 24 de outubro de 1989, passa a vigorar com alterações: as medidas judiciais de proteção de interesses coletivos, difusos, individuais homogêneos e indisponíveis da pessoa com deficiência podem ser propostas pelo Ministério Público, Defensoria Pública, União, Estados, Municípios, Distrito Federal, por associação constituída há mais de 1 ano, por autarquia, empresa pública, fundação ou sociedade de economia mista. Constitui crime punível com reclusão de 2 a 5 anos e multa recusar, cobrar valores adicionais, suspender, procrastinar, cancelar ou fazer cessar inscrição de aluno em razão da deficiência; obstar inscrição em concurso público ou acesso a cargo ou emprego público; negar ou obstar emprego, trabalho ou promoção; recusar ou dificultar internação ou assistência médico-hospitalar, entre outras condutas.",
+        "pontos": [
+          "Legitimados para ações coletivas, inclusive associação com mais de 1 ano.",
+          "Crimes da Lei nº 7.853: recusa de matrícula, obstar concurso ou emprego, negar assistência.",
+          "Reclusão de 2 a 5 anos e multa."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei nº 7.853, de 1989.",
+          "Reclusão de 2 a 5 anos."
+        ],
+        "exemplo": "A escola que se recusa a matricular aluno por causa da deficiência pratica crime.",
+        "prova": [
+          "Assertiva que prevê detenção para a recusa de matrícula por deficiência erra: é reclusão de 2 a 5 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 88"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-99",
+      "unit_id": "63116889-2d79-5b89-8506-4c810f3b350a",
+      "content_sha256": "8cc7d372fe37de7306077c95c8d0bde9928d0f6c4f43fb3d2937fcabd32ef1b4",
+      "simples": "A LBI acrescentou hipótese de movimentação do FGTS para trabalhador com deficiência que, por prescrição, necessite adquirir órtese ou prótese para acessibilidade e inclusão. A hipótese permanece no art. 20, XVIII, da Lei 8.036 compilada.",
+      "pontos": [
+        "Órtese ou prótese necessária por prescrição."
+      ],
+      "atencao": [
+        "Não se trata de liberação automática integral do saldo para qualquer aquisição; procedimentos e demais condições exigem consulta própria."
+      ],
+      "exemplo": "O trabalhador necessita de prótese prescrita: verifica a hipótese legal e o procedimento aplicável. Variação: A compra não possui a prescrição exigida: não basta alegar acessibilidade para ignorar o requisito.",
+      "prova": [
+        "A hipótese exige necessidade por prescrição? Sim; esse requisito está no inciso XVIII."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8036consol.htm"
+      ],
+      "expected": {
+        "unit_id": "63116889-2d79-5b89-8506-4c810f3b350a",
+        "content_sha256": "8cc7d372fe37de7306077c95c8d0bde9928d0f6c4f43fb3d2937fcabd32ef1b4",
+        "simples": "O art. 20 da Lei nº 8.036, de 11 de maio de 1990 (FGTS), passa a vigorar com o inciso XVIII, permitindo o saque do FGTS quando o trabalhador com deficiência, por prescrição, necessite adquirir órtese ou prótese para promoção de acessibilidade e de inclusão social.",
+        "pontos": [
+          "Saque do FGTS para compra de órtese ou prótese, mediante prescrição."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei do FGTS."
+        ],
+        "exemplo": "O trabalhador saca o FGTS para comprar uma prótese prescrita.",
+        "prova": [
+          "Assertiva que veda o saque do FGTS para órteses e próteses erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei do FGTS"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-100",
+      "unit_id": "b4621ffd-66a7-5c38-b74d-fef0e59956fa",
+      "content_sha256": "44b357ccc21fcc60bbe51a584b5907e85043f251351c44592ea91af816a5f190",
+      "simples": "O CDC passou a assegurar informação de produtos e serviços acessível à pessoa com deficiência. Também exige formato acessível para informações dos cadastros do art. 43, mediante solicitação do consumidor.",
+      "pontos": [
+        "CDC art. 6º, parágrafo único, e art. 43, §6º."
+      ],
+      "atencao": [
+        "Não confunda informação de consumo acessível com permissão para divulgar dados pessoais de terceiros."
+      ],
+      "exemplo": "O consumidor solicita suas informações cadastrais em formato acessível. Variação: São dados de outra pessoa: a exigência de acessibilidade não elimina as regras de acesso e privacidade.",
+      "prova": [
+        "O formato acessível do art. 43, §6º, depende de solicitação do consumidor? Sim; essa condição está expressa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b4621ffd-66a7-5c38-b74d-fef0e59956fa",
+        "content_sha256": "44b357ccc21fcc60bbe51a584b5907e85043f251351c44592ea91af816a5f190",
+        "simples": "O Código de Defesa do Consumidor passa a vigorar com alterações: a informação adequada e clara sobre produtos e serviços deve ser acessível à pessoa com deficiência, conforme regulamento; e todas as informações sobre cadastros e dados de consumidores devem ser disponibilizadas em formatos acessíveis, inclusive para a pessoa com deficiência, mediante solicitação do consumidor.",
+        "pontos": [
+          "Informação ao consumidor em formato acessível.",
+          "Cadastros de consumidores em formato acessível."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera o Código de Defesa do Consumidor (arts. 6º e 43)."
+        ],
+        "exemplo": "O consumidor com deficiência visual pede em formato acessível os dados de seu cadastro.",
+        "prova": [
+          "Assertiva que isenta o fornecedor de prestar informações acessíveis ao consumidor com deficiência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código de Defesa do Consumidor"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-101",
+      "unit_id": "793ab79b-c518-5a11-99cd-c891ccaa753b",
+      "content_sha256": "422f76cb081f42178affa65215a33e479f5fab4c9962a5db5cfca8f541cc8e5d",
+      "simples": "A LBI alterou dependentes, pensão, reserva de cargos e curatela na Lei 8.213. A compilação atual mantém direitos por deficiência e reserva de 2% a 5% em empresas com ao menos cem empregados. A quota considera contratação direta e exclui aprendiz com deficiência; benefício no INSS não exige termo de curatela.",
+      "pontos": [
+        "Estudar a Lei 8.213 atual, não só a alteração de 2015."
+      ],
+      "atencao": [
+        "Lei 13.183/2015 modificou o art. 77, §2º, II, retirando a referência à emancipação daquela redação. Lei 15.108/2025 atualizou equiparados a filho, incluindo menor sob guarda judicial nas condições legais. Não certifique toda pensão apenas com este artigo."
+      ],
+      "exemplo": "A empresa dispensa trabalhador abrangido nas condições do art. 93, §1º: deve observar contratação substitutiva prévia. Variação: Pretende computar aprendiz com deficiência na reserva: o §3º o exclui dessa contagem.",
+      "prova": [
+        "O aprendiz com deficiência integra a contagem da reserva do art. 93, §3º? Não; a reserva considera contratação direta e exclui esse aprendiz."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
+      ],
+      "expected": {
+        "unit_id": "793ab79b-c518-5a11-99cd-c891ccaa753b",
+        "content_sha256": "422f76cb081f42178affa65215a33e479f5fab4c9962a5db5cfca8f541cc8e5d",
+        "simples": "A Lei nº 8.213, de 24 de julho de 1991, passa a vigorar com alterações: inclui como dependentes o filho ou irmão não emancipado menor de 21 anos, inválido ou que tenha deficiência intelectual, mental ou grave; mantém a cota de pensão para o filho ou irmão com deficiência além dos 21 anos; e dispõe sobre a reserva de cargos para pessoas com deficiência e beneficiários reabilitados, determinando que a dispensa de pessoa com deficiência ao final de contrato por prazo determinado de mais de 90 dias e a dispensa imotivada em contrato por prazo indeterminado só ocorram após a contratação de outro trabalhador com deficiência ou reabilitado.",
+        "pontos": [
+          "Dependentes com deficiência intelectual, mental ou grave.",
+          "Pensão mantida para filho ou irmão com deficiência.",
+          "Dispensa condicionada à contratação de substituto com deficiência."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei de Benefícios da Previdência Social (arts. 16, 77 e 93).",
+          "Dispensa só após a contratação de outro trabalhador com deficiência ou reabilitado."
+        ],
+        "exemplo": "A empresa só pode dispensar o empregado com deficiência após contratar outro.",
+        "prova": [
+          "Assertiva que permite a dispensa imediata do empregado cotista sem substituição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 34"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-102",
+      "unit_id": "08a35dad-db93-518f-873f-e6a70ea1887a",
+      "content_sha256": "73de9bec317094998856ac5e890d81e2a9736a698e93b07cc20c74219df273a9",
+      "simples": "A Lei Rouanet passou a condicionar incentivos culturais à oferta também em formato acessível, sempre que tecnicamente possível e conforme regulamento. A redação permanece no art. 2º, §3º, da Lei 8.313 compilada.",
+      "pontos": [
+        "Formato acessível e possibilidade técnica, conforme regulamento."
+      ],
+      "atencao": [
+        "Não transforme a condição técnica em dispensa genérica sem análise."
+      ],
+      "exemplo": "O projeto incentivado disponibiliza recursos que permitem acesso à pessoa com deficiência. Variação: Alega impossibilidade técnica: ela precisa ser examinada no contexto, sem presumir exclusão automática de todo dever.",
+      "prova": [
+        "A regra exige formato acessível sempre que tecnicamente possível? Sim; essa condição está expressa no §3º."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm"
+      ],
+      "expected": {
+        "unit_id": "08a35dad-db93-518f-873f-e6a70ea1887a",
+        "content_sha256": "73de9bec317094998856ac5e890d81e2a9736a698e93b07cc20c74219df273a9",
+        "simples": "O art. 2º da Lei nº 8.313, de 23 de dezembro de 1991 (Lei de Incentivo à Cultura), passa a vigorar acrescido do §3º: os incentivos somente serão concedidos a projetos culturais que forem disponibilizados, sempre que tecnicamente possível, também em formato acessível à pessoa com deficiência, conforme regulamento.",
+        "pontos": [
+          "Incentivos culturais condicionados à oferta em formato acessível, quando possível."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei de Incentivo à Cultura."
+        ],
+        "exemplo": "O projeto cultural incentivado também é oferecido em formato acessível.",
+        "prova": [
+          "Assertiva que dispensa o formato acessível nos projetos incentivados erra: é exigido quando tecnicamente possível."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 42"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-103",
+      "unit_id": "25c033a3-b964-54e5-8c55-9ae7faff35ee",
+      "content_sha256": "a8fae79ae23619455bcc84aed0d81852a322f8cf289185760689b970ae738132",
+      "simples": "O artigo registra a inclusão histórica de descumprimento de acessibilidade no art. 11, IX, da Lei de Improbidade. Esse inciso foi revogado pela Lei 14.230/2021. A imputação atual exige examinar os tipos e requisitos vigentes, não repetir automaticamente o inciso antigo.",
+      "pontos": [
+        "Art. 11, IX: revogado em 2021."
+      ],
+      "atencao": [
+        "Descumprir acessibilidade pode gerar outras responsabilidades; a revogação não elimina o dever. Tampouco autoriza classificar toda irregularidade automaticamente como improbidade."
+      ],
+      "exemplo": "A questão de hoje cita o antigo inciso IX como vigente: a afirmação está desatualizada. Variação: O fato é anterior à reforma: a análise temporal e jurisprudencial exige estudo próprio, sem conclusão automática neste resumo.",
+      "prova": [
+        "O antigo inciso IX permanece vigente por estar transcrito na LBI? Não; foi revogado pela Lei 14.230/2021 na lei alterada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm"
+      ],
+      "expected": {
+        "unit_id": "25c033a3-b964-54e5-8c55-9ae7faff35ee",
+        "content_sha256": "a8fae79ae23619455bcc84aed0d81852a322f8cf289185760689b970ae738132",
+        "simples": "O art. 11 da Lei nº 8.429, de 2 de junho de 1992 (improbidade administrativa), passa a vigorar acrescido do inciso IX: constitui ato de improbidade deixar de cumprir a exigência de requisitos de acessibilidade previstos na legislação.",
+        "pontos": [
+          "Deixar de cumprir requisitos de acessibilidade é ato de improbidade."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o inciso foi posteriormente revogado pela reforma da Lei de Improbidade; confira o texto vigente."
+        ],
+        "exemplo": "O gestor que ignora as regras de acessibilidade respondia por improbidade.",
+        "prova": [
+          "Assertiva que mantém hoje, sem ressalvas, a acessibilidade como hipótese do art. 11 da Lei de Improbidade erra: houve reforma legislativa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Improbidade Administrativa"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-104",
+      "unit_id": "e811f270-a1af-567d-adcb-450b462a3858",
+      "content_sha256": "a4ed60b033c7c4fd87fbbf5c7998f04d43a72efe414478fd5bc88da0608c4e32",
+      "simples": "A LBI inseriu preferência e obrigações de acessibilidade na Lei 8.666. A Lei 14.133 revogou a legislação anterior para novas contratações, preservadas as regras de transição dos contratos regidos pelo regime antigo. Hoje, a Lei 14.133 também exige reserva legal de cargos, incluindo a obrigação durante a execução.",
+      "pontos": [
+        "Lei 8.666: contexto histórico; Lei 14.133: regime atual."
+      ],
+      "atencao": [
+        "Não ensine os critérios antigos como se fossem automaticamente os da lei nova. Contratos sob regime antigo exigem análise das regras de transição."
+      ],
+      "exemplo": "Uma nova contratação usa a Lei 14.133 e consulta suas exigências de habilitação e execução. Variação: O contrato foi validamente celebrado sob a lei antiga: não se presume migração automática para o regime novo.",
+      "prova": [
+        "A transcrição na LBI torna a Lei 8.666 o regime geral atual para novas licitações? Não; é necessário aplicar a Lei 14.133 e suas regras de transição."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+        "Lei 14.133 arts. 63, IV, 116 e 190–193"
+      ],
+      "expected": {
+        "unit_id": "e811f270-a1af-567d-adcb-450b462a3858",
+        "content_sha256": "a4ed60b033c7c4fd87fbbf5c7998f04d43a72efe414478fd5bc88da0608c4e32",
+        "simples": "A antiga Lei de Licitações (Lei nº 8.666, de 21 de junho de 1993) passa a prever preferência para bens e serviços produzidos ou prestados por empresas que comprovem o cumprimento da reserva de cargos para pessoas com deficiência ou reabilitados e que atendam às regras de acessibilidade. Essas empresas deverão cumprir a reserva e as regras de acessibilidade durante todo o período de execução do contrato, e a administração fiscalizará os requisitos de acessibilidade nos serviços e ambientes de trabalho.",
+        "pontos": [
+          "Preferência a empresas que cumprem a reserva de cargos e a acessibilidade.",
+          "Cumprimento durante toda a execução do contrato.",
+          "Fiscalização da administração."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a Lei nº 8.666 foi substituída pela nova Lei de Licitações; confira o regime vigente."
+        ],
+        "exemplo": "A administração prefere a empresa que cumpre a cota de pessoas com deficiência.",
+        "prova": [
+          "Assertiva que dispensa o cumprimento da cota durante a execução do contrato erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Licitações"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-105",
+      "unit_id": "c644cda2-4fe1-5bac-bb92-552b696071a9",
+      "content_sha256": "1d7ef804d32ed56ae19f4e3e95946a649fa80de9add7ba440682917c99559c08",
+      "simples": "A alteração da Loas define deficiência para o BPC pela interação de impedimento de longo prazo e barreiras, exclui rendimentos de estágio/aprendizagem no cálculo indicado e admite outros elementos probatórios de vulnerabilidade. Esses dispositivos devem ser lidos junto aos requisitos atuais da Loas.",
+      "pontos": [
+        "Loas art. 20, §§2º, 9º e 11."
+      ],
+      "atencao": [
+        "Lei 15.077/2024 acrescentou exigências e regras de verificação na Loas. Estes três parágrafos não esgotam renda, cadastro, identificação e avaliação do BPC."
+      ],
+      "exemplo": "A pessoa participa de aprendizagem: o §9º orienta a exclusão dos rendimentos ali previstos. Variação: Há outros requisitos atuais pendentes: a exclusão da renda não basta para conceder o benefício automaticamente.",
+      "prova": [
+        "Os rendimentos de aprendizagem são excluídos do cálculo referido no §9º? Sim; o parágrafo inclui estágio supervisionado e aprendizagem."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
+      ],
+      "expected": {
+        "unit_id": "c644cda2-4fe1-5bac-bb92-552b696071a9",
+        "content_sha256": "1d7ef804d32ed56ae19f4e3e95946a649fa80de9add7ba440682917c99559c08",
+        "simples": "O art. 20 da Lei Orgânica da Assistência Social (Lei nº 8.742, de 7 de dezembro de 1993) passa a vigorar com alterações: para a concessão do BPC, considera-se pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com barreiras, pode obstruir sua participação plena na sociedade; os rendimentos de estágio supervisionado e de aprendizagem não são computados na renda familiar per capita; e poderão ser utilizados outros elementos probatórios da miserabilidade e vulnerabilidade do grupo familiar.",
+        "pontos": [
+          "Conceito de pessoa com deficiência para o BPC.",
+          "Estágio e aprendizagem não entram na renda per capita.",
+          "Outros elementos probatórios da miserabilidade."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a LOAS (Lei nº 8.742, de 1993).",
+          "Rendimentos de ESTÁGIO e APRENDIZAGEM não contam na renda per capita."
+        ],
+        "exemplo": "O salário de aprendiz de um filho não é contado no cálculo da renda do BPC.",
+        "prova": [
+          "Assertiva que computa o rendimento de aprendizagem na renda per capita do BPC erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 40"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-107",
+      "unit_id": "185335ab-a433-5582-9122-bbb7ae31ea9e",
+      "content_sha256": "81e3e26a5fa3a1ed29992bc335bee37c4e79a5b31e5d438d0ba7623156235492",
+      "simples": "A Lei 9.029 veda discriminação no acesso ou manutenção da relação de trabalho, incluindo deficiência e reabilitação. No rompimento discriminatório, o empregado pode optar por reintegração com ressarcimento ou remuneração em dobro do afastamento, além da reparação moral prevista.",
+      "pontos": [
+        "Opções do empregado no rompimento discriminatório."
+      ],
+      "atencao": [
+        "A LBI transcreve apenas parte do art. 4º; leia também a alternativa do inciso II na lei atual."
+      ],
+      "exemplo": "O empregado prova rompimento discriminatório e escolhe a reintegração com ressarcimento nas condições legais. Variação: Escolhe a alternativa do inciso II: não se presume cumulação automática das duas opções.",
+      "prova": [
+        "O empregado deve receber simultaneamente as duas opções do art. 4º? Não; a lei lhe faculta optar entre elas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9029.htm"
+      ],
+      "expected": {
+        "unit_id": "185335ab-a433-5582-9122-bbb7ae31ea9e",
+        "content_sha256": "81e3e26a5fa3a1ed29992bc335bee37c4e79a5b31e5d438d0ba7623156235492",
+        "simples": "A Lei nº 9.029, de 13 de abril de 1995, passa a vigorar com alterações: é proibida a adoção de qualquer prática discriminatória e limitativa para efeito de acesso à relação de trabalho ou de sua manutenção, por motivo de sexo, origem, raça, cor, estado civil, situação familiar, deficiência, reabilitação profissional, idade, entre outros; as infrações são passíveis de cominações, inclusive a reintegração com ressarcimento integral de todo o período de afastamento, mediante pagamento das remunerações devidas, corrigidas monetariamente e acrescidas de juros legais.",
+        "pontos": [
+          "Proibida a discriminação no acesso e na manutenção do emprego, inclusive por deficiência.",
+          "Reintegração com ressarcimento integral."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei nº 9.029, de 1995.",
+          "Reintegração com ressarcimento integral."
+        ],
+        "exemplo": "O empregado dispensado por discriminação é reintegrado e recebe os salários do período.",
+        "prova": [
+          "Assertiva que impede a reintegração do empregado dispensado por deficiência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 34"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-108",
+      "unit_id": "12757884-4ef1-512c-8352-da114ae20fc5",
+      "content_sha256": "edc0ecb238ebc692ae70f79afc219b1557af0319f0c8ba8d6fae856d974eb788",
+      "simples": "A Lei 9.250 assegura preferência na restituição à pessoa com deficiência e ao contribuinte com dependente nessa condição, sem prejuízo da prioridade da pessoa idosa remetida pelo dispositivo.",
+      "pontos": [
+        "Preferência na restituição, não isenção tributária."
+      ],
+      "atencao": [
+        "Não confunda preferência com restituição imediata, valor garantido ou dispensa de imposto. Regras operacionais do lote precisam de consulta própria."
+      ],
+      "exemplo": "O contribuinte possui dependente com deficiência e verifica a preferência na restituição. Variação: Não há imposto a restituir: a preferência não cria um crédito inexistente.",
+      "prova": [
+        "A preferência prevista concede isenção geral de imposto? Não; trata de ordem preferencial de restituição."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9250.htm"
+      ],
+      "expected": {
+        "unit_id": "12757884-4ef1-512c-8352-da114ae20fc5",
+        "content_sha256": "edc0ecb238ebc692ae70f79afc219b1557af0319f0c8ba8d6fae856d974eb788",
+        "simples": "O art. 35 da Lei nº 9.250, de 26 de dezembro de 1995, passa a vigorar acrescido do §5º: a pessoa com deficiência, ou o contribuinte que tenha dependente nessa condição, tem preferência na restituição do imposto de renda, sem prejuízo da preferência dos idosos.",
+        "pontos": [
+          "Preferência na restituição do imposto de renda."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a lei do imposto de renda."
+        ],
+        "exemplo": "A pessoa com deficiência recebe a restituição do imposto de renda com prioridade.",
+        "prova": [
+          "Assertiva que nega a preferência na restituição à pessoa com deficiência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-109",
+      "unit_id": "feeb9c90-f489-5f33-a1d7-661e71b70a62",
+      "content_sha256": "1bbd09092d335dcb1e5a9160dc96bb048ad47323faa6ba2013826f0b2a60962f",
+      "simples": "A LBI ampliou o alcance do CTB a estacionamentos privados coletivos e introduziu sinalização e comunicação acessível na habilitação. A redação de 2015 deve ser cotejada com o CTB atual: estacionar sem credencial em vaga reservada é hipótese do art. 181, XX, gravíssima, com multa e remoção.",
+      "pontos": [
+        "CTB atual: art. 181, XX, para vagas reservadas."
+      ],
+      "atencao": [
+        "O art. 86-A conserva remissão textual ao inciso XVII. A alteração de 2015 da infração grave do XVII não substitui o tipo específico atual do XX, introduzido pela Lei 13.281/2016."
+      ],
+      "exemplo": "O veículo ocupa vaga reservada sem credencial: examine o tipo atual do inciso XX. Variação: O caso é outro estacionamento em desacordo com sinalização: diferencie o inciso correspondente, sem enquadrar tudo no XX.",
+      "prova": [
+        "A vaga reservada sem credencial continua sendo apenas a infração grave histórica do XVII? Não; o CTB atual prevê o tipo específico gravíssimo do XX."
+      ],
+      "termos": [],
+      "remissoes": [
+        "CTB arts. 2º, 86-A, 147-A e 181, XX"
+      ],
+      "expected": {
+        "unit_id": "feeb9c90-f489-5f33-a1d7-661e71b70a62",
+        "content_sha256": "1bbd09092d335dcb1e5a9160dc96bb048ad47323faa6ba2013826f0b2a60962f",
+        "simples": "O Código de Trânsito Brasileiro passa a vigorar com alterações: são consideradas vias terrestres as praias abertas à circulação pública, as vias internas de condomínios constituídos por unidades autônomas e as vias e áreas de estacionamento de estabelecimentos privados de uso coletivo; as vagas de estacionamento regulamentado devem ser sinalizadas com placas indicativas de destinação e informando os dados sobre a infração por estacionamento indevido; e ao candidato com deficiência auditiva é assegurada acessibilidade de comunicação em todas as etapas do processo de habilitação, com material didático audiovisual acessível e serviços de intérprete de Libras.",
+        "pontos": [
+          "Ampliação do conceito de via terrestre.",
+          "Placas nas vagas reservadas.",
+          "Acessibilidade ao candidato com deficiência auditiva na habilitação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera o Código de Trânsito Brasileiro (arts. 2º, 86-A e 147-A)."
+        ],
+        "exemplo": "O candidato surdo a habilitação pode requerer intérprete de Libras.",
+        "prova": [
+          "Assertiva que não prevê acessibilidade ao candidato com deficiência auditiva no processo de habilitação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código de Trânsito Brasileiro"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-110",
+      "unit_id": "04e4f93b-f53f-51e0-9928-62ca5af0aba5",
+      "content_sha256": "9a8fc12fd5b41d37bbf2fb31a88297c34dccbc0c9e30321d992ec4621b15ce70",
+      "simples": "O artigo registra percentuais históricos de recursos esportivos na Lei 9.615: 2,7% e divisão entre COB e CPB. A Lei 13.756/2018 revogou o art. 56, VI e §1º que recebiam essa alteração, e disciplinou a distribuição das loterias por modalidades.",
+      "pontos": [
+        "Percentuais transcritos: contexto histórico, não fórmula atual geral."
+      ],
+      "atencao": [
+        "A compilação da Lei 13.756 também contém alterações posteriores, incluindo Lei 15.523/2026. Não reutilize percentuais sem identificar modalidade, período e dispositivo vigente."
+      ],
+      "exemplo": "A questão apresenta os 2,7% como distribuição geral atual: falta considerar a revogação e o regime posterior. Variação: É questão sobre a redação histórica de 2015: os números podem ser estudados com essa identificação temporal.",
+      "prova": [
+        "Os percentuais históricos permanecem atuais apenas porque constam da LBI? Não; os dispositivos alterados foram revogados pela Lei 13.756/2018."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9615consol.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13756.htm"
+      ],
+      "expected": {
+        "unit_id": "04e4f93b-f53f-51e0-9928-62ca5af0aba5",
+        "content_sha256": "9a8fc12fd5b41d37bbf2fb31a88297c34dccbc0c9e30321d992ec4621b15ce70",
+        "simples": "O inciso VI e o §1º do art. 56 da Lei nº 9.615, de 24 de março de 1998 (Lei Pelé), passam a destinar 2,7% da arrecadação bruta dos concursos de prognósticos e loterias federais ao esporte; do total desses recursos, 62,96% vão ao Comitê Olímpico Brasileiro e 37,04% ao Comitê Paralímpico Brasileiro.",
+        "pontos": [
+          "2,7% da arrecadação de loterias federais.",
+          "62,96% ao COB e 37,04% ao CPB."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei Pelé; percentuais podem ter mudado por leis posteriores."
+        ],
+        "exemplo": "O CPB recebe 37,04% dos recursos previstos nesse dispositivo.",
+        "prova": [
+          "Assertiva que divide igualmente os recursos entre COB e CPB erra: são 62,96% e 37,04%."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei Pelé"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-111",
+      "unit_id": "23a08126-f89c-51da-a58d-d1e369d5036c",
+      "content_sha256": "a99e2a5b7b2c4d0bf44091de8616bdbdd7c9ccc0c9f424908695e33f28b6123b",
+      "simples": "O rol de prioridade da Lei 10.048 foi ampliado novamente pela Lei 14.626/2023: inclui expressamente autismo, mobilidade reduzida e doadores de sangue. Acompanhantes ou atendentes são atendidos junto e acessoriamente. Doadores vêm após os demais beneficiados, com comprovante válido por 120 dias.",
+      "pontos": [
+        "Atualização de 2023: rol, acompanhantes e prioridade dos doadores."
+      ],
+      "atencao": [
+        "Não use só o rol de 2015 transcrito na LBI. Doação não concede precedência sobre todos os outros beneficiários."
+      ],
+      "exemplo": "O doador apresenta comprovante válido, mas há outros titulares de prioridade aguardando: estes o precedem. Variação: O acompanhante está junto do titular: seu atendimento é acessório, não prioridade autônoma indistinta.",
+      "prova": [
+        "O doador de sangue tem precedência sobre os demais titulares do rol? Não; o §2º o coloca após os demais e exige comprovante válido."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l10048.htm"
+      ],
+      "expected": {
+        "unit_id": "23a08126-f89c-51da-a58d-d1e369d5036c",
+        "content_sha256": "a99e2a5b7b2c4d0bf44091de8616bdbdd7c9ccc0c9f424908695e33f28b6123b",
+        "simples": "O art. 1º da Lei nº 10.048, de 8 de novembro de 2000, passa a prever que as pessoas com deficiência, os idosos com idade igual ou superior a 60 anos, as gestantes, as lactantes, as pessoas com crianças de colo e os obesos terão atendimento prioritário.",
+        "pontos": [
+          "Atendimento prioritário: pessoas com deficiência, idosos, gestantes, lactantes, pessoas com crianças de colo e obesos."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei de Atendimento Prioritário; inclui os obesos."
+        ],
+        "exemplo": "A lactante e o obeso também têm atendimento prioritário.",
+        "prova": [
+          "Assertiva que exclui os obesos do atendimento prioritário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-112",
+      "unit_id": "90e43780-7d6a-5858-be0e-3beddcd8f8ce",
+      "content_sha256": "cb952667fa11c9929139affa4e1ad157796a36c6da37e96a1e3dcd127c407055",
+      "simples": "A Lei 10.098 recebeu conceitos inclusivos e regras sobre passeios, semáforos, sinalização tátil e carros/cadeiras de rodas em centros comerciais. Acessibilidade alcança ambiente físico, transportes, informação e comunicação.",
+      "pontos": [
+        "Lei 10.098 arts. 2º, 3º, 9º, 10-A e 12-A."
+      ],
+      "atencao": [
+        "Diferencie impedimento de longo prazo de mobilidade reduzida que pode ser temporária. No sinal sonoro, observe as hipóteses do caput e do parágrafo do art. 9º."
+      ],
+      "exemplo": "Mobiliário urbano oferece risco ao pedestre: deve ser indicado por sinalização tátil de alerta conforme normas. Variação: O semáforo dá acesso a serviço de reabilitação: examine a obrigação expressa do parágrafo do art. 9º.",
+      "prova": [
+        "Mobilidade reduzida precisa ser permanente em todos os casos? Não; a definição também contempla condição temporária."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l10098.htm"
+      ],
+      "expected": {
+        "unit_id": "90e43780-7d6a-5858-be0e-3beddcd8f8ce",
+        "content_sha256": "cb952667fa11c9929139affa4e1ad157796a36c6da37e96a1e3dcd127c407055",
+        "simples": "A Lei nº 10.098, de 19 de dezembro de 2000 (Lei da Acessibilidade), passa a vigorar com alterações nas definições, entre elas a de acessibilidade (possibilidade e condição de alcance, com segurança e autonomia, de espaços, mobiliários, edificações, transportes, informação e comunicação) e a de barreiras, classificadas em urbanísticas, arquitetônicas, nos transportes, nas comunicações e na informação, entre outras.",
+        "pontos": [
+          "Atualiza as definições de acessibilidade e barreiras.",
+          "Classificação das barreiras."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei nº 10.098, de 2000."
+        ],
+        "exemplo": "As barreiras nos transportes e nas comunicações são categorias definidas pela lei.",
+        "prova": [
+          "Assertiva que restringe as barreiras às arquitetônicas erra: há outras categorias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-113",
+      "unit_id": "2bb848ee-917d-5155-af13-5c41563ec1f9",
+      "content_sha256": "85d672e93f442541f06591a17f94126cb74fb346ff30107d2bb3d02b38e3a3cd",
+      "simples": "O Estatuto da Cidade passou a prever acessibilidade nas diretrizes urbanas e plano de rotas acessíveis compatível com o plano diretor. As rotas abrangem focos de circulação e, sempre que possível, integração com transporte coletivo.",
+      "pontos": [
+        "Plano de rotas acessíveis compatível com plano diretor."
+      ],
+      "atencao": [
+        "O art. 41, §3º se refere às cidades descritas no caput; não invente uma única condição populacional ignorando as demais hipóteses de plano diretor."
+      ],
+      "exemplo": "A rota conecta locais de saúde e educação com circulação acessível. Variação: A cidade integra região metropolitana: analise também essa hipótese do caput, sem verificar somente população.",
+      "prova": [
+        "As rotas devem ser compatíveis com o plano diretor? Sim; o §3º estabelece essa vinculação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10257.htm"
+      ],
+      "expected": {
+        "unit_id": "2bb848ee-917d-5155-af13-5c41563ec1f9",
+        "content_sha256": "85d672e93f442541f06591a17f94126cb74fb346ff30107d2bb3d02b38e3a3cd",
+        "simples": "O Estatuto da Cidade (Lei nº 10.257, de 10 de julho de 2001) passa a vigorar com alterações: a União deve promover programas de construção de moradias, saneamento, calçadas, passeios públicos e mobiliário urbano; as diretrizes de desenvolvimento urbano incluem regras de acessibilidade aos locais de uso público; e as cidades obrigadas a ter plano diretor devem elaborar plano de rotas acessíveis, compatível com o plano diretor, para os passeios públicos a serem implantados ou reformados.",
+        "pontos": [
+          "Acessibilidade nas diretrizes de desenvolvimento urbano.",
+          "Plano de rotas acessíveis nas cidades com plano diretor."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera o Estatuto da Cidade (arts. 3º e 41)."
+        ],
+        "exemplo": "A cidade elabora plano de rotas acessíveis para as calçadas.",
+        "prova": [
+          "Assertiva que dispensa o plano de rotas acessíveis nas cidades com plano diretor erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 60"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-114",
+      "unit_id": "44245523-e3f7-55ef-9e59-db5bfde55929",
+      "content_sha256": "98736a4c37117e8432f88998ee1116470a5f423fe092c2c109ee3c1d8c713106",
+      "simples": "A LBI alterou capacidade civil, casamento, testemunho e curatela no Código Civil. Deficiência não equivale automaticamente a incapacidade; menores de 16 anos são absolutamente incapazes. Atenção: os arts. 1.768, 1.769, 1.771 e 1.772 transcritos aqui estão revogados na compilação civil pelo CPC de 2015.",
+      "pontos": [
+        "Capacidade e apoio; procedimento atual exige CPC."
+      ],
+      "atencao": [
+        "Não apresente aqueles artigos civis revogados como procedimento vigente. Consulte CPC arts. 747–755 e LBI arts. 84–85. A explicação não certifica todas as decisões judiciais sobre curatela."
+      ],
+      "exemplo": "Um adulto com deficiência exprime sua vontade: não se presume incapacidade absoluta pelo diagnóstico. Variação: A questão atribui legitimidade processual ao antigo art. 1.768: consulte a regra atual do CPC, sem reutilizar a transcrição histórica.",
+      "prova": [
+        "A deficiência, por si, torna um adulto absolutamente incapaz? Não; a lei preserva sua capacidade, sem dispensar análise das hipóteses legais específicas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+      ],
+      "expected": {
+        "unit_id": "44245523-e3f7-55ef-9e59-db5bfde55929",
+        "content_sha256": "98736a4c37117e8432f88998ee1116470a5f423fe092c2c109ee3c1d8c713106",
+        "simples": "O Código Civil passa a vigorar com alterações: são absolutamente incapazes apenas os menores de 16 anos; são relativamente incapazes, entre outros, os ébrios habituais, os viciados em tóxico e aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade; a pessoa com deficiência poderá testemunhar em igualdade de condições, com recursos de tecnologia assistiva; os pais ou tutores podem revogar a autorização até a celebração do casamento; e a pessoa com deficiência mental ou intelectual em idade núbil poderá contrair matrimônio, expressando sua vontade diretamente ou por meio de seu responsável ou curador.",
+        "pontos": [
+          "Absolutamente incapazes: só os menores de 16 anos.",
+          "Pessoa com deficiência pode testemunhar.",
+          "Pessoa com deficiência pode casar."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera o Código Civil (arts. 3º, 4º, 228, 1.518, 1.548, 1.550, 1.557).",
+          "A deficiência NÃO gera mais incapacidade absoluta."
+        ],
+        "exemplo": "A pessoa com deficiência intelectual pode se casar.",
+        "prova": [
+          "Assertiva que mantém a pessoa com deficiência mental como absolutamente incapaz erra: só os menores de 16 anos são absolutamente incapazes."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-115",
+      "unit_id": "809ba7bd-c275-56ee-9e4b-e7e47fc647b7",
+      "content_sha256": "aa1deeba27c7cee06b6b682d5e9c119f146384ecc38f507098074afbe05b1f6e",
+      "simples": "A LBI alterou o título do Código Civil para reunir tutela, curatela e tomada de decisão apoiada. A mudança identifica institutos distintos: apoio não se torna automaticamente curatela nem tutela.",
+      "pontos": [
+        "Três institutos distintos no título civil."
+      ],
+      "atencao": [
+        "Este artigo modifica a denominação do título, não todos os requisitos dos institutos."
+      ],
+      "exemplo": "A pessoa lê o título e segue ao art. 1.783-A para estudar decisão apoiada. Variação: A prova afirma que os três nomes significam a mesma medida: confunde categorias jurídicas distintas.",
+      "prova": [
+        "A alteração do título torna tutela, curatela e apoio institutos idênticos? Não; a reunião no título não elimina suas diferenças."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      ],
+      "expected": {
+        "unit_id": "809ba7bd-c275-56ee-9e4b-e7e47fc647b7",
+        "content_sha256": "aa1deeba27c7cee06b6b682d5e9c119f146384ecc38f507098074afbe05b1f6e",
+        "simples": "O Título IV do Livro IV da Parte Especial do Código Civil passa a ter a redação: Da Tutela, da Curatela e da Tomada de Decisão Apoiada.",
+        "pontos": [
+          "Novo título: tutela, curatela e tomada de decisão apoiada."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a nomenclatura do Título IV do Código Civil."
+        ],
+        "exemplo": "O Código Civil agora trata da tomada de decisão apoiada no mesmo título da curatela.",
+        "prova": [
+          "Assertiva que não prevê a tomada de decisão apoiada no Código Civil erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 116"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-116",
+      "unit_id": "434cebf3-ac54-533c-8db3-498dd4483588",
+      "content_sha256": "c0fa85cff8e39b3043e61ca042a1bf0d5b29ac93ff2f179b8832956430d61466",
+      "simples": "Na decisão apoiada, a pessoa escolhe pelo menos duas pessoas idôneas e de confiança e requer o processo com limites, compromissos e duração do apoio. O juiz ouve requerente e apoiadores, com equipe multidisciplinar e MP. A pessoa apoiada pode pedir término a qualquer tempo; o apoiador depende de manifestação judicial para sair.",
+      "pontos": [
+        "Pelo menos dois apoiadores; vontade da pessoa preservada."
+      ],
+      "atencao": [
+        "Não transforme apoio em substituição automática da vontade. Divergência sobre negócio com risco relevante é decidida pelo juiz, ouvido o MP; abuso pode levar à destituição."
+      ],
+      "exemplo": "A pessoa escolhe dois apoiadores e formaliza limites do apoio. Variação: Um apoiador exerce pressão indevida: cabe denúncia ao MP ou juiz e, se procedente, destituição conforme a lei.",
+      "prova": [
+        "A decisão apoiada exige pelo menos duas pessoas idôneas escolhidas pela pessoa? Sim; esse mínimo está no art. 1.783-A."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      ],
+      "expected": {
+        "unit_id": "434cebf3-ac54-533c-8db3-498dd4483588",
+        "content_sha256": "c0fa85cff8e39b3043e61ca042a1bf0d5b29ac93ff2f179b8832956430d61466",
+        "simples": "O Código Civil passa a ter o Capítulo III, da Tomada de Decisão Apoiada. Ela é o processo pelo qual a pessoa com deficiência elege pelo menos 2 pessoas idôneas, com as quais mantenha vínculos e que gozem de sua confiança, para prestar-lhe apoio na tomada de decisão sobre atos da vida civil, fornecendo-lhes os elementos e informações necessários. Para o pedido, a pessoa e os apoiadores apresentam termo com os limites do apoio e os compromissos, inclusive o prazo de vigência. O pedido é requerido pela pessoa apoiada, com indicação dos apoiadores. Antes de decidir, o juiz, assistido por equipe multidisciplinar e ouvido o Ministério Público, ouve pessoalmente o requerente e os apoiadores.",
+        "pontos": [
+          "Tomada de decisão apoiada.",
+          "Pelo menos 2 apoiadores idôneos.",
+          "Termo com limites do apoio e prazo de vigência.",
+          "Pedido pela própria pessoa apoiada.",
+          "Juiz ouve pessoalmente os envolvidos, com equipe multidisciplinar e MP."
+        ],
+        "atencao": [
+          "Mínimo de 2 apoiadores.",
+          "O pedido é da PRÓPRIA pessoa apoiada, e ela mantém sua capacidade."
+        ],
+        "exemplo": "A pessoa escolhe dois amigos de confiança para apoiá-la nos contratos que fizer.",
+        "prova": [
+          "Assertiva que permite a tomada de decisão apoiada com um único apoiador erra: são pelo menos 2."
+        ],
+        "termos": [
+          {
+            "termo": "Tomada de decisão apoiada",
+            "significado": "Apoio escolhido pela pessoa com deficiência para decidir, sem perder a capacidade."
+          }
+        ],
+        "remissoes": [
+          "Art. 84"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-117",
+      "unit_id": "aebf469b-99a5-5850-8ea8-efa2defce87f",
+      "content_sha256": "c29704efe7977301e5a64801d06b00a14dfc9eac7eedf452f1d17c8507d27bc2",
+      "simples": "A Lei 11.126 assegura ingresso e permanência da pessoa com deficiência visual com cão-guia em transportes e locais públicos ou privados coletivos, observadas suas condições. Alcança todas as modalidades de transporte coletivo, inclusive internacional com origem no Brasil.",
+      "pontos": [
+        "Cão-guia e condições específicas da Lei 11.126."
+      ],
+      "atencao": [
+        "Não confunda cão-guia com autorização indiscriminada para qualquer animal. A lei define deficiência visual abrangida como cegueira e baixa visão."
+      ],
+      "exemplo": "A pessoa com baixa visão está acompanhada de cão-guia e solicita acesso nas condições legais. Variação: O transporte é internacional com origem no Brasil: a hipótese está expressamente contemplada.",
+      "prova": [
+        "A regra alcança transporte internacional com origem no território brasileiro? Sim; o §2º inclui essa situação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11126.htm"
+      ],
+      "expected": {
+        "unit_id": "aebf469b-99a5-5850-8ea8-efa2defce87f",
+        "content_sha256": "c29704efe7977301e5a64801d06b00a14dfc9eac7eedf452f1d17c8507d27bc2",
+        "simples": "O art. 1º da Lei nº 11.126, de 27 de junho de 2005, passa a assegurar à pessoa com deficiência visual acompanhada de cão-guia o direito de ingressar e permanecer com o animal em todos os meios de transporte e em estabelecimentos abertos ao público, de uso público e privados de uso coletivo, e a aplicar-se a todas as modalidades e jurisdições do transporte coletivo de passageiros, inclusive em esfera internacional com origem no território brasileiro.",
+        "pontos": [
+          "Direito ao cão-guia em transportes e estabelecimentos.",
+          "Alcança o transporte internacional com origem no Brasil."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei do Cão-Guia."
+        ],
+        "exemplo": "A pessoa cega entra no restaurante com o cão-guia.",
+        "prova": [
+          "Assertiva que permite barrar o cão-guia em estabelecimentos privados de uso coletivo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei do Cão-Guia"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-118",
+      "unit_id": "1b0b9a72-6f4f-5a9f-999f-628aa242f5d5",
+      "content_sha256": "80475d6f6d3cafaae04701c50bf1a18ad3bd672b9e83ad108222d7bc1b7bdd15",
+      "simples": "O Estatuto de Museus passou a incluir programa de acessibilidade a todas as pessoas no detalhamento do Plano Museológico. O art. 46, IV, k foi conferido na Lei 11.904 vigente.",
+      "pontos": [
+        "Programa de acessibilidade no Plano Museológico."
+      ],
+      "atencao": [
+        "Não limite a acessibilidade ao acervo físico; articule planejamento, comunicação e acesso ao espaço conforme normas aplicáveis."
+      ],
+      "exemplo": "O museu inclui acessibilidade na elaboração de seu plano e na análise de públicos. Variação: A prova afirma que esse programa se destina somente a um grupo de visitantes: a alínea fala em todas as pessoas.",
+      "prova": [
+        "O programa de acessibilidade mencionado destina-se a todas as pessoas? Sim; essa é a expressão da alínea k."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11904.htm"
+      ],
+      "expected": {
+        "unit_id": "1b0b9a72-6f4f-5a9f-999f-628aa242f5d5",
+        "content_sha256": "80475d6f6d3cafaae04701c50bf1a18ad3bd672b9e83ad108222d7bc1b7bdd15",
+        "simples": "O inciso IV do art. 46 da Lei nº 11.904, de 14 de janeiro de 2009 (Estatuto de Museus), passa a vigorar acrescido da alínea k, prevendo a acessibilidade a todas as pessoas entre os itens do plano museológico.",
+        "pontos": [
+          "Acessibilidade a todas as pessoas no plano museológico."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera o Estatuto de Museus."
+        ],
+        "exemplo": "O museu inclui a acessibilidade no seu plano museológico.",
+        "prova": [
+          "Assertiva que dispensa a acessibilidade no plano museológico erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 42"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-119",
+      "unit_id": "1add991e-cb39-511d-a37c-ba89b7d4b5ea",
+      "content_sha256": "74a9a9e1bbddd3a682c237de90cd69fb87b805a669900a48e1fbcfd3e43d899b",
+      "simples": "A Lei de Mobilidade reserva 10% das vagas de outorga de táxi a condutores com deficiência. O veículo deve ser próprio, conduzido por eles e adaptado às necessidades. Vagas não preenchidas são disponibilizadas aos demais concorrentes.",
+      "pontos": [
+        "10% da outorga para condutores, não quota de veículos da frota."
+      ],
+      "atencao": [
+        "Diferencie do art. 51 da LBI, que exige 10% da frota acessível para passageiros. Mesma porcentagem, objetos diferentes."
+      ],
+      "exemplo": "O condutor concorre à reserva com veículo próprio e adaptado que ele conduz. Variação: A reserva não é preenchida: as vagas remanescentes passam aos demais concorrentes.",
+      "prova": [
+        "A reserva de outorga é idêntica à quota de veículos acessíveis da frota? Não; uma trata de condutores e a outra da acessibilidade dos veículos para passageiros."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12587.htm"
+      ],
+      "expected": {
+        "unit_id": "1add991e-cb39-511d-a37c-ba89b7d4b5ea",
+        "content_sha256": "74a9a9e1bbddd3a682c237de90cd69fb87b805a669900a48e1fbcfd3e43d899b",
+        "simples": "A Lei nº 12.587, de 3 de janeiro de 2012 (Política Nacional de Mobilidade Urbana), passa a vigorar com o art. 12-B: na outorga de exploração de serviço de táxi, reservar-se-ão 10% das vagas para condutores com deficiência. O condutor deve ter veículo de sua propriedade, por ele conduzido, e adaptado às suas necessidades. As vagas não preenchidas são disponibilizadas aos demais concorrentes.",
+        "pontos": [
+          "10% das vagas de táxi para condutores com deficiência.",
+          "Veículo próprio e adaptado.",
+          "Vagas remanescentes vão aos demais."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: altera a Lei de Mobilidade Urbana.",
+          "10% das outorgas de táxi."
+        ],
+        "exemplo": "A prefeitura reserva 10% das vagas de táxi para condutores com deficiência.",
+        "prova": [
+          "Assertiva que fixa em 2% a reserva de vagas de táxi erra: são 10%."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 51"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-120",
+      "unit_id": "0f14e5e4-59e0-5fa5-b2df-e3db92eb5f40",
+      "content_sha256": "0fe86ee975950ecf608028e51a7940aa5a4e69d3f720c41efdc5584153bf2335",
+      "simples": "Órgãos competentes em cada esfera elaboram relatórios circunstanciados sobre cumprimento dos prazos das Leis 10.048 e 10.098 e os encaminham ao MP e reguladores. O prazo de apresentação fixado foi de um ano da entrada em vigor da LBI.",
+      "pontos": [
+        "Relatórios ao MP e órgãos de regulação."
+      ],
+      "atencao": [
+        "Prazo transitório contado da vigência original; não reinicia a cada leitura, cadastro ou concurso."
+      ],
+      "exemplo": "O órgão examina o cumprimento dos prazos e encaminha relatório aos destinatários legais. Variação: O aluno começa o curso hoje: isso não inaugura novo prazo de um ano.",
+      "prova": [
+        "O prazo começa novamente quando o aluno consulta a lei? Não; seu marco é a entrada em vigor da LBI."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "0f14e5e4-59e0-5fa5-b2df-e3db92eb5f40",
+        "content_sha256": "0fe86ee975950ecf608028e51a7940aa5a4e69d3f720c41efdc5584153bf2335",
+        "simples": "Cabe aos órgãos competentes, em cada esfera de governo, elaborar relatórios circunstanciados sobre o cumprimento dos prazos estabelecidos pelas Leis nº 10.048, de 8 de novembro de 2000, e nº 10.098, de 19 de dezembro de 2000, e encaminhá-los ao Ministério Público e aos órgãos de regulação. Os relatórios devem ser apresentados no prazo de 1 ano a contar da entrada em vigor da Lei.",
+        "pontos": [
+          "Relatórios sobre o cumprimento dos prazos de acessibilidade.",
+          "Envio ao Ministério Público e órgãos de regulação.",
+          "Prazo de 1 ano."
+        ],
+        "atencao": [
+          "Relatórios em 1 ano."
+        ],
+        "exemplo": "Cada esfera de governo apresenta relatório sobre a acessibilidade ao Ministério Público.",
+        "prova": [
+          "Assertiva que fixa em 5 anos o prazo dos relatórios erra: é 1 ano."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 127"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-121",
+      "unit_id": "b3b38d0a-046c-5f7a-83a8-89024969fad3",
+      "content_sha256": "0fe82a409912509d8facf3d7cfdc35af78aa39307df1ad5eb29b83896b04deb1",
+      "simples": "A LBI não exclui direitos e obrigações já previstos em outras normas e acordos vinculantes. A aplicação deve ser conjunta e prevalece a norma mais benéfica à pessoa com deficiência.",
+      "pontos": [
+        "Complementaridade normativa e norma mais benéfica."
+      ],
+      "atencao": [
+        "A regra não autoriza ignorar vigência, competência ou requisitos legais; exige identificar normas efetivamente aplicáveis."
+      ],
+      "exemplo": "Duas normas aplicáveis protegem a pessoa: compara-se a proteção mais benéfica no contexto. Variação: Uma suposta regra não está vigente: não se presume aplicável apenas por parecer favorável.",
+      "prova": [
+        "A LBI exclui automaticamente direitos previstos em outras leis? Não; o caput preserva a complementaridade."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b3b38d0a-046c-5f7a-83a8-89024969fad3",
+        "content_sha256": "0fe82a409912509d8facf3d7cfdc35af78aa39307df1ad5eb29b83896b04deb1",
+        "simples": "Os direitos, prazos e obrigações previstos na Lei não excluem os já estabelecidos em outras legislações, inclusive em pactos, tratados, convenções e declarações internacionais aprovados e promulgados pelo Congresso Nacional, e devem ser aplicados em conformidade com as demais normas internas e acordos internacionais vinculantes. Prevalecerá a norma mais benéfica à pessoa com deficiência.",
+        "pontos": [
+          "Soma-se a outras legislações e tratados.",
+          "Prevalece a norma mais benéfica."
+        ],
+        "atencao": [
+          "Princípio da norma MAIS BENÉFICA."
+        ],
+        "exemplo": "Entre a lei interna e o tratado, aplica-se o que for melhor à pessoa com deficiência.",
+        "prova": [
+          "Assertiva que prefere sempre a lei interna ao tratado erra: prevalece a norma mais benéfica."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-122",
+      "unit_id": "abf191dd-7918-5331-b147-a892903adea6",
+      "content_sha256": "ef77062c78107a631684fbf9c500c5e4a8818dfba533871507e0ce9512598d39",
+      "simples": "Regulamento adequa as exigências da LBI ao tratamento diferenciado, simplificado e favorecido das microempresas e empresas de pequeno porte referido na LC 123.",
+      "pontos": [
+        "Adequação regulamentar, não isenção geral."
+      ],
+      "atencao": [
+        "Não transforme tratamento favorecido em dispensa total e automática de acessibilidade."
+      ],
+      "exemplo": "A pequena empresa consulta a regulamentação aplicável à adequação de sua atividade. Variação: Alega que seu porte dispensa todo dever: o artigo não contém essa isenção geral.",
+      "prova": [
+        "O artigo isenta automaticamente microempresas de toda acessibilidade? Não; prevê adequação em regulamento ao tratamento favorecido."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "abf191dd-7918-5331-b147-a892903adea6",
+        "content_sha256": "ef77062c78107a631684fbf9c500c5e4a8818dfba533871507e0ce9512598d39",
+        "simples": "Regulamento disporá sobre a adequação do disposto na Lei ao tratamento diferenciado, simplificado e favorecido a ser dispensado às microempresas e às empresas de pequeno porte, previsto no §3º do art. 1º da Lei Complementar nº 123, de 14 de dezembro de 2006.",
+        "pontos": [
+          "Adequação às microempresas e empresas de pequeno porte por regulamento."
+        ],
+        "atencao": [
+          "Tratamento favorecido às ME e EPP."
+        ],
+        "exemplo": "Uma microempresa pode ter prazos adaptados para cumprir as regras.",
+        "prova": [
+          "Assertiva que isenta as microempresas de qualquer obrigação de acessibilidade erra: o regulamento só adequa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 125"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-123",
+      "unit_id": "a732ecbf-c4dd-5a85-adb2-12c86d38e788",
+      "content_sha256": "b9f3fa1e24b31caa25a430180ac7cd1f165b21c72508598d3e97c12c7533beb7",
+      "simples": "A LBI revogou dispositivos específicos, sobretudo civis, que associavam deficiência à incapacidade e restringiam testemunho, casamento ou apoio. A enumeração não revoga todo o Código Civil.",
+      "pontos": [
+        "Revogações expressas de dispositivos, não de diplomas inteiros."
+      ],
+      "atencao": [
+        "A compilação atual também registra revogações posteriores pelo CPC; não atribua indistintamente todas elas ao art. 123."
+      ],
+      "exemplo": "O aluno verifica o art. 3º civil atual e diferencia a revogação dos antigos incisos do caput vigente. Variação: A questão afirma que todo o Código Civil foi revogado: a enumeração é específica e não sustenta isso.",
+      "prova": [
+        "O art. 123 revoga integralmente o Código Civil? Não; enumera dispositivos determinados."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      ],
+      "expected": {
+        "unit_id": "a732ecbf-c4dd-5a85-adb2-12c86d38e788",
+        "content_sha256": "b9f3fa1e24b31caa25a430180ac7cd1f165b21c72508598d3e97c12c7533beb7",
+        "simples": "Revogam-se dispositivos de outras leis incompatíveis com o novo regime, entre eles o inciso II do §2º do art. 1º da Lei nº 9.008, de 21 de março de 1995; os incisos I, II e III do art. 3º do Código Civil; os incisos II e III do art. 228; o inciso I do art. 1.548; o inciso IV do art. 1.557; os incisos II e IV do art. 1.767; e os arts. 1.776 e 1.780 do Código Civil.",
+        "pontos": [
+          "Revoga incisos do Código Civil sobre incapacidade absoluta e outros.",
+          "Revoga o inciso II do §2º do art. 1º da Lei nº 9.008."
+        ],
+        "atencao": [
+          "Revogação de regras que tratavam a deficiência como incapacidade."
+        ],
+        "exemplo": "Foi revogada a regra que tornava absolutamente incapaz quem tinha deficiência mental.",
+        "prova": [
+          "Assertiva que mantém os incisos do art. 3º do Código Civil sobre incapacidade absoluta erra: foram revogados."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 114"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-124",
+      "unit_id": "3ea75aeb-f17c-57aa-aef6-9ce7a100d793",
+      "content_sha256": "7fffa51252c3fea32c6943cfedb240e1733f7a51433bdd1a5d3183be4e128a13",
+      "simples": "A avaliação biopsicossocial prevista no art. 2º, §1º teve prazo específico de entrada em vigor de até dois anos a partir da vigência da LBI. É disposição temporal própria, distinta da vacância geral de 180 dias.",
+      "pontos": [
+        "Até dois anos para o art. 2º, §1º."
+      ],
+      "atencao": [
+        "Não conte o prazo da publicação nem o reinicie hoje. A disciplina atual da avaliação exige leitura também dos atos posteriores."
+      ],
+      "exemplo": "A questão histórica compara avaliação e vacância geral: os marcos e prazos são diferentes. Variação: A prova inicia a contagem na publicação: o art. 124 usa a entrada em vigor da LBI.",
+      "prova": [
+        "O prazo do artigo é contado da entrada em vigor da LBI? Sim; esse é o marco expressamente indicado."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "3ea75aeb-f17c-57aa-aef6-9ce7a100d793",
+        "content_sha256": "7fffa51252c3fea32c6943cfedb240e1733f7a51433bdd1a5d3183be4e128a13",
+        "simples": "O §1º do art. 2º da Lei deverá entrar em vigor em até 2 anos, contados da entrada em vigor da Lei.",
+        "pontos": [
+          "Avaliação biopsicossocial deveria entrar em vigor em até 2 anos."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o prazo de 2 anos foi objeto de prorrogações e regulamentação posterior; confira a regulamentação da avaliação biopsicossocial."
+        ],
+        "exemplo": "A avaliação biopsicossocial tinha prazo de dois anos para ser implementada.",
+        "prova": [
+          "Assertiva que fixa em 10 anos o prazo do §1º do art. 2º erra: eram 2 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-125",
+      "unit_id": "16f45a0d-8e8e-595a-a6dd-20c3ba8ea23a",
+      "content_sha256": "6e14ad2740bde42f7bc7a545e92a02f224ddc19f8556f7b0c0b904dd1fc9fb20",
+      "simples": "A LBI fixou prazos específicos: 48 meses para a formação dos intérpretes indicada no art. 28, §2º, I e II; 84 meses para recursos de cinema; 24 meses para hotéis; 48 meses para fretamento/turismo. Contam da entrada em vigor.",
+      "pontos": [
+        "Cinema: 84 meses após alteração de 2021."
+      ],
+      "atencao": [
+        "Lei 14.159/2021 alterou o inciso II para 84 meses. Os prazos são transitórios e já transcorreram; não geram novos períodos de tolerância hoje."
+      ],
+      "exemplo": "A questão usa o prazo antigo de cinema: compare com os 84 meses da redação atual. Variação: Uma empresa inicia atividade hoje: não reinicia automaticamente o prazo transitório contado da vigência da LBI.",
+      "prova": [
+        "O prazo de cinema permanece o da redação original anterior à Lei 14.159? Não; o inciso II atual estabelece 84 meses."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "16f45a0d-8e8e-595a-a6dd-20c3ba8ea23a",
+        "content_sha256": "6e14ad2740bde42f7bc7a545e92a02f224ddc19f8556f7b0c0b904dd1fc9fb20",
+        "simples": "Devem ser observados os prazos, a partir da entrada em vigor da Lei, para o cumprimento de dispositivos: incisos I e II do §2º do art. 28, 48 meses; §6º do art. 44, 84 meses; art. 45, 24 meses; e art. 49, 48 meses.",
+        "pontos": [
+          "Art. 28, §2º, I e II: 48 meses.",
+          "Art. 44, §6º: 84 meses.",
+          "Art. 45: 24 meses.",
+          "Art. 49: 48 meses."
+        ],
+        "atencao": [
+          "Prazos de transição de 24, 48 e 84 meses."
+        ],
+        "exemplo": "Os hotéis tinham 24 meses para cumprir as regras do art. 45.",
+        "prova": [
+          "Assertiva que fixa em 12 meses o prazo para os hotéis erra: eram 24 meses."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 45"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-126",
+      "unit_id": "1b5a5329-c441-5ad2-8cdf-78f6c6652521",
+      "content_sha256": "414a50d62757f0569ffa1d651d0fc71b788816a51f67ebae57b8c31843ea2cad",
+      "simples": "A LBI prorrogou historicamente a Lei 8.989 até 31/12/2021. A lei alterada recebeu nova prorrogação: seu art. 9º atual prevê efeitos até 31/12/2026, pela Lei 14.287/2021. O limite de 2021 transcrito aqui não representa sozinho a disciplina vigente.",
+      "pontos": [
+        "IPI: distinguir prazo histórico e atual da Lei 8.989."
+      ],
+      "atencao": [
+        "Prazo de efeitos não concede isenção incondicional: beneficiários, veículos, requisitos e eventual regime futuro precisam de consulta própria. Não extrapole além de 2026 sem novo ato."
+      ],
+      "exemplo": "A questão em 2026 afirma que a lei encerrou efeitos em 2021 apenas com base na LBI: falta considerar a prorrogação posterior. Variação: O fato é de período posterior a 2026: exige nova verificação, não extensão presumida.",
+      "prova": [
+        "O prazo atual termina em 2021 apenas porque esse ano consta da LBI? Não; o art. 9º da Lei 8.989 prevê efeitos até 31/12/2026."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8989.htm"
+      ],
+      "expected": {
+        "unit_id": "1b5a5329-c441-5ad2-8cdf-78f6c6652521",
+        "content_sha256": "414a50d62757f0569ffa1d651d0fc71b788816a51f67ebae57b8c31843ea2cad",
+        "simples": "Prorroga-se até 31 de dezembro de 2021 a vigência da Lei nº 8.989, de 24 de fevereiro de 1995, que trata da isenção do IPI na aquisição de automóveis por pessoas com deficiência.",
+        "pontos": [
+          "Prorroga a isenção do IPI até 31 de dezembro de 2021."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a isenção foi prorrogada por leis posteriores; confira a vigência atual."
+        ],
+        "exemplo": "A prorrogação garantiu a isenção do IPI na compra do veículo adaptado até 2021.",
+        "prova": [
+          "Assertiva que torna definitiva essa prorrogação erra: ela era até 31 de dezembro de 2021."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 125"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-127",
+      "unit_id": "b8aa0b30-d091-5f6f-bf3b-5e2b5e9e3077",
+      "content_sha256": "dd84bc6b681e1ed5cf8a4822404379161f478978bd3fb3523c38ef9aa36f7091",
+      "simples": "A LBI estabeleceu vacância de 180 dias após sua publicação oficial. Diferencie publicação, entrada em vigor e prazos específicos dos arts. 124 e 125: são marcos e condições de aplicação distintos.",
+      "pontos": [
+        "Vacância geral: 180 dias."
+      ],
+      "atencao": [
+        "A consulta atual não inicia nova vacância. Alterações posteriores podem ter cláusulas próprias de vigência, que devem ser verificadas no ato modificador."
+      ],
+      "exemplo": "A questão pergunta a vacância original: responda 180 dias após publicação oficial. Variação: Pergunta o prazo especial dos cinemas: não substitua esse prazo pela vacância geral.",
+      "prova": [
+        "A vacância geral original é de 180 dias? Sim; o art. 127 estabelece esse intervalo após publicação oficial."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b8aa0b30-d091-5f6f-bf3b-5e2b5e9e3077",
+        "content_sha256": "dd84bc6b681e1ed5cf8a4822404379161f478978bd3fb3523c38ef9aa36f7091",
+        "simples": "Esta Lei entra em vigor após decorridos 180 dias de sua publicação oficial.",
+        "pontos": [
+          "Vacatio legis de 180 dias."
+        ],
+        "atencao": [
+          "Vacatio legis de 180 dias."
+        ],
+        "exemplo": "A Lei só passou a valer 180 dias depois de publicada.",
+        "prova": [
+          "Assertiva que prevê vigência imediata erra: são 180 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 126"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    }
+  ]
+}
