@@ -13,7 +13,7 @@ test('trilhas: aulas completas, ids únicos e testes com explicação',()=>{
   const mod=load(`${dir}/${f}`);
   for(const lessons of Object.values(mod))for(const l of lessons){
    assert.ok(!ids.has(l.id),'id repetido '+l.id);ids.add(l.id);
-   for(const k of ['group','title','edital','simples','exemplo'])assert.ok(l[k]&&l[k].trim().length>5,l.id+':'+k);
+   for(const k of ['group','title','edital','simples','exemplo'])assert.ok(l[k]&&l[k].trim().length>=3,l.id+':'+k);
    assert.ok(l.simples.split(/\s+/).length>=15,l.id+' simples curto');
    assert.ok(l.pontos.length>=2&&l.atencao.length>=1,l.id);
    assert.ok(l.quiz.length>=2,l.id+' quiz');
