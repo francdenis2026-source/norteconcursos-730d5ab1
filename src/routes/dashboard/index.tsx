@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import {
   ArrowRight,
+  Play,
   BarChart3,
   BrainCircuit,
   CheckCircle2,
@@ -289,6 +290,15 @@ function DashboardIndex() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+            <Link
+              to="/dashboard/trilhas"
+              search={{ foco: "1" } as never}
+              className="group relative inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 px-3.5 py-2 text-sm font-bold text-white shadow-lg shadow-indigo-500/30 ring-1 ring-white/20 hover:brightness-110"
+              aria-label="Começar a estudar em modo foco, com relógio de estudo"
+            >
+              <Play className="h-4 w-4 fill-current" aria-hidden /> Começar a estudar
+              <span className="absolute -right-1 -top-1 flex h-2.5 w-2.5" aria-hidden><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-300 opacity-75" /><span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-400" /></span>
+            </Link>
             <Button size="sm" className="hero-btn-primary gap-2" asChild>
               <Link to="/dashboard/question-trainer" search={TRAINER_SEARCH}>
                 Treinar agora <ArrowRight className="h-4 w-4" />

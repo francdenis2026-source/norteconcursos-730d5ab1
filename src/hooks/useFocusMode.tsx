@@ -217,5 +217,5 @@ export function useFocusMode() {
       </>
     );
 
-  return { focus, setFocus, containerClass, button, bar };
+  return { focus, setFocus, enter, containerClass, button, bar };
 }

@@ -17,9 +17,10 @@ import { ContentSearchResults } from "@/components/library/ContentSearchResults"
 
 export const Route = createFileRoute("/dashboard/trilhas")({
   component: TracksPage,
-  validateSearch: (s: Record<string, unknown>): { t?: string | undefined; l?: string | undefined } => ({
+  validateSearch: (s: Record<string, unknown>): { t?: string | undefined; l?: string | undefined; foco?: string | undefined } => ({
     t: typeof s["t"] === "string" ? s["t"] : undefined,
     l: typeof s["l"] === "string" ? s["l"] : undefined,
+    foco: s["foco"] === "1" ? "1" : undefined,
   }),
   head: () => ({ meta: [{ title: "Cursos por disciplina | Norte Concursos" }] }),
 });
@@ -147,7 +148,7 @@ function Lesson({ focus = false, trackSlug, lesson, onNext, onPrev, done, toggle
 }
 
 function TracksPage() {
-  const { t, l } = Route.useSearch();
+  const { t, l, foco } = Route.useSearch();
   const navigate = useNavigate({ from: "/dashboard/trilhas" });
   const track: Track = TRACKS.find((x) => x.slug === t) ?? TRACKS[0]!;
   const [done, setDone] = React.useState<string[]>([]);
@@ -161,6 +162,11 @@ function TracksPage() {
     saveDone(track.slug, next);
   };
   const fm = useFocusMode();
+  // Veio de um botão "Começar a estudar" de outra tela (?foco=1): entra no modo foco já com o relógio contando.
+  React.useEffect(() => {
+    if (foco === "1" && !fm.focus) fm.enter();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só ao chegar com o parâmetro
+  }, [foco]);
   const groups = [...new Set(track.lessons.map((x) => x.group))];
   const pct = Math.round((done.length / track.lessons.length) * 100);
   const lessonView = (
