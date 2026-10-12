@@ -10329,15 +10329,59 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     color: oklch(0.19 0.03 262);
   }
   html:not(.dark) .mh::before {
-    opacity: 0;
+    background: url("/media/acre-seguranca.jpg") center / cover no-repeat;
+    opacity: 0.12;
+    filter: saturate(0.9) contrast(1.05);
   }
   html:not(.dark) .mh::after {
-    background: transparent;
+    background: linear-gradient(180deg, oklch(1 0 0 / 0.9), oklch(1 0 0 / 0.97));
   }
   html:not(.dark) .mh__intro h2 {
     color: oklch(0.16 0.03 262);
   }
   html:not(.dark) .mh__intro p {
     color: oklch(0.34 0.03 262);
+  }
+  html:not(.dark) .mh__grid li:nth-child(4n + 1) {
+    border-color: #b8d7f0;
+    background: #eef7ff;
+  }
+  html:not(.dark) .mh__grid li:nth-child(4n + 2) {
+    border-color: #b9e1d2;
+    background: #effbf6;
+  }
+  html:not(.dark) .mh__grid li:nth-child(4n + 3) {
+    border-color: #ead39b;
+    background: #fff9e9;
+  }
+  html:not(.dark) .mh__grid li:nth-child(4n + 4) {
+    border-color: #e4bfd0;
+    background: #fff3f7;
+  }
+  html:not(.dark) .mh__grid li strong,
+  html:not(.dark) .mh__grid li span,
+  html:not(.dark) .mh__plan h3,
+  html:not(.dark) .mh__plan li {
+    color: #1d2a3b;
+  }
+  html:not(.dark) .mh__grid li > svg {
+    color: #246b9f;
+  }
+  html:not(.dark) .mh__plan:nth-child(3n + 1) {
+    border-color: #b8d7f0;
+    background: #eef7ff;
+  }
+  html:not(.dark) .mh__plan:nth-child(3n + 2) {
+    border-color: #b9e1d2;
+    background: #effbf6;
+  }
+  html:not(.dark) .mh__plan:nth-child(3n + 3) {
+    border-color: #ead39b;
+    background: #fff9e9;
+  }
+  html:not(.dark) .mh__pills li {
+    border-color: #c5d5e5;
+    background: #f6faff;
+    color: #29445f;
   }
 }
