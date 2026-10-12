@@ -225,7 +225,7 @@ function StudyToolsPage() {
   return (
     <div className="space-y-6">
       <PageHero
-        image="toolkit"
+        image="study-desk"
         kicker="Hoje"
         icon={Timer}
         title={
