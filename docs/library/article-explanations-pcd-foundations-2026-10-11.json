@@ -1,0 +1,2047 @@
+{
+  "version": "2026-10-11-pcd-targeted",
+  "checked_at": "2026-10-11T23:48:27.474612+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "pcd",
+      "title": "Lei 13.146/2015 — Estatuto da Pessoa com Deficiência",
+      "units": 39,
+      "scope_type": "targeted_correction",
+      "course_current_units": 127,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-11",
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-15",
+        "art-16",
+        "art-17",
+        "art-18",
+        "art-19",
+        "art-20",
+        "art-21",
+        "art-22",
+        "art-23",
+        "art-24",
+        "art-25",
+        "art-26",
+        "art-27",
+        "art-28",
+        "art-30",
+        "art-31",
+        "art-32",
+        "art-33",
+        "art-34",
+        "art-35",
+        "art-36",
+        "art-37",
+        "art-38",
+        "art-39",
+        "art-40"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+      "source_sha256": "967565f4e9ccd9c5aba4c24dd39c8d2a00f2ddb0832aeeca168f1cbc6079ec37",
+      "source_checked_at": "2026-10-11T23:22:00.590309+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "5b4cdc08-4821-59ae-b56c-e95b094464c4",
+      "content_sha256": "bb597a017efbe0c6a9724ae117b1a5b577eabf74d51243b90c82822c3b7987dc",
+      "simples": "A LBI promove igualdade no exercício de direitos, inclusão social e cidadania. Baseia-se na Convenção e seu Protocolo aprovados pelo procedimento do art. 5º, §3º, da Constituição; diferencie a vigência internacional de 2008 da promulgação interna de 2009.",
+      "pontos": [
+        "Finalidade: igualdade, inclusão e cidadania.",
+        "Distinga vigência internacional e promulgação interna da Convenção."
+      ],
+      "atencao": [
+        "Não confunda inclusão com segregação nem as duas datas de vigência da Convenção."
+      ],
+      "exemplo": "O órgão público remove barreiras para participação em igualdade: aplica a finalidade inclusiva da LBI. Variação: A prova atribui à LBI o objetivo de separar pessoas com deficiência dos demais: contraria sua finalidade.",
+      "prova": [
+        "A LBI busca inclusão social e exercício de direitos em igualdade? Sim; essa é sua finalidade expressa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "5b4cdc08-4821-59ae-b56c-e95b094464c4",
+        "content_sha256": "bb597a017efbe0c6a9724ae117b1a5b577eabf74d51243b90c82822c3b7987dc",
+        "simples": "É instituída a Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência), destinada a assegurar e promover, em condições de igualdade, o exercício dos direitos e das liberdades fundamentais por pessoa com deficiência, visando à sua inclusão social e cidadania. A Lei tem como base a Convenção sobre os Direitos das Pessoas com Deficiência e seu Protocolo Facultativo, aprovados com status de emenda constitucional.",
+        "pontos": [
+          "Lei Brasileira de Inclusão.",
+          "Igualdade, inclusão social e cidadania.",
+          "Base: Convenção sobre os Direitos das Pessoas com Deficiência."
+        ],
+        "atencao": [
+          "A Convenção foi aprovada pelo procedimento do art. 5º, §3º, da Constituição (equivalente a emenda constitucional)."
+        ],
+        "exemplo": "A Lei aplica a Convenção internacional como base para as regras de inclusão.",
+        "prova": [
+          "Assertiva que trata a Convenção como mera norma infraconstitucional erra: foi aprovada com status de emenda constitucional."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "417008d2-9486-54e7-8de7-dee994964cf0",
+      "content_sha256": "5db483ac312263a1d94c402614373fe2e25034a0d87d6672b1704791f8c0fa2b",
+      "simples": "Deficiência é impedimento de longo prazo que, em interação com barreiras, pode obstruir participação plena em igualdade. Quando necessária, a avaliação é biopsicossocial, por equipe multiprofissional e interdisciplinar, considerando impedimentos, fatores ambientais e pessoais, atividades e participação.",
+      "pontos": [
+        "Impedimento de longo prazo em interação com barreiras.",
+        "Avaliação considera quatro grupos de fatores; telemedicina é possibilidade do componente médico-pericial."
+      ],
+      "atencao": [
+        "Lei 14.724/2023: telemedicina ou análise documental podem ser usadas no componente médico-pericial, nas situações e requisitos regulamentados; isso não reduz toda avaliação biopsicossocial a diagnóstico médico."
+      ],
+      "exemplo": "A equipe avalia impedimento, ambiente e participação, sem se limitar ao nome de uma doença. Variação: O exame médico-pericial utiliza telemedicina conforme regulamento: a possibilidade não dispensa automaticamente os demais componentes.",
+      "prova": [
+        "A avaliação da deficiência, quando necessária, deve considerar fatores socioambientais, psicológicos e pessoais? Sim; eles integram os grupos de fatores da avaliação biopsicossocial."
+      ],
+      "termos": [
+        {
+          "termo": "Avaliação biopsicossocial",
+          "significado": "Avaliação dos impedimentos e da interação com fatores ambientais, pessoais, atividades e participação, por equipe multiprofissional e interdisciplinar."
+        }
+      ],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "417008d2-9486-54e7-8de7-dee994964cf0",
+        "content_sha256": "5db483ac312263a1d94c402614373fe2e25034a0d87d6672b1704791f8c0fa2b",
+        "simples": "Considera-se pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas. A avaliação da deficiência, quando necessária, será biopsicossocial, realizada por equipe multiprofissional e interdisciplinar, considerando os impedimentos nas funções e estruturas do corpo, os fatores socioambientais, psicológicos e pessoais, a limitação no desempenho de atividades e a restrição de participação. O Poder Executivo criará instrumentos de avaliação, e o exame médico-pericial poderá ser feito por telemedicina ou análise documental.",
+        "pontos": [
+          "Conceito: impedimento de longo prazo + barreiras.",
+          "Avaliação biopsicossocial por equipe multiprofissional.",
+          "Quatro critérios de avaliação.",
+          "Telemedicina ou análise documental no exame pericial."
+        ],
+        "atencao": [
+          "Modelo BIOPSICOSSOCIAL, e não apenas médico.",
+          "Impedimento de LONGO PRAZO."
+        ],
+        "exemplo": "A perícia avalia o corpo, o ambiente, as atividades e a participação social da pessoa.",
+        "prova": [
+          "Assertiva que baseia a avaliação da deficiência exclusivamente em laudo médico erra: é biopsicossocial."
+        ],
+        "termos": [
+          {
+            "termo": "Avaliação biopsicossocial",
+            "significado": "Análise que une aspectos biológicos, psicológicos e sociais."
+          }
+        ],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "5628b006-4dee-5bde-9804-9f0b2b689346",
+      "content_sha256": "30957cf2258dec9a2717e56d068f4aee7a015533dd9fac5a0743c7f9c3a3e077",
+      "simples": "O artigo reúne conceitos de acessibilidade, desenho universal, tecnologia assistiva, barreiras, comunicação, adaptações razoáveis, elementos de urbanização, mobiliário urbano, mobilidade reduzida, moradias e pessoas de apoio. Desenho universal prevê uso por todos; adaptação razoável é ajuste necessário ao caso, sem ônus desproporcional e indevido.",
+      "pontos": [
+        "Diferencie desenho universal, adaptações razoáveis e tecnologia assistiva.",
+        "Necessidades complexas de comunicação foram incluídas em 2025."
+      ],
+      "atencao": [
+        "Lei 15.249/2025 incluiu necessidades complexas de comunicação. Mobilidade reduzida pode ser temporária e não equivale automaticamente ao conceito de deficiência de longo prazo. Atendente pessoal e apoio escolar não assumem técnicas reservadas a profissões regulamentadas."
+      ],
+      "exemplo": "Um prédio tem escada que impede acesso: a barreira é arquitetônica. Uma conduta que exclui a pessoa por preconceito é barreira atitudinal. Variação: Uma gestante tem mobilidade reduzida; isso não basta para qualificá-la automaticamente como pessoa com deficiência nos termos do art. 2º.",
+      "prova": [
+        "Desenho universal e adaptação razoável são conceitos idênticos? Não; o primeiro concebe uso por todos, enquanto a segunda ajusta o caso concreto com os limites legais."
+      ],
+      "termos": [
+        {
+          "termo": "Adaptação razoável",
+          "significado": "Ajuste necessário e adequado ao caso, sem ônus desproporcional e indevido."
+        }
+      ],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "5628b006-4dee-5bde-9804-9f0b2b689346",
+        "content_sha256": "30957cf2258dec9a2717e56d068f4aee7a015533dd9fac5a0743c7f9c3a3e077",
+        "simples": "Para os fins da Lei, consideram-se: acessibilidade (possibilidade e condição de alcance, com segurança e autonomia, de espaços, mobiliários, edificações, transportes, informação e comunicação e outros serviços, na zona urbana e rural); desenho universal (concepção de produtos, ambientes, programas e serviços utilizáveis por todos, sem necessidade de adaptação); tecnologia assistiva (produtos, recursos e serviços que promovam a funcionalidade e a autonomia); barreiras (qualquer entrave que limite a participação social, como urbanísticas, arquitetônicas, nos transportes, nas comunicações e atitudinais); entre outros conceitos.",
+        "pontos": [
+          "Acessibilidade.",
+          "Desenho universal.",
+          "Tecnologia assistiva ou ajuda técnica.",
+          "Barreiras de vários tipos."
+        ],
+        "atencao": [
+          "Desenho universal dispensa adaptação posterior.",
+          "As barreiras incluem as ATITUDINAIS."
+        ],
+        "exemplo": "Uma rampa projetada desde o início é desenho universal.",
+        "prova": [
+          "Assertiva que restringe as barreiras às arquitetônicas erra: há também as urbanísticas, de transporte, de comunicação e atitudinais."
+        ],
+        "termos": [
+          {
+            "termo": "Tecnologia assistiva",
+            "significado": "Recursos que ampliam a autonomia da pessoa com deficiência."
+          }
+        ],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "3a12c9c1-96cb-52df-bb8d-7b498de35e67",
+      "content_sha256": "d7df165e41486b5f2c79d4b4d3f93cd20d14a547ca02721f83f9b01da11bdf49",
+      "simples": "São garantidas igualdade de oportunidades e não discriminação. Distinção, restrição ou exclusão por ação ou omissão que tenha propósito ou efeito de prejudicar direitos pode ser discriminação, incluindo recusa de adaptação razoável ou tecnologia assistiva. Benefícios de ação afirmativa não são de fruição obrigatória.",
+      "pontos": [
+        "Discriminação pode ocorrer por ação ou omissão, com propósito ou efeito prejudicial.",
+        "Fruição de benefício afirmativo não é obrigatória."
+      ],
+      "atencao": [
+        "A lei admite propósito OU efeito; não exige em toda hipótese prova de intenção declarada de discriminar."
+      ],
+      "exemplo": "A instituição recusa adaptação razoável necessária, com efeito de impedir participação: a omissão pode configurar discriminação. Variação: A pessoa opta por não utilizar um benefício de ação afirmativa: o §2º não a obriga a usufruí-lo.",
+      "prova": [
+        "A recusa de adaptação razoável pode integrar a definição de discriminação? Sim; está expressamente incluída no §1º, observados os elementos da definição."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "3a12c9c1-96cb-52df-bb8d-7b498de35e67",
+        "content_sha256": "d7df165e41486b5f2c79d4b4d3f93cd20d14a547ca02721f83f9b01da11bdf49",
+        "simples": "Toda pessoa com deficiência tem direito à igualdade de oportunidades com as demais pessoas e não sofrerá nenhuma espécie de discriminação. Considera-se discriminação em razão da deficiência toda forma de distinção, restrição ou exclusão, por ação ou omissão, que tenha o propósito ou o efeito de prejudicar, impedir ou anular o reconhecimento ou o exercício dos direitos e liberdades fundamentais, incluindo a recusa de adaptações razoáveis e de fornecimento de tecnologias assistivas. A pessoa com deficiência não está obrigada à fruição de benefícios decorrentes de ação afirmativa.",
+        "pontos": [
+          "Igualdade de oportunidades e vedação de discriminação.",
+          "Discriminação por ação ou omissão, com propósito ou efeito.",
+          "Recusa de adaptação razoável é discriminação.",
+          "Benefícios de ação afirmativa são opcionais."
+        ],
+        "atencao": [
+          "Recusar ADAPTAÇÃO RAZOÁVEL é discriminação.",
+          "Ação afirmativa não é obrigatória para a pessoa com deficiência."
+        ],
+        "exemplo": "A empresa que se recusa a adaptar o posto de trabalho comete discriminação.",
+        "prova": [
+          "Assertiva que não considera discriminação a recusa de adaptações razoáveis erra."
+        ],
+        "termos": [
+          {
+            "termo": "Adaptação razoável",
+            "significado": "Modificação necessária que não impõe ônus desproporcional."
+          }
+        ],
+        "remissoes": [
+          "Art. 88"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "d4362d0d-c910-5f1d-8f58-6c74de4711ee",
+      "content_sha256": "b1987c0ef32c7a516f6e421d4694dc53f87fa5b44da10a672aa2f8ced7975169",
+      "simples": "A proteção alcança negligência, discriminação, exploração, violência, tortura, crueldade, opressão e tratamento desumano ou degradante. Criança, adolescente, mulher e pessoa idosa com deficiência são especialmente vulneráveis para essa proteção.",
+      "pontos": [
+        "A proteção geral não se limita aos grupos especialmente vulneráveis."
+      ],
+      "atencao": [
+        "A vulnerabilidade especial não significa que os demais titulares perdem proteção."
+      ],
+      "exemplo": "A pessoa idosa com deficiência sofre exploração: há proteção geral e reconhecimento expresso de vulnerabilidade especial. Variação: A vítima é um homem adulto com deficiência: continua protegida, mesmo fora da lista especial.",
+      "prova": [
+        "O homem adulto com deficiência também recebe a proteção geral do artigo? Sim; o caput protege toda pessoa com deficiência, mesmo fora dos grupos de vulnerabilidade especial."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d4362d0d-c910-5f1d-8f58-6c74de4711ee",
+        "content_sha256": "b1987c0ef32c7a516f6e421d4694dc53f87fa5b44da10a672aa2f8ced7975169",
+        "simples": "A pessoa com deficiência será protegida de toda forma de negligência, discriminação, exploração, violência, tortura, crueldade, opressão e tratamento desumano ou degradante. São considerados especialmente vulneráveis a criança, o adolescente, a mulher e o idoso, com deficiência.",
+        "pontos": [
+          "Proteção contra negligência, discriminação, exploração, violência, tortura e crueldade.",
+          "Vulneráveis: criança, adolescente, mulher e idoso com deficiência."
+        ],
+        "atencao": [
+          "Quatro grupos especialmente vulneráveis."
+        ],
+        "exemplo": "A mulher idosa com deficiência recebe proteção reforçada.",
+        "prova": [
+          "Assertiva que não considera especialmente vulnerável a mulher com deficiência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "f1b8ef5f-0c36-5e84-9527-8e7b4e380110",
+      "content_sha256": "925d26315edd782cf231c822b58f30a86db05e9348e1ba06f430129a29fcacc5",
+      "simples": "A deficiência, por si só, não afeta plena capacidade civil. A regra alcança casamento, união estável, direitos sexuais e reprodutivos, planejamento familiar, conservação da fertilidade, convivência familiar, guarda, tutela, curatela e adoção em igualdade de oportunidades. Esterilização compulsória é vedada.",
+      "pontos": [
+        "A deficiência não retira por si só capacidade civil.",
+        "Esterilização compulsória é vedada."
+      ],
+      "atencao": [
+        "Não presuma incapacidade nem substituição de toda vontade por existir deficiência; curatela tem disciplina própria e limites."
+      ],
+      "exemplo": "O cartório não pode recusar casamento apenas por deficiência da pessoa. Variação: A família pretende impor esterilização por considerar mais conveniente: o inciso IV veda a esterilização compulsória.",
+      "prova": [
+        "A deficiência retira automaticamente a capacidade de casar? Não; ela não afeta, por si só, a plena capacidade civil prevista no artigo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 84",
+        "Art. 85"
+      ],
+      "expected": {
+        "unit_id": "f1b8ef5f-0c36-5e84-9527-8e7b4e380110",
+        "content_sha256": "925d26315edd782cf231c822b58f30a86db05e9348e1ba06f430129a29fcacc5",
+        "simples": "A deficiência não afeta a plena capacidade civil da pessoa, inclusive para casar-se e constituir união estável; exercer direitos sexuais e reprodutivos; decidir sobre o número de filhos e ter acesso a informações sobre planejamento familiar; conservar sua fertilidade, sendo vedada a esterilização compulsória; exercer o direito à família e à convivência familiar e comunitária; e exercer o direito à guarda, tutela, curatela e adoção, como adotante ou adotando, em igualdade de oportunidades.",
+        "pontos": [
+          "Capacidade civil plena.",
+          "Casamento e união estável.",
+          "Direitos sexuais e reprodutivos.",
+          "Vedada a esterilização compulsória.",
+          "Guarda, tutela, curatela e adoção."
+        ],
+        "atencao": [
+          "Deficiência NÃO afeta a capacidade civil.",
+          "Esterilização COMPULSÓRIA é vedada."
+        ],
+        "exemplo": "A pessoa com deficiência intelectual pode casar e decidir sobre ter filhos.",
+        "prova": [
+          "Assertiva que torna incapaz a pessoa com deficiência intelectual erra: a deficiência não afeta a capacidade civil."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 84"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "fb2a45d7-9e76-5aa5-b34c-2e2651f36b5f",
+      "content_sha256": "03e122b2c48ff495ac5b2ad17d0b47ddbfa9a183205bcbf6173488298baa7bdf",
+      "simples": "Toda pessoa deve comunicar à autoridade competente ameaça ou violação de direitos da pessoa com deficiência. Juízes e tribunais, quando conhecem no exercício de suas funções fatos caracterizadores das violações, devem remeter peças ao Ministério Público.",
+      "pontos": [
+        "Todos devem comunicar ameaça ou violação.",
+        "Juízes e tribunais remetem peças ao MP nas condições do parágrafo único."
+      ],
+      "atencao": [
+        "O dever geral inclui ameaça, não apenas violação já consumada; a remessa judicial tem destinatário próprio."
+      ],
+      "exemplo": "Uma pessoa presencia ameaça a direitos e comunica à autoridade competente. Variação: O juiz conhece fatos de violação no exercício da função: remete peças ao MP, conforme o parágrafo único.",
+      "prova": [
+        "Uma ameaça a direitos já deve ser comunicada à autoridade competente? Sim; o dever abrange ameaça ou violação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "fb2a45d7-9e76-5aa5-b34c-2e2651f36b5f",
+        "content_sha256": "03e122b2c48ff495ac5b2ad17d0b47ddbfa9a183205bcbf6173488298baa7bdf",
+        "simples": "É dever de todos comunicar à autoridade competente qualquer forma de ameaça ou de violação aos direitos da pessoa com deficiência. Se, no exercício de suas funções, os juízes e tribunais tiverem conhecimento de fatos que caracterizem violações previstas na Lei, devem remeter peças ao Ministério Público.",
+        "pontos": [
+          "Dever de todos de comunicar ameaças ou violações.",
+          "Juízes e tribunais enviam peças ao Ministério Público."
+        ],
+        "atencao": [
+          "O dever é de TODOS."
+        ],
+        "exemplo": "O juiz que identifica violação envia peças ao Ministério Público.",
+        "prova": [
+          "Assertiva que isenta os juízes do dever de remeter peças ao MP erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 79"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "7492db74-7ecc-5ffc-ba55-2a4d6ee83c45",
+      "content_sha256": "b628a0632b4d9bbd62f5663658eff1016d3bf2439f4f63279a79255e8726a659",
+      "simples": "Estado, sociedade e família devem efetivar com prioridade os direitos da pessoa com deficiência, incluindo vida, saúde, educação, trabalho, acessibilidade, comunicação, convivência e demais direitos previstos nas fontes indicadas. O rol não é fechado.",
+      "pontos": [
+        "Dever compartilhado por Estado, sociedade e família.",
+        "O rol de direitos não é fechado."
+      ],
+      "atencao": [
+        "Não atribua a responsabilidade exclusivamente à família ou ao Estado; o artigo reúne os três sujeitos."
+      ],
+      "exemplo": "Um programa público articula acessibilidade, educação e trabalho, com participação social e familiar. Variação: A banca afirma que apenas a família deve garantir os direitos: exclui indevidamente Estado e sociedade.",
+      "prova": [
+        "O dever previsto é exclusivo do Estado? Não; o artigo também o atribui à sociedade e à família."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "7492db74-7ecc-5ffc-ba55-2a4d6ee83c45",
+        "content_sha256": "b628a0632b4d9bbd62f5663658eff1016d3bf2439f4f63279a79255e8726a659",
+        "simples": "É dever do Estado, da sociedade e da família assegurar à pessoa com deficiência, com prioridade, a efetivação dos direitos referentes à vida, saúde, sexualidade, paternidade e maternidade, alimentação, habitação, educação, profissionalização, trabalho, previdência social, habilitação e reabilitação, transporte, acessibilidade, cultura, desporto, turismo, lazer, informação, comunicação, avanços científicos e tecnológicos, dignidade, respeito, liberdade e convivência familiar e comunitária, entre outros.",
+        "pontos": [
+          "Dever do Estado, da sociedade e da família.",
+          "Prioridade absoluta.",
+          "Rol amplo de direitos."
+        ],
+        "atencao": [
+          "Dever de TRÊS atores: Estado, sociedade e família."
+        ],
+        "exemplo": "A família e o Estado devem garantir a educação inclusiva.",
+        "prova": [
+          "Assertiva que restringe o dever ao Estado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "a4cf7fa2-0b31-5461-bd99-b36c6d06edb0",
+      "content_sha256": "64ac5fb0c0070842434b8ccb4282b84487417372bcca708739645e7a38113b2f",
+      "simples": "O atendimento prioritário alcança proteção e socorro, serviços, recursos acessíveis, transporte, informação, restituição de IR e tramitação processual. Estende-se ao acompanhante ou atendente pessoal, exceto restituição de IR e tramitação dos incisos VI e VII. Em emergência, observam-se os protocolos médicos.",
+      "pontos": [
+        "IR e tramitação não se estendem ao acompanhante pelo §1º.",
+        "Emergência observa protocolos médicos."
+      ],
+      "atencao": [
+        "A prioridade do acompanhante não transfere todos os benefícios pessoais; prioridade em emergência não afasta triagem clínica."
+      ],
+      "exemplo": "O acompanhante auxilia a pessoa com deficiência na fila de atendimento e recebe a extensão legal pertinente. Variação: Ele pede prioridade para sua própria restituição de IR: o §1º excepciona o inciso VI.",
+      "prova": [
+        "A prioridade em emergência permite ignorar protocolos médicos? Não; o §2º a condiciona aos protocolos de atendimento médico."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 3"
+      ],
+      "expected": {
+        "unit_id": "a4cf7fa2-0b31-5461-bd99-b36c6d06edb0",
+        "content_sha256": "64ac5fb0c0070842434b8ccb4282b84487417372bcca708739645e7a38113b2f",
+        "simples": "A pessoa com deficiência tem direito a atendimento prioritário, sobretudo para proteção e socorro em quaisquer circunstâncias; atendimento em todas as instituições e serviços ao público; recursos humanos e tecnológicos que garantam igualdade de condições; pontos de parada, estações e terminais acessíveis e segurança no embarque e desembarque; acesso a informações e comunicação acessíveis; recebimento de restituição de imposto de renda; e tramitação processual prioritária em todos os atos. Os direitos são extensivos ao acompanhante ou atendente pessoal, exceto quanto à restituição do imposto de renda e à prioridade processual. Nos serviços de emergência, a prioridade é condicionada aos protocolos de atendimento médico.",
+        "pontos": [
+          "Atendimento prioritário em instituições e serviços.",
+          "Prioridade na restituição do imposto de renda e na tramitação processual.",
+          "Extensivo ao acompanhante, exceto imposto de renda e prioridade processual.",
+          "Emergência: protocolos médicos."
+        ],
+        "atencao": [
+          "Acompanhante NÃO tem prioridade na restituição do IR nem na tramitação processual.",
+          "Na emergência, vale a gravidade clínica."
+        ],
+        "exemplo": "O acompanhante também é atendido com prioridade no banco, mas não na restituição do imposto.",
+        "prova": [
+          "Assertiva que estende ao acompanhante a prioridade processual erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10",
+      "unit_id": "01893925-32dd-531c-a66c-7d8d0289af41",
+      "content_sha256": "84fdb4a3871e1b8658fa2e64e722930355cb97ebef85848fb363386161ef4584",
+      "simples": "O poder público deve garantir dignidade ao longo de toda a vida. Em risco, emergência ou calamidade, a pessoa com deficiência é considerada vulnerável e requer medidas públicas de proteção e segurança.",
+      "pontos": [
+        "Dignidade ao longo de toda a vida.",
+        "Medidas específicas em risco, emergência e calamidade."
+      ],
+      "atencao": [
+        "A proteção de vulnerabilidade não permite apagar autonomia ou presumir incapacidade civil."
+      ],
+      "exemplo": "No abrigo de uma enchente, são organizados recursos acessíveis e medidas de proteção adequadas. Variação: A proteção é solicitada fora de calamidade: a garantia de dignidade ao longo da vida continua aplicável.",
+      "prova": [
+        "A garantia de dignidade vale também fora de situações de calamidade? Sim; o caput a assegura ao longo de toda a vida."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "01893925-32dd-531c-a66c-7d8d0289af41",
+        "content_sha256": "84fdb4a3871e1b8658fa2e64e722930355cb97ebef85848fb363386161ef4584",
+        "simples": "Compete ao poder público garantir a dignidade da pessoa com deficiência ao longo de toda a vida. Em situações de risco, emergência ou estado de calamidade pública, a pessoa com deficiência será considerada vulnerável, devendo o poder público adotar medidas para sua proteção e segurança.",
+        "pontos": [
+          "Dignidade ao longo de toda a vida.",
+          "Vulnerabilidade em risco, emergência e calamidade."
+        ],
+        "atencao": [
+          "Proteção especial em calamidades."
+        ],
+        "exemplo": "Em uma enchente, o poder público prioriza o resgate de pessoas com deficiência.",
+        "prova": [
+          "Assertiva que dispensa medidas específicas em calamidade pública erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-11",
+      "unit_id": "40f8bb45-75ca-5506-a8aa-864ee959c339",
+      "content_sha256": "07d0699b0aa431afcea0703267988bb0965acdf651fc1224a8ccf03314fc83d9",
+      "simples": "A pessoa com deficiência não pode ser obrigada a intervenção clínica ou cirúrgica, tratamento ou institucionalização forçada. Em situação de curatela, o consentimento pode ser suprido na forma da lei. Leia também as condições de consentimento e emergência dos arts. 12 e 13.",
+      "pontos": [
+        "Não há autorização geral para intervenção ou institucionalização forçada.",
+        "Consentimento suprido depende da forma legal."
+      ],
+      "atencao": [
+        "Curatela não é licença geral para impor qualquer procedimento; é preciso respeitar requisitos legais e participação da pessoa."
+      ],
+      "exemplo": "Uma instituição impõe internação apenas porque existe deficiência: a proibição legal deve ser confrontada. Variação: Há emergência em saúde: examine a exceção e as salvaguardas do art. 13, sem inventar autorização irrestrita.",
+      "prova": [
+        "A existência de curatela autoriza qualquer tratamento forçado? Não; o suprimento de consentimento só pode ocorrer na forma da lei e com as garantias aplicáveis."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 12",
+        "Art. 13"
+      ],
+      "expected": {
+        "unit_id": "40f8bb45-75ca-5506-a8aa-864ee959c339",
+        "content_sha256": "07d0699b0aa431afcea0703267988bb0965acdf651fc1224a8ccf03314fc83d9",
+        "simples": "A pessoa com deficiência não poderá ser obrigada a se submeter a intervenção clínica ou cirúrgica, a tratamento ou a institucionalização forçada. O consentimento da pessoa com deficiência em situação de curatela poderá ser suprido, na forma da lei.",
+        "pontos": [
+          "Vedada intervenção, tratamento ou institucionalização forçada.",
+          "Consentimento do curatelado pode ser suprido."
+        ],
+        "atencao": [
+          "Vedada a institucionalização FORÇADA."
+        ],
+        "exemplo": "A pessoa com deficiência não pode ser internada contra a vontade, salvo hipóteses legais.",
+        "prova": [
+          "Assertiva que autoriza a institucionalização forçada da pessoa com deficiência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12",
+      "unit_id": "1745acbf-7955-59a3-8e48-37267a48e5fc",
+      "content_sha256": "5f94e9918fd903652bde655cb75a9cb652a1b534c0b7ad81dfa7293d6ddb8d98",
+      "simples": "Tratamento, procedimento, hospitalização e pesquisa exigem consentimento prévio, livre e esclarecido. A pessoa em curatela deve participar da obtenção de consentimento no maior grau possível. Pesquisa em tutela ou curatela é excepcional, com indício de benefício direto próprio ou de outras pessoas com deficiência e sem alternativa comparável com participantes não tutelados ou curatelados.",
+      "pontos": [
+        "Consentimento prévio, livre e esclarecido.",
+        "Participação da pessoa em curatela no maior grau possível."
+      ],
+      "atencao": [
+        "Não confunda benefício científico abstrato com o benefício direto e as condições da pesquisa excepcional; confira a exceção de emergência do art. 13."
+      ],
+      "exemplo": "A equipe explica o procedimento de forma acessível e permite participação da pessoa em curatela. Variação: Existe alternativa de eficácia comparável com participantes não curatelados: falta a condição do §2º para a pesquisa excepcional descrita.",
+      "prova": [
+        "A pessoa em curatela deve participar da obtenção de consentimento no maior grau possível? Sim; é a garantia expressa do §1º."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 13"
+      ],
+      "expected": {
+        "unit_id": "1745acbf-7955-59a3-8e48-37267a48e5fc",
+        "content_sha256": "5f94e9918fd903652bde655cb75a9cb652a1b534c0b7ad81dfa7293d6ddb8d98",
+        "simples": "O consentimento prévio, livre e esclarecido da pessoa com deficiência é indispensável para a realização de tratamento, procedimento, hospitalização e pesquisa científica. Em caso de curatela, deve ser assegurada sua participação, no maior grau possível, para obtenção do consentimento. A pesquisa científica com pessoa em situação de tutela ou de curatela só pode ser realizada, em caráter excepcional, quando houver indícios de benefício direto para sua saúde ou de outras pessoas com deficiência e desde que não haja outra opção de eficácia comparável.",
+        "pontos": [
+          "Consentimento prévio, livre e esclarecido.",
+          "Participação do curatelado.",
+          "Pesquisa com tutelados ou curatelados só excepcionalmente."
+        ],
+        "atencao": [
+          "Consentimento PRÉVIO, LIVRE e ESCLARECIDO."
+        ],
+        "exemplo": "O hospital explica o procedimento à pessoa com deficiência antes de realizá-lo.",
+        "prova": [
+          "Assertiva que dispensa o consentimento da pessoa com deficiência para o tratamento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 13"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-13",
+      "unit_id": "954c4da9-8f96-5ed3-aea8-ac4c688496ab",
+      "content_sha256": "00814d8e38cf2dcb23f9979799e42cc26cea237f62cc5df7a9c9caa1643a2fa7",
+      "simples": "Atendimento sem consentimento prévio, livre e esclarecido é permitido nos casos de risco de morte e emergência em saúde, resguardado o superior interesse e adotadas as salvaguardas legais cabíveis.",
+      "pontos": [
+        "Exceção: risco de morte e emergência em saúde.",
+        "Superior interesse e salvaguardas legais permanecem."
+      ],
+      "atencao": [
+        "Não transporte essa exceção para todo procedimento eletivo, nem dispense superior interesse e salvaguardas."
+      ],
+      "exemplo": "Há risco de morte e impossibilidade de consentimento prévio: o atendimento é examinado sob a exceção legal com salvaguardas. Variação: O procedimento pode aguardar e não há emergência: o art. 13 não cria dispensa geral do consentimento.",
+      "prova": [
+        "O artigo autoriza atendimento sem consentimento em qualquer conveniência administrativa? Não; limita a hipótese a risco de morte e emergência em saúde, com garantias legais."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "954c4da9-8f96-5ed3-aea8-ac4c688496ab",
+        "content_sha256": "00814d8e38cf2dcb23f9979799e42cc26cea237f62cc5df7a9c9caa1643a2fa7",
+        "simples": "A pessoa com deficiência somente será atendida sem seu consentimento prévio, livre e esclarecido em casos de risco de morte e de emergência em saúde, resguardado seu superior interesse e adotadas as salvaguardas legais cabíveis.",
+        "pontos": [
+          "Atendimento sem consentimento só em risco de morte ou emergência."
+        ],
+        "atencao": [
+          "Exceção restrita."
+        ],
+        "exemplo": "Em parada cardíaca, o atendimento é feito sem o consentimento prévio.",
+        "prova": [
+          "Assertiva que permite tratar sem consentimento qualquer pessoa com deficiência, em qualquer situação, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-14",
+      "unit_id": "4ca3a27f-9e47-53f8-a8ab-1e9cf286f19d",
+      "content_sha256": "e9a79131e92c351e2b94ac3a73e559701da799a8633807946c13a76d80f7d354",
+      "simples": "Habilitação e reabilitação são direitos orientados ao desenvolvimento de potencialidades, talentos, habilidades e aptidões para autonomia e participação social em igualdade. A finalidade não se reduz a tratar uma doença.",
+      "pontos": [
+        "Habilitação e reabilitação visam autonomia e participação."
+      ],
+      "atencao": [
+        "Não confunda o direito ao processo com obrigação de eliminar toda diferença individual."
+      ],
+      "exemplo": "O programa desenvolve habilidades de comunicação e trabalho, visando autonomia e participação. Variação: A intervenção atende dimensões artísticas e psicossociais: também pode integrar as finalidades expressas.",
+      "prova": [
+        "A autonomia e a participação social orientam habilitação e reabilitação? Sim; são finalidades do processo previsto."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 15",
+        "Art. 16"
+      ],
+      "expected": {
+        "unit_id": "4ca3a27f-9e47-53f8-a8ab-1e9cf286f19d",
+        "content_sha256": "e9a79131e92c351e2b94ac3a73e559701da799a8633807946c13a76d80f7d354",
+        "simples": "O processo de habilitação e de reabilitação é um direito da pessoa com deficiência. Tem por objetivo o desenvolvimento de potencialidades, talentos, habilidades e aptidões físicas, cognitivas, sensoriais, psicossociais, atitudinais, profissionais e artísticas que contribuam para a conquista da autonomia e da participação social em igualdade de condições.",
+        "pontos": [
+          "Habilitação e reabilitação como direito.",
+          "Desenvolvimento de potencialidades e autonomia."
+        ],
+        "atencao": [
+          "Habilitação e reabilitação são DIREITOS."
+        ],
+        "exemplo": "O programa de reabilitação ajuda a pessoa a recuperar autonomia.",
+        "prova": [
+          "Assertiva que trata a reabilitação como mera faculdade do Estado erra: é direito da pessoa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-15",
+      "unit_id": "ad5297d1-812e-5565-be53-b2f857bd4091",
+      "content_sha256": "e43e64b12d2e21113e30108cbc0651305e5e7142d516a5073304998d88a34b97",
+      "simples": "A habilitação e a reabilitação usam avaliação multidisciplinar de necessidades, habilidades e potencialidades. Incluem diagnóstico e intervenção precoces, compensação de limitações, políticas articuladas, rede intersetorial e serviços próximos ao domicílio, inclusive rural, respeitadas RAS e normas do SUS.",
+      "pontos": [
+        "Avaliação multidisciplinar e rede articulada.",
+        "Proximidade ao domicílio inclui zona rural, respeitadas as redes do SUS."
+      ],
+      "atencao": [
+        "Proximidade ao domicílio é diretriz com observância da organização das redes, não promessa de todo serviço especializado em qualquer endereço."
+      ],
+      "exemplo": "A equipe articula atendimento de saúde e outras políticas segundo as necessidades da pessoa. Variação: A residência é rural: a diretriz expressamente a inclui, respeitadas as redes e normas do SUS.",
+      "prova": [
+        "A diretriz de proximidade ao domicílio inclui a zona rural, respeitadas as redes do SUS? Sim; o inciso V a inclui com as condições previstas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "ad5297d1-812e-5565-be53-b2f857bd4091",
+        "content_sha256": "e43e64b12d2e21113e30108cbc0651305e5e7142d516a5073304998d88a34b97",
+        "simples": "O processo de habilitação e reabilitação baseia-se em avaliação multidisciplinar das necessidades, habilidades e potencialidades de cada pessoa, observadas as diretrizes de diagnóstico e intervenção precoces; medidas para compensar perda ou limitação funcional; atuação permanente, integrada e articulada de políticas públicas; rede de serviços articulados, com atuação intersetorial; e prestação de serviços próximo ao domicílio, inclusive na zona rural, respeitadas as Redes de Atenção à Saúde e as normas do SUS.",
+        "pontos": [
+          "Avaliação multidisciplinar.",
+          "Diagnóstico e intervenção precoces.",
+          "Rede intersetorial.",
+          "Serviços perto do domicílio, inclusive na zona rural."
+        ],
+        "atencao": [
+          "Serviços próximos ao domicílio, inclusive no meio rural."
+        ],
+        "exemplo": "A criança tem diagnóstico e intervenção precoces perto de casa.",
+        "prova": [
+          "Assertiva que restringe os serviços de reabilitação às capitais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-16",
+      "unit_id": "a868b92b-9e94-5cf9-9208-65786e77b3d8",
+      "content_sha256": "8f0cde35a34b00d7fbb0ed8b3df048c9ef51a8e0a5f7bf33f714c80a77cc7d7c",
+      "simples": "Programas de habilitação e reabilitação devem oferecer organização e recursos adequados à pessoa, acessibilidade, tecnologia assistiva e de reabilitação, materiais, equipamentos e apoio técnico, além de capacitação continuada de profissionais.",
+      "pontos": [
+        "Acessibilidade, recursos adequados e capacitação continuada são garantias distintas."
+      ],
+      "atencao": [
+        "Um equipamento isolado não substitui acessibilidade, apoio e capacitação dos serviços."
+      ],
+      "exemplo": "O programa fornece tecnologia assistiva apropriada e prepara a equipe para seu uso adequado. Variação: O serviço oferece o recurso em ambiente inacessível: o inciso II continua exigindo acessibilidade.",
+      "prova": [
+        "A oferta de tecnologia assistiva elimina o dever de capacitação continuada? Não; são garantias distintas e cumulativamente previstas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a868b92b-9e94-5cf9-9208-65786e77b3d8",
+        "content_sha256": "8f0cde35a34b00d7fbb0ed8b3df048c9ef51a8e0a5f7bf33f714c80a77cc7d7c",
+        "simples": "Nos programas e serviços de habilitação e de reabilitação, são garantidos organização, serviços, métodos, técnicas e recursos para atender às características de cada pessoa; acessibilidade em todos os ambientes e serviços; tecnologia assistiva, tecnologia de reabilitação, materiais e equipamentos adequados e apoio técnico profissional; e capacitação continuada de todos os profissionais.",
+        "pontos": [
+          "Atendimento individualizado.",
+          "Acessibilidade.",
+          "Tecnologia assistiva e apoio técnico.",
+          "Capacitação continuada dos profissionais."
+        ],
+        "atencao": [
+          "Quatro garantias."
+        ],
+        "exemplo": "O centro de reabilitação adapta os métodos a cada paciente.",
+        "prova": [
+          "Assertiva que dispensa a capacitação dos profissionais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17",
+      "unit_id": "362d18f4-cc09-5654-ac59-83470b6fdcbe",
+      "content_sha256": "de1d65e7a28dbeb3cde267fafa5408eb978e9d97b87076b74d6564f2440341ee",
+      "simples": "SUS e Suas devem promover ações articuladas para pessoa com deficiência e família acessarem informações, orientações e políticas públicas. O rol de áreas inclui saúde, educação, transporte, trabalho, crédito e proteção de direitos, visando participação social.",
+      "pontos": [
+        "SUS e Suas articulam orientação para acesso a políticas públicas."
+      ],
+      "atencao": [
+        "Articulação entre SUS e Suas não transforma os dois sistemas em um único serviço nem limita orientação à saúde."
+      ],
+      "exemplo": "A equipe informa a família sobre políticas de transporte acessível e assistência social disponíveis. Variação: A demanda trata de acesso ao trabalho ou crédito: o parágrafo permite orientações também nessas áreas.",
+      "prova": [
+        "As orientações previstas se restringem à saúde? Não; o parágrafo abrange diversas áreas de exercício da cidadania."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "362d18f4-cc09-5654-ac59-83470b6fdcbe",
+        "content_sha256": "de1d65e7a28dbeb3cde267fafa5408eb978e9d97b87076b74d6564f2440341ee",
+        "simples": "Os serviços do SUS e do Suas deverão promover ações articuladas para garantir à pessoa com deficiência e sua família a aquisição de informações, orientações e formas de acesso às políticas públicas, com a finalidade de propiciar sua plena participação social. Podem fornecer informações em saúde, educação, cultura, esporte, lazer, transporte, previdência, assistência, habitação, trabalho, empreendedorismo, crédito e defesa de direitos.",
+        "pontos": [
+          "Ações articuladas do SUS e do Suas.",
+          "Informações e orientações sobre políticas públicas."
+        ],
+        "atencao": [
+          "Articulação entre saúde e assistência social."
+        ],
+        "exemplo": "O serviço do Suas orienta a família sobre os benefícios disponíveis.",
+        "prova": [
+          "Assertiva que restringe a orientação a temas de saúde erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 18"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-18",
+      "unit_id": "fb4b1648-f0d3-54ed-b05e-07be4a138075",
+      "content_sha256": "a4f8db7f47d2bd068347c2760eca887f761f40868ee03607f72c1c4e04048b2b",
+      "simples": "Atenção integral à saúde é garantida em todos os níveis pelo SUS, com acesso universal e igualitário. Há participação nas políticas, respeito à dignidade e autonomia, capacitação, atendimento multidisciplinar e as ações do §4º. As diretrizes alcançam também privados que complementam o SUS ou recebem recursos públicos para manutenção.",
+      "pontos": [
+        "Integralidade em todos os níveis do SUS.",
+        "Diretrizes alcançam certos serviços privados; psicológico inclui familiares e atendentes."
+      ],
+      "atencao": [
+        "Lei 15.280/2025: o atendimento psicológico do §4º, V, inclui familiares e atendentes pessoais, especialmente na vitimização em crime contra a dignidade sexual. Não limite automaticamente toda assistência psicológica apenas a essa situação."
+      ],
+      "exemplo": "A pessoa recebe atendimento psicológico, com inclusão de familiares ou atendentes nas condições da norma. Variação: Uma instituição privada recebe recursos públicos para manutenção: o §5º também lhe aplica as diretrizes deste artigo.",
+      "prova": [
+        "As diretrizes também alcançam privados que participam complementarmente do SUS ou recebem recursos públicos para manutenção? Sim; são as hipóteses do §5º."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 20",
+        "Art. 23"
+      ],
+      "expected": {
+        "unit_id": "fb4b1648-f0d3-54ed-b05e-07be4a138075",
+        "content_sha256": "a4f8db7f47d2bd068347c2760eca887f761f40868ee03607f72c1c4e04048b2b",
+        "simples": "É assegurada atenção integral à saúde da pessoa com deficiência em todos os níveis de complexidade, por intermédio do SUS, com acesso universal e igualitário. Assegura-se participação na elaboração das políticas de saúde, atendimento segundo normas éticas e técnicas, capacitação inicial e continuada dos profissionais e ações de saúde pública com diagnóstico e intervenção precoces por equipe multidisciplinar, serviços de habilitação e reabilitação, atendimento domiciliar multidisciplinar, tratamento ambulatorial e internação, campanhas de vacinação e atendimento psicológico, inclusive para familiares e atendentes pessoais.",
+        "pontos": [
+          "Atenção integral pelo SUS.",
+          "Participação na elaboração das políticas.",
+          "Diagnóstico precoce, reabilitação e atendimento domiciliar.",
+          "Apoio psicológico a familiares e atendentes."
+        ],
+        "atencao": [
+          "Atendimento psicológico alcança familiares e atendentes."
+        ],
+        "exemplo": "O SUS oferece atendimento domiciliar multidisciplinar à pessoa com deficiência.",
+        "prova": [
+          "Assertiva que exclui o apoio psicológico a familiares erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 19"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-19",
+      "unit_id": "5e6d9dd3-bee8-59a9-b6e7-b1407f34ccf0",
+      "content_sha256": "3e768cd4c88128a40327d3a88c540e194ad846260868780e7bf9440dae336aeb",
+      "simples": "O SUS desenvolve prevenção de deficiências por causas evitáveis, com acompanhamento de gravidez, parto e puerpério, alimentação e nutrição, imunização e triagem neonatal, controle de gestação de alto risco e atendimento neonatal preventivo.",
+      "pontos": [
+        "Prevenção das deficiências por causas evitáveis.",
+        "Telessaúde neonatal incluída em 2022."
+      ],
+      "atencao": [
+        "Lei 14.510/2022 incluiu aprimoramento neonatal, com prevenção de danos cerebrais e sequelas neurológicas, inclusive por telessaúde; o artigo não afirma que toda deficiência seja evitável."
+      ],
+      "exemplo": "O programa amplia triagem neonatal e cuidados preventivos conforme as ações do SUS. Variação: O serviço utiliza telessaúde no atendimento neonatal preventivo: o inciso V prevê essa possibilidade.",
+      "prova": [
+        "O artigo afirma que todas as deficiências são causadas por falha de prevenção? Não; refere-se à prevenção por causas evitáveis, sem essa generalização."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "5e6d9dd3-bee8-59a9-b6e7-b1407f34ccf0",
+        "content_sha256": "3e768cd4c88128a40327d3a88c540e194ad846260868780e7bf9440dae336aeb",
+        "simples": "Compete ao SUS desenvolver ações destinadas à prevenção de deficiências por causas evitáveis, inclusive por meio de acompanhamento da gravidez, do parto e do puerpério com parto humanizado e seguro; promoção de práticas alimentares adequadas; aprimoramento dos programas de imunização e de triagem neonatal; identificação e controle da gestante de alto risco; e aprimoramento do atendimento neonatal para prevenir danos cerebrais e sequelas neurológicas em recém-nascidos, inclusive por telessaúde.",
+        "pontos": [
+          "Prevenção de deficiências evitáveis.",
+          "Acompanhamento da gravidez, parto e puerpério.",
+          "Imunização e triagem neonatal.",
+          "Atendimento neonatal."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o inciso V (atendimento neonatal e telessaúde) foi incluído por lei posterior."
+        ],
+        "exemplo": "A triagem neonatal identifica doenças que podem causar deficiência.",
+        "prova": [
+          "Assertiva que exclui a triagem neonatal das ações de prevenção erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 18"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-20",
+      "unit_id": "54b049ae-2b1b-58dd-9b4f-2328d683bd6d",
+      "content_sha256": "03d0b3a0226943715da5a867321933f5e5cc5393b22e81c60c1598cb05ec017e",
+      "simples": "Planos e seguros privados de saúde devem garantir à pessoa com deficiência, no mínimo, todos os serviços e produtos ofertados aos demais clientes. A garantia impede diminuir cobertura apenas pela condição de deficiência.",
+      "pontos": [
+        "Oferta privada de serviços e produtos, no mínimo, igual à dos demais clientes."
+      ],
+      "atencao": [
+        "Não leia no mínimo como autorização para oferecer cobertura inferior nem confunda com o atendimento universal pelo SUS."
+      ],
+      "exemplo": "A operadora pretende retirar de um cliente com deficiência um serviço que oferece aos demais: deve observar o mínimo igual previsto. Variação: O atendimento é pelo SUS: a disciplina dos arts. 18 e seguintes tem suas próprias garantias, sem confundir sistemas.",
+      "prova": [
+        "A deficiência permite oferecer menos produtos e serviços que aos demais clientes? Não; o art. 20 estabelece, no mínimo, a mesma oferta."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "54b049ae-2b1b-58dd-9b4f-2328d683bd6d",
+        "content_sha256": "03d0b3a0226943715da5a867321933f5e5cc5393b22e81c60c1598cb05ec017e",
+        "simples": "As operadoras de planos e seguros privados de saúde são obrigadas a garantir à pessoa com deficiência, no mínimo, todos os serviços e produtos ofertados aos demais clientes.",
+        "pontos": [
+          "Planos de saúde: pelo menos os mesmos serviços e produtos aos demais clientes."
+        ],
+        "atencao": [
+          "Cobertura NO MÍNIMO igual à dos demais clientes."
+        ],
+        "exemplo": "O plano não pode oferecer cobertura reduzida à pessoa com deficiência.",
+        "prova": [
+          "Assertiva que permite ao plano limitar a cobertura da pessoa com deficiência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 23"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-21",
+      "unit_id": "e13809b5-b046-5118-9a5f-1adc4e955a6c",
+      "content_sha256": "f948be3a248653160f96d431f2a7c3a72c68c7c504b2ea0ea0ec1928bc752f4b",
+      "simples": "Quando os meios de atenção à saúde se esgotam no local de residência, há atendimento fora do domicílio para diagnóstico e tratamento, com transporte e acomodação da pessoa e de seu acompanhante.",
+      "pontos": [
+        "Atendimento externo após esgotar meios locais, com transporte e acomodação de pessoa e acompanhante."
+      ],
+      "atencao": [
+        "A hipótese exige esgotamento dos meios locais; não é escolha irrestrita de qualquer estabelecimento."
+      ],
+      "exemplo": "Os meios locais foram esgotados e é necessário atendimento em outro município: transporte e acomodação incluem acompanhante. Variação: O serviço local atende adequadamente à necessidade: o artigo não concede por esse motivo uma opção irrestrita de tratamento em qualquer cidade.",
+      "prova": [
+        "O atendimento fora do domicílio, quando esgotados os meios locais, inclui transporte e acomodação do acompanhante? Sim; o artigo também garante esses meios ao acompanhante."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "e13809b5-b046-5118-9a5f-1adc4e955a6c",
+        "content_sha256": "f948be3a248653160f96d431f2a7c3a72c68c7c504b2ea0ea0ec1928bc752f4b",
+        "simples": "Quando esgotados os meios de atenção à saúde da pessoa com deficiência no local de residência, será prestado atendimento fora de domicílio, para fins de diagnóstico e tratamento, garantidos o transporte e a acomodação da pessoa com deficiência e de seu acompanhante.",
+        "pontos": [
+          "Atendimento fora de domicílio.",
+          "Transporte e acomodação da pessoa e do acompanhante."
+        ],
+        "atencao": [
+          "Custeio do transporte e da hospedagem do acompanhante."
+        ],
+        "exemplo": "Sem especialista na cidade, o SUS custeia o tratamento e a hospedagem em outra cidade.",
+        "prova": [
+          "Assertiva que exclui o acompanhante do transporte e da acomodação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 18"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-22",
+      "unit_id": "dca12208-2ef3-5b74-9852-555805970536",
+      "content_sha256": "6704a53a35605edc4180ef895979adceeebb3f37ebf0d682bf5a591ffe3391c6",
+      "simples": "Pessoa com deficiência internada ou em observação tem direito a acompanhante ou atendente pessoal em tempo integral, com condições adequadas. Impossibilidade deve ser justificada por escrito pelo profissional responsável; a instituição adota providências para suprir a ausência.",
+      "pontos": [
+        "Permanência em tempo integral; impossibilidade tem justificativa escrita e medidas substitutivas."
+      ],
+      "atencao": [
+        "Não transforme uma proibição administrativa genérica em justificativa suficiente, nem esqueça as providências substitutivas do §2º."
+      ],
+      "exemplo": "Durante observação, a instituição proporciona permanência adequada do acompanhante. Variação: Existe impossibilidade justificada por escrito: devem ser adotadas providências para suprir a ausência.",
+      "prova": [
+        "A impossibilidade de permanência dispensa toda providência da instituição? Não; além da justificativa escrita, o §2º exige medidas cabíveis para suprir a ausência."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "dca12208-2ef3-5b74-9852-555805970536",
+        "content_sha256": "6704a53a35605edc4180ef895979adceeebb3f37ebf0d682bf5a591ffe3391c6",
+        "simples": "À pessoa com deficiência internada ou em observação é assegurado o direito a acompanhante ou a atendente pessoal, devendo o órgão ou a instituição de saúde proporcionar condições adequadas para sua permanência em tempo integral. Na impossibilidade, cabe ao profissional de saúde justificá-la por escrito, e a instituição deve adotar as providências para suprir a ausência.",
+        "pontos": [
+          "Direito a acompanhante ou atendente pessoal.",
+          "Permanência em tempo integral.",
+          "Negativa justificada por escrito."
+        ],
+        "atencao": [
+          "Negativa só com justificativa ESCRITA."
+        ],
+        "exemplo": "O hospital permite que o atendente pessoal fique com o paciente.",
+        "prova": [
+          "Assertiva que permite negar o acompanhante sem justificativa escrita erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 21"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-23",
+      "unit_id": "c781e50b-2818-5be8-8835-87c85663561b",
+      "content_sha256": "3578b751b22ad69dafb2a0616a5b9aca2fdf545aa1d926b18ca9de16a7832d8c",
+      "simples": "São vedadas todas as formas de discriminação, inclusive cobrança diferenciada por planos e seguros privados de saúde em razão da deficiência. O fundamento da diferença importa para o enquadramento.",
+      "pontos": [
+        "Cobrança diferenciada pela condição de deficiência é vedada."
+      ],
+      "atencao": [
+        "Não confunda o motivo deficiência com qualquer variação de preço decorrente de outra causa legalmente analisada."
+      ],
+      "exemplo": "A operadora acrescenta um valor apenas porque o cliente tem deficiência: confronte a vedação expressa. Variação: Uma diferença de preço possui outra causa alegada: ela exige análise própria, não aprovação ou proibição automática apenas por este artigo.",
+      "prova": [
+        "O plano pode cobrar adicional apenas pela condição de deficiência? Não; o artigo veda a discriminação, incluindo valores diferenciados por esse motivo."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "c781e50b-2818-5be8-8835-87c85663561b",
+        "content_sha256": "3578b751b22ad69dafb2a0616a5b9aca2fdf545aa1d926b18ca9de16a7832d8c",
+        "simples": "São vedadas todas as formas de discriminação contra a pessoa com deficiência, inclusive por meio de cobrança de valores diferenciados por planos e seguros privados de saúde, em razão de sua condição.",
+        "pontos": [
+          "Vedada a cobrança diferenciada pelos planos de saúde."
+        ],
+        "atencao": [
+          "Vedado cobrar mais por causa da deficiência."
+        ],
+        "exemplo": "O plano não pode cobrar mensalidade maior por causa da deficiência.",
+        "prova": [
+          "Assertiva que permite cobrança maior pelo plano em razão da deficiência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 20"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-24",
+      "unit_id": "8448032d-8c89-51c6-8fbb-cbda5f1a08e5",
+      "content_sha256": "67634b2350197d25fec487b4e0c2b57a092c603d8508b1b4839352c1fc75f4ee",
+      "simples": "O acesso à saúde pública e privada e às informações usa tecnologia assistiva e formas de comunicação acessíveis do art. 3º, V. Serviços públicos devem implementar comunicação aumentativa e alternativa de baixa tecnologia e capacitação permanente para necessidades complexas de comunicação.",
+      "pontos": [
+        "Comunicação acessível em serviços públicos e privados.",
+        "Novas medidas específicas dos serviços públicos, incluídas em 2025."
+      ],
+      "atencao": [
+        "Lei 15.249/2025 incluiu o parágrafo único; sua obrigação específica refere-se aos serviços públicos. O caput continua abrangendo públicos e privados."
+      ],
+      "exemplo": "O serviço oferece recursos de comunicação adequados para a pessoa compreender e expressar informações. Variação: É serviço público: também deve implementar as medidas específicas de comunicação e capacitação do parágrafo novo.",
+      "prova": [
+        "O caput assegura acesso à saúde e à informação com comunicação acessível nos serviços privados? Sim; públicos e privados estão expressamente abrangidos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "8448032d-8c89-51c6-8fbb-cbda5f1a08e5",
+        "content_sha256": "67634b2350197d25fec487b4e0c2b57a092c603d8508b1b4839352c1fc75f4ee",
+        "simples": "É assegurado à pessoa com deficiência o acesso aos serviços de saúde, públicos e privados, e às informações prestadas e recebidas, por meio de recursos de tecnologia assistiva e de todas as formas de comunicação. Os serviços públicos de saúde implementarão sistemas de comunicação aumentativa e alternativa de baixa tecnologia e promoverão a capacitação permanente das equipes para o atendimento de pessoas com necessidades complexas de comunicação.",
+        "pontos": [
+          "Acesso à informação em saúde por tecnologia assistiva.",
+          "Comunicação aumentativa e alternativa.",
+          "Capacitação das equipes."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o parágrafo único foi incluído por lei posterior."
+        ],
+        "exemplo": "A unidade de saúde usa pranchas de pictogramas para se comunicar com pacientes.",
+        "prova": [
+          "Assertiva que dispensa recursos de comunicação alternativa nos serviços públicos de saúde erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 62-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-25",
+      "unit_id": "26016cb8-95a3-5e84-af9f-60d319e967cd",
+      "content_sha256": "75ebd869401c5836223c494565b8c3f77f1881209d0916c10392130bd8b0dfcd",
+      "simples": "Espaços públicos e privados de saúde devem assegurar acesso com remoção de barreiras por projetos arquitetônicos, de ambientação e de comunicação, observadas as especificidades físicas, sensoriais, intelectuais e mentais.",
+      "pontos": [
+        "Remoção de barreiras físicas, de ambientação e de comunicação."
+      ],
+      "atencao": [
+        "Acessibilidade não se reduz a instalar rampa; informação e ambientação também entram na norma."
+      ],
+      "exemplo": "Uma clínica ajusta seu espaço e a comunicação para acesso de pessoas com diferentes deficiências. Variação: O local possui rampa, mas a comunicação continua inacessível: permanece uma dimensão expressa a atender.",
+      "prova": [
+        "A acessibilidade do serviço de saúde se limita a barreiras físicas? Não; o artigo inclui ambientação e comunicação, conforme as diferentes especificidades."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "26016cb8-95a3-5e84-af9f-60d319e967cd",
+        "content_sha256": "75ebd869401c5836223c494565b8c3f77f1881209d0916c10392130bd8b0dfcd",
+        "simples": "Os espaços dos serviços de saúde, públicos e privados, devem assegurar o acesso da pessoa com deficiência, em conformidade com a legislação, mediante a remoção de barreiras, por meio de projetos arquitetônico, de ambientação de interior e de comunicação que atendam às especificidades das pessoas com deficiência física, sensorial, intelectual e mental.",
+        "pontos": [
+          "Remoção de barreiras nos serviços de saúde.",
+          "Projetos arquitetônico, de interior e de comunicação."
+        ],
+        "atencao": [
+          "Vale para serviços públicos e privados."
+        ],
+        "exemplo": "A clínica privada deve ter rampas e sinalização acessível.",
+        "prova": [
+          "Assertiva que restringe a acessibilidade aos serviços públicos de saúde erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 56"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-26",
+      "unit_id": "852bd7b9-ac15-5d7b-8f90-6d3c93275cfc",
+      "content_sha256": "6ecf58891a516f56eb8f48609e1a49154ef21c5795b43365413a91b2534bff41",
+      "simples": "Suspeita ou confirmação de violência gera notificação compulsória por serviços públicos e privados de saúde à autoridade policial, ao MP e aos conselhos de direitos. Violência pode ser ação ou omissão, em local público ou privado, causando morte, dano ou sofrimento físico ou psicológico.",
+      "pontos": [
+        "Suspeita ou confirmação: notificação compulsória a polícia, MP e conselhos."
+      ],
+      "atencao": [
+        "Suspeita já é suficiente para o dever de notificar; não exija condenação judicial."
+      ],
+      "exemplo": "O serviço de saúde identifica suspeita de violência psicológica contra pessoa com deficiência e realiza a notificação prevista. Variação: A violência ocorreu em casa e por omissão: esses elementos não a retiram automaticamente da definição.",
+      "prova": [
+        "A suspeita de violência já ativa o dever de notificação compulsória dos serviços de saúde? Sim; o caput não exige confirmação para o dever."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "852bd7b9-ac15-5d7b-8f90-6d3c93275cfc",
+        "content_sha256": "6ecf58891a516f56eb8f48609e1a49154ef21c5795b43365413a91b2534bff41",
+        "simples": "Os casos de suspeita ou de confirmação de violência contra a pessoa com deficiência serão objeto de notificação compulsória pelos serviços de saúde, públicos e privados, à autoridade policial e ao Ministério Público, além dos Conselhos dos Direitos da Pessoa com Deficiência. Considera-se violência qualquer ação ou omissão, em local público ou privado, que cause morte, dano ou sofrimento físico ou psicológico.",
+        "pontos": [
+          "Notificação compulsória da suspeita ou confirmação de violência.",
+          "Polícia, Ministério Público e Conselhos.",
+          "Conceito amplo de violência."
+        ],
+        "atencao": [
+          "Basta a SUSPEITA para notificar."
+        ],
+        "exemplo": "O hospital notifica a suspeita de maus-tratos à polícia e ao Ministério Público.",
+        "prova": [
+          "Assertiva que exige confirmação da violência para a notificação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-27",
+      "unit_id": "98179adf-763e-54e6-8fad-0f54c4370a10",
+      "content_sha256": "8762a26a1b2e6c32082f497ae2ca03fbd3c34d91a58cbbd3a82cb75134af8602",
+      "simples": "Educação é direito, com sistema inclusivo em todos os níveis e aprendizagem ao longo da vida. Deve maximizar talentos e habilidades conforme características, interesses e necessidades. Estado, família, comunidade escolar e sociedade asseguram qualidade e proteção contra violência, negligência e discriminação.",
+      "pontos": [
+        "Inclusão em todos os níveis e aprendizado ao longo da vida."
+      ],
+      "atencao": [
+        "Não limite inclusão à educação básica nem fixe uma idade final para o aprendizado ao longo da vida."
+      ],
+      "exemplo": "A instituição organiza participação inclusiva também em curso superior. Variação: O estudante é adulto: o aprendizado ao longo da vida continua sendo uma garantia.",
+      "prova": [
+        "O aprendizado inclusivo é assegurado ao longo de toda a vida? Sim; é uma garantia expressa, além da inclusão em todos os níveis."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "98179adf-763e-54e6-8fad-0f54c4370a10",
+        "content_sha256": "8762a26a1b2e6c32082f497ae2ca03fbd3c34d91a58cbbd3a82cb75134af8602",
+        "simples": "A educação constitui direito da pessoa com deficiência, assegurados sistema educacional inclusivo em todos os níveis e aprendizado ao longo de toda a vida, de forma a alcançar o máximo desenvolvimento possível de seus talentos e habilidades, segundo suas características, interesses e necessidades. É dever do Estado, da família, da comunidade escolar e da sociedade assegurar educação de qualidade, colocando-a a salvo de toda forma de violência, negligência e discriminação.",
+        "pontos": [
+          "Educação como direito.",
+          "Sistema educacional inclusivo em todos os níveis.",
+          "Aprendizado ao longo da vida.",
+          "Dever do Estado, família, escola e sociedade."
+        ],
+        "atencao": [
+          "Educação INCLUSIVA em todos os níveis."
+        ],
+        "exemplo": "A escola regular matricula e adapta o ensino ao aluno com deficiência.",
+        "prova": [
+          "Assertiva que restringe a educação inclusiva ao ensino fundamental erra: é em todos os níveis."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-28",
+      "unit_id": "6869a6ce-1e83-5e76-b4a1-759fe576a1e8",
+      "content_sha256": "8a5a8a2b3dfde142adce008bcfbd33830bfb1c03848ed5683deac337c9a9bb1d",
+      "simples": "O poder público assegura educação inclusiva, acesso, permanência, participação e aprendizagem, atendimento especializado, recursos acessíveis, formação e profissionais de apoio. O §1º aplica às instituições privadas os incisos expressamente listados e proíbe cobrança adicional para cumpri-los; o §2º distingue qualificações dos intérpretes na básica e no ensino superior.",
+      "pontos": [
+        "Privadas não cobram adicionais para os deveres listados no §1º.",
+        "Qualificações de intérpretes variam entre básica e superior; novo inciso XIX em 2025."
+      ],
+      "atencao": [
+        "Lei 15.249/2025 incluiu o inciso XIX sobre comunicação aumentativa e alternativa de baixa tecnologia. O §1º lista incisos específicos: não diga que sua lista inclui automaticamente todo inciso do caput."
+      ],
+      "exemplo": "A escola privada cobra taxa extra pelo apoio escolar exigido: confronte a vedação de cobrança adicional no §1º. Variação: A questão troca as qualificações mínimas dos intérpretes da básica pelas do ensino superior: as duas regras do §2º são diferentes.",
+      "prova": [
+        "A escola privada pode repassar taxa adicional para cumprir os incisos do §1º? Não; o parágrafo veda valores adicionais de qualquer natureza em mensalidades, anuidades e matrículas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "6869a6ce-1e83-5e76-b4a1-759fe576a1e8",
+        "content_sha256": "8a5a8a2b3dfde142adce008bcfbd33830bfb1c03848ed5683deac337c9a9bb1d",
+        "simples": "Incumbe ao poder público assegurar, criar, desenvolver, implementar, incentivar, acompanhar e avaliar sistema educacional inclusivo em todos os níveis e modalidades; aprimoramento dos sistemas educacionais para garantir acesso, permanência, participação e aprendizagem; projeto pedagógico que institucionalize o atendimento educacional especializado e adaptações razoáveis; oferta de educação bilíngue, em Libras como primeira língua e língua portuguesa escrita como segunda língua; medidas individualizadas e coletivas que maximizem o desenvolvimento acadêmico e social; e pesquisas sobre novos métodos e tecnologias, entre outras.",
+        "pontos": [
+          "Sistema educacional inclusivo.",
+          "Atendimento educacional especializado.",
+          "Educação bilíngue: Libras como primeira língua.",
+          "Medidas individualizadas e coletivas."
+        ],
+        "atencao": [
+          "Libras como PRIMEIRA língua e português escrito como segunda."
+        ],
+        "exemplo": "A escola bilíngue ensina o aluno surdo em Libras e português escrito.",
+        "prova": [
+          "Assertiva que coloca o português como primeira língua do surdo na educação bilíngue erra: é a Libras."
+        ],
+        "termos": [
+          {
+            "termo": "Atendimento educacional especializado",
+            "significado": "Serviço complementar ao ensino regular para alunos com deficiência."
+          }
+        ],
+        "remissoes": [
+          "Art. 27"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-30",
+      "unit_id": "c238d98b-5c8c-5c05-ba48-3a9a0b2afc1e",
+      "content_sha256": "2a31c85c29a9a051ec1eccc354ca4ebc8661159d02b0d98b5c93b2a3a69a4c1e",
+      "simples": "Seleções de ensino superior e educação profissional e tecnológica, públicas e privadas, exigem atendimento preferencial, indicação de recursos na inscrição, provas e tecnologias acessíveis, tempo ampliado conforme demanda com solicitação e comprovação, critérios que considerem singularidade linguística e tradução de edital e retificações em Libras.",
+      "pontos": [
+        "Provas e recursos acessíveis; tempo conforme demanda, solicitação e comprovação."
+      ],
+      "atencao": [
+        "Dilação de tempo não é prazo ilimitado automático: observe demanda, solicitação prévia e comprovação da necessidade."
+      ],
+      "exemplo": "O candidato solicita previamente tempo ampliado e comprova a necessidade, conforme o inciso V. Variação: A instituição é privada: o caput também a inclui nas medidas de seleção e permanência.",
+      "prova": [
+        "As medidas de seleção previstas alcançam também instituições privadas dos níveis indicados? Sim; o caput inclui públicas e privadas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "c238d98b-5c8c-5c05-ba48-3a9a0b2afc1e",
+        "content_sha256": "2a31c85c29a9a051ec1eccc354ca4ebc8661159d02b0d98b5c93b2a3a69a4c1e",
+        "simples": "Nos processos seletivos para ingresso e permanência nos cursos de instituições de ensino superior e de educação profissional e tecnológica, públicas e privadas, devem ser adotadas medidas como atendimento preferencial; formulário de inscrição com campos para informar recursos de acessibilidade necessários; provas em formatos acessíveis; recursos de acessibilidade e tecnologia assistiva previamente solicitados; dilação de tempo, mediante solicitação e comprovação; critérios de avaliação que considerem a singularidade linguística da pessoa com deficiência, entre outras.",
+        "pontos": [
+          "Atendimento preferencial.",
+          "Provas em formatos acessíveis.",
+          "Recursos de tecnologia assistiva.",
+          "Dilação de tempo.",
+          "Avaliação que considere a singularidade linguística."
+        ],
+        "atencao": [
+          "Dilação de tempo depende de solicitação e comprovação."
+        ],
+        "exemplo": "O candidato com deficiência visual faz a prova em Braille e com tempo adicional.",
+        "prova": [
+          "Assertiva que dispensa a comprovação da necessidade de dilação de tempo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-31",
+      "unit_id": "8e095ffe-189c-57a4-bab6-cde4872f0815",
+      "content_sha256": "c1548f7d1bbe9a7aa41a099276db8b268c784c20c9ea347d27a96cbe870b0aa7",
+      "simples": "Moradia digna pode ser com família, cônjuge ou companheiro, desacompanhada, em moradia independente ou residência inclusiva. O poder público apoia moradia independente. Residência inclusiva no Suas atende dependência, falta de autossustentabilidade e vínculos fragilizados ou rompidos.",
+      "pontos": [
+        "Moradia pode ser desacompanhada; residência inclusiva possui condições específicas no Suas."
+      ],
+      "atencao": [
+        "Não imponha residência com a família como única opção nem trate toda modalidade como residência inclusiva."
+      ],
+      "exemplo": "A pessoa escolhe viver desacompanhada em condições dignas: essa opção está no caput. Variação: Há dependência, impossibilidade de autossustento e vínculos rompidos: examina-se a proteção em residência inclusiva no Suas.",
+      "prova": [
+        "A lei admite moradia digna desacompanhada? Sim; essa possibilidade integra o caput, sem imposição geral de morar com a família."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "8e095ffe-189c-57a4-bab6-cde4872f0815",
+        "content_sha256": "c1548f7d1bbe9a7aa41a099276db8b268c784c20c9ea347d27a96cbe870b0aa7",
+        "simples": "A pessoa com deficiência tem direito à moradia digna, no seio da família natural ou substituta, com seu cônjuge ou companheiro ou desacompanhada, ou em moradia para a vida independente, ou, ainda, em residência inclusiva. O poder público adotará programas e ações para apoiar a criação e a manutenção da moradia para a vida independente. A proteção integral na residência inclusiva será prestada no âmbito do Suas à pessoa em situação de dependência que não disponha de condições de autossustentabilidade, com vínculos familiares fragilizados ou rompidos.",
+        "pontos": [
+          "Moradia digna em várias modalidades.",
+          "Moradia para a vida independente.",
+          "Residência inclusiva no Suas."
+        ],
+        "atencao": [
+          "Residência inclusiva: pessoa em dependência com vínculos fragilizados."
+        ],
+        "exemplo": "A pessoa com deficiência pode morar em residência inclusiva custeada pelo Suas.",
+        "prova": [
+          "Assertiva que obriga a pessoa com deficiência a morar com a família erra: ela pode viver desacompanhada ou em moradia independente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-32",
+      "unit_id": "a30116cc-a010-5301-8cda-92a63a58283c",
+      "content_sha256": "d4a28647d72131f44fa36301f18f8c2582d6702b4f9d016da140f4aef7f9305e",
+      "simples": "Programas habitacionais públicos ou subsidiados com recursos públicos dão prioridade à pessoa com deficiência ou responsável, com reserva mínima de 3%, acessibilidade, equipamentos e projeto que permita elevadores. A prioridade é reconhecida uma vez; financiamento observa rendimentos. Unidades reservadas sem interessados podem ir aos demais.",
+      "pontos": [
+        "Reserva habitacional mínima de 3%; prioridade reconhecida uma vez."
+      ],
+      "atencao": [
+        "São 3% no mínimo, não máximo; não confunda esta reserva habitacional com percentuais de vagas de emprego ou estacionamento."
+      ],
+      "exemplo": "Em programa com cem unidades, a reserva legal mínima é de três, observadas as demais regras. Variação: Não há interessados com deficiência nas unidades reservadas: o §3º admite disponibilização aos demais.",
+      "prova": [
+        "A reserva de 3% é um teto que impede reservar mais? Não; o inciso I estabelece no mínimo 3%."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a30116cc-a010-5301-8cda-92a63a58283c",
+        "content_sha256": "d4a28647d72131f44fa36301f18f8c2582d6702b4f9d016da140f4aef7f9305e",
+        "simples": "Nos programas habitacionais, públicos ou subsidiados com recursos públicos, a pessoa com deficiência ou seu responsável goza de prioridade na aquisição de imóvel, observada a reserva de, no mínimo, 3% das unidades habitacionais; em edificação multifamiliar, a acessibilidade nas áreas comuns e nas unidades do térreo, com acessibilidade ou adaptação razoável nos demais pisos; equipamentos urbanos comunitários acessíveis; e especificações para instalação de elevadores. O direito à prioridade é reconhecido apenas uma vez. Os critérios de financiamento devem ser compatíveis com os rendimentos. Se não houver interessado, as unidades reservadas serão disponibilizadas às demais pessoas.",
+        "pontos": [
+          "Reserva mínima de 3% das unidades.",
+          "Acessibilidade em áreas comuns e no térreo.",
+          "Prioridade reconhecida apenas uma vez.",
+          "Sobras vão para as demais pessoas."
+        ],
+        "atencao": [
+          "Reserva de no mínimo 3%.",
+          "Prioridade só UMA vez."
+        ],
+        "exemplo": "Em um conjunto habitacional público, 3% das unidades são reservadas para pessoas com deficiência.",
+        "prova": [
+          "Assertiva que fixa em 10% a reserva de unidades erra: é de no mínimo 3%."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 33"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-33",
+      "unit_id": "b13c24d3-1a45-5a24-9c9f-fbe575e49697",
+      "content_sha256": "9b376592dd20099481493c108e1d0381b9412eccbc04ef444d8b0601015d2eab",
+      "simples": "O poder público adota providências para cumprir as regras de moradia e prioridade habitacional e divulga a política habitacional das diferentes esferas, com ênfase em acessibilidade. A divulgação também se dirige a agentes interessados e beneficiários.",
+      "pontos": [
+        "Providências de cumprimento e divulgação da política habitacional."
+      ],
+      "atencao": [
+        "Não reduza o dever a divulgar programas: o inciso I também exige providências de cumprimento."
+      ],
+      "exemplo": "O órgão divulga regras acessíveis e adota medidas para concretizar a reserva habitacional. Variação: Ele apenas anuncia o programa sem providências para cumprir os arts. 31 e 32: falta parte do dever legal.",
+      "prova": [
+        "A divulgação substitui toda providência para cumprir a política habitacional? Não; o artigo prevê ambos os deveres."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b13c24d3-1a45-5a24-9c9f-fbe575e49697",
+        "content_sha256": "9b376592dd20099481493c108e1d0381b9412eccbc04ef444d8b0601015d2eab",
+        "simples": "Ao poder público compete adotar as providências necessárias para o cumprimento dos arts. 31 e 32 e divulgar, para os agentes interessados e beneficiários, a política habitacional prevista nas legislações federal, estaduais, distrital e municipais, com ênfase nos dispositivos sobre acessibilidade.",
+        "pontos": [
+          "Providências para cumprir os arts. 31 e 32.",
+          "Divulgação da política habitacional."
+        ],
+        "atencao": [
+          "Dever de divulgação."
+        ],
+        "exemplo": "A prefeitura divulga como obter moradia acessível.",
+        "prova": [
+          "Assertiva que dispensa a divulgação da política habitacional erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-34",
+      "unit_id": "8dbbcbe8-e19e-5a84-b255-c399907d5ace",
+      "content_sha256": "753ee54ff05a92b6835dcc43d29e4a220b4172642031b737a349e2346ebb19c0",
+      "simples": "O trabalho é de livre escolha e aceitação, em ambiente acessível e inclusivo, com igualdade de oportunidades e remuneração por trabalho de igual valor. A proibição de discriminação alcança seleção, admissão, exames, permanência, carreira e reabilitação, inclusive exigência de aptidão plena. Há igualdade no acesso a cursos e incentivos.",
+      "pontos": [
+        "Igualdade no trabalho, remuneração por igual valor e acessibilidade na capacitação."
+      ],
+      "atencao": [
+        "Não restrinja a vedação à contratação inicial: ascensão, permanência e treinamentos também são protegidos."
+      ],
+      "exemplo": "A empresa nega promoção apenas pela deficiência, apesar de trabalho de igual valor: confronte igualdade e não discriminação. Variação: Ela fornece curso profissional em ambiente inacessível: o §5º também exige acessibilidade na capacitação.",
+      "prova": [
+        "O artigo protege igualdade de remuneração por trabalho de igual valor? Sim; é a garantia do §2º."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "8dbbcbe8-e19e-5a84-b255-c399907d5ace",
+        "content_sha256": "753ee54ff05a92b6835dcc43d29e4a220b4172642031b737a349e2346ebb19c0",
+        "simples": "A pessoa com deficiência tem direito ao trabalho de sua livre escolha e aceitação, em ambiente acessível e inclusivo, em igualdade de oportunidades. As pessoas jurídicas de direito público, privado ou de qualquer natureza são obrigadas a garantir ambientes de trabalho acessíveis e inclusivos. Há direito a condições justas e favoráveis, incluindo igual remuneração por trabalho de igual valor. É vedada restrição ao trabalho e qualquer discriminação, inclusive no recrutamento, seleção, contratação, exames admissional e periódico, permanência, ascensão profissional e reabilitação, bem como a exigência de aptidão plena. Há direito a cursos, treinamentos, planos de carreira, promoções e incentivos em igualdade, com acessibilidade nos cursos de formação.",
+        "pontos": [
+          "Trabalho de livre escolha em ambiente acessível.",
+          "Igual remuneração por trabalho de igual valor.",
+          "Vedada a exigência de aptidão plena.",
+          "Direito a treinamentos, promoções e planos de carreira."
+        ],
+        "atencao": [
+          "Vedada a exigência de APTIDÃO PLENA."
+        ],
+        "exemplo": "A empresa não pode exigir aptidão plena em exame admissional.",
+        "prova": [
+          "Assertiva que permite exigir aptidão plena da pessoa com deficiência erra: é vedado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 35"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-35",
+      "unit_id": "3bd32ddf-1324-58bd-ba79-7240acf0b686",
+      "content_sha256": "01215678c30482078006e8d25dc1a87fc2e65d23eafa1151c7aa63828a648a8f",
+      "simples": "Políticas públicas de trabalho e emprego promovem acesso e permanência no campo de trabalho. Estímulo ao empreendedorismo, trabalho autônomo, cooperativismo e associativismo deve incluir pessoas com deficiência e linhas de crédito quando necessárias.",
+      "pontos": [
+        "Acesso e permanência; participação também em empreendedorismo e trabalho autônomo."
+      ],
+      "atencao": [
+        "Não limite a inclusão ao emprego com contrato nem afirme crédito irrestrito e automático em qualquer situação."
+      ],
+      "exemplo": "O programa de cooperativismo prevê participação de pessoas com deficiência e crédito quando necessário. Variação: A política considera somente obter a primeira vaga, sem permanência: o caput também exige condições de permanência.",
+      "prova": [
+        "A finalidade se limita ao ingresso inicial no trabalho? Não; o caput reúne acesso e permanência."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "3bd32ddf-1324-58bd-ba79-7240acf0b686",
+        "content_sha256": "01215678c30482078006e8d25dc1a87fc2e65d23eafa1151c7aa63828a648a8f",
+        "simples": "É finalidade primordial das políticas públicas de trabalho e emprego promover e garantir condições de acesso e de permanência da pessoa com deficiência no campo de trabalho. Os programas de estímulo ao empreendedorismo e ao trabalho autônomo, incluídos o cooperativismo e o associativismo, devem prever a participação da pessoa com deficiência e a disponibilização de linhas de crédito, quando necessárias.",
+        "pontos": [
+          "Acesso e permanência no trabalho.",
+          "Empreendedorismo, cooperativismo e crédito."
+        ],
+        "atencao": [
+          "Finalidade primordial das políticas de trabalho."
+        ],
+        "exemplo": "O programa de microcrédito inclui empreendedores com deficiência.",
+        "prova": [
+          "Assertiva que exclui o empreendedorismo das políticas de trabalho para a pessoa com deficiência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 36"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-36",
+      "unit_id": "8e604b82-8c9d-5953-86d8-f5795f373084",
+      "content_sha256": "1fd8862bff8550a5bac2488df7f2f2bc3b4b66cc4d2bcbf2f7529172cd7fdc6a",
+      "simples": "Habilitação e reabilitação profissionais possibilitam ingresso, continuidade e retorno ao trabalho, respeitando escolha, vocação e interesse, com equipe multidisciplinar, recursos e ambientes acessíveis. O §6º admite habilitação em empresa com contrato prévio, tempo determinado e concomitância com inclusão, observada regulamentação, para contagem na reserva legal.",
+      "pontos": [
+        "Escolha, vocação e interesse; contagem na reserva da empresa exige condições específicas."
+      ],
+      "atencao": [
+        "Não transforme qualquer curso ou atividade informal em vínculo computável na reserva: observe as condições do §6º."
+      ],
+      "exemplo": "A equipe indica programa para adquirir habilidades profissionais, respeitando vocação e interesse. Variação: A habilitação ocorre em empresa sem formalização de contrato de emprego: não basta para a hipótese do §6º.",
+      "prova": [
+        "Qualquer habilitação em empresa conta automaticamente para a reserva de vagas? Não; o §6º estabelece requisitos específicos de contrato, duração, inclusão concomitante e regulamentação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "8e604b82-8c9d-5953-86d8-f5795f373084",
+        "content_sha256": "1fd8862bff8550a5bac2488df7f2f2bc3b4b66cc4d2bcbf2f7529172cd7fdc6a",
+        "simples": "O poder público deve implementar serviços e programas completos de habilitação e reabilitação profissional para que a pessoa com deficiência possa ingressar, continuar ou retornar ao campo do trabalho, respeitados sua livre escolha, vocação e interesse. Equipe multidisciplinar indicará, com base nos critérios da avaliação biopsicossocial, o programa adequado. Habilitação profissional é o processo de aquisição de conhecimentos, habilidades e aptidões para o exercício de profissão. Os serviços devem ter recursos para atender a toda pessoa com deficiência, independentemente de sua característica específica.",
+        "pontos": [
+          "Habilitação e reabilitação profissional.",
+          "Respeito à livre escolha, vocação e interesse.",
+          "Indicação por equipe multidisciplinar."
+        ],
+        "atencao": [
+          "Respeita a LIVRE ESCOLHA da pessoa."
+        ],
+        "exemplo": "O programa de reabilitação profissional prepara o trabalhador para nova função.",
+        "prova": [
+          "Assertiva que impõe a profissão à pessoa com deficiência erra: respeita-se a livre escolha."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 37"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-37",
+      "unit_id": "f8fe5cc7-091f-5e19-bf40-e22e6697d86d",
+      "content_sha256": "86263a8601096ff7d89721b1cfadda32fb5d0a327231860b810aee015460b3ba",
+      "simples": "A colocação competitiva, em igualdade de oportunidades, é modo de inclusão no trabalho, com acessibilidade, tecnologia assistiva e adaptação razoável. Pode ocorrer com apoio individualizado, respeito ao perfil, orientação ao empregador, avaliações, articulação de políticas e participação da sociedade civil.",
+      "pontos": [
+        "Colocação competitiva pode incluir apoio individualizado."
+      ],
+      "atencao": [
+        "Trabalho com apoio não elimina a igualdade de oportunidades nem permite desconsiderar o interesse vocacional da pessoa."
+      ],
+      "exemplo": "São ofertados suporte e tecnologia adequados para a pessoa atuar no emprego em igualdade de oportunidades. Variação: A entidade impõe ocupação sem considerar perfil e interesse: contraria a diretriz do inciso III.",
+      "prova": [
+        "A colocação competitiva pode ocorrer por meio de trabalho com apoio? Sim; o parágrafo único prevê essa possibilidade com diretrizes próprias."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "f8fe5cc7-091f-5e19-bf40-e22e6697d86d",
+        "content_sha256": "86263a8601096ff7d89721b1cfadda32fb5d0a327231860b810aee015460b3ba",
+        "simples": "Constitui modo de inclusão da pessoa com deficiência no trabalho a colocação competitiva, em igualdade de oportunidades, nos termos da legislação trabalhista e previdenciária, com regras de acessibilidade, tecnologia assistiva e adaptação razoável. Pode ocorrer por meio de trabalho com apoio, com prioridade ao atendimento de quem tem maior dificuldade de inserção, suportes individualizados, respeito ao perfil vocacional, aconselhamento aos empregadores, avaliações periódicas, articulação intersetorial e participação de organizações da sociedade civil.",
+        "pontos": [
+          "Colocação competitiva.",
+          "Trabalho com apoio.",
+          "Suportes individualizados e aconselhamento ao empregador."
+        ],
+        "atencao": [
+          "Colocação COMPETITIVA, e não apenas protegida."
+        ],
+        "exemplo": "O trabalhador com deficiência intelectual é contratado com apoio de um agente facilitador.",
+        "prova": [
+          "Assertiva que restringe a inclusão a oficinas protegidas erra: a colocação competitiva é o modo previsto."
+        ],
+        "termos": [
+          {
+            "termo": "Trabalho com apoio",
+            "significado": "Emprego competitivo com suportes individualizados."
+          }
+        ],
+        "remissoes": [
+          "Art. 34"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-38",
+      "unit_id": "e11dcb13-fa71-5b12-b15e-2dd1a98b595d",
+      "content_sha256": "d4a6184d37d3d1f56f36e6e422979d025cf54e02553033a7a9819edcc9564fcc",
+      "simples": "A entidade contratada para realizar seleção pública ou privada para cargo, função ou emprego deve observar a LBI e as demais normas vigentes de acessibilidade. A terceirização da seleção não afasta o dever.",
+      "pontos": [
+        "Organizadora contratada de seleção pública ou privada também observa acessibilidade."
+      ],
+      "atencao": [
+        "O alcance não se limita às bancas de concurso público; inclui processo seletivo privado nas hipóteses do artigo."
+      ],
+      "exemplo": "Uma empresa terceiriza a seleção: a organizadora deve observar normas de acessibilidade. Variação: A vaga é em entidade privada: a seleção continua incluída no caput.",
+      "prova": [
+        "A contratação de outra entidade dispensa a organizadora de acessibilidade? Não; o artigo atribui expressamente o dever à entidade contratada."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "e11dcb13-fa71-5b12-b15e-2dd1a98b595d",
+        "content_sha256": "d4a6184d37d3d1f56f36e6e422979d025cf54e02553033a7a9819edcc9564fcc",
+        "simples": "A entidade contratada para a realização de processo seletivo público ou privado para cargo, função ou emprego está obrigada à observância da Lei e de outras normas de acessibilidade vigentes.",
+        "pontos": [
+          "Banca de concurso e seleções privadas devem cumprir as normas de acessibilidade."
+        ],
+        "atencao": [
+          "Alcança a entidade CONTRATADA para o processo seletivo."
+        ],
+        "exemplo": "A banca do concurso deve garantir provas acessíveis.",
+        "prova": [
+          "Assertiva que isenta a banca organizadora das normas de acessibilidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 30"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-39",
+      "unit_id": "b0644e98-98f2-53a7-8be4-f2c92e4576a9",
+      "content_sha256": "1dcba362ee4d19c02ab3c5f8696ab18c9236ebdab05165eb3e7b5b92d31af176",
+      "simples": "Assistência social à pessoa com deficiência e família busca segurança de renda, acolhida, habilitação, reabilitação, autonomia e convivência para acesso a direitos e participação. Articula proteção básica e especial no Suas; serviços para situações de dependência contam com cuidadores sociais.",
+      "pontos": [
+        "Assistência articula proteção básica e especial, com cuidadores nas condições previstas."
+      ],
+      "atencao": [
+        "Não confunda a política de assistência com um único benefício financeiro ou somente com proteção especial."
+      ],
+      "exemplo": "O serviço articula acolhida, convivência e cuidados básicos em situação de dependência. Variação: A banca exclui a proteção básica do conjunto: o §1º também a inclui, junto à especial.",
+      "prova": [
+        "A assistência social prevista articula proteção básica e especial no Suas? Sim; são componentes do conjunto do §1º."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b0644e98-98f2-53a7-8be4-f2c92e4576a9",
+        "content_sha256": "1dcba362ee4d19c02ab3c5f8696ab18c9236ebdab05165eb3e7b5b92d31af176",
+        "simples": "Os serviços, programas, projetos e benefícios da política de assistência social à pessoa com deficiência e sua família têm como objetivo a garantia da segurança de renda, da acolhida, da habilitação e da reabilitação, do desenvolvimento da autonomia e da convivência familiar e comunitária. Envolve um conjunto articulado de serviços da Proteção Social Básica e da Especial, ofertados pelo Suas. Os serviços destinados à pessoa em situação de dependência devem contar com cuidadores sociais para os cuidados básicos e instrumentais.",
+        "pontos": [
+          "Segurança de renda, acolhida, habilitação e autonomia.",
+          "Proteção Social Básica e Especial.",
+          "Cuidadores sociais."
+        ],
+        "atencao": [
+          "Cuidadores sociais para pessoas em situação de dependência."
+        ],
+        "exemplo": "O serviço socioassistencial conta com cuidadores para a pessoa dependente.",
+        "prova": [
+          "Assertiva que dispensa cuidadores sociais nos serviços para pessoas em dependência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 40"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-40",
+      "unit_id": "8e9c1b26-5fec-5bb1-a6cb-c4b7b499037c",
+      "content_sha256": "c6dde0e1f7d8524322cf6ea57371e008153879e66b46a00c15039ed7f24fb370",
+      "simples": "A pessoa com deficiência sem meios de subsistência próprios nem de tê-la provida pela família tem garantia de benefício mensal de um salário-mínimo, nos termos da Loas. Este artigo não substitui os requisitos e regras vigentes da Lei 8.742/1993.",
+      "pontos": [
+        "Benefício mensal de um salário-mínimo sob requisitos da Loas; não é automático."
+      ],
+      "atencao": [
+        "Não prometa concessão automática apenas pela condição de deficiência nem transporte requisito etário da pessoa idosa para esta hipótese. Consulte a Loas compilada para avaliação e condições atuais."
+      ],
+      "exemplo": "Uma pessoa busca o benefício: a análise observa deficiência, subsistência e os requisitos da Loas vigente. Variação: A pessoa possui deficiência, mas a pergunta não informa requisitos socioassistenciais: não se pode concluir concessão automática.",
+      "prova": [
+        "Qualquer pessoa com deficiência recebe automaticamente o benefício pelo art. 40? Não; há condições de subsistência e aplicação dos requisitos da Loas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "8e9c1b26-5fec-5bb1-a6cb-c4b7b499037c",
+        "content_sha256": "c6dde0e1f7d8524322cf6ea57371e008153879e66b46a00c15039ed7f24fb370",
+        "simples": "É assegurado à pessoa com deficiência que não possua meios para prover sua subsistência nem de tê-la provida por sua família o benefício mensal de 1 salário-mínimo, nos termos da Lei Orgânica da Assistência Social (Lei nº 8.742, de 7 de dezembro de 1993).",
+        "pontos": [
+          "Benefício de prestação continuada: 1 salário-mínimo.",
+          "Para quem não pode prover o próprio sustento."
+        ],
+        "atencao": [
+          "BPC: 1 salário-mínimo, sem exigência de idade mínima para a pessoa com deficiência."
+        ],
+        "exemplo": "A pessoa com deficiência sem renda e sem apoio familiar recebe o BPC.",
+        "prova": [
+          "Assertiva que fixa meio salário-mínimo para o BPC erra: é 1 salário-mínimo."
+        ],
+        "termos": [
+          {
+            "termo": "BPC",
+            "significado": "Benefício de Prestação Continuada."
+          }
+        ],
+        "remissoes": [
+          "Art. 105"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    }
+  ]
+}

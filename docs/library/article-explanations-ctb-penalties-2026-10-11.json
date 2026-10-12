@@ -1,0 +1,743 @@
+{
+  "version": "2026-10-11-ctb-penalties",
+  "checked_at": "2026-10-11T23:38:55.796487+00:00",
+  "laws": [
+    {
+      "slug": "transito",
+      "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro",
+      "units": 12,
+      "scope_type": "targeted_correction",
+      "course_current_units": 365,
+      "target_unit_keys": [
+        "art-173",
+        "art-174",
+        "art-175",
+        "art-184",
+        "art-210",
+        "art-229",
+        "art-230",
+        "art-234",
+        "art-238",
+        "art-239",
+        "art-253",
+        "art-256"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "source_sha256": "3a18eb13f9d9adbdd64dfdfc7250c9fd2e45f4ea4d52e0570243c7e7a3f46e63",
+      "source_checked_at": "2026-10-11T23:22:04.811486+00:00"
+    },
+    {
+      "slug": "codigo-penal",
+      "title": "Código Penal — leitura atualizada",
+      "units": 1,
+      "scope_type": "targeted_correction",
+      "course_current_units": 401,
+      "target_unit_keys": [
+        "art-216-b"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "cecc5a7a7ec8306e418cd8afe07c0cd3eda5345bf421321dccc6798f46a83aa6",
+      "source_checked_at": "2026-10-11T23:21:53.674427+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-173",
+      "unit_id": "d3f9092b-4c98-5658-9245-1dbe878208d3",
+      "content_sha256": "2ac9b3edafe24c1b39d89fcd17457c314402dc83591867ee0fed67ecee9ef50e",
+      "simples": "Disputar corrida é infração gravíssima, com multa (dez vezes), suspensão do direito de dirigir, e medida administrativa de recolhimento do documento de habilitação e remoção do veículo. A multa é aplicada em dobro na reincidência no período de doze meses.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Dobro da multa na reincidência em doze meses.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Pode configurar também o crime de racha.",
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "Dois motoristas disputam corrida na via: examinam-se multa dez vezes, suspensão e medidas administrativas do artigo. Variação: Um agente recolhe a habilitação e remove o veículo: essas medidas não são a penalidade revogada de apreensão.",
+      "prova": [
+        "A multa administrativa impede por si só responsabilidade criminal? Não; as esferas não se excluem automaticamente, e o enquadramento penal depende dos requisitos do tipo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 308"
+      ],
+      "expected": {
+        "unit_id": "d3f9092b-4c98-5658-9245-1dbe878208d3",
+        "content_sha256": "2ac9b3edafe24c1b39d89fcd17457c314402dc83591867ee0fed67ecee9ef50e",
+        "simples": "Disputar corrida é infração gravíssima, com multa (dez vezes), suspensão do direito de dirigir e apreensão do veículo, e medida administrativa de recolhimento do documento de habilitação e remoção do veículo. A multa é aplicada em dobro na reincidência no período de doze meses.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa (dez vezes), suspensão e apreensão do veículo.",
+          "Dobro da multa na reincidência em doze meses."
+        ],
+        "atencao": [
+          "Pode configurar também o crime de racha."
+        ],
+        "exemplo": "O racha na avenida gera suspensão da CNH e apreensão do veículo.",
+        "prova": [
+          "Assertiva que prevê apenas multa para quem disputa corrida erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 308"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-174",
+      "unit_id": "05a3be5f-c805-55e8-9710-6bfccd43f327",
+      "content_sha256": "21dd0cdcfb267c07c80d2fde3e1c103ca8f2890d225fddd13132f6feff0446cf",
+      "simples": "Promover, na via, competição, eventos organizados, exibição e demonstração de perícia em manobra de veículo, ou deles participar como condutor, sem permissão da autoridade de trânsito é infração gravíssima, com multa (dez vezes), suspensão do direito de dirigir, e medida administrativa de recolhimento do documento e remoção do veículo. As penalidades se aplicam aos promotores e aos condutores participantes, e a multa é em dobro na reincidência em doze meses.",
+      "pontos": [
+        "Competição ou exibição sem permissão.",
+        "Aplica-se a promotores e condutores.",
+        "Mesmas penalidades da disputa de corrida.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Promotores E condutores participantes respondem.",
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "Organizador promove demonstração de manobras na via sem permissão da autoridade; o artigo alcança promotor e condutor participante. Variação: A defesa alega que só o motorista pode sofrer as penalidades: o §1º inclui os promotores.",
+      "prova": [
+        "O promotor do evento é sempre excluído das penalidades do artigo? Não; as penalidades alcançam promotores e condutores participantes."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 67"
+      ],
+      "expected": {
+        "unit_id": "05a3be5f-c805-55e8-9710-6bfccd43f327",
+        "content_sha256": "21dd0cdcfb267c07c80d2fde3e1c103ca8f2890d225fddd13132f6feff0446cf",
+        "simples": "Promover, na via, competição, eventos organizados, exibição e demonstração de perícia em manobra de veículo, ou deles participar como condutor, sem permissão da autoridade de trânsito é infração gravíssima, com multa (dez vezes), suspensão do direito de dirigir e apreensão do veículo, e medida administrativa de recolhimento do documento e remoção do veículo. As penalidades se aplicam aos promotores e aos condutores participantes, e a multa é em dobro na reincidência em doze meses.",
+        "pontos": [
+          "Competição ou exibição sem permissão.",
+          "Aplica-se a promotores e condutores.",
+          "Mesmas penalidades da disputa de corrida."
+        ],
+        "atencao": [
+          "Promotores E condutores participantes respondem."
+        ],
+        "exemplo": "O organizador do evento de manobras sem autorização é penalizado, assim como os condutores.",
+        "prova": [
+          "Assertiva que isenta o promotor do evento de penalidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 67"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-175",
+      "unit_id": "74bfa37c-de13-5b69-b10c-34f31ffe4512",
+      "content_sha256": "e5c902489481ad54cac7d33e59a5b768ee76ecd62112be2a499183d991756be8",
+      "simples": "Utilizar-se de veículo para demonstrar ou exibir manobra perigosa, mediante arrancada brusca, derrapagem ou frenagem com deslizamento ou arrastamento de pneus, é infração gravíssima, com multa (dez vezes), suspensão do direito de dirigir, e medida administrativa de recolhimento do documento e remoção do veículo. A multa é em dobro na reincidência em doze meses.",
+      "pontos": [
+        "Arrancada brusca, derrapagem ou frenagem com arrastamento.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Mesmas penalidades da disputa de corrida.",
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "O motorista exibe derrapagem na via: a demonstração perigosa prevista é gravíssima, com multa dez vezes e suspensão. Variação: Ele reincide em doze meses: a multa deste artigo é dobrada, sem confundir com qualquer infração reincidente.",
+      "prova": [
+        "Toda arrancada do veículo caracteriza automaticamente o artigo? Não; confronte a demonstração ou exibição de manobra perigosa e os elementos da conduta."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 173"
+      ],
+      "expected": {
+        "unit_id": "74bfa37c-de13-5b69-b10c-34f31ffe4512",
+        "content_sha256": "e5c902489481ad54cac7d33e59a5b768ee76ecd62112be2a499183d991756be8",
+        "simples": "Utilizar-se de veículo para demonstrar ou exibir manobra perigosa, mediante arrancada brusca, derrapagem ou frenagem com deslizamento ou arrastamento de pneus, é infração gravíssima, com multa (dez vezes), suspensão do direito de dirigir e apreensão do veículo, e medida administrativa de recolhimento do documento e remoção do veículo. A multa é em dobro na reincidência em doze meses.",
+        "pontos": [
+          "Arrancada brusca, derrapagem ou frenagem com arrastamento.",
+          "Gravíssima, com suspensão e apreensão."
+        ],
+        "atencao": [
+          "Mesmas penalidades da disputa de corrida."
+        ],
+        "exemplo": "Fazer cavalo de pau na via pública para exibição gera apreensão do veículo.",
+        "prova": [
+          "Assertiva que considera média a exibição de manobra perigosa erra: é gravíssima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 173"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-184",
+      "unit_id": "81e4aa30-11ba-56d7-a01e-981838e90e92",
+      "content_sha256": "2da550b6e62e54dadc6466e744e95f5acb6eda223ca80acb08149c120b969f27",
+      "simples": "Transitar com o veículo na faixa ou pista da direita regulamentada como de circulação exclusiva para determinado tipo de veículo, exceto para acesso a imóveis lindeiros ou conversões à direita, é infração leve; na faixa ou pista da esquerda regulamentada como exclusiva, é infração grave; e na faixa ou via de trânsito exclusivo destinada aos veículos de transporte público coletivo, salvo força maior e autorização do poder público, é infração gravíssima, com multa, e remoção.",
+      "pontos": [
+        "Faixa exclusiva da direita: leve.",
+        "Faixa exclusiva da esquerda: grave.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "O veículo circula na faixa exclusiva de transporte coletivo do inciso III: a infração é gravíssima, com multa e remoção. Variação: A faixa é outra hipótese dos incisos I ou II: classificação e requisitos não podem ser transportados automaticamente do inciso III.",
+      "prova": [
+        "Todos os incisos do art. 184 são gravíssimos? Não; é preciso identificar a hipótese e a classificação do inciso correspondente."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 185"
+      ],
+      "expected": {
+        "unit_id": "81e4aa30-11ba-56d7-a01e-981838e90e92",
+        "content_sha256": "2da550b6e62e54dadc6466e744e95f5acb6eda223ca80acb08149c120b969f27",
+        "simples": "Transitar com o veículo na faixa ou pista da direita regulamentada como de circulação exclusiva para determinado tipo de veículo, exceto para acesso a imóveis lindeiros ou conversões à direita, é infração leve; na faixa ou pista da esquerda regulamentada como exclusiva, é infração grave; e na faixa ou via de trânsito exclusivo destinada aos veículos de transporte público coletivo, salvo força maior e autorização do poder público, é infração gravíssima, com multa e apreensão do veículo, e remoção.",
+        "pontos": [
+          "Faixa exclusiva da direita: leve.",
+          "Faixa exclusiva da esquerda: grave.",
+          "Faixa exclusiva de transporte coletivo: gravíssima com apreensão."
+        ],
+        "atencao": [
+          "Faixa de ônibus: GRAVÍSSIMA, com apreensão e remoção."
+        ],
+        "exemplo": "Dirigir na faixa exclusiva de ônibus gera multa gravíssima e apreensão do veículo.",
+        "prova": [
+          "Assertiva que classifica como leve o uso indevido da faixa de ônibus erra: é gravíssima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 185"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-210",
+      "unit_id": "904d3eeb-7fff-5505-b95b-35d3ec2ae2df",
+      "content_sha256": "c506c2eb4b3d37f6ddb964932d8a37c33e0ba9416febb6a107619c039c62262e",
+      "simples": "Transpor, sem autorização, bloqueio viário policial é infração gravíssima, com multa e suspensão do direito de dirigir, e medida administrativa de remoção do veículo e recolhimento do documento de habilitação.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Remoção e recolhimento da CNH.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "O condutor transpõe bloqueio viário policial sem autorização: incidem as sanções e medidas específicas do artigo. Variação: O bloqueio não é policial: confira o art. 209, sem equiparar automaticamente as duas hipóteses.",
+      "prova": [
+        "Bloqueio policial e qualquer obstáculo viário têm sempre a mesma infração? Não; a natureza do bloqueio e os elementos do artigo distinguem as hipóteses."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 209"
+      ],
+      "expected": {
+        "unit_id": "904d3eeb-7fff-5505-b95b-35d3ec2ae2df",
+        "content_sha256": "c506c2eb4b3d37f6ddb964932d8a37c33e0ba9416febb6a107619c039c62262e",
+        "simples": "Transpor, sem autorização, bloqueio viário policial é infração gravíssima, com multa, apreensão do veículo e suspensão do direito de dirigir, e medida administrativa de remoção do veículo e recolhimento do documento de habilitação.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa, apreensão e suspensão.",
+          "Remoção e recolhimento da CNH."
+        ],
+        "atencao": [
+          "Bloqueio POLICIAL: gravíssima com suspensão e apreensão."
+        ],
+        "exemplo": "Furar a barreira policial gera suspensão do direito de dirigir.",
+        "prova": [
+          "Assertiva que prevê apenas multa para quem fura bloqueio policial erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 209"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-229",
+      "unit_id": "462c041d-cb36-56d0-8432-226bfac44d69",
+      "content_sha256": "d885c64165fec17394d2ab852a27ce013060d55e58f123d92003af6307004d12",
+      "simples": "Usar indevidamente no veículo aparelho de alarme ou que produza sons e ruído que perturbem o sossego público, em desacordo com normas fixadas pelo Contran, é infração média, com multa, e medida administrativa de remoção.",
+      "pontos": [
+        "Infração média.",
+        "Remoção do veículo.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "O alarme do veículo é utilizado indevidamente, perturbando o sossego em desacordo com as normas do Contran: o artigo prevê infração média. Variação: O fato é uso de equipamento de som em volume ou frequência não autorizados: examine o art. 228, sem aplicar o 229 só pela palavra ruído.",
+      "prova": [
+        "O ruído autoriza aplicar automaticamente qualquer artigo sobre som? Não; é necessário identificar aparelho, conduta e a norma pertinente."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 228"
+      ],
+      "expected": {
+        "unit_id": "462c041d-cb36-56d0-8432-226bfac44d69",
+        "content_sha256": "d885c64165fec17394d2ab852a27ce013060d55e58f123d92003af6307004d12",
+        "simples": "Usar indevidamente no veículo aparelho de alarme ou que produza sons e ruído que perturbem o sossego público, em desacordo com normas fixadas pelo Contran, é infração média, com multa e apreensão do veículo, e medida administrativa de remoção.",
+        "pontos": [
+          "Infração média.",
+          "Multa e apreensão do veículo.",
+          "Remoção do veículo."
+        ],
+        "atencao": [
+          "Média, mas com apreensão do veículo."
+        ],
+        "exemplo": "O alarme que dispara sem motivo e perturba o sossego pode gerar a apreensão.",
+        "prova": [
+          "Assertiva que prevê apenas multa simples erra: há apreensão do veículo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 228"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:55.135559+00:00",
+        "updated_at": "2026-10-11T22:03:55.135559+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-230",
+      "unit_id": "998b8a8a-a4ad-5920-a158-9a24d78abfed",
+      "content_sha256": "f1ce88eb8f28af4a0b31ac2de351379516fbe8d38bd6e49593b00b9a919784d7",
+      "simples": "Conduzir veículo com lacre, inscrição do chassi, selo ou placa violados ou falsificados, transportando passageiros em compartimento de carga, com dispositivo antirradar, sem qualquer das placas, não registrado e licenciado, ou com placa ilegível é infração gravíssima, com multa e remoção. Conduzir com cor ou característica alterada, sem inspeção obrigatória, sem equipamento obrigatório, com descarga livre, equipamento proibido, iluminação alterada, registrador viciado, publicidade no para-brisa, vidros cobertos por películas, cortinas fechadas, em mau estado de conservação ou sem acionar o limpador sob chuva é infração grave, com retenção para regularização. Sem autorização de condução de escolares: gravíssima, multa (cinco vezes). Com defeito de iluminação ou lâmpadas queimadas, ou em desacordo com o tempo de direção do art. 67-C: média.",
+      "pontos": [
+        "Gravíssima: identificação violada, sem placa, não licenciado, antirradar.",
+        "Grave: sem equipamento obrigatório, películas, mau estado, sem limpador sob chuva.",
+        "Escolar sem autorização: gravíssima, multa cinco vezes.",
+        "Média: lâmpada queimada e descumprimento do tempo de direção.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Descumprir o tempo de direção do art. 67-C: média, com retenção para o descanso.",
+        "Condutor estrangeiro: liberação condicionada ao pagamento ou depósito da multa.",
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "O veículo possui dispositivo antirradar: confronte o inciso III e as consequências da infração gravíssima. Variação: O defeito é em lâmpada ou iluminação: o inciso correspondente tem classificação própria; não se aplica automaticamente a classificação do antirradar.",
+      "prova": [
+        "Todas as condutas do art. 230 possuem a mesma gravidade? Não; seus grupos de incisos têm classificações e medidas próprias."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 67-C"
+      ],
+      "expected": {
+        "unit_id": "998b8a8a-a4ad-5920-a158-9a24d78abfed",
+        "content_sha256": "f1ce88eb8f28af4a0b31ac2de351379516fbe8d38bd6e49593b00b9a919784d7",
+        "simples": "Conduzir veículo com lacre, inscrição do chassi, selo ou placa violados ou falsificados, transportando passageiros em compartimento de carga, com dispositivo antirradar, sem qualquer das placas, não registrado e licenciado, ou com placa ilegível é infração gravíssima, com multa e apreensão do veículo e remoção. Conduzir com cor ou característica alterada, sem inspeção obrigatória, sem equipamento obrigatório, com descarga livre, equipamento proibido, iluminação alterada, registrador viciado, publicidade no para-brisa, vidros cobertos por películas, cortinas fechadas, em mau estado de conservação ou sem acionar o limpador sob chuva é infração grave, com retenção para regularização. Sem autorização de condução de escolares: gravíssima, multa (cinco vezes). Com defeito de iluminação ou lâmpadas queimadas, ou em desacordo com o tempo de direção do art. 67-C: média.",
+        "pontos": [
+          "Gravíssima: identificação violada, sem placa, não licenciado, antirradar.",
+          "Grave: sem equipamento obrigatório, películas, mau estado, sem limpador sob chuva.",
+          "Escolar sem autorização: gravíssima, multa cinco vezes.",
+          "Média: lâmpada queimada e descumprimento do tempo de direção."
+        ],
+        "atencao": [
+          "Dispositivo ANTIRRADAR: gravíssima, com apreensão.",
+          "Descumprir o tempo de direção do art. 67-C: média, com retenção para o descanso.",
+          "Condutor estrangeiro: liberação condicionada ao pagamento ou depósito da multa."
+        ],
+        "exemplo": "Dirigir sem a placa dianteira gera multa gravíssima e apreensão do veículo.",
+        "prova": [
+          "Assertiva que classifica como grave o uso de antirradar erra: é gravíssima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 67-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:55.135559+00:00",
+        "updated_at": "2026-10-11T22:03:55.135559+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-234",
+      "unit_id": "7dcf9faf-af65-5bf5-9582-62a9e1d71de0",
+      "content_sha256": "d5d0bc563751ec394e23015bad075dfdc6318bb865d3a9d2a07a6dff75b24763",
+      "simples": "Falsificar ou adulterar documento de habilitação e de identificação do veículo é infração gravíssima, com multa, e medida administrativa de remoção do veículo.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Pode configurar crime de falsificação.",
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "A fiscalização identifica documento de habilitação adulterado: a infração é gravíssima; examine multa e remoção, além de eventual responsabilidade criminal própria. Variação: O artigo ainda imprime apreensão do veículo na linha de penalidade: a revogação do art. 256, IV, impede tratá-la como penalidade atual.",
+      "prova": [
+        "A permanência da palavra apreensão no art. 234 restaura a penalidade revogada? Não; a redação residual deve ser lida com a revogação do rol geral e a distinção entre penalidade e medida administrativa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 114"
+      ],
+      "expected": {
+        "unit_id": "7dcf9faf-af65-5bf5-9582-62a9e1d71de0",
+        "content_sha256": "d5d0bc563751ec394e23015bad075dfdc6318bb865d3a9d2a07a6dff75b24763",
+        "simples": "Falsificar ou adulterar documento de habilitação e de identificação do veículo é infração gravíssima, com multa e apreensão do veículo, e medida administrativa de remoção do veículo.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa e apreensão do veículo."
+        ],
+        "atencao": [
+          "Gravíssima, com apreensão.",
+          "Pode configurar crime de falsificação."
+        ],
+        "exemplo": "Quem adultera a CNH sofre a apreensão do veículo.",
+        "prova": [
+          "Assertiva que classifica como grave a falsificação de documento de habilitação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 114"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:55.135559+00:00",
+        "updated_at": "2026-10-11T22:03:55.135559+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-238",
+      "unit_id": "d0d15a0e-fd3f-5b96-b047-51471c64ebbd",
+      "content_sha256": "c728f22f35535fcc1537897515a673397e66381ba46b3c7721b149057e316f88",
+      "simples": "Recusar-se a entregar à autoridade de trânsito ou a seus agentes, mediante recibo, os documentos de habilitação, de registro, de licenciamento e outros exigidos por lei, para averiguação de sua autenticidade, é infração gravíssima, com multa, e remoção.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Entrega é feita mediante RECIBO.",
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "O condutor recusa entregar, mediante recibo, documento exigido para averiguar autenticidade: é a hipótese gravíssima descrita no artigo. Variação: A exigência não é a verificação de autenticidade prevista aqui: não se enquadra toda recusa documental automaticamente no art. 238.",
+      "prova": [
+        "O artigo dispensa recibo para a entrega do documento? Não; exige entrega mediante recibo à autoridade ou ao agente para averiguação de autenticidade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 272"
+      ],
+      "expected": {
+        "unit_id": "d0d15a0e-fd3f-5b96-b047-51471c64ebbd",
+        "content_sha256": "c728f22f35535fcc1537897515a673397e66381ba46b3c7721b149057e316f88",
+        "simples": "Recusar-se a entregar à autoridade de trânsito ou a seus agentes, mediante recibo, os documentos de habilitação, de registro, de licenciamento e outros exigidos por lei, para averiguação de sua autenticidade, é infração gravíssima, com multa e apreensão do veículo, e remoção.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa e apreensão do veículo."
+        ],
+        "atencao": [
+          "Entrega é feita mediante RECIBO."
+        ],
+        "exemplo": "Recusar a entrega do documento para verificação gera apreensão do veículo.",
+        "prova": [
+          "Assertiva que classifica como média a recusa de entregar documentos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 272"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:55.135559+00:00",
+        "updated_at": "2026-10-11T22:03:55.135559+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-239",
+      "unit_id": "992aaec9-99f3-5be3-9262-af4dcfeb008c",
+      "content_sha256": "5c9aa4d0a0146abefc2fc02e02a2939993cf6ed8496971d434dd5b0aa9a7b82c",
+      "simples": "Retirar do local veículo legalmente retido para regularização, sem permissão da autoridade competente ou de seus agentes, é infração gravíssima, com multa, e remoção.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Gravíssima.",
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "O veículo está legalmente retido para regularização e o responsável o retira sem autorização: o artigo prevê infração gravíssima. Variação: A autoridade permitiu a retirada: falta o elemento sem permissão da conduta descrita.",
+      "prova": [
+        "A simples retirada de qualquer veículo basta para este artigo? Não; exige veículo legalmente retido para regularização e retirada sem permissão."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 270"
+      ],
+      "expected": {
+        "unit_id": "992aaec9-99f3-5be3-9262-af4dcfeb008c",
+        "content_sha256": "5c9aa4d0a0146abefc2fc02e02a2939993cf6ed8496971d434dd5b0aa9a7b82c",
+        "simples": "Retirar do local veículo legalmente retido para regularização, sem permissão da autoridade competente ou de seus agentes, é infração gravíssima, com multa e apreensão do veículo, e remoção.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa e apreensão do veículo."
+        ],
+        "atencao": [
+          "Gravíssima."
+        ],
+        "exemplo": "Levar embora o veículo retido sem autorização gera apreensão.",
+        "prova": [
+          "Assertiva que classifica como grave a retirada de veículo retido sem permissão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 270"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:55.135559+00:00",
+        "updated_at": "2026-10-11T22:03:55.135559+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-253",
+      "unit_id": "6b1e9cc5-812c-597d-9ac9-c68d754c40a8",
+      "content_sha256": "a1c4388aaa92c36db013b0a1b15297ad45536b0ace3ff01b5ad460936bc7440c",
+      "simples": "Bloquear a via com veículo é infração gravíssima, com multa, e medida administrativa de remoção do veículo.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "Um veículo bloqueia a via: a hipótese geral do art. 253 é gravíssima, com multa e remoção. Variação: O veículo é usado deliberadamente, sem autorização, para interromper, restringir ou perturbar circulação: examine os elementos próprios do art. 253-A.",
+      "prova": [
+        "O art. 253 e o art. 253-A são sempre intercambiáveis? Não; o art. 253-A descreve hipótese própria, com elementos e consequências específicos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 253-A"
+      ],
+      "expected": {
+        "unit_id": "6b1e9cc5-812c-597d-9ac9-c68d754c40a8",
+        "content_sha256": "a1c4388aaa92c36db013b0a1b15297ad45536b0ace3ff01b5ad460936bc7440c",
+        "simples": "Bloquear a via com veículo é infração gravíssima, com multa e apreensão do veículo, e medida administrativa de remoção do veículo.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Apreensão do veículo."
+        ],
+        "atencao": [
+          "Gravíssima, com apreensão."
+        ],
+        "exemplo": "Parar o veículo bloqueando a via gera apreensão.",
+        "prova": [
+          "Assertiva que classifica como média o bloqueio da via erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 253-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:55.135559+00:00",
+        "updated_at": "2026-10-11T22:03:55.135559+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-256",
+      "unit_id": "515cfece-836a-5a74-8549-d5db2e691150",
+      "content_sha256": "b119a0f287623bebe2cae97541d024fce7a8c69340c73aa25b03088d7bcd8ba7",
+      "simples": "A autoridade de trânsito, na esfera de sua competência e dentro de sua circunscrição, aplica às infrações as penalidades de advertência por escrito, multa, suspensão do direito de dirigir, cassação da CNH, cassação da Permissão para Dirigir e frequência obrigatória em curso de reciclagem. A aplicação das penalidades não elide as punições dos crimes de trânsito. A imposição da penalidade é comunicada aos órgãos de trânsito responsáveis pelo licenciamento do veículo e pela habilitação do condutor.",
+      "pontos": [
+        "Rol de penalidades.",
+        "Independência entre a esfera administrativa e a penal.",
+        "Comunicação da penalidade aos órgãos competentes.",
+        "Diferencie penalidade de multa ou suspensão da medida administrativa de remoção."
+      ],
+      "atencao": [
+        "Penalidade administrativa não exclui a punição penal.",
+        "Atualização de 2016: a Lei 13.281 revogou a apreensão do veículo como penalidade do art. 256, IV, e o art. 262. A referência residual em artigos específicos do compilado não restaura essa penalidade. Remoção é medida administrativa distinta; apreensão de documentos ou placas não é apreensão do veículo."
+      ],
+      "exemplo": "A autoridade aplica multa administrativa. Havendo também crime de trânsito, a penalidade administrativa não elimina automaticamente a responsabilidade penal. Variação: A questão inclui apreensão do veículo no rol atual de penalidades: o inciso IV foi revogado em 2016; remoção pertence às medidas administrativas.",
+      "prova": [
+        "Remoção e apreensão do veículo são hoje duas penalidades do rol do art. 256? Não; a apreensão foi revogada como penalidade e a remoção é medida administrativa, com disciplina própria."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 161"
+      ],
+      "expected": {
+        "unit_id": "515cfece-836a-5a74-8549-d5db2e691150",
+        "content_sha256": "b119a0f287623bebe2cae97541d024fce7a8c69340c73aa25b03088d7bcd8ba7",
+        "simples": "A autoridade de trânsito, na esfera de sua competência e dentro de sua circunscrição, aplica às infrações as penalidades de advertência por escrito, multa, suspensão do direito de dirigir, cassação da CNH, cassação da Permissão para Dirigir e frequência obrigatória em curso de reciclagem. A aplicação das penalidades não elide as punições dos crimes de trânsito. A imposição da penalidade é comunicada aos órgãos de trânsito responsáveis pelo licenciamento do veículo e pela habilitação do condutor.",
+        "pontos": [
+          "Rol de penalidades.",
+          "Independência entre a esfera administrativa e a penal.",
+          "Comunicação da penalidade aos órgãos competentes."
+        ],
+        "atencao": [
+          "Penalidade administrativa não exclui a punição penal.",
+          "ATUALIZAÇÃO: a apreensão do veículo e outras medidas constam em artigos específicos."
+        ],
+        "exemplo": "O condutor responde pela multa e pelo crime de trânsito, quando houver.",
+        "prova": [
+          "Assertiva que exclui o processo penal quando houver penalidade administrativa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 161"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:55.135559+00:00",
+        "updated_at": "2026-10-11T22:03:55.135559+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-216-b",
+      "unit_id": "e308203a-aa2f-515e-b499-a6f7c630a711",
+      "content_sha256": "f1a7595d3b8ccb5f8f4cd8d2d0f226fab3e784a6779b650ce511aacec2b7fcec",
+      "simples": "O art. 216-B pune produzir, fotografar, filmar ou registrar conteúdo de nudez ou ato sexual ou libidinoso íntimo e privado, sem autorização dos participantes. A pena é detenção de seis meses a um ano e multa. O parágrafo único alcança montagem destinada a incluir pessoa em cena de nudez ou ato sexual ou libidinoso íntimo.",
+      "pontos": [
+        "A conduta do caput envolve registrar conteúdo íntimo e privado sem autorização dos participantes.",
+        "Montagem para incluir pessoa na cena é hipótese expressa do parágrafo único.",
+        "Pena: detenção de seis meses a um ano e multa."
+      ],
+      "atencao": [
+        "Não confunda registro não autorizado com divulgação de conteúdo íntimo: a divulgação tem disciplina própria no art. 218-C.",
+        "O título histórico Sedução pertencia ao dispositivo seguinte revogado; não é parte da regra do art. 216-B."
+      ],
+      "exemplo": "Uma pessoa grava, sem autorização dos participantes, ato íntimo e privado: confronta-se o caput do art. 216-B. Variação: A cena foi produzida por montagem para incluir outra pessoa: o parágrafo único descreve essa hipótese, sem exigir que a gravação da cena tenha ocorrido como no caput.",
+      "prova": [
+        "Uma montagem está automaticamente fora do art. 216-B porque não registra uma cena realmente ocorrida? Não; o parágrafo único prevê montagem destinada a incluir pessoa em cena íntima de nudez ou ato sexual ou libidinoso."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 218-C"
+      ],
+      "expected": {
+        "unit_id": "e308203a-aa2f-515e-b499-a6f7c630a711",
+        "content_sha256": "e3a9bd9cba2ae663745857922f867fbc379465e35dad31ea54d1deb709899b94",
+        "simples": "Registro não autorizado da intimidade sexual: produzir, fotografar, filmar ou registrar, por qualquer meio, conteúdo com cena de nudez ou ato sexual ou libidinoso de caráter íntimo e privado sem autorização dos participantes. Pena: detenção de 6 meses a 1 ano e multa. Na mesma pena quem realiza montagem em fotografia, vídeo, áudio ou qualquer registro para incluir pessoa em cena de nudez ou ato sexual ou libidinoso de caráter íntimo.",
+        "pontos": [
+          "Registrar cena de nudez ou ato íntimo sem autorização dos participantes.",
+          "Detenção de 6 meses a 1 ano e multa.",
+          "Parágrafo único: montagem para incluir pessoa em cena íntima (inclusive por meios tecnológicos)."
+        ],
+        "atencao": [
+          "A divulgação desse material é crime à parte (art. 218-C)."
+        ],
+        "exemplo": "Filmar escondido o ato íntimo de um casal sem o consentimento deles.",
+        "prova": [
+          "Assertiva que exige divulgação do registro para configurar o art. 216-B erra: basta produzir ou registrar sem autorização."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 218-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    }
+  ]
+}

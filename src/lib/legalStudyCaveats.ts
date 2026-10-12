@@ -1,5 +1,11 @@
 /** Editorial application notes are separate from the unmodified compiled statute. */
 export function legalStudyCaveat(law: string, key: string) {
+  if (law === "transito" && ['art-173','art-174','art-175','art-184','art-210','art-229','art-230','art-234','art-238','art-239','art-253','art-256'].includes(key)) return {
+    literalPractice: false,
+    title: "Apreensão e remoção: atenção à atualização de 2016",
+    explanation: "A Lei 13.281/2016 revogou a apreensão do veículo como penalidade (art. 256, IV, e art. 262). Algumas redações específicas do compilado ainda conservam essa expressão. Não a memorize como penalidade atual: distinga a redação residual da medida administrativa de remoção e das demais sanções do artigo. A apreensão de placas ou de documentos tem outro objeto e não se confunde com essa revogação.",
+    source: "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+  };
   if (law === "ric" && key === "art-3") return {
     literalPractice: false,
     title: "Redação de 2009 e trecho histórico na compilação",

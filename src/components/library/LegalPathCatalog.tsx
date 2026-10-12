@@ -41,9 +41,10 @@ export function LegalPathCatalog({ userId, materials, query = "", searching = fa
             {matched && <span className="sr-only">Lei correspondente à busca</span>}
             <p className="library-law-date">{lawChronologyLabel(course.slug)}</p>
             <p className="library-law-meta">{course.overview.current_units} dispositivos vigentes · {course.overview.chapters.length} blocos</p>
-            <Link to="/dashboard/library/$slug" params={{slug: course.material_slug}} className="library-study-button">Estudar: guia, exemplos e flashcards<ArrowUpRight aria-hidden="true" size={16}/></Link>
-            <Link to="/dashboard/legal-course/$slug" params={{slug: course.slug}} className="library-reading-link">Leitura integral e revisão por dispositivo</Link>
-            {chronology && <a href={chronology.source_url} target="_blank" rel="noopener noreferrer" className="library-source-link">Conferir ato oficial desta data</a>}
+            <Link to="/dashboard/legal-course/$slug" params={{slug: course.slug}} className="library-study-button">Estudar artigo por artigo<ArrowUpRight aria-hidden="true" size={16}/></Link>
+            <p className="text-xs text-muted-foreground">Explicação simples, texto oficial e fixação em cada artigo, com seu progresso salvo.</p>
+            <Link to="/dashboard/library/$slug" params={{slug: course.material_slug}} className="library-reading-link">Resumo da lei, exemplos e flashcards</Link>
+            {chronology && <a href={chronology.source_url} target="_blank" rel="noopener noreferrer" className="library-source-link">Ver o texto oficial no site do governo</a>}
             {related.length > 0 && <details className="library-deep-links"><summary>Aprofundamentos ({related.length})</summary><ul>{related.map(material => <li key={material.slug}><Link to="/dashboard/library/$slug" params={{slug: material.slug}}><LibrarySearchMatch text={material.title} query={query}/></Link></li>)}</ul></details>}
           </article>;
         })}</div>

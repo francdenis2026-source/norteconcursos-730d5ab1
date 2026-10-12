@@ -4,6 +4,12 @@ spec=importlib.util.spec_from_file_location('legal_builder',path)
 builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
 
 class CurriculumTests(unittest.TestCase):
+ def test_cp_next_article_rubric_does_not_pollute_previous_body(self):
+  rows=self.parse('<p>Art. 14. Crime.</p><p>Tentativa</p><p>II - tentado.</p><p>Desistência voluntária e arrependimento eficaz (Redação dada pela Lei nº 7.209)</p><p>Art. 15. O agente.</p>','codigo-penal')
+  self.assertIn('Tentativa',rows[0]['text']);self.assertNotIn('Desistência',rows[0]['text'])
+ def test_cp_embedded_repealed_articles_do_not_enter_current_186(self):
+  rows=self.parse('<p>Art. 186. Ação penal.</p><p>Violação de privilégio Art 187. (Revogado pela Lei nº 9.279) Falsa atribuição Art 188. (Revogado pela Lei nº 9.279)</p><p>Art. 196. Outra regra vigente.</p>','codigo-penal')
+  self.assertNotIn('187',rows[0]['text']);self.assertEqual(rows[1]['key'],'art-196')
  def test_legacy_crossed_formatting_preserves_article_and_penalty(self):
   rows=self.parse('<p>Art. 183-A. Majorante patrimonial.</p><b><font><p></font></b><font>Art. 184. Violar direitos de autor:</font></p><font><p>Pena — detenção, de três meses a um ano.</p></font><p>Art. 185. (Revogado)</p>')
   self.assertEqual([r['key'] for r in rows],['art-183-a','art-184','art-185'])

@@ -11,7 +11,11 @@ import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
-import { LegalLiteralPractice } from "@/components/library/LegalLiteralPractice";
+import { SafeBoundary } from "@/components/library/SafeBoundary";
+import { LibraryVideos } from "@/components/library/LibraryVideos";
+import { useMediaCatalog } from "@/lib/mediaStore";
+import { lawVideos } from "@/lib/relatedVideos";
+import { UnitTrueFalse } from "@/components/library/UnitTrueFalse";
 import { LegalCoverage } from "@/components/library/LegalCoverage";
 import { useStudyMaterial } from "@/lib/studyMaterials";
 import { UnitExplanation } from "@/components/library/UnitExplanation";
@@ -49,7 +53,9 @@ function LegalCoursePage() {
   const [chapter, setChapter] = useState("all");
   const [dueOnly, setDueOnly] = useState(false);
   const [showExcluded, setShowExcluded] = useState(false);
-  const [tab, setTab] = useState<"learn" | "application">("learn");
+  const [tab, setTab] = useState<"learn" | "application" | "videos">("learn");
+  const { catalog } = useMediaCatalog();
+  const videos = useMemo(() => lawVideos(catalog, slug), [catalog, slug]);
   const rows = units.data ?? [];
   const states = progress.data ?? [];
   const current = rows.filter(row => row.content_status === "current");
@@ -77,38 +83,41 @@ function LegalCoursePage() {
   if (isLoading || courses.isPending || (course && units.isPending)) return <Skeleton className="h-80 rounded-2xl" />;
   if (courses.isError || units.isError || !course) return <div className="surface-card p-6"><p>Não foi possível abrir este percurso.</p><Button onClick={() => { void courses.refetch(); void units.refetch(); }}>Tentar novamente</Button><Link to="/dashboard/library" className="ml-4 underline">Biblioteca</Link></div>;
   return <LegalRefProvider value={{ slug: course.slug, index: refIndex }}><div className="space-y-5 pb-8">
-    <Link to="/dashboard/library" className="text-sm underline">← Biblioteca</Link>
-    <header className="surface-card p-5 sm:p-7">
-      <p className="text-xs font-semibold uppercase tracking-widest text-primary">Percurso de legislação</p>
-      <h1 className="mt-2 text-2xl font-bold sm:text-3xl">{course.title}</h1>
-      {coverage && <p className="mt-1 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-3 py-1 text-xs font-bold text-indigo-900 dark:bg-indigo-500/20 dark:text-indigo-100">💡 Explicação por artigo: {coverage.explained} de {coverage.total_units} dispositivos{coverage.explained === 0 ? " (em preparação)" : ""}</p>}
-      <p className="mt-3 text-muted-foreground">{course.overview.intro}</p>
-      <div className="mt-4 flex flex-wrap gap-3 text-sm" aria-label="Seu progresso nesta lei">
-        <span>{summary.read}/{current.length} lidos</span><span>{summary.practiced} praticados sem consulta</span><span>{summary.difficult} dificuldades</span><span>{summary.due} revisões pendentes</span>
+    <nav aria-label="Trilha" className="flex items-center gap-2 text-sm text-muted-foreground"><Link to="/dashboard/library" className="hover:text-foreground hover:underline">Biblioteca</Link><span aria-hidden>/</span><span className="text-foreground">Legislação</span></nav>
+    <header className="surface-card overflow-hidden p-0">
+      <div className="space-y-3 p-5 sm:p-7">
+        <p className="text-xs font-semibold uppercase tracking-widest text-primary">Percurso de legislação</p>
+        <h1 className="text-2xl font-bold leading-tight sm:text-3xl">{course.title}</h1>
+        {coverage && <p className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">Explicação por artigo: {coverage.explained} de {coverage.total_units}</p>}
+        <p className="max-w-3xl text-sm leading-6 text-muted-foreground sm:text-base">{course.overview.intro}</p>
       </div>
-      <progress className="mt-3 h-2 w-full" max={Math.max(current.length, 1)} value={summary.read} aria-label="Dispositivos lidos" />
+      <div className="grid grid-cols-2 gap-px border-t bg-border sm:grid-cols-4" aria-label="Seu progresso nesta lei">
+        {([["Lidos", `${summary.read}/${current.length}`], ["Praticados sem consulta", summary.practiced], ["Dificuldades", summary.difficult], ["Revisões pendentes", summary.due]] as const).map(([label, value]) => <div key={label} className="bg-card p-4"><p className="text-xl font-bold">{value}</p><p className="text-xs text-muted-foreground">{label}</p></div>)}
+      </div>
+      <progress className="block h-1.5 w-full accent-primary" max={Math.max(current.length, 1)} value={summary.read} aria-label="Dispositivos lidos" />
     </header>
     <LegalUpdateNotice review={course.legal_review ? { ...course.legal_review, course_slug: undefined } : null} slug={course.material_slug} />
-    <div className="flex flex-wrap gap-2" role="group" aria-label="Modo de estudo">
-      <Button variant={tab === "learn" ? "default" : "outline"} onClick={() => setTab("learn")}>Leitura e recuperação</Button>
-      <Button variant={tab === "application" ? "default" : "outline"} onClick={() => setTab("application")}>Questões comentadas e cartões</Button>
-      {suggested && <Button variant="outline" onClick={() => { setSelectedId(suggested.id); setTab("learn"); }}>Próximo passo sugerido</Button>}
+    <div className="flex flex-wrap items-center gap-2 rounded-xl border bg-card p-1.5" role="group" aria-label="Modo de estudo">
+      <Button variant={tab === "learn" ? "default" : "ghost"} onClick={() => setTab("learn")}>Leitura e recuperação</Button>
+      <Button variant={tab === "application" ? "default" : "ghost"} onClick={() => setTab("application")}>Questões comentadas e cartões</Button>
+      {videos.length > 0 && <Button variant={tab === "videos" ? "default" : "ghost"} onClick={() => setTab("videos")}>Vídeo-aulas ({videos.length})</Button>}
+      {suggested && <Button variant="ghost" className="ml-auto" onClick={() => { setSelectedId(suggested.id); setTab("learn"); }}>Continuar de onde parei →</Button>}
     </div>
     {progress.isError && <p role="alert" className="rounded-xl border p-3 text-sm">Não foi possível carregar o progresso. <button className="underline" onClick={() => void progress.refetch()}>Tentar novamente</button></p>}
-    {tab === "application" ? material.isPending ? <Skeleton className="h-64" /> : material.data ? <>
+    {tab === "videos" ? <LibraryVideos videos={videos} /> : tab === "application" ? material.isPending ? <Skeleton className="h-64" /> : material.data ? <>
       <p className="text-sm text-muted-foreground">Este conjunto testa os conceitos indicados no resumo de aplicação. A cobertura da leitura integral é acompanhada por dispositivo.</p>
       <WorkedExamples key={`${userId}:${course.material_slug}`} slug={course.material_slug} enabled={!!userId} />
       {userId && <LegalCoursePractice key={`${userId}:${material.data.slug}`} courseId={course.id} userId={userId} material={material.data} />}
       {userId && <LawPracticeLink law={course.slug} userId={userId} />}
       <Link to="/dashboard/library/$slug" params={{ slug: course.material_slug }} className="inline-block underline">Abrir explicações e exemplos de aplicação</Link>
     </> : <p>Não foi possível carregar os exercícios. <button onClick={() => void material.refetch()} className="underline">Tentar novamente</button></p> : <div className="grid gap-4 lg:grid-cols-[300px_minmax(0,1fr)]">
-      <aside className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:self-start">
+      <aside className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:self-start" aria-label="Navegação da lei"><p className="text-sm font-semibold">Artigos</p>
         <label className="block text-sm">Buscar artigo ou expressão<input className="mt-1 w-full rounded-lg border bg-background p-2" type="search" value={search} onChange={e => setSearch(e.target.value)} /></label>
         <label className="block text-sm">Capítulo ou seção<select className="mt-1 w-full rounded-lg border bg-background p-2" value={chapter} onChange={e => setChapter(e.target.value)}><option value="all">Todos os blocos</option>{Array.from(new Set(rows.map(row => row.chapter))).map(name => <option key={name} value={name}>{name}</option>)}</select></label>
         <label className="flex gap-2 text-sm"><input type="checkbox" checked={dueOnly} onChange={e => setDueOnly(e.target.checked)} />Somente revisões pendentes</label>
         <label className="flex gap-2 text-sm"><input type="checkbox" checked={showExcluded} onChange={e => setShowExcluded(e.target.checked)} />Mostrar dispositivos excluídos</label>
         <p className="text-xs text-muted-foreground">{visible.length} dispositivos neste filtro</p>
-        <nav className="max-h-[60vh] space-y-1 overflow-y-auto" aria-label="Dispositivos da lei">
+        <nav className="max-h-[calc(100vh-22rem)] min-h-48 space-y-1 overflow-y-auto pr-1" aria-label="Dispositivos da lei">
           {visible.map(row => <button type="button" key={row.id} aria-current={selected?.id === row.id ? "true" : undefined} onClick={() => setSelectedId(row.id)} className={`block w-full rounded-lg border p-2 text-left text-sm ${selected?.id === row.id ? "border-primary bg-primary/5" : "border-transparent hover:bg-muted"}`}>
             <strong>{row.label}</strong><span className="ml-2 text-xs text-muted-foreground">{row.content_status === "excluded" ? "Fora da leitura ativa" : byId.get(row.id)?.last_rating === "again" ? "Retomar" : byId.get(row.id)?.read_at ? "Lido" : "A estudar"}</span>
           </button>)}
@@ -160,20 +169,20 @@ function UnitLesson({ unit, law, materialSlug, references, progress, userId, hig
     } catch { toast.error("Não foi possível salvar. Suas anotações continuam nesta tela; tente novamente."); }
     finally { setBusy(false); }
   }
-  return <article id="dispositivo-aberto" className="surface-card scroll-mt-4 space-y-4 p-5 sm:p-7">
-    <p className="text-xs text-muted-foreground">{unit.chapter}</p><h2 className="text-2xl font-bold">{unit.label}</h2>
+  return <article id="dispositivo-aberto" className="surface-card scroll-mt-4 space-y-5 p-5 sm:p-7">
+    <header className="border-b pb-4"><p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{unit.chapter}</p><h2 className="mt-1 text-2xl font-bold sm:text-3xl">{unit.label}</h2></header>
     {unit.content_status === "excluded" ? <p className="rounded-xl border border-amber-500 p-4 text-sm">Este dispositivo está vetado, revogado ou sem redação ativa no texto compilado. Não integra o progresso nem a recuperação de regras vigentes. Consulte o ato modificador na fonte oficial.</p> : <>
-      <nav className="grid gap-2 sm:grid-cols-3" aria-label="Passos de estudo deste artigo">
-        {([["entender", "1", "Entender", "Explicação em palavras simples", "from-sky-500 to-indigo-600"], ["texto", "2", "Ler o texto oficial", "Com grifos e leitura guiada", "from-emerald-500 to-teal-600"], ["fixar", "3", "Fixar", "Recuperar sem consulta e praticar", "from-amber-500 to-orange-600"]] as const).map(([id, n, title, sub, grad]) =>
+      <nav className="grid gap-2 rounded-xl bg-muted/40 p-1.5 sm:grid-cols-3" aria-label="Passos de estudo deste artigo">
+        {([["entender", "1", "Entender", "Leia a explicação simples", "from-sky-500 to-indigo-600"], ["texto", "2", "Ler o texto oficial", "Com grifos e dicas dos termos", "from-emerald-500 to-teal-600"], ["fixar", "3", "Fixar", "Teste o que você aprendeu", "from-amber-500 to-orange-600"]] as const).map(([id, n, title, sub, grad]) =>
           <button key={id} type="button" aria-current={step === id ? "step" : undefined} onClick={() => { setStep(id); if (id === "fixar") { setRevealed(false); setResponse(""); } }}
-            className={`flex items-center gap-3 rounded-xl border p-3 text-left transition ${step === id ? `border-transparent bg-gradient-to-r ${grad} text-white shadow` : "bg-card hover:border-primary"}`}>
-            <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-full text-sm font-black ${step === id ? "bg-white/25" : "bg-muted"}`}>{n}</span>
-            <span><span className="block text-sm font-bold">{title}</span><span className={`block text-xs ${step === id ? "text-white/85" : "text-muted-foreground"}`}>{sub}</span></span>
+            className={`flex items-center gap-3 rounded-lg p-3 text-left transition ${step === id ? "bg-primary text-primary-foreground shadow-sm" : "hover:bg-card"}`}>
+            <span className={`grid h-7 w-7 shrink-0 place-items-center rounded-full text-xs font-bold ${step === id ? "bg-white/25" : "bg-muted"}`}>{n}</span>
+            <span><span className="block text-sm font-bold">{title}</span><span className={`block text-xs ${step === id ? "text-primary-foreground/80" : "text-muted-foreground"}`}>{sub}</span></span>
           </button>)}
       </nav>
-      {mode === "recall" && <section className="space-y-3 rounded-xl border p-4"><h3 className="font-semibold">Explique com suas palavras</h3><ol className="list-decimal space-y-2 pl-5 text-sm">{unit.recall.prompts.map(prompt => <li key={prompt}>{prompt}</li>)}</ol><label className="block text-sm">Sua resposta de recuperação<textarea className="mt-1 min-h-36 w-full rounded-lg border bg-background p-3" value={response} onChange={e => setResponse(e.target.value)} placeholder="Responda antes de abrir a referência." /></label><Button disabled={!response.trim()} variant="outline" onClick={() => setRevealed(true)}>Conferir com o texto e os critérios</Button></section>}
+      {mode === "recall" && <section className="space-y-3 rounded-xl border p-4"><h3 className="font-semibold">Explique com suas palavras</h3><p className="text-sm text-muted-foreground">Responda sem olhar o artigo. Depois confira com o texto oficial e diga o quanto lembrou: isso define quando o artigo volta para revisão.</p><ol className="list-decimal space-y-2 pl-5 text-sm">{unit.recall.prompts.map(prompt => <li key={prompt}>{prompt}</li>)}</ol><label className="block text-sm">Sua resposta de recuperação<textarea className="mt-1 min-h-36 w-full rounded-lg border bg-background p-3" value={response} onChange={e => setResponse(e.target.value)} placeholder="Responda antes de abrir a referência." /></label><Button disabled={!response.trim()} variant="outline" onClick={() => setRevealed(true)}>Conferir com o texto e os critérios</Button></section>}
       {step === "entender" && <>
-        {caveat && <aside className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4 text-sm"><strong>{caveat.title}</strong><p className="mt-2 leading-7">{caveat.explanation}</p><a href={caveat.source} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block underline">Conferir o entendimento do STJ</a></aside>}
+        {caveat && <aside className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4 text-sm"><strong>{caveat.title}</strong><p className="mt-2 leading-7">{caveat.explanation}</p><a href={caveat.source} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block underline">Conferir a fonte oficial</a></aside>}
         {references.map(ref => <aside key={ref.url} className="rounded-xl border border-amber-500/50 p-4 text-sm"><strong>{ref.title}</strong><p className="mt-2">{ref.explanation}</p>{isStudySourceUrl(ref.url) && <a className="mt-2 inline-block underline" href={ref.url} target="_blank" rel="noopener noreferrer">Fonte do tribunal</a>}</aside>)}
         <UnitExplanation unit={unit} userId={userId} />
         {explanation.isSuccess && !explanation.data && <p className="rounded-xl border border-dashed p-4 text-sm text-muted-foreground">A explicação deste artigo ainda está em preparação. Leia o texto oficial no passo 2.</p>}
@@ -181,7 +190,7 @@ function UnitLesson({ unit, law, materialSlug, references, progress, userId, hig
       </>}
       {(step === "texto" || (step === "fixar" && revealed)) && <>
         <div className={unit.unit_key.startsWith("anexo-") ? "library-body overflow-x-auto" : undefined}><LegalStudyReading source={unit.body_text} markdown={unit.unit_key.startsWith("anexo-")} highlightPar={highlightPar} /></div>
-        {step === "texto" && caveat?.literalPractice !== false && <LegalLiteralPractice key={unit.content_sha256} source={unit.body_text} label={unit.label} />}
+        {step === "texto" && caveat?.literalPractice !== false && <SafeBoundary><UnitTrueFalse key={unit.id} unit={unit} userId={userId} /></SafeBoundary>}
         {unit.recall.figures?.filter(figure => isStudySourceUrl(figure.url)).map(figure => <figure key={figure.url} className="rounded-xl border p-3"><img src={figure.url} alt={figure.title} className="h-auto max-w-full" loading="lazy" onError={event => { event.currentTarget.hidden = true; }} /><figcaption className="mt-2 text-xs"><a href={figure.url} target="_blank" rel="noopener noreferrer" className="underline">{figure.title}</a></figcaption></figure>)}
         {step === "texto" && <div className="flex justify-between gap-2"><Button variant="outline" onClick={() => setStep("entender")}>← Entender</Button><Button onClick={() => { setStep("fixar"); setRevealed(false); setResponse(""); }}>Fixar este artigo →</Button></div>}
       </>}
@@ -190,8 +199,8 @@ function UnitLesson({ unit, law, materialSlug, references, progress, userId, hig
         <WorkedExamples slug={materialSlug} enabled={true} articleLabel={unit.label} />
       </>}
       {mode === "recall" && revealed && <section className="space-y-3"><p className="text-sm">Compare sua resposta com o dispositivo inteiro. Registre a regra ou exceção que confundiu. Esta avaliação é feita por você; não é correção automática de texto livre.</p><div className="flex flex-wrap gap-2">{([['again','Não lembrei · 10 min'],['hard','Com dificuldade · 1 dia'],['good','Lembrei'],['easy','Lembrei com facilidade']] as const).map(([rating,label]) => <Button disabled={busy} key={rating} variant="outline" onClick={() => void save(rating)}>{label}</Button>)}</div></section>}
-      <label className="block text-sm">Anotações e confusões a retomar<textarea maxLength={4000} className="mt-1 min-h-24 w-full rounded-lg border bg-background p-3" value={notes} onChange={e => setNotes(e.target.value)} /></label>
-      <div className="flex flex-wrap gap-2"><Button disabled={busy} onClick={() => void save("read")}>Salvar leitura e anotações</Button><Button variant="outline" onClick={onNext}>Próximo dispositivo</Button></div>
+      <label className="block text-sm font-medium">Suas anotações<span className="ml-1 font-normal text-muted-foreground">(dúvidas e pontos a retomar)</span><textarea maxLength={4000} className="mt-1.5 min-h-24 w-full rounded-lg border bg-background p-3 text-sm font-normal" value={notes} onChange={e => setNotes(e.target.value)} /></label>
+      <div className="flex flex-wrap items-center gap-2 border-t pt-4"><Button disabled={busy} onClick={() => void save("read")}>Marcar como lido e salvar</Button><Button variant="outline" onClick={onNext}>Próximo artigo →</Button></div>
       {progress?.due_at && <p className="text-xs text-muted-foreground">Próxima revisão: {new Date(progress.due_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}</p>}
     </>}
   </article>;

@@ -59,7 +59,18 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
      hierarchy[pending_level]=' — '.join(pending)
      return ' / '.join(hierarchy[k] for k in sorted(hierarchy))
     inactive_article=False
+    # Inspected CP rubrics belong to the next article, not the preceding body.
+    # Keep rubrics inside an article (e.g. "Tentativa" within art. 14).
+    next_article_rubrics={'Desistência voluntária e arrependimento eficaz','Conversão das penas restritivas de direitos','Suspensão da execução da multa','Infanticídio','Abandono de incapaz','Sedução'}
     for value,unstripped in blocks:
+     if slug=='codigo-penal':
+      rubric=re.sub(r'\s*\((?:Redação dada|Incluído|Vide).*$', '',value).strip()
+      if rubric in next_article_rubrics:continue
+      # Legacy markup puts several repealed arts. 187–195 in one paragraph,
+      # prefixed by old rubrics. It must not become part of current art. 186.
+      embedded=list(re.finditer(r'\bArt\.?\s+\d+[.\s]',value,re.I))
+      if embedded and not article.match(value) and all(re.match(r'\s*\(?Revogado\b',value[m.end():],re.I) for m in embedded):
+       inactive_article=True;continue
      current_head=article.match(value)
      original_head=article.match(unstripped)
      if original_head and not unstripped.startswith(('“','"')) and not current_head:
