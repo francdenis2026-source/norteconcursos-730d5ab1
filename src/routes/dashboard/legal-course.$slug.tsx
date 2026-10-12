@@ -4,6 +4,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useFocusMode } from "@/hooks/useFocusMode";
+import { toolsAreaFor } from "@/components/study/StudyTools";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -94,7 +95,7 @@ function LegalCoursePage() {
       onNext: selected && current.findIndex(r => r.id === selected.id) < current.length - 1 ? () => { const i = current.findIndex(r => r.id === selected.id); setSelectedId(current[i + 1]!.id); } : undefined,
       prevLabel: "Artigo anterior",
       nextLabel: "Próximo artigo",
-      tools: "law",
+      tools: toolsAreaFor(`${course.title} ${course.slug}`),
       notesKey: `lei:${course.slug}`,
       extra: <Link to="/dashboard/question-trainer" search={{ law: course.slug, go: "1", reinforce: "1" }} className="flex items-center gap-1 rounded-lg bg-emerald-400 px-3 py-2 text-sm font-bold text-emerald-950 hover:bg-emerald-300">Questões</Link>,
     })}
