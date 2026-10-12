@@ -167,6 +167,14 @@ function ErrorArsenal({
           </details>
         </div>
       )}
+      <Button asChild className="w-full gap-2">
+        <Link
+          to="/dashboard/question-trainer"
+          search={{ subject: question.subject, go: "1", mode: "reforco" }}
+        >
+          <Target className="h-4 w-4" /> Refazer meus erros de {question.subject} (reforço, não pontua de novo)
+        </Link>
+      </Button>
       <Button asChild variant="outline" className="w-full gap-2">
         <Link
           to="/dashboard/question-trainer"
