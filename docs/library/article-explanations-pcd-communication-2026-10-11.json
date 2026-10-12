@@ -1,0 +1,1045 @@
+{
+  "version": "2026-10-11-pcd-targeted",
+  "checked_at": "2026-10-12T00:01:41.232689+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "pcd",
+      "title": "Lei 13.146/2015 — Estatuto da Pessoa com Deficiência",
+      "units": 20,
+      "scope_type": "targeted_correction",
+      "course_current_units": 127,
+      "target_unit_keys": [
+        "art-61",
+        "art-62",
+        "art-63",
+        "art-64",
+        "art-65",
+        "art-66",
+        "art-67",
+        "art-68",
+        "art-69",
+        "art-70",
+        "art-71",
+        "art-72",
+        "art-73",
+        "art-74",
+        "art-75",
+        "art-76",
+        "art-77",
+        "art-78",
+        "art-79",
+        "art-80"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+      "source_sha256": "967565f4e9ccd9c5aba4c24dd39c8d2a00f2ddb0832aeeca168f1cbc6079ec37",
+      "source_checked_at": "2026-10-11T23:22:00.590309+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-61",
+      "unit_id": "28f30cfe-7655-5b98-851f-9ad4f571bc2a",
+      "content_sha256": "d40f4d24a84acf909d1867b06d5b5d0b2f27b08c36b12702f1028b95314a5760",
+      "simples": "Ações de acessibilidade exigem prioridades, cronograma, reserva de recursos e planejamento contínuo articulado entre os setores. Formulação, implementação e manutenção integram a obrigação, que não termina na inauguração.",
+      "pontos": [
+        "Prioridades, cronograma e recursos.",
+        "Planejamento contínuo e articulação entre setores."
+      ],
+      "atencao": [
+        "Não confunda planejamento com ação isolada sem previsão de manutenção."
+      ],
+      "exemplo": "O órgão define etapas, orçamento e responsáveis pela manutenção da acessibilidade. Variação: A inauguração ocorreu, mas não há planejamento de manutenção: ainda falta cumprir uma dimensão do caput.",
+      "prova": [
+        "O planejamento de acessibilidade deve ser contínuo e articulado entre os setores? Sim; essa é a premissa do inciso II."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "28f30cfe-7655-5b98-851f-9ad4f571bc2a",
+        "content_sha256": "d40f4d24a84acf909d1867b06d5b5d0b2f27b08c36b12702f1028b95314a5760",
+        "simples": "A formulação, a implementação e a manutenção das ações de acessibilidade atenderão às premissas de eleição de prioridades, elaboração de cronograma e reserva de recursos para a implementação das ações; e de planejamento contínuo e articulado entre os setores envolvidos.",
+        "pontos": [
+          "Prioridades, cronograma e recursos.",
+          "Planejamento contínuo e articulado."
+        ],
+        "atencao": [
+          "Planejamento com recursos reservados."
+        ],
+        "exemplo": "O município define prioridades e cronograma para adaptar calçadas.",
+        "prova": [
+          "Assertiva que dispensa cronograma e reserva de recursos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 60"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-62",
+      "unit_id": "506d54bf-dbc6-5824-b59f-d13503e254ee",
+      "content_sha256": "8fea9fe6a0d261652e3075efb436e24e9b307ab80b6f378f18822c700c55855a",
+      "simples": "Mediante solicitação, a pessoa com deficiência recebe contas, boletos, recibos, extratos e cobranças de tributos em formato acessível. O comando inclui documentos financeiros e tributários, não somente contas de serviços.",
+      "pontos": [
+        "Formato acessível.",
+        "Mediante solicitação.",
+        "Inclui cobranças de tributos."
+      ],
+      "atencao": [
+        "Leia a condição mediante solicitação: o artigo não limita o direito às faturas bancárias."
+      ],
+      "exemplo": "A pessoa solicita extrato em formato que consegue acessar: o artigo assegura o recebimento acessível. Variação: O documento é cobrança de tributo: também integra a enumeração.",
+      "prova": [
+        "As cobranças de tributos estão excluídas do direito a formato acessível? Não; constam expressamente do artigo."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "506d54bf-dbc6-5824-b59f-d13503e254ee",
+        "content_sha256": "8fea9fe6a0d261652e3075efb436e24e9b307ab80b6f378f18822c700c55855a",
+        "simples": "É assegurado à pessoa com deficiência, mediante solicitação, o recebimento de contas, boletos, recibos, extratos e cobranças de tributos em formato acessível.",
+        "pontos": [
+          "Contas, boletos e extratos em formato acessível, mediante solicitação."
+        ],
+        "atencao": [
+          "Depende de SOLICITAÇÃO."
+        ],
+        "exemplo": "A pessoa cega pede o extrato do banco em Braille.",
+        "prova": [
+          "Assertiva que torna a emissão acessível automática, sem solicitação, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:12.659156+00:00",
+        "updated_at": "2026-10-11T21:58:12.659156+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-63",
+      "unit_id": "e3b60465-1e02-5c59-9938-d5c3e053b91e",
+      "content_sha256": "21b030d0b706e7b4bdd339003fff71a2a9d736702f78cfb2f64ed73edec7be6b",
+      "simples": "Sites governamentais e de empresas com sede ou representação comercial no País devem ser acessíveis e destacar símbolo de acessibilidade. Telecentros com recursos públicos federais e lan houses têm instalações e equipamentos acessíveis, com ao menos 10% dos computadores acessíveis à deficiência visual e mínimo de um quando o cálculo ficar abaixo de um.",
+      "pontos": [
+        "Sites de governo e empresas abrangidas.",
+        "Símbolo em destaque, além de acessibilidade efetiva.",
+        "Computadores: 10%, assegurado mínimo de um."
+      ],
+      "atencao": [
+        "O símbolo sozinho não garante acesso. A quota se refere aos computadores dos estabelecimentos descritos, não a 10% de todas as páginas de um site."
+      ],
+      "exemplo": "Uma lan house com dez computadores disponibiliza ao menos um com recursos adequados à deficiência visual. Variação: Há somente cinco computadores: o resultado percentual inferior a um não dispensa o equipamento mínimo.",
+      "prova": [
+        "Uma lan house fica dispensada do equipamento acessível quando 10% resultar em menos de um? Não; o §3º assegura pelo menos um equipamento."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "e3b60465-1e02-5c59-9938-d5c3e053b91e",
+        "content_sha256": "21b030d0b706e7b4bdd339003fff71a2a9d736702f78cfb2f64ed73edec7be6b",
+        "simples": "É obrigatória a acessibilidade nos sítios da internet mantidos por empresas com sede ou representação comercial no País ou por órgãos de governo, para uso da pessoa com deficiência, conforme as melhores práticas e diretrizes internacionais. Os sítios devem conter símbolo de acessibilidade em destaque. Telecentros comunitários que recebam recursos públicos federais e lan houses devem possuir equipamentos e instalações acessíveis, garantindo, no mínimo, 10% de seus computadores com recursos de acessibilidade para pessoa com deficiência visual, com pelo menos 1 equipamento.",
+        "pontos": [
+          "Acessibilidade obrigatória nos sítios de empresas e do governo.",
+          "Símbolo de acessibilidade em destaque.",
+          "Telecentros e lan houses: no mínimo 10% dos computadores acessíveis."
+        ],
+        "atencao": [
+          "Mínimo de 10% dos computadores, e pelo menos 1."
+        ],
+        "exemplo": "A loja virtual precisa ser compatível com leitores de tela.",
+        "prova": [
+          "Assertiva que isenta empresas privadas da acessibilidade de seus sítios erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 64"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-64",
+      "unit_id": "1a20bb80-f7cb-53db-a0e7-a4497d93d12b",
+      "content_sha256": "1cab430a5842717dc65e33760bd97d70434fe318e713802e09b88fa4bbae3704",
+      "simples": "A acessibilidade dos sites abrangidos pelo art. 63 é exigida para obter o financiamento do art. 54, III. Trata-se de projetos com recursos públicos, inclusive os instrumentos e benefícios ali descritos.",
+      "pontos": [
+        "Remissão ao art. 63.",
+        "Financiamento descrito no art. 54, III."
+      ],
+      "atencao": [
+        "Não generalize o artigo como proibição de qualquer crédito privado: seu objeto é o financiamento remetido."
+      ],
+      "exemplo": "Um projeto busca recursos públicos na modalidade do art. 54, III: deve observar a acessibilidade do site abrangido. Variação: O enunciado trata de outro crédito sem esse vínculo: não se enquadra automaticamente apenas por este artigo.",
+      "prova": [
+        "A acessibilidade do site deve ser observada no financiamento remetido ao art. 54, III? Sim; o art. 64 estabelece essa conexão."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "1a20bb80-f7cb-53db-a0e7-a4497d93d12b",
+        "content_sha256": "1cab430a5842717dc65e33760bd97d70434fe318e713802e09b88fa4bbae3704",
+        "simples": "A acessibilidade nos sítios da internet deve ser observada para obtenção do financiamento de que trata o inciso III do art. 54 da Lei.",
+        "pontos": [
+          "Acessibilidade dos sítios como condição para o financiamento público."
+        ],
+        "atencao": [
+          "Condição para financiamento."
+        ],
+        "exemplo": "A empresa só obtém financiamento público se o seu site for acessível.",
+        "prova": [
+          "Assertiva que dispensa a acessibilidade do site para o financiamento público erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 54"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-65",
+      "unit_id": "067d9ef5-3987-5ce4-9ee5-d22a24133ccf",
+      "content_sha256": "a04f46765efceb050d824c642b37c0cc77f5d1667f2d332093bd8964fbddcb4d",
+      "simples": "Prestadoras de telecomunicações garantem pleno acesso à pessoa com deficiência conforme regulamentação específica. A lei define o dever; suas condições técnicas devem ser consultadas no regulamento aplicável.",
+      "pontos": [
+        "Dever das prestadoras.",
+        "Pleno acesso.",
+        "Conforme regulamentação específica."
+      ],
+      "atencao": [
+        "O artigo não define sozinho todo canal, prazo ou requisito técnico de atendimento; não invente esses detalhes."
+      ],
+      "exemplo": "A prestadora organiza recursos de acesso segundo as regras específicas do serviço. Variação: A questão atribui ao artigo um prazo técnico não escrito nele: é necessário conferir a norma regulamentar correspondente.",
+      "prova": [
+        "O artigo fixa sozinho todos os prazos e canais técnicos do serviço? Não; expressamente remete à regulamentação específica."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "067d9ef5-3987-5ce4-9ee5-d22a24133ccf",
+        "content_sha256": "a04f46765efceb050d824c642b37c0cc77f5d1667f2d332093bd8964fbddcb4d",
+        "simples": "As empresas prestadoras de serviços de telecomunicações deverão garantir pleno acesso à pessoa com deficiência, conforme regulamentação específica.",
+        "pontos": [
+          "Telecomunicações com pleno acesso."
+        ],
+        "atencao": [
+          "Conforme regulamentação específica."
+        ],
+        "exemplo": "A operadora oferece canais de atendimento acessíveis.",
+        "prova": [
+          "Assertiva que isenta as operadoras de telefonia da acessibilidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 66"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-66",
+      "unit_id": "ecb452ca-9881-58d5-abfe-7334b0a1756f",
+      "content_sha256": "f0b703f7dbf95ad4c222c472a1c9e85a4ce0f4b9ab49b68a64d2bc91650665b5",
+      "simples": "O poder público incentiva aparelhos de telefonia fixa e móvel celular acessíveis. Entre as tecnologias contempladas estão indicação e ampliação sonoras de todas as operações e funções disponíveis.",
+      "pontos": [
+        "Telefonia fixa e móvel.",
+        "Incentivo público à oferta.",
+        "Indicação e ampliação sonoras entre os recursos."
+      ],
+      "atencao": [
+        "A expressão entre outras tecnologias assistivas torna a enumeração aberta; não a reduza a um único recurso."
+      ],
+      "exemplo": "Um programa incentiva aparelhos que informam sonoramente suas operações para o usuário. Variação: O aparelho é de telefonia fixa: também está abrangido, e não apenas o celular.",
+      "prova": [
+        "O incentivo do artigo alcança telefonia fixa e móvel celular? Sim; ambas aparecem no dispositivo."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "ecb452ca-9881-58d5-abfe-7334b0a1756f",
+        "content_sha256": "f0b703f7dbf95ad4c222c472a1c9e85a4ce0f4b9ab49b68a64d2bc91650665b5",
+        "simples": "Cabe ao poder público incentivar a oferta de aparelhos de telefonia fixa e móvel celular com acessibilidade que, entre outras tecnologias assistivas, possuam possibilidade de indicação e ampliação sonoras de todas as operações e funções disponíveis.",
+        "pontos": [
+          "Incentivo a aparelhos acessíveis."
+        ],
+        "atencao": [
+          "Incentivo (não obrigação direta ao fabricante)."
+        ],
+        "exemplo": "O celular lê em voz alta as funções do menu.",
+        "prova": [
+          "Assertiva que proíbe o incentivo a aparelhos acessíveis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 65"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-67",
+      "unit_id": "f99d0c72-3ad0-5aa6-9b6f-4c2a1a1de89d",
+      "content_sha256": "b3b79b6f1dcfd61e1cca99c378379f68e40bbfa27ef8a7213a1393fc4843c7d6",
+      "simples": "Radiodifusão de sons e imagens permite recursos de acessibilidade, incluindo legenda oculta, janela com intérprete de Libras e audiodescrição. Cada recurso atende necessidades próprias; a lista não é fechada.",
+      "pontos": [
+        "Legenda oculta.",
+        "Janela com intérprete de Libras.",
+        "Audiodescrição; lista aberta."
+      ],
+      "atencao": [
+        "Não trate legenda, Libras e audiodescrição como sinônimos nem suponha que a lei enumere somente duas tecnologias."
+      ],
+      "exemplo": "O programa permite legenda oculta para acompanhar falas e audiodescrição para compreender elementos visuais. Variação: Uma questão afirma que apenas legenda é prevista: esquece Libras e audiodescrição.",
+      "prova": [
+        "A lista do artigo é taxativa e proíbe qualquer outro recurso? Não; a expressão entre outros permite recursos adicionais."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "f99d0c72-3ad0-5aa6-9b6f-4c2a1a1de89d",
+        "content_sha256": "b3b79b6f1dcfd61e1cca99c378379f68e40bbfa27ef8a7213a1393fc4843c7d6",
+        "simples": "Os serviços de radiodifusão de sons e imagens devem permitir o uso, entre outros, da subtitulação por meio de legenda oculta, de janela com intérprete da Libras e da audiodescrição.",
+        "pontos": [
+          "Legenda oculta.",
+          "Janela com intérprete de Libras.",
+          "Audiodescrição."
+        ],
+        "atencao": [
+          "Três recursos principais."
+        ],
+        "exemplo": "A emissora transmite o programa com legenda oculta e janela de Libras.",
+        "prova": [
+          "Assertiva que dispensa a audiodescrição na radiodifusão erra."
+        ],
+        "termos": [
+          {
+            "termo": "Audiodescrição",
+            "significado": "Narração de elementos visuais para pessoas cegas."
+          }
+        ],
+        "remissoes": [
+          "Art. 70"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-68",
+      "unit_id": "16ef0b0e-c7d2-5656-9cc7-efc20954ec6b",
+      "content_sha256": "655753e325225ae43f336b88e312291e2ec9b2ed1f2d650018cc88299c081218",
+      "simples": "O poder público incentiva livros acessíveis em toda a cadeia editorial e nas publicações públicas ou financiadas publicamente. Editais de compra impedem participação de editoras que não ofertem também formatos acessíveis. Arquivos precisam funcionar com leitores de tela ou tecnologias substitutas; há apoio a artigos científicos acessíveis, inclusive em Libras.",
+      "pontos": [
+        "Cadeia editorial e publicações públicas.",
+        "Cláusulas nos editais de compras.",
+        "Arquivo digital efetivamente acessível; artigos científicos inclusive em Libras."
+      ],
+      "atencao": [
+        "PDF digitalizado como imagem não se torna acessível apenas por ser digital. A compatibilidade funcional descrita no §2º é determinante."
+      ],
+      "exemplo": "O arquivo permite voz sintetizada, ampliação e contrastes por tecnologia assistiva. Variação: O arquivo é uma imagem ilegível por leitor de tela: a mera extensão digital não demonstra atendimento à definição.",
+      "prova": [
+        "O edital de compra deve impedir participação de editora que não oferte também formatos acessíveis? Sim; o §1º determina essa cláusula."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "16ef0b0e-c7d2-5656-9cc7-efc20954ec6b",
+        "content_sha256": "655753e325225ae43f336b88e312291e2ec9b2ed1f2d650018cc88299c081218",
+        "simples": "O poder público deve adotar mecanismos de incentivo à produção, edição, difusão, distribuição e comercialização de livros em formatos acessíveis, inclusive em publicações da administração pública ou financiadas com recursos públicos. Nos editais de compras de livros, o poder público deverá adotar cláusulas de impedimento à participação de editoras que não ofertem sua produção também em formatos acessíveis. Consideram-se formatos acessíveis os arquivos digitais reconhecidos por leitores de tela ou outras tecnologias assistivas, permitindo leitura com voz sintetizada, ampliação de caracteres, contrastes e impressão em Braille. Deve-se estimular a adaptação de artigos científicos em formato acessível, inclusive em Libras.",
+        "pontos": [
+          "Incentivo a livros em formatos acessíveis.",
+          "Editais impedem editoras que não ofertem formato acessível.",
+          "Conceito de formato acessível.",
+          "Artigos científicos em formato acessível e Libras."
+        ],
+        "atencao": [
+          "Editoras sem formato acessível são impedidas de participar de compras públicas de livros."
+        ],
+        "exemplo": "A editora só vende livros ao governo se oferecer também versões acessíveis.",
+        "prova": [
+          "Assertiva que permite a compra pública de livros apenas em formato impresso comum erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 42"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-69",
+      "unit_id": "5a57f05c-59a9-5b2d-bc89-392c53510569",
+      "content_sha256": "c16888743293ad9876d0130228210d6160441373c7142afccffb9e80d4fa77b2",
+      "simples": "Informações de produtos e serviços devem ser corretas, claras e acessíveis, incluindo características, preço e riscos ao consumidor com deficiência. Anúncios e canais virtuais usam recursos compatíveis com o meio às expensas do fornecedor. Mediante solicitação, bulas e outros materiais de divulgação são disponibilizados em formato acessível.",
+      "pontos": [
+        "Informação correta e clara, inclusive riscos.",
+        "Publicidade acessível, conforme compatibilidade do meio.",
+        "Material acessível solicitado; custo dos recursos pelo fornecedor."
+      ],
+      "atencao": [
+        "A remissão ao CDC não certifica aqui todas as suas regras. Não retire a condição de compatibilidade do meio nem a solicitação prevista no §2º."
+      ],
+      "exemplo": "O consumidor solicita bula acessível e recebe material que permite sua leitura. Variação: O fornecedor transfere o custo dos recursos publicitários acessíveis ao consumidor: contraria a atribuição do §1º.",
+      "prova": [
+        "Os recursos acessíveis dos anúncios descritos no §1º correm às expensas do fornecedor? Sim; o dispositivo atribui esse custo ao fornecedor."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "5a57f05c-59a9-5b2d-bc89-392c53510569",
+        "content_sha256": "c16888743293ad9876d0130228210d6160441373c7142afccffb9e80d4fa77b2",
+        "simples": "O poder público deve assegurar a disponibilidade de informações corretas e claras sobre os diferentes produtos e serviços, por quaisquer meios, inclusive virtual, com a especificação de quantidade, qualidade, características, composição e preço, bem como sobre os eventuais riscos à saúde e à segurança do consumidor com deficiência. Os canais de comercialização virtual e os anúncios devem disponibilizar os recursos de acessibilidade do art. 67, a expensas do fornecedor. Os fornecedores devem disponibilizar, mediante solicitação, bulas, prospectos e materiais de divulgação em formato acessível.",
+        "pontos": [
+          "Informações claras e acessíveis sobre produtos e serviços.",
+          "Recursos de acessibilidade nos anúncios, a expensas do fornecedor.",
+          "Bulas e materiais em formato acessível, mediante solicitação."
+        ],
+        "atencao": [
+          "Custeio dos recursos de acessibilidade pelo FORNECEDOR."
+        ],
+        "exemplo": "O laboratório fornece a bula em formato acessível, quando solicitado.",
+        "prova": [
+          "Assertiva que transfere ao consumidor o custo dos recursos de acessibilidade na publicidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 67"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-70",
+      "unit_id": "420b3862-8e3c-51f6-a2e8-10bae242fae0",
+      "content_sha256": "ed137311a920813a7846ad9d280c23e615199c281dd3521874e3b6074fb6177c",
+      "simples": "Promotores de congressos, seminários, oficinas e eventos científico-culturais oferecem à pessoa com deficiência, no mínimo, os recursos assistivos previstos no art. 67: legenda oculta, janela de Libras e audiodescrição.",
+      "pontos": [
+        "Instituições promotoras.",
+        "Eventos científico-culturais.",
+        "Recursos mínimos remetidos ao art. 67."
+      ],
+      "atencao": [
+        "Não restrinja o dever a evento financiado pelo poder público: o art. 70 trata das instituições promotoras; o art. 71 acrescenta o contexto público."
+      ],
+      "exemplo": "Uma instituição privada organiza seminário científico e considera os recursos mínimos remetidos. Variação: Ela alega ausência de verba pública: isso não a exclui automaticamente do dever do art. 70.",
+      "prova": [
+        "O art. 70 alcança somente eventos financiados pelo poder público? Não; seu texto atribui o dever às instituições promotoras dos eventos descritos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "420b3862-8e3c-51f6-a2e8-10bae242fae0",
+        "content_sha256": "ed137311a920813a7846ad9d280c23e615199c281dd3521874e3b6074fb6177c",
+        "simples": "As instituições promotoras de congressos, seminários, oficinas e demais eventos de natureza científico-cultural devem oferecer à pessoa com deficiência, no mínimo, os recursos de tecnologia assistiva previstos no art. 67.",
+        "pontos": [
+          "Eventos científicos e culturais: pelo menos os recursos do art. 67."
+        ],
+        "atencao": [
+          "Mínimo: legenda, Libras e audiodescrição."
+        ],
+        "exemplo": "O congresso oferece intérprete de Libras e legenda.",
+        "prova": [
+          "Assertiva que dispensa recursos de acessibilidade em eventos privados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 71"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-71",
+      "unit_id": "6d3425be-2175-5935-8e80-6f340c7afcf8",
+      "content_sha256": "b9bb6906541e4569aaf2f79278fc0386bfc9067bb53ab7686c27b567eb206642",
+      "simples": "Eventos científico-culturais promovidos ou financiados pelo poder público garantem condições de acessibilidade e recursos de tecnologia assistiva. A ligação pode ser promoção pública ou financiamento público, não necessariamente ambos.",
+      "pontos": [
+        "Promoção OU financiamento público.",
+        "Condições de acessibilidade.",
+        "Recursos de tecnologia assistiva."
+      ],
+      "atencao": [
+        "Em prova, trocar ou por e restringe indevidamente as hipóteses."
+      ],
+      "exemplo": "Uma entidade organiza evento com financiamento público: a hipótese legal está presente mesmo sem organização direta pelo Estado. Variação: O poder público promove o evento sem financiamento externo: a promoção também é suficiente para a hipótese.",
+      "prova": [
+        "O evento precisa ser simultaneamente promovido e financiado pelo poder público? Não; o artigo utiliza a alternativa promovidos ou financiados."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "6d3425be-2175-5935-8e80-6f340c7afcf8",
+        "content_sha256": "b9bb6906541e4569aaf2f79278fc0386bfc9067bb53ab7686c27b567eb206642",
+        "simples": "Os congressos, seminários, oficinas e demais eventos de natureza científico-cultural promovidos ou financiados pelo poder público devem garantir as condições de acessibilidade e os recursos de tecnologia assistiva.",
+        "pontos": [
+          "Eventos públicos ou financiados pelo poder público garantem acessibilidade."
+        ],
+        "atencao": [
+          "Alcança os eventos FINANCIADOS pelo poder público."
+        ],
+        "exemplo": "O seminário financiado pelo governo oferece todos os recursos de acessibilidade.",
+        "prova": [
+          "Assertiva que restringe a obrigação a eventos realizados em prédios públicos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 70"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-72",
+      "unit_id": "27fa2bd3-87f2-5d59-9f3d-9a57433eed77",
+      "content_sha256": "1c3b45312c7a1c1f55b43592c48b4347cea2bd8aacf64dd0f516270f884ae611",
+      "simples": "Programas, linhas de pesquisa e projetos apoiados por agências de financiamento ou entidades públicas de auxílio à pesquisa contemplam temas de tecnologia assistiva. O dever integra o planejamento da pesquisa apoiada.",
+      "pontos": [
+        "Programas, linhas e projetos apoiados.",
+        "Tecnologia assistiva como tema contemplado."
+      ],
+      "atencao": [
+        "Não confunda contemplar esses temas com exigir que todo projeto tenha exclusivamente tecnologia assistiva como objeto."
+      ],
+      "exemplo": "Uma linha de pesquisa apoiada por agência pública inclui investigação de recursos assistivos. Variação: A prova afirma que nenhuma outra temática pode ser pesquisada: o artigo não estabelece exclusividade.",
+      "prova": [
+        "Os programas apoiados descritos devem contemplar temas de tecnologia assistiva? Sim; essa inclusão é exigida no artigo."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "27fa2bd3-87f2-5d59-9f3d-9a57433eed77",
+        "content_sha256": "1c3b45312c7a1c1f55b43592c48b4347cea2bd8aacf64dd0f516270f884ae611",
+        "simples": "Os programas, linhas de pesquisa e projetos desenvolvidos com apoio de agências de financiamento e de órgãos da administração pública que atuem no auxílio à pesquisa devem contemplar temas voltados à tecnologia assistiva.",
+        "pontos": [
+          "Pesquisa financiada deve contemplar tecnologia assistiva."
+        ],
+        "atencao": [
+          "Fomento à tecnologia assistiva."
+        ],
+        "exemplo": "A agência de fomento inclui um edital para tecnologia assistiva.",
+        "prova": [
+          "Assertiva que exclui a tecnologia assistiva das linhas de pesquisa financiadas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 77"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-73",
+      "unit_id": "ba4e4342-30ee-5e4e-8511-10e1c3403bc1",
+      "content_sha256": "0b30f1c5c679de57575081defc324d4e3adcf9179384cc036e1181511fb7de28",
+      "simples": "O poder público promove capacitação de tradutores e intérpretes de Libras, guias intérpretes e profissionais habilitados em Braille, audiodescrição, estenotipia e legendagem. Pode atuar diretamente ou em parceria com organizações da sociedade civil.",
+      "pontos": [
+        "Capacitação profissional em várias técnicas.",
+        "Atuação direta ou parceria com a sociedade civil."
+      ],
+      "atencao": [
+        "O dispositivo não limita a formação a intérpretes de Libras nem exclui parcerias."
+      ],
+      "exemplo": "O poder público firma parceria com organização civil para formação de profissionais de audiodescrição. Variação: A questão afirma que toda capacitação precisa ser executada diretamente pelo Estado: ignora a alternativa expressa.",
+      "prova": [
+        "A capacitação pode ocorrer em parceria com organizações da sociedade civil? Sim; o artigo autoriza essa forma de atuação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "ba4e4342-30ee-5e4e-8511-10e1c3403bc1",
+        "content_sha256": "0b30f1c5c679de57575081defc324d4e3adcf9179384cc036e1181511fb7de28",
+        "simples": "Caberá ao poder público, diretamente ou em parceria com organizações da sociedade civil, promover a capacitação de tradutores e intérpretes da Libras, de guias intérpretes e de profissionais habilitados em Braille, audiodescrição, estenotipia e legendagem.",
+        "pontos": [
+          "Capacitação de intérpretes de Libras, guias intérpretes e profissionais de Braille, audiodescrição, estenotipia e legendagem."
+        ],
+        "atencao": [
+          "Pode ser em parceria com a sociedade civil."
+        ],
+        "exemplo": "O governo financia cursos para intérpretes de Libras.",
+        "prova": [
+          "Assertiva que atribui só à iniciativa privada a capacitação desses profissionais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 67"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-74",
+      "unit_id": "7e77d80b-cd63-5632-8c52-e2ab429124c6",
+      "content_sha256": "33c0091a52f13f3086494263c5620840b4114f573f4c1724affd229286002d61",
+      "simples": "A pessoa com deficiência tem acesso a produtos e também estratégias, práticas, processos, métodos e serviços de tecnologia assistiva que ampliem autonomia, mobilidade e qualidade de vida. O conceito é mais amplo que um equipamento físico.",
+      "pontos": [
+        "Produtos e serviços.",
+        "Estratégias, práticas, processos e métodos.",
+        "Autonomia, mobilidade e qualidade de vida."
+      ],
+      "atencao": [
+        "Não reduza tecnologia assistiva a aparelhos eletrônicos; tampouco este artigo concede automaticamente qualquer produto específico sem análise das normas de fornecimento."
+      ],
+      "exemplo": "Um serviço com estratégias assistivas facilita mobilidade e participação do usuário. Variação: A estratégia não envolve aparelho eletrônico: isso não a exclui automaticamente do conceito legal.",
+      "prova": [
+        "Tecnologia assistiva abrange somente equipamentos eletrônicos? Não; o artigo inclui métodos, processos, estratégias e serviços."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "7e77d80b-cd63-5632-8c52-e2ab429124c6",
+        "content_sha256": "33c0091a52f13f3086494263c5620840b4114f573f4c1724affd229286002d61",
+        "simples": "É garantido à pessoa com deficiência acesso a produtos, recursos, estratégias, práticas, processos, métodos e serviços de tecnologia assistiva que maximizem sua autonomia, mobilidade pessoal e qualidade de vida.",
+        "pontos": [
+          "Acesso a tecnologia assistiva para maximizar autonomia e qualidade de vida."
+        ],
+        "atencao": [
+          "Direito de acesso à tecnologia assistiva."
+        ],
+        "exemplo": "A pessoa usa cadeira de rodas motorizada para ganhar autonomia.",
+        "prova": [
+          "Assertiva que trata a tecnologia assistiva como privilégio, e não direito, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 75"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-75",
+      "unit_id": "341078fc-36dd-5be7-8178-3d4a9394596e",
+      "content_sha256": "19880729fc9aec27d7126f5689abee042b2282ceedf5d6669e55b5b85446e0c6",
+      "simples": "O poder público desenvolve plano de tecnologia assistiva renovado a cada quatro anos e avalia seus procedimentos ao menos a cada dois. O plano envolve crédito, importação, produção nacional, tributação e inclusão de recursos em listas de distribuição pública.",
+      "pontos": [
+        "Renovação: quatro anos.",
+        "Avaliação: pelo menos a cada dois anos.",
+        "Crédito, importação, produção, tributação e distribuição."
+      ],
+      "atencao": [
+        "Memória: 4 renova, 2 avalia. Não transforme metas do plano em isenção tributária ou financiamento automaticamente concedidos a qualquer pessoa."
+      ],
+      "exemplo": "O plano é renovado no ciclo quadrienal e seus procedimentos passam por avaliação bienal. Variação: A questão troca os períodos: renovação de dois e avaliação de quatro não correspondem ao texto.",
+      "prova": [
+        "O plano deve ser renovado a cada quatro anos e avaliado ao menos a cada dois? Sim; caput e parágrafo único estabelecem ciclos distintos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "341078fc-36dd-5be7-8178-3d4a9394596e",
+        "content_sha256": "19880729fc9aec27d7126f5689abee042b2282ceedf5d6669e55b5b85446e0c6",
+        "simples": "O poder público desenvolverá plano específico de medidas, renovado a cada período de 4 anos, para facilitar o acesso a crédito especializado, inclusive linhas subsidiadas para a aquisição de tecnologia assistiva; agilizar, simplificar e priorizar procedimentos de importação; criar mecanismos de fomento à pesquisa e à produção nacional; eliminar ou reduzir a tributação da cadeia produtiva e da importação; e facilitar a inclusão de novos recursos no rol de produtos distribuídos pelo SUS. Os procedimentos serão avaliados, pelo menos, a cada 2 anos.",
+        "pontos": [
+          "Plano renovado a cada 4 anos.",
+          "Crédito, importação, fomento e tributação.",
+          "Inclusão de recursos no SUS.",
+          "Avaliação a cada 2 anos."
+        ],
+        "atencao": [
+          "Plano de 4 anos; avaliação a cada 2 anos."
+        ],
+        "exemplo": "O governo reduz o imposto de importação de próteses.",
+        "prova": [
+          "Assertiva que fixa o plano em 10 anos erra: é renovado a cada 4 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 74"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-76",
+      "unit_id": "e2780cff-b8ba-5323-ad21-30186e76ea59",
+      "content_sha256": "6fde390ca546561b9bf96d05a4929b754597dd5fbddbd44da7ad8e6c5ae5a7da",
+      "simples": "São garantidos direitos políticos, voto e candidatura em igualdade. A votação deve ser acessível, sem seções exclusivas por deficiência. Quando necessário e a pedido, a pessoa pode ser auxiliada por alguém de sua escolha. Pronunciamentos e transmissões previstas usam recursos acessíveis; a participação política também alcança pessoas institucionalizadas.",
+      "pontos": [
+        "Votar e ser votado.",
+        "Vedadas seções eleitorais exclusivas por deficiência.",
+        "Auxílio necessário e solicitado; participação inclusive institucionalizada."
+      ],
+      "atencao": [
+        "Acessibilidade não significa segregação eleitoral. A lei preserva a escolha de quem auxilia; regras eleitorais operacionais exigem consulta própria."
+      ],
+      "exemplo": "Uma eleitora solicita auxílio de pessoa de sua escolha para exercer o voto nas condições legais. Variação: O local cria seção exclusiva apenas para pessoas com deficiência: a medida contraria a vedação expressa.",
+      "prova": [
+        "A acessibilidade autoriza criar seções eleitorais exclusivas por deficiência? Não; o §1º, I veda essa segregação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "e2780cff-b8ba-5323-ad21-30186e76ea59",
+        "content_sha256": "6fde390ca546561b9bf96d05a4929b754597dd5fbddbd44da7ad8e6c5ae5a7da",
+        "simples": "O poder público deve garantir à pessoa com deficiência todos os direitos políticos e a oportunidade de exercê-los em igualdade de condições. Assegura-se o direito de votar e de ser votada, inclusive com procedimentos, instalações e equipamentos de votação apropriados e acessíveis, sendo vedada a instalação de seções eleitorais exclusivas para pessoa com deficiência; incentivo à candidatura e ao desempenho de funções públicas; recursos de acessibilidade nos pronunciamentos oficiais, propaganda obrigatória e debates na TV; e livre exercício do voto, com auxílio de pessoa de sua escolha, quando necessário e a seu pedido.",
+        "pontos": [
+          "Direito de votar e ser votada.",
+          "Vedadas seções eleitorais exclusivas.",
+          "Recursos de acessibilidade na propaganda e nos debates.",
+          "Auxílio de pessoa de sua escolha na votação."
+        ],
+        "atencao": [
+          "Vedadas seções eleitorais EXCLUSIVAS para pessoas com deficiência."
+        ],
+        "exemplo": "A pessoa cega vota com auxílio de alguém de sua confiança.",
+        "prova": [
+          "Assertiva que permite seções eleitorais exclusivas para pessoas com deficiência erra: é vedado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 96"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-77",
+      "unit_id": "a73c81b2-7b44-5564-a530-e41f883bc917",
+      "content_sha256": "97f7310570ee1e320fb937c9b70196b00f419260137597bc4acfa5b9ba259eb7",
+      "simples": "O poder público fomenta ciência, pesquisa, inovação e capacitação tecnológica para qualidade de vida, trabalho e inclusão. Prioriza prevenção, tratamento e tecnologias assistiva e social, apoia formação e instituições públicas e privadas e reavalia periodicamente as medidas.",
+      "pontos": [
+        "Pesquisa e inclusão social.",
+        "Formação e capacitação pública e privada.",
+        "Reavaliação periódica."
+      ],
+      "atencao": [
+        "O art. 77 não fixa o prazo bienal ou quadrienal do plano do art. 75; aqui a reavaliação é periódica sem esse número."
+      ],
+      "exemplo": "Uma instituição privada recebe estímulo para desenvolver tecnologia que favoreça funcionalidade e participação social. Variação: A questão exige reavaliação necessariamente a cada quatro anos neste artigo: o §4º não estabelece esse prazo.",
+      "prova": [
+        "A capacitação tecnológica pode alcançar instituições públicas e privadas? Sim; o §3º inclui ambas."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a73c81b2-7b44-5564-a530-e41f883bc917",
+        "content_sha256": "97f7310570ee1e320fb937c9b70196b00f419260137597bc4acfa5b9ba259eb7",
+        "simples": "O poder público deve fomentar o desenvolvimento científico, a pesquisa, a inovação e a capacitação tecnológicas voltados à melhoria da qualidade de vida e do trabalho da pessoa com deficiência e sua inclusão social. O fomento deve priorizar a geração de conhecimentos para a prevenção e o tratamento de deficiências e o desenvolvimento de tecnologias assistiva e social. A acessibilidade e as tecnologias devem ser fomentadas por cursos de pós-graduação e formação de recursos humanos. Deve-se fomentar a capacitação tecnológica de instituições públicas e privadas, e as medidas são reavaliadas periodicamente.",
+        "pontos": [
+          "Fomento à pesquisa e inovação.",
+          "Prioridade para prevenção, tratamento e tecnologias assistiva e social.",
+          "Reavaliação periódica."
+        ],
+        "atencao": [
+          "Medidas reavaliadas periodicamente."
+        ],
+        "exemplo": "A universidade recebe fomento para pesquisar tecnologias assistivas.",
+        "prova": [
+          "Assertiva que dispensa a reavaliação periódica das medidas de fomento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 78"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-78",
+      "unit_id": "4b69a16a-9f86-528c-a3fd-81cf183e2d12",
+      "content_sha256": "d1080377384ec5a9e55b1e7fab0a3a8a516622ec5238651243f585856f478a42",
+      "simples": "Pesquisa, desenvolvimento, inovação e difusão de tecnologias ampliam acesso à informação, comunicação e tecnologias sociais. O estímulo inclui superar barreiras funcionais e ampliar acessibilidade à computação e aos sites, especialmente ao governo eletrônico.",
+      "pontos": [
+        "Tecnologias de informação, comunicação e sociais.",
+        "Superação de barreiras.",
+        "Computação e sites, em especial governo eletrônico."
+      ],
+      "atencao": [
+        "O governo eletrônico recebe destaque, mas a norma não exclui os demais sites e aplicações abrangidos."
+      ],
+      "exemplo": "Um projeto facilita uso acessível de serviços digitais de governo. Variação: A tecnologia também reduz barreiras de entretenimento: essa finalidade aparece no inciso I.",
+      "prova": [
+        "A superação de barreiras ao entretenimento está excluída do inciso I? Não; o inciso também menciona o entretenimento."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "4b69a16a-9f86-528c-a3fd-81cf183e2d12",
+        "content_sha256": "d1080377384ec5a9e55b1e7fab0a3a8a516622ec5238651243f585856f478a42",
+        "simples": "Devem ser estimulados a pesquisa, o desenvolvimento, a inovação e a difusão de tecnologias voltadas para ampliar o acesso da pessoa com deficiência às tecnologias da informação e comunicação e às tecnologias sociais. Serão estimulados, em especial, o emprego de tecnologias da informação como instrumento de superação de limitações funcionais e barreiras, e a adoção de soluções que ampliem a acessibilidade à computação e aos sítios da internet, em especial aos serviços de governo eletrônico.",
+        "pontos": [
+          "Estímulo a tecnologias de informação e comunicação acessíveis.",
+          "Acessibilidade ao governo eletrônico."
+        ],
+        "atencao": [
+          "Destaque para o governo eletrônico."
+        ],
+        "exemplo": "Os serviços digitais do governo são adaptados para leitores de tela.",
+        "prova": [
+          "Assertiva que restringe o estímulo às tecnologias físicas, excluindo as de informação, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 77"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-79",
+      "unit_id": "d7ffa733-b9e3-58f1-a923-4cbd9b4f1cbd",
+      "content_sha256": "c431da6b21014542f23fad7710797fa6a52a9cc2400f354ace73f54b28e44a92",
+      "simples": "O acesso à justiça ocorre em igualdade, com adaptações e recursos assistivos sempre que requeridos. Há capacitação nos órgãos de justiça, segurança e sistema penitenciário. A restrição de liberdade não elimina os direitos dos apenados nem o dever de acessibilidade; MP e Defensoria adotam medidas de garantia.",
+      "pontos": [
+        "Adaptações e recursos requeridos.",
+        "Capacitação da justiça, segurança e sistema penitenciário.",
+        "Restrição de liberdade com direitos e acessibilidade."
+      ],
+      "atencao": [
+        "Não suponha que acessibilidade alcance apenas o fórum: o artigo inclui segurança pública e sistema penitenciário."
+      ],
+      "exemplo": "Um órgão de segurança capacita sua equipe para garantir a participação da pessoa em todo o processo judicial. Variação: A pessoa está submetida a restrição de liberdade: continuam assegurados os direitos e garantias dos apenados sem deficiência, com acessibilidade.",
+      "prova": [
+        "A restrição de liberdade afasta o dever de acessibilidade? Não; o §2º preserva os direitos e expressamente garante acessibilidade."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d7ffa733-b9e3-58f1-a923-4cbd9b4f1cbd",
+        "content_sha256": "c431da6b21014542f23fad7710797fa6a52a9cc2400f354ace73f54b28e44a92",
+        "simples": "O poder público deve assegurar o acesso da pessoa com deficiência à justiça, em igualdade de oportunidades, garantindo, sempre que requeridos, adaptações e recursos de tecnologia assistiva. Deve capacitar membros e servidores do Judiciário, Ministério Público, Defensoria Pública, órgãos de segurança pública e sistema penitenciário quanto aos direitos da pessoa com deficiência. À pessoa submetida a medida restritiva de liberdade devem ser assegurados todos os direitos e garantias dos apenados sem deficiência, garantida a acessibilidade. A Defensoria Pública e o Ministério Público tomarão as medidas necessárias à garantia dos direitos previstos na Lei.",
+        "pontos": [
+          "Acesso à justiça com adaptações.",
+          "Capacitação dos operadores do sistema de justiça.",
+          "Direitos do preso com deficiência.",
+          "Atuação da Defensoria e do MP."
+        ],
+        "atencao": [
+          "Capacitação inclui o sistema penitenciário e a segurança pública."
+        ],
+        "exemplo": "O tribunal oferece intérprete de Libras e a Defensoria atua na defesa dos direitos.",
+        "prova": [
+          "Assertiva que isenta o sistema penitenciário da capacitação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 80"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    },
+    {
+      "course_slug": "pcd",
+      "course_id": "701977cc-d990-5ef1-8d4b-6faa45ef9aaa",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-80",
+      "unit_id": "6778377b-2792-5027-b59c-dd4f05cafcd4",
+      "content_sha256": "ca682e6f41fa823785ea7f21ab1a5c004da33006661647e00071c542c2900daa",
+      "simples": "Recursos assistivos disponíveis garantem acesso à justiça em diversas funções: parte, testemunha, partícipe, advogado, defensor, magistrado ou membro do MP. Também há acesso ao conteúdo de todos os atos processuais de interesse da pessoa, inclusive no exercício da advocacia.",
+      "pontos": [
+        "Abrange vários papéis no processo.",
+        "Recursos assistivos disponíveis.",
+        "Conteúdo dos atos de interesse, inclusive na advocacia."
+      ],
+      "atencao": [
+        "Não limite o direito a autor e réu nem afirme acesso irrestrito a qualquer processo alheio: o parágrafo fala nos atos de seu interesse."
+      ],
+      "exemplo": "Uma advogada com deficiência acessa atos processuais de seu interesse com os recursos necessários. Variação: A pessoa atua como testemunha, e não como parte: o caput também contempla essa função.",
+      "prova": [
+        "A pessoa que atua como testemunha está abrangida pelo art. 80? Sim; ela aparece entre os papéis expressamente protegidos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "6778377b-2792-5027-b59c-dd4f05cafcd4",
+        "content_sha256": "ca682e6f41fa823785ea7f21ab1a5c004da33006661647e00071c542c2900daa",
+        "simples": "Devem ser oferecidos todos os recursos de tecnologia assistiva disponíveis para que a pessoa com deficiência tenha garantido o acesso à justiça, sempre que figure em um dos polos da ação ou atue como testemunha, partícipe da lide, advogado, defensor público, magistrado ou membro do Ministério Público. A pessoa com deficiência tem garantido o acesso ao conteúdo de todos os atos processuais de seu interesse, inclusive no exercício da advocacia.",
+        "pontos": [
+          "Tecnologia assistiva para qualquer participante do processo.",
+          "Acesso ao conteúdo dos atos processuais."
+        ],
+        "atencao": [
+          "Vale para partes, testemunhas, advogados e membros do Judiciário."
+        ],
+        "exemplo": "O advogado cego acessa o processo por meio de leitor de tela.",
+        "prova": [
+          "Assertiva que restringe os recursos de tecnologia assistiva às partes erra: abrange advogados e magistrados."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 79"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T21:58:44.662688+00:00",
+        "updated_at": "2026-10-11T21:58:44.662688+00:00"
+      }
+    }
+  ]
+}

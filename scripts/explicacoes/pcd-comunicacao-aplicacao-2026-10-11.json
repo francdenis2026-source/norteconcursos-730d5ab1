@@ -1,0 +1,341 @@
+{
+  "course_slug": "pcd",
+  "units": {
+    "art-61": {
+      "simples": "Ações de acessibilidade exigem prioridades, cronograma, reserva de recursos e planejamento contínuo articulado entre os setores. Formulação, implementação e manutenção integram a obrigação, que não termina na inauguração.",
+      "pontos": [
+        "Prioridades, cronograma e recursos.",
+        "Planejamento contínuo e articulação entre setores."
+      ],
+      "atencao": [
+        "Não confunda planejamento com ação isolada sem previsão de manutenção."
+      ],
+      "exemplo": "O órgão define etapas, orçamento e responsáveis pela manutenção da acessibilidade. Variação: A inauguração ocorreu, mas não há planejamento de manutenção: ainda falta cumprir uma dimensão do caput.",
+      "prova": [
+        "O planejamento de acessibilidade deve ser contínuo e articulado entre os setores? Sim; essa é a premissa do inciso II."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-62": {
+      "simples": "Mediante solicitação, a pessoa com deficiência recebe contas, boletos, recibos, extratos e cobranças de tributos em formato acessível. O comando inclui documentos financeiros e tributários, não somente contas de serviços.",
+      "pontos": [
+        "Formato acessível.",
+        "Mediante solicitação.",
+        "Inclui cobranças de tributos."
+      ],
+      "atencao": [
+        "Leia a condição mediante solicitação: o artigo não limita o direito às faturas bancárias."
+      ],
+      "exemplo": "A pessoa solicita extrato em formato que consegue acessar: o artigo assegura o recebimento acessível. Variação: O documento é cobrança de tributo: também integra a enumeração.",
+      "prova": [
+        "As cobranças de tributos estão excluídas do direito a formato acessível? Não; constam expressamente do artigo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-63": {
+      "simples": "Sites governamentais e de empresas com sede ou representação comercial no País devem ser acessíveis e destacar símbolo de acessibilidade. Telecentros com recursos públicos federais e lan houses têm instalações e equipamentos acessíveis, com ao menos 10% dos computadores acessíveis à deficiência visual e mínimo de um quando o cálculo ficar abaixo de um.",
+      "pontos": [
+        "Sites de governo e empresas abrangidas.",
+        "Símbolo em destaque, além de acessibilidade efetiva.",
+        "Computadores: 10%, assegurado mínimo de um."
+      ],
+      "atencao": [
+        "O símbolo sozinho não garante acesso. A quota se refere aos computadores dos estabelecimentos descritos, não a 10% de todas as páginas de um site."
+      ],
+      "exemplo": "Uma lan house com dez computadores disponibiliza ao menos um com recursos adequados à deficiência visual. Variação: Há somente cinco computadores: o resultado percentual inferior a um não dispensa o equipamento mínimo.",
+      "prova": [
+        "Uma lan house fica dispensada do equipamento acessível quando 10% resultar em menos de um? Não; o §3º assegura pelo menos um equipamento."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-64": {
+      "simples": "A acessibilidade dos sites abrangidos pelo art. 63 é exigida para obter o financiamento do art. 54, III. Trata-se de projetos com recursos públicos, inclusive os instrumentos e benefícios ali descritos.",
+      "pontos": [
+        "Remissão ao art. 63.",
+        "Financiamento descrito no art. 54, III."
+      ],
+      "atencao": [
+        "Não generalize o artigo como proibição de qualquer crédito privado: seu objeto é o financiamento remetido."
+      ],
+      "exemplo": "Um projeto busca recursos públicos na modalidade do art. 54, III: deve observar a acessibilidade do site abrangido. Variação: O enunciado trata de outro crédito sem esse vínculo: não se enquadra automaticamente apenas por este artigo.",
+      "prova": [
+        "A acessibilidade do site deve ser observada no financiamento remetido ao art. 54, III? Sim; o art. 64 estabelece essa conexão."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-65": {
+      "simples": "Prestadoras de telecomunicações garantem pleno acesso à pessoa com deficiência conforme regulamentação específica. A lei define o dever; suas condições técnicas devem ser consultadas no regulamento aplicável.",
+      "pontos": [
+        "Dever das prestadoras.",
+        "Pleno acesso.",
+        "Conforme regulamentação específica."
+      ],
+      "atencao": [
+        "O artigo não define sozinho todo canal, prazo ou requisito técnico de atendimento; não invente esses detalhes."
+      ],
+      "exemplo": "A prestadora organiza recursos de acesso segundo as regras específicas do serviço. Variação: A questão atribui ao artigo um prazo técnico não escrito nele: é necessário conferir a norma regulamentar correspondente.",
+      "prova": [
+        "O artigo fixa sozinho todos os prazos e canais técnicos do serviço? Não; expressamente remete à regulamentação específica."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-66": {
+      "simples": "O poder público incentiva aparelhos de telefonia fixa e móvel celular acessíveis. Entre as tecnologias contempladas estão indicação e ampliação sonoras de todas as operações e funções disponíveis.",
+      "pontos": [
+        "Telefonia fixa e móvel.",
+        "Incentivo público à oferta.",
+        "Indicação e ampliação sonoras entre os recursos."
+      ],
+      "atencao": [
+        "A expressão entre outras tecnologias assistivas torna a enumeração aberta; não a reduza a um único recurso."
+      ],
+      "exemplo": "Um programa incentiva aparelhos que informam sonoramente suas operações para o usuário. Variação: O aparelho é de telefonia fixa: também está abrangido, e não apenas o celular.",
+      "prova": [
+        "O incentivo do artigo alcança telefonia fixa e móvel celular? Sim; ambas aparecem no dispositivo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-67": {
+      "simples": "Radiodifusão de sons e imagens permite recursos de acessibilidade, incluindo legenda oculta, janela com intérprete de Libras e audiodescrição. Cada recurso atende necessidades próprias; a lista não é fechada.",
+      "pontos": [
+        "Legenda oculta.",
+        "Janela com intérprete de Libras.",
+        "Audiodescrição; lista aberta."
+      ],
+      "atencao": [
+        "Não trate legenda, Libras e audiodescrição como sinônimos nem suponha que a lei enumere somente duas tecnologias."
+      ],
+      "exemplo": "O programa permite legenda oculta para acompanhar falas e audiodescrição para compreender elementos visuais. Variação: Uma questão afirma que apenas legenda é prevista: esquece Libras e audiodescrição.",
+      "prova": [
+        "A lista do artigo é taxativa e proíbe qualquer outro recurso? Não; a expressão entre outros permite recursos adicionais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-68": {
+      "simples": "O poder público incentiva livros acessíveis em toda a cadeia editorial e nas publicações públicas ou financiadas publicamente. Editais de compra impedem participação de editoras que não ofertem também formatos acessíveis. Arquivos precisam funcionar com leitores de tela ou tecnologias substitutas; há apoio a artigos científicos acessíveis, inclusive em Libras.",
+      "pontos": [
+        "Cadeia editorial e publicações públicas.",
+        "Cláusulas nos editais de compras.",
+        "Arquivo digital efetivamente acessível; artigos científicos inclusive em Libras."
+      ],
+      "atencao": [
+        "PDF digitalizado como imagem não se torna acessível apenas por ser digital. A compatibilidade funcional descrita no §2º é determinante."
+      ],
+      "exemplo": "O arquivo permite voz sintetizada, ampliação e contrastes por tecnologia assistiva. Variação: O arquivo é uma imagem ilegível por leitor de tela: a mera extensão digital não demonstra atendimento à definição.",
+      "prova": [
+        "O edital de compra deve impedir participação de editora que não oferte também formatos acessíveis? Sim; o §1º determina essa cláusula."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-69": {
+      "simples": "Informações de produtos e serviços devem ser corretas, claras e acessíveis, incluindo características, preço e riscos ao consumidor com deficiência. Anúncios e canais virtuais usam recursos compatíveis com o meio às expensas do fornecedor. Mediante solicitação, bulas e outros materiais de divulgação são disponibilizados em formato acessível.",
+      "pontos": [
+        "Informação correta e clara, inclusive riscos.",
+        "Publicidade acessível, conforme compatibilidade do meio.",
+        "Material acessível solicitado; custo dos recursos pelo fornecedor."
+      ],
+      "atencao": [
+        "A remissão ao CDC não certifica aqui todas as suas regras. Não retire a condição de compatibilidade do meio nem a solicitação prevista no §2º."
+      ],
+      "exemplo": "O consumidor solicita bula acessível e recebe material que permite sua leitura. Variação: O fornecedor transfere o custo dos recursos publicitários acessíveis ao consumidor: contraria a atribuição do §1º.",
+      "prova": [
+        "Os recursos acessíveis dos anúncios descritos no §1º correm às expensas do fornecedor? Sim; o dispositivo atribui esse custo ao fornecedor."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-70": {
+      "simples": "Promotores de congressos, seminários, oficinas e eventos científico-culturais oferecem à pessoa com deficiência, no mínimo, os recursos assistivos previstos no art. 67: legenda oculta, janela de Libras e audiodescrição.",
+      "pontos": [
+        "Instituições promotoras.",
+        "Eventos científico-culturais.",
+        "Recursos mínimos remetidos ao art. 67."
+      ],
+      "atencao": [
+        "Não restrinja o dever a evento financiado pelo poder público: o art. 70 trata das instituições promotoras; o art. 71 acrescenta o contexto público."
+      ],
+      "exemplo": "Uma instituição privada organiza seminário científico e considera os recursos mínimos remetidos. Variação: Ela alega ausência de verba pública: isso não a exclui automaticamente do dever do art. 70.",
+      "prova": [
+        "O art. 70 alcança somente eventos financiados pelo poder público? Não; seu texto atribui o dever às instituições promotoras dos eventos descritos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-71": {
+      "simples": "Eventos científico-culturais promovidos ou financiados pelo poder público garantem condições de acessibilidade e recursos de tecnologia assistiva. A ligação pode ser promoção pública ou financiamento público, não necessariamente ambos.",
+      "pontos": [
+        "Promoção OU financiamento público.",
+        "Condições de acessibilidade.",
+        "Recursos de tecnologia assistiva."
+      ],
+      "atencao": [
+        "Em prova, trocar ou por e restringe indevidamente as hipóteses."
+      ],
+      "exemplo": "Uma entidade organiza evento com financiamento público: a hipótese legal está presente mesmo sem organização direta pelo Estado. Variação: O poder público promove o evento sem financiamento externo: a promoção também é suficiente para a hipótese.",
+      "prova": [
+        "O evento precisa ser simultaneamente promovido e financiado pelo poder público? Não; o artigo utiliza a alternativa promovidos ou financiados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-72": {
+      "simples": "Programas, linhas de pesquisa e projetos apoiados por agências de financiamento ou entidades públicas de auxílio à pesquisa contemplam temas de tecnologia assistiva. O dever integra o planejamento da pesquisa apoiada.",
+      "pontos": [
+        "Programas, linhas e projetos apoiados.",
+        "Tecnologia assistiva como tema contemplado."
+      ],
+      "atencao": [
+        "Não confunda contemplar esses temas com exigir que todo projeto tenha exclusivamente tecnologia assistiva como objeto."
+      ],
+      "exemplo": "Uma linha de pesquisa apoiada por agência pública inclui investigação de recursos assistivos. Variação: A prova afirma que nenhuma outra temática pode ser pesquisada: o artigo não estabelece exclusividade.",
+      "prova": [
+        "Os programas apoiados descritos devem contemplar temas de tecnologia assistiva? Sim; essa inclusão é exigida no artigo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-73": {
+      "simples": "O poder público promove capacitação de tradutores e intérpretes de Libras, guias intérpretes e profissionais habilitados em Braille, audiodescrição, estenotipia e legendagem. Pode atuar diretamente ou em parceria com organizações da sociedade civil.",
+      "pontos": [
+        "Capacitação profissional em várias técnicas.",
+        "Atuação direta ou parceria com a sociedade civil."
+      ],
+      "atencao": [
+        "O dispositivo não limita a formação a intérpretes de Libras nem exclui parcerias."
+      ],
+      "exemplo": "O poder público firma parceria com organização civil para formação de profissionais de audiodescrição. Variação: A questão afirma que toda capacitação precisa ser executada diretamente pelo Estado: ignora a alternativa expressa.",
+      "prova": [
+        "A capacitação pode ocorrer em parceria com organizações da sociedade civil? Sim; o artigo autoriza essa forma de atuação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-74": {
+      "simples": "A pessoa com deficiência tem acesso a produtos e também estratégias, práticas, processos, métodos e serviços de tecnologia assistiva que ampliem autonomia, mobilidade e qualidade de vida. O conceito é mais amplo que um equipamento físico.",
+      "pontos": [
+        "Produtos e serviços.",
+        "Estratégias, práticas, processos e métodos.",
+        "Autonomia, mobilidade e qualidade de vida."
+      ],
+      "atencao": [
+        "Não reduza tecnologia assistiva a aparelhos eletrônicos; tampouco este artigo concede automaticamente qualquer produto específico sem análise das normas de fornecimento."
+      ],
+      "exemplo": "Um serviço com estratégias assistivas facilita mobilidade e participação do usuário. Variação: A estratégia não envolve aparelho eletrônico: isso não a exclui automaticamente do conceito legal.",
+      "prova": [
+        "Tecnologia assistiva abrange somente equipamentos eletrônicos? Não; o artigo inclui métodos, processos, estratégias e serviços."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-75": {
+      "simples": "O poder público desenvolve plano de tecnologia assistiva renovado a cada quatro anos e avalia seus procedimentos ao menos a cada dois. O plano envolve crédito, importação, produção nacional, tributação e inclusão de recursos em listas de distribuição pública.",
+      "pontos": [
+        "Renovação: quatro anos.",
+        "Avaliação: pelo menos a cada dois anos.",
+        "Crédito, importação, produção, tributação e distribuição."
+      ],
+      "atencao": [
+        "Memória: 4 renova, 2 avalia. Não transforme metas do plano em isenção tributária ou financiamento automaticamente concedidos a qualquer pessoa."
+      ],
+      "exemplo": "O plano é renovado no ciclo quadrienal e seus procedimentos passam por avaliação bienal. Variação: A questão troca os períodos: renovação de dois e avaliação de quatro não correspondem ao texto.",
+      "prova": [
+        "O plano deve ser renovado a cada quatro anos e avaliado ao menos a cada dois? Sim; caput e parágrafo único estabelecem ciclos distintos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-76": {
+      "simples": "São garantidos direitos políticos, voto e candidatura em igualdade. A votação deve ser acessível, sem seções exclusivas por deficiência. Quando necessário e a pedido, a pessoa pode ser auxiliada por alguém de sua escolha. Pronunciamentos e transmissões previstas usam recursos acessíveis; a participação política também alcança pessoas institucionalizadas.",
+      "pontos": [
+        "Votar e ser votado.",
+        "Vedadas seções eleitorais exclusivas por deficiência.",
+        "Auxílio necessário e solicitado; participação inclusive institucionalizada."
+      ],
+      "atencao": [
+        "Acessibilidade não significa segregação eleitoral. A lei preserva a escolha de quem auxilia; regras eleitorais operacionais exigem consulta própria."
+      ],
+      "exemplo": "Uma eleitora solicita auxílio de pessoa de sua escolha para exercer o voto nas condições legais. Variação: O local cria seção exclusiva apenas para pessoas com deficiência: a medida contraria a vedação expressa.",
+      "prova": [
+        "A acessibilidade autoriza criar seções eleitorais exclusivas por deficiência? Não; o §1º, I veda essa segregação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-77": {
+      "simples": "O poder público fomenta ciência, pesquisa, inovação e capacitação tecnológica para qualidade de vida, trabalho e inclusão. Prioriza prevenção, tratamento e tecnologias assistiva e social, apoia formação e instituições públicas e privadas e reavalia periodicamente as medidas.",
+      "pontos": [
+        "Pesquisa e inclusão social.",
+        "Formação e capacitação pública e privada.",
+        "Reavaliação periódica."
+      ],
+      "atencao": [
+        "O art. 77 não fixa o prazo bienal ou quadrienal do plano do art. 75; aqui a reavaliação é periódica sem esse número."
+      ],
+      "exemplo": "Uma instituição privada recebe estímulo para desenvolver tecnologia que favoreça funcionalidade e participação social. Variação: A questão exige reavaliação necessariamente a cada quatro anos neste artigo: o §4º não estabelece esse prazo.",
+      "prova": [
+        "A capacitação tecnológica pode alcançar instituições públicas e privadas? Sim; o §3º inclui ambas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-78": {
+      "simples": "Pesquisa, desenvolvimento, inovação e difusão de tecnologias ampliam acesso à informação, comunicação e tecnologias sociais. O estímulo inclui superar barreiras funcionais e ampliar acessibilidade à computação e aos sites, especialmente ao governo eletrônico.",
+      "pontos": [
+        "Tecnologias de informação, comunicação e sociais.",
+        "Superação de barreiras.",
+        "Computação e sites, em especial governo eletrônico."
+      ],
+      "atencao": [
+        "O governo eletrônico recebe destaque, mas a norma não exclui os demais sites e aplicações abrangidos."
+      ],
+      "exemplo": "Um projeto facilita uso acessível de serviços digitais de governo. Variação: A tecnologia também reduz barreiras de entretenimento: essa finalidade aparece no inciso I.",
+      "prova": [
+        "A superação de barreiras ao entretenimento está excluída do inciso I? Não; o inciso também menciona o entretenimento."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-79": {
+      "simples": "O acesso à justiça ocorre em igualdade, com adaptações e recursos assistivos sempre que requeridos. Há capacitação nos órgãos de justiça, segurança e sistema penitenciário. A restrição de liberdade não elimina os direitos dos apenados nem o dever de acessibilidade; MP e Defensoria adotam medidas de garantia.",
+      "pontos": [
+        "Adaptações e recursos requeridos.",
+        "Capacitação da justiça, segurança e sistema penitenciário.",
+        "Restrição de liberdade com direitos e acessibilidade."
+      ],
+      "atencao": [
+        "Não suponha que acessibilidade alcance apenas o fórum: o artigo inclui segurança pública e sistema penitenciário."
+      ],
+      "exemplo": "Um órgão de segurança capacita sua equipe para garantir a participação da pessoa em todo o processo judicial. Variação: A pessoa está submetida a restrição de liberdade: continuam assegurados os direitos e garantias dos apenados sem deficiência, com acessibilidade.",
+      "prova": [
+        "A restrição de liberdade afasta o dever de acessibilidade? Não; o §2º preserva os direitos e expressamente garante acessibilidade."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-80": {
+      "simples": "Recursos assistivos disponíveis garantem acesso à justiça em diversas funções: parte, testemunha, partícipe, advogado, defensor, magistrado ou membro do MP. Também há acesso ao conteúdo de todos os atos processuais de interesse da pessoa, inclusive no exercício da advocacia.",
+      "pontos": [
+        "Abrange vários papéis no processo.",
+        "Recursos assistivos disponíveis.",
+        "Conteúdo dos atos de interesse, inclusive na advocacia."
+      ],
+      "atencao": [
+        "Não limite o direito a autor e réu nem afirme acesso irrestrito a qualquer processo alheio: o parágrafo fala nos atos de seu interesse."
+      ],
+      "exemplo": "Uma advogada com deficiência acessa atos processuais de seu interesse com os recursos necessários. Variação: A pessoa atua como testemunha, e não como parte: o caput também contempla essa função.",
+      "prova": [
+        "A pessoa que atua como testemunha está abrangida pelo art. 80? Sim; ela aparece entre os papéis expressamente protegidos."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

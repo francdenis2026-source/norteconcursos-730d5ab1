@@ -1,9 +1,10 @@
 import { useLegalExplanation, type LegalUnit } from "@/lib/legalCourses";
 import { LegalRefText } from "./LegalRefText";
 import { explanationExample, explanationPractice } from "@/lib/explanationPractice";
+import { hasCurrentExplanationReview } from "@/lib/explanationReview";
 
 const Block = ({ icon, title, tone, children }: { icon: string; title: string; tone: string; children: React.ReactNode }) => (
-  <section className={`rounded-xl border bg-card p-4 ${tone}`}>
+  <section className={`rounded-xl border p-4 ${tone.includes('bg-') ? '' : 'bg-card'} ${tone}`}>
     <h4 className="flex items-center gap-2 text-sm font-semibold"><span aria-hidden className="text-base">{icon}</span>{title}</h4>
     <div className="mt-2 text-[15px] leading-7">{children}</div>
   </section>
@@ -37,11 +38,12 @@ export function UnitExplanation({ unit, userId }: { unit: LegalUnit; userId: str
         <h3 className="text-lg font-bold">Entenda este artigo</h3>
         {e.status === "under_review" && <span className="rounded-full bg-amber-200 px-2.5 py-0.5 text-xs font-bold text-amber-900">Em revisão: só administradores veem</span>}
         {stale && <span className="rounded-full bg-rose-200 px-2.5 py-0.5 text-xs font-bold text-rose-900">Texto oficial mudou: revisar</span>}
+        {e.status === "published" && !stale && !hasCurrentExplanationReview(e, unit.content_sha256) && <span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-900 dark:bg-amber-950/40 dark:text-amber-200">Revisão editorial pendente</span>}
       </header>
       <Block icon="📘" title="Em palavras simples" tone="border-l-4 border-l-sky-500"><p><LegalRefText text={e.simples} /></p></Block>
       {e.pontos.length > 0 && <Block icon="🔑" title="Pontos-chave" tone="border-l-4 border-l-indigo-500"><List items={e.pontos} /></Block>}
       {e.atencao.length > 0 && <Block icon="⚠️" title="Atenção: onde o candidato erra" tone="border-l-4 border-l-amber-500"><List items={e.atencao} /></Block>}
-      {e.exemplo && <Block icon="🧩" title="Exemplo prático" tone="border-l-4 border-l-emerald-500"><p><LegalRefText text={example.scenario} /></p>
+      {e.exemplo && <Block icon="🧩" title="Exemplo prático" tone="border-l-4 border-l-emerald-500 bg-emerald-50/70 dark:bg-emerald-950/20"><p><LegalRefText text={example.scenario} /></p>
         {example.variation && <div className="mt-3 rounded-lg border border-violet-300 bg-violet-50 p-3 text-violet-950 dark:border-violet-400/30 dark:bg-violet-950/30 dark:text-violet-100"><strong>Altere o fato, confira a regra</strong><p className="mt-1"><LegalRefText text={example.variation} /></p></div>}
       </Block>}
       {e.prova.length > 0 && <Block icon="🎯" title="Fixação para a prova" tone="border-l-4 border-l-rose-500"><ExplanationChecks items={e.prova} /></Block>}

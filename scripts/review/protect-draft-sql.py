@@ -1,11 +1,11 @@
 """Protect newly added draft migrations from overwriting reviewed explanations.
 Usage: python scripts/review/protect-draft-sql.py SNAPSHOT_FOLDER
-No database writes. Only the explicitly listed law batch 3 files are changed.
+No database writes. Only the explicitly listed law batches 3/4 and CTB draft files are changed.
 """
 import json,re,sys
 from pathlib import Path
 root=Path(__file__).resolve().parents[2];p=Path(sys.argv[1]);cs=json.loads((p/'legal_courses.json').read_text(encoding='utf-8'));us=json.loads((p/'legal_course_units.json').read_text(encoding='utf-8'));slugs={c['id']:c['slug'] for c in cs};bykey={(slugs[u['course_id']],u['unit_key']):u for u in us}
-files=list((root/'supabase/migrations').glob('20261014003[3-8]00_explicacoes_*.sql'))+list((root/'sql-lotes').glob('leis3-*.sql'));assert len(files)==19
+files=list((root/'supabase/migrations').glob('20261014003[3-9]00_explicacoes_*.sql'))+list((root/'sql-lotes').glob('leis3-*.sql'))+list((root/'sql-lotes').glob('leis4-*.sql'))+[root/'sql-lotes/correcao-ctb-01.sql'];assert len(files)==26
 counts={'preserved_files':0,'guarded_statements':0,'excluded_statements_removed':0}
 pattern=re.compile(r'insert into public\.legal_unit_explanations.*?on conflict \(unit_id\).*?;',re.S)
 for file in files:

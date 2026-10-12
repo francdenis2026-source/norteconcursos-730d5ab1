@@ -72,6 +72,7 @@ export type LegalExplanation = {
   unit_id: string; content_sha256: string; simples: string; pontos: string[]; atencao: string[]; exemplo: string;
   prova: string[]; termos: { termo: string; significado: string }[]; remissoes: string[];
   status: "under_review" | "published";
+  reviewed_by?: string | null; reviewed_at?: string | null; updated_at?: string;
 };
 /** Explicação didática do artigo (RLS: aluno só vê publicada e com o texto oficial inalterado; admin vê também em revisão). */
 export function useLegalExplanation(unitId?: string, userId?: string) {

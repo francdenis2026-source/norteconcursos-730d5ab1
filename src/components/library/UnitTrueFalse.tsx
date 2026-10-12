@@ -1,28 +1,21 @@
 import { useMemo, useState } from "react";
 import { useLegalExplanation, type LegalUnit } from "@/lib/legalCourses";
 import { LegalRefText } from "./LegalRefText";
-
-type Item = { text: string; correct: boolean; why: string };
-
-const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
-
-/** "Certo ou errado?": afirmações tiradas da explicação do artigo (pontos = certas; assertivas de prova = erradas). */
-function buildItems(e: { pontos: string[]; prova: string[]; atencao: string[]; simples: string }, seed: string): Item[] {
-  const wrong: Item[] = e.prova.flatMap((p) => {
-    const m = p.match(/^Assertiva que (.+?) erra(?::\s*(.+?))?\.?$/);
-    return m ? [{ text: `Segundo o artigo, ${m[1]}.`, correct: false, why: m[2] ? `Na verdade: ${m[2]}.` : (e.atencao[0] ?? e.simples) }] : [];
-  });
-  const right: Item[] = e.pontos.slice(0, 2).map((t) => ({ text: `Segundo o artigo: ${t.replace(/\.$/, "")}.`, correct: true, why: "Isso está no artigo." }));
-  return [...right, ...wrong.slice(0, 2)].sort((a, b) => hash(seed + a.text) - hash(seed + b.text));
-}
+import { hasCurrentExplanationReview } from "@/lib/explanationReview";
+import { buildExplanationQuiz } from "@/lib/explanationQuiz";
 
 export function UnitTrueFalse({ unit, userId }: { unit: LegalUnit; userId: string }) {
   const { data: e } = useLegalExplanation(unit.id, userId);
-  const items = useMemo(() => (e ? buildItems(e, unit.id) : []), [e, unit.id]);
+  const items = useMemo(() => (e ? buildExplanationQuiz(e.prova, unit.id) : []), [e, unit.id]);
+  if (e && !hasCurrentExplanationReview(e, unit.content_sha256)) return <p role="status" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-200">O teste deste artigo aguarda revisão editorial. Você pode continuar a leitura na fonte oficial.</p>;
+  if (!items.length) return null;
+  return <ReviewedQuiz key={`${unit.id}:${e?.updated_at}`} items={items} />;
+}
+
+function ReviewedQuiz({items}: {items: ReturnType<typeof buildExplanationQuiz>}) {
   const [i, setI] = useState(0);
   const [pick, setPick] = useState<boolean | null>(null);
   const [score, setScore] = useState(0);
-  if (!items.length) return null;
   const done = i >= items.length;
   const item = items[i];
   const answer = (v: boolean) => { if (pick !== null) return; setPick(v); if (v === item!.correct) setScore((s) => s + 1); };
