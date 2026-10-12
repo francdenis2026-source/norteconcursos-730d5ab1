@@ -349,3 +349,20 @@ test('drug procedure separates custody, evidence, defense and constitutional hea
  assert.match(get('art-59').simples,/347.*independe da prisão/);
  for(const key of ['art-48','art-50','art-54','art-57','art-59']) assert.equal(legalStudyCaveat('drogas',key).literalPractice,false);
 });
+
+test('drug final review preserves third parties, historical deadlines and current regulatory remissions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-drug-final-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,25);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-60').atencao.join(' '),/2022.*origem lícita.*Boa-fé/);
+ assert.match(get('art-62-a').pontos.join(' '),/revogado.*14.973\/2024/);
+ assert.match(get('art-63-c').atencao.join(' '),/8.666.*revogada.*14.133.*12.607\/2025/);
+ assert.match(get('art-63-f').pontos.join(' '),/exatamente seis não/);
+ assert.match(get('art-66').pontos.join(' '),/1.036.*09\/07\/2026/);
+ assert.match(get('art-37').atencao.join(' '),/2026.*integrada.*art. 33/);
+ assert.match(get('art-74').atencao.join(' '),/Não aplicar.*automaticamente/);
+ const packs=['drug-care','drug-crimes','drug-procedure','drug-final'].map(n=>JSON.parse(readFileSync(`docs/library/article-explanations-${n}-2026-10-12.json`,'utf8')));
+ assert.equal(new Set(packs.flatMap(pack=>pack.units.map(r=>r.unit_key))).size,84);
+ for(const key of ['art-37','art-40-a','art-63','art-63-a','art-63-c','art-66']) assert.equal(legalStudyCaveat('drogas',key).literalPractice,false);
+});

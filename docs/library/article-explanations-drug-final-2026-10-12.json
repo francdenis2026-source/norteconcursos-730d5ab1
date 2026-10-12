@@ -1,0 +1,1526 @@
+{
+  "version": "2026-10-12-drogas-final-targeted",
+  "checked_at": "2026-10-12T16:47:46.350299+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "drogas",
+      "title": "Lei 11.343/2006 — Lei de Drogas",
+      "units": 25,
+      "scope_type": "targeted_correction",
+      "course_current_units": 84,
+      "target_unit_keys": [
+        "art-60",
+        "art-60-a",
+        "art-61",
+        "art-62",
+        "art-62-a",
+        "art-63",
+        "art-63-a",
+        "art-63-b",
+        "art-63-c",
+        "art-63-d",
+        "art-63-e",
+        "art-63-f",
+        "art-64",
+        "art-65",
+        "art-66",
+        "art-67",
+        "art-67-a",
+        "art-68",
+        "art-69",
+        "art-70",
+        "art-72",
+        "art-73",
+        "art-74",
+        "art-75",
+        "art-37"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "source_sha256": "6f6763a224e2dda8310d3bd971c6314d795c5fc5ffb73137953eeefe47647e98",
+      "source_checked_at": "2026-10-12T16:18:25.227571+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-60",
+      "unit_id": "940d68f4-666e-5ad1-98f7-2660845acc74",
+      "content_sha256": "4bcf04eb4191051ce00ffdb7cbad84684ab3f9a5586bea934d828d6a9485eba5",
+      "simples": "Medidas assecuratórias sobre bens, direitos e valores suspeitos de constituir produto ou proveito do crime podem ser decretadas pelo juiz, por provocação do MP, assistente ou autoridade policial, no inquérito ou processo, conforme o CPP. O artigo também prevê conservação, suspensão da execução e demonstração de origem lícita.",
+      "pontos": [
+        "Execução pode ser suspensa pelo juiz, ouvido o MP, se comprometer investigações.",
+        "Origem lícita: acusado dispõe de cinco dias para apresentar ou requerer prova, com exceção textual para veículo usado no transporte de droga ilícita.",
+        "A liberação por origem lícita também tem exceção para esse veículo, ressalvado terceiro de boa-fé; destinação segue arts. 61/62."
+      ],
+      "atencao": [
+        "Mudança da Lei 14.322/2022: origem lícita não implica devolução automática de veículo usado no transporte. Boa-fé de terceiro deve ser demonstrada.",
+        "Suspeita para cautela não é condenação definitiva nem perda irrestrita de todo patrimônio familiar."
+      ],
+      "exemplo": "Bens suspeitos de serem produto de tráfico sofrem medida judicial, com oportunidade de demonstração de origem. Variação: carro licitamente comprado foi usado no transporte ilícito; distinguir a exceção legal e eventual direito comprovado de terceiro de boa-fé.",
+      "prova": [
+        "Origem lícita garante sempre a restituição de veículo usado no transporte? Não; observar a exceção e o direito de terceiro de boa-fé.",
+        "A medida pode ser decretada por simples decisão do delegado? Não; cabe ao juiz mediante provocação prevista."
+      ],
+      "termos": [
+        "produto ou proveito",
+        "cinco dias",
+        "terceiro de boa-fé"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=24%2F03%2F2026&num_registro=202503525249"
+      ],
+      "expected": {
+        "unit_id": "940d68f4-666e-5ad1-98f7-2660845acc74",
+        "content_sha256": "4bcf04eb4191051ce00ffdb7cbad84684ab3f9a5586bea934d828d6a9485eba5",
+        "simples": "O juiz, a requerimento do Ministério Público ou do assistente de acusação, ou mediante representação da autoridade de polícia judiciária, poderá decretar, no curso do inquérito ou da ação penal, a apreensão e outras medidas assecuratórias nos casos em que haja suspeita de que os bens, direitos ou valores sejam produto do crime ou constituam proveito dos crimes da Lei, procedendo-se na forma dos arts. 125 e seguintes do Código de Processo Penal. Na hipótese do art. 366 do CPP, o juiz poderá determinar a prática de atos necessários à conservação dos bens. A ordem de apreensão ou sequestro poderá ser suspensa pelo juiz, ouvido o MP, quando a sua execução imediata puder comprometer as investigações.",
+        "pontos": [
+          "Medidas assecuratórias sobre bens suspeitos de serem produto ou proveito do crime.",
+          "Decretadas pelo juiz, a pedido do MP ou do assistente ou por representação da polícia.",
+          "Procedimento dos arts. 125 e seguintes do CPP.",
+          "Suspensão da ordem se comprometer a investigação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 13.840, de 2019.",
+          "§§ 1º e 2º revogados."
+        ],
+        "exemplo": "O juiz decreta o sequestro de imóvel comprado com dinheiro do tráfico.",
+        "prova": [
+          "Assertiva que impede medidas assecuratórias antes da denúncia erra: podem ser decretadas no curso do inquérito."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 60-A",
+          "Art. 125 do CPP"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-60-a",
+      "unit_id": "d46c615d-54ec-573c-8dc0-9ebd365a2183",
+      "content_sha256": "1491dd0c4bf6773752b3b117b44eaa3335b77e331781362efa6595a7730c265c",
+      "simples": "Moeda estrangeira, títulos, valores mobiliários e cheques sujeitos às medidas do art. 60 são imediatamente convertidos em moeda nacional. Espécie estrangeira é encaminhada a instituição financeira para alienação conforme CMN; se impossível, fica custodiada até decisão.",
+      "pontos": [
+        "Sem valor de mercado, após decisão de destino, espécimes podem ser destruídos ou doados à representação diplomática de origem.",
+        "Prazo de 360 dias do §4º trata do estoque anterior à MP 885/2019 custodiado no Banco Central; é regra histórica de transferência à Caixa."
+      ],
+      "atencao": [
+        "Não renovar o prazo transitório de 360 dias em toda apreensão atual. Custódia quando não se consegue alienar não equivale a destruição imediata."
+      ],
+      "exemplo": "Moeda estrangeira apreendida é encaminhada à instituição financeira para alienação. Variação: sem possibilidade de alienação, permanece custodiada até decisão, sem destruição automática.",
+      "prova": [
+        "Toda moeda estrangeira deve ser destruída imediatamente? Não; primeiro seguem conversão/alienação ou custódia e decisão sobre destino.",
+        "Os 360 dias são prazo geral de toda apreensão atual? Não; referem-se ao estoque anterior indicado no §4º."
+      ],
+      "termos": [
+        "conversão em moeda nacional",
+        "custodiada",
+        "360 dias"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "d46c615d-54ec-573c-8dc0-9ebd365a2183",
+        "content_sha256": "1491dd0c4bf6773752b3b117b44eaa3335b77e331781362efa6595a7730c265c",
+        "simples": "Se as medidas assecuratórias recaírem sobre moeda estrangeira, títulos, valores mobiliários ou cheques emitidos como ordem de pagamento, será determinada, imediatamente, a sua conversão em moeda nacional. A moeda estrangeira apreendida em espécie deve ser encaminhada a instituição financeira para alienação na forma prevista pelo Conselho Monetário Nacional. Se impossível a alienação, será custodiada pela instituição financeira até decisão sobre o seu destino. Caso verificada a inexistência de valor de mercado, seus espécimes poderão ser destruídos ou doados à representação diplomática do país de origem.",
+        "pontos": [
+          "Moeda estrangeira, títulos, valores mobiliários e cheques: conversão imediata em moeda nacional.",
+          "Moeda em espécie: instituição financeira aliena conforme o CMN.",
+          "Sem alienação possível: custódia pela instituição.",
+          "Sem valor de mercado: destruição ou doação ao país de origem."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.886, de 2019."
+        ],
+        "exemplo": "Dólares apreendidos em espécie são alienados por instituição financeira.",
+        "prova": [
+          "Assertiva que mantém a moeda estrangeira apreendida em espécie, sem conversão, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 60"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-61",
+      "unit_id": "f7b3108a-a1f1-5773-a221-74ee28c5f474",
+      "content_sha256": "70afce396c849471e70f009163581c38cee20c9f87bb0774b98050c86783a73b",
+      "simples": "A apreensão de meios de transporte, maquinários e objetos usados nos crimes, de modo habitual ou não, é comunicada imediatamente ao juízo. Em trinta dias da comunicação, o juiz determina alienação, exceto armas, submetidas à lei específica.",
+      "pontos": [
+        "Autos apartados devem mostrar nexo instrumental, descrição, custódia e localização.",
+        "Avaliação por oficial: cinco dias; se conhecimento especializado, avaliador nomeado em até dez dias. Funad, MP e interessado manifestam-se em cinco dias.",
+        "Hasta pública, preferencialmente eletrônica, maior lance e piso de 50% da avaliação judicial; MP fiscaliza a alienação.",
+        "Regularização de veículos em trinta dias; débitos anteriores não são condição exigível do arrematante ou alienante, preservada execução contra antigo proprietário e possibilidade de novos identificadores."
+      ],
+      "atencao": [
+        "Lei 14.322/2022 dispensa habitualidade, mas não elimina prova do vínculo entre bem e crime. Apreensão não é apropriação informal pela polícia.",
+        "Decreto 12.607/2025 regulamenta leilão eletrônico promovido pela Senad; integrar lei especial e procedimento vigente."
+      ],
+      "exemplo": "Carro instrumental ao tráfico pode entrar no procedimento mesmo sem utilização habitual. Variação: arrematante não pode ser obrigado a quitar multas anteriores para regularizar o veículo; a cobrança pode seguir contra o antigo proprietário.",
+      "prova": [
+        "O uso precisa ser habitual para toda apreensão do artigo? Não; o texto atual abrange prática habitual ou não.",
+        "Armas seguem indiscriminadamente o leilão do §1º? Não; são recolhidas conforme legislação específica."
+      ],
+      "termos": [
+        "habitual ou não",
+        "trinta dias",
+        "50%",
+        "nexo de instrumentalidade"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12607.htm"
+      ],
+      "expected": {
+        "unit_id": "f7b3108a-a1f1-5773-a221-74ee28c5f474",
+        "content_sha256": "70afce396c849471e70f009163581c38cee20c9f87bb0774b98050c86783a73b",
+        "simples": "A apreensão de veículos, embarcações, aeronaves e quaisquer outros meios de transporte e dos maquinários, utensílios, instrumentos e objetos de qualquer natureza utilizados para a prática, habitual ou não, dos crimes da Lei será imediatamente comunicada pela autoridade de polícia judiciária ao juízo competente. O juiz, no prazo de 30 dias contado da comunicação, determinará a alienação dos bens apreendidos, excetuadas as armas, que serão recolhidas na forma da legislação específica. A alienação será realizada em autos apartados. O juiz determinará a avaliação dos bens, por oficial de justiça no prazo de 5 dias da autuação, ou, se necessários conhecimentos especializados, por avaliador nomeado em prazo não superior a 10 dias.",
+        "pontos": [
+          "Comunicação imediata da apreensão de meios de transporte e instrumentos ao juízo.",
+          "Alienação determinada pelo juiz em 30 dias, exceto armas.",
+          "Autos apartados.",
+          "Avaliação: oficial de justiça em 5 dias ou avaliador em até 10 dias."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: caput com redação da Lei nº 14.322, de 2022; §§ 1º a 3º incluídos pela Lei nº 13.840, de 2019.",
+          "Prazos: 30, 5 e 10 dias."
+        ],
+        "exemplo": "O carro usado no tráfico é apreendido, comunicado ao juiz e alienado em até 30 dias.",
+        "prova": [
+          "Assertiva que inclui as armas entre os bens alienados nesse procedimento erra: elas são recolhidas na forma da legislação específica."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 62"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-62",
+      "unit_id": "f5c9fb80-3f67-5d36-8b6c-c6bb893feef8",
+      "content_sha256": "efa84989a1a5b4271985a6be4605d11a27d70540f39751cdb274634499d4f480",
+      "simples": "Uso público dos bens exige interesse público comprovado, autorização judicial, oitiva do MP, avaliação prévia e responsabilidade pela conservação. O gestor do Funad avalia interesse e indica destinatário em dez dias, com prioridade aos órgãos de segurança participantes da investigação ou repressão.",
+      "pontos": [
+        "Autorização descreve o bem, sua avaliação e o órgão responsável; enviar informações de conservação.",
+        "Veículo, embarcação ou aeronave: certificado provisório em favor do órgão; proteção contra débitos anteriores nos limites do §4º.",
+        "Se houver depreciação acima do esperado, cabe nova avaliação e indenização pelo ente ou entidade usuário quando constatada."
+      ],
+      "atencao": [
+        "Uso cautelar não transfere automaticamente propriedade. Não presumir que o órgão pode usar e deteriorar o bem sem prestação de informações e responsabilidade."
+      ],
+      "exemplo": "Polícia pede uso de bem apreendido e comprova interesse público; juiz ouve MP e exige avaliação. Variação: após devolução, depreciação superior ao uso esperado pode exigir nova avaliação e indenização.",
+      "prova": [
+        "A polícia pode usar o bem só porque o apreendeu? Não; observar interesse, avaliação, autorização e oitiva do MP.",
+        "Depreciação excessiva pode gerar indenização? Sim; conforme avaliação e §§5º/6º."
+      ],
+      "termos": [
+        "interesse público",
+        "prévia avaliação",
+        "conservação",
+        "indenizará"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "f5c9fb80-3f67-5d36-8b6c-c6bb893feef8",
+        "content_sha256": "efa84989a1a5b4271985a6be4605d11a27d70540f39751cdb274634499d4f480",
+        "simples": "Comprovado o interesse público na utilização de quaisquer dos bens de que trata o art. 61, os órgãos de polícia judiciária, militar e rodoviária poderão deles fazer uso, sob sua responsabilidade e com o objetivo de sua conservação, mediante autorização judicial, ouvido o Ministério Público e garantida a prévia avaliação dos bens. O juízo deve cientificar o órgão gestor do Funad para que, em 10 dias, avalie a existência do interesse público e indique o órgão que deve receber o bem. Têm prioridade os órgãos de segurança pública que participaram das ações de investigação ou repressão ao crime. A autorização deverá conter a descrição do bem, a avaliação e o órgão responsável pelo uso, que enviará ao juiz informações periódicas sobre o estado de conservação.",
+        "pontos": [
+          "Uso do bem apreendido por órgãos policiais, com autorização judicial e oitiva do MP.",
+          "Prévia avaliação do bem.",
+          "Funad avalia o interesse público em 10 dias.",
+          "Prioridade aos órgãos que participaram da investigação.",
+          "Informações periódicas sobre a conservação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: §§ 1º-A e 1º-B incluídos pela Lei nº 13.886, de 2019."
+        ],
+        "exemplo": "A polícia que apreendeu a viatura usada no crime recebe autorização judicial para usá-la.",
+        "prova": [
+          "Assertiva que dispensa a autorização judicial para o uso do bem apreendido erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 61",
+          "Art. 63-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-62-a",
+      "unit_id": "65043589-7b68-5683-945e-5f9a761811f4",
+      "content_sha256": "f0c011f446823dd3464713cea4f3fd7a04a6f653d962092def91e3aca4fb6f5d",
+      "simples": "Dinheiro apreendido, convertido ou proveniente de alienação é depositado na Caixa por documento específico. A Caixa transfere à conta única do Tesouro em 24 horas do depósito, à disposição do Funad. Perdimento transforma depósito em pagamento definitivo, respeitados lesados e terceiros de boa-fé.",
+      "pontos": [
+        "Devolução judicial ocorre como anulação de receita do Funad no exercício respectivo.",
+        "Caixa mantém controle dos depósitos e devoluções.",
+        "§2º foi revogado pela Lei 14.973/2024: não ensinar a remuneração antiga como regra vigente."
+      ],
+      "atencao": [
+        "Destino provisório de depósito não é sentença de perdimento. Revogação de remuneração exige separar texto residual de conta remunerada em remissões antigas."
+      ],
+      "exemplo": "Numerário apreendido é depositado na Caixa e transferido ao Tesouro em 24 horas. Variação: decisão manda devolver; a operação segue anulação de receita, sem atribuir automaticamente juros pela regra revogada.",
+      "prova": [
+        "O depósito já equivale a perdimento definitivo? Não; a conversão definitiva depende da decisão de perdimento.",
+        "O antigo §2º segue vigente? Não; foi revogado em 2024."
+      ],
+      "termos": [
+        "Caixa Econômica Federal",
+        "24 horas",
+        "anulação de receita"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14973.htm"
+      ],
+      "expected": {
+        "unit_id": "65043589-7b68-5683-945e-5f9a761811f4",
+        "content_sha256": "f0c011f446823dd3464713cea4f3fd7a04a6f653d962092def91e3aca4fb6f5d",
+        "simples": "O depósito, em dinheiro, de valores referentes ao produto da alienação ou a numerários apreendidos ou que tenham sido convertidos deve ser efetuado na Caixa Econômica Federal, por meio de documento de arrecadação destinado a essa finalidade. Os depósitos devem ser transferidos pela Caixa para a conta única do Tesouro Nacional, independentemente de formalidade, no prazo de 24 horas, onde ficarão à disposição do Funad. Decretado o perdimento em favor da União, o valor do depósito será transformado em pagamento definitivo, respeitados os direitos de lesados e de terceiros de boa-fé. Os valores devolvidos por decisão judicial devem ser efetuados como anulação de receita do Funad. A Caixa deve manter o controle dos valores depositados ou devolvidos.",
+        "pontos": [
+          "Depósitos em dinheiro na Caixa Econômica Federal.",
+          "Transferência à conta única do Tesouro em 24 horas, à disposição do Funad.",
+          "Perdimento: depósito vira pagamento definitivo.",
+          "Devolução: anulação de receita do Funad."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.886, de 2019; § 2º revogado pela Lei nº 14.973, de 2024.",
+          "Prazo de 24 horas."
+        ],
+        "exemplo": "Dinheiro apreendido é depositado na Caixa e transferido ao Tesouro em 24 horas.",
+        "prova": [
+          "Assertiva que fixa o depósito em banco privado erra: é na Caixa Econômica Federal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-63",
+      "unit_id": "af0b87a3-a471-50a9-90f0-6ee19a612d7a",
+      "content_sha256": "c26be19c49886cfe54cd6e6d9fb2881e4f1827f9571ae04f38679ea3dcd38dfc",
+      "simples": "Na sentença, o juiz decide sobre perdimento e sobre levantamento de valores/liberação de bens utilizados. Declarados perdidos em favor da União, são destinados ao Funad, com relação enviada ao gestor e regularização de registros e imóveis.",
+      "pontos": [
+        "Relação identifica bens, direitos, valores, local e custodiante; observar também providências após trânsito em julgado.",
+        "Antes do encaminhamento, averbações e registro dos imóveis em favor da União, com incorporação e entrega para destinação.",
+        "Valores/bens não reclamados: 360 dias após trânsito em julgado e conhecimento da sentença pelo interessado, na hipótese do inciso II."
+      ],
+      "atencao": [
+        "STJ, Informativo 868/2025: perdas patrimoniais devem respeitar terceiros inocentes, boa-fé e intranscendência; não perder integralmente imóvel familiar sem examinar esses requisitos.",
+        "A expressão conta remunerada deve ser lida com a revogação do art. 62-A, §2º, em 2024. Não iniciar os 360 dias só pela apreensão."
+      ],
+      "exemplo": "Sentença decide o destino dos bens e relaciona aqueles declarados perdidos. Variação: imóvel também pertence a familiares de boa-fé; a decisão não pode ignorar seus direitos nem presumir culpa pelo parentesco.",
+      "prova": [
+        "O prazo de 360 dias começa simplesmente na apreensão? Não; a lei exige trânsito em julgado e conhecimento da sentença pelo interessado.",
+        "Parentesco basta para ignorar direitos de terceiro inocente? Não; observar boa-fé, prova e garantias patrimoniais."
+      ],
+      "termos": [
+        "perdimento",
+        "conhecimento da sentença",
+        "360 dias"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://scon.stj.jus.br/SCON/GetPDFINFJ?edicao=0868"
+      ],
+      "expected": {
+        "unit_id": "af0b87a3-a471-50a9-90f0-6ee19a612d7a",
+        "content_sha256": "c26be19c49886cfe54cd6e6d9fb2881e4f1827f9571ae04f38679ea3dcd38dfc",
+        "simples": "Ao proferir a sentença, o juiz decidirá sobre o perdimento do produto, bem, direito ou valor apreendido ou objeto de medidas assecuratórias, e sobre o levantamento dos valores depositados em conta remunerada e a liberação dos bens utilizados nos termos do art. 62. Os bens, direitos ou valores apreendidos, após decretado o perdimento em favor da União, serão revertidos diretamente ao Funad. O juiz remeterá ao órgão gestor do Funad a relação dos bens perdidos. Transitada em julgado a sentença condenatória, o juiz, de ofício ou a requerimento do MP, remeterá à Senad a relação dos bens declarados perdidos em favor da União, entre outras providências.",
+        "pontos": [
+          "Sentença decide o perdimento e o levantamento dos valores.",
+          "Bens perdidos revertem ao Funad.",
+          "Relação dos bens enviada ao Funad e, após o trânsito, à Senad."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 13.840, de 2019; § 3º revogado pela Lei nº 13.886, de 2019."
+        ],
+        "exemplo": "Na sentença, o juiz decreta o perdimento de bens do tráfico em favor da União, que os reverte ao Funad.",
+        "prova": [
+          "Assertiva que destina os bens perdidos ao Tesouro estadual erra: revertem ao Funad."
+        ],
+        "termos": [
+          {
+            "termo": "Senad",
+            "significado": "Secretaria Nacional de Políticas sobre Drogas."
+          }
+        ],
+        "remissoes": [
+          "Art. 62",
+          "Art. 63-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-63-a",
+      "unit_id": "8cb18a76-fb3c-57a3-a3ff-85689afc5724",
+      "content_sha256": "734ac70bc880d1d54f716a124fd0bab160bc4ad9294eba5645c49d651de353c0",
+      "simples": "O texto condiciona o conhecimento do pedido de restituição ao comparecimento pessoal do acusado e permite atos judiciais necessários à conservação dos bens, direitos e valores.",
+      "pontos": [
+        "Comparecimento pessoal é requisito textual referido ao acusado.",
+        "Conservação é providência própria, distinta de perdimento definitivo."
+      ],
+      "atencao": [
+        "Não estender mecanicamente a condição a terceiro proprietário de boa-fé, que não é acusado. Distinguir pedido, legitimidade e garantias de defesa; este artigo não autoriza prisão para forçar presença."
+      ],
+      "exemplo": "Acusado pede restituição: observar a exigência textual e a situação processual. Variação: terceiro que demonstra propriedade e boa-fé não deve ser tratado como acusado só para aplicar a mesma condição.",
+      "prova": [
+        "O artigo transforma todo terceiro requerente em acusado? Não; a condição textual se refere ao acusado.",
+        "Atos de conservação são perdimento definitivo? Não; têm finalidade preservativa."
+      ],
+      "termos": [
+        "comparecimento pessoal",
+        "conservação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "8cb18a76-fb3c-57a3-a3ff-85689afc5724",
+        "content_sha256": "734ac70bc880d1d54f716a124fd0bab160bc4ad9294eba5645c49d651de353c0",
+        "simples": "Nenhum pedido de restituição será conhecido sem o comparecimento pessoal do acusado, podendo o juiz determinar a prática de atos necessários à conservação de bens, direitos ou valores.",
+        "pontos": [
+          "Pedido de restituição exige comparecimento PESSOAL do acusado.",
+          "Juiz pode determinar atos de conservação dos bens."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.840, de 2019."
+        ],
+        "exemplo": "O pedido de restituição do veículo só é conhecido se o acusado comparecer pessoalmente.",
+        "prova": [
+          "Assertiva que dispensa o comparecimento pessoal do acusado para o pedido de restituição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-63-b",
+      "unit_id": "c9e938c1-fb62-547f-bbdc-2e09101112e9",
+      "content_sha256": "96e2785a49f0b63b8f367ef8ec6a14dd85bd8d17f764a45fc9ba86f946aefe56",
+      "simples": "Comprovada a origem lícita, o juiz libera total ou parcialmente bens sujeitos a medidas assecuratórias, mantendo apenas o necessário e suficiente para reparação dos danos, prestações pecuniárias, multas e custas da infração.",
+      "pontos": [
+        "Liberação pode ser parcial; demonstrar origem lícita.",
+        "Constrição remanescente deve ser necessária e suficiente, não ilimitada."
+      ],
+      "atencao": [
+        "Integrar a regra com a disciplina específica do veículo usado em transporte de droga do art. 60, §6º, e os direitos de terceiros. Não oferecer devolução automática de todo bem lícito."
+      ],
+      "exemplo": "Origem lícita é provada, mas parte do valor é necessária às obrigações decorrentes da infração: juiz delimita a constrição. Variação: inexistindo necessidade residual e fora de exceção específica, analisar liberação integral.",
+      "prova": [
+        "A lei permite manter constrição patrimonial ilimitada? Não; apenas o necessário e suficiente às finalidades indicadas.",
+        "A liberação sempre precisa ser integral? Não; pode ser parcial."
+      ],
+      "termos": [
+        "origem lícita",
+        "necessários e suficientes",
+        "liberação total ou parcial"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "c9e938c1-fb62-547f-bbdc-2e09101112e9",
+        "content_sha256": "96e2785a49f0b63b8f367ef8ec6a14dd85bd8d17f764a45fc9ba86f946aefe56",
+        "simples": "O juiz determinará a liberação total ou parcial dos bens, direitos e objetos de medidas assecuratórias quando comprovada a licitude de sua origem, mantendo-se a constrição dos bens, direitos e valores necessários e suficientes à reparação dos danos e ao pagamento de prestações pecuniárias, multas e custas decorrentes da infração penal.",
+        "pontos": [
+          "Liberação total ou parcial dos bens com licitude comprovada.",
+          "Mantém-se a constrição necessária à reparação, prestações, multas e custas."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.840, de 2019."
+        ],
+        "exemplo": "Comprovada a origem lícita de um imóvel, o juiz o libera, mantendo outros bens para cobrir multa e danos.",
+        "prova": [
+          "Assertiva que libera todos os bens, mesmo os necessários à reparação, após comprovada a licitude, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-63-c",
+      "unit_id": "aa4b083c-6755-5afe-940b-3de311cc5d9f",
+      "content_sha256": "5062e3793fdc32660839212039869d11e6683ea75e1930c8ea7a172728367d49",
+      "simples": "A Senad destina bens não leiloados cautelarmente e perdidos em favor da União: alienação, incorporação a órgão público, destruição ou inutilização, conforme requisitos legais e finalidades do Funad.",
+      "pontos": [
+        "Alienação inclui leilão, doação com encargo a destinatários previstos e venda direta nos limites legais aplicáveis.",
+        "Leilão de móveis e imóveis, independentemente do valor, maior lance e piso de 50% da avaliação.",
+        "Edital tem divulgação ampla; em sistema eletrônico, a publicidade do sistema substitui jornais e diário oficial conforme §3º.",
+        "Débitos anteriores não oneram arrematante/alienante para regularização; convênios e contratação privada dependem dos procedimentos legais."
+      ],
+      "atencao": [
+        "Referência residual à Lei 8.666/1993 não autoriza usar seu antigo limite como regra de novas contratações: foi revogada; integrar Lei 14.133 e regime especial.",
+        "Atualização: Decreto 12.607/2025 disciplina o leilão eletrônico da Senad. Doação possui encargo e destinatários próprios, não é doação irrestrita."
+      ],
+      "exemplo": "Senad destina imóvel perdido por leilão conforme avaliação e publicidade. Variação: uma doação precisa atender destinatário, encargo e finalidade; não basta considerar o bem dispensável.",
+      "prova": [
+        "A Senad pode doar indistintamente a qualquer pessoa? Não; observar destinatários e encargos previstos.",
+        "O antigo limite da Lei 8.666 é regra geral de novas contratações? Não; considerar revogação e regime atual."
+      ],
+      "termos": [
+        "Senad",
+        "doação com encargo",
+        "50%",
+        "publicidade"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12607.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm"
+      ],
+      "expected": {
+        "unit_id": "aa4b083c-6755-5afe-940b-3de311cc5d9f",
+        "content_sha256": "5062e3793fdc32660839212039869d11e6683ea75e1930c8ea7a172728367d49",
+        "simples": "Compete à Senad, do Ministério da Justiça e Segurança Pública, proceder à destinação dos bens apreendidos e não leiloados em caráter cautelar, cujo perdimento seja decretado em favor da União, por alienação (licitação, doação com encargo a entidades ou órgãos públicos e comunidades terapêuticas acolhedoras, ou venda direta), incorporação ao patrimônio de órgão da administração pública, destruição ou inutilização. A alienação por licitação é na modalidade leilão, para bens móveis e imóveis, independentemente do valor, assegurada a venda pelo maior lance, por preço não inferior a 50% do valor da avaliação, entre outras regras.",
+        "pontos": [
+          "Senad destina os bens perdidos em favor da União.",
+          "Modalidades: alienação (licitação, doação com encargo, venda direta), incorporação, destruição ou inutilização.",
+          "Leilão: venda pelo maior lance, por preço não inferior a 50% da avaliação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.886, de 2019.",
+          "Piso do leilão: 50% da avaliação."
+        ],
+        "exemplo": "A Senad leiloa o imóvel perdido, por no mínimo 50% do valor da avaliação.",
+        "prova": [
+          "Assertiva que fixa o piso do leilão em três quartos da avaliação erra: é 50%."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-63-d",
+      "unit_id": "402762b9-b973-549d-8209-c4f6fc4ea8bc",
+      "content_sha256": "3e1397cf1c1bbcfa48b83f7cbf57ce6df1edebee1905274f583d061b2f72d5c3",
+      "simples": "Compete ao Ministério da Justiça e Segurança Pública regulamentar administração, preservação e destinação dos recursos provenientes de delitos e atos ilícitos, incluindo valores abaixo dos quais haverá destruição ou inutilização.",
+      "pontos": [
+        "Competência regulamentar do ministério, não livre escolha do agente apreensor.",
+        "Regulamento estabelece valores; o artigo não traz quantia única."
+      ],
+      "atencao": [
+        "Não inventar um limite monetário com base em outro regime. Destruição e inutilização exigem seguir procedimentos e critérios aplicáveis."
+      ],
+      "exemplo": "Um bem de baixo valor demanda aplicação do critério regulamentar de destinação. Variação: o servidor não pode fixar por preferência própria o limite para destruir qualquer bem.",
+      "prova": [
+        "O artigo fixa um valor numérico único para destruição? Não; atribui sua definição à regulamentação competente.",
+        "A competência indicada é do MJSP? Sim; para os procedimentos descritos."
+      ],
+      "termos": [
+        "regulamentar",
+        "preservação",
+        "destruição ou inutilização"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12607.htm"
+      ],
+      "expected": {
+        "unit_id": "402762b9-b973-549d-8209-c4f6fc4ea8bc",
+        "content_sha256": "3e1397cf1c1bbcfa48b83f7cbf57ce6df1edebee1905274f583d061b2f72d5c3",
+        "simples": "Compete ao Ministério da Justiça e Segurança Pública regulamentar os procedimentos relativos à administração, à preservação e à destinação dos recursos provenientes de delitos e atos ilícitos e estabelecer os valores abaixo dos quais se deve proceder à sua destruição ou inutilização.",
+        "pontos": [
+          "O Ministério da Justiça regulamenta a administração, a preservação e a destinação dos recursos.",
+          "Define os valores abaixo dos quais se destrói ou inutiliza."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.886, de 2019."
+        ],
+        "exemplo": "Portaria do Ministério fixa o valor mínimo para a alienação de bens apreendidos.",
+        "prova": [
+          "Assertiva que atribui ao Poder Judiciário a regulamentação desses procedimentos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-63-e",
+      "unit_id": "0b5695ba-06b5-57e4-a780-b114b6e4bf56",
+      "content_sha256": "2009067886434f53f9e2e59576d7b31ce07ed6dcdf09379371ef328a25226317",
+      "simples": "O produto da alienação dos bens apreendidos ou confiscados reverte integralmente ao Funad. Não se sub-roga o valor da arrematação para pagar multas, encargos ou tributos pendentes, sem impedir execução fiscal contra antigos devedores.",
+      "pontos": [
+        "Destino integral ao fundo.",
+        "Vedação de descontar dívidas anteriores do preço para quitá-las.",
+        "A dívida não desaparece: preservada cobrança do antigo devedor."
+      ],
+      "atencao": [
+        "Arrematante protegido não significa extinção automática das obrigações tributárias de outra pessoa."
+      ],
+      "exemplo": "Veículo é leiloado: preço vai ao Funad sem desconto para quitar multa antiga. Variação: o Fisco ainda pode executar o antigo devedor, observados seus requisitos legais.",
+      "prova": [
+        "Multas antigas podem ser quitadas automaticamente com o valor arrematado? Não; o artigo veda essa sub-rogação.",
+        "A vedação impede toda execução fiscal contra antigo devedor? Não; o parágrafo único a preserva."
+      ],
+      "termos": [
+        "integralmente ao Funad",
+        "vedada a sub-rogação",
+        "antigos devedores"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "0b5695ba-06b5-57e4-a780-b114b6e4bf56",
+        "content_sha256": "2009067886434f53f9e2e59576d7b31ce07ed6dcdf09379371ef328a25226317",
+        "simples": "O produto da alienação dos bens apreendidos ou confiscados será revertido integralmente ao Funad, nos termos do parágrafo único do art. 243 da Constituição, vedada a sub-rogação sobre o valor da arrematação para saldar eventuais multas, encargos ou tributos pendentes. O disposto não prejudica o ajuizamento de execução fiscal em relação aos antigos devedores.",
+        "pontos": [
+          "Produto da alienação revertido integralmente ao Funad.",
+          "Vedada a sub-rogação do valor da arrematação para pagar multas, encargos ou tributos.",
+          "Execução fiscal contra antigos devedores permanece possível."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.886, de 2019."
+        ],
+        "exemplo": "O arrematante não responde por tributos antigos do bem, que são cobrados do antigo devedor.",
+        "prova": [
+          "Assertiva que permite pagar débitos do bem com o valor da arrematação erra: é vedada a sub-rogação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-63-f",
+      "unit_id": "e79d8ba6-a9cc-54d1-9ab8-2747d07a89c2",
+      "content_sha256": "521ce1f47447d0435a989d6dc1a58ba058f162fa301f6a393865b4748497498b",
+      "simples": "Na condenação por infração desta lei com pena máxima superior a seis anos, pode haver perda do patrimônio incompatível com rendimento lícito como produto/proveito. Exigem-se provas de conduta criminosa habitual, reiterada ou profissional, ou vinculação a organização criminosa.",
+      "pontos": [
+        "Pena máxima superior a seis: exatamente seis não satisfaz o limiar.",
+        "Patrimônio abrange titularidade ou domínio/benefício direto ou indireto na data do crime ou recebido depois.",
+        "Inclui transferências gratuitas ou por preço irrisório a terceiros desde o início da atividade criminal.",
+        "Condenado pode demonstrar inexistência de incompatibilidade ou origem lícita."
+      ],
+      "atencao": [
+        "Não confiscar por mera suspeita de riqueza: condenação, limiar penal, prova qualificada e oportunidade de demonstração são elementos distintos. Não dispensar o §1º porque outro regime de confisco é diferente."
+      ],
+      "exemplo": "Condenado por tipo com máximo de dez anos apresenta patrimônio incompatível e há prova de atuação profissional: analisar o confisco com contraditório. Variação: delito tem máximo exatamente de seis anos; este requisito do art. 63-F não está atendido.",
+      "prova": [
+        "Máximo exatamente de seis anos satisfaz o artigo? Não; exige superior a seis.",
+        "O condenado pode demonstrar origem lícita? Sim; o §3º assegura essa possibilidade."
+      ],
+      "termos": [
+        "superior a seis anos",
+        "elementos probatórios",
+        "contraprestação irrisória"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "e79d8ba6-a9cc-54d1-9ab8-2747d07a89c2",
+        "content_sha256": "521ce1f47447d0435a989d6dc1a58ba058f162fa301f6a393865b4748497498b",
+        "simples": "Na hipótese de condenação por infrações às quais a Lei comine pena máxima superior a 6 anos de reclusão, poderá ser decretada a perda, como produto ou proveito do crime, dos bens correspondentes à diferença entre o valor do patrimônio do condenado e aquele compatível com o seu rendimento lícito. A decretação fica condicionada à existência de elementos probatórios que indiquem conduta criminosa habitual, reiterada ou profissional do condenado ou sua vinculação a organização criminosa. Patrimônio do condenado são todos os bens de sua titularidade, ou sobre os quais tenha domínio e benefício direto ou indireto, na data da infração ou recebidos posteriormente, e os transferidos a terceiros a título gratuito ou mediante contraprestação irrisória a partir do início da atividade criminal. O condenado poderá demonstrar a inexistência da incompatibilidade ou a procedência lícita do patrimônio.",
+        "pontos": [
+          "Perda alargada: diferença entre o patrimônio e o rendimento lícito.",
+          "Pena máxima superior a 6 anos de reclusão.",
+          "Exige indícios de conduta habitual, reiterada ou profissional, ou vínculo com organização criminosa.",
+          "Patrimônio inclui bens transferidos a terceiros de forma gratuita ou irrisória.",
+          "O condenado pode comprovar a origem lícita."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.886, de 2019.",
+          "Há inversão do ônus de demonstrar a origem lícita."
+        ],
+        "exemplo": "O condenado por tráfico organizado perde bens incompatíveis com sua renda lícita.",
+        "prova": [
+          "Assertiva que aplica a perda alargada a qualquer pena, mesmo inferior a 6 anos, erra."
+        ],
+        "termos": [
+          {
+            "termo": "Perda alargada",
+            "significado": "Perda de bens incompatíveis com o rendimento lícito do condenado."
+          }
+        ],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-64",
+      "unit_id": "0231fbb3-c04b-5d75-aa61-76f928cfe262",
+      "content_sha256": "66ef907e9d34b7bc08a374d1a599d3d986461630d275a72b78d1dcc7392adf93",
+      "simples": "A União, por meio da Senad, pode conveniar com estados, DF e organismos voltados à prevenção, atenção/reinserção e repressão, para liberar equipamentos e recursos arrecadados e executar programas sobre drogas.",
+      "pontos": [
+        "Convênio é instrumento de programas com as finalidades indicadas.",
+        "Não limitar a finalidade apenas à repressão."
+      ],
+      "atencao": [
+        "Poder firmar convênio não é direito automático de qualquer entidade a receber recursos, sem requisitos ou fiscalização."
+      ],
+      "exemplo": "Estado apresenta programa de prevenção e atenção para convênio com a União. Variação: pedido de recursos sem vinculação às finalidades legais não se legitima apenas por mencionar drogas.",
+      "prova": [
+        "O artigo abrange apenas atividade policial? Não; contempla prevenção, atenção e reinserção.",
+        "Convênio elimina os requisitos de recebimento e controle? Não; devem ser observadas as demais regras legais."
+      ],
+      "termos": [
+        "Senad",
+        "convênio",
+        "programas"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "0231fbb3-c04b-5d75-aa61-76f928cfe262",
+        "content_sha256": "66ef907e9d34b7bc08a374d1a599d3d986461630d275a72b78d1dcc7392adf93",
+        "simples": "A União, por intermédio da Senad, poderá firmar convênio com os Estados, com o Distrito Federal e com organismos orientados para a prevenção do uso indevido de drogas, a atenção e a reinserção social de usuários ou dependentes e a atuação na repressão à produção não autorizada e ao tráfico ilícito, com vistas à liberação de equipamentos e de recursos por ela arrecadados, para a implantação e execução de programas relacionados às drogas.",
+        "pontos": [
+          "A União, pela Senad, pode firmar convênios com Estados, DF e organismos.",
+          "Objetivo: liberar equipamentos e recursos arrecadados para programas."
+        ],
+        "atencao": [
+          "Faculdade ('poderá')."
+        ],
+        "exemplo": "A Senad celebra convênio com um Estado para equipar a polícia, com recursos arrecadados.",
+        "prova": [
+          "Assertiva que torna obrigatório o convênio da União com os Estados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 73"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-65",
+      "unit_id": "b956581a-52d7-5440-888c-e4ef13d8d605",
+      "content_sha256": "f432ec2c60f94dae6c422a238af4d3e80743a2bfa8aafe3944da58fb12549c61",
+      "simples": "Cooperação internacional solicitada ou necessária respeita não intervenção, igualdade jurídica, integridade territorial, leis nacionais e instrumentos internacionais. Abrange informações de políticas, inteligência policial e dados policiais/judiciais relacionados às drogas.",
+      "pontos": [
+        "Inteligência pode incluir armas, lavagem de dinheiro e desvio de precursores.",
+        "Prevenção e reinserção também integram o intercâmbio; não só repressão."
+      ],
+      "atencao": [
+        "Cooperar não autoriza atuar livremente em território estrangeiro nem ignorar garantias e canais jurídicos de compartilhamento."
+      ],
+      "exemplo": "Brasil intercambia experiência de prevenção por instrumento de cooperação. Variação: informação policial sobre tráfico internacional exige os canais e limites legais, sem intervenção unilateral em outro país.",
+      "prova": [
+        "A cooperação dispensa respeito às leis nacionais? Não; a regra expressamente as preserva.",
+        "Pode incluir experiências de prevenção? Sim; o inciso I as prevê."
+      ],
+      "termos": [
+        "não intervenção",
+        "integridade territorial",
+        "intercâmbio"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "b956581a-52d7-5440-888c-e4ef13d8d605",
+        "content_sha256": "f432ec2c60f94dae6c422a238af4d3e80743a2bfa8aafe3944da58fb12549c61",
+        "simples": "De conformidade com os princípios da não intervenção em assuntos internos, da igualdade jurídica e do respeito à integridade territorial dos Estados, e observado o espírito das Convenções das Nações Unidas, o governo brasileiro prestará, quando solicitado, cooperação a outros países e organismos internacionais e, quando necessário, deles solicitará a colaboração, nas áreas de intercâmbio de informações sobre legislações, experiências, projetos e programas de prevenção e atenção; intercâmbio de inteligência policial sobre produção e tráfico de drogas e delitos conexos, em especial o tráfico de armas, a lavagem de dinheiro e o desvio de precursores químicos; e intercâmbio de informações policiais e judiciais sobre produtores e traficantes.",
+        "pontos": [
+          "Cooperação internacional baseada na não intervenção, igualdade jurídica e integridade territorial.",
+          "Intercâmbio de informações sobre legislação e programas.",
+          "Intercâmbio de inteligência policial (tráfico de armas, lavagem, precursores).",
+          "Intercâmbio de informações policiais e judiciais sobre traficantes."
+        ],
+        "atencao": [
+          "Cooperação respeita os princípios do Direito Internacional."
+        ],
+        "exemplo": "A Polícia Federal troca informações de inteligência com polícias estrangeiras sobre uma rota do tráfico.",
+        "prova": [
+          "Assertiva que dispensa o respeito à não intervenção em assuntos internos na cooperação internacional erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 64"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-66",
+      "unit_id": "2df4919a-7bc2-5e44-9159-4f0f45614b8c",
+      "content_sha256": "09b8fce23716d0a73b24a88e8e76585f2510f8ae53770ea8ce0a2b4470378e6e",
+      "simples": "A definição de drogas remete à lista de entorpecentes, psicotrópicos, precursores e outras substâncias sob controle especial da Portaria SVS/MS 344/1998, com atualizações da Anvisa. A complementação deve considerar substância, lista, adendo e tempo do fato.",
+      "pontos": [
+        "A lista não ficou congelada em 1998: atualizações periódicas integram a consulta.",
+        "Fonte oficial consultada em 12/10/2026 indica RDC 1.036, de 09/07/2026, como versão vigente da lista.",
+        "Distinguir controle especial, proibição e autorização de usos delimitados; listas e adendos possuem alcances diferentes."
+      ],
+      "atencao": [
+        "Em 2026, RDCs 1.012/1.013 disciplinaram cultivo autorizado e 1.015 atualizou fabricação/importação de cannabis medicinal, com vigência iniciada em 04/05/2026. Não ensinar que todo uso médico ou de pesquisa é livre ou invariavelmente proibido.",
+        "A versão consultada tem data; reconferir a lista oficial antes de aplicar ao caso ou atualizar exercícios."
+      ],
+      "exemplo": "Questão trata de substância controlada: conferir lista e adendo vigentes na data relevante, não apenas sua denominação popular. Variação: atividade medicinal autorizada precisa cumprir regulamentação e licença; sua finalidade não elimina os requisitos.",
+      "prova": [
+        "A lista foi definitivamente congelada em 1998? Não; recebe atualizações oficiais periódicas.",
+        "Finalidade medicinal dispensa automaticamente autorização? Não; observar o regime sanitário correspondente."
+      ],
+      "termos": [
+        "Portaria 344/1998",
+        "listas atualizadas",
+        "controle especial"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/controlados/lista-substancias",
+        "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/controlados/rdcs-no-1-012-2026-e-no-1-013-2026",
+        "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-publica-perguntas-e-respostas-sobre-a-autorizacao-sanitaria-de-produtos-de-cannabis"
+      ],
+      "expected": {
+        "unit_id": "2df4919a-7bc2-5e44-9159-4f0f45614b8c",
+        "content_sha256": "09b8fce23716d0a73b24a88e8e76585f2510f8ae53770ea8ce0a2b4470378e6e",
+        "simples": "Para fins do disposto no parágrafo único do art. 1º, até que seja atualizada a terminologia da lista mencionada no preceito, denominam-se drogas as substâncias entorpecentes, psicotrópicas, precursoras e outras sob controle especial da Portaria SVS/MS nº 344, de 12 de maio de 1998.",
+        "pontos": [
+          "Drogas: substâncias da Portaria SVS/MS nº 344, de 1998.",
+          "Entorpecentes, psicotrópicas, precursoras e outras sob controle especial."
+        ],
+        "atencao": [
+          "Portaria é a norma que COMPLEMENTA o conceito de droga."
+        ],
+        "exemplo": "Substância listada na Portaria SVS/MS nº 344 é considerada droga.",
+        "prova": [
+          "Assertiva que define droga por lei específica, sem a Portaria SVS/MS, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-67",
+      "unit_id": "55cec003-f3a3-5039-8495-ee4c536c97e5",
+      "content_sha256": "fe895e9d20ef0532007daaac2409427c5d0ed8d418bd3c2573fda2c8ec7f1608",
+      "simples": "A liberação dos recursos da Lei 7.560 para estados e DF depende de adesão e cumprimento das diretrizes dos convênios e fornecimento de dados pelas polícias judiciárias para atualizar o sistema do art. 17.",
+      "pontos": [
+        "Cumprir diretrizes e fornecer dados são requisitos próprios.",
+        "Objeto: recursos da Lei 7.560 aos estados e DF."
+      ],
+      "atencao": [
+        "Não confundir celebração possível de convênio com liberação incondicional de dinheiro."
+      ],
+      "exemplo": "Estado adere às diretrizes e fornece os dados para habilitar a liberação. Variação: convênio assinado sem os dados necessários não elimina essa exigência.",
+      "prova": [
+        "Assinatura do convênio basta para dispensar dados? Não; o fornecimento é condição legal.",
+        "A regra menciona estados e DF? Sim; destinatários expressamente indicados."
+      ],
+      "termos": [
+        "adesão",
+        "diretrizes básicas",
+        "fornecimento de dados"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "55cec003-f3a3-5039-8495-ee4c536c97e5",
+        "content_sha256": "fe895e9d20ef0532007daaac2409427c5d0ed8d418bd3c2573fda2c8ec7f1608",
+        "simples": "A liberação dos recursos previstos na Lei nº 7.560, de 1986, em favor de Estados e do Distrito Federal, dependerá de sua adesão e respeito às diretrizes básicas contidas nos convênios firmados e do fornecimento de dados necessários à atualização do sistema do art. 17, pelas respectivas polícias judiciárias.",
+        "pontos": [
+          "Liberação de recursos aos Estados e ao DF depende de adesão e respeito às diretrizes dos convênios.",
+          "Exige fornecimento de dados ao sistema do art. 17."
+        ],
+        "atencao": [
+          "Condição: dados fornecidos pelas polícias judiciárias."
+        ],
+        "exemplo": "O Estado que não fornece dados das apreensões pode não receber os recursos.",
+        "prova": [
+          "Assertiva que libera os recursos sem exigir dados das polícias judiciárias erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-67-a",
+      "unit_id": "3ad870cf-814a-50dd-8862-8b472890746f",
+      "content_sha256": "38cb7ea4bfec631d64dfdb65cedf72814d94eb3d86fa8af0f4e49d104c2bbca8",
+      "simples": "Gestores e entidades que recebem recursos públicos para políticas sobre drogas devem assegurar aos fiscalizadores competentes acesso às instalações, documentação e elementos necessários ao controle efetivo.",
+      "pontos": [
+        "Obrigação alcança entidade e gestor.",
+        "Fiscalização exige acesso material e documental, não apenas relatório escolhido pelo beneficiário."
+      ],
+      "atencao": [
+        "Receber recursos para finalidade social não dispensa controle; acesso deve ocorrer pelos órgãos competentes."
+      ],
+      "exemplo": "Entidade beneficiária disponibiliza documentos e instalações à fiscalização competente. Variação: permite visita, mas oculta documentos essenciais; a obrigação não foi integralmente atendida.",
+      "prova": [
+        "Basta permitir visita e negar toda documentação? Não; a lei também exige acesso aos documentos e elementos necessários.",
+        "A fiscalização é dispensada por finalidade social? Não; aplica-se aos beneficiários dos recursos públicos."
+      ],
+      "termos": [
+        "garantir o acesso",
+        "efetiva fiscalização"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "3ad870cf-814a-50dd-8862-8b472890746f",
+        "content_sha256": "38cb7ea4bfec631d64dfdb65cedf72814d94eb3d86fa8af0f4e49d104c2bbca8",
+        "simples": "Os gestores e entidades que recebam recursos públicos para execução das políticas sobre drogas deverão garantir o acesso às suas instalações, à documentação e a todos os elementos necessários à efetiva fiscalização pelos órgãos competentes.",
+        "pontos": [
+          "Gestores e entidades que recebem recursos garantem acesso à fiscalização.",
+          "Abrange instalações, documentação e demais elementos."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.840, de 2019."
+        ],
+        "exemplo": "A comunidade terapêutica financiada deve permitir a inspeção das instalações e dos documentos.",
+        "prova": [
+          "Assertiva que dispensa a fiscalização das entidades privadas que recebem recursos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 67"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-68",
+      "unit_id": "19284ebc-7b06-5cd0-b213-de2b6c45ab52",
+      "content_sha256": "a0c28f30ea4c914ddcf2765df4f331c6119eb24e0e88166b696862ee0c9eda09",
+      "simples": "União, estados, DF e municípios podem criar estímulos fiscais e outros para pessoas físicas ou jurídicas que colaborem com prevenção, atenção/reinserção e repressão à produção não autorizada e tráfico.",
+      "pontos": [
+        "Competência abrange os quatro níveis federativos.",
+        "Beneficiários podem ser pessoas físicas ou jurídicas."
+      ],
+      "atencao": [
+        "Possibilidade de criar estímulos não concede isenção automática: verificar instituição e requisitos do benefício competente."
+      ],
+      "exemplo": "Município institui regularmente estímulo para colaboração com programa de prevenção. Variação: alguém apenas declara colaborar e exige isenção não criada; o art. 68 não a concede por si.",
+      "prova": [
+        "O artigo concede automaticamente isenção a todo colaborador? Não; autoriza criação de estímulos conforme requisitos legais.",
+        "Pode alcançar pessoa física? Sim; o texto contempla ambas as categorias."
+      ],
+      "termos": [
+        "poderão criar",
+        "estímulos fiscais",
+        "pessoas físicas e jurídicas"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "19284ebc-7b06-5cd0-b213-de2b6c45ab52",
+        "content_sha256": "a0c28f30ea4c914ddcf2765df4f331c6119eb24e0e88166b696862ee0c9eda09",
+        "simples": "A União, os Estados, o Distrito Federal e os Municípios poderão criar estímulos fiscais e outros, destinados às pessoas físicas e jurídicas que colaborem na prevenção do uso indevido de drogas, atenção e reinserção social de usuários e dependentes e na repressão da produção não autorizada e do tráfico ilícito.",
+        "pontos": [
+          "Todos os entes podem criar estímulos fiscais e outros.",
+          "Para quem colabora na prevenção, atenção, reinserção e repressão."
+        ],
+        "atencao": [
+          "Faculdade dos entes federados."
+        ],
+        "exemplo": "Município concede incentivo fiscal à empresa que contrata usuários em reinserção.",
+        "prova": [
+          "Assertiva que torna obrigatória a criação de estímulos fiscais erra: é faculdade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 24"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-69",
+      "unit_id": "a1057b43-20f9-5603-9a0d-39fbb7598920",
+      "content_sha256": "444e6a030457e9747a381dae8079057cc063e73b73242bf1a6b1a4fe8d2078f1",
+      "simples": "Na falência ou liquidação de estabelecimentos com drogas, o juízo determina lacração imediata, guarda pela autoridade sanitária e ciência ao MP. A alienação de produtos não proscritos é restrita a pessoas jurídicas habilitadas em saúde/pesquisa com destinação lícita comprovada.",
+      "pontos": [
+        "Produto não arrematado é destruído pela autoridade sanitária, com Conselho Estadual sobre Drogas e MP.",
+        "Exceção: especialidades farmacêuticas próprias ao uso terapêutico ficam com o Ministério da Saúde para a rede pública.",
+        "Não confundir bens de hospital em falência com bens instrumentais confiscados em crime de tráfico."
+      ],
+      "atencao": [
+        "Regra não permite vender substâncias proscritas ao público. Habilitação jurídica e finalidade lícita são necessárias mesmo na alienação permitida."
+      ],
+      "exemplo": "Hospital com produtos controlados entra em falência: juízo aciona lacração, guarda sanitária e MP. Variação: medicamento utilizável não arrematado segue a exceção terapêutica para a rede pública, não destruição indistinta.",
+      "prova": [
+        "Qualquer pessoa física pode arrematar os produtos deste artigo? Não; a regra exige pessoa jurídica habilitada e destinação lícita.",
+        "Todo medicamento não arrematado deve ser destruído? Não; há exceção para especialidades aptas ao emprego terapêutico."
+      ],
+      "termos": [
+        "lacradas",
+        "autoridade sanitária",
+        "destinação lícita",
+        "rede pública"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "a1057b43-20f9-5603-9a0d-39fbb7598920",
+        "content_sha256": "444e6a030457e9747a381dae8079057cc063e73b73242bf1a6b1a4fe8d2078f1",
+        "simples": "No caso de falência ou liquidação extrajudicial de empresas ou estabelecimentos hospitalares, de pesquisa, de ensino ou congêneres, assim como nos serviços de saúde que produzirem, venderem, adquirirem, consumirem, prescreverem ou fornecerem drogas, incumbe ao juízo determinar, imediatamente à ciência, que sejam lacradas as instalações; ordenar à autoridade sanitária a adoção das medidas para o recebimento e guarda das drogas arrecadadas; e dar ciência ao Ministério Público. Da licitação para alienação de substâncias não proscritas só podem participar pessoas jurídicas habilitadas na área de saúde ou pesquisa científica que comprovem a destinação lícita. O produto não arrematado será destruído pela autoridade sanitária, na presença dos Conselhos Estaduais sobre Drogas e do MP, ressalvada a hipótese do §3º.",
+        "pontos": [
+          "Falência ou liquidação de estabelecimentos que manipulam drogas.",
+          "Juízo lacra as instalações e ordena a guarda das drogas pela autoridade sanitária.",
+          "Ciência ao MP.",
+          "Licitação só para pessoas jurídicas habilitadas na saúde ou pesquisa.",
+          "Produto não arrematado é destruído pela autoridade sanitária."
+        ],
+        "atencao": [
+          "Hipótese específica de falência de estabelecimentos de saúde, pesquisa ou ensino."
+        ],
+        "exemplo": "Hospital em liquidação extrajudicial tem as instalações lacradas e as drogas recolhidas pela autoridade sanitária.",
+        "prova": [
+          "Assertiva que dispensa a ciência ao Ministério Público na falência desses estabelecimentos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-70",
+      "unit_id": "36b0ec06-1b88-5a5b-a710-3092e9500131",
+      "content_sha256": "f40753bc76884f941fface37d7bb51b9261f8fd54e515c15e0f03b8ccb88cb48",
+      "simples": "Crimes dos arts. 33 a 37 caracterizados como transnacionais são processados e julgados pela Justiça Federal. Se o município não possui vara federal, a competência é da vara federal da circunscrição correspondente.",
+      "pontos": [
+        "Transnacionalidade é requisito da regra federal específica.",
+        "Ausência de vara no município não transfere automaticamente a competência à Justiça Estadual."
+      ],
+      "atencao": [
+        "Tráfico entre estados não se torna federal só por ser interestadual. Transnacionalidade e interestadualidade são categorias diferentes; outras hipóteses constitucionais devem ser examinadas quando presentes."
+      ],
+      "exemplo": "Investigação comprova tráfico internacional em município sem vara federal: encaminhar à vara federal da circunscrição. Variação: tráfico somente entre dois estados não atrai essa competência apenas pela divisa interna.",
+      "prova": [
+        "Todo tráfico interestadual é federal pelo art. 70? Não; a hipótese exige transnacionalidade.",
+        "Sem vara federal local, julga automaticamente a vara estadual? Não; a vara federal da circunscrição é indicada."
+      ],
+      "termos": [
+        "ilícito transnacional",
+        "Justiça Federal",
+        "circunscrição"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "36b0ec06-1b88-5a5b-a710-3092e9500131",
+        "content_sha256": "f40753bc76884f941fface37d7bb51b9261f8fd54e515c15e0f03b8ccb88cb48",
+        "simples": "O processo e o julgamento dos crimes previstos nos arts. 33 a 37, se caracterizado ilícito transnacional, são da competência da Justiça Federal. Os crimes praticados nos Municípios que não sejam sede de vara federal serão processados e julgados na vara federal da circunscrição respectiva.",
+        "pontos": [
+          "Tráfico transnacional (arts. 33 a 37): Justiça Federal.",
+          "Município sem vara federal: vara federal da circunscrição."
+        ],
+        "atencao": [
+          "Competência federal depende da TRANSNACIONALIDADE.",
+          "Tráfico interno (sem transnacionalidade) é da Justiça Estadual."
+        ],
+        "exemplo": "Droga importada do exterior e apreendida em município sem vara federal é julgada na vara federal da circunscrição.",
+        "prova": [
+          "Assertiva que atribui à Justiça Federal todo tráfico, ainda que interno, erra: exige ilícito transnacional."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 40, I"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-72",
+      "unit_id": "fe605a28-cc0c-5ef0-bc2f-f4e44c9a3626",
+      "content_sha256": "f64ae74bea8a0ebd7993a9a950225e6fb317c66bdb668b15c94aab4236263c22",
+      "simples": "Encerrado o processo criminal ou arquivado o inquérito, o juiz determina destruição das amostras de contraprova, de ofício ou por provocação policial/MP, com certificação nos autos.",
+      "pontos": [
+        "Objeto: amostras guardadas para contraprova.",
+        "Marco: encerramento processual ou arquivamento investigativo.",
+        "Não confundir com destruição inicial da droga dos arts. 50/50-A."
+      ],
+      "atencao": [
+        "Preservar a prova durante a fase em que a contraprova ainda é necessária. Destruir o volume apreendido não autoriza destruir de imediato a amostra."
+      ],
+      "exemplo": "Depois do encerramento, juiz determina destruição da contraprova e registra nos autos. Variação: no começo da investigação, a amostra deve ser preservada mesmo que o restante já tenha sido incinerado.",
+      "prova": [
+        "A amostra pode ser destruída automaticamente junto com o restante no início? Não; observar sua finalidade e o marco do art. 72.",
+        "A destruição precisa ser certificada nos autos? Sim; é exigência expressa."
+      ],
+      "termos": [
+        "contraprova",
+        "encerrado",
+        "certificando nos autos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "fe605a28-cc0c-5ef0-bc2f-f4e44c9a3626",
+        "content_sha256": "f64ae74bea8a0ebd7993a9a950225e6fb317c66bdb668b15c94aab4236263c22",
+        "simples": "Encerrado o processo criminal ou arquivado o inquérito policial, o juiz, de ofício, mediante representação da autoridade de polícia judiciária, ou a requerimento do Ministério Público, determinará a destruição das amostras guardadas para contraprova, certificando nos autos.",
+        "pontos": [
+          "Fim do processo ou arquivamento do inquérito: destruição das amostras de contraprova.",
+          "De ofício, por representação da polícia ou a pedido do MP."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 13.840, de 2019."
+        ],
+        "exemplo": "Arquivado o inquérito, o juiz manda destruir as amostras guardadas.",
+        "prova": [
+          "Assertiva que mantém as amostras indefinidamente após o fim do processo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 50"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-73",
+      "unit_id": "7620b2ef-473c-5c18-8a3e-44b141daf091",
+      "content_sha256": "f4f7afd200ca66d6c64b0ff8d86f4684e4bf3f5c7509620dc6b8b64f055a02e4",
+      "simples": "União pode conveniar com estados/DF para prevenção e repressão ao tráfico e uso indevido; com municípios, para prevenção, atenção e reinserção social. A redação atual foi dada pela Lei 12.219/2010.",
+      "pontos": [
+        "Destinatário federativo e objeto do convênio são especificados.",
+        "Não apagar atenção e reinserção do objeto municipal."
+      ],
+      "atencao": [
+        "A enumeração do artigo não atribui competência policial repressiva geral aos municípios. Convênios também devem cumprir as demais exigências."
+      ],
+      "exemplo": "Município propõe ações de prevenção e reinserção em convênio com a União. Variação: pretender inferir poder investigativo penal geral apenas desse artigo confunde objeto convenial com competência policial.",
+      "prova": [
+        "O objeto municipal inclui atenção e reinserção? Sim; além da prevenção.",
+        "O artigo confere por si polícia judiciária municipal? Não; trata de convênios e suas finalidades."
+      ],
+      "termos": [
+        "Estados e DF",
+        "Municípios",
+        "atenção e reinserção"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "7620b2ef-473c-5c18-8a3e-44b141daf091",
+        "content_sha256": "f4f7afd200ca66d6c64b0ff8d86f4684e4bf3f5c7509620dc6b8b64f055a02e4",
+        "simples": "A União poderá estabelecer convênios com os Estados e com o Distrito Federal, visando à prevenção e repressão do tráfico ilícito e do uso indevido de drogas, e com os Municípios, com o objetivo de prevenir o uso indevido e de possibilitar a atenção e reinserção social de usuários e dependentes.",
+        "pontos": [
+          "Convênios com Estados e DF: prevenção e repressão.",
+          "Convênios com Municípios: prevenção, atenção e reinserção."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 12.219, de 2010.",
+          "Com os Municípios, o foco é prevenção e atenção (e não a repressão)."
+        ],
+        "exemplo": "A União firma convênio com um Município para ações de prevenção.",
+        "prova": [
+          "Assertiva que prevê convênio com Municípios para repressão ao tráfico erra: o foco é prevenção, atenção e reinserção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 64"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-74",
+      "unit_id": "57b06454-6267-56c4-939f-ab6f5314383e",
+      "content_sha256": "6e54a0f65e372b853b053a48393cea6fa5610a740ca5f1674dd0d2b7baa3c266",
+      "simples": "A lei original entrou em vigor quarenta e cinco dias depois de sua publicação. O dispositivo registra a vacância original, não um prazo que se reinicia a cada atualização ou consulta.",
+      "pontos": [
+        "Vacância original de 45 dias.",
+        "Leis modificadoras têm regras próprias de vigência e efeitos."
+      ],
+      "atencao": [
+        "Não aplicar este prazo automaticamente às alterações de 2019, 2022, 2024 ou 2026. Conferir cada ato modificador e a regra penal no tempo."
+      ],
+      "exemplo": "Questão pergunta a vacância da lei de 2006: quarenta e cinco dias. Variação: alteração de 2026 exige leitura de sua cláusula própria; não reutilizar os 45 dias por hábito.",
+      "prova": [
+        "Os 45 dias recomeçam a cada consulta? Não; tratam da vigência original.",
+        "A vigência de alteração posterior depende do ato modificador? Sim; não é determinada automaticamente pelo art. 74."
+      ],
+      "termos": [
+        "quarenta e cinco dias",
+        "publicação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "57b06454-6267-56c4-939f-ab6f5314383e",
+        "content_sha256": "6e54a0f65e372b853b053a48393cea6fa5610a740ca5f1674dd0d2b7baa3c266",
+        "simples": "Esta Lei entra em vigor 45 dias após a sua publicação.",
+        "pontos": [
+          "Vigência 45 dias após a publicação.",
+          "Cláusula de vigência."
+        ],
+        "atencao": [
+          "Dispositivo histórico (vacatio legis de 45 dias)."
+        ],
+        "exemplo": "A lei só passou a valer 45 dias depois de publicada.",
+        "prova": [
+          "Assertiva que fixa em 30 dias a vacatio legis da Lei de Drogas erra: são 45 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 75"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-75",
+      "unit_id": "ff9cd6cd-b06b-57e4-bb0d-638e39ec4149",
+      "content_sha256": "cd2f2487c0cb77b2547350645d45dc8e27cf64fa07356b22a83a4b72b08615fe",
+      "simples": "A Lei 11.343 revogou as Leis 6.368/1976 e 10.409/2002. Essas normas não devem aparecer como regime geral atual de questões novas, sem contexto temporal.",
+      "pontos": [
+        "Revogação dos dois diplomas anteriores.",
+        "Fatos antigos podem exigir análise da lei penal no tempo e eventual norma mais benéfica."
+      ],
+      "atencao": [
+        "Revogação não autoriza aplicar retroativamente lei mais severa. Apostila com pena ou procedimento do diploma antigo precisa ser contextualizada ou corrigida antes da publicação."
+      ],
+      "exemplo": "Apostila atribui a lei revogada como regime geral atual: corrigir a referência. Variação: caso ocorrido antes da lei nova exige análise temporal, sem imposição retroativa de regra penal desfavorável.",
+      "prova": [
+        "As Leis 6.368 e 10.409 seguem como regime geral vigente? Não; foram revogadas.",
+        "A revogação autoriza retroatividade penal mais severa? Não; permanece a garantia constitucional."
+      ],
+      "termos": [
+        "revogam-se",
+        "6.368/1976",
+        "10.409/2002"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "ff9cd6cd-b06b-57e4-bb0d-638e39ec4149",
+        "content_sha256": "cd2f2487c0cb77b2547350645d45dc8e27cf64fa07356b22a83a4b72b08615fe",
+        "simples": "Revogam-se a Lei nº 6.368, de 1976, e a Lei nº 10.409, de 2002, que tratavam anteriormente da matéria.",
+        "pontos": [
+          "Revoga a Lei nº 6.368, de 1976.",
+          "Revoga a Lei nº 10.409, de 2002."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A nova lei substituiu os diplomas anteriores sobre drogas.",
+        "prova": [
+          "Assertiva que mantém em vigor a Lei nº 6.368, de 1976, erra: ela foi revogada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 74"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-37",
+      "unit_id": "fd46ca26-91b7-52d3-acec-889dd06f9fe6",
+      "content_sha256": "3d659512e93421998d7ad401fb7ceef1d87843ce7b66dbc709f9dfac9f75f5c9",
+      "simples": "O art. 37 pune colaboração como informante com grupo, organização ou associação voltados aos crimes do art. 33, caput e §1º, ou art. 34: dois a seis anos e 300 a 700 dias-multa. Seu caráter subsidiário exige distinguir informação periférica de participação integrada no tráfico.",
+      "pontos": [
+        "Informar criminosos não se confunde com informar autoridades para investigação.",
+        "O rótulo olheiro não determina sozinho o artigo: examinar papel, integração e prova."
+      ],
+      "atencao": [
+        "STJ, julgado de 07/04/2026, publicado em 13/04 e descrito no Informativo 892: olheiro atuando de forma integrada e essencial à comercialização responde como coautor/partícipe do art. 33, não por desclassificação automática ao art. 37.",
+        "Distinguir ainda vínculo associativo estável do art. 35; não concluir três crimes cumulativos apenas pelo nome da função."
+      ],
+      "exemplo": "Colaborador fornece informação periférica ao grupo, sem integração direta à mercancia: examinar o art. 37. Variação: vigilante trabalha junto ao vendedor de forma essencial e integrada durante a venda; o STJ afasta a desclassificação automática do art. 33 para o art. 37.",
+      "prova": [
+        "Todo olheiro responde necessariamente só pelo art. 37? Não; atuação integrada e essencial pode configurar participação no art. 33.",
+        "Informar autoridades configura este crime por si? Não; o tipo exige colaboração com o grupo destinado aos crimes indicados."
+      ],
+      "termos": [
+        "como informante",
+        "subsidiário",
+        "integração à comercialização"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://scon.stj.jus.br/SCON/GetPDFINFJ?edicao=0892"
+      ],
+      "expected": {
+        "unit_id": "fd46ca26-91b7-52d3-acec-889dd06f9fe6",
+        "content_sha256": "3d659512e93421998d7ad401fb7ceef1d87843ce7b66dbc709f9dfac9f75f5c9",
+        "simples": "Colaborar como informante com grupo, organização ou associação destinados aos crimes do art. 33, caput e §1º, ou art. 34 tem pena de dois a seis anos e 300 a 700 dias-multa.",
+        "pontos": [
+          "Conduta específica: colaboração como informante.",
+          "Finalidade criminosa do grupo deve corresponder aos dispositivos indicados."
+        ],
+        "atencao": [
+          "Não tratar informação prestada às autoridades como colaboração criminosa. Distinguir informante e participação estável na associação a partir da conduta comprovada."
+        ],
+        "exemplo": "Uma pessoa fornece alertas ao grupo para favorecer sua atividade de tráfico: examinar o art. 37. Variação: comunicar fatos à polícia para investigar o tráfico não configura, por isso, colaboração como informante do grupo.",
+        "prova": [
+          "Informar a polícia sobre tráfico é o crime do art. 37? Não; o tipo trata de informar em colaboração com o grupo criminoso.",
+          "A pena do art. 37 é igual à do financiamento? Não; é de dois a seis anos, enquanto o art. 36 prevê oito a vinte."
+        ],
+        "termos": [
+          "como informante",
+          "dois a seis anos",
+          "300 a 700"
+        ],
+        "remissoes": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T16:30:06.659+00:00",
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-12T16:30:06.659+00:00"
+      }
+    }
+  ]
+}
