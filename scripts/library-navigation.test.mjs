@@ -9,9 +9,57 @@ import ts from 'typescript';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 const native=createRequire(import.meta.url);
+const contran=await import('../src/data/contranGuides.ts');
+const contranStudy=await import('../src/lib/contranStudy.ts');
 function load(file,overrides={}) { const module={exports:{}}; const code=ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText; vm.runInNewContext(code,{module,exports:module.exports,require:n=>overrides[n]??native(n),URL}); return module.exports; }
 const laws=load('src/lib/legalLibrary.ts');
 const organization=load('src/lib/libraryOrganization.ts',{'./legalLibrary':laws,'./subjects':sharedSubjects});
+test('CONTRAN current study rejects whole repeal and expired guides while preserving compatible amendments',()=>{
+ const rows=contranStudy.currentContranGuides(contran.CONTRAN_GUIDES);
+ assert.equal(contran.CONTRAN_GUIDES.length,50);assert.equal(rows.length,42);
+ for(const n of [1029,1014,1011,1002,992,981,979,972])assert.ok(!rows.some(r=>r.number===n));
+ const base=rows.find(r=>r.number===973);
+ assert.equal(contranStudy.currentContranGuides([{...base,officialSituation:'Revoga a Resolução 180/05'}]).length,1);
+ assert.equal(contranStudy.currentContranGuides([{...base,officialSituation:'Revogada pela Resolução 1020/25'}]).length,0);
+ assert.equal(contranStudy.currentContranGuides([{...base,officialSituation:'Revogada em parte; artigos restantes em vigor'}]).length,1);
+ assert.equal(contranStudy.currentContranGuides(contran.CONTRAN_GUIDES,'Resolução 1.026/2026')[0].number,1026);
+ assert.equal(contranStudy.currentContranGuides(contran.CONTRAN_GUIDES,'álcool')[0].number,1031);
+ assert.equal(rows[0].number,1026);
+});
+test('CONTRAN source editions match the audited PDF evidence and keep clinical, interim and amendment caveats',()=>{
+ const report=JSON.parse(readFileSync('docs/library/contran-review-2026-10-12.json','utf8'));
+ assert.equal(report.batch_resolutions,50);
+ for(const guide of contranStudy.currentContranGuides(contran.CONTRAN_GUIDES)){
+  const e=report.evidence.find(e=>e.number===guide.number);
+  assert.equal(e.ok,true);assert.equal(guide.sourceSha256,e.sha256);
+  const source=JSON.parse(readFileSync('public'+guide.textPath,'utf8'));
+  assert.equal(source.source_url,guide.sourceUrl);assert.ok(source.text.length>80);
+  assert.match(source.edition,/original.*não compilação/);
+  assert.ok(guide.example.scenario&&guide.example.answer&&guide.example.variation&&guide.example.variationAnswer);
+ }
+ const get=n=>contran.CONTRAN_GUIDES.find(g=>g.number===n);
+ assert.match(get(1031).warning,/12\/10\/2026.*vigência diferida/);
+ assert.match(get(1026).warning,/12\/10\/2026.*novembro/);
+ assert.match(get(1007).warning,/2026.*2027/);
+ assert.match(get(1009).points.join(' '),/revogado pela 1020/);
+});
+test('CONTRAN library link respects discipline and contest filters, and cases keep their answers closed',()=>{
+ const link=load('src/components/library/ContranLibraryLink.tsx',{
+  '@/data/contranGuides':contran,'@/lib/contranStudy':contranStudy,
+  '@tanstack/react-router':{Link:({to,search,children,...props})=>React.createElement('a',{...props,href:to+'?'+new URLSearchParams(search)},children)},
+ }).ContranLibraryLink;
+ const props={area:'legislation',discipline:'all',contest:'all',topic:'all',query:'1031'};
+ const html=renderToStaticMarkup(React.createElement(link,props));
+ assert.match(html,/Resoluções do CONTRAN/);assert.match(html,/\/dashboard\/ctb\?tab=resolucoes/);assert.ok(!html.includes('target="_blank"'));
+ assert.equal(renderToStaticMarkup(React.createElement(link,{...props,contest:'PF'})),'');
+ assert.equal(renderToStaticMarkup(React.createElement(link,{...props,discipline:'Direito Penal'})),'');
+ const reader=load('src/components/library/ContranStudy.tsx',{'@/data/contranGuides':contran,'@/lib/contranStudy':contranStudy}).ContranStudy;
+ const result=renderToStaticMarkup(React.createElement(reader,{query:'1031'}));
+ assert.ok(result.includes('Caso prático'));assert.ok(result.includes('Altere o fato'));assert.ok(result.includes('Conferir resposta comentada'));
+ assert.ok(!/<details[^>]*\bopen(?:=|\s|>)/.test(result));
+ assert.ok(result.includes('border-emerald-500')&&result.includes('border-violet-500'));
+ assert.ok(!result.includes('Resolução 1.029/2026'));
+});
 const sample=(slug,discipline)=>({id:slug,slug,discipline,title:slug,topic_label:slug,summary:null,contest_name:'PF',content_status:'active',sort_order:1,syllabus_topic_order:1,law_version_checked_at:null});
 const items=[
  sample('legislacao-armas-revisao','Legislação Especial'),

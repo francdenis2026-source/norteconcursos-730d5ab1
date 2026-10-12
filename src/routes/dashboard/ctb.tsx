@@ -1,20 +1,17 @@
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BookOpen, ExternalLink, Gavel, Lightbulb, Search } from "lucide-react";
+import { Gavel, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PageHero } from "@/components/dashboard/PageHero";
+import { ContranStudy } from "@/components/library/ContranStudy";
 import {
   CATEGORIAS,
   GRAVIDADES,
   INFRACOES,
   PRAZOS,
-  RESOLUCOES,
-  RESOLUCOES_COBRADAS,
-  RESOLUCOES_FONTE,
-  RESOLUCOES_VERIFICADO_EM,
   SUSPENSAO_PONTOS,
   VELOCIDADES,
   valorMulta,
@@ -22,7 +19,13 @@ import {
 } from "@/data/ctbPanel";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/dashboard/ctb")({ component: CtbPanelPage });
+export const Route = createFileRoute("/dashboard/ctb")({
+  component: CtbPanelPage,
+  validateSearch: (search: Record<string, unknown>): { tab?: "resolucoes" | undefined; q?: string | undefined } => ({
+    tab: search["tab"] === "resolucoes" ? "resolucoes" : undefined,
+    q: typeof search["q"] === "string" ? search["q"] : undefined,
+  }),
+});
 
 const brl = (n: number) => n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 const norm = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -33,27 +36,16 @@ const GRAV_STYLE: Record<Gravidade, string> = {
   gravissima: "bg-red-100 text-red-900",
 };
 
-function resolutionLearning(subject: string) {
-  const text = norm(subject);
-  if (text.includes("alcool") || text.includes("substancia")) {
-    return { points: ["Identifique a conduta fiscalizada e o artigo do CTB relacionado.", "Separe a infração administrativa da eventual consequência criminal.", "Confira quando a nova resolução substitui ou altera a anterior."], example: "Uma blitz pode aplicar o procedimento administrativo mesmo quando o condutor se recusa ao teste; a recusa tem enquadramento próprio." };
-  }
-  if (text.includes("formacao") || text.includes("habilitacao")) {
-    return { points: ["Confira as etapas exigidas para cada categoria de habilitação.", "Observe os documentos, exames e prazos previstos.", "Não misture regra de aprendizagem com regra de renovação da CNH."], example: "Um candidato à categoria D precisa cumprir os requisitos de idade, tempo de habilitação e exames antes de iniciar a etapa prática." };
-  }
-  if (text.includes("remocao") || text.includes("leilao") || text.includes("guarda")) {
-    return { points: ["Diferencie remoção, custódia, liberação e leilão.", "Marque os prazos que começam após o recolhimento do veículo.", "Confira quem pode retirar o veículo e quais documentos são exigidos."], example: "Um veículo removido não é automaticamente perdido: primeiro há custódia e possibilidade de liberação; o leilão depende do prazo e do procedimento oficial." };
-  }
-  if (text.includes("sinalizacao") || text.includes("velocidade")) {
-    return { points: ["Leia o anexo técnico junto com o texto principal.", "Relacione a regra ao tipo de via, sinal ou equipamento.", "Confira alterações posteriores antes de memorizar o número."], example: "A mesma placa pode ter efeito diferente se estiver acompanhada de sinalização complementar; na prova, procure primeiro a combinação completa." };
-  }
-  return { points: ["Comece pelo objeto e pelo alcance da resolução.", "Marque os artigos, anexos e exceções que alteram a regra geral.", "Confira a situação oficial e as normas que a alteraram ou revogaram."], example: "Ao estudar uma regra de registro de veículo, transforme o texto em uma sequência: quem deve fazer, qual documento usar e qual prazo observar." };
-}
-
 function CtbPanelPage() {
+  const search = Route.useSearch();
+  const [tab, setTab] = React.useState<string>(search.tab ?? "infracoes");
   const [q, setQ] = React.useState("");
   const [grav, setGrav] = React.useState<Gravidade | "todas">("todas");
-  const [qRes, setQRes] = React.useState("");
+  const [qRes, setQRes] = React.useState(search.q ?? "");
+  React.useEffect(() => {
+    if (search.tab) setTab(search.tab);
+    setQRes(search.q ?? "");
+  }, [search.tab, search.q]);
 
   const infracoes = React.useMemo(
     () =>
@@ -63,14 +55,6 @@ function CtbPanelPage() {
           (!q || norm(`${i.art} ${i.conduta} ${i.extra ?? ""}`).includes(norm(q))),
       ),
     [q, grav],
-  );
-  const resolucoes = React.useMemo(
-    () => RESOLUCOES.filter((r) => !qRes || norm(`${r.numero} ${r.assunto} ${r.situacao}`).includes(norm(qRes))),
-    [qRes],
-  );
-  const resolucoesVigentes = React.useMemo(
-    () => RESOLUCOES_COBRADAS.filter((r) => r.estado === "vigente"),
-    [],
   );
 
   return (
@@ -92,7 +76,7 @@ function CtbPanelPage() {
         }
       />
 
-      <Tabs defaultValue="infracoes">
+      <Tabs value={tab} onValueChange={setTab}>
         <TabsList className="flex h-auto flex-wrap justify-start gap-1">
           <TabsTrigger value="infracoes">Infrações e multas</TabsTrigger>
           <TabsTrigger value="pontos">Pontos e suspensão</TabsTrigger>
@@ -227,81 +211,11 @@ function CtbPanelPage() {
         </TabsContent>
 
         <TabsContent value="resolucoes" className="space-y-4">
-          <Card>
-            <CardContent className="space-y-2 p-4 text-sm">
-              <p>
-                Situação conferida na página oficial do Ministério dos Transportes em <strong>{RESOLUCOES_VERIFICADO_EM}</strong>. A relação abaixo
-                reúne as resoluções recentes de maior impacto para provas, não todas as vigentes.
-              </p>
-              <a href={RESOLUCOES_FONTE} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 font-medium text-primary underline">
-                Consultar o texto e a situação oficial de qualquer resolução <ExternalLink className="h-3.5 w-3.5" />
-              </a>
-              <p className="text-xs text-muted-foreground">
-                Resoluções são alteradas e revogadas com frequência. Antes de usar uma resolução em prova, confirme a vigência na fonte oficial.
-              </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-base">Mais cobradas em concursos</CardTitle>
-              <CardDescription>
-                Resoluções confirmadas como vigentes, selecionadas pela tendência de cobrança no guia da TEC Concursos (fonte secundária). Itens revogados, alterados ou sem situação confirmada ficam fora desta lista de estudo. O edital da PF 2025 não inclui trânsito nem resoluções do Contran.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-2">
-              {resolucoesVigentes.map((r) => (
-                <div key={r.numero} className="flex flex-col gap-1 rounded-md border p-3 text-sm sm:flex-row sm:items-center sm:justify-between">
-                  <span><strong>Res. {r.numero}</strong> · {r.assunto}</span>
-                  <span className="flex shrink-0 items-center gap-2">
-                    <span className="text-xs text-muted-foreground">{r.questoes} questões</span>
-                    <Badge className={cn(r.estado === "revogada" ? "bg-red-100 text-red-900" : r.estado === "alterada" ? "bg-amber-100 text-amber-900" : r.estado === "vigente" ? "bg-emerald-100 text-emerald-900" : "bg-slate-100 text-slate-700")}>
-                      {r.estado === "revogada" ? "Revogada" : r.estado === "alterada" ? "Alterada" : r.estado === "vigente" ? "Em vigor" : "Confirmar"}
-                    </Badge>
-                  </span>
-                  <span className="text-xs text-muted-foreground sm:basis-full">{r.situacao}</span>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
           <div className="relative">
             <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input value={qRes} onChange={(e) => setQRes(e.target.value)} placeholder="Buscar resolução (número ou assunto)" className="pl-9" />
+            <Input value={qRes} onChange={(e) => setQRes(e.target.value)} placeholder="Buscar resolução, assunto ou palavra-chave" className="pl-9" aria-label="Buscar resolução do CONTRAN" />
           </div>
-          <div className="space-y-2">
-            {resolucoes.map((r) => (
-              <Card key={r.numero}>
-                <CardContent className="space-y-1 p-4">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <Badge>Res. {r.numero}</Badge>
-                    <span className="text-xs text-muted-foreground">{r.data}</span>
-                  </div>
-                  <p className="text-sm font-medium">{r.assunto}</p>
-                  <p className="text-xs text-muted-foreground">{r.situacao}</p>
-                  {r.nota && <p className="text-xs font-medium text-amber-700">ATUALIZAÇÃO: {r.nota}</p>}
-                  <details className="ctb-resolution-reader mt-3 rounded-lg border bg-muted/30 p-3">
-                    <summary className="flex cursor-pointer items-center gap-2 text-sm font-semibold text-primary">
-                      <BookOpen className="h-4 w-4" /> Ler guia da resolução e pontos-chave
-                    </summary>
-                    <div className="mt-3 grid gap-3 text-sm sm:grid-cols-[1fr_1.1fr]">
-                      <div>
-                        <p className="mb-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Pontos importantes</p>
-                        <ul className="list-disc space-y-1 pl-5">
-                          {resolutionLearning(r.assunto).points.map((point) => <li key={point}>{point}</li>)}
-                        </ul>
-                      </div>
-                      <div className="rounded-md border border-amber-300/60 bg-amber-50 p-3 text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/30 dark:text-amber-100">
-                        <p className="mb-1 flex items-center gap-1 text-xs font-bold uppercase tracking-wide"><Lightbulb className="h-3.5 w-3.5" /> Exemplo do dia a dia</p>
-                        <p className="leading-6">{resolutionLearning(r.assunto).example}</p>
-                      </div>
-                    </div>
-                    <a href={RESOLUCOES_FONTE} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary underline">
-                      Abrir documento e situação oficial <ExternalLink className="h-3 w-3" />
-                    </a>
-                  </details>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <ContranStudy query={qRes} />
         </TabsContent>
       </Tabs>
     </div>

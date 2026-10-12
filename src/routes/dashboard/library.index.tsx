@@ -33,6 +33,7 @@ import {
   type LibraryArea,
 } from "@/lib/libraryOrganization";
 import { LegalPathCatalog } from "@/components/library/LegalPathCatalog";
+import { ContranLibraryLink } from "@/components/library/ContranLibraryLink";
 import {
   readSlugs,
   useStudyMaterialList,
@@ -282,6 +283,7 @@ export function LibraryIndex() {
             onReset={resetFilters}
           />
           {signedIn && user && <ContentSearchResults query={query} userId={user.id} />}
+          <ContranLibraryLink area={area} discipline={discipline} contest={contest} topic={topic} query={query} />
           {content.isError && query.trim().length >= 2 && (
             <p role="alert" className="rounded-xl border p-4 text-sm">
               A busca nos textos não carregou; títulos e assuntos continuam disponíveis.{" "}

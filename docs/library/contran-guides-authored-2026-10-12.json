@@ -1,0 +1,852 @@
+{
+  "1031": {
+    "title": "Álcool: fiscalização e consequências distintas",
+    "points": [
+      "Fiscalização pode ocorrer mesmo sem sinais prévios de alteração psicomotora.",
+      "Infração administrativa, recusa e crime têm hipóteses próprias.",
+      "As alterações do Anexo do MBFT têm vigência 60 dias após 18/08/2026; os demais artigos, na publicação."
+    ],
+    "warning": "Em 12/10/2026, não antecipar a parte do MBFT com vigência diferida. A resolução substituiu a 432/2013, mas não torna toda recusa prova automática de crime.",
+    "example": {
+      "scenario": "Um motorista fiscalizado recusa o teste, sem que os demais elementos de crime tenham sido demonstrados.",
+      "question": "A recusa prova automaticamente o crime do art. 306 do CTB?",
+      "answer": "Não. Examine o enquadramento administrativo da recusa e, separadamente, os elementos e meios de prova da infração penal.",
+      "variation": "O agente quer usar em 12/10/2026 uma alteração de ficha do MBFT submetida aos 60 dias.",
+      "variationAnswer": "Deve respeitar a vigência diferida, não aplicar a alteração apenas porque o restante da resolução já vigora."
+    },
+    "historical": false
+  },
+  "1030": {
+    "title": "Telas: imagem ao passageiro não é imagem ao condutor",
+    "points": [
+      "Altera o art. 3º da Resolução 242/2007.",
+      "Tela dianteira: mecanismo automático de inativação/comutação quando o veículo se move, ou tecnologia que impeça a visão das imagens pelo condutor.",
+      "A vedação de visão deve funcionar em qualquer posição de ajuste do banco."
+    ],
+    "warning": "A promessa do motorista de não olhar não substitui o requisito técnico.",
+    "example": {
+      "scenario": "Uma tela permite entretenimento ao passageiro, mas sua imagem também fica visível ao motorista ao ajustar o banco.",
+      "question": "Basta o motorista dizer que não assistirá?",
+      "answer": "Não. A alternativa técnica exige impedir a visualização pela perspectiva do condutor em qualquer ajuste.",
+      "variation": "O equipamento comuta automaticamente para informação de auxílio à orientação ao entrar em movimento.",
+      "variationAnswer": "É uma das alternativas descritas; verificar os requisitos do equipamento e da instalação."
+    },
+    "historical": false
+  },
+  "1029": {
+    "title": "CNH: prorrogação excepcional com prazo encerrado",
+    "points": [
+      "Abrangeu documentos com vencimento de 05/06 a 08/09/2026.",
+      "Validade prorrogada até 09/09/2026, seguida de 30 dias para renovar.",
+      "Não abrangia direito de dirigir suspenso ou cassado."
+    ],
+    "warning": "O período dessa prorrogação não deve ser ensinado como autorização atual em 12/10/2026.",
+    "example": {
+      "scenario": "Em outubro, alguém cita a resolução como autorização indefinida para dirigir com documento vencido.",
+      "question": "A prorrogação era indefinida?",
+      "answer": "Não. A norma delimitou documentos e datas; o prazo específico já terminou.",
+      "variation": "Na janela original, o condutor estava com o direito de dirigir suspenso.",
+      "variationAnswer": "Mesmo naquele período, a exceção expressa impedia usar a prorrogação para afastar a suspensão."
+    },
+    "historical": true
+  },
+  "1028": {
+    "title": "Free flow: tarifa, multa e transição",
+    "points": [
+      "Ratifica a transição da Deliberação 277/2026: 200 dias desde sua publicação em 29/04/2026.",
+      "Durante a janela, o regime protege contra a tipificação de não pagar a tarifa, nos limites descritos; não extingue a tarifa.",
+      "Art. 7º da 1013: 30 dias desde a confirmação do processamento do registro de passagem, com comparação do prazo mais favorável."
+    ],
+    "warning": "A aprovação em agosto não reinicia os 200 dias. A data de publicação, a passagem e a confirmação do processamento são marcos diferentes.",
+    "example": {
+      "scenario": "O usuário passa pelo pórtico e confunde suspensão transitória de consequências com pedágio gratuito.",
+      "question": "A transição extinguiu a tarifa?",
+      "answer": "Não. Há prazo de regularização e consequências próprias; a obrigação de pagar não foi eliminada.",
+      "variation": "O pagamento é comprovado na janela e já existe penalidade relacionada à tarifa.",
+      "variationAnswer": "Examine o cancelamento/revisão previsto, inclusive a hipótese de multa paga, sem prometer restituição fora das condições legais."
+    },
+    "historical": false
+  },
+  "1027": {
+    "title": "Registro, licenciamento e transferência",
+    "points": [
+      "Padroniza procedimentos e documentos de regularidade do veículo.",
+      "Há disciplina de assinaturas eletrônicas avançadas/qualificadas e prevenção de fraudes.",
+      "Substitui as Resoluções 809/2020, 817/2021 e 999/2023."
+    ],
+    "warning": "Não estudar só o procedimento da 809/2020 como regime atual. Implantação sistêmica e validade jurídica de cada etapa não são a mesma coisa.",
+    "example": {
+      "scenario": "O comprador recebe o veículo e acha que a entrega das chaves já altera o registro.",
+      "question": "A entrega material conclui automaticamente todos os atos de transferência?",
+      "answer": "Não. A operação precisa observar os procedimentos registrais e documentais da resolução.",
+      "variation": "A operação usa assinatura eletrônica e envolve integração com Renave.",
+      "variationAnswer": "Conferir modalidade, validação e etapa de implantação; não dispensar controles de titularidade e fraude por ser digital."
+    },
+    "historical": false
+  },
+  "1026": {
+    "title": "Renave: estoque não é transferência de propriedade",
+    "points": [
+      "Registra entrada/saída de veículos novos/usados nos estabelecimentos abrangidos.",
+      "Escrituração eletrônica de estoque não substitui, sozinha, a transferência de propriedade.",
+      "Circular 2, de 30/09/2026, estabelece etapas assistidas e integrações entre outubro e novembro."
+    ],
+    "warning": "Em 12/10/2026, não presumir concluídas as integrações previstas para novembro. O índice registra 30/06 e o PDF aponta 01/07; as duas referências e a retificação foram mantidas na evidência.",
+    "example": {
+      "scenario": "Uma loja escritura a entrada de um automóvel e afirma que isso basta para a transferência definitiva.",
+      "question": "A escrituração de estoque tem esse efeito isolado?",
+      "answer": "Não. O próprio art. 1º separa o escopo do Renave dos procedimentos de transferência e outras operações.",
+      "variation": "O exemplo acontece em 12/10 e usa a integração de transferência prevista para 16 a 20/11.",
+      "variationAnswer": "Não antecipar a etapa futura do cronograma nem tratar vigência normativa como comprovação de disponibilidade técnica."
+    },
+    "historical": false
+  },
+  "1025": {
+    "title": "Remoção: custódia, liberação e leilão",
+    "points": [
+      "Organiza etapas: recolhimento, registro, comunicação, possível liberação, leilão e destinação.",
+      "Institui o Sivec e controles sobre informações da custódia.",
+      "Substitui a Resolução 623/2016."
+    ],
+    "warning": "Recolhimento não transfere automaticamente a propriedade nem autoriza pular comunicação e condições de liberação.",
+    "example": {
+      "scenario": "O veículo chega ao pátio e o responsável propõe leiloá-lo imediatamente.",
+      "question": "A remoção basta para o leilão imediato?",
+      "answer": "Não. Há etapas, prazos e condições oficiais antes do leilão.",
+      "variation": "O proprietário ou representante legal busca a liberação e cumpre as exigências.",
+      "variationAnswer": "Analisar a etapa de liberação segundo a norma; não confundir custódia com perda definitiva."
+    },
+    "historical": false
+  },
+  "1024": {
+    "title": "Lanternas especiais e utilidade pública",
+    "points": [
+      "Inclui operação/manutenção da Rede Hidrometeorológica Nacional no art. 6º da 970/2022.",
+      "Classificação de utilidade pública não equivale, por si, a veículo de emergência.",
+      "Continuam necessários os requisitos da norma-base e do CTB."
+    ],
+    "warning": "Não converter uma inclusão no rol em licença para prioridade irrestrita ou qualquer iluminação.",
+    "example": {
+      "scenario": "Um veículo de manutenção hidrometeorológica é tratado como ambulância em emergência só por pertencer ao novo rol.",
+      "question": "Essa equiparação é automática?",
+      "answer": "Não. Utilidade pública e emergência possuem regimes próprios.",
+      "variation": "O mesmo veículo instala uma lanterna fora dos requisitos técnicos.",
+      "variationAnswer": "A inclusão no rol não dispensa as especificações da 970 e as condições do CTB."
+    },
+    "historical": false
+  },
+  "1023": {
+    "title": "Fora de estrada: passeio não autoriza via pública",
+    "points": [
+      "Regula veículos off-road recreativos/esportivos/turísticos, incluindo ATV e UTV.",
+      "Regra: circulação proibida em vias públicas, inclusive praias abertas à circulação.",
+      "Exceção depende do órgão com circunscrição sobre a via e das condições específicas."
+    ],
+    "warning": "Não confundir um veículo off-road com quadriciclo homologado para uso viário.",
+    "example": {
+      "scenario": "Um turista leva ATV para uma praia aberta ao trânsito e alega que a finalidade recreativa libera a circulação.",
+      "question": "A finalidade recreativa basta?",
+      "answer": "Não. A proibição alcança essas vias; a exceção não decorre só da vontade do usuário.",
+      "variation": "Existe autorização do órgão competente para situação delimitada.",
+      "variationAnswer": "Verificar seus limites e as demais exigências; não extrapolar para qualquer via ou atividade."
+    },
+    "historical": false
+  },
+  "1022": {
+    "title": "Quadriciclos: classificação e requisitos cumulativos",
+    "points": [
+      "Distingue categorias leves/pesadas e subcategorias.",
+      "Para L6, há velocidade de projeto até 45 km/h e outros critérios cumulativos.",
+      "Número de rodas, massa, configuração e potência precisam ser examinados juntos."
+    ],
+    "warning": "Quatro rodas, isoladamente, não comprovam a classe nem autorizam circulação. A norma substitui a 573/2015.",
+    "example": {
+      "scenario": "O anúncio chama de quadriciclo leve um veículo só por ter quatro rodas.",
+      "question": "Essa informação encerra a classificação?",
+      "answer": "Não. Conferir os demais critérios da categoria e subcategoria.",
+      "variation": "O veículo tem cabine e função exclusiva de transporte de mercadorias.",
+      "variationAnswer": "Examinar a subcategoria e os requisitos da plataforma; não copiar automaticamente critérios de passageiro ou veículo montado."
+    },
+    "historical": false
+  },
+  "1021": {
+    "title": "Motor elétrico auxiliar: modificação exige controle",
+    "points": [
+      "Abrange caminhão/caminhão-trator com motor elétrico auxiliar.",
+      "A instalação é modificação sujeita a homologação compulsória.",
+      "A retificação de 09/06/2026 completa a referência ao Anexo IV da 916/2022."
+    ],
+    "warning": "Uma tecnologia ambientalmente vantajosa não dispensa homologação e segurança.",
+    "example": {
+      "scenario": "Uma empresa instala motor auxiliar e alega que não precisa de controle porque o caminhão já era registrado.",
+      "question": "O registro anterior dispensa o regime da modificação?",
+      "answer": "Não. A resolução trata especificamente da alteração do veículo.",
+      "variation": "A prova traz a ementa incompleta do PDF original.",
+      "variationAnswer": "Usar a retificação: o anexo mencionado pertence à Resolução 916/2022."
+    },
+    "historical": false
+  },
+  "1020": {
+    "title": "Formação: regra nova sem dispensar os exames",
+    "points": [
+      "Substitui a 789/2020 e outras normas de formação.",
+      "Admite formas de formação e instrutores definidos na norma; não se limita a copiar o modelo antigo de autoescola.",
+      "Licença de aprendizagem digital não é CNH definitiva; há etapas e supervisão."
+    ],
+    "warning": "Flexibilização não significa dirigir sozinho sem habilitação ou dispensar avaliações. Não ensinar cargas horárias antigas como regra universal.",
+    "example": {
+      "scenario": "O candidato obtém a licença de aprendizagem e decide dirigir desacompanhado como habilitado.",
+      "question": "A licença tem esse alcance?",
+      "answer": "Não. A aprendizagem depende das condições e supervisão próprias.",
+      "variation": "A formação usa instrutor autônomo conforme a norma.",
+      "variationAnswer": "Verificar autorização e requisitos do instrutor, sem presumir dispensa de todos os demais atos do processo."
+    },
+    "historical": false
+  },
+  "1019": {
+    "title": "Câmaras Temáticas: apoio técnico e competência",
+    "points": [
+      "Disciplina criação e regimento das Câmaras Temáticas do Contran.",
+      "Organiza áreas especializadas como saúde, educação e engenharia/sinalização.",
+      "Participação técnica não confunde automaticamente os órgãos e suas competências."
+    ],
+    "warning": "Não atribuir a um grupo de estudo o mesmo poder normativo final do Contran.",
+    "example": {
+      "scenario": "Uma câmara debate uma proposta e um aluno trata o debate como resolução já vigente.",
+      "question": "Discussão técnica equivale à publicação do ato normativo?",
+      "answer": "Não. Há diferença entre apoio técnico, proposta e ato aprovado/publicado.",
+      "variation": "A questão envolve saúde do condutor, e não projeto de sinalização.",
+      "variationAnswer": "Identificar a câmara temática pertinente, sem confundir a especialização das áreas."
+    },
+    "historical": false
+  },
+  "1018": {
+    "title": "Alienação fiduciária: execução e trânsito têm papéis próprios",
+    "points": [
+      "Trata de execução extrajudicial perante os órgãos executivos de trânsito.",
+      "A faculdade do credor está condicionada ao regime legal e às formalidades.",
+      "Empresas registradoras especializadas têm atuação credenciada no processamento."
+    ],
+    "warning": "Não equiparar inadimplência a remoção por infração de trânsito ou autorização de tomada informal do veículo.",
+    "example": {
+      "scenario": "O credor identifica atraso e quer usar o rito como se bastasse uma comunicação informal.",
+      "question": "A resolução dispensa os procedimentos legais?",
+      "answer": "Não. A execução extrajudicial exige o rito e as condições pertinentes.",
+      "variation": "O veículo é removido numa fiscalização administrativa.",
+      "variationAnswer": "Isso pertence a outra hipótese; não substituir o regime de remoção pelo de garantia fiduciária."
+    },
+    "historical": false
+  },
+  "1017": {
+    "title": "Tratores: finalidade, cadastro e circulação",
+    "points": [
+      "Diferencia máquinas agrícolas das destinadas à construção/pavimentação.",
+      "Renagro e Renavam não são nomes intercambiáveis.",
+      "Registro, licenciamento, emplacamento e autorização de circulação possuem hipóteses próprias."
+    ],
+    "warning": "Dispensa de um ato não representa liberdade para transitar em qualquer via ou com qualquer dimensão.",
+    "example": {
+      "scenario": "O proprietário de uma máquina agrícola presume que seu cadastro resolve toda circulação em via pública.",
+      "question": "O cadastro basta, isoladamente?",
+      "answer": "Não. É preciso conferir a classificação, os documentos e as condições aplicáveis à circulação.",
+      "variation": "A máquina é destinada a construção, não a trabalho agrícola.",
+      "variationAnswer": "Reexaminar a hipótese de registro e as dispensas; não transportar automaticamente o regime agrícola."
+    },
+    "historical": false
+  },
+  "1016": {
+    "title": "Financiamento: registro e responsabilidade por informação",
+    "points": [
+      "Altera procedimentos de contratos de financiamento com garantia real da 807/2020.",
+      "Anotação de gravame, registro do contrato e titularidade são atos distintos.",
+      "Dados e atuação das entidades devem observar os controles e responsabilidades previstos."
+    ],
+    "warning": "Ler também a alteração posterior da 1026/2026; o fragmento de 2024 não esgota o regime atual.",
+    "example": {
+      "scenario": "Um candidato confunde a anotação do financiamento com aquisição automática da propriedade.",
+      "question": "São o mesmo ato?",
+      "answer": "Não. A garantia financeira e os atos de propriedade têm objetos e procedimentos próprios.",
+      "variation": "Uma entidade processa dados incorretos.",
+      "variationAnswer": "Examinar responsabilidades e correção; a digitalização não elimina controles nem proteção de dados."
+    },
+    "historical": false
+  },
+  "1015": {
+    "title": "Peso: exceção tecnológica não é regra para toda frota",
+    "points": [
+      "Altera a 882/2021 para propulsões listadas: gás, biometano, híbrida/elétrica, hidrogênio/célula de combustível.",
+      "Prevê 7 toneladas no eixo dianteiro isolado de dois pneumáticos da hipótese.",
+      "Permite acréscimo de 1 t no PBT/PBTC da hipótese, observadas as condições."
+    ],
+    "warning": "Não aplicar o acréscimo a qualquer caminhão nem confundir limite por eixo com peso total.",
+    "example": {
+      "scenario": "Um caminhão convencional pede o acréscimo só por ter dois pneus no eixo.",
+      "question": "Esse único dado preenche a exceção?",
+      "answer": "Não. A propulsão e os demais requisitos descritos precisam estar presentes.",
+      "variation": "O caminhão tem propulsão elétrica e se enquadra na hipótese.",
+      "variationAnswer": "Conferir separadamente eixo e PBT/PBTC; atender um limite não prova atendimento de todos."
+    },
+    "historical": false
+  },
+  "1014": {
+    "title": "Campanhas: calendário de 2025 não é calendário de 2026",
+    "points": [
+      "Organiza mensagem e calendário das campanhas de janeiro a dezembro de 2025.",
+      "A mensagem daquele recorte é Desacelere. Seu bem maior é a vida.",
+      "Datas anuais e diretrizes permanentes não devem ser confundidas."
+    ],
+    "warning": "Este guia é histórico do calendário de 2025; não certifica a edição anual de 2026.",
+    "example": {
+      "scenario": "Um aluno usa o anexo de 2025 como calendário anual atual sem conferir o ano.",
+      "question": "A consulta está atualizada para qualquer ano?",
+      "answer": "Não. O recorte anual precisa ser respeitado.",
+      "variation": "A questão pede especificamente a campanha de 2025.",
+      "variationAnswer": "Usar a fonte histórica e sua mensagem, explicitando o ano em vez de anunciá-la como calendário atual."
+    },
+    "historical": true
+  },
+  "1013": {
+    "title": "Free flow: passagem e pagamento sem praça física",
+    "points": [
+      "Abrange vias urbanas/rurais e diferentes esferas administrativas.",
+      "Distingue pagamento automático e avulso, canais válidos e competências.",
+      "A 1028/2026 atualiza prazo e marco do pagamento, além da transição."
+    ],
+    "warning": "Não memorizar o prazo do PDF de 2024 sem a alteração de 2026. Tarifa e multa são pagamentos distintos.",
+    "example": {
+      "scenario": "O veículo passa pelo pórtico sem parar, e o usuário conclui que não existe cobrança.",
+      "question": "Ausência de cancela dispensa pagar?",
+      "answer": "Não. O sistema permite circulação livre e cobrança pelos canais e prazos previstos.",
+      "variation": "O registro da passagem é confirmado em data posterior.",
+      "variationAnswer": "Conferir o marco atualizado e a transição mais favorável, não contar mecanicamente só da viagem."
+    },
+    "historical": false
+  },
+  "1012": {
+    "title": "Vaga reservada: credencial digital e vínculo do veículo",
+    "points": [
+      "Credencial pode ser física ou digital e vale nacionalmente.",
+      "A versão digital pode vincular um veículo; esse vínculo pode ser substituído conforme o uso.",
+      "Sem vinculação, a versão impressa é usada conforme as condições descritas."
+    ],
+    "warning": "A tecnologia não dispensa a qualidade de beneficiário nem autoriza terceiro a usar a vaga sem o titular.",
+    "example": {
+      "scenario": "O beneficiário tem credencial digital vinculada ao veículo e não deixa impressão no painel.",
+      "question": "A falta de papel é sempre irregular?",
+      "answer": "Não. A versão vinculada tem disciplina própria de fiscalização.",
+      "variation": "A credencial não foi vinculada e a pessoa também não usa a versão impressa exigida.",
+      "variationAnswer": "Verificar os requisitos dessa modalidade; não transferir a dispensa da versão vinculada para qualquer caso."
+    },
+    "historical": false
+  },
+  "1011": {
+    "title": "Calamidade no RS: prazos excepcionais de 2024",
+    "points": [
+      "Delimita pessoas, veículos e autuações relacionados ao Rio Grande do Sul.",
+      "Contém janelas e cronograma de retomada, não suspensão geral permanente.",
+      "Alcance nacional da fiscalização não amplia o grupo beneficiado."
+    ],
+    "warning": "Não usar a exceção de calamidade de 2024 como prorrogação atual indiscriminada.",
+    "example": {
+      "scenario": "Em 2026, um condutor de outro Estado invoca a norma para ignorar um prazo novo.",
+      "question": "A regra excepcional é universal e permanente?",
+      "answer": "Não. Ela delimita vínculos com o RS, procedimentos e datas.",
+      "variation": "A questão trata de fiscalização de veículo efetivamente beneficiado na época.",
+      "variationAnswer": "Aplicar o recorte histórico pertinente e o cronograma, sem reinventar uma janela em 2026."
+    },
+    "historical": true
+  },
+  "1010": {
+    "title": "Competência: delegação ao órgão executivo nacional",
+    "points": [
+      "Aprova a Deliberação 273/2024.",
+      "Delega a competência do CTB 103, §3º, ao órgão máximo executivo da União.",
+      "Delegação é específica; não transfere todo poder do Contran."
+    ],
+    "warning": "Órgão executivo nacional, Contran e órgão estadual não são autoridades intercambiáveis.",
+    "example": {
+      "scenario": "O enunciado atribui a um órgão municipal a competência delegada por esse ato.",
+      "question": "O destinatário está correto?",
+      "answer": "Não. O texto indica o órgão máximo executivo de trânsito da União.",
+      "variation": "O candidato afirma que todas as competências do Contran foram delegadas.",
+      "variationAnswer": "Não. O ato delimita a competência por remissão ao CTB 103, §3º."
+    },
+    "historical": false
+  },
+  "1009": {
+    "title": "Toxicológico: prazo do laudo, validade e periodicidade",
+    "points": [
+      "Altera regras de exames toxicológicos e fichas de fiscalização.",
+      "Entrega/inserção do resultado em até 30 dias não é a validade de 90 dias desde a coleta.",
+      "O art. 2º, ligado à 789/2020, foi revogado pela 1020/2025."
+    ],
+    "warning": "Não usar o bloco revogado de formação nem confundir periodicidade de 2 anos e 6 meses com validade do resultado.",
+    "example": {
+      "scenario": "O condutor acha que receber o laudo depois de 20 dias reinicia a validade do exame.",
+      "question": "O recebimento muda o marco de validade?",
+      "answer": "Não. A regra de validade usa a coleta, diferente do prazo de entrega.",
+      "variation": "Uma questão reaproveita o art. 2º da alteração como regra atual de formação.",
+      "variationAnswer": "Confrontar a revogação expressa e o regime da 1020; o ato é parcialmente atingido, não integralmente removido."
+    },
+    "historical": false
+  },
+  "1007": {
+    "title": "Basculante: vigência e exigibilidade em 2027",
+    "points": [
+      "Altera a 859/2021.",
+      "CSV no licenciamento de 2027 conforme cronograma local.",
+      "A exigência indicada do art. 7º, §2º, começa em 01/01/2027."
+    ],
+    "warning": "Não antecipar em outubro de 2026 o requisito do art. 7º, §2º, exigível em 01/01/2027, nem o CSV do licenciamento de 2027.",
+    "example": {
+      "scenario": "Uma questão exige em 2026 o CSV pelo marco específico do licenciamento de 2027.",
+      "question": "A exigência temporal foi corretamente aplicada?",
+      "answer": "Não. Separar vigência da resolução e exigibilidade do requisito.",
+      "variation": "O fato acontece no licenciamento de 2027.",
+      "variationAnswer": "Examinar o calendário do Estado/DF e as demais condições, em vez de dispensar o requisito indefinidamente."
+    },
+    "historical": false
+  },
+  "1006": {
+    "title": "Foto da CNH: exceções não dispensam identificação",
+    "points": [
+      "Altera o Anexo III da 886/2021.",
+      "Admite exceções por crença/religião ou queda de cabelo por patologia/tratamento.",
+      "Face, testa e queixo devem ficar perfeitamente visíveis; revoga o art. 4º da 998."
+    ],
+    "warning": "Não impor proibição absoluta de vestuário religioso nem aceitar ocultação dos elementos necessários.",
+    "example": {
+      "scenario": "Uma candidata usa véu religioso, com face, testa e queixo visíveis.",
+      "question": "A exceção pode ser examinada?",
+      "answer": "Sim. A regra contempla essa hipótese sem dispensar visibilidade dos elementos indicados.",
+      "variation": "O acessório cobre face e queixo.",
+      "variationAnswer": "A condição da exceção não foi atendida; a justificativa religiosa não elimina o requisito de identificação."
+    },
+    "historical": false
+  },
+  "1005": {
+    "title": "Dimensão: combinação específica de duas unidades",
+    "points": [
+      "Altera a 882/2021 e aprova a Deliberação 270/2023.",
+      "Caminhão-trator e semirreboque na hipótese: comprimento máximo de 19,30 m.",
+      "Não é limite universal para toda espécie de veículo."
+    ],
+    "warning": "Identificar configuração e norma específica antes de usar um valor isolado.",
+    "example": {
+      "scenario": "O candidato aplica 19,30 m a qualquer veículo rodoviário.",
+      "question": "O limite é universal?",
+      "answer": "Não. O dispositivo identifica uma configuração articulada de duas unidades.",
+      "variation": "O conjunto tem configuração diferente.",
+      "variationAnswer": "Procurar o limite correspondente; não estender automaticamente o número dessa hipótese."
+    },
+    "historical": false
+  },
+  "1004": {
+    "title": "PNATRANS: erro humano e responsabilidade compartilhada",
+    "points": [
+      "Abordagens Sistema Seguro e Visão Zero.",
+      "Erros humanos são inevitáveis; mortes e lesões graves não são aceitáveis.",
+      "Responsabilidade envolve projeto, construção, gestão, fiscalização e uso, conforme competências."
+    ],
+    "warning": "Não interpretar Visão Zero como prova de ausência de risco ou atribuição exclusiva de culpa ao condutor.",
+    "example": {
+      "scenario": "Após sinistro, a equipe propõe rever desenho da via e atendimento às vítimas, além da fiscalização.",
+      "question": "Isso é compatível com o plano?",
+      "answer": "Sim. O plano integra áreas e responsabilidades para prevenção de mortes e lesões.",
+      "variation": "A gestão atribui toda prevenção apenas aos usuários.",
+      "variationAnswer": "A abordagem é incompleta: o sistema seguro prevê responsabilidade compartilhada."
+    },
+    "historical": false
+  },
+  "1003": {
+    "title": "MBFT: atualização de fichas não cria infração por si",
+    "points": [
+      "Altera o Anexo do MBFT da 985/2022.",
+      "Entrou em vigor em 02/01/2024.",
+      "Ficha de fiscalização precisa ser relacionada ao dispositivo do CTB e às alterações posteriores."
+    ],
+    "warning": "Este guia não certifica cada ficha/anexo; a regulamentação não dispensa tipificação legal e fatos.",
+    "example": {
+      "scenario": "Uma autuação usa ficha antiga sem verificar a alteração aplicável.",
+      "question": "Basta conhecer o número 985?",
+      "answer": "Não. Conferir a versão da ficha e a base legal pertinente.",
+      "variation": "O candidato trata o manual como lei que cria livremente infrações.",
+      "variationAnswer": "Separar procedimento de fiscalização e tipo legal do CTB."
+    },
+    "historical": false
+  },
+  "1002": {
+    "title": "Toxicológico: calendário extraordinário de 2023",
+    "points": [
+      "Referenda a Deliberação 268/2023.",
+      "Estabeleceu data específica em dezembro de 2023 para regularização.",
+      "Prazo extraordinário não é periodicidade geral do exame."
+    ],
+    "warning": "A janela de regularização não deve reaparecer como nova tolerância em 2026.",
+    "example": {
+      "scenario": "Um motorista invoca o prazo de 2023 para adiar exame devido em 2026.",
+      "question": "O calendário antigo concede nova prorrogação?",
+      "answer": "Não. O ato tem recorte temporal específico.",
+      "variation": "A questão pede a regra aplicável ao fato na janela de 2023.",
+      "variationAnswer": "Consultar o ato histórico e os demais atos da época; não extrapolar para qualquer vencimento atual."
+    },
+    "historical": true
+  },
+  "998": {
+    "title": "Modelo da CNH: estoque antigo e revogação parcial",
+    "points": [
+      "Altera Anexo I da 886/2021.",
+      "Permite usar formulários produzidos antes da vigência até esgotar o estoque.",
+      "Art. 4º foi revogado pela 1006/2024; as demais disposições não são automaticamente revogadas."
+    ],
+    "warning": "Modelo novo não implica cancelamento de toda CNH antiga ou inutilização imediata dos formulários autorizados.",
+    "example": {
+      "scenario": "A entidade pretende descartar todo estoque anterior apenas por surgir um modelo novo.",
+      "question": "O art. 3º exige descarte imediato?",
+      "answer": "Não. Autoriza utilização até o fim do estoque da hipótese.",
+      "variation": "Uma pergunta cita o art. 4º como vigente.",
+      "variationAnswer": "Identificar a revogação parcial pela 1006, sem concluir que todo o ato desapareceu."
+    },
+    "historical": false
+  },
+  "997": {
+    "title": "Cintos e ancoragens: ensaio e escopo técnico",
+    "points": [
+      "Altera a 951/2022.",
+      "Prevê referências técnicas de ensaios para cintos/ancoragens, sistemas infantis e apoios de cabeça.",
+      "As normas técnicas precisam corresponder ao componente e ao escopo."
+    ],
+    "warning": "Não considerar que qualquer certificado estrangeiro serve para qualquer componente.",
+    "example": {
+      "scenario": "Um laudo de ancoragem é oferecido como prova automática de todo equipamento do veículo.",
+      "question": "O escopo de um ensaio é ilimitado?",
+      "answer": "Não. Deve corresponder ao requisito e ao componente examinados.",
+      "variation": "O laudo atende à referência admitida para o componente pertinente.",
+      "variationAnswer": "Verificar versão e escopo, sem misturar ensaio de apoio de cabeça com fixação de dispositivo infantil."
+    },
+    "historical": false
+  },
+  "996": {
+    "title": "Bicicleta elétrica, equipamento autopropelido e ciclomotor",
+    "points": [
+      "Bicicleta elétrica: pedal assistido, sem acelerador, limites próprios.",
+      "A definição envolve potência, velocidade de fabricação e características do veículo.",
+      "Ciclomotor não se define só pelo uso de motor elétrico."
+    ],
+    "warning": "Não classificar qualquer veículo vendido como bicicleta pelo nome comercial ou pela velocidade observada numa viagem.",
+    "example": {
+      "scenario": "Um veículo tem acelerador, mas o anúncio diz bicicleta elétrica com pedal assistido.",
+      "question": "O anúncio basta para enquadrar na definição?",
+      "answer": "Não. A definição de bicicleta elétrica exige não dispor de acelerador e atender aos outros critérios.",
+      "variation": "O condutor usa um equipamento com características distintas de bicicleta.",
+      "variationAnswer": "Analisar a classe correta e regras locais de circulação, não transportar automaticamente as dispensas de outra categoria."
+    },
+    "historical": false
+  },
+  "994": {
+    "title": "Largura: trator e demais veículos",
+    "points": [
+      "Altera limites da 882/2021.",
+      "Prevê 2,80 m para os tratores/máquinas descritos e 2,60 m para os demais veículos.",
+      "Há previsão de comprimento de 15 m para a hipótese de tratores indicada."
+    ],
+    "warning": "Dimensão permitida na regra não elimina outras condições de circulação ou eventual autorização específica.",
+    "example": {
+      "scenario": "Um veículo comum tenta usar o limite de largura destinado a trator.",
+      "question": "O enquadramento foi correto?",
+      "answer": "Não. As classes indicadas têm limites distintos.",
+      "variation": "O caso envolve máquina agrícola da hipótese.",
+      "variationAnswer": "Verificar também as demais dimensões e o regime de circulação, inclusive alterações da 1017/2024."
+    },
+    "historical": false
+  },
+  "993": {
+    "title": "Equipamentos: exigência conforme a espécie",
+    "points": [
+      "Lista equipamentos obrigatórios e índice técnico de segurança.",
+      "Tipo de veículo e anexos delimitam o que é exigido.",
+      "Fiscalização verifica funcionamento, não apenas presença física."
+    ],
+    "warning": "Não presumir que todos os veículos possuem a mesma lista ou que equipamento avariado atende ao requisito.",
+    "example": {
+      "scenario": "O componente existe, mas não funciona.",
+      "question": "A presença física basta?",
+      "answer": "Não. A resolução atribui à fiscalização a verificação das condições de funcionamento.",
+      "variation": "O veículo pertence a classe diversa da usada no exemplo.",
+      "variationAnswer": "Consultar a relação correspondente e suas ressalvas; não copiar exigências de outra espécie."
+    },
+    "historical": false
+  },
+  "992": {
+    "title": "Pará: prorrogação antiga com calendário delimitado",
+    "points": [
+      "Referenda a Deliberação 266/2023.",
+      "Delimita condutores habilitados no Pará e documentos/janelas específicos.",
+      "Suspensão/cassação não era afastada pela prorrogação."
+    ],
+    "warning": "Não oferecer calendário excepcional de 2023 como validade atual de qualquer CNH.",
+    "example": {
+      "scenario": "Em 2026, o condutor usa a norma como autorização geral permanente.",
+      "question": "O ato concedeu validade sem término?",
+      "answer": "Não. Há cronograma e recorte de documentos e beneficiários.",
+      "variation": "Na época, o direito de dirigir estava cassado.",
+      "variationAnswer": "A ressalva da norma excluía usar a prorrogação para afastar essa condição."
+    },
+    "historical": true
+  },
+  "991": {
+    "title": "Multas: pagamento e órgão arrecadador",
+    "points": [
+      "Atualiza a 918/2022.",
+      "Órgãos autuadores federais usam GRU Cobrança ou PagTesouro nos termos descritos.",
+      "Pagamento com cartão depende da disciplina e da autorização pertinente."
+    ],
+    "warning": "Forma de pagamento não muda a infração nem cria parcelamento obrigatório e irrestrito por todo órgão.",
+    "example": {
+      "scenario": "O estudante afirma que todo ente deve usar a mesma guia federal.",
+      "question": "A regra do art. 25 é universal para qualquer ente?",
+      "answer": "Não. Identifica os órgãos autuadores da União.",
+      "variation": "O órgão oferece pagamento por cartão com autorização e parceria regular.",
+      "variationAnswer": "Distinguir alternativa de quitação e requisitos operacionais de revisão ou cancelamento da infração."
+    },
+    "historical": false
+  },
+  "990": {
+    "title": "Cana-de-açúcar: acrescentar eixo não dispensa inspeção",
+    "points": [
+      "Altera a 872/2021 para CVC na faixa específica de PBTC.",
+      "Inclusão de eixo exige condições estruturais, ABS e documentos técnicos para CSV.",
+      "O conjunto precisa atender às homologações e à norma de modificação."
+    ],
+    "warning": "Não aumentar a carga de qualquer composição só porque foi instalado mais um eixo.",
+    "example": {
+      "scenario": "A empresa acrescenta um eixo e considera liberado o novo peso sem laudos.",
+      "question": "A instalação isolada basta?",
+      "answer": "Não. Há requisitos de estrutura, frenagem, inspeção e homologação.",
+      "variation": "A operação usa composição fora da faixa ou finalidade descrita.",
+      "variationAnswer": "Não estender automaticamente a exceção de CVC de cana-de-açúcar à configuração diferente."
+    },
+    "historical": false
+  },
+  "989": {
+    "title": "Vidros: área indispensável à dirigibilidade",
+    "points": [
+      "Altera a 960/2022.",
+      "Distingue vidros indispensáveis à dirigibilidade das demais áreas.",
+      "A hipótese de menor transmitância nas outras áreas exige retrovisores externos em ambos os lados."
+    ],
+    "warning": "A exceção não autoriza película arbitrária nas áreas indispensáveis nem elimina a regra específica dos blindados.",
+    "example": {
+      "scenario": "O proprietário invoca a exceção dos vidros traseiros para escurecer qualquer área frontal.",
+      "question": "Pode aplicar a exceção indistintamente?",
+      "answer": "Não. É necessário identificar a área e as condições da norma.",
+      "variation": "O veículo se enquadra na hipótese de vidros fora da área indispensável e tem os dois retrovisores.",
+      "variationAnswer": "Examinar essa exceção sem extrapolar para todas as áreas ou dispensar os outros requisitos."
+    },
+    "historical": false
+  },
+  "988": {
+    "title": "Alarme: remissão não cria número livre de decibéis",
+    "points": [
+      "Altera a 37/1998.",
+      "Nível máximo do alarme remete à resolução específica de buzinas.",
+      "Objeto é acessório de segurança contra furto/roubo, não prova de qualquer uso sonoro."
+    ],
+    "warning": "Não inventar limite numérico que este ato não enuncia nem confundir alarme com sirene de emergência.",
+    "example": {
+      "scenario": "A questão atribui à resolução um número de decibéis sem consultar a norma remetida.",
+      "question": "O próprio ato fixa esse número?",
+      "answer": "Não. A regra alterada remete à regulamentação específica.",
+      "variation": "O proprietário instala alarme e o chama de sirene com prioridade de passagem.",
+      "variationAnswer": "A função antirroubo não cria as prerrogativas de veículo de emergência."
+    },
+    "historical": false
+  },
+  "987": {
+    "title": "Protetor lateral: posição e fabricação",
+    "points": [
+      "Altera a 953/2022.",
+      "Trata de região posterior aos eixos em carroceria basculante/silo basculante.",
+      "Marcação da hipótese deve estar em local aparente no protetor do lado esquerdo."
+    ],
+    "warning": "Não extrapolar dispensa de uma região específica para todo o veículo ou qualquer carroceria.",
+    "example": {
+      "scenario": "O veículo tem uma exceção para região traseira e o aluno elimina todo protetor lateral.",
+      "question": "A exceção tem esse alcance?",
+      "answer": "Não. Deve ser lida no recorte específico da norma-base.",
+      "variation": "A marcação exigida fica invisível em local diverso.",
+      "variationAnswer": "Conferir posição e visibilidade, além do marco de fabricação/modificação aplicável."
+    },
+    "historical": false
+  },
+  "986": {
+    "title": "R-32: faixa exclusiva e complemento",
+    "points": [
+      "Altera o Volume I do regulamento da 973/2022.",
+      "R-32 sinaliza circulação exclusiva de transporte público coletivo.",
+      "Informação complementar pode delimitar horários, serviço, faixa ou outros veículos autorizados."
+    ],
+    "warning": "Não decidir só pela placa isolada quando há complemento; não presumir que qualquer táxi é automaticamente autorizado em toda faixa.",
+    "example": {
+      "scenario": "A placa vem com horário de exclusividade e controle da faixa.",
+      "question": "O condutor deve ignorar o complemento?",
+      "answer": "Não. A sinalização deve ser interpretada no conjunto.",
+      "variation": "A sinalização admite táxi expressamente na hipótese concreta.",
+      "variationAnswer": "Considerar essa informação, sem generalizar a autorização para outras faixas ou horários."
+    },
+    "historical": false
+  },
+  "985": {
+    "title": "MBFT: manual, ficha e enquadramento legal",
+    "points": [
+      "Aprova o Manual Brasileiro de Fiscalização de Trânsito.",
+      "Alterações posteriores alcançam fichas e procedimentos específicos.",
+      "A parte alterada pela 1031/2026 tem vigência diferida; não antecipar o anexo novo."
+    ],
+    "warning": "A leitura do ato de aprovação não certifica todas as fichas do manual. Não ensinar a versão inicial de 2022 como compilação completa atual.",
+    "example": {
+      "scenario": "Uma ficha antiga foi copiada sem verificar ato modificador e vigência.",
+      "question": "Conhecer o número do manual basta para aplicar essa ficha?",
+      "answer": "Não. É preciso conferir redação aplicável, enquadramento e fatos.",
+      "variation": "A ficha pertence ao trecho alterado em agosto com prazo de 60 dias.",
+      "variationAnswer": "Respeitar a data de efeitos; publicação do ato alterador e aplicabilidade da ficha não são equivalentes."
+    },
+    "historical": false
+  },
+  "981": {
+    "title": "Película retrorrefletiva: transição encerrada",
+    "points": [
+      "Alterou prazo do art. 8º da 948/2022.",
+      "A adequação da descrição APROVADO SENATRAN foi delimitada até 01/01/2024.",
+      "Prazo de adaptação não é prazo individual de validade de cada veículo."
+    ],
+    "warning": "Não reapresentar a tolerância transitória como prazo novo a partir de uma instalação em 2026.",
+    "example": {
+      "scenario": "O fabricante conta o prazo de adaptação novamente desde a compra de película em 2026.",
+      "question": "O marco era a compra individual?",
+      "answer": "Não. A norma estabeleceu uma data final específica.",
+      "variation": "A dúvida é sobre a exigência técnica atual da película.",
+      "variationAnswer": "Consultar a 948 e os atos atuais; a transição encerrada não substitui a regra técnica vigente."
+    },
+    "historical": true
+  },
+  "979": {
+    "title": "Biometria: não aplicar o fragmento de norma substituída",
+    "points": [
+      "Alterava a 928/2022 e sua validação biométrica.",
+      "A 928/2022 foi revogada pela 1020/2025.",
+      "O percentual e o fluxo do ato antigo não são certificados como regra atual por esta revisão."
+    ],
+    "warning": "Este guia é histórico; observar o regime novo e seus atos operacionais.",
+    "example": {
+      "scenario": "A entidade usa o fragmento de 2022 como autorização suficiente para o processo atual.",
+      "question": "A referência antiga resolve o procedimento atual?",
+      "answer": "Não. A norma-base foi substituída e o regime novo precisa ser consultado.",
+      "variation": "A prova pergunta expressamente pelo funcionamento em 2022.",
+      "variationAnswer": "Distinguir o recorte histórico, sem anunciar o percentual antigo como exigência vigente universal."
+    },
+    "historical": true
+  },
+  "977": {
+    "title": "Vistoria: dispensa a critério do órgão",
+    "points": [
+      "Atualiza a 941/2022.",
+      "Prevê hipóteses como reorganização societária, transferência entre entes públicos e filiais.",
+      "A dispensa depende do órgão competente e do caso, podendo haver documentos adicionais."
+    ],
+    "warning": "Poder dispensar não significa dispensa automática de toda transferência entre pessoas jurídicas.",
+    "example": {
+      "scenario": "A empresa sofre incorporação e conclui que nenhuma verificação será necessária.",
+      "question": "A hipótese dispensa automaticamente a vistoria?",
+      "answer": "Não. O órgão decide e pode exigir documentos complementares.",
+      "variation": "A transferência é entre particulares sem a hipótese societária descrita.",
+      "variationAnswer": "Não transportar a dispensa específica para a situação diferente."
+    },
+    "historical": false
+  },
+  "976": {
+    "title": "CNH: anexo técnico e documento emitido",
+    "points": [
+      "Referenda a Deliberação 259/2022 e altera anexos da 886/2021.",
+      "Detalhes técnicos são fornecidos às empresas credenciadas nos termos do ato.",
+      "Mudança de anexo de produção não se confunde com perda automática de validade da CNH."
+    ],
+    "warning": "Confrontar as alterações de 998/2023 e 1006/2024 antes de usar o fragmento inicial como especificação completa atual.",
+    "example": {
+      "scenario": "O aluno acha que uma mudança no anexo cancela todas as habilitações emitidas.",
+      "question": "A conclusão decorre automaticamente do ato?",
+      "answer": "Não. Especificação de produção e validade individual têm regimes diferentes.",
+      "variation": "A gráfica produz novo formulário.",
+      "variationAnswer": "Usar as especificações atuais pertinentes ao credenciamento, não reproduzir qualquer versão histórica."
+    },
+    "historical": false
+  },
+  "975": {
+    "title": "RNPC: autorização e histórico administrativo",
+    "points": [
+      "Cadastro considera 12 meses sem infração sujeita à pontuação, nos termos da norma.",
+      "Infrações precisam ter instância administrativa encerrada para o cômputo indicado.",
+      "Ingresso exige autorização prévia; a consulta tem disciplina de consentimento."
+    ],
+    "warning": "Não confundir RNPC com licença para ignorar infrações futuras ou inclusão compulsória de todo condutor.",
+    "example": {
+      "scenario": "O condutor recebe uma autuação ainda em julgamento e o aluno a trata como pontuação definitiva para esse cadastro.",
+      "question": "O artigo permite ignorar o estágio administrativo?",
+      "answer": "Não. O parágrafo do art. 2º exige encerramento da instância para o cômputo descrito.",
+      "variation": "A pessoa não autorizou a inclusão.",
+      "variationAnswer": "A autorização prévia é requisito; bom histórico não torna o cadastro automaticamente compulsório."
+    },
+    "historical": false
+  },
+  "974": {
+    "title": "CVC de cana: regra transitória de capacitação",
+    "points": [
+      "Altera a 872/2021.",
+      "Prevê curso de cargas indivisíveis até regulamentar a capacitação específica.",
+      "É necessário verificar se o fato ainda se encontra na hipótese transitória."
+    ],
+    "warning": "Não apresentar a substituição transitória como exigência permanente sem conferir regulamentação específica posterior.",
+    "example": {
+      "scenario": "A prova situa o caso no período em que a capacitação específica ainda não foi regulamentada.",
+      "question": "Qual referência transitória o ato oferece?",
+      "answer": "Curso especializado de transporte de cargas indivisíveis, na hipótese descrita.",
+      "variation": "Há regulamentação específica aplicável ao fato posterior.",
+      "variationAnswer": "Reexaminar o regime; uma condição transitória não autoriza ignorar norma superveniente."
+    },
+    "historical": false
+  },
+  "973": {
+    "title": "Sinalização: localizar o volume correto",
+    "points": [
+      "Organiza nove volumes do Manual Brasileiro de Sinalização.",
+      "Regulamentação, advertência, indicação, horizontal e semafórica são modalidades distintas.",
+      "Também há volumes de dispositivos auxiliares, temporária, cicloviária e cruzamento rodoferroviário."
+    ],
+    "warning": "Os anexos receberam alterações por 986/2022, 1012/2024 e 1013/2024. O guia não certifica cada especificação de todos os volumes.",
+    "example": {
+      "scenario": "Uma obra exige sinalização temporária, e a equipe consulta apenas o volume de marcas horizontais.",
+      "question": "Esse recorte substitui o volume temporário?",
+      "answer": "Não. O Volume VII trata da sinalização temporária; considerar também os demais elementos necessários.",
+      "variation": "O caso envolve circulação exclusiva com placa R-32.",
+      "variationAnswer": "Consultar Volume I e a alteração da 986, incluindo informação complementar."
+    },
+    "historical": false
+  },
+  "972": {
+    "title": "Piauí: retomada de prazos da pandemia",
+    "points": [
+      "Referenda a Deliberação 258/2022.",
+      "Restabelece prazos e delimita condutores, veículos e autuações ligados ao Piauí.",
+      "Trata de recorte excepcional da pandemia, não de suspensão permanente."
+    ],
+    "warning": "Não reutilizar cronograma excepcional de 2022 como prazo geral vigente de renovação em 2026.",
+    "example": {
+      "scenario": "Um aluno usa o calendário pandêmico do Piauí para um processo novo de outro Estado.",
+      "question": "O uso é adequado?",
+      "answer": "Não. É preciso respeitar local, beneficiários, período e procedimento.",
+      "variation": "A prova pede situação específica da retomada em 2022.",
+      "variationAnswer": "Aplicar o documento histórico pertinente, sem transformá-lo em benefício permanente."
+    },
+    "historical": true
+  }
+}
