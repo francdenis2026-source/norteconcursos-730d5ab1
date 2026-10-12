@@ -30,6 +30,8 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
 import { useReinforcement } from "@/hooks/useReinforcement";
+import { QuestionSupportText } from "@/components/library/QuestionSupportText";
+import { needsMissingSupportText, reflowStem } from "@/lib/questionText";
 import { idleSeconds, IDLE_PAUSE_SECONDS, startActivityTracking } from "@/lib/activity";
 import { fetchQuestionsAnsweredToday, getDailyQuestionLimit } from "@/lib/questionDailyLimit";
 import {
@@ -154,10 +156,13 @@ function QuestionTrainer() {
     error,
   } = useQuestionCatalog(userId, canLoad);
   const law = routeFilters.law;
-  const catalog = React.useMemo(
-    () => (law === undefined ? fullCatalog : fullCatalog.filter((q) => questionMatchesLaw(q, law))),
-    [fullCatalog, law],
-  );
+  // Questões de Português que remetem a "o texto" sem o texto de apoio ficam fora do treino até o texto ser cadastrado:
+  // sem ele, o aluno não consegue resolver.
+  const { catalog, missingSupportText } = React.useMemo(() => {
+    const scoped = law === undefined ? fullCatalog : fullCatalog.filter((q) => questionMatchesLaw(q, law));
+    const usable = scoped.filter((q) => !needsMissingSupportText(q));
+    return { catalog: usable, missingSupportText: scoped.length - usable.length };
+  }, [fullCatalog, law]);
   const library = useStudyMaterialList(canLoad);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
   const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
@@ -716,6 +721,7 @@ function QuestionTrainer() {
       <div className="space-y-4">
         {lawNotice}
         <section className="space-y-3 rounded-xl border bg-card p-4 text-sm" aria-label="Modo de prática">
+          {missingSupportText > 0 && <p className="rounded-lg border bg-muted/40 p-2 text-xs text-muted-foreground">{missingSupportText} questões de Língua Portuguesa dependem de um texto de apoio que ainda não foi cadastrado e ficam fora do treino por enquanto, para você não receber perguntas sem o texto.</p>}
           {notice && <p className="rounded-lg border border-amber-300 bg-amber-50 p-2 text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100" role="status">{notice}</p>}
           <p className="font-semibold">O que você quer praticar neste filtro?</p>
           <div className="grid gap-2 sm:grid-cols-3">
@@ -968,13 +974,13 @@ function QuestionTrainer() {
                 {parsed.baseLabel}
                 <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
               </summary>
-              <div className="max-h-52 overflow-y-auto whitespace-pre-line px-3 pb-3 text-sm leading-6 text-foreground sm:max-h-80 sm:px-4 sm:pb-4 sm:leading-7">
-                {parsed.base}
+              <div className="max-h-64 overflow-y-auto px-3 pb-3 text-foreground sm:max-h-[26rem] sm:px-4 sm:pb-4">
+                <QuestionSupportText text={parsed.base} citesLines={/(^|\W)linhas?\s+\d+/i.test(`${parsed.stem} ${parsed.options.map((o) => o.text).join(" ")}`)} />
               </div>
             </details>
           )}
           <p className="whitespace-pre-line text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
-            {parsed.stem}
+            {reflowStem(parsed.stem)}
           </p>
           <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
             {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
