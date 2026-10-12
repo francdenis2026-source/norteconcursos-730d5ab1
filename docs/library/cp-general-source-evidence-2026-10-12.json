@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-10-12T21:29:49.826090+00:00",
+  "sources": [
+    {
+      "id": "CP",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "d9b42e2c5a070664c2248ee9482a01987705913dc7dafc69e74367aae27d752e"
+    },
+    {
+      "id": "CF",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "sha256": "6919be82f75739ca00a6f37a05915c689171c0b3b9e6d24173acc6386361dd5d"
+    },
+    {
+      "id": "Real",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9069.htm",
+      "sha256": "3994d33c5c72a3b4bf9fc8674211c7b87060fae6e4870b18b250c234a0d8a1c3"
+    },
+    {
+      "id": "STJ",
+      "url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "sha256": "8a7298bfd40ecac21b31f15a6f9aef6a10a4fbbecdee4fac6fd665ebec338b82"
+    },
+    {
+      "id": "STF",
+      "url": "https://noticias.stf.jus.br/postsnoticias/decisoes-que-asseguraram-direitos-das-mulheres-marcam-historia-do-stf-como-tribunal-constitucional/",
+      "sha256": "95a0f32cccda56a7e858b705b051ca54e169824419913d326c87e22ffc044e00"
+    }
+  ],
+  "primary_audit": {
+    "scope": "Somente Código Penal",
+    "rows": [
+      {
+        "slug": "codigo-penal",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "source_sha256": "d9b42e2c5a070664c2248ee9482a01987705913dc7dafc69e74367aae27d752e",
+        "parsed_current": 401,
+        "database_current": 401,
+        "missing_articles": [],
+        "unexpected_current": [],
+        "text_differences": []
+      }
+    ]
+  },
+  "scope": "Somente CP; súmulas 269/440/527/567/588 consultadas no PDF oficial. STF: publicação institucional confirma julgamento da ADPF 779 em 2023; não foi alegada leitura integral do acórdão, pois a consulta processual retornou 403."
+}

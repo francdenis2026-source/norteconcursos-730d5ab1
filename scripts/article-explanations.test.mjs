@@ -622,3 +622,16 @@ test('ambientais: redações de licenciamento e transição histórica não vira
  for(const key of ['art-49','art-60','art-67','art-71','art-79-a'])assert.equal(legalStudyCaveat('ambientais',key).literalPractice,false);
  assert.equal(legalStudyCaveat('ambientais','art-34'),null);
 });
+
+test('CP: aplicação e teoria preservam limites e impedem literalidade histórica',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-aplicacao-teoria-2026-10-12.json','utf8'));
+ assert.equal(p.units.length,30);assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ assert.ok(!p.units.some(r=>r.unit_key==='art-1'));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(13).pontos.join(' '),/devia E podia/);
+ assert.match(get(16).pontos.join(' '),/RECEBIMENTO/);
+ assert.match(get(17).pontos.join(' '),/ABSOLUTA/);
+ assert.match(get(23).atencao.join(' '),/defesa da honra/);
+ assert.match(get(25).pontos.join(' '),/observar o caput/);
+ for(const n of [9,10,11,23,25,26])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+});

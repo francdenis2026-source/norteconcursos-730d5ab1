@@ -1,8 +1,8 @@
 {
   "current_units": 3511,
-  "current_review_metadata": 1174,
-  "pending_current_review_metadata": 2337,
-  "checked_at": "2026-10-12T21:11:57.409Z",
+  "current_review_metadata": 1204,
+  "pending_current_review_metadata": 2307,
+  "checked_at": "2026-10-12T21:35:04.065Z",
   "note": "Contagem de aprovações editoriais atuais com revisor, data e hash correspondente; existência de explicação publicada não equivale a revisão atual. Não certifica toda a regulamentação ou jurisprudência.",
   "courses": [
     {
@@ -20,8 +20,8 @@
     {
       "slug": "codigo-penal",
       "current": 401,
-      "review_metadata": 20,
-      "pending": 381
+      "review_metadata": 50,
+      "pending": 351
     },
     {
       "slug": "armas",
