@@ -7242,6 +7242,20 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   :root:not(.dark) .lp-footer .lp-coord b {
     color: var(--brass-deep);
   }
+  /* Reforça a leitura dos textos secundários no rodapé escuro em telas
+     pequenas, mantendo a hierarquia visual e o tema claro inalterado. */
+  .dark .lp-footer__bottom {
+    color: oklch(0.86 0.008 255);
+  }
+  .dark .lp-footer__dev {
+    color: oklch(0.76 0.012 255);
+  }
+  .dark .lp-footer .lp-coord {
+    color: oklch(0.82 0.01 255);
+  }
+  .dark .lp-footer .lp-coord b {
+    color: var(--brass-soft);
+  }
   .mh {
     display: block;
     background: var(--ink-deep);
@@ -7517,6 +7531,15 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .mh__cta .btn-brass svg,
   .mh__cta .btn-glass svg {
     flex: none;
+  }
+  /* O hub mantém um fundo escuro no celular. Os textos com opacidade baixa
+     ficavam abaixo do contraste confortável no modo escuro. */
+  .dark .mh__pcac small,
+  .dark .mh__price small {
+    color: oklch(0.82 0.01 255);
+  }
+  .dark .mh__plan li.is-off {
+    color: oklch(0.72 0.012 255);
   }
   :root:not(.dark) .mh {
     background: oklch(0.99 0.004 255);
