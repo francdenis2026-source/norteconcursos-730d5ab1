@@ -1,0 +1,45 @@
+{
+  "sources": [
+    {
+      "id": "ambientais",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "sha256": "3be3d63964a53747dc66fb26f9899f5b5392104ea5ca11f17b47a0023ce8b394",
+      "checked_at": "2026-10-12T21:04:16.741571+00:00"
+    },
+    {
+      "id": "poda",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15299.htm",
+      "sha256": "f6b506395dbf77c9394866f5fe82a0e355e3f8493831b4a096730c33ec62dfe7",
+      "checked_at": "2026-10-12T21:04:16.741642+00:00"
+    },
+    {
+      "id": "licenciamento",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15190.htm",
+      "sha256": "7118b19b31752ed4af3bd397d07b10342f636d4444b51b6b350f65ae4d24c481",
+      "checked_at": "2026-10-12T21:04:16.742342+00:00"
+    },
+    {
+      "id": "stf_ajuizamento",
+      "url": "https://noticias.stf.jus.br/postsnoticias/partidos-e-associacoes-questionam-pontos-da-lei-geral-de-licenciamento-ambiental/",
+      "sha256": "85d12991bae3f23cff88b702dc2a127a6030411db2853749a44adcb41b1e4bb4",
+      "checked_at": "2026-10-12T21:04:16.742491+00:00"
+    }
+  ],
+  "primary_text_audit": {
+    "checked_at": "2026-10-12T20:57:57.784434+00:00",
+    "scope": "Somente Lei 9.605/1998; comparação textual não certifica explicações ou jurisprudência.",
+    "rows": [
+      {
+        "slug": "ambientais",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "source_sha256": "3be3d63964a53747dc66fb26f9899f5b5392104ea5ca11f17b47a0023ce8b394",
+        "parsed_current": 79,
+        "database_current": 79,
+        "missing_articles": [],
+        "unexpected_current": [],
+        "text_differences": []
+      }
+    ]
+  },
+  "judicial_scope": "Notícia oficial confirma ajuizamento, não julgamento. Consultas processuais 7913/7916/7919 falharam nesta rodada; não se certifica seu estado decisório atual."
+}

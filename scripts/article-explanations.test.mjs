@@ -595,3 +595,16 @@ test('environmental fauna review includes 2025 and 2026 changes without adverse 
  assert.equal(legalStudyCaveat('ambientais','art-32').literalPractice,false);
  assert.match(get('art-33').simples,/ou multa, ou ambas/);
 });
+
+test('ambientais: pesca e flora preservam limites, revisão de incêndio e poda condicionada',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ambientais-pesca-flora-2026-10-12.json','utf8'));
+ const get=k=>p.units.find(u=>u.unit_key===k);
+ assert.equal(p.units.length,20);assert.equal(p.laws[0].scope_type,'targeted_correction');
+ assert.ok(p.units.every(u=>u.expected&&u.exemplo.includes('Variação:')&&u.prova.length>=2));
+ assert.ok(!p.units.some(u=>['art-43','art-47','art-1','art-5','art-81'].includes(u.unit_key)));
+ assert.match(get('art-41').pontos.join(' '),/demais formas de vegetação/);
+ assert.match(get('art-49').pontos.join(' '),/45 dias.*fundamentada/);
+ assert.match(get('art-49').atencao.join(' '),/não é autorização.*desmatar/);
+ assert.match(get('art-50-a').prova.join(' '),/superior/);
+ assert.match(get('art-37').atencao.join(' '),/ADPF 640/);
+});
