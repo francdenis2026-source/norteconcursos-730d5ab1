@@ -738,4 +738,55 @@ export const CONTRAN_DIDATICA: Record<string, ContranDidatica> = {
     ],
     fontes: ["1024/2026"],
   },
+  "1025/2026": {
+    simples: [
+      "Esta resolução conta toda a vida de um veículo removido, do guincho ao leilão, e criou o Sivec, o Sistema Integrado de Veículos Custodiados, plataforma nacional com as informações de remoção, guarda, liberação e leilão (art. 1º, § 1º). Ela revogou a Resolução 623/2016, que era a norma anterior.",
+      "As etapas, em ordem (art. 2º): aplicação da medida administrativa de remoção; remoção até o local fixado; guarda; liberação ao proprietário ou representante, se cumpridas as exigências; leilão público eletrônico, se o veículo não for reclamado no prazo legal; arrematação e pagamento; transferência ao arrematante; e baixa, conforme o caso.",
+      "Termo de Recolhimento: ao aplicar a remoção, o órgão emite o Termo de Recolhimento do Veículo e o registra eletronicamente. Nele constam, entre outros, o fundamento legal, o local de guarda, os objetos deixados no veículo, os equipamentos obrigatórios ausentes, o estado da lataria, pintura e pneus e o prazo para retirar o veículo, sob pena de leilão (art. 14). O proprietário ou condutor presente é considerado notificado, mesmo que se recuse a assinar (art. 14, § 2º).",
+      "Se o proprietário não estava presente, o órgão providencia a notificação em até dez dias da remoção, preferencialmente pelo SNE (Sistema de Notificação Eletrônica); sem adesão ao SNE, por remessa postal em até dez dias e, se frustrada, por edital (art. 15). A partir de 1º de janeiro de 2027, as notificações serão exclusivamente por meio do SNE (art. 15, § 3º).",
+      "Antes do leilão, o veículo é guardado em centro de custódia, que responde pela guarda, segurança e integridade física durante todo o período (art. 20), e só entra depois de vistoria eletrônica (art. 19). O proprietário paga a remoção e a guarda (art. 21). A diária é de vinte e quatro horas e a cobrança fica limitada ao período máximo de seis meses, devida por quem retira o veículo (art. 21, §§ 1º e 2º).",
+      "Liberação: depende da quitação dos débitos e da regularização do que motivou a remoção (art. 23). Se a regularização não puder ser feita no centro de custódia, o veículo pode ser liberado só para ir ao reparo, com prazo de reapresentação de no máximo sessenta dias; se não regularizar, entra restrição de circulação no Renavam e ele pode ser removido de novo (art. 23, §§ 1º e 2º).",
+      "Leilão: o veículo não reclamado em sessenta dias, contados do recolhimento, vai a leilão. Considera-se não reclamado o veículo cujo dono, dentro do prazo, não regulariza as pendências e não o retira do centro de custódia, ao mesmo tempo (art. 25). Passados trinta dias da remoção sem regularização e retirada, pode-se notificar por edital, que é complementar e não impede a liberação enquanto não houver a alienação (art. 26).",
+      "Guarda monitorada: o órgão pode autorizar que o dono cumpra a remoção mantendo o veículo sob monitoramento, desde que preencha requisitos, como condições de segurança para circular, ausência de indícios de adulteração, condutor habilitado, sem registro de furto ou roubo, sem restrição judicial e licenciado em ao menos um dos três últimos exercícios (art. 17). Quem descumpre, inclusive violando o dispositivo, tem restrição de circulação, nova remoção e infração do art. 239 do CTB (art. 17, § 3º).",
+    ],
+    quadro: {
+      titulo: "Remoção, guarda e leilão: prazos",
+      linhas: [
+        ["Notificação do proprietário ausente", "Em até dez dias da remoção (art. 15)"],
+        ["Exclusivamente pelo SNE", "A partir de 1º de janeiro de 2027 (art. 15, § 3º)"],
+        ["Diária de guarda", "Períodos de vinte e quatro horas; cobrança limitada a seis meses (art. 21)"],
+        ["Edital complementar", "Depois de trinta dias da remoção, sem regularização e retirada (art. 26)"],
+        ["Preparação do leilão", "Pode começar depois de trinta dias do recolhimento (art. 27)"],
+        ["Leilão se não reclamado", "Sessenta dias contados do recolhimento (art. 25)"],
+        ["Liberação só para reparo", "Prazo de reapresentação de no máximo sessenta dias (art. 23, § 1º)"],
+        ["Arquivos do centro de custódia", "Guardados por no mínimo 5 anos (art. 9º, VII)"],
+        ["Devolução de valores", "Se o recolhimento foi indevido ou houve abuso na permanência (art. 5º, VII)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "Um carro foi removido na ausência do dono, em 2026. Como e em quanto tempo ele deve ser avisado?",
+        resposta: "O órgão providencia a notificação em até dez dias da remoção, preferencialmente pelo SNE; sem adesão ao SNE, por remessa postal e, frustrada a entrega, por edital (art. 15).",
+      },
+      {
+        situacao: "O dono só retirou o veículo depois de oito meses no pátio. Quantos meses de diária pode ser cobrado?",
+        resposta: "No máximo seis meses. A cobrança das diárias de guarda é limitada a esse período (art. 21, § 2º).",
+      },
+      {
+        situacao: "O proprietário não pagou os débitos nem retirou o veículo. Quando ele vai a leilão?",
+        resposta: "Se não for reclamado no prazo de sessenta dias contados do recolhimento, será levado a leilão. Para ser considerado reclamado, o dono precisa regularizar as pendências e retirar o veículo (art. 25).",
+      },
+      {
+        situacao: "Para liberar o veículo, o proprietário precisa consertar um item que não dá para consertar no pátio. O que o órgão pode fazer?",
+        resposta: "Liberar o veículo exclusivamente para transporte ao local do reparo, com prazo de reapresentação não superior a sessenta dias (art. 23, § 1º).",
+      },
+    ],
+    pegadinhas: [
+      "Citar a Resolução 623/2016 como vigente: ela foi revogada pela 1.025/2026.",
+      "Confundir o prazo do leilão (sessenta dias do recolhimento) com o do edital (a partir de trinta dias).",
+      "Dizer que o edital impede a liberação. Ele é complementar e não impede a liberação enquanto não houver alienação.",
+      "Achar que a diária é cobrada sem limite: fica limitada a seis meses.",
+      "Esquecer que o proprietário ou condutor presente é considerado notificado, mesmo se recusar assinar o termo.",
+    ],
+  },
 };
