@@ -42,6 +42,7 @@ import { cn } from "@/lib/utils";
 import { StudyTimeCard } from "@/components/dashboard/StudyTimeCard";
 import { usePerformanceOverview, type SubjectAccuracy } from "@/hooks/usePerformanceOverview";
 import { useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
+import { rhythmInsights, type RhythmKind } from "@/lib/rhythmInsights";
 
 export const Route = createFileRoute("/dashboard/performance")({
   component: PerformancePage,
@@ -580,6 +581,44 @@ function HeroStat({
   );
 }
 
+const RHYTHM_STYLE: Record<RhythmKind, { label: string; cls: string }> = {
+  strong: { label: "Ponto forte", cls: "bg-emerald-100 text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-200" },
+  "strong-slow": { label: "Acerta, mas devagar", cls: "bg-sky-100 text-sky-900 dark:bg-sky-950/40 dark:text-sky-200" },
+  neutral: { label: "No esperado", cls: "bg-muted text-foreground" },
+  weak: { label: "Ponto fraco", cls: "bg-rose-100 text-rose-900 dark:bg-rose-950/40 dark:text-rose-200" },
+  "weak-fast": { label: "Erra com pressa", cls: "bg-amber-100 text-amber-950 dark:bg-amber-950/40 dark:text-amber-200" },
+  "weak-slow": { label: "Lacuna de conteúdo", cls: "bg-rose-200 text-rose-950 dark:bg-rose-950/60 dark:text-rose-100" },
+};
+const mmss = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+
+/** Pontos fortes e fracos por matéria, cruzando acerto com o tempo médio por questão (só a 1ª resposta de cada uma). */
+function RhythmCard({ subjects }: { subjects: import("@/hooks/usePerformanceOverview").SubjectAccuracy[] }) {
+  const { items, overallSeconds } = rhythmInsights(subjects);
+  if (!items.length) return null;
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="text-lg">Seu ritmo por matéria</CardTitle>
+        <CardDescription>
+          Acerto e tempo médio por questão, comparados com a sua própria média ({mmss(overallSeconds)} por questão). Cada questão tem cronômetro próprio, que conta só o tempo em que você está com ela aberta e ativo.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-2">
+        {items.map((i) => (
+          <div key={i.subject} className="rounded-xl border p-3">
+            <div className="flex flex-wrap items-center gap-2">
+              <p className="font-semibold">{i.subject}</p>
+              <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${RHYTHM_STYLE[i.kind].cls}`}>{RHYTHM_STYLE[i.kind].label}</span>
+              <p className="ml-auto text-xs text-muted-foreground">{i.accuracy}% de acerto · {mmss(i.avgSeconds)} por questão · {i.total} questões</p>
+            </div>
+            <p className="mt-1 text-sm text-muted-foreground">{i.message}</p>
+          </div>
+        ))}
+      </CardContent>
+    </Card>
+  );
+}
+
 function PerformanceOverviewTab({
   userId,
   overview,
@@ -661,6 +700,8 @@ function PerformanceOverviewTab({
           tone="navy"
         />
       </section>
+
+      <RhythmCard subjects={trainer.bySubject} />
 
       <div className="grid gap-4 lg:grid-cols-2">
         <Card>

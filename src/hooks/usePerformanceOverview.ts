@@ -122,8 +122,11 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
           entry.correct += 1;
           totalCorrect += 1;
         }
-        entry.seconds += r.response_seconds ?? 0;
-        totalSeconds += r.response_seconds ?? 0;
+        // Respostas antigas, gravadas quando o cronômetro contava também o tempo parado, podem ter valores
+        // absurdos; limitar a 15 minutos evita distorcer a média de tempo por questão.
+        const secs = Math.min(r.response_seconds ?? 0, 900);
+        entry.seconds += secs;
+        totalSeconds += secs;
         bySubjectMap.set(key, entry);
       }
       const bySubject: SubjectAccuracy[] = Array.from(bySubjectMap.entries())
