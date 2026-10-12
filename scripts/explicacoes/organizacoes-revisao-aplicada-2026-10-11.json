@@ -1,0 +1,600 @@
+{
+  "course_slug": "organizacoes",
+  "units": {
+    "art-1": {
+      "simples": "Organização criminosa exige quatro ou mais pessoas, estrutura ordenada e divisão de tarefas, ainda que informal, buscando vantagem de qualquer natureza mediante infrações com pena máxima superior a quatro anos OU caráter transnacional. A lei também alcança as situações de tratado e organizações terroristas legalmente definidas do §2º.",
+      "pontos": [
+        "Memória: 4 + estrutura + tarefas + vantagem + (>4 anos OU transnacional). CP 288: 3; drogas 35: 2; facção da lei própria: 3, com elementos ultraviolentos específicos."
+      ],
+      "atencao": [
+        "Número sozinho não tipifica. Associação para o tráfico exige vínculo associativo estável; participação ocasional conjunta não basta. Facção não é sinônimo automático de toda organização."
+      ],
+      "exemplo": "Quatro pessoas dividem tarefas estáveis para obter vantagem com delitos de pena máxima superior a quatro anos: examinam-se todos os elementos. Variação: Três pessoas praticam um delito juntas: não há automaticamente organização nem associação estável; examine vínculo, finalidade e tipo específico.",
+      "prova": [
+        "Quatro participantes bastam, sem estrutura e divisão de tarefas? Não; também são exigidos os demais elementos legais.",
+        "A pena máxima de exatamente quatro anos basta por esse critério? Não; o texto exige superior a quatro, ressalvada a alternativa transnacional.",
+        "O mínimo numérico da facção é igual ao da organização desta lei? Não; a lei própria define três, com requisitos específicos, enquanto esta exige quatro."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=09%2F03%2F2026&num_registro=202401678115"
+      ]
+    },
+    "art-2": {
+      "simples": "Promover, constituir, financiar ou integrar organização, pessoalmente ou por intermediário: reclusão de 3 a 8 anos e multa, além dos demais crimes. Obstrução do §1º é subsidiária desde a Lei 15.245/2025. Emprego de arma de fogo aumenta até metade; comando agrava sem exigir execução pessoal. As hipóteses do §4º aumentam de 1/6 a 2/3; desde a Lei 15.487/2026, o inciso I também abrange organização destinada a crimes do ECA, mesmo sem menor integrante.",
+      "pontos": [
+        "Afastamento cautelar necessário e judicial preserva remuneração. Condenação definitiva: perda do vínculo público e interdição de 8 anos após cumprir a pena. Corregedoria apura policial com acompanhamento do MP."
+      ],
+      "atencao": [
+        "Não confundir segurança máxima do §8º com previsão expressa federal dos arts. 21-A/B. Restrição de benefícios do §9º exige condenação expressa e prova de manutenção do vínculo; não é veto eterno automático."
+      ],
+      "exemplo": "Adultos organizam crimes previstos no ECA sem recrutar menor: a nova hipótese do §4º, I, deve ser examinada. Variação: O servidor é apenas afastado cautelarmente: não se aplica a perda definitiva do cargo nem se corta sua remuneração pelo §5º.",
+      "prova": [
+        "A majorante nova do §4º, I exige sempre um menor integrante? Não; também alcança organização destinada a crimes do ECA."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+        "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=ADI&numeroProcesso=5567"
+      ]
+    },
+    "art-3": {
+      "simples": "Enumera colaboração, captação ambiental, ação controlada, acesso a registros, interceptação, afastamento de sigilos, infiltração por policiais e cooperação institucional. Cada técnica conserva seus próprios requisitos. Dispensa de licitação do §1º exige necessidade justificada de sigilo da capacidade investigatória, nos objetos indicados.",
+      "pontos": [
+        "Lista de técnicas não é autorização irrestrita para quebrar qualquer sigilo."
+      ],
+      "atencao": [
+        "O §2º ainda menciona a antiga Lei 8.666; ela foi revogada. Para contratações atuais, confira o regime vigente da Lei 14.133, sem ensinar a remissão histórica como regra geral atual."
+      ],
+      "exemplo": "A investigação precisa interceptar comunicações e observa a autorização e condições da Lei 9.296. Variação: A técnica consta da lista, mas falta requisito judicial exigido pela legislação específica: a lista não o substitui.",
+      "prova": [
+        "A enumeração permite interceptar sem observar a lei específica? Não; os requisitos próprios permanecem."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm"
+      ]
+    },
+    "art-3-a": {
+      "simples": "O acordo de colaboração é negócio jurídico processual e meio de obtenção de prova, condicionado a utilidade e interesse públicos. O acordo não se confunde com a prova corroborativa efetivamente obtida.",
+      "pontos": [
+        "Negócio processual + meio de obtenção de prova."
+      ],
+      "atencao": [
+        "Não chamar a assinatura de prova suficiente para condenação; compare o art. 4º, §16."
+      ],
+      "exemplo": "O acordo permite localizar documentos que deverão ser examinados e corroborados. Variação: Há somente relato sem corroboração: homologação não equivale a condenação automática.",
+      "prova": [
+        "A assinatura do acordo basta para condenar o delatado? Não; acordo e prova corroborativa são distintos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-3-b": {
+      "simples": "O recebimento da proposta inicia negociação e confidencialidade. A rejeição sumária precisa de justificativa; sem rejeição, firma-se termo de confidencialidade. A negociação não suspende por si a investigação, ressalvado acordo próprio sobre medidas indicadas. Pode haver instrução preliminar, com termos assinados pelo celebrante, colaborador e defensor com poderes específicos.",
+      "pontos": [
+        "Se o celebrante não concluir o acordo por sua iniciativa, não pode usar para outra finalidade informações e provas apresentadas de boa-fé."
+      ],
+      "atencao": [
+        "Receber proposta não garante celebrar nem suspende automaticamente medidas cautelares. Confidencialidade não é publicação livre."
+      ],
+      "exemplo": "O celebrante recebe documentos de boa-fé, negocia e decide não celebrar: aplica-se a vedação de uso do §6º. Variação: O investigado entrega proposta e presume paralisação automática do inquérito: a presunção contraria o §3º.",
+      "prova": [
+        "A proposta suspende automaticamente a investigação? Não; o artigo expressamente afasta essa conclusão."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-3-c": {
+      "simples": "A proposta exige procuração com poderes específicos ou assinatura pessoal acompanhada de advogado/defensor. Nenhuma tratativa ocorre sem defesa técnica. Conflito de interesses ou hipossuficiência requer outra defesa ou Defensoria. O colaborador relata os fatos ilícitos diretamente relacionados em que concorreu, e a defesa apresenta descrição e elementos corroborativos.",
+      "pontos": [
+        "Defesa técnica em toda tratativa; relato e corroboração dos fatos relacionados."
+      ],
+      "atencao": [
+        "Não confundir relato de todos os fatos diretamente relacionados com autorização de interrogatório informal sem advogado."
+      ],
+      "exemplo": "O advogado tem conflito de interesses e a negociação passa a outra defesa adequada. Variação: A autoridade tenta começar tratativas sem defensor: a proposta não elimina a exigência.",
+      "prova": [
+        "As tratativas podem ocorrer sem defensor se houver urgência? Não; o §1º exige defesa técnica."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-4": {
+      "simples": "Colaboração efetiva e voluntária pode gerar perdão, redução até 2/3 ou substituição por restritivas, se produzir um ou mais resultados do caput, com avaliação de eficácia e demais critérios. Suspensão relativa ao colaborador: até 6 meses mais igual período, suspendendo prescrição. Não oferecimento de denúncia exige infração sem conhecimento prévio, não liderança e primeira colaboração efetiva; inquérito ou procedimento já instaurado afasta desconhecimento. Depois da sentença: redução até metade ou progressão sem requisitos objetivos nos termos do §5º.",
+      "pontos": [
+        "Juiz não negocia: controla regularidade, legalidade, adequação e voluntariedade; pode devolver para ajustes. Não se renuncia ao direito de impugnar homologação. Delatado manifesta-se depois do delator. Defensor acompanha negociação, confirmação e execução; atos são registrados e há cópia ao colaborador."
+      ],
+      "atencao": [
+        "STF, ADI 5567: o silêncio é irrenunciável e inalienável; a palavra renúncia do §14 significa exercício voluntário no acordo, com defesa, não extinção da garantia. Cautelares, recebimento da acusação e condenação não podem apoiar-se apenas nas declarações (§16). ADPF 569: destinação de bens segue a lei, resguardando lesado/terceiro de boa-fé; MP/juiz não escolhem livremente fundos. Omissão dolosa ou continuidade ilícita relacionada podem rescindir."
+      ],
+      "exemplo": "O relato leva à recuperação de produto e há corroboração documental: examinam-se benefício, eficácia e critérios, não um prêmio automático. Variação: Há apenas acusação verbal e pretende-se preventiva ou condenação: o §16 exige suporte além da declaração. Se a colaboração vem após sentença, compare a redução até metade, não até dois terços.",
+      "prova": [
+        "A homologação dispensa provas corroborativas para cautelares ou condenação? Não; o §16 veda fundamento apenas nas declarações.",
+        "O caput exige todos os cinco resultados conjuntamente? Não; exige um ou mais resultados, com eficácia e critérios legais.",
+        "O direito ao silêncio é definitivamente extinto pela colaboração? Não; o STF preserva a garantia irrenunciável e o exercício voluntário com defesa.",
+        "O juiz participa da negociação para conceder benefícios? Não; ele exerce controle judicial, sem negociar o acordo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=ADI&numeroProcesso=5567",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5650503"
+      ]
+    },
+    "art-5": {
+      "simples": "Protege identidade, segurança e informação sobre atos processuais; permite participação sem contato visual com outros acusados, cumprimento em estabelecimento diverso dos corréus/condenados e proteção contra exposição midiática sem autorização prévia escrita.",
+      "pontos": [
+        "Proteção não é liberdade automática; consentimento de imagem precisa ser escrito."
+      ],
+      "atencao": [
+        "Distinguir estabelecimento distinto de corréus de regime aberto ou perdão."
+      ],
+      "exemplo": "O colaborador não autoriza por escrito fotografia pública: a proteção do inciso V deve ser observada. Variação: Ele recebe proteção e pede extinção automática da pena: o artigo não concede esse benefício.",
+      "prova": [
+        "A autorização apenas verbal atende à exposição midiática prevista? Não; a lei exige autorização prévia escrita."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-6": {
+      "simples": "O termo escrito descreve colaboração e resultados possíveis, condições propostas, aceitação do colaborador e defensor, assinaturas e medidas protetivas específicas para colaborador/família quando necessárias.",
+      "pontos": [
+        "Termo escrito com conteúdo mínimo e assinaturas."
+      ],
+      "atencao": [
+        "Descrição de resultados possíveis não equivale a prova de resultado efetivo nem homologação automática."
+      ],
+      "exemplo": "O termo registra condições, aceitação assistida e medidas familiares necessárias. Variação: O documento não contém assinatura do defensor: não atende ao conteúdo exigido.",
+      "prova": [
+        "O termo dispensa assinatura do defensor? Não; a lei a inclui expressamente."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-7": {
+      "simples": "O pedido de homologação distribui-se sigilosamente sem identificar colaborador/objeto. As informações detalhadas vão ao juiz, que decide em 48 horas. Acesso defensivo é assegurado nos termos legais, salvo diligências em andamento. Acordo e depoimentos permanecem sigilosos até o recebimento da denúncia ou queixa, sem publicidade antecipada decidida pelo magistrado.",
+      "pontos": [
+        "48 horas; marco do sigilo é recebimento da acusação, não simples oferecimento."
+      ],
+      "atencao": [
+        "Sigilo não apaga acesso da defesa ao que lhe diz respeito; preserva diligências em andamento."
+      ],
+      "exemplo": "A denúncia foi oferecida, mas ainda não recebida: não se presume encerrado o sigilo do §3º. Variação: É diligência já documentada relativa à defesa: examina-se acesso conforme §2º, não negação genérica.",
+      "prova": [
+        "O simples oferecimento da denúncia encerra o sigilo do §3º? Não; o marco é o recebimento."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-8": {
+      "simples": "Ação controlada retarda intervenção policial ou administrativa sob observação e acompanhamento para colher prova no momento mais eficaz. Retardamento é previamente comunicado ao juiz, que pode fixar limites e comunica o MP. Há sigilo e, ao término, auto circunstanciado.",
+      "pontos": [
+        "Retardar e observar, não abandonar investigação. Comunicação judicial prévia."
+      ],
+      "atencao": [
+        "Não trocar comunicação por autorização como requisito textual genérico deste artigo; outras técnicas acumuladas mantêm suas exigências próprias."
+      ],
+      "exemplo": "A equipe acompanha entrega e comunica previamente ao juiz o retardamento. Variação: Interrompe vigilância e perde o objeto: isso não é o acompanhamento exigido.",
+      "prova": [
+        "O texto exige comunicação prévia do retardamento ao juiz? Sim; o §1º prevê essa comunicação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-9": {
+      "simples": "Ação controlada com transposição de fronteiras só pode ocorrer com cooperação das autoridades dos países do provável itinerário ou destino, visando reduzir fuga e extravio do produto, objeto, instrumento ou proveito.",
+      "pontos": [
+        "Fronteira: cooperação no itinerário ou destino provável."
+      ],
+      "atencao": [
+        "Não presumir que comunicação ao juiz brasileiro substitui cooperação externa."
+      ],
+      "exemplo": "A entrega passa por outro país e a equipe coordena a operação com a autoridade competente. Variação: Há apenas decisão doméstica sem cooperação: não atende à condição do artigo.",
+      "prova": [
+        "A decisão doméstica dispensa cooperação na ação transfronteiriça? Não; o art. 9º a exige."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-10": {
+      "simples": "Infiltração por agentes de polícia exige representação do delegado ou requerimento do MP e autorização judicial circunstanciada, motivada e sigilosa, com limites. Requer indícios e subsidiariedade. O MP é ouvido na representação policial; pedido do MP durante inquérito conta com manifestação técnica policial. Prazo até 6 meses, renovável com necessidade comprovada; relatório final vai ao juiz e imediatamente ao MP.",
+      "pontos": [
+        "Infiltração policial presencial: até 6 meses por autorização, renovação fundamentada."
+      ],
+      "atencao": [
+        "O teto de 720 dias é da infiltração virtual do art. 10-A; não transplante esse teto para este artigo."
+      ],
+      "exemplo": "A técnica é necessária e o pedido especifica limites, com controle judicial. Variação: Há alternativa adequada que obtém a prova: examina-se a subsidiariedade antes da medida.",
+      "prova": [
+        "O art. 10 estabelece teto total de 720 dias? Não; esse teto aparece na infiltração virtual do art. 10-A."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-10-a": {
+      "simples": "Infiltração virtual de agentes de polícia exige autorização judicial, indícios e demonstração de necessidade diante da impossibilidade de obter prova por outros meios. Pedido delimita tarefas, nomes/apelidos e dados disponíveis. Períodos até 6 meses, renováveis, sem exceder 720 dias no total; relatório circunstanciado e registros eletrônicos preservam atos. Descumprimento do artigo torna a prova nula.",
+      "pontos": [
+        "Virtual: 6 meses por período; máximo total 720 dias."
+      ],
+      "atencao": [
+        "Dados de conexão identificam terminal, IP e tempos; dados cadastrais identificam pessoa. Não confundir com captura irrestrita de conteúdo."
+      ],
+      "exemplo": "A operação virtual é renovada com necessidade, respeitando o total de 720 dias. Variação: A prorrogação excede 720 dias: a existência de renovação não elimina o teto.",
+      "prova": [
+        "A renovação permite exceder 720 dias na infiltração virtual? Não; o §4º fixa limite total."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-10-b": {
+      "simples": "As informações da infiltração virtual são encaminhadas diretamente ao juiz, responsável pelo sigilo. Até a conclusão, o acesso reservado previsto é de juiz, MP e delegado, garantindo sigilo das investigações.",
+      "pontos": [
+        "Envio direto ao juiz; acesso restrito antes da conclusão."
+      ],
+      "atencao": [
+        "Não divulgar identidade do agente nem tratar sigilo como ausência de registro."
+      ],
+      "exemplo": "Relatórios seguem diretamente ao juiz sob reserva. Variação: Servidor externo pretende acesso público antes do término: não está no grupo de acesso previsto.",
+      "prova": [
+        "As informações devem ser encaminhadas diretamente ao juiz? Sim; o artigo assim determina."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-10-c": {
+      "simples": "Policial que oculta identidade na internet para colher indícios de autoria/materialidade dos crimes do art. 1º não comete crime por essa ocultação. Fora da estrita finalidade, responde pelos excessos.",
+      "pontos": [
+        "Ocultar identidade na finalidade legal; excessos responsabilizam."
+      ],
+      "atencao": [
+        "Não é imunidade genérica para qualquer crime ou finalidade pessoal."
+      ],
+      "exemplo": "O agente utiliza identidade dissimulada na operação legalmente delimitada. Variação: Usa a identidade para vantagem pessoal fora da investigação: examine responsabilidade pelo excesso.",
+      "prova": [
+        "A ocultação dá imunidade para atos alheios à finalidade? Não; o parágrafo único prevê responsabilização."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-10-d": {
+      "simples": "Concluída a infiltração virtual, todos os atos eletrônicos são registrados, gravados, armazenados e encaminhados ao juiz/MP com relatório circunstanciado. Reúnem-se em autos apartados, apensados ao processo, preservando identidade do agente e intimidade dos envolvidos.",
+      "pontos": [
+        "Registrar tudo; autos apartados e apensamento com proteção."
+      ],
+      "atencao": [
+        "Preservar sigilo não significa apagar registros ou inviabilizar controle da prova."
+      ],
+      "exemplo": "A equipe entrega registros completos e relatório em autos protegidos. Variação: Só entrega resumo e elimina originais: não atende à guarda de todos os atos.",
+      "prova": [
+        "O relatório dispensa armazenamento dos atos eletrônicos? Não; todos devem ser registrados e armazenados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-11": {
+      "simples": "Pedido de infiltração demonstra necessidade, alcance das tarefas e, se possível, investigados e local. Órgãos de registro/cadastro podem incluir informações necessárias à identidade fictícia mediante requisição judicial sigilosa.",
+      "pontos": [
+        "Necessidade e limites; identidade fictícia por requisição judicial."
+      ],
+      "atencao": [
+        "Não atribuir ao policial poder unilateral de alterar cadastro público sem requisição judicial."
+      ],
+      "exemplo": "O juiz requisita inclusão sigilosa dos dados necessários à identidade fictícia. Variação: O agente tenta fazer a alteração por conta própria: não é a via prevista.",
+      "prova": [
+        "A identidade fictícia em cadastro pode ser requisitada judicialmente? Sim; o parágrafo único prevê essa medida sigilosa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-12": {
+      "simples": "Pedido distribui-se sigilosamente. O juiz decide em 24 horas após ouvir o MP quando houver representação policial. Informações acompanham a denúncia e ficam à defesa preservando o agente. Risco iminente permite sustar a operação pelo MP ou delegado, com as comunicações imediatas previstas.",
+      "pontos": [
+        "Decisão: 24 horas; risco iminente admite sustação imediata."
+      ],
+      "atencao": [
+        "Sigilo da identidade não impede acesso defensivo às informações pertinentes. Não confundir as 24 horas com as 48 da homologação de colaboração."
+      ],
+      "exemplo": "Surge risco iminente ao infiltrado e o delegado susta, comunicando imediatamente juiz e MP. Variação: O pedido é de homologação de colaboração: o prazo pertinente é o do art. 7º, não este.",
+      "prova": [
+        "O prazo de decisão da infiltração neste artigo é de 48 horas? Não; são 24 horas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-13": {
+      "simples": "O agente guarda proporcionalidade com a finalidade investigatória e responde pelos excessos. Crime praticado no curso da infiltração não é punível quando inexigível conduta diversa, conforme os requisitos do parágrafo único.",
+      "pontos": [
+        "Proporcionalidade; inexigibilidade, não licença geral."
+      ],
+      "atencao": [
+        "Estar infiltrado não exclui automaticamente punibilidade de todo ato."
+      ],
+      "exemplo": "O caso demonstra concretamente inexigibilidade de conduta diversa: examina-se a hipótese legal. Variação: O agente comete delito desnecessário por interesse pessoal: não basta invocar a operação.",
+      "prova": [
+        "Todo crime praticado pelo infiltrado é automaticamente impunível? Não; a lei condiciona a hipótese à inexigibilidade."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-14": {
+      "simples": "O agente pode recusar ou fazer cessar a infiltração. Tem proteção de identidade e alterações nos termos da Lei 9.807, preservação de nome, imagem, voz e demais informações, inclusive sem exposição pela mídia sem autorização prévia escrita.",
+      "pontos": [
+        "Recusar/cessar e preservar identidade; consentimento escrito."
+      ],
+      "atencao": [
+        "Não transformar infiltração em obrigação ilimitada nem consentimento verbal em autorização escrita."
+      ],
+      "exemplo": "O agente decide cessar a participação e aciona as garantias de proteção. Variação: Divulgam sua voz sem autorização escrita: isso confronta o direito previsto.",
+      "prova": [
+        "O agente tem direito de recusar a infiltração? Sim; o inciso I assegura esse direito."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm"
+      ]
+    },
+    "art-15": {
+      "simples": "MP e delegado acessam, sem autorização judicial, exclusivamente dados cadastrais de qualificação pessoal, filiação e endereço nas entidades enumeradas. Isso não autoriza acesso irrestrito ao conteúdo, movimentação financeira ou demais sigilos.",
+      "pontos": [
+        "Q-F-E: qualificação, filiação e endereço."
+      ],
+      "atencao": [
+        "Banco como detentor não transforma todas as transações bancárias em dado cadastral livre."
+      ],
+      "exemplo": "O delegado requisita endereço e filiação para identificar o investigado. Variação: Pretende obter extrato financeiro só com este artigo: extrapola os dados enumerados.",
+      "prova": [
+        "O artigo autoriza extratos bancários sem ordem apenas por serem cadastro? Não; limita-se à qualificação, filiação e endereço."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-16": {
+      "simples": "Empresas de transporte possibilitam, por cinco anos, acesso direto e permanente do juiz, MP e delegado aos bancos de reservas e registros de viagens.",
+      "pontos": [
+        "Transporte: reservas/viagens; 5 anos."
+      ],
+      "atencao": [
+        "Não confundir registros de viagem com conteúdo de comunicações ou prazo de interceptação."
+      ],
+      "exemplo": "A autoridade legalmente indicada consulta reserva dentro do período de guarda. Variação: Usa a regra para pedir conteúdo de mensagens: o objeto deste artigo é outro.",
+      "prova": [
+        "O período previsto é de cinco anos? Sim; o artigo fixa esse prazo para os registros indicados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-17": {
+      "simples": "Concessionárias de telefonia fixa ou móvel mantêm por cinco anos registros de identificação dos terminais de origem e destino das ligações à disposição das autoridades mencionadas no art. 15.",
+      "pontos": [
+        "Terminais de origem/destino; guarda de 5 anos."
+      ],
+      "atencao": [
+        "Registro de ligação não é gravação do conteúdo por cinco anos nem autorização automática de interceptação."
+      ],
+      "exemplo": "A investigação identifica terminais que se comunicaram por meio dos registros. Variação: Quer ouvir a conversa antiga porque há registro: o dispositivo não exige gravar conteúdo.",
+      "prova": [
+        "A regra manda gravar todas as conversas por cinco anos? Não; manda manter registros de identificação dos terminais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-18": {
+      "simples": "Revelar identidade, fotografar ou filmar colaborador sem autorização prévia escrita é crime, com reclusão de 1 a 3 anos e multa.",
+      "pontos": [
+        "Colaborador; autorização prévia escrita; 1–3 anos e multa."
+      ],
+      "atencao": [
+        "Distinguir o tipo do direito do infiltrado e dos crimes de quebra de sigilo do art. 20."
+      ],
+      "exemplo": "Um autor expõe a identidade do colaborador sem autorização escrita: examina-se o tipo. Variação: A autorização é apenas verbal: não satisfaz a forma expressamente exigida.",
+      "prova": [
+        "A autorização apenas verbal satisfaz a exigência do art. 18? Não; deve ser prévia e escrita."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-19": {
+      "simples": "Imputar falsamente infração a quem sabe inocente, ou revelar informações sobre estrutura que sabe inverídicas sob pretexto de colaboração, é crime: reclusão de 1 a 4 anos e multa.",
+      "pontos": [
+        "Conhecimento da falsidade, não erro inocente presumido."
+      ],
+      "atencao": [
+        "Não criminalizar automaticamente toda colaboração sem êxito; verificar dolo e elementos do tipo."
+      ],
+      "exemplo": "O colaborador inventa conscientemente participação de pessoa que sabe inocente. Variação: Há engano sem prova de consciência da falsidade: não se presume o elemento subjetivo.",
+      "prova": [
+        "Toda informação equivocada configura automaticamente este crime? Não; o tipo exige conhecimento da falsidade/inocência."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-20": {
+      "simples": "Descumprir determinação de sigilo das investigações envolvendo ação controlada e infiltração é crime: reclusão de 1 a 4 anos e multa.",
+      "pontos": [
+        "Sigilo de ação controlada/infiltração; 1–4 anos e multa."
+      ],
+      "atencao": [
+        "Não confundir com negativa de dados do art. 21 ou divulgação de identidade de colaborador do art. 18."
+      ],
+      "exemplo": "Há determinação de sigilo e o autor deliberadamente divulga detalhes protegidos da operação. Variação: A pergunta versa negativa de informação requisitada: compare o tipo próprio do art. 21.",
+      "prova": [
+        "Este artigo fixa pena de seis meses a dois anos? Não; a pena é de um a quatro anos e multa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-21": {
+      "simples": "Recusar ou omitir dados cadastrais, registros, documentos e informações requisitados por juiz, MP ou delegado na investigação/processo é punido com reclusão de 6 meses a 2 anos e multa. Mesma pena para apropriação, divulgação ou uso indevido dos dados cadastrais do artigo.",
+      "pontos": [
+        "Requisição legal no contexto; 6 meses–2 anos e multa."
+      ],
+      "atencao": [
+        "Não usar a incriminação para legitimar requisição que extrapola limites legais e reservas de sigilo."
+      ],
+      "exemplo": "O detentor recusa dados cadastrais legalmente requisitados na investigação. Variação: O pedido busca conteúdo protegido sem cumprir requisitos: o art. 21 não elimina os limites de acesso.",
+      "prova": [
+        "O uso indevido dos dados cadastrais também recebe a pena do artigo? Sim; o parágrafo único o inclui."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-21-a": {
+      "simples": "Incluído pela Lei 15.245/2025, pune solicitar mediante promessa/concessão de vantagem, ou ordenar violência/grave ameaça contra os sujeitos protegidos, para impedir, embaraçar ou retaliar processo/investigação de organização ou aprovação de medida contra crime organizado. Pena 4 a 12 anos e multa; também protege familiares enumerados. Violência/ameaça tentada ou consumada recebe ainda a pena correspondente.",
+      "pontos": [
+        "Solicitar com vantagem OU ordenar; finalidade especial. Início de pena e prisão provisória em estabelecimento federal de segurança máxima, conforme §§3º/4º."
+      ],
+      "atencao": [
+        "Não exigir que o próprio solicitante execute a violência. Não confundir o art. 2º, §1º subsidiário com este tipo mais grave."
+      ],
+      "exemplo": "O autor promete vantagem para intimidar testemunha visando obstruir investigação da organização. Variação: A ameaça alcança familiar abrangido: o §1º estende a proteção, e não exige que ele próprio seja testemunha.",
+      "prova": [
+        "O tipo exige que o solicitante pratique pessoalmente a violência? Não; pune a solicitação qualificada ou ordem nos termos do caput."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm"
+      ]
+    },
+    "art-21-b": {
+      "simples": "Incluído pela Lei 15.245/2025, pune ajuste de duas ou mais pessoas para violência/grave ameaça contra os sujeitos protegidos, com finalidade de impedir, embaraçar ou retaliar processo/investigação ou aprovação de medida contra o crime organizado. Pena 4 a 12 anos e multa; familiares enumerados também abrangidos. Soma-se pena da violência/ameaça tentada ou consumada; §§3º/4º preveem estabelecimento federal de segurança máxima.",
+      "pontos": [
+        "Conspiração específica: 2+ e ajuste para violência/ameaça com finalidade típica."
+      ],
+      "atencao": [
+        "Dois participantes neste crime não reduzem o mínimo de quatro da definição geral de organização. Conversa sem ajuste típico não basta."
+      ],
+      "exemplo": "Duas pessoas se ajustam para agredir perito a fim de retaliar investigação de organização. Variação: São apenas dois conspiradores: isso não significa que a própria dupla preencha a organização do art. 1º.",
+      "prova": [
+        "A conspiração do art. 21-B exige quatro participantes? Não; o tipo prevê duas ou mais pessoas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm"
+      ]
+    },
+    "art-22": {
+      "simples": "Crimes da lei e conexos seguem o procedimento ordinário do CPP. Com réu preso, a instrução encerra-se em prazo razoável, até 120 dias, prorrogáveis por igual período por decisão fundamentada na complexidade ou fato procrastinatório atribuível ao réu.",
+      "pontos": [
+        "Réu preso: 120 + até 120, com fundamento legal."
+      ],
+      "atencao": [
+        "Não presumir prorrogação automática nem aplicar esta contagem a todo processo sem verificar hipótese."
+      ],
+      "exemplo": "O juiz justifica concretamente complexidade para prorrogar por igual período. Variação: Apenas repete fórmula vazia: não atende à exigência de fundamentação.",
+      "prova": [
+        "A prorrogação de 120 dias é automática? Não; precisa de decisão fundamentada nas razões previstas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-23": {
+      "simples": "Sigilo pode ser judicialmente decretado para celeridade/eficácia; defensor acessa elementos que digam respeito à defesa mediante autorização, ressalvadas diligências em andamento. Agendado depoimento, defensor tem vista com antecedência mínima de três dias, ampliável a critério da autoridade.",
+      "pontos": [
+        "Vista prévia: mínimo 3 dias; diligências em andamento ressalvadas."
+      ],
+      "atencao": [
+        "Sigilo não equivale a vedação genérica de conhecer provas documentadas pertinentes à defesa."
+      ],
+      "exemplo": "O depoimento é agendado e assegura-se vista defensiva por pelo menos três dias. Variação: Concede-se apenas um dia sem observar a regra: não cumpre o mínimo previsto.",
+      "prova": [
+        "A antecedência mínima indicada é de três dias? Sim; o parágrafo único fixa esse mínimo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-24": {
+      "simples": "Este artigo alterou o CP 288 em 2013; sua transcrição é histórica. Para estudar o tipo vigente, consulte o Código Penal compilado: a Lei 15.245/2025 renumerou a majorante como §1º e acrescentou §2º sobre solicitar/contratar crime a integrante de associação.",
+      "pontos": [
+        "Artigo modificador não substitui a compilação vigente do CP."
+      ],
+      "atencao": [
+        "Não ensinar o antigo parágrafo único como único texto atual nem ignorar o §2º de 2025."
+      ],
+      "exemplo": "A questão cobra CP 288 atual e o candidato consulta sua compilação, incluindo os dois parágrafos. Variação: Só lê o trecho reproduzido em 2013: pode perder a hipótese de contratar crime acrescida em 2025.",
+      "prova": [
+        "A transcrição de 2013 contém todas as alterações atuais do CP 288? Não; é necessário consultar a compilação vigente."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm"
+      ]
+    },
+    "art-288": {
+      "simples": "Trecho histórico do CP introduzido pelo art. 24 desta lei: associação de três ou mais para cometer crimes, pena 1 a 3 anos. Hoje, a majorante armada/menor é §1º; a Lei 15.245/2025 acrescentou §2º, que alcança solicitar/contratar crime a integrante da associação, além da pena do crime solicitado/contratado.",
+      "pontos": [
+        "Associação: 3+ e finalidade específica, com estabilidade/permanência; não mero concurso ocasional."
+      ],
+      "atencao": [
+        "Esta reprodução termina no antigo parágrafo único. Use CP 288 compilado para a prova atual. Não confundir mínimo 3 da associação/facção, 2 do tráfico/conspiração e 4 da organização: os outros elementos diferem."
+      ],
+      "exemplo": "Alguém contrata crime a integrante de associação: o §2º atual deve ser examinado, embora ausente da reprodução histórica. Variação: Três pessoas se unem ocasionalmente para um fato: o número não demonstra vínculo associativo estável.",
+      "prova": [
+        "O texto histórico reproduzido aqui inclui o §2º acrescido em 2025? Não; consulte o CP compilado para a hipótese atual."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=18%2F05%2F2026&num_registro=202600899779"
+      ]
+    },
+    "art-25": {
+      "simples": "Alterou a pena do CP 342 para reclusão de 2 a 4 anos e multa, ainda presente na compilação. O tipo abrange testemunha, perito, contador, tradutor/intérprete em processos, inquérito ou arbitragem, com elementos próprios; majorantes e retratação estão no CP.",
+      "pontos": [
+        "Pena atual: 2–4 anos e multa. Consulte também CP 342, §§1º/2º."
+      ],
+      "atencao": [
+        "Não equiparar automaticamente acusado exercendo defesa a testemunha obrigada à verdade; a hipótese de retratação tem marco legal antes da sentença do processo do ilícito."
+      ],
+      "exemplo": "A questão apresenta testemunha que conscientemente falseia fato e se examina o CP 342 completo. Variação: É acusado exercendo direito ao silêncio: não se aplica automaticamente dever da testemunha.",
+      "prova": [
+        "A alteração de 2013 fixou pena de dois a quatro anos e multa? Sim; essa pena permanece no CP compilado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-26": {
+      "simples": "Revogou a Lei 9.034/1995. Para meios atuais de enfrentamento ao crime organizado, estude a Lei 12.850 com alterações posteriores e as leis específicas aplicáveis.",
+      "pontos": [
+        "Revogada: Lei 9.034/1995."
+      ],
+      "atencao": [
+        "Não afirmar que o artigo revogou a própria Lei 12.850 nem usar automaticamente o regime antigo em fatos atuais."
+      ],
+      "exemplo": "O material cita poder investigatório da Lei 9.034 como vigente: consulte a disciplina atual. Variação: A prova pergunta qual diploma foi revogado: não troque os números das leis.",
+      "prova": [
+        "A lei revogada pelo art. 26 é a 9.034/1995? Sim; o artigo a identifica expressamente."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-27": {
+      "simples": "A lei original entrou em vigor após 45 dias da publicação. Alterações de 2025/2026 possuem marcos próprios; data de revisão do material não é data de vigência nem torna lei mais gravosa retroativa.",
+      "pontos": [
+        "Vacância original: 45 dias; mudanças posteriores seguem seus atos."
+      ],
+      "atencao": [
+        "Não aplicar a vacância original automaticamente a toda alteração futura."
+      ],
+      "exemplo": "A pergunta é a vigência original de 2013: aplica-se o prazo de 45 dias. Variação: A questão é a Lei 15.245/2025: sua vigência é a publicação, não os mesmos 45 dias.",
+      "prova": [
+        "Toda alteração posterior desta lei tem automaticamente vacância de 45 dias? Não; deve-se consultar o ato modificador."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm"
+      ]
+    }
+  }
+}

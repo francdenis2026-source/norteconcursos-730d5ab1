@@ -158,3 +158,43 @@ test('special procedures cover 71 current units with cases and preserve differen
  assert.match(get('terrorismo','art-2').simples,/um ou mais/);
  assert.match(get('terrorismo','art-5').atencao.join(' '),/não aplicar.*indistintamente/i);
 });
+
+test('organization review distinguishes current amendments, historical CP and infiltration limits',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-organizacoes-review-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,37);assert.equal(new Set(p.units.map(r=>r.unit_id)).size,37);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-2').simples,/15.487\/2026.*mesmo sem menor/);
+ assert.match(get('art-288').simples,/15.245\/2025.*§2º/);
+ assert.match(get('art-4').atencao.join(' '),/irrenunciável.*não podem apoiar-se apenas nas declarações/i);
+ assert.match(get('art-10').atencao.join(' '),/720.*virtual/);
+ assert.match(get('art-10-a').simples,/720 dias no total/);
+ assert.match(get('art-21-b').simples,/duas ou mais/);
+ assert.match(get('art-15').atencao.join(' '),/transações.*dado cadastral/);
+});
+
+test('abuse review preserves intent, nonautomatic effects and current advocacy penalty',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-abuso-review-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,40);assert.equal(new Set(p.units.map(r=>r.unit_id)).size,40);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-1').simples,/finalidade específica/);
+ assert.match(get('art-4').simples,/reincidência em abuso.*não são automáticas/);
+ assert.match(get('art-10').simples,/mesmo com intimação prévia/);
+ assert.match(get('art-43').simples,/14.365\/2022.*2 a 4 anos/);
+ assert.match(get('art-42').atencao.join(' '),/15.487\/2026/);
+ assert.match(get('art-15-a').simples,/aumenta 2\/3.*dobra/);
+ assert.match(get('art-22').atencao.join(' '),/não substitui inviolabilidade/);
+});
+
+test('racism review distinguishes personal injury, recreation and nonautomatic effects',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-racismo-review-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,23);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-2-a').simples,/2 a 5 anos.*CP 140.*incondicionada/);
+ assert.match(get('art-20-b').atencao.join(' '),/Não estender automaticamente/);
+ assert.match(get('art-20-a').simples,/1\/3 até metade/);
+ assert.match(get('art-18').simples,/não são automáticos.*art. 17.*vetado/);
+ assert.match(get('art-6').atencao.join(' '),/exatamente 18/);
+});

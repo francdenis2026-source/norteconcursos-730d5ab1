@@ -1,0 +1,375 @@
+{
+  "course_slug": "racismo",
+  "units": {
+    "art-1": {
+      "simples": "A lei abrange crimes resultantes de discriminação/preconceito de raça, cor, etnia, religião ou procedência nacional. STF, ADO 26 e MI 4733: homotransfobia enquadrada no tratamento do racismo enquanto não houver lei específica; embargos de 2023 também alcançam ofensas individuais nos termos decididos.",
+      "pontos": [
+        "Rol literal e aplicação constitucional devem ser distinguidos."
+      ],
+      "atencao": [
+        "Não limitar racismo à cor nem equiparar qualquer desavença pessoal ao tipo, sem elementos discriminatórios. A proteção da liberdade religiosa não autoriza discurso de ódio."
+      ],
+      "exemplo": "Um grupo é discriminado por origem nacional: examine a modalidade legal pertinente. Variação: É ofensa por orientação sexual: consulte a interpretação do STF, não apenas a literalidade do rol.",
+      "prova": [
+        "A lei literal limita-se a raça e cor? Não; inclui etnia, religião e procedência nacional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=ADO&numeroProcesso=26",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=512663"
+      ]
+    },
+    "art-2-a": {
+      "simples": "Desde a Lei 14.532/2023, injúria em razão de raça, cor, etnia ou procedência nacional está nesta lei: reclusão de 2 a 5 anos e multa. Concurso de duas ou mais pessoas aumenta metade. Não se confunde com injúria qualificada religiosa/idoso/deficiência que permanece no CP 140, §3º. STF reconhece injúria racial como racismo imprescritível; regime atual é de ação pública incondicionada.",
+      "pontos": [
+        "Ofensa à pessoa: 2–5 anos e multa; concurso 2+: +1/2."
+      ],
+      "atencao": [
+        "Não ensinar faixa antiga de 1–3 anos nem exigir representação para o art. 2º-A atual. Fato anterior exige análise temporal; pena nova mais gravosa não retroage."
+      ],
+      "exemplo": "Duas pessoas ofendem a dignidade de uma vítima por sua raça: examina-se a majorante de metade. Variação: A ofensa usa condição de idoso sem motivo racial: consulte CP 140, §3º, não aplique automaticamente art. 2º-A.",
+      "prova": [
+        "Toda injúria baseada em religião ou deficiência migrou ao art. 2º-A? Não; CP 140, §3º mantém essas hipóteses próprias.",
+        "O art. 2º-A atual exige representação da vítima? Não; integra o regime de ação penal pública incondicionada da lei."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=475646",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=512663",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=23%2F03%2F2026&num_registro=202400258788"
+      ]
+    },
+    "art-3": {
+      "simples": "Impedir acesso de habilitado a cargo da administração direta/indireta ou concessionária, por motivo abrangido na lei: reclusão de 2 a 5 anos. A discriminação na promoção funcional também é alcançada.",
+      "pontos": [
+        "Acesso público e promoção; 2–5 anos."
+      ],
+      "atencao": [
+        "Não classificar reprovação legítima por falta de requisito como discriminação automática."
+      ],
+      "exemplo": "Candidato habilitado é barrado por sua etnia na admissão pública. Variação: Não atende a requisito legal objetivo aplicado igualmente: isso não prova motivo discriminatório.",
+      "prova": [
+        "O artigo também alcança promoção funcional discriminatória? Sim; o parágrafo único a prevê."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-4": {
+      "simples": "Negar/obstar emprego privado por discriminação: reclusão 2 a 5 anos. Inclui equipamentos, ascensão/benefícios e tratamento, especialmente salário. Recrutamento com exigência racial/étnica de aparência injustificada recebe multa e serviços comunitários nos termos do §2º.",
+      "pontos": [
+        "Emprego, condições e salário; anúncio tem sanção específica."
+      ],
+      "atencao": [
+        "Não atribuir indistintamente pena 2–5 ao anúncio do §2º nem admitir seleção racial arbitrária por preferência comercial."
+      ],
+      "exemplo": "Empregador nega equipamento necessário a empregado por origem étnica, ao contrário dos demais. Variação: O caso é anúncio com aparência racial injustificada: compare a sanção própria de multa e serviços.",
+      "prova": [
+        "O §2º prevê a mesma pena privativa de liberdade do caput para anúncio? Não; prevê multa e prestação de serviços."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-5": {
+      "simples": "Negar servir, atender ou receber cliente no comércio por discriminação abrangida na lei: reclusão de 1 a 3 anos.",
+      "pontos": [
+        "Comércio: 1–3 anos."
+      ],
+      "atencao": [
+        "Não confundir recusa fundada em motivo legítimo comprovado com discriminação, nem supor que justificativa aparente afasta prova de preconceito."
+      ],
+      "exemplo": "Cliente é recusado no balcão unicamente por sua raça. Variação: A loja alega regra neutra, mas a aplica só ao grupo: investigue o motivo real e tratamento.",
+      "prova": [
+        "O tipo alcança negar atendimento ao cliente? Sim; o caput enumera servir, atender e receber."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-6": {
+      "simples": "Recusar, negar ou impedir matrícula/ingresso de aluno por discriminação: reclusão 3 a 5 anos, em ensino público ou privado de qualquer grau. Contra menor de 18, aumento de um terço.",
+      "pontos": [
+        "Ensino: 3–5; vítima menor de 18: +1/3."
+      ],
+      "atencao": [
+        "Não limitar a escola pública nem considerar exatamente 18 como menor de 18."
+      ],
+      "exemplo": "Aluno de 17 anos é impedido de matricular-se por origem nacional: examina-se aumento. Variação: Tem 18 anos completos: o tipo pode existir, mas essa majorante etária não é automática.",
+      "prova": [
+        "A majorante etária alcança quem tem exatamente 18 anos? Não; o texto exige menor de dezoito."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-7": {
+      "simples": "Negar acesso/hospedagem em hotel, pensão, estalagem ou similar por discriminação: reclusão 3 a 5 anos.",
+      "pontos": [
+        "Hospedagem: 3–5, diferente de atendimento comercial geral."
+      ],
+      "atencao": [
+        "Não usar indiscriminadamente a faixa 1–3 do comércio quando a hipótese é hospedagem."
+      ],
+      "exemplo": "Há vaga, mas o hotel recusa hospedar alguém por sua etnia. Variação: O estabelecimento está sem vagas para todos: a indisponibilidade objetiva, sozinha, não prova preconceito.",
+      "prova": [
+        "A pena de recusa discriminatória de hospedagem é de três a cinco anos? Sim; é a faixa do art. 7º."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-8": {
+      "simples": "Negar acesso/atendimento em restaurante, bar, confeitaria ou similar aberto ao público por discriminação: reclusão 1 a 3 anos.",
+      "pontos": [
+        "Alimentação e locais semelhantes abertos ao público."
+      ],
+      "atencao": [
+        "Não confundir com hotel nem transformar motivo legítimo indistinto em crime presumido."
+      ],
+      "exemplo": "O bar atende os demais, mas recusa cliente por religião. Variação: O local está fechado para todos: fechamento comum não demonstra motivo discriminatório.",
+      "prova": [
+        "O artigo abrange bares abertos ao público? Sim; estão expressamente enumerados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-9": {
+      "simples": "Negar acesso/atendimento em estabelecimentos esportivos, diversão ou clubes sociais abertos ao público por discriminação: reclusão 1 a 3 anos.",
+      "pontos": [
+        "Acesso discriminatório em clube/esporte/diversão."
+      ],
+      "atencao": [
+        "Distinguir recusa de entrada do art. 9º da prática/incitação em evento público do art. 20, §2º-A."
+      ],
+      "exemplo": "Clube aberto ao público barra cliente por cor. Variação: O fato é incitação racista durante evento: examine o tipo e a pena próprios do art. 20.",
+      "prova": [
+        "O contexto esportivo elimina a distinção entre recusa de entrada e incitação? Não; são hipóteses legais diferentes."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-10": {
+      "simples": "Negar acesso/atendimento em cabeleireiro, barbearia, termas, massagem ou similar por discriminação: reclusão 1 a 3 anos.",
+      "pontos": [
+        "Serviços pessoais; 1–3 anos."
+      ],
+      "atencao": [
+        "Preferência do prestador não legitima recusa racial."
+      ],
+      "exemplo": "Barbearia recusa atendimento por origem étnica. Variação: Cliente não tem agendamento e a regra é indistinta: examine os elementos, não conclua preconceito só pela espera.",
+      "prova": [
+        "A lei abrange barbearias e estabelecimentos de finalidade semelhante? Sim; o art. 10 os inclui."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-11": {
+      "simples": "Impedir acesso às entradas sociais de edifícios públicos ou residenciais e elevadores/escadas por discriminação: reclusão 1 a 3 anos.",
+      "pontos": [
+        "Entrada social e circulação; edifício público ou residencial."
+      ],
+      "atencao": [
+        "Não reduzir o tipo ao comércio nem justificar segregação racial pela existência de entrada de serviço."
+      ],
+      "exemplo": "A pessoa é enviada à entrada de serviço apenas por sua cor. Variação: Há organização objetiva sem discriminação: deve-se examinar o motivo real e a aplicação da regra.",
+      "prova": [
+        "O tipo também alcança edifícios residenciais? Sim; o texto os menciona."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-12": {
+      "simples": "Impedir acesso/uso de transporte público ou concedido por discriminação: reclusão 1 a 3 anos. A lista de meios é exemplificativa e inclui aéreo, aquaviário e terrestre.",
+      "pontos": [
+        "Acesso ou uso; transportes concedidos também."
+      ],
+      "atencao": [
+        "Não limitar ao ônibus nem ignorar caráter público/concedido por ser empresa privada."
+      ],
+      "exemplo": "Passageiro é impedido de usar serviço concedido por origem nacional. Variação: A empresa alega ser privada: isso não afasta o tipo de transporte concedido.",
+      "prova": [
+        "A exploração por concessionária exclui automaticamente a hipótese? Não; o artigo inclui transporte concedido."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-13": {
+      "simples": "Impedir acesso ao serviço em qualquer ramo das Forças Armadas por discriminação abrangida na lei: reclusão 2 a 4 anos.",
+      "pontos": [
+        "Forças Armadas; 2–4 anos."
+      ],
+      "atencao": [
+        "Não substituir requisito legal legítimo de ingresso por juízo automático de preconceito."
+      ],
+      "exemplo": "Candidato habilitado é barrado no serviço por etnia. Variação: O impedimento decorre de requisito objetivo legítimo não atendido: examine motivo e igualdade de aplicação.",
+      "prova": [
+        "A hipótese limita-se a um ramo das Forças Armadas? Não; refere-se a qualquer ramo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-14": {
+      "simples": "Impedir casamento ou convivência familiar/social por qualquer meio, por discriminação abrangida na lei: reclusão 2 a 4 anos.",
+      "pontos": [
+        "Casamento e convivência; não apenas impedimento registral."
+      ],
+      "atencao": [
+        "Não reduzir o tipo a negativa de cartório, nem presumir crime em qualquer desacordo familiar sem motivo típico."
+      ],
+      "exemplo": "Um agente impede convívio social exclusivamente pela etnia de uma pessoa. Variação: Há desavença pessoal sem elemento discriminatório demonstrado: não basta o conflito para o tipo.",
+      "prova": [
+        "O artigo limita-se ao casamento formal? Não; também protege convivência familiar e social."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-16": {
+      "simples": "Efeitos: servidor perde cargo/função e estabelecimento particular pode ter funcionamento suspenso por até três meses. Pelo art. 18, os efeitos não são automáticos e exigem declaração motivada.",
+      "pontos": [
+        "Suspensão de funcionamento: até 3 meses; motivação no art. 18."
+      ],
+      "atencao": [
+        "Não confundir suspensão de estabelecimento com fechamento definitivo nem perda automática do cargo."
+      ],
+      "exemplo": "A sentença fundamenta suspensão do estabelecimento por período dentro do limite. Variação: Impõe suspensão de seis meses por este artigo: excede o teto de três.",
+      "prova": [
+        "O art. 16 permite suspensão de seis meses? Não; o teto é de três meses."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-18": {
+      "simples": "Os efeitos referidos não são automáticos e devem ser motivadamente declarados na sentença. A remissão ao art. 17 é histórica: esse artigo aparece vetado, sem fornecer efeito vigente autônomo.",
+      "pontos": [
+        "Efeitos com motivação; art. 17 vetado."
+      ],
+      "atencao": [
+        "Não preencher o artigo vetado por imaginação nem aplicar efeitos do art. 16 sem fundamentação."
+      ],
+      "exemplo": "Há condenação e o juiz fundamenta o efeito concretamente aplicável do art. 16. Variação: A sentença presume perda funcional automática: não atende ao art. 18.",
+      "prova": [
+        "A condenação torna automaticamente aplicáveis os efeitos do art. 16? Não; devem ser declarados motivadamente."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-20": {
+      "simples": "Praticar, induzir ou incitar discriminação: reclusão 1 a 3 anos e multa. Divulgação do nazismo com os símbolos indicados: 2 a 5 e multa. Comunicação/redes/publicação: 2 a 5 e multa. Evento público esportivo, religioso, artístico/cultural: 2 a 5 e proibição de frequência por três anos nos locais descritos. Obstar práticas religiosas tem pena do caput, além da violência. Medidas sobre material/publicação têm controle judicial nos §§3º/4º.",
+      "pontos": [
+        "Caput 1–3; hipóteses especiais 2–5; evento tem proibição específica."
+      ],
+      "atencao": [
+        "Não exigir coletividade da vítima em toda aplicação nem confundir divulgação nazista com todo uso histórico/didático da suástica, que exige finalidade de divulgação do nazismo. Distinguir caput da injúria pessoal do art. 2º-A."
+      ],
+      "exemplo": "O autor incita discriminação racial por rede social: examine a faixa do §2º. Variação: É representação acadêmica sem finalidade de divulgar nazismo: não presuma a finalidade típica só pelo símbolo.",
+      "prova": [
+        "A propaganda nazista do §1º exige finalidade de divulgação do nazismo? Sim; o tipo a exige expressamente."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ]
+    },
+    "art-20-a": {
+      "simples": "Crimes da lei em contexto ou com intuito de descontração, diversão ou recreação têm aumento de 1/3 até metade. A majorante foi incluída em 2023.",
+      "pontos": [
+        "Racismo recreativo agrava; não é excludente por ser brincadeira."
+      ],
+      "atencao": [
+        "Não admitir que humor apaga automaticamente elementos discriminatórios; tampouco dispensar análise do tipo."
+      ],
+      "exemplo": "A ofensa racista é usada para diversão dos presentes: examine tipo e majorante. Variação: O autor alega brincadeira: esse contexto não é autorização para discriminar.",
+      "prova": [
+        "A intenção recreativa afasta automaticamente a pena? Não; a lei prevê aumento nesse contexto."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ]
+    },
+    "art-20-b": {
+      "simples": "Penas dos arts. 2º-A e 20 aumentam de 1/3 até metade se praticados por funcionário público, na definição penal, no exercício ou a pretexto da função.",
+      "pontos": [
+        "Só arts. 2º-A/20; vínculo funcional na conduta."
+      ],
+      "atencao": [
+        "Não estender automaticamente esta majorante a todo artigo da lei nem bastar ser servidor em situação inteiramente particular."
+      ],
+      "exemplo": "O servidor usa a função para praticar injúria racial contra usuário do serviço. Variação: O crime cobrado é outro artigo: examine sua disciplina sem transpor automaticamente art. 20-B.",
+      "prova": [
+        "A majorante do art. 20-B vale indistintamente para todos os crimes da lei? Não; o texto indica arts. 2º-A e 20."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ]
+    },
+    "art-20-c": {
+      "simples": "A interpretação considera tratamento discriminatório que cause constrangimento, humilhação, vergonha, medo ou exposição indevida não usualmente dirigido a outros grupos em razão dos motivos previstos. Regra interpretativa não é tipo com pena autônoma.",
+      "pontos": [
+        "Comparar tratamento e motivo, sem substituir requisitos do crime."
+      ],
+      "atencao": [
+        "Não usar desconforto isolado para dispensar conduta e elementos discriminatórios do tipo pertinente."
+      ],
+      "exemplo": "Só pessoas de determinada etnia recebem revista humilhante, enquanto as demais são tratadas de outro modo. Variação: Há tratamento indistinto legítimo: analise contexto antes de atribuir discriminação por mera impressão.",
+      "prova": [
+        "O art. 20-C cria pena autônoma para qualquer desconforto? Não; estabelece critério interpretativo da lei."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ]
+    },
+    "art-20-d": {
+      "simples": "Vítima de racismo deve ser acompanhada de advogado ou defensor público em todos os atos processuais, cíveis e criminais. Proteção incluída em 2023.",
+      "pontos": [
+        "Acompanhamento processual cível e criminal."
+      ],
+      "atencao": [
+        "Não converter essa assistência em ação privada nem dispensar atribuições do MP na ação pública."
+      ],
+      "exemplo": "A vítima recebe assistência da Defensoria em ato processual criminal. Variação: O processo é cível: o artigo também o inclui, sem alterar natureza da ação penal.",
+      "prova": [
+        "A assistência limita-se aos atos criminais? Não; inclui atos cíveis e criminais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ]
+    },
+    "art-21": {
+      "simples": "A lei original entrou em vigor na publicação. O artigo foi renumerado em 1990; as alterações posteriores, incluindo 2023, possuem marcos próprios e análise temporal.",
+      "pontos": [
+        "Publicação original; renumeração não reabre vigência."
+      ],
+      "atencao": [
+        "Não aplicar retroativamente pena mais gravosa de 2023 a fatos anteriores."
+      ],
+      "exemplo": "A questão pergunta a vacância original: vigência na publicação. Variação: Pergunta pena de fato anterior à alteração: analise a sucessão temporal.",
+      "prova": [
+        "A renumeração de 1990 reabre automaticamente a vigência original? Não; não cria por si nova vacância."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ]
+    },
+    "art-22": {
+      "simples": "Revogação de disposições contrárias encerra o diploma. Não permite presumir que toda norma correlata foi revogada nem usar este artigo para apagar alterações posteriores.",
+      "pontos": [
+        "Revogação exige incompatibilidade ou previsão específica; consulte compilação."
+      ],
+      "atencao": [
+        "Não afirmar que o CP 140, §3º foi totalmente revogado: suas hipóteses atuais próprias permanecem."
+      ],
+      "exemplo": "O aluno confere CP 140, §3º atual para injúria religiosa/idoso/deficiência. Variação: A apostila diz que toda injúria qualificada desapareceu: compare as hipóteses legais atuais.",
+      "prova": [
+        "A Lei 14.532 eliminou toda hipótese atual do CP 140, §3º? Não; o dispositivo conserva hipóteses específicas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    }
+  }
+}
