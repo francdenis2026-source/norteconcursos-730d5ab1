@@ -1,0 +1,1067 @@
+{
+  "version": "2026-10-12-armas-final-targeted",
+  "checked_at": "2026-10-12T17:42:56.695921+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "armas",
+      "title": "Lei 10.826/2003 — Estatuto do Desarmamento",
+      "units": 17,
+      "scope_type": "targeted_correction",
+      "course_current_units": 41,
+      "target_unit_keys": [
+        "art-22",
+        "art-23",
+        "art-24",
+        "art-25",
+        "art-26",
+        "art-27",
+        "art-28",
+        "art-29",
+        "art-30",
+        "art-31",
+        "art-32",
+        "art-33",
+        "art-34",
+        "art-34-a",
+        "art-35",
+        "art-37",
+        "anexo-1"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "source_sha256": "31c397ac2b5ec75c49ee6f587d3fac364e2a22577b19d954990d26cd1a49ba62",
+      "source_checked_at": "2026-10-12T16:18:16.577539+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-22",
+      "unit_id": "be0a18de-0e40-5f8b-ad9d-6ec78982a95c",
+      "content_sha256": "4f3564d2c4fb70c749c936b3ee576bfb886b670d9dbae1467e2cb9989ba40850",
+      "simples": "O Ministério da Justiça pode celebrar convênios com Estados e DF para cumprir a lei.",
+      "pontos": [
+        "Poderá: autorização de cooperação, não obrigação de celebrar todo convênio.",
+        "Partícipes expressos: Estados e Distrito Federal; finalidade vinculada ao cumprimento do Estatuto."
+      ],
+      "atencao": [
+        "Convênio não permite criar crime, dispensar requisito estatutário ou alterar competência por simples acordo."
+      ],
+      "exemplo": "MJ e Estado ajustam cooperação para execução da lei. Variação: acordo pretende dispensar registro obrigatório; cooperação não autoriza contrariar o Estatuto.",
+      "prova": [
+        "Todo Estado deve receber convênio automaticamente? Não; o dispositivo usa poderá.",
+        "O convênio pode dispensar obrigação legal de registro? Não; a cooperação visa cumprir a lei."
+      ],
+      "termos": [
+        "poderá",
+        "convênios",
+        "Estados e Distrito Federal"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "be0a18de-0e40-5f8b-ad9d-6ec78982a95c",
+        "content_sha256": "4f3564d2c4fb70c749c936b3ee576bfb886b670d9dbae1467e2cb9989ba40850",
+        "simples": "O Ministério da Justiça poderá celebrar convênios com os Estados e o Distrito Federal para o cumprimento do disposto na Lei.",
+        "pontos": [
+          "Convênios do Ministério da Justiça com Estados e Distrito Federal."
+        ],
+        "atencao": [
+          "Faculdade ('poderá')."
+        ],
+        "exemplo": "O Ministério firma convênio com um Estado para ações de controle de armas.",
+        "prova": [
+          "Assertiva que torna obrigatória a celebração de convênios erra: é faculdade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-23",
+      "unit_id": "ff1cd561-5c46-5929-bfaf-e88eeeb25931",
+      "content_sha256": "866b53a47f560b9c057b8c425c0efadce543fa72d357b5d8822cb51cf74ed736",
+      "simples": "Classificação/definição de armas e produtos controlados é disciplinada por ato do chefe do Executivo federal mediante proposta do Exército. O artigo também estabelece identificação de munições, segurança/identificação de armas e autorização de insumos de recarga para instituições específicas.",
+      "pontos": [
+        "§1º: embalagens de munição com código de barras para identificar fabricante/adquirente e demais dados regulamentares.",
+        "§2º: para órgãos do art. 6º, identificação de lote/adquirente no culote, conforme regulamento.",
+        "§3º: dispositivo intrínseco de segurança e identificação gravado no corpo, marco de um ano da publicação e exclusão textual dos órgãos do art. 6º.",
+        "§4º, redação da Lei 14.967/2024: ensino policial, guardas referidas e escolas de segurança privada podem adquirir insumos/máquinas de recarga exclusivamente para suas atividades, mediante autorização."
+      ],
+      "atencao": [
+        "Classificações dependem do Decreto 11.615/2023 atualizado pelo 12.345/2024 e atos complementares de calibres da PF/Exército. Não congelar tabela antiga nem definir categoria só pelo nome popular da arma.",
+        "Identificação da embalagem e identificação de lote/adquirente são comandos distintos. Autorização institucional de recarga não é permissão geral de comércio ou produção."
+      ],
+      "exemplo": "Escola de formação autorizada adquire insumos de recarga para suas próprias atividades, observando regras atuais. Variação: pretende vendê-los livremente com base no §4º; a finalidade exclusiva não cobre essa conclusão.",
+      "prova": [
+        "A classificação pode ser fixada por qualquer município? Não; há competência federal e procedimento previsto.",
+        "Autorização do §4º equivale a permissão geral de comércio de recargas? Não; a finalidade é exclusiva e depende de autorização."
+      ],
+      "termos": [
+        "chefe do Poder Executivo Federal",
+        "uso exclusivo",
+        "autorização",
+        "código de barras"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.gov.br/pf/pt-br/assuntos/armas/normativos/legislacao",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12345.htm"
+      ],
+      "expected": {
+        "unit_id": "ff1cd561-5c46-5929-bfaf-e88eeeb25931",
+        "content_sha256": "866b53a47f560b9c057b8c425c0efadce543fa72d357b5d8822cb51cf74ed736",
+        "simples": "A classificação legal, técnica e geral, bem como a definição das armas de fogo e demais produtos controlados, de usos proibidos, restritos, permitidos ou obsoletos e de valor histórico, serão disciplinadas em ato do chefe do Poder Executivo Federal, mediante proposta do Comando do Exército. Todas as munições comercializadas deverão estar em embalagens com código de barras que permita identificar o fabricante e o adquirente. Para os órgãos do art. 6º, somente serão expedidas autorizações de compra de munição com identificação do lote e do adquirente no culote dos projéteis. As armas fabricadas a partir de um ano da publicação conterão dispositivo intrínseco de segurança e de identificação. Instituições de ensino policial, guardas municipais e escolas de formação de segurança privada poderão adquirir insumos e máquinas de recarga.",
+        "pontos": [
+          "Classificação de uso proibido, restrito, permitido ou obsoleto por ato do chefe do Executivo, a proposta do Exército.",
+          "Munição com código de barras.",
+          "Identificação do lote e do adquirente no culote para os órgãos do art. 6º.",
+          "Dispositivo de segurança e identificação nas armas fabricadas depois de um ano."
+        ],
+        "atencao": [
+          "A CLASSIFICAÇÃO (permitido, restrito, proibido) vem de ATO DO EXECUTIVO (decreto), com proposta do Exército.",
+          "Redação dada pela Lei nº 11.706, de 2008."
+        ],
+        "exemplo": "Um decreto define quais armas são de uso permitido e quais são de uso restrito.",
+        "prova": [
+          "Assertiva que fixa na própria lei a lista de armas de uso restrito erra: a classificação é por ato do chefe do Executivo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 24"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-24",
+      "unit_id": "60460b2c-f7a0-5d55-b04f-ec1e1c9f6cfa",
+      "content_sha256": "39628a1cf27b1cf8d439f03a0a058a0af2b5b9079e7ab1632e535e604adbd275",
+      "simples": "O artigo atribui ao Exército autorização/fiscalização de produção, exportação, importação, desembaraço e comércio de armas/produtos controlados, ressalvado o art. 2º. A referência a CACs deve integrar a regulamentação administrativa atual.",
+      "pontos": [
+        "A ressalva das atribuições do Sinarm impede ler a competência como universal e isolada.",
+        "Atividades industriais e produtos controlados não se confundem com porte pessoal de defesa."
+      ],
+      "atencao": [
+        "Transição de 2025: serviços de CACs passaram ao regime da PF conforme Decreto 12.345/2024, IN 311/2025 alterada pela 322/2025 e Portaria 19.040/2025. A remissão residual não autoriza afirmar que todo serviço de CAC continua exclusivamente no Exército.",
+        "Conferir categoria e serviço; persistem competências militares próprias."
+      ],
+      "exemplo": "Empresa busca autorização para produção de produto controlado: identificar competência industrial e regulamento. Variação: CAC busca serviço de seu acervo; observar o canal da PF vigente para o serviço, sem usar o artigo isolado.",
+      "prova": [
+        "O artigo elimina as atribuições do art. 2º? Não; as ressalva expressamente.",
+        "A remissão a CACs dispensa normas administrativas atuais? Não; integrar mudanças e competências remanescentes."
+      ],
+      "termos": [
+        "excetuadas",
+        "Comando do Exército",
+        "produtos controlados"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.gov.br/pf/pt-br/assuntos/armas/normativos/legislacao",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm"
+      ],
+      "expected": {
+        "unit_id": "60460b2c-f7a0-5d55-b04f-ec1e1c9f6cfa",
+        "content_sha256": "39628a1cf27b1cf8d439f03a0a058a0af2b5b9079e7ab1632e535e604adbd275",
+        "simples": "Excetuadas as atribuições do art. 2º (Sinarm), compete ao Comando do Exército autorizar e fiscalizar a produção, exportação, importação, desembaraço alfandegário e o comércio de armas de fogo e demais produtos controlados, inclusive o registro e o porte de trânsito de arma de fogo de colecionadores, atiradores e caçadores.",
+        "pontos": [
+          "Comando do Exército autoriza e fiscaliza produção, exportação, importação, desembaraço e comércio.",
+          "Também registro e porte de trânsito de colecionadores, atiradores e caçadores."
+        ],
+        "atencao": [
+          "O EXÉRCITO fiscaliza a produção e o comércio; o SINARM (PF) cadastra."
+        ],
+        "exemplo": "A fábrica de armas é autorizada e fiscalizada pelo Comando do Exército.",
+        "prova": [
+          "Assertiva que atribui à Polícia Federal a fiscalização da produção de armas erra: é do Comando do Exército."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º",
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-25",
+      "unit_id": "9df12527-a021-5155-9810-c1ccefb9a982",
+      "content_sha256": "07cfec443b75c6960b6da2e6593dff600b2b77b9443c43374dd574b602bdf13e",
+      "simples": "Arma apreendida, periciada e com laudo juntado, sem interesse restante à persecução, é encaminhada pelo juiz ao Exército em até 48 horas para destruição ou doação regulamentada. Há requisitos e prioridades próprios para doação.",
+      "pontos": [
+        "Não destruir enquanto houver interesse à persecução penal; perícia e juntada precedem a destinação.",
+        "§1º: parecer favorável, padrão/dotação, prioridades do MJ, ouvido Exército, relatório reservado trimestral e manifestação de interesse.",
+        "§1º-A, Lei 13.886/2019: armas/munições relacionadas ao tráfico e perdidas à União, em bom estado certificado, têm prioridade para segurança pública/sistema penitenciário da UF responsável pela apreensão.",
+        "§2º: relação enviada ao juiz para perdimento em favor da beneficiária. §3º: beneficiária transporta e cadastra em Sinarm/Sigma.",
+        "§4º vetado; §5º: Judiciário informa semestralmente armas acauteladas, características e local ao sistema pertinente."
+      ],
+      "atencao": [
+        "48 horas, relatório trimestral e relação semestral são prazos de atos diferentes. Apreensão não equivale por si a doação imediata.",
+        "Prioridade do §1º-A exige seu contexto, perdimento e bom estado; não estender a todo bem de todo processo nem beneficiar particular livremente."
+      ],
+      "exemplo": "Após perícia e fim do interesse processual, juiz encaminha arma para destinação em até 48 horas. Variação: arma vinculada ao tráfico perdida à União está em bom estado; verificar prioridade da UF apreensora e rito da doação, não distribuição automática.",
+      "prova": [
+        "Pode destruir a arma antes da perícia só porque foi apreendida? Não; o caput exige perícia, juntada e fim do interesse processual.",
+        "Relatório de possível doação e informação de armas em juízo têm mesma periodicidade? Não; respectivamente trimestral e semestral."
+      ],
+      "termos": [
+        "48 horas",
+        "não mais interessarem",
+        "trimestral",
+        "semestralmente"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13886.htm"
+      ],
+      "expected": {
+        "unit_id": "9df12527-a021-5155-9810-c1ccefb9a982",
+        "content_sha256": "07cfec443b75c6960b6da2e6593dff600b2b77b9443c43374dd574b602bdf13e",
+        "simples": "As armas de fogo apreendidas, após a elaboração do laudo pericial e sua juntada aos autos, quando não mais interessarem à persecução penal, serão encaminhadas pelo juiz competente ao Comando do Exército, no prazo de até 48 horas, para destruição ou doação aos órgãos de segurança pública ou às Forças Armadas, na forma do regulamento. As armas e munições apreendidas em decorrência do tráfico de drogas, perdidas em favor da União, devem ser, após perícia que ateste seu bom estado, destinadas com prioridade para os órgãos de segurança pública e do sistema penitenciário da unidade da federação responsável pela apreensão. O Comando do Exército encaminha a relação das armas a serem doadas ao juiz, que determina o perdimento em favor da instituição beneficiada. O Poder Judiciário instituirá instrumentos para o encaminhamento semestral ao Sinarm ou ao Sigma da relação de armas acauteladas em juízo.",
+        "pontos": [
+          "Arma apreendida sem interesse penal: juiz a envia ao Exército em até 48 horas.",
+          "Destino: destruição ou doação a órgãos de segurança ou Forças Armadas.",
+          "Armas do tráfico de drogas: prioridade para a segurança pública e o sistema penitenciário do Estado da apreensão.",
+          "Relação semestral de armas acauteladas em juízo ao Sinarm ou Sigma."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: caput com redação da Lei nº 13.886, de 2019 (prazo de 48 horas).",
+          "Prazo de 48 HORAS."
+        ],
+        "exemplo": "Após a perícia, o juiz envia a arma ao Exército em 48 horas para destruição ou doação.",
+        "prova": [
+          "Assertiva que fixa em 10 dias o prazo de envio da arma ao Exército erra: são 48 horas."
+        ],
+        "termos": [
+          {
+            "termo": "Sigma",
+            "significado": "Sistema de Gerenciamento Militar de Armas, do Exército."
+          }
+        ],
+        "remissoes": [
+          "Art. 24"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-26",
+      "unit_id": "1b4c6cf9-9146-573a-957d-64e64d70eaa0",
+      "content_sha256": "8d4f87586df90c3bfd0d94420ecc2f29569df11719ff9ee5a1239fd4c15fb117",
+      "simples": "Fabricação, venda, comercialização e importação de brinquedos/réplicas/simulacros que possam se confundir com armas são vedadas. Exceção para instrução, adestramento ou coleção de usuário autorizado, nas condições fixadas.",
+      "pontos": [
+        "Não é proibição indistinta de qualquer brinquedo: observar semelhança descrita.",
+        "Exceção tem finalidade, usuário autorizado e condições do Exército."
+      ],
+      "atencao": [
+        "Não confundir simulacro com arma de fogo apta nem concluir que toda posse de réplica configura os tipos dos arts. 12–16. Seu uso em outro crime pode ter tratamento próprio."
+      ],
+      "exemplo": "Comerciante vende réplica confundível com arma real sem enquadramento autorizado: examinar a vedação. Variação: réplica destinada a instrução de usuário autorizado atende as condições próprias; examinar a exceção.",
+      "prova": [
+        "Toda réplica é liberada porque não dispara? Não; a lei veda atos com réplicas confundíveis, salvo exceção.",
+        "Coleção dispensa usuário autorizado e condições? Não; ambas exigências permanecem."
+      ],
+      "termos": [
+        "que se possam confundir",
+        "excetuam-se",
+        "usuário autorizado"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1b4c6cf9-9146-573a-957d-64e64d70eaa0",
+        "content_sha256": "8d4f87586df90c3bfd0d94420ecc2f29569df11719ff9ee5a1239fd4c15fb117",
+        "simples": "São vedadas a fabricação, a venda, a comercialização e a importação de brinquedos, réplicas e simulacros de armas de fogo, que com estas se possam confundir. Excetuam-se da proibição as réplicas e os simulacros destinados à instrução, ao adestramento ou à coleção de usuário autorizado, nas condições fixadas pelo Comando do Exército.",
+        "pontos": [
+          "Vedados brinquedos, réplicas e simulacros que se possam confundir com armas de fogo.",
+          "Exceção: instrução, adestramento ou coleção de usuário autorizado."
+        ],
+        "atencao": [
+          "Exceção condicionada a regras do Comando do Exército."
+        ],
+        "exemplo": "A venda de pistola de brinquedo idêntica à real é proibida.",
+        "prova": [
+          "Assertiva que permite a venda de simulacros indistinguíveis de armas a qualquer pessoa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 24"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-27",
+      "unit_id": "9a04ea28-f2c0-59a0-b171-0b6ea01421ed",
+      "content_sha256": "e6e6b1ec30b9e3eadd99706c550307de39759b302e2e001e962e2e380d8b477e",
+      "simples": "Aquisição de armas de uso restrito depende de autorização excepcional do Exército; o parágrafo único exclui desse comando aquisições dos Comandos Militares.",
+      "pontos": [
+        "Excepcionalidade impede tratar aquisição como direito geral automático.",
+        "Não confundir autorização de aquisição com registro, posse e porte."
+      ],
+      "atencao": [
+        "STF, ADIs 6119/6139/6466: aquisição restrita vinculada ao interesse de segurança pública ou defesa nacional, não mera preferência pessoal. Integrar decisões e regulamento atual.",
+        "Exceção dos Comandos Militares não se estende automaticamente a qualquer servidor."
+      ],
+      "exemplo": "Pessoa pede arma restrita apenas por gosto pessoal: isso não substitui excepcionalidade, interesse admitido e requisitos atuais. Variação: aquisição por Comando Militar tem a ressalva expressa do parágrafo único, sem generalizar a particulares.",
+      "prova": [
+        "Preferência pessoal garante aquisição restrita automaticamente? Não; observar excepcionalidade e interpretação constitucional.",
+        "A exceção menciona qualquer servidor público? Não; menciona aquisições dos Comandos Militares."
+      ],
+      "termos": [
+        "excepcionalmente",
+        "uso restrito",
+        "Comandos Militares"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=510073&ori=1"
+      ],
+      "expected": {
+        "unit_id": "9a04ea28-f2c0-59a0-b171-0b6ea01421ed",
+        "content_sha256": "e6e6b1ec30b9e3eadd99706c550307de39759b302e2e001e962e2e380d8b477e",
+        "simples": "Caberá ao Comando do Exército autorizar, excepcionalmente, a aquisição de armas de fogo de uso restrito. O disposto não se aplica às aquisições dos Comandos Militares. O texto remete a ação direta de inconstitucionalidade.",
+        "pontos": [
+          "Aquisição de arma de uso restrito: autorização EXCEPCIONAL do Comando do Exército.",
+          "Não se aplica às aquisições dos Comandos Militares."
+        ],
+        "atencao": [
+          "Autorização EXCEPCIONAL."
+        ],
+        "exemplo": "A compra de arma de uso restrito por particular exige autorização excepcional do Exército.",
+        "prova": [
+          "Assertiva que torna regra a autorização de aquisição de arma de uso restrito erra: é excepcional."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-28",
+      "unit_id": "a800433b-b250-51cc-9321-834e2ac17efc",
+      "content_sha256": "14e9267f2d223b14e8f6fd08d78af6517ebf617b0d453655c7ad6ef7e030a551",
+      "simples": "Regra de idade: menor de 25 anos não pode adquirir arma, ressalvadas categorias dos incisos I, II, III, V, VI, VII e X do art. 6º.",
+      "pontos": [
+        "Atingir maioridade civil aos 18 não satisfaz automaticamente o requisito de aquisição.",
+        "Rol de ressalvas não contém todos os incisos do art. 6º; conferir categoria exata.",
+        "Exceção de idade não dispensa os outros requisitos aplicáveis."
+      ],
+      "atencao": [
+        "Idade de aquisição não é idade universal de imputabilidade nem autorização de porte. Categoria listada exige comprovação, não alegação de profissão semelhante."
+      ],
+      "exemplo": "Civil de 22 anos sem ressalva legal não pode adquirir apenas porque é maior de idade. Variação: integrante de categoria expressamente ressalvada deve comprovar enquadramento e cumprir demais exigências.",
+      "prova": [
+        "Maioridade civil aos 18 garante compra de arma? Não; há regra específica de 25 anos e ressalvas.",
+        "A ressalva de idade elimina demais requisitos? Não; permanece o regime aplicável."
+      ],
+      "termos": [
+        "menor de 25",
+        "ressalvados",
+        "incisos I, II, III, V, VI, VII e X"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a800433b-b250-51cc-9321-834e2ac17efc",
+        "content_sha256": "14e9267f2d223b14e8f6fd08d78af6517ebf617b0d453655c7ad6ef7e030a551",
+        "simples": "É vedado ao menor de 25 anos adquirir arma de fogo, ressalvados os integrantes das entidades constantes dos incisos I, II, III, V, VI, VII e X do art. 6º.",
+        "pontos": [
+          "Menor de 25 anos não pode adquirir arma de fogo.",
+          "Ressalva: integrantes de certas entidades do art. 6º."
+        ],
+        "atencao": [
+          "Idade mínima: 25 ANOS (a regra do art. 4º exige, no caso comum, requisitos adicionais)."
+        ],
+        "exemplo": "Um jovem de 22 anos não pode comprar arma de fogo, salvo se integrar entidade ressalvada.",
+        "prova": [
+          "Assertiva que fixa em 21 anos a idade mínima para adquirir arma de fogo erra: são 25 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-29",
+      "unit_id": "d6e60196-7950-5c92-afe5-fd1151bb34b0",
+      "content_sha256": "11e1a224274e1785c7effaa645a59c260a0559598d2e7719a7341ddbfe10e57e",
+      "simples": "O artigo disciplinou expiração/transição dos portes antigos e renovação específica sem ônus em 90 dias. A Lei 10.884/2004 alterou o termo inicial desse regime histórico para a publicação do decreto regulamentador, nas condições de seu art. 1º.",
+      "pontos": [
+        "Marco histórico original foi alterado pela Lei 10.884/2004: observar publicação do decreto regulamentador e o limite legal daquele regime, não cada novo pedido.",
+        "Renovação prevista no parágrafo único remete aos arts. 4º, 6º e 10, dentro do prazo e condições históricos."
+      ],
+      "atencao": [
+        "Não memorizar 90 dias como validade geral de todo porte atual nem anunciar gratuidade permanente. Consultar autorização e regulamento vigente para pedidos atuais."
+      ],
+      "exemplo": "Ao estudar caso de transição de 2003/2004, identificar o marco de publicação e legislação correlata. Variação: pedido atual não obtém porte gratuito ou validade de 90 dias simplesmente por invocar esta transição.",
+      "prova": [
+        "Todo porte atual tem prazo obrigatório de 90 dias por este artigo? Não; trata de transição histórica.",
+        "A renovação gratuita histórica vale para todo pedido atual? Não; respeitar seu marco e condições."
+      ],
+      "termos": [
+        "já concedidas",
+        "após a publicação",
+        "90 dias"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.884.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm"
+      ],
+      "expected": {
+        "unit_id": "d6e60196-7950-5c92-afe5-fd1151bb34b0",
+        "content_sha256": "11e1a224274e1785c7effaa645a59c260a0559598d2e7719a7341ddbfe10e57e",
+        "simples": "As autorizações de porte de armas de fogo já concedidas expirar-se-ão 90 dias após a publicação da Lei. O detentor de autorização com prazo de validade superior a 90 dias poderá renová-la, perante a Polícia Federal, nas condições dos arts. 4º, 6º e 10, no prazo de 90 dias após sua publicação, sem ônus para o requerente.",
+        "pontos": [
+          "Portes anteriores expiram em 90 dias da publicação da lei.",
+          "Renovação na PF, nas condições da lei, sem custo, em 90 dias."
+        ],
+        "atencao": [
+          "Dispositivo transitório."
+        ],
+        "exemplo": "Texto transitório da época da edição do Estatuto.",
+        "prova": [
+          "Assertiva que aplica hoje o prazo de 90 dias do art. 29 erra: é dispositivo transitório."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 10"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-30",
+      "unit_id": "94ec926a-e96a-5fae-90d9-e7fbe2a83fdb",
+      "content_sha256": "5c6ec2760c744c9059c834a8719006139a928d643426e6d337869d544b28224e",
+      "simples": "O dispositivo trata da regularização histórica de armas permitidas ainda sem registro. Embora transcreva 31/12/2008, o prazo foi prorrogado pela Lei 11.922/2009 para 31/12/2009; não é autorização de regularização ilimitada atual.",
+      "pontos": [
+        "Documentos: identificação, residência fixa e nota fiscal, prova admitida de origem lícita ou declaração com características e propriedade.",
+        "Dispensas de taxas e requisitos I–III do art. 4º pertencem ao regime transitório delimitado.",
+        "Parágrafo único remete ao certificado provisório da PF, nos termos históricos do art. 5º, §4º."
+      ],
+      "atencao": [
+        "Súmula 513/STJ: a abolitio criminis temporária da posse não alcança arma com numeração raspada, suprimida ou adulterada. Não confundir com porte nem usar prazo encerrado como imunidade atual.",
+        "A Lei 11.922 prorrogou expressamente art. 30 e art. 5º, §3º. Conferir tempo do fato e possibilidade de registro na hipótese histórica."
+      ],
+      "exemplo": "Questão menciona regularização de arma permitida em 2009: observar a prorrogação e demais condições, não só data de 2008. Variação: posse atual sem registro não fica automaticamente atípica por existir este artigo histórico.",
+      "prova": [
+        "A data de 2008 é o único marco sem prorrogação? Não; a Lei 11.922 prorrogou para 31/12/2009.",
+        "A regra transitória autoriza posse irregular indefinidamente? Não; seu prazo foi delimitado."
+      ],
+      "termos": [
+        "31 de dezembro de 2009",
+        "origem lícita",
+        "regime transitório"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11922.htm",
+        "https://www.stj.jus.br/docs_internet/jurisprudencia/tematica/download/SU/Sumulas/SumulasSTJ.pdf"
+      ],
+      "expected": {
+        "unit_id": "94ec926a-e96a-5fae-90d9-e7fbe2a83fdb",
+        "content_sha256": "5c6ec2760c744c9059c834a8719006139a928d643426e6d337869d544b28224e",
+        "simples": "Os possuidores e proprietários de arma de fogo de uso permitido ainda não registrada deveriam solicitar seu registro até o dia 31 de dezembro de 2008, mediante documento de identificação pessoal e comprovante de residência fixa, acompanhados de nota fiscal de compra ou comprovação da origem lícita da posse, ou declaração firmada com as características da arma e a condição de proprietário, dispensados de taxas e de parte das exigências do art. 4º. O proprietário poderia obter, na Polícia Federal, certificado de registro provisório.",
+        "pontos": [
+          "Regularização do registro até 31 de dezembro de 2008.",
+          "Documentos: identificação, residência e nota fiscal ou prova da origem lícita da posse.",
+          "Dispensa de taxas e de exigências do art. 4º.",
+          "Certificado de registro provisório."
+        ],
+        "atencao": [
+          "Dispositivo transitório com prazos prorrogados por leis posteriores."
+        ],
+        "exemplo": "Texto transitório de regularização de armas antigas.",
+        "prova": [
+          "Assertiva que mantém aberto indefinidamente o prazo do art. 30 erra: o prazo foi fixado para dezembro de 2008, com prorrogações."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-31",
+      "unit_id": "b4626c87-442c-5baa-bc73-00a06c54b3eb",
+      "content_sha256": "b48711500741340cddb2d18946a2d170595cecd355e160505c550663079473de",
+      "simples": "Possuidores/proprietários de armas regularmente adquiridas podem entregá-las à PF, a qualquer tempo, com recibo e indenização conforme regulamento.",
+      "pontos": [
+        "Objeto: arma adquirida regularmente.",
+        "A qualquer tempo distingue a entrega da antiga janela de registro.",
+        "Recibo e indenização têm procedimento regulamentar."
+      ],
+      "atencao": [
+        "Entregar arma não equivale a vendê-la informalmente a particular. Comparar art. 32, que disciplina entrega espontânea e eventual posse irregular."
+      ],
+      "exemplo": "Titular de arma regularmente adquirida decide entregá-la à PF e recebe recibo, seguindo indenização regulamentada. Variação: vende informalmente a terceiro; isso não é a entrega pública prevista neste artigo.",
+      "prova": [
+        "A entrega do art. 31 ficou limitada a 2008? Não; o texto diz a qualquer tempo.",
+        "A entrega pode ser substituída por venda informal a particular? Não; o artigo prevê entrega à PF com procedimento próprio."
+      ],
+      "termos": [
+        "regularmente",
+        "a qualquer tempo",
+        "recibo e indenização"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm"
+      ],
+      "expected": {
+        "unit_id": "b4626c87-442c-5baa-bc73-00a06c54b3eb",
+        "content_sha256": "b48711500741340cddb2d18946a2d170595cecd355e160505c550663079473de",
+        "simples": "Os possuidores e proprietários de armas de fogo adquiridas regularmente poderão, a qualquer tempo, entregá-las à Polícia Federal, mediante recibo e indenização, nos termos do regulamento da Lei.",
+        "pontos": [
+          "Entrega voluntária à Polícia Federal, a qualquer tempo.",
+          "Mediante recibo e indenização."
+        ],
+        "atencao": [
+          "Para armas adquiridas REGULARMENTE."
+        ],
+        "exemplo": "O proprietário entrega a arma regular à PF e recebe indenização.",
+        "prova": [
+          "Assertiva que restringe a entrega com indenização a um prazo certo erra: pode ser feita a qualquer tempo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-32",
+      "unit_id": "d3b69083-4034-5ee9-a4a6-90e70fffa5f6",
+      "content_sha256": "9765a601c646ef91ca30221c9e147394e5ff3db0a49121c26fba5abf934dc865",
+      "simples": "Entrega espontânea de arma mediante recibo tem presunção de boa-fé e indenização regulamentada; extingue a punibilidade da eventual posse irregular dessa arma.",
+      "pontos": [
+        "Spontaneidade e entrega são elementos próprios, não sinônimos de apreensão coercitiva.",
+        "Efeito penal refere-se à eventual posse irregular da arma entregue.",
+        "Parágrafo único revogado em 2008 não constitui requisito atual adicional."
+      ],
+      "atencao": [
+        "Não estender extinção a homicídio, roubo, porte anterior ou todo crime em que a arma tenha sido usada. Não apresentar qualquer apreensão policial como entrega espontânea.",
+        "Distinguir art. 30: prazo de registro histórico e entrega espontânea atual têm regimes diferentes."
+      ],
+      "exemplo": "Pessoa entrega espontaneamente arma e segue procedimento com recibo: examinar extinção da eventual posse irregular. Variação: arma é apreendida em abordagem após roubo; não afirmar que a apreensão apaga automaticamente roubo e demais delitos.",
+      "prova": [
+        "A entrega apaga automaticamente todos os crimes praticados com a arma? Não; o efeito textual é a eventual posse irregular da arma entregue.",
+        "Apreensão coercitiva equivale sempre a entrega espontânea? Não; espontaneidade precisa ser examinada."
+      ],
+      "termos": [
+        "espontaneamente",
+        "presumindo-se de boa-fé",
+        "eventual posse irregular"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11615.htm"
+      ],
+      "expected": {
+        "unit_id": "d3b69083-4034-5ee9-a4a6-90e70fffa5f6",
+        "content_sha256": "9765a601c646ef91ca30221c9e147394e5ff3db0a49121c26fba5abf934dc865",
+        "simples": "Os possuidores e proprietários de arma de fogo poderão entregá-la, espontaneamente, mediante recibo e, presumindo-se de boa-fé, serão indenizados, na forma do regulamento, ficando extinta a punibilidade de eventual posse irregular da referida arma.",
+        "pontos": [
+          "Entrega espontânea mediante recibo.",
+          "Presunção de boa-fé e indenização.",
+          "Extingue-se a punibilidade da posse irregular."
+        ],
+        "atencao": [
+          "Extingue a punibilidade da POSSE irregular (não abrange outros crimes).",
+          "ATUALIZAÇÃO: redação dada pela Lei nº 11.706, de 2008."
+        ],
+        "exemplo": "O dono de arma sem registro a entrega à PF e fica livre da punição pela posse irregular.",
+        "prova": [
+          "Assertiva que extingue a punibilidade de qualquer crime praticado com a arma entregue erra: o benefício é da posse irregular."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12",
+          "Art. 31"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-33",
+      "unit_id": "02ab6f6f-8ce1-5695-9c19-b2aee6a425b7",
+      "content_sha256": "ade8cde1364cecdf46cd8d149fa0d2339c81fec36bccd47a799822a0e0f4f0fc",
+      "simples": "Multa administrativa de R$ 100 mil a R$ 300 mil, regulamentada, alcança empresa de transporte que deliberadamente facilite transporte irregular/inseguro de arma ou munição e empresa de armamentos que estimule uso indiscriminado em publicidade, salvo publicações especializadas.",
+      "pontos": [
+        "Transporte: aéreo, rodoviário, ferroviário, marítimo, fluvial ou lacustre; conduta deliberada é requisito do inciso I.",
+        "Publicidade: empresa de produção/comércio e estímulo ao uso indiscriminado; exceção textual de publicação especializada.",
+        "Faixa de multa não substitui requisitos de eventual responsabilidade penal."
+      ],
+      "atencao": [
+        "Não imputar a multa a qualquer acidente de transporte sem examinar deliberadamente. Não estender exceção publicitária a toda propaganda ou dispensar outras regras aplicáveis."
+      ],
+      "exemplo": "Empresa deliberadamente facilita transporte de munição sem autorização: verificar multa e demais responsabilidades. Variação: incidente não demonstra a conduta deliberada descrita; não aplicar o inciso I por presunção automática.",
+      "prova": [
+        "O inciso I dispensa o elemento deliberadamente? Não; ele está expressamente no tipo administrativo.",
+        "A faixa é de R$ 100 a R$ 300? Não; é de R$ 100 mil a R$ 300 mil."
+      ],
+      "termos": [
+        "deliberadamente",
+        "cem mil",
+        "trezentos mil",
+        "publicações especializadas"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "02ab6f6f-8ce1-5695-9c19-b2aee6a425b7",
+        "content_sha256": "ade8cde1364cecdf46cd8d149fa0d2339c81fec36bccd47a799822a0e0f4f0fc",
+        "simples": "Será aplicada multa de R$ 100.000,00 a R$ 300.000,00, conforme especificar o regulamento, à empresa de transporte aéreo, rodoviário, ferroviário, marítimo, fluvial ou lacustre que deliberadamente, por qualquer meio, faça, promova, facilite ou permita o transporte de arma ou munição sem a devida autorização ou com inobservância das normas de segurança; e à empresa de produção ou comércio de armamentos que realize publicidade para venda, estimulando o uso indiscriminado de armas de fogo, exceto nas publicações especializadas.",
+        "pontos": [
+          "Multa de R$ 100.000,00 a R$ 300.000,00.",
+          "Empresa de transporte que permite o transporte irregular de arma ou munição.",
+          "Empresa de armamentos que faz publicidade estimulando o uso indiscriminado."
+        ],
+        "atencao": [
+          "Sanção ADMINISTRATIVA (multa), e não crime."
+        ],
+        "exemplo": "A transportadora que facilita o transporte de armas sem autorização sofre multa.",
+        "prova": [
+          "Assertiva que trata o art. 33 como crime com pena de reclusão erra: prevê multa administrativa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 34"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-34",
+      "unit_id": "1dd1d9b3-e110-539d-b65b-50d7606eaa6b",
+      "content_sha256": "2eb370d9e98bc5c2decb2fff8eca03a95be9be4dc041c818c1e9c7ad8211f319",
+      "simples": "Promotores de eventos fechados com mais de mil pessoas devem prevenir ingresso de armados, ressalvados eventos de liberdade de consciência/crença e culto do art. 5º, VI, da Constituição. Transportadoras internacionais/interestaduais de passageiros devem prevenir embarque de armados.",
+      "pontos": [
+        "Caput: local fechado e aglomeração superior a mil, não simplesmente qualquer reunião de mil.",
+        "Parágrafo único: transporte internacional e interestadual de passageiros, sem repetir o limite de público do caput.",
+        "Providências e responsabilidades devem integrar normas aplicáveis à segurança e transporte."
+      ],
+      "atencao": [
+        "Ressalva constitucional não é licença universal de porte em celebração religiosa. Não confundir limiar do evento com regra do embarque ou estender lista modal de outro artigo."
+      ],
+      "exemplo": "Evento fechado com 1.200 pessoas deve adotar medidas legais para impedir ingresso armado. Variação: embarque em transporte interestadual tem obrigação própria, mesmo sem reunir mil passageiros.",
+      "prova": [
+        "O caput inclui exatamente mil pela expressão superior a mil? Não; seu limiar textual exige mais de mil.",
+        "A obrigação do transporte depende de mil passageiros? Não; o parágrafo único possui hipótese própria."
+      ],
+      "termos": [
+        "locais fechados",
+        "superior a 1000",
+        "internacional e interestadual"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "1dd1d9b3-e110-539d-b65b-50d7606eaa6b",
+        "content_sha256": "2eb370d9e98bc5c2decb2fff8eca03a95be9be4dc041c818c1e9c7ad8211f319",
+        "simples": "Os promotores de eventos em locais fechados, com aglomeração superior a 1000 pessoas, adotarão, sob pena de responsabilidade, as providências necessárias para evitar o ingresso de pessoas armadas, ressalvados os eventos garantidos pelo inciso VI do art. 5º da Constituição. As empresas responsáveis pelo transporte internacional e interestadual de passageiros adotarão as providências necessárias para evitar o embarque de passageiros armados.",
+        "pontos": [
+          "Eventos fechados com mais de 1000 pessoas: providências para evitar o ingresso de pessoas armadas.",
+          "Transporte internacional e interestadual: evitar o embarque de passageiros armados.",
+          "Ressalva: eventos garantidos pelo art. 5º, VI, da Constituição (cultos religiosos)."
+        ],
+        "atencao": [
+          "Limite: mais de 1000 pessoas."
+        ],
+        "exemplo": "O organizador de um show com mais de mil pessoas deve impedir a entrada de pessoas armadas.",
+        "prova": [
+          "Assertiva que fixa em 500 o número de pessoas a partir do qual se aplica o art. 34 erra: são mais de 1000."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 33"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-34-a",
+      "unit_id": "fc1e600a-3826-5385-970c-256a2cc83035",
+      "content_sha256": "b755672d954c539d37a3d6451982e3701a6adda8c44d5578cde4fe52a9063392",
+      "simples": "Banco Nacional de Perfis Balísticos armazena registros balísticos para auxiliar investigação, incluindo características de projéteis/estojos deflagrados relacionados a crimes; é gerido pela unidade oficial de perícia criminal.",
+      "pontos": [
+        "Objetivo: cadastrar armas e características de classe/individualizadoras de projéteis e estojos.",
+        "Abrange apurações federais, estaduais e distritais.",
+        "Dados sigilosos; uso diverso da lei/decisão judicial gera responsabilidade civil, penal e administrativa.",
+        "Comercialização total ou parcial vedada; formação, gestão e acesso dependem de ato do Executivo federal."
+      ],
+      "atencao": [
+        "Não confundir perfil balístico com banco genético/DNA ou dados públicos de consulta livre. A ausência de venda integral não permite vender parte da base."
+      ],
+      "exemplo": "Perícia compara marcas balísticas relacionadas a crimes para subsidiar investigação. Variação: interessado tenta comprar parte dos dados; sigilo e vedação de comercialização parcial impedem essa conclusão.",
+      "prova": [
+        "A base pode ser comercializada apenas parcialmente? Não; a vedação cobre total e parcial.",
+        "Perfil balístico é o mesmo que perfil genético? Não; registra características de armas e elementos de munição."
+      ],
+      "termos": [
+        "sigiloso",
+        "unidade oficial de perícia criminal",
+        "total ou parcial",
+        "Poder Executivo federal"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "fc1e600a-3826-5385-970c-256a2cc83035",
+        "content_sha256": "b755672d954c539d37a3d6451982e3701a6adda8c44d5578cde4fe52a9063392",
+        "simples": "Os dados relacionados à coleta de registros balísticos serão armazenados no Banco Nacional de Perfis Balísticos, que tem por objetivo cadastrar armas de fogo e armazenar características de classe e individualizadoras de projéteis e de estojos de munição deflagrados por arma de fogo. Será constituído pelos registros de elementos de munição deflagrados por armas relacionados a crimes, para subsidiar apurações criminais federais, estaduais e distritais, e gerido pela unidade oficial de perícia criminal. Os dados terão caráter sigiloso, e quem permitir ou promover seu uso para fins diversos responderá civil, penal e administrativamente. É vedada a comercialização da base de dados.",
+        "pontos": [
+          "Banco Nacional de Perfis Balísticos: dados de projéteis e estojos de munição deflagrados.",
+          "Subsidia apurações criminais federais, estaduais e distritais.",
+          "Gerido pela unidade oficial de perícia criminal.",
+          "Dados sigilosos, com responsabilização por uso indevido.",
+          "Vedada a comercialização da base."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.964, de 2019."
+        ],
+        "exemplo": "O estojo encontrado na cena do crime é comparado com o banco balístico.",
+        "prova": [
+          "Assertiva que permite a comercialização da base de dados balísticos erra: é vedada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º, X"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-35",
+      "unit_id": "0f83f6a8-94b8-510d-86ed-0801555f5148",
+      "content_sha256": "56283ec8d6a9eb0a8dbc5f180a82701d0a2bec4b315064636c57a8a6a94b37dd",
+      "simples": "A proibição comercial do caput dependia de aprovação no referendo de 2005. A população rejeitou a proibição; portanto não ensinar o caput como proibição geral vigente de comércio legal.",
+      "pontos": [
+        "§1º: condição de entrada em vigor, aprovação popular.",
+        "TSE: consulta em 23/10/2005, 63,94% de votos não.",
+        "Resultado não revogou todo o Estatuto nem eliminou requisitos de compra, registro ou porte."
+      ],
+      "atencao": [
+        "Distinguir texto transcrito e eficácia condicionada. O não foi à proibição comercial, não à existência de controle de armas. Este dispositivo não permite exercício de literalidade que afirme proibição geral atual sem a condição."
+      ],
+      "exemplo": "Questão diz que o art. 35 proibiu definitivamente todo comércio legal: a condição de aprovação não ocorreu. Variação: comprador invoca o resultado para dispensar registro; o referendo não retirou as demais exigências do Estatuto.",
+      "prova": [
+        "A proibição geral entrou em vigor por mera publicação da lei? Não; dependia de aprovação no referendo, que foi rejeitada.",
+        "O referendo eliminou obrigação de registro? Não; não revogou o restante do Estatuto."
+      ],
+      "termos": [
+        "dependerá de aprovação",
+        "referendo popular",
+        "entrada em vigor"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.tse.jus.br/servicos-eleitorais/glossario/termos/referendo",
+        "https://www.tse.jus.br/eleicoes/plebiscitos-e-referendos/referendo-2005"
+      ],
+      "expected": {
+        "unit_id": "0f83f6a8-94b8-510d-86ed-0801555f5148",
+        "content_sha256": "56283ec8d6a9eb0a8dbc5f180a82701d0a2bec4b315064636c57a8a6a94b37dd",
+        "simples": "É proibida a comercialização de arma de fogo e munição em todo o território nacional, salvo para as entidades previstas no art. 6º, dispositivo que dependia, para entrar em vigor, de aprovação mediante referendo popular a ser realizado em outubro de 2005. O referendo realizou-se e a proibição não foi aprovada, de modo que o dispositivo não vigora.",
+        "pontos": [
+          "Previa a proibição da comercialização de armas e munições, salvo para as entidades do art. 6º.",
+          "Dependia de referendo popular em outubro de 2005.",
+          "Referendo rejeitou a proibição."
+        ],
+        "atencao": [
+          "O referendo de 2005 REJEITOU a proibição: a comercialização continua permitida, na forma da lei."
+        ],
+        "exemplo": "A proibição geral do comércio de armas não entrou em vigor.",
+        "prova": [
+          "Assertiva que considera em vigor a proibição geral do comércio de armas e munições erra."
+        ],
+        "termos": [
+          {
+            "termo": "Referendo",
+            "significado": "Consulta popular sobre lei já aprovada."
+          }
+        ],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-37",
+      "unit_id": "b55aec10-a11c-53a2-bdb3-9ce56e7f7897",
+      "content_sha256": "3b0c52eb2708f84dcac10d05c3f5902b459d7d5217db0072aa37f0200f638c08",
+      "simples": "O Estatuto entrou em vigor na data de sua publicação. Alterações posteriores e regras condicionadas/transitórias devem ser examinadas com seus próprios marcos temporais.",
+      "pontos": [
+        "Lei original publicada em 23/12/2003.",
+        "O art. 37 não torna retroativas as penas mais graves de leis posteriores.",
+        "O art. 35 tem condição própria de eficácia; artigos de regularização possuem prazos históricos específicos."
+      ],
+      "atencao": [
+        "Não confundir data de assinatura (22/12/2003), publicação, prazo de transição e vigência de alteração posterior. Aplicação penal respeita irretroatividade gravosa e retroatividade benéfica."
+      ],
+      "exemplo": "Para fato da época da lei original, verificar publicação e norma penal aplicável. Variação: mudança gravosa de 2026 não se aplica a fato anterior só porque o Estatuto original já estava em vigor.",
+      "prova": [
+        "Vigência original autoriza retroagir qualquer aumento posterior? Não; cada alteração respeita seu marco e garantias penais.",
+        "Assinatura e publicação têm sempre a mesma data? Não; nesta lei são 22 e 23/12/2003."
+      ],
+      "termos": [
+        "data de sua publicação",
+        "vigência",
+        "irretroatividade"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "b55aec10-a11c-53a2-bdb3-9ce56e7f7897",
+        "content_sha256": "3b0c52eb2708f84dcac10d05c3f5902b459d7d5217db0072aa37f0200f638c08",
+        "simples": "Esta Lei entra em vigor na data de sua publicação.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei começou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis para o Estatuto do Desarmamento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 35"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "anexo-1",
+      "unit_id": "7c07ea11-c3a6-55cf-a968-6f795770b828",
+      "content_sha256": "57af2c235552431e72bd25b8214d160b0cf7d9d425ce612987dbd0dab9a46faf",
+      "simples": "Tabela estatutária de taxas: valores do anexo devem ser relacionados ao serviço e à data, distinguindo faixas transitórias antigas, isenções e honorários profissionais.",
+      "pontos": [
+        "Desde os marcos atuais do anexo: registro, renovação de registro, registro/renovação empresarial e segunda via do registro, R$ 60.",
+        "Expedição e renovação de porte: R$ 1.000; segunda via de porte: R$ 60.",
+        "Gratuidade e valores graduais de 2008 são históricos; verificar prorrogação da regularização até 31/12/2009 pela Lei 11.922 e isenções do art. 11/7-A."
+      ],
+      "atencao": [
+        "Trata-se da tabela do Estatuto para estudo, não orçamento universal de qualquer serviço de armas: CACs, serviços específicos e atos complementares podem ter regime próprio. Consultar canal competente antes de pagamento.",
+        "Taxa estatal não é avaliação psicológica, capacidade técnica, preço de arma ou multa administrativa."
+      ],
+      "exemplo": "Questão compara expedição de porte e segunda via: no anexo, R$ 1.000 e R$ 60 são atos distintos. Variação: categoria legalmente isenta não passa a pagar só porque a tabela contém valor, e regra histórica de gratuidade não se estende a todos os pedidos atuais.",
+      "prova": [
+        "Expedir porte e sua segunda via têm o mesmo valor no anexo? Não; respectivamente R$ 1.000 e R$ 60.",
+        "Toda gratuidade de 2008 é regra permanente atual? Não; conferir transição, prorrogação e isenções próprias."
+      ],
+      "termos": [
+        "ato administrativo",
+        "R$ 60",
+        "R$ 1.000",
+        "isenções"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.gov.br/pf/pt-br/assuntos/armas/normativos/legislacao",
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11922.htm"
+      ],
+      "expected": {
+        "unit_id": "7c07ea11-c3a6-55cf-a968-6f795770b828",
+        "content_sha256": "57af2c235552431e72bd25b8214d160b0cf7d9d425ce612987dbd0dab9a46faf",
+        "simples": "O Anexo traz a tabela de taxas dos atos administrativos relativos às armas de fogo: o registro (gratuito até 31 de dezembro de 2008 e, depois, R$ 60,00), a renovação do certificado de registro, o registro para empresa de segurança privada e de transporte de valores (R$ 60,00), a renovação para essas empresas (R$ 30,00, R$ 45,00 e R$ 60,00, conforme o período), a expedição de porte de arma de fogo (R$ 1.000,00), a renovação do porte (R$ 1.000,00) e a segunda via de certificado de registro e de porte (R$ 60,00 cada).",
+        "pontos": [
+          "Registro e renovação: R$ 60,00 a partir de 2009.",
+          "Empresas de segurança privada: registro de R$ 60,00 e renovação escalonada.",
+          "Porte e renovação do porte: R$ 1.000,00.",
+          "Segunda via: R$ 60,00."
+        ],
+        "atencao": [
+          "Valores previstos na redação da Lei nº 11.706, de 2008; confira atualizações regulamentares."
+        ],
+        "exemplo": "A expedição do porte federal tem a taxa de R$ 1.000,00.",
+        "prova": [
+          "Assertiva que fixa a taxa do porte de arma de fogo em R$ 60,00 erra: é de R$ 1.000,00."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 11"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    }
+  ]
+}

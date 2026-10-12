@@ -420,3 +420,20 @@ test('arms criminal review prevents unconstitutional custody and sentencing conf
  assert.equal(captions.changes.length,7);assert.equal(captions.additions.length,0);
  for(const r of captions.changes) assert.equal(r.expected.body_text,r.body_text+'\n\n'+r.moved_captions.join('\n\n'));
 });
+
+test('arms final review separates expired transitions, conditioned efficacy and current controls',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-arms-final-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,17);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-23').pontos.join(' '),/14.967\/2024.*exclusivamente/);
+ assert.match(get('art-25').simples,/48 horas/);assert.match(get('art-25').pontos.join(' '),/trimestral.*semestral/s);
+ assert.match(get('art-29').simples,/10.884\/2004.*decreto regulamentador/);
+ assert.match(get('art-30').simples,/2008.*11.922\/2009.*2009/);
+ assert.match(get('art-32').atencao.join(' '),/Não estender.*homicídio.*porte anterior/);
+ assert.match(get('art-34').prova.join(' '),/exatamente mil.*Não/);
+ assert.match(get('art-35').pontos.join(' '),/63,94%.*não/);
+ const packs=['registration','crimes','final'].map(n=>JSON.parse(readFileSync(`docs/library/article-explanations-arms-${n}-2026-10-12.json`,'utf8')));
+ assert.equal(new Set(packs.flatMap(pack=>pack.units.map(r=>r.unit_key))).size,41);
+ for(const key of ['art-24','art-27','art-29','art-30','art-35','anexo-1']) assert.equal(legalStudyCaveat('armas',key).literalPractice,false);
+});
