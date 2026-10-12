@@ -1,0 +1,785 @@
+{
+  "version": "2026-10-12-ambientais-general",
+  "checked_at": "2026-10-12T20:10:28.784666+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "ambientais",
+      "title": "Lei 9.605/1998 — Crimes Ambientais",
+      "units": 13,
+      "scope_type": "targeted_correction",
+      "course_current_units": 79,
+      "target_unit_keys": [
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-11",
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-15"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "source_sha256": "e59817ef929c73f6782a029a6397ebede300ba92c119ef0f68691a409f84c8cd",
+      "source_checked_at": "2026-10-12T16:18:24.261384+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "d7553c3f-029a-5aa6-8bd8-2d089f6d5e56",
+      "content_sha256": "18ea3420ef5ec97fae83b9a11c22fe2a6ed03513e36fe850e59d9433517744ec",
+      "simples": "A participação em crime ambiental é individualizada pela culpabilidade; cargo de direção não gera responsabilidade penal automática.",
+      "pontos": [
+        "Quem concorre para o fato responde conforme sua culpabilidade.",
+        "Dirigente e demais agentes enumerados podem responder por omissão quando sabem da conduta e podiam impedi-la."
+      ],
+      "atencao": [
+        "Não presumir ciência, possibilidade de agir ou participação só pelo cargo; identificar conduta e elementos de imputação."
+      ],
+      "exemplo": "Gerente sabe do descarte criminoso e podia impedir sua prática, mas deliberadamente se omite. Variação: título de gerente sem prova de ciência e possibilidade de atuação não basta para condenação automática.",
+      "prova": [
+        "O cargo sozinho basta? Não; demonstrar elementos de responsabilidade.",
+        "A omissão exige saber da conduta e poder impedir? Sim; condições expressas."
+      ],
+      "termos": [
+        "na medida da culpabilidade",
+        "sabendo",
+        "quando podia agir"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "d7553c3f-029a-5aa6-8bd8-2d089f6d5e56",
+        "content_sha256": "18ea3420ef5ec97fae83b9a11c22fe2a6ed03513e36fe850e59d9433517744ec",
+        "simples": "Quem, de qualquer forma, concorre para a prática dos crimes da Lei incide nas penas a eles cominadas, na medida de sua culpabilidade, bem como o diretor, administrador, membro de conselho e de órgão técnico, auditor, gerente, preposto ou mandatário de pessoa jurídica que, sabendo da conduta criminosa de outrem, deixar de impedir sua prática, quando podia agir para evitá-la.",
+        "pontos": [
+          "Concurso de pessoas: responde quem concorre, na medida da culpabilidade.",
+          "Dirigentes e prepostos que sabem do crime e não o impedem também respondem."
+        ],
+        "atencao": [
+          "Omissão imprópria: o dirigente que sabe e pode evitar responde."
+        ],
+        "exemplo": "O diretor que sabe do despejo ilegal de resíduos e nada faz responde pelo crime.",
+        "prova": [
+          "Assertiva que isenta o diretor que sabia do crime e podia evitá-lo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "50a442e3-411d-597c-a38f-27383bc488c0",
+      "content_sha256": "cc8dd743b14b2b2831df1f2a27ad3100d553a49a1761cb32505e84ecdb9e4d6b",
+      "simples": "Pessoa jurídica pode responder penalmente por crime ambiental, sem obrigatoriedade de acusar simultaneamente uma pessoa física; os requisitos legais continuam necessários.",
+      "pontos": [
+        "Infração decorre de decisão de representante legal/contratual ou órgão colegiado, no interesse ou benefício da entidade.",
+        "Responsabilidade da entidade não exclui pessoas físicas autoras/partícipes; individualizar ambas quando cabíveis.",
+        "RE 548181/STF afastou exigência de dupla imputação obrigatória; STJ adotou esse entendimento."
+      ],
+      "atencao": [
+        "Não confundir independência processual com responsabilidade objetiva de toda empresa por qualquer dano; verificar decisão, interesse/benefício e tipo."
+      ],
+      "exemplo": "Órgão colegiado decide prática criminosa para beneficiar a empresa; o caso pode prosseguir contra a entidade sem acusação simultânea de dirigente. Variação: dano sem demonstração dos pressupostos não autoriza imputação automática pelo nome empresarial.",
+      "prova": [
+        "A acusação simultânea de pessoa física é sempre obrigatória? Não; RE 548181 afastou essa exigência.",
+        "A responsabilidade da empresa apaga a do autor físico? Não; parágrafo único preserva responsabilidade própria."
+      ],
+      "termos": [
+        "decisão",
+        "interesse ou benefício",
+        "não exclui"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=244969&ori=1",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/05052024-A-responsabilidade-penal-das-pessoas-juridicas-segundo-o-STJ.aspx"
+      ],
+      "expected": {
+        "unit_id": "50a442e3-411d-597c-a38f-27383bc488c0",
+        "content_sha256": "cc8dd743b14b2b2831df1f2a27ad3100d553a49a1761cb32505e84ecdb9e4d6b",
+        "simples": "As pessoas jurídicas serão responsabilizadas administrativa, civil e penalmente nos casos em que a infração seja cometida por decisão de seu representante legal ou contratual, ou de seu órgão colegiado, no interesse ou benefício da entidade. A responsabilidade da pessoa jurídica não exclui a das pessoas físicas autoras, coautoras ou partícipes do mesmo fato.",
+        "pontos": [
+          "Responsabilidade administrativa, civil e penal da pessoa jurídica.",
+          "Infração por decisão do representante ou órgão colegiado, no interesse da entidade.",
+          "Não exclui a responsabilidade das pessoas físicas."
+        ],
+        "atencao": [
+          "A pessoa jurídica responde penalmente (exceção constitucional).",
+          "Dupla imputação: empresa e pessoa física podem responder juntas."
+        ],
+        "exemplo": "A empresa e o seu diretor respondem pelo mesmo crime ambiental.",
+        "prova": [
+          "Assertiva que isenta a pessoa física quando a pessoa jurídica é responsabilizada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 21"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "5b077457-4de3-5350-9ca3-cfbcf89a9a08",
+      "content_sha256": "da8eca244ffce6944c4e1c17626a5167786af9fa43d2878cd2d070a335e5b77c",
+      "simples": "Desconsideração da personalidade jurídica é possível quando ela impede ressarcir prejuízos à qualidade ambiental; isso não equivale a condenação penal automática de sócios.",
+      "pontos": [
+        "Foco do dispositivo é obstáculo ao ressarcimento ambiental.",
+        "Distinguir alcance patrimonial, responsabilidade da entidade e imputação penal individual."
+      ],
+      "atencao": [
+        "Não ensinar perda universal de toda autonomia societária nem presunção de culpabilidade penal dos sócios."
+      ],
+      "exemplo": "Personalidade da sociedade impede ressarcimento do prejuízo ambiental: analisar desconsideração para reparação. Variação: alcançar patrimônio não dispensa prova própria para eventual condenação criminal do sócio.",
+      "prova": [
+        "Desconsiderar significa condenar penalmente todos os sócios? Não; são análises distintas.",
+        "Qual obstáculo o texto exige? Obstáculo ao ressarcimento de prejuízos ambientais."
+      ],
+      "termos": [
+        "obstáculo ao ressarcimento",
+        "qualidade do meio ambiente"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "5b077457-4de3-5350-9ca3-cfbcf89a9a08",
+        "content_sha256": "da8eca244ffce6944c4e1c17626a5167786af9fa43d2878cd2d070a335e5b77c",
+        "simples": "Poderá ser desconsiderada a pessoa jurídica sempre que sua personalidade for obstáculo ao ressarcimento de prejuízos causados à qualidade do meio ambiente.",
+        "pontos": [
+          "Desconsideração da personalidade jurídica para ressarcir danos ambientais."
+        ],
+        "atencao": [
+          "Basta que a personalidade seja OBSTÁCULO ao ressarcimento (teoria menor)."
+        ],
+        "exemplo": "Os bens dos sócios podem responder pelo dano ambiental da empresa sem patrimônio.",
+        "prova": [
+          "Assertiva que exige fraude ou abuso para a desconsideração ambiental erra: basta o obstáculo ao ressarcimento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-6",
+      "unit_id": "b2377645-bc80-5870-82c8-933327811862",
+      "content_sha256": "7e8ea1489768c36ae16c6b9f4e3ad4c96e2aedb90f2a72986e2c0dd23b7192e7",
+      "simples": "Na graduação da penalidade, gravidade, antecedentes ambientais e situação econômica na multa têm funções próprias.",
+      "pontos": [
+        "Gravidade inclui motivos e consequências para saúde pública e ambiente.",
+        "Antecedentes referem-se ao cumprimento de legislação ambiental.",
+        "Situação econômica é expressamente relacionada à multa; não torna riqueza prova do crime."
+      ],
+      "atencao": [
+        "Distinguir critério de dosimetria e elemento de tipicidade; nenhum substitui prova da infração."
+      ],
+      "exemplo": "Autoridade gradua multa considerando consequências e condição econômica demonstrada. Variação: recursos financeiros elevados não provam por si só prática da infração.",
+      "prova": [
+        "Riqueza prova o delito? Não; é critério específico de graduação da multa.",
+        "Consequências à saúde pública são pertinentes? Sim; integram gravidade."
+      ],
+      "termos": [
+        "gravidade",
+        "antecedentes ambientais",
+        "no caso de multa"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "b2377645-bc80-5870-82c8-933327811862",
+        "content_sha256": "7e8ea1489768c36ae16c6b9f4e3ad4c96e2aedb90f2a72986e2c0dd23b7192e7",
+        "simples": "Para imposição e gradação da penalidade, a autoridade competente observará a gravidade do fato, tendo em vista os motivos da infração e suas consequências para a saúde pública e o meio ambiente; os antecedentes do infrator quanto ao cumprimento da legislação ambiental; e a situação econômica do infrator, no caso de multa.",
+        "pontos": [
+          "Gravidade do fato.",
+          "Antecedentes ambientais.",
+          "Situação econômica, para multa."
+        ],
+        "atencao": [
+          "A situação econômica só vale para a MULTA."
+        ],
+        "exemplo": "A multa de uma pequena empresa considera sua capacidade econômica.",
+        "prova": [
+          "Assertiva que aplica a situação econômica a todas as penalidades erra: ela vale no caso de multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 72"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-7",
+      "unit_id": "9e606d72-4ecc-5e2f-8df2-3d2a5b95ad5e",
+      "content_sha256": "ad71cdb7281ebd7e4709024e98fe09d31282ced883da2fe07b5170097fea26af",
+      "simples": "Substituição ambiental combina requisito do inciso I e suficiência do inciso II; a hipótese de pena dolosa usa inferior a quatro anos, não igual a quatro.",
+      "pontos": [
+        "Inciso I: crime culposo ou pena privativa aplicada inferior a quatro anos.",
+        "Inciso II exige avaliação de culpabilidade, antecedentes, conduta, personalidade, motivos e circunstâncias.",
+        "Duração da restritiva corresponde à privativa substituída."
+      ],
+      "atencao": [
+        "Não importar automaticamente fórmula até quatro anos do CP como literalidade especial; culpa ou pena baixa não dispensam avaliar suficiência."
+      ],
+      "exemplo": "Pena dolosa de três anos com circunstâncias que indiquem substituição suficiente: analisar requisitos conjuntos. Variação: pena dolosa exatamente quatro anos não satisfaz a expressão inferior a quatro apenas pelo número.",
+      "prova": [
+        "Exatamente quatro é inferior a quatro? Não; distinguir limites.",
+        "Crime culposo dispensa suficiência do inciso II? Não; requisito deve ser analisado."
+      ],
+      "termos": [
+        "culposo ou inferior a quatro",
+        "suficiente",
+        "mesma duração"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "9e606d72-4ecc-5e2f-8df2-3d2a5b95ad5e",
+        "content_sha256": "ad71cdb7281ebd7e4709024e98fe09d31282ced883da2fe07b5170097fea26af",
+        "simples": "As penas restritivas de direitos são autônomas e substituem as privativas de liberdade quando se tratar de crime culposo ou for aplicada pena privativa de liberdade inferior a quatro anos, e quando a culpabilidade, os antecedentes, a conduta social e a personalidade do condenado, bem como os motivos e as circunstâncias do crime, indicarem que a substituição seja suficiente. Terão a mesma duração da pena substituída.",
+        "pontos": [
+          "Penas restritivas de direitos são autônomas.",
+          "Substituem a privativa se for crime culposo ou pena inferior a quatro anos.",
+          "Análise subjetiva favorável.",
+          "Mesma duração da pena substituída."
+        ],
+        "atencao": [
+          "Limite: pena INFERIOR a quatro anos (no Código Penal geral, é até quatro anos).",
+          "No crime culposo, cabe sempre que a análise subjetiva for favorável."
+        ],
+        "exemplo": "A pena de dois anos por crime ambiental pode ser substituída por restritiva de direitos.",
+        "prova": [
+          "Assertiva que fixa em dois anos o limite da substituição erra: é pena inferior a quatro anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8",
+      "unit_id": "27230c89-e3a6-58df-a7fb-c2a437075a2e",
+      "content_sha256": "231c83ce64d0c431902de293a13d62b58e4ce52f6bf87b672cce443806d68387",
+      "simples": "O rol ambiental distingue serviços comunitários, interdição temporária, suspensão de atividades, prestação pecuniária e recolhimento domiciliar.",
+      "pontos": [
+        "Cinco modalidades expressas; interdição e suspensão não são o mesmo instituto.",
+        "Detalhes aparecem nos artigos 9 a 13; não equiparar prestação pecuniária à multa."
+      ],
+      "atencao": [
+        "Pessoa jurídica tem penas específicas nos arts. 21 a 24; não aplicar prisão domiciliar à empresa por copiar rol individual."
+      ],
+      "exemplo": "Questão oferece prestação pecuniária como restritiva e multa como sinônimo: somente a primeira integra o rol aqui. Variação: sanções de empresa exigem consultar regime próprio.",
+      "prova": [
+        "Prestação pecuniária é idêntica à multa? Não; natureza e disciplina distintas.",
+        "Recolhimento domiciliar é modalidade expressa? Sim; inciso V."
+      ],
+      "termos": [
+        "cinco modalidades",
+        "prestação pecuniária",
+        "recolhimento domiciliar"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "27230c89-e3a6-58df-a7fb-c2a437075a2e",
+        "content_sha256": "231c83ce64d0c431902de293a13d62b58e4ce52f6bf87b672cce443806d68387",
+        "simples": "As penas restritivas de direito são a prestação de serviços à comunidade, a interdição temporária de direitos, a suspensão parcial ou total de atividades, a prestação pecuniária e o recolhimento domiciliar.",
+        "pontos": [
+          "Prestação de serviços à comunidade.",
+          "Interdição temporária de direitos.",
+          "Suspensão de atividades.",
+          "Prestação pecuniária.",
+          "Recolhimento domiciliar."
+        ],
+        "atencao": [
+          "Rol com cinco penas restritivas de direitos."
+        ],
+        "exemplo": "O condenado presta serviços em um parque público.",
+        "prova": [
+          "Assertiva que inclui a perda de bens entre as penas restritivas do art. 8º erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-9",
+      "unit_id": "f31bfb8a-b3ef-5a2b-a73a-239ec095b14e",
+      "content_sha256": "4f0d51249b8b05ba8d3cf995413f700461160e1cad0a5e554bd99ec6b4dc08c6",
+      "simples": "Serviços comunitários são tarefas gratuitas em parques, jardins públicos e unidades de conservação; restauração de coisa danificada depende de possibilidade.",
+      "pontos": [
+        "Objeto danificado pode ser particular, público ou tombado.",
+        "Gratuidade e possibilidade de restauração são elementos relevantes; não inventar serviço remunerado obrigatório."
+      ],
+      "atencao": [
+        "Não exigir restauração material impossível nem reduzir toda execução a qualquer emprego escolhido pelo condenado."
+      ],
+      "exemplo": "Condenado realiza tarefas gratuitas em unidade de conservação conforme decisão. Variação: coisa tombada danificada pode exigir restauração se possível, com exame técnico da viabilidade.",
+      "prova": [
+        "A tarefa é remunerada pelo texto? Não; gratuita.",
+        "Restauração da coisa é exigida mesmo quando impossível? Não; há condição expressa de possibilidade."
+      ],
+      "termos": [
+        "tarefas gratuitas",
+        "unidades de conservação",
+        "se possível"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "f31bfb8a-b3ef-5a2b-a73a-239ec095b14e",
+        "content_sha256": "4f0d51249b8b05ba8d3cf995413f700461160e1cad0a5e554bd99ec6b4dc08c6",
+        "simples": "A prestação de serviços à comunidade consiste na atribuição ao condenado de tarefas gratuitas junto a parques e jardins públicos e unidades de conservação e, no caso de dano da coisa particular, pública ou tombada, na restauração desta, se possível.",
+        "pontos": [
+          "Tarefas gratuitas em parques, jardins e unidades de conservação.",
+          "Restauração da coisa danificada, se possível."
+        ],
+        "atencao": [
+          "Serviços ligados ao meio ambiente."
+        ],
+        "exemplo": "O condenado restaura o bem tombado que danificou.",
+        "prova": [
+          "Assertiva que prevê serviços remunerados erra: as tarefas são gratuitas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-10",
+      "unit_id": "08818845-cc77-562f-a138-412c99fd888e",
+      "content_sha256": "5c0a8f48d02380639e3129b4921dc2d2678d0a337c92d768d2801b44a130959b",
+      "simples": "Interdição temporária impede contratar com Poder Público, receber incentivos/benefícios e participar de licitações: cinco anos no crime doloso e três no culposo.",
+      "pontos": [
+        "Memória: dolo cinco, culpa três; não inverter prazos.",
+        "Não confundir interdição temporária individual e proibição de contratar da pessoa jurídica, que possui regra própria."
+      ],
+      "atencao": [
+        "A leitura deve combinar espécie específica com aplicação judicial e demais requisitos; não generalizar os prazos a toda sanção ambiental."
+      ],
+      "exemplo": "Condenação dolosa com interdição do artigo 10 alcança os impedimentos pelo prazo legal de cinco anos. Variação: caso culposo tem prazo de três, não o mesmo prazo só por ser ambiental.",
+      "prova": [
+        "Dolo e culpa têm o mesmo prazo? Não; cinco e três anos respectivamente.",
+        "Esses prazos são universais para toda pena ambiental? Não; pertencem à modalidade específica."
+      ],
+      "termos": [
+        "cinco anos dolo",
+        "três anos culpa",
+        "licitações"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "08818845-cc77-562f-a138-412c99fd888e",
+        "content_sha256": "5c0a8f48d02380639e3129b4921dc2d2678d0a337c92d768d2801b44a130959b",
+        "simples": "As penas de interdição temporária de direito são a proibição de o condenado contratar com o Poder Público, de receber incentivos fiscais ou outros benefícios e de participar de licitações, pelo prazo de cinco anos, no caso de crimes dolosos, e de três anos, no de crimes culposos.",
+        "pontos": [
+          "Proibição de contratar com o Poder Público, receber incentivos e licitar.",
+          "Cinco anos nos crimes dolosos.",
+          "Três anos nos crimes culposos."
+        ],
+        "atencao": [
+          "Cinco anos (doloso) e três anos (culposo)."
+        ],
+        "exemplo": "O condenado por crime doloso fica cinco anos sem poder licitar.",
+        "prova": [
+          "Assertiva que inverte os prazos de interdição erra: cinco anos para dolosos e três para culposos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 22"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-11",
+      "unit_id": "779b0865-8eaa-5f04-99b7-4d1176f641b1",
+      "content_sha256": "32f01cb3d99a8d4a80c523a349a1719d9367090e52ba3ff175a731aab8a602cd",
+      "simples": "Suspensão de atividades exige que elas não obedeçam às prescrições legais; não é simples punição por existir atividade econômica.",
+      "pontos": [
+        "Relacionar descumprimento legal e atividade atingida.",
+        "Distinguir suspensão parcial/total do rol e interdição temporária de direitos de outro artigo."
+      ],
+      "atencao": [
+        "Identificar prescrição violada; licença válida não dispensa todas as demais regras ambientais."
+      ],
+      "exemplo": "Atividade funciona em desacordo com prescrição legal e sofre suspensão judicial cabível. Variação: funcionamento regular não autoriza suspensão penal só pela preferência do fiscal.",
+      "prova": [
+        "A mera existência da empresa basta? Não; verificar descumprimento legal.",
+        "Suspensão é idêntica à proibição de licitar? Não; institutos distintos."
+      ],
+      "termos": [
+        "atividades",
+        "prescrições legais"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "779b0865-8eaa-5f04-99b7-4d1176f641b1",
+        "content_sha256": "32f01cb3d99a8d4a80c523a349a1719d9367090e52ba3ff175a731aab8a602cd",
+        "simples": "A suspensão de atividades será aplicada quando estas não estiverem obedecendo às prescrições legais.",
+        "pontos": [
+          "Suspensão de atividades que descumprem a lei."
+        ],
+        "atencao": [
+          "Pena restritiva de direitos aplicada à atividade irregular."
+        ],
+        "exemplo": "A atividade que funciona fora das regras ambientais é suspensa.",
+        "prova": [
+          "Assertiva que aplica a suspensão a qualquer atividade, mesmo regular, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 22"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-12",
+      "unit_id": "1e3cc861-47bc-5009-96a7-3ca2f6342ae4",
+      "content_sha256": "c7db6c9aba6680df63216662955fbb0b6a11ecba76ef6b5af1d69cb9e0d4809d",
+      "simples": "Prestação pecuniária vai à vítima ou entidade pública/privada com fim social, entre um e 360 salários mínimos fixados judicialmente.",
+      "pontos": [
+        "O valor pago é deduzido de eventual reparação civil a que o infrator seja condenado.",
+        "Não confundir esse pagamento com multa em dias-multa nem com quitação de todo dano por qualquer quantia."
+      ],
+      "atencao": [
+        "Dedução não significa desaparecimento automático do dever de reparar parcela remanescente; distinguir destinatário e finalidade."
+      ],
+      "exemplo": "Juiz fixa prestação à entidade de fim social dentro da faixa legal. Variação: eventual reparação civil superior ao pagamento exige observar dedução sem presumir extinção integral.",
+      "prova": [
+        "O limite superior é 360 salários mínimos? Sim; faixa legal expressa.",
+        "Pagamento extingue qualquer reparação civil, sem cálculo? Não; deduzir valor do montante eventual."
+      ],
+      "termos": [
+        "um a 360 salários mínimos",
+        "fim social",
+        "deduzido"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "1e3cc861-47bc-5009-96a7-3ca2f6342ae4",
+        "content_sha256": "c7db6c9aba6680df63216662955fbb0b6a11ecba76ef6b5af1d69cb9e0d4809d",
+        "simples": "A prestação pecuniária consiste no pagamento em dinheiro à vítima ou à entidade pública ou privada com fim social, de importância fixada pelo juiz, não inferior a um salário mínimo nem superior a trezentos e sessenta salários mínimos. O valor pago será deduzido do montante de eventual reparação civil.",
+        "pontos": [
+          "Pagamento à vítima ou entidade com fim social.",
+          "De um a trezentos e sessenta salários mínimos.",
+          "Deduzida da reparação civil."
+        ],
+        "atencao": [
+          "Teto de trezentos e sessenta salários mínimos."
+        ],
+        "exemplo": "O juiz fixa o pagamento a uma entidade ambiental, abatido da indenização.",
+        "prova": [
+          "Assertiva que fixa o teto em cem salários mínimos erra: são trezentos e sessenta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-13",
+      "unit_id": "d61cecd3-e580-5c44-8d50-f8383c691c2f",
+      "content_sha256": "3cff34f698e649ca47b444168b985ba5db472234d1e53b44130efa2df939421b",
+      "simples": "Recolhimento domiciliar baseia-se em autodisciplina: atividade autorizada e permanência na moradia nos horários de folga, conforme sentença, sem vigilância.",
+      "pontos": [
+        "Pode trabalhar, frequentar curso ou exercer atividade autorizada.",
+        "Sentença delimita condições; não é liberdade irrestrita nem prisão preventiva domiciliar por definição."
+      ],
+      "atencao": [
+        "Não equiparar automaticamente à medida cautelar do CPP ou afirmar tornozeleira obrigatória pela literalidade deste artigo."
+      ],
+      "exemplo": "Condenado frequenta curso autorizado e recolhe-se na folga conforme sentença. Variação: sair livremente nos horários de recolhimento não é permitido só por faltar vigilância.",
+      "prova": [
+        "Sem vigilância significa sem condições? Não; respeitar sentença e horários.",
+        "É necessariamente prisão preventiva domiciliar? Não; é pena restritiva com regime próprio."
+      ],
+      "termos": [
+        "autodisciplina",
+        "sem vigilância",
+        "dias e horários de folga"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "d61cecd3-e580-5c44-8d50-f8383c691c2f",
+        "content_sha256": "3cff34f698e649ca47b444168b985ba5db472234d1e53b44130efa2df939421b",
+        "simples": "O recolhimento domiciliar baseia-se na autodisciplina e senso de responsabilidade do condenado, que deverá, sem vigilância, trabalhar, frequentar curso ou exercer atividade autorizada, permanecendo recolhido nos dias e horários de folga em residência ou local de moradia habitual, conforme a sentença.",
+        "pontos": [
+          "Autodisciplina e senso de responsabilidade.",
+          "Sem vigilância.",
+          "Recolhimento nos dias e horários de folga."
+        ],
+        "atencao": [
+          "Não há vigilância direta."
+        ],
+        "exemplo": "O condenado trabalha de dia e se recolhe em casa nos fins de semana.",
+        "prova": [
+          "Assertiva que exige monitoramento constante no recolhimento domiciliar erra: ele é sem vigilância."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-14",
+      "unit_id": "989e614f-88b8-5a05-b011-75c21e8c39bb",
+      "content_sha256": "91d78cce33818cf486858f27d2fa374bfe2b2c7252ac8db4b8237369411f37cc",
+      "simples": "Atenuantes ambientais incluem baixa instrução, reparação espontânea/limitação significativa do dano, comunicação prévia de perigo iminente e colaboração com fiscalização.",
+      "pontos": [
+        "Arrependimento exige manifestação descrita, não só declaração verbal genérica.",
+        "Comunicação deve ser prévia ao perigo iminente; colaboração é hipótese distinta."
+      ],
+      "atencao": [
+        "Atenuar não significa absolver nem reduzir obrigatoriamente em fração fixa inventada; aplicar regime de dosimetria pertinente."
+      ],
+      "exemplo": "Infrator espontaneamente limita de modo significativo a degradação: examinar inciso II. Variação: mera frase de arrependimento sem conduta reparadora não satisfaz automaticamente essa hipótese.",
+      "prova": [
+        "Arrependimento apenas verbal basta sempre? Não; verificar manifestação exigida.",
+        "Comunicação prévia e colaboração são hipóteses distintas? Sim; incisos III e IV."
+      ],
+      "termos": [
+        "espontânea reparação",
+        "limitação significativa",
+        "comunicação prévia"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "989e614f-88b8-5a05-b011-75c21e8c39bb",
+        "content_sha256": "91d78cce33818cf486858f27d2fa374bfe2b2c7252ac8db4b8237369411f37cc",
+        "simples": "São circunstâncias que atenuam a pena o baixo grau de instrução ou escolaridade do agente; o arrependimento do infrator, manifestado pela espontânea reparação do dano ou limitação significativa da degradação ambiental; a comunicação prévia pelo agente do perigo iminente de degradação ambiental; e a colaboração com os agentes encarregados da vigilância e do controle ambiental.",
+        "pontos": [
+          "Baixa escolaridade.",
+          "Arrependimento com reparação do dano.",
+          "Comunicação prévia do perigo.",
+          "Colaboração com a fiscalização."
+        ],
+        "atencao": [
+          "Baixo grau de instrução é atenuante típica desta Lei."
+        ],
+        "exemplo": "Quem repara espontaneamente o dano tem a pena atenuada.",
+        "prova": [
+          "Assertiva que não admite atenuante pela colaboração com a fiscalização erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-15",
+      "unit_id": "073d3938-8ac2-599a-8c77-3a2385112609",
+      "content_sha256": "2fbdb855a52b64d7d88339b896529168f05da2c62e9143bc7ef4b4390650b97b",
+      "simples": "Agravantes ambientais só incidem quando a circunstância não constitui nem qualifica o crime; repetir o mesmo elemento gera dupla valoração indevida.",
+      "pontos": [
+        "Rol inclui reincidência ambiental, vantagem pecuniária, grave perigo, defeso, noite, domingos/feriados, espécies ameaçadas e demais condições expressas.",
+        "Conferir espécie ameaçada em relatório oficial competente, não apenas crença popular.",
+        "Unidades e territórios protegidos podem já integrar tipo/qualificadora: verificar antes de agravar."
+      ],
+      "atencao": [
+        "Não presumir toda infração ambiental agravada por dano ambiental genérico nem acumular automaticamente todas as alíneas que repetem o mesmo fundamento."
+      ],
+      "exemplo": "Infração praticada à noite pode exigir agravante se esse fato não integra o tipo ou qualificadora. Variação: circunstância já qualificadora não volta a agravar pelo mesmo fundamento.",
+      "prova": [
+        "Agravante pode repetir elemento constitutivo do próprio crime? Não; caput impede dupla valoração.",
+        "Espécie ameaçada depende só de opinião pessoal? Não; verificar listas/relatórios oficiais competentes."
+      ],
+      "termos": [
+        "quando não constituem ou qualificam",
+        "defeso",
+        "relatórios oficiais"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "073d3938-8ac2-599a-8c77-3a2385112609",
+        "content_sha256": "2fbdb855a52b64d7d88339b896529168f05da2c62e9143bc7ef4b4390650b97b",
+        "simples": "São circunstâncias que agravam a pena, quando não constituem ou qualificam o crime, a reincidência nos crimes ambientais e o fato de o agente ter cometido a infração para obter vantagem pecuniária; coagindo outrem; afetando gravemente a saúde pública ou o meio ambiente; concorrendo para danos à propriedade alheia; atingindo unidades de conservação ou áreas de regime especial; atingindo áreas urbanas; em período de defeso; em domingos ou feriados; à noite; em épocas de seca ou inundações; no interior de espaço territorial protegido; com métodos cruéis; mediante fraude ou abuso de confiança; com abuso de licença; no interesse de pessoa jurídica mantida por verbas públicas; atingindo espécies ameaçadas; ou com facilitação de funcionário público.",
+        "pontos": [
+          "Reincidência em crimes ambientais.",
+          "Motivação econômica, coação, fraude e abuso de confiança.",
+          "Local e época: unidades de conservação, áreas urbanas, defeso, noite, domingos, feriados, seca e inundações.",
+          "Métodos cruéis e espécies ameaçadas."
+        ],
+        "atencao": [
+          "Agravantes só valem quando não constituem ou qualificam o crime."
+        ],
+        "exemplo": "Pescar em período de defeso agrava a pena.",
+        "prova": [
+          "Assertiva que aplica as agravantes mesmo quando já integram o tipo erra."
+        ],
+        "termos": [
+          {
+            "termo": "Defeso",
+            "significado": "Período em que a pesca ou a caça de certas espécies é proibida."
+          }
+        ],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    }
+  ]
+}

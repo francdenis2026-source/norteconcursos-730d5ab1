@@ -535,3 +535,16 @@ test('contravention final block closes 66 distinct units without drilling supers
  const footer=JSON.parse(readFileSync('docs/library/contravencoes-footer-correction-2026-10-12.json','utf8'));
  assert.equal(footer.changes.length,1);assert.match(footer.changes[0].body_text,/1.*janeiro de 1942/);assert.doesNotMatch(footer.changes[0].body_text,/GETULIO|Francisco Campos/);
 });
+
+test('environmental general review separates entity liability, substitution limits and duplicate aggravation',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ambientais-general-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,13);assert.equal(new Set(p.units.map(r=>r.unit_key)).size,13);
+ assert.ok(!p.units.some(r=>['art-1','art-5'].includes(r.unit_key)));
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);assert.ok(r.prova.length>=2);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-3').pontos.join(' '),/548181.*dupla imputação obrigatória/);
+ assert.match(get('art-7').simples,/inferior a quatro.*não igual a quatro/);
+ assert.match(get('art-10').simples,/cinco anos.*doloso.*três.*culposo/);
+ assert.match(get('art-12').simples,/360 salários mínimos/);
+ assert.match(get('art-15').simples,/não constitui nem qualifica/);
+});
