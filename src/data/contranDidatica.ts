@@ -640,4 +640,55 @@ export const CONTRAN_DIDATICA: Record<string, ContranDidatica> = {
       "Citar a Resolução 789/2020 como vigente para a formação de condutores: ela foi revogada pela 1.020/2025.",
     ],
   },
+  "969/2022": {
+    simples: [
+      "A placa de identificação veicular (PIV) é o sistema de placas dos veículos do país. Depois do registro, cada veículo recebe uma PIV dianteira e uma traseira. Reboques, semirreboques, motocicletas, motonetas, ciclomotores, cicloelétricos, triciclos, quadriciclos e guindastes levam apenas a traseira (art. 2º, § 1º).",
+      "Toda PIV tem um QR Code com números de série e acesso aos dados do fabricante: ele controla a produção e a instalação e verifica a autenticidade. Esse QR Code é o lacre eletrônico da placa e substitui o lacre do art. 115 do CTB (arts. 3º e 5º).",
+      "Segunda placa traseira: é obrigatória em veículo com engate de reboque ou carroceria intercambiável, quando a carga cobrir total ou parcialmente a placa traseira (art. 4º). Pode ficar no para-choque, na carroceria ou em suporte adaptador, em local visível.",
+      "Quem fabrica e quem estampa: o fabricante de PIV é credenciado pelo órgão máximo executivo de trânsito da União; o estampador é credenciado pelo órgão de trânsito do Estado ou do DF e faz o acabamento final e vende ao proprietário (art. 6º, I e II). O fabricante só fornece a estampadores credenciados (art. 13), é proibido contrato de exclusividade entre eles (art. 12) e o credenciamento vale cinco anos, renovável sem limite (art. 19).",
+      "Quando a PIV é exigida: no primeiro emplacamento. Para veículos em circulação, também na troca de placa por mudança de categoria, furto, extravio, roubo ou dano, na mudança de município ou de unidade da federação e quando for preciso instalar a segunda placa traseira (art. 56). A placa nacional única antiga, no padrão de três letras e quatro números, pode circular até o sucateamento, e é proibido exigir a troca fora dessas situações (art. 57 e § 2º).",
+      "Placas especiais: a PIV-Fab é do fabricante, para testes de seus produtos (art. 35); a PIV-Exp é de estabelecimentos que reformam, compram, vendem ou desmontam veículos (art. 39), com livro de registro de entrada, saída e uso (art. 41), e circula só nas vias da unidade da federação que a expediu (art. 42). Há ainda placas de representação de autoridades (arts. 26 a 30), de representação diplomática (arts. 31 a 34) e de veículos de coleção originais (art. 2º, § 5º).",
+      "Clonagem: veículo clonado é o original cuja combinação da placa foi usada em outro veículo; o clone é o que usa essa combinação (art. 6º, VI e VII). O proprietário do original requer a troca de placa em processo administrativo; enquanto isso fica a restrição \"suspeita de clonagem\" (art. 51). Comprovada a clonagem, o registro do original ganha novo RENAVAM e nova placa; o registro do clone recebe \"CL\" no fim do VIN e do número do motor e é baixado por clonagem (art. 53). A pontuação de multas cometidas pelo clone é excluída do prontuário do proprietário (art. 55, parágrafo único).",
+    ],
+    quadro: {
+      titulo: "Placas: o que costuma cair",
+      linhas: [
+        ["Só traseira", "Reboque, semirreboque, motocicleta, motoneta, ciclomotor, cicloelétrico, triciclo, quadriciclo e guindaste (art. 2º, § 1º)"],
+        ["Lacre", "QR Code é o lacre eletrônico, no lugar do lacre do art. 115 do CTB (art. 3º)"],
+        ["Segunda placa traseira", "Veículo com engate de reboque ou carroceria intercambiável, quando a carga cobre a placa (art. 4º)"],
+        ["Troca obrigatória para a PIV", "Primeiro emplacamento; mudança de categoria; furto, extravio, roubo ou dano; mudança de município ou UF; segunda placa (art. 56)"],
+        ["Placa antiga", "Circula até o sucateamento; troca só nas situações do art. 56 (art. 57)"],
+        ["Credenciamento", "Cinco anos, renovável por igual período, sem limite (art. 19)"],
+        ["PIV-Exp", "Estabelecimentos do art. 330 do CTB; vale só na UF que a expediu (arts. 39 e 42)"],
+        ["Livro da PIV-Exp", "Autenticado até o décimo dia do mês seguinte; ordem de serviço guardada por doze meses; listagens por cinco anos (arts. 45 a 47)"],
+        ["Clonagem", "Original recebe nova placa e novo RENAVAM; clone recebe CL no VIN e no motor (art. 53)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "Um motociclista quer saber se precisa de placa dianteira.",
+        resposta: "Não. Motocicletas, motonetas e ciclomotores são identificados apenas pela PIV traseira (art. 2º, § 1º).",
+      },
+      {
+        situacao: "Um carro com carroceria intercambiável leva carga que cobre a placa traseira. O que fazer?",
+        resposta: "Usar uma segunda PIV traseira, em local visível (art. 4º). Por ser caso de instalação da segunda placa, a nova PIV é exigida (art. 56, § 1º, III).",
+      },
+      {
+        situacao: "O proprietário de um carro com a placa antiga no padrão de três letras e quatro números é obrigado a trocar para o novo modelo?",
+        resposta: "Em regra, não. Pode circular até o sucateamento e só é exigida a troca nas situações do art. 56 (furto, mudança de município ou de UF, entre outras). É vedado exigir a troca fora dessas hipóteses (art. 57, § 2º).",
+      },
+      {
+        situacao: "O dono do carro descobre que há outro veículo usando as mesmas letras e números da placa dele. O que acontece depois do processo?",
+        resposta: "O veículo original passa a ter novo registro, novo RENAVAM e nova placa; o registro usado pelo clone recebe CL no fim do VIN e do motor e é baixado por clonagem (art. 53).",
+      },
+    ],
+    pegadinhas: [
+      "Achar que todo veículo precisa de duas placas: reboque, moto, ciclomotor e outros só têm a traseira.",
+      "Dizer que a placa antiga precisa ser trocada em todos os casos. Só nas situações do art. 56.",
+      "Confundir o lacre: o QR Code é o lacre eletrônico e substitui o lacre do art. 115 do CTB.",
+      "Confundir PIV-Fab (fabricantes, testes) com PIV-Exp (estabelecimentos de reforma, compra, venda e desmontagem).",
+      "Esquecer que a PIV-Exp só circula na unidade da federação do órgão que a expediu.",
+      "Achar que o dono do veículo original responde pelas multas do clone: a pontuação comprovadamente do clone é excluída do prontuário.",
+    ],
+  },
 };
