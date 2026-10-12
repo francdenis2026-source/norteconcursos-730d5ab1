@@ -1,0 +1,1444 @@
+{
+  "version": "2026-10-12-maria-final-targeted",
+  "checked_at": "2026-10-12T18:47:59.622660+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "maria-penha",
+      "title": "Lei 11.340/2006 — Lei Maria da Penha",
+      "units": 24,
+      "scope_type": "targeted_correction",
+      "course_current_units": 56,
+      "target_unit_keys": [
+        "art-25",
+        "art-26",
+        "art-27",
+        "art-28",
+        "art-29",
+        "art-30",
+        "art-31",
+        "art-32",
+        "art-33",
+        "art-34",
+        "art-35",
+        "art-36",
+        "art-37",
+        "art-38",
+        "art-38-a",
+        "art-39",
+        "art-40",
+        "art-40-a",
+        "art-41",
+        "art-42",
+        "art-43",
+        "art-44",
+        "art-45",
+        "art-46"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "source_sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+      "source_checked_at": "2026-10-12T16:18:21.610439+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-25",
+      "unit_id": "82056158-4f1c-5ea3-b1b7-73f800a5d995",
+      "content_sha256": "2eaa9c54e60c4b8b98d3d91853916dca4f761f3f8c69466ca99a63edd9e51d3b",
+      "simples": "O Ministério Público intervém nas causas cíveis e criminais decorrentes de violência doméstica/familiar quando não atua como parte.",
+      "pontos": [
+        "Intervenção abrange causas cíveis e criminais, não apenas acusação penal.",
+        "Se o MP já é parte, a regra não exige duplicar papéis artificialmente."
+      ],
+      "atencao": [
+        "Não confundir atuação como parte e intervenção na fiscalização da ordem jurídica.",
+        "Essa intervenção não torna universalmente obrigatória manifestação prévia para medida urgente do art. 19."
+      ],
+      "exemplo": "Em causa cível de proteção, MP que não é parte intervém. Variação: proteção urgente pode ser concedida sem prévia manifestação, com comunicação pronta conforme art. 19.",
+      "prova": [
+        "A atuação do art. 25 se limita à esfera penal? Não; inclui causas cíveis.",
+        "A regra impede qualquer proteção antes de ouvir MP? Não; deve ser integrada à urgência do art. 19."
+      ],
+      "termos": [
+        "quando não for parte",
+        "cíveis e criminais"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "82056158-4f1c-5ea3-b1b7-73f800a5d995",
+        "content_sha256": "2eaa9c54e60c4b8b98d3d91853916dca4f761f3f8c69466ca99a63edd9e51d3b",
+        "simples": "O Ministério Público intervirá, quando não for parte, nas causas cíveis e criminais decorrentes da violência doméstica e familiar contra a mulher.",
+        "pontos": [
+          "O MP intervém, quando não for parte, nas causas cíveis e criminais."
+        ],
+        "atencao": [
+          "Atuação como fiscal da lei nas causas cíveis e criminais."
+        ],
+        "exemplo": "Em ação cível de alimentos da vítima, o MP intervém como fiscal da lei.",
+        "prova": [
+          "Assertiva que restringe a intervenção do MP às causas criminais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 26"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-26",
+      "unit_id": "48229982-ba1e-501c-ba20-ebfc716f9600",
+      "content_sha256": "127b89533e6e3b4a8419036743a8bb4c3e7651ca43cdb2a4bd0610026f3a9ebd",
+      "simples": "Quando necessário, MP requisita força policial/serviços públicos, fiscaliza atendimento público e particular, reage às irregularidades e cadastra os casos.",
+      "pontos": [
+        "Requisições incluem saúde, educação, assistência social e segurança, em rol não exaustivo.",
+        "Fiscalização alcança estabelecimentos particulares; medidas administrativas/judiciais cabíveis devem ser adotadas de imediato.",
+        "Cadastro do MP não substitui registro judicial protetivo em banco do CNJ no art. 38-A."
+      ],
+      "atencao": [
+        "Não limitar fiscalização aos serviços estatais nem confundir cadastro com publicidade irrestrita de dados pessoais."
+      ],
+      "exemplo": "MP identifica irregularidade em abrigo particular e adota providência cabível, requisitando serviço de saúde. Variação: ser instituição privada não a exclui da fiscalização legal.",
+      "prova": [
+        "A fiscalização inclui estabelecimentos particulares? Sim; o inciso II os inclui.",
+        "Cadastrar o caso substitui necessariamente o registro judicial da medida? Não; são deveres próprios e distintos."
+      ],
+      "termos": [
+        "quando necessário",
+        "públicos e particulares",
+        "de imediato",
+        "cadastrar"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "48229982-ba1e-501c-ba20-ebfc716f9600",
+        "content_sha256": "127b89533e6e3b4a8419036743a8bb4c3e7651ca43cdb2a4bd0610026f3a9ebd",
+        "simples": "Caberá ao Ministério Público, sem prejuízo de outras atribuições, nos casos de violência doméstica e familiar contra a mulher, quando necessário, requisitar força policial e serviços públicos de saúde, de educação, de assistência social e de segurança, entre outros; fiscalizar os estabelecimentos públicos e particulares de atendimento à mulher, adotando de imediato as medidas administrativas ou judiciais cabíveis; e cadastrar os casos de violência doméstica e familiar contra a mulher.",
+        "pontos": [
+          "Requisitar força policial e serviços públicos.",
+          "Fiscalizar estabelecimentos de atendimento à mulher.",
+          "Cadastrar os casos de violência."
+        ],
+        "atencao": [
+          "Três atribuições específicas, sem prejuízo de outras."
+        ],
+        "exemplo": "O MP fiscaliza uma casa-abrigo e adota medida diante de irregularidade.",
+        "prova": [
+          "Assertiva que retira do MP a atribuição de cadastrar os casos de violência doméstica erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 25"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-27",
+      "unit_id": "423f6166-b856-5cf3-b292-1d2258958cb8",
+      "content_sha256": "24b3e6d4e34f57466b754948c2fa85b0eb45487ad80ec77f0628c0616ef0323d",
+      "simples": "Nos atos processuais cíveis e criminais, a mulher deve estar acompanhada de advogado, com ressalva do pedido protetivo disciplinado pelo art. 19.",
+      "pontos": [
+        "Assistência jurídica é garantia de participação nos atos processuais.",
+        "A ressalva evita transformar ausência de advogado em obstáculo universal à proteção urgente."
+      ],
+      "atencao": [
+        "Não exigir contratação particular como condição de atendimento; art. 28 assegura Defensoria/assistência gratuita nos termos legais.",
+        "Pedido da própria ofendida do art. 19 não pode ser recusado automaticamente por faltar advogado."
+      ],
+      "exemplo": "Mulher sem advogado pede medida protetiva urgente e o pedido é apreciado, observada a ressalva. Variação: nos demais atos processuais, assegurar assistência jurídica adequada.",
+      "prova": [
+        "Pedido protetivo exige sempre advogado particular previamente contratado? Não; há ressalva no art. 19 e assistência gratuita.",
+        "A regra abrange atos cíveis? Sim; expressamente cíveis e criminais."
+      ],
+      "termos": [
+        "todos os atos processuais",
+        "ressalvado",
+        "art. 19"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "423f6166-b856-5cf3-b292-1d2258958cb8",
+        "content_sha256": "24b3e6d4e34f57466b754948c2fa85b0eb45487ad80ec77f0628c0616ef0323d",
+        "simples": "Em todos os atos processuais, cíveis e criminais, a mulher em situação de violência doméstica e familiar deverá estar acompanhada de advogado, ressalvado o previsto no art. 19 (concessão de medidas protetivas de urgência).",
+        "pontos": [
+          "Acompanhamento por advogado em todos os atos processuais, cíveis e criminais.",
+          "Ressalva: o pedido de medidas protetivas do art. 19."
+        ],
+        "atencao": [
+          "Para pedir medida protetiva, NÃO é necessário advogado."
+        ],
+        "exemplo": "A vítima pede a medida protetiva na delegacia, sem advogado, mas é assistida nos demais atos.",
+        "prova": [
+          "Assertiva que exige advogado para o pedido de medida protetiva erra: o art. 27 ressalva o art. 19."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 19",
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-28",
+      "unit_id": "206e05b3-6d2e-52bb-921d-9b37a85f9c94",
+      "content_sha256": "7d240dbcf7096f7469dd032d43da8012b9f0aa489eb26877b145d829ad1144bf",
+      "simples": "A mulher em violência doméstica/familiar tem acesso à Defensoria Pública ou assistência judiciária gratuita, nos termos da lei, tanto na polícia como no Judiciário, com atendimento específico e humanizado.",
+      "pontos": [
+        "Garantia alcança sede policial, não apenas audiência judicial.",
+        "Atendimento deve observar proteção e evitar revitimização."
+      ],
+      "atencao": [
+        "Nos termos da lei não equivale a exigir advogado particular nem a prometer todo serviço sem considerar regime legal de assistência."
+      ],
+      "exemplo": "Mulher procura delegacia e é encaminhada à assistência jurídica humanizada. Variação: ainda não haver processo judicial não elimina a garantia em sede policial.",
+      "prova": [
+        "Assistência jurídica começa necessariamente só no fórum? Não; o artigo inclui sede policial.",
+        "Atendimento genérico que revitimiza atende plenamente à regra? Não; exige atendimento específico e humanizado."
+      ],
+      "termos": [
+        "nos termos da lei",
+        "policial e judicial",
+        "humanizado"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "206e05b3-6d2e-52bb-921d-9b37a85f9c94",
+        "content_sha256": "7d240dbcf7096f7469dd032d43da8012b9f0aa489eb26877b145d829ad1144bf",
+        "simples": "É garantido a toda mulher em situação de violência doméstica e familiar o acesso aos serviços de Defensoria Pública ou de Assistência Judiciária Gratuita, nos termos da lei, em sede policial e judicial, mediante atendimento específico e humanizado.",
+        "pontos": [
+          "Acesso à Defensoria Pública ou à Assistência Judiciária Gratuita.",
+          "Em sede policial e judicial.",
+          "Atendimento específico e humanizado."
+        ],
+        "atencao": [
+          "Assistência garantida também na FASE POLICIAL."
+        ],
+        "exemplo": "A vítima é atendida pela Defensoria Pública já na delegacia.",
+        "prova": [
+          "Assertiva que restringe a assistência jurídica à fase judicial erra: abrange a fase policial."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 27"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-29",
+      "unit_id": "30ca5a1e-4be2-58dc-98d4-256c21df6c96",
+      "content_sha256": "2efa7404b5fc42c992e12699007c79c9a0d2928da1c2ffac05eebdad4354f4a7",
+      "simples": "Juizados que forem criados podem contar com equipe multidisciplinar especializada nas áreas psicossocial, jurídica e de saúde.",
+      "pontos": [
+        "O texto usa poderão, sem declarar que cada unidade já possui equipe instalada.",
+        "Multidisciplinaridade combina campos profissionais, não atendimento exclusivamente jurídico."
+      ],
+      "atencao": [
+        "Não converter possibilidade institucional em prova de existência local nem usar falta de equipe para negar proteção."
+      ],
+      "exemplo": "Juizado organiza equipe com áreas psicossocial, jurídica e saúde. Variação: equipe ainda não instalada não autoriza deixar vítima sem apreciação da proteção urgente.",
+      "prova": [
+        "A equipe é exclusivamente jurídica? Não; envolve também psicossocial e saúde.",
+        "O artigo comprova equipe já instalada em toda comarca? Não; prevê possibilidade de estruturação."
+      ],
+      "termos": [
+        "poderão contar",
+        "psicossocial",
+        "jurídica",
+        "saúde"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "30ca5a1e-4be2-58dc-98d4-256c21df6c96",
+        "content_sha256": "2efa7404b5fc42c992e12699007c79c9a0d2928da1c2ffac05eebdad4354f4a7",
+        "simples": "Os Juizados de Violência Doméstica e Familiar contra a Mulher que vierem a ser criados poderão contar com uma equipe de atendimento multidisciplinar, a ser integrada por profissionais especializados nas áreas psicossocial, jurídica e de saúde.",
+        "pontos": [
+          "Equipe multidisciplinar nos Juizados.",
+          "Áreas psicossocial, jurídica e de saúde."
+        ],
+        "atencao": [
+          "Faculdade ('poderão contar')."
+        ],
+        "exemplo": "O Juizado conta com psicólogos, assistentes sociais e profissionais de saúde.",
+        "prova": [
+          "Assertiva que torna obrigatória a equipe multidisciplinar erra: é facultativa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 30"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-30",
+      "unit_id": "2423bdec-db6f-593c-994c-cb773706b453",
+      "content_sha256": "d1ba88edb06deae35b51540d01200d93245fbb99efe745f2d15a5773f8369c55",
+      "simples": "Equipe multidisciplinar fornece subsídios ao juiz, MP e Defensoria, por escrito em laudos ou verbalmente em audiência, e realiza orientação, encaminhamento, prevenção e outras medidas.",
+      "pontos": [
+        "Atuação dirige-se à ofendida, agressor e familiares, com especial atenção a crianças/adolescentes.",
+        "Legislação local pode reservar outras atribuições."
+      ],
+      "atencao": [
+        "Subsídios técnicos não substituem decisão judicial nem condenação; atuação não se limita à vítima ou a um laudo escrito."
+      ],
+      "exemplo": "Equipe presta esclarecimento em audiência e encaminha familiares à rede de cuidado. Variação: trabalhar com agressor em prevenção não retira atendimento e proteção da ofendida.",
+      "prova": [
+        "Só laudo escrito pode fornecer subsídios? Não; o artigo admite manifestação verbal em audiência.",
+        "Crianças e adolescentes merecem atenção especial? Sim; previsão expressa."
+      ],
+      "termos": [
+        "por escrito",
+        "verbalmente em audiência",
+        "especial atenção"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "2423bdec-db6f-593c-994c-cb773706b453",
+        "content_sha256": "d1ba88edb06deae35b51540d01200d93245fbb99efe745f2d15a5773f8369c55",
+        "simples": "Compete à equipe de atendimento multidisciplinar, entre outras atribuições, fornecer subsídios por escrito ao juiz, ao Ministério Público e à Defensoria Pública, mediante laudos ou verbalmente em audiência, e desenvolver trabalhos de orientação, encaminhamento, prevenção e outras medidas, voltados para a ofendida, o agressor e os familiares, com especial atenção às crianças e aos adolescentes.",
+        "pontos": [
+          "Fornecer subsídios por escrito ou verbalmente ao juiz, ao MP e à Defensoria.",
+          "Orientação, encaminhamento e prevenção.",
+          "Voltados à ofendida, ao agressor e aos familiares, com atenção às crianças e adolescentes."
+        ],
+        "atencao": [
+          "Atende também o AGRESSOR e os familiares."
+        ],
+        "exemplo": "A equipe elabora laudo psicossocial para subsidiar a decisão do juiz.",
+        "prova": [
+          "Assertiva que restringe o atendimento da equipe à vítima erra: abrange o agressor e os familiares."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-31",
+      "unit_id": "fefb9932-2f09-5753-ba74-b93d9aefef6f",
+      "content_sha256": "8ebe21a952717ab525fb07480a2c92fc5c42d7e66af7fcc535167f79fe3e43b2",
+      "simples": "Caso complexo pode exigir avaliação aprofundada de profissional especializado, cuja manifestação o juiz pode determinar mediante indicação da equipe multidisciplinar.",
+      "pontos": [
+        "A complexidade é o pressuposto próprio da medida técnica.",
+        "Indicação pela equipe e determinação pelo juiz são papéis distintos."
+      ],
+      "atencao": [
+        "Não confundir profissional especializado com substituição da competência do julgador; avaliação aprofundada não é requisito universal para toda medida urgente."
+      ],
+      "exemplo": "Equipe identifica situação complexa de trauma infantil e indica especialista; juiz determina avaliação. Variação: caso urgente simples não precisa aguardar avaliação especializada universalmente.",
+      "prova": [
+        "Todo caso exige especialista por força deste artigo? Não; pressupõe complexidade que demande aprofundamento.",
+        "Quem determina a manifestação é necessariamente a própria equipe? Não; a determinação é judicial mediante indicação técnica."
+      ],
+      "termos": [
+        "complexidade",
+        "poderá determinar",
+        "mediante indicação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "fefb9932-2f09-5753-ba74-b93d9aefef6f",
+        "content_sha256": "8ebe21a952717ab525fb07480a2c92fc5c42d7e66af7fcc535167f79fe3e43b2",
+        "simples": "Quando a complexidade do caso exigir avaliação mais aprofundada, o juiz poderá determinar a manifestação de profissional especializado, mediante a indicação da equipe de atendimento multidisciplinar.",
+        "pontos": [
+          "Caso complexo: juiz pode determinar a manifestação de profissional especializado.",
+          "Indicado pela equipe multidisciplinar."
+        ],
+        "atencao": [
+          "Indicação feita pela equipe multidisciplinar."
+        ],
+        "exemplo": "O juiz pede avaliação de um psiquiatra indicado pela equipe.",
+        "prova": [
+          "Assertiva que dispensa a indicação pela equipe multidisciplinar do profissional especializado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 30"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-32",
+      "unit_id": "e08dd47b-7c52-5b7e-b883-0a6d2b1fed4e",
+      "content_sha256": "beb7c0c8a92672992be48ef634c5c95134b3bf2bfaf7162f72a55e57d2600665",
+      "simples": "Judiciário pode prever recursos para criar e manter equipe multidisciplinar em sua proposta orçamentária, nos termos da Lei de Diretrizes Orçamentárias.",
+      "pontos": [
+        "Planejamento inclui criação e manutenção, não só instalação inicial.",
+        "Proposta orçamentária e LDO devem ser consideradas conjuntamente."
+      ],
+      "atencao": [
+        "Não afirmar que o artigo abre crédito automaticamente ou autoriza despesa sem regras orçamentárias."
+      ],
+      "exemplo": "Tribunal inclui criação e manutenção da equipe na proposta, observando LDO. Variação: previsão na lei protetiva não dispensa trâmite orçamentário adequado.",
+      "prova": [
+        "A previsão contempla manutenção? Sim; expressamente criação e manutenção.",
+        "O artigo dispensa observar LDO? Não; exige observância."
+      ],
+      "termos": [
+        "proposta orçamentária",
+        "criação e manutenção",
+        "LDO"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "e08dd47b-7c52-5b7e-b883-0a6d2b1fed4e",
+        "content_sha256": "beb7c0c8a92672992be48ef634c5c95134b3bf2bfaf7162f72a55e57d2600665",
+        "simples": "O Poder Judiciário, na elaboração de sua proposta orçamentária, poderá prever recursos para a criação e manutenção da equipe de atendimento multidisciplinar, nos termos da Lei de Diretrizes Orçamentárias.",
+        "pontos": [
+          "O Judiciário pode prever recursos orçamentários para a equipe multidisciplinar.",
+          "Nos termos da Lei de Diretrizes Orçamentárias."
+        ],
+        "atencao": [
+          "Faculdade."
+        ],
+        "exemplo": "O tribunal inclui na proposta orçamentária verba para a equipe multidisciplinar.",
+        "prova": [
+          "Assertiva que torna obrigatória a previsão de recursos para a equipe multidisciplinar erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-33",
+      "unit_id": "44e68548-1d31-5da1-911b-3ae456338411",
+      "content_sha256": "87c3e7de05692ff8edf49e5bea91f3a8e4e006b88e9c345b781b6df47fd9d6f0",
+      "simples": "Enquanto os Juizados especializados não estiverem estruturados, varas criminais acumulam competências cível e criminal para essas causas, observadas as regras do Título IV e legislação processual pertinente.",
+      "pontos": [
+        "Regra de transição impede desproteção institucional.",
+        "Processamento e julgamento dessas causas têm preferência nas varas criminais."
+      ],
+      "atencao": [
+        "Não tratar ausência de Juizado como impossibilidade de proteção nem como competência cível universal para qualquer litígio.",
+        "Tema 1412/STF: urgência pode demandar atuação protetiva seguida de encaminhamento ao juízo competente."
+      ],
+      "exemplo": "Comarca ainda sem Juizado especializado recebe causa protetiva na vara criminal, com competência cumulativa e preferência. Variação: litígio cível sem conexão legal não é automaticamente atraído por essa regra.",
+      "prova": [
+        "Sem Juizado estruturado, causas ficam necessariamente sem juiz? Não; a vara criminal acumula competências nos limites do artigo.",
+        "Há preferência de processamento/julgamento? Sim; o parágrafo único a garante."
+      ],
+      "termos": [
+        "enquanto não estruturados",
+        "acumularão",
+        "preferência"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=ARE&incidente=7171450&numeroProcesso=1537713&numeroTema=1412"
+      ],
+      "expected": {
+        "unit_id": "44e68548-1d31-5da1-911b-3ae456338411",
+        "content_sha256": "87c3e7de05692ff8edf49e5bea91f3a8e4e006b88e9c345b781b6df47fd9d6f0",
+        "simples": "Enquanto não estruturados os Juizados de Violência Doméstica e Familiar contra a Mulher, as varas criminais acumularão as competências cível e criminal para conhecer e julgar as causas decorrentes da prática de violência doméstica e familiar contra a mulher, observadas as previsões do Título IV da Lei, subsidiada pela legislação processual pertinente. Será garantido o direito de preferência, nas varas criminais, para o processo e o julgamento dessas causas.",
+        "pontos": [
+          "Sem Juizado, as varas criminais acumulam competência cível e criminal.",
+          "Preferência para o processo e julgamento dessas causas."
+        ],
+        "atencao": [
+          "Regra transitória, com preferência de julgamento."
+        ],
+        "exemplo": "Em comarca sem Juizado especializado, a vara criminal julga também as medidas cíveis.",
+        "prova": [
+          "Assertiva que remete as causas à vara cível, na ausência de Juizado, erra: as varas criminais acumulam as competências."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-34",
+      "unit_id": "ed495d3c-f3ac-5535-afaf-8eecd46640ff",
+      "content_sha256": "2ea6c3c5cc5bc139e9950fa0dbae2e9dfaecb17f1bc2194f6835b86fdd7f8128",
+      "simples": "Criação dos Juizados especializados pode ser acompanhada por curadorias necessárias e serviço de assistência judiciária.",
+      "pontos": [
+        "Estrutura complementar oferece suporte ao atendimento e à garantia de assistência.",
+        "Possibilidade de implantação não comprova serviço já existente em toda localidade."
+      ],
+      "atencao": [
+        "Não confundir essa previsão institucional com restrição da garantia de assistência do art. 28."
+      ],
+      "exemplo": "Ao instituir Juizado, ente organiza também serviço de assistência judiciária. Variação: demora da estrutura complementar não torna inexistente o direito de acesso à assistência.",
+      "prova": [
+        "A implantação pode acompanhar a criação do Juizado? Sim; previsão expressa.",
+        "A previsão reduz o direito à assistência do art. 28? Não; deve ser integrada à garantia de acesso."
+      ],
+      "termos": [
+        "poderá ser acompanhada",
+        "curadorias",
+        "assistência judiciária"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "ed495d3c-f3ac-5535-afaf-8eecd46640ff",
+        "content_sha256": "2ea6c3c5cc5bc139e9950fa0dbae2e9dfaecb17f1bc2194f6835b86fdd7f8128",
+        "simples": "A instituição dos Juizados de Violência Doméstica e Familiar contra a Mulher poderá ser acompanhada pela implantação das curadorias necessárias e do serviço de assistência judiciária.",
+        "pontos": [
+          "A instituição dos Juizados pode ser acompanhada de curadorias e assistência judiciária."
+        ],
+        "atencao": [
+          "Faculdade."
+        ],
+        "exemplo": "Ao criar o Juizado, o tribunal também implanta serviço de assistência judiciária.",
+        "prova": [
+          "Assertiva que torna obrigatória a implantação de curadorias com o Juizado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-35",
+      "unit_id": "dc53f041-3b8a-5f54-9f3d-c21daa839455",
+      "content_sha256": "1808141759f78ba7348e8caba9e286305b8358087d42645b2708693925aba370",
+      "simples": "Entes federativos podem criar centros integrais, casas-abrigos, unidades especializadas, campanhas e centros de educação/reabilitação de agressores, no limite de competências.",
+      "pontos": [
+        "Centros integrais alcançam mulheres e dependentes; casas-abrigos incluem respectivos dependentes menores.",
+        "Especialização abrange delegacia, Defensoria, saúde e perícia médico-legal.",
+        "Lei 15.383/2026: campanhas devem informar procedimentos/abordagens policiais, prevenção à revitimização, medidas protetivas e monitoração eletrônica."
+      ],
+      "atencao": [
+        "Poderão criar estruturas não torna opcional ignorar o conteúdo obrigatório das campanhas realizadas.",
+        "Campanha educativa não substitui ordem judicial protetiva nem intervenção de segurança."
+      ],
+      "exemplo": "Campanha explica aproximação segura, proteção e monitoração, evitando revitimização. Variação: campanha que só apresenta slogan sem os conteúdos legais deve ser revista.",
+      "prova": [
+        "As campanhas de 2026 devem abordar monitoração eletrônica? Sim; o parágrafo único inclui esse tema.",
+        "Todos os dependentes de casas-abrigos aparecem sem delimitação etária no inciso II? Não; ali estão respectivos dependentes menores."
+      ],
+      "termos": [
+        "limite das competências",
+        "deverão contemplar",
+        "revitimização",
+        "monitoração"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15383.htm"
+      ],
+      "expected": {
+        "unit_id": "dc53f041-3b8a-5f54-9f3d-c21daa839455",
+        "content_sha256": "1808141759f78ba7348e8caba9e286305b8358087d42645b2708693925aba370",
+        "simples": "A União, o Distrito Federal, os Estados e os Municípios poderão criar e promover, no limite das respectivas competências, centros de atendimento integral e multidisciplinar para mulheres e dependentes; casas-abrigos para mulheres e dependentes menores; delegacias, núcleos de defensoria pública, serviços de saúde e centros de perícia médico-legal especializados; programas e campanhas de enfrentamento da violência; e centros de educação e de reabilitação para os agressores. As campanhas deverão contemplar informações sobre procedimentos e abordagens policiais, prevenção à revitimização, funcionamento das medidas protetivas e mecanismos de monitoração eletrônica.",
+        "pontos": [
+          "Centros de atendimento integral e multidisciplinar.",
+          "Casas-abrigos.",
+          "Delegacias, defensoria, saúde e perícia especializados.",
+          "Programas e campanhas.",
+          "Centros de educação e reabilitação para agressores."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: parágrafo único incluído pela Lei nº 15.383, de 2026 (conteúdo das campanhas).",
+          "Faculdade ('poderão')."
+        ],
+        "exemplo": "O Município mantém uma casa-abrigo para mulheres e seus filhos.",
+        "prova": [
+          "Assertiva que exclui os centros de reabilitação para agressores do rol do art. 35 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-36",
+      "unit_id": "08d72967-5be6-532d-9c58-9eaec191def2",
+      "content_sha256": "1a7176fee719883e50adeb79542b3199bf5b023ebedbff7db34434beea05a35e",
+      "simples": "União, Estados, DF e Municípios devem adaptar órgãos e programas às diretrizes e princípios da lei.",
+      "pontos": [
+        "Aqui o verbo promoverão expressa dever, distinto de poderão de outras estruturas.",
+        "Adaptação alcança programas e órgãos existentes."
+      ],
+      "atencao": [
+        "Não limitar cumprimento à criação de prédio novo ou tratá-lo como mera faculdade administrativa."
+      ],
+      "exemplo": "Município reorganiza seu programa de assistência para atendimento humanizado e integrado. Variação: ter programa antigo não basta se práticas seguem incompatíveis com a lei.",
+      "prova": [
+        "A adaptação é prevista só para União? Não; inclui Estados, DF e Municípios.",
+        "Promoverão equivale a faculdade sem dever? Não; exprime dever de adequação."
+      ],
+      "termos": [
+        "promoverão",
+        "órgãos e programas",
+        "diretrizes e princípios"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "08d72967-5be6-532d-9c58-9eaec191def2",
+        "content_sha256": "1a7176fee719883e50adeb79542b3199bf5b023ebedbff7db34434beea05a35e",
+        "simples": "A União, os Estados, o Distrito Federal e os Municípios promoverão a adaptação de seus órgãos e de seus programas às diretrizes e aos princípios da Lei.",
+        "pontos": [
+          "Todos os entes adaptam seus órgãos e programas às diretrizes e princípios da lei."
+        ],
+        "atencao": [
+          "Dever de adaptação ('promoverão')."
+        ],
+        "exemplo": "O Estado adapta o funcionamento de suas delegacias às diretrizes da lei.",
+        "prova": [
+          "Assertiva que torna facultativa a adaptação dos órgãos às diretrizes da lei erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:19:34.126458+00:00",
+        "updated_at": "2026-10-11T14:19:34.126458+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-37",
+      "unit_id": "58132585-3812-52a3-ba15-abb344bdd9eb",
+      "content_sha256": "021712f9facc01cbab8b69b5ed67a30f0751bc24f79701f11988c898eb69117b",
+      "simples": "Defesa de direitos transindividuais pode ser exercida concorrentemente pelo MP e associação da área regularmente constituída há pelo menos um ano.",
+      "pontos": [
+        "Associação exige atuação na área e constituição regular, não só número de membros.",
+        "Juiz pode dispensar pré-constituição quando não houver outra entidade com representatividade adequada para a demanda coletiva."
+      ],
+      "atencao": [
+        "Concorrentemente não significa participação conjunta obrigatória.",
+        "Dispensa excepcional depende da avaliação judicial; não elimina automaticamente demais requisitos de pertinência e representatividade."
+      ],
+      "exemplo": "Associação da área constituída há dois anos promove demanda coletiva sem precisar atuar junto com MP. Variação: associação recente pode requerer dispensa específica se não houver outra entidade adequadamente representativa.",
+      "prova": [
+        "MP e associação precisam sempre assinar a demanda juntos? Não; a legitimidade é concorrente.",
+        "O requisito de um ano pode ser excepcionalmente dispensado pelo juiz? Sim; nas condições do parágrafo único."
+      ],
+      "termos": [
+        "concorrentemente",
+        "pelo menos um ano",
+        "representatividade adequada"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "58132585-3812-52a3-ba15-abb344bdd9eb",
+        "content_sha256": "021712f9facc01cbab8b69b5ed67a30f0751bc24f79701f11988c898eb69117b",
+        "simples": "A defesa dos interesses e direitos transindividuais previstos na Lei poderá ser exercida, concorrentemente, pelo Ministério Público e por associação de atuação na área, regularmente constituída há pelo menos um ano, nos termos da legislação civil. O requisito da pré-constituição poderá ser dispensado pelo juiz quando entender que não há outra entidade com representatividade adequada para o ajuizamento da demanda coletiva.",
+        "pontos": [
+          "Defesa de direitos transindividuais por MP e associações.",
+          "Associação constituída há pelo menos um ano.",
+          "Juiz pode dispensar a pré-constituição se não houver outra entidade adequada."
+        ],
+        "atencao": [
+          "Legitimação CONCORRENTE."
+        ],
+        "exemplo": "Associação de mulheres com mais de um ano ajuíza ação coletiva.",
+        "prova": [
+          "Assertiva que atribui apenas ao MP a defesa dos direitos transindividuais da lei erra: é concorrente com associações."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 25"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-38",
+      "unit_id": "580ca45d-f324-56b6-ae08-277ece8492aa",
+      "content_sha256": "f0c4037cacc8019da2765a8f74adc8eed03a50ef08c076a0afde28e8be65317f",
+      "simples": "Estatísticas de violência doméstica/familiar integram bases oficiais do Sistema de Justiça e Segurança para subsidiar dados e informações relativos às mulheres.",
+      "pontos": [
+        "Finalidade é subsidiar sistema nacional de dados, não expor nominalmente vítimas.",
+        "Secretarias estaduais e do DF podem remeter informações criminais ao Ministério da Justiça."
+      ],
+      "atencao": [
+        "Distinguir inclusão das estatísticas obrigatória e remessa estadual/DF prevista como poderão.",
+        "Estatística não equivale a registro imediato de cada medida no banco do CNJ (38-A)."
+      ],
+      "exemplo": "Órgãos consolidam estatísticas de violência para a base oficial. Variação: cadastro nominal aberto à internet não é consequência automática dessa previsão estatística.",
+      "prova": [
+        "Podem as estatísticas ser excluídas das bases oficiais por mera conveniência? Não; o artigo prevê inclusão.",
+        "Estatísticas e registro judicial de medida são o mesmo dever? Não; possuem finalidades e comandos próprios."
+      ],
+      "termos": [
+        "serão incluídas",
+        "órgãos oficiais",
+        "poderão remeter"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      ],
+      "expected": {
+        "unit_id": "580ca45d-f324-56b6-ae08-277ece8492aa",
+        "content_sha256": "f0c4037cacc8019da2765a8f74adc8eed03a50ef08c076a0afde28e8be65317f",
+        "simples": "As estatísticas sobre a violência doméstica e familiar contra a mulher serão incluídas nas bases de dados dos órgãos oficiais do Sistema de Justiça e Segurança a fim de subsidiar o sistema nacional de dados e informações relativo às mulheres. As Secretarias de Segurança Pública dos Estados e do Distrito Federal poderão remeter suas informações criminais para a base de dados do Ministério da Justiça.",
+        "pontos": [
+          "Estatísticas incluídas nas bases do Sistema de Justiça e Segurança.",
+          "Subsidiam o sistema nacional de dados sobre mulheres.",
+          "Secretarias estaduais podem remeter informações ao Ministério da Justiça."
+        ],
+        "atencao": [
+          "Remessa das Secretarias estaduais é FACULTATIVA."
+        ],
+        "exemplo": "A Secretaria estadual de segurança remete seus dados ao Ministério da Justiça.",
+        "prova": [
+          "Assertiva que torna obrigatória a remessa de dados das Secretarias de Segurança erra: é faculdade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-38-a",
+      "unit_id": "9f203628-d8a6-5169-bb9b-93782faf2e28",
+      "content_sha256": "6f5e42579ba983063f727267c9dd862ac0d0f634ae79c364a092f1932048cb72",
+      "simples": "Juiz providencia registro da medida protetiva. Depois da concessão, ela é imediatamente registrada em banco mantido e regulamentado pelo CNJ, com acesso instantâneo às instituições previstas.",
+      "pontos": [
+        "Lei 14.310/2022 atualizou o parágrafo: MP, Defensoria, segurança pública e assistência social têm acesso para fiscalização e efetividade.",
+        "Registro sucede concessão; não é fundamento para protelar a proteção."
+      ],
+      "atencao": [
+        "Acesso institucional instantâneo não significa publicidade irrestrita ao público.",
+        "Não substituir registro judicial por estatística geral ou cadastro do MP do art. 26."
+      ],
+      "exemplo": "Medida concedida é registrada imediatamente e a rede autorizada consegue consultá-la para fiscalizar. Variação: dado não deve ser divulgado nominalmente ao público apenas porque há acesso institucional.",
+      "prova": [
+        "O banco é mantido e regulamentado pelo CNJ? Sim; previsão expressa.",
+        "O acesso autorizado inclui assistência social? Sim; o texto atual a inclui."
+      ],
+      "termos": [
+        "imediatamente",
+        "CNJ",
+        "acesso instantâneo"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14310.htm"
+      ],
+      "expected": {
+        "unit_id": "9f203628-d8a6-5169-bb9b-93782faf2e28",
+        "content_sha256": "6f5e42579ba983063f727267c9dd862ac0d0f634ae79c364a092f1932048cb72",
+        "simples": "O juiz competente providenciará o registro da medida protetiva de urgência. As medidas protetivas serão, após sua concessão, imediatamente registradas em banco de dados mantido e regulamentado pelo Conselho Nacional de Justiça, garantido o acesso instantâneo do Ministério Público, da Defensoria Pública e dos órgãos de segurança pública e de assistência social, com vistas à fiscalização e à efetividade das medidas.",
+        "pontos": [
+          "Registro da medida protetiva pelo juiz competente.",
+          "Banco de dados mantido e regulamentado pelo CNJ.",
+          "Acesso instantâneo do MP, da Defensoria e dos órgãos de segurança e assistência."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 13.827, de 2019; parágrafo único com redação da Lei nº 14.310, de 2022.",
+          "Banco de dados do CNJ."
+        ],
+        "exemplo": "A medida protetiva é registrada no banco do CNJ, e a polícia consulta de imediato.",
+        "prova": [
+          "Assertiva que atribui a manutenção do banco de medidas protetivas ao Ministério Público erra: é do CNJ."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-39",
+      "unit_id": "53fcd2d9-b3fc-5cde-8eb9-93ea07526cae",
+      "content_sha256": "d582b7efca5f3a54c67a19297db7e17f99a4807fc2fd4d2d2ddd17d4d7c03286",
+      "simples": "Entes podem estabelecer dotações específicas a cada exercício financeiro, observadas competências e LDO. Entre prioridades de alocação devem considerar aquisição/manutenção de monitoração de agressores e dispositivos de segurança para vítimas.",
+      "pontos": [
+        "Lei 15.383/2026 inseriu a prioridade no parágrafo único.",
+        "Planejamento anual e manutenção dos equipamentos são relevantes, não só aquisição inicial."
+      ],
+      "atencao": [
+        "Poderão estabelecer dotações específicas não transforma a prioridade legal dos equipamentos em tema dispensável.",
+        "Previsão legal não dispensa regras de contratação, orçamento e proteção de dados."
+      ],
+      "exemplo": "Estado planeja dotação anual e inclui manutenção de tornozeleiras e dispositivos das vítimas. Variação: comprar equipamentos sem considerar manutenção não cobre o conteúdo integral da prioridade.",
+      "prova": [
+        "A prioridade atual inclui dispositivos das vítimas? Sim; não apenas equipamentos do agressor.",
+        "O texto limita a prioridade à compra inicial? Não; inclui aquisição e manutenção."
+      ],
+      "termos": [
+        "cada exercício financeiro",
+        "deverão observar",
+        "aquisição e manutenção"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15383.htm"
+      ],
+      "expected": {
+        "unit_id": "53fcd2d9-b3fc-5cde-8eb9-93ea07526cae",
+        "content_sha256": "d582b7efca5f3a54c67a19297db7e17f99a4807fc2fd4d2d2ddd17d4d7c03286",
+        "simples": "A União, os Estados, o Distrito Federal e os Municípios, no limite de suas competências e nos termos das respectivas leis de diretrizes orçamentárias, poderão estabelecer dotações orçamentárias específicas, em cada exercício financeiro, para a implementação das medidas da Lei. Na implementação, os entes deverão observar, entre as prioridades de alocação de recursos, a aquisição e a manutenção de equipamentos de monitoração eletrônica para agressores e de dispositivos de segurança para as vítimas.",
+        "pontos": [
+          "Dotações orçamentárias específicas, a cada exercício.",
+          "Prioridade: equipamentos de monitoração eletrônica de agressores e dispositivos de segurança para vítimas."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: parágrafo único incluído pela Lei nº 15.383, de 2026."
+        ],
+        "exemplo": "O Estado prioriza a compra de tornozeleiras eletrônicas para agressores.",
+        "prova": [
+          "Assertiva que dispensa a prioridade de recursos para monitoração eletrônica erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12-D"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-40",
+      "unit_id": "47350586-eeca-5942-a797-a6fb71b8bd9f",
+      "content_sha256": "3bcf2a037a923a8c8ef22f3f6f493fabda6309f0b9889781628959f734c9a2c2",
+      "simples": "Obrigações expressas na lei não excluem outras que decorram dos princípios nela adotados.",
+      "pontos": [
+        "O conjunto protetivo deve ser integrado pelos princípios compatíveis.",
+        "Rol de deveres não é interpretado como eliminação automática de toda garantia adicional."
+      ],
+      "atencao": [
+        "Cláusula principiológica não autoriza criar crime ou pena sem lei nem analogia penal gravosa."
+      ],
+      "exemplo": "Rede adota providência compatível de acolhimento para efetivar proteção, mesmo sem descrição literal de cada procedimento. Variação: inventar novo crime por princípio viola legalidade penal.",
+      "prova": [
+        "As obrigações expressas esgotam necessariamente toda proteção? Não; o artigo admite outras derivadas dos princípios.",
+        "A cláusula permite criar pena por analogia? Não; permanece legalidade penal."
+      ],
+      "termos": [
+        "não excluem",
+        "princípios",
+        "obrigações"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "47350586-eeca-5942-a797-a6fb71b8bd9f",
+        "content_sha256": "3bcf2a037a923a8c8ef22f3f6f493fabda6309f0b9889781628959f734c9a2c2",
+        "simples": "As obrigações previstas na Lei não excluem outras decorrentes dos princípios por ela adotados.",
+        "pontos": [
+          "As obrigações da lei não excluem outras decorrentes dos seus princípios."
+        ],
+        "atencao": [
+          "Cláusula de abertura."
+        ],
+        "exemplo": "Obrigação não prevista no texto, mas decorrente dos princípios da lei, também deve ser cumprida.",
+        "prova": [
+          "Assertiva que restringe as obrigações da lei às expressamente previstas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-40-a",
+      "unit_id": "cd790ba2-a053-547a-9bec-a5f006332c86",
+      "content_sha256": "e9ab0b42c1cdcc5d09334bf521737eabb73de83c1b94e4a10b433bfc4dd4b114",
+      "simples": "Situações do art. 5º atraem aplicação da lei independentemente da causa/motivação da violência e condição de ofensor ou ofendida. Tema 1412/STF ampliou medidas protetivas para violência de gênero fora desses vínculos.",
+      "pontos": [
+        "Lei 14.550/2023 reforça incidência sem exigir motivação adicional nas situações legais.",
+        "Não exigir prova de ciúme, dependência econômica ou convivência sob o mesmo teto para toda hipótese.",
+        "Tema 1412, julgado em agosto/2026: distinguir extensão da proteção urgente e enquadramento penal/competência."
+      ],
+      "atencao": [
+        "Não converter o artigo em aplicação penal automática a qualquer discussão com mulher sem examinar contexto legal.",
+        "Ausência de vínculo doméstico não pode ser usada isoladamente para negar proteção diante de violência de gênero abrangida pelo STF."
+      ],
+      "exemplo": "Agressão em relação afetiva não deixa de atrair proteção porque agressor alega discussão por dinheiro. Variação: violência de gênero sem vínculo afetivo exige examinar proteção do Tema 1412, sem transposição penal automática.",
+      "prova": [
+        "A alegação de motivo financeiro afasta necessariamente a lei na situação do art. 5º? Não; o art. 40-A afasta esse obstáculo.",
+        "Fora dos vínculos do art. 5º toda medida deve ser negada? Não; observar Tema 1412 para violência de gênero."
+      ],
+      "termos": [
+        "independentemente",
+        "causa ou motivação",
+        "condição"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=ARE&incidente=7171450&numeroProcesso=1537713&numeroTema=1412",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14550.htm"
+      ],
+      "expected": {
+        "unit_id": "cd790ba2-a053-547a-9bec-a5f006332c86",
+        "content_sha256": "e9ab0b42c1cdcc5d09334bf521737eabb73de83c1b94e4a10b433bfc4dd4b114",
+        "simples": "A Lei será aplicada a todas as situações previstas no seu art. 5º, independentemente da causa ou da motivação dos atos de violência e da condição do ofensor ou da ofendida.",
+        "pontos": [
+          "Aplica-se a todas as situações do art. 5º.",
+          "Independe da causa, da motivação, e da condição do ofensor ou da ofendida."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 14.550, de 2023.",
+          "Reforça a aplicação independentemente da motivação."
+        ],
+        "exemplo": "A lei se aplica à agressão no âmbito doméstico, qualquer que seja o motivo.",
+        "prova": [
+          "Assertiva que condiciona a aplicação da lei à motivação do agressor erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-41",
+      "unit_id": "5344253b-ec9b-5f6b-ac64-5ae0faac5023",
+      "content_sha256": "01d28a03f7b52b679410c9cde30b3da0f67e919c35ee5abef4c567abe74ef6ef",
+      "simples": "A Lei 9.099/1995 não se aplica aos crimes de violência doméstica/familiar contra mulher, independentemente da pena. Súmula 536/STJ afasta transação penal e suspensão condicional do processo nos delitos sujeitos ao rito.",
+      "pontos": [
+        "Pena pequena não restabelece automaticamente institutos do Juizado Especial.",
+        "CPP 28-A, §2º, IV também exclui ANPP em favor do agressor nas hipóteses legais.",
+        "Não confundir suspensão condicional do processo com suspensão condicional da pena, que exige análise de seu regime próprio."
+      ],
+      "atencao": [
+        "Não prometer transação por lesão leve ou afirmar que qualquer pena baixa admite ANPP.",
+        "Outras garantias processuais permanecem; exclusão da Lei 9.099 não autoriza condenação sem defesa."
+      ],
+      "exemplo": "Crime com pena pequena em contexto doméstico não ganha transação apenas por esse limite. Variação: pedido de suspensão condicional da pena é instituto diferente e exige examinar CP, não repetir automaticamente vedação do processo.",
+      "prova": [
+        "Pena baixa autoriza aplicar automaticamente Lei 9.099? Não; a exclusão independe da pena.",
+        "Suspensão do processo e suspensão da pena são idênticas? Não; possuem regimes distintos."
+      ],
+      "termos": [
+        "independentemente da pena",
+        "não se aplica",
+        "transação penal"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://arquivocidadao.stj.jus.br/index.php/sumula-536-2%3Bisad?sf_culture=pt"
+      ],
+      "expected": {
+        "unit_id": "5344253b-ec9b-5f6b-ac64-5ae0faac5023",
+        "content_sha256": "01d28a03f7b52b679410c9cde30b3da0f67e919c35ee5abef4c567abe74ef6ef",
+        "simples": "Aos crimes praticados com violência doméstica e familiar contra a mulher, independentemente da pena prevista, não se aplica a Lei nº 9.099, de 1995 (Juizados Especiais Criminais).",
+        "pontos": [
+          "Não se aplica a Lei dos Juizados Especiais, independentemente da pena.",
+          "Afasta transação penal, suspensão condicional do processo e outros benefícios da Lei nº 9.099."
+        ],
+        "atencao": [
+          "O STF reconheceu a constitucionalidade do dispositivo.",
+          "Súmula do STJ: não cabe suspensão condicional do processo nesses crimes."
+        ],
+        "exemplo": "Lesão corporal leve contra a esposa não admite transação penal.",
+        "prova": [
+          "Assertiva que admite a transação penal nos crimes de violência doméstica, por serem de menor potencial ofensivo, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-42",
+      "unit_id": "8d6b0f78-15ce-5031-8d42-65291adb6941",
+      "content_sha256": "2275aaf644964d5e58975dcfc0449e7b78695d6926e7a9607261c4d7accc3aab",
+      "simples": "Artigo registra alteração histórica que inseriu inciso IV no CPP 313 em 2006. Para aplicação atual, consultar CPP compilado: Lei 12.403/2011 revogou o IV e disciplinou a hipótese doméstica no inciso III.",
+      "pontos": [
+        "CPP 313, III atual inclui mulher, criança, adolescente, idoso, enfermo ou pessoa com deficiência, para garantir medidas protetivas.",
+        "Admissibilidade do art. 313 não dispensa requisitos concretos do 312, provocação válida do 311 e fundamentação.",
+        "CPP recebeu novas hipóteses em 2026 (V e VI); não recriar o antigo IV como se vigente."
+      ],
+      "atencao": [
+        "A transcrição da norma modificadora de 2006 não é o texto atual completo do dispositivo alterado.",
+        "Não impor prisão automática apenas porque há pedido de medida protetiva."
+      ],
+      "exemplo": "Questão atual pede inciso doméstico da preventiva: resposta deve usar o III do CPP compilado. Variação: prova de história legislativa sobre inclusão em 2006 pode mencionar IV, com identificação temporal expressa.",
+      "prova": [
+        "O antigo inciso IV transcrito permanece vigente nessa numeração? Não; foi revogado em 2011.",
+        "A hipótese doméstica atual dispensa perigo concreto? Não; exige requisitos cautelares."
+      ],
+      "termos": [
+        "alteração histórica",
+        "inciso III atual",
+        "requisitos concretos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12403.htm"
+      ],
+      "expected": {
+        "unit_id": "8d6b0f78-15ce-5031-8d42-65291adb6941",
+        "content_sha256": "2275aaf644964d5e58975dcfc0449e7b78695d6926e7a9607261c4d7accc3aab",
+        "simples": "O art. 313 do Código de Processo Penal passa a vigorar acrescido do inciso IV: se o crime envolver violência doméstica e familiar contra a mulher, nos termos da lei específica, para garantir a execução das medidas protetivas de urgência (admissão da prisão preventiva).",
+        "pontos": [
+          "Acrescenta hipótese de prisão preventiva no CPP.",
+          "Crime com violência doméstica e familiar contra a mulher, para garantir a execução das medidas protetivas."
+        ],
+        "atencao": [
+          "A norma foi depois reorganizada: hoje consta do art. 313, III, do CPP."
+        ],
+        "exemplo": "A preventiva é admitida para garantir o cumprimento das medidas protetivas.",
+        "prova": [
+          "Assertiva que impede a preventiva para garantir medidas protetivas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 313 do CPP"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-43",
+      "unit_id": "a25b8e15-ddf6-5248-b725-5cfa00d1f958",
+      "content_sha256": "3906d12e5334eef5bfa9a58bc1af2a1f08611e8dee7990f556e1e6dbce9ec523",
+      "simples": "Alteração de 2006 incluiu no CP 61, II, f a violência contra mulher na forma da lei específica, ao lado de abuso de autoridade e relações domésticas/coabitação/hospitalidade. Aplicação atual exige consultar CP e jurisprudência.",
+      "pontos": [
+        "Tema 1197/STJ: agravante em conjunto com disposições da Maria da Penha não configura, por si, bis in idem.",
+        "CP 61 condiciona agravante a circunstância que não constitua nem qualifique o crime; vedação de repetição do mesmo fundamento permanece.",
+        "Tema 1333/STJ, 2025: agravante cabe nas contravenções em contexto doméstico, mas não junto ao §2º especial de vias de fato do art. 21/LCP, por especialidade e bis in idem."
+      ],
+      "atencao": [
+        "Não transformar Tema 1197 em autorização universal de dupla valoração de elemento já usado em tipo qualificado.",
+        "Agravante genérica, qualificadora e causa de aumento são estruturas distintas."
+      ],
+      "exemplo": "Lesão do §9º, que não exige vítima mulher, demanda examinar agravante de gênero segundo Tema 1197. Variação: vias de fato com §2º especial não recebe novamente agravante pelo mesmo fundamento, conforme Tema 1333.",
+      "prova": [
+        "A aplicação da Maria da Penha elimina sempre a agravante do CP? Não; Tema 1197 afasta essa conclusão.",
+        "Tema 1197 autoriza repetir qualquer elemento do crime na pena? Não; permanece vedação de bis in idem e limite do CP 61."
+      ],
+      "termos": [
+        "agravante",
+        "não constituem ou qualificam",
+        "bis in idem"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1197&cod_tema_inicial=1197&novaConsulta=true&tipo_pesquisa=T",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1333&cod_tema_inicial=1333&novaConsulta=true&tipo_pesquisa=T"
+      ],
+      "expected": {
+        "unit_id": "a25b8e15-ddf6-5248-b725-5cfa00d1f958",
+        "content_sha256": "3906d12e5334eef5bfa9a58bc1af2a1f08611e8dee7990f556e1e6dbce9ec523",
+        "simples": "A alínea f do inciso II do art. 61 do Código Penal passa a vigorar com a redação: com abuso de autoridade ou prevalecendo-se de relações domésticas, de coabitação ou de hospitalidade, ou com violência contra a mulher na forma da lei específica (circunstância agravante).",
+        "pontos": [
+          "Agravante genérica: violência contra a mulher na forma da lei específica.",
+          "Também abuso de autoridade e relações domésticas, de coabitação ou hospitalidade."
+        ],
+        "atencao": [
+          "Circunstância AGRAVANTE do art. 61, II, f, do Código Penal."
+        ],
+        "exemplo": "A agressão contra a esposa, prevalecendo-se da relação doméstica, atrai a agravante.",
+        "prova": [
+          "Assertiva que trata a violência contra a mulher como causa de aumento do art. 61 erra: é circunstância agravante."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 61 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-44",
+      "unit_id": "9882f379-1c69-51c0-8afd-ccf08028c1a3",
+      "content_sha256": "734e2ca9c2866aab3e8e8dfef244f9fcfbf1c82713bebabf49cdf5095aca4fc2",
+      "simples": "A transcrição de 2006 no artigo não traz a pena atual do CP 129, §9º. Lei 14.994/2024 fixou reclusão de dois a cinco anos; Lei 15.455/2026 acrescentou relação de trabalho doméstico ao contexto do §9º.",
+      "pontos": [
+        "O §9º não exige necessariamente vítima mulher; o §13 trata lesão contra mulher por razões da condição do sexo feminino, com remissão ao 121-A, §1º.",
+        "§11 mantém aumento de um terço na hipótese do §9º contra pessoa com deficiência.",
+        "Pena residual de detenção de três meses a três anos é histórica, não pena atual; analisar lei do tempo e vedação de retroatividade gravosa.",
+        "Lei 15.358/2026 incluiu majorante do §8º-A em contexto legal ultraviolento, com ressalva própria: aplicar requisitos, sem associar automaticamente qualquer rótulo de facção."
+      ],
+      "atencao": [
+        "Não confundir §9º amplo, §13 de gênero e graduação de lesões; não aplicar aumentos por mera soma sem enquadramento.",
+        "Atualização deve usar CP compilado e data do fato, não copiar isoladamente transcrição da lei modificadora."
+      ],
+      "exemplo": "Lesão atual contra trabalhadora doméstica exige analisar §9º com redação de 2026 e pena vigente. Variação: fato anterior à lei mais gravosa exige análise temporal; lesão por razão da condição feminina pode exigir enquadramento próprio do §13.",
+      "prova": [
+        "A detenção de três meses a três anos transcrita aqui é pena atual do §9º? Não; atualmente há reclusão de dois a cinco anos.",
+        "O §9º exige vítima mulher em todas as hipóteses? Não; seu rol é mais amplo, distinto do §13."
+      ],
+      "termos": [
+        "reclusão de dois a cinco anos",
+        "trabalho doméstico",
+        "um terço",
+        "lei do tempo"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15455.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ],
+      "expected": {
+        "unit_id": "9882f379-1c69-51c0-8afd-ccf08028c1a3",
+        "content_sha256": "734e2ca9c2866aab3e8e8dfef244f9fcfbf1c82713bebabf49cdf5095aca4fc2",
+        "simples": "O art. 129 do Código Penal passa a vigorar com alterações: se a lesão for praticada contra ascendente, descendente, irmão, cônjuge ou companheiro, ou com quem conviva ou tenha convivido, ou prevalecendo-se o agente das relações domésticas, de coabitação ou de hospitalidade, a pena é de detenção de 3 meses a 3 anos; e, nessa hipótese, a pena será aumentada de um terço se o crime for cometido contra pessoa portadora de deficiência.",
+        "pontos": [
+          "Lesão corporal doméstica: detenção de 3 meses a 3 anos.",
+          "Aumento de um terço se a vítima é pessoa com deficiência."
+        ],
+        "atencao": [
+          "O art. 129, §9º, foi posteriormente alterado por outras leis; confira a redação vigente do Código Penal."
+        ],
+        "exemplo": "Lesão corporal leve contra a esposa configura o art. 129, §9º, do Código Penal.",
+        "prova": [
+          "Assertiva que fixa pena de reclusão para a lesão doméstica do art. 129, §9º, na redação da Lei Maria da Penha, erra: é detenção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 129 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-45",
+      "unit_id": "c36571f8-112e-5f5e-a602-adebbdbc42b5",
+      "content_sha256": "c88a122397b23c5b671d7679960ef94333feb03f1c7cae1bbf00ffa63764701b",
+      "simples": "A norma alterou LEP 152 para permitir comparecimento obrigatório do agressor a programas de recuperação/reeducação. Texto atual da LEP foi ampliado pela Lei 14.344/2022 para hipóteses relativas a criança/adolescente, além da mulher.",
+      "pontos": [
+        "LEP atual inclui violência doméstica/familiar contra criança, adolescente e mulher e tratamento cruel/degradante ou educação/correção/disciplina violentas contra criança/adolescente.",
+        "Comparecimento é obrigatório quando determinado pelo juiz; poder determinar não significa adesão facultativa após ordem.",
+        "Distinguir programa na execução penal e medida protetiva de reeducação do art. 22, VI."
+      ],
+      "atencao": [
+        "Não ensinar a redação de 2006 como rol atual exaustivo nem tratar programa como nova pena sem decisão fundamentada."
+      ],
+      "exemplo": "Juiz determina comparecimento a programa no contexto da execução em hipótese legal. Variação: agressor de criança também pode ser abrangido pelo texto atual, não excluído pela transcrição antiga limitada à mulher.",
+      "prova": [
+        "O texto atual da LEP protege somente a mulher nesse dispositivo? Não; foi ampliado em 2022.",
+        "Determinado o comparecimento obrigatório, ele se torna facultativo para agressor? Não; observar a ordem judicial."
+      ],
+      "termos": [
+        "comparecimento obrigatório",
+        "texto atual",
+        "recuperação e reeducação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm"
+      ],
+      "expected": {
+        "unit_id": "c36571f8-112e-5f5e-a602-adebbdbc42b5",
+        "content_sha256": "c88a122397b23c5b671d7679960ef94333feb03f1c7cae1bbf00ffa63764701b",
+        "simples": "O art. 152 da Lei de Execução Penal passa a vigorar com o parágrafo único: nos casos de violência doméstica contra a mulher, o juiz poderá determinar o comparecimento obrigatório do agressor a programas de recuperação e reeducação.",
+        "pontos": [
+          "Na execução, o juiz pode determinar o comparecimento do agressor a programas de recuperação e reeducação."
+        ],
+        "atencao": [
+          "Alteração da Lei de Execução Penal."
+        ],
+        "exemplo": "O juiz da execução determina que o agressor frequente programa de reeducação.",
+        "prova": [
+          "Assertiva que torna obrigatório o programa para todo agressor, independentemente de decisão do juiz, erra: depende de determinação judicial."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 22, VI"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    },
+    {
+      "course_slug": "maria-penha",
+      "course_id": "717f3076-8fb0-5398-84ee-4d571885fd49",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-46",
+      "unit_id": "c22cf3b2-434d-58fc-938a-ee0a950b629f",
+      "content_sha256": "72a229a6f00e4b7be0245161361a1b8fef7873785572a0746a18d9e4140a2ca6",
+      "simples": "A lei original teve vacatio legis de 45 dias após publicação. A data de assinatura, 7/8/2006, não substitui a publicação no DOU de 8/8/2006; alterações posteriores possuem seus próprios marcos.",
+      "pontos": [
+        "Contagem da vacatio observa LC 95/1998, art. 8º, §1º: inclusão de publicação e último dia, com vigência no dia subsequente à consumação integral.",
+        "O prazo original não é reiniciado automaticamente por toda alteração posterior."
+      ],
+      "atencao": [
+        "Não aplicar universalmente 45 dias às leis de 2026 que modificaram a Maria da Penha.",
+        "Norma material gravosa não retroage; marco de vigência e natureza da alteração importam."
+      ],
+      "exemplo": "Candidato diferencia assinatura e publicação ao identificar vacatio original. Variação: lei modificadora dispõe vigência na publicação, e não se espera 45 dias apenas por alterar esta lei.",
+      "prova": [
+        "Todas as alterações posteriores têm automaticamente 45 dias de vacatio? Não; cada lei tem cláusula própria.",
+        "Assinatura é sempre termo inicial da vacatio? Não; a regra se vincula à publicação e contagem legal."
+      ],
+      "termos": [
+        "45 dias",
+        "após sua publicação",
+        "marco próprio"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp95.htm"
+      ],
+      "expected": {
+        "unit_id": "c22cf3b2-434d-58fc-938a-ee0a950b629f",
+        "content_sha256": "72a229a6f00e4b7be0245161361a1b8fef7873785572a0746a18d9e4140a2ca6",
+        "simples": "Esta Lei entra em vigor 45 dias após sua publicação.",
+        "pontos": [
+          "Vigência 45 dias após a publicação."
+        ],
+        "atencao": [
+          "Dispositivo histórico (vacatio legis de 45 dias)."
+        ],
+        "exemplo": "A lei só passou a valer 45 dias depois de publicada.",
+        "prova": [
+          "Assertiva que fixa em 30 dias a vacatio legis da Lei Maria da Penha erra: são 45 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:04.441813+00:00",
+        "updated_at": "2026-10-11T14:20:04.441813+00:00"
+      }
+    }
+  ]
+}

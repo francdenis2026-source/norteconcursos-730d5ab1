@@ -1,8 +1,8 @@
 {
   "current_units": 3511,
-  "current_review_metadata": 1010,
-  "pending_current_review_metadata": 2501,
-  "checked_at": "2026-10-12T18:41:17.987Z",
+  "current_review_metadata": 1034,
+  "pending_current_review_metadata": 2477,
+  "checked_at": "2026-10-12T19:10:26.560Z",
   "note": "Contagem de aprovações editoriais atuais com revisor, data e hash correspondente; existência de explicação publicada não equivale a revisão atual. Não certifica toda a regulamentação ou jurisprudência.",
   "courses": [
     {
@@ -128,8 +128,8 @@
     {
       "slug": "maria-penha",
       "current": 56,
-      "review_metadata": 32,
-      "pending": 24
+      "review_metadata": 56,
+      "pending": 0
     },
     {
       "slug": "hediondos",

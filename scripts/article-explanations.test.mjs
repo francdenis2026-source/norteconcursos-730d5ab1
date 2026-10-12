@@ -465,3 +465,18 @@ test('Maria procedure review integrates 2026 changes without automatic imprisonm
  assert.match(get('art-24-a').atencao.join(' '),/não revoga formalmente.*adulteração/s);
  for(const key of ['art-16','art-16-a','art-20','art-22','art-24-a']) assert.equal(legalStudyCaveat('maria-penha',key).literalPractice,false);
 });
+
+test('Maria final review does not teach historical amendments as current host law',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-maria-final-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,24);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-42').simples,/12.403\/2011.*revogou o IV.*inciso III/);
+ assert.match(get('art-44').simples,/14.994\/2024.*dois a cinco.*15.455\/2026.*trabalho doméstico/);
+ assert.match(get('art-45').simples,/14.344\/2022.*criança\/adolescente/);
+ assert.match(get('art-43').pontos.join(' '),/1333.*não junto ao §2º/);
+ assert.match(get('art-38-a').atencao.join(' '),/não significa publicidade irrestrita/);
+ const packs=['protection','procedure','final'].map(n=>JSON.parse(readFileSync(`docs/library/article-explanations-maria-${n}-2026-10-12.json`,'utf8')));
+ assert.equal(new Set(packs.flatMap(pack=>pack.units.map(r=>r.unit_key))).size,56);
+ for(const key of ['art-40-a','art-41','art-42','art-43','art-44','art-45']) assert.equal(legalStudyCaveat('maria-penha',key).literalPractice,false);
+});
