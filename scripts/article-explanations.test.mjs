@@ -548,3 +548,16 @@ test('environmental general review separates entity liability, substitution limi
  assert.match(get('art-12').simples,/360 salários mínimos/);
  assert.match(get('art-15').simples,/não constitui nem qualifica/);
 });
+
+test('environmental procedure review distinguishes sursis, entity penalties and repair safeguards',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ambientais-procedure-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,11);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-16').simples,/não superior a três.*diferente.*processo/);
+ assert.match(get('art-19').simples,/contraditório/);
+ assert.match(get('art-20').pontos.join(' '),/pedido expresso.*indicação do valor/);
+ assert.match(get('art-22').simples,/não excede dez anos/);
+ assert.match(get('art-27').simples,/comprovada impossibilidade.*não é necessariamente reparação integral/);
+ assert.match(get('art-28').simples,/não é sursis.*nem extinção automática/);
+});

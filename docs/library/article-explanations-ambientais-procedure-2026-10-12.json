@@ -1,0 +1,659 @@
+{
+  "version": "2026-10-12-ambientais-procedure",
+  "checked_at": "2026-10-12T20:13:50.128949+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "ambientais",
+      "title": "Lei 9.605/1998 — Crimes Ambientais",
+      "units": 11,
+      "scope_type": "targeted_correction",
+      "course_current_units": 79,
+      "target_unit_keys": [
+        "art-16",
+        "art-17",
+        "art-18",
+        "art-19",
+        "art-20",
+        "art-21",
+        "art-22",
+        "art-23",
+        "art-26",
+        "art-27",
+        "art-28"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "source_sha256": "e59817ef929c73f6782a029a6397ebede300ba92c119ef0f68691a409f84c8cd",
+      "source_checked_at": "2026-10-12T16:18:24.261384+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-16",
+      "unit_id": "ed23b2db-20a6-579d-a8a1-62e04f62d833",
+      "content_sha256": "eccabd271ee1d6b34843fecaa51027287344e59c9c2237af7fb22adb24b03385",
+      "simples": "Sursis da pena ambiental admite condenação privativa de liberdade não superior a três anos; é instituto diferente da suspensão do processo.",
+      "pontos": [
+        "Exatamente três integra o limite não superior; não confundir com inferior a quatro da substituição.",
+        "Aplicação exige demais requisitos legais do sursis, não só número de anos."
+      ],
+      "atencao": [
+        "Não afirmar concessão automática a toda pena de três anos; diferenciar CP e suspensão processual da Lei 9.099."
+      ],
+      "exemplo": "Condenação de três anos pode ser examinada para sursis ambiental se demais requisitos forem atendidos. Variação: suspensão do processo não é essa suspensão da execução da pena após condenação.",
+      "prova": [
+        "Exatamente três anos está no limite? Sim; não superior a três.",
+        "Número suficiente garante benefício automático? Não; examinar demais requisitos."
+      ],
+      "termos": [
+        "não superior a três",
+        "suspensão da pena"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm"
+      ],
+      "expected": {
+        "unit_id": "ed23b2db-20a6-579d-a8a1-62e04f62d833",
+        "content_sha256": "eccabd271ee1d6b34843fecaa51027287344e59c9c2237af7fb22adb24b03385",
+        "simples": "Nos crimes da Lei, a suspensão condicional da pena pode ser aplicada nos casos de condenação a pena privativa de liberdade não superior a três anos.",
+        "pontos": [
+          "Sursis para pena privativa de liberdade não superior a três anos."
+        ],
+        "atencao": [
+          "Limite de três anos (maior do que o do Código Penal comum)."
+        ],
+        "exemplo": "Condenado a três anos por crime ambiental pode ter a pena suspensa.",
+        "prova": [
+          "Assertiva que fixa em dois anos o limite do sursis ambiental erra: são três anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-17",
+      "unit_id": "b8a4dd08-16eb-547e-92ed-2c38dc256da0",
+      "content_sha256": "4eedee87de2aed6ee6d8e18354438520567862a1825f6369dec0d6f672fbb0ea",
+      "simples": "Reparação para o sursis especial é verificada por laudo ambiental; as condições judiciais devem ter relação com proteção do ambiente.",
+      "pontos": [
+        "Remissão é ao CP 78 §2, não à cláusula de extinção da suspensão processual.",
+        "Laudo examina reparação; simples declaração não substitui automaticamente constatação técnica."
+      ],
+      "atencao": [
+        "Distinguir laudo ambiental, condições do benefício e impossibilidade de reparação nos termos do regime legal."
+      ],
+      "exemplo": "Para o sursis especial, juiz examina laudo e fixa condições relacionadas à proteção ambiental. Variação: alegação unilateral de ter reparado não dispensa exame dos requisitos e prova.",
+      "prova": [
+        "Qual documento verifica reparação aqui? Laudo de reparação ambiental.",
+        "Qualquer condição sem relação ambiental é autorizada pelo artigo? Não; relacionar à proteção do ambiente."
+      ],
+      "termos": [
+        "laudo de reparação",
+        "proteção ao meio ambiente"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b8a4dd08-16eb-547e-92ed-2c38dc256da0",
+        "content_sha256": "4eedee87de2aed6ee6d8e18354438520567862a1825f6369dec0d6f672fbb0ea",
+        "simples": "A verificação da reparação a que se refere o §2º do art. 78 do Código Penal será feita mediante laudo de reparação do dano ambiental, e as condições a serem impostas pelo juiz deverão relacionar-se com a proteção ao meio ambiente.",
+        "pontos": [
+          "Laudo de reparação do dano ambiental.",
+          "Condições do sursis ligadas à proteção ambiental."
+        ],
+        "atencao": [
+          "Verificação por LAUDO."
+        ],
+        "exemplo": "O juiz exige laudo que comprove a recuperação da área degradada.",
+        "prova": [
+          "Assertiva que dispensa o laudo de reparação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-18",
+      "unit_id": "7dadfc9c-1318-5c28-8634-ab0d9fb5d93b",
+      "content_sha256": "8c548af779438a55f9d7bf89babe248010836c9b01332660998e9c4424d5a321",
+      "simples": "Multa segue critérios do CP e pode ser aumentada até três vezes se ineficaz mesmo no máximo, em razão da vantagem econômica auferida.",
+      "pontos": [
+        "Aumento é condicionado, não obrigatório em toda condenação.",
+        "Até três vezes não significa acrescentar três vezes e totalizar quatro por leitura automática."
+      ],
+      "atencao": [
+        "Não confundir multa e prestação pecuniária de um a 360 salários mínimos; fundamentar ineficácia e vantagem."
+      ],
+      "exemplo": "Multa máxima permanece ineficaz diante do ganho econômico demonstrado: examinar aumento fundamentado até três vezes. Variação: ausência desses pressupostos impede triplicar apenas por ser delito ambiental.",
+      "prova": [
+        "Toda multa ambiental é triplicada? Não; pressupostos e fundamento necessários.",
+        "Prestação pecuniária tem o mesmo cálculo? Não; instituto distinto."
+      ],
+      "termos": [
+        "ineficaz mesmo no máximo",
+        "até três vezes",
+        "vantagem econômica"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7dadfc9c-1318-5c28-8634-ab0d9fb5d93b",
+        "content_sha256": "8c548af779438a55f9d7bf89babe248010836c9b01332660998e9c4424d5a321",
+        "simples": "A multa será calculada segundo os critérios do Código Penal; se revelar-se ineficaz, ainda que aplicada no valor máximo, poderá ser aumentada até três vezes, tendo em vista o valor da vantagem econômica auferida.",
+        "pontos": [
+          "Cálculo pelo Código Penal.",
+          "Aumento até três vezes se ineficaz."
+        ],
+        "atencao": [
+          "Triplicação da multa em caso de ineficácia."
+        ],
+        "exemplo": "Se a multa máxima é pouca diante do lucro do crime, o juiz pode triplicá-la.",
+        "prova": [
+          "Assertiva que fixa o aumento máximo em dez vezes erra: são até três vezes."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-19",
+      "unit_id": "4902290b-aa91-5ee7-ae39-0a9ca4f455ae",
+      "content_sha256": "f2d33605a27650f99e66cc79f81009951c4bff9f0cb07fe6706186f69e92b8d1",
+      "simples": "Perícia ambiental, quando possível, quantifica prejuízo para fiança e multa; perícia civil pode ser usada no processo penal com contraditório.",
+      "pontos": [
+        "Aproveitamento não elimina oportunidade de contestar a prova.",
+        "Sempre que possível qualifica a fixação do montante, não autoriza inventar valor sem base."
+      ],
+      "atencao": [
+        "Não afirmar nulidade universal de toda prova originada em inquérito civil nem aceitação automática sem contraditório."
+      ],
+      "exemplo": "Laudo do inquérito civil é levado ao processo penal e submetido à defesa. Variação: utilização sem possibilidade de impugnação não é justificada apenas pela origem oficial.",
+      "prova": [
+        "Perícia civil é sempre proibida no processo penal? Não; pode ser aproveitada com contraditório.",
+        "A origem oficial elimina contraditório? Não; garantia expressa."
+      ],
+      "termos": [
+        "sempre que possível",
+        "poderá ser aproveitada",
+        "contraditório"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "4902290b-aa91-5ee7-ae39-0a9ca4f455ae",
+        "content_sha256": "f2d33605a27650f99e66cc79f81009951c4bff9f0cb07fe6706186f69e92b8d1",
+        "simples": "A perícia de constatação do dano ambiental, sempre que possível, fixará o montante do prejuízo causado para efeitos de prestação de fiança e cálculo de multa. A perícia produzida no inquérito civil ou no juízo cível poderá ser aproveitada no processo penal, instaurando-se o contraditório.",
+        "pontos": [
+          "Perícia fixa o montante do prejuízo.",
+          "Aproveitamento da perícia civil no processo penal, com contraditório."
+        ],
+        "atencao": [
+          "Prova emprestada com contraditório."
+        ],
+        "exemplo": "A perícia do inquérito civil é reaproveitada na ação penal.",
+        "prova": [
+          "Assertiva que veda o aproveitamento da perícia civil no processo penal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 20"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-20",
+      "unit_id": "44b50235-bebc-545b-a66b-bb21c64d826f",
+      "content_sha256": "979df19b6b527dfc6bf6c87df95b4b897625240b180b9d5b4ab34a5c4754e3d0",
+      "simples": "Sentença condenatória pode fixar mínimo reparatório com base nos prejuízos; sua execução após trânsito não impede liquidar dano efetivamente sofrido.",
+      "pontos": [
+        "Mínimo não é necessariamente reparação integral; liquidação pode apurar restante.",
+        "STJ exige pedido expresso e indicação do valor para assegurar contraditório; confrontar instrução e dano do caso concreto."
+      ],
+      "atencao": [
+        "Não ensinar fixação surpresa de valor por simples existência de condenação nem confundir valor mínimo e multa penal."
+      ],
+      "exemplo": "Denúncia pede reparação com valor estimado por laudo e defesa pode contestar; sentença fixa mínimo cabível. Variação: ausência de pedido/valor e contraditório não pode ser ignorada invocando apenas sempre que possível.",
+      "prova": [
+        "Valor mínimo impede toda liquidação posterior? Não; lei preserva apuração do dano efetivo.",
+        "Condenação autoriza valor surpresa sem contraditório? Não; observar requisitos jurisprudenciais."
+      ],
+      "termos": [
+        "valor mínimo",
+        "trânsito em julgado",
+        "sem prejuízo da liquidação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202403157892"
+      ],
+      "expected": {
+        "unit_id": "44b50235-bebc-545b-a66b-bb21c64d826f",
+        "content_sha256": "979df19b6b527dfc6bf6c87df95b4b897625240b180b9d5b4ab34a5c4754e3d0",
+        "simples": "A sentença penal condenatória, sempre que possível, fixará o valor mínimo para reparação dos danos causados pela infração, considerando os prejuízos sofridos pelo ofendido ou pelo meio ambiente. Transitada em julgado, a execução poderá efetuar-se pelo valor fixado, sem prejuízo da liquidação para apuração do dano efetivamente sofrido.",
+        "pontos": [
+          "Valor mínimo de reparação fixado na sentença.",
+          "Execução imediata pelo valor mínimo.",
+          "Liquidação do dano efetivo."
+        ],
+        "atencao": [
+          "Reparação MÍNIMA na sentença penal."
+        ],
+        "exemplo": "A sentença já fixa uma indenização mínima pelo dano à floresta.",
+        "prova": [
+          "Assertiva que impede a liquidação do dano efetivo após a sentença erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 19"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-21",
+      "unit_id": "f6f6ea38-a0e1-5a8b-a067-8f3d80366757",
+      "content_sha256": "8a5593b5cc838b2da523289f221eb2da3fff7b412163b90e797309fc07bb1000",
+      "simples": "Penas da pessoa jurídica podem ser isoladas, cumulativas ou alternativas: multa, restritivas e serviços comunitários, conforme pressupostos do art. 3.",
+      "pontos": [
+        "Não há prisão da pessoa jurídica no rol.",
+        "Possibilidade de cumulação não significa dever de aplicar sempre todas; fundamentar adequação."
+      ],
+      "atencao": [
+        "Não transportar recolhimento domiciliar individual para empresa nem dispensar decisão no interesse/benefício e demais pressupostos."
+      ],
+      "exemplo": "Empresa condenada com requisitos legais recebe multa e serviços ambientais fundamentados. Variação: pena de prisão simples da própria sociedade não integra o rol.",
+      "prova": [
+        "A lei exige todas as penas sempre juntas? Não; admite opções isoladas, cumulativas ou alternativas.",
+        "Empresa recebe prisão pelo rol? Não; sanções específicas."
+      ],
+      "termos": [
+        "isolada cumulativa ou alternativamente",
+        "pessoa jurídica",
+        "art. 3"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "f6f6ea38-a0e1-5a8b-a067-8f3d80366757",
+        "content_sha256": "8a5593b5cc838b2da523289f221eb2da3fff7b412163b90e797309fc07bb1000",
+        "simples": "As penas aplicáveis isolada, cumulativa ou alternativamente às pessoas jurídicas são a multa, as restritivas de direitos e a prestação de serviços à comunidade.",
+        "pontos": [
+          "Multa.",
+          "Restritivas de direitos.",
+          "Prestação de serviços à comunidade."
+        ],
+        "atencao": [
+          "Pessoa jurídica não recebe pena privativa de liberdade."
+        ],
+        "exemplo": "A empresa condenada paga multa e custeia projetos ambientais.",
+        "prova": [
+          "Assertiva que prevê prisão para a pessoa jurídica erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 22"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-22",
+      "unit_id": "709b31d8-ac8b-5ebe-a4af-8722a18dbdaf",
+      "content_sha256": "0883c953cd9cc5e76a623572a2fb6c8e9f9d5986978678c9e114d6735c460f7a",
+      "simples": "Restritivas da empresa incluem suspensão, interdição e proibição de contratar/receber benefícios públicos; esta última não excede dez anos.",
+      "pontos": [
+        "Suspensão: atividade contrária às regras de proteção ambiental.",
+        "Interdição: falta de autorização, desacordo com ela ou violação legal/regulamentar.",
+        "Prazo máximo de dez anos pertence à proibição de contratar/receber subsídios, subvenções ou doações."
+      ],
+      "atencao": [
+        "Não confundir dez anos da empresa com cinco/três da interdição do art. 10 nem atribuir prazo de dez automaticamente a toda restritiva."
+      ],
+      "exemplo": "Empresa atua sem autorização e sofre interdição cabível. Variação: proibição de contratar por prazo superior a dez anos contraria o limite especial.",
+      "prova": [
+        "Dez anos é limite universal de toda pena restritiva ambiental? Não; hipótese específica do §3.",
+        "Os cinco/três anos do art. 10 são o mesmo regime? Não; distinguir destinatário e espécie."
+      ],
+      "termos": [
+        "suspensão",
+        "interdição",
+        "não exceder dez anos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "709b31d8-ac8b-5ebe-a4af-8722a18dbdaf",
+        "content_sha256": "0883c953cd9cc5e76a623572a2fb6c8e9f9d5986978678c9e114d6735c460f7a",
+        "simples": "As penas restritivas de direitos da pessoa jurídica são a suspensão parcial ou total de atividades, a interdição temporária de estabelecimento, obra ou atividade e a proibição de contratar com o Poder Público e dele obter subsídios, subvenções ou doações. A suspensão aplica-se quando as atividades descumprem normas ambientais. A interdição aplica-se quando o estabelecimento funciona sem autorização ou em desacordo com ela. A proibição de contratar não pode exceder dez anos.",
+        "pontos": [
+          "Suspensão de atividades.",
+          "Interdição de estabelecimento, obra ou atividade.",
+          "Proibição de contratar com o Poder Público por até dez anos."
+        ],
+        "atencao": [
+          "Proibição de contratar: máximo de dez anos."
+        ],
+        "exemplo": "A fábrica sem licença tem o estabelecimento interditado.",
+        "prova": [
+          "Assertiva que fixa em cinco anos o teto da proibição de contratar erra: são dez anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 21"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-23",
+      "unit_id": "ac60bf4c-0493-5fa6-9e0f-df345c8fec07",
+      "content_sha256": "479bf0de43704cfabc1cbda8e0cb03924e9426913ebfe94f6c0b34d8c46c02cb",
+      "simples": "Serviços da pessoa jurídica assumem custeio de projetos ambientais, recuperação de áreas, manutenção de espaços públicos ou contribuições a entidades ambientais/culturais públicas.",
+      "pontos": [
+        "São prestações adequadas à entidade, distintas das tarefas pessoais do art. 9.",
+        "No inciso IV, o texto qualifica as entidades como públicas; não apagar essa palavra em resumo."
+      ],
+      "atencao": [
+        "Não reduzir todo serviço empresarial a doação livre a qualquer pessoa nem confundir prestação pecuniária individual."
+      ],
+      "exemplo": "Empresa executa recuperação de área degradada como serviço comunitário judicialmente definido. Variação: contribuição do inciso IV exige entidade ambiental/cultural pública, não qualquer destinatário informal.",
+      "prova": [
+        "Recuperação de área degradada é modalidade? Sim; inciso II.",
+        "Inciso IV permite qualquer entidade privada sem distinção? Não; texto especifica públicas."
+      ],
+      "termos": [
+        "custeio",
+        "recuperação",
+        "entidades públicas"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "ac60bf4c-0493-5fa6-9e0f-df345c8fec07",
+        "content_sha256": "479bf0de43704cfabc1cbda8e0cb03924e9426913ebfe94f6c0b34d8c46c02cb",
+        "simples": "A prestação de serviços à comunidade pela pessoa jurídica consistirá no custeio de programas e projetos ambientais, na execução de obras de recuperação de áreas degradadas, na manutenção de espaços públicos e em contribuições a entidades ambientais ou culturais públicas.",
+        "pontos": [
+          "Custeio de programas ambientais.",
+          "Recuperação de áreas degradadas.",
+          "Manutenção de espaços públicos.",
+          "Contribuições a entidades ambientais ou culturais públicas."
+        ],
+        "atencao": [
+          "Quatro formas de prestação de serviços pela empresa."
+        ],
+        "exemplo": "A empresa financia a recuperação de uma nascente degradada.",
+        "prova": [
+          "Assertiva que prevê trabalho pessoal dos sócios como serviço da pessoa jurídica erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 21"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-26",
+      "unit_id": "f31e0ec4-e02c-568f-834e-6208e68d456a",
+      "content_sha256": "1b86e72f4727522605e85cd15fa3f83771e412de3bd93d35275fbac10dac3f5e",
+      "simples": "Ação penal pelos delitos da Lei 9.605 é pública incondicionada; não depende de representação particular como regra desta lei.",
+      "pontos": [
+        "Distinguir ação penal e legitimidade para ação civil de reparação.",
+        "Composição ambiental em benefício processual não transforma ação em condicionada nem apaga crime automaticamente."
+      ],
+      "atencao": [
+        "Não confundir incondicionada com condenação obrigatória, prisão automática ou inexistência de requisitos de benefícios cabíveis."
+      ],
+      "exemplo": "MP promove acusação ambiental sem exigir representação do vizinho afetado. Variação: acordo reparatório pode influir em instituto próprio, mas não muda natureza da ação.",
+      "prova": [
+        "Precisa sempre de representação da vítima? Não; ação pública incondicionada.",
+        "Composição transforma automaticamente ação em privada? Não; institutos distintos."
+      ],
+      "termos": [
+        "pública incondicionada",
+        "infrações penais"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "f31e0ec4-e02c-568f-834e-6208e68d456a",
+        "content_sha256": "1b86e72f4727522605e85cd15fa3f83771e412de3bd93d35275fbac10dac3f5e",
+        "simples": "Nas infrações penais previstas na Lei, a ação penal é pública incondicionada.",
+        "pontos": [
+          "Ação penal pública incondicionada."
+        ],
+        "atencao": [
+          "Não depende de representação."
+        ],
+        "exemplo": "O Ministério Público denuncia o crime ambiental sem precisar de representação.",
+        "prova": [
+          "Assertiva que condiciona a ação penal ambiental à representação da vítima erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 27"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-27",
+      "unit_id": "a8759a3a-154c-517f-96e4-9ae916f06163",
+      "content_sha256": "8cfcda83f4f6f3d23316f76d88b8eec7b20ca296c947b44155d09ecaa969bb0d",
+      "simples": "Transação ambiental exige prévia composição do dano, salvo comprovada impossibilidade; composição não é necessariamente reparação integral já executada.",
+      "pontos": [
+        "Remissão é à aplicação imediata da pena do art. 76 da Lei 9.099.",
+        "Composição do dano e execução material da reparação têm momentos distintos; não confundir com laudo de extinção da suspensão processual."
+      ],
+      "atencao": [
+        "Não transformar exceção de impossibilidade em mera conveniência alegada; deve ser comprovada, com requisitos gerais do benefício."
+      ],
+      "exemplo": "Autor compõe previamente o dano e é analisada proposta de transação cabível. Variação: impossibilidade demonstrada precisa ser avaliada pela ressalva, não rejeitada como se não existisse.",
+      "prova": [
+        "Composição é sempre execução integral já concluída? Não; distinguir acordo e cumprimento.",
+        "Impossibilidade apenas alegada basta necessariamente? Não; lei exige comprovação."
+      ],
+      "termos": [
+        "prévia composição",
+        "comprovada impossibilidade",
+        "art. 76"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm"
+      ],
+      "expected": {
+        "unit_id": "a8759a3a-154c-517f-96e4-9ae916f06163",
+        "content_sha256": "8cfcda83f4f6f3d23316f76d88b8eec7b20ca296c947b44155d09ecaa969bb0d",
+        "simples": "Nos crimes ambientais de menor potencial ofensivo, a proposta de aplicação imediata de pena restritiva de direitos ou multa (transação penal) somente poderá ser formulada desde que tenha havido a prévia composição do dano ambiental, salvo em caso de comprovada impossibilidade.",
+        "pontos": [
+          "Transação penal exige prévia composição do dano ambiental.",
+          "Exceção: impossibilidade comprovada."
+        ],
+        "atencao": [
+          "Sem composição do dano, não há transação penal."
+        ],
+        "exemplo": "Antes de propor a transação, o autor do crime repara o dano ambiental.",
+        "prova": [
+          "Assertiva que dispensa a composição do dano para a transação penal ambiental erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei dos Juizados Especiais"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-28",
+      "unit_id": "05124b57-e20e-5f21-9744-016734a50639",
+      "content_sha256": "e70c629fd969794ccb1469c8502e7ea50582c799c7393d868f76300c4d0c604d",
+      "simples": "Suspensão do processo ambiental tem controle por laudo e possíveis prorrogações; não é sursis da pena nem extinção automática por calendário.",
+      "pontos": [
+        "Laudo de reparação condiciona extinção, com ressalva legal de impossibilidade.",
+        "Reparação incompleta permite prorrogação nos limites legais com prescrição suspensa; nas prorrogações afastam-se condições II, III e IV do art. 89 §1.",
+        "Ao final máximo, laudo deve comprovar providências necessárias à reparação integral; não inventar extinção sem avaliação."
+      ],
+      "atencao": [
+        "Não confundir ausência de determinadas condições nas prorrogações com abandono do dever de reparar; confrontar requisitos completos do art. 89 e do artigo ambiental."
+      ],
+      "exemplo": "Laudo demonstra reparação incompleta: examinar prorrogação legal e suspensão da prescrição. Variação: mero fim do período sem laudo/providências necessárias não garante extinção automática.",
+      "prova": [
+        "Fim do prazo dispensa sempre laudo? Não; aplicar condições e ressalva legal.",
+        "Prorrogação mantém sempre todas as condições II a IV do art. 89 §1? Não; inciso III as afasta no período prorrogado."
+      ],
+      "termos": [
+        "laudo",
+        "prescrição suspensa",
+        "providências necessárias"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm"
+      ],
+      "expected": {
+        "unit_id": "05124b57-e20e-5f21-9744-016734a50639",
+        "content_sha256": "e70c629fd969794ccb1469c8502e7ea50582c799c7393d868f76300c4d0c604d",
+        "simples": "As disposições do sursis processual da Lei dos Juizados Especiais aplicam-se aos crimes de menor potencial ofensivo da Lei com modificações: a extinção da punibilidade depende de laudo de constatação de reparação do dano ambiental; se o laudo mostrar reparação incompleta, o prazo de suspensão é prorrogado até o máximo previsto, acrescido de mais um ano, com suspensão da prescrição; no período de prorrogação não se aplicam algumas condições; findo o prazo, faz-se novo laudo, podendo haver nova prorrogação; e esgotada a prorrogação, a extinção da punibilidade depende de laudo que comprove as providências necessárias à reparação integral.",
+        "pontos": [
+          "Sursis processual com laudo de reparação do dano.",
+          "Prorrogação por reparação incompleta, mais um ano.",
+          "Prescrição suspensa.",
+          "Extinção da punibilidade depende de laudo."
+        ],
+        "atencao": [
+          "A extinção da punibilidade exige LAUDO de reparação."
+        ],
+        "exemplo": "O processo fica suspenso até o laudo comprovar a recuperação da área.",
+        "prova": [
+          "Assertiva que extingue a punibilidade pelo mero decurso do prazo erra: depende de laudo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei dos Juizados Especiais"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    }
+  ]
+}
