@@ -1,6 +1,6 @@
 import React from "react";
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
-import { CheckCircle2, ChevronLeft, ChevronRight, GraduationCap } from "lucide-react";
+import { CheckCircle2, ChevronLeft, ChevronRight, GraduationCap, Maximize2, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -150,8 +150,50 @@ function TracksPage() {
     setDone(next);
     saveDone(track.slug, next);
   };
+  // Modo foco: a aula ocupa a tela inteira, sem menu, topo nem lista de aulas. Esc sai.
+  const [focus, setFocus] = React.useState(false);
+  React.useEffect(() => {
+    if (!focus) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setFocus(false);
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [focus]);
   const groups = [...new Set(track.lessons.map((x) => x.group))];
   const pct = Math.round((done.length / track.lessons.length) * 100);
+  const lessonView = (
+    <Lesson
+      trackSlug={track.slug}
+      key={lesson.id}
+      lesson={lesson}
+      done={done.includes(lesson.id)}
+      toggleDone={toggle}
+      {...(index < track.lessons.length - 1 ? { onNext: () => go(index + 1) } : {})}
+      {...(index > 0 ? { onPrev: () => go(index - 1) } : {})}
+    />
+  );
+  if (focus) {
+    return (
+      <div className="fixed inset-0 z-[60] flex flex-col bg-background" role="dialog" aria-label="Modo foco">
+        <header className="flex items-center gap-3 border-b px-4 py-2 sm:px-6">
+          <p className="min-w-0 flex-1 truncate text-sm text-muted-foreground">
+            {track.title} · aula {index + 1} de {track.lessons.length}
+          </p>
+          <Badge variant="secondary">{pct}%</Badge>
+          <Button size="sm" variant="outline" onClick={() => setFocus(false)}>
+            <X className="mr-1 h-4 w-4" /> Sair do foco (Esc)
+          </Button>
+        </header>
+        <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+          <div className="mx-auto max-w-3xl">{lessonView}</div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="space-y-5 pb-8">
       <PageHero
@@ -167,7 +209,10 @@ function TracksPage() {
             {x.discipline}
           </Button>
         ))}
-        <Badge variant="secondary" className="ml-auto">{done.length}/{track.lessons.length} aulas · {pct}%</Badge>
+        <Button size="sm" variant="outline" className="ml-auto" onClick={() => setFocus(true)}>
+          <Maximize2 className="mr-1 h-4 w-4" /> Modo foco
+        </Button>
+        <Badge variant="secondary">{done.length}/{track.lessons.length} aulas · {pct}%</Badge>
       </div>
       <div className="grid gap-4 lg:grid-cols-[280px_minmax(0,1fr)]">
         <aside className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-6rem)] lg:self-start lg:overflow-y-auto" aria-label="Aulas da trilha">
@@ -195,15 +240,7 @@ function TracksPage() {
             </div>
           ))}
         </aside>
-        <Lesson
-          trackSlug={track.slug}
-          key={lesson.id}
-          lesson={lesson}
-          done={done.includes(lesson.id)}
-          toggleDone={toggle}
-          {...(index < track.lessons.length - 1 ? { onNext: () => go(index + 1) } : {})}
-          {...(index > 0 ? { onPrev: () => go(index - 1) } : {})}
-        />
+        {lessonView}
       </div>
       <Card>
         <CardContent className="p-4 text-xs text-muted-foreground">
