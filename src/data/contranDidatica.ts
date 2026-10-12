@@ -640,4 +640,153 @@ export const CONTRAN_DIDATICA: Record<string, ContranDidatica> = {
       "Citar a Resolução 789/2020 como vigente para a formação de condutores: ela foi revogada pela 1.020/2025.",
     ],
   },
+  "969/2022": {
+    simples: [
+      "A placa de identificação veicular (PIV) é o sistema de placas dos veículos do país. Depois do registro, cada veículo recebe uma PIV dianteira e uma traseira. Reboques, semirreboques, motocicletas, motonetas, ciclomotores, cicloelétricos, triciclos, quadriciclos e guindastes levam apenas a traseira (art. 2º, § 1º).",
+      "Toda PIV tem um QR Code com números de série e acesso aos dados do fabricante: ele controla a produção e a instalação e verifica a autenticidade. Esse QR Code é o lacre eletrônico da placa e substitui o lacre do art. 115 do CTB (arts. 3º e 5º).",
+      "Segunda placa traseira: é obrigatória em veículo com engate de reboque ou carroceria intercambiável, quando a carga cobrir total ou parcialmente a placa traseira (art. 4º). Pode ficar no para-choque, na carroceria ou em suporte adaptador, em local visível.",
+      "Quem fabrica e quem estampa: o fabricante de PIV é credenciado pelo órgão máximo executivo de trânsito da União; o estampador é credenciado pelo órgão de trânsito do Estado ou do DF e faz o acabamento final e vende ao proprietário (art. 6º, I e II). O fabricante só fornece a estampadores credenciados (art. 13), é proibido contrato de exclusividade entre eles (art. 12) e o credenciamento vale cinco anos, renovável sem limite (art. 19).",
+      "Quando a PIV é exigida: no primeiro emplacamento. Para veículos em circulação, também na troca de placa por mudança de categoria, furto, extravio, roubo ou dano, na mudança de município ou de unidade da federação e quando for preciso instalar a segunda placa traseira (art. 56). A placa nacional única antiga, no padrão de três letras e quatro números, pode circular até o sucateamento, e é proibido exigir a troca fora dessas situações (art. 57 e § 2º).",
+      "Placas especiais: a PIV-Fab é do fabricante, para testes de seus produtos (art. 35); a PIV-Exp é de estabelecimentos que reformam, compram, vendem ou desmontam veículos (art. 39), com livro de registro de entrada, saída e uso (art. 41), e circula só nas vias da unidade da federação que a expediu (art. 42). Há ainda placas de representação de autoridades (arts. 26 a 30), de representação diplomática (arts. 31 a 34) e de veículos de coleção originais (art. 2º, § 5º).",
+      "Clonagem: veículo clonado é o original cuja combinação da placa foi usada em outro veículo; o clone é o que usa essa combinação (art. 6º, VI e VII). O proprietário do original requer a troca de placa em processo administrativo; enquanto isso fica a restrição \"suspeita de clonagem\" (art. 51). Comprovada a clonagem, o registro do original ganha novo RENAVAM e nova placa; o registro do clone recebe \"CL\" no fim do VIN e do número do motor e é baixado por clonagem (art. 53). A pontuação de multas cometidas pelo clone é excluída do prontuário do proprietário (art. 55, parágrafo único).",
+    ],
+    quadro: {
+      titulo: "Placas: o que costuma cair",
+      linhas: [
+        ["Só traseira", "Reboque, semirreboque, motocicleta, motoneta, ciclomotor, cicloelétrico, triciclo, quadriciclo e guindaste (art. 2º, § 1º)"],
+        ["Lacre", "QR Code é o lacre eletrônico, no lugar do lacre do art. 115 do CTB (art. 3º)"],
+        ["Segunda placa traseira", "Veículo com engate de reboque ou carroceria intercambiável, quando a carga cobre a placa (art. 4º)"],
+        ["Troca obrigatória para a PIV", "Primeiro emplacamento; mudança de categoria; furto, extravio, roubo ou dano; mudança de município ou UF; segunda placa (art. 56)"],
+        ["Placa antiga", "Circula até o sucateamento; troca só nas situações do art. 56 (art. 57)"],
+        ["Credenciamento", "Cinco anos, renovável por igual período, sem limite (art. 19)"],
+        ["PIV-Exp", "Estabelecimentos do art. 330 do CTB; vale só na UF que a expediu (arts. 39 e 42)"],
+        ["Livro da PIV-Exp", "Autenticado até o décimo dia do mês seguinte; ordem de serviço guardada por doze meses; listagens por cinco anos (arts. 45 a 47)"],
+        ["Clonagem", "Original recebe nova placa e novo RENAVAM; clone recebe CL no VIN e no motor (art. 53)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "Um motociclista quer saber se precisa de placa dianteira.",
+        resposta: "Não. Motocicletas, motonetas e ciclomotores são identificados apenas pela PIV traseira (art. 2º, § 1º).",
+      },
+      {
+        situacao: "Um carro com carroceria intercambiável leva carga que cobre a placa traseira. O que fazer?",
+        resposta: "Usar uma segunda PIV traseira, em local visível (art. 4º). Por ser caso de instalação da segunda placa, a nova PIV é exigida (art. 56, § 1º, III).",
+      },
+      {
+        situacao: "O proprietário de um carro com a placa antiga no padrão de três letras e quatro números é obrigado a trocar para o novo modelo?",
+        resposta: "Em regra, não. Pode circular até o sucateamento e só é exigida a troca nas situações do art. 56 (furto, mudança de município ou de UF, entre outras). É vedado exigir a troca fora dessas hipóteses (art. 57, § 2º).",
+      },
+      {
+        situacao: "O dono do carro descobre que há outro veículo usando as mesmas letras e números da placa dele. O que acontece depois do processo?",
+        resposta: "O veículo original passa a ter novo registro, novo RENAVAM e nova placa; o registro usado pelo clone recebe CL no fim do VIN e do motor e é baixado por clonagem (art. 53).",
+      },
+    ],
+    pegadinhas: [
+      "Achar que todo veículo precisa de duas placas: reboque, moto, ciclomotor e outros só têm a traseira.",
+      "Dizer que a placa antiga precisa ser trocada em todos os casos. Só nas situações do art. 56.",
+      "Confundir o lacre: o QR Code é o lacre eletrônico e substitui o lacre do art. 115 do CTB.",
+      "Confundir PIV-Fab (fabricantes, testes) com PIV-Exp (estabelecimentos de reforma, compra, venda e desmontagem).",
+      "Esquecer que a PIV-Exp só circula na unidade da federação do órgão que a expediu.",
+      "Achar que o dono do veículo original responde pelas multas do clone: a pontuação comprovadamente do clone é excluída do prontuário.",
+    ],
+  },
+  "970/2022": {
+    simples: [
+      "Esta resolução trata das luzes do veículo: faróis, lanternas, retrorrefletores e, principalmente para a prova, as lanternas especiais. A ideia central é separar duas coisas: emitir luz (lanterna) é diferente de refletir a luz de fora (retrorrefletor, art. 2º, III). Farol ilumina a via; lanterna sinaliza para os outros (art. 2º, I e II).",
+      "Os detalhes técnicos de cada dispositivo ficam nos anexos: automóveis, caminhões, ônibus, reboques e semirreboques seguem os anexos I a XVI (art. 3º); motocicletas, motonetas, ciclomotores, triciclos e quadriciclos seguem os anexos XVII a XXI (art. 4º).",
+      "Lanternas especiais de emergência (azul, vermelha ou as duas combinadas) só podem ser usadas em veículos de socorro de incêndio e salvamento, salvamento difuso, polícia, fiscalização e operação de trânsito e ambulâncias (art. 5º). Só devem ser acionadas quando houver serviço de urgência, policiamento ostensivo ou preservação da ordem pública, ou seja, quando se usa a prioridade de trânsito (art. 5º, § 1º). Ao usar a livre circulação e parada, o dispositivo sonoro deve ser acionado junto com a lanterna (art. 5º, § 2º).",
+      "O livre estacionamento só vale se o veículo estiver identificado por luz rotativa ou intermitente regulamentar (art. 5º, § 3º). Serviço de urgência é o deslocamento que exige brevidade, sem a qual há risco concreto à vida de terceiros ou grande prejuízo à incolumidade pública (art. 5º, § 4º).",
+      "Lanterna amarelo-âmbar: identifica veículos prestadores de serviços de utilidade pública, com lanterna não removível (art. 6º). São eles os de manutenção de redes de energia, água e esgoto, gás canalizado e comunicações; conservação e sinalização viária a serviço da Administração; guindastes e guinchos de socorro veicular; transporte de valores; escolta de cargas superdimensionadas; recolhimento de lixo a serviço da Administração; e manutenção de linhas e estações metroferroviárias (art. 6º, § 1º). A instalação depende de autorização prévia do órgão de trânsito do Estado ou do DF onde o veículo está registrado (art. 6º, § 2º).",
+      "Esses veículos têm livre parada e estacionamento, mas só quando estiverem em efetiva operação no local do serviço e identificados pela lanterna amarelo-âmbar e, quando necessário, por sinalização auxiliar na via (art. 7º).",
+    ],
+    atualizacoes: [
+      "Resolução 1.024/2026 (em vigor desde a publicação): acrescentou aos veículos prestadores de serviços de utilidade pública os utilizados na operação e manutenção da Rede Hidrometeorológica Nacional, que passa a ser o inciso VIII do § 1º do art. 6º.",
+    ],
+    quadro: {
+      titulo: "Cor da lanterna especial: quem usa",
+      linhas: [
+        ["Azul, vermelha ou as duas", "Socorro de incêndio e salvamento, salvamento difuso, polícia, fiscalização e operação de trânsito, ambulância (art. 5º)"],
+        ["Amarelo-âmbar", "Veículos de serviço de utilidade pública, como rede elétrica, guincho, escolta de carga e recolhimento de lixo (art. 6º)"],
+        ["Quando acionar (emergência)", "Só em urgência, policiamento ostensivo ou preservação da ordem pública (art. 5º, § 1º)"],
+        ["Livre circulação e parada", "Sirene junto com a lanterna (art. 5º, § 2º)"],
+        ["Livre estacionamento", "Só com luz rotativa ou intermitente regulamentar ligada (art. 5º, § 3º)"],
+        ["Amarelo-âmbar: autorização", "Prévia, do órgão de trânsito do Estado ou do DF do registro (art. 6º, § 2º)"],
+        ["Amarelo-âmbar: livre parada", "Só em efetiva operação e identificado (art. 7º)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "Uma ambulância leva um paciente grave ao hospital. Pode usar luz azul e passar o sinal vermelho?",
+        resposta: "Pode usar a lanterna especial, pois ambulância está na lista do art. 5º, e há serviço de urgência. Ao usar a livre circulação, o dispositivo sonoro deve ser acionado junto com a lanterna (art. 5º, § 2º).",
+      },
+      {
+        situacao: "Um carro particular quer instalar uma luz giratória azul. É permitido?",
+        resposta: "Não. As lanternas especiais de emergência só podem ser usadas nos veículos listados no art. 5º, como polícia, bombeiros e ambulâncias.",
+      },
+      {
+        situacao: "Um caminhão guincho de empresa de socorro veicular, com luz amarelo-âmbar, estaciona na frente de um local proibido enquanto atende um carro quebrado. Pode?",
+        resposta: "Guinchos de socorro veicular estão entre os veículos de utilidade pública (art. 6º, § 1º, III). Têm livre parada e estacionamento se estiverem em efetiva operação e identificados pela lanterna amarelo-âmbar (art. 7º).",
+      },
+    ],
+    pegadinhas: [
+      "Confundir as cores: azul e vermelha são de emergência; amarelo-âmbar é de utilidade pública.",
+      "Dizer que a lanterna amarela pode ser removível. A lanterna especial para prestação de serviços é não removível.",
+      "Esquecer que o livre estacionamento do veículo de emergência só vale com luz rotativa ou intermitente ligada.",
+      "Achar que emitir luz e refletir luz são a mesma coisa: retrorrefletor reflete a luz que vem de fora.",
+      "Citar a lista de veículos de utilidade pública sem o item da Rede Hidrometeorológica Nacional, que foi incluído pela Resolução 1.024/2026.",
+    ],
+    fontes: ["1024/2026"],
+  },
+  "1025/2026": {
+    simples: [
+      "Esta resolução conta toda a vida de um veículo removido, do guincho ao leilão, e criou o Sivec, o Sistema Integrado de Veículos Custodiados, plataforma nacional com as informações de remoção, guarda, liberação e leilão (art. 1º, § 1º). Ela revogou a Resolução 623/2016, que era a norma anterior.",
+      "As etapas, em ordem (art. 2º): aplicação da medida administrativa de remoção; remoção até o local fixado; guarda; liberação ao proprietário ou representante, se cumpridas as exigências; leilão público eletrônico, se o veículo não for reclamado no prazo legal; arrematação e pagamento; transferência ao arrematante; e baixa, conforme o caso.",
+      "Termo de Recolhimento: ao aplicar a remoção, o órgão emite o Termo de Recolhimento do Veículo e o registra eletronicamente. Nele constam, entre outros, o fundamento legal, o local de guarda, os objetos deixados no veículo, os equipamentos obrigatórios ausentes, o estado da lataria, pintura e pneus e o prazo para retirar o veículo, sob pena de leilão (art. 14). O proprietário ou condutor presente é considerado notificado, mesmo que se recuse a assinar (art. 14, § 2º).",
+      "Se o proprietário não estava presente, o órgão providencia a notificação em até dez dias da remoção, preferencialmente pelo SNE (Sistema de Notificação Eletrônica); sem adesão ao SNE, por remessa postal em até dez dias e, se frustrada, por edital (art. 15). A partir de 1º de janeiro de 2027, as notificações serão exclusivamente por meio do SNE (art. 15, § 3º).",
+      "Antes do leilão, o veículo é guardado em centro de custódia, que responde pela guarda, segurança e integridade física durante todo o período (art. 20), e só entra depois de vistoria eletrônica (art. 19). O proprietário paga a remoção e a guarda (art. 21). A diária é de vinte e quatro horas e a cobrança fica limitada ao período máximo de seis meses, devida por quem retira o veículo (art. 21, §§ 1º e 2º).",
+      "Liberação: depende da quitação dos débitos e da regularização do que motivou a remoção (art. 23). Se a regularização não puder ser feita no centro de custódia, o veículo pode ser liberado só para ir ao reparo, com prazo de reapresentação de no máximo sessenta dias; se não regularizar, entra restrição de circulação no Renavam e ele pode ser removido de novo (art. 23, §§ 1º e 2º).",
+      "Leilão: o veículo não reclamado em sessenta dias, contados do recolhimento, vai a leilão. Considera-se não reclamado o veículo cujo dono, dentro do prazo, não regulariza as pendências e não o retira do centro de custódia, ao mesmo tempo (art. 25). Passados trinta dias da remoção sem regularização e retirada, pode-se notificar por edital, que é complementar e não impede a liberação enquanto não houver a alienação (art. 26).",
+      "Guarda monitorada: o órgão pode autorizar que o dono cumpra a remoção mantendo o veículo sob monitoramento, desde que preencha requisitos, como condições de segurança para circular, ausência de indícios de adulteração, condutor habilitado, sem registro de furto ou roubo, sem restrição judicial e licenciado em ao menos um dos três últimos exercícios (art. 17). Quem descumpre, inclusive violando o dispositivo, tem restrição de circulação, nova remoção e infração do art. 239 do CTB (art. 17, § 3º).",
+    ],
+    quadro: {
+      titulo: "Remoção, guarda e leilão: prazos",
+      linhas: [
+        ["Notificação do proprietário ausente", "Em até dez dias da remoção (art. 15)"],
+        ["Exclusivamente pelo SNE", "A partir de 1º de janeiro de 2027 (art. 15, § 3º)"],
+        ["Diária de guarda", "Períodos de vinte e quatro horas; cobrança limitada a seis meses (art. 21)"],
+        ["Edital complementar", "Depois de trinta dias da remoção, sem regularização e retirada (art. 26)"],
+        ["Preparação do leilão", "Pode começar depois de trinta dias do recolhimento (art. 27)"],
+        ["Leilão se não reclamado", "Sessenta dias contados do recolhimento (art. 25)"],
+        ["Liberação só para reparo", "Prazo de reapresentação de no máximo sessenta dias (art. 23, § 1º)"],
+        ["Arquivos do centro de custódia", "Guardados por no mínimo 5 anos (art. 9º, VII)"],
+        ["Devolução de valores", "Se o recolhimento foi indevido ou houve abuso na permanência (art. 5º, VII)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "Um carro foi removido na ausência do dono, em 2026. Como e em quanto tempo ele deve ser avisado?",
+        resposta: "O órgão providencia a notificação em até dez dias da remoção, preferencialmente pelo SNE; sem adesão ao SNE, por remessa postal e, frustrada a entrega, por edital (art. 15).",
+      },
+      {
+        situacao: "O dono só retirou o veículo depois de oito meses no pátio. Quantos meses de diária pode ser cobrado?",
+        resposta: "No máximo seis meses. A cobrança das diárias de guarda é limitada a esse período (art. 21, § 2º).",
+      },
+      {
+        situacao: "O proprietário não pagou os débitos nem retirou o veículo. Quando ele vai a leilão?",
+        resposta: "Se não for reclamado no prazo de sessenta dias contados do recolhimento, será levado a leilão. Para ser considerado reclamado, o dono precisa regularizar as pendências e retirar o veículo (art. 25).",
+      },
+      {
+        situacao: "Para liberar o veículo, o proprietário precisa consertar um item que não dá para consertar no pátio. O que o órgão pode fazer?",
+        resposta: "Liberar o veículo exclusivamente para transporte ao local do reparo, com prazo de reapresentação não superior a sessenta dias (art. 23, § 1º).",
+      },
+    ],
+    pegadinhas: [
+      "Citar a Resolução 623/2016 como vigente: ela foi revogada pela 1.025/2026.",
+      "Confundir o prazo do leilão (sessenta dias do recolhimento) com o do edital (a partir de trinta dias).",
+      "Dizer que o edital impede a liberação. Ele é complementar e não impede a liberação enquanto não houver alienação.",
+      "Achar que a diária é cobrada sem limite: fica limitada a seis meses.",
+      "Esquecer que o proprietário ou condutor presente é considerado notificado, mesmo se recusar assinar o termo.",
+    ],
+  },
 };
