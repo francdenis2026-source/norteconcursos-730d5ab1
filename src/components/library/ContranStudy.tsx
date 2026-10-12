@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BookOpen, ExternalLink, Lightbulb } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CONTRAN_CHECKED_AT, CONTRAN_GUIDES, CONTRAN_INDEX_URL } from "@/data/contranGuides";
+import { CONTRAN_DIDATICA, type ContranDidatica } from "@/data/contranDidatica";
 import { RESOLUCOES_COBRADAS } from "@/data/ctbPanel";
 import { contranDate, currentContranGuides, type ContranGuide } from "@/lib/contranStudy";
 
@@ -32,6 +33,27 @@ function OfficialText({ guide }: { guide: ContranGuide }) {
     {failed && <div className="mt-3 text-sm"><p>Não foi possível abrir o texto. Use o PDF oficial abaixo ou tente novamente.</p><button className="mt-2 font-semibold underline" onClick={() => void load()}>Tentar novamente</button></div>}
     {text && <pre className="mt-3 max-h-[36rem] overflow-auto whitespace-pre-wrap rounded-lg bg-muted/40 p-3 font-sans text-sm leading-6">{text}</pre>}
   </details>;
+}
+
+function DidaticaBlock({ d }: { d: ContranDidatica }) {
+  return <div className="space-y-4">
+    <section className="rounded-xl border-l-4 border-sky-500 bg-sky-50/60 p-3 dark:bg-sky-950/20">
+      <h4 className="text-sm font-bold">Explicação passo a passo</h4>
+      <div className="mt-2 space-y-2 text-sm leading-6">{d.simples.map((p) => <p key={p}>{p}</p>)}</div>
+    </section>
+    {d.quadro && <section className="rounded-xl border p-3">
+      <h4 className="text-sm font-bold">{d.quadro.titulo}</h4>
+      <dl className="mt-2 divide-y text-sm">{d.quadro.linhas.map(([k, v]) => <div key={k} className="grid gap-1 py-2 sm:grid-cols-[11rem_1fr]"><dt className="font-semibold">{k}</dt><dd className="text-muted-foreground">{v}</dd></div>)}</dl>
+    </section>}
+    {d.exemplos.length > 0 && <section className="rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-3 text-emerald-950 dark:bg-emerald-950/30 dark:text-emerald-100">
+      <h4 className="text-sm font-bold">Aplique em situações reais</h4>
+      <ul className="mt-2 space-y-3 text-sm leading-6">{d.exemplos.map((e) => <li key={e.situacao}><p className="font-semibold">{e.situacao}</p><details className="mt-1"><summary className="cursor-pointer text-xs font-semibold underline">Ver a resposta</summary><p className="mt-1">{e.resposta}</p></details></li>)}</ul>
+    </section>}
+    {d.pegadinhas.length > 0 && <section className="rounded-xl border-l-4 border-rose-500 bg-rose-50 p-3 text-rose-950 dark:bg-rose-950/30 dark:text-rose-100">
+      <h4 className="text-sm font-bold">Onde o candidato erra</h4>
+      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{d.pegadinhas.map((p) => <li key={p}>{p}</li>)}</ul>
+    </section>}
+  </div>;
 }
 
 const guideKey = (g: ContranGuide) => `${g.number.toLocaleString("pt-BR")}/${g.year}`;
@@ -72,6 +94,7 @@ export function ContranStudy({ query = "" }: { query?: string }) {
             <TabsTrigger value="oficial">Fonte oficial</TabsTrigger>
           </TabsList>
           <TabsContent value="entenda" className="mt-4 space-y-4">
+            {CONTRAN_DIDATICA[guideKey(guide)] && <DidaticaBlock d={CONTRAN_DIDATICA[guideKey(guide)]!} />}
             <section className="rounded-xl border-l-4 border-indigo-500 bg-indigo-50/50 p-3 dark:bg-indigo-950/20">
               <h4 className="text-sm font-bold">Em resumo</h4>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{guide.points.map((point) => <li key={point}>{point}</li>)}</ul>
