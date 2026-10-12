@@ -18,9 +18,6 @@ export function ExplanationChecks({ items }: { items: string[] }) {
     if (!exercise) return <p key={text}><LegalRefText text={text} /></p>;
     return <section key={text} className="rounded-xl border border-rose-200 bg-white/70 p-3 dark:border-rose-500/30 dark:bg-rose-950/20">
       <p className="font-semibold"><LegalRefText text={exercise.question} /></p>
-      <label className="mt-2 block text-xs font-semibold">Sua resposta — tente sem consultar
-        <textarea aria-label={`Resposta ao exercício ${index + 1}`} rows={2} className="mt-1 w-full resize-y rounded-lg border bg-background p-2 text-sm font-normal text-foreground" placeholder="Explique a regra e a exceção aplicável." />
-      </label>
       <details className="mt-2"><summary className="cursor-pointer text-sm font-bold">Conferir resposta comentada</summary><p className="mt-2 leading-7"><LegalRefText text={exercise.answer} /></p></details>
     </section>;
   })}</div>;
@@ -32,6 +29,8 @@ export function UnitExplanation({ unit, userId }: { unit: LegalUnit; userId: str
   if (!e) return null;
   const stale = e.content_sha256 !== unit.content_sha256;
   const example = explanationExample(e.exemplo);
+  // avisos de conferência editorial ficam fora da leitura do aluno
+  const atencao = e.atencao.filter((t) => !/^Correção editorial/i.test(t));
   return (
     <section className="space-y-3" aria-label="Entenda este artigo">
       <header className="flex flex-wrap items-center gap-2">
@@ -42,8 +41,8 @@ export function UnitExplanation({ unit, userId }: { unit: LegalUnit; userId: str
       </header>
       <Block icon="📘" title="Em palavras simples" tone="border-l-4 border-l-sky-500"><p><LegalRefText text={e.simples} /></p></Block>
       {e.pontos.length > 0 && <Block icon="🔑" title="Pontos-chave" tone="border-l-4 border-l-indigo-500"><List items={e.pontos} /></Block>}
-      {e.atencao.length > 0 && <Block icon="⚠️" title="Atenção: onde o candidato erra" tone="border-l-4 border-l-amber-500"><List items={e.atencao} /></Block>}
-      {e.exemplo && <Block icon="🧩" title="Exemplo prático" tone="border-l-4 border-l-emerald-500 bg-emerald-50/70 dark:bg-emerald-950/20"><p><LegalRefText text={example.scenario} /></p>
+      {atencao.length > 0 && <Block icon="⚠️" title="Atenção: onde o candidato erra" tone="border-l-4 border-l-amber-500"><List items={atencao} /></Block>}
+      {e.exemplo && <Block icon="🧩" title="Exemplo prático" tone="border-l-4 border-l-emerald-500"><p><LegalRefText text={example.scenario} /></p>
         {example.variation && <div className="mt-3 rounded-lg border border-violet-300 bg-violet-50 p-3 text-violet-950 dark:border-violet-400/30 dark:bg-violet-950/30 dark:text-violet-100"><strong>Altere o fato, confira a regra</strong><p className="mt-1"><LegalRefText text={example.variation} /></p></div>}
       </Block>}
       {e.prova.length > 0 && <Block icon="🎯" title="Fixação para a prova" tone="border-l-4 border-l-rose-500"><ExplanationChecks items={e.prova} /></Block>}

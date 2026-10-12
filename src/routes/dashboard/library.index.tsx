@@ -21,6 +21,7 @@ import { materialLawSlug } from "@/lib/legalLibrary";
 import { librarySearchText, matchesLibrarySearch, matchingLibraryLaws } from "@/lib/librarySearch";
 import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
 import { LibraryNavigation } from "@/components/library/LibraryNavigation";
+import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 import { BackToPlan } from "@/components/cronograma/BackToPlan";
 import { StartHere } from "@/components/library/StartHere";
 import {
@@ -280,6 +281,7 @@ export function LibraryIndex() {
             searchingContent={!lawMatches.length && query.trim().length >= 2 && content.isPending}
             onReset={resetFilters}
           />
+          {signedIn && user && <ContentSearchResults query={query} userId={user.id} />}
           {content.isError && query.trim().length >= 2 && (
             <p role="alert" className="rounded-xl border p-4 text-sm">
               A busca nos textos não carregou; títulos e assuntos continuam disponíveis.{" "}
