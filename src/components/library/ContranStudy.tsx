@@ -3,6 +3,7 @@ import { BookOpen, ExternalLink, Lightbulb } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CONTRAN_CHECKED_AT, CONTRAN_GUIDES, CONTRAN_INDEX_URL } from "@/data/contranGuides";
 import { CONTRAN_DIDATICA, type ContranDidatica } from "@/data/contranDidatica";
+import { StudyText, HighlightToggle } from "./StudyText";
 import { RESOLUCOES_COBRADAS } from "@/data/ctbPanel";
 import { contranDate, currentContranGuides, type ContranGuide } from "@/lib/contranStudy";
 
@@ -39,23 +40,23 @@ function DidaticaBlock({ d }: { d: ContranDidatica }) {
   return <div className="space-y-4">
     <section className="rounded-xl border-l-4 border-sky-500 bg-sky-50/60 p-3 dark:bg-sky-950/20">
       <h4 className="text-sm font-bold">Explicação passo a passo</h4>
-      <div className="mt-2 space-y-2 text-sm leading-6">{d.simples.map((p) => <p key={p}>{p}</p>)}</div>
+      <div className="mt-2 space-y-2 text-sm leading-6">{d.simples.map((p) => <p key={p}><StudyText text={p} /></p>)}</div>
     </section>
     {d.atualizacoes && d.atualizacoes.length > 0 && <section className="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-3 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100">
       <h4 className="text-sm font-bold">Atualização: o que mudou depois</h4>
-      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{d.atualizacoes.map((a) => <li key={a}>{a}</li>)}</ul>
+      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{d.atualizacoes.map((a) => <li key={a}><StudyText text={a} /></li>)}</ul>
     </section>}
     {d.quadro && <section className="rounded-xl border p-3">
       <h4 className="text-sm font-bold">{d.quadro.titulo}</h4>
-      <dl className="mt-2 divide-y text-sm">{d.quadro.linhas.map(([k, v]) => <div key={k} className="grid gap-1 py-2 sm:grid-cols-[11rem_1fr]"><dt className="font-semibold">{k}</dt><dd className="text-muted-foreground">{v}</dd></div>)}</dl>
+      <dl className="mt-2 divide-y text-sm">{d.quadro.linhas.map(([k, v]) => <div key={k} className="grid gap-1 py-2 sm:grid-cols-[11rem_1fr]"><dt className="font-semibold">{k}</dt><dd><StudyText text={v} /></dd></div>)}</dl>
     </section>}
     {d.exemplos.length > 0 && <section className="rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-3 text-emerald-950 dark:bg-emerald-950/30 dark:text-emerald-100">
       <h4 className="text-sm font-bold">Aplique em situações reais</h4>
-      <ul className="mt-2 space-y-3 text-sm leading-6">{d.exemplos.map((e) => <li key={e.situacao}><p className="font-semibold">{e.situacao}</p><details className="mt-1"><summary className="cursor-pointer text-xs font-semibold underline">Ver a resposta</summary><p className="mt-1">{e.resposta}</p></details></li>)}</ul>
+      <ul className="mt-2 space-y-3 text-sm leading-6">{d.exemplos.map((e) => <li key={e.situacao}><p className="font-semibold"><StudyText text={e.situacao} /></p><details className="mt-1"><summary className="cursor-pointer text-xs font-semibold underline">Ver a resposta</summary><p className="mt-1"><StudyText text={e.resposta} /></p></details></li>)}</ul>
     </section>}
     {d.pegadinhas.length > 0 && <section className="rounded-xl border-l-4 border-rose-500 bg-rose-50 p-3 text-rose-950 dark:bg-rose-950/30 dark:text-rose-100">
       <h4 className="text-sm font-bold">Onde o candidato erra</h4>
-      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{d.pegadinhas.map((p) => <li key={p}>{p}</li>)}</ul>
+      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{d.pegadinhas.map((p) => <li key={p}><StudyText text={p} /></li>)}</ul>
     </section>}
   </div>;
 }
@@ -75,6 +76,7 @@ export function ContranStudy({ query = "" }: { query?: string }) {
       <p className="font-semibold">{total} resoluções em vigor para estudar</p>
       <p className="mt-1 text-muted-foreground">Cada uma tem a explicação do Norte (elaborada a partir do texto oficial), um caso prático e a fonte oficial, em abas separadas. Fontes conferidas em {contranDate(CONTRAN_CHECKED_AT)}; resoluções totalmente revogadas ficam de fora.</p>
       <p className="mt-1 text-muted-foreground">Cobradas em concursos da PRF (Legislação de Trânsito). Para outras carreiras, confira o edital: o da PF 2025 não inclui Trânsito.</p>
+      <div className="mt-2"><HighlightToggle /></div>
       <a className="mt-2 inline-flex items-center gap-1 font-semibold text-primary underline" href={CONTRAN_INDEX_URL} target="_blank" rel="noopener noreferrer">Catálogo oficial do CONTRAN <ExternalLink size={14} /></a>
     </div>
     {!query.trim() && top.length > 0 && <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100">
@@ -101,28 +103,28 @@ export function ContranStudy({ query = "" }: { query?: string }) {
             {CONTRAN_DIDATICA[guideKey(guide)] && <DidaticaBlock d={CONTRAN_DIDATICA[guideKey(guide)]!} />}
             <section className="rounded-xl border-l-4 border-indigo-500 bg-indigo-50/50 p-3 dark:bg-indigo-950/20">
               <h4 className="text-sm font-bold">Em resumo</h4>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{guide.points.map((point) => <li key={point}>{point}</li>)}</ul>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{guide.points.map((point) => <li key={point}><StudyText text={point} /></li>)}</ul>
             </section>
             <section className="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-3 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100">
               <h4 className="text-sm font-bold">Cuidado na prova</h4>
-              <p className="mt-1 text-sm leading-6">{guide.warning}</p>
+              <p className="mt-1 text-sm leading-6"><StudyText text={guide.warning} /></p>
             </section>
             <p className="text-xs text-muted-foreground">Explicação elaborada pelo Norte a partir do texto oficial, para estudo. Em caso de dúvida, vale o texto da norma (aba Fonte oficial).</p>
           </TabsContent>
           <TabsContent value="pratica" className="mt-4 space-y-4">
             <section className="rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-3 text-emerald-950 dark:bg-emerald-950/30 dark:text-emerald-100">
               <h4 className="flex items-center gap-1 text-sm font-bold"><Lightbulb size={15} /> Caso prático</h4>
-              <p className="mt-2 text-sm leading-6">{guide.example.scenario}</p>
+              <p className="mt-2 text-sm leading-6"><StudyText text={guide.example.scenario} /></p>
               <p className="mt-2 text-sm font-semibold">{guide.example.question}</p>
-              <details className="mt-2 text-sm"><summary className="cursor-pointer font-semibold">Ver resposta comentada</summary><p className="mt-2 leading-6">{guide.example.answer}</p></details>
+              <details className="mt-2 text-sm"><summary className="cursor-pointer font-semibold">Ver resposta comentada</summary><p className="mt-2 leading-6"><StudyText text={guide.example.answer} /></p></details>
             </section>
             <section className="rounded-xl border border-violet-300 bg-violet-50 p-3 text-violet-950 dark:border-violet-400/30 dark:bg-violet-950/30 dark:text-violet-100">
               <h4 className="text-sm font-bold">Agora é com você: o mesmo caso, com um detalhe diferente</h4>
               <p className="mt-1 text-xs">Mudar um detalhe pode mudar a resposta. Leia, decida sozinho e só depois confira.</p>
               <ol className="mt-3 space-y-3 text-sm leading-6">
-                <li><span className="font-semibold">1. Nova situação.</span> {guide.example.variation}</li>
+                <li><span className="font-semibold">1. Nova situação.</span> <StudyText text={guide.example.variation} /></li>
                 <li><span className="font-semibold">2. Pense:</span> a resposta do caso anterior continua valendo?</li>
-                <li><details><summary className="cursor-pointer font-semibold underline">3. Conferir a resposta</summary><p className="mt-2 rounded-lg bg-white/70 p-2 dark:bg-black/20">{guide.example.variationAnswer}</p></details></li>
+                <li><details><summary className="cursor-pointer font-semibold underline">3. Conferir a resposta</summary><p className="mt-2 rounded-lg bg-white/70 p-2 dark:bg-black/20"><StudyText text={guide.example.variationAnswer} /></p></details></li>
               </ol>
             </section>
           </TabsContent>

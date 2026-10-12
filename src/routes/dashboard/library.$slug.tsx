@@ -19,6 +19,7 @@ import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { materialLawSlug } from "@/lib/legalLibrary";
 import { StudyPractice } from "@/components/library/StudyPractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
+import { HighlightToggle } from "@/components/library/StudyText";
 import { useFocusMode } from "@/hooks/useFocusMode";
 import { toolsAreaFor } from "@/components/study/StudyTools";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
@@ -155,6 +156,7 @@ function MaterialPage() {
         </ul>
       </header>
 
+      <HighlightToggle />
       <LegalUpdateNotice review={material.legal_review} slug={material.slug} />
 
       <div className="surface-card library-body">
