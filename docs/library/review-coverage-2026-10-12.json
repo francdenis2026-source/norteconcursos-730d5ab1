@@ -1,8 +1,8 @@
 {
   "current_units": 3511,
-  "current_review_metadata": 1127,
-  "pending_current_review_metadata": 2384,
-  "checked_at": "2026-10-12T20:22:45.791Z",
+  "current_review_metadata": 1132,
+  "pending_current_review_metadata": 2379,
+  "checked_at": "2026-10-12T20:26:46.233Z",
   "note": "Contagem de aprovações editoriais atuais com revisor, data e hash correspondente; existência de explicação publicada não equivale a revisão atual. Não certifica toda a regulamentação ou jurisprudência.",
   "courses": [
     {
@@ -218,8 +218,8 @@
     {
       "slug": "ambientais",
       "current": 79,
-      "review_metadata": 32,
-      "pending": 47
+      "review_metadata": 37,
+      "pending": 42
     },
     {
       "slug": "testemunhas",

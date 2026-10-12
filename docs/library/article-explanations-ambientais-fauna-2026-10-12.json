@@ -1,0 +1,331 @@
+{
+  "version": "2026-10-12-ambientais-fauna",
+  "checked_at": "2026-10-12T20:25:24.740124+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "ambientais",
+      "title": "Lei 9.605/1998 — Crimes Ambientais",
+      "units": 5,
+      "scope_type": "targeted_correction",
+      "course_current_units": 79,
+      "target_unit_keys": [
+        "art-29",
+        "art-30",
+        "art-31",
+        "art-32",
+        "art-33"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "source_sha256": "e59817ef929c73f6782a029a6397ebede300ba92c119ef0f68691a409f84c8cd",
+      "source_checked_at": "2026-10-12T16:18:24.261384+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-29",
+      "unit_id": "e6bbf77d-f847-568d-a212-0bbbcfac4a8a",
+      "content_sha256": "d3ca1fb9c869548dd2ed4fdab7f78263863a8e58150c98b03421f784fc028690",
+      "simples": "Fauna silvestre exige licença/autorização e respeito aos limites; pena-base é detenção de seis meses a um ano e multa, com hipóteses equiparadas e aumentos próprios.",
+      "pontos": [
+        "Matar, perseguir, caçar, apanhar ou utilizar; equiparações abrangem procriação irregular, ninhos e comércio/cativeiro de espécimes, ovos, larvas e produtos nas condições legais.",
+        "Guarda doméstica de espécie não ameaçada permite ao juiz considerar circunstâncias e deixar de aplicar pena; não é licença geral de captura.",
+        "§4 aumenta de metade nas condições listadas; caça profissional aumenta até triplo; atos de pesca estão excluídos deste artigo."
+      ],
+      "atencao": [
+        "Conferir classificação oficial, espécie, autorização e temporalidade; não duplicar a mesma circunstância como agravante do art. 15 e majorante."
+      ],
+      "exemplo": "Pessoa mantém espécime silvestre em cativeiro sem autorização aplicável: analisar hipótese e condições. Variação: guarda doméstica de espécie não ameaçada permite avaliação judicial do §2, sem descriminalização automática de toda captura.",
+      "prova": [
+        "O artigo alcança pesca indistintamente? Não; §6 exclui atos de pesca.",
+        "Deixar de aplicar pena no §2 é automático? Não; juiz examina circunstâncias."
+      ],
+      "termos": [
+        "fauna silvestre",
+        "de metade",
+        "até triplo",
+        "não se aplicam à pesca"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "e6bbf77d-f847-568d-a212-0bbbcfac4a8a",
+        "content_sha256": "d3ca1fb9c869548dd2ed4fdab7f78263863a8e58150c98b03421f784fc028690",
+        "simples": "Matar, perseguir, caçar, apanhar ou utilizar espécimes da fauna silvestre, nativos ou em rota migratória, sem a devida permissão, licença ou autorização da autoridade competente, ou em desacordo com a obtida: detenção de seis meses a um ano, e multa. Incorre nas mesmas penas quem impede a procriação da fauna, quem modifica, danifica ou destrói ninho, abrigo ou criadouro natural, e quem vende, expõe à venda, exporta, adquire, guarda, tem em cativeiro ou transporta espécimes ou produtos da fauna silvestre sem autorização. Na guarda doméstica de espécie silvestre não ameaçada, o juiz pode deixar de aplicar a pena. A pena é aumentada de metade se o crime é praticado contra espécie rara ou ameaçada, em período proibido à caça, durante a noite, entre outras hipóteses.",
+        "pontos": [
+          "Matar, caçar ou utilizar fauna silvestre sem autorização: detenção de seis meses a um ano e multa.",
+          "Equiparados: impedir procriação, destruir ninhos e comercializar fauna sem autorização.",
+          "Guarda doméstica de espécie não ameaçada: juiz pode não aplicar a pena.",
+          "Aumento de metade em hipóteses graves."
+        ],
+        "atencao": [
+          "Fauna silvestre é a que tem ciclo de vida, total ou parcial, no território ou nas águas jurisdicionais brasileiras."
+        ],
+        "exemplo": "Caçar um animal silvestre sem licença é crime do art. 29.",
+        "prova": [
+          "Assertiva que pune sempre a guarda doméstica de qualquer espécie silvestre erra: o juiz pode deixar de aplicar a pena se a espécie não for ameaçada."
+        ],
+        "termos": [
+          {
+            "termo": "Fauna silvestre",
+            "significado": "Animais nativos ou migratórios cujo ciclo de vida ocorre no território brasileiro."
+          }
+        ],
+        "remissoes": [
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-30",
+      "unit_id": "5ef777de-d966-5185-8c3b-6eb3e8a59bc3",
+      "content_sha256": "1348751eaf9a0d23cdbed7d071ee9f62aae1d52cf908c88b42b7ac4a7e0d117d",
+      "simples": "Exportação irregular de peles/couros em bruto de anfíbios e répteis tem reclusão de um a três anos e multa; objeto e direção da operação são específicos.",
+      "pontos": [
+        "Exige saída para exterior e ausência de autorização ambiental competente.",
+        "Não confundir exportar esses materiais e importar espécime animal do art. 31."
+      ],
+      "atencao": [
+        "Não aplicar o tipo a toda venda interna de qualquer couro; pode haver outro enquadramento, mas requer análise própria."
+      ],
+      "exemplo": "Exportador envia ao exterior couro bruto de réptil sem autorização: examinar art. 30. Variação: venda interna de couro não prova por si só exportação nem autoriza enquadramento automático nesse artigo.",
+      "prova": [
+        "Toda venda interna satisfaz exportação? Não; direção internacional é elemento.",
+        "A pena é prisão simples? Não; reclusão de um a três anos e multa."
+      ],
+      "termos": [
+        "exportar",
+        "em bruto",
+        "anfíbios e répteis"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "5ef777de-d966-5185-8c3b-6eb3e8a59bc3",
+        "content_sha256": "1348751eaf9a0d23cdbed7d071ee9f62aae1d52cf908c88b42b7ac4a7e0d117d",
+        "simples": "Exportar para o exterior peles e couros de anfíbios e répteis em bruto, sem a autorização da autoridade ambiental competente: reclusão de um a três anos, e multa.",
+        "pontos": [
+          "Exportação de peles e couros de anfíbios e répteis em bruto.",
+          "Reclusão de um a três anos e multa."
+        ],
+        "atencao": [
+          "Pena de RECLUSÃO."
+        ],
+        "exemplo": "Enviar ao exterior couros de jacaré sem autorização é crime.",
+        "prova": [
+          "Assertiva que prevê detenção para esse crime erra: a pena é de reclusão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-31",
+      "unit_id": "4792904e-6f1a-5ba5-8ee0-42075f663e97",
+      "content_sha256": "8cbc94253dd3ac1f5a00b9d592820aca21e314e83a2c349e20ba8dc887df4643",
+      "simples": "Introdução de espécime animal no País exige parecer técnico oficial favorável e licença competente; os dois requisitos não são equivalentes.",
+      "pontos": [
+        "Pena textual: detenção de três meses a um ano e multa.",
+        "Importação de animal distingue-se de exportação de peles/couros; controle sanitário e ambiental pode ter normas complementares."
+      ],
+      "atencao": [
+        "Parecer privado não equivale automaticamente a parecer oficial nem elimina licença; identificar exigências e autoridade aplicáveis."
+      ],
+      "exemplo": "Importador introduz animal sem parecer técnico oficial e licença exigidos. Variação: possuir apenas laudo particular não preenche automaticamente os dois requisitos legais.",
+      "prova": [
+        "Parecer favorável e licença são a mesma coisa? Não; requisitos distintos.",
+        "O objeto é exclusivamente couro de réptil? Não; espécime animal, distinguindo art. 30."
+      ],
+      "termos": [
+        "parecer técnico oficial favorável",
+        "licença",
+        "introduzir no País"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "4792904e-6f1a-5ba5-8ee0-42075f663e97",
+        "content_sha256": "8cbc94253dd3ac1f5a00b9d592820aca21e314e83a2c349e20ba8dc887df4643",
+        "simples": "Introduzir espécime animal no País, sem parecer técnico oficial favorável e licença expedida por autoridade competente: detenção de três meses a um ano, e multa.",
+        "pontos": [
+          "Introdução de espécime animal sem parecer técnico e licença.",
+          "Detenção de três meses a um ano e multa."
+        ],
+        "atencao": [
+          "Exige parecer técnico oficial favorável E licença."
+        ],
+        "exemplo": "Trazer espécie exótica para criação sem licença é crime.",
+        "prova": [
+          "Assertiva que dispensa o parecer técnico oficial erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-32",
+      "unit_id": "e61a6f6d-aaeb-56bd-ba2e-5b020ea3e17c",
+      "content_sha256": "be242d1b91782f49563116db3241cd95810c126e3e6feda51bd83b6232e5dd88",
+      "simples": "Maus-tratos protegem animais silvestres, domésticos/domesticados, nativos/exóticos; cães e gatos têm regime especial, e alterações de 2025/2026 precisam aparecer no estudo.",
+      "pontos": [
+        "Regra-base: detenção de três meses a um ano e multa. Lei 14.064/2020: cães/gatos, reclusão de dois a cinco anos, multa e proibição da guarda; morte aumenta de um sexto a um terço.",
+        "Lei 15.150/2025 acrescentou realização/permissão de tatuagem ou piercing em cães/gatos com fins estéticos.",
+        "Lei 15.355/2026 acrescentou desastre ambiental que prejudique vida, integridade ou bem-estar de animais silvestres/domésticos, em vigor na publicação de 12/3/2026.",
+        "Experiência dolorosa/cruel havendo alternativa não se torna lícita por finalidade científica; testes cosméticos possuem proibições e exceções específicas da Lei 15.183/2025."
+      ],
+      "atencao": [
+        "Não estender pena especial de cães/gatos a qualquer espécie por analogia prejudicial; o §1-C diz mesmas penas, exigindo integração cuidadosa do dispositivo, sem inventar tese jurisprudencial consolidada sobre pena para toda espécie.",
+        "Nova hipótese mais gravosa não retroage. ADPF 640 impede abate automático em apreensão por maus-tratos; RE 494601 reconhece proteção de sacrifício ritual em cultos de matriz africana, sem licença genérica para crueldade."
+      ],
+      "exemplo": "Responsável permite piercing estético em cão após vigência da alteração: analisar §1-B e regime específico. Variação: desastre ambiental prejudica bem-estar de animal em 2026 e exige análise do novo §1-C; não copiar uma pena universal por espécie nem aplicar regra nova retroativamente.",
+      "prova": [
+        "Piercing estético foi expressamente incorporado? Sim; Lei 15.150/2025, incluindo quem permite.",
+        "§1-C exige necessariamente morte? Não; alcança prejuízo à vida, integridade ou bem-estar conforme texto.",
+        "Finalidade científica elimina automaticamente maus-tratos? Não; confrontar alternativas e normas específicas de pesquisa."
+      ],
+      "termos": [
+        "cães e gatos",
+        "fins estéticos",
+        "desastre ambiental",
+        "bem-estar"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14064.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15150.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15355.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15183.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2419108"
+      ],
+      "expected": {
+        "unit_id": "e61a6f6d-aaeb-56bd-ba2e-5b020ea3e17c",
+        "content_sha256": "be242d1b91782f49563116db3241cd95810c126e3e6feda51bd83b6232e5dd88",
+        "simples": "Praticar ato de abuso, maus-tratos, ferir ou mutilar animais silvestres, domésticos ou domesticados, nativos ou exóticos: detenção de três meses a um ano, e multa. Incorre nas mesmas penas quem realiza experiência dolorosa ou cruel em animal vivo, ainda que para fins didáticos ou científicos, quando existirem recursos alternativos. Quando se tratar de cão ou gato, a pena é de reclusão de 2 a 5 anos, multa e proibição da guarda. Incorre nas mesmas penas quem realiza ou permite tatuagens e piercings em cães e gatos com fins estéticos, ou provoca desastre ambiental que prejudique animais. A pena é aumentada de um sexto a um terço se ocorre morte do animal.",
+        "pontos": [
+          "Abuso, maus-tratos, ferir ou mutilar animais: detenção de três meses a um ano e multa.",
+          "Experiência cruel quando há alternativas.",
+          "Cão ou gato: reclusão de 2 a 5 anos, multa e proibição da guarda.",
+          "Aumento de um sexto a um terço se o animal morre."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a pena qualificada para cão e gato (reclusão) foi incluída pela Lei nº 14.064, de 2020 (Lei Sansão).",
+          "Maus-tratos a CÃO ou GATO: reclusão de 2 a 5 anos."
+        ],
+        "exemplo": "Mutilar um cão é crime punido com reclusão.",
+        "prova": [
+          "Assertiva que aplica detenção aos maus-tratos contra cães e gatos erra: a pena é de reclusão de 2 a 5 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-33",
+      "unit_id": "eb4957fe-6605-5444-baa1-c0a66975c195",
+      "content_sha256": "35d0d6ed5f4e7dfceade51f21400981e541720fd390933797968f532b6db9939",
+      "simples": "Perecimento de fauna aquática por efluentes ou carreamento de materiais tem detenção de um a três anos, ou multa, ou ambas; equiparações possuem elementos próprios.",
+      "pontos": [
+        "Caput descreve perecimento e vínculo com emissão/carreamento; não equiparar automaticamente qualquer ruído à mortandade.",
+        "Equiparações: degradação em viveiros/açudes/estações públicas; exploração sem autorização de campos naturais de invertebrados/algas; fundeio ou detritos sobre bancos de moluscos/corais demarcados."
+      ],
+      "atencao": [
+        "Distinguir caput e incisos: domínio público e demarcação não podem desaparecer do resumo; não exigir mortandade do caput em toda hipótese equiparada."
+      ],
+      "exemplo": "Efluente causa perecimento de fauna em rio: analisar caput e nexo. Variação: fundeio sobre banco de corais devidamente demarcado tem previsão própria, sem substituir seus elementos pelos do caput.",
+      "prova": [
+        "A pena exige sempre detenção e multa cumuladas? Não; alternativas ou cumulação previstas.",
+        "Demarcação do banco de corais é irrelevante no inciso III? Não; elemento expresso."
+      ],
+      "termos": [
+        "perecimento",
+        "ou multa ou ambas",
+        "domínio público",
+        "demarcados"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "eb4957fe-6605-5444-baa1-c0a66975c195",
+        "content_sha256": "35d0d6ed5f4e7dfceade51f21400981e541720fd390933797968f532b6db9939",
+        "simples": "Provocar, pela emissão de efluentes ou carreamento de materiais, o perecimento de espécimes da fauna aquática existentes em rios, lagos, açudes, lagoas, baías ou águas jurisdicionais brasileiras: detenção de um a três anos, ou multa, ou ambas. Incorre nas mesmas penas quem causa degradação em viveiros, açudes ou estações de aquicultura de domínio público; quem explora campos naturais de invertebrados aquáticos e algas sem licença; e quem fundeia embarcações ou lança detritos sobre bancos de moluscos ou corais demarcados em carta náutica.",
+        "pontos": [
+          "Perecimento de fauna aquática por efluentes ou materiais.",
+          "Degradação de viveiros e açudes públicos.",
+          "Exploração sem licença de invertebrados e algas.",
+          "Danos a bancos de moluscos e corais."
+        ],
+        "atencao": [
+          "Detenção de um a três anos, ou multa, ou ambas."
+        ],
+        "exemplo": "Lançar efluentes que matam peixes de um rio é crime.",
+        "prova": [
+          "Assertiva que prevê reclusão para esse crime erra: a pena é de detenção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 34"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    }
+  ]
+}

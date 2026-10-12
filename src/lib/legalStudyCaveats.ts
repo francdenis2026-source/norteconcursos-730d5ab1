@@ -1,5 +1,11 @@
 /** Editorial application notes are separate from the unmodified compiled statute. */
 export function legalStudyCaveat(law: string, key: string) {
+  if (law === 'ambientais' && key === 'art-32') return {
+    title: 'Maus-tratos: novidades de 2025 e 2026',
+    explanation: 'Lei 15.150/2025 inclui realizar ou permitir tatuagem/piercing estético em cães e gatos. Lei 15.355/2026 inclui desastre que prejudique vida, integridade ou bem-estar de animais; não exige sempre morte. Distinguir pena-base, regime de cães/gatos e remissão do §1-C, sem analogia prejudicial universal. Pesquisa cosmética exige também Lei 15.183/2025; não gerar treino automático ignorando exceções e interpretação constitucional.',
+    source: 'https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15355.htm',
+    literalPractice: false,
+  };
   if (law === 'ambientais' && key === 'art-25') return {
     title: 'Animais apreendidos: ADPF 640 e destinação adequada',
     explanation: 'Apreensão em situação de maus-tratos não autoriza abate automático, inclusive por falta de estrutura. Distinguir animal vivo, produtos/subprodutos da fauna e madeira; priorizar habitat quando viável e cumprir guarda, transporte e cuidados legais. Não usar nota de MP prejudicada como regra atual de leilão.',

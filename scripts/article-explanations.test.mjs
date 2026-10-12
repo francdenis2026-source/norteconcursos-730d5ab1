@@ -582,3 +582,16 @@ test('environmental final rules preserve jurisdiction, subsidiary law and histor
  assert.match(get('art-80').simples,/não é prazo.*pagar multa/);
  assert.ok(!p.units.some(r=>r.unit_key==='art-81'));
 });
+
+test('environmental fauna review includes 2025 and 2026 changes without adverse analogy',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ambientais-fauna-2026-10-12.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,5);
+ for(const r of p.units){assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-29').pontos.join(' '),/atos de pesca estão excluídos/);
+ assert.match(get('art-31').simples,/parecer técnico oficial favorável e licença/);
+ const animal=get('art-32');assert.match(animal.pontos.join(' '),/15.150\/2025.*15.355\/2026.*15.183\/2025/s);
+ assert.ok(animal.remissoes.includes('https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14064.htm'));
+ assert.match(animal.atencao.join(' '),/não.*analogia prejudicial.*não retroage/si);
+ assert.equal(legalStudyCaveat('ambientais','art-32').literalPractice,false);
+ assert.match(get('art-33').simples,/ou multa, ou ambas/);
+});
