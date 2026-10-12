@@ -7219,7 +7219,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     font-size: 0.7rem;
   }
   :root:not(.dark) .lp-footer {
-    background: oklch(0.99 0.004 255);
+    background: oklch(1 0 0);
     color: oklch(0.32 0.03 262 / 0.82);
     border-top-color: oklch(0.1 0.03 262 / 0.1);
   }
@@ -7569,9 +7569,9 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     color: oklch(0.72 0.012 255);
   }
   :root:not(.dark) .mh {
-    background:
-      radial-gradient(110% 80% at 0% 0%, oklch(0.96 0.025 82), transparent 58%),
-      linear-gradient(180deg, oklch(0.985 0.006 255), oklch(0.95 0.012 255));
+    /* O tema claro da homepage usa branco como superfície principal. Evita
+       que a área inferior pareça cinza por causa de gradientes translúcidos. */
+    background: oklch(1 0 0);
     color: oklch(0.19 0.03 262);
     border-top: 1px solid oklch(0.2 0.03 262 / 0.1);
   }
@@ -10317,5 +10317,71 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .dark .mh .btn-glass:hover {
     border-color: oklch(1 0 0 / 0.46);
     background: oklch(1 0 0 / 0.16);
+  }
+}
+
+/* A camada de textura do hub é exclusiva do modo escuro. Sem esta
+   sobrescrita final ela continuava escurecendo o bloco claro por cima do
+   fundo branco escolhido acima. */
+@media (max-width: 767px) {
+  html:not(.dark) .mh {
+    background: #fff;
+    color: oklch(0.19 0.03 262);
+  }
+  html:not(.dark) .mh::before {
+    background: url("/media/acre-seguranca.jpg") center / cover no-repeat;
+    opacity: 0.12;
+    filter: saturate(0.9) contrast(1.05);
+  }
+  html:not(.dark) .mh::after {
+    background: linear-gradient(180deg, oklch(1 0 0 / 0.9), oklch(1 0 0 / 0.97));
+  }
+  html:not(.dark) .mh__intro h2 {
+    color: oklch(0.16 0.03 262);
+  }
+  html:not(.dark) .mh__intro p {
+    color: oklch(0.34 0.03 262);
+  }
+  html:not(.dark) .mh__grid li:nth-child(4n + 1) {
+    border-color: #b8d7f0;
+    background: #eef7ff;
+  }
+  html:not(.dark) .mh__grid li:nth-child(4n + 2) {
+    border-color: #b9e1d2;
+    background: #effbf6;
+  }
+  html:not(.dark) .mh__grid li:nth-child(4n + 3) {
+    border-color: #ead39b;
+    background: #fff9e9;
+  }
+  html:not(.dark) .mh__grid li:nth-child(4n + 4) {
+    border-color: #e4bfd0;
+    background: #fff3f7;
+  }
+  html:not(.dark) .mh__grid li strong,
+  html:not(.dark) .mh__grid li span,
+  html:not(.dark) .mh__plan h3,
+  html:not(.dark) .mh__plan li {
+    color: #1d2a3b;
+  }
+  html:not(.dark) .mh__grid li > svg {
+    color: #246b9f;
+  }
+  html:not(.dark) .mh__plan:nth-child(3n + 1) {
+    border-color: #b8d7f0;
+    background: #eef7ff;
+  }
+  html:not(.dark) .mh__plan:nth-child(3n + 2) {
+    border-color: #b9e1d2;
+    background: #effbf6;
+  }
+  html:not(.dark) .mh__plan:nth-child(3n + 3) {
+    border-color: #ead39b;
+    background: #fff9e9;
+  }
+  html:not(.dark) .mh__pills li {
+    border-color: #c5d5e5;
+    background: #f6faff;
+    color: #29445f;
   }
 }
