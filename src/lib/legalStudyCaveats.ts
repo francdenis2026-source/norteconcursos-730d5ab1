@@ -1,5 +1,17 @@
 /** Editorial application notes are separate from the unmodified compiled statute. */
 export function legalStudyCaveat(law: string, key: string) {
+  if (law === 'drogas' && ['art-33','art-42'].includes(key)) return {
+    literalPractice: false,
+    title: 'Atualização de setembro/2026: privilégio e dosimetria',
+    explanation: 'Os Temas 1154 e 1241 do STJ exigem fundamentação concreta. Quantidade excepcionalmente expressiva pode afastar o privilégio; fora dessa hipótese, examinar outros elementos de dedicação criminosa ou organização. Distinguir afastar a minorante de modular sua fração. Não repetir natureza/quantidade para elevar a pena-base e reduzir a fração; não transformar a vedação dessa duplicidade em proibição de demonstrar dedicação criminosa. No art. 33, observar também a SV 63 e o afastamento da vedação absoluta de penas alternativas.',
+    source: 'https://scon.stj.jus.br/SCON/GetPDFINFJ?edicao=0901',
+  };
+  if (law === 'drogas' && key === 'art-41') return {
+    literalPractice: false,
+    title: 'Colaboração: distinguir precedentes e mera confissão',
+    explanation: 'O Informativo 868 do STJ (2025) exige identificação de coautores e apreensão cumulativamente, orientação reafirmada em acórdão publicado em fevereiro/2026. O HC 663.265/SP (2023) havia admitido alternatividade: a explicação registra a divergência e a sequência temporal. Não tratar qualquer indicação de droga como redução automática nem mera confissão como colaboração eficaz. A fração é de um terço a dois terços.',
+    source: 'https://scon.stj.jus.br/SCON/GetPDFINFJ?edicao=0868',
+  };
   if (law === 'drogas' && key === 'art-35') return {
     literalPractice: false,
     title: 'Associação para tráfico: vínculo estável e permanente',

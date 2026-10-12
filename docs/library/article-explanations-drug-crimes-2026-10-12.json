@@ -1,0 +1,1393 @@
+{
+  "version": "2026-10-12-drogas-crimes-targeted",
+  "checked_at": "2026-10-12T16:28:45.515763+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "drogas",
+      "title": "Lei 11.343/2006 — Lei de Drogas",
+      "units": 22,
+      "scope_type": "targeted_correction",
+      "course_current_units": 84,
+      "target_unit_keys": [
+        "art-27",
+        "art-28",
+        "art-29",
+        "art-30",
+        "art-31",
+        "art-32",
+        "art-33",
+        "art-34",
+        "art-35",
+        "art-36",
+        "art-37",
+        "art-38",
+        "art-39",
+        "art-40",
+        "art-40-a",
+        "art-41",
+        "art-42",
+        "art-43",
+        "art-44",
+        "art-45",
+        "art-46",
+        "art-47"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "source_sha256": "6f6763a224e2dda8310d3bd971c6314d795c5fc5ffb73137953eeefe47647e98",
+      "source_checked_at": "2026-10-12T16:18:25.227571+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-27",
+      "unit_id": "57039845-2bfa-5e5f-a4bf-2f248fd7e2d0",
+      "content_sha256": "d73c65b309ba10c6bc5e49448ba754f8f15ff3be45c50d5a894552f30fd71d51",
+      "simples": "O juiz pode aplicar as medidas deste capítulo isoladamente ou em conjunto e substituí-las a qualquer tempo, depois de ouvir Ministério Público e defensor.",
+      "pontos": [
+        "Isolada ou cumulativamente: não existe obrigação de aplicar todas as medidas.",
+        "Substituição pode ocorrer a qualquer tempo; MP e defensor devem ser ouvidos."
+      ],
+      "atencao": [
+        "Tema 506/STF: cannabis para consumo pessoal não produz consequências penais. Não transfira o regime penal do capítulo indistintamente para essa hipótese."
+      ],
+      "exemplo": "O juiz considera substituir uma medida educativa: deve ouvir acusação e defesa. Variação: no porte de cannabis para uso pessoal, a análise deve respeitar o procedimento não penal do Tema 506.",
+      "prova": [
+        "A substituição dispensa ouvir o defensor? Não; ele e o Ministério Público devem ser ouvidos.",
+        "Todas as medidas precisam ser cumuladas? Não; o artigo permite aplicação isolada."
+      ],
+      "termos": [
+        "isolada ou cumulativamente",
+        "a qualquer tempo",
+        "ouvidos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4034145&numeroProcesso=635659&numeroTema=506"
+      ],
+      "expected": {
+        "unit_id": "57039845-2bfa-5e5f-a4bf-2f248fd7e2d0",
+        "content_sha256": "d73c65b309ba10c6bc5e49448ba754f8f15ff3be45c50d5a894552f30fd71d51",
+        "simples": "As penas previstas para o usuário (art. 28) poderão ser aplicadas isolada ou cumulativamente, bem como substituídas a qualquer tempo, ouvidos o Ministério Público e o defensor.",
+        "pontos": [
+          "Penas do art. 28 podem ser isoladas ou cumulativas.",
+          "Podem ser substituídas a qualquer tempo.",
+          "Ouvidos o MP e o defensor."
+        ],
+        "atencao": [
+          "O texto remete a debate no STF (RE 635659) sobre o art. 28."
+        ],
+        "exemplo": "O juiz substitui a prestação de serviços por advertência, ouvidos o MP e o defensor.",
+        "prova": [
+          "Assertiva que impede a substituição das penas do art. 28 após a sentença erra: pode ocorrer a qualquer tempo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-28",
+      "unit_id": "ef5dfc81-a404-511a-974a-393907bb9adf",
+      "content_sha256": "6ddfa5ed489baa7c64ee9b8c881999c76038ed06d19ce847e624537774b5b74a",
+      "simples": "O texto prevê advertência, prestação de serviços e comparecimento a programa ou curso educativo para aquisição, guarda, depósito, transporte ou porte de droga destinada ao consumo pessoal. O pequeno cultivo para consumo próprio recebe as mesmas medidas. A aplicação atual exige distinguir cannabis das demais drogas.",
+      "pontos": [
+        "Finalidade pessoal depende do conjunto: natureza, quantidade, local, condições, circunstâncias sociais e pessoais, conduta e antecedentes.",
+        "Serviços e curso: até cinco meses; na reincidência prevista no texto, até dez. Recusa injustificada: admoestação e multa sucessivas, não prisão.",
+        "O poder público deve oferecer gratuitamente estabelecimento de saúde, preferencialmente ambulatorial."
+      ],
+      "atencao": [
+        "Tema 506/STF, 2024: cannabis para uso pessoal é infração não penal. Até 40 g ou seis plantas fêmeas geram presunção relativa; não são autorização de comercialização.",
+        "Quantidade inferior pode coexistir com provas concretas de tráfico; quantidade superior não impede reconhecer uso pessoal. A decisão não descriminalizou indistintamente todas as drogas."
+      ],
+      "exemplo": "Uma pessoa porta 30 g de cannabis para consumo próprio, sem elementos concretos de venda: aplica-se a orientação não penal. Variação: a mesma quantidade, acompanhada de evidências concretas de comercialização, exige análise do tráfico; o peso não resolve sozinho.",
+      "prova": [
+        "Quarenta gramas autorizam vender cannabis? Não; o critério trata de presunção relativa de consumo pessoal.",
+        "A decisão do STF abrange indistintamente qualquer droga? Não; o Tema 506 trata de cannabis."
+      ],
+      "termos": [
+        "consumo pessoal",
+        "presunção relativa",
+        "cinco meses",
+        "dez meses"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4034145&numeroProcesso=635659&numeroTema=506"
+      ],
+      "expected": {
+        "unit_id": "ef5dfc81-a404-511a-974a-393907bb9adf",
+        "content_sha256": "6ddfa5ed489baa7c64ee9b8c881999c76038ed06d19ce847e624537774b5b74a",
+        "simples": "Quem adquirir, guardar, tiver em depósito, transportar ou trouxer consigo, para consumo pessoal, drogas sem autorização ou em desacordo com determinação legal ou regulamentar será submetido a advertência sobre os efeitos das drogas, prestação de serviços à comunidade e medida educativa de comparecimento a programa ou curso educativo. Às mesmas medidas submete-se quem, para seu consumo pessoal, semeia, cultiva ou colhe plantas destinadas à preparação de pequena quantidade de substância capaz de causar dependência. Para determinar se a droga destinava-se a consumo pessoal, o juiz atenderá à natureza e à quantidade da substância, ao local e às condições da ação, às circunstâncias sociais e pessoais e à conduta e aos antecedentes do agente. As penas dos incisos II e III duram no máximo 5 meses (10 meses na reincidência).",
+        "pontos": [
+          "Núcleos: adquirir, guardar, ter em depósito, transportar ou trazer consigo, para consumo pessoal.",
+          "Penas: advertência, prestação de serviços à comunidade e curso educativo (sem prisão).",
+          "§1º: cultivo para consumo pessoal.",
+          "§2º: critérios para distinguir usuário de traficante.",
+          "Prazo máximo: 5 meses; reincidência: 10 meses."
+        ],
+        "atencao": [
+          "O art. 28 NÃO prevê pena privativa de liberdade (despenalização).",
+          "O STF discute a constitucionalidade do artigo (RE 635659).",
+          "Prazo de 5 meses (10 na reincidência) para as penas dos incisos II e III."
+        ],
+        "exemplo": "Quem é flagrado com pequena quantidade para uso próprio é advertido e pode prestar serviços à comunidade.",
+        "prova": [
+          "Assertiva que prevê pena de detenção para o porte para consumo pessoal erra: o art. 28 não prevê pena de prisão."
+        ],
+        "termos": [
+          {
+            "termo": "Despenalização",
+            "significado": "Retirada da pena de prisão, mantendo o fato como infração."
+          }
+        ],
+        "remissoes": [
+          "Art. 33",
+          "Art. 48"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-29",
+      "unit_id": "0ad7ff86-2489-5ef5-a324-f919eceda469",
+      "content_sha256": "95b4e82f3aac5b914ccff97139e89e8eb91353765c858e2bd1b202c03f9f90af",
+      "simples": "Para a multa coercitiva do art. 28, §6º, o juiz fixa entre 40 e 100 dias-multa segundo a reprovabilidade. Cada dia varia de um trinta avos até três vezes o maior salário mínimo, conforme a capacidade econômica. Os valores vão ao Funad.",
+      "pontos": [
+        "Quantidade de dias: reprovabilidade da conduta.",
+        "Valor de cada dia: capacidade econômica.",
+        "Destino: Fundo Nacional Antidrogas."
+      ],
+      "atencao": [
+        "Não confundir esta multa com a multa criminal dos arts. 33 a 39, cujo valor unitário é disciplinado no art. 43.",
+        "Para cannabis pessoal, preserve o caráter não penal do Tema 506; multa não pode recriar consequências criminais afastadas pelo STF."
+      ],
+      "exemplo": "Ao fixar a multa do art. 28, o juiz distingue número de dias e valor unitário. Variação: uma multa do tráfico é calculada com o art. 43, não com o teto de três salários mínimos deste artigo.",
+      "prova": [
+        "O art. 29 fixa o cálculo de toda multa da Lei de Drogas? Não; disciplina a multa indicada no art. 28, §6º.",
+        "A capacidade econômica define o valor do dia-multa? Sim; não deve ser confundida com o critério de quantidade de dias."
+      ],
+      "termos": [
+        "40 a 100",
+        "capacidade econômica",
+        "Funad"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4034145&numeroProcesso=635659&numeroTema=506"
+      ],
+      "expected": {
+        "unit_id": "0ad7ff86-2489-5ef5-a324-f919eceda469",
+        "content_sha256": "95b4e82f3aac5b914ccff97139e89e8eb91353765c858e2bd1b202c03f9f90af",
+        "simples": "Na imposição da multa prevista como medida educativa ao usuário que se recusa a cumprir as medidas (art. 28, §6º, II), o juiz, atendendo à reprovabilidade da conduta, fixará o número de dias-multa, em quantidade nunca inferior a 40 nem superior a 100, atribuindo depois a cada um, segundo a capacidade econômica do agente, o valor de um trinta avos até 3 vezes o valor do maior salário mínimo. Os valores da multa serão creditados à conta do Fundo Nacional Antidrogas.",
+        "pontos": [
+          "Multa de 40 a 100 dias-multa.",
+          "Valor do dia-multa: de um trinta avos até 3 vezes o maior salário mínimo.",
+          "Valores creditados ao Funad."
+        ],
+        "atencao": [
+          "A multa só incide sobre quem se recusa a cumprir as medidas do art. 28."
+        ],
+        "exemplo": "O usuário que se recusa a cumprir as medidas paga multa fixada entre 40 e 100 dias-multa.",
+        "prova": [
+          "Assertiva que destina a multa do art. 29 ao Tesouro Estadual erra: é creditada ao Funad."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-30",
+      "unit_id": "6037d732-e650-567d-a0fe-d3195f129957",
+      "content_sha256": "0ca4536d91d7b1d42e20ea25dc36246a99417adfcf3e940efa48c976017d405c",
+      "simples": "A imposição e a execução das penas do art. 28 prescrevem em dois anos, com as regras de interrupção do Código Penal.",
+      "pontos": [
+        "Objeto delimitado: sanções do art. 28.",
+        "Prazo: dois anos; interrupção segue o Código Penal."
+      ],
+      "atencao": [
+        "Não aplicar dois anos ao tráfico do art. 33. Para cannabis pessoal, a prescrição penal deste texto não pode restabelecer natureza criminal afastada pelo Tema 506."
+      ],
+      "exemplo": "Uma questão atribui prazo de dois anos a qualquer crime da lei: a generalização está errada. Variação: se o caso trata do art. 28, identificar ainda a substância e a orientação constitucional aplicável.",
+      "prova": [
+        "O tráfico do art. 33 prescreve sempre em dois anos? Não; esse prazo específico refere-se ao art. 28.",
+        "A interrupção é disciplinada pelo Código Penal? Sim; por remissão expressa."
+      ],
+      "termos": [
+        "dois anos",
+        "art. 28",
+        "interrupção"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4034145&numeroProcesso=635659&numeroTema=506"
+      ],
+      "expected": {
+        "unit_id": "6037d732-e650-567d-a0fe-d3195f129957",
+        "content_sha256": "0ca4536d91d7b1d42e20ea25dc36246a99417adfcf3e940efa48c976017d405c",
+        "simples": "Prescrevem em 2 anos a imposição e a execução das penas do usuário (art. 28), observado, no tocante à interrupção do prazo, o disposto nos arts. 107 e seguintes do Código Penal.",
+        "pontos": [
+          "Prescrição de 2 anos para a imposição e a execução das penas do art. 28.",
+          "Interrupção segue os arts. 107 e seguintes do CP."
+        ],
+        "atencao": [
+          "Prazo prescricional de 2 anos."
+        ],
+        "exemplo": "Passados 2 anos sem decisão, prescreve a pretensão de punir o usuário.",
+        "prova": [
+          "Assertiva que fixa a prescrição do art. 28 em 4 anos erra: são 2 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-31",
+      "unit_id": "aa545437-a313-5613-8c7d-d1f4e2e3743e",
+      "content_sha256": "83145e88e958fd7d0475b44cee32290c4ae9581945c0e2ca02d0b3df2dfc6e0b",
+      "simples": "Produzir, extrair, fabricar, transformar, preparar, possuir, manter em depósito, importar, exportar, reexportar, remeter, transportar, expor, oferecer, vender, comprar, trocar, ceder ou adquirir drogas e matérias-primas destinadas à preparação exige licença prévia da autoridade competente e cumprimento dos demais requisitos legais.",
+      "pontos": [
+        "Exigência alcança atividades com qualquer finalidade.",
+        "Licença prévia e outros requisitos são cumulativos; não basta alegar finalidade científica ou médica."
+      ],
+      "atencao": [
+        "A regulamentação sanitária deve ser consultada para a atividade concreta. O artigo não equivale a proibição absoluta de toda atividade regularmente autorizada."
+      ],
+      "exemplo": "Um laboratório quer importar substância controlada para pesquisa: finalidade científica não dispensa licença. Variação: mesmo com licença, deve cumprir os demais requisitos sanitários e legais.",
+      "prova": [
+        "Finalidade de pesquisa dispensa licença prévia? Não; a regra alcança qualquer finalidade.",
+        "A licença elimina os demais requisitos? Não; eles também devem ser atendidos."
+      ],
+      "termos": [
+        "licença prévia",
+        "qualquer finalidade",
+        "demais exigências legais"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "aa545437-a313-5613-8c7d-d1f4e2e3743e",
+        "content_sha256": "83145e88e958fd7d0475b44cee32290c4ae9581945c0e2ca02d0b3df2dfc6e0b",
+        "simples": "É indispensável a licença prévia da autoridade competente para produzir, extrair, fabricar, transformar, preparar, possuir, manter em depósito, importar, exportar, reexportar, remeter, transportar, expor, oferecer, vender, comprar, trocar, ceder ou adquirir, para qualquer fim, drogas ou matéria-prima destinada à sua preparação, observadas as demais exigências legais.",
+        "pontos": [
+          "Licença prévia da autoridade competente para lidar com drogas ou matéria-prima.",
+          "Aplica-se a qualquer fim.",
+          "Rol amplo de condutas."
+        ],
+        "atencao": [
+          "Exige LICENÇA PRÉVIA, e não apenas comunicação."
+        ],
+        "exemplo": "Laboratório farmacêutico precisa de licença para produzir substância controlada.",
+        "prova": [
+          "Assertiva que dispensa a licença quando a finalidade é científica erra: a licença é exigida para qualquer fim."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 33"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-32",
+      "unit_id": "94ca933c-dab4-5ae4-8777-82f2a3405dea",
+      "content_sha256": "ea8e06300d97bb201f2885aabb0a400c8e23369a6eaa3af5d511cef076d876f2",
+      "simples": "Plantações ilícitas são imediatamente destruídas pelo delegado, preservada quantidade suficiente à perícia e lavrado auto com condições do local e delimitação da área. A destruição segue o art. 50-A. O artigo também disciplina queimada e remete a imóveis cultivados ilicitamente à expropriação constitucional.",
+      "pontos": [
+        "Delegado executa a destruição; conservar amostra pericial e documentação.",
+        "§§1º e 2º foram revogados pela Lei 12.961/2014.",
+        "§3º dispensa autorização prévia ambiental para a queimada na hipótese do artigo, sem dispensar cautelas de proteção ambiental."
+      ],
+      "atencao": [
+        "Não converter a regra especial em permissão geral para queimadas. A expropriação remete ao art. 243 da Constituição e às garantias próprias; não é perda automática por decisão informal do delegado."
+      ],
+      "exemplo": "Encontrada plantação ilícita, o delegado preserva amostra e documenta a área antes da destruição. Variação: a medida não autoriza queimar vegetação vizinha nem decidir informalmente a expropriação do imóvel.",
+      "prova": [
+        "Pode destruir toda a prova sem guardar amostra? Não; é necessária quantidade suficiente ao exame pericial.",
+        "Os antigos §§1º e 2º continuam vigentes? Não; foram revogados em 2014."
+      ],
+      "termos": [
+        "imediatamente destruídas",
+        "exame pericial",
+        "auto de levantamento"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art243",
+        "https://www.planalto.gov.br/ccivil_03/decreto/d2661.htm"
+      ],
+      "expected": {
+        "unit_id": "94ca933c-dab4-5ae4-8777-82f2a3405dea",
+        "content_sha256": "ea8e06300d97bb201f2885aabb0a400c8e23369a6eaa3af5d511cef076d876f2",
+        "simples": "As plantações ilícitas serão imediatamente destruídas pelo delegado de polícia na forma do art. 50-A, que recolherá quantidade suficiente para exame pericial, de tudo lavrando auto de levantamento das condições encontradas, com a delimitação do local, asseguradas as medidas necessárias para a preservação da prova. Em caso de queimada, observar-se-á o Decreto nº 2.661, de 1998, dispensada a autorização prévia do Sisnama. As glebas cultivadas com plantações ilícitas serão expropriadas, conforme o art. 243 da Constituição.",
+        "pontos": [
+          "Destruição imediata pelo delegado de polícia.",
+          "Recolhe amostra para perícia e lavra auto de levantamento.",
+          "Queimada: cautelas ambientais, sem autorização prévia do Sisnama.",
+          "Glebas expropriadas (art. 243 da Constituição)."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 12.961, de 2014 (destruição pelo delegado).",
+          "Os §§ 1º e 2º foram revogados."
+        ],
+        "exemplo": "O delegado destrói a plantação de maconha após coletar amostra e lavrar o auto.",
+        "prova": [
+          "Assertiva que exige autorização judicial prévia para destruir a plantação ilícita erra, segundo a redação dada pela Lei nº 12.961, de 2014."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 50-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-33",
+      "unit_id": "33f37497-552c-5cab-9746-451aef3e7591",
+      "content_sha256": "ef1e70ce0bf56d25c3918e910e1d907a1f14d165ebe26c7fa0840caea61c544c",
+      "simples": "O tráfico do caput reúne diversas condutas, como importar, vender, oferecer, guardar, transportar e fornecer drogas sem autorização ou contra a regulamentação, ainda que gratuitamente: reclusão de cinco a quinze anos e 500 a 1.500 dias-multa. Os parágrafos diferenciam condutas equiparadas, indução, compartilhamento eventual e tráfico privilegiado.",
+      "pontos": [
+        "§1º: insumos destinados à droga, cultivo ilícito, disponibilização de imóvel/local para tráfico e negociação com policial disfarçado, com elementos probatórios razoáveis de conduta criminal preexistente.",
+        "§2º: induzir, instigar ou auxiliar uso indevido; detenção de um a três anos e 100 a 300 dias-multa.",
+        "§3º: oferta eventual, sem lucro, a pessoa do relacionamento para consumo conjunto; detenção de seis meses a um ano, 700 a 1.500 dias-multa e medidas do art. 28.",
+        "§4º: redução de um sexto a dois terços, com primariedade, bons antecedentes, ausência de dedicação criminosa e de integração a organização criminosa, cumulativamente."
+      ],
+      "atencao": [
+        "Atualização STJ, setembro/2026, Temas 1154 e 1241: quantidade excepcionalmente expressiva pode afastar o privilégio com fundamentação concreta; fora dessa hipótese, examinar outros elementos indicativos de dedicação ou organização. Não ensinar que quantidade nunca pode afastar a redução.",
+        "SV 63/STF: tráfico privilegiado não é hediondo. A vedação absoluta de penas alternativas foi afastada; a substituição depende dos requisitos aplicáveis.",
+        "Oferta gratuita não é sempre compartilhamento do §3º: todos os requisitos precisam estar presentes. Defesa pública da legalização não se confunde automaticamente com indução ao consumo."
+      ],
+      "exemplo": "Uma pessoa fornece droga gratuitamente a desconhecidos: a gratuidade não exclui o caput. Variação: oferta eventual a amigo, sem lucro e para consumirem juntos, reúne os elementos específicos do §3º. Para o §4º, não basta dizer que o acusado é primário: conferir os quatro requisitos e a fundamentação do caso.",
+      "prova": [
+        "Fornecimento gratuito exclui automaticamente o tráfico? Não; o caput inclui fornecimento mesmo gratuito.",
+        "Primariedade, sozinha, garante o §4º? Não; os quatro requisitos são cumulativos."
+      ],
+      "termos": [
+        "ainda que gratuitamente",
+        "consumirem juntos",
+        "um sexto a dois terços",
+        "conduta criminal preexistente"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://scon.stj.jus.br/SCON/GetPDFINFJ?edicao=0901",
+        "https://noticias.stf.jus.br/postsnoticias/stf-aprova-sumula-vinculante-que-afasta-carater-hediondo-do-trafico-privilegiado/",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2697947"
+      ],
+      "expected": {
+        "unit_id": "33f37497-552c-5cab-9746-451aef3e7591",
+        "content_sha256": "ef1e70ce0bf56d25c3918e910e1d907a1f14d165ebe26c7fa0840caea61c544c",
+        "simples": "Tráfico de drogas: importar, exportar, remeter, preparar, produzir, fabricar, adquirir, vender, expor à venda, oferecer, ter em depósito, transportar, trazer consigo, guardar, prescrever, ministrar, entregar a consumo ou fornecer drogas, ainda que gratuitamente, sem autorização ou em desacordo com determinação legal ou regulamentar. Pena: reclusão de 5 a 15 anos e 500 a 1.500 dias-multa. Nas mesmas penas incorre quem pratica condutas relativas a matéria-prima, insumo ou produto químico destinado à preparação de drogas; quem semeia, cultiva ou colhe plantas que sejam matéria-prima; e quem utiliza local ou bem de que tem a posse ou guarda, ou consente que outrem o utilize, para o tráfico. Há ainda figuras do §1º, IV (venda a policial disfarçado), do §2º (induzir, instigar ou auxiliar ao uso: detenção de 1 a 3 anos), do §3º (oferecer droga eventualmente, sem lucro, a pessoa de relacionamento, para consumirem juntos: detenção de 6 meses a 1 ano) e o tráfico privilegiado do §4º.",
+        "pontos": [
+          "Tipo misto alternativo com 18 núcleos.",
+          "Pena: reclusão de 5 a 15 anos e 500 a 1.500 dias-multa.",
+          "§1º: matéria-prima, insumos, plantio e cessão de local.",
+          "§2º: induzir, instigar ou auxiliar o uso.",
+          "§3º: oferecer droga eventualmente, sem lucro, a pessoa de relacionamento.",
+          "§4º: tráfico privilegiado (redução de pena para o primário, de bons antecedentes, que não se dedique ao crime nem integre organização)."
+        ],
+        "atencao": [
+          "Crime de ação múltipla: praticar mais de um núcleo no mesmo contexto é crime único.",
+          "O tráfico privilegiado (§4º) NÃO é equiparado a hediondo (STF).",
+          "Equiparado a hediondo na forma do caput e do §1º."
+        ],
+        "exemplo": "Quem guarda drogas em casa para entregar a terceiros pratica tráfico, ainda que sem lucro.",
+        "prova": [
+          "Assertiva que considera hediondo o tráfico privilegiado do §4º erra, conforme o STF."
+        ],
+        "termos": [
+          {
+            "termo": "Tráfico privilegiado",
+            "significado": "Causa de diminuição de pena para o réu primário, de bons antecedentes, que não integra organização criminosa."
+          }
+        ],
+        "remissoes": [
+          "Art. 28",
+          "Art. 40",
+          "Art. 44"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-34",
+      "unit_id": "6f958b93-7cf4-56d6-94ab-7535368adfd6",
+      "content_sha256": "e548c4bc33d6f0b92d50ef73266a6902fee3461828c00f4e5fe91f7f5e2244bf",
+      "simples": "Fabricar, adquirir, utilizar, transportar, oferecer, vender, distribuir, entregar, possuir, guardar ou fornecer maquinário, aparelho, instrumento ou objeto destinado à fabricação, preparação, produção ou transformação de drogas, sem autorização ou contra a regulamentação, tem pena de três a dez anos e 1.200 a 2.000 dias-multa.",
+      "pontos": [
+        "Objeto: equipamentos destinados à produção/preparação de drogas; não a droga em si.",
+        "A destinação e a ausência de autorização ou desconformidade normativa integram o tipo."
+      ],
+      "atencao": [
+        "STJ, HC 1.005.146/SP, março/2026: art. 34 não é hediondo; progressão segue regras de crime comum. Não estender a hediondez por mera proximidade com o tráfico."
+      ],
+      "exemplo": "Um equipamento é mantido comprovadamente para fabricar drogas ilicitamente: examinar art. 34. Variação: possuir utensílio de uso doméstico, sem comprovar destinação ilícita, não basta para concluir pela prática do crime.",
+      "prova": [
+        "Todo utensílio doméstico configura art. 34? Não; é necessária a destinação prevista no tipo e a ilicitude da atividade.",
+        "O STJ considera automaticamente hediondo o art. 34? Não; o HC 1.005.146/SP afastou essa classificação."
+      ],
+      "termos": [
+        "maquinário",
+        "destinado à fabricação",
+        "três a dez anos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://scon.stj.jus.br/SCON/GetPDFINFJ?edicao=0882"
+      ],
+      "expected": {
+        "unit_id": "6f958b93-7cf4-56d6-94ab-7535368adfd6",
+        "content_sha256": "e548c4bc33d6f0b92d50ef73266a6902fee3461828c00f4e5fe91f7f5e2244bf",
+        "simples": "Fabricar, adquirir, utilizar, transportar, oferecer, vender, distribuir, entregar a qualquer título, possuir, guardar ou fornecer, ainda que gratuitamente, maquinário, aparelho, instrumento ou qualquer objeto destinado à fabricação, preparação, produção ou transformação de drogas, sem autorização ou em desacordo com determinação legal ou regulamentar. Pena: reclusão de 3 a 10 anos e 1.200 a 2.000 dias-multa.",
+        "pontos": [
+          "Crime de petrechos para o tráfico.",
+          "Objeto destinado à fabricação, preparação, produção ou transformação de drogas.",
+          "Reclusão de 3 a 10 anos e 1.200 a 2.000 dias-multa."
+        ],
+        "atencao": [
+          "O objeto deve ser DESTINADO à produção de drogas."
+        ],
+        "exemplo": "Quem guarda uma prensa destinada à produção de drogas comete o crime do art. 34.",
+        "prova": [
+          "Assertiva que aplica o art. 34 a qualquer objeto, ainda que sem destinação ao preparo de drogas, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 33"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-35",
+      "unit_id": "df04662b-2d2b-5fed-a15e-d0ff1c32079b",
+      "content_sha256": "3a3c668477612e6d8cbd8064e835d5ed53b16260f10d38a3393e5e30557db604",
+      "simples": "Associação de duas ou mais pessoas para os crimes do art. 33, caput e §1º, ou art. 34: três a dez anos e 700 a 1.200 dias-multa. O parágrafo único alcança associação para prática reiterada do financiamento do art. 36.",
+      "pontos": [
+        "STJ exige vínculo estável e permanente: concurso ocasional de pessoas não equivale à associação.",
+        "Lembre: tráfico associado — dois; associação criminosa do CP 288 — três; organização da Lei 12.850 — quatro. Cada figura exige seus próprios elementos; facção ultraviolenta possui definição específica da Lei 15.358/2026."
+      ],
+      "atencao": [
+        "A expressão reiteradamente ou não não elimina estabilidade/permanência. Presença em território de facção não prova associação.",
+        "Tema 1355/STJ, junho/2026: livramento condicional segue a regra especial de dois terços do art. 44, embora o art. 35 não seja hediondo."
+      ],
+      "exemplo": "Duas pessoas ajustam vínculo permanente para traficar: o art. 35 pode incidir conforme a prova. Variação: duas pessoas participam apenas de um episódio ocasional, sem vínculo estável: a contagem não basta para associação.",
+      "prova": [
+        "Dois agentes em episódio ocasional bastam para associação? Não; é necessária estabilidade e permanência.",
+        "A associação é hedionda porque o livramento exige dois terços? Não; o Tema 1355 aplica a regra especial sem atribuir hediondez."
+      ],
+      "termos": [
+        "duas ou mais",
+        "estável e permanente",
+        "prática reiterada"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://scon.stj.jus.br/SCON/GetPDFINFJ?edicao=0892",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/26082022-Falta-de-demonstracao-de-vinculo-permanente-afasta-condenacao-por-associacao-para-o-trafico.aspx"
+      ],
+      "expected": {
+        "unit_id": "df04662b-2d2b-5fed-a15e-d0ff1c32079b",
+        "content_sha256": "3a3c668477612e6d8cbd8064e835d5ed53b16260f10d38a3393e5e30557db604",
+        "simples": "Associação para o tráfico: associarem-se duas ou mais pessoas para o fim de praticar, reiteradamente ou não, qualquer dos crimes previstos nos arts. 33, caput e §1º, e 34. Pena: reclusão de 3 a 10 anos e 700 a 1.200 dias-multa. Nas mesmas penas incorre quem se associa para a prática reiterada do crime de financiamento do tráfico (art. 36).",
+        "pontos": [
+          "Associação de 2 ou mais pessoas.",
+          "Fim de praticar, reiteradamente ou não, os crimes dos arts. 33 e 34.",
+          "Reclusão de 3 a 10 anos e 700 a 1.200 dias-multa.",
+          "Parágrafo único: associação para a prática reiterada do financiamento (art. 36)."
+        ],
+        "atencao": [
+          "Basta a associação de DUAS pessoas (diferente da associação criminosa do CP, que exige 3).",
+          "Exige estabilidade e permanência da associação."
+        ],
+        "exemplo": "Duas pessoas se unem de forma estável para traficar: associação para o tráfico.",
+        "prova": [
+          "Assertiva que exige 3 ou mais pessoas para o art. 35 erra: bastam duas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 36",
+          "Associação criminosa (Código Penal)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-36",
+      "unit_id": "80af4d30-6210-5e08-95d6-c9d50c9bcc9b",
+      "content_sha256": "620389fb4aec5660fe0bf841fe82bf852b98c82d48088d3b13ea840512e9c988",
+      "simples": "Financiar ou custear os crimes do art. 33, caput e §1º, ou do art. 34 tem pena de oito a vinte anos e 1.500 a 4.000 dias-multa.",
+      "pontos": [
+        "Objeto do financiamento: crimes expressamente indicados, não qualquer infração da lei.",
+        "Financiar/custear possui tipo próprio; o art. 40, VII, também exige atenção no enquadramento."
+      ],
+      "atencao": [
+        "Não somar automaticamente art. 36 e majorante de financiamento pelo mesmo fato. Diferenciar a atuação concretamente imputada e impedir dupla punição indevida."
+      ],
+      "exemplo": "Alguém custeia comprovadamente operação ilícita de produção de drogas: analisar art. 36. Variação: ajuda financeira lícita, sem demonstração do vínculo com esses crimes, não preenche o tipo apenas por envolver dinheiro.",
+      "prova": [
+        "O art. 36 exige financiamento de crime indicado na lei? Sim; arts. 33, caput e §1º, ou 34.",
+        "Qual é a faixa de prisão do art. 36? Oito a vinte anos de reclusão."
+      ],
+      "termos": [
+        "financiar ou custear",
+        "oito a vinte anos",
+        "1.500 a 4.000"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "80af4d30-6210-5e08-95d6-c9d50c9bcc9b",
+        "content_sha256": "620389fb4aec5660fe0bf841fe82bf852b98c82d48088d3b13ea840512e9c988",
+        "simples": "Financiar ou custear a prática de qualquer dos crimes previstos nos arts. 33, caput e §1º, e 34. Pena: reclusão de 8 a 20 anos e 1.500 a 4.000 dias-multa.",
+        "pontos": [
+          "Financiar ou custear o tráfico ou os petrechos.",
+          "Reclusão de 8 a 20 anos e 1.500 a 4.000 dias-multa."
+        ],
+        "atencao": [
+          "Pena MAIS ALTA da Lei de Drogas.",
+          "Pune o financiador, ainda que não pratique o tráfico."
+        ],
+        "exemplo": "Quem custeia a compra de uma carga de droga responde pelo art. 36.",
+        "prova": [
+          "Assertiva que fixa a pena do financiamento em 5 a 15 anos erra: é de 8 a 20 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 33",
+          "Art. 40, VII"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-37",
+      "unit_id": "fd46ca26-91b7-52d3-acec-889dd06f9fe6",
+      "content_sha256": "3d659512e93421998d7ad401fb7ceef1d87843ce7b66dbc709f9dfac9f75f5c9",
+      "simples": "Colaborar como informante com grupo, organização ou associação destinados aos crimes do art. 33, caput e §1º, ou art. 34 tem pena de dois a seis anos e 300 a 700 dias-multa.",
+      "pontos": [
+        "Conduta específica: colaboração como informante.",
+        "Finalidade criminosa do grupo deve corresponder aos dispositivos indicados."
+      ],
+      "atencao": [
+        "Não tratar informação prestada às autoridades como colaboração criminosa. Distinguir informante e participação estável na associação a partir da conduta comprovada."
+      ],
+      "exemplo": "Uma pessoa fornece alertas ao grupo para favorecer sua atividade de tráfico: examinar o art. 37. Variação: comunicar fatos à polícia para investigar o tráfico não configura, por isso, colaboração como informante do grupo.",
+      "prova": [
+        "Informar a polícia sobre tráfico é o crime do art. 37? Não; o tipo trata de informar em colaboração com o grupo criminoso.",
+        "A pena do art. 37 é igual à do financiamento? Não; é de dois a seis anos, enquanto o art. 36 prevê oito a vinte."
+      ],
+      "termos": [
+        "como informante",
+        "dois a seis anos",
+        "300 a 700"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "fd46ca26-91b7-52d3-acec-889dd06f9fe6",
+        "content_sha256": "3d659512e93421998d7ad401fb7ceef1d87843ce7b66dbc709f9dfac9f75f5c9",
+        "simples": "Colaborar, como informante, com grupo, organização ou associação destinados à prática de qualquer dos crimes previstos nos arts. 33, caput e §1º, e 34. Pena: reclusão de 2 a 6 anos e 300 a 700 dias-multa.",
+        "pontos": [
+          "Colaborar como informante com grupo destinado ao tráfico.",
+          "Reclusão de 2 a 6 anos e 300 a 700 dias-multa."
+        ],
+        "atencao": [
+          "Crime autônomo, de quem apenas informa (olheiro)."
+        ],
+        "exemplo": "Quem avisa à quadrilha da chegada da polícia comete o crime de colaboração como informante.",
+        "prova": [
+          "Assertiva que absorve o informante pela associação para o tráfico, sem crime autônomo, erra."
+        ],
+        "termos": [
+          {
+            "termo": "Informante",
+            "significado": "Quem colabora passando informações ao grupo do tráfico."
+          }
+        ],
+        "remissoes": [
+          "Art. 35"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-38",
+      "unit_id": "bb367884-09fc-523b-8c57-d51d510237b4",
+      "content_sha256": "ea88332c91dcbed0ccedf19cc0079098980ad86500bcc05bacb4f835f3b08022",
+      "simples": "Prescrever ou ministrar culposamente drogas sem necessidade do paciente, em dose excessiva ou em desacordo com determinação legal ou regulamentar: detenção de seis meses a dois anos e 50 a 200 dias-multa. O juiz comunica a condenação ao Conselho Federal da categoria profissional.",
+      "pontos": [
+        "Tipo expressamente culposo; verificar a conduta profissional descrita.",
+        "Três hipóteses: desnecessidade, excesso ou desconformidade normativa.",
+        "Comunicação é da condenação, ao Conselho Federal respectivo."
+      ],
+      "atencao": [
+        "Não atribuir automaticamente dolo ou tráfico a todo erro de prescrição. O enquadramento depende dos elementos comprovados."
+      ],
+      "exemplo": "Profissional, por negligência, ministra dose excessiva de droga controlada ao paciente: examinar art. 38. Variação: uma prescrição necessária e regular não vira crime só porque o medicamento é controlado.",
+      "prova": [
+        "O art. 38 exige dolo? Não; descreve conduta culposa.",
+        "A comunicação é ao Conselho Federal da categoria? Sim; a lei prevê comunicação da condenação."
+      ],
+      "termos": [
+        "culposamente",
+        "sem que delas necessite",
+        "Conselho Federal"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "bb367884-09fc-523b-8c57-d51d510237b4",
+        "content_sha256": "ea88332c91dcbed0ccedf19cc0079098980ad86500bcc05bacb4f835f3b08022",
+        "simples": "Prescrever ou ministrar, culposamente, drogas, sem que delas necessite o paciente, ou fazê-lo em doses excessivas ou em desacordo com determinação legal ou regulamentar. Pena: detenção de 6 meses a 2 anos e 50 a 200 dias-multa. O juiz comunicará a condenação ao Conselho Federal da categoria profissional a que pertença o agente.",
+        "pontos": [
+          "Prescrever ou ministrar CULPOSAMENTE drogas.",
+          "Detenção de 6 meses a 2 anos e 50 a 200 dias-multa.",
+          "Condenação comunicada ao Conselho Federal da categoria profissional."
+        ],
+        "atencao": [
+          "Único crime CULPOSO da Lei de Drogas.",
+          "Pena de DETENÇÃO."
+        ],
+        "exemplo": "Médico prescreve dose excessiva de substância controlada por imprudência.",
+        "prova": [
+          "Assertiva que torna dolosa a conduta do art. 38 erra: o crime é culposo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 33"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-39",
+      "unit_id": "e64a4a32-0142-50c0-9ae0-16cbe24d5543",
+      "content_sha256": "5313beff1deaf1d9efe45dd9dd0b695e0d61f4e5fff5211545e7cad604a0cb85",
+      "simples": "Conduzir embarcação ou aeronave após consumir drogas e expor a dano potencial a integridade física de outras pessoas: detenção de seis meses a três anos, apreensão do veículo, cassação da habilitação ou proibição de obtê-la pelo mesmo prazo da prisão aplicada, e 200 a 400 dias-multa. No transporte coletivo de passageiros: prisão de quatro a seis anos e 400 a 600 dias-multa, além das outras penas.",
+      "pontos": [
+        "Objeto: embarcação ou aeronave.",
+        "Exige exposição de outras pessoas a dano potencial; não exige dano consumado.",
+        "Transporte coletivo tem pena específica mais elevada."
+      ],
+      "atencao": [
+        "Não substituir este tipo pelo crime de condução de veículo automotor do CTB. A remissão a apreensão neste artigo penal não é a antiga penalidade administrativa de apreensão do CTB."
+      ],
+      "exemplo": "Piloto dirige aeronave após consumir droga e expõe terceiros a risco: analisar art. 39. Variação: se a aeronave transporta coletivamente passageiros, observar a pena diferenciada do parágrafo único.",
+      "prova": [
+        "É indispensável acidente com lesão efetiva? Não; o tipo exige dano potencial à integridade de terceiros.",
+        "O artigo se refere indistintamente a carros? Não; descreve embarcação ou aeronave."
+      ],
+      "termos": [
+        "embarcação ou aeronave",
+        "dano potencial",
+        "transporte coletivo"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "e64a4a32-0142-50c0-9ae0-16cbe24d5543",
+        "content_sha256": "5313beff1deaf1d9efe45dd9dd0b695e0d61f4e5fff5211545e7cad604a0cb85",
+        "simples": "Conduzir embarcação ou aeronave após o consumo de drogas, expondo a dano potencial a incolumidade de outrem. Pena: detenção de 6 meses a 3 anos, além da apreensão do veículo, cassação da habilitação ou proibição de obtê-la, pelo mesmo prazo da pena privativa de liberdade, e 200 a 400 dias-multa. Se o veículo for de transporte coletivo de passageiros, as penas de prisão e multa serão de 4 a 6 anos e de 400 a 600 dias-multa.",
+        "pontos": [
+          "Conduzir embarcação ou aeronave após consumir drogas.",
+          "Exige exposição de outrem a dano potencial (perigo concreto).",
+          "Detenção de 6 meses a 3 anos, apreensão do veículo e cassação da habilitação.",
+          "Transporte coletivo: 4 a 6 anos."
+        ],
+        "atencao": [
+          "Aplica-se a embarcação e aeronave; para veículos terrestres vale o Código de Trânsito."
+        ],
+        "exemplo": "Piloto conduz aeronave após consumir droga, expondo passageiros a perigo.",
+        "prova": [
+          "Assertiva que aplica o art. 39 à condução de automóvel erra: trata de embarcação e aeronave."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código de Trânsito Brasileiro"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-40",
+      "unit_id": "eee3d5a8-4cf5-50c5-8160-2036538a929d",
+      "content_sha256": "3aa81b71060ce7fe141b362c0bd560e99a2a75b08655868fca17bcd5283d75b4",
+      "simples": "As penas dos arts. 33 a 37 aumentam de um sexto a dois terços nas hipóteses de transnacionalidade, abuso de função ou dever, determinados locais, violência ou intimidação, tráfico interestadual, envolvimento de criança/adolescente ou pessoa vulnerável e financiamento/custeio.",
+      "pontos": [
+        "Incisos I a VII: identificar qual circunstância foi comprovada, sem transferir a majorante aos arts. 38 ou 39.",
+        "O inciso III enumera locais e contextos, incluindo prisões, escolas, hospitais e transportes públicos; conferir o nexo do fato, não apenas o rótulo do local.",
+        "Violência, grave ameaça, arma de fogo ou intimidação difusa/coletiva aparecem no inciso IV."
+      ],
+      "atencao": [
+        "Súmulas 587 e 607/STJ: a transposição efetiva de divisa estadual ou fronteira internacional não é indispensável quando demonstrada a destinação correspondente.",
+        "Não confundir esta fração com o dobro do novo art. 40-A; o enquadramento exige os elementos de cada regra."
+      ],
+      "exemplo": "Droga destinada comprovadamente a outro estado é apreendida antes da divisa: não afasta, só por isso, o inciso V. Variação: a localização próxima da divisa, sem prova da destinação interestadual, não substitui esse requisito.",
+      "prova": [
+        "É indispensável cruzar efetivamente a divisa para a majorante interestadual? Não; a Súmula 587 exige prova da destinação, não transposição consumada.",
+        "As majorantes do art. 40 alcançam automaticamente o art. 39? Não; o caput limita-se aos arts. 33 a 37."
+      ],
+      "termos": [
+        "um sexto a dois terços",
+        "arts. 33 a 37",
+        "destinação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.stj.jus.br/docs_internet/jurisprudencia/tematica/download/SU/Sumulas/SumulasSTJ.pdf"
+      ],
+      "expected": {
+        "unit_id": "eee3d5a8-4cf5-50c5-8160-2036538a929d",
+        "content_sha256": "3aa81b71060ce7fe141b362c0bd560e99a2a75b08655868fca17bcd5283d75b4",
+        "simples": "As penas previstas nos arts. 33 a 37 são aumentadas de um sexto a dois terços se a natureza, a procedência da substância e as circunstâncias evidenciarem a transnacionalidade do delito; se o agente praticar o crime prevalecendo-se de função pública ou no desempenho de missão de educação, poder familiar, guarda ou vigilância; se a infração for cometida nas dependências ou imediações de estabelecimentos prisionais, de ensino, hospitalares, de entidades estudantis, sociais, culturais, recreativas, esportivas ou beneficentes, de locais de trabalho coletivo, de recintos de espetáculos, de serviços de tratamento, de unidades militares ou policiais ou em transportes públicos; se o crime for praticado com violência, grave ameaça, emprego de arma de fogo ou intimidação difusa ou coletiva; se caracterizado o tráfico interestadual; se envolver ou visar a atingir criança ou adolescente ou quem tenha diminuída a capacidade de entendimento; e se o agente financiar ou custear o crime, entre outras hipóteses.",
+        "pontos": [
+          "Aumento de 1/6 a 2/3 para os arts. 33 a 37.",
+          "I: transnacionalidade.",
+          "II: função pública ou missão de educação, poder familiar, guarda ou vigilância.",
+          "III: proximidade de escolas, hospitais, presídios, transporte público etc.",
+          "IV: violência, grave ameaça, arma de fogo.",
+          "V: tráfico interestadual.",
+          "VI: criança, adolescente ou pessoa com capacidade diminuída.",
+          "VII: financiamento ou custeio."
+        ],
+        "atencao": [
+          "Não se aplica ao art. 38 nem ao art. 39.",
+          "Súmula do STJ: para o tráfico interestadual basta a destinação a outro Estado, sem exigir a transposição efetiva da divisa."
+        ],
+        "exemplo": "Venda de droga na porta de uma escola atrai o aumento do art. 40, III.",
+        "prova": [
+          "Assertiva que aplica as causas de aumento do art. 40 ao porte para consumo pessoal erra: elas valem para os arts. 33 a 37."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 33",
+          "Art. 40-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-40-a",
+      "unit_id": "fd15f1db-dc41-5d17-95cc-9fd4966a1658",
+      "content_sha256": "cbedfbe669ef37d5ddf8e6db72cafec9ab40f94b416af0d9b14ac35884914439",
+      "simples": "Incluído pela Lei 15.358/2026, determina o dobro das penas dos arts. 33 a 37 quando praticados por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada, no contexto da atuação ou para realizar as condutas do art. 2º da lei antifacção. O parágrafo único prevê concurso material, conforme CP 69, em crime praticado com emprego de arma de fogo, independentemente do vínculo direto da arma com a mercancia.",
+      "pontos": [
+        "Exigir vínculo pessoal e contexto/finalidade legal: o nome facção não basta.",
+        "Dobro das penas não se confunde com aumento de um sexto a dois terços do art. 40.",
+        "Concurso material segue soma das penas dos crimes, não criação de tipo de arma inexistente."
+      ],
+      "atencao": [
+        "Atualização de 2026: regra penal mais gravosa não retroage. Conferir tempo do fato, definição legal e decisões constitucionais aplicáveis.",
+        "Não duplicar penas de toda associação de duas pessoas nem presumir uso de arma por pertencer ao grupo."
+      ],
+      "exemplo": "Crime de tráfico posterior à vigência, praticado por integrante de grupo legalmente caracterizado e no contexto exigido, deve ser examinado à luz do art. 40-A. Variação: associação comum de duas pessoas, sem os requisitos específicos, não recebe automaticamente o dobro.",
+      "prova": [
+        "Qualquer associação de duas pessoas gera o dobro? Não; o art. 40-A exige a qualidade e o contexto descritos.",
+        "A regra mais gravosa de 2026 retroage para fato anterior? Não; aplica-se a garantia de irretroatividade penal desfavorável."
+      ],
+      "termos": [
+        "em dobro",
+        "no contexto da atuação",
+        "concurso material"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ],
+      "expected": {
+        "unit_id": "fd15f1db-dc41-5d17-95cc-9fd4966a1658",
+        "content_sha256": "cbedfbe669ef37d5ddf8e6db72cafec9ab40f94b416af0d9b14ac35884914439",
+        "simples": "As penas previstas nos arts. 33 a 37 serão aplicadas em dobro se o crime tiver sido praticado por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada, no contexto da atuação ou para a consecução das condutas previstas no art. 2º da lei que institui o marco legal do combate ao crime organizado no Brasil. Aplica-se a pena do concurso material do art. 69 do Código Penal se o crime tiver sido praticado com o emprego de arma de fogo, independentemente de o seu uso estar diretamente ligado ao comércio ilícito de entorpecentes ou de o artefato ter sido utilizado para assegurar o sucesso da mercancia.",
+        "pontos": [
+          "Penas dos arts. 33 a 37 em DOBRO para integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada.",
+          "Emprego de arma de fogo: concurso material (art. 69 do CP).",
+          "Independe de o uso da arma estar ligado ao comércio da droga."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído pela Lei nº 15.358, de 2026.",
+          "Aplicação das penas em DOBRO, e não em fração."
+        ],
+        "exemplo": "Miliciano que trafica drogas tem as penas dobradas.",
+        "prova": [
+          "Assertiva que fixa o aumento do art. 40-A em um sexto a dois terços erra: as penas são aplicadas em dobro."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 40"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-41",
+      "unit_id": "41b5646c-7149-53d9-89fb-9c18d11c6462",
+      "content_sha256": "4a596cb9da54598740f7c798ada0bf2955073ed132249abde9c7fb42dbe92ff6",
+      "simples": "O indiciado ou acusado que colaborar voluntariamente com investigação e processo, na identificação de coautores/partícipes e recuperação total ou parcial do produto do crime, pode ter a pena reduzida de um terço a dois terços em caso de condenação. A interpretação dos resultados da colaboração exige atenção aos precedentes.",
+      "pontos": [
+        "Colaboração voluntária e eficaz; mera confissão não é equivalente.",
+        "Fração de um terço a dois terços: diferente do mínimo de um sexto do art. 33, §4º."
+      ],
+      "atencao": [
+        "STJ, Informativo 868, setembro/outubro de 2025, exige identificação e apreensão cumulativas. O HC 663.265/SP, Informativo 789/2023, havia admitido alternatividade; há divergência histórica que deve aparecer ao aluno.",
+        "Acórdão publicado em 13/02/2026 (registro 202504206844) reafirma a cumulatividade. Não apresentar a orientação antiga como regra atual uniforme ou prometer redução automática por indicar droga."
+      ],
+      "exemplo": "Réu apenas admite possuir a droga apreendida: isso não demonstra os resultados da colaboração. Variação: a colaboração identifica outros envolvidos e permite recuperar drogas; verificar eficácia, voluntariedade e o precedente aplicável para a redução.",
+      "prova": [
+        "A fração mínima do art. 41 é um sexto? Não; é um terço.",
+        "Mera confissão assegura automaticamente a colaboração premiada? Não; são necessários os resultados e requisitos próprios, observada a jurisprudência indicada."
+      ],
+      "termos": [
+        "voluntariamente",
+        "um terço a dois terços",
+        "identificação",
+        "recuperação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://scon.stj.jus.br/SCON/GetPDFINFJ?edicao=0868",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=%40CNOT%3D020248",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=13%2F02%2F2026&num_registro=202504206844"
+      ],
+      "expected": {
+        "unit_id": "41b5646c-7149-53d9-89fb-9c18d11c6462",
+        "content_sha256": "4a596cb9da54598740f7c798ada0bf2955073ed132249abde9c7fb42dbe92ff6",
+        "simples": "O indiciado ou acusado que colaborar voluntariamente com a investigação policial e o processo criminal na identificação dos demais coautores ou partícipes do crime e na recuperação total ou parcial do produto do crime, no caso de condenação, terá pena reduzida de um terço a dois terços.",
+        "pontos": [
+          "Colaboração voluntária na identificação de coautores ou partícipes.",
+          "Ou na recuperação do produto do crime.",
+          "Redução de 1/3 a 2/3 da pena, em caso de condenação."
+        ],
+        "atencao": [
+          "A colaboração deve ser VOLUNTÁRIA e eficaz."
+        ],
+        "exemplo": "O acusado aponta os demais integrantes do grupo e ajuda a recuperar a droga: a pena é reduzida.",
+        "prova": [
+          "Assertiva que torna a delação premiada do art. 41 obrigatória para o juiz reduzir a pena erra: exige colaboração voluntária e eficaz."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 33"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-42",
+      "unit_id": "9266c225-9247-5ce4-829a-a0a45e127a56",
+      "content_sha256": "636f38429726ebbedfe35fb65ae3a40c3b1afab2c562657f06fb9b335e68ea96",
+      "simples": "Na fixação das penas, natureza e quantidade da droga, personalidade e conduta social têm preponderância sobre as circunstâncias do CP 59. A aplicação não autoriza repetir indevidamente a mesma valoração.",
+      "pontos": [
+        "Preponderância significa peso especial, não dispensa de fundamentação.",
+        "Temas 1154/1241/STJ, setembro/2026: natureza e quantidade são avaliadas conjuntamente e preferencialmente na terceira fase para modular o redutor, quando ele incide."
+      ],
+      "atencao": [
+        "Não usar os mesmos dados para aumentar a pena-base e diminuir a fração de redução. Distinguir essa duplicidade da demonstração concreta de dedicação criminosa para afastar o privilégio, tratada de maneira própria no julgamento de 2026."
+      ],
+      "exemplo": "Sentença usa a mesma quantidade para elevar a pena-base e também reduzir a fração do privilégio: revisar a duplicidade. Variação: a fundamentação demonstra dedicação criminosa e afasta o privilégio; não tratar essa situação como idêntica à modulação da fração.",
+      "prova": [
+        "Natureza e quantidade dispensam fundamentação? Não; a decisão precisa justificar concretamente a valoração.",
+        "Modular a fração e afastar a minorante são a mesma operação? Não; têm pressupostos e consequências distintos."
+      ],
+      "termos": [
+        "preponderância",
+        "natureza e quantidade",
+        "fundamentação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://scon.stj.jus.br/SCON/GetPDFINFJ?edicao=0901"
+      ],
+      "expected": {
+        "unit_id": "9266c225-9247-5ce4-829a-a0a45e127a56",
+        "content_sha256": "636f38429726ebbedfe35fb65ae3a40c3b1afab2c562657f06fb9b335e68ea96",
+        "simples": "O juiz, na fixação das penas, considerará, com preponderância sobre o previsto no art. 59 do Código Penal, a natureza e a quantidade da substância ou do produto, a personalidade e a conduta social do agente.",
+        "pontos": [
+          "Natureza e quantidade da substância.",
+          "Personalidade e conduta social do agente.",
+          "Preponderam sobre o art. 59 do CP."
+        ],
+        "atencao": [
+          "Critérios com PREPONDERÂNCIA sobre o art. 59 do Código Penal."
+        ],
+        "exemplo": "A grande quantidade de crack apreendida pesa na fixação da pena-base.",
+        "prova": [
+          "Assertiva que dá ao art. 59 do CP preponderância sobre o art. 42 da Lei de Drogas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 59 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-43",
+      "unit_id": "0ce7fb8f-c4d6-5e9f-a188-b1b5c6b890a9",
+      "content_sha256": "cb2818d4fd61475752c8f57023b9981864baf243e917931ca66db717f1e491c9",
+      "simples": "Nas multas dos arts. 33 a 39, o juiz usa os critérios do art. 42 para definir os dias-multa. Cada dia vale de um trinta avos até cinco vezes o maior salário mínimo, conforme as condições econômicas. Se insuficiente mesmo no máximo, pode aumentar a multa até o décuplo; no concurso, as multas são cumuladas.",
+      "pontos": [
+        "Número de dias segue também a faixa do tipo penal respectivo.",
+        "Valor unitário considera capacidade econômica; limite comum de cinco salários mínimos.",
+        "Aumento até dez vezes exige insuficiência diante da situação econômica."
+      ],
+      "atencao": [
+        "Não importar o teto de três salários mínimos do art. 29. A previsão econômica de aumento não significa multiplicar automaticamente qualquer multa por dez."
+      ],
+      "exemplo": "Condenado por tráfico recebe dias-multa dentro da faixa do art. 33 e valor unitário conforme renda. Variação: grande capacidade econômica torna insuficiente o máximo; o juiz deve fundamentar eventual aumento até o décuplo.",
+      "prova": [
+        "O teto unitário comum é de três salários mínimos? Não; no art. 43 é de cinco.",
+        "No concurso de crimes as multas se anulam? Não; são aplicadas cumulativamente."
+      ],
+      "termos": [
+        "um trinta avos",
+        "cinco vezes",
+        "até o décuplo",
+        "cumulativamente"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "0ce7fb8f-c4d6-5e9f-a188-b1b5c6b890a9",
+        "content_sha256": "cb2818d4fd61475752c8f57023b9981864baf243e917931ca66db717f1e491c9",
+        "simples": "Na fixação da multa a que se referem os arts. 33 a 39, o juiz, atendendo ao que dispõe o art. 42, determinará o número de dias-multa, atribuindo a cada um, segundo as condições econômicas dos acusados, valor não inferior a um trinta avos nem superior a 5 vezes o maior salário mínimo. As multas, que em caso de concurso de crimes serão impostas sempre cumulativamente, podem ser aumentadas até o décuplo se, em virtude da situação econômica do acusado, considerá-las o juiz ineficazes, ainda que aplicadas no máximo.",
+        "pontos": [
+          "Dia-multa: de um trinta avos a 5 vezes o maior salário mínimo.",
+          "Concurso de crimes: multas sempre cumuladas.",
+          "Podem ser aumentadas até o décuplo se ineficazes."
+        ],
+        "atencao": [
+          "Aumento até o DÉCUPLO."
+        ],
+        "exemplo": "Réu muito rico tem a multa aumentada até o décuplo por ser considerada ineficaz.",
+        "prova": [
+          "Assertiva que limita o dia-multa a 3 vezes o maior salário mínimo, no art. 43, erra: é de até 5 vezes."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 42"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-44",
+      "unit_id": "bd4e2095-f76f-5f06-96ef-4cfb4057074a",
+      "content_sha256": "8351aef4c2097c711b6d1b02d961fb1ffdf1c87f20ed0a5c47dcc4950fa3ff41",
+      "simples": "O caput conserva restrições para os arts. 33, caput e §1º, e 34 a 37. Sua leitura atual precisa separar inafiançabilidade, custódia cautelar, penas alternativas, natureza hedionda e livramento. O parágrafo único exige dois terços para o livramento e veda o benefício ao reincidente específico.",
+      "pontos": [
+        "STF afastou a proibição absoluta de liberdade provisória e de conversão em restritivas de direitos; cada providência conserva seus requisitos.",
+        "Tema 1355/STJ, junho/2026: dois terços também para associação do art. 35, sem torná-la hedionda.",
+        "SV 63/STF: tráfico privilegiado não é hediondo; não presumir proibição de indulto apenas pela palavra tráfico."
+      ],
+      "atencao": [
+        "Inafiançabilidade não equivale a prisão obrigatória: liberdade sem fiança pode ser juridicamente possível.",
+        "O art. 34 também não é hediondo segundo o STJ em março/2026. Não importar a lista residual do art. 44 como lista de crimes hediondos."
+      ],
+      "exemplo": "Uma decisão mantém prisão só porque o crime é inafiançável: a cautelar exige fundamento próprio. Variação: condenado pelo art. 35 busca livramento; aplicar a fração especial do Tema 1355 sem chamar a associação de hedionda.",
+      "prova": [
+        "Inafiançabilidade torna obrigatória toda prisão cautelar? Não; exige análise dos requisitos próprios.",
+        "Art. 35 vira hediondo por exigir dois terços no livramento? Não; a regra especial não altera sua classificação."
+      ],
+      "termos": [
+        "inafiançáveis",
+        "dois terços",
+        "reincidente específico"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+        "https://scon.stj.jus.br/SCON/GetPDFINFJ?edicao=0892",
+        "https://scon.stj.jus.br/SCON/GetPDFINFJ?edicao=0882",
+        "https://noticias.stf.jus.br/postsnoticias/stf-reafirma-inconstitucionalidade-da-regra-que-proibe-liberdade-provisoria-a-presos-por-trafico-de-drogas/",
+        "https://noticias.stf.jus.br/postsnoticias/stf-aprova-sumula-vinculante-que-afasta-carater-hediondo-do-trafico-privilegiado/"
+      ],
+      "expected": {
+        "unit_id": "bd4e2095-f76f-5f06-96ef-4cfb4057074a",
+        "content_sha256": "8351aef4c2097c711b6d1b02d961fb1ffdf1c87f20ed0a5c47dcc4950fa3ff41",
+        "simples": "Os crimes previstos nos arts. 33, caput e §1º, e 34 a 37 são inafiançáveis e insuscetíveis de sursis, graça, indulto, anistia e liberdade provisória, vedada a conversão de suas penas em restritivas de direitos. Nos crimes previstos no caput, dar-se-á o livramento condicional após o cumprimento de dois terços da pena, vedada sua concessão ao reincidente específico.",
+        "pontos": [
+          "Inafiançáveis e insuscetíveis de sursis, graça, indulto, anistia e liberdade provisória.",
+          "Vedada a conversão em penas restritivas de direitos.",
+          "Livramento condicional após 2/3 da pena, vedado ao reincidente específico."
+        ],
+        "atencao": [
+          "O STF declarou inconstitucionais a vedação de liberdade provisória e a de conversão em restritivas de direitos (a conversão é possível no tráfico privilegiado).",
+          "Livramento: 2/3, e não a fração do Código Penal."
+        ],
+        "exemplo": "Condenado por tráfico só pode pedir livramento condicional após cumprir dois terços da pena, se não for reincidente específico.",
+        "prova": [
+          "Assertiva que fixa o livramento condicional do tráfico em metade da pena erra: são dois terços."
+        ],
+        "termos": [
+          {
+            "termo": "Reincidente específico",
+            "significado": "Quem reincide em crime da mesma natureza."
+          }
+        ],
+        "remissoes": [
+          "Art. 33",
+          "Lei dos Crimes Hediondos"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-45",
+      "unit_id": "c6bfde3b-6363-571c-a723-8ae3df7ec632",
+      "content_sha256": "2870ef0e154a4e4676f7b2ac1d8ee816a54c5e658775504ca991ef4976d52bd6",
+      "simples": "Há isenção de pena quando, por dependência ou efeito de droga decorrente de caso fortuito ou força maior, o agente era inteiramente incapaz de compreender a ilicitude ou de agir conforme essa compreensão ao tempo do fato, qualquer que seja a infração. Na absolvição, o juiz pode determinar encaminhamento para tratamento médico adequado com base em avaliação pericial.",
+      "pontos": [
+        "Incapacidade total no momento da ação ou omissão.",
+        "Nexo com as causas qualificadas do artigo; não basta uso ou diagnóstico isolado.",
+        "Tratamento na absolvição depende de avaliação pericial e de adequação."
+      ],
+      "atencao": [
+        "Consumo voluntário não garante isenção. Não confundir dependência, inimputabilidade e acolhimento voluntário em comunidade terapêutica."
+      ],
+      "exemplo": "Perícia demonstra incapacidade total, ligada à dependência, no momento do crime: analisar isenção. Variação: a pessoa apenas havia consumido droga e compreendia a ilicitude; não se aplica automaticamente o art. 45.",
+      "prova": [
+        "Dependência, isoladamente, prova incapacidade total? Não; o nexo e a incapacidade no tempo do fato precisam ser demonstrados.",
+        "A isenção é restrita aos crimes desta lei? Não; o texto refere-se a qualquer infração penal nas condições previstas."
+      ],
+      "termos": [
+        "inteiramente incapaz",
+        "ao tempo da ação ou da omissão",
+        "avaliação pericial"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "c6bfde3b-6363-571c-a723-8ae3df7ec632",
+        "content_sha256": "2870ef0e154a4e4676f7b2ac1d8ee816a54c5e658775504ca991ef4976d52bd6",
+        "simples": "É isento de pena o agente que, em razão da dependência, ou sob o efeito, proveniente de caso fortuito ou força maior, de droga, era, ao tempo da ação ou da omissão, qualquer que tenha sido a infração penal praticada, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento. Quando absolver o agente, reconhecendo, por força pericial, essas condições, o juiz poderá determinar, na sentença, o seu encaminhamento para tratamento médico adequado.",
+        "pontos": [
+          "Isenção de pena por dependência ou efeito de droga (caso fortuito ou força maior).",
+          "Exige incapacidade TOTAL de entender o ilícito ou de se determinar.",
+          "Absolvido: possível encaminhamento a tratamento médico."
+        ],
+        "atencao": [
+          "Aplica-se a QUALQUER infração penal, e não só aos crimes da Lei de Drogas.",
+          "Exige reconhecimento por perícia."
+        ],
+        "exemplo": "Dependente químico totalmente incapaz de entender o caráter ilícito do furto praticado é isento de pena.",
+        "prova": [
+          "Assertiva que limita o art. 45 aos crimes da Lei de Drogas erra: vale para qualquer infração penal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 46",
+          "Art. 26 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-46",
+      "unit_id": "d8a3cff1-7b4c-5f0b-9a74-25d3d5358f4f",
+      "content_sha256": "13475849cf37f7a1ec7b02c636f30bb5f0c39dd2c97bfa27dad502b2f97f3f6f",
+      "simples": "Quando, pelas circunstâncias qualificadas do art. 45, o agente não tinha plena capacidade de compreender a ilicitude ou de se determinar, as penas podem ser reduzidas de um terço a dois terços.",
+      "pontos": [
+        "Incapacidade parcial, não total.",
+        "Fração de um terço a dois terços; conservar nexo com as circunstâncias do art. 45."
+      ],
+      "atencao": [
+        "Não atribuir redução a todo usuário nem confundir esta fração com um sexto a dois terços do tráfico privilegiado."
+      ],
+      "exemplo": "Perícia aponta capacidade parcialmente comprometida pela causa descrita no art. 45: considerar redução do art. 46. Variação: incapacidade integral, comprovada nos mesmos pressupostos, remete à isenção do art. 45.",
+      "prova": [
+        "Incapacidade parcial leva automaticamente à isenção do art. 45? Não; o art. 46 prevê redução.",
+        "A redução começa em um terço? Sim; não em um sexto."
+      ],
+      "termos": [
+        "plena capacidade",
+        "um terço a dois terços"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "d8a3cff1-7b4c-5f0b-9a74-25d3d5358f4f",
+        "content_sha256": "13475849cf37f7a1ec7b02c636f30bb5f0c39dd2c97bfa27dad502b2f97f3f6f",
+        "simples": "As penas podem ser reduzidas de um terço a dois terços se, por força das circunstâncias previstas no art. 45, o agente não possuía, ao tempo da ação ou da omissão, a plena capacidade de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.",
+        "pontos": [
+          "Redução de 1/3 a 2/3 da pena.",
+          "Capacidade apenas REDUZIDA (não plena) por dependência ou efeito de droga."
+        ],
+        "atencao": [
+          "Art. 45: isenção (incapacidade total). Art. 46: redução (capacidade parcial)."
+        ],
+        "exemplo": "O dependente com capacidade parcialmente reduzida tem a pena diminuída.",
+        "prova": [
+          "Assertiva que isenta de pena o agente com capacidade apenas reduzida erra: a pena é reduzida."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 45"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    },
+    {
+      "course_slug": "drogas",
+      "course_id": "fec461e5-6887-53d7-89ae-b5a983381f5a",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-47",
+      "unit_id": "27e7819f-db94-5806-8170-1093d2a05dfc",
+      "content_sha256": "1a79683e0009be1aa6b7238b027cbe7fb9f8620a067a023dfa5ca06fc8617198",
+      "simples": "Na sentença condenatória, avaliação por profissional de saúde competente pode indicar necessidade de tratamento. O juiz determina sua realização, observando as disposições de atenção à saúde da própria lei.",
+      "pontos": [
+        "Avaliação profissional: não presumir necessidade apenas pela condenação.",
+        "Condenação e tratamento podem coexistir.",
+        "Atenção clínica e forma de atendimento devem respeitar os requisitos próprios, inclusive art. 23-A."
+      ],
+      "atencao": [
+        "Tratamento adequado não significa internação automática de todo condenado. Internação tem requisitos específicos e prioridade do atendimento ambulatorial."
+      ],
+      "exemplo": "Avaliação competente aponta que condenado necessita tratamento: a sentença deve determinar atendimento adequado. Variação: inexistindo indicação de internação e presentes condições para ambulatório, não trocar tratamento por internação compulsória genérica.",
+      "prova": [
+        "Condenação por si determina internação de todo usuário? Não; avaliar necessidade e requisitos da modalidade.",
+        "O tratamento pode constar da sentença condenatória? Sim; quando a avaliação competente indica sua necessidade."
+      ],
+      "termos": [
+        "profissional de saúde",
+        "sentença condenatória",
+        "tratamento adequado"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+      ],
+      "expected": {
+        "unit_id": "27e7819f-db94-5806-8170-1093d2a05dfc",
+        "content_sha256": "1a79683e0009be1aa6b7238b027cbe7fb9f8620a067a023dfa5ca06fc8617198",
+        "simples": "Na sentença condenatória, o juiz, com base em avaliação que ateste a necessidade de encaminhamento do agente para tratamento, realizada por profissional de saúde com competência específica na forma da lei, determinará que a tal se proceda, observado o disposto no art. 26 da Lei.",
+        "pontos": [
+          "Sentença condenatória pode determinar o encaminhamento a tratamento.",
+          "Exige avaliação por profissional de saúde com competência específica.",
+          "Observa o art. 26."
+        ],
+        "atencao": [
+          "Depende de avaliação profissional que ateste a NECESSIDADE de tratamento."
+        ],
+        "exemplo": "Condenado dependente, avaliado por profissional de saúde, é encaminhado ao tratamento na sentença.",
+        "prova": [
+          "Assertiva que dispensa a avaliação profissional para determinar o tratamento na sentença erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 26"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:14:23.911535+00:00",
+        "updated_at": "2026-10-11T14:14:23.911535+00:00"
+      }
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 {
   "current_units": 3511,
-  "current_review_metadata": 879,
-  "pending_current_review_metadata": 2632,
-  "checked_at": "2026-10-12T03:39:26.665Z",
-  "note": "66 novas revisões confirmadas: 41 Antifacção e 25 Drogas. Metadados de revisão não certificam cada detalhe ou toda jurisprudência. Alertas do RE 635659 e do art. 44 de Drogas não contam como aprovação editorial desses artigos.",
+  "current_review_metadata": 901,
+  "pending_current_review_metadata": 2610,
+  "checked_at": "2026-10-12T16:31:44.376Z",
+  "note": "22 novas revisões do bloco penal da Lei de Drogas confirmadas por leitura integral; metadados não certificam toda a jurisprudência nem os demais artigos pendentes.",
   "courses": [
     {
       "slug": "cin",
@@ -254,8 +254,8 @@
     {
       "slug": "drogas",
       "current": 84,
-      "review_metadata": 25,
-      "pending": 59
+      "review_metadata": 47,
+      "pending": 37
     }
   ]
 }

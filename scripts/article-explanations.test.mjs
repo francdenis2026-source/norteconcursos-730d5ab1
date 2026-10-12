@@ -319,3 +319,19 @@ test('antifaction comparison uses thresholds with material elements rather than 
  assert.equal(buildExplanationQuiz(r.prova,r.unit_id).length,2);
  for(const row of p.units){assert.ok(row.expected);assert.ok(explanationExample(row.exemplo).variation);for(const q of row.prova)assert.ok(explanationPractice(q));}
 });
+
+test('drug criminal review guards cannabis, sentencing, cooperation and impairment distinctions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-drug-crimes-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,22);assert.equal(p.laws[0].course_current_units,84);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-28').atencao.join(' '),/40 g.*seis plantas.*presunção relativa/);
+ assert.match(get('art-33').atencao.join(' '),/1154.*1241.*excepcionalmente expressiva/);
+ assert.match(get('art-34').atencao.join(' '),/2026.*não é hediondo/);
+ assert.match(get('art-35').atencao.join(' '),/1355.*2026.*não seja hediondo/);
+ assert.match(get('art-40-a').atencao.join(' '),/mais gravosa não retroage/);
+ assert.match(get('art-41').atencao.join(' '),/2025.*cumulativas.*2023.*alternatividade/);
+ assert.match(get('art-46').simples,/parcial|não tinha plena capacidade/);
+ assert.match(get('art-47').atencao.join(' '),/não significa internação automática/);
+ for(const key of ['art-28','art-33','art-41','art-42','art-44']) assert.equal(legalStudyCaveat('drogas',key).literalPractice,false);
+});
