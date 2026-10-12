@@ -1,6 +1,6 @@
 import React from "react";
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
-import { CheckCircle2, ChevronLeft, ChevronRight, GraduationCap, Maximize2, X } from "lucide-react";
+import { CheckCircle2, ChevronLeft, ChevronRight, GraduationCap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,6 +8,8 @@ import { PageHero } from "@/components/dashboard/PageHero";
 import { GlossaryText } from "@/components/library/GlossaryText";
 import { TRACKS, type Track, type TrackLesson } from "@/data/tracks";
 import { cn } from "@/lib/utils";
+import { useFocusMode } from "@/hooks/useFocusMode";
+import { toolsAreaFor } from "@/components/study/StudyTools";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 
@@ -156,24 +158,12 @@ function TracksPage() {
     setDone(next);
     saveDone(track.slug, next);
   };
-  // Modo foco: a aula ocupa a tela inteira, sem menu, topo nem lista de aulas. Esc sai.
-  const [focus, setFocus] = React.useState(false);
-  React.useEffect(() => {
-    if (!focus) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setFocus(false);
-    window.addEventListener("keydown", onKey);
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prev;
-    };
-  }, [focus]);
+  const fm = useFocusMode();
   const groups = [...new Set(track.lessons.map((x) => x.group))];
   const pct = Math.round((done.length / track.lessons.length) * 100);
   const lessonView = (
     <Lesson
-      focus={focus}
+      focus={fm.focus}
       trackSlug={track.slug}
       key={lesson.id}
       lesson={lesson}
@@ -183,46 +173,38 @@ function TracksPage() {
       {...(index > 0 ? { onPrev: () => go(index - 1) } : {})}
     />
   );
-  if (focus) {
-    return (
-      <div className="fixed inset-0 z-[60] flex flex-col bg-background" role="dialog" aria-label="Modo foco">
-        <header className="flex items-center gap-3 border-b px-4 py-2 sm:px-6">
-          <p className="min-w-0 flex-1 truncate text-sm text-muted-foreground">
-            {track.title} · aula {index + 1} de {track.lessons.length}
-          </p>
-          <Badge variant="secondary">{pct}%</Badge>
-          <Button size="sm" variant="outline" onClick={() => setFocus(false)}>
-            <X className="mr-1 h-4 w-4" /> Sair do foco (Esc)
-          </Button>
-        </header>
-        <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-          <div className="mx-auto max-w-6xl">{lessonView}</div>
-        </div>
-      </div>
-    );
-  }
   return (
-    <div className="space-y-5 pb-8">
-      <PageHero
+    <div className={fm.focus ? fm.containerClass : "space-y-5 pb-8"}>
+      {fm.bar({
+        kicker: track.title,
+        title: lesson.title,
+        position: `aula ${index + 1} de ${track.lessons.length}`,
+        progress: pct,
+        onPrev: index > 0 ? () => go(index - 1) : undefined,
+        onNext: index < track.lessons.length - 1 ? () => go(index + 1) : undefined,
+        prevLabel: "Aula anterior",
+        nextLabel: "Próxima aula",
+        tools: toolsAreaFor(track.title),
+        notesKey: `curso:${track.slug}`,
+      })}
+      {!fm.focus && <PageHero
         image="study-desk"
         kicker="Cursos por disciplina"
         icon={GraduationCap}
         title={track.title}
         description={`${track.source}. Aulas curtas, com exemplo, pegadinhas e teste rápido, na ordem do edital.`}
-      />
-      <div className="flex flex-wrap items-center gap-2">
+      />}
+      {!fm.focus && <div className="flex flex-wrap items-center gap-2">
         {TRACKS.map((x) => (
           <Button key={x.slug} size="sm" variant={x.slug === track.slug ? "default" : "outline"} onClick={() => void navigate({ search: { t: x.slug }, replace: true })}>
             {x.discipline}
           </Button>
         ))}
-        <Button size="sm" variant="outline" className="ml-auto" onClick={() => setFocus(true)}>
-          <Maximize2 className="mr-1 h-4 w-4" /> Modo foco
-        </Button>
+        <span className="ml-auto">{fm.button}</span>
         <Badge variant="secondary">{done.length}/{track.lessons.length} aulas · {pct}%</Badge>
-      </div>
-      <div className="grid gap-4 lg:grid-cols-[280px_minmax(0,1fr)]">
-        <aside className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-6rem)] lg:self-start lg:overflow-y-auto" aria-label="Aulas da trilha">
+      </div>}
+      <div className={fm.focus ? "" : "grid gap-4 lg:grid-cols-[280px_minmax(0,1fr)]"}>
+        {!fm.focus && <aside className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-6rem)] lg:self-start lg:overflow-y-auto" aria-label="Aulas da trilha">
           {groups.map((g) => (
             <div key={g}>
               <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">{g}</p>
@@ -246,14 +228,14 @@ function TracksPage() {
               </ul>
             </div>
           ))}
-        </aside>
+        </aside>}
         {lessonView}
       </div>
-      <Card>
+      {!fm.focus && <Card>
         <CardContent className="p-4 text-xs text-muted-foreground">
           Material de estudo elaborado a partir do conteúdo programático oficial. Em caso de dúvida, confira a norma ou o pronunciamento citado.
         </CardContent>
-      </Card>
+      </Card>}
     </div>
   );
 }

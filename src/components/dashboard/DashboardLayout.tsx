@@ -46,6 +46,7 @@ import {
   Medal,
   Radar,
   Gavel,
+  Scale,
   BookA,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -157,6 +158,7 @@ const MENU: MenuItem[] = [
   },
   { group: "Edital e conteúdo", label: "Biblioteca de leis", icon: Library, href: "/dashboard/library" },
   { group: "Edital e conteúdo", label: "Painel do CTB", icon: Gavel, href: "/dashboard/ctb" },
+  { group: "Edital e conteúdo", label: "Calculadora penal", icon: Scale, href: "/dashboard/calculadora-penal" },
   { group: "Edital e conteúdo", label: "Cursos por disciplina", icon: GraduationCap, href: "/dashboard/trilhas" },
   { group: "Edital e conteúdo", label: "Dicionário", icon: BookA, href: "/dashboard/dicionario" },
   {

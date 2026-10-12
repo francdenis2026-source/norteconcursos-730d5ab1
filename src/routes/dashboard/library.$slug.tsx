@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from "react";
-import { createFileRoute, Link, useParams } from "@tanstack/react-router";
+import { createFileRoute, useNavigate, Link, useParams } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -20,6 +20,7 @@ import { materialLawSlug } from "@/lib/legalLibrary";
 import { StudyPractice } from "@/components/library/StudyPractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { useFocusMode } from "@/hooks/useFocusMode";
+import { toolsAreaFor } from "@/components/study/StudyTools";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { Button } from "@/components/ui/button";
 import { BackToPlan } from "@/components/cronograma/BackToPlan";
@@ -44,6 +45,7 @@ export const Route = createFileRoute("/dashboard/library/$slug")({
 
 function MaterialPage() {
   const fm = useFocusMode();
+  const navigate = useNavigate();
   const { slug } = useParams({ from: "/dashboard/library/$slug" });
   const { back: backToPlan, tema } = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
@@ -127,7 +129,17 @@ function MaterialPage() {
 
   return (
     <article className={`mx-auto max-w-3xl space-y-6 pb-10 ${fm.containerClass}`}>
-      {fm.focus ? <div className="flex justify-end">{fm.button}</div> : <div className="flex flex-wrap items-center justify-between gap-2"><div><BackToPlan back={backToPlan} topic={tema} />{back}</div>{fm.button}</div>}
+      {fm.bar({
+        kicker: material.discipline,
+        title: material.title,
+        onPrev: siblings.prev ? () => void navigate({ to: "/dashboard/library/$slug", params: { slug: siblings.prev!.slug } }) : undefined,
+        onNext: siblings.next ? () => void navigate({ to: "/dashboard/library/$slug", params: { slug: siblings.next!.slug } }) : undefined,
+        prevLabel: "Material anterior",
+        nextLabel: "Próximo material",
+        tools: toolsAreaFor(material.discipline),
+        notesKey: `material:${material.slug}`,
+      })}
+      {!fm.focus && <div className="flex flex-wrap items-center justify-between gap-2"><div><BackToPlan back={backToPlan} topic={tema} />{back}</div>{fm.button}</div>}
 
       <header className="library-header">
         <span className="hero-chip">

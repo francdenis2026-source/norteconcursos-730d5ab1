@@ -32,6 +32,7 @@ import { Route as DashboardAdminSignupsRouteImport } from './routes/dashboard/ad
 import { Route as DashboardAdminStudentsRouteImport } from './routes/dashboard/admin-students'
 import { Route as DashboardAdminSupportRouteImport } from './routes/dashboard/admin-support'
 import { Route as DashboardAiSolverRouteImport } from './routes/dashboard/ai-solver'
+import { Route as DashboardCalculadoraPenalRouteImport } from './routes/dashboard/calculadora-penal'
 import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers'
 import { Route as DashboardCronogramaRouteImport } from './routes/dashboard/cronograma'
 import { Route as DashboardCtbRouteImport } from './routes/dashboard/ctb'
@@ -188,6 +189,12 @@ const DashboardAiSolverRoute = DashboardAiSolverRouteImport.update({
   path: '/ai-solver',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardCalculadoraPenalRoute =
+  DashboardCalculadoraPenalRouteImport.update({
+    id: '/calculadora-penal',
+    path: '/calculadora-penal',
+    getParentRoute: () => DashboardRoute,
+  } as any)
 const DashboardCareersRoute = DashboardCareersRouteImport.update({
   id: '/careers',
   path: '/careers',
@@ -409,6 +416,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
+  '/dashboard/calculadora-penal': typeof DashboardCalculadoraPenalRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/cronograma': typeof DashboardCronogramaRoute
   '/dashboard/ctb': typeof DashboardCtbRoute
@@ -472,6 +480,7 @@ export interface FileRoutesByTo {
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
+  '/dashboard/calculadora-penal': typeof DashboardCalculadoraPenalRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/cronograma': typeof DashboardCronogramaRoute
   '/dashboard/ctb': typeof DashboardCtbRoute
@@ -535,6 +544,7 @@ export interface FileRoutesById {
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
+  '/dashboard/calculadora-penal': typeof DashboardCalculadoraPenalRoute
   '/dashboard/careers': typeof DashboardCareersRoute
   '/dashboard/cronograma': typeof DashboardCronogramaRoute
   '/dashboard/ctb': typeof DashboardCtbRoute
@@ -601,6 +611,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-students'
     | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
+    | '/dashboard/calculadora-penal'
     | '/dashboard/careers'
     | '/dashboard/cronograma'
     | '/dashboard/ctb'
@@ -664,6 +675,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-students'
     | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
+    | '/dashboard/calculadora-penal'
     | '/dashboard/careers'
     | '/dashboard/cronograma'
     | '/dashboard/ctb'
@@ -726,6 +738,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-students'
     | '/dashboard/admin-support'
     | '/dashboard/ai-solver'
+    | '/dashboard/calculadora-penal'
     | '/dashboard/careers'
     | '/dashboard/cronograma'
     | '/dashboard/ctb'
@@ -944,6 +957,13 @@ declare module '@tanstack/react-router' {
       path: '/ai-solver'
       fullPath: '/dashboard/ai-solver'
       preLoaderRoute: typeof DashboardAiSolverRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/calculadora-penal': {
+      id: '/dashboard/calculadora-penal'
+      path: '/calculadora-penal'
+      fullPath: '/dashboard/calculadora-penal'
+      preLoaderRoute: typeof DashboardCalculadoraPenalRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/careers': {
@@ -1261,6 +1281,7 @@ interface DashboardRouteChildren {
   DashboardAdminStudentsRoute: typeof DashboardAdminStudentsRoute
   DashboardAdminSupportRoute: typeof DashboardAdminSupportRoute
   DashboardAiSolverRoute: typeof DashboardAiSolverRoute
+  DashboardCalculadoraPenalRoute: typeof DashboardCalculadoraPenalRoute
   DashboardCareersRoute: typeof DashboardCareersRoute
   DashboardCronogramaRoute: typeof DashboardCronogramaRoute
   DashboardCtbRoute: typeof DashboardCtbRoute
@@ -1310,6 +1331,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminStudentsRoute: DashboardAdminStudentsRoute,
   DashboardAdminSupportRoute: DashboardAdminSupportRoute,
   DashboardAiSolverRoute: DashboardAiSolverRoute,
+  DashboardCalculadoraPenalRoute: DashboardCalculadoraPenalRoute,
   DashboardCareersRoute: DashboardCareersRoute,
   DashboardCronogramaRoute: DashboardCronogramaRoute,
   DashboardCtbRoute: DashboardCtbRoute,
