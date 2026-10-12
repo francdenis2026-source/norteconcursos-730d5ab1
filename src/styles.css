@@ -10611,3 +10611,22 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     background-position: 30% 40%;
   }
 }
+
+/* Painel do aluno: ícones coloridos por tema (antes: caixa preta com ícone dourado também no modo claro). */
+.quick-action:nth-child(4n + 1), .metric-tile:nth-child(4n + 1) { --tone: oklch(0.58 0.15 245); }
+.quick-action:nth-child(4n + 2), .metric-tile:nth-child(4n + 2) { --tone: oklch(0.68 0.15 70); }
+.quick-action:nth-child(4n + 3), .metric-tile:nth-child(4n + 3) { --tone: oklch(0.6 0.14 165); }
+.quick-action:nth-child(4n + 4), .metric-tile:nth-child(4n + 4) { --tone: oklch(0.6 0.17 330); }
+.app-shell .quick-action__icon,
+.app-shell .metric-tile__icon {
+  color: color-mix(in oklab, var(--tone, var(--brass-deep)) 82%, black);
+  background: color-mix(in oklab, var(--tone, var(--brass)) 15%, white);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--tone, var(--brass)) 35%, transparent);
+}
+.app-shell .quick-action:hover { border-color: color-mix(in oklab, var(--tone, var(--brass)) 50%, var(--color-border)); }
+.dark .app-shell .quick-action__icon,
+.dark .app-shell .metric-tile__icon {
+  color: color-mix(in oklab, var(--tone, var(--brass)) 70%, white);
+  background: color-mix(in oklab, var(--tone, var(--brass)) 24%, oklch(0.2 0.03 262));
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--tone, var(--brass)) 45%, transparent);
+}
