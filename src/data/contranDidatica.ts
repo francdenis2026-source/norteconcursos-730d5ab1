@@ -423,4 +423,57 @@ export const CONTRAN_DIDATICA: Record<string, ContranDidatica> = {
     ],
     fontes: ["977/2022"],
   },
+  "918/2022": {
+    simples: [
+      "Esta resolução conta o caminho de uma multa, do flagrante até a cobrança. Entenda as etapas na ordem: primeiro o AIT, depois a NA, depois a defesa e, por fim, a NP.",
+      "AIT (Auto de Infração de Trânsito): é o documento que inicia o processo administrativo. Pode ser lavrado pelo agente em documento próprio, em talão eletrônico ou registrado em sistema, quando a infração é comprovada por equipamento com registrador de imagem (art. 3º, § 1º). O AIT vale como NA se o condutor o assinar e for o proprietário ou o principal condutor previamente identificado, e constar a data final da defesa (art. 3º, § 5º).",
+      "NA (Notificação da Autuação): avisa o proprietário de que seu veículo cometeu uma infração. Deve ser expedida em até 30 dias contados da infração; se não sair nesse prazo, o AIT é arquivado (art. 4º e § 1º). A NA traz a data final para a defesa, que não pode ser inferior a 30 dias (art. 4º, § 2º).",
+      "Quem dirigia? Se o condutor não é o proprietário e não foi identificado na hora, o proprietário (ou principal condutor) indica o real condutor em formulário, dentro do prazo da NA (art. 5º). O proprietário responde pela infração quando não identifica o condutor no prazo, identifica fora das regras do art. 5º ou não há registro de comunicação de venda na época da infração (art. 6º). Se for pessoa jurídica, a multa é do art. 257, § 8º, do CTB (art. 7º).",
+      "Defesa da autuação: a autoridade a aprecia, inclusive no mérito. Acolhida, o AIT é cancelado e arquivado (art. 9º, § 1º). Indeferida ou não apresentada, aplica-se a penalidade e expede-se a NP em até 180 dias da infração; se a defesa foi apresentada no prazo, esse limite sobe para 360 dias (art. 9º, §§ 2º e 3º).",
+      "Advertência por escrito: em infração leve ou média, a autoridade aplica advertência em vez de multa, nos termos do art. 267 do CTB; ela não gera pontuação (art. 10, § 4º). Se a multa foi aplicada quando o infrator se enquadrava nos requisitos do art. 267, ela é nula (art. 10, § 8º).",
+    ],
+    atualizacoes: [
+      "Resolução 991/2023 (em vigor desde 2 de maio de 2023): os órgãos autuadores da União arrecadam multas pela GRU do tipo Cobrança ou pela plataforma PagTesouro (art. 25).",
+      "Também pela 991/2023, os órgãos arrecadadores podem firmar acordos, sem ônus para si, para aceitar o pagamento de multas com cartão de débito ou crédito, à vista ou em parcelas mensais, com regularização imediata do veículo. Para isso devem pedir autorização ao órgão máximo executivo de trânsito da União (art. 27).",
+    ],
+    quadro: {
+      titulo: "Multa de trânsito: etapas e prazos",
+      linhas: [
+        ["AIT", "Início do processo administrativo (art. 2º, I)"],
+        ["NA", "Em até 30 dias da infração, senão o AIT é arquivado (art. 4º)"],
+        ["Prazo de defesa", "Não inferior a 30 dias, contados da expedição da NA ou do edital (art. 4º, § 2º)"],
+        ["NP", "Em até 180 dias da infração; 360 dias se houve defesa no prazo (art. 9º, §§ 2º e 3º)"],
+        ["Defesa acolhida", "AIT cancelado e arquivado (art. 9º, § 1º)"],
+        ["Advertência por escrito", "Infração leve ou média; sem pontos no prontuário (art. 10, § 4º)"],
+        ["Repasse do FUNSET", "Cinco por cento do valor da multa, pelo órgão arrecadador (art. 2º, V)"],
+        ["Quem autua x quem arrecada", "Autuador autua, julga a defesa e aplica a penalidade; arrecadador cobra e repassa (art. 2º, IV e V)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "A infração foi em 1º de março e a notificação da autuação chegou ao proprietário só em maio. A multa vale?",
+        resposta: "Não. A NA deve ser expedida em até 30 dias da infração. Passado esse prazo, o AIT é arquivado (art. 4º, § 1º).",
+      },
+      {
+        situacao: "O proprietário apresentou defesa dentro do prazo e ela foi negada. Em quanto tempo a NP precisa ser expedida?",
+        resposta: "Em até 360 dias contados da infração, porque houve defesa no prazo. Sem defesa, o limite é de 180 dias (art. 9º, §§ 2º e 3º).",
+      },
+      {
+        situacao: "O proprietário vendeu o carro, mas não houve registro de comunicação de venda quando a infração ocorreu. De quem é a responsabilidade?",
+        resposta: "Do proprietário que consta no cadastro: a ausência de registro da comunicação de venda na época da infração o torna responsável (art. 6º, III).",
+      },
+      {
+        situacao: "Um motorista cometeu infração leve e o órgão aplicou advertência por escrito. Ele recebe pontos?",
+        resposta: "Não. A advertência por escrito não gera registro de pontuação no prontuário (art. 10, § 4º).",
+      },
+    ],
+    pegadinhas: [
+      "Confundir NA (avisa da infração) com NP (avisa da penalidade e do valor da multa).",
+      "Trocar os prazos: NA em até 30 dias da infração; NP em até 180 dias, ou 360 dias com defesa.",
+      "Achar que a multa continua válida se a NA saiu fora do prazo: o AIT é arquivado.",
+      "Dizer que o proprietário nunca responde por infração de outro condutor. Responde se não indicar o condutor no prazo ou indicar fora das regras.",
+      "Atribuir à Resolução 918 a definição do valor da multa. Ela trata do procedimento, e os valores estão no CTB.",
+    ],
+    fontes: ["991/2023"],
+  },
 };
