@@ -10,6 +10,7 @@ import { TRACKS, type Track, type TrackLesson } from "@/data/tracks";
 import { cn } from "@/lib/utils";
 import { useFocusMode } from "@/hooks/useFocusMode";
 import { toolsAreaFor } from "@/components/study/StudyTools";
+import { TRACK_SUBJECT, practiceSearch } from "@/lib/practiceLink";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 
@@ -88,7 +89,7 @@ function Complement({ lesson, trackSlug }: { lesson: TrackLesson; trackSlug: str
       <div className="flex flex-wrap gap-2 text-sm">
         {isLaw && <Link to="/dashboard/library" search={{ q: query, back: undefined }} className={chip}>Biblioteca de leis</Link>}
         <Link to="/dashboard/dicionario" search={{ q: query } as never} className={chip}>Dicionário</Link>
-        <Link to="/dashboard/question-bank" className={chip}>Questões</Link>
+        <Link to="/dashboard/question-trainer" search={practiceSearch(TRACK_SUBJECT[trackSlug] ?? lesson.title, lesson.title) as never} className="rounded-md border border-emerald-600 bg-emerald-600 px-3 py-1.5 font-semibold text-white hover:bg-emerald-700">Treinar questões deste assunto</Link>
         <Link to="/dashboard/study-tools" className={chip}>Foco e revisão</Link>
       </div>
       {isLaw && user && user.id !== "demo-user" && <ContentSearchResults query={query} userId={user.id} hideEmpty />}
@@ -186,6 +187,7 @@ function TracksPage() {
         nextLabel: "Próxima aula",
         tools: toolsAreaFor(track.title),
         notesKey: `curso:${track.slug}`,
+        extra: <Link to="/dashboard/question-trainer" search={practiceSearch(TRACK_SUBJECT[track.slug] ?? lesson.title, lesson.title) as never} className="flex items-center gap-1 rounded-lg bg-emerald-400 px-3 py-2 text-sm font-bold text-emerald-950 hover:bg-emerald-300">Questões</Link>,
       })}
       {!fm.focus && <PageHero
         image="study-desk"

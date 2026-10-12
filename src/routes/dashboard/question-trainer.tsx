@@ -447,8 +447,18 @@ function QuestionTrainer() {
       category,
     ],
   );
+  // Questões que o aluno ainda não respondeu: a 1ª resposta de cada questão é a que conta para ranking e medalhas,
+  // então o treino não repete as já respondidas, a menos que ele peça para revisá-las.
+  const [includeAnswered, setIncludeAnswered] = React.useState(false);
+  const [notice, setNotice] = React.useState("");
+  const fresh = React.useMemo(() => pool.filter((q) => !locked.has(lockedKey(q.source, q.id))), [pool, locked]);
+  const trainingPool = includeAnswered ? pool : fresh;
   const startTraining = () => {
-    const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
+    const ordered = orderMode === "random" ? shuffled(trainingPool) : [...trainingPool];
+    if (!ordered.length) {
+      setNotice("Você já respondeu todas as questões deste filtro. Marque “Incluir as já respondidas” para revisá-las.");
+      return;
+    }
     setQuestions(ordered.slice(0, Number(limit)));
     setIndex(0);
     setResults([]);
@@ -459,13 +469,24 @@ function QuestionTrainer() {
     setStartedAt(Date.now());
     setStarted(true);
   };
-  // Veio do cronograma com ?go=1: começa direto, com 10 questões do assunto, assim que houver questões.
+  // Veio com ?go=1 (cronograma, cursos, leis): começa direto, com 10 questões ainda não respondidas do assunto.
   React.useEffect(() => {
-    if (!autoStart.current || loading || started || pool.length === 0) return;
+    if (!autoStart.current || loading || started) return;
+    if (pool.length === 0) {
+      // assunto sem questões catalogadas: treina a matéria inteira em vez de abrir uma tela vazia
+      if (topic !== "all") {
+        setNotice("Ainda há poucas questões deste assunto específico; o treino usa a matéria inteira.");
+        setTopic("all");
+      }
+      return;
+    }
     autoStart.current = false;
+    if (fresh.length === 0) {
+      setNotice("Você já respondeu todas as questões deste tema. Marque “Incluir as já respondidas” para revisá-las ou escolha outro assunto.");
+      return;
+    }
     setLimit("10");
-    const ordered = shuffled(pool).slice(0, 10);
-    setQuestions(ordered);
+    setQuestions(shuffled(fresh).slice(0, 10));
     setIndex(0);
     setResults([]);
     setSelected(null);
@@ -474,7 +495,7 @@ function QuestionTrainer() {
     setSupportNotice(false);
     setStartedAt(Date.now());
     setStarted(true);
-  }, [loading, started, pool]);
+  }, [loading, started, pool, fresh, topic]);
   const selectAppliedExam = (value: string) => {
     setAppliedExam(value);
     if (value === "all") return;
@@ -628,9 +649,15 @@ function QuestionTrainer() {
     return (
       <div className="space-y-4">
         {lawNotice}
+        {(notice || pool.length > fresh.length) && (
+          <div className="flex flex-wrap items-center gap-3 rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100" role="status">
+            <p className="flex-1">{notice || `${pool.length - fresh.length} das ${pool.length} questões deste filtro você já respondeu; o treino mostra só as novas.`}</p>
+            <label className="flex items-center gap-2 font-semibold"><input type="checkbox" checked={includeAnswered} onChange={(e) => setIncludeAnswered(e.target.checked)} /> Incluir as já respondidas</label>
+          </div>
+        )}
         <TrainerSetup
           total={catalog.length}
-          available={pool.length}
+          available={trainingPool.length}
           choices={choices}
           facets={facets}
           values={{

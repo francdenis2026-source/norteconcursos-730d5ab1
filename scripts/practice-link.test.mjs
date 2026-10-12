@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { practiceSearch, TRACK_SUBJECT } from '../src/lib/practiceLink.ts';
+
+test('link de prática vai direto ao treino, filtrado pela matéria e começando sozinho', () => {
+  const s = practiceSearch('Língua Portuguesa', 'Regência e crase');
+  assert.equal(s.area, 'Língua Portuguesa');
+  assert.equal(s.go, '1');
+  assert.equal(s.reinforce, '1');
+  assert.equal(s.topic, 'Crase');
+});
+
+test('sem assunto reconhecido, o link filtra só pela matéria', () => {
+  const s = practiceSearch('Direito Constitucional', 'Texto que não casa com nenhum assunto cadastrado xyz');
+  assert.equal(s.area, 'Direito Constitucional');
+  assert.equal('topic' in s, false);
+  assert.equal(TRACK_SUBJECT.portugues, 'Língua Portuguesa');
+});
