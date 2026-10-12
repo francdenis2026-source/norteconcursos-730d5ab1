@@ -37,4 +37,6 @@ Não houve importação ou remoção de questões nesta etapa. PDFs privados, HT
 
 ## Validação
 
-231 testes JavaScript aprovados, 14 testes do extrator Python aprovados, build de produção concluído e relatórios de leitura independente registrados na entrega. Não foi atestado o deploy público apenas por sucesso do build ou push.
+236 testes JavaScript aprovados, 14 testes do extrator Python aprovados, build de produção concluído e relatórios de leitura independente registrados na entrega. Não foi atestado o deploy público apenas por sucesso do build ou push.
+
+As atualizações concorrentes de dicionário, navegação e vídeo-aulas da main foram integradas. A fixture do teste do dicionário foi corrigida para reproduzir a importação padrão do JSON, e esse teste passou a integrar npm test.
