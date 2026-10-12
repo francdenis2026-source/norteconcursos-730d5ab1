@@ -1,5 +1,6 @@
 import { useLegalExplanation, type LegalUnit } from "@/lib/legalCourses";
 import { LegalRefText } from "./LegalRefText";
+import { HighlightToggle } from "./StudyText";
 import { explanationExample, explanationPractice } from "@/lib/explanationPractice";
 import { hasCurrentExplanationReview } from "@/lib/explanationReview";
 
@@ -9,7 +10,11 @@ const Block = ({ icon, title, tone, children }: { icon: string; title: string; t
     <div className="mt-2 text-[15px] leading-7">{children}</div>
   </section>
 );
-const List = ({ items }: { items: string[] }) => <ul className="list-disc space-y-1 pl-5">{items.map((t) => <li key={t}><LegalRefText text={t} /></li>)}</ul>;
+const isUpdate = (t: string) => /^atualiza[çc][ãa]o/i.test(t);
+/** Itens de ATUALIZAÇÃO viram um aviso colorido, para o aluno não perder a mudança da lei. */
+const List = ({ items }: { items: string[] }) => <ul className="list-disc space-y-1.5 pl-5">{items.map((t) => isUpdate(t)
+  ? <li key={t} className="-ml-5 list-none rounded-lg border-l-4 border-l-amber-500 bg-amber-50 p-2.5 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100"><LegalRefText text={t} /></li>
+  : <li key={t}><LegalRefText text={t} /></li>)}</ul>;
 
 /** Keep the answer closed while the learner attempts the authored question. */
 export function ExplanationChecks({ items }: { items: string[] }) {
@@ -40,6 +45,7 @@ export function UnitExplanation({ unit, userId }: { unit: LegalUnit; userId: str
         {e.status === "published" && !stale && !hasCurrentExplanationReview(e, unit.content_sha256) && <span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-900 dark:bg-amber-950/40 dark:text-amber-200">Revisão editorial pendente</span>}
         {e.status === "published" && !stale && hasCurrentExplanationReview(e, unit.content_sha256) && <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-200">✓ Revisado em {new Date(e.reviewed_at!).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}</span>}
       </header>
+      <HighlightToggle />
       <Block icon="📘" title="Em palavras simples" tone="border-l-4 border-l-sky-500"><p><LegalRefText text={e.simples} /></p></Block>
       {e.pontos.length > 0 && <Block icon="🔑" title="Pontos-chave" tone="border-l-4 border-l-indigo-500"><List items={e.pontos} /></Block>}
       {atencao.length > 0 && <Block icon="⚠️" title="Atenção: onde o candidato erra" tone="border-l-4 border-l-amber-500"><List items={atencao} /></Block>}
