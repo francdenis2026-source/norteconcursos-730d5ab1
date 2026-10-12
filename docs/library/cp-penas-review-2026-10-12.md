@@ -34,8 +34,8 @@ literal inadequado nos itens qualificados. Os documentos preservam
 versões anteriores, hashes, alvos explícitos e fontes.
 
 Dry-run, preflight, publicação concorrente e readback independente
-confirmaram o conteúdo e a preservação. 321 testes, TypeScript e build
-passaram. A publicação no banco não depende de supor que o push já
+confirmaram o conteúdo e a preservação. 321 testes passaram antes da integração remota; depois dela,
+324 testes, TypeScript e build passaram. A publicação no banco não depende de supor que o push já
 implantou os novos alertas no domínio público.
 
 CP: 70/401 revisados, 331 pendentes. Global: 1.224/3.511 revisados,

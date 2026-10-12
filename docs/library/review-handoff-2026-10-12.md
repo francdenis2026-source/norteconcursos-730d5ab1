@@ -39,7 +39,8 @@ leitura integral do acórdão; consulta processual retornou 403.
 Regime inicial, substituição, saúde mental, multa e referência residual
 do art. 54 têm qualificações; não se certifica toda política ou decisão
 específica da execução penal. 321 testes, TypeScript e build passaram
-antes da integração final das alterações remotas.
+antes da integração final das alterações remotas. Após integrar sessão e
+inatividade do modo foco, 324 testes, TypeScript e build passaram.
 
 Retomar CP nos arts. 55 e seguintes conforme cp-checkpoint-2026-10-12.json,
 conferindo novamente banco e revisões concorrentes. Usuário informou 70%
