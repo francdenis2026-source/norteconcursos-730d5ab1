@@ -45,9 +45,10 @@ function friendlyAuthError(error: unknown) {
 export const Route = createFileRoute("/auth")({
   validateSearch: (
     search: Record<string, unknown>,
-  ): { mode?: "register" | undefined; recovery?: boolean } => ({
+  ): { mode?: "register" | undefined; recovery?: boolean; reason?: "inactive" | "another-device" | undefined } => ({
     mode: search["mode"] === "register" ? "register" : undefined,
     recovery: search["recovery"] === true || search["recovery"] === "true",
+    reason: search["reason"] === "inactive" || search["reason"] === "another-device" ? search["reason"] : undefined,
   }),
   component: AuthPage,
   head: () => ({
@@ -119,6 +120,10 @@ function AuthPage() {
     });
     return () => sub.subscription.unsubscribe();
   }, [navigate, routeSearch.recovery]);
+  useEffect(() => {
+    if (routeSearch.reason === "inactive") toast.message("Sessão encerrada por inatividade", { id: "auth-reason", description: "Passaram-se mais de 5 minutos sem interação. Entre novamente para continuar de onde parou." });
+    if (routeSearch.reason === "another-device") toast.message("Sessão encerrada", { id: "auth-reason", description: "Sua conta foi aberta em outro aparelho." });
+  }, [routeSearch.reason]);
 
   useEffect(() => {
     if (cooldown <= 0) return;

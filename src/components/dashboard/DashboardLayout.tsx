@@ -77,6 +77,8 @@ import { AcreClock } from "@/components/dashboard/AcreClock";
 import { FarewellDialog } from "@/components/dashboard/FarewellDialog";
 import { flushStudyClock, getStudyToday, stopStudyClock } from "@/lib/studyClock";
 import { SessionClock } from "@/components/dashboard/SessionClock";
+import { IdleGuard } from "@/components/dashboard/IdleGuard";
+import { FocusReturnBar } from "@/components/dashboard/FocusReturnBar";
 import { RenewPlanDialog } from "@/components/dashboard/RenewPlanDialog";
 import { MockService, type MedalProgress } from "@/services/mockService";
 import type { Achievement, UserStreak } from "@/types";
@@ -533,6 +535,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <TooltipProvider delayDuration={150}>
       <div className="app-shell" data-area={isAdmin ? "admin" : "student"}>
+        {user && user.id !== "demo-user" && <IdleGuard />}
+        <FocusReturnBar />
         <aside className="app-sidebar no-print" data-collapsed={isCollapsed}>
           <div className="app-sidebar__head">
             <Link to="/dashboard" aria-label="Norte Concurso — visão geral">

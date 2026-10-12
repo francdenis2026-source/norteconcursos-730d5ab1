@@ -91,7 +91,6 @@ function Complement({ lesson, trackSlug }: { lesson: TrackLesson; trackSlug: str
         {isLaw && <Link to="/dashboard/library" search={{ q: query, back: undefined }} className={chip}>Biblioteca de leis</Link>}
         <Link to="/dashboard/dicionario" search={{ q: query } as never} className={chip}>Dicionário</Link>
         <Link to="/dashboard/question-trainer" search={practiceSearch(TRACK_SUBJECT[trackSlug] ?? lesson.title, lesson.title) as never} className="rounded-md border border-emerald-600 bg-emerald-600 px-3 py-1.5 font-semibold text-white hover:bg-emerald-700">Treinar questões deste assunto</Link>
-        <Link to="/dashboard/study-tools" className={chip}>Foco e revisão</Link>
       </div>
       {isLaw && user && user.id !== "demo-user" && <ContentSearchResults query={query} userId={user.id} hideEmpty />}
     </section>
