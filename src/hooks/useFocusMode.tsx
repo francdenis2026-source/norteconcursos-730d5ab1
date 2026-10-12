@@ -147,11 +147,25 @@ export function useFocusMode() {
       ].join(" ")
     : "";
 
-  /** Botão para entrar no modo foco (fora dele). */
+  /** Chamada visual para entrar no modo foco (fora dele): o relógio de estudo começa a contar ao clicar. */
   const button = (
-    <Button type="button" size="sm" variant="outline" className="no-print" onClick={enter}>
-      <Maximize2 className="mr-1 h-4 w-4" /> Modo foco
-    </Button>
+    <button
+      type="button"
+      onClick={enter}
+      className="no-print group relative inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 px-4 py-2.5 text-left text-white shadow-lg shadow-indigo-500/30 ring-1 ring-white/20 transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-500"
+      aria-label="Começar a estudar em modo foco: tela cheia com relógio de estudo"
+    >
+      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-white/20 transition group-hover:bg-white/30"><Play className="h-4 w-4 fill-current" aria-hidden /></span>
+      <span className="leading-tight">
+        <span className="block text-sm font-bold">Começar a estudar</span>
+        <span className="block text-[11px] text-white/80">Modo foco · tela cheia e relógio de estudo</span>
+      </span>
+      <Maximize2 className="h-4 w-4 text-white/70" aria-hidden />
+      <span className="absolute -right-1 -top-1 flex h-3 w-3" aria-hidden>
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-300 opacity-75" />
+        <span className="relative inline-flex h-3 w-3 rounded-full bg-amber-400" />
+      </span>
+    </button>
   );
 
   /** Faixa colorida fixa do topo, com relógio, navegação e ferramentas. Só existe em foco. */

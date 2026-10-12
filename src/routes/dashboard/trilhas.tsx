@@ -204,7 +204,11 @@ function TracksPage() {
           </Button>
         ))}
         <span className="ml-auto">{fm.button}</span>
-        <Badge variant="secondary">{done.length}/{track.lessons.length} aulas · {pct}%</Badge>
+        <div className="flex items-center gap-3 rounded-xl border bg-card px-4 py-2" aria-label={`Progresso: ${done.length} de ${track.lessons.length} aulas`}>
+          <div className="leading-tight"><p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Seu progresso</p><p className="text-sm font-bold">{done.length}/{track.lessons.length} aulas</p></div>
+          <div className="h-2 w-24 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}><div className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500" style={{ width: `${pct}%` }} /></div>
+          <span className="text-sm font-bold tabular-nums">{pct}%</span>
+        </div>
       </div>}
       <div className={fm.focus ? "" : "grid gap-4 lg:grid-cols-[280px_minmax(0,1fr)]"}>
         {!fm.focus && <aside className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-6rem)] lg:self-start lg:overflow-y-auto" aria-label="Aulas da trilha">
