@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BookOpen, ExternalLink, Lightbulb } from "lucide-react";
 import { CONTRAN_CHECKED_AT, CONTRAN_GUIDES, CONTRAN_INDEX_URL } from "@/data/contranGuides";
+import { RESOLUCOES_COBRADAS } from "@/data/ctbPanel";
 import { contranDate, currentContranGuides, type ContranGuide } from "@/lib/contranStudy";
 
 function OfficialText({ guide }: { guide: ContranGuide }) {
@@ -32,8 +33,15 @@ function OfficialText({ guide }: { guide: ContranGuide }) {
   </details>;
 }
 
+const guideKey = (g: ContranGuide) => `${g.number.toLocaleString("pt-BR")}/${g.year}`;
+/** Número de questões de prova que citam a resolução (levantamento TEC Concursos, tendência); 0 quando não consta. */
+const QUESTOES = new Map(RESOLUCOES_COBRADAS.map((r) => [r.numero, r.questoes]));
+const cobradas = (g: ContranGuide) => QUESTOES.get(guideKey(g)) ?? 0;
+
 export function ContranStudy({ query = "" }: { query?: string }) {
-  const guides = currentContranGuides(CONTRAN_GUIDES, query);
+  // as mais cobradas em prova primeiro; empate mantém a ordem do catálogo (mais recentes antes)
+  const guides = [...currentContranGuides(CONTRAN_GUIDES, query)].sort((a, b) => cobradas(b) - cobradas(a));
+  const top = guides.filter((g) => cobradas(g) > 0).slice(0, 6);
   const total = currentContranGuides(CONTRAN_GUIDES).length;
   return <section className="space-y-4" aria-label="Consulta das resoluções do CONTRAN">
     <div className="rounded-xl border bg-card p-4 text-sm leading-6">
@@ -43,9 +51,15 @@ export function ContranStudy({ query = "" }: { query?: string }) {
       <p className="mt-1 text-muted-foreground">Confira o edital da sua carreira. Trânsito e CONTRAN não constam do edital PF 2025 citado nesta biblioteca.</p>
       <a className="mt-2 inline-flex items-center gap-1 font-semibold text-primary underline" href={CONTRAN_INDEX_URL} target="_blank" rel="noopener noreferrer">Catálogo oficial do CONTRAN <ExternalLink size={14} /></a>
     </div>
+    {!query.trim() && top.length > 0 && <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100">
+      <p className="font-semibold">Mais cobradas em prova</p>
+      <p className="mt-1 text-xs">Comece por estas: são as que mais aparecem em questões de prova, segundo levantamento do guia de estudo da TEC Concursos (fonte secundária: indica tendência, não é dado oficial). Os guias abaixo seguem essa ordem.</p>
+      <ul className="mt-2 flex flex-wrap gap-2">{top.map((g) => <li key={guideKey(g)} className="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold dark:bg-amber-900/40">Res. {guideKey(g)} · {cobradas(g)} questões</li>)}</ul>
+    </div>}
     {guides.map((guide) => <article key={`${guide.number}/${guide.year}`} className="rounded-2xl border bg-card p-4 sm:p-5">
       <header className="flex flex-wrap items-center gap-2">
         <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-950 dark:bg-emerald-950/50 dark:text-emerald-100">Resolução {guide.number.toLocaleString("pt-BR")}/{guide.year}</span>
+        {cobradas(guide) > 0 && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-950 dark:bg-amber-950/50 dark:text-amber-100">Mais cobrada · {cobradas(guide)} questões</span>}
         <span className="text-xs text-muted-foreground">Publicação: {contranDate(guide.publicationDate)}</span>
       </header>
       <h3 className="mt-3 text-lg font-bold">{guide.title}</h3>

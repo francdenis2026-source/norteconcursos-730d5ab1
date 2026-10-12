@@ -2,15 +2,22 @@ import { supabase } from "@/integrations/supabase/client";
 
 const STORAGE_KEY = "norte-active-session";
 
+/** Identifica o aparelho/navegador (não a aba): abas do mesmo navegador compartilham a chave e não se derrubam. */
 function sessionKey(userId: string) {
   const key = `${STORAGE_KEY}:${userId}`;
-  let value = sessionStorage.getItem(key);
-  if (!value) {
-    value = crypto.randomUUID();
-    sessionStorage.setItem(key, value);
+  try {
+    let value = localStorage.getItem(key);
+    if (!value) {
+      value = crypto.randomUUID();
+      localStorage.setItem(key, value);
+    }
+    return value;
+  } catch {
+    // sem armazenamento: chave estável só nesta aba
+    return (memoryKeys[key] ??= crypto.randomUUID());
   }
-  return value;
 }
+const memoryKeys: Record<string, string> = {};
 
 export async function claimSingleDeviceSession(userId: string) {
   if (typeof window === "undefined") return;
