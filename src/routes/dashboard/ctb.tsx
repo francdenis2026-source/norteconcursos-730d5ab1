@@ -1,6 +1,6 @@
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ExternalLink, Gavel, Search } from "lucide-react";
+import { BookOpen, ExternalLink, Gavel, Lightbulb, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -32,6 +32,23 @@ const GRAV_STYLE: Record<Gravidade, string> = {
   grave: "bg-orange-100 text-orange-900",
   gravissima: "bg-red-100 text-red-900",
 };
+
+function resolutionLearning(subject: string) {
+  const text = norm(subject);
+  if (text.includes("alcool") || text.includes("substancia")) {
+    return { points: ["Identifique a conduta fiscalizada e o artigo do CTB relacionado.", "Separe a infração administrativa da eventual consequência criminal.", "Confira quando a nova resolução substitui ou altera a anterior."], example: "Uma blitz pode aplicar o procedimento administrativo mesmo quando o condutor se recusa ao teste; a recusa tem enquadramento próprio." };
+  }
+  if (text.includes("formacao") || text.includes("habilitacao")) {
+    return { points: ["Confira as etapas exigidas para cada categoria de habilitação.", "Observe os documentos, exames e prazos previstos.", "Não misture regra de aprendizagem com regra de renovação da CNH."], example: "Um candidato à categoria D precisa cumprir os requisitos de idade, tempo de habilitação e exames antes de iniciar a etapa prática." };
+  }
+  if (text.includes("remocao") || text.includes("leilao") || text.includes("guarda")) {
+    return { points: ["Diferencie remoção, custódia, liberação e leilão.", "Marque os prazos que começam após o recolhimento do veículo.", "Confira quem pode retirar o veículo e quais documentos são exigidos."], example: "Um veículo removido não é automaticamente perdido: primeiro há custódia e possibilidade de liberação; o leilão depende do prazo e do procedimento oficial." };
+  }
+  if (text.includes("sinalizacao") || text.includes("velocidade")) {
+    return { points: ["Leia o anexo técnico junto com o texto principal.", "Relacione a regra ao tipo de via, sinal ou equipamento.", "Confira alterações posteriores antes de memorizar o número."], example: "A mesma placa pode ter efeito diferente se estiver acompanhada de sinalização complementar; na prova, procure primeiro a combinação completa." };
+  }
+  return { points: ["Comece pelo objeto e pelo alcance da resolução.", "Marque os artigos, anexos e exceções que alteram a regra geral.", "Confira a situação oficial e as normas que a alteraram ou revogaram."], example: "Ao estudar uma regra de registro de veículo, transforme o texto em uma sequência: quem deve fazer, qual documento usar e qual prazo observar." };
+}
 
 function CtbPanelPage() {
   const [q, setQ] = React.useState("");
@@ -257,6 +274,26 @@ function CtbPanelPage() {
                   <p className="text-sm font-medium">{r.assunto}</p>
                   <p className="text-xs text-muted-foreground">{r.situacao}</p>
                   {r.nota && <p className="text-xs font-medium text-amber-700">ATUALIZAÇÃO: {r.nota}</p>}
+                  <details className="ctb-resolution-reader mt-3 rounded-lg border bg-muted/30 p-3">
+                    <summary className="flex cursor-pointer items-center gap-2 text-sm font-semibold text-primary">
+                      <BookOpen className="h-4 w-4" /> Ler guia da resolução e pontos-chave
+                    </summary>
+                    <div className="mt-3 grid gap-3 text-sm sm:grid-cols-[1fr_1.1fr]">
+                      <div>
+                        <p className="mb-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Pontos importantes</p>
+                        <ul className="list-disc space-y-1 pl-5">
+                          {resolutionLearning(r.assunto).points.map((point) => <li key={point}>{point}</li>)}
+                        </ul>
+                      </div>
+                      <div className="rounded-md border border-amber-300/60 bg-amber-50 p-3 text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/30 dark:text-amber-100">
+                        <p className="mb-1 flex items-center gap-1 text-xs font-bold uppercase tracking-wide"><Lightbulb className="h-3.5 w-3.5" /> Exemplo do dia a dia</p>
+                        <p className="leading-6">{resolutionLearning(r.assunto).example}</p>
+                      </div>
+                    </div>
+                    <a href={RESOLUCOES_FONTE} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary underline">
+                      Abrir documento e situação oficial <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </details>
                 </CardContent>
               </Card>
             ))}
