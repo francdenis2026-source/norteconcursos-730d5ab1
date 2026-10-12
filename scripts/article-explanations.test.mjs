@@ -499,3 +499,23 @@ test('contravention general review separates special rules, historic measures an
  const chapters=JSON.parse(readFileSync('docs/library/contravencoes-chapter-corrections-2026-10-12.json','utf8'));
  assert.equal(chapters.units.length,66);assert.match(chapters.units.find(r=>r.unit_key==='art-24').chapter,/PATRIMÔNIO/);
 });
+
+test('contravention public review respects non-reception, special statutes and tripled penalty',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-contravencoes-public-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,18);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-19').simples,/857.*circunstâncias concretas/);
+ assert.match(get('art-21').pontos.join(' '),/maior de 60, não exatamente 60.*1333/s);
+ assert.match(get('art-25').simples,/não foi recepcionado/);
+ assert.match(get('art-32').simples,/720.*309.*perigo de dano/);
+ assert.match(get('art-28').pontos.join(' '),/9.605.*balões/);
+ for(const key of ['art-18','art-19','art-20','art-21','art-22','art-25','art-28','art-32','art-34'])assert.equal(legalStudyCaveat('contravencoes',key).literalPractice,false);
+});
+
+test('contravention amendment reference resolves to the verified Planalto path',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-contravencoes-links-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,1);assert.equal(p.units[0].unit_key,'art-20');
+ assert.ok(p.units[0].remissoes.includes('https://www.planalto.gov.br/ccivil_03/leis/l6734.htm'));
+ assert.ok(p.units[0].expected.remissoes.some(u=>u.includes('1970-1979')));
+});
