@@ -10514,3 +10514,28 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     color: oklch(0.42 0.12 235);
   }
 }
+
+@media (max-width: 767px) {
+  .mh__challenge { margin: 0 0 14px; }
+  .mh__challenge .daily-badge {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: 1px solid color-mix(in oklab, var(--brass) 48%, transparent);
+    border-radius: 16px;
+    background: linear-gradient(120deg, color-mix(in oklab, var(--brass) 18%, var(--ink-deep)), color-mix(in oklab, var(--signal) 10%, var(--ink-deep)));
+    box-shadow: 0 14px 30px -22px oklch(0 0 0 / .8);
+  }
+  .mh__challenge .daily-badge__body { gap: 12px; }
+  .mh__challenge .daily-badge__cta { white-space: nowrap; }
+  html:not(.dark) .mh__challenge .daily-badge {
+    border-color: #d9b45b;
+    background: linear-gradient(120deg, #fff8e6, #eef7ff);
+    box-shadow: 0 12px 26px -22px rgb(15 23 42 / .5);
+  }
+  html:not(.dark) .mh__challenge .daily-badge__live,
+  html:not(.dark) .mh__challenge .daily-badge__cta { color: #8a5a08; }
+  html:not(.dark) .mh__challenge .daily-badge__main strong { color: #17263a; }
+  html:not(.dark) .mh__challenge .daily-badge__main small,
+  html:not(.dark) .mh__challenge .daily-badge__timer { color: #526176; }
+}

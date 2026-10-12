@@ -16,6 +16,7 @@ import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { PAYMENTS_ENABLED, TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 import { PLAN_ROWS, planValue } from "@/lib/planPresentation";
 import { cn } from "@/lib/utils";
+import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 
 type Tab = "metodo" | "recursos" | "carreiras" | "pcac" | "planos";
 
@@ -75,6 +76,9 @@ export function MobileHub({ steps, tools, careers, pillars }: Props) {
         <span className="mh__eyebrow">NORTE CONCURSO</span>
         <h2>Seu próximo ciclo começa aqui.</h2>
         <p>Escolha uma frente e avance com direção, clareza e constância.</p>
+      </div>
+      <div className="mh__challenge" aria-label="Desafio diário">
+        <DailyChallengeBadge />
       </div>
       <div className="mh__tabs" role="tablist" aria-label="Seções">
         {TABS.map(({ id, label, icon: Icon }) => (

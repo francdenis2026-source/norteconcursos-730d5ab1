@@ -195,7 +195,9 @@ function RootComponent() {
       const currentUser = session?.user.id ?? null;
       if (currentUser !== previousUser) queryClient.clear();
       previousUser = currentUser;
-      if (event === "SIGNED_IN" && session) void claimSingleDeviceSession(session.user.id);
+      if ((event === "SIGNED_IN" || event === "INITIAL_SESSION") && session) {
+        void claimSingleDeviceSession(session.user.id);
+      }
       if (event === "PASSWORD_RECOVERY")
         void router.navigate({ to: "/auth", search: { recovery: true } });
     });
@@ -213,10 +215,13 @@ function RootComponent() {
         window.location.assign("/auth?reason=another-device");
       }
     };
-    void check();
-    const timer = window.setInterval(check, 20000);
+    // Dá tempo para a sessão recém-criada ser registrada antes da primeira
+    // verificação, evitando logout durante o redirecionamento inicial.
+    const first = window.setTimeout(check, 8000);
+    const timer = window.setInterval(check, 30000);
     return () => {
       cancelled = true;
+      window.clearTimeout(first);
       window.clearInterval(timer);
     };
   }, []);

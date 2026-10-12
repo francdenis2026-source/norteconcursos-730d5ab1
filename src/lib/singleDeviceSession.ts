@@ -15,19 +15,22 @@ function sessionKey(userId: string) {
 export async function claimSingleDeviceSession(userId: string) {
   if (typeof window === "undefined") return;
   const key = sessionKey(userId);
-  await supabase.from("active_user_sessions").upsert(
+  const { error } = await supabase.from("active_user_sessions").upsert(
     { user_id: userId, session_key: key, last_seen_at: new Date().toISOString() },
     { onConflict: "user_id" },
   );
+  // A migration may still be pending; do not disrupt the local login then.
+  return !error;
 }
 
 export async function ownsSingleDeviceSession(userId: string) {
   if (typeof window === "undefined") return true;
   const key = sessionKey(userId);
-  const { data } = await supabase
+  const { data, error } = await supabase
     .from("active_user_sessions")
     .select("session_key")
     .eq("user_id", userId)
     .maybeSingle();
+  if (error) return true;
   return !data || data.session_key === key;
 }
