@@ -699,3 +699,20 @@ test('CP: prescrição não usa trânsito unilateral, pena hipotética ou reiní
  assert.match(get(120).simples,/18.*declaratória.*sem efeito condenatório/);
  for(const n of [107,109,110,111,112,115,116,117,119,120])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
 });
+
+test('CP: vida e integridade preservam limites recentes e decisões cautelares',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-vida-integridade-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,15);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ assert.ok(!p.units.some(r=>['art-123','art-124','art-125','art-126'].includes(r.unit_key)));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(121).atencao.join(' '),/Não.*inciso.*revogados.*bis in idem/s);
+ assert.match(get('121-b').atencao.join(' '),/não.*rede de apoio.*não retroagem/si);
+ assert.match(get('121-b').simples,/10\/4\/2026.*15\/4\/2026/);
+ assert.match(get(128).atencao.join(' '),/não.*referendou.*24\/10\/2025.*não.*posteriores/si);
+ assert.match(get(129).pontos.join(' '),/15.455.*2\/7\/2026.*EXCEÇÃO/s);
+ assert.match(get(129).atencao.join(' '),/542.*incondicionada/);
+ assert.match(get(133).pontos.join(' '),/2 a.*5.*3 a.*7.*8 a.*14/);
+ assert.match(get(136).atencao.join(' '),/Não.*castigo físico moderado.*18-A/s);
+ for(const n of [121,'121-a','121-b',122,127,128,129,133,134,'135-a',136])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+});

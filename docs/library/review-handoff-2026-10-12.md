@@ -2,8 +2,8 @@
 
 ## Estado confirmado no banco
 
-3.511 dispositivos ativos: 1.289 com metadados de aprovação editorial atual
-(revisor, data e hash correspondente), 2.222 pendentes. São unidades da
+3.511 dispositivos ativos: 1.304 com metadados de aprovação editorial atual
+(revisor, data e hash correspondente), 2.207 pendentes. São unidades da
 biblioteca, não questões do treinador. Fonte: review-coverage-2026-10-12.json.
 
 Drogas 84/84; Desarmamento 41/41; Maria da Penha 56/56;
@@ -52,7 +52,7 @@ Consultar novamente remoto, alterações locais e banco antes de escrever.
 Não duplicar revisões ambientais. Pendências registradas:
 
 - CPP: 808.
-- Código Penal: 266; prioridade atual por orientação expressa do usuário.
+- Código Penal: 251; prioridade atual por orientação expressa do usuário.
 - CTB: 348.
 - ECA: 322.
 - LEP: 206.
@@ -93,7 +93,7 @@ Usuário informou 59%; não há medição automática de créditos.
 
 50 revisões novas confirmadas no banco: arts. 55–79, 80, 82–89, 91,
 91-A e 92–105. CP 120/401, 281 pendentes; global 1.274/3.511,
-2.222 pendentes. Comparação cumulativa preservou 3.463 explicações
+2.207 pendentes. Comparação cumulativa preservou 3.463 explicações
 alheias e sete tabelas, sem alterações de timestamps alheios.
 Primeiro bloco enviado em fa922c7; segundo bloco com pacote, dry-run,
 publicação, readback, autoria, fontes e alertas próprios.
@@ -106,8 +106,18 @@ Saldo de 59% foi informado pelo usuário, sem medição automática do corte de 
 ## CP — extinção e prescrição
 
 15 revisões novas nos arts. 106–120. CP135/401, 266 pendentes; global
-1.289/3.511, 2.222 pendentes. Corrigido art.112 com Tema788/STF
+1.289/3.511, 2.207 pendentes. Corrigido art.112 com Tema788/STF
 (ambas as partes e modulação), sem alegar leitura integral do acórdão
 ou certificação da fronteira temporal específica; consulta processual403.
 Readback preservou 3.498 explicações alheias e sete tabelas.
 Retomar art.121 e seguintes; informações de blocos anteriores são históricas.
+
+## CP — vida e integridade
+
+Mais15 revisões, totalizando30 neste trecho da continuidade. CP150/401,
+251 pendentes; global1.304/3.511,2.207 pendentes. Arts.123–126 preservados.
+338 testes, TypeScript e build passaram; readback confirmou15 gravações
+e preservou3.498 explicações e sete tabelas. Primeiro bloco integrado
+e enviado em9ad8998. Retomar arts.137 e seguintes após conferir concorrência.
+ADPF989/1207: cautelar não referendada em2025; não certificado todo mérito
+ou ausência de decisões posteriores em2026. Não ensinar MC isolada como vigente.

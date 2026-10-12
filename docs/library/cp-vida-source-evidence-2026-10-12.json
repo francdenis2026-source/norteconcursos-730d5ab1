@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-10-12T23:24:52.472902+00:00",
+  "sources": [
+    {
+      "id": "CP",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "4aa57b9f44b3fde54e7009d761c132c987cbc313684f847fca70e894d2f99611"
+    },
+    {
+      "id": "l14994",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm",
+      "sha256": "4f9a3f3149a070aac0bef6b9d9c356256e3c92102662cec1c13385b3a45e0d68"
+    },
+    {
+      "id": "l14811",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm",
+      "sha256": "9cc2332f620cc8d9509ef2f790d0754bdbd5b37376f0981c18a1a8c5425830ab"
+    },
+    {
+      "id": "l15159",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15159.htm",
+      "sha256": "796f1b4979290d164431aa7c189eb51a035214554dbe71dd406bb8327db2bad3"
+    },
+    {
+      "id": "l15134",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15134.htm",
+      "sha256": "fd51776e1d1fe5bc40ed552327f33726ba8c04ca0a7ce0f6fac0336626bdf5c7"
+    },
+    {
+      "id": "l15163",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15163.htm",
+      "sha256": "d145bba44d13d12a253c9f130c6d2c1866e28a34b09f494e203ed3f262870b16"
+    },
+    {
+      "id": "l15358",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+      "sha256": "578ce06691a64595e43a5d8615b55cfdbdbec672bb0548f3747091d51b5302ba"
+    },
+    {
+      "id": "l15455",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15455.htm",
+      "sha256": "0af64a674f12b7398228cef6299edc0e8e48e4fd0ee250c9d907a329e8180237"
+    },
+    {
+      "id": "l15384",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15384.htm",
+      "sha256": "a83e24ced86a5daa9c54bbaff17d1957e13bb8541e68c225c26fdc7634ece003"
+    },
+    {
+      "id": "STJ542",
+      "url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "sha256": "8a7298bfd40ecac21b31f15a6f9aef6a10a4fbbecdee4fac6fd665ebec338b82"
+    },
+    {
+      "id": "ECA18-A",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+      "sha256": "bdd8a0c25defd43564221a7751ad55d9c4ccbb1064b0a2ae17107b2b7abf7590"
+    },
+    {
+      "id": "ADPF54",
+      "url": "https://noticias.stf.jus.br/postsnoticias/mes-da-mulher-ha-onze-anos-stf-descriminalizou-a-interrupcao-da-gravidez-de-fetos-anencefalos/",
+      "sha256": "c0f1322b12cff46b7f2a4935343b94ea8e6dee94a6c6369665c84d608c0cad34"
+    },
+    {
+      "id": "ADPF989/1207 cautelar",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-derruba-liminar-que-autorizou-profissionais-de-enfermagem-a-realizar-aborto-legal/",
+      "sha256": "f2110934d28a487e43d6df801bd93db2cfdf64deec6800d996b8d1a939baff1c"
+    }
+  ],
+  "primary_audit": {
+    "rows": [
+      {
+        "slug": "codigo-penal",
+        "parsed_current": 401,
+        "database_current": 401,
+        "missing_articles": [],
+        "unexpected_current": [],
+        "text_differences": []
+      }
+    ]
+  },
+  "limitations": [
+    "ADPF54: consultada notícia institucional do julgamento de2012, sem alegar leitura integral do acórdão.",
+    "ADPF989/1207: consultada notícia de27/10/2025 sobre não referendo da cautelar; não certificado todo mérito posterior ou ausência de novas decisões até2026. Não utilizar referência MC como autorização atual universal.",
+    "Lei15.358: texto oficial e produção de efeitos conferidos; não declarado resolvido todo controle constitucional.",
+    "ECA18-A consultado como integração de maus-tratos; não registrada revisão geral do percurso ECA.",
+    "Não certificadas todas as teses de privilégio/qualificação, concurso de majorantes ou enquadramento de contágio."
+  ]
+}
