@@ -68,6 +68,10 @@ function CtbPanelPage() {
     () => RESOLUCOES.filter((r) => !qRes || norm(`${r.numero} ${r.assunto} ${r.situacao}`).includes(norm(qRes))),
     [qRes],
   );
+  const resolucoesVigentes = React.useMemo(
+    () => RESOLUCOES_COBRADAS.filter((r) => r.estado === "vigente"),
+    [],
+  );
 
   return (
     <div className="space-y-6">
@@ -241,11 +245,11 @@ function CtbPanelPage() {
             <CardHeader>
               <CardTitle className="text-base">Mais cobradas em concursos</CardTitle>
               <CardDescription>
-                Resoluções do edital da PRF, em ordem de questões no guia de estudo da TEC Concursos (fonte secundária: mostra tendência, não é dado oficial). O edital da PF 2025 não inclui trânsito nem resoluções do Contran. A coluna de situação vem da página oficial do Contran.
+                Resoluções confirmadas como vigentes, selecionadas pela tendência de cobrança no guia da TEC Concursos (fonte secundária). Itens revogados, alterados ou sem situação confirmada ficam fora desta lista de estudo. O edital da PF 2025 não inclui trânsito nem resoluções do Contran.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
-              {RESOLUCOES_COBRADAS.map((r) => (
+              {resolucoesVigentes.map((r) => (
                 <div key={r.numero} className="flex flex-col gap-1 rounded-md border p-3 text-sm sm:flex-row sm:items-center sm:justify-between">
                   <span><strong>Res. {r.numero}</strong> · {r.assunto}</span>
                   <span className="flex shrink-0 items-center gap-2">
