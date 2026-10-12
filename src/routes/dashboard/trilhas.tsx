@@ -71,26 +71,32 @@ function Quiz({ lesson }: { lesson: TrackLesson }) {
   );
 }
 
-/** Liga a aula ao restante da plataforma: artigos de lei sobre o tema, dicionário e questões. */
-function Complement({ lesson }: { lesson: TrackLesson }) {
+/** Matérias cujo conteúdo está na Biblioteca de leis; nas demais, buscar artigos de lei não faz sentido. */
+const LAW_TRACKS = new Set(["constitucional", "administrativo", "direitos-humanos"]);
+
+/** Liga a aula ao restante da plataforma; artigos de lei só aparecem nas matérias de direito. */
+function Complement({ lesson, trackSlug }: { lesson: TrackLesson; trackSlug: string }) {
   const { user } = useAuthStatus();
+  const isLaw = LAW_TRACKS.has(trackSlug);
+  const query = lesson.title.replace(/\s*\(.*?\)\s*/g, " ").trim();
+  const chip = "rounded-md border px-3 py-1.5 hover:bg-muted/50";
   return (
     <section className="space-y-3" aria-label="Material complementar">
       <h3 className="text-base font-semibold">Aprofunde na plataforma</h3>
       <div className="flex flex-wrap gap-2 text-sm">
-        <Link to="/dashboard/library" search={{ q: lesson.title, back: undefined }} className="rounded-md border px-3 py-1.5 hover:bg-muted/50">Biblioteca de leis</Link>
-        <Link to="/dashboard/dicionario" search={{ q: lesson.title } as never} className="rounded-md border px-3 py-1.5 hover:bg-muted/50">Dicionário</Link>
-        <Link to="/dashboard/question-bank" className="rounded-md border px-3 py-1.5 hover:bg-muted/50">Questões</Link>
-        <Link to="/dashboard/study-tools" className="rounded-md border px-3 py-1.5 hover:bg-muted/50">Foco e revisão</Link>
+        {isLaw && <Link to="/dashboard/library" search={{ q: query, back: undefined }} className={chip}>Biblioteca de leis</Link>}
+        <Link to="/dashboard/dicionario" search={{ q: query } as never} className={chip}>Dicionário</Link>
+        <Link to="/dashboard/question-bank" className={chip}>Questões</Link>
+        <Link to="/dashboard/study-tools" className={chip}>Foco e revisão</Link>
       </div>
-      {user && user.id !== "demo-user" && <ContentSearchResults query={lesson.title} userId={user.id} />}
+      {isLaw && user && user.id !== "demo-user" && <ContentSearchResults query={query} userId={user.id} hideEmpty />}
     </section>
   );
 }
 
-type LessonProps = { lesson: TrackLesson; done: boolean; toggleDone: () => void; onNext?: () => void; onPrev?: () => void };
+type LessonProps = { trackSlug: string; lesson: TrackLesson; done: boolean; toggleDone: () => void; onNext?: () => void; onPrev?: () => void };
 
-function Lesson({ lesson, onNext, onPrev, done, toggleDone }: LessonProps) {
+function Lesson({ trackSlug, lesson, onNext, onPrev, done, toggleDone }: LessonProps) {
   return (
     <article className="surface-card space-y-5 p-5 sm:p-7">
       <header className="border-b pb-4">
@@ -114,7 +120,7 @@ function Lesson({ lesson, onNext, onPrev, done, toggleDone }: LessonProps) {
         <h3 className="text-sm font-semibold">Atenção: onde o candidato erra</h3>
         <ul className="mt-1 list-disc space-y-1 pl-5 leading-7">{lesson.atencao.map((p) => <li key={p}><GlossaryText text={p} /></li>)}</ul>
       </section>
-      <Complement lesson={lesson} />
+      <Complement lesson={lesson} trackSlug={trackSlug} />
       <Quiz lesson={lesson} key={`q-${lesson.id}`} />
       <footer className="flex flex-wrap items-center gap-2 border-t pt-4">
         <Button variant={done ? "outline" : "default"} onClick={toggleDone}>
@@ -190,6 +196,7 @@ function TracksPage() {
           ))}
         </aside>
         <Lesson
+          trackSlug={track.slug}
           key={lesson.id}
           lesson={lesson}
           done={done.includes(lesson.id)}

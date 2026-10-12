@@ -4,10 +4,11 @@ import { useContentSearch } from "@/lib/contentSearch";
 import { searchGlossary } from "@/lib/glossary";
 
 /** Resultados da busca dentro das leis: mostra a lei (matéria), o capítulo (assunto) e o artigo, e abre direto no ponto certo. */
-export function ContentSearchResults({ query, userId }: { query: string; userId: string }) {
+export function ContentSearchResults({ query, userId, hideEmpty = false }: { query: string; userId: string; hideEmpty?: boolean }) {
   const { data, isFetching, isError } = useContentSearch(query, userId);
   const terms = query.trim().length >= 3 ? searchGlossary(query).slice(0, 3) : [];
   if (query.trim().length < 3) return null;
+  if (hideEmpty && data && data.length === 0 && !isFetching) return null;
   return (
     <section className="surface-card space-y-3 p-4" aria-label="Resultados nos artigos">
       <header className="flex items-center justify-between gap-2">
