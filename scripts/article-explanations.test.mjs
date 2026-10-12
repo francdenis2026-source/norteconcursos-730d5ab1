@@ -635,3 +635,17 @@ test('CP: aplicação e teoria preservam limites e impedem literalidade históri
  assert.match(get(25).pontos.join(' '),/observar o caput/);
  for(const n of [9,10,11,23,25,26])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
 });
+
+test('CP: penas separam regimes, multa e texto residual de substituição',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-penas-2026-10-12.json','utf8'));
+ assert.equal(p.units.length,20);assert.ok(p.units.every(r=>r.expected&&r.prova.length>=2&&r.exemplo.includes('Variação:')));
+ assert.ok(!p.units.some(r=>['art-42','art-43','art-47'].includes(r.unit_key)));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(33).atencao.join(' '),/Súmula 269.*440/);
+ assert.match(get(35).atencao.join(' '),/faculdade/);
+ assert.match(get(46).pontos.join(' '),/SUPERIOR a 6/);
+ assert.match(get(49).pontos.join(' '),/10 a 360/);
+ assert.match(get(51).atencao.join(' '),/antiga conversão/);
+ assert.match(get(54).atencao.join(' '),/proibição geral atual/);
+ for(const n of [33,35,36,39,41,44,51,54])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+});

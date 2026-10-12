@@ -25,6 +25,16 @@
       "id": "STF",
       "url": "https://noticias.stf.jus.br/postsnoticias/decisoes-que-asseguraram-direitos-das-mulheres-marcam-historia-do-stf-como-tribunal-constitucional/",
       "sha256": "95a0f32cccda56a7e858b705b051ca54e169824419913d326c87e22ffc044e00"
+    },
+    {
+      "id": "LEP",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "sha256": "297d4d734cfbe0df53d058fc8f335bd2856ae4497b0d5e3f3c3a27090b84a464"
+    },
+    {
+      "id": "Saúde mental",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+      "sha256": "a077b4b292b9001c01e4374c4044c255d4bdf1faed329c189085903f1938ce16"
     }
   ],
   "primary_audit": {

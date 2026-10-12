@@ -2,8 +2,8 @@
 
 ## Estado confirmado no banco
 
-3.511 dispositivos ativos: 1.174 com metadados de aprovação editorial atual
-(revisor, data e hash correspondente), 2.337 pendentes. São unidades da
+3.511 dispositivos ativos: 1.224 com metadados de aprovação editorial atual
+(revisor, data e hash correspondente), 2.287 pendentes. São unidades da
 biblioteca, não questões do treinador. Fonte: review-coverage-2026-10-12.json.
 
 Drogas 84/84; Desarmamento 41/41; Maria da Penha 56/56;
@@ -25,13 +25,33 @@ Os alertas de aplicação bloqueiam treino automático de literalidade nos
 arts. 49, 60, 67, 71 e 79-A. A implantação desses alertas no domínio público
 não se presume pelo push; publicação no banco tem readback independente.
 
+## Código Penal — continuidade posterior
+
+50 revisões novas em dois blocos: arts. 2–31 e 32–41/44–46/48–54.
+CP chegou a 70/401, com 331 pendentes; fonte compilada comparada aos 401
+ativos sem diferenças. 50 casos, 50 variações e 100 perguntas respondidas,
+sem questões novas no treinador. A leitura completa preservou as outras
+3.463 explicações e sete tabelas. Primeiro envio: 108cf1c.
+
+Constituição, Lei 9.069, Lei 10.216, LEP e PDF oficial STJ consultados.
+ADPF 779: publicação institucional confirma julgamento de 2023, sem alegar
+leitura integral do acórdão; consulta processual retornou 403.
+Regime inicial, substituição, saúde mental, multa e referência residual
+do art. 54 têm qualificações; não se certifica toda política ou decisão
+específica da execução penal. 321 testes, TypeScript e build passaram
+antes da integração final das alterações remotas.
+
+Retomar CP nos arts. 55 e seguintes conforme cp-checkpoint-2026-10-12.json,
+conferindo novamente banco e revisões concorrentes. Usuário informou 70%
+do limite; isso não é leitura automática nem demonstra chegada aos 5%.
+
 ## Retomada
 
 Consultar novamente remoto, alterações locais e banco antes de escrever.
 Não duplicar revisões ambientais. Pendências registradas:
 
 - CPP: 808.
-- Código Penal: 381.
+- Código Penal: 331; prioridade atual por orientação expressa do usuário.
 - CTB: 348.
 - ECA: 322.
 - LEP: 206.

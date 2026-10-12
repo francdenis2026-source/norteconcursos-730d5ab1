@@ -1,0 +1,496 @@
+{
+  "course_slug": "codigo-penal",
+  "units": {
+    "art-32": {
+      "simples": "O Código enumera penas privativas de liberdade, restritivas de direitos e multa. Cada categoria tem seus requisitos e efeitos; restritiva de direitos não é sinônimo de restrição da liberdade em estabelecimento penal.",
+      "pontos": [
+        "Três categorias expressas: privação de liberdade, restrição de direitos e multa.",
+        "Medida de segurança não aparece como quarta pena nessa enumeração."
+      ],
+      "atencao": [
+        "Não confundir multa criminal com sanção administrativa. A enumeração não autoriza aplicar qualquer espécie sem o tipo e as regras de dosimetria pertinentes."
+      ],
+      "exemplo": "A questão classifica prestação de serviços como espécie de prisão. Variação: Se a sanção é multa penal, identificar o regime próprio, não os tetos de multa administrativa ambiental.",
+      "prova": [
+        "Restritiva de direitos é necessariamente prisão? Não; é categoria distinta.",
+        "A enumeração permite inventar uma quarta pena? Não; indica as três espécies, sem dispensar seus regimes."
+      ],
+      "termos": [
+        {
+          "termo": "Espécie de pena",
+          "significado": "Categoria legal da sanção, distinta de regime prisional ou medida de segurança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-33": {
+      "simples": "O regime inicial considera espécie da pena, quantidade, reincidência e circunstâncias judiciais. Reclusão admite os três regimes; detenção inicia em semiaberto ou aberto, ressalvada transferência. Regime mais rigoroso não decorre apenas da gravidade abstrata do delito.",
+      "pontos": [
+        "Superior a 8 anos: fechado no recorte legal; mais de 4 até 8 e não reincidente: observar semiaberto.",
+        "Até 4 anos e não reincidente: aberto pode ser cabível, com circunstâncias pertinentes.",
+        "Súmulas STJ 269 e 440 qualificam reincidência e gravidade abstrata."
+      ],
+      "atencao": [
+        "Não ensinar regime automático só pelo número da pena. A Súmula 269 admite semiaberto ao reincidente com até 4 anos e circunstâncias favoráveis; a 440 afasta agravamento só por gravidade abstrata com pena-base mínima. Progressão depende também da LEP vigente."
+      ],
+      "exemplo": "Reincidente com pena de até 4 anos e circunstâncias favoráveis é apresentado como obrigatoriamente fechado apenas pela reincidência. Variação: Se existem circunstâncias concretas desfavoráveis legitimamente valoradas, a análise muda; não transformar a súmula em direito universal ao regime mais leve.",
+      "prova": [
+        "Reincidência sempre impõe fechado nessa hipótese? Não; a Súmula 269 admite semiaberto nas condições indicadas.",
+        "Gravidade abstrata, sozinha, basta no recorte da Súmula 440? Não; ela veda esse fundamento isolado."
+      ],
+      "termos": [
+        {
+          "termo": "Regime inicial",
+          "significado": "Forma inicial de cumprimento fixada segundo requisitos e fundamentação pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-34": {
+      "simples": "No regime fechado, o Código disciplina classificação inicial e trabalho, incluindo hipótese de trabalho externo em serviços ou obras públicas. O regime não torna toda atividade externa juridicamente impossível, mas exige os requisitos da execução.",
+      "pontos": [
+        "Trabalho interno conforme aptidões e compatibilidade com a execução.",
+        "§3º admite trabalho externo em serviços OU obras públicas.",
+        "Classificação inicial não deve ser confundida com exame para progressão."
+      ],
+      "atencao": [
+        "Admissibilidade não é autorização automática de saída. Conferir condições e decisão no regime da LEP; não usar o exame inicial para resolver toda controvérsia atual sobre progressão."
+      ],
+      "exemplo": "Uma questão afirma que o regime fechado proíbe absolutamente trabalho externo em obra pública. Variação: A existência de obra pública não concede por si autorização: as condições concretas e o procedimento da execução ainda precisam ser atendidos.",
+      "prova": [
+        "O CP contém hipótese de trabalho externo no fechado? Sim; serviços ou obras públicas.",
+        "A previsão libera automaticamente qualquer condenado? Não; a admissibilidade exige regime e requisitos pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Trabalho externo",
+          "significado": "Atividade fora do estabelecimento admitida na hipótese e nas condições legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-35": {
+      "simples": "O regime semiaberto prevê trabalho comum diurno em colônia ou estabelecimento similar, admite trabalho externo e frequência a cursos indicados. As remissões sobre classificação devem ser integradas à LEP, sem confundir exame inicial e progressão.",
+      "pontos": [
+        "Trabalho externo é admissível.",
+        "Cursos profissionalizantes, ensino médio ou superior constam do §2º.",
+        "O artigo não transforma toda atividade externa em autorização irrestrita."
+      ],
+      "atencao": [
+        "Conferir a LEP para procedimento, requisitos e exame de classificação. O parágrafo do art. 8º da LEP usa faculdade para o semiaberto; não deduzir obrigação universal de exame só da remissão isolada do CP nem resolver a progressão atual por ela."
+      ],
+      "exemplo": "Condenado no semiaberto busca frequentar curso superior nas condições da execução. Variação: Se apenas informa matrícula e pretende sair sem observar as condições e decisões pertinentes, a previsão do §2º não dispensa o procedimento.",
+      "prova": [
+        "O CP admite frequência a curso superior? Sim; está no §2º.",
+        "O artigo basta para autorizar qualquer saída sem condições? Não; integrar a disciplina da execução."
+      ],
+      "termos": [
+        {
+          "termo": "Semiaberto",
+          "significado": "Regime com as atividades admitidas e restrições legais, distinto de liberdade irrestrita."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-36": {
+      "simples": "O regime aberto se baseia em autodisciplina e responsabilidade, com atividade autorizada fora e recolhimento noturno e em folgas. A regra de transferência inclui condições específicas, como o não pagamento de multa quando o condenado podia pagá-la.",
+      "pontos": [
+        "Atividades externas não eliminam o recolhimento previsto no texto.",
+        "Não pagamento: o §2º exige a condição de poder pagar.",
+        "Regressão depende da disciplina e das garantias da execução."
+      ],
+      "atencao": [
+        "Não impor regressão automática pela pobreza nem transformar desemprego em descumprimento presumido. Requisitos, capacidade econômica e procedimento precisam ser examinados."
+      ],
+      "exemplo": "A questão pretende transferir o condenado de regime só porque não pagou a multa, sem analisar sua possibilidade de pagamento. Variação: Se a capacidade de pagar é demonstrada e há descumprimento pertinente, examinar a hipótese e o procedimento, sem equipará-la à impossibilidade econômica.",
+      "prova": [
+        "O texto ignora a capacidade de pagar? Não; usa se podendo.",
+        "Aberto significa ausência de qualquer recolhimento? Não; o §1º prevê período noturno e dias de folga."
+      ],
+      "termos": [
+        {
+          "termo": "Autodisciplina",
+          "significado": "Base do regime aberto com deveres e condições legais, não liberdade sem regras."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-37": {
+      "simples": "As mulheres cumprem pena em estabelecimento próprio, com observância dos deveres e direitos inerentes à sua condição e das regras cabíveis do capítulo. A norma não afasta a proteção da pessoa presa nem toda disciplina de execução.",
+      "pontos": [
+        "Estabelecimento próprio e direitos/deveres pertinentes.",
+        "Regras do capítulo aplicam-se no que couber."
+      ],
+      "atencao": [
+        "O artigo não fixa prazo de licença, regime automático ou suspensão universal da pena por gravidez. Saúde, maternidade e situações concretas exigem normas e garantias próprias."
+      ],
+      "exemplo": "A administração sustenta que o estabelecimento próprio afasta todos os direitos gerais de quem cumpre pena. Variação: Se a questão pede proteção específica de maternidade, buscar o regime próprio sem inventar seu prazo neste artigo.",
+      "prova": [
+        "Estabelecimento próprio elimina os direitos gerais? Não; observar os direitos pertinentes e o capítulo no que couber.",
+        "O artigo fixa sozinho todos os efeitos da gravidez na execução? Não; não contém essa disciplina completa."
+      ],
+      "termos": [
+        {
+          "termo": "Regime especial",
+          "significado": "Previsão de estabelecimento e condições pertinentes, integrada aos direitos de execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-38": {
+      "simples": "A prisão não elimina os direitos não atingidos pela perda da liberdade. Todas as autoridades devem respeitar integridade física e moral, sem transformar execução penal em autorização para violência ou humilhação.",
+      "pontos": [
+        "Conservação dos direitos não atingidos pela perda da liberdade.",
+        "Integridade física E moral obrigatória para todas as autoridades."
+      ],
+      "atencao": [
+        "Nem todo direito é exercido da mesma forma fora da prisão, mas restrições exigem fundamento. Condenação não autoriza retirar indiscriminadamente todos os direitos."
+      ],
+      "exemplo": "Uma autoridade afirma que a condenação permite humilhação porque o preso perdeu todos os direitos. Variação: Uma restrição efetivamente pertinente à perda da liberdade precisa ser distinguida de violação da integridade ou retirada de direito não atingido.",
+      "prova": [
+        "O preso perde todos os direitos? Não; conserva os não atingidos pela perda da liberdade.",
+        "A proteção se limita a ferimentos físicos? Não; a integridade moral também está expressa."
+      ],
+      "termos": [
+        {
+          "termo": "Integridade moral",
+          "significado": "Proteção contra violações que não se limitam à dimensão física, inclusive tratamento degradante."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-39": {
+      "simples": "O trabalho do preso tem remuneração e proteção previdenciária na disciplina pertinente. É diferente da prestação de serviços à comunidade como pena restritiva, cujas tarefas são gratuitas; não misturar os dois institutos.",
+      "pontos": [
+        "Trabalho do preso: sempre remunerado conforme o regime legal.",
+        "A regulamentação define condições e direitos pertinentes."
+      ],
+      "atencao": [
+        "Não deduzir vínculo CLT, salário mínimo integral ou benefício previdenciário automático sem requisitos só desta frase. A execução tem disciplina especial; tarefas gratuitas do art. 46 são outro instituto."
+      ],
+      "exemplo": "A questão usa a gratuidade da prestação de serviços para negar toda remuneração do trabalho prisional. Variação: Se o caso é pena de prestação de serviços à comunidade, a gratuidade do art. 46 não é contrariada por esta regra do trabalho do preso.",
+      "prova": [
+        "Trabalho prisional e pena de serviços são idênticos? Não; têm regimes distintos.",
+        "O art. 39, sozinho, garante qualquer benefício sem requisitos? Não; a disciplina e seus pressupostos precisam ser observados."
+      ],
+      "termos": [
+        {
+          "termo": "Trabalho prisional",
+          "significado": "Trabalho no regime de execução, distinto de pena substitutiva de tarefas comunitárias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-40": {
+      "simples": "A legislação especial disciplina direitos, deveres, regimes e infrações na execução. A remissão impede resolver toda a execução apenas pelos dispositivos gerais do CP, sem autorizar criação livre de sanções pela administração.",
+      "pontos": [
+        "Direitos e trabalho dos arts. 38/39 são integrados à legislação especial.",
+        "Revogação/transferência de regimes e disciplina exigem as regras próprias."
+      ],
+      "atencao": [
+        "Não usar a remissão como autorização para inventar infração ou afastar defesa. Identificar a norma especial pertinente, especialmente a LEP."
+      ],
+      "exemplo": "Uma questão afirma que todo procedimento de regressão pode ser resolvido pelo CP sem consultar a legislação de execução. Variação: A autoridade invoca a remissão para criar sanção sem base: regular por legislação especial não significa delegação irrestrita para punir.",
+      "prova": [
+        "A norma afasta a legislação especial? Não; expressamente remete a ela.",
+        "A remissão elimina garantias do processo de execução? Não; não contém essa dispensa."
+      ],
+      "termos": [
+        {
+          "termo": "Legislação de execução",
+          "significado": "Regime especial que integra as regras gerais e disciplina suas condições concretas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-41": {
+      "simples": "Doença mental superveniente à condenação exige tratamento adequado na disciplina da execução e da proteção à saúde mental. A redação histórica sobre hospital de custódia não autoriza resposta asilar automática, indefinida ou sem avaliação técnica.",
+      "pontos": [
+        "Distinguir doença superveniente de inimputabilidade no momento do fato do art. 26.",
+        "Lei 10.216: internação depende da insuficiência de recursos extra-hospitalares e de laudo circunstanciado.",
+        "Garantias e cuidado adequado precisam integrar a leitura do dispositivo."
+      ],
+      "atencao": [
+        "Não certificar nesta revisão toda regulamentação da política antimanicomial. Diagnóstico não cria nova pena perpétua; conversão, suspensão ou cuidado dependem da situação e normas pertinentes, sem internação automática pela frase isolada."
+      ],
+      "exemplo": "O transtorno surge durante a execução e a autoridade pretende impor internação automática apenas pelo diagnóstico. Variação: Se os requisitos técnicos e legais indicam tratamento específico, avaliar sua forma adequada; isso não transforma a pessoa retroativamente em inimputável ao tempo do fato.",
+      "prova": [
+        "Doença surgida depois prova inimputabilidade no momento do crime? Não; os momentos são diferentes.",
+        "A Lei 10.216 exige laudo para internação? Sim; e a insuficiência dos recursos extra-hospitalares deve ser considerada."
+      ],
+      "termos": [
+        {
+          "termo": "Superveniência",
+          "significado": "Surgimento posterior à situação inicial, que exige distinguir os momentos e regimes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-44": {
+      "simples": "A substituição por penas restritivas exige os critérios objetivos e subjetivos do artigo e as ressalvas pertinentes. Crimes dolosos e culposos têm recortes diferentes; reincidência também deve ser lida com a exceção do §3º e regimes especiais.",
+      "pontos": [
+        "Dolo: até 4 anos e sem violência/grave ameaça à pessoa, com os demais requisitos.",
+        "Culpa: o inciso I não fixa esse limite de quantidade.",
+        "§3º: reincidência pode admitir substituição nas condições legais; Súmula 588/STJ qualifica violência doméstica."
+      ],
+      "atencao": [
+        "Pena curta não assegura substituição automática. Não confundir restritiva com regime aberto nem copiar proibição absoluta de leis especiais já afastada sem consultar a decisão e seus requisitos."
+      ],
+      "exemplo": "Crime culposo tem pena superior a 4 anos; a questão nega a substituição apenas por esse número. Variação: Num crime doloso com violência à pessoa, o raciocínio objetivo é diferente; não estender a regra culposa automaticamente.",
+      "prova": [
+        "Todo crime culposo é excluído porque a pena excede 4 anos? Não por esse único critério; examinar os demais requisitos.",
+        "Até 4 anos garante sempre substituição? Não; há condições cumulativas e qualificações pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Substituição",
+          "significado": "Troca da pena privativa por sanções restritivas na hipótese legal, distinta de mudança de regime."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-45": {
+      "simples": "Prestação pecuniária é paga à vítima, dependentes ou entidade com destinação social no limite legal; prestação de outra natureza exige aceitação. Perda de bens tem destino e teto próprios, distintos da multa penal calculada em dias-multa.",
+      "pontos": [
+        "Prestação pecuniária: de 1 a 360 salários mínimos.",
+        "Dedução na reparação civil depende de coincidência dos beneficiários.",
+        "Prestação de outra natureza exige aceitação; perda de bens vai ao fundo na hipótese, com teto definido pelo maior valor indicado."
+      ],
+      "atencao": [
+        "Não transformar prestação pecuniária em multa criminal nem deduzir automaticamente de qualquer reparação civil com beneficiário diferente. Respeitar a ressalva da legislação especial."
+      ],
+      "exemplo": "O pagamento pecuniário e a condenação civil têm beneficiários coincidentes nas condições do §1º. Variação: Se os beneficiários diferem, não afirmar a mesma dedução automática pela regra do artigo.",
+      "prova": [
+        "Prestação de outra natureza dispensa aceitação? Não; o §2º exige a aceitação do beneficiário.",
+        "A dedução civil ignora quem recebe? Não; a coincidência é condição expressa."
+      ],
+      "termos": [
+        {
+          "termo": "Prestação pecuniária",
+          "significado": "Pena restritiva com destinatários e limites próprios, diferente de dias-multa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-46": {
+      "simples": "Prestação de serviços consiste em tarefas gratuitas, atribuídas conforme aptidões e sem prejudicar a jornada normal de trabalho. O artigo estabelece limite para sua aplicação e disciplina cumprimento em menor tempo em hipótese específica.",
+      "pontos": [
+        "Aplicação a condenação SUPERIOR a 6 meses.",
+        "Uma hora de tarefa por dia de condenação, sem prejudicar trabalho normal.",
+        "Pena substituída superior a 1 ano: cumprimento abreviado nunca inferior à metade."
+      ],
+      "atencao": [
+        "Não tratar exatamente 6 meses como superior a 6. Gratuidade das tarefas comunitárias não altera o regime de remuneração do trabalho prisional."
+      ],
+      "exemplo": "A pena é exatamente de 6 meses e a questão afirma que o requisito de superioridade do caput está preenchido. Variação: Com pena superior ao limite, o requisito objetivo do caput muda, mas ainda se verificam os requisitos da substituição e execução.",
+      "prova": [
+        "Exatamente 6 meses é superior a 6? Não; essa distinção é do caput.",
+        "Pode abreviar abaixo da metade na hipótese do §4º? Não; há limite expresso."
+      ],
+      "termos": [
+        {
+          "termo": "Tarefas gratuitas",
+          "significado": "Atividades da pena comunitária, sem confusão com trabalho prisional remunerado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-48": {
+      "simples": "A limitação de fim de semana exige permanência por cinco horas em cada sábado e domingo em local adequado. Durante ela, atividades educativas, cursos e palestras podem ser oferecidos; não é prisão contínua durante todo o fim de semana.",
+      "pontos": [
+        "5 horas DIÁRIAS aos sábados e domingos.",
+        "Cursos, palestras e atividades educativas são previstos como possibilidade."
+      ],
+      "atencao": [
+        "Não converter cinco horas diárias em cinco horas no total dos dois dias. Condições concretas dependem da execução e do estabelecimento pertinente."
+      ],
+      "exemplo": "A questão soma sábado e domingo e fixa apenas cinco horas para todo o fim de semana. Variação: Se indica cinco horas em cada dia, corresponde ao parâmetro textual, sem concluir que dispensa o restante do procedimento de execução.",
+      "prova": [
+        "São cinco horas por fim de semana inteiro? Não; são diárias nos dois dias.",
+        "O texto proíbe atividades educativas? Não; o parágrafo prevê sua possibilidade."
+      ],
+      "termos": [
+        {
+          "termo": "Limitação de fim de semana",
+          "significado": "Restrição com permanência nos períodos indicados, distinta de recolhimento integral de 48 horas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-49": {
+      "simples": "A multa penal combina número de dias-multa e valor de cada dia, com atualização na execução. Não é o mesmo regime de prestação pecuniária, nem se deve aplicar um salário mínimo atual sem observar o marco indicado para o valor-base.",
+      "pontos": [
+        "Regra geral do artigo: 10 a 360 dias-multa.",
+        "Valor do dia: entre 1/30 e 5 vezes o salário mínimo indicado ao tempo do fato.",
+        "Na execução, há atualização por índices pertinentes."
+      ],
+      "atencao": [
+        "Legislação especial pode fixar outro intervalo de dias-multa. Não confundir número de dias com valor de cada dia ou omitir a atualização na execução."
+      ],
+      "exemplo": "A sentença define 20 dias-multa; o candidato trata isso como 20 reais independentemente do valor do dia. Variação: Com o valor do dia identificado, calcula-se a quantidade vezes o valor, observadas as regras e atualização pertinentes.",
+      "prova": [
+        "Dias-multa e reais são unidades idênticas? Não; um é quantidade, o outro depende do valor fixado.",
+        "O intervalo deste artigo deve ser copiado para toda lei especial? Não; verificar eventual disciplina diversa."
+      ],
+      "termos": [
+        {
+          "termo": "Dia-multa",
+          "significado": "Unidade de quantidade cujo valor é fixado separadamente para compor a multa penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-50": {
+      "simples": "O artigo prevê prazo textual de dez dias após trânsito em julgado e admite parcelamento a requerimento, conforme as circunstâncias. Desconto em salário tem hipóteses e proteção dos recursos indispensáveis à subsistência.",
+      "pontos": [
+        "Parcelamento é possível, não automático nem proibido em absoluto.",
+        "Desconto não deve atingir os recursos indispensáveis do condenado e família.",
+        "Procedimento de cobrança deve ser integrado à execução penal."
+      ],
+      "atencao": [
+        "Não impor desconto universal em toda folha nem concluir prisão automática por inadimplência. O prazo textual não substitui o procedimento e a intimação exigidos no caso."
+      ],
+      "exemplo": "O desconto proposto consome recursos indispensáveis à manutenção do condenado e de sua família. Variação: Se o pedido é de parcelamento, avaliar as circunstâncias e decisão competente, não negar porque o texto menciona dez dias.",
+      "prova": [
+        "Parcelamento é sempre vedado? Não; o artigo admite conforme as condições.",
+        "O desconto pode ignorar subsistência familiar? Não; o §2º protege esses recursos."
+      ],
+      "termos": [
+        {
+          "termo": "Parcelamento",
+          "significado": "Possibilidade de pagamento em parcelas mediante requerimento e condições pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-51": {
+      "simples": "A multa é executada perante o juiz da execução penal e considerada dívida de valor, com integração das normas de dívida ativa nos pontos indicados. Isso não restaura os parágrafos revogados nem autoriza convertê-la em prisão por simples inadimplência.",
+      "pontos": [
+        "Redação de 2019: execução perante juiz da execução penal.",
+        "Regras de dívida ativa incluem causas interruptivas e suspensivas da prescrição.",
+        "§§1º e 2º estão revogados."
+      ],
+      "atencao": [
+        "Não ensinar como vigente a antiga conversão da multa em detenção. O artigo remete à ADI 7032; legitimidade de cobrança, efeitos da hipossuficiência e extinção exigem análise específica, não se certificando aqui todos os desdobramentos da decisão."
+      ],
+      "exemplo": "Uma questão usa os parágrafos revogados para converter automaticamente multa não paga em detenção. Variação: Cobrança de dívida de valor no regime atual é outra hipótese; não significa restaurar uma privação de liberdade revogada.",
+      "prova": [
+        "O tipo dívida de valor elimina o juiz de execução indicado? Não; o caput o menciona expressamente.",
+        "Parágrafos revogados autorizam prisão automática? Não; não são disciplina vigente."
+      ],
+      "termos": [
+        {
+          "termo": "Dívida de valor",
+          "significado": "Qualificação da multa com integração das normas indicadas, sem restauração da conversão revogada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-52": {
+      "simples": "Doença mental que sobrevém ao condenado suspende a execução da multa pela redação do artigo. Suspender execução não equivale a extinguir o débito ou a transformar qualquer diagnóstico em efeito automático sem apuração pertinente.",
+      "pontos": [
+        "Efeito textual: suspensão da execução da multa.",
+        "Distinguir suspensão de extinção e doença superveniente de situação ao tempo do crime."
+      ],
+      "atencao": [
+        "Avaliação e garantias de saúde mental são necessárias; não afirmar cancelamento universal da condenação ou conversão em prisão a partir desta regra."
+      ],
+      "exemplo": "A hipótese legal de doença mental superveniente é reconhecida e a questão descreve suspensão da execução da multa. Variação: Se a questão afirma extinção definitiva automática do débito, está mudando o efeito indicado pelo artigo.",
+      "prova": [
+        "Suspender e extinguir são sinônimos aqui? Não; a redação determina suspensão.",
+        "O artigo manda converter a multa em prisão? Não; não contém essa consequência."
+      ],
+      "termos": [
+        {
+          "termo": "Suspensão da execução",
+          "significado": "Paralisação da execução na hipótese pertinente, sem equivalência automática a extinção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-53": {
+      "simples": "Os limites das penas privativas de liberdade estão na sanção de cada tipo penal. A norma orienta identificar o crime efetivamente aplicável antes de usar um intervalo de pena, sem inventar máximo geral único para todo delito.",
+      "pontos": [
+        "Mínimo e máximo do tipo não são intercambiáveis entre crimes.",
+        "Dosimetria e causas de alteração devem ser integradas às regras próprias."
+      ],
+      "atencao": [
+        "Não confundir pena máxima abstrata do tipo com limite de cumprimento do art. 75. Causas de aumento ou diminuição e concurso têm efeitos próprios."
+      ],
+      "exemplo": "A questão usa a faixa de um crime como pena de outro apenas porque pertencem ao mesmo capítulo. Variação: Se o problema pede limite de cumprimento, consultar o art. 75 e seu âmbito, não substituir por qualquer máximo abstrato.",
+      "prova": [
+        "Crimes no mesmo capítulo sempre têm a mesma pena? Não; a sanção de cada tipo precisa ser identificada.",
+        "Máximo abstrato e limite de cumprimento são sempre o mesmo conceito? Não; correspondem a regras distintas."
+      ],
+      "termos": [
+        {
+          "termo": "Pena abstrata",
+          "significado": "Sanção cominada ao tipo, distinta da pena aplicada e do limite de cumprimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-54": {
+      "simples": "O dispositivo prevê aplicação de restritivas independentemente de previsão expressa em cada tipo da Parte Especial. Sua referência antiga a pena inferior a um ano deve ser integrada aos requisitos ampliados do art. 44 pela Lei 9.714/1998.",
+      "pontos": [
+        "Não é necessária enumeração da restritiva em cada tipo da Parte Especial.",
+        "Art. 44 atual disciplina até 4 anos em crimes dolosos nas condições previstas e regra própria para culpa."
+      ],
+      "atencao": [
+        "Não usar a frase inferior a um ano como proibição geral atual de substituir penas entre um e quatro anos. O artigo remissivo não revoga os requisitos atuais do art. 44."
+      ],
+      "exemplo": "Uma questão nega substituição a pena dolosa de dois anos exclusivamente pela frase inferior a um ano do art. 54. Variação: Se há violência/grave ameaça à pessoa ou falta outro requisito do art. 44, a análise pode negar substituição por esse motivo, não pelo limite antigo isolado.",
+      "prova": [
+        "É preciso que cada tipo liste todas as restritivas? Não; o artigo admite aplicação independentemente dessa cominação.",
+        "Dois anos sempre impedem substituição pela referência do art. 54? Não; integrar os requisitos atuais do art. 44."
+      ],
+      "termos": [
+        {
+          "termo": "Integração normativa",
+          "significado": "Leitura coerente com a disciplina posterior vigente, sem usar trecho residual como veto geral."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    }
+  }
+}
