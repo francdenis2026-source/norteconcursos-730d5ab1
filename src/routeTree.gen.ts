@@ -63,6 +63,7 @@ import { Route as DashboardStudyRoomRouteImport } from './routes/dashboard/study
 import { Route as DashboardStudyToolsRouteImport } from './routes/dashboard/study-tools'
 import { Route as DashboardSubscriptionsRouteImport } from './routes/dashboard/subscriptions'
 import { Route as DashboardTimerRouteImport } from './routes/dashboard/timer'
+import { Route as DashboardTrilhasRouteImport } from './routes/dashboard/trilhas'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
 import { Route as DashboardAdminStudentIdRouteImport } from './routes/dashboard/admin-student.$id'
 import { Route as DashboardEditalIndexRouteImport } from './routes/dashboard/edital.index'
@@ -343,6 +344,11 @@ const DashboardTimerRoute = DashboardTimerRouteImport.update({
   path: '/timer',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardTrilhasRoute = DashboardTrilhasRouteImport.update({
+  id: '/trilhas',
+  path: '/trilhas',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const ApiPublicStripeWebhookRoute = ApiPublicStripeWebhookRouteImport.update({
   id: '/api/public/stripe-webhook',
   path: '/api/public/stripe-webhook',
@@ -434,6 +440,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
+  '/dashboard/trilhas': typeof DashboardTrilhasRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
@@ -494,6 +501,7 @@ export interface FileRoutesByTo {
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
+  '/dashboard/trilhas': typeof DashboardTrilhasRoute
   '/dashboard': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
@@ -558,6 +566,7 @@ export interface FileRoutesById {
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
+  '/dashboard/trilhas': typeof DashboardTrilhasRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
@@ -623,6 +632,7 @@ export interface FileRouteTypes {
     | '/dashboard/study-tools'
     | '/dashboard/subscriptions'
     | '/dashboard/timer'
+    | '/dashboard/trilhas'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
@@ -683,6 +693,7 @@ export interface FileRouteTypes {
     | '/dashboard/study-tools'
     | '/dashboard/subscriptions'
     | '/dashboard/timer'
+    | '/dashboard/trilhas'
     | '/dashboard'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
@@ -746,6 +757,7 @@ export interface FileRouteTypes {
     | '/dashboard/study-tools'
     | '/dashboard/subscriptions'
     | '/dashboard/timer'
+    | '/dashboard/trilhas'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
@@ -1151,6 +1163,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardTimerRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/trilhas': {
+      id: '/dashboard/trilhas'
+      path: '/trilhas'
+      fullPath: '/dashboard/trilhas'
+      preLoaderRoute: typeof DashboardTrilhasRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/api/public/stripe-webhook': {
       id: '/api/public/stripe-webhook'
       path: '/api/public/stripe-webhook'
@@ -1273,6 +1292,7 @@ interface DashboardRouteChildren {
   DashboardStudyToolsRoute: typeof DashboardStudyToolsRoute
   DashboardSubscriptionsRoute: typeof DashboardSubscriptionsRoute
   DashboardTimerRoute: typeof DashboardTimerRoute
+  DashboardTrilhasRoute: typeof DashboardTrilhasRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
   DashboardAdminStudentIdRoute: typeof DashboardAdminStudentIdRoute
   DashboardLegalCourseSlugRoute: typeof DashboardLegalCourseSlugRoute
@@ -1321,6 +1341,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardStudyToolsRoute: DashboardStudyToolsRoute,
   DashboardSubscriptionsRoute: DashboardSubscriptionsRoute,
   DashboardTimerRoute: DashboardTimerRoute,
+  DashboardTrilhasRoute: DashboardTrilhasRoute,
   DashboardIndexRoute: DashboardIndexRoute,
   DashboardAdminStudentIdRoute: DashboardAdminStudentIdRoute,
   DashboardLegalCourseSlugRoute: DashboardLegalCourseSlugRoute,

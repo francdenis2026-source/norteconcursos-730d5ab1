@@ -157,6 +157,7 @@ const MENU: MenuItem[] = [
   },
   { group: "Edital e conteúdo", label: "Biblioteca", icon: Library, href: "/dashboard/library" },
   { group: "Edital e conteúdo", label: "Painel do CTB", icon: Gavel, href: "/dashboard/ctb" },
+  { group: "Edital e conteúdo", label: "Trilhas de estudo", icon: GraduationCap, href: "/dashboard/trilhas" },
   { group: "Edital e conteúdo", label: "Dicionário", icon: BookA, href: "/dashboard/dicionario" },
   {
     group: "Edital e conteúdo",
