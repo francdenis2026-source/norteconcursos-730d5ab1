@@ -716,3 +716,19 @@ test('CP: vida e integridade preservam limites recentes e decisões cautelares',
  assert.match(get(136).atencao.join(' '),/Não.*castigo físico moderado.*18-A/s);
  for(const n of [121,'121-a','121-b',122,127,128,129,133,134,'135-a',136])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
 });
+
+test('CP: honra e liberdade não restauram remissões ou iniciativa superadas',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-honra-liberdade-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,20);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(140).simples,/Lei 7.716.*14.532.*11\/1\/2023/s);
+ assert.match(get(147).pontos.join(' '),/EXCETO/);
+ assert.match(get('147-a').atencao.join(' '),/Não reativar.*revogado/si);
+ assert.match(get('147-a').pontos.join(' '),/Representação no/);
+ assert.match(get('147-b').pontos.join(' '),/não é por qualquer uso.*imagem\/som/);
+ assert.match(get(150).atencao.join(' '),/280.*fundadas razões.*Não.*suspeita/si);
+ assert.match(get(151).simples,/40.*6.538/);
+ assert.match(get(151).atencao.join(' '),/Bloquear exercícios automáticos/);
+ for(const n of [140,141,144,145,'146-a',147,'147-a','147-b','147-c',148,149,150,151])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+});

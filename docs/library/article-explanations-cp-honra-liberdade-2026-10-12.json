@@ -1,0 +1,1306 @@
+{
+  "version": "2026-10-11-codigo-penal-targeted",
+  "checked_at": "2026-10-12T23:30:02.717037+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-penal",
+      "title": "Código Penal — leitura atualizada",
+      "units": 20,
+      "scope_type": "targeted_correction",
+      "course_current_units": 401,
+      "target_unit_keys": [
+        "art-137",
+        "art-138",
+        "art-139",
+        "art-140",
+        "art-141",
+        "art-142",
+        "art-143",
+        "art-144",
+        "art-145",
+        "art-146",
+        "art-146-a",
+        "art-147",
+        "art-147-a",
+        "art-147-b",
+        "art-147-c",
+        "art-148",
+        "art-149",
+        "art-149-a",
+        "art-150",
+        "art-151"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "4aa57b9f44b3fde54e7009d761c132c987cbc313684f847fca70e894d2f99611",
+      "source_checked_at": "2026-10-12T23:12:14.957804+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-137",
+      "unit_id": "3bc008a4-e6d5-5d3a-9a81-7f3130e4afe9",
+      "content_sha256": "61d0fb986a0f93b1d854812e69e0c58cb4500b80c49e8cd8f37cfcc73bc66adb",
+      "simples": "Participar de rixa tem detenção de quinze dias a dois meses ou multa; atuação para separar contendores é ressalvada. Morte ou lesão grave tem pena qualificada pela participação, sem apagar outros enquadramentos individuais.",
+      "pontos": [
+        "Resultado qualificado: seis meses a dois anos.",
+        "Separar não equivale a participar da luta."
+      ],
+      "atencao": [
+        "Não tratar agressão unilateral ou qualquer discussão verbal como rixa. Imputação de resultado, autoria específica e relação com participação exigem análise; não dispensar prova por estar no local."
+      ],
+      "exemplo": "Pessoa intervém apenas para separar a luta: a ressalva impede presumir participação típica. Variação: Se passa a integrar a luta, a conduta muda; ainda provar requisitos e eventual resultado qualificado.",
+      "prova": [
+        "Quem apenas separa integra necessariamente o crime? Não.",
+        "Toda discussão verbal configura rixa? Não; examinar o tipo."
+      ],
+      "termos": [
+        {
+          "termo": "Rixa",
+          "significado": "Participação na luta nas condições típicas, distinta de separar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3bc008a4-e6d5-5d3a-9a81-7f3130e4afe9",
+        "content_sha256": "61d0fb986a0f93b1d854812e69e0c58cb4500b80c49e8cd8f37cfcc73bc66adb",
+        "simples": "Rixa: participar de rixa, salvo para separar os contendores. Pena: detenção de 15 dias a 2 meses, ou multa. Se ocorre morte ou lesão corporal grave, aplica-se, pelo fato da participação na rixa, detenção de 6 meses a 2 anos.",
+        "pontos": [
+          "Participar de rixa (briga generalizada), salvo para separar os contendores.",
+          "Pena: detenção de 15 dias a 2 meses, ou multa.",
+          "Parágrafo único: morte ou lesão grave: detenção de 6 meses a 2 anos, pela participação."
+        ],
+        "atencao": [
+          "Quem entra na rixa para separar os contendores não comete o crime.",
+          "A qualificadora do parágrafo único pune a PARTICIPAÇÃO, mesmo sem saber quem causou o resultado."
+        ],
+        "exemplo": "Briga generalizada em que todos agridem todos e alguém morre: todos os rixosos respondem pelo parágrafo único.",
+        "prova": [
+          "Assertiva que pune quem intervém só para separar os contendores erra: o tipo ressalva essa hipótese."
+        ],
+        "termos": [
+          {
+            "termo": "Rixa",
+            "significado": "Briga tumultuária entre três ou mais pessoas, com agressões recíprocas."
+          }
+        ],
+        "remissoes": [
+          "Art. 129 (lesão corporal)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-138",
+      "unit_id": "0cdae5e6-6343-5cd7-aad9-92eed6d30e85",
+      "content_sha256": "1af438793e7304f9fde8a976c3f153566a346eec361feba7e9c4ae4b886a5d98",
+      "simples": "Calúnia imputa falsamente fato definido como crime; não é apenas xingamento. Divulgar sabendo falsa a imputação é hipótese própria; calúnia contra mortos é punível. Exceção da verdade tem restrições expressas.",
+      "pontos": [
+        "Pena: seis meses a dois anos e multa.",
+        "§1º exige saber falsa; §3º lista exceções à prova da verdade."
+      ],
+      "atencao": [
+        "Não usar verdadeira informação como calúnia automática nem toda crítica como imputação criminosa. Exceção da verdade não é admitida universalmente, e crimes contra honra têm regime próprio de ação."
+      ],
+      "exemplo": "Alguém atribui falsamente um furto concreto: examinar imputação de fato criminoso e elementos do tipo. Variação: Se apenas dirige ofensa à dignidade sem fato, avaliar injúria, não calúnia por rótulo.",
+      "prova": [
+        "Toda ofensa é calúnia? Não; exige fato definido como crime.",
+        "Prova da verdade cabe sem exceções? Não; ler §3º."
+      ],
+      "termos": [
+        {
+          "termo": "Imputação criminosa",
+          "significado": "Atribuição de fato criminoso concreto, distinta de ofensa genérica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0cdae5e6-6343-5cd7-aad9-92eed6d30e85",
+        "content_sha256": "1af438793e7304f9fde8a976c3f153566a346eec361feba7e9c4ae4b886a5d98",
+        "simples": "Calúnia: imputar falsamente a alguém fato definido como crime. Pena: detenção de 6 meses a 2 anos e multa. Na mesma pena incorre quem, sabendo falsa a imputação, a propala ou divulga. É punível a calúnia contra os mortos. Admite-se a prova da verdade (exceção da verdade), salvo se o fato imputado é crime de ação privada e o ofendido não foi condenado por sentença irrecorrível; se o fato é imputado a quem indica o inciso I do art. 141; ou se, do crime imputado, embora de ação pública, o ofendido foi absolvido por sentença irrecorrível.",
+        "pontos": [
+          "Imputar falsamente fato definido COMO CRIME.",
+          "Pena: detenção de 6 meses a 2 anos e multa.",
+          "§1º: pune quem, sabendo falsa a imputação, a propala ou divulga.",
+          "§2º: calúnia contra os mortos é punível.",
+          "§3º: exceção da verdade admitida, salvo nos casos dos incisos I a III."
+        ],
+        "atencao": [
+          "Calúnia exige imputação FALSA de FATO DEFINIDO COMO CRIME (na difamação, o fato é só ofensivo à reputação).",
+          "Calúnia contra os mortos é punível (difamação e injúria contra mortos não)."
+        ],
+        "exemplo": "Dizer falsamente, em público, que um vizinho furtou um carro é calúnia.",
+        "prova": [
+          "Assertiva que afirma que só a calúnia contra pessoa viva é punível erra: o §2º pune a calúnia contra os mortos."
+        ],
+        "termos": [
+          {
+            "termo": "Exceção da verdade",
+            "significado": "Direito de provar que o fato imputado é verdadeiro."
+          }
+        ],
+        "remissoes": [
+          "Arts. 139 e 140",
+          "Art. 141"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-139",
+      "unit_id": "66ce70ab-2dbf-5528-a41f-552c9e89c3a8",
+      "content_sha256": "d6e9169f8b2c563722e3f3e32955c6277f15555d4e024fe4a824826b7ee5d71f",
+      "simples": "Difamação imputa fato ofensivo à reputação; não exige que o fato seja definido como crime. A verdade não exclui automaticamente todo caso: a exceção textual exige funcionário público e ligação com função.",
+      "pontos": [
+        "Pena: três meses a um ano e multa.",
+        "Exceção: funcionário público E ofensa relativa às funções."
+      ],
+      "atencao": [
+        "Distinguir fato e juízo ofensivo, contexto e direito de crítica. Não ensinar que divulgar qualquer fato verdadeiro sempre é impune nem presumir crime por crítica legítima."
+      ],
+      "exemplo": "Fato ofensivo não criminoso é divulgado sobre pessoa: examinar difamação, não calúnia automaticamente. Variação: Se o ofendido é funcionário e a ofensa se refere à função, muda a hipótese da exceção, sem dispensar os demais elementos.",
+      "prova": [
+        "O fato precisa ser crime? Não.",
+        "Toda verdade afasta automaticamente difamação? Não; a exceção tem recorte."
+      ],
+      "termos": [
+        {
+          "termo": "Reputação",
+          "significado": "Honra objetiva relacionada à consideração social."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "66ce70ab-2dbf-5528-a41f-552c9e89c3a8",
+        "content_sha256": "d6e9169f8b2c563722e3f3e32955c6277f15555d4e024fe4a824826b7ee5d71f",
+        "simples": "Difamação: imputar a alguém fato ofensivo à sua reputação. Pena: detenção de 3 meses a 1 ano e multa. A exceção da verdade só se admite se o ofendido é funcionário público e a ofensa é relativa ao exercício de suas funções.",
+        "pontos": [
+          "Imputar fato (verdadeiro ou falso) ofensivo à reputação.",
+          "Pena: detenção de 3 meses a 1 ano e multa.",
+          "Exceção da verdade só se o ofendido é funcionário público e a ofensa se refere ao exercício das funções."
+        ],
+        "atencao": [
+          "Na difamação, o fato não precisa ser crime; basta ofender a REPUTAÇÃO (honra objetiva).",
+          "A exceção da verdade é restrita (funcionário público no exercício da função)."
+        ],
+        "exemplo": "Espalhar que um comerciante deu calote em fornecedores (fato ofensivo à reputação) é difamação.",
+        "prova": [
+          "Assertiva que admite a exceção da verdade na difamação contra qualquer pessoa erra: só contra funcionário público em razão das funções."
+        ],
+        "termos": [
+          {
+            "termo": "Honra objetiva",
+            "significado": "Reputação: o que os outros pensam da pessoa."
+          }
+        ],
+        "remissoes": [
+          "Arts. 138 e 140"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-140",
+      "unit_id": "e05fa975-21a7-578a-bc17-0ff4dc25c06a",
+      "content_sha256": "608da545157f4a39e87396eb5dc19c58386b36c1404cfbd69714967537f4ef1c",
+      "simples": "Injúria ofende dignidade/decoro. O §3º atual abrange religião ou condição de pessoa idosa/com deficiência; injúria racial passou à Lei 7.716, art.2º-A, após Lei 14.532 publicada e vigente em 11/1/2023.",
+      "pontos": [
+        "Caput: um a seis meses OU multa; real: três meses a um ano E multa, além da violência.",
+        "§3º: um a três anos E multa no recorte atual.",
+        "§1º admite deixar de aplicar pena nas hipóteses de provocação/retorsão imediata."
+      ],
+      "atencao": [
+        "Não copiar raça/cor/etnia/origem da redação histórica do §3º como enquadramento atual de injúria racial. Não confundir perdão judicial facultativo com direito de agredir ou imunidade geral; lei no tempo exige integração à norma especial, sem revisar novamente todo percurso Racismo."
+      ],
+      "exemplo": "Ofensa racial após a alteração de 2023 é classificada mecanicamente no antigo §3º do CP. Variação: Se a ofensa utiliza religião ou condição indicada no §3º atual, examinar este recorte e seu regime, sem equiparar automaticamente todas as hipóteses.",
+      "prova": [
+        "Raça permanece no §3º atual? Não; integrar Lei 7.716 art.2º-A.",
+        "Retorsão imediata autoriza qualquer violência? Não; observar a hipótese legal."
+      ],
+      "termos": [
+        {
+          "termo": "Honra subjetiva",
+          "significado": "Dignidade/decoro pessoais, com modalidades e disciplina especial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm"
+      ],
+      "expected": {
+        "unit_id": "e05fa975-21a7-578a-bc17-0ff4dc25c06a",
+        "content_sha256": "608da545157f4a39e87396eb5dc19c58386b36c1404cfbd69714967537f4ef1c",
+        "simples": "Injúria: ofender a dignidade ou o decoro de alguém (honra subjetiva). Pena: detenção de 1 a 6 meses, ou multa. O juiz pode deixar de aplicar a pena se o ofendido, de forma reprovável, provocou diretamente a injúria, ou em caso de retorsão imediata que consista em outra injúria. Injúria real (violência ou vias de fato aviltantes): detenção de 3 meses a 1 ano e multa, além da pena da violência. Injúria com elementos referentes a religião ou à condição de pessoa idosa ou com deficiência: reclusão de 1 a 3 anos e multa.",
+        "pontos": [
+          "Ofender a dignidade ou o decoro.",
+          "Caput: detenção de 1 a 6 meses, ou multa.",
+          "§1º: perdão judicial se houver provocação reprovável do ofendido ou retorsão imediata.",
+          "§2º: injúria real: detenção de 3 meses a 1 ano e multa, mais a pena da violência.",
+          "§3º: injúria qualificada por elementos de religião, idade (idoso) ou deficiência: reclusão de 1 a 3 anos e multa."
+        ],
+        "atencao": [
+          "Injúria atinge a honra SUBJETIVA (dignidade e decoro).",
+          "Retorsão imediata e provocação reprovável autorizam o perdão judicial (§1º).",
+          "O §3º refere-se a religião, pessoa idosa ou com deficiência no texto atual; outras formas de discriminação têm lei específica."
+        ],
+        "exemplo": "Chamar alguém, na sua frente, de adjetivo humilhante: injúria.",
+        "prova": [
+          "Assertiva que exige imputação de fato determinado na injúria erra: a injúria atribui qualidade ofensiva, sem fato determinado."
+        ],
+        "termos": [
+          {
+            "termo": "Honra subjetiva",
+            "significado": "Sentimento que a pessoa tem sobre si mesma (dignidade e decoro)."
+          }
+        ],
+        "remissoes": [
+          "Arts. 138, 139, 141, 145"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-141",
+      "unit_id": "87d88764-0ae8-5009-8017-03626eeee62e",
+      "content_sha256": "f6245bd742ced6ae7929db4502e50f35bc8b50023be7e7206a9fb4f51b37e44a",
+      "simples": "Crimes de honra têm aumentos por destinatário/contexto, recompensa, redes sociais e razões da condição do sexo feminino. Frações não se somam automaticamente por qualquer rótulo.",
+      "pontos": [
+        "Regra: um terço nas hipóteses dos incisos.",
+        "Paga/promessa: dobro; redes sociais: triplo.",
+        "Lei 14.994 vigente 10/10/2024: dobro na hipótese do §3º.",
+        "IncisoIV ressalva art.140§3º; função exige relação pertinente."
+      ],
+      "atencao": [
+        "Não usar aplicativo/celular como prova automática de qualquer divulgação em rede social nem duplicar a mesma condição já elementar. Conferir vigência da parte promulgada depois de veto e irretroatividade gravosa; não certificar todo concurso de majorantes neste bloco."
+      ],
+      "exemplo": "A condição etária já integra a injúria do §3º e a questão aplica também incisoIV pelo mesmo dado, ignorando ressalva. Variação: Se a hipótese não tem essa elementar, examinar o inciso com seus requisitos e regras de dosimetria, sem conclusão por etiqueta.",
+      "prova": [
+        "IncisoIV ignora §3º do 140? Não; há exceção.",
+        "Toda hipótese tem a mesma fração? Não; um terço, dobro e triplo são distintos."
+      ],
+      "termos": [
+        {
+          "termo": "Majorantes da honra",
+          "significado": "Aumentos condicionados ao contexto e sem duplicação automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm"
+      ],
+      "expected": {
+        "unit_id": "87d88764-0ae8-5009-8017-03626eeee62e",
+        "content_sha256": "f6245bd742ced6ae7929db4502e50f35bc8b50023be7e7206a9fb4f51b37e44a",
+        "simples": "Disposições comuns aos crimes contra a honra: as penas aumentam-se de um terço se qualquer dos crimes é cometido contra o Presidente da República ou chefe de governo estrangeiro; contra funcionário público em razão de suas funções ou contra os Presidentes do Senado, da Câmara ou do STF; na presença de várias pessoas ou por meio que facilite a divulgação; ou contra criança, adolescente, pessoa maior de 60 anos ou com deficiência (exceto a hipótese do art. 140, §3º). Se o crime é cometido mediante paga ou promessa de recompensa, a pena é em dobro. Se cometido ou divulgado em redes sociais, aplica-se em triplo a pena. Se contra a mulher por razões da condição do sexo feminino (art. 121-A, §1º), a pena é em dobro.",
+        "pontos": [
+          "Aumento de 1/3: Presidente da República ou chefe de governo estrangeiro; funcionário público em razão de suas funções, ou Presidentes do Senado, da Câmara e do STF; presença de várias pessoas ou meio de divulgação; criança, adolescente, maior de 60 anos ou pessoa com deficiência.",
+          "§1º: paga ou promessa de recompensa: em dobro.",
+          "§2º: redes sociais: em triplo.",
+          "§3º: mulher por razões da condição do sexo feminino: em dobro."
+        ],
+        "atencao": [
+          "Aumento de 1/3 no caput; em dobro (paga, violência de gênero); em TRIPLO (redes sociais).",
+          "O inciso IV exclui a hipótese da injúria qualificada do art. 140, §3º."
+        ],
+        "exemplo": "Calúnia divulgada em rede social tem a pena aplicada em triplo (§2º).",
+        "prova": [
+          "Assertiva que aplica o aumento em dobro, e não em triplo, aos crimes contra a honra praticados em redes sociais contraria o §2º."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 138 a 140",
+          "Art. 145"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-142",
+      "unit_id": "4145365f-a6c2-5be1-99ec-695389cee253",
+      "content_sha256": "71485be0d3f9b7c2d76c333046451bb221370a13427cfdec5f058d09c723fe44",
+      "simples": "As hipóteses textuais de exclusão abrangem injúria/difamação em discussão da causa, crítica pertinente ou dever funcional. Não mencionam calúnia como licença irrestrita; publicidade nos incisos I/III tem ressalva.",
+      "pontos": [
+        "Crítica: ressalva de intenção inequívoca de injuriar/difamar.",
+        "Juízo: discussão da causa, parte/procurador.",
+        "Publicidade pode gerar responsabilidade no recorte do parágrafo."
+      ],
+      "atencao": [
+        "Não transformar atuação profissional em autorização de qualquer ofensa alheia à causa ou calúnia. Garantias específicas e contexto exigem verificação; a lista não é licença universal."
+      ],
+      "exemplo": "Advogado atribui falsamente crime e invoca o art.142 como imunidade universal de calúnia. Variação: Se a fala é pertinente à discussão e se enquadra nas hipóteses de injúria/difamação, examinar limites e publicidade, sem presumir toda ofensa protegida.",
+      "prova": [
+        "O artigo exclui universalmente calúnia? Não.",
+        "Crítica com intenção inequívoca de ofender é sempre protegida peloII? Não; há ressalva."
+      ],
+      "termos": [
+        {
+          "termo": "Exclusão delimitada",
+          "significado": "Hipótese com objeto e contexto próprios, não autorização irrestrita."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4145365f-a6c2-5be1-99ec-695389cee253",
+        "content_sha256": "71485be0d3f9b7c2d76c333046451bb221370a13427cfdec5f058d09c723fe44",
+        "simples": "Exclusão do crime: não constituem injúria ou difamação punível a ofensa irrogada em juízo, na discussão da causa, pela parte ou por seu procurador; a opinião desfavorável da crítica literária, artística ou científica, salvo quando inequívoca a intenção de injuriar ou difamar; e o conceito desfavorável emitido por funcionário público, em apreciação ou informação que preste no cumprimento de dever do ofício. Nos casos dos incisos I e III, responde pela injúria ou difamação quem lhe dá publicidade.",
+        "pontos": [
+          "I – ofensa em juízo, na discussão da causa, pela parte ou seu procurador.",
+          "II – opinião desfavorável da crítica literária, artística ou científica, salvo inequívoca intenção de ofender.",
+          "III – conceito desfavorável de funcionário público no cumprimento do dever do ofício.",
+          "Parágrafo único: quem dá publicidade nos casos I e III responde."
+        ],
+        "atencao": [
+          "Vale para INJÚRIA e DIFAMAÇÃO; a calúnia não está contemplada.",
+          "Quem dá PUBLICIDADE às ofensas dos incisos I e III responde."
+        ],
+        "exemplo": "Advogado, na petição, usa expressões duras contra a parte adversa, dentro da discussão da causa: não há crime punível.",
+        "prova": [
+          "Assertiva que estende a imunidade do art. 142 à calúnia erra: refere-se à injúria e à difamação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 139 e 140"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-143",
+      "unit_id": "d5a61517-5933-5884-8e2a-da9533627de5",
+      "content_sha256": "dc367bc2b783448b2eaf45767022f9076ffffaeeb919da2054684f6b63010045",
+      "simples": "Retratação cabal de calúnia/difamação antes da sentença pode isentar pena. Se foi por comunicação, o ofendido pode desejar os mesmos meios. Injúria não integra automaticamente esse recorte.",
+      "pontos": [
+        "Cabal E antes da sentença.",
+        "Mesmo meio se o ofendido assim desejar."
+      ],
+      "atencao": [
+        "Não tratar desculpa vaga, negação parcial ou retratação tardia como cumprimento automático. Não confundir com perdão do ofendido ou direito de resposta de regime próprio."
+      ],
+      "exemplo": "Antes da sentença, o querelado se retrata integralmente de calúnia difundida por meio de comunicação e o ofendido deseja o mesmo meio. Variação: Se apenas reafirma a acusação com pedido genérico de desculpas, reavaliar se houve retratação cabal, sem presumir o benefício.",
+      "prova": [
+        "A regra inclui qualquer injúria? Não; calúnia/difamação.",
+        "Basta retratação parcial por etiqueta? Não; exige cabal."
+      ],
+      "termos": [
+        {
+          "termo": "Retratação cabal",
+          "significado": "Retirada integral da imputação no momento e forma pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d5a61517-5933-5884-8e2a-da9533627de5",
+        "content_sha256": "dc367bc2b783448b2eaf45767022f9076ffffaeeb919da2054684f6b63010045",
+        "simples": "Retratação: o querelado que, antes da sentença, se retrata cabalmente da calúnia ou da difamação fica isento de pena. Se usou meios de comunicação, a retratação far-se-á, se o ofendido quiser, pelos mesmos meios.",
+        "pontos": [
+          "Retratação cabal antes da sentença: isenção de pena.",
+          "Cabe na calúnia e na difamação (não na injúria).",
+          "Meios de comunicação: retratação pelos mesmos meios, se o ofendido desejar."
+        ],
+        "atencao": [
+          "A retratação NÃO vale para a injúria."
+        ],
+        "exemplo": "O ofensor publica retratação completa antes da sentença: fica isento de pena na calúnia.",
+        "prova": [
+          "Assertiva que admite retratação na injúria erra: o art. 143 trata de calúnia e difamação."
+        ],
+        "termos": [
+          {
+            "termo": "Retratação",
+            "significado": "Desdizer-se, retirando a ofensa de forma completa."
+          }
+        ],
+        "remissoes": [
+          "Art. 107, VI"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-144",
+      "unit_id": "0b7cc2c5-3594-564a-a23d-65979c8cb193",
+      "content_sha256": "0075b515715d1c456da412c185c564280fa7e4a8223db3562fb783a0be85c4d6",
+      "simples": "Referências ambíguas podem motivar pedido judicial de explicações. O procedimento não transforma automaticamente silêncio em condenação: a ofensa e seus elementos dependem de análise com garantias.",
+      "pontos": [
+        "Faculdade de pedir explicações.",
+        "Resposta ou ausência exige exame do caso, não culpa presumida."
+      ],
+      "atencao": [
+        "A frase responde pela ofensa não elimina presunção de inocência ou direito ao silêncio. Pedido não substitui queixa nem se presume suspensão/reinício do prazo decadencial só por sua apresentação."
+      ],
+      "exemplo": "O interpelado não responde e a questão declara condenação automática sem provar crime. Variação: Resposta esclarecedora pode mudar a compreensão; ainda identificar elementos e via adequada, não condenar por ausência de explicação satisfatória sozinha.",
+      "prova": [
+        "Silêncio sozinho prova condenação? Não.",
+        "O pedido é sempre a própria ação penal? Não; distinguir procedimento e iniciativa."
+      ],
+      "termos": [
+        {
+          "termo": "Interpelação",
+          "significado": "Pedido de esclarecimento, sem dispensar prova e garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0b7cc2c5-3594-564a-a23d-65979c8cb193",
+        "content_sha256": "0075b515715d1c456da412c185c564280fa7e4a8223db3562fb783a0be85c4d6",
+        "simples": "Pedido de explicações em juízo: se de referências, alusões ou frases se infere calúnia, difamação ou injúria, quem se julga ofendido pode pedir explicações em juízo. Aquele que se recusa a dá-las ou, a critério do juiz, não as dá satisfatórias, responde pela ofensa.",
+        "pontos": [
+          "Procedimento para ofensas veladas (referências, alusões ou frases).",
+          "Quem se recusa a explicar ou não dá explicações satisfatórias responde pela ofensa."
+        ],
+        "atencao": [
+          "É procedimento preparatório, útil quando a ofensa é equívoca."
+        ],
+        "exemplo": "Alguém faz insinuações veladas sobre um colega: este pede explicações em juízo antes de processar.",
+        "prova": [
+          "Assertiva que dispensa o pedido de explicações para toda calúnia, difamação ou injúria erra: ele é cabível quando a ofensa se infere de referências, alusões ou frases."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 138 a 140"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-145",
+      "unit_id": "e7ede65b-992c-5e35-a5e6-98cfea33ae57",
+      "content_sha256": "6585303a15750e893384b387016eb92054eeba28935c2d6dd47f60d9c2c36336",
+      "simples": "Queixa é a regra textual no capítulo, com exceções para violência com lesão, requisição e representação. A disciplina da injúria racial posterior a 2023 é especial, não se decide pela redação histórica do CP.",
+      "pontos": [
+        "IncisoI do 141: requisição; incisoII e 140§3º: representação no texto.",
+        "Não confundir queixa, denúncia e representação."
+      ],
+      "atencao": [
+        "Não declarar exclusividade universal do MP ou da queixa em ofensa funcional por leitura isolada: legitimação concorrente e seu alcance exigem jurisprudência específica, não certificada integralmente aqui. Integrar Lei 14.532 e exceções especiais."
+      ],
+      "exemplo": "A questão atribui a todo crime de honra apenas uma mesma forma de iniciativa, sem identificar o tipo e contexto. Variação: Em ofensa funcional ou injúria racial, conferir regime integrado e legitimidade antes de usar resposta universal.",
+      "prova": [
+        "Há só uma forma de iniciativa para todo capítulo? Não.",
+        "Pode decidir injúria racial atual apenas pelo §3º antigo? Não; verificar lei especial."
+      ],
+      "termos": [
+        {
+          "termo": "Regime da ação",
+          "significado": "Titularidade e condição variam por hipótese, com integração necessária."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e7ede65b-992c-5e35-a5e6-98cfea33ae57",
+        "content_sha256": "6585303a15750e893384b387016eb92054eeba28935c2d6dd47f60d9c2c36336",
+        "simples": "Ação penal nos crimes contra a honra: em regra somente se procede mediante queixa (ação penal privada), salvo quando, no caso do art. 140, §2º, da violência resulta lesão corporal. Procede-se mediante requisição do Ministro da Justiça no caso do art. 141, I (Presidente da República ou chefe de governo estrangeiro), e mediante representação do ofendido no caso do art. 141, II (funcionário público em razão das funções etc.) e no caso do art. 140, §3º.",
+        "pontos": [
+          "Regra: queixa (ação privada).",
+          "Exceção: injúria real com lesão corporal: ação pública.",
+          "Parágrafo único: requisição do Ministro da Justiça (art. 141, I); representação (art. 141, II e art. 140, §3º)."
+        ],
+        "atencao": [
+          "Regra: ação PRIVADA; exceções: pública condicionada à requisição ou à representação."
+        ],
+        "exemplo": "Calúnia contra o Presidente da República: ação pública condicionada à requisição do Ministro da Justiça.",
+        "prova": [
+          "Assertiva que torna pública incondicionada a ação nos crimes contra a honra, em regra, erra: a regra é queixa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 138 a 141"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-146",
+      "unit_id": "cf51339a-d3c9-54e3-89a9-2f4a7da9d07c",
+      "content_sha256": "b268bca1ef6107fca428844b753c23419b95fe30fffbf9dcf40ce4ce2d300b0c",
+      "simples": "Constranger por violência/grave ameaça ou redução da resistência a não fazer o permitido ou fazer o não mandado tem hipótese própria. Mais de três pessoas ou armas têm regra agravada; exceções médicas/suicídio são delimitadas.",
+      "pontos": [
+        "Três meses a um ano OU multa; §1º cumulativas E dobro.",
+        "Mais de três não é exatamente três.",
+        "Intervenção sem consentimento: perigo de vida IMINENTE, não conveniência geral."
+      ],
+      "atencao": [
+        "Não legitimar qualquer intervenção médica ou coação pelo simples nome de tratamento. Distinguir tipos especiais, elementos e garantias; penas da violência possuem previsão cumulativa própria."
+      ],
+      "exemplo": "Exatamente três pessoas atuam sem arma: esse número sozinho não preenche mais de três do §1º. Variação: Se há arma, a outra hipótese do §1º precisa ser examinada, sem exigir também quatro pessoas.",
+      "prova": [
+        "Exatamente três basta por número? Não.",
+        "Toda intervenção sem consentimento está excluída? Não; observar perigo iminente de vida."
+      ],
+      "termos": [
+        {
+          "termo": "Constrangimento ilegal",
+          "significado": "Restrição da liberdade por meios e finalidade previstos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "cf51339a-d3c9-54e3-89a9-2f4a7da9d07c",
+        "content_sha256": "b268bca1ef6107fca428844b753c23419b95fe30fffbf9dcf40ce4ce2d300b0c",
+        "simples": "Constrangimento ilegal: constranger alguém, mediante violência ou grave ameaça, ou depois de lhe haver reduzido, por qualquer outro meio, a capacidade de resistência, a não fazer o que a lei permite ou a fazer o que ela não manda. Pena: detenção de 3 meses a 1 ano, ou multa. As penas aplicam-se cumulativamente e em dobro quando se reúnem mais de três pessoas ou há emprego de armas; aplicam-se também as da violência. Não se compreendem a intervenção médica ou cirúrgica sem consentimento justificada por iminente perigo de vida, nem a coação para impedir suicídio.",
+        "pontos": [
+          "Constranger mediante violência, grave ameaça ou redução da capacidade de resistência.",
+          "Pena: detenção de 3 meses a 1 ano, ou multa.",
+          "§1º: mais de 3 pessoas ou arma: penas cumulativas e em dobro.",
+          "§2º: aplicam-se também as penas da violência.",
+          "§3º: não é constrangimento ilegal a intervenção médica por iminente perigo de vida, nem a coação para impedir suicídio."
+        ],
+        "atencao": [
+          "Mais de TRÊS pessoas (ou emprego de armas) = pena cumulativa e em dobro.",
+          "O crime é subsidiário em relação a crimes mais graves (como roubo e extorsão)."
+        ],
+        "exemplo": "O agente força alguém, com ameaça de agressão, a assinar um documento sem proveito econômico: constrangimento ilegal.",
+        "prova": [
+          "Assertiva que considera crime a coação exercida para impedir suicídio erra: o §3º, II, a exclui."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 146-A",
+          "Art. 158 (extorsão)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-146-a",
+      "unit_id": "49efef8a-7ba7-5a0a-9290-d5c559e6ef38",
+      "content_sha256": "67b7563f8ac2083b772dc94d1d99286f36dded165d5e0e42e996977b6485914a",
+      "simples": "Bullying exige intimidação intencional, sistemática e repetitiva nos meios legais. Lei 14.811, vigente 15/1/2024, prevê multa na forma comum e reclusão 2 a 4 anos e multa na virtual, subsidiariamente a crime mais grave.",
+      "pontos": [
+        "Caput e parágrafo têm penas diferentes.",
+        "Ambiente digital não dispensa repetição/intencionalidade.",
+        "Subsidiariedade nas duas hipóteses."
+      ],
+      "atencao": [
+        "Não transformar ofensa isolada em bullying automaticamente nem todo conflito em crime por opinião subjetiva. Outros tipos podem incidir; alteração penal gravosa não retroage."
+      ],
+      "exemplo": "Uma única mensagem ofensiva é chamada automaticamente de bullying por estar em rede social. Variação: Com intimidação sistemática e repetitiva comprovada em ambiente digital, examinar parágrafo e subsidiariedade, sem dispensar os demais elementos.",
+      "prova": [
+        "Digital dispensa repetição? Não.",
+        "Forma comum e virtual têm só multa? Não; a virtual tem reclusão e multa."
+      ],
+      "termos": [
+        {
+          "termo": "Intimidação sistemática",
+          "significado": "Conduta repetitiva e intencional, distinta de qualquer episódio isolado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm"
+      ],
+      "expected": {
+        "unit_id": "49efef8a-7ba7-5a0a-9290-d5c559e6ef38",
+        "content_sha256": "67b7563f8ac2083b772dc94d1d99286f36dded165d5e0e42e996977b6485914a",
+        "simples": "Intimidação sistemática (bullying): intimidar sistematicamente, individualmente ou em grupo, mediante violência física ou psicológica, uma ou mais pessoas, de modo intencional e repetitivo, sem motivação evidente, por atos de intimidação, humilhação ou discriminação ou ações verbais, morais, sexuais, sociais, psicológicas, físicas, materiais ou virtuais. Pena: multa, se a conduta não constituir crime mais grave. Se realizada por meio da rede de computadores, rede social, aplicativos, jogos on-line ou qualquer meio digital, ou transmitida em tempo real (cyberbullying): reclusão de 2 a 4 anos e multa, se não constituir crime mais grave.",
+        "pontos": [
+          "Intimidação sistemática: intencional, repetitiva e sem motivação evidente.",
+          "Caput: multa, se não houver crime mais grave.",
+          "Parágrafo único (cyberbullying): reclusão de 2 a 4 anos e multa, se não houver crime mais grave."
+        ],
+        "atencao": [
+          "Crime SUBSIDIÁRIO: só se não houver crime mais grave.",
+          "A forma virtual (cyberbullying) tem pena de reclusão de 2 a 4 anos."
+        ],
+        "exemplo": "Grupo de alunos humilha repetidamente um colega por redes sociais: cyberbullying.",
+        "prova": [
+          "Assertiva que fixa pena de reclusão para o bullying presencial (caput) erra: a pena do caput é multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 147"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-147",
+      "unit_id": "b6667fa4-98f4-5981-b21d-50038c7e9e0d",
+      "content_sha256": "3abf7458b88dc4bf93d89fdfc9cde1c65df4e2c1a1ca494cf3ad14b3ceef30f9",
+      "simples": "Ameaça exige mal injusto e grave comunicado pelos meios previstos. Lei 14.994, vigente 10/10/2024, prevê dobro na hipótese contra mulher por razões do sexo feminino e exclui essa hipótese da exigência de representação.",
+      "pontos": [
+        "Caput: um a seis meses OU multa.",
+        "§2º: representação EXCETO hipótese§1º.",
+        "Ser mulher, sozinho, não prova razões legais."
+      ],
+      "atencao": [
+        "Não ensinar representação obrigatória para toda ameaça nem aplicar dobro a qualquer vítima mulher sem elementos. Não confundir anúncio de exercício legítimo de direito com mal injusto; lei penal no tempo importa."
+      ],
+      "exemplo": "Ameaça preenchida por razões legais contra mulher sob regime atual é tratada como dependente sempre de representação. Variação: Em hipótese fora do §1º, examinar a regra geral condicionada; fato anterior exige análise temporal própria.",
+      "prova": [
+        "Toda ameaça exige representação atual? Não; há exceção.",
+        "Qualquer vítima mulher determina dobro? Não; exige razões legais."
+      ],
+      "termos": [
+        {
+          "termo": "Ameaça e ação",
+          "significado": "Mal injusto/grave e regime de iniciativa com exceção atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm"
+      ],
+      "expected": {
+        "unit_id": "b6667fa4-98f4-5981-b21d-50038c7e9e0d",
+        "content_sha256": "3abf7458b88dc4bf93d89fdfc9cde1c65df4e2c1a1ca494cf3ad14b3ceef30f9",
+        "simples": "Ameaça: ameaçar alguém, por palavra, escrito ou gesto, ou qualquer outro meio simbólico, de causar-lhe mal injusto e grave. Pena: detenção de 1 a 6 meses, ou multa. Se contra a mulher por razões da condição do sexo feminino, pena em dobro. Somente se procede mediante representação, exceto na hipótese de ameaça contra a mulher por razões da condição do sexo feminino.",
+        "pontos": [
+          "Mal injusto e grave por palavra, escrito, gesto ou meio simbólico.",
+          "Pena: detenção de 1 a 6 meses, ou multa.",
+          "§1º: mulher por razões da condição do sexo feminino: em dobro.",
+          "§2º: ação condicionada à representação, exceto no §1º (incondicionada)."
+        ],
+        "atencao": [
+          "Regra: ação condicionada à representação; ameaça contra a mulher por razões do sexo feminino: ação pública incondicionada."
+        ],
+        "exemplo": "Ameaçar de morte o ex-companheiro por mensagem: ameaça.",
+        "prova": [
+          "Assertiva que exige representação da ofendida na ameaça contra a mulher por razões da condição do sexo feminino erra: nesse caso a ação é incondicionada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 147-A",
+          "Art. 147-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-147-a",
+      "unit_id": "19a8c6c4-82c1-5a1f-875b-af3ef1a850bb",
+      "content_sha256": "3a40da65c71301d620cedbdb93f468602e7b5b9d8d4a6d9db22965f66aa8a930",
+      "simples": "Perseguição exige reiteração e afeta integridade, locomoção ou esfera de liberdade/privacidade. Pena 6 meses a 2 anos e multa; majorantes próprias e representação. A remissão a 121§2º-A é residual após feminicídio autônomo.",
+      "pontos": [
+        "Aumento METADE: hipóteses pessoais, concurso 2 ou mais OU arma.",
+        "Representação no§3º, não copiar exceção da ameaça do 147.",
+        "Integrar razões da condição do sexo feminino ao 121-A atual."
+      ],
+      "atencao": [
+        "Não reativar §2º-A revogado nem declarar revogada toda perseguição por essa remissão. Um ato isolado não prova reiteradamente, ainda que outro crime possa existir. Não presumir perseguição só por desconforto sem elementos."
+      ],
+      "exemplo": "Um contato isolado é usado para afirmar reiteração sem outros atos comprovados. Variação: Com perseguição repetida e elementos legais, examinar tipo e majorantes; ameaça concomitante tem regime próprio, não troca automática de ação.",
+      "prova": [
+        "Um episódio sozinho prova reiteração? Não.",
+        "A remissão residual revoga todo 147-A? Não; exige integração."
+      ],
+      "termos": [
+        {
+          "termo": "Reiteração persecutória",
+          "significado": "Repetição de condutas nas hipóteses de afetação da liberdade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "19a8c6c4-82c1-5a1f-875b-af3ef1a850bb",
+        "content_sha256": "3a40da65c71301d620cedbdb93f468602e7b5b9d8d4a6d9db22965f66aa8a930",
+        "simples": "Perseguição (stalking): perseguir alguém, reiteradamente e por qualquer meio, ameaçando-lhe a integridade física ou psicológica, restringindo-lhe a capacidade de locomoção ou, de qualquer forma, invadindo ou perturbando sua esfera de liberdade ou privacidade. Pena: reclusão de 6 meses a 2 anos e multa. A pena aumenta de metade se contra criança, adolescente ou idoso, contra mulher por razões da condição de sexo feminino ou mediante concurso de 2 ou mais pessoas ou emprego de arma. As penas se aplicam sem prejuízo das da violência. Somente se procede mediante representação.",
+        "pontos": [
+          "Conduta REITERADA, por qualquer meio.",
+          "Pena: reclusão de 6 meses a 2 anos e multa.",
+          "§1º: aumento de metade (criança, adolescente, idoso; mulher por razões do sexo feminino; concurso de 2 ou mais pessoas ou arma).",
+          "§2º: sem prejuízo das penas da violência.",
+          "§3º: ação condicionada à representação."
+        ],
+        "atencao": [
+          "Exige REITERAÇÃO.",
+          "Ação penal condicionada à representação."
+        ],
+        "exemplo": "Alguém acompanha, liga e aparece repetidamente no local de trabalho da ex-namorada, perturbando sua privacidade: perseguição.",
+        "prova": [
+          "Assertiva que configura a perseguição com uma única conduta isolada erra: exige reiteração."
+        ],
+        "termos": [
+          {
+            "termo": "Stalking",
+            "significado": "Perseguição reiterada que invade a esfera de liberdade ou privacidade da vítima."
+          }
+        ],
+        "remissoes": [
+          "Art. 147"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-147-b",
+      "unit_id": "894ca3b6-ff8b-5e8e-b1de-2839d59a9386",
+      "content_sha256": "2bab43f6ddd3e2340196f537dfb29cfbe07e8acfc1be091b2276d243f3dba312",
+      "simples": "Violência psicológica contra mulher exige dano emocional e meios/finalidades descritos, subsidiariamente a crime mais grave. Lei 15.123, vigente 25/4/2025, aumenta metade quando IA ou recurso tecnológico altera imagem/som da vítima.",
+      "pontos": [
+        "Caput:6 meses a 2 anos E multa.",
+        "Aumento não é por qualquer uso de celular: alteração de imagem/som é requisito.",
+        "Dano e elementos devem ser demonstrados."
+      ],
+      "atencao": [
+        "Não diagnosticar crime por qualquer desentendimento ou presumir dano emocional apenas pelo rótulo. Não ampliar majorante a toda tecnologia sem alteração indicada; mudança gravosa não retroage."
+      ],
+      "exemplo": "Recurso de IA altera voz/imagem da vítima em conduta com dano emocional e elementos legais demonstrados. Variação: Se houve mensagem comum sem alteração de imagem/som, não aplicar automaticamente a nova majorante, embora o caput exija análise própria.",
+      "prova": [
+        "Qualquer tecnologia basta à majorante? Não.",
+        "Dispensa elementos de dano/conduta? Não; provar o tipo."
+      ],
+      "termos": [
+        {
+          "termo": "Dano emocional",
+          "significado": "Resultado e afetação previstos, distintos de rótulo genérico de conflito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15123.htm"
+      ],
+      "expected": {
+        "unit_id": "894ca3b6-ff8b-5e8e-b1de-2839d59a9386",
+        "content_sha256": "2bab43f6ddd3e2340196f537dfb29cfbe07e8acfc1be091b2276d243f3dba312",
+        "simples": "Violência psicológica contra a mulher: causar dano emocional à mulher que a prejudique e perturbe seu pleno desenvolvimento ou vise a degradar ou controlar suas ações, comportamentos, crenças e decisões, mediante ameaça, constrangimento, humilhação, manipulação, isolamento, chantagem, ridicularização, limitação do direito de ir e vir ou qualquer outro meio que cause prejuízo à sua saúde psicológica e autodeterminação. Pena: reclusão de 6 meses a 2 anos e multa, se a conduta não constitui crime mais grave. A pena é aumentada de metade se cometido com uso de inteligência artificial ou outro recurso tecnológico que altere imagem ou som da vítima.",
+        "pontos": [
+          "Dano emocional que prejudique, degrade ou controle a mulher.",
+          "Meios: ameaça, constrangimento, humilhação, manipulação, isolamento, chantagem, ridicularização, limitação do direito de ir e vir etc.",
+          "Pena: reclusão de 6 meses a 2 anos e multa, se não houver crime mais grave.",
+          "Aumento de metade se usar inteligência artificial ou recurso tecnológico que altere imagem ou som da vítima."
+        ],
+        "atencao": [
+          "Crime subsidiário (só se não houver crime mais grave).",
+          "A pena aumenta de metade quando há alteração de imagem ou som por meio tecnológico (por exemplo, deepfake)."
+        ],
+        "exemplo": "Isolar a companheira de amigos e familiares e humilhá-la sistematicamente para controlá-la: violência psicológica.",
+        "prova": [
+          "Assertiva que exige lesão física para configurar o art. 147-B erra: o tipo trata de dano emocional."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 147-A",
+          "Lei Maria da Penha"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-147-c",
+      "unit_id": "6858dc35-ad3d-52d3-b69e-ab6585a5a9d5",
+      "content_sha256": "887625f05682e42fb750548ef4c8d11e61778647fac73d7b952cde1595bb9a5d",
+      "simples": "A ameaça no contexto/finalidade legais do combate ao crime organizado tem reclusão 1 a 3 anos após Lei 15.358, vigente 25/3/2026. O tipo exige contexto ou finalidade prevista, não apenas pronunciar nome de facção.",
+      "pontos": [
+        "Mal injusto E grave.",
+        "Contexto da atuação OU consecução das condutas legais."
+      ],
+      "atencao": [
+        "Não importar automaticamente penas e condição de ação de todo 147 nem ampliar por analogia a qualquer conflito. Provar elementos e lei no tempo; controle constitucional não foi certificado integralmente."
+      ],
+      "exemplo": "Agente usa nome de facção, mas contexto/finalidade legais não estão demonstrados. Variação: Com elementos típicos e vínculo contextual provados, examinar norma especial e garantias, sem aplicar mudança gravosa a fato anterior.",
+      "prova": [
+        "Nome de facção sozinho resolve? Não.",
+        "Pena nova retroage prejudicialmente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Ameaça contextual",
+          "significado": "Hipótese especial dependente do contexto/finalidade legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ],
+      "expected": {
+        "unit_id": "6858dc35-ad3d-52d3-b69e-ab6585a5a9d5",
+        "content_sha256": "887625f05682e42fb750548ef4c8d11e61778647fac73d7b952cde1595bb9a5d",
+        "simples": "Ameaça qualificada pelo contexto do crime organizado: ameaçar alguém, por palavra, escrito, gesto ou qualquer outro meio simbólico, de causar-lhe mal injusto e grave, no contexto da atuação ou para a consecução das condutas previstas no art. 2º da lei que institui o marco legal do combate ao crime organizado no Brasil. Pena: reclusão de 1 a 3 anos.",
+        "pontos": [
+          "Ameaça de mal injusto e grave.",
+          "No contexto da atuação ou para a consecução das condutas do art. 2º da lei do marco legal do combate ao crime organizado.",
+          "Pena: reclusão de 1 a 3 anos."
+        ],
+        "atencao": [
+          "A diferença para o art. 147 é o CONTEXTO (crime organizado), que eleva a pena."
+        ],
+        "exemplo": "Integrante de organização criminosa ameaça uma testemunha para forçar o silêncio dela: art. 147-C.",
+        "prova": [
+          "Assertiva que aplica o art. 147-C a toda ameaça, independentemente do contexto, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 147"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-148",
+      "unit_id": "7e053c0d-44b0-5bbe-ae3c-b5d7c628905d",
+      "content_sha256": "2bd41bcc989ca259e1bd51b92d1bb2bec6f19ac81f8f6eeee5982eb74e50f448",
+      "simples": "Sequestro/cárcere priva liberdade com pena 1 a 3, qualificações 2 a 5 ou 2 a 8 e hipótese especial de 2026. Duração superior a quinze dias não é requisito de todo caput; é qualificadora indicada.",
+      "pontos": [
+        "§1º: parentesco/idade, internação, MAIS 15 dias, menor 18 ou fim libidinoso.",
+        "§2º: grave sofrimento decorrente de maus-tratos/natureza da detenção.",
+        "§3º:12 a 20, Lei 15.358 vigente 25/3/2026, integrante E contexto/finalidade."
+      ],
+      "atencao": [
+        "Não exigir quinze dias para todo crime nem confundir com extorsão mediante sequestro. Idade e finalidade têm recortes; grupo sozinho não prova §3º, e mudanças gravosas não retroagem."
+      ],
+      "exemplo": "Privação dura exatamente quinze dias: não satisfaz mais de quinze apenas pela duração, mas o caput/outros elementos seguem relevantes. Variação: Se dura dezesseis, a hipótese temporal muda, sem dispensar prova de privação e demais condições.",
+      "prova": [
+        "O caput exige sempre mais 15 dias? Não.",
+        "Exatamente 15 preenche superior 15? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Privação de liberdade",
+          "significado": "Supressão da liberdade física, com modalidades e recortes distintos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ],
+      "expected": {
+        "unit_id": "7e053c0d-44b0-5bbe-ae3c-b5d7c628905d",
+        "content_sha256": "2bd41bcc989ca259e1bd51b92d1bb2bec6f19ac81f8f6eeee5982eb74e50f448",
+        "simples": "Sequestro e cárcere privado: privar alguém de sua liberdade, mediante sequestro ou cárcere privado. Pena: reclusão de 1 a 3 anos. Forma qualificada (reclusão de 2 a 5 anos): vítima ascendente, descendente, cônjuge ou companheiro do agente ou maior de 60 anos; internação em casa de saúde ou hospital; privação por mais de 15 dias; vítima menor de 18 anos; fins libidinosos. Se resulta grave sofrimento físico ou moral por maus-tratos ou natureza da detenção: reclusão de 2 a 8 anos. Se cometido por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia: reclusão de 12 a 20 anos.",
+        "pontos": [
+          "Caput: reclusão de 1 a 3 anos.",
+          "§1º: reclusão de 2 a 5 anos em cinco hipóteses (parente ou idoso; internação em casa de saúde ou hospital; mais de 15 dias; menor de 18 anos; fins libidinosos).",
+          "§2º: grave sofrimento físico ou moral: reclusão de 2 a 8 anos.",
+          "§3º: organização ultraviolenta, paramilitar ou milícia: reclusão de 12 a 20 anos (texto atual)."
+        ],
+        "atencao": [
+          "Mais de 15 dias de privação: qualificadora do §1º, III.",
+          "Vítima menor de 18 anos e fins libidinosos também qualificam."
+        ],
+        "exemplo": "Manter alguém trancado por 20 dias: sequestro qualificado (reclusão de 2 a 5 anos).",
+        "prova": [
+          "Assertiva que fixa em 10 dias a duração para qualificar o sequestro erra: são mais de 15 dias."
+        ],
+        "termos": [
+          {
+            "termo": "Cárcere privado",
+            "significado": "Privação da liberdade mantendo a vítima confinada em local fechado."
+          }
+        ],
+        "remissoes": [
+          "Art. 159 (extorsão mediante sequestro)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-149",
+      "unit_id": "6c2b36e0-4e35-58fd-8ac3-92df9120543a",
+      "content_sha256": "f2ef1290fab4c92c27a6878f57275837c64ef9e3ee8f1da9e9cf4bbe5290b675",
+      "simples": "Condição análoga à de escravo abrange alternativas de trabalho forçado, jornada exaustiva, condições degradantes ou restrição por dívida. Não depende sempre de correntes ou impedimento físico de sair.",
+      "pontos": [
+        "Dois a oito anos E multa, além da violência.",
+        "§1º: transporte, vigilância/documentos com fim de reter.",
+        "§2º: metade por criança/adolescente ou motivo discriminatório indicado."
+      ],
+      "atencao": [
+        "Não equiparar qualquer irregularidade trabalhista automaticamente ao tipo nem exigir restrição locomotora em todas as alternativas. Demonstrar gravidade e elementos; trabalho doméstico não é área imune ao tipo."
+      ],
+      "exemplo": "A acusação descreve condições degradantes típicas, mas o candidato exclui o crime só por não haver correntes. Variação: Mera irregularidade pontual sem elementos do tipo não prova automaticamente escravidão; examinar enquadramento e provas.",
+      "prova": [
+        "Toda hipótese exige correntes? Não.",
+        "Qualquer descumprimento trabalhista basta? Não; provar elementos."
+      ],
+      "termos": [
+        {
+          "termo": "Alternativas típicas",
+          "significado": "Formas distintas de redução, sem requisito único de restrição física."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6c2b36e0-4e35-58fd-8ac3-92df9120543a",
+        "content_sha256": "f2ef1290fab4c92c27a6878f57275837c64ef9e3ee8f1da9e9cf4bbe5290b675",
+        "simples": "Redução a condição análoga à de escravo: submeter alguém a trabalhos forçados ou a jornada exaustiva, sujeitá-lo a condições degradantes de trabalho ou restringir, por qualquer meio, sua locomoção em razão de dívida contraída com o empregador ou preposto. Pena: reclusão de 2 a 8 anos e multa, além da pena correspondente à violência. Nas mesmas penas incorre quem cerceia o uso de meio de transporte do trabalhador para retê-lo, ou mantém vigilância ostensiva ou se apodera de documentos ou objetos pessoais para retê-lo. A pena aumenta de metade se contra criança ou adolescente ou por preconceito de raça, cor, etnia, religião ou origem.",
+        "pontos": [
+          "Trabalhos forçados; jornada exaustiva; condições degradantes; restrição de locomoção por dívida.",
+          "Pena: reclusão de 2 a 8 anos, multa e pena da violência.",
+          "§1º: cerceio de transporte; vigilância ostensiva ou apoderamento de documentos ou objetos para reter o trabalhador.",
+          "§2º: aumento de metade (criança ou adolescente; preconceito de raça, cor, etnia, religião ou origem)."
+        ],
+        "atencao": [
+          "As QUATRO formas do caput são alternativas: basta uma para configurar o crime.",
+          "O crime protege a liberdade e a dignidade do trabalhador."
+        ],
+        "exemplo": "Empregador retém os documentos dos trabalhadores e os obriga a pagar dívida de alojamento, impedindo sua saída: art. 149.",
+        "prova": [
+          "Assertiva que exige cumulativamente as quatro condutas para configurar o crime erra: são alternativas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 149-A (tráfico de pessoas)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-149-a",
+      "unit_id": "e3f1cb55-d11a-59f4-9410-0ccc82e5cc4c",
+      "content_sha256": "8d9a6bdf6c173718763ea701dc40f6cf8a0ec92fd9acbf009ed928547b3547c0",
+      "simples": "Tráfico de pessoas reúne conduta, meio ilícito e finalidade listados; não exige sempre cruzar fronteira. Pena 4 a 8 e multa, aumento 1/3 até metade e redução 1 a 2 terços na hipótese legal.",
+      "pontos": [
+        "Finalidades: órgãos, trabalho análogo, servidão, adoção ilegal, exploração sexual.",
+        "Primário E não integrar organização para redução.",
+        "Lei 13.344: publicação 7/10/2016, vacância 45 dias; artigos 231/231-A revogados."
+      ],
+      "atencao": [
+        "Não criminalizar toda viagem/acolhimento sem meios e finalidade, nem ensinar transporte internacional como requisito universal. Retirada do território é majorante própria; redução exige condições cumulativas e lei no tempo."
+      ],
+      "exemplo": "Recrutamento mediante fraude para finalidade legal ocorre dentro do país: ausência de fronteira não exclui por si o tipo. Variação: Viagem regular sem meio ilícito e finalidade típica não se torna tráfico apenas por transportar pessoa.",
+      "prova": [
+        "Exige sempre sair do Brasil? Não.",
+        "Primariedade sozinha basta à redução? Não; também não integrar organização."
+      ],
+      "termos": [
+        {
+          "termo": "Tráfico de pessoas",
+          "significado": "Conduta, meio e finalidade típicos, distinta de mero deslocamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm"
+      ],
+      "expected": {
+        "unit_id": "e3f1cb55-d11a-59f4-9410-0ccc82e5cc4c",
+        "content_sha256": "8d9a6bdf6c173718763ea701dc40f6cf8a0ec92fd9acbf009ed928547b3547c0",
+        "simples": "Tráfico de pessoas: agenciar, aliciar, recrutar, transportar, transferir, comprar, alojar ou acolher pessoa, mediante grave ameaça, violência, coação, fraude ou abuso, com a finalidade de remover-lhe órgãos, tecidos ou partes do corpo; submetê-la a trabalho em condições análogas à de escravo ou a qualquer tipo de servidão; adoção ilegal; ou exploração sexual. Pena: reclusão de 4 a 8 anos e multa. A pena é aumentada de um terço até a metade se o crime é cometido por funcionário público no exercício das funções ou a pretexto de exercê-las, contra criança, adolescente, idoso ou pessoa com deficiência, entre outras hipóteses do texto completo.",
+        "pontos": [
+          "Condutas: agenciar, aliciar, recrutar, transportar, transferir, comprar, alojar ou acolher.",
+          "Meios: grave ameaça, violência, coação, fraude ou abuso.",
+          "Finalidades: remoção de órgãos; trabalho escravo; servidão; adoção ilegal; exploração sexual.",
+          "Pena: reclusão de 4 a 8 anos e multa.",
+          "§1º: aumento de 1/3 até a metade (funcionário público; criança, adolescente, idoso ou pessoa com deficiência; relações de parentesco, domésticas e outras, conforme o texto completo)."
+        ],
+        "atencao": [
+          "São CINCO finalidades possíveis; basta uma.",
+          "Aumento de um terço até a metade (confira as demais hipóteses no texto completo)."
+        ],
+        "exemplo": "Aliciar mulheres com falsas promessas de emprego no exterior para exploração sexual: tráfico de pessoas.",
+        "prova": [
+          "Assertiva que exige remoção de órgãos como finalidade única do tráfico de pessoas erra: há cinco finalidades."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 149",
+          "Lei de tráfico de pessoas"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-150",
+      "unit_id": "ff5a557e-4a49-5bc3-a3fd-75da72136655",
+      "content_sha256": "bef0b2428a894802d68950e8e878b3d7119748c29b193c98a8321627844804a4",
+      "simples": "Violação de domicílio protege entrada/permanência nas condições legais e conceito de casa, inclusive compartimento profissional não aberto ao público. Exceções devem ser integradas à Constituição e fundadas razões, não licença por suspeita vaga.",
+      "pontos": [
+        "Caput: um a três meses OU multa; §1º: seis meses a dois anos mais violência.",
+        "§2º revogado pela Lei 13.869; não ensinar agravante histórica como vigente.",
+        "Quarto ocupado em habitação coletiva integra casa; área aberta não equivale a qualquer quarto."
+      ],
+      "atencao": [
+        "CF 5ºXI e Tema 280/STF: ingresso forçado sem mandado exige fundadas razões de flagrante, justificadas depois. Não usar a palavra iminência para legitimar qualquer suspeita futura ou descoberta posterior como justificativa retroativa. Consentimento e outras exceções exigem prova; não certificada toda jurisprudência de busca."
+      ],
+      "exemplo": "Há apenas suspeita genérica e o ingresso é justificado só porque depois se encontrou objeto ilícito. Variação: Com fundadas razões anteriores de flagrante demonstradas, examinar hipótese e controle; mandado judicial tem requisitos próprios, inclusive período diurno.",
+      "prova": [
+        "Qualquer suspeita basta? Não.",
+        "Quarto ocupado de hospedagem perde toda proteção por estar no hotel? Não; o§4º o contempla."
+      ],
+      "termos": [
+        {
+          "termo": "Casa constitucionalmente protegida",
+          "significado": "Espaço de intimidade nas hipóteses legais, com exceções delimitadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-define-limites-para-entrada-da-policia-em-domicilio-sem-autorizacao-judicial/"
+      ],
+      "expected": {
+        "unit_id": "ff5a557e-4a49-5bc3-a3fd-75da72136655",
+        "content_sha256": "bef0b2428a894802d68950e8e878b3d7119748c29b193c98a8321627844804a4",
+        "simples": "Violação de domicílio: entrar ou permanecer, clandestina ou astuciosamente, ou contra a vontade expressa ou tácita de quem de direito, em casa alheia ou em suas dependências. Pena: detenção de 1 a 3 meses, ou multa. Se cometido de noite, em lugar ermo, com violência ou arma, ou por duas ou mais pessoas: detenção de 6 meses a 2 anos, além da pena da violência. Não é crime a entrada durante o dia, com as formalidades legais, para efetuar prisão ou outra diligência, nem a entrada a qualquer hora quando algum crime está sendo ali praticado ou na iminência de o ser. O conceito de 'casa' abrange compartimento habitado, aposento ocupado de habitação coletiva e compartimento não aberto ao público onde se exerce profissão ou atividade; não abrange hospedaria enquanto aberta, taverna e casa de jogo.",
+        "pontos": [
+          "Entrar ou permanecer, clandestina ou astuciosamente, ou contra vontade expressa ou tácita.",
+          "Caput: detenção de 1 a 3 meses, ou multa.",
+          "§1º: noite, lugar ermo, violência ou arma, ou duas ou mais pessoas: detenção de 6 meses a 2 anos.",
+          "§3º: não é crime entrada durante o dia com formalidades legais para prisão ou diligência; ou a qualquer hora se há crime em andamento ou iminente.",
+          "§4º: 'casa' = compartimento habitado; aposento de habitação coletiva; compartimento não aberto ao público para profissão ou atividade.",
+          "§5º: não é 'casa' hospedaria aberta, taverna, casa de jogo."
+        ],
+        "atencao": [
+          "Entrada para prisão ou diligência: durante o DIA, com formalidades legais (à noite, só com consentimento ou em caso de crime em curso/iminente, desastre ou para prestar socorro, conforme a Constituição).",
+          "O §2º foi revogado."
+        ],
+        "exemplo": "Policial entra, durante o dia, em uma casa munido de mandado judicial: não há crime (§3º, I).",
+        "prova": [
+          "Assertiva que considera crime a entrada em casa alheia quando um crime está sendo praticado ali erra: o §3º, II, a exclui."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 23 (excludentes de ilicitude)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-151",
+      "unit_id": "e0412313-f7c0-5239-9b71-37c46185bffb",
+      "content_sha256": "aa4930dd54a6696c2ce76c1befbe7da434a2898f861789536c0a023d1c87b625",
+      "simples": "Comunicações têm diferentes hipóteses de violação, divulgação e interrupção. A correspondência postal deve ser integrada ao art.40 da Lei 6.538/1978; rádio/telecomunicações exigem normas posteriores, não aplicação literal universal do CP residual.",
+      "pontos": [
+        "Caput e§1ºI possuem disciplina postal posterior correspondente.",
+        "Lei 9.472, art.183: atividade clandestina de telecomunicações tem regime próprio.",
+        "Representação textual tem exceções em§1ºIV/§3º, a integrar conforme o tipo aplicável."
+      ],
+      "atencao": [
+        "Não ensinar pena do caput do CP como regime completo atual de toda correspondência postal nem rádio sem licença como sempre enquadrado no§1ºIV. Lei especial, finalidade e natureza do serviço importam; não certificada toda derrogação ou jurisprudência. Bloquear exercícios automáticos de literalidade residual."
+      ],
+      "exemplo": "Violação de correspondência fechada é resolvida apenas pela pena antiga do caput, ignorando art.40 da Lei 6.538. Variação: Se o caso é comunicação telefônica ou telecomunicação clandestina, identificar norma própria em vez de copiar a mesma resposta postal.",
+      "prova": [
+        "CP 151 sozinho resolve todo serviço postal atual? Não.",
+        "Correspondência e telecomunicação têm regime necessariamente idêntico? Não; integrar normas especiais."
+      ],
+      "termos": [
+        {
+          "termo": "Integração das comunicações",
+          "significado": "Determinação da norma aplicável conforme objeto/serviço, sem universalizar trecho residual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l6538.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9472.htm"
+      ],
+      "expected": {
+        "unit_id": "e0412313-f7c0-5239-9b71-37c46185bffb",
+        "content_sha256": "aa4930dd54a6696c2ce76c1befbe7da434a2898f861789536c0a023d1c87b625",
+        "simples": "Violação de correspondência: devassar indevidamente o conteúdo de correspondência fechada, dirigida a outrem. Pena: detenção de 1 a 6 meses, ou multa. Na mesma pena incorre quem se apossa indevidamente de correspondência alheia, embora não fechada, e a sonega ou destrói (sonegação ou destruição de correspondência); quem divulga, transmite ou utiliza abusivamente comunicação telegráfica ou radioelétrica dirigida a terceiro, ou conversação telefônica entre outras pessoas; quem impede essa comunicação; e quem instala ou utiliza estação ou aparelho radioelétrico sem observância de disposição legal. As penas aumentam-se de metade se há dano para outrem. Com abuso de função em serviço postal, telegráfico, radioelétrico ou telefônico: detenção de 1 a 3 anos. Em regra, ação condicionada à representação, salvo nos casos do §1º, IV, e do §3º.",
+        "pontos": [
+          "Caput: devassar correspondência fechada alheia: detenção de 1 a 6 meses, ou multa.",
+          "§1º, I: sonegação ou destruição de correspondência.",
+          "§1º, II e III: violação ou impedimento de comunicação telegráfica, radioelétrica ou telefônica.",
+          "§1º, IV: instalar ou usar estação radioelétrica sem observância legal.",
+          "§2º: aumento de metade se há dano a outrem.",
+          "§3º: abuso de função em serviço postal ou de telecomunicações: detenção de 1 a 3 anos.",
+          "§4º: representação, salvo §1º, IV, e §3º."
+        ],
+        "atencao": [
+          "Devassar exige correspondência FECHADA; a sonegação ou destruição alcança a correspondência mesmo aberta."
+        ],
+        "exemplo": "Abrir carta fechada dirigida ao vizinho e ler o conteúdo: art. 151.",
+        "prova": [
+          "Assertiva que torna condicionada à representação a ação no abuso de função em serviço postal erra: o §4º a exclui."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 152",
+          "Art. 153"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    }
+  ]
+}
