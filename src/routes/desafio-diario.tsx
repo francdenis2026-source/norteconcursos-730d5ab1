@@ -252,7 +252,9 @@ function DesafioDiario() {
         )}
 
         {step === "intro" && (
+          <div className="daily-intro">
           <PageHero
+            className="daily-intro__hero"
             image="trainer"
             size="lg"
             kicker="Sem cadastro · grátis"
@@ -275,6 +277,22 @@ function DesafioDiario() {
               <HeroStat icon={Sparkles} label="Custo" value="Grátis" />
             </div>
           </PageHero>
+          <section className="daily-intro__guide" aria-labelledby="daily-guide-title">
+            <figure className="daily-intro__visual">
+              <img src="/media/hero/study-desk.webp" alt="Ambiente de estudo e preparação para concursos" width={960} height={540} />
+              <figcaption>Um treino por dia. Mais direção para sua preparação.</figcaption>
+            </figure>
+            <div className="daily-intro__steps">
+              <h2 id="daily-guide-title">Seu treino em três passos</h2>
+              <ol>
+                <li><b>01</b><div><strong>Resolva no seu ritmo</strong><p>Leia o enunciado e escolha uma alternativa.</p></div></li>
+                <li><b>02</b><div><strong>Entenda a resposta</strong><p>Confira o gabarito e a explicação após responder.</p></div></li>
+                <li><b>03</b><div><strong>Veja seu resultado</strong><p>Ao concluir, acompanhe seus acertos e pontos de revisão.</p></div></li>
+              </ol>
+              <button type="button" className="btn-brass" onClick={startChallenge}>Iniciar meu desafio <ArrowRight /></button>
+            </div>
+          </section>
+          </div>
         )}
 
         <div className="mx-auto max-w-3xl">
