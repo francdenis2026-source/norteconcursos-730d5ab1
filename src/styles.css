@@ -10319,3 +10319,25 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     background: oklch(1 0 0 / 0.16);
   }
 }
+
+/* A camada de textura do hub é exclusiva do modo escuro. Sem esta
+   sobrescrita final ela continuava escurecendo o bloco claro por cima do
+   fundo branco escolhido acima. */
+@media (max-width: 767px) {
+  html:not(.dark) .mh {
+    background: #fff;
+    color: oklch(0.19 0.03 262);
+  }
+  html:not(.dark) .mh::before {
+    opacity: 0;
+  }
+  html:not(.dark) .mh::after {
+    background: transparent;
+  }
+  html:not(.dark) .mh__intro h2 {
+    color: oklch(0.16 0.03 262);
+  }
+  html:not(.dark) .mh__intro p {
+    color: oklch(0.34 0.03 262);
+  }
+}
