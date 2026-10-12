@@ -19,6 +19,7 @@ import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { materialLawSlug } from "@/lib/legalLibrary";
 import { StudyPractice } from "@/components/library/StudyPractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
+import { practiceSearch } from "@/lib/practiceLink";
 import { HighlightToggle } from "@/components/library/StudyText";
 import { useFocusMode } from "@/hooks/useFocusMode";
 import { toolsAreaFor } from "@/components/study/StudyTools";
@@ -139,6 +140,7 @@ function MaterialPage() {
         nextLabel: "Próximo material",
         tools: toolsAreaFor(material.discipline),
         notesKey: `material:${material.slug}`,
+        extra: <Link to="/dashboard/question-trainer" search={practiceSearch(material.discipline, `${material.topic_label ?? ""} ${material.title}`) as never} className="flex items-center gap-1 rounded-lg bg-emerald-400 px-3 py-2 text-sm font-bold text-emerald-950 hover:bg-emerald-300">Questões</Link>,
       })}
       {!fm.focus && <div className="flex flex-wrap items-center justify-between gap-2"><div><BackToPlan back={backToPlan} topic={tema} />{back}</div>{fm.button}</div>}
 
@@ -209,7 +211,7 @@ function MaterialPage() {
         <Button asChild className="hero-btn-primary gap-2">
           <Link
             to="/dashboard/question-trainer"
-            search={{ subject: material.discipline, go: "1", reinforce: "1" }}
+            search={practiceSearch(material.discipline, `${material.topic_label ?? ""} ${material.title}`) as never}
           >
             <BrainCircuit className="h-4 w-4" /> Treinar questões
           </Link>

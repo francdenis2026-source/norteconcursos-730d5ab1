@@ -96,6 +96,7 @@ function LegalCoursePage() {
       nextLabel: "Próximo artigo",
       tools: "law",
       notesKey: `lei:${course.slug}`,
+      extra: <Link to="/dashboard/question-trainer" search={{ law: course.slug, go: "1", reinforce: "1" }} className="flex items-center gap-1 rounded-lg bg-emerald-400 px-3 py-2 text-sm font-bold text-emerald-950 hover:bg-emerald-300">Questões</Link>,
     })}
     {!fm.focus && <nav aria-label="Trilha" className="flex items-center gap-2 text-sm text-muted-foreground"><Link to="/dashboard/library" className="hover:text-foreground hover:underline">Biblioteca</Link><span aria-hidden>/</span><span className="text-foreground">Legislação</span></nav>}
     {!fm.focus && <header className="surface-card overflow-hidden p-0">

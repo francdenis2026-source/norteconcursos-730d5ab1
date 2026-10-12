@@ -10,6 +10,7 @@ import {
   ArrowLeft,
   ArrowRight,
   BookOpenCheck,
+  RefreshCw,
   BrainCircuit,
   Check,
   CheckCircle2,
@@ -28,6 +29,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
+import { useReinforcement } from "@/hooks/useReinforcement";
 import { fetchQuestionsAnsweredToday, getDailyQuestionLimit } from "@/lib/questionDailyLimit";
 import {
   type Answer,
@@ -93,7 +95,8 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       | "area"
       | "topic"
       | "go"
-      | "reinforce",
+      | "reinforce"
+      | "mode",
       string | undefined
     >
   > => ({
@@ -111,6 +114,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     topic: typeof search["topic"] === "string" ? search["topic"] : undefined,
     go: typeof search["go"] === "string" ? search["go"] : undefined,
     reinforce: typeof search["reinforce"] === "string" ? search["reinforce"] : undefined,
+    mode: typeof search["mode"] === "string" ? search["mode"] : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -155,8 +159,10 @@ function QuestionTrainer() {
   );
   const library = useStudyMaterialList(canLoad);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
+  const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
+  const [sessionReinforce, setSessionReinforce] = React.useState(false);
   const [contest, setContest] = React.useState(routeFilters.contest || "all");
   const [board, setBoard] = React.useState(trainerBoard(routeFilters.board));
   const [career, setCareer] = React.useState(canonicalCareerName(routeFilters.career) || "all");
@@ -193,7 +199,7 @@ function QuestionTrainer() {
   const restoredSelection = React.useRef<string | null>(null);
   const bookmarkRef = React.useRef<{ userId: string; value: TrainerBookmark } | null>(null);
   bookmarkRef.current =
-    userId && started
+    userId && started && !sessionReinforce
       ? {
           userId,
           value: {
@@ -447,8 +453,26 @@ function QuestionTrainer() {
       category,
     ],
   );
+  // Modos de prática. "new": só questões ainda não respondidas (a 1ª resposta é a que conta para ranking e medalhas).
+  // "wrong" e "all": reforço de questões já respondidas; as novas tentativas ficam numa tabela própria e não pontuam.
+  const [practiceMode, setPracticeMode] = React.useState<"new" | "wrong" | "all">(routeFilters.mode === "reforco" ? "wrong" : "new");
+  const [notice, setNotice] = React.useState("");
+  const fresh = React.useMemo(() => pool.filter((q) => !locked.has(lockedKey(q.source, q.id))), [pool, locked]);
+  const answeredPool = React.useMemo(() => pool.filter((q) => locked.has(lockedKey(q.source, q.id))), [pool, locked]);
+  // erro na 1ª tentativa e ainda não recuperado no reforço
+  const wrongPending = React.useMemo(
+    () => answeredPool.filter((q) => { const k = lockedKey(q.source, q.id); return locked.get(k)?.isCorrect === false && !reinforced.get(k)?.lastCorrect; }),
+    [answeredPool, locked, reinforced],
+  );
+  const recovered = answeredPool.filter((q) => { const k = lockedKey(q.source, q.id); return locked.get(k)?.isCorrect === false && reinforced.get(k)?.lastCorrect; }).length;
+  const trainingPool = practiceMode === "new" ? fresh : practiceMode === "wrong" ? wrongPending : answeredPool;
   const startTraining = () => {
-    const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
+    const ordered = orderMode === "random" ? shuffled(trainingPool) : [...trainingPool];
+    if (!ordered.length) {
+      setNotice(practiceMode === "new" ? "Você já respondeu todas as questões deste filtro. Escolha “Reforço” para refazer as que errou." : "Não há questões para este modo de reforço neste filtro.");
+      return;
+    }
+    setSessionReinforce(practiceMode !== "new");
     setQuestions(ordered.slice(0, Number(limit)));
     setIndex(0);
     setResults([]);
@@ -459,13 +483,27 @@ function QuestionTrainer() {
     setStartedAt(Date.now());
     setStarted(true);
   };
-  // Veio do cronograma com ?go=1: começa direto, com 10 questões do assunto, assim que houver questões.
+  // Veio com ?go=1 (cronograma, cursos, leis): começa direto, com 10 questões ainda não respondidas do assunto.
   React.useEffect(() => {
-    if (!autoStart.current || loading || started || pool.length === 0) return;
+    if (!autoStart.current || loading || started) return;
+    if (pool.length === 0) {
+      // assunto sem questões catalogadas: treina a matéria inteira em vez de abrir uma tela vazia
+      if (topic !== "all") {
+        setNotice("Ainda há poucas questões deste assunto específico; o treino usa a matéria inteira.");
+        setTopic("all");
+      }
+      return;
+    }
     autoStart.current = false;
+    if (trainingPool.length === 0) {
+      setNotice(practiceMode === "new"
+        ? "Você já respondeu todas as questões deste tema. Escolha “Reforço” para refazer as que errou ou outro assunto."
+        : "Não há questões para este modo de reforço neste tema.");
+      return;
+    }
+    setSessionReinforce(practiceMode !== "new");
     setLimit("10");
-    const ordered = shuffled(pool).slice(0, 10);
-    setQuestions(ordered);
+    setQuestions(shuffled(trainingPool).slice(0, 10));
     setIndex(0);
     setResults([]);
     setSelected(null);
@@ -474,7 +512,7 @@ function QuestionTrainer() {
     setSupportNotice(false);
     setStartedAt(Date.now());
     setStarted(true);
-  }, [loading, started, pool]);
+  }, [loading, started, pool, trainingPool, practiceMode, topic]);
   const selectAppliedExam = (value: string) => {
     setAppliedExam(value);
     if (value === "all") return;
@@ -499,7 +537,7 @@ function QuestionTrainer() {
     // Enquanto o histórico de respostas ainda está carregando, espera: decidir "não respondida"
     // antes de saber é o que deixava responder de novo e, ao voltar, mostrar como não respondida.
     if (lockedLoading) return;
-    const past = locked.get(lockedKey(question.source, question.id));
+    const past = sessionReinforce ? undefined : locked.get(lockedKey(question.source, question.id));
     if (past) {
       setSelected(past.selected);
       setAnswered(true);
@@ -527,7 +565,7 @@ function QuestionTrainer() {
       setStartedAt(Date.now());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- só deve rodar quando a questão exibida muda (ou quando o histórico termina de carregar)
-  }, [index, question?.id, question?.source, lockedLoading]);
+  }, [index, question?.id, question?.source, lockedLoading, sessionReinforce]);
   const submit = async () => {
     if (
       !selected ||
@@ -535,13 +573,43 @@ function QuestionTrainer() {
       answered ||
       !user ||
       savingRef.current ||
-      reachedDailyLimit ||
+      (reachedDailyLimit && !sessionReinforce) ||
       lockedLoading
     )
       return;
     savingRef.current = true;
     setSaving(true);
     const isCorrect = selected === question.answer;
+    if (sessionReinforce) {
+      // Reforço: guarda o desempenho de estudo, mas não pontua nem consome o limite diário.
+      try {
+        const { error } = await supabase.from("question_reinforcement_attempts").insert({
+          id: responseIdRef.current,
+          user_id: user.id,
+          question_id: question.id,
+          question_source: question.source,
+          contest_name: question.contest,
+          board: question.board ?? "",
+          subject: question.subject,
+          selected_answer: selected,
+          official_answer: question.answer,
+          is_correct: isCorrect,
+          response_seconds: Math.max(0, Math.round((Date.now() - startedAt) / 1000)),
+        });
+        if (error && !/PGRST205|42P01|does not exist|schema cache/i.test(`${error.code ?? ""} ${error.message}`)) throw error;
+        if (error) toast.message("Reforço registrado só nesta sessão: o histórico de reforço ainda não foi habilitado no banco.");
+        setAnswered(true);
+        markReinforced(question.source, question.id, isCorrect);
+        setResults((prev) => { const copy = [...prev]; copy[index] = isCorrect ? "ok" : "err"; return copy; });
+        setModal("result");
+      } catch {
+        toast.error("Não foi possível salvar sua tentativa de reforço. Tente novamente.");
+      } finally {
+        savingRef.current = false;
+        setSaving(false);
+      }
+      return;
+    }
     try {
       const { error } = await supabase.from("question_training_responses").upsert(
         {
@@ -628,9 +696,27 @@ function QuestionTrainer() {
     return (
       <div className="space-y-4">
         {lawNotice}
+        <section className="space-y-3 rounded-xl border bg-card p-4 text-sm" aria-label="Modo de prática">
+          {notice && <p className="rounded-lg border border-amber-300 bg-amber-50 p-2 text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100" role="status">{notice}</p>}
+          <p className="font-semibold">O que você quer praticar neste filtro?</p>
+          <div className="grid gap-2 sm:grid-cols-3">
+            {([
+              ["new", "Questões novas", `${fresh.length} ainda não respondidas. Contam para o ranking.`],
+              ["wrong", "Reforço: o que errei", `${wrongPending.length} erros pendentes${recovered ? ` · ${recovered} já recuperados` : ""}. Não pontuam de novo.`],
+              ["all", "Revisar respondidas", `${answeredPool.length} já respondidas. Não pontuam de novo.`],
+            ] as const).map(([id, title, sub]) => (
+              <label key={id} className={`cursor-pointer rounded-xl border p-3 ${practiceMode === id ? "border-primary bg-primary/5" : "hover:bg-muted/50"}`}>
+                <input type="radio" name="practice-mode" className="mr-2" checked={practiceMode === id} onChange={() => { setPracticeMode(id); setNotice(""); }} />
+                <span className="font-semibold">{title}</span>
+                <span className="mt-1 block text-xs text-muted-foreground">{sub}</span>
+              </label>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground">Só a primeira resposta de cada questão conta para ranking, medalhas e seus números de acertos e erros. O reforço registra suas tentativas à parte, para você acompanhar a recuperação dos erros.</p>
+        </section>
         <TrainerSetup
           total={catalog.length}
-          available={pool.length}
+          available={trainingPool.length}
           choices={choices}
           facets={facets}
           values={{
@@ -729,7 +815,13 @@ function QuestionTrainer() {
   return (
     <div className="trainer-session-shell mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
       {lawNotice}
-      {routeFilters.reinforce === "1" && (
+      {sessionReinforce && (
+        <div role="status" className="flex items-start gap-2 rounded-xl border border-sky-300 bg-sky-50 p-3 text-sm text-sky-950 dark:border-sky-500/30 dark:bg-sky-950/20 dark:text-sky-100">
+          <RefreshCw className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+          <p><strong>Modo reforço.</strong> Esta tentativa fica registrada para você acompanhar sua evolução, mas não conta de novo para o ranking, as medalhas nem o limite diário. A sua primeira resposta continua sendo a oficial.</p>
+        </div>
+      )}
+      {routeFilters.reinforce === "1" && !sessionReinforce && (
         <div className="reinforce-banner">
           <BookOpenCheck className="h-5 w-5 shrink-0" />
           <div>
@@ -741,7 +833,7 @@ function QuestionTrainer() {
           </div>
         </div>
       )}
-      {reachedDailyLimit && (
+      {reachedDailyLimit && !sessionReinforce && (
         <div
           role="status"
           className="flex items-start gap-2 rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground"
@@ -995,7 +1087,7 @@ function QuestionTrainer() {
                 </Button>
                 <Button
                   size="lg"
-                  disabled={!selected || saving || reachedDailyLimit}
+                  disabled={!selected || saving || (reachedDailyLimit && !sessionReinforce)}
                   onClick={submit}
                   className="h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
                 >
