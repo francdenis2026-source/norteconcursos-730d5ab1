@@ -1,5 +1,16 @@
 /** Editorial application notes are separate from the unmodified compiled statute. */
 export function legalStudyCaveat(law: string, key: string) {
+  const drugProcedure: Record<string, [string, string, string]> = {
+    'art-48': ['Cannabis pessoal: a remissão penal não prevalece isoladamente', 'O Tema 506/STF afasta efeitos penais do porte de cannabis para consumo pessoal. A remissão literal a processo criminal e transação penal não deve ser aplicada indistintamente. Não confundir esta hipótese com tráfico, nem a vedação específica de detenção com proibição de qualquer flagrante da lei.', 'https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4034145&numeroProcesso=635659&numeroTema=506'],
+    'art-50': ['Constatação para flagrante e prova para condenação', 'O laudo preliminar suficiente ao flagrante não dispensa genericamente o definitivo para condenar. O STJ admite equivalência excepcional de laudo oficial com o mesmo grau de certeza. Preserve amostra e diferencie os prazos judicial de dez dias e de execução de quinze.', 'https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=03%2F03%2F2026&num_registro=202503473800'],
+    'art-54': ['Arquivamento: integrar o CPP atual', 'A remissão do rito especial deve ser lida junto ao regime atual do CPP 28, suas comunicações e revisão. Não atribua ao juiz iniciativa acusatória nem use a redação antiga para suprimir as garantias atuais.', 'https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm'],
+    'art-57': ['Interrogatório ao final da instrução', 'O STF aplica o CPP 400 aos procedimentos especiais, inclusive Lei de Drogas. A ordem residual do art. 57 não deve virar exercício que ensina interrogatório antes das testemunhas. Distinga o marco temporal e o exame de nulidade do direito de defesa atual.', 'https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=430484'],
+    'art-59': ['Apelação independe de recolhimento à prisão', 'Súmula 347/STJ: conhecer a apelação não depende de prisão. A exceção literal de primariedade não torna admissível exigir recolhimento dos demais recorrentes. Eventual prisão cautelar exige fundamento próprio e não é eliminada automaticamente pela interposição do recurso.', 'https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&livre=%22347%22+INPATH%28NUM%29&operador=AND&ordenacao=-%40NUM&p=false'],
+  };
+  if (law === 'drogas' && drugProcedure[key]) {
+    const [title, explanation, source] = drugProcedure[key];
+    return {title, explanation, source, literalPractice: false};
+  }
   if (law === 'drogas' && ['art-33','art-42'].includes(key)) return {
     literalPractice: false,
     title: 'Atualização de setembro/2026: privilégio e dosimetria',

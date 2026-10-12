@@ -335,3 +335,17 @@ test('drug criminal review guards cannabis, sentencing, cooperation and impairme
  assert.match(get('art-47').atencao.join(' '),/não significa internação automática/);
  for(const key of ['art-28','art-33','art-41','art-42','art-44']) assert.equal(legalStudyCaveat('drogas',key).literalPractice,false);
 });
+
+test('drug procedure separates custody, evidence, defense and constitutional hearing order',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-drug-procedure-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,13);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-50').atencao.join(' '),/não é dispensa geral.*excepcional/);
+ assert.match(get('art-50-a').simples,/trinta dias contados da apreensão/);
+ assert.match(get('art-51').simples,/trinta.*preso.*noventa.*solto/);
+ assert.match(get('art-55').atencao.join(' '),/antecede o recebimento/);
+ assert.match(get('art-57').pontos.join(' '),/interrogatório ao final/);
+ assert.match(get('art-59').simples,/347.*independe da prisão/);
+ for(const key of ['art-48','art-50','art-54','art-57','art-59']) assert.equal(legalStudyCaveat('drogas',key).literalPractice,false);
+});

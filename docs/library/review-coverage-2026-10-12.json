@@ -1,9 +1,9 @@
 {
   "current_units": 3511,
-  "current_review_metadata": 901,
-  "pending_current_review_metadata": 2610,
-  "checked_at": "2026-10-12T16:31:44.376Z",
-  "note": "22 novas revisões do bloco penal da Lei de Drogas confirmadas por leitura integral; metadados não certificam toda a jurisprudência nem os demais artigos pendentes.",
+  "current_review_metadata": 914,
+  "pending_current_review_metadata": 2597,
+  "checked_at": "2026-10-12T16:40:41.932Z",
+  "note": "Contagem de aprovações editoriais atuais com revisor, data e hash correspondente; existência de explicação publicada não equivale a revisão atual. Não certifica toda a regulamentação ou jurisprudência.",
   "courses": [
     {
       "slug": "cin",
@@ -254,8 +254,8 @@
     {
       "slug": "drogas",
       "current": 84,
-      "review_metadata": 47,
-      "pending": 37
+      "review_metadata": 60,
+      "pending": 24
     }
   ]
 }
