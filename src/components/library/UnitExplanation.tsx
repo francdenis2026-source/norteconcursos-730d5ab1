@@ -38,6 +38,7 @@ export function UnitExplanation({ unit, userId }: { unit: LegalUnit; userId: str
         {e.status === "under_review" && <span className="rounded-full bg-amber-200 px-2.5 py-0.5 text-xs font-bold text-amber-900">Em revisão: só administradores veem</span>}
         {stale && <span className="rounded-full bg-rose-200 px-2.5 py-0.5 text-xs font-bold text-rose-900">Texto oficial mudou: revisar</span>}
         {e.status === "published" && !stale && !hasCurrentExplanationReview(e, unit.content_sha256) && <span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-900 dark:bg-amber-950/40 dark:text-amber-200">Revisão editorial pendente</span>}
+        {e.status === "published" && !stale && hasCurrentExplanationReview(e, unit.content_sha256) && <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-200">✓ Revisado em {new Date(e.reviewed_at!).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}</span>}
       </header>
       <Block icon="📘" title="Em palavras simples" tone="border-l-4 border-l-sky-500"><p><LegalRefText text={e.simples} /></p></Block>
       {e.pontos.length > 0 && <Block icon="🔑" title="Pontos-chave" tone="border-l-4 border-l-indigo-500"><List items={e.pontos} /></Block>}

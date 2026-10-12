@@ -133,7 +133,7 @@ const MENU: MenuItem[] = [
   { group: "Hoje", label: "Assistente de estudos", icon: Sparkles, href: "/dashboard/study-coach" },
   { group: "Hoje", label: "Meu cronograma", icon: CalendarClock, href: "/dashboard/cronograma" },
   { group: "Hoje", label: "Plano de estudos", icon: ClipboardList, href: "/dashboard/study-plan" },
-  { group: "Hoje", label: "Central de estudos", icon: Timer, href: "/dashboard/study-tools" },
+  { group: "Hoje", label: "Foco e revisão", icon: Timer, href: "/dashboard/study-tools" },
   { group: "Objetivo", label: "Meu concurso", icon: Target, href: "/dashboard/my-contest" },
   { group: "Objetivo", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
   {
@@ -155,9 +155,9 @@ const MENU: MenuItem[] = [
     icon: Radar,
     href: "/dashboard/edital-radar",
   },
-  { group: "Edital e conteúdo", label: "Biblioteca", icon: Library, href: "/dashboard/library" },
+  { group: "Edital e conteúdo", label: "Biblioteca de leis", icon: Library, href: "/dashboard/library" },
   { group: "Edital e conteúdo", label: "Painel do CTB", icon: Gavel, href: "/dashboard/ctb" },
-  { group: "Edital e conteúdo", label: "Trilhas de estudo", icon: GraduationCap, href: "/dashboard/trilhas" },
+  { group: "Edital e conteúdo", label: "Cursos por disciplina", icon: GraduationCap, href: "/dashboard/trilhas" },
   { group: "Edital e conteúdo", label: "Dicionário", icon: BookA, href: "/dashboard/dicionario" },
   {
     group: "Edital e conteúdo",

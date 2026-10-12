@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import {
   ArrowRight,
   BookOpenCheck,
+  LibraryBig,
   BrainCircuit,
   CalendarClock,
   CheckCircle2,
@@ -32,16 +33,26 @@ import {
   buildPlan,
   type CareerId,
   type Experience,
+  norm,
   type SubjectStat,
 } from "@/lib/studyEngine";
 import { topicsFor } from "@/data/studyTopics";
+import { TRACKS } from "@/data/tracks";
+import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 import { acreDateKey } from "@/lib/acreTime";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/study-tools")({
-  head: () => ({ meta: [{ title: "Central de estudos | Norte Concurso" }] }),
+  head: () => ({ meta: [{ title: "Foco e revisão | Norte Concurso" }] }),
   component: StudyToolsPage,
 });
+
+const ALL_SUBJECTS = [
+  "Língua Portuguesa", "Raciocínio Lógico", "Matemática", "Estatística", "Informática",
+  "Direito Constitucional", "Direito Administrativo", "Direito Penal", "Direito Processual Penal",
+  "Legislação Especial", "Legislação de Trânsito", "Direitos Humanos", "Contabilidade",
+  "Atualidades", "Ética", "Medicina Legal",
+];
 
 // ───────────────────────── Contexto do aluno ─────────────────────────
 
@@ -123,10 +134,12 @@ function useStudyContext() {
         : null,
     [profile, stats, hours],
   );
-  const subjects = React.useMemo(
-    () => (plan ? plan.subjects.map((s) => s.name) : career.subjects.map((s) => s.name)),
-    [plan, career],
-  );
+  // Disciplinas do plano primeiro; as demais da plataforma ficam disponíveis para estudo livre.
+  const subjects = React.useMemo(() => {
+    const own = plan ? plan.subjects.map((s) => s.name) : career.subjects.map((s) => s.name);
+    const seen = new Set(own.map(norm));
+    return [...own, ...ALL_SUBJECTS.filter((n) => !seen.has(norm(n)) && topicsFor(n).length)];
+  }, [plan, career]);
   // Matéria mais urgente: pior aproveitamento (com amostra mínima); sem dados, a de maior peso no tempo.
   const suggested = React.useMemo(() => {
     if (!plan) return subjects[0] ?? "";
@@ -217,12 +230,12 @@ function StudyToolsPage() {
         icon={Timer}
         title={
           <>
-            Central de <em>estudos</em>
+            Foco e <em>revisão</em>
           </>
         }
         description={
           ctx.profile
-            ? `Montada para ${ctx.career.name}${ctx.daysToExam !== null && ctx.daysToExam > 0 ? ` · faltam ${ctx.daysToExam} dias para a prova` : ""}. Foco, revisão e checklist das suas disciplinas.`
+            ? `Montada para ${ctx.career.name}${ctx.daysToExam !== null && ctx.daysToExam > 0 ? ` · faltam ${ctx.daysToExam} dias para a prova` : ""}. Cronômetro de foco, cartões de revisão e checklist; o conteúdo vem da Biblioteca de leis e dos Cursos por disciplina.`
             : "Foco, revisão e checklist das disciplinas. Configure o Assistente de estudos para personalizar com o seu concurso."
         }
         actions={
@@ -266,6 +279,8 @@ function StudyToolsPage() {
         onFocusDone={onFocusDone}
       />
 
+      <PlatformMaterialCard subject={subject} topic={topic} />
+
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <ReviewCard due={ctx.due} subject={subject} careerId={ctx.career.id} real={ctx.real} />
         <PlanLinkCard
@@ -282,6 +297,49 @@ function StudyToolsPage() {
         essay={ctx.profile?.essay ?? false}
       />
     </div>
+  );
+}
+
+// ───────────────────────── Material da plataforma (integra Biblioteca, trilhas e questões) ─────────────────────────
+
+function PlatformMaterialCard({ subject, topic }: { subject: string; topic: string }) {
+  const { user } = useAuthStatus();
+  const track = TRACKS.find((t) => norm(subject).includes(norm(t.discipline).slice(0, 8)));
+  const q = topic || subject;
+  return (
+    <Card>
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center gap-2 text-lg">
+          <LibraryBig className="h-5 w-5" /> Material para estudar agora
+        </CardTitle>
+        <CardDescription>
+          {subject}
+          {topic ? ` · ${topic}` : ""}: onde este assunto aparece na Biblioteca, nas trilhas e nas questões.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="flex flex-wrap gap-2">
+          <Button asChild className="gap-2">
+            <Link to="/dashboard/library" search={{ q, back: undefined }}>
+              <LibraryBig className="h-4 w-4" /> Biblioteca
+            </Link>
+          </Button>
+          {track && (
+            <Button asChild variant="outline" className="gap-2">
+              <Link to="/dashboard/trilhas" search={{ t: track.slug, l: undefined }}>
+                <BookOpenCheck className="h-4 w-4" /> Trilha de {track.discipline}
+              </Link>
+            </Button>
+          )}
+          <Button asChild variant="outline" className="gap-2">
+            <Link to="/dashboard/question-bank">
+              <ListChecks className="h-4 w-4" /> Questões
+            </Link>
+          </Button>
+        </div>
+        {user && user.id !== "demo-user" && <ContentSearchResults query={q} userId={user.id} />}
+      </CardContent>
+    </Card>
   );
 }
 
