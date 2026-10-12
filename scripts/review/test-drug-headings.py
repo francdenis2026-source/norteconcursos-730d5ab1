@@ -34,4 +34,8 @@ class DrugHeadings(unittest.TestCase):
   us={u['key']:u for u in m.parse_law(raw.encode(),'contravencoes')}
   self.assertIn('CAPÍTULO III',us['art-28']['chapter'])
   self.assertEqual(us['art-26']['text'],'Art. 26. Regra atual.')
+ def test_contravention_footer_keeps_vigency_and_excludes_signatures(self):
+  raw='<p>Art. 72. Esta lei entrará em vigor no dia 1º de janeiro de 1942.</p><p>Rio de Janeiro, 3 de outubro de 1941; 120º da Independência.</p><p>GETULIO VARGAS</p><p>Francisco Campos</p>'
+  us={u['key']:u for u in m.parse_law(raw.encode(),'contravencoes')}
+  self.assertEqual(us['art-72']['text'],'Art. 72. Esta lei entrará em vigor no dia 1º de janeiro de 1942.')
 if __name__=='__main__':unittest.main()

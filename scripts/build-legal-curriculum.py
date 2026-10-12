@@ -166,6 +166,7 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
       inactive_article=True
      if current_head and not value.startswith(('“','"')):inactive_article=False
      if not value:continue
+     if slug=='contravencoes' and value.startswith('Rio de Janeiro, 3 de outubro de 1941;'):break
      if slug in {'drogas','contravencoes'} and re.match(heading_pattern,value,re.I):
       # A new structural heading ends the preceding revoked article too.
       inactive_article=False

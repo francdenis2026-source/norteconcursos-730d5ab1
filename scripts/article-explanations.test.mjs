@@ -519,3 +519,19 @@ test('contravention amendment reference resolves to the verified Planalto path',
  assert.ok(p.units[0].remissoes.includes('https://www.planalto.gov.br/ccivil_03/leis/l6734.htm'));
  assert.ok(p.units[0].expected.remissoes.some(u=>u.includes('1970-1979')));
 });
+
+test('contravention final block closes 66 distinct units without drilling superseded regimes',()=>{
+ const load=s=>JSON.parse(readFileSync(`docs/library/article-explanations-contravencoes-${s}-2026-10-12.json`,'utf8'));
+ const p=load('final');validateArticlePackage(p);assert.equal(p.units.length,26);
+ const all=[...load('general').units,...load('public').units,...p.units];assert.equal(all.length,66);assert.equal(new Set(all.map(r=>r.unit_key)).size,66);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);assert.ok(r.prova.length>=2);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-50').atencao.join(' '),/924.*pedido de vista.*não apresentar voto como tese final/);
+ assert.match(get('art-58').simples,/6.259\/1944.*1.508\/1951/);
+ assert.match(get('art-63').pontos.join(' '),/revogado.*gratuitamente/);
+ assert.match(get('art-66').pontos.join(' '),/24 horas/);
+ assert.match(get('art-70').simples,/6.538\/1978.*ADPF 46/);
+ for(const key of ['art-50','art-51','art-52','art-53','art-54','art-55','art-56','art-57','art-58','art-62','art-63','art-66','art-70'])assert.equal(legalStudyCaveat('contravencoes',key).literalPractice,false);
+ const footer=JSON.parse(readFileSync('docs/library/contravencoes-footer-correction-2026-10-12.json','utf8'));
+ assert.equal(footer.changes.length,1);assert.match(footer.changes[0].body_text,/1.*janeiro de 1942/);assert.doesNotMatch(footer.changes[0].body_text,/GETULIO|Francisco Campos/);
+});

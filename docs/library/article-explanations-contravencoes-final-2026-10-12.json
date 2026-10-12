@@ -1,0 +1,1566 @@
+{
+  "version": "2026-10-12-contravencoes-final",
+  "checked_at": "2026-10-12T20:05:56.638706+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "contravencoes",
+      "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais",
+      "units": 26,
+      "scope_type": "targeted_correction",
+      "course_current_units": 66,
+      "target_unit_keys": [
+        "art-40",
+        "art-41",
+        "art-42",
+        "art-43",
+        "art-44",
+        "art-45",
+        "art-46",
+        "art-47",
+        "art-48",
+        "art-49",
+        "art-50",
+        "art-51",
+        "art-52",
+        "art-53",
+        "art-54",
+        "art-55",
+        "art-56",
+        "art-57",
+        "art-58",
+        "art-62",
+        "art-63",
+        "art-66",
+        "art-67",
+        "art-70",
+        "art-71",
+        "art-72"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+      "source_sha256": "2e94194ce818853cd12d7053747be20073903a0230868d2970f288e37320d835",
+      "source_checked_at": "2026-10-12T16:18:18.943244+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-40",
+      "unit_id": "01828732-d567-5ddc-a7ac-4cdd8c6abc8e",
+      "content_sha256": "6d999bdc58ead2f6d973bda3932f529c0cf735079011cc990bbae3a54f293912",
+      "simples": "Tumulto ou conduta inconveniente/desrespeitosa em solenidade/ato oficial, assembleia ou espetáculo público tem prisão simples de quinze dias a seis meses ou multa, se não configurar infração penal mais grave.",
+      "pontos": [
+        "Contextos delimitados integram a descrição; não é proibição geral de qualquer crítica.",
+        "Cláusula subsidiária exige confrontar infração mais grave quando demonstrada."
+      ],
+      "atencao": [
+        "Crítica ou manifestação legítima não é automaticamente tumulto; direitos constitucionais e fatos concretos importam."
+      ],
+      "exemplo": "Agente provoca tumulto em solenidade oficial nas condições legais. Variação: discordância pacífica e respeitosa não pode ser igualada automaticamente à conduta típica.",
+      "prova": [
+        "Qualquer crítica pacífica é automaticamente contravenção? Não; verificar elementos e direitos.",
+        "Infração mais grave deve ser confrontada? Sim; há cláusula subsidiária."
+      ],
+      "termos": [
+        "solenidade ou ato oficial",
+        "se não constitui infração mais grave"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "01828732-d567-5ddc-a7ac-4cdd8c6abc8e",
+        "content_sha256": "4d3cfc43eb84da67aaf3cf795bc0666367428aebf6b7e8feb7b87001723985d3",
+        "simples": "Provocar tumulto ou portar-se de modo inconveniente ou desrespeitoso, em solenidade ou ato oficial, em assembleia ou espetáculo público, se o fato não constitui infração penal mais grave: prisão simples de quinze dias a seis meses, ou multa.",
+        "pontos": [
+          "Tumulto ou comportamento inconveniente em solenidade, assembleia ou espetáculo público.",
+          "Subsidiária."
+        ],
+        "atencao": [
+          "Só se aplica se não houver infração mais grave."
+        ],
+        "exemplo": "Quem tumultua uma solenidade oficial responde pela contravenção.",
+        "prova": [
+          "Assertiva que aplica a contravenção mesmo quando há crime mais grave erra: ela é subsidiária."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 41"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-41",
+      "unit_id": "5bc96318-337e-5a2a-8540-b95fab9af05d",
+      "content_sha256": "2aa5cbd1b6285fdc35ef34fe263100bea2a128cd62586f8b2ad79d7a076f7da7",
+      "simples": "Falso alarma envolve anunciar desastre/perigo inexistente ou ato capaz de produzir pânico/tumulto. Pena textual: prisão simples de quinze dias a seis meses ou multa.",
+      "pontos": [
+        "Distinguir falso alarma de comunicação falsa de crime do CP 340 e denunciação caluniosa do 339.",
+        "O contexto, destinatário, consciência e objeto do anúncio orientam enquadramento."
+      ],
+      "atencao": [
+        "Alerta de risco real não equivale ao anúncio de perigo inexistente.",
+        "Não punir automaticamente erro escusável sem examinar responsabilidade subjetiva."
+      ],
+      "exemplo": "Pessoa anuncia deliberadamente desastre inexistente e produz alarme em público. Variação: alguém comunica de boa-fé risco real ou plausível; não presumir mesmo elemento do falso alerta.",
+      "prova": [
+        "Falso alarma e falsa comunicação de crime são necessariamente idênticos? Não; possuem elementos próprios.",
+        "O primeiro verbo trata perigo inexistente? Sim; requisito expresso."
+      ],
+      "termos": [
+        "perigo inexistente",
+        "pânico ou tumulto"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5bc96318-337e-5a2a-8540-b95fab9af05d",
+        "content_sha256": "e09c849ee10beb5976d03e2a65ab7fe9117be16562f7b6b71949d9bfc6cc24bb",
+        "simples": "Provocar alarma, anunciando desastre ou perigo inexistente, ou praticar qualquer ato capaz de produzir pânico ou tumulto: prisão simples de quinze dias a seis meses, ou multa.",
+        "pontos": [
+          "Falso alarme de desastre ou perigo.",
+          "Ato capaz de produzir pânico ou tumulto."
+        ],
+        "atencao": [
+          "Basta a aptidão para provocar pânico."
+        ],
+        "exemplo": "Gritar que há um incêndio inexistente em um cinema lotado é contravenção.",
+        "prova": [
+          "Assertiva que exige o efetivo pânico para a contravenção erra: basta o ato capaz de produzi-lo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 40"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-42",
+      "unit_id": "436e07aa-50d7-5806-a14c-3e5a57084e7f",
+      "content_sha256": "650180b982e88f3b89ea1eba937e61b4cac62f379c898f527ae4573ffe940bc2",
+      "simples": "Perturbação do trabalho/sossego abrange gritaria, profissão ruidosa em desacordo legal, abuso de sons e barulho de animal provocado ou não impedido por responsável. Pena: prisão simples de quinze dias a três meses ou multa.",
+      "pontos": [
+        "Não há horário noturno único no tipo: conduta pode ocorrer durante dia conforme elementos.",
+        "Barulho de animal exige vínculo de guarda e conduta descrita, não responsabilidade automática por qualquer ruído.",
+        "Distinguir dimensão do sossego tutelado, poluição ambiental e antiga perturbação individual do art. 65 revogado."
+      ],
+      "atencao": [
+        "Não ensinar que somente após 22h pode ocorrer contravenção ou que qualquer incômodo individual basta sem contexto.",
+        "Lei 9.605, art. 54 exige pressupostos próprios: decibéis isolados não substituem análise dos tipos."
+      ],
+      "exemplo": "Responsável abusa de equipamento sonoro perturbando trabalho/sossego de vizinhos durante dia. Variação: um incômodo sem comprovação do contexto e das formas descritas não autoriza enquadramento automático.",
+      "prova": [
+        "O tipo se limita expressamente ao período depois das 22h? Não; essa restrição não consta.",
+        "Perturbação e poluição ambiental dispensam distinção? Não; têm requisitos diferentes."
+      ],
+      "termos": [
+        "abusando",
+        "em desacordo",
+        "animal de que tem a guarda"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14132.htm"
+      ],
+      "expected": {
+        "unit_id": "436e07aa-50d7-5806-a14c-3e5a57084e7f",
+        "content_sha256": "73190d0a32d20b08975df5c55b0578709dcfaeb7ea4dcfa1366f7312c44a8a21",
+        "simples": "Perturbar alguém o trabalho ou o sossego alheios com gritaria ou algazarra; exercendo profissão incômoda ou ruidosa em desacordo com as prescrições legais; abusando de instrumentos sonoros ou sinais acústicos; ou provocando ou não procurando impedir barulho produzido por animal de que tem a guarda: prisão simples de quinze dias a três meses, ou multa.",
+        "pontos": [
+          "Gritaria ou algazarra.",
+          "Profissão ruidosa irregular.",
+          "Abuso de instrumentos sonoros.",
+          "Barulho de animal sob sua guarda."
+        ],
+        "atencao": [
+          "É a contravenção da perturbação do sossego alheio, muito cobrada."
+        ],
+        "exemplo": "Dar festa com som alto durante a madrugada, incomodando a vizinhança, é perturbação do sossego.",
+        "prova": [
+          "Assertiva que isenta o dono do animal que late sem parar erra: o inciso IV o alcança."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 40"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-43",
+      "unit_id": "beb6c87e-ed3c-524a-85d1-241e3f96cfe4",
+      "content_sha256": "d32043c9bf9a2695bd9b16d07b53811a2ed6286afe35f8549cb477e4101ae224",
+      "simples": "Recusar receber pelo valor moeda de curso legal no país tem sanção textual de multa. Distinguir moeda válida e meios de pagamento diversos.",
+      "pontos": [
+        "Curso legal e valor são elementos próprios.",
+        "Pix, cartão, cheque ou moeda estrangeira não se confundem automaticamente com moeda de curso legal."
+      ],
+      "atencao": [
+        "Não usar o artigo para afirmar obrigação universal de aceitar todo cartão ou transferência.",
+        "Limites legais de circulação e recebimento de moedas exigem examinar normas monetárias pertinentes."
+      ],
+      "exemplo": "Questão descreve recusa injustificada de moeda válida pelo seu valor: examinar elementos e normas monetárias. Variação: recusar determinada bandeira de cartão não é automaticamente esta contravenção.",
+      "prova": [
+        "O tipo obriga por si aceitar toda bandeira de cartão? Não; trata moeda de curso legal.",
+        "Moeda estrangeira é automaticamente moeda de curso legal no Brasil? Não; conferir regime monetário."
+      ],
+      "termos": [
+        "pelo seu valor",
+        "curso legal",
+        "multa"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm"
+      ],
+      "expected": {
+        "unit_id": "beb6c87e-ed3c-524a-85d1-241e3f96cfe4",
+        "content_sha256": "f0c140325dc22d00e477a43bc9eb31fc677389912a4223def99a1f14f59c1348",
+        "simples": "Recusar-se a receber, pelo seu valor, moeda de curso legal no país: multa.",
+        "pontos": [
+          "Recusa de moeda de curso legal.",
+          "Pena de multa."
+        ],
+        "atencao": [
+          "Protege o curso legal da moeda."
+        ],
+        "exemplo": "O comerciante que recusa o pagamento em dinheiro, pelo seu valor, comete a contravenção.",
+        "prova": [
+          "Assertiva que prevê prisão simples para essa contravenção erra: a pena é multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 44"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-44",
+      "unit_id": "f8cb5f18-487e-5bbb-977f-5d87c27f96aa",
+      "content_sha256": "28a5bb69ee7e7f241be7780bdff63740635f29be5ccd6bdd73fdd5ffc6adb786",
+      "simples": "Usar em propaganda impresso/objeto confundível com moeda por pessoa inexperiente integra a descrição; sanção textual é multa.",
+      "pontos": [
+        "Finalidade de propaganda distingue a descrição de falsificação de moeda do CP 289.",
+        "Semelhança capaz de confundir é elemento, não qualquer desenho monetário."
+      ],
+      "atencao": [
+        "Não presumir todo panfleto com cifrão como contravenção nem tratar falsificação destinada à circulação como mera propaganda."
+      ],
+      "exemplo": "Publicidade usa objeto com aparência confundível de moeda; examinar condições do artigo. Variação: fabricação para circulação como dinheiro exige confrontar CP 289.",
+      "prova": [
+        "Propaganda e falsificação de moeda possuem necessariamente o mesmo enquadramento? Não; finalidade e elementos diferem.",
+        "Qualquer símbolo de dinheiro basta automaticamente? Não; o objeto precisa satisfazer aptidão de confusão descrita."
+      ],
+      "termos": [
+        "como propaganda",
+        "possa confundir",
+        "moeda"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f8cb5f18-487e-5bbb-977f-5d87c27f96aa",
+        "content_sha256": "e1acf86bd0a2d443090244d4e0f156e70e4cd78e7d9b5542e9eabafecaf170c2",
+        "simples": "Usar, como propaganda, impresso ou objeto que pessoa inexperiente ou rústica possa confundir com moeda: multa.",
+        "pontos": [
+          "Propaganda com impresso que possa ser confundido com moeda.",
+          "Pena de multa."
+        ],
+        "atencao": [
+          "Protege pessoas inexperientes do engano."
+        ],
+        "exemplo": "Distribuir panfleto com aparência de cédula para atrair clientes é contravenção.",
+        "prova": [
+          "Assertiva que exige falsificação perfeita da moeda erra: basta a possibilidade de confusão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 43"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-45",
+      "unit_id": "87393860-31a0-5cf5-885c-af025eab11b8",
+      "content_sha256": "4a68fdb814350d8810c0e28c961523bd2546491c909940631d08638c9f7725bf",
+      "simples": "Fingir-se funcionário público tem prisão simples de um a três meses ou multa; distinguir da usurpação do exercício de função pública do CP 328.",
+      "pontos": [
+        "Simular qualidade e efetivamente exercer função são situações distintas.",
+        "Obtendo vantagem ou praticando fraude, examinar eventuais tipos próprios e concurso/absorção com fundamento."
+      ],
+      "atencao": [
+        "Não confundir o artigo com uso público de uniforme/distintivo do 46 nem presumir condenação múltipla sem análise."
+      ],
+      "exemplo": "Pessoa afirma falsamente ser funcionário, sem exercer atribuições: examinar simulação. Variação: passa a executar ato funcional, exigindo confrontar CP 328.",
+      "prova": [
+        "Fingir qualidade e exercer função são sempre a mesma descrição? Não; diferem art. 45 e CP 328.",
+        "A pena textual é prisão simples de um a três meses ou multa? Sim; alternativa."
+      ],
+      "termos": [
+        "fingir-se",
+        "funcionário público",
+        "exercício da função"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "87393860-31a0-5cf5-885c-af025eab11b8",
+        "content_sha256": "d8ad9a4852b1153e4fa1c3a06e6c53e7ee02cb5930a458635594c6dc8f66c115",
+        "simples": "Fingir-se funcionário público: prisão simples de um a três meses, ou multa.",
+        "pontos": [
+          "Fingir-se funcionário público.",
+          "Prisão simples ou multa."
+        ],
+        "atencao": [
+          "Diferente da usurpação de função pública, que é crime."
+        ],
+        "exemplo": "Dizer-se agente público sem sê-lo, sem praticar atos de ofício, é contravenção.",
+        "prova": [
+          "Assertiva que considera crime de usurpação o mero fingimento de ser funcionário erra: é contravenção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal (usurpação de função pública)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-46",
+      "unit_id": "b13f4e7c-1703-5f83-b18a-a895c672b6d6",
+      "content_sha256": "c32a0cb0cae31511af45063755f92d0aa100050d84c49f9557717d00007741ea",
+      "simples": "Uso público de uniforme/distintivo de função não exercida ou uso indevido de sinal/denominação regulados tem multa, se não constituir infração mais grave.",
+      "pontos": [
+        "Uso público e função não exercida delimitam primeira hipótese.",
+        "Sinal, distintivo ou denominação na segunda hipótese exigem regulação legal."
+      ],
+      "atencao": [
+        "Não transformar fantasia em contexto lícito ou símbolo não regulado em tipo por mera semelhança.",
+        "Eventual fraude/usurpação tem exame próprio; subsidiariedade impede ignorar infração mais grave."
+      ],
+      "exemplo": "Pessoa usa publicamente distintivo de função que não exerce em contexto típico. Variação: ato com exercício funcional fraudulento exige examinar crime mais grave, não apenas multa.",
+      "prova": [
+        "A segunda hipótese exige emprego regulado por lei? Sim; requisito expresso.",
+        "Subsidiariedade permite ignorar crime mais grave? Não; exige confrontá-lo."
+      ],
+      "termos": [
+        "publicamente",
+        "indevidamente",
+        "regulado por lei",
+        "mais grave"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b13f4e7c-1703-5f83-b18a-a895c672b6d6",
+        "content_sha256": "2e5306de64d34fff5e69b7c9756533031f94517401d0515267c5467260eb5bcc",
+        "simples": "Usar publicamente uniforme ou distintivo de função pública que não exerce, ou usar indevidamente sinal, distintivo ou denominação cujo emprego seja regulado por lei: multa, se o fato não constitui infração penal mais grave.",
+        "pontos": [
+          "Uso público de uniforme ou distintivo de função pública que não exerce.",
+          "Uso indevido de sinal ou denominação regulados em lei.",
+          "Subsidiária."
+        ],
+        "atencao": [
+          "Só se aplica se não houver infração mais grave."
+        ],
+        "exemplo": "Quem veste farda de polícia sem ser policial, em público, comete a contravenção.",
+        "prova": [
+          "Assertiva que prevê prisão simples para esse uso indevido erra: a pena é multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 45"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-47",
+      "unit_id": "9bee82c4-83b3-5824-8859-5866c5c8b40e",
+      "content_sha256": "74471fbdd1ddc55dff3cc82997706a6a6b23cb5061c4b7bbd720e721c2d518e2",
+      "simples": "Exercer profissão/atividade econômica ou anunciar exercício sem condições legalmente exigidas tem prisão simples de quinze dias a três meses ou multa. É necessário identificar exigência válida aplicável à atividade.",
+      "pontos": [
+        "Não basta ausência de cadastro administrativo qualquer: condição deve decorrer de lei e contexto.",
+        "Atividades especiais podem ter crime próprio, como exercício ilegal de medicina no CP 282.",
+        "Restrições profissionais devem ser compatíveis com liberdade constitucional e jurisprudência específica."
+      ],
+      "atencao": [
+        "Não afirmar que toda profissão exige licença/cadastro universal nem copiar exigência derrubada pelo STF.",
+        "Exercício irregular e anúncio têm previsão, mas dependem dos elementos e condição válida."
+      ],
+      "exemplo": "Agente exerce atividade sujeita a requisito legal válido sem preenchê-lo: confrontar norma da profissão. Variação: condição inexigível constitucionalmente não pode ser recriada por mera preferência do órgão.",
+      "prova": [
+        "Qualquer exigência informal basta para o tipo? Não; identificar condição legal válida.",
+        "Medicina ilegal pode exigir tipo específico do CP? Sim; art. 282 deve ser confrontado."
+      ],
+      "termos": [
+        "por lei",
+        "condições",
+        "exercer ou anunciar"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "9bee82c4-83b3-5824-8859-5866c5c8b40e",
+        "content_sha256": "57084eb6e73f750972cf447406bc2efe9a90cf3a0a26035ec7a72d3024c117c1",
+        "simples": "Exercer profissão ou atividade econômica, ou anunciar que a exerce, sem preencher as condições a que por lei está subordinado o seu exercício: prisão simples de quinze dias a três meses, ou multa.",
+        "pontos": [
+          "Exercício ou anúncio de profissão sem os requisitos legais.",
+          "Prisão simples ou multa."
+        ],
+        "atencao": [
+          "Anunciar também é conduta típica."
+        ],
+        "exemplo": "Quem atua como advogado sem inscrição na OAB comete a contravenção de exercício ilegal de profissão.",
+        "prova": [
+          "Assertiva que exige o exercício efetivo, dispensando o anúncio, erra: o anúncio também basta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal (exercício ilegal da medicina)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-48",
+      "unit_id": "69ca2c23-8657-57db-b4b6-fe881733ad49",
+      "content_sha256": "5703454f703b510010bf267b08110c5afac294284a69b863d390746216d78027",
+      "simples": "Comércio de antiguidades, obras de arte, manuscritos/livros antigos ou raros sem prescrições legais tem prisão simples de um a seis meses ou multa.",
+      "pontos": [
+        "Objeto cultural descrito e prescrição aplicável precisam ser identificados.",
+        "Confrontar regras de patrimônio cultural, procedência e eventual crime mais específico; nem todo livro usado é antigo ou raro."
+      ],
+      "atencao": [
+        "Não ensinar proibição universal de vender obra de arte nem atribuir crime por mera idade do objeto sem elementos."
+      ],
+      "exemplo": "Comerciante de manuscritos raros viola prescrição legal específica: analisar norma e conduta. Variação: venda de livro usado comum não equivale automaticamente ao objeto cultural descrito.",
+      "prova": [
+        "Todo livro usado é automaticamente livro antigo/raro do artigo? Não; verificar características e prescrição.",
+        "O tipo exige desobservância de prescrições legais? Sim; elemento expresso."
+      ],
+      "termos": [
+        "prescrições legais",
+        "antiguidades",
+        "antigos ou raros"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm"
+      ],
+      "expected": {
+        "unit_id": "69ca2c23-8657-57db-b4b6-fe881733ad49",
+        "content_sha256": "5fed9e49d235608e55802dac3e2f214e4a5d2a1cdc8cce5f3c69242ad35cbe7f",
+        "simples": "Exercer, sem observância das prescrições legais, comércio de antiguidades, de obras de arte ou de manuscritos e livros antigos ou raros: prisão simples de um a seis meses, ou multa.",
+        "pontos": [
+          "Comércio irregular de antiguidades, obras de arte e livros raros.",
+          "Prisão simples ou multa."
+        ],
+        "atencao": [
+          "Exige observância das prescrições legais do ramo."
+        ],
+        "exemplo": "Vender obras de arte sem cumprir as exigências legais é contravenção.",
+        "prova": [
+          "Assertiva que alcança a venda de qualquer produto usado erra: a norma trata de antiguidades, arte e livros raros."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 49"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-49",
+      "unit_id": "dd535309-26a6-5df8-bcc2-4fefbfd65d07",
+      "content_sha256": "95980f00961989280ecfbff928f923c6fb8d1d9df8bcca2bfa51ba6ec5fe28e7",
+      "simples": "Infringir determinação legal sobre matrícula/escrituração de indústria, comércio ou outra atividade tem sanção textual de multa.",
+      "pontos": [
+        "A determinação deve ser legal e relacionada a registro/escrituração da atividade.",
+        "Distinguir infração de escrituração e exercício de profissão do art. 47."
+      ],
+      "atencao": [
+        "Não presumir ilícito por documento não exigido ou registro dispensado; conferir disciplina atual da atividade."
+      ],
+      "exemplo": "Empresa descumpre obrigação legal de escrituração aplicável. Variação: obrigação dispensada pela legislação atual não pode ser restaurada pelo tipo antigo.",
+      "prova": [
+        "Qualquer documento informal solicitado basta? Não; exige determinação legal pertinente.",
+        "O artigo é idêntico ao exercício profissional sem condição? Não; trata matrícula/escrituração."
+      ],
+      "termos": [
+        "determinação legal",
+        "matrícula",
+        "escrituração"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm"
+      ],
+      "expected": {
+        "unit_id": "dd535309-26a6-5df8-bcc2-4fefbfd65d07",
+        "content_sha256": "61b9e0886d0f746b07ae87a9ac18861f5c564d3308ac7758954e7fb5cbe087cc",
+        "simples": "Infringir determinação legal relativa à matrícula ou à escrituração de indústria, de comércio ou de outra atividade: multa.",
+        "pontos": [
+          "Descumprimento de regras de matrícula ou escrituração.",
+          "Pena de multa."
+        ],
+        "atencao": [
+          "Contravenção de natureza administrativa."
+        ],
+        "exemplo": "O comerciante que não mantém a escrituração exigida comete a contravenção.",
+        "prova": [
+          "Assertiva que prevê prisão simples para esse caso erra: a pena é multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 48"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-50",
+      "unit_id": "ed4e3a0e-a20f-5b71-9218-92bc489eb646",
+      "content_sha256": "26a9496fe2c8e6e0adfba90cbc93cff788bf4b153d7ec408482f10dbc488d832",
+      "simples": "O tipo trata estabelecer/explorar jogo de azar em lugar público ou acessível ao público. Não confundir a descrição histórica com apostas legalmente autorizadas.",
+      "pontos": [
+        "Azar: ganho/perda exclusiva ou principalmente da sorte; o texto também descreve apostas fora de locais autorizados e competições esportivas.",
+        "A disciplina posterior das apostas de quota fixa exige Lei 14.790/2023 e autorização; não legaliza todo estabelecimento clandestino.",
+        "Distinguir explorador, participante e hipóteses de lugar equiparado; hospedagem/associação não excluem automaticamente acesso público."
+      ],
+      "atencao": [
+        "Tema 924/STF: julgamento iniciado em agosto de 2026 com pedido de vista; não apresentar voto como tese final de descriminalização. Conferência em 12/10/2026.",
+        "Moedas históricas e dispositivos de apostas precisam ser integrados às leis posteriores; não gerar memorização automática da pena antiga."
+      ],
+      "exemplo": "Explorador mantém sala de jogo de azar acessível ao público sem regime autorizativo aplicável. Variação: aposta de quota fixa operada sob autorização válida tem disciplina própria, não autorização universal para cassino clandestino.",
+      "prova": [
+        "Uma bet autorizada legaliza qualquer jogo de azar? Não; autorização é específica e regulada.",
+        "Um voto no Tema 924 já equivale a tese final? Não; acompanhar conclusão do julgamento."
+      ],
+      "termos": [
+        "estabelecer ou explorar",
+        "acessível ao público",
+        "exclusiva ou principalmente da sorte"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4970952&numeroTema=924"
+      ],
+      "expected": {
+        "unit_id": "ed4e3a0e-a20f-5b71-9218-92bc489eb646",
+        "content_sha256": "057262d03d6a8b63cb54ed9c329c502b11b4880c26370b0bf5fae72b5288e418",
+        "simples": "Jogo de azar: estabelecer ou explorar jogo de azar em lugar público ou acessível ao público, mediante pagamento de entrada ou sem ele: prisão simples de três meses a um ano, e multa, com perda dos móveis e objetos de decoração do local. A pena é aumentada de um terço se há empregado ou participante menor de dezoito anos. Quem é encontrado a participar do jogo, ainda que pela internet ou outro meio, como ponteiro ou apostador, incorre em multa de R$ 2.000,00 a R$ 200.000,00. São jogos de azar aqueles em que o ganho e a perda dependem exclusiva ou principalmente da sorte, as apostas em corrida de cavalos fora de local autorizado e as apostas em qualquer outra competição esportiva. Equiparam-se a lugar acessível ao público a casa particular com jogo habitual de pessoas fora da família, o hotel ou casa coletiva, a sede de sociedade ou associação e o estabelecimento destinado ao jogo.",
+        "pontos": [
+          "Explorar jogo de azar em lugar público ou acessível ao público.",
+          "Prisão simples de três meses a um ano e multa.",
+          "Aumento de um terço se houver menor de dezoito anos.",
+          "Multa ao participante (ponteiro ou apostador), inclusive pela internet.",
+          "Conceito de jogo de azar e lugares equiparados."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a multa do §2º e o alcance à internet foram incluídos por lei posterior; o regime de apostas de quota fixa é regulado por lei própria, que autoriza operadores licenciados.",
+          "Jogos de azar continuam contravenção, salvo atividades autorizadas em lei."
+        ],
+        "exemplo": "Manter uma casa de jogo de azar aberta ao público é a contravenção do art. 50.",
+        "prova": [
+          "Assertiva que exige cobrança de entrada para configurar a contravenção erra: ocorre mediante pagamento de entrada ou sem ele."
+        ],
+        "termos": [
+          {
+            "termo": "Jogo de azar",
+            "significado": "Jogo em que o ganho ou a perda dependem principalmente da sorte."
+          }
+        ],
+        "remissoes": [
+          "Art. 51"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-51",
+      "unit_id": "75f315a4-c9e9-516a-b775-46fb3103376f",
+      "content_sha256": "2acc252301290b4d7f65f0acfa687970ab0e932e0060bdaba008429313c7bfb8",
+      "simples": "Promoção ou extração de loteria sem autorização legal deve ser estudada com legislação posterior e competência constitucional.",
+      "pontos": [
+        "O texto equipara guarda, venda, exposição e circulação comercial de bilhetes não autorizados.",
+        "Definição envolve prêmio dependente de sorteio por bilhetes, listas, cupons, sinais, símbolos ou meios análogos.",
+        "ADPFs 492/493: exploração de loterias não é exclusividade material da União; competência legislativa federal não se confunde com exploração estadual."
+      ],
+      "atencao": [
+        "DL 6.259/1944 e legislação das modalidades posteriores impedem transpor automaticamente sanções antigas. Promoção comercial autorizada não é loteria clandestina por simples existência de sorteio."
+      ],
+      "exemplo": "Organizador comercializa bilhetes de loteria sem autorização legal aplicável. Variação: modalidade explorada legitimamente por estado não se torna ilícita apenas por não ser operação da União.",
+      "prova": [
+        "Toda loteria estadual é ilegal por não ser federal? Não; distinguir exploração e competência legislativa.",
+        "Qualquer sorteio autorizado é automaticamente clandestino? Não; verificar modalidade e autorização."
+      ],
+      "termos": [
+        "sem autorização legal",
+        "fim de comércio",
+        "dependente de sorteio"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://noticias.stf.jus.br/postsnoticias/loteria-e-prestacao-de-servico-publico-e-pode-ser-explorada-pelos-estados/",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/del6259.htm"
+      ],
+      "expected": {
+        "unit_id": "75f315a4-c9e9-516a-b775-46fb3103376f",
+        "content_sha256": "98e7fa04038c9a41c3c04db0a013acf7155307603369e6bbb361fdf99a37d241",
+        "simples": "Promover ou fazer extrair loteria, sem autorização legal: prisão simples de seis meses a dois anos, e multa, com perda dos móveis do local. Incorre na mesma pena quem guarda, vende ou expõe à venda, tem sob sua guarda para venda, introduz ou tenta introduzir na circulação bilhete de loteria não autorizada. Loteria é toda operação que, mediante distribuição de bilhetes, listas, cupões, vales, sinais ou meios análogos, faz depender de sorteio a obtenção de prêmio em dinheiro ou bens. Não se compreendem os sorteios autorizados em legislação especial.",
+        "pontos": [
+          "Promover ou extrair loteria sem autorização.",
+          "Venda e circulação de bilhetes de loteria não autorizada.",
+          "Conceito de loteria.",
+          "Sorteios autorizados em lei especial ficam fora."
+        ],
+        "atencao": [
+          "Loteria autorizada em lei não é contravenção."
+        ],
+        "exemplo": "Organizar uma rifa clandestina com venda de bilhetes é contravenção.",
+        "prova": [
+          "Assertiva que alcança também os sorteios autorizados em legislação especial erra: eles ficam excluídos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 52"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-52",
+      "unit_id": "17eaf205-83fd-5ec8-8b68-9960864527e9",
+      "content_sha256": "3cb291c1b4c1056d575bcbc6ac1a1e6d6c10295a73fd63441787fe53cf3bbdc5",
+      "simples": "Loteria estrangeira: o texto descreve introdução de bilhetes, rifas ou tômbolas para comércio e sua guarda/venda/exposição comercial, sob confronto com legislação posterior.",
+      "pontos": [
+        "Finalidade comercial é expressa; não atribuir o tipo a qualquer lembrança de viagem.",
+        "Distinguir bilhete de loteria estrangeira, lista de sorteio e modalidade digital autorizada; enquadramento não decorre apenas de idioma ou domínio estrangeiro."
+      ],
+      "atencao": [
+        "Conferir DL 6.259/1944, autorização e territorialidade; não converter valores antigos em reais nem presumir crime em qualquer acesso a site estrangeiro."
+      ],
+      "exemplo": "Pessoa importa bilhetes de loteria estrangeira para venda irregular no Brasil. Variação: lembrança pessoal sem finalidade comercial não comprova esse elemento por si só.",
+      "prova": [
+        "A finalidade comercial é indiferente? Não; integra a descrição.",
+        "Site em idioma estrangeiro basta para enquadrar automaticamente? Não; analisar modalidade, território e elementos."
+      ],
+      "termos": [
+        "fim de comércio",
+        "loteria estrangeira",
+        "bilhete rifa ou tômbola"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/del6259.htm"
+      ],
+      "expected": {
+        "unit_id": "17eaf205-83fd-5ec8-8b68-9960864527e9",
+        "content_sha256": "0790ff177ced56e15945282eff25a0e41020ab3df4cac525eb5d57d7abe3440c",
+        "simples": "Introduzir no país, para fim de comércio, bilhete de loteria, rifa ou tômbola estrangeiras: prisão simples de quatro meses a um ano, e multa. Na mesma pena quem vende, expõe à venda, tem sob sua guarda para venda, introduz ou tenta introduzir na circulação bilhete de loteria estrangeira.",
+        "pontos": [
+          "Introduzir bilhete de loteria, rifa ou tômbola estrangeiras para comércio.",
+          "Venda e circulação desses bilhetes."
+        ],
+        "atencao": [
+          "Alcança loteria ESTRANGEIRA."
+        ],
+        "exemplo": "Trazer ao país bilhetes de loteria estrangeira para vender é contravenção.",
+        "prova": [
+          "Assertiva que alcança a loteria estadual autorizada erra: o art. 52 trata de loteria estrangeira."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 53"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-53",
+      "unit_id": "afb7e7ac-201d-57e5-b865-4b36cbbe0d89",
+      "content_sha256": "1337a7c21e242d317fa80bdfaf7c9d2c69e9722f2784d7d82ea76cbab7ee5540",
+      "simples": "Comércio de bilhete de loteria estadual em território no qual não possa legalmente circular exige identificar efetiva restrição e regime atual da modalidade.",
+      "pontos": [
+        "O tipo menciona introduzir, guardar, vender ou expor à venda em âmbito territorial proibido.",
+        "ADPFs 492/493 reconhecem exploração estadual; autorização de um operador não dispensa limites legais de oferta e circulação."
+      ],
+      "atencao": [
+        "Não usar a origem estadual como prova automática de ilicitude; confrontar legislação lotérica posterior e autorização vigente."
+      ],
+      "exemplo": "Vendedor comercializa bilhete em território no qual sua circulação é legalmente proibida. Variação: operação estadual legitimamente autorizada dentro do âmbito permitido não é ilícita só pela origem estadual.",
+      "prova": [
+        "Origem estadual basta para punição? Não; verificar proibição legal e conduta.",
+        "Autorização em uma modalidade elimina todos os limites territoriais? Não; conferir regime aplicável."
+      ],
+      "termos": [
+        "onde não possa legalmente circular",
+        "introduzir vender expor",
+        "loteria estadual"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://noticias.stf.jus.br/postsnoticias/loteria-e-prestacao-de-servico-publico-e-pode-ser-explorada-pelos-estados/",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/del6259.htm"
+      ],
+      "expected": {
+        "unit_id": "afb7e7ac-201d-57e5-b865-4b36cbbe0d89",
+        "content_sha256": "b202d6e194e5834ba71f100ec3afb3122bf96eaec80b818162467667bd6ed86d",
+        "simples": "Introduzir, para fim de comércio, bilhete de loteria estadual em território onde não possa legalmente circular: prisão simples de dois a seis meses, e multa. Na mesma pena quem vende, expõe à venda, tem sob sua guarda para venda, introduz ou tenta introduzir na circulação bilhete de loteria estadual em território onde não possa legalmente circular.",
+        "pontos": [
+          "Bilhete de loteria estadual em território onde não pode circular.",
+          "Venda e circulação."
+        ],
+        "atencao": [
+          "A loteria estadual é lícita só no território em que circula legalmente."
+        ],
+        "exemplo": "Vender, em outro Estado, bilhete de loteria estadual que não pode circular ali é contravenção.",
+        "prova": [
+          "Assertiva que torna lícita a venda de loteria estadual em qualquer Estado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 52"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-54",
+      "unit_id": "ce598c1f-17e7-5e9a-8d75-394608e0abb7",
+      "content_sha256": "1e97e2a2ce0dfdf0cc6d57930de84d3c0cad6d06042dc435cb89eeb77e457242",
+      "simples": "Exibir ou guardar lista de sorteio de loteria estrangeira, ou de estadual com circulação proibida no território, não é a mesma conduta de vender bilhetes.",
+      "pontos": [
+        "Identificar lista de sorteio e condição territorial expressa.",
+        "A disciplina lotérica posterior exige confronto antes de aplicar sanções históricas; estudo da rubrica não dispensa verificar autorização."
+      ],
+      "atencao": [
+        "Não presumir proibição de qualquer resultado de sorteio público autorizado; distinguir modalidade, lista e âmbito."
+      ],
+      "exemplo": "Estabelecimento guarda lista do sorteio na situação de circulação legalmente proibida descrita. Variação: resultado de loteria autorizada e regularmente circulante não se equipara automaticamente.",
+      "prova": [
+        "Lista e bilhete são necessariamente o mesmo objeto? Não; tipos descrevem objetos/condutas distintos.",
+        "Resultado de sorteio autorizado é sempre proibido? Não; verificar condições legais."
+      ],
+      "termos": [
+        "lista de sorteio",
+        "exibir ou ter sob guarda",
+        "não possa circular"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://noticias.stf.jus.br/postsnoticias/loteria-e-prestacao-de-servico-publico-e-pode-ser-explorada-pelos-estados/",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/del6259.htm"
+      ],
+      "expected": {
+        "unit_id": "ce598c1f-17e7-5e9a-8d75-394608e0abb7",
+        "content_sha256": "cf7981291cdc4cde5f4bbfd1a304343100927f4ea2153c9cd9a1d70bafaac1db",
+        "simples": "Exibir ou ter sob sua guarda lista de sorteio de loteria estrangeira: prisão simples de um a três meses, e multa. Na mesma pena quem exibe ou tem sob sua guarda lista de sorteio de loteria estadual em território onde esta não possa legalmente circular.",
+        "pontos": [
+          "Exibir ou guardar lista de sorteio de loteria estrangeira.",
+          "Também a lista de loteria estadual fora de seu território."
+        ],
+        "atencao": [
+          "Alcança a posse e a exibição da lista."
+        ],
+        "exemplo": "Manter afixada lista de sorteio de loteria estrangeira é contravenção.",
+        "prova": [
+          "Assertiva que exige a venda de bilhetes para a contravenção do art. 54 erra: basta exibir ou ter a lista."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 55"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-55",
+      "unit_id": "24dfd4a3-16f2-5281-85b1-7c8cb467cacf",
+      "content_sha256": "3a1bc83d12c2ff1c949604436c2776a6f8a3cbf91c455f22b72a950f1b7f2121",
+      "simples": "Impressão ou execução de serviço relativo a bilhetes, listas, avisos ou cartazes de loteria sem circulação legalmente permitida deve ser confrontada com legislação posterior.",
+      "pontos": [
+        "O objeto e a impossibilidade legal de circulação são elementos, não mera ausência de preferência administrativa.",
+        "Distinguir fabricação/impressão, transporte/distribuição e divulgação dos artigos seguintes."
+      ],
+      "atencao": [
+        "Não aplicar automaticamente a toda gráfica que imprime sorteio autorizado; considerar regime lotérico vigente, elementos subjetivos e legalidade."
+      ],
+      "exemplo": "Gráfica imprime bilhetes de loteria irregular nas condições legais do tipo. Variação: material de modalidade autorizada não é ilícito apenas por conter prêmio.",
+      "prova": [
+        "Imprimir e transportar são a mesma conduta textual? Não; comparar artigos 55 e 56.",
+        "Todo impresso premiado é irregular? Não; conferir autorização e elementos."
+      ],
+      "termos": [
+        "imprimir ou executar serviço",
+        "bilhetes listas avisos cartazes",
+        "circulação legal"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/del6259.htm"
+      ],
+      "expected": {
+        "unit_id": "24dfd4a3-16f2-5281-85b1-7c8cb467cacf",
+        "content_sha256": "a126e1ae8803c5e6d00b5371cab8383725fdf7264fa86067665c3c95d5b3626a",
+        "simples": "Imprimir ou executar qualquer serviço de feitura de bilhetes, lista de sorteio, avisos ou cartazes relativos a loteria, em lugar onde ela não possa legalmente circular: prisão simples de um a seis meses, e multa.",
+        "pontos": [
+          "Imprimir ou produzir bilhetes, listas e cartazes de loteria em lugar proibido."
+        ],
+        "atencao": [
+          "Atinge o gráfico ou o prestador do serviço."
+        ],
+        "exemplo": "A gráfica que imprime bilhetes de loteria não autorizada comete a contravenção.",
+        "prova": [
+          "Assertiva que isenta a gráfica que apenas imprime erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 56"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-56",
+      "unit_id": "987dadf2-06d0-58c8-a0f7-5f0e5f2cd672",
+      "content_sha256": "8131f11ecb227ec7f388a9ad82d6d0961aca6bbc8a2a80f70b0f8a12a48c2b39",
+      "simples": "Distribuir ou transportar cartazes, listas ou avisos de loteria onde não possa legalmente circular difere de imprimir o material ou anunciar na mídia.",
+      "pontos": [
+        "Conduta e território precisam corresponder à descrição.",
+        "Integrar DL 6.259/1944 e regras atuais da modalidade antes de concluir pela sanção antiga."
+      ],
+      "atencao": [
+        "Não ensinar que transporte de toda publicidade de loteria autorizada seja punível; verificar efetiva vedação."
+      ],
+      "exemplo": "Distribuidor leva listas de loteria à região de circulação legalmente proibida. Variação: transporte de material regularmente autorizado não satisfaz automaticamente a proibição.",
+      "prova": [
+        "O simples transporte de qualquer lista premiada basta? Não; exige condições legais descritas.",
+        "O artigo trata anúncio pela mídia indistintamente? Não; transporte/distribuição têm descrição própria."
+      ],
+      "termos": [
+        "distribuir ou transportar",
+        "onde não possa circular",
+        "cartazes listas avisos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/del6259.htm"
+      ],
+      "expected": {
+        "unit_id": "987dadf2-06d0-58c8-a0f7-5f0e5f2cd672",
+        "content_sha256": "c771a56f39933592628d17d62d4ed00405c27c624af531d2b5eeb837875cb225",
+        "simples": "Distribuir ou transportar cartazes, listas de sorteio ou avisos de loteria, onde ela não possa legalmente circular: prisão simples de um a três meses, e multa.",
+        "pontos": [
+          "Distribuir ou transportar material de loteria em local onde não pode circular."
+        ],
+        "atencao": [
+          "Alcança quem distribui e quem transporta."
+        ],
+        "exemplo": "Quem leva cartazes de loteria proibida para outra cidade comete a contravenção.",
+        "prova": [
+          "Assertiva que alcança só quem imprime o material erra: distribuir e transportar também são condutas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 57"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-57",
+      "unit_id": "7181abbd-a9e0-5320-93c4-a053c7489388",
+      "content_sha256": "dcdb6d4f952139ea70fd2f67c8b3881884874a23e2e0b598b919d15d8a092124",
+      "simples": "Divulgar anúncio, aviso ou resultado de loteria em local de circulação proibida pode ocorrer de modo claro ou disfarçado; a modalidade e a lei posterior devem ser verificadas.",
+      "pontos": [
+        "O texto alcança jornal, rádio, cinema e outra forma de divulgação; disfarce não elimina descrição.",
+        "Distinguir divulgação, impressão e transporte; não acumular tipos automaticamente pela mesma conduta."
+      ],
+      "atencao": [
+        "Publicidade de aposta/loteria autorizada possui regras próprias; autorização não dispensa restrições publicitárias e não legaliza modalidade clandestina."
+      ],
+      "exemplo": "Empresa divulga de forma disfarçada resultado da loteria nas condições de proibição legal. Variação: publicidade regular de modalidade autorizada depende de suas próprias regras, sem equiparação automática.",
+      "prova": [
+        "Divulgação disfarçada fica necessariamente fora do texto? Não; há previsão expressa.",
+        "Autorização dispensa todas as regras de publicidade? Não; cumprir disciplina específica."
+      ],
+      "termos": [
+        "clara ou disfarçadamente",
+        "anúncio aviso resultado",
+        "qualquer outra forma"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/del6259.htm"
+      ],
+      "expected": {
+        "unit_id": "7181abbd-a9e0-5320-93c4-a053c7489388",
+        "content_sha256": "c7fe0ee27d4440097c5fe6b19d7a31ce367b669875ffe508ca80928df5f79e1f",
+        "simples": "Divulgar, por jornal ou outro impresso, rádio, cinema ou qualquer outra forma, ainda que disfarçadamente, anúncio, aviso ou resultado de extração de loteria, onde a circulação dos seus bilhetes não seria legal: multa.",
+        "pontos": [
+          "Divulgar anúncio, aviso ou resultado de loteria em local proibido.",
+          "Pena de multa."
+        ],
+        "atencao": [
+          "Alcança a divulgação disfarçada."
+        ],
+        "exemplo": "Publicar em jornal o resultado de loteria ilegal no local é contravenção.",
+        "prova": [
+          "Assertiva que isenta a divulgação disfarçada erra: ela também é punida."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 58"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-58",
+      "unit_id": "5c7abf31-7542-5f48-8b3e-47db044ec15c",
+      "content_sha256": "d2c9c3efb7a8e91599d71011d02270ceaaf018686d0fab199f214357d036c7c8",
+      "simples": "Jogo do bicho exige leitura do art. 58 do DL 6.259/1944 e da Lei 1.508/1951; não memorizar o art. 58 antigo da LCP como regime completo atual.",
+      "pontos": [
+        "A disciplina posterior distingue banqueiro/vendedor e comprador/ponto, com hipóteses de intermediação e materiais.",
+        "A Lei 1.508 revogou o procedimento fiscal do §3º do DL 6.259; processo deve ser integrado ao sistema constitucional e rito atual, sem juiz iniciar acusação por portaria."
+      ],
+      "atencao": [
+        "Apostas de quota fixa autorizadas pela Lei 14.790/2023 não legalizam automaticamente jogo do bicho.",
+        "A fonte de 1944 tem redação numérica incoerente na pena do comprador e moeda antiga: não transformar esse trecho em flashcard de prazo/valor nem corrigir por palpite."
+      ],
+      "exemplo": "Banqueiro recebe apostas em combinações de animais/números e promete prêmio por sorteio: consultar regime específico posterior. Variação: operador de bet autorizada não recebe por isso licença para banca de jogo do bicho.",
+      "prova": [
+        "Basta estudar a pena antiga do art. 58 da LCP? Não; confrontar DL 6.259/1944 e alterações.",
+        "Autorização de bet abrange automaticamente jogo do bicho? Não; modalidades e autorização são específicas."
+      ],
+      "termos": [
+        "banqueiro ou vendedor",
+        "comprador ou ponto",
+        "legislação posterior"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/del6259.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l1508.htm"
+      ],
+      "expected": {
+        "unit_id": "5c7abf31-7542-5f48-8b3e-47db044ec15c",
+        "content_sha256": "f62d43ba23c4dfc68b40e93e8decad252f409f2dd1c2a9088f095756c1bd5933",
+        "simples": "Jogo do bicho: explorar ou realizar a loteria denominada jogo do bicho, ou praticar qualquer ato relativo à sua realização ou exploração: prisão simples de quatro meses a um ano, e multa. Incorre em multa aquele que participa da loteria, visando à obtenção de prêmio, para si ou para terceiro.",
+        "pontos": [
+          "Explorar ou realizar o jogo do bicho.",
+          "Prisão simples e multa.",
+          "Apostador: multa."
+        ],
+        "atencao": [
+          "O APOSTADOR também responde, com pena de multa."
+        ],
+        "exemplo": "Quem recolhe apostas do jogo do bicho comete a contravenção.",
+        "prova": [
+          "Assertiva que isenta o apostador do jogo do bicho erra: ele incorre em multa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 50"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-62",
+      "unit_id": "8864948b-ef24-53a6-9716-f3db3ea6c155",
+      "content_sha256": "2f930d93a715132457e26c375007eb392a2a206020361748b667bb217eb35399",
+      "simples": "Embriaguez em lugar público exige a forma que cause escândalo ou ponha em perigo segurança própria ou alheia; beber em público não é suficiente por si só.",
+      "pontos": [
+        "Distinguir ingestão, embriaguez e condição expressa de escândalo/perigo.",
+        "Condução de veículo sob álcool exige CTB, com elementos próprios; não transplantar pena contravencional."
+      ],
+      "atencao": [
+        "A menção histórica a internação por alcoolismo deve ser integrada à reforma penal e Lei 10.216; não autoriza internação automática por diagnóstico ou condição social."
+      ],
+      "exemplo": "Pessoa embriagada põe concretamente em risco segurança alheia em lugar público. Variação: consumo de bebida sem embriaguez nas condições descritas não basta para o tipo.",
+      "prova": [
+        "Qualquer consumo público caracteriza artigo 62? Não; verificar embriaguez e escândalo ou perigo.",
+        "O parágrafo autoriza internação automática hoje? Não; integrar regime penal e cuidado em saúde atuais."
+      ],
+      "termos": [
+        "lugar público",
+        "escândalo",
+        "segurança própria ou alheia"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8864948b-ef24-53a6-9716-f3db3ea6c155",
+        "content_sha256": "3bbae559d588cc00398d585a6479d1e7e15d8da992ebbaa4ca5c2ede3d5b4bb9",
+        "simples": "Apresentar-se publicamente em estado de embriaguez, de modo que cause escândalo ou ponha em perigo a segurança própria ou alheia: prisão simples de quinze dias a três meses, ou multa. Se habitual a embriaguez, o contraventor é internado em casa de custódia e tratamento.",
+        "pontos": [
+          "Embriaguez pública com escândalo ou perigo.",
+          "Prisão simples ou multa.",
+          "Embriaguez habitual: internação em casa de custódia."
+        ],
+        "atencao": [
+          "Só há contravenção se causar escândalo ou perigo; embriaguez discreta não basta."
+        ],
+        "exemplo": "Quem, embriagado, cria confusão em praça pública pratica a contravenção.",
+        "prova": [
+          "Assertiva que pune qualquer embriaguez em público, sem escândalo ou perigo, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-63",
+      "unit_id": "8e84ece0-7ecb-51ff-ba0a-db6d88f6737c",
+      "content_sha256": "af525841fca3bdfc6b7313db49b0828596a600aec127ceed1dcaa0cd8fe5b21b",
+      "simples": "Servir álcool nas hipóteses remanescentes requer distinguir embriaguez, ciência da condição legal e fornecimento a menor, que tem crime específico no ECA.",
+      "pontos": [
+        "Inciso I foi revogado pela Lei 13.106/2015; ECA 243 alcança vender, fornecer, servir, ministrar ou entregar, até gratuitamente, bebida alcoólica a criança/adolescente.",
+        "Incisos remanescentes descrevem pessoa embriagada, pessoa que o agente sabe sofrer das condições mentais descritas e pessoa cuja proibição judicial o agente conhece."
+      ],
+      "atencao": [
+        "Não ensinar fornecimento a menor como mera contravenção de multa nem exigir sempre venda onerosa; não presumir ciência onde o inciso a exige."
+      ],
+      "exemplo": "Adulto entrega gratuitamente álcool a adolescente: analisar crime do ECA, não inciso I revogado. Variação: servir a adulto já embriagado demanda análise do inciso II remanescente.",
+      "prova": [
+        "Entrega gratuita a menor fica fora do ECA 243? Não; gratuidade é expressamente alcançada.",
+        "O inciso I da LCP permanece vigente para esse fornecimento? Não; revogado em 2015."
+      ],
+      "termos": [
+        "inciso I revogado",
+        "pessoa embriagada",
+        "sabe"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13106.htm"
+      ],
+      "expected": {
+        "unit_id": "8e84ece0-7ecb-51ff-ba0a-db6d88f6737c",
+        "content_sha256": "eb86b4e144d2f92f375226303e9b3bfe6df36b9601b19eb9f034c8cdb73a07cb",
+        "simples": "Servir bebidas alcoólicas a quem se acha em estado de embriaguez, a pessoa que o agente sabe sofrer das faculdades mentais, ou a pessoa que o agente sabe estar judicialmente proibida de frequentar lugares onde se consome bebida de tal natureza: prisão simples de dois meses a um ano, ou multa.",
+        "pontos": [
+          "Servir bebida a embriagado.",
+          "Servir a quem o agente sabe ter doença mental.",
+          "Servir a quem está judicialmente proibido."
+        ],
+        "atencao": [
+          "O inciso I (servir a menor) foi revogado, pois o fato é crime no Estatuto da Criança e do Adolescente."
+        ],
+        "exemplo": "O garçom que serve mais bebida a cliente visivelmente embriagado comete a contravenção.",
+        "prova": [
+          "Assertiva que alcança a venda de bebida a menor de idade como contravenção do art. 63 erra: o fato é crime do ECA."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 62",
+          "Estatuto da Criança e do Adolescente"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-66",
+      "unit_id": "677553c9-da73-5e80-936b-86d775886a28",
+      "content_sha256": "644de63a051f7fcdd0e3aad85f5915b05aae1839db4e120e18760af639ad1bab",
+      "simples": "Omissão de comunicação envolve crime de ação pública não condicionada conhecido no exercício de função pública, ou da medicina/profissão sanitária nas condições próprias do inciso II.",
+      "pontos": [
+        "No inciso II, a comunicação não pode expor o cliente a procedimento criminal; isso não é dispensa universal de notificação sanitária.",
+        "Lei 10.778 atual: indícios/confirmação de violência contra mulher atendida em saúde exigem comunicação à polícia em até 24 horas, além da disciplina sigilosa de notificação."
+      ],
+      "atencao": [
+        "Distinguir denúncia penal, comunicação policial e notificação em saúde; cumprir leis específicas e proteção de dados, sem divulgar prontuário indiscriminadamente."
+      ],
+      "exemplo": "Servidor conhece no exercício da função crime de ação pública incondicionada e omite comunicação: conferir inciso I. Variação: profissional de saúde atende vítima de violência contra mulher e deve observar comunicação legal específica de 24 horas, não uma dispensa geral por sigilo.",
+      "prova": [
+        "Qualquer crime condicionado satisfaz os incisos? Não; o tipo exige ação pública que não dependa de representação.",
+        "Sigilo elimina toda obrigação legal de comunicar violência contra mulher? Não; aplicar Lei 10.778 com proteção e requisitos próprios."
+      ],
+      "termos": [
+        "exercício de função pública",
+        "não depende de representação",
+        "não exponha o cliente"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.778.htm"
+      ],
+      "expected": {
+        "unit_id": "677553c9-da73-5e80-936b-86d775886a28",
+        "content_sha256": "37866abf149af1c07d6ed50ab0df514b6eaaae6c4e1a3a72efeaea51e21fb405",
+        "simples": "Deixar de comunicar à autoridade competente crime de ação pública de que teve conhecimento no exercício de função pública, desde que a ação penal não dependa de representação; ou crime de ação pública de que teve conhecimento no exercício da medicina ou de outra profissão sanitária, desde que a ação não dependa de representação e a comunicação não exponha o cliente a procedimento criminal: multa.",
+        "pontos": [
+          "Omissão de comunicação de crime por funcionário público.",
+          "Omissão por profissional da saúde, sem expor o paciente a processo.",
+          "Só para ação pública incondicionada."
+        ],
+        "atencao": [
+          "Exige que a ação penal não dependa de representação."
+        ],
+        "exemplo": "O funcionário que sabe de um crime de ação pública e não comunica comete a contravenção.",
+        "prova": [
+          "Assertiva que obriga o médico a comunicar mesmo quando expõe o paciente a processo erra: há ressalva."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código de Processo Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-67",
+      "unit_id": "e6517c14-6aa4-5d9c-b314-d000dd9b4c48",
+      "content_sha256": "c3d68c96e6d3d6611ca61c9f19aefb8d4d523f54217e334d5a2c8a45590d2289",
+      "simples": "Inumar ou exumar cadáver em desacordo com disposições legais configura descrição própria; ocultar ou destruir cadáver exige confrontar crime mais específico.",
+      "pontos": [
+        "Verificar norma de sepultamento/exumação efetivamente infringida, sem presumir irregularidade em procedimento autorizado.",
+        "CP 211 trata destruição, subtração ou ocultação; não confundir toda exumação irregular com ocultação dolosa."
+      ],
+      "atencao": [
+        "A exigência legal concreta e o propósito da conduta importam; não ensinar concurso automático de todos os tipos relativos a cadáver."
+      ],
+      "exemplo": "Responsável realiza exumação descumprindo disposição legal aplicável. Variação: subtração deliberada para ocultar cadáver exige análise do CP 211, não apenas irregularidade administrativa.",
+      "prova": [
+        "Toda exumação autorizada é proibida? Não; o artigo exige infração às disposições legais.",
+        "Ocultação deliberada deve ser confrontada com CP 211? Sim; crime específico possui elementos próprios."
+      ],
+      "termos": [
+        "inumar ou exumar",
+        "disposições legais"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e6517c14-6aa4-5d9c-b314-d000dd9b4c48",
+        "content_sha256": "15d9a187de81656e3d556647f70c09f424b1c1eb0ef94cfa074ae135b25dd5a5",
+        "simples": "Inumar ou exumar cadáver, com infração das disposições legais: prisão simples de um mês a um ano, ou multa.",
+        "pontos": [
+          "Enterrar ou exumar cadáver contra as regras legais.",
+          "Prisão simples ou multa."
+        ],
+        "atencao": [
+          "Diferente do crime de violação de sepultura."
+        ],
+        "exemplo": "Enterrar um corpo sem o atestado de óbito comete a contravenção.",
+        "prova": [
+          "Assertiva que aplica a contravenção a quem destrói o cadáver erra: o fato é crime do Código Penal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal (violação de sepultura)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-70",
+      "unit_id": "19d06d95-4342-5b28-bbbd-d7a7f72449dd",
+      "content_sha256": "a39d55a0aca6190e6cba0e956013aec4e7df21713a7d09d99165c6984a44db2f",
+      "simples": "Privilégio postal: a norma posterior relevante é Lei 6.538/1978, arts. 9 e 42, com interpretação conforme da ADPF 46; não usar a multa antiga como regime atual completo.",
+      "pontos": [
+        "A disciplina posterior prevê crime relativo ao privilégio postal; a decisão constitucional restringe art. 42 às atividades do art. 9.",
+        "Cartas, cartões-postais e correspondência agrupada não se confundem com toda encomenda entregue por transportador privado."
+      ],
+      "atencao": [
+        "Não afirmar que qualquer entrega privada de pacote é ilícita nem que pagamento de tarifa elimina violação das condições legais."
+      ],
+      "exemplo": "Empresa transporta correspondência sujeita ao privilégio sem condições legais: examinar Lei 6.538 e ADPF 46. Variação: entrega privada de encomenda não vira crime só por existir privilégio dos Correios.",
+      "prova": [
+        "Todo pacote entregue por transportadora é crime postal? Não; distinguir atividades protegidas e encomendas.",
+        "A antiga multa da LCP substitui o regime da Lei 6.538? Não; há disciplina posterior e interpretação constitucional."
+      ],
+      "termos": [
+        "privilégio postal",
+        "atividades do art. 9",
+        "interpretação conforme"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l6538.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2182784"
+      ],
+      "expected": {
+        "unit_id": "19d06d95-4342-5b28-bbbd-d7a7f72449dd",
+        "content_sha256": "6b4e63304ca47886a2e95353612a8ac0c6bfee0c0d2bf3557a16df5b073bf3ec",
+        "simples": "Praticar qualquer ato que importe violação do monopólio postal da União: prisão simples de três meses a um ano, ou multa, ou ambas cumulativamente.",
+        "pontos": [
+          "Violação do monopólio postal da União.",
+          "Prisão simples e multa."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o monopólio postal é discutido após decisão do STF sobre a recepção da lei postal; confira a situação atual."
+        ],
+        "exemplo": "Explorar serviço de entrega de cartas que a lei reserva à União é contravenção.",
+        "prova": [
+          "Assertiva que prevê apenas multa para a violação do monopólio postal erra: há prisão simples ou multa, ou ambas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei Postal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-71",
+      "unit_id": "2fbca209-f8ec-5821-8959-dd9ffe2d623d",
+      "content_sha256": "390a683927ea0a2c0649a2175999333bbca8e6d411ae50a5c385121dc3501a9c",
+      "simples": "A cláusula de revogação de disposições contrárias é histórica, com ressalva aos códigos Florestal, Caça e Pesca então existentes; não impede legislação ambiental posterior.",
+      "pontos": [
+        "Distinguir regra de transição de 1941 e regime atual de proteção ambiental.",
+        "Lei 9.605/1998 e alterações possuem tipos/penas próprios; cláusula antiga não afasta automaticamente lei especial posterior."
+      ],
+      "atencao": [
+        "Não transportar nomes de códigos históricos como certificação de vigência integral em 2026; confrontar cada diploma atual."
+      ],
+      "exemplo": "Questão pretende afastar crime ambiental de 1998 citando a ressalva de 1941: a conclusão não procede automaticamente. Variação: aplicação histórica da cláusula exige identificar normas da época e regras de sucessão.",
+      "prova": [
+        "A ressalva congela todo direito ambiental em 1941? Não; há legislação posterior.",
+        "Ela dispensa verificar lei específica atual? Não; vigência e sucessão precisam ser analisadas."
+      ],
+      "termos": [
+        "revogadas disposições em contrário",
+        "ressalvadas",
+        "legislação posterior"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "2fbca209-f8ec-5821-8959-dd9ffe2d623d",
+        "content_sha256": "390a683927ea0a2c0649a2175999333bbca8e6d411ae50a5c385121dc3501a9c",
+        "simples": "Ressalvada a legislação especial sobre florestas, caça e pesca, revogam-se as disposições em contrário.",
+        "pontos": [
+          "Revoga disposições em contrário.",
+          "Ressalva a legislação especial sobre florestas, caça e pesca."
+        ],
+        "atencao": [
+          "Cláusula de revogação com ressalva."
+        ],
+        "exemplo": "A lei especial sobre pesca continua em vigor, apesar da cláusula.",
+        "prova": [
+          "Assertiva que revoga a legislação especial sobre florestas, caça e pesca erra: ela é ressalvada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 72"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    },
+    {
+      "course_slug": "contravencoes",
+      "course_id": "46e90398-cf1d-59e8-83d4-becb090fa507",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-72",
+      "unit_id": "423b1e23-7f50-5e81-91af-e710bbecb88b",
+      "content_sha256": "949acf27e94930bf15b6deeef82915ff41114d3ecce848efcb17af3a99adf852",
+      "simples": "Vigência original da LCP: 1º de janeiro de 1942. Data de assinatura em 1941 e começo de eficácia da lei não são a mesma coisa.",
+      "pontos": [
+        "A cláusula estabelece termo inicial próprio, não prazo geral para toda alteração futura.",
+        "Leis modificadoras posteriores possuem suas próprias regras de vigência e irretroatividade de norma penal mais gravosa."
+      ],
+      "atencao": [
+        "Assinaturas e fecho da publicação são metadados documentais, não continuação normativa do artigo; foram separados sem cortar a regra de vigência."
+      ],
+      "exemplo": "Enunciado atribui vigência original à assinatura de 3/10/1941: incorreto, o artigo fixa 1/1/1942. Variação: majorante criada em 2024 deve observar vigência da alteração e não retroagir por existir uma lei-base de 1941.",
+      "prova": [
+        "A LCP passou a vigorar no dia da assinatura? Não; art. 72 fixa 1º de janeiro de 1942.",
+        "Toda alteração posterior vale retroativamente desde 1942? Não; aplicar vigência própria e garantias penais."
+      ],
+      "termos": [
+        "1º de janeiro de 1942",
+        "vigência original",
+        "irretroatividade"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "423b1e23-7f50-5e81-91af-e710bbecb88b",
+        "content_sha256": "916fecbfd58b36ddd465619b61fea1eddd85ea1fb34d266d2e546e41f51d4bb0",
+        "simples": "Esta lei entrará em vigor no dia 1º de janeiro de 1942.",
+        "pontos": [
+          "Vigência em 1º de janeiro de 1942."
+        ],
+        "atencao": [
+          "Lei histórica, de 1941, com muitos artigos revogados ou superados."
+        ],
+        "exemplo": "A lei foi publicada em 1941 e passou a valer em 1942.",
+        "prova": [
+          "Assertiva que prevê vigência imediata na data da publicação erra: começou em 1º de janeiro de 1942."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 71"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:44:49.09976+00:00",
+        "updated_at": "2026-10-11T18:44:49.09976+00:00"
+      }
+    }
+  ]
+}

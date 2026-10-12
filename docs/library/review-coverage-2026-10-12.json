@@ -1,8 +1,8 @@
 {
   "current_units": 3511,
-  "current_review_metadata": 1069,
-  "pending_current_review_metadata": 2442,
-  "checked_at": "2026-10-12T19:50:13.389Z",
+  "current_review_metadata": 1095,
+  "pending_current_review_metadata": 2416,
+  "checked_at": "2026-10-12T20:07:39.108Z",
   "note": "Contagem de aprovações editoriais atuais com revisor, data e hash correspondente; existência de explicação publicada não equivale a revisão atual. Não certifica toda a regulamentação ou jurisprudência.",
   "courses": [
     {
@@ -56,8 +56,8 @@
     {
       "slug": "contravencoes",
       "current": 66,
-      "review_metadata": 40,
-      "pending": 26
+      "review_metadata": 66,
+      "pending": 0
     },
     {
       "slug": "identificacao-criminal",
