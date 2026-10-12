@@ -1,0 +1,384 @@
+{
+  "version": "2026-10-11-ric-targeted",
+  "checked_at": "2026-10-12T01:45:08.482710+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "ric",
+      "title": "Lei 9.454/1997 — Registro de Identidade Civil",
+      "units": 7,
+      "scope_type": "targeted_correction",
+      "course_current_units": 7,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-7",
+        "art-8"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "source_sha256": "d5a23befcd323fa16242b0c757e43b71cf55886d61a4aaafefab5ead52b70e01",
+      "source_checked_at": "2026-10-12T00:31:25.596210+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "ric",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "039ebe7d-b2b0-591c-a58c-6d3fb4fc792b",
+      "content_sha256": "d0667d4a6722f947e93b12bf0a33895d9a50dda3afe48210a1a1cbb7899e1296",
+      "simples": "Institui identificador único para brasileiro nato/naturalizado nas relações públicas/privadas. Desde 2023, documentos novos usam CPF, único e definitivo. Trechos vetados não acrescentam campos ou novas obrigações.",
+      "pontos": [
+        "CPF único; não número novo por estado."
+      ],
+      "atencao": [
+        "Número identifica, não autentica sozinho nem autoriza exposição ilimitada."
+      ],
+      "exemplo": "Documento novo conserva CPF como identificador. Variação: Pessoa muda de estado: não recebe novo CPF por essa mudança.",
+      "prova": [
+        "O número de novos documentos é o CPF? Sim; o §2º atual o prevê."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "039ebe7d-b2b0-591c-a58c-6d3fb4fc792b",
+        "content_sha256": "d0667d4a6722f947e93b12bf0a33895d9a50dda3afe48210a1a1cbb7899e1296",
+        "simples": "É instituído o número único de Registro de Identidade Civil, pelo qual cada cidadão brasileiro, nato ou naturalizado, será identificado em suas relações com a sociedade e com os organismos governamentais e privados. Nos documentos novos será adotado, como número único, o número de inscrição no Cadastro de Pessoas Físicas (CPF), que é único e definitivo para cada pessoa física.",
+        "pontos": [
+          "Número único de Registro de Identidade Civil.",
+          "Aplica-se ao brasileiro nato ou naturalizado.",
+          "O número do CPF é adotado nos documentos novos.",
+          "O CPF é único e definitivo."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: os §§2º e 3º foram incluídos pela Lei do CPF como documento único (CPF como número único).",
+          "O §1º foi vetado."
+        ],
+        "exemplo": "Os novos documentos trazem o CPF como número único do cidadão.",
+        "prova": [
+          "Assertiva que cria novo número para cada documento erra: o CPF é o número único."
+        ],
+        "termos": [
+          {
+            "termo": "RIC",
+            "significado": "Registro de Identidade Civil."
+          }
+        ],
+        "remissoes": [
+          "Lei do CPF"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "ric",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "b3c96b35-1fc7-53ea-9922-601bc808ac2a",
+      "content_sha256": "f89e572152f6498ef018c43dcf2e168ec36383d9ea44369e87e9a9592b25167b",
+      "simples": "Cadastro nacional reúne número único acompanhado dos dados de identificação do cidadão. Não é banco penal por essa definição nem dispensa proteção e regras de compartilhamento.",
+      "pontos": [
+        "Cadastro civil e dados de identificação."
+      ],
+      "atencao": [
+        "Não presumir publicidade integral de biometria/cadastro."
+      ],
+      "exemplo": "Órgão mantém dados de identificação no cadastro civil. Variação: Terceiro quer acesso irrestrito: a existência do banco não cria essa autorização.",
+      "prova": [
+        "Criar o cadastro significa torná-lo integralmente público? Não; finalidade civil não elimina proteção de dados."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b3c96b35-1fc7-53ea-9922-601bc808ac2a",
+        "content_sha256": "f89e572152f6498ef018c43dcf2e168ec36383d9ea44369e87e9a9592b25167b",
+        "simples": "É instituído o Cadastro Nacional de Registro de Identificação Civil, destinado a conter o número único de Registro de Identidade Civil, acompanhado dos dados de identificação de cada cidadão.",
+        "pontos": [
+          "Cadastro Nacional de Registro de Identificação Civil.",
+          "Contém o número único e os dados de identificação."
+        ],
+        "atencao": [
+          "Base nacional unificada."
+        ],
+        "exemplo": "O cadastro nacional reúne o número único e os dados de cada cidadão.",
+        "prova": [
+          "Assertiva que mantém cadastros estaduais isolados sem base nacional erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "ric",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "69ab257d-5d03-562f-b2c4-fa9021703f8e",
+      "content_sha256": "57bc1c135d7ece6b16a492ca751d8102b821a8c96d55a611094761154ae7ea44",
+      "simples": "Executivo define órgão central; União pode conveniar com estados/DF. O §2º atual de 2009 atribui a signatários operacionalização/atualização em compartilhamento disciplinado pelo órgão central. A página oficial conserva §2º anterior; ele não deve ser ensinado como segunda regra simultânea. §3º antigo foi revogado.",
+      "pontos": [
+        "§2º com redação de 2009 é o atual."
+      ],
+      "atencao": [
+        "Duas redações na página não significam dois parágrafos simultaneamente vigentes; não recriar o §3º revogado."
+      ],
+      "exemplo": "Estado signatário atualiza cadastro com compartilhamento na disciplina central. Variação: Lê o §2º antigo antes do atual: deve selecionar a redação dada em 2009.",
+      "prova": [
+        "As duas versões exibidas do §2º são regras simultâneas atuais? Não; estude a redação de 2009."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "69ab257d-5d03-562f-b2c4-fa9021703f8e",
+        "content_sha256": "57bc1c135d7ece6b16a492ca751d8102b821a8c96d55a611094761154ae7ea44",
+        "simples": "O Poder Executivo definirá a entidade que centralizará as atividades de implementação, coordenação e controle do Cadastro Nacional, que será o órgão central do Sistema Nacional de Registro de Identificação Civil. A União fica autorizada a firmar convênio com os Estados e o Distrito Federal para a implementação do número único. Os órgãos regionais coordenarão no âmbito de cada Unidade da Federação, repassando aos órgãos locais as instruções do órgão central e reportando a este as informações.",
+        "pontos": [
+          "Executivo define o órgão central do Sistema.",
+          "Convênios da União com Estados e DF.",
+          "Órgãos regionais coordenam em cada Unidade da Federação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: parte do dispositivo foi revogada pela Lei nº 12.058, de 2009."
+        ],
+        "exemplo": "A União firma convênio com um Estado para implantar o número único.",
+        "prova": [
+          "Assertiva que atribui a escolha do órgão central ao Poder Legislativo erra: é do Executivo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "ric",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "169c5373-7f06-5971-9b60-1496a611ed45",
+      "content_sha256": "ebd7eedeea248a94f5736fe7b3d372b4ebc5a5e6834bd2d8ad80d2efd4d13725",
+      "simples": "Proposta orçamentária do órgão central inclui meios necessários e cronograma de implementação/manutenção. Previsão orçamentária não é taxa individual ao cidadão.",
+      "pontos": [
+        "Meios e cronograma no orçamento."
+      ],
+      "atencao": [
+        "Não inferir cobrança ou prazo de validade documental deste artigo."
+      ],
+      "exemplo": "Órgão planeja manutenção no orçamento. Variação: A questão é validade da CIN: não se extrai prazo deste planejamento.",
+      "prova": [
+        "O artigo fixa validade da carteira por um ano? Não; trata de orçamento e cronograma do sistema."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "169c5373-7f06-5971-9b60-1496a611ed45",
+        "content_sha256": "ebd7eedeea248a94f5736fe7b3d372b4ebc5a5e6834bd2d8ad80d2efd4d13725",
+        "simples": "Será incluída, na proposta orçamentária do órgão central do sistema, a provisão de meios necessários, acompanhada do cronograma de implementação e manutenção do sistema.",
+        "pontos": [
+          "Provisão orçamentária para o sistema.",
+          "Acompanhada de cronograma."
+        ],
+        "atencao": [
+          "Dispositivo orçamentário."
+        ],
+        "exemplo": "O órgão central inclui na proposta orçamentária os recursos do sistema.",
+        "prova": [
+          "Assertiva que dispensa a previsão orçamentária erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "ric",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "b63721a0-5c97-5cd3-ac1b-fe7ff2607f4a",
+      "content_sha256": "94dd3b94abd3a1535d9ad0f11db1b9662090f90567513fb3211658278b418dbc",
+      "simples": "Regulamentação em 180 dias e início de implementação em 360 são prazos históricos da lei de 1997. Não se renovam por emissão nem equivalem a validade de documento. Prazo do art. 6º antigo, revogado, não deve ser inserido como regra atual.",
+      "pontos": [
+        "180/360: implantação histórica."
+      ],
+      "atencao": [
+        "Não ensinar antigo prazo revogado como validade de toda carteira atual."
+      ],
+      "exemplo": "A pergunta trata implantação inicial e identifica os dois prazos. Variação: Trata documento emitido agora: consulte regime atual, não reinicie cronograma de 1997.",
+      "prova": [
+        "Os 360 dias são validade de cada documento novo? Não; são prazo histórico de início da implementação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "b63721a0-5c97-5cd3-ac1b-fe7ff2607f4a",
+        "content_sha256": "94dd3b94abd3a1535d9ad0f11db1b9662090f90567513fb3211658278b418dbc",
+        "simples": "A Lei 9.454 fixou ao Poder Executivo cento e oitenta dias para regulamentação e trezentos e sessenta dias para início de implementação. São prazos da implantação prevista naquela lei, não prazos renovados a cada carteira emitida.",
+        "pontos": [
+          "Regulamentar e iniciar implementação têm prazos diferentes."
+        ],
+        "atencao": [
+          "Conferência editorial em 11/10/2026; essa data não indica alteração legislativa ou início de vigência.",
+          "Este dispositivo transitório não deve ser confundido com o funcionamento atual da CIN regulado pelo Decreto 10.977/2022. A lei-fonte é parcialmente revogada; isso não transforma todo artigo remanescente em revogado."
+        ],
+        "exemplo": "A questão histórica pergunta o prazo legal de regulamentação: são cento e oitenta dias. Variação: Pergunta o início da implementação: são trezentos e sessenta dias, não o mesmo prazo.",
+        "prova": [
+          "Esses prazos começam novamente a cada emissão de documento? Não; o artigo disciplina a implantação prevista na lei, não a validade individual de carteiras."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T20:09:49.054+00:00",
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T20:09:49.054+00:00"
+      }
+    },
+    {
+      "course_slug": "ric",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-7",
+      "unit_id": "177224d3-a968-5923-bf86-9a4d63279d1e",
+      "content_sha256": "7f0ace71f32e64b020d5db883464095c5b0776931c92ab094368c80f9cc361b3",
+      "simples": "Lei original vigora na publicação; modificações posteriores têm marcos próprios, incluindo adoção CPF em 2023.",
+      "pontos": [
+        "Vigência original e mudanças não se confundem."
+      ],
+      "atencao": [
+        "Não afirmar que CPF estava nessa regra em 1997 pelo fato de hoje aparecer compilado."
+      ],
+      "exemplo": "A pergunta é a vacância original: publicação. Variação: É o número de documento novo atual: considerar alterações de 2023.",
+      "prova": [
+        "O artigo original prevê vacância de 45 dias? Não; vigência na publicação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "177224d3-a968-5923-bf86-9a4d63279d1e",
+        "content_sha256": "7f0ace71f32e64b020d5db883464095c5b0776931c92ab094368c80f9cc361b3",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo final."
+        ],
+        "exemplo": "A Lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 8º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "ric",
+      "course_id": "6d8fb1bb-d9f8-5fb6-b577-0ab05f7a67c9",
+      "syllabus_topic_id": "82857c23-6112-48ab-a1b2-733c5595cab8",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8",
+      "unit_id": "2e2ed55a-2a0a-5c5a-8fe6-91ba8c43f313",
+      "content_sha256": "bf2e2abfe960551d2cd1f67eda5aa10e1f93837a9d86010db62319e490b11ff3",
+      "simples": "Revoga disposições contrárias sem impedir alterações posteriores. O artigo 6º da própria lei foi revogado em 2009 e está fora da leitura atual.",
+      "pontos": [
+        "Cláusula final; não reinserir artigo revogado."
+      ],
+      "atencao": [
+        "Não confundir revogação interna de 2009 com nova regra de validade."
+      ],
+      "exemplo": "Aluno separa dispositivo revogado e conserva leitura atual. Variação: Apostila reintroduz art. 6º como vigente: consulte revogação específica.",
+      "prova": [
+        "O art. 6º revogado deve ser estudado como prazo atual? Não; deve ser identificado como histórico."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12058.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ],
+      "expected": {
+        "unit_id": "2e2ed55a-2a0a-5c5a-8fe6-91ba8c43f313",
+        "content_sha256": "bf2e2abfe960551d2cd1f67eda5aa10e1f93837a9d86010db62319e490b11ff3",
+        "simples": "Revogam-se as disposições em contrário, isto é, ficam sem efeito as normas anteriores incompatíveis com esta Lei.",
+        "pontos": [
+          "Cláusula de revogação genérica."
+        ],
+        "atencao": [
+          "Dispositivo final."
+        ],
+        "exemplo": "Normas incompatíveis foram revogadas.",
+        "prova": [
+          "Assertiva que vê revogação expressa de lei específica erra: é cláusula genérica."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    }
+  ]
+}

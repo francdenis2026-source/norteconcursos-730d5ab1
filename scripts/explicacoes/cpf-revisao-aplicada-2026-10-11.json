@@ -1,0 +1,120 @@
+{
+  "course_slug": "cpf",
+  "units": {
+    "art-1": {
+      "simples": "CPF é identificador único e suficiente nos bancos de serviços públicos e deve constar dos documentos/cadastros enumerados. Documentos novos ou reemitidos pelos órgãos/conselhos usam esse número.",
+      "pontos": [
+        "Identificador nos serviços públicos; não senha de autenticação."
+      ],
+      "atencao": [
+        "Número identifica, mas não prova sozinho identidade de quem o informa. Não concluir que a lei exige CPF para login de toda plataforma privada."
+      ],
+      "exemplo": "Serviço público usa CPF para localizar o cadastro do cidadão. Variação: Alguém sabe o número de terceiro: isso não autentica sua identidade nem autoriza acesso à conta.",
+      "prova": [
+        "Conhecer o CPF basta como prova de autenticação? Não; identificador e autenticação são diferentes."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-2": {
+      "simples": "Alterou a Lei 7.116: novos documentos usam CPF como registro geral; emissor pesquisa integridade na base e compartilha dados cadastrais/biométricos com Receita na hipótese prevista. Se não houver inscrição, órgão de identificação a realiza.",
+      "pontos": [
+        "CPF no registro geral; cadastro prévio ausente é providenciado pelo emissor."
+      ],
+      "atencao": [
+        "Não recusar definitivamente emissão só porque requerente não tem CPF nem estender compartilhamento específico a qualquer terceiro."
+      ],
+      "exemplo": "O requerente sem CPF é inscrito pelo órgão de identificação. Variação: Empresa privada pede todo dado biométrico com base no artigo: a autorização específica não é acesso irrestrito.",
+      "prova": [
+        "A falta de CPF autoriza simplesmente negar emissão? Não; o §3º prevê inscrição pelo órgão de identificação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm"
+      ]
+    },
+    "art-3": {
+      "simples": "Adicionou à Lei 9.454 uso de CPF nos documentos novos e unicidade/definitividade do número para cada pessoa.",
+      "pontos": [
+        "Um número para cada pessoa; documento novo não gera novo CPF."
+      ],
+      "atencao": [
+        "Não confundir número permanente com documento físico sem prazo de validade."
+      ],
+      "exemplo": "Cidadão renova documento e conserva seu número CPF. Variação: Muda de estado: não se cria outro CPF por essa mudança.",
+      "prova": [
+        "A renovação documental exige gerar outro CPF? Não; o número é único e definitivo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm"
+      ]
+    },
+    "art-4": {
+      "simples": "Novos DNIs usam CPF como número único, conforme acréscimo à Lei 13.444. DNI/ICN e CIN possuem instrumentos e regras próprios apesar do número comum.",
+      "pontos": [
+        "Número comum não torna documentos/sistemas sinônimos."
+      ],
+      "atencao": [
+        "Não confundir compartilhamento biométrico da ICN com divulgação irrestrita nem troca de siglas."
+      ],
+      "exemplo": "A questão cobra número de novo DNI: CPF. Variação: Cobra validade da CIN: consultar o decreto próprio, não deduzi-la desta alteração.",
+      "prova": [
+        "O número único previsto para novo DNI é o CPF? Sim; o §6º acrescido assim determina."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm"
+      ]
+    },
+    "art-5": {
+      "simples": "Serviços públicos disponibilizam campo CPF obrigatório para identificação e não exigem outro número para esse mesmo fim. Isso não elimina prova de requisitos substantivos do serviço ou autenticação adequada.",
+      "pontos": [
+        "Suficiência como número identificador, não dispensa universal de documentos."
+      ],
+      "atencao": [
+        "Não transformar regra em acesso ao serviço sem demonstrar direito/materialidade nem criar exigência legal genérica de CPF em todo site privado."
+      ],
+      "exemplo": "O formulário identifica o cidadão pelo CPF sem exigir segundo número cadastral. Variação: Benefício exige prova de condição legal: essa comprovação não é automaticamente proibida pela suficiência do identificador.",
+      "prova": [
+        "A suficiência do CPF elimina toda prova de requisitos do benefício? Não; trata do número de identificação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13460.htm"
+      ]
+    },
+    "art-8": {
+      "simples": "Revogou Lei 13.444, art. 5º, §2º, I, b; inciso II vetado não fornece revogação válida. A cláusula não extingue a ICN inteira.",
+      "pontos": [
+        "Revogação pontual; veto não cria comando."
+      ],
+      "atencao": [
+        "Não ensinar revogação integral da Lei 13.444."
+      ],
+      "exemplo": "A questão pede dispositivo revogado: identifica-se a referência precisa. Variação: Afirma que toda ICN deixou de existir: não decorre desta cláusula.",
+      "prova": [
+        "Este artigo revogou integralmente a Lei 13.444? Não; a revogação é de dispositivo específico."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm"
+      ]
+    },
+    "art-9": {
+      "simples": "Vigência na publicação; órgãos tiveram 12 meses para adaptar sistemas/atendimento e 24 para interoperabilidade dos cadastros. Os prazos são de implantação, já transcorridos em 2026, não validade de CPF ou prazo renovado a cada emissão.",
+      "pontos": [
+        "12 meses adaptação; 24 interoperabilidade."
+      ],
+      "atencao": [
+        "Não converter prazos de implantação em expiração do número nem presumir que cumprimento técnico foi automaticamente constatado em todos os órgãos."
+      ],
+      "exemplo": "O aluno diferencia implantação institucional da validade do documento. Variação: Um documento é emitido hoje: os prazos não recomeçam por essa emissão.",
+      "prova": [
+        "Os 24 meses são prazo de validade do CPF? Não; referem-se à interoperabilidade institucional."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

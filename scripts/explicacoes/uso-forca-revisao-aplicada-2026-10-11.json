@@ -1,0 +1,188 @@
+{
+  "course_slug": "uso-forca",
+  "units": {
+    "art-1": {
+      "simples": "Disciplina força e instrumentos de menor potencial com eficiência, transparência, valorização profissional e direitos humanos. Classificação remete a leis/decreto específicos, não preferência informal.",
+      "pontos": [
+        "Uso da força e proteção profissional/pessoal em conjunto."
+      ],
+      "atencao": [
+        "Não tratar menor potencial como risco zero nem confundir com Juizados."
+      ],
+      "exemplo": "Equipe planeja atuação com instrumento classificado no regime aplicável. Variação: É instrumento improvisado sem conferência de classificação: não se presume adequado pelo nome.",
+      "prova": [
+        "O decreto trata apenas de punição penal? Não; disciplina políticas, instrumentos e diretrizes de uso da força."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ]
+    },
+    "art-2": {
+      "simples": "Princípios: legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização e não discriminação. Planejar reduz dano; só usar intensidade maior quando menor for insuficiente. Responsabilização exige processo, contraditório e defesa.",
+      "pontos": [
+        "Objetivo legal + planejamento + menor intensidade suficiente."
+      ],
+      "atencao": [
+        "Não reduzir proporcionalidade a força igual à do oponente nem presumir culpa sem processo."
+      ],
+      "exemplo": "Comunicação resolve a resistência e evita escalada desnecessária. Variação: Recurso menor não atende à ameaça concreta: analise intensidade necessária, sem escalada automática.",
+      "prova": [
+        "A responsabilização dispensa defesa e contraditório? Não; o decreto os assegura."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ]
+    },
+    "art-3": {
+      "simples": "Força diferenciada responde à ameaça real/potencial, prioriza comunicação/negociação e evita escalada. Arma de fogo é último recurso; fuga/bloqueio simples não autoriza disparo. Profissionais precisam estar habilitados; ferimento/morte gera relatório circunstanciado.",
+      "pontos": [
+        "Último recurso, habilitação e registro do resultado."
+      ],
+      "atencao": [
+        "Não confundir ameaça potencial com licença genérica de força letal nem relatório com substituto do socorro."
+      ],
+      "exemplo": "O veículo evade bloqueio sem risco indicado e não se presume disparo legítimo. Variação: Há ferimento: relatório é devido, além da assistência da lei.",
+      "prova": [
+        "A mera fuga autoriza automaticamente arma de fogo? Não; valem as restrições e condições de risco."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ]
+    },
+    "art-4": {
+      "simples": "Capacitação é obrigatória e anual, no horário de serviço, abrangendo armas e instrumentos de menor potencial; matriz curricular deve ser adequada.",
+      "pontos": [
+        "Anual e em serviço."
+      ],
+      "atencao": [
+        "Não tratar treinamento inicial único como cumprimento indefinido."
+      ],
+      "exemplo": "Órgão organiza reciclagem anual no horário de serviço. Variação: Há só curso antigo de ingresso: deve observar periodicidade prevista.",
+      "prova": [
+        "A capacitação obrigatória é anual? Sim; o inciso I prevê periodicidade anual."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ]
+    },
+    "art-5": {
+      "simples": "MJSP financia conforme orçamento, padroniza/monitora, oferece consultoria e referências, capacita, pesquisa, integra sociedade, reduz vitimização/letalidade e consolida/publica dados. Aquisição por adesão a atas é possibilidade, não imposição universal.",
+      "pontos": [
+        "Política técnica, dados e proteção, com disponibilidade orçamentária."
+      ],
+      "atencao": [
+        "Não afirmar repasse ilimitado obrigatório nem substituir controle local por consultoria."
+      ],
+      "exemplo": "O ministério oferece orientação técnica e dados nacionais. Variação: Órgão quer financiamento sem limite: o inciso I condiciona à disponibilidade.",
+      "prova": [
+        "O financiamento é ilimitado independentemente de orçamento? Não; há condição orçamentária."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ]
+    },
+    "art-6": {
+      "simples": "Órgãos atualizam normas, registram/publicam dados, oferecem EPI e no mínimo dois instrumentos de menor potencial a cada profissional em serviço, cuidado continuado de saúde mental, capacitação e identificação individualizável. Normatizam crises, buscas, algemas e providências por lesão/morte.",
+      "pontos": [
+        "Mínimo 2 instrumentos e EPI; identificação e saúde mental."
+      ],
+      "atencao": [
+        "Não confundir quantidade mínima disponível com dever de empregar ambos em toda ocorrência."
+      ],
+      "exemplo": "Profissional recebe EPI e dois instrumentos, com treinamento. Variação: A ocorrência dispensa força: ter dois equipamentos não obriga utilizá-los.",
+      "prova": [
+        "A previsão exige usar os dois instrumentos em toda abordagem? Não; trata de disponibilização, com necessidade/proporcionalidade no uso."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ]
+    },
+    "art-7": {
+      "simples": "Fiscalização interna garante transparência, canais acessíveis de denúncia, tratamento eficaz de reclamações e fortalecimento de corregedorias/ouvidorias. Registro formal é previsto por lesão/morte e uso de armas/instrumentos de menor potencial em ambientes prisionais.",
+      "pontos": [
+        "No presídio, uso indicado também gera registro sem exigir lesão."
+      ],
+      "atencao": [
+        "Transparência não implica publicar irrestritamente dados pessoais sensíveis; preserve limites legais."
+      ],
+      "exemplo": "Há uso de instrumento em presídio sem ferimento: examine registro da hipótese específica. Variação: É reclamação de uso de força: devem existir canais e processamento, não silêncio administrativo.",
+      "prova": [
+        "O registro prisional depende sempre de ocorrer ferimento? Não; a hipótese de emprego dos instrumentos ali também é prevista."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ]
+    },
+    "art-8": {
+      "simples": "Ato ministerial institui comitê nacional com participação civil, monitoramento, relatórios, indicadores e articulação. Comitês locais seguem finalidades, com participação civil no que couber.",
+      "pontos": [
+        "Monitorar/avaliar; não julgar penalmente todo agente."
+      ],
+      "atencao": [
+        "Não substituir procedimento de responsabilização individual por relatório do comitê."
+      ],
+      "exemplo": "O comitê propõe indicador e articula intercâmbio local. Variação: Uma ocorrência exige apuração individual: relatório de monitoramento não é sentença.",
+      "prova": [
+        "O comitê substitui automaticamente juiz criminal? Não; sua finalidade é monitoramento e avaliação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-9": {
+      "simples": "Repasses de FNSP/Funpen para ações que envolvam uso da força ficam condicionados a observar lei/decreto. A condição tem objeto, não autoriza presumir corte de todo recurso por qualquer divergência.",
+      "pontos": [
+        "Repasses para ações abrangidas; observância das normas."
+      ],
+      "atencao": [
+        "Não transformar condição específica em veto universal a financiamento sem examinar âmbito e requisitos."
+      ],
+      "exemplo": "Projeto de uso da força demonstra aderência às diretrizes para repasse. Variação: É recurso de objeto diverso: não ampliar a cláusula automaticamente.",
+      "prova": [
+        "A condição é expressa para ações que envolvam uso da força? Sim; esse é o objeto do artigo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ]
+    },
+    "art-10": {
+      "simples": "Ministro da Justiça edita normas complementares de execução. Para procedimento operacional, consulte também os atos oficiais atuais, sem inventar requisito só do texto geral.",
+      "pontos": [
+        "Decreto + complementação vigente."
+      ],
+      "atencao": [
+        "Não tratar material didático como portaria nem garantir que decreto esgota todos os procedimentos."
+      ],
+      "exemplo": "O aluno consulta ato oficial para parâmetros de relatório. Variação: Manual informal diverge: confira norma vigente antes de adotar a regra.",
+      "prova": [
+        "O artigo prevê normas complementares ministeriais? Sim; atribui essa edição ao ministro."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ]
+    },
+    "art-11": {
+      "simples": "Decreto vigora na publicação. A Lei 13.060 anterior e atos complementares posteriores têm seus marcos próprios.",
+      "pontos": [
+        "Data do decreto ≠ nascimento da lei."
+      ],
+      "atencao": [
+        "Não aplicar nova rotina retroativamente sem examinar natureza e regra temporal."
+      ],
+      "exemplo": "A questão pergunta a vacância do decreto: publicação. Variação: Pergunta a lei de 2014: seu marco é próprio.",
+      "prova": [
+        "O decreto prevê vacância geral de 120 dias? Não; vigora na publicação."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

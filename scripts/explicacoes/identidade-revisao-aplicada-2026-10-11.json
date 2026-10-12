@@ -1,0 +1,222 @@
+{
+  "course_slug": "identidade",
+  "units": {
+    "art-1": {
+      "simples": "Carteira expedida pelos órgãos estaduais/DF/territórios tem fé pública e validade nacional. Mudança de estado não impõe novo identificador; documentos novos usam CPF conforme 2023.",
+      "pontos": [
+        "Validade nacional, não limitada ao estado emissor."
+      ],
+      "atencao": [
+        "Não confundir validade territorial com validade temporal indeterminada de toda carteira."
+      ],
+      "exemplo": "Carteira de um estado é apresentada em outro para identificação. Variação: O documento apresenta problema temporal/material: validade territorial não dispensa as regras próprias.",
+      "prova": [
+        "A carteira vale somente no estado emissor? Não; tem validade em todo território nacional."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ]
+    },
+    "art-2": {
+      "simples": "Documentação-base: nascimento ou casamento, com hipóteses específicas de nome alterado e naturalização. Primeira emissão é gratuita. Leia com regras atuais da CIN e inscrição no CPF providenciada pelo emissor quando ausente.",
+      "pontos": [
+        "Primeira emissão gratuita; CPF ausente tem procedimento próprio."
+      ],
+      "atencao": [
+        "Não afirmar gratuidade universal de toda segunda via nem dispensar atualização do registro civil quando necessária."
+      ],
+      "exemplo": "Pessoa solicita primeira emissão e não se cobra a taxa própria dessa emissão. Variação: Solicita segunda via: gratuidade da primeira não garante universalmente gratuidade dessa situação.",
+      "prova": [
+        "A primeira emissão é gratuita por lei? Sim; o §3º a assegura."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ]
+    },
+    "art-3": {
+      "simples": "Lista elementos de identificação e CPF obrigatório nas emissões novas como número geral, desde 2023. Emissor verifica base CPF e providencia inscrição se ausente. Modelo/biometria atuais também são regulamentados pelo Decreto 10.977.",
+      "pontos": [
+        "CPF atual como RG; coleta e modelo seguem regulamentação."
+      ],
+      "atencao": [
+        "Não tratar formato fotográfico histórico isolado como todas as exigências operacionais atuais nem permitir compartilhamento para qualquer finalidade."
+      ],
+      "exemplo": "Órgão consulta integridade e emite carteira nova com CPF como número. Variação: A apostila diz que cada estado necessariamente cria um novo RG: compare regra vigente de unicidade.",
+      "prova": [
+        "Documento novo deve usar CPF como número geral? Sim; o §1º atual o exige."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ]
+    },
+    "art-4": {
+      "simples": "Permite inclusão de dados opcionais solicitados/comprovados, como PIS/Pasep. A antiga menção ao CPF facultativo precisa ser lida com art. 3º atual: CPF tornou-se elemento obrigatório e número do novo documento.",
+      "pontos": [
+        "PIS/Pasep opcionais; CPF obrigatório nas regras posteriores."
+      ],
+      "atencao": [
+        "Não ensinar CPF facultativo apenas porque aparece no texto antigo deste artigo."
+      ],
+      "exemplo": "Titular pede inclusão de dado opcional e apresenta comprovação. Variação: Não pede CPF: isso não afasta a obrigatoriedade prevista no art. 3º atual.",
+      "prova": [
+        "O CPF pode ser omitido em documento novo apenas por falta de pedido? Não; a disciplina posterior o tornou obrigatório."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ]
+    },
+    "art-5": {
+      "simples": "Trata da carteira de português beneficiado pela igualdade e referência à nacionalidade/convenção histórica. Não concede automaticamente igualdade a qualquer português; aplicação atual deve observar o tratado promulgado pelo Decreto 3.927/2001 e reconhecimento cabível.",
+      "pontos": [
+        "Português beneficiado, não todo residente por mera nacionalidade."
+      ],
+      "atencao": [
+        "Remissão à convenção de 1972 é histórica; não dispense requisitos atuais do regime de igualdade."
+      ],
+      "exemplo": "Português com reconhecimento de igualdade solicita documento no regime aplicável. Variação: Apenas tem nacionalidade portuguesa: não se presume o benefício sem requisitos.",
+      "prova": [
+        "A nacionalidade portuguesa sozinha basta para presumir estatuto de igualdade? Não; o artigo refere-se ao beneficiado pelo regime."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto/2001/d3927.htm"
+      ]
+    },
+    "art-6": {
+      "simples": "A carteira prova os dados nela incluídos, dispensando documentos que originaram ou nela foram mencionados. Isso não significa prova de fatos/condições ausentes nem autenticidade de documento materialmente inválido.",
+      "pontos": [
+        "Dispensa relacionada a dados incluídos, não todos os documentos possíveis."
+      ],
+      "atencao": [
+        "Não presumir renda, habilitação profissional ou condição atual que não conste do documento."
+      ],
+      "exemplo": "O dado de nascimento consta na carteira e se observa a dispensa legal. Variação: O serviço exige comprovação de requisito que não está nela: o artigo não prova esse requisito automaticamente.",
+      "prova": [
+        "A carteira dispensa comprovação de qualquer fato não registrado nela? Não; a dispensa relaciona-se aos dados incluídos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-7": {
+      "simples": "Segunda via mediante solicitação, com documentação do art. 2º. Deve ser lida com emissão atual da CIN, cadastro e requisitos legais; não exige provar um motivo especial além das condições previstas.",
+      "pontos": [
+        "Solicitação de segunda via; documentação legal."
+      ],
+      "atencao": [
+        "Não confundir ausência de justificativa adicional com gratuidade universal ou dispensa de identificar requerente."
+      ],
+      "exemplo": "Titular pede segunda via com documentação legal. Variação: O atendente exige narrativa pessoal não prevista como condição geral: confira os limites do artigo.",
+      "prova": [
+        "O artigo exige sempre prova de motivo especial para a segunda via? Não; prevê simples solicitação com a documentação legal."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-8": {
+      "simples": "A expedição baseia-se em identificação datiloscópica; a CIN atual possui regras complementares de coleta/segurança. A coleta não autoriza divulgar biometria indiscriminadamente.",
+      "pontos": [
+        "Datiloscopia é identificação por impressões digitais."
+      ],
+      "atencao": [
+        "Não confundir cadastro civil com autorização irrestrita para qualquer banco de investigação ou divulgação pública."
+      ],
+      "exemplo": "O órgão coleta impressões no procedimento de identificação. Variação: Terceiro pretende publicar a base biométrica: a coleta não cria essa permissão.",
+      "prova": [
+        "Identificação datiloscópica envolve impressões digitais? Sim; é a técnica indicada pelo artigo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-9": {
+      "simples": "Nascimento/casamento/documentos do art. 2º podem ser apresentados por cópia regularmente autenticada. Leia com legislação posterior de desburocratização e conferência administrativa aplicável; não impor cartório universal a toda cópia.",
+      "pontos": [
+        "Cópia autenticada admitida; requisitos posteriores também importam."
+      ],
+      "atencao": [
+        "Lei 13.726 permite formas de dispensa/conferência no âmbito indicado; a admissão da cópia não obriga autenticação cartorial em toda situação."
+      ],
+      "exemplo": "Apresenta-se cópia regularmente autenticada no procedimento. Variação: Órgão pode conferir cópia e original pela regra posterior aplicável: não se exige cartório universal pela redação antiga.",
+      "prova": [
+        "A regra torna autenticação cartorial universalmente obrigatória para toda cópia? Não; admissão da cópia deve ser lida com legislação posterior."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13726.htm"
+      ]
+    },
+    "art-10": {
+      "simples": "Executivo federal aprova modelo e normas complementares. O modelo atual está no Decreto 10.977/2022 e alterações, não só no padrão antigo de apostila.",
+      "pontos": [
+        "Lei + decreto atual para modelo e validade."
+      ],
+      "atencao": [
+        "Não criar modelo ou prazo pela imaginação nem deduzir validade pelo formato histórico."
+      ],
+      "exemplo": "O candidato consulta decreto atual para os padrões da CIN. Variação: Apostila traz modelo anterior: ele não esgota a regulamentação vigente.",
+      "prova": [
+        "As normas complementares são aprovadas pelo Executivo federal? Sim; o artigo prevê essa competência."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ]
+    },
+    "art-11": {
+      "simples": "Preserva carteiras emitidas antes da lei original; para transição atual, consulte Decreto 10.977, art. 25: documentos de padrão anterior permanecem por dez anos desde a vigência do decreto, com validade indeterminada para quem tinha a partir de 60 anos naquele marco. Não são dez anos da emissão de cada RG.",
+      "pontos": [
+        "Transição atual e exceção etária no marco do decreto."
+      ],
+      "atencao": [
+        "Não declarar todo RG antigo inválido já nem todo RG eterno. CIN nova tem validade própria, diferente da transição."
+      ],
+      "exemplo": "Titular tinha 60 anos no marco do decreto e se examina a exceção do documento anterior. Variação: Atinge 60 só depois: não se presume a mesma exceção temporal do art. 25.",
+      "prova": [
+        "Os dez anos de transição contam da emissão individual do RG? Não; contam da entrada em vigor do decreto."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm"
+      ]
+    },
+    "art-12": {
+      "simples": "A lei original vigora na publicação. Gratuidade, CPF e regras da CIN foram introduzidos depois e possuem marcos próprios.",
+      "pontos": [
+        "Vigência original distinta das alterações."
+      ],
+      "atencao": [
+        "Não situar obrigatoriedade atual do CPF já no texto original de 1983."
+      ],
+      "exemplo": "A pergunta é a vacância original: publicação. Variação: É a regra de 2023: consulte o ato modificador próprio.",
+      "prova": [
+        "O artigo original prevê espera de 120 dias? Não; vigência na publicação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-13": {
+      "simples": "Revoga disposições contrárias à lei original; não impede alterações posteriores nem dispensa consultar a regulamentação atual.",
+      "pontos": [
+        "Cláusula geral, sem apagar automaticamente leis posteriores."
+      ],
+      "atencao": [
+        "Não concluir que o decreto da CIN foi revogado por cláusula anterior a ele."
+      ],
+      "exemplo": "A lei é lida com os acréscimos posteriores e normas atuais. Variação: Apostila usa a cláusula para rejeitar CPF/CIN: ela não produz essa conclusão.",
+      "prova": [
+        "Esta cláusula torna inaplicáveis todas as normas posteriores da CIN? Não; são normas posteriores a conferir no conjunto vigente."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

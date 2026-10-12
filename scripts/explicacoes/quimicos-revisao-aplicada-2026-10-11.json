@@ -1,0 +1,377 @@
+{
+  "course_slug": "quimicos",
+  "units": {
+    "art-1": {
+      "simples": "Controle alcança múltiplas operações com insumos para drogas e formulações nas concentrações regulamentares, em qualquer estado físico, independentemente do nome fantasia ou uso lícito. As substâncias do §1º são as não controladas pelo órgão competente da Saúde.",
+      "pontos": [
+        "Produto, concentração e operação, não nome comercial."
+      ],
+      "atencao": [
+        "Uso industrial lícito não exclui automaticamente controle. Não incluir toda substância sem consultar listas e concentração atuais."
+      ],
+      "exemplo": "Empresa vende formulação sob marca própria, mas o insumo/concentração está controlado: examine o regime. Variação: O nome muda sem mudar composição: isso não afasta controle.",
+      "prova": [
+        "O nome fantasia afasta o controle do produto? Não; composição e critérios regulamentares prevalecem."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ]
+    },
+    "art-2": {
+      "simples": "Ministro da Justiça define e atualiza produtos, critérios e formas em portaria, de ofício ou por proposta dos órgãos enumerados. Consulta deve alcançar regulamentação atual, não lista congelada em apostila.",
+      "pontos": [
+        "Portaria controla lista/concentração; instruções complementam procedimentos."
+      ],
+      "atencao": [
+        "Atualização de 2026: IN DG/PF 338 substituiu INs 166/2020 e 211/2021 desde publicação em 03/08/2026. Ela não deve ser confundida com ato ministerial que define lista."
+      ],
+      "exemplo": "O produto é comparado à lista ministerial e o procedimento à instrução vigente. Variação: Manual usa só a IN 166: consulte a norma substitutiva de 2026.",
+      "prova": [
+        "A lista pode ser atualizada por portaria? Sim; o artigo prevê inclusão e exclusão de produtos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao",
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/in-338-2026.pdf"
+      ]
+    },
+    "art-3": {
+      "simples": "Cabe à PF controlar/fiscalizar produtos da lei e aplicar sanções administrativas. Outras atribuições legais permanecem, inclusive autoridades de saúde.",
+      "pontos": [
+        "PF: fiscalização e sanção administrativa."
+      ],
+      "atencao": [
+        "Sanção administrativa não equivale à condenação penal pela própria autoridade policial."
+      ],
+      "exemplo": "PF fiscaliza atividade controlada e instaura apuração administrativa cabível. Variação: O fiscal aplica multa: isso não substitui julgamento penal de eventual outro crime.",
+      "prova": [
+        "A competência inclui sanções administrativas? Sim; o art. 3º as atribui à PF."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-4": {
+      "simples": "Atividade controlada exige cadastro e licença da PF, conforme regulamentação, sem dispensar demais exigências. Atividade eventual exige cadastro e autorização especial; pessoas jurídicas cadastradas têm previsão de recadastramento regulamentar.",
+      "pontos": [
+        "Rotina: licença; eventual: autorização especial, com cadastro."
+      ],
+      "atencao": [
+        "Eventual não significa livre de autorização nem substitui exigências dos outros órgãos."
+      ],
+      "exemplo": "Pessoa precisa realizar operação eventual e requer autorização especial. Variação: Pretende operar habitualmente sob autorização pontual: compare licença exigida para atividade regular.",
+      "prova": [
+        "A operação eventual dispensa cadastro e autorização? Não; o §2º exige ambos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ]
+    },
+    "art-5": {
+      "simples": "A pessoa jurídica abrangida deve pedir anualmente renovação da licença para prosseguir. Procedimento eletrônico e condições devem ser conferidos na regulamentação PF vigente.",
+      "pontos": [
+        "Renovação anual; não licença permanente."
+      ],
+      "atencao": [
+        "Não presumir renovação automática sem requerimento nem aplicar manual de IN substituída."
+      ],
+      "exemplo": "A empresa prepara renovação anual dentro do procedimento. Variação: Apenas mantém o cadastro antigo sem renovar: cadastro não substitui licença válida.",
+      "prova": [
+        "A pessoa jurídica pode prosseguir indefinidamente sem renovar licença? Não; o art. 5º exige renovação anual."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao",
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/in-338-2026.pdf"
+      ]
+    },
+    "art-6": {
+      "simples": "Todas as partes envolvidas devem possuir licença, salvo quantidades abaixo dos limites estabelecidos em portaria. A dispensa depende da hipótese concreta de produto e quantidade.",
+      "pontos": [
+        "Limites regulamentares, não isenção universal."
+      ],
+      "atencao": [
+        "Ser quantidade pequena sem comparar limite aplicável não basta. Não presumir que uma parte licenciada regulariza todas."
+      ],
+      "exemplo": "Comprador e vendedor conferem licenças e eventual exceção quantitativa. Variação: Só o fornecedor está regular: examine também a exigência da outra parte.",
+      "prova": [
+        "Uma parte licenciada dispensa automaticamente licença das demais? Não; a regra alcança todas as partes."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ]
+    },
+    "art-7": {
+      "simples": "Importação, exportação ou reexportação controlada requer autorização prévia PF nos casos da portaria, sem dispensar licenças e procedimentos dos outros órgãos.",
+      "pontos": [
+        "Prévia; as três operações internacionais."
+      ],
+      "atencao": [
+        "Não pedir autorização somente depois da operação nem presumir que licença interna basta."
+      ],
+      "exemplo": "A empresa prepara reexportação e obtém autorização prévia cabível. Variação: Tem licença de funcionamento, mas não autorização internacional exigida: uma não substitui automaticamente a outra.",
+      "prova": [
+        "A regra também alcança reexportação? Sim; é expressamente enumerada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ]
+    },
+    "art-8": {
+      "simples": "Pessoa jurídica fornece periodicamente informações de operações à PF. Documentos de suporte são guardados cinco anos e apresentados quando requisitados.",
+      "pontos": [
+        "Informação periódica + arquivo por 5 anos."
+      ],
+      "atencao": [
+        "Não confundir guarda de documentos com autorização de operar nem prazo de comunicação emergencial."
+      ],
+      "exemplo": "Empresa informa operações e mantém documentos comprobatórios cinco anos. Variação: Envia mapa e descarta notas imediatamente: informar não dispensa arquivar.",
+      "prova": [
+        "O envio das informações dispensa guardar documentos? Não; o parágrafo exige arquivo por cinco anos."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-9": {
+      "simples": "Modelos de mapas/formulários são publicados em portaria ministerial. Uso operacional segue os instrumentos eletrônicos e normas atuais disponíveis na PF.",
+      "pontos": [
+        "Modelo oficial e fluxo atualizado."
+      ],
+      "atencao": [
+        "Não recriar formulário antigo como garantia de aceitação no sistema atual."
+      ],
+      "exemplo": "O responsável utiliza o modelo/fluxo oficial para prestar informações. Variação: Apostila mostra tela antiga: consulte a documentação vigente antes de tratá-la como exigência atual.",
+      "prova": [
+        "Os modelos são definidos livremente por cada empresa? Não; o artigo prevê publicação ministerial."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ]
+    },
+    "art-10": {
+      "simples": "Suspensão ou mudança de atividade controlada deve ser comunicada à PF em trinta dias contados do evento.",
+      "pontos": [
+        "30 dias da suspensão/mudança."
+      ],
+      "atencao": [
+        "Não contar da próxima renovação anual nem confundir com 24h para suspeita de desvio."
+      ],
+      "exemplo": "A empresa interrompe atividade e comunica dentro de trinta dias. Variação: Aguarda o ano seguinte para renovar: isso não cumpre a comunicação do evento.",
+      "prova": [
+        "O prazo começa apenas na renovação anual? Não; começa na suspensão ou mudança."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-11": {
+      "simples": "Qualquer suspeita de desvio de produto controlado deve ser informada à PF no máximo em 24 horas. Não se exige esperar confirmação do crime.",
+      "pontos": [
+        "Suspeita: 24h."
+      ],
+      "atencao": [
+        "Furto/roubo/extravio têm hipótese específica de 48h no art. 12, XII; não trocar os eventos."
+      ],
+      "exemplo": "Surge suspeita de desvio e o responsável comunica em até 24h. Variação: Espera prova definitiva para informar: o dever legal já nasce da suspeita.",
+      "prova": [
+        "É preciso confirmar o desvio para só então informar? Não; a lei exige informar qualquer suspeita."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-12": {
+      "simples": "Lista infrações administrativas: cadastro/licença, alteração comunicada em 30 dias, informação/documentos, operação irregular e contraparte irregular, desvio, autorização internacional, composição e concentração, fraude documental e obstrução. Furto, roubo ou extravio de produto/documento devem ser comunicados em 48h. IN 338/2026 atualiza enquadramento procedimental e faixas administrativas.",
+      "pontos": [
+        "Memória de prazos: alterações 30 dias; suspeita 24h; furto/roubo/extravio 48h."
+      ],
+      "atencao": [
+        "A lista é administrativa; eventual crime requer tipo penal próprio. Não equiparar alteração de composição previamente comunicada à fraude automaticamente."
+      ],
+      "exemplo": "O responsável conhece furto de produto e omite comunicação além de 48h: examine inciso XII. Variação: É suspeita de desvio: compare o prazo menor de 24h, sem transplantar 48h.",
+      "prova": [
+        "O prazo para comunicar furto, roubo ou extravio é de 48 horas? Sim; o inciso XII o prevê."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao",
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/in-338-2026.pdf"
+      ]
+    },
+    "art-13": {
+      "simples": "A fiscalização deve ser formalizada em documento próprio. IN 338/2026 disciplina fiscalização e processo eletrônico, sem transformar toda fiscalização sem irregularidade em infração.",
+      "pontos": [
+        "Documentar fiscalização; distinguir constatação e punição."
+      ],
+      "atencao": [
+        "A visita de fiscalização não prova automaticamente irregularidade."
+      ],
+      "exemplo": "A equipe documenta o ato e seus achados. Variação: Não encontra infração: não se presume necessidade de processo punitivo só pela visita.",
+      "prova": [
+        "A fiscalização precisa de formalização documental? Sim; o artigo exige documento próprio."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao",
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/in-338-2026.pdf"
+      ]
+    },
+    "art-14": {
+      "simples": "Medidas administrativas podem ser isoladas/cumulativas: advertência, apreensão irregular, suspensão/cancelamento da licença, revogação da autorização e multa de R$2.128,20 a R$1.064.100,00. Dosimetria considera fatores legais; multa pode ser parcelada até cinco meses a critério da autoridade. Recurso ao diretor-geral segue regulamento; IN 338/2026 prevê prazo de 15 dias da ciência no PAI.",
+      "pontos": [
+        "Não confundir suspensão/cancelamento de licença com revogação de autorização especial."
+      ],
+      "atencao": [
+        "Parcelamento não é direito automático; sanção não elimina responsabilidade penal. Faixa global da lei não substitui dosimetria e faixas da IN vigente."
+      ],
+      "exemplo": "A autoridade fundamenta multa considerando reincidência, quantidade e contexto. Variação: Concede parcelamento em até cinco parcelas: isso não revoga a sanção nem garante todo pedido.",
+      "prova": [
+        "O parcelamento é automaticamente obrigatório a pedido do infrator? Não; fica a critério da autoridade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao",
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/in-338-2026.pdf"
+      ]
+    },
+    "art-15": {
+      "simples": "Irregularidades devem ser sanadas em trinta dias da fiscalização, sem excluir medidas administrativas. Regularização permite devolução ao legítimo titular; destinação definitiva de não regularizados observa decisão administrativa final. Risco iminente à saúde/ambiente admite destinação imediata.",
+      "pontos": [
+        "30 dias para sanar; risco iminente é exceção de destinação."
+      ],
+      "atencao": [
+        "Não considerar regularização perdão automático de sanções nem destruir livremente antes da decisão fora da hipótese excepcional."
+      ],
+      "exemplo": "Regulariza produto e requer devolução, sem apagar necessariamente sanção. Variação: Há risco iminente à saúde: examina-se destinação imediata do §3º.",
+      "prova": [
+        "Sanar em trinta dias afasta automaticamente toda medida administrativa? Não; o caput ressalva sua aplicação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-16": {
+      "simples": "A taxa tem fato gerador no exercício do poder de polícia PF de controle/fiscalização das atividades da lei. Não é multa por conduta ilícita.",
+      "pontos": [
+        "Taxa ≠ sanção."
+      ],
+      "atencao": [
+        "Exercício regular sujeito à taxa não implica que houve infração."
+      ],
+      "exemplo": "Empresa regular solicita ato sujeito à taxa. Variação: Também sofre multa por irregularidade: cobrança e sanção têm fundamentos distintos.",
+      "prova": [
+        "O pagamento da taxa é necessariamente punição por infração? Não; decorre do poder de polícia."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-17": {
+      "simples": "Sujeitos passivos são pessoas físicas e jurídicas que exercem atividades controladas. As isenções do art. 18 precisam ser verificadas separadamente.",
+      "pontos": [
+        "Pessoa física também pode ser contribuinte."
+      ],
+      "atencao": [
+        "Não restringir taxa a grandes empresas nem presumir isenção de qualquer entidade sem lucro sem comprovação."
+      ],
+      "exemplo": "Pessoa física exerce atividade controlada e examina obrigação tributária. Variação: A entidade invoca isenção: deve preencher hipótese e comprovação aplicáveis.",
+      "prova": [
+        "A taxa alcança somente pessoas jurídicas? Não; o artigo inclui pessoas físicas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-18": {
+      "simples": "Isentos: administração direta federal/estadual/municipal, instituições públicas de ensino/pesquisa/saúde e entidades assistenciais/filantrópicas sem fins lucrativos comprovadas. Isenção da taxa não afasta outros deveres de controle.",
+      "pontos": [
+        "Isenção tributária, não liberação de fiscalização."
+      ],
+      "atencao": [
+        "Não estender automaticamente a toda entidade da administração indireta apenas por vínculo público."
+      ],
+      "exemplo": "Instituição pública de pesquisa preenche hipótese de isenção, mas mantém deveres legais. Variação: Deixa de informar operações por ser isenta: a isenção não elimina o dever.",
+      "prova": [
+        "A isenção da taxa dispensa as demais obrigações da lei? Não; o caput as preserva."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-19": {
+      "simples": "Valores legais: registro/cópia/alteração R$500; licença/cópia/renovação R$1.000; autorização especial/cópia R$50. Reduções dos incisos I/II: EPP 40%, filial já cadastrada 50%, microempresa 70%. Não se estendem automaticamente à autorização especial.",
+      "pontos": [
+        "Redução significa subtrair percentual: ME paga 30% da base indicada."
+      ],
+      "atencao": [
+        "Não somar descontos nem aplicá-los ao inciso III sem previsão. Operação real exige conferir instruções de recolhimento PF."
+      ],
+      "exemplo": "Microempresa aplica 70% de redução na licença de base R$1.000: resultado legal R$300. Variação: É autorização especial de R$50: a redução dos incisos I/II não incide automaticamente.",
+      "prova": [
+        "As reduções do parágrafo abrangem automaticamente a autorização especial? Não; o texto as limita aos incisos I e II."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-20": {
+      "simples": "Recolhimento da taxa segue prazos/condições estabelecidos em ato PF. O artigo não fixa prazo universal igual ao da comunicação de desvio.",
+      "pontos": [
+        "Pagamento: ato regulamentar próprio."
+      ],
+      "atencao": [
+        "Não inventar prazo de 24h/48h para toda taxa nem usar guia antiga sem conferir o serviço oficial."
+      ],
+      "exemplo": "O solicitante consulta orientação PF de recolhimento do ato solicitado. Variação: Confunde comunicação de ocorrência com vencimento da taxa: são obrigações distintas.",
+      "prova": [
+        "O artigo fixa prazo único de 24 horas para toda taxa? Não; remete aos prazos e condições do ato PF."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.gov.br/pf/pt-br/assuntos/produtos-quimicos/legislacao/legislacao"
+      ]
+    },
+    "art-21": {
+      "simples": "Taxa, multa e alienação de produtos constituem receita FUNAD. O parágrafo prevê destinar 80% desses recursos à PF para reaparelhamento/custeio de controle e repressão ao tráfico.",
+      "pontos": [
+        "80% do conjunto de receitas enumeradas, não de todo recurso público."
+      ],
+      "atencao": [
+        "Não confundir com honorário individual do fiscal nem destinação discricionária a qualquer órgão."
+      ],
+      "exemplo": "A receita de taxa indicada integra FUNAD e segue a destinação legal. Variação: Pergunta-se sobre fonte fora do caput: não aplicar automaticamente o mesmo percentual.",
+      "prova": [
+        "O percentual legal indicado para a PF é de 80%? Sim; sobre os recursos enumerados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-22": {
+      "simples": "Lei original entrou em vigor na publicação. Regulamentação posterior, inclusive IN 338/2026, tem marcos próprios.",
+      "pontos": [
+        "Vigência na publicação, não renovação anual."
+      ],
+      "atencao": [
+        "Não confundir início da lei com entrada em vigor de instrução posterior."
+      ],
+      "exemplo": "A pergunta cobra vacância original: não há prazo de espera no artigo. Variação: Cobra procedimento em 2026: consulte o ato regulamentar atual.",
+      "prova": [
+        "A lei original previu vacância de 120 dias? Não; entrou em vigor na publicação."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-23": {
+      "simples": "Revogou especificamente arts. 1º a 13 e 18 da Lei 9.017/1995. Não revogou integralmente todo diploma nem elimina normas regulamentares posteriores válidas.",
+      "pontos": [
+        "Revogação delimitada por artigos."
+      ],
+      "atencao": [
+        "Não afirmar revogação total da Lei 9.017 por esta cláusula."
+      ],
+      "exemplo": "Apostila usa um artigo no conjunto revogado como base vigente: confira norma sucessora. Variação: Cita dispositivo não enumerado: este artigo sozinho não prova sua revogação.",
+      "prova": [
+        "A cláusula revoga todos os artigos da Lei 9.017 indistintamente? Não; enumera artigos específicos."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

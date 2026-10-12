@@ -198,3 +198,45 @@ test('racism review distinguishes personal injury, recreation and nonautomatic e
  assert.match(get('art-18').simples,/não são automáticos.*art. 17.*vetado/);
  assert.match(get('art-6').atencao.join(' '),/exatamente 18/);
 });
+
+test('heinous review separates current catalog from revoked modifying fragments',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-hediondos-review-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,17);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-1').simples,/vicaricídio.*2026/);
+ assert.match(get('art-2').simples,/não equivale.*liberdade provisória.*revogado/);
+ assert.match(get('art-6').simples,/24 a 30.*15.397\/2026/);
+ assert.match(get('art-7').simples,/1996.*concurso/);
+ assert.match(get('art-8').atencao.join(' '),/1355\/2026.*embora não hediondo/);
+ assert.match(get('art-214').simples,/revogado em 2009/);
+ assert.match(get('art-270').simples,/não torna.*hediondo/);
+});
+
+test('federal basics preserve chemical deadlines, identity transition and force limits',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-federal-basics-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,51);assert.deepEqual(p.laws.map(l=>l.units),[23,7,13,8]);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=(s,k)=>p.units.find(r=>r.course_slug===s&&r.unit_key===k);
+ assert.match(get('quimicos','art-2').atencao.join(' '),/338.*03\/08\/2026/);
+ assert.match(get('quimicos','art-11').simples,/24 horas/);
+ assert.match(get('quimicos','art-12').simples,/48h/);
+ assert.match(get('quimicos','art-19').exemplo,/R\$300/);
+ assert.match(get('cpf','art-1').atencao.join(' '),/não prova.*login/);
+ assert.match(get('identidade','art-4').simples,/CPF tornou-se.*obrigatório/);
+ assert.match(get('identidade','art-11').simples,/60 anos naquele marco/);
+ assert.match(get('menor-potencial-ofensivo','art-4').simples,/não é impossibilidade/);
+});
+
+test('compliance review guards unconstitutional removal, financial records and force reporting',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-compliance-review-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,42);assert.deepEqual(p.laws.map(l=>l.units),[24,11,7]);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=(s,k)=>p.units.find(r=>r.course_slug===s&&r.unit_key===k);
+ assert.match(get('lavagem','art-17-d').simples,/4911.*inconstitucional.*2020/i);
+ assert.match(get('lavagem','art-7').simples,/estadual\/DF.*15.358\/2026/);
+ assert.match(get('lavagem','art-10').simples,/cinco anos desde encerramento/);
+ assert.match(get('lavagem','art-14').simples,/Banco Central/);
+ assert.match(get('uso-forca','art-7').pontos.join(' '),/presídio.*sem exigir lesão/i);
+ assert.match(get('ric','art-3').simples,/2009.*não deve ser ensinado/);
+});

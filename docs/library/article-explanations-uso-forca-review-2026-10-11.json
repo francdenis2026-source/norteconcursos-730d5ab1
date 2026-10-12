@@ -1,0 +1,593 @@
+{
+  "version": "2026-10-11-uso-forca-targeted",
+  "checked_at": "2026-10-12T01:45:08.221321+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "uso-forca",
+      "title": "Decreto 12.341/2024 — Uso Diferenciado da Força",
+      "units": 11,
+      "scope_type": "targeted_correction",
+      "course_current_units": 11,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-11"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "source_sha256": "ed70fcb6c063c794473221dc957052c97067ea249eaaa4684b287f76ac1c9fa0",
+      "source_checked_at": "2026-10-12T00:31:33.338022+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "bfaf454b-0e7b-58b1-85b9-652a1db6ee3e",
+      "content_sha256": "8c57e53766964ae2b709074ab18ba1cb36930b6a9efe59bb4e795be31a1f25ab",
+      "simples": "Disciplina força e instrumentos de menor potencial com eficiência, transparência, valorização profissional e direitos humanos. Classificação remete a leis/decreto específicos, não preferência informal.",
+      "pontos": [
+        "Uso da força e proteção profissional/pessoal em conjunto."
+      ],
+      "atencao": [
+        "Não tratar menor potencial como risco zero nem confundir com Juizados."
+      ],
+      "exemplo": "Equipe planeja atuação com instrumento classificado no regime aplicável. Variação: É instrumento improvisado sem conferência de classificação: não se presume adequado pelo nome.",
+      "prova": [
+        "O decreto trata apenas de punição penal? Não; disciplina políticas, instrumentos e diretrizes de uso da força."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ],
+      "expected": {
+        "unit_id": "bfaf454b-0e7b-58b1-85b9-652a1db6ee3e",
+        "content_sha256": "8c57e53766964ae2b709074ab18ba1cb36930b6a9efe59bb4e795be31a1f25ab",
+        "simples": "Este Decreto disciplina o uso da força e dos instrumentos de menor potencial ofensivo pelos profissionais de segurança pública, com vistas a promover eficiência, transparência, valorização dos profissionais e respeito aos direitos humanos. A classificação dos instrumentos de menor potencial ofensivo obedece ao Estatuto do Desarmamento, à Lei nº 13.060, de 22 de dezembro de 2014, e a decreto específico.",
+        "pontos": [
+          "Regula o uso da força e dos instrumentos de menor potencial ofensivo.",
+          "Objetivos: eficiência, transparência, valorização dos profissionais e direitos humanos.",
+          "Classificação dos instrumentos segue o Estatuto do Desarmamento, a Lei nº 13.060 e decreto próprio."
+        ],
+        "atencao": [
+          "É um DECRETO (ato do Executivo), e não uma lei.",
+          "Complementa a Lei nº 13.060, de 22 de dezembro de 2014."
+        ],
+        "exemplo": "O decreto orienta a polícia a empregar a força de forma proporcional e a respeitar direitos humanos.",
+        "prova": [
+          "Assertiva que classifica o ato como lei ordinária erra: é decreto do Executivo."
+        ],
+        "termos": [
+          {
+            "termo": "Instrumento de menor potencial ofensivo",
+            "significado": "Equipamento projetado para conter sem causar morte, como o spray de pimenta."
+          }
+        ],
+        "remissoes": [
+          "Lei do Uso Diferenciado da Força"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "9960f2a1-746d-56c0-a1fa-a5dfd703338a",
+      "content_sha256": "6931d5972431e3ef48a62abf7c44c4e1fcaff0537124243d65227bb41bc07b9b",
+      "simples": "Princípios: legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização e não discriminação. Planejar reduz dano; só usar intensidade maior quando menor for insuficiente. Responsabilização exige processo, contraditório e defesa.",
+      "pontos": [
+        "Objetivo legal + planejamento + menor intensidade suficiente."
+      ],
+      "atencao": [
+        "Não reduzir proporcionalidade a força igual à do oponente nem presumir culpa sem processo."
+      ],
+      "exemplo": "Comunicação resolve a resistência e evita escalada desnecessária. Variação: Recurso menor não atende à ameaça concreta: analise intensidade necessária, sem escalada automática.",
+      "prova": [
+        "A responsabilização dispensa defesa e contraditório? Não; o decreto os assegura."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ],
+      "expected": {
+        "unit_id": "9960f2a1-746d-56c0-a1fa-a5dfd703338a",
+        "content_sha256": "6931d5972431e3ef48a62abf7c44c4e1fcaff0537124243d65227bb41bc07b9b",
+        "simples": "São princípios gerais do uso da força em segurança pública: legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização e não discriminação. O uso da força deve observar diretrizes como: ocorrer para um objetivo legal e nos estritos limites da lei; planejar as ações para prevenir ou minimizar o uso da força e mitigar danos; empregar um recurso de força somente quando recursos de menor intensidade não bastarem; compatibilizar o nível da força com a gravidade da ameaça; empregá-la com bom senso, prudência e equilíbrio; responsabilizar órgãos e profissionais pelo uso inadequado, respeitados o devido processo legal, a ampla defesa e o contraditório; e atuar sem discriminação de raça, etnia, cor, gênero, orientação sexual, idioma, religião, nacionalidade, origem social, deficiência, situação econômica ou opinião política.",
+        "pontos": [
+          "Sete princípios: legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização e não discriminação.",
+          "Força só quando meios menos intensos forem insuficientes.",
+          "Nível da força compatível com a gravidade da ameaça.",
+          "Responsabilização com devido processo legal.",
+          "Atuação sem discriminação."
+        ],
+        "atencao": [
+          "Mnemônico dos princípios: LPNPRRN (legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização, não discriminação).",
+          "A força é progressiva (do menor ao maior nível)."
+        ],
+        "exemplo": "O policial usa a verbalização antes de recorrer a instrumentos de menor potencial ofensivo.",
+        "prova": [
+          "Assertiva que omite a necessidade e a proporcionalidade do rol de princípios erra."
+        ],
+        "termos": [
+          {
+            "termo": "Proporcionalidade",
+            "significado": "Resposta compatível com a gravidade da ameaça."
+          }
+        ],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "c703ca84-9852-55b8-a27b-c901a0258b2d",
+      "content_sha256": "4b26f50ff2bd60e896785ffc3432ba259b7cab4180e318a7fb54813c2ce28a90",
+      "simples": "Força diferenciada responde à ameaça real/potencial, prioriza comunicação/negociação e evita escalada. Arma de fogo é último recurso; fuga/bloqueio simples não autoriza disparo. Profissionais precisam estar habilitados; ferimento/morte gera relatório circunstanciado.",
+      "pontos": [
+        "Último recurso, habilitação e registro do resultado."
+      ],
+      "atencao": [
+        "Não confundir ameaça potencial com licença genérica de força letal nem relatório com substituto do socorro."
+      ],
+      "exemplo": "O veículo evade bloqueio sem risco indicado e não se presume disparo legítimo. Variação: Há ferimento: relatório é devido, além da assistência da lei.",
+      "prova": [
+        "A mera fuga autoriza automaticamente arma de fogo? Não; valem as restrições e condições de risco."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ],
+      "expected": {
+        "unit_id": "c703ca84-9852-55b8-a27b-c901a0258b2d",
+        "content_sha256": "4b26f50ff2bd60e896785ffc3432ba259b7cab4180e318a7fb54813c2ce28a90",
+        "simples": "A força deverá ser utilizada de forma diferenciada, com a seleção apropriada do nível a ser empregado, em resposta a uma ameaça real ou potencial, para minimizar o uso de meios que possam causar ofensas, ferimentos ou mortes. Os profissionais priorizarão a comunicação, a negociação e as técnicas que impeçam uma escalada da violência. O emprego de arma de fogo será medida de último recurso. Não é legítimo o uso de arma de fogo contra pessoa em fuga desarmada ou que não represente risco imediato de morte ou lesão, nem contra veículo que desrespeite bloqueio policial, exceto quando o ato represente risco de morte ou lesão. O emprego de arma de fogo ou de instrumento de menor potencial ofensivo é restrito a profissionais habilitados. Sempre que o uso da força resultar em ferimento ou morte, será elaborado relatório circunstanciado.",
+        "pontos": [
+          "Uso diferenciado da força.",
+          "Prioridade para comunicação e negociação.",
+          "Arma de fogo é último recurso.",
+          "Vedada contra fugitivo desarmado sem risco imediato e contra veículo que fure bloqueio, salvo risco de morte ou lesão.",
+          "Somente profissionais habilitados.",
+          "Relatório circunstanciado em caso de ferimento ou morte."
+        ],
+        "atencao": [
+          "Arma de fogo: ÚLTIMO recurso.",
+          "Veículo que fura bloqueio: só há uso legítimo se houver risco de morte ou lesão."
+        ],
+        "exemplo": "O policial não pode atirar em fugitivo desarmado que não represente risco imediato.",
+        "prova": [
+          "Assertiva que autoriza tiro contra qualquer veículo que desrespeite bloqueio erra: exige risco de morte ou lesão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-4",
+      "unit_id": "173109a7-d494-5b82-9224-d79984620ce8",
+      "content_sha256": "1024fd80b19fc54cf6ca295994d73994d2efa9be969af084ab1c02a1003133f1",
+      "simples": "Capacitação é obrigatória e anual, no horário de serviço, abrangendo armas e instrumentos de menor potencial; matriz curricular deve ser adequada.",
+      "pontos": [
+        "Anual e em serviço."
+      ],
+      "atencao": [
+        "Não tratar treinamento inicial único como cumprimento indefinido."
+      ],
+      "exemplo": "Órgão organiza reciclagem anual no horário de serviço. Variação: Há só curso antigo de ingresso: deve observar periodicidade prevista.",
+      "prova": [
+        "A capacitação obrigatória é anual? Sim; o inciso I prevê periodicidade anual."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ],
+      "expected": {
+        "unit_id": "173109a7-d494-5b82-9224-d79984620ce8",
+        "content_sha256": "1024fd80b19fc54cf6ca295994d73994d2efa9be969af084ab1c02a1003133f1",
+        "simples": "Na capacitação de profissionais de segurança pública sobre o uso da força, os órgãos deverão observar a obrigatoriedade e a periodicidade anual da capacitação; sua realização no horário de serviço; e a adoção de conteúdo sobre o emprego adequado de diferentes tipos de armas de fogo e de instrumentos de menor potencial ofensivo. A matriz curricular nacional deverá ser atualizada para adequação à Lei nº 13.060, de 22 de dezembro de 2014, e a este Decreto.",
+        "pontos": [
+          "Capacitação obrigatória e anual.",
+          "Realizada no horário de serviço.",
+          "Conteúdo sobre armas de fogo e instrumentos de menor potencial ofensivo.",
+          "Atualização da matriz curricular nacional."
+        ],
+        "atencao": [
+          "Periodicidade ANUAL."
+        ],
+        "exemplo": "A corporação realiza o treinamento anual sobre uso da força em horário de serviço.",
+        "prova": [
+          "Assertiva que torna facultativa a capacitação anual erra: é obrigatória."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-5",
+      "unit_id": "67827005-8fe0-50b7-9503-ef5544c25496",
+      "content_sha256": "7bad4d150e240ffdbfdaacabbd7eae45046ac0a56210cdd14b3957a285388737",
+      "simples": "MJSP financia conforme orçamento, padroniza/monitora, oferece consultoria e referências, capacita, pesquisa, integra sociedade, reduz vitimização/letalidade e consolida/publica dados. Aquisição por adesão a atas é possibilidade, não imposição universal.",
+      "pontos": [
+        "Política técnica, dados e proteção, com disponibilidade orçamentária."
+      ],
+      "atencao": [
+        "Não afirmar repasse ilimitado obrigatório nem substituir controle local por consultoria."
+      ],
+      "exemplo": "O ministério oferece orientação técnica e dados nacionais. Variação: Órgão quer financiamento sem limite: o inciso I condiciona à disponibilidade.",
+      "prova": [
+        "O financiamento é ilimitado independentemente de orçamento? Não; há condição orçamentária."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ],
+      "expected": {
+        "unit_id": "67827005-8fe0-50b7-9503-ef5544c25496",
+        "content_sha256": "7bad4d150e240ffdbfdaacabbd7eae45046ac0a56210cdd14b3957a285388737",
+        "simples": "Cabe ao Ministério da Justiça e Segurança Pública implementar as ações federais enumeradas para a Lei 13.060/2014 e o decreto: financiamento conforme orçamento, consultoria, capacitação, materiais, boas práticas, pesquisa, dados nacionais e informação pública.",
+        "pontos": [
+          "A competência federal não elimina as diretrizes próprias de cada órgão previstas no art. 6º."
+        ],
+        "atencao": [
+          "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+          "O financiamento está condicionado à disponibilidade orçamentária; não trate o inciso I como promessa de recurso irrestrito."
+        ],
+        "exemplo": "O MJSP elabora referências sobre algemas com participação dos órgãos de segurança: o inciso IV prevê essa atuação. Variação: Um órgão local ignora suas diretrizes alegando que o MJSP é responsável: o art. 6º também lhe impõe deveres.",
+        "prova": [
+          "Qual órgão recebe as competências do art. 5º? O Ministério da Justiça e Segurança Pública, sem dispensar os deveres dos demais órgãos."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T19:32:07.856+00:00",
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T19:32:07.856+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-6",
+      "unit_id": "d31612d2-471d-5f2b-8343-13f218cddba3",
+      "content_sha256": "981243095a0561374a5b855bd4dc18719e7e3e643c702332b58871c3a6018ed9",
+      "simples": "Órgãos atualizam normas, registram/publicam dados, oferecem EPI e no mínimo dois instrumentos de menor potencial a cada profissional em serviço, cuidado continuado de saúde mental, capacitação e identificação individualizável. Normatizam crises, buscas, algemas e providências por lesão/morte.",
+      "pontos": [
+        "Mínimo 2 instrumentos e EPI; identificação e saúde mental."
+      ],
+      "atencao": [
+        "Não confundir quantidade mínima disponível com dever de empregar ambos em toda ocorrência."
+      ],
+      "exemplo": "Profissional recebe EPI e dois instrumentos, com treinamento. Variação: A ocorrência dispensa força: ter dois equipamentos não obriga utilizá-los.",
+      "prova": [
+        "A previsão exige usar os dois instrumentos em toda abordagem? Não; trata de disponibilização, com necessidade/proporcionalidade no uso."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ],
+      "expected": {
+        "unit_id": "d31612d2-471d-5f2b-8343-13f218cddba3",
+        "content_sha256": "981243095a0561374a5b855bd4dc18719e7e3e643c702332b58871c3a6018ed9",
+        "simples": "Os órgãos de segurança devem observar diretrizes sobre normas de uso da força, dados, equipamentos, saúde mental, capacitação, identificação individualizável e atuação em crises, buscas, algemas e ocorrências com lesão ou morte.",
+        "pontos": [
+          "Todo profissional em serviço deve receber proteção individual e, no mínimo, dois instrumentos de menor potencial ofensivo."
+        ],
+        "atencao": [
+          "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+          "Mínimo de dois não significa exatamente dois nem elimina treinamento e observância das demais normas."
+        ],
+        "exemplo": "Um profissional em serviço recebe proteção, mas apenas um instrumento de menor potencial ofensivo: falta o mínimo do inciso III. Variação: Recebe dois instrumentos, mas sem capacitação: o atendimento ao inciso III não supre a diretriz de capacitação do inciso VII.",
+        "prova": [
+          "Dois instrumentos dispensam capacitação? Não; equipamento e capacitação são diretrizes distintas e devem ser observadas."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T19:32:08.267+00:00",
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T19:32:08.267+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-7",
+      "unit_id": "d4701703-179c-5c48-b2d4-fd4212037cf3",
+      "content_sha256": "7db5cd7c47e2d3269b3547f99b579b080b77d6ae9d6768696d1ed78db1d0ee58",
+      "simples": "Fiscalização interna garante transparência, canais acessíveis de denúncia, tratamento eficaz de reclamações e fortalecimento de corregedorias/ouvidorias. Registro formal é previsto por lesão/morte e uso de armas/instrumentos de menor potencial em ambientes prisionais.",
+      "pontos": [
+        "No presídio, uso indicado também gera registro sem exigir lesão."
+      ],
+      "atencao": [
+        "Transparência não implica publicar irrestritamente dados pessoais sensíveis; preserve limites legais."
+      ],
+      "exemplo": "Há uso de instrumento em presídio sem ferimento: examine registro da hipótese específica. Variação: É reclamação de uso de força: devem existir canais e processamento, não silêncio administrativo.",
+      "prova": [
+        "O registro prisional depende sempre de ocorrer ferimento? Não; a hipótese de emprego dos instrumentos ali também é prevista."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ],
+      "expected": {
+        "unit_id": "d4701703-179c-5c48-b2d4-fd4212037cf3",
+        "content_sha256": "7db5cd7c47e2d3269b3547f99b579b080b77d6ae9d6768696d1ed78db1d0ee58",
+        "simples": "São diretrizes para os mecanismos de fiscalização e controle interno na supervisão do uso da força: garantir a transparência e o acesso público a dados; disponibilizar canais de denúncia e orientações de registro e acompanhamento de reclamações; garantir o processamento eficaz e transparente das reclamações; e fortalecer corregedorias e ouvidorias. As ocorrências relacionadas ao uso da força serão formalmente registradas quando resultarem em lesão corporal ou morte, ou envolverem o emprego de armas de fogo ou de instrumentos de menor potencial ofensivo em ambientes prisionais.",
+        "pontos": [
+          "Transparência e acesso a dados.",
+          "Canais de denúncia e acompanhamento de reclamações.",
+          "Fortalecimento de corregedorias e ouvidorias.",
+          "Registro formal quando houver lesão ou morte, ou uso de armas em ambiente prisional."
+        ],
+        "atencao": [
+          "Registro obrigatório nas hipóteses do parágrafo único."
+        ],
+        "exemplo": "Ocorrência com morte durante ação policial é registrada formalmente.",
+        "prova": [
+          "Assertiva que dispensa o registro em caso de lesão corporal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º, §5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-8",
+      "unit_id": "9ff7919e-232d-5742-9615-29b62565a380",
+      "content_sha256": "49747d8a39511af36847036eb11277c28c3133447c96c2794e1b630a56a164bc",
+      "simples": "Ato ministerial institui comitê nacional com participação civil, monitoramento, relatórios, indicadores e articulação. Comitês locais seguem finalidades, com participação civil no que couber.",
+      "pontos": [
+        "Monitorar/avaliar; não julgar penalmente todo agente."
+      ],
+      "atencao": [
+        "Não substituir procedimento de responsabilização individual por relatório do comitê."
+      ],
+      "exemplo": "O comitê propõe indicador e articula intercâmbio local. Variação: Uma ocorrência exige apuração individual: relatório de monitoramento não é sentença.",
+      "prova": [
+        "O comitê substitui automaticamente juiz criminal? Não; sua finalidade é monitoramento e avaliação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "9ff7919e-232d-5742-9615-29b62565a380",
+        "content_sha256": "49747d8a39511af36847036eb11277c28c3133447c96c2794e1b630a56a164bc",
+        "simples": "Ato do Ministro da Justiça e Segurança Pública instituirá o Comitê Nacional de Monitoramento do Uso da Força. Deve regular composição com sociedade civil, competências, funcionamento e finalidades de relatórios, indicadores, conhecimento e articulação. Também observa o Capítulo VI do Decreto 12.002/2024.",
+        "pontos": [
+          "Entes locais, quando criarem comitês, observarão as mesmas finalidades, com sociedade civil no que couber."
+        ],
+        "atencao": [
+          "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+          "Não converta a expressão quando instituírem em obrigação de criação automática de comitês em todos os municípios."
+        ],
+        "exemplo": "Um Estado cria comitê de monitoramento: deve observar as finalidades correspondentes e participação civil no que couber. Variação: Um município ainda não criou comitê: o §2º enuncia condições quando houver criação, não uma ordem expressa de criação universal.",
+        "prova": [
+          "O decreto exige criação automática de comitê em cada Município? O §2º usa quando instituírem; regula a criação quando ocorrer, sem impor ali a criação universal."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T19:32:08.713+00:00",
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T19:32:08.713+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-9",
+      "unit_id": "35973d52-ecfa-59c0-8c75-cbadce685154",
+      "content_sha256": "b321fd39073dfd006b1db59831c1c512a11dc553bf2ab5fdd698801e349beae4",
+      "simples": "Repasses de FNSP/Funpen para ações que envolvam uso da força ficam condicionados a observar lei/decreto. A condição tem objeto, não autoriza presumir corte de todo recurso por qualquer divergência.",
+      "pontos": [
+        "Repasses para ações abrangidas; observância das normas."
+      ],
+      "atencao": [
+        "Não transformar condição específica em veto universal a financiamento sem examinar âmbito e requisitos."
+      ],
+      "exemplo": "Projeto de uso da força demonstra aderência às diretrizes para repasse. Variação: É recurso de objeto diverso: não ampliar a cláusula automaticamente.",
+      "prova": [
+        "A condição é expressa para ações que envolvam uso da força? Sim; esse é o objeto do artigo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ],
+      "expected": {
+        "unit_id": "35973d52-ecfa-59c0-8c75-cbadce685154",
+        "content_sha256": "b321fd39073dfd006b1db59831c1c512a11dc553bf2ab5fdd698801e349beae4",
+        "simples": "Repasses do Fundo Nacional de Segurança Pública e do Fundo Penitenciário Nacional para ações que envolvam uso da força por órgãos estaduais, distritais e municipais dependem da observância da Lei 13.060/2014 e do decreto.",
+        "pontos": [
+          "São mencionados dois fundos, tipos determinados de ações e três níveis de entes beneficiários."
+        ],
+        "atencao": [
+          "Correção editorial em 11/10/2026: conferida a extração do texto oficial; essa data não é a data de entrada em vigor da norma.",
+          "Não formule perda automática de todo recurso federal: a condição deste artigo tem o escopo descrito."
+        ],
+        "exemplo": "O Estado solicita recurso de um dos fundos para ação envolvendo uso da força: a observância de lei e decreto é condição do repasse. Variação: A discussão é sobre verba distinta e ação sem esse objeto: não se pode aplicar automaticamente esta condição específica sem examinar a base do repasse.",
+        "prova": [
+          "Cumprir apenas o decreto basta para a condição do artigo? Não; o texto menciona também a Lei 13.060/2014."
+        ],
+        "termos": [],
+        "remissoes": [],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-11T19:32:09.147+00:00",
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T19:32:09.147+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-10",
+      "unit_id": "72f68e20-2e4f-536b-96d6-1e37a70d4b91",
+      "content_sha256": "14ba87793a5bbc4332db3475feba53beef775b43c3abd784f3ab2fcf9dd15682",
+      "simples": "Ministro da Justiça edita normas complementares de execução. Para procedimento operacional, consulte também os atos oficiais atuais, sem inventar requisito só do texto geral.",
+      "pontos": [
+        "Decreto + complementação vigente."
+      ],
+      "atencao": [
+        "Não tratar material didático como portaria nem garantir que decreto esgota todos os procedimentos."
+      ],
+      "exemplo": "O aluno consulta ato oficial para parâmetros de relatório. Variação: Manual informal diverge: confira norma vigente antes de adotar a regra.",
+      "prova": [
+        "O artigo prevê normas complementares ministeriais? Sim; atribui essa edição ao ministro."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm"
+      ],
+      "expected": {
+        "unit_id": "72f68e20-2e4f-536b-96d6-1e37a70d4b91",
+        "content_sha256": "14ba87793a5bbc4332db3475feba53beef775b43c3abd784f3ab2fcf9dd15682",
+        "simples": "O Ministro de Estado da Justiça e Segurança Pública editará normas complementares necessárias à execução do disposto neste Decreto.",
+        "pontos": [
+          "Normas complementares pelo Ministro da Justiça e Segurança Pública."
+        ],
+        "atencao": [
+          "Competência regulamentar do Ministro."
+        ],
+        "exemplo": "Uma portaria do Ministro detalha o relatório circunstanciado.",
+        "prova": [
+          "Assertiva que atribui a edição das normas complementares ao Congresso erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º, §5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "uso-forca",
+      "course_id": "c8b77412-22c5-5d3d-bab4-ecbb0c6799fc",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-11",
+      "unit_id": "15329da6-21cc-5eda-82d1-501be8af3e4b",
+      "content_sha256": "8fa70b154e94b2c59c3be4c039296a0d44c16c03332a9d32230f8427ea07fadf",
+      "simples": "Decreto vigora na publicação. A Lei 13.060 anterior e atos complementares posteriores têm seus marcos próprios.",
+      "pontos": [
+        "Data do decreto ≠ nascimento da lei."
+      ],
+      "atencao": [
+        "Não aplicar nova rotina retroativamente sem examinar natureza e regra temporal."
+      ],
+      "exemplo": "A questão pergunta a vacância do decreto: publicação. Variação: Pergunta a lei de 2014: seu marco é próprio.",
+      "prova": [
+        "O decreto prevê vacância geral de 120 dias? Não; vigora na publicação."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "15329da6-21cc-5eda-82d1-501be8af3e4b",
+        "content_sha256": "8fa70b154e94b2c59c3be4c039296a0d44c16c03332a9d32230f8427ea07fadf",
+        "simples": "Este Decreto entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo final."
+        ],
+        "exemplo": "O Decreto passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 10"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    }
+  ]
+}
