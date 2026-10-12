@@ -70,9 +70,9 @@ test('CONTRAN library link respects discipline and contest filters, and cases ke
  assert.match(html,/Resoluções do CONTRAN/);assert.match(html,/\/dashboard\/ctb\?tab=resolucoes/);assert.ok(!html.includes('target="_blank"'));
  assert.equal(renderToStaticMarkup(React.createElement(link,{...props,contest:'PF'})),'');
  assert.equal(renderToStaticMarkup(React.createElement(link,{...props,discipline:'Direito Penal'})),'');
- const reader=load('src/components/library/ContranStudy.tsx',{'@/data/contranGuides':contran,'@/lib/contranStudy':contranStudy}).ContranStudy;
+ const reader=load('src/components/library/ContranStudy.tsx',{'@/data/contranGuides':contran,'@/lib/contranStudy':contranStudy,'@/data/ctbPanel':{RESOLUCOES_COBRADAS:[]},'@/components/ui/tabs':{Tabs:({children})=>React.createElement('div',null,children),TabsList:({children})=>React.createElement('div',null,children),TabsTrigger:({children})=>React.createElement('button',null,children),TabsContent:({children})=>React.createElement('div',null,children)}}).ContranStudy;
  const result=renderToStaticMarkup(React.createElement(reader,{query:'1031'}));
- assert.ok(result.includes('Caso prático'));assert.ok(result.includes('Altere o fato'));assert.ok(result.includes('Conferir resposta comentada'));
+ assert.ok(result.includes('Caso prático'));assert.ok(result.includes('E se o fato mudar?'));assert.ok(result.includes('Ver resposta comentada'));
  assert.ok(!/<details[^>]*\bopen(?:=|\s|>)/.test(result));
  assert.ok(result.includes('border-emerald-500')&&result.includes('border-violet-500'));
  assert.ok(!result.includes('Resolução 1.029/2026'));
