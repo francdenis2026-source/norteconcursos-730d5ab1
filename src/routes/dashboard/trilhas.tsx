@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PageHero } from "@/components/dashboard/PageHero";
 import { GlossaryText } from "@/components/library/GlossaryText";
+import { HighlightToggle } from "@/components/library/StudyText";
 import { TRACKS, type Track, type TrackLesson } from "@/data/tracks";
 import { cn } from "@/lib/utils";
 import { useAuthStatus } from "@/hooks/useDashboard";
@@ -103,6 +104,7 @@ function Lesson({ focus = false, trackSlug, lesson, onNext, onPrev, done, toggle
         <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{lesson.group}</p>
         <h2 className="mt-1 text-2xl font-bold">{lesson.title}</h2>
         <p className="mt-1 text-xs text-muted-foreground">Edital: {lesson.edital}</p>
+        <div className="mt-3"><HighlightToggle /></div>
       </header>
       <div className={focus ? "grid gap-x-10 gap-y-5 lg:grid-cols-2" : "space-y-5"}>
       <div className="space-y-5">

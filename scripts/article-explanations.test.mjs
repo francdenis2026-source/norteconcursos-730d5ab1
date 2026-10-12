@@ -70,6 +70,7 @@ vm.runInNewContext(code,{module,exports:module.exports,require:name=>({
   '@/lib/explanationPractice':{explanationExample,explanationPractice},
   '@/lib/explanationReview':{hasCurrentExplanationReview},
   './LegalRefText':{LegalRefText:({text})=>React.createElement('span',null,text)},
+  './StudyText':{HighlightToggle:()=>null},
 }[name]??native(name))});
 const {ExplanationChecks}=module.exports;
 test('editorial approval requires reviewer, matching source and review of the latest content',()=>{

@@ -89,6 +89,7 @@ test('Published additions render in colored case blocks with collapsed resolutio
   const diagrams=load('src/lib/learningDiagrams.ts');
   const illustrations=load('src/components/library/LearningIllustrations.tsx',{'@/lib/learningDiagrams':diagrams});
   const components=load('src/components/library/WorkedExamples.tsx',{
+    './StudyText':{StudyText:({text})=>text,HighlightToggle:()=>null},
     './LearningIllustrations':illustrations,
     '@/lib/studyEnrichment':{useStudyEnrichment:()=>{throw Error('Unexpected network hook');}},
     '@/lib/studySourceUrl':{isStudySourceUrl:url=>new URL(url).hostname==='www.planalto.gov.br'},
