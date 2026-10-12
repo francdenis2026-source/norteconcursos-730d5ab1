@@ -40,7 +40,7 @@ export function ContranStudy({ query = "" }: { query?: string }) {
       <p className="font-semibold">{total} guias para consulta atual · {CONTRAN_GUIDES.length} atos conferidos nos lotes publicados</p>
       <p className="mt-1 text-muted-foreground">Conferência das fontes em {contranDate(CONTRAN_CHECKED_AT)}. Resoluções integralmente revogadas ficam fora do estudo atual; calendários antigos e guias de normas-base substituídas também foram separados.</p>
       <p className="mt-1 text-muted-foreground">As datas de publicação, atualização e produção de efeitos são diferentes. Os casos são autorais e revisam temas delimitados; não certificam todas as fichas e especificações técnicas dos anexos.</p>
-      <p className="mt-1 text-muted-foreground">Confira o edital da sua carreira. Trânsito e CONTRAN não constam do edital PF 2025 citado nesta biblioteca.</p>
+      <p className="mt-1 text-muted-foreground">Resoluções do CONTRAN são conteúdo cobrado em concursos da PRF (Legislação de Trânsito). Para PF e outras carreiras, confira o edital: o do PF 2025 citado nesta biblioteca não inclui Trânsito.</p>
       <a className="mt-2 inline-flex items-center gap-1 font-semibold text-primary underline" href={CONTRAN_INDEX_URL} target="_blank" rel="noopener noreferrer">Catálogo oficial do CONTRAN <ExternalLink size={14} /></a>
     </div>
     {guides.map((guide) => <article key={`${guide.number}/${guide.year}`} className="rounded-2xl border bg-card p-4 sm:p-5">
