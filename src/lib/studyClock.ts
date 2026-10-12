@@ -5,6 +5,7 @@
  */
 import { supabase } from "@/integrations/supabase/client";
 import { acreDateKey } from "@/lib/acreTime";
+import { idleSeconds, IDLE_PAUSE_SECONDS } from "@/lib/activity";
 
 interface State {
   day: string;
@@ -82,6 +83,8 @@ export function startStudyClock(userId: string) {
   timers = [
     window.setInterval(() => {
       if (document.visibilityState !== "visible") return;
+      // sem interação por mais de 2 minutos, o tempo não conta (e aos 5 minutos a sessão é encerrada)
+      if (idleSeconds() >= IDLE_PAUSE_SECONDS) return;
       const s = read();
       write({ ...s, today: s.today + 1, unsent: s.unsent + 1 });
     }, 1000),

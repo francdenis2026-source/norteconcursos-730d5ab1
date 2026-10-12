@@ -1,10 +1,20 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import { useBlocker, useRouter } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, Clock3, Maximize2, Pause, Play, Wrench, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StudyToolsPanel, type ToolsArea } from "@/components/study/StudyTools";
+import { confirmDialog } from "@/lib/confirm";
+import { beginFocus, endFocus, getFocusSession, goAway, setFocusPaused, subscribeFocusSession, tickFocus } from "@/lib/focusSession";
 
 const pad = (n: number) => String(n).padStart(2, "0");
-const hms = (s: number) => `${pad(Math.floor(s / 3600))}:${pad(Math.floor((s % 3600) / 60))}:${pad(s % 60)}`;
+export const hms = (s: number) => `${pad(Math.floor(s / 3600))}:${pad(Math.floor((s % 3600) / 60))}:${pad(s % 60)}`;
+
+/** Áreas para onde o aluno pode ir sem encerrar o foco: o relógio pausa e volta de onde parou. */
+const PAUSE_DESTINATIONS = [
+  { path: "/dashboard/question-trainer", name: "Questões" },
+  { path: "/dashboard/question-bank", name: "o Banco de questões" },
+  { path: "/dashboard/dicionario", name: "o Dicionário" },
+];
 
 export type FocusBarProps = {
   /** Linha pequena acima do título (matéria, lei, curso). */
@@ -27,34 +37,103 @@ export type FocusBarProps = {
 /**
  * Modo foco: o conteúdo em estudo ocupa a tela inteira, sem menu, topo nem listas laterais.
  * O mesmo elemento só troca de classe (não remonta), então respostas e anotações não se perdem.
- * Traz relógio de estudo (tempo da sessão com pausa), faixa colorida, navegação e ferramentas. Esc sai.
+ * Traz relógio de estudo com pausa, faixa colorida, navegação e ferramentas.
+ * Sair da área pede confirmação; ir a Questões ou Dicionário pausa o relógio, que continua de onde parou ao voltar.
  */
 export function useFocusMode() {
+  const router = useRouter();
   const [focus, setFocus] = useState(false);
-  const [elapsed, setElapsed] = useState(0);
-  const [paused, setPaused] = useState(false);
   const [now, setNow] = useState(() => new Date());
   const [toolsOpen, setToolsOpen] = useState(false);
+  const session = useSyncExternalStore(subscribeFocusSession, getFocusSession, () => null);
+  const exiting = useRef(false);
+  const href = useCallback(() => router.state.location.href, [router]);
+  const elapsed = session?.elapsed ?? 0;
+  const paused = session?.paused ?? false;
+
+  // Voltou de Questões ou Dicionário para a mesma área: retoma o foco e o relógio de onde pararam.
+  useEffect(() => {
+    const s = getFocusSession();
+    if (s?.away && s.returnTo === href()) {
+      beginFocus(s.returnTo, s.title);
+      setFocus(true);
+    }
+  }, [href]);
+
+  const enter = useCallback(() => {
+    beginFocus(href(), "");
+    setFocus(true);
+  }, [href]);
+
+  const requestExit = useCallback(async () => {
+    if (exiting.current) return;
+    exiting.current = true;
+    try {
+      const ok = await confirmDialog({
+        title: "Encerrar o modo foco?",
+        message: `O tempo de estudo desta sessão (${hms(getFocusSession()?.elapsed ?? 0)}) será encerrado.`,
+        confirmLabel: "Encerrar",
+        cancelLabel: "Continuar estudando",
+        tone: "default",
+      });
+      if (ok) {
+        endFocus();
+        setFocus(false);
+      }
+    } finally {
+      exiting.current = false;
+    }
+  }, []);
 
   useEffect(() => {
     if (!focus) { setToolsOpen(false); return; }
-    setElapsed(0);
-    setPaused(false);
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setFocus(false); };
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") void requestExit(); };
     window.addEventListener("keydown", onKey);
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    const id = window.setInterval(() => { setNow(new Date()); tickFocus(); }, 1000);
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
+      window.clearInterval(id);
     };
-  }, [focus]);
+  }, [focus, requestExit]);
 
-  useEffect(() => {
-    if (!focus) return;
-    const id = window.setInterval(() => { setNow(new Date()); if (!document.hidden) setElapsed((s) => (paused ? s : s + 1)); }, 1000);
-    return () => window.clearInterval(id);
-  }, [focus, paused]);
+  // Avisa ao tentar sair da área (fechar a aba, recarregar ou navegar para outra tela).
+  useBlocker({
+    disabled: !focus,
+    enableBeforeUnload: () => focus,
+    shouldBlockFn: async ({ current, next }) => {
+      if (next.routeId === current.routeId) return false; // trocar de aula, artigo ou material não sai da área
+      const pause = PAUSE_DESTINATIONS.find((d) => next.pathname.startsWith(d.path));
+      if (pause) {
+        const ok = await confirmDialog({
+          title: "Pausar o relógio de estudo?",
+          message: `Você vai para ${pause.name}. O relógio de estudo ficará parado e continuará de onde parou quando você voltar à área de estudo. O horário exibido segue o real. Um botão no topo leva você de volta.`,
+          confirmLabel: "Ir e pausar o relógio",
+          cancelLabel: "Continuar estudando",
+          tone: "default",
+        });
+        if (ok) {
+          goAway(href());
+          setFocus(false);
+        }
+        return !ok;
+      }
+      const ok = await confirmDialog({
+        title: "Sair da área de estudo?",
+        message: `Seu tempo de estudo (${hms(getFocusSession()?.elapsed ?? 0)}) está sendo contabilizado. Se sair, a sessão de foco será encerrada.`,
+        confirmLabel: "Sair e encerrar",
+        cancelLabel: "Continuar estudando",
+        tone: "default",
+      });
+      if (ok) {
+        endFocus();
+        setFocus(false);
+      }
+      return !ok;
+    },
+  });
 
   /** Classes do contêiner do conteúdo: tela cheia, abaixo da faixa fixa do topo. */
   const containerClass = focus
@@ -70,7 +149,7 @@ export function useFocusMode() {
 
   /** Botão para entrar no modo foco (fora dele). */
   const button = (
-    <Button type="button" size="sm" variant="outline" className="no-print" onClick={() => setFocus(true)}>
+    <Button type="button" size="sm" variant="outline" className="no-print" onClick={enter}>
       <Maximize2 className="mr-1 h-4 w-4" /> Modo foco
     </Button>
   );
@@ -91,7 +170,7 @@ export function useFocusMode() {
                 <p className="font-mono text-lg font-bold tabular-nums" aria-live="off">{hms(elapsed)}</p>
                 <p className="text-[10px] uppercase tracking-wider text-white/70">{paused ? "pausado" : "tempo de estudo"} · {now.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Rio_Branco" })}</p>
               </div>
-              <button type="button" onClick={() => setPaused((v) => !v)} className="ml-1 grid h-8 w-8 place-items-center rounded-full bg-white/15 hover:bg-white/25" aria-label={paused ? "Retomar contagem" : "Pausar contagem"}>
+              <button type="button" onClick={() => setFocusPaused(!paused)} className="ml-1 grid h-8 w-8 place-items-center rounded-full bg-white/15 hover:bg-white/25" aria-label={paused ? "Retomar contagem" : "Pausar contagem"}>
                 {paused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
               </button>
             </div>
@@ -110,7 +189,7 @@ export function useFocusMode() {
               </button>
             )}
             {p.extra}
-            <button type="button" onClick={() => setFocus(false)} className="flex items-center gap-1 rounded-lg border border-white/40 px-3 py-2 text-sm font-semibold hover:bg-white/15">
+            <button type="button" onClick={() => void requestExit()} className="flex items-center gap-1 rounded-lg border border-white/40 px-3 py-2 text-sm font-semibold hover:bg-white/15">
               <X className="h-4 w-4" /> Sair <span className="hidden text-white/70 lg:inline">(Esc)</span>
             </button>
           </div>
