@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { annotate, type GlossaryEntry } from "@/lib/glossary";
 import { SafeBoundary } from "./SafeBoundary";
+import { StudyText } from "./StudyText";
 
 function Term({ entry, children }: { entry: GlossaryEntry; children: string }) {
   const [open, setOpen] = useState(false);
@@ -27,10 +28,10 @@ function Term({ entry, children }: { entry: GlossaryEntry; children: string }) {
 /** Texto comum com verbetes do dicionário sublinhados; ao passar o mouse (ou tocar) mostra significado, sinônimos e exemplo. */
 function Annotated({ text }: { text: string }) {
   const parts = useMemo(() => annotate(text), [text]);
-  if (parts.length === 1 && !parts[0]!.entry) return <>{text}</>;
+  if (parts.length === 1 && !parts[0]!.entry) return <StudyText text={text} />;
   return (
     <TooltipProvider>
-      {parts.map((p, i) => (p.entry ? <Term key={i} entry={p.entry}>{p.text}</Term> : <span key={i}>{p.text}</span>))}
+      {parts.map((p, i) => (p.entry ? <Term key={i} entry={p.entry}>{p.text}</Term> : <StudyText key={i} text={p.text} />))}
     </TooltipProvider>
   );
 }

@@ -116,6 +116,7 @@ test('Antifaction comparison preserves practice, separates definitions from offe
 
 test('All law case cards expose distinct presentation for case, resolution, pitfall and variation',()=>{
  const {WorkedExampleContent}=load('src/components/library/WorkedExamples.tsx',{
+  './StudyText':{StudyText:({text})=>text,HighlightToggle:()=>null},
   './LearningIllustrations':{LearningIllustration:()=>null},
   '@/lib/studyEnrichment':{},
   '@/lib/studySourceUrl':{isStudySourceUrl:()=>true},

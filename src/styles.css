@@ -10630,3 +10630,22 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   background: color-mix(in oklab, var(--tone, var(--brass)) 24%, oklch(0.2 0.03 262));
   box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--tone, var(--brass)) 45%, transparent);
 }
+
+/* Destaques didáticos nos textos explicativos (além dos grifos do texto oficial). */
+.legal-highlight-prohibition { background: #ffe4e6; color: #9f1239; }
+.legal-highlight-obligation { background: #e0f2fe; color: #075985; }
+.dark .legal-highlight-prohibition { background: #4c1d2b; color: #fecdd3; }
+.dark .legal-highlight-obligation { background: #16384f; color: #bae6fd; }
+.study-tag { display: inline-block; margin-right: .35em; padding: .05em .55em; border-radius: 999px; font-size: .72em; font-weight: 800; letter-spacing: .06em; line-height: 1.6; vertical-align: .08em; }
+.study-tag-update { background: #fde68a; color: #78350f; }
+.study-tag-example { background: #bbf7d0; color: #14532d; }
+.study-tag-warning { background: #fecdd3; color: #881337; }
+.study-tag-exception { background: #e9d5ff; color: #581c87; }
+.study-tag-rule { background: #bfdbfe; color: #1e3a8a; }
+.study-tag-tip { background: #a5f3fc; color: #164e63; }
+.dark .study-tag-update { background: #713f12; color: #fde68a; }
+.dark .study-tag-example { background: #14532d; color: #bbf7d0; }
+.dark .study-tag-warning { background: #881337; color: #fecdd3; }
+.dark .study-tag-exception { background: #581c87; color: #e9d5ff; }
+.dark .study-tag-rule { background: #1e3a8a; color: #bfdbfe; }
+.dark .study-tag-tip { background: #164e63; color: #a5f3fc; }

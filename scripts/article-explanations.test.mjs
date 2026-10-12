@@ -70,6 +70,7 @@ vm.runInNewContext(code,{module,exports:module.exports,require:name=>({
   '@/lib/explanationPractice':{explanationExample,explanationPractice},
   '@/lib/explanationReview':{hasCurrentExplanationReview},
   './LegalRefText':{LegalRefText:({text})=>React.createElement('span',null,text)},
+  './StudyText':{HighlightToggle:()=>null},
 }[name]??native(name))});
 const {ExplanationChecks}=module.exports;
 test('editorial approval requires reviewer, matching source and review of the latest content',()=>{
@@ -607,4 +608,17 @@ test('ambientais: pesca e flora preservam limites, revisão de incêndio e poda 
  assert.match(get('art-49').atencao.join(' '),/não é autorização.*desmatar/);
  assert.match(get('art-50-a').prova.join(' '),/superior/);
  assert.match(get('art-37').atencao.join(' '),/ADPF 640/);
+});
+
+test('ambientais: redações de licenciamento e transição histórica não viram treino literal residual',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ambientais-poluicao-administracao-2026-10-12.json','utf8'));
+ const get=k=>p.units.find(u=>u.unit_key===k);
+ assert.equal(p.units.length,22);assert.ok(p.units.every(u=>u.expected&&u.exemplo.includes('Variação:')&&u.prova.length>=2));
+ assert.match(get('art-60').pontos.join(' '),/6 meses a 2 anos/);
+ assert.match(get('art-67').pontos.join(' '),/culposo.*revogado/);
+ assert.match(get('art-79-a').atencao.join(' '),/1998.*suspensão universal/);
+ assert.match(get('art-73').pontos.join(' '),/50%.*pode ser alterado/);
+ assert.match(get('art-69-a').prova.join(' '),/dano significativo.*uso/);
+ for(const key of ['art-49','art-60','art-67','art-71','art-79-a'])assert.equal(legalStudyCaveat('ambientais',key).literalPractice,false);
+ assert.equal(legalStudyCaveat('ambientais','art-34'),null);
 });
