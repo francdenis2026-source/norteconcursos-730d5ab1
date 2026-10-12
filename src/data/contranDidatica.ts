@@ -13,6 +13,10 @@ export type ContranDidatica = {
   exemplos: { situacao: string; resposta: string }[];
   /** Erros típicos de quem estuda de forma superficial. */
   pegadinhas: string[];
+  /** O que mudou depois da publicação (atos alteradores), em frases curtas. */
+  atualizacoes?: string[];
+  /** Outras resoluções cujo texto oficial foi lido para estas explicações (ex.: as que alteraram a norma). */
+  fontes?: string[];
 };
 
 export const CONTRAN_DIDATICA: Record<string, ContranDidatica> = {
@@ -169,5 +173,160 @@ export const CONTRAN_DIDATICA: Record<string, ContranDidatica> = {
       "Achar que multas e débitos sempre impedem a baixa. Para sucata leiloada, o art. 9º, § 2º, diz que não impedem.",
       "Esquecer que a restrição judicial ou policial, em regra, impede a baixa, com exceção dos veículos leiloados como sucata (art. 9º).",
     ],
+  },
+  "960/2022": {
+    simples: [
+      "Esta resolução diz como devem ser os vidros do veículo e o que pode (ou não) ser colocado neles. Ela vale para ver bem a rua e para o agente conseguir ver quem está dentro.",
+      "Vidro de segurança: o para-brisa tem de ser laminado. As demais partes envidraçadas podem ser de vidro temperado ou laminado (art. 3º). Os vidros trazem marcação indelével com a marca do fabricante e o símbolo do INMETRO (art. 5º).",
+      "Transparência (transmitância luminosa): para-brisa e vidros indispensáveis à dirigibilidade (o para-brisa e os vidros laterais dianteiros) não podem deixar passar menos de 70% da luz (art. 4º, I). Isso vale para o conjunto vidro mais película.",
+      "Película: só a não refletiva é permitida, e desde que o conjunto respeite a transmitância do art. 4º (art. 8º). Película refletiva é proibida (art. 10, I). Cada película deve ter chancela legível pelo lado de fora, com a marca do instalador e o índice de transmitância (art. 8º, §§ 1º e 2º).",
+      "Trincas no para-brisa: o que importa é onde está o dano. Na área crítica de visão do condutor e numa faixa de 2,5 cm nas bordas do para-brisa não pode haver trincas ou fraturas circulares, e elas não podem ser recuperadas (art. 14). Fora dessas regiões há limites: ônibus, micro-ônibus e caminhões aceitam até três danos (trinca até 20 cm, fratura circular até 4 cm de diâmetro); os demais veículos, até dois danos (trinca até 10 cm, fratura circular até 4 cm) (arts. 15 e 16).",
+      "Na fiscalização com o medidor (MTL), soma-se 7% à medição feita: valor considerado = medição + 7% (art. 19, § 1º). O auto de infração traz a medição, o valor considerado e o limite da área fiscalizada (art. 19).",
+    ],
+    quadro: {
+      titulo: "Vidros: o que vale em cada lugar",
+      linhas: [
+        ["Para-brisa", "Vidro laminado; transmitância mínima de 70% (arts. 3º e 4º, I)"],
+        ["Laterais dianteiras", "Também são indispensáveis à dirigibilidade: mínimo de 70% (art. 4º, § 1º, II e art. 4º, I)"],
+        ["Demais vidros", "Desde 2 de janeiro de 2023, podem ter transmitância menor que 70% se o veículo tiver espelho retrovisor externo dos dois lados (Res. 989/2022)"],
+        ["Película refletiva", "Proibida (art. 10, I)"],
+        ["Película não refletiva", "Permitida, com chancela legível por fora e respeitando a transmitância (art. 8º)"],
+        ["Adesivos, legendas e símbolos", "Proibidos nas áreas indispensáveis à dirigibilidade (art. 10, III)"],
+        ["Cortinas e persianas fechadas", "Proibidas com o veículo em movimento, salvo em áreas não indispensáveis e com espelhos retrovisores nos dois lados (art. 10, IV)"],
+        ["Teto", "Fica fora dos limites de transmitância (art. 4º, § 3º)"],
+        ["Veículo blindado", "Isento do vidro de segurança do art. 2º e da transmitância do art. 4º, I; vale a NBR 16218 (art. 12)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "O agente mede o para-brisa com o medidor e o aparelho marca 66%. O condutor é autuado?",
+        resposta: "O valor considerado é 66% + 7% = 73%, acima do mínimo de 70%, então não há infração por transmitância (art. 19, § 1º).",
+      },
+      {
+        situacao: "O medidor marca 60% no vidro lateral dianteiro. O que acontece?",
+        resposta: "O valor considerado é 60% + 7% = 67%, abaixo do mínimo de 70% para vidro indispensável à dirigibilidade. Há infração do art. 230, inciso XVI, do CTB (art. 21, III, b).",
+      },
+      {
+        situacao: "Um para-brisa de carro de passeio tem uma trinca de 8 cm longe da área do condutor. Pode circular?",
+        resposta: "Pode, se for no máximo dois danos fora da área crítica e das bordas, e a trinca não passar de 10 cm (art. 16, parágrafo único).",
+      },
+      {
+        situacao: "A trinca de 3 cm está bem na frente do motorista, na área crítica de visão. Pode ser reparada para continuar circulando?",
+        resposta: "Não. Na área crítica de visão não pode haver trinca ou fratura circular, e elas não podem ser recuperadas (art. 14). Há infração do art. 230, inciso XVIII (art. 21, V, a).",
+      },
+    ],
+    pegadinhas: [
+      "Dizer que o mínimo de 28% ainda vale. Essa regra do texto original foi alterada pela Resolução 989/2022, em vigor desde 2 de janeiro de 2023.",
+      "Esquecer que o 70% é do conjunto vidro mais película, e não só da película.",
+      "Ignorar os 7% de margem: a medição é corrigida antes de comparar com o limite.",
+      "Achar que película refletiva é permitida em alguma área. O art. 10, I, proíbe nas áreas envidraçadas do veículo.",
+      "Confundir os limites de dano: ônibus, micro-ônibus e caminhão aceitam até três danos; os demais, até dois.",
+    ],
+    atualizacoes: [
+      "Resolução 989/2022 (vigente desde 2 de janeiro de 2023): o inciso II do art. 4º deixou de fixar 28%. Os vidros fora das áreas indispensáveis à dirigibilidade podem ter transmitância inferior à do inciso I, desde que o veículo tenha espelhos retrovisores externos de ambos os lados.",
+      "Também pela 989/2022, a isenção dos veículos blindados passou a se referir aos requisitos do inciso I do art. 4º.",
+    ],
+    fontes: ["989/2022"],
+  },
+  "957/2022": {
+    simples: [
+      "Veículo de coleção é o fabricado há mais de trinta anos, original ou modificado, que tenha valor histórico próprio (art. 2º). Ter trinta anos não basta: é preciso valor histórico e o certificado.",
+      "Quem atesta isso é uma entidade credenciada pelo órgão máximo executivo de trânsito da União, que emite o Certificado de Veículo de Coleção (CVCOL) depois de uma vistoria presencial. A vistoria remota, por foto ou meio digital, é proibida (arts. 10 e 16, II).",
+      "Original ou modificado? Original é o veículo que fez oitenta pontos ou mais, de um total de cem, na avaliação das características de fabricação. Modificado é o que sofreu modificações feitas de acordo com a regulamentação do CONTRAN (art. 2º, § 4º).",
+      "O veículo original não pode ser modificado durante a validade do CVCOL sem autorização prévia do órgão de trânsito do Estado ou do DF onde está registrado. Autorizada a modificação, ele passa por inspeção para o Certificado de Segurança Veicular (CSV) e é reavaliado: pode continuar original (oitenta pontos ou mais) ou ser reclassificado como modificado (art. 2º, §§ 5º a 7º).",
+      "Para registrar e licenciar como coleção, o proprietário apresenta o CVCOL, o CSV (quando o veículo é modificado) e o veículo deve estar em condições de circular. Os órgãos estaduais não podem exigir mais nada além disso (art. 4º, § 1º). O CRLV-e passa a indicar a espécie \"coleção\" (art. 6º).",
+      "O CVCOL vale sessenta meses e pode ser renovado por igual período se o veículo continuar atendendo às exigências (art. 11, I). Na venda, o novo proprietário precisa de um novo CVCOL em seu nome; sem ele, o licenciamento na espécie coleção é negado e as placas voltam ao tipo e espécie de origem (art. 7º).",
+    ],
+    quadro: {
+      titulo: "Veículo de coleção em números e prazos",
+      linhas: [
+        ["Idade", "Fabricado há mais de trinta anos, com valor histórico próprio (art. 2º)"],
+        ["Original", "Oitenta pontos ou mais, de cem, nas características de fabricação (art. 2º, § 4º, I)"],
+        ["Modificado", "Modificações feitas conforme o CONTRAN; exige CSV (art. 2º, § 4º, II e art. 4º, IV)"],
+        ["Quem emite o CVCOL", "Entidade credenciada pelo órgão máximo executivo de trânsito da União (art. 10)"],
+        ["Validade do CVCOL", "Sessenta meses, renovável por igual período (art. 11, I)"],
+        ["Credenciamento da entidade", "Quatro anos, renovável por igual período (art. 13)"],
+        ["Venda do veículo", "Exige novo CVCOL no nome do comprador (art. 7º)"],
+        ["Importado que não atende", "Proibido de circular até a adequação ou restauração e a emissão do CVCOL (art. 9º)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "Um carro tem mais de trinta anos de fabricação, mas nunca foi avaliado por entidade credenciada. Pode ser licenciado como veículo de coleção?",
+        resposta: "Não. É requisito apresentar o CVCOL expedido por entidade credenciada (art. 4º, III). Só a idade não basta.",
+      },
+      {
+        situacao: "O dono de um veículo de coleção original quer trocar o motor. Pode fazer a troca e seguir normalmente?",
+        resposta: "Não. Precisa de autorização prévia do órgão de trânsito do Estado ou do DF, depois inspeção para o CSV e nova avaliação. Se perder pontos, o veículo passa a ser classificado como modificado (art. 2º, §§ 5º a 7º).",
+      },
+      {
+        situacao: "O veículo foi vendido. O comprador pode usar o CVCOL do antigo dono?",
+        resposta: "Não. O órgão de trânsito exige novo CVCOL em nome do novo proprietário (art. 7º). Sem ele, o licenciamento como coleção é indeferido e as placas voltam ao tipo e espécie de origem.",
+      },
+      {
+        situacao: "A entidade credenciada quer emitir o CVCOL por fotos enviadas pelo dono. É permitido?",
+        resposta: "Não. A vistoria remota por fotografia ou meio digital não presencial é vedada às entidades credenciadas (art. 16, II).",
+      },
+    ],
+    pegadinhas: [
+      "Achar que basta ter trinta anos de fabricação. Também são exigidos valor histórico próprio e o CVCOL.",
+      "Confundir original com modificado: original é quem tem oitenta pontos ou mais de cem, e o modificado precisa de CSV.",
+      "Dizer que o CVCOL é permanente. Vale sessenta meses; o credenciamento da entidade é que dura quatro anos.",
+      "Esquecer que a venda exige novo CVCOL em nome do comprador.",
+      "Achar que os órgãos estaduais podem pedir documentos extras. O art. 4º, § 1º, veda qualquer exigência adicional.",
+    ],
+  },
+  "965/2022": {
+    simples: [
+      "Esta resolução diz quem pode ter vaga exclusiva na rua e como ela é marcada. Quem cria e regulamenta essas áreas é o órgão de trânsito com circunscrição sobre a via (art. 2º). As áreas específicas são nove: veículo de aluguel, pessoa com deficiência, pessoa idosa, carga e descarga, ambulância, estacionamento rotativo, curta duração (até trinta minutos, não pago, com pisca-alerta ligado), viaturas policiais e veículos elétricos durante a recarga (art. 3º).",
+      "Área de segurança é outra coisa: é o trecho da via diante de edificações públicas ou especiais, do tamanho da testada do imóvel, onde parar e estacionar são proibidos. É definida pelas autoridades locais de segurança pública, mas projeto, sinalização e fiscalização são do órgão de trânsito (art. 6º). A sinalização é a placa R-6c \"Proibido Parar e Estacionar\" com a informação \"Área de Segurança\" (art. 6º, § 3º).",
+      "Vagas de pessoa com deficiência (com comprometimento de mobilidade) e de pessoa idosa: ficam marcadas no chão, com o Símbolo Internacional de Acesso ou o símbolo \"Idoso\". Em estabelecimentos privados de uso coletivo, as vagas reservadas são numeradas em sequência, sem repetir número (arts. 7º e 9º). A sinalização é feita pelo órgão de trânsito ou, em área privada, pelo proprietário (arts. 8º e 10).",
+      "Para usar essas vagas é obrigatória a credencial do beneficiário (art. 11). A credencial vale em todo o território nacional e a física é emitida pelo órgão de trânsito do município onde a pessoa mora (art. 12).",
+      "A credencial só vale se for usada para transportar o beneficiário (art. 14, II). A credencial não isenta o pagamento em estacionamento rotativo pago nem em estabelecimentos privados de uso coletivo (art. 18). É proibido reservar parte da via para estacionamento privativo em situações que a resolução não prevê (art. 19).",
+    ],
+    atualizacoes: [
+      "Resolução 1.012/2024 (em vigor desde a publicação): a credencial pode ser física ou digital. A digital é expedida pelo órgão máximo executivo de trânsito da União, pode ser mostrada no aplicativo oficial ou impressa em papel A4 comum, e deve ser vinculada a um único veículo, que pode ser trocado a qualquer tempo (art. 12-A).",
+      "Se o beneficiário vincula a credencial digital ao veículo, não precisa imprimir nem colocar no painel (art. 12-A, § 4º). Sem a vinculação, usa a versão impressa no painel, com a frente voltada para cima, podendo ser em preto e branco (art. 12-A, § 5º). A fiscalização tem consulta on-line ao veículo vinculado e validação por QR Code.",
+      "A prova pode cobrar o que foi tirado: a 1.012 revogou o parágrafo único do art. 14, o art. 16 (recolhimento da credencial) e o art. 21 (lista de penalidades). A credencial física temporária passou a ter prazo definido pelo município (art. 13, § 2º). Quando o beneficiário falece, a credencial digital é cancelada pela União (art. 13, § 3º).",
+    ],
+    quadro: {
+      titulo: "Credencial de vaga reservada (idoso e pessoa com deficiência)",
+      linhas: [
+        ["Obrigatória", "Para usar as vagas reservadas (art. 11)"],
+        ["Quem emite a física", "Órgão de trânsito do município de domicílio do beneficiário (art. 12)"],
+        ["Quem emite a digital", "Órgão máximo executivo de trânsito da União (art. 12-A)"],
+        ["Onde vale", "Em todo o território nacional (art. 11)"],
+        ["Só vale se", "Usada para transportar o beneficiário; a física, no original e no painel com a frente para cima (art. 14)"],
+        ["Digital", "Vinculada a um único veículo, que pode ser trocado; dispensa impressão e painel (art. 12-A)"],
+        ["Isenta de pagar o rotativo pago?", "Não (art. 18)"],
+        ["Irregularidade na emissão", "O órgão emissor pode suspender ou cassar, com devido processo legal (art. 17)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "Um motorista estaciona na vaga de idoso com a credencial da avó, mas a avó não está no carro. Pode?",
+        resposta: "Não. A credencial só vale quando usada para transportar o beneficiário (art. 14, II). Sem isso, a conduta se encaixa no art. 181, inciso XX, do CTB.",
+      },
+      {
+        situacao: "Uma idosa usa o celular com a credencial digital já vinculada ao carro dela. Precisa imprimir e deixar no painel?",
+        resposta: "Não. Com a credencial digital vinculada a um único veículo, fica dispensada a impressão e o uso no painel (art. 12-A, § 4º).",
+      },
+      {
+        situacao: "A pessoa com deficiência estaciona em vaga reservada no rotativo pago do centro. Está isenta da tarifa?",
+        resposta: "Não. A credencial não exime do pagamento em estacionamento rotativo pago (art. 18).",
+      },
+      {
+        situacao: "Um prédio público quer proibir a parada na frente dele, com a extensão da testada. Que área é essa e qual é a placa?",
+        resposta: "É a área de segurança (art. 6º), sinalizada com a placa R-6c \"Proibido Parar e Estacionar\" com a informação \"Área de Segurança\".",
+      },
+    ],
+    pegadinhas: [
+      "Dizer que a credencial só pode ser física. Desde a Resolução 1.012/2024 ela também pode ser digital, emitida pela União.",
+      "Achar que a credencial vale só no município que a emitiu: vale em todo o território nacional.",
+      "Confundir área de segurança (proibido parar e estacionar na frente de prédio especial) com vaga reservada.",
+      "Esquecer que a credencial não isenta o pagamento do rotativo pago.",
+      "Citar o art. 16 ou o art. 21 como vigentes: foram revogados pela 1.012/2024.",
+    ],
+    fontes: ["1012/2024"],
   },
 };
