@@ -173,10 +173,13 @@ export function parseQuestion(raw: string): ParsedQuestion {
   let text = raw.replace(/\r/g, "").trim();
   let base = "";
   let baseLabel = "Texto de apoio";
-  const head = text.match(/^(Texto-base|Comando):\n([\s\S]*?)\n\n(?=\S)/);
+  // "Texto-base [Texto 1]:" (rótulo opcional). Quando o texto tem parágrafos separados por linha em branco,
+  // o fim do texto vem marcado com "[[/texto-base]]" numa linha própria, para não confundir o 1º parágrafo com o enunciado.
+  const marked = text.match(/^(Texto-base)(?: \[([^\]]+)\])?:\n([\s\S]*)\n\n\[\[\/texto-base\]\]\n/);
+  const head = marked ?? text.match(/^(Texto-base|Comando)(?: \[([^\]]+)\])?:\n([\s\S]*?)\n\n(?=\S)/);
   if (head) {
-    baseLabel = head[1] === "Comando" ? "Comando da questão" : "Texto de apoio";
-    base = (head[2] ?? "").trim();
+    baseLabel = head[1] === "Comando" ? "Comando da questão" : head[2] ? head[2] : "Texto de apoio";
+    base = (head[3] ?? "").trim();
     text = text.slice(head[0].length).trim();
   }
   text = text.replace(/^Item:\s*/, "");

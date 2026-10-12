@@ -1,0 +1,89 @@
+/**
+ * Formatação dos textos das questões. Os textos de apoio vêm de PDFs transcritos: quebras de linha na largura da
+ * coluna, recuo e, nas provas do Cebraspe, numeração de linhas a cada 3 linhas ("1 A polícia…", "4 conhecimentos…").
+ * Aqui separamos a numeração do texto, reorganizamos os parágrafos para leitura e detectamos questões que dependem
+ * de um texto que não está cadastrado.
+ */
+
+export type SupportLine = { n: number | null; text: string };
+
+const GUTTER = /^\s*(\d{1,3})\s{1,3}(\S.*)$/;
+
+/** Separa a numeração de linhas do texto, quando ela existe (números crescentes em várias linhas). */
+export function parseSupportLines(raw: string): { lines: SupportLine[]; numbered: boolean } {
+  const rows = raw.replace(/\r/g, "").split("\n").filter((l) => l.trim() !== "");
+  const parsed = rows.map((r): SupportLine => {
+    const m = GUTTER.exec(r);
+    return m ? { n: Number(m[1]), text: m[2]!.trim() } : { n: null, text: r.trim() };
+  });
+  const nums = parsed.filter((l) => l.n !== null).map((l) => l.n!);
+  let increasing = 0;
+  for (let i = 1; i < nums.length; i++) if (nums[i]! > nums[i - 1]!) increasing++;
+  // texto numerado: pelo menos 3 linhas numeradas em ordem crescente (a numeração não pode ser parte de uma lista comum)
+  const numbered = nums.length >= 3 && increasing >= nums.length - 2 && nums.length >= parsed.length / 6;
+  return numbered ? { lines: parsed, numbered } : { lines: rows.map((r) => ({ n: null, text: r.trim() })), numbered: false };
+}
+
+const END = /[.!?…:»”"')\]]\s*$/;
+const DASH_START = /^[—–-]\s?\S/;
+
+/** Junta as linhas quebradas pelo PDF em parágrafos, mantendo falas e títulos curtos em linhas próprias. */
+export function reflowParagraphs(lines: string[]): string[] {
+  const clean = lines.map((l) => l.trim()).filter(Boolean);
+  if (!clean.length) return [];
+  const longest = Math.max(...clean.map((l) => l.length));
+  const out: string[] = [];
+  let cur = "";
+  clean.forEach((line, i) => {
+    cur = cur ? `${cur} ${line}` : line;
+    const next = clean[i + 1];
+    const shortLine = line.length < longest * 0.62;
+    // título curto sem pontuação final (ex.: nome do texto ou do autor)
+    const heading = shortLine && !END.test(line) && line.length < 60 && cur === line;
+    const endsParagraph = !next || (END.test(line) && (shortLine || DASH_START.test(next))) || heading || (shortLine && DASH_START.test(next));
+    if (endsParagraph) { out.push(cur); cur = ""; }
+  });
+  return out;
+}
+
+/** Reorganiza um enunciado quebrado em linhas curtas, sem mexer em listas e itens numerados. */
+export function reflowStem(text: string): string {
+  const lines = text.replace(/\r/g, "").split("\n");
+  if (lines.length < 2) return text;
+  const out: string[] = [];
+  for (const raw of lines) {
+    const line = raw.trim();
+    const prev = out[out.length - 1];
+    const isListItem = /^(\(?[a-eA-E]\)|[IVX]+\s*[-–.)]|\d+\s*[-–.)]|[-•*])\s/.test(line);
+    if (prev !== undefined && line && !isListItem && !END.test(prev) && /^[a-zà-ú]/.test(line)) out[out.length - 1] = `${prev} ${line}`;
+    else out.push(raw.trimEnd());
+  }
+  return out.join("\n");
+}
+
+// ───────── Questões que dependem de texto ausente ─────────
+const REFERS_TO_TEXT = new RegExp(
+  [
+    String.raw`(?:de acordo com|segundo|conforme|com base n?|considerando|à luz d?|a partir d?|leitura d?)\s*o\s+texto|(?:no|do|ao|pelo|neste|deste|desse|nesse)\s+texto`,
+    String.raw`texto\s+(?:[IVX]+|\d+|[A-Z]{2}\d[A-Z]\d(?:-[IVX]+)?)`,
+    String.raw`(?:primeiro|segundo|terceiro|quarto|quinto|sexto|último|penúltimo)\s+par[áa]grafo`,
+    String.raw`par[áa]grafo\s+\d+`,
+    String.raw`linhas?\s+\d+`,
+    String.raw`segundo\s+o\s+autor`,
+  ].join("|"),
+  "i",
+);
+const SELF_CONTAINED = /(?:^|\n)\s*(?:texto|leia(?: o texto| o trecho)?|observe(?: o texto| o trecho)?)\s*[:：]\s*["“«]/i;
+
+/** Questões de Português que remetem a "o texto" sem o texto de apoio. O treinador as deixa de fora até o texto ser cadastrado. */
+export function needsMissingSupportText(q: { subject: string; text: string; source?: string }): boolean {
+  // itens autorais e do caderno pessoal trazem o seu contexto no próprio enunciado
+  if (q.source === "curated" || q.source === "personal") return false;
+  if (!/portugu|reda[çc][ãa]o|interpreta/i.test(q.subject.normalize("NFC"))) return false;
+  if (/^(Texto-base|Comando)(?: \[[^\]]+\])?:\n/.test(q.text)) return false;
+  if (SELF_CONTAINED.test(q.text)) return false;
+  // enunciado com texto longo entre aspas dentro dele é autossuficiente
+  const quoted = [...q.text.matchAll(/["“«]([^"”»]{200,})["”»]/g)];
+  if (quoted.length) return false;
+  return REFERS_TO_TEXT.test(q.text);
+}
