@@ -582,4 +582,62 @@ export const CONTRAN_DIDATICA: Record<string, ContranDidatica> = {
     ],
     fontes: ["923/2022", "1020/2025"],
   },
+  "1020/2025": {
+    simples: [
+      "A Resolução 1.020/2025 reorganizou o processo para tirar a CNH (ou a Autorização para Conduzir Ciclomotor, ACC), com a proposta de um modelo mais acessível, flexível e desburocratizado, sem abrir mão da segurança viária (art. 1º). Ela também organiza renovação, mudança e adição de categoria, transferência, reabilitação, segunda via e documento estrangeiro (art. 6º).",
+      "Documentos de habilitação (art. 4º): Permissão para Dirigir (provisória, válida por um ano, dada a quem passou nos exames teórico e de direção), ACC (para ciclomotor) e CNH (definitiva). A validade da CNH e da ACC depende do prazo do exame de aptidão física e mental (art. 4º, §§ 5º e 6º).",
+      "As etapas da primeira habilitação, em ordem (art. 12): requerimento; curso teórico; abertura do formulário Renach e coleta de dados biométricos; avaliação psicológica; exames de aptidão física e mental; exame teórico; aulas práticas; exame de direção; Permissão para Dirigir; e, por fim, CNH ou ACC.",
+      "Requisitos do candidato (art. 17): ser penalmente imputável, saber ler e escrever, ter documento de identificação reconhecido por lei e estar inscrito no CPF.",
+      "Curso teórico: o candidato escolhe livremente onde fazer. Pode ser o curso EaD assíncrono do órgão máximo executivo de trânsito da União, autoescolas, entidades especializadas de ensino a distância, Escolas Públicas de Trânsito ou órgãos do SNT, e pode combinar opções (art. 20). Não há carga horária mínima pré-definida (art. 21). O certificado só prova participação; o domínio do conteúdo é avaliado pelo exame teórico (art. 23).",
+      "Exame teórico: trinta questões de múltipla escolha, quatro alternativas e apenas uma correta; duração de no mínimo uma hora, dobrada para candidatos com dislexia, TDAH ou TEA; aprovação com vinte acertos, sem limite de tentativas, e a segunda tentativa pode ser feita sem nova taxa (arts. 31, 33 e 34). A aprovação gera a Licença de Aprendizagem, digital, que autoriza as aulas práticas com instrutor (art. 35).",
+      "Aulas práticas: obrigatórias para a CNH, mas dispensadas para a ACC (art. 35, § 4º). Carga horária mínima de duas horas, para cada categoria quando se faz A e B juntas (art. 38). Podem ser feitas com instrutor autônomo ou vinculado a autoescola, a Escola Pública de Trânsito ou a órgão do SNT (art. 36), sempre com a Licença de Aprendizagem e supervisão permanente do instrutor (art. 37).",
+      "Exame de direção: o candidato começa com nota zero e soma pontos pelas infrações cometidas (leve, um; média, dois; grave, quatro; gravíssima, seis). É aprovado com nota de até dez pontos (arts. 45 e 47). A comissão examinadora tem três membros, e a decisão final cabe só a ela (art. 43, § 1º e art. 45, § 2º). A Permissão para Dirigir é expedida automaticamente depois da aprovação (art. 48).",
+      "Durante o ano da Permissão, o condutor não pode cometer infração grave ou gravíssima nem ser reincidente em infração média (art. 49, parágrafo único). Terminado o ano, a CNH (ou a ACC) é expedida automaticamente, sem requerimento (art. 50). Se houve infração impeditiva, a expedição automática não é barrada enquanto não houver decisão administrativa definitiva; confirmada a infração, a CNH é cancelada de ofício e o candidato precisa reiniciar todo o processo (art. 51).",
+      "Mudança de categoria (art. 52): exame toxicológico de larga janela, exames de aptidão física e mental, curso especializado prático, exames de direção e expedição da CNH. O exame de aptidão física e mental pode ser reaproveitado se o resultado foi apto, sem restrições, e estiver no prazo. Só adicionar a categoria A ou a ACC para quem já é C, D ou E não exige novo toxicológico.",
+    ],
+    atualizacoes: [
+      "A 1.020/2025 revogou, entre outras normas, a Resolução 789/2020 (formação de condutores) (art. 140, IV) e o art. 2º da Resolução 1.009/2024 (art. 139). Quem estuda pelos materiais antigos deve atualizar: a formação passou a ter escolha livre do curso teórico e carga horária mínima de apenas duas horas de aula prática.",
+      "Cancelamento da CNH: o condutor pode pedir o cancelamento a qualquer tempo, sem precisar de motivação (art. 7º, I). O condutor com documento cancelado fica impedido de dirigir e é considerado inabilitado enquanto durar a situação (art. 7º, § 1º). A baixa definitiva só ocorre com o óbito (art. 7º, § 3º).",
+    ],
+    quadro: {
+      titulo: "Primeira habilitação em números",
+      linhas: [
+        ["Permissão para Dirigir", "Validade de um ano (art. 49)"],
+        ["Curso teórico", "Sem carga horária mínima; escolha livre da entidade e da modalidade (arts. 20 e 21)"],
+        ["Exame teórico", "Trinta questões; vinte acertos; duração mínima de uma hora (arts. 33 e 34)"],
+        ["Reprovado no teórico ou no de direção", "Sem limite de tentativas; segunda tentativa sem nova taxa (arts. 34 e 47)"],
+        ["Aula prática", "Mínimo de duas horas, para cada categoria no caso de A e B juntas (art. 38)"],
+        ["Exame de direção", "Comissão de três membros; aprovação com até dez pontos (arts. 43 e 47)"],
+        ["Pesos das infrações no exame", "Leve um, média dois, grave quatro, gravíssima seis (art. 45)"],
+        ["Aula prática para ACC", "Dispensada (art. 35, § 4º)"],
+        ["Cancelamento a pedido", "Possível a qualquer tempo, sem motivação (art. 7º, I)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "Um candidato quer fazer o curso teórico só pela internet, no curso gratuito do órgão federal. Pode?",
+        resposta: "Pode. O art. 20 permite o curso EaD assíncrono do órgão máximo executivo de trânsito da União, e a escolha é do candidato, que ainda pode combinar mais de uma opção.",
+      },
+      {
+        situacao: "O candidato acertou dezoito das trinta questões do exame teórico. Foi aprovado? Pode tentar de novo?",
+        resposta: "Não foi aprovado: são necessários vinte acertos. Pode refazer sem limite de tentativas, e a segunda tentativa pode ser feita sem cobrança de nova taxa (art. 34).",
+      },
+      {
+        situacao: "No exame de direção, o candidato cometeu uma infração média e uma grave. Qual é a nota e o resultado?",
+        resposta: "Média vale dois pontos e grave, quatro: a nota é seis. Como a aprovação exige nota de até dez pontos, ele é aprovado (arts. 45 e 47).",
+      },
+      {
+        situacao: "Quem só quer a ACC precisa fazer as aulas práticas?",
+        resposta: "Não. As aulas práticas são obrigatórias para a CNH, mas dispensadas nos processos destinados à ACC (art. 35, § 4º).",
+      },
+    ],
+    pegadinhas: [
+      "Achar que a autoescola é obrigatória: o candidato escolhe entre várias opções para o curso teórico, e as aulas práticas podem ser com instrutor autônomo.",
+      "Confundir certificado do curso com aprovação: o certificado só comprova a participação; quem avalia o domínio é o exame teórico.",
+      "Dizer que há carga horária mínima para o curso teórico. Não há; a carga mínima de duas horas é das aulas práticas.",
+      "Trocar a lógica do exame de direção: ele começa em zero e as infrações somam pontos; passa quem fecha com até dez.",
+      "Esquecer que a Permissão para Dirigir vale um ano e que, nesse período, infração grave ou gravíssima (ou reincidência em média) é impeditiva: mas a CNH só é cancelada depois de decisão administrativa definitiva (art. 51).",
+      "Citar a Resolução 789/2020 como vigente para a formação de condutores: ela foi revogada pela 1.020/2025.",
+    ],
+  },
 };
