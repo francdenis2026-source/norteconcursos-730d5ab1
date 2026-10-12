@@ -19,6 +19,7 @@ import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { materialLawSlug } from "@/lib/legalLibrary";
 import { StudyPractice } from "@/components/library/StudyPractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
+import { useFocusMode } from "@/hooks/useFocusMode";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { Button } from "@/components/ui/button";
 import { BackToPlan } from "@/components/cronograma/BackToPlan";
@@ -42,6 +43,7 @@ export const Route = createFileRoute("/dashboard/library/$slug")({
 });
 
 function MaterialPage() {
+  const fm = useFocusMode();
   const { slug } = useParams({ from: "/dashboard/library/$slug" });
   const { back: backToPlan, tema } = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
@@ -124,9 +126,8 @@ function MaterialPage() {
   const sources = (material.legal_basis ?? []).filter((item) => item.title || item.url);
 
   return (
-    <article className="mx-auto max-w-3xl space-y-6 pb-10">
-      <BackToPlan back={backToPlan} topic={tema} />
-      {back}
+    <article className={`mx-auto max-w-3xl space-y-6 pb-10 ${fm.containerClass}`}>
+      {fm.focus ? <div className="flex justify-end">{fm.button}</div> : <div className="flex flex-wrap items-center justify-between gap-2"><div><BackToPlan back={backToPlan} topic={tema} />{back}</div>{fm.button}</div>}
 
       <header className="library-header">
         <span className="hero-chip">

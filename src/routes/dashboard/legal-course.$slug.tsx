@@ -3,6 +3,7 @@ import { createFileRoute, Link, useNavigate, useParams } from "@tanstack/react-r
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { useFocusMode } from "@/hooks/useFocusMode";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -36,6 +37,7 @@ export const Route = createFileRoute("/dashboard/legal-course/$slug")({
 });
 
 function LegalCoursePage() {
+  const fm = useFocusMode();
   const { slug } = useParams({ from: "/dashboard/legal-course/$slug" });
   const { user, isLoading } = useAuthStatus();
   const userId = user?.id !== "demo-user" ? user?.id : undefined;
@@ -82,9 +84,10 @@ function LegalCoursePage() {
   if (!isLoading && !userId) return <LockedState image="study-desk" title="Percurso de legislação" description="Entre para estudar e guardar seu progresso e suas revisões." />;
   if (isLoading || courses.isPending || (course && units.isPending)) return <Skeleton className="h-80 rounded-2xl" />;
   if (courses.isError || units.isError || !course) return <div className="surface-card p-6"><p>Não foi possível abrir este percurso.</p><Button onClick={() => { void courses.refetch(); void units.refetch(); }}>Tentar novamente</Button><Link to="/dashboard/library" className="ml-4 underline">Biblioteca</Link></div>;
-  return <LegalRefProvider value={{ slug: course.slug, index: refIndex }}><div className="space-y-5 pb-8">
-    <nav aria-label="Trilha" className="flex items-center gap-2 text-sm text-muted-foreground"><Link to="/dashboard/library" className="hover:text-foreground hover:underline">Biblioteca</Link><span aria-hidden>/</span><span className="text-foreground">Legislação</span></nav>
-    <header className="surface-card overflow-hidden p-0">
+  return <LegalRefProvider value={{ slug: course.slug, index: refIndex }}><div className={`space-y-5 pb-8 ${fm.containerClass}`}>
+    {fm.focus && <div className="flex justify-end">{fm.button}</div>}
+    {!fm.focus && <nav aria-label="Trilha" className="flex items-center gap-2 text-sm text-muted-foreground"><Link to="/dashboard/library" className="hover:text-foreground hover:underline">Biblioteca</Link><span aria-hidden>/</span><span className="text-foreground">Legislação</span></nav>}
+    {!fm.focus && <header className="surface-card overflow-hidden p-0">
       <div className="space-y-3 p-5 sm:p-7">
         <p className="text-xs font-semibold uppercase tracking-widest text-primary">Percurso de legislação</p>
         <h1 className="text-2xl font-bold leading-tight sm:text-3xl">{course.title}</h1>
@@ -95,9 +98,10 @@ function LegalCoursePage() {
         {([["Lidos", `${summary.read}/${current.length}`], ["Fixados", summary.practiced], ["Dificuldades", summary.difficult], ["Revisões pendentes", summary.due]] as const).map(([label, value]) => <div key={label} className="bg-card p-4"><p className="text-xl font-bold">{value}</p><p className="text-xs text-muted-foreground">{label}</p></div>)}
       </div>
       <progress className="block h-1.5 w-full accent-primary" max={Math.max(current.length, 1)} value={summary.read} aria-label="Dispositivos lidos" />
-    </header>
-    <LegalUpdateNotice review={course.legal_review ? { ...course.legal_review, course_slug: undefined } : null} slug={course.material_slug} />
+    </header>}
+    {!fm.focus && <LegalUpdateNotice review={course.legal_review ? { ...course.legal_review, course_slug: undefined } : null} slug={course.material_slug} />}
     <div className="flex flex-wrap items-center gap-2 rounded-xl border bg-card p-1.5" role="group" aria-label="Modo de estudo">
+      {!fm.focus && fm.button}
       <Button variant={tab === "learn" ? "default" : "ghost"} onClick={() => setTab("learn")}>Estudo por artigo</Button>
       <Button variant={tab === "application" ? "default" : "ghost"} onClick={() => setTab("application")}>Questões comentadas e cartões</Button>
       {videos.length > 0 && <Button variant={tab === "videos" ? "default" : "ghost"} onClick={() => setTab("videos")}>Vídeo-aulas ({videos.length})</Button>}
@@ -110,8 +114,8 @@ function LegalCoursePage() {
       {userId && <LegalCoursePractice key={`${userId}:${material.data.slug}`} courseId={course.id} userId={userId} material={material.data} />}
       {userId && <LawPracticeLink law={course.slug} userId={userId} />}
       <Link to="/dashboard/library/$slug" params={{ slug: course.material_slug }} className="inline-block underline">Abrir explicações e exemplos de aplicação</Link>
-    </> : <p>Não foi possível carregar os exercícios. <button onClick={() => void material.refetch()} className="underline">Tentar novamente</button></p> : <div className="grid gap-4 lg:grid-cols-[300px_minmax(0,1fr)]">
-      <aside className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:self-start" aria-label="Navegação da lei"><p className="text-sm font-semibold">Artigos</p>
+    </> : <p>Não foi possível carregar os exercícios. <button onClick={() => void material.refetch()} className="underline">Tentar novamente</button></p> : <div className={fm.focus ? "block" : "grid gap-4 lg:grid-cols-[300px_minmax(0,1fr)]"}>
+      {!fm.focus && <aside className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:self-start" aria-label="Navegação da lei"><p className="text-sm font-semibold">Artigos</p>
         <label className="block text-sm">Buscar artigo ou expressão<input className="mt-1 w-full rounded-lg border bg-background p-2" type="search" value={search} onChange={e => setSearch(e.target.value)} /></label>
         <label className="block text-sm">Capítulo ou seção<select className="mt-1 w-full rounded-lg border bg-background p-2" value={chapter} onChange={e => setChapter(e.target.value)}><option value="all">Todos os blocos</option>{Array.from(new Set(rows.map(row => row.chapter))).map(name => <option key={name} value={name}>{name}</option>)}</select></label>
         <label className="flex gap-2 text-sm"><input type="checkbox" checked={dueOnly} onChange={e => setDueOnly(e.target.checked)} />Somente revisões pendentes</label>
@@ -123,10 +127,10 @@ function LegalCoursePage() {
           </button>)}
           {!visible.length && <p className="text-sm">Nenhum dispositivo neste filtro.</p>}
         </nav>
-      </aside>
-      {progress.isPending ? <Skeleton className="h-80 rounded-xl" /> : selected && userId && !progress.isError && <UnitLesson key={`${userId}:${selected.id}`} unit={selected} law={course.slug} materialSlug={course.material_slug} references={course.overview.jurisprudence.filter(ref => ref.articles.includes(selected.label))} progress={byId.get(selected.id)} userId={userId} highlightPar={selected.unit_key === art ? par : undefined} onNext={() => { const index = current.findIndex(row => row.id === selected.id); if (current[index + 1]) setSelectedId(current[index + 1]!.id); }} />}
+      </aside>}
+      {progress.isPending ? <Skeleton className="h-80 rounded-xl" /> : selected && userId && !progress.isError && <UnitLesson key={`${userId}:${selected.id}`} unit={selected} law={course.slug} materialSlug={course.material_slug} references={course.overview.jurisprudence.filter(ref => ref.articles.includes(selected.label))} progress={byId.get(selected.id)} userId={userId} highlightPar={selected.unit_key === art ? par : undefined} onPrev={() => { const index = current.findIndex(row => row.id === selected.id); if (current[index - 1]) setSelectedId(current[index - 1]!.id); }} onNext={() => { const index = current.findIndex(row => row.id === selected.id); if (current[index + 1]) setSelectedId(current[index + 1]!.id); }} />}
     </div>}
-    <section aria-label="Sobre esta lei" className="space-y-4 border-t pt-5"><h2 className="text-lg font-bold">Sobre esta lei</h2>
+    {!fm.focus && <section aria-label="Sobre esta lei" className="space-y-4 border-t pt-5"><h2 className="text-lg font-bold">Sobre esta lei</h2>
       <div className="surface-card p-5 text-sm">
         <p className="mt-2 text-xs text-muted-foreground">O progresso por artigo orienta suas revisões; ele não certifica aprovação.</p>
         <p className="mt-3 text-sm"><strong>Edital de referência:</strong> {course.overview.contest}. A leitura integral inclui disposições que podem exceder o programa do cargo; confira seu edital.</p>
@@ -140,11 +144,11 @@ function LegalCoursePage() {
       {course.overview.jurisprudence.map(ref => <div key={ref.url} className="mt-4 text-sm"><strong>{ref.title}</strong><p className="mt-1">{ref.explanation}</p>{isStudySourceUrl(ref.url) && <a href={ref.url} target="_blank" rel="noopener noreferrer" className="underline">Conferir no tribunal</a>}</div>)}
       <p className="mt-4 text-xs text-muted-foreground">{course.overview.editorial_scope}</p>
     </details>
-    </section>
+    </section>}
   </div></LegalRefProvider>;
 }
 
-function UnitLesson({ unit, law, materialSlug, references, progress, userId, highlightPar, onNext }: { highlightPar?: string | undefined; unit: LegalUnit; law: string; materialSlug: string; references: LegalCourse["overview"]["jurisprudence"]; progress: LegalProgress | undefined; userId: string; onNext: () => void }) {
+function UnitLesson({ unit, law, materialSlug, references, progress, userId, highlightPar, onNext, onPrev }: { highlightPar?: string | undefined; unit: LegalUnit; law: string; materialSlug: string; references: LegalCourse["overview"]["jurisprudence"]; progress: LegalProgress | undefined; userId: string; onNext: () => void; onPrev?: () => void }) {
   const caveat = legalStudyCaveat(law, unit.unit_key);
   const queryClient = useQueryClient();
   const [step, setStep] = useState<"entender" | "texto" | "fixar">(highlightPar ? "texto" : "entender");
@@ -200,7 +204,7 @@ function UnitLesson({ unit, law, materialSlug, references, progress, userId, hig
       </>}
       {mode === "recall" && revealed && <section className="space-y-3"><p className="text-sm">Compare sua resposta com o dispositivo inteiro. Registre a regra ou exceção que confundiu. Esta avaliação é feita por você; não é correção automática de texto livre.</p><div className="flex flex-wrap gap-2">{([['again','Não lembrei · 10 min'],['hard','Com dificuldade · 1 dia'],['good','Lembrei'],['easy','Lembrei com facilidade']] as const).map(([rating,label]) => <Button disabled={busy} key={rating} variant="outline" onClick={() => void save(rating)}>{label}</Button>)}</div></section>}
       <details className="rounded-lg border px-3 py-2 text-sm" open={!!notes}><summary className="cursor-pointer font-medium">Minhas anotações</summary><textarea aria-label="Minhas anotações" maxLength={4000} className="mt-2 min-h-20 w-full rounded-lg border bg-background p-2 text-sm" value={notes} onChange={e => setNotes(e.target.value)} /></details>
-      <div className="flex flex-wrap items-center gap-2 border-t pt-4"><Button disabled={busy} onClick={() => void save("read")}>Marcar como lido e salvar</Button><Button variant="outline" onClick={onNext}>Próximo artigo →</Button></div>
+      <div className="flex flex-wrap items-center gap-2 border-t pt-4"><Button disabled={busy} onClick={() => void save("read")}>Marcar como lido e salvar</Button>{onPrev && <Button variant="outline" onClick={onPrev}>← Artigo anterior</Button>}<Button variant="outline" onClick={onNext}>Próximo artigo →</Button></div>
       {progress?.due_at && <p className="text-xs text-muted-foreground">Próxima revisão: {new Date(progress.due_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}</p>}
     </>}
   </article>;
