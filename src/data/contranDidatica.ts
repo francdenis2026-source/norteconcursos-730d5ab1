@@ -329,4 +329,98 @@ export const CONTRAN_DIDATICA: Record<string, ContranDidatica> = {
     ],
     fontes: ["1012/2024"],
   },
+  "927/2022": {
+    simples: [
+      "Para tirar ou renovar a CNH (ou a ACC), o candidato passa por dois exames: o de aptidão física e mental, feito por médico perito examinador de trânsito, e a avaliação psicológica, feita por psicólogo perito examinador de trânsito (art. 1º). Cada resultado é de exclusiva responsabilidade do profissional que o assina (art. 10).",
+      "Exame médico: começa pela anamnese (questionário e interrogatório), segue com o exame físico geral e os exames específicos (visão, audição, coração e pulmão, neurológico, aparelho locomotor e, nas categorias C, D e E, distúrbios do sono na renovação, adição e mudança de categoria) e, se o médico quiser, exames complementares (art. 4º). O candidato com deficiência física é examinado por Junta Médica Especial (art. 4º, § 1º).",
+      "Avaliação psicológica: mede tomada e processamento de informação, tomada de decisão, comportamento, autoavaliação do comportamento e traços de personalidade, usando entrevista, testes psicológicos, dinâmicas de grupo e escuta (arts. 5º e 6º).",
+      "Os resultados do médico são quatro: apto; apto com restrições (a CNH registra a restrição ou adaptação do veículo); inapto temporário (o problema pode ser tratado ou corrigido); inapto (o motivo é irreversível) (art. 8º). Na avaliação psicológica são três: apto, inapto temporário (desempenho não condizente, mas passível de adequação) e inapto (art. 9º). O psicólogo deve liberar o resultado em até dois dias úteis (art. 9º, § 3º).",
+      "Se discordar, o candidato pode pedir Junta Médica e/ou Psicológica, em até trinta dias do conhecimento do resultado, qualquer que seja ele (art. 12). Mantida a inaptidão permanente, cabe recurso ao CETRAN (ou ao CONTRANDIFE, no DF) em trinta dias do resultado da revisão (art. 13). O pedido e o recurso são feitos no órgão de trânsito do estado ou DF onde o interessado mora (art. 14).",
+    ],
+    quadro: {
+      titulo: "Resultados e prazos que mais caem",
+      linhas: [
+        ["Exame médico: resultados", "Apto, apto com restrições, inapto temporário, inapto (art. 8º)"],
+        ["Avaliação psicológica: resultados", "Apto, inapto temporário, inapto (art. 9º)"],
+        ["Inapto temporário", "Problema passível de tratamento ou correção (médico) ou de adequação (psicólogo)"],
+        ["Inapto", "Motivo irreversível, sem tratamento ou correção (médico)"],
+        ["Resultado do psicólogo", "Disponibilizado em até dois dias úteis (art. 9º, § 3º)"],
+        ["Pedir Junta Médica ou Psicológica", "Trinta dias do conhecimento do resultado (art. 12)"],
+        ["Composição da junta", "Três médicos peritos ou especialistas em medicina de tráfego; ou três psicólogos peritos ou especialistas em psicologia de trânsito (art. 12, §§ 1º e 2º)"],
+        ["Órgão designa a junta", "Em quinze dias úteis do requerimento; a junta decide em trinta dias da designação (art. 14, §§ 1º e 3º)"],
+        ["Recurso ao CETRAN/CONTRANDIFE", "Trinta dias do resultado da revisão, se mantida inaptidão permanente (art. 13)"],
+        ["Credenciamento da clínica", "Um ano, renovável; a cada dois anos comprova as instalações (art. 16, §§ 2º e 3º)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "O médico considera o candidato inapto porque está com uma infecção que tem tratamento. Qual é o resultado correto?",
+        resposta: "Inapto temporário: o motivo da reprovação é passível de tratamento ou correção (art. 8º, III). Inapto, sem ser temporário, seria para motivo irreversível.",
+      },
+      {
+        situacao: "O candidato apto precisa usar óculos para dirigir. Como o resultado fica registrado?",
+        resposta: "Como apto com restrições: há necessidade de registrar na CNH a restrição ou adaptação (art. 8º, II).",
+      },
+      {
+        situacao: "Candidato reprovado na avaliação psicológica quer contestar. Em quanto tempo deve pedir a junta, e a quem?",
+        resposta: "Em trinta dias, contados do seu conhecimento do resultado, ao órgão de trânsito do estado ou do DF onde mora, que instaura uma Junta Psicológica (arts. 12 e 14).",
+      },
+      {
+        situacao: "A Junta Médica manteve a inaptidão permanente. Ainda dá para recorrer?",
+        resposta: "Sim: recurso ao CETRAN (ou ao CONTRANDIFE, no DF) em trinta dias contados do conhecimento do resultado da revisão (art. 13).",
+      },
+    ],
+    pegadinhas: [
+      "Trocar os resultados: a avaliação psicológica não tem \"apto com restrições\"; essa categoria é do exame médico.",
+      "Confundir inapto temporário (tem tratamento ou adequação) com inapto (irreversível).",
+      "Achar que a junta só pode ser pedida se o resultado for inapto. O art. 12 diz \"independentemente do resultado\".",
+      "Esquecer que o recurso ao CETRAN só cabe depois da junta, quando mantida a inaptidão permanente.",
+      "Dizer que o médico não precisa de especialização. Desde 12 de abril de 2024, médicos e psicólogos credenciados devem ter título de especialista em medicina de tráfego e em psicologia do trânsito, respectivamente (art. 19, § 2º).",
+    ],
+  },
+  "941/2022": {
+    simples: [
+      "A vistoria de identificação veicular é a conferência do veículo antes de mudar de dono ou de domicílio entre municípios ou estados. Ela é de responsabilidade dos órgãos executivos de trânsito dos Estados e do DF, que podem fazê-la com seus servidores ou habilitar uma pessoa jurídica pública ou privada (arts. 1º e 2º).",
+      "O que se verifica (art. 2º, § 2º): se a identificação do veículo e a documentação são autênticas; se a propriedade é legítima; se os equipamentos obrigatórios existem e funcionam; e se as características originais foram modificadas e, havendo alteração, se ela foi autorizada, regularizada e consta do prontuário.",
+      "O resultado é o laudo único, emitido só por meio eletrônico. Ele só tem validade no Sistema Nacional de Trânsito se for registrado no SISCSV, mantido pelo órgão máximo executivo de trânsito da União (art. 2º, § 1º).",
+      "Há uma proibição importante: não se faz vistoria de identificação em veículo sinistrado com laudo pericial de perda total (art. 2º, § 4º).",
+      "Vistoria móvel (fora da sede da vistoriadora) só em casos listados: veículo indenizado por seguradora, recuperado ou alienado por instituição financeira, adquirido ou vendido por empresa que comercializa veículos, apreendido em pátio público com liberação condicionada, em leilão ou leiloado, e veículo com peso bruto total acima de dez toneladas (art. 3º). Em regra, ela fica dentro da unidade da federação em que a empresa é habilitada, com exceções (art. 4º).",
+    ],
+    atualizacoes: [
+      "Resolução 977/2022 (em vigor desde 1º de agosto de 2022): a vistoria pode ser dispensada, a critério do órgão de trânsito e após análise do caso concreto, em três hipóteses: fusão, cisão ou incorporação de empresas com transferência de veículos entre elas; transferência de veículos entre entes públicos; e transferência entre filiais da mesma empresa (art. 2º-A).",
+      "Também pela 977/2022, a habilitação de empresas passa a ser opcional para o órgão: o art. 5º agora trata dos órgãos que optarem por habilitar empresas. A Resolução 22/1998 foi revogada.",
+    ],
+    quadro: {
+      titulo: "Vistoria de identificação: o essencial",
+      linhas: [
+        ["Quando", "Transferência de propriedade ou de domicílio intermunicipal ou interestadual (art. 2º)"],
+        ["Quem é responsável", "Órgãos executivos de trânsito dos Estados e do DF; podem habilitar pessoa jurídica (arts. 1º e 2º)"],
+        ["Documento final", "Laudo único eletrônico, válido no SNT se registrado no SISCSV (art. 2º, § 1º)"],
+        ["Proibida", "Em veículo sinistrado com laudo de perda total (art. 2º, § 4º)"],
+        ["Pode ser dispensada", "Fusão, cisão ou incorporação; entre entes públicos; entre filiais da mesma empresa (art. 2º-A, Res. 977/2022)"],
+        ["Vistoria móvel", "Só nas hipóteses do art. 3º, como seguradora, instituição financeira, leilão e PBT acima de dez toneladas"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "Um carro será vendido para uma pessoa de outro estado. A vistoria é necessária?",
+        resposta: "Em regra, sim: a vistoria é feita na transferência de propriedade ou de domicílio intermunicipal ou interestadual (art. 2º).",
+      },
+      {
+        situacao: "Uma empresa de transportes transfere veículos para uma filial da mesma empresa. A vistoria é obrigatória?",
+        resposta: "Pode ser dispensada, a critério do órgão de trânsito, depois de analisar o caso concreto (art. 2º-A, III, incluído pela Resolução 977/2022).",
+      },
+      {
+        situacao: "Uma seguradora pagou indenização integral por um sinistro e quer vender o veículo recuperado. Pode fazer vistoria de identificação nele?",
+        resposta: "A vistoria móvel é permitida no pátio da seguradora para veículo indenizado integralmente (art. 3º, I). Mas é vedada a vistoria de identificação em veículo sinistrado com laudo pericial de perda total (art. 2º, § 4º).",
+      },
+    ],
+    pegadinhas: [
+      "Achar que a vistoria só verifica a numeração do chassi: ela também confere propriedade, equipamentos obrigatórios e modificações.",
+      "Dizer que o laudo vale em qualquer lugar por si só. Para valer no SNT, precisa estar registrado no SISCSV.",
+      "Esquecer a dispensa trazida pela Resolução 977/2022; ela é a atualização mais cobrada desta norma.",
+      "Confundir vistoria móvel com vistoria sem regras: ela só cabe nas hipóteses listadas no art. 3º.",
+    ],
+    fontes: ["977/2022"],
+  },
 };
