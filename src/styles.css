@@ -753,6 +753,8 @@ html {
   display: none;
 }
 .lp-sheet {
+  width: min(88vw, 380px) !important;
+  padding: 22px 22px max(22px, env(safe-area-inset-bottom)) !important;
   border-color: oklch(1 0 0 / 0.08) !important;
   background: var(--ink-deep) !important;
   color: white !important;
@@ -763,17 +765,32 @@ html {
 .lp-sheet-nav {
   display: grid;
   gap: 4px;
-  margin-top: 28px;
+  margin-top: 10px;
+}
+.lp-sheet__intro {
+  max-width: 28ch;
+  margin: 20px 0 24px;
+  color: oklch(1 0 0 / 0.66);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.lp-sheet__label {
+  color: var(--brass-soft);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 .lp-sheet-nav a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 4px;
+  padding: 13px 4px;
   border-bottom: 1px solid oklch(1 0 0 / 0.07);
   color: oklch(1 0 0 / 0.86);
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 5vw, 1.45rem);
   font-stretch: 80%;
   font-weight: 700;
 }
@@ -10383,5 +10400,56 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     border-color: #c5d5e5;
     background: #f6faff;
     color: #29445f;
+  }
+  html:not(.dark) .mh::before {
+    background-image: url("/media/hero/command-room.webp");
+    background-position: 58% center;
+    opacity: 0.2;
+  }
+  html:not(.dark) .mh::after {
+    background: linear-gradient(180deg, oklch(1 0 0 / 0.82), oklch(1 0 0 / 0.93));
+  }
+  html:not(.dark) .lp-sheet {
+    border-color: #d8e1ed !important;
+    background: #fff !important;
+    color: #162337 !important;
+    box-shadow: -18px 0 48px rgb(15 23 42 / 0.14);
+  }
+  html:not(.dark) .lp-sheet > button {
+    color: #1d2a3b;
+  }
+  html:not(.dark) .lp-sheet__intro {
+    color: #526176;
+  }
+  html:not(.dark) .lp-sheet__label {
+    color: var(--brass-deep);
+  }
+  html:not(.dark) .lp-sheet-nav a {
+    border-bottom-color: #e4eaf1;
+    color: #17263a;
+  }
+  html:not(.dark) .lp-sheet-nav a svg {
+    color: var(--brass-deep);
+  }
+  .lp-sheet .btn-glass {
+    min-height: 46px;
+    justify-content: center;
+  }
+  .lp-hero {
+    min-height: 640px;
+  }
+  .lp-hero__body {
+    padding-top: 92px;
+    padding-bottom: 20px;
+  }
+  .mh {
+    padding: 16px 14px 72px;
+  }
+  .mh__intro {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  .mh__tabs {
+    margin-bottom: 14px;
   }
 }

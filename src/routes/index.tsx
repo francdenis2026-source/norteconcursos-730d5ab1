@@ -238,6 +238,8 @@ function Index() {
                     <NorteBrand light />
                   </SheetTitle>
                 </SheetHeader>
+                <p className="lp-sheet__intro">Estude com direção para a carreira que você escolheu.</p>
+                <span className="lp-sheet__label">Explorar</span>
                 <nav className="lp-sheet-nav" aria-label="Navegação móvel">
                   {[...NAV, ["PCAC 2026", "#pcac"] as [string, string]].map(([label, href]) => (
                     <SheetClose asChild key={href}>
@@ -248,6 +250,7 @@ function Index() {
                   ))}
                 </nav>
                 <div className="mt-auto grid gap-3 pt-10">
+                  <span className="lp-sheet__label">Acesso rápido</span>
                   <SheetClose asChild>
                     <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
                       Começar grátis <ArrowRight />
