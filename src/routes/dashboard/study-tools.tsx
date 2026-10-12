@@ -43,7 +43,7 @@ import { acreDateKey } from "@/lib/acreTime";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/study-tools")({
-  head: () => ({ meta: [{ title: "Central de estudos | Norte Concurso" }] }),
+  head: () => ({ meta: [{ title: "Foco e revisão | Norte Concurso" }] }),
   component: StudyToolsPage,
 });
 
@@ -230,12 +230,12 @@ function StudyToolsPage() {
         icon={Timer}
         title={
           <>
-            Central de <em>estudos</em>
+            Foco e <em>revisão</em>
           </>
         }
         description={
           ctx.profile
-            ? `Montada para ${ctx.career.name}${ctx.daysToExam !== null && ctx.daysToExam > 0 ? ` · faltam ${ctx.daysToExam} dias para a prova` : ""}. Foco, revisão e checklist das suas disciplinas.`
+            ? `Montada para ${ctx.career.name}${ctx.daysToExam !== null && ctx.daysToExam > 0 ? ` · faltam ${ctx.daysToExam} dias para a prova` : ""}. Cronômetro de foco, cartões de revisão e checklist; o conteúdo vem da Biblioteca de leis e dos Cursos por disciplina.`
             : "Foco, revisão e checklist das disciplinas. Configure o Assistente de estudos para personalizar com o seu concurso."
         }
         actions={
