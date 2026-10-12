@@ -10562,3 +10562,21 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     box-shadow: 0 18px 40px -30px oklch(0.04 0.02 263 / 0.72);
   }
 }
+
+/* Mobile: a hero mostrava a mesma foto duas vezes (::before e ::after), com posições diferentes,
+   o que parecia duas imagens repetidas. A foto fica só no ::before; o ::after vira apenas o degradê. */
+@media (max-width: 767px) {
+  .lp-hero__media::before {
+    background-position: 72% center;
+  }
+  .lp-hero__media::after {
+    opacity: 1;
+    background: linear-gradient(
+      180deg,
+      oklch(0.08 0.025 263 / 0.08) 0%,
+      oklch(0.08 0.025 263 / 0.16) 38%,
+      oklch(0.08 0.025 263 / 0.7) 88%,
+      var(--ink-deep) 100%
+    );
+  }
+}
