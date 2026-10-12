@@ -1,4 +1,5 @@
 import { trainerBoard } from "@/lib/trainerFilters";
+import { needsMissingSupportText } from "@/lib/questionText";
 import { filterSimulatorQuestions } from "@/lib/simulatorFilters";
 import { fetchAllRows, isMissingQuestionTable } from "@/lib/catalog";
 import { isEligibleQuestion } from "@/lib/questionFormat";
@@ -323,7 +324,12 @@ function ProfessionalSimulator() {
           difficulty: null,
           legalBasis: parseLegalBasis(row["legal_basis"]),
         }));
-      setCatalog([...official, ...curated, ...boardQuestions]);
+      // simulado vale nota: questões que citam um texto ausente ficam de fora para não prejudicar o candidato
+      setCatalog(
+        [...official, ...curated, ...boardQuestions].filter(
+          (q) => !needsMissingSupportText({ subject: q.subject, text: q.text, source: q.sourceKind === "curated" ? "curated" : "official" }),
+        ),
+      );
       setHistory((historyResult.data || []) as AttemptHistory[]);
       setRankProfile((rankResult.data || null) as RankProfile | null);
     } catch (error) {
