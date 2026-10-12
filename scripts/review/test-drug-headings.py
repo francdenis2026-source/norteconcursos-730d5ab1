@@ -38,4 +38,9 @@ class DrugHeadings(unittest.TestCase):
   raw='<p>Art. 72. Esta lei entrará em vigor no dia 1º de janeiro de 1942.</p><p>Rio de Janeiro, 3 de outubro de 1941; 120º da Independência.</p><p>GETULIO VARGAS</p><p>Francisco Campos</p>'
   us={u['key']:u for u in m.parse_law(raw.encode(),'contravencoes')}
   self.assertEqual(us['art-72']['text'],'Art. 72. Esta lei entrará em vigor no dia 1º de janeiro de 1942.')
+ def test_environmental_split_caption_and_struck_mp_note_preserve_rules(self):
+  raw='<p>Art. 24. Liquidação forçada.</p><p>CAPÍTULO III</p><p>DA APREENSÃO</p><p>ADMINISTRATIVA OU DE CRIME</p><p>Art. 25. Apreensão.</p><p>§ 1º Animais protegidos.</p><p><strike>§ 2º Regra de MP prejudicada.</strike> Prejudicada</p><p>Art. 26. Ação pública.</p>'
+  us={u['key']:u for u in m.parse_law(raw.encode(),'ambientais')}
+  self.assertEqual(us['art-24']['text'],'Art. 24. Liquidação forçada.')
+  self.assertIn('Animais protegidos',us['art-25']['text']);self.assertNotIn('Prejudicada',us['art-25']['text'])
 if __name__=='__main__':unittest.main()

@@ -561,3 +561,13 @@ test('environmental procedure review distinguishes sursis, entity penalties and 
  assert.match(get('art-27').simples,/comprovada impossibilidade.*não é necessariamente reparação integral/);
  assert.match(get('art-28').simples,/não é sursis.*nem extinção automática/);
 });
+
+test('environmental seizure review preserves current rules and qualifies animal disposal',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ambientais-seizure-2026-10-12.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,2);
+ for(const r of p.units){assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ assert.match(p.units.find(r=>r.unit_key==='art-24').simples,/preponderantemente.*não decorre.*irregularidade isolada/);
+ assert.match(p.units.find(r=>r.unit_key==='art-25').pontos.join(' '),/13.052\/2014.*640.*veda interpretação/s);
+ assert.equal(legalStudyCaveat('ambientais','art-25').literalPractice,false);
+ const c=JSON.parse(readFileSync('docs/library/ambientais-captions-correction-2026-10-12.json','utf8'));assert.equal(c.changes.length,2);
+ for(const r of c.changes){assert.equal(r.expected.body_text,r.body_text+'\n\n'+r.moved_captions.join('\n\n'));assert.ok(r.body_text.startsWith('Art.'));}
+});

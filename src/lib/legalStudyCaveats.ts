@@ -1,5 +1,11 @@
 /** Editorial application notes are separate from the unmodified compiled statute. */
 export function legalStudyCaveat(law: string, key: string) {
+  if (law === 'ambientais' && key === 'art-25') return {
+    title: 'Animais apreendidos: ADPF 640 e destinação adequada',
+    explanation: 'Apreensão em situação de maus-tratos não autoriza abate automático, inclusive por falta de estrutura. Distinguir animal vivo, produtos/subprodutos da fauna e madeira; priorizar habitat quando viável e cumprir guarda, transporte e cuidados legais. Não usar nota de MP prejudicada como regra atual de leilão.',
+    source: 'https://portal.stf.jus.br/processos/detalhe.asp?incidente=5836739',
+    literalPractice: false,
+  };
   const contraventionNotes: Record<string, [string, string, string]> = {
     'art-50': ['Apostas autorizadas e julgamento ainda em acompanhamento', 'Lei 14.790 regula modalidade e autorização específicas; não libera todo jogo de azar. Tema 924/STF tinha julgamento iniciado e pedido de vista na conferência de 12/10/2026. Voto não equivale a tese final; acompanhar andamento antes de afirmar descriminalização.', 'https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4970952&numeroTema=924'],
     'art-51': ['Loterias: leis posteriores e competência', 'Exploração estadual não se confunde com competência legislativa federal. ADPFs 492/493 e legislação lotérica posterior impedem usar o texto antigo para afirmar exclusividade material universal da União ou copiar sanções históricas sem confronto.', 'https://noticias.stf.jus.br/postsnoticias/loteria-e-prestacao-de-servico-publico-e-pode-ser-explorada-pelos-estados/'],

@@ -144,6 +144,9 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
      'Voluntariedade Dolo e culpa',
     }
     for value,unstripped in blocks:
+     # Inspected split chapter caption and annotation left after struck MP text.
+     # Scope to this source; never discard an operative paragraph by length.
+     if slug=='ambientais' and value in {'ADMINISTRATIVA OU DE CRIME','Prejudicada'}:continue
      if slug=='contravencoes' and value=='CAPÍLULO II':value='CAPÍTULO II'
      if slug=='contravencoes' and value in contravention_rubrics:continue
      if slug=='armas' and value in arms_rubrics:
