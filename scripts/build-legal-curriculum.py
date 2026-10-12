@@ -40,6 +40,7 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
     # Keep those boundaries in DOM order rather than attaching their captions
     # to the preceding article or carrying an unrelated section forward.
     block_selector='//p|//h4|//h5' if slug=='drogas' else '//p'
+    if slug=='contravencoes':block_selector='//p|//h2'
     original_paragraphs=list(tree.xpath(block_selector))
     original_text={e:clean(e.text_content()) for e in original_paragraphs}
     original=list(original_text.values())
@@ -57,6 +58,9 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
     units=[];chapter='Disposições iniciais';pending=[];annex=False;hierarchy={};pending_level=0
     levels={'livro':0,'titulo':1,'capitulo':2,'secao':3,'seccao':3,'subsecao':4}
     if slug=='budapeste':levels={'capitulo':0,'secao':1,'seccao':1,'titulo':2,'subsecao':3,'livro':0}
+    if slug=='contravencoes':levels={'parte':0,'capitulo':1}
+    heading_pattern=r'^(?:CAP[IÍ]TULO|T[IÍ]TULO|LIVRO|Seção|Secção|Subseção)\b'
+    if slug=='contravencoes':heading_pattern=r'^(?:PARTE|CAP[IÍ]TULO|DISPOSIÇÕES FINAIS)\b'
     def finish_heading():
      for level in list(hierarchy):
       if level>=pending_level:del hierarchy[level]
@@ -67,7 +71,81 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
     # Keep rubrics inside an article (e.g. "Tentativa" within art. 14).
     next_article_rubrics={'Desistência voluntária e arrependimento eficaz','Conversão das penas restritivas de direitos','Suspensão da execução da multa','Infanticídio','Abandono de incapaz','Sedução'}
     arms_rubrics={'Posse irregular de arma de fogo de uso permitido','Omissão de cautela','Porte ilegal de arma de fogo de uso permitido','Disparo de arma de fogo','Posse ou porte ilegal de arma de fogo de uso restrito','Comércio ilegal de arma de fogo','Tráfico internacional de arma de fogo'}
+    contravention_rubrics={
+     'Abuso na prática da aviação',
+     'Anúncio de meio abortivo ou anticoncepcional',
+     'Aplicação das regras gerais do Código Penal',
+     'Arremesso ou colocação perigosa',
+     'Associação secreta',
+     'Ação penal',
+     'Bebidas alcoólicas',
+     'Conversão da multa em prisão simples',
+     'Crueldade contra animais',
+     'Desabamento de construção',
+     'Direção não licenciada de aeronave',
+     'Direção perigosa de veículo na via pública',
+     'Disparo de arma de fogo',
+     'Distribuição ou transporte de listas ou avisos',
+     'Embriaguez',
+     'Emissão de fumaça, vapor ou gás',
+     'Erro de direito',
+     'Exercício ilegal de profissão ou atividade',
+     'Exercício ilegal do comércio de coisas antigas e obras de arte',
+     'Exibição ou guarda de lista de sorteio',
+     'Exploração da credulidade pública',
+     'Fabrico, comércio, ou detenção de armas ou munição',
+     'Falso alarma',
+     'Falta de habilitação para dirigir veículo',
+     'Imitação de moeda para propaganda',
+     'Importunação ofensiva ao pudor',
+     'Impressão de bilhetes, lista ou anúncios',
+     'Indevida custódia de doente mental',
+     'Instrumento de emprego usual na prática de furto',
+     'Internação em colônia agrícola ou em instituto de trabalho, de reeducação ou de ensino profissional',
+     'Internação em manicômio judiciário ou em casa de custódia e tratamento',
+     'Internação irregular em estabelecimento psiquiátrico',
+     'Inumação ou exumação de cadáver',
+     'Jogo de azar',
+     'Jogo do bicho',
+     'Limites das penas',
+     'Loteria estadual',
+     'Loteria estrangeira',
+     'Loteria não autorizada',
+     'Matrícula ou escrituração de indústria e profissão',
+     'Medidas de segurança',
+     'Mendicância',
+     'Omissão de cautela na guarda ou condução de animais',
+     'Omissão de comunicação de crime',
+     'Penas acessórias',
+     'Penas principais',
+     'Perigo de desabamento',
+     'Perturbação da tranquilidade',
+     'Perturbação do trabalho ou do sossego alheios',
+     'Porte de arma',
+     'Posse não justificada de instrumento de emprego usual na prática de furto',
+     'Presunção de periculosidade',
+     'Prisão simples',
+     'Proibição de atividade remunerada a estrangeiro',
+     'Provocação de tumulto. Conduta inconveniente',
+     'Publicidade de sorteio',
+     'Recusa de dados sobre a própria identidade ou qualificação',
+     'Recusa de moeda de curso legal',
+     'Reincidência',
+     'Simulação da qualidade de funcionário',
+     'Sinais de perigo',
+     'Suspensão condicional da pena de prisão simples',
+     'Tentativa',
+     'Territorialidade',
+     'Uso ilegítimo de uniforme ou distintivo',
+     'Vadiagem',
+     'Vias de fato',
+     'Violação de lugar ou objeto',
+     'Violação do privilégio postal da União',
+     'Voluntariedade Dolo e culpa',
+    }
     for value,unstripped in blocks:
+     if slug=='contravencoes' and value=='CAPÍLULO II':value='CAPÍTULO II'
+     if slug=='contravencoes' and value in contravention_rubrics:continue
      if slug=='armas' and value in arms_rubrics:
       # Inspected standalone rubrics identify the following offense. They are
       # not a normative paragraph of the preceding article (including 11-A).
@@ -88,7 +166,7 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
       inactive_article=True
      if current_head and not value.startswith(('“','"')):inactive_article=False
      if not value:continue
-     if slug=='drogas' and re.match(r'^(?:CAP[IÍ]TULO|T[IÍ]TULO|LIVRO|Seção|Secção|Subseção)\b',value,re.I):
+     if slug in {'drogas','contravencoes'} and re.match(heading_pattern,value,re.I):
       # A new structural heading ends the preceding revoked article too.
       inactive_article=False
      if inactive_article:continue
@@ -96,7 +174,7 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
       if slug!='budapeste':break
       if value.startswith('Brasília,'):continue
      if re.match(r'^(?:ANEXO|CONVENÇÃO SOBRE)',value,re.I):annex=True
-     if re.match(r'^(?:CAP[IÍ]TULO|T[IÍ]TULO|LIVRO|Seção|Secção|Subseção)\b',value,re.I):
+     if re.match(heading_pattern,value,re.I):
       if pending:chapter=finish_heading()
       token=value.split()[0].lower().translate(str.maketrans('íãç','iac'))
       pending_level=levels.get(token,0);pending=[value];continue

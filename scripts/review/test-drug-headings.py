@@ -20,4 +20,18 @@ class DrugHeadings(unittest.TestCase):
   self.assertEqual(us['art-11-a']['text'],'Art. 11-A. Honorários.')
   self.assertNotIn('Omissão de cautela',us['art-12']['text'])
   self.assertIn('um a três anos',us['art-12']['text']);self.assertIn('um a dois anos',us['art-13']['text'])
+ def test_contravention_parts_and_typo_preserve_penalties(self):
+  raw='<h2>PARTE GERAL</h2><p>Art. 1. Regra geral.</p><p>Territorialidade</p><p>Art. 2. Território nacional.</p><h2>PARTE ESPECIAL</h2><p>CAPÍTULO I</p><p>DAS CONTRAVENÇÕES REFERENTES À PESSOA</p><p>Art. 23. Custódia.</p><p>Pena – prisão simples de quinze dias a três meses.</p><p>CAPÍLULO II</p><p>DAS CONTRAVENÇÕES REFERENTES AO PATRIMÔNIO</p><p>Instrumento de emprego usual na prática de furto</p><p>Art. 24. Fabricar gazua.</p><p>Pena – prisão simples de seis meses a dois anos e multa.</p>'
+  us={u['key']:u for u in m.parse_law(raw.encode(),'contravencoes')}
+  self.assertEqual(us['art-1']['text'],'Art. 1. Regra geral.')
+  self.assertEqual(us['art-1']['chapter'],'PARTE GERAL')
+  self.assertNotIn('PATRIMÔNIO',us['art-23']['text'])
+  self.assertIn('quinze dias a três meses',us['art-23']['text'])
+  self.assertEqual(us['art-24']['chapter'],'PARTE ESPECIAL / CAPÍTULO II — DAS CONTRAVENÇÕES REFERENTES AO PATRIMÔNIO')
+  self.assertIn('seis meses a dois anos e multa',us['art-24']['text'])
+ def test_contravention_revocation_does_not_hide_following_chapter(self):
+  raw='<h2>PARTE ESPECIAL</h2><p>CAPÍTULO I</p><p>DAS CONTRAVENÇÕES REFERENTES À PESSOA</p><p>Art. 26. Regra atual.</p><p><strike>Art. 27. Revogado.</strike></p><p>CAPÍTULO III</p><p>DAS CONTRAVENÇÕES REFERENTES À INCOLUMIDADE PÚBLICA</p><p>Disparo de arma de fogo</p><p>Art. 28. Regra seguinte.</p>'
+  us={u['key']:u for u in m.parse_law(raw.encode(),'contravencoes')}
+  self.assertIn('CAPÍTULO III',us['art-28']['chapter'])
+  self.assertEqual(us['art-26']['text'],'Art. 26. Regra atual.')
 if __name__=='__main__':unittest.main()

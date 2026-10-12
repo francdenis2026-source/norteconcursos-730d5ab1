@@ -480,3 +480,22 @@ test('Maria final review does not teach historical amendments as current host la
  assert.equal(new Set(packs.flatMap(pack=>pack.units.map(r=>r.unit_key))).size,56);
  for(const key of ['art-40-a','art-41','art-42','art-43','art-44','art-45']) assert.equal(legalStudyCaveat('maria-penha',key).literalPractice,false);
 });
+
+test('contravention general review separates special rules, historic measures and current law',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-contravencoes-general-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,22);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-4').simples,/tentativa.*não é punível/);
+ assert.match(get('art-6').pontos.join(' '),/exatamente quinze/);
+ assert.match(get('art-7').pontos.join(' '),/estrangeira por contravenção não/);
+ assert.match(get('art-9').simples,/9.268\/1996.*inadimplemento não autoriza/);
+ assert.match(get('art-14').simples,/sem tratar.*presunção automática/);
+ assert.match(get('art-59').atencao.join(' '),/não atribuir.*revogação expressa/);
+ for(const key of ['art-3','art-9','art-10','art-12','art-13','art-14','art-15','art-16','art-17','art-38','art-59','art-64'])assert.equal(legalStudyCaveat('contravencoes',key).literalPractice,false);
+ const moved=JSON.parse(readFileSync('docs/library/contravencoes-structural-corrections-2026-10-12.json','utf8'));
+ assert.equal(moved.changes.length,64);assert.equal(moved.additions.length,0);
+ for(const r of moved.changes)assert.equal(r.expected.body_text,r.body_text+'\n\n'+r.moved_captions.join('\n\n'));
+ const chapters=JSON.parse(readFileSync('docs/library/contravencoes-chapter-corrections-2026-10-12.json','utf8'));
+ assert.equal(chapters.units.length,66);assert.match(chapters.units.find(r=>r.unit_key==='art-24').chapter,/PATRIMÔNIO/);
+});

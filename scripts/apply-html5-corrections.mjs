@@ -15,7 +15,15 @@ const result={dry_run:mode==='--dry-run',corrected:0,added:0,excluded:0,preserve
 if(!result.dry_run){
  const project=process.env.TASK_SUPABASE_PROJECT,key=process.env.TASK_SUPABASE_KEY;
  if(project!=='gkwphadbveiyjcwiiizw'||!key)throw Error('Defina projeto e chave na sessão');
- async function request(path,method='GET',body,prefer){const r=await fetch(`https://${project}.supabase.co/rest/v1/${path}`,{method,headers:{...sessionAuthHeaders(key),'Content-Type':'application/json',...(prefer?{Prefer:prefer}:{})},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(30000)});if(!r.ok)throw Error(`HTTP ${r.status}: ${path.split('?')[0]}`);const text=await r.text();return text?JSON.parse(text):null;}
+ async function request(path,method='GET',body,prefer){
+  let r;
+  for(let attempt=0;;attempt++){
+   try{r=await fetch(`https://${project}.supabase.co/rest/v1/${path}`,{method,headers:{...sessionAuthHeaders(key),'Content-Type':'application/json',...(prefer?{Prefer:prefer}:{})},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(30000)});break;}
+   catch(error){if(method!=='GET'||attempt===2)throw error;}
+  }
+  if(!r.ok)throw Error(`HTTP ${r.status}: ${path.split('?')[0]}`);
+  const text=await r.text();return text?JSON.parse(text):null;
+ }
  const courses=await request('legal_courses?select=*&status=eq.active'),current=new Map(),existingAdditions=new Set();
  for(const law of pack.laws){
   const c=courses.find(c=>c.id===law.expected.id);if(!c||c.source_url!==law.source_url||c.source_sha256!==law.expected.source_sha256||c.syllabus_topic_id!==law.expected.syllabus_topic_id)throw Error('Fonte ou vínculo alterado');
