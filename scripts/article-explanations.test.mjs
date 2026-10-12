@@ -400,3 +400,23 @@ test('arms registration review distinguishes institutional permissions and curre
  assert.match(get('art-11-a').simples,/R\$ 80 mais munição/);
  for(const key of ['art-3','art-5','art-6','art-7-a','art-9']) assert.equal(legalStudyCaveat('armas',key).literalPractice,false);
 });
+
+test('arms criminal review prevents unconstitutional custody and sentencing conflation',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-arms-crimes-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,12);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-12').atencao.join(' '),/890.*2026.*herdeiro.*próprio registro/s);
+ assert.match(get('art-13').pontos.join(' '),/24 horas/);
+ assert.match(get('art-14').atencao.join(' '),/3112.*inconstitucional/);
+ assert.match(get('art-15').pontos.join(' '),/subsidiariedade/);
+ assert.match(get('art-16').atencao.join(' '),/668.*não é hedionda/);
+ assert.match(get('art-17').pontos.join(' '),/criminal preexistente/);
+ assert.match(get('art-18').pontos.join(' '),/a qualquer título/);
+ assert.match(get('art-21-a').pontos.join(' '),/25\/03\/2026.*não retroage/);
+ assert.match(get('art-21-a').atencao.join(' '),/1259.*2024.*2026.*reavaliar/);
+ for(const key of ['art-12','art-14','art-15','art-16','art-21','art-21-a']) assert.equal(legalStudyCaveat('armas',key).literalPractice,false);
+ const captions=JSON.parse(readFileSync('docs/library/arms-caption-corrections-2026-10-12.json','utf8'));
+ assert.equal(captions.changes.length,7);assert.equal(captions.additions.length,0);
+ for(const r of captions.changes) assert.equal(r.expected.body_text,r.body_text+'\n\n'+r.moved_captions.join('\n\n'));
+});

@@ -66,7 +66,12 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
     # Inspected CP rubrics belong to the next article, not the preceding body.
     # Keep rubrics inside an article (e.g. "Tentativa" within art. 14).
     next_article_rubrics={'Desistência voluntária e arrependimento eficaz','Conversão das penas restritivas de direitos','Suspensão da execução da multa','Infanticídio','Abandono de incapaz','Sedução'}
+    arms_rubrics={'Posse irregular de arma de fogo de uso permitido','Omissão de cautela','Porte ilegal de arma de fogo de uso permitido','Disparo de arma de fogo','Posse ou porte ilegal de arma de fogo de uso restrito','Comércio ilegal de arma de fogo','Tráfico internacional de arma de fogo'}
     for value,unstripped in blocks:
+     if slug=='armas' and value in arms_rubrics:
+      # Inspected standalone rubrics identify the following offense. They are
+      # not a normative paragraph of the preceding article (including 11-A).
+      continue
      if slug=='codigo-penal':
       rubric=re.sub(r'\s*\((?:Redação dada|Incluído|Vide).*$', '',value).strip()
       if rubric in next_article_rubrics:continue

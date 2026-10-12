@@ -14,4 +14,10 @@ class DrugHeadings(unittest.TestCase):
  def test_new_heading_after_removed_article_is_not_skipped(self):
   us=self.parse('<p>Art. 1. Atual.</p><p><strike>Art. 2. Revogado.</strike></p><p>Pena antiga.</p><p>TÍTULO II</p><p>OUTRAS DISPOSIÇÕES</p><p>Art. 3. Atual seguinte.</p>')
   self.assertEqual(us['art-1']['text'],'Art. 1. Atual.');self.assertEqual(us['art-3']['chapter'],'TÍTULO II — OUTRAS DISPOSIÇÕES');self.assertEqual(us['art-3']['text'],'Art. 3. Atual seguinte.')
+ def test_arms_crime_caption_does_not_become_previous_penalty(self):
+  raw='<p>Art. 11-A. Honorários.</p><p>Posse irregular de arma de fogo de uso permitido</p><p>Art. 12. Possuir arma irregular.</p><p>Pena – detenção de um a três anos.</p><p>Omissão de cautela</p><p>Art. 13. Deixar de observar cautelas.</p><p>Pena – detenção de um a dois anos.</p>'
+  us={u['key']:u for u in m.parse_law(raw.encode(),'armas')}
+  self.assertEqual(us['art-11-a']['text'],'Art. 11-A. Honorários.')
+  self.assertNotIn('Omissão de cautela',us['art-12']['text'])
+  self.assertIn('um a três anos',us['art-12']['text']);self.assertIn('um a dois anos',us['art-13']['text'])
 if __name__=='__main__':unittest.main()

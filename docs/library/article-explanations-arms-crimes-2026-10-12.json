@@ -1,0 +1,805 @@
+{
+  "version": "2026-10-12-armas-crimes-targeted",
+  "checked_at": "2026-10-12T17:31:28.880523+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "armas",
+      "title": "Lei 10.826/2003 — Estatuto do Desarmamento",
+      "units": 12,
+      "scope_type": "targeted_correction",
+      "course_current_units": 41,
+      "target_unit_keys": [
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-15",
+        "art-16",
+        "art-17",
+        "art-18",
+        "art-19",
+        "art-20",
+        "art-21",
+        "art-21-a",
+        "art-11-a"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "source_sha256": "31c397ac2b5ec75c49ee6f587d3fac364e2a22577b19d954990d26cd1a49ba62",
+      "source_checked_at": "2026-10-12T16:18:16.577539+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-12",
+      "unit_id": "9953bcf2-6e4f-5893-a4fc-d43bec22e5fe",
+      "content_sha256": "df1e3c49c43d7a47917c31d7ebae99c1b4afd4891b033474961f1ba89b931897",
+      "simples": "Posse irregular de arma, acessório ou munição de uso permitido na residência/dependências ou no trabalho do titular/responsável legal: detenção de um a três anos e multa.",
+      "pontos": [
+        "Local e condição do agente diferenciam posse do art. 12 e porte do art. 14.",
+        "Objeto não é só arma: acessório e munição também constam do tipo.",
+        "Arma desmuniciada não torna a conduta automaticamente atípica; crime de perigo abstrato."
+      ],
+      "atencao": [
+        "STJ, Informativo 890, REsp 2.201.660/RS, julgado em 19/05/2026: arma em nome de terceiro falecido, com registro vencido, não se regulariza pela mera condição de herdeiro.",
+        "Distinguir vencimento do próprio registro de arma regularmente adquirida: STJ trata essa posse como irregularidade administrativa. Não estender a terceiros/herdeiros, ao porte na rua ou à ausência original de registro.",
+        "Pouca munição sem arma apta pode excepcionalmente ser insignificante conforme contexto; não é atipicidade automática por quantidade nem regra para arma desmuniciada."
+      ],
+      "exemplo": "Pessoa mantém arma permitida nunca registrada em casa: examinar art. 12, com pena de detenção e multa. Variação: herdou arma registrada em nome do pai falecido e não regularizou a transferência; a expectativa hereditária não equivale ao próprio registro apenas vencido.",
+      "prova": [
+        "Toda arma desmuniciada exclui o art. 12? Não; o STJ reconhece perigo abstrato.",
+        "Ser herdeiro regulariza automaticamente arma de terceiro falecido? Não; o Informativo 890 exige observar a regularização própria."
+      ],
+      "termos": [
+        "residência",
+        "titular ou responsável legal",
+        "detenção",
+        "um a três anos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/15092024-Porte--posse--crime-os-delitos-relacionados-as-armas-de-fogo--segundo-o-STJ.aspx",
+        "https://processo.stj.jus.br/SCON/GetPDFINFJ?edicao=0890",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=08%2F04%2F2026&num_registro=202403862326",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2023/28082023-Jurisprudencia-em-Teses-aborda-principio-da-insignificancia-.aspx"
+      ],
+      "expected": {
+        "unit_id": "9953bcf2-6e4f-5893-a4fc-d43bec22e5fe",
+        "content_sha256": "3759a56258146bbe63cbe465cf98bdf3faae923979f3775a3353f990d7fe17eb",
+        "simples": "Posse irregular de arma de fogo de uso permitido: possuir ou manter sob sua guarda arma de fogo, acessório ou munição, de uso permitido, em desacordo com determinação legal ou regulamentar, no interior de sua residência ou dependência desta, ou no seu local de trabalho, desde que seja o titular ou o responsável legal do estabelecimento ou empresa. Pena: detenção de 1 a 3 anos e multa.",
+        "pontos": [
+          "Posse de arma, acessório ou munição de USO PERMITIDO.",
+          "Em desacordo com a lei, na residência, dependência ou local de trabalho do titular.",
+          "Detenção de 1 a 3 anos e multa."
+        ],
+        "atencao": [
+          "POSSE (dentro de casa ou do trabalho) × PORTE (fora): a posse é o art. 12; o porte, o art. 14.",
+          "Pena de DETENÇÃO."
+        ],
+        "exemplo": "Manter em casa pistola de uso permitido sem registro configura posse irregular.",
+        "prova": [
+          "Assertiva que aplica o art. 12 a quem anda com a arma na rua erra: seria porte ilegal (art. 14)."
+        ],
+        "termos": [
+          {
+            "termo": "Posse irregular",
+            "significado": "Manter arma sem registro dentro de casa ou do local de trabalho."
+          }
+        ],
+        "remissoes": [
+          "Art. 14",
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-13",
+      "unit_id": "ddb93966-82d9-5a41-8caf-dd2924bd654a",
+      "content_sha256": "defa5fb0f9a6021ee291fa8af8a59743b26662df5ac141dee67f7a8770b82aa4",
+      "simples": "Omissão de cautela: deixar de impedir que menor de 18 anos ou pessoa descrita no tipo se apodere de arma sob posse/propriedade do agente. Pena: detenção de um a dois anos e multa. O parágrafo único pune omissão de registro e comunicação de extravio pela empresa responsável.",
+      "pontos": [
+        "Caput: observar cautelas necessárias para impedir acesso à arma; não exige que a pessoa vulnerável dispare.",
+        "Parágrafo único: proprietário/diretor responsável de empresa de segurança e transporte de valores deve registrar ocorrência e comunicar à PF perda, furto, roubo ou extravio de arma, acessório ou munição.",
+        "Prazo expresso: primeiras 24 horas depois do fato; são providências distintas, não só aviso interno."
+      ],
+      "atencao": [
+        "Distinguir falta de cautela de entrega voluntária de arma a criança/adolescente, conduta do art. 16, §1º, V.",
+        "Não transportar a lista de objetos do parágrafo único para o caput sem observar seu texto. Responsabilidade penal exige seus elementos; não presumir condenação por qualquer incidente."
+      ],
+      "exemplo": "Adolescente se apodera de arma deixada sem cautelas necessárias pelo proprietário: examinar o caput, mesmo sem disparo. Variação: responsável empresarial sabe do extravio e omite ocorrência e comunicação à PF no prazo legal; examinar o parágrafo único.",
+      "prova": [
+        "O caput exige que o menor efetue disparo? Não; a apropriação e a omissão descritas devem ser examinadas.",
+        "Só aviso ao supervisor substitui ocorrência policial e comunicação à PF? Não; são exigências próprias do parágrafo único."
+      ],
+      "termos": [
+        "menor de 18",
+        "cautelas necessárias",
+        "24 horas",
+        "Polícia Federal"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ddb93966-82d9-5a41-8caf-dd2924bd654a",
+        "content_sha256": "9eb2528e210fca046954cc9175b23cb9282783054e546f0b4249d5a50e5136e1",
+        "simples": "Omissão de cautela: deixar de observar as cautelas necessárias para impedir que menor de 18 anos ou pessoa portadora de deficiência mental se apodere de arma de fogo que esteja sob sua posse ou que seja de sua propriedade. Pena: detenção de 1 a 2 anos e multa. Nas mesmas penas incorrem o proprietário ou diretor responsável de empresa de segurança e transporte de valores que deixarem de registrar ocorrência policial e de comunicar à Polícia Federal perda, furto, roubo ou outras formas de extravio de arma de fogo, acessório ou munição sob sua guarda, nas primeiras 24 horas depois de ocorrido o fato.",
+        "pontos": [
+          "Deixar de tomar cautelas para impedir que menor de 18 anos ou pessoa com deficiência mental se apodere da arma.",
+          "Detenção de 1 a 2 anos e multa.",
+          "Empresa de segurança: não comunicar o extravio à PF em 24 horas."
+        ],
+        "atencao": [
+          "Crime de omissão (culposo na essência).",
+          "Prazo de 24 horas para a empresa comunicar o extravio."
+        ],
+        "exemplo": "O pai deixa a arma ao alcance do filho menor, que se apodera dela.",
+        "prova": [
+          "Assertiva que exige que o menor use a arma para configurar o art. 13 erra: basta a omissão de cautela e o apoderamento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-14",
+      "unit_id": "ebc3d845-be44-5c85-91ae-589fd26bfe41",
+      "content_sha256": "5bb9a2ea685fdaab43f231cfc5f2f6394ea9fb11f2d8c2f9510116a88c7ecd43",
+      "simples": "Porte ilegal de arma, acessório ou munição de uso permitido reúne várias condutas sem autorização e em desacordo com norma legal/regulamentar. Pena: reclusão de dois a quatro anos e multa.",
+      "pontos": [
+        "Portar não é o único verbo: adquirir, fornecer, receber, transportar, ceder gratuitamente, emprestar, remeter, empregar, guardar e ocultar também estão previstos.",
+        "Registro não substitui porte; transporte fora das condições autorizadas demanda enquadramento próprio.",
+        "Diferenciar art. 12 pelo local e situação do titular; arma restrita/proibida e sinais adulterados exigem examinar art. 16."
+      ],
+      "atencao": [
+        "ADI 3112/STF: o parágrafo único de inafiançabilidade foi declarado inconstitucional. Não memorizar proibição de fiança nem sua exceção de registro como regra vigente.",
+        "Arma desmuniciada não afasta automaticamente tipicidade. Pequena munição sem arma exige análise excepcional do contexto; não aplicar bagatela por contagem isolada."
+      ],
+      "exemplo": "Pessoa leva na rua arma permitida registrada, sem autorização de porte: o registro não resolve a irregularidade do porte. Variação: transporte atende autorização específica de trânsito e suas condições; não concluir crime apenas porque saiu da residência.",
+      "prova": [
+        "Ter registro autoriza automaticamente andar armado? Não; registro e porte são distintos.",
+        "A vedação do parágrafo único pode ser aplicada isoladamente hoje? Não; foi afastada na ADI 3112."
+      ],
+      "termos": [
+        "uso permitido",
+        "ainda que gratuitamente",
+        "reclusão",
+        "dois a quatro anos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-declara-inconstitucionalidade-de-tres-dispositivos-do-estatuto-do-desarmamento/",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/15092024-Porte--posse--crime-os-delitos-relacionados-as-armas-de-fogo--segundo-o-STJ.aspx"
+      ],
+      "expected": {
+        "unit_id": "ebc3d845-be44-5c85-91ae-589fd26bfe41",
+        "content_sha256": "2e697e00ca8ea21a2ababa7b51b1c14c4848c9d66732d2974dc31c2578ac9c8f",
+        "simples": "Porte ilegal de arma de fogo de uso permitido: portar, deter, adquirir, fornecer, receber, ter em depósito, transportar, ceder, ainda que gratuitamente, emprestar, remeter, empregar, manter sob guarda ou ocultar arma de fogo, acessório ou munição, de uso permitido, sem autorização e em desacordo com determinação legal ou regulamentar. Pena: reclusão de 2 a 4 anos e multa. O crime é inafiançável, salvo quando a arma de fogo estiver registrada em nome do agente.",
+        "pontos": [
+          "Tipo misto alternativo com 14 núcleos.",
+          "Arma, acessório ou munição de USO PERMITIDO.",
+          "Reclusão de 2 a 4 anos e multa.",
+          "Inafiançável, salvo arma registrada em nome do agente."
+        ],
+        "atencao": [
+          "Crime de perigo abstrato: dispensa a demonstração de perigo concreto.",
+          "Arma desmuniciada também configura o crime (entendimento do STF e do STJ).",
+          "O STF julgou inconstitucional a vedação de fiança e liberdade provisória em ação direta de inconstitucionalidade."
+        ],
+        "exemplo": "Portar pistola registrada sem porte, na rua, caracteriza o art. 14.",
+        "prova": [
+          "Assertiva que exige perigo concreto à incolumidade pública para o art. 14 erra: é crime de perigo abstrato."
+        ],
+        "termos": [
+          {
+            "termo": "Crime de perigo abstrato",
+            "significado": "O perigo é presumido pela lei, sem necessidade de prova."
+          }
+        ],
+        "remissoes": [
+          "Art. 12",
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-15",
+      "unit_id": "0bc33e91-0f13-5d01-814e-51c2a0604703",
+      "content_sha256": "096913a6fd5c2264e1414e7539baa376efe8a79cb74381ace8671fcbed12f1ff",
+      "simples": "Disparar arma ou acionar munição em lugar habitado, adjacências, via pública ou em sua direção, sem finalidade de outro crime: reclusão de dois a quatro anos e multa.",
+      "pontos": [
+        "Os lugares e a direção do disparo são elementos: não ensinar qualquer disparo em qualquer ambiente como este delito.",
+        "A cláusula de ausência de finalidade de outro crime estabelece subsidiariedade.",
+        "Não é necessário ferimento para preencher o tipo, mas é necessário examinar todos os seus elementos."
+      ],
+      "atencao": [
+        "ADI 3112/STF: inconstitucional a inafiançabilidade do parágrafo único. Isso não impede prisão cautelar devidamente fundamentada ou regras próprias de fiança.",
+        "Disparo dirigido à prática de homicídio não vira automaticamente crime autônomo do art. 15; analisar o delito-fim e a subsidiariedade, sem presumir absolvição."
+      ],
+      "exemplo": "Agente dispara para comemorar em via pública, sem finalidade de outro delito: examinar art. 15, mesmo sem atingir alguém. Variação: atira contra vítima com intenção homicida; a cláusula de subsidiariedade impede ignorar o crime-fim.",
+      "prova": [
+        "É indispensável atingir uma vítima para o art. 15? Não; o tipo não exige resultado de lesão.",
+        "O artigo se aplica automaticamente se o disparo visa outro crime? Não; há cláusula expressa de subsidiariedade."
+      ],
+      "termos": [
+        "lugar habitado",
+        "em direção a ela",
+        "desde que",
+        "outro crime"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-declara-inconstitucionalidade-de-tres-dispositivos-do-estatuto-do-desarmamento/"
+      ],
+      "expected": {
+        "unit_id": "0bc33e91-0f13-5d01-814e-51c2a0604703",
+        "content_sha256": "dcd1bfbe610b521628751271a16afac55ad58f638943fb54902a4bd186c246e6",
+        "simples": "Disparo de arma de fogo: disparar arma de fogo ou acionar munição em lugar habitado ou em suas adjacências, em via pública ou em direção a ela, desde que essa conduta não tenha como finalidade a prática de outro crime. Pena: reclusão de 2 a 4 anos e multa. O crime é inafiançável.",
+        "pontos": [
+          "Disparar ou acionar munição em lugar habitado, adjacências ou via pública.",
+          "Subsidiário: não pode ter finalidade de outro crime.",
+          "Reclusão de 2 a 4 anos e multa.",
+          "Inafiançável."
+        ],
+        "atencao": [
+          "Crime SUBSIDIÁRIO: se o disparo visava a outro crime (por exemplo, homicídio), aplica-se este.",
+          "Perigo abstrato."
+        ],
+        "exemplo": "Dar tiros para o alto numa rua movimentada, sem intenção de ferir ninguém, é disparo de arma de fogo.",
+        "prova": [
+          "Assertiva que aplica o art. 15 mesmo quando o disparo visava matar alguém erra: o tipo é subsidiário."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-16",
+      "unit_id": "ee6032ce-5da9-51d4-a687-8eb88dc12619",
+      "content_sha256": "4af4e6f7ba02f31aebd014da7d6da2327d6df471ddffc501168bfad969025818",
+      "simples": "Posse/porte e demais condutas com arma, acessório ou munição de uso restrito: reclusão de três a seis anos e multa. Há seis hipóteses equiparadas. Quando envolver arma de uso proibido, o §2º prevê reclusão de quatro a doze anos.",
+      "pontos": [
+        "I: suprimir/alterar identificação de arma ou artefato. II: modificar características para uso proibido/restrito ou induzir autoridade, perito ou juiz a erro.",
+        "III: explosivo/incendiário irregular. IV: portar/possuir/adquirir/transportar/fornecer arma com sinal raspado, suprimido ou adulterado.",
+        "V: vender/entregar/fornecer, inclusive gratuitamente, arma, acessório, munição ou explosivo a criança/adolescente. VI: produção, recarga, reciclagem não autorizada ou adulteração de munição/explosivo.",
+        "§2º menciona arma de fogo de uso proibido; não ampliar automaticamente a todo objeto ou confundir com uso restrito."
+      ],
+      "atencao": [
+        "Lei 13.964/2019 separou uso restrito (3–6) e arma proibida (4–12). Classificação depende de regulamentação atual, não só de um nome de calibre.",
+        "Súmula 668/STJ: arma de uso permitido com identificação adulterada configura hipótese penal específica, mas não é hedionda por esse motivo.",
+        "Lei 8.072 atual inclui posse/porte de arma de uso proibido; não ensinar todo art. 16 ou todo uso restrito como hediondo. Hediondez não se confunde com tipicidade e pena."
+      ],
+      "exemplo": "Pessoa possui arma de uso permitido com numeração raspada: examinar §1º, IV, sem presumir hediondez. Variação: a conduta envolve arma classificada como proibida; examinar §2º e o rol atual da Lei 8.072.",
+      "prova": [
+        "Arma permitida com numeração raspada é sempre hedionda? Não; a Súmula 668 afasta essa conclusão.",
+        "Uso restrito e arma de uso proibido têm a mesma faixa de pena? Não; caput prevê 3–6 anos e §2º, 4–12 anos."
+      ],
+      "termos": [
+        "uso restrito",
+        "uso proibido",
+        "nas mesmas penas",
+        "quatro a doze anos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+        "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&h=true&i=9&l=10&ordenacao=-%40NUM&p=false",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=17%2F08%2F2023&num_registro=202202462520"
+      ],
+      "expected": {
+        "unit_id": "ee6032ce-5da9-51d4-a687-8eb88dc12619",
+        "content_sha256": "e5c374443a0d61cafe608bf184420eec79b15bb76231e683e423c7d9ff43cb73",
+        "simples": "Posse ou porte ilegal de arma de fogo de uso restrito: possuir, deter, portar, adquirir, fornecer, receber, ter em depósito, transportar, ceder, emprestar, remeter, empregar, manter sob guarda ou ocultar arma de fogo, acessório ou munição de uso restrito, sem autorização. Pena: reclusão de 3 a 6 anos e multa. Nas mesmas penas incorre quem suprime ou altera marca, numeração ou sinal de identificação; modifica as características da arma para torná-la equivalente a de uso proibido ou restrito ou para induzir a erro autoridade, perito ou juiz; possui, detém, fabrica ou emprega artefato explosivo ou incendiário sem autorização; porta, possui, adquire, transporta ou fornece arma com numeração raspada, suprimida ou adulterada; vende, entrega ou fornece arma, acessório, munição ou explosivo a criança ou adolescente; e produz, recarrega ou recicla, sem autorização, ou adultera munição ou explosivo. Se envolver arma de uso proibido, a pena é reclusão de 4 a 12 anos.",
+        "pontos": [
+          "Posse e porte de arma, acessório ou munição de USO RESTRITO: reclusão de 3 a 6 anos e multa.",
+          "§1º: arma raspada ou adulterada; artefato explosivo; venda a criança ou adolescente; recarga de munição.",
+          "§2º: arma de USO PROIBIDO: reclusão de 4 a 12 anos."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 13.964, de 2019 (Pacote Anticrime); o §2º elevou a pena para arma de uso proibido.",
+          "Equiparado a hediondo quando o objeto é arma de uso PROIBIDO (parágrafo único do art. 1º da Lei dos Crimes Hediondos).",
+          "Posse e porte de uso restrito: MESMA pena (não distingue posse de porte)."
+        ],
+        "exemplo": "Quem guarda em casa um fuzil de uso restrito sem autorização responde pelo art. 16.",
+        "prova": [
+          "Assertiva que aplica ao uso restrito a pena de detenção do art. 12 erra: é reclusão de 3 a 6 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14",
+          "Art. 17"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-17",
+      "unit_id": "8e91c8ce-d0ed-508f-8027-c56dc49650fd",
+      "content_sha256": "daccff5881a871120a362edea4094abab57ba28e4e789eeb66d9c1bddee92bf9",
+      "simples": "Comércio ilegal: condutas com arma, acessório ou munição no exercício comercial/industrial, em proveito próprio ou alheio e sem autorização ou em desacordo com normas. Pena atual: reclusão de seis a doze anos e multa.",
+      "pontos": [
+        "Inclui aquisição, aluguel, transporte, desmontagem, montagem, remontagem, adulteração, venda e exposição à venda.",
+        "§1º equipara serviços, fabricação/comércio irregular ou clandestino, inclusive em residência. Endereço doméstico não elimina a atividade comercial.",
+        "§2º: entrega/venda irregular a policial disfarçado exige elementos probatórios razoáveis de conduta criminal preexistente."
+      ],
+      "atencao": [
+        "Lei 13.964/2019 elevou a pena e inseriu disciplina do policial disfarçado. Não confundir com indução policial que cria o crime ou ignorar a preexistência.",
+        "Comércio ilegal é hediondo no rol atual, tentado ou consumado. Distinguir de cessão ocasional sem atividade comercial/industrial, cujo enquadramento demanda os demais tipos.",
+        "Não retroagir a pena mais gravosa a fato anterior à vigência."
+      ],
+      "exemplo": "Agente mantém comércio clandestino de armas em casa: residência não afasta art. 17. Variação: policial disfarçado recebe arma em operação; verificar elementos razoáveis de atividade criminosa preexistente, não presumir validade por sua presença.",
+      "prova": [
+        "Comércio clandestino em residência está fora do art. 17? Não; o §1º o abrange.",
+        "Entregar a policial disfarçado dispensa prova de conduta anterior? Não; o §2º exige elementos razoáveis de preexistência."
+      ],
+      "termos": [
+        "atividade comercial ou industrial",
+        "inclusive em residência",
+        "preexistente",
+        "seis a doze anos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm"
+      ],
+      "expected": {
+        "unit_id": "8e91c8ce-d0ed-508f-8027-c56dc49650fd",
+        "content_sha256": "d3f8a672a8a7d6fd54b87c4dce8763689cabb8480585bc9270ddff966ef19137",
+        "simples": "Comércio ilegal de arma de fogo: adquirir, alugar, receber, transportar, conduzir, ocultar, ter em depósito, desmontar, montar, remontar, adulterar, vender, expor à venda, ou de qualquer forma utilizar, em proveito próprio ou alheio, no exercício de atividade comercial ou industrial, arma de fogo, acessório ou munição, sem autorização. Pena: reclusão de 6 a 12 anos e multa. Equipara-se à atividade comercial ou industrial qualquer forma de prestação de serviços, fabricação ou comércio irregular ou clandestino, inclusive o exercido em residência. Incorre na mesma pena quem vende ou entrega arma, acessório ou munição, sem autorização, a agente policial disfarçado, quando presentes elementos probatórios razoáveis de conduta criminal preexistente.",
+        "pontos": [
+          "Condutas no exercício de atividade comercial ou industrial.",
+          "Reclusão de 6 a 12 anos e multa.",
+          "Equipara-se: comércio clandestino, mesmo em residência.",
+          "Venda a policial disfarçado, com elementos de conduta preexistente."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: pena elevada pela Lei nº 13.964, de 2019; §2º incluído (policial disfarçado).",
+          "Exige a atividade COMERCIAL ou industrial."
+        ],
+        "exemplo": "Quem vende armas clandestinamente em casa pratica o comércio ilegal.",
+        "prova": [
+          "Assertiva que dispensa a atividade comercial ou industrial no art. 17 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16",
+          "Art. 19"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-18",
+      "unit_id": "e2bdc4be-22c9-5715-9b06-3caee294f99e",
+      "content_sha256": "1b26fdc4e95c559a4c7243895009fd2407d8718a0759fb936304f43e9982583b",
+      "simples": "Tráfico internacional: importar/exportar ou favorecer entrada/saída do território nacional de arma, acessório ou munição, a qualquer título, sem autorização competente. Pena atual: reclusão de oito a dezesseis anos e multa.",
+      "pontos": [
+        "Fronteira/entrada-saída internacional distinguem o tipo de mero comércio interno.",
+        "Não exige pagamento ou lucro: a qualquer título.",
+        "Parágrafo único: venda/entrega em operação de importação a policial disfarçado exige irregularidade e elementos probatórios razoáveis de conduta preexistente."
+      ],
+      "atencao": [
+        "Lei 13.964/2019 alterou a pena e introduziu o parágrafo único. Irretroatividade da resposta mais gravosa.",
+        "É hediondo no rol atual, tentado ou consumado; distinguir isso da vedação absoluta de liberdade provisória afastada na ADI 3112.",
+        "A intenção internacional e os atos de execução devem ser demonstrados; não inferir tráfico internacional só pela origem estrangeira da arma."
+      ],
+      "exemplo": "Agente importa munição sem autorização: examinar art. 18, mesmo sem venda posterior. Variação: arma estrangeira circula apenas em comércio interno e não se comprova participação na entrada; origem do objeto não demonstra sozinha o art. 18.",
+      "prova": [
+        "O tráfico internacional exige necessariamente venda lucrativa? Não; a lei diz a qualquer título.",
+        "Toda arma fabricada no exterior prova o art. 18 contra seu possuidor? Não; é necessário demonstrar os elementos da conduta internacional."
+      ],
+      "termos": [
+        "território nacional",
+        "a qualquer título",
+        "oito a dezesseis anos"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-declara-inconstitucionalidade-de-tres-dispositivos-do-estatuto-do-desarmamento/"
+      ],
+      "expected": {
+        "unit_id": "e2bdc4be-22c9-5715-9b06-3caee294f99e",
+        "content_sha256": "1b26fdc4e95c559a4c7243895009fd2407d8718a0759fb936304f43e9982583b",
+        "simples": "Tráfico internacional de arma de fogo: importar, exportar, favorecer a entrada ou saída do território nacional, a qualquer título, de arma de fogo, acessório ou munição, sem autorização da autoridade competente. Pena: reclusão de 8 a 16 anos e multa. Incorre na mesma pena quem vende ou entrega arma, acessório ou munição, em operação de importação, sem autorização, a agente policial disfarçado, quando presentes elementos probatórios razoáveis de conduta criminal preexistente.",
+        "pontos": [
+          "Importar, exportar ou favorecer a entrada ou saída de armas, acessórios ou munições.",
+          "Reclusão de 8 a 16 anos e multa.",
+          "Venda a agente policial disfarçado em operação de importação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: pena e §1º dados pela Lei nº 13.964, de 2019.",
+          "Competência da JUSTIÇA FEDERAL (tráfico internacional)."
+        ],
+        "exemplo": "Contrabandear munição de outro país sem autorização é tráfico internacional de arma.",
+        "prova": [
+          "Assertiva que fixa a pena do tráfico internacional de arma em 6 a 12 anos erra: é de 8 a 16 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17",
+          "Art. 19"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-19",
+      "unit_id": "ef990cbc-a1fc-590d-9b89-6b4b07365ef8",
+      "content_sha256": "2816ee7bde40a8f4dc783c17af13a27fa771c7dc81ea201cbc65e17b16ede792",
+      "simples": "Nos crimes de comércio ilegal e tráfico internacional (arts. 17 e 18), uso proibido ou restrito da arma, acessório ou munição aumenta a pena pela metade.",
+      "pontos": [
+        "Fração: metade, não dobro nem dois terços.",
+        "Âmbito: arts. 17 e 18; não todos os delitos do Estatuto.",
+        "Classificação regulamentar atual é necessária para identificar uso permitido, restrito ou proibido."
+      ],
+      "atencao": [
+        "Não confundir majorante do art. 19 com faixa qualificada do art. 16, §2º, ou majorantes dos arts. 20 e 21-A. Multiplicação ilustrativa não dispensa dosimetria judicial e limites do CP 68."
+      ],
+      "exemplo": "Comércio ilegal tem pena intermediária ilustrativa de oito anos e envolve arma restrita: só a majorante de metade a levaria a doze anos. Variação: posse irregular do art. 12 não recebe esta majorante, porque não integra seu rol.",
+      "prova": [
+        "A majorante alcança automaticamente o art. 12? Não; o rol é formado pelos arts. 17 e 18.",
+        "A fração é de dois terços? Não; é de metade."
+      ],
+      "termos": [
+        "arts. 17 e 18",
+        "metade",
+        "proibido ou restrito"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ef990cbc-a1fc-590d-9b89-6b4b07365ef8",
+        "content_sha256": "2816ee7bde40a8f4dc783c17af13a27fa771c7dc81ea201cbc65e17b16ede792",
+        "simples": "Nos crimes previstos nos arts. 17 e 18, a pena é aumentada da metade se a arma de fogo, acessório ou munição forem de uso proibido ou restrito.",
+        "pontos": [
+          "Comércio ilegal e tráfico internacional: pena aumentada da metade.",
+          "Se o objeto for de uso PROIBIDO ou RESTRITO."
+        ],
+        "atencao": [
+          "Aumento da METADE."
+        ],
+        "exemplo": "Comerciar ilegalmente fuzis de uso restrito eleva a pena em metade.",
+        "prova": [
+          "Assertiva que aplica o aumento do art. 19 aos arts. 14 e 15 erra: vale para os arts. 17 e 18."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 17",
+          "Art. 18"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-20",
+      "unit_id": "ac5702d8-2189-5120-807c-3645179a6e5d",
+      "content_sha256": "6ba2c501172aa053920de1378f3948d1de46fc29091a5590cc5c1ec81045deef",
+      "simples": "Nos arts. 14, 15, 16, 17 e 18, aumentar pela metade se o crime for praticado por integrante dos órgãos/empresas dos arts. 6º–8º ou por reincidente específico em crimes dessa natureza.",
+      "pontos": [
+        "Duas hipóteses alternativas de incidência; verificar sujeito ou reincidência específica.",
+        "Arts. 12 e 13 não estão no rol do caput.",
+        "Reincidência exige os pressupostos legais e a natureza especificada; não equivale a inquérito ou mera acusação anterior."
+      ],
+      "atencao": [
+        "Redação de 2019 incluiu reincidência específica. Não contar a mesma reincidência na agravante e na majorante, sem fundamento distinto, produzindo bis in idem.",
+        "Pluralidade de majorantes exige observar CP 68, parágrafo único, e fundamentação; não ensinar soma mecânica de percentuais em qualquer situação."
+      ],
+      "exemplo": "Integrante de categoria indicada pratica um delito do art. 14: verificar aumento de metade. Variação: pessoa responde a inquérito antigo, sem condenação apta a caracterizar reincidência; isso não satisfaz o inciso II.",
+      "prova": [
+        "Qualquer inquérito anterior caracteriza reincidência específica? Não; observar os requisitos legais de reincidência.",
+        "O caput inclui expressamente arts. 12 e 13? Não; enumera 14, 15, 16, 17 e 18."
+      ],
+      "termos": [
+        "metade",
+        "reincidente específico",
+        "arts. 14, 15, 16, 17 e 18"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ac5702d8-2189-5120-807c-3645179a6e5d",
+        "content_sha256": "6ba2c501172aa053920de1378f3948d1de46fc29091a5590cc5c1ec81045deef",
+        "simples": "Nos crimes previstos nos arts. 14, 15, 16, 17 e 18, a pena é aumentada da metade se forem praticados por integrante dos órgãos e empresas referidas nos arts. 6º, 7º e 8º, ou se o agente for reincidente específico em crimes dessa natureza.",
+        "pontos": [
+          "Aumento da metade nos arts. 14 a 18.",
+          "Agente integrante dos órgãos e empresas dos arts. 6º, 7º e 8º.",
+          "Reincidente específico."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação dada pela Lei nº 13.964, de 2019.",
+          "Aumento da metade para o agente que tem DEVER legal de cautela (policial, vigilante)."
+        ],
+        "exemplo": "Policial que comete crime de comércio ilegal de arma tem a pena aumentada da metade.",
+        "prova": [
+          "Assertiva que aplica o aumento do art. 20 ao art. 12 erra: vale para os arts. 14 a 18."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 19"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-21",
+      "unit_id": "7ba48946-d640-54c6-93b1-774e8a61c89b",
+      "content_sha256": "986b2e9b9f9b52d707e36a4c4cae32b15ea9781d0ed017bbfde881603004be7f",
+      "simples": "A vedação automática de liberdade provisória para os arts. 16, 17 e 18, ainda transcrita na lei, foi declarada inconstitucional pelo STF na ADI 3112.",
+      "pontos": [
+        "Texto histórico residual não se aplica como prisão obrigatória.",
+        "Prisão cautelar exige requisitos atuais do CPP, fundamento concreto e decisão motivada.",
+        "Fiança e liberdade provisória são institutos distintos; crimes hediondos podem ter vedação de fiança sem prisão automática."
+      ],
+      "atencao": [
+        "Não converter o afastamento da proibição absoluta em direito automático de soltura em qualquer caso.",
+        "Não memorizar a literalidade do art. 21 como gabarito vigente: a Constituição e a ADI 3112 qualificam sua aplicação."
+      ],
+      "exemplo": "Decisão mantém prisão apenas citando art. 21: falta fundamento cautelar próprio, pois a proibição absoluta foi afastada. Variação: há risco concreto e requisitos atuais do CPP comprovados; a ADI não impede essa análise cautelar.",
+      "prova": [
+        "O art. 21 fundamenta sozinho prisão obrigatória? Não; a vedação absoluta foi declarada inconstitucional.",
+        "A ADI impede toda prisão preventiva nesses crimes? Não; prisão fundamentada nos requisitos próprios continua possível."
+      ],
+      "termos": [
+        "ADI 3112",
+        "liberdade provisória",
+        "fundamentação concreta"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-declara-inconstitucionalidade-de-tres-dispositivos-do-estatuto-do-desarmamento/",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7ba48946-d640-54c6-93b1-774e8a61c89b",
+        "content_sha256": "986b2e9b9f9b52d707e36a4c4cae32b15ea9781d0ed017bbfde881603004be7f",
+        "simples": "Os crimes previstos nos arts. 16, 17 e 18 são insuscetíveis de liberdade provisória. O texto remete a ação direta de inconstitucionalidade.",
+        "pontos": [
+          "Vedada a liberdade provisória nos arts. 16, 17 e 18."
+        ],
+        "atencao": [
+          "O STF declarou inconstitucional a vedação absoluta de liberdade provisória."
+        ],
+        "exemplo": "Texto legal declarado inconstitucional: a liberdade provisória é analisada caso a caso.",
+        "prova": [
+          "Assertiva que mantém hoje a vedação absoluta de liberdade provisória do art. 21 erra, à luz da decisão do STF."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14, parágrafo único"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-21-a",
+      "unit_id": "1283fdac-3626-5f83-b29f-3e7b22a36ec0",
+      "content_sha256": "38c1283df08811091e0c872fccf7565f044ed0dc8c2d580cedeadf4876d7955b",
+      "simples": "Lei 15.358/2026 acrescentou aumento de dois terços nos crimes dos arts. 12, 14 e 16, nas hipóteses textuais de concurso com crime da Lei de Drogas, ligação direta com comércio ilícito de entorpecentes ou utilização do artefato para assegurar sucesso da mercancia.",
+      "pontos": [
+        "Rol delimitado: 12, 14 e 16; não estender automaticamente aos arts. 15, 17 ou 18.",
+        "Fração fixa legal: dois terços.",
+        "Vigência desde publicação em 25/03/2026; regra penal mais gravosa não retroage.",
+        "Distinguir a majorante da arma do art. 40, IV, da Lei de Drogas e da relação entre autonomia/consunção dos delitos."
+      ],
+      "atencao": [
+        "Tema 1259/STJ, de 2024, tratou a relação finalística entre arma e tráfico: absorção quando instrumental ao tráfico e concurso material quando autônomo. A nova lei de 2026 exige reavaliar essa articulação para fatos posteriores, sem apresentar precedente anterior como se já resolvesse toda a lei nova.",
+        "Não presumir cumulação de majorantes e dupla punição pela mesma circunstância. Distinguir data do fato, prova do nexo e concurso aparente/material; não há nesta revisão certificação de tese posterior consolidada para toda hipótese da lei nova."
+      ],
+      "exemplo": "Fato posterior a 25/03/2026 envolve crime do art. 14 e arma usada para assegurar comércio de drogas: examinar a nova majorante e a articulação com a Lei de Drogas, sem duplicar punição automaticamente. Variação: fato anterior à vigência não recebe aumento mais gravoso retroativamente.",
+      "prova": [
+        "A nova fração é de metade? Não; é de dois terços.",
+        "Pode incidir retroativamente para agravar fato anterior a 25/03/2026? Não; regra penal mais gravosa não retroage."
+      ],
+      "termos": [
+        "dois terços",
+        "arts. 12, 14 e 16",
+        "diretamente ligado",
+        "sucesso da mercancia"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/09122024-Arma-ilegal-na-posse-de-traficante-pode-ser-crime-autonomo-se-nao-houver-prova-de-relacao-entre-os-delitos.aspx"
+      ],
+      "expected": {
+        "unit_id": "1283fdac-3626-5f83-b29f-3e7b22a36ec0",
+        "content_sha256": "38c1283df08811091e0c872fccf7565f044ed0dc8c2d580cedeadf4876d7955b",
+        "simples": "Nos crimes previstos nos arts. 12, 14 e 16, a pena é aumentada de 2/3 se o crime for praticado em concurso com crime da Lei de Drogas, estiver diretamente ligado ao comércio ilícito de entorpecentes ou o artefato tiver sido utilizado para assegurar o sucesso da mercancia.",
+        "pontos": [
+          "Arts. 12, 14 e 16: aumento de 2/3.",
+          "Concurso com crime da Lei de Drogas, ligação direta ao comércio ilícito de entorpecentes ou uso da arma para assegurar a mercancia."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído pela Lei nº 15.358, de 2026."
+        ],
+        "exemplo": "Traficante que porta arma de uso permitido para assegurar a venda de drogas tem a pena aumentada de 2/3.",
+        "prova": [
+          "Assertiva que aplica o aumento de 2/3 ao crime de disparo (art. 15) erra: o art. 21-A cita os arts. 12, 14 e 16."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Drogas (causas de aumento)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-11T14:20:26.05733+00:00"
+      }
+    },
+    {
+      "course_slug": "armas",
+      "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-11-a",
+      "unit_id": "b8bcdf1b-eeeb-5647-9837-b02f7be5e30a",
+      "content_sha256": "3f1eb5cf7dfcebacc8287f165ce2123962c00ddcf0fc908333f4545b0421c7f8",
+      "simples": "O Ministério da Justiça disciplina o credenciamento, pela PF, dos profissionais de aptidão psicológica e capacidade técnica. A lei fixa teto psicológico por referência à tabela do CFP e, para instrutor, R$ 80 mais munição. Cobrança superior aos limites implica descredenciamento pela PF.",
+      "pontos": [
+        "Teto psicológico: valor médio do item 1.16 da tabela do CFP, conforme referência legal.",
+        "Capacidade técnica: R$ 80, acrescidos da munição, para a comprovação tratada no artigo.",
+        "Credenciamento e fiscalização são próprios da atividade, não mera livre indicação do interessado."
+      ],
+      "atencao": [
+        "Não ensinar R$ 80 como preço de qualquer curso ou de qualquer avaliação: a regra se refere à comprovação técnica do artigo. Verificar também normas profissionais e de credenciamento aplicáveis.",
+        "Credenciamento profissional não equivale a autorização de porte ou a registro de arma."
+      ],
+      "exemplo": "Instrutor cobra pelo exame técnico previsto e separa custo da munição. Variação: cobra além do limite legal para esse serviço; a lei prevê descredenciamento, não só uma recomendação de preço.",
+      "prova": [
+        "O teto técnico inclui obrigatoriamente a munição dentro dos R$ 80? Não; o texto prevê acréscimo do custo da munição.",
+        "Cobrança acima dos limites tem consequência de credenciamento? Sim; a lei prevê descredenciamento pela PF."
+      ],
+      "termos": [
+        "credenciamento",
+        "R$ 80",
+        "custo da munição",
+        "descredenciamento"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "https://www.gov.br/pf/pt-br/assuntos/armas/normativos/legislacao"
+      ],
+      "expected": {
+        "unit_id": "b8bcdf1b-eeeb-5647-9837-b02f7be5e30a",
+        "content_sha256": "d269b144fbfe5c3c39ca3b11b2c0c53ffbc96360b6f1424957eeb2d274c0d245",
+        "simples": "O Ministério da Justiça disciplina o credenciamento, pela PF, dos profissionais de aptidão psicológica e capacidade técnica. A lei fixa teto psicológico por referência à tabela do CFP e, para instrutor, R$ 80 mais munição. Cobrança superior aos limites implica descredenciamento pela PF.",
+        "pontos": [
+          "Teto psicológico: valor médio do item 1.16 da tabela do CFP, conforme referência legal.",
+          "Capacidade técnica: R$ 80, acrescidos da munição, para a comprovação tratada no artigo.",
+          "Credenciamento e fiscalização são próprios da atividade, não mera livre indicação do interessado."
+        ],
+        "atencao": [
+          "Não ensinar R$ 80 como preço de qualquer curso ou de qualquer avaliação: a regra se refere à comprovação técnica do artigo. Verificar também normas profissionais e de credenciamento aplicáveis.",
+          "Credenciamento profissional não equivale a autorização de porte ou a registro de arma."
+        ],
+        "exemplo": "Instrutor cobra pelo exame técnico previsto e separa custo da munição. Variação: cobra além do limite legal para esse serviço; a lei prevê descredenciamento, não só uma recomendação de preço.",
+        "prova": [
+          "O teto técnico inclui obrigatoriamente a munição dentro dos R$ 80? Não; o texto prevê acréscimo do custo da munição.",
+          "Cobrança acima dos limites tem consequência de credenciamento? Sim; a lei prevê descredenciamento pela PF."
+        ],
+        "termos": [
+          "credenciamento",
+          "R$ 80",
+          "custo da munição",
+          "descredenciamento"
+        ],
+        "remissoes": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+          "https://www.gov.br/pf/pt-br/assuntos/armas/normativos/legislacao"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T17:11:51.055+00:00",
+        "created_at": "2026-10-11T14:20:26.05733+00:00",
+        "updated_at": "2026-10-12T17:11:51.055+00:00"
+      }
+    }
+  ]
+}

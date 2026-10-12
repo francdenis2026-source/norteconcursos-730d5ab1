@@ -1,0 +1,347 @@
+{
+  "version": "2026-10-12-armas-captions",
+  "checked_at": "2026-10-12T17:16:47.551616+00:00",
+  "scope": "Separar sete rubricas de crimes anexadas ao artigo precedente, sem remoção de disposição normativa ou alteração de identidade, capítulo e posição.",
+  "laws": [
+    {
+      "expected": {
+        "id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+        "slug": "armas",
+        "title": "Lei 10.826/2003 — Estatuto do Desarmamento",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+        "source_sha256": "bd5431a15da37ea073d3846748a6f0a09938183334e7f00c8af04bc4984a5c5c",
+        "checked_at": "2026-10-10T02:56:29.131965+00:00",
+        "material_slug": "legislacao-armas-revisao",
+        "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+        "overview": {
+          "intro": "Complemente o módulo de posse e porte com o cadastro de armas e a responsabilidade das empresas. Sistema cadastral, registro e uso em serviço são funções distintas.",
+          "alerts": "A Lei 14.967/2024 alterou o art. 7º do Estatuto. Este é módulo complementar; o material anterior de posse/porte e art. 21-A foi preservado. As mudanças regulamentares de CACs exigem conferência específica e não são deduzidas apenas do art. 3º.",
+          "contest": "Polícia Federal — Agente — Edital 1/2025 atualizado",
+          "chapters": [
+            {
+              "count": 2,
+              "title": "CAPÍTULO I — DO SISTEMA NACIONAL DE ARMAS"
+            },
+            {
+              "count": 3,
+              "title": "CAPÍTULO II — DO REGISTRO"
+            },
+            {
+              "count": 8,
+              "title": "CAPÍTULO III — DO PORTE"
+            },
+            {
+              "count": 11,
+              "title": "CAPÍTULO IV — DOS CRIMES E DAS PENAS"
+            },
+            {
+              "count": 14,
+              "title": "CAPÍTULO V — DISPOSIÇÕES GERAIS"
+            },
+            {
+              "count": 2,
+              "title": "CAPÍTULO VI — DISPOSIÇÕES FINAIS"
+            },
+            {
+              "count": 1,
+              "title": "Anexos / ANEXO (Redação dada pela Lei nº 11.706, de 2008)"
+            }
+          ],
+          "objectives": [
+            "Separar competências de cadastro, registro, posse e porte.",
+            "Identificar requisitos, hipóteses especiais e validade dos atos.",
+            "Comparar os tipos penais, penas, elementos especiais e responsabilidades.",
+            "Retomar disposições finais, restrições e referências regulamentares."
+          ],
+          "current_units": 41,
+          "jurisprudence": [],
+          "excluded_units": 1,
+          "editorial_scope": "A leitura cobre os dispositivos do diploma e conserva registro das exclusões. Recuperação por dispositivo é autoavaliada. O conjunto comentado testa os conceitos especificados no resumo e não equivale a uma questão de aplicação para cada artigo. Jurisprudência é apresentada nos pontos aqui verificados, sem alegar catálogo exaustivo de decisões."
+        },
+        "status": "active",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-10T02:58:33.253645+00:00",
+        "legal_review": {
+          "scope": "Texto integral confrontado dispositivo a dispositivo com a fonte oficial em 09/10/2026. Alertas de alterações e recorte de edital preservados; conferência não equivale a cobertura de todos os editais ou monitoramento automático de jurisprudência.",
+          "changes": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.358/2026",
+              "summary": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+              "vigency": "Art. 44. Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 21-A"
+              ]
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15306.htm",
+              "state": "effective",
+              "title": "LEI Nº 15.306/2025",
+              "summary": "Altera a Lei nº 10.826, de 22 de dezembro de 2003 (Estatuto do Desarmamento), para conceder porte de arma de fogo aos policiais legislativos das Assembleias Legislativas dos Estados e da Câmara Legislativa do Distrito Federal.",
+              "vigency": "Art. 2º Esta Lei entra em vigor na data de sua publicação.",
+              "articles": [
+                "Art. 6"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+              "title": "Lei 10.826/2003 — Estatuto do Desarmamento — texto oficial conferido",
+              "sha256": "bd5431a15da37ea073d3846748a6f0a09938183334e7f00c8af04bc4984a5c5c"
+            },
+            {
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+              "title": "Lei 14.967/2024 — alteração do art. 7º do Estatuto do Desarmamento",
+              "sha256": "6640b9e7dcaccc0c08bcbe2097d03908051b71e2347820f96ecfe5f23e3d7854"
+            },
+            {
+              "url": "https://noticias.stf.jus.br/postsnoticias/supremo-declara-inconstitucionalidade-de-tres-dispositivos-do-estatuto-do-desarmamento/",
+              "title": "STF — ADI 3112, fiança e liberdade provisória",
+              "sha256": "f1dfcee2c0d0ffb3707b102d9ae3fc54ab733f2979c050918dcccf6efd5eec5b",
+              "checked_at": "2026-10-10T02:56:29.131965Z",
+              "evidence_format": "official-html"
+            }
+          ],
+          "checked_at": "2026-10-10T02:56:29.131965Z",
+          "corrections": [
+            "Organização de guia, mapa integral, casos com variações e flashcards de aplicação; associação ao percurso próprio da norma."
+          ],
+          "course_slug": "armas"
+        }
+      },
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "source_sha256": "31c397ac2b5ec75c49ee6f587d3fac364e2a22577b19d954990d26cd1a49ba62",
+      "source_checked_at": "2026-10-12T16:18:16.577539+00:00"
+    }
+  ],
+  "changes": [
+    {
+      "course_slug": "armas",
+      "expected": {
+        "id": "0bc33e91-0f13-5d01-814e-51c2a0604703",
+        "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+        "unit_key": "art-15",
+        "label": "Art. 15",
+        "chapter": "CAPÍTULO IV — DOS CRIMES E DAS PENAS",
+        "position": 16,
+        "body_text": "Art. 15. Disparar arma de fogo ou acionar munição em lugar habitado ou em suas adjacências, em via pública ou em direção a ela, desde que essa conduta não tenha como finalidade a prática de outro crime:\n\nPena – reclusão, de 2 (dois) a 4 (quatro) anos, e multa.\n\nParágrafo único. O crime previsto neste artigo é inafiançável. (Vide Adin 3.112-1)\n\nPosse ou porte ilegal de arma de fogo de uso restrito",
+        "content_sha256": "dcd1bfbe610b521628751271a16afac55ad58f638943fb54902a4bd186c246e6",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 15. Disparar arma de fogo ou acionar munição em lugar habitado ou em suas adjacências, em via pública ou em direção a ela, desde que essa conduta não tenha como finalidade a prática de outro crime:\n\nPena – reclusão, de 2 (dois) a 4 (quatro) anos, e multa.\n\nParágrafo único. O crime previsto neste artigo é inafiançável. (Vide Adin 3.112-1)",
+      "content_sha256": "096913a6fd5c2264e1414e7539baa376efe8a79cb74381ace8671fcbed12f1ff",
+      "moved_captions": [
+        "Posse ou porte ilegal de arma de fogo de uso restrito"
+      ]
+    },
+    {
+      "course_slug": "armas",
+      "expected": {
+        "id": "8e91c8ce-d0ed-508f-8027-c56dc49650fd",
+        "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+        "unit_key": "art-17",
+        "label": "Art. 17",
+        "chapter": "CAPÍTULO IV — DOS CRIMES E DAS PENAS",
+        "position": 18,
+        "body_text": "Art. 17. Adquirir, alugar, receber, transportar, conduzir, ocultar, ter em depósito, desmontar, montar, remontar, adulterar, vender, expor à venda, ou de qualquer forma utilizar, em proveito próprio ou alheio, no exercício de atividade comercial ou industrial, arma de fogo, acessório ou munição, sem autorização ou em desacordo com determinação legal ou regulamentar:\n\nPena - reclusão, de 6 (seis) a 12 (doze) anos, e multa. (Redação dada pela Lei nº 13.964, de 2019)\n\n§ 1º Equipara-se à atividade comercial ou industrial, para efeito deste artigo, qualquer forma de prestação de serviços, fabricação ou comércio irregular ou clandestino, inclusive o exercido em residência. (Redação dada pela Lei nº 13.964, de 2019)\n\n§ 2º Incorre na mesma pena quem vende ou entrega arma de fogo, acessório ou munição, sem autorização ou em desacordo com a determinação legal ou regulamentar, a agente policial disfarçado, quando presentes elementos probatórios razoáveis de conduta criminal preexistente. (Incluído pela Lei nº 13.964, de 2019)\n\nTráfico internacional de arma de fogo",
+        "content_sha256": "d3f8a672a8a7d6fd54b87c4dce8763689cabb8480585bc9270ddff966ef19137",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 17. Adquirir, alugar, receber, transportar, conduzir, ocultar, ter em depósito, desmontar, montar, remontar, adulterar, vender, expor à venda, ou de qualquer forma utilizar, em proveito próprio ou alheio, no exercício de atividade comercial ou industrial, arma de fogo, acessório ou munição, sem autorização ou em desacordo com determinação legal ou regulamentar:\n\nPena - reclusão, de 6 (seis) a 12 (doze) anos, e multa. (Redação dada pela Lei nº 13.964, de 2019)\n\n§ 1º Equipara-se à atividade comercial ou industrial, para efeito deste artigo, qualquer forma de prestação de serviços, fabricação ou comércio irregular ou clandestino, inclusive o exercido em residência. (Redação dada pela Lei nº 13.964, de 2019)\n\n§ 2º Incorre na mesma pena quem vende ou entrega arma de fogo, acessório ou munição, sem autorização ou em desacordo com a determinação legal ou regulamentar, a agente policial disfarçado, quando presentes elementos probatórios razoáveis de conduta criminal preexistente. (Incluído pela Lei nº 13.964, de 2019)",
+      "content_sha256": "daccff5881a871120a362edea4094abab57ba28e4e789eeb66d9c1bddee92bf9",
+      "moved_captions": [
+        "Tráfico internacional de arma de fogo"
+      ]
+    },
+    {
+      "course_slug": "armas",
+      "expected": {
+        "id": "9953bcf2-6e4f-5893-a4fc-d43bec22e5fe",
+        "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+        "unit_key": "art-12",
+        "label": "Art. 12",
+        "chapter": "CAPÍTULO IV — DOS CRIMES E DAS PENAS",
+        "position": 13,
+        "body_text": "Art. 12. Possuir ou manter sob sua guarda arma de fogo, acessório ou munição, de uso permitido, em desacordo com determinação legal ou regulamentar, no interior de sua residência ou dependência desta, ou, ainda no seu local de trabalho, desde que seja o titular ou o responsável legal do estabelecimento ou empresa:\n\nPena – detenção, de 1 (um) a 3 (três) anos, e multa.\n\nOmissão de cautela",
+        "content_sha256": "3759a56258146bbe63cbe465cf98bdf3faae923979f3775a3353f990d7fe17eb",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 12. Possuir ou manter sob sua guarda arma de fogo, acessório ou munição, de uso permitido, em desacordo com determinação legal ou regulamentar, no interior de sua residência ou dependência desta, ou, ainda no seu local de trabalho, desde que seja o titular ou o responsável legal do estabelecimento ou empresa:\n\nPena – detenção, de 1 (um) a 3 (três) anos, e multa.",
+      "content_sha256": "df1e3c49c43d7a47917c31d7ebae99c1b4afd4891b033474961f1ba89b931897",
+      "moved_captions": [
+        "Omissão de cautela"
+      ]
+    },
+    {
+      "course_slug": "armas",
+      "expected": {
+        "id": "b8bcdf1b-eeeb-5647-9837-b02f7be5e30a",
+        "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+        "unit_key": "art-11-a",
+        "label": "Art. 11-A",
+        "chapter": "CAPÍTULO III — DO PORTE",
+        "position": 12,
+        "body_text": "Art. 11-A. O Ministério da Justiça disciplinará a forma e as condições do credenciamento de profissionais pela Polícia Federal para comprovação da aptidão psicológica e da capacidade técnica para o manuseio de arma de fogo. (Incluído pela Lei nº 11.706, de 2008)\n\n§ 1o Na comprovação da aptidão psicológica, o valor cobrado pelo psicólogo não poderá exceder ao valor médio dos honorários profissionais para realização de avaliação psicológica constante do item 1.16 da tabela do Conselho Federal de Psicologia. (Incluído pela Lei nº 11.706, de 2008)\n\n§ 2o Na comprovação da capacidade técnica, o valor cobrado pelo instrutor de armamento e tiro não poderá exceder R$ 80,00 (oitenta reais), acrescido do custo da munição. (Incluído pela Lei nº 11.706, de 2008)\n\n§ 3o A cobrança de valores superiores aos previstos nos §§ 1o e 2o deste artigo implicará o descredenciamento do profissional pela Polícia Federal. (Incluído pela Lei nº 11.706, de 2008)\n\nPosse irregular de arma de fogo de uso permitido",
+        "content_sha256": "d269b144fbfe5c3c39ca3b11b2c0c53ffbc96360b6f1424957eeb2d274c0d245",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Quais requisitos, limites ou exceções alteram sua aplicação? Se não houver, diga isso.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 11-A. O Ministério da Justiça disciplinará a forma e as condições do credenciamento de profissionais pela Polícia Federal para comprovação da aptidão psicológica e da capacidade técnica para o manuseio de arma de fogo. (Incluído pela Lei nº 11.706, de 2008)\n\n§ 1o Na comprovação da aptidão psicológica, o valor cobrado pelo psicólogo não poderá exceder ao valor médio dos honorários profissionais para realização de avaliação psicológica constante do item 1.16 da tabela do Conselho Federal de Psicologia. (Incluído pela Lei nº 11.706, de 2008)\n\n§ 2o Na comprovação da capacidade técnica, o valor cobrado pelo instrutor de armamento e tiro não poderá exceder R$ 80,00 (oitenta reais), acrescido do custo da munição. (Incluído pela Lei nº 11.706, de 2008)\n\n§ 3o A cobrança de valores superiores aos previstos nos §§ 1o e 2o deste artigo implicará o descredenciamento do profissional pela Polícia Federal. (Incluído pela Lei nº 11.706, de 2008)",
+      "content_sha256": "3f1eb5cf7dfcebacc8287f165ce2123962c00ddcf0fc908333f4545b0421c7f8",
+      "moved_captions": [
+        "Posse irregular de arma de fogo de uso permitido"
+      ]
+    },
+    {
+      "course_slug": "armas",
+      "expected": {
+        "id": "ddb93966-82d9-5a41-8caf-dd2924bd654a",
+        "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+        "unit_key": "art-13",
+        "label": "Art. 13",
+        "chapter": "CAPÍTULO IV — DOS CRIMES E DAS PENAS",
+        "position": 14,
+        "body_text": "Art. 13. Deixar de observar as cautelas necessárias para impedir que menor de 18 (dezoito) anos ou pessoa portadora de deficiência mental se apodere de arma de fogo que esteja sob sua posse ou que seja de sua propriedade:\n\nPena – detenção, de 1 (um) a 2 (dois) anos, e multa.\n\nParágrafo único. Nas mesmas penas incorrem o proprietário ou diretor responsável de empresa de segurança e transporte de valores que deixarem de registrar ocorrência policial e de comunicar à Polícia Federal perda, furto, roubo ou outras formas de extravio de arma de fogo, acessório ou munição que estejam sob sua guarda, nas primeiras 24 (vinte quatro) horas depois de ocorrido o fato.\n\nPorte ilegal de arma de fogo de uso permitido",
+        "content_sha256": "9eb2528e210fca046954cc9175b23cb9282783054e546f0b4249d5a50e5136e1",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 13. Deixar de observar as cautelas necessárias para impedir que menor de 18 (dezoito) anos ou pessoa portadora de deficiência mental se apodere de arma de fogo que esteja sob sua posse ou que seja de sua propriedade:\n\nPena – detenção, de 1 (um) a 2 (dois) anos, e multa.\n\nParágrafo único. Nas mesmas penas incorrem o proprietário ou diretor responsável de empresa de segurança e transporte de valores que deixarem de registrar ocorrência policial e de comunicar à Polícia Federal perda, furto, roubo ou outras formas de extravio de arma de fogo, acessório ou munição que estejam sob sua guarda, nas primeiras 24 (vinte quatro) horas depois de ocorrido o fato.",
+      "content_sha256": "defa5fb0f9a6021ee291fa8af8a59743b26662df5ac141dee67f7a8770b82aa4",
+      "moved_captions": [
+        "Porte ilegal de arma de fogo de uso permitido"
+      ]
+    },
+    {
+      "course_slug": "armas",
+      "expected": {
+        "id": "ebc3d845-be44-5c85-91ae-589fd26bfe41",
+        "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+        "unit_key": "art-14",
+        "label": "Art. 14",
+        "chapter": "CAPÍTULO IV — DOS CRIMES E DAS PENAS",
+        "position": 15,
+        "body_text": "Art. 14. Portar, deter, adquirir, fornecer, receber, ter em depósito, transportar, ceder, ainda que gratuitamente, emprestar, remeter, empregar, manter sob guarda ou ocultar arma de fogo, acessório ou munição, de uso permitido, sem autorização e em desacordo com determinação legal ou regulamentar:\n\nPena – reclusão, de 2 (dois) a 4 (quatro) anos, e multa.\n\nParágrafo único. O crime previsto neste artigo é inafiançável, salvo quando a arma de fogo estiver registrada em nome do agente. (Vide Adin 3.112-1)\n\nDisparo de arma de fogo",
+        "content_sha256": "2e697e00ca8ea21a2ababa7b51b1c14c4848c9d66732d2974dc31c2578ac9c8f",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 14. Portar, deter, adquirir, fornecer, receber, ter em depósito, transportar, ceder, ainda que gratuitamente, emprestar, remeter, empregar, manter sob guarda ou ocultar arma de fogo, acessório ou munição, de uso permitido, sem autorização e em desacordo com determinação legal ou regulamentar:\n\nPena – reclusão, de 2 (dois) a 4 (quatro) anos, e multa.\n\nParágrafo único. O crime previsto neste artigo é inafiançável, salvo quando a arma de fogo estiver registrada em nome do agente. (Vide Adin 3.112-1)",
+      "content_sha256": "5bb9a2ea685fdaab43f231cfc5f2f6394ea9fb11f2d8c2f9510116a88c7ecd43",
+      "moved_captions": [
+        "Disparo de arma de fogo"
+      ]
+    },
+    {
+      "course_slug": "armas",
+      "expected": {
+        "id": "ee6032ce-5da9-51d4-a687-8eb88dc12619",
+        "course_id": "22c1e6aa-dbe6-5f91-9c90-4d51ff85801d",
+        "unit_key": "art-16",
+        "label": "Art. 16",
+        "chapter": "CAPÍTULO IV — DOS CRIMES E DAS PENAS",
+        "position": 17,
+        "body_text": "Art. 16. Possuir, deter, portar, adquirir, fornecer, receber, ter em depósito, transportar, ceder, ainda que gratuitamente, emprestar, remeter, empregar, manter sob sua guarda ou ocultar arma de fogo, acessório ou munição de uso restrito, sem autorização e em desacordo com determinação legal ou regulamentar: (Redação dada pela Lei nº 13.964, de 2019)\n\nPena – reclusão, de 3 (três) a 6 (seis) anos, e multa.\n\n§ 1º Nas mesmas penas incorre quem: (Redação dada pela Lei nº 13.964, de 2019)\n\nI – suprimir ou alterar marca, numeração ou qualquer sinal de identificação de arma de fogo ou artefato;\n\nII – modificar as características de arma de fogo, de forma a torná-la equivalente a arma de fogo de uso proibido ou restrito ou para fins de dificultar ou de qualquer modo induzir a erro autoridade policial, perito ou juiz;\n\nIII – possuir, detiver, fabricar ou empregar artefato explosivo ou incendiário, sem autorização ou em desacordo com determinação legal ou regulamentar;\n\nIV – portar, possuir, adquirir, transportar ou fornecer arma de fogo com numeração, marca ou qualquer outro sinal de identificação raspado, suprimido ou adulterado;\n\nV – vender, entregar ou fornecer, ainda que gratuitamente, arma de fogo, acessório, munição ou explosivo a criança ou adolescente; e\n\nVI – produzir, recarregar ou reciclar, sem autorização legal, ou adulterar, de qualquer forma, munição ou explosivo.\n\n§ 2º Se as condutas descritas no caput e no § 1º deste artigo envolverem arma de fogo de uso proibido, a pena é de reclusão, de 4 (quatro) a 12 (doze) anos. (Incluído pela Lei nº 13.964, de 2019)\n\nComércio ilegal de arma de fogo",
+        "content_sha256": "e5c374443a0d61cafe608bf184420eec79b15bb76231e683e423c7d9ff43cb73",
+        "content_status": "current",
+        "recall": {
+          "prompts": [
+            "Sem consultar, explique a regra deste dispositivo e a quem ela se aplica.",
+            "Se houver tipo penal ou sanção, indique conduta, sujeito, espécie de pena e circunstâncias modificadoras, sem confundir tipos próximos.",
+            "Construa um exemplo de aplicação e identifique no texto o elemento que sustenta sua resposta."
+          ],
+          "checklist": [
+            "A resposta conservou sujeito, conduta ou competência e os requisitos previstos?",
+            "Você separou a regra do caput das condições e exceções dos parágrafos e incisos?",
+            "Os números, prazos ou penas citados correspondem ao dispositivo, sem transferência de outra lei?",
+            "Seu exemplo respeita os limites do texto e os alertas jurisprudenciais apresentados no percurso?"
+          ]
+        }
+      },
+      "body_text": "Art. 16. Possuir, deter, portar, adquirir, fornecer, receber, ter em depósito, transportar, ceder, ainda que gratuitamente, emprestar, remeter, empregar, manter sob sua guarda ou ocultar arma de fogo, acessório ou munição de uso restrito, sem autorização e em desacordo com determinação legal ou regulamentar: (Redação dada pela Lei nº 13.964, de 2019)\n\nPena – reclusão, de 3 (três) a 6 (seis) anos, e multa.\n\n§ 1º Nas mesmas penas incorre quem: (Redação dada pela Lei nº 13.964, de 2019)\n\nI – suprimir ou alterar marca, numeração ou qualquer sinal de identificação de arma de fogo ou artefato;\n\nII – modificar as características de arma de fogo, de forma a torná-la equivalente a arma de fogo de uso proibido ou restrito ou para fins de dificultar ou de qualquer modo induzir a erro autoridade policial, perito ou juiz;\n\nIII – possuir, detiver, fabricar ou empregar artefato explosivo ou incendiário, sem autorização ou em desacordo com determinação legal ou regulamentar;\n\nIV – portar, possuir, adquirir, transportar ou fornecer arma de fogo com numeração, marca ou qualquer outro sinal de identificação raspado, suprimido ou adulterado;\n\nV – vender, entregar ou fornecer, ainda que gratuitamente, arma de fogo, acessório, munição ou explosivo a criança ou adolescente; e\n\nVI – produzir, recarregar ou reciclar, sem autorização legal, ou adulterar, de qualquer forma, munição ou explosivo.\n\n§ 2º Se as condutas descritas no caput e no § 1º deste artigo envolverem arma de fogo de uso proibido, a pena é de reclusão, de 4 (quatro) a 12 (doze) anos. (Incluído pela Lei nº 13.964, de 2019)",
+      "content_sha256": "4af4e6f7ba02f31aebd014da7d6da2327d6df471ddffc501168bfad969025818",
+      "moved_captions": [
+        "Comércio ilegal de arma de fogo"
+      ]
+    }
+  ],
+  "additions": [],
+  "status_changes": []
+}

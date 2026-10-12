@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-10-12T17:31:28.478469+00:00",
+  "caption_moves_confirmed": 7,
+  "untargeted_units_preserved": 3664,
+  "protected_tables_unchanged": [
+    "study_materials",
+    "study_material_enrichments",
+    "legal_courses",
+    "legal_unit_explanations",
+    "syllabus_topics",
+    "syllabus_editions",
+    "content_sources"
+  ],
+  "normative_words_removed": 0,
+  "identities_positions_chapters_preserved": true,
+  "explanation_hashes_automatically_rebound": false
+}
