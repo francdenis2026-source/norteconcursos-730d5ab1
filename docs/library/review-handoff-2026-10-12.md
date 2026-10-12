@@ -2,8 +2,8 @@
 
 ## Estado confirmado no banco
 
-3.511 dispositivos ativos: 1.249 com metadados de aprovação editorial atual
-(revisor, data e hash correspondente), 2.262 pendentes. São unidades da
+3.511 dispositivos ativos: 1.274 com metadados de aprovação editorial atual
+(revisor, data e hash correspondente), 2.237 pendentes. São unidades da
 biblioteca, não questões do treinador. Fonte: review-coverage-2026-10-12.json.
 
 Drogas 84/84; Desarmamento 41/41; Maria da Penha 56/56;
@@ -52,7 +52,7 @@ Consultar novamente remoto, alterações locais e banco antes de escrever.
 Não duplicar revisões ambientais. Pendências registradas:
 
 - CPP: 808.
-- Código Penal: 306; prioridade atual por orientação expressa do usuário.
+- Código Penal: 281; prioridade atual por orientação expressa do usuário.
 - CTB: 348.
 - ECA: 322.
 - LEP: 206.
@@ -88,3 +88,17 @@ finalizar a publicação verificada antes de interromper um bloco.
 545 revisada consultada no SCON; PDF geral antigo não usado como atual.
 326 testes, TypeScript e build passaram. Retomar arts. 80 e seguintes.
 Usuário informou 59%; não há medição automática de créditos.
+
+## CP — fechamento dos dois blocos seguintes
+
+50 revisões novas confirmadas no banco: arts. 55–79, 80, 82–89, 91,
+91-A e 92–105. CP 120/401, 281 pendentes; global 1.274/3.511,
+2.237 pendentes. Comparação cumulativa preservou 3.463 explicações
+alheias e sete tabelas, sem alterações de timestamps alheios.
+Primeiro bloco enviado em fa922c7; segundo bloco com pacote, dry-run,
+publicação, readback, autoria, fontes e alertas próprios.
+328 testes, TypeScript e build passaram; 55 testes específicos repetidos
+após qualificação do art. 83. Nenhum item histórico excluído reativado.
+Retomar arts. 106 e seguintes conforme checkpoint atual, conferindo remoto
+e banco; seções anteriores descrevem os blocos históricos desta continuidade.
+Saldo de 59% foi informado pelo usuário, sem medição automática do corte de 5%.

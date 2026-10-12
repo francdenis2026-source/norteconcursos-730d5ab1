@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T22:02:01.508627+00:00",
+  "checked_at": "2026-10-12T22:04:12.432604+00:00",
   "sources": [
     {
       "id": "CP",
@@ -30,6 +30,31 @@
       "id": "l15160",
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15160.htm",
       "sha256": "69bf613a74bf7982e67480fbb2ea9700543fb80710cc9ba408d819fb0f367369"
+    },
+    {
+      "id": "l15358",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+      "sha256": "2d9bab7a659e5499036c10374d6e53bc7d5c4b3291c5ace5cb88a324094ea2e7"
+    },
+    {
+      "id": "l15438",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15438.htm",
+      "sha256": "2613613d052b889a8ed18f8b40306e9573f73625683ec96a31dd87c4daa1bf50"
+    },
+    {
+      "id": "l15487",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+      "sha256": "1adce1f1d6c4a2c53180c26b64f8c6f65d0146f1d3e8ac855b495c821e3c2d73"
+    },
+    {
+      "id": "l10216",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+      "sha256": "9bb8a7b620028d3cb4e9b485ccbf3adcc5fa8e0ce6daf7ac1c59caf191646979"
+    },
+    {
+      "id": "l7210",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "sha256": "698caac5307459ee0b125cac2a63650e5b548bdfe7c4f6c1e41e48934d628bf8"
     }
   ],
   "primary_audit": {
@@ -47,6 +72,10 @@
   "limitations": [
     "STJ 545: enunciado revisado consultado no SCON; PDF geral contém redação anterior, não usada como orientação atual. Não certificadas todas as teses do Tema 1194.",
     "Multa no crime continuado: integração jurisprudencial específica não certificada, com alerta e treino literal bloqueado.",
-    "Notícia institucional STF consultada; não afirmada leitura integral de todos os acórdãos."
+    "Notícia institucional STF consultada; não afirmada leitura integral de todos os acórdãos.",
+    "Súmulas 441, 527 e 617 consultadas no PDF institucional; não alegada certificação de todos os precedentes, saúde mental ou política antimanicomial.",
+    "Art. 91: não certificadas todas as teses da ADPF 569.",
+    "Art. 91-A: texto de 2026 conferido, sem declaração de resolução de todo controle constitucional.",
+    "LEP: consultados arts. 112/131/132/145/146 como integração do CP; não registrada revisão editorial geral do percurso LEP."
   ]
 }

@@ -665,3 +665,21 @@ test('CP: dosimetria incorpora súmula revisada e distingue fases, teto e sursis
  assert.match(get(77).simples,/diferente da suspensão condicional do processo/);
  for(const n of [58,59,60,65,67,68,72,75,77])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
 });
+
+test('CP: efeitos e ação incluem alterações de 2026 e limites de medidas',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-efeitos-livramento-acao-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,25);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ assert.ok(!p.units.some(r=>['art-81','art-90'].includes(r.unit_key)));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(83).atencao.join(' '),/441.*não interrompe.*subjetivos/);
+ assert.match(get(89).atencao.join(' '),/617.*antes do término/);
+ assert.match(get('91-a').pontos.join(' '),/SUPERIOR a 6.*15.358.*25\/3\/2026/s);
+ assert.match(get(92).pontos.join(' '),/15.487.*7\/8\/2026.*180 dias/s);
+ assert.match(get(92).prova.join(' '),/Nunca são automáticos.*Não.*todo crime do ECA.*Não/s);
+ assert.match(get(97).pontos.join(' '),/527.*máximo abstratamente/);
+ assert.match(get(103).pontos.join(' '),/12 meses.*19\/6\/2026/);
+ assert.match(get(103).atencao.join(' '),/não reabre automaticamente decadência/);
+ assert.match(get(102).pontos.join(' '),/OFERECIMENTO/);
+ for(const n of [83,89,91,'91-a',92,96,97,98,99,102,103])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+});

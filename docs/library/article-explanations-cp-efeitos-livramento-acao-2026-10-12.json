@@ -1,0 +1,1601 @@
+{
+  "version": "2026-10-11-codigo-penal-targeted",
+  "checked_at": "2026-10-12T22:03:50.087524+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-penal",
+      "title": "Código Penal — leitura atualizada",
+      "units": 25,
+      "scope_type": "targeted_correction",
+      "course_current_units": 401,
+      "target_unit_keys": [
+        "art-80",
+        "art-82",
+        "art-83",
+        "art-84",
+        "art-85",
+        "art-86",
+        "art-87",
+        "art-88",
+        "art-89",
+        "art-91",
+        "art-91-a",
+        "art-92",
+        "art-93",
+        "art-94",
+        "art-95",
+        "art-96",
+        "art-97",
+        "art-98",
+        "art-99",
+        "art-100",
+        "art-101",
+        "art-102",
+        "art-103",
+        "art-104",
+        "art-105"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "7bac399f268c13eeeb6c782dc650c90a51aa8456db903a1186b2124745afc8ff",
+      "source_checked_at": "2026-10-12T21:50:35.586189+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-80",
+      "unit_id": "82ba644c-1b71-5dd4-a1a8-b0cf09a1ef53",
+      "content_sha256": "708cc71d118fb29b683ff587b83cf3d779ee23ebd0e60fbcf027b902a7960b36",
+      "simples": "O sursis penal suspende a execução da pena privativa nas condições legais. Não estende essa suspensão às restritivas de direitos nem à multa.",
+      "pontos": [
+        "Objeto: pena privativa.",
+        "Multa e restritivas ficam fora dessa extensão."
+      ],
+      "atencao": [
+        "Não transformar sursis em suspensão de todas as sanções ou absolvição. Verificar o regime próprio de cada obrigação."
+      ],
+      "exemplo": "A sentença concede sursis e o candidato conclui que a multa também ficou suspensa pelo art. 80. Variação: Se pergunta apenas sobre a execução da pena privativa, examinar condições do benefício, sem apagar a multa.",
+      "prova": [
+        "O sursis suspende automaticamente a multa? Não; o artigo exclui essa extensão.",
+        "Restritiva integra essa suspensão? Não; também está excluída."
+      ],
+      "termos": [
+        {
+          "termo": "Extensão do sursis",
+          "significado": "Delimitação das penas alcançadas pelo benefício."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "82ba644c-1b71-5dd4-a1a8-b0cf09a1ef53",
+        "content_sha256": "708cc71d118fb29b683ff587b83cf3d779ee23ebd0e60fbcf027b902a7960b36",
+        "simples": "A suspensão condicional não se estende às penas restritivas de direitos nem à multa.",
+        "pontos": [
+          "Suspensão não alcança restritivas de direitos.",
+          "Suspensão não alcança multa."
+        ],
+        "atencao": [
+          "O sursis suspende só a pena privativa de liberdade."
+        ],
+        "exemplo": "Mesmo com a prisão suspensa, a multa aplicada continua a ser exigível.",
+        "prova": [
+          "Assertiva que estende o sursis à multa erra: o art. 80 afasta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 77"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-82",
+      "unit_id": "51e55791-493c-5cf1-88f8-ab3a4288a73f",
+      "content_sha256": "d2e44a27abd659f5c63b649451e73112d28369fe7e759baac4e36dac5c70f6e8",
+      "simples": "Ao expirar o prazo sem revogação, considera-se extinta a pena privativa suspensa. Não é absolvição retroativa nem cancelamento automático das outras sanções.",
+      "pontos": [
+        "Prazo expirado E ausência de revogação.",
+        "Extinção refere-se à pena privativa."
+      ],
+      "atencao": [
+        "Não confundir o prazo de prova do sursis com prescrição ou livramento. Os efeitos remanescentes têm regime próprio."
+      ],
+      "exemplo": "O período termina sem revogação e pergunta-se o efeito sobre a pena privativa suspensa. Variação: Se houve revogação, falta uma condição da regra; não repetir a resposta de extinção.",
+      "prova": [
+        "Basta conceder sursis para extinguir imediatamente? Não; a regra usa o término sem revogação.",
+        "A regra cancela toda multa? Não; delimita a pena privativa."
+      ],
+      "termos": [
+        {
+          "termo": "Término do sursis",
+          "significado": "Conclusão do período de prova na hipótese legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "51e55791-493c-5cf1-88f8-ab3a4288a73f",
+        "content_sha256": "d2e44a27abd659f5c63b649451e73112d28369fe7e759baac4e36dac5c70f6e8",
+        "simples": "Expirado o prazo da suspensão sem que tenha havido revogação, considera-se extinta a pena privativa de liberdade.",
+        "pontos": [
+          "Fim do prazo sem revogação: pena privativa de liberdade extinta."
+        ],
+        "atencao": [
+          "A extinção ocorre ao fim do período de prova sem revogação."
+        ],
+        "exemplo": "Cumpridas as condições durante todo o prazo, a pena suspensa é declarada extinta.",
+        "prova": [
+          "Assertiva que determina cumprimento da pena após o prazo sem revogação erra: a pena fica extinta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 77 a 81"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-83",
+      "unit_id": "fbd8fa1a-6a7e-5efd-8179-5a8f067ff528",
+      "content_sha256": "4d624f547334d89e60856955b992c22ca616dab11c0097bcc0bae2e16d5b183b",
+      "simples": "Livramento condicional pressupõe pena privativa igual ou superior a dois anos, fração pertinente e requisitos cumulativos. O requisito de ausência de falta grave nos últimos doze meses não dispensa a avaliação do comportamento durante a execução.",
+      "pontos": [
+        "Mais de 1/3 na hipótese do inciso I; mais da metade no II.",
+        "Mais de 2/3 no inciso V, com ausência de reincidência específica; distinguir vedações da LEP, como feminicídio na hipótese atual do art. 112, VI, d, após Lei 15.358, vigente em 25/3/2026, sem retroatividade gravosa.",
+        "Reparação ressalva efetiva impossibilidade; violência/ameaça tem requisito pessoal adicional."
+      ],
+      "atencao": [
+        "Fração cumprida não garante benefício. Súmula 441/STJ: falta grave não interrompe prazo para livramento, mas pode importar nos requisitos subjetivos. Integrar LEP e vedações especiais atuais; não confundir com progressão."
+      ],
+      "exemplo": "Primário com bons antecedentes condenado a seis anos cumpriu exatamente dois: ainda não cumpriu MAIS de um terço na hipótese do inciso I. Variação: Com mais de dois anos cumpridos, o requisito temporal pode mudar, mas ainda avaliar faltas, comportamento e demais condições; em hipótese legal de vedação, a fração não libera o benefício.",
+      "prova": [
+        "A fração sozinha basta? Não; requisitos são cumulativos.",
+        "Falta grave reinicia automaticamente esse prazo? Não, conforme Súmula 441; distinguir avaliação subjetiva."
+      ],
+      "termos": [
+        {
+          "termo": "Livramento condicional",
+          "significado": "Liberdade condicionada na execução, distinta de progressão e sursis."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ],
+      "expected": {
+        "unit_id": "fbd8fa1a-6a7e-5efd-8179-5a8f067ff528",
+        "content_sha256": "4d624f547334d89e60856955b992c22ca616dab11c0097bcc0bae2e16d5b183b",
+        "simples": "Livramento condicional: o juiz pode conceder ao condenado a pena privativa de liberdade igual ou superior a 2 anos, desde que: cumprida mais de um terço da pena (não reincidente em crime doloso e com bons antecedentes) ou mais da metade (reincidente em crime doloso); comprovados bom comportamento, ausência de falta grave nos últimos 12 meses, bom desempenho no trabalho e aptidão para prover a própria subsistência; reparado o dano, salvo impossibilidade; e, para os crimes de maior gravidade (hediondo, tortura, tráfico, tráfico de pessoas e terrorismo), cumpridos mais de dois terços se o apenado não for reincidente específico (confira o texto completo, que traz outros incisos e o parágrafo único).",
+        "pontos": [
+          "Pena igual ou superior a 2 anos.",
+          "I – mais de 1/3 se não reincidente em crime doloso e com bons antecedentes.",
+          "II – mais da metade se reincidente em crime doloso.",
+          "III – comprovação de bom comportamento, ausência de falta grave nos últimos 12 meses, bom desempenho no trabalho e aptidão para subsistência por trabalho honesto.",
+          "IV – dano reparado, salvo efetiva impossibilidade.",
+          "V – mais de 2/3 nos crimes hediondos, tortura, tráfico de drogas, tráfico de pessoas e terrorismo, se não reincidente específico."
+        ],
+        "atencao": [
+          "Frações: mais de 1/3 (primário com bons antecedentes), mais da metade (reincidente doloso), mais de 2/3 (hediondos e equiparados, não reincidente específico).",
+          "Falta grave: considera-se os últimos 12 meses."
+        ],
+        "exemplo": "Condenado primário e de bons antecedentes a 6 anos pode pedir livramento condicional após cumprir mais de 2 anos, se cumpridos os demais requisitos.",
+        "prova": [
+          "Assertiva que exige cumprimento de mais da metade da pena do primário com bons antecedentes erra: basta mais de um terço."
+        ],
+        "termos": [
+          {
+            "termo": "Livramento condicional",
+            "significado": "Liberdade antecipada do condenado, mediante condições, após cumprir parte da pena."
+          }
+        ],
+        "remissoes": [
+          "Arts. 84 a 90"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-84",
+      "unit_id": "286842ec-9fa7-52ad-9fde-4a2055f679ef",
+      "content_sha256": "b0bc206c179a375499cab0aea8624c036730cf9d9e6a5031fad45a27d2da91a7",
+      "simples": "Para o livramento, somam-se penas correspondentes a infrações diversas. A regra de soma não transforma todas as infrações numa espécie única nem apaga requisitos e vedações próprias.",
+      "pontos": [
+        "Soma das penas para efeito do benefício.",
+        "Identificar a natureza de cada condenação."
+      ],
+      "atencao": [
+        "Não usar o teto de cumprimento do art. 75 como substituto automático de todos os cálculos. A soma não dispensa os requisitos do art. 83 e legislação especial."
+      ],
+      "exemplo": "Duas condenações são tratadas isoladamente para omitir pena relevante ao livramento. Variação: Com ambas consideradas, ainda examinar frações e impedimentos pertinentes, sem concluir benefício automático.",
+      "prova": [
+        "O texto manda somar para esse efeito? Sim.",
+        "A soma elimina impedimentos especiais? Não; eles exigem integração."
+      ],
+      "termos": [
+        {
+          "termo": "Soma para livramento",
+          "significado": "Consideração conjunta das penas no regime do benefício."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "286842ec-9fa7-52ad-9fde-4a2055f679ef",
+        "content_sha256": "b0bc206c179a375499cab0aea8624c036730cf9d9e6a5031fad45a27d2da91a7",
+        "simples": "As penas que correspondem a infrações diversas devem somar-se para efeito do livramento condicional.",
+        "pontos": [
+          "Para o livramento, somam-se as penas de infrações diversas."
+        ],
+        "atencao": [
+          "A soma vale para calcular a pena cumprida e o requisito temporal."
+        ],
+        "exemplo": "Duas condenações são somadas para verificar se o tempo mínimo exigido foi cumprido.",
+        "prova": [
+          "Assertiva que avalia cada condenação isoladamente para o livramento condicional contraria o art. 84."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 83"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-85",
+      "unit_id": "a2b43f4e-0e35-5b3e-abb7-c9c9a5c019b5",
+      "content_sha256": "90a7478f6337bbc2f118f3dbe1459635352b28d5e5f2775d7fee5d198d57c1c4",
+      "simples": "A sentença especifica as condições do livramento. O benefício não é liberdade sem deveres; devem ser identificadas condições legais e aquelas fixadas legitimamente para o caso.",
+      "pontos": [
+        "Condições devem ser especificadas.",
+        "Integração com a disciplina de execução."
+      ],
+      "atencao": [
+        "Não inventar condições arbitrárias nem supor que todas sejam idênticas às do sursis. Examinar lei, decisão e situação concreta."
+      ],
+      "exemplo": "O candidato chama livramento de dispensa de qualquer condição. Variação: Se a sentença fixa condições legais, seu cumprimento importa, sem equivaler à suspensão do processo.",
+      "prova": [
+        "Existem condições especificadas? Sim; o artigo exige isso.",
+        "É o mesmo instituto do sursis? Não; verificar regime próprio."
+      ],
+      "termos": [
+        {
+          "termo": "Condição do livramento",
+          "significado": "Dever de observação fixado no benefício de execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a2b43f4e-0e35-5b3e-abb7-c9c9a5c019b5",
+        "content_sha256": "90a7478f6337bbc2f118f3dbe1459635352b28d5e5f2775d7fee5d198d57c1c4",
+        "simples": "A sentença do livramento especificará as condições a que fica subordinado o benefício.",
+        "pontos": [
+          "Condições do livramento especificadas na sentença."
+        ],
+        "atencao": [
+          "As condições devem constar da decisão que concede o livramento."
+        ],
+        "exemplo": "A decisão fixa obrigações como comparecer periodicamente em juízo.",
+        "prova": [
+          "Assertiva que dispensa especificar condições no livramento contraria o art. 85."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 83"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-86",
+      "unit_id": "753616d1-2100-503a-8508-573115316435",
+      "content_sha256": "10e034249d7ed037587de03b85fa6a3c8b4632d7207ddb7716b9a6e6c59e929b",
+      "simples": "A revogação obrigatória prevista exige condenação irrecorrível a pena privativa. Abrange crime durante o benefício e crime anterior, neste último com a integração do art. 84.",
+      "pontos": [
+        "Condenação definitiva a pena privativa.",
+        "Distinguir crime anterior e cometido na vigência."
+      ],
+      "atencao": [
+        "Não equiparar mero indiciamento a condenação irrecorrível. Medidas provisórias de execução são outra análise, sem presumir decisão final."
+      ],
+      "exemplo": "O liberado é condenado definitivamente a pena privativa por crime cometido durante o benefício. Variação: Se existe apenas investigação, não estão demonstrados os requisitos de revogação obrigatória deste artigo.",
+      "prova": [
+        "Indiciamento basta para essa hipótese definitiva? Não.",
+        "Crime anterior é irrelevante? Não; o inciso II o contempla com a remissão."
+      ],
+      "termos": [
+        {
+          "termo": "Revogação obrigatória",
+          "significado": "Consequência nas hipóteses e pressupostos específicos do artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "753616d1-2100-503a-8508-573115316435",
+        "content_sha256": "10e034249d7ed037587de03b85fa6a3c8b4632d7207ddb7716b9a6e6c59e929b",
+        "simples": "Revogação obrigatória do livramento: ocorre se o liberado vem a ser condenado a pena privativa de liberdade, em sentença irrecorrível, por crime cometido durante a vigência do benefício, ou por crime anterior, observado o art. 84.",
+        "pontos": [
+          "Condenação a pena privativa de liberdade em sentença irrecorrível.",
+          "I – por crime cometido durante o livramento.",
+          "II – por crime anterior, observado o art. 84."
+        ],
+        "atencao": [
+          "É revogação OBRIGATÓRIA e exige sentença irrecorrível e pena privativa de liberdade."
+        ],
+        "exemplo": "Quem, solto em livramento, comete e é definitivamente condenado por novo crime tem o benefício revogado.",
+        "prova": [
+          "Assertiva que revoga o livramento por simples abertura de inquérito erra: exige condenação irrecorrível."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 87",
+          "Art. 88"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-87",
+      "unit_id": "3ce5d702-a91d-5bfe-91a4-ee6b710d9133",
+      "content_sha256": "1d1765c5451a863092d56a69c423aa36dc43082e52246a2b4b0aaacb5740ccd7",
+      "simples": "A revogação facultativa pode decorrer de descumprimento de obrigação ou condenação irrecorrível por crime/contravenção a pena não privativa. Não significa que qualquer notícia imponha revogação automática.",
+      "pontos": [
+        "O juiz PODERÁ revogar.",
+        "Pena não privativa difere da hipótese do art. 86."
+      ],
+      "atencao": [
+        "Examinar prova, procedimento e decisão fundamentada. Facultativa não é obrigação universal nem dispensa das garantias."
+      ],
+      "exemplo": "Uma obrigação da sentença foi descumprida e o candidato afirma que o artigo manda obrigatoriamente revogar. Variação: Se a condenação definitiva é a pena privativa, reavaliar a hipótese do art. 86, sem trocar os regimes.",
+      "prova": [
+        "O verbo legal indica faculdade? Sim.",
+        "A hipótese de pena não privativa é igual à do art. 86? Não; os artigos distinguem regimes."
+      ],
+      "termos": [
+        {
+          "termo": "Revogação facultativa",
+          "significado": "Possibilidade fundamentada, diferente da hipótese obrigatória."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3ce5d702-a91d-5bfe-91a4-ee6b710d9133",
+        "content_sha256": "1d1765c5451a863092d56a69c423aa36dc43082e52246a2b4b0aaacb5740ccd7",
+        "simples": "Revogação facultativa: o juiz pode revogar o livramento se o liberado deixar de cumprir qualquer das obrigações da sentença, ou for irrecorrivelmente condenado, por crime ou contravenção, a pena que não seja privativa de liberdade.",
+        "pontos": [
+          "Descumprimento de obrigação da sentença.",
+          "Condenação irrecorrível, por crime ou contravenção, a pena não privativa de liberdade."
+        ],
+        "atencao": [
+          "Aqui o juiz PODE revogar (facultativa)."
+        ],
+        "exemplo": "O liberado deixa de comparecer a juízo sem justificativa: o juiz pode revogar o livramento.",
+        "prova": [
+          "Assertiva que trata como obrigatória a revogação do art. 87 erra: é facultativa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 86"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-88",
+      "unit_id": "25864c66-e92c-52d4-99ce-f8385e37dfcc",
+      "content_sha256": "66202afd7a25813855720f5621eb8ae349426bc3b202504e288745dcb4a532c7",
+      "simples": "Revogado o livramento, não se concede novamente aquele benefício; a regra de não descontar o tempo solto tem exceção quando a revogação decorre de condenação por crime anterior ao benefício.",
+      "pontos": [
+        "Regra: não descontar tempo em liberdade.",
+        "Exceção: condenação por crime anterior."
+      ],
+      "atencao": [
+        "Não apagar a exceção nem estender a proibição a qualquer benefício futuro de qualquer condenação sem análise própria. Identificar o motivo da revogação."
+      ],
+      "exemplo": "O livramento foi revogado por condenação por crime anterior e a questão proíbe descontar o tempo solto sem ressalva. Variação: Se o fundamento é crime na vigência, a exceção indicada não se aplica pela mesma razão.",
+      "prova": [
+        "Há exceção ao não desconto? Sim; crime anterior na hipótese legal.",
+        "O motivo da revogação importa? Sim; altera esse efeito."
+      ],
+      "termos": [
+        {
+          "termo": "Efeitos da revogação",
+          "significado": "Consequências condicionadas ao fundamento, não regra indiferenciada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "25864c66-e92c-52d4-99ce-f8385e37dfcc",
+        "content_sha256": "66202afd7a25813855720f5621eb8ae349426bc3b202504e288745dcb4a532c7",
+        "simples": "Efeitos da revogação: revogado o livramento, não poderá ser novamente concedido, e, salvo quando a revogação resulta de condenação por outro crime anterior àquele benefício, não se desconta na pena o tempo em que esteve solto o condenado.",
+        "pontos": [
+          "Revogado, não pode ser concedido de novo.",
+          "Em regra, o tempo solto não é descontado da pena.",
+          "Exceção: revogação por condenação por crime anterior ao benefício."
+        ],
+        "atencao": [
+          "A exceção do desconto é a revogação por crime ANTERIOR ao livramento."
+        ],
+        "exemplo": "Revogado o livramento por novo crime, o tempo em que o condenado esteve solto não é descontado.",
+        "prova": [
+          "Assertiva que permite novo livramento após a revogação contraria o art. 88."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 86 e 87"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-89",
+      "unit_id": "da1ec61c-27f8-58a1-8416-2de224f2aa8d",
+      "content_sha256": "08bf07e00e1c59e370aa7b0683a9533cf5da5625cc6cb297d3a2d90b3f8065bb",
+      "simples": "O texto impede declarar extinta a pena enquanto não transitar a sentença no processo por crime cometido durante o livramento. A aplicação exige integração com suspensão/revogação e seus marcos, não prorrogação indefinida por qualquer processo.",
+      "pontos": [
+        "Crime cometido na vigência é o recorte.",
+        "Confrontar decisões e término do período de prova."
+      ],
+      "atencao": [
+        "Súmula 617/STJ: ausência de suspensão ou revogação antes do término do período de prova enseja extinção pelo cumprimento integral. Não usar o art. 89 isoladamente para autorizar revogação tardia universal."
+      ],
+      "exemplo": "Há processo por fato durante o benefício, mas nenhuma suspensão ou revogação até o término do período. Variação: Se houve suspensão tempestiva, muda o pressuposto da Súmula 617; examinar o procedimento, sem presumir o mesmo resultado.",
+      "prova": [
+        "Qualquer processo autoriza espera indefinida? Não; recorte e marcos importam.",
+        "A Súmula 617 exige olhar a data da suspensão/revogação? Sim; antes do término."
+      ],
+      "termos": [
+        {
+          "termo": "Marco do período de prova",
+          "significado": "Data relevante à integração entre processo pendente e extinção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ],
+      "expected": {
+        "unit_id": "da1ec61c-27f8-58a1-8416-2de224f2aa8d",
+        "content_sha256": "08bf07e00e1c59e370aa7b0683a9533cf5da5625cc6cb297d3a2d90b3f8065bb",
+        "simples": "O juiz não poderá declarar extinta a pena enquanto não passar em julgado a sentença do processo a que responde o liberado por crime cometido na vigência do livramento.",
+        "pontos": [
+          "Extinção da pena fica condicionada ao trânsito em julgado do processo por crime cometido durante o livramento."
+        ],
+        "atencao": [
+          "Evita extinguir a pena enquanto pende processo por novo crime cometido no livramento."
+        ],
+        "exemplo": "Terminado o prazo do livramento, a extinção da pena aguarda o desfecho do processo pelo novo crime.",
+        "prova": [
+          "Assertiva que permite declarar extinta a pena enquanto ainda tramita processo por crime cometido no livramento contraria o art. 89."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 86"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-91",
+      "unit_id": "f0579341-d838-563a-b9d0-9c6a11f6df65",
+      "content_sha256": "b1dd7347482a85ca0dfeffbd4bfefe55db5768df6208ab557642cad0409c5915",
+      "simples": "A condenação torna certa a obrigação de indenizar e prevê perda de instrumentos ilícitos e produto/proveito, ressalvados lesado e terceiro de boa-fé. A perda de equivalentes tem condições quando o produto não é encontrado ou está no exterior.",
+      "pontos": [
+        "Instrumento ilícito e produto/proveito são categorias diferentes.",
+        "Equivalentes: §§1º/2º; resguardar terceiros e procedimento."
+      ],
+      "atencao": [
+        "Não presumir que todo bem lícito usado no crime é perdido por esta alínea nem que o valor civil já esteja integralmente liquidado. A remissão à ADPF 569 não certifica aqui toda interpretação da decisão; integrar hipóteses especiais, inclusive art. 91-A."
+      ],
+      "exemplo": "Um instrumento cujo porte é lícito é confiscado apenas pela generalização da alínea a, sem hipótese especial identificada. Variação: Se é produto do delito, examinar alínea b e direitos protegidos, em vez de exigir ilicitude intrínseca do objeto.",
+      "prova": [
+        "Toda ferramenta lícita entra automaticamente na alínea a? Não; a hipótese exige ilicitude indicada.",
+        "O terceiro de boa-fé pode ser ignorado? Não; há ressalva expressa."
+      ],
+      "termos": [
+        {
+          "termo": "Perdimento",
+          "significado": "Perda patrimonial nas hipóteses legais, distinta da apreensão provisória."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f0579341-d838-563a-b9d0-9c6a11f6df65",
+        "content_sha256": "b1dd7347482a85ca0dfeffbd4bfefe55db5768df6208ab557642cad0409c5915",
+        "simples": "Efeitos da condenação: tornar certa a obrigação de indenizar o dano causado pelo crime e a perda em favor da União, ressalvado o direito do lesado ou de terceiro de boa-fé, dos instrumentos do crime (se consistirem em coisas cujo fabrico, alienação, uso, porte ou detenção seja ilícito) e do produto do crime ou de qualquer bem ou valor que constitua proveito auferido com o crime. O §1º permite a perda de bens ou valores equivalentes quando o produto não for encontrado ou estiver no exterior, e o §2º estende as medidas assecuratórias a bens equivalentes. O texto traz 'Vide ADPF 569'.",
+        "pontos": [
+          "I – torna certa a obrigação de indenizar o dano.",
+          "II, a: perda dos instrumentos do crime cujo fabrico, alienação, uso, porte ou detenção seja ilícito.",
+          "II, b: perda do produto do crime ou de qualquer bem ou valor que constitua proveito.",
+          "Ressalva: direito do lesado ou de terceiro de boa-fé.",
+          "§1º: perda de bens ou valores equivalentes se não encontrados ou no exterior.",
+          "§2º: medidas assecuratórias podem alcançar bens equivalentes."
+        ],
+        "atencao": [
+          "Os instrumentos só são confiscados se forem coisas ilícitas em si (fabrico, alienação, uso, porte ou detenção).",
+          "A perda é em favor da UNIÃO, ressalvado o lesado ou terceiro de boa-fé."
+        ],
+        "exemplo": "A arma sem registro usada no crime é perdida em favor da União após a condenação.",
+        "prova": [
+          "Assertiva que confisca qualquer instrumento do crime, ainda que de uso lícito, erra: só os de fabrico, alienação, uso, porte ou detenção ilícitos."
+        ],
+        "termos": [
+          {
+            "termo": "Medidas assecuratórias",
+            "significado": "Medidas cautelares para garantir bens, como o sequestro."
+          }
+        ],
+        "remissoes": [
+          "Art. 91-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-91-a",
+      "unit_id": "00bb2a4c-6614-5b25-9461-4977a5222a18",
+      "content_sha256": "9c8f60bed0076bed8b7f9949ce64467d462173c3d07fc64d30a9d9ce98bd594f",
+      "simples": "Perda alargada considera incompatibilidade patrimonial em condenação por infração com pena máxima superior a seis anos de reclusão. Há requerimento expresso na denúncia, defesa da origem lícita e especificação na sentença; o §5º trata especialmente de instrumentos de organizações/milícias.",
+      "pontos": [
+        "SUPERIOR a 6 anos, não exatamente seis.",
+        "MP requer na denúncia e indica diferença; sentença especifica valor/bens.",
+        "Lei 15.358, vigente em 25/3/2026: §5º inclui União, Estado ou DF conforme a Justiça."
+      ],
+      "atencao": [
+        "Não confiscar por mera acusação ou nome de facção. Identificar os requisitos e separar perda alargada do caput da hipótese especial do §5º; mudança gravosa não retroage e controle constitucional deve ser acompanhado, sem declarar toda controvérsia resolvida."
+      ],
+      "exemplo": "A infração tem pena máxima exatamente seis anos e a questão considera preenchido o requisito de superior a seis. Variação: Com máxima superior a seis, ainda verificar condenação, pedido, diferença patrimonial, defesa e sentença.",
+      "prova": [
+        "Máxima de seis satisfaz superior a seis? Não.",
+        "O caput dispensa pedido expresso na denúncia? Não; o §3º exige."
+      ],
+      "termos": [
+        {
+          "termo": "Perda alargada",
+          "significado": "Hipótese patrimonial com pressupostos e garantias específicos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"
+      ],
+      "expected": {
+        "unit_id": "00bb2a4c-6614-5b25-9461-4977a5222a18",
+        "content_sha256": "9c8f60bed0076bed8b7f9949ce64467d462173c3d07fc64d30a9d9ce98bd594f",
+        "simples": "Perda alargada: na condenação por infrações com pena máxima superior a 6 anos de reclusão, pode ser decretada a perda, como produto ou proveito do crime, dos bens correspondentes à diferença entre o valor do patrimônio do condenado e o que seja compatível com seu rendimento lícito. Considera-se patrimônio todos os bens de sua titularidade ou sobre os quais tenha domínio e benefício, e os transferidos a terceiros a título gratuito ou por contraprestação irrisória desde o início da atividade criminal. O condenado pode demonstrar a origem lícita; a perda deve ser requerida expressamente pelo Ministério Público na denúncia, com indicação da diferença apurada.",
+        "pontos": [
+          "Cabimento: infrações com pena máxima superior a 6 anos de reclusão.",
+          "Objeto: diferença entre o patrimônio e o rendimento lícito.",
+          "§1º: patrimônio inclui bens titulados, de domínio e benefício, e os transferidos a terceiros gratuitamente ou por valor irrisório.",
+          "§2º: o condenado pode demonstrar a origem lícita.",
+          "§3º: requerimento expresso do MP na denúncia, com a diferença apurada."
+        ],
+        "atencao": [
+          "Pena MÁXIMA superior a 6 anos (não a pena aplicada).",
+          "A perda deve ser pedida pelo MP na denúncia."
+        ],
+        "exemplo": "Condenado por crime com pena máxima de 10 anos tem patrimônio muito acima do rendimento lícito: o excedente pode ser perdido, se o MP requereu na denúncia.",
+        "prova": [
+          "Assertiva que dispensa o requerimento expresso do Ministério Público na denúncia erra: o §3º o exige."
+        ],
+        "termos": [
+          {
+            "termo": "Perda alargada",
+            "significado": "Confisco da diferença entre o patrimônio e o rendimento lícito do condenado."
+          }
+        ],
+        "remissoes": [
+          "Art. 91"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-92",
+      "unit_id": "aae561ad-18a4-54e8-a50c-ea71e964278c",
+      "content_sha256": "7cbbe14d292eb99c591680dd2c32f665ca74935b1ce7a08115c4c4ac15c33515",
+      "simples": "Os efeitos específicos incluem cargo/função/mandato, poder familiar e direção de veículo, com pressupostos distintos. A regra exige declaração motivada, mas o §2º excepciona a automaticidade; em 2026 seu alcance foi ampliado a crimes do ECA expressamente listados.",
+      "pontos": [
+        "Cargo: igual/superior a 1 ano na hipótese de abuso/dever; superior a 4 nos demais.",
+        "Lei 15.487, publicada e vigente em 7/8/2026: lista específica de crimes do ECA no §2º.",
+        "Lei 15.358, vigente em 25/3/2026: CNPJ 180 dias; reincidência e interdição comercial por 5 anos têm hipóteses próprias."
+      ],
+      "atencao": [
+        "Nem todos os efeitos são sempre automáticos, nem sempre dependem de declaração: distinguir §§1º/2º. Não estender a qualquer crime do ECA ou qualquer estabelecimento; observar lei no tempo e os pressupostos das hipóteses recentes."
+      ],
+      "exemplo": "O candidato diz que os efeitos do art. 92 nunca são automáticos, ignorando §2º e sua lista atual. Variação: Fora da exceção, aplicar a regra de declaração motivada; não presumir automática perda de cargo por qualquer pena.",
+      "prova": [
+        "Nunca são automáticos? Não; o §2º traz exceções.",
+        "A ampliação de 2026 inclui todo crime do ECA? Não; há lista expressa de dispositivos."
+      ],
+      "termos": [
+        {
+          "termo": "Efeitos específicos",
+          "significado": "Consequências adicionais com requisitos e exceções próprias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm"
+      ],
+      "expected": {
+        "unit_id": "aae561ad-18a4-54e8-a50c-ea71e964278c",
+        "content_sha256": "7cbbe14d292eb99c591680dd2c32f665ca74935b1ce7a08115c4c4ac15c33515",
+        "simples": "Efeitos específicos da condenação (não são automáticos: dependem de declaração motivada na sentença). I: perda de cargo, função pública ou mandato eletivo quando aplicada pena privativa de liberdade igual ou superior a 1 ano nos crimes praticados com abuso de poder ou violação de dever para com a Administração Pública, ou superior a 4 anos nos demais casos. II: incapacidade para o poder familiar, tutela ou curatela nos crimes dolosos sujeitos à pena de reclusão contra outrem igualmente titular do mesmo poder, contra filho, descendente, tutelado ou curatelado e nos crimes contra a mulher por razões da condição do sexo feminino. III: inabilitação para dirigir veículo quando utilizado como meio para crime doloso. O inciso IV traz regra de suspensão da inscrição no CNPJ de estabelecimento (confira o texto completo).",
+        "pontos": [
+          "I, a: perda do cargo se pena igual ou superior a 1 ano, em crime com abuso de poder ou violação de dever para com a Administração.",
+          "I, b: perda do cargo se pena superior a 4 anos nos demais casos.",
+          "II: incapacidade para poder familiar, tutela ou curatela em crimes dolosos de reclusão contra familiar/tutelado ou contra a mulher por razões da condição do sexo feminino.",
+          "III: inabilitação para dirigir quando o veículo é meio para crime DOLOSO.",
+          "IV: suspensão da inscrição no CNPJ por 180 dias, nos termos do texto."
+        ],
+        "atencao": [
+          "Limites do inciso I: 1 ano (crimes funcionais) e MAIS DE 4 anos (demais).",
+          "Os efeitos do art. 92 não são automáticos: devem ser motivadamente declarados na sentença (regra do parágrafo único do artigo, conforme o texto completo).",
+          "Inabilitação para dirigir: crime doloso (para culposo de trânsito, veja o art. 47, III)."
+        ],
+        "exemplo": "Servidor condenado a 2 anos por peculato pode perder o cargo (inciso I, a).",
+        "prova": [
+          "Assertiva que exige pena superior a 4 anos para a perda do cargo nos crimes praticados com abuso de poder erra: basta pena igual ou superior a 1 ano."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 93 (reabilitação)",
+          "Art. 47"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-93",
+      "unit_id": "05a5ad10-383c-538b-b4b5-64f32c5c69a2",
+      "content_sha256": "d2adf9444546e53474eb92e5847a0abf1c560c7d11650aa229caa7ddf66ea990",
+      "simples": "Reabilitação assegura sigilo dos registros de processo/condenação nas condições legais. Pode alcançar efeitos do art. 92, mas não permite reintegração à situação anterior nos incisos I e II.",
+      "pontos": [
+        "Sentença definitiva e regime de reabilitação.",
+        "Vedação de reintegração nos incisos I/II."
+      ],
+      "atencao": [
+        "Não confundir sigilo com apagar o fato, absolver ou assegurar retorno automático ao cargo. Integrar arts. 94/95 e regime de registros."
+      ],
+      "exemplo": "Após reabilitação, o candidato afirma direito automático de reassumir o cargo perdido. Variação: Se o pedido trata do sigilo, examinar essa proteção, distinguindo-a da reintegração proibida.",
+      "prova": [
+        "Reabilitar garante retorno ao cargo? Não; há vedação indicada.",
+        "É absolvição retroativa? Não; não transforma a condenação em absolvição."
+      ],
+      "termos": [
+        {
+          "termo": "Reabilitação",
+          "significado": "Instituto de sigilo e efeitos delimitados, com requisitos legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "05a5ad10-383c-538b-b4b5-64f32c5c69a2",
+        "content_sha256": "d2adf9444546e53474eb92e5847a0abf1c560c7d11650aa229caa7ddf66ea990",
+        "simples": "A reabilitação alcança quaisquer penas aplicadas em sentença definitiva, assegurando ao condenado o sigilo dos registros sobre seu processo e condenação. Pode também atingir os efeitos da condenação do art. 92, vedada a reintegração na situação anterior nos casos dos incisos I e II.",
+        "pontos": [
+          "Alcança quaisquer penas aplicadas em sentença definitiva.",
+          "Assegura sigilo dos registros do processo e da condenação.",
+          "Pode atingir os efeitos do art. 92, mas sem reintegração nos casos dos incisos I e II."
+        ],
+        "atencao": [
+          "Mesmo reabilitado, não volta ao cargo perdido nem recupera o poder familiar (art. 92, I e II)."
+        ],
+        "exemplo": "O reabilitado tem o sigilo dos registros, mas o servidor que perdeu o cargo não é reintegrado.",
+        "prova": [
+          "Assertiva que garante reintegração ao cargo perdido pela reabilitação erra: é vedada."
+        ],
+        "termos": [
+          {
+            "termo": "Reabilitação",
+            "significado": "Medida que assegura o sigilo da condenação e pode afastar certos efeitos dela."
+          }
+        ],
+        "remissoes": [
+          "Art. 92",
+          "Art. 94"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-94",
+      "unit_id": "bbe9cce8-f269-5fc2-8e01-9b88407bac28",
+      "content_sha256": "fc9bd7d4f13b57059a5e8d9f360e888b6960f76eded8815f07ce2d60e83be26d",
+      "simples": "Reabilitação pode ser requerida após dois anos dos marcos legais, computados períodos de prova sem revogação, com domicílio no País, comportamento e reparação ou alternativas expressas. Indeferimento permite novo pedido com novos elementos.",
+      "pontos": [
+        "Dois anos da extinção ou término, não necessariamente do trânsito.",
+        "Reparação: impossibilidade absoluta, renúncia da vítima ou novação são alternativas previstas."
+      ],
+      "atencao": [
+        "Não exigir novo biênio universal depois de indeferimento nem negar automaticamente por pobreza: identificar a impossibilidade e comprovação pertinentes. Não presumir que só o prazo basta."
+      ],
+      "exemplo": "O pedido negado é renovado com novos elementos e a questão exige esperar sempre mais dois anos. Variação: Se não há novos elementos comprobatórios, falta requisito da renovação; tempo sozinho não os substitui.",
+      "prova": [
+        "O trânsito é sempre o único marco? Não; o artigo usa extinção/término.",
+        "Novo pedido exige sempre outro biênio? Não; o parágrafo permite a qualquer tempo com novos elementos."
+      ],
+      "termos": [
+        {
+          "termo": "Requisitos da reabilitação",
+          "significado": "Condições cumulativas e alternativas de reparação previstas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "bbe9cce8-f269-5fc2-8e01-9b88407bac28",
+        "content_sha256": "fc9bd7d4f13b57059a5e8d9f360e888b6960f76eded8815f07ce2d60e83be26d",
+        "simples": "A reabilitação pode ser requerida decorridos 2 anos do dia em que for extinta, de qualquer modo, a pena ou terminar sua execução, computando-se o período de prova da suspensão e do livramento condicional se não houver revogação, desde que o condenado: tenha tido domicílio no País nesse prazo; demonstre bom comportamento público e privado; e tenha ressarcido o dano (ou demonstre a absoluta impossibilidade) ou exiba renúncia da vítima ou novação da dívida. Negada, pode ser requerida novamente a qualquer tempo, com novos elementos.",
+        "pontos": [
+          "Prazo: 2 anos após a extinção ou término da execução da pena.",
+          "I – domicílio no País durante o prazo.",
+          "II – bom comportamento público e privado, de forma efetiva e constante.",
+          "III – dano ressarcido (ou absoluta impossibilidade), ou renúncia da vítima/novação da dívida.",
+          "Parágrafo único: negada, pode ser requerida de novo com novos elementos comprobatórios."
+        ],
+        "atencao": [
+          "Prazo de 2 anos (conte o período de prova do sursis e do livramento se não revogados).",
+          "Três requisitos cumulativos: domicílio, bom comportamento e reparação."
+        ],
+        "exemplo": "Dois anos depois do término da pena, o condenado que comprovou bom comportamento e ressarciu o dano pede a reabilitação.",
+        "prova": [
+          "Assertiva que fixa o prazo da reabilitação em 5 anos erra: é de 2 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 93 e 95"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-95",
+      "unit_id": "1fb85aa1-ce34-5103-adcd-1dc193c15b6e",
+      "content_sha256": "dc6cfb2039a0570046869aa72d616803790c59839788342cd5bcc366df592dfe",
+      "simples": "Reabilitação é revogada de ofício ou por requerimento do MP quando há condenação definitiva como reincidente a pena que não seja multa. Investigação ou condenação exclusivamente pecuniária não preenche essa hipótese.",
+      "pontos": [
+        "Decisão definitiva e condição de reincidente.",
+        "Pena que NÃO seja multa."
+      ],
+      "atencao": [
+        "Não revogar por mera acusação nem omitir a ressalva da multa. Verificar todos os pressupostos, não apenas a existência de novo fato."
+      ],
+      "exemplo": "A nova condenação definitiva, como reincidente, é exclusivamente a multa. Variação: Se a pena não é multa e os demais requisitos se completam, examinar a hipótese de revogação.",
+      "prova": [
+        "Qualquer investigação basta? Não; exige condenação definitiva.",
+        "Só multa satisfaz essa hipótese? Não; o artigo a excepciona."
+      ],
+      "termos": [
+        {
+          "termo": "Revogação da reabilitação",
+          "significado": "Consequência com requisitos específicos, não cancelamento por notícia."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1fb85aa1-ce34-5103-adcd-1dc193c15b6e",
+        "content_sha256": "dc6cfb2039a0570046869aa72d616803790c59839788342cd5bcc366df592dfe",
+        "simples": "A reabilitação será revogada, de ofício ou a requerimento do Ministério Público, se o reabilitado for condenado, como reincidente, por decisão definitiva, a pena que não seja de multa.",
+        "pontos": [
+          "Revogação de ofício ou a requerimento do MP.",
+          "Condenação como reincidente, por decisão definitiva, a pena que não seja de multa."
+        ],
+        "atencao": [
+          "Condenação só a multa NÃO revoga a reabilitação."
+        ],
+        "exemplo": "O reabilitado volta a ser condenado, como reincidente, a prisão: a reabilitação é revogada.",
+        "prova": [
+          "Assertiva que revoga a reabilitação por condenação apenas a multa contraria o art. 95."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 93 e 94"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-96",
+      "unit_id": "0ad37fb8-a157-59b0-ba96-9bacaa3b40de",
+      "content_sha256": "ab7c4893266e80a5b8d252db5ff6e9ac8374eda632d905cd9e4d2ca43979a2a7",
+      "simples": "O CP enumera internação e tratamento ambulatorial, integrados à legislação de saúde mental e garantias. Extinta a punibilidade, não se impõe nem subsiste medida de segurança.",
+      "pontos": [
+        "Duas espécies textuais.",
+        "Extinção da punibilidade impede imposição/subsistência."
+      ],
+      "atencao": [
+        "A enumeração histórica não dispensa Lei 10.216: cuidado adequado, recursos extra-hospitalares e garantias. Não transformar diagnóstico em confinamento automático; toda política/regulamentação não foi certificada aqui."
+      ],
+      "exemplo": "A punibilidade está extinta e a questão admite impor medida de segurança pelo mesmo fato apenas porque há diagnóstico. Variação: Com punibilidade não extinta, ainda verificar imputabilidade, decisão e necessidade, sem concluir medida automática.",
+      "prova": [
+        "Extinta a punibilidade pode impor a medida pelo fato? Não; o parágrafo veda.",
+        "Diagnóstico sozinho define internação? Não; exige avaliação e regime de cuidado."
+      ],
+      "termos": [
+        {
+          "termo": "Medida de segurança",
+          "significado": "Resposta jurídico-terapêutica com pressupostos e limites, não pena perpétua."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ],
+      "expected": {
+        "unit_id": "0ad37fb8-a157-59b0-ba96-9bacaa3b40de",
+        "content_sha256": "ab7c4893266e80a5b8d252db5ff6e9ac8374eda632d905cd9e4d2ca43979a2a7",
+        "simples": "As medidas de segurança são a internação em hospital de custódia e tratamento psiquiátrico (ou, à falta, em outro estabelecimento adequado) e a sujeição a tratamento ambulatorial. Extinta a punibilidade, não se impõe medida de segurança nem subsiste a que tenha sido imposta.",
+        "pontos": [
+          "I – internação em hospital de custódia e tratamento psiquiátrico ou estabelecimento adequado.",
+          "II – tratamento ambulatorial.",
+          "Extinta a punibilidade: não se impõe nem subsiste a medida."
+        ],
+        "atencao": [
+          "As medidas de segurança são duas espécies: internação e tratamento ambulatorial."
+        ],
+        "exemplo": "O inimputável que praticou fato típico e ilícito pode ser internado ou sujeito a tratamento ambulatorial.",
+        "prova": [
+          "Assertiva que mantém a medida de segurança mesmo após extinta a punibilidade contraria o parágrafo único."
+        ],
+        "termos": [
+          {
+            "termo": "Medida de segurança",
+            "significado": "Medida de cunho curativo aplicada a inimputáveis (ou semi-imputáveis em certos casos)."
+          }
+        ],
+        "remissoes": [
+          "Art. 97",
+          "Art. 98"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-97",
+      "unit_id": "21caedf2-d993-5e95-be43-03eb63b71dc4",
+      "content_sha256": "d9538033e7df64f7eb480b903b10103aa5eb3f1c7c27d50a0e824ef49af45815",
+      "simples": "O texto diferencia internação e tratamento e prevê mínimo de um a três anos, perícia e liberação condicional. Deve ser lido com limites constitucionais, Súmula 527/STJ e Lei 10.216; não ensina internação perpétua nem escolha automática apenas pelo nome da pena.",
+      "pontos": [
+        "Mínimo fixado de 1 a 3 não é máximo universal de duração.",
+        "Perícia no termo mínimo e anualmente, ou a qualquer tempo por determinação.",
+        "Súmula 527: duração não deve ultrapassar máximo abstratamente cominado ao delito."
+      ],
+      "atencao": [
+        "Tempo indeterminado não autoriza perpetuidade. Necessidade clínica, modalidade adequada e garantias importam; Lei 10.216 exige insuficiência dos recursos extra-hospitalares para internação. Não se certifica toda regulamentação antimanicomial neste bloco."
+      ],
+      "exemplo": "A questão transforma a expressão tempo indeterminado em autorização de internação perpétua. Variação: Se o tratamento é ambulatorial, internação posterior ainda exige necessidade curativa e garantias, não é automática por conveniência.",
+      "prova": [
+        "Um a três anos é sempre o teto? Não; o texto o chama prazo mínimo.",
+        "Pode ultrapassar sem limite o máximo do delito segundo Súmula 527? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Limites da medida",
+          "significado": "Prazo e cuidado integrados à jurisprudência e legislação de saúde."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ],
+      "expected": {
+        "unit_id": "21caedf2-d993-5e95-be43-03eb63b71dc4",
+        "content_sha256": "d9538033e7df64f7eb480b903b10103aa5eb3f1c7c27d50a0e824ef49af45815",
+        "simples": "Se o agente for inimputável, o juiz determina sua internação; se o fato for punível com detenção, pode submetê-lo a tratamento ambulatorial. A internação ou o tratamento é por tempo indeterminado, enquanto não for averiguada, por perícia médica, a cessação da periculosidade, com prazo mínimo de 1 a 3 anos. A perícia ocorre ao fim do prazo mínimo e deve ser repetida de ano em ano, ou a qualquer tempo se o juiz da execução determinar. A desinternação ou liberação é sempre condicional e a situação anterior é restabelecida se, antes de 1 ano, o agente pratica fato indicativo de persistência da periculosidade. Em qualquer fase do tratamento ambulatorial, o juiz pode determinar a internação, se necessária para fins curativos.",
+        "pontos": [
+          "Inimputável: internação; se o fato é punível com detenção, o juiz pode aplicar tratamento ambulatorial.",
+          "§1º: tempo indeterminado, até cessar a periculosidade; prazo mínimo de 1 a 3 anos.",
+          "§2º: perícia ao fim do prazo mínimo e repetida de ano em ano.",
+          "§3º: desinternação/liberação sempre condicional; restabelece-se a situação anterior se, antes de 1 ano, houver fato indicativo de periculosidade.",
+          "§4º: o juiz pode converter o ambulatorial em internação, se necessário para fins curativos."
+        ],
+        "atencao": [
+          "Prazo MÍNIMO de 1 a 3 anos e MÁXIMO indeterminado (o tema do limite é muito cobrado, conforme a jurisprudência).",
+          "A desinternação é CONDICIONAL: período de 1 ano."
+        ],
+        "exemplo": "Inimputável que cometeu crime punido com reclusão é internado; a internação dura enquanto houver periculosidade, com perícia anual após o prazo mínimo.",
+        "prova": [
+          "Assertiva que fixa prazo máximo definitivo de 3 anos para a medida de segurança lê o prazo MÍNIMO como máximo: o texto fala em tempo indeterminado."
+        ],
+        "termos": [
+          {
+            "termo": "Periculosidade",
+            "significado": "Probabilidade de o agente voltar a delinquir, que justifica a medida de segurança."
+          }
+        ],
+        "remissoes": [
+          "Art. 26",
+          "Art. 96",
+          "Art. 98"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-98",
+      "unit_id": "1b3df0b5-4b34-5937-8510-937b24a6b4d2",
+      "content_sha256": "e3123b351eca613067b94d810c508923fe20dd0e4f081ce17f6321722633d14c",
+      "simples": "No semi-imputável que necessita de especial tratamento curativo, a pena privativa pode ser substituída por medida adequada, com mínimo de um a três anos e remissões ao art. 97. Não é substituição obrigatória para todo diagnóstico.",
+      "pontos": [
+        "Hipótese: art. 26, parágrafo único.",
+        "Necessidade de especial tratamento; poderá substituir."
+      ],
+      "atencao": [
+        "Distinguir redução por capacidade diminuída de substituição curativa. Integrar Súmula 527 e Lei 10.216; não somar automaticamente pena e medida como duas punições integrais pelo mesmo título."
+      ],
+      "exemplo": "Há capacidade diminuída, mas a questão impõe internação automaticamente sem avaliar necessidade curativa. Variação: Com necessidade demonstrada, examinar a possibilidade e modalidade adequada, preservando direitos e limites.",
+      "prova": [
+        "Todo diagnóstico impõe substituição? Não; há pressupostos próprios.",
+        "O artigo usa faculdade e necessidade? Sim; pode substituir se necessitar especial tratamento."
+      ],
+      "termos": [
+        {
+          "termo": "Semi-imputabilidade",
+          "significado": "Capacidade diminuída na hipótese legal, distinta de incapacidade inteira."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ],
+      "expected": {
+        "unit_id": "1b3df0b5-4b34-5937-8510-937b24a6b4d2",
+        "content_sha256": "e3123b351eca613067b94d810c508923fe20dd0e4f081ce17f6321722633d14c",
+        "simples": "Na hipótese do parágrafo único do art. 26 (semi-imputável) e necessitando o condenado de especial tratamento curativo, a pena privativa de liberdade pode ser substituída pela internação ou tratamento ambulatorial, pelo prazo mínimo de 1 a 3 anos, nos termos do art. 97 e dos §§1º a 4º.",
+        "pontos": [
+          "Aplica-se ao semi-imputável que necessite de especial tratamento curativo.",
+          "A pena privativa pode ser substituída por internação ou tratamento ambulatorial.",
+          "Prazo mínimo de 1 a 3 anos, nos termos do art. 97."
+        ],
+        "atencao": [
+          "É o sistema vicariante: pena OU medida de segurança, não as duas."
+        ],
+        "exemplo": "Condenado semi-imputável que precisa de tratamento tem a prisão substituída por internação.",
+        "prova": [
+          "Assertiva que cumula pena e medida de segurança para o semi-imputável contraria o art. 98 (substitui)."
+        ],
+        "termos": [
+          {
+            "termo": "Sistema vicariante",
+            "significado": "Pena ou medida de segurança, nunca as duas ao mesmo tempo."
+          }
+        ],
+        "remissoes": [
+          "Art. 26, parágrafo único",
+          "Art. 97"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-99",
+      "unit_id": "4f7c34be-4e9e-59b4-8604-0a276e4b173a",
+      "content_sha256": "94df998aa4a6dbc51bb608d1d69ac7cf1d6bb8556a00a8bd57d2e979e2f44daf",
+      "simples": "O internado tem direito a estabelecimento adequado com características hospitalares e tratamento. Custódia não permite negar assistência ou transformar a medida em mero isolamento sem cuidados.",
+      "pontos": [
+        "Tratamento é dever legal.",
+        "Integração com Lei 10.216 e direitos de saúde mental."
+      ],
+      "atencao": [
+        "Não concluir que qualquer cela sem atendimento satisfaz o artigo. A denominação do local não substitui condições reais e proteção de direitos; não certificar toda rede/regulamentação nesta revisão."
+      ],
+      "exemplo": "A instituição apenas isola a pessoa e não oferece tratamento, alegando que a custódia basta. Variação: Com cuidado adequado, ainda avaliar continuidade, necessidade e garantias, sem presumir confinamento vitalício.",
+      "prova": [
+        "Só isolar cumpre o dever? Não; o texto exige tratamento.",
+        "Características hospitalares dispensam assistência real? Não; ambas devem ser efetivas."
+      ],
+      "termos": [
+        {
+          "termo": "Direito ao tratamento",
+          "significado": "Garantia de cuidado e adequação institucional."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf"
+      ],
+      "expected": {
+        "unit_id": "4f7c34be-4e9e-59b4-8604-0a276e4b173a",
+        "content_sha256": "94df998aa4a6dbc51bb608d1d69ac7cf1d6bb8556a00a8bd57d2e979e2f44daf",
+        "simples": "O internado será recolhido a estabelecimento dotado de características hospitalares e será submetido a tratamento.",
+        "pontos": [
+          "Estabelecimento com características hospitalares.",
+          "Submetido a tratamento."
+        ],
+        "atencao": [
+          "A internação tem finalidade curativa, não punitiva."
+        ],
+        "exemplo": "O inimputável internado fica em hospital de custódia e recebe tratamento.",
+        "prova": [
+          "Assertiva que determina recolhimento do internado em presídio comum contraria o art. 99."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 96 a 98"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-100",
+      "unit_id": "19b46665-e0ab-50b4-ac59-39f98dc0cfbe",
+      "content_sha256": "9ee0c3c25f4451150bf0540b4b7de08136b250e75ff3a450563dd33d57a3c5ad",
+      "simples": "A ação penal é pública como regra, salvo lei expressa de iniciativa privada. MP promove a pública; representação e requisição são condições quando exigidas. A privada subsidiária cabe na inércia legal do MP, não por mera discordância da vítima.",
+      "pontos": [
+        "Queixa é peça da iniciativa privada; denúncia da pública.",
+        "Subsidiária: denúncia não oferecida no prazo legal.",
+        "Morte/ausência: cônjuge, ascendente, descendente ou irmão no §4º."
+      ],
+      "atencao": [
+        "Não transformar toda ação pública em condicionada nem toda discordância de arquivamento em direito a queixa subsidiária. Integrar CPP e legislação especial; vínculo com vítima não transfere titularidade de qualquer ação."
+      ],
+      "exemplo": "A vítima discorda de atuação tempestiva do MP e presume cabimento automático da queixa subsidiária. Variação: Se há inércia e transcurso do prazo legal, examinar o fundamento específico e os demais requisitos.",
+      "prova": [
+        "Toda ação pública exige representação? Não; apenas quando lei exige.",
+        "Subsidiária decorre simplesmente de discordância? Não; o §3º usa inércia no prazo."
+      ],
+      "termos": [
+        {
+          "termo": "Titularidade da ação",
+          "significado": "Legitimação para promover ação conforme o regime legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "19b46665-e0ab-50b4-ac59-39f98dc0cfbe",
+        "content_sha256": "9ee0c3c25f4451150bf0540b4b7de08136b250e75ff3a450563dd33d57a3c5ad",
+        "simples": "Ação penal: a ação é pública, salvo quando a lei expressamente a declara privativa do ofendido. A ação pública é promovida pelo Ministério Público, dependendo, quando a lei o exige, de representação do ofendido ou de requisição do Ministro da Justiça. A ação de iniciativa privada é promovida por queixa do ofendido ou de quem o represente e pode ser intentada nos crimes de ação pública se o Ministério Público não oferecer denúncia no prazo legal (ação privada subsidiária). Em caso de morte do ofendido ou declaração de ausência, o direito de queixa ou de prosseguir passa ao cônjuge, ascendente, descendente ou irmão.",
+        "pontos": [
+          "Regra: ação penal pública; exceção: privativa do ofendido, se a lei declarar.",
+          "§1º: pública promovida pelo MP; pode depender de representação ou requisição do Ministro da Justiça.",
+          "§2º: privada promovida por queixa.",
+          "§3º: ação privada subsidiária da pública, se o MP não denunciar no prazo legal.",
+          "§4º: morte ou ausência do ofendido: o direito passa a cônjuge, ascendente, descendente ou irmão."
+        ],
+        "atencao": [
+          "A regra é ação PÚBLICA; a privada precisa de previsão expressa.",
+          "Ordem de sucessão no §4º: cônjuge, ascendente, descendente ou irmão (conforme o texto)."
+        ],
+        "exemplo": "O Ministério Público deixa de denunciar no prazo legal em crime de ação pública: o ofendido pode propor queixa subsidiária.",
+        "prova": [
+          "Assertiva que torna regra a ação privada erra: a regra é a ação pública."
+        ],
+        "termos": [
+          {
+            "termo": "Queixa",
+            "significado": "Petição inicial da ação penal privada."
+          },
+          {
+            "termo": "Representação",
+            "significado": "Manifestação da vítima autorizando o MP a processar em certos crimes."
+          }
+        ],
+        "remissoes": [
+          "Arts. 101 a 106"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-101",
+      "unit_id": "64517869-5d1c-5b45-bfe1-d5abd7a03e4f",
+      "content_sha256": "310b9a4eaabc63b77035c6d0eaace5a394f1f78a6c071cea46625fa23e7a822a",
+      "simples": "No crime complexo, a ação será pública se algum fato integrante que constitui crime tem iniciativa do MP, nos termos do artigo. O enquadramento exige identificar elementos do tipo, não apenas dizer que o caso é complicado.",
+      "pontos": [
+        "Fatos constitutivos de crime como elemento/circunstância do tipo.",
+        "Iniciativa pública de algum integrante é o requisito indicado."
+      ],
+      "atencao": [
+        "Complexo é categoria jurídica, não sinônimo de investigação difícil. Integrar o tipo específico atual; não usar o artigo para contrariar regime especial sem confronto."
+      ],
+      "exemplo": "O candidato chama uma apuração difícil de crime complexo e aplica o artigo sem analisar o tipo. Variação: Se o tipo integra fatos criminosos e há iniciativa pública no recorte legal, muda o fundamento da análise.",
+      "prova": [
+        "Basta investigação difícil? Não; exige estrutura do tipo.",
+        "O tipo específico deve ser conferido? Sim; a categoria não dispensa seu regime atual."
+      ],
+      "termos": [
+        {
+          "termo": "Crime complexo",
+          "significado": "Tipo que integra fatos criminosos, não dificuldade prática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "64517869-5d1c-5b45-bfe1-d5abd7a03e4f",
+        "content_sha256": "310b9a4eaabc63b77035c6d0eaace5a394f1f78a6c071cea46625fa23e7a822a",
+        "simples": "Crime complexo: quando a lei considera como elemento ou circunstância do tipo legal fatos que, por si mesmos, constituem crimes, cabe ação pública em relação àquele, desde que, em relação a qualquer destes, se deva proceder por iniciativa do Ministério Público.",
+        "pontos": [
+          "Fatos que integram o tipo e são crimes por si mesmos.",
+          "Cabe ação pública no crime complexo se algum deles for de ação pública."
+        ],
+        "atencao": [
+          "Prevalece a ação pública se qualquer dos crimes componentes é de ação pública."
+        ],
+        "exemplo": "O roubo é complexo (furto + violência ou ameaça); como alguns de seus componentes são de ação pública, a ação é pública.",
+        "prova": [
+          "Assertiva que torna privada a ação do crime complexo apenas porque um componente é de ação privada, mesmo havendo componente de ação pública, contraria o art. 101."
+        ],
+        "termos": [
+          {
+            "termo": "Crime complexo",
+            "significado": "Crime formado pela fusão de dois ou mais outros crimes ou fatos típicos."
+          }
+        ],
+        "remissoes": [
+          "Art. 100"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-102",
+      "unit_id": "48cd9f9c-c31a-5623-bf95-b89afb78ccef",
+      "content_sha256": "2439b13abcffd57f76bee802112ec7bcec8e05c9c15800f937431fb3f799071e",
+      "simples": "Pela regra geral do CP, a representação torna-se irretratável depois de oferecida a denúncia. Oferecimento não é recebimento judicial; hipóteses especiais devem ser estudadas em sua própria disciplina.",
+      "pontos": [
+        "Marco geral: OFERECIMENTO.",
+        "Não confundir representação, queixa e perdão."
+      ],
+      "atencao": [
+        "Maria da Penha, art. 16, tem disciplina especial para ações condicionadas; não transportar automaticamente o marco geral nem criar representação em crime de ação incondicionada."
+      ],
+      "exemplo": "Na regra geral, a denúncia foi oferecida mas ainda não recebida e a questão admite retratação só por não haver recebimento. Variação: Se incide disciplina especial aplicável, confrontar seus requisitos em vez de repetir o marco geral sem ressalva.",
+      "prova": [
+        "O CP usa recebimento como marco geral? Não; usa oferecimento.",
+        "A regra torna toda ação condicionada? Não; depende do regime do crime."
+      ],
+      "termos": [
+        {
+          "termo": "Irretratabilidade",
+          "significado": "Impossibilidade de retirar a representação após o marco aplicável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "48cd9f9c-c31a-5623-bf95-b89afb78ccef",
+        "content_sha256": "2439b13abcffd57f76bee802112ec7bcec8e05c9c15800f937431fb3f799071e",
+        "simples": "A representação da vítima, que autoriza o Ministério Público a agir nos crimes de ação pública condicionada, pode ser retirada (retratação) até o oferecimento da denúncia; depois disso, ela é irretratável.",
+        "pontos": [
+          "A representação pode ser retratada até o oferecimento da denúncia.",
+          "Depois da denúncia, é irretratável."
+        ],
+        "atencao": [
+          "O marco é o OFERECIMENTO da denúncia."
+        ],
+        "exemplo": "A vítima que ofereceu representação pode se retratar antes de o MP denunciar; depois, não.",
+        "prova": [
+          "Assertiva que permite a retratação da representação após o recebimento da denúncia erra: o marco é o oferecimento."
+        ],
+        "termos": [
+          {
+            "termo": "Irretratável",
+            "significado": "Que não pode mais ser desfeita ou retirada."
+          }
+        ],
+        "remissoes": [
+          "Art. 100, §1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-103",
+      "unit_id": "2b33a21e-e3d7-5cce-bcab-639e805850b0",
+      "content_sha256": "b76f4953ed05882f4bae084dbee547fe458264db4f5599f88ee8c1067f25f37d",
+      "simples": "O prazo geral para queixa/representação é seis meses dos marcos indicados, salvo regra expressa diversa. Lei 15.438/2026 trouxe doze meses no âmbito de violência doméstica e familiar contra mulher; a mudança não transforma ação incondicionada em condicionada.",
+      "pontos": [
+        "Geral: 6 meses desde conhecimento do AUTOR, não necessariamente do fato.",
+        "Subsidiária: fim do prazo para denúncia.",
+        "Parágrafo incluído em 2026: 12 meses; publicação/vigência em 19/6/2026."
+      ],
+      "atencao": [
+        "Identificar necessidade de representação/queixa, regra especial e lei no tempo. Ampliação prejudicial não reabre automaticamente decadência já consumada nem autoriza retroagir por estar no compilado atual. Não aplicar seis meses indistintamente a toda violência doméstica."
+      ],
+      "exemplo": "A questão sobre regime atual de ação condicionada em violência doméstica ignora o parágrafo e aplica sempre seis meses. Variação: Se a ação é pública incondicionada, não inventar condição de representação apenas para aplicar os doze meses.",
+      "prova": [
+        "Todo caso doméstico exige representação? Não; verificar o tipo.",
+        "O prazo novo permite reabrir automaticamente decadência consumada? Não; exige análise temporal e irretroatividade prejudicial."
+      ],
+      "termos": [
+        {
+          "termo": "Decadência",
+          "significado": "Perda do direito por não exercer a iniciativa/condição no prazo aplicável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15438.htm"
+      ],
+      "expected": {
+        "unit_id": "2b33a21e-e3d7-5cce-bcab-639e805850b0",
+        "content_sha256": "b76f4953ed05882f4bae084dbee547fe458264db4f5599f88ee8c1067f25f37d",
+        "simples": "Salvo disposição expressa em contrário, o ofendido decai do direito de queixa ou de representação se não o exerce dentro de 6 meses, contados do dia em que veio a saber quem é o autor do crime, ou, no caso da ação privada subsidiária, do dia em que se esgota o prazo para o oferecimento da denúncia. Nos crimes praticados no âmbito de violência doméstica e familiar contra a mulher, o prazo é de 12 meses, conforme o parágrafo único (incluído por lei de 2026).",
+        "pontos": [
+          "Prazo decadencial: 6 meses, da ciência de quem é o autor.",
+          "Ação privada subsidiária: conta-se do fim do prazo para a denúncia.",
+          "Parágrafo único: violência doméstica e familiar contra a mulher: 12 meses."
+        ],
+        "atencao": [
+          "O prazo conta da ciência de QUEM É O AUTOR, não da data do fato.",
+          "Violência doméstica e familiar contra a mulher: prazo de 12 meses (conforme o texto atual)."
+        ],
+        "exemplo": "A vítima soube quem era o autor em janeiro: tem até julho para exercer a queixa ou a representação (regra geral).",
+        "prova": [
+          "Assertiva que conta o prazo de 6 meses do dia do fato erra: conta-se da ciência de quem é o autor."
+        ],
+        "termos": [
+          {
+            "termo": "Decadência",
+            "significado": "Perda do direito pelo decurso do prazo para exercê-lo."
+          }
+        ],
+        "remissoes": [
+          "Art. 100",
+          "Art. 107, IV"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-104",
+      "unit_id": "d35b2e85-c517-50dd-904c-b9b47767aa41",
+      "content_sha256": "4d3a29563144c7a403bfe9ae7285fc59fa2ff859fbc80eb6f9ca3bbe1d208105",
+      "simples": "Renúncia expressa ou tácita impede exercício do direito de queixa. Ato incompatível pode configurar renúncia tácita, mas receber indenização não a implica por si segundo a regra do CP.",
+      "pontos": [
+        "Renúncia do direito de queixa precede seu exercício.",
+        "Indenização: ressalva expressa do CP."
+      ],
+      "atencao": [
+        "Não confundir renúncia com perdão após início da ação. Regimes especiais de composição civil exigem confronto próprio; não afirmar que todo pagamento sempre renuncia ou nunca afeta qualquer procedimento."
+      ],
+      "exemplo": "A vítima recebe indenização e a questão presume renúncia tácita apenas por esse recebimento, na regra geral do CP. Variação: Se há outro ato incompatível demonstrado ou regime especial de composição, reavaliar seus pressupostos, sem generalizar a ressalva.",
+      "prova": [
+        "Indenização por si implica renúncia tácita no CP? Não; há ressalva.",
+        "Renúncia e perdão são o mesmo momento? Não; distinguir antes/depois do exercício."
+      ],
+      "termos": [
+        {
+          "termo": "Renúncia",
+          "significado": "Abandono do direito de queixa antes de exercê-lo, na hipótese aplicável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d35b2e85-c517-50dd-904c-b9b47767aa41",
+        "content_sha256": "4d3a29563144c7a403bfe9ae7285fc59fa2ff859fbc80eb6f9ca3bbe1d208105",
+        "simples": "O direito de queixa não pode ser exercido quando renunciado expressa ou tacitamente. Importa renúncia tácita a prática de ato incompatível com a vontade de exercê-lo; não a implica o fato de o ofendido receber a indenização do dano causado pelo crime.",
+        "pontos": [
+          "Renúncia expressa ou tácita impede a queixa.",
+          "Renúncia tácita: ato incompatível com a vontade de exercê-la.",
+          "Receber a indenização do dano NÃO implica renúncia."
+        ],
+        "atencao": [
+          "Receber indenização não significa renúncia ao direito de queixa."
+        ],
+        "exemplo": "Quem convida o ofensor para um evento familiar pode ter praticado ato incompatível com a intenção de processá-lo (renúncia tácita).",
+        "prova": [
+          "Assertiva que considera renúncia tácita o simples recebimento da indenização do dano erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 105",
+          "Art. 107, V"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-105",
+      "unit_id": "55e96f0d-78c8-51b7-890b-bd3ab6110474",
+      "content_sha256": "6995568c0b8c7cb9bae140c0b32f93bc2234a0b805cb38cc458e76f639bb3064",
+      "simples": "O perdão do ofendido impede prosseguimento nos crimes que somente se processam por queixa, integrado à aceitação e limites do art. 106. Não autoriza extinguir toda ação pública pela vontade isolada da vítima.",
+      "pontos": [
+        "Recorte: ação de iniciativa privada exclusiva.",
+        "Perdão deve ser lido com art. 106."
+      ],
+      "atencao": [
+        "Não confundir com perdão judicial, retratação de representação ou renúncia anterior à queixa. A frase não elimina requisito de aceitação pertinente."
+      ],
+      "exemplo": "Em ação pública, a vítima declara perdão e o candidato conclui extinção automática com base no art. 105. Variação: Na ação privada exclusiva, examinar perdão e aceitação, não considerar a declaração sozinha universalmente suficiente.",
+      "prova": [
+        "Serve indistintamente para ação pública? Não; o recorte é específico.",
+        "Dispensa leitura do art. 106? Não; integra aceitação e limites."
+      ],
+      "termos": [
+        {
+          "termo": "Perdão do ofendido",
+          "significado": "Instituto da ação privada, distinto do perdão judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "55e96f0d-78c8-51b7-890b-bd3ab6110474",
+        "content_sha256": "6995568c0b8c7cb9bae140c0b32f93bc2234a0b805cb38cc458e76f639bb3064",
+        "simples": "O perdão do ofendido, nos crimes em que somente se procede mediante queixa, obsta ao prosseguimento da ação.",
+        "pontos": [
+          "O perdão do ofendido obsta o prosseguimento da ação privada."
+        ],
+        "atencao": [
+          "Só nos crimes de ação PRIVADA; precisa ser aceito (art. 107, V)."
+        ],
+        "exemplo": "No curso da ação privada, o ofendido perdoa o querelado, que aceita: a ação não prossegue.",
+        "prova": [
+          "Assertiva que aplica o perdão do ofendido à ação penal pública incondicionada erra."
+        ],
+        "termos": [
+          {
+            "termo": "Querelado",
+            "significado": "Réu na ação penal privada."
+          }
+        ],
+        "remissoes": [
+          "Art. 106",
+          "Art. 107, V"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:13:34.973808+00:00"
+      }
+    }
+  ]
+}
