@@ -10580,3 +10580,31 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     );
   }
 }
+
+/* Mobile: faixa de imagem profissional logo abaixo da hero, no início do hub. Claro: equipe a caminho do centro de
+   treinamento ao amanhecer; escuro: sala de comando. A imagem esmaece para o fundo e o título começa abaixo dela. */
+@media (max-width: 767px) {
+  .mh {
+    padding-top: 208px;
+  }
+  .mh::before {
+    inset: 0 0 auto 0;
+    height: 250px;
+    z-index: -2;
+    background: url("/media/hero/journey.webp") 36% 62% / cover no-repeat;
+    opacity: 1;
+    filter: none;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 62%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 62%, transparent 100%);
+  }
+  .mh::after {
+    inset: 0 0 auto 0;
+    height: 250px;
+    z-index: -1;
+    background: none;
+  }
+  .dark .mh::before {
+    background-image: url("/media/hero/command-room.webp");
+    background-position: 30% 40%;
+  }
+}
