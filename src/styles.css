@@ -10479,3 +10479,38 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .daily-intro__steps ol { gap:12px; margin:14px 0; }
   .daily-intro__steps .btn-brass { width:100%; justify-content:center; min-height:44px; }
 }
+
+/* Student workspace mobile pass: readable type, calmer cards and colored icons
+   in the light theme. */
+@media (max-width: 767px) {
+  .app-shell[data-area="student"] .app-content {
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+  .app-shell[data-area="student"] .app-content .text-xs,
+  .app-shell[data-area="student"] .app-content .text-\[11px\],
+  .app-shell[data-area="student"] .app-content .text-\[10px\] {
+    font-size: 0.74rem;
+    line-height: 1.4;
+  }
+  .app-shell[data-area="student"] .app-content .text-sm {
+    line-height: 1.5;
+  }
+  .app-shell[data-area="student"] .app-content [data-slot="card"],
+  .app-shell[data-area="student"] .app-content .surface-card {
+    border-radius: 16px;
+  }
+  .app-shell[data-area="student"] .app-content svg.lucide:not([class*="text-"]) {
+    color: var(--hue-ink, oklch(0.46 0.1 235));
+  }
+  html:not(.dark) .app-shell[data-area="student"] .app-content .app-ico {
+    background: color-mix(in oklab, var(--hue) 16%, white);
+    color: var(--hue-ink);
+  }
+  html:not(.dark) .app-shell[data-area="student"] .app-content .app-ico svg {
+    color: currentColor;
+  }
+  html:not(.dark) .app-shell[data-area="student"] .app-content [data-slot="card"] svg.lucide:not([class*="text-"]) {
+    color: oklch(0.42 0.12 235);
+  }
+}

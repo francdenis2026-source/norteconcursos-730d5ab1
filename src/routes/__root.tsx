@@ -19,6 +19,7 @@ import { UpdateAvailablePrompt } from "@/components/UpdateAvailablePrompt";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { THEME_INIT_SCRIPT } from "../lib/theme";
+import { claimSingleDeviceSession, ownsSingleDeviceSession } from "../lib/singleDeviceSession";
 
 function StatusScreen({
   code,
@@ -194,11 +195,31 @@ function RootComponent() {
       const currentUser = session?.user.id ?? null;
       if (currentUser !== previousUser) queryClient.clear();
       previousUser = currentUser;
+      if (event === "SIGNED_IN" && session) void claimSingleDeviceSession(session.user.id);
       if (event === "PASSWORD_RECOVERY")
         void router.navigate({ to: "/auth", search: { recovery: true } });
     });
     return () => data.subscription.unsubscribe();
   }, [router, queryClient]);
+
+  useEffect(() => {
+    let cancelled = false;
+    const check = async () => {
+      const { data } = await supabase.auth.getSession();
+      const userId = data.session?.user.id;
+      if (!userId || cancelled) return;
+      if (!(await ownsSingleDeviceSession(userId)) && !cancelled) {
+        await supabase.auth.signOut({ scope: "local" });
+        window.location.assign("/auth?reason=another-device");
+      }
+    };
+    void check();
+    const timer = window.setInterval(check, 20000);
+    return () => {
+      cancelled = true;
+      window.clearInterval(timer);
+    };
+  }, []);
 
   useEffect(() => {
     // Registra o service worker de app-shell (só ícone/manifesto em cache,
