@@ -1,5 +1,6 @@
 import generated from "@/data/glossary.generated.json";
 import { CURATED_GLOSSARY } from "@/data/glossaryCurated";
+import { EDITAL_GLOSSARY } from "@/data/glossaryEdital";
 
 export type GlossaryEntry = {
   term: string;
@@ -22,7 +23,7 @@ const isLetter = (c: string | undefined) => !!c && /[\p{L}\p{N}]/u.test(c);
 function buildEntries(): GlossaryEntry[] {
   const byKey = new Map<string, GlossaryEntry>();
   for (const e of generated as GlossaryEntry[]) byKey.set(normalize(e.term), e);
-  for (const e of CURATED_GLOSSARY) byKey.set(normalize(e.term), { ...byKey.get(normalize(e.term)), ...e });
+  for (const e of [...CURATED_GLOSSARY, ...EDITAL_GLOSSARY]) byKey.set(normalize(e.term), { ...byKey.get(normalize(e.term)), ...e });
   return [...byKey.values()].sort((a, b) => normalize(a.term).localeCompare(normalize(b.term), "pt-BR"));
 }
 
