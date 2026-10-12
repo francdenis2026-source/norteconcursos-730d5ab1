@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BookOpen, ExternalLink, Lightbulb } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CONTRAN_CHECKED_AT, CONTRAN_GUIDES, CONTRAN_INDEX_URL } from "@/data/contranGuides";
 import { RESOLUCOES_COBRADAS } from "@/data/ctbPanel";
 import { contranDate, currentContranGuides, type ContranGuide } from "@/lib/contranStudy";
@@ -45,57 +46,68 @@ export function ContranStudy({ query = "" }: { query?: string }) {
   const total = currentContranGuides(CONTRAN_GUIDES).length;
   return <section className="space-y-4" aria-label="Consulta das resoluções do CONTRAN">
     <div className="rounded-xl border bg-card p-4 text-sm leading-6">
-      <p className="font-semibold">{total} guias para consulta atual · {CONTRAN_GUIDES.length} atos conferidos nos lotes publicados</p>
-      <p className="mt-1 text-muted-foreground">Conferência das fontes em {contranDate(CONTRAN_CHECKED_AT)}. Resoluções integralmente revogadas ficam fora do estudo atual; calendários antigos e guias de normas-base substituídas também foram separados.</p>
-      <p className="mt-1 text-muted-foreground">As datas de publicação, atualização e produção de efeitos são diferentes. Os casos são autorais e revisam temas delimitados; não certificam todas as fichas e especificações técnicas dos anexos.</p>
-      <p className="mt-1 text-muted-foreground">Resoluções do CONTRAN são conteúdo cobrado em concursos da PRF (Legislação de Trânsito). Para PF e outras carreiras, confira o edital: o do PF 2025 citado nesta biblioteca não inclui Trânsito.</p>
+      <p className="font-semibold">{total} resoluções em vigor para estudar</p>
+      <p className="mt-1 text-muted-foreground">Cada uma tem a explicação do Norte (elaborada a partir do texto oficial), um caso prático e a fonte oficial, em abas separadas. Fontes conferidas em {contranDate(CONTRAN_CHECKED_AT)}; resoluções totalmente revogadas ficam de fora.</p>
+      <p className="mt-1 text-muted-foreground">Cobradas em concursos da PRF (Legislação de Trânsito). Para outras carreiras, confira o edital: o da PF 2025 não inclui Trânsito.</p>
       <a className="mt-2 inline-flex items-center gap-1 font-semibold text-primary underline" href={CONTRAN_INDEX_URL} target="_blank" rel="noopener noreferrer">Catálogo oficial do CONTRAN <ExternalLink size={14} /></a>
     </div>
     {!query.trim() && top.length > 0 && <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100">
-      <p className="font-semibold">Mais cobradas em prova</p>
-      <p className="mt-1 text-xs">Comece por estas: são as que mais aparecem em questões de prova, segundo levantamento do guia de estudo da TEC Concursos (fonte secundária: indica tendência, não é dado oficial). Os guias abaixo seguem essa ordem.</p>
+      <p className="font-semibold">Comece por estas: as mais cobradas em prova</p>
+      <p className="mt-1 text-xs">Ordem baseada em levantamento de questões de provas anteriores; indica tendência, não é dado oficial. Os guias abaixo seguem essa ordem.</p>
       <ul className="mt-2 flex flex-wrap gap-2">{top.map((g) => <li key={guideKey(g)} className="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold dark:bg-amber-900/40">Res. {guideKey(g)} · {cobradas(g)} questões</li>)}</ul>
     </div>}
     {guides.map((guide) => <article key={`${guide.number}/${guide.year}`} className="rounded-2xl border bg-card p-4 sm:p-5">
       <header className="flex flex-wrap items-center gap-2">
-        <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-950 dark:bg-emerald-950/50 dark:text-emerald-100">Resolução {guide.number.toLocaleString("pt-BR")}/{guide.year}</span>
-        {cobradas(guide) > 0 && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-950 dark:bg-amber-950/50 dark:text-amber-100">Mais cobrada · {cobradas(guide)} questões</span>}
-        <span className="text-xs text-muted-foreground">Publicação: {contranDate(guide.publicationDate)}</span>
+        <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-950 dark:bg-emerald-950/50 dark:text-emerald-100">Resolução {guideKey(guide)}</span>
+        {cobradas(guide) > 0 && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-950 dark:bg-amber-950/50 dark:text-amber-100">Mais cobrada</span>}
       </header>
       <h3 className="mt-3 text-lg font-bold">{guide.title}</h3>
-      <p className="mt-1 text-xs text-muted-foreground">Último ato relacionado identificado: {contranDate(guide.lastRelatedActDate)} · conferência: {contranDate(guide.checkedAt)}</p>
+      <p className="mt-1 text-sm leading-6 text-muted-foreground">{guide.points[0]}</p>
       <details className="mt-3 rounded-xl border bg-muted/20 p-3">
-        <summary className="flex cursor-pointer items-center gap-2 text-sm font-semibold"><BookOpen size={16} /> Estudar pontos-chave, casos e texto oficial</summary>
-        <div className="mt-4 space-y-4">
-          {guide.reviewedScope && <p className="text-xs leading-5 text-muted-foreground">Escopo deste guia: {guide.reviewedScope}. Outros dispositivos e anexos exigem consulta específica.</p>}
-          <section className="rounded-xl border-l-4 border-indigo-500 bg-indigo-50/50 p-3 dark:bg-indigo-950/20">
-            <h4 className="text-sm font-bold">Pontos-chave</h4>
-            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{guide.points.map((point) => <li key={point}>{point}</li>)}</ul>
-          </section>
-          <section className="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-3 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100">
-            <h4 className="text-sm font-bold">Atualização e erro de prova</h4>
-            <p className="mt-1 text-sm leading-6">{guide.warning}</p>
-            <p className="mt-2 text-xs leading-5">Situação indicada no catálogo oficial: {guide.officialSituation}</p>
-          </section>
-          <section className="rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-3 text-emerald-950 dark:bg-emerald-950/30 dark:text-emerald-100">
-            <h4 className="flex items-center gap-1 text-sm font-bold"><Lightbulb size={15} /> Caso prático</h4>
-            <p className="mt-2 text-sm leading-6">{guide.example.scenario}</p>
-            <p className="mt-2 text-sm font-semibold">{guide.example.question}</p>
-            <details className="mt-2 text-sm"><summary className="cursor-pointer font-semibold">Conferir resposta comentada</summary><p className="mt-2 leading-6">{guide.example.answer}</p></details>
-          </section>
-          <section className="rounded-xl border-l-4 border-violet-500 bg-violet-50 p-3 text-violet-950 dark:bg-violet-950/30 dark:text-violet-100">
-            <h4 className="text-sm font-bold">Altere o fato e teste sua compreensão</h4>
-            <p className="mt-2 text-sm leading-6">{guide.example.variation}</p>
-            <details className="mt-2 text-sm"><summary className="cursor-pointer font-semibold">Ver a consequência da mudança</summary><p className="mt-2 leading-6">{guide.example.variationAnswer}</p></details>
-          </section>
-          <OfficialText guide={guide} />
-          <div className="space-y-2 text-xs">
-            <a className="inline-flex items-center gap-1 font-semibold text-primary underline" href={guide.sourceUrl} target="_blank" rel="noopener noreferrer">Abrir PDF no portal oficial <ExternalLink size={13} /></a>
-            {guide.relatedSources.length > 0 && <div><p className="mb-1 font-semibold">Atos relacionados para conferir a regra</p><ul className="space-y-1">{guide.relatedSources.map((source) => <li key={`${source.url}-${source.label}`}><a className="text-primary underline" href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}</ul></div>}
-          </div>
-        </div>
+        <summary className="flex cursor-pointer items-center gap-2 text-sm font-semibold"><BookOpen size={16} /> Estudar esta resolução</summary>
+        <Tabs defaultValue="entenda" className="mt-3">
+          <TabsList className="grid w-full grid-cols-3">
+            <TabsTrigger value="entenda">Entenda</TabsTrigger>
+            <TabsTrigger value="pratica">Na prática</TabsTrigger>
+            <TabsTrigger value="oficial">Fonte oficial</TabsTrigger>
+          </TabsList>
+          <TabsContent value="entenda" className="mt-4 space-y-4">
+            <section className="rounded-xl border-l-4 border-indigo-500 bg-indigo-50/50 p-3 dark:bg-indigo-950/20">
+              <h4 className="text-sm font-bold">Em resumo</h4>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{guide.points.map((point) => <li key={point}>{point}</li>)}</ul>
+            </section>
+            <section className="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-3 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100">
+              <h4 className="text-sm font-bold">Cuidado na prova</h4>
+              <p className="mt-1 text-sm leading-6">{guide.warning}</p>
+            </section>
+            <p className="text-xs text-muted-foreground">Explicação elaborada pelo Norte a partir do texto oficial, para estudo. Em caso de dúvida, vale o texto da norma (aba Fonte oficial).</p>
+          </TabsContent>
+          <TabsContent value="pratica" className="mt-4 space-y-4">
+            <section className="rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-3 text-emerald-950 dark:bg-emerald-950/30 dark:text-emerald-100">
+              <h4 className="flex items-center gap-1 text-sm font-bold"><Lightbulb size={15} /> Caso prático</h4>
+              <p className="mt-2 text-sm leading-6">{guide.example.scenario}</p>
+              <p className="mt-2 text-sm font-semibold">{guide.example.question}</p>
+              <details className="mt-2 text-sm"><summary className="cursor-pointer font-semibold">Ver resposta comentada</summary><p className="mt-2 leading-6">{guide.example.answer}</p></details>
+            </section>
+            <section className="rounded-xl border-l-4 border-violet-500 bg-violet-50 p-3 text-violet-950 dark:bg-violet-950/30 dark:text-violet-100">
+              <h4 className="text-sm font-bold">E se o fato mudar?</h4>
+              <p className="mt-2 text-sm leading-6">{guide.example.variation}</p>
+              <details className="mt-2 text-sm"><summary className="cursor-pointer font-semibold">Ver o que muda</summary><p className="mt-2 leading-6">{guide.example.variationAnswer}</p></details>
+            </section>
+          </TabsContent>
+          <TabsContent value="oficial" className="mt-4 space-y-3">
+            {guide.reviewedScope && <p className="text-xs leading-5 text-muted-foreground">Este guia cobre: {guide.reviewedScope}. Outros dispositivos e anexos exigem consulta específica.</p>}
+            <p className="text-xs text-muted-foreground">Publicada em {contranDate(guide.publicationDate)} · último ato relacionado em {contranDate(guide.lastRelatedActDate)} · conferida em {contranDate(guide.checkedAt)}</p>
+            <details className="rounded-xl border p-3 text-xs"><summary className="cursor-pointer font-semibold">Situação no catálogo oficial</summary><p className="mt-2 leading-5 text-muted-foreground">{guide.officialSituation}</p></details>
+            <OfficialText guide={guide} />
+            <div className="space-y-2 text-xs">
+              <a className="inline-flex items-center gap-1 font-semibold text-primary underline" href={guide.sourceUrl} target="_blank" rel="noopener noreferrer">Abrir PDF no portal oficial <ExternalLink size={13} /></a>
+              {guide.relatedSources.length > 0 && <div><p className="mb-1 font-semibold">Atos que alteram ou complementam</p><ul className="space-y-1">{guide.relatedSources.map((source) => <li key={`${source.url}-${source.label}`}><a className="text-primary underline" href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}</ul></div>}
+            </div>
+          </TabsContent>
+        </Tabs>
       </details>
     </article>)}
-    {!guides.length && <p className="rounded-xl border p-4 text-sm text-muted-foreground">Nenhum guia atual deste lote corresponde à busca. Consulte o catálogo oficial para outras resoluções.</p>}
+    {!guides.length && <p className="rounded-xl border p-4 text-sm text-muted-foreground">Nenhum guia corresponde à busca. Consulte o catálogo oficial para outras resoluções.</p>}
   </section>;
 }
