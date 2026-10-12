@@ -29,3 +29,7 @@ posteriores de integração registrados no fechamento da continuidade.
 CP135/401 revisados, 266 pendentes; global1.289/3.511, 2.222 pendentes.
 Próximos: art.121 e seguintes. Revisão limitada ao escopo e fontes descritos,
 sem certificação de todo detalhe judicial ou implantação dos alertas no domínio.
+
+Após integrar main a6fdd66 (ferramentas e confirmações do modo foco),
+336 testes, TypeScript e build passaram. Comparação dos arquivos de
+ferramentas e alertas confirmou que a cópia de build contém a integração.
