@@ -240,3 +240,30 @@ test('compliance review guards unconstitutional removal, financial records and f
  assert.match(get('uso-forca','art-7').pontos.join(' '),/presídio.*sem exigir lesão/i);
  assert.match(get('ric','art-3').simples,/2009.*não deve ser ensinado/);
 });
+
+test('Henry Borel review separates constitutional requisitions, time rules and different protection statutes',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-henry-borel-review-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,34);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-5').simples,/14.826\/2024.*brincar/);
+ assert.match(get('art-14').simples,/município não é sede.*não há delegado.*24h/);
+ assert.match(get('art-15').simples,/24h/);
+ assert.match(get('art-21').simples,/7192.*2024.*sem força vinculante/);
+ assert.match(get('art-25').atencao.join(' '),/Não copiar pena.*2 a 5/);
+ assert.match(get('art-29').atencao.join(' '),/26\/05\/2026.*benéficos/);
+ assert.match(get('art-31').atencao.join(' '),/revogado em 2024.*121-A/);
+ assert.match(get('art-33').simples,/1186.*idade da menina/);
+});
+
+test('antifaction comparison uses thresholds with material elements rather than headcount alone',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-antifaction-comparison-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,2);assert.equal(p.laws[0].course_current_units,43);
+ const r=p.units.find(r=>r.unit_key==='art-2');
+ assert.match(r.pontos.join(' '),/TRÁFICO começa em 2.*FACÇÃO em 3.*em 4/);
+ assert.match(r.pontos.join(' '),/estável\/permanente.*reiteradamente ou não/);
+ assert.match(r.atencao.join(' '),/não determina cumulação automática.*não certifica constitucionalidade/);
+ assert.equal(r.prova.length,4);
+ assert.equal(buildExplanationQuiz(r.prova,r.unit_id).length,2);
+ for(const row of p.units){assert.ok(row.expected);assert.ok(explanationExample(row.exemplo).variation);for(const q of row.prova)assert.ok(explanationPractice(q));}
+});
