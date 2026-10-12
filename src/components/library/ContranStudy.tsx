@@ -67,6 +67,12 @@ const QUESTOES = new Map(RESOLUCOES_COBRADAS.map((r) => [r.numero, r.questoes]))
 const cobradas = (g: ContranGuide) => QUESTOES.get(guideKey(g)) ?? 0;
 
 export function ContranStudy({ query = "" }: { query?: string }) {
+  // guias abertos; clicar em uma resolução da faixa "mais cobradas" abre o guia e leva até ele
+  const [opened, setOpened] = useState<Set<string>>(new Set());
+  const goTo = (key: string) => {
+    setOpened((prev) => new Set(prev).add(key));
+    window.setTimeout(() => document.getElementById(`res-${key.replace("/", "-")}`)?.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
+  };
   // as mais cobradas em prova primeiro; empate mantém a ordem do catálogo (mais recentes antes)
   const guides = [...currentContranGuides(CONTRAN_GUIDES, query)].sort((a, b) => cobradas(b) - cobradas(a));
   const top = guides.filter((g) => cobradas(g) > 0).slice(0, 6);
@@ -82,16 +88,16 @@ export function ContranStudy({ query = "" }: { query?: string }) {
     {!query.trim() && top.length > 0 && <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100">
       <p className="font-semibold">Comece por estas: as mais cobradas em prova</p>
       <p className="mt-1 text-xs">Ordem baseada em levantamento de questões de provas anteriores; indica tendência, não é dado oficial. Os guias abaixo seguem essa ordem.</p>
-      <ul className="mt-2 flex flex-wrap gap-2">{top.map((g) => <li key={guideKey(g)} className="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold dark:bg-amber-900/40">Res. {guideKey(g)} · {cobradas(g)} questões</li>)}</ul>
+      <ul className="mt-2 flex flex-wrap gap-2">{top.map((g) => <li key={guideKey(g)}><button type="button" onClick={() => goTo(guideKey(g))} className="cursor-pointer rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-950 transition hover:bg-amber-200 hover:shadow focus-visible:outline-2 focus-visible:outline-amber-600 dark:bg-amber-900/40 dark:text-amber-100 dark:hover:bg-amber-900/70" aria-label={`Abrir a Resolução ${guideKey(g)}`}>Res. {guideKey(g)} · {cobradas(g)} questões →</button></li>)}</ul>
     </div>}
-    {guides.map((guide) => <article key={`${guide.number}/${guide.year}`} className="rounded-2xl border bg-card p-4 sm:p-5">
+    {guides.map((guide) => <article key={`${guide.number}/${guide.year}`} id={`res-${guideKey(guide).replace("/", "-")}`} className="scroll-mt-24 rounded-2xl border bg-card p-4 sm:p-5">
       <header className="flex flex-wrap items-center gap-2">
         <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-950 dark:bg-emerald-950/50 dark:text-emerald-100">Resolução {guideKey(guide)}</span>
         {cobradas(guide) > 0 && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-950 dark:bg-amber-950/50 dark:text-amber-100">Mais cobrada</span>}
       </header>
       <h3 className="mt-3 text-lg font-bold">{guide.title}</h3>
       <p className="mt-1 text-sm leading-6 text-muted-foreground">{guide.points[0]}</p>
-      <details className="mt-3 rounded-xl border bg-muted/20 p-3">
+      <details className="mt-3 rounded-xl border bg-muted/20 p-3" open={opened.has(guideKey(guide))} onToggle={(e) => { const isOpen = e.currentTarget.open; setOpened((prev) => { if (prev.has(guideKey(guide)) === isOpen) return prev; const next = new Set(prev); if (isOpen) next.add(guideKey(guide)); else next.delete(guideKey(guide)); return next; }); }}>
         <summary className="flex cursor-pointer items-center gap-2 text-sm font-semibold"><BookOpen size={16} /> Estudar esta resolução</summary>
         <Tabs defaultValue="entenda" className="mt-3">
           <TabsList className="grid w-full grid-cols-3">
