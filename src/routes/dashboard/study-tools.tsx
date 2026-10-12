@@ -304,7 +304,7 @@ function StudyToolsPage() {
 
 function PlatformMaterialCard({ subject, topic }: { subject: string; topic: string }) {
   const { user } = useAuthStatus();
-  const track = TRACKS.find((t) => norm(subject).includes(norm(t.discipline).slice(0, 8)));
+  const track = TRACKS.find((t) => norm(subject).includes(norm(t.discipline)));
   const q = topic || subject;
   return (
     <Card>
