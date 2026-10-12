@@ -4,12 +4,14 @@ import { youtubeEmbedUrl } from "@/data/mediaCatalog";
 import { isPlaylistId } from "@/lib/arsenal";
 import type { RelatedVideo } from "@/lib/relatedVideos";
 import { cn } from "@/lib/utils";
+import { fmtDate, fmtMonthYear, videoNotice } from "@/lib/videoFreshness";
 
 /** Player embutido para as vídeo-aulas correlatas de um material da Biblioteca. */
-export function LibraryVideos({ videos }: { videos: RelatedVideo[] }) {
+export function LibraryVideos({ videos, law }: { videos: RelatedVideo[]; law?: { slug: string; materialSlug?: string | undefined } }) {
   const [playingId, setPlayingId] = useState<string | null>(null);
   const video = videos.find((v) => v.id === playingId) ?? videos[0];
   if (!video) return null;
+  const notice = law ? videoNotice(video.id, law) : null;
 
   return (
     <section className="surface-card library-videos no-print" aria-label="Vídeo-aulas relacionadas">
@@ -52,6 +54,24 @@ export function LibraryVideos({ videos }: { videos: RelatedVideo[] }) {
               Abrir no YouTube <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </div>
+          {notice && (
+            <details className="rounded-lg border border-amber-300/60 bg-amber-50/60 px-3 py-2 text-xs text-amber-950 dark:border-amber-400/30 dark:bg-amber-950/20 dark:text-amber-100">
+              <summary className="cursor-pointer select-none font-medium">
+                Vídeo de {fmtMonthYear(notice.published)}
+                {notice.changes.length || notice.lastAmendment ? " · a lei mudou depois: veja o que mudou" : " · confira se a lei mudou"}
+              </summary>
+              <div className="mt-2 space-y-2 leading-5">
+                {notice.changes.map((c) => (
+                  <p key={c.title}><strong>{c.title}</strong> ({c.since.split(",")[0]}): {c.what} <span className="text-muted-foreground">{c.where}</span></p>
+                ))}
+                {!notice.changes.length && notice.lastAmendment && (
+                  <p>A lei foi alterada em {fmtDate(notice.lastAmendment.date)}, depois da publicação deste vídeo. <a className="underline" href={notice.lastAmendment.url} target="_blank" rel="noreferrer">Ver o ato</a></p>
+                )}
+                {!notice.changes.length && !notice.lastAmendment && <p>O vídeo tem mais de quatro anos. Confira o texto atual da lei na leitura por artigo.</p>}
+                <p className="text-muted-foreground">O texto da lei na plataforma é sempre o vigente; em caso de diferença, vale o texto.</p>
+              </div>
+            </details>
+          )}
         </div>
         {videos.length > 1 && (
           <ul className="max-h-[320px] space-y-1.5 overflow-y-auto pr-1">

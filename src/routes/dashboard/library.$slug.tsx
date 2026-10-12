@@ -139,12 +139,6 @@ function MaterialPage() {
           <li>
             <Clock3 /> {readingMinutes(material.body_md)} min de leitura
           </li>
-          {material.law_version_checked_at && (
-            <li>
-              <ShieldCheck /> Fontes conferidas em{" "}
-              {new Date(material.law_version_checked_at).toLocaleDateString("pt-BR")}
-            </li>
-          )}
         </ul>
       </header>
 
@@ -160,7 +154,7 @@ function MaterialPage() {
         enabled={signedIn}
       />
 
-      <LibraryVideos videos={videos} />
+      <LibraryVideos videos={videos} {...(materialLawSlug(material) ? { law: { slug: materialLawSlug(material)!, materialSlug: material.slug } } : {})} />
 
       {(sources.length > 0 || material.source_note) && (
         <aside className="surface-card library-sources" aria-label="Fontes">

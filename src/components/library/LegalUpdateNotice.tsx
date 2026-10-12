@@ -108,9 +108,6 @@ export function LegalUpdateNotice({
         <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
           {total} {total === 1 ? "mudança" : "mudanças"}
         </span>
-        {date && (
-          <span className="text-xs font-normal text-muted-foreground">conferida em {date}</span>
-        )}
       </summary>
       <div className="mt-4 space-y-4">
         {!!curated.length && (

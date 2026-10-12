@@ -92,19 +92,19 @@ function LegalCoursePage() {
         <p className="max-w-3xl text-sm leading-6 text-muted-foreground sm:text-base">{course.overview.intro}</p>
       </div>
       <div className="grid grid-cols-2 gap-px border-t bg-border sm:grid-cols-4" aria-label="Seu progresso nesta lei">
-        {([["Lidos", `${summary.read}/${current.length}`], ["Praticados sem consulta", summary.practiced], ["Dificuldades", summary.difficult], ["Revisões pendentes", summary.due]] as const).map(([label, value]) => <div key={label} className="bg-card p-4"><p className="text-xl font-bold">{value}</p><p className="text-xs text-muted-foreground">{label}</p></div>)}
+        {([["Lidos", `${summary.read}/${current.length}`], ["Fixados", summary.practiced], ["Dificuldades", summary.difficult], ["Revisões pendentes", summary.due]] as const).map(([label, value]) => <div key={label} className="bg-card p-4"><p className="text-xl font-bold">{value}</p><p className="text-xs text-muted-foreground">{label}</p></div>)}
       </div>
       <progress className="block h-1.5 w-full accent-primary" max={Math.max(current.length, 1)} value={summary.read} aria-label="Dispositivos lidos" />
     </header>
     <LegalUpdateNotice review={course.legal_review ? { ...course.legal_review, course_slug: undefined } : null} slug={course.material_slug} />
     <div className="flex flex-wrap items-center gap-2 rounded-xl border bg-card p-1.5" role="group" aria-label="Modo de estudo">
-      <Button variant={tab === "learn" ? "default" : "ghost"} onClick={() => setTab("learn")}>Leitura e recuperação</Button>
+      <Button variant={tab === "learn" ? "default" : "ghost"} onClick={() => setTab("learn")}>Estudo por artigo</Button>
       <Button variant={tab === "application" ? "default" : "ghost"} onClick={() => setTab("application")}>Questões comentadas e cartões</Button>
       {videos.length > 0 && <Button variant={tab === "videos" ? "default" : "ghost"} onClick={() => setTab("videos")}>Vídeo-aulas ({videos.length})</Button>}
       {suggested && <Button variant="ghost" className="ml-auto" onClick={() => { setSelectedId(suggested.id); setTab("learn"); }}>Continuar de onde parei →</Button>}
     </div>
     {progress.isError && <p role="alert" className="rounded-xl border p-3 text-sm">Não foi possível carregar o progresso. <button className="underline" onClick={() => void progress.refetch()}>Tentar novamente</button></p>}
-    {tab === "videos" ? <LibraryVideos videos={videos} /> : tab === "application" ? material.isPending ? <Skeleton className="h-64" /> : material.data ? <>
+    {tab === "videos" ? <LibraryVideos videos={videos} law={{ slug: course.slug, materialSlug: course.material_slug }} /> : tab === "application" ? material.isPending ? <Skeleton className="h-64" /> : material.data ? <>
       <p className="text-sm text-muted-foreground">Este conjunto testa os conceitos indicados no resumo de aplicação. A cobertura da leitura integral é acompanhada por dispositivo.</p>
       <WorkedExamples key={`${userId}:${course.material_slug}`} slug={course.material_slug} enabled={!!userId} />
       {userId && <LegalCoursePractice key={`${userId}:${material.data.slug}`} courseId={course.id} userId={userId} material={material.data} />}
@@ -128,9 +128,9 @@ function LegalCoursePage() {
     </div>}
     <section aria-label="Sobre esta lei" className="space-y-4 border-t pt-5"><h2 className="text-lg font-bold">Sobre esta lei</h2>
       <div className="surface-card p-5 text-sm">
-        <p className="mt-2 text-xs text-muted-foreground">Leitura e recuperação são acompanhadas separadamente. A autoavaliação orienta a revisão; não certifica aprovação ou domínio.</p>
+        <p className="mt-2 text-xs text-muted-foreground">O progresso por artigo orienta suas revisões; ele não certifica aprovação.</p>
         <p className="mt-3 text-sm"><strong>Edital de referência:</strong> {course.overview.contest}. A leitura integral inclui disposições que podem exceder o programa do cargo; confira seu edital.</p>
-        {isStudySourceUrl(course.source_url) && <a href={course.source_url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm underline">Texto oficial · conferido em {new Date(course.checked_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}</a>}
+        {isStudySourceUrl(course.source_url) && <a href={course.source_url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm underline">Texto oficial no site do governo</a>}
       </div>
     {userId && <LegalCoverage course={course} units={rows} userId={userId} />}
     <details className="surface-card p-5">
@@ -171,7 +171,7 @@ function UnitLesson({ unit, law, materialSlug, references, progress, userId, hig
   }
   return <article id="dispositivo-aberto" className="surface-card scroll-mt-4 space-y-5 p-5 sm:p-7">
     <header className="border-b pb-4"><p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{unit.chapter}</p><h2 className="mt-1 text-2xl font-bold sm:text-3xl">{unit.label}</h2></header>
-    {unit.content_status === "excluded" ? <p className="rounded-xl border border-amber-500 p-4 text-sm">Este dispositivo está vetado, revogado ou sem redação ativa no texto compilado. Não integra o progresso nem a recuperação de regras vigentes. Consulte o ato modificador na fonte oficial.</p> : <>
+    {unit.content_status === "excluded" ? <p className="rounded-xl border border-amber-500 p-4 text-sm">Este dispositivo está vetado, revogado ou sem redação ativa no texto compilado. Não integra o progresso de estudo das regras vigentes. Consulte o ato modificador na fonte oficial.</p> : <>
       <nav className="grid gap-2 rounded-xl bg-muted/40 p-1.5 sm:grid-cols-3" aria-label="Passos de estudo deste artigo">
         {([["entender", "1", "Entender", "Leia a explicação simples", "from-sky-500 to-indigo-600"], ["texto", "2", "Ler o texto oficial", "Com grifos e dicas dos termos", "from-emerald-500 to-teal-600"], ["fixar", "3", "Fixar", "Teste o que você aprendeu", "from-amber-500 to-orange-600"]] as const).map(([id, n, title, sub, grad]) =>
           <button key={id} type="button" aria-current={step === id ? "step" : undefined} onClick={() => { setStep(id); if (id === "fixar") { setRevealed(false); setResponse(""); } }}
@@ -180,7 +180,7 @@ function UnitLesson({ unit, law, materialSlug, references, progress, userId, hig
             <span><span className="block text-sm font-bold">{title}</span><span className={`block text-xs ${step === id ? "text-primary-foreground/80" : "text-muted-foreground"}`}>{sub}</span></span>
           </button>)}
       </nav>
-      {mode === "recall" && <section className="space-y-3 rounded-xl border p-4"><h3 className="font-semibold">Explique com suas palavras</h3><p className="text-sm text-muted-foreground">Responda sem olhar o artigo. Depois confira com o texto oficial e diga o quanto lembrou: isso define quando o artigo volta para revisão.</p><ol className="list-decimal space-y-2 pl-5 text-sm">{unit.recall.prompts.map(prompt => <li key={prompt}>{prompt}</li>)}</ol><label className="block text-sm">Sua resposta de recuperação<textarea className="mt-1 min-h-36 w-full rounded-lg border bg-background p-3" value={response} onChange={e => setResponse(e.target.value)} placeholder="Responda antes de abrir a referência." /></label><Button disabled={!response.trim()} variant="outline" onClick={() => setRevealed(true)}>Conferir com o texto e os critérios</Button></section>}
+      {mode === "recall" && <section className="space-y-3 rounded-xl border p-4"><h3 className="font-semibold">Revise de cabeça</h3><p className="text-sm text-muted-foreground">Pense na resposta de cada pergunta, sem olhar o artigo. Depois confira com o texto e diga o quanto lembrou: isso define quando o artigo volta para revisão.</p><ol className="list-decimal space-y-2 pl-5 text-sm">{unit.recall.prompts.map(prompt => <li key={prompt}>{prompt}</li>)}</ol><Button variant="outline" onClick={() => setRevealed(true)}>Mostrar o texto e conferir</Button></section>}
       {step === "entender" && <>
         {caveat && <aside className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4 text-sm"><strong>{caveat.title}</strong><p className="mt-2 leading-7">{caveat.explanation}</p><a href={caveat.source} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block underline">Conferir o entendimento do STJ</a></aside>}
         {references.map(ref => <aside key={ref.url} className="rounded-xl border border-amber-500/50 p-4 text-sm"><strong>{ref.title}</strong><p className="mt-2">{ref.explanation}</p>{isStudySourceUrl(ref.url) && <a className="mt-2 inline-block underline" href={ref.url} target="_blank" rel="noopener noreferrer">Fonte do tribunal</a>}</aside>)}
@@ -199,7 +199,7 @@ function UnitLesson({ unit, law, materialSlug, references, progress, userId, hig
         <WorkedExamples slug={materialSlug} enabled={true} articleLabel={unit.label} />
       </>}
       {mode === "recall" && revealed && <section className="space-y-3"><p className="text-sm">Compare sua resposta com o dispositivo inteiro. Registre a regra ou exceção que confundiu. Esta avaliação é feita por você; não é correção automática de texto livre.</p><div className="flex flex-wrap gap-2">{([['again','Não lembrei · 10 min'],['hard','Com dificuldade · 1 dia'],['good','Lembrei'],['easy','Lembrei com facilidade']] as const).map(([rating,label]) => <Button disabled={busy} key={rating} variant="outline" onClick={() => void save(rating)}>{label}</Button>)}</div></section>}
-      <label className="block text-sm font-medium">Suas anotações<span className="ml-1 font-normal text-muted-foreground">(dúvidas e pontos a retomar)</span><textarea maxLength={4000} className="mt-1.5 min-h-24 w-full rounded-lg border bg-background p-3 text-sm font-normal" value={notes} onChange={e => setNotes(e.target.value)} /></label>
+      <details className="rounded-lg border px-3 py-2 text-sm" open={!!notes}><summary className="cursor-pointer font-medium">Minhas anotações</summary><textarea aria-label="Minhas anotações" maxLength={4000} className="mt-2 min-h-20 w-full rounded-lg border bg-background p-2 text-sm" value={notes} onChange={e => setNotes(e.target.value)} /></details>
       <div className="flex flex-wrap items-center gap-2 border-t pt-4"><Button disabled={busy} onClick={() => void save("read")}>Marcar como lido e salvar</Button><Button variant="outline" onClick={onNext}>Próximo artigo →</Button></div>
       {progress?.due_at && <p className="text-xs text-muted-foreground">Próxima revisão: {new Date(progress.due_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}</p>}
     </>}

@@ -42,7 +42,7 @@ test('practice does not guess answers for legacy notes and rendering keeps autho
   assert.equal(explanationPractice('Uma assertiva comentada sem pergunta.'),null);
   assert.equal(explanationPractice('Uma pergunta sem resposta?'),null);
   const html=renderToStaticMarkup(React.createElement(ExplanationChecks,{items:['Qual regra? RESPOSTA-RESERVADA']}));
-  assert.ok(html.includes('textarea'));assert.match(html,/<details class="mt-2">/);assert.ok(!html.includes('<details open'));assert.ok(html.indexOf('RESPOSTA-RESERVADA')>html.indexOf('<details'));
+  assert.ok(!html.includes('textarea'));assert.match(html,/<details class="mt-2">/);assert.ok(!html.includes('<details open'));assert.ok(html.indexOf('RESPOSTA-RESERVADA')>html.indexOf('<details'));
 });
 
 test('targeted corrections require an explicit complete list, unchanged course count and previous revision',()=>{
