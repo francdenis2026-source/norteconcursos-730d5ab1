@@ -476,4 +476,57 @@ export const CONTRAN_DIDATICA: Record<string, ContranDidatica> = {
     ],
     fontes: ["991/2023"],
   },
+  "1031/2026": {
+    simples: [
+      "Esta é a resolução atual sobre fiscalização de álcool e outras substâncias ao volante. Ela revogou a Resolução 432/2013 (art. 15), então quem estudou pela norma antiga precisa atualizar. Fiscalizar o consumo deve ser rotina dos órgãos de trânsito e qualquer condutor abordado pode ser testado, mesmo sem sinais de embriaguez (art. 2º, § 1º).",
+      "Como o agente constata a influência? Pelo menos um destes meios (art. 3º). Para álcool: etilômetro (teste do ar alveolar) ou sinais de alteração da capacidade psicomotora. Para outras substâncias: teste em aparelho que detecta a substância ou os sinais psicomotores. O etilômetro serve só para álcool (art. 3º, § 3º). Imagem e vídeo entram como prova suplementar, e deve-se priorizar os testes com aparelho (art. 3º, §§ 4º e 5º).",
+      "O pré-teste (teste passivo) é só triagem: serve de indício, não caracteriza infração nem fundamenta autuação (art. 4º). O etilômetro precisa de modelo aprovado pelo Inmetro e verificação metrológica em dia (art. 5º), e do resultado se desconta a margem de erro máxima admissível, conforme a tabela do Anexo I. Reteste só se o resultado válido ficar prejudicado por motivo técnico ou operacional (art. 5º, § 2º).",
+      "Sinais psicomotores: é preciso pelo menos dois sinais que, em conjunto, comprovem a situação, descritos no auto de infração ou em termo específico (art. 7º).",
+      "Infração do art. 165 (administrativa): configura com etilômetro de 0,05 mg/L ou mais (descontado o erro máximo), teste positivo para outra substância, ou sinais psicomotores (art. 8º). Crime do art. 306: etilômetro de 0,34 mg/L ou mais (descontado o erro), teste positivo, sinais psicomotores, exame de sangue de 6 dg/L ou mais, exame clínico com laudo de médico perito ou exame laboratorial para outras substâncias (art. 9º). O crime não afasta a infração do art. 165 (art. 9º, § 1º).",
+      "Recusa: quem se recusa a qualquer procedimento responde pelo art. 165-A, desde que não haja pelo menos dois sinais de alteração; havendo dois sinais, aplica-se o art. 165, sem prejuízo do crime do art. 306 (art. 8º, §§ 1º e 2º). Recusar é negar o procedimento oferecido; o condutor não escolhe qual deles será usado (art. 8º, § 3º).",
+      "Depois da abordagem: o veículo fica retido até a apresentação de condutor habilitado, que também é fiscalizado; sem condutor apto, vai ao depósito (art. 11). O agente não recolhe a CNH por essas infrações (art. 12). Em caso de morte em sinistro de trânsito, é obrigatório exame de sangue ou laboratorial para a perícia oficial (art. 13).",
+    ],
+    atualizacoes: [
+      "A Resolução 1.031/2026 revogou a Resolução 432/2013 e entrou em vigor na publicação; a alteração do Anexo da Resolução 985/2022 vale 60 dias depois da publicação (arts. 15 e 16).",
+      "Novidades que costumam cair: dois sinais psicomotores em conjunto (art. 7º); pré-teste que não autua (art. 4º); o condutor não escolhe o meio de verificação (art. 8º, § 3º); e exames de sangue ou clínico como suplementares, a critério da autoridade policial (art. 9º, § 3º).",
+    ],
+    quadro: {
+      titulo: "Álcool no trânsito: infração x crime",
+      linhas: [
+        ["Infração (art. 165 CTB)", "Etilômetro de 0,05 mg/L ou mais, descontado o erro máximo; ou teste positivo; ou sinais psicomotores (art. 8º)"],
+        ["Crime (art. 306 CTB)", "Etilômetro de 0,34 mg/L ou mais, descontado o erro máximo; sangue de 6 dg/L ou mais; laudo clínico; ou os testes e sinais acima (art. 9º)"],
+        ["Pré-teste", "Só triagem: não autua (art. 4º, § 2º)"],
+        ["Sinais psicomotores", "Pelo menos dois, em conjunto (art. 7º, § 1º)"],
+        ["Recusa", "Art. 165-A, se não houver dois sinais; com dois sinais, art. 165 e possível crime (art. 8º, §§ 1º e 2º)"],
+        ["Veículo", "Retido até condutor habilitado; senão, depósito (art. 11)"],
+        ["CNH", "O agente não a recolhe (art. 12)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "O etilômetro marcou 0,10 mg/L. Qual é a consequência?",
+        resposta: "Há infração administrativa do art. 165, pois a medição passou de 0,05 mg/L. Não é crime do art. 306, que exige 0,34 mg/L ou mais (arts. 8º e 9º).",
+      },
+      {
+        situacao: "O condutor aceita fazer o pré-teste, que dá positivo, mas não quer soprar o etilômetro. Pode ser autuado só pelo pré-teste?",
+        resposta: "Não. O pré-teste é só indicativo e não pode fundamentar a autuação (art. 4º, § 2º). Se ele recusar o procedimento adequado, aplica-se o art. 165-A, salvo se houver dois sinais psicomotores (art. 8º, § 1º).",
+      },
+      {
+        situacao: "O condutor diz que prefere fazer exame de sangue em vez de soprar o etilômetro. Pode escolher?",
+        resposta: "Não. A recusa se caracteriza pela negativa ao procedimento oferecido; o condutor não escolhe a modalidade (art. 8º, § 3º).",
+      },
+      {
+        situacao: "O condutor é flagrado com 0,05 mg/L e o agente pergunta se pode levar a CNH. Pode?",
+        resposta: "Não. O agente não recolhe o documento de habilitação por essas infrações (art. 12). A suspensão do direito de dirigir segue regulamentação específica.",
+      },
+    ],
+    pegadinhas: [
+      "Usar a Resolução 432/2013 como se ainda valesse. Ela foi revogada pela 1.031/2026.",
+      "Dizer que o pré-teste basta para autuar. Ele é só triagem.",
+      "Confundir os limites: 0,05 mg/L é infração; 0,34 mg/L é crime.",
+      "Achar que o etilômetro serve para drogas. Ele só verifica álcool.",
+      "Esquecer que o exame de sangue e o clínico são suplementares: não são necessários para a infração.",
+      "Dizer que a recusa sempre dá o art. 165-A. Com dois sinais psicomotores, aplica-se o art. 165.",
+    ],
+  },
 };
