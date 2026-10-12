@@ -30,6 +30,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
 import { useReinforcement } from "@/hooks/useReinforcement";
+import { idleSeconds, IDLE_PAUSE_SECONDS, startActivityTracking } from "@/lib/activity";
 import { fetchQuestionsAnsweredToday, getDailyQuestionLimit } from "@/lib/questionDailyLimit";
 import {
   type Answer,
@@ -194,6 +195,11 @@ function QuestionTrainer() {
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
   const [results, setResults] = React.useState<("ok" | "err")[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
+  // Cronômetro da questão: conta só o tempo ativo (aba visível e aluno interagindo) enquanto a questão está
+  // aberta e sem resposta, e recomeça do zero a cada questão. É o tempo gravado como response_seconds.
+  const [questionSecs, setQuestionSecs] = React.useState(0);
+  React.useEffect(() => startActivityTracking(), []);
+  const questionSecsRef = React.useRef(0);
   const routeKey = trainerRouteKey(routeFilters);
   const pendingRestore = React.useRef(false);
   const restoredSelection = React.useRef<string | null>(null);
@@ -529,6 +535,19 @@ function QuestionTrainer() {
   };
 
   const question = questions[index];
+  React.useEffect(() => {
+    questionSecsRef.current = 0;
+    setQuestionSecs(0);
+  }, [startedAt, index, question?.id, question?.source]);
+  React.useEffect(() => {
+    if (!started || !question || answered) return;
+    const id = window.setInterval(() => {
+      if (document.visibilityState !== "visible" || idleSeconds() >= IDLE_PAUSE_SECONDS) return;
+      questionSecsRef.current += 1;
+      setQuestionSecs(questionSecsRef.current);
+    }, 1000);
+    return () => window.clearInterval(id);
+  }, [started, question?.id, question?.source, answered, index]);
   // Já respondida antes (nesta sessão ou em qualquer sessão anterior): mostra
   // em modo revisão, sem permitir reenviar. Só rearma quando a questão exibida
   // muda — back/forward dentro da sessão não reconta nem reseta o cronômetro.
@@ -594,7 +613,7 @@ function QuestionTrainer() {
           selected_answer: selected,
           official_answer: question.answer,
           is_correct: isCorrect,
-          response_seconds: Math.max(0, Math.round((Date.now() - startedAt) / 1000)),
+          response_seconds: Math.max(0, questionSecsRef.current),
         });
         if (error && !/PGRST205|42P01|does not exist|schema cache/i.test(`${error.code ?? ""} ${error.message}`)) throw error;
         if (error) toast.message("Reforço registrado só nesta sessão: o histórico de reforço ainda não foi habilitado no banco.");
@@ -624,7 +643,7 @@ function QuestionTrainer() {
           is_correct: isCorrect,
           // Learning support is available only after this answer is saved.
           asked_for_help: false,
-          response_seconds: Math.max(0, Math.round((Date.now() - startedAt) / 1000)),
+          response_seconds: Math.max(0, questionSecsRef.current),
         },
         { onConflict: "id" },
       );
@@ -920,7 +939,7 @@ function QuestionTrainer() {
                 {correct} certas · {wrong} erradas
               </p>
             </div>
-            <ElapsedTimer startedAt={startedAt} running={!answered} />
+            <ElapsedTimer seconds={questionSecs} />
           </div>
           <div
             className="mb-4 flex gap-1 sm:mb-6 sm:gap-1.5"
@@ -1664,15 +1683,8 @@ function TrainingResult({
   );
 }
 
-function ElapsedTimer({ startedAt, running }: { startedAt: number; running: boolean }) {
-  const [secs, setSecs] = React.useState(0);
-  React.useEffect(() => {
-    const tick = () => setSecs(Math.max(0, Math.floor((Date.now() - startedAt) / 1000)));
-    tick();
-    if (!running) return;
-    const id = window.setInterval(tick, 1000);
-    return () => window.clearInterval(id);
-  }, [startedAt, running]);
+function ElapsedTimer({ seconds }: { seconds: number }) {
+  const secs = seconds;
   const mm = String(Math.floor(secs / 60)).padStart(2, "0");
   const ss = String(secs % 60).padStart(2, "0");
   return (
