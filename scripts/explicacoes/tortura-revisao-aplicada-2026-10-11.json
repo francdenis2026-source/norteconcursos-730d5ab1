@@ -1,0 +1,88 @@
+{
+  "course_slug": "tortura",
+  "units": {
+    "art-1": {
+      "simples": "A tortura abrange obtenção de informação/confissão, provocação de crime e discriminação racial/religiosa com violência ou grave ameaça; castigo/prevenção exige guarda, poder ou autoridade e sofrimento intenso. A Lei Barbara Penna, 15.410/2026, acrescentou sofrimento intenso reiterado de mulher em violência doméstica/familiar, em vigor desde a publicação em 21/05/2026. A pena básica é reclusão de 2 a 8 anos; omissão com dever de evitar/apurar recebe detenção de 1 a 4.",
+      "pontos": [
+        "Lesão grave/gravíssima: reclusão 4–10; morte: 8–16.",
+        "Aumento 1/6 a 1/3: agente público; vítimas enumeradas; sequestro.",
+        "Perda de cargo/função/emprego e interdição pelo dobro da pena; inafiançabilidade e vedação de graça/anistia.",
+        "Texto do §7º indica fechado, mas STJ aplica individualização pelo CP e Súmulas 440/STJ e 719/STF.",
+        "Informativo STJ 904, outubro/2026: majorante de agente público é compatível com tortura de pessoa presa, sem bis in idem automático."
+      ],
+      "atencao": [
+        "Não confundir detenção da omissão com reclusão dos tipos ativos.",
+        "O novo inciso III exige reiteração; não classificar toda discussão doméstica como tortura.",
+        "Na literalidade da majorante, a idade é maior de 60, não substituir silenciosamente por 60 ou mais.",
+        "Crime inafiançável não significa automaticamente imprescritível.",
+        "Regime inicial fechado não é obrigatório pela mera gravidade abstrata."
+      ],
+      "exemplo": "O agressor submete reiteradamente a mulher a sofrimento intenso em contexto doméstico: examinam-se os elementos do inciso III e as demais infrações cabíveis. Em outro caso, agente público impõe sofrimento ilegal a preso: a majorante pode incidir com o §1º, conforme STJ 904. Variação: Quem tinha dever de evitar ou apurar apenas se omite: examina-se o §2º, com pena distinta. Ao fixar regime, o juiz individualiza e não aplica fechado automaticamente só pelo nome do crime.",
+      "prova": [
+        "A omissão do §2º tem pena de reclusão de 2 a 8 anos? Não; sua pena é detenção de 1 a 4.",
+        "O inciso III exige sofrimento intenso reiterado no contexto doméstico/familiar? Sim; são elementos da redação de 2026.",
+        "Toda condenação por tortura exige automaticamente regime inicial fechado? Não; a jurisprudência exige individualização.",
+        "A majorante de agente público é sempre incompatível com tortura de pessoa presa? Não; o STJ 904 reconheceu compatibilidade porque as circunstâncias são distintas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40cnot%3D014772",
+        "https://scon.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D022658"
+      ]
+    },
+    "art-2": {
+      "simples": "A lei também se aplica a crime cometido fora do Brasil quando a vítima é brasileira ou o agente se encontra em local sob jurisdição brasileira. O artigo usa alternativas, e não exige simultaneamente nacionalidade brasileira da vítima e presença do autor.",
+      "pontos": [
+        "Memória: vítima brasileira OU agente sob jurisdição brasileira."
+      ],
+      "atencao": [
+        "Não trocar a conjunção ou por e.",
+        "Aplicação da lei não dispensa garantias processuais e análise dos fatos."
+      ],
+      "exemplo": "A vítima é brasileira e o crime ocorreu no exterior: o artigo contém hipótese de aplicação. Variação: A vítima é estrangeira, mas o agente se encontra sob jurisdição brasileira: a outra hipótese deve ser examinada.",
+      "prova": [
+        "As duas condições precisam ocorrer juntas? Não; o texto usa alternativas.",
+        "O artigo se limita a fatos ocorridos dentro do território nacional? Não; prevê aplicação também fora dele."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-3": {
+      "simples": "A Lei 9.455 entrou em vigor na publicação. A alteração de 2026 também adotou publicação como marco próprio; para a nova modalidade penal, deve-se respeitar a irretroatividade da lei penal mais gravosa.",
+      "pontos": [
+        "Vigência original: publicação; nova modalidade: publicação da Lei 15.410 em 21/05/2026."
+      ],
+      "atencao": [
+        "Não usar uma nova incriminação mais gravosa para fatos anteriores ao marco legal."
+      ],
+      "exemplo": "A prova pergunta quando a lei original iniciou vigência: na publicação. Variação: O fato é anterior à nova modalidade de 2026: não se aplica retroativamente a nova incriminação mais gravosa; examina-se a legislação aplicável ao fato.",
+      "prova": [
+        "O art. 3º fixa vacância de 45 dias? Não; usa a publicação.",
+        "A nova modalidade pode retroagir automaticamente para prejudicar o acusado? Não; deve-se respeitar a irretroatividade penal mais gravosa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm"
+      ]
+    },
+    "art-4": {
+      "simples": "A Lei de Tortura revogou o art. 233 do ECA, antigo dispositivo sobre tortura. Não revogou todo o Estatuto nem o art. 232, que trata de vexame ou constrangimento de criança/adolescente sob autoridade, guarda ou vigilância.",
+      "pontos": [
+        "Revogado: ECA art. 233; não confundir com art. 232."
+      ],
+      "atencao": [
+        "Nem todo constrangimento é automaticamente tortura: examinar elementos de cada tipo."
+      ],
+      "exemplo": "O material cita o art. 233 do ECA como crime vigente: deve ser corrigido pela revogação expressa. Variação: A conduta envolve vexame no art. 232: esse artigo não foi revogado pelo art. 4º da Lei de Tortura.",
+      "prova": [
+        "Foi revogado todo o ECA? Não; a revogação é do art. 233.",
+        "O artigo revogado foi o 232? Não; foi o 233."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
+      ]
+    }
+  }
+}

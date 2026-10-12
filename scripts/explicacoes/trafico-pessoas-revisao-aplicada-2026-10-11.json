@@ -1,0 +1,287 @@
+{
+  "course_slug": "trafico-pessoas",
+  "units": {
+    "art-1": {
+      "simples": "A lei enfrenta tráfico no Brasil contra vítima brasileira ou estrangeira, e no exterior contra vítima brasileira. O enfrentamento reúne prevenção, repressão e atenção às vítimas, não apenas sanção penal.",
+      "pontos": [
+        "Três frentes: prevenir, reprimir, atender."
+      ],
+      "atencao": [
+        "Não restringir o atendimento no Brasil a vítimas brasileiras nem exigir viagem internacional para todo tráfico."
+      ],
+      "exemplo": "Uma vítima estrangeira é explorada no Brasil: está no âmbito descrito. Variação: A vítima é brasileira e o fato ocorre no exterior: o artigo também contempla essa situação.",
+      "prova": [
+        "A lei no território nacional protege apenas brasileiros? Não; abrange vítimas brasileiras e estrangeiras."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-2": {
+      "simples": "Dignidade, cidadania, direitos humanos, não discriminação, transversalidade, atenção integral e proteção de crianças/adolescentes orientam a política. O atendimento de vítimas diretas e indiretas independe de nacionalidade e colaboração na investigação ou processo.",
+      "pontos": [
+        "Atenção não condicionada a nacionalidade ou colaboração."
+      ],
+      "atencao": [
+        "Não condicionar assistência à entrega de informações contra o autor."
+      ],
+      "exemplo": "A vítima necessita de assistência, mas teme colaborar: o atendimento integral não depende dessa colaboração. Variação: A vítima é estrangeira ou está em situação migratória irregular: não discriminação continua aplicável.",
+      "prova": [
+        "A atenção integral depende de colaboração com a investigação? Não; o inciso VI expressamente a dispensa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-3": {
+      "simples": "As diretrizes articulam governo e sociedade, redes de atendimento, cooperação internacional, estudos, sigilo e gestão integrada. Incluem atenção a fronteiras, portos, aeroportos e vias de transporte de maior incidência.",
+      "pontos": [
+        "Articulação federativa e social; sigilo; cooperação."
+      ],
+      "atencao": [
+        "Diretrizes não autorizam divulgação irrestrita de dados de vítimas."
+      ],
+      "exemplo": "Equipes de distintas esferas coordenam atuação em rota de maior incidência. Variação: Uma entidade participa do enfrentamento: a parceria não afasta o sigilo dos procedimentos.",
+      "prova": [
+        "O enfrentamento se limita a um único órgão federal? Não; exige articulação de várias esferas e sociedade."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-4": {
+      "simples": "A prevenção emprega medidas intersetoriais, campanhas adaptadas às realidades e linguagens, mobilização social e projetos. Áreas como educação, trabalho, saúde, turismo e assistência também participam.",
+      "pontos": [
+        "Prevenção: setores integrados e conscientização."
+      ],
+      "atencao": [
+        "Não confundir prevenção com investigação ou condenação já consumadas."
+      ],
+      "exemplo": "Uma campanha local orienta sobre recrutamento fraudulento e mobiliza escola e rede social. Variação: A ação ocorre antes do delito: não precisa esperar a condenação para ser medida preventiva.",
+      "prova": [
+        "A prevenção depende de condenação prévia? Não; atua para evitar o tráfico."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-5": {
+      "simples": "A repressão envolve cooperação nacional/internacional entre justiça e segurança, integração com crimes correlatos e equipes conjuntas de investigação. Cooperação não dispensa competência, garantias e requisitos de cada medida.",
+      "pontos": [
+        "Repressão: cooperação, integração e investigação conjunta."
+      ],
+      "atencao": [
+        "Não transformar equipe conjunta em autorização para interceptar ou prender sem fundamento."
+      ],
+      "exemplo": "Órgãos coordenam investigação do tráfico e de delitos correlatos. Variação: A equipe precisa de interceptação: aplica os requisitos próprios, apesar da atuação conjunta.",
+      "prova": [
+        "A equipe conjunta dispensa os requisitos das medidas cautelares? Não; a cooperação não elimina garantias legais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-6": {
+      "simples": "Proteção de vítimas diretas e indiretas inclui assistência jurídica, social, emprego e saúde; abrigo, privacidade, informação e atendimento humanizado, evitando revitimização. Há reinserção social e, para crianças/adolescentes, familiar e comunitária. Brasileiros no exterior recebem assistência consular imediata independentemente da situação migratória; a saúde inclui recuperação física e psicológica.",
+      "pontos": [
+        "Proteção integral, privacidade e não revitimização."
+      ],
+      "atencao": [
+        "Não reduzir saúde a lesão física ou atendimento a vítima direta."
+      ],
+      "exemplo": "A vítima recebe abrigo e apoio psicológico, com informação compreensível e proteção da identidade. Variação: É vítima brasileira no exterior com status migratório irregular: a assistência consular imediata não fica excluída por isso.",
+      "prova": [
+        "A assistência à saúde abrange recuperação psicológica? Sim; o §3º inclui expressamente esse aspecto."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-7": {
+      "simples": "O artigo inseriu residência permanente e regularização no antigo Estatuto do Estrangeiro, Lei 6.815. Esse diploma foi revogado pela Lei 13.445/2017. Para situação atual, consultar a autorização de residência do art. 30, II, g, da Lei de Migração e a regulamentação aplicável; não ensinar os antigos artigos e isenções como procedimento atual completo.",
+      "pontos": [
+        "Remissão histórica: Lei 6.815 revogada; Lei de Migração atual."
+      ],
+      "atencao": [
+        "A revogação da lei antiga não significa ausência de proteção migratória. Evitar prometer documento ou isenção automática sem conferir o procedimento vigente."
+      ],
+      "exemplo": "O atendimento identifica vítima de tráfico e examina a hipótese atual de autorização de residência. Variação: O material manda aplicar diretamente o antigo art. 18-A do Estatuto do Estrangeiro: a referência deve ser atualizada.",
+      "prova": [
+        "A Lei 6.815 continua vigente por estar transcrita neste artigo? Não; foi revogada pela Lei 13.445/2017."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm"
+      ]
+    },
+    "art-8": {
+      "simples": "Com indícios suficientes, o juiz pode decretar medidas sobre instrumentos, produtos e proveitos do tráfico, inclusive em nome de interpostas pessoas, observando CPP e estrutura acusatória. Alienação antecipada preserva valor de bens; comprovação de origem lícita permite liberação, mantida constrição necessária a reparação, prestações, multas e custas. Sentença decide perdimento.",
+      "pontos": [
+        "Assecurar não equivale a declarar perdimento definitivo."
+      ],
+      "atencao": [
+        "Não excluir bens só por estarem em nome de terceiro intermediário. A redação exige comparecimento pessoal para pedido de liberação; aplicação não autoriza o juiz a assumir investigação."
+      ],
+      "exemplo": "Um bem relacionado ao tráfico está se depreciando: examina-se alienação antecipada. Variação: A origem é demonstrada lícita: examina-se liberação, sem ignorar as obrigações para as quais a lei preserva constrição.",
+      "prova": [
+        "A alienação antecipada exige esperar sempre a sentença definitiva? Não; é medida de preservação de valor nos casos legais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-9": {
+      "simples": "Aplica-se a Lei 12.850 subsidiariamente e no que couber. Regras próprias da Lei de Tráfico de Pessoas não são apagadas pela remissão e técnicas exigem seus requisitos legais.",
+      "pontos": [
+        "Subsidiária: complementa quando cabível."
+      ],
+      "atencao": [
+        "Não transpor automaticamente benefício ou técnica de outro diploma sem verificar compatibilidade."
+      ],
+      "exemplo": "Há lacuna procedimental e se examina a regra compatível da Lei 12.850. Variação: Existe disciplina própria específica: não a substitua automaticamente pela lei subsidiária.",
+      "prova": [
+        "A remissão elimina todas as regras próprias desta lei? Não; a aplicação é subsidiária e no que couber."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-10": {
+      "simples": "O Poder Público é autorizado a criar sistema de informações para coletar e gerir dados que orientem o enfrentamento. Não é autorização para divulgação pública irrestrita de identidade ou intimidade das vítimas.",
+      "pontos": [
+        "Sistema para orientar política; proteção de dados das vítimas."
+      ],
+      "atencao": [
+        "Articular com privacidade, sigilo e atendimento humanizado dos arts. 3º e 6º."
+      ],
+      "exemplo": "Dados são geridos para identificar rotas e planejar a política. Variação: O gestor publica a identidade de vítimas em massa: o objetivo informacional não afasta sua proteção.",
+      "prova": [
+        "O sistema autoriza divulgação irrestrita das vítimas? Não; permanecem os deveres de proteção e sigilo."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-11": {
+      "simples": "Acrescentou CPP 13-A e 13-B, ainda atuais. Dados cadastrais dos crimes enumerados podem ser requisitados por MP ou delegado e devem ser fornecidos em 24h, com autoridade, inquérito e unidade identificados. Localização por sinais exige, como regra, autorização judicial; não dá acesso ao conteúdo. O sinal tem 30 dias, uma renovação igual e ordem para períodos superiores; inquérito em até 72h da ocorrência. Sem manifestação judicial em 12h, há requisição imediata de localização com comunicação ao juiz.",
+      "pontos": [
+        "Memória: cadastro 24h; manifestação judicial 12h; inquérito 72h; sinal 30 + 30."
+      ],
+      "atencao": [
+        "Não trocar dados cadastrais/localização por conteúdo de comunicação. A exceção das 12h não autoriza interceptação sem ordem."
+      ],
+      "exemplo": "A autoridade pede localização de vítima de tráfico e aguarda controle judicial nos termos do art. 13-B. Variação: O juiz não se manifesta em 12h: a hipótese permite requisitar meios de localização e comunicar imediatamente, sem abrir o conteúdo das conversas.",
+      "prova": [
+        "A localização por sinal autoriza ler o conteúdo de mensagens? Não; conteúdo exige autorização judicial conforme a lei."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-12": {
+      "simples": "Incluiu tráfico de pessoas no art. 83, V, do CP: livramento exige mais de dois terços e ausência de reincidência específica nos crimes enumerados. O inciso não esgota as condições: ler o art. 83 atual, inclusive requisitos de comportamento e demais condições.",
+      "pontos": [
+        "Mais de 2/3; não apenas 2/3 exatos; sem reincidência específica."
+      ],
+      "atencao": [
+        "Livramento não é progressão de regime, remição nem perdão. Atingir fração não dispensa as condições restantes."
+      ],
+      "exemplo": "O condenado supera a fração e o juiz examina os demais requisitos do art. 83. Variação: Há reincidência específica abrangida no inciso: a fração, sozinha, não satisfaz sua condição.",
+      "prova": [
+        "Cumprir exatamente dois terços satisfaz a expressão mais de dois terços? Não; é preciso superar a fração."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-13": {
+      "simples": "Este dispositivo introduziu o art. 149-A no CP. O tipo e seus parágrafos aparecem na unidade própria art. 149-A deste percurso; a leitura exige conduta, meio e finalidade, não apenas a expressão tráfico de pessoas.",
+      "pontos": [
+        "Estudar com a unidade art. 149-A e o CP compilado."
+      ],
+      "atencao": [
+        "O marcador de inclusão não é a definição penal completa; não preencher texto ausente com inferência."
+      ],
+      "exemplo": "O candidato segue para o art. 149-A para examinar verbos, meios e cinco finalidades. Variação: A questão chama qualquer deslocamento de tráfico: é necessário examinar os elementos do tipo.",
+      "prova": [
+        "Qualquer deslocamento de pessoa basta para o art. 149-A? Não; exige conduta típica, meio e finalidade previstos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-149-a": {
+      "simples": "O tráfico tipifica agenciar, aliciar, recrutar, transportar, transferir, comprar, alojar ou acolher pessoa mediante grave ameaça, violência, coação, fraude ou abuso, visando remoção de órgãos, trabalho análogo à escravidão, servidão, adoção ilegal ou exploração sexual. Pena: reclusão 4–8 e multa. Aumento 1/3–1/2 nas hipóteses funcionais, vítimas, relações de prevalência e retirada do Brasil; redução 1/3–2/3 exige primariedade e não integrar organização criminosa.",
+      "pontos": [
+        "Memória: verbo + meio + finalidade; internacionalidade não é requisito geral."
+      ],
+      "atencao": [
+        "Não limitar a exploração sexual; não exigir saída do país para todo tráfico. A redução exige ambos os requisitos, não um deles isolado."
+      ],
+      "exemplo": "Por fraude, o autor recruta e aloja vítima para trabalho análogo à escravidão dentro do Brasil: examinam-se os elementos. Variação: O autor é primário, mas integra organização criminosa: não satisfaz sozinho a redução do §2º.",
+      "prova": [
+        "O crime exige sempre retirar a vítima do Brasil? Não; a retirada é uma hipótese de aumento, não requisito geral."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-14": {
+      "simples": "O Dia Nacional de Enfrentamento ao Tráfico de Pessoas é celebrado anualmente em 30 de julho. A data é de conscientização, não marco de vigência da lei ou condição para proteção.",
+      "pontos": [
+        "Data anual: 30 de julho."
+      ],
+      "atencao": [
+        "Não trocar data comemorativa por prazo processual."
+      ],
+      "exemplo": "Uma campanha educativa é planejada para 30 de julho. Variação: O atendimento ocorre em outro mês: a proteção não fica limitada à data comemorativa.",
+      "prova": [
+        "A proteção só pode ser prestada em 30 de julho? Não; a data é comemorativa e de conscientização."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-15": {
+      "simples": "Campanhas nacionais devem conscientizar sobre todas as modalidades de tráfico. Não se limitam à exploração sexual ou ao tráfico internacional e devem dialogar com a prevenção dos arts. 2º–4º.",
+      "pontos": [
+        "Todas as modalidades; divulgação em veículos de comunicação."
+      ],
+      "atencao": [
+        "Evitar campanhas que culpabilizem vítimas ou exponham identidades protegidas."
+      ],
+      "exemplo": "A campanha aborda aliciamento fraudulento para trabalho e remoção de órgãos. Variação: A ação só fala em tráfico sexual internacional: essa abordagem não esgota todas as modalidades.",
+      "prova": [
+        "As campanhas abrangem só exploração sexual? Não; o artigo exige conscientização sobre todas as modalidades."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-16": {
+      "simples": "Foram revogados os antigos CP 231 e 231-A. O estudo atual deve usar o art. 149-A e outros tipos cabíveis, observando os elementos e a análise temporal; a revogação não permite concluir automaticamente que todo fato anterior deixou de ser punível.",
+      "pontos": [
+        "CP 231 e 231-A revogados; estudar tipo atual e aplicação temporal."
+      ],
+      "atencao": [
+        "Não presumir abolitio criminis geral ou continuidade automática sem comparar fatos e elementos antigos/novos."
+      ],
+      "exemplo": "Um material apresenta o CP 231 como vigente hoje: a referência está desatualizada. Variação: O caso é anterior à reforma: exige comparação temporal e dos elementos, não conclusão automática baseada apenas no número revogado.",
+      "prova": [
+        "Os arts. 231 e 231-A continuam vigentes hoje? Não; foram expressamente revogados."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-17": {
+      "simples": "A lei fixou vacância de 45 dias após publicação oficial. É diferente de leis com vigência imediata e da data comemorativa de 30 de julho.",
+      "pontos": [
+        "Vacância: 45 dias após publicação oficial."
+      ],
+      "atencao": [
+        "Não contar automaticamente da assinatura nem usar a data comemorativa."
+      ],
+      "exemplo": "A questão pergunta a cláusula original de vigência: 45 dias após publicação. Variação: A pergunta trata do Dia Nacional: a resposta é 30 de julho, não o prazo de vigência.",
+      "prova": [
+        "A vigência original foi imediata na publicação? Não; o artigo estabeleceu 45 dias."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

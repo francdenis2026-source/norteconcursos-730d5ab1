@@ -1,0 +1,401 @@
+{
+  "version": "2026-10-11-temporaria-targeted",
+  "checked_at": "2026-10-12T00:36:33.326717+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "temporaria",
+      "title": "Lei 7.960/1989 — Prisão Temporária",
+      "units": 7,
+      "scope_type": "targeted_correction",
+      "course_current_units": 7,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+      "source_sha256": "2c4ad7ac9d6cf5fd41c7ee6ebbca9725be4ed02e36d7c13d21ac765475611bc0",
+      "source_checked_at": "2026-10-12T00:31:34.575846+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "7e2919d5-a21a-5470-b555-a12604d040fb",
+      "content_sha256": "ba0239b656fb277d390dab5be792b13f91863f8babeff49f1aaa52b4c0b56b9b",
+      "simples": "A leitura constitucional do STF nas ADIs 3360 e 4109 exige cinco requisitos cumulativos: imprescindibilidade concreta para o inquérito; fundadas razões de autoria/participação em crime do rol; fatos novos ou contemporâneos; adequação à gravidade concreta, circunstâncias e condições pessoais; insuficiência de cautelares alternativas. Falta de residência não autoriza, sozinha, a prisão. O rol não admite ampliação por analogia.",
+      "pontos": [
+        "Memória I-A-C-A-S: imprescindibilidade, autoria, contemporaneidade, adequação, subsidiariedade.",
+        "Cinco requisitos cumulativos; prisão para averiguações proibida."
+      ],
+      "atencao": [
+        "Não trate os incisos I, II e III como alternativas independentes.",
+        "O texto conserva remissões históricas a tipos e diplomas alterados/revogados; consultar CP e legislação atual, sem inventar novo crime no rol.",
+        "Prisão cautelar não é pena antecipada."
+      ],
+      "exemplo": "No inquérito por roubo, há elementos atuais de participação e demonstração concreta de necessidade; o juiz também examina adequação e insuficiência das alternativas. Variação: O único motivo é morar na rua: não atende aos requisitos constitucionais e não legitima prisão para averiguações.",
+      "prova": [
+        "A falta de residência fixa basta, sozinha? Não; o STF exige cinco requisitos cumulativos.",
+        "O rol pode ser ampliado por analogia? Não; a interpretação fixada proíbe essa ampliação.",
+        "Fatos novos ou contemporâneos e insuficiência de alternativas devem ser examinados? Sim; integram os requisitos cumulativos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=481715"
+      ],
+      "expected": {
+        "unit_id": "7e2919d5-a21a-5470-b555-a12604d040fb",
+        "content_sha256": "ba0239b656fb277d390dab5be792b13f91863f8babeff49f1aaa52b4c0b56b9b",
+        "simples": "Caberá prisão temporária quando imprescindível para as investigações do inquérito policial; quando o indiciado não tiver residência fixa ou não fornecer elementos necessários ao esclarecimento de sua identidade; ou quando houver fundadas razões de autoria ou participação do indiciado em crimes como homicídio doloso, sequestro ou cárcere privado, roubo, extorsão, extorsão mediante sequestro, estupro, atentado violento ao pudor, rapto violento, epidemia com resultado de morte, envenenamento de água potável ou substância alimentícia ou medicinal qualificado pela morte, quadrilha ou bando, genocídio, tráfico de drogas, crimes contra o sistema financeiro e crimes da Lei de Terrorismo.",
+        "pontos": [
+          "I: imprescindível para o inquérito policial.",
+          "II: sem residência fixa ou sem identidade esclarecida.",
+          "III: fundadas razões de autoria em crimes do rol (homicídio doloso, sequestro, roubo, extorsão, estupro, tráfico, terrorismo, entre outros)."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a alínea p (crimes da Lei de Terrorismo) foi incluída por lei posterior; o rol possui expressões de leis antigas, e a doutrina exige combinar os incisos.",
+          "Doutrina e STF: o inciso III exige, em regra, também a imprescindibilidade ou a falta de identidade (leitura conjunta).",
+          "Cabe apenas na fase de INQUÉRITO."
+        ],
+        "exemplo": "Suspeito de homicídio doloso, sem residência fixa, pode ser preso temporariamente.",
+        "prova": [
+          "Assertiva que admite a prisão temporária na fase processual erra: ela é cabível na investigação (inquérito)."
+        ],
+        "termos": [
+          {
+            "termo": "Prisão temporária",
+            "significado": "Prisão cautelar de curta duração, para a investigação de crimes graves."
+          }
+        ],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "d20a035a-1d9f-5d2c-aca1-794bd2b11e5d",
+      "content_sha256": "f69cfa67995d998725753a1ffb75cc89765d8325788d0e1bc6ec3af21b746f9a",
+      "simples": "Só o juiz decreta temporária, provocado por representação policial ou requerimento do MP. O prazo geral é cinco dias, prorrogável por igual período diante de extrema e comprovada necessidade. A decisão é fundamentada em até 24 horas; na representação policial, ouve-se antes o MP. O mandado informa duração e dia de soltura, e o dia de cumprimento entra na contagem.",
+      "pontos": [
+        "Prazo geral 5 + 5; hediondos/equiparados: consultar 30 + 30 do art. 2º, §4º, da Lei 8.072.",
+        "Somente executar após mandado, em duas vias, com ciência dos direitos.",
+        "Término: soltar imediatamente sem nova ordem, salvo comunicação prévia de prorrogação ou preventiva."
+      ],
+      "atencao": [
+        "Juiz pode determinar apresentação/exame de ofício pelo §3º, mas isso não autoriza decretar a prisão de ofício.",
+        "Prorrogação não é automática.",
+        "Lei 13.869/2019 alterou soltura e acrescentou conteúdo do mandado e dia inicial da contagem."
+      ],
+      "exemplo": "O mandado é cumprido na segunda-feira e o prazo termina sem comunicação de prorrogação ou preventiva: a custódia deve liberar imediatamente no marco legal. Variação: A autoridade espera novo alvará só porque o prazo terminou: o §7º dispensa nova ordem nessa hipótese.",
+      "prova": [
+        "O juiz pode decretar temporária de ofício com base no §3º? Não; esse parágrafo trata de apresentação, informações e exame.",
+        "O dia do cumprimento do mandado entra na contagem? Sim; o §8º o inclui.",
+        "A soltura por fim do prazo depende sempre de nova ordem? Não; o §7º exige liberação, ressalvadas as comunicações previstas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm"
+      ],
+      "expected": {
+        "unit_id": "d20a035a-1d9f-5d2c-aca1-794bd2b11e5d",
+        "content_sha256": "f69cfa67995d998725753a1ffb75cc89765d8325788d0e1bc6ec3af21b746f9a",
+        "simples": "A prisão temporária será decretada pelo juiz, em face da representação da autoridade policial ou de requerimento do Ministério Público, e terá o prazo de 5 dias, prorrogável por igual período em caso de extrema e comprovada necessidade. Na representação da autoridade policial, o juiz ouvirá antes o Ministério Público. O despacho será fundamentado e prolatado dentro de 24 horas do recebimento. O juiz poderá determinar que o preso lhe seja apresentado e submetê-lo a exame de corpo de delito. Expede-se mandado em duas vias, uma entregue ao indiciado como nota de culpa, e o mandado conterá o período de duração e o dia da libertação. A prisão só pode ser executada após o mandado judicial. Efetuada a prisão, a autoridade informará o preso de seus direitos constitucionais. Decorrido o prazo, a autoridade custodiante deve soltar o preso, independentemente de nova ordem, salvo comunicação de prorrogação ou de prisão preventiva. O dia do cumprimento do mandado entra no cômputo do prazo.",
+        "pontos": [
+          "Decretada pelo juiz, por representação da autoridade policial ou requerimento do MP.",
+          "Prazo de 5 dias, prorrogável por igual período.",
+          "Despacho fundamentado em 24 horas.",
+          "Mandado em duas vias, com duração e dia da libertação.",
+          "Soltura automática ao fim do prazo.",
+          "Dia do cumprimento do mandado conta no prazo."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: §§4º-A, 7º e 8º incluídos pela Lei nº 13.869, de 2019 (Lei de Abuso de Autoridade).",
+          "O juiz NÃO decreta de ofício.",
+          "Crimes hediondos e equiparados têm prazo próprio, mais longo (veja a Lei dos Crimes Hediondos) (Lei dos Crimes Hediondos)."
+        ],
+        "exemplo": "O delegado representa pela prisão temporária, o juiz ouve o MP e decide em 24 horas.",
+        "prova": [
+          "Assertiva que permite ao juiz decretar a prisão temporária de ofício erra: depende de representação ou requerimento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º",
+          "Lei dos Crimes Hediondos"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:04.135442+00:00",
+        "updated_at": "2026-10-11T14:21:04.135442+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "c9b6d578-9ebb-563f-ac4e-bc7ad2c5a922",
+      "content_sha256": "6adc769dcdcfb67eefbd99dc0d4f9de94b88e97f2ef1f93354b3febed57673bc",
+      "simples": "Presos temporários devem permanecer separados dos demais detentos. É regra de custódia, não autorização para tratamento degradante ou restrição de direitos sem base legal.",
+      "pontos": [
+        "Separação obrigatória dos demais detentos."
+      ],
+      "atencao": [
+        "Não confundir separação com pena de isolamento ou regime disciplinar."
+      ],
+      "exemplo": "A unidade organiza a custódia do preso temporário separadamente dos demais detentos. Variação: A equipe chama essa separação de punição disciplinar: a natureza da regra é de custódia, não de sanção.",
+      "prova": [
+        "A separação é facultativa pelo artigo? Não; é obrigatória.",
+        "Essa regra constitui pena disciplinar de isolamento? Não; é exigência de custódia."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "c9b6d578-9ebb-563f-ac4e-bc7ad2c5a922",
+        "content_sha256": "6adc769dcdcfb67eefbd99dc0d4f9de94b88e97f2ef1f93354b3febed57673bc",
+        "simples": "Os presos temporários deverão permanecer, obrigatoriamente, separados dos demais detentos.",
+        "pontos": [
+          "Separação obrigatória dos demais detentos."
+        ],
+        "atencao": [
+          "Evita contato com presos definitivos."
+        ],
+        "exemplo": "O preso temporário fica em cela ou ala separada.",
+        "prova": [
+          "Assertiva que permite misturar o preso temporário com os condenados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "d070c0bd-2226-5b13-bd0b-a72b73daf730",
+      "content_sha256": "2d81067857fccf201628dd6f8dfe25533a3ce17548a94d3442b15cf3237306e9",
+      "simples": "O artigo acrescentou historicamente crime à Lei 4.898/1965, que foi revogada pela Lei 13.869/2019. Não ensine aquela alínea como tipo penal vigente. A disciplina atual inclui o art. 12, parágrafo único, IV, da Lei 13.869, que deve ser lido com seus elementos e a finalidade específica do art. 1º, §1º.",
+      "pontos": [
+        "Lei 4.898: revogada; consultar tipo atual de abuso e seus requisitos."
+      ],
+      "atencao": [
+        "Não concluir que qualquer atraso, sem examinar dolo e finalidade legal, configura automaticamente abuso de autoridade.",
+        "A revogação do tipo antigo não elimina o dever de soltura do art. 2º, §7º."
+      ],
+      "exemplo": "Um material de hoje aplica a antiga alínea i da Lei 4.898 como vigente: a referência penal precisa ser atualizada. Variação: O caso trata de descumprimento atual de ordem de liberdade: examinam-se a Lei 13.869 e o contexto, não se reaplica automaticamente a lei revogada.",
+      "prova": [
+        "A antiga Lei 4.898 continua vigente por estar transcrita neste artigo? Não; foi revogada pela Lei 13.869.",
+        "A análise de abuso atual dispensa os requisitos subjetivos da Lei 13.869? Não; eles devem ser examinados."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm"
+      ],
+      "expected": {
+        "unit_id": "d070c0bd-2226-5b13-bd0b-a72b73daf730",
+        "content_sha256": "2d81067857fccf201628dd6f8dfe25533a3ce17548a94d3442b15cf3237306e9",
+        "simples": "O art. 4º da antiga Lei de Abuso de Autoridade foi acrescido da alínea i, que considerava abuso de autoridade prolongar a execução de prisão temporária, de pena ou de medida de segurança, deixando de expedir em tempo oportuno ou de cumprir imediatamente ordem de liberdade.",
+        "pontos": [
+          "Alterou a antiga Lei de Abuso de Autoridade.",
+          "Prolongar a execução da prisão era abuso."
+        ],
+        "atencao": [
+          "Dispositivo histórico: a antiga lei foi substituída pela Lei de Abuso de Autoridade atual."
+        ],
+        "exemplo": "Demorar para soltar o preso temporário ao fim do prazo era abuso de autoridade.",
+        "prova": [
+          "Assertiva que considera a alínea i vigente na antiga lei erra: ela foi substituída."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Abuso de Autoridade"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "3cd6296b-7b50-545b-9e2f-cafe5453cfbd",
+      "content_sha256": "3c843290160f646081b39d7e411fcf54d0a3e0c1531234d3023b2a86a5eb1687",
+      "simples": "Todas as comarcas e seções judiciárias devem ter plantão permanente de 24 horas do Judiciário e do MP para apreciar pedidos de prisão temporária. Plantão assegura apreciação, mas não dispensa os requisitos da medida.",
+      "pontos": [
+        "Plantão permanente: Judiciário e MP, 24 horas."
+      ],
+      "atencao": [
+        "Disponibilidade de plantão não torna automática a prisão."
+      ],
+      "exemplo": "O pedido chega de madrugada e pode ser apreciado no plantão dos órgãos indicados. Variação: O requerente sustenta que a urgência dispensa fundamentação: os requisitos continuam necessários.",
+      "prova": [
+        "O plantão é apenas do Judiciário? Não; o artigo inclui o Ministério Público.",
+        "O plantão dispensa os critérios do art. 1º? Não; facilita a apreciação, sem remover requisitos."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "3cd6296b-7b50-545b-9e2f-cafe5453cfbd",
+        "content_sha256": "3c843290160f646081b39d7e411fcf54d0a3e0c1531234d3023b2a86a5eb1687",
+        "simples": "Em todas as comarcas e seções judiciárias haverá um plantão permanente de vinte e quatro horas do Poder Judiciário e do Ministério Público para apreciação dos pedidos de prisão temporária.",
+        "pontos": [
+          "Plantão permanente de vinte e quatro horas.",
+          "Judiciário e Ministério Público.",
+          "Em todas as comarcas e seções judiciárias."
+        ],
+        "atencao": [
+          "Garante a apreciação a qualquer hora."
+        ],
+        "exemplo": "O pedido de prisão temporária feito na madrugada é apreciado pelo juiz de plantão.",
+        "prova": [
+          "Assertiva que restringe o plantão ao Judiciário erra: inclui o Ministério Público."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "fa3463da-9083-533a-8436-3ad3589a0c71",
+      "content_sha256": "07ae326f3bcda8526ff6baf4243fd974b29cf5ce62dfdcb256547518f214b790",
+      "simples": "A Lei 7.960 entrou em vigor na publicação. A cláusula original não afasta os marcos próprios de alterações posteriores nem a interpretação constitucional fixada pelo STF.",
+      "pontos": [
+        "Vigência original na publicação."
+      ],
+      "atencao": [
+        "Distinguir marco original, alteração legislativa e interpretação judicial."
+      ],
+      "exemplo": "A prova pergunta a vigência original: publicação. Variação: A prova pergunta os critérios constitucionais atuais: usa-se também o julgamento de 2022, não só os incisos isolados.",
+      "prova": [
+        "O art. 6º fixa espera de 45 dias? Não; a vigência é na publicação.",
+        "A cláusula de vigência dispensa leitura da jurisprudência constitucional? Não; são aspectos diferentes."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "fa3463da-9083-533a-8436-3ad3589a0c71",
+        "content_sha256": "07ae326f3bcda8526ff6baf4243fd974b29cf5ce62dfdcb256547518f214b790",
+        "simples": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos desde então.",
+        "pontos": [
+          "Vigência imediata."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A lei passou a valer na data da publicação.",
+        "prova": [
+          "Assertiva que prevê vacatio legis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    },
+    {
+      "course_slug": "temporaria",
+      "course_id": "f169c218-af23-5e2b-83c8-17c450927469",
+      "syllabus_topic_id": "99d26564-30ec-5895-98f4-a05f8061d4d2",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "03e6b9b3-97ab-53a8-a430-883361bb42d9",
+      "content_sha256": "6e88e88b1a0e3bd66799665543a7bc49b18e55e7e71b66c30d670312be4db91d",
+      "simples": "A cláusula revoga disposições incompatíveis, sem listar a revogação de todo o sistema processual penal. Ela não substitui a pesquisa de atos posteriores e dos dispositivos vigentes.",
+      "pontos": [
+        "Revogação por incompatibilidade, não de todo o CPP."
+      ],
+      "atencao": [
+        "Não use a fórmula geral para presumir revogação de uma norma compatível."
+      ],
+      "exemplo": "Ao comparar normas, o aluno identifica conflito concreto antes de afirmar revogação. Variação: As regras são compatíveis: o texto geral não determina que uma delas seja descartada sem análise.",
+      "prova": [
+        "A cláusula revoga integralmente o CPP? Não; refere-se às disposições em contrário.",
+        "É necessário verificar incompatibilidade ao aplicar a cláusula? Sim; não se presume revogação indiscriminada."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "03e6b9b3-97ab-53a8-a430-883361bb42d9",
+        "content_sha256": "6e88e88b1a0e3bd66799665543a7bc49b18e55e7e71b66c30d670312be4db91d",
+        "simples": "Revogam-se as disposições em contrário, isto é, ficam sem efeito as normas anteriores incompatíveis com esta Lei.",
+        "pontos": [
+          "Cláusula de revogação genérica."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "Normas incompatíveis foram revogadas.",
+        "prova": [
+          "Assertiva que vê revogação expressa de lei específica erra: é cláusula genérica."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:29.901609+00:00",
+        "updated_at": "2026-10-11T14:21:29.901609+00:00"
+      }
+    }
+  ]
+}

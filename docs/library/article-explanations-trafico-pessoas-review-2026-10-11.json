@@ -1,0 +1,966 @@
+{
+  "version": "2026-10-11-trafico-pessoas-targeted",
+  "checked_at": "2026-10-12T00:48:18.843533+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "trafico-pessoas",
+      "title": "Lei 13.344/2016 — Tráfico de Pessoas",
+      "units": 18,
+      "scope_type": "targeted_correction",
+      "course_current_units": 18,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-11",
+        "art-12",
+        "art-13",
+        "art-149-a",
+        "art-14",
+        "art-15",
+        "art-16",
+        "art-17"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "source_sha256": "fe68bb7fc0cb67eca20574ac08f9d81a221f7a70939f107af8ed59c8539d696a",
+      "source_checked_at": "2026-10-12T00:31:28.644041+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "57eef774-1c77-5f0f-a30b-434b02d460c1",
+      "content_sha256": "0ead09283a07810ad872852d000b2fb0471384fc071af11f20186ccba88490b0",
+      "simples": "A lei enfrenta tráfico no Brasil contra vítima brasileira ou estrangeira, e no exterior contra vítima brasileira. O enfrentamento reúne prevenção, repressão e atenção às vítimas, não apenas sanção penal.",
+      "pontos": [
+        "Três frentes: prevenir, reprimir, atender."
+      ],
+      "atencao": [
+        "Não restringir o atendimento no Brasil a vítimas brasileiras nem exigir viagem internacional para todo tráfico."
+      ],
+      "exemplo": "Uma vítima estrangeira é explorada no Brasil: está no âmbito descrito. Variação: A vítima é brasileira e o fato ocorre no exterior: o artigo também contempla essa situação.",
+      "prova": [
+        "A lei no território nacional protege apenas brasileiros? Não; abrange vítimas brasileiras e estrangeiras."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "57eef774-1c77-5f0f-a30b-434b02d460c1",
+        "content_sha256": "0ead09283a07810ad872852d000b2fb0471384fc071af11f20186ccba88490b0",
+        "simples": "Esta Lei dispõe sobre o tráfico de pessoas cometido no território nacional contra vítima brasileira ou estrangeira e no exterior contra vítima brasileira. O enfrentamento ao tráfico de pessoas compreende a prevenção e a repressão desse delito, bem como a atenção às suas vítimas.",
+        "pontos": [
+          "Alcance: tráfico no território nacional (vítima brasileira ou estrangeira) e no exterior (vítima brasileira).",
+          "Três eixos: prevenção, repressão e atenção às vítimas."
+        ],
+        "atencao": [
+          "Estrutura em três eixos: PREVENÇÃO, REPRESSÃO e ATENÇÃO ÀS VÍTIMAS."
+        ],
+        "exemplo": "A política abrange tanto o aliciamento de brasileiros para o exterior quanto o de estrangeiros no Brasil.",
+        "prova": [
+          "Assertiva que limita a Lei às vítimas estrangeiras erra: abrange brasileiras e estrangeiras."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 149-A do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "ed4d1805-e91a-5ff8-97e3-588a9ec22ae2",
+      "content_sha256": "6b4a9581c6553624ef77033cc2898a1125560f66882018b7403853497548786d",
+      "simples": "Dignidade, cidadania, direitos humanos, não discriminação, transversalidade, atenção integral e proteção de crianças/adolescentes orientam a política. O atendimento de vítimas diretas e indiretas independe de nacionalidade e colaboração na investigação ou processo.",
+      "pontos": [
+        "Atenção não condicionada a nacionalidade ou colaboração."
+      ],
+      "atencao": [
+        "Não condicionar assistência à entrega de informações contra o autor."
+      ],
+      "exemplo": "A vítima necessita de assistência, mas teme colaborar: o atendimento integral não depende dessa colaboração. Variação: A vítima é estrangeira ou está em situação migratória irregular: não discriminação continua aplicável.",
+      "prova": [
+        "A atenção integral depende de colaboração com a investigação? Não; o inciso VI expressamente a dispensa."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "ed4d1805-e91a-5ff8-97e3-588a9ec22ae2",
+        "content_sha256": "6b4a9581c6553624ef77033cc2898a1125560f66882018b7403853497548786d",
+        "simples": "O enfrentamento ao tráfico de pessoas atenderá aos princípios do respeito à dignidade da pessoa humana; da promoção e garantia da cidadania e dos direitos humanos; da universalidade, indivisibilidade e interdependência; da não discriminação por motivo de gênero, orientação sexual, origem étnica ou social, procedência, nacionalidade, atuação profissional, raça, religião, faixa etária, situação migratória ou outro status; da transversalidade dessas dimensões nas políticas públicas; da atenção integral às vítimas diretas e indiretas, independentemente de nacionalidade e de colaboração em investigações; e da proteção integral da criança e do adolescente.",
+        "pontos": [
+          "Dignidade da pessoa humana e direitos humanos.",
+          "Universalidade, indivisibilidade e interdependência.",
+          "Não discriminação e transversalidade.",
+          "Atenção integral às vítimas, independentemente de colaboração.",
+          "Proteção integral da criança e do adolescente."
+        ],
+        "atencao": [
+          "A assistência à vítima NÃO depende de colaboração com a investigação."
+        ],
+        "exemplo": "A vítima estrangeira recebe atendimento mesmo sem aceitar depor.",
+        "prova": [
+          "Assertiva que condiciona a atenção à vítima à sua colaboração com o processo erra."
+        ],
+        "termos": [
+          {
+            "termo": "Transversalidade",
+            "significado": "Incorporar uma preocupação em todas as políticas públicas."
+          }
+        ],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "27d74a53-b52f-5022-a361-0cb2a607ecc4",
+      "content_sha256": "c09984574e4d9030d2360177048b2d44c8d042c529e6965aa9ff28f207f20c99",
+      "simples": "As diretrizes articulam governo e sociedade, redes de atendimento, cooperação internacional, estudos, sigilo e gestão integrada. Incluem atenção a fronteiras, portos, aeroportos e vias de transporte de maior incidência.",
+      "pontos": [
+        "Articulação federativa e social; sigilo; cooperação."
+      ],
+      "atencao": [
+        "Diretrizes não autorizam divulgação irrestrita de dados de vítimas."
+      ],
+      "exemplo": "Equipes de distintas esferas coordenam atuação em rota de maior incidência. Variação: Uma entidade participa do enfrentamento: a parceria não afasta o sigilo dos procedimentos.",
+      "prova": [
+        "O enfrentamento se limita a um único órgão federal? Não; exige articulação de várias esferas e sociedade."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "27d74a53-b52f-5022-a361-0cb2a607ecc4",
+        "content_sha256": "c09984574e4d9030d2360177048b2d44c8d042c529e6965aa9ff28f207f20c99",
+        "simples": "O enfrentamento ao tráfico de pessoas atenderá às diretrizes de fortalecimento do pacto federativo; articulação com organizações governamentais e não governamentais, nacionais e estrangeiras; incentivo à participação da sociedade em instâncias de controle social; estruturação da rede de enfrentamento; fortalecimento da atuação em áreas de maior incidência, como fronteiras, portos, aeroportos, rodovias e estações; estímulo à cooperação internacional; incentivo a estudos e pesquisas; preservação do sigilo dos procedimentos; e gestão integrada para coordenação da política e dos planos nacionais.",
+        "pontos": [
+          "Atuação conjunta das esferas de governo.",
+          "Articulação com organizações nacionais e estrangeiras.",
+          "Foco em fronteiras, portos, aeroportos e rodovias.",
+          "Cooperação internacional.",
+          "Sigilo dos procedimentos."
+        ],
+        "atencao": [
+          "Lista de diretrizes (nove incisos)."
+        ],
+        "exemplo": "A política reforça a atuação nas regiões de fronteira e nos aeroportos.",
+        "prova": [
+          "Assertiva que exclui a cooperação internacional das diretrizes erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "4c765c11-382c-5741-a012-040fdb66503a",
+      "content_sha256": "b10b62c12df4b112c81c12d04639367ad29a1936ad43bb204c3802b289733fad",
+      "simples": "A prevenção emprega medidas intersetoriais, campanhas adaptadas às realidades e linguagens, mobilização social e projetos. Áreas como educação, trabalho, saúde, turismo e assistência também participam.",
+      "pontos": [
+        "Prevenção: setores integrados e conscientização."
+      ],
+      "atencao": [
+        "Não confundir prevenção com investigação ou condenação já consumadas."
+      ],
+      "exemplo": "Uma campanha local orienta sobre recrutamento fraudulento e mobiliza escola e rede social. Variação: A ação ocorre antes do delito: não precisa esperar a condenação para ser medida preventiva.",
+      "prova": [
+        "A prevenção depende de condenação prévia? Não; atua para evitar o tráfico."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "4c765c11-382c-5741-a012-040fdb66503a",
+        "content_sha256": "b10b62c12df4b112c81c12d04639367ad29a1936ad43bb204c3802b289733fad",
+        "simples": "A prevenção ao tráfico de pessoas dar-se-á por meio da implementação de medidas intersetoriais e integradas nas áreas de saúde, educação, trabalho, segurança pública, justiça, turismo, assistência social, desenvolvimento rural, esportes, comunicação, cultura e direitos humanos; de campanhas socioeducativas e de conscientização; do incentivo à mobilização da sociedade civil; e do incentivo a projetos de prevenção.",
+        "pontos": [
+          "Medidas intersetoriais em várias áreas.",
+          "Campanhas socioeducativas.",
+          "Participação da sociedade civil.",
+          "Projetos de prevenção."
+        ],
+        "atencao": [
+          "Prevenção é multissetorial, e não só policial."
+        ],
+        "exemplo": "Campanhas em escolas orientam sobre falsas ofertas de emprego no exterior.",
+        "prova": [
+          "Assertiva que restringe a prevenção à área de segurança pública erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "4057ba81-5077-5b47-bbee-395a0f652476",
+      "content_sha256": "34fbd1ca96f68a53eab7f6a1c854215ed54735924e1e57090e6eedf3a1ad2c1c",
+      "simples": "A repressão envolve cooperação nacional/internacional entre justiça e segurança, integração com crimes correlatos e equipes conjuntas de investigação. Cooperação não dispensa competência, garantias e requisitos de cada medida.",
+      "pontos": [
+        "Repressão: cooperação, integração e investigação conjunta."
+      ],
+      "atencao": [
+        "Não transformar equipe conjunta em autorização para interceptar ou prender sem fundamento."
+      ],
+      "exemplo": "Órgãos coordenam investigação do tráfico e de delitos correlatos. Variação: A equipe precisa de interceptação: aplica os requisitos próprios, apesar da atuação conjunta.",
+      "prova": [
+        "A equipe conjunta dispensa os requisitos das medidas cautelares? Não; a cooperação não elimina garantias legais."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "4057ba81-5077-5b47-bbee-395a0f652476",
+        "content_sha256": "34fbd1ca96f68a53eab7f6a1c854215ed54735924e1e57090e6eedf3a1ad2c1c",
+        "simples": "A repressão ao tráfico de pessoas dar-se-á por meio da cooperação entre órgãos do sistema de justiça e segurança, nacionais e estrangeiros; da integração de políticas e ações de repressão aos crimes correlatos e da responsabilização dos seus autores; e da formação de equipes conjuntas de investigação.",
+        "pontos": [
+          "Cooperação entre órgãos nacionais e estrangeiros.",
+          "Integração da repressão a crimes correlatos.",
+          "Equipes conjuntas de investigação."
+        ],
+        "atencao": [
+          "Equipes conjuntas podem envolver órgãos estrangeiros."
+        ],
+        "exemplo": "A Polícia Federal e uma polícia estrangeira formam equipe conjunta de investigação.",
+        "prova": [
+          "Assertiva que veda a cooperação com órgãos estrangeiros na repressão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "2e829eb4-d323-5a18-9fc7-9bc7e2ce6751",
+      "content_sha256": "dabdb2e8b93eb57b14b60b167ffaeff7aea598676286c5bbe2ab8ca51d25fb65",
+      "simples": "Proteção de vítimas diretas e indiretas inclui assistência jurídica, social, emprego e saúde; abrigo, privacidade, informação e atendimento humanizado, evitando revitimização. Há reinserção social e, para crianças/adolescentes, familiar e comunitária. Brasileiros no exterior recebem assistência consular imediata independentemente da situação migratória; a saúde inclui recuperação física e psicológica.",
+      "pontos": [
+        "Proteção integral, privacidade e não revitimização."
+      ],
+      "atencao": [
+        "Não reduzir saúde a lesão física ou atendimento a vítima direta."
+      ],
+      "exemplo": "A vítima recebe abrigo e apoio psicológico, com informação compreensível e proteção da identidade. Variação: É vítima brasileira no exterior com status migratório irregular: a assistência consular imediata não fica excluída por isso.",
+      "prova": [
+        "A assistência à saúde abrange recuperação psicológica? Sim; o §3º inclui expressamente esse aspecto."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "2e829eb4-d323-5a18-9fc7-9bc7e2ce6751",
+        "content_sha256": "dabdb2e8b93eb57b14b60b167ffaeff7aea598676286c5bbe2ab8ca51d25fb65",
+        "simples": "A proteção e o atendimento à vítima direta ou indireta do tráfico de pessoas compreendem assistência jurídica, social, de trabalho e emprego e de saúde; acolhimento e abrigo provisório; atenção às necessidades específicas; preservação da intimidade e da identidade; prevenção à revitimização; atendimento humanizado; e informação sobre os procedimentos. A atenção dá-se com a interrupção da situação de exploração, a reinserção social, o acesso à educação, cultura, formação e trabalho e, para crianças e adolescentes, a reinserção familiar e comunitária. No exterior, a assistência imediata a brasileiras cabe à rede consular, independentemente da situação migratória. A assistência à saúde compreende a recuperação física e psicológica.",
+        "pontos": [
+          "Assistência jurídica, social, de trabalho e de saúde.",
+          "Acolhimento e abrigo provisório.",
+          "Preservação da intimidade e da identidade.",
+          "Prevenção à revitimização.",
+          "No exterior, assistência pela rede consular."
+        ],
+        "atencao": [
+          "Rede consular presta assistência independentemente da situação migratória."
+        ],
+        "exemplo": "A vítima brasileira resgatada no exterior recebe assistência no consulado.",
+        "prova": [
+          "Assertiva que condiciona a assistência consular à regularidade migratória da vítima erra."
+        ],
+        "termos": [
+          {
+            "termo": "Revitimização",
+            "significado": "Nova violência causada à vítima pelo próprio atendimento."
+          }
+        ],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "d0fa077e-7b30-5e04-a63d-b9318d236885",
+      "content_sha256": "8a83973989af0450ca646fec688ba2333480aca847934f0d33b93f9bbef03091",
+      "simples": "O artigo inseriu residência permanente e regularização no antigo Estatuto do Estrangeiro, Lei 6.815. Esse diploma foi revogado pela Lei 13.445/2017. Para situação atual, consultar a autorização de residência do art. 30, II, g, da Lei de Migração e a regulamentação aplicável; não ensinar os antigos artigos e isenções como procedimento atual completo.",
+      "pontos": [
+        "Remissão histórica: Lei 6.815 revogada; Lei de Migração atual."
+      ],
+      "atencao": [
+        "A revogação da lei antiga não significa ausência de proteção migratória. Evitar prometer documento ou isenção automática sem conferir o procedimento vigente."
+      ],
+      "exemplo": "O atendimento identifica vítima de tráfico e examina a hipótese atual de autorização de residência. Variação: O material manda aplicar diretamente o antigo art. 18-A do Estatuto do Estrangeiro: a referência deve ser atualizada.",
+      "prova": [
+        "A Lei 6.815 continua vigente por estar transcrita neste artigo? Não; foi revogada pela Lei 13.445/2017."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm"
+      ],
+      "expected": {
+        "unit_id": "d0fa077e-7b30-5e04-a63d-b9318d236885",
+        "content_sha256": "8a83973989af0450ca646fec688ba2333480aca847934f0d33b93f9bbef03091",
+        "simples": "O artigo acrescentou à antiga Lei do Estrangeiro (hoje substituída pela Lei de Migração) dispositivos que concediam residência permanente às vítimas de tráfico de pessoas no território nacional, independentemente de sua situação migratória e de colaboração em procedimento administrativo, policial ou judicial, com possibilidade de extensão por reunião familiar a cônjuges, companheiros, ascendentes, descendentes e outros dependentes, com isenção de multas e taxas, e previu que o estrangeiro estaria em situação regular enquanto tramitasse pedido de regularização migratória.",
+        "pontos": [
+          "Residência permanente para vítima de tráfico no território nacional.",
+          "Independe de situação migratória e de colaboração.",
+          "Extensão à família por reunião familiar.",
+          "Isenção de multas e taxas.",
+          "Regularidade enquanto tramita o pedido."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o Estatuto do Estrangeiro foi revogado pela Lei de Migração; consulte o regime vigente.",
+          "Colaboração com a investigação NÃO é condição."
+        ],
+        "exemplo": "A estrangeira vítima de tráfico no Brasil pode obter residência permanente sem depor.",
+        "prova": [
+          "Assertiva que condiciona a residência permanente à colaboração com o processo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Migração"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "502d045a-4e67-59cc-b9f6-b990ef4af03d",
+      "content_sha256": "99725a5bd4d8fb49e0a543f926cee9d37e42b1630e7c7028424896abf04b9fbc",
+      "simples": "Com indícios suficientes, o juiz pode decretar medidas sobre instrumentos, produtos e proveitos do tráfico, inclusive em nome de interpostas pessoas, observando CPP e estrutura acusatória. Alienação antecipada preserva valor de bens; comprovação de origem lícita permite liberação, mantida constrição necessária a reparação, prestações, multas e custas. Sentença decide perdimento.",
+      "pontos": [
+        "Assecurar não equivale a declarar perdimento definitivo."
+      ],
+      "atencao": [
+        "Não excluir bens só por estarem em nome de terceiro intermediário. A redação exige comparecimento pessoal para pedido de liberação; aplicação não autoriza o juiz a assumir investigação."
+      ],
+      "exemplo": "Um bem relacionado ao tráfico está se depreciando: examina-se alienação antecipada. Variação: A origem é demonstrada lícita: examina-se liberação, sem ignorar as obrigações para as quais a lei preserva constrição.",
+      "prova": [
+        "A alienação antecipada exige esperar sempre a sentença definitiva? Não; é medida de preservação de valor nos casos legais."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "502d045a-4e67-59cc-b9f6-b990ef4af03d",
+        "content_sha256": "99725a5bd4d8fb49e0a543f926cee9d37e42b1630e7c7028424896abf04b9fbc",
+        "simples": "O juiz, de ofício, a requerimento do Ministério Público ou por representação do delegado de polícia, ouvido o Ministério Público, havendo indícios suficientes de infração penal, poderá decretar medidas assecuratórias relativas a bens, direitos ou valores do investigado ou acusado, ou em nome de interpostas pessoas, que sejam instrumento, produto ou proveito do tráfico de pessoas, na forma dos arts. 125 a 144-A do Código de Processo Penal. Procede-se à alienação antecipada quando houver deterioração ou dificuldade de manutenção. O juiz libera os bens de origem lícita, mantendo os necessários à reparação dos danos e ao pagamento de multas e custas. Nenhum pedido de liberação será conhecido sem o comparecimento pessoal do acusado ou da interposta pessoa. Na sentença, o juiz decide sobre o perdimento.",
+        "pontos": [
+          "Medidas assecuratórias sobre bens do tráfico de pessoas.",
+          "Alienação antecipada em caso de deterioração.",
+          "Liberação de bens de origem lícita.",
+          "Comparecimento pessoal para pedido de liberação.",
+          "Perdimento decidido na sentença."
+        ],
+        "atencao": [
+          "Semelhante ao regime da Lei de Lavagem.",
+          "Comparecimento pessoal exigido para a liberação."
+        ],
+        "exemplo": "O juiz bloqueia imóvel adquirido com o lucro do aliciamento.",
+        "prova": [
+          "Assertiva que permite a liberação dos bens sem comparecimento pessoal do acusado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Lavagem de Dinheiro"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "a6207df8-450a-59c8-bbab-d0a577c7c75d",
+      "content_sha256": "a003c99ebbb79475c01bf830004fe9524f7630dc10052e3ea7f9a680fa19252d",
+      "simples": "Aplica-se a Lei 12.850 subsidiariamente e no que couber. Regras próprias da Lei de Tráfico de Pessoas não são apagadas pela remissão e técnicas exigem seus requisitos legais.",
+      "pontos": [
+        "Subsidiária: complementa quando cabível."
+      ],
+      "atencao": [
+        "Não transpor automaticamente benefício ou técnica de outro diploma sem verificar compatibilidade."
+      ],
+      "exemplo": "Há lacuna procedimental e se examina a regra compatível da Lei 12.850. Variação: Existe disciplina própria específica: não a substitua automaticamente pela lei subsidiária.",
+      "prova": [
+        "A remissão elimina todas as regras próprias desta lei? Não; a aplicação é subsidiária e no que couber."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "a6207df8-450a-59c8-bbab-d0a577c7c75d",
+        "content_sha256": "a003c99ebbb79475c01bf830004fe9524f7630dc10052e3ea7f9a680fa19252d",
+        "simples": "Aplica-se subsidiariamente, no que couber, o disposto na Lei de Organizações Criminosas aos casos de tráfico de pessoas.",
+        "pontos": [
+          "Aplicação subsidiária da Lei de Organizações Criminosas."
+        ],
+        "atencao": [
+          "Permite meios de prova como colaboração premiada e infiltração, no que couber."
+        ],
+        "exemplo": "A investigação do tráfico de pessoas pode usar colaboração premiada.",
+        "prova": [
+          "Assertiva que afasta a Lei de Organizações Criminosas do tráfico de pessoas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Lei de Organizações Criminosas"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10",
+      "unit_id": "38b2aaf4-74f6-54d0-8df9-05617a986fd2",
+      "content_sha256": "3ece4593659faf07e5f16f61e846b4e738dd861cdc5f2cb0b42e75386175a08b",
+      "simples": "O Poder Público é autorizado a criar sistema de informações para coletar e gerir dados que orientem o enfrentamento. Não é autorização para divulgação pública irrestrita de identidade ou intimidade das vítimas.",
+      "pontos": [
+        "Sistema para orientar política; proteção de dados das vítimas."
+      ],
+      "atencao": [
+        "Articular com privacidade, sigilo e atendimento humanizado dos arts. 3º e 6º."
+      ],
+      "exemplo": "Dados são geridos para identificar rotas e planejar a política. Variação: O gestor publica a identidade de vítimas em massa: o objetivo informacional não afasta sua proteção.",
+      "prova": [
+        "O sistema autoriza divulgação irrestrita das vítimas? Não; permanecem os deveres de proteção e sigilo."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "38b2aaf4-74f6-54d0-8df9-05617a986fd2",
+        "content_sha256": "3ece4593659faf07e5f16f61e846b4e738dd861cdc5f2cb0b42e75386175a08b",
+        "simples": "O Poder Público é autorizado a criar sistema de informações visando à coleta e à gestão de dados que orientem o enfrentamento ao tráfico de pessoas.",
+        "pontos": [
+          "Autorização para criar sistema de informações.",
+          "Coleta e gestão de dados."
+        ],
+        "atencao": [
+          "Faculdade ('é autorizado')."
+        ],
+        "exemplo": "Um sistema nacional reúne dados sobre ocorrências de tráfico de pessoas.",
+        "prova": [
+          "Assertiva que torna obrigatória a criação do sistema erra: é autorização."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-11",
+      "unit_id": "38d130c8-296b-5015-b879-d93fa8fd0848",
+      "content_sha256": "4c4bfe20a7fecc19d5dcc1f28dbccb4fd0fa6c9093c4c724f0417e831b5d618d",
+      "simples": "Acrescentou CPP 13-A e 13-B, ainda atuais. Dados cadastrais dos crimes enumerados podem ser requisitados por MP ou delegado e devem ser fornecidos em 24h, com autoridade, inquérito e unidade identificados. Localização por sinais exige, como regra, autorização judicial; não dá acesso ao conteúdo. O sinal tem 30 dias, uma renovação igual e ordem para períodos superiores; inquérito em até 72h da ocorrência. Sem manifestação judicial em 12h, há requisição imediata de localização com comunicação ao juiz.",
+      "pontos": [
+        "Memória: cadastro 24h; manifestação judicial 12h; inquérito 72h; sinal 30 + 30."
+      ],
+      "atencao": [
+        "Não trocar dados cadastrais/localização por conteúdo de comunicação. A exceção das 12h não autoriza interceptação sem ordem."
+      ],
+      "exemplo": "A autoridade pede localização de vítima de tráfico e aguarda controle judicial nos termos do art. 13-B. Variação: O juiz não se manifesta em 12h: a hipótese permite requisitar meios de localização e comunicar imediatamente, sem abrir o conteúdo das conversas.",
+      "prova": [
+        "A localização por sinal autoriza ler o conteúdo de mensagens? Não; conteúdo exige autorização judicial conforme a lei."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "38d130c8-296b-5015-b879-d93fa8fd0848",
+        "content_sha256": "4c4bfe20a7fecc19d5dcc1f28dbccb4fd0fa6c9093c4c724f0417e831b5d618d",
+        "simples": "O artigo acrescentou ao Código de Processo Penal os arts. 13-A e 13-B. O art. 13-A permite que o membro do Ministério Público ou o delegado requisitem, de órgãos públicos ou empresas privadas, dados e informações cadastrais da vítima ou de suspeitos, nos crimes de sequestro, redução a condição análoga à de escravo, tráfico de pessoas, extorsão qualificada, extorsão mediante sequestro e tráfico de crianças, com atendimento em 24 horas. O art. 13-B permite, mediante autorização judicial, requisitar às empresas de telecomunicações os meios técnicos que localizem a vítima ou suspeitos (sinais), sem acesso ao conteúdo, por até 30 dias, renovável uma vez por igual período; o inquérito deve ser instaurado em 72 horas, e, sem manifestação judicial em 12 horas, a autoridade requisita diretamente, comunicando o juiz.",
+        "pontos": [
+          "Requisição de dados cadastrais sem ordem judicial (art. 13-A).",
+          "Resposta em 24 horas.",
+          "Localização por sinais com autorização judicial (art. 13-B).",
+          "Sem acesso ao conteúdo das comunicações.",
+          "Sinais por até 30 dias, renováveis uma vez.",
+          "Inquérito em 72 horas."
+        ],
+        "atencao": [
+          "Dados CADASTRAIS: sem ordem judicial; SINAIS de localização: com ordem judicial, salvo omissão do juiz em 12 horas.",
+          "Conteúdo das comunicações exige autorização judicial própria."
+        ],
+        "exemplo": "A polícia obtém a localização do celular da vítima sequestrada pela torre de cobertura.",
+        "prova": [
+          "Assertiva que permite acessar o conteúdo das mensagens com base no art. 13-B erra: ele é vedado sem autorização judicial específica."
+        ],
+        "termos": [
+          {
+            "termo": "Sinal",
+            "significado": "Posicionamento da estação de cobertura, setorização e intensidade de radiofrequência."
+          }
+        ],
+        "remissoes": [
+          "Código de Processo Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12",
+      "unit_id": "85a46cc1-9f0a-551e-ba62-2cf9bf3373f6",
+      "content_sha256": "3bbe4ddf7ef0d601c6a56f97cfcff504afe6e470f4a1456e2a19cb55cd0d6f94",
+      "simples": "Incluiu tráfico de pessoas no art. 83, V, do CP: livramento exige mais de dois terços e ausência de reincidência específica nos crimes enumerados. O inciso não esgota as condições: ler o art. 83 atual, inclusive requisitos de comportamento e demais condições.",
+      "pontos": [
+        "Mais de 2/3; não apenas 2/3 exatos; sem reincidência específica."
+      ],
+      "atencao": [
+        "Livramento não é progressão de regime, remição nem perdão. Atingir fração não dispensa as condições restantes."
+      ],
+      "exemplo": "O condenado supera a fração e o juiz examina os demais requisitos do art. 83. Variação: Há reincidência específica abrangida no inciso: a fração, sozinha, não satisfaz sua condição.",
+      "prova": [
+        "Cumprir exatamente dois terços satisfaz a expressão mais de dois terços? Não; é preciso superar a fração."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "85a46cc1-9f0a-551e-ba62-2cf9bf3373f6",
+        "content_sha256": "3bbe4ddf7ef0d601c6a56f97cfcff504afe6e470f4a1456e2a19cb55cd0d6f94",
+        "simples": "O inciso V do art. 83 do Código Penal passa a prever que o livramento condicional exige o cumprimento de mais de dois terços da pena nos casos de condenação por crime hediondo, prática de tortura, tráfico ilícito de entorpecentes, tráfico de pessoas e terrorismo, se o apenado não for reincidente específico em crimes dessa natureza.",
+        "pontos": [
+          "Livramento condicional após mais de dois terços da pena.",
+          "Inclui o tráfico de pessoas.",
+          "Vedado ao reincidente específico."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o regime de livramento condicional foi alterado por leis posteriores (Pacote Anticrime); confira a redação vigente do Código Penal.",
+          "Dois terços para hediondos e equiparados."
+        ],
+        "exemplo": "O condenado por tráfico de pessoas só tem livramento condicional após cumprir mais de dois terços.",
+        "prova": [
+          "Assertiva que fixa um terço da pena para o livramento do tráfico de pessoas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal, art. 83"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-13",
+      "unit_id": "d11c7281-17e5-51f8-aa23-cf677374d8e5",
+      "content_sha256": "b4c0382d668191b22c830c3094a26b27f379ff22cf58d21b84cb410d445c0f83",
+      "simples": "Este dispositivo introduziu o art. 149-A no CP. O tipo e seus parágrafos aparecem na unidade própria art. 149-A deste percurso; a leitura exige conduta, meio e finalidade, não apenas a expressão tráfico de pessoas.",
+      "pontos": [
+        "Estudar com a unidade art. 149-A e o CP compilado."
+      ],
+      "atencao": [
+        "O marcador de inclusão não é a definição penal completa; não preencher texto ausente com inferência."
+      ],
+      "exemplo": "O candidato segue para o art. 149-A para examinar verbos, meios e cinco finalidades. Variação: A questão chama qualquer deslocamento de tráfico: é necessário examinar os elementos do tipo.",
+      "prova": [
+        "Qualquer deslocamento de pessoa basta para o art. 149-A? Não; exige conduta típica, meio e finalidade previstos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d11c7281-17e5-51f8-aa23-cf677374d8e5",
+        "content_sha256": "b4c0382d668191b22c830c3094a26b27f379ff22cf58d21b84cb410d445c0f83",
+        "simples": "O Código Penal passa a vigorar acrescido do art. 149-A, que cria o crime de tráfico de pessoas e substitui os antigos tipos de tráfico para fins de prostituição.",
+        "pontos": [
+          "Acrescenta o art. 149-A ao Código Penal.",
+          "Cria o tipo penal do tráfico de pessoas."
+        ],
+        "atencao": [
+          "Os antigos arts. 231 e 231-A foram revogados (art. 16)."
+        ],
+        "exemplo": "O crime de tráfico de pessoas passa a constar do Código Penal.",
+        "prova": [
+          "Assertiva que mantém os antigos arts. 231 e 231-A vigentes erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 149-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-149-a",
+      "unit_id": "8d40c392-2961-561c-8e44-7a20093853e9",
+      "content_sha256": "fe382f9bbeefe923995b84df90d7c3c43ad71073cfb7b11b1feb53978953e75d",
+      "simples": "O tráfico tipifica agenciar, aliciar, recrutar, transportar, transferir, comprar, alojar ou acolher pessoa mediante grave ameaça, violência, coação, fraude ou abuso, visando remoção de órgãos, trabalho análogo à escravidão, servidão, adoção ilegal ou exploração sexual. Pena: reclusão 4–8 e multa. Aumento 1/3–1/2 nas hipóteses funcionais, vítimas, relações de prevalência e retirada do Brasil; redução 1/3–2/3 exige primariedade e não integrar organização criminosa.",
+      "pontos": [
+        "Memória: verbo + meio + finalidade; internacionalidade não é requisito geral."
+      ],
+      "atencao": [
+        "Não limitar a exploração sexual; não exigir saída do país para todo tráfico. A redução exige ambos os requisitos, não um deles isolado."
+      ],
+      "exemplo": "Por fraude, o autor recruta e aloja vítima para trabalho análogo à escravidão dentro do Brasil: examinam-se os elementos. Variação: O autor é primário, mas integra organização criminosa: não satisfaz sozinho a redução do §2º.",
+      "prova": [
+        "O crime exige sempre retirar a vítima do Brasil? Não; a retirada é uma hipótese de aumento, não requisito geral."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8d40c392-2961-561c-8e44-7a20093853e9",
+        "content_sha256": "fe382f9bbeefe923995b84df90d7c3c43ad71073cfb7b11b1feb53978953e75d",
+        "simples": "Tráfico de pessoas: agenciar, aliciar, recrutar, transportar, transferir, comprar, alojar ou acolher pessoa, mediante grave ameaça, violência, coação, fraude ou abuso, com a finalidade de remover-lhe órgãos, tecidos ou partes do corpo; submetê-la a trabalho em condições análogas à de escravo; submetê-la a qualquer tipo de servidão; adoção ilegal; ou exploração sexual. Pena: reclusão de quatro a oito anos e multa. A pena é aumentada de um terço até a metade se o crime for cometido por funcionário público no exercício das funções, contra criança, adolescente, pessoa idosa ou com deficiência, com prevalência de relações de parentesco, domésticas, de dependência ou autoridade, ou se a vítima for retirada do território nacional. A pena é reduzida de um a dois terços se o agente for primário e não integrar organização criminosa.",
+        "pontos": [
+          "Condutas: agenciar, aliciar, recrutar, transportar, transferir, comprar, alojar ou acolher.",
+          "Meios: grave ameaça, violência, coação, fraude ou abuso.",
+          "Fins: remoção de órgãos, trabalho escravo, servidão, adoção ilegal ou exploração sexual.",
+          "Reclusão de quatro a oito anos e multa.",
+          "Aumento de um terço até a metade.",
+          "Redução de um a dois terços para primário que não integre organização criminosa."
+        ],
+        "atencao": [
+          "Os MEIOS (ameaça, violência, coação, fraude ou abuso) integram o tipo; o consentimento da vítima é irrelevante nos casos de vulneráveis.",
+          "Há causa de diminuição ('tráfico privilegiado' do tráfico de pessoas) para primário que não integre organização criminosa.",
+          "Crime de competência federal quando houver transnacionalidade."
+        ],
+        "exemplo": "Recrutar mulheres com falsa promessa de emprego no exterior para exploração sexual é tráfico de pessoas.",
+        "prova": [
+          "Assertiva que dispensa a finalidade de exploração para o crime do art. 149-A erra."
+        ],
+        "termos": [
+          {
+            "termo": "Servidão",
+            "significado": "Sujeição da pessoa a dependência que limita sua liberdade."
+          }
+        ],
+        "remissoes": [
+          "Art. 13",
+          "Lei de Migração"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-14",
+      "unit_id": "b3ca9e10-932a-528e-859b-db72e477297a",
+      "content_sha256": "8f1bb3a5084d13ea83b8b7d98486e4a76ed360d150062345996f913a53768f66",
+      "simples": "O Dia Nacional de Enfrentamento ao Tráfico de Pessoas é celebrado anualmente em 30 de julho. A data é de conscientização, não marco de vigência da lei ou condição para proteção.",
+      "pontos": [
+        "Data anual: 30 de julho."
+      ],
+      "atencao": [
+        "Não trocar data comemorativa por prazo processual."
+      ],
+      "exemplo": "Uma campanha educativa é planejada para 30 de julho. Variação: O atendimento ocorre em outro mês: a proteção não fica limitada à data comemorativa.",
+      "prova": [
+        "A proteção só pode ser prestada em 30 de julho? Não; a data é comemorativa e de conscientização."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "b3ca9e10-932a-528e-859b-db72e477297a",
+        "content_sha256": "8f1bb3a5084d13ea83b8b7d98486e4a76ed360d150062345996f913a53768f66",
+        "simples": "É instituído o Dia Nacional de Enfrentamento ao Tráfico de Pessoas, a ser comemorado, anualmente, em 30 de julho.",
+        "pontos": [
+          "Dia Nacional de Enfrentamento ao Tráfico de Pessoas.",
+          "Comemorado em 30 de julho."
+        ],
+        "atencao": [
+          "Data: 30 de julho."
+        ],
+        "exemplo": "Em 30 de julho ocorrem ações de conscientização sobre o tráfico de pessoas.",
+        "prova": [
+          "Assertiva que fixa o dia nacional em outra data erra: é 30 de julho."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-15",
+      "unit_id": "7567eab5-f05c-588b-87cd-e0d5fc09eb79",
+      "content_sha256": "6ce9c9a781b11952109f11e707a37f23e32ec2ea474b16a1d87bffd975a80876",
+      "simples": "Campanhas nacionais devem conscientizar sobre todas as modalidades de tráfico. Não se limitam à exploração sexual ou ao tráfico internacional e devem dialogar com a prevenção dos arts. 2º–4º.",
+      "pontos": [
+        "Todas as modalidades; divulgação em veículos de comunicação."
+      ],
+      "atencao": [
+        "Evitar campanhas que culpabilizem vítimas ou exponham identidades protegidas."
+      ],
+      "exemplo": "A campanha aborda aliciamento fraudulento para trabalho e remoção de órgãos. Variação: A ação só fala em tráfico sexual internacional: essa abordagem não esgota todas as modalidades.",
+      "prova": [
+        "As campanhas abrangem só exploração sexual? Não; o artigo exige conscientização sobre todas as modalidades."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "7567eab5-f05c-588b-87cd-e0d5fc09eb79",
+        "content_sha256": "6ce9c9a781b11952109f11e707a37f23e32ec2ea474b16a1d87bffd975a80876",
+        "simples": "Serão adotadas campanhas nacionais de enfrentamento ao tráfico de pessoas, a serem divulgadas em veículos de comunicação, visando à conscientização da sociedade sobre todas as modalidades de tráfico de pessoas.",
+        "pontos": [
+          "Campanhas nacionais divulgadas na mídia.",
+          "Conscientização sobre todas as modalidades."
+        ],
+        "atencao": [
+          "Alcança todas as modalidades de tráfico."
+        ],
+        "exemplo": "Campanha na televisão alerta sobre falsas ofertas de emprego.",
+        "prova": [
+          "Assertiva que limita as campanhas à exploração sexual erra: abrangem todas as modalidades."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-16",
+      "unit_id": "deb81809-1477-5eea-8f42-62f8d501bd30",
+      "content_sha256": "c0d9038ac95a76c57cf9e49a59c7f1711cf395003c5cb5c05b886ef18ab0d242",
+      "simples": "Foram revogados os antigos CP 231 e 231-A. O estudo atual deve usar o art. 149-A e outros tipos cabíveis, observando os elementos e a análise temporal; a revogação não permite concluir automaticamente que todo fato anterior deixou de ser punível.",
+      "pontos": [
+        "CP 231 e 231-A revogados; estudar tipo atual e aplicação temporal."
+      ],
+      "atencao": [
+        "Não presumir abolitio criminis geral ou continuidade automática sem comparar fatos e elementos antigos/novos."
+      ],
+      "exemplo": "Um material apresenta o CP 231 como vigente hoje: a referência está desatualizada. Variação: O caso é anterior à reforma: exige comparação temporal e dos elementos, não conclusão automática baseada apenas no número revogado.",
+      "prova": [
+        "Os arts. 231 e 231-A continuam vigentes hoje? Não; foram expressamente revogados."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "deb81809-1477-5eea-8f42-62f8d501bd30",
+        "content_sha256": "c0d9038ac95a76c57cf9e49a59c7f1711cf395003c5cb5c05b886ef18ab0d242",
+        "simples": "Revogam-se os arts. 231 e 231-A do Código Penal, que previam os crimes de tráfico internacional e interno de pessoas para fim de exploração sexual.",
+        "pontos": [
+          "Revoga os arts. 231 e 231-A do Código Penal."
+        ],
+        "atencao": [
+          "O novo tipo (art. 149-A) substituiu os antigos."
+        ],
+        "exemplo": "A conduta passa a ser tratada pelo art. 149-A.",
+        "prova": [
+          "Assertiva que mantém em vigor o art. 231 do Código Penal erra: foi revogado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 149-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    },
+    {
+      "course_slug": "trafico-pessoas",
+      "course_id": "9049d33c-d50a-54a0-8b3a-ab166847bc20",
+      "syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17",
+      "unit_id": "d24c2746-8b2c-5b4e-82db-b1f3e482d1f1",
+      "content_sha256": "0d07c380eb22629ff82df40263568ce576d88e9a88f076c4e8d9ef599a5b8ae5",
+      "simples": "A lei fixou vacância de 45 dias após publicação oficial. É diferente de leis com vigência imediata e da data comemorativa de 30 de julho.",
+      "pontos": [
+        "Vacância: 45 dias após publicação oficial."
+      ],
+      "atencao": [
+        "Não contar automaticamente da assinatura nem usar a data comemorativa."
+      ],
+      "exemplo": "A questão pergunta a cláusula original de vigência: 45 dias após publicação. Variação: A pergunta trata do Dia Nacional: a resposta é 30 de julho, não o prazo de vigência.",
+      "prova": [
+        "A vigência original foi imediata na publicação? Não; o artigo estabeleceu 45 dias."
+      ],
+      "termos": [],
+      "remissoes": [],
+      "expected": {
+        "unit_id": "d24c2746-8b2c-5b4e-82db-b1f3e482d1f1",
+        "content_sha256": "0d07c380eb22629ff82df40263568ce576d88e9a88f076c4e8d9ef599a5b8ae5",
+        "simples": "Esta Lei entra em vigor após decorridos 45 dias de sua publicação oficial.",
+        "pontos": [
+          "Vacatio legis de 45 dias."
+        ],
+        "atencao": [
+          "Vacatio legis de 45 dias."
+        ],
+        "exemplo": "A Lei só começou a valer 45 dias depois de publicada.",
+        "prova": [
+          "Assertiva que prevê vigência imediata erra: são 45 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T14:21:49.025248+00:00",
+        "updated_at": "2026-10-11T14:21:49.025248+00:00"
+      }
+    }
+  ]
+}

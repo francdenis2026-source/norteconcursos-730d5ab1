@@ -126,3 +126,35 @@ test('LBI complete review covers 127 distinct current units and preserves histor
  assert.match(row('art-111').simples,/120 dias/);
  assert.match(row('art-109').simples,/gravíssima/);
 });
+
+test('five investigation statutes: closed practice preserves constitutional and repeal distinctions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-investigation-review-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,30);
+ assert.deepEqual(p.laws.map(l=>l.units),[4,13,2,7,4]);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ assert.ok(p.units.flatMap(r=>buildExplanationQuiz(r.prova,r.unit_id)).length>=30);
+ const get=(s,k)=>p.units.find(r=>r.course_slug===s&&r.unit_key===k);
+ assert.match(get('temporaria','art-1').simples,/cinco requisitos cumulativos/);
+ assert.match(get('temporaria','art-4').simples,/revogada.*13.869/);
+ assert.match(get('tortura','art-1').atencao.join(' '),/fechado não é obrigatório/);
+ assert.match(get('tortura','art-1').simples,/21\/05\/2026/);
+ assert.match(get('identificacao-criminal','art-7-a').atencao.join(' '),/cumprimento da pena/);
+ assert.match(get('identificacao-criminal','art-3').atencao.join(' '),/30 dias/);
+ assert.match(get('delegado','art-2').simples,/afastou.*exclusividade/);
+});
+
+test('special procedures cover 71 current units with cases and preserve different safeguards',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-special-procedures-review-2026-10-11.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,71);assert.deepEqual(p.laws.map(l=>l.units),[17,14,18,22]);
+ assert.equal(new Set(p.units.map(r=>r.unit_id)).size,71);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=(s,k)=>p.units.find(r=>r.course_slug===s&&r.unit_key===k);
+ assert.match(get('interceptacao','art-5').simples,/renovações sucessivas/);
+ assert.match(get('interceptacao','art-2').atencao.join(' '),/quatro anos.*8º-A/);
+ assert.match(get('trafico-pessoas','art-7').simples,/revogado.*13.445/);
+ assert.match(get('trafico-pessoas','art-11').atencao.join(' '),/12h.*não autoriza interceptação/);
+ assert.match(get('testemunhas','art-2').simples,/não da eventual preservação/);
+ assert.match(get('testemunhas','art-14').simples,/maio de 2026.*cumulativos/);
+ assert.match(get('terrorismo','art-2').simples,/um ou mais/);
+ assert.match(get('terrorismo','art-5').atencao.join(' '),/não aplicar.*indistintamente/i);
+});

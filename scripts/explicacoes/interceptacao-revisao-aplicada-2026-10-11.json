@@ -1,0 +1,221 @@
+{
+  "course_slug": "interceptacao",
+  "units": {
+    "art-1": {
+      "simples": "Interceptação telefônica depende de ordem do juiz competente, segredo de justiça e finalidade de prova em investigação criminal ou instrução penal. A disciplina também alcança fluxo de comunicações informáticas e telemáticas.",
+      "pontos": [
+        "Ordem judicial + finalidade criminal + sigilo; fluxo telemático incluído."
+      ],
+      "atencao": [
+        "Não confundir fluxo em curso com dados estáticos armazenados, nem interceptação por terceiro com gravação própria de interlocutor."
+      ],
+      "exemplo": "A polícia pede interceptação de fluxo telemático para investigação penal e submete o pedido ao juiz competente. Variação: Um particular pretende aplicar a lei para obter prova exclusivamente cível: essa finalidade não é a prevista no artigo.",
+      "prova": [
+        "O artigo admite interceptação para finalidade exclusivamente cível? Não; prevê investigação criminal e instrução penal."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-2": {
+      "simples": "A interceptação não é admitida sem indícios razoáveis de autoria/participação, se a prova puder ser feita por outros meios disponíveis ou se a infração for punida, no máximo, com detenção. A situação deve ser clara e os investigados identificados, salvo impossibilidade manifesta justificada.",
+      "pontos": [
+        "Indícios + subsidiariedade + infração não limitada à detenção."
+      ],
+      "atencao": [
+        "A pena máxima superior a quatro anos pertence à captação ambiental do art. 8º-A, não é o mesmo critério deste artigo. Impossibilidade de qualificar deve ser justificada."
+      ],
+      "exemplo": "Existem indícios e os outros meios disponíveis não permitem obter a prova do crime indicado: examina-se a admissibilidade. Variação: Há somente suspeita vaga ou prova disponível por meio menos invasivo: a interceptação não se autoriza automaticamente.",
+      "prova": [
+        "O critério deste artigo é necessariamente pena máxima superior a quatro anos? Não; esse critério específico é do art. 8º-A."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-3": {
+      "simples": "A redação atribui decisão ao juiz e requerimento à polícia na investigação, ou ao MP na investigação e instrução penal. A menção textual a atuação de ofício deve ser lida com o art. 3º-A do CPP e o sistema acusatório; não é autorização para o juiz assumir a investigação.",
+      "pontos": [
+        "Polícia: investigação; MP: investigação e instrução."
+      ],
+      "atencao": [
+        "Não transformar a redação isolada em poder judicial investigatório ilimitado; distinguir questão de literalidade e aplicação constitucional."
+      ],
+      "exemplo": "O MP requer a medida na instrução e o juiz decide fundamentadamente. Variação: O juiz substitui o órgão acusador e conduz a investigação: a frase de ofício não dispensa a estrutura acusatória.",
+      "prova": [
+        "O MP pode requerer também na instrução processual penal? Sim; o inciso II contempla ambas as fases."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ]
+    },
+    "art-4": {
+      "simples": "O pedido demonstra necessidade e meios empregados. Excepcionalmente pode ser verbal se os pressupostos estiverem presentes, mas a concessão exige redução a termo. O juiz decide em até 24 horas.",
+      "pontos": [
+        "Pedido necessário e específico; verbal excepcional documentado; decisão 24h."
+      ],
+      "atencao": [
+        "Pedido verbal não significa autorização informal sem registro."
+      ],
+      "exemplo": "A urgência fundamenta pedido verbal e ele é reduzido a termo para a concessão. Variação: A equipe pede autorização informal sem documentação: não satisfaz a condição do §1º.",
+      "prova": [
+        "O pedido verbal dispensa redução a termo? Não; a concessão depende dela."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-5": {
+      "simples": "A decisão é fundamentada, sob pena de nulidade, e indica execução. Cada período é de até quinze dias. No Tema 661, o STF admitiu renovações sucessivas, com requisitos legais, necessidade concreta e complexidade da investigação demonstradas e motivação legítima. Não há teto geral automático de trinta dias.",
+      "pontos": [
+        "Até 15 dias por período; renovações justificadas, sem automatismo."
+      ],
+      "atencao": [
+        "Uma vez comprovada não significa uma única renovação. Motivações padronizadas sem relação com o caso são ilegais."
+      ],
+      "exemplo": "A investigação complexa justifica nova etapa com elementos concretos e decisão motivada. Variação: O juiz repete modelo genérico sem justificar a continuidade: a renovação não satisfaz o Tema 661.",
+      "prova": [
+        "O prazo total é sempre limitado a trinta dias? Não; o Tema 661 admite renovações sucessivas justificadas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=3906320&numeroProcesso=625263&numeroTema=661"
+      ]
+    },
+    "art-6": {
+      "simples": "A polícia conduz a execução com ciência do MP, que pode acompanhar. O resultado é encaminhado ao juiz com auto circunstanciado e resumo das operações. A lei prevê transcrição da gravação; a jurisprudência distingue isso de exigência de degravação integral, preservado acesso da defesa aos diálogos.",
+      "pontos": [
+        "Execução policial; ciência MP; resultado e auto ao juiz."
+      ],
+      "atencao": [
+        "Não confundir resumo das operações com seleção que impeça acesso defensivo. Não afirmar transcrição integral obrigatória sem a ressalva jurisprudencial."
+      ],
+      "exemplo": "A equipe entrega resultado e auto, mantendo o material acessível às partes nos limites processuais e de sigilo. Variação: Somente fragmentos são preservados para impedir exame defensivo: o dever de documentação não legitima cerceamento.",
+      "prova": [
+        "A polícia executa a interceptação dando ciência ao MP? Sim; o art. 6º estabelece essa condução."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=22%2F10%2F2018&num_registro=201402344478"
+      ]
+    },
+    "art-7": {
+      "simples": "A polícia pode requisitar serviços e técnicos especializados das concessionárias de serviço público para executar a interceptação autorizada. Apoio técnico não substitui ordem judicial ou requisitos de admissibilidade.",
+      "pontos": [
+        "Requisição de apoio técnico a concessionárias."
+      ],
+      "atencao": [
+        "Distinguir execução técnica de autorização da medida."
+      ],
+      "exemplo": "Após deferimento judicial, a polícia requisita suporte técnico especializado. Variação: A concessionária recebe solicitação técnica antes de haver autorização e pretende interceptar: apoio não substitui a ordem exigida.",
+      "prova": [
+        "A requisição técnica substitui a ordem judicial? Não; trata da execução, não da autorização."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-8": {
+      "simples": "A interceptação tramita em autos apartados, depois apensados ao inquérito/processo, preservado o sigilo de diligências, gravações e transcrições. O artigo contém remissões processuais históricas; seus momentos devem ser lidos com a estrutura vigente do CPP, sem restaurar artigos revogados.",
+      "pontos": [
+        "Autos apartados + apensação + sigilo."
+      ],
+      "atencao": [
+        "Sigilo não significa vedação absoluta de defesa. Conferir remissões antigas ao CPP antes de decorar o procedimento."
+      ],
+      "exemplo": "A diligência fica em apartado com preservação das gravações e posterior apensação processual. Variação: Alguém propõe divulgação pública irrestrita após apensar: o apensamento não afasta o sigilo legal.",
+      "prova": [
+        "A apensação elimina automaticamente o sigilo? Não; o artigo preserva o sigilo das diligências e registros."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-8-a": {
+      "simples": "Captação ambiental judicial requer que outro meio disponível igualmente eficaz não produza a prova e indícios razoáveis em infração com pena máxima superior a quatro anos ou conexa. O pedido descreve local e instalação. Cada período é até quinze dias, com renovação judicial por indispensabilidade e atividade permanente, habitual ou continuada. Instalação disfarçada/noturna não afasta a proteção constitucional da casa.",
+      "pontos": [
+        "Ambiental: pena máxima >4 ou conexa; 15 dias; requisitos próprios."
+      ],
+      "atencao": [
+        "O §4º contempla gravação de interlocutor em defesa com integridade demonstrada. Isso não autoriza concluir, sem examinar regime e jurisprudência, que toda gravação própria é ilícita para acusação. Distinguir captação estatal, gravação espontânea e contexto eleitoral."
+      ],
+      "exemplo": "A polícia descreve instalação fora de casa e justifica ausência de outro meio eficaz para a infração indicada. Variação: Pretende instalação noturna em residência só com base neste artigo: a exceção constitucional da casa deve ser respeitada.",
+      "prova": [
+        "A autorização de instalação noturna elimina a proteção constitucional da casa? Não; o §2º ressalva a casa."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-9": {
+      "simples": "Gravação sem interesse para a prova pode ser inutilizada por decisão judicial no inquérito, instrução ou depois, a requerimento do MP ou parte interessada. O MP assiste ao incidente; presença do acusado/representante é facultativa.",
+      "pontos": [
+        "Decisão judicial; requerimento; MP presente; acusado facultativo."
+      ],
+      "atencao": [
+        "A equipe não pode destruir seletivamente material por conta própria."
+      ],
+      "exemplo": "A parte requer inutilização de trecho irrelevante e o juiz decide com observância do incidente. Variação: A polícia apaga o trecho unilateralmente: falta a decisão judicial prevista.",
+      "prova": [
+        "A presença do acusado no incidente é obrigatória pelo artigo? Não; é facultativa, ao contrário da assistência do MP."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-10": {
+      "simples": "Interceptação telefônica, informática ou telemática, escuta ambiental e quebra do segredo da Justiça sem autorização ou com objetivos não autorizados em lei são tipificados com reclusão de 2 a 4 anos e multa. A redação de 2019 também alcança juiz que determina a conduta com objetivo não autorizado.",
+      "pontos": [
+        "Lei 13.869/2019: redação e figura judicial; pena 2–4 + multa."
+      ],
+      "atencao": [
+        "Não presumir que uma ordem judicial legitima objetivo proibido pela lei. Distinguir o art. 10-A e suas hipóteses próprias."
+      ],
+      "exemplo": "Uma autoridade ordena interceptação para objetivo alheio à lei: a existência da ordem não elimina a análise do tipo. Variação: A medida tem finalidade legal e atende aos requisitos: não se conclui crime apenas porque houve quebra autorizada de sigilo.",
+      "prova": [
+        "Uma ordem judicial legitima qualquer objetivo? Não; o artigo também pune objetivo não autorizado em lei."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-10-a": {
+      "simples": "Captação ambiental para investigação/instrução sem autorização, quando exigida, recebe reclusão de 2 a 4 anos e multa. Não há esse crime quando a captação é por um interlocutor. Funcionario público que viola o sigilo ou revela gravações durante sigilo judicial tem a pena em dobro na hipótese do §2º.",
+      "pontos": [
+        "Autorização quando exigida; interlocutor: exclusão do crime; sigilo funcional: dobro."
+      ],
+      "atencao": [
+        "Ausência deste crime não garante admissibilidade automática de qualquer prova. Distinguir tipicidade, integridade, finalidade e licitude probatória."
+      ],
+      "exemplo": "Um interlocutor registra sua conversa: o §1º exclui este crime; a utilização como prova exige análise própria. Variação: Funcionário revela gravações mantidas sob sigilo judicial: examina-se a sanção específica do §2º.",
+      "prova": [
+        "A ausência de crime do interlocutor garante admissibilidade automática em qualquer contexto? Não; tipicidade e admissibilidade probatória são questões distintas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-11": {
+      "simples": "A lei entrou em vigor na publicação. As mudanças de 2019 possuem marcos próprios, incluindo partes inicialmente vetadas e depois promulgadas; a leitura atual não deve antecipar efeitos a fatos anteriores.",
+      "pontos": [
+        "Vigência original na publicação; alterações com marcos próprios."
+      ],
+      "atencao": [
+        "Não equiparar assinatura, publicação e promulgação de partes vetadas."
+      ],
+      "exemplo": "O candidato responde a regra original de vigência: publicação. Variação: A pergunta versa sobre dispositivo acrescido posteriormente: verifica-se o marco do ato modificador.",
+      "prova": [
+        "O art. 11 define a vigência de todas as alterações futuras? Não; alterações podem possuir cláusulas próprias."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-12": {
+      "simples": "A cláusula geral revoga disposições em contrário, sem revogar integralmente o CPP ou dispensar requisitos constitucionais de sigilo e prova. Compatibilidade precisa ser examinada.",
+      "pontos": [
+        "Revogação das disposições incompatíveis."
+      ],
+      "atencao": [
+        "Não usar cláusula geral como substituto de exame da norma vigente."
+      ],
+      "exemplo": "Duas normas são compatíveis e aplicadas em conjunto. Variação: A questão afirma revogação de todo o CPP: a cláusula não autoriza tal conclusão.",
+      "prova": [
+        "O art. 12 revoga integralmente o CPP? Não; refere-se às disposições em contrário."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

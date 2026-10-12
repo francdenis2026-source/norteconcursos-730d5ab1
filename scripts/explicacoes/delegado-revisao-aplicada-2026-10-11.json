@@ -1,0 +1,80 @@
+{
+  "course_slug": "delegado",
+  "units": {
+    "art-1": {
+      "simples": "A lei disciplina a investigação conduzida pelo delegado. Seu âmbito não cria monopólio de toda investigação criminal: a ADI 5043 afastou essa leitura do art. 2º, §1º.",
+      "pontos": [
+        "Objeto: investigação conduzida pelo delegado; não exclusividade de toda investigação."
+      ],
+      "atencao": [
+        "Distinguir polícia judiciária, procedimento investigatório e atribuições de outros órgãos."
+      ],
+      "exemplo": "A polícia instaura inquérito para apurar um roubo e aplica as garantias desta lei. Variação: O Ministério Público conduz investigação própria: a lei não a torna inválida apenas por não ser dirigida por delegado.",
+      "prova": [
+        "A lei torna toda investigação criminal exclusiva do delegado? Não; essa interpretação foi afastada na ADI 5043.",
+        "A lei disciplina a investigação conduzida pelo delegado? Sim; esse é seu objeto."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=4464179"
+      ]
+    },
+    "art-2": {
+      "simples": "As funções descritas são jurídicas, essenciais e exclusivas de Estado. O delegado apura circunstâncias, materialidade e autoria, requisita diligências e fundamenta o indiciamento. Avocação e redistribuição dependem de superior hierárquico e fundamento legal; remoção também exige motivação. Na ADI 5043, julgada em março de 2025, o STF afastou a leitura de exclusividade de toda investigação criminal.",
+      "pontos": [
+        "Indiciamento: privativo do delegado, fundamentado, com análise técnico-jurídica.",
+        "Avocação/redistribuição: superior hierárquico, despacho fundamentado, interesse público ou falha regulamentar prejudicial à eficácia.",
+        "Remoção: ato fundamentado; §3º vetado não cria poder."
+      ],
+      "atencao": [
+        "Exclusivas de Estado não significa exclusivas de um único órgão investigador.",
+        "Requisição de dados não elimina reservas constitucionais e legais de jurisdição.",
+        "Não confunda indiciamento com denúncia do Ministério Público ou condenação judicial."
+      ],
+      "exemplo": "O delegado indica os elementos de autoria e materialidade ao indiciar; a chefia só redistribui o caso com o fundamento exigido. Variação: A chefia retira o caso sem justificar, ou se afirma que investigação própria do MP é sempre proibida: são leituras incompatíveis com as garantias legais e a ADI 5043.",
+      "prova": [
+        "Indiciamento e denúncia são o mesmo ato? Não; o primeiro é ato privativo do delegado e a denúncia pertence à persecução judicial.",
+        "A remoção do delegado pode ocorrer sem fundamentação? Não; o §5º exige ato fundamentado.",
+        "Exclusividade de Estado exclui necessariamente a investigação própria do MP? Não; a ADI 5043 afastou o monopólio da investigação criminal."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=4464179"
+      ]
+    },
+    "art-3": {
+      "simples": "O cargo exige bacharelado em Direito e recebe o tratamento protocolar indicado na lei. Igual tratamento protocolar não equipara cargos, atribuições, remunerações ou garantias constitucionais de carreiras distintas.",
+      "pontos": [
+        "Requisito: bacharel em Direito.",
+        "Tratamento protocolar: magistrados, defensores, membros do MP e advogados."
+      ],
+      "atencao": [
+        "A lista inclui advogados; não se limita à magistratura.",
+        "O dispositivo não estabelece equiparação salarial."
+      ],
+      "exemplo": "No ato oficial, o delegado recebe o tratamento protocolar previsto para os profissionais enumerados. Variação: A questão conclui que isso garante o mesmo salário de magistrado: o artigo não contém essa regra.",
+      "prova": [
+        "O artigo cria equiparação salarial com magistrados? Não; trata de requisito e tratamento protocolar.",
+        "O cargo é privativo de bacharel em Direito? Sim; esse requisito está expresso."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-4": {
+      "simples": "A vigência original começou na publicação da lei, sem vacância fixada neste artigo. A consulta atual da compilação não reinicia esse marco e decisões posteriores exigem leitura própria.",
+      "pontos": [
+        "Entrada em vigor: publicação."
+      ],
+      "atencao": [
+        "Data da assinatura e data da publicação são marcos distintos."
+      ],
+      "exemplo": "A questão pergunta a vacância original: a lei não prevê espera de 45 dias neste dispositivo. Variação: A pergunta trata da interpretação constitucional de 2025: consulte a ADI 5043, não uma nova vacância do art. 4º.",
+      "prova": [
+        "O art. 4º estabelece vacância de 45 dias? Não; prevê entrada em vigor na publicação.",
+        "Consultar a lei hoje reinicia sua vigência? Não; o marco original é a publicação."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}

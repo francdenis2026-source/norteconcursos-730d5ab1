@@ -1,0 +1,347 @@
+{
+  "course_slug": "testemunhas",
+  "units": {
+    "art-1": {
+      "simples": "União, Estados e DF prestam proteção a vítimas/testemunhas coagidas ou sob grave ameaça por colaborar com investigação ou processo, mediante programas especiais. Podem celebrar parcerias, inclusive com entidades não governamentais; a supervisão federal cabe ao órgão competente do Ministério da Justiça.",
+      "pontos": [
+        "Coação/ameaça ligada à colaboração; programas e parcerias."
+      ],
+      "atencao": [
+        "Não confundir ser testemunha com admissão automática sem os requisitos do programa."
+      ],
+      "exemplo": "Uma testemunha ameaçada por depoimento busca proteção no programa da esfera competente. Variação: Uma entidade parceira executa ações: isso não afasta supervisão e requisitos legais.",
+      "prova": [
+        "A lei permite parcerias com entidades não governamentais? Sim; o §1º contempla essa possibilidade."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-2": {
+      "simples": "A proteção considera gravidade física/psicológica, dificuldade de resposta convencional e importância para a prova. Pode alcançar familiares/dependentes de convivência habitual. Ingresso e medidas exigem anuência; após ingresso, cumpre-se o programa e sigilo. Condenados em execução e pessoas sob prisão cautelar estão excluídos do programa, mas não da eventual preservação de integridade pelos órgãos de segurança.",
+      "pontos": [
+        "Anuência + adequação ao caso + sigilo."
+      ],
+      "atencao": [
+        "Não transformar exclusão do programa em abandono de proteção à integridade. Familiares não ingressam automaticamente sem necessidade concreta."
+      ],
+      "exemplo": "A ameaça também alcança dependente de convivência habitual e a extensão é examinada. Variação: O colaborador está preso cautelarmente: a exclusão do programa não elimina medidas especiais de segurança cabíveis.",
+      "prova": [
+        "Excluir do programa elimina toda preservação da integridade do preso? Não; o §2º ressalva medidas pelos órgãos de segurança."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-3": {
+      "simples": "Toda admissão ou exclusão é precedida de consulta ao MP sobre os critérios do art. 2º e depois comunicada à autoridade policial ou ao juiz competente. Consulta e comunicação têm momentos e funções diferentes.",
+      "pontos": [
+        "Antes: consulta MP; depois: comunicação polícia/juiz."
+      ],
+      "atencao": [
+        "Consulta não substitui decisão do conselho do art. 6º."
+      ],
+      "exemplo": "O conselho consulta o MP, decide ingresso e comunica à autoridade competente. Variação: A equipe só informa ao MP depois da exclusão: isso não substitui a consulta prévia prevista.",
+      "prova": [
+        "A consulta ao MP deve ocorrer somente depois da decisão? Não; é prévia à admissão ou exclusão."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-4": {
+      "simples": "O conselho deliberativo dirige o programa com representantes do MP, Judiciário e órgãos públicos/privados ligados a segurança e direitos humanos. A execução cabe a órgão representado, com agentes capacitados; polícia fornece apoio necessário.",
+      "pontos": [
+        "Conselho dirige; órgão representado executa; polícia apoia."
+      ],
+      "atencao": [
+        "Não confundir funções de direção, execução e apoio."
+      ],
+      "exemplo": "O conselho delibera e um órgão representado executa com equipe capacitada. Variação: O apoio policial é necessário: a existência do conselho não dispensa essa colaboração.",
+      "prova": [
+        "A lei exige capacitação compatível dos agentes executores? Sim; o §1º a prevê."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-5": {
+      "simples": "Interessado, MP, polícia, juiz e órgãos/entidades de direitos humanos podem solicitar ingresso, com qualificação, histórico, delito e ameaça. Informações/exames adicionais exigem aquiescência. Na urgência, órgão executor pode providenciar custódia policial provisória enquanto o conselho decide, com comunicação imediata ao conselho e MP.",
+      "pontos": [
+        "Pedido por vários legitimados; urgência com comunicação imediata."
+      ],
+      "atencao": [
+        "Custódia protetiva não equivale automaticamente a prisão cautelar do protegido nem dispensa sua anuência."
+      ],
+      "exemplo": "A ameaça é iminente e o executor providencia proteção provisória, comunicando conselho e MP. Variação: Não há urgência comprovada: não se usa a exceção como substituto permanente da deliberação.",
+      "prova": [
+        "Somente o interessado pode encaminhar pedido? Não; o artigo enumera outros legitimados."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-6": {
+      "simples": "O conselho decide ingresso, exclusão e providências de cumprimento. Delibera por maioria absoluta dos membros e a execução está sujeita à disponibilidade orçamentária.",
+      "pontos": [
+        "Maioria absoluta de membros, não maioria dos presentes."
+      ],
+      "atencao": [
+        "Não atribuir ao juiz toda decisão administrativa de ingresso."
+      ],
+      "exemplo": "Um conselho de sete membros precisa de quatro votos para maioria absoluta. Variação: Comparecem três e dois aprovam: a maioria dos presentes não satisfaz a maioria absoluta de sete membros.",
+      "prova": [
+        "Em conselho de sete membros, dois votos formam maioria absoluta? Não; são necessários quatro."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-7": {
+      "simples": "Medidas podem ser isoladas ou cumulativas conforme o caso: segurança, escolta, mudança de residência, preservação de identidade, assistência, sigilo e apoio para obrigações. Ajuda financeira tem condições de impossibilidade de trabalho/renda e teto anual do conselho; suspensão funcional temporária de servidor/militar preserva vencimentos/vantagens.",
+      "pontos": [
+        "Medidas proporcionais ao caso; ajuda financeira condicionada e com teto."
+      ],
+      "atencao": [
+        "Não transformar ajuda em renda irrestrita a todo protegido nem suspensão em demissão."
+      ],
+      "exemplo": "O protegido não consegue trabalhar e não dispõe de renda: examina-se ajuda dentro do teto. Variação: O servidor precisa de suspensão temporária para segurança: a medida prevê preservação de vencimentos e vantagens.",
+      "prova": [
+        "A ajuda financeira é ilimitada e automática? Não; há condições e teto fixado pelo conselho."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-8": {
+      "simples": "O conselho pode solicitar ao MP que requeira ao juiz medidas cautelares relacionadas à eficácia da proteção. A cadeia de atuação distingue deliberação administrativa, requerimento ministerial e decisão judicial.",
+      "pontos": [
+        "Conselho solicita → MP requer → juiz decide."
+      ],
+      "atencao": [
+        "O conselho não decreta diretamente medida judicial reservada."
+      ],
+      "exemplo": "A proteção exige cautela judicial e o conselho provoca o MP para requerimento. Variação: O conselho tenta decretar a medida judicial sozinho: o artigo não atribui esse poder.",
+      "prova": [
+        "O conselho pode decretar diretamente a cautelar judicial do artigo? Não; solicita atuação do MP perante o juiz."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-9": {
+      "simples": "Em caso excepcional e grave, o conselho encaminha pedido fundamentado de alteração de nome ao juiz de registros públicos. O juiz ouve o MP; o procedimento é sumaríssimo e sigiloso. Pode alcançar familiares previstos, preservados direitos de terceiros. Averba-se a existência da sentença sem revelar nome alterado; documentos e controle de localização preservam sigilo. Cessada a ameaça, o protegido pode pedir retorno ao nome original.",
+      "pontos": [
+        "Alteração excepcional, judicial e sigilosa; retorno facultativo."
+      ],
+      "atencao": [
+        "Não confundir com alteração extrajudicial imotivada da Lei de Registros Públicos após 2022. Não apagar obrigações ou direitos de terceiros."
+      ],
+      "exemplo": "A ameaça grave justifica novo nome com sentença sigilosa e emissão documental. Variação: A ameaça cessa: o interessado pode requerer retorno, que não é automático.",
+      "prova": [
+        "O retorno ao nome original é automático ao cessar a ameaça? Não; o §5º permite solicitação ao juiz."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+      ]
+    },
+    "art-10": {
+      "simples": "A exclusão pode ocorrer a qualquer tempo por pedido do interessado ou decisão do conselho diante de cessação dos motivos ou conduta incompatível. O procedimento mantém consulta e comunicação do art. 3º.",
+      "pontos": [
+        "Saída voluntária; cessação; incompatibilidade de conduta."
+      ],
+      "atencao": [
+        "Não trocar exclusão do programa por sanção penal automática."
+      ],
+      "exemplo": "O protegido pede saída e aplica-se o procedimento legal. Variação: A ameaça permanece, mas há conduta incompatível: o conselho examina a hipótese, sem presumir condenação penal pela exclusão.",
+      "prova": [
+        "A exclusão só pode ocorrer após dois anos? Não; o artigo permite a qualquer tempo nas hipóteses legais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-11": {
+      "simples": "A proteção tem duração máxima de dois anos, admitida prorrogação excepcional quando persistirem os motivos da admissão. O prazo não é limite absoluto que ignore a ameaça persistente.",
+      "pontos": [
+        "Regra: 2 anos; exceção: prorrogação por motivos persistentes."
+      ],
+      "atencao": [
+        "Prorrogação não é automática nem nova admissão indiscriminada."
+      ],
+      "exemplo": "Ao final de dois anos, ameaça grave ainda persiste e o programa examina prorrogação excepcional. Variação: Os motivos cessaram: não se presume direito automático de permanência indefinida.",
+      "prova": [
+        "A lei proíbe toda proteção além de dois anos? Não; admite prorrogação excepcional."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-12": {
+      "simples": "Institui programa federal de assistência a vítimas e testemunhas ameaçadas, no órgão do Ministério da Justiça responsável pela política de direitos humanos, com regulamentação por decreto. Não extingue programas estaduais ou do DF.",
+      "pontos": [
+        "Programa federal; regulamentação executiva."
+      ],
+      "atencao": [
+        "Não ensinar a denominação administrativa histórica como garantia de estrutura ministerial imutável."
+      ],
+      "exemplo": "A proteção federal segue regulamentação própria e articulação com outras esferas. Variação: Existe programa estadual: a criação federal não o torna automaticamente inválido.",
+      "prova": [
+        "A criação federal extingue os programas estaduais? Não; a lei preserva atuação das diversas esferas."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-13": {
+      "simples": "O juiz pode conceder perdão e extinguir punibilidade ao acusado primário cuja colaboração efetiva e voluntária produza os resultados legais: identificação de participantes, localização da vítima com integridade preservada e recuperação total/parcial do produto. Considera personalidade e natureza, circunstâncias, gravidade e repercussão do fato. Jurisprudência recente do STJ reafirma requisitos cumulativos; confissão isolada não garante o benefício.",
+      "pontos": [
+        "Perdão: acusado primário + colaboração efetiva/voluntária + resultados + apreciação judicial."
+      ],
+      "atencao": [
+        "Distinguir perdão de redução do art. 14 e dos acordos da Lei 12.850. Não prometer perdão por qualquer relato, nem tratar precedente antigo isolado como entendimento geral atual."
+      ],
+      "exemplo": "O acusado primário colabora e a atuação produz os resultados legais; o juiz examina também os critérios do parágrafo único. Variação: A pessoa apenas confessa fato já apurado, sem resultados relevantes: não há perdão automático por essa fala.",
+      "prova": [
+        "A confissão isolada assegura automaticamente perdão judicial? Não; exige os requisitos e apreciação previstos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=18%2F05%2F2026&num_registro=202502404118"
+      ]
+    },
+    "art-14": {
+      "simples": "No caso de condenação, colaboração voluntária efetiva com investigação e processo, identificação de participantes, localização da vítima com vida e recuperação total/parcial do produto pode dar redução de 1/3 a 2/3 nos termos legais. O STJ, inclusive em acórdão publicado em maio de 2026, reafirmou requisitos cumulativos e rejeitou colaboração sem contribuição relevante aos resultados.",
+      "pontos": [
+        "Redução 1/3–2/3; não confundir com extinção da punibilidade."
+      ],
+      "atencao": [
+        "Cooperação formal ou repetição de fatos conhecidos não assegura o redutor. Localização com vida é diferente de localização de cadáver."
+      ],
+      "exemplo": "A colaboração voluntária identifica autores, localiza vítima viva e contribui para recuperar produto: examina-se o redutor. Variação: A apreensão ocorreu por outra investigação, sem contribuição do colaborador: não atribuir automaticamente esse resultado a ele.",
+      "prova": [
+        "A localização de cadáver equivale à localização da vítima com vida exigida? Não; o texto exige vítima com vida."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=18%2F05%2F2026&num_registro=202502404118"
+      ]
+    },
+    "art-15": {
+      "simples": "Colaborador pode receber medidas especiais de segurança preso ou em liberdade, diante de ameaça/coação eventual ou efetiva. Na custódia cautelar ou flagrante, fica separado; na instrução e execução fechada, o juiz pode adotar as medidas legais de segurança.",
+      "pontos": [
+        "Proteção especial ao colaborador também preso."
+      ],
+      "atencao": [
+        "Não confundir com ingresso no programa geral, cujas exclusões estão no art. 2º. Proteção não equivale a liberdade automática."
+      ],
+      "exemplo": "O colaborador sob preventiva recebe custódia separada e proteção de integridade. Variação: O acusado pede soltura só por colaborar: a proteção não substitui análise dos requisitos da prisão.",
+      "prova": [
+        "O colaborador preso fica sem qualquer medida de segurança? Não; o artigo prevê medidas especiais e custódia separada."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-16": {
+      "simples": "Acrescentou LRP 57, §7º, ainda presente na compilação: alteração por ameaça/coação ligada a colaboração é averbada mencionando existência de sentença, sem revelar nome alterado. Revelação posterior exige determinação que considere cessação da ameaça.",
+      "pontos": [
+        "Averbar existência da sentença, não expor novo nome."
+      ],
+      "atencao": [
+        "A reforma registral de 2022 não autoriza confundir esta hipótese protetiva com alteração imotivada comum."
+      ],
+      "exemplo": "O cartório registra a existência da sentença sem revelar o nome protegido. Variação: Alguém pede divulgação imediata do novo nome: o sigilo e a determinação posterior exigida permanecem.",
+      "prova": [
+        "A averbação protetiva revela automaticamente o nome alterado? Não; a regra resguarda essa informação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+      ]
+    },
+    "art-17": {
+      "simples": "LRP 58, parágrafo único, permite substituição de prenome por fundada ameaça/coação decorrente de colaboração com apuração de crime, mediante sentença do juiz competente e oitiva do MP. A hipótese protetiva permanece distinta da via imotivada extrajudicial do art. 56, reformado em 2022.",
+      "pontos": [
+        "Prenome protetivo: sentença e oitiva do MP."
+      ],
+      "atencao": [
+        "Não dizer que toda alteração de prenome atual depende de sentença: há outras hipóteses no art. 56 da LRP."
+      ],
+      "exemplo": "O pedido de alteração protetiva é submetido ao juiz, com oitiva ministerial. Variação: Trata-se de pedido imotivado ordinário de adulto: não se aplica automaticamente o mesmo procedimento protetivo.",
+      "prova": [
+        "Toda mudança de prenome hoje exige o procedimento deste artigo? Não; a LRP possui outras hipóteses, inclusive a do art. 56."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+      ]
+    },
+    "art-18": {
+      "simples": "A LRP 18 mantém emissão de certidão sem despacho judicial como regra, mas ressalva dispositivos de registros protegidos, incluindo 57, §7º. Deve mencionar livro/documento de origem. Essa publicidade não elimina proteção sigilosa de nome.",
+      "pontos": [
+        "Regra registral com exceções expressas de proteção."
+      ],
+      "atencao": [
+        "Não transpor publicidade geral para registro protegido sem ressalvas."
+      ],
+      "exemplo": "O cartório aplica a regra comum a registro sem exceção. Variação: O registro decorre de alteração protetiva: observa-se a ressalva, sem revelar livremente a identidade.",
+      "prova": [
+        "A regra de certidão dispensa todas as ressalvas de sigilo? Não; o art. 18 contém exceções expressas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+      ]
+    },
+    "art-19": {
+      "simples": "A União pode utilizar estabelecimentos destinados à execução de pena de condenados que tenham prestado colaboração prévia e voluntária e celebrar convênios com Estados e DF. Não se trata de perdão ou regime aberto automático.",
+      "pontos": [
+        "Estabelecimentos especiais e convênios; colaboração prévia/voluntária."
+      ],
+      "atencao": [
+        "Distinguir segurança da execução, redutor e perdão."
+      ],
+      "exemplo": "A execução considera estabelecimento voltado a colaboradores nas condições legais. Variação: O condenado pretende eliminar a pena por causa da destinação especial: o dispositivo não extingue a condenação.",
+      "prova": [
+        "O uso de estabelecimento especial extingue automaticamente a pena? Não; trata de execução e segurança."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-19-a": {
+      "simples": "Inquéritos/processos com os colaboradores e protegidos indicados têm prioridade. Após citação, o juiz toma antecipadamente depoimentos dos incluídos nos programas, em qualquer rito; eventual impossibilidade ou prejuízo à instrução deve ser justificado.",
+      "pontos": [
+        "Prioridade e depoimento antecipado após citação; justificativa da exceção."
+      ],
+      "atencao": [
+        "A regra não torna justificativa dispensável nem antecipa condenação."
+      ],
+      "exemplo": "O juiz prioriza o processo e organiza o depoimento do protegido após citação. Variação: A antecipação causaria prejuízo concreto à instrução: o juiz deve justificar a exceção.",
+      "prova": [
+        "A impossibilidade de antecipar pode ficar sem justificativa? Não; o parágrafo único exige fundamentação dessa exceção."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-20": {
+      "simples": "Despesas federais de aplicação correm em dotação orçamentária. A fonte federal não converte todas as despesas estaduais em obrigação automática da União.",
+      "pontos": [
+        "Aplicação pela União: dotação no orçamento."
+      ],
+      "atencao": [
+        "Ler com disponibilidade orçamentária e parcerias, sem inventar valor individual de benefício."
+      ],
+      "exemplo": "A execução federal planeja suas despesas em dotação própria. Variação: Uma esfera estadual executa seu programa: o artigo não promete custeio federal irrestrito de toda despesa.",
+      "prova": [
+        "O artigo fixa um valor mensal universal por protegido? Não; apenas indica a dotação das despesas federais."
+      ],
+      "termos": [],
+      "remissoes": []
+    },
+    "art-21": {
+      "simples": "A Lei 9.807 entrou em vigor na publicação, sem prazo de vacância previsto neste artigo. Mudanças posteriores, como a prioridade acrescida em 2011 e regras registrais de 2022, têm fontes e marcos próprios.",
+      "pontos": [
+        "Vigência original na publicação."
+      ],
+      "atencao": [
+        "Não confundir data de consulta com início da vigência."
+      ],
+      "exemplo": "A pergunta é a vacância original: publicação. Variação: A pergunta é sobre alteração posterior da LRP: consultar também seu ato modificador.",
+      "prova": [
+        "A lei original fixou 45 dias de vacância? Não; estabeleceu vigência na publicação."
+      ],
+      "termos": [],
+      "remissoes": []
+    }
+  }
+}
