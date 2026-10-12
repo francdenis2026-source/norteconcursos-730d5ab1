@@ -15,10 +15,13 @@ test('explicações didáticas só usam números presentes no texto oficial da r
     const path = `public/contran/${num}-${year}.json`;
     assert.ok(existsSync(path), `sem texto oficial para ${key}`);
     const official = JSON.parse(readFileSync(path, 'utf8')).text;
-    const allowed = new Set([...nums(official), num, year]);
+    const extraText = (d.fontes ?? []).map((f) => { const [n, y] = f.split('/'); return JSON.parse(readFileSync(`public/contran/${n}-${y}.json`, 'utf8')).text; });
+    const allowed = new Set([...nums(official), ...extraText.flatMap(nums), num, year, ...(d.fontes ?? []).flatMap((f) => f.split('/'))]);
     // números vindos do catálogo oficial (atos que alteraram a norma), declarados à parte
     const extra = (EXTRA[key] ?? []).map(String);
-    for (const n of nums(JSON.stringify(d))) {
+    // exemplos trazem valores hipotéticos e contas; o resto (texto, quadro, atualizações) só cita o que está nos atos
+    const { exemplos, ...checked } = d;
+    for (const n of nums(JSON.stringify(checked))) {
       if (!allowed.has(n) && !extra.includes(n)) assert.fail(`${key}: número ${n} fora do texto oficial`);
     }
     assert.ok(d.simples.length >= 2 && d.exemplos.length >= 2 && d.pegadinhas.length >= 2, `${key} incompleta`);

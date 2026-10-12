@@ -41,6 +41,10 @@ function DidaticaBlock({ d }: { d: ContranDidatica }) {
       <h4 className="text-sm font-bold">Explicação passo a passo</h4>
       <div className="mt-2 space-y-2 text-sm leading-6">{d.simples.map((p) => <p key={p}>{p}</p>)}</div>
     </section>
+    {d.atualizacoes && d.atualizacoes.length > 0 && <section className="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-3 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100">
+      <h4 className="text-sm font-bold">Atualização: o que mudou depois</h4>
+      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{d.atualizacoes.map((a) => <li key={a}>{a}</li>)}</ul>
+    </section>}
     {d.quadro && <section className="rounded-xl border p-3">
       <h4 className="text-sm font-bold">{d.quadro.titulo}</h4>
       <dl className="mt-2 divide-y text-sm">{d.quadro.linhas.map(([k, v]) => <div key={k} className="grid gap-1 py-2 sm:grid-cols-[11rem_1fr]"><dt className="font-semibold">{k}</dt><dd className="text-muted-foreground">{v}</dd></div>)}</dl>
