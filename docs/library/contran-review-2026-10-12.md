@@ -48,8 +48,8 @@ como conteúdo da aplicação. Snapshots e PDFs de evidência ficam em outputs i
 Hashes e fontes constam do relatório JSON adjacente.
 
 281 testes, verificação TypeScript e build passaram. A leitura HTTP de um texto
-de consulta foi verificada no ambiente. A implantação no domínio de produção
-não foi confirmada: a consulta externa retornou bloqueio de saída do ambiente.
+de consulta foi verificada no ambiente. O domínio de produção respondeu após
+a configuração de acesso; isso ainda não confirma a implantação deste lote.
 Enviar à main não constitui evidência de implantação concluída.
 
 A biblioteca anterior permanece com 3.511 unidades atuais, 879 com metadados
