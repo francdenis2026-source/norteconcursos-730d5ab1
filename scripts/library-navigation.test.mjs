@@ -16,8 +16,9 @@ const laws=load('src/lib/legalLibrary.ts');
 const organization=load('src/lib/libraryOrganization.ts',{'./legalLibrary':laws,'./subjects':sharedSubjects});
 test('CONTRAN current study rejects whole repeal and expired guides while preserving compatible amendments',()=>{
  const rows=contranStudy.currentContranGuides(contran.CONTRAN_GUIDES);
- assert.equal(contran.CONTRAN_GUIDES.length,50);assert.equal(rows.length,42);
- for(const n of [1029,1014,1011,1002,992,981,979,972])assert.ok(!rows.some(r=>r.number===n));
+ assert.equal(contran.CONTRAN_GUIDES.length,100);assert.equal(rows.length,90);
+ assert.equal(new Set(contran.CONTRAN_GUIDES.map(g=>g.number)).size,100);
+ for(const n of [1029,1014,1011,1002,992,981,979,972,971,962])assert.ok(!rows.some(r=>r.number===n));
  const base=rows.find(r=>r.number===973);
  assert.equal(contranStudy.currentContranGuides([{...base,officialSituation:'Revoga a Resolução 180/05'}]).length,1);
  assert.equal(contranStudy.currentContranGuides([{...base,officialSituation:'Revogada pela Resolução 1020/25'}]).length,0);
@@ -26,11 +27,14 @@ test('CONTRAN current study rejects whole repeal and expired guides while preser
  assert.equal(contranStudy.currentContranGuides(contran.CONTRAN_GUIDES,'álcool')[0].number,1031);
  assert.equal(rows[0].number,1026);
 });
-test('CONTRAN source editions match the audited PDF evidence and keep clinical, interim and amendment caveats',()=>{
+test('CONTRAN source editions match both audited batches and keep temporal and amendment caveats',()=>{
  const report=JSON.parse(readFileSync('docs/library/contran-review-2026-10-12.json','utf8'));
+ const batch2=JSON.parse(readFileSync('docs/library/contran-review-2026-10-12-batch02.json','utf8'));
  assert.equal(report.batch_resolutions,50);
+ assert.equal(batch2.batch_resolutions,50);assert.equal(batch2.current_guides,48);
+ const evidence=[...report.evidence,...batch2.evidence];
  for(const guide of contranStudy.currentContranGuides(contran.CONTRAN_GUIDES)){
-  const e=report.evidence.find(e=>e.number===guide.number);
+  const e=evidence.find(e=>e.number===guide.number);
   assert.equal(e.ok,true);assert.equal(guide.sourceSha256,e.sha256);
   const source=JSON.parse(readFileSync('public'+guide.textPath,'utf8'));
   assert.equal(source.source_url,guide.sourceUrl);assert.ok(source.text.length>80);
@@ -42,6 +46,19 @@ test('CONTRAN source editions match the audited PDF evidence and keep clinical, 
  assert.match(get(1026).warning,/12\/10\/2026.*novembro/);
  assert.match(get(1007).warning,/2026.*2027/);
  assert.match(get(1009).points.join(' '),/revogado pela 1020/);
+ assert.match(get(923).points.join(' '),/15 para 30 dias/);
+ assert.match(get(949).warning,/2026.*não apresentar.*futuro/);
+ assert.match(get(939).warning,/28\/12\/2018.*retificado/);
+ assert.match(get(936).points.join(' '),/1º\/01\/2021.*retificação/);
+ assert.match(get(957).warning,/fronteira exata/);
+ assert.equal(get(937).publicationDate,'2022-04-01');
+ assert.equal(get(937).publicationIndexDate,'01.04.222');
+ assert.match(get(917).example.answer,/superior a 2,50/);
+ for(const e of batch2.evidence){
+  const g=get(e.number);assert.ok(g.reviewedScope);
+  assert.equal(g.sourceSha256,e.sha256);
+ }
+ for(const n of [954,948,949,939,936,924])assert.ok(get(n).relatedSources.some(s=>/delibera|retifica/i.test(s.label)));
 });
 test('CONTRAN library link respects discipline and contest filters, and cases keep their answers closed',()=>{
  const link=load('src/components/library/ContranLibraryLink.tsx',{

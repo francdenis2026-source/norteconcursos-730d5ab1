@@ -1520,5 +1520,1583 @@ export const CONTRAN_GUIDES: ContranGuide[] = [
       "variation": "A prova pede situação específica da retomada em 2022.",
       "variationAnswer": "Aplicar o documento histórico pertinente, sem transformá-lo em benefício permanente."
     }
+  },
+  {
+    "number": 971,
+    "year": 2022,
+    "title": "Rio de Janeiro: calendário excepcional de 2022",
+    "subject": "Esta Resolução referenda a Deliberação CONTRAN nº 254, de 25 de março de 2022, que dispõe sobre os prazos de processos e de procedimentos afetos aos órgãos e entidades do Sistema Nacional de Trânsito (SNT) e às entidades públicas e privadas prestadoras de serviços relacionados ao trânsito, por força das medidas de enfrentamento da pandemia de Covid-19 no Estado do Rio de Janeiro.",
+    "issueDate": "2022-06-20",
+    "publicationDate": "2022-06-24",
+    "lastRelatedActDate": "2022-06-24",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Revoga a Portaria CONTRAN 209/21 Revoga a Resolução CONTRAN 829/21",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9712022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "4f7321d2a9d8c2013b608d4ff00df81e008beccbffab779ef5ea3d32423c98d1",
+    "historical": true,
+    "points": [
+      "A medida tem recorte territorial no Rio de Janeiro e decorre da pandemia.",
+      "Os cronogramas referem-se a vencimentos e procedimentos de 2020–2022."
+    ],
+    "warning": "Calendário histórico: não usar para prorrogar CNH vencida em 2026. O PDF traz inclusive a expressão impossível “31 de setembro de 2022”; não criar exercício que a ensine como data válida.",
+    "example": {
+      "scenario": "Uma pessoa invoca este calendário de 2022 para dirigir com CNH vencida em outubro de 2026.",
+      "question": "O ato concede essa prorrogação?",
+      "answer": "Não. O benefício exige enquadramento no período e nas hipóteses originais.",
+      "variation": "A questão pede a retomada dos prazos ocorrida no Rio de Janeiro em 2022.",
+      "variationAnswer": "Nesse caso, trata-se de consulta histórica, exigindo a fonte e eventuais correções do período."
+    },
+    "reviewedScope": "Arts. 1º–4º e cronogramas dos Anexos I e II"
+  },
+  {
+    "number": 970,
+    "year": 2022,
+    "title": "Iluminação: emitir luz não é retrorrefletir",
+    "subject": "Esta Resolução dispõe sobre as características e especificações técnicas dos sistemas de sinalização, de iluminação e seus dispositivos, bem como sobre o uso de lanternas especiais em veículos.",
+    "issueDate": "2022-06-20",
+    "publicationDate": "2022-06-24",
+    "lastRelatedActDate": "2026-07-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos (I ao XVI) e Anexos (XVII ao XXI) Alterada pela Resolução 1024/26 Em vigor em 1º de julho de 2022 Revoga as Resoluções 268/08; 614/16; 667/17; 681/17; 761/18 e 799/20 Revoga a partir de 1º de janeiro de 2024 as Resoluções 227/07; 294/08; 383/11 e 436/13",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9702022.pdf",
+    "relatedSources": [
+      {
+        "label": "Resolução 1024",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10242026c.pdf"
+      }
+    ],
+    "sourceSha256": "311838ffba73e35468132ed0b4c4c50098420c7fbc58a3cdf36472670e861fb4",
+    "historical": false,
+    "points": [
+      "Dispositivo de iluminação ilumina a via; dispositivo de sinalização emite sinal para outros usuários.",
+      "Retrorrefletor indica a presença do veículo devolvendo luz originada de outra fonte."
+    ],
+    "warning": "Ler com a alteração da 1024/2026 sobre lanternas especiais. Este guia não substitui os ensaios dos anexos nem autoriza mudar o sistema original.",
+    "example": {
+      "scenario": "Um dispositivo traseiro devolve a luz do farol de outro veículo, sem produzir luz própria.",
+      "question": "É retrorrefletor ou farol?",
+      "answer": "Retrorrefletor: a fonte luminosa não está no próprio dispositivo.",
+      "variation": "O equipamento projeta um facho para iluminar a via à frente.",
+      "variationAnswer": "A função descrita é de farol; não basta a cor da peça para classificar sua função."
+    },
+    "reviewedScope": "Art. 2º, I–IV; divisão dos anexos dos arts. 3º e 4º",
+    "textPath": "/contran/970-2022.json"
+  },
+  {
+    "number": 969,
+    "year": 2022,
+    "title": "Placas: regra geral e exceção da motocicleta",
+    "subject": "Esta Resolução dispõe sobre o sistema de Placas de Identificação de Veículos (PIV), registrados no território nacional.",
+    "issueDate": "2022-06-20",
+    "publicationDate": "2022-06-24",
+    "lastRelatedActDate": "2022-06-24",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Em vigor em 1° de julho de 2022 Revoga a Deliberação 260/22 Revoga as Resoluções 493/75; 793/94; 32/98; 60/98; 88/99; 231/07; 241/07; 275/08; 286/08; 309/09; 342/10; 372/11; 527/15; 670/17; 742/18; 780/19; 786/20; 792/20 e 887/21",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9692022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "c0e48ed8cef1cf155df26cfde04a91c9670dd2b773d986b7efcaee387d48d8a8",
+    "historical": false,
+    "points": [
+      "Regra geral: PIV dianteira e traseira após o registro.",
+      "Motocicletas, motonetas, reboques e os demais veículos listados no art. 2º, § 1º usam apenas a PIV traseira.",
+      "Carga que encobre a placa pode exigir segunda PIV traseira."
+    ],
+    "warning": "Não exigir troca universal de placa antiga só pela existência do modelo novo; as hipóteses de substituição dependem do art. 56.",
+    "example": {
+      "scenario": "Uma motocicleta registrada está sem placa dianteira, mas possui a traseira regular.",
+      "question": "A ausência da dianteira, por si só, viola a regra desta resolução?",
+      "answer": "Não. Motocicletas estão na exceção expressa da PIV apenas traseira.",
+      "variation": "O mesmo fato ocorre com um automóvel comum.",
+      "variationAnswer": "Aplica-se a regra geral de placas dianteira e traseira; a exceção da motocicleta não se estende ao automóvel."
+    },
+    "reviewedScope": "Arts. 2º–4º",
+    "textPath": "/contran/969-2022.json"
+  },
+  {
+    "number": 968,
+    "year": 2022,
+    "title": "Identificação: VIN e seus três blocos",
+    "subject": "Esta resolução estabelece o critério de identificação de veículos, a que se refere o art. 114 do Código de Trânsito Brasileiro (CTB).",
+    "issueDate": "2022-06-20",
+    "publicationDate": "2022-06-24",
+    "lastRelatedActDate": "2022-06-24",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Em vigor em 1º de julho de 2022 Revoga a partir de 1º de janeiro de 2025 as Resoluções 836/97; 24/98; 282/08; 325/09; 581/16 e 634/16",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9682022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "9202086a67b4d85f9b239a6b0d2a6db10d9207ebbe42b3c6fc9b1031ecb63d0f",
+    "historical": false,
+    "points": [
+      "VIN: 17 caracteres distribuídos em WMI, VDS e VIS.",
+      "WMI identifica o fabricante; VDS descreve características; VIS individualiza o veículo.",
+      "Identificadores gravados e placa são instrumentos distintos."
+    ],
+    "warning": "O marco de 1º/01/2025 indicado no catálogo é anterior à conferência de 2026. Não misturar os campos VIN com o código da placa ou ensinar todas as gravações a partir deste resumo.",
+    "example": {
+      "scenario": "Uma questão chama o código alfanumérico da placa de VIN de 17 caracteres.",
+      "question": "A identificação está correta?",
+      "answer": "Não. A placa e o número de identificação veicular são identificadores diferentes.",
+      "variation": "A questão descreve a seção inicial de três caracteres que identifica o fabricante.",
+      "variationAnswer": "Trata-se do WMI, primeira seção do VIN."
+    },
+    "reviewedScope": "Arts. 2º–4º, com foco no art. 3º, I–IV",
+    "textPath": "/contran/968-2022.json"
+  },
+  {
+    "number": 967,
+    "year": 2022,
+    "title": "Baixa: retirar de circulação não é transferir",
+    "subject": "Estabelece critérios para a baixa do registro de veículos, bem como os prazos para efetivação.",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2022-05-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Em Vigor em 1º de junho de 2022 Revoga a Deliberação 255/22 Revoga o art. 30º da Resolução 611/16 Revoga as Resoluções 011/98; 113/00; 179/05 e 661/17",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9672022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "50012b6bdb9d15a551d631893b74a7fcacba26d928b0bf0a7be1dfc358807bd5",
+    "historical": false,
+    "points": [
+      "A baixa é obrigatória nas hipóteses de veículo irrecuperável, definitivamente desmontado e outras previstas no art. 2º.",
+      "A solicitação motivada é dirigida ao órgão executivo estadual ou distrital de registro.",
+      "Cumpridas as exigências, o órgão emite a Certidão de Baixa."
+    ],
+    "warning": "Não confundir baixa definitiva com transferência de proprietário ou simples falta de uso. O recolhimento de documentos e identificadores depende da hipótese do art. 3º.",
+    "example": {
+      "scenario": "Um veículo foi definitivamente desmontado e seu responsável pretende apenas transferir o registro como se pudesse circular.",
+      "question": "A transferência substitui o procedimento de baixa?",
+      "answer": "Não. A desmontagem definitiva está entre as hipóteses de baixa obrigatória.",
+      "variation": "O veículo continua íntegro e foi vendido para uso regular.",
+      "variationAnswer": "A venda comum exige o procedimento de transferência; não se presume baixa só pela troca de proprietário."
+    },
+    "reviewedScope": "Arts. 2º–4º",
+    "textPath": "/contran/967-2022.json"
+  },
+  {
+    "number": 966,
+    "year": 2022,
+    "title": "Retrovisores: anexos dependem do veículo",
+    "subject": "Dispõe sobre os requisitos técnicos dos espelhos retrovisores de veículos.",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2022-05-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Em Vigor em 1º de junho de 2022 Revoga o art. 5º da Resolução 799/20 Revoga as Resoluções 682/17 e 703/17",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9662022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "cc4ec391bc8d869733a37c39e4a61fdefa1a4ba9bb7e53ec39703fd61266bed9",
+    "historical": false,
+    "points": [
+      "Retrovisor permite observar área adjacente sem visão direta.",
+      "Motocicletas e veículos listados no art. 3º seguem o Anexo I.",
+      "Automóveis e veículos listados no art. 4º seguem os Anexos II, III e IV."
+    ],
+    "warning": "Ensaios e equivalências técnicas devem respeitar o dispositivo aplicável. Não deduzir conformidade só porque o acessório cabe no veículo.",
+    "example": {
+      "scenario": "Um candidato aplica ao retrovisor de motocicleta o conjunto de anexos reservado aos automóveis.",
+      "question": "A escolha do anexo está correta?",
+      "answer": "Não. O art. 3º remete as motocicletas ao Anexo I.",
+      "variation": "O caso trata de retrovisores de um automóvel.",
+      "variationAnswer": "A referência é o art. 4º e seus Anexos II, III e IV, com as condições técnicas previstas."
+    },
+    "reviewedScope": "Arts. 2º–4º",
+    "textPath": "/contran/966-2022.json"
+  },
+  {
+    "number": 965,
+    "year": 2022,
+    "title": "Estacionamento reservado: competência e sinalização",
+    "subject": "Define e regulamenta as áreas de segurança e de estacionamentos específicos de veículos.",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2024-10-16",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Revoga as Resoluções 302/08; 303/08 e 304/08 Alterada pela Resolução 1012/24",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9652022.pdf",
+    "relatedSources": [
+      {
+        "label": "Resolução 1012",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10122024.pdf"
+      }
+    ],
+    "sourceSha256": "316bb6e2310873698f88323510940bd9f1bfc232ee17e87764223e13b9014569",
+    "historical": false,
+    "points": [
+      "Estacionamento específico em via pública é estabelecido pelo órgão com circunscrição sobre a via.",
+      "A sinalização deve seguir os padrões do CONTRAN.",
+      "Credenciais para pessoa idosa ou com deficiência têm disciplina modificada pela 1012/2024."
+    ],
+    "warning": "Pintura particular não cria área pública de estacionamento exclusivo. Não copiar o capítulo antigo de credenciais sem a alteração de 2024.",
+    "example": {
+      "scenario": "Um comerciante pinta a via pública como vaga exclusiva de sua loja, sem regulamentação do órgão competente.",
+      "question": "A pintura cria estacionamento específico regular?",
+      "answer": "Não. O art. 2º exige estabelecimento e regulamentação pelo órgão de trânsito competente.",
+      "variation": "O órgão com circunscrição regulamenta e sinaliza a área nos padrões do CONTRAN.",
+      "variationAnswer": "A origem da área agora atende ao requisito estudado; o usuário deve ainda respeitar sua finalidade e condições."
+    },
+    "reviewedScope": "Arts. 2º e 4º; confronto com a alteração 1012/2024",
+    "textPath": "/contran/965-2022.json"
+  },
+  {
+    "number": 964,
+    "year": 2022,
+    "title": "Air bag: equipamento suplementar e recorte de fabricação",
+    "subject": "Dispõe sobre a obrigatoriedade do uso do equipamento suplementar de segurança passiva - Air Bag, na parte frontal, para o condutor e o passageiro do assento dianteiro, dos veículos das categorias M1 e N1.",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2022-05-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga as Resoluções 311/09; 394/11; 534/15 e 597/16",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9642022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "57413c13be140bb7a3bd42b6a6a4449a90ead53282d4f7bde3fde0f21d9d0989",
+    "historical": false,
+    "points": [
+      "Air bag frontal é equipamento suplementar de segurança passiva para condutor e passageiro dianteiro.",
+      "O art. 2º alcança M1 e N1 fabricados a partir de 1º/01/2014.",
+      "Há dispensas específicas no art. 4º, como veículos de uso bélico."
+    ],
+    "warning": "Suplementar significa adicional, não substituto do cinto. Não transformar o marco de fabricação em obrigação automática de adaptar qualquer veículo antigo.",
+    "example": {
+      "scenario": "Um automóvel comum M1 fabricado em 2025 é apresentado sem air bag frontal obrigatório.",
+      "question": "O ano de fabricação o coloca fora do recorte da norma?",
+      "answer": "Não. Ele é posterior a 1º/01/2014 e se enquadra na categoria, ressalvadas dispensas específicas que não foram dadas no caso.",
+      "variation": "A questão trata de veículo de uso bélico.",
+      "variationAnswer": "É necessário aplicar a dispensa expressa do art. 4º, e não a regra sem exceções."
+    },
+    "reviewedScope": "Arts. 1º–4º",
+    "textPath": "/contran/964-2022.json"
+  },
+  {
+    "number": 963,
+    "year": 2022,
+    "title": "Rodas especiais: troca precisa atender à segurança",
+    "subject": "Estabelece os requisitos mínimos de segurança para rodas especiais de veículos",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2022-05-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Revoga as Resoluções 533/78; 545/78 e 569/81",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9632022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "edc0bf70666d3b98a94e927e4a1c700ad85fe38f3c8696aeeb61a58f6726acca",
+    "historical": false,
+    "points": [
+      "Rodas especiais substituem as originais ou opcionais de fábrica.",
+      "A disciplina estudada alcança automóveis e camionetas de uso misto deles derivadas.",
+      "É proibida circulação com rodas substitutas que não cumpram os requisitos do Anexo."
+    ],
+    "warning": "Aparência ou encaixe da roda não comprovam atendimento aos requisitos. A alteração do conjunto roda/pneu também precisa seguir a regulamentação pertinente.",
+    "example": {
+      "scenario": "Um automóvel recebe rodas fora das especificações mínimas do Anexo, embora caibam nos cubos.",
+      "question": "O encaixe físico torna regular a circulação?",
+      "answer": "Não. O art. 4º exige os requisitos de segurança, além da mera possibilidade de montagem.",
+      "variation": "Foram comprovados os requisitos técnicos da roda e das modificações do conjunto roda/pneu.",
+      "variationAnswer": "A análise é de conformidade técnica; o caso anterior não era irregular simplesmente por ser uma roda especial."
+    },
+    "reviewedScope": "Arts. 2º–4º",
+    "textPath": "/contran/963-2022.json"
+  },
+  {
+    "number": 962,
+    "year": 2022,
+    "title": "Mato Grosso: prazos da pandemia encerrados",
+    "subject": "Dispõe sobre os prazos de processos e de procedimentos afetos aos órgãos e entidades do Sistema Nacional de Trânsito (SNT) e às entidades públicas e privadas prestadoras de serviços relacionados ao trânsito, por força das medidas de enfrentamento da pandemia de Covid-19 no Estado do Mato Grosso.",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2022-05-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Revoga a Deliberação 253/22",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9622022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "6ae3dd6d1f43244223df6cdc75877bf8e31ed6ac74b4f44d8fc18f8a06b742a4",
+    "historical": true,
+    "points": [
+      "O ato alcança condutores habilitados pelo órgão do Mato Grosso.",
+      "O cronograma contempla CNH/ACC vencidas de março de 2020 a dezembro de 2022.",
+      "A última data do Anexo é 31/01/2023."
+    ],
+    "warning": "Consulta histórica: não ensinar este calendário como prorrogação vigente em 2026.",
+    "example": {
+      "scenario": "Uma CNH de Mato Grosso vence em 2026 e seu titular cita o cronograma da pandemia.",
+      "question": "Esse vencimento está contemplado?",
+      "answer": "Não. O cronograma tem recorte temporal encerrado e não inclui vencimentos de 2026.",
+      "variation": "A pergunta descreve CNH vencida em dezembro de 2022 e exige o prazo excepcional daquele período.",
+      "variationAnswer": "No enquadramento histórico indicado, o Anexo prevê renovação até 31/01/2023."
+    },
+    "reviewedScope": "Arts. 1º–4º e Anexo"
+  },
+  {
+    "number": 961,
+    "year": 2022,
+    "title": "Acessibilidade: equipamento e informação no CRLV-e",
+    "subject": "Estabelece requisitos técnicos de acessibilidade para os veículos de transporte coletivo de passageiros e os procedimentos para a indicação do nível de acessibilidade no Certificado de Registro e Licenciamento do Veículo em meio digital (CRLV-e).",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2022-05-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Em Vigor em 1º de junho de 2022 Revoga as Resoluções 402/12; 469/13 e 605/16",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9612022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "6e59a8f05fcfab991dfba863f2b94478daddb80bc76940f88c4401a5550cf449",
+    "historical": false,
+    "points": [
+      "Acessibilidade abrange os requisitos do veículo e a informação de suas características no CRLV-e.",
+      "O art. 3º remete ao Anexo I para a indicação das características ou tipos de acessibilidade."
+    ],
+    "warning": "Não presumir que a presença de um equipamento dispensa os demais requisitos ou a informação documental.",
+    "example": {
+      "scenario": "Um ônibus acessível tem equipamento adequado, mas o responsável afirma que as características não precisam aparecer no CRLV-e.",
+      "question": "A informação documental é dispensada?",
+      "answer": "Não. O art. 3º exige a apresentação das características ou tipos de acessibilidade no CRLV-e.",
+      "variation": "O documento informa a acessibilidade, mas um requisito técnico não foi atendido.",
+      "variationAnswer": "A inscrição documental não substitui a conformidade técnica do veículo."
+    },
+    "reviewedScope": "Arts. 1º–3º",
+    "textPath": "/contran/961-2022.json"
+  },
+  {
+    "number": 960,
+    "year": 2022,
+    "title": "Vidros: avaliar o conjunto e a área de visão",
+    "subject": "Dispõe sobre os requisitos de segurança de vidros, a visibilidade para fins de circulação, o uso de vidros em veículos blindados e o uso de medidores de transmitância luminosa.",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2022-12-26",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Revoga o art. 3º da Resolução 786/20 Revoga as Resoluções 216/06; 253/07; 254/07; 334/09; 385/11; 386/11; 580/16; 707/17 e 869/21 Alterada a partir de 2 de janeiro de 2023 pela Resolução 989/22",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9602022.pdf",
+    "relatedSources": [
+      {
+        "label": "Resolução 989",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9892022.pdf"
+      }
+    ],
+    "sourceSha256": "f2523e474d2c0b959375284261338a86a334e415c8355ea1426db17a612774c2",
+    "historical": false,
+    "points": [
+      "Nas áreas indispensáveis à dirigibilidade, o limite mínimo de transmitância é 70%.",
+      "Película não refletiva deve preservar os limites do conjunto vidro-película.",
+      "A 989/2022 alterou o regime das demais áreas: não copiar o antigo mínimo de 28% sem a ressalva atual."
+    ],
+    "warning": "A chancela da película não prova, sozinha, a transmitância final do conjunto. Este guia não esgota as dispensas, áreas excluídas nem a medição técnica.",
+    "example": {
+      "scenario": "Em uma área lateral indispensável à dirigibilidade, o conjunto vidro-película apresenta transmitância de 65%.",
+      "question": "A película com chancela de 70% torna o conjunto conforme?",
+      "answer": "Não. O requisito do caso é do conjunto, que ficou abaixo de 70%.",
+      "variation": "O conjunto apresenta 75%, mas a película é refletiva.",
+      "variationAnswer": "O percentual isolado não elimina a proibição específica de película refletiva."
+    },
+    "reviewedScope": "Arts. 4º, 8º e 10; alteração 989/2022",
+    "textPath": "/contran/960-2022.json"
+  },
+  {
+    "number": 959,
+    "year": 2022,
+    "title": "Ônibus M3: CAT e comprovação técnica",
+    "subject": "Estabelece os requisitos de segurança para veículos de transporte de passageiros tipos micro-ônibus e ônibus, categoria M3, de fabricação nacional e importados.",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2022-05-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Em Vigor em 1º de junho de 2022 Revoga as Resoluções 445/13; 629/16; 644/16 e 754/18",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9592022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "54bffc991227481786dfd33567af33f74db38abd649577dcabaa22d331ddfbfa",
+    "historical": false,
+    "points": [
+      "O objeto são ônibus e micro-ônibus da categoria M3, nacionais e importados.",
+      "Pedidos de CAT precisam demonstrar atendimento aos requisitos previstos.",
+      "A preservação de CAT antigo depende das condições do art. 3º, não apenas da data de emissão."
+    ],
+    "warning": "Não confundir CAT, CCT e CRLV-e. Os ensaios de estabilidade e estrutura são exigências próprias; não foram integralmente auditados neste guia.",
+    "example": {
+      "scenario": "Um fabricante pede CAT para ônibus M3 sem comprovar os requisitos técnicos que o art. 2º exige.",
+      "question": "A identificação como M3 dispensa a comprovação?",
+      "answer": "Não. A categoria define o recorte, mas o pedido precisa atender às exigências da resolução.",
+      "variation": "O caso trata de micro-ônibus M2.",
+      "variationAnswer": "Deve-se consultar o regime próprio da 939/2022; não aplicar automaticamente o guia da M3."
+    },
+    "reviewedScope": "Arts. 1º–3º",
+    "textPath": "/contran/959-2022.json"
+  },
+  {
+    "number": 958,
+    "year": 2022,
+    "title": "Emissões: motor, combustível e ano importam",
+    "subject": "Dispõe sobre os limites de emissões de gases e partículas pelo escapamento de veículos automotores, sua fiscalização pelos agentes de trânsito, requisitos de controle de gases do cárter e sons produzidos por equipamentos utilizados em veículos.",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2022-05-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Em Vigor em 1º de junho de 2022 Revoga a observação 9 do anexo V da Resolução 916/22 Revoga as Resoluções 507/76; 451/13; 452/13; 624/16 e 666/17",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9582022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "821add1770727840c9c6730377ca91460733a0151f03824dea4c8614228e0cae",
+    "historical": false,
+    "points": [
+      "A resolução abrange emissões, procedimentos de fiscalização, gases do cárter e sons de equipamentos.",
+      "As tabelas do art. 3º para ciclo Otto distinguem ano de fabricação e combustível.",
+      "O ato também revogou a observação 9 do Anexo V da 916/2022."
+    ],
+    "warning": "Não memorizar um único limite de CO para toda a frota. Este guia não certifica todas as tabelas, instrumentos ou normas ambientais referenciadas.",
+    "example": {
+      "scenario": "Uma questão aplica a mesma linha de limite de CO a veículos com anos e combustíveis diferentes, sem consultar a tabela.",
+      "question": "A comparação é suficiente?",
+      "answer": "Não. É preciso enquadrar ano de fabricação, combustível e procedimento na tabela aplicável.",
+      "variation": "Os veículos têm o mesmo combustível, mas anos de fabricação distintos.",
+      "variationAnswer": "A igualdade do combustível não dispensa verificar a faixa de ano de cada veículo."
+    },
+    "reviewedScope": "Arts. 1º–3º",
+    "textPath": "/contran/958-2022.json"
+  },
+  {
+    "number": 957,
+    "year": 2022,
+    "title": "Veículo de coleção: idade não basta",
+    "subject": "Dispõe sobre os requisitos para registro e licenciamento de veículo de coleção.",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2022-05-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Em Vigor em 1º de junho de 2022 Revoga as Resoluções 056/98 e 127/01",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9572022n2.pdf",
+    "relatedSources": [],
+    "sourceSha256": "f3f3f2bd2f25e0824203bfc655da86a632d63ce35cbf11b859822e46e31c58f6",
+    "historical": false,
+    "points": [
+      "A definição do art. 2º exige antiguidade e valor histórico próprio, admitindo original ou modificado.",
+      "A preservação de características é avaliada para o CVCOL nos termos próprios."
+    ],
+    "warning": "O art. 2º usa “mais de trinta anos” e o art. 3º usa “trinta anos ou mais”. O caso evita a fronteira exata; não criar exercício automático para resolver essa diferença textual.",
+    "example": {
+      "scenario": "Um veículo com 35 anos é apresentado como de coleção apenas pela idade, sem demonstrar valor histórico ou os demais requisitos.",
+      "question": "A idade sozinha é suficiente?",
+      "answer": "Não. A definição exige valor histórico próprio, e o registro e licenciamento seguem requisitos específicos.",
+      "variation": "Um veículo com 35 anos tem valor histórico e atende aos requisitos comprovados para seu registro.",
+      "variationAnswer": "O enquadramento passa pela antiguidade e pelos demais requisitos; não pela idade isolada."
+    },
+    "reviewedScope": "Arts. 2º–3º",
+    "textPath": "/contran/957-2022.json"
+  },
+  {
+    "number": 956,
+    "year": 2022,
+    "title": "Eixo elétrico auxiliar: auxiliar não substitui tração",
+    "subject": "Estabelece os requisitos para produção de veículos tipo semirreboque com eixo elétrico auxiliar e sua instalação.",
+    "issueDate": "2022-05-17",
+    "publicationDate": "2022-05-25",
+    "lastRelatedActDate": "2022-05-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexo Em Vigor em 1º de junho de 2022",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9562022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "583274c4c9dc9477902d6934abdc4eec24622bc11ef028e53039f6dc33368d05",
+    "historical": false,
+    "points": [
+      "O eixo converte energia regenerada em torque auxiliar, sem substituir a tração principal.",
+      "Mesmo instalado opcionalmente, deve cumprir os requisitos do Anexo.",
+      "Semirreboque com eixo elétrico precisa de código específico e CAT, conforme o art. 2º."
+    ],
+    "warning": "Opcionalidade de instalação não dispensa segurança, ensaios ou identificação específica.",
+    "example": {
+      "scenario": "Um fabricante instala o eixo como opcional e afirma que, por isso, não precisa atender ao Anexo.",
+      "question": "A justificativa procede?",
+      "answer": "Não. O art. 1º, § 2º determina atendimento mesmo na instalação opcional.",
+      "variation": "O equipamento é descrito como substituto completo da tração principal.",
+      "variationAnswer": "Isso não corresponde à definição de eixo elétrico auxiliar estudada no art. 1º."
+    },
+    "reviewedScope": "Arts. 1º–2º",
+    "textPath": "/contran/956-2022.json"
+  },
+  {
+    "number": 955,
+    "year": 2022,
+    "title": "Bicicleta externa: placa e lanternas precisam aparecer",
+    "subject": "Dispõe sobre o transporte de cargas ou bicicletas nas partes externas dos veículos dos tipos automóvel, caminhonete, camioneta e utilitário.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Anexos Revoga as Resoluções 349/10 e 589/16",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9552022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "09d9fc332a39b19014e59a3e305df6685520f1eabe442a78d305cc8739695335",
+    "historical": false,
+    "points": [
+      "Carga e suporte precisam respeitar limites do veículo e dos fabricantes.",
+      "Encobrimento da sinalização exige régua de sinalização; encobrimento da placa exige segunda placa traseira.",
+      "Amarração não pode comprometer visibilidade e estabilidade."
+    ],
+    "warning": "Não corrigir o encobrimento da placa com papel manuscrito. As exigências de placa e sinalização são distintas e podem coexistir.",
+    "example": {
+      "scenario": "Bicicletas no suporte traseiro encobrem tanto a placa quanto as lanternas.",
+      "question": "Basta instalar uma segunda placa?",
+      "answer": "Não. O art. 5º exige a solução de identificação e, para a sinalização encoberta, a régua correspondente.",
+      "variation": "As lanternas estão livres, mas a placa continua parcialmente coberta.",
+      "variationAnswer": "A exigência relativa à placa permanece; “parcialmente” também está abrangido."
+    },
+    "reviewedScope": "Arts. 2º–6º",
+    "textPath": "/contran/955-2022.json"
+  },
+  {
+    "number": 954,
+    "year": 2022,
+    "title": "Estabilidade: cronograma corrigido pela Deliberação 264",
+    "subject": "Dispõe sobre a obrigatoriedade do uso do sistema de controle de estabilidade nos veículos das categorias M1, M2, M3, N1, N2, N3, O3 e O4 novos saídos de fábrica, nacionais e importados.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-10-31",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Anexos Revoga as Resoluções 567/15 e 641/16 Revoga as Arts. 2º e 3º da Resolução 799/20 Alterada pela Deliberação 264",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9542022.pdf",
+    "relatedSources": [
+      {
+        "label": "Deliberação 264/2022",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/Deliberacao2642022.pdf"
+      }
+    ],
+    "sourceSha256": "56fa725fd66a8943186dcbe62f6e5f8e6fb9145e481117b281b4048288c19897",
+    "historical": false,
+    "points": [
+      "O sistema exigido depende da categoria e das alternativas permitidas no art. 3º.",
+      "A Deliberação 264 corrigiu os marcos de projeto do cronograma.",
+      "Para M2, M3, N2, N3, O3 e O4, o marco dos projetos novos passou a 1º/07/2023; os anteriores seguem a exigência a partir de 1º/01/2025."
+    ],
+    "warning": "Não usar o PDF original sozinho para o art. 7º. A alteração substitui datas do projeto e não significa que todos os veículos antigos em circulação devem receber adaptação.",
+    "example": {
+      "scenario": "Uma questão sobre o cronograma mantém 14/12/2016 como marco de projeto dos veículos do inciso II, ignorando a Deliberação 264.",
+      "question": "A data continua sendo a referência desse inciso?",
+      "answer": "Não. A deliberação alterou o marco para 1º/07/2023, com o regime dos projetos anteriores indicado no inciso.",
+      "variation": "A pergunta exige adaptação universal de qualquer veículo usado, apenas porque chegou 2025.",
+      "variationAnswer": "O cronograma é de veículos produzidos/importados no recorte da norma; não autoriza essa extensão universal."
+    },
+    "reviewedScope": "Arts. 1º–3º e 7º; Deliberação 264/2022",
+    "textPath": "/contran/954-2022.json"
+  },
+  {
+    "number": 953,
+    "year": 2022,
+    "title": "Protetor lateral: dispensa de região não é dispensa total",
+    "subject": "Estabelece os requisitos técnicos de fabricação e instalação do protetor lateral para veículos de carga.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-12-26",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Anexos Revoga as Resoluções 323/09 e 377/11 Alterada a partir de 2 de janeiro de 2023 pela Resolução 987/22",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9532022.pdf",
+    "relatedSources": [
+      {
+        "label": "Resolução 987",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9872022.pdf"
+      }
+    ],
+    "sourceSha256": "758f8bc4a506dfd26f8ad17924babba003b252aa81a6699b0c12c29a5bc29e01",
+    "historical": false,
+    "points": [
+      "O art. 2º trata de caminhões, reboques e semirreboques com PBT superior a 3.500 kg, no recorte de fabricação e alterações definido.",
+      "A 987/2022 mudou a dispensa da região posterior aos eixos para carroçaria basculante ou silo basculante.",
+      "O art. 3º enumera regiões longitudinais dispensadas."
+    ],
+    "warning": "Não generalizar a dispensa de uma região para todo o veículo. Ler o inciso IV na redação de 2023, não na original.",
+    "example": {
+      "scenario": "Um caminhão basculante invoca a dispensa da região posterior aos eixos para retirar também a proteção exigida em outra região.",
+      "question": "A dispensa autoriza a retirada integral?",
+      "answer": "Não. O art. 3º trata de regiões determinadas, não de autorização geral para retirar o equipamento.",
+      "variation": "A pergunta se limita à região posterior aos eixos do caminhão com carroçaria basculante.",
+      "variationAnswer": "É necessário considerar a redação do inciso IV dada pela 987/2022."
+    },
+    "reviewedScope": "Arts. 2º–3º; alteração 987/2022",
+    "textPath": "/contran/953-2022.json"
+  },
+  {
+    "number": 952,
+    "year": 2022,
+    "title": "Para-choque traseiro: categoria e alteração do veículo",
+    "subject": "Estabelece as especificações técnicas para a fabricação e a instalação de para-choques traseiros nos veículos de fabricação nacional ou importados das categorias N2, N3, O3 e O4.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Anexos Revoga as Resoluções 593/16; 645/16 e 674/17",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9522022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "47fa0150b323a2edd1a5d4758c637f8813fda7a02ccf6ea7b329025ff99b5403",
+    "historical": false,
+    "points": [
+      "O recorte abrange N2, N3, O3 e O4.",
+      "O art. 3º alcança fabricação ou importação a partir de 1º/01/2017.",
+      "Alterações que exigem inspeção para CSV também atraem as especificações do Anexo I, conforme o § 1º."
+    ],
+    "warning": "Não usar o marco de 2017 para dispensar automaticamente um veículo modificado enquadrado no § 1º. Ensaios e exceções têm disciplina própria.",
+    "example": {
+      "scenario": "Um veículo da categoria alcançada sofreu modificação que exige CSV; o responsável diz que seu ano antigo basta para afastar todas as especificações.",
+      "question": "O argumento resolve o caso?",
+      "answer": "Não. O art. 3º, § 1º também disciplina as alterações com inspeção exigida para CSV.",
+      "variation": "A questão descreve automóvel M1 comum.",
+      "variationAnswer": "Ele não entra no recorte de categorias do art. 1º apenas porque possui para-choque traseiro."
+    },
+    "reviewedScope": "Arts. 1º–3º",
+    "textPath": "/contran/952-2022.json"
+  },
+  {
+    "number": 951,
+    "year": 2022,
+    "title": "Cintos e ancoragem: conjunto técnico, não só presença",
+    "subject": "Estabelece os requisitos de instalação e os procedimentos de ensaios de cintos de segurança, ancoragem e apoios de cabeça dos veículos automotores.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2023-09-26",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Alterada a partir de 02 de outubro de 2023 pela Resolução 997/23 Anexos Revoga as Resoluções 278/08; 518/15 e 551/15",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9512022.pdf",
+    "relatedSources": [
+      {
+        "label": "Resolução 997",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9972023.pdf"
+      }
+    ],
+    "sourceSha256": "a41b468b4fadc5428cf6a8eb73994c24e057f5293277781bea06845388504369",
+    "historical": false,
+    "points": [
+      "Cinto, ancoragem e apoio de cabeça têm requisitos técnicos nos anexos.",
+      "O art. 3º define o recorte de produção/importação a partir de 30/01/2020.",
+      "A 997/2023 alterou o Anexo I quanto aos apoios de cabeça; consultar a redação atual do ponto específico."
+    ],
+    "warning": "Ter um cinto instalado não prova que sua ancoragem atende ao ensaio. As exceções de apoio de cabeça não se transformam em dispensa universal de cintos.",
+    "example": {
+      "scenario": "Um fabricante demonstra somente que há cintos, sem verificar a ancoragem exigida.",
+      "question": "A demonstração cobre todos os requisitos estudados?",
+      "answer": "Não. O art. 2º exige o atendimento técnico dos cintos, da ancoragem e dos apoios de cabeça, conforme sua aplicação.",
+      "variation": "Uma hipótese de exceção da 997/2023 é citada para dispensar todos os cintos do veículo.",
+      "variationAnswer": "A exceção precisa ser aplicada ao item e ao recorte exatos; não se amplia automaticamente para outros equipamentos."
+    },
+    "reviewedScope": "Arts. 1º–3º; alteração 997/2023",
+    "textPath": "/contran/951-2022.json"
+  },
+  {
+    "number": 950,
+    "year": 2022,
+    "title": "Transporte internacional: inspeção e certificado",
+    "subject": "Dispõe sobre a atribuição de competência para a realização da inspeção técnica veicular nos veículos utilizados no transporte rodoviário internacional de cargas e passageiros.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Revoga as Resoluções 247/07; 359/10 e 379/11",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9502022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "6dbccd76cd408cb9635af75709e4173949963d2b463644eda5b18104bc57d76e",
+    "historical": false,
+    "points": [
+      "O órgão máximo executivo de trânsito da União realiza a inspeção por empresas licenciadas no regime do art. 2º.",
+      "Veículo aprovado recebe selo de segurança vinculado ao certificado.",
+      "O certificado é de porte obrigatório na forma prevista pela resolução."
+    ],
+    "warning": "Não confundir o selo com dispensa do certificado, nem empresa licenciada com qualquer oficina.",
+    "example": {
+      "scenario": "Um veículo de transporte rodoviário internacional aprovado traz o selo no para-brisa, mas seu responsável diz que não precisa portar o certificado.",
+      "question": "O selo elimina o requisito documental?",
+      "answer": "Não. O art. 3º vincula selo e certificado e exige o porte deste nos termos da resolução.",
+      "variation": "A inspeção foi feita por oficina sem o licenciamento exigido para essa atividade.",
+      "variationAnswer": "O vínculo com empresa licenciada também integra o regime de competência do art. 2º."
+    },
+    "reviewedScope": "Arts. 1º–3º",
+    "textPath": "/contran/950-2022.json"
+  },
+  {
+    "number": 949,
+    "year": 2022,
+    "title": "Impacto lateral: retificação muda datas do cronograma",
+    "subject": "Estabelece os requisitos de proteção aos ocupantes de veículos em casos de impacto lateral contra barreira deformável e em casos de impacto lateral em poste.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-06-07",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Anexos Revoga as Resoluções 721/18 e 751/18 Revoga o Art. 6º da Resolução 799/20 Retificação",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9492022.pdf",
+    "relatedSources": [
+      {
+        "label": "Retificação da 949",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9492022R.pdf"
+      }
+    ],
+    "sourceSha256": "9b1505055be305a5358bded0622340a69a1c3ee11d762a9a6dffaa20f91a09cf",
+    "historical": false,
+    "points": [
+      "Impacto lateral contra barreira e impacto contra poste têm ensaios próprios.",
+      "A retificação do art. 5º, I, a substituiu 22/01/2018 por 1º/01/2020.",
+      "A retificação do art. 5º, II, a substituiu 31/12/2018 por 1º/01/2026."
+    ],
+    "warning": "Em outubro de 2026, não apresentar o marco de janeiro de 2026 como futuro. O alcance depende do ensaio, categoria e condições do dispositivo; o cronograma original está retificado.",
+    "example": {
+      "scenario": "Uma questão exige a data do art. 5º, II, a e oferece apenas a redação original de 31/12/2018.",
+      "question": "Qual marco consta da retificação oficial?",
+      "answer": "1º de janeiro de 2026. O PDF original deve ser lido com a retificação de 07/06/2022.",
+      "variation": "A pergunta se refere ao art. 5º, I, a.",
+      "variationAnswer": "Nesse outro dispositivo, a data corrigida é 1º de janeiro de 2020; não trocar os dois marcos."
+    },
+    "reviewedScope": "Arts. 1º–5º, com foco na retificação de 07/06/2022",
+    "textPath": "/contran/949-2022.json"
+  },
+  {
+    "number": 948,
+    "year": 2022,
+    "title": "Retrorrefletivos: a transição de 2024 já terminou",
+    "subject": "Estabelece os requisitos técnicos para o emprego de película retrorrefletiva em veículos.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-12-26",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Anexos Revoga a Resolução 643/16 Alterada pela Deliberação 263/22",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9482022.pdf",
+    "relatedSources": [
+      {
+        "label": "Resolução 981",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9812022.pdf"
+      },
+      {
+        "label": "Deliberação 263/2022",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/Deliberacao2632022.pdf"
+      }
+    ],
+    "sourceSha256": "4913ca4062bac5feecd4fe75ccb7f6eaff849c44ca3286eca77ce33379e4b1b6",
+    "historical": false,
+    "points": [
+      "Película retrorrefletiva aumenta a visibilidade diurna e noturna.",
+      "As categorias do art. 2º devem atender às disposições dos anexos.",
+      "O prazo da descrição “APROVADO SENATRAN” foi estendido até 1º/01/2024."
+    ],
+    "warning": "A transição não permanece aberta em 2026. Película retrorrefletiva de sinalização não é película de escurecimento de vidro, regulada por outro ato.",
+    "example": {
+      "scenario": "Um responsável invoca em 2026 a extensão até janeiro de 2024 para continuar sem a descrição exigida.",
+      "question": "O prazo antigo ainda justifica a falta?",
+      "answer": "Não. A extensão tem marco encerrado; é necessário aplicar a exigência e suas condições atuais.",
+      "variation": "A pergunta trata de película escura no para-brisa.",
+      "variationAnswer": "O objeto muda: deve-se consultar o regime de vidros da 960/2022 e sua alteração, não a 948."
+    },
+    "reviewedScope": "Arts. 1º–3º e 8º; Deliberação 263/2022 e ratificação 981/2022",
+    "textPath": "/contran/948-2022.json"
+  },
+  {
+    "number": 946,
+    "year": 2022,
+    "title": "Granel: conter e cobrir a carga",
+    "subject": "Dispõe sobre o transporte de cargas de sólidos a granel nas vias abertas à circulação pública em todo o território.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Revoga as Resoluções 441/13; 499/14; 618/16 e 664/17",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9462022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "1b91a007fceff406f34ecfd16c3d2835b5c384484d8e9a3aed9db265440f9343",
+    "historical": false,
+    "points": [
+      "Carga sólida a granel não está acondicionada em embalagem.",
+      "Nas hipóteses do art. 2º, cobertura deve ser integral, ancorada e conservada.",
+      "A regra geral tem ressalva para transporte com regulamentação específica."
+    ],
+    "warning": "Guardas laterais não substituem a cobertura exigida. A previsão especial da cana inteira não autoriza cordas em qualquer carga.",
+    "example": {
+      "scenario": "Areia é transportada diretamente em carroceria aberta com laterais fechadas, mas sem a cobertura exigida.",
+      "question": "As laterais bastam?",
+      "answer": "Não. Nas condições do art. 2º, também é necessária cobertura integral e eficaz, sem prejudicar equipamentos obrigatórios.",
+      "variation": "O veículo possui cobertura, mas a areia ultrapassa os limites da carroceria.",
+      "variationAnswer": "A cobertura não elimina a exigência de respeitar os limites da carroceria do art. 2º, § 4º."
+    },
+    "reviewedScope": "Arts. 2º–3º",
+    "textPath": "/contran/946-2022.json"
+  },
+  {
+    "number": 945,
+    "year": 2022,
+    "title": "Amarração: corda da lona não amarra a carga",
+    "subject": "Fixa os requisitos mínimos de segurança para amarração das cargas transportadas em veículos de carga.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Anexos Revoga as Resoluções 552/15; 631/16 e 676/17",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9452022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "7c1f561b92dd67b37bfb3d94783a22ec82fc991d90823a11c19159c64d9909c9",
+    "historical": false,
+    "points": [
+      "Amarração e ancoragem devem conter a carga nas condições esperadas da viagem.",
+      "O art. 4º prevê cintas, correntes ou cabos de aço e requisitos de capacidade.",
+      "Cordas são proibidas para amarração da carga, mas podem fixar a lona de cobertura."
+    ],
+    "warning": "A regra geral não elimina regimes específicos ou veículos com sistema próprio de contenção, nos termos do art. 2º. Não confundir cobertura com amarração.",
+    "example": {
+      "scenario": "Em transporte sujeito à regra geral, caixas são amarradas apenas por cordas.",
+      "question": "É suficiente se a corda parecer resistente?",
+      "answer": "Não. O art. 4º, § 3º proíbe cordas como dispositivo de amarração da carga.",
+      "variation": "A carga está amarrada com os dispositivos adequados e a corda prende somente a lona.",
+      "variationAnswer": "Esse uso da corda é admitido pela ressalva; ainda devem ser cumpridos os demais requisitos de segurança."
+    },
+    "reviewedScope": "Arts. 2º–4º",
+    "textPath": "/contran/945-2022.json"
+  },
+  {
+    "number": 944,
+    "year": 2022,
+    "title": "Identificação auxiliar: não é base do AIT",
+    "subject": "Dispõe sobre o dispositivo auxiliar de identificação veicular.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Anexos Revoga as Resoluções 370/10; 387/11; 575/15 e 616/16",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9442022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "eb16406adc5734b417b1524ddb8c9f338c4824e069b315a1cb7b943782694d27",
+    "historical": false,
+    "points": [
+      "O sistema auxiliar de identificação é facultativo, respeitadas as especificações.",
+      "O art. 3º veda fundamentar a identificação para AIT nesse sistema auxiliar.",
+      "Caracteres diferentes da placa de registro têm consequência específica no art. 4º."
+    ],
+    "warning": "Faixa de identificação auxiliar não substitui a placa oficial, mesmo que seja mais fácil de visualizar.",
+    "example": {
+      "scenario": "O agente identifica o veículo para o AIT exclusivamente pela inscrição auxiliar, sem fundamento na identificação oficial.",
+      "question": "O procedimento atende ao art. 3º?",
+      "answer": "Não. A norma impede que a identificação para o AIT se fundamente no sistema auxiliar.",
+      "variation": "A inscrição auxiliar coincide com a placa, mas é apresentada como obrigatória para toda a frota.",
+      "variationAnswer": "O art. 2º trata de uso facultativo; coincidência de caracteres não altera a natureza dessa previsão."
+    },
+    "reviewedScope": "Arts. 2º–4º",
+    "textPath": "/contran/944-2022.json"
+  },
+  {
+    "number": 943,
+    "year": 2022,
+    "title": "Motofrete e mototáxi: categoria e equipamentos",
+    "subject": "Estabelece requisitos mínimos de segurança para o transporte remunerado de passageiros (mototáxi) e de cargas (motofrete) em motocicleta e motoneta, e dá outras providências.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Anexos Revoga as Resoluções 251/07; 356/10 e 378/11",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9432022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "5bd331bb20e2cf1a4103a557dd7d4a8956ed3f7996876f5e4b8a177aba40c084",
+    "historical": false,
+    "points": [
+      "Veículo autorizado para transporte remunerado deve ser registrado na categoria aluguel.",
+      "A proteção de pernas e motor e o aparador de linha integram os equipamentos do art. 3º.",
+      "A autorização do serviço e as exigências do veículo são requisitos diferentes."
+    ],
+    "warning": "Não confundir categoria de aluguel do veículo com categoria da CNH. Este guia não certifica todas as exigências pessoais ou municipais do serviço.",
+    "example": {
+      "scenario": "Uma motocicleta foi autorizada para motofrete, mas continua registrada como particular.",
+      "question": "A autorização dispensa o registro na categoria aluguel?",
+      "answer": "Não. O art. 2º exige a categoria de registro adequada para o serviço remunerado autorizado.",
+      "variation": "O registro está correto, mas falta um equipamento de segurança exigido no art. 3º.",
+      "variationAnswer": "A categoria correta não substitui as exigências dos equipamentos."
+    },
+    "reviewedScope": "Arts. 2º–4º",
+    "textPath": "/contran/943-2022.json"
+  },
+  {
+    "number": 942,
+    "year": 2022,
+    "title": "Siderúrgicos: classificar a carga antes de amarrar",
+    "subject": "Estabelece as exigências sobre a análise, comparação e transporte de material siderúrgico para veículos rodoviários e de carga.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Em vigor Anexos Revoga as Resoluções 701/17; 767/18 e 821/21",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9422022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "20df5cf12ec80e8aff9077ea837799cd819e7360ef36a838608b7465b8974c8e",
+    "historical": false,
+    "points": [
+      "A classificação distingue produtos siderúrgicos e seus insumos.",
+      "O carvão, a granel ou ensacado, é considerado insumo pelo art. 3º.",
+      "Arrumação e amarração seguem as condições específicas da resolução."
+    ],
+    "warning": "Não aplicar uma única configuração a barras, bobinas e outros materiais diferentes. Este guia não certifica os esquemas técnicos de cada tipo.",
+    "example": {
+      "scenario": "Uma questão exclui o carvão ensacado do regime sob a justificativa de que não é produto metálico acabado.",
+      "question": "A exclusão corresponde ao art. 3º?",
+      "answer": "Não. A resolução considera o carvão a granel ou ensacado como insumo de produtos siderúrgicos.",
+      "variation": "O caso troca barras por bobinas e mantém a configuração de amarração sem reavaliar a carga.",
+      "variationAnswer": "É preciso conferir as condições próprias do material; a classificação interfere na arrumação e contenção."
+    },
+    "reviewedScope": "Arts. 2º–4º",
+    "textPath": "/contran/942-2022.json"
+  },
+  {
+    "number": 941,
+    "year": 2022,
+    "title": "Vistoria de identificação: habilitação prévia",
+    "subject": "Estabelece procedimentos para o exercício da atividade de vistoria de identificação veicular a ser realizada pelos órgãos e entidades executivos de trânsito dos Estados e do Distrito Federal, ou por pessoa jurídica de direito público ou privado, habilitada para a prestação dos serviços de vistoria veicular.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-07-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Alterada a partir de 1º de agosto de 2022 pela Resolução 977/22 Revoga as Resoluções 466/13; 496/14; 737/18 e 781/20",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9412022.pdf",
+    "relatedSources": [
+      {
+        "label": "Resolução 977",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9772022.pdf"
+      }
+    ],
+    "sourceSha256": "3215840c6ec3d2f3a9a7af22d0c539270e0686c71418b92c172d9cb773d8880f",
+    "historical": false,
+    "points": [
+      "A responsabilidade da vistoria de identificação é do órgão executivo estadual ou distrital.",
+      "Pessoa jurídica pública ou privada pode prestar o serviço quando previamente habilitada.",
+      "A vistoria de identificação não é automaticamente a inspeção técnica para emissão de CSV."
+    ],
+    "warning": "A 977/2022 alterou o regime de habilitação; consultar suas condições para casos específicos. Este guia não dá autorização genérica para vistoria móvel.",
+    "example": {
+      "scenario": "Uma empresa privada oferece vistoria de identificação sem a habilitação prevista.",
+      "question": "Ser pessoa jurídica privada basta?",
+      "answer": "Não. O art. 2º admite a execução por pessoa jurídica previamente habilitada, mantendo a responsabilidade do órgão de trânsito.",
+      "variation": "A empresa é habilitada e a hipótese exige vistoria de identificação.",
+      "variationAnswer": "A condição de prestador foi atendida, mas o procedimento e o laudo ainda precisam seguir as regras aplicáveis."
+    },
+    "reviewedScope": "Arts. 1º–2º; leitura com a alteração 977/2022",
+    "textPath": "/contran/941-2022.json"
+  },
+  {
+    "number": 940,
+    "year": 2022,
+    "title": "Capacete: óculos comuns não substituem proteção",
+    "subject": "Disciplina o uso de capacete para condutor e passageiro de motocicletas, motonetas, ciclomotores, triciclos motorizados e quadriciclos motorizados.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Revoga as Resoluções 453/13; 680/17 e 846/21",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9402022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "d9ce096ccc33966f87ac336bbae87d014bf0609c158815e34f6d3cdc37a6cc6c",
+    "historical": false,
+    "points": [
+      "Capacete precisa estar afixado pela cinta jugular e engate abaixo do maxilar inferior.",
+      "Capacete deve ter viseira ou, na ausência dela, óculos de proteção.",
+      "Óculos de sol, corretivos ou EPI usados isoladamente não substituem os óculos de proteção."
+    ],
+    "warning": "As regras não se aplicam aos triciclos e quadriciclos com cabine fechada indicados no art. 1º. Exceção de cabine não é dispensa para motocicleta aberta.",
+    "example": {
+      "scenario": "Um motociclista usa capacete sem viseira e somente óculos de grau.",
+      "question": "Os óculos de grau, sozinhos, atendem à exigência?",
+      "answer": "Não. O art. 4º, § 2º proíbe usá-los isoladamente em substituição aos óculos de proteção.",
+      "variation": "Usa óculos de proteção que permitem os óculos de grau simultaneamente.",
+      "variationAnswer": "Essa combinação é prevista na definição do § 1º, respeitadas as condições de uso e os demais requisitos."
+    },
+    "reviewedScope": "Arts. 1º–4º",
+    "textPath": "/contran/940-2022.json"
+  },
+  {
+    "number": 939,
+    "year": 2022,
+    "title": "Micro-ônibus M2: cronograma retificado",
+    "subject": "Estabelece os requisitos de segurança para veículos de transporte de passageiros tipo micro-ônibus, categoria M2, de fabricação nacional e importado.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-05-27",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Revoga as Resoluções 416/12; 505/14; 646/16 e 753/18 Retificação",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9392022.pdf",
+    "relatedSources": [
+      {
+        "label": "Retificação da 939",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9392022R.pdf"
+      }
+    ],
+    "sourceSha256": "a1e7da37e6b9e6daa45e862b3fbbd19eb1513ad3213b9be8e0305b6c0a144d57",
+    "historical": false,
+    "points": [
+      "A resolução se aplica a micro-ônibus da categoria M2.",
+      "A retificação substituiu o marco do projeto no art. 4º, I por 1º/01/2023.",
+      "O inciso II prevê o alcance geral dos requisitos da Tabela 2 a partir de 1º/01/2025, no recorte do dispositivo."
+    ],
+    "warning": "Não memorizar 28/12/2018 do PDF original no inciso retificado. M2 e M3 têm normas técnicas distintas.",
+    "example": {
+      "scenario": "A questão apresenta 28/12/2018 como marco de projeto vigente no art. 4º, I.",
+      "question": "Qual correção precisa ser considerada?",
+      "answer": "A retificação oficial de 27/05/2022 passou o marco para 1º de janeiro de 2023.",
+      "variation": "O caso trata de ônibus da categoria M3.",
+      "variationAnswer": "Consulte o regime próprio da 959/2022, em vez de transferir automaticamente o cronograma da M2."
+    },
+    "reviewedScope": "Arts. 1º–4º; retificação de 27/05/2022",
+    "textPath": "/contran/939-2022.json"
+  },
+  {
+    "number": 938,
+    "year": 2022,
+    "title": "Cronotacógrafo: registros além da velocidade",
+    "subject": "Dispõe sobre requisitos técnicos mínimos do registrador instantâneo e inalterável de velocidade e tempo (cronotacógrafo).",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga as Resoluções 092/99 e 406/12 Revoga a Art. 2º da Resolução 786/20",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9382022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "d33fe3ce62400a855cb9604a452b8d50ff223f338157de3d9695d59978ed0915",
+    "historical": false,
+    "points": [
+      "O aparelho registra velocidade e tempo de forma instantânea e inalterável.",
+      "Pode ser mecânico, eletrônico ou integrar conjunto computadorizado.",
+      "O art. 3º exige informações das últimas 24 horas de operação, incluindo distância e interrupções."
+    ],
+    "warning": "“Últimas 24 horas de operação” não é um prazo trabalhista de jornada autorizada. Este guia não certifica os limites legais de trabalho e descanso.",
+    "example": {
+      "scenario": "Um aparelho mostra apenas a velocidade atual, sem os registros mínimos das últimas 24 horas de operação.",
+      "question": "Isso atende ao art. 3º?",
+      "answer": "Não. A norma exige as informações mínimas de operação, não apenas um velocímetro instantâneo.",
+      "variation": "O cronotacógrafo integra um conjunto computadorizado que exerce outras funções.",
+      "variationAnswer": "A integração é admitida pelo art. 2º, desde que preserve as funções e os requisitos exigidos."
+    },
+    "reviewedScope": "Arts. 1º–4º",
+    "textPath": "/contran/938-2022.json"
+  },
+  {
+    "number": 937,
+    "year": 2022,
+    "title": "Engate: capacidade declarada pelo fabricante",
+    "subject": "Dispõe sobre o dispositivo de acoplamento mecânico para reboque (engate) utilizado em veículos com peso bruto total de até 3.500 kg e dá outras providências.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga as Resoluções 197/06 e 234/07",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9372022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "2a4bfdbadcfc7408dfca9c43cd977effa8c5d32992b5ea252542ee999f78068d",
+    "historical": false,
+    "points": [
+      "O recorte inclui veículos com PBT de até 3.500 kg com capacidade de tracionar declarada.",
+      "A norma trata do engate não original de fábrica e exige requisitos próprios.",
+      "A plaqueta de rastreabilidade informa fabricante, modelo de aplicação e outras características."
+    ],
+    "warning": "Instalar engate não cria capacidade de tração que o fabricante não declarou. O índice traz “01.04.222”; adotada a publicação de 01/04/2022 confirmada no PDF oficial. O objeto não é qualquer engate de qualquer veículo.",
+    "example": {
+      "scenario": "Um veículo de 3.000 kg recebe engate, mas não possui capacidade de tracionar reboques declarada pelo fabricante.",
+      "question": "O peso abaixo de 3.500 kg basta para autorizar a utilização no regime estudado?",
+      "answer": "Não. O art. 1º também exige a capacidade declarada de tracionar.",
+      "variation": "Há capacidade declarada, mas o engate não atende ao licenciamento e requisitos aplicáveis.",
+      "variationAnswer": "A capacidade do veículo é necessária, mas não substitui a conformidade do acessório."
+    },
+    "reviewedScope": "Arts. 1º–4º",
+    "publicationIndexDate": "01.04.222",
+    "textPath": "/contran/937-2022.json"
+  },
+  {
+    "number": 936,
+    "year": 2022,
+    "title": "Aviso do cinto: posição do condutor e retificação",
+    "subject": "Dispõe sobre a obrigatoriedade da instalação de dispositivo de aviso de não afivelamento dos cintos de segurança",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-07-07",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga o art. 7º da Resolução 799/20 e a Resolução 760/18 Retificação",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9362022.pdf",
+    "relatedSources": [
+      {
+        "label": "Retificação da 936",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9362022R.pdf"
+      }
+    ],
+    "sourceSha256": "376ed27631ac85bdeadf8bd75030286e0f7eed7c414739bdc4bad2bfe6b2a664",
+    "historical": false,
+    "points": [
+      "A posição do condutor deve ter o aviso de não afivelamento, conforme aplicação da norma.",
+      "Quando instalados nas posições dos passageiros indicados no art. 3º, os dispositivos também precisam cumprir os requisitos.",
+      "O cronograma usa 1º/01/2021 como marco de projeto após a retificação; o inciso II alcança os projetos anteriores a partir de 1º/01/2024."
+    ],
+    "warning": "Aviso sonoro/visual não substitui a obrigação de usar o cinto. Não repetir 31/12/2018 do cronograma original retificado.",
+    "example": {
+      "scenario": "Uma questão descreve o aviso do assento do condutor como facultativo em veículo abrangido pelo art. 2º.",
+      "question": "A classificação é correta?",
+      "answer": "Não. A posição do condutor tem exigência obrigatória no regime aplicável.",
+      "variation": "A questão pede o marco do projeto do art. 4º, I após a retificação.",
+      "variationAnswer": "O marco é 1º de janeiro de 2021, e não 31 de dezembro de 2018."
+    },
+    "reviewedScope": "Arts. 1º–4º; retificação de 07/07/2022",
+    "textPath": "/contran/936-2022.json"
+  },
+  {
+    "number": 935,
+    "year": 2022,
+    "title": "Rochas ornamentais: verificação durante o percurso",
+    "subject": "Dispõe sobre os requisitos de segurança para o transporte de blocos e chapas serradas de rochas ornamentais.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexo Revoga as Resoluções 354/10 e 790/20",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9352022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "7d22c013b55ce10887ff127111cec2fc3af6d0c63121b8a94f7ebaa790e4fad6",
+    "historical": false,
+    "points": [
+      "O transporte de blocos e chapas serradas exige condutor aprovado e certificado em CETCI.",
+      "O condutor deve verificar periodicamente travas e tensionamento durante o percurso.",
+      "Reaperto é necessário quando a verificação demonstrar a necessidade."
+    ],
+    "warning": "Inspeção antes da partida não dispensa as verificações periódicas. O conteúdo e a realização atual do curso devem ser conferidos na regulamentação de formação vigente.",
+    "example": {
+      "scenario": "O motorista verifica a amarração somente antes da saída e recusa qualquer conferência durante a viagem.",
+      "question": "A conduta atende ao art. 4º?",
+      "answer": "Não. A norma atribui ao condutor verificação periódica durante o percurso, com reaperto quando necessário.",
+      "variation": "A verificação do percurso revela afrouxamento das cintas.",
+      "variationAnswer": "Deve realizar o reaperto necessário; a conferência não é mera formalidade."
+    },
+    "reviewedScope": "Arts. 3º–4º",
+    "textPath": "/contran/935-2022.json"
+  },
+  {
+    "number": 932,
+    "year": 2022,
+    "title": "RENAINF: autuar e arrecadar são funções distintas",
+    "subject": "Dispõe sobre a organização e o funcionamento do Registro Nacional de Infrações de Trânsito (RENAINF), de que trata o inciso XXX do art. 19 do Código de Trânsito Brasileiro (CTB).",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga as Resoluções 637/16 e 677/17",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9322022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "599e61f21ee948aab0e3bf8f774bcda832b9f218c15c609722a8727d389caf40",
+    "historical": false,
+    "points": [
+      "O registro nacional integra-se ao RENAVAM e ao RENACH.",
+      "Órgão autuador autua, julga defesa de autuação e aplica multa no recorte definido.",
+      "Órgão arrecadador efetua cobrança e recebimento, segundo a definição do art. 4º."
+    ],
+    "warning": "Receber o valor da multa não transforma, por si só, o arrecadador no autor da autuação ou julgador da defesa.",
+    "example": {
+      "scenario": "Um órgão recebe o pagamento da multa e é tratado como autuador apenas por esse recebimento.",
+      "question": "As duas funções são necessariamente iguais?",
+      "answer": "Não. As definições do art. 4º distinguem autuação e arrecadação; podem envolver órgãos com funções diferentes.",
+      "variation": "A pergunta indica o órgão que efetivamente autuou e aprecia a defesa da autuação.",
+      "variationAnswer": "A função descrita corresponde ao órgão autuador, não somente à arrecadação."
+    },
+    "reviewedScope": "Arts. 2º–4º",
+    "textPath": "/contran/932-2022.json"
+  },
+  {
+    "number": 931,
+    "year": 2022,
+    "title": "SNE: adesão e disponibilização da notificação",
+    "subject": "Estabelece o Sistema de Notificação Eletrônica (SNE).",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga as Resoluções 622/16 e 636/16",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9312022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "d3318afc884001ffd232d88e7fcb4385187a5061ca72d06893619eda13b93d80",
+    "historical": false,
+    "points": [
+      "O SNE é meio de comunicação virtual mediante adesão prévia.",
+      "Abrange notificações e meios de defesa e recurso previstos no art. 4º.",
+      "A expedição da notificação de autuação corresponde à efetiva disponibilização no sistema, registrada, para o prazo de 30 dias referido no art. 5º."
+    ],
+    "warning": "Não confundir expedição com o momento em que o usuário abre a mensagem. Este guia não promete desconto automático por instalar aplicativo.",
+    "example": {
+      "scenario": "No regime do SNE aplicável, a notificação é disponibilizada e registrada, mas o usuário só a abre dias depois.",
+      "question": "A abertura tardia é o marco da expedição do art. 5º?",
+      "answer": "Não. O dispositivo usa a efetiva disponibilização no SNE, devidamente registrada.",
+      "variation": "A questão afirma que o sistema serve apenas para enviar multas, sem comportar defesa prévia ou recurso.",
+      "variationAnswer": "A afirmação não corresponde ao art. 4º, que contempla esses instrumentos de comunicação."
+    },
+    "reviewedScope": "Arts. 2º, 4º–5º",
+    "textPath": "/contran/931-2022.json"
+  },
+  {
+    "number": 927,
+    "year": 2022,
+    "title": "Aptidão: restrição não é inaptidão definitiva",
+    "subject": "Dispõe sobre o exame de aptidão física e mental, a avaliação psicológica e o credenciamento das entidades públicas e privadas de que tratam o art. 147, I e §§ 1º a 4º e o art. 148 da Lei nº 9.503, de 23 de setembro de 1997, que institui o Código de Trânsito Brasileiro.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Revoga as Resoluções 425/12; 474/14 e 500/14",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9272022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "d758833ebd14b6364d4bdfd84f73c72a20cfa30845cbb52629e4184e9dcf7b59",
+    "historical": false,
+    "points": [
+      "Apto com restrições envolve registro de restrição ou adaptação veicular.",
+      "Inapto temporário corresponde a motivo passível de tratamento ou correção.",
+      "Inapto corresponde, na definição do art. 8º, a motivo irreversível para a categoria pretendida."
+    ],
+    "warning": "Resultado médico e resultado psicológico têm classificações próprias. A necessidade de adaptação não autoriza presumir inaptidão; procedimentos de habilitação devem ser lidos com a 1020/2025.",
+    "example": {
+      "scenario": "O médico conclui que o candidato pode conduzir com uma restrição a registrar na CNH.",
+      "question": "Isso equivale automaticamente a inapto?",
+      "answer": "Não. A categoria descrita no art. 8º é apto com restrições.",
+      "variation": "O motivo da reprovação é passível de tratamento ou correção.",
+      "variationAnswer": "A classificação médica descrita é inapto temporário, não inaptidão irreversível."
+    },
+    "reviewedScope": "Arts. 8º–9º, com foco nos resultados do exame médico",
+    "textPath": "/contran/927-2022.json"
+  },
+  {
+    "number": 926,
+    "year": 2022,
+    "title": "Infração sem veículo: prazo de expedição da autuação",
+    "subject": "Dispõe sobre a padronização dos procedimentos administrativos na lavratura de Auto de Infração de Trânsito, na expedição de notificação de autuação e de notificação de penalidade por infrações de responsabilidade de pessoas físicas ou jurídicas, sem a utilização de veículos, expressamente mencionadas no Código de Trânsito Brasileiro (CTB).",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga a Resolução 390/11",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9262022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "77efd4adc15dc23f142e338a77da24742d9b5effa09bfbef7a268bbf26cffab7",
+    "historical": false,
+    "points": [
+      "O objeto é a infração expressamente prevista no CTB sob responsabilidade de pessoa física/jurídica sem utilização de veículo.",
+      "No regime do art. 4º, ressalvado o art. 5º, a NA deve ser expedida em até 30 dias da constatação.",
+      "A defesa de autuação tem prazo próprio, não inferior a 30 dias conforme o dispositivo."
+    ],
+    "warning": "Expedir notificação e receber correspondência são eventos diferentes. Não aplicar o regime sem identificar a infração e as exceções do art. 5º.",
+    "example": {
+      "scenario": "Em hipótese alcançada pelo art. 4º, sem a exceção do art. 5º, a NA só é expedida 40 dias após a constatação.",
+      "question": "Foi respeitado o limite de expedição estudado?",
+      "answer": "Não. O limite do caso é de 30 dias contados da constatação.",
+      "variation": "A expedição ocorreu em 20 dias, mas o recebimento foi posterior.",
+      "variationAnswer": "Não concluir atraso de expedição só pela data de recebimento; os dois eventos precisam ser distinguidos."
+    },
+    "reviewedScope": "Arts. 1º–4º",
+    "textPath": "/contran/926-2022.json"
+  },
+  {
+    "number": 924,
+    "year": 2022,
+    "title": "Transporte escolar: campos de visão, não só presença de câmera",
+    "subject": "Consolida normas sobre a utilização obrigatória de espelhos retrovisores, equipamento do tipo câmera-monitor ou outro dispositivo equivalente, nos veículos destinados ao transporte coletivo de escolares.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-05-27",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Revoga as Resoluções 504/14 e 763/18 Retificação",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9242022.pdf",
+    "relatedSources": [
+      {
+        "label": "Retificação da 924",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9242022R.pdf"
+      }
+    ],
+    "sourceSha256": "248f0989704594e0cd54aa5192678fe5a19b7ad6d314e91b3ba6a97fb8c235c4",
+    "historical": false,
+    "points": [
+      "Os campos de visão podem ser obtidos por retrovisores, câmera-monitor, combinação ou outros dispositivos tecnicamente eficientes.",
+      "O equipamento precisa cumprir as especificações dos anexos.",
+      "A retificação do art. 4º, I substituiu 1º/01/2019 por 1º/01/2024 como marco do projeto."
+    ],
+    "warning": "Não dispensar campos de visão apenas porque existe uma câmera. O cronograma original deve ser lido com a retificação; não presumir adaptação universal a partir do resumo.",
+    "example": {
+      "scenario": "Um transporte escolar tem câmera, mas não proporciona um campo de visão exigido pelo anexo aplicável.",
+      "question": "A câmera, por si só, atende à norma?",
+      "answer": "Não. A alternativa tecnológica precisa obter os campos de visão e atender às especificações técnicas exigidas.",
+      "variation": "A solução combina retrovisores e câmera e comprova os campos de visão.",
+      "variationAnswer": "A combinação é admitida pelo art. 2º; o resultado técnico e as demais condições precisam ser atendidos."
+    },
+    "reviewedScope": "Arts. 2º–4º; retificação de 27/05/2022",
+    "textPath": "/contran/924-2022.json"
+  },
+  {
+    "number": 923,
+    "year": 2022,
+    "title": "Toxicológico: prazo do laudo atualizado para 30 dias",
+    "subject": "Dispõe sobre o exame toxicológico de larga janela de detecção, em amostra queratínica, para a habilitação, renovação ou mudança para as categorias C, D e E, decorrente da Lei nº 13.103, de 02 de março de 2015.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2024-04-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Alterada pela Resolução 1009/24 Revoga as Resoluções 691/17; 713/17; 724/18 e 843/21Revoga o art. 4º da Resolução 786/20 e os arts. 2º e 4º da Resolução 855/21",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9232022.pdf",
+    "relatedSources": [
+      {
+        "label": "Resolução 1009",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10092024.pdf"
+      }
+    ],
+    "sourceSha256": "c2a5db6c9b6ba190346489a9f223c4f0be9d100bc8cef817a1120033e86b3ad4",
+    "historical": false,
+    "points": [
+      "O exame estudado tem análise retrospectiva mínima de 90 dias em amostra queratínica.",
+      "Todas as etapas precisam de cadeia de custódia com validade forense.",
+      "O prazo do art. 9º para entrega do laudo passou de 15 para 30 dias contados da coleta pela 1009/2024."
+    ],
+    "warning": "O PDF original conserva o prazo antigo de 15 dias. Não confundir janela retrospectiva, validade do resultado e prazo de entrega, nem tratar a lista desta resolução como exaustiva de toda exigência do CTB atual.",
+    "example": {
+      "scenario": "Um laboratório usa a redação original para afirmar que o art. 9º vigente mantém prazo máximo de 15 dias para entrega do laudo.",
+      "question": "Qual é a redação modificadora conferida?",
+      "answer": "A 1009/2024 alterou o prazo máximo para trinta dias contados da coleta.",
+      "variation": "A questão chama os 90 dias de análise retrospectiva de prazo para entrega do laudo.",
+      "variationAnswer": "São grandezas diferentes: retrospectiva refere-se à janela de detecção; a entrega segue o art. 9º atualizado."
+    },
+    "reviewedScope": "Arts. 2º–4º e 9º; redação da 1009/2024",
+    "textPath": "/contran/923-2022.json"
+  },
+  {
+    "number": 922,
+    "year": 2022,
+    "title": "CSV: inspeção de segurança não é mera identificação",
+    "subject": "Estabelece procedimentos para a prestação de serviços por Instituição Técnica Licenciada (ITL) e Entidade Técnica Públicaou Paraestatal (ETP), para emissão do Certificado de Segurança Veicular (CSV), de que trata o art. 106 do Código de Trânsito Brasileiro (CTB).",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga as Resoluções 632/16; 669/17; 693/17 e 695/17",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9222022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "2a6b8a4818faa0ab91f88fa22305ff784257dee0bc5c3d50fd50edf165b22909",
+    "historical": false,
+    "points": [
+      "A resolução disciplina ITL e ETP na prestação de serviços para emissão do CSV.",
+      "O art. 2º inclui inspeção de veículos modificados e outros casos indicados.",
+      "Laudos previstos no art. 3º têm finalidades próprias; não se confundem automaticamente com o CSV."
+    ],
+    "warning": "Uma vistoria de identificação não substitui a inspeção de segurança exigida para a modificação. Conferir a instituição e o procedimento aplicáveis.",
+    "example": {
+      "scenario": "Uma modificação exige inspeção de segurança para CSV, mas o proprietário apresenta apenas vistoria de identificação.",
+      "question": "Os procedimentos são intercambiáveis?",
+      "answer": "Não. A vistoria de identificação e a inspeção de segurança têm objetos distintos; deve ser atendida a inspeção exigida.",
+      "variation": "A inspeção cabível é feita pela instituição habilitada e resulta no CSV exigido.",
+      "variationAnswer": "Esse é o documento do regime de segurança; ainda devem ser cumpridas as demais exigências da modificação e do registro."
+    },
+    "reviewedScope": "Arts. 1º–3º",
+    "textPath": "/contran/922-2022.json"
+  },
+  {
+    "number": 921,
+    "year": 2022,
+    "title": "Tanque suplementar: autorização antes da instalação",
+    "subject": "Disciplina múltiplos tanques, a instalação de tanque suplementar e a alteração da capacidade do tanque original de combustível em veículos, dedicados à sua propulsão ou operação de seus equipamentos especializados, e dá outras providências.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga as Resoluções 181/05 e 194/06",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9212022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "c2d4543478c7cd706a4a82e20e9ffe1f055c263b8341425500244d60bfc3098e",
+    "historical": false,
+    "points": [
+      "Tanque suplementar é instalado após registro/licenciamento e destinado à propulsão ou equipamento especializado.",
+      "Instalação e alteração da capacidade exigem prévia autorização.",
+      "O art. 3º prevê limite de 1.200 litros para tanques de veículos automotores e regime próprio de 350 litros em reboques/semirreboques para equipamentos especializados."
+    ],
+    "warning": "Não transferir o limite de 1.200 litros para qualquer tanque em reboque. O regime varia conforme veículo e finalidade.",
+    "example": {
+      "scenario": "Um caminhão recebe tanque suplementar antes de pedir a autorização competente.",
+      "question": "Pedir a autorização depois satisfaz a exigência de autorização prévia?",
+      "answer": "Não. O art. 5º exige autorização antes da instalação ou da alteração da capacidade.",
+      "variation": "Um semirreboque usa tanque para equipamento especializado durante o transporte e invoca o limite de 1.200 litros.",
+      "variationAnswer": "O art. 3º, § 3º prevê para esse caso o limite de 350 litros; os recortes não são equivalentes."
+    },
+    "reviewedScope": "Arts. 2º–5º",
+    "textPath": "/contran/921-2022.json"
+  },
+  {
+    "number": 920,
+    "year": 2022,
+    "title": "Fiscalização não metrológica também exige conformidade",
+    "subject": "Regulamenta a utilização de sistemas automáticos não metrológicos de fiscalização, nos termos do § 2º do artigo 280 do Código de Trânsito Brasileiro.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga as Resoluções 165/04; 174/05 e 458/13",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9202022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "15be466f6f31ce9c8d1780f83d2458855878446080a6f3f3efb29826418020d6",
+    "historical": false,
+    "points": [
+      "Os sistemas possuem registrador de imagem e tipos de instalação definidos.",
+      "A conformidade do modelo deve ser avaliada pelo INMETRO ou entidade acreditada.",
+      "Precisam atender aos requisitos mínimos da infração a detectar."
+    ],
+    "warning": "“Não metrológico” não significa sem controle técnico. Não aplicar esta disciplina automaticamente a medidores de velocidade.",
+    "example": {
+      "scenario": "Uma câmera de fiscalização é usada sem avaliação de conformidade do modelo, sob a alegação de que o sistema não é metrológico.",
+      "question": "A alegação afasta o art. 3º?",
+      "answer": "Não. O dispositivo exige avaliação de conformidade do modelo mesmo nesse tipo de sistema.",
+      "variation": "A avaliação existe, mas o sistema não atende ao requisito específico da infração detectada.",
+      "variationAnswer": "A conformidade geral do modelo não substitui o atendimento dos requisitos específicos mínimos."
+    },
+    "reviewedScope": "Arts. 1º–4º",
+    "textPath": "/contran/920-2022.json"
+  },
+  {
+    "number": 919,
+    "year": 2022,
+    "title": "Extintor: obrigatório em ônibus, facultativo em automóvel",
+    "subject": "Estabelece as especificações para os extintores de incêndio de instalação obrigatória ou facultativa nos veículos automotores.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga as Resoluções 157/04; 223/07; 272/08; 333/09; 516/15; 521/15; 536/15 e 556/15",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9192022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "7804d14417f6cbf42e38cc0a01ae538ed9479aaa5c991778f51d717f74c3f120",
+    "historical": false,
+    "points": [
+      "Ônibus, micro-ônibus, caminhão e demais categorias do art. 2º têm instalação obrigatória.",
+      "Em automóveis e outras categorias do § 1º, a instalação é facultativa por opção do proprietário.",
+      "Quem opta por instalar deve seguir as especificações da resolução."
+    ],
+    "warning": "Facultativo não significa permitido instalar equipamento vencido ou inadequado. Não estender a opção do automóvel ao ônibus.",
+    "example": {
+      "scenario": "Um ônibus circula sem extintor e seu responsável cita a faculdade prevista para automóveis.",
+      "question": "A faculdade se aplica ao ônibus?",
+      "answer": "Não. Ônibus está no grupo de instalação obrigatória do art. 2º.",
+      "variation": "O proprietário de automóvel particular opta por instalar extintor.",
+      "variationAnswer": "A escolha é facultativa no recorte do § 1º, mas o equipamento instalado deve cumprir as normas aplicáveis."
+    },
+    "reviewedScope": "Arts. 2º–3º",
+    "textPath": "/contran/919-2022.json"
+  },
+  {
+    "number": 918,
+    "year": 2022,
+    "title": "Multas: autuação e penalidade são etapas distintas",
+    "subject": "Consolida as normas sobre procedimentos para a aplicação das multas por infrações, a arrecadação e o repasse dos valores arrecadados, nos termos do Código de Trânsito Brasileiro (CTB).",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2023-04-25",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Alterada pela Resolução 991/23 Revoga as Resoluções 156/04; 424/12; 442/13; 574/15; 619/16; 697/17; 736/18 e 845/21Revoga a Deliberação 115/11",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9182022.pdf",
+    "relatedSources": [
+      {
+        "label": "Resolução 991",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9912023.pdf"
+      }
+    ],
+    "sourceSha256": "5153b6823048ef78d7f19e181252a4b6701dffa7bed3e8b64b6ae1cbc34eae41",
+    "historical": false,
+    "points": [
+      "O AIT inicia o processo administrativo; NA e notificação de penalidade têm funções distintas.",
+      "No regime do art. 4º, a NA deve ser expedida em até 30 dias do cometimento.",
+      "A não expedição da NA no prazo leva ao arquivamento do AIT, na hipótese estudada."
+    ],
+    "warning": "O prazo é de expedição, não de recebimento. Há exceção remissiva ao art. 3º, § 5º. A 991/2023 alterou o regime de multa pela não identificação: não reproduzir o artigo correspondente só pelo PDF original.",
+    "example": {
+      "scenario": "Fora da exceção indicada, o órgão só expede a NA 40 dias depois do cometimento da infração.",
+      "question": "Qual efeito prevê o art. 4º, § 1º?",
+      "answer": "Arquivamento do AIT pela não expedição no prazo de trinta dias.",
+      "variation": "A NA foi expedida em prazo regular, mas o proprietário a recebeu depois.",
+      "variationAnswer": "O recebimento posterior, sozinho, não comprova descumprimento do prazo de expedição; analisar os eventos corretos."
+    },
+    "reviewedScope": "Arts. 2º–4º; leitura com a alteração 991/2023",
+    "textPath": "/contran/918-2022.json"
+  },
+  {
+    "number": 917,
+    "year": 2022,
+    "title": "Madeira: a fronteira de 2,50 metros",
+    "subject": "Fixa os requisitos técnicos de segurança para o transporte de toras e de madeira bruta por veículo rodoviário de carga.",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Anexos Revoga as Resoluções 196/06 e 246/07",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9172022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "ce93606a20221dab64008df1b4b9776d79bd9e66deefc7d25a4efc011552f258",
+    "historical": false,
+    "points": [
+      "Tora é madeira bruta com comprimento superior a 2,50 m.",
+      "Toras seguem transporte longitudinal com as disposições previstas.",
+      "Madeira bruta de até 2,50 m pode ser transportada longitudinal ou transversalmente, cumpridas as condições próprias."
+    ],
+    "warning": "Não classificar madeira de exatamente 2,50 m como “superior a 2,50 m”. A orientação permitida não dispensa contenção e amarração.",
+    "example": {
+      "scenario": "A carga contém madeira bruta de exatamente 2,50 metros de comprimento.",
+      "question": "Ela é tora pela definição desta resolução?",
+      "answer": "Não. A definição exige comprimento superior a 2,50 m; o caso está no recorte do art. 4º.",
+      "variation": "O comprimento passa a 2,60 metros.",
+      "variationAnswer": "Entra na definição de tora e no regime de transporte longitudinal do art. 3º."
+    },
+    "reviewedScope": "Arts. 2º–4º",
+    "textPath": "/contran/917-2022.json"
+  },
+  {
+    "number": 916,
+    "year": 2022,
+    "title": "Modificação: autorização, CAT e CSV têm funções próprias",
+    "subject": "Dispõe sobre a concessão de código de marca/modelo/versão, bem como sobre a permissão de modificações em veículos previstas nos arts. 98 e 106 da Lei nº 9.503, de 23 de setembro de 1997, que institui o Código de Trânsito Brasileiro (CTB).",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2026-05-29",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Alterada pela Resolução 958/22 Anexo IV alterado pela Resolução 1021/26 Anexos Revoga as Resoluções 78/98; 115/00; 291/08; 292/08; 319/09; 369/10; 384/11; 397/11; 419/12; 450/13; 463/13; 479/14; 673/17 e 847/21",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9162022.pdf",
+    "relatedSources": [
+      {
+        "label": "Resolução 1021",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10212026.pdf"
+      },
+      {
+        "label": "Resolução 958",
+        "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9582022.pdf"
+      }
+    ],
+    "sourceSha256": "a52f98b3134d0e92f6f104ca329199b914e1a74f5abc941a03dc36e6efa49d21",
+    "historical": false,
+    "points": [
+      "Modificação em veículo registrado exige autorização prévia da autoridade responsável.",
+      "Novo código/CAT e inspeção/CSV dependem das hipóteses dos anexos.",
+      "O Anexo IV deve ser lido com a 1021/2026; a observação 9 do Anexo V foi revogada pela 958/2022."
+    ],
+    "warning": "Não transformar emissão de CSV em autorização automática para qualquer modificação. A 1021/2026 teve ementa retificada; consultar o ato relacionado para o Anexo IV atual.",
+    "example": {
+      "scenario": "Um proprietário realiza a modificação e só depois solicita a autorização para o veículo já registrado.",
+      "question": "A ordem atende ao art. 4º, I?",
+      "answer": "Não. A autorização exigida deve ser prévia, e as demais exigências dependem da modificação.",
+      "variation": "A autorização foi obtida, mas a modificação exige inspeção e CSV segundo o anexo aplicável.",
+      "variationAnswer": "A autorização não dispensa a inspeção e o documento de segurança exigidos para aquele caso."
+    },
+    "reviewedScope": "Arts. 3º–4º; alterações 958/2022 e 1021/2026 com retificação",
+    "textPath": "/contran/916-2022.json"
+  },
+  {
+    "number": 915,
+    "year": 2022,
+    "title": "ABS e CBS: funções diferentes na frenagem",
+    "subject": "Dispõe sobre os procedimentos para avaliação dos sistemas de freios de veículos e sobre a obrigatoriedade do uso do sistema antitravamento das rodas (ABS) e/ou frenagem combinada das rodas (CBS).",
+    "issueDate": "2022-03-28",
+    "publicationDate": "2022-04-01",
+    "lastRelatedActDate": "2022-04-01",
+    "checkedAt": "2026-10-12",
+    "officialSituation": "Revoga as Resoluções 380/11; 395/11; 509/14; 519/15; 535/15; 596/16; 606/16 e 657/17",
+    "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9152022.pdf",
+    "relatedSources": [],
+    "sourceSha256": "07b53ce129b94e6a5fc9b3cba7039af2c7f6cef5097ab89f74b7e9c85425ebc6",
+    "historical": false,
+    "points": [
+      "ABS evita o travamento das rodas durante a frenagem.",
+      "CBS distribui proporcionalmente a força de frenagem entre as rodas.",
+      "A exigência e as alternativas dependem do tipo de veículo e dos requisitos aplicáveis."
+    ],
+    "warning": "Os dois sistemas não são sinônimos. A definição não autoriza substituir qualquer ABS por CBS; cronogramas e categorias precisam ser conferidos no dispositivo próprio.",
+    "example": {
+      "scenario": "Uma questão define como ABS o sistema cuja função descrita é distribuir proporcionalmente a força de frenagem entre as rodas.",
+      "question": "A definição corresponde ao art. 3º?",
+      "answer": "Não. A descrição é de CBS. O ABS tem como finalidade evitar o travamento das rodas.",
+      "variation": "O sistema evita travamento por sensores e unidade de comando.",
+      "variationAnswer": "Essa é a função de ABS, sem que a identificação da função dispense os requisitos técnicos aplicáveis."
+    },
+    "reviewedScope": "Art. 3º, I–II; art. 4º",
+    "textPath": "/contran/915-2022.json"
   }
 ];

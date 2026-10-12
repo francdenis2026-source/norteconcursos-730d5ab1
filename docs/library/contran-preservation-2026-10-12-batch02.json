@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-12T15:43:51.640237+00:00",
+  "database_writes_in_batch": 0,
+  "tables": [
+    {
+      "table": "content_sources",
+      "before_rows": 275,
+      "after_rows": 275,
+      "identical": true
+    },
+    {
+      "table": "legal_course_units",
+      "before_rows": 3671,
+      "after_rows": 3671,
+      "identical": true
+    },
+    {
+      "table": "legal_courses",
+      "before_rows": 42,
+      "after_rows": 42,
+      "identical": true
+    },
+    {
+      "table": "legal_unit_explanations",
+      "before_rows": 3513,
+      "after_rows": 3513,
+      "identical": true
+    },
+    {
+      "table": "study_material_enrichments",
+      "before_rows": 244,
+      "after_rows": 244,
+      "identical": true
+    },
+    {
+      "table": "study_materials",
+      "before_rows": 152,
+      "after_rows": 152,
+      "identical": true
+    },
+    {
+      "table": "syllabus_editions",
+      "before_rows": 41,
+      "after_rows": 41,
+      "identical": true
+    },
+    {
+      "table": "syllabus_topics",
+      "before_rows": 429,
+      "after_rows": 429,
+      "identical": true
+    }
+  ],
+  "current_legal_units": 3511,
+  "current_review_metadata": 879,
+  "pending_current_review_metadata": 2632,
+  "note": "Snapshots brutos ignorados em outputs. Não foram criados cursos, questões ou materiais redundantes no Supabase.",
+  "previous_50_guides_preserved_exactly": true,
+  "new_guides": 50
+}

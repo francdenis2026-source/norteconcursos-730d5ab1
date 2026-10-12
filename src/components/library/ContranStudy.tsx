@@ -37,7 +37,7 @@ export function ContranStudy({ query = "" }: { query?: string }) {
   const total = currentContranGuides(CONTRAN_GUIDES).length;
   return <section className="space-y-4" aria-label="Consulta das resoluções do CONTRAN">
     <div className="rounded-xl border bg-card p-4 text-sm leading-6">
-      <p className="font-semibold">{total} guias para consulta atual · primeiro lote de {CONTRAN_GUIDES.length} atos conferidos</p>
+      <p className="font-semibold">{total} guias para consulta atual · {CONTRAN_GUIDES.length} atos conferidos nos lotes publicados</p>
       <p className="mt-1 text-muted-foreground">Conferência das fontes em {contranDate(CONTRAN_CHECKED_AT)}. Resoluções integralmente revogadas ficam fora do estudo atual; calendários antigos e guias de normas-base substituídas também foram separados.</p>
       <p className="mt-1 text-muted-foreground">As datas de publicação, atualização e produção de efeitos são diferentes. Os casos são autorais e revisam temas delimitados; não certificam todas as fichas e especificações técnicas dos anexos.</p>
       <p className="mt-1 text-muted-foreground">Confira o edital da sua carreira. Trânsito e CONTRAN não constam do edital PF 2025 citado nesta biblioteca.</p>
@@ -53,6 +53,7 @@ export function ContranStudy({ query = "" }: { query?: string }) {
       <details className="mt-3 rounded-xl border bg-muted/20 p-3">
         <summary className="flex cursor-pointer items-center gap-2 text-sm font-semibold"><BookOpen size={16} /> Estudar pontos-chave, casos e texto oficial</summary>
         <div className="mt-4 space-y-4">
+          {guide.reviewedScope && <p className="text-xs leading-5 text-muted-foreground">Escopo deste guia: {guide.reviewedScope}. Outros dispositivos e anexos exigem consulta específica.</p>}
           <section className="rounded-xl border-l-4 border-indigo-500 bg-indigo-50/50 p-3 dark:bg-indigo-950/20">
             <h4 className="text-sm font-bold">Pontos-chave</h4>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{guide.points.map((point) => <li key={point}>{point}</li>)}</ul>

@@ -13,6 +13,7 @@ export type ContranGuide = {
   subject: string;
   issueDate: string;
   publicationDate: string;
+  publicationIndexDate?: string;
   lastRelatedActDate: string;
   checkedAt: string;
   officialSituation: string;
@@ -20,6 +21,7 @@ export type ContranGuide = {
   relatedSources: { label: string; url: string }[];
   sourceSha256: string;
   historical: boolean;
+  reviewedScope?: string;
   points: string[];
   warning: string;
   example: ContranExample;
