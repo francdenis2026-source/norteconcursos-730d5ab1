@@ -7,7 +7,7 @@ import ts from 'typescript';
 function load(file,overrides={}){const module={exports:{}};const native=createRequire(import.meta.url);const code=ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;vm.runInNewContext(code,{module,exports:module.exports,require:name=>overrides[name]??native(name),URL},{filename:file});return module.exports;}
 const curated=load('src/data/glossaryCurated.ts');
 const generated=JSON.parse(readFileSync('src/data/glossary.generated.json','utf8'));
-const g=load('src/lib/glossary.ts',{'@/data/glossary.generated.json':generated,'@/data/glossaryCurated':curated});
+const g=load('src/lib/glossary.ts',{'@/data/glossary.generated.json':{default:generated},'@/data/glossaryCurated':curated});
 test('annotate marca verbetes sem alterar o texto e só a primeira ocorrência',()=>{
  const text='O flagrante é a prisão em flagrante; o Habeas Corpus protege a liberdade.';
  const parts=g.annotate(text);

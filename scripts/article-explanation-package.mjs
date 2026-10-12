@@ -1,4 +1,5 @@
 import {isDeepStrictEqual} from 'node:util';
+import {hasCurrentExplanationReview} from '../src/lib/explanationReview.ts';
 export const explanationFields=['unit_id','content_sha256','simples','pontos','atencao','exemplo','prova','termos','remissoes'];
 // Partial revocation does not repeal the surviving current articles. Never
 // admit a fully revoked source; unit status and exact body hash remain required.
@@ -40,6 +41,7 @@ export function checkArticlePreflight(pack, snapshot){
     const old=snapshot.legal_unit_explanations.find(e=>e.unit_id===row.unit_id);
     if(!course||course.syllabus_topic_id!==row.syllabus_topic_id||course.source_url!==law.source_url||!unit||!topic||!edition||!source)throw Error(`Vínculo ou texto mudou: ${row.course_slug}/${row.unit_key}`);
     if(old&&!sameExplanation(old,explanationPayload(row))&&(!row.expected||!isDeepStrictEqual(old,row.expected)))throw Error(`Preserve a revisão existente: ${row.unit_id}`);
+    if(old?.status==='published'&&!hasCurrentExplanationReview(old,row.content_sha256)&&(!row.expected||!isDeepStrictEqual(old,row.expected)))throw Error(`Revisão da publicação existente necessária: ${row.unit_id}`);
     if(!old&&row.expected)throw Error('Revisão anterior desapareceu');
     if(old&&!['published','under_review'].includes(old.status))throw Error('Estado inesperado');
   }

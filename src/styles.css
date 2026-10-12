@@ -10195,3 +10195,59 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     z-index: 1;
   }
 }
+
+/* Mobile dark theme: keep the image-led homepage readable after the compact
+   surface rules are applied. */
+@media (max-width: 767px) {
+  .dark .lp-hero__title,
+  .dark .mh__grid strong,
+  .dark .mh__plan h3,
+  .dark .mh__price {
+    color: oklch(0.98 0.006 255);
+  }
+  .dark .lp-hero__lead,
+  .dark .mh__lead,
+  .dark .mh__grid span,
+  .dark .mh__pills li,
+  .dark .mh__pcac p,
+  .dark .mh__plan li,
+  .dark .mh__cta {
+    color: oklch(0.9 0.012 255);
+  }
+  .dark .mh__pcac small,
+  .dark .mh__price small,
+  .dark .mh__plan li.is-off {
+    color: oklch(0.76 0.018 258);
+  }
+  .dark .mh__tab {
+    border-color: oklch(1 0 0 / 0.2);
+    color: oklch(0.9 0.012 255);
+    background: oklch(1 0 0 / 0.08);
+  }
+  .dark .mh__tab.is-on {
+    border-color: var(--brass-soft);
+    color: var(--brass-foreground);
+    background: var(--brass);
+  }
+  .dark .mh__grid li,
+  .dark .mh__plan {
+    border-color: oklch(1 0 0 / 0.16);
+    background: oklch(1 0 0 / 0.08);
+  }
+  .dark .mh__pills li {
+    border-color: oklch(1 0 0 / 0.18);
+  }
+  .dark .mh__cta {
+    border-color: oklch(1 0 0 / 0.16);
+    background: oklch(0.06 0.02 263 / 0.72);
+  }
+  .dark .mh .btn-glass {
+    border-color: oklch(1 0 0 / 0.28);
+    color: oklch(0.98 0.006 255);
+    background: oklch(1 0 0 / 0.1);
+  }
+  .dark .mh .btn-glass:hover {
+    border-color: oklch(1 0 0 / 0.46);
+    background: oklch(1 0 0 / 0.16);
+  }
+}

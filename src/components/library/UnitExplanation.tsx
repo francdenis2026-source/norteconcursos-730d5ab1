@@ -1,9 +1,10 @@
 import { useLegalExplanation, type LegalUnit } from "@/lib/legalCourses";
 import { LegalRefText } from "./LegalRefText";
 import { explanationExample, explanationPractice } from "@/lib/explanationPractice";
+import { hasCurrentExplanationReview } from "@/lib/explanationReview";
 
 const Block = ({ icon, title, tone, children }: { icon: string; title: string; tone: string; children: React.ReactNode }) => (
-  <section className={`rounded-xl border bg-card p-4 ${tone}`}>
+  <section className={`rounded-xl border p-4 ${tone.includes('bg-') ? '' : 'bg-card'} ${tone}`}>
     <h4 className="flex items-center gap-2 text-sm font-semibold"><span aria-hidden className="text-base">{icon}</span>{title}</h4>
     <div className="mt-2 text-[15px] leading-7">{children}</div>
   </section>
@@ -36,6 +37,7 @@ export function UnitExplanation({ unit, userId }: { unit: LegalUnit; userId: str
         <h3 className="text-lg font-bold">Entenda este artigo</h3>
         {e.status === "under_review" && <span className="rounded-full bg-amber-200 px-2.5 py-0.5 text-xs font-bold text-amber-900">Em revisão: só administradores veem</span>}
         {stale && <span className="rounded-full bg-rose-200 px-2.5 py-0.5 text-xs font-bold text-rose-900">Texto oficial mudou: revisar</span>}
+        {e.status === "published" && !stale && !hasCurrentExplanationReview(e, unit.content_sha256) && <span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-900 dark:bg-amber-950/40 dark:text-amber-200">Revisão editorial pendente</span>}
       </header>
       <Block icon="📘" title="Em palavras simples" tone="border-l-4 border-l-sky-500"><p><LegalRefText text={e.simples} /></p></Block>
       {e.pontos.length > 0 && <Block icon="🔑" title="Pontos-chave" tone="border-l-4 border-l-indigo-500"><List items={e.pontos} /></Block>}

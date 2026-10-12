@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {validateArticlePackage,checkArticlePreflight,explanationPayload} from './article-explanation-package.mjs';
 import {explanationExample,explanationPractice} from '../src/lib/explanationPractice.ts';
+import {hasCurrentExplanationReview} from '../src/lib/explanationReview.ts';
+import {buildExplanationQuiz} from '../src/lib/explanationQuiz.ts';
 import ts from 'typescript';
 import vm from 'node:vm';
 import {createRequire} from 'node:module';
@@ -14,9 +16,27 @@ const code=ts.transpileModule(readFileSync('src/components/library/UnitExplanati
 vm.runInNewContext(code,{module,exports:module.exports,require:name=>({
   '@/lib/legalCourses':{},
   '@/lib/explanationPractice':{explanationExample,explanationPractice},
+  '@/lib/explanationReview':{hasCurrentExplanationReview},
   './LegalRefText':{LegalRefText:({text})=>React.createElement('span',null,text)},
 }[name]??native(name))});
 const {ExplanationChecks}=module.exports;
+test('editorial approval requires reviewer, matching source and review of the latest content',()=>{
+ const e={status:'published',reviewed_by:'reviewer',reviewed_at:'2026-10-11T20:00:00Z',updated_at:'2026-10-11T20:00:00Z',content_sha256:'hash'};
+ assert.equal(hasCurrentExplanationReview(e,'hash'),true);
+ assert.equal(hasCurrentExplanationReview({...e,reviewed_by:null},'hash'),false);
+ assert.equal(hasCurrentExplanationReview({...e,reviewed_at:null},'hash'),false);
+ assert.equal(hasCurrentExplanationReview({...e,updated_at:'2026-10-11T21:00:00Z'},'hash'),false);
+ assert.equal(hasCurrentExplanationReview(e,'changed-source'),false);
+ assert.equal(hasCurrentExplanationReview({...e,status:'under_review'},'hash'),false);
+});
+test('true/false uses authored yes/no answers rather than turning headings into true assertions',()=>{
+ const items=buildExplanationQuiz(['O prazo é sempre trinta dias? Não; há prazos distintos.','A remoção é medida administrativa? Sim; é distinta de penalidade.','Qual é o prazo? Trinta dias.','Assertiva que reduz o prazo erra.'],'unit');
+ assert.equal(items.length,2);
+ assert.equal(items.find(i=>i.text.startsWith('O prazo')).correct,false);
+ assert.equal(items.find(i=>i.text.startsWith('A remoção')).correct,true);
+ assert.equal(items.find(i=>i.text.startsWith('O prazo')).why,'Não; há prazos distintos.');
+ assert.deepEqual(buildExplanationQuiz(['Rol de penalidades.','O prazo? A lei define.'],'unit'),[]);
+});
 function fixture(){
   return {
     legal_courses:pack.laws.map(l=>{const r=pack.units.find(r=>r.course_slug===l.slug);return {id:r.course_id,slug:l.slug,status:'active',source_url:l.source_url,syllabus_topic_id:r.syllabus_topic_id};}),
@@ -36,7 +56,8 @@ test('entire batch rejects changed source, stale curriculum, missing article or 
   for(const mutate of [s=>s.legal_course_units[0].content_sha256='f'.repeat(64),s=>s.syllabus_editions.forEach(e=>e.status='archived'),s=>s.legal_course_units.push({...s.legal_course_units[0],id:'00000000-0000-0000-0000-000000000000'}),s=>s.legal_unit_explanations[0].simples='A conflicting published revision',s=>s.legal_unit_explanations.shift()]){
     const s=fixture();mutate(s);assert.throws(()=>checkArticlePreflight(pack,s));
   }
-  const s=fixture();s.legal_unit_explanations=pack.units.map(r=>({...explanationPayload(r),status:'published'}));assert.doesNotThrow(()=>checkArticlePreflight(pack,s));
+  const s=fixture(),reviewedAt=new Date().toISOString();s.legal_unit_explanations=pack.units.map(r=>({...explanationPayload(r),status:'published',reviewed_by:'verified-reviewer',reviewed_at:reviewedAt,updated_at:reviewedAt}));assert.doesNotThrow(()=>checkArticlePreflight(pack,s));
+  s.legal_unit_explanations[0].reviewed_by=null;assert.throws(()=>checkArticlePreflight(pack,s));
 });
 test('practice does not guess answers for legacy notes and rendering keeps authored answer collapsed',()=>{
   assert.equal(explanationPractice('Uma assertiva comentada sem pergunta.'),null);
@@ -84,3 +105,11 @@ test('examples retain legal distinctions at age thresholds, biometrics and benef
   assert.match(get('icn','art-3').simples,/exclui dados biométricos/);assert.match(get('sic','art-12').atencao.join(' '),/Não transporte os dois terços/);
   assert.match(get('pensao-regulamento','art-15').atencao.join(' '),/§2º remete literalmente/);assert.match(get('pensao-regulamento','art-10').atencao.join(' '),/exceção/);
 });
+
+for (const [file,count] of [['pcd-foundations',39],['pcd-accessibility',21],['pcd-communication',20],['pcd-capacity-crimes',14],['pcd-recent-communication',2]]) {
+ test(`LBI reviewed package ${file}: explicit cases and answer keys`,()=>{
+  const p=JSON.parse(readFileSync(`docs/library/article-explanations-${file}-2026-10-11.json`,'utf8'));
+  validateArticlePackage(p);assert.equal(p.units.length,count);
+  for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ });
+}

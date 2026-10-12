@@ -17,8 +17,8 @@ for (const file of fs.readdirSync("scripts/explicacoes").filter((f) => f.endsWit
 }
 
 test('rascunhos não sobrescrevem revisões e exigem o texto-base exato',()=>{
- const files=[...fs.readdirSync('supabase/migrations').filter(f=>/^20261014003[3-8]00_explicacoes_.*\.sql$/.test(f)).map(f=>'supabase/migrations/'+f),...fs.readdirSync('sql-lotes').filter(f=>/^leis3-.*\.sql$/.test(f)).map(f=>'sql-lotes/'+f)];
- assert.equal(files.length,19);
+ const files=[...fs.readdirSync('supabase/migrations').filter(f=>/^20261014003[3-9]00_explicacoes_.*\.sql$/.test(f)).map(f=>'supabase/migrations/'+f),...fs.readdirSync('sql-lotes').filter(f=>/^leis[34]-.*\.sql$/.test(f)).map(f=>'sql-lotes/'+f),'sql-lotes/correcao-ctb-01.sql'];
+ assert.equal(files.length,26);
  for(const file of files){
   const sql=fs.readFileSync(file,'utf8');
   const statements=sql.match(/insert into public\.legal_unit_explanations[\s\S]*?on conflict \(unit_id\)[\s\S]*?;/g)??[];
