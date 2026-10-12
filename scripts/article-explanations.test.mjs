@@ -452,3 +452,16 @@ test('Maria protection review distinguishes scope, revictimization and emergency
  assert.match(get('art-12-d').pontos.join(' '),/não enumera qualquer policial.*13.084\/2026/s);
  for(const key of ['art-1','art-2','art-5','art-12','art-12-c','art-12-d']) assert.equal(legalStudyCaveat('maria-penha',key).literalPractice,false);
 });
+
+test('Maria procedure review integrates 2026 changes without automatic imprisonment or coercive consent',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-maria-procedure-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,16);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match([get('art-16-a').simples,...get('art-16-a').pontos].join(' '),/incondicionada/);
+ assert.match(get('art-20').simples,/provocação válida.*de ofício.*13.964\/2019/);
+ assert.match(get('art-22').pontos.join(' '),/simultâneo.*sem ação principal/s);
+ assert.match(get('art-24-a').pontos.join(' '),/livremente consentida.*intimidação/s);
+ assert.match(get('art-24-a').atencao.join(' '),/não revoga formalmente.*adulteração/s);
+ for(const key of ['art-16','art-16-a','art-20','art-22','art-24-a']) assert.equal(legalStudyCaveat('maria-penha',key).literalPractice,false);
+});
