@@ -152,3 +152,49 @@ export const RESOLUCOES: ResolucaoContran[] = [
   { numero: "985", data: "15/12/2022", assunto: "Manual Brasileiro de Fiscalização de Trânsito (MBFT)", situacao: "Em vigor — alterada pelas Res. 1.012/2024, 1.003/2023, 1.023/2026 e 1.031/2026" },
   { numero: "973", data: "18/07/2022", assunto: "Regulamento de Sinalização Viária", situacao: "Consta da lista oficial; confira alterações posteriores no texto consolidado" },
 ];
+
+export type ResolucaoCobrada = {
+  numero: string;
+  assunto: string;
+  questoes: number;
+  /** vigente | alterada | revogada | confirmar */
+  estado: "vigente" | "alterada" | "revogada" | "confirmar";
+  situacao: string;
+};
+
+/**
+ * Resoluções do edital da PRF 2021 (lista de 34 resoluções) com o número de questões do guia de estudo da TEC Concursos
+ * (fonte secundária; indica tendência de cobrança, não é dado oficial). A situação vem da página oficial do Contran,
+ * atualizada em 06/10/2026; "confirmar" = a página não mostrou a situação no trecho consultado.
+ * O edital da PF 2025 (Agente, Escrivão, Papiloscopista e Delegado) não traz Legislação de Trânsito nem resoluções do Contran.
+ */
+export const RESOLUCOES_COBRADAS: ResolucaoCobrada[] = [
+  { numero: "973/2022", assunto: "Regulamento de Sinalização Viária (e anexos)", questoes: 434, estado: "alterada", situacao: "Alterada pelas Res. 986/2022, 1.012/2024 e 1.013/2024" },
+  { numero: "985/2022", assunto: "Manual Brasileiro de Fiscalização de Trânsito", questoes: 74, estado: "alterada", situacao: "Alterada pelas Res. 1.003/2023, 1.009/2024, 1.012/2024, 1.013/2024 e 1.031/2026" },
+  { numero: "882/2021", assunto: "Limites de peso e dimensões nas vias", questoes: 69, estado: "alterada", situacao: "Alterada pelas Res. 994/2023 e 1.015/2024 e pelas Deliberações 250 e 270" },
+  { numero: "960/2022", assunto: "Requisitos de segurança de vidros", questoes: 42, estado: "alterada", situacao: "Alterada pela Res. 989/2022 (a partir de 02/01/2023)" },
+  { numero: "993/2023", assunto: "Equipamentos obrigatórios da frota em circulação", questoes: 38, estado: "vigente", situacao: "Em vigor desde 03/07/2023" },
+  { numero: "623/2016", assunto: "Remoção, custódia e leilão de veículos", questoes: 37, estado: "revogada", situacao: "Revogada pela Res. 1.025/2026" },
+  { numero: "432/2013", assunto: "Fiscalização do consumo de álcool e outras substâncias psicoativas", questoes: 33, estado: "revogada", situacao: "Revogada pela Res. 1.031/2026" },
+  { numero: "789/2020", assunto: "Formação de condutores", questoes: 27, estado: "revogada", situacao: "Revogada pela Res. 1.020/2025" },
+  { numero: "24/1998", assunto: "Critérios de identificação de veículos", questoes: 27, estado: "confirmar", situacao: "Situação não confirmada na página oficial" },
+  { numero: "941/2022", assunto: "Vistoria veicular", questoes: 26, estado: "alterada", situacao: "Alterada pela Res. 977/2022" },
+  { numero: "969/2022", assunto: "Sistema de placas de identificação de veículos", questoes: 26, estado: "vigente", situacao: "Em vigor desde 01/07/2022" },
+  { numero: "957/2022", assunto: "Registro e licenciamento de veículo de coleção", questoes: 24, estado: "vigente", situacao: "Em vigor desde 01/06/2022" },
+  { numero: "508/2014", assunto: "Segurança para circulação de veículo de carga", questoes: 23, estado: "confirmar", situacao: "Situação não confirmada na página oficial" },
+  { numero: "927/2022", assunto: "Exame de aptidão, avaliação psicológica e credenciamento", questoes: 21, estado: "confirmar", situacao: "Situação não confirmada na página oficial" },
+  { numero: "723/2018", assunto: "Suspensão e cassação do direito de dirigir", questoes: 20, estado: "vigente", situacao: "Em vigor" },
+  { numero: "300/2008", assunto: "Exames pós-condenação por crime de trânsito", questoes: 20, estado: "confirmar", situacao: "Situação não confirmada na página oficial" },
+  { numero: "798/2020", assunto: "Fiscalização de velocidade", questoes: 19, estado: "alterada", situacao: "Em vigor desde 01/11/2020; alterada pela Res. 804/2020" },
+  { numero: "965/2022", assunto: "Áreas de segurança e estacionamento específicos", questoes: 19, estado: "alterada", situacao: "Alterada pela Res. 1.012/2024" },
+  { numero: "809/2020", assunto: "CRLV-e e ATPV-e (documentos digitais do veículo)", questoes: 17, estado: "revogada", situacao: "Revogada pela Res. 1.027/2026" },
+  { numero: "810/2020", assunto: "Classificação de danos de veículos acidentados", questoes: 17, estado: "alterada", situacao: "Alterada pela Res. 851/2021" },
+  { numero: "967/2022", assunto: "Baixa do registro de veículos", questoes: 16, estado: "vigente", situacao: "Em vigor desde 01/06/2022" },
+  { numero: "819/2021", assunto: "Transporte de crianças em veículos", questoes: 15, estado: "vigente", situacao: "Em vigor desde 12/04/2021" },
+  { numero: "735/2018", assunto: "Combinações para transporte de veículos (CTV/CTVP)", questoes: 13, estado: "revogada", situacao: "Revogada pela Res. 882/2021" },
+  { numero: "870/2021", assunto: "Plano Nacional de Redução de Mortes e Lesões no Trânsito", questoes: 12, estado: "revogada", situacao: "Revogada pela Res. 1.004/2023 (a partir de 02/01/2024)" },
+  { numero: "36/1998", assunto: "Sinalização de advertência com veículo imobilizado", questoes: 12, estado: "confirmar", situacao: "Situação não confirmada na página oficial" },
+  { numero: "525/2015", assunto: "Fiscalização do tempo de direção do motorista profissional", questoes: 10, estado: "confirmar", situacao: "Situação não confirmada na página oficial" },
+  { numero: "918/2022", assunto: "Procedimentos para aplicação de multas", questoes: 10, estado: "alterada", situacao: "Alterada pela Res. 991/2023" },
+  { numero: "970/2022", assunto: "Sinalização, iluminação e lanternas especiais", questoes: 6, estado: "alterada", situacao: "Alterada pela Res. 1.024/2026" },
+];

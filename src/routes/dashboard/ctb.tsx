@@ -12,6 +12,7 @@ import {
   INFRACOES,
   PRAZOS,
   RESOLUCOES,
+  RESOLUCOES_COBRADAS,
   RESOLUCOES_FONTE,
   RESOLUCOES_VERIFICADO_EM,
   SUSPENSAO_PONTOS,
@@ -217,6 +218,28 @@ function CtbPanelPage() {
               <p className="text-xs text-muted-foreground">
                 Resoluções são alteradas e revogadas com frequência. Antes de usar uma resolução em prova, confirme a vigência na fonte oficial.
               </p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Mais cobradas em concursos</CardTitle>
+              <CardDescription>
+                Resoluções do edital da PRF, em ordem de questões no guia de estudo da TEC Concursos (fonte secundária: mostra tendência, não é dado oficial). O edital da PF 2025 não inclui trânsito nem resoluções do Contran. A coluna de situação vem da página oficial do Contran.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              {RESOLUCOES_COBRADAS.map((r) => (
+                <div key={r.numero} className="flex flex-col gap-1 rounded-md border p-3 text-sm sm:flex-row sm:items-center sm:justify-between">
+                  <span><strong>Res. {r.numero}</strong> · {r.assunto}</span>
+                  <span className="flex shrink-0 items-center gap-2">
+                    <span className="text-xs text-muted-foreground">{r.questoes} questões</span>
+                    <Badge className={cn(r.estado === "revogada" ? "bg-red-100 text-red-900" : r.estado === "alterada" ? "bg-amber-100 text-amber-900" : r.estado === "vigente" ? "bg-emerald-100 text-emerald-900" : "bg-slate-100 text-slate-700")}>
+                      {r.estado === "revogada" ? "Revogada" : r.estado === "alterada" ? "Alterada" : r.estado === "vigente" ? "Em vigor" : "Confirmar"}
+                    </Badge>
+                  </span>
+                  <span className="text-xs text-muted-foreground sm:basis-full">{r.situacao}</span>
+                </div>
+              ))}
             </CardContent>
           </Card>
           <div className="relative">
