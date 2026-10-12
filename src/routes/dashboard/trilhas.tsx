@@ -94,18 +94,20 @@ function Complement({ lesson, trackSlug }: { lesson: TrackLesson; trackSlug: str
   );
 }
 
-type LessonProps = { trackSlug: string; lesson: TrackLesson; done: boolean; toggleDone: () => void; onNext?: () => void; onPrev?: () => void };
+type LessonProps = { focus?: boolean; trackSlug: string; lesson: TrackLesson; done: boolean; toggleDone: () => void; onNext?: () => void; onPrev?: () => void };
 
-function Lesson({ trackSlug, lesson, onNext, onPrev, done, toggleDone }: LessonProps) {
+function Lesson({ focus = false, trackSlug, lesson, onNext, onPrev, done, toggleDone }: LessonProps) {
   return (
-    <article className="surface-card space-y-5 p-5 sm:p-7">
+    <article className={cn("surface-card space-y-5 p-5 sm:p-7", focus && "text-[17px] leading-8")}>
       <header className="border-b pb-4">
         <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{lesson.group}</p>
         <h2 className="mt-1 text-2xl font-bold">{lesson.title}</h2>
         <p className="mt-1 text-xs text-muted-foreground">Edital: {lesson.edital}</p>
       </header>
+      <div className={focus ? "grid gap-x-10 gap-y-5 lg:grid-cols-2" : "space-y-5"}>
+      <div className="space-y-5">
       <section className="space-y-2">
-        <h3 className="text-sm font-semibold">Em palavras simples</h3>
+        <h3 className={cn("font-semibold", focus ? "text-base" : "text-sm")}>Em palavras simples</h3>
         <p className="leading-7"><GlossaryText text={lesson.simples} /></p>
       </section>
       <section className="space-y-2">
@@ -116,12 +118,16 @@ function Lesson({ trackSlug, lesson, onNext, onPrev, done, toggleDone }: LessonP
         <h3 className="text-sm font-semibold">Exemplo prático</h3>
         <p className="mt-1 leading-7"><GlossaryText text={lesson.exemplo} /></p>
       </section>
+      </div>
+      <div className="space-y-5">
       <section className="rounded-xl border-l-4 border-l-amber-500 bg-card p-4">
         <h3 className="text-sm font-semibold">Atenção: onde o candidato erra</h3>
         <ul className="mt-1 list-disc space-y-1 pl-5 leading-7">{lesson.atencao.map((p) => <li key={p}><GlossaryText text={p} /></li>)}</ul>
       </section>
       <Complement lesson={lesson} trackSlug={trackSlug} />
       <Quiz lesson={lesson} key={`q-${lesson.id}`} />
+      </div>
+      </div>
       <footer className="flex flex-wrap items-center gap-2 border-t pt-4">
         <Button variant={done ? "outline" : "default"} onClick={toggleDone}>
           <CheckCircle2 className="mr-1 h-4 w-4" />
@@ -167,6 +173,7 @@ function TracksPage() {
   const pct = Math.round((done.length / track.lessons.length) * 100);
   const lessonView = (
     <Lesson
+      focus={focus}
       trackSlug={track.slug}
       key={lesson.id}
       lesson={lesson}
@@ -189,7 +196,7 @@ function TracksPage() {
           </Button>
         </header>
         <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-          <div className="mx-auto max-w-3xl">{lessonView}</div>
+          <div className="mx-auto max-w-6xl">{lessonView}</div>
         </div>
       </div>
     );
