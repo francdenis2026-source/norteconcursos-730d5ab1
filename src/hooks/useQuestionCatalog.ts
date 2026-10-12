@@ -20,6 +20,13 @@ import {
 } from "@/lib/questionFormat";
 import { fetchAllRows, isMissingQuestionTable } from "@/lib/catalog";
 
+/** Junta o texto de apoio ligado ao item (se houver) ao enunciado, no formato lido por parseQuestion. */
+function withSupportText(support: unknown, text: string): string {
+  const s = support as { label?: string; body?: string } | null | undefined;
+  if (!s?.body) return text;
+  return `Texto-base${s.label ? ` [${s.label}]` : ""}:\n${s.body}\n\n[[/texto-base]]\n${text}`;
+}
+
 export function useQuestionCatalog(userId: string | undefined, enabled: boolean) {
   const [catalog, setCatalog] = React.useState<Question[]>([]);
   const [hidden, setHidden] = React.useState(0);
@@ -54,13 +61,17 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
           error: null,
           gated: true,
         });
-        const [officialResult, curatedResult, personalResult, boardResult] = await Promise.all([
+        // Itens de prova podem ter um texto de apoio compartilhado (question_support_texts).
+        const officialQuery = (withSupport: boolean) =>
           query(
             "official_exam_questions",
-            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,state,career_category",
+            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,state,career_category" +
+              (withSupport ? ",support:question_support_texts(label,body)" : ""),
             "law_version_checked_at,legal_review_required,legal_audit_completed,context_review_required,difficulty",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
-          ),
+          );
+        const [officialResult, curatedResult, personalResult, boardResult] = await Promise.all([
+          officialQuery(true).catch(() => officialQuery(false)), // sem a coluna de texto de apoio ainda: segue sem ela
           query(
             "curated_question_catalog",
             "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
@@ -160,7 +171,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             board: canonicalBoard(String(row["exam_board"] ?? "")) || "Não informada",
             subject: canonicalSubject(String(row["subject"])),
             subtopic: null,
-            text: String(row["question_text"]),
+            text: withSupportText(row["support"], String(row["question_text"])),
             answer: String(row["official_answer"]) as Answer,
             explanation: String(
               row["review_note"] || "Item conferido com o gabarito definitivo da prova oficial.",
