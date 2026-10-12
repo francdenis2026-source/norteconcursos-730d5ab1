@@ -571,3 +571,14 @@ test('environmental seizure review preserves current rules and qualifies animal 
  const c=JSON.parse(readFileSync('docs/library/ambientais-captions-correction-2026-10-12.json','utf8'));assert.equal(c.changes.length,2);
  for(const r of c.changes){assert.equal(r.expected.body_text,r.body_text+'\n\n'+r.moved_captions.join('\n\n'));assert.ok(r.body_text.startsWith('Art.'));}
 });
+
+test('environmental final rules preserve jurisdiction, subsidiary law and historical implementation dates',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ambientais-final-2026-10-12.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,6);
+ for(const r of p.units){assert.ok(explanationExample(r.exemplo).variation);for(const q of r.prova)assert.ok(explanationPractice(q));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-76').pontos.join(' '),/667.*não afasta automaticamente.*140.*4757/s);
+ assert.match(get('art-77').simples,/soberania.*Ministério da Justiça/);
+ assert.match(get('art-79').simples,/subsidiariamente.*sem apagar regras especiais/);
+ assert.match(get('art-80').simples,/não é prazo.*pagar multa/);
+ assert.ok(!p.units.some(r=>r.unit_key==='art-81'));
+});

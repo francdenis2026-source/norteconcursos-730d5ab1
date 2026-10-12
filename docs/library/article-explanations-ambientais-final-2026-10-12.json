@@ -1,0 +1,368 @@
+{
+  "version": "2026-10-12-ambientais-final",
+  "checked_at": "2026-10-12T20:21:37.258556+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "ambientais",
+      "title": "Lei 9.605/1998 — Crimes Ambientais",
+      "units": 6,
+      "scope_type": "targeted_correction",
+      "course_current_units": 79,
+      "target_unit_keys": [
+        "art-77",
+        "art-78",
+        "art-79",
+        "art-80",
+        "art-82",
+        "art-76"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "source_sha256": "e59817ef929c73f6782a029a6397ebede300ba92c119ef0f68691a409f84c8cd",
+      "source_checked_at": "2026-10-12T16:18:24.261384+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-77",
+      "unit_id": "f650ea2d-7c2e-5909-818c-c7e6b39ae29e",
+      "content_sha256": "22b199da278fd8e3ec4fc0dd048dbd0ee57321516db025f4f1c35d1faa8bce92",
+      "simples": "Cooperação ambiental internacional observa soberania, ordem pública e condições legais; solicitação segue Ministério da Justiça e autoridade competente.",
+      "pontos": [
+        "Pode abranger prova, exame de coisas/lugares, informações, presença temporária de preso e outras formas permitidas por lei/tratado.",
+        "Pedido identifica autoridade, objeto/motivo, procedimento, assistência e documentação necessária.",
+        "MJSP/DRCI orienta via de cooperação; verificar tratado e autoridade central específicos, sem acesso direto irrestrito de órgão estrangeiro."
+      ],
+      "atencao": [
+        "A menção sem ônus não dispensa garantias processuais, proteção de dados ou decisão competente quando necessária; presença temporária de preso não é extradição automática."
+      ],
+      "exemplo": "Autoridade estrangeira pede exame ambiental com documentos e motivo, encaminhado pela via legal à autoridade capaz. Variação: pedido informal não permite automaticamente retirar preso brasileiro ou acessar dados sem requisitos.",
+      "prova": [
+        "A cooperação dispensa soberania e ordem pública? Não; ressalvas expressas.",
+        "Presença temporária de preso equivale necessariamente a extradição? Não; finalidade e regime específicos."
+      ],
+      "termos": [
+        "soberania nacional",
+        "Ministério da Justiça",
+        "assistência solicitada"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/autoridade-central-1"
+      ],
+      "expected": {
+        "unit_id": "f650ea2d-7c2e-5909-818c-c7e6b39ae29e",
+        "content_sha256": "22b199da278fd8e3ec4fc0dd048dbd0ee57321516db025f4f1c35d1faa8bce92",
+        "simples": "Resguardados a soberania nacional, a ordem pública e os bons costumes, o Governo brasileiro prestará, no que concerne ao meio ambiente, a necessária cooperação a outro país, sem qualquer ônus, quando solicitado para produção de prova, exame de objetos e lugares, informações sobre pessoas e coisas, presença temporária da pessoa presa cujas declarações tenham relevância e outras formas de assistência permitidas. A solicitação será dirigida ao Ministério da Justiça, que a remeterá ao órgão competente, e deverá conter a qualificação da autoridade, o objeto e motivo, a descrição do procedimento, a assistência solicitada e a documentação necessária.",
+        "pontos": [
+          "Cooperação internacional sem ônus.",
+          "Produção de prova, exame de lugares e informações.",
+          "Solicitação dirigida ao Ministério da Justiça.",
+          "Requisitos do pedido."
+        ],
+        "atencao": [
+          "A solicitação passa pelo Ministério da Justiça."
+        ],
+        "exemplo": "Um país pede ao Brasil provas sobre crime ambiental transnacional, e o pedido vai ao Ministério da Justiça.",
+        "prova": [
+          "Assertiva que cobra ônus do país solicitante erra: a cooperação é sem qualquer ônus."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 78"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-78",
+      "unit_id": "5f45c5b4-bf64-50b6-990a-16bf94b48855",
+      "content_sha256": "15242270e96c8b76756df8d6cc7ed10b8e95c366aaf0036948ed9a6edbeb1c75",
+      "simples": "Sistema de comunicação deve facilitar intercâmbio internacional rápido e seguro de informações para fins ambientais e reciprocidade.",
+      "pontos": [
+        "Rapidez não exclui segurança; ambos são objetivos expressos.",
+        "Intercâmbio precisa respeitar vias e requisitos da cooperação do artigo anterior e legislação aplicável."
+      ],
+      "atencao": [
+        "Não confundir sistema eficiente com divulgação pública universal de informação sigilosa ou dados pessoais."
+      ],
+      "exemplo": "Órgãos intercambiam informação ambiental por canal seguro para assistência legítima. Variação: publicar prontuário ou dado sigiloso indiscriminadamente não é autorizado pela exigência de rapidez.",
+      "prova": [
+        "Rapidez elimina necessidade de segurança? Não; artigo exige ambas.",
+        "Comunicação internacional autoriza todo dado público indiscriminadamente? Não; cumprir requisitos e proteção."
+      ],
+      "termos": [
+        "rápido e seguro",
+        "reciprocidade",
+        "intercâmbio"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "5f45c5b4-bf64-50b6-990a-16bf94b48855",
+        "content_sha256": "15242270e96c8b76756df8d6cc7ed10b8e95c366aaf0036948ed9a6edbeb1c75",
+        "simples": "Para a consecução dos fins da Lei e especialmente para a reciprocidade da cooperação internacional, deve ser mantido sistema de comunicações apto a facilitar o intercâmbio rápido e seguro de informações com órgãos de outros países.",
+        "pontos": [
+          "Sistema de comunicações para intercâmbio rápido e seguro de informações."
+        ],
+        "atencao": [
+          "Apoia a reciprocidade internacional."
+        ],
+        "exemplo": "Os órgãos ambientais mantêm canal seguro com autoridades de outros países.",
+        "prova": [
+          "Assertiva que dispensa o sistema de comunicações com órgãos estrangeiros erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 77"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-79",
+      "unit_id": "977108fc-6ba7-583f-9db4-b1e06cdceb03",
+      "content_sha256": "963b1bc62b6ab84294f271fba554cb58c22c1e87d1c23d335cafbade5fe43f7e",
+      "simples": "CP e CPP aplicam-se subsidiariamente: completam disciplina ambiental compatível sem apagar regras especiais da lei.",
+      "pontos": [
+        "Identificar regra especial antes de importar solução geral.",
+        "Substituição ambiental e sursis possuem limites próprios; processo exige contraditório e demais garantias."
+      ],
+      "atencao": [
+        "Subsidiariedade não torna toda pena ambiental idêntica à do CP nem autoriza misturar prisão simples de contravenções com crimes ambientais."
+      ],
+      "exemplo": "Para instituto sem regra especial, confronta-se CP/CPP compatível. Variação: limite especial de substituição não pode ser substituído pela fórmula geral sem analisar especialidade e jurisprudência.",
+      "prova": [
+        "CP/CPP revogam automaticamente regras especiais ambientais? Não; aplicação é subsidiária.",
+        "Pode misturar pena de contravenção com crime ambiental sem confronto? Não; regimes próprios."
+      ],
+      "termos": [
+        "subsidiariamente",
+        "Código Penal",
+        "Código de Processo Penal"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "977108fc-6ba7-583f-9db4-b1e06cdceb03",
+        "content_sha256": "963b1bc62b6ab84294f271fba554cb58c22c1e87d1c23d335cafbade5fe43f7e",
+        "simples": "Aplicam-se subsidiariamente a esta Lei as disposições do Código Penal e do Código de Processo Penal.",
+        "pontos": [
+          "Aplicação subsidiária do Código Penal e do Código de Processo Penal."
+        ],
+        "atencao": [
+          "Subsidiária, não principal."
+        ],
+        "exemplo": "Na falta de regra na Lei, aplica-se o Código de Processo Penal.",
+        "prova": [
+          "Assertiva que afasta o Código Penal dos crimes ambientais erra: ele se aplica subsidiariamente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-80",
+      "unit_id": "341f316e-abb3-5c45-8a42-a14f931bf8e2",
+      "content_sha256": "a6e77748f5e66b1692a3150781e7451ab06b3ed117dc55ac4769cc0060880a3c",
+      "simples": "Noventa dias para regulamentação é prazo dirigido ao Executivo a partir da publicação original; não é prazo para infrator pagar multa ou para cada revisão do material.",
+      "pontos": [
+        "Marco inicial é publicação da lei, não data da infração.",
+        "Regulamentação atual exige atos posteriores pertinentes, como Decreto 6.514/2008 para infrações administrativas, e suas alterações."
+      ],
+      "atencao": [
+        "Não confundir prazo de regulamentação com vacatio legis nem recomeçá-lo a cada modificação de decreto."
+      ],
+      "exemplo": "Questão conta noventa dias a partir de infração para pagar multa citando artigo 80: conclusão errada. Variação: revisão de apostila não reinicia prazo histórico de regulamentação.",
+      "prova": [
+        "Noventa dias é prazo universal de pagamento da multa? Não; prazo de regulamentação pelo Executivo.",
+        "É contado da data de revisão do curso? Não; publicação da lei."
+      ],
+      "termos": [
+        "Poder Executivo",
+        "noventa dias",
+        "publicação"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6514.htm"
+      ],
+      "expected": {
+        "unit_id": "341f316e-abb3-5c45-8a42-a14f931bf8e2",
+        "content_sha256": "a6e77748f5e66b1692a3150781e7451ab06b3ed117dc55ac4769cc0060880a3c",
+        "simples": "O Poder Executivo regulamentará esta Lei no prazo de noventa dias a contar de sua publicação.",
+        "pontos": [
+          "Regulamentação em noventa dias."
+        ],
+        "atencao": [
+          "Prazo de noventa dias."
+        ],
+        "exemplo": "O Executivo tinha noventa dias para regulamentar a Lei.",
+        "prova": [
+          "Assertiva que fixa em trinta dias o prazo de regulamentação erra: são noventa dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 82"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-82",
+      "unit_id": "8064053e-5ad5-5cae-abcd-4e3e7ef3b7b0",
+      "content_sha256": "1c04a8dff6ed314540e2f40c11064b193d0c917d9bfdd13496bb65d963a9031d",
+      "simples": "Revogação de disposições contrárias exige conflito e sucessão normativa; não elimina em bloco todo regime de proteção ambiental.",
+      "pontos": [
+        "Distinguir lei especial posterior e normas compatíveis que permanecem.",
+        "A cláusula não impede novas leis nem regulamentação compatível; vigência de cada diploma deve ser conferida na fonte."
+      ],
+      "atencao": [
+        "Não atribuir revogação total a códigos ou tipos pelo simples assunto ambiental; comparar disposições e legislação posterior."
+      ],
+      "exemplo": "Regra anterior incompatível exige análise da sucessão legislativa. Variação: regra ambiental compatível não fica revogada apenas por tratar da mesma matéria geral.",
+      "prova": [
+        "Todo diploma sobre ambiente foi revogado em bloco? Não; cláusula refere-se a disposições contrárias.",
+        "A cláusula impede atualização posterior? Não; novas leis e regulamentos têm regime próprio."
+      ],
+      "termos": [
+        "disposições em contrário",
+        "compatibilidade",
+        "sucessão normativa"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "8064053e-5ad5-5cae-abcd-4e3e7ef3b7b0",
+        "content_sha256": "1c04a8dff6ed314540e2f40c11064b193d0c917d9bfdd13496bb65d963a9031d",
+        "simples": "Revogam-se as disposições em contrário, isto é, ficam sem efeito as normas anteriores incompatíveis com esta Lei.",
+        "pontos": [
+          "Cláusula de revogação genérica."
+        ],
+        "atencao": [
+          "Dispositivo final."
+        ],
+        "exemplo": "Normas incompatíveis com a Lei foram revogadas.",
+        "prova": [
+          "Assertiva que vê revogação expressa de lei específica erra: é cláusula genérica."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 80"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-76",
+      "unit_id": "823091d7-337d-5f31-944a-c4ccd4e71d6a",
+      "content_sha256": "9293ed53325d069ff6898494e5b826399459c46b32d8de9419c3114c1e44021d",
+      "simples": "Pagamento de multa estadual, municipal, distrital ou territorial substitui a federal na mesma hipótese de incidência; a regra não é reciprocidade automática entre todos os entes.",
+      "pontos": [
+        "STJ, Informativo 667: pagamento de multa federal não afasta automaticamente cobrança municipal por inverter o sentido do artigo.",
+        "Aplicação atual exige integrar competência/licenciamento da LC 140, art. 17, e ADI 4757; prevalência do auto do órgão licenciador não exclui atuação supletiva diante de omissão ou insuficiência comprovada."
+      ],
+      "atencao": [
+        "Não ensinar duplicação irrestrita de multas nem anulação automática de qualquer segundo auto; conferir pagamento, hipótese, competência, período e atuação supletiva."
+      ],
+      "exemplo": "Contribuinte prova pagamento de multa municipal na mesma hipótese e examina substituição da federal. Variação: pagamento à União não cria por simples inversão dispensa universal da multa municipal; conferir regras de competência e caso concreto.",
+      "prova": [
+        "A mera aplicação sem pagamento é idêntica ao pagamento exigido? Não; distinguir fatos.",
+        "A norma funciona automaticamente nos dois sentidos? Não; STJ diferencia e o regime atual exige LC 140/ADI 4757."
+      ],
+      "termos": [
+        "pagamento",
+        "mesma hipótese de incidência",
+        "substitui a federal"
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40cnot%3D017535",
+        "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp140.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=4224704"
+      ],
+      "expected": {
+        "unit_id": "823091d7-337d-5f31-944a-c4ccd4e71d6a",
+        "content_sha256": "9293ed53325d069ff6898494e5b826399459c46b32d8de9419c3114c1e44021d",
+        "simples": "O pagamento de multa imposta pelos Estados, Municípios, Distrito Federal ou Territórios substitui a multa federal na mesma hipótese de incidência.",
+        "pontos": [
+          "Multa estadual, municipal ou distrital substitui a federal na mesma hipótese."
+        ],
+        "atencao": [
+          "Evita a dupla penalização pelo mesmo fato."
+        ],
+        "exemplo": "Quem pagou a multa estadual não paga a federal pelo mesmo fato.",
+        "prova": [
+          "Assertiva que cumula as multas federal e estadual pelo mesmo fato erra: a estadual substitui a federal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 75"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    }
+  ]
+}
