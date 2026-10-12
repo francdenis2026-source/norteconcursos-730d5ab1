@@ -85,7 +85,18 @@ function LegalCoursePage() {
   if (isLoading || courses.isPending || (course && units.isPending)) return <Skeleton className="h-80 rounded-2xl" />;
   if (courses.isError || units.isError || !course) return <div className="surface-card p-6"><p>Não foi possível abrir este percurso.</p><Button onClick={() => { void courses.refetch(); void units.refetch(); }}>Tentar novamente</Button><Link to="/dashboard/library" className="ml-4 underline">Biblioteca</Link></div>;
   return <LegalRefProvider value={{ slug: course.slug, index: refIndex }}><div className={`space-y-5 pb-8 ${fm.containerClass}`}>
-    {fm.focus && <div className="flex justify-end">{fm.button}</div>}
+    {fm.bar({
+      kicker: course.title,
+      title: selected?.label ?? "Escolha um artigo",
+      position: selected ? `${Math.max(1, current.findIndex(r => r.id === selected.id) + 1)} de ${current.length}` : "",
+      progress: current.length ? (summary.read / current.length) * 100 : 0,
+      onPrev: selected && current.findIndex(r => r.id === selected.id) > 0 ? () => { const i = current.findIndex(r => r.id === selected.id); setSelectedId(current[i - 1]!.id); } : undefined,
+      onNext: selected && current.findIndex(r => r.id === selected.id) < current.length - 1 ? () => { const i = current.findIndex(r => r.id === selected.id); setSelectedId(current[i + 1]!.id); } : undefined,
+      prevLabel: "Artigo anterior",
+      nextLabel: "Próximo artigo",
+      tools: "law",
+      notesKey: `lei:${course.slug}`,
+    })}
     {!fm.focus && <nav aria-label="Trilha" className="flex items-center gap-2 text-sm text-muted-foreground"><Link to="/dashboard/library" className="hover:text-foreground hover:underline">Biblioteca</Link><span aria-hidden>/</span><span className="text-foreground">Legislação</span></nav>}
     {!fm.focus && <header className="surface-card overflow-hidden p-0">
       <div className="space-y-3 p-5 sm:p-7">
