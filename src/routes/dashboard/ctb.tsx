@@ -69,7 +69,7 @@ function CtbPanelPage() {
     [qRes],
   );
   const resolucoesVigentes = React.useMemo(
-    () => RESOLUCOES_COBRADAS.filter((r) => r.estado === "vigente"),
+    () => RESOLUCOES_COBRADAS.filter((r) => r.estado === "vigente" || r.estado === "alterada"),
     [],
   );
 
@@ -245,7 +245,7 @@ function CtbPanelPage() {
             <CardHeader>
               <CardTitle className="text-base">Mais cobradas em concursos</CardTitle>
               <CardDescription>
-                Resoluções confirmadas como vigentes, selecionadas pela tendência de cobrança no guia da TEC Concursos (fonte secundária). Itens revogados, alterados ou sem situação confirmada ficam fora desta lista de estudo. O edital da PF 2025 não inclui trânsito nem resoluções do Contran.
+                Resoluções em vigor (inclusive as que já receberam alterações: confira o texto consolidado), selecionadas pela tendência de cobrança no guia da TEC Concursos (fonte secundária). Itens revogados ou sem situação confirmada ficam fora desta lista de estudo. O edital da PF 2025 não inclui trânsito nem resoluções do Contran.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
