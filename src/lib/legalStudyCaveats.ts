@@ -1,5 +1,16 @@
 /** Editorial application notes are separate from the unmodified compiled statute. */
 export function legalStudyCaveat(law: string, key: string) {
+  const environmentalNotes: Record<string, [string, string, string]> = {
+    'art-49': ['Poda: autorização tácita condicionada', 'Lei 15.299/2025: a hipótese exige requerimento por risco de acidente devidamente atestado por profissional/empresa habilitado e ausência de resposta fundamentada em 45 dias. Não é autorização geral para qualquer corte nem dispensa automática de outras proteções pertinentes.', 'https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15299.htm'],
+    'art-60': ['Licenciamento: pena modificada e aplicação temporal', 'A redação compilada após Lei 15.190/2025 prevê detenção de 6 meses a 2 anos e aumento até o dobro quando o licenciamento é sujeito ao EIA. A lei modificadora tem vacância de 180 dias; pena mais gravosa não retroage. Há controle constitucional: a notícia de ajuizamento não é decisão final e as consultas processuais falharam nesta rodada. Não certificar seu estado decisório nem gerar exercício automático sem as ressalvas.', 'https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15190.htm'],
+    'art-67': ['Concessão dolosa: parágrafo culposo revogado no compilado', 'A Lei 15.190/2025 descreve concessão dolosa e ciência do desacordo com normas ambientais, alterando a pena e revogando o parágrafo culposo. Distinguir redação original, produção de efeitos, lei penal no tempo e controle constitucional; esta rodada não certifica o estado decisório das ADIs. A marca residual de revogação no compilado não revoga todo o artigo.', 'https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15190.htm'],
+    'art-71': ['Prazos legais: marcos e procedimento aplicável', 'O artigo indica prazos máximos distintos e diferentes marcos de contagem. Não transportar datas entre defesa, julgamento, recurso e pagamento; conferir regulamentação aplicável e efeitos do atraso. O transcurso do prazo de julgamento não ensina arquivamento automático de todo processo.', 'https://www.planalto.gov.br/ccivil_03/leis/l9605.htm'],
+    'art-79-a': ['Termo de compromisso: transição de 1998', 'Os §§2º e 3º têm recorte histórico de empreendimentos e requerimentos de 1998. Não transformar todo termo novo em suspensão universal de sanções. O §4º preserva execução de multas anteriores e o §8º exige publicação oficial do extrato sob pena de ineficácia.', 'https://www.planalto.gov.br/ccivil_03/leis/l9605.htm'],
+  };
+  if (law === 'ambientais' && environmentalNotes[key]) {
+    const [title, explanation, source] = environmentalNotes[key];
+    return { title, explanation, source, literalPractice: false };
+  }
   if (law === 'ambientais' && key === 'art-32') return {
     title: 'Maus-tratos: novidades de 2025 e 2026',
     explanation: 'Lei 15.150/2025 inclui realizar ou permitir tatuagem/piercing estético em cães e gatos. Lei 15.355/2026 inclui desastre que prejudique vida, integridade ou bem-estar de animais; não exige sempre morte. Distinguir pena-base, regime de cães/gatos e remissão do §1-C, sem analogia prejudicial universal. Pesquisa cosmética exige também Lei 15.183/2025; não gerar treino automático ignorando exceções e interpretação constitucional.',

@@ -1,0 +1,1358 @@
+{
+  "version": "2026-10-11-ambientais-targeted",
+  "checked_at": "2026-10-12T21:07:15.788483+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "ambientais",
+      "title": "Lei 9.605/1998 — Crimes Ambientais",
+      "units": 22,
+      "scope_type": "targeted_correction",
+      "course_current_units": 79,
+      "target_unit_keys": [
+        "art-54",
+        "art-55",
+        "art-56",
+        "art-58",
+        "art-60",
+        "art-61",
+        "art-62",
+        "art-63",
+        "art-64",
+        "art-65",
+        "art-66",
+        "art-67",
+        "art-68",
+        "art-69",
+        "art-69-a",
+        "art-70",
+        "art-71",
+        "art-72",
+        "art-73",
+        "art-74",
+        "art-75",
+        "art-79-a"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "source_sha256": "3be3d63964a53747dc66fb26f9899f5b5392104ea5ca11f17b47a0023ce8b394",
+      "source_checked_at": "2026-10-12T20:57:57.785110+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-54",
+      "unit_id": "79734257-d3f4-5e16-acc5-e0db66cbd8d2",
+      "content_sha256": "4a90d6f6f2e2fc7aaac1150cd6718a00145940fd92d3540029fbbfb4ec1d5012",
+      "simples": "O tipo de poluição exige os níveis e resultados ou potencialidade previstos, não qualquer alteração ambiental. O artigo distingue forma básica, culpa, formas qualificadas e omissão das medidas de precaução exigidas pela autoridade competente.",
+      "pontos": [
+        "Caput: reclusão de 1 a 4 anos E multa; culpa: detenção de 6 meses a 1 ano E multa.",
+        "§2º: reclusão de 1 a 5 anos nas hipóteses qualificadas.",
+        "§3º: omissão de medidas exigidas em risco de dano grave ou irreversível recebe as penas do §2º."
+      ],
+      "atencao": [
+        "Não presumir dano consumado como único caminho do caput: a potencialidade de dano à saúde é expressa. A prova dos elementos e a necessidade de exame técnico devem ser analisadas no caso, sem inventar dispensa universal de perícia."
+      ],
+      "exemplo": "Poluição hídrica torna necessária a interrupção do abastecimento público de água de uma comunidade. Variação: Se não há essa interrupção, não se conclui ausência de todo crime: examinar os elementos do caput ou de outra hipótese, com prova adequada.",
+      "prova": [
+        "A interrupção do abastecimento público está no §2º? Sim; no inciso III.",
+        "O §3º exige uma medida de precaução cobrada pela autoridade competente? Sim; não descreve qualquer omissão genérica."
+      ],
+      "termos": [
+        {
+          "termo": "Nível de poluição",
+          "significado": "Patamar relevante para os resultados ou potencialidade descritos no tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "79734257-d3f4-5e16-acc5-e0db66cbd8d2",
+        "content_sha256": "4a90d6f6f2e2fc7aaac1150cd6718a00145940fd92d3540029fbbfb4ec1d5012",
+        "simples": "Poluição: causar poluição de qualquer natureza em níveis tais que resultem ou possam resultar em danos à saúde humana, ou que provoquem a mortandade de animais ou a destruição significativa da flora: reclusão de um a quatro anos, e multa. Se culposo, detenção de seis meses a um ano e multa. Se o crime tornar área imprópria para a ocupação humana, causar poluição atmosférica que retire habitantes ou cause danos à saúde, causar poluição hídrica que interrompa o abastecimento público, dificultar o uso público das praias, ou ocorrer por lançamento de resíduos em desacordo com leis ou regulamentos, a pena é de reclusão de um a cinco anos. Nas mesmas penas incorre quem deixar de adotar medidas de precaução exigidas pela autoridade em caso de risco de dano ambiental grave ou irreversível.",
+        "pontos": [
+          "Poluição que cause ou possa causar dano à saúde, mortandade de animais ou destruição da flora.",
+          "Reclusão de um a quatro anos e multa.",
+          "Culposo: detenção de seis meses a um ano.",
+          "Qualificadoras: reclusão de um a cinco anos.",
+          "Omissão de medidas de precaução."
+        ],
+        "atencao": [
+          "Crime de perigo: basta que a poluição POSSA causar dano.",
+          "Qualificadoras com pena de um a cinco anos."
+        ],
+        "exemplo": "Contaminar um rio a ponto de interromper o abastecimento de água qualifica a poluição.",
+        "prova": [
+          "Assertiva que exige dano efetivo à saúde humana para o crime do art. 54 erra: basta a possibilidade de dano."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 56"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-55",
+      "unit_id": "91f89fe8-e8e8-51ee-9b95-9803ec283299",
+      "content_sha256": "4dcd794eeed0b1fba18e3d39986b5119d9051ee0a0a259bb3de1b39542e293a1",
+      "simples": "A norma pune pesquisa, lavra ou extração mineral sem o ato competente ou em desacordo com o obtido. O parágrafo inclui a falta de recuperação da área nos termos do ato autorizativo ou da determinação competente.",
+      "pontos": [
+        "Pena: detenção de 6 meses a 1 ano E multa.",
+        "Ter licença não basta se a execução contrariar suas condições.",
+        "A recuperação da área é obrigação penalmente relevante na hipótese do parágrafo."
+      ],
+      "atencao": [
+        "Não confundir pesquisa mineral com simples estudo bibliográfico. Licenças e competências concretas precisam ser identificadas; não se presume concurso com outros crimes pela mesma palavra extração."
+      ],
+      "exemplo": "Uma lavra possui autorização, mas opera deliberadamente em desacordo com suas condições. Variação: A lavra encerra e o responsável deixa de recuperar a área conforme a determinação competente: o parágrafo tem hipótese própria.",
+      "prova": [
+        "A existência do documento elimina toda hipótese do caput? Não; executar em desacordo com ele também está descrito.",
+        "A omissão de recuperar a área aparece no artigo? Sim; o parágrafo a equipara nas condições previstas."
+      ],
+      "termos": [
+        {
+          "termo": "Lavra",
+          "significado": "Atividade de aproveitamento de recursos minerais no regime autorizativo pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "91f89fe8-e8e8-51ee-9b95-9803ec283299",
+        "content_sha256": "4dcd794eeed0b1fba18e3d39986b5119d9051ee0a0a259bb3de1b39542e293a1",
+        "simples": "Executar pesquisa, lavra ou extração de recursos minerais sem a competente autorização, permissão, concessão ou licença, ou em desacordo com a obtida: detenção de seis meses a um ano, e multa. Nas mesmas penas quem deixa de recuperar a área pesquisada ou explorada, nos termos da autorização ou determinação do órgão competente.",
+        "pontos": [
+          "Pesquisa, lavra ou extração mineral sem autorização.",
+          "Deixar de recuperar a área explorada.",
+          "Detenção de seis meses a um ano e multa."
+        ],
+        "atencao": [
+          "Também pune quem não recupera a área."
+        ],
+        "exemplo": "O garimpo sem licença configura o crime do art. 55.",
+        "prova": [
+          "Assertiva que pune só a atividade sem licença, ignorando a falta de recuperação da área, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 44"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-56",
+      "unit_id": "0761452e-f621-5dbf-9e61-29cb34e9bb16",
+      "content_sha256": "fdeccf54da2b39e57358e240de2677fe85973443d6ea20bb93d13e6855511a45",
+      "simples": "Pune atividades com produto ou substância tóxica, perigosa ou nociva em desacordo com lei ou regulamento. Também alcança abandono e tratamento irregular de resíduos perigosos, com disciplina de culpa e de material nuclear ou radioativo.",
+      "pontos": [
+        "Dolo: reclusão de 1 a 4 anos E multa; culpa: detenção de 6 meses a 1 ano E multa.",
+        "Material nuclear/radioativo: aumento de 1/6 a 1/3.",
+        "O §1º inclui resíduos perigosos e abandono ou uso contrário às normas."
+      ],
+      "atencao": [
+        "Identificar a periculosidade e a exigência legal/regulamentar violada. Produto perigoso não torna ilícita toda operação autorizada; não importar uma lista química desatualizada como proibição universal."
+      ],
+      "exemplo": "Resíduo perigoso é armazenado deliberadamente de modo diverso do estabelecido na regulamentação aplicável. Variação: Se o fato é culposo e preenche essa modalidade, utilizar a pena do §3º, não a reclusão do caput.",
+      "prova": [
+        "Resíduos perigosos estão fora da redação? Não; o §1º, II inclui sua manipulação, transporte e destinação irregular.",
+        "Material radioativo eleva a pena por fração expressa? Sim; de um sexto a um terço."
+      ],
+      "termos": [
+        {
+          "termo": "Resíduo perigoso",
+          "significado": "Resíduo sujeito às exigências pertinentes que integram o tipo, com sua natureza demonstrada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "0761452e-f621-5dbf-9e61-29cb34e9bb16",
+        "content_sha256": "fdeccf54da2b39e57358e240de2677fe85973443d6ea20bb93d13e6855511a45",
+        "simples": "Produzir, processar, embalar, importar, exportar, comercializar, fornecer, transportar, armazenar, guardar, ter em depósito ou usar produto ou substância tóxica, perigosa ou nociva à saúde humana ou ao meio ambiente, em desacordo com as exigências legais ou regulamentares: reclusão de um a quatro anos, e multa. Nas mesmas penas quem abandona os produtos ou os utiliza em desacordo com normas ambientais ou de segurança, ou manipula, armazena, transporta ou dá destinação final a resíduos perigosos de forma diversa da legal. Se o produto for nuclear ou radioativo, a pena é aumentada de um sexto a um terço. Se culposo, detenção de seis meses a um ano e multa.",
+        "pontos": [
+          "Condutas com produtos ou substâncias tóxicas, perigosas ou nocivas em desacordo com a lei.",
+          "Reclusão de um a quatro anos e multa.",
+          "Resíduos perigosos com destinação irregular.",
+          "Nuclear ou radioativo: aumento de um sexto a um terço.",
+          "Culposo: detenção de seis meses a um ano."
+        ],
+        "atencao": [
+          "Tipo misto alternativo com muitos núcleos."
+        ],
+        "exemplo": "Descartar resíduos químicos perigosos em lixão comum configura o crime.",
+        "prova": [
+          "Assertiva que isenta o armazenamento irregular de substância perigosa erra: ele é um dos núcleos do tipo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 54"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-58",
+      "unit_id": "1c604930-4bc6-5e68-aabe-daed8eee9a39",
+      "content_sha256": "ee68130afed1862eda84cda950c04f47504fa3f8c2d032377657133b87ca2d45",
+      "simples": "Prevê aumentos para crimes dolosos da seção de poluição e outros crimes ambientais, conforme o resultado. A regra tem condição de subsidiariedade: aplica-se somente se do fato não resultar crime mais grave.",
+      "pontos": [
+        "Dano irreversível: 1/6 a 1/3; lesão corporal grave: 1/3 até metade.",
+        "Morte: aumento até o dobro, não dobro obrigatório.",
+        "O caput limita a regra aos crimes dolosos desta seção."
+      ],
+      "atencao": [
+        "Não aplicar este aumento automaticamente a crimes culposos ou ignorar o crime mais grave mencionado no parágrafo. Resultados e vínculo com a conduta exigem demonstração."
+      ],
+      "exemplo": "Crime doloso dessa seção causa dano ambiental irreversível, sem configurar crime mais grave na hipótese analisada. Variação: Se o crime-base é culposo, não aplicar automaticamente o art. 58: o caput refere-se a crimes dolosos.",
+      "prova": [
+        "A morte sempre obriga dobrar exatamente a pena? Não; a redação diz até o dobro.",
+        "O dispositivo afasta a análise de crime mais grave? Não; o parágrafo condiciona sua aplicação."
+      ],
+      "termos": [
+        {
+          "termo": "Subsidiariedade",
+          "significado": "Aplicação condicionada à inexistência de crime mais grave resultante do fato, nos termos do parágrafo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "1c604930-4bc6-5e68-aabe-daed8eee9a39",
+        "content_sha256": "ee68130afed1862eda84cda950c04f47504fa3f8c2d032377657133b87ca2d45",
+        "simples": "Nos crimes dolosos previstos na seção sobre poluição e outros crimes ambientais, as penas serão aumentadas de um sexto a um terço se resulta dano irreversível à flora ou ao meio ambiente em geral; de um terço até a metade se resulta lesão corporal de natureza grave em outrem; e até o dobro se resultar a morte de outrem. As penalidades somente serão aplicadas se do fato não resultar crime mais grave.",
+        "pontos": [
+          "Dano irreversível: um sexto a um terço.",
+          "Lesão grave: um terço até a metade.",
+          "Morte: até o dobro.",
+          "Só se não houver crime mais grave."
+        ],
+        "atencao": [
+          "Aplica-se apenas aos crimes DOLOSOS.",
+          "Subsidiário a crime mais grave."
+        ],
+        "exemplo": "A poluição dolosa que causa morte de pessoa tem a pena aumentada até o dobro.",
+        "prova": [
+          "Assertiva que aplica os aumentos aos crimes culposos erra: valem nos crimes dolosos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 54"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-60",
+      "unit_id": "df766ef0-b3d0-5394-828f-3560b1455755",
+      "content_sha256": "7b760b9a36c0f6f4cf078fb9a436fb928f0e3f4f61e522ebd3c896dd16e202fe",
+      "simples": "Na redação compilada após a Lei 15.190/2025, o tipo trata de construir, reformar, ampliar, instalar ou fazer funcionar empreendimento potencialmente poluidor sem ato ambiental competente ou contrariando as normas. A pena foi alterada e há aumento ligado à sujeição ao EIA.",
+      "pontos": [
+        "Redação de 2025: detenção de 6 meses a 2 anos OU multa, ou ambas.",
+        "Parágrafo: aumento até o dobro se o licenciamento é sujeito ao Estudo Prévio de Impacto Ambiental.",
+        "A Lei 15.190 prevê vacância de 180 dias; publicação original e produção de efeitos não são a mesma data."
+      ],
+      "atencao": [
+        "Não ensinar a antiga pena de 1 a 6 meses como redação atual compilada. A lei geral de licenciamento é objeto de controle no STF; a notícia de ajuizamento não resolve as ADIs nem permite afirmar suspensão universal. Aplicação temporal e decisão pertinente exigem consulta específica."
+      ],
+      "exemplo": "A questão pede a pena do art. 60 na redação compilada conferida em 2026, e apresenta somente 1 a 6 meses. Variação: Se o fato ocorreu antes da produção de efeitos da mudança, analisar a lei penal no tempo; a nova pena mais gravosa não retroage apenas por constar hoje no compilado.",
+      "prova": [
+        "A redação compilada de 2025 mantém 1 a 6 meses? Não; prevê 6 meses a 2 anos, ou multa, ou ambas.",
+        "Até o dobro significa aumento necessariamente igual ao dobro? Não; o parágrafo usa limite máximo, condicionado à sujeição ao EIA."
+      ],
+      "termos": [
+        {
+          "termo": "EIA",
+          "significado": "Estudo Prévio de Impacto Ambiental; sua exigência é pressuposto do aumento descrito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15190.htm"
+      ],
+      "expected": {
+        "unit_id": "df766ef0-b3d0-5394-828f-3560b1455755",
+        "content_sha256": "7b760b9a36c0f6f4cf078fb9a436fb928f0e3f4f61e522ebd3c896dd16e202fe",
+        "simples": "Construir, reformar, ampliar, instalar ou fazer funcionar, em qualquer parte do território nacional, estabelecimentos, obras ou serviços potencialmente poluidores, sem licença ou autorização dos órgãos ambientais competentes, ou contrariando as normas legais e regulamentares: detenção de 6 meses a 2 anos, ou multa, ou ambas. A pena é aumentada até o dobro se o licenciamento for sujeito ao Estudo Prévio de Impacto Ambiental.",
+        "pontos": [
+          "Instalar ou fazer funcionar atividade potencialmente poluidora sem licença.",
+          "Detenção de 6 meses a 2 anos, ou multa, ou ambas.",
+          "Aumento até o dobro se exigir Estudo Prévio de Impacto Ambiental."
+        ],
+        "atencao": [
+          "Exige falta de licença ou desrespeito às normas."
+        ],
+        "exemplo": "Abrir uma fábrica poluidora sem licença ambiental é crime.",
+        "prova": [
+          "Assertiva que dispensa a licença ambiental para atividade potencialmente poluidora erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 54"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-61",
+      "unit_id": "0c3a087e-92bb-58da-9508-ea2e4b51d8b0",
+      "content_sha256": "0bb35f90bb24206c94277fd5e38c6079e7e8ebd81d7e570c9c1e1e693e960d8c",
+      "simples": "O artigo protege agricultura, pecuária, fauna, flora e ecossistemas contra disseminação de doença, praga ou espécies que possam causar dano. É preciso identificar a disseminação e a capacidade danosa, sem tratar qualquer introdução de organismo como crime automático.",
+      "pontos": [
+        "Pena: reclusão de 1 a 4 anos E multa.",
+        "Doença, praga OU espécies potencialmente danosas são objetos previstos."
+      ],
+      "atencao": [
+        "A possibilidade de causar dano é elemento expresso; a classificação técnica e os demais elementos precisam de demonstração. Não criar modalidade culposa sem previsão."
+      ],
+      "exemplo": "É disseminada espécie cuja capacidade de dano ao ecossistema está tecnicamente identificada, nas circunstâncias que preenchem o tipo. Variação: Sem prova da capacidade danosa e dos demais elementos, não concluir o crime só porque se trata de espécie nova naquele local.",
+      "prova": [
+        "O dano precisa sempre já ter acontecido? O artigo se refere a espécies que possam causar dano; a capacidade é elemento da redação.",
+        "Só agricultura e pecuária são protegidas? Não; também fauna, flora e ecossistemas."
+      ],
+      "termos": [
+        {
+          "termo": "Disseminação",
+          "significado": "Propagação do agente ou espécie nas condições previstas pelo tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "0c3a087e-92bb-58da-9508-ea2e4b51d8b0",
+        "content_sha256": "0bb35f90bb24206c94277fd5e38c6079e7e8ebd81d7e570c9c1e1e693e960d8c",
+        "simples": "Disseminar doença ou praga ou espécies que possam causar dano à agricultura, à pecuária, à fauna, à flora ou aos ecossistemas: reclusão de um a quatro anos, e multa.",
+        "pontos": [
+          "Disseminar doença, praga ou espécies danosas.",
+          "Reclusão de um a quatro anos e multa."
+        ],
+        "atencao": [
+          "Crime de perigo."
+        ],
+        "exemplo": "Espalhar praga que ameaça lavouras configura o crime.",
+        "prova": [
+          "Assertiva que prevê detenção para esse crime erra: é reclusão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 56"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-62",
+      "unit_id": "26b479d6-be43-58b1-8b5e-9d5bfa13358f",
+      "content_sha256": "02f82532a3e6785ace8ae14454b9bcf55d183b787d6c9758308ba8cf2b784489",
+      "simples": "Pune destruir, inutilizar ou deteriorar bem especialmente protegido e os acervos ou instalações especificados. A proteção pode decorrer de lei, ato administrativo ou decisão judicial; há pena própria para a modalidade culposa.",
+      "pontos": [
+        "Dolo: reclusão de 1 a 3 anos E multa.",
+        "Culpa: detenção de 6 meses a 1 ano, sem prejuízo da multa.",
+        "Arquivo, biblioteca e instalação científica protegidos constam do inciso II."
+      ],
+      "atencao": [
+        "Não exigir sempre tombamento formal como único modo de proteção: o texto também indica lei, ato administrativo ou decisão judicial. Verificar o objeto efetivamente protegido."
+      ],
+      "exemplo": "É destruído arquivo especialmente protegido por decisão judicial. Variação: Se o fato é culposo, a pena é a do parágrafo; não transportar a reclusão dolosa nem ignorar a multa.",
+      "prova": [
+        "A proteção pode decorrer de decisão judicial? Sim; é fonte expressa nos dois incisos.",
+        "Culpa afasta automaticamente toda punição? Não; há previsão específica no parágrafo."
+      ],
+      "termos": [
+        {
+          "termo": "Bem especialmente protegido",
+          "significado": "Objeto cuja proteção pertinente foi estabelecida por lei, ato administrativo ou decisão judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "26b479d6-be43-58b1-8b5e-9d5bfa13358f",
+        "content_sha256": "02f82532a3e6785ace8ae14454b9bcf55d183b787d6c9758308ba8cf2b784489",
+        "simples": "Destruir, inutilizar ou deteriorar bem especialmente protegido por lei, ato administrativo ou decisão judicial, ou arquivo, registro, museu, biblioteca, pinacoteca, instalação científica ou similar protegido: reclusão de um a três anos, e multa. Se o crime for culposo, detenção de seis meses a um ano, sem prejuízo da multa.",
+        "pontos": [
+          "Destruir bem especialmente protegido ou acervo cultural.",
+          "Reclusão de um a três anos e multa.",
+          "Culposo: detenção de seis meses a um ano."
+        ],
+        "atencao": [
+          "Crime contra o patrimônio cultural."
+        ],
+        "exemplo": "Incendiar uma biblioteca protegida por tombamento é o crime do art. 62.",
+        "prova": [
+          "Assertiva que não admite a forma culposa erra: ela existe, com pena de detenção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-63",
+      "unit_id": "2820a229-a73a-5987-ad97-f88ebc3d1706",
+      "content_sha256": "dc3a3dc5c29cf4727633a2a9e9798f77ed691b48bc3f57005ffd070a6cafde00",
+      "simples": "Pune alterar aspecto ou estrutura de edificação ou local especialmente protegido por seu valor indicado, sem autorização ou em desacordo com ela. Não é necessário descrever destruição completa para a conduta de alteração prevista.",
+      "pontos": [
+        "Pena: reclusão de 1 a 3 anos E multa.",
+        "Proteção pode decorrer de lei, ato administrativo OU decisão judicial.",
+        "Autorização existente não abrange alterações que a contrariem."
+      ],
+      "atencao": [
+        "Não confundir a alteração deste artigo com a destruição do art. 62. Identificar a especial proteção e o ato autorizativo, sem presumir que toda reforma é criminosa."
+      ],
+      "exemplo": "A fachada de edificação protegida por valor histórico é alterada em desacordo com a autorização concedida. Variação: Uma intervenção efetivamente abrangida pela autorização não demonstra a hipótese de falta ou desacordo; outras exigências continuam relevantes.",
+      "prova": [
+        "É preciso destruir totalmente a edificação? Não; o núcleo é alterar aspecto ou estrutura nas condições previstas.",
+        "Possuir qualquer autorização elimina o tipo? Não; a alteração em desacordo com a concedida também consta."
+      ],
+      "termos": [
+        {
+          "termo": "Alteração de aspecto",
+          "significado": "Modificação visual relevante ao bem protegido nas condições do artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "2820a229-a73a-5987-ad97-f88ebc3d1706",
+        "content_sha256": "dc3a3dc5c29cf4727633a2a9e9798f77ed691b48bc3f57005ffd070a6cafde00",
+        "simples": "Alterar o aspecto ou estrutura de edificação ou local especialmente protegido por lei, ato administrativo ou decisão judicial, em razão de seu valor paisagístico, ecológico, turístico, artístico, histórico, cultural, religioso, arqueológico, etnográfico ou monumental, sem autorização da autoridade competente ou em desacordo com a concedida: reclusão de um a três anos, e multa.",
+        "pontos": [
+          "Alterar edificação ou local protegido sem autorização.",
+          "Reclusão de um a três anos e multa."
+        ],
+        "atencao": [
+          "Pune a ALTERAÇÃO, e não só a destruição."
+        ],
+        "exemplo": "Reformar a fachada de um prédio tombado sem autorização é crime.",
+        "prova": [
+          "Assertiva que exige a destruição total do bem erra: basta a alteração do aspecto ou da estrutura."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 64"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-64",
+      "unit_id": "383a7f06-1101-593a-a1a2-567d45766b7e",
+      "content_sha256": "0dcf4c798f2144a188805695322ead5125c5e47b6b4aa831f4408772a5d624c7",
+      "simples": "Pune promover construção em solo não edificável ou seu entorno, quando esse regime decorre dos valores protegidos indicados, sem autorização ou em desacordo com a concedida. A não edificabilidade e a proteção pertinente são elementos do recorte.",
+      "pontos": [
+        "Pena: detenção de 6 meses a 1 ano E multa.",
+        "O texto inclui o entorno e enumera valores como paisagístico, ecológico, histórico e cultural."
+      ],
+      "atencao": [
+        "Não concluir o crime a partir de qualquer irregularidade de obra ou de qualquer solo sem alvará. Identificar a não edificabilidade por motivo indicado e a autorização competente."
+      ],
+      "exemplo": "É promovida construção em solo não edificável por seu valor arqueológico, sem a autorização competente. Variação: Em obra irregular em terreno comum, não presumir este mesmo enquadramento sem o regime protegido específico; verificar os tipos e normas pertinentes.",
+      "prova": [
+        "O entorno é sempre excluído? Não; está expressamente indicado no tipo.",
+        "Qualquer falta de alvará preenche necessariamente este artigo? Não; o solo e a proteção precisam corresponder ao recorte legal."
+      ],
+      "termos": [
+        {
+          "termo": "Solo não edificável",
+          "significado": "Solo submetido à condição descrita em razão dos valores protegidos pelo tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "383a7f06-1101-593a-a1a2-567d45766b7e",
+        "content_sha256": "0dcf4c798f2144a188805695322ead5125c5e47b6b4aa831f4408772a5d624c7",
+        "simples": "Promover construção em solo não edificável, ou no seu entorno, assim considerado em razão de seu valor paisagístico, ecológico, artístico, turístico, histórico, cultural, religioso, arqueológico, etnográfico ou monumental, sem autorização da autoridade competente ou em desacordo com a concedida: detenção de seis meses a um ano, e multa.",
+        "pontos": [
+          "Construir em solo não edificável ou no entorno sem autorização.",
+          "Detenção de seis meses a um ano e multa."
+        ],
+        "atencao": [
+          "Alcança também o ENTORNO do local protegido."
+        ],
+        "exemplo": "Erguer um prédio ao lado de um sítio histórico, sem autorização, pode configurar o crime.",
+        "prova": [
+          "Assertiva que limita o crime à construção no próprio solo protegido erra: inclui o entorno."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-65",
+      "unit_id": "11bb8ea9-1d71-539c-99b8-4fb5a193bc68",
+      "content_sha256": "802f2f7575e99b9aba8e2e1e35612a0e0e2b98522e2d776de1188a1b07fd8a2c",
+      "simples": "A pichação ou outra conspurcação de edificação ou monumento urbano é punida, com pena específica para bem tombado pelo valor indicado. Grafite artístico pode não constituir crime, mas a ressalva exige consentimento/autorização e observância das normas pertinentes.",
+      "pontos": [
+        "Caput: detenção de 3 meses a 1 ano E multa.",
+        "Bem tombado nas hipóteses do §1º: detenção de 6 meses a 1 ano E multa.",
+        "Grafite: objetivo de valorização artística e condições do §2º."
+      ],
+      "atencao": [
+        "Finalidade artística alegada não substitui consentimento do proprietário e, quando cabível, locatário/arrendatário; em bem público exige-se autorização competente e observância das regras."
+      ],
+      "exemplo": "Grafite de valorização artística é realizado em bem público com autorização competente e atendimento das normas pertinentes. Variação: Sem a autorização pública exigida, não basta chamar a intervenção de arte para preencher a ressalva do §2º.",
+      "prova": [
+        "Todo grafite é automaticamente lícito? Não; o §2º contém requisitos cumulativos conforme o bem.",
+        "No bem público basta consentimento de um particular? Não; exige autorização do órgão competente."
+      ],
+      "termos": [
+        {
+          "termo": "Grafite autorizado",
+          "significado": "Manifestação artística que preenche a finalidade e as condições legais da ressalva."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "11bb8ea9-1d71-539c-99b8-4fb5a193bc68",
+        "content_sha256": "802f2f7575e99b9aba8e2e1e35612a0e0e2b98522e2d776de1188a1b07fd8a2c",
+        "simples": "Pichar ou por outro meio conspurcar edificação ou monumento urbano: detenção de 3 meses a 1 ano, e multa. Se o ato for realizado em monumento ou coisa tombada em virtude de valor artístico, arqueológico ou histórico, a pena é de 6 meses a 1 ano de detenção e multa. Não constitui crime o grafite realizado para valorizar o patrimônio público ou privado mediante manifestação artística, desde que consentido pelo proprietário e, no caso de bem público, autorizado pelo órgão competente, observadas as posturas municipais e as normas de preservação.",
+        "pontos": [
+          "Pichar ou conspurcar edificação ou monumento urbano.",
+          "Detenção de 3 meses a 1 ano e multa.",
+          "Monumento ou bem tombado: 6 meses a 1 ano.",
+          "Grafite consentido e autorizado não é crime."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: redação do artigo dada pela Lei nº 12.408, de 2011, que distinguiu pichação e grafite.",
+          "Grafite com consentimento não é crime."
+        ],
+        "exemplo": "Pichar o muro de um prédio sem autorização é crime; um grafite autorizado não é.",
+        "prova": [
+          "Assertiva que considera crime o grafite artístico consentido pelo proprietário erra."
+        ],
+        "termos": [
+          {
+            "termo": "Grafite",
+            "significado": "Manifestação artística em muros, com consentimento."
+          }
+        ],
+        "remissoes": [
+          "Art. 63"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-66",
+      "unit_id": "c3e84a5d-1a88-534d-a2ec-e96e672df90d",
+      "content_sha256": "8e52e8133587427431cdb1f78d802df47dca01f6f2eb8506c540628ce0712748",
+      "simples": "O artigo trata do funcionário público que faz afirmação falsa ou enganosa, omite verdade ou sonega informação técnico-científica em procedimento de autorização ou licenciamento ambiental. O papel do agente e o contexto do procedimento são essenciais.",
+      "pontos": [
+        "Pena: reclusão de 1 a 3 anos E multa.",
+        "Omissão da verdade e sonegação também são condutas previstas."
+      ],
+      "atencao": [
+        "Não aplicar indistintamente a qualquer particular a condição de funcionário público deste tipo; participação e outros crimes exigem análise própria. Estudo falso também tem disciplina do art. 69-A."
+      ],
+      "exemplo": "Funcionário público omite informação técnico-científica relevante no procedimento ambiental em hipótese que preenche o tipo. Variação: Se o fato é elaboração de estudo falso por particular, examinar o art. 69-A e eventual participação, em vez de ignorar o sujeito e o procedimento exigidos aqui.",
+      "prova": [
+        "O artigo só alcança mentira expressamente escrita? Não; inclui omitir a verdade e sonegar informações.",
+        "O contexto é qualquer conversa privada? Não; a redação delimita procedimentos de autorização ou licenciamento ambiental."
+      ],
+      "termos": [
+        {
+          "termo": "Sonegação de informação",
+          "significado": "Ocultação da informação técnico-científica no procedimento previsto."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "c3e84a5d-1a88-534d-a2ec-e96e672df90d",
+        "content_sha256": "8e52e8133587427431cdb1f78d802df47dca01f6f2eb8506c540628ce0712748",
+        "simples": "Fazer o funcionário público afirmação falsa ou enganosa, omitir a verdade, sonegar informações ou dados técnico-científicos em procedimentos de autorização ou de licenciamento ambiental: reclusão de um a três anos, e multa.",
+        "pontos": [
+          "Funcionário que faz afirmação falsa ou omite dados no licenciamento.",
+          "Reclusão de um a três anos e multa."
+        ],
+        "atencao": [
+          "Crime próprio de funcionário público."
+        ],
+        "exemplo": "O servidor que omite dados técnicos para facilitar uma licença responde pelo crime.",
+        "prova": [
+          "Assertiva que alcança qualquer particular como autor do art. 66 erra: o crime é do funcionário público."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 69-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-67",
+      "unit_id": "259efd03-e70d-544d-8420-3d30c02fa345",
+      "content_sha256": "c53e11658261965d1d1813a3d91896b56c3782365209eb35a17861c50794e0d7",
+      "simples": "A Lei 15.190/2025 passou a descrever expressamente a concessão dolosa, por funcionário público, de licença, autorização ou permissão que sabe contrariar as normas ambientais. O parágrafo de modalidade culposa foi revogado na redação compilada.",
+      "pontos": [
+        "Redação atual compilada: detenção de 1 a 3 anos E multa.",
+        "Exige concessão dolosa e ciência do desacordo; o parágrafo culposo está revogado.",
+        "Distinguir a concessão irregular do art. 67 da informação falsa do art. 66."
+      ],
+      "atencao": [
+        "Não ensinar o antigo parágrafo culposo como modalidade atual. A Lei 15.190 tem vacância e controle constitucional em acompanhamento; conferir data do fato e decisão aplicável, sem inferir que ajuizamento suspendeu tudo ou encerrou a controvérsia."
+      ],
+      "exemplo": "Funcionário concede dolosamente licença que sabe contrariar as normas ambientais, conforme o recorte da redação compilada. Variação: Se a questão indica mera culpa em fato antigo, examinar sucessão de leis e eventual lei mais benéfica; não restaurar automaticamente o parágrafo revogado nem concluir licitude universal de toda conduta.",
+      "prova": [
+        "A redação compilada mantém modalidade culposa expressa no parágrafo? Não; ele está revogado.",
+        "Uma notícia de ajuizamento decide definitivamente a constitucionalidade? Não; andamento e decisão precisam ser consultados."
+      ],
+      "termos": [
+        {
+          "termo": "Concessão dolosa",
+          "significado": "Concessão consciente no recorte expresso da redação modificadora de 2025."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15190.htm"
+      ],
+      "expected": {
+        "unit_id": "259efd03-e70d-544d-8420-3d30c02fa345",
+        "content_sha256": "c53e11658261965d1d1813a3d91896b56c3782365209eb35a17861c50794e0d7",
+        "simples": "Conceder dolosamente o funcionário público licença, autorização ou permissão que sabe estar em desacordo com as normas ambientais, a atividades, obras ou serviços cuja realização depende de ato autorizativo do poder público: detenção de 1 a 3 anos, e multa.",
+        "pontos": [
+          "Funcionário que concede dolosamente licença contrária às normas ambientais.",
+          "Detenção de 1 a 3 anos e multa."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o parágrafo único (forma culposa) foi tratado por lei posterior; confira a vigência.",
+          "Exige DOLO."
+        ],
+        "exemplo": "O servidor que concede, sabendo da irregularidade, licença para obra poluidora comete o crime.",
+        "prova": [
+          "Assertiva que pune a concessão culposa de licença no caput erra: o caput exige dolo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 66"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-68",
+      "unit_id": "2e74ed42-1d4c-577b-93c7-f6c3ebf939d3",
+      "content_sha256": "1d69e1caaf7a76e6450cf4c147d878f65a59506d356a6a89fecca7049828deeb",
+      "simples": "O artigo pune a omissão de obrigação de relevante interesse ambiental por quem tem dever legal ou contratual de cumpri-la. O dever específico e sua fonte são requisitos; não basta atribuir genericamente a todos a mesma obrigação.",
+      "pontos": [
+        "Dolo: detenção de 1 a 3 anos E multa.",
+        "Culpa: detenção de 3 meses a 1 ano, sem prejuízo da multa.",
+        "O dever pode ser legal OU contratual."
+      ],
+      "atencao": [
+        "Não equiparar obrigação moral genérica ao dever específico do tipo. Identificar o conteúdo relevante e a responsabilidade do sujeito no fato."
+      ],
+      "exemplo": "O responsável deixa de cumprir obrigação ambiental relevante expressamente assumida em contrato, preenchidos os elementos do tipo. Variação: Se o fato é culposo, a resposta usa a pena específica do parágrafo; se falta o dever legal/contratual, não se presume seu preenchimento.",
+      "prova": [
+        "Só dever previsto em lei pode integrar o tipo? Não; também o contratual.",
+        "A culpa tem a mesma pena de 1 a 3 anos? Não; o parágrafo prevê 3 meses a 1 ano, sem prejuízo da multa."
+      ],
+      "termos": [
+        {
+          "termo": "Dever específico",
+          "significado": "Obrigação ambiental relevante de fonte legal ou contratual atribuída ao sujeito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "2e74ed42-1d4c-577b-93c7-f6c3ebf939d3",
+        "content_sha256": "1d69e1caaf7a76e6450cf4c147d878f65a59506d356a6a89fecca7049828deeb",
+        "simples": "Deixar, aquele que tiver o dever legal ou contratual de fazê-lo, de cumprir obrigação de relevante interesse ambiental: detenção de um a três anos, e multa. Se o crime é culposo, a pena é de três meses a um ano, sem prejuízo da multa.",
+        "pontos": [
+          "Descumprir obrigação de relevante interesse ambiental, legal ou contratual.",
+          "Detenção de um a três anos e multa.",
+          "Culposo: três meses a um ano."
+        ],
+        "atencao": [
+          "Crime omissivo próprio."
+        ],
+        "exemplo": "A empresa que não cumpre a obrigação ambiental assumida no contrato comete o crime.",
+        "prova": [
+          "Assertiva que não admite a forma culposa erra: ela existe."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 69"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-69",
+      "unit_id": "f47b460d-68a3-5604-a4f5-3462d1f18237",
+      "content_sha256": "9ab96cdacada54a52da5ab0dda31b13477792f9f13218748d4153553d809e219",
+      "simples": "Pune obstruir ou dificultar fiscalização do Poder Público em matéria ambiental. A conduta deve interferir na ação fiscalizadora; não se confunde com qualquer divergência ou com a apresentação regular de defesa no procedimento.",
+      "pontos": [
+        "Pena: detenção de 1 a 3 anos E multa.",
+        "Obstar OU dificultar: não exige sempre impedir completamente a fiscalização."
+      ],
+      "atencao": [
+        "Exercício regular de defesa não é, por si só, embaraço criminoso. O enquadramento depende da ação concreta e dos elementos do tipo."
+      ],
+      "exemplo": "O agente realiza conduta que dificulta concretamente a fiscalização ambiental, preenchidos os elementos legais. Variação: Apresentar impugnação regular no processo administrativo não se transforma automaticamente na obstrução deste artigo.",
+      "prova": [
+        "É indispensável impedir completamente a ação? Não; dificultar também é verbo previsto.",
+        "Toda defesa administrativa configura o crime? Não; defesa regular e obstrução concreta são situações distintas."
+      ],
+      "termos": [
+        {
+          "termo": "Ação fiscalizadora",
+          "significado": "Atividade de fiscalização ambiental do Poder Público protegida pelo tipo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "f47b460d-68a3-5604-a4f5-3462d1f18237",
+        "content_sha256": "9ab96cdacada54a52da5ab0dda31b13477792f9f13218748d4153553d809e219",
+        "simples": "Obstar ou dificultar a ação fiscalizadora do Poder Público no trato de questões ambientais: detenção de um a três anos, e multa.",
+        "pontos": [
+          "Obstar ou dificultar a fiscalização ambiental.",
+          "Detenção de um a três anos e multa."
+        ],
+        "atencao": [
+          "Alcança qualquer obstáculo à fiscalização."
+        ],
+        "exemplo": "Impedir a entrada de fiscais do órgão ambiental na propriedade é crime.",
+        "prova": [
+          "Assertiva que exige violência para o crime erra: basta obstar ou dificultar."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 68"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-69-a",
+      "unit_id": "5a983661-d572-5cde-9a99-ccbccb2a3947",
+      "content_sha256": "cf74f25cca53fb972c3a0efc2436842ed6cb46fd2bc54a4e78a6f1c6da599fa1",
+      "simples": "A norma pune elaboração ou apresentação de estudo, laudo ou relatório ambiental total ou parcialmente falso ou enganoso em procedimentos administrativos indicados. Abrange omissão, modalidade culposa e aumento quando a informação causa dano significativo.",
+      "pontos": [
+        "Dolo: reclusão de 3 a 6 anos E multa; culpa: detenção de 1 a 3 anos.",
+        "Dano significativo decorrente do uso da informação: aumento de 1/3 a 2/3.",
+        "Inclui licenciamento, concessão florestal OU outro procedimento administrativo."
+      ],
+      "atencao": [
+        "Para o aumento, demonstrar dano significativo e o nexo com o uso da informação. Divergência técnica honesta não autoriza presumir falsidade ou culpa penal automaticamente."
+      ],
+      "exemplo": "É apresentado relatório ambiental parcialmente falso por omissão relevante no licenciamento. Variação: Se há dano significativo decorrente do uso dessa informação, examinar o aumento; não aplicá-lo apenas porque o relatório foi falso, sem demonstrar o resultado e o vínculo.",
+      "prova": [
+        "A falsidade precisa abranger todo o documento? Não; pode ser parcial e inclusive por omissão.",
+        "Aumento depende só da existência de informação falsa? Não; exige dano significativo decorrente de seu uso."
+      ],
+      "termos": [
+        {
+          "termo": "Nexo do uso da informação",
+          "significado": "Vínculo entre o uso da informação falsa/incompleta/enganosa e o dano significativo do §2º."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "5a983661-d572-5cde-9a99-ccbccb2a3947",
+        "content_sha256": "cf74f25cca53fb972c3a0efc2436842ed6cb46fd2bc54a4e78a6f1c6da599fa1",
+        "simples": "Elaborar ou apresentar, no licenciamento, concessão florestal ou outro procedimento administrativo, estudo, laudo ou relatório ambiental total ou parcialmente falso ou enganoso, inclusive por omissão: reclusão de 3 a 6 anos, e multa. Se culposo, detenção de 1 a 3 anos. A pena é aumentada de 1/3 a 2/3 se há dano significativo ao meio ambiente em decorrência do uso da informação falsa, incompleta ou enganosa.",
+        "pontos": [
+          "Estudo, laudo ou relatório ambiental falso ou enganoso.",
+          "Reclusão de 3 a 6 anos e multa.",
+          "Culposo: detenção de 1 a 3 anos.",
+          "Aumento de 1/3 a 2/3 com dano significativo."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído por lei posterior à redação original.",
+          "Pune também a omissão."
+        ],
+        "exemplo": "Apresentar relatório de impacto ambiental falso para obter a licença é crime.",
+        "prova": [
+          "Assertiva que restringe o crime a documentos falsos totalmente forjados erra: o parcialmente falso ou enganoso também é punido."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 66"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-70",
+      "unit_id": "682432d3-84b4-561d-87fa-98394ee28f91",
+      "content_sha256": "8331f77c18144906433e2616fb1159a496313320980e4f04809b0040fafaedab",
+      "simples": "Define infração administrativa ambiental e estabelece competências e garantias de apuração. Qualquer pessoa pode representar, mas lavrar auto e instaurar processo dependem das autoridades indicadas; contraditório e ampla defesa são assegurados.",
+      "pontos": [
+        "Ação OU omissão que viole as regras ambientais descritas pode constituir infração administrativa.",
+        "Funcionários ambientais do SISNAMA designados para fiscalização e agentes das Capitanias dos Portos são indicados no §1º.",
+        "Conhecimento da infração impõe apuração imediata por processo próprio."
+      ],
+      "atencao": [
+        "Representação particular não equivale a auto de infração lavrado por autoridade. Infração administrativa e crime são regimes distintos; não concluir responsabilidade objetiva de multa a partir da definição geral."
+      ],
+      "exemplo": "Um cidadão comunica infração à autoridade competente por representação. Variação: Ele tenta aplicar a multa por conta própria: a faculdade de representar não lhe transfere competência sancionatória.",
+      "prova": [
+        "Qualquer pessoa pode representar? Sim; o §2º permite essa comunicação às autoridades.",
+        "A apuração dispensa defesa? Não; o §4º assegura ampla defesa e contraditório."
+      ],
+      "termos": [
+        {
+          "termo": "Representação",
+          "significado": "Comunicação de possível infração à autoridade para exercício do poder de polícia, não aplicação privada de sanção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "682432d3-84b4-561d-87fa-98394ee28f91",
+        "content_sha256": "8331f77c18144906433e2616fb1159a496313320980e4f04809b0040fafaedab",
+        "simples": "Considera-se infração administrativa ambiental toda ação ou omissão que viole as regras jurídicas de uso, gozo, promoção, proteção e recuperação do meio ambiente. São autoridades competentes para lavrar auto de infração e instaurar processo os funcionários de órgãos do SISNAMA designados para fiscalização e os agentes das Capitanias dos Portos. Qualquer pessoa, constatando infração, poderá representar às autoridades. A autoridade que tiver conhecimento da infração é obrigada a promover sua apuração imediata, sob pena de corresponsabilidade. As infrações são apuradas em processo administrativo próprio, com ampla defesa e contraditório.",
+        "pontos": [
+          "Conceito de infração administrativa ambiental.",
+          "Autoridades competentes: SISNAMA e Capitanias dos Portos.",
+          "Qualquer pessoa pode representar.",
+          "Dever de apuração imediata.",
+          "Ampla defesa e contraditório."
+        ],
+        "atencao": [
+          "A autoridade que sabe e não apura responde junto (corresponsabilidade)."
+        ],
+        "exemplo": "Qualquer cidadão pode representar ao órgão ambiental contra uma infração.",
+        "prova": [
+          "Assertiva que restringe a representação a pessoas com interesse direto erra: qualquer pessoa pode representar."
+        ],
+        "termos": [
+          {
+            "termo": "SISNAMA",
+            "significado": "Sistema Nacional do Meio Ambiente."
+          }
+        ],
+        "remissoes": [
+          "Art. 71"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-71",
+      "unit_id": "2bd6848e-fa67-513c-acba-a71ce0e5830e",
+      "content_sha256": "618ecb8b06a623a08848b26b96a9edf94a5cba363fa102d97465e1a34285ac45",
+      "simples": "O processo administrativo ambiental tem prazos máximos legais diferentes para defesa, julgamento, recurso e pagamento. Cada prazo tem seu marco próprio; não se deve tratar todos como contados da mesma data ou misturá-los a prazos penais.",
+      "pontos": [
+        "Defesa: 20 dias da ciência; julgamento: 30 dias da lavratura do auto, apresentada defesa ou não.",
+        "Recurso: 20 dias na hipótese do inciso III; pagamento: 5 dias do recebimento da notificação.",
+        "O texto qualifica os prazos como máximos; conferir o procedimento regulamentar aplicável."
+      ],
+      "atencao": [
+        "Não concluir arquivamento ou nulidade automática de todo processo pelo simples transcurso de prazo de julgamento. Efeitos do atraso, regras de contagem e regulamentos exigem análise própria."
+      ],
+      "exemplo": "A questão conta o prazo de defesa de 20 dias desde a lavratura, embora a ciência do autuado tenha ocorrido depois. Variação: Se a pergunta é o prazo de julgamento, o inciso II usa a lavratura do auto, independentemente da apresentação da defesa.",
+      "prova": [
+        "A defesa começa necessariamente na lavratura? Não; o inciso I usa a ciência da autuação.",
+        "Pagamento e recurso têm o mesmo prazo legal? Não; os incisos indicam 5 e 20 dias, respectivamente."
+      ],
+      "termos": [
+        {
+          "termo": "Marco de contagem",
+          "significado": "Evento legal que inicia o prazo específico, diferente conforme a etapa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "2bd6848e-fa67-513c-acba-a71ce0e5830e",
+        "content_sha256": "618ecb8b06a623a08848b26b96a9edf94a5cba363fa102d97465e1a34285ac45",
+        "simples": "O processo administrativo para apuração de infração ambiental deve observar os prazos máximos de vinte dias para o infrator oferecer defesa ou impugnação, contados da ciência da autuação; trinta dias para a autoridade julgar o auto de infração, contados da lavratura; vinte dias para o infrator recorrer da decisão condenatória à instância superior; e cinco dias para o pagamento da multa, contados do recebimento da notificação.",
+        "pontos": [
+          "Defesa: vinte dias.",
+          "Julgamento: trinta dias.",
+          "Recurso: vinte dias.",
+          "Pagamento da multa: cinco dias."
+        ],
+        "atencao": [
+          "Prazos: vinte dias (defesa), trinta (julgamento), vinte (recurso) e cinco (pagamento)."
+        ],
+        "exemplo": "O autuado tem vinte dias para apresentar defesa.",
+        "prova": [
+          "Assertiva que fixa em dez dias o prazo de defesa erra: são vinte dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 70"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-72",
+      "unit_id": "d7b90d93-f4b6-50d9-9f16-3d67eda818dc",
+      "content_sha256": "9a32350bab340000c8a180cd4fdef597af9345dc1ebcff53b6b5e4fb6010e66c",
+      "simples": "A lei enumera sanções administrativas e regras de sua aplicação, como cumulação para infrações simultâneas, multa diária para conduta prolongada e possibilidade de conversão da multa simples. Sanção administrativa não se confunde com pena criminal.",
+      "pontos": [
+        "Infrações simultâneas distintas: sanções correspondentes aplicadas cumulativamente (§1º).",
+        "Multa simples PODE ser convertida em serviços ambientais; a conversão não é automática (§4º).",
+        "Multa diária: infração prolongada no tempo (§5º); sanções restritivas têm lista própria (§8º)."
+      ],
+      "atencao": [
+        "Não ensinar multa administrativa como responsabilidade objetiva só pela condição de proprietário. Também não exigir advertência prévia para toda e qualquer multa a partir de uma leitura isolada do §3º. Apreensão/destinação precisam observar o art. 25 e os alertas judiciais preservados."
+      ],
+      "exemplo": "O autuado sustenta que toda multa simples deve automaticamente ser convertida em serviços. Variação: Se a infração se prolonga no tempo, examinar a multa diária e seus requisitos, sem substituir automaticamente a identificação da conduta pela simples passagem do tempo.",
+      "prova": [
+        "Conversão da multa é automática pelo §4º? Não; o dispositivo diz pode ser convertida.",
+        "Uma só sanção exclui sempre todas as outras? Não; há regras de cumulação e cada hipótese precisa ser identificada."
+      ],
+      "termos": [
+        {
+          "termo": "Multa diária",
+          "significado": "Sanção vinculada à infração prolongada no tempo, com sua aplicação e requisitos pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "d7b90d93-f4b6-50d9-9f16-3d67eda818dc",
+        "content_sha256": "9a32350bab340000c8a180cd4fdef597af9345dc1ebcff53b6b5e4fb6010e66c",
+        "simples": "As infrações administrativas são punidas com advertência; multa simples; multa diária; apreensão dos animais, produtos, instrumentos, equipamentos ou veículos usados na infração; destruição ou inutilização do produto; suspensão de venda e fabricação; embargo de obra ou atividade; demolição de obra; suspensão parcial ou total de atividades; e sanção restritiva de direitos. Se o infrator cometer duas ou mais infrações, as sanções são aplicadas cumulativamente. A advertência é aplicada pela inobservância da lei. A multa simples é aplicada quando o agente, por negligência ou dolo, deixa de sanar irregularidades advertidas ou opõe embaraço à fiscalização. A multa simples pode ser convertida em serviços de preservação e recuperação ambiental. A multa diária é aplicada quando a infração se prolonga no tempo.",
+        "pontos": [
+          "Rol de sanções administrativas.",
+          "Cumulação em caso de várias infrações.",
+          "Multa simples por não sanar irregularidade ou por embaraço à fiscalização.",
+          "Conversão da multa simples em serviços ambientais.",
+          "Multa diária quando a infração se prolonga."
+        ],
+        "atencao": [
+          "Multa simples pode ser CONVERTIDA em serviços ambientais.",
+          "Multa diária para infração continuada."
+        ],
+        "exemplo": "O infrator que continua poluindo recebe multa diária.",
+        "prova": [
+          "Assertiva que impede a conversão da multa simples em serviços ambientais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-73",
+      "unit_id": "9c162eeb-cc8c-5a62-becd-36652994d9fa",
+      "content_sha256": "62476a83911ceb467cef596eab5f63e7efb71fe7b73e23047a905f3b5fda5865",
+      "simples": "Na redação de 2023, o produto das multas ambientais tem destinação aos fundos indicados conforme o órgão arrecadador. Para multas aplicadas pela União, o §1º estabelece percentual para o Fundo Nacional do Meio Ambiente, com possibilidade expressa de alteração.",
+      "pontos": [
+        "A lista inclui FNMA, Fundo Naval, Funcap e fundos estaduais/municipais ambientais ou correlatos.",
+        "50% das multas da União revertem ao FNMA, percentual que pode ser alterado a critério dos órgãos arrecadadores.",
+        "O §2º está vetado."
+      ],
+      "atencao": [
+        "Não apresentar 50% como percentual imutável nem aplicá-lo indistintamente a toda multa estadual ou municipal. É destinação da arrecadação, não desconto ao infrator."
+      ],
+      "exemplo": "Uma questão afirma que 50% de todas as multas de qualquer ente são desconto obrigatório ao infrator. Variação: Tratando-se de multas da União, o §1º descreve destinação ao FNMA, com a ressalva de alteração do percentual, não abatimento do débito.",
+      "prova": [
+        "A regra de 50% é um desconto na multa? Não; é destinação de valores arrecadados.",
+        "O percentual é declarado imutável? Não; o §1º admite alteração a critério dos órgãos arrecadadores."
+      ],
+      "termos": [
+        {
+          "termo": "Destinação da arrecadação",
+          "significado": "Destino dos valores recebidos, distinto da apuração ou redução da multa devida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "9c162eeb-cc8c-5a62-becd-36652994d9fa",
+        "content_sha256": "62476a83911ceb467cef596eab5f63e7efb71fe7b73e23047a905f3b5fda5865",
+        "simples": "Os valores arrecadados em pagamento de multas por infração ambiental serão revertidos ao Fundo Nacional do Meio Ambiente, ao Fundo Naval, ao Fundo Nacional para Calamidades Públicas, Proteção e Defesa Civil e aos fundos estaduais ou municipais de meio ambiente, conforme dispuser o órgão arrecadador. Reverterão ao Fundo Nacional do Meio Ambiente 50% dos valores de multas aplicadas pela União, percentual que poderá ser alterado pelos órgãos arrecadadores.",
+        "pontos": [
+          "Destino das multas: fundos ambientais, naval e de defesa civil.",
+          "Multas da União: 50% ao Fundo Nacional do Meio Ambiente."
+        ],
+        "atencao": [
+          "50% das multas da União vão ao Fundo Nacional do Meio Ambiente (percentual alterável)."
+        ],
+        "exemplo": "Metade da multa aplicada pela União vai ao Fundo Nacional do Meio Ambiente.",
+        "prova": [
+          "Assertiva que destina todas as multas ao Tesouro sem vinculação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 72"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-74",
+      "unit_id": "58626b2b-7d68-50d9-813b-e8499d77b507",
+      "content_sha256": "3d0b79c0c29d7616e856ac67c435c7a6defac36c0a4a1e18c9400eed0b022e13",
+      "simples": "A base da multa pode ser unidade, hectare, metro cúbico, quilograma ou outra medida pertinente ao objeto jurídico lesado. A unidade de cálculo depende da infração e não se limita a hectares de área.",
+      "pontos": [
+        "As medidas indicadas são exemplos de base pertinente.",
+        "Escolher unidade de medida não determina sozinho o valor monetário da sanção."
+      ],
+      "atencao": [
+        "Não inventar tarifa universal por hectare ou quilograma a partir deste artigo. O enquadramento e o regulamento aplicável definem o cálculo concreto."
+      ],
+      "exemplo": "A infração tem objeto mensurado em quilogramas e a questão afirma que a lei só permite hectares. Variação: Se o objeto é uma área, hectare pode ser medida pertinente, mas não é a única medida legal nem define sozinho a tarifa.",
+      "prova": [
+        "A lista admite outra medida pertinente? Sim; a redação contém essa alternativa.",
+        "O artigo fixa valor universal por hectare? Não; trata da base de medida, não dessa tarifa."
+      ],
+      "termos": [
+        {
+          "termo": "Base da multa",
+          "significado": "Unidade ou medida pertinente usada no cálculo conforme o objeto jurídico lesado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "58626b2b-7d68-50d9-813b-e8499d77b507",
+        "content_sha256": "3d0b79c0c29d7616e856ac67c435c7a6defac36c0a4a1e18c9400eed0b022e13",
+        "simples": "A multa terá por base a unidade, hectare, metro cúbico, quilograma ou outra medida pertinente, de acordo com o objeto jurídico lesado.",
+        "pontos": [
+          "Base da multa: unidade, hectare, metro cúbico, quilograma ou outra medida pertinente."
+        ],
+        "atencao": [
+          "Multa proporcional ao objeto lesado."
+        ],
+        "exemplo": "A multa por desmatamento é calculada por hectare.",
+        "prova": [
+          "Assertiva que fixa a multa em valor único, independentemente do objeto lesado, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 75"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-75",
+      "unit_id": "d421ccc8-621a-518d-897b-944ac9fd3a1c",
+      "content_sha256": "0d107d31035d6fe5f4465d92324b3fdad9567bc113de71fffa3368975b633479",
+      "simples": "O valor da multa administrativa é fixado no regulamento e corrigido periodicamente na forma legal. O artigo apresenta limites gerais, sem atribuir automaticamente o máximo a toda infração nem confundir multa administrativa com dias-multa penal.",
+      "pontos": [
+        "Limites textuais: mínimo de R$ 50 e máximo de R$ 50 milhões.",
+        "Fixação no regulamento e correção periódica conforme os índices pertinentes."
+      ],
+      "atencao": [
+        "Valores do artigo não substituem a faixa específica do regulamento, a motivação e os critérios de aplicação. Não usar esses limites como número de dias-multa criminal."
+      ],
+      "exemplo": "A questão afirma que toda infração administrativa ambiental recebe automaticamente multa de R$ 50 milhões. Variação: A existência do teto não determina o valor concreto; enquadramento, regulamento e critérios aplicáveis devem ser observados.",
+      "prova": [
+        "O artigo indica teto de R$ 50 milhões? Sim; como limite textual, não como multa universal.",
+        "Os limites são contagem de dias-multa penal? Não; pertencem à multa administrativa deste capítulo."
+      ],
+      "termos": [
+        {
+          "termo": "Teto da multa",
+          "significado": "Limite máximo textual, que não equivale ao valor obrigatório de toda sanção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "d421ccc8-621a-518d-897b-944ac9fd3a1c",
+        "content_sha256": "0d107d31035d6fe5f4465d92324b3fdad9567bc113de71fffa3368975b633479",
+        "simples": "O valor da multa será fixado no regulamento da Lei e corrigido periodicamente, com base nos índices da legislação pertinente, sendo o mínimo de R$ 50,00 e o máximo de R$ 50.000.000,00.",
+        "pontos": [
+          "Valor fixado em regulamento e corrigido periodicamente.",
+          "Mínimo de R$ 50,00.",
+          "Máximo de R$ 50.000.000,00."
+        ],
+        "atencao": [
+          "Faixa: de R$ 50,00 a R$ 50.000.000,00."
+        ],
+        "exemplo": "A multa ambiental pode variar de R$ 50,00 até R$ 50.000.000,00.",
+        "prova": [
+          "Assertiva que fixa o teto da multa em R$ 1.000.000,00 erra: é R$ 50.000.000,00."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 74"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    },
+    {
+      "course_slug": "ambientais",
+      "course_id": "cbe217be-51a1-57de-a669-64c14199c75f",
+      "syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-79-a",
+      "unit_id": "f3b84a83-5aab-50a5-a141-b6b73b57b95c",
+      "content_sha256": "2007dee04d250df4e773b8d1cae055afe33bb1117c6f3d066c6d3e60300d36af",
+      "simples": "Órgãos ambientais competentes podem celebrar termo de compromisso com força de título executivo extrajudicial para correção de atividades. O instrumento tem cláusulas e publicidade obrigatórias; os parágrafos com datas de 1998 são transição histórica, não reabertura permanente de prazo.",
+      "pontos": [
+        "Vigência do compromisso: 90 dias a 3 anos, prorrogável por igual período, conforme complexidade.",
+        "Descumprimento: rescisão de pleno direito, ressalvados caso fortuito/força maior.",
+        "Publicação do extrato oficial é requisito de eficácia; multas anteriores não são apagadas pela celebração."
+      ],
+      "atencao": [
+        "Os §§2º e 3º vinculam sua hipótese a empreendimentos e requerimentos datados de 1998. Não ensinar suspensão universal de sanções por todo termo novo, nem transformar o prazo histórico em janela aberta em 2026."
+      ],
+      "exemplo": "Um termo para correção de atividade é celebrado sem publicação do extrato no órgão oficial competente. Variação: Após publicação, ainda se observam as cláusulas e a execução de multas anteriores; o termo não elimina automaticamente todos os débitos ou responsabilidade penal.",
+      "prova": [
+        "Sem publicação do extrato há eficácia pelo §8º? Não; a publicação é exigida sob pena de ineficácia.",
+        "Celebrar qualquer termo novo suspende universalmente todas as sanções? Não; a hipótese dos §§2º e 3º tem transição histórica específica, e o §4º preserva execução de multas anteriores."
+      ],
+      "termos": [
+        {
+          "termo": "Título executivo extrajudicial",
+          "significado": "Força atribuída ao termo para exigibilidade das obrigações, observados seus requisitos legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "expected": {
+        "unit_id": "f3b84a83-5aab-50a5-a141-b6b73b57b95c",
+        "content_sha256": "2007dee04d250df4e773b8d1cae055afe33bb1117c6f3d066c6d3e60300d36af",
+        "simples": "Os órgãos ambientais integrantes do SISNAMA ficam autorizados a celebrar, com força de título executivo extrajudicial, termo de compromisso com pessoas físicas ou jurídicas responsáveis por estabelecimentos e atividades que utilizem recursos ambientais, efetiva ou potencialmente poluidores. O termo destina-se exclusivamente a permitir que corrijam suas atividades para atender às exigências ambientais, e deve dispor, entre outros pontos, sobre as partes, o prazo de vigência, que pode variar de noventa dias a três anos, prorrogável por igual período, a descrição do objeto, o valor do investimento e o cronograma, com metas trimestrais.",
+        "pontos": [
+          "Termo de compromisso com força de título executivo extrajudicial.",
+          "Finalidade: corrigir atividades poluidoras.",
+          "Prazo de noventa dias a três anos, prorrogável por igual período.",
+          "Cronograma com metas trimestrais."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: incluído por medida provisória e lei posteriores; confira a redação vigente.",
+          "Título executivo EXTRAJUDICIAL."
+        ],
+        "exemplo": "A empresa assina termo de compromisso para adequar sua operação às exigências ambientais.",
+        "prova": [
+          "Assertiva que fixa o prazo do termo em até cinco anos erra: varia de noventa dias a três anos, prorrogável por igual período."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 72"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T18:47:14.920542+00:00",
+        "updated_at": "2026-10-11T18:47:14.920542+00:00"
+      }
+    }
+  ]
+}
