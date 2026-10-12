@@ -1,0 +1,149 @@
+{
+  "version": "2026-10-11-codigo-penal-targeted",
+  "checked_at": "2026-10-12T23:49:03.213582+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-penal",
+      "title": "Código Penal — leitura atualizada",
+      "units": 2,
+      "scope_type": "targeted_correction",
+      "course_current_units": 401,
+      "target_unit_keys": [
+        "art-158",
+        "art-170"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06",
+      "source_checked_at": "2026-10-12T23:38:16.494220+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-158",
+      "unit_id": "78cdc174-4632-55c5-aa29-e724b4799f60",
+      "content_sha256": "4b658f7f9cb0da98485511541addd110dc05e6a8d1e6211c9251a98c61fc161b",
+      "simples": "Extorsão: constranger alguém, mediante violência ou grave ameaça, e com o intuito de obter indevida vantagem econômica, a fazer, tolerar que se faça ou deixar de fazer alguma coisa. Pena: reclusão de 4 a 10 anos e multa. Aumenta-se de um terço até metade se por duas ou mais pessoas ou com arma. Aplica-se à extorsão com violência o disposto no §3º do art. 157. Se o crime é cometido mediante restrição da liberdade da vítima, e essa condição é necessária para a vantagem econômica (sequestro-relâmpago), a pena é de reclusão de 6 a 12 anos, além da multa; se resulta lesão grave ou morte, aplicam-se as penas do art. 159, §§2º e 3º. §4º: organização criminosa, grupo paramilitar ou milícia no contexto/finalidade legais; triplo. Não inserir ultraviolenta como requisito que esse parágrafo não traz.",
+      "pontos": [
+        "Constranger com violência ou grave ameaça para obter vantagem econômica indevida.",
+        "Caput: reclusão de 4 a 10 anos e multa.",
+        "§1º: duas ou mais pessoas ou arma: aumento de 1/3 até metade.",
+        "§3º: restrição da liberdade da vítima necessária para a vantagem (sequestro-relâmpago): 6 a 12 anos; lesão grave ou morte: penas do art. 159, §§2º e 3º.",
+        "§4º: organização criminosa, grupo paramilitar ou milícia no contexto/finalidade previstos; pena em triplo."
+      ],
+      "atencao": [
+        "Extorsão: a colaboração da vítima é necessária (ela faz, tolera ou deixa de fazer); no roubo a subtração ocorre sem tal colaboração.",
+        "Sequestro-relâmpago: §3º, com pena de 6 a 12 anos.",
+        "Súmula 96/STJ: extorsão consuma-se independentemente da obtenção da vantagem indevida. §4º exige contexto/finalidade; não presumir pelo grupo nem retroagir pena mais gravosa."
+      ],
+      "termos": [
+        {
+          "termo": "Sequestro-relâmpago",
+          "significado": "Restrição da liberdade necessária à obtenção da vantagem econômica na hipótese do§3º, sem prazo máximo presumido."
+        }
+      ],
+      "remissoes": [
+        "Art. 157",
+        "Art. 159"
+      ],
+      "exemplo": "Vítima é coagida a transferir valor para obtenção de vantagem econômica indevida. Variação: Se liberdade é restringida como condição necessária para a vantagem, examinar §3º e resultados.",
+      "prova": [
+        "Obter efetivamente a vantagem é sempre necessário? Não; Súmula 96/STJ qualifica consumação da extorsão.",
+        "Grupo sozinho prova §4º? Não; contexto/finalidade legais também importam."
+      ],
+      "expected": {
+        "unit_id": "78cdc174-4632-55c5-aa29-e724b4799f60",
+        "content_sha256": "4b658f7f9cb0da98485511541addd110dc05e6a8d1e6211c9251a98c61fc161b",
+        "simples": "Extorsão: constranger alguém, mediante violência ou grave ameaça, e com o intuito de obter indevida vantagem econômica, a fazer, tolerar que se faça ou deixar de fazer alguma coisa. Pena: reclusão de 4 a 10 anos e multa. Aumenta-se de um terço até metade se por duas ou mais pessoas ou com arma. Aplica-se à extorsão com violência o disposto no §3º do art. 157. Se o crime é cometido mediante restrição da liberdade da vítima, e essa condição é necessária para a vantagem econômica (sequestro-relâmpago), a pena é de reclusão de 6 a 12 anos, além da multa; se resulta lesão grave ou morte, aplicam-se as penas do art. 159, §§2º e 3º. §4º: organização criminosa, grupo paramilitar ou milícia no contexto/finalidade legais; triplo. Não inserir ultraviolenta como requisito que esse parágrafo não traz.",
+        "pontos": [
+          "Constranger com violência ou grave ameaça para obter vantagem econômica indevida.",
+          "Caput: reclusão de 4 a 10 anos e multa.",
+          "§1º: duas ou mais pessoas ou arma: aumento de 1/3 até metade.",
+          "§3º: restrição da liberdade da vítima necessária para a vantagem (sequestro-relâmpago): 6 a 12 anos; lesão grave ou morte: penas do art. 159, §§2º e 3º.",
+          "§4º: organização ultraviolenta, paramilitar ou milícia: pena em triplo."
+        ],
+        "atencao": [
+          "Extorsão: a colaboração da vítima é necessária (ela faz, tolera ou deixa de fazer); no roubo a subtração ocorre sem tal colaboração.",
+          "Sequestro-relâmpago: §3º, com pena de 6 a 12 anos.",
+          "Súmula 96/STJ: extorsão consuma-se independentemente da obtenção da vantagem indevida. §4º exige contexto/finalidade; não presumir pelo grupo nem retroagir pena mais gravosa."
+        ],
+        "exemplo": "Vítima é coagida a transferir valor para obtenção de vantagem econômica indevida. Variação: Se liberdade é restringida como condição necessária para a vantagem, examinar §3º e resultados.",
+        "prova": [
+          "Obter efetivamente a vantagem é sempre necessário? Não; Súmula 96/STJ qualifica consumação da extorsão.",
+          "Grupo sozinho prova §4º? Não; contexto/finalidade legais também importam."
+        ],
+        "termos": [
+          {
+            "termo": "Sequestro-relâmpago",
+            "significado": "Restrição da liberdade da vítima por pouco tempo para obter vantagem econômica."
+          }
+        ],
+        "remissoes": [
+          "Art. 157",
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T23:44:12.583+00:00",
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-12T23:44:12.583+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-170",
+      "unit_id": "4fd2149a-e61d-5aa1-b68d-43cc5552604b",
+      "content_sha256": "d54dcce26fa98c596200a93785ccd29b057f5e34d321d60370e140f2ad438082",
+      "simples": "Nos crimes previstos neste capítulo (crimes contra o patrimônio da apropriação indébita, entre outros), aplica-se o disposto no art. 155, §2º, isto é, o privilégio (primário e de pequeno valor).",
+      "pontos": [
+        "Extensão do 155§2º aos crimes do capítulo da apropriação indébita; estelionato tem remissão própria no 171§1º."
+      ],
+      "atencao": [
+        "O privilégio exige primariedade e coisa de pequeno valor."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 155, §2º"
+      ],
+      "exemplo": "Apropriação no capítulo é examinada com primariedade e pequeno valor. Variação: Valor elevado não recebe privilégio apenas por ser primeira infração.",
+      "prova": [
+        "Requisitos são alternativos? Não; primário e pequeno valor.",
+        "Remissão cria absolvição automática? Não; integra possibilidades do 155§2º."
+      ],
+      "expected": {
+        "unit_id": "4fd2149a-e61d-5aa1-b68d-43cc5552604b",
+        "content_sha256": "d54dcce26fa98c596200a93785ccd29b057f5e34d321d60370e140f2ad438082",
+        "simples": "Nos crimes previstos neste capítulo (crimes contra o patrimônio da apropriação indébita, entre outros), aplica-se o disposto no art. 155, §2º, isto é, o privilégio (primário e de pequeno valor).",
+        "pontos": [
+          "Extensão do furto privilegiado (art. 155, §2º) aos crimes do capítulo (apropriação indébita, estelionato etc.)."
+        ],
+        "atencao": [
+          "O privilégio exige primariedade e coisa de pequeno valor."
+        ],
+        "exemplo": "Apropriação no capítulo é examinada com primariedade e pequeno valor. Variação: Valor elevado não recebe privilégio apenas por ser primeira infração.",
+        "prova": [
+          "Requisitos são alternativos? Não; primário e pequeno valor.",
+          "Remissão cria absolvição automática? Não; integra possibilidades do 155§2º."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 155, §2º"
+        ],
+        "status": "published",
+        "authored_by": "codex",
+        "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+        "reviewed_at": "2026-10-12T23:44:26.152+00:00",
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-12T23:44:26.152+00:00"
+      }
+    }
+  ]
+}

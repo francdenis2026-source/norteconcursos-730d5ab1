@@ -732,3 +732,17 @@ test('CP: honra e liberdade não restauram remissões ou iniciativa superadas',(
  assert.match(get(151).atencao.join(' '),/Bloquear exercícios automáticos/);
  for(const n of [140,141,144,145,'146-a',147,'147-a','147-b','147-c',148,149,150,151])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
 });
+
+test('CP final lote1: patrimônio e trabalho não ensinam textos residuais como atuais',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-final-lote-1-2026-10-12.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(155).atencao.join(' '),/15.517.*23\/9\/2026/);
+ assert.match(get(158).simples,/Não inserir ultraviolenta/);
+ assert.doesNotMatch(get(158).pontos.join(' '),/ultraviolenta/);
+ assert.match(get(170).pontos.join(' '),/estelionato tem remissão própria/);
+ assert.match(get(171).atencao.join(' '),/revogou.*Não ensinar representação/);
+ assert.match(get('168-a').atencao.join(' '),/legislação tributária posterior.*9\/1\/2026/s);
+ assert.match(get(165).simples,/62.*9.605/);assert.match(get(201).simples,/direito constitucional de greve/);
+ for(const n of [153,154,'154-a',155,158,165,166,'168-a',171,180,'180-a',181,182,201,204,213])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+});

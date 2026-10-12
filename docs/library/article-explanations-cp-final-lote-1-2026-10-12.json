@@ -1,0 +1,3052 @@
+{
+  "version": "2026-10-11-codigo-penal-targeted",
+  "checked_at": "2026-10-12T23:49:02.865812+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-penal",
+      "title": "Código Penal — leitura atualizada",
+      "units": 50,
+      "scope_type": "targeted_correction",
+      "course_current_units": 401,
+      "target_unit_keys": [
+        "art-152",
+        "art-153",
+        "art-154",
+        "art-154-a",
+        "art-154-b",
+        "art-155",
+        "art-156",
+        "art-158",
+        "art-160",
+        "art-161",
+        "art-162",
+        "art-164",
+        "art-165",
+        "art-166",
+        "art-167",
+        "art-168",
+        "art-168-a",
+        "art-169",
+        "art-170",
+        "art-171",
+        "art-173",
+        "art-174",
+        "art-175",
+        "art-176",
+        "art-177",
+        "art-178",
+        "art-179",
+        "art-180",
+        "art-180-a",
+        "art-181",
+        "art-182",
+        "art-186",
+        "art-197",
+        "art-198",
+        "art-199",
+        "art-200",
+        "art-201",
+        "art-202",
+        "art-203",
+        "art-204",
+        "art-205",
+        "art-206",
+        "art-207",
+        "art-208",
+        "art-209",
+        "art-210",
+        "art-211",
+        "art-212",
+        "art-213",
+        "art-215"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06",
+      "source_checked_at": "2026-10-12T23:38:16.494220+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-152",
+      "unit_id": "8287a14f-f953-5825-9cb2-ecd7ca6fe44e",
+      "content_sha256": "67e1b95f5a8479e1fb03fd8ef107d1b64cb7c4d5808dc793270f99c604641cb0",
+      "simples": "Correspondência comercial: abusar da condição de sócio ou empregado de estabelecimento comercial ou industrial para, no todo ou em parte, desviar, sonegar, subtrair ou suprimir correspondência, ou revelar a estranho seu conteúdo. Pena: detenção de 3 meses a 2 anos. Somente se procede mediante representação.",
+      "pontos": [
+        "Autor: sócio ou empregado de estabelecimento comercial ou industrial.",
+        "Condutas: desviar, sonegar, subtrair, suprimir correspondência ou revelar seu conteúdo a estranho.",
+        "Pena: detenção de 3 meses a 2 anos.",
+        "Ação condicionada à representação."
+      ],
+      "atencao": [
+        "Crime próprio: exige a qualidade de sócio ou empregado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 151"
+      ],
+      "exemplo": "Empregado revela a terceiro conteúdo comercial aproveitando seu vínculo. Variação: Sem qualidade de sócio/empregado, identificar outro tipo, não presumir este crime próprio.",
+      "prova": [
+        "Exige a qualidade indicada? Sim; sócio ou empregado do estabelecimento.",
+        "Ação sempre incondicionada? Não; o parágrafo exige representação."
+      ],
+      "expected": {
+        "unit_id": "8287a14f-f953-5825-9cb2-ecd7ca6fe44e",
+        "content_sha256": "67e1b95f5a8479e1fb03fd8ef107d1b64cb7c4d5808dc793270f99c604641cb0",
+        "simples": "Correspondência comercial: abusar da condição de sócio ou empregado de estabelecimento comercial ou industrial para, no todo ou em parte, desviar, sonegar, subtrair ou suprimir correspondência, ou revelar a estranho seu conteúdo. Pena: detenção de 3 meses a 2 anos. Somente se procede mediante representação.",
+        "pontos": [
+          "Autor: sócio ou empregado de estabelecimento comercial ou industrial.",
+          "Condutas: desviar, sonegar, subtrair, suprimir correspondência ou revelar seu conteúdo a estranho.",
+          "Pena: detenção de 3 meses a 2 anos.",
+          "Ação condicionada à representação."
+        ],
+        "atencao": [
+          "Crime próprio: exige a qualidade de sócio ou empregado."
+        ],
+        "exemplo": "Empregado de uma empresa sonega cartas comerciais da empresa e as revela a um concorrente.",
+        "prova": [
+          "Assertiva que torna incondicionada a ação do art. 152 contraria o parágrafo único."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 151"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-153",
+      "unit_id": "58e6dd33-db63-5198-8cfb-4f988b5bb365",
+      "content_sha256": "450b74a7efc34ee86ce72570208edd94d000db32d0e1abd0953f249b92e6da39",
+      "simples": "Divulgação de segredo: divulgar alguém, sem justa causa, conteúdo de documento particular ou de correspondência confidencial, de que é destinatário ou detentor, e cuja divulgação possa produzir dano a outrem. Pena: detenção de 1 a 6 meses, ou multa. Ação condicionada à representação. O §1º-A pune a divulgação, sem justa causa, de informações sigilosas ou reservadas, assim definidas em lei, contidas ou não nos sistemas de informações ou bancos de dados da Administração Pública: detenção de 1 a 4 anos e multa. Quando resultar prejuízo para a Administração Pública, a ação penal será incondicionada.",
+      "pontos": [
+        "Caput: divulgação sem justa causa de documento particular ou correspondência confidencial, com potencial de dano.",
+        "§1º: representação.",
+        "§1º-A: informações sigilosas ou reservadas da Administração: detenção de 1 a 4 anos e multa.",
+        "§2º: prejuízo à Administração Pública: ação incondicionada."
+      ],
+      "atencao": [
+        "A divulgação deve poder produzir DANO a outrem.",
+        "Informações sigilosas da Administração: pena maior (1 a 4 anos).",
+        "Moeda em mil-réis é histórica; integrar regime de dias-multa, não converter valores por palpite."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 154"
+      ],
+      "exemplo": "Destinatário divulga documento confidencial sem justa causa, com capacidade de dano. Variação: Se há informações administrativas legalmente sigilosas, examinar §1º-A e prejuízo à Administração.",
+      "prova": [
+        "Precisa sempre dano já consumado no caput? Não; divulgação que possa produzir dano.",
+        "A moeda histórica do caput é atual? Não; integrar regime atual de multa."
+      ],
+      "expected": {
+        "unit_id": "58e6dd33-db63-5198-8cfb-4f988b5bb365",
+        "content_sha256": "450b74a7efc34ee86ce72570208edd94d000db32d0e1abd0953f249b92e6da39",
+        "simples": "Divulgação de segredo: divulgar alguém, sem justa causa, conteúdo de documento particular ou de correspondência confidencial, de que é destinatário ou detentor, e cuja divulgação possa produzir dano a outrem. Pena: detenção de 1 a 6 meses, ou multa. Ação condicionada à representação. O §1º-A pune a divulgação, sem justa causa, de informações sigilosas ou reservadas, assim definidas em lei, contidas ou não nos sistemas de informações ou bancos de dados da Administração Pública: detenção de 1 a 4 anos e multa. Quando resultar prejuízo para a Administração Pública, a ação penal será incondicionada.",
+        "pontos": [
+          "Caput: divulgação sem justa causa de documento particular ou correspondência confidencial, com potencial de dano.",
+          "§1º: representação.",
+          "§1º-A: informações sigilosas ou reservadas da Administração: detenção de 1 a 4 anos e multa.",
+          "§2º: prejuízo à Administração Pública: ação incondicionada."
+        ],
+        "atencao": [
+          "A divulgação deve poder produzir DANO a outrem.",
+          "Informações sigilosas da Administração: pena maior (1 a 4 anos)."
+        ],
+        "exemplo": "O destinatário divulga carta confidencial recebida, causando dano ao remetente, sem justa causa.",
+        "prova": [
+          "Assertiva que torna sempre condicionada à representação a ação do art. 153 erra: se há prejuízo à Administração Pública, é incondicionada (§2º)."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 154"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-154",
+      "unit_id": "7811cc14-87dc-59b3-9fa7-f17d4cf05131",
+      "content_sha256": "c4ffaf77ab8e7a5abb7862798b6699a0d749fbb2aa13a84f77ffdfcea34c1410",
+      "simples": "Violação do segredo profissional: revelar alguém, sem justa causa, segredo de que tem ciência em razão de função, ministério, ofício ou profissão, e cuja revelação possa produzir dano a outrem. Pena: detenção de 3 meses a 1 ano, ou multa. Somente se procede mediante representação.",
+      "pontos": [
+        "Segredo conhecido em razão de função, ministério, ofício ou profissão.",
+        "Revelação sem justa causa, com potencial de dano.",
+        "Pena: detenção de 3 meses a 1 ano, ou multa.",
+        "Ação condicionada à representação."
+      ],
+      "atencao": [
+        "A 'justa causa' afasta o crime (ex.: dever legal de comunicar).",
+        "Referência monetária histórica não é tabela atual de multa; justa causa exige fundamento pertinente, não autorização genérica."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 153"
+      ],
+      "exemplo": "Profissional revela segredo conhecido pelo ofício sem justa causa e com potencial de dano. Variação: Comunicação fundada em dever legal exige exame de justa causa, não licença irrestrita de divulgação.",
+      "prova": [
+        "Basta saber segredo por qualquer meio? Não; o vínculo profissional indicado importa.",
+        "Sempre independe de representação? Não; o parágrafo a exige."
+      ],
+      "expected": {
+        "unit_id": "7811cc14-87dc-59b3-9fa7-f17d4cf05131",
+        "content_sha256": "c4ffaf77ab8e7a5abb7862798b6699a0d749fbb2aa13a84f77ffdfcea34c1410",
+        "simples": "Violação do segredo profissional: revelar alguém, sem justa causa, segredo de que tem ciência em razão de função, ministério, ofício ou profissão, e cuja revelação possa produzir dano a outrem. Pena: detenção de 3 meses a 1 ano, ou multa. Somente se procede mediante representação.",
+        "pontos": [
+          "Segredo conhecido em razão de função, ministério, ofício ou profissão.",
+          "Revelação sem justa causa, com potencial de dano.",
+          "Pena: detenção de 3 meses a 1 ano, ou multa.",
+          "Ação condicionada à representação."
+        ],
+        "atencao": [
+          "A 'justa causa' afasta o crime (ex.: dever legal de comunicar)."
+        ],
+        "exemplo": "Advogado revela, sem justa causa, segredo do cliente, causando-lhe dano: art. 154.",
+        "prova": [
+          "Assertiva que pune a revelação do segredo mesmo com justa causa erra: o tipo exige 'sem justa causa'."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 153"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-154-a",
+      "unit_id": "12113d8f-9bcf-5865-b6f1-ac12fb7e34c8",
+      "content_sha256": "521b2fe17d6818e938ef625b00c60925cbe309ad64dab099555de858142b01a9",
+      "simples": "Invasão de dispositivo informático: invadir dispositivo informático de uso alheio, conectado ou não à rede, com o fim de obter, adulterar ou destruir dados ou informações sem autorização expressa ou tácita do usuário, ou de instalar vulnerabilidades para obter vantagem ilícita. Pena: reclusão de 1 a 4 anos e multa. Na mesma pena quem produz, oferece, distribui, vende ou difunde dispositivo ou programa com o intuito de permitir a conduta. Aumenta-se de 1/3 a 2/3 se resulta prejuízo econômico. Se resulta obtenção de conteúdo de comunicações eletrônicas privadas, segredos comerciais ou industriais, informações sigilosas ou controle remoto não autorizado: reclusão de 2 a 5 anos e multa, com aumento de um a dois terços se houver divulgação, comercialização ou transmissão a terceiro (confira o texto completo).",
+      "pontos": [
+        "Invadir dispositivo de uso alheio, conectado ou não à rede, com o fim de obter, adulterar ou destruir dados ou instalar vulnerabilidades.",
+        "Caput: reclusão de 1 a 4 anos e multa.",
+        "§1º: produzir, oferecer, distribuir, vender ou difundir programa ou dispositivo para a prática.",
+        "§2º: prejuízo econômico: aumento de 1/3 a 2/3.",
+        "§3º: obtenção de comunicações privadas, segredos ou controle remoto: reclusão de 2 a 5 anos e multa."
+      ],
+      "atencao": [
+        "Vale mesmo que o dispositivo NÃO esteja conectado à rede.",
+        "Exige o fim específico (obter, adulterar ou destruir dados ou instalar vulnerabilidades).",
+        "Redação de 2021 retirou referência expressa à violação de mecanismo de segurança; não exigir esse requisito histórico em toda hipótese atual. Mudança gravosa não retroage."
+      ],
+      "termos": [
+        {
+          "termo": "Dispositivo informático",
+          "significado": "Computador, celular, tablet e equipamentos semelhantes que armazenam ou processam dados."
+        }
+      ],
+      "remissoes": [
+        "Art. 154-B (ação penal)"
+      ],
+      "exemplo": "Invasão de dispositivo de uso alheio ocorre mesmo desconectado da internet, com finalidade típica. Variação: Acesso autorizado no limite concedido muda a análise; obter comunicação privada atrai modalidade específica.",
+      "prova": [
+        "Rede conectada é indispensável? Não; texto inclui conectado ou não.",
+        "A lei atual exige sempre violar mecanismo de segurança? Não; a redação de 2021 retirou essa exigência expressa."
+      ],
+      "expected": {
+        "unit_id": "12113d8f-9bcf-5865-b6f1-ac12fb7e34c8",
+        "content_sha256": "521b2fe17d6818e938ef625b00c60925cbe309ad64dab099555de858142b01a9",
+        "simples": "Invasão de dispositivo informático: invadir dispositivo informático de uso alheio, conectado ou não à rede, com o fim de obter, adulterar ou destruir dados ou informações sem autorização expressa ou tácita do usuário, ou de instalar vulnerabilidades para obter vantagem ilícita. Pena: reclusão de 1 a 4 anos e multa. Na mesma pena quem produz, oferece, distribui, vende ou difunde dispositivo ou programa com o intuito de permitir a conduta. Aumenta-se de 1/3 a 2/3 se resulta prejuízo econômico. Se resulta obtenção de conteúdo de comunicações eletrônicas privadas, segredos comerciais ou industriais, informações sigilosas ou controle remoto não autorizado: reclusão de 2 a 5 anos e multa, com aumento de um a dois terços se houver divulgação, comercialização ou transmissão a terceiro (confira o texto completo).",
+        "pontos": [
+          "Invadir dispositivo de uso alheio, conectado ou não à rede, com o fim de obter, adulterar ou destruir dados ou instalar vulnerabilidades.",
+          "Caput: reclusão de 1 a 4 anos e multa.",
+          "§1º: produzir, oferecer, distribuir, vender ou difundir programa ou dispositivo para a prática.",
+          "§2º: prejuízo econômico: aumento de 1/3 a 2/3.",
+          "§3º: obtenção de comunicações privadas, segredos ou controle remoto: reclusão de 2 a 5 anos e multa."
+        ],
+        "atencao": [
+          "Vale mesmo que o dispositivo NÃO esteja conectado à rede.",
+          "Exige o fim específico (obter, adulterar ou destruir dados ou instalar vulnerabilidades)."
+        ],
+        "exemplo": "Alguém invade o celular da ex-companheira para copiar conversas privadas: invasão de dispositivo informático (pode incidir o §3º).",
+        "prova": [
+          "Assertiva que exige que o dispositivo esteja conectado à internet erra: o tipo vale para dispositivo conectado ou não à rede."
+        ],
+        "termos": [
+          {
+            "termo": "Dispositivo informático",
+            "significado": "Computador, celular, tablet e equipamentos semelhantes que armazenam ou processam dados."
+          }
+        ],
+        "remissoes": [
+          "Art. 154-B (ação penal)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-154-b",
+      "unit_id": "404c9deb-d708-5e83-ab4b-85891e94c150",
+      "content_sha256": "7fbf4e34ebd212e237dbc4bdaf61fe1b622c21f4677281dc048870f9a0c5be16",
+      "simples": "Ação penal na invasão de dispositivo informático: nos crimes do art. 154-A somente se procede mediante representação, salvo se o crime é cometido contra a administração pública direta ou indireta de qualquer dos Poderes da União, Estados, Distrito Federal ou Municípios, ou contra empresas concessionárias de serviços públicos.",
+      "pontos": [
+        "Regra: ação pública condicionada à representação.",
+        "Exceção: crime contra a administração pública direta ou indireta, ou contra concessionárias de serviços públicos: incondicionada."
+      ],
+      "atencao": [
+        "Regra: representação; contra a Administração ou concessionárias: ação pública incondicionada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 154-A"
+      ],
+      "exemplo": "Invasão atinge concessionária de serviço público. Variação: Se atinge usuário particular, verificar a regra geral de representação.",
+      "prova": [
+        "Concessionária está na exceção? Sim; o texto a inclui.",
+        "Todo dispositivo de particular torna ação incondicionada? Não; regra é representação."
+      ],
+      "expected": {
+        "unit_id": "404c9deb-d708-5e83-ab4b-85891e94c150",
+        "content_sha256": "7fbf4e34ebd212e237dbc4bdaf61fe1b622c21f4677281dc048870f9a0c5be16",
+        "simples": "Ação penal na invasão de dispositivo informático: nos crimes do art. 154-A somente se procede mediante representação, salvo se o crime é cometido contra a administração pública direta ou indireta de qualquer dos Poderes da União, Estados, Distrito Federal ou Municípios, ou contra empresas concessionárias de serviços públicos.",
+        "pontos": [
+          "Regra: ação pública condicionada à representação.",
+          "Exceção: crime contra a administração pública direta ou indireta, ou contra concessionárias de serviços públicos: incondicionada."
+        ],
+        "atencao": [
+          "Regra: representação; contra a Administração ou concessionárias: ação pública incondicionada."
+        ],
+        "exemplo": "Invasão do sistema de um órgão municipal: ação pública incondicionada.",
+        "prova": [
+          "Assertiva que exige representação mesmo na invasão de dispositivo de órgão da administração direta erra: nesse caso a ação é incondicionada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 154-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-155",
+      "unit_id": "7cb71c66-c0ac-5dd2-9664-f9233cf3ce46",
+      "content_sha256": "27e8a88343f85cc4184ff593d25766a3f4ec379724f3775b98d74100ad672e8c",
+      "simples": "Furto: subtrair, para si ou para outrem, coisa alheia móvel. Pena: reclusão de 1 a 6 anos e multa (texto atual). Aumento de metade se praticado durante o repouso noturno. Furto privilegiado (§2º): se o criminoso é primário e a coisa é de pequeno valor, o juiz pode substituir reclusão por detenção, diminuir de um a dois terços ou aplicar só multa. Energia elétrica e outras com valor econômico equiparam-se a coisa móvel (§3º). Furto qualificado (§4º, reclusão de 2 a 8 anos e multa): destruição ou rompimento de obstáculo; abuso de confiança, fraude, escalada ou destreza; chave falsa; concurso de duas ou mais pessoas; bens que comprometam o funcionamento de órgãos públicos ou serviços essenciais. Há ainda formas com pena de 4 a 10 anos (explosivo, fraude eletrônica, veículo levado a outro Estado ou ao exterior, animais, celulares e computadores, armas etc.) e causas de aumento para fraude eletrônica (servidor no exterior; idoso ou vulnerável). Confira o texto completo.",
+      "pontos": [
+        "Caput: subtrair coisa alheia móvel; reclusão de 1 a 6 anos e multa.",
+        "§1º: aumento de metade no repouso noturno.",
+        "§2º: furto privilegiado (primário + pequeno valor).",
+        "§3º: equipara-se à coisa móvel a energia elétrica ou outra com valor econômico.",
+        "§4º: qualificadoras (obstáculo; confiança, fraude, escalada ou destreza; chave falsa; concurso de pessoas; bens essenciais): reclusão de 2 a 8 anos e multa.",
+        "§4º-A e seguintes: formas específicas com pena de 4 a 10 anos (explosivo, fraude por dispositivo eletrônico, veículo para outro Estado ou exterior, semovente ou animal doméstico, celular e computador, arma de fogo, substâncias explosivas)."
+      ],
+      "atencao": [
+        "Repouso noturno é causa de AUMENTO (metade) no furto simples; privilégio exige primariedade e coisa de pequeno valor.",
+        "Qualificadoras do §4º: reclusão de 2 a 8 anos.",
+        "As penas e hipóteses seguem a redação atual do texto (leis de 2018, 2021 e 2026).",
+        "Lei 15.397 vigente em 4/5/2026: novas penas/repouso noturno. Lei 15.517 vigente em 23/9/2026: combustíveis nas instalações indicadas,§§10–12 e requisitos de aumentos. Não retroagir agravamento nem duplicar fundamento. Súmula 511/STJ condiciona privilégio no qualificado; Súmula 567 afasta impossível só pela vigilância."
+      ],
+      "termos": [
+        {
+          "termo": "Subtrair",
+          "significado": "Retirar a coisa da posse de quem a detém, sem violência ou grave ameaça."
+        },
+        {
+          "termo": "Furto privilegiado",
+          "significado": "Furto de pequeno valor por réu primário, com benefícios na pena."
+        }
+      ],
+      "remissoes": [
+        "Art. 157 (roubo)",
+        "Art. 156",
+        "Art. 170",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15517.htm"
+      ],
+      "exemplo": "Furto de celular sob regime atual exige analisar §6ºII, não usar só pena genérica antiga. Variação: Subtração de combustível nas instalações indicadas exige §10 e seus resultados, sem aplicar norma mais gravosa a fato anterior.",
+      "prova": [
+        "A pena geral atual é 1 a 4? Não; compilado prevê 1 a 6 após alteração de 2026.",
+        "Toda subtração com pequeno valor gera privilégio? Não; verificar primariedade, objeto e compatibilidade pertinente."
+      ],
+      "expected": {
+        "unit_id": "7cb71c66-c0ac-5dd2-9664-f9233cf3ce46",
+        "content_sha256": "27e8a88343f85cc4184ff593d25766a3f4ec379724f3775b98d74100ad672e8c",
+        "simples": "Furto: subtrair, para si ou para outrem, coisa alheia móvel. Pena: reclusão de 1 a 6 anos e multa (texto atual). Aumento de metade se praticado durante o repouso noturno. Furto privilegiado (§2º): se o criminoso é primário e a coisa é de pequeno valor, o juiz pode substituir reclusão por detenção, diminuir de um a dois terços ou aplicar só multa. Energia elétrica e outras com valor econômico equiparam-se a coisa móvel (§3º). Furto qualificado (§4º, reclusão de 2 a 8 anos e multa): destruição ou rompimento de obstáculo; abuso de confiança, fraude, escalada ou destreza; chave falsa; concurso de duas ou mais pessoas; bens que comprometam o funcionamento de órgãos públicos ou serviços essenciais. Há ainda formas com pena de 4 a 10 anos (explosivo, fraude eletrônica, veículo levado a outro Estado ou ao exterior, animais, celulares e computadores, armas etc.) e causas de aumento para fraude eletrônica (servidor no exterior; idoso ou vulnerável). Confira o texto completo.",
+        "pontos": [
+          "Caput: subtrair coisa alheia móvel; reclusão de 1 a 6 anos e multa.",
+          "§1º: aumento de metade no repouso noturno.",
+          "§2º: furto privilegiado (primário + pequeno valor).",
+          "§3º: equipara-se à coisa móvel a energia elétrica ou outra com valor econômico.",
+          "§4º: qualificadoras (obstáculo; confiança, fraude, escalada ou destreza; chave falsa; concurso de pessoas; bens essenciais): reclusão de 2 a 8 anos e multa.",
+          "§4º-A e seguintes: formas específicas com pena de 4 a 10 anos (explosivo, fraude por dispositivo eletrônico, veículo para outro Estado ou exterior, semovente ou animal doméstico, celular e computador, arma de fogo, substâncias explosivas)."
+        ],
+        "atencao": [
+          "Repouso noturno é causa de AUMENTO (metade) no furto simples; privilégio exige primariedade e coisa de pequeno valor.",
+          "Qualificadoras do §4º: reclusão de 2 a 8 anos.",
+          "As penas e hipóteses seguem a redação atual do texto (leis de 2018, 2021 e 2026)."
+        ],
+        "exemplo": "Subtrair um celular de dentro de uma bolsa, sem violência: furto (e, conforme o texto atual, forma com pena de 4 a 10 anos se for celular).",
+        "prova": [
+          "Assertiva que confunde furto com roubo por exigir violência ou grave ameaça no furto erra: o furto é sem violência."
+        ],
+        "termos": [
+          {
+            "termo": "Subtrair",
+            "significado": "Retirar a coisa da posse de quem a detém, sem violência ou grave ameaça."
+          },
+          {
+            "termo": "Furto privilegiado",
+            "significado": "Furto de pequeno valor por réu primário, com benefícios na pena."
+          }
+        ],
+        "remissoes": [
+          "Art. 157 (roubo)",
+          "Art. 156",
+          "Art. 170"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-156",
+      "unit_id": "c6cfdd5b-d53c-5ce1-b7d8-02c8e0b4d88d",
+      "content_sha256": "95c55de1d42e0fb85cdc447c3968114174cf9823d1ceeec00f4b3f21daff3917",
+      "simples": "Furto de coisa comum: subtrair o condômino, coerdeiro ou sócio, para si ou para outrem, a quem legitimamente a detém, a coisa comum. Pena: detenção de 6 meses a 2 anos, ou multa. Somente se procede mediante representação. Não é punível a subtração de coisa comum fungível cujo valor não excede a quota a que tem direito o agente.",
+      "pontos": [
+        "Sujeito: condômino, coerdeiro ou sócio.",
+        "Subtrai coisa comum de quem legitimamente a detém.",
+        "Pena: detenção de 6 meses a 2 anos, ou multa.",
+        "Ação condicionada à representação.",
+        "Não é punível a subtração de coisa comum fungível até o valor da quota do agente."
+      ],
+      "atencao": [
+        "A coisa é COMUM (do próprio agente em parte)."
+      ],
+      "termos": [
+        {
+          "termo": "Coisa fungível",
+          "significado": "Coisa que pode ser substituída por outra do mesmo gênero, quantidade e qualidade, como dinheiro."
+        }
+      ],
+      "remissoes": [
+        "Art. 155"
+      ],
+      "exemplo": "Condômino subtrai coisa comum de quem a detém legitimamente. Variação: Se coisa é fungível e valor não excede a quota, verificar exclusão expressa, não estendê-la a toda coisa indivisível.",
+      "prova": [
+        "Quota basta sem fungibilidade? Não; requisitos são cumulativos.",
+        "Ação é mediante representação? Sim; §1º."
+      ],
+      "expected": {
+        "unit_id": "c6cfdd5b-d53c-5ce1-b7d8-02c8e0b4d88d",
+        "content_sha256": "95c55de1d42e0fb85cdc447c3968114174cf9823d1ceeec00f4b3f21daff3917",
+        "simples": "Furto de coisa comum: subtrair o condômino, coerdeiro ou sócio, para si ou para outrem, a quem legitimamente a detém, a coisa comum. Pena: detenção de 6 meses a 2 anos, ou multa. Somente se procede mediante representação. Não é punível a subtração de coisa comum fungível cujo valor não excede a quota a que tem direito o agente.",
+        "pontos": [
+          "Sujeito: condômino, coerdeiro ou sócio.",
+          "Subtrai coisa comum de quem legitimamente a detém.",
+          "Pena: detenção de 6 meses a 2 anos, ou multa.",
+          "Ação condicionada à representação.",
+          "Não é punível a subtração de coisa comum fungível até o valor da quota do agente."
+        ],
+        "atencao": [
+          "A coisa é COMUM (do próprio agente em parte)."
+        ],
+        "exemplo": "Um sócio retira de quem a guarda mercadoria que pertence à sociedade, acima da sua quota.",
+        "prova": [
+          "Assertiva que pune a subtração de coisa comum fungível cujo valor não excede a quota do agente erra: o §2º a declara não punível."
+        ],
+        "termos": [
+          {
+            "termo": "Coisa fungível",
+            "significado": "Coisa que pode ser substituída por outra do mesmo gênero, quantidade e qualidade, como dinheiro."
+          }
+        ],
+        "remissoes": [
+          "Art. 155"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-158",
+      "unit_id": "78cdc174-4632-55c5-aa29-e724b4799f60",
+      "content_sha256": "4b658f7f9cb0da98485511541addd110dc05e6a8d1e6211c9251a98c61fc161b",
+      "simples": "Extorsão: constranger alguém, mediante violência ou grave ameaça, e com o intuito de obter indevida vantagem econômica, a fazer, tolerar que se faça ou deixar de fazer alguma coisa. Pena: reclusão de 4 a 10 anos e multa. Aumenta-se de um terço até metade se por duas ou mais pessoas ou com arma. Aplica-se à extorsão com violência o disposto no §3º do art. 157. Se o crime é cometido mediante restrição da liberdade da vítima, e essa condição é necessária para a vantagem econômica (sequestro-relâmpago), a pena é de reclusão de 6 a 12 anos, além da multa; se resulta lesão grave ou morte, aplicam-se as penas do art. 159, §§2º e 3º. §4º: organização criminosa, grupo paramilitar ou milícia no contexto/finalidade legais; triplo. Não inserir ultraviolenta como requisito que esse parágrafo não traz.",
+      "pontos": [
+        "Constranger com violência ou grave ameaça para obter vantagem econômica indevida.",
+        "Caput: reclusão de 4 a 10 anos e multa.",
+        "§1º: duas ou mais pessoas ou arma: aumento de 1/3 até metade.",
+        "§3º: restrição da liberdade da vítima necessária para a vantagem (sequestro-relâmpago): 6 a 12 anos; lesão grave ou morte: penas do art. 159, §§2º e 3º.",
+        "§4º: organização criminosa, grupo paramilitar ou milícia no contexto/finalidade previstos; pena em triplo."
+      ],
+      "atencao": [
+        "Extorsão: a colaboração da vítima é necessária (ela faz, tolera ou deixa de fazer); no roubo a subtração ocorre sem tal colaboração.",
+        "Sequestro-relâmpago: §3º, com pena de 6 a 12 anos.",
+        "Súmula 96/STJ: extorsão consuma-se independentemente da obtenção da vantagem indevida. §4º exige contexto/finalidade; não presumir pelo grupo nem retroagir pena mais gravosa."
+      ],
+      "termos": [
+        {
+          "termo": "Sequestro-relâmpago",
+          "significado": "Restrição da liberdade necessária à obtenção da vantagem econômica na hipótese do§3º, sem prazo máximo presumido."
+        }
+      ],
+      "remissoes": [
+        "Art. 157",
+        "Art. 159"
+      ],
+      "exemplo": "Vítima é coagida a transferir valor para obtenção de vantagem econômica indevida. Variação: Se liberdade é restringida como condição necessária para a vantagem, examinar §3º e resultados.",
+      "prova": [
+        "Obter efetivamente a vantagem é sempre necessário? Não; Súmula 96/STJ qualifica consumação da extorsão.",
+        "Grupo sozinho prova §4º? Não; contexto/finalidade legais também importam."
+      ],
+      "expected": {
+        "unit_id": "78cdc174-4632-55c5-aa29-e724b4799f60",
+        "content_sha256": "4b658f7f9cb0da98485511541addd110dc05e6a8d1e6211c9251a98c61fc161b",
+        "simples": "Extorsão: constranger alguém, mediante violência ou grave ameaça, e com o intuito de obter indevida vantagem econômica, a fazer, tolerar que se faça ou deixar de fazer alguma coisa. Pena: reclusão de 4 a 10 anos e multa. Aumenta-se de um terço até metade se por duas ou mais pessoas ou com arma. Aplica-se à extorsão com violência o disposto no §3º do art. 157. Se o crime é cometido mediante restrição da liberdade da vítima, e essa condição é necessária para a vantagem econômica (sequestro-relâmpago), a pena é de reclusão de 6 a 12 anos, além da multa; se resulta lesão grave ou morte, aplicam-se as penas do art. 159, §§2º e 3º. Organização criminosa ultraviolenta, paramilitar ou milícia: pena em triplo.",
+        "pontos": [
+          "Constranger com violência ou grave ameaça para obter vantagem econômica indevida.",
+          "Caput: reclusão de 4 a 10 anos e multa.",
+          "§1º: duas ou mais pessoas ou arma: aumento de 1/3 até metade.",
+          "§3º: restrição da liberdade da vítima necessária para a vantagem (sequestro-relâmpago): 6 a 12 anos; lesão grave ou morte: penas do art. 159, §§2º e 3º.",
+          "§4º: organização ultraviolenta, paramilitar ou milícia: pena em triplo."
+        ],
+        "atencao": [
+          "Extorsão: a colaboração da vítima é necessária (ela faz, tolera ou deixa de fazer); no roubo a subtração ocorre sem tal colaboração.",
+          "Sequestro-relâmpago: §3º, com pena de 6 a 12 anos."
+        ],
+        "exemplo": "O agente ameaça o dono de um comércio, exigindo dinheiro periódico para não lhe causar mal: extorsão.",
+        "prova": [
+          "Assertiva que dispensa a finalidade de vantagem econômica na extorsão erra: é elementar do tipo."
+        ],
+        "termos": [
+          {
+            "termo": "Sequestro-relâmpago",
+            "significado": "Restrição da liberdade da vítima por pouco tempo para obter vantagem econômica."
+          }
+        ],
+        "remissoes": [
+          "Art. 157",
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-160",
+      "unit_id": "8ebe1050-86ba-5bc7-835b-e2525a7a8880",
+      "content_sha256": "464cad93c4a5ac2474e67d4b4ce462115cf6b20c361bf6ec326f59a97a59e1b8",
+      "simples": "Extorsão indireta: exigir ou receber, como garantia de dívida, abusando da situação de alguém, documento que pode dar causa a procedimento criminal contra a vítima ou contra terceiro. Pena: reclusão de 1 a 3 anos e multa.",
+      "pontos": [
+        "Exigir ou receber documento como garantia de dívida.",
+        "Abusando da situação de alguém.",
+        "Documento que pode dar causa a procedimento criminal.",
+        "Reclusão de 1 a 3 anos e multa."
+      ],
+      "atencao": [
+        "Típico do 'agiota' que exige documento comprometedor como garantia."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 158"
+      ],
+      "exemplo": "Credor exige documento capaz de gerar procedimento criminal, abusando da situação do devedor, como garantia. Variação: Documento regular sem capacidade indicada não preenche este elemento por ser garantia.",
+      "prova": [
+        "Toda cobrança de dívida é art.160? Não; exige abuso e documento com aptidão prevista.",
+        "Documento pode atingir terceiro? Sim; o texto inclui vítima ou terceiro."
+      ],
+      "expected": {
+        "unit_id": "8ebe1050-86ba-5bc7-835b-e2525a7a8880",
+        "content_sha256": "464cad93c4a5ac2474e67d4b4ce462115cf6b20c361bf6ec326f59a97a59e1b8",
+        "simples": "Extorsão indireta: exigir ou receber, como garantia de dívida, abusando da situação de alguém, documento que pode dar causa a procedimento criminal contra a vítima ou contra terceiro. Pena: reclusão de 1 a 3 anos e multa.",
+        "pontos": [
+          "Exigir ou receber documento como garantia de dívida.",
+          "Abusando da situação de alguém.",
+          "Documento que pode dar causa a procedimento criminal.",
+          "Reclusão de 1 a 3 anos e multa."
+        ],
+        "atencao": [
+          "Típico do 'agiota' que exige documento comprometedor como garantia."
+        ],
+        "exemplo": "O credor exige, como garantia da dívida, um documento que pode incriminar o devedor.",
+        "prova": [
+          "Assertiva que dispensa o abuso da situação da vítima no art. 160 erra: é parte do tipo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-161",
+      "unit_id": "e3bee6c0-8aac-5ef2-8460-8a8981e64931",
+      "content_sha256": "ceea27ec6a4d38f096df22a67400732feb40071e19d3cda32c050f9e7ccbcbb5",
+      "simples": "Alteração de limites, usurpação de águas e esbulho possessório: suprimir ou deslocar tapume, marco ou outro sinal de linha divisória para apropriar-se de coisa imóvel alheia. Pena: detenção de 1 a 6 meses e multa. Na mesma pena quem desvia ou represa águas alheias em proveito próprio ou de outrem, ou invade, com violência a pessoa ou grave ameaça, ou mediante concurso de mais de duas pessoas, terreno ou edifício alheio para esbulho possessório. Se há violência, pune-se também a violência. Se a propriedade é particular e sem violência, somente se procede mediante queixa.",
+      "pontos": [
+        "Caput: suprimir ou deslocar marco divisório para apropriar-se de imóvel.",
+        "§1º, I: usurpação de águas.",
+        "§1º, II: esbulho possessório (violência, grave ameaça ou mais de duas pessoas).",
+        "§2º: também a pena da violência.",
+        "§3º: propriedade particular e sem violência: queixa."
+      ],
+      "atencao": [
+        "Concurso de MAIS DE DUAS pessoas no esbulho (inciso II)."
+      ],
+      "termos": [
+        {
+          "termo": "Esbulho possessório",
+          "significado": "Invasão de imóvel para tomar-lhe a posse."
+        }
+      ],
+      "remissoes": [
+        "Art. 163"
+      ],
+      "exemplo": "Duas pessoas invadem sem violência nem grave ameaça para esbulho. Variação: Com três, analisar mais de duas; violência pode configurar outra hipótese independentemente desse número.",
+      "prova": [
+        "Exatamente duas basta pela quantidade? Não; texto exige mais de duas.",
+        "Sempre basta mera disputa de divisa? Não; finalidade de apropriação/esbulho e condutas devem ser demonstradas."
+      ],
+      "expected": {
+        "unit_id": "e3bee6c0-8aac-5ef2-8460-8a8981e64931",
+        "content_sha256": "ceea27ec6a4d38f096df22a67400732feb40071e19d3cda32c050f9e7ccbcbb5",
+        "simples": "Alteração de limites, usurpação de águas e esbulho possessório: suprimir ou deslocar tapume, marco ou outro sinal de linha divisória para apropriar-se de coisa imóvel alheia. Pena: detenção de 1 a 6 meses e multa. Na mesma pena quem desvia ou represa águas alheias em proveito próprio ou de outrem, ou invade, com violência a pessoa ou grave ameaça, ou mediante concurso de mais de duas pessoas, terreno ou edifício alheio para esbulho possessório. Se há violência, pune-se também a violência. Se a propriedade é particular e sem violência, somente se procede mediante queixa.",
+        "pontos": [
+          "Caput: suprimir ou deslocar marco divisório para apropriar-se de imóvel.",
+          "§1º, I: usurpação de águas.",
+          "§1º, II: esbulho possessório (violência, grave ameaça ou mais de duas pessoas).",
+          "§2º: também a pena da violência.",
+          "§3º: propriedade particular e sem violência: queixa."
+        ],
+        "atencao": [
+          "Concurso de MAIS DE DUAS pessoas no esbulho (inciso II)."
+        ],
+        "exemplo": "Grupo de mais de duas pessoas invade terreno alheio para se apossar dele: esbulho possessório (§1º, II).",
+        "prova": [
+          "Assertiva que exige apenas duas pessoas para o esbulho do §1º, II, erra: exige mais de duas."
+        ],
+        "termos": [
+          {
+            "termo": "Esbulho possessório",
+            "significado": "Invasão de imóvel para tomar-lhe a posse."
+          }
+        ],
+        "remissoes": [
+          "Art. 163"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-162",
+      "unit_id": "c129b3d8-563c-5fd5-b335-0721595d600b",
+      "content_sha256": "8937b06820872addd3b55d1419e4632beff543868397d963b6863cb79624a267",
+      "simples": "Supressão ou alteração de marca em animais: suprimir ou alterar, indevidamente, em gado ou rebanho alheio, marca ou sinal indicativo de propriedade. Pena: detenção de 6 meses a 3 anos e multa.",
+      "pontos": [
+        "Suprimir ou alterar marca ou sinal de propriedade em gado ou rebanho alheio.",
+        "Detenção de 6 meses a 3 anos e multa."
+      ],
+      "atencao": [
+        "O objeto é a MARCA (sinal indicativo de propriedade), não a subtração do animal."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 155"
+      ],
+      "exemplo": "Marca de propriedade de rebanho alheio é alterada indevidamente. Variação: Subtrair o animal é conduta distinta: avaliar furto e eventual concurso, sem equiparação automática.",
+      "prova": [
+        "Objeto central é a marca? Sim; sinal de propriedade.",
+        "Toda modificação autorizada é crime? Não; o tipo exige indevidamente."
+      ],
+      "expected": {
+        "unit_id": "c129b3d8-563c-5fd5-b335-0721595d600b",
+        "content_sha256": "8937b06820872addd3b55d1419e4632beff543868397d963b6863cb79624a267",
+        "simples": "Supressão ou alteração de marca em animais: suprimir ou alterar, indevidamente, em gado ou rebanho alheio, marca ou sinal indicativo de propriedade. Pena: detenção de 6 meses a 3 anos e multa.",
+        "pontos": [
+          "Suprimir ou alterar marca ou sinal de propriedade em gado ou rebanho alheio.",
+          "Detenção de 6 meses a 3 anos e multa."
+        ],
+        "atencao": [
+          "O objeto é a MARCA (sinal indicativo de propriedade), não a subtração do animal."
+        ],
+        "exemplo": "Alterar a marca a ferro em bois alheios para dificultar a identificação do dono.",
+        "prova": [
+          "Assertiva que aplica o art. 162 à simples subtração de animal erra: ele pune a supressão ou alteração da marca."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 155"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-164",
+      "unit_id": "e0155793-92ea-51ee-b685-09a8a5d042b0",
+      "content_sha256": "85f41a7d26dbccbcb99acf08571182d2a31cd7dc7bd64c8ca9b04ceeda48a19a",
+      "simples": "Introdução ou abandono de animais em propriedade alheia: introduzir ou deixar animais em propriedade alheia, sem consentimento de quem de direito, desde que do fato resulte prejuízo. Pena: detenção de 15 dias a 6 meses, ou multa.",
+      "pontos": [
+        "Introduzir ou deixar animais em propriedade alheia sem consentimento.",
+        "Exige prejuízo.",
+        "Detenção de 15 dias a 6 meses, ou multa."
+      ],
+      "atencao": [
+        "Só há crime se resultar PREJUÍZO."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 167"
+      ],
+      "exemplo": "Animais são deixados em propriedade alheia sem consentimento e causam prejuízo. Variação: Sem prejuízo resultante falta condição expressa deste artigo, ainda que outras obrigações existam.",
+      "prova": [
+        "Prejuízo é exigido? Sim; desde que o fato resulte prejuízo.",
+        "Autorização do titular é irrelevante? Não; ausência de consentimento integra o tipo."
+      ],
+      "expected": {
+        "unit_id": "e0155793-92ea-51ee-b685-09a8a5d042b0",
+        "content_sha256": "85f41a7d26dbccbcb99acf08571182d2a31cd7dc7bd64c8ca9b04ceeda48a19a",
+        "simples": "Introdução ou abandono de animais em propriedade alheia: introduzir ou deixar animais em propriedade alheia, sem consentimento de quem de direito, desde que do fato resulte prejuízo. Pena: detenção de 15 dias a 6 meses, ou multa.",
+        "pontos": [
+          "Introduzir ou deixar animais em propriedade alheia sem consentimento.",
+          "Exige prejuízo.",
+          "Detenção de 15 dias a 6 meses, ou multa."
+        ],
+        "atencao": [
+          "Só há crime se resultar PREJUÍZO."
+        ],
+        "exemplo": "Soltar o gado no pasto do vizinho, que sofre prejuízo.",
+        "prova": [
+          "Assertiva que dispensa o prejuízo no art. 164 erra: é condição do tipo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 167"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-165",
+      "unit_id": "4494031c-eedb-580c-bd3d-d3c9562bf06d",
+      "content_sha256": "74b35ca13d50145a5aac62103ef7336bcd604055ae33cffe80da8957e5f179d3",
+      "simples": "Texto do CP remanescente exige integração ao art.62 da Lei 9.605/1998 sobre proteção cultural/ambiental. Não usar pena antiga do CP como regime vigente completo; identificar objeto, proteção e norma posterior.",
+      "pontos": [
+        "Confrontar Lei 9.605 art.62.",
+        "Texto residual não certifica vigência plena do tipo histórico."
+      ],
+      "atencao": [
+        "Disciplina posterior impede exercício automático que ensine a pena antiga como regra atual. Não certificada aqui toda derrogação/jurisprudência."
+      ],
+      "termos": [
+        {
+          "termo": "Tombamento",
+          "significado": "Proteção oficial de bens de valor cultural."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "exemplo": "Dano em bem protegido deve ser confrontado com art.62 da Lei 9.605. Variação: Não escolher automaticamente a pena residual do CP só porque ainda consta no compilado.",
+      "prova": [
+        "CP 165 isolado resolve todo dano cultural atual? Não; integrar disciplina ambiental posterior.",
+        "A ressalva autoriza danificar bem protegido? Não; indica norma aplicável e alcance correto."
+      ],
+      "expected": {
+        "unit_id": "4494031c-eedb-580c-bd3d-d3c9562bf06d",
+        "content_sha256": "74b35ca13d50145a5aac62103ef7336bcd604055ae33cffe80da8957e5f179d3",
+        "simples": "Dano em coisa de valor artístico, arqueológico ou histórico: destruir, inutilizar ou deteriorar coisa tombada pela autoridade competente em virtude de valor artístico, arqueológico ou histórico. Pena: detenção de 6 meses a 2 anos e multa.",
+        "pontos": [
+          "Coisa tombada pela autoridade competente.",
+          "Valor artístico, arqueológico ou histórico.",
+          "Detenção de 6 meses a 2 anos e multa."
+        ],
+        "atencao": [
+          "A coisa deve ser TOMBADA pela autoridade."
+        ],
+        "exemplo": "Pichar um monumento tombado como patrimônio histórico.",
+        "prova": [
+          "Assertiva que aplica o art. 165 a bens sem tombamento erra."
+        ],
+        "termos": [
+          {
+            "termo": "Tombamento",
+            "significado": "Proteção oficial de bens de valor cultural."
+          }
+        ],
+        "remissoes": [
+          "Art. 163"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-166",
+      "unit_id": "bc480f58-d47a-5514-8ea4-be36deb791d0",
+      "content_sha256": "76487b45002ad81478b545d5174086dbcb0a1f16d2a1200d342c12ac898c0926",
+      "simples": "Texto do CP remanescente exige integração ao art.63 da Lei 9.605/1998 sobre proteção cultural/ambiental. Não usar pena antiga do CP como regime vigente completo; identificar objeto, proteção e norma posterior.",
+      "pontos": [
+        "Confrontar Lei 9.605 art.63.",
+        "Texto residual não certifica vigência plena do tipo histórico."
+      ],
+      "atencao": [
+        "Disciplina posterior impede exercício automático que ensine a pena antiga como regra atual. Não certificada aqui toda derrogação/jurisprudência."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      ],
+      "exemplo": "Aspecto de local especialmente protegido é alterado sem autorização. Variação: Examinar Lei 9.605 art.63 e alcance de proteção, sem tomar pena residual como regime completo.",
+      "prova": [
+        "Basta qualquer local bonito? Não; proteção e elementos legais precisam ser identificados.",
+        "Norma posterior pode ser ignorada? Não; confrontar disciplina ambiental."
+      ],
+      "expected": {
+        "unit_id": "bc480f58-d47a-5514-8ea4-be36deb791d0",
+        "content_sha256": "76487b45002ad81478b545d5174086dbcb0a1f16d2a1200d342c12ac898c0926",
+        "simples": "Alteração de local especialmente protegido: alterar, sem licença da autoridade competente, o aspecto de local especialmente protegido por lei. Pena: detenção de 1 mês a 1 ano, ou multa.",
+        "pontos": [
+          "Alterar o aspecto de local especialmente protegido por lei.",
+          "Sem licença da autoridade competente.",
+          "Detenção de 1 mês a 1 ano, ou multa."
+        ],
+        "atencao": [
+          "A proteção deve decorrer de LEI."
+        ],
+        "exemplo": "Reformar a fachada de um local protegido sem licença da autoridade.",
+        "prova": [
+          "Assertiva que dispensa a ausência de licença da autoridade erra: é elemento do tipo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 165"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-167",
+      "unit_id": "736888d2-c4d6-5592-92af-4fd4855c99f0",
+      "content_sha256": "43615b1b1df057263ff21ed0a7600cd9891ec286ca4583a897ff5b6a5c08f907",
+      "simples": "Ação penal: nos casos do art. 163 (dano simples), do inciso IV do seu parágrafo (dano por motivo egoístico ou com prejuízo considerável) e do art. 164, somente se procede mediante queixa.",
+      "pontos": [
+        "Ação penal privada nos arts. 163 (simples), 163, parágrafo único, IV, e 164."
+      ],
+      "atencao": [
+        "As demais qualificadoras do dano (violência, substância inflamável) são de ação pública."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Arts. 163 e 164"
+      ],
+      "exemplo": "Dano simples é analisado para forma de iniciativa. Variação: Se a qualificadora é violência, não copiar automaticamente queixa da hipótese específica do incisoIV.",
+      "prova": [
+        "Todo dano segue a mesma ação? Não; artigo enumera os recortes.",
+        "Art.164 está expressamente incluído? Sim; na regra de queixa."
+      ],
+      "expected": {
+        "unit_id": "736888d2-c4d6-5592-92af-4fd4855c99f0",
+        "content_sha256": "43615b1b1df057263ff21ed0a7600cd9891ec286ca4583a897ff5b6a5c08f907",
+        "simples": "Ação penal: nos casos do art. 163 (dano simples), do inciso IV do seu parágrafo (dano por motivo egoístico ou com prejuízo considerável) e do art. 164, somente se procede mediante queixa.",
+        "pontos": [
+          "Ação penal privada nos arts. 163 (simples), 163, parágrafo único, IV, e 164."
+        ],
+        "atencao": [
+          "As demais qualificadoras do dano (violência, substância inflamável) são de ação pública."
+        ],
+        "exemplo": "No dano simples, a vítima precisa oferecer queixa.",
+        "prova": [
+          "Assertiva que torna pública incondicionada a ação no dano simples erra: é por queixa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 163 e 164"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-168",
+      "unit_id": "43000220-f63d-5475-9198-0326264c9981",
+      "content_sha256": "347188b827759989727488f67c94c2bc36874a1d98f366b45f60f66a0042409f",
+      "simples": "Apropriação indébita: apropriar-se de coisa alheia móvel, de que tem a posse ou a detenção. Pena: reclusão de 1 a 4 anos e multa. A pena aumenta-se de um terço quando o agente recebeu a coisa em depósito necessário; na qualidade de tutor, curador, síndico, liquidatário, inventariante, testamenteiro ou depositário judicial; ou em razão de ofício, emprego ou profissão.",
+      "pontos": [
+        "O agente JÁ tem a posse ou detenção legítima e inverte o ânimo, apropriando-se.",
+        "Pena: reclusão de 1 a 4 anos e multa.",
+        "§1º: aumento de 1/3 (depósito necessário; tutor, curador, síndico, liquidatário, inventariante, testamenteiro ou depositário judicial; ofício, emprego ou profissão)."
+      ],
+      "atencao": [
+        "Diferença para o furto: na apropriação indébita a posse é LEGÍTIMA no início; no furto há subtração."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 155",
+        "Art. 168-A"
+      ],
+      "exemplo": "Bem recebido legitimamente passa a ser apropriado pelo detentor com os elementos típicos. Variação: Se a posse foi obtida mediante subtração, reavaliar furto; inadimplemento civil sozinho não prova apropriação.",
+      "prova": [
+        "Mera dívida sempre é crime? Não; provar apropriação típica.",
+        "Recebimento por profissão pode aumentar? Sim; observar §1ºIII."
+      ],
+      "expected": {
+        "unit_id": "43000220-f63d-5475-9198-0326264c9981",
+        "content_sha256": "347188b827759989727488f67c94c2bc36874a1d98f366b45f60f66a0042409f",
+        "simples": "Apropriação indébita: apropriar-se de coisa alheia móvel, de que tem a posse ou a detenção. Pena: reclusão de 1 a 4 anos e multa. A pena aumenta-se de um terço quando o agente recebeu a coisa em depósito necessário; na qualidade de tutor, curador, síndico, liquidatário, inventariante, testamenteiro ou depositário judicial; ou em razão de ofício, emprego ou profissão.",
+        "pontos": [
+          "O agente JÁ tem a posse ou detenção legítima e inverte o ânimo, apropriando-se.",
+          "Pena: reclusão de 1 a 4 anos e multa.",
+          "§1º: aumento de 1/3 (depósito necessário; tutor, curador, síndico, liquidatário, inventariante, testamenteiro ou depositário judicial; ofício, emprego ou profissão)."
+        ],
+        "atencao": [
+          "Diferença para o furto: na apropriação indébita a posse é LEGÍTIMA no início; no furto há subtração."
+        ],
+        "exemplo": "O depositário de um bem se recusa a devolvê-lo e passa a tratá-lo como seu: apropriação indébita.",
+        "prova": [
+          "Assertiva que exige subtração da coisa na apropriação indébita erra: o agente já tem a posse ou detenção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 155",
+          "Art. 168-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-168-a",
+      "unit_id": "7bf85da3-1f10-505a-ad64-3c9cab251579",
+      "content_sha256": "f3760512e8a9b03c9ada6ed9863eb1a2969dd6747e4b98590047820ca57705b0",
+      "simples": "Apropriação indébita previdenciária: deixar de repassar à previdência social as contribuições recolhidas dos contribuintes, no prazo e forma legal ou convencional. Pena: reclusão de 2 a 5 anos e multa. Na mesma pena quem deixa de recolher no prazo contribuição descontada de pagamento a segurados, a terceiros ou arrecadada do público; de recolher contribuições que integraram despesas contábeis ou custos relativos à venda de produtos ou prestação de serviços; ou de pagar benefício devido a segurado quando já reembolsado pela previdência. É extinta a punibilidade se o agente espontaneamente declara, confessa e paga antes do início da ação fiscal. O juiz pode deixar de aplicar a pena ou aplicar só a multa se o agente é primário e de bons antecedentes, em hipóteses do §3º. Os §§5º e 6º, incluídos em 2026, afastam a extinção de punibilidade do §2º para o devedor contumaz declarado em decisão administrativa definitiva e inscrito no Cadin.",
+      "pontos": [
+        "Caput: não repassar contribuições recolhidas: reclusão de 2 a 5 anos e multa.",
+        "§1º: não recolher contribuição descontada; contribuições embutidas em custos; não pagar benefício já reembolsado.",
+        "§2º: extinção da punibilidade com declaração, confissão e pagamento antes da ação fiscal.",
+        "§3º: perdão judicial ou multa (primário e bons antecedentes) com pagamento ou valor mínimo.",
+        "§§5º e 6º: devedor contumaz inscrito no Cadin não tem a extinção do §2º."
+      ],
+      "atencao": [
+        "§2º tem marcos e requisitos próprios, mas legislação tributária posterior deve ser integrada: não afirmar que só pagamento anterior à fiscalização pode extinguir em todo regime. LC 225/2026 traz exceções do devedor contumaz nos§§5º/6º; não confundir suspensão por parcelamento, extinção por pagamento e faculdade do§3º.",
+        "LC 225: exceções penais vigentes em 9/1/2026; vacância de 90 dias de programas específicos não é vacância geral dessas alterações. Integrar Lei 10.684 art.9 e lei no tempo."
+      ],
+      "termos": [
+        {
+          "termo": "Cadin",
+          "significado": "Cadastro Informativo dos créditos não quitados do setor público federal."
+        }
+      ],
+      "remissoes": [
+        "Art. 168",
+        "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp225.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.684.htm"
+      ],
+      "exemplo": "Contribuições recolhidas não são repassadas no prazo legal. Variação: Pagamento e situação de devedor contumaz exigem integrar §§2º–6º e legislação posterior, sem promessa universal de extinção.",
+      "prova": [
+        "§2º exige só confissão? Não; declaração, pagamento e informações nas condições legais.",
+        "Qualquer pagamento posterior sempre extingue? Não; analisar regras especiais, momento e exceções atuais."
+      ],
+      "expected": {
+        "unit_id": "7bf85da3-1f10-505a-ad64-3c9cab251579",
+        "content_sha256": "f3760512e8a9b03c9ada6ed9863eb1a2969dd6747e4b98590047820ca57705b0",
+        "simples": "Apropriação indébita previdenciária: deixar de repassar à previdência social as contribuições recolhidas dos contribuintes, no prazo e forma legal ou convencional. Pena: reclusão de 2 a 5 anos e multa. Na mesma pena quem deixa de recolher no prazo contribuição descontada de pagamento a segurados, a terceiros ou arrecadada do público; de recolher contribuições que integraram despesas contábeis ou custos relativos à venda de produtos ou prestação de serviços; ou de pagar benefício devido a segurado quando já reembolsado pela previdência. É extinta a punibilidade se o agente espontaneamente declara, confessa e paga antes do início da ação fiscal. O juiz pode deixar de aplicar a pena ou aplicar só a multa se o agente é primário e de bons antecedentes, em hipóteses do §3º. Os §§5º e 6º, incluídos em 2026, afastam a extinção de punibilidade do §2º para o devedor contumaz declarado em decisão administrativa definitiva e inscrito no Cadin.",
+        "pontos": [
+          "Caput: não repassar contribuições recolhidas: reclusão de 2 a 5 anos e multa.",
+          "§1º: não recolher contribuição descontada; contribuições embutidas em custos; não pagar benefício já reembolsado.",
+          "§2º: extinção da punibilidade com declaração, confissão e pagamento antes da ação fiscal.",
+          "§3º: perdão judicial ou multa (primário e bons antecedentes) com pagamento ou valor mínimo.",
+          "§§5º e 6º: devedor contumaz inscrito no Cadin não tem a extinção do §2º."
+        ],
+        "atencao": [
+          "Extinção da punibilidade só com pagamento ANTES do início da ação fiscal.",
+          "O devedor contumaz declarado e inscrito no Cadin não se beneficia do §2º (texto atual)."
+        ],
+        "exemplo": "Empresa desconta a contribuição previdenciária do salário e não a repassa à previdência: art. 168-A.",
+        "prova": [
+          "Assertiva que permite extinguir a punibilidade mesmo após o início da ação fiscal erra: o §2º exige pagamento antes dela."
+        ],
+        "termos": [
+          {
+            "termo": "Cadin",
+            "significado": "Cadastro Informativo dos créditos não quitados do setor público federal."
+          }
+        ],
+        "remissoes": [
+          "Art. 168"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-169",
+      "unit_id": "2f4b02a8-90ee-50da-98c2-7bcafc1a9822",
+      "content_sha256": "b915fab0c4f254c9f7f454153b3628a663aadd8be9eff52486b94169f35fb523",
+      "simples": "Apropriação de coisa havida por erro, caso fortuito ou força da natureza: apropriar-se alguém de coisa alheia vinda ao seu poder por erro, caso fortuito ou força da natureza. Pena: detenção de 1 mês a 1 ano, ou multa. Na mesma pena quem acha tesouro em prédio alheio e se apropria, no todo ou em parte, da quota do proprietário do prédio, e quem acha coisa alheia perdida e dela se apropria, total ou parcialmente, deixando de restituí-la ao dono ou legítimo possuidor ou de entregá-la à autoridade competente no prazo de 15 dias.",
+      "pontos": [
+        "Caput: coisa que chegou por erro, caso fortuito ou força da natureza.",
+        "Parágrafo único, I: apropriação de tesouro (quota do dono do prédio).",
+        "Parágrafo único, II: apropriação de coisa achada: prazo de 15 dias para restituir ou entregar à autoridade.",
+        "Detenção de 1 mês a 1 ano, ou multa."
+      ],
+      "atencao": [
+        "Coisa achada: 15 dias para devolver ou entregar à autoridade."
+      ],
+      "termos": [
+        {
+          "termo": "Tesouro",
+          "significado": "Depósito antigo de coisas preciosas, sem dono conhecido."
+        }
+      ],
+      "remissoes": [
+        "Art. 168"
+      ],
+      "exemplo": "Quem acha bem perdido dele se apropria e não restitui/entrega à autoridade em quinze dias. Variação: Bem veio por erro, em vez de achado: avaliar caput e seus requisitos, não aplicar prazo de outra hipótese indiscriminadamente.",
+      "prova": [
+        "Coisa perdida vira automaticamente bem sem dono? Não.",
+        "A regra do achado permite guardar indefinidamente? Não; prazo e deveres são expressos."
+      ],
+      "expected": {
+        "unit_id": "2f4b02a8-90ee-50da-98c2-7bcafc1a9822",
+        "content_sha256": "b915fab0c4f254c9f7f454153b3628a663aadd8be9eff52486b94169f35fb523",
+        "simples": "Apropriação de coisa havida por erro, caso fortuito ou força da natureza: apropriar-se alguém de coisa alheia vinda ao seu poder por erro, caso fortuito ou força da natureza. Pena: detenção de 1 mês a 1 ano, ou multa. Na mesma pena quem acha tesouro em prédio alheio e se apropria, no todo ou em parte, da quota do proprietário do prédio, e quem acha coisa alheia perdida e dela se apropria, total ou parcialmente, deixando de restituí-la ao dono ou legítimo possuidor ou de entregá-la à autoridade competente no prazo de 15 dias.",
+        "pontos": [
+          "Caput: coisa que chegou por erro, caso fortuito ou força da natureza.",
+          "Parágrafo único, I: apropriação de tesouro (quota do dono do prédio).",
+          "Parágrafo único, II: apropriação de coisa achada: prazo de 15 dias para restituir ou entregar à autoridade.",
+          "Detenção de 1 mês a 1 ano, ou multa."
+        ],
+        "atencao": [
+          "Coisa achada: 15 dias para devolver ou entregar à autoridade."
+        ],
+        "exemplo": "Quem encontra uma carteira com documentos e a guarda sem procurar o dono nem entregar à autoridade em 15 dias comete o crime.",
+        "prova": [
+          "Assertiva que fixa em 30 dias o prazo para entregar a coisa achada erra: são 15 dias."
+        ],
+        "termos": [
+          {
+            "termo": "Tesouro",
+            "significado": "Depósito antigo de coisas preciosas, sem dono conhecido."
+          }
+        ],
+        "remissoes": [
+          "Art. 168"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-170",
+      "unit_id": "4fd2149a-e61d-5aa1-b68d-43cc5552604b",
+      "content_sha256": "d54dcce26fa98c596200a93785ccd29b057f5e34d321d60370e140f2ad438082",
+      "simples": "Nos crimes previstos neste capítulo (crimes contra o patrimônio da apropriação indébita, entre outros), aplica-se o disposto no art. 155, §2º, isto é, o privilégio (primário e de pequeno valor).",
+      "pontos": [
+        "Extensão do 155§2º aos crimes do capítulo da apropriação indébita; estelionato tem remissão própria no 171§1º."
+      ],
+      "atencao": [
+        "O privilégio exige primariedade e coisa de pequeno valor."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 155, §2º"
+      ],
+      "exemplo": "Apropriação no capítulo é examinada com primariedade e pequeno valor. Variação: Valor elevado não recebe privilégio apenas por ser primeira infração.",
+      "prova": [
+        "Requisitos são alternativos? Não; primário e pequeno valor.",
+        "Remissão cria absolvição automática? Não; integra possibilidades do 155§2º."
+      ],
+      "expected": {
+        "unit_id": "4fd2149a-e61d-5aa1-b68d-43cc5552604b",
+        "content_sha256": "d54dcce26fa98c596200a93785ccd29b057f5e34d321d60370e140f2ad438082",
+        "simples": "Nos crimes previstos neste capítulo (crimes contra o patrimônio da apropriação indébita, entre outros), aplica-se o disposto no art. 155, §2º, isto é, o privilégio (primário e de pequeno valor).",
+        "pontos": [
+          "Extensão do furto privilegiado (art. 155, §2º) aos crimes do capítulo (apropriação indébita, estelionato etc.)."
+        ],
+        "atencao": [
+          "O privilégio exige primariedade e coisa de pequeno valor."
+        ],
+        "exemplo": "Em apropriação indébita de objeto de pequeno valor por réu primário, o juiz pode reduzir a pena nos termos do art. 155, §2º.",
+        "prova": [
+          "Assertiva que nega o privilégio do furto aos crimes de apropriação erra: o art. 170 o estende."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 155, §2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-171",
+      "unit_id": "f2b179b2-03fb-58af-942d-43daa702e39e",
+      "content_sha256": "f9e8638703dc1f71ff8401f4096d395ef440a096eb0a435783c547ab68eda515",
+      "simples": "Estelionato: obter, para si ou para outrem, vantagem ilícita, em prejuízo alheio, induzindo ou mantendo alguém em erro, mediante artifício, ardil ou qualquer outro meio fraudulento. Pena: reclusão de 1 a 5 anos e multa (texto atual). Se primário e de pequeno valor o prejuízo, aplica-se o art. 155, §2º. Nas mesmas penas incorre quem pratica as fraudes do §2º: disposição de coisa alheia como própria; alienação ou oneração fraudulenta de coisa própria; defraudação de penhor; fraude na entrega de coisa; fraude para recebimento de seguro; fraude no pagamento por cheque sem provisão de fundos; e cessão de conta bancária para fins criminosos (conta laranja). Fraude eletrônica (§2º-A): reclusão de 4 a 8 anos e multa; aumento de 1/3 a 2/3 se servidor fora do país. Aumento de um terço contra entidade de direito público ou de assistência social (§3º), e de 1/3 ao dobro contra idoso ou vulnerável (§4º).",
+      "pontos": [
+        "Caput: vantagem ilícita em prejuízo alheio, induzindo ou mantendo em erro, por fraude; reclusão de 1 a 5 anos e multa.",
+        "§1º: privilégio (primário e pequeno valor).",
+        "§2º, I a VII: fraudes equiparadas (coisa alheia como própria; coisa própria inalienável; penhor; entrega de coisa; seguro; cheque sem fundos; conta laranja).",
+        "§2º-A: fraude eletrônica: reclusão de 4 a 8 anos e multa.",
+        "§2º-B: servidor fora do país: aumento de 1/3 a 2/3.",
+        "§3º: aumento de 1/3 contra entidade de direito público, economia popular, assistência social ou beneficência.",
+        "§4º: aumento de 1/3 ao dobro contra idoso ou vulnerável."
+      ],
+      "atencao": [
+        "Estelionato exige FRAUDE e erro da vítima, que entrega voluntariamente a vantagem (diferente do furto e do roubo).",
+        "O §5º, sobre a ação penal, está revogado no texto atual.",
+        "A fraude eletrônica do §2º-A tem pena de 4 a 8 anos.",
+        "Lei 15.397 vigente em 4/5/2026 revogou§5º. Não ensinar representação geral como vigente nem retroagir mudança prejudicial a fatos anteriores; regime intertemporal exige análise própria."
+      ],
+      "termos": [
+        {
+          "termo": "Ardil",
+          "significado": "Astúcia, manobra para enganar alguém."
+        }
+      ],
+      "remissoes": [
+        "Art. 155",
+        "Art. 170"
+      ],
+      "exemplo": "Vítima induzida a erro entrega vantagem patrimonial mediante fraude. Variação: Subtração fraudulenta sem entrega pertinente exige distinguir furto; conta laranja tem incisoVII próprio atual.",
+      "prova": [
+        "§5º atual mantém representação geral? Não; foi revogado em 2026, com análise de lei no tempo.",
+        "Todo uso da internet basta à forma eletrônica? Não; provar a fraude e requisitos do§2º-A."
+      ],
+      "expected": {
+        "unit_id": "f2b179b2-03fb-58af-942d-43daa702e39e",
+        "content_sha256": "f9e8638703dc1f71ff8401f4096d395ef440a096eb0a435783c547ab68eda515",
+        "simples": "Estelionato: obter, para si ou para outrem, vantagem ilícita, em prejuízo alheio, induzindo ou mantendo alguém em erro, mediante artifício, ardil ou qualquer outro meio fraudulento. Pena: reclusão de 1 a 5 anos e multa (texto atual). Se primário e de pequeno valor o prejuízo, aplica-se o art. 155, §2º. Nas mesmas penas incorre quem pratica as fraudes do §2º: disposição de coisa alheia como própria; alienação ou oneração fraudulenta de coisa própria; defraudação de penhor; fraude na entrega de coisa; fraude para recebimento de seguro; fraude no pagamento por cheque sem provisão de fundos; e cessão de conta bancária para fins criminosos (conta laranja). Fraude eletrônica (§2º-A): reclusão de 4 a 8 anos e multa; aumento de 1/3 a 2/3 se servidor fora do país. Aumento de um terço contra entidade de direito público ou de assistência social (§3º), e de 1/3 ao dobro contra idoso ou vulnerável (§4º).",
+        "pontos": [
+          "Caput: vantagem ilícita em prejuízo alheio, induzindo ou mantendo em erro, por fraude; reclusão de 1 a 5 anos e multa.",
+          "§1º: privilégio (primário e pequeno valor).",
+          "§2º, I a VII: fraudes equiparadas (coisa alheia como própria; coisa própria inalienável; penhor; entrega de coisa; seguro; cheque sem fundos; conta laranja).",
+          "§2º-A: fraude eletrônica: reclusão de 4 a 8 anos e multa.",
+          "§2º-B: servidor fora do país: aumento de 1/3 a 2/3.",
+          "§3º: aumento de 1/3 contra entidade de direito público, economia popular, assistência social ou beneficência.",
+          "§4º: aumento de 1/3 ao dobro contra idoso ou vulnerável."
+        ],
+        "atencao": [
+          "Estelionato exige FRAUDE e erro da vítima, que entrega voluntariamente a vantagem (diferente do furto e do roubo).",
+          "O §5º, sobre a ação penal, está revogado no texto atual.",
+          "A fraude eletrônica do §2º-A tem pena de 4 a 8 anos."
+        ],
+        "exemplo": "Vender, por meio de anúncio falso na internet, um produto que não existe, recebendo o pagamento: estelionato.",
+        "prova": [
+          "Assertiva que dispensa o emprego de fraude no estelionato erra: o meio fraudulento é elementar."
+        ],
+        "termos": [
+          {
+            "termo": "Ardil",
+            "significado": "Astúcia, manobra para enganar alguém."
+          }
+        ],
+        "remissoes": [
+          "Art. 155",
+          "Art. 170"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-173",
+      "unit_id": "3aab345e-584f-5ca3-949a-f043b94bc507",
+      "content_sha256": "0e905e772198c6391cfd3f5962b51568ab0619009306593e104ac147069df5fa",
+      "simples": "Abuso de incapazes: abusar, em proveito próprio ou alheio, de necessidade, paixão ou inexperiência de menor, ou da alienação ou debilidade mental de outrem, induzindo qualquer deles à prática de ato suscetível de produzir efeito jurídico, em prejuízo próprio ou de terceiro. Pena: reclusão de 2 a 6 anos e multa.",
+      "pontos": [
+        "Abusar da necessidade, paixão ou inexperiência de menor, ou da alienação ou debilidade mental.",
+        "Induzir à prática de ato com efeito jurídico em prejuízo próprio ou de terceiro.",
+        "Reclusão de 2 a 6 anos e multa."
+      ],
+      "atencao": [
+        "A vítima é MENOR ou pessoa com alienação ou debilidade mental."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 171"
+      ],
+      "exemplo": "Agente explora inexperiência de menor para ato jurídico prejudicial. Variação: Diagnóstico ou idade isolados não provam abuso, proveito e ato típico.",
+      "prova": [
+        "Toda pessoa com deficiência é incapaz por presunção? Não; verificar elementos sem estigma.",
+        "O ato deve poder produzir efeito jurídico? Sim; requisito expresso."
+      ],
+      "expected": {
+        "unit_id": "3aab345e-584f-5ca3-949a-f043b94bc507",
+        "content_sha256": "0e905e772198c6391cfd3f5962b51568ab0619009306593e104ac147069df5fa",
+        "simples": "Abuso de incapazes: abusar, em proveito próprio ou alheio, de necessidade, paixão ou inexperiência de menor, ou da alienação ou debilidade mental de outrem, induzindo qualquer deles à prática de ato suscetível de produzir efeito jurídico, em prejuízo próprio ou de terceiro. Pena: reclusão de 2 a 6 anos e multa.",
+        "pontos": [
+          "Abusar da necessidade, paixão ou inexperiência de menor, ou da alienação ou debilidade mental.",
+          "Induzir à prática de ato com efeito jurídico em prejuízo próprio ou de terceiro.",
+          "Reclusão de 2 a 6 anos e multa."
+        ],
+        "atencao": [
+          "A vítima é MENOR ou pessoa com alienação ou debilidade mental."
+        ],
+        "exemplo": "Fazer pessoa com debilidade mental assinar um contrato que a prejudica.",
+        "prova": [
+          "Assertiva que aplica o art. 173 a qualquer vítima adulta capaz erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 171"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-174",
+      "unit_id": "dbf7f8f9-5f83-5bd5-834b-f02a7be6c9fc",
+      "content_sha256": "36a315097797a6ef31813e532282497d05e5589ba6ab8e69dacc39fc5a3f0e2a",
+      "simples": "Induzimento à especulação: abusar, em proveito próprio ou alheio, da inexperiência ou da simplicidade ou inferioridade mental de outrem, induzindo-o à prática de jogo ou aposta, ou à especulação com títulos ou mercadorias, sabendo ou devendo saber que a operação é ruinosa. Pena: reclusão de 1 a 3 anos e multa.",
+      "pontos": [
+        "Abusar da inexperiência, simplicidade ou inferioridade mental.",
+        "Induzir a jogo, aposta ou especulação com títulos ou mercadorias.",
+        "Operação sabidamente ruinosa.",
+        "Reclusão de 1 a 3 anos e multa."
+      ],
+      "atencao": [
+        "Exige que o agente SAIBA ou DEVA SABER que a operação é ruinosa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 171",
+        "Art. 173"
+      ],
+      "exemplo": "Agente induz vulnerável a operação ruinosa, conhecendo os pressupostos legais. Variação: Perda normal de investimento, sem abuso e elementos, não configura automaticamente o crime.",
+      "prova": [
+        "Basta qualquer prejuízo de aposta? Não; provar abuso e conhecimento indicado.",
+        "O texto inclui especulação com títulos? Sim; além de jogo/aposta nas hipóteses."
+      ],
+      "expected": {
+        "unit_id": "dbf7f8f9-5f83-5bd5-834b-f02a7be6c9fc",
+        "content_sha256": "36a315097797a6ef31813e532282497d05e5589ba6ab8e69dacc39fc5a3f0e2a",
+        "simples": "Induzimento à especulação: abusar, em proveito próprio ou alheio, da inexperiência ou da simplicidade ou inferioridade mental de outrem, induzindo-o à prática de jogo ou aposta, ou à especulação com títulos ou mercadorias, sabendo ou devendo saber que a operação é ruinosa. Pena: reclusão de 1 a 3 anos e multa.",
+        "pontos": [
+          "Abusar da inexperiência, simplicidade ou inferioridade mental.",
+          "Induzir a jogo, aposta ou especulação com títulos ou mercadorias.",
+          "Operação sabidamente ruinosa.",
+          "Reclusão de 1 a 3 anos e multa."
+        ],
+        "atencao": [
+          "Exige que o agente SAIBA ou DEVA SABER que a operação é ruinosa."
+        ],
+        "exemplo": "Convencer pessoa ingênua a investir suas economias em uma operação que sabe ser ruinosa.",
+        "prova": [
+          "Assertiva que dispensa o conhecimento do caráter ruinoso da operação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 171",
+          "Art. 173"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-175",
+      "unit_id": "cb4ae77e-d85c-5245-a977-b2674b577990",
+      "content_sha256": "a993f7597f70691ae2c41640979c1bba1990ceb333016cf43a46e1eb0ff96e40",
+      "simples": "Fraude no comércio: enganar, no exercício de atividade comercial, o adquirente ou consumidor, vendendo como verdadeira ou perfeita mercadoria falsificada ou deteriorada, ou entregando uma mercadoria por outra. Pena: detenção de 6 meses a 2 anos, ou multa. Também quem altera, em obra encomendada, a qualidade ou o peso de metal, substitui pedra verdadeira por falsa ou menos valiosa, vende pedra falsa por verdadeira ou como precioso metal de outra qualidade: reclusão de 1 a 5 anos e multa. Aplica-se o art. 155, §2º.",
+      "pontos": [
+        "Enganar o adquirente ou consumidor no exercício de atividade comercial.",
+        "I – vender como verdadeira mercadoria falsificada ou deteriorada; II – entregar mercadoria por outra.",
+        "Detenção de 6 meses a 2 anos, ou multa.",
+        "§1º: fraudes com metais e pedras: reclusão de 1 a 5 anos e multa.",
+        "§2º: privilégio do art. 155, §2º."
+      ],
+      "atencao": [
+        "Exige atividade COMERCIAL.",
+        "As fraudes com metais e pedras têm pena de reclusão."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 171"
+      ],
+      "exemplo": "Comerciante entrega mercadoria diversa daquela contratada fraudulentamente. Variação: Fraude em pedra/metal tem modalidade própria; defeito não doloso exige outro regime.",
+      "prova": [
+        "Toda reclamação de consumo é crime? Não; provar fraude e elementos.",
+        "§2º integra privilégio? Sim; remete ao 155§2º, com requisitos."
+      ],
+      "expected": {
+        "unit_id": "cb4ae77e-d85c-5245-a977-b2674b577990",
+        "content_sha256": "a993f7597f70691ae2c41640979c1bba1990ceb333016cf43a46e1eb0ff96e40",
+        "simples": "Fraude no comércio: enganar, no exercício de atividade comercial, o adquirente ou consumidor, vendendo como verdadeira ou perfeita mercadoria falsificada ou deteriorada, ou entregando uma mercadoria por outra. Pena: detenção de 6 meses a 2 anos, ou multa. Também quem altera, em obra encomendada, a qualidade ou o peso de metal, substitui pedra verdadeira por falsa ou menos valiosa, vende pedra falsa por verdadeira ou como precioso metal de outra qualidade: reclusão de 1 a 5 anos e multa. Aplica-se o art. 155, §2º.",
+        "pontos": [
+          "Enganar o adquirente ou consumidor no exercício de atividade comercial.",
+          "I – vender como verdadeira mercadoria falsificada ou deteriorada; II – entregar mercadoria por outra.",
+          "Detenção de 6 meses a 2 anos, ou multa.",
+          "§1º: fraudes com metais e pedras: reclusão de 1 a 5 anos e multa.",
+          "§2º: privilégio do art. 155, §2º."
+        ],
+        "atencao": [
+          "Exige atividade COMERCIAL.",
+          "As fraudes com metais e pedras têm pena de reclusão."
+        ],
+        "exemplo": "Lojista vende como original uma mercadoria falsificada.",
+        "prova": [
+          "Assertiva que aplica o art. 175 a quem não exerce atividade comercial erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 171"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-176",
+      "unit_id": "bf72453a-2729-5f9b-be85-8317fb7bba87",
+      "content_sha256": "6957d97cb85ce661f94dccd818adf6f78ff53361f255a117a1a3074b669c5e0d",
+      "simples": "Outras fraudes: tomar refeição em restaurante, alojar-se em hotel ou utilizar-se de meio de transporte sem dispor de recursos para efetuar o pagamento. Pena: detenção de 15 dias a 2 meses, ou multa. Somente se procede mediante representação, e o juiz pode, conforme as circunstâncias, deixar de aplicar a pena.",
+      "pontos": [
+        "Consumir refeição, hospedagem ou transporte sem recursos para pagar.",
+        "Detenção de 15 dias a 2 meses, ou multa.",
+        "Ação condicionada à representação.",
+        "O juiz pode deixar de aplicar a pena."
+      ],
+      "atencao": [
+        "Hipótese conhecida como 'calote'; ação condicionada à representação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 171"
+      ],
+      "exemplo": "Serviço é utilizado sem recursos, nas condições do tipo, com dolo a demonstrar. Variação: Inadimplência superveniente ou desacordo civil não é crime automaticamente; pobreza não é fundamento isolado.",
+      "prova": [
+        "Todo não pagamento configura 176? Não; provar elementos, não criminalizar pobreza.",
+        "O juiz pode deixar de aplicar pena? Sim; faculdade conforme circunstâncias e regra de ação."
+      ],
+      "expected": {
+        "unit_id": "bf72453a-2729-5f9b-be85-8317fb7bba87",
+        "content_sha256": "6957d97cb85ce661f94dccd818adf6f78ff53361f255a117a1a3074b669c5e0d",
+        "simples": "Outras fraudes: tomar refeição em restaurante, alojar-se em hotel ou utilizar-se de meio de transporte sem dispor de recursos para efetuar o pagamento. Pena: detenção de 15 dias a 2 meses, ou multa. Somente se procede mediante representação, e o juiz pode, conforme as circunstâncias, deixar de aplicar a pena.",
+        "pontos": [
+          "Consumir refeição, hospedagem ou transporte sem recursos para pagar.",
+          "Detenção de 15 dias a 2 meses, ou multa.",
+          "Ação condicionada à representação.",
+          "O juiz pode deixar de aplicar a pena."
+        ],
+        "atencao": [
+          "Hipótese conhecida como 'calote'; ação condicionada à representação."
+        ],
+        "exemplo": "Pessoa almoça em restaurante sabendo que não tem dinheiro para pagar.",
+        "prova": [
+          "Assertiva que torna incondicionada a ação do art. 176 erra: exige representação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 171"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-177",
+      "unit_id": "0b2ae7b9-1f9a-5976-905f-a72e0f472ece",
+      "content_sha256": "d1410d7bff28b50f4767f31fbf371edd3eddcb05e16743fb458fed90e046b32d",
+      "simples": "Fraudes e abusos na fundação ou administração de sociedade por ações: promover a fundação de sociedade por ações fazendo, em prospecto ou comunicação ao público ou à assembleia, afirmação falsa sobre a constituição da sociedade, ou ocultando fraudulentamente fato a ela relativo. Pena: reclusão de 1 a 4 anos e multa, se o fato não constitui crime contra a economia popular. Na mesma pena incorrem diretor, gerente ou fiscal que faz afirmação falsa sobre as condições econômicas da sociedade, promove falsa cotação das ações, toma empréstimo à sociedade ou usa bens sociais sem autorização da assembleia, compra ou vende ações da própria sociedade fora dos casos permitidos, ou aceita em penhor ou caução ações da própria sociedade como garantia de crédito social.",
+      "pontos": [
+        "Falsa afirmação ou ocultação fraudulenta na fundação de sociedade por ações.",
+        "Pena: reclusão de 1 a 4 anos e multa, se não for crime contra a economia popular.",
+        "§1º, I a V: condutas de diretor, gerente ou fiscal (afirmação falsa; falsa cotação; uso de bens da sociedade; negociação de ações próprias; aceitar ações próprias em penhor)."
+      ],
+      "atencao": [
+        "Subsidiário ao crime contra a economia popular (ressalva expressa)."
+      ],
+      "termos": [
+        {
+          "termo": "Prospecto",
+          "significado": "Documento de oferta pública de valores mobiliários."
+        }
+      ],
+      "remissoes": [
+        "Art. 171"
+      ],
+      "exemplo": "Diretor publica balanço falso nas condições societárias típicas. Variação: Irregularidade contábil sem dolo/fraude não basta; verificar subsidiariedade e legislação especial.",
+      "prova": [
+        "Todo acionista tem o mesmo papel do diretor? Não; sujeitos e§2º possuem recortes.",
+        "A ressalva da economia popular pode ser ignorada? Não; é expressa."
+      ],
+      "expected": {
+        "unit_id": "0b2ae7b9-1f9a-5976-905f-a72e0f472ece",
+        "content_sha256": "d1410d7bff28b50f4767f31fbf371edd3eddcb05e16743fb458fed90e046b32d",
+        "simples": "Fraudes e abusos na fundação ou administração de sociedade por ações: promover a fundação de sociedade por ações fazendo, em prospecto ou comunicação ao público ou à assembleia, afirmação falsa sobre a constituição da sociedade, ou ocultando fraudulentamente fato a ela relativo. Pena: reclusão de 1 a 4 anos e multa, se o fato não constitui crime contra a economia popular. Na mesma pena incorrem diretor, gerente ou fiscal que faz afirmação falsa sobre as condições econômicas da sociedade, promove falsa cotação das ações, toma empréstimo à sociedade ou usa bens sociais sem autorização da assembleia, compra ou vende ações da própria sociedade fora dos casos permitidos, ou aceita em penhor ou caução ações da própria sociedade como garantia de crédito social.",
+        "pontos": [
+          "Falsa afirmação ou ocultação fraudulenta na fundação de sociedade por ações.",
+          "Pena: reclusão de 1 a 4 anos e multa, se não for crime contra a economia popular.",
+          "§1º, I a V: condutas de diretor, gerente ou fiscal (afirmação falsa; falsa cotação; uso de bens da sociedade; negociação de ações próprias; aceitar ações próprias em penhor)."
+        ],
+        "atencao": [
+          "Subsidiário ao crime contra a economia popular (ressalva expressa)."
+        ],
+        "exemplo": "O diretor promove falsa cotação das ações da companhia para atrair investidores.",
+        "prova": [
+          "Assertiva que aplica o art. 177 mesmo quando o fato constitui crime contra a economia popular erra: a ressalva afasta o tipo."
+        ],
+        "termos": [
+          {
+            "termo": "Prospecto",
+            "significado": "Documento de oferta pública de valores mobiliários."
+          }
+        ],
+        "remissoes": [
+          "Art. 171"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-178",
+      "unit_id": "f8b0561e-fd98-5d14-afcd-3fdd432f0dbd",
+      "content_sha256": "efb00478a2fcde066ccbdd525ffb7ac8c0a00d09acb4b9afe49fb0297632130c",
+      "simples": "Emissão irregular de conhecimento de depósito ou warrant: emitir conhecimento de depósito ou warrant em desacordo com disposição legal. Pena: reclusão de 1 a 4 anos e multa.",
+      "pontos": [
+        "Emitir conhecimento de depósito ou warrant em desacordo com a lei.",
+        "Reclusão de 1 a 4 anos e multa."
+      ],
+      "atencao": [
+        "Crime próprio de quem emite esses títulos (armazéns gerais)."
+      ],
+      "termos": [
+        {
+          "termo": "Warrant",
+          "significado": "Título que representa mercadoria depositada e permite sua oneração como garantia."
+        }
+      ],
+      "remissoes": [
+        "Art. 171"
+      ],
+      "exemplo": "Emissor competente emite warrant em desacordo com regra aplicável. Variação: Documento comum que não é o título indicado exige outro enquadramento.",
+      "prova": [
+        "Basta qualquer recibo? Não; identificar título e disposição legal.",
+        "A emissão regular satisfaz o tipo? Não; exige desacordo legal."
+      ],
+      "expected": {
+        "unit_id": "f8b0561e-fd98-5d14-afcd-3fdd432f0dbd",
+        "content_sha256": "efb00478a2fcde066ccbdd525ffb7ac8c0a00d09acb4b9afe49fb0297632130c",
+        "simples": "Emissão irregular de conhecimento de depósito ou warrant: emitir conhecimento de depósito ou warrant em desacordo com disposição legal. Pena: reclusão de 1 a 4 anos e multa.",
+        "pontos": [
+          "Emitir conhecimento de depósito ou warrant em desacordo com a lei.",
+          "Reclusão de 1 a 4 anos e multa."
+        ],
+        "atencao": [
+          "Crime próprio de quem emite esses títulos (armazéns gerais)."
+        ],
+        "exemplo": "Armazém emite warrant sem a mercadoria correspondente.",
+        "prova": [
+          "Assertiva que prevê detenção para o art. 178 erra: a pena é de reclusão."
+        ],
+        "termos": [
+          {
+            "termo": "Warrant",
+            "significado": "Título que representa mercadoria depositada e permite sua oneração como garantia."
+          }
+        ],
+        "remissoes": [
+          "Art. 171"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-179",
+      "unit_id": "61b87eca-4c89-5cd6-8329-06dd88dd5d32",
+      "content_sha256": "0f89e26353723e6f263c8cc267150e59b0e87d1ac9732810c2f060764083fc4f",
+      "simples": "Fraude à execução: fraudar execução, alienando, desviando, destruindo ou danificando bens, ou simulando dívidas. Pena: detenção de 6 meses a 2 anos, ou multa. Somente se procede mediante queixa.",
+      "pontos": [
+        "Alienar, desviar, destruir ou danificar bens, ou simular dívidas, para fraudar execução.",
+        "Detenção de 6 meses a 2 anos, ou multa.",
+        "Ação penal privada (queixa)."
+      ],
+      "atencao": [
+        "Ação penal por QUEIXA (privada)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 171"
+      ],
+      "exemplo": "Executado simula dívidas para fraudar execução. Variação: Alienação regular sem fraude não prova o tipo; consequências civis não equivalem automaticamente a crime.",
+      "prova": [
+        "Toda venda durante processo é crime? Não; provar fraude e elementos.",
+        "A regra exige queixa? Sim; parágrafo único."
+      ],
+      "expected": {
+        "unit_id": "61b87eca-4c89-5cd6-8329-06dd88dd5d32",
+        "content_sha256": "0f89e26353723e6f263c8cc267150e59b0e87d1ac9732810c2f060764083fc4f",
+        "simples": "Fraude à execução: fraudar execução, alienando, desviando, destruindo ou danificando bens, ou simulando dívidas. Pena: detenção de 6 meses a 2 anos, ou multa. Somente se procede mediante queixa.",
+        "pontos": [
+          "Alienar, desviar, destruir ou danificar bens, ou simular dívidas, para fraudar execução.",
+          "Detenção de 6 meses a 2 anos, ou multa.",
+          "Ação penal privada (queixa)."
+        ],
+        "atencao": [
+          "Ação penal por QUEIXA (privada)."
+        ],
+        "exemplo": "O devedor, já sendo executado, vende seu único imóvel a um parente por preço simbólico para frustrar a cobrança.",
+        "prova": [
+          "Assertiva que torna pública incondicionada a ação na fraude à execução erra: é por queixa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 171"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-180",
+      "unit_id": "28acc07c-41c7-5792-9e33-a8c7e77963a8",
+      "content_sha256": "df891be96956954627b254b0c402904b8b89aa2995de1e240ee72d882b7fae8b",
+      "simples": "Receptação: adquirir, receber, transportar, conduzir ou ocultar, em proveito próprio ou alheio, coisa que sabe ser produto de crime, ou influir para que terceiro, de boa-fé, a adquira, receba ou oculte. Pena: reclusão de 2 a 6 anos e multa (texto atual). Receptação qualificada (§1º): no exercício de atividade comercial ou industrial, coisa que deve saber ser produto de crime (reclusão de 3 a 8 anos e multa), e o §2º equipara à atividade comercial qualquer forma de comércio irregular ou clandestino, inclusive em residência. Receptação culposa (§3º): adquirir ou receber coisa que, por sua natureza, pela desproporção entre valor e preço ou pela condição de quem a oferece, deve presumir-se obtida por meio criminoso: detenção de 1 mês a 1 ano, ou multa, ou ambas. A receptação é punível ainda que desconhecido ou isento de pena o autor do crime anterior (§4º). Bens de entes públicos: pena em dobro (§6º); fios, cabos e equipamentos de energia, telefonia, dados ou cargas ferroviárias ou metroviárias: em dobro (§7º).",
+      "pontos": [
+        "Caput: sabe ser produto de crime; reclusão de 2 a 6 anos e multa.",
+        "§1º: qualificada (atividade comercial ou industrial; 'deve saber'): reclusão de 3 a 8 anos e multa.",
+        "§2º: comércio irregular ou clandestino, inclusive em residência, equipara-se à atividade comercial.",
+        "§3º: culposa (deve presumir-se obtida por meio criminoso): detenção de 1 mês a 1 ano, ou multa, ou ambas.",
+        "§4º: punível ainda que o autor do crime anterior seja desconhecido ou isento de pena.",
+        "§6º: bens da União, Estados, DF, Municípios e entes públicos: pena em dobro.",
+        "§7º: fios, cabos, equipamentos e cargas citados: pena em dobro."
+      ],
+      "atencao": [
+        "Distinguir ciência/dolo, atividade comercial e hipótese culposa; expressão deve saber não permite condenação sem elemento subjetivo nem equiparar comércio a culpa automática. §5º revogado pela Lei 15.358/2026; caput 2 a 6 após Lei 15.397 vigente 4/5/2026. Não retroagir agravamento."
+      ],
+      "termos": [
+        {
+          "termo": "Receptação",
+          "significado": "Lidar com coisa que se sabe (ou deve saber) ser produto de crime."
+        }
+      ],
+      "remissoes": [
+        "Art. 180-A",
+        "Art. 155"
+      ],
+      "exemplo": "Comerciante recebe mercadoria de origem criminosa com elementos subjetivos demonstrados. Variação: Preço baixo sozinho não autoriza condenação automática; diferenciar caput, comércio e culpa.",
+      "prova": [
+        "O antigo§5º é vigente? Não; foi revogado em 2026.",
+        "Autor do crime antecedente precisa estar identificado? Não;§4º ressalva, sem dispensar prova da origem criminosa."
+      ],
+      "expected": {
+        "unit_id": "28acc07c-41c7-5792-9e33-a8c7e77963a8",
+        "content_sha256": "df891be96956954627b254b0c402904b8b89aa2995de1e240ee72d882b7fae8b",
+        "simples": "Receptação: adquirir, receber, transportar, conduzir ou ocultar, em proveito próprio ou alheio, coisa que sabe ser produto de crime, ou influir para que terceiro, de boa-fé, a adquira, receba ou oculte. Pena: reclusão de 2 a 6 anos e multa (texto atual). Receptação qualificada (§1º): no exercício de atividade comercial ou industrial, coisa que deve saber ser produto de crime (reclusão de 3 a 8 anos e multa), e o §2º equipara à atividade comercial qualquer forma de comércio irregular ou clandestino, inclusive em residência. Receptação culposa (§3º): adquirir ou receber coisa que, por sua natureza, pela desproporção entre valor e preço ou pela condição de quem a oferece, deve presumir-se obtida por meio criminoso: detenção de 1 mês a 1 ano, ou multa, ou ambas. A receptação é punível ainda que desconhecido ou isento de pena o autor do crime anterior (§4º). Bens de entes públicos: pena em dobro (§6º); fios, cabos e equipamentos de energia, telefonia, dados ou cargas ferroviárias ou metroviárias: em dobro (§7º).",
+        "pontos": [
+          "Caput: sabe ser produto de crime; reclusão de 2 a 6 anos e multa.",
+          "§1º: qualificada (atividade comercial ou industrial; 'deve saber'): reclusão de 3 a 8 anos e multa.",
+          "§2º: comércio irregular ou clandestino, inclusive em residência, equipara-se à atividade comercial.",
+          "§3º: culposa (deve presumir-se obtida por meio criminoso): detenção de 1 mês a 1 ano, ou multa, ou ambas.",
+          "§4º: punível ainda que o autor do crime anterior seja desconhecido ou isento de pena.",
+          "§6º: bens da União, Estados, DF, Municípios e entes públicos: pena em dobro.",
+          "§7º: fios, cabos, equipamentos e cargas citados: pena em dobro."
+        ],
+        "atencao": [
+          "Caput exige DOLO DIRETO ('sabe ser produto de crime'); no §1º basta 'deve saber'.",
+          "Receptação CULPOSA: §3º, com pena de detenção.",
+          "A receptação é crime AUTÔNOMO: independe da punição do autor do crime antecedente (§4º)."
+        ],
+        "exemplo": "Quem compra, por preço muito abaixo do mercado, celular oferecido por desconhecido na rua pode responder por receptação culposa (§3º).",
+        "prova": [
+          "Assertiva que exige a condenação do autor do crime anterior para punir a receptação erra: o §4º a dispensa."
+        ],
+        "termos": [
+          {
+            "termo": "Receptação",
+            "significado": "Lidar com coisa que se sabe (ou deve saber) ser produto de crime."
+          }
+        ],
+        "remissoes": [
+          "Art. 180-A",
+          "Art. 155"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-180-a",
+      "unit_id": "5fba6a52-04eb-531f-9151-78fc1ca50c19",
+      "content_sha256": "39dcc617b4d508325c5d55a575ac500690ce5fae642fd458971d27bb11582df6",
+      "simples": "Receptação de animais: adquirir, receber, transportar, conduzir, ocultar, ter em depósito ou vender, com a finalidade de produção ou comercialização, semovente domesticável de produção, ainda que abatido ou dividido em partes, ou animal doméstico, que sabe ou deve saber ser produto de crime. Pena: reclusão de 3 a 8 anos e multa (texto atual).",
+      "pontos": [
+        "Objeto: semovente domesticável de produção (mesmo abatido ou dividido em partes) ou animal doméstico.",
+        "Finalidade de produção ou comercialização.",
+        "Sabe ou deve saber que é produto de crime.",
+        "Reclusão de 3 a 8 anos e multa."
+      ],
+      "atencao": [
+        "Basta 'sabe ou deve saber'.",
+        "Lei 15.397 vigente em 4/5/2026 ampliou animal doméstico e pena 3 a 8; exige finalidade típica e elemento subjetivo, não culpa presumida ou retroatividade gravosa."
+      ],
+      "termos": [
+        {
+          "termo": "Semovente",
+          "significado": "Animal que se move por si, como o gado."
+        }
+      ],
+      "remissoes": [
+        "Art. 180"
+      ],
+      "exemplo": "Animal doméstico de origem criminosa é recebido para comercialização na hipótese atual. Variação: Recebimento sem finalidade de produção/comercialização exige reavaliar norma aplicável.",
+      "prova": [
+        "A finalidade especial importa? Sim; consta do tipo.",
+        "Todo dono de animal presume origem criminosa? Não; provar os elementos subjetivos previstos."
+      ],
+      "expected": {
+        "unit_id": "5fba6a52-04eb-531f-9151-78fc1ca50c19",
+        "content_sha256": "39dcc617b4d508325c5d55a575ac500690ce5fae642fd458971d27bb11582df6",
+        "simples": "Receptação de animais: adquirir, receber, transportar, conduzir, ocultar, ter em depósito ou vender, com a finalidade de produção ou comercialização, semovente domesticável de produção, ainda que abatido ou dividido em partes, ou animal doméstico, que sabe ou deve saber ser produto de crime. Pena: reclusão de 3 a 8 anos e multa (texto atual).",
+        "pontos": [
+          "Objeto: semovente domesticável de produção (mesmo abatido ou dividido em partes) ou animal doméstico.",
+          "Finalidade de produção ou comercialização.",
+          "Sabe ou deve saber que é produto de crime.",
+          "Reclusão de 3 a 8 anos e multa."
+        ],
+        "atencao": [
+          "Basta 'sabe ou deve saber'."
+        ],
+        "exemplo": "Frigorífico recebe gado abatido de origem criminosa para comercializar.",
+        "prova": [
+          "Assertiva que exige finalidade de lucro direto para o crime erra: o tipo fala em finalidade de produção ou comercialização."
+        ],
+        "termos": [
+          {
+            "termo": "Semovente",
+            "significado": "Animal que se move por si, como o gado."
+          }
+        ],
+        "remissoes": [
+          "Art. 180"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-181",
+      "unit_id": "5733341e-e7e7-5bd7-bff3-38cb90bd4d53",
+      "content_sha256": "45387029d5ae8130ed1da2de9003ce5c22f06b1ea429eff4e791ef6a44e70631",
+      "simples": "Imunidades absolutas: é isento de pena quem comete qualquer dos crimes contra o patrimônio em prejuízo do cônjuge, na constância da sociedade conjugal, ou de ascendente ou descendente, seja o parentesco legítimo ou ilegítimo, civil ou natural. O texto traz a indicação 'Vide Lei nº 10.741/2003' (Estatuto da Pessoa Idosa).",
+      "pontos": [
+        "Isento de pena: crime patrimonial contra o cônjuge na constância da sociedade conjugal.",
+        "Isento de pena: contra ascendente ou descendente (qualquer parentesco)."
+      ],
+      "atencao": [
+        "É escusa absolutória (imunidade absoluta); o texto remete ao Estatuto da Pessoa Idosa para conferir exceções.",
+        "Não vale se o crime é roubo ou extorsão, ou com grave ameaça ou violência (art. 183).",
+        "Integrar 183: violência/grave ameaça, estranho participante e vítima com 60 ou mais afastam as disposições. Não generalizar toda violência patrimonial familiar sem norma especial e jurisprudência aplicáveis."
+      ],
+      "termos": [
+        {
+          "termo": "Escusa absolutória",
+          "significado": "Causa que isenta o agente de pena por razões de política criminal, mesmo havendo crime."
+        }
+      ],
+      "remissoes": [
+        "Art. 182",
+        "Art. 183"
+      ],
+      "exemplo": "Crime patrimonial sem violência entre ascendente e descendente é examinado para escusa. Variação: Se vítima tem sessenta ou mais, ou há violência/grave ameaça, integrar 183 e legislação especial, sem conceder imunidade universal.",
+      "prova": [
+        "Parentesco dispensa art.183? Não.",
+        "A proteção beneficia automaticamente estranho participante? Não;183 excepciona."
+      ],
+      "expected": {
+        "unit_id": "5733341e-e7e7-5bd7-bff3-38cb90bd4d53",
+        "content_sha256": "45387029d5ae8130ed1da2de9003ce5c22f06b1ea429eff4e791ef6a44e70631",
+        "simples": "Imunidades absolutas: é isento de pena quem comete qualquer dos crimes contra o patrimônio em prejuízo do cônjuge, na constância da sociedade conjugal, ou de ascendente ou descendente, seja o parentesco legítimo ou ilegítimo, civil ou natural. O texto traz a indicação 'Vide Lei nº 10.741/2003' (Estatuto da Pessoa Idosa).",
+        "pontos": [
+          "Isento de pena: crime patrimonial contra o cônjuge na constância da sociedade conjugal.",
+          "Isento de pena: contra ascendente ou descendente (qualquer parentesco)."
+        ],
+        "atencao": [
+          "É escusa absolutória (imunidade absoluta); o texto remete ao Estatuto da Pessoa Idosa para conferir exceções.",
+          "Não vale se o crime é roubo ou extorsão, ou com grave ameaça ou violência (art. 183)."
+        ],
+        "exemplo": "Filho que furta objeto do pai é isento de pena (salvo exceções legais).",
+        "prova": [
+          "Assertiva que aplica a imunidade do art. 181 ao roubo praticado contra o pai erra: o art. 183 a afasta quando há violência ou grave ameaça."
+        ],
+        "termos": [
+          {
+            "termo": "Escusa absolutória",
+            "significado": "Causa que isenta o agente de pena por razões de política criminal, mesmo havendo crime."
+          }
+        ],
+        "remissoes": [
+          "Art. 182",
+          "Art. 183"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-182",
+      "unit_id": "a501a177-cf7a-55f3-8d02-d8b1d5d0319d",
+      "content_sha256": "af1292009b9733065f820f41de2f75757a70e874cee4b28cd7d1d3b82b1c94c5",
+      "simples": "Imunidades relativas: somente se procede mediante representação se o crime patrimonial é cometido em prejuízo de cônjuge desquitado ou judicialmente separado; de irmão, legítimo ou ilegítimo; ou de tio ou sobrinho com quem o agente coabita. O texto remete ao Estatuto da Pessoa Idosa.",
+      "pontos": [
+        "Ação condicionada à representação: cônjuge separado; irmão; tio ou sobrinho que coabita com o agente."
+      ],
+      "atencao": [
+        "Imunidade RELATIVA: há crime, mas a ação depende de representação.",
+        "Integrar 183: violência/grave ameaça, estranho participante e vítima com 60 ou mais afastam as disposições. Não generalizar toda violência patrimonial familiar sem norma especial e jurisprudência aplicáveis."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Arts. 181 e 183"
+      ],
+      "exemplo": "Crime patrimonial contra tio com coabitação é examinado para representação. Variação: Sem coabitação, esse inciso não se preenche; vítima idosa ou violência exige 183.",
+      "prova": [
+        "Tio e sobrinho dispensam coabitação? Não; incisoIII a exige.",
+        "É a mesma isenção de 181? Não; aqui a regra é de iniciativa condicionada."
+      ],
+      "expected": {
+        "unit_id": "a501a177-cf7a-55f3-8d02-d8b1d5d0319d",
+        "content_sha256": "af1292009b9733065f820f41de2f75757a70e874cee4b28cd7d1d3b82b1c94c5",
+        "simples": "Imunidades relativas: somente se procede mediante representação se o crime patrimonial é cometido em prejuízo de cônjuge desquitado ou judicialmente separado; de irmão, legítimo ou ilegítimo; ou de tio ou sobrinho com quem o agente coabita. O texto remete ao Estatuto da Pessoa Idosa.",
+        "pontos": [
+          "Ação condicionada à representação: cônjuge separado; irmão; tio ou sobrinho que coabita com o agente."
+        ],
+        "atencao": [
+          "Imunidade RELATIVA: há crime, mas a ação depende de representação."
+        ],
+        "exemplo": "Furto contra o irmão: o processo depende de representação da vítima.",
+        "prova": [
+          "Assertiva que isenta de pena o furto praticado contra o irmão erra: a hipótese é de ação condicionada, não de isenção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 181 e 183"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:00.523254+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-186",
+      "unit_id": "0cfb10f6-1cbf-5adb-b9a9-e6b4350e6012",
+      "content_sha256": "02ccff265c2341c90526dbeafdcabc3efeeafd2b0b99506c0c8f6b0769235a6a",
+      "simples": "Ação penal nos crimes contra a propriedade imaterial: procede-se mediante queixa nos crimes do caput do art. 184; ação penal pública incondicionada nos crimes dos §§1º e 2º do art. 184; ação pública incondicionada nos crimes cometidos em desfavor de entidades de direito público, autarquia, empresa pública, sociedade de economia mista ou fundação pública; e ação pública condicionada à representação nos crimes do §3º do art. 184.",
+      "pontos": [
+        "Caput do art. 184: queixa.",
+        "§§1º e 2º do art. 184: pública incondicionada.",
+        "Contra entes públicos: pública incondicionada.",
+        "§3º do art. 184: pública condicionada à representação."
+      ],
+      "atencao": [
+        "Quatro regimes de ação penal: queixa; incondicionada; incondicionada (entes públicos); condicionada (§3º)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 183-A (texto do art. 184)"
+      ],
+      "exemplo": "Violação de direitos autorais no caput e nas formas do 184 são distinguidas para ação. Variação: Contra entidade pública, verificar incisoIII, não copiar regra geral de queixa.",
+      "prova": [
+        "Todo 184 exige queixa? Não; há diferentes regimes.",
+        "§3º tem representação no recorte doIV? Sim; integrar demais hipóteses e legislação."
+      ],
+      "expected": {
+        "unit_id": "0cfb10f6-1cbf-5adb-b9a9-e6b4350e6012",
+        "content_sha256": "02ccff265c2341c90526dbeafdcabc3efeeafd2b0b99506c0c8f6b0769235a6a",
+        "simples": "Ação penal nos crimes contra a propriedade imaterial: procede-se mediante queixa nos crimes do caput do art. 184; ação penal pública incondicionada nos crimes dos §§1º e 2º do art. 184; ação pública incondicionada nos crimes cometidos em desfavor de entidades de direito público, autarquia, empresa pública, sociedade de economia mista ou fundação pública; e ação pública condicionada à representação nos crimes do §3º do art. 184.",
+        "pontos": [
+          "Caput do art. 184: queixa.",
+          "§§1º e 2º do art. 184: pública incondicionada.",
+          "Contra entes públicos: pública incondicionada.",
+          "§3º do art. 184: pública condicionada à representação."
+        ],
+        "atencao": [
+          "Quatro regimes de ação penal: queixa; incondicionada; incondicionada (entes públicos); condicionada (§3º)."
+        ],
+        "exemplo": "Violação simples de direito autoral (caput): o titular deve oferecer queixa.",
+        "prova": [
+          "Assertiva que torna pública incondicionada a ação do caput do art. 184 erra: é por queixa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 183-A (texto do art. 184)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-197",
+      "unit_id": "157896c6-7f1f-5a7b-b38c-713937272610",
+      "content_sha256": "bf74b98f4a59095d9d4d7770c58409ff293b628a956954e02dc499b55ce13c75",
+      "simples": "Atentado contra a liberdade de trabalho: constranger alguém, mediante violência ou grave ameaça, a exercer ou não exercer arte, ofício, profissão ou indústria, ou a trabalhar ou não trabalhar durante certo período ou em determinados dias (detenção de 1 mês a 1 ano e multa, além da pena da violência); ou a abrir ou fechar o seu estabelecimento de trabalho, ou a participar de parede ou paralisação de atividade econômica (detenção de 3 meses a 1 ano e multa, além da violência).",
+      "pontos": [
+        "I – constranger a exercer ou não exercer profissão ou a trabalhar ou não: detenção de 1 mês a 1 ano e multa.",
+        "II – constranger a abrir ou fechar estabelecimento ou a participar de greve ou paralisação: detenção de 3 meses a 1 ano e multa.",
+        "Em ambos, além da pena da violência."
+      ],
+      "atencao": [
+        "Exige violência ou grave ameaça."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Arts. 198 a 200"
+      ],
+      "exemplo": "Pessoa é coagida com grave ameaça a abandonar profissão. Variação: Discordância pacífica sobre trabalho não satisfaz violência/grave ameaça.",
+      "prova": [
+        "Toda reivindicação é crime? Não; provar meios típicos.",
+        "Os incisos têm pena mínima idêntica? Não; um mês e três meses nos recortes."
+      ],
+      "expected": {
+        "unit_id": "157896c6-7f1f-5a7b-b38c-713937272610",
+        "content_sha256": "bf74b98f4a59095d9d4d7770c58409ff293b628a956954e02dc499b55ce13c75",
+        "simples": "Atentado contra a liberdade de trabalho: constranger alguém, mediante violência ou grave ameaça, a exercer ou não exercer arte, ofício, profissão ou indústria, ou a trabalhar ou não trabalhar durante certo período ou em determinados dias (detenção de 1 mês a 1 ano e multa, além da pena da violência); ou a abrir ou fechar o seu estabelecimento de trabalho, ou a participar de parede ou paralisação de atividade econômica (detenção de 3 meses a 1 ano e multa, além da violência).",
+        "pontos": [
+          "I – constranger a exercer ou não exercer profissão ou a trabalhar ou não: detenção de 1 mês a 1 ano e multa.",
+          "II – constranger a abrir ou fechar estabelecimento ou a participar de greve ou paralisação: detenção de 3 meses a 1 ano e multa.",
+          "Em ambos, além da pena da violência."
+        ],
+        "atencao": [
+          "Exige violência ou grave ameaça."
+        ],
+        "exemplo": "Ameaçar um comerciante para que feche o estabelecimento em dia de paralisação.",
+        "prova": [
+          "Assertiva que dispensa violência ou grave ameaça no art. 197 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 198 a 200"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-198",
+      "unit_id": "d674a35e-5e20-5408-a692-96ebe7b52c82",
+      "content_sha256": "747004751a80a33f32de1536d98756412fef70f92e09816af4a64d29b38ccc94",
+      "simples": "Atentado contra a liberdade de contrato de trabalho e boicotagem violenta: constranger alguém, mediante violência ou grave ameaça, a celebrar contrato de trabalho, ou a não fornecer a outrem ou não adquirir de outrem matéria-prima ou produto industrial ou agrícola. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência.",
+      "pontos": [
+        "Constranger a celebrar contrato de trabalho.",
+        "Ou a não fornecer ou não adquirir matéria-prima ou produto (boicote violento).",
+        "Detenção de 1 mês a 1 ano, multa e pena da violência."
+      ],
+      "atencao": [
+        "Boicotagem violenta: coação para não fornecer ou não comprar."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 197"
+      ],
+      "exemplo": "Agente usa grave ameaça para obrigar terceiro a celebrar contrato de trabalho. Variação: Boicote pacífico sem meios típicos exige outra análise, não criminalização automática.",
+      "prova": [
+        "A celebração coercitiva está prevista? Sim.",
+        "Mera escolha de fornecedor basta? Não; tipo exige violência/grave ameaça."
+      ],
+      "expected": {
+        "unit_id": "d674a35e-5e20-5408-a692-96ebe7b52c82",
+        "content_sha256": "747004751a80a33f32de1536d98756412fef70f92e09816af4a64d29b38ccc94",
+        "simples": "Atentado contra a liberdade de contrato de trabalho e boicotagem violenta: constranger alguém, mediante violência ou grave ameaça, a celebrar contrato de trabalho, ou a não fornecer a outrem ou não adquirir de outrem matéria-prima ou produto industrial ou agrícola. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência.",
+        "pontos": [
+          "Constranger a celebrar contrato de trabalho.",
+          "Ou a não fornecer ou não adquirir matéria-prima ou produto (boicote violento).",
+          "Detenção de 1 mês a 1 ano, multa e pena da violência."
+        ],
+        "atencao": [
+          "Boicotagem violenta: coação para não fornecer ou não comprar."
+        ],
+        "exemplo": "Ameaçar um fornecedor para que deixe de vender a um concorrente.",
+        "prova": [
+          "Assertiva que torna lícita a boicotagem pacífica como crime erra: o tipo exige violência ou grave ameaça."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 197"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-199",
+      "unit_id": "825636fe-ee10-5f14-8655-a464f81c58b3",
+      "content_sha256": "4d726cfa602802611715a18eb9eb86be01fbdd4fac3136a4d36b32e63a346afa",
+      "simples": "Atentado contra a liberdade de associação: constranger alguém, mediante violência ou grave ameaça, a participar ou deixar de participar de determinado sindicato ou associação profissional. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência.",
+      "pontos": [
+        "Constranger a participar ou deixar de participar de sindicato ou associação profissional.",
+        "Violência ou grave ameaça.",
+        "Detenção de 1 mês a 1 ano, multa e pena da violência."
+      ],
+      "atencao": [
+        "Protege a liberdade de filiação sindical ou profissional (para ingressar ou para sair)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 197"
+      ],
+      "exemplo": "Empregado é ameaçado para deixar sindicato. Variação: Escolha voluntária de filiação ou desfiliação não é a coação do tipo.",
+      "prova": [
+        "Protege também a saída do sindicato? Sim.",
+        "Qualquer divergência sindical basta? Não; demonstrar meios típicos."
+      ],
+      "expected": {
+        "unit_id": "825636fe-ee10-5f14-8655-a464f81c58b3",
+        "content_sha256": "4d726cfa602802611715a18eb9eb86be01fbdd4fac3136a4d36b32e63a346afa",
+        "simples": "Atentado contra a liberdade de associação: constranger alguém, mediante violência ou grave ameaça, a participar ou deixar de participar de determinado sindicato ou associação profissional. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência.",
+        "pontos": [
+          "Constranger a participar ou deixar de participar de sindicato ou associação profissional.",
+          "Violência ou grave ameaça.",
+          "Detenção de 1 mês a 1 ano, multa e pena da violência."
+        ],
+        "atencao": [
+          "Protege a liberdade de filiação sindical ou profissional (para ingressar ou para sair)."
+        ],
+        "exemplo": "Ameaçar um trabalhador para que se desfilie do sindicato.",
+        "prova": [
+          "Assertiva que restringe o art. 199 à coação para participar (e não para deixar de participar) erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 197"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-200",
+      "unit_id": "9b0779b6-675b-5523-8906-78007d6de474",
+      "content_sha256": "a33ca50acbb0e5423a0c42b17109265f4ad0874b9fc22e80a7b2fff788a73fed",
+      "simples": "Paralisação de trabalho seguida de violência ou perturbação da ordem: participar de suspensão ou abandono coletivo de trabalho, praticando violência contra pessoa ou contra coisa. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência. Para considerar-se coletivo, o abandono exige o concurso de, pelo menos, três empregados.",
+      "pontos": [
+        "Participar de suspensão ou abandono coletivo de trabalho com violência contra pessoa ou coisa.",
+        "Detenção de 1 mês a 1 ano, multa e pena da violência.",
+        "Parágrafo único: mínimo de TRÊS empregados."
+      ],
+      "atencao": [
+        "A greve em si não é crime; o crime é a violência na paralisação.",
+        "Coletivo = pelo menos três empregados."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 201"
+      ],
+      "exemplo": "Três empregados participam de paralisação com violência típica comprovada. Variação: Paralisação pacífica não se torna crime por contar três pessoas.",
+      "prova": [
+        "Pelo menos três inclui exatamente três? Sim.",
+        "Greve em si é crime do 200? Não; violência e elementos precisam ser demonstrados."
+      ],
+      "expected": {
+        "unit_id": "9b0779b6-675b-5523-8906-78007d6de474",
+        "content_sha256": "a33ca50acbb0e5423a0c42b17109265f4ad0874b9fc22e80a7b2fff788a73fed",
+        "simples": "Paralisação de trabalho seguida de violência ou perturbação da ordem: participar de suspensão ou abandono coletivo de trabalho, praticando violência contra pessoa ou contra coisa. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência. Para considerar-se coletivo, o abandono exige o concurso de, pelo menos, três empregados.",
+        "pontos": [
+          "Participar de suspensão ou abandono coletivo de trabalho com violência contra pessoa ou coisa.",
+          "Detenção de 1 mês a 1 ano, multa e pena da violência.",
+          "Parágrafo único: mínimo de TRÊS empregados."
+        ],
+        "atencao": [
+          "A greve em si não é crime; o crime é a violência na paralisação.",
+          "Coletivo = pelo menos três empregados."
+        ],
+        "exemplo": "Em uma greve, grupo de trabalhadores depreda máquinas da empresa.",
+        "prova": [
+          "Assertiva que considera crime a mera adesão pacífica à greve erra: o tipo exige violência."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 201"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-201",
+      "unit_id": "2e060f4c-4472-5b34-a78e-98c356f5132c",
+      "content_sha256": "bf96d121665d670007ff41b4f310b13c37660807a7bf95d6936d5c98312a750d",
+      "simples": "O texto histórico do art.201 deve ser integrado ao direito constitucional de greve e Lei 7.783/1989. Interrupção de serviço coletivo não autoriza criminalizar automaticamente toda greve; verificar deveres legais, abuso e outros tipos pertinentes.",
+      "pontos": [
+        "CF 9º e Lei 7.783: direito de greve e serviços essenciais.",
+        "Não ensinar detenção residual como punição universal por greve legítima."
+      ],
+      "atencao": [
+        "Não certificada toda discussão de recepção ou jurisprudência de greve nesta revisão; treino literal automático bloqueado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7783.htm"
+      ],
+      "exemplo": "Paralisação de serviço coletivo é invocada para punir greve sem examinar a Constituição. Variação: Conferir direito de greve, deveres de serviços essenciais e Lei 7.783, sem ensinar proibição penal universal.",
+      "prova": [
+        "Toda greve que afete serviço configura crime? Não; Constituição e lei posterior exigem integração.",
+        "Texto residual dispensa análise de legalidade constitucional? Não."
+      ],
+      "expected": {
+        "unit_id": "2e060f4c-4472-5b34-a78e-98c356f5132c",
+        "content_sha256": "bf96d121665d670007ff41b4f310b13c37660807a7bf95d6936d5c98312a750d",
+        "simples": "Paralisação de trabalho de interesse coletivo: participar de suspensão ou abandono coletivo de trabalho, provocando a interrupção de obra pública ou serviço de interesse coletivo. Pena: detenção de 6 meses a 2 anos e multa.",
+        "pontos": [
+          "Participar de suspensão ou abandono coletivo de trabalho.",
+          "Resultado: interrupção de obra pública ou serviço de interesse coletivo.",
+          "Detenção de 6 meses a 2 anos e multa."
+        ],
+        "atencao": [
+          "Diferente do art. 200 (violência), aqui o foco é a interrupção de obra pública ou serviço coletivo."
+        ],
+        "exemplo": "Paralisação que interrompe o fornecimento de serviço essencial de interesse coletivo.",
+        "prova": [
+          "Assertiva que exige violência no art. 201 erra: o tipo se configura pela interrupção da obra ou serviço."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 200"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-202",
+      "unit_id": "3dd96cb7-0875-50fb-8962-dd5d712bbfa6",
+      "content_sha256": "cd667c1a1ce4a8c0e1ca47ca0563d239a3cee873b7d4846779ab5e49705ceb2b",
+      "simples": "Invasão de estabelecimento industrial, comercial ou agrícola e sabotagem: invadir ou ocupar estabelecimento industrial, comercial ou agrícola, com o intuito de impedir ou embaraçar o curso normal do trabalho, ou com o mesmo fim danificar o estabelecimento ou as coisas nele existentes ou delas dispor. Pena: reclusão de 1 a 3 anos e multa.",
+      "pontos": [
+        "Invadir ou ocupar estabelecimento industrial, comercial ou agrícola.",
+        "Intuito de impedir ou embaraçar o trabalho (ou danificar ou dispor das coisas).",
+        "Reclusão de 1 a 3 anos e multa."
+      ],
+      "atencao": [
+        "Exige o intuito específico de impedir ou embaraçar o trabalho."
+      ],
+      "termos": [
+        {
+          "termo": "Sabotagem",
+          "significado": "Dano ou obstrução deliberada à produção."
+        }
+      ],
+      "remissoes": [
+        "Art. 163 (dano)"
+      ],
+      "exemplo": "Estabelecimento é ocupado com finalidade específica de impedir o curso normal do trabalho. Variação: Entrada regular sem essa finalidade não é automaticamente o tipo; contexto e garantias devem ser provados.",
+      "prova": [
+        "A finalidade específica importa? Sim.",
+        "Toda presença em estabelecimento prova sabotagem? Não; conduta e intenção devem ser demonstradas."
+      ],
+      "expected": {
+        "unit_id": "3dd96cb7-0875-50fb-8962-dd5d712bbfa6",
+        "content_sha256": "cd667c1a1ce4a8c0e1ca47ca0563d239a3cee873b7d4846779ab5e49705ceb2b",
+        "simples": "Invasão de estabelecimento industrial, comercial ou agrícola e sabotagem: invadir ou ocupar estabelecimento industrial, comercial ou agrícola, com o intuito de impedir ou embaraçar o curso normal do trabalho, ou com o mesmo fim danificar o estabelecimento ou as coisas nele existentes ou delas dispor. Pena: reclusão de 1 a 3 anos e multa.",
+        "pontos": [
+          "Invadir ou ocupar estabelecimento industrial, comercial ou agrícola.",
+          "Intuito de impedir ou embaraçar o trabalho (ou danificar ou dispor das coisas).",
+          "Reclusão de 1 a 3 anos e multa."
+        ],
+        "atencao": [
+          "Exige o intuito específico de impedir ou embaraçar o trabalho."
+        ],
+        "exemplo": "Grupo ocupa a fábrica para paralisar a produção e danifica equipamentos.",
+        "prova": [
+          "Assertiva que dispensa o intuito de impedir ou embaraçar o trabalho erra."
+        ],
+        "termos": [
+          {
+            "termo": "Sabotagem",
+            "significado": "Dano ou obstrução deliberada à produção."
+          }
+        ],
+        "remissoes": [
+          "Art. 163 (dano)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-203",
+      "unit_id": "66eb3e92-a571-5d61-aec9-547c0dd63d93",
+      "content_sha256": "28ef613272946c132c779630004723534026643c26b6bdde53fc469a609a4626",
+      "simples": "Frustração de direito assegurado por lei trabalhista: frustrar, mediante fraude ou violência, direito assegurado pela legislação do trabalho. Pena: detenção de 1 a 2 anos e multa, além da pena da violência. Na mesma pena quem obriga ou coage alguém a usar mercadorias de determinado estabelecimento para impossibilitar o desligamento em virtude de dívida, ou impede alguém de se desligar de serviços mediante coação ou retenção de documentos pessoais ou contratuais. A pena aumenta de um sexto a um terço se a vítima é menor de 18 anos, idosa, gestante, indígena ou portadora de deficiência física ou mental.",
+      "pontos": [
+        "Frustrar direito trabalhista mediante fraude ou violência.",
+        "Detenção de 1 a 2 anos, multa e pena da violência.",
+        "§1º: coagir a usar mercadorias do estabelecimento (servidão por dívida) ou impedir o desligamento por coação ou retenção de documentos.",
+        "§2º: aumento de 1/6 a 1/3 (menor de 18, idosa, gestante, indígena, pessoa com deficiência)."
+      ],
+      "atencao": [
+        "Reter documentos para impedir o desligamento é conduta do §1º, II."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 149 (trabalho análogo ao de escravo)"
+      ],
+      "exemplo": "Documentos são retidos para impedir trabalhador de desligar-se do serviço. Variação: Irregularidade trabalhista pontual sem fraude/violência ou hipótese equiparada não basta à imputação automática.",
+      "prova": [
+        "Retenção com finalidade do§1ºII está prevista? Sim.",
+        "Todo atraso de pagamento é automaticamente 203? Não; verificar elementos."
+      ],
+      "expected": {
+        "unit_id": "66eb3e92-a571-5d61-aec9-547c0dd63d93",
+        "content_sha256": "28ef613272946c132c779630004723534026643c26b6bdde53fc469a609a4626",
+        "simples": "Frustração de direito assegurado por lei trabalhista: frustrar, mediante fraude ou violência, direito assegurado pela legislação do trabalho. Pena: detenção de 1 a 2 anos e multa, além da pena da violência. Na mesma pena quem obriga ou coage alguém a usar mercadorias de determinado estabelecimento para impossibilitar o desligamento em virtude de dívida, ou impede alguém de se desligar de serviços mediante coação ou retenção de documentos pessoais ou contratuais. A pena aumenta de um sexto a um terço se a vítima é menor de 18 anos, idosa, gestante, indígena ou portadora de deficiência física ou mental.",
+        "pontos": [
+          "Frustrar direito trabalhista mediante fraude ou violência.",
+          "Detenção de 1 a 2 anos, multa e pena da violência.",
+          "§1º: coagir a usar mercadorias do estabelecimento (servidão por dívida) ou impedir o desligamento por coação ou retenção de documentos.",
+          "§2º: aumento de 1/6 a 1/3 (menor de 18, idosa, gestante, indígena, pessoa com deficiência)."
+        ],
+        "atencao": [
+          "Reter documentos para impedir o desligamento é conduta do §1º, II."
+        ],
+        "exemplo": "O empregador retém a carteira de trabalho para impedir que o empregado deixe o serviço.",
+        "prova": [
+          "Assertiva que exige violência física para o art. 203 erra: pode ser fraude ou violência."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 149 (trabalho análogo ao de escravo)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-204",
+      "unit_id": "71a3b3b4-38b5-53db-a704-40d1263b5f9d",
+      "content_sha256": "f31451058b01a4743e10dd296830cb9d64c2be44447a6daf0331c68d37284111",
+      "simples": "Frustração de lei sobre a nacionalização do trabalho: frustrar, mediante fraude ou violência, obrigação legal relativa à nacionalização do trabalho. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência.",
+      "pontos": [
+        "Frustrar obrigação legal de nacionalização do trabalho, mediante fraude ou violência.",
+        "Detenção de 1 mês a 1 ano, multa e pena da violência."
+      ],
+      "atencao": [
+        "Exige fraude ou violência.",
+        "A obrigação de nacionalização precisa ser identificada no direito vigente; não criminalizar contratação regular de migrante por nacionalidade. Não certificadas todas as normas complementares setoriais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 203"
+      ],
+      "exemplo": "Obrigação legal vigente é frustrada mediante fraude ou violência. Variação: Não usar texto antigo para criminalizar toda contratação lícita de estrangeiro ou ressuscitar quota revogada.",
+      "prova": [
+        "A obrigação precisa ser vigente? Sim; norma complementar deve ser conferida.",
+        "Nacionalidade sozinha prova o crime? Não."
+      ],
+      "expected": {
+        "unit_id": "71a3b3b4-38b5-53db-a704-40d1263b5f9d",
+        "content_sha256": "f31451058b01a4743e10dd296830cb9d64c2be44447a6daf0331c68d37284111",
+        "simples": "Frustração de lei sobre a nacionalização do trabalho: frustrar, mediante fraude ou violência, obrigação legal relativa à nacionalização do trabalho. Pena: detenção de 1 mês a 1 ano e multa, além da pena da violência.",
+        "pontos": [
+          "Frustrar obrigação legal de nacionalização do trabalho, mediante fraude ou violência.",
+          "Detenção de 1 mês a 1 ano, multa e pena da violência."
+        ],
+        "atencao": [
+          "Exige fraude ou violência."
+        ],
+        "exemplo": "Fraude para burlar a cota legal de trabalhadores nacionais.",
+        "prova": [
+          "Assertiva que pune a simples omissão sem fraude ou violência erra: o tipo exige o meio fraudulento ou violento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 203"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-205",
+      "unit_id": "2965c84b-3c46-55c6-b42d-c6633a92b191",
+      "content_sha256": "05cbb0a9afc395bad48b8122b4e1878223b2b873e328e4ad3fa5771d17038310",
+      "simples": "Exercício de atividade com infração de decisão administrativa: exercer atividade de que está impedido por decisão administrativa. Pena: detenção de 3 meses a 2 anos, ou multa.",
+      "pontos": [
+        "Exercer atividade da qual está impedido por decisão administrativa.",
+        "Detenção de 3 meses a 2 anos, ou multa."
+      ],
+      "atencao": [
+        "O impedimento decorre de decisão ADMINISTRATIVA (não judicial)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 47, II"
+      ],
+      "exemplo": "Atividade é exercida apesar de impedimento administrativo válido e pertinente. Variação: Restrições sem fundamento legal ou sem incidência no caso não podem ser presumidas.",
+      "prova": [
+        "Decisão mencionada é administrativa? Sim; texto distingue esse fundamento.",
+        "Toda falta de diploma é automaticamente 205? Não; identificar atividade e impedimento aplicável."
+      ],
+      "expected": {
+        "unit_id": "2965c84b-3c46-55c6-b42d-c6633a92b191",
+        "content_sha256": "05cbb0a9afc395bad48b8122b4e1878223b2b873e328e4ad3fa5771d17038310",
+        "simples": "Exercício de atividade com infração de decisão administrativa: exercer atividade de que está impedido por decisão administrativa. Pena: detenção de 3 meses a 2 anos, ou multa.",
+        "pontos": [
+          "Exercer atividade da qual está impedido por decisão administrativa.",
+          "Detenção de 3 meses a 2 anos, ou multa."
+        ],
+        "atencao": [
+          "O impedimento decorre de decisão ADMINISTRATIVA (não judicial)."
+        ],
+        "exemplo": "Profissional suspenso pelo conselho de classe continua a exercer a atividade.",
+        "prova": [
+          "Assertiva que exige decisão judicial para o impedimento erra: o tipo fala em decisão administrativa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 47, II"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-206",
+      "unit_id": "697ea145-e57c-556c-8437-eb7df49668eb",
+      "content_sha256": "d67fa3bd7d6162ca51ac5465c5b845783624d5504d0baca86120a43dbc56669f",
+      "simples": "Aliciamento para fim de emigração: recrutar trabalhadores, mediante fraude, com o fim de levá-los para território estrangeiro. Pena: detenção de 1 a 3 anos e multa.",
+      "pontos": [
+        "Recrutar trabalhadores mediante fraude.",
+        "Fim de levá-los para território estrangeiro.",
+        "Detenção de 1 a 3 anos e multa."
+      ],
+      "atencao": [
+        "Exige FRAUDE e fim de levar os trabalhadores ao exterior."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 207",
+        "Art. 149-A"
+      ],
+      "exemplo": "Trabalhador é recrutado mediante fraude para ser levado ao exterior. Variação: Deslocamento interno exige 207; recrutamento internacional regular não satisfaz fraude.",
+      "prova": [
+        "Exterior é o recorte? Sim.",
+        "Basta proposta lícita de emprego estrangeiro? Não; meio fraudulento importa."
+      ],
+      "expected": {
+        "unit_id": "697ea145-e57c-556c-8437-eb7df49668eb",
+        "content_sha256": "d67fa3bd7d6162ca51ac5465c5b845783624d5504d0baca86120a43dbc56669f",
+        "simples": "Aliciamento para fim de emigração: recrutar trabalhadores, mediante fraude, com o fim de levá-los para território estrangeiro. Pena: detenção de 1 a 3 anos e multa.",
+        "pontos": [
+          "Recrutar trabalhadores mediante fraude.",
+          "Fim de levá-los para território estrangeiro.",
+          "Detenção de 1 a 3 anos e multa."
+        ],
+        "atencao": [
+          "Exige FRAUDE e fim de levar os trabalhadores ao exterior."
+        ],
+        "exemplo": "Enganar trabalhadores com promessas falsas de emprego no exterior para levá-los ao estrangeiro.",
+        "prova": [
+          "Assertiva que aplica o art. 206 ao recrutamento para outra localidade do Brasil erra: para isso há o art. 207."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 207",
+          "Art. 149-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-207",
+      "unit_id": "b0dc1a18-16d9-56ee-9a80-bd5c3202ecde",
+      "content_sha256": "3b72a49caeaebb20fbf0c67edf06bfc0c0ef3009410654fbe166e4e8bc1ce4d3",
+      "simples": "Aliciamento de trabalhadores de um local para outro do território nacional: aliciar trabalhadores com o fim de levá-los de uma para outra localidade. Pena: detenção de 1 a 3 anos e multa. Incorre na mesma pena quem recruta trabalhadores fora da localidade de execução do trabalho, dentro do território nacional, mediante fraude ou cobrança de qualquer quantia do trabalhador, ou não assegura condições do seu retorno ao local de origem. A pena aumenta de um sexto a um terço se a vítima é menor de 18 anos, idosa, gestante, indígena ou portadora de deficiência física ou mental.",
+      "pontos": [
+        "Aliciar trabalhadores para levá-los de uma localidade a outra do país.",
+        "Detenção de 1 a 3 anos e multa.",
+        "§1º: recrutar fraudulentamente ou cobrando quantia; ou não assegurar o retorno.",
+        "§2º: aumento de 1/6 a 1/3 (menor de 18, idosa, gestante, indígena, pessoa com deficiência)."
+      ],
+      "atencao": [
+        "Dentro do território nacional (diferente do art. 206)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 206"
+      ],
+      "exemplo": "Recrutamento interno cobra quantia do trabalhador nas condições equiparadas. Variação: Contratação regular não é aliciamento automaticamente; analisar meios e retorno exigidos.",
+      "prova": [
+        "§1º inclui não assegurar retorno? Sim; na hipótese indicada.",
+        "Todo transporte de trabalhador é crime? Não; verificar tipo e normas pertinentes."
+      ],
+      "expected": {
+        "unit_id": "b0dc1a18-16d9-56ee-9a80-bd5c3202ecde",
+        "content_sha256": "3b72a49caeaebb20fbf0c67edf06bfc0c0ef3009410654fbe166e4e8bc1ce4d3",
+        "simples": "Aliciamento de trabalhadores de um local para outro do território nacional: aliciar trabalhadores com o fim de levá-los de uma para outra localidade. Pena: detenção de 1 a 3 anos e multa. Incorre na mesma pena quem recruta trabalhadores fora da localidade de execução do trabalho, dentro do território nacional, mediante fraude ou cobrança de qualquer quantia do trabalhador, ou não assegura condições do seu retorno ao local de origem. A pena aumenta de um sexto a um terço se a vítima é menor de 18 anos, idosa, gestante, indígena ou portadora de deficiência física ou mental.",
+        "pontos": [
+          "Aliciar trabalhadores para levá-los de uma localidade a outra do país.",
+          "Detenção de 1 a 3 anos e multa.",
+          "§1º: recrutar fraudulentamente ou cobrando quantia; ou não assegurar o retorno.",
+          "§2º: aumento de 1/6 a 1/3 (menor de 18, idosa, gestante, indígena, pessoa com deficiência)."
+        ],
+        "atencao": [
+          "Dentro do território nacional (diferente do art. 206)."
+        ],
+        "exemplo": "Aliciar trabalhadores rurais para outro estado e deixá-los sem condições de retornar.",
+        "prova": [
+          "Assertiva que aplica o art. 207 ao aliciamento para o exterior erra: esse é o art. 206."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 206"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-208",
+      "unit_id": "36b0cc0f-7a9e-579d-85c1-d198db621db2",
+      "content_sha256": "a58eef3c221705f59382751510efe62389f92e75ea6a1687722514c9d4e45327",
+      "simples": "Ultraje a culto e impedimento ou perturbação de ato a ele relativo: escarnecer de alguém publicamente, por motivo de crença ou função religiosa; impedir ou perturbar cerimônia ou prática de culto religioso; vilipendiar publicamente ato ou objeto de culto religioso. Pena: detenção de 1 mês a 1 ano, ou multa. Se há emprego de violência, a pena é aumentada de um terço, sem prejuízo da correspondente à violência.",
+      "pontos": [
+        "Escarnecer publicamente por crença ou função religiosa.",
+        "Impedir ou perturbar cerimônia ou prática de culto.",
+        "Vilipendiar publicamente ato ou objeto de culto.",
+        "Detenção de 1 mês a 1 ano, ou multa.",
+        "Violência: aumento de 1/3, mais a pena da violência."
+      ],
+      "atencao": [
+        "Três condutas alternativas."
+      ],
+      "termos": [
+        {
+          "termo": "Vilipendiar",
+          "significado": "Tratar com desprezo, ultrajar."
+        }
+      ],
+      "remissoes": [
+        "Art. 209"
+      ],
+      "exemplo": "Culto é impedido por conduta típica, não apenas criticado respeitosamente. Variação: Liberdade de expressão não autoriza violência, mas crítica legítima não é ultraje automaticamente.",
+      "prova": [
+        "Existem condutas alternativas? Sim; distinguir escárnio, impedimento e vilipêndio.",
+        "Toda opinião diferente configura 208? Não; provar elementos."
+      ],
+      "expected": {
+        "unit_id": "36b0cc0f-7a9e-579d-85c1-d198db621db2",
+        "content_sha256": "a58eef3c221705f59382751510efe62389f92e75ea6a1687722514c9d4e45327",
+        "simples": "Ultraje a culto e impedimento ou perturbação de ato a ele relativo: escarnecer de alguém publicamente, por motivo de crença ou função religiosa; impedir ou perturbar cerimônia ou prática de culto religioso; vilipendiar publicamente ato ou objeto de culto religioso. Pena: detenção de 1 mês a 1 ano, ou multa. Se há emprego de violência, a pena é aumentada de um terço, sem prejuízo da correspondente à violência.",
+        "pontos": [
+          "Escarnecer publicamente por crença ou função religiosa.",
+          "Impedir ou perturbar cerimônia ou prática de culto.",
+          "Vilipendiar publicamente ato ou objeto de culto.",
+          "Detenção de 1 mês a 1 ano, ou multa.",
+          "Violência: aumento de 1/3, mais a pena da violência."
+        ],
+        "atencao": [
+          "Três condutas alternativas."
+        ],
+        "exemplo": "Invadir um templo durante o culto, gritando para interromper a cerimônia.",
+        "prova": [
+          "Assertiva que exige violência para configurar o crime do art. 208 erra: a violência apenas aumenta a pena."
+        ],
+        "termos": [
+          {
+            "termo": "Vilipendiar",
+            "significado": "Tratar com desprezo, ultrajar."
+          }
+        ],
+        "remissoes": [
+          "Art. 209"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-209",
+      "unit_id": "25a9c61d-de98-52d2-9094-9eb5c3bbd128",
+      "content_sha256": "4412eea743c06cccd4564cd6f790b76ff24f6fe5f31a608ade89dd083e40d8c7",
+      "simples": "Impedimento ou perturbação de cerimônia funerária: impedir ou perturbar enterro ou cerimônia funerária. Pena: detenção de 1 mês a 1 ano, ou multa. Com violência, a pena aumenta de um terço, sem prejuízo da pena da violência.",
+      "pontos": [
+        "Impedir ou perturbar enterro ou cerimônia funerária.",
+        "Detenção de 1 mês a 1 ano, ou multa.",
+        "Violência: aumento de 1/3 e pena da violência."
+      ],
+      "atencao": [
+        "O aumento de um terço vale se há emprego de violência."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 208"
+      ],
+      "exemplo": "Agente perturba deliberadamente cerimônia funerária. Variação: Discordância privada sem impedimento/perturbação não comprova o tipo.",
+      "prova": [
+        "Violência tem aumento? Sim; um terço, além da pena correspondente.",
+        "Toda falta de cerimônia religiosa exclui proteção? Não; enterro e cerimônia funerária são os objetos indicados."
+      ],
+      "expected": {
+        "unit_id": "25a9c61d-de98-52d2-9094-9eb5c3bbd128",
+        "content_sha256": "4412eea743c06cccd4564cd6f790b76ff24f6fe5f31a608ade89dd083e40d8c7",
+        "simples": "Impedimento ou perturbação de cerimônia funerária: impedir ou perturbar enterro ou cerimônia funerária. Pena: detenção de 1 mês a 1 ano, ou multa. Com violência, a pena aumenta de um terço, sem prejuízo da pena da violência.",
+        "pontos": [
+          "Impedir ou perturbar enterro ou cerimônia funerária.",
+          "Detenção de 1 mês a 1 ano, ou multa.",
+          "Violência: aumento de 1/3 e pena da violência."
+        ],
+        "atencao": [
+          "O aumento de um terço vale se há emprego de violência."
+        ],
+        "exemplo": "Tumultuar um velório para impedir a cerimônia.",
+        "prova": [
+          "Assertiva que dispensa a cerimônia ou enterro como objeto do crime erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 208"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-210",
+      "unit_id": "f662ff3f-f880-5993-a823-b76a09f68764",
+      "content_sha256": "7a76ccffbc604c3c7eeaf92009775e741b518cff54e1ac880ceca10f3064bbff",
+      "simples": "Violação de sepultura: violar ou profanar sepultura ou urna funerária. Pena: reclusão de 1 a 3 anos e multa.",
+      "pontos": [
+        "Violar ou profanar sepultura ou urna funerária.",
+        "Reclusão de 1 a 3 anos e multa."
+      ],
+      "atencao": [
+        "A pena é de RECLUSÃO."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Arts. 211 e 212"
+      ],
+      "exemplo": "Sepultura é profanada sem fundamento autorizado. Variação: Exumação lícita nas formalidades legais não se equipara automaticamente a profanação.",
+      "prova": [
+        "Urna funerária é contemplada? Sim.",
+        "A pena é detenção? Não; reclusão de 1 a 3 e multa."
+      ],
+      "expected": {
+        "unit_id": "f662ff3f-f880-5993-a823-b76a09f68764",
+        "content_sha256": "7a76ccffbc604c3c7eeaf92009775e741b518cff54e1ac880ceca10f3064bbff",
+        "simples": "Violação de sepultura: violar ou profanar sepultura ou urna funerária. Pena: reclusão de 1 a 3 anos e multa.",
+        "pontos": [
+          "Violar ou profanar sepultura ou urna funerária.",
+          "Reclusão de 1 a 3 anos e multa."
+        ],
+        "atencao": [
+          "A pena é de RECLUSÃO."
+        ],
+        "exemplo": "Abrir uma sepultura sem autorização, desrespeitando o local.",
+        "prova": [
+          "Assertiva que prevê detenção para a violação de sepultura erra: é reclusão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 211 e 212"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-211",
+      "unit_id": "7497fe78-8eaa-5f2e-ab81-0a0c1b4993d0",
+      "content_sha256": "2ca2d678e77b5c70322f3508d4e2fb9cc2017d739ba6ed0ca81af97007263ccb",
+      "simples": "Destruição, subtração ou ocultação de cadáver: destruir, subtrair ou ocultar cadáver ou parte dele. Pena: reclusão de 1 a 3 anos e multa.",
+      "pontos": [
+        "Destruir, subtrair ou ocultar cadáver ou parte dele.",
+        "Reclusão de 1 a 3 anos e multa."
+      ],
+      "atencao": [
+        "O objeto jurídico é o respeito devido aos mortos; as três condutas (destruir, subtrair, ocultar) são alternativas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 212"
+      ],
+      "exemplo": "Parte de cadáver é ocultada nas condições típicas. Variação: Procedimento médico/legal autorizado precisa ser distinguido, não presumido crime pela manipulação do corpo.",
+      "prova": [
+        "Protege também parte do cadáver? Sim.",
+        "As três condutas são todas cumulativamente necessárias? Não; destruir, subtrair ou ocultar são alternativas."
+      ],
+      "expected": {
+        "unit_id": "7497fe78-8eaa-5f2e-ab81-0a0c1b4993d0",
+        "content_sha256": "2ca2d678e77b5c70322f3508d4e2fb9cc2017d739ba6ed0ca81af97007263ccb",
+        "simples": "Destruição, subtração ou ocultação de cadáver: destruir, subtrair ou ocultar cadáver ou parte dele. Pena: reclusão de 1 a 3 anos e multa.",
+        "pontos": [
+          "Destruir, subtrair ou ocultar cadáver ou parte dele.",
+          "Reclusão de 1 a 3 anos e multa."
+        ],
+        "atencao": [
+          "O objeto jurídico é o respeito devido aos mortos; as três condutas (destruir, subtrair, ocultar) são alternativas."
+        ],
+        "exemplo": "Esconder o corpo de uma pessoa morta.",
+        "prova": [
+          "Assertiva que restringe o crime à destruição total do cadáver erra: inclui subtrair, ocultar e parte dele."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 212"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-212",
+      "unit_id": "55e0f7b0-518f-50d0-9294-9616197d2abd",
+      "content_sha256": "c7b8a2c98a591e9e41d6f33d5af2906e6d0bd7f1127d88c975b40cf5e24fec2d",
+      "simples": "Vilipêndio a cadáver: vilipendiar cadáver ou suas cinzas. Pena: detenção de 1 a 3 anos e multa.",
+      "pontos": [
+        "Vilipendiar (tratar com desprezo) cadáver ou suas cinzas.",
+        "Detenção de 1 a 3 anos e multa."
+      ],
+      "atencao": [
+        "Alcança também as cinzas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Arts. 210 e 211"
+      ],
+      "exemplo": "Cinzas são objeto de ato de desprezo típico. Variação: Manuseio lícito ou respeitoso não é vilipêndio automaticamente.",
+      "prova": [
+        "Cinzas estão incluídas? Sim.",
+        "A pena é reclusão como no 210? Não; aqui detenção de 1 a 3 e multa."
+      ],
+      "expected": {
+        "unit_id": "55e0f7b0-518f-50d0-9294-9616197d2abd",
+        "content_sha256": "c7b8a2c98a591e9e41d6f33d5af2906e6d0bd7f1127d88c975b40cf5e24fec2d",
+        "simples": "Vilipêndio a cadáver: vilipendiar cadáver ou suas cinzas. Pena: detenção de 1 a 3 anos e multa.",
+        "pontos": [
+          "Vilipendiar (tratar com desprezo) cadáver ou suas cinzas.",
+          "Detenção de 1 a 3 anos e multa."
+        ],
+        "atencao": [
+          "Alcança também as cinzas."
+        ],
+        "exemplo": "Profanar o corpo de uma pessoa morta, desrespeitando-o.",
+        "prova": [
+          "Assertiva que exclui as cinzas do objeto do art. 212 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 210 e 211"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-213",
+      "unit_id": "058b8064-4037-5f50-b748-24548b575a91",
+      "content_sha256": "de5d44df915df6baad815579c105a38addea29810b881c367a000c68cabac2f2",
+      "simples": "Estupro: constranger alguém, mediante violência ou grave ameaça, a ter conjunção carnal ou a praticar ou permitir que com ele se pratique outro ato libidinoso. Pena: reclusão de 6 a 10 anos. Se resulta lesão corporal grave ou se a vítima é menor de 18 e maior de 14 anos: reclusão de 8 a 12 anos. Se resulta morte: reclusão de 12 a 30 anos.",
+      "pontos": [
+        "Constranger mediante violência ou grave ameaça a conjunção carnal ou outro ato libidinoso.",
+        "Caput: reclusão de 6 a 10 anos.",
+        "§1º: lesão grave ou vítima entre 14 e 18 anos: reclusão de 8 a 12 anos.",
+        "§2º: morte: reclusão de 12 a 30 anos."
+      ],
+      "atencao": [
+        "O estupro abrange conjunção carnal E outros atos libidinosos.",
+        "Vítima menor de 14 anos: estupro de vulnerável (art. 217-A, fora deste artigo).",
+        "Estupro é crime hediondo (lei especial).",
+        "A faixa etária do§1º tem redação residual com ou; não ensinar inclusão universal de maior 14 isoladamente nem certificar aqui toda fronteira etária por leitura automática. Integrar 217-A e jurisprudência específica; treino literal de faixa ambígua bloqueado."
+      ],
+      "termos": [
+        {
+          "termo": "Ato libidinoso",
+          "significado": "Ato de natureza sexual, além da conjunção carnal."
+        }
+      ],
+      "remissoes": [
+        "Art. 215",
+        "Art. 217-A"
+      ],
+      "exemplo": "Grave ameaça constrange vítima a ato sexual típico, sem exigir apenas conjunção carnal. Variação: Se a vítima é vulnerável, integrar 217-A; ausência de violência não autoriza qualquer ato sem consentimento.",
+      "prova": [
+        "O tipo inclui outros atos libidinosos? Sim.",
+        "O conectivo etário residual pode ser lido como toda pessoa maior 14? Não; exige integração, sem exercício automático de faixa ambígua."
+      ],
+      "expected": {
+        "unit_id": "058b8064-4037-5f50-b748-24548b575a91",
+        "content_sha256": "de5d44df915df6baad815579c105a38addea29810b881c367a000c68cabac2f2",
+        "simples": "Estupro: constranger alguém, mediante violência ou grave ameaça, a ter conjunção carnal ou a praticar ou permitir que com ele se pratique outro ato libidinoso. Pena: reclusão de 6 a 10 anos. Se resulta lesão corporal grave ou se a vítima é menor de 18 e maior de 14 anos: reclusão de 8 a 12 anos. Se resulta morte: reclusão de 12 a 30 anos.",
+        "pontos": [
+          "Constranger mediante violência ou grave ameaça a conjunção carnal ou outro ato libidinoso.",
+          "Caput: reclusão de 6 a 10 anos.",
+          "§1º: lesão grave ou vítima entre 14 e 18 anos: reclusão de 8 a 12 anos.",
+          "§2º: morte: reclusão de 12 a 30 anos."
+        ],
+        "atencao": [
+          "O estupro abrange conjunção carnal E outros atos libidinosos.",
+          "Vítima menor de 14 anos: estupro de vulnerável (art. 217-A, fora deste artigo).",
+          "Estupro é crime hediondo (lei especial)."
+        ],
+        "exemplo": "Constranger alguém, com grave ameaça, a praticar ato libidinoso diverso da conjunção carnal: estupro.",
+        "prova": [
+          "Assertiva que restringe o estupro à conjunção carnal erra: inclui outros atos libidinosos."
+        ],
+        "termos": [
+          {
+            "termo": "Ato libidinoso",
+            "significado": "Ato de natureza sexual, além da conjunção carnal."
+          }
+        ],
+        "remissoes": [
+          "Art. 215",
+          "Art. 217-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-215",
+      "unit_id": "97c1ba4d-bedc-5274-ac81-400b6e6f79c7",
+      "content_sha256": "43cac059030ab4c794c16aefe2ef9df47dcaf5aa4b7a03f79e69d7631a1f67de",
+      "simples": "Violação sexual mediante fraude: ter conjunção carnal ou praticar outro ato libidinoso com alguém, mediante fraude ou outro meio que impeça ou dificulte a livre manifestação de vontade da vítima. Pena: reclusão de 2 a 6 anos. Se o crime é cometido com o fim de obter vantagem econômica, aplica-se também multa.",
+      "pontos": [
+        "Ato libidinoso mediante fraude ou outro meio que dificulte a livre manifestação de vontade.",
+        "Reclusão de 2 a 6 anos.",
+        "Fim de vantagem econômica: também multa."
+      ],
+      "atencao": [
+        "Sem violência ou grave ameaça (diferente do estupro): o meio é a fraude ou obstáculo à vontade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 213"
+      ],
+      "exemplo": "Fraude impede ou dificulta manifestação livre de vontade para ato sexual típico. Variação: Violência/grave ameaça ou vulnerabilidade exigem tipos próprios, não classificação automática pelo nome fraude.",
+      "prova": [
+        "Qualquer vantagem econômica é requisito do caput? Não; finalidade econômica agrega multa.",
+        "Fraude elimina a necessidade de provar elementos? Não; conduta e afetação da vontade devem ser demonstradas."
+      ],
+      "expected": {
+        "unit_id": "97c1ba4d-bedc-5274-ac81-400b6e6f79c7",
+        "content_sha256": "43cac059030ab4c794c16aefe2ef9df47dcaf5aa4b7a03f79e69d7631a1f67de",
+        "simples": "Violação sexual mediante fraude: ter conjunção carnal ou praticar outro ato libidinoso com alguém, mediante fraude ou outro meio que impeça ou dificulte a livre manifestação de vontade da vítima. Pena: reclusão de 2 a 6 anos. Se o crime é cometido com o fim de obter vantagem econômica, aplica-se também multa.",
+        "pontos": [
+          "Ato libidinoso mediante fraude ou outro meio que dificulte a livre manifestação de vontade.",
+          "Reclusão de 2 a 6 anos.",
+          "Fim de vantagem econômica: também multa."
+        ],
+        "atencao": [
+          "Sem violência ou grave ameaça (diferente do estupro): o meio é a fraude ou obstáculo à vontade."
+        ],
+        "exemplo": "O agente se faz passar por outra pessoa para ter relação com a vítima, que o aceita por engano.",
+        "prova": [
+          "Assertiva que exige violência ou grave ameaça para o art. 215 erra: o tipo prevê fraude ou outro meio."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 213"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    }
+  ]
+}

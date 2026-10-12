@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-10-12T23:50:09.992985+00:00",
+  "primary_audit": {
+    "rows": [
+      {
+        "slug": "codigo-penal",
+        "parsed_current": 401,
+        "database_current": 401,
+        "missing_articles": [],
+        "unexpected_current": [],
+        "text_differences": []
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "codigo-penal",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06"
+    },
+    {
+      "id": "l15397",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15397.htm",
+      "sha256": "3aaa45c615c0cf3e53ac41ffad2e47fe46207cc3627421b38cf07d794562bf2d"
+    },
+    {
+      "id": "l15517",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15517.htm",
+      "sha256": "2bfb49dbfcd67297f72dd95efc75230986a41dc1dd982b7305dea4c4d5da6fa3"
+    },
+    {
+      "id": "lcp225",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp225.htm",
+      "sha256": "d5a9b7129228edcea442e4d78e016d7fc76242db792593808f3d87526816bf9f"
+    },
+    {
+      "id": "l10684",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.684.htm",
+      "sha256": "9bd3de7d9cfce6039ce9d5ea33153d4d615e68f441d86ea3c1cbc57933629285"
+    },
+    {
+      "id": "l7783",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7783.htm",
+      "sha256": "22b7f0f4bcb071759f63b6e8df4ee32768eca8f605adc22e1d6cc0db592cf9dd"
+    },
+    {
+      "id": "ambientais",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "sha256": "ef44ef55597b2cee5f16dda009eddfe591c2f76190f355015254caca8bc484bf"
+    },
+    {
+      "id": "STJ96/511/567/17",
+      "url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "sha256": "8a7298bfd40ecac21b31f15a6f9aef6a10a4fbbecdee4fac6fd665ebec338b82",
+      "note": "Reutilizada coleta oficial válida de12/10/2026 desta sessão; tentativa nova retornou HTML e não foi usada como PDF."
+    }
+  ],
+  "limitations": [
+    "Não certificadas todas as derrogações dos arts.165/166 ou recepção do201; integração posterior e treino literal bloqueado.",
+    "Previdenciário: pagamento/parcelamento exigem regime aplicável e exceções da LC225, sem extinção universal.",
+    "Lei15.397:4/5/2026; Lei15.517:23/9/2026; LC225 alterações penais:9/1/2026. Mudanças gravosas não retroagem.",
+    "Quadros remanescentes sobre fronteira etária de213 exigem integração, sem exercício automático universal."
+  ]
+}
