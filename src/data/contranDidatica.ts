@@ -529,4 +529,57 @@ export const CONTRAN_DIDATICA: Record<string, ContranDidatica> = {
       "Dizer que a recusa sempre dá o art. 165-A. Com dois sinais psicomotores, aplica-se o art. 165.",
     ],
   },
+  "1009/2024": {
+    simples: [
+      "O exame toxicológico de larga janela de detecção usa amostra de cabelo ou pelo (amostra queratínica) e enxerga o consumo de substâncias psicoativas em uma janela retrospectiva mínima de noventa dias (Resolução 923/2022, art. 2º). Ele vale para motoristas profissionais das categorias C, D e E.",
+      "Quando fazer: para obter ou renovar a CNH nessas categorias, inclusive nas mudanças de categoria, é preciso resultado negativo (art. 10, nova redação). Na habilitação, o exame vem antes dos exames feitos pelo órgão de trânsito (art. 10, parágrafo único).",
+      "Periódico: quem já tem CNH C, D ou E e tem menos de setenta anos refaz o exame a cada dois anos e seis meses, a contar da obtenção ou renovação da CNH, independentemente da validade dos demais exames (art. 10-A). O calendário é calculado pelo órgão máximo executivo de trânsito da União com base na data de emissão da CNH no RENACH; segunda via não muda o calendário (art. 10-A, §§ 1º e 2º). Não se exige o periódico de quem tem CNH com validade inferior a três anos (art. 10-A, § 3º).",
+      "Validade do exame: noventa dias, contados da coleta, e o resultado pode ser usado nesse período para todos os fins (art. 10-B). O laboratório entrega o laudo detalhado ao condutor e insere o resultado no RENACH em até trinta dias da coleta (arts. 9º e 15).",
+      "Se o periódico der positivo para uma das substâncias do Anexo I em nível que configure uso, a penalidade é suspensão do direito de dirigir por três meses. O levantamento depende de novo exame negativo no RENACH ou do cumprimento da penalidade, e não se aplicam outras penalidades, nem acessórias (art. 16).",
+      "Quem deixa de fazer o exame sofre as penalidades do CTB conforme o MBFT (art. 22). Se o condutor mudar para a categoria B ou AB, ou pedir o cancelamento da CNH, até o trigésimo dia depois do vencimento do prazo do periódico, afasta a penalidade do art. 165-D do CTB (art. 22, § 2º).",
+    ],
+    atualizacoes: [
+      "A Resolução 1.009/2024 (em vigor desde a publicação) alterou a 923/2022 e a 789/2020. Entre as mudanças: laudo entregue ao condutor em até trinta dias, validade de noventa dias do exame, alerta de vencimento enviado trinta dias antes do prazo do periódico (art. 10-B, § 2º) e regras para o exame de periodicidade.",
+      "O art. 2º da 1.009/2024, que incluía na Resolução 789/2020 o cancelamento da CNH a qualquer tempo e sem motivação, foi revogado pela Resolução 1.020/2025 (art. 139).",
+    ],
+    quadro: {
+      titulo: "Exame toxicológico: prazos que mais caem",
+      linhas: [
+        ["Quem faz", "Condutores das categorias C, D e E (art. 10)"],
+        ["Quando", "Obtenção e renovação da CNH, inclusive mudança para C, D ou E (art. 10)"],
+        ["Periódico", "A cada dois anos e seis meses, para quem tem menos de setenta anos (art. 10-A)"],
+        ["Validade do exame", "Noventa dias, a contar da coleta (art. 10-B)"],
+        ["Laudo e RENACH", "Em até trinta dias da coleta (arts. 9º e 15)"],
+        ["Alerta de vencimento", "Enviado com trinta dias de antecedência (art. 10-B, § 2º)"],
+        ["Resultado positivo no periódico", "Suspensão de três meses; sem outras penalidades (art. 16)"],
+        ["Fugir da penalidade do art. 165-D", "Mudar para B ou AB, ou cancelar a CNH, até o trigésimo dia após o vencimento (art. 22, § 2º)"],
+      ],
+    },
+    exemplos: [
+      {
+        situacao: "Um motorista de caminhão (categoria E) com 45 anos renovou a CNH. Quando precisa fazer o próximo exame toxicológico?",
+        resposta: "A cada dois anos e seis meses, a contar da renovação, mesmo que os demais exames ainda estejam válidos (art. 10-A).",
+      },
+      {
+        situacao: "O exame foi coletado há quatro meses. Pode ser usado para renovar a CNH hoje?",
+        resposta: "Não. O exame tem validade de noventa dias a partir da coleta (art. 10-B). Passado esse prazo, é preciso refazer.",
+      },
+      {
+        situacao: "O periódico de um condutor deu positivo em nível de uso. Qual é a penalidade?",
+        resposta: "Suspensão do direito de dirigir por três meses, com levantamento condicionado a novo exame negativo ou ao cumprimento da pena, sem outras penalidades (art. 16).",
+      },
+      {
+        situacao: "Um motorista de 72 anos com CNH categoria D precisa fazer o toxicológico periódico?",
+        resposta: "O periódico do art. 10-A vale para quem tem menos de setenta anos. Com 72, ele não está sujeito a esse periódico.",
+      },
+    ],
+    pegadinhas: [
+      "Trocar os prazos: periódico a cada dois anos e seis meses; validade do exame de noventa dias.",
+      "Achar que o exame vale para todas as categorias. É para C, D e E.",
+      "Esquecer a exceção de idade: o periódico se aplica a quem tem menos de setenta anos.",
+      "Dizer que a segunda via da CNH reinicia o calendário. Não reinicia.",
+      "Confundir a penalidade: no periódico positivo, a resolução prevê suspensão de três meses e veda outras penalidades.",
+    ],
+    fontes: ["923/2022", "1020/2025"],
+  },
 };
