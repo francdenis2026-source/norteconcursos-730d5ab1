@@ -1,0 +1,261 @@
+{
+  "current_units": 3511,
+  "current_review_metadata": 879,
+  "pending_current_review_metadata": 2632,
+  "checked_at": "2026-10-12T03:39:26.665Z",
+  "note": "66 novas revisões confirmadas: 41 Antifacção e 25 Drogas. Metadados de revisão não certificam cada detalhe ou toda jurisprudência. Alertas do RE 635659 e do art. 44 de Drogas não contam como aprovação editorial desses artigos.",
+  "courses": [
+    {
+      "slug": "cin",
+      "current": 30,
+      "review_metadata": 30,
+      "pending": 0
+    },
+    {
+      "slug": "seguranca-privada",
+      "current": 72,
+      "review_metadata": 72,
+      "pending": 0
+    },
+    {
+      "slug": "codigo-penal",
+      "current": 401,
+      "review_metadata": 20,
+      "pending": 381
+    },
+    {
+      "slug": "armas",
+      "current": 41,
+      "review_metadata": 0,
+      "pending": 41
+    },
+    {
+      "slug": "lep",
+      "current": 215,
+      "review_metadata": 9,
+      "pending": 206
+    },
+    {
+      "slug": "organizacoes",
+      "current": 37,
+      "review_metadata": 37,
+      "pending": 0
+    },
+    {
+      "slug": "terrorismo",
+      "current": 17,
+      "review_metadata": 17,
+      "pending": 0
+    },
+    {
+      "slug": "idosa",
+      "current": 117,
+      "review_metadata": 117,
+      "pending": 0
+    },
+    {
+      "slug": "contravencoes",
+      "current": 66,
+      "review_metadata": 5,
+      "pending": 61
+    },
+    {
+      "slug": "identificacao-criminal",
+      "current": 13,
+      "review_metadata": 13,
+      "pending": 0
+    },
+    {
+      "slug": "quimicos",
+      "current": 23,
+      "review_metadata": 23,
+      "pending": 0
+    },
+    {
+      "slug": "pf-interestadual",
+      "current": 2,
+      "review_metadata": 2,
+      "pending": 0
+    },
+    {
+      "slug": "abuso",
+      "current": 40,
+      "review_metadata": 40,
+      "pending": 0
+    },
+    {
+      "slug": "icn",
+      "current": 13,
+      "review_metadata": 13,
+      "pending": 0
+    },
+    {
+      "slug": "antifaccao",
+      "current": 43,
+      "review_metadata": 43,
+      "pending": 0
+    },
+    {
+      "slug": "eca",
+      "current": 326,
+      "review_metadata": 4,
+      "pending": 322
+    },
+    {
+      "slug": "migracao",
+      "current": 123,
+      "review_metadata": 0,
+      "pending": 123
+    },
+    {
+      "slug": "racismo",
+      "current": 23,
+      "review_metadata": 23,
+      "pending": 0
+    },
+    {
+      "slug": "ric",
+      "current": 7,
+      "review_metadata": 7,
+      "pending": 0
+    },
+    {
+      "slug": "pcd",
+      "current": 127,
+      "review_metadata": 127,
+      "pending": 0
+    },
+    {
+      "slug": "maria-penha",
+      "current": 56,
+      "review_metadata": 1,
+      "pending": 55
+    },
+    {
+      "slug": "hediondos",
+      "current": 17,
+      "review_metadata": 17,
+      "pending": 0
+    },
+    {
+      "slug": "lavagem",
+      "current": 24,
+      "review_metadata": 24,
+      "pending": 0
+    },
+    {
+      "slug": "trafico-pessoas",
+      "current": 18,
+      "review_metadata": 18,
+      "pending": 0
+    },
+    {
+      "slug": "interceptacao",
+      "current": 14,
+      "review_metadata": 14,
+      "pending": 0
+    },
+    {
+      "slug": "transito",
+      "current": 365,
+      "review_metadata": 17,
+      "pending": 348
+    },
+    {
+      "slug": "henry-borel",
+      "current": 34,
+      "review_metadata": 34,
+      "pending": 0
+    },
+    {
+      "slug": "sic",
+      "current": 29,
+      "review_metadata": 29,
+      "pending": 0
+    },
+    {
+      "slug": "delegado",
+      "current": 4,
+      "review_metadata": 4,
+      "pending": 0
+    },
+    {
+      "slug": "menor-potencial-ofensivo",
+      "current": 8,
+      "review_metadata": 8,
+      "pending": 0
+    },
+    {
+      "slug": "tortura",
+      "current": 4,
+      "review_metadata": 4,
+      "pending": 0
+    },
+    {
+      "slug": "codigo-processo-penal",
+      "current": 808,
+      "review_metadata": 0,
+      "pending": 808
+    },
+    {
+      "slug": "pensao-regulamento",
+      "current": 22,
+      "review_metadata": 22,
+      "pending": 0
+    },
+    {
+      "slug": "uso-forca",
+      "current": 11,
+      "review_metadata": 11,
+      "pending": 0
+    },
+    {
+      "slug": "identidade",
+      "current": 13,
+      "review_metadata": 13,
+      "pending": 0
+    },
+    {
+      "slug": "ambientais",
+      "current": 79,
+      "review_metadata": 0,
+      "pending": 79
+    },
+    {
+      "slug": "testemunhas",
+      "current": 22,
+      "review_metadata": 22,
+      "pending": 0
+    },
+    {
+      "slug": "temporaria",
+      "current": 7,
+      "review_metadata": 7,
+      "pending": 0
+    },
+    {
+      "slug": "budapeste",
+      "current": 51,
+      "review_metadata": 0,
+      "pending": 51
+    },
+    {
+      "slug": "juizados",
+      "current": 98,
+      "review_metadata": 0,
+      "pending": 98
+    },
+    {
+      "slug": "cpf",
+      "current": 7,
+      "review_metadata": 7,
+      "pending": 0
+    },
+    {
+      "slug": "drogas",
+      "current": 84,
+      "review_metadata": 25,
+      "pending": 59
+    }
+  ]
+}

@@ -1,0 +1,524 @@
+{
+  "course_slug": "drogas",
+  "units": {
+    "art-1": {
+      "simples": "A Lei de Drogas institui o Sisnad (Sistema Nacional de Políticas Públicas sobre Drogas), prescreve medidas de prevenção do uso indevido, atenção e reinserção social de usuários e dependentes, estabelece normas de repressão à produção não autorizada e ao tráfico ilícito e define crimes. Drogas são as substâncias ou produtos capazes de causar dependência, especificados em lei ou em listas atualizadas periodicamente pelo Poder Executivo da União.",
+      "pontos": [
+        "Sisnad combina prevenção, atenção/reinserção e repressão; não é apenas aparelho policial.",
+        "A definição exige especificação em lei ou lista atualizada pelo Executivo federal."
+      ],
+      "atencao": [
+        "Capacidade de causar dependência, isoladamente, não transforma qualquer produto em droga para todo efeito penal. A lista normativa e o tempo do fato importam."
+      ],
+      "exemplo": "Uma prova apresenta o Sisnad como sistema exclusivamente repressivo: faltam prevenção e atenção/reinserção. Variação: uma substância não vira automaticamente objeto de crime apenas porque pode causar dependência; conferir a especificação normativa.",
+      "prova": [
+        "O Sisnad tem finalidade exclusivamente policial? Não; também abrange prevenção, atenção e reinserção.",
+        "Basta causar dependência para preencher toda a definição legal? Não; o parágrafo exige especificação em lei ou lista do Executivo federal."
+      ],
+      "termos": [
+        {
+          "termo": "Norma penal em branco",
+          "significado": "Norma cuja descrição depende de complemento por outra norma."
+        }
+      ],
+      "remissoes": [
+        "Art. 2º",
+        "Art. 66"
+      ]
+    },
+    "art-2": {
+      "simples": "Ficam proibidas, em todo o território nacional, as drogas, bem como o plantio, a cultura, a colheita e a exploração de vegetais e substratos dos quais possam ser extraídas ou produzidas drogas, ressalvada a hipótese de autorização legal ou regulamentar e o uso estritamente ritualístico-religioso da Convenção de Viena de 1971. A União pode autorizar o plantio, a cultura e a colheita desses vegetais exclusivamente para fins medicinais ou científicos, em local e prazo predeterminados, mediante fiscalização.",
+      "pontos": [
+        "A proibição tem ressalvas legais/regulamentares e referência ritualístico-religiosa específica.",
+        "A autorização federal de cultivo medicinal/científico exige local e prazo predeterminados e fiscalização."
+      ],
+      "atencao": [
+        "Não apresentar a ressalva como permissão geral de autocultivo. Decisões judiciais, normas sanitárias e limites da autorização devem ser conferidos no caso; este lote não revisa toda a regulamentação da cannabis."
+      ],
+      "exemplo": "Um projeto científico solicita autorização ao órgão competente e é submetido a limites de local, prazo e fiscalização. Variação: alegar genericamente finalidade medicinal não equivale a possuir autorização irrestrita para cultivo.",
+      "prova": [
+        "A autorização prevista no parágrafo único dispensa delimitar local e prazo? Não; ambos são exigidos, além de fiscalização.",
+        "A lei só contempla finalidade comercial recreativa para esse cultivo? Não; o parágrafo especifica fins medicinais ou científicos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 1º",
+        "Art. 33, §1º, II"
+      ]
+    },
+    "art-3": {
+      "simples": "O Sisnad tem a finalidade de articular, integrar, organizar e coordenar as atividades de prevenção do uso indevido, atenção e reinserção social de usuários e dependentes de drogas e de repressão da produção não autorizada e do tráfico ilícito. Sisnad é o conjunto ordenado de princípios, regras, critérios e recursos materiais e humanos das políticas sobre drogas, incluindo por adesão os sistemas dos Estados, do Distrito Federal e dos Municípios. Atua em articulação com o SUS e o SUAS.",
+      "pontos": [
+        "Há articulação tanto com SUS quanto com SUAS.",
+        "Os sistemas dos outros entes integram o conjunto por adesão, nos termos do §1º."
+      ],
+      "atencao": [
+        "Integração entre políticas não torna todo serviço social uma atividade de investigação criminal."
+      ],
+      "exemplo": "Saúde e assistência coordenam atendimento e reinserção no território. Variação: excluir o SUAS porque a pessoa recebe atendimento médico reduz indevidamente a articulação prevista.",
+      "prova": [
+        "O Sisnad se articula apenas com SUS? Não; o §2º também menciona SUAS.",
+        "A repressão exclui a função de reinserção do sistema? Não; são eixos que a lei manda articular."
+      ],
+      "termos": [
+        {
+          "termo": "Sisnad",
+          "significado": "Sistema Nacional de Políticas Públicas sobre Drogas."
+        }
+      ],
+      "remissoes": [
+        "Art. 4º",
+        "Art. 5º"
+      ]
+    },
+    "art-4": {
+      "simples": "São princípios do Sisnad, entre outros, o respeito aos direitos fundamentais, especialmente à autonomia e à liberdade; o respeito à diversidade; a promoção dos valores éticos, culturais e de cidadania; a promoção de consensos nacionais; a responsabilidade compartilhada entre Estado e sociedade; o reconhecimento da intersetorialidade dos fatores; a integração das estratégias nacionais e internacionais; a articulação com o Ministério Público e os Poderes Legislativo e Judiciário; e a abordagem multidisciplinar.",
+      "pontos": [
+        "Direitos fundamentais, autonomia e diversidade orientam o sistema.",
+        "Responsabilidade é compartilhada entre Estado e sociedade.",
+        "Abordagem multidisciplinar e equilíbrio entre prevenção, atenção e repressão são diretrizes distintas."
+      ],
+      "atencao": [
+        "Não confundir equilíbrio entre atividades com obrigação de gastar percentuais idênticos: o artigo não fixa essa regra."
+      ],
+      "exemplo": "Uma ação territorial integra saúde, escola e assistência em vez de estigmatizar usuários. Variação: afirmar que responsabilidade social exonera o Estado inverte o princípio de responsabilidade compartilhada.",
+      "prova": [
+        "A responsabilidade compartilhada dispensa atuação estatal? Não; pressupõe participação de Estado e sociedade.",
+        "O princípio de equilíbrio fixa orçamento igual para cada eixo? Não; o artigo não estabelece essa fórmula."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 3º"
+      ]
+    },
+    "art-5": {
+      "simples": "O Sisnad tem os seguintes objetivos: contribuir para a inclusão social do cidadão, tornando-o menos vulnerável a comportamentos de risco; promover a construção e a socialização do conhecimento sobre drogas no país; promover a integração entre as políticas de prevenção, atenção e reinserção e de repressão e as políticas setoriais dos órgãos do Poder Executivo; e assegurar as condições para a coordenação, a integração e a articulação das atividades do art. 3º.",
+      "pontos": [
+        "Inclusão social busca reduzir vulnerabilidades e riscos.",
+        "Conhecimento, integração com políticas setoriais e coordenação compõem os objetivos."
+      ],
+      "atencao": [
+        "Objetivos de inclusão e conhecimento não devem ser substituídos por uma promessa de erradicação absoluta que o dispositivo não formula."
+      ],
+      "exemplo": "Uma política combina educação e assistência para reduzir vulnerabilidade. Variação: medir apenas número de prisões não representa todos os objetivos do artigo.",
+      "prova": [
+        "A inclusão social é objetivo expresso? Sim; busca reduzir a vulnerabilidade a comportamentos de risco.",
+        "Socializar conhecimento sobre drogas fica fora dos objetivos? Não; está no inciso II."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 3º"
+      ]
+    },
+    "art-7": {
+      "simples": "A organização do Sisnad assegura a orientação central e a execução descentralizada das atividades realizadas em seu âmbito, nas esferas federal, distrital, estadual e municipal, e se constitui matéria definida no regulamento da Lei.",
+      "pontos": [
+        "Orientação central convive com execução descentralizada.",
+        "A organização alcança as esferas federal, distrital, estadual e municipal e depende de regulamento."
+      ],
+      "atencao": [
+        "Coordenar centralmente não significa que a União executará sozinha todo serviço local."
+      ],
+      "exemplo": "Diretrizes nacionais orientam uma atividade executada no Município. Variação: centralizar todos os atendimentos na esfera federal contraria a execução descentralizada.",
+      "prova": [
+        "Orientação central e execução descentralizada são incompatíveis? Não; o artigo prevê as duas conjuntamente.",
+        "A descentralização exclui orientação nacional? Não; a orientação central continua prevista."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 8º-A"
+      ]
+    },
+    "art-8-a": {
+      "simples": "Compete à União formular e coordenar a execução da Política Nacional sobre Drogas; elaborar o Plano Nacional de Políticas sobre Drogas, em parceria com Estados, Distrito Federal, Municípios e a sociedade; coordenar o Sisnad; estabelecer diretrizes e normas de referência; elaborar objetivos, ações estratégicas, metas e indicadores e definir formas de financiamento e gestão; promover a integração com os demais entes; financiar, com eles, a execução das políticas; e estabelecer formas de colaboração com os entes federados, entre outras competências.",
+      "pontos": [
+        "União coordena o Sisnad, formula política e elabora plano em parceria.",
+        "Publicidade dos repasses e divulgação de estatísticas são competências específicas.",
+        "Há financiamento e colaboração com os entes; incisos vetados não fornecem competências."
+      ],
+      "atencao": [
+        "A parceria na elaboração do plano não elimina a competência federal; tampouco o veto permite reconstruir poderes inexistentes."
+      ],
+      "exemplo": "A União publica informações de repasses e elabora o plano com entes e sociedade. Variação: excluir toda participação local por ser competência federal confunde coordenação com atuação isolada.",
+      "prova": [
+        "A elaboração do plano dispensa parceria com outros entes e sociedade? Não; o inciso II prevê essa parceria.",
+        "Publicidade de repasses está entre as competências? Sim; é prevista no inciso XI."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 7º"
+      ]
+    },
+    "art-8-d": {
+      "simples": "São objetivos do Plano Nacional de Políticas sobre Drogas, dentre outros, promover a interdisciplinaridade e a integração dos programas nas áreas de saúde, educação, trabalho, assistência social, previdência social, habitação, cultura, desporto e lazer; viabilizar a ampla participação social; priorizar programas articulados com estabelecimentos de ensino, sociedade e família; ampliar as alternativas de inserção social e econômica do usuário ou dependente, priorizando escolarização e qualificação profissional; e promover o acesso do usuário ou dependente a todos os serviços públicos.",
+      "pontos": [
+        "Plano Nacional: duração de 5 anos desde sua aprovação.",
+        "O poder público deve dar ampla divulgação ao conteúdo.",
+        "Integração de áreas, participação social, escolarização e trabalho são objetivos expressos."
+      ],
+      "atencao": [
+        "Não contar os 5 anos desde a lei ou desde cada atendimento: o marco é a aprovação do plano."
+      ],
+      "exemplo": "Um plano aprovado em determinado dia inicia nesse marco sua duração quinquenal. Variação: a data de publicação da Lei 13.840 não é automaticamente a aprovação de todos os planos seguintes.",
+      "prova": [
+        "Qual é o marco dos 5 anos? A aprovação do plano, conforme o §1º.",
+        "O plano pode ter seu conteúdo mantido sigiloso como regra geral? Não; o §2º exige ampla divulgação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 8º-A",
+        "Art. 8º-E"
+      ]
+    },
+    "art-8-e": {
+      "simples": "Os conselhos de políticas sobre drogas, constituídos por Estados, Distrito Federal e Municípios, terão os objetivos de auxiliar na elaboração de políticas sobre drogas; colaborar com os órgãos governamentais no planejamento e na execução das políticas; propor a celebração de instrumentos de cooperação para programas de prevenção, tratamento, acolhimento, reinserção e repressão ao tráfico; promover estudos; propor políticas que permitam a integração do usuário ou dependente no processo social, econômico, político e cultural; e desenvolver outras atividades relacionadas.",
+      "pontos": [
+        "Conselhos locais auxiliam, colaboram, propõem cooperação e promovem estudos.",
+        "Os objetivos alcançam prevenção, tratamento, acolhimento, reinserção e repressão."
+      ],
+      "atencao": [
+        "Propor instrumento de cooperação não é celebrar qualquer contrato automaticamente nem assumir competência policial."
+      ],
+      "exemplo": "O conselho municipal propõe cooperação e produz estudo para subsidiar a política. Variação: emitir condenação criminal não está entre os objetivos deste artigo.",
+      "prova": [
+        "Os conselhos apenas tratam de repressão? Não; têm funções também de prevenção, atendimento e integração.",
+        "Propor cooperação equivale a julgar crimes? Não; são atribuições de naturezas distintas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 8º-D"
+      ]
+    },
+    "art-16": {
+      "simples": "As instituições com atuação nas áreas da atenção à saúde e da assistência social que atendam usuários ou dependentes de drogas devem comunicar ao órgão competente do respectivo sistema municipal de saúde os casos atendidos e os óbitos ocorridos, preservando a identidade das pessoas, conforme orientações emanadas da União.",
+      "pontos": [
+        "Comunicar casos atendidos e óbitos ao órgão competente do sistema municipal de saúde.",
+        "Preservar a identidade das pessoas conforme orientações da União."
+      ],
+      "atencao": [
+        "O dever de comunicação não autoriza publicar nomes ou presumir denúncia criminal de todo paciente."
+      ],
+      "exemplo": "Uma instituição comunica os eventos ao órgão municipal competente com preservação da identidade. Variação: divulgar em rede social a lista nominal dos atendidos viola a distinção entre comunicação institucional e exposição pública.",
+      "prova": [
+        "A lei manda publicar nomes dos usuários? Não; determina preservar a identidade.",
+        "A comunicação prevista inclui óbitos? Sim; inclui casos atendidos e óbitos ocorridos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 17"
+      ]
+    },
+    "art-17": {
+      "simples": "Os dados estatísticos nacionais de repressão ao tráfico ilícito de drogas integrarão sistema de informações do Poder Executivo.",
+      "pontos": [
+        "Dados estatísticos nacionais de repressão integram sistema de informações do Executivo.",
+        "Estatística não se confunde com prova individual de culpabilidade."
+      ],
+      "atencao": [
+        "Não trocar estatísticas nacionais de repressão por exposição indiscriminada de prontuários de saúde."
+      ],
+      "exemplo": "Um relatório agregado sobre repressão alimenta o sistema de informações. Variação: uma tabela estatística não prova por si a participação de uma pessoa em crime.",
+      "prova": [
+        "Os dados previstos integram sistema do Executivo? Sim; é o destino indicado no artigo.",
+        "Estatística nacional condena automaticamente um indivíduo? Não; informação agregada e prova individual são coisas distintas."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 16"
+      ]
+    },
+    "art-18": {
+      "simples": "Constituem atividades de prevenção do uso indevido de drogas, para efeito da Lei, aquelas direcionadas para a redução dos fatores de vulnerabilidade e risco e para a promoção e o fortalecimento dos fatores de proteção.",
+      "pontos": [
+        "Prevenção reduz vulnerabilidades e riscos.",
+        "Também promove e fortalece fatores de proteção."
+      ],
+      "atencao": [
+        "Não reduzir prevenção à repressão do tráfico ou à ameaça de punição; o artigo descreve outra dimensão da política."
+      ],
+      "exemplo": "Projeto fortalece vínculos familiares e reduz exposição a riscos. Variação: somente apreender drogas não demonstra, por si, que o projeto executou as atividades preventivas definidas aqui.",
+      "prova": [
+        "Prevenção envolve apenas reduzir fatores de risco? Não; também fortalece fatores de proteção.",
+        "A lei define prevenção como simples condenação penal? Não; descreve redução de vulnerabilidade e fortalecimento de proteção."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 19"
+      ]
+    },
+    "art-19": {
+      "simples": "As atividades de prevenção do uso indevido de drogas devem observar princípios e diretrizes como o reconhecimento do uso indevido como fator de interferência na qualidade de vida; a adoção de conceitos objetivos e de fundamentação científica; o fortalecimento da autonomia e da responsabilidade individual; o compartilhamento de responsabilidades com o setor privado e a sociedade; estratégias diferenciadas conforme as populações e as drogas; o reconhecimento do 'não-uso', do 'retardamento do uso' e da redução de riscos como resultados desejáveis; e o tratamento especial às parcelas mais vulneráveis da população.",
+      "pontos": [
+        "Fundamentação científica e conceitos objetivos devem evitar preconceito e estigma.",
+        "Não uso, retardamento do uso e redução de riscos são resultados desejáveis distintos.",
+        "Prevenção para crianças/adolescentes deve observar também as diretrizes do Conanda."
+      ],
+      "atencao": [
+        "A política não precisa tratar todas as populações e substâncias de forma idêntica; o inciso V manda adequar estratégias às especificidades."
+      ],
+      "exemplo": "Uma equipe adapta ação à faixa etária e ao contexto sociocultural com fundamento científico. Variação: rejeitar redução de riscos como resultado preventivo contradiz o inciso VI.",
+      "prova": [
+        "A lei admite redução de riscos como resultado desejável? Sim; junto do não uso e do retardamento do uso.",
+        "Toda ação deve ignorar diferenças socioculturais? Não; a lei exige estratégias adequadas às especificidades."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 18"
+      ]
+    },
+    "art-19-a": {
+      "simples": "Fica instituída a Semana Nacional de Políticas sobre Drogas, comemorada anualmente, na quarta semana de junho. No período, serão intensificadas as ações de difusão de informações sobre os problemas decorrentes do uso de drogas; promoção de eventos para o debate público; difusão de boas práticas de prevenção, tratamento, acolhimento e reinserção; divulgação de iniciativas e campanhas; mobilização da comunidade; e mobilização dos sistemas de ensino.",
+      "pontos": [
+        "Semana Nacional: quarta semana de junho, anualmente.",
+        "Intensificam-se informação, debate, boas práticas e mobilização da comunidade e ensino."
+      ],
+      "atencao": [
+        "Uma semana de intensificação não suspende ações preventivas durante o resto do ano."
+      ],
+      "exemplo": "Uma escola intensifica campanhas na quarta semana de junho. Variação: encerrar o trabalho preventivo nas demais semanas não é obrigação prevista pela norma.",
+      "prova": [
+        "A semana legal é a primeira de junho? Não; é a quarta semana de junho.",
+        "A criação da semana proíbe campanhas fora dela? Não; prevê intensificação anual, não exclusividade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 19"
+      ]
+    },
+    "art-20": {
+      "simples": "Constituem atividades de atenção ao usuário e dependente de drogas e respectivos familiares, para efeito da Lei, aquelas que visem à melhoria da qualidade de vida e à redução dos riscos e dos danos associados ao uso de drogas.",
+      "pontos": [
+        "Atenção visa qualidade de vida e redução de riscos e danos.",
+        "A regra alcança usuários, dependentes e respectivos familiares."
+      ],
+      "atencao": [
+        "Não confundir atenção com reinserção social do art. 21, embora possam atuar juntas."
+      ],
+      "exemplo": "Um serviço atende a pessoa e orienta seus familiares para reduzir danos e melhorar qualidade de vida. Variação: excluir familiares de toda atividade de atenção contraria o público expresso do artigo.",
+      "prova": [
+        "A atenção inclui os familiares? Sim; o artigo os menciona expressamente.",
+        "O foco descrito é apenas elevar número de condenações? Não; é qualidade de vida e redução de riscos e danos."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 21"
+      ]
+    },
+    "art-21": {
+      "simples": "Constituem atividades de reinserção social do usuário ou do dependente de drogas e respectivos familiares, para efeito da Lei, aquelas direcionadas para sua integração ou reintegração em redes sociais.",
+      "pontos": [
+        "Reinserção busca integrar ou reintegrar em redes sociais.",
+        "Usuários/dependentes e respectivos familiares são abrangidos."
+      ],
+      "atencao": [
+        "Redes sociais aqui são redes de vínculos e integração; não apenas aplicativos ou plataformas digitais."
+      ],
+      "exemplo": "A equipe apoia o retorno à convivência comunitária e a vínculos familiares. Variação: criar somente uma conta em aplicativo não demonstra a reinserção social definida pela lei.",
+      "prova": [
+        "Redes sociais significa apenas plataforma digital? Não; o contexto é integração e reintegração social.",
+        "A reinserção é definida como punição mais severa? Não; seu objeto é a integração nas redes sociais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 20"
+      ]
+    },
+    "art-22": {
+      "simples": "As atividades de atenção e de reinserção social do usuário e do dependente e de seus familiares devem observar princípios como o respeito ao usuário independentemente de quaisquer condições; estratégias diferenciadas conforme as peculiaridades socioculturais; projeto terapêutico individualizado; atenção multidisciplinar, por equipes multiprofissionais; observância das normas do Conad; alinhamento às diretrizes dos órgãos de controle social; estímulo à capacitação técnica e profissional; e políticas de reinserção voltadas à educação continuada e ao trabalho.",
+      "pontos": [
+        "Projeto terapêutico deve ser individualizado e orientado à inclusão e redução de riscos/danos.",
+        "Sempre que possível, equipes multiprofissionais e abordagem multidisciplinar.",
+        "PIA, educação continuada, trabalho e orientação adequada integram as diretrizes."
+      ],
+      "atencao": [
+        "Respeito independe das condições pessoais; tratamento padronizado que ignora peculiaridades não atende à individualização."
+      ],
+      "exemplo": "A equipe adapta projeto à pessoa e seus vínculos, com metas de saúde e inclusão. Variação: impor um roteiro idêntico sem considerar peculiaridades socioculturais afasta a diretriz do inciso II.",
+      "prova": [
+        "O projeto terapêutico deve ignorar necessidades individuais? Não; o inciso III exige individualização.",
+        "A orientação só deve tratar do uso habitual? Não; o inciso X também menciona consequências do uso ocasional."
+      ],
+      "termos": [
+        {
+          "termo": "Conad",
+          "significado": "Conselho Nacional de Políticas sobre Drogas."
+        }
+      ],
+      "remissoes": [
+        "Art. 23-B"
+      ]
+    },
+    "art-22-a": {
+      "simples": "As pessoas atendidas por órgãos integrantes do Sisnad terão atendimento nos programas de educação profissional e tecnológica, educação de jovens e adultos e alfabetização.",
+      "pontos": [
+        "Atendidos por órgãos do Sisnad terão atendimento em educação profissional/tecnológica, EJA e alfabetização."
+      ],
+      "atencao": [
+        "Não transformar atendimento nesses programas em diploma automático ou dispensa dos requisitos educacionais aplicáveis."
+      ],
+      "exemplo": "A pessoa é encaminhada a programa de alfabetização e formação compatível com suas necessidades. Variação: participar do Sisnad não gera certificação profissional sem o percurso educativo.",
+      "prova": [
+        "A alfabetização é contemplada? Sim; junto de educação profissional/tecnológica e EJA.",
+        "O artigo concede diploma automático? Não; prevê atendimento em programas, não certificação sem aprendizagem."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 22"
+      ]
+    },
+    "art-23": {
+      "simples": "As redes dos serviços de saúde da União, dos Estados, do Distrito Federal e dos Municípios desenvolverão programas de atenção ao usuário e ao dependente de drogas, respeitadas as diretrizes do Ministério da Saúde e os princípios do art. 22, obrigatória a previsão orçamentária adequada. Será criada estratégia específica de assistência multiprofissional e interdisciplinar às mulheres usuárias e dependentes de álcool, em especial às gestantes e às puérperas.",
+      "pontos": [
+        "Redes de saúde dos entes devem desenvolver programas com previsão orçamentária adequada.",
+        "O parágrafo único prevê estratégia específica para mulheres usuárias/dependentes de álcool, especialmente gestantes e puérperas."
+      ],
+      "atencao": [
+        "O destaque a gestantes e puérperas não exclui todas as demais mulheres do grupo descrito. Não confundir previsão orçamentária com promessa de tratamento idêntico para qualquer caso."
+      ],
+      "exemplo": "Uma rede planeja assistência multiprofissional às mulheres do público descrito, com atenção especial ao período gestacional e pós-parto. Variação: atender exclusivamente gestantes excluindo as demais mulheres inverte o uso de em especial.",
+      "prova": [
+        "A previsão orçamentária é obrigatória? Sim; o caput a exige para os programas.",
+        "O parágrafo único limita a estratégia somente a gestantes? Não; destaca gestantes e puérperas dentro do grupo das mulheres descrito."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 22"
+      ]
+    },
+    "art-23-a": {
+      "simples": "O tratamento prioriza modalidades ambulatoriais. Internação é excepcional, em unidade de saúde ou hospital geral, com equipe multidisciplinar e autorização médica. A voluntária exige consentimento e declaração escrita; seu término decorre de decisão médica ou solicitação escrita da pessoa. A involuntária exige solicitação dos legitimados e decisão médica após avaliar drogas, padrão de uso e impossibilidade de alternativas. Não é prisão nem internação em comunidade terapêutica.",
+      "pontos": [
+        "Ambulatório tem prioridade; internação só quando recursos extra-hospitalares forem insuficientes.",
+        "Internação exige unidade de saúde/hospital geral com equipe e autorização de médico registrado no CRM do Estado.",
+        "Na involuntária, avaliar alternativas; apenas tempo necessário à desintoxicação, máximo de 90 dias. Internações e altas são informadas em até 72 horas aos órgãos indicados, com sigilo.",
+        "Na falta absoluta de familiar/responsável, a hipótese de solicitação por servidor exclui os da segurança pública; comunidade terapêutica não pode realizar internação."
+      ],
+      "atencao": [
+        "Solicitar a medida não substitui decisão médica. Os 90 dias são limite da involuntária, não duração mínima ou prazo comum do PIA. A família pode requerer ao médico a interrupção a qualquer tempo; isso não equivale a determinar alta automaticamente."
+      ],
+      "exemplo": "A equipe verifica insuficiência dos recursos extra-hospitalares e a decisão médica antes de internação involuntária. Variação: não se pode usar comunidade terapêutica para internar compulsoriamente alguém nem tratar o limite de 90 dias como permanência obrigatória.",
+      "prova": [
+        "O pedido da família sozinho substitui a decisão médica? Não; a internação exige autorização e formalização médica nas condições legais.",
+        "A internação involuntária deve durar obrigatoriamente 90 dias? Não; dura apenas o necessário à desintoxicação, com esse limite máximo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 23-B"
+      ]
+    },
+    "art-23-b": {
+      "simples": "O atendimento ao usuário ou dependente de drogas na rede de atenção à saúde dependerá de avaliação prévia por equipe técnica multidisciplinar e multissetorial e da elaboração de um Plano Individual de Atendimento (PIA). A avaliação levantará no mínimo o tipo de droga e o padrão de seu uso e o risco à saúde física e mental do usuário ou das pessoas com as quais convive. O PIA deverá contemplar a participação dos familiares ou responsáveis, os quais têm o dever de contribuir com o processo, sendo passíveis de responsabilização, no caso de crianças e adolescentes, nos termos do Estatuto da Criança e do Adolescente.",
+      "pontos": [
+        "PIA: até 30 dias desde ingresso no atendimento.",
+        "Avaliação prévia é multidisciplinar/multissetorial; o plano é elaborado pela equipe do primeiro projeto e atualizado nas fases posteriores.",
+        "Objetivos declarados pelo atendido, integração/capacitação, apoio e participação familiar e medidas de saúde constam do conteúdo mínimo.",
+        "Avaliação e plano são sigilosos."
+      ],
+      "atencao": [
+        "Não contar prazo desde a lei, nem congelar o plano após a primeira elaboração. A responsabilização de familiares de crianças/adolescentes segue os termos do ECA, sem punição automática genérica."
+      ],
+      "exemplo": "A pessoa ingressa no atendimento e a equipe organiza PIA no prazo de até 30 dias, com objetivos e necessidades individuais. Variação: ao mudar a fase de atendimento, manter plano desatualizado contraria o §4º.",
+      "prova": [
+        "O PIA é elaborado em até 30 dias desde qual marco? Desde o ingresso no atendimento.",
+        "O plano pode ser divulgado publicamente como regra? Não; as informações da avaliação e do plano são sigilosas."
+      ],
+      "termos": [
+        {
+          "termo": "PIA",
+          "significado": "Plano Individual de Atendimento."
+        }
+      ],
+      "remissoes": [
+        "Art. 23-A",
+        "Art. 26-A"
+      ]
+    },
+    "art-24": {
+      "simples": "A União, os Estados, o Distrito Federal e os Municípios poderão conceder benefícios às instituições privadas que desenvolverem programas de reinserção no mercado de trabalho, do usuário e do dependente de drogas encaminhados por órgão oficial.",
+      "pontos": [
+        "Entes podem conceder benefícios a instituições privadas com programas de reinserção no mercado de trabalho.",
+        "O usuário/dependente deve ser encaminhado por órgão oficial na hipótese descrita."
+      ],
+      "atencao": [
+        "Poderão conceder não equivale a benefício automático e incondicionado a toda empresa."
+      ],
+      "exemplo": "Instituição mantém programa laboral para pessoas encaminhadas por órgão oficial e é avaliada para benefício. Variação: só contratar qualquer trabalhador não comprova os requisitos do programa previsto.",
+      "prova": [
+        "A lei impõe benefício automático a toda instituição privada? Não; prevê possibilidade na hipótese descrita.",
+        "O encaminhamento oficial integra essa hipótese? Sim; é condição expressa do texto."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 22"
+      ]
+    },
+    "art-25": {
+      "simples": "As instituições da sociedade civil, sem fins lucrativos, com atuação nas áreas da atenção à saúde e da assistência social, que atendam usuários ou dependentes de drogas poderão receber recursos do Funad, condicionados à sua disponibilidade orçamentária e financeira.",
+      "pontos": [
+        "Recursos do Funad podem atender instituições civis sem fins lucrativos nas áreas indicadas.",
+        "Disponibilidade orçamentária E financeira condiciona o repasse."
+      ],
+      "atencao": [
+        "Não confundir Funad com FNSP nem prometer recursos independentemente de orçamento, caixa e regras de transferência."
+      ],
+      "exemplo": "Uma instituição sem fins lucrativos atua em atenção à saúde/assistência de usuários e requer recursos do Funad. Variação: a mera existência de previsão no orçamento, sem disponibilidade financeira, não dispensa a condição cumulativa.",
+      "prova": [
+        "O artigo prevê repasse incondicional? Não; depende de disponibilidade orçamentária e financeira.",
+        "Funad e FNSP são o mesmo fundo neste dispositivo? Não; o artigo indica especificamente o Funad."
+      ],
+      "termos": [
+        {
+          "termo": "Funad",
+          "significado": "Fundo Nacional Antidrogas."
+        }
+      ],
+      "remissoes": [
+        "Art. 24"
+      ]
+    },
+    "art-26": {
+      "simples": "O usuário e o dependente de drogas que, em razão da prática de infração penal, estiverem cumprindo pena privativa de liberdade ou submetidos a medida de segurança, têm garantidos os serviços de atenção à sua saúde, definidos pelo respectivo sistema penitenciário.",
+      "pontos": [
+        "Condenado em pena privativa de liberdade e pessoa sob medida de segurança têm serviços de atenção à saúde garantidos.",
+        "A garantia não depende de se chamar a medida de prisão ou tratamento."
+      ],
+      "atencao": [
+        "Cumprir pena não extingue o direito à atenção à saúde; o artigo não autoriza substituição automática da condenação por atendimento."
+      ],
+      "exemplo": "Uma pessoa cumpre pena e necessita dos serviços de atenção definidos no sistema penitenciário. Variação: estar sob medida de segurança também está previsto, sem confundir a garantia de saúde com revisão automática da sanção.",
+      "prova": [
+        "A pessoa sob medida de segurança foi excluída? Não; o artigo a abrange expressamente.",
+        "Garantir atenção à saúde substitui automaticamente toda pena? Não; a garantia de atendimento não é essa regra de substituição."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 20"
+      ]
+    },
+    "art-26-a": {
+      "simples": "O acolhimento do usuário ou dependente de drogas na comunidade terapêutica acolhedora caracteriza-se pela oferta de projetos terapêuticos que visam à abstinência; adesão e permanência voluntária, formalizadas por escrito, como etapa transitória para a reinserção; ambiente residencial propício à formação de vínculos; avaliação médica prévia; elaboração de plano individual de atendimento; e vedação de isolamento físico do usuário.",
+      "pontos": [
+        "Adesão E permanência voluntárias e escritas; acolhimento é etapa transitória de reinserção.",
+        "Avaliação médica prévia e PIA são requisitos; isolamento físico é vedado.",
+        "Comprometimentos graves que exijam atenção contínua ou de emergência devem ser encaminhados à rede de saúde."
+      ],
+      "atencao": [
+        "Acolhimento residencial não se transforma em internação: o art. 23-A, §9º, veda internação em comunidades terapêuticas. Não criar conteúdo para parágrafos vetados."
+      ],
+      "exemplo": "Uma pessoa adere voluntariamente por escrito ao acolhimento, depois de avaliação, com PIA e sem isolamento. Variação: necessidade grave de atenção médico-hospitalar contínua exige encaminhamento à rede de saúde, não permanência forçada na comunidade.",
+      "prova": [
+        "A voluntariedade vale somente para ingresso? Não; adesão e permanência devem ser voluntárias.",
+        "A comunidade pode substituir hospital numa necessidade grave e contínua? Não; o §1º prevê encaminhamento à rede de saúde e a lei veda internação ali."
+      ],
+      "termos": [
+        {
+          "termo": "Comunidade terapêutica acolhedora",
+          "significado": "Entidade de acolhimento voluntário, de caráter residencial e transitório."
+        }
+      ],
+      "remissoes": [
+        "Art. 23-B"
+      ]
+    }
+  }
+}

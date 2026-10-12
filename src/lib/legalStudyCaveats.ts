@@ -1,5 +1,35 @@
 /** Editorial application notes are separate from the unmodified compiled statute. */
 export function legalStudyCaveat(law: string, key: string) {
+  if (law === 'drogas' && key === 'art-35') return {
+    literalPractice: false,
+    title: 'Associação para tráfico: vínculo estável e permanente',
+    explanation: 'Preserve a orientação do STJ já indicada na revisão anterior: a expressão reiteradamente ou não não dispensa estabilidade e permanência do vínculo associativo. Duas pessoas em concurso ocasional ou a presença em território de facção não provam associação por si. O parágrafo único tem referência própria à prática reiterada do art. 36. Este alerta não equivale à revisão integral do dispositivo.',
+    source: 'https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/26082022-Falta-de-demonstracao-de-vinculo-permanente-afasta-condenacao-por-associacao-para-o-trafico.aspx',
+  };
+  if (law === 'drogas' && ['art-27','art-28','art-29','art-30'].includes(key)) return {
+    literalPractice: false,
+    title: 'Cannabis para uso pessoal: procedimento não penal',
+    explanation: 'No RE 635659, o STF afastou consequências penais do porte de cannabis para consumo pessoal. Até 40 gramas ou seis plantas fêmeas indicam presunção relativa de uso, não licença de tráfico nem limite absoluto. Para cannabis, advertência e medida educativa são aplicadas em procedimento não penal; não memorize toda a literalidade desses artigos como regra penal indistinta para todas as substâncias.',
+    source: 'https://noticias.stf.jus.br/postsnoticias/stf-define-40-gramas-de-maconha-como-criterio-para-diferenciar-usuario-de-traficante/',
+  };
+  if (law === 'drogas' && key === 'art-44') return {
+    literalPractice: false,
+    title: 'Texto residual: liberdade provisória e penas alternativas',
+    explanation: 'O STF afastou a vedação de liberdade provisória (HC 104339 e RE 1038925) e a proibição absoluta de conversão em restritivas de direitos (HC 97256 e ARE 663261). Inafiançabilidade não impõe custódia automática nem torna impossível liberdade sem fiança; conversão exige requisitos próprios. A SV 63 afasta a hediondez do tráfico privilegiado, sem criar benefício automático. Não use o caput residual para exercícios literais.',
+    source: 'https://noticias.stf.jus.br/postsnoticias/stf-reafirma-inconstitucionalidade-da-regra-que-proibe-liberdade-provisoria-a-presos-por-trafico-de-drogas/',
+  };
+  if (law === 'antifaccao' && key === 'art-42') return {
+    literalPractice: false,
+    title: 'Apostas: transcrição de março e alteração de setembro',
+    explanation: 'A MP 1.394, publicada em 25/09/2026, alterou o art. 21-A e revogou dispositivos da Lei 14.790, preservando aplicação transitória às hipóteses do art. 29, parágrafo único. Não memorize os arts. 39 e 40 reproduzidos em março como regime geral atual. Separe texto vigente, texto anterior e transição; confira conversão ou perda de eficácia da MP antes de aplicar a regra.',
+    source: 'https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Mpv/mpv1394.htm',
+  };
+  if (law === 'antifaccao' && ['art-9','art-10','art-11','art-12','art-17','art-29','art-30','art-35','art-38','art-40'].includes(key)) return {
+    literalPractice: false,
+    title: 'Lei nova: literalidade e garantias constitucionais',
+    explanation: 'Estes dispositivos envolvem garantias patrimoniais, defesa, custódia, cadastro, benefícios ou direitos políticos discutidos no controle constitucional da Lei 15.358. O texto legislativo não prova prisão automática, culpa por cadastro ou solução definitiva das ADIs. Use os exercícios autorais com suas ressalvas e consulte as decisões aplicáveis; esta revisão não certifica todo o andamento processual.',
+    source: 'https://noticias.stf.jus.br/postsnoticias/stf-reune-ministerio-publico-e-defensorias-publicas-para-discutir-lei-antifaccao/',
+  };
   if (law === 'hediondos' && ['art-6','art-7','art-9','art-10','art-214','art-223'].includes(key)) return {
     literalPractice: false,
     title: 'Transcrição histórica: confira a lei alterada atual',

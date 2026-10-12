@@ -1,0 +1,49 @@
+{
+  "scope": "Fontes oficiais efetivamente lidas para alertas de aplicação, não aprovação editorial de todos os dispositivos de Drogas.",
+  "sources": [
+    {
+      "slug": "stf-reafirma-inconstitucionalidade-da-regra-que-proibe-liberdade-provisoria-a-presos-por-trafico-de-drogas",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-reafirma-inconstitucionalidade-da-regra-que-proibe-liberdade-provisoria-a-presos-por-trafico-de-drogas/",
+      "sha256": "0176c6b683694c2a43f6e226af5d1aec862b5ef182a72777e9d81084a4995898",
+      "checked_at": "2026-10-12T03:32:54.528500+00:00"
+    },
+    {
+      "slug": "reafirmada-jurisprudencia-sobre-impedimento-de-pena-alternativa-previsto-na-lei-de-drogas",
+      "url": "https://noticias.stf.jus.br/postsnoticias/reafirmada-jurisprudencia-sobre-impedimento-de-pena-alternativa-previsto-na-lei-de-drogas/",
+      "sha256": "2bd681a59dab014097605ef21a779f75ba5795d6347f38d06e1d023e85a8ae60",
+      "checked_at": "2026-10-12T03:32:54.806628+00:00"
+    },
+    {
+      "slug": "stf-aprova-sumula-vinculante-que-afasta-carater-hediondo-do-trafico-privilegiado",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-aprova-sumula-vinculante-que-afasta-carater-hediondo-do-trafico-privilegiado/",
+      "sha256": "bdc6fa1e833f92e221acc222a1bd75c714f8ded8be7c567647ff5efb2fa55ff0",
+      "checked_at": "2026-10-12T03:32:54.469576+00:00"
+    },
+    {
+      "slug": "stf-reafirma-jurisprudencia-sobre-aplicacao-da-quantidade-e-natureza-da-droga-na-dosimetria",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-reafirma-jurisprudencia-sobre-aplicacao-da-quantidade-e-natureza-da-droga-na-dosimetria/",
+      "sha256": "463123e0a7d5a910e9a0a3d5316b2a0796e2b92b6abbef8646c3a2c7dc555089",
+      "checked_at": "2026-10-12T03:32:54.621041+00:00"
+    },
+    {
+      "slug": "stf-cannabis",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-define-40-gramas-de-maconha-como-criterio-para-diferenciar-usuario-de-traficante/",
+      "sha256": "77a6faaca7afb6b3722beef08db7232f642b104a6198910c99813d3480e3a581",
+      "checked_at": "2026-10-12T03:40:10.208303+00:00"
+    }
+  ],
+  "unverified_destinations": [
+    {
+      "host": "www.stj.jus.br",
+      "result": "HTTP 200 com Request Rejected; não validado como conteúdo judicial"
+    },
+    {
+      "host": "scon.stj.jus.br",
+      "result": "HTTP 200 com Request Rejected; não validado como conteúdo judicial"
+    },
+    {
+      "host": "portal.stf.jus.br",
+      "result": "HTTP 403; andamento completo das ADIs não conferido"
+    }
+  ]
+}

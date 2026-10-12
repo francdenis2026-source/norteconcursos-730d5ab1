@@ -5,12 +5,64 @@ import {validateArticlePackage,checkArticlePreflight,explanationPayload} from '.
 import {explanationExample,explanationPractice} from '../src/lib/explanationPractice.ts';
 import {hasCurrentExplanationReview} from '../src/lib/explanationReview.ts';
 import {buildExplanationQuiz} from '../src/lib/explanationQuiz.ts';
+import {legalStudyCaveat} from '../src/lib/legalStudyCaveats.ts';
 import ts from 'typescript';
 import vm from 'node:vm';
 import {createRequire} from 'node:module';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 const pack=JSON.parse(readFileSync('docs/library/article-explanations-identification-pension-2026-10-11.json','utf8'));
+test('antifaction review preserves prior versions and separates timelines, percentages and constitutional guarantees',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-antifaction-procedures-2026-10-12.json','utf8'));
+ validateArticlePackage(p);
+ assert.equal(p.units.length,41);
+ assert.equal(new Set(p.units.map(r=>r.unit_key)).size,41);
+ assert.ok(!p.units.some(r=>['art-1','art-2','art-43'].includes(r.unit_key)));
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);assert.ok(r.prova.every(q=>explanationPractice(q)));}
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-5').pontos.join(' '),/não se somam 24 horas/);
+ assert.match(get('art-24').atencao.join(' '),/Não importar as contas trimestrais/);
+ assert.match(get('art-38').atencao.join(' '),/veda gravidade abstrata/);
+ assert.match(get('art-40').simples,/condenação transitada em julgado/);
+ assert.match(get('art-41').pontos.join(' '),/não a 60% de todas as receitas/);
+ assert.match(get('art-42').simples,/25\/09\/2026/);
+ assert.match(get('art-42').atencao.join(' '),/transição/);
+ assert.ok(p.supplementary_source_evidence.some(e=>e.slug==='mpv1394'&&/^[a-f0-9]{64}$/.test(e.sha256)));
+});
+test('disputed antifaction rules and superseded betting fragments use qualified authored practice',()=>{
+ for(const key of ['art-9','art-10','art-11','art-12','art-17','art-29','art-30','art-35','art-38','art-40','art-42']){
+  assert.equal(legalStudyCaveat('antifaccao',key)?.literalPractice,false);
+ }
+ assert.equal(legalStudyCaveat('antifaccao','art-24'),null);
+ assert.match(legalStudyCaveat('antifaccao','art-42').explanation,/revogou.*transitória/);
+ assert.equal(legalStudyCaveat('antifaccao','art-2').literalPractice,false);
+ assert.equal(legalStudyCaveat('lavagem','art-17-d').literalPractice,false);
+});
+test('drug care separates voluntary accommodation, exceptional hospitalization and PIA deadlines',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-drug-care-2026-10-12.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,25);
+ for(const r of p.units){assert.ok(r.expected);assert.ok(explanationExample(r.exemplo).variation);assert.ok(r.prova.every(q=>explanationPractice(q)));}
+ assert.ok(p.units.every(r=>parseInt(r.unit_key.split('-')[1],10)<27));
+ const get=k=>p.units.find(r=>r.unit_key===k);
+ assert.match(get('art-23-a').pontos.join(' '),/máximo de 90 dias.*72 horas/);
+ assert.match(get('art-23-a').pontos.join(' '),/exclui os da segurança pública/);
+ assert.match(get('art-23-b').pontos.join(' '),/30 dias desde ingresso/);
+ assert.match(get('art-26-a').pontos.join(' '),/Adesão E permanência voluntárias/);
+ assert.match(get('art-26-a').atencao.join(' '),/veda internação em comunidades/);
+ assert.match(get('art-8-d').atencao.join(' '),/marco é a aprovação/);
+ assert.match(get('art-16').prova.join(' '),/preservar a identidade/);
+});
+test('drug literal practice does not teach criminal cannabis use or absolute custody and conversion prohibitions',()=>{
+ for(const key of ['art-27','art-28','art-29','art-30','art-35','art-44'])assert.equal(legalStudyCaveat('drogas',key)?.literalPractice,false);
+ const cannabis=legalStudyCaveat('drogas','art-28');
+ assert.match(cannabis.explanation,/presunção relativa/);
+ assert.match(cannabis.explanation,/procedimento não penal/);
+ const custody=legalStudyCaveat('drogas','art-44');
+ assert.match(custody.explanation,/Inafiançabilidade não impõe custódia automática/);
+ assert.match(custody.explanation,/conversão exige requisitos/);
+ assert.match(legalStudyCaveat('drogas','art-35').explanation,/não dispensa estabilidade e permanência/);
+ assert.equal(legalStudyCaveat('drogas','art-23-a'),null);
+});
 const native=createRequire(import.meta.url),module={exports:{}};
 const code=ts.transpileModule(readFileSync('src/components/library/UnitExplanation.tsx','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
 vm.runInNewContext(code,{module,exports:module.exports,require:name=>({
