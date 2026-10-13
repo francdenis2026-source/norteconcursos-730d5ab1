@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP execução não recupera multa prisional ou sursis histórico',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-execution-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,33);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(669).atencao.join(' '),/barreira antiga.*oito anos/);
+ assert.match(get(689).simples,/não integra regime atual/);
+ assert.match(get(696).pontos.join(' '),/dois a quatro anos/);
+ assert.match(get(693).simples,/incompatível com igualdade/);
+ for(const n of [669,675,689,690,693,696])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP habeas corpus distingue regra de2024 e remissões históricas',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-habeas-corpus-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,32);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);

@@ -1,0 +1,2030 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T04:33:36.862235+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 33,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-668",
+        "art-669",
+        "art-670",
+        "art-671",
+        "art-672",
+        "art-673",
+        "art-674",
+        "art-675",
+        "art-676",
+        "art-677",
+        "art-678",
+        "art-679",
+        "art-680",
+        "art-681",
+        "art-682",
+        "art-683",
+        "art-684",
+        "art-685",
+        "art-686",
+        "art-687",
+        "art-688",
+        "art-689",
+        "art-690",
+        "art-691",
+        "art-692",
+        "art-693",
+        "art-694",
+        "art-695",
+        "art-696",
+        "art-697",
+        "art-698",
+        "art-699",
+        "art-700"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-668",
+      "unit_id": "db8053b1-6656-5b24-a75e-6edd4507f3fa",
+      "content_sha256": "e24552d25a5bbc6e50d3823eccf61baf9dcd0a45e4f83700258a6603ab8f8723",
+      "simples": "Competência executória segue juiz indicado na organização judiciária e, na ausência, juiz da sentença, conforme LEP65.",
+      "pontos": [
+        "Distinguir julgamento e execução.",
+        "Referências ao presidente do júri/tribunal precisam ser integradas à competência atual."
+      ],
+      "atencao": [
+        "Não presumir que toda decisão do júri permanece em execução com seu presidente apesar de vara competente."
+      ],
+      "exemplo": "Vara de execução definida pela lei local recebe título condenatório. Variação: Sem juiz especializado indicado, examina-se competência supletiva da sentença.",
+      "prova": [
+        "Organização judiciária define juiz da execução? Sim.",
+        "Presidente do júri é sempre executor exclusivo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Juízo executório",
+          "significado": "Órgão competente para efetivar a sanção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "db8053b1-6656-5b24-a75e-6edd4507f3fa",
+        "content_sha256": "e24552d25a5bbc6e50d3823eccf61baf9dcd0a45e4f83700258a6603ab8f8723",
+        "simples": "A execução, onde não houver juiz especial, incumbirá ao juiz da sentença, ou, se a decisão for do Tribunal do Júri, ao seu presidente. Se a decisão for de tribunal superior, nos casos de sua competência originária, caberá ao respectivo presidente prover-lhe a execução.",
+        "pontos": [
+          "Execução cabe ao juiz da sentença (ou ao presidente do Júri), se não houver juiz especial.",
+          "Decisão de tribunal em competência originária: execução pelo respectivo presidente."
+        ],
+        "atencao": [
+          "Hoje a Lei de Execução Penal prevê o juízo da execução."
+        ],
+        "exemplo": "Sem vara de execuções, o juiz da sentença executa a pena.",
+        "prova": [
+          "Assertiva que sempre atribui a execução ao Ministério Público erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 669"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-669",
+      "unit_id": "9e3daade-551a-513a-94fa-a0ab15761941",
+      "content_sha256": "33b9f102603563fe9aa950e8c08a49813fd833cad5ef5bf72d336851f7859cc2",
+      "simples": "Trânsito em julgado e efeitos da sentença exigem leitura das garantias atuais; exceções antigas não criam prisão automática.",
+      "pontos": [
+        "Separar cautelar e execução.",
+        "Absolvição permite soltura se não houver outro título válido.",
+        "Júri possui regime específico do Tema1068."
+      ],
+      "atencao": [
+        "Não aplicar barreira antiga de pena máxima de oito anos para negar soltura após absolvição."
+      ],
+      "exemplo": "Réu absolvido sem outro título de prisão é liberado. Variação: Preventiva de outro processo precisa ser examinada por fundamento próprio.",
+      "prova": [
+        "Pena máxima de oito anos impede toda soltura do absolvido? Não.",
+        "Outro título válido exige análise própria? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Efeitos atuais da sentença",
+          "significado": "Consequências delimitadas pelo regime constitucional."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "9e3daade-551a-513a-94fa-a0ab15761941",
+        "content_sha256": "33b9f102603563fe9aa950e8c08a49813fd833cad5ef5bf72d336851f7859cc2",
+        "simples": "Só depois de passar em julgado, será exequível a sentença, salvo quando condenatória, para o efeito de sujeitar o réu a prisão, ainda no caso de crime afiançável, enquanto não for prestada a fiança; e quando absolutória, para o fim de imediata soltura do réu, desde que não proferida em processo por crime a que a lei comine pena de reclusão, no máximo, por tempo igual ou superior a oito anos.",
+        "pontos": [
+          "Regra: a sentença só é exequível após o trânsito em julgado.",
+          "Exceção condenatória: prisão enquanto não prestada a fiança.",
+          "Exceção absolutória: soltura imediata, salvo reclusão com máximo igual ou superior a oito anos."
+        ],
+        "atencao": [
+          "Dispositivo anterior ao art. 596, que determina a soltura imediata em qualquer absolvição."
+        ],
+        "exemplo": "A sentença absolutória permite a soltura imediata do réu.",
+        "prova": [
+          "Assertiva que torna a sentença condenatória exequível antes do trânsito em julgado sempre erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 596"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-670",
+      "unit_id": "1e0aa8d2-dbd8-56d6-b2a0-1f7dd95772ee",
+      "content_sha256": "ea48dca79f63a7a8021130b12d8c2511fe795bdbf7e8caa381b8239fc3aa1558",
+      "simples": "Absolvição confirmada ou proferida na apelação exige efetivar alvará e comunicar primeiro grau.",
+      "pontos": [
+        "Cumprimento célere da decisão.",
+        "Verificar outro motivo legal de custódia."
+      ],
+      "atencao": [
+        "Decisão absolutória não pode ficar sem implementação por mera espera administrativa."
+      ],
+      "exemplo": "Tribunal absolve e determina expedição do alvará pertinente. Variação: Outro mandado válido impede presumir liberdade física sem conferência.",
+      "prova": [
+        "Relator promove alvará na hipótese? Sim.",
+        "Comunicação ao primeiro grau é dispensável? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Alvará de soltura",
+          "significado": "Ordem judicial para cessar custódia atingida pela decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "1e0aa8d2-dbd8-56d6-b2a0-1f7dd95772ee",
+        "content_sha256": "ea48dca79f63a7a8021130b12d8c2511fe795bdbf7e8caa381b8239fc3aa1558",
+        "simples": "No caso de decisão absolutória confirmada ou proferida em grau de apelação, incumbirá ao relator fazer expedir o alvará de soltura, de que dará imediatamente conhecimento ao juiz de primeira instância.",
+        "pontos": [
+          "Absolvição confirmada ou proferida na apelação: o relator expede o alvará de soltura.",
+          "Comunica de imediato o juiz de primeira instância."
+        ],
+        "atencao": [
+          "O relator expede o alvará."
+        ],
+        "exemplo": "O tribunal absolve o réu em apelação, e o relator expede o alvará de soltura.",
+        "prova": [
+          "Assertiva que atribui a expedição do alvará ao juiz de primeira instância apenas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 596"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-671",
+      "unit_id": "f52e534f-ca26-5121-b7e7-e694895374e0",
+      "content_sha256": "2d4026a6e4bf070d6c4c594e3c7d6a4a87647b65f1ab9eab3b667471e29b44b6",
+      "simples": "Incidentes da execução são decididos pelo juiz competente, integrado às atribuições da LEP66.",
+      "pontos": [
+        "Questões de cumprimento são jurisdicionais.",
+        "Garantir participação e defesa cabíveis."
+      ],
+      "atencao": [
+        "Diretor não substitui juiz para decidir definitivamente incidente reservado à jurisdição."
+      ],
+      "exemplo": "Defesa suscita erro no cálculo e juízo executório decide. Variação: Questão recursal da condenação pode ter via diferente do incidente executório.",
+      "prova": [
+        "Incidente é resolvido pelo juiz competente? Sim.",
+        "Diretor decide sozinho toda questão executória? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Incidente executório",
+          "significado": "Questão surgida no cumprimento da sanção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "f52e534f-ca26-5121-b7e7-e694895374e0",
+        "content_sha256": "2d4026a6e4bf070d6c4c594e3c7d6a4a87647b65f1ab9eab3b667471e29b44b6",
+        "simples": "Os incidentes da execução, como pedidos de progressão e livramento, serão resolvidos pelo respectivo juiz da execução.",
+        "pontos": [
+          "Incidentes da execução são resolvidos pelo juiz da execução."
+        ],
+        "atencao": [
+          "Juízo da execução."
+        ],
+        "exemplo": "O pedido de progressão de regime é decidido pelo juiz da execução.",
+        "prova": [
+          "Assertiva que remete os incidentes da execução ao tribunal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 668"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-672",
+      "unit_id": "d1a606ee-c7ff-52d5-9bab-e538d0df63e2",
+      "content_sha256": "11f698150778786eec58a6c03b72dc8cda442c0b4d3a79fc84426ac6cced2e9b",
+      "simples": "Tempo de prisão e internação pertinente pode ser abatido da pena por detração, conforme CP42.",
+      "pontos": [
+        "Considerar custódia no Brasil ou exterior nos pressupostos legais.",
+        "Distinguir detração e remição.",
+        "Evitar contagem dupla do mesmo período."
+      ],
+      "atencao": [
+        "Detração não é crédito irrestrito para crimes futuros nem autoriza descontar qualquer internação sem vínculo pertinente."
+      ],
+      "exemplo": "Noventa dias de prisão provisória do caso entram no cálculo cabível. Variação: Dias já computados não devem ser abatidos duas vezes.",
+      "prova": [
+        "Detração difere de remição por trabalho ou estudo? Sim.",
+        "Mesmo período pode ser contado duas vezes? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Detração",
+          "significado": "Abatimento do período legalmente computável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "d1a606ee-c7ff-52d5-9bab-e538d0df63e2",
+        "content_sha256": "11f698150778786eec58a6c03b72dc8cda442c0b4d3a79fc84426ac6cced2e9b",
+        "simples": "Computar-se-á na pena privativa da liberdade o tempo de prisão preventiva no Brasil ou no estrangeiro; de prisão provisória no Brasil ou no estrangeiro; e de internação em hospital ou manicômio.",
+        "pontos": [
+          "Computa-se o tempo de prisão preventiva.",
+          "Prisão provisória.",
+          "Internação em hospital ou manicômio."
+        ],
+        "atencao": [
+          "Detração penal."
+        ],
+        "exemplo": "Quem ficou preso preventivamente tem esse tempo descontado da pena.",
+        "prova": [
+          "Assertiva que não computa a prisão cumprida no estrangeiro erra."
+        ],
+        "termos": [
+          {
+            "termo": "Detração",
+            "significado": "Desconto do tempo de prisão provisória da pena."
+          }
+        ],
+        "remissoes": [
+          "Art. 387, §2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-673",
+      "unit_id": "f61bf46f-97a1-5f58-a5d5-4fb5f74e2b17",
+      "content_sha256": "6e2214f902a37bbf1ff3044bc92893961ea811c6d3925b57dddfe9053fb0eb48",
+      "simples": "Custódia que alcança duração da pena requer controle imediato; ressalva antiga de oito anos não autoriza excesso automático.",
+      "pontos": [
+        "Comparar título, duração e situação recursal.",
+        "Apelação pode continuar após soltura."
+      ],
+      "atencao": [
+        "Recurso acusatório não permite por si manter prisão além do limite sem fundamento atual válido."
+      ],
+      "exemplo": "Condenado já permaneceu preso por tempo igual à pena e não tem outro título válido; examina-se soltura. Variação: Outra preventiva fundamentada é analisada separadamente, não por rótulo da pena máxima.",
+      "prova": [
+        "Soltura impede julgamento da apelação? Não.",
+        "Recurso acusatório legitima automaticamente excesso? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Controle de duração",
+          "significado": "Prevenção da prisão além dos limites válidos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "f61bf46f-97a1-5f58-a5d5-4fb5f74e2b17",
+        "content_sha256": "6e2214f902a37bbf1ff3044bc92893961ea811c6d3925b57dddfe9053fb0eb48",
+        "simples": "Verificado que o réu, pendente a apelação por ele interposta, já sofreu prisão por tempo igual ao da pena a que foi condenado, o relator do feito mandará pô-lo imediatamente em liberdade, sem prejuízo do julgamento do recurso, salvo se, no caso de crime a que a lei comine pena de reclusão, no máximo, por tempo igual ou superior a oito anos, o tribunal entender conveniente a manutenção da prisão, nos termos do dispositivo.",
+        "pontos": [
+          "Apelação do réu pendente e prisão já igual à pena imposta: liberdade imediata pelo relator.",
+          "O recurso segue em julgamento.",
+          "Exceção para reclusão de máximo igual ou superior a oito anos."
+        ],
+        "atencao": [
+          "Evita cumprimento da pena além do imposto."
+        ],
+        "exemplo": "O réu já cumpriu a pena aplicada enquanto aguarda a apelação: o relator o solta.",
+        "prova": [
+          "Assertiva que mantém o réu preso após cumprir o tempo da pena aplicada, sem exceção, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 672"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-674",
+      "unit_id": "cc320163-e172-5951-8d4d-cb1584fc858c",
+      "content_sha256": "c393d3bbbda5eeafea5d54f39014734a33825179ad1c5eb195209f072fa3ed14",
+      "simples": "Guia formaliza execução da pena privativa de liberdade, integrada aos artigos105–107 da LEP.",
+      "pontos": [
+        "Título e dados necessários devem ser conferidos.",
+        "Soma ou unificação exige competência própria."
+      ],
+      "atencao": [
+        "Guia não cria condenação nem permite ignorar regime, detração e eventual unificação."
+      ],
+      "exemplo": "Condenação definitiva com custódia exige guia para execução regular. Variação: Nova condenação requer atualizar cálculo sob órgão competente.",
+      "prova": [
+        "Guia formaliza título de execução? Sim.",
+        "Pode criar pena que a sentença não impôs? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Guia de recolhimento",
+          "significado": "Documento judicial de ingresso regular na execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "cc320163-e172-5951-8d4d-cb1584fc858c",
+        "content_sha256": "c393d3bbbda5eeafea5d54f39014734a33825179ad1c5eb195209f072fa3ed14",
+        "simples": "Transitando em julgado a sentença que impuser pena privativa de liberdade, se o réu já estiver preso, ou vier a ser preso, o juiz ordenará a expedição de carta de guia para o cumprimento da pena. Na hipótese do art. 82, última parte, a expedição da carta de guia será ordenada pelo juiz competente para a soma ou unificação das penas.",
+        "pontos": [
+          "Trânsito em julgado: carta de guia para o cumprimento da pena.",
+          "Soma ou unificação das penas: carta de guia pelo juiz competente."
+        ],
+        "atencao": [
+          "Hoje se fala em guia de recolhimento (LEP)."
+        ],
+        "exemplo": "Com o trânsito em julgado, o juiz expede a carta de guia.",
+        "prova": [
+          "Assertiva que dispensa a carta de guia para o início da pena erra."
+        ],
+        "termos": [
+          {
+            "termo": "Carta de guia",
+            "significado": "Documento que autoriza o cumprimento da pena privativa de liberdade."
+          }
+        ],
+        "remissoes": [
+          "Art. 676"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-675",
+      "unit_id": "5e0113dd-89cd-5a67-9c81-161fe0cb6bb1",
+      "content_sha256": "45557a1a58f414ea5abc6ad7e4b9179e8d746360fb775757d79747d732298ab2",
+      "simples": "Providências de prisão e encaminhamento executório precisam respeitar título, regime e pressupostos atuais.",
+      "pontos": [
+        "Trânsito em julgado deve ser examinado.",
+        "Reforma de absolvição não gera prisão automática em toda hipótese.",
+        "Prisão especial tem regras próprias e limites temporais."
+      ],
+      "atencao": [
+        "Não copiar§1 como execução genérica imediata após qualquer apelação condenatória; integrar CPP283 e regime específico do júri."
+      ],
+      "exemplo": "Condenação definitiva impõe cumprimento conforme regime e ordem judicial válida. Variação: Tribunal reforma absolvição fora do júri; ausência de fundamento cautelar não é suprida pelo texto histórico.",
+      "prova": [
+        "Toda reforma de absolvição permite prisão automática? Não.",
+        "Regime fixado deve ser respeitado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Título executório",
+          "significado": "Fundamento judicial válido para cumprimento da sanção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "5e0113dd-89cd-5a67-9c81-161fe0cb6bb1",
+        "content_sha256": "45557a1a58f414ea5abc6ad7e4b9179e8d746360fb775757d79747d732298ab2",
+        "simples": "No caso de ainda não ter sido expedido mandado de prisão, por tratar-se de infração penal em que o réu se livra solto ou por estar afiançado, o juiz, ou o presidente da câmara ou tribunal, se tiver havido recurso, fará expedir o mandado de prisão, logo que transite em julgado a sentença condenatória. Reformada pela superior instância a sentença absolutória, estando o réu solto, o presidente da câmara ou do tribunal fará, logo após a sessão de julgamento, remeter ao chefe de Polícia o mandado de prisão do condenado. Se o réu estiver em prisão especial, deverá ser expedida ordem para sua imediata remoção para prisão comum, até a expedição de carta de guia, ressalvada a legislação relativa aos militares.",
+        "pontos": [
+          "Réu solto ou afiançado: mandado de prisão após o trânsito em julgado.",
+          "Reforma da absolvição: mandado remetido ao chefe de Polícia.",
+          "Prisão especial: remoção para a comum até a carta de guia."
+        ],
+        "atencao": [
+          "Dispositivo antecede as regras atuais da Lei de Execução Penal."
+        ],
+        "exemplo": "Transitada em julgado a condenação, o juiz expede o mandado de prisão do réu solto.",
+        "prova": [
+          "Assertiva que dispensa mandado de prisão para o réu solto após o trânsito em julgado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 674"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-676",
+      "unit_id": "b5800a55-c896-5a87-9f80-01726ad9cb81",
+      "content_sha256": "3561dae606536cfcce94a2458528f2ed74bec3b897cf6830248fc62bf0687f76",
+      "simples": "Guia identifica condenado, título e duração; LEP106 exige conjunto atual de informações e retificação.",
+      "pontos": [
+        "Incluir denúncia, sentença e certidão pertinente.",
+        "Não ignorar alterações de início ou tempo.",
+        "Múltiplas penas exigem soma/unificação no sistema atual."
+      ],
+      "atencao": [
+        "Não ensinar fila mecânica de guias como substituta da unificação e cálculo atual."
+      ],
+      "exemplo": "Remição reconhecida exige atualizar término calculado. Variação: Duas condenações são apreciadas no regime da LEP111, não só aguardando fim da primeira guia.",
+      "prova": [
+        "Guia deve refletir alteração de duração? Sim.",
+        "Unificação pode ser ignorada por haver duas guias? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Retificação da guia",
+          "significado": "Atualização documental da situação executória."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "b5800a55-c896-5a87-9f80-01726ad9cb81",
+        "content_sha256": "3561dae606536cfcce94a2458528f2ed74bec3b897cf6830248fc62bf0687f76",
+        "simples": "A carta de guia, extraída pelo escrivão e assinada pelo juiz, que a rubricará em todas as folhas, será remetida ao diretor do estabelecimento em que tenha de ser cumprida a sentença condenatória, e conterá o nome do réu e a alcunha por que for conhecido; a sua qualificação civil, instrução e, se constar, número do registro geral do Instituto de Identificação; e o teor integral da sentença condenatória e a data da terminação da pena. Expedida carta de guia para cumprimento de uma pena, se o réu estiver cumprindo outra, só depois de terminada a execução desta será aquela executada. Retificar-se-á a carta de guia sempre que sobrevenha modificação quanto ao início da execução ou ao tempo de duração da pena.",
+        "pontos": [
+          "Carta de guia extraída pelo escrivão, assinada e rubricada pelo juiz.",
+          "Conteúdo: nome, alcunha, qualificação, teor da sentença e data de término.",
+          "Nova guia aguarda a conclusão da pena em curso.",
+          "Retificação sempre que mudar o início ou a duração."
+        ],
+        "atencao": [
+          "Conteúdo obrigatório da carta de guia."
+        ],
+        "exemplo": "A carta de guia traz a qualificação do réu e o teor integral da sentença.",
+        "prova": [
+          "Assertiva que dispensa o teor integral da sentença na carta de guia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 674"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-677",
+      "unit_id": "d13dad4c-373e-5e5a-b105-e6b21021bde3",
+      "content_sha256": "842454ae0477ece07dadb05739d7d655d482207693599bd5abfced17376d3273",
+      "simples": "Texto prevê cópia da guia e aditamentos ao Conselho Penitenciário; integrar comunicação aos órgãos atuais da execução.",
+      "pontos": [
+        "Ciência do MP na LEP106§1.",
+        "Não trocar comunicação por decisão sobre benefício."
+      ],
+      "atencao": [
+        "Receber cópia não torna Conselho juiz da execução nem titular de toda concessão."
+      ],
+      "exemplo": "Alteração da guia é comunicada conforme fluxo legal e institucional pertinente. Variação: Parecer de órgão consultivo não dispensa decisão judicial quando exigida.",
+      "prova": [
+        "Cópia transforma Conselho em juiz? Não.",
+        "MP possui ciência prevista na LEP? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Comunicação executória",
+          "significado": "Compartilhamento institucional dos dados pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "d13dad4c-373e-5e5a-b105-e6b21021bde3",
+        "content_sha256": "842454ae0477ece07dadb05739d7d655d482207693599bd5abfced17376d3273",
+        "simples": "Da carta de guia e seus aditamentos se remeterá cópia ao Conselho Penitenciário.",
+        "pontos": [
+          "Cópia da carta de guia e aditamentos ao Conselho Penitenciário."
+        ],
+        "atencao": [
+          "Comunicação ao Conselho Penitenciário."
+        ],
+        "exemplo": "O juiz remete cópia da carta de guia ao Conselho Penitenciário.",
+        "prova": [
+          "Assertiva que dispensa o envio ao Conselho Penitenciário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 676"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-678",
+      "unit_id": "91af6721-7303-52aa-8681-98f699a052a2",
+      "content_sha256": "17b12a3e4690e48583c0d9f2b4fa86afa1aebeb849622c32f6f0ddf67cb5971f",
+      "simples": "Recebimento da guia deve ser documentado; LEP107 também prevê ciência dos termos ao condenado.",
+      "pontos": [
+        "Recibo integra autos.",
+        "Informação permite controle do cumprimento."
+      ],
+      "atencao": [
+        "Registro administrativo não dispensa guia judicial ou informação ao condenado prevista no regime atual."
+      ],
+      "exemplo": "Estabelecimento confirma recebimento e informa os termos da execução. Variação: Divergência documental é comunicada, sem inventar pena diversa.",
+      "prova": [
+        "Recebimento exige documentação? Sim.",
+        "Direção pode substituir sentença por cálculo arbitrário? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Recibo de guia",
+          "significado": "Prova da entrega do documento executório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "91af6721-7303-52aa-8681-98f699a052a2",
+        "content_sha256": "17b12a3e4690e48583c0d9f2b4fa86afa1aebeb849622c32f6f0ddf67cb5971f",
+        "simples": "O diretor do estabelecimento em que o réu tiver de cumprir a pena passará recibo da carta de guia para juntar-se aos autos do processo.",
+        "pontos": [
+          "Diretor do estabelecimento passa recibo da carta de guia.",
+          "Recibo é juntado aos autos."
+        ],
+        "atencao": [
+          "Recibo juntado aos autos."
+        ],
+        "exemplo": "O diretor assina o recibo, e o juiz o junta aos autos.",
+        "prova": [
+          "Assertiva que dispensa o recibo do diretor erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 676"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-679",
+      "unit_id": "193d6c0a-6e07-5162-b2f5-05f5495584a3",
+      "content_sha256": "adf2f7333c651613ddc38cb5f9bd11075b1a478688b1e3fe8ae0b9bbd90bea2c",
+      "simples": "Registro cronológico e anotações acompanham evolução da execução, integrado à LEP107§2.",
+      "pontos": [
+        "Atualizar remições e retificações.",
+        "Manter rastreabilidade do título."
+      ],
+      "atencao": [
+        "Registro inicial não é cálculo imutável de duração."
+      ],
+      "exemplo": "Remição deferida é incorporada ao prontuário e cálculo. Variação: Erro encontrado deve ser corrigido por procedimento adequado, não perpetuado por ordem cronológica.",
+      "prova": [
+        "Anotações acompanham alterações? Sim.",
+        "Registro inicial impede retificar cálculo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prontuário executório",
+          "significado": "Histórico atualizado do cumprimento da pena."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "193d6c0a-6e07-5162-b2f5-05f5495584a3",
+        "content_sha256": "adf2f7333c651613ddc38cb5f9bd11075b1a478688b1e3fe8ae0b9bbd90bea2c",
+        "simples": "As cartas de guia serão registradas em livro especial, segundo a ordem cronológica do recebimento, fazendo-se no curso da execução as anotações necessárias.",
+        "pontos": [
+          "Registro em livro especial, por ordem cronológica.",
+          "Anotações durante a execução."
+        ],
+        "atencao": [
+          "Registro cronológico."
+        ],
+        "exemplo": "As cartas de guia constam do livro especial, em ordem de recebimento.",
+        "prova": [
+          "Assertiva que dispensa o registro das cartas de guia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 678"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-680",
+      "unit_id": "43964b8d-94aa-5c5c-bf42-1b73519aa9fb",
+      "content_sha256": "de9553c4c3cb4bd2df8fb361f9302a6ca64d6e08aca7eab98930ce16674f93d7",
+      "simples": "Tempo de custódia após condenação definitiva conta na pena mesmo em estabelecimento diverso do destinado.",
+      "pontos": [
+        "Local inadequado não apaga período cumprido.",
+        "Distinguir contagem e legalidade das condições."
+      ],
+      "atencao": [
+        "Computar tempo não legitima permanência em regime mais gravoso por falta de vaga."
+      ],
+      "exemplo": "Condenado aguarda transferência preso; período pertinente integra cumprimento. Variação: Direito ao regime adequado continua sujeito a controle, apesar de contagem do tempo.",
+      "prova": [
+        "Espera de transferência apaga dias cumpridos? Não.",
+        "Contagem legitima automaticamente regime indevido? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Tempo efetivamente cumprido",
+          "significado": "Período de custódia que não se perde pela localização."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "43964b8d-94aa-5c5c-bf42-1b73519aa9fb",
+        "content_sha256": "de9553c4c3cb4bd2df8fb361f9302a6ca64d6e08aca7eab98930ce16674f93d7",
+        "simples": "Computar-se-á no tempo da pena o período em que o condenado, por sentença irrecorrível, permanecer preso em estabelecimento diverso do destinado ao cumprimento dela.",
+        "pontos": [
+          "O tempo preso em estabelecimento diverso do destinado à pena é computado."
+        ],
+        "atencao": [
+          "Computa-se o tempo, ainda que em local inadequado."
+        ],
+        "exemplo": "O condenado aguarda vaga em delegacia, e esse tempo conta para a pena.",
+        "prova": [
+          "Assertiva que desconsidera o tempo preso em estabelecimento diverso erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 672"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-681",
+      "unit_id": "519e57ee-a19b-5cab-b018-be02ee996a56",
+      "content_sha256": "e5d24091dd444a8ad10d20d57720011747775c6c9577ec879b69d2d5bafbbc84",
+      "simples": "Ordem de execução das penas exige integração ao CP76 e à soma ou unificação pela LEP111.",
+      "pontos": [
+        "Texto ordena reclusão, detenção e prisão simples.",
+        "Prioridade da pena mais grave não dispensa regime atual."
+      ],
+      "atencao": [
+        "Não aplicar fila de espécies para ignorar cálculo conjunto ou direitos executórios."
+      ],
+      "exemplo": "Reclusão e detenção concorrentes são examinadas sob prioridade e unificação cabíveis. Variação: Regime não é decidido apenas pelo nome da espécie sem cálculo legal.",
+      "prova": [
+        "Prioridade dispensa unificação pertinente? Não.",
+        "Pena mais grave orienta ordem de cumprimento? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Ordem de cumprimento",
+          "significado": "Prioridade integrada ao cálculo atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "519e57ee-a19b-5cab-b018-be02ee996a56",
+        "content_sha256": "e5d24091dd444a8ad10d20d57720011747775c6c9577ec879b69d2d5bafbbc84",
+        "simples": "Se impostas cumulativamente penas privativas da liberdade, será executada primeiro a de reclusão, depois a de detenção e por último a de prisão simples.",
+        "pontos": [
+          "Ordem de execução: reclusão, detenção e prisão simples."
+        ],
+        "atencao": [
+          "Primeiro a pena mais grave."
+        ],
+        "exemplo": "Reclusão e detenção cumulativas: cumpre-se primeiro a reclusão.",
+        "prova": [
+          "Assertiva que inverte a ordem de execução, começando pela prisão simples, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 676"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-682",
+      "unit_id": "109b9f11-462b-5491-a34b-b6a801cfcf5c",
+      "content_sha256": "c0e5487b11c1cf450812b2474182e829b251b9d0f0e661316cea2cf0d39ae8fc",
+      "simples": "Transtorno mental superveniente exige avaliação e providência judicial adequada, integrada à LEP e ao cuidado em saúde.",
+      "pontos": [
+        "Distinguir tratamento e substituição por medida de segurança.",
+        "Urgência administrativa é comunicada imediatamente ao juízo.",
+        "Não prolongar custódia penal indefinidamente."
+      ],
+      "atencao": [
+        "Diagnóstico não autoriza prisão perpétua ou internação punitiva automática após término da pena; integrar LEP183 e garantias do tratamento."
+      ],
+      "exemplo": "Quadro grave é avaliado por profissionais e levado ao juiz para medida legal cabível. Variação: Ao fim do título penal, necessidade de cuidado não cria novo título de prisão por vontade da direção.",
+      "prova": [
+        "Doença autoriza custódia penal indefinida? Não.",
+        "Substituição exige análise judicial própria? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Saúde mental superveniente",
+          "significado": "Condição que demanda cuidado e decisão legal individualizada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "109b9f11-462b-5491-a34b-b6a801cfcf5c",
+        "content_sha256": "c0e5487b11c1cf450812b2474182e829b251b9d0f0e661316cea2cf0d39ae8fc",
+        "simples": "O sentenciado a que sobrevier doença mental, verificada por perícia médica, será internado em manicômio judiciário, ou, à falta, em outro estabelecimento adequado, onde lhe seja assegurada a custódia. Em caso de urgência, o diretor do estabelecimento penal poderá determinar a remoção do sentenciado, comunicando imediatamente ao juiz, que, em face da perícia médica, ratificará ou revogará a medida. Se a internação se prolongar até o término do prazo restante da pena e não houver sido imposta medida de segurança detentiva, o indivíduo terá o destino aconselhado pela sua enfermidade, feita a devida comunicação ao juiz de incapazes.",
+        "pontos": [
+          "Doença mental superveniente na execução: internação em manicômio judiciário ou outro estabelecimento adequado.",
+          "Urgência: o diretor remove e comunica o juiz.",
+          "Fim do prazo restante da pena sem medida de segurança: destino aconselhado pela enfermidade."
+        ],
+        "atencao": [
+          "Hoje se aplica a Lei de Execução Penal (art. 183)."
+        ],
+        "exemplo": "O condenado desenvolve doença mental e é internado em estabelecimento adequado.",
+        "prova": [
+          "Assertiva que mantém o sentenciado em doença mental no presídio comum erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 154"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-683",
+      "unit_id": "f8932857-6c25-5d6c-8c7b-3ecfc64b9881",
+      "content_sha256": "f6c278485be5a22d9070e630f2e4642a7702ba02458f7fb119c7130e0dbbed64",
+      "simples": "Direção comunica imediatamente óbito, fuga ou soltura ao juiz; óbito acompanha certidão.",
+      "pontos": [
+        "Atualizar autos e situação executória.",
+        "Distinguir comunicação e decisão jurídica posterior."
+      ],
+      "atencao": [
+        "Fuga comunicada não autoriza sanção definitiva sem procedimento cabível."
+      ],
+      "exemplo": "Óbito é informado com certidão para providências judiciais. Variação: Notícia de fuga desencadeia controles e apuração, sem presumir todo efeito sancionatório.",
+      "prova": [
+        "Óbito deve vir acompanhado de certidão? Sim.",
+        "Comunicação dispensa apuração de sanção? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Comunicação de ocorrência",
+          "significado": "Atualização imediata sobre custódia e execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "f8932857-6c25-5d6c-8c7b-3ecfc64b9881",
+        "content_sha256": "f6c278485be5a22d9070e630f2e4642a7702ba02458f7fb119c7130e0dbbed64",
+        "simples": "O diretor da prisão a que o réu tiver sido recolhido provisoriamente ou em cumprimento de pena comunicará imediatamente ao juiz o óbito, a fuga ou a soltura do detido ou sentenciado para que fique constando dos autos. A certidão de óbito acompanhará a comunicação.",
+        "pontos": [
+          "Diretor comunica imediatamente ao juiz óbito, fuga ou soltura.",
+          "Certidão de óbito acompanha a comunicação."
+        ],
+        "atencao": [
+          "Comunicação imediata."
+        ],
+        "exemplo": "O diretor comunica a fuga do sentenciado ao juiz.",
+        "prova": [
+          "Assertiva que dispensa a comunicação da fuga ao juiz erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 684"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-684",
+      "unit_id": "963eaa04-bb5d-54be-8554-c70fe844044b",
+      "content_sha256": "cc8d1a308035702d324753ca6049417d59d42f6b89c1060765517463af39dd84",
+      "simples": "Recaptura de evadido dispensa prévia nova ordem e pode ser realizada por qualquer pessoa nos limites legais.",
+      "pontos": [
+        "Verificar identidade e situação de evasão.",
+        "Não dispensar proteção da integridade e entrega à autoridade."
+      ],
+      "atencao": [
+        "Regra não autoriza violência arbitrária nem capturar pessoa livre por mera suspeita."
+      ],
+      "exemplo": "Pessoa reconhecida como evadida é contida legalmente e entregue à autoridade. Variação: Erro de identidade exige verificação, não prisão baseada só em aparência.",
+      "prova": [
+        "Recaptura exige sempre novo mandado prévio? Não.",
+        "Autoriza violência arbitrária? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Recaptura",
+          "significado": "Retomada legal da custódia do evadido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "963eaa04-bb5d-54be-8554-c70fe844044b",
+        "content_sha256": "cc8d1a308035702d324753ca6049417d59d42f6b89c1060765517463af39dd84",
+        "simples": "A recaptura do réu evadido não depende de prévia ordem judicial e poderá ser efetuada por qualquer pessoa.",
+        "pontos": [
+          "Recaptura do evadido sem prévia ordem judicial.",
+          "Qualquer pessoa pode efetuá-la."
+        ],
+        "atencao": [
+          "Dispensa nova ordem."
+        ],
+        "exemplo": "Qualquer pessoa pode recapturar o preso que fugiu.",
+        "prova": [
+          "Assertiva que exige nova ordem judicial para a recaptura do evadido erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 683"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-685",
+      "unit_id": "86346987-6042-5244-9b68-3d4ce8684acb",
+      "content_sha256": "077cfda335c4dd34a21a1d5ce790f73a9460f7849fb78587212efb7d4b141bf1",
+      "simples": "Cumprida ou extinta a pena, deve ser efetivada liberdade, salvo outro motivo legal válido.",
+      "pontos": [
+        "Alvará judicial e conferência dos títulos.",
+        "Medida de segurança exige fundamento atual próprio."
+      ],
+      "atencao": [
+        "Parágrafo histórico não restaura aplicação cumulativa automática de pena e medida de segurança do sistema antigo."
+      ],
+      "exemplo": "Pena cumprida sem outro título leva à expedição e cumprimento do alvará. Variação: Necessidade de saúde não permite inventar medida detentiva após o fim da pena.",
+      "prova": [
+        "Pena cumprida garante liberdade se não houver outro título? Sim.",
+        "Parágrafo cria medida de segurança automática? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Extinção do cumprimento",
+          "significado": "Cessação da execução nos limites do título."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "86346987-6042-5244-9b68-3d4ce8684acb",
+        "content_sha256": "077cfda335c4dd34a21a1d5ce790f73a9460f7849fb78587212efb7d4b141bf1",
+        "simples": "Cumprida ou extinta a pena, o condenado será posto, imediatamente, em liberdade, mediante alvará do juiz, no qual se ressalvará a hipótese de dever o condenado continuar na prisão por outro motivo legal. Se tiver sido imposta medida de segurança detentiva, o condenado será removido para estabelecimento adequado.",
+        "pontos": [
+          "Pena cumprida ou extinta: liberdade imediata por alvará.",
+          "Ressalva de outra causa legal de prisão.",
+          "Medida de segurança detentiva: remoção para estabelecimento adequado."
+        ],
+        "atencao": [
+          "Liberdade imediata."
+        ],
+        "exemplo": "Cumprida a pena, o juiz expede o alvará de soltura.",
+        "prova": [
+          "Assertiva que mantém o condenado preso após o cumprimento da pena, sem outro motivo, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 762"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-686",
+      "unit_id": "8a12f251-c708-55f9-897d-d1727d7c8277",
+      "content_sha256": "f0e9469768cb16b74ac3810a20ec7d2beec85b4a451671798c1b3c5d52926d2a",
+      "simples": "Pagamento da multa integra CP50 e execução atual perante juízo executório pelo CP51 e LEP164.",
+      "pontos": [
+        "Distinguir pagamento e citação executiva.",
+        "Referências recursais antigas não criam cobrança antes do título exigido."
+      ],
+      "atencao": [
+        "Não transformar falta de pagamento em prisão; execução da multa tem regime próprio."
+      ],
+      "exemplo": "Após título definitivo, cobrança segue procedimento legal de multa. Variação: Inadimplemento não autoriza converter valor em dias de cadeia.",
+      "prova": [
+        "Multa tem regime próprio de execução? Sim.",
+        "Não pagar permite prisão por conversão? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Execução da multa",
+          "significado": "Cobrança da sanção pecuniária no regime atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "8a12f251-c708-55f9-897d-d1727d7c8277",
+        "content_sha256": "f0e9469768cb16b74ac3810a20ec7d2beec85b4a451671798c1b3c5d52926d2a",
+        "simples": "A pena de multa será paga dentro de 10 dias após haver transitado em julgado a sentença que a impuser. Se interposto recurso da sentença, esse prazo será contado do dia em que o juiz ordenar o cumprimento da decisão da superior instância.",
+        "pontos": [
+          "Multa paga em 10 dias do trânsito em julgado.",
+          "Com recurso: prazo conta da ordem de cumprimento da decisão superior."
+        ],
+        "atencao": [
+          "Hoje a multa é dívida de valor, cobrada conforme a Lei de Execução Penal."
+        ],
+        "exemplo": "Transitada em julgado a sentença, o condenado paga a multa em 10 dias.",
+        "prova": [
+          "Assertiva que fixa em 30 dias o prazo para pagar a multa erra: são 10 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 687"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-687",
+      "unit_id": "a67e2da2-4f51-5294-9650-a00225c140eb",
+      "content_sha256": "c5bc26cb6ebaa46c95561b8ce3c99f5b5594d596ac418b69f1aa9e0c30ca4a8a",
+      "simples": "Parcelamento da multa exige pedido, situação econômica e decisão, conforme CP50 e LEP169.",
+      "pontos": [
+        "Distinguir autorização e direito automático.",
+        "Regras antigas de prorrogação/caução devem ser integradas.",
+        "Fraude e inadimplemento têm consequências legais próprias."
+      ],
+      "atencao": [
+        "Não apresentar três meses e caução antiga como regime atual único; não recuperar conversão em prisão."
+      ],
+      "exemplo": "Condenado demonstra renda e pede prestações compatíveis; juiz examina. Variação: Melhora econômica ou impontualidade pode afetar benefício segundo LEP, sem prisão por multa.",
+      "prova": [
+        "Pedido garante automaticamente qualquer parcelamento? Não.",
+        "Parcelamento exige decisão e exame econômico? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Parcelamento da multa",
+          "significado": "Pagamento fracionado legalmente autorizado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "a67e2da2-4f51-5294-9650-a00225c140eb",
+        "content_sha256": "c5bc26cb6ebaa46c95561b8ce3c99f5b5594d596ac418b69f1aa9e0c30ca4a8a",
+        "simples": "O juiz poderá, desde que o condenado o requeira, prorrogar o prazo do pagamento da multa até três meses, se as circunstâncias justificarem essa prorrogação; e permitir, nas mesmas circunstâncias, que o pagamento se faça em parcelas mensais, no prazo que fixar, mediante caução real ou fidejussória, quando necessário. O requerimento, em ambos os casos, será feito dentro do decêndio concedido para o pagamento da multa. A permissão para o pagamento em parcelas será revogada se o juiz verificar que o condenado dela se vale para fraudar a execução da pena, hipótese em que a caução se resolve em valor monetário.",
+        "pontos": [
+          "Prorrogação do prazo em até três meses, a requerimento.",
+          "Pagamento em parcelas mensais, com caução, se necessário.",
+          "Requerimento em dez dias.",
+          "Revogação se houver fraude à execução."
+        ],
+        "atencao": [
+          "Prazo de requerimento: o decêndio (dez dias)."
+        ],
+        "exemplo": "O condenado pede o parcelamento da multa dentro dos dez dias concedidos.",
+        "prova": [
+          "Assertiva que permite prorrogar o pagamento da multa por prazo indeterminado erra: é até três meses."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 686"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-688",
+      "unit_id": "5c228a2f-d271-5d0f-a104-94e6d7a220c4",
+      "content_sha256": "ec19dce618cf05ff6bec188afebaaebcc59fe71898fc0537b574c82efefebb55",
+      "simples": "Cobrança judicial e descontos devem seguir CP50–51 e LEP164–170, com proteção do sustento.",
+      "pontos": [
+        "Penhora e desconto possuem pressupostos próprios.",
+        "Não adotar sempre um quarto como desconto obrigatório.",
+        "Selo penitenciário e remissões antigas não definem meio atual universal."
+      ],
+      "atencao": [
+        "Insolvência não autoriza desconto que retire recursos indispensáveis nem converta multa em prisão."
+      ],
+      "exemplo": "Juízo examina renda antes de ordenar desconto legal. Variação: Salário necessário à subsistência familiar exige proteção, não retirada automática de25%.",
+      "prova": [
+        "Desconto pode retirar sustento indispensável? Não.",
+        "Um quarto é desconto automático universal? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Cobrança proporcional",
+          "significado": "Execução pecuniária submetida aos limites legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "5c228a2f-d271-5d0f-a104-94e6d7a220c4",
+        "content_sha256": "ec19dce618cf05ff6bec188afebaaebcc59fe71898fc0537b574c82efefebb55",
+        "simples": "Findo o decêndio ou a prorrogação sem que o condenado efetue o pagamento, ou ocorrendo a hipótese do §2º do artigo anterior, observar-se-á o seguinte: possuindo o condenado bens sobre os quais possa recair a execução, será extraída certidão da sentença condenatória, a fim de que o Ministério Público proceda à cobrança judicial; sendo o condenado insolvente, far-se-á a cobrança mediante desconto de quarta parte de sua remuneração quando cumprir pena privativa de liberdade cumulativamente imposta com a de multa, mediante desconto em seu vencimento ou salário se, cumprida a pena privativa de liberdade ou concedido o livramento condicional, a multa não houver sido resgatada, ou mediante esse desconto se a multa for a única pena imposta ou no caso de suspensão condicional da pena. O desconto será feito mediante ordem ao empregador, à repartição competente ou à administração da entidade paraestatal, e o empregador será intimado sob pena de desobediência.",
+        "pontos": [
+          "Não pago: com bens, certidão para cobrança judicial pelo MP.",
+          "Insolvente: desconto de quarta parte da remuneração (preso), desconto em vencimento ou salário (após a pena ou no livramento), ou na multa como pena única.",
+          "Desconto por ordem ao empregador, sob pena de desobediência."
+        ],
+        "atencao": [
+          "Regras anteriores à reforma (a multa é dívida de valor)."
+        ],
+        "exemplo": "Multa não paga por condenado com bens: o MP promove a cobrança judicial.",
+        "prova": [
+          "Assertiva que prevê a prisão como primeira consequência do não pagamento da multa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 687"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-689",
+      "unit_id": "c2c56884-b313-5e5b-9096-8f28cb902e60",
+      "content_sha256": "2c64cee4e1fddff4eeeb4dbe3462f811d45d0ab7e1ac6a87e80aa90acf9f05dd",
+      "simples": "Conversão histórica de multa em detenção ou prisão simples não integra regime atual do CP51.",
+      "pontos": [
+        "Lei9.268/1996 afastou conversão.",
+        "Moeda de mil-réis é histórica.",
+        "Cobrança segue via executória própria."
+      ],
+      "atencao": [
+        "Não ensinar taxa antiga, mandado de prisão ou conversão de parcelas como solução atual para multa inadimplida."
+      ],
+      "exemplo": "Multa não paga é objeto de cobrança legal, não de cálculo de dias de prisão. Variação: Mesmo devedor solvente que frustra pagamento não reativa a conversão antiga.",
+      "prova": [
+        "Multa pode virar prisão pelo art.689 antigo? Não.",
+        "Solvência reativa conversão revogada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Conversão histórica",
+          "significado": "Mecanismo antigo afastado pelo regime posterior."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "c2c56884-b313-5e5b-9096-8f28cb902e60",
+        "content_sha256": "2c64cee4e1fddff4eeeb4dbe3462f811d45d0ab7e1ac6a87e80aa90acf9f05dd",
+        "simples": "A multa será convertida, à razão de dez mil-réis por dia, em detenção ou prisão simples, no caso de crime ou de contravenção, se o condenado solvente frustrar o pagamento da multa ou se não forem pagas pelo condenado solvente as parcelas mensais autorizadas sem garantia. Se o juiz reconhecer desde logo a existência de causa para a conversão, a ela procederá de ofício ou a requerimento do Ministério Público, independentemente de audiência do condenado; caso contrário, depois de ouvir o condenado, poderá admitir a apresentação de prova pelas partes. O juiz, desde que transite em julgado a decisão, ordenará a expedição de mandado de prisão ou aditamento à carta de guia. Na hipótese do inciso II, a conversão será feita pelo valor das parcelas não pagas.",
+        "pontos": [
+          "Conversão da multa em detenção ou prisão simples, se o solvente frustrar o pagamento.",
+          "Também se o solvente não pagar as parcelas autorizadas sem garantia.",
+          "Conversão de ofício ou a requerimento do MP.",
+          "Mandado de prisão ou aditamento à carta de guia."
+        ],
+        "atencao": [
+          "Conversão da multa em prisão foi eliminada pelo Código Penal reformado (a multa é dívida de valor).",
+          "Valor em moeda antiga."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que admite a conversão da multa em prisão hoje erra, à luz do Código Penal reformado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 690"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-690",
+      "unit_id": "24328668-2e39-582c-bf3d-99656a16c2f8",
+      "content_sha256": "0eb14ea4fbb80fb0449eb494b8dff04eee330f810814708cfa8f1cb14ccd3c59",
+      "simples": "Cessação da antiga conversão por pagamento ou caução é parte de modelo histórico que não deve ser aplicado como atual.",
+      "pontos": [
+        "Hoje não há conversão de multa em prisão.",
+        "Pagamento tem efeitos executórios próprios."
+      ],
+      "atencao": [
+        "Não propor prender primeiro e soltar depois de pagar multa com fundamento nesta regra antiga."
+      ],
+      "exemplo": "Quitação é registrada na cobrança da multa e seus efeitos cabíveis. Variação: Prisão por outro título válido não desaparece só porque multa foi paga.",
+      "prova": [
+        "É correto prender por multa e liberar mediante caução antiga? Não.",
+        "Outro título prisional deve ser examinado separadamente? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Regime histórico da multa",
+          "significado": "Regra sem aplicação automática após reformas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "24328668-2e39-582c-bf3d-99656a16c2f8",
+        "content_sha256": "0eb14ea4fbb80fb0449eb494b8dff04eee330f810814708cfa8f1cb14ccd3c59",
+        "simples": "O juiz tornará sem efeito a conversão, expedindo alvará de soltura ou cassando a ordem de prisão, se o condenado, em qualquer tempo, pagar a multa ou prestar caução real ou fidejussória que lhe assegure o pagamento. No caso da caução, antes de homologada, será ouvido o Ministério Público dentro do prazo de dois dias.",
+        "pontos": [
+          "Conversão sem efeito se o condenado pagar a multa ou prestar caução.",
+          "Em qualquer tempo.",
+          "Caução: oitiva do MP em dois dias antes da homologação."
+        ],
+        "atencao": [
+          "Prazo de dois dias para o MP."
+        ],
+        "exemplo": "Pagando a multa, o condenado tem a conversão cassada.",
+        "prova": [
+          "Assertiva que impede a revogação da conversão após certo prazo erra: é em qualquer tempo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 689"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-691",
+      "unit_id": "aeaf5410-e6b0-5c4a-81d2-2dd81d84b2f1",
+      "content_sha256": "20bac99970ff903fb8d1e47ed597deb22e799fb8ac1a34ef53cf32fa1528e721",
+      "simples": "Efeito condenatório relativo a função ou atividade exige título legal atual e comunicação ao órgão competente.",
+      "pontos": [
+        "Integrar CP92 e legislação pertinente.",
+        "Não confundir pena restritiva e efeito da condenação.",
+        "Conferir se efeito é automático ou exige declaração na hipótese."
+      ],
+      "atencao": [
+        "Não presumir perda universal de função em toda condenação; reformas podem prever hipóteses específicas."
+      ],
+      "exemplo": "Sentença declara perda funcional legalmente cabível e comunica administração. Variação: Condenação sem pressupostos do efeito não permite inventar perda de cargo.",
+      "prova": [
+        "Toda condenação implica perda automática de cargo? Não.",
+        "Comunicação depende do efeito cabível no título? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Efeito funcional",
+          "significado": "Consequência da condenação sujeita à base legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "aeaf5410-e6b0-5c4a-81d2-2dd81d84b2f1",
+        "content_sha256": "20bac99970ff903fb8d1e47ed597deb22e799fb8ac1a34ef53cf32fa1528e721",
+        "simples": "O juiz dará à autoridade administrativa competente conhecimento da sentença transitada em julgado que impuser ou de que resultar a perda da função pública ou a incapacidade temporária para investidura em função pública ou para exercício de profissão ou atividade.",
+        "pontos": [
+          "Comunicação à autoridade administrativa da sentença que impuser perda de função pública ou incapacidade temporária."
+        ],
+        "atencao": [
+          "Efeito da condenação."
+        ],
+        "exemplo": "O juiz comunica ao órgão público a perda do cargo decorrente da condenação.",
+        "prova": [
+          "Assertiva que dispensa a comunicação à autoridade administrativa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 92 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-692",
+      "unit_id": "f68081ed-1bb6-5f7c-ad39-277ffc5f1707",
+      "content_sha256": "5cecab63915776e466f09e4e61f514a0ed46adc9cdf6d42798de8c2d8a3798c6",
+      "simples": "Proteção da pessoa e dos bens diante de incapacidade ligada a poder familiar, tutela ou curatela exige regime atual e juízo competente.",
+      "pontos": [
+        "Integrar CP92 e normas civis protetivas.",
+        "Pátrio poder é terminologia histórica.",
+        "Não presumir incapacidade em qualquer condenação."
+      ],
+      "atencao": [
+        "Condição do condenado não autoriza abandono de pessoa protegida nem efeito sem fundamento legal."
+      ],
+      "exemplo": "Efeito legalmente reconhecido é comunicado para providências de proteção. Variação: Condenação diversa sem pressupostos não retira automaticamente poder familiar.",
+      "prova": [
+        "Providências visam proteger pessoa e bens? Sim.",
+        "Qualquer condenação retira poder familiar? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção familiar",
+          "significado": "Salvaguarda civil diante do efeito penal cabível."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "f68081ed-1bb6-5f7c-ad39-277ffc5f1707",
+        "content_sha256": "5cecab63915776e466f09e4e61f514a0ed46adc9cdf6d42798de8c2d8a3798c6",
+        "simples": "No caso de incapacidade temporária ou permanente para o exercício do pátrio poder, da tutela ou da curatela, o juiz providenciará para que sejam acautelados, no juízo competente, a pessoa e os bens do menor ou do interdito.",
+        "pontos": [
+          "Incapacidade para o poder familiar, tutela ou curatela: o juiz providencia a proteção da pessoa e dos bens do menor ou interdito."
+        ],
+        "atencao": [
+          "Proteção do incapaz."
+        ],
+        "exemplo": "O condenado perde o poder familiar, e o juiz providencia a proteção do filho.",
+        "prova": [
+          "Assertiva que dispensa providências quanto aos bens do menor ou interdito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 693"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-693",
+      "unit_id": "fc8f9d69-7383-5480-a467-0b9f17f4a604",
+      "content_sha256": "93e94ff344875ce49bf9085fe396b239f0f29181a503c6d6d6fbb192f6af9dc2",
+      "simples": "Registro de efeitos familiares precisa observar regime atual; autoridade marital é concepção histórica incompatível com igualdade.",
+      "pontos": [
+        "Integrar poder familiar e efeito legal cabível.",
+        "Não reproduzir superioridade do marido sobre cônjuge."
+      ],
+      "atencao": [
+        "Averbação não pode criar incapacidade por autoridade marital antiga ou automática em toda condenação."
+      ],
+      "exemplo": "Efeito válido relacionado ao poder familiar recebe registro cabível. Variação: Não se registra perda de domínio marital sobre a esposa, conceito incompatível com Constituição.",
+      "prova": [
+        "Autoridade marital antiga deve ser ensinada como poder atual? Não.",
+        "Registro depende de efeito juridicamente válido? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Igualdade familiar",
+          "significado": "Paridade constitucional e proteção no regime atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "fc8f9d69-7383-5480-a467-0b9f17f4a604",
+        "content_sha256": "93e94ff344875ce49bf9085fe396b239f0f29181a503c6d6d6fbb192f6af9dc2",
+        "simples": "A incapacidade permanente ou temporária para o exercício da autoridade marital ou do pátrio poder será averbada no registro civil.",
+        "pontos": [
+          "Incapacidade para a autoridade marital ou o pátrio poder é averbada no registro civil."
+        ],
+        "atencao": [
+          "Averbação no registro civil."
+        ],
+        "exemplo": "A perda do poder familiar é averbada no registro civil.",
+        "prova": [
+          "Assertiva que dispensa a averbação no registro civil erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 692"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-694",
+      "unit_id": "643d4f19-5323-56ea-af31-dd7c8dcf4bea",
+      "content_sha256": "766b43f38dc6ed215cbabd4b70f654ac3aeba55d06275551635538201ea2f868",
+      "simples": "Comunicações de interdição devem ser integradas às penas restritivas e efeitos atuais, não ao sistema antigo de penas acessórias.",
+      "pontos": [
+        "Distinguir CP47 e CP92.",
+        "Rol de culpados não é consequência atual automática.",
+        "Registro respeita normas e finalidade pertinentes."
+      ],
+      "atencao": [
+        "Não recuperar pena acessória antiga nem indiscriminada divulgação pública de antecedentes."
+      ],
+      "exemplo": "Interdição temporária cabível é comunicada para cumprimento do direito restringido. Variação: Efeito da condenação não vira pena acessória por mudar o nome do registro.",
+      "prova": [
+        "Sistema antigo de penas acessórias permanece íntegro? Não.",
+        "Interdição e efeito condenatório são sempre iguais? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Registro de interdição",
+          "significado": "Comunicação da restrição legalmente imposta."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "643d4f19-5323-56ea-af31-dd7c8dcf4bea",
+        "content_sha256": "766b43f38dc6ed215cbabd4b70f654ac3aeba55d06275551635538201ea2f868",
+        "simples": "As penas acessórias consistentes em interdições de direitos serão comunicadas ao Instituto de Identificação e Estatística ou estabelecimento congênere, figurarão na folha de antecedentes do condenado e serão mencionadas no rol de culpados.",
+        "pontos": [
+          "Interdições de direitos são comunicadas ao Instituto de Identificação.",
+          "Constam da folha de antecedentes e do rol de culpados."
+        ],
+        "atencao": [
+          "Efeitos registrais."
+        ],
+        "exemplo": "A interdição é anotada na folha de antecedentes do condenado.",
+        "prova": [
+          "Assertiva que dispensa a menção das interdições na folha de antecedentes erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 695"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-695",
+      "unit_id": "fdf70ad5-0300-5358-adca-ad0fe4ae1d1f",
+      "content_sha256": "07b73fe4630f22f064d68eebd1e4bcf0bbb0f99f2c06b31252f51d1daf90bc0a",
+      "simples": "Duração de interdição exige título e legislação atuais; remissão ao antigo CP72 não define automaticamente prazo vigente.",
+      "pontos": [
+        "Distinguir pena restritiva e efeito permanente.",
+        "Aplicar CP47 e55 e LEP pertinentes."
+      ],
+      "atencao": [
+        "Não fixar termo final por referência a artigo antigo sem identificar sanção atual."
+      ],
+      "exemplo": "Interdição temporária é executada pelo período legal fixado no título. Variação: Perda funcional como efeito distinto não recebe duração de pena restritiva por analogia automática.",
+      "prova": [
+        "CP72 antigo basta para definir prazo atual? Não.",
+        "Espécie da consequência precisa ser identificada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Duração da interdição",
+          "significado": "Limite temporal conforme título e sanção atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "fdf70ad5-0300-5358-adca-ad0fe4ae1d1f",
+        "content_sha256": "07b73fe4630f22f064d68eebd1e4bcf0bbb0f99f2c06b31252f51d1daf90bc0a",
+        "simples": "Iniciada a execução das interdições temporárias, o juiz, de ofício, a requerimento do Ministério Público ou do condenado, fixará o seu termo final, completando as providências determinadas nos artigos anteriores.",
+        "pontos": [
+          "Iniciada a interdição temporária, o juiz fixa o termo final.",
+          "De ofício ou a requerimento do MP ou do condenado."
+        ],
+        "atencao": [
+          "Fixação do termo final da interdição."
+        ],
+        "exemplo": "O juiz fixa a data final da interdição temporária de direitos.",
+        "prova": [
+          "Assertiva que deixa a interdição temporária sem termo final erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 694"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:19:08.454532+00:00",
+        "updated_at": "2026-10-11T13:19:08.454532+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-696",
+      "unit_id": "b69981ba-a4de-5d36-a410-f5c66be3a8d3",
+      "content_sha256": "3fcae55fae31c1686f5640c7d0105d213f2349cc90f733762ee25e0ee6f10754",
+      "simples": "Sursis da pena exige requisitos atuais do CP77–82; prazo antigo geral de dois a seis anos não é regra comum atual.",
+      "pontos": [
+        "Regra comum: suspensão de dois a quatro anos, pena até dois anos, requisitos legais.",
+        "Hipótese etária ou de saúde tem limites próprios.",
+        "Distinguir suspensão da pena e suspensão do processo."
+      ],
+      "atencao": [
+        "Não substituir CP77 pelos requisitos antigos nem negar benefício só por condenação anterior a multa."
+      ],
+      "exemplo": "Pena de um ano exige avaliar reincidência dolosa, circunstâncias e substituição antes do sursis. Variação: Pessoa maior de setenta anos pode exigir análise da hipótese específica, sem aplicação a todos.",
+      "prova": [
+        "Prazo comum atual é dois a quatro anos? Sim.",
+        "Sursis da pena é suspensão do processo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Sursis penal",
+          "significado": "Suspensão condicionada da execução da pena."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "b69981ba-a4de-5d36-a410-f5c66be3a8d3",
+        "content_sha256": "3fcae55fae31c1686f5640c7d0105d213f2349cc90f733762ee25e0ee6f10754",
+        "simples": "O juiz poderá suspender, por tempo não inferior a 2 nem superior a 6 anos, a execução das penas de reclusão e de detenção que não excedam 2 anos, ou, por tempo não inferior a 1 nem superior a 3 anos, a execução da pena de prisão simples, desde que o sentenciado não haja sofrido condenação irrecorrível por outro crime a pena privativa de liberdade (salvo o parágrafo único do art. 46 do Código Penal) e que seus antecedentes, personalidade, motivos e circunstâncias autorizem a presunção de que não tornará a delinquir. Processado o beneficiário por outro crime ou contravenção, o prazo da suspensão considera-se prorrogado até o julgamento definitivo.",
+        "pontos": [
+          "Sursis: reclusão ou detenção até 2 anos, suspensa por 2 a 6 anos.",
+          "Prisão simples: suspensão por 1 a 3 anos.",
+          "Requisitos: sem condenação irrecorrível anterior a pena de prisão; presunção de que não voltará a delinquir.",
+          "Processado por novo crime: prazo prorrogado até o julgamento."
+        ],
+        "atencao": [
+          "Hoje a suspensão condicional da pena está nos arts. 77 e seguintes do Código Penal e na Lei de Execução Penal; prevalecem estas regras."
+        ],
+        "exemplo": "Condenado a 1 ano de detenção, sem antecedentes, pode ter a pena suspensa por 2 a 6 anos.",
+        "prova": [
+          "Assertiva que aplica a suspensão a pena de reclusão de 3 anos erra: o limite no texto é de 2 anos."
+        ],
+        "termos": [
+          {
+            "termo": "Sursis",
+            "significado": "Suspensão condicional da execução da pena."
+          }
+        ],
+        "remissoes": [
+          "Art. 697",
+          "Art. 698"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-697",
+      "unit_id": "16abbc5c-ddec-57f8-a626-da9efd2f3036",
+      "content_sha256": "001c877b7262a5e58467825579cf57c1768316cef2f87724f4efe472ca77570b",
+      "simples": "Decisão deve motivar concessão ou denegação da suspensão da pena nas hipóteses legais atuais.",
+      "pontos": [
+        "Examinar CP77 e espécie de sursis.",
+        "Não automatizar por quantidade de pena.",
+        "Hipóteses especiais não se limitam à pena comum de dois anos."
+      ],
+      "atencao": [
+        "Não dizer que pena curta garante benefício nem omitir motivação ao negar."
+      ],
+      "exemplo": "Sentença identifica substituição cabível e explica por que sursis não se aplica. Variação: Hipótese etária ou de saúde exige exame próprio dos limites legais.",
+      "prova": [
+        "Concessão ou negativa exige motivação? Sim.",
+        "Pena até dois anos garante sempre sursis? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Decisão sobre sursis",
+          "significado": "Exame fundamentado dos requisitos atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "16abbc5c-ddec-57f8-a626-da9efd2f3036",
+        "content_sha256": "001c877b7262a5e58467825579cf57c1768316cef2f87724f4efe472ca77570b",
+        "simples": "O juiz ou tribunal, na decisão que aplicar pena privativa da liberdade não superior a 2 anos, deverá pronunciar-se, motivadamente, sobre a suspensão condicional, quer a conceda quer a denegue.",
+        "pontos": [
+          "Pena até 2 anos: o juiz deve se manifestar sobre a suspensão condicional.",
+          "Concedendo ou negando, com motivação."
+        ],
+        "atencao": [
+          "Dever de pronunciamento, e não de concessão automática."
+        ],
+        "exemplo": "Na sentença que fixa 1 ano de detenção, o juiz decide expressamente sobre o sursis.",
+        "prova": [
+          "Assertiva que dispensa o juiz de se manifestar sobre o sursis quando o negar erra: deve fundamentar."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 696"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-698",
+      "unit_id": "a3122704-3a36-551b-83a2-bf179a1850ce",
+      "content_sha256": "0b12cb8a42a9403c089324b24c5ce78342b93228ded6eff767a1f0db30654cb0",
+      "simples": "Condições, audiência e fiscalização do sursis devem ser integradas ao CP78–79 e LEP156–163.",
+      "pontos": [
+        "Condições adequadas ao fato e situação pessoal.",
+        "Comunicar mudança autorizada e descumprimento.",
+        "Fiscalização não autoriza condições arbitrárias."
+      ],
+      "atencao": [
+        "Remissão ao767 e modelo antigo não criam qualquer obrigação automática; distinguir hipótese comum e especial."
+      ],
+      "exemplo": "Beneficiário recebe ciência das condições na audiência pertinente e cumpre acompanhamento. Variação: Mudança de residência exige comunicação adequada, não perda automática por deslocamento permitido.",
+      "prova": [
+        "Condições podem ser arbitrárias? Não.",
+        "Ciência e fiscalização são relevantes ao benefício? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Condições do sursis",
+          "significado": "Obrigações legais individualizadas para suspensão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "a3122704-3a36-551b-83a2-bf179a1850ce",
+        "content_sha256": "0b12cb8a42a9403c089324b24c5ce78342b93228ded6eff767a1f0db30654cb0",
+        "simples": "Concedida a suspensão, o juiz especificará as condições a que fica sujeito o condenado, pelo prazo previsto, começando este a correr da audiência em que se der conhecimento da sentença ao beneficiário e lhe for entregue documento similar ao do art. 724. As condições serão adequadas ao delito e à personalidade do condenado. Poderão ser impostas, além das do art. 767, frequentar curso de habilitação profissional ou de instrução escolar; prestar serviços em favor da comunidade; atender aos encargos de família; e submeter-se a tratamento de desintoxicação. O juiz poderá fixar, a qualquer tempo, de ofício ou a requerimento do Ministério Público, outras condições, desde que as circunstâncias o aconselhem.",
+        "pontos": [
+          "Juiz especifica as condições; o prazo corre da audiência.",
+          "Condições adequadas ao delito e à personalidade.",
+          "Exemplos: curso, serviços à comunidade, encargos de família, desintoxicação.",
+          "Condições adicionais a qualquer tempo, de ofício ou a pedido do MP."
+        ],
+        "atencao": [
+          "O prazo conta da audiência de advertência."
+        ],
+        "exemplo": "O juiz impõe curso profissionalizante e comparecimento periódico como condições do sursis.",
+        "prova": [
+          "Assertiva que fixa condições imutáveis na sentença erra: podem ser acrescidas a qualquer tempo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 703",
+          "Art. 724"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-699",
+      "unit_id": "59ab0897-3fb9-5f54-b4e5-45c629f6ff25",
+      "content_sha256": "5a4fba7da5b790654b557995f8b248d03dcb0bb4cf81b3e22d4e44d8bdd4f34c",
+      "simples": "No júri, presidente examina sursis na sentença quando cabível, integrado ao regime atual.",
+      "pontos": [
+        "Requisitos materiais continuam necessários.",
+        "Competência executória posterior segue organização judicial e LEP."
+      ],
+      "atencao": [
+        "Presidência do júri não transforma todo condenado em beneficiário nem exclui juiz da execução."
+      ],
+      "exemplo": "Pena e circunstâncias permitem análise motivada do benefício na sentença do júri. Variação: Pena incompatível com hipótese legal não recebe sursis por ter sido julgada por jurados.",
+      "prova": [
+        "Júri dispensa requisitos do sursis? Não.",
+        "Presidente aprecia matéria na sentença pertinente? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Sursis no júri",
+          "significado": "Exame do benefício na decisão judicial do procedimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "59ab0897-3fb9-5f54-b4e5-45c629f6ff25",
+        "content_sha256": "5a4fba7da5b790654b557995f8b248d03dcb0bb4cf81b3e22d4e44d8bdd4f34c",
+        "simples": "No caso de condenação pelo Tribunal do Júri, a suspensão condicional da pena competirá ao seu presidente.",
+        "pontos": [
+          "Condenação pelo Júri: o presidente decide a suspensão condicional."
+        ],
+        "atencao": [
+          "O presidente do Júri é o juiz togado."
+        ],
+        "exemplo": "O juiz presidente decide sobre o sursis da condenação do Júri.",
+        "prova": [
+          "Assertiva que atribui o sursis do Júri aos jurados erra: compete ao presidente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 492"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-700",
+      "unit_id": "2fd8da1e-ed25-50a3-bd45-af541d44f638",
+      "content_sha256": "cc3844f397b068e38b30dd1624a3525836af89bcdc0e36679b712a4394438865",
+      "simples": "Suspensão da pena não elimina automaticamente multa ou outras consequências; integrar CP80 e sistema atual.",
+      "pontos": [
+        "CP80 exclui multa e penas restritivas de direitos da suspensão.",
+        "Penas acessórias são referência histórica.",
+        "Efeitos e custas têm regime próprio."
+      ],
+      "atencao": [
+        "Não ensinar sursis como cancelamento integral da condenação nem restaurar sistema acessório antigo."
+      ],
+      "exemplo": "Execução corporal é suspensa com condições, mas multa não desaparece por isso. Variação: Obrigação pecuniária ou efeito funcional exige fundamento próprio e exame pertinente.",
+      "prova": [
+        "Sursis apaga automaticamente multa? Não.",
+        "Pena acessória antiga pode ser restaurada pelo texto? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Limites do sursis",
+          "significado": "Consequências que não são apagadas pela suspensão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "2fd8da1e-ed25-50a3-bd45-af541d44f638",
+        "content_sha256": "cc3844f397b068e38b30dd1624a3525836af89bcdc0e36679b712a4394438865",
+        "simples": "A suspensão não compreende a multa, as penas acessórias, os efeitos da condenação nem as custas.",
+        "pontos": [
+          "A suspensão não alcança multa, penas acessórias, efeitos da condenação e custas."
+        ],
+        "atencao": [
+          "Só a pena privativa de liberdade é suspensa."
+        ],
+        "exemplo": "O condenado com sursis ainda deve pagar a multa e as custas.",
+        "prova": [
+          "Assertiva que estende a suspensão condicional à multa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 701"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    }
+  ]
+}
