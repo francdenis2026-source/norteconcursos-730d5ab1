@@ -27,3 +27,11 @@ test('refuses a syllabus whose source is a caderno instead of an edital',async()
  const p=make();const req=async path=>path.startsWith('official_exam_questions')?[p.items[0].expected]:path.startsWith('syllabus_topics')?[{edition_id:'e1',content_status:'current'}]:path.startsWith('syllabus_editions')?[{source_id:'s1',status:'active'}]:[{is_official:true,source_type:'outro',status:'vigente'}];
  await assert.rejects(()=>publishReview(p,req),/official active syllabus/);
 });
+test('duplicate archiving requires matching source, item, answer and syllabus',async()=>{
+ const p=make();p.items[0].expected.career_name='Polícia Civil do Acre';
+ p.items[0].patch.content_status='archived';p.items[0].evidence.duplicate_of='canonical';p.items[0].evidence.career_alias_verified=true;
+ let writes=0;
+ const canonical={...p.items[0].expected,id:'canonical',career_name:'Agente de Polícia Civil',official_answer:'C'};
+ const req=async(path,method)=>{if(method==='PATCH'){writes++;return [];}return path.includes('canonical')?[canonical]:[p.items[0].expected];};
+ await assert.rejects(()=>publishReview(p,req),/Duplicate identity mismatch/);assert.equal(writes,0);
+});

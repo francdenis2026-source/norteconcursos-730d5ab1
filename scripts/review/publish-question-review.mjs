@@ -37,6 +37,14 @@ export async function publishReview(pack, request) {
     const [actual]=await request(`${table}?id=eq.${expected.id}&select=*`);
     if (isDeepStrictEqual(actual,{...expected,...patch})) continue;
     if (!isDeepStrictEqual(actual,expected)) throw Error(`Concurrent revision: ${table}/${expected.id}`);
+    if (item.evidence.duplicate_of) {
+      if (patch.content_status!=='archived' || pack.items.some(i=>i.table===table && i.expected.id===item.evidence.duplicate_of)) throw Error('Canonical duplicate cannot also be archived');
+      const [canonical]=await request(`${table}?id=eq.${item.evidence.duplicate_of}&select=*`);
+      const identity=['question_source_id','answer_key_source_id','item_number','question_text','official_answer','syllabus_topic_id','exam_year','contest_name'];
+      const aliases={'Polícia Civil do Acre':'Agente de Polícia Civil','Polícia Penal do Acre':'Agente de Polícia Penal'};
+      const careerMatches=canonical && (canonical.career_name===expected.career_name || (item.evidence.career_alias_verified && aliases[expected.career_name]===canonical.career_name));
+      if (!canonical || !careerMatches || !['active','under_review'].includes(canonical.content_status) || identity.some(k=>!isDeepStrictEqual(canonical[k],expected[k]))) throw Error('Duplicate identity mismatch');
+    }
     if (patch.content_status==='active') {
       const topicId=patch.current_syllabus_topic_id || patch.syllabus_topic_id || expected.syllabus_topic_id;
       const [topic]=await request(`syllabus_topics?id=eq.${topicId}&select=*`);
