@@ -1,0 +1,1795 @@
+{
+  "version": "2026-10-11-codigo-penal-targeted",
+  "checked_at": "2026-10-13T03:08:37.592773+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-penal",
+      "title": "Código Penal — leitura atualizada",
+      "units": 31,
+      "scope_type": "targeted_correction",
+      "course_current_units": 401,
+      "target_unit_keys": [
+        "art-349-a",
+        "art-351",
+        "art-352",
+        "art-353",
+        "art-354",
+        "art-355",
+        "art-356",
+        "art-357",
+        "art-358",
+        "art-359",
+        "art-359-a",
+        "art-359-b",
+        "art-359-c",
+        "art-359-d",
+        "art-359-e",
+        "art-359-f",
+        "art-359-g",
+        "art-359-h",
+        "art-359-i",
+        "art-359-j",
+        "art-359-k",
+        "art-359-l",
+        "art-359-m",
+        "art-359-m--2",
+        "art-359-m--3",
+        "art-359-n",
+        "art-359-p",
+        "art-359-r",
+        "art-359-t",
+        "art-360",
+        "art-361"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06",
+      "source_checked_at": "2026-10-12T23:38:16.494220+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-349-a",
+      "unit_id": "39a305d6-3c79-5925-bc35-1e56be6939aa",
+      "content_sha256": "6838b0bc76c84957a90ca3282fea21df32d3809ba74d4c7deecd01b39a9622f3",
+      "simples": "Ingresso de aparelho telefônico em estabelecimento prisional: ingressar, promover, intermediar, auxiliar ou facilitar a entrada de aparelho telefônico de comunicação móvel, de rádio ou similar, sem autorização legal, em estabelecimento prisional. Pena: detenção de 3 meses a 1 ano.",
+      "pontos": [
+        "Ingressar, promover, intermediar, auxiliar ou facilitar a entrada de aparelho telefônico, rádio ou similar.",
+        "Sem autorização legal.",
+        "Em estabelecimento prisional.",
+        "Detenção de 3 meses a 1 ano."
+      ],
+      "atencao": [
+        "O art. 319-A pune o agente público que deixa de vedar o acesso do preso."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 319-A"
+      ],
+      "exemplo": "Pessoa facilita entrada não autorizada de telefone em estabelecimento prisional. Variação: Uso/posse e ingresso não são sinônimos; omissão funcional do 319-A tem recorte próprio.",
+      "prova": [
+        "Rádio ou similar também está previsto? Sim.",
+        "Todo objeto eletrônico é telefone/radio típico por presunção? Não."
+      ],
+      "expected": {
+        "unit_id": "39a305d6-3c79-5925-bc35-1e56be6939aa",
+        "content_sha256": "6838b0bc76c84957a90ca3282fea21df32d3809ba74d4c7deecd01b39a9622f3",
+        "simples": "Ingresso de aparelho telefônico em estabelecimento prisional: ingressar, promover, intermediar, auxiliar ou facilitar a entrada de aparelho telefônico de comunicação móvel, de rádio ou similar, sem autorização legal, em estabelecimento prisional. Pena: detenção de 3 meses a 1 ano.",
+        "pontos": [
+          "Ingressar, promover, intermediar, auxiliar ou facilitar a entrada de aparelho telefônico, rádio ou similar.",
+          "Sem autorização legal.",
+          "Em estabelecimento prisional.",
+          "Detenção de 3 meses a 1 ano."
+        ],
+        "atencao": [
+          "O art. 319-A pune o agente público que deixa de vedar o acesso do preso."
+        ],
+        "exemplo": "Visitante tenta entrar com celular em presídio.",
+        "prova": [
+          "Assertiva que aplica o art. 349-A só a servidores públicos erra: o crime é comum."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 319-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-351",
+      "unit_id": "e016e661-8e38-58c2-8d04-2511a886d4b2",
+      "content_sha256": "f9555e8d501bd7f2a85d2326e866f3763b43901439a6deb7e7962502d5022bc4",
+      "simples": "Fuga de pessoa presa ou submetida a medida de segurança: promover ou facilitar a fuga de pessoa legalmente presa ou submetida a medida de segurança detentiva. Pena: detenção de seis meses a dois anos. Se o crime é praticado a mão armada, ou por mais de uma pessoa, ou mediante arrombamento: reclusão de dois a seis anos. Se há emprego de violência contra pessoa, aplica-se também a pena da violência. Se praticado por pessoa sob cuja custódia ou guarda está o preso ou o internado: reclusão de um a quatro anos. No caso de culpa do funcionário incumbido da custódia ou guarda: detenção de três meses a um ano, ou multa.",
+      "pontos": [
+        "Promover ou facilitar a fuga de pessoa legalmente presa ou em medida de segurança detentiva.",
+        "Detenção de seis meses a dois anos.",
+        "§1º: mão armada, mais de uma pessoa ou arrombamento: reclusão de dois a seis anos.",
+        "§2º: violência contra pessoa: também a pena da violência.",
+        "§3º: agente é o custodiante: reclusão de um a quatro anos.",
+        "§4º: culpa do funcionário: detenção de três meses a um ano, ou multa."
+      ],
+      "atencao": [
+        "Promover/facilitar fuga de terceiro distingue-se da evasão do 352. Fuga simples não satisfaz 352, mas outros crimes concretos ou falta disciplinar podem existir; não afirmar impunidade universal de toda fuga.",
+        "§4º é modalidade culposa do funcionário incumbido da custódia/guarda."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 352"
+      ],
+      "exemplo": "Terceiro promove fuga de pessoa legalmente presa. Variação: A própria evasão do preso exige distinguir 352; culpa do funcionário custodiante tem pena própria.",
+      "prova": [
+        "Medida de segurança detentiva está incluída? Sim.",
+        "Qualquer fuga por culpa de qualquer pessoa é automaticamente§4º? Não; recorte funcional."
+      ],
+      "expected": {
+        "unit_id": "e016e661-8e38-58c2-8d04-2511a886d4b2",
+        "content_sha256": "f9555e8d501bd7f2a85d2326e866f3763b43901439a6deb7e7962502d5022bc4",
+        "simples": "Fuga de pessoa presa ou submetida a medida de segurança: promover ou facilitar a fuga de pessoa legalmente presa ou submetida a medida de segurança detentiva. Pena: detenção de seis meses a dois anos. Se o crime é praticado a mão armada, ou por mais de uma pessoa, ou mediante arrombamento: reclusão de dois a seis anos. Se há emprego de violência contra pessoa, aplica-se também a pena da violência. Se praticado por pessoa sob cuja custódia ou guarda está o preso ou o internado: reclusão de um a quatro anos. No caso de culpa do funcionário incumbido da custódia ou guarda: detenção de três meses a um ano, ou multa.",
+        "pontos": [
+          "Promover ou facilitar a fuga de pessoa legalmente presa ou em medida de segurança detentiva.",
+          "Detenção de seis meses a dois anos.",
+          "§1º: mão armada, mais de uma pessoa ou arrombamento: reclusão de dois a seis anos.",
+          "§2º: violência contra pessoa: também a pena da violência.",
+          "§3º: agente é o custodiante: reclusão de um a quatro anos.",
+          "§4º: culpa do funcionário: detenção de três meses a um ano, ou multa."
+        ],
+        "atencao": [
+          "Quem promove a fuga do preso responde; o preso que foge sem violência não comete crime (mas falta disciplinar).",
+          "Há modalidade culposa para o funcionário custodiante."
+        ],
+        "exemplo": "Agente penitenciário facilita a fuga de um preso sob sua guarda: reclusão de um a quatro anos.",
+        "prova": [
+          "Assertiva que pune o preso que foge sem violência pelo art. 351 erra: o tipo pune quem promove ou facilita a fuga."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 352"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-352",
+      "unit_id": "9d0537ff-f3fc-5cb1-b5a2-3c4f7edaac62",
+      "content_sha256": "5c2c90b62b5721457d170bb8a8757e3e7d297454f6aa242455673edf3212c795",
+      "simples": "Evasão mediante violência contra a pessoa: evadir-se ou tentar evadir-se o preso ou o indivíduo submetido a medida de segurança detentiva, usando de violência contra a pessoa. Pena: detenção de três meses a um ano, além da pena correspondente à violência.",
+      "pontos": [
+        "Preso ou internado se evade ou tenta evadir-se usando violência contra a pessoa.",
+        "Detenção de três meses a um ano, além da pena da violência."
+      ],
+      "atencao": [
+        "Violência contra pessoa é elemento do 352; violência só contra coisa ou fuga simples não bastam para este tipo. Outros crimes/faltas não são excluídos automaticamente."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 351"
+      ],
+      "exemplo": "Preso tenta evadir-se usando violência contra pessoa. Variação: Fuga simples não preenche 352; isso não exclui falta disciplinar ou outros crimes concretos.",
+      "prova": [
+        "Precisa conseguir sair para a conduta expressa? Não; tentar evadir-se também é previsto.",
+        "Violência só contra coisa equivale automaticamente à pessoa? Não."
+      ],
+      "expected": {
+        "unit_id": "9d0537ff-f3fc-5cb1-b5a2-3c4f7edaac62",
+        "content_sha256": "5c2c90b62b5721457d170bb8a8757e3e7d297454f6aa242455673edf3212c795",
+        "simples": "Evasão mediante violência contra a pessoa: evadir-se ou tentar evadir-se o preso ou o indivíduo submetido a medida de segurança detentiva, usando de violência contra a pessoa. Pena: detenção de três meses a um ano, além da pena correspondente à violência.",
+        "pontos": [
+          "Preso ou internado se evade ou tenta evadir-se usando violência contra a pessoa.",
+          "Detenção de três meses a um ano, além da pena da violência."
+        ],
+        "atencao": [
+          "Só há crime se houver VIOLÊNCIA CONTRA A PESSOA; a fuga simples não é crime."
+        ],
+        "exemplo": "Preso agride o agente para fugir.",
+        "prova": [
+          "Assertiva que pune a evasão simples, sem violência, erra: não é crime."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 351"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-353",
+      "unit_id": "e9c5e293-bf27-5309-ba78-33c042fdb5a5",
+      "content_sha256": "54a36b322fe4a3144a3530357b906dee7b570b6a314f9f23c891c14b4adde3ff",
+      "simples": "Arrebatamento de preso: arrebatar preso, a fim de maltratá-lo, do poder de quem o tenha sob custódia ou guarda. Pena: reclusão de um a quatro anos, além da pena correspondente à violência.",
+      "pontos": [
+        "Arrebatar preso do poder de quem o tem sob custódia ou guarda.",
+        "Fim de maltratá-lo.",
+        "Reclusão de um a quatro anos, além da pena da violência."
+      ],
+      "atencao": [
+        "Exige o fim específico de MALTRATAR o preso."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 351"
+      ],
+      "exemplo": "Preso é arrebatado da custódia para ser maltratado. Variação: Resgate com outra finalidade exige enquadramento próprio; não presumir maltrato.",
+      "prova": [
+        "Finalidade de maltratar importa? Sim.",
+        "Pena da violência pode acumular? Sim; previsão expressa."
+      ],
+      "expected": {
+        "unit_id": "e9c5e293-bf27-5309-ba78-33c042fdb5a5",
+        "content_sha256": "54a36b322fe4a3144a3530357b906dee7b570b6a314f9f23c891c14b4adde3ff",
+        "simples": "Arrebatamento de preso: arrebatar preso, a fim de maltratá-lo, do poder de quem o tenha sob custódia ou guarda. Pena: reclusão de um a quatro anos, além da pena correspondente à violência.",
+        "pontos": [
+          "Arrebatar preso do poder de quem o tem sob custódia ou guarda.",
+          "Fim de maltratá-lo.",
+          "Reclusão de um a quatro anos, além da pena da violência."
+        ],
+        "atencao": [
+          "Exige o fim específico de MALTRATAR o preso."
+        ],
+        "exemplo": "Grupo retira o preso da delegacia para linchá-lo.",
+        "prova": [
+          "Assertiva que dispensa o fim de maltratar o preso erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 351"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-354",
+      "unit_id": "3a46f2c2-d6e1-5931-b41f-7a90cd27ae33",
+      "content_sha256": "e9d1bc83d9f12d95580ca5623b9ea12a2160b1f55b572095200c043d9dbf9bc1",
+      "simples": "Motim de presos: amotinarem-se presos, perturbando a ordem ou disciplina da prisão. Pena: detenção de seis meses a dois anos, além da pena correspondente à violência.",
+      "pontos": [
+        "Presos se amotinam, perturbando a ordem ou disciplina da prisão.",
+        "Detenção de seis meses a dois anos, além da pena da violência."
+      ],
+      "atencao": [
+        "Crime de concurso necessário (plurissubjetivo)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 352"
+      ],
+      "exemplo": "Presos se amotinam perturbando ordem prisional. Variação: Reivindicação lícita sem motim típico não é automaticamente crime.",
+      "prova": [
+        "Pluralidade de presos é característica? Sim.",
+        "Qualquer reclamação individual é 354? Não."
+      ],
+      "expected": {
+        "unit_id": "3a46f2c2-d6e1-5931-b41f-7a90cd27ae33",
+        "content_sha256": "e9d1bc83d9f12d95580ca5623b9ea12a2160b1f55b572095200c043d9dbf9bc1",
+        "simples": "Motim de presos: amotinarem-se presos, perturbando a ordem ou disciplina da prisão. Pena: detenção de seis meses a dois anos, além da pena correspondente à violência.",
+        "pontos": [
+          "Presos se amotinam, perturbando a ordem ou disciplina da prisão.",
+          "Detenção de seis meses a dois anos, além da pena da violência."
+        ],
+        "atencao": [
+          "Crime de concurso necessário (plurissubjetivo)."
+        ],
+        "exemplo": "Presos se rebelam e tomam o controle de uma ala.",
+        "prova": [
+          "Assertiva que admite o motim praticado por um único preso erra: é crime de concurso necessário."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 352"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-355",
+      "unit_id": "6999bdd4-a9ed-5cc6-85f6-e8389f3d7234",
+      "content_sha256": "94ab09ed9e1b1521b4bd593d1b64b45449a1411b3df16562af40fed3d89c1861",
+      "simples": "Patrocínio infiel: trair, na qualidade de advogado ou procurador, o dever profissional, prejudicando interesse cujo patrocínio, em juízo, lhe é confiado. Pena: detenção de seis meses a três anos e multa. Tergiversação (patrocínio simultâneo): incorre na pena o advogado ou procurador judicial que defende na mesma causa, simultânea ou sucessivamente, partes contrárias.",
+      "pontos": [
+        "Trair o dever profissional, prejudicando interesse que lhe é confiado em juízo.",
+        "Detenção de seis meses a três anos e multa.",
+        "Parágrafo único: defender, na mesma causa, partes contrárias, simultânea ou sucessivamente."
+      ],
+      "atencao": [
+        "Crime próprio do advogado ou procurador.",
+        "O parágrafo único é a tergiversação."
+      ],
+      "termos": [
+        {
+          "termo": "Tergiversação",
+          "significado": "Defender partes contrárias na mesma causa."
+        }
+      ],
+      "remissoes": [
+        "Art. 356"
+      ],
+      "exemplo": "Advogado trai dever profissional e prejudica interesse confiado em juízo. Variação: Defender partes contrárias na mesma causa tem parágrafo próprio; incompetência sem dolo não é traição automática.",
+      "prova": [
+        "Sucessão de patrocínio também está prevista? Sim.",
+        "Todo resultado desfavorável prova crime do advogado? Não."
+      ],
+      "expected": {
+        "unit_id": "6999bdd4-a9ed-5cc6-85f6-e8389f3d7234",
+        "content_sha256": "94ab09ed9e1b1521b4bd593d1b64b45449a1411b3df16562af40fed3d89c1861",
+        "simples": "Patrocínio infiel: trair, na qualidade de advogado ou procurador, o dever profissional, prejudicando interesse cujo patrocínio, em juízo, lhe é confiado. Pena: detenção de seis meses a três anos e multa. Tergiversação (patrocínio simultâneo): incorre na pena o advogado ou procurador judicial que defende na mesma causa, simultânea ou sucessivamente, partes contrárias.",
+        "pontos": [
+          "Trair o dever profissional, prejudicando interesse que lhe é confiado em juízo.",
+          "Detenção de seis meses a três anos e multa.",
+          "Parágrafo único: defender, na mesma causa, partes contrárias, simultânea ou sucessivamente."
+        ],
+        "atencao": [
+          "Crime próprio do advogado ou procurador.",
+          "O parágrafo único é a tergiversação."
+        ],
+        "exemplo": "Advogado atua para a parte contrária na mesma causa.",
+        "prova": [
+          "Assertiva que exige que a defesa de partes contrárias seja simultânea na tergiversação erra: pode ser sucessiva."
+        ],
+        "termos": [
+          {
+            "termo": "Tergiversação",
+            "significado": "Defender partes contrárias na mesma causa."
+          }
+        ],
+        "remissoes": [
+          "Art. 356"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-356",
+      "unit_id": "bcc205c8-e233-5b6b-80fe-a5f33fbb4e0a",
+      "content_sha256": "740c1ccd3fc462611d1d0c9d343863958a5bbef8c9b81bfb8dc2d415f4174800",
+      "simples": "Sonegação de papel ou objeto de valor probatório: inutilizar, total ou parcialmente, ou deixar de restituir autos, documento ou objeto de valor probatório, que recebeu na qualidade de advogado ou procurador. Pena: detenção de seis meses a três anos e multa.",
+      "pontos": [
+        "Inutilizar ou deixar de restituir autos, documento ou objeto de valor probatório.",
+        "Recebidos na qualidade de advogado ou procurador.",
+        "Detenção de seis meses a três anos e multa."
+      ],
+      "atencao": [
+        "Crime próprio do advogado ou procurador."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 355"
+      ],
+      "exemplo": "Advogado inutiliza documento probatório recebido nessa qualidade. Variação: Impossibilidade justificada ou perda sem dolo não deve ser tratada como sonegação automática.",
+      "prova": [
+        "Inutilização parcial está incluída? Sim.",
+        "A qualidade em que recebeu o objeto importa? Sim."
+      ],
+      "expected": {
+        "unit_id": "bcc205c8-e233-5b6b-80fe-a5f33fbb4e0a",
+        "content_sha256": "740c1ccd3fc462611d1d0c9d343863958a5bbef8c9b81bfb8dc2d415f4174800",
+        "simples": "Sonegação de papel ou objeto de valor probatório: inutilizar, total ou parcialmente, ou deixar de restituir autos, documento ou objeto de valor probatório, que recebeu na qualidade de advogado ou procurador. Pena: detenção de seis meses a três anos e multa.",
+        "pontos": [
+          "Inutilizar ou deixar de restituir autos, documento ou objeto de valor probatório.",
+          "Recebidos na qualidade de advogado ou procurador.",
+          "Detenção de seis meses a três anos e multa."
+        ],
+        "atencao": [
+          "Crime próprio do advogado ou procurador."
+        ],
+        "exemplo": "Advogado retira os autos do cartório e não os devolve.",
+        "prova": [
+          "Assertiva que aplica o art. 356 a qualquer pessoa erra: é crime próprio de advogado ou procurador."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 355"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-357",
+      "unit_id": "ad8306cb-11e3-507f-a899-69f16ff8752a",
+      "content_sha256": "bd42f0791041b55c98d522e9c2d0e673c7802a2ca4ec68e10c1f89580fcd5aa0",
+      "simples": "Exploração de prestígio: solicitar ou receber dinheiro ou qualquer outra utilidade, a pretexto de influir em juiz, jurado, órgão do Ministério Público, funcionário de justiça, perito, tradutor, intérprete ou testemunha. Pena: reclusão de um a cinco anos e multa. As penas aumentam-se de um terço se o agente alega ou insinua que o dinheiro ou utilidade também se destina a qualquer das pessoas referidas.",
+      "pontos": [
+        "Solicitar ou receber dinheiro ou utilidade a pretexto de influir em pessoas ligadas à Justiça.",
+        "Reclusão de um a cinco anos e multa.",
+        "Parágrafo único: alegar ou insinuar destinação a essas pessoas: aumento de um terço."
+      ],
+      "atencao": [
+        "Diferença para o art. 332: aqui o pretexto é influir em pessoas da JUSTIÇA (juiz, jurado, MP etc.)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 332"
+      ],
+      "exemplo": "Agente solicita utilidade a pretexto de influir em testemunha. Variação: Tráfico de influência genérico 332 e corrupção real têm elementos próprios.",
+      "prova": [
+        "Testemunha e perito estão no rol? Sim.",
+        "Insinuar destino da utilidade ao juiz tem aumento próprio? Sim;um terço."
+      ],
+      "expected": {
+        "unit_id": "ad8306cb-11e3-507f-a899-69f16ff8752a",
+        "content_sha256": "bd42f0791041b55c98d522e9c2d0e673c7802a2ca4ec68e10c1f89580fcd5aa0",
+        "simples": "Exploração de prestígio: solicitar ou receber dinheiro ou qualquer outra utilidade, a pretexto de influir em juiz, jurado, órgão do Ministério Público, funcionário de justiça, perito, tradutor, intérprete ou testemunha. Pena: reclusão de um a cinco anos e multa. As penas aumentam-se de um terço se o agente alega ou insinua que o dinheiro ou utilidade também se destina a qualquer das pessoas referidas.",
+        "pontos": [
+          "Solicitar ou receber dinheiro ou utilidade a pretexto de influir em pessoas ligadas à Justiça.",
+          "Reclusão de um a cinco anos e multa.",
+          "Parágrafo único: alegar ou insinuar destinação a essas pessoas: aumento de um terço."
+        ],
+        "atencao": [
+          "Diferença para o art. 332: aqui o pretexto é influir em pessoas da JUSTIÇA (juiz, jurado, MP etc.)."
+        ],
+        "exemplo": "Pessoa cobra dinheiro dizendo ter influência sobre o juiz da causa.",
+        "prova": [
+          "Assertiva que confunde exploração de prestígio com tráfico de influência erra: aquela envolve pessoas ligadas à Justiça."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 332"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-358",
+      "unit_id": "687c7f14-3b19-5cb9-b727-d591c1789e14",
+      "content_sha256": "6b9035791e5c30b3a97fb11624cefa935a746ff0edc07f22a7573f55be1d0a57",
+      "simples": "Violência ou fraude em arrematação judicial: impedir, perturbar ou fraudar arrematação judicial; afastar ou procurar afastar concorrente ou licitante, por meio de violência, grave ameaça, fraude ou oferecimento de vantagem. Pena: detenção de dois meses a um ano, ou multa, além da pena correspondente à violência.",
+      "pontos": [
+        "Impedir, perturbar ou fraudar arrematação judicial.",
+        "Afastar ou procurar afastar concorrente por violência, grave ameaça, fraude ou vantagem.",
+        "Detenção de dois meses a um ano, ou multa, além da pena da violência."
+      ],
+      "atencao": [
+        "Trata de arrematação JUDICIAL."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 335"
+      ],
+      "exemplo": "Concorrente é ameaçado para se afastar de arrematação judicial. Variação: Não substituir automaticamente este regime pelos tipos de licitações administrativas.",
+      "prova": [
+        "Procurar afastar é conduta expressa? Sim.",
+        "Todo leilão particular entra como arrematação judicial? Não."
+      ],
+      "expected": {
+        "unit_id": "687c7f14-3b19-5cb9-b727-d591c1789e14",
+        "content_sha256": "6b9035791e5c30b3a97fb11624cefa935a746ff0edc07f22a7573f55be1d0a57",
+        "simples": "Violência ou fraude em arrematação judicial: impedir, perturbar ou fraudar arrematação judicial; afastar ou procurar afastar concorrente ou licitante, por meio de violência, grave ameaça, fraude ou oferecimento de vantagem. Pena: detenção de dois meses a um ano, ou multa, além da pena correspondente à violência.",
+        "pontos": [
+          "Impedir, perturbar ou fraudar arrematação judicial.",
+          "Afastar ou procurar afastar concorrente por violência, grave ameaça, fraude ou vantagem.",
+          "Detenção de dois meses a um ano, ou multa, além da pena da violência."
+        ],
+        "atencao": [
+          "Trata de arrematação JUDICIAL."
+        ],
+        "exemplo": "Ameaçar outro participante para que desista de arrematar bem em leilão judicial.",
+        "prova": [
+          "Assertiva que aplica o art. 358 a licitação administrativa erra: o tipo trata de arrematação judicial."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 335"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359",
+      "unit_id": "37497201-0d1b-5c56-9836-505e2e96813b",
+      "content_sha256": "ff0adf74173e5409445db744b0fe2d64f10cb99e356da44f6f0aa8361cd68898",
+      "simples": "Desobediência a decisão judicial sobre perda ou suspensão de direito: exercer função, atividade, direito, autoridade ou múnus, de que foi suspenso ou privado por decisão judicial. Pena: detenção de três meses a dois anos, ou multa.",
+      "pontos": [
+        "Exercer função, atividade, direito, autoridade ou múnus de que foi suspenso ou privado por decisão judicial.",
+        "Detenção de três meses a dois anos, ou multa."
+      ],
+      "atencao": [
+        "Depende de DECISÃO JUDICIAL de suspensão ou privação."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 47"
+      ],
+      "exemplo": "Pessoa exerce atividade da qual foi privada por decisão judicial válida conhecida. Variação: Sanção exclusivamente administrativa exige outro enquadramento; não presumir decisão judicial.",
+      "prova": [
+        "Suspensão judicial também está prevista? Sim.",
+        "Qualquer restrição administrativa é 359? Não."
+      ],
+      "expected": {
+        "unit_id": "37497201-0d1b-5c56-9836-505e2e96813b",
+        "content_sha256": "ff0adf74173e5409445db744b0fe2d64f10cb99e356da44f6f0aa8361cd68898",
+        "simples": "Desobediência a decisão judicial sobre perda ou suspensão de direito: exercer função, atividade, direito, autoridade ou múnus, de que foi suspenso ou privado por decisão judicial. Pena: detenção de três meses a dois anos, ou multa.",
+        "pontos": [
+          "Exercer função, atividade, direito, autoridade ou múnus de que foi suspenso ou privado por decisão judicial.",
+          "Detenção de três meses a dois anos, ou multa."
+        ],
+        "atencao": [
+          "Depende de DECISÃO JUDICIAL de suspensão ou privação."
+        ],
+        "exemplo": "Profissional suspenso por decisão judicial continua exercendo a atividade.",
+        "prova": [
+          "Assertiva que aplica o art. 359 à suspensão decidida só em âmbito administrativo erra: exige decisão judicial."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 47"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-a",
+      "unit_id": "e7c48881-3bb2-52e6-a36a-4999b0fa041b",
+      "content_sha256": "096ea28e2af6a4345a284b9ae06766d864d81a04d22c574fb576262259f91088",
+      "simples": "Contratação de operação de crédito: ordenar, autorizar ou realizar operação de crédito, interno ou externo, sem prévia autorização legislativa. Pena: reclusão de 1 a 2 anos. Incide na mesma pena quem ordena, autoriza ou realiza operação de crédito com inobservância de limite, condição ou montante estabelecido em lei ou em resolução do Senado Federal, ou quando o montante da dívida consolidada ultrapassa o limite máximo autorizado por lei.",
+      "pontos": [
+        "Ordenar, autorizar ou realizar operação de crédito sem prévia autorização legislativa.",
+        "Reclusão de 1 a 2 anos.",
+        "Parágrafo único: inobservância de limite, condição ou montante; dívida consolidada acima do limite."
+      ],
+      "atencao": [
+        "Crimes contra finanças públicas inseridos pela Lei 10.028/2000 no CP; não atribuir criação dos tipos à LC 101 nem presumir que toda irregularidade fiscal seja crime. Normas financeiras complementares atuais exigem consulta específica.",
+        "Limites,competência,autorização e complementos financeiros exigem normas vigentes específicas; não certificado todo regulamento/valor/recorte setorial. Não condenar por irregularidade administrativa sem elementos penais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-B"
+      ],
+      "exemplo": "Operação de crédito público é autorizada sem prévia autorização legislativa. Variação: Limites legais e resolução do Senado têm hipóteses equiparadas; não confundir com empréstimo pessoal comum.",
+      "prova": [
+        "Crédito externo também está previsto? Sim.",
+        "Qualquer dívida privada constitui este tipo? Não."
+      ],
+      "expected": {
+        "unit_id": "e7c48881-3bb2-52e6-a36a-4999b0fa041b",
+        "content_sha256": "096ea28e2af6a4345a284b9ae06766d864d81a04d22c574fb576262259f91088",
+        "simples": "Contratação de operação de crédito: ordenar, autorizar ou realizar operação de crédito, interno ou externo, sem prévia autorização legislativa. Pena: reclusão de 1 a 2 anos. Incide na mesma pena quem ordena, autoriza ou realiza operação de crédito com inobservância de limite, condição ou montante estabelecido em lei ou em resolução do Senado Federal, ou quando o montante da dívida consolidada ultrapassa o limite máximo autorizado por lei.",
+        "pontos": [
+          "Ordenar, autorizar ou realizar operação de crédito sem prévia autorização legislativa.",
+          "Reclusão de 1 a 2 anos.",
+          "Parágrafo único: inobservância de limite, condição ou montante; dívida consolidada acima do limite."
+        ],
+        "atencao": [
+          "Crimes contra as finanças públicas (Lei de Responsabilidade Fiscal)."
+        ],
+        "exemplo": "Gestor contrata empréstimo sem a autorização legislativa necessária.",
+        "prova": [
+          "Assertiva que dispensa a autorização legislativa prévia no art. 359-A erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-b",
+      "unit_id": "66a1b1a3-d524-5e99-8b8a-52921c26ad85",
+      "content_sha256": "95b5756e94bf0f5faa76c976a730abbf796cbfa7df0f44043ac12bfb30d9d2f4",
+      "simples": "Inscrição de despesas não empenhadas em restos a pagar: ordenar ou autorizar a inscrição em restos a pagar de despesa que não tenha sido previamente empenhada ou que exceda limite estabelecido em lei. Pena: detenção de 6 meses a 2 anos.",
+      "pontos": [
+        "Ordenar ou autorizar inscrição em restos a pagar de despesa não empenhada previamente.",
+        "Ou que exceda o limite legal.",
+        "Detenção de 6 meses a 2 anos."
+      ],
+      "atencao": [
+        "Pena de DETENÇÃO.",
+        "Limites,competência,autorização e complementos financeiros exigem normas vigentes específicas; não certificado todo regulamento/valor/recorte setorial. Não condenar por irregularidade administrativa sem elementos penais."
+      ],
+      "termos": [
+        {
+          "termo": "Restos a pagar",
+          "significado": "Despesas empenhadas e não pagas até o fim do exercício."
+        }
+      ],
+      "remissoes": [
+        "Art. 359-F"
+      ],
+      "exemplo": "Inscrição em restos a pagar é ordenada sem empenho prévio. Variação: Excesso de limite é alternativa típica distinta; restos a pagar regulares não são crime por si.",
+      "prova": [
+        "Pena é detenção? Sim.",
+        "Toda despesa empenhada e ainda não paga prova crime? Não."
+      ],
+      "expected": {
+        "unit_id": "66a1b1a3-d524-5e99-8b8a-52921c26ad85",
+        "content_sha256": "95b5756e94bf0f5faa76c976a730abbf796cbfa7df0f44043ac12bfb30d9d2f4",
+        "simples": "Inscrição de despesas não empenhadas em restos a pagar: ordenar ou autorizar a inscrição em restos a pagar de despesa que não tenha sido previamente empenhada ou que exceda limite estabelecido em lei. Pena: detenção de 6 meses a 2 anos.",
+        "pontos": [
+          "Ordenar ou autorizar inscrição em restos a pagar de despesa não empenhada previamente.",
+          "Ou que exceda o limite legal.",
+          "Detenção de 6 meses a 2 anos."
+        ],
+        "atencao": [
+          "Pena de DETENÇÃO."
+        ],
+        "exemplo": "Gestor inscreve em restos a pagar uma despesa que nunca foi empenhada.",
+        "prova": [
+          "Assertiva que fixa pena de reclusão para o art. 359-B erra: é detenção."
+        ],
+        "termos": [
+          {
+            "termo": "Restos a pagar",
+            "significado": "Despesas empenhadas e não pagas até o fim do exercício."
+          }
+        ],
+        "remissoes": [
+          "Art. 359-F"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-c",
+      "unit_id": "ef595100-e3cc-59dc-87e0-28636584f87a",
+      "content_sha256": "efe3c6303f67299a077e407b75af8d42ff248c9b9b94434ec7420c12feef91f9",
+      "simples": "Assunção de obrigação no último ano do mandato ou legislatura: ordenar ou autorizar a assunção de obrigação, nos dois últimos quadrimestres do último ano do mandato ou legislatura, cuja despesa não possa ser paga no mesmo exercício financeiro ou, caso reste parcela a ser paga no exercício seguinte, que não tenha contrapartida suficiente de disponibilidade de caixa. Pena: reclusão de 1 a 4 anos.",
+      "pontos": [
+        "Dois últimos quadrimestres do último ano do mandato/legislatura.",
+        "Obrigação com impossibilidade de pagamento no exercício ou parcela seguinte sem contrapartida suficiente de caixa, nos pressupostos legais.",
+        "Reclusão 1 a 4; não proibição universal de contratos ou parcelas futuras."
+      ],
+      "atencao": [
+        "Período: dois últimos quadrimestres do último ano do mandato ou legislatura.",
+        "Limites,competência,autorização e complementos financeiros exigem normas vigentes específicas; não certificado todo regulamento/valor/recorte setorial. Não condenar por irregularidade administrativa sem elementos penais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-G"
+      ],
+      "exemplo": "Obrigações são assumidas nos dois últimos quadrimestres sem caixa suficiente no recorte legal. Variação: Obrigação com parcela futura e contrapartida suficiente precisa ser distinguida; não proibir todo contrato de fim de mandato.",
+      "prova": [
+        "Período é o último ano inteiro? Não;dois últimos quadrimestres.",
+        "Parcela no ano seguinte é sempre ilícita mesmo com caixa? Não; verificar condições."
+      ],
+      "expected": {
+        "unit_id": "ef595100-e3cc-59dc-87e0-28636584f87a",
+        "content_sha256": "efe3c6303f67299a077e407b75af8d42ff248c9b9b94434ec7420c12feef91f9",
+        "simples": "Assunção de obrigação no último ano do mandato ou legislatura: ordenar ou autorizar a assunção de obrigação, nos dois últimos quadrimestres do último ano do mandato ou legislatura, cuja despesa não possa ser paga no mesmo exercício financeiro ou, caso reste parcela a ser paga no exercício seguinte, que não tenha contrapartida suficiente de disponibilidade de caixa. Pena: reclusão de 1 a 4 anos.",
+        "pontos": [
+          "Ordenar ou autorizar a assunção de obrigação nos dois últimos quadrimestres do último ano do mandato.",
+          "Despesa que não possa ser paga no mesmo exercício, ou sem disponibilidade de caixa.",
+          "Reclusão de 1 a 4 anos."
+        ],
+        "atencao": [
+          "Período: dois últimos quadrimestres do último ano do mandato ou legislatura."
+        ],
+        "exemplo": "Prefeito contrai obrigação no fim do mandato sem caixa para pagá-la.",
+        "prova": [
+          "Assertiva que aplica o art. 359-C a qualquer período do mandato erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-G"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-d",
+      "unit_id": "61c80db7-19e0-5dd8-9518-b44411354018",
+      "content_sha256": "893019a170537ba85993a39219e0628dbcd017c741d5a22a606654ce14ebe45b",
+      "simples": "Ordenação de despesa não autorizada: ordenar despesa não autorizada por lei. Pena: reclusão de 1 a 4 anos.",
+      "pontos": [
+        "Ordenar despesa não autorizada por lei.",
+        "Reclusão de 1 a 4 anos."
+      ],
+      "atencao": [
+        "O núcleo é ORDENAR.",
+        "Limites,competência,autorização e complementos financeiros exigem normas vigentes específicas; não certificado todo regulamento/valor/recorte setorial. Não condenar por irregularidade administrativa sem elementos penais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-A"
+      ],
+      "exemplo": "Despesa não autorizada por lei é ordenada com os elementos penais. Variação: Não confundir ordenar com toda execução material ou erro contábil sem dolo.",
+      "prova": [
+        "Núcleo legal é ordenar? Sim.",
+        "Todo desacerto administrativo prova automaticamente o crime? Não."
+      ],
+      "expected": {
+        "unit_id": "61c80db7-19e0-5dd8-9518-b44411354018",
+        "content_sha256": "893019a170537ba85993a39219e0628dbcd017c741d5a22a606654ce14ebe45b",
+        "simples": "Ordenação de despesa não autorizada: ordenar despesa não autorizada por lei. Pena: reclusão de 1 a 4 anos.",
+        "pontos": [
+          "Ordenar despesa não autorizada por lei.",
+          "Reclusão de 1 a 4 anos."
+        ],
+        "atencao": [
+          "O núcleo é ORDENAR."
+        ],
+        "exemplo": "Gestor ordena pagamento de despesa sem previsão legal.",
+        "prova": [
+          "Assertiva que fixa pena de detenção para o art. 359-D erra: é reclusão de 1 a 4 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-e",
+      "unit_id": "20875583-fee0-5ca4-a6e7-f8d60f72d281",
+      "content_sha256": "8461a8c758394a631af2b6319adc6990926e95a223a167bde78c41a75ef815d5",
+      "simples": "Prestação de garantia graciosa: prestar garantia em operação de crédito sem que tenha sido constituída contragarantia em valor igual ou superior ao valor da garantia prestada, na forma da lei. Pena: detenção de 3 meses a 1 ano.",
+      "pontos": [
+        "Prestar garantia em operação de crédito sem contragarantia suficiente.",
+        "Contragarantia em valor igual ou superior à garantia prestada.",
+        "Detenção de 3 meses a 1 ano."
+      ],
+      "atencao": [
+        "A contragarantia deve ser de valor igual ou SUPERIOR.",
+        "Limites,competência,autorização e complementos financeiros exigem normas vigentes específicas; não certificado todo regulamento/valor/recorte setorial. Não condenar por irregularidade administrativa sem elementos penais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-A"
+      ],
+      "exemplo": "Garantia em operação de crédito é prestada sem contragarantia legal suficiente. Variação: Contragarantia de igual valor satisfaz referência quantitativa, mas outros requisitos legais continuam.",
+      "prova": [
+        "Valor inferior é suficiente pelo texto? Não.",
+        "Tipo exige valor exatamente igual e proíbe superior? Não;igual ou superior."
+      ],
+      "expected": {
+        "unit_id": "20875583-fee0-5ca4-a6e7-f8d60f72d281",
+        "content_sha256": "8461a8c758394a631af2b6319adc6990926e95a223a167bde78c41a75ef815d5",
+        "simples": "Prestação de garantia graciosa: prestar garantia em operação de crédito sem que tenha sido constituída contragarantia em valor igual ou superior ao valor da garantia prestada, na forma da lei. Pena: detenção de 3 meses a 1 ano.",
+        "pontos": [
+          "Prestar garantia em operação de crédito sem contragarantia suficiente.",
+          "Contragarantia em valor igual ou superior à garantia prestada.",
+          "Detenção de 3 meses a 1 ano."
+        ],
+        "atencao": [
+          "A contragarantia deve ser de valor igual ou SUPERIOR."
+        ],
+        "exemplo": "Ente público garante empréstimo de terceiro sem contragarantia.",
+        "prova": [
+          "Assertiva que aceita contragarantia de valor inferior no art. 359-E erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-f",
+      "unit_id": "956336eb-65b5-594b-8635-b730a0cdba57",
+      "content_sha256": "080306c7f712a9967f90cf25b96edce20baa661f71c16848aa412c4ca93de4ff",
+      "simples": "Não cancelamento de restos a pagar: deixar de ordenar, de autorizar ou de promover o cancelamento do montante de restos a pagar inscrito em valor superior ao permitido em lei. Pena: detenção de 6 meses a 2 anos.",
+      "pontos": [
+        "Deixar de ordenar, autorizar ou promover o cancelamento de restos a pagar acima do permitido.",
+        "Detenção de 6 meses a 2 anos."
+      ],
+      "atencao": [
+        "Crime omissivo.",
+        "Limites,competência,autorização e complementos financeiros exigem normas vigentes específicas; não certificado todo regulamento/valor/recorte setorial. Não condenar por irregularidade administrativa sem elementos penais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-B"
+      ],
+      "exemplo": "Agente com dever deixa de promover cancelamento de restos a pagar excessivos. Variação: Não cancelar montante regular não é a mesma hipótese; dever e limite legal devem ser identificados.",
+      "prova": [
+        "Crime tem conduta omissiva? Sim.",
+        "Todo saldo inscrito deve ser cancelado por este artigo? Não;excesso legal importa."
+      ],
+      "expected": {
+        "unit_id": "956336eb-65b5-594b-8635-b730a0cdba57",
+        "content_sha256": "080306c7f712a9967f90cf25b96edce20baa661f71c16848aa412c4ca93de4ff",
+        "simples": "Não cancelamento de restos a pagar: deixar de ordenar, de autorizar ou de promover o cancelamento do montante de restos a pagar inscrito em valor superior ao permitido em lei. Pena: detenção de 6 meses a 2 anos.",
+        "pontos": [
+          "Deixar de ordenar, autorizar ou promover o cancelamento de restos a pagar acima do permitido.",
+          "Detenção de 6 meses a 2 anos."
+        ],
+        "atencao": [
+          "Crime omissivo."
+        ],
+        "exemplo": "Gestor deixa de cancelar restos a pagar inscritos acima do limite legal.",
+        "prova": [
+          "Assertiva que torna comissiva a conduta do art. 359-F erra: é omissiva."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-g",
+      "unit_id": "410a735f-a5de-576e-9ffe-115e79e7a77f",
+      "content_sha256": "4887b0d3d19a696b6b15d0e6ea571392830071dd92435fa65d55022ca4d418bf",
+      "simples": "Aumento de despesa total com pessoal no último ano do mandato ou legislatura: ordenar, autorizar ou executar ato que acarrete aumento de despesa total com pessoal, nos cento e oitenta dias anteriores ao final do mandato ou da legislatura. Pena: reclusão de 1 a 4 anos.",
+      "pontos": [
+        "Ordenar, autorizar ou executar ato que aumente a despesa total com pessoal.",
+        "Nos cento e oitenta dias anteriores ao fim do mandato ou da legislatura.",
+        "Reclusão de 1 a 4 anos."
+      ],
+      "atencao": [
+        "Período: cento e oitenta dias anteriores ao fim do mandato.",
+        "Limites,competência,autorização e complementos financeiros exigem normas vigentes específicas; não certificado todo regulamento/valor/recorte setorial. Não condenar por irregularidade administrativa sem elementos penais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-C"
+      ],
+      "exemplo": "Ato aumenta despesa total com pessoal nos 180 dias anteriores ao fim do mandato. Variação: Não confundir prazo penal com dois quadrimestres do 359-C; exceções e elementos exigem regime aplicável.",
+      "prova": [
+        "Prazo é 180 dias? Sim.",
+        "Qualquer reajuste histórico prova crime sem examinar tipo e regime? Não."
+      ],
+      "expected": {
+        "unit_id": "410a735f-a5de-576e-9ffe-115e79e7a77f",
+        "content_sha256": "4887b0d3d19a696b6b15d0e6ea571392830071dd92435fa65d55022ca4d418bf",
+        "simples": "Aumento de despesa total com pessoal no último ano do mandato ou legislatura: ordenar, autorizar ou executar ato que acarrete aumento de despesa total com pessoal, nos cento e oitenta dias anteriores ao final do mandato ou da legislatura. Pena: reclusão de 1 a 4 anos.",
+        "pontos": [
+          "Ordenar, autorizar ou executar ato que aumente a despesa total com pessoal.",
+          "Nos cento e oitenta dias anteriores ao fim do mandato ou da legislatura.",
+          "Reclusão de 1 a 4 anos."
+        ],
+        "atencao": [
+          "Período: cento e oitenta dias anteriores ao fim do mandato."
+        ],
+        "exemplo": "Prefeito concede aumento geral a servidores nos últimos cento e oitenta dias do mandato.",
+        "prova": [
+          "Assertiva que fixa o período em noventa dias antes do fim do mandato erra: são cento e oitenta dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-h",
+      "unit_id": "04e225f4-49af-5fb6-8e62-0a5f48b512c0",
+      "content_sha256": "cb1ac2ebca4771b3237930076cbd5abbede314544494abb018410c5ccd0f255f",
+      "simples": "Oferta pública ou colocação de títulos no mercado: ordenar, autorizar ou promover a oferta pública ou a colocação no mercado financeiro de títulos da dívida pública sem que tenham sido criados por lei ou sem que estejam registrados em sistema centralizado de liquidação e de custódia. Pena: reclusão de 1 a 4 anos.",
+      "pontos": [
+        "Ordenar, autorizar ou promover oferta pública ou colocação de títulos da dívida pública.",
+        "Sem criação por lei, ou sem registro em sistema centralizado de liquidação e custódia.",
+        "Reclusão de 1 a 4 anos."
+      ],
+      "atencao": [
+        "São alternativas incriminadoras: ausência de criação por lei OU ausência de registro. Regularidade exige os pressupostos aplicáveis, não escolha livre entre criação e registro.",
+        "Limites,competência,autorização e complementos financeiros exigem normas vigentes específicas; não certificado todo regulamento/valor/recorte setorial. Não condenar por irregularidade administrativa sem elementos penais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-A"
+      ],
+      "exemplo": "Títulos de dívida pública criados por lei são colocados no mercado sem registro exigido. Variação: Apenas criação legal não basta: falta de registro é alternativa incriminadora própria.",
+      "prova": [
+        "Uma só dessas ausências pode satisfazer a alternativa típica? Sim.",
+        "Os requisitos de regularidade são escolher criação ou registro? Não;ambos no recorte legal."
+      ],
+      "expected": {
+        "unit_id": "04e225f4-49af-5fb6-8e62-0a5f48b512c0",
+        "content_sha256": "cb1ac2ebca4771b3237930076cbd5abbede314544494abb018410c5ccd0f255f",
+        "simples": "Oferta pública ou colocação de títulos no mercado: ordenar, autorizar ou promover a oferta pública ou a colocação no mercado financeiro de títulos da dívida pública sem que tenham sido criados por lei ou sem que estejam registrados em sistema centralizado de liquidação e de custódia. Pena: reclusão de 1 a 4 anos.",
+        "pontos": [
+          "Ordenar, autorizar ou promover oferta pública ou colocação de títulos da dívida pública.",
+          "Sem criação por lei, ou sem registro em sistema centralizado de liquidação e custódia.",
+          "Reclusão de 1 a 4 anos."
+        ],
+        "atencao": [
+          "Dois requisitos alternativos: criação legal ou registro em sistema centralizado."
+        ],
+        "exemplo": "Gestor oferece ao mercado títulos da dívida pública não criados por lei.",
+        "prova": [
+          "Assertiva que dispensa o registro em sistema centralizado de liquidação e custódia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-i",
+      "unit_id": "4c18dc79-d0f5-576a-9fbe-de28f43b87c5",
+      "content_sha256": "bca6fb92c05cac76a8ca709eae3db4dc209c01b45a1f20c6bd606704c589f8db",
+      "simples": "Atentado à soberania: negociar com governo ou grupo estrangeiro, ou seus agentes, com o fim de provocar atos típicos de guerra contra o País ou invadi-lo. Pena: reclusão de 3 a 8 anos. Aumenta-se a pena de metade até o dobro, se declarada guerra em decorrência das condutas do caput. Se o agente participa de operação bélica com o fim de submeter o território nacional, ou parte dele, ao domínio ou à soberania de outro país: reclusão de 4 a 12 anos.",
+      "pontos": [
+        "Negociar com governo ou grupo estrangeiro para provocar atos de guerra ou invadir o País.",
+        "Reclusão de 3 a 8 anos.",
+        "§1º: guerra declarada: aumento de metade até o dobro.",
+        "§2º: participar de operação bélica para submeter o território a outro país: reclusão de 4 a 12 anos."
+      ],
+      "atencao": [
+        "Crimes contra a soberania e as instituições democráticas (Título XII, Lei nº 14.197, de 2021).",
+        "Lei 14.197/2021 substituiu regime da antiga Lei de Segurança Nacional com vacância própria; não retroagir agravamento. Integrar 359-T e direitos constitucionais,sem criminalizar oposição,jornalismo ou manifestação legítima por rótulo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-J",
+        "Art. 359-K"
+      ],
+      "exemplo": "Agente negocia com grupo estrangeiro para provocar atos de guerra contra o País. Variação: Diplomacia ou crítica pacífica não prova finalidade bélica; operação bélica do§2º tem pena distinta.",
+      "prova": [
+        "Finalidade de guerra/invasão importa? Sim.",
+        "Toda conversa com estrangeiro é crime? Não."
+      ],
+      "expected": {
+        "unit_id": "4c18dc79-d0f5-576a-9fbe-de28f43b87c5",
+        "content_sha256": "bca6fb92c05cac76a8ca709eae3db4dc209c01b45a1f20c6bd606704c589f8db",
+        "simples": "Atentado à soberania: negociar com governo ou grupo estrangeiro, ou seus agentes, com o fim de provocar atos típicos de guerra contra o País ou invadi-lo. Pena: reclusão de 3 a 8 anos. Aumenta-se a pena de metade até o dobro, se declarada guerra em decorrência das condutas do caput. Se o agente participa de operação bélica com o fim de submeter o território nacional, ou parte dele, ao domínio ou à soberania de outro país: reclusão de 4 a 12 anos.",
+        "pontos": [
+          "Negociar com governo ou grupo estrangeiro para provocar atos de guerra ou invadir o País.",
+          "Reclusão de 3 a 8 anos.",
+          "§1º: guerra declarada: aumento de metade até o dobro.",
+          "§2º: participar de operação bélica para submeter o território a outro país: reclusão de 4 a 12 anos."
+        ],
+        "atencao": [
+          "Crimes contra a soberania e as instituições democráticas (Título XII, Lei nº 14.197, de 2021)."
+        ],
+        "exemplo": "Pessoa negocia com governo estrangeiro a invasão do País.",
+        "prova": [
+          "Assertiva que fixa o aumento do §1º em um terço erra: é de metade até o dobro."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-J",
+          "Art. 359-K"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-j",
+      "unit_id": "ab75053f-8333-5729-998d-3b7c63f21a0a",
+      "content_sha256": "5c134a5997331827aa42aca7aee3c1f83a59e1b939e7f572f16b327ae180ea32",
+      "simples": "Atentado à integridade nacional: praticar violência ou grave ameaça com a finalidade de desmembrar parte do território nacional para constituir país independente. Pena: reclusão de 2 a 6 anos, além da pena correspondente à violência.",
+      "pontos": [
+        "Praticar violência ou grave ameaça.",
+        "Finalidade de desmembrar parte do território para constituir país independente.",
+        "Reclusão de 2 a 6 anos, além da pena da violência."
+      ],
+      "atencao": [
+        "Exige violência ou grave ameaça.",
+        "Lei 14.197/2021 substituiu regime da antiga Lei de Segurança Nacional com vacância própria; não retroagir agravamento. Integrar 359-T e direitos constitucionais,sem criminalizar oposição,jornalismo ou manifestação legítima por rótulo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-I"
+      ],
+      "exemplo": "Violência é praticada para desmembrar território e constituir país independente. Variação: Debate político pacífico não satisfaz automaticamente violência/grave ameaça.",
+      "prova": [
+        "Grave ameaça é alternativa prevista? Sim.",
+        "Toda defesa abstrata de mudança territorial basta? Não."
+      ],
+      "expected": {
+        "unit_id": "ab75053f-8333-5729-998d-3b7c63f21a0a",
+        "content_sha256": "5c134a5997331827aa42aca7aee3c1f83a59e1b939e7f572f16b327ae180ea32",
+        "simples": "Atentado à integridade nacional: praticar violência ou grave ameaça com a finalidade de desmembrar parte do território nacional para constituir país independente. Pena: reclusão de 2 a 6 anos, além da pena correspondente à violência.",
+        "pontos": [
+          "Praticar violência ou grave ameaça.",
+          "Finalidade de desmembrar parte do território para constituir país independente.",
+          "Reclusão de 2 a 6 anos, além da pena da violência."
+        ],
+        "atencao": [
+          "Exige violência ou grave ameaça."
+        ],
+        "exemplo": "Grupo usa violência para separar parte do território e formar país independente.",
+        "prova": [
+          "Assertiva que pune a mera defesa pacífica da separação como crime do art. 359-J erra: exige violência ou grave ameaça."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-I"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-k",
+      "unit_id": "a81acb2d-ddab-537e-9d36-eec1600e7c83",
+      "content_sha256": "f8178110759a56a5b02c2439114ebba0f6fd192e2f8aba39626c38578d6b0454",
+      "simples": "Espionagem tem destinatários,objeto classificado e risco típicos;3 a 12 anos no caput, hipóteses equiparadas/penas próprias nos§§1º a 3º. Atenção:§4º expressamente exclui crime para comunicação,entrega ou publicação destinada a expor crime ou violação de direitos humanos.",
+      "pontos": [
+        "Documento/informação secretos ou ultrassecretos,nos termos legais;destinatário e risco típicos.",
+        "§1º auxílio consciente a espião;§2º violação do dever de sigilo;§3º facilitação de acesso têm recortes próprios.",
+        "§4º: não constitui crime comunicação,entrega/publicação para expor crime ou violação de direitos humanos."
+      ],
+      "atencao": [
+        "O documento deve ser classificado como secreto ou ultrassecreto.",
+        "Violação do dever de sigilo eleva a pena.",
+        "Lei 14.197/2021 substituiu regime da antiga Lei de Segurança Nacional com vacância própria; não retroagir agravamento. Integrar 359-T e direitos constitucionais,sem criminalizar oposição,jornalismo ou manifestação legítima por rótulo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-I",
+        "Art. 325"
+      ],
+      "exemplo": "Informação ultrassecreta é entregue a destinatário legalmente indicado com risco típico. Variação: Comunicação para expor crime ou violação de direitos humanos tem ressalva expressa no§4º; não omití-la.",
+      "prova": [
+        "Informação reservada equivale automaticamente à secreta/ultrassecreta? Não.",
+        "A finalidade de expor crime possui ressalva legal? Sim;§4º."
+      ],
+      "expected": {
+        "unit_id": "a81acb2d-ddab-537e-9d36-eec1600e7c83",
+        "content_sha256": "f8178110759a56a5b02c2439114ebba0f6fd192e2f8aba39626c38578d6b0454",
+        "simples": "Espionagem: entregar a governo estrangeiro, a seus agentes, ou a organização criminosa estrangeira, em desacordo com determinação legal ou regulamentar, documento ou informação classificados como secretos ou ultrassecretos nos termos da lei, cuja revelação possa colocar em perigo a preservação da ordem constitucional ou a soberania nacional. Pena: reclusão de 3 a 12 anos. Incorre na mesma pena quem presta auxílio a espião, conhecendo essa circunstância, para subtraí-lo à ação da autoridade pública. Se o documento, dado ou informação é transmitido ou revelado com violação do dever de sigilo: reclusão de 6 a 15 anos. Facilitar a prática dos crimes do artigo mediante atribuição, fornecimento ou empréstimo de senha, ou de qualquer outra forma de acesso de pessoas não autorizadas a sistemas de informações: detenção de 1 a 4 anos.",
+        "pontos": [
+          "Entregar a governo estrangeiro ou organização criminosa estrangeira documento ou informação secreta ou ultrassecreta.",
+          "Reclusão de 3 a 12 anos.",
+          "§1º: auxiliar espião, conhecendo a circunstância.",
+          "§2º: violação do dever de sigilo: reclusão de 6 a 15 anos.",
+          "§3º: facilitar mediante senha ou acesso de pessoas não autorizadas: detenção de 1 a 4 anos."
+        ],
+        "atencao": [
+          "O documento deve ser classificado como secreto ou ultrassecreto.",
+          "Violação do dever de sigilo eleva a pena."
+        ],
+        "exemplo": "Servidor repassa a governo estrangeiro documento ultrassecreto.",
+        "prova": [
+          "Assertiva que aplica o art. 359-K a documento público comum erra: o tipo exige informação classificada como secreta ou ultrassecreta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-I",
+          "Art. 325"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-l",
+      "unit_id": "d2d66bbd-c3f6-5dff-9fa5-0b4bb8d37b68",
+      "content_sha256": "48f6b559c8389dbd18e32464fbae2f5efbaf4dfd59edc978c3a0fe0669a3cb29",
+      "simples": "Abolição violenta do Estado Democrático de Direito: tentar, com emprego de violência ou grave ameaça, abolir o Estado Democrático de Direito, impedindo ou restringindo o exercício dos poderes constitucionais. Pena: reclusão de 4 a 8 anos, além da pena correspondente à violência.",
+      "pontos": [
+        "Tentar abolir o Estado Democrático de Direito.",
+        "Com emprego de violência ou grave ameaça.",
+        "Impedindo ou restringindo o exercício dos poderes constitucionais.",
+        "Reclusão de 4 a 8 anos, além da pena da violência."
+      ],
+      "atencao": [
+        "Crime de atentado: a TENTATIVA já é o tipo consumado.",
+        "Lei 14.197/2021 substituiu regime da antiga Lei de Segurança Nacional com vacância própria; não retroagir agravamento. Integrar 359-T e direitos constitucionais,sem criminalizar oposição,jornalismo ou manifestação legítima por rótulo."
+      ],
+      "termos": [
+        {
+          "termo": "Crime de atentado",
+          "significado": "Tentativa punida com a mesma pena do crime consumado."
+        }
+      ],
+      "remissoes": [
+        "Art. 359-M"
+      ],
+      "exemplo": "Violência é usada para tentar abolir Estado Democrático impedindo poderes constitucionais. Variação: Crítica,reunião pacífica ou jornalismo exigem 359-T; não presumir crime pelo posicionamento político.",
+      "prova": [
+        "Tentar é verbo expresso do tipo? Sim.",
+        "Toda oposição política é abolir violentamente? Não."
+      ],
+      "expected": {
+        "unit_id": "d2d66bbd-c3f6-5dff-9fa5-0b4bb8d37b68",
+        "content_sha256": "48f6b559c8389dbd18e32464fbae2f5efbaf4dfd59edc978c3a0fe0669a3cb29",
+        "simples": "Abolição violenta do Estado Democrático de Direito: tentar, com emprego de violência ou grave ameaça, abolir o Estado Democrático de Direito, impedindo ou restringindo o exercício dos poderes constitucionais. Pena: reclusão de 4 a 8 anos, além da pena correspondente à violência.",
+        "pontos": [
+          "Tentar abolir o Estado Democrático de Direito.",
+          "Com emprego de violência ou grave ameaça.",
+          "Impedindo ou restringindo o exercício dos poderes constitucionais.",
+          "Reclusão de 4 a 8 anos, além da pena da violência."
+        ],
+        "atencao": [
+          "Crime de atentado: a TENTATIVA já é o tipo consumado."
+        ],
+        "exemplo": "Grupo usa violência para impedir o funcionamento dos poderes constitucionais.",
+        "prova": [
+          "Assertiva que reduz a pena pela tentativa no art. 359-L erra: o tipo já descreve a tentativa."
+        ],
+        "termos": [
+          {
+            "termo": "Crime de atentado",
+            "significado": "Tentativa punida com a mesma pena do crime consumado."
+          }
+        ],
+        "remissoes": [
+          "Art. 359-M"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-m",
+      "unit_id": "87fbb195-f90a-5318-8361-9d56e8cb78e9",
+      "content_sha256": "b4d6cc68721ea7ac7bf9ef50d53b4d48fc416c061f09e76aa02fbe480c9de819",
+      "simples": "Golpe de Estado: tentar depor, por meio de violência ou grave ameaça, o governo legitimamente constituído. Pena: reclusão de 4 a 12 anos, além da pena correspondente à violência.",
+      "pontos": [
+        "Tentar depor o governo legitimamente constituído.",
+        "Por violência ou grave ameaça.",
+        "Reclusão de 4 a 12 anos, além da pena da violência."
+      ],
+      "atencao": [
+        "Também crime de atentado.",
+        "Lei 14.197/2021 substituiu regime da antiga Lei de Segurança Nacional com vacância própria; não retroagir agravamento. Integrar 359-T e direitos constitucionais,sem criminalizar oposição,jornalismo ou manifestação legítima por rótulo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-L"
+      ],
+      "exemplo": "Agente tenta depor governo legitimamente constituído por grave ameaça. Variação: Discordância eleitoral ou manifestação constitucional legítima não prova tentativa violenta.",
+      "prova": [
+        "Deposição precisa ocorrer para a conduta expressa? Não.",
+        "A pena do caput é igual à do 359-L? Não;limite máximo distinto."
+      ],
+      "expected": {
+        "unit_id": "87fbb195-f90a-5318-8361-9d56e8cb78e9",
+        "content_sha256": "b4d6cc68721ea7ac7bf9ef50d53b4d48fc416c061f09e76aa02fbe480c9de819",
+        "simples": "Golpe de Estado: tentar depor, por meio de violência ou grave ameaça, o governo legitimamente constituído. Pena: reclusão de 4 a 12 anos, além da pena correspondente à violência.",
+        "pontos": [
+          "Tentar depor o governo legitimamente constituído.",
+          "Por violência ou grave ameaça.",
+          "Reclusão de 4 a 12 anos, além da pena da violência."
+        ],
+        "atencao": [
+          "Também crime de atentado."
+        ],
+        "exemplo": "Grupo tenta, pela força, afastar o governo eleito.",
+        "prova": [
+          "Assertiva que exige que o governo seja efetivamente deposto no art. 359-M erra: a tentativa já consuma o crime."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-L"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-m--2",
+      "unit_id": "3bfe99db-e8b0-5ad6-a321-4dbc6005c46e",
+      "content_sha256": "d042813cb1b603d343531877631ee68fc7d79e141113bf15d5ed766969f72c45",
+      "simples": "Texto compilado de 359-M-A, incluído por Lei 15.402/2026: prevê concurso formal próprio para delitos deste Capítulo no mesmo contexto,mesmo com desígnio autônomo,sem cúmulo material. Distinguir texto legislativo e aplicação judicial: há controle constitucional e suspensão nas execuções específicas listadas na notícia oficial,sem certificação de mérito posterior ou benefício universal.",
+      "pontos": [
+        "Regra textual específica do mesmo Capítulo e mesmo contexto.",
+        "Remete à primeira parte do 70 e veda os cúmulos expressamente indicados.",
+        "Não aplicar automaticamente em processo sujeito à suspensão/decisão judicial; consultar controle constitucional atual."
+      ],
+      "atencao": [
+        "Evita a soma das penas: aplica-se a mais grave, aumentada.",
+        "Lei 15.402/2026: notícia oficial de 9/5/2026 registra ADIs 7966/7967 e suspensão nas EPs 41,134,100,102,43,52,61 e 72. Notícia de 11/5 registra também ADIs 7968/7969. Não certificada decisão de mérito final posterior nem suspensão nacional de toda execução. Texto compilado não autoriza exercício de aplicação automática do benefício."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 69",
+        "Art. 70",
+        "https://noticias.stf.jus.br/postsnoticias/relator-suspende-aplicacao-da-lei-da-dosimetria-a-execucoes-penais-no-stf/"
+      ],
+      "exemplo": "Texto de 359-M-A indica concurso formal próprio para delitos do capítulo no mesmo contexto. Variação: Notícia oficial de 9/5/2026 registra suspensão nas execuções específicas listadas; não apresentar benefício como universal definitivo.",
+      "prova": [
+        "A regra textual autoriza soma irrestrita nesse recorte? Não.",
+        "Pode aplicá-la automaticamente a toda execução apesar de decisão judicial? Não."
+      ],
+      "expected": {
+        "unit_id": "3bfe99db-e8b0-5ad6-a321-4dbc6005c46e",
+        "content_sha256": "d042813cb1b603d343531877631ee68fc7d79e141113bf15d5ed766969f72c45",
+        "simples": "Regra de aplicação da pena (art. 359-M-A): quando os delitos deste Capítulo estão inseridos no mesmo contexto, a pena deverá ser aplicada, ainda que existente desígnio autônomo, na forma do concurso formal próprio de que trata a primeira parte do art. 70, vedando-se a aplicação do cômputo cumulativo previsto na segunda parte desse dispositivo e no art. 69.",
+        "pontos": [
+          "Delitos do Capítulo no mesmo contexto.",
+          "Aplica-se o concurso formal PRÓPRIO (primeira parte do art. 70), mesmo com desígnio autônomo.",
+          "Vedado o cúmulo da segunda parte do art. 70 e do art. 69."
+        ],
+        "atencao": [
+          "Evita a soma das penas: aplica-se a mais grave, aumentada."
+        ],
+        "exemplo": "Vários crimes do Capítulo no mesmo contexto: aplica-se o concurso formal próprio, e não a soma das penas.",
+        "prova": [
+          "Assertiva que manda somar as penas dos crimes do Capítulo no mesmo contexto erra: aplica-se o concurso formal próprio."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 69",
+          "Art. 70"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-m--3",
+      "unit_id": "c6d5c6e0-08f1-5f09-8710-442e7cc67c7e",
+      "content_sha256": "0dc51c655d68e13414f94143fca425fec3af6fb3c35c49f1e0cb8f5d4314a611",
+      "simples": "Texto compilado de 359-M-B, incluído por Lei 15.402/2026: prevê redução 1/3 a 2/3 no contexto de multidão,sem financiamento ou liderança. Aplicação concreta exige decisões pertinentes: notícia oficial registra suspensão em execuções específicas e ADIs; não certificado desfecho final posterior ou benefício automático.",
+      "pontos": [
+        "Requisitos textuais: delitos deste Capítulo,multidão,não financiamento/não liderança.",
+        "Fração prevista 1/3 a 2/3,sem redução automática por mera presença física.",
+        "Distinguir previsão legislativa e aplicação judicial,observando decisões e controle constitucional."
+      ],
+      "atencao": [
+        "Financiadores e líderes NÃO têm a redução.",
+        "Lei 15.402/2026: notícia oficial de 9/5/2026 registra ADIs 7966/7967 e suspensão nas EPs 41,134,100,102,43,52,61 e 72. Notícia de 11/5 registra também ADIs 7968/7969. Não certificada decisão de mérito final posterior nem suspensão nacional de toda execução. Texto compilado não autoriza exercício de aplicação automática do benefício."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-M-A",
+        "https://noticias.stf.jus.br/postsnoticias/relator-suspende-aplicacao-da-lei-da-dosimetria-a-execucoes-penais-no-stf/"
+      ],
+      "exemplo": "Texto de 359-M-B prevê redução em contexto de multidão sem financiamento nem liderança. Variação: Liderança/financiamento afasta condição textual; controle constitucional e decisões aplicáveis impedem benefício automático.",
+      "prova": [
+        "Fração textual é 1/3 a 2/3? Sim.",
+        "Estar em multidão garante redução definitiva em qualquer processo? Não."
+      ],
+      "expected": {
+        "unit_id": "c6d5c6e0-08f1-5f09-8710-442e7cc67c7e",
+        "content_sha256": "0dc51c655d68e13414f94143fca425fec3af6fb3c35c49f1e0cb8f5d4314a611",
+        "simples": "Redução de pena em contexto de multidão (art. 359-M-B): quando os crimes previstos neste Capítulo forem praticados em contexto de multidão, a pena será reduzida de 1/3 a 2/3, desde que o agente não tenha praticado ato de financiamento ou exercido papel de liderança.",
+        "pontos": [
+          "Crimes do Capítulo praticados em contexto de multidão.",
+          "Redução de 1/3 a 2/3.",
+          "Condição: o agente não ter financiado nem exercido papel de liderança."
+        ],
+        "atencao": [
+          "Financiadores e líderes NÃO têm a redução."
+        ],
+        "exemplo": "Participante de multidão, sem liderança nem financiamento, tem a pena reduzida.",
+        "prova": [
+          "Assertiva que concede a redução ao líder da multidão erra: ele não tem direito."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-M-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-n",
+      "unit_id": "82f73b6e-339f-50ea-9a27-b537b74f597e",
+      "content_sha256": "d4eaebc87554479454b2688001a48dfb4aeb17f8a23c1cea0f863036486d65d2",
+      "simples": "Interrupção do processo eleitoral: impedir ou perturbar a eleição ou a aferição de seu resultado, mediante violação indevida de mecanismos de segurança do sistema eletrônico de votação estabelecido pela Justiça Eleitoral. Pena: reclusão de 3 a 6 anos e multa.",
+      "pontos": [
+        "Impedir ou perturbar a eleição ou a aferição de seu resultado.",
+        "Violação indevida de mecanismos de segurança do sistema eletrônico de votação.",
+        "Reclusão de 3 a 6 anos e multa."
+      ],
+      "atencao": [
+        "O meio é a violação de mecanismos de segurança do sistema eletrônico de votação.",
+        "Lei 14.197/2021 substituiu regime da antiga Lei de Segurança Nacional com vacância própria; não retroagir agravamento. Integrar 359-T e direitos constitucionais,sem criminalizar oposição,jornalismo ou manifestação legítima por rótulo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-L"
+      ],
+      "exemplo": "Mecanismo de segurança de votação é violado para perturbar aferição do resultado. Variação: Debate sobre eleições ou erro técnico sem elementos típicos não prova esse crime.",
+      "prova": [
+        "Violação indevida do mecanismo importa? Sim.",
+        "Toda crítica ao resultado configura interrupção eleitoral? Não."
+      ],
+      "expected": {
+        "unit_id": "82f73b6e-339f-50ea-9a27-b537b74f597e",
+        "content_sha256": "d4eaebc87554479454b2688001a48dfb4aeb17f8a23c1cea0f863036486d65d2",
+        "simples": "Interrupção do processo eleitoral: impedir ou perturbar a eleição ou a aferição de seu resultado, mediante violação indevida de mecanismos de segurança do sistema eletrônico de votação estabelecido pela Justiça Eleitoral. Pena: reclusão de 3 a 6 anos e multa.",
+        "pontos": [
+          "Impedir ou perturbar a eleição ou a aferição de seu resultado.",
+          "Violação indevida de mecanismos de segurança do sistema eletrônico de votação.",
+          "Reclusão de 3 a 6 anos e multa."
+        ],
+        "atencao": [
+          "O meio é a violação de mecanismos de segurança do sistema eletrônico de votação."
+        ],
+        "exemplo": "Invadir o sistema eletrônico de votação para perturbar a apuração.",
+        "prova": [
+          "Assertiva que dispensa a violação de mecanismos de segurança do sistema eletrônico erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-L"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-p",
+      "unit_id": "d8ec92a0-2be9-5d14-a1fa-075286500b5d",
+      "content_sha256": "a15e1e6cf878d9ed9da800909416d8bf55e0e28a17e01136a7bf2d1e6926438f",
+      "simples": "Violência política: restringir, impedir ou dificultar, com emprego de violência física, sexual ou psicológica, o exercício de direitos políticos a qualquer pessoa em razão de seu sexo, raça, cor, etnia, religião ou procedência nacional. Pena: reclusão de 3 a 6 anos e multa, além da pena correspondente à violência.",
+      "pontos": [
+        "Restringir, impedir ou dificultar o exercício de direitos políticos.",
+        "Com violência física, sexual ou psicológica.",
+        "Em razão de sexo, raça, cor, etnia, religião ou procedência nacional.",
+        "Reclusão de 3 a 6 anos e multa, além da pena da violência."
+      ],
+      "atencao": [
+        "A motivação discriminatória é elemento do tipo.",
+        "Lei 14.197/2021 substituiu regime da antiga Lei de Segurança Nacional com vacância própria; não retroagir agravamento. Integrar 359-T e direitos constitucionais,sem criminalizar oposição,jornalismo ou manifestação legítima por rótulo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-N"
+      ],
+      "exemplo": "Violência psicológica impede direito político por motivo de raça. Variação: Conflito político sem motivação discriminatória e violência típica exige outro enquadramento.",
+      "prova": [
+        "Protege só candidatas mulheres? Não;qualquer pessoa no recorte legal.",
+        "Violência sexual também é meio expresso? Sim."
+      ],
+      "expected": {
+        "unit_id": "d8ec92a0-2be9-5d14-a1fa-075286500b5d",
+        "content_sha256": "a15e1e6cf878d9ed9da800909416d8bf55e0e28a17e01136a7bf2d1e6926438f",
+        "simples": "Violência política: restringir, impedir ou dificultar, com emprego de violência física, sexual ou psicológica, o exercício de direitos políticos a qualquer pessoa em razão de seu sexo, raça, cor, etnia, religião ou procedência nacional. Pena: reclusão de 3 a 6 anos e multa, além da pena correspondente à violência.",
+        "pontos": [
+          "Restringir, impedir ou dificultar o exercício de direitos políticos.",
+          "Com violência física, sexual ou psicológica.",
+          "Em razão de sexo, raça, cor, etnia, religião ou procedência nacional.",
+          "Reclusão de 3 a 6 anos e multa, além da pena da violência."
+        ],
+        "atencao": [
+          "A motivação discriminatória é elemento do tipo."
+        ],
+        "exemplo": "Impedir, com violência, que uma candidata exerça seus direitos políticos por ser mulher.",
+        "prova": [
+          "Assertiva que dispensa a motivação discriminatória no art. 359-P erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-N"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-r",
+      "unit_id": "3933654a-f46a-5b54-ad1d-294cbcff7220",
+      "content_sha256": "02a06040385f6cdc2d562a99ae054426357fa582901dd845352079f7fda97207",
+      "simples": "Sabotagem: destruir ou inutilizar meios de comunicação ao público, estabelecimentos, instalações ou serviços destinados à defesa nacional, com o fim de abolir o Estado Democrático de Direito. Pena: reclusão de 2 a 8 anos.",
+      "pontos": [
+        "Destruir ou inutilizar meios de comunicação ao público, estabelecimentos, instalações ou serviços de defesa nacional.",
+        "Fim de abolir o Estado Democrático de Direito.",
+        "Reclusão de 2 a 8 anos."
+      ],
+      "atencao": [
+        "Exige o fim específico de abolir o Estado Democrático de Direito.",
+        "Lei 14.197/2021 substituiu regime da antiga Lei de Segurança Nacional com vacância própria; não retroagir agravamento. Integrar 359-T e direitos constitucionais,sem criminalizar oposição,jornalismo ou manifestação legítima por rótulo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-L"
+      ],
+      "exemplo": "Instalação destinada à defesa nacional é destruída para abolir Estado Democrático. Variação: Dano sem essa finalidade não é automaticamente este tipo; eventual outro crime precisa ser identificado.",
+      "prova": [
+        "Fim de abolir importa? Sim.",
+        "Toda falha em serviço público é sabotagem do 359-R? Não."
+      ],
+      "expected": {
+        "unit_id": "3933654a-f46a-5b54-ad1d-294cbcff7220",
+        "content_sha256": "02a06040385f6cdc2d562a99ae054426357fa582901dd845352079f7fda97207",
+        "simples": "Sabotagem: destruir ou inutilizar meios de comunicação ao público, estabelecimentos, instalações ou serviços destinados à defesa nacional, com o fim de abolir o Estado Democrático de Direito. Pena: reclusão de 2 a 8 anos.",
+        "pontos": [
+          "Destruir ou inutilizar meios de comunicação ao público, estabelecimentos, instalações ou serviços de defesa nacional.",
+          "Fim de abolir o Estado Democrático de Direito.",
+          "Reclusão de 2 a 8 anos."
+        ],
+        "atencao": [
+          "Exige o fim específico de abolir o Estado Democrático de Direito."
+        ],
+        "exemplo": "Destruir instalação de defesa nacional para abolir o Estado Democrático de Direito.",
+        "prova": [
+          "Assertiva que dispensa o fim específico de abolir o Estado Democrático de Direito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-L"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359-t",
+      "unit_id": "8e437c5d-01cf-5cde-b895-e6bed7cdde65",
+      "content_sha256": "e98714619d23bc6e3207122c9ff2850a83ea5e26eaa208d7caa11c88ace00006",
+      "simples": "Exclusão de crime: não constitui crime previsto neste Título a manifestação crítica aos poderes constitucionais nem a atividade jornalística ou a reivindicação de direitos e garantias constitucionais por meio de passeatas, de reuniões, de greves, de aglomerações ou de qualquer outra forma de manifestação política com propósitos sociais.",
+      "pontos": [
+        "Não é crime a manifestação crítica aos poderes constitucionais.",
+        "Nem a atividade jornalística.",
+        "Nem a reivindicação de direitos por passeatas, reuniões, greves, aglomerações ou outras manifestações políticas com propósitos sociais."
+      ],
+      "atencao": [
+        "Garante a liberdade de manifestação política com propósitos sociais.",
+        "Lei 14.197/2021 substituiu regime da antiga Lei de Segurança Nacional com vacância própria; não retroagir agravamento. Integrar 359-T e direitos constitucionais,sem criminalizar oposição,jornalismo ou manifestação legítima por rótulo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 359-L",
+        "Art. 359-M"
+      ],
+      "exemplo": "Jornalista critica poderes constitucionais ou noticia fatos no âmbito legítimo. Variação: A ressalva não autoriza presumir violência típica como crítica, nem criminalizar manifestação pacífica por rótulo.",
+      "prova": [
+        "Crítica aos poderes é expressamente resguardada? Sim.",
+        "O artigo cria imunidade geral para todo crime do CP? Não;refere-se ao Título."
+      ],
+      "expected": {
+        "unit_id": "8e437c5d-01cf-5cde-b895-e6bed7cdde65",
+        "content_sha256": "e98714619d23bc6e3207122c9ff2850a83ea5e26eaa208d7caa11c88ace00006",
+        "simples": "Exclusão de crime: não constitui crime previsto neste Título a manifestação crítica aos poderes constitucionais nem a atividade jornalística ou a reivindicação de direitos e garantias constitucionais por meio de passeatas, de reuniões, de greves, de aglomerações ou de qualquer outra forma de manifestação política com propósitos sociais.",
+        "pontos": [
+          "Não é crime a manifestação crítica aos poderes constitucionais.",
+          "Nem a atividade jornalística.",
+          "Nem a reivindicação de direitos por passeatas, reuniões, greves, aglomerações ou outras manifestações políticas com propósitos sociais."
+        ],
+        "atencao": [
+          "Garante a liberdade de manifestação política com propósitos sociais."
+        ],
+        "exemplo": "Uma greve ou passeata para reivindicar direitos não é crime deste Título.",
+        "prova": [
+          "Assertiva que considera crime do Título qualquer manifestação política com propósitos sociais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359-L",
+          "Art. 359-M"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-360",
+      "unit_id": "a641398c-d254-55c6-a8b1-04ce5fde4c38",
+      "content_sha256": "ea9438a588631aa1da8814246aa1c6bd83d9761392ca60871a3d7bccc3121f41",
+      "simples": "Cláusula de revogação: ressalvada a legislação especial sobre os crimes contra a existência, a segurança e a integridade do Estado e contra a guarda e o emprego da economia popular, os crimes de imprensa e os de falência, os de responsabilidade do Presidente da República e dos Governadores ou Interventores, e os crimes militares, revogam-se as disposições em contrário.",
+      "pontos": [
+        "Revogam-se as disposições em contrário.",
+        "Ressalvam-se leis especiais (segurança do Estado, economia popular, imprensa, falência, crimes de responsabilidade, crimes militares)."
+      ],
+      "atencao": [
+        "Artigo histórico de transição, de pouca incidência prática.",
+        "Dispositivo histórico de revogação/vigência original,não tipo penal autônomo. Não gerar treino literal como lei nova ou validade atual de diploma especial antigo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 12"
+      ],
+      "exemplo": "Cláusula histórica do CP é lida junto à evolução posterior de leis especiais. Variação: A menção histórica a imprensa/segurança não revive leis revogadas ou não recebidas.",
+      "prova": [
+        "Ressalva histórica garante vigência eterna de toda lei citada? Não.",
+        "Cria crime autônomo novo? Não;cláusula revogatória."
+      ],
+      "expected": {
+        "unit_id": "a641398c-d254-55c6-a8b1-04ce5fde4c38",
+        "content_sha256": "ea9438a588631aa1da8814246aa1c6bd83d9761392ca60871a3d7bccc3121f41",
+        "simples": "Cláusula de revogação: ressalvada a legislação especial sobre os crimes contra a existência, a segurança e a integridade do Estado e contra a guarda e o emprego da economia popular, os crimes de imprensa e os de falência, os de responsabilidade do Presidente da República e dos Governadores ou Interventores, e os crimes militares, revogam-se as disposições em contrário.",
+        "pontos": [
+          "Revogam-se as disposições em contrário.",
+          "Ressalvam-se leis especiais (segurança do Estado, economia popular, imprensa, falência, crimes de responsabilidade, crimes militares)."
+        ],
+        "atencao": [
+          "Artigo histórico de transição, de pouca incidência prática."
+        ],
+        "exemplo": "A legislação especial sobre crimes militares continua a valer, ressalvada pelo Código.",
+        "prova": [
+          "Assertiva que revoga a legislação especial sobre crimes militares por este artigo erra: ela é ressalvada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-361",
+      "unit_id": "04ee5bfb-c31a-5d0e-91c7-6a8252fd2d5a",
+      "content_sha256": "a634b7bd07b2cd27b522b4c7ef28662b31a17049b1d0dae6cc529244a01a4576",
+      "simples": "Vigência: este Código entrou em vigor em 1º de janeiro de 1942, data que consta do próprio texto. O dispositivo é uma cláusula histórica de vigência, sem aplicação prática atual.",
+      "pontos": [
+        "Cláusula de vigência do Código Penal original.",
+        "Sem aplicação prática atual."
+      ],
+      "atencao": [
+        "Dispositivo meramente histórico.",
+        "Dispositivo histórico de revogação/vigência original,não tipo penal autônomo. Não gerar treino literal como lei nova ou validade atual de diploma especial antigo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 1º"
+      ],
+      "exemplo": "O Código original entrou em vigor em 1/1/1942, após diploma de 7/12/1940. Variação: Alteração penal de 2026 tem vigência própria; não usar 1942 como data de toda redação atual.",
+      "prova": [
+        "Data original e data de atualização são iguais? Não.",
+        "Conferência editorial de 2026 é a data de criação do Código? Não."
+      ],
+      "expected": {
+        "unit_id": "04ee5bfb-c31a-5d0e-91c7-6a8252fd2d5a",
+        "content_sha256": "a634b7bd07b2cd27b522b4c7ef28662b31a17049b1d0dae6cc529244a01a4576",
+        "simples": "Vigência: este Código entrou em vigor em 1º de janeiro de 1942, data que consta do próprio texto. O dispositivo é uma cláusula histórica de vigência, sem aplicação prática atual.",
+        "pontos": [
+          "Cláusula de vigência do Código Penal original.",
+          "Sem aplicação prática atual."
+        ],
+        "atencao": [
+          "Dispositivo meramente histórico."
+        ],
+        "exemplo": "O artigo apenas marca o início de vigência do Código.",
+        "prova": [
+          "Assertiva que atribui ao art. 361 efeito prático sobre crimes hoje em apuração erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:52.550214+00:00"
+      }
+    }
+  ]
+}

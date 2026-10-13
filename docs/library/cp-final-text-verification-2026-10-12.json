@@ -1,0 +1,14 @@
+{
+  "verified_at": "2026-10-13T03:13:16.197876+00:00",
+  "current_units": 401,
+  "text_differences": [],
+  "missing_articles": [],
+  "unexpected_current": [],
+  "source": {
+    "slug": "codigo-penal",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06",
+    "checked_at": "2026-10-12T23:38:16.494220+00:00"
+  },
+  "note": "Comparação final com fonte oficial válida coletada nesta sessão; nova tentativa de coleta no encerramento retornou503,não contada como nova evidência. Hash/scope textual não certificam toda jurisprudência."
+}

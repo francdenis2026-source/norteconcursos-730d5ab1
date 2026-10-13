@@ -963,3 +963,17 @@ test('CP final lote4: textos residuais, multas e hipóteses especiais não geram
  assert.match(get(348).atencao.join(' '),/companheiro.*não certificada/);
  for(const n of [322,326,335,'337-a','337-h','337-j','338-a',348])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
 });
+
+test('CP final lote5: exceções democráticas e suspensão judicial distinguem texto de aplicação',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-final-lote-5-2026-10-12.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,31);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get('359-k').pontos.join(' '),/§4º.*direitos humanos/);
+ assert.match(get('359-h').atencao.join(' '),/ausência de criação.*OU.*ausência de registro/);
+ for(const n of ['359-m--2','359-m--3']){
+  assert.match(get(n).simples,/Texto compilado.*suspensão/s);
+  assert.match(get(n).atencao.join(' '),/9\/5\/2026.*EPs.*41.*não autoriza.*automática/s);
+  assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+ }
+ for(const n of [351,352,'359-k','359-l','359-m','359-t',360,361])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+ assert.match(get(361).exemplo,/1942.*1940.*Variação/s);
+});
