@@ -1,13 +1,15 @@
-# Revisão CPP — ponto de retomada
+# CPP — revisão editorial das unidades atuais concluída
 
-Atualização posterior:775/808 revisadas;33 pendentes,780–811 e798-A. 474-A e761–779 foram publicados e relidos no bloco security-execution. O JSON de progresso contém a lista vigente. Novo limite solicitado: parar próximo de2% disponível. Quatrocentos testes e TypeScript aprovados. As informações abaixo preservam o checkpoint anterior; não representam a contagem atual.
+Estado confirmado no Supabase em 13/10/2026: **808/808 unidades atuais com aprovação editorial válida; zero pendências nesse inventário**. O encerramento acrescentou 33 revisões, dos arts. 780–811 e 798-A. As 775 anteriores foram preservadas integralmente. A contagem considera publicação, revisor, data e hash correspondente ao texto atual; não é contagem de questões do treinador.
 
-Estado confirmado no Supabase:755 de808 unidades com aprovação editorial atual (revisor, data, publicação e hash correspondente);53 pendentes. O arquivo `cpp-review-progress-2026-10-13.json` contém a lista exata. Há52 unidades a partir do761, incluindo798-A, e uma pendência do júri:474-A. Não declarar todos os artigos anteriores ao761 integralmente concluídos enquanto essa pendência existir.
+O lote final distingue homologação e rogatória, competência atual do STJ e execução federal, canais de cooperação, publicidade e defesa, calendário, suspensão de prazos, custas, funções cartorárias e disposições históricas. Cada unidade tem caso resolvido, variação, dois exercícios respondidos com explicação e termo definido. Alertas na aplicação impedem exercícios literais automáticos que ensinem competências, penas ou sanções históricas como regras atuais.
 
-Últimos blocos: habeas corpus32, execução33, sursis/livramento31, clemência/reabilitação28. Todos publicados com comparação da revisão anterior e leitura integral após gravação. Texto legal preservado; casos, variações, duas perguntas e termos revisados individualmente. Atualizações das outras contas em CP/LEP foram preservadas na integração.
+A gravação confirmou 33/33, hashes e todos os campos autorais. As 3.480 explicações fora do lote, todos os dispositivos e as seis outras tabelas protegidas ficaram intactos. Nenhuma atualização concorrente foi observada entre os snapshots deste lote.
 
-Retomar primeiro474-A (dignidade da vítima/testemunhas, Lei14.245/2021), depois761–779 (medidas de segurança),780–790 (cooperação internacional) e disposições finais até811. Conferir competência atual do STJ para homologação/exequatur, CP/LEP, política de saúde mental do CNJ, prazos e798-A. Fontes já consultadas para retomada não equivalem a revisão publicada desses dispositivos.
+O texto compilado oficial do CPP foi obtido nesta sessão em 12/10; uma nova requisição retornou 503. A evidência original, sua data e seu hash foram preservados. A comparação HTML5 dos 808 dispositivos com o banco não encontrou diferenças. Fontes complementares oficiais do STJ, MJ e STF foram consultadas em 13/10. O PDF integral do RISTJ ficou inacessível; não foram inventados prazos atuais em substituição aos históricos. As limitações e os hashes estão em `cpp-final-review-2026-10-13.json`.
 
-O encerramento foi determinado pela regra do usuário de parar com aproximadamente5% de limite restante. Não foi certificado o término do CPP nem de toda regulamentação/jurisprudência. PDFs, fontes brutas e snapshots permanecem nos outputs locais; credenciais não estão nos arquivos versionados.
+**808/808 significa aprovação editorial das unidades existentes**, sem certificar toda jurisprudência, cada tratado, todas as tabelas de custas ou futura mudança normativa. Os blocos anteriores estão documentados em seus relatórios próprios.
 
-Validação final da integração:399 testes aprovados; TypeScript e build verificados no fechamento. Nenhuma inspeção visual de produção é certificada por esses testes.
+Validação: 408 testes, TypeScript e build de produção aprovados. Fontes brutas, snapshots e logs ficam nos outputs ignorados; credenciais não são versionadas. A correção da busca por artigo foi enviada separadamente no commit `3487b78`; o arquivo servido pela plataforma pública já contém a correção, sem certificação de uma sessão visual autenticada.
+
+Inventário geral após o lote: **2.460/3.511 revisadas; 1.051 pendentes**. Restam CTB 348, ECA 322, Lei de Migração 123, LEP 109, Juizados Especiais 98 e Convenção de Budapeste 51. Outras disciplinas não são abrangidas por essa contagem.

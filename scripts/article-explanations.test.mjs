@@ -1,4 +1,32 @@
 import test from 'node:test';
+test('CPP final integrates current STJ competence and rejects historical automatic drills',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-final-2026-10-13.json','utf8'));validateArticlePackage(p);
+ assert.equal(p.units.length,33);assert.equal(p.laws[0].scope_type,'targeted_correction');
+ assert.equal(p.laws[0].course_current_units,808);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(784).simples,/STJ.*105.*Justiça|STJ.*105.*federal/s);
+ assert.match(get(787).simples,/CP 9.*efeitos civis.*medida de segurança/);
+ assert.match(get(789).simples,/Não ensinar.*10\/30/);
+ assert.match(get(803).atencao.join(' '),/ADI 7231/);
+ assert.match(get(801).atencao.join(' '),/Devido processo/);
+ for(const row of p.units){
+  assert.equal(legalStudyCaveat('codigo-processo-penal',row.unit_key).literalPractice,false);
+  assert.ok(row.expected&&row.expected.unit_id===row.unit_id);
+  assert.ok(explanationExample(row.exemplo).variation);
+  assert.equal(row.prova.length,2);
+  for(const q of row.prova)assert.ok(explanationPractice(q)?.answer.length>45,'explanation rather than bare yes/no');
+ }
+});
+test('CPP final teaches deadline continuity with explicit suspension and functional exceptions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-final-2026-10-13.json','utf8'));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(798).exemplo,/terça.*quarta.*domingo.*prorroga/s);
+ assert.match(get('798-a').simples,/20 de dezembro.*20 de janeiro.*vinculado.*Maria da Penha.*urgente/s);
+ assert.match(get('798-a').pontos.join(' '),/saldo.*não reinicia/);
+ assert.match(get(800).pontos.join(' '),/dez.*cinco.*um.*igual tempo/s);
+ assert.match(get(809).pontos.join(' '),/trimestre.*semestral.*1995/s);
+ assert.match(get(810).simples,/1942.*não é.*alteração/);
+});
 test('CPP medidas e dignidade não recuperam exílio ou confisco universal',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-security-execution-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,20);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);

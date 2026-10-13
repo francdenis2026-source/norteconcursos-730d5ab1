@@ -7,3 +7,5 @@ Agora a busca normaliza acentos e maiúsculas, aceita números de artigo (inclus
 O alcance é o rótulo, capítulo e texto dos dispositivos da matéria aberta. A correção não altera o texto legal, explicações, progresso ou banco de dados.
 
 Validação: 405 testes aprovados, incluindo regressões de seleção e renderização da tela para “estupro”, ausência de resultados, acentos, artigos e grifos; TypeScript e build de produção aprovados. A validação da tela usou renderização com dados controlados, sem acesso à sessão autenticada do candidato na plataforma pública.
+
+Envio à main: `3487b78`. Em 13/10/2026 às 05:30 UTC, o arquivo público `/assets/legal-course._slug-DHTBHON_.js` retornou 200 e contém o trecho destacado, a limpeza de filtros e o estado de ausência de resultados. Isso confirma a disponibilização do código da correção; não é uma inspeção visual da sessão do candidato.

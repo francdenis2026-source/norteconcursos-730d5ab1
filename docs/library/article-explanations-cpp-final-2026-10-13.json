@@ -1,0 +1,2025 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T05:26:45.459923+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 33,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-780",
+        "art-781",
+        "art-782",
+        "art-783",
+        "art-784",
+        "art-785",
+        "art-786",
+        "art-787",
+        "art-788",
+        "art-789",
+        "art-790",
+        "art-791",
+        "art-792",
+        "art-793",
+        "art-794",
+        "art-795",
+        "art-796",
+        "art-797",
+        "art-798",
+        "art-798-a",
+        "art-799",
+        "art-800",
+        "art-801",
+        "art-802",
+        "art-803",
+        "art-804",
+        "art-805",
+        "art-806",
+        "art-807",
+        "art-808",
+        "art-809",
+        "art-810",
+        "art-811"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "6f5bdd2bba16060b80b305d4c19014b7b16ecd3781bf48df1e2649611f8be34e",
+      "source_checked_at": "2026-10-12T03:15:23.450687+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-780",
+      "unit_id": "42718e0c-fc60-5e9b-9668-c35484ec8338",
+      "content_sha256": "3d8041e372c4397f540b407f46f869d5ebcd0b9ec23068bea68f51f7017d7120",
+      "simples": "O título trata de homologação e rogatórias penais, sem afastar instrumentos internacionais aplicáveis. Integrar competência constitucional e procedimento atual de cooperação.",
+      "pontos": [
+        "Identificar objeto: reconhecer decisão ou cumprir diligência.",
+        "Tratado aplicável e legislação atual devem ser verificados, sem presumir que toda cláusula histórica governa qualquer pedido."
+      ],
+      "atencao": [
+        "Não tratar tratado como autorização para afastar Constituição, garantias ou requisitos indiscriminadamente. Não certificada vigência de todo tratado bilateral."
+      ],
+      "exemplo": "Juízo pede oitiva de testemunha no exterior: identificar instrumento e canal de cooperação adequado, sem chamar isso de homologação da condenação. Variação: Reconhecer efeitos de decisão estrangeira exige procedimento e pressupostos próprios, não mera carta para ouvir testemunha.",
+      "prova": [
+        "Uma carta para ouvir testemunha no exterior homologa a condenação? Não. É pedido de diligência; reconhecimento dos efeitos da sentença tem objeto e procedimento próprios.",
+        "O título do CPP permite ignorar tratado aplicável? Não. O próprio artigo ressalva convenções e tratados, integrados à Constituição e às normas atuais."
+      ],
+      "termos": [
+        {
+          "termo": "Cooperação jurídica internacional",
+          "significado": "Atuação entre autoridades de Estados para atos e efeitos jurídicos no regime pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira",
+        "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/cooperacao-juridica-internacional-em-materia-penal"
+      ],
+      "expected": {
+        "unit_id": "42718e0c-fc60-5e9b-9668-c35484ec8338",
+        "content_sha256": "3d8041e372c4397f540b407f46f869d5ebcd0b9ec23068bea68f51f7017d7120",
+        "simples": "Sem prejuízo de convenções ou tratados, aplicar-se-á o disposto neste Título à homologação de sentenças penais estrangeiras e à expedição e ao cumprimento de cartas rogatórias para citações, inquirições e outras diligências necessárias à instrução de processo penal.",
+        "pontos": [
+          "O Título rege a homologação de sentenças penais estrangeiras.",
+          "Rege também as cartas rogatórias, sem prejuízo de tratados."
+        ],
+        "atencao": [
+          "Tratados e convenções prevalecem."
+        ],
+        "exemplo": "A carta rogatória para ouvir testemunha no exterior segue este Título, salvo tratado.",
+        "prova": [
+          "Assertiva que afasta os tratados internacionais em favor do CPP erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 783"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-781",
+      "unit_id": "db80f896-0540-5019-9dde-8f485fd7ac67",
+      "content_sha256": "1158652519e6b096be778c2325cafe6399e98accd4d5a415a700e94b852f0bd1",
+      "simples": "Ordem pública limita reconhecimento de decisões e cumprimento de diligências estrangeiras, com integração constitucional e garantias atuais.",
+      "pontos": [
+        "Examinar conteúdo e efeitos pertinentes.",
+        "Ordem pública não é autorização para revisar indiscriminadamente todo mérito estrangeiro."
+      ],
+      "atencao": [
+        "Bons costumes não legitima discriminação arbitrária ou juízo moral sem fundamento constitucional. O controle deve seguir o procedimento competente."
+      ],
+      "exemplo": "Pedido estrangeiro exige diligência incompatível com garantia fundamental: a incompatibilidade deve ser examinada pelo órgão competente. Variação: Discordar do resultado sem afronta relevante não transforma homologação em novo julgamento completo.",
+      "prova": [
+        "Basta discordar da conclusão estrangeira para negar reconhecimento? Não. O limite de ordem pública não transforma o procedimento em nova apreciação irrestrita do mérito.",
+        "Bons costumes autorizam discriminação arbitrária? Não. A expressão histórica deve ser interpretada sob direitos e garantias constitucionais."
+      ],
+      "termos": [
+        {
+          "termo": "Ordem pública",
+          "significado": "Limite jurídico de reconhecimento e cooperação, integrado à Constituição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ],
+      "expected": {
+        "unit_id": "db80f896-0540-5019-9dde-8f485fd7ac67",
+        "content_sha256": "1158652519e6b096be778c2325cafe6399e98accd4d5a415a700e94b852f0bd1",
+        "simples": "As sentenças estrangeiras não serão homologadas, nem as cartas rogatórias cumpridas, se contrárias à ordem pública e aos bons costumes.",
+        "pontos": [
+          "Sentenças estrangeiras e cartas rogatórias contrárias à ordem pública e aos bons costumes não são homologadas ou cumpridas."
+        ],
+        "atencao": [
+          "Limite da ordem pública."
+        ],
+        "exemplo": "Uma carta rogatória contrária à ordem pública brasileira não é cumprida.",
+        "prova": [
+          "Assertiva que obriga o cumprimento de carta rogatória contrária à ordem pública erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 780"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-782",
+      "unit_id": "44bb6fac-c3be-5fdf-babc-93e01bfd28bd",
+      "content_sha256": "588d761612fa32e34d4cc0598db443ce96732f50d835f3f12c9f39075a8abe5b",
+      "simples": "O artigo atribui força de autenticidade ao trânsito diplomático; ele não faz dessa via a única forma atual de autenticação de documento estrangeiro.",
+      "pontos": [
+        "Distinguir autenticidade, conteúdo e eficácia.",
+        "Regimes de tratados, dispensas e apostilamento pertinentes precisam ser identificados."
+      ],
+      "atencao": [
+        "Não exigir autenticação consular universal nem aceitar qualquer cópia sem o regime aplicável. Apostila não homologa o mérito da sentença."
+      ],
+      "exemplo": "Documento transmitido pela via diplomática é analisado sob a regra de autenticidade, sem concluir que a condenação já produz qualquer efeito. Variação: Quando instrumento vigente admite outro modo de autenticar, é preciso aplicar suas condições, não invalidar por ausência de trânsito diplomático isolada.",
+      "prova": [
+        "Autenticidade diplomática já torna a sentença executável? Não. Confirmar a origem documental é diferente de reconhecer seus efeitos jurídicos.",
+        "Todo documento estrangeiro exige a mesma legalização consular? Não. O instrumento e o canal de cooperação aplicáveis podem prever tratamento próprio; a orientação do MJ distingue a tramitação por autoridade central."
+      ],
+      "termos": [
+        {
+          "termo": "Autenticidade documental",
+          "significado": "Confirmação formal de origem distinta do reconhecimento dos efeitos da decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira",
+        "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/cooperacao-juridica-internacional-em-materia-penal"
+      ],
+      "expected": {
+        "unit_id": "44bb6fac-c3be-5fdf-babc-93e01bfd28bd",
+        "content_sha256": "588d761612fa32e34d4cc0598db443ce96732f50d835f3f12c9f39075a8abe5b",
+        "simples": "O trânsito, por via diplomática, dos documentos apresentados constituirá prova bastante de sua autenticidade.",
+        "pontos": [
+          "Documentos transmitidos por via diplomática têm autenticidade comprovada."
+        ],
+        "atencao": [
+          "Via diplomática comprova a autenticidade."
+        ],
+        "exemplo": "O documento enviado por via diplomática dispensa outra prova de autenticidade.",
+        "prova": [
+          "Assertiva que exige nova autenticação de documento que tramitou por via diplomática erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 783"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-783",
+      "unit_id": "618c6fb5-d899-598c-a007-59cef977efa8",
+      "content_sha256": "5916f1daf775522b5c45c74549d20a874dc224d8324628aa98c1cf85f720045e",
+      "simples": "A remessa diplomática descrita no CPP deve ser integrada aos canais atuais de cooperação e às autoridades centrais designadas no instrumento aplicável.",
+      "pontos": [
+        "Identificar pedido ativo e Estado destinatário.",
+        "DRCI/MJSP atua na cooperação penal no regime informado pelo órgão oficial."
+      ],
+      "atencao": [
+        "Não ensinar remessa pessoal ao ministro como único canal em todo tratado ou confundir via diplomática com todos os mecanismos atuais."
+      ],
+      "exemplo": "Autoridade brasileira prepara pedido penal para o exterior e confere a autoridade central e requisitos indicados no instrumento aplicável. Variação: Pedido sob outro instrumento pode ter fluxo próprio; não copiar o mesmo percurso burocrático por presunção.",
+      "prova": [
+        "O DRCI substitui o tribunal no julgamento do pedido? Não. A autoridade central exerce funções técnicas e administrativas de cooperação, distintas da atividade jurisdicional.",
+        "A remessa diplomática é o único canal possível hoje? Não. É necessário conferir o instrumento internacional e as orientações da autoridade central, sem universalizar o fluxo histórico."
+      ],
+      "termos": [
+        {
+          "termo": "Autoridade central",
+          "significado": "Órgão designado para receber, transmitir ou acompanhar cooperação no instrumento pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/cooperacao-juridica-internacional-em-materia-penal"
+      ],
+      "expected": {
+        "unit_id": "618c6fb5-d899-598c-a007-59cef977efa8",
+        "content_sha256": "5916f1daf775522b5c45c74549d20a874dc224d8324628aa98c1cf85f720045e",
+        "simples": "As cartas rogatórias serão, pelo respectivo juiz, remetidas ao Ministro da Justiça, a fim de ser pedido o seu cumprimento, por via diplomática, às autoridades estrangeiras competentes.",
+        "pontos": [
+          "Cartas rogatórias remetidas pelo juiz ao Ministro da Justiça.",
+          "Cumprimento pedido por via diplomática."
+        ],
+        "atencao": [
+          "Trâmite por via diplomática."
+        ],
+        "exemplo": "O juiz remete ao Ministro da Justiça a carta rogatória para ouvir testemunha no exterior.",
+        "prova": [
+          "Assertiva que permite ao juiz enviar a carta rogatória diretamente à autoridade estrangeira erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 780"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-784",
+      "unit_id": "41a99b47-6c53-522c-bc1e-45a5d121366b",
+      "content_sha256": "b4713764f9c51f3a50bdf8aba131a773992e94b05a86a2cff36f6d8c792a89c3",
+      "simples": "Carta rogatória não é homologação de sentença. O exequatur cabe hoje ao STJ, conforme CF, art. 105, I, i; a execução do exequatur é competência federal da CF, art. 109, X.",
+      "pontos": [
+        "Referências ao STF e Tribunal de Apelação são históricas.",
+        "Tradução, autenticidade e admissibilidade seguem normas e instrumentos pertinentes.",
+        "Não confundir reconhecimento de decisão com autorização de diligência.",
+        "O §3º trata do impulso pelo interessado e das despesas na hipótese de ação privada segundo a lei brasileira. Integrar instrumento aplicável, sem transformar isso em regra universal de toda cooperação."
+      ],
+      "atencao": [
+        "Não ensinar competência do STF ou cumprimento sempre por juiz criminal estadual. Via diplomática e relação com extradição do texto residual exigem integração; não certificadas todas as hipóteses internacionais."
+      ],
+      "exemplo": "Carta estrangeira pede citação no Brasil: distinguir exequatur no STJ e cumprimento federal, não enviar automaticamente ao STF. Variação: Pedido de reconhecer efeitos de condenação estrangeira exige homologação adequada, em vez de tratar toda decisão como simples rogatória.",
+      "prova": [
+        "O STF concede atualmente exequatur às cartas rogatórias? Não. A CF, art. 105, I, i, atribui essa competência ao STJ desde a EC 45/2004.",
+        "Depois do exequatur, toda carta deve ser cumprida por juiz estadual? Não. A CF, art. 109, X, atribui a execução à Justiça Federal; não repetir o percurso histórico do CPP."
+      ],
+      "termos": [
+        {
+          "termo": "Exequatur",
+          "significado": "Autorização para cumprimento da carta rogatória no regime constitucional atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira",
+        "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/cooperacao-juridica-internacional-em-materia-penal"
+      ],
+      "expected": {
+        "unit_id": "41a99b47-6c53-522c-bc1e-45a5d121366b",
+        "content_sha256": "b4713764f9c51f3a50bdf8aba131a773992e94b05a86a2cff36f6d8c792a89c3",
+        "simples": "As cartas rogatórias emanadas de autoridades estrangeiras competentes não dependem de homologação e serão atendidas se encaminhadas por via diplomática e desde que o crime, segundo a lei brasileira, não exclua a extradição. As rogatórias, acompanhadas de tradução, serão, após exequatur do presidente do Supremo Tribunal Federal, cumpridas pelo juiz criminal do lugar onde as diligências tenham de efetuar-se. A carta rogatória será remetida pelo presidente do STF ao presidente do Tribunal de Apelação do Estado, do Distrito Federal ou do Território. Versando sobre crime de ação privada, o andamento depende do interessado, a quem incumbirá o pagamento das despesas. Ficará sempre na secretaria do STF cópia da carta rogatória.",
+        "pontos": [
+          "Rogatória estrangeira dispensa homologação, mas exige via diplomática e crime que não exclua a extradição.",
+          "Tradução e exequatur do presidente do STF.",
+          "Cumprimento pelo juiz criminal do lugar.",
+          "Crime de ação privada: andamento e despesas pelo interessado.",
+          "Cópia fica no STF."
+        ],
+        "atencao": [
+          "Hoje o exequatur é do Superior Tribunal de Justiça (Emenda Constitucional 45)."
+        ],
+        "exemplo": "A rogatória estrangeira vem por via diplomática e recebe exequatur antes de ser cumprida.",
+        "prova": [
+          "Assertiva que exige homologação das rogatórias estrangeiras erra: elas dependem de exequatur, e não de homologação."
+        ],
+        "termos": [
+          {
+            "termo": "Exequatur",
+            "significado": "Autorização para cumprir no Brasil ato de autoridade estrangeira."
+          }
+        ],
+        "remissoes": [
+          "Art. 783"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-785",
+      "unit_id": "f1fab7de-a4fe-5a27-b6af-f48470ffc273",
+      "content_sha256": "377a42297dfdcbd870b19978035b6a7c97e62c467a4e0a7ca6f1841e5f0c8a95",
+      "simples": "Conclusão, saneamento e devolução de rogatória seguem fluxo atual do STJ, Justiça Federal e instrumento de cooperação aplicável.",
+      "pontos": [
+        "Não reutilizar como órgãos atuais o STF e Tribunal de Apelação da redação antiga.",
+        "Diligência incompleta exige providência competente, sem inventar atos ou suprir defesa."
+      ],
+      "atencao": [
+        "Devolução histórica não pode fixar competência contra a CF. Não certificada toda regulamentação de cada canal internacional."
+      ],
+      "exemplo": "Diligência é concluída e sua documentação encaminhada pelo fluxo competente de cooperação. Variação: Se falta ato essencial, a incompletude precisa ser tratada, sem presumir cumprimento integral pela mera devolução.",
+      "prova": [
+        "A devolução dispensa verificar diligência incompleta? Não. O artigo prevê completar diligências e sanar nulidades, integrado ao fluxo constitucional atual.",
+        "Tribunal de Apelação é o órgão constitucional atual obrigatório desse fluxo? Não. A denominação é histórica; observar STJ, Justiça Federal e o canal pertinente."
+      ],
+      "termos": [
+        {
+          "termo": "Devolução da rogatória",
+          "significado": "Encerramento e remessa da diligência pelo canal pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira",
+        "https://www.gov.br/mj/pt-br/assuntos/sua-protecao/cooperacao-internacional/cooperacao-juridica-internacional-em-materia-penal"
+      ],
+      "expected": {
+        "unit_id": "f1fab7de-a4fe-5a27-b6af-f48470ffc273",
+        "content_sha256": "377a42297dfdcbd870b19978035b6a7c97e62c467a4e0a7ca6f1841e5f0c8a95",
+        "simples": "Concluídas as diligências, a carta rogatória será devolvida ao presidente do Supremo Tribunal Federal, por intermédio do presidente do Tribunal de Apelação, o qual, antes de devolvê-la, mandará completar qualquer diligência ou sanar qualquer nulidade.",
+        "pontos": [
+          "Rogatória cumprida volta ao presidente do STF, por intermédio do presidente do Tribunal de Apelação.",
+          "O presidente completa diligências ou sana nulidades antes de devolver."
+        ],
+        "atencao": [
+          "Devolução com saneamento."
+        ],
+        "exemplo": "Antes de devolver a rogatória, o presidente do tribunal manda completar uma diligência.",
+        "prova": [
+          "Assertiva que dispensa o saneamento de nulidades antes da devolução erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 784"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-786",
+      "unit_id": "55111811-123d-53e4-9c87-99765bd10d60",
+      "content_sha256": "2143f7bdc7ebdcafa3fec81fdd009fec76accd5cd392451d8421a6064c1aacbe",
+      "simples": "O cumprimento da diligência deve observar prazo fixado e eventual justa causa devidamente documentada, integrando o órgão constitucional atual.",
+      "pontos": [
+        "Prazo razoável não significa prazo arbitrário ou indefinido.",
+        "Justificativa e comunicação devem chegar à autoridade competente no fluxo vigente."
+      ],
+      "atencao": [
+        "Não direcionar comunicação ao STF apenas por referência histórica nem presumir que qualquer atraso fica automaticamente autorizado."
+      ],
+      "exemplo": "Diligência não pôde ser concluída por obstáculo comprovado; o órgão comunica justificativa e providência pertinente. Variação: Demora sem causa documentada não é validada pelo simples rótulo razoável.",
+      "prova": [
+        "O exequatur fixa sempre um número uniforme de dias? Não. O texto prevê prazo razoável fixado no despacho, conforme a diligência.",
+        "Qualquer demora é automaticamente permitida? Não. A exceção depende de justa causa consignada e comunicação no fluxo competente atual."
+      ],
+      "termos": [
+        {
+          "termo": "Justa causa documentada",
+          "significado": "Motivo verificável para atraso, submetido à autoridade competente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ],
+      "expected": {
+        "unit_id": "55111811-123d-53e4-9c87-99765bd10d60",
+        "content_sha256": "2143f7bdc7ebdcafa3fec81fdd009fec76accd5cd392451d8421a6064c1aacbe",
+        "simples": "O despacho que conceder o exequatur marcará, para o cumprimento da diligência, prazo razoável, que poderá ser excedido, havendo justa causa, ficando esta consignada em ofício dirigido ao presidente do Supremo Tribunal Federal, juntamente com a carta rogatória.",
+        "pontos": [
+          "Exequatur fixa prazo razoável para o cumprimento.",
+          "Pode ser excedido por justa causa, consignada em ofício ao presidente do STF."
+        ],
+        "atencao": [
+          "Justa causa registrada em ofício."
+        ],
+        "exemplo": "O prazo da diligência é excedido, e a justa causa é informada em ofício.",
+        "prova": [
+          "Assertiva que veda qualquer excesso do prazo fixado no exequatur erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 784"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-787",
+      "unit_id": "1999cfd3-fcb0-5a2a-b189-c0f1a97da208",
+      "content_sha256": "bfb760762ec57777e8c149e6a6d4d9bfd17c9aeab8cecc320f134afe201168b3",
+      "simples": "Homologação de decisão estrangeira é competência do STJ. A remissão ao antigo CP 7 deve ser confrontada com CP 9 atual para efeitos civis e medida de segurança.",
+      "pontos": [
+        "CP 9 distingue pedido do interessado e condições dos demais efeitos.",
+        "Homologação não equivale automaticamente a toda execução de pena estrangeira.",
+        "CP 9: consequências equivalentes à lei brasileira; efeitos civis dependem de pedido do interessado. Para os demais efeitos ali previstos, tratado de extradição ou, na sua falta, requisição do Ministro da Justiça."
+      ],
+      "atencao": [
+        "Não recuperar competência do STF nem afirmar que o CP 7 atual tem o mesmo conteúdo da remissão antiga. Outros regimes de cooperação/execução têm fundamentos próprios."
+      ],
+      "exemplo": "Interessado busca reparação civil de sentença penal estrangeira: examinar homologação no STJ e condições do CP 9. Variação: Pedido de transferir execução de pena exige regime específico, não autorização universal só pelo art 787.",
+      "prova": [
+        "A remissão ao antigo CP 7 corresponde ao art. 7 atual? Não. A matéria dos efeitos de sentença estrangeira está no CP 9; a numeração histórica precisa de integração.",
+        "Homologação para reparação civil autoriza qualquer prisão estrangeira automaticamente? Não. O CP 9 separa efeitos civis e medida de segurança; outros regimes de execução dependem de fundamentos específicos."
+      ],
+      "termos": [
+        {
+          "termo": "Correspondência da remissão",
+          "significado": "Integração do número histórico ao conteúdo legal atual pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ],
+      "expected": {
+        "unit_id": "1999cfd3-fcb0-5a2a-b189-c0f1a97da208",
+        "content_sha256": "bfb760762ec57777e8c149e6a6d4d9bfd17c9aeab8cecc320f134afe201168b3",
+        "simples": "As sentenças estrangeiras deverão ser previamente homologadas pelo Supremo Tribunal Federal para que produzam os efeitos do art. 7º do Código Penal. Hoje a competência é do Superior Tribunal de Justiça.",
+        "pontos": [
+          "Sentença estrangeira precisa de homologação prévia para produzir os efeitos do art. 7º do CP.",
+          "A competência passou ao STJ."
+        ],
+        "atencao": [
+          "Homologação é do STJ após a Emenda Constitucional 45."
+        ],
+        "exemplo": "A sentença penal estrangeira só produz efeitos no Brasil depois de homologada.",
+        "prova": [
+          "Assertiva que dispensa a homologação da sentença estrangeira para produzir efeitos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 788"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-788",
+      "unit_id": "488e2d64-b387-58f4-80fe-a8b2cea0af71",
+      "content_sha256": "aff121cd6239d6505f1a3b65ccf0e1946ac9e12661a7acfb4d0b2e05d24b79c1",
+      "simples": "Os requisitos textuais de sentença penal estrangeira devem ser integrados ao CP 9, à Constituição e ao procedimento vigente do STJ/CPC, sem lista histórica universal.",
+      "pontos": [
+        "Autoridade competente, citação, autenticidade, efeitos e tradução precisam de exame.",
+        "A página oficial STJ remete ao CPC 963 e RISTJ 216-C/D.",
+        "Trânsito e eficácia dependem do regime e finalidade do reconhecimento.",
+        "A equivalência de consequências com a aplicação da lei brasileira é pressuposto do CP 9 e do caput textual; não basta apenas traduzir o documento."
+      ],
+      "atencao": [
+        "Não exigir chancela consular como única forma em qualquer instrumento, nem dispensar requisito específico com regra genérica de outro tipo de decisão. Não certificada toda hipótese de dispensa de trânsito/tradução."
+      ],
+      "exemplo": "Pedido traz sentença de juiz competente, citação e documentação; órgão verifica requisitos e efeitos no regime aplicável, sem homologação automática pela lista. Variação: Documento autenticado não sana por si citação irregular ou incompatibilidade constitucional.",
+      "prova": [
+        "Uma autenticação regular sana citação inválida? Não. Autenticidade documental e regularidade da citação são requisitos distintos de reconhecimento.",
+        "Os cinco incisos históricos bastam para certificar todo pedido atual? Não. Integrar CP 9, Constituição, CPC e Regimento do STJ, observando a finalidade e o regime aplicável."
+      ],
+      "termos": [
+        {
+          "termo": "Requisitos do reconhecimento",
+          "significado": "Pressupostos materiais e formais do regime vigente e da finalidade pretendida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ],
+      "expected": {
+        "unit_id": "488e2d64-b387-58f4-80fe-a8b2cea0af71",
+        "content_sha256": "aff121cd6239d6505f1a3b65ccf0e1946ac9e12661a7acfb4d0b2e05d24b79c1",
+        "simples": "A sentença penal estrangeira será homologada, quando a aplicação da lei brasileira produzir na espécie as mesmas consequências e concorrerem os seguintes requisitos: estar revestida das formalidades externas necessárias, segundo a legislação do país de origem; haver sido proferida por juiz competente, mediante citação regular, segundo a mesma legislação; ter passado em julgado; estar devidamente autenticada por cônsul brasileiro; e estar acompanhada de tradução feita por tradutor público.",
+        "pontos": [
+          "Mesmas consequências pela lei brasileira.",
+          "Formalidades externas segundo a lei do país de origem.",
+          "Juiz competente e citação regular.",
+          "Trânsito em julgado.",
+          "Autenticação por cônsul brasileiro e tradução por tradutor público."
+        ],
+        "atencao": [
+          "Cinco requisitos, além da equivalência de consequências."
+        ],
+        "exemplo": "A sentença estrangeira transitada em julgado, autenticada e traduzida pode ser homologada.",
+        "prova": [
+          "Assertiva que dispensa o trânsito em julgado da sentença estrangeira erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 787"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-789",
+      "unit_id": "9debed7f-217a-57d5-a239-b30dc922c708",
+      "content_sha256": "145bc2ec428501279acdee90473f8bd0c4448b22ef9c5321c1d00cd77b1f084e",
+      "simples": "O rito histórico de homologação e penas acessórias precisa ser integrado ao CP 9, CF, art. 105, I, i e procedimento atual do STJ. Não ensinar os prazos antigos 10/30 por residência como regra universal atual.",
+      "pontos": [
+        "Medida de segurança e efeitos civis têm condições próprias no CP 9.",
+        "STJ orienta petição eletrônica por advogado e requisitos do CPC/RISTJ.",
+        "Citação, defesa e intervenção seguem o procedimento pertinente."
+      ],
+      "atencao": [
+        "Não recuperar pena acessória histórica, STF, Tribunal de Apelação ou prazo por Distrito Federal automaticamente. Não certificada toda regulamentação processual específica posterior."
+      ],
+      "exemplo": "Parte apresenta pedido ao STJ sob rito vigente; contraditório é assegurado sem impor automaticamente prazo antigo por residência no DF. Variação: A medida de segurança pretendida exige seus pressupostos, não aplicação de pena acessória desaparecida apenas porque consta na redação antiga.",
+      "prova": [
+        "O prazo histórico de dez ou trinta dias conforme residência é universal hoje? Não. O rito atual do STJ deve ser consultado; não usar a distinção antiga como prazo geral vigente.",
+        "A menção a pena acessória restaura o regime antigo do CP? Não. Efeitos e medidas dependem do CP atual e de seus pressupostos; o texto residual não cria sanção desaparecida."
+      ],
+      "termos": [
+        {
+          "termo": "Rito integrado",
+          "significado": "Procedimento de reconhecimento segundo competência e normas atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ],
+      "expected": {
+        "unit_id": "9debed7f-217a-57d5-a239-b30dc922c708",
+        "content_sha256": "145bc2ec428501279acdee90473f8bd0c4448b22ef9c5321c1d00cd77b1f084e",
+        "simples": "O procurador-geral da República, sempre que tiver conhecimento da existência de sentença penal estrangeira, emanada de Estado que tenha com o Brasil tratado de extradição e que haja imposto medida de segurança pessoal ou pena acessória que deva ser cumprida no Brasil, pedirá ao Ministro da Justiça providências para a homologação. A homologação de sentença de Estado que não tiver tratado de extradição dependerá de requisição do Ministro da Justiça. Distribuído o requerimento, o relator mandará citar o interessado para deduzir embargos, dentro de dez dias se residir no Distrito Federal, de trinta dias no caso contrário. Se o interessado não deduzir embargos, será nomeado defensor, que produzirá a defesa em dez dias. Os embargos somente poderão fundar-se em dúvida sobre a autenticidade do documento, sobre a inteligência da sentença ou sobre a falta de requisito dos arts. 781 e 788.",
+        "pontos": [
+          "PGR provoca a homologação de sentença de Estado com tratado de extradição.",
+          "Sem tratado: requisição do Ministro da Justiça.",
+          "Embargos em dez dias (Distrito Federal) ou trinta dias (demais).",
+          "Sem embargos: defensor nomeado, com dez dias.",
+          "Embargos só por dúvida sobre autenticidade, inteligência da sentença ou falta de requisito."
+        ],
+        "atencao": [
+          "Prazos de embargos: 10 e 30 dias."
+        ],
+        "exemplo": "O interessado que reside fora do Distrito Federal tem trinta dias para embargar.",
+        "prova": [
+          "Assertiva que fixa em dez dias o prazo de embargos para quem reside fora do Distrito Federal erra: são trinta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 787",
+          "Art. 788"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-790",
+      "unit_id": "ee0a8d21-9766-55c9-98b6-086206fc6af6",
+      "content_sha256": "041d485c7793d1d442d1d0d29779bfd8865cadab9af0725baa6789401ce20889",
+      "simples": "Interessado nos efeitos civis de decisão penal estrangeira requer reconhecimento perante STJ, com integração ao CP 9 e CPC. Execução da decisão homologada segue competência federal.",
+      "pontos": [
+        "Reparação, restituição e outros efeitos civis são recorte expresso.",
+        "STJ reconhece; Justiça Federal executa no regime indicado."
+      ],
+      "atencao": [
+        "Não ensinar requerimento ao STF nem tratar homologação como nova ação de condenação sobre todo mérito. Outros regimes possuem hipóteses próprias."
+      ],
+      "exemplo": "Vítima busca executar reparação reconhecida no exterior: confere homologação e posterior execução competentes. Variação: Pretensão de aplicar toda pena corporal estrangeira não se resolve por um pedido de efeito civil.",
+      "prova": [
+        "A vítima deve pedir homologação ao STF para efeitos civis? Não. A competência passou ao STJ; a remissão histórica deve ser lida com a Constituição atual.",
+        "Reconhecida a sentença, sua execução cabe genericamente ao juízo estadual? Não. A CF 109, X, e a orientação oficial do STJ situam a execução na Justiça Federal."
+      ],
+      "termos": [
+        {
+          "termo": "Efeitos civis",
+          "significado": "Consequências patrimoniais da decisão reconhecida no regime adequado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Processos/Sentenca-Estrangeira"
+      ],
+      "expected": {
+        "unit_id": "ee0a8d21-9766-55c9-98b6-086206fc6af6",
+        "content_sha256": "041d485c7793d1d442d1d0d29779bfd8865cadab9af0725baa6789401ce20889",
+        "simples": "O interessado na execução de sentença penal estrangeira, para a reparação do dano, restituição e outros efeitos civis, poderá requerer ao Supremo Tribunal Federal a sua homologação, observando-se o que a respeito prescreve o Código de Processo Civil.",
+        "pontos": [
+          "Interessado na reparação do dano e efeitos civis pode requerer a homologação.",
+          "Segue o Código de Processo Civil."
+        ],
+        "atencao": [
+          "Hoje a competência é do STJ."
+        ],
+        "exemplo": "A vítima busca homologar a sentença estrangeira para executar a reparação do dano.",
+        "prova": [
+          "Assertiva que restringe a homologação aos efeitos penais erra: abrange efeitos civis."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 787"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-791",
+      "unit_id": "bdf84d00-d94c-5cea-b863-5741b196d7fd",
+      "content_sha256": "373696035b2de086967c7d4fee05c1d1b79acf8fe949f02f7c937d6ce0a2c721",
+      "simples": "Audiências e sessões extraordinárias podem atender à celeridade conforme necessidade, sem eliminar direitos processuais.",
+      "pontos": [
+        "Distinguir calendário ordinário e necessidade extraordinária.",
+        "Compatibilizar intimação, preparação da defesa e restrições de 798-A."
+      ],
+      "atencao": [
+        "Celeridade não autoriza realizar ato no período suspenso sem hipótese legal ou surpreender defesa sem intimação pertinente."
+      ],
+      "exemplo": "Necessidade justifica sessão adicional em data permitida, com comunicações regulares. Variação: Urgência genérica não dispensa fundamentar exceção do 798-A quando necessária.",
+      "prova": [
+        "Sessão extraordinária dispensa intimação e defesa? Não. A finalidade de acelerar o andamento não elimina as garantias processuais.",
+        "É possível ignorar o art. 798-A porque a sessão é extraordinária? Não. O calendário deve respeitar a vedação e suas exceções expressas."
+      ],
+      "termos": [
+        {
+          "termo": "Sessão extraordinária",
+          "significado": "Ato adicional cabível sob requisitos e garantias processuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "bdf84d00-d94c-5cea-b863-5741b196d7fd",
+        "content_sha256": "373696035b2de086967c7d4fee05c1d1b79acf8fe949f02f7c937d6ce0a2c721",
+        "simples": "Em todos os juízos e tribunais do crime, além das audiências e sessões ordinárias, haverá as extraordinárias, de acordo com as necessidades do rápido andamento dos feitos.",
+        "pontos": [
+          "Além das ordinárias, haverá audiências e sessões extraordinárias, conforme a necessidade."
+        ],
+        "atencao": [
+          "Celeridade processual."
+        ],
+        "exemplo": "O juízo marca audiência extraordinária para acelerar um processo com réu preso.",
+        "prova": [
+          "Assertiva que proíbe audiências extraordinárias erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 792"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-792",
+      "unit_id": "5917b81f-2545-5415-a35d-b0e9c728bc3f",
+      "content_sha256": "d75f751b7824d6abd5fd4a79f49faf055087f2fa9aa981328633a542ea8de447",
+      "simples": "Publicidade é regra; restrição e local excepcional devem ter fundamento constitucional, necessidade e preservação da participação processual.",
+      "pontos": [
+        "Integrar CF, art. 5º, LX e 93, IX.",
+        "Intimidade e interesse social permitem restrição legal fundamentada.",
+        "Ato remoto/eletrônico e local excepcional têm regras próprias.",
+        "Sede do juízo/tribunal é a regra textual. Local excepcional por necessidade não dispensa acesso, defesa, motivação e requisitos pertinentes ao ato."
+      ],
+      "atencao": [
+        "Não decretar sigilo por mero constrangimento de autoridade ou invocar bons costumes para discriminar. Portas fechadas não eliminam defesa técnica nem fundamentação."
+      ],
+      "exemplo": "Dados íntimos legitimam restrição fundamentada de acesso, sem retirar defensor do ato. Variação: Incômodo político com audiência pública não constitui sozinho motivo legítimo de segredo.",
+      "prova": [
+        "Todos os atos processuais são secretos por conveniência do juiz? Não. Publicidade é regra; restrição exige hipótese legítima e fundamentação constitucional.",
+        "Portas fechadas permitem excluir automaticamente o defensor? Não. A restrição de público não elimina participação e defesa técnica."
+      ],
+      "termos": [
+        {
+          "termo": "Publicidade processual",
+          "significado": "Acesso como regra, com exceções legais integradas às garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "5917b81f-2545-5415-a35d-b0e9c728bc3f",
+        "content_sha256": "d75f751b7824d6abd5fd4a79f49faf055087f2fa9aa981328633a542ea8de447",
+        "simples": "As audiências, sessões e atos processuais serão, em regra, públicos e se realizarão nas sedes dos juízos e tribunais, com assistência dos escrivães, do secretário e do oficial de justiça que servir de porteiro, em dia e hora certos. Se da publicidade puder resultar escândalo, inconveniente grave ou perigo de perturbação da ordem, o juiz ou tribunal poderá, de ofício ou a requerimento, determinar que o ato seja realizado a portas fechadas. Em caso de necessidade, poderão realizar-se na residência do juiz, ou em outra casa por ele designada.",
+        "pontos": [
+          "Regra: publicidade.",
+          "Realizam-se nas sedes dos juízos e tribunais, em dia e hora certos.",
+          "Escândalo, inconveniente grave ou perigo de perturbação: portas fechadas.",
+          "Necessidade: na residência do juiz ou outra casa designada."
+        ],
+        "atencao": [
+          "Segredo de justiça só em hipóteses legais (Constituição, art. 93, IX)."
+        ],
+        "exemplo": "Por risco de perturbação da ordem, o juiz determina audiência a portas fechadas.",
+        "prova": [
+          "Assertiva que torna o sigilo das audiências a regra erra: a regra é a publicidade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 793"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-793",
+      "unit_id": "d0b11d3d-ff03-50c0-b2fb-caeabb618580",
+      "content_sha256": "90be74080c89690ac6d39136520030e2c4f702244e5189cabee4302a457ba636",
+      "simples": "A etiqueta da redação histórica deve ser compatibilizada com prerrogativas profissionais, acessibilidade e condições concretas do ato.",
+      "pontos": [
+        "O próprio parágrafo admite requerimento sentado do advogado perante juiz singular.",
+        "Postura física não substitui respeito, participação e garantias profissionais."
+      ],
+      "atencao": [
+        "Não criar prisão, nulidade ou punição automática pela pessoa permanecer sentada. Não certificada aqui toda disciplina profissional/regulamentação de atos remotos."
+      ],
+      "exemplo": "Advogado formula requerimento sentado perante juiz singular, na hipótese expressa; isso não é desobediência automática. Variação: Pessoa com mobilidade reduzida precisa de adaptação, não coerção para cumprir gesto fisicamente inviável.",
+      "prova": [
+        "O próprio CPP admite requerimento sentado do advogado perante juiz singular? Sim. É a hipótese expressa no parágrafo único; a postura, por si, não configura desobediência.",
+        "Uma limitação física autoriza coerção para cumprir gesto inviável? Não. A organização do ato deve preservar participação e acessibilidade compatíveis com as garantias constitucionais."
+      ],
+      "termos": [
+        {
+          "termo": "Etiqueta e acessibilidade",
+          "significado": "Organização do ato compatível com direitos e participação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "d0b11d3d-ff03-50c0-b2fb-caeabb618580",
+        "content_sha256": "90be74080c89690ac6d39136520030e2c4f702244e5189cabee4302a457ba636",
+        "simples": "Nas audiências e nas sessões, os advogados, as partes, os escrivães e os espectadores poderão estar sentados. Todos, porém, se levantarão quando se dirigirem aos juízes ou quando estes se levantarem para qualquer ato do processo. Nos atos da instrução criminal, perante os juízes singulares, os advogados poderão requerer sentados.",
+        "pontos": [
+          "Todos podem permanecer sentados nas audiências.",
+          "Levantam-se ao se dirigir aos juízes ou quando eles se levantam.",
+          "Perante juiz singular, os advogados podem requerer sentados."
+        ],
+        "atencao": [
+          "Norma de etiqueta forense."
+        ],
+        "exemplo": "O advogado requer sentado na instrução diante do juiz singular.",
+        "prova": [
+          "Assertiva que obriga os advogados a requerer sempre em pé erra: perante juiz singular podem requerer sentados."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 794"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-794",
+      "unit_id": "8b53006e-9574-5faa-917a-f1ae78db6fc0",
+      "content_sha256": "67f8ec21db9f6ac2ceae77241777f7d516a695fdb296e651c727645aa0262c60",
+      "simples": "A autoridade que preside mantém a ordem e pode requisitar força pública, sob limites legais e constitucionais.",
+      "pontos": [
+        "Identificar juiz ou presidente responsável pelo ato.",
+        "Manutenção de ordem não elimina direito de defesa nem integridade."
+      ],
+      "atencao": [
+        "Não tratar polícia da audiência como autorização geral de prisão, punição coletiva ou repressão de manifestação defensiva pertinente."
+      ],
+      "exemplo": "Presidente organiza entrada do público e atua proporcionalmente diante de tumulto real. Variação: Pergunta pertinente do defensor não deve ser silenciada sob mero rótulo de inconveniência.",
+      "prova": [
+        "A polícia da audiência é a investigação do crime? Não. A expressão designa direção e manutenção da ordem do ato pelo juiz ou presidente.",
+        "Requisitar força pública permite suprimir qualquer pergunta defensiva? Não. O poder de ordem tem limites legais e não elimina defesa pertinente."
+      ],
+      "termos": [
+        {
+          "termo": "Polícia da audiência",
+          "significado": "Direção e preservação da ordem sob competência e garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "8b53006e-9574-5faa-917a-f1ae78db6fc0",
+        "content_sha256": "67f8ec21db9f6ac2ceae77241777f7d516a695fdb296e651c727645aa0262c60",
+        "simples": "A polícia das audiências e das sessões compete aos respectivos juízes ou ao presidente do tribunal, câmara ou turma, que poderão determinar o que for conveniente à manutenção da ordem. Para tal fim, requisitarão força pública, que ficará exclusivamente à sua disposição.",
+        "pontos": [
+          "Juízes e presidentes mantêm a ordem nas audiências e sessões.",
+          "Podem requisitar força pública, sob sua exclusiva disposição."
+        ],
+        "atencao": [
+          "Poder de polícia das audiências."
+        ],
+        "exemplo": "O presidente da sessão requisita a força pública para manter a ordem.",
+        "prova": [
+          "Assertiva que atribui a polícia das audiências à autoridade policial erra: compete ao juiz ou ao presidente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 251"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-795",
+      "unit_id": "3e2142f1-386e-5598-ad09-63e74f02063b",
+      "content_sha256": "0b2b480a903a7b28c52e901d2264b6b0ce246f0f3f426c7f46126811243d5e9e",
+      "simples": "Espectadores devem preservar regularidade do ato; retirada e eventual responsabilização exigem situação e base legais.",
+      "pontos": [
+        "Espectador não exerce o mesmo papel processual da parte/defensor.",
+        "Retirada não equivale automaticamente a crime ou prisão."
+      ],
+      "atencao": [
+        "Não ensinar prisão universal de quem protesta: tipicidade, legalidade, proporcionalidade e garantias precisam ser demonstradas."
+      ],
+      "exemplo": "Espectador provoca tumulto e recebe ordem legítima de retirada, com providência proporcional à situação. Variação: Discordância sem conduta típica não autoriza inventar condenação automática por resistência.",
+      "prova": [
+        "Todo espectador retirado está automaticamente condenado por resistência? Não. A medida de ordem é distinta da apuração de eventual crime, que exige pressupostos próprios.",
+        "O artigo autoriza o público a interromper livremente a audiência? Não. O texto restringe manifestações dos espectadores e prevê retirada, sob limites constitucionais."
+      ],
+      "termos": [
+        {
+          "termo": "Retirada do espectador",
+          "significado": "Medida de ordem distinta de condenação penal automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "3e2142f1-386e-5598-ad09-63e74f02063b",
+        "content_sha256": "0b2b480a903a7b28c52e901d2264b6b0ce246f0f3f426c7f46126811243d5e9e",
+        "simples": "Os espectadores das audiências ou das sessões não poderão manifestar-se. O juiz ou o presidente fará retirar da sala os desobedientes, que, em caso de resistência, serão presos e autuados.",
+        "pontos": [
+          "Espectadores não podem se manifestar.",
+          "Desobedientes são retirados da sala.",
+          "Resistência: prisão e autuação."
+        ],
+        "atencao": [
+          "Silêncio dos espectadores."
+        ],
+        "exemplo": "Um espectador que grita é retirado da sala pelo juiz.",
+        "prova": [
+          "Assertiva que permite manifestação dos espectadores nas audiências erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 794"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-796",
+      "unit_id": "8c445bcf-35e7-5bd2-8abd-181301131ded",
+      "content_sha256": "44756908aecc879a55d37ae57f6f1ef8368840fa91da46e1778b3897df106dc8",
+      "simples": "Comportamento inconveniente do réu exige medida fundamentada e preservação de defesa técnica e participação compatível.",
+      "pontos": [
+        "Integrar regra especial da instrução e do júri pertinente.",
+        "Não realizar instrução contra réu sem defensor apenas pela retirada."
+      ],
+      "atencao": [
+        "Inconveniência não significa perda de todos os direitos; distinguir silêncio, exercício legítimo da defesa e perturbação concreta."
+      ],
+      "exemplo": "Réu perturba repetidamente o ato e providência legal mantém presença do defensor e garantias necessárias. Variação: Réu exerce silêncio: isso não constitui automaticamente comportamento inconveniente que dispense sua defesa.",
+      "prova": [
+        "O ato pode prosseguir sem defensor apenas porque o réu se comportou inconvenientemente? Não. O texto preserva expressamente a assistência do defensor.",
+        "Exercer silêncio equivale automaticamente a perturbar a audiência? Não. Silêncio é garantia; comportamento inconveniente exige situação concreta, sem punição pelo exercício de direito."
+      ],
+      "termos": [
+        {
+          "termo": "Defesa durante o ato",
+          "significado": "Preservação da assistência técnica diante de medida legítima de ordem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "8c445bcf-35e7-5bd2-8abd-181301131ded",
+        "content_sha256": "44756908aecc879a55d37ae57f6f1ef8368840fa91da46e1778b3897df106dc8",
+        "simples": "Os atos de instrução ou julgamento prosseguirão com a assistência do defensor, se o réu se portar inconvenientemente.",
+        "pontos": [
+          "Réu que se porta inconvenientemente: o ato prossegue com o defensor."
+        ],
+        "atencao": [
+          "O defensor sempre acompanha o ato."
+        ],
+        "exemplo": "O réu perturba a audiência, que continua com a presença do defensor.",
+        "prova": [
+          "Assertiva que suspende o ato por mau comportamento do réu, sem prosseguir com o defensor, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 497, VI"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-797",
+      "unit_id": "2d626eae-56b5-5577-87e7-b87de1613fd8",
+      "content_sha256": "2434c9ce1d97077ea43555e6848964bb7ab2fc40b3ff212cc5e5267e9db22433",
+      "simples": "Calendário de atos e continuidade do julgamento devem ser integrados à suspensão específica do 798-A e às exceções legais.",
+      "pontos": [
+        "Sessões de julgamento não são marcadas para domingo ou feriado na regra textual.",
+        "Julgamento iniciado em dia útil não se interrompe apenas pela superveniência de domingo ou feriado.",
+        "Compatibilizar atos em férias com a vedação e as exceções específicas do art. 798-A."
+      ],
+      "atencao": [
+        "A permissão histórica de atos nas férias não afasta proibição atual de audiências/sessões de 20 de dezembro a 20 de janeiro fora das exceções."
+      ],
+      "exemplo": "Julgamento iniciado em dia útil tem regra de continuidade, que exige compatibilização com normas específicas pertinentes. Variação: Agendar audiência ordinária no período protegido não se torna válido só pela frase atos nas férias.",
+      "prova": [
+        "Pode-se marcar normalmente sessão de julgamento para domingo pelo art. 797? Não. O texto ressalva as sessões, que não serão marcadas para domingo ou feriado.",
+        "Todo julgamento iniciado em dia útil para automaticamente no domingo? Não. O texto prevê continuidade, integrada às regras especiais, inclusive ao art. 798-A."
+      ],
+      "termos": [
+        {
+          "termo": "Calendário processual",
+          "significado": "Datas permitidas e continuidade sob regras gerais e especiais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2d626eae-56b5-5577-87e7-b87de1613fd8",
+        "content_sha256": "2434c9ce1d97077ea43555e6848964bb7ab2fc40b3ff212cc5e5267e9db22433",
+        "simples": "Excetuadas as sessões de julgamento, que não serão marcadas para domingo ou dia feriado, os demais atos do processo poderão ser praticados em período de férias, em domingos e dias feriados. Todavia, os julgamentos iniciados em dia útil não se interromperão pela superveniência de feriado ou domingo.",
+        "pontos": [
+          "Sessões de julgamento não são marcadas em domingo ou feriado.",
+          "Demais atos podem ocorrer em férias, domingos e feriados.",
+          "Julgamento iniciado em dia útil não se interrompe por feriado ou domingo."
+        ],
+        "atencao": [
+          "Exceção só às sessões de julgamento."
+        ],
+        "exemplo": "Um ato de investigação é praticado em feriado; a sessão do Júri, não.",
+        "prova": [
+          "Assertiva que permite marcar sessão de julgamento para domingo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 798"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-798",
+      "unit_id": "448cb998-f477-5fb3-9696-ea3b93913f97",
+      "content_sha256": "4f04f66f137079a56f21a6cce0d7e1e0bedb9e0cd8c0802e117edb843f96d5d2",
+      "simples": "A regra penal é contagem contínua, excluindo o dia inicial e incluindo vencimento, com prorrogação e causas de não curso. Integrar 798-A e intimação aplicável.",
+      "pontos": [
+        "Dias úteis não substituem genericamente todos os dias corridos do CPP.",
+        "Vencimento não útil e inexistência de expediente exigem regime pertinente.",
+        "Intimação, ciência, força maior e obstáculo precisam de prova.",
+        "A certificação do término não é condição absoluta: o §2º admite prova do dia em que o prazo começou.",
+        "O §4º prevê impedimento do juiz, força maior e obstáculo judicial oposto pela parte contrária.",
+        "Salvo casos expressos, o §5º considera intimação, decisão em audiência/sessão com a parte presente e ciência inequívoca manifestada nos autos."
+      ],
+      "atencao": [
+        "Não dizer nunca suspende: 798-A e §4º são ressalvas. Intimação eletrônica, sexta-feira, feriados locais e prazos especiais exigem confirmação própria; exemplos pressupõem intimação válida e nenhum evento adicional."
+      ],
+      "exemplo": "Intimação válida ocorre na terça e prazo de cinco dias começa quarta: conta quarta, quinta, sexta, sábado, domingo; vencendo domingo, prorroga ao dia útil imediato, sem feriado ou outro evento. Variação: Se o curso alcança suspensão aplicável de 798-A, os dias suspensos não são consumidos; saldo retoma depois, sem reinício integral automático.",
+      "prova": [
+        "O CPP conta genericamente apenas dias úteis? Não. A regra geral é de dias contínuos, com exclusão do começo, inclusão do vencimento e exceções de suspensão/prorrogação.",
+        "Cinco dias após intimação válida na terça vencem necessariamente no domingo? Não. Na hipótese sem feriado ou evento adicional, a contagem alcança domingo e o vencimento é prorrogado ao dia útil imediato."
+      ],
+      "termos": [
+        {
+          "termo": "Prazo contínuo",
+          "significado": "Contagem corrida integrada a suspensão, prorrogação e início válido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "448cb998-f477-5fb3-9696-ea3b93913f97",
+        "content_sha256": "4f04f66f137079a56f21a6cce0d7e1e0bedb9e0cd8c0802e117edb843f96d5d2",
+        "simples": "Todos os prazos correrão em cartório e serão contínuos e peremptórios, não se interrompendo por férias, domingo ou dia feriado. Não se computará no prazo o dia do começo, incluindo-se, porém, o do vencimento. A terminação dos prazos será certificada nos autos pelo escrivão, mas será considerado findo o prazo ainda que omitida aquela formalidade. O prazo que terminar em domingo ou feriado considerar-se-á prorrogado até o dia útil imediato. Não correrão os prazos se houver impedimento do juiz, força maior ou obstáculo judicial oposto pela parte contrária. Salvo casos expressos, os prazos correrão da intimação, da audiência ou sessão em que for proferida a decisão, se presente a parte, ou do dia em que a parte manifestar nos autos ciência inequívoca da sentença ou despacho.",
+        "pontos": [
+          "Prazos contínuos e peremptórios.",
+          "Exclui-se o dia do começo e inclui-se o do vencimento.",
+          "Prazo que termina em domingo ou feriado prorroga-se para o dia útil seguinte.",
+          "Não correm por impedimento do juiz, força maior ou obstáculo judicial da parte contrária.",
+          "Contagem: da intimação, da audiência (se presente) ou da ciência inequívoca."
+        ],
+        "atencao": [
+          "Prazos CONTÍNUOS (sem suspensão por feriados), mas prorrogados se o último dia não for útil."
+        ],
+        "exemplo": "O prazo termina no sábado e passa para a segunda-feira seguinte.",
+        "prova": [
+          "Assertiva que conta o dia do começo do prazo erra: ele é excluído."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 798-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-798-a",
+      "unit_id": "f07c9972-324d-58b6-ab2b-d2b243659b6a",
+      "content_sha256": "bc4200c444e5fe1532511edc5e2f7f0469232cc49fd0faaa407470e163709188",
+      "simples": "Suspensão inclui 20 de dezembro e 20 de janeiro. Exceções: réu preso no processo vinculado à prisão, Maria da Penha e medida urgente fundamentada.",
+      "pontos": [
+        "As duas datas extremas integram suspensão.",
+        "Vedadas audiências/sessões no intervalo fora das três hipóteses.",
+        "Suspender preserva saldo de prazo, não reinicia tudo como interrupção."
+      ],
+      "atencao": [
+        "Não excluir todo processo de pessoa presa sem vínculo com a prisão, nem declarar qualquer causa urgente sem despacho fundamentado. Redação incluída por Lei 14.365/2022; a data da conferência não é sua criação."
+      ],
+      "exemplo": "Prazo ordinário tem dois dias restantes ao começar suspensão: preserva saldo, retomando após o intervalo conforme calendário e regime de intimação. Variação: Processo vinculado à prisão do réu está na exceção; não copiar suspensão automática do caso ordinário.",
+      "prova": [
+        "Vinte de janeiro integra a suspensão ordinária? Sim. O intervalo legal inclui as duas datas extremas, de 20 de dezembro a 20 de janeiro.",
+        "Toda pessoa presa faz qualquer processo seu escapar da suspensão? Não. O inciso I exige processo vinculado àquela prisão; os demais incisos têm hipóteses próprias."
+      ],
+      "termos": [
+        {
+          "termo": "Suspensão e saldo",
+          "significado": "Pausa que preserva dias restantes, diferente de reinício integral."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f07c9972-324d-58b6-ab2b-d2b243659b6a",
+        "content_sha256": "bc4200c444e5fe1532511edc5e2f7f0469232cc49fd0faaa407470e163709188",
+        "simples": "Suspende-se o curso do prazo processual nos dias compreendidos entre 20 de dezembro e 20 de janeiro, inclusive, salvo nos casos que envolvam réus presos, nos processos vinculados a essas prisões; nos procedimentos regidos pela Lei Maria da Penha; e nas medidas consideradas urgentes, mediante despacho fundamentado do juízo competente. Durante o período, fica vedada a realização de audiências e de sessões de julgamento, salvo nas hipóteses dos incisos I, II e III.",
+        "pontos": [
+          "Prazos suspensos de 20 de dezembro a 20 de janeiro.",
+          "Exceções: réus presos, Lei Maria da Penha e medidas urgentes fundamentadas.",
+          "Vedadas audiências e sessões de julgamento no período, salvo as exceções."
+        ],
+        "atencao": [
+          "Incluído pela Lei nº 14.365, de 2022.",
+          "Período: 20 de dezembro a 20 de janeiro."
+        ],
+        "exemplo": "Em processo de réu preso, os prazos continuam correndo em janeiro.",
+        "prova": [
+          "Assertiva que suspende também os prazos dos processos com réu preso erra: eles continuam a correr."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 798"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-799",
+      "unit_id": "aef13a7a-13b3-5389-8abf-abc04c8717f2",
+      "content_sha256": "b3234330efc30f994795a01664a680d21288f0bad2ded910839a58671d313a35",
+      "simples": "Atos do escrivão têm prazo textual de dois dias; sanções antigas devem ser integradas ao regime funcional e devido processo atuais.",
+      "pontos": [
+        "Não converter mil-réis em reais por palpite.",
+        "Responsabilização não é automática e depende de regime competente."
+      ],
+      "atencao": [
+        "Não ensinar desconto, suspensão ou multa monetária histórica como punição atual automática por qualquer demora."
+      ],
+      "exemplo": "Servidor cumpre determinação no prazo textual; atraso justificado e eventual responsabilidade são examinados sob regime pertinente. Variação: Erro de serviço não gera por si multa em valor inventado a partir de mil-réis.",
+      "prova": [
+        "Qual é o prazo textual para atos determinados ou ordenados ao escrivão? Dois dias. Essa regra não autoriza converter arbitrariamente em reais a multa histórica em mil-réis.",
+        "Qualquer atraso gera automaticamente a sanção monetária antiga? Não. Responsabilização funcional deve observar competência, regime atual e garantias de apuração."
+      ],
+      "termos": [
+        {
+          "termo": "Prazo funcional",
+          "significado": "Marco para cumprimento de ato, distinto de sanção histórica automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "aef13a7a-13b3-5389-8abf-abc04c8717f2",
+        "content_sha256": "b3234330efc30f994795a01664a680d21288f0bad2ded910839a58671d313a35",
+        "simples": "O escrivão, sob pena de multa e, na reincidência, suspensão até 30 dias, executará dentro do prazo de dois dias os atos determinados em lei ou ordenados pelo juiz.",
+        "pontos": [
+          "Escrivão cumpre os atos em dois dias.",
+          "Sanção: multa e, na reincidência, suspensão de até 30 dias."
+        ],
+        "atencao": [
+          "Prazo de dois dias."
+        ],
+        "exemplo": "O escrivão cumpre em dois dias a ordem do juiz, sob pena de multa.",
+        "prova": [
+          "Assertiva que fixa em cinco dias o prazo do escrivão para cumprir os atos erra: são dois dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 800"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-800",
+      "unit_id": "a9edd544-b7a5-5feb-a126-35c3b3fc6cd6",
+      "content_sha256": "acd15a237c71040c0a9fb53d5b9a71a4c5275ee5fa93e357061646ff6fccc167",
+      "simples": "Na ausência de prazo específico, o texto distingue decisões definitivas/mistas, simples e expediente: 10, 5 e 1 dia, com conclusão, vista e justo motivo.",
+      "pontos": [
+        "DECISÃO DEFINITIVA ou interlocutória mista: dez dias; interlocutória simples: cinco; expediente: um.",
+        "Prazos do juiz começam da conclusão; vista do MP tem marco próprio, ressalvada a interposição de recurso.",
+        "Prazo especial prevalece. Motivo justo declarado permite exceder por igual tempo, não indefinidamente."
+      ],
+      "atencao": [
+        "Não aplicar 1/5/10 indiscriminadamente a decisão com prazo especial nem copiar recurso do MP como prazo de mera vista."
+      ],
+      "exemplo": "Decisão tem prazo específico em outra norma: usa-se o específico, sem aplicar dez dias por automatismo. Variação: Sem prazo específico, despacho de expediente tem um dia no texto; motivo justo deve ser declarado para extensão cabível.",
+      "prova": [
+        "Qual prazo subsidiário cabe ao despacho de expediente? Um dia. A regra só se aplica quando outro prazo específico não estiver estabelecido.",
+        "O motivo justo permite qualquer extensão indefinida? Não. O §3º prevê exceder por igual tempo mediante motivo declarado, integrado às garantias e regras especiais."
+      ],
+      "termos": [
+        {
+          "termo": "Prazo subsidiário",
+          "significado": "Regra geral aplicável quando não há prazo específico pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a9edd544-b7a5-5feb-a126-35c3b3fc6cd6",
+        "content_sha256": "acd15a237c71040c0a9fb53d5b9a71a4c5275ee5fa93e357061646ff6fccc167",
+        "simples": "Os juízes singulares darão seus despachos e decisões dentro dos seguintes prazos, quando outros não estiverem estabelecidos: de dez dias, se a decisão for definitiva ou interlocutória mista; de cinco dias, se for interlocutória simples; e de um dia, se se tratar de despacho de expediente. Os prazos para o juiz contam-se do termo de conclusão; os do Ministério Público, do termo de vista, salvo para recurso. Em qualquer instância, declarando motivo justo, poderá o juiz exceder por igual tempo os prazos. O escrivão que não enviar os autos no dia em que assinar termo de conclusão ou de vista sujeita-se à sanção do art. 799.",
+        "pontos": [
+          "Decisão definitiva ou interlocutória mista: dez dias.",
+          "Interlocutória simples: cinco dias.",
+          "Despacho de expediente: um dia.",
+          "Prazos do juiz contam da conclusão; do MP, da vista.",
+          "Pode exceder por igual tempo, com motivo justo."
+        ],
+        "atencao": [
+          "Prazos impróprios para o juiz: dez, cinco e um dia."
+        ],
+        "exemplo": "O juiz profere a sentença em dez dias do termo de conclusão.",
+        "prova": [
+          "Assertiva que fixa em cinco dias o prazo para decisão definitiva erra: são dez dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 799",
+          "Art. 801"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-801",
+      "unit_id": "055fdbda-648e-500a-b0ea-6dc59020e1ad",
+      "content_sha256": "52b4c17fe8cd84e3babf5517c79e61cfaeb61b5da673a58a2c63c4596c0c0f7b",
+      "simples": "O dispositivo contém modelo histórico de descontos por atraso; aplicação exige compatibilidade com regimes constitucionais e funcionais atuais.",
+      "pontos": [
+        "Não descontar remuneração automaticamente.",
+        "Não eliminar tempo de serviço/promocional por simples contagem de dias sem procedimento."
+      ],
+      "atencao": [
+        "Não certificar sanção salarial automática contra juiz/MP como regime atual apenas pelo texto residual. Devido processo, competência e normas próprias precisam ser observados."
+      ],
+      "exemplo": "Atraso é levado ao órgão competente para apuração sob regime funcional aplicável. Variação: Certidão isolada não autoriza inventar desconto salarial e perda dobrada de tempo como consequência automática.",
+      "prova": [
+        "Uma certidão de atraso basta para desconto automático na remuneração atual? Não. O modelo histórico deve ser integrado às normas constitucionais e ao procedimento funcional competente.",
+        "A cautela sobre desconto torna irrelevante todo atraso? Não. O dever de celeridade permanece e eventual responsabilidade exige apuração válida."
+      ],
+      "termos": [
+        {
+          "termo": "Responsabilidade funcional",
+          "significado": "Apuração de deveres com competência e garantias atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "055fdbda-648e-500a-b0ea-6dc59020e1ad",
+        "content_sha256": "52b4c17fe8cd84e3babf5517c79e61cfaeb61b5da673a58a2c63c4596c0c0f7b",
+        "simples": "Findos os respectivos prazos, os juízes e os órgãos do Ministério Público, responsáveis pelo retardamento, perderão tantos dias de vencimentos quantos forem os excedidos. Na contagem do tempo de serviço, para efeito de promoção e aposentadoria, a perda será do dobro dos dias excedidos.",
+        "pontos": [
+          "Juízes e membros do MP perdem tantos dias de vencimentos quantos excederem o prazo.",
+          "Tempo de serviço: perda do dobro dos dias excedidos."
+        ],
+        "atencao": [
+          "Dispositivo raramente aplicado."
+        ],
+        "exemplo": "Texto de aplicação rara, sobre desconto de vencimentos por atraso.",
+        "prova": [
+          "Assertiva que isenta o MP da sanção por atraso nos prazos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 802"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-802",
+      "unit_id": "dc08954b-8fee-5dcd-945f-bdb7e442ee65",
+      "content_sha256": "de0b425d2d01a40f7a85d694a05552d226766b294e8cfa82a2afe61d96d177ab",
+      "simples": "Certidão pode documentar atraso, mas o mecanismo histórico de desconto/multa não substitui regime atual de responsabilização.",
+      "pontos": [
+        "Integrar 801 e garantias de apuração.",
+        "Valor em mil-réis é referência histórica, não tabela monetária atual."
+      ],
+      "atencao": [
+        "Não ensinar multa de pleno direito ou desconto automático sem competência, base atual e devido processo."
+      ],
+      "exemplo": "Registro documenta atraso para providência legítima do órgão competente. Variação: Enviar certidão não torna lícita sanção sem oportunidade de defesa.",
+      "prova": [
+        "Certificar atraso equivale a impor sanção definitiva? Não. Documentar o fato é distinto de decidir responsabilidade com competência e garantias atuais.",
+        "Quinhentos mil-réis permitem inventar valor equivalente em reais? Não. A moeda histórica não constitui tabela atual de multas por conversão arbitrária."
+      ],
+      "termos": [
+        {
+          "termo": "Certificação do atraso",
+          "significado": "Documentação distinta da decisão sancionatória válida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "dc08954b-8fee-5dcd-945f-bdb7e442ee65",
+        "content_sha256": "de0b425d2d01a40f7a85d694a05552d226766b294e8cfa82a2afe61d96d177ab",
+        "simples": "O desconto referido no artigo antecedente far-se-á à vista da certidão do escrivão do processo ou do secretário do tribunal, que deverão, de ofício ou a requerimento de qualquer interessado, remetê-la às repartições encarregadas do pagamento e da contagem do tempo de serviço.",
+        "pontos": [
+          "Desconto feito à vista de certidão do escrivão ou secretário.",
+          "Remessa, de ofício ou a requerimento, às repartições de pagamento e de contagem do tempo."
+        ],
+        "atencao": [
+          "Procedimento do desconto do art. 801."
+        ],
+        "exemplo": "O escrivão expede certidão do atraso para o desconto de vencimentos.",
+        "prova": [
+          "Assertiva que dispensa a certidão do escrivão para o desconto do art. 801 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 801"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-803",
+      "unit_id": "0680b18e-4c14-51ed-89ed-40748fdca2bd",
+      "content_sha256": "287d5511fd37bc3d84a2b5304b8b96b744865ce788e52a5b0e6fda517f0bd9db",
+      "simples": "Retirada e acesso aos autos devem observar hipóteses legais, prerrogativas profissionais, sigilo e processo eletrônico atual.",
+      "pontos": [
+        "Não negar toda consulta/carga pela proibição geral histórica.",
+        "Também não autorizar retirada indiscriminada de documento sigiloso."
+      ],
+      "atencao": [
+        "Acesso eletrônico não elimina autenticação ou restrições legítimas; carga legal não se confunde com extravio de autos.",
+        "ATUALIZAÇÃO judicial: a notícia oficial do STF de 23/06/2025 registra a ADI 7231, que invalidou a revogação indevida dos §§1º e 2º do art. 7º do Estatuto da Advocacia. Não ensinar desaparecimento dessas garantias pelo erro legislativo de 2022."
+      ],
+      "exemplo": "Advogado acessa autos nas condições legais aplicáveis, sem negativa genérica baseada somente no 803. Variação: Autos sob sigilo exigem autorização/legitimação pertinentes, não livre disponibilização a qualquer visitante.",
+      "prova": [
+        "O art. 803 proíbe todas as formas de consulta ou carga? Não. O próprio dispositivo ressalva casos legais; integrar prerrogativas, sigilo e regras atuais de acesso.",
+        "Acesso eletrônico permite retirar ou divulgar livremente autos sigilosos? Não. Consulta e guarda continuam sujeitas à legitimação, integridade e restrições válidas."
+      ],
+      "termos": [
+        {
+          "termo": "Acesso e guarda dos autos",
+          "significado": "Consulta/carga legais com integridade, sigilo e responsabilidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://noticias.stf.jus.br/postsnoticias/stf-invalida-norma-que-revogou-direitos-dos-advogados-por-erro-legislativo/"
+      ],
+      "expected": {
+        "unit_id": "0680b18e-4c14-51ed-89ed-40748fdca2bd",
+        "content_sha256": "287d5511fd37bc3d84a2b5304b8b96b744865ce788e52a5b0e6fda517f0bd9db",
+        "simples": "Salvo nos casos expressos em lei, é proibida a retirada de autos do cartório, ainda que em confiança, sob pena de responsabilidade do escrivão.",
+        "pontos": [
+          "Proibida a retirada de autos do cartório, salvo casos legais.",
+          "Escrivão responde pelo descumprimento."
+        ],
+        "atencao": [
+          "Hoje vale o processo eletrônico e o direito do advogado à carga, na forma da lei."
+        ],
+        "exemplo": "O escrivão não entrega os autos físicos a quem não tem direito legal à carga.",
+        "prova": [
+          "Assertiva que permite a retirada de autos do cartório em confiança, sem previsão legal, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 801"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-804",
+      "unit_id": "f4431706-f3af-5bf0-a302-5a29ca6bbb44",
+      "content_sha256": "530b2dd4ab40c50ac2dd44235c2c74c740f426d345b73d63db21cfaef94d4810",
+      "simples": "Condenação em custas deve ser integrada à sucumbência, assistência jurídica e regimes legais de exigibilidade pertinentes.",
+      "pontos": [
+        "Condenar em custas não é o mesmo que cobrar imediatamente de qualquer pessoa.",
+        "Gratuidade e hipóteses especiais precisam ser verificadas."
+      ],
+      "atencao": [
+        "Não impedir defesa nem afirmar que todo hipossuficiente sempre paga imediatamente ou nunca pode constar da condenação em custas."
+      ],
+      "exemplo": "Decisão examina custas e condição de gratuidade, separando condenação e exigibilidade. Variação: Benefício reconhecido pode alterar cobrança no regime cabível, sem inventar imunidade patrimonial universal.",
+      "prova": [
+        "Condenação em custas equivale sempre a cobrança imediata? Não. A previsão na decisão é distinta da exigibilidade, que depende do regime e de eventual gratuidade.",
+        "A condição econômica pode ser ignorada em qualquer cobrança? Não. Assistência jurídica e regras de gratuidade/exigibilidade precisam ser examinadas no caso."
+      ],
+      "termos": [
+        {
+          "termo": "Exigibilidade de custas",
+          "significado": "Condições para cobrança, distintas da previsão na decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "f4431706-f3af-5bf0-a302-5a29ca6bbb44",
+        "content_sha256": "530b2dd4ab40c50ac2dd44235c2c74c740f426d345b73d63db21cfaef94d4810",
+        "simples": "A sentença ou o acórdão que julgar a ação, qualquer incidente ou recurso, condenará nas custas o vencido.",
+        "pontos": [
+          "O vencido é condenado nas custas."
+        ],
+        "atencao": [
+          "Princípio da sucumbência quanto às custas."
+        ],
+        "exemplo": "O réu condenado paga as custas processuais.",
+        "prova": [
+          "Assertiva que isenta o vencido das custas, sempre, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 805"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-805",
+      "unit_id": "49202cdf-874f-57a9-9555-510430f52c03",
+      "content_sha256": "047f4137ba0c1601f90e58b508e27d9aae1e25c4176344b647c65ac2659ff0ab",
+      "simples": "Contagem e cobrança de custas dependem de regras atuais da competência pertinente; o CPP não fornece tabela nacional completa.",
+      "pontos": [
+        "Conferir norma válida e hipótese de cobrança.",
+        "Competência tributária/legalidade e gratuidade não desaparecem pela referência a regulamento."
+      ],
+      "atencao": [
+        "Não inventar valor ou cobrar com tabela revogada. Não certificadas todas as tabelas estaduais/federais."
+      ],
+      "exemplo": "Diligência sujeita a custas é calculada pela tabela vigente do órgão competente, considerando eventual benefício. Variação: Tabela de outro estado não deve ser aplicada automaticamente só por existir no material.",
+      "prova": [
+        "O CPP fornece uma única tabela com todos os valores nacionais? Não. O artigo remete às regras pertinentes da União e dos Estados; conferir a tabela vigente e a hipótese de cobrança.",
+        "Uma tabela revogada pode ser usada por estar no material antigo? Não. Cobrança exige base atual e compatibilidade com competência, legalidade e eventual gratuidade."
+      ],
+      "termos": [
+        {
+          "termo": "Tabela pertinente",
+          "significado": "Regra vigente do órgão e hipótese de cobrança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "49202cdf-874f-57a9-9555-510430f52c03",
+        "content_sha256": "047f4137ba0c1601f90e58b508e27d9aae1e25c4176344b647c65ac2659ff0ab",
+        "simples": "As custas serão contadas e cobradas de acordo com os regulamentos expedidos pela União e pelos Estados.",
+        "pontos": [
+          "Custas contadas e cobradas segundo regulamentos da União e dos Estados."
+        ],
+        "atencao": [
+          "Regulamentação fora do CPP."
+        ],
+        "exemplo": "As custas seguem o regimento estadual de custas.",
+        "prova": [
+          "Assertiva que fixa as custas apenas pelo CPP erra: seguem os regulamentos da União e dos Estados."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 804"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-806",
+      "unit_id": "46d349da-10be-535f-b638-a669a08152e3",
+      "content_sha256": "612d386393d946fe2e87c43366cdce18cd35bae93fee42cfedcaa2881b0cbbdf",
+      "simples": "Depósito e consequências textuais por falta de custas exigem integração ao regime da ação, recurso, gratuidade e defesa constitucional.",
+      "pontos": [
+        "Hipossuficiência e assistência não podem ser ignoradas.",
+        "Não aplicar deserção universal em todo recurso penal.",
+        "Prova de pobreza tardia não dispensa exame de prejuízo e garantias.",
+        "O caput tem recorte de ação mediante queixa e ressalva o art. 32. O §1º distingue atos no interesse da defesa e acusado pobre; integrar assistência jurídica atual."
+      ],
+      "atencao": [
+        "Não recusar prova essencial da defesa apenas por impossibilidade econômica, nem repetir o §3º como imunidade universal a nulidades. Não certificada toda regra local de preparo."
+      ],
+      "exemplo": "Defesa hipossuficiente requer diligência necessária: órgão examina assistência e garantia probatória, sem negativa automática por falta de depósito. Variação: Ausência de preparo em hipótese que efetivamente o exige é examinada com regras e oportunidades pertinentes, sem generalizar a toda ação penal pública.",
+      "prova": [
+        "Todo recurso criminal é deserto por falta de custas? Não. O recorte do artigo, a espécie de ação, o recurso e a gratuidade precisam ser examinados; não generalizar o texto residual.",
+        "O texto permite negar automaticamente prova essencial à defesa hipossuficiente? Não. A própria ressalva de pobreza e as garantias constitucionais exigem análise pertinente, sem exclusão automática."
+      ],
+      "termos": [
+        {
+          "termo": "Preparo e defesa",
+          "significado": "Requisito financeiro quando cabível, integrado a assistência e garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "46d349da-10be-535f-b638-a669a08152e3",
+        "content_sha256": "612d386393d946fe2e87c43366cdce18cd35bae93fee42cfedcaa2881b0cbbdf",
+        "simples": "Salvo o caso do art. 32, nas ações intentadas mediante queixa, nenhum ato ou diligência se realizará sem que seja depositada em cartório a importância das custas. Igualmente, nenhum ato requerido no interesse da defesa será realizado sem o prévio pagamento das custas, salvo se o acusado for pobre. A falta do pagamento das custas, nos prazos fixados em lei, ou marcados pelo juiz, importará renúncia à diligência requerida ou deserção do recurso interposto. A falta de qualquer prova ou diligência que deixe de realizar-se em virtude do não pagamento de custas não implicará a nulidade do processo, se a prova de pobreza do acusado só posteriormente foi feita.",
+        "pontos": [
+          "Ação por queixa: custas depositadas antes dos atos, salvo ofendido pobre.",
+          "Defesa: pagamento prévio das custas, salvo acusado pobre.",
+          "Falta de pagamento: renúncia à diligência ou deserção do recurso.",
+          "Falta de prova por custas não anula o processo se a pobreza só foi provada depois."
+        ],
+        "atencao": [
+          "Pobreza dispensa o pagamento."
+        ],
+        "exemplo": "O querelante não deposita as custas e o ato não é realizado.",
+        "prova": [
+          "Assertiva que exige o pagamento prévio de custas do acusado pobre erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-807",
+      "unit_id": "b190c8ea-c1de-55ec-9ef8-8e798ee317c6",
+      "content_sha256": "81ae3d54c7bb717b88f614555ee52b1a898d3dab3ec99f2064d5475b822fd2ca",
+      "simples": "A referência à iniciativa judicial deve ser compatibilizada com sistema acusatório e hipóteses legais, sem neutralizar garantias por exigência de custas.",
+      "pontos": [
+        "Juiz não pode substituir acusação na investigação.",
+        "Providência instrutória precisa de fundamento, momento e contraditório pertinentes.",
+        "A exigência de custas do artigo anterior não impede, por si, diligência judicial legalmente cabível; isso não amplia ilimitadamente o poder probatório."
+      ],
+      "atencao": [
+        "Não ensinar poderes ilimitados de produzir prova nem confundir esclarecimento cabível com investigação judicial substitutiva."
+      ],
+      "exemplo": "Durante instrução, juízo examina esclarecimento legalmente cabível e assegura manifestação das partes. Variação: Juízo não pode assumir coleta acusatória indiscriminada apenas porque o 807 permite diligência.",
+      "prova": [
+        "Determinar diligência de ofício significa substituir livremente a acusação? Não. O art. 807 deve ser integrado ao sistema acusatório e aos limites legais da atividade judicial.",
+        "A remissão às custas elimina contraditório sobre a prova? Não. A questão financeira não suprime garantias nem transforma o juiz em investigador acusatório."
+      ],
+      "termos": [
+        {
+          "termo": "Iniciativa probatória delimitada",
+          "significado": "Providência compatível com função judicial e sistema acusatório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "b190c8ea-c1de-55ec-9ef8-8e798ee317c6",
+        "content_sha256": "81ae3d54c7bb717b88f614555ee52b1a898d3dab3ec99f2064d5475b822fd2ca",
+        "simples": "O disposto no artigo anterior não obstará à faculdade atribuída ao juiz de determinar de ofício inquirição de testemunhas ou outras diligências.",
+        "pontos": [
+          "A exigência de custas não impede o juiz de determinar, de ofício, testemunhas ou diligências."
+        ],
+        "atencao": [
+          "Iniciativa do juiz independe de custas."
+        ],
+        "exemplo": "Mesmo sem custas pagas, o juiz determina de ofício a oitiva de uma testemunha.",
+        "prova": [
+          "Assertiva que condiciona as diligências de ofício do juiz ao pagamento de custas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 806"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-808",
+      "unit_id": "9d805727-975d-5563-bfeb-a790fc667289",
+      "content_sha256": "4de86a48017526dde62d7e183fc529205d934704e9c58f2149735938e357388f",
+      "simples": "Na falta ou impedimento do escrivão e seu substituto, pessoa idônea pode servir mediante nomeação pela autoridade, compromisso e termo no recorte legal.",
+      "pontos": [
+        "Ausência dos responsáveis normais é pressuposto.",
+        "Nomeação não substitui competência e regime funcional atual para todos os cargos."
+      ],
+      "atencao": [
+        "Não apresentar nomeação ad hoc como dispensa universal de concurso, qualificação ou controle de acesso."
+      ],
+      "exemplo": "Em ato sem escrivão nem substituto, autoridade formaliza nomeação idônea e compromisso pertinente. Variação: Pessoal disponível regularmente não é afastado sem causa só para nomear conhecido da autoridade.",
+      "prova": [
+        "A nomeação excepcional prescinde de compromisso e termo? Não. O artigo exige pessoa idônea, nomeação, compromisso perante a autoridade e termo correspondente.",
+        "A regra dispensa concurso para qualquer investidura permanente? Não. Seu recorte é a falta ou impedimento do escrivão e substituto no ato, integrado ao regime funcional atual."
+      ],
+      "termos": [
+        {
+          "termo": "Escrivão ad hoc",
+          "significado": "Designação excepcional no ato, sujeita a pressupostos e formalização."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "9d805727-975d-5563-bfeb-a790fc667289",
+        "content_sha256": "4de86a48017526dde62d7e183fc529205d934704e9c58f2149735938e357388f",
+        "simples": "Na falta ou impedimento do escrivão e seu substituto, servirá pessoa idônea, nomeada pela autoridade, perante quem prestará compromisso, lavrando o respectivo termo.",
+        "pontos": [
+          "Sem escrivão nem substituto, serve pessoa idônea nomeada pela autoridade.",
+          "Presta compromisso e lavra termo."
+        ],
+        "atencao": [
+          "Compromisso do escrivão ad hoc."
+        ],
+        "exemplo": "Sem escrivão, a autoridade nomeia pessoa idônea, que presta compromisso.",
+        "prova": [
+          "Assertiva que dispensa o compromisso da pessoa nomeada para suprir o escrivão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 305"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-809",
+      "unit_id": "ccd8931c-7bd3-5f33-b27f-1781126cce33",
+      "content_sha256": "c32c605bc598710ed78f80293582f8241cce0e5d6782353bf35aaee7494c64a2",
+      "simples": "Estatística criminal prevista no texto deve ser integrada à gestão de dados e órgãos atuais, com finalidade, qualidade, sigilo e proteção constitucional.",
+      "pontos": [
+        "Boletim e remessa semestral são referências textuais históricas a integrar.",
+        "Não tratar acusado como culpado apenas por cadastro.",
+        "Dados pessoais/sensíveis não são automaticamente públicos.",
+        "Separar o trimestre referido no inciso I da remessa semestral do §2º, cuja redação é da Lei 9.061/1995."
+      ],
+      "atencao": [
+        "Não inventar competência atual pelo nome antigo da repartição nem divulgar religião, saúde ou antecedentes sem regime e finalidade legítimos. Não certificada toda regulamentação de estatísticas."
+      ],
+      "exemplo": "Órgão registra dados necessários para estatística legítima, preservando identificação e sigilo no regime pertinente. Variação: Planilha pública com informações de saúde identificáveis não se legitima só pela lista do 809.",
+      "prova": [
+        "Todos os dados do boletim criminal podem ser publicados com identificação? Não. A finalidade estatística não elimina sigilo, presunção de inocência e proteção constitucional de informações pessoais.",
+        "O nome histórico da repartição certifica o órgão atual competente? Não. A estrutura administrativa e regulamentação pertinentes devem ser conferidas; distinguir texto e implementação atual."
+      ],
+      "termos": [
+        {
+          "termo": "Estatística e proteção de dados",
+          "significado": "Informação para finalidade pública legítima sob limites e qualidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "ccd8931c-7bd3-5f33-b27f-1781126cce33",
+        "content_sha256": "c32c605bc598710ed78f80293582f8241cce0e5d6782353bf35aaee7494c64a2",
+        "simples": "A estatística judiciária criminal, a cargo do Instituto de Identificação e Estatística ou repartições congêneres, terá por base o boletim individual, parte integrante dos processos, e versará sobre crimes e contravenções, armas apreendidas, número de delinquentes e seus dados pessoais, casos de codelinquência, reincidência e antecedentes, sentenças, natureza das penas e medidas de segurança, suspensão condicional da pena e concessões ou denegações de habeas corpus. Os dados constituem o mínimo exigível e serão lançados semestralmente em mapa.",
+        "pontos": [
+          "Estatística criminal feita com base no boletim individual.",
+          "Abrange crimes, armas, delinquentes, reincidência, sentenças, penas, medidas de segurança, sursis e habeas corpus.",
+          "Dados mínimos, acrescidos de outros úteis.",
+          "Lançados semestralmente em mapa."
+        ],
+        "atencao": [
+          "Estatística semestral."
+        ],
+        "exemplo": "O instituto compila semestralmente as estatísticas criminais a partir do boletim individual.",
+        "prova": [
+          "Assertiva que dispensa o boletim individual das estatísticas criminais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 23"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-810",
+      "unit_id": "f6b7270b-da8a-5152-8cf3-4d311f9e8b9a",
+      "content_sha256": "56a246d38ef86d6a4aaa5ac95012eddc140a98fe7ced248a487ac060a965a3b0",
+      "simples": "O CPP original entrou em vigor em 1º de janeiro de 1942. Essa data não é a vigência de toda alteração posterior.",
+      "pontos": [
+        "Diploma original: 1941; entrada em vigor: 1942.",
+        "Separar atualização normativa e conferência editorial de criação do Código."
+      ],
+      "atencao": [
+        "Não ensinar cláusula histórica como início da regra do 798-A de 2022 ou de qualquer lei posterior."
+      ],
+      "exemplo": "Cláusula original indica 1/1/1942, enquanto mudança posterior exige sua própria regra temporal. Variação: Data de revisão de 2026 não altera data original de vigência.",
+      "prova": [
+        "Toda alteração do CPP entrou em vigor em 1º de janeiro de 1942? Não. Esse é o marco do diploma original; cada lei modificadora possui sua disciplina temporal.",
+        "A data de conferência editorial muda a data original de vigência? Não. Revisão do conteúdo, criação do diploma e atualização normativa são marcos distintos."
+      ],
+      "termos": [
+        {
+          "termo": "Vigência original",
+          "significado": "Marco histórico do Código, distinto das alterações posteriores."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f6b7270b-da8a-5152-8cf3-4d311f9e8b9a",
+        "content_sha256": "56a246d38ef86d6a4aaa5ac95012eddc140a98fe7ced248a487ac060a965a3b0",
+        "simples": "Este Código entrará em vigor no dia 1º de janeiro de 1942, dispositivo hoje meramente histórico.",
+        "pontos": [
+          "Cláusula de vigência do Código de Processo Penal original."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "O artigo apenas marca o início de vigência do Código.",
+        "prova": [
+          "Assertiva que atribui ao art. 810 efeito prático sobre os processos atuais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 811"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-811",
+      "unit_id": "9790dafa-7701-542b-a307-3d76fe32f990",
+      "content_sha256": "97f4c194bcdefeb49cbf21c6b8f68a2e91b936411716baeb9d70b5e97abadcb5",
+      "simples": "Cláusula final revoga disposições em contrário no contexto da criação do CPP; não elimina automaticamente todas as leis especiais futuras.",
+      "pontos": [
+        "Identificar conflito e sucessão normativa concretos.",
+        "Cláusula não é tipo penal autônomo nem autorização para ignorar legislação posterior."
+      ],
+      "atencao": [
+        "Não declarar revogação de qualquer lei especial só pela frase final de 1941. Normas posteriores e especiais exigem integração."
+      ],
+      "exemplo": "Conflito é analisado segundo hierarquia, especialidade e sucessão pertinentes. Variação: Lei especial posterior não desaparece automaticamente por estar fora do CPP.",
+      "prova": [
+        "A cláusula final revoga automaticamente toda lei especial futura? Não. Ela encerra o diploma original; conflitos posteriores exigem análise de hierarquia, especialidade e sucessão.",
+        "O art. 811 contém tipo penal autônomo? Não. Trata-se de cláusula revogatória, sem criação de crime ou pena própria."
+      ],
+      "termos": [
+        {
+          "termo": "Cláusula revogatória",
+          "significado": "Disposição final cuja aplicação exige conflito e contexto normativos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9790dafa-7701-542b-a307-3d76fe32f990",
+        "content_sha256": "97f4c194bcdefeb49cbf21c6b8f68a2e91b936411716baeb9d70b5e97abadcb5",
+        "simples": "Revogam-se as disposições em contrário, cláusula final do Código de Processo Penal, que encerra o texto com a data e a assinatura originais.",
+        "pontos": [
+          "Cláusula de revogação das disposições em contrário.",
+          "Encerra o texto original do Código."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "A cláusula apenas revoga normas anteriores incompatíveis com o Código.",
+        "prova": [
+          "Assertiva que atribui ao art. 811 efeito prático sobre os processos atuais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 810"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    }
+  ]
+}
