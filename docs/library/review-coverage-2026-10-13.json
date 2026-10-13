@@ -1,8 +1,8 @@
 {
   "current_units": 3511,
-  "current_review_metadata": 2214,
-  "pending_current_review_metadata": 1297,
-  "checked_at": "2026-10-13T04:11:49.064Z",
+  "current_review_metadata": 2379,
+  "pending_current_review_metadata": 1132,
+  "checked_at": "2026-10-13T04:41:18.318Z",
   "note": "Contagem de aprovações editoriais atuais com revisor, data e hash correspondente; existência de explicação publicada não equivale a revisão atual. Não certifica toda a regulamentação ou jurisprudência.",
   "courses": [
     {
@@ -32,8 +32,8 @@
     {
       "slug": "lep",
       "current": 215,
-      "review_metadata": 59,
-      "pending": 156
+      "review_metadata": 106,
+      "pending": 109
     },
     {
       "slug": "organizacoes",
@@ -194,8 +194,8 @@
     {
       "slug": "codigo-processo-penal",
       "current": 808,
-      "review_metadata": 609,
-      "pending": 199
+      "review_metadata": 727,
+      "pending": 81
     },
     {
       "slug": "pensao-regulamento",
