@@ -1,0 +1,1792 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T02:43:30.310037+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 30,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-321",
+        "art-322",
+        "art-323",
+        "art-324",
+        "art-325",
+        "art-326",
+        "art-327",
+        "art-328",
+        "art-329",
+        "art-330",
+        "art-331",
+        "art-332",
+        "art-333",
+        "art-334",
+        "art-335",
+        "art-336",
+        "art-337",
+        "art-338",
+        "art-339",
+        "art-340",
+        "art-341",
+        "art-342",
+        "art-343",
+        "art-344",
+        "art-345",
+        "art-346",
+        "art-347",
+        "art-348",
+        "art-349",
+        "art-350"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-321",
+      "unit_id": "a67acbb6-1a76-5905-b947-1f9da5f02b27",
+      "content_sha256": "0bbaea194a1901d3adfd595160fdec9e75866c5eb08c5fc177705148a16ebcb5",
+      "simples": "Sem requisitos de preventiva, juiz concede liberdade provisória, com cautelares se necessárias.",
+      "pontos": [
+        "Art. 319 e critérios do 282 delimitam restrições.",
+        "Incisos antigos I e II revogados."
+      ],
+      "atencao": [
+        "Incapacidade de pagar fiança não cria por si motivo cautelar para prender."
+      ],
+      "exemplo": "Não há risco concreto: juiz concede liberdade e avalia necessidade de cautelar. Variação: Prisão não se mantém só porque acusado é pobre.",
+      "prova": [
+        "Ausência de requisitos impõe liberdade provisória? Sim.",
+        "Cautelares são sempre todas obrigatórias? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Liberdade provisória",
+          "significado": "Liberdade durante processo sob condições legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202501926710"
+      ],
+      "expected": {
+        "unit_id": "a67acbb6-1a76-5905-b947-1f9da5f02b27",
+        "content_sha256": "0bbaea194a1901d3adfd595160fdec9e75866c5eb08c5fc177705148a16ebcb5",
+        "simples": "Ausentes os requisitos que autorizam a decretação da prisão preventiva, o juiz deverá conceder liberdade provisória, impondo, se for o caso, as medidas cautelares previstas no art. 319 e observados os critérios do art. 282. Os incisos I e II estão revogados.",
+        "pontos": [
+          "Ausentes os requisitos da preventiva: liberdade provisória.",
+          "Pode impor medidas do art. 319, observado o art. 282."
+        ],
+        "atencao": [
+          "Liberdade provisória é a regra quando faltam os requisitos da preventiva."
+        ],
+        "exemplo": "Sem requisitos da preventiva, o juiz concede liberdade provisória com comparecimento periódico.",
+        "prova": [
+          "Assertiva que mantém a prisão sem requisitos da preventiva erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 312",
+          "Art. 319"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-322",
+      "unit_id": "75e74ace-93de-549b-ac86-762de318033d",
+      "content_sha256": "4cab3711d43dea4685f57bec86f78584b11137c0cbe63446d35693c674607c97",
+      "simples": "Polícia concede fiança somente quando pena máxima não supera quatro anos; demais casos cabem ao juiz, em 48 horas.",
+      "pontos": [
+        "Exatamente quatro integra limite policial.",
+        "Verificar vedação de fiança mesmo dentro da faixa.",
+        "Competência pelo máximo cominado, não por pena imaginada."
+      ],
+      "atencao": [
+        "Não confundir máximo até quatro com requisito de preventiva superior a quatro."
+      ],
+      "exemplo": "Delito afiançável com máximo de quatro admite arbitramento policial. Variação: Máximo de cinco exige requerimento judicial, não arbitramento pela polícia.",
+      "prova": [
+        "Máximo exatamente quatro está no limite? Sim.",
+        "Juiz decide nos demais casos em 48 horas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Competência para fiança",
+          "significado": "Arbitramento conforme pena máxima e vedações."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "75e74ace-93de-549b-ac86-762de318033d",
+        "content_sha256": "4cab3711d43dea4685f57bec86f78584b11137c0cbe63446d35693c674607c97",
+        "simples": "A autoridade policial somente poderá conceder fiança nos casos de infração cuja pena privativa de liberdade máxima não seja superior a 4 anos. Nos demais casos, a fiança será requerida ao juiz, que decidirá em 48 horas.",
+        "pontos": [
+          "Delegado concede fiança se a pena máxima não for superior a 4 anos.",
+          "Demais casos: pedido ao juiz, que decide em 48 horas."
+        ],
+        "atencao": [
+          "Pena MÁXIMA não superior a 4 anos.",
+          "Juiz decide em 48 horas."
+        ],
+        "exemplo": "Em infração com pena máxima de 3 anos, o delegado pode arbitrar fiança.",
+        "prova": [
+          "Assertiva que atribui ao delegado a concessão de fiança para pena máxima de 6 anos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 325"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-323",
+      "unit_id": "4671b767-bd79-539d-a16c-9c82fa47826a",
+      "content_sha256": "9357634e58eaff4594c0913e4a1d51e2c359baa1ae272f52d013794f19c89230",
+      "simples": "Fiança não cabe nos crimes constitucionalmente inafiançáveis enumerados.",
+      "pontos": [
+        "Racismo.",
+        "Tortura, tráfico ilícito, terrorismo e hediondos.",
+        "Grupos armados contra ordem constitucional e Estado Democrático.",
+        "Incisos antigos IV e V revogados."
+      ],
+      "atencao": [
+        "Inafiançabilidade não é sinônimo universal de prisão preventiva automática nem elimina exame de liberdade sem fiança."
+      ],
+      "exemplo": "Crime hediondo não admite fiança; juiz examina necessidade cautelar e liberdade juridicamente cabível. Variação: Crime não incluído na lista ainda pode ter vedação por outra regra.",
+      "prova": [
+        "Inafiançável significa automaticamente preventiva? Não.",
+        "Hediondo admite fiança pelo simples pagamento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Inafiançabilidade",
+          "significado": "Vedação da garantia pecuniária, distinta de necessidade de prender."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=2690064&numeroProcesso=601384&numeroTema=192"
+      ],
+      "expected": {
+        "unit_id": "4671b767-bd79-539d-a16c-9c82fa47826a",
+        "content_sha256": "9357634e58eaff4594c0913e4a1d51e2c359baa1ae272f52d013794f19c89230",
+        "simples": "Não será concedida fiança nos crimes de racismo; nos crimes de tortura, tráfico ilícito de entorpecentes e drogas afins, terrorismo e nos definidos como crimes hediondos; e nos crimes cometidos por grupos armados, civis ou militares, contra a ordem constitucional e o Estado Democrático. Os incisos IV e V foram revogados.",
+        "pontos": [
+          "Racismo.",
+          "Tortura, tráfico, terrorismo e crimes hediondos.",
+          "Crimes de grupos armados contra a ordem constitucional e o Estado Democrático."
+        ],
+        "atencao": [
+          "Rol de crimes inafiançáveis (veja também a Constituição, art. 5º, XLII, XLIII e XLIV)."
+        ],
+        "exemplo": "Crime de racismo é inafiançável.",
+        "prova": [
+          "Assertiva que admite fiança em crime de tortura erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 324"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-324",
+      "unit_id": "02dd822d-058a-52a4-900f-3ab93d63f748",
+      "content_sha256": "049972dabf89eb7a88b340fadf9c6b6f214f7f94fc4dce54aa120df421ed20ba",
+      "simples": "Também há vedação por quebra no mesmo processo, obrigações descumpridas sem causa, prisão civil/militar ou motivos de preventiva.",
+      "pontos": [
+        "Quebra anterior na mesma causa ou infração injustificada dos arts. 327/328.",
+        "Civil/militar têm regimes próprios.",
+        "Motivos de preventiva excluem fiança como substituição suficiente."
+      ],
+      "atencao": [
+        "Não generalizar quebra em processo diverso como hipótese textual idêntica; nem restaurar inciso III revogado."
+      ],
+      "exemplo": "Acusado quebra obrigação injustificadamente no mesmo feito e enfrenta vedação. Variação: Ausência com justa causa exige análise, sem vedação mecânica.",
+      "prova": [
+        "O inciso I fala do mesmo processo? Sim.",
+        "Justa causa é irrelevante ao descumprimento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Vedação adicional",
+          "significado": "Impedimento ligado à situação processual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "02dd822d-058a-52a4-900f-3ab93d63f748",
+        "content_sha256": "049972dabf89eb7a88b340fadf9c6b6f214f7f94fc4dce54aa120df421ed20ba",
+        "simples": "Não será, igualmente, concedida fiança: aos que, no mesmo processo, tiverem quebrado fiança anteriormente concedida ou infringido, sem motivo justo, qualquer das obrigações dos arts. 327 e 328; em caso de prisão civil ou militar; e quando presentes os motivos que autorizam a decretação da prisão preventiva (art. 312). O inciso III está revogado.",
+        "pontos": [
+          "Quem quebrou fiança no mesmo processo ou infringiu obrigações dos arts. 327 e 328.",
+          "Prisão civil ou militar.",
+          "Presentes os motivos da prisão preventiva."
+        ],
+        "atencao": [
+          "Se há motivos para a preventiva, não cabe fiança."
+        ],
+        "exemplo": "Acusado que quebrou fiança anterior no mesmo processo não tem nova fiança.",
+        "prova": [
+          "Assertiva que permite fiança quando presentes os motivos da preventiva erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 323"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-325",
+      "unit_id": "e6e48501-7390-502d-a598-072447a3b506",
+      "content_sha256": "535ebed59bd0d79ff2a915757385201789b2d7e9e553bdb76a6c2cf8d9d8c4d5",
+      "simples": "Fiança parte de faixas em salários mínimos e pode ser ajustada pela situação econômica nos limites legais.",
+      "pontos": [
+        "Máximo até quatro: um a cem salários mínimos.",
+        "Máximo superior a quatro: dez a duzentos.",
+        "Dispensa pelo art. 350; redução até dois terços; aumento até mil vezes."
+      ],
+      "atencao": [
+        "Reduzir em dois terços deixa um terço do valor; não confundir reduzir até dois terços com fixar necessariamente dois terços."
+      ],
+      "exemplo": "Valor-base de três salários é reduzido em dois terços e resulta em um. Variação: Situação econômica pode justificar dispensa judicial em vez de prisão por pobreza.",
+      "prova": [
+        "Faixa até quatro é de um a cem? Sim.",
+        "Aumento máximo previsto é mil vezes? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Ajuste econômico",
+          "significado": "Calibragem da garantia conforme condição financeira."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202501926710"
+      ],
+      "expected": {
+        "unit_id": "e6e48501-7390-502d-a598-072447a3b506",
+        "content_sha256": "535ebed59bd0d79ff2a915757385201789b2d7e9e553bdb76a6c2cf8d9d8c4d5",
+        "simples": "O valor da fiança será fixado pela autoridade que a conceder nos seguintes limites: de 1 a 100 salários mínimos, quando se tratar de infração cuja pena privativa de liberdade, no grau máximo, não for superior a 4 anos; e de 10 a 200 salários mínimos, quando o máximo da pena privativa de liberdade cominada for superior a 4 anos. Se assim recomendar a situação econômica do preso, a fiança poderá ser dispensada, reduzida até o máximo de 2/3 ou aumentada em até 1.000 vezes.",
+        "pontos": [
+          "Pena máxima até 4 anos: 1 a 100 salários mínimos.",
+          "Pena máxima superior a 4 anos: 10 a 200 salários mínimos.",
+          "Dispensa, redução de até 2/3 ou aumento de até 1.000 vezes, conforme a situação econômica."
+        ],
+        "atencao": [
+          "Faixas de valor e possibilidade de ajuste pela situação econômica."
+        ],
+        "exemplo": "Preso muito rico tem a fiança aumentada em até 1.000 vezes.",
+        "prova": [
+          "Assertiva que fixa o teto da redução da fiança em metade erra: pode ser reduzida até 2/3."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 322",
+          "Art. 326"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-326",
+      "unit_id": "404f9ed7-c433-55eb-8917-bef588e54ca8",
+      "content_sha256": "8cd1c0a4e1b29785a3ca9bba931caa0dbfc83d72c0adddf45e989ab7f4defc17",
+      "simples": "Arbitramento considera natureza da infração, condições pessoais e econômicas, vida pregressa, periculosidade e custas prováveis.",
+      "pontos": [
+        "Fundamentar escolha dentro do regime aplicável.",
+        "Capacidade econômica importa à adequação."
+      ],
+      "atencao": [
+        "Fiança não deve ser pena antecipada nem valor aleatório."
+      ],
+      "exemplo": "Autoridade justifica valor considerando renda e elementos do caso. Variação: Não copiar valor alto sem analisar condições econômicas concretas.",
+      "prova": [
+        "Condição econômica é relevante? Sim.",
+        "Valor pode ser arbitrário? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Arbitramento individualizado",
+          "significado": "Definição motivada do valor da garantia."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "404f9ed7-c433-55eb-8917-bef588e54ca8",
+        "content_sha256": "8cd1c0a4e1b29785a3ca9bba931caa0dbfc83d72c0adddf45e989ab7f4defc17",
+        "simples": "Para determinar o valor da fiança, a autoridade terá em consideração a natureza da infração, as condições pessoais de fortuna e vida pregressa do acusado, as circunstâncias indicativas de sua periculosidade, bem como a importância provável das custas do processo, até final julgamento.",
+        "pontos": [
+          "Natureza da infração.",
+          "Condições pessoais de fortuna e vida pregressa.",
+          "Circunstâncias indicativas de periculosidade.",
+          "Custas prováveis do processo."
+        ],
+        "atencao": [
+          "Critérios de fixação do valor."
+        ],
+        "exemplo": "O delegado considera a situação econômica do preso ao fixar a fiança.",
+        "prova": [
+          "Assertiva que desconsidera as condições de fortuna do acusado ao fixar a fiança erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 325"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-327",
+      "unit_id": "4241ca62-cab6-57bf-8665-1721380d8dc6",
+      "content_sha256": "ef566f4974a481788f6eec0a64b1b9138e56f565d5700a9fbd52d4b47ae7017e",
+      "simples": "Afiançado comparece quando intimado aos atos do inquérito, instrução e julgamento, integrando regras de justa causa.",
+      "pontos": [
+        "Termo estabelece obrigação.",
+        "Quebramento exige leitura com art. 341, I: intimação regular e ausência injustificada."
+      ],
+      "atencao": [
+        "Não ensinar perda automática por qualquer falta, mesmo sem intimação ou com impedimento legítimo."
+      ],
+      "exemplo": "Acusado regularmente intimado comparece à audiência. Variação: Hospitalização comprovada exige apreciar motivo justo.",
+      "prova": [
+        "Qualquer falta sem análise sempre quebra fiança? Não.",
+        "Há obrigação de comparecer quando intimado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Comparecimento devido",
+          "significado": "Obrigação condicionada a convocação regular e causas legítimas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4241ca62-cab6-57bf-8665-1721380d8dc6",
+        "content_sha256": "ef566f4974a481788f6eec0a64b1b9138e56f565d5700a9fbd52d4b47ae7017e",
+        "simples": "A fiança tomada por termo obrigará o afiançado a comparecer perante a autoridade, todas as vezes que for intimado para atos do inquérito e da instrução criminal e para o julgamento. Quando o réu não comparecer, a fiança será havida como quebrada.",
+        "pontos": [
+          "Afiançado deve comparecer a todos os atos do inquérito, da instrução e do julgamento.",
+          "Não comparecimento: fiança quebrada."
+        ],
+        "atencao": [
+          "Obrigação de comparecimento."
+        ],
+        "exemplo": "Afiançado falta à audiência sem justificativa: fiança quebrada.",
+        "prova": [
+          "Assertiva que dispensa o comparecimento do afiançado aos atos do inquérito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 341"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-328",
+      "unit_id": "d4dc57d8-5369-5a8c-8cff-625dc6c8ec8f",
+      "content_sha256": "0ececab8c1711d6ba2f0f3144135a14d3fad10a96f6a18081dd034edb9187780",
+      "simples": "Afiançado precisa de permissão prévia para mudar residência e de comunicação de localização para afastar-se por mais de oito dias.",
+      "pontos": [
+        "Mudança: permissão prévia.",
+        "Ausência superior a oito dias: informar onde será encontrado.",
+        "Obrigações distintas, com controle de descumprimento."
+      ],
+      "atencao": [
+        "Não confundir comunicar afastamento com pedir permissão para mudar residência; exatamente oito não é mais de oito."
+      ],
+      "exemplo": "Réu solicita permissão antes da mudança. Variação: Viagem de dez dias exige informar lugar onde poderá ser encontrado.",
+      "prova": [
+        "Mudança exige permissão prévia? Sim.",
+        "Afastamento de mais de oito dias exige comunicação? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Controle de localização",
+          "significado": "Permissão e informação sobre residência e ausência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d4dc57d8-5369-5a8c-8cff-625dc6c8ec8f",
+        "content_sha256": "0ececab8c1711d6ba2f0f3144135a14d3fad10a96f6a18081dd034edb9187780",
+        "simples": "O réu afiançado não poderá, sob pena de quebramento da fiança, mudar de residência sem prévia permissão da autoridade processante, ou ausentar-se por mais de 8 dias de sua residência sem comunicar àquela autoridade o lugar onde será encontrado.",
+        "pontos": [
+          "Mudança de residência exige prévia permissão.",
+          "Ausência por mais de 8 dias exige comunicação do local."
+        ],
+        "atencao": [
+          "Prazo de 8 dias."
+        ],
+        "exemplo": "Afiançado viaja por 10 dias sem comunicar onde estará: quebra de fiança.",
+        "prova": [
+          "Assertiva que fixa em 15 dias o limite de ausência sem comunicação erra: são 8 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 341"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-329",
+      "unit_id": "025380ab-e27d-5736-b515-6dcb2bf79d8d",
+      "content_sha256": "18aceee7ecbb17faf6059e97c32921971bf9d508b00ebf0dbf815530d0073b9c",
+      "simples": "Fiança é formalizada em termo e certificada nos autos, com notificação das obrigações e consequências.",
+      "pontos": [
+        "Livro especial e formalidades descritas; integrar documentação atual aplicável.",
+        "Assinaturas da autoridade e prestador.",
+        "Réu e prestador recebem ciência dos arts. 327/328."
+      ],
+      "atencao": [
+        "Registro não é só recibo de pagamento; ciência das obrigações deve constar."
+      ],
+      "exemplo": "Termo é assinado e certidão juntada com informação das obrigações. Variação: Pagamento por terceiro não elimina ciência do acusado e do prestador.",
+      "prova": [
+        "Deve notificar obrigações? Sim.",
+        "Termo dispensa certidão nos autos? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Termo de fiança",
+          "significado": "Formalização e ciência da garantia."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "025380ab-e27d-5736-b515-6dcb2bf79d8d",
+        "content_sha256": "18aceee7ecbb17faf6059e97c32921971bf9d508b00ebf0dbf815530d0073b9c",
+        "simples": "Nos juízos criminais e delegacias de polícia, haverá um livro especial, com termos de abertura e de encerramento, numerado e rubricado em todas as suas folhas pela autoridade, destinado especialmente aos termos de fiança. O termo será lavrado pelo escrivão e assinado pela autoridade e por quem prestar a fiança, e dele extrair-se-á certidão para juntar-se aos autos. O réu e quem prestar a fiança serão notificados pelo escrivão das obrigações e da sanção previstas nos arts. 327 e 328, o que constará dos autos.",
+        "pontos": [
+          "Livro especial de termos de fiança, numerado e rubricado.",
+          "Termo lavrado pelo escrivão e assinado pela autoridade e por quem presta a fiança.",
+          "Certidão juntada aos autos.",
+          "Notificação das obrigações e sanções dos arts. 327 e 328."
+        ],
+        "atencao": [
+          "Formalidades do termo de fiança."
+        ],
+        "exemplo": "O escrivão lavra o termo de fiança no livro especial.",
+        "prova": [
+          "Assertiva que dispensa a notificação do réu quanto às obrigações da fiança erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 327",
+          "Art. 328"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-330",
+      "unit_id": "b61ecf39-ad10-5874-b228-508c6d624dbe",
+      "content_sha256": "95e851a8641ae26a1638cefc6873b73b620b6de6ec130ee08751a199b4c4f607",
+      "simples": "Fiança admite dinheiro, bens preciosos, títulos públicos e hipoteca inscrita em primeiro lugar, com avaliações pertinentes.",
+      "pontos": [
+        "Avaliação imediata de imóvel ou preciosos por perito.",
+        "Títulos públicos pela cotação; nominativos livres de ônus comprovadamente.",
+        "Garantia definitiva não significa imutabilidade ou impossibilidade de cassação/reforço."
+      ],
+      "atencao": [
+        "Não aceitar qualquer título privado como se fosse título público enumerado."
+      ],
+      "exemplo": "Bem precioso é avaliado pelo perito designado. Variação: Título nominativo com ônus não satisfaz comprovação de liberdade prevista.",
+      "prova": [
+        "Pode ser hipoteca de primeiro grau? Sim.",
+        "Definitiva impede reforço posterior? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Modalidade de caução",
+          "significado": "Meio patrimonial admitido para garantir obrigações."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b61ecf39-ad10-5874-b228-508c6d624dbe",
+        "content_sha256": "95e851a8641ae26a1638cefc6873b73b620b6de6ec130ee08751a199b4c4f607",
+        "simples": "A fiança, que será sempre definitiva, consistirá em depósito de dinheiro, pedras, objetos ou metais preciosos, títulos da dívida pública, federal, estadual ou municipal, ou em hipoteca inscrita em primeiro lugar. A avaliação de imóvel, pedras, objetos ou metais preciosos será feita imediatamente por perito nomeado pela autoridade. Quando a fiança consistir em caução de títulos da dívida pública, o valor será determinado pela sua cotação em Bolsa, e, sendo nominativos, exigir-se-á prova de que estão livres de ônus.",
+        "pontos": [
+          "Fiança sempre definitiva.",
+          "Modalidades: depósito de dinheiro, pedras, objetos ou metais preciosos, títulos da dívida pública, ou hipoteca em primeiro lugar.",
+          "Avaliação imediata por perito.",
+          "Títulos: cotação em Bolsa e prova de que estão livres de ônus."
+        ],
+        "atencao": [
+          "Fiança sempre DEFINITIVA."
+        ],
+        "exemplo": "A fiança é prestada mediante depósito em dinheiro.",
+        "prova": [
+          "Assertiva que admite fiança provisória no art. 330 erra: ela é sempre definitiva."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 331"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-331",
+      "unit_id": "ad6978c8-d7ae-5ea7-8597-e9161e66c524",
+      "content_sha256": "2d40516ce2ec14e5c952cbc0e94af3aad4a5bd90b4a9f00b19638bb7d8127495",
+      "simples": "Valor segue repartição arrecadadora ou depositário público, com comprovantes; impossibilidade de depósito imediato tem solução e prazo.",
+      "pontos": [
+        "Entrega excepcional ao escrivão ou pessoa abonada a critério da autoridade.",
+        "Destino regular dentro de três dias e registro no termo."
+      ],
+      "atencao": [
+        "Não manter valor indefinidamente fora do depósito regular."
+      ],
+      "exemplo": "Sem depósito pronto, autoridade designa responsável e regulariza em três dias. Variação: Entrega excepcional não autoriza gasto ou apropriação privada.",
+      "prova": [
+        "Prazo excepcional é três dias? Sim.",
+        "Deve haver comprovantes nos autos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Depósito da garantia",
+          "significado": "Custódia formal dos valores."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ad6978c8-d7ae-5ea7-8597-e9161e66c524",
+        "content_sha256": "2d40516ce2ec14e5c952cbc0e94af3aad4a5bd90b4a9f00b19638bb7d8127495",
+        "simples": "O valor em que consistir a fiança será recolhido à repartição arrecadadora federal ou estadual, ou entregue ao depositário público, juntando-se aos autos os respectivos conhecimentos. Nos lugares em que o depósito não se puder fazer de pronto, o valor será entregue ao escrivão ou pessoa abonada, a critério da autoridade, e dentro de três dias dar-se-á ao valor o destino que lhe assina o artigo, o que tudo constará do termo de fiança.",
+        "pontos": [
+          "Valor recolhido à repartição arrecadadora ou entregue ao depositário público.",
+          "Conhecimentos juntados aos autos.",
+          "Sem depósito imediato: entrega ao escrivão ou pessoa abonada e destinação em três dias."
+        ],
+        "atencao": [
+          "Prazo de três dias para a destinação."
+        ],
+        "exemplo": "Em local sem banco, a fiança é entregue ao escrivão e depositada em três dias.",
+        "prova": [
+          "Assertiva que fixa em 10 dias o prazo para dar destino ao valor entregue ao escrivão erra: são três dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 330"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-332",
+      "unit_id": "63764baa-996d-5cd1-8737-661281cc2a16",
+      "content_sha256": "936b1dfb12b6208c5229349180cb7abcfd94170618543d72409b4dd0a6ee6792",
+      "simples": "No flagrante, autoridade do auto concede fiança dentro de sua competência; prisão por mandado segue autoridades previstas, com limites atuais.",
+      "pontos": [
+        "Integrar limite policial do art. 322.",
+        "Juiz emissor ou autoridade destinatária de requisição nos termos legais."
+      ],
+      "atencao": [
+        "Artigo não amplia competência policial para pena máxima acima de quatro nem torna crime inafiançável afiançável."
+      ],
+      "exemplo": "Autoridade do flagrante arbitra garantia em delito permitido e faixa de competência. Variação: Pena superior ao limite policial exige juiz, ainda que polícia presida auto.",
+      "prova": [
+        "Presidir auto elimina limite do art. 322? Não.",
+        "Há regra própria para mandado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Competência integrada",
+          "significado": "Identificação da autoridade respeitando limites."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "63764baa-996d-5cd1-8737-661281cc2a16",
+        "content_sha256": "936b1dfb12b6208c5229349180cb7abcfd94170618543d72409b4dd0a6ee6792",
+        "simples": "Em caso de prisão em flagrante, será competente para conceder a fiança a autoridade que presidir ao respectivo auto e, em caso de prisão por mandado, o juiz que o houver expedido, ou a autoridade judiciária ou policial a quem tiver sido requisitada a prisão.",
+        "pontos": [
+          "Flagrante: autoridade que preside o auto.",
+          "Prisão por mandado: juiz que o expediu, ou autoridade a quem foi requisitada a prisão."
+        ],
+        "atencao": [
+          "Competência para conceder a fiança."
+        ],
+        "exemplo": "Delegado que preside o auto de flagrante pode conceder a fiança, nos limites da lei.",
+        "prova": [
+          "Assertiva que atribui ao Ministério Público a concessão da fiança erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 322"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-333",
+      "unit_id": "f6368170-b989-59a4-be18-7947eaab7346",
+      "content_sha256": "76e26ab745f6135db2071c4409e292ef4fcc3c51af2141f6e654f8f01ccf90e7",
+      "simples": "Concessão da fiança independe de audiência prévia do MP; após prestação, MP recebe vista para providências pertinentes.",
+      "pontos": [
+        "Não atrasar concessão exigindo oitiva prévia inexistente.",
+        "Controle posterior permanece."
+      ],
+      "atencao": [
+        "Dispensa de audiência prévia não retira fiscalização posterior."
+      ],
+      "exemplo": "Fiança é prestada e processo segue ao MP para manifestação. Variação: Não suspender concessão apenas esperando parecer prévio como requisito geral.",
+      "prova": [
+        "Parecer prévio é requisito aqui? Não.",
+        "MP terá vista depois? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Controle posterior",
+          "significado": "Manifestação após prestação da garantia."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f6368170-b989-59a4-be18-7947eaab7346",
+        "content_sha256": "76e26ab745f6135db2071c4409e292ef4fcc3c51af2141f6e654f8f01ccf90e7",
+        "simples": "Depois de prestada a fiança, que será concedida independentemente de audiência do Ministério Público, este terá vista do processo a fim de requerer o que julgar conveniente.",
+        "pontos": [
+          "Fiança concedida sem oitiva prévia do MP.",
+          "Depois de prestada, o MP tem vista para requerer o que entender."
+        ],
+        "atencao": [
+          "Oitiva do MP apenas posterior."
+        ],
+        "exemplo": "O MP examina o processo após a prestação da fiança.",
+        "prova": [
+          "Assertiva que exige a prévia oitiva do MP para conceder a fiança erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 332"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-334",
+      "unit_id": "dc8c1b46-659c-5376-ab30-b9f61136801d",
+      "content_sha256": "2b2ba503d73c1f997ae8732d361f2b60759ca2f344a375e9ae315e43184b05e0",
+      "simples": "Fiança pode ser prestada enquanto condenação não transitar em julgado, observada admissibilidade.",
+      "pontos": [
+        "Limite temporal específico.",
+        "Não afasta regime de execução imediata do júri ou outros fundamentos cautelares."
+      ],
+      "atencao": [
+        "Antes do trânsito não significa direito universal a fiança em qualquer delito ou título de prisão."
+      ],
+      "exemplo": "Em caso juridicamente afiançável, garantia é prestada antes do trânsito. Variação: Crime inafiançável não passa a admitir garantia por estar em recurso.",
+      "prova": [
+        "O marco textual é trânsito da condenação? Sim.",
+        "O prazo elimina vedações de fiança? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Momento da prestação",
+          "significado": "Janela legal condicionada à admissibilidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "dc8c1b46-659c-5376-ab30-b9f61136801d",
+        "content_sha256": "2b2ba503d73c1f997ae8732d361f2b60759ca2f344a375e9ae315e43184b05e0",
+        "simples": "A fiança poderá ser prestada enquanto não transitar em julgado a sentença condenatória.",
+        "pontos": [
+          "Fiança pode ser prestada até o trânsito em julgado da sentença condenatória."
+        ],
+        "atencao": [
+          "Limite temporal: o trânsito em julgado."
+        ],
+        "exemplo": "Mesmo após a sentença condenatória recorrível, a fiança ainda pode ser prestada.",
+        "prova": [
+          "Assertiva que limita a fiança à fase de inquérito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 330"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-335",
+      "unit_id": "00fe875d-9d8d-5cd7-97cc-05b9bba4c374",
+      "content_sha256": "4e5d2effebb940565ef36f1b84b47fd7a271c415c0e994e08740726d7848affa",
+      "simples": "Recusa ou demora policial permite petição simples ao juiz por preso ou outra pessoa, com decisão em 48 horas.",
+      "pontos": [
+        "Via judicial para controle da concessão.",
+        "Preservar requisitos e vedações de fundo."
+      ],
+      "atencao": [
+        "Petição não torna fiança cabível onde lei veda."
+      ],
+      "exemplo": "Familiar apresenta pedido ao juiz diante de recusa policial. Variação: Juiz decide em prazo previsto após avaliar cabimento.",
+      "prova": [
+        "Terceiro pode peticionar pelo preso? Sim.",
+        "Decisão tem prazo de 48 horas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Controle da recusa",
+          "significado": "Pedido judicial diante de negativa ou atraso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "00fe875d-9d8d-5cd7-97cc-05b9bba4c374",
+        "content_sha256": "4e5d2effebb940565ef36f1b84b47fd7a271c415c0e994e08740726d7848affa",
+        "simples": "Recusando ou retardando a autoridade policial a concessão da fiança, o preso, ou alguém por ele, poderá prestá-la, mediante simples petição, perante o juiz competente, que decidirá em 48 horas.",
+        "pontos": [
+          "Recusa ou retardo do delegado: petição ao juiz.",
+          "Juiz decide em 48 horas."
+        ],
+        "atencao": [
+          "Prazo de 48 horas."
+        ],
+        "exemplo": "O delegado retarda a fiança, e o preso pede ao juiz por simples petição.",
+        "prova": [
+          "Assertiva que exige habeas corpus para a fiança recusada pela autoridade policial erra: basta simples petição."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 322"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-336",
+      "unit_id": "e9e60bc3-6758-54cf-bce5-01e7c4120297",
+      "content_sha256": "378fc2a7c52b417e2c7884cd67e26e078031323f1ee4309ce48216fa72cbb1a6",
+      "simples": "Fiança atende encargos patrimoniais legais se houver condenação, inclusive hipótese de prescrição depois da sentença nos termos do parágrafo.",
+      "pontos": [
+        "Custas, indenização, prestação pecuniária e multa.",
+        "Regra especial alcança prescrição posterior à sentença condenatória."
+      ],
+      "atencao": [
+        "Fiança não é multa paga antecipadamente em toda hipótese; comparar restituição do art. 337."
+      ],
+      "exemplo": "Condenação permite destinação aos encargos legalmente devidos. Variação: Absolvição definitiva segue restituição, não retenção como punição.",
+      "prova": [
+        "Pode servir à indenização do dano? Sim.",
+        "Toda fiança é automaticamente confiscada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Destinação aos encargos",
+          "significado": "Aplicação do patrimônio conforme resultado e obrigações."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e9e60bc3-6758-54cf-bce5-01e7c4120297",
+        "content_sha256": "378fc2a7c52b417e2c7884cd67e26e078031323f1ee4309ce48216fa72cbb1a6",
+        "simples": "O dinheiro ou objetos dados como fiança servirão ao pagamento das custas, da indenização do dano, da prestação pecuniária e da multa, se o réu for condenado. Este dispositivo terá aplicação ainda no caso da prescrição depois da sentença condenatória.",
+        "pontos": [
+          "Fiança paga custas, indenização, prestação pecuniária e multa, se condenado.",
+          "Aplica-se também na prescrição após a sentença condenatória."
+        ],
+        "atencao": [
+          "Mesmo com prescrição posterior à condenação."
+        ],
+        "exemplo": "Condenado o réu, o valor da fiança cobre custas e multa.",
+        "prova": [
+          "Assertiva que devolve a fiança ao réu na prescrição posterior à sentença condenatória erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 337"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-337",
+      "unit_id": "df49c746-94e1-5c62-bd6c-720b251e0f83",
+      "content_sha256": "7c14a6e30160e53d866703ffde72c76141d65b0894b2a8c767e7a3abd0579ea1",
+      "simples": "Sem efeito ou com absolvição/extinção definitiva, restitui-se valor atualizado sem desconto, ressalvada hipótese do art. 336, parágrafo único.",
+      "pontos": [
+        "Atualização do valor.",
+        "Exceção específica não pode ser ignorada."
+      ],
+      "atencao": [
+        "Não ensinar devolução universal sem considerar prescrição posterior à condenação na regra remetida."
+      ],
+      "exemplo": "Absolvição definitiva gera restituição atualizada na hipótese. Variação: Prescrição após sentença condenatória demanda integrar exceção do art. 336.",
+      "prova": [
+        "Restituição prevista considera atualização? Sim.",
+        "Há ressalva expressa? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Restituição da fiança",
+          "significado": "Devolução conforme resultado e exceção legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "df49c746-94e1-5c62-bd6c-720b251e0f83",
+        "content_sha256": "7c14a6e30160e53d866703ffde72c76141d65b0894b2a8c767e7a3abd0579ea1",
+        "simples": "Se a fiança for declarada sem efeito ou passar em julgado sentença que houver absolvido o acusado ou declarada extinta a ação penal, o valor que a constituir, atualizado, será restituído sem desconto, salvo o disposto no parágrafo único do art. 336.",
+        "pontos": [
+          "Fiança sem efeito, absolvição ou extinção da ação: restituição do valor atualizado, sem desconto.",
+          "Ressalva do parágrafo único do art. 336."
+        ],
+        "atencao": [
+          "Valor devolvido atualizado e sem desconto."
+        ],
+        "exemplo": "Acusado absolvido recebe de volta o valor da fiança, atualizado.",
+        "prova": [
+          "Assertiva que autoriza descontar custas do valor devolvido na absolvição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 336"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-338",
+      "unit_id": "622126cf-b4b4-5cce-aca0-3b73603c1725",
+      "content_sha256": "a3589c70a1cd0ab1e12fa4794e69ed008e1ca300b252a97b470852edcd956fc5",
+      "simples": "Reconhecido que fiança não era cabível, ela é cassada em qualquer fase processual.",
+      "pontos": [
+        "Controle de cabimento originário.",
+        "Cassação difere de quebra por comportamento posterior."
+      ],
+      "atencao": [
+        "Cassar garantia não dispensa analisar título legítimo para manter prisão."
+      ],
+      "exemplo": "Descobre-se vedação legal já existente e juiz cassa garantia. Variação: Não confundir essa situação com faltar injustificadamente a ato.",
+      "prova": [
+        "Cassação por não cabimento é possível em qualquer fase? Sim.",
+        "É o mesmo que quebramento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Cassação por incabimento",
+          "significado": "Retirada da garantia juridicamente inadmissível."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "622126cf-b4b4-5cce-aca0-3b73603c1725",
+        "content_sha256": "a3589c70a1cd0ab1e12fa4794e69ed008e1ca300b252a97b470852edcd956fc5",
+        "simples": "A fiança que se reconheça não ser cabível na espécie será cassada em qualquer fase do processo.",
+        "pontos": [
+          "Fiança incabível é cassada em qualquer fase do processo."
+        ],
+        "atencao": [
+          "Cassação por incabimento."
+        ],
+        "exemplo": "Percebe-se que o crime é inafiançável, e a fiança é cassada.",
+        "prova": [
+          "Assertiva que impede a cassação da fiança após certa fase do processo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 339"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-339",
+      "unit_id": "9344c1ae-6bdb-5e16-9a9d-376413df22e8",
+      "content_sha256": "0b2f7a08556077aa53898cb96ccbbcd1664fd28d150e1b37f1589ebf859ec930",
+      "simples": "Mudança da classificação para crime inafiançável leva à cassação da fiança.",
+      "pontos": [
+        "Exige reconhecimento da nova classificação e inafiançabilidade.",
+        "Comparar reforço quando nova classificação ainda admite garantia."
+      ],
+      "atencao": [
+        "Não transformar toda reclassificação em cassação automática."
+      ],
+      "exemplo": "Nova classificação é hedionda e não admite fiança. Variação: Se continua afiançável mas muda valor exigível, avaliar reforço, não cassação por este fundamento.",
+      "prova": [
+        "Toda nova classificação é inafiançável? Não.",
+        "Inafiançabilidade reconhecida fundamenta cassação? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Cassação por reclassificação",
+          "significado": "Garantia incompatível com nova classificação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9344c1ae-6bdb-5e16-9a9d-376413df22e8",
+        "content_sha256": "0b2f7a08556077aa53898cb96ccbbcd1664fd28d150e1b37f1589ebf859ec930",
+        "simples": "Será também cassada a fiança quando reconhecida a existência de delito inafiançável, no caso de inovação na classificação do delito.",
+        "pontos": [
+          "Cassação da fiança se a nova classificação revelar delito inafiançável."
+        ],
+        "atencao": [
+          "Inovação na classificação do delito."
+        ],
+        "exemplo": "Desclassificação para crime hediondo faz cassar a fiança.",
+        "prova": [
+          "Assertiva que mantém a fiança após reclassificação para crime inafiançável erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 338"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-340",
+      "unit_id": "87a93dd8-5e16-56ea-be45-c7b36bee6fc8",
+      "content_sha256": "9a5ce6a4c04dbcf10caf6657d1aaa6fd30cbcca6ba22b69009343a921eaeef05",
+      "simples": "Reforço corrige fiança insuficiente por engano, perda de valor dos bens ou classificação nova que o exija.",
+      "pontos": [
+        "Hipóteses dos três incisos.",
+        "Falta de reforço exige integração com condição econômica e regras atuais de cautelares.",
+        "Não converter impossibilidade financeira em prisão automática."
+      ],
+      "atencao": [
+        "Parágrafo histórico sobre recolhimento deve integrar arts. 282, 312, 321 e 350; pobreza não substitui risco concreto."
+      ],
+      "exemplo": "Bem caucionado perde valor e autoridade aprecia reforço adequado. Variação: Réu comprova impossibilidade financeira: analisar dispensa/ajuste e requisitos, sem prender só por falta de dinheiro.",
+      "prova": [
+        "Depreciação pode justificar reforço? Sim.",
+        "Incapacidade econômica basta por si para preventiva? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Reforço da garantia",
+          "significado": "Recomposição sujeita a legalidade e condição econômica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202501926710"
+      ],
+      "expected": {
+        "unit_id": "87a93dd8-5e16-56ea-be45-c7b36bee6fc8",
+        "content_sha256": "9a5ce6a4c04dbcf10caf6657d1aaa6fd30cbcca6ba22b69009343a921eaeef05",
+        "simples": "Será exigido o reforço da fiança quando a autoridade tomar, por engano, fiança insuficiente; quando houver depreciação material ou perecimento dos bens hipotecados ou caucionados, ou depreciação dos metais ou pedras preciosas; ou quando for inovada a classificação do delito. A fiança ficará sem efeito e o réu será recolhido à prisão quando, na conformidade deste artigo, não for reforçada.",
+        "pontos": [
+          "I: fiança insuficiente por engano.",
+          "II: depreciação ou perecimento dos bens dados em garantia.",
+          "III: nova classificação do delito.",
+          "Sem reforço: fiança sem efeito e réu recolhido à prisão."
+        ],
+        "atencao": [
+          "Falta de reforço leva à prisão."
+        ],
+        "exemplo": "Os bens caucionados se depreciam, e o juiz exige o reforço da fiança.",
+        "prova": [
+          "Assertiva que dispensa o reforço da fiança quando os bens se depreciam erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 341"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-341",
+      "unit_id": "dcc94970-731e-598d-ace9-5465fec66320",
+      "content_sha256": "32d4caf902b25eb9ab047ac9da4da7b12c95df727928233d961c6cc074110a66",
+      "simples": "Quebra ocorre nas condutas previstas, com intimação regular e justa causa examinada quando cabível.",
+      "pontos": [
+        "Falta injustificada ao ato; obstrução deliberada.",
+        "Descumprimento de cautelar cumulada.",
+        "Resistência injustificada à ordem; nova infração dolosa."
+      ],
+      "atencao": [
+        "Não equiparar automaticamente acidente culposo à nova infração dolosa do inciso V."
+      ],
+      "exemplo": "Afiançado obstrui deliberadamente produção de prova e juiz aprecia quebra. Variação: Ausência médica comprovada não preenche simples falta injustificada.",
+      "prova": [
+        "Inciso V exige nova infração dolosa? Sim.",
+        "Obstrução prevista é deliberada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Quebramento",
+          "significado": "Consequência das violações legalmente definidas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "dcc94970-731e-598d-ace9-5465fec66320",
+        "content_sha256": "32d4caf902b25eb9ab047ac9da4da7b12c95df727928233d961c6cc074110a66",
+        "simples": "Julgar-se-á quebrada a fiança quando o acusado, regularmente intimado para ato do processo, deixar de comparecer sem motivo justo; deliberadamente praticar ato de obstrução ao andamento do processo; descumprir medida cautelar imposta cumulativamente com a fiança; resistir injustificadamente a ordem judicial; ou praticar nova infração penal dolosa.",
+        "pontos": [
+          "I: falta injustificada a ato do processo.",
+          "II: obstrução deliberada do processo.",
+          "III: descumprimento de cautelar cumulada.",
+          "IV: resistência injustificada a ordem judicial.",
+          "V: nova infração penal dolosa."
+        ],
+        "atencao": [
+          "Rol de cinco hipóteses de quebramento."
+        ],
+        "exemplo": "Afiançado comete novo crime doloso: fiança quebrada.",
+        "prova": [
+          "Assertiva que considera a prática de infração culposa hipótese de quebramento da fiança erra: o inciso V fala em infração dolosa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 343"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-342",
+      "unit_id": "bf8d0038-4267-5580-aeb9-065190475e5e",
+      "content_sha256": "1b19ffc40852943a63903283e50254868c29536b037d9a2c3386cf34ae4ae80a",
+      "simples": "Reforma da decisão que declarou quebra restaura efeitos da fiança.",
+      "pontos": [
+        "Depende de reforma do julgamento pertinente.",
+        "Não confundir simples pedido pendente com reforma efetiva."
+      ],
+      "atencao": [
+        "Recorrer não equivale por si a obter reforma."
+      ],
+      "exemplo": "Decisão de quebra é reformada e garantia subsiste em seus efeitos. Variação: Pedido ainda sem decisão não deve ser apresentado como restauração consumada.",
+      "prova": [
+        "Reforma restaura efeitos? Sim.",
+        "Petição pendente já é reforma? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Subsistência restaurada",
+          "significado": "Efeito da reversão do julgamento de quebra."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "bf8d0038-4267-5580-aeb9-065190475e5e",
+        "content_sha256": "1b19ffc40852943a63903283e50254868c29536b037d9a2c3386cf34ae4ae80a",
+        "simples": "Se vier a ser reformado o julgamento em que se declarou quebrada a fiança, esta subsistirá em todos os seus efeitos.",
+        "pontos": [
+          "Reformada a decisão que declarou a fiança quebrada, ela subsiste com todos os efeitos."
+        ],
+        "atencao": [
+          "A reforma restabelece a fiança."
+        ],
+        "exemplo": "O tribunal reforma a decisão que quebrou a fiança, e ela volta a valer.",
+        "prova": [
+          "Assertiva que mantém a fiança quebrada mesmo após a reforma da decisão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 341"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-343",
+      "unit_id": "206bf579-2798-5362-b5f3-96856b907140",
+      "content_sha256": "85148d37865ae1694c62d850231ee2a6507c473f23d8f2ebf57cbf5ee7942c5c",
+      "simples": "Quebra injustificada perde metade da fiança; juiz analisa outras cautelares ou preventiva cabível.",
+      "pontos": [
+        "Metade, não totalidade.",
+        "Prisão exige requisitos, não é consequência obrigatória.",
+        "Distinguir perda total do art. 344."
+      ],
+      "atencao": [
+        "Não ensinar toda quebra como perda integral ou prisão automática."
+      ],
+      "exemplo": "Quebra injustificada de garantia de dez unidades perde cinco, com análise das medidas. Variação: Se não há requisitos de preventiva, a consequência patrimonial não os cria.",
+      "prova": [
+        "Quebra injustificada perde metade? Sim.",
+        "Impõe sempre preventiva? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Perda parcial",
+          "significado": "Sanção patrimonial por quebra injustificada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "206bf579-2798-5362-b5f3-96856b907140",
+        "content_sha256": "85148d37865ae1694c62d850231ee2a6507c473f23d8f2ebf57cbf5ee7942c5c",
+        "simples": "O quebramento injustificado da fiança importará na perda de metade do seu valor, cabendo ao juiz decidir sobre a imposição de outras medidas cautelares ou, se for o caso, a decretação da prisão preventiva.",
+        "pontos": [
+          "Quebramento injustificado: perda de metade do valor.",
+          "O juiz decide sobre outras cautelares ou preventiva."
+        ],
+        "atencao": [
+          "Perda de METADE (e não da totalidade)."
+        ],
+        "exemplo": "Fiança quebrada sem justificativa: o acusado perde metade do valor.",
+        "prova": [
+          "Assertiva que determina a perda total do valor no quebramento erra: é metade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 344"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-344",
+      "unit_id": "75913572-b1c2-59d8-b64f-c14f9c81cca8",
+      "content_sha256": "28f8e4f8a323e2a0f645fc7202fa0226cd1ccad3ed34d70377087fdb6e7b090b",
+      "simples": "Perda total ocorre se condenado não se apresenta ao início da pena definitivamente imposta.",
+      "pontos": [
+        "Condenação e não apresentação na hipótese.",
+        "Distinguir quebra parcial durante processo."
+      ],
+      "atencao": [
+        "Não reduzir toda perda total a faltar a audiência nem substituir definitivamente por qualquer sentença recorrível."
+      ],
+      "exemplo": "Condenado não se apresenta ao início do cumprimento definitivo e perde total nos termos legais. Variação: Falta a audiência durante instrução tem análise de quebra, não esta hipótese idêntica.",
+      "prova": [
+        "O artigo prevê perda total? Sim.",
+        "Refere-se a pena definitivamente imposta? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Perdimento total",
+          "significado": "Consequência da não apresentação ao cumprimento definitivo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "75913572-b1c2-59d8-b64f-c14f9c81cca8",
+        "content_sha256": "28f8e4f8a323e2a0f645fc7202fa0226cd1ccad3ed34d70377087fdb6e7b090b",
+        "simples": "Entender-se-á perdido, na totalidade, o valor da fiança, se, condenado, o acusado não se apresentar para o início do cumprimento da pena definitivamente imposta.",
+        "pontos": [
+          "Condenado que não se apresenta para cumprir a pena definitiva perde a totalidade da fiança."
+        ],
+        "atencao": [
+          "Perda TOTAL."
+        ],
+        "exemplo": "Condenado definitivo foge e não se apresenta: perde todo o valor da fiança.",
+        "prova": [
+          "Assertiva que limita a perda à metade nessa hipótese erra: é a totalidade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 343"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-345",
+      "unit_id": "c17f3fc2-4c2f-5683-9fb3-a650de386915",
+      "content_sha256": "e612e00e06a442f3749736d8e96c6ad2e8042f2886aa125c3d9b0ee58106aa0c",
+      "simples": "Na perda, deduzem-se custas e encargos e recolhe-se saldo ao fundo penitenciário nos termos legais.",
+      "pontos": [
+        "Destinação pública do saldo.",
+        "Deduções dos encargos pertinentes."
+      ],
+      "atencao": [
+        "Não entregar todo valor ao agente executor ou destinar livremente."
+      ],
+      "exemplo": "Após deduções legais, saldo perdido segue ao fundo penitenciário. Variação: Encargos precisam ser apurados, sem desconto fictício.",
+      "prova": [
+        "Há dedução de encargos previstos? Sim.",
+        "Saldo perdido vai livremente ao executor? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Destinação da perda",
+          "significado": "Aplicação pública após deduções legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c17f3fc2-4c2f-5683-9fb3-a650de386915",
+        "content_sha256": "e612e00e06a442f3749736d8e96c6ad2e8042f2886aa125c3d9b0ee58106aa0c",
+        "simples": "No caso de perda da fiança, o seu valor, deduzidas as custas e mais encargos a que o acusado estiver obrigado, será recolhido ao fundo penitenciário, na forma da lei.",
+        "pontos": [
+          "Perda da fiança: valor líquido de custas e encargos vai ao fundo penitenciário."
+        ],
+        "atencao": [
+          "Destino: fundo penitenciário."
+        ],
+        "exemplo": "Fiança perdida, deduzidas as custas, vai ao fundo penitenciário.",
+        "prova": [
+          "Assertiva que destina a fiança perdida ao ofendido, nos termos do art. 345, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 344"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-346",
+      "unit_id": "b78ee423-05cf-5133-9fbf-0d52294efd0b",
+      "content_sha256": "32ea70191b9e23d5e4e391dbbbd1037410e453989d43e3c746daedf8b297986a",
+      "simples": "Em quebramento, valor sujeito ao regime de perda segue deduções e recolhimento ao fundo penitenciário.",
+      "pontos": [
+        "Integrar metade perdida do art. 343.",
+        "Remissão às deduções do art. 345.",
+        "Não transformar quebramento em perda de todo depósito."
+      ],
+      "atencao": [
+        "Ler destinação junto à extensão da perda parcial, não isoladamente."
+      ],
+      "exemplo": "Metade perdida por quebra sofre deduções legais e destinação prevista. Variação: A parte não perdida não é confiscada automaticamente por este artigo.",
+      "prova": [
+        "Quebramento equivale sempre a perda total? Não.",
+        "Há remissão às deduções do art. 345? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Destino da parcela perdida",
+          "significado": "Recolhimento conforme extensão legal da sanção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b78ee423-05cf-5133-9fbf-0d52294efd0b",
+        "content_sha256": "32ea70191b9e23d5e4e391dbbbd1037410e453989d43e3c746daedf8b297986a",
+        "simples": "No caso de quebramento de fiança, feitas as deduções previstas no art. 345, o valor restante será recolhido ao fundo penitenciário, na forma da lei.",
+        "pontos": [
+          "Quebramento: após as deduções do art. 345, o valor restante vai ao fundo penitenciário."
+        ],
+        "atencao": [
+          "Mesmo destino da fiança perdida."
+        ],
+        "exemplo": "Na quebra da fiança, o valor restante é recolhido ao fundo penitenciário.",
+        "prova": [
+          "Assertiva que devolve ao acusado o valor restante da fiança quebrada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 345"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-347",
+      "unit_id": "1f54db37-35fc-578d-930d-a0830bb65df4",
+      "content_sha256": "0163bae7ecce76b03b91d4e8437ace4dee077756325f3982af35a8aebaebb006",
+      "simples": "Fora da hipótese de perda do art. 345, saldo é entregue a quem prestou fiança após encargos devidos.",
+      "pontos": [
+        "Beneficiário é prestador, que pode ser terceiro.",
+        "Deduzir obrigações pertinentes."
+      ],
+      "atencao": [
+        "Não presumir que todo saldo pertence necessariamente ao acusado se outra pessoa prestou."
+      ],
+      "exemplo": "Familiar prestador recebe saldo após encargos legais. Variação: Devolução precisa distinguir perda, restituição e destinação dos artigos vizinhos.",
+      "prova": [
+        "Pode receber terceiro que prestou? Sim.",
+        "Deve analisar encargos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Saldo devolvido",
+          "significado": "Restante devido ao prestador nas condições legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1f54db37-35fc-578d-930d-a0830bb65df4",
+        "content_sha256": "0163bae7ecce76b03b91d4e8437ace4dee077756325f3982af35a8aebaebb006",
+        "simples": "Não ocorrendo a hipótese do art. 345, o saldo será entregue a quem houver prestado a fiança, depois de deduzidos os encargos a que o réu estiver obrigado.",
+        "pontos": [
+          "Não havendo perda, o saldo é devolvido a quem prestou a fiança.",
+          "Deduzidos os encargos do réu."
+        ],
+        "atencao": [
+          "Devolução a quem prestou a fiança, e não necessariamente ao réu."
+        ],
+        "exemplo": "Terceiro que prestou a fiança recebe o saldo após as deduções.",
+        "prova": [
+          "Assertiva que destina o saldo sempre ao réu erra: vai a quem prestou a fiança."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 345"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-348",
+      "unit_id": "31accd8a-fe91-5b47-adf1-bca43d66fb08",
+      "content_sha256": "f0b1cc451421dd874cdabde86b8a551cb0740bed401e20080f6a3bcc99ea8ba7",
+      "simples": "Garantia hipotecária é executada no juízo cível pelo Ministério Público.",
+      "pontos": [
+        "Modalidade específica: hipoteca.",
+        "Não executar como simples apreensão de dinheiro no processo penal."
+      ],
+      "atencao": [
+        "Competência da execução patrimonial não altera competência para julgar crime."
+      ],
+      "exemplo": "MP promove no cível execução da hipoteca dada em fiança. Variação: Não concluir que toda ação penal se torna cível por essa destinação.",
+      "prova": [
+        "Execução hipotecária ocorre no cível? Sim.",
+        "Quem a promove é MP no texto? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Execução hipotecária",
+          "significado": "Realização da garantia por via cível."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "31accd8a-fe91-5b47-adf1-bca43d66fb08",
+        "content_sha256": "f0b1cc451421dd874cdabde86b8a551cb0740bed401e20080f6a3bcc99ea8ba7",
+        "simples": "Nos casos em que a fiança tiver sido prestada por meio de hipoteca, a execução será promovida no juízo cível pelo órgão do Ministério Público.",
+        "pontos": [
+          "Fiança por hipoteca: execução no juízo cível.",
+          "Promovida pelo Ministério Público."
+        ],
+        "atencao": [
+          "Execução no JUÍZO CÍVEL, e não no criminal."
+        ],
+        "exemplo": "Fiança prestada por hipoteca é executada pelo MP na esfera cível quando perdida.",
+        "prova": [
+          "Assertiva que atribui a execução da fiança hipotecária ao juízo criminal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 330"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-349",
+      "unit_id": "fd471298-c05d-5df9-90e1-9b743c62e0d5",
+      "content_sha256": "caf8886db5a6f6030ab46937bfca321cdce01e18af7ea1fa41578b4fc6f76ce7",
+      "simples": "Bens preciosos dados em fiança podem ser vendidos por determinação do juiz, por leiloeiro ou corretor.",
+      "pontos": [
+        "Objeto: pedras, objetos ou metais preciosos.",
+        "Procedimento formal de conversão patrimonial."
+      ],
+      "atencao": [
+        "Agente não pode vender informalmente por conta própria."
+      ],
+      "exemplo": "Juiz determina venda de bem precioso pelo profissional previsto. Variação: Não confundir realização da garantia com apropriação particular.",
+      "prova": [
+        "Venda depende de determinação judicial? Sim.",
+        "Pode executor apropriar-se do bem? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Realização de bens",
+          "significado": "Conversão formal de garantia preciosa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "fd471298-c05d-5df9-90e1-9b743c62e0d5",
+        "content_sha256": "caf8886db5a6f6030ab46937bfca321cdce01e18af7ea1fa41578b4fc6f76ce7",
+        "simples": "Se a fiança consistir em pedras, objetos ou metais preciosos, o juiz determinará a venda por leiloeiro ou corretor.",
+        "pontos": [
+          "Fiança em pedras, objetos ou metais preciosos: venda por leiloeiro ou corretor."
+        ],
+        "atencao": [
+          "Determinação do juiz."
+        ],
+        "exemplo": "Joias dadas em fiança são vendidas por leiloeiro quando houver perda.",
+        "prova": [
+          "Assertiva que manda restituir as joias dadas em fiança, sem venda, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 330"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-350",
+      "unit_id": "2b4be1b5-f877-528f-874e-c60846425d54",
+      "content_sha256": "fdcdbe9a9d3cf51836f6b5a05cd92c8f2e20ffac1e90d6b1226b3284b2ed7ffc",
+      "simples": "Em caso afiançável, situação econômica pode justificar liberdade sem pagamento, com obrigações e cautelares pertinentes.",
+      "pontos": [
+        "Juiz examina condição financeira.",
+        "Obrigações dos arts. 327/328 e outras medidas se cabíveis.",
+        "Descumprimento sem justa causa segue art. 282, §4º."
+      ],
+      "atencao": [
+        "Dispensa do valor não elimina obrigações nem autoriza preventiva automática por descumprimento."
+      ],
+      "exemplo": "Preso sem recursos recebe liberdade com obrigações legalmente adequadas. Variação: Quebra de obrigação exige pedido e análise proporcional do regime cautelar.",
+      "prova": [
+        "Dispensa do dinheiro elimina comparecimento? Não.",
+        "É juiz que examina situação econômica aqui? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Dispensa econômica",
+          "significado": "Liberdade sem garantia pecuniária com deveres pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202501926710"
+      ],
+      "expected": {
+        "unit_id": "2b4be1b5-f877-528f-874e-c60846425d54",
+        "content_sha256": "fdcdbe9a9d3cf51836f6b5a05cd92c8f2e20ffac1e90d6b1226b3284b2ed7ffc",
+        "simples": "Nos casos em que couber fiança, o juiz, verificando a situação econômica do preso, poderá conceder-lhe liberdade provisória, sujeitando-o às obrigações dos arts. 327 e 328 e a outras medidas cautelares, se for o caso. Se o beneficiado descumprir, sem motivo justo, qualquer das obrigações ou medidas impostas, aplica-se o disposto no § 4º do art. 282.",
+        "pontos": [
+          "Preso pobre: liberdade provisória sem fiança, com as obrigações dos arts. 327 e 328.",
+          "Pode haver outras cautelares.",
+          "Descumprimento sem justo motivo: aplica-se o art. 282, §4º."
+        ],
+        "atencao": [
+          "Dispensa da fiança pela situação econômica."
+        ],
+        "exemplo": "Preso sem recursos recebe liberdade provisória sem fiança, mas deve comparecer aos atos.",
+        "prova": [
+          "Assertiva que exige sempre o pagamento da fiança para que haja liberdade provisória erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 325",
+          "Art. 282"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    }
+  ]
+}

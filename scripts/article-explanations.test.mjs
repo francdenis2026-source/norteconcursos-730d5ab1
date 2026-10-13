@@ -1,4 +1,14 @@
 import test from 'node:test';
+test('CPP fiança distingue competência, percentuais e prisão por pobreza',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-bail-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,30);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(322).pontos.join(' '),/Exatamente quatro/);
+ assert.match(get(325).pontos.join(' '),/dois terços.*mil vezes/s);
+ assert.match(get(340).atencao.join(' '),/pobreza não substitui risco concreto/);
+ assert.match(get(343).pontos.join(' '),/Metade, não totalidade/);
+ assert.match(get(344).simples,/pena definitivamente imposta/);
+ for(const n of [327,340])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP flagrante e preventiva integram alterações 2025/2026 sem automatismos',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-flagrant-preventive-2026-10-13.json','utf8'));
  validateArticlePackage(p);assert.equal(p.units.length,23);
