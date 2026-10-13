@@ -1,0 +1,1904 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T04:38:35.251333+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 31,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-701",
+        "art-702",
+        "art-703",
+        "art-704",
+        "art-705",
+        "art-706",
+        "art-708",
+        "art-709",
+        "art-710",
+        "art-711",
+        "art-712",
+        "art-713",
+        "art-714",
+        "art-715",
+        "art-716",
+        "art-717",
+        "art-718",
+        "art-719",
+        "art-720",
+        "art-721",
+        "art-722",
+        "art-723",
+        "art-724",
+        "art-725",
+        "art-726",
+        "art-727",
+        "art-728",
+        "art-729",
+        "art-730",
+        "art-731",
+        "art-732"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-701",
+      "unit_id": "0e4220e2-986b-581e-b190-cd564853b258",
+      "content_sha256": "3bf359c4f8c96edd603cbbcb36099377d287729bc3b305fe0a8cf2edf13700c1",
+      "simples": "Custas e cobranças ligadas ao sursis exigem base legal atual e exame econômico.",
+      "pontos": [
+        "Separar pena, custas e taxa histórica."
+      ],
+      "atencao": [
+        "Taxa penitenciária não é obrigação atual universal criada só pela redação antiga."
+      ],
+      "exemplo": "Juízo examina capacidade econômica para providência legal relativa a custas. Variação: Hipossuficiência não pode ser ignorada por cobrança automática de taxa histórica.",
+      "prova": [
+        "Taxa antiga vale automaticamente para todos? Não.",
+        "Condições econômicas importam? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Encargos processuais",
+          "significado": "Obrigações pecuniárias distintas da pena suspensa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "0e4220e2-986b-581e-b190-cd564853b258",
+        "content_sha256": "3bf359c4f8c96edd603cbbcb36099377d287729bc3b305fe0a8cf2edf13700c1",
+        "simples": "O juiz, ao conceder a suspensão, fixará, tendo em conta as condições econômicas ou profissionais do réu, o prazo para o pagamento, integral ou em prestações, das custas do processo e taxa penitenciária.",
+        "pontos": [
+          "Juiz fixa o prazo de pagamento das custas e da taxa penitenciária.",
+          "Considera as condições econômicas ou profissionais do réu."
+        ],
+        "atencao": [
+          "Pode ser em prestações."
+        ],
+        "exemplo": "O juiz permite que o condenado pague as custas em parcelas.",
+        "prova": [
+          "Assertiva que dispensa o pagamento das custas por quem tem sursis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 700"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-702",
+      "unit_id": "712b9afa-26bc-5d75-9d4d-af76e88b506b",
+      "content_sha256": "e429ba6d98557fdb03672af57411b7c2ac7964577a754571477c7ea8ef942a80",
+      "simples": "Sursis é individualizado: coautores podem receber decisões diferentes conforme requisitos.",
+      "pontos": [
+        "Avaliar situação de cada condenado.",
+        "Motivar resultado."
+      ],
+      "atencao": [
+        "Concessão a um não estende automaticamente benefício aos demais."
+      ],
+      "exemplo": "Um coautor preenche requisitos; outro é reincidente doloso impeditivo. Variação: Igual participação no fato não elimina diferenças pessoais legalmente relevantes.",
+      "prova": [
+        "Coautores precisam ter igual resultado? Não.",
+        "Decisão exige exame individual? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Individualização",
+          "significado": "Exame dos requisitos de cada beneficiário."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "712b9afa-26bc-5d75-9d4d-af76e88b506b",
+        "content_sha256": "e429ba6d98557fdb03672af57411b7c2ac7964577a754571477c7ea8ef942a80",
+        "simples": "Em caso de coautoria, a suspensão poderá ser concedida a uns e negada a outros réus.",
+        "pontos": [
+          "Coautoria: a suspensão pode ser concedida a alguns e negada a outros."
+        ],
+        "atencao": [
+          "Análise individualizada."
+        ],
+        "exemplo": "Um coautor primário recebe o sursis e o reincidente, não.",
+        "prova": [
+          "Assertiva que estende automaticamente o sursis a todos os coautores erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 696"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-703",
+      "unit_id": "0f60e69f-c283-5b8e-b211-57e542a8c475",
+      "content_sha256": "26d8c290f9ae0d7c1a60f75769a1d1e042bfaa5c3592ce7f2d47b5a5d84c768c",
+      "simples": "Audiência dá ciência da sentença e condições do sursis, advertindo consequências legais.",
+      "pontos": [
+        "Integrar LEP160–162.",
+        "Não confundir advertência e ameaça arbitrária."
+      ],
+      "atencao": [
+        "Nova infração não tem efeito único automático: distinguir revogação, prorrogação e hipótese legal."
+      ],
+      "exemplo": "Beneficiário conhece obrigações e consequências na audiência. Variação: Processo por outro crime exige examinar regra atual, não imediata condenação presumida.",
+      "prova": [
+        "Audiência informa condições? Sim.",
+        "Mera acusação equivale sempre a revogação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Audiência admonitória",
+          "significado": "Ciência formal das obrigações da suspensão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "0f60e69f-c283-5b8e-b211-57e542a8c475",
+        "content_sha256": "26d8c290f9ae0d7c1a60f75769a1d1e042bfaa5c3592ce7f2d47b5a5d84c768c",
+        "simples": "O juiz que conceder a suspensão lerá ao réu, em audiência, a sentença respectiva, e o advertirá das consequências de nova infração penal e da transgressão das obrigações impostas.",
+        "pontos": [
+          "Audiência de advertência: leitura da sentença ao réu.",
+          "Advertência sobre nova infração e descumprimento das obrigações."
+        ],
+        "atencao": [
+          "Marco inicial do período de prova (art. 698)."
+        ],
+        "exemplo": "Na audiência, o juiz lê a sentença e adverte o réu sobre as consequências de nova infração.",
+        "prova": [
+          "Assertiva que dispensa a audiência de advertência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 705"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-704",
+      "unit_id": "4dfb2cd0-ab69-5fe1-93ef-c86fb2aa3d1a",
+      "content_sha256": "b6d72071328d16371e814f6705b8441e0e19e958ae849f64a9fa4f5218911e6a",
+      "simples": "Concessão recursal deve fixar condições e viabilizar audiência segundo competência e regime atuais.",
+      "pontos": [
+        "Tribunal pode conceder benefício cabível.",
+        "Implementação exige comunicação ao juízo competente."
+      ],
+      "atencao": [
+        "Concessão no tribunal não dispensa ciência das condições nem fiscalização."
+      ],
+      "exemplo": "Acórdão concede sursis e determina providências de audiência. Variação: Juízo de execução acompanha cumprimento sem alterar arbitrariamente benefício.",
+      "prova": [
+        "Concessão recursal elimina audiência? Não.",
+        "Condições devem ser definidas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Implementação recursal",
+          "significado": "Efetivação do benefício concedido em recurso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "4dfb2cd0-ab69-5fe1-93ef-c86fb2aa3d1a",
+        "content_sha256": "b6d72071328d16371e814f6705b8441e0e19e958ae849f64a9fa4f5218911e6a",
+        "simples": "Quando for concedida a suspensão pela superior instância, a esta caberá estabelecer-lhe as condições, podendo a audiência ser presidida por qualquer membro do tribunal ou câmara, pelo juiz do processo ou por outro designado pelo presidente do tribunal ou câmara.",
+        "pontos": [
+          "Sursis concedido pelo tribunal: ele fixa as condições.",
+          "Audiência presidida por membro do tribunal, juiz do processo ou outro designado."
+        ],
+        "atencao": [
+          "Competência do tribunal para fixar as condições."
+        ],
+        "exemplo": "O tribunal concede o sursis e define as condições; o juiz do processo preside a audiência.",
+        "prova": [
+          "Assertiva que deixa ao juiz de primeira instância definir as condições do sursis concedido pelo tribunal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 703"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-705",
+      "unit_id": "c414b8f5-54a7-57d5-8afa-2b45c738d634",
+      "content_sha256": "2a8a443c23e2eab7ddddcc79e183ecf1d2f5d412706515d79fa35338253f5d96",
+      "simples": "Não comparecimento injustificado à audiência pode deixar sursis sem efeito; justo impedimento precisa ser examinado.",
+      "pontos": [
+        "Intimação pessoal ou edital no regime pertinente.",
+        "Integrar LEP161 e devido processo."
+      ],
+      "atencao": [
+        "Ausência com internação comprovada não deve ser tratada como recusa automática."
+      ],
+      "exemplo": "Intimado falta sem justificativa; juízo apura consequência legal. Variação: Impedimento grave demonstrado pode exigir nova audiência.",
+      "prova": [
+        "Justo impedimento importa? Sim.",
+        "Toda ausência significa perda automática sem exame? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Comparecimento admonitório",
+          "significado": "Participação exigida para ciência do benefício."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "c414b8f5-54a7-57d5-8afa-2b45c738d634",
+        "content_sha256": "2a8a443c23e2eab7ddddcc79e183ecf1d2f5d412706515d79fa35338253f5d96",
+        "simples": "Se, intimado pessoalmente ou por edital com prazo de 20 dias, o réu não comparecer à audiência a que se refere o art. 703, a suspensão ficará sem efeito e será executada imediatamente a pena, salvo prova de justo impedimento, caso em que será marcada nova audiência.",
+        "pontos": [
+          "Réu não comparece à audiência, intimado pessoalmente ou por edital de 20 dias: suspensão sem efeito.",
+          "Pena executada imediatamente.",
+          "Exceção: justo impedimento, com nova audiência."
+        ],
+        "atencao": [
+          "Edital de 20 dias."
+        ],
+        "exemplo": "O réu falta à audiência sem justificativa: o sursis perde o efeito.",
+        "prova": [
+          "Assertiva que mantém o sursis diante da ausência injustificada à audiência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 703"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-706",
+      "unit_id": "e4f20db1-9352-57c8-b4b2-222679f31eb5",
+      "content_sha256": "41db46523c39543f62d1ecb82f2a50804cec6641037e91f0aac128174d95bd29",
+      "simples": "Aumento válido da pena em recurso pode tornar sursis incompatível com limites atuais.",
+      "pontos": [
+        "Aplicar limites do CP77.",
+        "Respeitar proibição de agravar em recurso só defensivo."
+      ],
+      "atencao": [
+        "Não aumentar pena indevidamente só para retirar benefício; hipótese etária/saúde tem limites próprios."
+      ],
+      "exemplo": "Recurso acusatório cabível aumenta pena além da hipótese legal. Variação: Recurso exclusivo da defesa não autoriza agravamento que retire sursis.",
+      "prova": [
+        "Recurso só defensivo permite agravamento livre? Não.",
+        "Aumento válido pode excluir hipótese legal? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Limite do benefício",
+          "significado": "Compatibilidade do sursis com pena e requisitos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "e4f20db1-9352-57c8-b4b2-222679f31eb5",
+        "content_sha256": "41db46523c39543f62d1ecb82f2a50804cec6641037e91f0aac128174d95bd29",
+        "simples": "A suspensão também ficará sem efeito se, em virtude de recurso, for aumentada a pena de modo que exclua a concessão do benefício.",
+        "pontos": [
+          "Aumento da pena em recurso, que exclua o benefício, torna a suspensão sem efeito."
+        ],
+        "atencao": [
+          "Depende do novo patamar da pena."
+        ],
+        "exemplo": "O tribunal eleva a pena acima do limite do sursis, e a suspensão perde o efeito.",
+        "prova": [
+          "Assertiva que mantém o sursis mesmo se a pena for aumentada acima do limite legal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 696"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-708",
+      "unit_id": "8ca229da-c40e-59b6-bcfe-24a5547f566c",
+      "content_sha256": "57ae712449337b19189e46665f28648d347dbf1c3bdbbedeb25a317a70411e59",
+      "simples": "Fim do prazo ou prorrogação sem causa legal de revogação exige examinar extinção da pena suspensa.",
+      "pontos": [
+        "Integrar CP81–82 e LEP162.",
+        "Distinguir suspensão da pena e do processo."
+      ],
+      "atencao": [
+        "Não declarar extinção ignorando prorrogação legal nem manter pena indefinidamente sem fundamento."
+      ],
+      "exemplo": "Período é cumprido regularmente e juízo declara efeito extintivo. Variação: Processo relevante no período exige conferir prorrogação cabível antes da conclusão.",
+      "prova": [
+        "Prorrogação legal deve ser conferida? Sim.",
+        "Sursis equivale à suspensão do processo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Extinção no sursis",
+          "significado": "Conclusão do benefício no regime legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "8ca229da-c40e-59b6-bcfe-24a5547f566c",
+        "content_sha256": "57ae712449337b19189e46665f28648d347dbf1c3bdbbedeb25a317a70411e59",
+        "simples": "Expirado o prazo de suspensão ou a prorrogação, sem que tenha ocorrido motivo de revogação, a pena privativa de liberdade será declarada extinta. O juiz, quando julgar necessário, requisitará, antes do julgamento, nova folha de antecedentes do beneficiário.",
+        "pontos": [
+          "Fim do período de prova sem revogação: pena declarada extinta.",
+          "Juiz pode requisitar nova folha de antecedentes."
+        ],
+        "atencao": [
+          "Cumprido o período de prova, a pena se extingue."
+        ],
+        "exemplo": "Terminado o prazo do sursis sem motivo de revogação, o juiz declara extinta a pena.",
+        "prova": [
+          "Assertiva que obriga o cumprimento da pena após o fim do período de prova sem revogação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 696"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-709",
+      "unit_id": "422fa7bc-6fa2-5525-a150-e58c161d56d1",
+      "content_sha256": "c6f4863838a74966320b3906e28316e338219f47727bcf7a467add263882b00f",
+      "simples": "Registro do sursis e averbações integram LEP163, com sigilo e finalidades legais.",
+      "pontos": [
+        "Registrar revogação ou extinção.",
+        "Pena acessória antiga não afasta automaticamente sigilo atual."
+      ],
+      "atencao": [
+        "Não divulgar registro irrestritamente por remissão histórica a interdição."
+      ],
+      "exemplo": "Juízo registra suspensão e posterior extinção. Variação: Consulta institucional deve observar finalidade e regras de acesso.",
+      "prova": [
+        "Averbação deve refletir extinção? Sim.",
+        "Registro é publicidade irrestrita? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Registro sigiloso",
+          "significado": "Documentação do benefício sob limites legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "422fa7bc-6fa2-5525-a150-e58c161d56d1",
+        "content_sha256": "c6f4863838a74966320b3906e28316e338219f47727bcf7a467add263882b00f",
+        "simples": "A condenação será inscrita, com a nota de suspensão, em livros especiais do Instituto de Identificação e Estatística, ou repartição congênere, averbando-se, mediante comunicação do juiz ou do tribunal, a revogação da suspensão ou a extinção da pena. Nos lugares onde não houver o Instituto, o registro e a averbação serão feitos em livro próprio no juízo ou no tribunal. O registro será secreto, salvo para efeito de informações requisitadas por autoridade judiciária, no caso de novo processo. Não se aplica o sigilo quando houver sido imposta ou resultar de condenação pena acessória consistente em interdição de direitos.",
+        "pontos": [
+          "Condenação inscrita com nota de suspensão.",
+          "Averbação da revogação ou da extinção da pena.",
+          "Sem Instituto: livro próprio no juízo.",
+          "Registro secreto, exceto para autoridade judiciária em novo processo.",
+          "Sigilo afastado se houver interdição de direitos."
+        ],
+        "atencao": [
+          "Registro sigiloso."
+        ],
+        "exemplo": "O registro do sursis só é revelado a autoridade judiciária em novo processo.",
+        "prova": [
+          "Assertiva que torna público o registro do sursis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 694"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-710",
+      "unit_id": "e3f5d1bc-3065-5721-9e7e-5c64d300da14",
+      "content_sha256": "410aa30daf6b9487d8a2615d5f0a0a513cf9cab721ff9f510183595646ccb20f",
+      "simples": "Livramento exige CP83 e LEP131; frações antigas de metade ou três quartos não são regra atual universal.",
+      "pontos": [
+        "Distinguir mais de um terço, metade ou dois terços conforme hipótese.",
+        "Examinar vedações especiais e requisitos subjetivos.",
+        "Lei13.964/2019 inclui ausência de falta grave nos últimos doze meses."
+      ],
+      "atencao": [
+        "Não aplicar três quartos automaticamente ao reincidente; progressão de regime é benefício distinto."
+      ],
+      "exemplo": "Não reincidente doloso com bons antecedentes exige conferir hipótese de um terço e demais requisitos. Variação: Crime abrangido por regra especial pode exigir fração diversa ou vedação, sem cálculo genérico.",
+      "prova": [
+        "Reincidente sempre exige três quartos? Não.",
+        "Fração sozinha garante livramento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Livramento condicional",
+          "significado": "Liberdade condicionada aos requisitos legais atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "e3f5d1bc-3065-5721-9e7e-5c64d300da14",
+        "content_sha256": "410aa30daf6b9487d8a2615d5f0a0a513cf9cab721ff9f510183595646ccb20f",
+        "simples": "O livramento condicional poderá ser concedido ao condenado a pena privativa da liberdade igual ou superior a 2 anos, desde que se verifiquem as condições seguintes: cumprimento de mais da metade da pena, ou mais de três quartos, se reincidente; ausência ou cessação de periculosidade; bom comportamento durante a vida carcerária; aptidão para prover à própria subsistência mediante trabalho honesto; e reparação do dano causado pela infração, salvo impossibilidade de fazê-lo.",
+        "pontos": [
+          "Pena igual ou superior a 2 anos.",
+          "Cumprimento de mais da metade (mais de três quartos se reincidente).",
+          "Ausência de periculosidade e bom comportamento.",
+          "Aptidão para o trabalho honesto.",
+          "Reparação do dano, salvo impossibilidade."
+        ],
+        "atencao": [
+          "Hoje o livramento condicional é regulado pelo art. 83 do Código Penal (frações atuais)."
+        ],
+        "exemplo": "O condenado que cumpriu a fração exigida, com bom comportamento, pede o livramento condicional.",
+        "prova": [
+          "Assertiva que dispensa a reparação do dano, mesmo havendo possibilidade de repará-lo, erra."
+        ],
+        "termos": [
+          {
+            "termo": "Livramento condicional",
+            "significado": "Liberdade antecipada, sob condições, no final da pena."
+          }
+        ],
+        "remissoes": [
+          "Art. 83 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-711",
+      "unit_id": "bdf72532-8f46-5736-9d8a-00625dde94bd",
+      "content_sha256": "73225b7090cfd27402fdc3e364f0b92a7b01a2b4877b40099d8647cd55b5e412",
+      "simples": "Penas de infrações diversas devem ser somadas para livramento conforme CP84.",
+      "pontos": [
+        "Não escolher só a condenação mais conveniente.",
+        "Considerar regime legal de cada título e vedações."
+      ],
+      "atencao": [
+        "Soma não uniformiza toda fração especial nem elimina impedimento legal."
+      ],
+      "exemplo": "Duas penas integram cálculo pertinente do benefício. Variação: Crime sujeito a vedação não se torna elegível por soma a delito comum.",
+      "prova": [
+        "CP84 impõe soma pertinente? Sim.",
+        "Soma elimina toda vedação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Soma para livramento",
+          "significado": "Base de cálculo integrada dos títulos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "bdf72532-8f46-5736-9d8a-00625dde94bd",
+        "content_sha256": "73225b7090cfd27402fdc3e364f0b92a7b01a2b4877b40099d8647cd55b5e412",
+        "simples": "As penas que correspondem a infrações diversas podem somar-se, para efeito do livramento.",
+        "pontos": [
+          "Penas de infrações diversas podem ser somadas para o livramento condicional."
+        ],
+        "atencao": [
+          "Soma das penas."
+        ],
+        "exemplo": "Duas condenações são somadas para calcular a fração do livramento.",
+        "prova": [
+          "Assertiva que veda a soma de penas de infrações diversas para o livramento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 710"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-712",
+      "unit_id": "0ba71648-f225-5217-ae37-7f0312ac05fa",
+      "content_sha256": "a8b0d390039d90f95cc23c4e0bc64e5fe43a741694c57c4872a2965efd197d35",
+      "simples": "Pedido ou iniciativa de livramento é processado judicialmente com regime da LEP131 e194–195.",
+      "pontos": [
+        "Distinguir provocação e poder de conceder.",
+        "Garantir participação pertinente."
+      ],
+      "atencao": [
+        "Família ou direção pode provocar análise, mas não liberar pessoa por decisão própria."
+      ],
+      "exemplo": "Defesa apresenta documentação para exame do juiz da execução. Variação: Diretor encaminha proposta, sem substituir decisão judicial.",
+      "prova": [
+        "Diretor concede sozinho livramento? Não.",
+        "Provocação exige exame judicial? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Provocação executória",
+          "significado": "Iniciativa para análise jurisdicional do benefício."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "0ba71648-f225-5217-ae37-7f0312ac05fa",
+        "content_sha256": "a8b0d390039d90f95cc23c4e0bc64e5fe43a741694c57c4872a2965efd197d35",
+        "simples": "O livramento condicional poderá ser concedido mediante requerimento do sentenciado, de seu cônjuge ou de parente em linha reta, ou por proposta do diretor do estabelecimento penal, ou por iniciativa do Conselho Penitenciário.",
+        "pontos": [
+          "Legitimados: sentenciado, cônjuge, parente em linha reta, diretor do estabelecimento ou Conselho Penitenciário."
+        ],
+        "atencao": [
+          "Vários legitimados."
+        ],
+        "exemplo": "O diretor do presídio propõe o livramento condicional de um preso.",
+        "prova": [
+          "Assertiva que restringe o pedido ao próprio sentenciado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 713"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-713",
+      "unit_id": "69c137b2-fcdf-5279-a7b0-16f82c9fb54b",
+      "content_sha256": "ffd870fc0006dbc534baf42ee2e5e3e04451151054502598975ef7f4c52308b6",
+      "simples": "Parecer do Conselho não vincula juiz, que decide fundamentadamente pelos requisitos atuais.",
+      "pontos": [
+        "LEP131 prevê oitiva de MP e Conselho.",
+        "Distinguir parecer e decisão."
+      ],
+      "atencao": [
+        "Conveniente não substitui requisito legal; parecer desfavorável tampouco dispensa motivação judicial."
+      ],
+      "exemplo": "Juiz enfrenta dados do parecer e fundamenta concessão cabível. Variação: Parecer favorável não permite ignorar requisito objetivo ausente.",
+      "prova": [
+        "Parecer vincula necessariamente juiz? Não.",
+        "Decisão exige requisitos legais? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Parecer penitenciário",
+          "significado": "Subsídio consultivo ao exame judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "69c137b2-fcdf-5279-a7b0-16f82c9fb54b",
+        "content_sha256": "ffd870fc0006dbc534baf42ee2e5e3e04451151054502598975ef7f4c52308b6",
+        "simples": "As condições de admissibilidade, conveniência e oportunidade da concessão do livramento serão verificadas pelo Conselho Penitenciário, a cujo parecer não ficará, entretanto, adstrito o juiz.",
+        "pontos": [
+          "Conselho Penitenciário verifica as condições.",
+          "Parecer não vincula o juiz."
+        ],
+        "atencao": [
+          "Parecer opinativo."
+        ],
+        "exemplo": "O juiz concede o livramento mesmo contra o parecer do Conselho, fundamentando.",
+        "prova": [
+          "Assertiva que vincula o juiz ao parecer do Conselho Penitenciário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 714"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-714",
+      "unit_id": "c7180ee9-00d9-5ba3-bb2c-e0203aaa78ac",
+      "content_sha256": "0ed74ef18970178317beee9b81d2a5906515b7168ab48548b8a1ce2caa4c5384",
+      "simples": "Informações penitenciárias subsidiam livramento com dados pertinentes, sem tornar relatório sentença.",
+      "pontos": [
+        "Conduta, trabalho e situação social são elementos de análise.",
+        "Integrar requisitos atuais e defesa."
+      ],
+      "atencao": [
+        "Promessa de emprego não é requisito universal substitutivo de toda análise legal."
+      ],
+      "exemplo": "Direção informa atividades e comportamento para instruir pedido. Variação: Falta de promessa particular não dispensa exame individual da aptidão e condições pertinentes.",
+      "prova": [
+        "Relatório decide benefício sozinho? Não.",
+        "Dados precisam ser relacionados aos requisitos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Relatório instrutório",
+          "significado": "Informações documentadas para exame executório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "c7180ee9-00d9-5ba3-bb2c-e0203aaa78ac",
+        "content_sha256": "0ed74ef18970178317beee9b81d2a5906515b7168ab48548b8a1ce2caa4c5384",
+        "simples": "O diretor do estabelecimento penal remeterá ao Conselho Penitenciário minucioso relatório sobre o caráter do sentenciado, revelado pelos seus antecedentes e conduta na prisão; o procedimento do liberando na prisão, sua aplicação ao trabalho e seu trato com companheiros e funcionários; suas relações com a família e estranhos; seu grau de instrução e aptidão profissional; e sua situação financeira e propósitos quanto ao futuro meio de vida. O relatório será remetido em quinze dias, com o prontuário do sentenciado; na falta, o Conselho opinará livremente.",
+        "pontos": [
+          "Relatório do diretor sobre caráter, conduta, relações, instrução e situação financeira.",
+          "Prazo de quinze dias.",
+          "Sem relatório, o Conselho opina livremente e comunica a omissão."
+        ],
+        "atencao": [
+          "Prazo de quinze dias para o relatório."
+        ],
+        "exemplo": "O diretor envia em quinze dias o relatório sobre o comportamento do preso.",
+        "prova": [
+          "Assertiva que fixa em cinco dias o prazo do relatório do diretor erra: são quinze dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 713"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-715",
+      "unit_id": "56626ef9-2ac8-53fa-b73d-2dcea3dcafe9",
+      "content_sha256": "38b876ff76cbf4f1b46a5161cb6a68d77892a5f8cac28cda8081295f32a39e24",
+      "simples": "Referência a medida detentiva cumulada com pena pertence ao modelo antigo e exige integração ao sistema atual.",
+      "pontos": [
+        "Distinguir livramento de pena e desinternação de medida.",
+        "Não restaurar sistema duplo automático."
+      ],
+      "atencao": [
+        "Cessação de periculosidade da medida não pode ser aplicada indiscriminadamente como requisito de todo livramento."
+      ],
+      "exemplo": "Condenado cumpre pena e tem benefício examinado pelo CP83. Variação: Internado em medida de segurança segue regime próprio de desinternação, não livramento por simples troca de nome.",
+      "prova": [
+        "Todo livramento exige cessação de medida cumulada? Não.",
+        "Desinternação e livramento são iguais? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Distinção de regimes",
+          "significado": "Separação de execução da pena e medida de segurança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "56626ef9-2ac8-53fa-b73d-2dcea3dcafe9",
+        "content_sha256": "38b876ff76cbf4f1b46a5161cb6a68d77892a5f8cac28cda8081295f32a39e24",
+        "simples": "Se tiver sido imposta medida de segurança detentiva, o livramento não poderá ser concedido sem que se verifique, mediante exame das condições do sentenciado, a cessação da periculosidade. Consistindo a medida de segurança em internação em casa de custódia e tratamento, proceder-se-á a exame mental do sentenciado.",
+        "pontos": [
+          "Medida de segurança detentiva: livramento só com cessação da periculosidade.",
+          "Internação em casa de custódia: exame mental."
+        ],
+        "atencao": [
+          "Exame da periculosidade."
+        ],
+        "exemplo": "Antes do livramento, faz-se exame mental do sentenciado internado.",
+        "prova": [
+          "Assertiva que concede o livramento sem verificar a cessação da periculosidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 710"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-716",
+      "unit_id": "233d02a2-b131-5978-b10d-cafb55376cef",
+      "content_sha256": "9ed4e84a79fce664657c67856e21b98eb09b2ab390347d066f5e04f09fddda15",
+      "simples": "Instrução e manifestação ministerial subsidiam decisão judicial do livramento segundo LEP131.",
+      "pontos": [
+        "Conselho pode fornecer parecer e dados.",
+        "Garantir decisão motivada do órgão competente."
+      ],
+      "atencao": [
+        "Encaminhamento não é concessão nem autoriza deferir sem verificar requisitos."
+      ],
+      "exemplo": "Parecer, relatório e pedido são examinados pelo juiz com participação legal. Variação: Necessidade de diligência é avaliada sem converter consulta em atraso indefinido.",
+      "prova": [
+        "Encaminhar proposta equivale a conceder? Não.",
+        "MP é ouvido no regime legal? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Instrução do benefício",
+          "significado": "Preparação dos elementos para decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "233d02a2-b131-5978-b10d-cafb55376cef",
+        "content_sha256": "9ed4e84a79fce664657c67856e21b98eb09b2ab390347d066f5e04f09fddda15",
+        "simples": "A petição ou a proposta de livramento será remetida ao juiz ou ao tribunal por ofício do presidente do Conselho Penitenciário, com a cópia do respectivo parecer e do relatório do diretor da prisão. Para emitir parecer, o Conselho poderá determinar diligências e requisitar os autos do processo. O juiz ou o tribunal mandará juntar a petição ou a proposta aos autos e proferirá sua decisão, previamente ouvido o Ministério Público.",
+        "pontos": [
+          "Petição enviada pelo presidente do Conselho, com parecer e relatório.",
+          "Conselho pode determinar diligências.",
+          "Decisão após ouvir o MP."
+        ],
+        "atencao": [
+          "Oitiva prévia do MP."
+        ],
+        "exemplo": "O juiz decide o livramento depois de ouvir o Ministério Público.",
+        "prova": [
+          "Assertiva que dispensa a oitiva do MP antes da decisão sobre o livramento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 714"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-717",
+      "unit_id": "0b89742d-8a4c-5287-a431-73ebff2bc74e",
+      "content_sha256": "1a60c66aee73dfe01c43cce31a42100ed13ca2c16b95869f105336e9a1136d1a",
+      "simples": "Requisito temporal ausente exige indeferimento fundamentado pela fração atual pertinente, não pelo710 antigo.",
+      "pontos": [
+        "Usar CP83 e regras especiais.",
+        "Conferir cálculo e possibilidade de erro."
+      ],
+      "atencao": [
+        "Não indeferir por ausência de três quartos históricos se a hipótese atual exige outra fração."
+      ],
+      "exemplo": "Pedido prematuro é examinado pelo tempo legal efetivamente exigido. Variação: Erro de contagem comprovado exige correção antes de concluir ausência do requisito.",
+      "prova": [
+        "Usar710 antigo basta para fração atual? Não.",
+        "Cálculo deve ser conferido? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Requisito temporal",
+          "significado": "Tempo exigido pelo regime atual do benefício."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "0b89742d-8a4c-5287-a431-73ebff2bc74e",
+        "content_sha256": "1a60c66aee73dfe01c43cce31a42100ed13ca2c16b95869f105336e9a1136d1a",
+        "simples": "Na ausência da condição prevista no art. 710, I (cumprimento da fração da pena), o requerimento será liminarmente indeferido.",
+        "pontos": [
+          "Sem o tempo mínimo de pena cumprida, indeferimento liminar."
+        ],
+        "atencao": [
+          "Requisito objetivo."
+        ],
+        "exemplo": "O preso pede o livramento sem ter cumprido a fração exigida: indeferimento imediato.",
+        "prova": [
+          "Assertiva que processa o pedido sem a fração mínima cumprida erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 710"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-718",
+      "unit_id": "66305fdd-8648-5a08-9517-79850e6ce329",
+      "content_sha256": "41e586238997478fc929917b0ce2eab1534d768edabadd691a6460a5b3ae0bde",
+      "simples": "Condições do livramento seguem CP85 e LEP132–134, com comunicação de mudança autorizada.",
+      "pontos": [
+        "Distinguir obrigações obrigatórias e possíveis.",
+        "Lei14.843/2024 prevê monitoração como condição possível.",
+        "Apresentação ao destino deve ser orientada."
+      ],
+      "atencao": [
+        "Não tratar condição possível como obrigatória universal nem confundir sursis e livramento."
+      ],
+      "exemplo": "Liberado obtém autorização para residir fora e é orientado a apresentar-se ao destino. Variação: Monitoração precisa de decisão cabível, não imposição automática por qualquer caso.",
+      "prova": [
+        "Todas condições possíveis são obrigatórias? Não.",
+        "Mudança autorizada requer comunicação adequada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Condições do livramento",
+          "significado": "Obrigações individualizadas do beneficiário."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "66305fdd-8648-5a08-9517-79850e6ce329",
+        "content_sha256": "41e586238997478fc929917b0ce2eab1534d768edabadd691a6460a5b3ae0bde",
+        "simples": "Deferido o pedido, o juiz, ao especificar as condições a que ficará subordinado o livramento, atenderá ao disposto no art. 698, §§ 1º, 2º e 5º. Se for permitido ao liberado residir fora da jurisdição do juiz da execução, remeter-se-á cópia da sentença do livramento à autoridade judiciária do lugar para onde ele se transferir e à entidade de observação cautelar e proteção. O liberado será advertido da obrigação de apresentar-se imediatamente à autoridade judiciária e à entidade de observação cautelar e proteção.",
+        "pontos": [
+          "Condições segundo o art. 698, §§ 1º, 2º e 5º.",
+          "Residência fora da jurisdição: cópia da sentença à autoridade do novo local.",
+          "Advertência da obrigação de apresentação imediata."
+        ],
+        "atencao": [
+          "Comunicação ao novo local de residência."
+        ],
+        "exemplo": "O liberado muda de comarca, e a sentença é enviada ao juízo local.",
+        "prova": [
+          "Assertiva que dispensa a comunicação ao juízo do novo local de residência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 698"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-719",
+      "unit_id": "2580b418-9eb9-57c3-9de8-535422d69dd2",
+      "content_sha256": "934ef4bdae8dc9b88bc6ce09e2dcd920f6f3c24714042cd4f80a8aa4361786a8",
+      "simples": "Custas e taxa histórica devem ser examinadas com base legal e capacidade econômica, sem barreira automática ao livramento.",
+      "pontos": [
+        "Separar benefício e cobrança.",
+        "Distinguir insolvência e recusa deliberada."
+      ],
+      "atencao": [
+        "Não exigir pagamento universal de taxa penitenciária antiga como preço da liberdade."
+      ],
+      "exemplo": "Insolvência demonstrada é considerada no exame dos encargos cabíveis. Variação: Renda disponível pode fundamentar pagamento legal, sem inventar taxa por redação histórica.",
+      "prova": [
+        "Insolvência pode ser ignorada? Não.",
+        "Taxa antiga é requisito universal atual? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Capacidade econômica",
+          "significado": "Condição relevante aos encargos legalmente exigíveis."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "2580b418-9eb9-57c3-9de8-535422d69dd2",
+        "content_sha256": "934ef4bdae8dc9b88bc6ce09e2dcd920f6f3c24714042cd4f80a8aa4361786a8",
+        "simples": "O livramento ficará também subordinado à obrigação de pagamento das custas do processo e da taxa penitenciária, salvo caso de insolvência comprovada. O juiz poderá fixar o prazo para o pagamento integral ou em prestações, tendo em consideração as condições econômicas ou profissionais do liberado.",
+        "pontos": [
+          "Livramento subordinado ao pagamento das custas e da taxa penitenciária.",
+          "Exceção: insolvência comprovada.",
+          "Prazo e parcelamento fixados pelo juiz."
+        ],
+        "atencao": [
+          "Insolvência comprovada afasta a obrigação."
+        ],
+        "exemplo": "O liberado insolvente comprovado fica dispensado das custas.",
+        "prova": [
+          "Assertiva que obriga o pagamento das custas mesmo na insolvência comprovada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 701"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-720",
+      "unit_id": "40899364-2d20-57d8-8e6d-3a41a4e44ed4",
+      "content_sha256": "7221d0bccef770e8226dea8547a192c13c77c0077b5bc0b128e224ef771e7be2",
+      "simples": "Multa remanescente segue CP50–51 e LEP164–170, não todo modelo antigo do688.",
+      "pontos": [
+        "Pagamento ou parcelamento tem regime próprio.",
+        "Desconto protege sustento."
+      ],
+      "atencao": [
+        "Não converter multa em prisão nem aplicar automaticamente selo penitenciário ou quarto do salário."
+      ],
+      "exemplo": "Juízo examina cobrança legal compatível com renda. Variação: Recursos indispensáveis à família não são retirados por desconto automático.",
+      "prova": [
+        "Não pagar permite conversão em prisão? Não.",
+        "Cobrança deve proteger sustento? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Multa remanescente",
+          "significado": "Pena pecuniária ainda sujeita à execução legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "40899364-2d20-57d8-8e6d-3a41a4e44ed4",
+        "content_sha256": "7221d0bccef770e8226dea8547a192c13c77c0077b5bc0b128e224ef771e7be2",
+        "simples": "A forma de pagamento da multa, ainda não paga pelo liberando, será determinada de acordo com o disposto no art. 688.",
+        "pontos": [
+          "Pagamento da multa pendente segue o art. 688."
+        ],
+        "atencao": [
+          "Remissão ao art. 688."
+        ],
+        "exemplo": "A multa pendente do liberando segue o rito de cobrança do art. 688.",
+        "prova": [
+          "Assertiva que cria forma própria de pagamento da multa no livramento erra: aplica-se o art. 688."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 688"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-721",
+      "unit_id": "0d07a11a-6e73-5aa6-af75-6bcfb619f8b9",
+      "content_sha256": "304394fef6e1fd29091725be72f57d6e929af70e34689324a79676a44f2d8774",
+      "simples": "Reforma da negativa de livramento exige implementação pelo juízo executório, conforme LEP135.",
+      "pontos": [
+        "Fixar condições e efetivar decisão.",
+        "Não ignorar limites do acórdão."
+      ],
+      "atencao": [
+        "Acórdão favorável não pode ficar sem cumprimento por falta de encaminhamento."
+      ],
+      "exemplo": "Tribunal reforma negativa e juízo promove condições e providências. Variação: Juízo não transforma cumprimento em nova negativa arbitrária do mesmo fundamento afastado.",
+      "prova": [
+        "Reforma exige providências de implementação? Sim.",
+        "Juízo pode ignorar acórdão? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Cumprimento recursal",
+          "significado": "Efetivação do livramento reconhecido em recurso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "0d07a11a-6e73-5aa6-af75-6bcfb619f8b9",
+        "content_sha256": "304394fef6e1fd29091725be72f57d6e929af70e34689324a79676a44f2d8774",
+        "simples": "Reformada a sentença denegatória do livramento, os autos baixarão ao juiz da primeira instância, a fim de que determine as condições que devam ser impostas ao liberando.",
+        "pontos": [
+          "Reformada a negativa: autos voltam à primeira instância.",
+          "O juiz fixa as condições do livramento."
+        ],
+        "atencao": [
+          "O juiz de primeiro grau fixa as condições."
+        ],
+        "exemplo": "O tribunal reforma a negativa, e o juiz da execução define as condições.",
+        "prova": [
+          "Assertiva que atribui ao tribunal a fixação das condições após reformar a negativa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 718"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-722",
+      "unit_id": "6b6a439e-f510-5989-8230-88c0f2719e6d",
+      "content_sha256": "b0a3bc2c49acf1ccd247dfca179385a687549a1ae5d8954898cfab41d36c7632",
+      "simples": "Concessão exige carta de livramento conforme LEP136, distinta da guia de ingresso no cumprimento.",
+      "pontos": [
+        "Cópia integral e vias pertinentes.",
+        "Comunicar administração e Conselho."
+      ],
+      "atencao": [
+        "Não confundir carta de livramento com nova ordem de prisão ou ingresso executório."
+      ],
+      "exemplo": "Decisão é documentada e encaminhada para efetivar liberdade condicionada. Variação: Erro nas condições exige ajuste do documento ao título judicial.",
+      "prova": [
+        "Documento atual é carta de livramento? Sim.",
+        "Equivale a mandado de prisão? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Carta de livramento",
+          "significado": "Documento de efetivação do benefício."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "6b6a439e-f510-5989-8230-88c0f2719e6d",
+        "content_sha256": "b0a3bc2c49acf1ccd247dfca179385a687549a1ae5d8954898cfab41d36c7632",
+        "simples": "Concedido o livramento, será expedida carta de guia, com a cópia integral da sentença em duas vias, remetendo-se uma ao diretor do estabelecimento penal e outra ao presidente do Conselho Penitenciário.",
+        "pontos": [
+          "Carta de guia com cópia integral da sentença em duas vias.",
+          "Uma ao diretor e outra ao presidente do Conselho Penitenciário."
+        ],
+        "atencao": [
+          "Duas vias."
+        ],
+        "exemplo": "A carta de guia do livramento segue ao diretor e ao Conselho Penitenciário.",
+        "prova": [
+          "Assertiva que dispensa a carta de guia no livramento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 676"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-723",
+      "unit_id": "9f8c987f-b935-51ec-9bb4-12d2f0fefd71",
+      "content_sha256": "151feaf588c3561b929335b5e2f5d023f4c08b4a7e89dea927113ce8d33c3f5f",
+      "simples": "Cerimônia informa sentença, condições e aceitação do liberando, integrada à LEP137.",
+      "pontos": [
+        "Lavrar termo e encaminhar cópia.",
+        "Assinatura a rogo se necessário."
+      ],
+      "atencao": [
+        "Formalidade não autoriza condições diferentes das judicialmente fixadas ou exposição humilhante."
+      ],
+      "exemplo": "Beneficiário ouve condições e declara aceitação documentada. Variação: Impossibilidade de escrever permite assinatura a rogo nos termos legais.",
+      "prova": [
+        "Aceitação é documentada? Sim.",
+        "Cerimônia permite inventar novas condições? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Termo de livramento",
+          "significado": "Registro da ciência e aceitação das condições."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "9f8c987f-b935-51ec-9bb4-12d2f0fefd71",
+        "content_sha256": "151feaf588c3561b929335b5e2f5d023f4c08b4a7e89dea927113ce8d33c3f5f",
+        "simples": "A cerimônia do livramento condicional será realizada solenemente, em dia marcado pela autoridade que deva presidi-la, observando-se que a sentença será lida ao liberando, na presença dos demais presos, salvo motivo relevante, pelo presidente do Conselho Penitenciário, seu representante ou, na falta, pela autoridade judiciária local; o diretor do estabelecimento chamará a atenção do liberando para as condições impostas; e o preso declarará se aceita as condições. De tudo se lavrará termo em livro próprio, subscrito por quem presidir a cerimônia e pelo liberando, ou alguém a seu rogo, enviando-se cópia ao juiz do processo.",
+        "pontos": [
+          "Cerimônia solene, em dia marcado.",
+          "Leitura da sentença na presença dos demais presos.",
+          "Diretor chama a atenção para as condições.",
+          "O preso declara se aceita as condições.",
+          "Termo em livro próprio, com cópia ao juiz."
+        ],
+        "atencao": [
+          "O liberando precisa aceitar as condições."
+        ],
+        "exemplo": "Na cerimônia, o preso declara aceitar as condições do livramento.",
+        "prova": [
+          "Assertiva que dispensa a aceitação das condições pelo liberando erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 724"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-724",
+      "unit_id": "acca6b83-6b53-558b-9e14-bf4103998ae1",
+      "content_sha256": "c6976f02e75e4262ec3597f4ddaf24a8ac1f2c1d8b90875a4c3b65bc7a47c5fa",
+      "simples": "Documento entregue ao liberado identifica pessoa e condições, integrado à LEP138.",
+      "pontos": [
+        "Caderneta ou substituto legal pertinente.",
+        "Registrar cumprimento das condições.",
+        "Pena acessória antiga não é restaurada."
+      ],
+      "atencao": [
+        "Salvo-conduto do livramento não é imunidade geral nem HC preventivo ilimitado."
+      ],
+      "exemplo": "Liberado recebe identificação e obrigações fixadas para acompanhamento. Variação: Documento não impede prisão por outro título legal válido.",
+      "prova": [
+        "Documento elimina qualquer ordem prisional futura? Não.",
+        "Deve informar condições do benefício? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Documento do liberado",
+          "significado": "Identificação e orientação da liberdade condicionada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "acca6b83-6b53-558b-9e14-bf4103998ae1",
+        "content_sha256": "c6976f02e75e4262ec3597f4ddaf24a8ac1f2c1d8b90875a4c3b65bc7a47c5fa",
+        "simples": "Ao sair da prisão, o liberado receberá, além do saldo do seu pecúlio e do que lhe pertencer, uma caderneta que exibirá à autoridade judiciária ou administrativa sempre que lhe for exigido, contendo a reprodução da ficha de identidade ou o retrato do liberado, sua qualificação e sinais; o texto impresso dos artigos do capítulo; as condições impostas; e a pena acessória a que esteja sujeito. Na falta de caderneta, será entregue um salvo-conduto com as condições e a pena acessória. Na caderneta e no salvo-conduto deve haver espaço para consignar o cumprimento das condições do art. 718.",
+        "pontos": [
+          "Liberado recebe pecúlio e caderneta.",
+          "Caderneta: identificação, texto dos artigos, condições e pena acessória.",
+          "Na falta: salvo-conduto.",
+          "Espaço para anotar o cumprimento das condições."
+        ],
+        "atencao": [
+          "Caderneta ou salvo-conduto do liberado."
+        ],
+        "exemplo": "Ao sair, o liberado recebe a caderneta com as condições do livramento.",
+        "prova": [
+          "Assertiva que dispensa a entrega de caderneta ou salvo-conduto ao liberado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 718",
+          "Art. 723"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-725",
+      "unit_id": "8fcaeed0-315f-5a5a-9d6a-4702a15341fe",
+      "content_sha256": "2c02faab82f5d73f50618aca648bedde61774089a3349af5d36406d3f099d24d",
+      "simples": "Acompanhamento combina fiscalização e apoio ao beneficiário segundo LEP139.",
+      "pontos": [
+        "Orientar obrigações e atividade laboral.",
+        "Comunicar fatos pertinentes ao juízo.",
+        "Não recuperar pena acessória histórica."
+      ],
+      "atencao": [
+        "Apoio não é mera vigilância punitiva nem autorização para restrições extras."
+      ],
+      "exemplo": "Patronato auxilia inserção laboral e verifica condições. Variação: Dificuldade de emprego exige orientação e exame concreto, não automática declaração de crime.",
+      "prova": [
+        "Acompanhamento inclui auxílio? Sim.",
+        "Entidade pode inventar restrições? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Acompanhamento protetivo",
+          "significado": "Fiscalização com suporte à reintegração."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "8fcaeed0-315f-5a5a-9d6a-4702a15341fe",
+        "content_sha256": "2c02faab82f5d73f50618aca648bedde61774089a3349af5d36406d3f099d24d",
+        "simples": "A observação cautelar e proteção realizadas por serviço social penitenciário, patronato, conselho de comunidade ou entidades similares terá a finalidade de fazer observar o cumprimento da pena acessória, bem como das condições especificadas na sentença concessiva do benefício, e de proteger o beneficiário, orientando-o na execução de suas obrigações e auxiliando-o na obtenção de atividade laborativa. As entidades apresentarão relatório ao Conselho Penitenciário, para efeito da representação prevista nos arts. 730 e 731.",
+        "pontos": [
+          "Observação cautelar: fiscalizar o cumprimento da pena acessória e das condições.",
+          "Proteger e orientar o beneficiário, inclusive na obtenção de trabalho.",
+          "Relatórios ao Conselho Penitenciário."
+        ],
+        "atencao": [
+          "Fiscalização e proteção ao mesmo tempo."
+        ],
+        "exemplo": "O patronato acompanha o liberado e o ajuda a conseguir emprego.",
+        "prova": [
+          "Assertiva que restringe a observação cautelar à fiscalização, sem proteção ao beneficiário, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 730"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-726",
+      "unit_id": "ac277405-3ad1-53d8-b456-71c0f1ac5132",
+      "content_sha256": "8f37569841b6ae57433fb6d10851c1a2a2e0cc1446bc0a6c288dc1856dca5078",
+      "simples": "Revogação obrigatória segue CP86: condenação definitiva a pena privativa por crime, com distinção temporal.",
+      "pontos": [
+        "Crime anterior e durante benefício têm efeitos próprios.",
+        "Não equiparar toda contravenção à regra obrigatória antiga."
+      ],
+      "atencao": [
+        "CP87 disciplina hipótese facultativa por crime ou contravenção com pena não privativa; identificar tipo e sanção."
+      ],
+      "exemplo": "Condenação definitiva por crime cometido no benefício exige analisar CP86. Variação: Contravenção não recebe automaticamente tratamento obrigatório só pelo texto antigo.",
+      "prova": [
+        "Toda contravenção gera revogação obrigatória pelo726? Não.",
+        "Tipo de infração e sanção importam? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Revogação obrigatória",
+          "significado": "Hipótese atual de retirada do benefício pelo CP86."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "ac277405-3ad1-53d8-b456-71c0f1ac5132",
+        "content_sha256": "8f37569841b6ae57433fb6d10851c1a2a2e0cc1446bc0a6c288dc1856dca5078",
+        "simples": "Revogar-se-á o livramento condicional se o liberado vier, por crime ou contravenção, a ser condenado por sentença irrecorrível a pena privativa de liberdade.",
+        "pontos": [
+          "Revogação obrigatória: condenação irrecorrível a pena privativa de liberdade, por crime ou contravenção."
+        ],
+        "atencao": [
+          "Revogação obrigatória."
+        ],
+        "exemplo": "O liberado é condenado definitivamente a prisão por novo crime: o livramento é revogado.",
+        "prova": [
+          "Assertiva que torna facultativa a revogação por condenação irrecorrível a pena de prisão erra: é obrigatória."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 727"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-727",
+      "unit_id": "eb4f8d99-8fbd-577d-8d73-83082ed5150c",
+      "content_sha256": "efca4c83d96212a9d3eb4fe9c1ae97f42d2e050d941972aa34557b67369a2157",
+      "simples": "Revogação facultativa segue CP87 e LEP140; considerar obrigações e condenação definitiva pertinente.",
+      "pontos": [
+        "Não confundir poder de revogar e dever automático.",
+        "Alternativas legais podem incluir advertência ou condições mais rigorosas."
+      ],
+      "atencao": [
+        "Penas acessórias antigas não criam fundamento autônomo atual; respeitar oitiva e decisão motivada."
+      ],
+      "exemplo": "Descumprimento é apurado e juiz avalia resposta legal. Variação: Justificativa comprovada exige análise antes de tratar falta como motivo de revogação.",
+      "prova": [
+        "Facultativa significa sempre revogar? Não.",
+        "Descumprimento precisa de exame? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Revogação facultativa",
+          "significado": "Decisão judicial nas hipóteses atuais discricionárias delimitadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "eb4f8d99-8fbd-577d-8d73-83082ed5150c",
+        "content_sha256": "efca4c83d96212a9d3eb4fe9c1ae97f42d2e050d941972aa34557b67369a2157",
+        "simples": "O juiz pode, também, revogar o livramento se o liberado deixar de cumprir qualquer das obrigações constantes da sentença, de observar proibições inerentes à pena acessória ou for irrecorrivelmente condenado, por crime, à pena que não seja privativa da liberdade. Se o juiz não revogar o livramento, deverá advertir o liberado ou exacerbar as condições.",
+        "pontos": [
+          "Revogação facultativa: descumprimento das obrigações, violação de proibições da pena acessória, condenação a pena não privativa de liberdade.",
+          "Sem revogação: advertência ou exacerbação das condições."
+        ],
+        "atencao": [
+          "Facultativa ('pode')."
+        ],
+        "exemplo": "O liberado descumpre uma condição, e o juiz opta por advertência em vez de revogar.",
+        "prova": [
+          "Assertiva que torna obrigatória a revogação por descumprimento de condição erra: é facultativa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 726"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-728",
+      "unit_id": "fbcc3999-51ee-52d2-82cf-0f33963b83fb",
+      "content_sha256": "2c160e8e89f8bfc38885fd77bbba02da765bc70978d1f9d857945ac99be022aa",
+      "simples": "Revogação por crime anterior pode preservar contagem do período em liberdade e permitir exame de soma para novo livramento.",
+      "pontos": [
+        "Integrar CP86II,88 e LEP141.",
+        "Data do crime é decisiva, não só data da condenação."
+      ],
+      "atencao": [
+        "Não tratar fato anterior como ocorrido no período apenas porque julgamento veio depois."
+      ],
+      "exemplo": "Crime foi cometido antes do benefício e condenado posteriormente; aplica-se regime temporal próprio. Variação: Fato cometido durante livramento pode produzir efeitos distintos sobre tempo livre.",
+      "prova": [
+        "Data do fato importa? Sim.",
+        "Toda condenação posterior significa crime posterior? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Crime anterior",
+          "significado": "Infração precedente ao período do benefício."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "fbcc3999-51ee-52d2-82cf-0f33963b83fb",
+        "content_sha256": "2c160e8e89f8bfc38885fd77bbba02da765bc70978d1f9d857945ac99be022aa",
+        "simples": "Se a revogação for motivada por infração penal anterior à vigência do livramento, computar-se-á no tempo da pena o período em que esteve solto o liberado, sendo permitida, para a concessão de novo livramento, a soma do tempo das duas penas.",
+        "pontos": [
+          "Revogação por infração anterior ao livramento: o tempo solto é computado.",
+          "Soma das penas para novo livramento."
+        ],
+        "atencao": [
+          "Consequência mais branda que a do art. 729."
+        ],
+        "exemplo": "A revogação decorre de crime anterior ao livramento: o tempo em liberdade conta como pena cumprida.",
+        "prova": [
+          "Assertiva que desconta o tempo solto quando a infração é anterior ao livramento erra: ele é computado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 729"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-729",
+      "unit_id": "c4097029-c859-54e9-92e4-360da495247f",
+      "content_sha256": "bf573ec2dae42fe20c734b09b72496fb6231515925fdf255075fa3d08c327ae8",
+      "simples": "Revogação por fundamento distinto do crime anterior pode impedir desconto do período livre e novo livramento da mesma pena.",
+      "pontos": [
+        "Integrar CP88 e LEP142.",
+        "Identificar fundamento e título atingido."
+      ],
+      "atencao": [
+        "Não aplicar efeitos mais graves de modo indiscriminado ao crime anterior beneficiado por exceção legal."
+      ],
+      "exemplo": "Crime cometido durante benefício leva ao exame do regime sem contagem do período livre. Variação: Crime anterior exige avaliar exceção e soma pertinente.",
+      "prova": [
+        "Fundamento da revogação muda efeitos? Sim.",
+        "Todo período livre é sempre descontado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Efeitos da revogação",
+          "significado": "Consequências conforme causa e momento do fato."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "c4097029-c859-54e9-92e4-360da495247f",
+        "content_sha256": "bf573ec2dae42fe20c734b09b72496fb6231515925fdf255075fa3d08c327ae8",
+        "simples": "No caso de revogação por outro motivo, não se computará na pena o tempo em que esteve solto o liberado, e tampouco se concederá, em relação à mesma pena, novo livramento.",
+        "pontos": [
+          "Revogação por outro motivo: o tempo solto não é computado.",
+          "Não há novo livramento em relação à mesma pena."
+        ],
+        "atencao": [
+          "Consequência mais grave; compare com o art. 728."
+        ],
+        "exemplo": "O livramento é revogado por descumprimento de condição: o tempo solto não conta.",
+        "prova": [
+          "Assertiva que permite novo livramento da mesma pena após revogação por descumprimento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 728"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-730",
+      "unit_id": "f426c0f4-f3dc-5c0a-8b52-3465116f77e2",
+      "content_sha256": "4dd04d90170d447f84b40fbffac5d1f3ad6c92e3c7fbe049cb5f419d79a5e19f",
+      "simples": "Revogação exige decisão judicial com oitiva do liberado e apuração pertinente, integrada à LEP143.",
+      "pontos": [
+        "MP, Conselho e iniciativa judicial nas hipóteses legais.",
+        "Garantir prova e motivação."
+      ],
+      "atencao": [
+        "Relatório administrativo não revoga benefício por si nem elimina defesa."
+      ],
+      "exemplo": "Descumprimento é comunicado; liberado é ouvido e apresenta justificativa. Variação: Decisão enfrenta prova antes de aplicar consequência legal.",
+      "prova": [
+        "Entidade revoga sozinha benefício? Não.",
+        "Liberado deve ser ouvido na apuração? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Procedimento revocatório",
+          "significado": "Exame judicial com participação defensiva."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "f426c0f4-f3dc-5c0a-8b52-3465116f77e2",
+        "content_sha256": "4dd04d90170d447f84b40fbffac5d1f3ad6c92e3c7fbe049cb5f419d79a5e19f",
+        "simples": "A revogação do livramento será decretada mediante representação do Conselho Penitenciário, ou a requerimento do Ministério Público, ou de ofício, pelo juiz, que, antes, ouvirá o liberado, podendo ordenar diligências e permitir a produção de prova, no prazo de cinco dias.",
+        "pontos": [
+          "Revogação por representação do Conselho, requerimento do MP ou de ofício.",
+          "Antes, o juiz ouve o liberado.",
+          "Prova e diligências em cinco dias."
+        ],
+        "atencao": [
+          "Contraditório prévio: oitiva do liberado."
+        ],
+        "exemplo": "O MP requer a revogação, e o juiz ouve o liberado antes de decidir.",
+        "prova": [
+          "Assertiva que dispensa a oitiva do liberado antes da revogação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 726",
+          "Art. 727"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-731",
+      "unit_id": "3fe05503-e0c0-5884-891a-58e2040bc6ad",
+      "content_sha256": "68dace9aa907c038f35c79c5c287812000c1427df0e244916048b491d3186b44",
+      "simples": "Modificação de condições exige decisão e ciência do beneficiário, conforme LEP144.",
+      "pontos": [
+        "Distinguir alteração e revogação.",
+        "Preservar obrigações legalmente cabíveis."
+      ],
+      "atencao": [
+        "Alterar condição não permite punição retroativa por obrigação antes inexistente."
+      ],
+      "exemplo": "Horário é ajustado por decisão e comunicado formalmente. Variação: Exigir comparecimento novo sem ciência não comprova automaticamente descumprimento anterior.",
+      "prova": [
+        "Alteração exige ciência? Sim.",
+        "Pode punir retroativamente condição inexistente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Modificação de condições",
+          "significado": "Ajuste legal e comunicado do acompanhamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "3fe05503-e0c0-5884-891a-58e2040bc6ad",
+        "content_sha256": "68dace9aa907c038f35c79c5c287812000c1427df0e244916048b491d3186b44",
+        "simples": "O juiz, de ofício, a requerimento do Ministério Público, ou mediante representação do Conselho Penitenciário, poderá modificar as condições ou normas de conduta especificadas na sentença, devendo a respectiva decisão ser lida ao liberado por uma das autoridades ou por um dos funcionários indicados no inciso I do art. 723, observado o disposto nos incisos II e III do mesmo artigo.",
+        "pontos": [
+          "Modificação das condições de ofício, a pedido do MP ou por representação do Conselho.",
+          "Decisão lida ao liberado, observado o art. 723."
+        ],
+        "atencao": [
+          "Leitura da decisão ao liberado."
+        ],
+        "exemplo": "O juiz acrescenta uma condição e a decisão é lida ao liberado.",
+        "prova": [
+          "Assertiva que dispensa a leitura da decisão que modifica as condições ao liberado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 723"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-732",
+      "unit_id": "718c3a9c-0d2c-59a6-8681-2d4f7e6b383c",
+      "content_sha256": "31c481d145d9997f59e101116990b1091ae90f4afe18f38d956678d9e8f826df",
+      "simples": "Nova infração pode fundamentar suspensão e providência cautelar cabível; revogação depende do regime e decisão legal.",
+      "pontos": [
+        "Integrar LEP145 e CP86–90.",
+        "Separar notícia, apuração e condenação definitiva.",
+        "Não presumir culpa pela imputação."
+      ],
+      "atencao": [
+        "Prisão e suspensão não são revogação definitiva automática; verificar fundamento e garantias."
+      ],
+      "exemplo": "Juízo examina notícia de novo crime e medida prevista na LEP. Variação: Absolvição no novo feito exige reavaliar efeitos da suspensão no regime aplicável.",
+      "prova": [
+        "Notícia de infração revoga definitivamente por si? Não.",
+        "Suspensão e revogação são distintas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Suspensão do livramento",
+          "significado": "Providência provisória sujeita à apuração e decisão próprias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "718c3a9c-0d2c-59a6-8681-2d4f7e6b383c",
+        "content_sha256": "31c481d145d9997f59e101116990b1091ae90f4afe18f38d956678d9e8f826df",
+        "simples": "Praticada pelo liberado nova infração, o juiz ou o tribunal poderá ordenar a sua prisão, ouvido o Conselho Penitenciário, suspendendo o curso do livramento condicional, cuja revogação ficará, entretanto, dependendo da decisão final no novo processo.",
+        "pontos": [
+          "Nova infração: o juiz pode ordenar a prisão do liberado.",
+          "Suspende o curso do livramento.",
+          "Revogação depende da decisão final no novo processo."
+        ],
+        "atencao": [
+          "Suspensão cautelar, e não revogação imediata."
+        ],
+        "exemplo": "O liberado é acusado de novo crime, e o livramento fica suspenso até o julgamento.",
+        "prova": [
+          "Assertiva que revoga imediatamente o livramento pela simples acusação de nova infração erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 733"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    }
+  ]
+}

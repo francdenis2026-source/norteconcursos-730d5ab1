@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP livramento usa requisitos atuais e distingue causas revocatórias',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-parole-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,31);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(710).atencao.join(' '),/três quartos automaticamente/);
+ assert.match(get(726).atencao.join(' '),/tipo e sanção/);
+ assert.match(get(728).pontos.join(' '),/Data do crime/);
+ assert.match(get(732).simples,/revogação depende/);
+ for(const n of [710,715,726,728,732])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP execução não recupera multa prisional ou sursis histórico',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-execution-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,33);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
