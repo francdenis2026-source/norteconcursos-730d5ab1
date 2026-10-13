@@ -13,6 +13,32 @@ import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 const pack=JSON.parse(readFileSync('docs/library/article-explanations-identification-pension-2026-10-11.json','utf8'));
 
+test('CPP: proteção testemunhal não dispensa defesa ou presume incapacidade',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-witnesses-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,26);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(208).atencao.join(' '),/Ausência de compromisso não é proibição/);
+ assert.match(get(217).simples,/primeiro usar videoconferência.*retirada só se vídeo for impossível/);
+ assert.match(get(214).simples,/antes.*só exclui.*207–208/s);
+ assert.match(get(221).pontos.join(' '),/Escrito: Presidente\/Vice.*presidentes/);
+ assert.match(get(225).atencao.join(' '),/Velhice isolada não torna automática/);
+ for(const n of [208,211,216,219,221,223])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
+test('CPP: interrogatório preserva silêncio e modulações distintas da confissão',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-interrogation-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,15);assert.ok(!p.units.some(r=>r.unit_key==='art-194'));
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(185).pontos.join(' '),/decisão de vídeo com dez dias de antecedência ao ato/);
+ assert.match(get(198).atencao.join(' '),/Não ensinar.*permissão atual/);
+ assert.match(get(199).pontos.join(' '),/3\/7\/2024.*não estender.*atenuante/s);
+ assert.match(get(197).pontos.join(' '),/1194.*2025.*retratação.*utilidade/s);
+ assert.match(get(200).atencao.join(' '),/Não afirmar que toda retratação perde/);
+ for(const n of [186,192,197,198,199,200])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
 test('CPP: provas não restauram impedimento inconstitucional ou coerção grafotécnica',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-evidence-2026-10-13.json','utf8'));
  validateArticlePackage(p);assert.equal(p.units.length,36);
