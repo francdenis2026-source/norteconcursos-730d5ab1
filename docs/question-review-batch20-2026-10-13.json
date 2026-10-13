@@ -1,0 +1,44 @@
+{
+  "verified_at": "2026-10-13T23:25:32.169858+00:00",
+  "scope": "Uma questão administrativa revisada com tese repetitiva e aplicação em acórdão de 2026; ressalvas registradas.",
+  "topics": [
+    {
+      "id": "0cdabffb-8e0b-5224-88b6-72f79477bb4f",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Administrativo",
+      "topic_order": 7,
+      "topic_text": "Intervenção do Estado sobre a propriedade privada (item 7 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "repairs": [],
+  "items": [
+    {
+      "id": "77cf417d-3d45-4cfc-8c79-b8885ac99e7b",
+      "item_number": 16,
+      "original_answer": "A",
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1004&cod_tema_inicial=1004&novaConsulta=true&tipo_pesquisa=T",
+          "norma": "STJ — Tema repetitivo 1004",
+          "artigo": "tese e exceções"
+        },
+        {
+          "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202303640783",
+          "norma": "STJ — AgInt no AREsp 2.500.935/SP",
+          "artigo": "julgamento 15/06/2026; publicação 18/06/2026"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito A confirmado na regra do Tema 1004/STJ. Restrição administrativa já existente é presumida no preço da aquisição; a tese não elimina indenização em toda hipótese. Ressalvas expressas: sucessão por negócio gratuito e vulnerabilidade econômica com boa-fé objetiva patente. Distinguir limitação geral de efetivo apossamento e provar prejuízo concreto. O AgInt no AREsp 2.500.935/SP, publicado em 18/06/2026, mantém o exame dessas condições e ressalvas, sem autorizar vedação absoluta de indenização.",
+        "sources": [
+          "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1004&cod_tema_inicial=1004&novaConsulta=true&tipo_pesquisa=T",
+          "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202303640783"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "verified_at": "2026-10-13T23:18:14.447702+00:00",
+  "scope": "Revisões individuais; catálogo ainda incompleto.",
+  "topics": [
+    {
+      "id": "8c6ac292-a6ad-5c95-badb-b4cab78d30ed",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Constitucional",
+      "topic_order": 27,
+      "topic_text": "Constituição do Estado do Ceará (item 27 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "repairs": [
+    {
+      "id": "d420988f-1ab7-402c-a34e-26d1d6d6ee16",
+      "item_number": 1,
+      "page": 1,
+      "pdf_sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba",
+      "old_text_sha256": "3ddc551d327c4e76f54a4fab22b401c39eb0434596aa5c90907a85ec98b07101",
+      "new_text_sha256": "47040d58ba63c6823be624d92a26020c53d14d0bdd9269bbce5f0b7954747ed1",
+      "answer_preserved": true,
+      "raw_preserved": true
+    }
+  ],
+  "items": [
+    {
+      "id": "d420988f-1ab7-402c-a34e-26d1d6d6ee16",
+      "item_number": 1,
+      "original_answer": "D",
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.al.ce.gov.br/storage/anexos/Cj9acVyVkaLTmo2cQTt1b2CcVmJMn30yE5RGhdnT.pdf",
+          "norma": "Constituição do Estado do Ceará — compilada até EC 136/2026",
+          "artigo": "art. 180, caput e § 2º; página PDF 99"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "D. O Conselho de Segurança Pública tem funções consultivas e fiscalizadoras (art. 180, caput), autonomia administrativa e financeira, quadro próprio e dotações orçamentárias diretamente vinculadas (§ 2º). Não trocar fiscalizadoras por deliberativas nem atribuir ao texto do § 2º iniciativa autônoma de proposta orçamentária. Conferida a compilação atual da ALECE até a EC 136/2026, publicada em 12/05/2026; a regra cobrada permanece. Foram retiradas somente instruções gerais da prova, preservados enunciado, alternativas e resposta.",
+        "sources": [
+          "https://www.al.ce.gov.br/storage/anexos/Cj9acVyVkaLTmo2cQTt1b2CcVmJMn30yE5RGhdnT.pdf"
+        ]
+      }
+    },
+    {
+      "id": "549f3377-af4f-4890-b8aa-3e60d9916fe7",
+      "item_number": 3,
+      "original_answer": "B",
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.al.ce.gov.br/storage/anexos/Cj9acVyVkaLTmo2cQTt1b2CcVmJMn30yE5RGhdnT.pdf",
+          "norma": "Constituição do Estado do Ceará — compilada até EC 136/2026",
+          "artigo": "art. 133, I a V; página PDF 79"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "B. O art. 133 enumera curadorias de meio ambiente, consumidor, grupos socialmente discriminados, acidentes do trabalho e ausentes e incapazes. Segurança pública não consta desse rol, o que não exclui atribuições gerais do Ministério Público nessa matéria. Lista confirmada na compilação atual da ALECE até EC 136/2026, página PDF 79. Não confundir as curadorias constitucionais com toda a organização infraconstitucional das promotorias.",
+        "sources": [
+          "https://www.al.ce.gov.br/storage/anexos/Cj9acVyVkaLTmo2cQTt1b2CcVmJMn30yE5RGhdnT.pdf"
+        ]
+      }
+    }
+  ],
+  "normative_pdf_sha256": "f0e84e410d6a07bf076497ba55c56b9d0685ccc3e6eb6e7029fda0598c3740aa",
+  "publisher_page": "https://www.al.ce.gov.br/paginas/constituicao-do-estado-do-ceara",
+  "normative_version": "Compilação até EC 136/2026, publicada em 12/05/2026"
+}
