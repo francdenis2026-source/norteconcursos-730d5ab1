@@ -157,7 +157,7 @@ test('LEP disciplina e órgãos integra defesa, estrutura atual e textos residua
  for(const n of [50,52,54]){
   assert.ok(!get(n),'alteração2026 ainda não certificada');
   const caveat=legalStudyCaveat('lep','art-'+n);assert.equal(caveat.literalPractice,false);
-  assert.match(caveat.explanation,/permanece pendente/);
+  assert.match(caveat.explanation,/2026/);
  }
  assert.match(get(51).pontos.join(' '),/INJUSTIFICADAMENTE/);
  assert.match(get(59).simples,/972598.*afasta PAD/s);
@@ -1330,4 +1330,20 @@ test('CTB historical deadlines and annex definitions cannot generate unqualified
  assert.match(annex.exemplo,/INTERRUPÇÃO DE MARCHA/);
  for(const n of [313,316,319,323,331,334,336,339,340])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
  assert.equal(legalStudyCaveat('transito','anexo-1').literalPractice,false);
+});
+
+test('LEP RDD integrates later insertion, judicial decision and actual defense opportunity',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-3-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,55);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(52).atencao.join(' '),/§8º atual desde 21\/5\/2026.*veto anterior/s);
+ assert.match(get(54).simples,/quinze dias.*oportunidade de defesa/s);
+ assert.match(get(50).prova.join(' '),/medidas do art. 22/);
+ for(const n of [50,52,54])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
+});
+test('LEP progression, remission and community service retain temporal and computational safeguards',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-3-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(112).prova.join(' '),/mais gravosa não retroage/);
+ assert.match(get(126).prova.join(' '),/NO MÍNIMO TRÊS DIAS/);
+ assert.match(get(149).simples,/CP 46.*uma hora.*não apresentar oito horas/si);
+ assert.match(get(146).simples+' '+get(146).exemplo,/suspensão/);
+ for(const n of [112,122,126,149])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
 });

@@ -1,8 +1,8 @@
 {
   "current_units": 3511,
-  "current_review_metadata": 2808,
-  "pending_current_review_metadata": 703,
-  "checked_at": "2026-10-13T22:42:56.702Z",
+  "current_review_metadata": 2863,
+  "pending_current_review_metadata": 648,
+  "checked_at": "2026-10-13T23:17:08.205Z",
   "note": "Contagem de aprovações editoriais atuais com revisor, data e hash correspondente; existência de explicação publicada não equivale a revisão atual. Não certifica toda a regulamentação ou jurisprudência.",
   "courses": [
     {
@@ -32,8 +32,8 @@
     {
       "slug": "lep",
       "current": 215,
-      "review_metadata": 106,
-      "pending": 109
+      "review_metadata": 161,
+      "pending": 54
     },
     {
       "slug": "organizacoes",
