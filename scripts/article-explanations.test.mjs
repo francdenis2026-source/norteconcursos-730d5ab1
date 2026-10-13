@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP julgamento e revisão respeita empate e limites favoráveis',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-judgment-revision-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,22);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(615).pontos.join(' '),/todos os julgamentos colegiados/);
+ assert.match(get(617).simples,/não agrava pena quando só réu/);
+ assert.match(get(622).pontos.join(' '),/Novo pedido/);
+ assert.match(get(626).simples,/nunca agravar/);
+ for(const n of [615,624,630])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP processamento recursal distingue efeitos e prazos atuais',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-appeal-process-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,19);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
