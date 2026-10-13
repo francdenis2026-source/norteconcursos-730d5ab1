@@ -1347,3 +1347,21 @@ test('LEP progression, remission and community service retain temporal and compu
  assert.match(get(146).simples+' '+get(146).exemplo,/suspensão/);
  for(const n of [112,122,126,149])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
 });
+
+test('LEP final units distinguish penalty fine, poverty and current judicial competence',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-4-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,56);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(165).simples,/CP 51.*execução penal.*transferência automática/s);
+ assert.match(get(170).simples,/931.*7032.*não prisão por dívida/s);
+ assert.match(get(181).simples,/remissão antiga.*CP 44/s);
+ assert.match(get(149).pontos.join(' '),/residual.*uma hora.*não oito horas invariáveis/s);
+ for(const n of [164,165,166,170,181])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
+});
+test('LEP care, handcuffs and historical provisions cannot produce automatic unqualified practice',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-4-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(108).simples,/não é consequência automática/);
+ assert.match(get(173).prova.join(' '),/limite máximo.*527/s);
+ assert.match(get(199).pontos.join(' '),/POR ESCRITO.*trajeto.*hospitalização/s);
+ assert.match(get(201).simples,/não cria.*depositário infiel/s);
+ assert.match(get(203).simples,/histórica.*Não reinicia/s);
+ for(const n of [108,173,199,201,203])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
+});
