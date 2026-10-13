@@ -950,3 +950,16 @@ test('CP final lote3: medicamento sem registro, classificação e identidade tê
  assert.match(get(282).atencao.join(' '),/8\/6\/2026.*não responsabilidade objetiva/);
  for(const n of [270,273,282,283,284,286,287,288,289,297,299,304,307,309,310,311,315])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
 });
+
+test('CP final lote4: textos residuais, multas e hipóteses especiais não geram treino indevido',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-final-lote-4-2026-10-12.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(318).simples,/334-A/);
+ assert.match(get(328).atencao.join(' '),/servidor também pode/);
+ assert.match(get('337-a').pontos.join(' '),/contumaz/);
+ assert.match(get('337-h').atencao.join(' '),/exceções legais motivadas/);
+ assert.ok(!get('337-h').atencao.some(x=>x==='Pagamento fora da ordem cronológica também é crime.'));
+ assert.match(get('338-a').atencao.join(' '),/8\/12\/2025.*Henry Borel/);
+ assert.match(get(348).atencao.join(' '),/companheiro.*não certificada/);
+ for(const n of [322,326,335,'337-a','337-h','337-j','338-a',348])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+});
